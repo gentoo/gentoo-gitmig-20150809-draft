@@ -1,7 +1,7 @@
 /*
  * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.3.c,v 1.2 2004/12/23 18:04:06 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.4.c,v 1.1 2004/12/28 05:32:10 eradicator Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  */
 
@@ -23,6 +23,9 @@
 #define GCC_CONFIG	"/usr/bin/gcc-config"
 #define ENVD_BASE	"/etc/env.d/05gcc"
 
+#define MAXNEWFLAGS 32
+#define MAXFLAGLEN  127
+
 struct wrapper_data {
 	char name[MAXPATHLEN + 1];
 	char fullname[MAXPATHLEN + 1];
@@ -30,6 +33,8 @@ struct wrapper_data {
 	char tmp[MAXPATHLEN + 1];
 	
 	char *path;
+	char newflags[MAXNEWFLAGS][MAXFLAGLEN + 1];
+	unsigned newflagsCount;
 };
 
 static const char *wrapper_strerror(int err, struct wrapper_data *data)
@@ -249,12 +254,15 @@ static void modify_path(struct wrapper_data *data)
 	putenv(newpath);
 }
 
+#define lastOfStr(str, n) ((str) + strlen(str) - (n))
+
 int main(int argc, char *argv[])
 {
 	struct wrapper_data *data;
 	size_t size;
 	char *path;
 	int result = 0;
+	char **newargv = argv;
 
 	data = alloca(sizeof(*data));
 	if (data == NULL)
@@ -293,8 +301,85 @@ int main(int argc, char *argv[])
 	 * http://bugs.gentoo.org/show_bug.cgi?id=8132 */
 	argv[0] = data->bin;
 
+	/* If this is g{cc,++}{32,64}, we need to add -m{32,64}
+	 * otherwise  we need to add ${CFLAGS_${ABI}}
+	 */
+	if(!strcmp(lastOfStr(data->bin, 2), "32") ) {
+		strcpy(data->newflags[data->newflagsCount], "-m32");
+		data->bin[strlen(data->bin) - 2] = '\0';
+		data->newflagsCount++;
+	} else if (!strcmp(lastOfStr(data->bin, 2), "64") ) {
+		data->bin[strlen(data->bin) - 2] = '\0';
+		strcpy(data->newflags[data->newflagsCount], "-m64");
+		data->newflagsCount++;
+	} else if(getenv("ABI")) {
+		char *envar = (char *)malloc(sizeof(char) * 
+                                             (strlen("CFLAGS_") + strlen(getenv("ABI")) + 1 ));
+		if(!envar)
+			wrapper_exit("%s wrapper: out of memory\n", argv[0]);
+
+		/* We use CFLAGS_${ABI} for gcc, g++, g77, etc as they are
+		 * the same no matter which compiler we are using.
+		 */
+		sprintf(envar, "CFLAGS_%s", getenv("ABI"));
+
+		if(getenv(envar)) {
+			const char *newflagsStr = getenv(envar);
+			unsigned s, f; /* start/finish of each flag. f points to
+			                * the char AFTER the end (ie the space/\0
+			                */
+
+			/* Tokenize the flag list */
+			for(s=0; s < strlen(newflagsStr); s=f+1) {
+				/* Put s at the start of the next flag */
+				while(newflagsStr[s] == ' ' || 
+				      newflagsStr[s] == '\t')
+					s++;
+				if(s == strlen(newflagsStr))
+					break;
+
+				f = s + 1;
+				while(newflagsStr[f] != ' ' && 
+				      newflagsStr[f] != '\t' &&
+				      newflagsStr[f] != '\0')
+					f++;
+
+				/* Detect overrun */
+				if(MAXFLAGLEN < f - s || MAXNEWFLAGS == data->newflagsCount)
+					wrapper_exit("%s wrapper: Exiting due to inadequate buffer space.  Preventing buffer overrun.\n", argv[0]);			
+
+				strncpy(data->newflags[data->newflagsCount], newflagsStr + s, f - s);
+				data->newflagsCount++;
+			}
+		}
+
+		free(envar);
+	}
+
+	if(data->newflagsCount) {
+		unsigned i;
+
+		/* Make room for the original, new ones, and the NULL terminator */
+		newargv = (char **)malloc(sizeof(char *) * (argc + data->newflagsCount + 1));
+		if(!newargv)
+			wrapper_exit("Unable to allocate enough memory for new argv[].");
+
+		/* We just use the existing argv[i] as the start. */
+		for(i=0; i < argc; i++) {
+			newargv[i] = argv[i];
+		}
+
+		/* Now we want to append our newflags list. */
+		for(; i < argc + data->newflagsCount; i++) {
+			newargv[i] = data->newflags[i - argc];
+		}
+
+		/* And now cap it off... */
+		newargv[i] = NULL;
+	}
+
 	/* Ok, do it ... */
-	if (execv(data->bin, argv) < 0)
+	if (execv(data->bin, newargv) < 0)
 		wrapper_exit("Could not run/locate \"%s\"\n", data->name);
 
 	return 0;
