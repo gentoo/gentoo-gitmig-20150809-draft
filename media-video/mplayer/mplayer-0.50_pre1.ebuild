@@ -6,9 +6,11 @@
 
 MY_P="MPlayer-0.50pre"
 S=${WORKDIR}/${MY_P}?
-A=${MY_P}1.tar.bz2
+A="${MY_P}1.tar.bz2 default.tar.bz2 mp-arial-iso-8859-1.zip"
 DESCRIPTION="Media Player for Linux"
-SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}"
+SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
+	 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2
+	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
 HOMEPAGE="http://www.mplayerhq.hu"
 
 # Experimental USE flags dvd and decss
@@ -76,6 +78,20 @@ src_install() {
 	rm DOCS/*.1
 	dodir /usr/share/doc/${PF}
 	cp -a DOCS/* ${D}/usr/share/doc/${PF}
+
+	# Install default skin
+	if [ "`use gtk`" ] ; then
+		insinto /usr/share/mplayer/Skin/default
+		doins ${WORKDIR}/default/*
+		# Permissions is fried by default
+		chmod a+rx ${D}/usr/share/mplayer/Skin/default/
+		chmod a+r ${D}/usr/share/mplayer/Skin/default/*
+	fi
+
+	# Install the font used by OSD and the gui
+	dodir /usr/share/mplayer/fonts
+	cp -a ${WORKDIR}/iso-8859-1/ ${D}/usr/share/mplayer/fonts
+	dosym /usr/share/mplayer/fonts/iso-8859-1/arial-14/ /usr/share/mplayer/font
 
 	# Install a wrapper for mplayer to handle the codecs.conf
 	mv ${D}/usr/bin/mplayer ${D}/usr/bin/mplayer-bin

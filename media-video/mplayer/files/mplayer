@@ -10,5 +10,5 @@ if [ ! -f ~/.mplayer/codecs.conf ] ; then
 	cp /etc/codecs.conf ~/.mplayer/codecs.conf
 fi
 
-$mplayerbin $@
+$mplayerbin "$@"
 
