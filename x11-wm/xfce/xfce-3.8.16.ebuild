@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.12 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.13 2002/12/09 12:04:58 jmorgan Exp $
 
 IUSE="arts gtk gnome nls"
  
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xfce/${P}.tar.gz"
 HOMEPAGE="http://www.xfce.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
