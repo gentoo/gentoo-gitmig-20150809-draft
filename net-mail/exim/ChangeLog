@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.22 2003/02/12 08:10:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.23 2003/03/25 22:50:12 seemant Exp $
 
 *exim-4.12 (28 Jan 2003)
 
@@ -51,6 +51,9 @@
   Removed nonexistant sample config.
 
 *exim-4.04-r2 (20 Aug 2002)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> exim-4.04-r2.ebuild:
+  changed pgsql USE to postgres, which exists
 
   01 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.04-r2.ebuild :
   Changed use variables to coincide with already defined system variables.

@@ -1,29 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r2.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r2.ebuild,v 1.9 2003/03/25 22:50:12 seemant Exp $
 
-IUSE="pgsql ssl tcpd mysql ldap pam"
+IUSE="postgres ssl tcpd mysql ldap pam"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.gz"
 HOMEPAGE="http://www.exim.org/"
 
-DEPEND="virtual/glibc
-		>=sys-libs/db-3.2
-		>=dev-lang/perl-5.6.0
-		>=dev-libs/libpcre-3.4
-		pam? ( >=sys-libs/pam-0.75 )
-		tcpd? ( sys-apps/tcp-wrappers )
-		ssl? ( >=dev-libs/openssl-0.9.6 )
-		ldap? ( >=net-nds/openldap-2.0.7 )
-		mysql? ( >=dev-db/mysql-3.23.28 )
-		pgsql? ( >=dev-db/postgresql-7 )"
+DEPEND=">=sys-libs/db-3.2
+	dev-lang/perl
+	>=dev-libs/libpcre-3.4
+	pam? ( >=sys-libs/pam-0.75 )
+	tcpd? ( sys-apps/tcp-wrappers )
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	ldap? ( >=net-nds/openldap-2.0.7 )
+	mysql? ( >=dev-db/mysql-3.23.28 )
+	postgres? ( >=dev-db/postgresql-7 )"
 
 RDEPEND="${DEPEND}
-		!virtual/mta
-		>=net-mail/mailbase-0.00"
+	!virtual/mta
+	>=net-mail/mailbase-0.00"
 
 PROVIDE="virtual/mta"
 
@@ -100,7 +99,7 @@ src_unpack() {
 		LOOKUP_LIBS="$LOOKUP_LIBS -L/usr/lib -lmysqlclient"
 	fi
 
-	if use pgsql; then
+	if use postgres; then
 		cp Local/Makefile Local/Makefile.tmp
 		sed -e "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" \
 			Local/Makefile.tmp >| Local/Makefile
