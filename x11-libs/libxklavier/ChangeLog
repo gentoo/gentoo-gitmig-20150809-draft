@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/ChangeLog
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.1 2004/03/18 22:17:33 foser Exp $
+
+*libxklavier-1.00 (18 Mar 2004)
+
+  18 Mar 2004; foser <foser@gentoo.org> metadata.xml, libxklavier-1.00.ebuild, ChangeLog :
+  Initial commit
+  high-level X KeyBoard library
+  Added to the gnome herd for now
