@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.2 2003/11/06 19:47:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.3 2003/12/09 17:42:40 lanius Exp $
 
 MY_PN=${PN/ctive-/}
 MY_P=${MY_PN}-${PV}
@@ -18,7 +18,7 @@ KEYWORDS="~x86"
 DEPEND=">=dev-lang/ocaml-3.04
 	>=dev-ml/camlimages-2.11
 	virtual/tetex
-	>=app-text/ghostscript-6.52"
+	virtual/ghostscript"
 RDEPEND="${DEPEND}
 	cjk? ( media-fonts/kochi-substitute )"
 

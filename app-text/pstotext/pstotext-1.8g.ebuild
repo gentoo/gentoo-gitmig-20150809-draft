@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.8g.ebuild,v 1.4 2003/02/13 09:43:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.8g.ebuild,v 1.5 2003/12/09 17:41:01 lanius Exp $
 
 DESCRIPTION="extract ASCII text from a PostScript or PDF file"
 HOMEPAGE="http://research.compaq.com/SRC/virtualpaper/pstotext.html"
@@ -12,7 +12,7 @@ KEYWORDS="x86 sparc "
 
 DEPEND="app-arch/ncompress"
 
-RDEPEND=">=app-text/ghostscript-3.51"
+RDEPEND="virtual/ghostscript"
 
 S=${WORKDIR}/${PN}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.33.ebuild,v 1.11 2003/04/14 17:03:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.33.ebuild,v 1.12 2003/12/09 17:41:37 lanius Exp $
 
 IUSE="kde"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND=">=sys-apps/sed-4.0.5
-	app-text/ghostscript"
+	virtual/ghostscript"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.ebuild,v 1.5 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.ebuild,v 1.6 2003/12/09 17:40:22 lanius Exp $
 
 IUSE="motif"
 
@@ -17,7 +17,7 @@ DEPEND="motif? ( virtual/x11
 		virtual/motif )
 	>=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
-	app-text/ghostscript"
+	virtual/ghostscript"
 
 src_compile() {
 	econf \

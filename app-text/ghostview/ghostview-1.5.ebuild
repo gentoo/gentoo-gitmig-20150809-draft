@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5.ebuild,v 1.13 2003/09/05 22:37:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5.ebuild,v 1.14 2003/12/09 17:43:15 lanius Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc"
 DEPEND="virtual/glibc
 	virtual/x11"
 RDEPEND="${DEPEND}
-	>=app-text/ghostscript-6.50-r2"
+	virtual/ghostscript"
 
 src_unpack() {
 	unpack ${A}
