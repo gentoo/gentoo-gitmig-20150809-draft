@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ddf992d263ea6441be3038531e88a571 shared-mime-info-0.14.ebuild 723
-MD5 4e7f41e3aef35b123cc250d27b411fef ChangeLog 3972
 MD5 34cb3f14ceed8d406a18bfb2dd67735f shared-mime-info-0.15.ebuild 1096
+MD5 ddf992d263ea6441be3038531e88a571 shared-mime-info-0.14.ebuild 723
+MD5 ca076e965f3dc8329a99af6ad19e2fe6 shared-mime-info-0.16.ebuild 986
+MD5 97f98155d39a1959f518e14d463314c1 ChangeLog 4110
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 712db9426ce82ddeac0f550fb7722b7d shared-mime-info-0.14-r1.ebuild 999
 MD5 95a67c18f59d2f94e64f4bc06ab91810 shared-mime-info-0.14-r2.ebuild 1087
-MD5 67aa86e5f21d4e23fe3cb4aef1984df7 files/digest-shared-mime-info-0.15 73
-MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14-r2 73
 MD5 2ba3279e9293282a945a64b94e679c25 files/shared-mime-info-0.15-ALL_CFLAGS_LIBS.patch 232
-MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14-r1 73
-MD5 d321aa82774706113fca9f5c62f7923b files/shared-mime-info-0.14-text_plain.patch 7403
 MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14 73
+MD5 67aa86e5f21d4e23fe3cb4aef1984df7 files/digest-shared-mime-info-0.15 73
+MD5 ef9e940db1ccddfec652d897511fcc27 files/digest-shared-mime-info-0.16 73
+MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14-r2 73
+MD5 d321aa82774706113fca9f5c62f7923b files/shared-mime-info-0.14-text_plain.patch 7403
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPhANugEuf3OQ0akRAt1fAJ4rc9p4EdU+JSHb99UhJRSBS1kGjACgm1Vr
-TPnWUkdm77ZCS1bMuhtNCHg=
-=7XSx
+iD8DBQFCQ/8QevY57Fted3ERAmM+AJ9TBH2+5eX8go470driLqJKfO/ZkwCeKJeL
+ZlO/21GuCPWfd1GiW1j0vvk=
+=ykBD
 -----END PGP SIGNATURE-----
