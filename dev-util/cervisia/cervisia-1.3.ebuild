@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cervisia/cervisia-1.3.ebuild,v 1.5 2001/09/29 21:03:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cervisia/cervisia-1.3.ebuild,v 1.6 2001/11/10 12:45:09 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A CVS Client for KDE"
-SRC_URI="http://ftp1.sourceforge.net/cervisia/${A}"
+SRC_URI="http://ftp1.sourceforge.net/cervisia/${P}.tar.gz"
 HOMEPAGE="http://cervisia.sourceforge.net"
 
 DEPEND=">=kde-base/kdelibs-2.0"

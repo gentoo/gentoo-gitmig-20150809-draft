@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.7 2001/10/22 10:05:15 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.8 2001/11/10 12:45:09 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="glade"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/glade/"${A}
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/glade/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=x11-libs/gtk+-1.2.10-r4
@@ -17,7 +16,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
         >=dev-util/intltool-0.11
         >=app-text/scrollkeeper-0.2"
-
 
 src_compile() {
 	local myopts
@@ -54,7 +52,9 @@ src_compile() {
 }
 
 src_install() {
-	try make prefix=${D}/usr sysconfdir=${D}/etc install
+	make prefix=${D}/usr 						\
+	     sysconfdir=${D}/etc 					\
+	     install || die
 
 	dodoc AUTHORS COPYING* FAQ NEWS README* TODO
 }

@@ -1,13 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-1.9.ebuild,v 1.1 2001/06/05 16:31:49 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-1.9.ebuild,v 1.2 2001/11/10 12:45:09 hallski Exp $
 
-#P=
-A=${P}.src.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical file comparator and merge tool simular to xdiff."
-SRC_URI="http://prdownloads.sourceforge.net/xxdiff/${A}"
+SRC_URI="http://prdownloads.sourceforge.net/xxdiff/${P}.src.tar.gz"
 HOMEPAGE="http://xxdiff.sourceforge.net/"
 
 DEPEND="virtual/glibc
@@ -17,14 +15,16 @@ DEPEND="virtual/glibc
 RDEPEND="sys-apps/diffutils"
 
 src_compile() {
-    try ./configure --prefix=/usr --mandir=/usr/share/man
-    try make
+	./configure --prefix=/usr --mandir=/usr/share/man || die
+
+	make || die
 }
 
 src_install () {
-    dobin src/xxdiff
-    newman src/xxdiff.man xxdiff.1
-    dodoc README COPYING CHANGES ChangeLog copyright.txt doc/xxdiff-doc.sgml
+	dobin src/xxdiff
+	newman src/xxdiff.man xxdiff.1
+	dodoc README COPYING CHANGES ChangeLog 
+	dodoc copyright.txt doc/xxdiff-doc.sgml
 }
 
 # vim: ai et sw=4 ts=4
