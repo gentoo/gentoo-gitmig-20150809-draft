@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.2 2002/08/06 16:37:35 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.3 2002/11/08 13:33:58 foser Exp $
 
 *ghex-1.2.1 (1 Feb 2002)
+
+  08 Nov 2002; foser <foser@gentoo.org> ghex-1.2.1.ebuild :
+  Fixed FHS issue (bug #10413)
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
