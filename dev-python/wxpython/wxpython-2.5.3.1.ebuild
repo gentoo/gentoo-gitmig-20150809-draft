@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.5.3.1.ebuild,v 1.1 2004/11/13 04:08:20 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.5.3.1.ebuild,v 1.2 2004/11/13 17:27:42 pythonhead Exp $
 
 inherit wxwidgets
 
@@ -80,6 +80,7 @@ src_install() {
 	python_version
 	local mypyconf
 	local site_pkgs=/usr/lib/python${PYVER}/site-packages
+	dodir ${site_pkgs}
 
 	use opengl \
 		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
