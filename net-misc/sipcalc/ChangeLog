@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/sipcalc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.1 2004/11/20 14:22:18 ticho Exp $
+
+*sipcalc-1.1.2 (20 Nov 2004)
+
+  20 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +sipcalc-1.1.2.ebuild:
+  Initial import. Closes bug #68197, ebuild submitted by Marti
+  <integor@gmail.com>.
+
