@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/sparc32
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.9 2004/10/02 15:38:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.10 2004/12/19 11:18:02 eradicator Exp $
+
+*sparc32-1.1-r3 (19 Dec 2004)
+
+  19 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/sparc32-1.1-linux32.patch, +sparc32-1.1-r3.ebuild:
+  Added patch/symlinks for linux{32,64} to work with the same exec name as
+  sys-apps/linux32... makes env-switching scripts play nicer cross platform.
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sparc32-1.1-r1.ebuild, sparc32-1.1-r2.ebuild:
