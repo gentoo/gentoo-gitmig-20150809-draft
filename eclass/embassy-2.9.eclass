@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.2 2005/03/23 23:05:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.3 2005/03/25 17:36:24 ribosome Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -10,7 +10,7 @@
 # necessary, add "(R|P)DEPEND"encies. Additionnaly, the inheriting ebuild's
 # name must begin by "embassy-".
 
-inherit eutils
+inherit eutils multilib
 
 ECLASS=embassy
 INHERITED="$INHERITED $ECLASS"

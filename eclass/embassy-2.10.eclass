@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.10.eclass,v 1.1 2005/03/22 22:07:40 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.10.eclass,v 1.2 2005/03/25 17:36:24 ribosome Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -10,7 +10,7 @@
 # necessary, add "(R|P)DEPEND"encies. Additionnaly, the inheriting ebuild's
 # name must begin by "embassy-".
 
-inherit eutils
+inherit eutils multilib
 
 ECLASS=embassy
 INHERITED="$INHERITED $ECLASS"
@@ -32,7 +32,7 @@ SRC_URI="ftp://ftp.uk.embnet.org/pub/EMBOSS/EMBOSS-${EBOV}.tar.gz
 SLOT="0"
 IUSE="X png"
 
-DEPEND="=sci-biology/emboss-${EBOV}*
+DEPEND=">=sci-biology/emboss-${EBOV}*
 	X? ( virtual/x11 )
 	png? ( sys-libs/zlib
 		media-libs/libpng
@@ -49,6 +49,10 @@ embassy_src_unpack() {
 	cp /usr/$(get_libdir)/libajax.la EMBOSS-${EBOV}/ajax/
 	cp /usr/$(get_libdir)/libajaxg.la EMBOSS-${EBOV}/ajax/
 	cp /usr/$(get_libdir)/libnucleus.la EMBOSS-${EBOV}/nucleus/
+	if [ -e ${FILESDIR}/${PF}.patch ]; then
+		cd ${S}
+		epatch ${FILESDIR}/${PF}.patch
+	fi
 }
 
 embassy_src_compile() {
