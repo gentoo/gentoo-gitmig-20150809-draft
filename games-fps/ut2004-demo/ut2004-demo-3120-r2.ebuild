@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.3 2004/02/26 16:32:19 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.4 2004/02/27 19:10:36 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -67,7 +67,7 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "For Text To Speech:"
-	einfo "   1) emerge festival speech"
+	einfo "   1) emerge festival speechd"
 	einfo "   2) Edit your ~/.ut2004demo/System/UT2004.ini file."
 	einfo "      In the [SDLDrv.SDLClient] section, add:"
 	einfo "         TextToSpeechFile=/dev/speech"
