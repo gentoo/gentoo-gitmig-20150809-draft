@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_dav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.12 2004/07/01 22:45:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.13 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mod_dav-1.0.3-r1.ebuild:
+  Masked mod_dav-1.0.3-r1.ebuild stable for ppc
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mod_dav-1.0.3-r1.ebuild:

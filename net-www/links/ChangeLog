@@ -1,6 +1,23 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.48 2004/07/16 04:26:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.49 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  links-2.1_pre11.ebuild, links-2.1_pre13.ebuild, links-2.1_pre14.ebuild,
+  links-2.1_pre15.ebuild:
+  Masked links-2.1_pre15.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  links-2.1_pre11.ebuild, links-2.1_pre13.ebuild, links-2.1_pre14.ebuild:
+  Masked links-2.1_pre14.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  links-2.1_pre11.ebuild, links-2.1_pre13.ebuild:
+  Masked links-2.1_pre13.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  links-2.1_pre11.ebuild:
+  Masked links-2.1_pre11.ebuild stable for ppc
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> links-2.1_pre15.ebuild:
   added ~ppc64, bug #55430

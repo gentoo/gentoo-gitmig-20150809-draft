@@ -1,6 +1,13 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.25 2004/06/25 00:48:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.26 2004/09/03 23:24:07 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> amaya-8.0.ebuild,
+  amaya-8.5.ebuild:
+  Masked amaya-8.5.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> amaya-8.0.ebuild:
+  Masked amaya-8.0.ebuild stable for ppc
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> amaya-8.0.ebuild,
   amaya-8.5.ebuild:

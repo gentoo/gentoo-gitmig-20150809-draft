@@ -1,6 +1,23 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.30 2004/08/19 22:42:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.31 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  elinks-0.4.2.ebuild, elinks-0.4.3_rc2.ebuild, elinks-0.9.1-r1.ebuild,
+  elinks-0.9.1.ebuild:
+  Masked elinks-0.9.1.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  elinks-0.4.2.ebuild, elinks-0.4.3_rc2.ebuild, elinks-0.9.1-r1.ebuild:
+  Masked elinks-0.9.1-r1.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  elinks-0.4.2.ebuild, elinks-0.4.3_rc2.ebuild:
+  Masked elinks-0.4.3_rc2.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  elinks-0.4.2.ebuild:
+  Masked elinks-0.4.2.ebuild stable for ppc
 
   19 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> elinks-0.9.1-r1.ebuild:
   Stable on sparc

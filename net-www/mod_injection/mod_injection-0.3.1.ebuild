@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/mod_injection-0.3.1.ebuild,v 1.4 2004/06/25 01:01:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/mod_injection-0.3.1.ebuild,v 1.5 2004/09/03 23:24:08 pvdabeel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}
 SRC_URI="http://pmade.org/pjones/software/${PN}/download/${P}.tar.gz"
 DEPEND="=net-www/apache-2*"
 LICENSE="Apache-1.1"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 SLOT="0"
 

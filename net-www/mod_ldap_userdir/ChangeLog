@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_ldap_userdir
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/ChangeLog,v 1.4 2004/06/25 01:02:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/ChangeLog,v 1.5 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mod_ldap_userdir-1.1.4.ebuild:
+  Masked mod_ldap_userdir-1.1.4.ebuild stable for ppc
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_ldap_userdir-1.1.1.ebuild,
   mod_ldap_userdir-1.1.4.ebuild:

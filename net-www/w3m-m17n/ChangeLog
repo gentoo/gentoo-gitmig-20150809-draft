@@ -1,6 +1,10 @@
 # ChangeLog for net-www/w3m-m17n
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/ChangeLog,v 1.16 2004/07/01 22:50:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/ChangeLog,v 1.17 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  w3m-m17n-0.4.2.ebuild:
+  Masked w3m-m17n-0.4.2.ebuild stable for ppc
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   w3m-m17n-0.4.2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_throttle
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.9 2004/06/25 01:04:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.10 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mod_throttle-3.1.2-r1.ebuild:
+  Masked mod_throttle-3.1.2-r1.ebuild stable for ppc
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_throttle-3.1.2-r1.ebuild:
   Fix typo in message. Closes #5488.

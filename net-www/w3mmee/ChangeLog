@@ -1,6 +1,10 @@
 # ChangeLog for net-www/w3mmee
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.13 2004/06/25 16:05:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.14 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  w3mmee-0.3.2_p24-r4.ebuild:
+  Masked w3mmee-0.3.2_p24-r4.ebuild stable for ppc
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> w3mmee-0.3.2_p24-r3.ebuild,
   w3mmee-0.3.2_p24-r4.ebuild:

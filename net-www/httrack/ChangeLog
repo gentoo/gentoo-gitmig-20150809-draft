@@ -1,6 +1,10 @@
 # ChangeLog for net-www/httrack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/ChangeLog,v 1.10 2004/07/01 22:43:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/ChangeLog,v 1.11 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  httrack-3.32.2.ebuild:
+  Masked httrack-3.32.2.ebuild stable for ppc
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> httrack-3.23.ebuild,
   httrack-3.30.ebuild, httrack-3.32.2.ebuild:

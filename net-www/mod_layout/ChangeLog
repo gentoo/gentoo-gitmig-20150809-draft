@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_layout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.7 2004/06/25 01:01:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.8 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mod_layout-4.0.1a.ebuild:
+  Masked mod_layout-4.0.1a.ebuild stable for ppc
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_layout-3.2.1.ebuild:
   Stable on x86. Changed category to net-www.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.1.ebuild,v 1.6 2004/08/28 06:00:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.1.ebuild,v 1.7 2004/09/03 23:24:07 pvdabeel Exp $
 
 inherit eutils webapp
 
@@ -8,7 +8,7 @@ DESCRIPTION="AWStats is a short for Advanced Web Statistics."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://awstats.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~ppc ~mips ~sparc x86 ~amd64"
+KEYWORDS="~alpha ppc ~mips ~sparc x86 ~amd64"
 DEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/libpng-1.2
 	dev-perl/Time-Local

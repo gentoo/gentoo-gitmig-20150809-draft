@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.13 2004/07/01 22:50:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.14 2004/09/03 23:24:08 pvdabeel Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://gentoo/${W3M_P}.tar.gz
 
 LICENSE="w3m"
 SLOT="0"
-KEYWORDS="x86 alpha ~ppc sparc"
+KEYWORDS="x86 alpha ppc sparc"
 IUSE="X nopixbuf imlib imlib2 xface migemo gpm ssl"
 #IUSE="nls"
 

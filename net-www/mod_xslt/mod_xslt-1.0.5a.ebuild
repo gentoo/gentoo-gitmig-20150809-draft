@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/mod_xslt-1.0.5a.ebuild,v 1.8 2004/06/25 01:05:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/mod_xslt-1.0.5a.ebuild,v 1.9 2004/09/03 23:24:08 pvdabeel Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.dunkel.org/mod-xslt/downloads/mod-xslt-${PV}.tar.gz"
 DEPEND="dev-lang/perl dev-libs/libxslt dev-libs/libxml2
 	=net-www/apache-2* dev-util/pkgconfig"
 LICENSE="Apache-1.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 IUSE=""
 SLOT="0"
 

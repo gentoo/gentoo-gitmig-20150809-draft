@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/mod_throttle-3.1.2-r1.ebuild,v 1.11 2004/06/25 01:04:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/mod_throttle-3.1.2-r1.ebuild,v 1.12 2004/09/03 23:24:08 pvdabeel Exp $
 
 DESCRIPTION="Bandwidth and request throttling for Apache"
 HOMEPAGE="http://www.snert.com/Software/mod_throttle/"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ppc"
 
 MY_V="`echo ${PV} | sed -e 's:\.::g'`"
 S=${WORKDIR}/${P}

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.37 2004/08/13 12:15:57 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.38 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lynx-2.8.5.ebuild:
+  Masked lynx-2.8.5.ebuild stable for ppc
 
   13 Aug 2004; Rob Holland <tigger@gentoo.org> lynx-2.8.4.1c.ebuild,
   lynx-2.8.4.1d-r1.ebuild, lynx-2.8.4.1d.ebuild, lynx-2.8.5.ebuild:

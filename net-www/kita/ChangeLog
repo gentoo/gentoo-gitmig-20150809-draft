@@ -1,6 +1,14 @@
 # ChangeLog for net-www/kita
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.30 2004/09/01 17:15:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.31 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kita-0.160.0.ebuild, kita-0.170.0.ebuild:
+  Masked kita-0.170.0.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kita-0.160.0.ebuild:
+  Masked kita-0.160.0.ebuild stable for ppc
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> kita-0.160.0.ebuild:
   stable on ppc64, bug #61780

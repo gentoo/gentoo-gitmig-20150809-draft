@@ -1,6 +1,10 @@
 # ChangeLog for net-www/khttrack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.6 2004/08/03 19:40:08 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.7 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  khttrack-0.10.ebuild:
+  Masked khttrack-0.10.ebuild stable for ppc
 
   03 Aug 2004; Dominik Stadler <centic@gentoo.org> khttrack-0.10.ebuild:
   Mark stable on x86

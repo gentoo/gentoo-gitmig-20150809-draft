@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.6 2004/08/28 06:00:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.7 2004/09/03 23:24:07 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> awstats-6.1.ebuild:
+  Masked awstats-6.1.ebuild stable for ppc
 
   27 Aug 2004; Seemant Kulleen <seemant@gentoo.org> awstats-6.1.ebuild:
   Typo in pkg_postinst. propert->proper. Thanks to: Kurt McKee

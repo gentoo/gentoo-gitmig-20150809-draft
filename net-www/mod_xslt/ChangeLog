@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_xslt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.9 2004/06/25 01:05:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.10 2004/09/03 23:24:08 pvdabeel Exp $
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mod_xslt-1.0.5a.ebuild:
+  Masked mod_xslt-1.0.5a.ebuild stable for ppc
 
   23 Apr 2004; Chuck Short <zul@gentoo.org> mod_xslt-1.0.5a.ebuild,
   files/mod-xslt-1.0.5a-content.patch, files/mod-xslt-1.0.5a-debug.patch:
