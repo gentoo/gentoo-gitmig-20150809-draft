@@ -1,0 +1,53 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.new,v 1.2 2001/12/06 20:17:02 azarah Exp
+
+# you can override the scheme by setting it in the environment
+OSCHEME=""
+if [ -n "${SCHEME}" ] ; then OSCHEME=${SCHEME} ; fi
+. /etc/pcmcia.conf
+if [ -n "${OSCHEME}" ] ; then SCHEME=${OSCHEME} ; fi
+
+RUN=/var/run
+SC=${RUN}/pcmcia-scheme
+
+cleanup()
+{
+	while read SN CLASS MOD INST DEV EXTRA ; do
+		if [ "x${SN}" != "xSocket" ] ; then
+			/etc/pcmcia/${CLASS} stop ${DEV} 2> /dev/null
+		fi
+	done
+}
+
+start() {
+	# Scheme is set for the /etc/pcmcia/shared script
+	if [ -n "${SCHEME}" ] ; then umask 022 ; echo $SCHEME > ${SC}
+	else umask 022 ; touch ${SC}
+	fi
+
+	# clean up any old interfaces
+	if [ -r ${RUN}/stab ] ; then
+		cat ${RUN}/stab | cleanup
+	fi
+
+	if [ -z "`fgrep  ds /proc/modules`" ] ; then
+		eerror "You need to load the pcmcia modules ($PCIC) and ds)"
+		eerror "in order for cardmgr to start."
+		return 1
+	fi
+
+	ebegin "Starting pcmcia"
+	start-stop-daemon --start --quiet --exec /sbin/cardmgr -- -s ${RUN}/stab ${CARDMGR_OPTS}
+	eend $?
+}
+
+stop() {
+	if [ -w ${SC} ] ; then rm -f ${SC} ; fi
+
+	ebegin "Stopping pcmcia"
+	start-stop-daemon --stop --quiet --pidfile /var/run/cardmgr.pid --retry 5
+	eend $?
+}
+
