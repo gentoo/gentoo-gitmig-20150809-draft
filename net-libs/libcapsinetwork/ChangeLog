@@ -1,6 +1,9 @@
-# ChangeLog for net-libs/libcapsinetwork 
+# ChangeLog for net-libs/libcapsinetwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapsinetwork/ChangeLog,v 1.9 2004/07/19 19:14:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapsinetwork/ChangeLog,v 1.10 2004/09/05 08:10:16 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *libcapsinetwork-0.3.0 (19 Jul 2004)
 
