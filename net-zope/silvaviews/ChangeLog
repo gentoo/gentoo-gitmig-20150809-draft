@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/silvaviews
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/silvaviews/ChangeLog,v 1.4 2005/02/21 21:34:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silvaviews/ChangeLog,v 1.5 2005/03/28 15:59:10 radek Exp $
+
+*silvaviews-0.10 (28 Mar 2005)
+
+  28 Mar 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  +silvaviews-0.10.ebuild:
+  version bump
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> silvaviews-0.9.ebuild:
   added ~amd64
