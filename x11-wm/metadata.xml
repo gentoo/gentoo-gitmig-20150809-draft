@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The x11-wm category contains X11 window managers.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría x11-wm contiene manejadores de ventanas para X11.
+	</longdescription>
 </catmetadata>
 
