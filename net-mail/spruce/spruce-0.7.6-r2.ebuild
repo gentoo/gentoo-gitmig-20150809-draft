@@ -1,8 +1,8 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>
 # Maintainer: Desktop Team <desktop@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.3 2002/04/16 01:00:28 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk email client"
@@ -10,10 +10,10 @@ SRC_URI="ftp://spruce.sourceforge.net/pub/spruce/devel/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/"
 
 RDEPEND=">=x11-libs/gtk+-1.2.10-r4
-         gnome-base/libglade
-	 ssl? ( >=dev-libs/openssl-0.9.6 )
-         gpg? ( app-crypt/gnupg )
-         gnome? ( >=gnome-base/gnome-print-0.29-r1 )"
+	gnome-base/libglade
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	crypt? ( app-crypt/gnupg )
+	gnome? ( >=gnome-base/gnome-print-0.29-r1 )"
 
 DEPEND="$RDEPEND
         nls? ( sys-devel/gettext )"
@@ -27,24 +27,19 @@ src_unpack() {
 src_compile() {
 	local myopts
 
-	if [ -z "`use nls`" ]; then
-		myopts="--disable-nls"
-	fi
+	use nls \
+		|| myopts="--disable-nls"
 
-	if [ "`use ssl`" ]; then
-		echo "SSL does not work"
+	use ssl \
+		&& echo "SSL does not work"
 		#  myopts="$myopts --with-ssl"
-	fi
 
-	if [ "`use gpg`" ] ; then
-		myopts="$myopts --enable-pgp"
-	else
-		myopts="$myopts --disable-pgp"
-	fi
+	use crypt \
+		&& myopts="$myopts --enable-pgp" \
+		|| myopts="$myopts --disable-pgp"
 
-	if [ "`use gnome`" ] ; then
-		myopts="$myopts --enable-gnome"
-	fi
+	use gnome \
+		&& myopts="$myopts --enable-gnome"
 
 	CFLAGS="${CFLAGS} `gnome-config --cflags print gdk_pixbuf`"
 
