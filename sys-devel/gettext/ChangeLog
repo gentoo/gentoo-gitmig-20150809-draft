@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.22 2003/09/17 18:52:43 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.23 2003/11/02 16:05:27 agriffis Exp $
+
+  02 Nov 2003; Aron Griffis <agriffis@gentoo.org> gettext-0.11.5-r1.ebuild:
+  Repair compilation on alpha when compaq-jdk/jre is installed
 
   16 Sep 2003; Daniel Robbins <drobbins@gentoo> gettext-0.12.1.ebuild:
   KEYWORDS="-*" since it needs C++ to compile and breaks bootstrap.
