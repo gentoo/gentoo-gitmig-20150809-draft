@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.2 2005/01/12 03:51:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.3 2005/01/15 04:13:15 vapier Exp $
+
+*uclibc-0.9.27 (14 Jan 2005)
+
+  14 Jan 2005; Mike Frysinger <vapier@gentoo.org> +uclibc-0.9.27.ebuild:
+  Version bump.
 
   11 Jan 2005; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.26-r8.ebuild:
   Merge psm & my cross compile work together and BAM we have a sweet ebuild.
