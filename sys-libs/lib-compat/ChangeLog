@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/lib-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.11 2003/09/08 12:39:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.12 2003/10/11 17:39:20 azarah Exp $
+
+*lib-compat-1.2-r1 (11 Oct 2003)
+
+  11 Oct 2003; Martin Schlemmer <azarah@gentoo.org> lib-compat-1.2-r1.ebuild:
+  Cleanup the filename s to be a bit more uniform, and fix warning forwith
+  ldconfig from glibc-2.3.3.
 
   08 Sep 2003; Seemant Kulleen <seemant@gentoo.org> lib-compat-1.2.ebuild:
   bumped to stable. Closing bug #27856, by: Brett Simpson
