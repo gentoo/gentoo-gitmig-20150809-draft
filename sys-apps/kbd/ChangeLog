@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.13 2003/07/31 04:29:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.14 2003/07/31 04:37:05 azarah Exp $
 
   31 Jul 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r1.ebuild:
   Fix struct kbd_rate not being fixed for sparc to use 'period' and not 'rate',
@@ -11,7 +11,9 @@
   29 Jul 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r1.ebuild:
   New configure script is even more broken than before - we should not add the
   prefix to the paths we pass --datadir and --mandir, else it looks for data in
-  /usr/usr/share ...
+  /usr/usr/share ... (bug #25448).
+  Thanks to Nicolai Lissner <nlissne@linux01.gwdg.de> who did have the right
+  solution (did not check bug again until now, so missed his feedback).
 
 *kbd-1.08 (28 Jul 2003)
 
