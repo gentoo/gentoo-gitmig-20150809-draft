@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.6 2004/02/27 20:19:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.7 2004/03/21 13:00:46 mboman Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.doxpara.com/paketto/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 #paketto comes with local copies of these ...
 DEPEND="<net-libs/libnet-1.1
