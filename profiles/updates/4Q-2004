@@ -38,3 +38,4 @@ move dev-haskell/WASH dev-haskell/wash
 slotmove =sys-devel/gcc-3.3* 3.2 3.3
 
 move dev-libs/lsh net-misc/lsh
+move sys-apps/cloop sys-fs/cloop
