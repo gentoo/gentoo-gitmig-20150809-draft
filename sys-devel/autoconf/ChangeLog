@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.21 2003/02/24 20:35:36 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.22 2003/03/09 16:46:20 azarah Exp $
+
+  09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> files/ac-wrapper.pl :
+  Some new stuff have AC_PREREQ in [].
 
   20 Feb 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57.ebuild :
   Run autom4te-2.5x if called without setting WANT_AUTOMAKE_2_5=1.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57.ebuild,v 1.5 2003/02/24 20:35:36 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57.ebuild,v 1.6 2003/03/09 16:46:20 azarah Exp $
 
 IUSE=""
 
@@ -104,7 +104,7 @@ src_install() {
 	#
 
 	# need to use 'prefix' here, else we get sandbox problems
-    cd ${OLD_S}
+	cd ${OLD_S}
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
