@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r5.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r5.ebuild,v 1.5 2003/09/07 01:10:02 msterret Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -56,23 +56,23 @@ src_unpack() {
 	# starts with '/dev', modprobe from modutils-2.4.22 do not print any
 	# errors:
 	#
-	#   gateway root # modprobe /dev/sd1   
+	#   gateway root # modprobe /dev/sd1
 	#   modprobe: Can't locate module /dev/sd1
 	#   gateway root # modprobe -C /etc/modules.conf /dev/sd1
 	#   modprobe: Can't locate module /dev/sd1
 	#   gateway root # modprobe -C /etc/modules.devfs /dev/sd1
-	#   gateway root # modprobe foo     
+	#   gateway root # modprobe foo
 	#   modprobe: Can't locate module foo
-	#   gateway root # modprobe -C /etc/modules.conf foo     
+	#   gateway root # modprobe -C /etc/modules.conf foo
 	#   modprobe: Can't locate module foo
-	#   gateway root # modprobe -C /etc/modules.devfs foo     
+	#   gateway root # modprobe -C /etc/modules.devfs foo
 	#   modprobe: Can't locate module foo
-	#   gateway root # 
+	#   gateway root #
 	#   gateway root # modprobe -C /etc/modules.devfs /dev/sd1 && echo yes
 	#   yes
 	#   gateway root # modprobe -C /etc/modules.devfs foo && echo yes
 	#   modprobe: Can't locate module foo
-	#   gateway root # 
+	#   gateway root #
 	epatch ${FILESDIR}/${P}-be-quiet-for-devfsd.patch
 }
 
@@ -89,7 +89,7 @@ src_compile() {
 		--enable-insmod-static \
 		--disable-zlib \
 		${myconf}
-	
+
 	emake || die "emake modutils failed"
 	einfo "Building module-init-tools..."
 	cd ${S}

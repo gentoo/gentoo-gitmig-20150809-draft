@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.13_pre2.ebuild,v 1.2 2003/09/06 14:55:40 pappy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.13_pre2.ebuild,v 1.3 2003/09/07 01:10:06 msterret Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -39,7 +39,7 @@ src_unpack() {
 
 	# Export GPL symbols - from MDK.
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.9.7-export-gpl.patch
-	
+
 	# A hack to have absolutely no output if:
 	#
 	#   1) our config file is /etc/modprobe.devfs or /etc/modules.devfs
@@ -60,7 +60,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	
+
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
 
@@ -75,7 +75,7 @@ src_compile() {
 		--disable-insmod-static \
 		--disable-zlib \
 		${myconf}
-	
+
 	emake || die "emake modutils failed"
 	einfo "Building module-init-tools..."
 	cd ${S}
@@ -123,7 +123,7 @@ src_install () {
 	do
 		mv -f ${f} ${f%\.*}.old.${f##*\.}
 	done
-	
+
 	einstall prefix=${D}
 
 	# Install compat symlink

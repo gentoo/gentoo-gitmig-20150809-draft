@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.12.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.12.ebuild,v 1.4 2003/09/07 01:10:06 msterret Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -36,24 +36,24 @@ src_unpack() {
 	# <drobbins@gentoo.org> (26 Mar 2003)
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
 	epatch ${FILESDIR}/modutils-2.4.22-no-above-below.patch
-	
-    # A hack to have absolutely no output if:
-    #
-    #   1) we have no logging enabled
-    # 
-    #   2) our config file is /etc/modprobe.devfs or /etc/modules.devfs
-    #   
-    #   3) with the module name starting with '/dev/'.
-    #
-    # Rasionale:  This is what modprobe from modutils does.
-    #
-    # <azarah@gentoo.org> (17 Mar 2003)
-    cd ${S}; epatch ${FILESDIR}/${PN}-0.9.11-be-quiet-for-devfsd.patch
+
+	# A hack to have absolutely no output if:
+	#
+	#   1) we have no logging enabled
+	#
+	#   2) our config file is /etc/modprobe.devfs or /etc/modules.devfs
+	#
+	#   3) with the module name starting with '/dev/'.
+	#
+	# Rasionale:  This is what modprobe from modutils does.
+	#
+	# <azarah@gentoo.org> (17 Mar 2003)
+	cd ${S}; epatch ${FILESDIR}/${PN}-0.9.11-be-quiet-for-devfsd.patch
 }
 
 src_compile() {
 	local myconf=
-	
+
 	filter-flags -fPIC
 
 	einfo "Building modutils..."
@@ -65,7 +65,7 @@ src_compile() {
 		--enable-insmod-static \
 		--disable-zlib \
 		${myconf}
-	
+
 	emake || die "emake modutils failed"
 	einfo "Building module-init-tools..."
 	cd ${S}
@@ -113,7 +113,7 @@ src_install () {
 	do
 		mv -f ${f} ${f%\.*}.old.${f##*\.}
 	done
-	
+
 	einstall prefix=${D}
 
 	# Install compat symlink
