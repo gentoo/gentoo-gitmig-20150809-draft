@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/cl-defsystem3
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.1 2003/06/07 19:45:44 mkennedy Exp $
+
+*cl-defsystem3-3.3i (07 Jul 2003)
+
+  07 Jul 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  initial import
