@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/staden
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.2 2004/12/24 02:36:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.3 2004/12/28 21:15:24 ribosome Exp $
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> staden-1.4.1-r7.ebuild:
+  Dependency update: dev-libs/io_lib -> sci-libs/io_lib.
 
   14 Oct 2004; Olivier Fisette <ribosome@gentoo.org> staden-1.4.1-r7.ebuild:
   Use gcc-getCC/CXX from gcc.eclass rather than ${CC/CXX}.

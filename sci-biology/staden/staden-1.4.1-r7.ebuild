@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.1 2004/12/23 21:59:25 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.2 2004/12/28 21:15:24 ribosome Exp $
 
 inherit eutils gcc
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 RDEPEND="app-shells/ksh
 	dev-lang/tcl
 	dev-lang/tk
-	dev-libs/io_lib
+	sci-libs/io_lib
 	=dev-tcltk/itcl-3.2*
 	dev-tcltk/iwidgets
 	media-libs/libpng
@@ -195,13 +195,13 @@ src_compile() {
 
 	# Remove trashed "linux-binaries" file and replace it by a directory
 	# containing the appropriate libraries. Remove libread since an updated
-	# version is included in "dev-libs/io_lib".
+	# version is included in "sci-libs/io_lib".
 	rm ${S}/lib/linux-binaries
 	rm ${S}/src/lib/linux-binaries/libread.so
 	mkdir ${S}/lib/linux-binaries
 	cp ${S}/src/lib/linux-binaries/* ${S}/lib/linux-binaries
 
-	# Delete the binaries already included in "dev-libs/io_lib".
+	# Delete the binaries already included in "sci-libs/io_lib".
 	for FILE in convert_trace \
 		extract_seq \
 		get_comment \
