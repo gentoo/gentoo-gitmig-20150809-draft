@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.59 2005/02/16 19:53:21 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.60 2005/03/01 13:11:02 beu Exp $
+
+*mailman-2.1.6_beta1-r1 (01 Mar 2005)
+
+  01 Mar 2005; Elfyn McBratney <beu@gentoo.org> +files/50_mailman.conf,
+  +mailman-2.1.5-r5.ebuild, +mailman-2.1.6_beta1-r1.ebuild:
+  Rev bumps.  Update to use the new apache paths.  Closes #77916.
 
   16 Feb 2005; Elfyn McBratney <beu@gentoo.org> mailman-2.1.5-r2.ebuild,
   mailman-2.1.5-r3.ebuild, mailman-2.1.5-r4.ebuild,
