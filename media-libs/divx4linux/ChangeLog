@@ -1,12 +1,11 @@
 # ChangeLog for media-libs/divx4linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.8 2002/12/13 10:18:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.9 2002/12/13 10:59:35 blizzy Exp $
 
   13 Dec 2002; Martin Schlemmer <azarah@gentoo.org> divx4linux-20020418-r1.ebuild :
   Fix to install with xvid installed.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
-  Changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Do not install if xvid is installed.

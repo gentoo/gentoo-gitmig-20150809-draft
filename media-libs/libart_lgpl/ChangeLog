@@ -1,9 +1,8 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.6 2002/12/09 04:26:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.7 2002/12/13 10:59:35 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libart_lgpl-2.3.10 (02 Jul 2002)
   02 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> libart_lgpl-2.3.10.ebuild :

@@ -1,9 +1,8 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.5 2002/12/09 04:26:11 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.6 2002/12/13 10:59:35 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> glut-3.7{-r2,.1}.ebuild :
 
