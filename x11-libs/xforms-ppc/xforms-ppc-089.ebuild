@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Header: $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms-ppc/xforms-ppc-089.ebuild,v 1.3 2002/07/22 03:56:31 seemant Exp $
 
 MY_P="bxform-${PV}-glibc21"
 S=${WORKDIR}/${PN/-ppc/}
