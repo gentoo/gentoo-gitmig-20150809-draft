@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 50244614c27f97fdd538c8193ae709c3 vm-pop3d-1.1.6.ebuild 1051
-MD5 74e5a9275ab2a760b8a412bb6857d704 vm-pop3d-1.1.6-r1.ebuild 1365
-MD5 0d9e1147f0cdf0c232e52e809d867d54 ChangeLog 1521
+MD5 ca989b5861f4c100f6cf95b357c83bf1 vm-pop3d-1.1.6-r1.ebuild 1385
+MD5 4d4e9bee8a16259383e3870ed9b44c46 ChangeLog 1660
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 a9d324f523ea86118e7332afd4a86680 files/vm-pop3d.pamd 371
 MD5 ffe8e1df8587bd263bbd0d3f6bbc3f47 files/digest-vm-pop3d-1.1.6-r1 66
@@ -14,7 +14,7 @@ MD5 800c7ed87d86ddfdfb50e3a2738c3f74 files/makefile.in.diff 408
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCHHTOViELBEf1JB0RAulRAKCDCP5HYypDtOApNKK++GNUa0wRBQCcCqYm
-/ADqxO5GHq0/VXjCm0MeyRY=
-=UsUE
+iD8DBQFCHuzoViELBEf1JB0RAn3OAJ97TP6dkY7RiRzSYJxT/GsDhRMuZACfb1QD
+asZjfXzpg69p1pnTGbygnXg=
+=fR3Q
 -----END PGP SIGNATURE-----
