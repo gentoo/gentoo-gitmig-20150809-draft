@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mod_xslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.11 2005/01/10 23:08:18 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.12 2005/01/22 07:25:04 trapni Exp $
+
+*mod_xslt-2.0.4 (22 Jan 2005)
+
+  22 Jan 2005; Christian Parpart <trapni@gentoo.org> metadata.xml,
+  +mod_xslt-2.0.4.ebuild:
+  version bump; Thanks to Daniel Webert <rockoo@gmail.com> who submitted the ebuild 
+  and filed the bug; I just optimized it abit.
 
 *mod_xslt-1.0.5a-r1 (11 Jan 2005)
 
