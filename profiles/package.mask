@@ -22,6 +22,12 @@
 ##   End example
 ##
 
+
+# <drobbins@gentoo.org> (01 Jul 2002)
+# Masked for testing, but should be 100% good:
+=sys-apps/portage-2.0.9
+
+
 # <owen@gentoo.org> (30 Jun 2002 )
 # New ebuild for CCMSN. Masked For Testing.
 =net-im/ccmsn-0.3
