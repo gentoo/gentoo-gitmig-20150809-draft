@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.3 2002/05/02 18:49:15 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.4 2002/06/23 23:59:31 lamer Exp $
+
+*maildrop-1.3.9-r1 (23 Jun 2002)
+	23 Jun 2002; Ben Lutgens <lamer@gentoo.org>
+	I'm explicitly stripping out -funroll-loops cause it's causing maildrop
+	to not compile.
 
 *maildrop-1.3.8-r1 (2 May 2002)
 
