@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qinx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.13 2004/06/28 22:55:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.14 2004/07/06 12:06:02 carlo Exp $
+
+  06 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  -qinx-0.2.ebuild, -qinx-0.3.ebuild, -qinx-0.5.ebuild, qinx-0.6.ebuild:
+  removed old ebuilds, QA: newdepend -> R/DEPEND, need-kde, missing metadata.xml
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> qinx-0.2.ebuild:
   sync IUSE (missing)
