@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.2 2003/06/12 22:28:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.3 2003/06/20 02:49:21 kumba Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
@@ -23,7 +23,7 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~mips"
 
 src_unpack() {
 	unpack ${A}
