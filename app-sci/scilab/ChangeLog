@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.9 2003/10/06 23:37:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.10 2003/10/12 17:53:36 george Exp $
+
+  11 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
+  added few more dependensies for gtk interface
 
   06 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
   looks like gnome-lib is also needed for gtk interface, added it to DEPEND under gtk?
