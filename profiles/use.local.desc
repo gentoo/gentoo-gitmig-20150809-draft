@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.837 2005/01/05 13:10:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.838 2005/01/05 14:47:32 port001 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -723,6 +723,7 @@ www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-client/w3m:migemo - Enables migemo support
+www-misc/nsxml:xslt - Enables xslt support
 www-proxy/squid:underscores - Enables support for domain names containing underscores
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 www-servers/lighttpd:modcache - if you want mod_cache enabled
