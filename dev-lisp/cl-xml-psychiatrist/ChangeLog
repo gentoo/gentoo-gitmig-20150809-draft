@@ -1,0 +1,7 @@
+# ChangeLog for dev-lisp/cl-xml-psychiatrist
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml-psychiatrist/ChangeLog,v 1.2 2004/11/07 22:59:08 swegener Exp $
+
+  07 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing ChangeLog.
+
