@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3149 2004/09/14 11:34:02 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3150 2004/09/14 20:05:19 lv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <lv@gentoo.org> (14 Sep 2004)
+# This release has so many issues it's not even funny. With the insanity
+# caused by unmasking gcc 3.4 on x86, I want to make sure the bugs fixed
+# are actual gcc 3.4 bugs, and not just "ebuild rewrite for 3.4.2" bugs.
+>=sys-devel/gcc-3.4.2
 
 # <foser@gentoo.org> (14 Sep 2004)
 # Big GNOME 2.8 mask
