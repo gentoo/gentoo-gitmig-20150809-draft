@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.12 2003/11/24 06:43:16 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.13 2003/12/05 00:00:34 zhen Exp $
+
+*xerces-c-2.4.0 (04 Dec 2003)
+
+  04 Dec 2003; zhen <zhen@gentoo.org> xerces-c-2.3.0-r5.ebuild,
+  xerces-c-2.4.0.ebuild:
+  bumped to 2.4.0, fresh from the apache foundation. removed 2.3.0-r5 because it
+  is buggy.
 
 *xerces-c-2.3.0-r6 (24 Nov 2003)
 
