@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.9 2004/04/24 00:38:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.10 2004/04/24 00:40:22 vapier Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -99,7 +99,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* arm"
+KEYWORDS="-*"
 IUSE="static nls bootstrap java build X"
 
 # Ok, this is a hairy one again, but lets assume that we
