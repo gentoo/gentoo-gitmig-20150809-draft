@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.15 2005/01/05 15:40:14 foser Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.16 2005/01/30 10:16:09 lanius Exp $
+
+  30 Jan 2005; lanius@gentoo.org :
+  stable on amd64
 
   05 Jan 2004; foser <foser@gentoo.org> gst-plugins-ffmpeg-0.8.3.ebuild :
   Also strip -msse3 from CFLAGS (#64262 comment #35)
