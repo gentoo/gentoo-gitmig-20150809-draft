@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/k3guitune
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.6 2004/09/14 16:36:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.7 2004/10/15 09:18:03 eradicator Exp $
+
+  15 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  Added arts as a dependency because you can't build without mcopidl.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   k3guitune-0.4.1.ebuild:
