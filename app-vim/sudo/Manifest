@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f1a9730cff86ed1160fedfae1afa2b4 ChangeLog 325
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 1b31c51a669a09b05a00a8972a3c705b sudo-1.0.ebuild 688
+MD5 affebc240aa505d80012293896c0a5e4 files/digest-sudo-1.0 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBQMBiLLFUmVNQ7rkRAhsFAJ4u2gOd/lLm8kHyHVyak3iVp9OKcACgvfYC
+txAk1lJrxNCv5MhiQT2HGqw=
+=GWus
+-----END PGP SIGNATURE-----
