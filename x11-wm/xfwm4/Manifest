@@ -1,3 +1,5 @@
 MD5 7d48d3d9554873b4f3aabc027d8f92a7 xfwm4-3.90.0.ebuild 909
-MD5 ac32be21a77119f82ca949853bb1717b ChangeLog 321
+MD5 4b0c2d30daf8a4d524142057cca8356c xfwm4-3.91.0.ebuild 909
+MD5 788be92ed78e53090c6da0f89511d638 ChangeLog 434
 MD5 014760f0755d89d608a75af0d78d8d2d files/digest-xfwm4-3.90.0 64
+MD5 dbecc9c2de3620a774a56158fb534d42 files/digest-xfwm4-3.91.0 64
