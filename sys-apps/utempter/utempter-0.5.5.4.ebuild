@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.4.ebuild,v 1.2 2004/05/03 21:22:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.4.ebuild,v 1.3 2004/05/03 21:28:44 vapier Exp $
 
 inherit rpm eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://fr2.rpmfind.net/linux/fedora/core/development/SRPMS/${MY_P}.src.r
 
 LICENSE="MIT | LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE=""
 
 RDEPEND="virtual/glibc"
