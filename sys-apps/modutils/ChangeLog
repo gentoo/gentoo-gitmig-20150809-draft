@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.12 2003/01/09 08:50:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.13 2003/01/19 19:59:14 tuxus Exp $
 
 *modutils-2.4.22 (25 Nov 2002)
 
@@ -29,6 +29,9 @@
   Version bump thanks to Doug Goldstein <cardoe@cardoe.com>
 
 *modutils-2.4.19 (21 Aug 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   21 Aug 2002; phoen][x <phoenix@gentoo.org> modutils-2.4.19.ebuild,
   files/digest-modutils-2.4.19 :

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.7 2002/12/16 14:39:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.8 2003/01/19 20:03:42 tuxus Exp $
 
 *tcp-wrappers-7.6-r5.ebuild (16 Dec 2002)
 
@@ -16,6 +16,9 @@
   Added LICENSE, KEYWORDS, SLOT.
 
 *tcp-wrappers-7.6-r4 (06 Apr 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   17 Nov 2002; Steafn Jones <cretin@gentoo.org> tcp-wrappers-7.6-r4.ebuild :
   Removed alpha patch and added -fPIC to CFLAGS. This is to aid linking
