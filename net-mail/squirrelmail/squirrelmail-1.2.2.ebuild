@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.2.ebuild,v 1.1 2002/01/02 19:12:56 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.2.ebuild,v 1.2 2002/01/02 20:04:52 g2boojum Exp $
 
 PLUGINS=${PN}_plugins-20010604
 S=${WORKDIR}/${P}
@@ -33,5 +33,7 @@ src_install () {
 	do
 		tar xvzf ${name}
 	done
+	cd ${D}/${HTTPD_ROOT}
+	chown -R nobody.nobody ${P}
 }
 
