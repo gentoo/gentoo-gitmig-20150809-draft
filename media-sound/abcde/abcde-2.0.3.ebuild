@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.0.3.ebuild,v 1.5 2002/08/01 11:59:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.0.3.ebuild,v 1.6 2003/01/19 03:30:43 kain Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a better cd encoder"
@@ -9,7 +9,7 @@ HOMEPAGE="http://lly.org/~rcw/abcde/page/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=media-sound/id3-0.12
         >=media-sound/cd-discid-0.6
