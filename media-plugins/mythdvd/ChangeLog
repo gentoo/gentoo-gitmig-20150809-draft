@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.13 2004/06/24 23:33:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.14 2004/09/10 19:49:29 aliz Exp $
+
+*mythdvd-0.16 (10 Sep 2004)
+
+  10 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythdvd-0.16.ebuild:
+  Version bump.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> mythdvd-0.13.ebuild:
   Fix use invocation
