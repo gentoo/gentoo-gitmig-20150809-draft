@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.1.2.ebuild,v 1.7 2003/07/22 19:35:58 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.1.2.ebuild,v 1.8 2004/01/07 00:03:49 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/qt-x11-free-${PV}
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 HOMEPAGE="http://www.trolltech.com/"
 DESCRIPTION="Documentation for the QT ${PV} API"
-KEYWORDS="x86 sparc ppc alpha hppa amd64"
+KEYWORDS="x86 sparc ppc alpha hppa amd64 ia64"
 SLOT="3"
 LICENSE="QPL-1.0"
 
