@@ -1,27 +1,66 @@
-diff -ur NPRQuake-SDL-orig/Makefile NPRQuake-SDL/Makefile
---- NPRQuake-SDL-orig/Makefile	2003-07-16 23:58:48.000000000 -0400
-+++ NPRQuake-SDL/Makefile	2003-07-16 23:58:59.000000000 -0400
+diff -ur NPRQuake-SDL.orig/Makefile NPRQuake-SDL/Makefile
+--- NPRQuake-SDL.orig/Makefile	2003-09-28 20:09:29.010852408 -0400
++++ NPRQuake-SDL/Makefile	2003-09-28 20:09:29.521774736 -0400
 @@ -1,4 +1,4 @@
 -RELEASE_CFLAGS=-Dstricmp=strcasecmp -mcpu=i586 -march=i586 -O6 -ffast-math -funroll-loops -fomit-frame-pointer -fexpensive-optimizations
-+RELEASE_CFLAGS=-Dstricmp=strcasecmp GENTOO_CFLAGS -O6 -ffast-math -funroll-loops -fomit-frame-pointer -fexpensive-optimizations
++RELEASE_CFLAGS=-Dstricmp=strcasecmp $(OPTFLAGS) -DGENTOO_LIBDIR='\"$(GENTOO_LIBDIR)\"' -DGENTOO_DATADIR='\"$(GENTOO_DATADIR)\"'
  
  DEBUG_CFLAGS=-Dstricmp=strcasecmp -g
  
-diff -ur NPRQuake-SDL-orig/NPRQuakeSrc/Makefile NPRQuake-SDL/NPRQuakeSrc/Makefile
---- NPRQuake-SDL-orig/NPRQuakeSrc/Makefile	2003-07-16 23:58:48.000000000 -0400
-+++ NPRQuake-SDL/NPRQuakeSrc/Makefile	2003-07-16 23:59:38.000000000 -0400
+diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/Makefile NPRQuake-SDL/NPRQuakeSrc/Makefile
+--- NPRQuake-SDL.orig/NPRQuakeSrc/Makefile	2003-09-28 20:09:29.065844048 -0400
++++ NPRQuake-SDL/NPRQuakeSrc/Makefile	2003-09-28 20:09:43.153702368 -0400
 @@ -29,7 +29,7 @@
  
  CC=gcc
  
 -RELEASE_CFLAGS=$(BASE_CFLAGS) -mcpu=i586 -march=i586 -O6 -ffast-math -funroll-loops -fomit-frame-pointer -fexpensive-optimizations
-+RELEASE_CFLAGS=$(BASE_CFLAGS) GENTOO_CFLAGS -O6 -ffast-math -funroll-loops -fomit-frame-pointer -fexpensive-optimizations
++RELEASE_CFLAGS=$(BASE_CFLAGS) $(OPTFLAGS) -DGENTOO_LIBDIR='\"$(GENTOO_LIBDIR)\"' -DGENTOO_DATADIR='\"$(GENTOO_DATADIR)\"'
  DEBUG_CFLAGS=$(BASE_CFLAGS) -g
  LDFLAGS=-lm
  CFLAGS=$(RELEASE_CFLAGS)
-diff -ur NPRQuake-SDL-orig/NPRQuakeSrc/gl_rmisc.c NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c
---- NPRQuake-SDL-orig/NPRQuakeSrc/gl_rmisc.c	2003-07-16 23:58:49.000000000 -0400
-+++ NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c	2003-07-17 00:00:39.000000000 -0400
+@@ -176,7 +176,7 @@
+ 	$(DO_GL_CC)
+ 
+ $(BUILDDIR)/glquake/common.o :       common.c
+-	$(DO_GL_DEBUG_CC)
++	$(DO_GL_CC)
+ 
+ $(BUILDDIR)/glquake/console.o :      console.c
+ 	$(DO_GL_CC)
+diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/common.c NPRQuake-SDL/NPRQuakeSrc/common.c
+--- NPRQuake-SDL.orig/NPRQuakeSrc/common.c	2003-09-28 20:09:29.140832648 -0400
++++ NPRQuake-SDL/NPRQuakeSrc/common.c	2003-09-28 20:09:29.525774128 -0400
+@@ -1775,11 +1775,16 @@
+ // start up with GAMENAME by default (id1)
+ //
+ 	COM_AddGameDirectory (va("%s/"GAMENAME, basedir) );
++	COM_AddGameDirectory (GENTOO_DATADIR"/"GAMENAME);
+ 
+-	if (COM_CheckParm ("-rogue"))
++	if (COM_CheckParm ("-rogue")) {
+ 		COM_AddGameDirectory (va("%s/rogue", basedir) );
+-	if (COM_CheckParm ("-hipnotic"))
++		COM_AddGameDirectory (GENTOO_DATADIR"/rogue");
++	}
++	if (COM_CheckParm ("-hipnotic")) {
+ 		COM_AddGameDirectory (va("%s/hipnotic", basedir) );
++		COM_AddGameDirectory (GENTOO_DATADIR"/hipnotic");
++	}
+ 
+ //
+ // -game <gamedir>
+@@ -1790,6 +1795,7 @@
+ 	{
+ 		com_modified = true;
+ 		COM_AddGameDirectory (va("%s/%s", basedir, com_argv[i+1]));
++		COM_AddGameDirectory (va(GENTOO_DATADIR"/%s", com_argv[i+1]));
+ 	}
+ 
+ //
+diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/gl_rmisc.c NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c
+--- NPRQuake-SDL.orig/NPRQuakeSrc/gl_rmisc.c	2003-09-28 20:09:29.139832800 -0400
++++ NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c	2003-09-28 20:09:29.529773520 -0400
 @@ -563,13 +563,15 @@
  
      // this should be as big as the number of functions we pull out.
@@ -39,4 +78,3 @@ diff -ur NPRQuake-SDL-orig/NPRQuakeSrc/gl_rmisc.c NPRQuake-SDL/NPRQuakeSrc/gl_rm
  #endif
  
      if( hnewlib == NULL ) {
-Only in NPRQuake-SDL/NPRQuakeSrc: gl_rmisc.c.orig
