@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/blowfishj
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.1 2004/11/12 00:18:45 karltk Exp $
+
+*blowfishj-2.13 (12 Nov 2004)
+
+  12 Nov 2004; Karl Trygve Kalleberg <karltk@gentoo.org> +metadata.xml, 
+  +blowfishj-2.13.ebuild:
+  Initial import. Ebuild submitted by Saleem A. <compnerd@compnerd.org>, fixes
+  #70326.
+
