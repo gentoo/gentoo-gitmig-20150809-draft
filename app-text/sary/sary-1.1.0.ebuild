@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.1.0.ebuild,v 1.2 2005/01/01 16:34:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.1.0.ebuild,v 1.3 2005/01/27 07:23:31 nigoro Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sary.namazu.org/"
 SRC_URI="http://prime.sourceforge.jp/src/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="~x86 ~alpha ~ppc ~ppc64"
 SLOT="0"
 
 DEPEND=">=dev-libs/glib-2"
