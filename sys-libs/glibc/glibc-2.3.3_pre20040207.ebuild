@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040207.ebuild,v 1.4 2004/02/24 18:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040207.ebuild,v 1.5 2004/02/24 18:34:52 pappy Exp $
 
 IUSE="nls pic build nptl"
 
@@ -297,7 +297,8 @@ src_unpack() {
 	# Program header support for PaX.
 	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
 
-	# prevent unresolvable relocation against symbol `main' in Scrt1.o
+	# suppress unresolvable relocation against symbol `main' in Scrt1.o
+	# can be reproduced with compiling net-dns/bind-9.2.2-r3 using -pie
 	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-got-fix.diff
 
 	# Cosmetic change to SSP
