@@ -1,0 +1,11 @@
+--- demo6.c	2004-08-21 14:13:20.233320280 +0300
++++ demo6.c	2004-08-21 14:11:17.624959584 +0300
+@@ -55,7 +55,7 @@
+ 				write(req->sock, buff, len);
+ 			ret = tux(TUX_ACTION_FINISH_CLOSE_REQ, req);
+ 			break;
+-		abort:
++		abort: ;
+ 	}
+ 	return ret;
+ }

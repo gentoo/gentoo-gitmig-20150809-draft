@@ -1,7 +1,18 @@
-MD5 e25e75c6afb782bf71a021502e4c3472 ChangeLog 804
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0a573b3ca4314dccd5c1467bffed361 ChangeLog 956
 MD5 de847eec61d31baf25b41719ec7c9bba tux-2.2.7.ebuild 811
-MD5 f4610dcc1bee1718179de0d8dd479348 tux-3.2.16.ebuild 994
+MD5 e4cc6d649672c9b11f73c169db444dad tux-3.2.16.ebuild 1033
 MD5 5cdf6a00aa7a9f1a9c960054ddf17917 files/digest-tux-2.2.7 60
 MD5 eec61576fb028448bc45ca00fe54efeb files/digest-tux-3.2.16 61
 MD5 05de99492b2c2d9d8cbb30adc0791fa8 files/tux.conf.d 1852
 MD5 499c8232be6bee50514aee499c1e44a8 files/tux.init.d 1705
+MD5 09a5dc28058212cacca2e40c2f57bb25 files/3.2.16-gcc34.patch 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBM91vHTu7gpaalycRAjiDAKCF2588Mq9Pb797JU7Hwxmaj/Ko2QCgzY6+
+ZdJwbe02z4orU4u96cBmv4Q=
+=eyB4
+-----END PGP SIGNATURE-----
