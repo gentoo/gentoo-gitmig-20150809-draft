@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.11 2004/07/01 11:18:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.12 2005/04/01 23:05:45 vapier Exp $
 
 inherit eutils games
 
@@ -16,6 +16,7 @@ IUSE="3dfx X opengl"
 
 RDEPEND="virtual/libc
 	X? ( virtual/x11 )
+	=media-libs/libsdl-1.2*
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
