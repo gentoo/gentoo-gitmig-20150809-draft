@@ -99,6 +99,7 @@ net-wireless
 net-www
 net-zope
 rox-base
+rox-extra
 sec-policy
 sys-apps
 sys-boot
