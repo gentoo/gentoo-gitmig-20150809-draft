@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgpool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/ChangeLog,v 1.21 2005/02/11 17:56:49 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/ChangeLog,v 1.22 2005/02/11 17:58:17 nakano Exp $
+
+  11 Feb 2005; Masatomo Nakano <nakano@gentoo.org> pgpool-2.4.ebuild:
+  Makred stable on x86.
 
 *pgpool-2.5 (11 Feb 2005)
 
