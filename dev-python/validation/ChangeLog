@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/validation
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/validation/ChangeLog,v 1.1 2003/10/11 06:12:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/validation/ChangeLog,v 1.2 2003/10/11 08:38:22 robbat2 Exp $
+
+*validation-1.0.1 (11 Oct 2003)
+
+  11 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> validation-1.0.1.ebuild:
+  version bump, source is now inside archetypes
 
 *validation-1.0 (10 Oct 2003)
 
