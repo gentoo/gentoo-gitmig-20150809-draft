@@ -1,20 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r9.ebuild,v 1.2 2002/04/21 12:40:51 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r9.ebuild,v 1.3 2002/05/04 17:18:13 bangert Exp $
 
 # to use this, you must be part of the "cron" group
 
 S=${WORKDIR}/dcron
 DESCRIPTION="A cute little cron from Matt Dillon"
 SRC_URI="http://apollo.backplane.com/FreeSrc/dcron27.tgz"
-HOMEPAGE="http://apollo.backplane.com"
+HOMEPAGE="http://apollo.backplane.com/"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
 RDEPEND="!virtual/cron
 	sys-apps/cronbase
 	virtual/mta"
+
 PROVIDE="virtual/cron"
 
 src_unpack() {
@@ -59,11 +61,11 @@ src_install() {
 
 pkg_postinst() {
 
-    echo
-    einfo "To activate /etc/cron.{hourly|daily|weekly|montly} please run: "
-    einfo "crontab /etc/crontab"
-    echo 
-    einfo "!!! That will replace root's current crontab !!!"
-    echo
+	echo
+	einfo "To activate /etc/cron.{hourly|daily|weekly|montly} please run: "
+	einfo "crontab /etc/crontab"
+	echo
+	einfo "!!! That will replace root's current crontab !!!"
+	echo
 
 }
