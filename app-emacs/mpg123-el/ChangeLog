@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/mpg123-el
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.1 2004/06/04 20:16:24 usata Exp $
+
+*mpg123-el-1.42 (05 Jun 2004)
+
+  05 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> mpg123-el-1.42.ebuild,
+  files/50mpg123-el-gentoo.el:
+  Initial import. Thanks to Louis C. Candell <gentoo@ossh.com> and
+  Atzm Watanabe <sitosito@p.chan.ne.jp>, closing bug #37456
+
