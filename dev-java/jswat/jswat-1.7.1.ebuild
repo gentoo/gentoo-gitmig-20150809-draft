@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1.ebuild,v 1.1 2003/05/24 10:45:47 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1.ebuild,v 1.2 2003/05/24 18:07:29 absinthe Exp $
 
 inherit java-pkg
 
 S="${WORKDIR}/${PN}-${PV}"
-DESCRIPTION="Extensible graphical Java debugger for JDK 1.3"
+DESCRIPTION="Extensible graphical Java debugger"
 HOMEPAGE="http://www.bluemarsh.com/java/jswat"
 SRC_URI="mirror://sourceforge/jswat/${P}.tar.gz"
 LICENSE="GPL-2"
