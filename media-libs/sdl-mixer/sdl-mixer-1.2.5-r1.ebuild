@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.9 2004/03/17 04:55:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.10 2004/04/03 07:13:12 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
 IUSE="mpeg mikmod oggvorbis"
 
-DEPEND=">=media-libs/libsdl-1.2.5
-	>=sys-apps/sed-4
+RDEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/smpeg-0.4.4-r1
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-RDEPEND=""
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
