@@ -1,7 +1,15 @@
 # ChangeLog for dev-util/colorgcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.8 2003/08/26 08:48:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.9 2003/10/02 17:06:03 kumba Exp $
 
+*colorgcc-1.3.2-r4 (02 Oct 2003)
+
+  02 Oct 2003; Joshua Kinard <kumba@gentoo.org> colorgcc-1.3.2-r4.ebuild,
+  files/colorgcc-1.3.2-gentoo-one.patch,
+  files/colorgcc-1.3.2-gentoo-two.patch:
+  New colorgcc ebuild, thanks goto Wayne Davison <gentoo@blorf.net> for his
+  work on this package.
+  Closes Bugs #15387 and #29178.
 
 *colorgcc-1.3.2-r3 (09 Feb 2003)
 
