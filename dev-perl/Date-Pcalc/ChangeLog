@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Date-Pcalc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.1 2004/08/26 10:02:28 rl03 Exp $
+
+*Date-Pcalc-1.2 (26 Aug 2004)
+
+  26 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +Date-Pcalc-1.2.ebuild:
+  Initial ebuild. OTRS dependency. OK'd by mcummings.
+
