@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xwgui2/xwgui2-2.08.ebuild,v 1.3 2004/06/24 22:53:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xwgui2/xwgui2-2.08.ebuild,v 1.4 2004/12/26 19:44:51 plasmaroo Exp $
 
 DESCRIPTION="xwGUI2 is an image and photo layout application aimed for printing"
 HOMEPAGE="http://xwgui.automatix.de/"
@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/x11
 	>=x11-libs/xforms-1.0
-	>=media-libs/t1lib-1.0"
+	=media-libs/t1lib-1*"
 
 S="${WORKDIR}/xwGUI"
 
@@ -30,6 +30,7 @@ src_compile() {
 	sed -e 's/20,xwGR/23,xwGR/' -i xwGUI/*.c || die
 
 	cd xwGUI || die
+	sed -e 's:/usr/X11R6/lib/libforms.so.1.0:/usr/lib/libforms.so.1:' -i Makefile || die
 	emake || die
 	echo
 	echo
