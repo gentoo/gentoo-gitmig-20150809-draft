@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.6 2003/10/23 14:18:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.7 2003/12/06 02:47:21 zul Exp $
+
+  05 Dec 2003; Chuck Short <zul@gentoo.org> radvd-0.7.2-r1.ebuild:
+  Chown fixes.
 
 *radvd-0.7.2-r1 (21 Apr 2003)
  
