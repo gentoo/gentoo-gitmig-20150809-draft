@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cc011570ac87e2d1052e71db4fdce1c4 ChangeLog 6322
+MD5 fa86668859e99ed8d405c701681068cc ChangeLog 6410
 MD5 c4319ef2e1cc3ca5d5d6ae2408c5b70f uw-imap-2002e-r3.ebuild 3356
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 7f6b3d166deb9a5536e6bb3ed0cdb03c uw-imap-2002e.ebuild 2932
@@ -9,7 +9,7 @@ MD5 d924c53550af88a6d3f210e44940b399 uw-imap-2002e-r4.ebuild 3177
 MD5 3c8b9095f4bd5afcd95c93a076635c56 uw-imap-2002e-r1.ebuild 3093
 MD5 979bed91d308223958ffe9c988d744ad uw-imap-2002e-r2.ebuild 3108
 MD5 8dd3c14bf6b644035b66eb851612386e uw-imap-2002d-r1.ebuild 2935
-MD5 e825ed63ec2b40f2c1494c1eb01fbc2e uw-imap-2004a.ebuild 3297
+MD5 d84f5bd7c99a6bf8f8ed41668c621ded uw-imap-2004a.ebuild 3296
 MD5 e4d5b81145aa085b4e36d86e6318dac1 uw-imap-2002d.ebuild 2586
 MD5 506e7347cac698714cf5cd60eca761ba files/uw-ipop2.xinetd 563
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-uw-imap-2002e-r4 62
@@ -29,7 +29,7 @@ MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-uw-imap-2002e-r3 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBpFR710xuJSrg3/sRAonGAJ0erKs6b08VSv/npo6NxD1vwiPlyQCbBoL8
-U/5uE8h8zDOrdYU+vX38G3A=
-=Uexb
+iD8DBQFBpFWd10xuJSrg3/sRAnrXAJ0b4qbTUFELFEoJdrHbiTwFfs6vXwCeNkmK
+OhhfmHAFU2Ivcjr9ASlE010=
+=eoGz
 -----END PGP SIGNATURE-----
