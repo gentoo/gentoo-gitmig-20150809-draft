@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/pnetlib
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.10 2004/01/03 23:21:08 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.11 2004/03/13 11:00:35 scandium Exp $
+
+*pnetlib-0.6.4 (13 Mar 2004)
+
+  13 Mar 2004; Rainer Groesslinger <scandium@gentoo.org> pnetlib-0.6.4.ebuild:
+  new version (thanks to all the arch people!)
 
 *pnetlib-0.6.2 (03 Jan 2004)
 
