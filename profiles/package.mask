@@ -22,6 +22,12 @@
 ##   End example
 ##
 
+# <chadh@gentoo.org> (19 Jul 2002)
+# new ebuild.  x86-only.  Should be good to go once it is masked for alt arch
+app-misc/lphdisk
+# new ebuild.  probably x86-only as well.
+app-misc/mwavem
+
 # <spider@gentoo.org> (19 Jul 2002)
 # new ebuild, waiting for our good ppc guys to test this and sparkle with holy pengin .... whatever
 net-analyzer/driftnet
