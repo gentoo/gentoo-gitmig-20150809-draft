@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/yasr
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.6 2004/04/19 14:48:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.7 2004/04/23 03:57:35 dmwaters Exp $
+
+  22 Apr 2004; Deedra Waters,,, <dmwaters@gentoo.org> yasr-0.6.5.ebuild:
+  Marking stable on x86
+  Fixed a typo in RDEPENd 
+  Changed RDEPEND to be empty since the package has no runtime dependencies.
 
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org> yasr-0.6.5.ebuild:
   QA - removed runtime dependance on make and autoconf
