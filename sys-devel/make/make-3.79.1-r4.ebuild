@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r4.ebuild,v 1.10 2003/09/05 02:07:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r4.ebuild,v 1.11 2004/06/24 02:52:07 agriffis Exp $
 
 IUSE="nls static build"
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/glibc"
 
 src_compile() {
 	local myconf=""
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myconf="--disable-nls"
 	fi
@@ -29,7 +29,7 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		make ${MAKEOPTS} || die
 	else
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		make DESTDIR=${D} install || die
 
