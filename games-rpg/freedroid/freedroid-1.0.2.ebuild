@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.5 2004/05/27 20:56:25 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.6 2004/06/04 06:50:47 mr_bones_ Exp $
 
 inherit games flag-o-matic gcc
 
@@ -22,12 +22,12 @@ DEPEND=">=media-libs/libsdl-1.2.3
 	oggvorbis? ( media-libs/libvorbis )"
 
 src_compile() {
-	[ "`gcc-fullversion`" == "3.2.3" ] && filter-mfpmath sse
+	[ "$(gcc-fullversion)" == "3.2.3" ] && filter-mfpmath sse
 	games_src_compile
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README
 	prepgamesdirs
 }

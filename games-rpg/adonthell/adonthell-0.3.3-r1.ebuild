@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.3-r1.ebuild,v 1.5 2004/06/03 18:43:14 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.3-r1.ebuild,v 1.6 2004/06/04 06:50:47 mr_bones_ Exp $
 
 inherit games
 
@@ -23,8 +23,8 @@ DEPEND="dev-lang/python
 
 src_compile() {
 	egamesconf \
-		`use_enable nls` \
-		`use_enable doc` \
+		$(use_enable nls) \
+		$(use_enable doc) \
 		--with-gnu-ld \
 		|| die
 	touch doc/items/{footer,header}.html
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README AUTHORS ChangeLog FULLSCREEN.howto NEWBIE NEWS
 	prepgamesdirs
 }

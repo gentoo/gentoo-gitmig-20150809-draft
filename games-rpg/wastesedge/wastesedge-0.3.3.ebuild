@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.7 2004/06/03 18:43:14 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.8 2004/06/04 06:50:47 mr_bones_ Exp $
 
 inherit games
 
@@ -24,8 +24,8 @@ DEPEND="virtual/x11
 
 src_compile(){
 	egamesconf \
-		`use_enable nls` \
-		`use_enable doc` \
+		$(use_enable nls) \
+		$(use_enable doc) \
 		--with-adonthell-binary=${GAMES_BINDIR}/adonthell \
 		|| die
 	emake || die "emake failed"
