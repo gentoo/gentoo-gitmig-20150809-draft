@@ -1,0 +1,14 @@
+Browse to http://${VHOST_HOSTNAME}/${PN} and complete the installation. 
+
+When you are done,:
+- edit ${MY_INSTALLDIR}/config.ini.php and set 
+classdir = "${VHOST_ROOT}/${PN}/class"
+
+- rm ${MY_INSTALLDIR}/config_setup.php and 
+- chmod 644 ${MY_INSTALLDIR}/config.ini.php
+
+Change the god password but don't delete the accound yet.
+
+If you want htdig/ldap support, see
+http://press.list.free.fr/contrib/CUPE/ldap/README
+http://press.list.free.fr/contrib/CUPE/htdig/README
