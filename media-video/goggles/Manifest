@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 465152cbc840121feecf5d614ff24286 goggles-0.7.4.ebuild 925
-MD5 d4ea8ce406c277c00c504104ea8d7947 ChangeLog 362
+MD5 d1bc3318149c3291ad385462152d0369 ChangeLog 446
+MD5 64b8fc00c008f8aad8edeb31df3826a0 goggles-0.7.4.ebuild 929
 MD5 526f11a066c4a4c196484c623e3aa5c5 metadata.xml 164
 MD5 24eefdf711e3a7ce5e095b5b989741b8 files/digest-goggles-0.7.4 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBLXHbHTu7gpaalycRAt2uAJ9/zF4OK8U0wimnlt6xRM8g1BhT+QCgzZbV
-NvTgWWNcmqBTZLofQF0FC34=
-=24qj
------END PGP SIGNATURE-----
