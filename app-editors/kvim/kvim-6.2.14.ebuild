@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.3 2003/09/08 15:17:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.4 2003/10/03 11:53:04 agriffis Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -12,7 +12,7 @@ DESCRIPTION="KDE editor based on vim"
 SRC_URI="http://freenux.org/${PN}/${P//_}.tar.bz2"
 HOMEPAGE="http://www.freehackers.org/${PN}"
 LICENSE="GPL-2"
-KEYWORDS="~alpha x86 sparc"
+KEYWORDS="alpha x86 sparc"
 newdepend ">=app-editors/vim-core-6.2
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
 	cscope? ( dev-util/cscope )
