@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.33 2005/03/18 22:19:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.34 2005/03/20 14:45:19 weeve Exp $
+
+  20 Mar 2005; Jason Wever <weeve@gentoo.org> lostirc-0.4.4.ebuild:
+  Stable on SPARC wrt bug #65804.
 
   18 Mar 2005; Sven Wegener <swegener@gentoo.org> -lostirc-0.4.3.ebuild,
   lostirc-0.4.4.ebuild:
