@@ -1,11 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.8 2003/04/01 18:06:58 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.9 2003/06/08 14:51:36 mholzer Exp $
 
 inherit base
 
 DESCRIPTION="distribution of Wine with enhanced DirectX for gaming"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-fake_windows.tar.bz2
+	mirror://gentoo/${P}-misc.tar.bz2"
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="0"
@@ -32,12 +34,11 @@ src_unpack() {
 	# Unpacking the miscellaneous files
 	mkdir misc
 	cd misc
-	tar jxvf ${FILESDIR}/${P}-misc.tar.bz2 &> /dev/null
+	tar jxvf ${DISTDIR}/${P}-misc.tar.bz2 &> /dev/null
 	chown root:root *
 }
 
 src_compile() {
-    
 	cd ${S}
 	local myconf
 
@@ -87,7 +88,7 @@ src_install () {
 	# winex wrapper script
 	dodir /usr/lib/winex/.data
 	cd ${D}/usr/lib/winex/.data
-	tar jxvf ${FILESDIR}/${P}-fake_windows.tar.bz2
+	tar jxvf ${DISTDIR}/${P}-fake_windows.tar.bz2
 	chown root:root fake_windows/ -R
 
 	# moving the wrappers to bin/
@@ -119,7 +120,6 @@ src_install () {
 	# Remove the executable flag from those libraries.
 	cd ${D}/usr/lib/${PN}/bin
 	chmod a-x *.so
-		
 }
 
 pkg_postinst() {
@@ -131,4 +131,3 @@ pkg_postinst() {
 	einfo "Manpage has been installed to the system."
 	einfo "\"man winex\" should show it."
 }
-
