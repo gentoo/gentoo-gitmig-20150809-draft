@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.12 2004/06/18 19:57:01 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.13 2004/06/18 22:44:06 fvdpol Exp $
+
+*hydrogen-0.8.2-r2 (19 Jun 2004)
+
+  19 Jun 2004; Frank van de Pol <fvdpol@gentoo.org>
+  +files/hydrogen-0.8.2-64bit.patch, +hydrogen-0.8.2-r2.ebuild:
+  Added patch to fix noise on amd64. Closes bug #54340
 
 *hydrogen-0.8.2-r1 (18 Jun 2004)
 
