@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.18 2002/11/05 15:32:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.19 2002/12/03 14:54:51 nall Exp $
 
 
 *file-roller-2.0.4 (04 Nov 2002)
@@ -14,6 +14,9 @@
   
     
 *file-roller-2.1.2 (27 Oct 2002)
+
+  03 Dec 2002; Jon Nall <nall@gentoo.org> file-roller-2.1.2.ebuild :
+  keyworded ~ppc
 
   27 Oct 2002; foser <foser@gentoo.org> file-roller-2.1.2.ebuild :
   New unstable tree version

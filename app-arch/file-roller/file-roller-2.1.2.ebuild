@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.1.2.ebuild,v 1.3 2002/11/29 23:13:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.1.2.ebuild,v 1.4 2002/12/03 14:54:51 nall Exp $
 
 inherit gnome2 debug
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.gnome.org/pub/GNOME/desktop/2.1/2.1.1/sources/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="=x11-libs/gtk+-2.1*
 	>=gnome-base/gnome-vfs-2.0.4	
