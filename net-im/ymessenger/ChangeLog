@@ -1,6 +1,11 @@
 # ChangeLog for net-im/ymessenger
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ChangeLog,v 1.8 2002/12/13 10:59:59 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ChangeLog,v 1.9 2003/01/18 23:02:19 raker Exp $
+
+  18 Jan 2003; Nick Hadaway <raker@gentoo.org> ymessenger-0.99.19.ebuild :
+  Removed gnome use variable and now DEPEND on gtkhtml as there are text
+  rendering problems with the included gtkhtml libraries.  See bug
+  #12311.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

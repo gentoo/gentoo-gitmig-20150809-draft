@@ -1,8 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.11 2002/12/09 04:33:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.12 2003/01/18 23:02:19 raker Exp $
 
-IUSE="gnome"
+IUSE=""
 
 # If you are looking in here, it is because emerge has instructed you to do
 # so.  Please go to http://messenger.yahoo.com/download/unix.html and scroll
@@ -16,7 +16,7 @@ SRC_URI=""
 HOMEPAGE="http://messenger.yahoo.com/messenger/download/unix.html"
 
 DEPEND="media-libs/gdk-pixbuf
-	gnome? ( gnome-extra/gtkhtml )"
+	gnome-extra/gtkhtml"
 RDEPEND="virtual/x11"
 
 RESTRICT="fetch"
@@ -64,38 +64,42 @@ src_install () {
 	doins bin/*
 
 	exeinto /opt/ymessenger/bin
-	doexe bin/ymessenger
+	#doexe bin/ymessenger
 	doexe bin/ymessenger.bin
+	rm ${D}/opt/ymessenger/bin/ymessenger
+	dosym /opt/ymessenger/bin/ymessenger.bin /opt/ymessenger/bin/ymessenger
 
-	cp -a lib ${D}/opt/${PN}
+	#cp -a lib ${D}/opt/${PN}
 	
 	#use gnome && ( \
 	#	insinto /usr/share/gnome/apps/Internet
 	#	doins ymessenger.desktop
-#
-#		insinto /usr/share/pixmaps
-#		doins yahoo.xpm
-#	) || (
-#		dohtml yahoo.xpm
-#	)
+	#
+	#	insinto /usr/share/pixmaps
+	#	doins yahoo.xpm
+	#) || (
+	#	dohtml yahoo.xpm
+	#)
 	
-#	use kde && ( \
-#		insinto ${KDEDIR}/share/applnk/Applications
-#		doins ymessenger.kdelnk
-#
-#		insinto ${KDEDIR}/share/icons/hicolor/48x48/apps
-#		doins yahoo.png
-#	) || (
-#		dohtml yahoo.png
-#	)
+	#use kde && ( \
+	#	insinto ${KDEDIR}/share/applnk/Applications
+	#	doins ymessenger.kdelnk
+	#
+	#	insinto ${KDEDIR}/share/icons/hicolor/48x48/apps
+	#	doins yahoo.png
+	#) || (
+	#	dohtml yahoo.png
+	#)
 
 	dodir /etc/env.d
 	echo "PATH=/opt/ymessenger/bin" > ${D}/etc/env.d/97ymessenger
 }
 
 pkg_postinst() {
-
-	einfo "If you are upgrading from an old version of ymessenger, please"
-	einfo "remove the older version.  Also, please do this: "
+	einfo ""
+	einfo "If you are upgrading from an older version of ymessenger,"
+	einfo "please unmerge the previous version."
+	einfo "-=AND=-"
 	einfo "mv ~/.ymessenger/preferences ~/.ymessenger/preferences.old"
+	einfo ""
 }
