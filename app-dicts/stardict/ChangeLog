@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.5 2003/05/04 18:39:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.6 2003/05/21 08:25:01 liquidx Exp $
+
+  21 May 2003; Alastair Tse <liquidx@gentoo.org> stardict-1.3.ebuild,
+  stardict-1.3.ebuild, stardict-2.0.0.ebuild, stardict-2.0.0_pre2.ebuild,
+  stardict-2.0.0_pre2.ebuild:
+  marking stardict 2.0.0 as stable and cleanups
 
 *stardict-2.0.0 (04 May 2003)
 
