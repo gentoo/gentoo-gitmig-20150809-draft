@@ -1,20 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.10.1-r1.ebuild,v 1.4 2004/06/24 22:27:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.32_pre20041012.ebuild,v 1.1 2004/10/12 15:45:32 usata Exp $
 
 inherit elisp
 
-MY_P="${P/wanderlust/wl}"
+MY_P="wl-${PV/_pre/-}"
 
 IUSE="ssl"
 
-DESCRIPTION="Wanderlust is a mail/news reader supporting IMAP4rev1 for emacsen"
+DESCRIPTION="Wanderlust -- Yet Another Message Interface on Emacsen"
 HOMEPAGE="http://www.gohome.org/wl/"
-SRC_URI="ftp://ftp.gohome.org/wl/stable/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha sparc ppc"
+# Please do not mark it stable since this is merely a CVS snapshot
+KEYWORDS="~x86 ~alpha ~sparc ~ppc ~ppc-macos"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.6
@@ -22,17 +24,10 @@ DEPEND="virtual/emacs
 	virtual/semi
 	!app-emacs/wanderlust-cvs"
 
-S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-	if use ssl ; then
-		cd ${S}
-		echo "(setq wl-install-utils t)" >> WL-CFG
-	fi
-}
+S="${WORKDIR}/${PN}"
 
 src_compile() {
+	use ssl && echo "(setq wl-install-utils t)" >> WL-CFG
 	make || die
 	make info || die
 }
@@ -54,14 +49,4 @@ src_install() {
 
 	doinfo doc/wl-ja.info doc/wl.info
 	dodoc BUGS* ChangeLog INSTALL* README*
-}
-
-pkg_postinst() {
-	elisp-site-regen
-	einfo "Please see /usr/share/doc/${P}/INSTALL.gz."
-	einfo "And Sample configuration files exist on /usr/share/wl/samples."
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }
