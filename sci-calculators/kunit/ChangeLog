@@ -1,0 +1,20 @@
+# ChangeLog for app-sci/kunit
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kunit/ChangeLog,v 1.1 2004/12/24 15:01:42 ribosome Exp $
+
+*kunit-0.5 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +kunit-0.5.ebuild:
+  Moved from app-sci/kunit to sci-calculators/kunit.
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> kunit-0.5.ebuild:
+  added amd64 keyword.
+
+*kunit-0.5 (22 Nov 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> kunit-0.5.ebuild :
+  set ppc in keywords
+
+  22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Dylan Carlson <bsinthe@pobox.com>.
