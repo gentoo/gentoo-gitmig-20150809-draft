@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/getmail
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.1 2002/06/18 18:09:01 stroke Exp $
+
+*getmail-2.3.8 (18 Jun 2002)
+
+  18 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog :
+
+  New package. Ebuild author:  Jeremiah Mahler <jmahler@pacbell.net>
