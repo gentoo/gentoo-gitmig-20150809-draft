@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.13 2004/04/03 18:12:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.14 2004/04/19 15:40:59 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-200a-r1.ebuild:
+  Changing first SRC_URI and closing bug #48299.
 
   03 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing digest and closing bug #46645.
