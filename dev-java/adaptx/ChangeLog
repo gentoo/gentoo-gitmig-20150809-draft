@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/adaptx
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.1 2004/12/04 18:21:37 karltk Exp $
+
+*adaptx-20041105 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> adaptx-20041105.ebuild:
+  Initial import. Ebuild submitted by the cute and cuddly Jan Brinkmann 
+  <lucky@the-luckyduck.de>. Fixes #70242.
