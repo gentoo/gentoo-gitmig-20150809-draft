@@ -47,7 +47,6 @@
 *app-shells/sash
 *dev-lang/perl
 *virtual/editor
-*net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/rsync
 *net-misc/wget
@@ -71,9 +70,9 @@
 *sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages
-*sys-apps/modutils
+*virtual/modutils
 *sys-apps/net-tools
-*sys-apps/xinetd
+*virtual/inetd
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/sed
