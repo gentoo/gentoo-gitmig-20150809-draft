@@ -37,7 +37,7 @@ depend() {
 
 check_ext2() {
   PART=`cat /proc/mounts | grep vice | grep ext2 | awk '{print $1}'`
-  if [ -z $PART ]
+  if [ -z "$PART" ]
   then
     echo ">>> PLEASE CREATE A EXT2 (no reiserfs) PARTITION (of aprox. 200M)"
     echo ">>> AND MOUNT IT TO /USR/VICE/CACHE !!!"
