@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <pylon@gentoo.org> (31 Aug 2003)
+# this mol-snapshot has problems with the audio-driver.  we
+# will resnapshot it later.
+=app-emulation/mol-0.9.69_pre4
+
 # <liquidx@gentoo.org> (29 Aug 2003)
 # initial testing for python 2.3.x. do not unmask unless you
 # are prepared for a non-working portage.
