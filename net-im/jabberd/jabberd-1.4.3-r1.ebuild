@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.8 2004/02/17 22:14:32 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.9 2004/02/21 16:12:59 rizzo Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -11,12 +11,16 @@ SRC_URI="http://jabberd.jabberstudio.org/1.4/dist/jabberd-${PV}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-IUSE="ssl ldap ipv6"
+IUSE="ssl ldap ipv6 msn oscar yahoo"
 
 DEPEND="!net-im/jabber-server
 	=dev-libs/pth-1.4.0
 	ssl? ( >=dev-libs/openssl-0.9.6i )
 	ldap? ( =net-nds/openldap-2* )"
+
+PDEPEND="msn? ( net-im/msn-transport )
+		 oscar? ( net-im/aim-transport )
+		 yahoo? ( net-im/yahoo-transport )"
 
 src_unpack() {
 	unpack jabberd-${PV}.tar.gz
@@ -154,10 +158,10 @@ pkg_postinst() {
 	einfo "The various IM transports for jabber are now separate packages,"
 	einfo "which you will need to install separately if you want them:"
 	einfo "net-im/jit - ICQ transport (You can use aim-transport for icq but JIT is better)"
-	einfo "net-im/msn-transport - MSN transport"
+	einfo "net-im/msn-transport - MSN transport (USE=msn)"
 	einfo "net-im/jud - Jabber User Directory"
-	einfo "net-im/yahoo-transport - Yahoo IM system"
-	einfo "net-im/aim-transport - AOL transport"
+	einfo "net-im/yahoo-transport - Yahoo IM system (USE=yahoo)"
+	einfo "net-im/aim-transport - AOL transport (USE=oscar)"
 	einfo "net-im/mu-conference - Jabber multi user conference"
 	einfo
 	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
