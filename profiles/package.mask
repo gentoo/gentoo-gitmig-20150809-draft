@@ -171,14 +171,15 @@ gnome-apps/gedit
 gnome-apps/gtkdiff
 gnome-apps/battstat
 gnome-apps/ggv
+gnome-libs/bonobo-conf
+gnome-apps/evolution
+app-admin/procman
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
 # /Hallski
 
 dev-util/anjuta
-gnome-extra/bonobo-conf
-app-office/evolution
 net-im/gabber
 app-misc/gentoo
 dev-util/glade
@@ -192,7 +193,6 @@ app-admin/gwcc
 net-analyzer/netleds_applet
 net-news/pan
 x11-terms/powershell
-gnome-extra/procman
 net-www/screem
 gnome-extra/users-guide
 media-video/zapping
