@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.20 2003/01/30 20:01:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.21 2003/02/04 18:36:03 hannes Exp $
+
+*kdevelop-2.1.5 (04 Feb 2003)
+
+  04 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdevelop-2.1.5.ebuild:
+  version bump, thanks to Sascha Herrmann <Sascha.Herrmann@web.de> for
+  help in bug #14536, this should also fix bug #3875, bug #14971, bug #8113,
+  and bug #9958
 
   30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
