@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1.ebuild,v 1.7 2004/10/17 12:42:14 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1.ebuild,v 1.8 2004/10/26 14:16:15 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz"
 
 LICENSE="isc-dhcp"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips arm hppa ~ppc64 ~alpha ~amd64"
+KEYWORDS="~alpha amd64 arm hppa ~mips ppc ~ppc64 sparc x86"
 IUSE="static selinux"
 
 RDEPEND="virtual/libc
@@ -42,7 +42,7 @@ src_compile() {
 	END
 
 	cat <<-END > site.conf
-	CC = gcc
+	CC = $(tc-getCC)
 	LIBDIR = /usr/lib
 	INCDIR = /usr/include
 	ETC = /etc/dhcp
