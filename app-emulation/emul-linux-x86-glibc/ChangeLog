@@ -1,6 +1,15 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/ChangeLog,v 1.1 2004/07/31 12:47:02 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/ChangeLog,v 1.2 2004/08/16 20:40:54 lv Exp $
+
+*emul-linux-x86-glibc-1.1 (16 Aug 2004)
+
+  16 Aug 2004; Travis Tilley <lv@gentoo.org> -emul-linux-x86-glibc-1.0.ebuild,
+  +emul-linux-x86-glibc-1.1.ebuild:
+  new build. this one is built with gcc 3.4.1-r2 using the flags "-march=k8
+  -m32". it's also trimmed down slightly so that it doesnt bloat future multilib
+  stages. added an env.d script so that this can replace baselibs as a minimal
+  base 32bit environment. glibc version is 2.3.4.20040808
 
 *emul-linux-x86-glibc-1.0 (31 Jul 2004)
 
