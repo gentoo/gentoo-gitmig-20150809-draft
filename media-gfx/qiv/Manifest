@@ -1,8 +1,18 @@
-MD5 7cfd1f93747f64e297348d5126fce1cc ChangeLog 1496
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2cc303379e78065e89c48cd212c549e4 ChangeLog 1585
+MD5 b5b126fbe50fe7f246aaa4712002fa0c qiv-1.9_pre10.ebuild 640
+MD5 4e282ac4d99cd38f0852204fc5a935d5 qiv-1.9.ebuild 621
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 d12a130f42b539d515b413611b9b4766 qiv-1.7-r3.ebuild 610
-MD5 72c9f9dfa8d07cf426e2c01153629d7b qiv-1.9.ebuild 616
-MD5 b5b126fbe50fe7f246aaa4712002fa0c qiv-1.9_pre10.ebuild 640
-MD5 98b8d5ed7bf4340676a2aa8e16906c81 files/digest-qiv-1.7-r3 59
 MD5 28ceb350e2f9981483bf5dd1408e8f47 files/digest-qiv-1.9 59
 MD5 5699ee267d58090636ca8299ff3f9c78 files/digest-qiv-1.9_pre10 62
+MD5 98b8d5ed7bf4340676a2aa8e16906c81 files/digest-qiv-1.7-r3 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBouN9ugEuf3OQ0akRAqBPAJ98VTqCSY9X39KxUGgSLHzkHwF6lQCfQMZR
+TmSXJcV4AqSqOpwWL/LmTJo=
+=a80n
+-----END PGP SIGNATURE-----

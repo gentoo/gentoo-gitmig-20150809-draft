@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qiv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.10 2004/07/22 22:38:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.11 2004/11/23 07:14:32 kloeri Exp $
+
+  23 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> qiv-1.9.ebuild:
+  ~alpha keyword.
 
   22 Jul 2004; Tom Gall <tgall@gentoo.org> qiv-1.9.ebuild:
   stable on ppc64, bug #57623
