@@ -29,3 +29,15 @@
  void gm_print (void * ignore, GmConnection * connection);
  void gm_print_preview (void * ignore, GmConnection * connection);
  
+--- plugins/exporter/csv/csv.glade.h.orig	2004-12-05 10:36:46.619777608 +0930
++++ plugins/exporter/csv/csv.glade.h	2004-12-05 10:36:56.183323728 +0930
+@@ -1,9 +1,3 @@
+-/*
+- * Datei für übersetzbare Zeichenketten, erzeugt durch Glade.
+- * Fügen Sie diese Datei zur POTFILES.in Ihres Projektes hinzu.
+- * Compilieren Sie sie NICHT als Teil Ihrer Anwendung.
+- */
+-
+ gchar *s = N_("Csv-Plugin : Text structured export");
+ gchar *s = N_("Customize the export format. The line terminator is the character sequence used for terminating a line in the text file. Whether the quote character is placed around cells depends on the value chosen for quoting.");
+ gchar *s = N_("Line termination :");

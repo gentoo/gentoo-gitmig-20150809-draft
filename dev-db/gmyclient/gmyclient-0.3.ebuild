@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.11 2004/11/21 20:52:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.12 2004/12/05 01:11:40 dragonheart Exp $
 
 inherit eutils
 
@@ -30,6 +30,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "installed failed"
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS COPYING README
 	mv ${D}/usr/share/gmyclient/doc ${D}/usr/share/doc/${PF}/html
 }

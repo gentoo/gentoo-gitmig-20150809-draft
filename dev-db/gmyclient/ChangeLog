@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/gmyclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.6 2004/11/21 20:50:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.7 2004/12/05 01:11:40 dragonheart Exp $
+
+  05 Dec 2004; Daniel Black <dragonheart@gentoo.org> files/0.3-fix.patch,
+  gmyclient-0.3.ebuild, +metadata.xml:
+  removed comments from a header file to make xgettext happy. Bug #72249 refers.
+  Thanks to Gary <gary@garylynn.net> for the bug report.
 
   22 Nov 2004; Daniel Black <dragonheart@gentoo.org> +files/0.3-fix.patch,
   gmyclient-0.3.ebuild:

@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e1289d1fd0532d56b7e72c94fada4316 ChangeLog 810
-MD5 cfb753e78c0ffd232705f0132e3685a8 gmyclient-0.3.ebuild 888
-MD5 4099749bb897b80e8e6fc6cbd2b886bc files/0.3-fix.patch 844
+MD5 e4a99b74c95e57356c11e5b62db881c7 ChangeLog 1062
+MD5 6291f12641ddfc0cc3ecfe073f51c1aa gmyclient-0.3.ebuild 868
+MD5 5697c24b43814e3061d47356c4040ee4 metadata.xml 408
+MD5 e36d3c30335045d03c2c521a4ed0d4b5 files/0.3-fix.patch 1531
 MD5 9ce548600f5d9e1ffeb2347725a40bd9 files/digest-gmyclient-0.3 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoQASmdTrptrqvGERAuyEAJ4kDpzBzorgPxJOGl4ySNzLAhRW1ACcCKIy
-1wPS9EuIRr+MJo2S1Tl03N8=
-=UwWW
+iD8DBQFBsmBTmdTrptrqvGERAic5AJ4yo/5pYcNK2Ak0gCGMLb3KIeYO7ACghK/6
+kuAynZXFPxushc1VOQXvU18=
+=GWuZ
 -----END PGP SIGNATURE-----
