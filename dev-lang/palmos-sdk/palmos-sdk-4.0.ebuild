@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-4.0.ebuild,v 1.2 2004/03/13 12:57:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-4.0.ebuild,v 1.3 2004/06/01 11:17:06 plasmaroo Exp $
 
 inherit rpm
 
@@ -18,7 +18,7 @@ AD1="sdk40-docs.zip"
 AD2="sdk40-examples.tar.gz"
 AX="${A1} ${A2}"
 
-IUSE=""
+IUSE="doc"
 BASE="/opt/palmdev/sdk-${SLOT}"
 RESTRICT="nostrip"
 S=${WORKDIR}
@@ -50,7 +50,7 @@ src_unpack() {
 	rpm_unpack *.rpm
 	rm *.rpm
 
-	if [ `use doc` ]; then
+	if use doc; then
 		unpack ${AD1}
 		unpack ${AD2}
 	fi
