@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-clipman
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.9 2005/01/24 19:57:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/ChangeLog,v 1.10 2005/01/29 20:11:29 pylon Exp $
+
+  29 Jan 2005; Lars Weiler <pylon@gentoo.org> xfce4-clipman-0.4.1-r1.ebuild:
+  Stable on ppc.
 
   24 Jan 2005; Guy Martin <gmsoft@gentoo.org> xfce4-clipman-0.4.1-r1.ebuild:
   Stable on hppa.
