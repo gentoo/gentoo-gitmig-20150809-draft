@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc6,v 1.5 2002/07/03 21:03:08 nitro Exp $
+# Distributed under the terms of the GNU General Public License v2         
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc6,v 1.6 2002/10/31 23:19:23 vapier Exp $
 
 #NB: Config is in /etc/conf.d/ntpd
 
