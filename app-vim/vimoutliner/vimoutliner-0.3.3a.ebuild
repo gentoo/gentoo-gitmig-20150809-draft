@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.3a.ebuild,v 1.1 2005/02/22 19:12:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.3a.ebuild,v 1.2 2005/02/22 23:47:15 agriffis Exp $
 
 inherit vim-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: easy and fast outlining"
 HOMEPAGE="http://www.vimoutliner.org"
 SRC_URI="mirror://gentoo/${PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips ~amd64"
+KEYWORDS="~x86 ~sparc ~mips ~amd64 ~alpha ~ia64"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="vimoutliner"
