@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.4 2002/12/09 04:26:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.5 2002/12/13 02:16:45 method Exp $
+
+*ffmpeg-0.4.5.20021212 (12 Dec 2002)
+  12 Dec 2002; Joshua Brindle <method@gentoo.org> ffmpeg-0.4.5.20021212.ebuild :
+  cvs snapshot so that streaming will work, also added mp3lame and oggvorbis
+  support with encode and oggvorbis use vars.
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
