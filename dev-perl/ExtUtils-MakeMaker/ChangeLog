@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.38 2003/12/26 01:14:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.39 2003/12/26 01:18:43 rac Exp $
+
+*ExtUtils-MakeMaker-6.21 (25 Dec 2003)
+
+  25 Dec 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.15-r1.ebuild,
+  ExtUtils-MakeMaker-6.15.ebuild, ExtUtils-MakeMaker-6.16-r1.ebuild,
+  ExtUtils-MakeMaker-6.16.ebuild, ExtUtils-MakeMaker-6.21.ebuild:
+  Add ~arch .21 including self-tests. Clean house on .15 and .16s
 
   25 Dec 2003; Jason Wever <weeve@gentoo.org> ExtUtils-MakeMaker-6.20.ebuild:
   Marked stable on sparc.
