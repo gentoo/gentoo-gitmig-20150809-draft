@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0-r3.ebuild,v 1.1 2002/05/04 10:03:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0-r3.ebuild,v 1.2 2002/05/05 12:01:52 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -99,5 +99,5 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 }
 
 pkg_postinst() {
-	mkdir ${KDEDIR}/share/templates/.source/emptydir
+    mkdir -p ${KDEDIR}/share/templates/.source/emptydir
 }
