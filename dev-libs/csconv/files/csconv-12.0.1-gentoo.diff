@@ -1,0 +1,25 @@
+diff -urN im-sdk-r12_0_1-svn1891.orig/lib/CSConv/converterPI/icuconv/tools/gencnval/Makefile.in im-sdk-r12_0_1-svn1891/lib/CSConv/converterPI/icuconv/tools/gencnval/Makefile.in
+--- im-sdk-r12_0_1-svn1891.orig/lib/CSConv/converterPI/icuconv/tools/gencnval/Makefile.in	2004-03-17 16:01:40.000000000 +0900
++++ im-sdk-r12_0_1-svn1891/lib/CSConv/converterPI/icuconv/tools/gencnval/Makefile.in	2004-09-13 05:12:24.708060808 +0900
+@@ -138,17 +138,17 @@
+ install:: all $(pkgdatadir)/$(CONVRTRSDATA) $(pkgdatadir)/$(CONVRTRSDATA_LINK) 
+ 
+ $(pkgdatadir)/$(CONVRTRSDATA): mkdir 
+-	$(INSTALL) $(ICUDATADIR)/$(CONVRTRSDATA)  $(pkgdatadir)
++	$(INSTALL) $(ICUDATADIR)/$(CONVRTRSDATA)  $(DESTDIR)$(pkgdatadir)
+ 
+ mkdir:
+-	$(mkinstalldirs)  $(pkgdatadir)
++	$(mkinstalldirs)  $(DESTDIR)$(pkgdatadir)
+ 
+ mkinstalldirs = $(SHELL) $(IM_ACDIR)/mkinstalldirs
+ 
+ 
+ $(pkgdatadir)/$(CONVRTRSDATA_LINK): $(pkgdatadir)/$(CONVRTRSDATA)
+-	@$(RM) $@
+-	$(LN_S) $(CONVRTRSDATA) $@
++	@$(RM) $(DESTDIR)$@
++	$(LN_S) $(CONVRTRSDATA) $(DESTDIR)$@
+ 
+ 
+ 
