@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.6 2004/05/15 21:05:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.7 2004/05/22 16:11:26 gmsoft Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -58,6 +58,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
 	epatch ${FILESDIR}/${PN}-2.3-mimetypes_apache.patch
 	epatch ${FILESDIR}/${PN}-2.3-db4.2.patch
+	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
+	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
 }
 
 src_configure() {
