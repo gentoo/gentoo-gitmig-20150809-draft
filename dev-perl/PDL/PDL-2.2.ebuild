@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.ebuild,v 1.4 2001/04/24 00:07:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.ebuild,v 1.5 2001/04/24 01:22:41 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,8 +18,12 @@ src_unpack() {
 
   unpack ${A}
   cp ${FILESDIR}/perldl.conf ${S}
-  if [ -z "`use opengl`" ]
+  #open gl does not work at the moment
+  if [ "`use opengl`" ]
   then
+     echo "Disabled at the moment"
+    sed -e "s:WITH_3D => undef:WITH_3D => 0:" ${FILESDIR}/perldl.conf > ${S}/perldl.conf
+  else
     sed -e "s:WITH_3D => undef:WITH_3D => 0:" ${FILESDIR}/perldl.conf > ${S}/perldl.conf
   fi
 
