@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.6 2004/12/28 19:02:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.7 2004/12/28 19:03:59 ribosome Exp $
 
 inherit flag-o-matic
 
@@ -49,8 +49,8 @@ src_install() {
 	mv -v usr/bin/ncdump usr/bin/hdfdump
 	mv -v usr/share/man/man1/ncgen.1 usr/share/man/man1/hdfgen.1
 	mv -v usr/share/man/man1/ncdump.1 usr/share/man/man1/hdfdump.1
-	if has_version app-sci/netcdf; then
-		einfo app-sci/netcdf is already installed - not installing netcdf related header files
+	if has_version sci-libs/netcdf; then
+		einfo sci-libs/netcdf is already installed - not installing netcdf related header files
 		rm -v usr/include/netcdf.inc
 		rm -v usr/include/netcdf.h
 	fi
