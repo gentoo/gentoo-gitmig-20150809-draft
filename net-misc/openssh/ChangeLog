@@ -1,18 +1,19 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.13 2002/07/05 14:41:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.14 2002/07/09 10:25:07 phoenix Exp $
 
 *openssh-3.4_p1-r2 (04 July 2002)
 
-  04 July 2002; Brandon Low <lostlogic@gentoo.org> : openssh-3.4_p1-r2.ebuild
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> openssh-3.4_p1-r2.ebuild :
+  Added KEYWORDS.
 
+  04 July 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r2.ebuild :
   Fixes problem of /var/empty being removed if immediately do emerge openssh
   emerge openssh.  Not an urgent upgrade, but recommended.
 
 *openssh-3.4_p1-r1 (02 July 2002)
 
-  02 July 2002; Brandon Low <lostlogic@gentoo.org> : openssh-3.4_p1-r1.ebuild
-
+  02 July 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r1.ebuild :
   This closes bugs 4169, 4170, and 4193.  This new ebuild changes the sshd
   user from whatever it may be to UID 22, this shouldn't mean anything to most
   people because no scripts, nor programs use the sshd UID directly (for that
@@ -23,7 +24,6 @@
 *openssh-3.4_p1 (26 June 2002)
 
   26 June 2002; Brandon Low <lostlogic@gentoo.org> :
-
   New version closes soon to be released security hole, PLEASE upgrade immediately
   according to the changelogs, this new version closes several possible holes found
   during a massive audit of the code.
@@ -31,27 +31,23 @@
 *openssh-3.3_p1 (22 June 2002)
 
   22 June 2002; Donny Davies <woodchip@gentoo.org> :
-
   Chase latest release.  Starting with this version sshd uses a new privelaged
   process separation scheme.  See the docs for more info.
 
 *openssh-3.2.3_p1-1 (5 June 2002)
 
-  5 June 2002; Gabriele Giorgetti <stroke@gentoo.org> :
-  
+  5 June 2002; Gabriele Giorgetti <stroke@gentoo.org> :  
   New revision. Changes submitted by Alson van der Meulen gentoo@alm.xs4all.nl
   within bug #3391 were added. Bug closed/fixed.
 
 *openssh-3.2.3_p1 (30 May 2002)
 
   30 May 2002; Arcady Genkin <agenkin@thpoon.com> :
-
   Update to 3.2.3.
 
 *openssh-3.2.2_p1 (18 May 2002)
 
   18 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Chase latest release + update openssl dependency.
 
 *openssh-3.1_p1-r2 (03 Apr 2002)
@@ -65,22 +61,18 @@
 *openssh-3.1_p1 (7 Mar 2002)
 
   15 Mar 2002; Bruce A. Locke <blocke@shivan.org> files/sshd.rc6 files/sshd.rc5 :
-
   ssh1 keygen requires a new option in the initscripts
 
   13 Mar 2002; M.Schlemmer <azarah@gentoo.org> openssh-3.1_p1-r1.ebuild :
-
   Update rc-script not to fail on restart if there is open sessions.
 
   7 Mar 2002; F.Meyndert <m0rpheus@gentoo.org> openssh-3.1_p1.ebuild :
-
   Updated openssh to version 3.1 that fixes a nasty off by one bug in all
   previous version. That caused a local root hole.
 
 *openssh-3.0.2_p1-r1 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

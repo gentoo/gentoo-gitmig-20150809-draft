@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304.ebuild,v 1.7 2001/09/13 16:57:58 darks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304.ebuild,v 1.8 2002/07/09 10:28:30 phoenix Exp $
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_4.tar.gz omniNotify11b1.tar.gz"
 S=${WORKDIR}/omni
@@ -10,6 +10,9 @@ SRC_URI="ftp://ftp.uk.research.att.com/pub/omniORB/omniORB3/${PN}_${PV}.tar.gz
 	 ftp://ftp.uk.research.att.com/pub/omniORB/omniORBpy/${PN}py_1_4.tar.gz
 	 ftp://ftp.uk.research.att.com/pub/omniNotify/omniNotify1/omniNotify11b1.tar.gz"
 HOMEPAGE="http://www.uk.research.att.com/omniORB/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/glibc 
         >=dev-lang/python-2.1"

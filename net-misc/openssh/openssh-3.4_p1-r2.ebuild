@@ -1,9 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r2.ebuild,v 1.2 2002/07/08 16:22:52 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r2.ebuild,v 1.3 2002/07/09 10:25:07 phoenix Exp $
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
+KEYWORDS="x86"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
