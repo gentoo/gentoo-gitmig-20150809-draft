@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.85 2003/12/31 02:26:26 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.86 2004/01/09 22:44:25 tseng Exp $
+
+  09 Jan 2004; Brandon Hale <tseng@gentoo.org> xine-lib-1_rc3-r1.ebuild,
+  xine-lib-1_rc3.ebuild:
+  Also filter -fPIC.
 
   31 Dec 2003; Guy Martin <gmsoft@gentoo.org> xine-lib-1_rc2.ebuild:
   Marked stable on hppa.
