@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.247 2004/12/19 21:52:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.248 2004/12/20 19:19:16 spyderous Exp $
+
+  20 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r3.ebuild, xorg-x11-6.8.0-r4.ebuild,
+  xorg-x11-6.8.1.901.ebuild:
+  (#75067) SSE3 is also broken on gcc 3.4, so append -mno-sse3.
 
   19 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.901.ebuild:
