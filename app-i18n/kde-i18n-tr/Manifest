@@ -5,7 +5,6 @@ MD5 188ebe3f37c2e5566061bc94ce04455f files/digest-kde-i18n-tr-3.0.4 134
 MD5 2f9af6cebb405a0789201f04358a517a files/digest-kde-i18n-tr-3.0.5a 71
 MD5 3ce9a4f6916b012d3f12af72ff3af419 files/digest-kde-i18n-tr-3.1 69
 MD5 fa2e4f5cddf8d91b6535e4d9cb0d2942 files/digest-kde-i18n-tr-3.1.1 71
-MD5 59f6014e77d183fa5544d821fffae213 kde-i18n-tr-2.2.2.ebuild 261
 MD5 2b852579e0e59632e8994490afb952ca kde-i18n-tr-3.0.2.ebuild 254
 MD5 3a0508bf86e8e9ee92a9e4704a4d601a kde-i18n-tr-3.0.3.ebuild 254
 MD5 0d1703d472eb80800e32754f10ea85ca kde-i18n-tr-3.0.4.ebuild 254
@@ -13,3 +12,4 @@ MD5 baea399495e105713e855948272ac5fb kde-i18n-tr-3.0.5a.ebuild 255
 MD5 00d77cae7ad6a2b27fd4bb654f464c0b kde-i18n-tr-3.1.ebuild 252
 MD5 b550b5bd113d39a1c8a688496ada1bf9 kde-i18n-tr-3.1.1.ebuild 254
 MD5 46347e35d4b5aaea7ec71be778e4588b ChangeLog 2229
+MD5 64abbb6a84af05d8bb29e61577925c82 kde-i18n-tr-2.2.2.ebuild 254
