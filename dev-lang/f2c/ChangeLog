@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/f2c
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.9 2004/09/30 00:03:47 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.10 2005/01/10 19:57:29 corsair Exp $
+
+  10 Jan 2005; Markus Rothe <corsair@gentoo.org> f2c-20030320.ebuild:
+  Stable on ppc64
 
   09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> f2c-20030320.ebuild:
   Marked ~ppc64
