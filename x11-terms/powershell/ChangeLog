@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/powershell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/ChangeLog,v 1.4 2004/01/22 21:22:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/ChangeLog,v 1.5 2004/06/19 13:38:34 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> powershell-0.9_pre3.ebuild:
+  Added IUSE.
 
   22 Jan 2004; Martin Holzer <mholzer@gentoo.org> powershell-0.8.ebuild,
   powershell-0.9_pre3.ebuild:

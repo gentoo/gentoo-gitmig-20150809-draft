@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/cxterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/ChangeLog,v 1.5 2004/03/28 02:39:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/ChangeLog,v 1.6 2004/06/19 13:39:58 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> cxterm-5.2.3.ebuild:
+  Added IUSE.
 
   27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cxterm-5.2.3.ebuild:
   don't assign default to S
