@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/bbdb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.1 2003/01/02 05:40:10 mkennedy Exp $
+
+*bbdb-2.34 (01 Jan 2003)
+
+  01 Jan 2002; Matthew Kennedy <mkennedy@gentoo.org> bbdb-2.34.ebuild,
+  ChangeLog, files/digest-bbdb-2.34 :
+	
+  Initial import.  Ebuild submitted by Alexander Kreuzer <a_kreuzer@gmx.de>.
