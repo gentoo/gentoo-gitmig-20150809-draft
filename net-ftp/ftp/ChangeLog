@@ -1,11 +1,14 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.11 2003/07/15 09:19:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.12 2003/07/25 05:01:36 gmsoft Exp $
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org> ftp-0.17-r3.ebuild:
   Added sparc stable keyword
 
 *ftp-0.17-r3 (13 Jun 2003)
+
+  25 Jul 2003; Guy Martin <gmsoft@gentoo.org> ftp-0.17-r3.ebuild :
+  Marked stable on hppa.
 
   13 Jun 2003; Seemant Kulleen <seemant@gentoo.org> ftp-0.17-r3.ebuild,
   files/netkit-ftp-0.17+ssl-0.2+auth.diff:
