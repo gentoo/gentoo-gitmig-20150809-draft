@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/examine/examine-0.0.1.20040522.ebuild,v 1.1 2004/05/23 06:08:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/examine/examine-0.0.1.20040529.ebuild,v 1.1 2004/05/30 18:39:27 vapier Exp $
 
 inherit enlightenment
 
