@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.73 2004/02/25 12:43:22 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.74 2004/03/01 07:34:31 mholzer Exp $
+
+*gkrellm-2.1.27 (01 Mar 2004)
+
+  01 Mar 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.27.ebuild,
+  files/gkrellm-2.1.27-dotkeep.patch:
+  Version bumped. Closes 43232
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> gkrellm-2.1.25.ebuild:
   Stable on sparc.
