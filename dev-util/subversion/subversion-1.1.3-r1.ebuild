@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3-r1.ebuild,v 1.6 2005/02/28 23:20:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3-r1.ebuild,v 1.7 2005/03/20 10:45:25 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache
 
@@ -36,10 +36,6 @@ S=${WORKDIR}/${P/_rc/-rc}
 : ${SVN_REPOS_LOC:=/var/svn}
 
 pkg_setup() {
-	if has_version =sys-devel/autoconf-2.58*; then
-		die "Subversion WILL NOT BUILD with autoconf-2.58"
-	fi
-
 	if use berkdb && has_version '<dev-util/subversion-0.34.0' && [[ -z ${SVN_DUMPED} ]]; then
 		echo
 		ewarn "Presently you have $(best_version subversion)"
