@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3-r1.ebuild,v 1.2 2004/04/27 21:41:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3-r1.ebuild,v 1.3 2004/04/28 16:05:58 dholm Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 
 DEPEND="virtual/glibc"
 
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="~x86 ~sparc ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
