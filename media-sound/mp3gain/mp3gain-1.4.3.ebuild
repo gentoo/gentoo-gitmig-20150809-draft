@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.3.ebuild,v 1.7 2004/08/14 14:42:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.3.ebuild,v 1.8 2004/09/15 16:13:45 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 amd64 ~ppc sparc ~alpha ~hppa"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}

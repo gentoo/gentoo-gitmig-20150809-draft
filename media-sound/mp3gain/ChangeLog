@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.7 2004/08/14 14:42:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.8 2004/09/15 16:13:45 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3gain-1.4.3.ebuild:
+  Stable amd64, sparc.
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> mp3gain-1.4.3.ebuild:
   Trimmed trailing whitespace.
