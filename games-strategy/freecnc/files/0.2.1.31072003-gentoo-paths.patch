@@ -35,7 +35,7 @@
 -    lf = new char[strlen(binpath)+strlen("audplay.log")+2];
 -    sprintf(lf, "%s/audplay.log", binpath);
 +    lf = new char[strlen("GENTOO_LOGDIR")+strlen("audplay.log")+2];
-+    sprintf(lf, "GENTOO_LOGDIR/audplay.log", binpath);
++    sprintf(lf, "GENTOO_LOGDIR/audplay.log");
      VFS_PreInit(binpath);
      logger = new Logger(lf,0);
      delete[] lf;
