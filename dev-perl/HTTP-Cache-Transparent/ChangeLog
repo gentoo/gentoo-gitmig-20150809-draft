@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/HTTP-Cache-Transparent
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cache-Transparent/ChangeLog,v 1.1 2005/01/01 12:24:47 aliz Exp $
+
+*HTTP-Cache-Transparent-0.5 (01 Jan 2005)
+
+  01 Jan 2005; Daniel Ahlberg <aliz@gentoo.org>
+  HTTP-Cache-Transparent-0.5.ebuild:
+  Initial import, dependency for xmltv-0.5.37.
+
