@@ -1,37 +1,36 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.8 2003/02/12 07:08:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.9 2003/02/20 11:45:31 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*imlib2-1.0.6.20030220 (20 Feb 2003)
+
+  20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump (bug fixes from CVS).
  
 *imlib2-1.0.6-r1 (26 Apr 2002)
+
   26 Apr 2002; Spider <spider@gentoo.org> imlib2-1.0.6-r1.ebuild :
   libtoolize
-
 
 *imlib2-1.0.6 (26 Apr 2002)
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> imlib2-1.0.6.ebuild
   files/digest-imlib2-1.0.6 :
-
   Version bump
 
 *imlib2-1.0.5 (12 Apr 2002)
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> imlib2-1.0.5-r1.ebuild :
-
   Recompile against libpng-1.2.1
 
 *imlib2-1.0.5 (27 Mar 2002)
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> imlib2-1.0.5.ebuild :
-
   Ungzipped HTML docs.
   
 *imlib2-1.0.5 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
