@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.5 2002/09/05 21:28:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.6 2002/10/01 10:20:12 aliz Exp $
+
+*unzip-5.50 (01 Oct 2002)
+
+  01 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *unzip-5.42-r1 (25 Jul 2002)
 
