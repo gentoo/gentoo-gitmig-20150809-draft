@@ -1,0 +1,49 @@
+# ChangeLog for app-sci/coq
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.1 2004/12/28 05:03:02 ribosome Exp $
+
+*coq-8.0-r1 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/coq-8.0-byteflags.patch, +files/coq-8.0-ocaml-3.08.1.patch,
+  +files/coqide.desktop, +files/ocaml-3.07.patch, +coq-7.4.ebuild,
+  +coq-8.0-r1.ebuild, +coq-8.0.ebuild:
+  Moved from app-sci/coq to sci-mathematics/coq.
+
+  18 Nov 2004; Matthieu Sozeau <mattam@gentoo.org>
+  +files/coq-8.0-ocaml-3.08.1.patch, coq-8.0-r1.ebuild:
+  Add patch for ocaml-3.08.1.
+
+  13 Aug 2004; Jason Wever <weeve@gentoo.org> coq-8.0-r1.ebuild:
+  Added ~sparc keyword.
+
+*coq-8.0-r1 (08 Aug 2004)
+
+  08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> coq-7.4.ebuild,
+  +coq-8.0-r1.ebuild, coq-8.0.ebuild, -coq-8.0_beta.ebuild:
+  Prepare for 3.08 insertion, remove old beta ebuild and add the latest version.
+
+  13 Jul 2004; Travis Tilley <lv@gentoo.org> coq-7.4.ebuild:
+  adding ~amd64 keyword
+
+*coq-8.0 (01 Jul 2004)
+
+  01 Jul 2004; Matthieu Sozeau <mattam@gentoo.org> coq-8.0.ebuild,
+  files/coq-8.0-byteflags.patch, files/coqide.desktop:
+  Add new stable release of coq, which comes with an ide now, and a translation
+  script from older versions. Adding two local use flags for those.
+
+*coq-8.0_beta (02 Apr 2004)
+
+  02 Apr 2004; Matthieu Sozeau <mattam@gentoo.org> coq-7.4.ebuild,
+  coq-8.0_beta.ebuild:
+  Added coq-8.0_beta ebuild, tested on x86. Make coq-7.4 stable,
+  as there were no bug reports for some time now.
+
+*coq-7.4 (22 Jan 2004)
+
+  22 Jan 2004; Matthieu Sozeau <mattam@gentoo.org> coq-7.4.ebuild,
+  metadata.xml, files/ocaml-3.07.patch:
+  Initial commit. Related bugs are 30388 and 24616. norealanalysis use flag idea
+  taken from Peter Lietz <p.lietz@gmx.de> ebuild.
+
