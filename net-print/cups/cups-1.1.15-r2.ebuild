@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.15-r2.ebuild,v 1.1 2002/07/19 20:38:03 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.15-r2.ebuild,v 1.2 2002/08/13 15:41:13 gerk Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND} !virtual/lpr
 		>=app-text/ghostscript-7.05.3"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
