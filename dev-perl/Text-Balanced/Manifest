@@ -1,4 +1,14 @@
-MD5 aa985b1109396097eaf779ad0e717136 ChangeLog 982
-MD5 2ec158ce40e9dfeced8cb503d5c05992 Text-Balanced-1.95.ebuild 574
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 09a17a1102250e1a257dd5e7d28bc9b1 ChangeLog 1074
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 c2c87f877f46f7c0912cc7616557b9bb Text-Balanced-1.95.ebuild 573
 MD5 40bc19dc4e7572e6180a139ad6f6043a files/digest-Text-Balanced-1.95 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTXaZ60LfUIagIAkRAtFxAJ98fhjTjLjJd0/swB8UlW9IJaLlGACg75Gr
+GDZebA/MTpR252KRqtixYuU=
+=/qRr
+-----END PGP SIGNATURE-----
