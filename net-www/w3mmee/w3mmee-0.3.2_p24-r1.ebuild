@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r1.ebuild,v 1.1 2003/08/22 14:41:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r1.ebuild,v 1.2 2003/12/06 12:16:27 usata Exp $
+
+inherit alternatives
 
 IUSE="cjk gpm imlib nls ssl"
 
 MY_PV=${PV##*_}-18
 MY_P=${PN}-${MY_PV}
-GC_PV="6.3alpha1"
+GC_PV="6.2"
 MY_GC=gc${GC_PV}
 
 DESCRIPTION="A variant of w3m with support for multiple character encodings"
@@ -16,7 +18,7 @@ HOMEPAGE="http://pub.ks-and-ks.ne.jp/prog/w3mmee/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~x86 -alpha ~ppc ~sparc"
+KEYWORDS="x86 -alpha ppc sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
@@ -43,6 +45,8 @@ src_unpack() {
 	# (Debian is the only Linux distribution that can compile it)
 	unpack ${MY_GC}.tar.gz
 	mv ${MY_GC} gc
+
+	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 }
 
 src_compile() {
@@ -104,7 +108,7 @@ src_compile() {
 		-cflags=${CFLAGS} -ldflags=${LDFLAGS} \
 		${myconf} || die
 
-	emake MAN='env LC_MESSAGES=$${LC_MESSAGES:-$${LC_ALL:-$${LANG}}} LANG=C man' || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -117,15 +121,6 @@ src_install() {
 	mv ${D}/usr/share/man/man1/w3m{,mee}.1
 	mv ${D}/usr/share/man/man1/w3mman{,mee}.1
 
-	# creates symlinks if w3m is not installed
-	if [ ! -e /usr/bin/w3m ] ; then
-		dosym /usr/bin/w3m{mee,}
-		dosym /usr/bin/w3m{mee,}man
-		dosym /usr/share/man/ja/man1/w3m{mee,}.1
-		dosym /usr/share/man/man1/w3m{mee,}.1
-		dosym /usr/share/man/man1/w3m{mee,}man.1
-	fi
-
 	dodoc 00INCOMPATIBLE.html ChangeLog NEWS* README
 	docinto en
 	dodoc doc/*
@@ -135,10 +130,32 @@ src_install() {
 
 pkg_postinst() {
 
+	w3m_alternatives
 	einfo
 	einfo "If you want to render multilingual text, please refer to"
 	einfo "/usr/share/doc/${P}/en/README.mee or"
 	einfo "/usr/share/doc/${P}/jp/README.mee"
 	einfo "and set W3MLANG variable respectively."
 	einfo
+}
+
+pkg_postrm() {
+
+	w3m_alternatives
+}
+
+w3m_alternatives() {
+
+	if [ ! -f /usr/bin/w3m ] ; then
+		alternatives_makesym /usr/bin/w3m \
+			/usr/bin/w3m{m17n,mee}
+		alternatives_makesym /usr/bin/w3mman \
+			/usr/bin/w3m{man-m17n,meeman}
+		alternatives_makesym /usr/share/man/ja/man1/w3m.1.gz \
+			/usr/share/man/ja/man1/w3m{m17n,mee}.1.gz
+		alternatives_makesym /usr/share/man/man1/w3m.1.gz \
+			/usr/share/man/man1/w3m{m17n,mee}.1.gz
+		alternatives_makesym /usr/share/man/man1/w3mman.1.gz \
+			/usr/share/man/man1/w3m{man-m17n,meeman}.1.gz
+	fi
 }
