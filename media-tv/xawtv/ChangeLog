@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.10 2004/03/16 03:20:51 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.11 2004/06/04 15:26:29 mholzer Exp $
+
+*xawtv-3.91-r1 (04 Jun 2004)
+
+  04 Jun 2004; Martin Holzer <mholzer@gentoo.org> xawtv-3.91-r1.ebuild:
+  changing default httproot.
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> xawtv-3.90-r1.ebuild,
   xawtv-3.90.ebuild, xawtv-3.91.ebuild:
