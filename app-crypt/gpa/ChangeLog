@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.12 2004/01/07 04:01:06 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.13 2004/01/24 14:34:54 weeve Exp $
+
+  24 Jan 2004; Jason Wever <weeve@gentoo.org> gpa-0.6.1.ebuild:
+  Marked stable on sparc.
 
   06 Jan 2004; Jason Wever <weeve@gentoo.org> gpa-0.6.1.ebuild:
   Added ~sparc keyword.
