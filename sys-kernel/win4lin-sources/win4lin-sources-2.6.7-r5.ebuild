@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r5.ebuild,v 1.2 2004/08/23 14:02:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r5.ebuild,v 1.3 2004/08/26 01:14:37 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -24,7 +24,10 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	http://www.netraverse.com/member/downloads/files/mki-adapter26_${MKI_VERSION}.patch
 	http://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
-KEYWORDS="x86 -*"
+
+# Best to keep "~x86" until Win4Lin-5.1.10 is in the tree and stable;
+# bug #55587.
+KEYWORDS="~x86 -*"
 SLOT="${KV}"
 
 K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.org/ for an

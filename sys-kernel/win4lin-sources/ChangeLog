@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.35 2004/08/23 14:02:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.36 2004/08/26 01:14:37 plasmaroo Exp $
+
+  26 Aug 2004; <plasmaroo@gentoo.org> win4lin-sources-2.6.7-r5.ebuild:
+  Marking the 2.6 version as "~x86"; bug #55587.
 
   23 Aug 2004; Michal Januszewski <spock@gentoo.org>
   win4lin-sources-2.6.7-r5.ebuild:
