@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11-r1.ebuild,v 1.1 2004/09/16 18:58:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11-r1.ebuild,v 1.2 2004/10/16 18:15:00 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -33,7 +33,7 @@ src_install () {
 	doexe ganttproject
 	dodoc AUTHORS  COPYING  README
 	if use doc; then
-		dohtml -r build/docs/api
+		java-pkg_dohtml -r build/docs/api
 	fi
 	if use gnome; then
 		mkdir -p ${D}/usr/share/gnome/apps/Office/
