@@ -1,0 +1,11 @@
+# ChangeLog for app-text/gnomesword
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.1 2004/08/18 17:22:44 squinky86 Exp $
+
+*gnomesword-2.1.1 (18 Aug 2004)
+
+  18 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +gnomesword-2.1.1.ebuild:
+  Initial commit, closes #14559. Thanks to all who helped out, Jeremy Stent
+  <stentj@att.net>, Robert Moss <robmoss@gentoo.org>, and others.
+
