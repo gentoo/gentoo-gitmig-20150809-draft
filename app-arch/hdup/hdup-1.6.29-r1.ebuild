@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hdup/hdup-1.6.29-r1.ebuild,v 1.1 2004/04/28 16:57:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hdup/hdup-1.6.29-r1.ebuild,v 1.2 2004/05/01 17:21:23 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Hdup is backup program using tar,find,gzip/bzip2,mcrypt and ssh."
 HOMEPAGE="http://www.miek.nl/projects/hdup16/hdup16.html"
