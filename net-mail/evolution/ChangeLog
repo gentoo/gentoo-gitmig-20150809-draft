@@ -1,16 +1,20 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.12 2002/04/23 13:53:06 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.13 2002/04/29 19:50:28 azarah Exp $
+
+  29 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r6.ebuild :
+
+  Replaced the "perl" use flag with "doc".
 
 *evolution-1.0.3-r6 (23 Apr 2002)
 
-  23 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r.ebuild :
+  23 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r6.ebuild :
 
   Resolve bug #334.  Note: libtoolize is run only if "pda" is not in USE.
 
 *evolution-1.0.3-r5 (22 Apr 2002)
 
-  22 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r.ebuild :
+  22 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r6.ebuild :
 
   Resolve bug #334.
 

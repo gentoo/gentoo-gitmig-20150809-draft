@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r6.ebuild,v 1.2 2002/04/24 23:17:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r6.ebuild,v 1.3 2002/04/29 19:50:29 azarah Exp $
 
 #provide Xmake and Xemake
 . /usr/portage/eclass/inherit.eclass
@@ -40,7 +40,7 @@ RDEPEND=">=gnome-extra/bonobo-conf-0.14
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4.1-r1
-	perl? ( dev-util/gtk-doc )
+	doc? ( dev-util/gtk-doc )
 	nls?  ( >=dev-util/intltool-0.11
 	        sys-devel/gettext )"
 
@@ -123,7 +123,7 @@ src_compile() {
 				--with-nspr-libs=${MOZILLA}"
 	fi
 
-	if [ -n "`use perl`" ] ; then
+	if [ -n "`use doc`" ] ; then
 		myconf="${myconf} --enable-gtk-doc"
 	else
 		myconf="${myconf} --disable-gtk-doc"
