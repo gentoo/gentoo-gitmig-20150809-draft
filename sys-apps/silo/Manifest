@@ -2,7 +2,9 @@ MD5 4785735116d8ae2b2e1982e6f57d90d2 ChangeLog 1291
 MD5 bade10beb6ac6a3429412e45660637cb silo-1.2.5.ebuild 658
 MD5 3f6e0369ecbe50b642687b33c7ff9827 silo-1.2.6.ebuild 656
 MD5 d3548e7853ac780781127d2a3bc81893 silo-1.3.0.ebuild 630
+MD5 fbaa1e3c493063b11578ba57a28859b6 silo-1.3.0-r1.ebuild 684
 MD5 df829855fb1a2d89b336cdf78207419e files/digest-silo-1.2.5 63
 MD5 e9a495efa1b76ac532e16905c3d76900 files/digest-silo-1.2.6 63
 MD5 83abd0a2622029e47ae371fbbe8e7f32 files/digest-silo-1.3.0 62
 MD5 fb91d749bdbdaee58c78d3da057f48fd files/silo_1.2.5-1.diff 20854
+MD5 83abd0a2622029e47ae371fbbe8e7f32 files/digest-silo-1.3.0-r1 62
