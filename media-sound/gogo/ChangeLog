@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gogo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/ChangeLog,v 1.2 2002/06/21 00:40:01 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/ChangeLog,v 1.3 2002/07/02 03:08:13 lamer Exp $
+
+*gogo-3.10-r1 (1 Jul 2002)
+	1 Jul 2002; Ben Lutgens <lamer@gentoo.org> gogo-3.10-r1.ebuild :
+
+	The workdir was wrong, removed the src_unpack() because it was useless
+	and corrected the dodoc stuff at the end of src_install()
+
 
 *gogo-3.10 (20 Jun 2002)
 
