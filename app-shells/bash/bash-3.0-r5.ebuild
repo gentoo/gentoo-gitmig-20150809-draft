@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r4.ebuild,v 1.1 2004/08/02 19:23:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r5.ebuild,v 1.1 2004/08/18 16:39:17 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -54,7 +54,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-posixtrap.patch
 
 	# Patch display.c so that only invisible characters actually on the first
-	# line are counted in it
+	# line are counted in it.  (This patch doesn't fix everything and Chet says
+	# he has a better patch... so watch for it in bash-3.0.1)
 	epatch ${FILESDIR}/${P}-invisible.patch
 
 	# Patch readline's bind.c so that /etc/inputrc is read as a last resort
@@ -67,6 +68,10 @@ src_unpack() {
 	# http://news.gmane.org/gmane.comp.shells.bash.bugs/cutoff=4115
 	# to fix bug 58961 (segfault on local arrays)
 	epatch ${FILESDIR}/${P}-local-array.patch
+
+	# Chet Ramey (upstream maintainer) provided this patch to solve
+	# bug 60127 (bash 3 breaks array stripping)
+	epatch ${FILESDIR}/${P}-array-stripping.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h
