@@ -70,6 +70,7 @@
 =kde-base/kdeadmin-3.2.0_alpha2
 =kde-base/kdeutils-3.2.0_alpha2
 =kde-base/kdeedu-3.2.0_alpha2
+=kde-base/kdeaccessibility-3.2.0_alpha2
 =kde-base/arts-1.2.0_alpha2
 
 # <spider@gentoo.org> (04 Sep 2003)
