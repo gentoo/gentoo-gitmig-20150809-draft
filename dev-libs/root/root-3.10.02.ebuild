@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02.ebuild,v 1.2 2004/04/21 21:15:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02.ebuild,v 1.3 2004/06/07 05:45:26 phosphan Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="mysql postgres opengl afs kerberos ldap qt"
 
 DEPEND="virtual/x11
@@ -20,12 +20,15 @@ DEPEND="virtual/x11
 	opengl? ( virtual/opengl virtual/glu )
 	mysql? ( >=dev-db/mysql-3.23.49 )
 	postgres? ( >=dev-db/postgresql-7.1.3-r4 )
-	afs? ( net-fs/openafs )
+	!amd64? ( afs? ( net-fs/openafs ) )
 	kerberos? ( app-crypt/mit-krb5 )
 	ldap? ( net-nds/openldap )
 	qt? ( x11-libs/qt )"
 
 src_compile() {
+
+	local myconf
+
 	if [ "x$CERNLIB" = "x" ]
 	then
 		einfo "No support for cernlib, (h/g)2root will not be build."
@@ -107,6 +110,12 @@ src_compile() {
 			append-flags "-fsigned-char";;
 	esac
 
+	if ! use amd64; then
+		myconf="${myconf} $(use_enable afs)"
+	else
+		myconf="${myconf} --disable-afs"
+	fi
+
 	./configure linux \
 		--aclocaldir=/usr/share/aclocal/ \
 		--bindir=/usr/bin \
@@ -126,7 +135,6 @@ src_compile() {
 		--srcdir=/usr/share/root/src \
 		--testdir=/usr/share/doc/${P}/test \
 		--tutdir=/usr/share/doc/${P}/tutorial \
-		`use_enable afs` \
 		--disable-alien \
 		--disable-asimage \
 		$USECERN \

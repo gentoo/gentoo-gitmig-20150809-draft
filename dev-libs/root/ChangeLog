@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/root
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/ChangeLog,v 1.12 2004/04/20 13:43:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/ChangeLog,v 1.13 2004/06/07 05:45:26 phosphan Exp $
+
+  07 Jun 2004; Patrick Kursawe <phosphan@gentoo.org> root-3.10.02.ebuild:
+  According to user report (forums/slackerman) it works for amd64.
 
 *root-3.10.02 (20 Apr 2004)
 
