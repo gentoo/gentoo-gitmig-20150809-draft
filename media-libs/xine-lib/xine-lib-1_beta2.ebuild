@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta2.ebuild,v 1.6 2003/03/07 23:25:49 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta2.ebuild,v 1.7 2003/03/08 00:00:43 agenkin Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -38,6 +38,14 @@ replace-flags k6-2 i686
 replace-flags k6   i686
 
 src_compile() {
+
+	# Make sure that the older libraries are not installed (bug #15081).
+	if [ -f /usr/lib/libxine.so.0 ]
+	then
+		einfo "Please uninstall older xine libraries.";
+		einfo "The compilation cannot procede.";
+		die
+	fi
 
 	# Most of these are not working currently, but are here for completeness
 	# don't use the --disable-XXXtest because that defaults to ON not OFF
