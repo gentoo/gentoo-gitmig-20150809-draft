@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.1.ebuild,v 1.1 2005/03/21 21:05:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.1.ebuild,v 1.2 2005/03/21 21:06:40 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 		then
 			PATCH=kernel-2.6.11-layer7-${PV}.patch
 		else
- 			PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-${PV}.patch
+			PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-${PV}.patch
 		fi
 	else
 		# 2.6.0-2.6.8.1
