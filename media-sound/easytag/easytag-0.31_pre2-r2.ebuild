@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2-r2.ebuild,v 1.1 2004/04/13 18:44:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2-r2.ebuild,v 1.2 2004/04/22 17:01:58 eradicator Exp $
+
+inherit eutils
 
 IUSE="nls oggvorbis flac gtk2"
 
@@ -31,8 +33,11 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
-	if [ `use gtk2` ] ; then
+
+	if use gtk2; then
 		epatch ${DISTDIR}/${DSD_PATCH}
+		epatch ${FILESDIR}/${MY_P}-gcc2.patch
+
 		export WANT_AUTOMAKE=1.7
 		export WANT_AUTOCONF=2.5
 		ebegin "Remaking configure script (be patient)"
@@ -66,7 +71,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use gtk2` ] ; then
+	if use gtk2; then
 		einfo "You merged with the \"gtk2\" USE flag set"
 		ewarn "GTK+ 2 support for this program is still experimental"
 		ewarn "Please report bugs to http://bugs.gentoo.org"
