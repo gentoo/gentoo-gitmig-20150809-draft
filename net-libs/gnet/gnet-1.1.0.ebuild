@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joshua Pierre <joshua@swool.com> 
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.0.ebuild,v 1.1 2001/12/30 03:00:22 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.0.ebuild,v 1.2 2002/04/12 18:50:52 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNet network library."
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
 HOMEPAGE="http://www.gnetlibrary.org/"
 
 DEPEND="virtual/glibc
-	>=dev-libs/glib-1.2.10"
+	=dev-libs/glib-1.2*"
 
 src_compile() {
 	./configure --host=${CHOST} \
