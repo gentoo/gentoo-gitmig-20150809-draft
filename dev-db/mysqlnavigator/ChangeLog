@@ -1,11 +1,14 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.3 2003/02/12 05:48:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.4 2003/02/15 07:24:15 gerk Exp $
 
   03 Jan 2003; Hannes Mehnert <hannes@gentoo.org> mysqlnavigator-1.4.1.ebuild:
   fixed to compile with qt-3.1.x. solves #12772
 
 *mysqlnavigator-1.4.1 (24 Oct 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> mysqlnavigator-1.4.1.ebuild :
+  set ~ppc in keywords
 
   24 Oct 2002; Hannes Mehnert <hannes@gentoo.org> mysqlnavigator-1.4.1.ebuild,
   ChangeLog: Initial ebuild. Thanks to malverian@hotmail.com (Philip Walls)
