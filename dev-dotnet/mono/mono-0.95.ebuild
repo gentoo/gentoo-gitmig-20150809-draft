@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.95.ebuild,v 1.3 2004/06/02 20:45:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.95.ebuild,v 1.4 2004/06/02 20:58:44 dholm Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -19,7 +19,9 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 DEPEND="virtual/glibc
 	>=dev-libs/glib-2.0
 	>=dev-libs/icu-2.6.1
-	!dev-dotnet/pnet"
+	!dev-dotnet/pnet
+	ppc? ( >=sys-devel/gcc-3.2.3-r4 )
+	ppc? ( >=sys-libs/glibc-2.3.3_pre20040420 )"
 
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
