@@ -1,6 +1,7 @@
 MD5 b969d312ac4266769ab295c44748ffc4 grsec-sources-2.4.26.2.0-r4.ebuild 3065
+MD5 8eec4c810a4fb95efe9f6f3bbcf46f29 grsec-sources-2.4.26.2.0-r6.ebuild 3318
 MD5 ea8807d44eed01d93f651bd7254e3a83 grsec-sources-2.4.26.2.0-r3.ebuild 2817
-MD5 77d698377396456d2b242077427db897 ChangeLog 5578
+MD5 c03bfde85623c329e8461cf093eb3568 ChangeLog 5774
 MD5 140d8af1d66f9f6cd030e7d9902f38d9 metadata.xml 478
 MD5 d1056a17aa337464259468e329785e46 grsec-sources-2.4.26.2.0-r5.ebuild 3181
 MD5 c47b7075dd1e065b09bb08936c1901a1 files/2.4.26-signal-race.patch 365
@@ -13,3 +14,5 @@ MD5 dc18e982f8149588a291956481885a8c files/gentoo-sources-2.4.CAN-2004-0495.patc
 MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r3 143
 MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r4 143
 MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r5 143
+MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r6 143
+MD5 169359fc6f96d31d4b811b77b6326737 files/2.4.26-fchown-attr.patch 683
