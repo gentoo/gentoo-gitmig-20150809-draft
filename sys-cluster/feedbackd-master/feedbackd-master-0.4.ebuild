@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.3 2005/01/27 08:49:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.4 2005/03/08 02:49:52 xmerlin Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://ozlabs.org/~jk/projects/feedbackd/"
 LICENSE="GPL-2"
 DEPEND="virtual/libc
 	dev-libs/libxml2
-	sys-cluster/ipvsadm
+	>=sys-cluster/ipvsadm-1.24
 	dev-lang/perl"
 
 SRC_URI="mirror://sourceforge/feedbackd/${P}.tar.gz"
