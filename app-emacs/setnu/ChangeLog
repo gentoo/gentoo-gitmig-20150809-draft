@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/setnu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/setnu/ChangeLog,v 1.1 2004/11/16 02:42:28 mkennedy Exp $
+
+*setnu-1.06 (15 Nov 2004)
+
+  15 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> +metadata.xml,
+  +files/50setnu-gentoo.el, +setnu-1.06.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
