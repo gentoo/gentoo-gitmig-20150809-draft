@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 80ea2b9ab90b8deb7658586df84622d5 ant-contrib-1.0_beta1.ebuild 1067
+MD5 f46c29cee00b4bd522b050349b13007d ant-contrib-1.0_beta1.ebuild 1157
 MD5 de88e0024eb2bb11d6783792bb1f146e ChangeLog 381
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 ceb92d92286af34135f5d0bdcb5c67db files/digest-ant-contrib-1.0_beta1 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD4DBQFBC//A/rLF9B432nYRAvgNAJdTZb4iVneRH0K+aV8nEvOSAYkoAKDHMNmG
-/zbGc3t2wrE/VXxejAnPoA==
-=ko2/
+iD8DBQFBDB8p/rLF9B432nYRAsxTAKCersy6gK3edi/tuxMWXSsu6mjSdACeLNX0
+LzYIHYH1db2yYQ0/7LMwjwA=
+=kdiT
 -----END PGP SIGNATURE-----
