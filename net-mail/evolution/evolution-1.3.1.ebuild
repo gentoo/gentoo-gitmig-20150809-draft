@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.2 2003/03/19 14:11:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.3 2003/03/19 14:43:42 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos"
 
@@ -9,8 +9,7 @@ inherit eutils flag-o-matic gnome.org libtool virtualx gnome2
 DB3="db-3.1.17"
 S="${WORKDIR}/${P}"
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
-SRC_URI="ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/${P}.tar.gz
-	http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
+SRC_URI="${SRC_URI} http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
 SLOT="2" # can co-exist with evolution <= 1.2
