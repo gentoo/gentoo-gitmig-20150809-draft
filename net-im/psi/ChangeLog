@@ -1,6 +1,11 @@
 # ChangeLog for net-im/psi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.9 2002/12/06 14:11:05 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.10 2003/02/01 20:14:48 danarmak Exp $
+
+  01 Feb 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Hopefully fix bug #13957 - use need-qt() from kde-functions.eclass toget
+  the sandbox fix for qt apps.
 
   6 Dec 2002; Bart Verwilst <verwilst@gentoo.org> :
   Added a patch that shows "Gentoo Linux" as OS instead of "Linux" :o)

@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.7.ebuild,v 1.4 2002/12/06 14:11:05 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.7.ebuild,v 1.5 2003/02/01 20:14:48 danarmak Exp $
+inherit kde-functions
 
 IUSE="ssl"
 
@@ -15,8 +16,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-DEPEND=">=x11-libs/qt-3
-	ssl? ( >=dev-libs/openssl-0.9.6c )"
+need-qt 3
+
+newdepend "ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_unpack() {
 
