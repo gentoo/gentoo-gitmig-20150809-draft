@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.7 2004/04/02 20:50:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.8 2004/04/25 11:49:21 dholm Exp $
+
+  25 Apr 2004; David Holm <dholm@gentoo.org> ntfsprogs-1.9.0.ebuild:
+  Added to ~ppc, required by some packages which are useful on ppc.
 
 *ntfsprogs-1.9.0 (02 Apr 2004)
 
