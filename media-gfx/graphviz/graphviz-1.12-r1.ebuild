@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12-r1.ebuild,v 1.5 2004/12/14 10:17:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12-r1.ebuild,v 1.6 2005/02/19 05:09:04 j4rg0n Exp $
 
 inherit gnuconfig eutils
 
