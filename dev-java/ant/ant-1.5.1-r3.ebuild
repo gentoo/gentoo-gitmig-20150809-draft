@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.1-r3.ebuild,v 1.1 2002/12/02 00:55:23 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.1-r3.ebuild,v 1.2 2002/12/02 01:15:40 strider Exp $
 
 S=${WORKDIR}/jakarta-ant-${PV}
 DESCRIPTION="Build system for Java"
-SRC_URI="mirror://gentoo/jakarta-ant-${PV}-bin.tar.bz2"
+SRC_URI="http://www.apache.org/dist/ant/binaries/jakarta-ant-${PV}-bin.tar.bz2"
 HOMEPAGE="http://jakarta.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
