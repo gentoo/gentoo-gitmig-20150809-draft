@@ -1,10 +1,18 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.14 2004/04/27 22:00:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.15 2004/06/02 12:48:30 plasmaroo Exp $
+
+*ia64-sources-2.4.24-r4 (02 Jun 2004)
+
+  02 Jun 2004; <plasmaroo@gentoo.org> -ia64-sources-2.4.24-r3.ebuild,
+  +ia64-sources-2.4.24-r4.ebuild,
+  +files/ia64-sources-2.4.24.CAN-2004-...patch:
+  Added patches for the CAN-2004-0075, CAN-2004-0181, CAN-2004-0394, and
+  CAN-2004-0427 vulnerabilities. Bug #47881.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   ia64-sources-2.4.22-r1.ebuild, ia64-sources-2.4.22.ebuild:
-  Add inherit eutils
+  Add inherit eutils.
 
 *ia64-sources-2.4.24-r3 (17 Apr 2004)
 
