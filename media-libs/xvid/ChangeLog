@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.14 2003/09/26 17:28:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.15 2004/01/03 13:10:27 mholzer Exp $
+
+*xvid-1.0.0_beta3 (03 Jan 2004)
+
+  03 Jan 2004; Martin Holzer <mholzer@gentoo.org> xvid-1.0.0_beta3.ebuild:
+  Version bumped. Closes 36984
 
   26 Sep 2003; Jason Wever <weeve@gentoo.org> xvid-0.9.1.ebuild:
   Added sparc keyword.
