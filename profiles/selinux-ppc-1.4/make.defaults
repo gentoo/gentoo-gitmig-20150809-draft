@@ -1,0 +1,33 @@
+# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# System-wide defaults for the Portage system
+
+ARCH="ppc"
+
+# Host-type
+
+CHOST=powerpc-unknown-linux-gnu
+PLATFORM=$CHOST
+
+# Options passed to make during the build process
+MAKEOPTS="-j2"
+
+# Fetching command (5 tries, passive ftp for firewall compatibility)
+FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+# Global configure options
+
+# C Compiler flags
+CFLAGS="-O2 -pipe"
+# C++ Compiler flags
+CXXFLAGS=${CFLAGS}
+
+USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+
+# The following USE should _not_ bet set on ppc as they can cause breakage
+# in some pacakges (are mostly x86 only options)
+# 3dfx 3dnow avi icc icc-pgo mmx svga sse
+
+ACCEPT_KEYWORDS="ppc"
+
+COMPILER="gcc3"
+
+POLICYDIR="/etc/security/selinux/src/policy"
