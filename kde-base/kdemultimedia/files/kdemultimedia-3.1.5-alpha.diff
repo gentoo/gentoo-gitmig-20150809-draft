@@ -1,0 +1,12 @@
+--- mpeglib/lib/input/cdromAccess_Linux.cpp.agriffis	2004-01-11 23:03:27.000000000 -0500
++++ mpeglib/lib/input/cdromAccess_Linux.cpp	2004-01-11 23:03:37.000000000 -0500
+@@ -10,7 +10,9 @@
+ 
+  */
+ 
++#if 0
+ typedef unsigned long long __u64;
++#endif
+ 
+ #include "cdromToc.h"
+ #include "cdromRawAccess.h"

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.61 2004/01/13 16:43:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.62 2004/01/15 03:20:59 caleb Exp $
+
+*kdenetwork-3.1.5 (14 Jan 2004)
+
+  14 Jan 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.1.5.ebuild:
+  New version
 
   13 Jan 2004; Aron Griffis <agriffis@gentoo.org> kdenetwork-3.1.4.ebuild:
   stable on alpha
