@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/mini-xml
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.1 2004/09/28 23:04:33 fvdpol Exp $
+
+  29 Sep 2004; Frank van de Pol <fvdpol@gentoo.org> :
+  Mini-xml library used by ZynAddSubFX. Ebuild submitted by Eric Shattow
+  <shadow@serverart.org> in bug #58214.
+
