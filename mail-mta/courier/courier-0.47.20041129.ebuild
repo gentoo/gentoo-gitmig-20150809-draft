@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.5 2004/12/06 04:11:03 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.6 2004/12/07 01:16:58 swtaylor Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ DEPEND="virtual/libc
 	net-libs/courier-authlib
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
+	|| ( app-misc/mime-types net-www/apache )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? ( >=media-libs/netpbm-9.12 virtual/ghostscript >=net-dialup/mgetty-1.1.28 )
 	pam? ( >=sys-libs/pam-0.75 )
@@ -57,6 +58,8 @@ src_compile() {
 		myconf="${myconf} --enable-mimetypes=/etc/apache/conf/mime.types"
 	[ -e /etc/apache2/conf/mime.types ] && \
 		myconf="${myconf} --enable-mimetypes=/etc/apache2/conf/mime.types"
+	[ -e /etc/mime.types ] && \
+		myconf="${myconf} --enable-mimetypes=/etc/mime.types"
 
 	einfo "Configuring courier: `echo ${myconf} | xargs echo`"
 	./configure \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47-r1.ebuild,v 1.2 2004/12/06 04:11:03 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47-r1.ebuild,v 1.3 2004/12/07 01:16:58 swtaylor Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ PROVIDE="virtual/mta
 DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
+	|| ( app-misc/mime-types net-www/apache )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
 		virtual/ghostscript
@@ -78,6 +79,13 @@ src_compile() {
 		myconf="${myconf} --disable-unicode"
 	fi
 
+	[ -e /etc/apache/conf/mime.types ] && \
+		myconf="${myconf} --enable-mimetypes=/etc/apache/conf/mime.types"
+	[ -e /etc/apache2/conf/mime.types ] && \
+		myconf="${myconf} --enable-mimetypes=/etc/apache2/conf/mime.types"
+	[ -e /etc/mime.types ] && \
+		myconf="${myconf} --enable-mimetypes=/etc/mime.types"
+
 	myconf="${myconf} debug=true"
 
 	./configure \
@@ -96,7 +104,6 @@ src_compile() {
 		--with-paranoid-smtpext \
 		--disable-autorenamesent \
 		--with-db=gdbm \
-		--enable-mimetypes=/etc/apache/conf/mime.types \
 		--enable-workarounds-for-imap-client-bugs \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
