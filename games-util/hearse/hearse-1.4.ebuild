@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.4.ebuild,v 1.1 2003/11/25 11:05:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.4.ebuild,v 1.2 2003/11/28 18:36:50 mr_bones_ Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="exchange Nethack bones files with other players"
 HOMEPAGE="http://www.argon.org/~roderick/hearse/"
 SRC_URI="http://www.argon.org/~roderick/hearse/dist/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
