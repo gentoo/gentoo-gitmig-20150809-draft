@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.6.8.ebuild,v 1.1 2003/06/18 12:02:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.6.8.ebuild,v 1.2 2003/06/18 12:03:11 seemant Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xawdecode/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=sys-apps/sed-4.0.5"
 
