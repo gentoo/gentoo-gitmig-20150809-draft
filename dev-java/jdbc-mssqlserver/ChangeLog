@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc-mssqlserver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.5 2004/10/16 17:21:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.6 2004/10/20 09:30:43 absinthe Exp $
+
+*jdbc-mssqlserver-2.2.0040 (20 Oct 2004)
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  +jdbc-mssqlserver-2.2.0040.ebuild:
+  Version bump. Added ~amd64 keyword.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   jdbc-mssqlserver-2.2.0029.ebuild:
