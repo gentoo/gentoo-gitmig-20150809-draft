@@ -1,18 +1,24 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.33 2004/10/12 00:39:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.34 2004/12/14 03:19:04 latexer Exp $
 
-  11 Oct 2004; <peter@gentoo.org> rxvt-unicode-2.4.ebuild,
+*rxvt-unicode-4.5 (13 Dec 2004)
+
+  13 Dec 2004; Peter Johanson <latexer@gentoo.org> -rxvt-unicode-3.5.ebuild,
+  rxvt-unicode-4.0.ebuild, +rxvt-unicode-4.5.ebuild:
+  Bump new release, mark 4.0 stable on x86, and remove one older version.
+
+  11 Oct 2004; Peter Johanson <latexer@gentoo.org> rxvt-unicode-2.4.ebuild,
   rxvt-unicode-3.0.ebuild, rxvt-unicode-3.5.ebuild, rxvt-unicode-3.6.ebuild,
   rxvt-unicode-3.9.ebuild, rxvt-unicode-4.0.ebuild:
   Fix the HOMEPAGE to point to the new location. See bug #66538
 
 *rxvt-unicode-4.0 (28 Sep 2004)
 
-  28 Sep 2004; <peter@gentoo.org> +files/rxvt-unicode-4.0-64bit.patch,
-  -rxvt-unicode-2.8.ebuild, -rxvt-unicode-2.9.ebuild,
-  -rxvt-unicode-3.1.ebuild, -rxvt-unicode-3.2.ebuild, rxvt-unicode-3.6.ebuild,
-  rxvt-unicode-3.9.ebuild, +rxvt-unicode-4.0.ebuild:
+  28 Sep 2004; Peter Johanson <latexer@gentoo.org>
+  +files/rxvt-unicode-4.0-64bit.patch, -rxvt-unicode-2.8.ebuild,
+  -rxvt-unicode-2.9.ebuild, -rxvt-unicode-3.1.ebuild, -rxvt-unicode-3.2.ebuild,
+  rxvt-unicode-3.6.ebuild, rxvt-unicode-3.9.ebuild, +rxvt-unicode-4.0.ebuild:
   Bump, fix a few deps, and do some cleanup of older versions. See bug #62418
   for dep change info.
 

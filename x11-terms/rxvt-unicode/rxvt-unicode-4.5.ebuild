@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.5.ebuild,v 1.3 2004/10/12 00:39:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-4.5.ebuild,v 1.1 2004/12/14 03:19:04 latexer Exp $
+
+inherit 64-bit eutils
 
 IUSE="xgetdefault"
 
@@ -10,20 +12,22 @@ SRC_URI="http://rxvt-unicode-dist.plan9.de/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips ~amd64 ppc"
+KEYWORDS="~x86 ~sparc ~mips ~amd64 ~ppc"
 
 DEPEND="virtual/libc
 	virtual/x11
-	app-text/yodl"
+	dev-lang/perl"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	local tdir=/usr/share/terminfo
+	sed -i -e \
+		"s~@TIC@ \(etc/rxvt\)~@TIC@ -o ${D}/${tdir} \1~" \
+		doc/Makefile.in
+}
 
 src_compile() {
-	local term
-	if [ -n "${RXVT_TERM}" ] ; then
-		term="${RXVT_TERM}"
-	else
-		term="rxvt"
-	fi
-
 	econf \
 		--enable-everything \
 		--enable-rxvt-scroll \
@@ -43,8 +47,6 @@ src_compile() {
 		--enable-shared \
 		--enable-keepscrolling \
 		--enable-xft \
-		--with-term=${term} \
-		--with-term=rxvt \
 		`use_enable xgetdefault` \
 		--disable-text-blink \
 		--disable-menubar || die
@@ -53,23 +55,14 @@ src_compile() {
 }
 
 src_install() {
-
-	einstall mandir=${D}/usr/share/man/man1 || die
+	make DESTDIR=${D} install || die
 
 	dodoc README.unicode Changes
 	cd ${S}/doc
-	dodoc README* changes.txt FAQ BUGS TODO etc/*
+	dodoc README* changes.txt BUGS TODO etc/*
 }
 
 pkg_postinst() {
-
-	einfo
-	einfo "If you want to change default TERM variable other than rxvt,"
-	einfo "set RXVT_TERM environment variable and then emerge rxvt-unicode."
-	einfo "Especially, if you use rxvt under monochrome X you might need to run"
-	einfo "\t RXVT_TERM=rxvt-basic emerge rxvt-unicode"
-	einfo "otherwise curses based program will not work."
-	ewarn
-	ewarn "${PN} has renamed its binaries to urxvt, urxvtd, and urxvtc!"
-	ewarn
+	einfo "urxvt now always uses TERM=rxvt-unicode so that the"
+	einfo "upstream-supplied terminfo files can be used."
 }
