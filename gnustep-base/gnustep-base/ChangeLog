@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.6 2004/09/28 00:51:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.7 2004/09/28 17:50:19 fafhrd Exp $
+
+*gnustep-base-1.10.1_pre20040927 (28 Sep 2004)
+
+  28 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  +gnustep-base-1.10.1_pre20040928.ebuild:
+  Version bump; pre release date specd live cvs pull.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org>
   files/config-gnustep-base.sh:
