@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/queen-0.ebuild,v 1.2 2004/03/30 15:45:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/queen-0.ebuild,v 1.3 2004/04/12 03:26:54 weeve Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ S="${WORKDIR}/FOTAQ_Talkie"
 
 LICENSE="queen"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE=""
 
 DEPEND=">=games-engines/scummvm-0.6.0"
