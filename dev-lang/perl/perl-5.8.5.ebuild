@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5.ebuild,v 1.6 2004/09/25 00:46:57 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5.ebuild,v 1.7 2004/09/27 11:33:14 mcummings Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -17,7 +17,7 @@ LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
-IUSE="berkdb doc gdbm ithreads uclibc"
+IUSE="berkdb debug doc gdbm ithreads uclibc"
 
 DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
@@ -159,6 +159,12 @@ src_configure() {
 		# <rac@gentoo.org> 2003.06.26
 		myconf="${myconf} -Dd_u32align"
 	fi
+
+	if use debug
+	then
+		CFLAGS="${CFLAGS} -g"
+	fi
+
 	if use sparc
 	then
 		myconf="${myconf} -Ud_longdbl"
