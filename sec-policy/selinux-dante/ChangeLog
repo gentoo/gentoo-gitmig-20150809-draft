@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-dante
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dante/ChangeLog,v 1.5 2005/02/01 09:31:35 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dante/ChangeLog,v 1.6 2005/02/06 17:16:35 kaiowas Exp $
+
+  06 Feb 2005; petre rodan <kaiowas@gentoo.org>
+  selinux-dante-20050201.ebuild:
+  mark stable
 
 *selinux-dante-20050201 (01 Feb 2005)
 
