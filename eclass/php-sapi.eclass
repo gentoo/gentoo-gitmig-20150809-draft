@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.14 2004/03/28 22:08:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.15 2004/03/28 22:57:38 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -38,7 +38,7 @@ fi
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -93,7 +93,8 @@ RDEPEND="${RDEPEND}
    virtual/mta
    sys-apps/file
    yaz? ( dev-libs/yaz )
-   doc? ( app-doc/php-docs )"
+   doc? ( app-doc/php-docs )
+   gmp? ( dev-libs/gmp )"
 
 
 # USE structure doesn't support ~x86
@@ -284,6 +285,7 @@ php-sapi_src_compile() {
 	myconf="${myconf} `use_with snmp snmp /usr`"
 	use snmp && myconf="${myconf} --enable-ucd-snmp-hack"
 	use X && myconf="${myconf} --with-xpm-dir=/usr/X11R6" LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib"
+	use gmp && myconf="${myconf} --with-gmp"
 	
 	# This chunk is intended for png/tiff/jpg, as there are several things that need them, indepentandly!
 	REQUIREPNG=
