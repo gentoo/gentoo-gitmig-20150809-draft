@@ -1,0 +1,11 @@
+# ChangeLog for app-office/gbib
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gbib/ChangeLog,v 1.1 2004/02/23 18:00:29 usata Exp $
+
+*gbib-0.1.2 (24 Feb 2004)
+
+  24 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> gbib-0.1.2.ebuild,
+  metadata.xml, files/gbib-gentoo.patch:
+  Initial import. Ebuild submitted by Scott A. Friedman <friedman@ucla.edu>,
+  closing bug #28143
+
