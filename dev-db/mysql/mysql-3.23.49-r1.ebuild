@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.49.ebuild,v 1.1 2002/02/19 03:44:41 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.49-r1.ebuild,v 1.1 2002/05/04 01:58:36 woodchip Exp $
 
 # NB: Databases are now in /var/lib/mysql vs. the old /var/mysql.  If you are
 # upgrading from a recent mysql version, you should be able to simply move your
@@ -30,6 +28,8 @@ SRC_URI="http://www.kernelnotes.de/MySQL/Downloads/MySQL-3.23/${P}.tar.gz
 
 RDEPEND="virtual/glibc readline? ( >=sys-libs/readline-4.1 ) >=sys-libs/ncurses-5.1 >=sys-libs/zlib-1.1.3"
 DEPEND="${RDEPEND} tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) sys-devel/perl sys-apps/procps"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_unpack() {
 
