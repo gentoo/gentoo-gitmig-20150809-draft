@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/crypto-sources-2.4.19-r3.ebuild,v 1.1 2002/05/06 22:45:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/crypto-sources-2.4.19-r4.ebuild,v 1.1 2002/05/08 05:47:20 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.18
-KV=2.4.19-gentoo-r3
+KV=2.4.19-crypto-r4
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
