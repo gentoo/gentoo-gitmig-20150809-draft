@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.12 2003/03/29 02:53:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.13 2003/04/02 00:17:58 spider Exp $
 
 DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -13,8 +13,7 @@ KEYWORDS="x86 ppc sparc"
 DEPEND="virtual/motif
 	>=media-libs/tiff-3.5.7
 	>=media-libs/jpeg-6b
-	>=media-libs/libpng-1.2.3
-	>=media-libs/xpm-3.4k"
+	>=media-libs/libpng-1.2.3"
 
 S="${WORKDIR}/Ted-${PV}"
 
