@@ -1,8 +1,14 @@
 # ChangeLog for app-office/siag
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/ChangeLog,v 1.3 2002/06/06 13:57:01 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/ChangeLog,v 1.4 2002/06/17 22:18:09 lostlogic Exp $
 
 *siag-3.5.2 (5 Jun 2002)
+
+  17 Jun 2002; Brandon Low <lostlogic@gentoo.org> siag-3.5.2-r2.ebuild
+
+  Fix sandbox violation if KDEDIR is not defined, if installing siag and KDE
+  please ensure that you have USE="kde" and that you insatll siag AFTER installing
+  KDE to ensure that siag can properly link itself to KDE.
 
   6 Jun 2002; Brandon Low <lostlogic@gentoo.org> siag-3.5.2-r1.ebuild
 
