@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.25 2003/04/21 14:48:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.26 2003/05/07 11:17:55 liquidx Exp $
+
+*libgtkhtml-3.0.3 (07 May 2003)
+
+  07 May 2003; Alastair Tse <liquidx@gentoo.org> libgtkhtml-3.0.3.ebuild:
+  version bump
 
 *libgtkhtml-3.0.2 (21 Apr 2003)
 

@@ -1,5 +1,6 @@
-MD5 7989d89f530f4f82667325b987abcf60 ChangeLog 3195
+MD5 6e70d11a1af0f266911b869ee9426779 ChangeLog 3318
 MD5 992c9f1c51d87cbb85e72f239b02f845 libgtkhtml-2.2.1.ebuild 805
+MD5 141c72af723465b446502e50562d796d libgtkhtml-3.0.3.ebuild 1784
 MD5 a98a27c7ff7d616fdd134e1cb90d3007 libgtkhtml-2.0.2.ebuild 735
 MD5 ea985cb9f34fd51bd2b19a2fb028a4a0 libgtkhtml-2.2.3.ebuild 807
 MD5 a510615f71848f13b82ff16a69616f26 libgtkhtml-3.0.1.ebuild 1204
@@ -9,4 +10,5 @@ MD5 729c836f5eeae9823f074f7729ecadfe files/digest-libgtkhtml-3.0.1 66
 MD5 1d102cc4ec5ae76f652e75c8e020c297 files/digest-libgtkhtml-3.0.2 67
 MD5 277fd5b1d3246d060bc3821f73bf4392 files/digest-libgtkhtml-2.0.2 69
 MD5 59cd7ffde71d082b5c68834945dc71cc files/digest-libgtkhtml-2.2.3 69
+MD5 b8f138597164ed0131bdedb8f973ebd7 files/digest-libgtkhtml-3.0.3 67
 MD5 8b985f9a98b7a90232d5ea193b8078d1 files/libgtkhtml-2.2.0-alpha.patch 652

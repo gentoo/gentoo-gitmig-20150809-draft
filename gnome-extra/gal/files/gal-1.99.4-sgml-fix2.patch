@@ -1,0 +1,16 @@
+--- gal-1.99.4/docs/sgml/e-table-header-item.sgml	2003-04-29 19:28:49.000000000 +0100
++++ gal-1.99.4/docs/sgml/e-table-header-item.sgml	2003-05-06 22:57:53.000000000 +0100
+@@ -197,12 +197,10 @@
+ </entry></row>
+ <row><entry align="right"><parameter>arg1</parameter>&nbsp;:</entry>
+ <entry>The GdkEvent.
+-</para>
+-
+ </entry></row>
+ <row><entry align="right"><parameter>user_data</parameter>&nbsp;:</entry>
+ <entry>user data set when the signal handler was connected.</entry></row>
+-</tbody></tgroup></informaltable></refsect2>
++</tbody></tgroup></informaltable></para></refsect2>
+ </refsect1>
+ 
+ 
