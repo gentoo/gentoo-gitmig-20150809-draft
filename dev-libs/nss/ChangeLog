@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.4 2003/07/11 20:37:02 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.5 2003/07/11 20:45:53 liquidx Exp $
+
+  11 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
+  putting in ~sparc keyword. thanks to weeve for testing
 
   11 Jul 2003; Bartosch Pixa <darkspecter@gentoo.org> nss-3.8.ebuild:
   set ~ppc in keywords
@@ -8,6 +11,9 @@
   11 Jul 2003; Brandon Low <lostlogic@gentoo.org> nss-3.8.ebuild:
   Add an important || die statement, and make work on all kernels, arches, and
   debug settings
+
+  11 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
+  oops. fix HOMEPAGE. thanks to weeve.
 
   11 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
   no parallel building
