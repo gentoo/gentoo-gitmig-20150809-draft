@@ -1,4 +1,5 @@
 MD5 be7cdd4ef688e605056410f47ef2c179 courier-0.44.0.ebuild 9883
+MD5 25d6ac027da8f4833bb24ed2b04b09ec courier-0.44.2.ebuild 10002
 MD5 691ca6f96ab6aec62e920996a874d104 courier-0.42.2.ebuild 9621
 MD5 ae88f6f03970445f78c36ea37c090cc3 ChangeLog 6184
 MD5 891fa054ac6cfcaee491ccaae9b84a85 metadata.xml 463
@@ -18,8 +19,9 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/locallowercase 0
 MD5 b24f71b5e2b701cdcb758c2f6e3b1083 files/digest-courier-0.42.2 68
 MD5 07811e054f4f8eb642d6cca22c960c6a files/digest-courier-0.43.2 68
 MD5 69a536abf75f11f8d362901f7979a780 files/digest-courier-0.44.0 68
+MD5 0b192e51cf2e6e24ffa844e7066e6f30 files/digest-courier-0.44.2 68
 MD5 aba961cc052d0c255f4e1deb65945153 files/courier-0.42.2-gentoo.diff.bz2 378
-MD5 249ceebfffaef283a84a1d49393db8f8 files/courier-init 4392
+MD5 d56f50088f63932fa659fe0f17c1a23e files/courier-init 4633
 MD5 e3a4ab031bd750b7ce2c7b85fee83d8e files/set-mime 741
 MD5 d587a072860886d2896d8b5a8c118951 files/courier-esmtpd-msa 438
 MD5 8be77f68229aebdc27b53660a6431e8c files/courier-esmtpd-ssl 456
