@@ -1,8 +1,14 @@
 # ChangeLog for app-emacs/semi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.5 2003/07/27 01:47:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.6 2003/07/29 02:31:32 usata Exp $
 
 *semi-1.14.5-r1 (13 Jul 2003)
+
+  29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> semi-1.14.5-r1.ebuild:
+  Marked x86 and alpha stable.  Added eutils to inherit.
+  (however, semi-1.14.5-gentoo.diff was not necessary because affected
+  version of Emacs of the security hole shown below was under 20.x and
+  at this moment there is no such version of Emacs ebuild available)
 
   27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> semi-1.14.5-r1.ebuild:
   Changed dependency to virtual/flim rather than app-emacs/flim
