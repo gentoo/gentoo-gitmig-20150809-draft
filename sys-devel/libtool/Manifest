@@ -58,11 +58,11 @@ MD5 6ef585a59058c79f3601bbd7787f2683 files/1.5.2/libtool-1.5-libtool.m4-x86_64.p
 MD5 0fb02114fa6b6cd63ea25510f04f346a files/1.5.2/libtool-1.5-testfailure.patch 6448
 MD5 8ac4aa8ff1c680fe44447274d9f3a673 files/1.5.2/libtool-1.5.2-libtool_m4-shared_ext.patch 882
 MD5 d2313fcf3c18603f201627ca94850786 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd_len.patch 1153
-MD5 055538f9759547fa48053a0ff9f4aa44 files/1.5.2/libtool-1.5-filter-host-tags.patch 1687
+MD5 6dd0c1d0f23c427ef0b48346e207dbfc files/1.5.2/libtool-1.5-filter-host-tags.patch 1783
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBibq6HTu7gpaalycRAoSWAKChFi9NT8RvV4JLpElScXd9IDLqBACgoi3J
-urRZClHwVEsF6G9aHm4TadA=
-=I/Gb
+iD8DBQFBi7GiHTu7gpaalycRAmiOAJ9gWs5Z79CuO36BWDMKcD41sbKVzgCgtudr
+gk32hK/tSsU5OBEYITalv1E=
+=eW85
 -----END PGP SIGNATURE-----
