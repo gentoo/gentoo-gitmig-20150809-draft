@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3da7ac2b602f5bf847268cbd1e5ecbb6 ChangeLog 5663
+MD5 9cce5a1b73ba74518b489fe6c3eb5739 webapp-config-1.10-r3.ebuild 1392
+MD5 801b740d19b4a680780bc6c016a0eceb webapp-config-1.9-r2.ebuild 1145
+MD5 c6bdf774008e6da1bfa7faf1d6cd1a63 webapp-config-1.10-r2.ebuild 1392
+MD5 f2ff5b60d854a2ad4dff39a02536eca3 ChangeLog 5831
 MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
-MD5 b36358a8a2bfc1abb19dd394602c9442 webapp-config-1.10-r3.ebuild 1384
-MD5 2e8e716df8579657cdb56cd7cf7f70a2 webapp-config-1.9-r2.ebuild 1136
-MD5 db7072c38c71ad927f0158678e253d70 webapp-config-1.10-r2.ebuild 1384
-MD5 afd9d99f18f5eac34ce6d9c858f06ecd files/digest-webapp-config-1.10-r3 73
 MD5 0c1ae4fd2fcc6de80a24f04993a63d80 files/digest-webapp-config-1.9-r2 72
 MD5 6de3add921ada350b2dd768bc46a6e80 files/digest-webapp-config-1.10-r2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA6aBaHTu7gpaalycRAsgjAJ9hbv8gy+URMNAnk52PytjUu1PTlQCg1iqZ
-fQzzcnIiQF8/hn4n/Lrdw9E=
-=UXrU
------END PGP SIGNATURE-----
+MD5 afd9d99f18f5eac34ce6d9c858f06ecd files/digest-webapp-config-1.10-r3 73
