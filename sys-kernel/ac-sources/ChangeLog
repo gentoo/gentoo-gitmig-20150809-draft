@@ -1,0 +1,14 @@
+# ChangeLog for sys-kernel/ac-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.1 2002/10/06 18:48:59 lostlogic Exp $
+
+*ac-sources-2.4.20_pre83 (06 Oct 2002)
+
+  06 Oct 2002; Brandon Low <lostlogic@gentoo.org> ac-sources-2.4.20_pre83.ebuild:
+
+  New package for -ac sources, the versioning is silly
+  because we really have 2 parts to the -pre number the
+  marcelo kernel pre version and the -ac subversion so 
+  _pre83 means -pre8-ac3.  This doesn't hold up if
+  there are more than 10 -ac versions for a -pre I hope
+  that -ac never sinks to that level ;-).
