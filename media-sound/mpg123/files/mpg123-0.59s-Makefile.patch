@@ -1,0 +1,20 @@
+--- Makefile.orig	2004-04-12 22:41:30.819936000 -0700
++++ Makefile	2004-04-12 22:41:51.649936000 -0700
+@@ -402,7 +402,7 @@
+ 		OBJECTS='decode.o dct64.o audio_esd.o' \
+ 		CFLAGS='-DREAL_IS_FLOAT -DUSE_MMAP -DOSS -DUSE_ESD -DSPARCLINUX -Wall  \
+ 			-fomit-frame-pointer -funroll-all-loops \
+-			-finline-functions -ffast-math \
++			-finline-functions -ffast-math' \
+ 		mpg123-make
+ 
+ 
+@@ -410,7 +410,7 @@
+ 	$(MAKE)  LDFLAGS= OBJECTS='decode.o dct64.o audio_oss.o' \
+ 		CFLAGS='-DLINUX -DOSS -Wall  \
+ 			-fomit-frame-pointer -funroll-all-loops \
+-			-finline-functions -ffast-math \
++			-finline-functions -ffast-math' \
+ 			-Wall -O6 -DUSE_MMAP \
+                 mpg123-make
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r3.ebuild,v 1.2 2004/04/13 04:56:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r3.ebuild,v 1.3 2004/04/13 05:52:25 eradicator Exp $
 
 inherit eutils
 
@@ -42,7 +42,10 @@ src_unpack() {
 	# amd64.  It's good to understand the distinction between int and
 	# long: ANSI says that int should be 32-bits, long should be the
 	# native size of the CPU (usually the same as a pointer).
-	epatch ${FILESDIR}/mpg123-0.59s-amd64.patch
+	epatch ${FILESDIR}/${P}-amd64.patch
+
+	# Fix Makefile missing quotes
+	epatch ${FILESDIR}/${P}-Makefile.patch
 
 	# Don't force gcc since icc/ccc might be possible
 	sed -i -e "s|CC=gcc||" Makefile
