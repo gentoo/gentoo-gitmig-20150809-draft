@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.17 2005/01/02 09:38:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.18 2005/01/02 10:29:34 stuart Exp $
+
+  02 Jan 2005; Stuart Herbert <stuart@gentoo.org> -nxclient-1.3.0.ebuild,
+  -nxclient-1.3.2.ebuild, -nxclient-1.4.0-r1.ebuild,
+  -nxclient-1.4.0-r2.ebuild, -nxclient-1.4.0.ebuild:
+  Removed obsolete version
 
 *nxclient-1.4.0-r3 (02 Jan 2005)
 
