@@ -1,9 +1,11 @@
---- Sources/API/GL/opengl_wrap.h.orig	2004-01-17 22:59:57.862435912 -0500
-+++ Sources/API/GL/opengl_wrap.h	2004-01-17 23:00:54.660801248 -0500
-@@ -1887,5 +1887,5 @@
- 	typedef void (CL_GLFUNC *ptr_glDrawPixels)(CLsizei width, CLsizei height, CLenum format, CLenum type, const CLvoid *pixels);
- 	typedef void (CL_GLFUNC *ptr_glEdgeFlag)(CLboolean flag);
--	typedef void (CL_GLFUNC *ptr_glEdgeFlagPointer)(CLsizei stride, const CLvoid *pointer);
-+	typedef void (CL_GLFUNC *ptr_glEdgeFlagPointer)(CLsizei stride, const CLboolean *pointer);
- 	typedef void (CL_GLFUNC *ptr_glEdgeFlagv)(const CLboolean *flag);
- 	typedef void (CL_GLFUNC *ptr_glEnable)(CLenum cap);
+--- Sources/GL/opengl_state_generic.cpp.orig	2004-01-19 03:27:03.151761520 -0500
++++ Sources/GL/opengl_state_generic.cpp	2004-01-19 03:27:22.483822600 -0500
+@@ -518,7 +518,7 @@
+ 	functions->drawElements = &glDrawElements;
+ 	functions->drawPixels = &glDrawPixels;
+ 	functions->edgeFlag = &glEdgeFlag;
+-	functions->edgeFlagPointer = &glEdgeFlagPointer;
++	functions->edgeFlagPointer = (CL_GLFunctions::ptr_glEdgeFlagPointer) &glEdgeFlagPointer;
+ 	functions->edgeFlagv = &glEdgeFlagv;
+ 	functions->enable = &glEnable;
+ 	functions->enableClientState = &glEnableClientState;
