@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.18 2003/03/31 22:51:27 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.19 2003/04/19 19:26:36 sethbc Exp $
+
+*openoffice-1.0.3 (07 Apr 2003)
+  07 Apr 2003; Seth Chandler <sethbc@gentoo.org>;
+  added 1.0.3 to portage, but its not a good bet becuase printing doesn't work
+
+*openoffice-1.1beta (03 Apr 2003)
+  03 Apr 2003; Seth Chandler <sethbc@gentoo.org>;
+  do not build this package, it doesn't yet work
 
 *openoffice-1.0.2-r1 (31 Mar 2003)
 
