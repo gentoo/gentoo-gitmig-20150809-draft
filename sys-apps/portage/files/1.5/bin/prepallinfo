@@ -4,7 +4,7 @@ z=`find ${D} -name "info" -type d`
 echo "info:"
 for x in ${z} 
 do
-	rm -f ${x}/dir
+	rm -f ${x}/dir ${x}/dir.info ${x}/dir.info.gz
 	w=`echo ${x}/*.info*`
 	if [ "${w}" != "${x}"'/*.info*' ]
 	then
