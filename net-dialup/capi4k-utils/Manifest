@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ca4004299d225c5400a6a01a736ba7a0 ChangeLog 1431
+MD5 7faa5d662bac9f6a100d3b62ea62400a ChangeLog 1585
 MD5 13fdd484fb075fd3f6197b1569cb2f18 capi4k-utils-20020701.ebuild 1133
 MD5 03aaea36415b2221e3057baee7f1662f capi4k-utils-20021026.ebuild 1346
 MD5 cfe7bbdd4bf971d18fb61439bb19e158 capi4k-utils-20030616.ebuild 2004
@@ -12,11 +12,11 @@ MD5 d4eb961f35cf41379f2574203166860f files/digest-capi4k-utils-20020701 75
 MD5 14a08bf121eef97390c18eafd8458bc7 files/digest-capi4k-utils-20021026 75
 MD5 4a13b34e5d2c5c120b83ca02719162fc files/digest-capi4k-utils-20030616 75
 MD5 daf5a35ac5aeac77c4ac69274ed15395 files/digest-capi4k-utils-20040810 75
-MD5 58833b5640981a9be93d2a22fb823dc1 files/capi-init-20040810 617
+MD5 befd926d2f898c15846c2f7452853ec1 files/capi-init-20040810 609
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBU2QZmdTrptrqvGERAozWAJ0YKmXS0TRkXJtaV1FmSMTtAJJQbwCcDYS2
-nDE4bCdOgbf/rZFQpRNhw8E=
-=JehD
+iD8DBQFBV+esmdTrptrqvGERAuvhAJ0YIv87zR3ZakTCw064mf2c44WJkwCcDkEL
+K9vICEIjoDw7xg9sDnK1oMM=
+=0LUG
 -----END PGP SIGNATURE-----
