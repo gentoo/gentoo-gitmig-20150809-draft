@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10-r1.ebuild,v 1.6 2004/04/27 21:44:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10-r1.ebuild,v 1.7 2004/06/09 18:01:59 khai Exp $
 
 inherit eutils
 
@@ -31,7 +31,8 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-norpm.patch
-}
+	epatch ${FILESDIR}/gtkam-0.1.10-gtk24.patch
+	}
 
 src_compile() {
 
