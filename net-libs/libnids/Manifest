@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 05d4391cb8abd10337998d4e67a85f3d libnids-1.20.ebuild 890
-MD5 63a3d2a973f75fb51900c6b610a3f5bd libnids-1.18.ebuild 904
-MD5 af95abc194d6a0ecee78f8648aaa647a ChangeLog 2689
+MD5 856a3ee436e18804fd337b3ce0dd2017 libnids-1.18.ebuild 933
+MD5 aa7578e38cff231b342eea34ed44bd4f ChangeLog 2865
 MD5 c9a3c259574bc6c3d7583402ad67e763 metadata.xml 311
 MD5 9562afeb0aef6794b0b94779fab9c381 files/libnids-1.20-chksum.c-ebx.patch 718
 MD5 b8821b8ac4cbf9a8d5c0ce7eadc5f710 files/digest-libnids-1.18 64
 MD5 8c22ab811547cb71906e15bee2d4160e files/digest-libnids-1.20 64
 MD5 4f1acaf2ec159ddfba1e456f21c99112 files/libnids-1.18-chksum.c-ebx.patch 615
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCMOfdEZCkKN40op4RAhu6AJsE9O7BbQnJIpq7dOK1HDHBcnmjVwCdE7Fo
-bzFxn0xzBcwtk/s322dLrUs=
-=nS1e
------END PGP SIGNATURE-----
