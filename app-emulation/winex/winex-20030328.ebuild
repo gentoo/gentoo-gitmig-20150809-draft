@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.7 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.8 2003/07/17 04:44:47 pfeifer Exp $
 
 inherit base
 
@@ -26,6 +26,7 @@ DEPEND="sys-devel/gcc
 		dev-lang/tk ) 
 	opengl? ( virtual/opengl )
 	cups? ( net-print/cups )
+	!>sys-libs/glibc-2.3.2
 	!app-emulation/winex-transgaming"
 
 S=${WORKDIR}/wine
