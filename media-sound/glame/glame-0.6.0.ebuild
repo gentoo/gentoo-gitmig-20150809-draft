@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.0.ebuild,v 1.3 2002/07/21 03:07:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.0.ebuild,v 1.4 2002/09/21 02:08:09 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Glame is an audio file editing utility."
-SRC_URI="http://download.sourceforge.net/glame/${P}.tar.gz"
-HOMEPAGE="http://glame.sourceforge.net/glame/"
+SRC_URI="mirror://sourceforge/glame/${P}.tar.gz"
+HOMEPAGE="http://glame.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
