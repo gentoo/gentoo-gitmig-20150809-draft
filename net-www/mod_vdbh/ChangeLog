@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_vdbh
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/ChangeLog,v 1.9 2004/09/03 23:24:08 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/ChangeLog,v 1.10 2005/01/09 00:13:00 hollow Exp $
+
+*mod_vdbh-1.0.3-r1 (09 Jan 2005)
+
+  09 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/1.0.3-r1/21_mod_vdbh.conf, +mod_vdbh-1.0.3-r1.ebuild:
+  Apache herd package refresh
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mod_vdbh-1.0.3.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_roaming
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_roaming/ChangeLog,v 1.5 2004/06/25 01:03:45 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_roaming/ChangeLog,v 1.6 2005/01/09 00:24:14 hollow Exp $
+
+*mod_roaming-2.0.0-r1 (09 Jan 2005)
+
+  09 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/2.0.0-r1/18_mod_roaming.conf, +mod_roaming-2.0.0-r1.ebuild:
+  Apache herd package refresh
 
   04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
   mod_roaming-2.0.0.ebuild:

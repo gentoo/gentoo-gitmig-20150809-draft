@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_limitipconn
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/ChangeLog,v 1.6 2004/09/03 23:24:08 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/ChangeLog,v 1.7 2005/01/09 00:29:55 hollow Exp $
+
+*mod_limitipconn-0.22-r1 (09 Jan 2005)
+
+  09 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/27_mod_limitipconn.conf, +mod_limitipconn-0.22-r1.ebuild:
+  Apache herd package refresh
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mod_limitipconn-0.22.ebuild:

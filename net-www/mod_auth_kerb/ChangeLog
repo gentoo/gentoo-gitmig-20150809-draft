@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_auth_kerb
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.5 2004/06/25 00:59:36 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.6 2005/01/09 00:38:29 hollow Exp $
+
+*mod_auth_kerb-4.11-r1 (09 Jan 2005)
+
+  09 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/4.11-r1/11_mod_auth_kerb.conf, +mod_auth_kerb-4.11-r1.ebuild:
+  Apache herd package refresh
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_auth_kerb-4.11.ebuild:
   Ebuild cleanups.

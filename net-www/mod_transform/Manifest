@@ -1,5 +1,18 @@
-MD5 a55bc3eb5c38262583de6925a8798295 ChangeLog 654
-MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
-MD5 4ac29020a30536c6d0a83835144c1db8 mod_transform-0.4.0.ebuild 909
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd398ff8ff4803fe83248f3dff40db4b ChangeLog 844
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
+MD5 91424bf0348ce57649b84e4e31cc44b3 mod_transform-0.4.0.ebuild 907
+MD5 ba49cf547fb758ceda0d9620be5b7352 mod_transform-0.6.0.ebuild 882
 MD5 b3e31c1680f2a0e219fed438a86ef676 files/digest-mod_transform-0.4.0 71
 MD5 4add2247f328f42a90844bf430bfbb06 files/mod_transform.conf 92
+MD5 db935b300b66a380d0f0b21f43d4a8d5 files/10_mod_transform.conf 113
+MD5 9e604557601ae40625764b4af75b86a4 files/digest-mod_transform-0.6.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4HXWmPFBzbX68WERAihTAJ4wlZSEogLqG1OwNGY4MiF38/NKFQCdFl/7
+GeoaB275VMIhhRKVY8zssfY=
+=6mNn
+-----END PGP SIGNATURE-----
