@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r1.ebuild,v 1.1 2005/01/05 00:15:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r1.ebuild,v 1.2 2005/01/06 01:00:40 eradicator Exp $
 
 IUSE="doc"
 
@@ -17,7 +17,7 @@ LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 
-RDEPEND="|| ( sys-libs/ncurses sys-libs/libtermcap-compat )"
+RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
 	app-arch/cpio
 	sys-apps/findutils
@@ -88,6 +88,8 @@ src_install() {
 	find include -print | cpio -pmd ${D}/usr/lib/speech-tools || die "Unable to install include files"
 
 	chown -R root:root ${D}/usr/lib/speech-tools
+
+	find ${D}/usr/lib/speech-tools/config -type f | xargs sed -i 's/-ltermcap/-lncurses/g'
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/58speech-tools

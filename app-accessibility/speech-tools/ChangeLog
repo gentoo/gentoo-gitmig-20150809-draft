@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.17 2005/01/05 00:15:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.18 2005/01/06 01:00:40 eradicator Exp $
+
+  05 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  speech-tools-1.2.3-r1.ebuild:
+  Force ncurses over libtermcap.
 
 *speech-tools-1.2.3-r1 (03 Jan 2005)
 
