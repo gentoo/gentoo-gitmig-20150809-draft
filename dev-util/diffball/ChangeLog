@@ -1,9 +1,9 @@
 # ChangeLog for dev-util/diffball
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.7 2005/03/09 09:58:42 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.8 2005/03/09 10:08:58 ferringb Exp $
 
-  09 Mar 2005; Brian Harring <ferringb@gentoo.org> diffball-0.6.ebuild:
-  Version bump.
+  09 Mar 2005; Brian Harring <ferringb@gentoo.org> diffball-0.6.ebuild, -diffball-0.4_pre4:
+  Version bump, and cleansing.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
