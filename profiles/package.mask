@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3201 2004/09/30 17:45:18 axxo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3202 2004/09/30 18:18:52 ribosome Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Olivier Fisette <ribosome@gentoo.org> (30 Sep 2004)
+# Package has major QA (and other) problems (see bug #65941).
+app-sci/ncbi-tools
 
 # Gustavo Felisberto <humpback@gentoo.org> (30 Sep 2004)
 # Skype is beta binary software and users complain in Gentoo Bugzilla
