@@ -1,12 +1,22 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.40 2005/03/16 00:21:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.41 2005/03/23 13:19:46 agriffis Exp $
+
+*mozilla-launcher-1.28 (23 Mar 2005)
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-launcher-1.28.ebuild:
+  Add support for debugging via -g/--debug and -d/--debugger
+  Don't override tabbing preferences set in the browser #82653
+  Honor MOZILLA_LAUNCHER to workaround brokenness in OOo #78890
 
 *mozilla-launcher-1.26 (15 Mar 2005)
 
   15 Mar 2005; Aron Griffis <agriffis@gentoo.org>
   +mozilla-launcher-1.26.ebuild:
-  Update to 1.26 with numerous bugfixes
+  Add support for Mozilla PIS (Pluggable Init Scripts) #62916
+  Handle -compose with an argument #56556
+  Handle absolute file paths #75064
 
   09 Feb 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-launcher-1.22.ebuild, mozilla-launcher-1.23.ebuild:
@@ -35,7 +45,7 @@
   Add XUL.mfasl to the list of files to delete when the browser is upgraded
   #67338
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   mozilla-launcher-1.21.ebuild:
   Stable on alpha.
 

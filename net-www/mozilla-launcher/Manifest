@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 53c6ad7efd195c84e4afa95f9a58f527 ChangeLog 8433
-MD5 bd87ad0dd97b6285115f93a1c97d9452 mozilla-launcher-1.26.ebuild 826
-MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
-MD5 4eebbbd15d99af5c8c649e5f70e87d79 mozilla-launcher-1.23.ebuild 816
 MD5 2107ee348dc3660f027272b4e9b469e2 mozilla-launcher-1.22.ebuild 816
+MD5 bd87ad0dd97b6285115f93a1c97d9452 mozilla-launcher-1.26.ebuild 826
+MD5 bd87ad0dd97b6285115f93a1c97d9452 mozilla-launcher-1.28.ebuild 826
+MD5 4eebbbd15d99af5c8c649e5f70e87d79 mozilla-launcher-1.23.ebuild 816
+MD5 53c6ad7efd195c84e4afa95f9a58f527 ChangeLog 8433
+MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
 MD5 c17f9892a452364378b79aba30e72f3c files/digest-mozilla-launcher-1.22 68
 MD5 69a8e91fd85f00a9e76eed8c9e4bc463 files/digest-mozilla-launcher-1.23 68
 MD5 564930b3ec590dc05282a47a74105063 files/digest-mozilla-launcher-1.26 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCN3w5BXaUFmZvwyMRApN7AJ4nSau/lem+8+bBHRzQ4Md+gmlg5ACcCIqr
-BHm63sV6G10Yh3rUC36M9ws=
-=yY20
------END PGP SIGNATURE-----
+MD5 74b9f3aec58644bae20d62eb78716fa4 files/digest-mozilla-launcher-1.28 68
