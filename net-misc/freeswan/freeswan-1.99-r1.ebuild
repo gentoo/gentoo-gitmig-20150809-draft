@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.12 2004/04/27 21:34:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99-r1.ebuild,v 1.1 2004/06/24 01:43:11 pfeifer Exp $
 
 inherit eutils
 
-X509_PATCH=0.9.34
+X509_PATCH=0.9.41
 S=${WORKDIR}/${P}
 DESCRIPTION="FreeS/WAN IPSec Userspace Utilities with X.509 Patches"
 SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/${P}.tar.gz
@@ -19,6 +19,7 @@ LICENSE="GPL-2"
 RDEPEND=""
 SLOT="0"
 KEYWORDS="x86 -sparc"
+IUSE=""
 
 pkg_setup() {
 	[ -d /usr/src/linux/net/ipsec ] || {
