@@ -1,36 +1,36 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.ebuild,v 1.3 2003/02/13 14:46:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.ebuild,v 1.4 2003/03/27 02:24:54 seemant Exp $
 
+S=${WORKDIR}
 DESCRIPTION="Sets up class-based queue traffic control (QoS) with iproute2"
 HOMEPAGE="http://www.sourceforge.net/projects/cbqinit"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/cbqinit/cbq.init-v${PV}"
+SRC_URI="mirror://sourceforge/cbqinit/cbq.init-v${PV}"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+
+DEPEND=">=sys-apps/sed-4.0.5"
 
 RDEPEND="sys-apps/iproute"
-DEPEND=""
-
-S="${WORKDIR}"
 
 src_unpack() {
 	cp ${DISTDIR}/cbq.init-v${PV} ${S}
 }
 
 src_compile() {
-	mv cbq.init-v${PV} cbq.init-v${PV}.orig
-	sed <cbq.init-v${PV}.orig >cbq.init-v${PV} \
-		-e 's|CBQ_PATH=${CBQ_PATH:-/etc/sysconfig/cbq}|CBQ_PATH=/etc/cbqinit|' \
-		-e 's|CBQ_CACHE=${CBQ_CACHE:-/var/cache/cbq.init}|CBQ_CACHE=/var/cache/cbqinit|' \
-		-e 's|-x /sbin/tc -a -x /sbin/ip|-x /usr/sbin/tc -a -x /usr/sbin/ip|'
+	sed -i \
+		-e 's|^CBQ_PATH=.*|CBQ_PATH=/etc/cbqinit|' \
+		-e 's|CBQ_CACHE=.*|CBQ_CACHE=/var/cache/cbqinit|' \
+		-e 's|/sbin/tc|/usr/sbin/tc|' \
+		-e 's|/sbin/ip|/usr/sbin/ip|' \
+		cbq.init-v${PV}
 }
 
 src_install() {
-	mv cbq.init-v${PV} cbqinit
-
 	exeinto /usr/sbin
-	doexe cbqinit
+	newexe cbq.init-v${PV} cbqinit
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/rc_cbqinit cbqinit
