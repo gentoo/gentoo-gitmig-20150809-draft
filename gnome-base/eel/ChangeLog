@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.4 2002/05/22 20:53:28 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.5 2002/05/23 19:15:17 spider Exp $
+
+
+*eel-1.1.15 (23 May 2002)
+  23 May 2002; Spider <spider@gentoo.org> eel-1.1.15.ebuild: 
+  New version of the fish ( Eazel Extension Libraries actually)
 
 
 *eel-1.1.14 (22 May 2002)
