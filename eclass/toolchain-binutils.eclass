@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.26 2005/03/09 15:25:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.27 2005/03/09 17:07:06 azarah Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -9,7 +9,7 @@
 inherit eutils libtool flag-o-matic gnuconfig
 ECLASS=toolchain-binutils
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_prerm
+EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_postrm
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -219,19 +219,22 @@ toolchain-binutils_pkg_postinst() {
 }
 
 toolchain-binutils_pkg_postrm() {
-	local curr=$(env CHOST=${CTARGET} binutils-config -c)
-	[[ ${curr} != ${CTARGET}-${PV} ]] && return 0
-
-	# if user was so kind as to unmerge the version we have 
-	# active, then switch to another version
 	local choice=$(binutils-config -l | grep ${CTARGET} | grep -v ${CTARGET}-${PV})
 	choice=${choice/* }
 
 	# If no other versions exist, then uninstall for this 
 	# target ... otherwise, switch to the newest version
-	if [[ ! -f ${BINPATH}/ld && -z ${choice} ]] ; then
-		binutils-config -u ${CTARGET}
-	elif [[ -n ${choice} ]] ; then
-		binutils-config ${choice}
+	# Note: only do this if this version is unmerged.  We
+	#       rerun binutils-config if this is a remerge, as
+	#       we want the mtimes on the symlinks updated (if
+	#       it is the same as the current selected profile)
+	if [[ ! -e ${BINPATH}/ld ]] ; then
+		if [[ -z ${choice} ]] ; then
+			binutils-config -u ${CTARGET}
+		else
+			binutils-config ${choice}
+		fi
+	elif [[ $(CHOST=${CTARGET} binutils-config -c) = ${CTARGET}-${PV} ]] ; then
+		binutils-config ${CTARGET}-${PV}
 	fi
 }
