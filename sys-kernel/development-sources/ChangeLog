@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.39 2003/09/08 22:13:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.40 2003/09/11 22:15:41 plasmaroo Exp $
+
+  11 Sep 2003; <plasmaroo@gentoo.org> development-sources-2.5.70.ebuild,
+  development-sources-2.5.71.ebuild, development-sources-2.5.72.ebuild,
+  development-sources-2.5.73.ebuild, development-sources-2.5.74.ebuild,
+  development-sources-2.5.75.ebuild, development-sources-2.6.0_beta1.ebuild,
+  development-sources-2.6.0_beta2.ebuild, development-sources-2.6.0_beta3.ebuild,
+  development-sources-2.6.0_beta4.ebuild, development-sources-2.6.0_beta5.ebuild:
+  Added "virtual/alsa" provides to ebuilds without it. [Bug #28412]
 
 *development-sources-2.6.0_beta5 (09 Sep 2003)
 
