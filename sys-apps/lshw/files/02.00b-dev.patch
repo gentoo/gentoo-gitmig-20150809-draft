@@ -1,0 +1,27 @@
+No real reason to force including of kernel headers in order
+to get at the major/minor functions since libc provides them.
+
+http://bugs.gentoo.org/show_bug.cgi?id=75168
+
+--- lshw-B.02.00/src/core/osutils.cc.orig	2004-12-21 17:02:04.562016784 -0500
++++ lshw-B.02.00/src/core/osutils.cc	2004-12-21 17:02:24.910923280 -0500
+@@ -7,10 +7,6 @@
+ #include <limits.h>
+ #include <stdlib.h>
+ #include <ctype.h>
+-#include <linux/fs.h>
+-#ifndef MINOR
+-#include <linux/kdev_t.h>
+-#endif
+ 
+ static char *id =
+   "@(#) $Id: 02.00b-dev.patch,v 1.1 2004/12/21 22:15:01 vapier Exp $";
+@@ -250,7 +246,7 @@
+   {
+     char devid[80];
+                                                                                 
+-    snprintf(devid, sizeof(devid), "%ud:%ud", (unsigned int)MAJOR(buf.st_rdev), (unsigned int)MINOR(buf.st_rdev));
++    snprintf(devid, sizeof(devid), "%ud:%ud", (unsigned int)major(buf.st_rdev), (unsigned int)minor(buf.st_rdev));
+     return string(devid);
+   }
+   else

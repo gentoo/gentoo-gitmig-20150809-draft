@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.13 2004/12/20 15:44:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.14 2004/12/21 22:15:01 vapier Exp $
+
+  21 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/02.00b-dev.patch,
+  lshw-02.00b.ebuild:
+  Clean up ebuild and add patch to fix includes #75168 by lukenshiro@ngi.it.
 
 *lshw-02.00b (21 Dec 2004)
 
