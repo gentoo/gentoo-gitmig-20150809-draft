@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r2.ebuild,v 1.1 2004/01/09 12:11:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r2.ebuild,v 1.2 2004/01/09 19:47:26 mr_bones_ Exp $
 
 DESCRIPTION="bluetooth utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -59,14 +59,14 @@ src_install() {
 
 	sed -e "s:security auto;:security user;:" \
 		-i ${D}/etc/bluetooth/hcid.conf
-	
+
 	if [ -n "`use gtk`" ]; then
 		sed -e "s:\(pin_helper \).*:\1/usr/bin/bluepin;:" \
 			-i ${D}/etc/bluetooth/hcid.conf
 	else
 		sed -e "s:\(pin_helper \).*:\1/etc/bluetooth/pin;:" \
 			-i ${D}/etc/bluetooth/hcid.conf
-	fi			
+	fi
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/bluetooth.rc bluetooth
@@ -82,7 +82,7 @@ pkg_postinst() {
 	einfo "RFComm devices are found in /dev/bluetooh/rfcomm/* instead of /dev/rfcomm*"
 	einfo "If you need to set a default PIN, edit /etc/bluetooth/pin, and change"
 	einfo "/etc/bluetooth/hcid.conf option 'pin_helper' to /etc/bluetooth/pin."
-	if [ -n "`use gtk`" ]; then 
+	if [ -n "`use gtk`" ]; then
 		einfo "By default, /usr/bin/bluepin will be launched on the desktop display"
 		einfo "for pin number input."
 	fi
