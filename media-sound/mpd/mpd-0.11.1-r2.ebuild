@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.2-r1.ebuild,v 1.1 2004/07/22 21:30:43 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.1-r2.ebuild,v 1.1 2004/07/23 00:13:03 ferringb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Music Player Daemon (mpd)"
 SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 HOMEPAGE="http://www.musicpd.org"
 
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -59,7 +59,7 @@ src_install() {
 	if use droproot; then
 		dosed 's:^#user.*$:user "mpd":' /etc/mpd.conf
 	fi
-	dosed 's:^#bind.*$:bind "localhost":' /etc/mpd.conf
+	dosed 's:^#bind.*$:bind_to_address "localhost":' /etc/mpd.conf
 	dosed 's:^port.*$:port "6600":' /etc/mpd.conf
 	dosed 's:^music_directory.*$:music_directory "/usr/share/mpd/music":' /etc/mpd.conf
 	dosed 's:^playlist_directory.*$:playlist_directory "/usr/share/mpd/playlists":' /etc/mpd.conf
