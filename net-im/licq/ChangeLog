@@ -1,6 +1,10 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.24 2003/06/04 04:26:10 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.25 2003/06/20 09:49:53 phosphan Exp $
+
+  20 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> licq-1.2.6-r1.ebuild,
+  files/1.2.6-debugflag.patch:
+  Added patch for correct stripping of debug flags (bug 21009)
 
 *licq-1.2.6-r1 (04 June 2003)
   04 June 2003; Brad Laue <brad@gentoo.org> licq-1.2.6-r1.ebuild:

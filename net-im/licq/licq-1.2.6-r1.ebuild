@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6-r1.ebuild,v 1.2 2003/06/04 04:26:10 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6-r1.ebuild,v 1.3 2003/06/20 09:49:53 phosphan Exp $
 
 inherit kde-base
 need-kde 3.0
@@ -28,7 +28,7 @@ DEPEND="kde? ( ${DEPEND} )
 
 src_unpack() {
 	unpack ${A}
-	
+
 	if [ "`use kde`" ]
 	then
 		# fix for #12436
@@ -47,6 +47,8 @@ src_unpack() {
 				eend $?
 		fi
 	fi
+	cd ${S}
+	patch -p0 < ${FILESDIR}/1.2.6-debugflag.patch || die "patch failed"
 }
 
 src_compile() {
