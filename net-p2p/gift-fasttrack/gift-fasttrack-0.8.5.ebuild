@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.7 2004/04/27 20:48:11 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.8 2004/05/04 05:03:24 eradicator Exp $
+
+IUSE=""
 
 IUSE=""
 
