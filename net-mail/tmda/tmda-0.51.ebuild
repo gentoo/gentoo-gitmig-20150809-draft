@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.50.ebuild,v 1.1 2002/04/02 05:00:04 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.51.ebuild,v 1.1 2002/04/04 00:02:40 agenkin Exp $
 
 DESCRIPTION="Python-based SPAM reduction system"
 HOMEPAGE="http://software.libertine.org/tmda/index.html"
@@ -41,8 +41,4 @@ src_install () {
         dodoc README.RELAY qmail-smtpd_auth.patch tmda.spec sample.tmdarc
         exeinto /usr/lib/tmda/bin
         doexe printcdb printdbm collectaddys
-        insinto /usr/lib/tmda
-        doins setup.pyc
-        exeinto /usr/lib/tmda
-        doexe setup.py
 }
