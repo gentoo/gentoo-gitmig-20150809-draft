@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4ed091e322683876b04cac65a1b1dabc coriander-1.0.0_pre3.ebuild 722
-MD5 26c6f13992f512fd3b5a8f234aa936a4 ChangeLog 406
+MD5 ae4341e90f6149df4d65bff61c8f43d5 ChangeLog 485
 MD5 3ef71e548387cb21fa1e7d1750970bbd files/digest-coriander-1.0.0_pre3 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsdmI1lqEGTUzyQRAsuxAKDUZeJOoD7wZbrLA0HR2laocOChlwCePGZl
+H9vCle50bmdovXyfS9SGFD8=
+=MBZ8
+-----END PGP SIGNATURE-----
