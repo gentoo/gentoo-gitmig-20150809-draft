@@ -1,4 +1,20 @@
-MD5 4c05319ac8d3946b343a11ea13aebc1e ChangeLog 1620
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 49a0cfa3284e5edf96bb23ad771bb17d pegasos-sources-2.6.10-r1.ebuild 753
+MD5 6a86956f9ec4e574174bf27ebf9599c0 pegasos-sources-2.6.9-r5.ebuild 751
+MD5 d851fd8b640683b1ea4bc09ff54b74f4 ChangeLog 1987
+MD5 e8a29073e80e7fd9a95a1913e5afdd80 pegasos-sources-2.6.8.1-r2.ebuild 832
 MD5 a768f20366d412feaf748b4ac46b046e metadata.xml 350
-MD5 91e672a503d2a4bf9bb253b44b150281 pegasos-sources-2.4.ebuild 862
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-pegasos-sources-2.4 0
+MD5 537dd7128c0b7e05882553403da3bc19 pegasos-sources-2.6.9-r4.ebuild 751
+MD5 b03f2054a7c8d904d9f7d2a10867aa09 files/digest-pegasos-sources-2.6.8.1-r2 141
+MD5 55c967d175ece9bc37715a8a47442e26 files/digest-pegasos-sources-2.6.10-r1 139
+MD5 152f36d2b5a67c4dc78118f6d6b4009d files/digest-pegasos-sources-2.6.9-r4 137
+MD5 1dfa80fe9da56995233d5165cfc30cec files/digest-pegasos-sources-2.6.9-r5 137
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5FFHm/TpOlox+n8RAt/eAKD6J3Pd9sC6pG8t8INfOcgIQx4zYACg8y29
+BNVIXaO8x8/cf6zfQeuOnqY=
+=gszL
+-----END PGP SIGNATURE-----
