@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.41 2003/09/13 12:30:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.42 2003/09/27 02:22:03 darkspecter Exp $
+
+  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> eog-2.2.2.ebuild:
+  set ppc in keywords
 
   12 Sep 2003; Alastair Tse <liquidx@gentoo.org> eog-2.2.0.ebuild,
   eog-2.2.1.ebuild, eog-2.2.2.ebuild:
