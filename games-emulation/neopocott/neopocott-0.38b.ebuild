@@ -22,6 +22,5 @@ src_install() {
 	exeinto /opt/bin
 	doexe neopocott || die "doexe failed"
 	dodoc doc/*
-	games_make_wrapper neopocott ./neopocott /opt/bin
 	prepgamesdirs
 }
