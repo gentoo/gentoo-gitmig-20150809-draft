@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.14-r1.ebuild,v 1.1 2003/11/14 02:55:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.14-r1.ebuild,v 1.2 2003/12/06 00:15:31 zul Exp $
 
 IUSE="ipv6 perl ssl tcltk"
 
@@ -56,7 +56,7 @@ src_install () {
 	rm -f ${D}/usr/share/epic/help/Makefile
 	rm -rf ${D}/usr/share/epic/help/CVS
 
-	chown -R root.root ${D}/usr/share/epic/help
+	chown -R root:root ${D}/usr/share/epic/help
 }
 
 pkg_postinst() {
