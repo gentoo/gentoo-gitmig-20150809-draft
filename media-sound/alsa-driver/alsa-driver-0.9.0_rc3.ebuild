@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc3.ebuild,v 1.3 2002/09/05 00:48:56 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc3.ebuild,v 1.4 2002/09/23 19:43:12 vapier Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
-LICENSE="GPL"
+LICENSE="GPL-2 LGPL-2.1"
 
 # By default, drivers for all supported cards will be compiled.
 # If you want to only compile for specific card(s), set ALSA_CARDS

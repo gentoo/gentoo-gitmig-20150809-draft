@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.8 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.9 2002/09/23 19:43:12 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
@@ -12,7 +12,7 @@ DEPEND="sys-devel/autoconf virtual/glibc"
 PROVIDE="virtual/alsa"
 
 SLOT="0.5"
-LICENSE="GPL"
+LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86"
 
 setkv() {
