@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.6 2003/12/28 02:23:04 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.7 2004/01/09 22:03:31 weeve Exp $
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> reiserfsprogs-3.6.11.ebuild:
+  Marked stable on sparc.
 
   28 Dec 2003; Guy Martin <gmsoft@gentoo.org> reiserfsprogs-3.6.11-r1.ebuild:
   Marked stable on hppa.

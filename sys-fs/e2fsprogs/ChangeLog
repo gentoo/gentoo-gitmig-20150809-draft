@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.11 2003/12/30 09:46:43 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.12 2004/01/09 22:02:05 weeve Exp $
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> e2fsprogs-1.34.ebuild:
+  Marked stable on sparc.
 
   30 Dec 2003; Seemant Kulleen <seemant@gentoo.org> e2fsprogs-1.34.ebuild,
   files/e2fsprogs-sed-locale.patch:
