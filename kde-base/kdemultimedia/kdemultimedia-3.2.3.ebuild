@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.3.ebuild,v 1.8 2004/08/26 14:43:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.3.ebuild,v 1.9 2004/08/26 15:49:51 caleb Exp $
 
 inherit kde-dist flag-o-matic eutils
 
@@ -24,6 +24,7 @@ DEPEND="~kde-base/kdebase-${PV}
 src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/3.2.3-Makefile-synth.am.diff
+	make -f admin/Makefile.common
 }
 
 src_compile() {
