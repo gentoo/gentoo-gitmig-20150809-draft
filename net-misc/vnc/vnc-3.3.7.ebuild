@@ -1,21 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.7 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.8 2003/11/11 15:58:33 vapier Exp $
 
 inherit eutils
 
-IUSE="java tcpd"
-
 MY_P="${P}-unixsrc"
-
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.realvnc.com/"
-
 SRC_URI="http://www.realvnc.com/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ppc"
+IUSE="java tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	!net-misc/tightvnc"
@@ -34,6 +31,10 @@ src_unpack() {
 		epatch ${FILESDIR}/vnc-3.3.4-platform-fixes.patch
 		epatch ${FILESDIR}/vnc-3.3.3-10-xdm-auth-support.patch
 	fi
+	sed -i \
+		's:CC = cc:CC = gcc:' \
+		Xvnc/config/imake/Makefile.ini \
+		Xvnc/config/util/Makefile.ini
 }
 
 src_compile() {
