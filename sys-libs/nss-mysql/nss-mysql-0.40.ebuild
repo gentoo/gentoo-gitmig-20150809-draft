@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Written for Portage by Christian Skarby (Interhost ANS, Norway) christian.skarby@interhost.no
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.40.ebuild,v 1.2 2002/10/04 06:37:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.40.ebuild,v 1.3 2002/12/10 00:51:13 blauwers Exp $
 
 DESCRIPTION="NSS MySQL Module"
 HOMEPAGE="http://savannah.gnu.org/projects/nss-mysql"
@@ -23,7 +23,7 @@ src_compile() {
 		--libdir=/lib \
 		--mandir=/usr/share/man || die "./configure failed"
 	emake || die
-	cp -a /usr/portage/${CATEGORY}/nss-mysql/files/gentoo.sql.${P}.gentoo ${S}/gentoo.sql
+	cp -a ${PORTDIR}/${CATEGORY}/nss-mysql/files/gentoo.sql.${P}.gentoo ${S}/gentoo.sql
 }
 
 src_install () {
