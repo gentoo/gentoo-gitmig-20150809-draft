@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/peksystray
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.4 2004/06/24 22:30:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.5 2004/11/23 12:40:50 usata Exp $
+
+*peksystray-0.2.1 (23 Nov 2004)
+
+  23 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +peksystray-0.2.1.ebuild:
+  Version bumped. Thanks to Thomas Kirchner <gentoo@halffull.org>; bug #71401.
 
   19 Jun 2004; <pyrania@gentoo.org> peksystray-0.2.ebuild:
   Removed default ${S}, added IUSE.
