@@ -4,6 +4,8 @@
 <herd>mobile</herd>
 <maintainer>
   <email>cardoe@gentoo.org</email>
+  <name>Doug Goldstein</name>
+  <description>Actively maintained</description>
 </maintainer>
 <longdescription>ndiswrapper provides a kernel module and utility for
 implementing the Windows(tm) NDIS API. This serves to provide drivers 

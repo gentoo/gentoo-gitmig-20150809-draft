@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.0.ebuild,v 1.1 2005/01/30 08:56:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.0.ebuild,v 1.2 2005/03/04 21:14:42 cardoe Exp $
 
 inherit linux-mod eutils
 
@@ -18,8 +18,9 @@ S=${WORKDIR}/${P}
 if use !4kstacks
 then
 	CONFIG_CHECK="!4KSTACKS"
-	4KSTACKS_ERROR="CONFIG_4KSTACKS should not be set.\nIf you feel really confident that 4K Stacks will work for you, add '4kstacks' to your USE flags. But don't expect any support from Gentoo."
 fi
+
+#4KSTACKS_ERROR="CONFIG_4KSTACKS should not be set.\nIf you feel really confident that 4K Stacks will work for you, add '4kstacks' to your USE flags. But don't expect any support from Gentoo."
 
 CONFIG_CHECK="${CONFIG_CHECK} NET_RADIO"
 
