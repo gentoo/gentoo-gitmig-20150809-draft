@@ -1,15 +1,25 @@
-MD5 5593a906cb7b7fac69b26f282c2f150b mpd-0.11.4-r1.ebuild 2436
-MD5 6b43fc0647741ede59e886ef6c8ba6b7 mpd-0.11.2-r2.ebuild 2823
-MD5 50121b6de1f3e801fb4f7f8b1f04c002 mpd-0.11.3.ebuild 2819
-MD5 f24d946a3fd92412e653646d95c484a9 ChangeLog 7293
-MD5 f669f4eac81568d338deca3965b88cb5 mpd-0.11.1-r2.ebuild 2821
-MD5 b2d78ed41faf3b6e13a571e2d9c7e4d5 mpd-0.11.0-r2.ebuild 2806
-MD5 f767a55ce84340b2ef2ea218867c2995 mpd-0.11.4.ebuild 2827
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8fae622f743bb2e6051b79dff75a1a2b ChangeLog 7405
 MD5 ab49b3978e51630cd199bddd4321bd49 metadata.xml 221
-MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4 63
-MD5 268d1b619a63dd6c824afc1c63b97b50 files/digest-mpd-0.11.1-r2 63
-MD5 e1942b96aae7fa8cbc9b738857b5988f files/mpd.rc6 870
+MD5 6b43fc0647741ede59e886ef6c8ba6b7 mpd-0.11.2-r2.ebuild 2823
+MD5 b2d78ed41faf3b6e13a571e2d9c7e4d5 mpd-0.11.0-r2.ebuild 2806
+MD5 f669f4eac81568d338deca3965b88cb5 mpd-0.11.1-r2.ebuild 2821
+MD5 50121b6de1f3e801fb4f7f8b1f04c002 mpd-0.11.3.ebuild 2819
+MD5 f767a55ce84340b2ef2ea218867c2995 mpd-0.11.4.ebuild 2827
+MD5 70c40b633ef18ce5907f9cda229916ca mpd-0.11.4-r1.ebuild 2435
 MD5 721443952b6dfa20f262595b919c626b files/digest-mpd-0.11.2-r2 63
 MD5 12b5b0ad7c2d89bfa754775e3a984aad files/digest-mpd-0.11.0-r2 63
-MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4-r1 63
+MD5 268d1b619a63dd6c824afc1c63b97b50 files/digest-mpd-0.11.1-r2 63
+MD5 e1942b96aae7fa8cbc9b738857b5988f files/mpd.rc6 870
 MD5 43f2a5bef136d6572b63c1a32de542fc files/digest-mpd-0.11.3 63
+MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4 63
+MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdLIXArHZZzCEUG0RAqDlAJ9Y7xAcJ807zbn+oe9AS8NM+atRxwCffGFH
+SPZYTxdKuyTvQkft53StrCY=
+=a4AO
+-----END PGP SIGNATURE-----
