@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.45 2004/10/14 18:28:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.46 2004/11/10 23:16:04 foser Exp $
+
+*intltool-0.32.1 (11 Nov 2004)
+
+  11 Nov 2004; foser <foser@gentoo.org> intltool-0.32.1.ebuild :
+  Fresh release
 
 *intltool-0.31.3 (14 Oct 2004)
 
