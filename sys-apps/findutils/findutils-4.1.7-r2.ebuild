@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.11 2004/02/11 01:42:41 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.12 2004/02/23 00:42:36 agriffis Exp $
 
 IUSE="nls build afs"
 
@@ -10,7 +10,7 @@ DESCRIPTION="GNU utilities to find files"
 SRC_URI="ftp://alpha.gnu.org/gnu/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 
-KEYWORDS="x86 amd64 ~hppa arm ppc"
+KEYWORDS="x86 amd64 ~hppa ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

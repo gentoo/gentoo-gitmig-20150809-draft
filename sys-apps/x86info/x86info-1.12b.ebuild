@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.12b.ebuild,v 1.1 2003/11/15 01:44:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.12b.ebuild,v 1.2 2004/02/23 00:54:35 agriffis Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.codemonkey.org.uk/projects/${PN}/"
 SRC_URI="${HOMEPAGE}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 -ppc -sparc -mips -alpha -arm -hppa"
+KEYWORDS="~x86 ~amd64 -ppc -sparc -mips -alpha -hppa"
 DEPEND="virtual/kernel"
 RDEPEND=""
 IUSE=""

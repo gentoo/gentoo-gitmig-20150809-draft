@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r6.ebuild,v 1.3 2003/09/07 02:58:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r6.ebuild,v 1.4 2004/02/23 00:47:32 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa mips"
 IUSE="nls build"
 
 DEPEND="nls? ( sys-devel/gettext )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r3.ebuild,v 1.4 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r3.ebuild,v 1.5 2004/02/23 00:50:29 agriffis Exp $
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa mips"
 IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.06-r1.ebuild,v 1.23 2004/01/19 18:48:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.06-r1.ebuild,v 1.24 2004/02/23 00:44:20 agriffis Exp $
 
 IUSE="nls"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Keyboard and console utilities"
 SRC_URI="ftp://ftp.win.tue.nl/pub/home/aeb/linux-local/utils/kbd/${P}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/kbd/"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa "
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.67.ebuild,v 1.3 2003/06/24 14:30:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.67.ebuild,v 1.4 2004/02/23 00:44:59 agriffis Exp $
 
 IUSE=""
 MY_P=${P/-/_}
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc ~sparc alpha ~hppa arm"
+KEYWORDS="x86 amd64 ~ppc ~sparc alpha ~hppa "
 
 #This pkg appears to be highly kernel-dependent.
 

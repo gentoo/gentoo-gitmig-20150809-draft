@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.9 2003/11/02 07:21:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.10 2004/02/23 00:41:55 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ DESCRIPTION="Program to identify a file's format by scanning binary data for pat
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc ~arm alpha hppa"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa"
 SLOT="0"
 LICENSE="as-is"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.69.ebuild,v 1.1 2003/10/26 23:02:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.69.ebuild,v 1.2 2004/02/23 00:44:59 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64"
 IUSE="static"
 
 #This pkg appears to be highly kernel-dependent.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r1.ebuild,v 1.3 2004/01/25 05:00:21 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r1.ebuild,v 1.4 2004/02/23 00:48:30 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~ia64 ~ppc64 ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~ppc64 ~amd64"
 
 DEPEND="virtual/glibc
 	net-misc/wget"
