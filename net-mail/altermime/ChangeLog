@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/altermime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.5 2004/06/24 23:19:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.6 2004/12/21 17:28:34 ticho Exp $
+
+  21 Dec 2004; Andrej Kacian <ticho@gentoo.org> :
+  Stable on x86.
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> altermime-0.3.3.ebuild:
   adding s390 keywords
