@@ -163,7 +163,9 @@ dev-libs/libiconv
 
 # Licq is b0rked beyond usability.. Not only the ebuild, but the protocol 
 #they use as well... Trust me, unmasking this has no use at all :o) <Verwilst, 17 April 2002>
+# adding gtk+licq just to make it complete;  26 Jun 2002; <spider@gentoo.org>
 <net-im/licq-1.1.0
+net-im/gtk+licq
 
 # Fails to compile... <Verwilst, 6 april 2002>
 =dev-libs/pwlib-1.2.13
