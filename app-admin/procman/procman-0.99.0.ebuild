@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.99.0.ebuild,v 1.15 2004/03/12 10:45:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.99.0.ebuild,v 1.16 2004/04/25 21:41:18 agriffis Exp $
 
 DESCRIPTION="Process viewer for GNOME"
 SRC_URI="http://www.personal.psu.edu/users/k/f/kfv101/procman/source/${P}.tar.gz"
@@ -20,7 +20,7 @@ src_compile() {
 	use nls || myconf="--disable-nls"
 
 	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
-	econf --disable-more-warnings ${myconf}
+	econf --disable-more-warnings ${myconf} || die "econf failed"
 
 	emake || die
 }

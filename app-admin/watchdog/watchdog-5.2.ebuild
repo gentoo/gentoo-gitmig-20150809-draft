@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.15 2004/03/12 10:45:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.16 2004/04/25 21:44:28 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_compile() {
 	# Two configure switches have been added to use /etc/watchdog
 	econf \
 		--sysconfdir=/etc/watchdog \
-		--with-configfile=/etc/watchdog/watchdog.conf
+		--with-configfile=/etc/watchdog/watchdog.conf || die "econf failed"
 	emake || die
 }
 

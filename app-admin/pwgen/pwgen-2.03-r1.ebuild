@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03-r1.ebuild,v 1.7 2004/03/07 18:33:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03-r1.ebuild,v 1.8 2004/04/25 21:42:07 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --sysconfdir=/etc/pwgen
+	econf --sysconfdir=/etc/pwgen || die "econf failed"
 	make || die
 }
 

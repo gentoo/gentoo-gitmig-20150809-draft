@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.12 2004/04/02 01:23:46 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.13 2004/04/25 21:42:52 agriffis Exp $
 
 DESCRIPTION="Allows certain users/groups to run commands as root"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
@@ -27,7 +27,7 @@ src_compile() {
 	econf --with-all-insults \
 		--disable-path-info \
 		--with-env-editor \
-		${myconf}
+		${myconf} || die "econf failed"
 	emake || die
 }
 

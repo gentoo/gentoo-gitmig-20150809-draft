@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/procman
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.8 2003/06/10 13:14:29 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.9 2004/04/25 21:41:18 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> procman-0.99.0.ebuild,
+  procman-1.0.ebuild:
+  Add die following econf for bug 48950
 
   10 Jun 2003; Alastair Tse <liquidx@gentoo.org> procman-0.99.0.ebuild,
   procman-1.0.ebuild:
