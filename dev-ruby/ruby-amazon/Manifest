@@ -1,4 +1,6 @@
 MD5 9bb8a4623f18350b7b70300cfccf76e6 ruby-amazon-0.8.1.ebuild 721
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 d330d5e72e375525ce1cae8fccc7bf91 ChangeLog 428
+MD5 fbf7e6076ad808fc8a164b19d47e774a ChangeLog 575
+MD5 5a4da29b2ad7b7e91b57c2e5f87aadf7 ruby-amazon-0.8.2.ebuild 720
 MD5 ce3cc5c7b608c795ce064a58775a5c15 files/digest-ruby-amazon-0.8.1 69
+MD5 0b39756694131af39ca0d002a52d28c3 files/digest-ruby-amazon-0.8.2 69

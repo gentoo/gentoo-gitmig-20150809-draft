@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-amazon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-amazon/ChangeLog,v 1.1 2004/06/04 19:13:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-amazon/ChangeLog,v 1.2 2004/06/20 20:35:10 usata Exp $
+
+*ruby-amazon-0.8.2 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +ruby-amazon-0.8.2.ebuild:
+  Version bumped, closing bug #53821
 
 *ruby-amazon-0.8.1 (05 Jun 2004)
 
