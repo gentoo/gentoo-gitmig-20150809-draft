@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/habak
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.8 2004/07/05 22:05:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.9 2004/09/17 18:45:47 taviso Exp $
+
+*habak-0.2.4 (17 Sep 2004)
+
+  17 Sep 2004; Tavis Ormandy <taviso@gentoo.org> +habak-0.2.4.ebuild:
+  bump, #62870
 
   06 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> habak-0.2.1.ebuild:
   Marked ~amd64.
