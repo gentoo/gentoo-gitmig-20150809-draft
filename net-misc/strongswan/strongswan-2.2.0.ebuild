@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.2.0.ebuild,v 1.1 2004/08/31 18:15:42 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.2.0.ebuild,v 1.2 2004/09/12 06:23:19 pfeifer Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="-* ~x86 ~ppc"
 IUSE="curl ldap smartcard"
 
-DEPEND="virtual/libc
+DEPEND="!net-misc/openswan
+	virtual/libc
 	virtual/linux-sources
 	curl? ( net-misc/curl )
 	ldap? ( =net-nds/openldap-2* )
