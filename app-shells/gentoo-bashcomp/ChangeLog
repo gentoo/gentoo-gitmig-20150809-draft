@@ -1,0 +1,11 @@
+# ChangeLog for app-shells/gentoo-bashcomp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.1 2005/03/16 12:44:14 ka0ttic Exp $
+
+*gentoo-bashcomp-20050316 (16 Mar 2005)
+
+  16 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +gentoo-bashcomp-20050316.ebuild:
+  New release; broken out from app-shells/bash-completion and into its own
+  ebuild.
+
