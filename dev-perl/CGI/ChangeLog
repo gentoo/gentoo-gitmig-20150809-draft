@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.19 2003/08/01 16:38:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.20 2003/08/13 22:25:43 rac Exp $
+
+  13 Aug 2003; <rac@gentoo.org> CGI-2.97.ebuild, CGI-2.98.ebuild,
+  CGI-2.99.ebuild:
+  Add mips keywords, allow >=perl-5.8.0-r12 to fulfill file-spec dep in 2.97
 
 *CGI-2.99 (01 Aug 2003)
 
