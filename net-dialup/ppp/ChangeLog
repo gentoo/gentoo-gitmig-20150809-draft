@@ -1,9 +1,18 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.14 2002/12/13 10:59:50 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.15 2002/12/15 17:22:11 phoenix Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*ppp-2.4.1-r12 (15 Dec 2002)
+
+  15 Dec 2002; phoen][x <phoenix@gentoo.org> ppp-2.4.1-r12.ebuild, ChangeLog,
+  files/digest-ppp-2.4.1-r12 :
+  Fixed a pretty severe bug: /etc/modules.d/ppp was set +x - that caused
+  a strange behaviour with update-modules. See bug #12002 for more details.
+  Fixed the LICENSE setting: GPL -> GPL-2.
+  Revision bump to force portage to update ppp. 
+
 *ppp-2.4.1-r11 (28 Aug 2002)
 
   13 Nov 2002; Hannes Mehnert <hannes@gentoo.org> ppp-2.4.1-r11.ebuild :
