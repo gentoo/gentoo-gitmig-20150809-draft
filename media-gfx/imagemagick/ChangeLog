@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.62 2004/04/26 02:27:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.63 2004/04/27 21:45:09 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> imagemagick-5.5.3.2.ebuild,
+  imagemagick-5.5.4.4.ebuild, imagemagick-5.5.6-r1.ebuild,
+  imagemagick-5.5.7.11.ebuild, imagemagick-5.5.7.14.ebuild,
+  imagemagick-5.5.7.15.ebuild:
+  Add inherit eutils
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> imagemagick-5.5.4.4.ebuild:
   Add die following econf for bug 48950

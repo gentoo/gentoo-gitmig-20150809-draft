@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.5.0-r1.ebuild,v 1.2 2004/02/21 19:50:41 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.5.0-r1.ebuild,v 1.3 2004/04/27 21:49:06 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="SWF Tools is a collection of SWF manipulation and generation utilities"
 HOMEPAGE="http://www.quiss.org/swftools/"

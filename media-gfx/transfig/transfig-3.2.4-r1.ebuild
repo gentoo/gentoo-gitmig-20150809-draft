@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.8 2003/12/05 15:11:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.9 2004/04/27 21:49:38 agriffis Exp $
 
-inherit gcc
+inherit gcc eutils
 
 MY_P=${P/transfig-/transfig.}
 S=${WORKDIR}/${MY_P}

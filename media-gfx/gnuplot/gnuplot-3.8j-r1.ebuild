@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j-r1.ebuild,v 1.1 2004/04/09 04:01:51 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j-r1.ebuild,v 1.2 2004/04/27 21:43:40 agriffis Exp $
+
+inherit eutils
 
 MY_P="${P}.0"
 S=${WORKDIR}/${MY_P}

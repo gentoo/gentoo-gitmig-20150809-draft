@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.10 2004/03/03 16:12:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.11 2004/04/27 21:41:33 agriffis Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
-inherit gnome.org
+inherit gnome.org eutils
 
 IUSE="nls png jpeg"
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.3.2.ebuild,v 1.17 2004/03/08 04:15:59 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.3.2.ebuild,v 1.18 2004/04/27 21:45:09 agriffis Exp $
 
-inherit libtool
+inherit libtool eutils
 inherit perl-module
 inherit flag-o-matic
 replace-flags k6-3 i586

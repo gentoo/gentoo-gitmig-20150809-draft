@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.4 2004/04/12 14:15:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.5 2004/04/27 21:45:46 agriffis Exp $
 
-inherit python
+inherit python eutils
 
 IUSE="truetype doc python ruby"
 

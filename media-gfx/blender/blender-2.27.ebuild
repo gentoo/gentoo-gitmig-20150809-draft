@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.27.ebuild,v 1.3 2003/10/11 17:28:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.27.ebuild,v 1.4 2004/04/27 21:40:49 agriffis Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
