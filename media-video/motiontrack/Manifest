@@ -1,6 +1,18 @@
-MD5 d332ef8e12314ad7ad3cc92210ef5e3b ChangeLog 1121
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b59ac55fd9af9f70f024346c08f9232 ChangeLog 1261
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 95dd1ae456ce1489665da5631c29ced9 motiontrack-0.1.0.ebuild 1946
 MD5 5e17175bc71732b667f810dbaf4a4b7b motiontrack-0.1.2.ebuild 1955
+MD5 7f0ef93ebeeff9fba5bc65344b9d1b35 motiontrack-0.1.3.ebuild 2009
 MD5 1e0932e975040bc45ea22a77983a2247 files/digest-motiontrack-0.1.0 69
 MD5 657b34d97059cec1a62b7e41615ed406 files/digest-motiontrack-0.1.2 69
+MD5 69f35a2546de93eff00bbf1dba20c9b1 files/digest-motiontrack-0.1.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBt6l2FdQwWVoAgN4RAoHPAKDssvw0Uu97OcEKBKnPWXV7tp7SMACfUlJO
+7vXXu9jKpsHfgpZBAjAJoCA=
+=PqYp
+-----END PGP SIGNATURE-----
