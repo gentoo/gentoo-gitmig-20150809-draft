@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.4.1.ebuild,v 1.1 2001/12/12 02:34:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.4.1-r1.ebuild,v 1.1 2001/12/12 23:50:21 karltk Exp $
 
 A="jakarta-ant-${PV}-src.tar.gz"
 S=${WORKDIR}/jakarta-ant-${PV}
@@ -17,8 +17,11 @@ src_compile() {
 }
 
 src_install() {
+
+	cp ${FILESDIR}/gentoo-ant-1.4.1 src/ant
+
 	exeinto /usr/bin
-	doexe src/script/ant
+	doexe src/ant
 
 	insinto /usr/share/ant
 	doins build/lib/*.jar lib/*.jar
