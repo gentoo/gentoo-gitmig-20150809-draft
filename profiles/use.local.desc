@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1035 2005/03/23 20:03:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1036 2005/03/24 02:07:21 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -787,7 +787,7 @@ www-client/mozilla:mozaccess - Enable text-to-speech (and eventually to braille)
 www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
 www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
-www-client/mozilla:moznocompose - Disable building of mozilla's web page composer
+www-client/mozilla:moznocompose - Disable building of mozilla's HTML editor component
 www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
 www-client/mozilla:moznomail - Disable building mozilla's mail client
 www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
