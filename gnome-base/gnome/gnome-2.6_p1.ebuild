@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.5 2004/04/22 19:34:24 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.6 2004/04/23 17:43:35 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -58,14 +58,14 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/eel-2.6.1
 	>=gnome-base/nautilus-2.6.1
 
-	>=media-libs/gstreamer-0.8
-	>=media-libs/gst-plugins-0.8-r1
+	>=media-libs/gstreamer-0.8.1
+	>=media-libs/gst-plugins-0.8.1
 	>=gnome-extra/gnome-media-2.6
 	>=gnome-extra/nautilus-media-0.8
 
-	>=media-gfx/eog-2.6
+	>=media-gfx/eog-2.6.1
 	>=net-www/epiphany-1.2.3
-	>=app-arch/file-roller-2.6
+	>=app-arch/file-roller-2.6.1
 	>=gnome-extra/gcalctool-4.3.51
 	>=gnome-extra/gconf-editor-2.6.1
 	>=gnome-base/gdm-2.4.4.7-r1
@@ -87,8 +87,8 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/gtksourceview-1
 	>=gnome-extra/gucharmap-1.4.1
-	>=gnome-base/libgnomeprint-2.6
-	>=gnome-base/libgnomeprintui-2.6
+	>=gnome-base/libgnomeprint-2.6.1
+	>=gnome-base/libgnomeprintui-2.6.1
 	=gnome-extra/libgtkhtml-2.6*
 
 	>=gnome-extra/gnome-utils-2.6
