@@ -1,6 +1,13 @@
 # ChangeLog for net-im/yahoo-transport
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/ChangeLog,v 1.1 2004/01/12 01:14:39 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/ChangeLog,v 1.2 2004/01/23 19:33:17 humpback Exp $
+
+*yahoo-transport-2.3.0-r1 (23 Jan 2004)
+
+  23 Jan 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  yahoo-transport-2.3.0-r1.ebuild, files/yahootrans.xml:
+  Updated auth scheme on Yahoo servers. Also updated the yahootrans.xml to use
+  the new Yahoo server.
 
 *yahoo-transport-2.3.0 (11 Jan 2004)
 
