@@ -151,3 +151,4 @@
 >=net-nds/openldap-1.2.12-r6
 >=net-nds/portmap-5b-r6
 >=sys-apps/vcron-3.0_p1-r6
+>=media-sound/alsa-utils-0.5.10-r6
