@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.5 2004/09/11 17:44:54 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.6 2004/12/01 14:04:38 vapier Exp $
 
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -40,7 +40,7 @@
 >=x11-base/xfree-4.1.0-r2
 
 *sys-devel/bin86
-*>=sys-devel/libtool-1.4.1-r4
+*sys-devel/libtool
 *sys-libs/pwdb
 *virtual/dev-manager
 

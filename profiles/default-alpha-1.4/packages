@@ -86,7 +86,7 @@ virtual/os-headers
 *sys-devel/bc
 *sys-devel/bison
 *sys-devel/flex
-*>=sys-devel/libtool-1.4.1-r9
+*sys-devel/libtool
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch

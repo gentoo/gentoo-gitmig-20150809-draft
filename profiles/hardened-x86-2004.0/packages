@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/packages,v 1.7 2004/12/01 13:57:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/packages,v 1.8 2004/12/01 14:04:38 vapier Exp $
 
 # base system stuff
 >dev-lang/gpc-2.1
@@ -74,7 +74,7 @@ virtual/os-headers
 *sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
-*>=sys-devel/libtool-1.4.1-r4
+*sys-devel/libtool
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch

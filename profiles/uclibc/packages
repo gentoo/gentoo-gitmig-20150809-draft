@@ -9,7 +9,6 @@
 # minimal versions
 -*>=net-misc/iputils-021109-r3
 *>=sys-devel/bison-1.875
-*>=sys-devel/libtool-1.5.2
 
 # remove stuff not needed on uclibc
 # c++ stuff disabled
