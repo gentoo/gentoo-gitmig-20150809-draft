@@ -1,8 +1,8 @@
 #!/bin/sh
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/files/dripgetdvd.sh,v 1.2 2003/04/27 14:27:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/files/dripgetdvd.sh,v 1.3 2004/03/04 18:52:12 vapier Exp $
 
 # This basically resolves a symlink in /dev to the block device node.  If
 # $1 is a absolute path, and that do not exist, we also check /etc/fstab
@@ -72,4 +72,3 @@ else
 fi
 
 exit 0
-
