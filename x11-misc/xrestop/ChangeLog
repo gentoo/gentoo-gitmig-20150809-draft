@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrestop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.2 2004/01/06 22:24:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.3 2004/03/16 17:10:39 augustus Exp $
+
+  16 Mar 2004; <augustus@gentoo.org> xrestop-0.2.ebuild:
+  Marked ~amd64.
 
   06 Jan 2004; Luca Barbato <lu_zero@gentoo.org> xrestop-0.2.ebuild:
   Marked ~ppc
