@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.1.20041026.ebuild,v 1.4 2004/11/11 23:19:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.3.20041109-r1.ebuild,v 1.1 2004/11/20 19:53:19 usata Exp $
 
 inherit tetex eutils flag-o-matic
 
 #TETEX_TEXMF_PV=2.96.5.20040711
 TETEX_TEXMF_PV=${PV}
 TEXMF_PATH=/var/lib/texmf
-S=${WORKDIR}/tetex-src-beta-${PV}
+S=${WORKDIR}/tetex-src-${PV}-beta
 
-TETEX_SRC="tetex-src-beta-${TETEX_SRC_PV:-${TETEX_PV}}.tar.gz"
-TETEX_TEXMF="tetex-texmf-beta-${TETEX_TEXMF_PV:-${TETEX_PV}}.tar.gz"
-TETEX_TEXMF_SRC="tetex-texmfsrc-beta-${TETEX_TEXMF_PV:-${TETEX_PV}}.tar.gz"
+TETEX_SRC="tetex-src-${TETEX_SRC_PV:-${TETEX_PV}}-beta.tar.gz"
+TETEX_TEXMF="tetex-texmf-${TETEX_TEXMF_PV:-${TETEX_PV}}-beta.tar.gz"
+#TETEX_TEXMF_SRC="tetex-texmfsrc-${TETEX_TEXMF_PV:-${TETEX_PV}}-beta.tar.gz"
+TETEX_TEXMF_SRC=""
 
 DESCRIPTION="a complete TeX distribution"
 HOMEPAGE="http://tug.org/teTeX/"
@@ -23,11 +24,20 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	http://dev.gentoo.org/~usata/distfiles/${P}-gentoo.tar.gz"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
-IUSE="motif lesstif Xaw3d"
+IUSE="motif lesstif Xaw3d neXt"
 
 DEPEND="motif? ( lesstif? ( x11-libs/lesstif )
 		!lesstif? ( x11-libs/openmotif ) )
-	!motif? ( Xaw3d? ( x11-libs/Xaw3d ) )"
+	!motif? ( neXt? ( x11-libs/neXtaw )
+		!neXt? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
+	!dev-tex/memoir
+	!dev-tex/lineno
+	!dev-tex/SIunits
+	!dev-tex/floatflt
+	!dev-tex/g-brief
+	!dev-tex/pgf
+	!dev-tex/xcolor
+	!dev-tex/xkeyval"
 
 pkg_setup() {
 	ewarn
@@ -48,6 +58,8 @@ src_compile() {
 			export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include/lesstif"
 		fi
 		toolkit="motif"
+	elif use neXt ; then
+		toolkit="neXtaw"
 	elif use Xaw3d ; then
 		toolkit="xaw3d"
 	else
