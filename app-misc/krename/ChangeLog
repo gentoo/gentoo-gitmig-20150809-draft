@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.33 2004/08/06 19:20:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.34 2004/08/08 16:10:14 carlo Exp $
+
+*krename-3.0.2 (08 Aug 2004)
+
+  08 Aug 2004; Carsten Lohrke <carlo@gentoo.org> -krename-3.0.0.ebuild,
+  -krename-3.0.0_rc3.ebuild, -krename-3.0.1.ebuild, +krename-3.0.2.ebuild:
+  version bump, marked stable immediately because of grave bug in 3.0.1, ebuild
+  clean up
 
   06 Aug 2004; Carsten Lohrke <carlo@gentoo.org> krename-3.0.1.ebuild:
   stable on x86
