@@ -2,6 +2,7 @@ MD5 b71562bab84945c99c2fd6521c166609 ChangeLog 1645
 MD5 2196352ff09a0911d140c0c894967808 docutils-0.3_pre20030530.ebuild 716
 MD5 3b77f1541dc354b1155715d80f197bad docutils-0.3_pre20030530-r3.ebuild 1543
 MD5 4ecda915abc9c0f1242895c64464440e docutils-0.3.ebuild 1529
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 8c6d9ea3ddd2e36b369112ee20b660fb files/digest-docutils-0.3_pre20030530 73
 MD5 8c6d9ea3ddd2e36b369112ee20b660fb files/digest-docutils-0.3_pre20030530-r3 73
 MD5 4787b6c5e6678d3f211ec7f8ec71aa03 files/glep.py 699

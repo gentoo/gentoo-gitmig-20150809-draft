@@ -1,3 +1,4 @@
-MD5 1929efd859e004d9dfe70dde4e1c8940 files/digest-bicyclerepair-0.7.1 70
-MD5 fdf38a01f167286f87722397b2dd6901 ChangeLog 505
 MD5 ddf28d176d7f2327e5dfcda2aae3eadc bicyclerepair-0.7.1.ebuild 1183
+MD5 fdf38a01f167286f87722397b2dd6901 ChangeLog 505
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 1929efd859e004d9dfe70dde4e1c8940 files/digest-bicyclerepair-0.7.1 70
