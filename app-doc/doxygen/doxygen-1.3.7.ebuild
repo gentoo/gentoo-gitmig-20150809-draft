@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.7.ebuild,v 1.8 2004/10/05 12:20:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.7.ebuild,v 1.9 2004/10/17 10:15:53 absinthe Exp $
 
 DESCRIPTION="documentation system for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha ~hppa ~amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc ~mips alpha ~hppa amd64 ~ia64 ppc64"
 IUSE="doc qt tetex"
 
 RDEPEND="media-gfx/graphviz
