@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-0.2.1.ebuild,v 1.4 2004/06/24 21:57:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-0.2.1.ebuild,v 1.5 2004/07/14 03:26:23 tgall Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa amd64 ~ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa amd64 ~ia64 ~mips ~ppc64"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.3.1
