@@ -503,11 +503,6 @@ dev-lang/tcl-tk
 # gnome meeting has some issues with the sandbox
 =net-im/gnomemeeting-0.84.0
 
-#seemant@gentoo.org 31 Mar 2002
-# created shell script front ends for sgmltools-lite.  This needs to be
-# tested though.
-=app-text/sgmltools-lite-3.0.3-r4
-
 # moved theese to gphoto2
 =media-gfx/gphoto-2.0.0
 =media-gfx/gphoto-2.0.0-r1
