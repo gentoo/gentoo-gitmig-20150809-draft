@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fee9abc7797fef753c42454679bae9a7 metadata.xml 456
 MD5 8b5c3c8f58882ff5c8bc99dc89676ee5 rsbac-sources-2.4.26-r3.ebuild 1393
 MD5 5e8a6fb05c7d7fe97f9ed8a3c2d556db ChangeLog 1229
-MD5 c74ba989ea26d7bc7ff36cedad0046a2 rsbac-sources-2.4.26-r1.ebuild 1323
-MD5 99e5dd8d006e354060a8191d2d98b481 rsbac-sources-2.4.26-r2.ebuild 1359
 MD5 dc18e982f8149588a291956481885a8c files/rsbac-sources-2.4.CAN-2004-0495.patch 17549
 MD5 0f66013f643c79c97fda489618a4e2fd files/rsbac-sources-2.4.CAN-2004-0535.patch 476
 MD5 a869ab037c7e264df5f8e899864f08e9 files/rsbac-sources-v1.2.3-3.patch 557
 MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/rsbac-sources-CAN-2004-0497.patch 707
 MD5 6f7531a1113b6ecc54c506b918d40e95 files/digest-rsbac-sources-2.4.26-r3 207
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+AvoJUNS2Y9cV5ERAleRAJ49gRHA/54xmgsBR+kkBuexzBsbFwCfdAXK
-inSHr7m3HE3IIMeI37TMfrU=
-=MdmS
------END PGP SIGNATURE-----
