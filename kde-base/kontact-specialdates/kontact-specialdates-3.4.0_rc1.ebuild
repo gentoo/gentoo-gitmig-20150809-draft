@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.4.0_rc1.ebuild,v 1.1 2005/02/27 20:21:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.4.0_rc1.ebuild,v 1.2 2005/03/06 15:26:18 cryos Exp $
 
 KMNAME=kdepim
 KMNOMODULE=true
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Special Dates plugin for Kontact: displays a summary of important holidays and calendar events"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="
