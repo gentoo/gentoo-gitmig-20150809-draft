@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/HTML-Tagset-3.03-r1.ebuild,v 1.4 2002/07/25 04:13:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/HTML-Tagset-3.03-r1.ebuild,v 1.5 2002/07/31 13:11:40 cselkirk Exp $
 
 inherit perl-module
 
@@ -11,4 +11,4 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"

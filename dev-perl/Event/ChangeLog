@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.2 2002/05/05 16:02:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.3 2002/07/31 12:59:05 cselkirk Exp $
 
 *Event-0.85-r1 (5 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Event-0.85-r1.ebuild :
+
+  Added ppc to KEYWORDS.
 
   5 May 2002; Seemant Kulleen <seemant@gentoo.org> Event-0.85-r1.ebuild
   files/digest-Event-0.85-r1 :

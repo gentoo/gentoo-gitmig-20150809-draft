@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.1 2002/06/28 12:18:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.2 2002/07/31 13:21:53 cselkirk Exp $
 
 *Jcode-0.80 (28 Jun 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Jcode-0.80.ebuild :
+
+  Added ppc to KEYWORDS.
 
   28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> Jcode-0.80.ebuild
   files/digest-Jcode-0.80 :

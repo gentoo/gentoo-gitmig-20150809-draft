@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.1 2002/07/17 04:04:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.2 2002/07/31 13:19:43 cselkirk Exp $
 
 *Inline-0.43 (16 Jul 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Inline-0.43.ebuild :
+
+  Added ppc to KEYWORDS.
 
   16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> Inline-0.43.ebuild
   ChangeLog files/digest-Inline-0.43 :

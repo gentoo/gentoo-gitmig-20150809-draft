@@ -1,7 +1,12 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.1 2002/05/24 03:01:41 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.2 2002/07/31 12:41:43 cselkirk Exp $
+
 *DBD-Pg-1.13 (23 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> DBD-Pg-1.13.ebuild :
+
+  Added ppc to KEYWORDS.
 
   23 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   

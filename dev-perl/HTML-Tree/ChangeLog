@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.2 2002/07/31 13:13:04 cselkirk Exp $
 
 *HTML-Tree-3.11 (14 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> HTML-Tree-3.11.ebuild :
+  
+  Added ppc to KEYWORDS.
 
   14 May 2002; J.Alberto S.L. <bass@gentoo.org> HTML-Tree-3.11.ebuild:
 	First relase.

@@ -1,7 +1,11 @@
 # ChangeLog for dev-perl/DelimMatch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.2 2002/07/31 12:46:52 cselkirk Exp $
 
 *DelimMatch-1.4 (31 05 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> DelimMatch-1.4.ebuild :
+
+  Added ppc to KEYWORDS.
 
   31 May 2002; B.Lauwers <blauwers@gentoo.org> ChangeLog: Added initial ebuild

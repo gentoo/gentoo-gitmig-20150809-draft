@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Filter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.1 2002/05/11 17:34:37 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.2 2002/07/31 13:04:21 cselkirk Exp $
 
 *Filter-1.28 (11 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Filter-1.28.ebuild :
+
+  Added ppc to KEYWORDS.
 
   11 May 2002; Arcady Genkin <agenkin@thpoon.com> Filter-1.28.ebuild :
 

@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Digest-MD5
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.4 2002/05/24 07:51:28 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.5 2002/07/31 12:49:32 cselkirk Exp $
 
 *Digest-MD5-2.20 (24 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Digest-MD5-2.20.ebuild :
+
+  Added ppc to KEYWORDS.
 
   24 May 2002; Ryan Phillips <rphillips@gentoo.org> Digest-MD5-2.20.ebuild
   files/digest-Digest-MD5-2.20 :
