@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.5.ebuild,v 1.5 2004/04/24 05:47:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.5.ebuild,v 1.6 2004/06/24 22:12:27 agriffis Exp $
 
 DESCRIPTION="The GGZ library, used by GGZ Gameing Zone"
 HOMEPAGE="http://ggz.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-0.1.9.ebuild,v 1.9 2004/05/02 01:57:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-0.1.9.ebuild,v 1.10 2004/06/24 22:14:10 agriffis Exp $
 
 DESCRIPTION="abstraction layer for filesystems, useful for games"
 HOMEPAGE="http://icculus.org/physfs/"

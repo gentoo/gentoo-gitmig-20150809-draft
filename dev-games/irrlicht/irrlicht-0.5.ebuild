@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.5.ebuild,v 1.1 2004/02/23 04:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.5.ebuild,v 1.2 2004/06/24 22:11:56 agriffis Exp $
 
 inherit eutils
 

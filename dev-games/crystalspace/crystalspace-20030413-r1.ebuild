@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-20030413-r1.ebuild,v 1.14 2004/06/03 21:46:19 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-20030413-r1.ebuild,v 1.15 2004/06/24 22:10:09 agriffis Exp $
 
 DESCRIPTION="portable 3D Game Development Kit written in C++"
 SRC_URI="mirror://gentoo/distfiles/${P}.tar.gz"

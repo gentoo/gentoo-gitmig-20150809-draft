@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/libmaitretarot-0.1.98.ebuild,v 1.4 2004/04/19 12:21:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/libmaitretarot-0.1.98.ebuild,v 1.5 2004/06/24 22:12:43 agriffis Exp $
 
 DESCRIPTION="backend library for the maitretarot games"
 HOMEPAGE="http://www.nongnu.org/maitretarot/"

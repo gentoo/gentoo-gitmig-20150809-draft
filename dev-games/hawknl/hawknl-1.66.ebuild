@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc., 2004 Richard Garand <richard@garandnet.net>
+# Copyright 1999-2004 Gentoo Foundation, 2004 Richard Garand <richard@garandnet.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.66.ebuild,v 1.4 2004/06/02 20:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.66.ebuild,v 1.5 2004/06/24 22:11:19 agriffis Exp $
 
 DESCRIPTION="A cross-platform network library designed for games"
 HOMEPAGE="http://www.hawksoft.com/hawknl/"

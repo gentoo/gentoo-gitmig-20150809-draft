@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.6 2004/02/20 07:44:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.7 2004/06/24 22:09:48 agriffis Exp $
 
 inherit cvs
 ECVS_SERVER="cvs.cel.sourceforge.net:/cvsroot/cel"
