@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030709.ebuild,v 1.5 2003/08/15 16:20:47 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030709.ebuild,v 1.6 2003/09/03 08:05:14 msterret Exp $
 
 inherit eutils base
 
@@ -22,7 +22,7 @@ DEPEND="sys-devel/gcc
 	>=sys-libs/ncurses-5.2
 	>=media-libs/freetype-2.0.0
 	X? ( virtual/x11 )
-	tcltk? ( dev-lang/tcl dev-lang/tk ) 
+	tcltk? ( dev-lang/tcl dev-lang/tk )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
@@ -33,16 +33,16 @@ src_unpack() {
 	base_src_unpack
 	cd ${S}
 	epatch ${DISTDIR}/${P}-xopenfont.patch
-	
+
 	#cd ${S}/dlls/oleaut32/
 	#patch -R < ${FILESDIR}/kpp-fix.patch
 }
 
-src_compile() {	
+src_compile() {
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
-	
+
 	unset CFLAGS CXXFLAGS
-	
+
 	ac_cv_header_jack_jack_h=no \
 	ac_cv_lib_soname_jack= \
 	./configure \
@@ -59,25 +59,25 @@ src_compile() {
 	cd ${S}/programs/winetest
 	cp Makefile 1
 	sed -e 's:wine.pm:include/wine.pm:' 1 > Makefile
-	
+
 	# No parallel make
-	cd ${S}	
+	cd ${S}
 	make depend all || die
 	cd programs && emake || die
 }
 
 src_install() {
 	local WINEMAKEOPTS="prefix=${D}/usr/lib/wine"
-	
+
 	### Install wine to ${D}
 	make ${WINEMAKEOPTS} install || die
 	cd ${S}/programs
 	make ${WINEMAKEOPTS} install || die
-	
+
 	# Needed for later installation
 	dodir /usr/bin
- 
-	### Creation of /usr/lib/wine/.data 
+
+	### Creation of /usr/lib/wine/.data
 	# Setting up fake_windows
 	dodir /usr/lib/wine/.data
 	cd ${D}/usr/lib/wine/.data
