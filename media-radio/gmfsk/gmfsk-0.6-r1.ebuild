@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6.ebuild,v 1.6 2005/03/07 06:12:35 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6-r1.ebuild,v 1.1 2005/03/07 06:12:35 killsoft Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Gnome MFSK, RTTY, THROB, PSK31, MT63 and HELLSCHREIBER terminal"
 HOMEPAGE="http://gmfsk.connect.fi/index.html"
@@ -10,7 +10,7 @@ SRC_URI="http://he.fi/pub/ham/unix/linux/hfmodems/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
 RDEPEND="virtual/libc
@@ -28,3 +28,10 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} --enable-hamlib"
 DOCS="AUTHORS COPYING COPYING-DOCS ChangeLog INSTALL NEWS README"
+
+src_unpack(){
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-patch-mt63_dsp.h || \
+		die "epatch failed"
+}
