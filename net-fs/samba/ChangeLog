@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.56 2004/01/07 21:47:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.57 2004/01/16 09:22:36 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> samba-3.0.1-r1.ebuild:
+  ppc needs the statfs patch too
 
   07 Jan 2004; <agriffis@gentoo.org> samba-3.0.1-r1.ebuild:
   add ~alpha and ia64 to keywords
