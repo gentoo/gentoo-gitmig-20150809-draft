@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/spruce-0.7.6-r2.ebuild,v 1.4 2004/07/14 16:26:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/spruce-0.7.6-r2.ebuild,v 1.5 2004/09/01 17:21:30 sekretarz Exp $
+
+inherit eutils
 
 IUSE="ssl nls gnome crypt"
 
@@ -23,6 +25,10 @@ KEYWORDS="x86 sparc ~ppc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# gcc-3.4 fix
+	epatch ${FILESDIR}/${PN}-gcc34.patch
+
 	autoconf
 }
 

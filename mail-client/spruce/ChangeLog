@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/spruce
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/ChangeLog,v 1.4 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/ChangeLog,v 1.5 2004/09/01 17:21:30 sekretarz Exp $
+
+  01 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/spruce-gcc34.patch, spruce-0.7.6-r2.ebuild:
+  Fixed gcc-3.4 compile problems. Bug #50428
 
   04 Jun 2004; David Holm <dholm@gentoo.org> spruce-0.7.6-r2.ebuild:
   Added to ~ppc.
