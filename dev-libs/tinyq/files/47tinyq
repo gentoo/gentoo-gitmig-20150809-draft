@@ -1,0 +1,5 @@
+PATH=/usr/qt/tinyq/bin
+ROOTPATH=/usr/qt/tinyq/bin
+LDPATH=/usr/qt/tinyq/lib
+QTDIR=/usr/qt/tinyq
+QMAKESPEC=linux-g++

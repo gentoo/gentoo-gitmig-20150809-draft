@@ -1,0 +1,25 @@
+# ChangeLog for dev-libs/tinyq
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/dev-libs/tinyqt/ChangeLog,v 1.1 2002/03/26 10:52:11 gbevin Exp
+
+*tinyq-3.0.4 (30 May 2002)
+
+  26 Mar 2002; G.Bevin <gbevin@uwyn.com> : tinyq-3.0.4.ebuild,
+  files/digest-tinyq-3.0.4
+  
+  Changed to TinyQ due to trademark issues.
+  
+*tinyqt-3.0.3 (26 Mar 2002)
+
+  26 Mar 2002; G.Bevin <gbevin@gentoo.org> : tinyqt-3.0.3.ebuild,
+  files/digest-tinyqt-3.0.3
+  
+  Upgraded to version 3.0.3 and moved to the dev-libs category instead.
+  
+*tinyqt-3.0.1 (22 Feb 2002)
+
+  22 Feb 2002; G.Bevin <gbevin@gentoo.org> :
+  
+  Stripped down Qt 3 to support everything that's needed to do commanline
+  development without any GUI classes. Thus providing a nice C++ framework
+  for console applications without having to resort to STL or other bloatware.
