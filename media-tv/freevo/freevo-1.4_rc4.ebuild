@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4_rc4.ebuild,v 1.2 2003/11/16 22:17:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4_rc4.ebuild,v 1.3 2003/11/17 03:32:28 max Exp $
 
 inherit distutils
 
@@ -22,7 +22,6 @@ DEPEND=">=dev-python/pygame-1.5.6
 	>=media-video/mplayer-0.92
 	>=media-libs/freetype-2.1.4
 	>=media-libs/libsdl-1.2.5
-	>=media-tv/xmltv-0.5.19
 	>=sys-apps/sed-4
 	dvd? ( >=media-video/xine-ui-0.9.22 )
 	encode? ( >=media-sound/cdparanoia-3.9.8 >=media-sound/lame-3.93.1 )
@@ -67,13 +66,6 @@ src_install() {
 	insinto /etc/conf.d
 	newins "${FILESDIR}/freevo.conf" freevo
 
-	if [ ! "`use lirc`" ] ; then
-		dosed '/need lirc/d' /etc/init.d/freevo
-	fi
-	if [ ! "`use X`" ] ; then
-		dosed '/need xfs/d' /etc/init.d/freevo
-	fi
-
 	rm -rf "${D}/usr/share/doc"
 	newdoc Docs/README README.docs
 	dodoc BUGS COPYING ChangeLog FAQ INSTALL PKG-INFO README TODO \
@@ -82,6 +74,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "If you want to schedule programs, emerge xmltv now."
+	echo
+
 	einfo "Please check /etc/freevo/freevo.conf and"
 	einfo "/etc/freevo/local_conf.py before starting Freevo."
 	einfo "To rebuild freevo.conf with different parameters,"

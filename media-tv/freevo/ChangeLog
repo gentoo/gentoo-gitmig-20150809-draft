@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.8 2003/11/16 22:17:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.9 2003/11/17 03:32:28 max Exp $
+
+  16 Nov 2003; <max@gentoo.org> freevo-1.4_rc2.ebuild, freevo-1.4_rc3.ebuild,
+  freevo-1.4_rc4.ebuild, files/freevo.rc6:
+  Remove the dosed calls to tweak the startup script. Change the startup script
+  from need to use. Remove xmltv as a dependency. Remove old _rc versions.
 
   16 Nov 2003; Martin Holzer <mholzer@gentoo.org> freevo-1.4_rc2.ebuild,
   freevo-1.4_rc3.ebuild, freevo-1.4_rc4.ebuild:
