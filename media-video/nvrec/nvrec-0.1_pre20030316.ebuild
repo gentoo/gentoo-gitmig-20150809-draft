@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/nvrec-0.1_pre20030217-r1.ebuild,v 1.2 2003/03/27 07:22:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/nvrec-0.1_pre20030316.ebuild,v 1.1 2003/03/27 07:22:29 phosphan Exp $
 
-MY_VER="20030217"
+MY_VER="20030316"
 DESCRIPTION="High quality video capture for Linux"
 HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="http://${PN}.sourceforge.net/downloads/${PN}-${MY_VER}.tar.gz
 		mirror://sourceforge/ffmpeg/ffmpeg-0.4.6.tar.gz"
 LICENSE="GPL-2"
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}-${MY_VER}"
 IUSE="avi quicktime sdl oggvorbis"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="dev-lang/perl
 		>=sys-devel/automake-1.6.1
@@ -72,4 +72,5 @@ src_install() {
 	einstall || die "install failed"
 	insinto /etc
 	doins etc/nvrec.conf
+	dodoc AUTHORS CREDITS ChangeLog FAQ KNOWN_BUGS README README.FIRST STATUS
 }
