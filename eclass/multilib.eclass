@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.9 2005/01/15 13:44:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.10 2005/01/16 17:45:19 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -178,6 +178,35 @@ is_final_abi() {
 # echo the number of ABIs we will be installing for
 number_abis() {
 	get_abi_order | wc -w
+}
+
+# get_ml_incdir [<include dir> [<ABI>]]
+# include dir defaults to /usr/include
+# ABI defaults to ${ABI} or ${DEFAULT_ABI}
+get_ml_incdir() {
+	local dir=/usr/include
+
+	if [[ ${#} -gt 0 ]]; then
+		incdir=${1}
+		shift
+	fi
+
+	if [[ -z "${MULTILIB_ABIS}" ]]; then
+		echo ${incdir}
+		return 0
+	fi
+
+	local abi=${ABI:-${DEFAULT_ABI}}
+	if [[ ${#} -gt 0 ]]; then
+		abi=${1}
+		shift
+	fi
+
+	if [[ -d "${dir}/gentoo-multilib/${abi}" ]]; then
+		echo ${dir}/gentoo-multilib/${abi}
+	else
+		echo ${dir}
+	fi
 }
 
 # prep_ml_includes:
