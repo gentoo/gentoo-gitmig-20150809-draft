@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.9 2004/03/21 12:10:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.10 2004/03/24 14:32:38 weeve Exp $
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> gdome2-0.7.4.ebuild:
+  Stable on sparc.
 
   21 Mar 2004; David Holm <dholm@gentoo.org> gdome2-0.7.2.ebuild:
   Added to ~ppc. It's a dependency of dev-perl/XML-GDOME-0.85.
