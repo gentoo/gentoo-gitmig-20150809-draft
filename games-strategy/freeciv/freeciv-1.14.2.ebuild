@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.2.ebuild,v 1.1 2004/09/12 02:28:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.2.ebuild,v 1.2 2004/11/23 21:10:01 mr_bones_ Exp $
 
 inherit games
 
@@ -35,8 +35,6 @@ RDEPEND="X? ( virtual/x11 )
 				>=dev-libs/glib-1.2.5
 				>=media-libs/imlib-1.9.2
 			)
-			>=media-libs/libogg-1.0
-			>=media-libs/libvorbis-1.0-r2
 		)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
