@@ -1,0 +1,87 @@
+diff -urpN nv/Makefile.kbuild nv.kdev_val/Makefile.kbuild
+--- nv/Makefile.kbuild	2003-09-07 01:38:37.683707640 +0200
++++ nv.kdev_val/Makefile.kbuild	2003-09-07 02:30:08.068897680 +0200
+@@ -134,6 +134,15 @@ ifeq ($(shell sh $(src)/conftest.sh rema
+ endif
+ 
+ #
++# Linux 2.6.0-test4-bk8 and later do not have the kdev_val(kdev_t) function
++# anymore.
++#
++
++ifeq ($(shell sh $(src)/conftest.sh have_kdev_val $(KERNEL_HEADERS)), 1)
++  EXTRA_CFLAGS += -DHAVE_KDEV_VAL
++endif
++
++#
+ # NVIDIA binary object file includes .common section.
+ #
+ 
+diff -urpN nv/Makefile.nvidia nv.kdev_val/Makefile.nvidia
+--- nv/Makefile.nvidia	2003-09-07 01:38:37.685707336 +0200
++++ nv.kdev_val/Makefile.nvidia	2003-09-07 02:35:47.404310856 +0200
+@@ -64,6 +64,14 @@ ifeq ($(shell sh conftest.sh remap_page_
+   DEFINES += -DREMAP_PAGE_RANGE_4
+ endif
+ 
++#
++# Linux 2.6.0-test4-bk8 and later do not have the kdev_val(kdev_t) function
++# anymore.
++#
++ifeq ($(shell sh conftest.sh have_kdev_val $(INCLUDES)), 1)
++  DEFINES += -DHAVE_KDEV_VAL
++endif
++
+ DEFINES+=$(EXTRA_DEFINES)
+ 
+ # allow build parameters to be passed in through the environment
+diff -urpN nv/conftest.sh nv.kdev_val/conftest.sh
+--- nv/conftest.sh	2003-09-07 01:38:37.687707032 +0200
++++ nv.kdev_val/conftest.sh	2003-09-07 02:46:38.104389408 +0200
+@@ -38,6 +38,27 @@ case "$1" in
+         fi
+     ;;
+ 
++	have_kdev_val)
++		shift
++		#
++		# Determine if we have the kdev_val() function.
++		#
++		echo "#include <linux/kdev_t.h>
++		int do_test_have_kdev_val(kdev_t dev) {
++		   int retval = kdev_val(dev);
++		}" > conftest.c
++
++		gcc -c conftest.c -o conftest.o $* -D__KERNEL__ > /dev/null 2>&1
++
++		if test -f conftest.o; then
++		  echo "1"
++		  rm -f conftest.{c,o}
++		else
++		  echo "0"
++		  rm -f conftest.{c,o}
++		fi
++	;;
++
+     cc_sanity_check)
+         shift
+         #
+diff -urpN nv/nv-linux.h nv.kdev_val/nv-linux.h
+--- nv/nv-linux.h	2003-09-07 01:38:38.019656568 +0200
++++ nv.kdev_val/nv-linux.h	2003-09-07 02:18:47.367380040 +0200
+@@ -358,8 +358,13 @@ extern struct mem_track_t *fp_list;
+ #define NV_VMA_PRIVATE(vma)           ((vma)->vm_private_data)
+ 
+ #ifdef KERNEL_2_5
+-#  define NV_DEVICE_NUMBER(_minor)      ((kdev_val(_minor)) & 0x0f)
+-#  define NV_IS_CONTROL_DEVICE(_minor)  (((kdev_val(_minor)) & 0xff) == 0xff)
++#  ifdef HAVE_KDEV_VAL
++#   define NV_DEVICE_NUMBER(_minor)      ((kdev_val(_minor)) & 0x0f)
++#   define NV_IS_CONTROL_DEVICE(_minor)  (((kdev_val(_minor)) & 0xff) == 0xff)
++#  else
++#   define NV_DEVICE_NUMBER(_minor)      ((_minor) & 0x0f)
++#   define NV_IS_CONTROL_DEVICE(_minor)  (((_minor) & 0xff) == 0xff)
++#  endif
+ #  define NV_IS_SUSER()                 capable(CAP_SYS_ADMIN)
+ #  ifdef CONFIG_PCI_NAMES
+ #   define NV_PCI_DEVICE_NAME(x)        ((x)->pretty_name)
