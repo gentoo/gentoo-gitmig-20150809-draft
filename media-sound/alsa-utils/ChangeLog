@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.80 2004/11/29 12:28:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.81 2004/11/29 21:33:27 eradicator Exp $
+
+  29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  Fixed alsasound to work on kernels where module support is disabled. Closes
+  bug #72849.
 
   29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
   Added save option thanks to Ben Anderson <roothorick@new.rr.com> in bug #72771.
