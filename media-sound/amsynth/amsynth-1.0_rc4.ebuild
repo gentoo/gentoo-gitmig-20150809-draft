@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc2.ebuild,v 1.2 2003/07/12 23:41:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc4.ebuild,v 1.1 2004/01/22 09:58:33 torbenh Exp $
 
 MY_P=${P/_rc/-rc}
 MY_P=${MY_P/amsynth/amSynth}
@@ -22,6 +22,14 @@ DEPEND="=dev-cpp/gtkmm-1.2* \
 	jack? ( virtual/jack )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" src/drivers/ALSAmmapAudioDriver.h
+	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" src/drivers/ALSAAudioDriver.h
+}
 
 src_compile() {
 	local myconf
