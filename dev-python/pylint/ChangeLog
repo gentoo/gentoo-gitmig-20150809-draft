@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.3 2004/02/17 20:49:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.4 2004/02/22 09:55:18 liquidx Exp $
+
+*pylint-0.3.3 (22 Feb 2004)
+
+  22 Feb 2004; Alastair Tse <liquidx@gentoo.org> pylint-0.3.3.ebuild:
+  version bump. bumped logilab-common dep
 
 *pylint-0.3.2 (17 Feb 2004)
 
