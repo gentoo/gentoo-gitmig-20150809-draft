@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-truecombat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.4 2003/10/05 02:34:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.5 2003/12/12 06:21:06 vapier Exp $
+
+*quake3-truecombat-1.1 (12 Dec 2003)
+
+  12 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #35230.
 
 *quake3-truecombat-1.0a (15 Jul 2003)
 
