@@ -1,5 +1,5 @@
-MD5 aa9553138b8e9d544d072db355d4d43c ChangeLog 2229
-MD5 9324f35d5fdf230a50a2ffb1b54de7cd dbus-0.22.ebuild 2477
+MD5 e738afcd145adb27ed5a31714c61d741 dbus-0.22.ebuild 2696
+MD5 a3803479b2cdd84e537c0ab7d9f71fa1 ChangeLog 2363
 MD5 5b5bcd9c1a432b2c8157b0004a073f72 metadata.xml 224
 MD5 5ad50ae94f784548fc0d6f1364ce23bb files/dbus 544
 MD5 b0cc4f0bb3505fb083602b48c09f25a6 files/digest-dbus-0.22 62

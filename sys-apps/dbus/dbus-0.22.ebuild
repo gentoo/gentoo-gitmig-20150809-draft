@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22.ebuild,v 1.4 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22.ebuild,v 1.5 2004/09/18 22:12:17 lv Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono
@@ -15,7 +15,7 @@ SRC_URI="http://www.freedesktop.org/software/dbus/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 | AFL-2.1"
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ppc ~amd64"
 
 RDEPEND=">=dev-libs/glib-2
 	xml2? ( >=dev-libs/libxml2-2.6 )
@@ -69,6 +69,12 @@ src_compile() {
 
 	# do not build the mono examples, they need gtk-sharp
 	touch ${S}/mono/example/echo-{server,client}.exe
+
+	# this gets around a lib64 sandbox bug. note that this addpredict is
+	# added automatically by sandbox.c for lib.
+	addpredict /usr/lib64/python2.3/
+	addpredict /usr/lib64/python2.2/
+	addpredict /usr/lib64/python2.1/
 
 	emake || die
 
