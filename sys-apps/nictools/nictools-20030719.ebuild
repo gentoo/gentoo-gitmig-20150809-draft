@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.1 2003/07/20 04:07:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.2 2003/09/23 22:21:28 robbat2 Exp $
 
 DESCRIPTION="nictools - diagnostic tools for a variety of ISA and PCI network cards"
 HOMEPAGE="http://www.scyld.com/diag/index.html"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.scyld.com/diag/index.html"
 SRC_URI="mirrors:/gentoo/${P}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="static"
 DEPEND=""
 
@@ -37,6 +37,11 @@ nictools_setupcards() {
 pkg_setup() {
 	einfo "If you want the configuration tools for only PCI or ISA cards, "
 	einfo "do: 'NICTOOLS_CARDS=\"pci\" emerge nictools' or 'NICTOOLS_CARDS=\"isa\" emerge nictools'"
+}
+
+src_unpack() {
+	unpack ${P}.tbz2
+	epatch ${DISTDIR}/${P}-gcc33-multilinestring.patch
 }
 
 src_compile() {
