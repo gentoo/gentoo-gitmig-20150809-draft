@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.6 2004/10/15 16:13:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.7 2004/10/24 21:09:02 swegener Exp $
+
+  24 Oct 2004; Sven Wegener <swegener@gentoo.org>
+  -ircservices-5.0.40.ebuild, ircservices-5.0.41.ebuild:
+  Removed old ebuild. Replaced -O[0-9] with -O[3-9] to catch only values above 2.
 
   15 Oct 2004; David Holm <dholm@gentoo.org> ircservices-5.0.41.ebuild:
   Added to ~ppc.
