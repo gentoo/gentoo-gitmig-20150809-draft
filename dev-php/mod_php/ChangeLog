@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.136 2004/04/06 16:47:52 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.137 2004/04/08 19:27:48 stuart Exp $
+
+  08 Apr 2004; Stuart Herbert <stuart@gentoo.org> mod_php-4.3.6_rc2.ebuild:
+  Marked as stable, because 4.3.5 has issues
 
   06 Apr 2004; Jon Portnoy <avenj@gentoo.org> mod_php-4.3.6_rc2.ebuild :
   Fix typo in epatch statement for amd64, bug #46939
