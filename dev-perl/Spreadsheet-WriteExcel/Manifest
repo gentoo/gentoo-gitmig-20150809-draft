@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1498910e082ed9fbb74fc5a3a3fe6ca6 ChangeLog 808
-MD5 01646e9770432268f57f319bdacb429c Spreadsheet-WriteExcel-2.04.ebuild 606
+MD5 d3197109d7f5ccc060dfe34aa4d388f8 ChangeLog 890
+MD5 9f7f46b0b532ec8b2b2db38b40cbb80c Spreadsheet-WriteExcel-2.04.ebuild 608
+MD5 44906002a21d7a54671e509f409fb2fb Spreadsheet-WriteExcel-2.11.ebuild 592
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
-MD5 e28bb7f41bdaf217a248bb4b6ebcf3ef Spreadsheet-WriteExcel-2.11.ebuild 589
 MD5 a5620aeafa789f026f9e01e2ab56720c files/digest-Spreadsheet-WriteExcel-2.04 79
 MD5 941ec67c9b13083864b73da295185b15 files/digest-Spreadsheet-WriteExcel-2.11 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBc+zGtG5z4I8BtQoRAm0DAJ4kzIu93S6CxTKi3+9a7aGs6jhE+wCeMNGQ
-v3Sp1TuPGUhFh4e90bTVBgE=
-=Aqt1
------END PGP SIGNATURE-----
