@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>hardened</herd>
+	<maintainer>
+		<email>solar@gentoo.org</email>
+		<description>Primary Maintainer</description>
+	</maintainer>
+	<longdescription>gradm is the userspace ACL parsing and authentication program for the grsecurity Access Control List System. grsecurity aims to be a complete security system for Linux 2.4. gradm performs several tasks for the ACL system including authenticated via a password to the kernel and parsing ACLs to be passed to the kernel.</longdescription>
+</pkgmetadata>
