@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.17 2004/09/28 20:19:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.18 2004/11/12 08:26:30 eradicator Exp $
+
+  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -fluidsynth-1.0.1.ebuild, fluidsynth-1.0.5.ebuild:
+  Removing 1.0.1.  Stable amd64, sparc, x86.
 
 *fluidsynth-1.0.5 (28 Sep 2004)
 
