@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.3 2005/02/06 19:53:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.4 2005/02/06 20:45:07 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -214,7 +214,7 @@ src_install() {
 
 	# Ugly compatibility with stupid ebuilds and old profiles symlinks
 	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
-		rm -r "${D}"/{lib,usr/lib,usr/local/lib}
+		rm -r "${D}"/{lib,usr/lib,usr/local/lib} &> /dev/null
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/lib
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/local/lib
@@ -259,7 +259,7 @@ src_install() {
 
 	# List all the multilib libdirs in /etc/env/04multilib (only if they're 
 	# actually different from the normal
-	if [[ $(get_libdir) != "lib" ]] ; then
+	if [ $(number_abis) -ne 1 -o $(get_libdir) != "lib" ]; then
 		echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
 	fi
 
