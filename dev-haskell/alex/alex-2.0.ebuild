@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.7 2005/01/01 18:03:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.8 2005/01/21 10:40:27 kosmikus Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -33,18 +33,22 @@ RDEPEND=""
 GHCPATH="${PATH}:/opt/ghc/bin"
 
 src_compile() {
+	# fix string gaps
+	sed -i -e 's/\\ $/" ++/' -e 's/^\([ \t]*\)\\/\1"/' alex/src/Main.hs
+	# fix version string
+	sed -i -e 's/ALEX_VERSION/'"${PV}"'/' -e 's/tail ""/tail $ ""/' alex/src/Main.hs
+
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
 	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf || die "econf failed"
-	# using make because emake behaved strangely on my machine
-	make || die
+	emake -j1 || die "make failed"
 
 	# if documentation has been requested, build documentation ...
 	if use doc; then
 		cd ${S}/haddock/doc
-		emake html || die
+		emake html || die "make html failed"
 		if use tetex; then
-			emake ps || die
+			emake ps || die "make ps failed"
 		fi
 	fi
 }
@@ -60,7 +64,7 @@ src_install() {
 		prefix="${D}/usr" \
 		datadir="${D}/usr/share/doc/${PF}" \
 		infodir="${D}/usr/share/info" \
-		mandir="${D}/usr/share/man" || die
+		mandir="${D}/usr/share/man" || die "make install failed"
 
 	cd ${S}/haddock
 	dodoc CHANGES LICENSE README TODO
@@ -71,7 +75,7 @@ src_install() {
 		dosym alex.html /usr/share/doc/${PF}/html/index.html
 		if use tetex; then
 			docinto ps
-			dodoc alex.ps || die
+			dodoc alex.ps || die "dodoc failed"
 		fi
 	fi
 }
