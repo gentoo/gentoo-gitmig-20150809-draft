@@ -1,22 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 028e131d4a7eb4d4bb72c295834c81b3 ChangeLog 13252
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 42d08116bc0726aa50efacc3add671a4 ncurses-5.3-r5.ebuild 3849
-MD5 71fd9dd82fb68684797d2237fa9d9543 ncurses-5.4-r1.ebuild 4754
-MD5 5556757d32b4e07c9260f37d2a216426 ncurses-5.4-r2.ebuild 5403
+MD5 56119e8feb5337d1d5bc4125c6ddaf2a ncurses-5.4-r2.ebuild 5432
 MD5 42bb017699458eb0d24c630da5f79e5d ncurses-8.1.ebuild 413
-MD5 e0940a89a4f64a1c57a5a993a89a27b7 ncurses-5.4-r3.ebuild 5353
-MD5 9a0e2bc9319fa72c9e0f529c22ec68af ncurses-5.4-r4.ebuild 5781
-MD5 25e3b68f68c1b80b08eee6f2d6a44916 ncurses-5.4-r5.ebuild 5899
-MD5 cd8a694247cfd64ce864e99246a8d87f files/digest-ncurses-5.3-r5 64
-MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r1 64
-MD5 143b9126206485a5faeb817fd94b1054 files/ncurses-5.3-coreutils.patch 1581
-MD5 c5b265c81eb2dea26b66cd656c61e99c files/ncurses-5.3-share-sed.patch 686
-MD5 f96d1b4b0bf94f1d38ce950df0efb37e files/ncurses-5.3-xterm.patch 1002
-MD5 1ecbf68a55269d2cebeb997f6973fc1d files/ncurses-5.4-share-sed.patch 686
-MD5 61ecd5aac5ddbd35cc4d4a00282eed01 files/ncurses-5.4-xterm.patch 495
-MD5 2167b54d7c96964183554e767e5f5376 files/xterm-debian.ti 342
+MD5 c0a47569107ff1bf2cc2bdfad2f9d864 ncurses-5.4-r3.ebuild 5383
+MD5 1ce139bb792e99a0810847bb3eec735f ncurses-5.4-r4.ebuild 5810
+MD5 e89210ddf781e36e04afce8d7108c65a ncurses-5.3-r5.ebuild 3863
+MD5 2d0cc2efb3441450e5d7a06b36a04d13 ncurses-5.4-r1.ebuild 4782
+MD5 59f35a804fa64b0c4f7073169c843b55 ncurses-5.4-r5.ebuild 5926
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r2 64
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ncurses-8.1 0
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r3 64
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r4 64
+MD5 f96d1b4b0bf94f1d38ce950df0efb37e files/ncurses-5.3-xterm.patch 1002
+MD5 2167b54d7c96964183554e767e5f5376 files/xterm-debian.ti 342
+MD5 cd8a694247cfd64ce864e99246a8d87f files/digest-ncurses-5.3-r5 64
+MD5 143b9126206485a5faeb817fd94b1054 files/ncurses-5.3-coreutils.patch 1581
+MD5 c5b265c81eb2dea26b66cd656c61e99c files/ncurses-5.3-share-sed.patch 686
+MD5 1ecbf68a55269d2cebeb997f6973fc1d files/ncurses-5.4-share-sed.patch 686
+MD5 61ecd5aac5ddbd35cc4d4a00282eed01 files/ncurses-5.4-xterm.patch 495
+MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r1 64
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBUxzEHTu7gpaalycRAv9YAJ9MuEmYD6KIu9odLk3mqZcLE6HUxQCfYm8w
+sHZ9QI2GDoTQLEozeO2fkaM=
+=QopQ
+-----END PGP SIGNATURE-----

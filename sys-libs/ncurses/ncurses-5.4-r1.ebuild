@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.26 2004/09/08 15:05:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.27 2004/09/23 18:57:33 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -150,10 +150,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# Old ncurses may still be around from old build tbz2's.
-	rm -f /lib/libncurses.so.5.[23]
-	rm -f /usr/lib/lib{form,menu,panel}.so.5.[23]
+	rm -f ${ROOT}/lib/libncurses.so.5.[23]
+	rm -f ${ROOT}/usr/lib/lib{form,menu,panel}.so.5.[23]
 	if [ "$(get_libdir)" != "lib" ] ;then
-		rm -f /$(get_libdir)/libncurses.so.5.[23]
-		rm -f /usr/$(get_libdir)/lib{form,menu,panel}.so.5.[23]
+		rm -f ${ROOT}/$(get_libdir)/libncurses.so.5.[23]
+		rm -f ${ROOT}/usr/$(get_libdir)/lib{form,menu,panel}.so.5.[23]
 	fi
 }

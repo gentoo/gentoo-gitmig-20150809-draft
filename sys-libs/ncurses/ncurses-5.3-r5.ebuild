@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.19 2004/09/08 15:05:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.20 2004/09/23 18:57:33 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -129,6 +129,6 @@ src_install() {
 
 pkg_postinst() {
 	# Old ncurses may still be around from old build tbz2's.
-	rm -f /lib/libncurses.so.5.2
-	rm -f /usr/lib/lib{form,menu,panel}.so.5.2
+	rm -f ${ROOT}/lib/libncurses.so.5.2
+	rm -f ${ROOT}/usr/lib/lib{form,menu,panel}.so.5.2
 }
