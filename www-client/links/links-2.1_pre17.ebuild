@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre15.ebuild,v 1.2 2005/03/25 13:53:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17.ebuild,v 1.1 2005/03/25 13:53:38 seemant Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/download/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ppc-macos s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
@@ -58,7 +58,7 @@ pkg_setup (){
 }
 
 src_unpack (){
-	unpack ${A}
+	unpack ${A}; cd ${S}
 
 	if use unicode ; then
 		epatch ${WORKDIR}/${MY_P}-utf8.diff
@@ -76,11 +76,13 @@ src_compile (){
 
 	# Note: --enable-static breaks.
 
-	# Note: ./configure only support 'gpm' features auto-detection, so if
-	# sys-libs/gpm is on your system, links will compile with gpm support
+	# Note: ./configure only support 'gpm' features auto-detection, so
+	# we use the autoconf trick
+	( use gpm || use fbcon ) || export ac_cv_lib_gpm_Gpm_Open="no"
 
 	export LANG=C
-	econf --program-suffix=2 \
+
+	econf \
 		$(use_with X x) \
 		$(use_with png libpng) \
 		$(use_with jpeg libjpeg) \
@@ -97,18 +99,26 @@ src_compile (){
 src_install (){
 	einstall
 
-	if [ ! -f /usr/bin/links ]
-	then
-		dosym links2 /usr/bin/links
-	fi
-
 	# Only install links icon if X driver was compiled in ...
 	use X && { insinto /usr/share/pixmaps ;	doins graphics/links.xpm ; }
 
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES TODO
 	dohtml doc/links_cal/*
+
+	# Install a compatibility symlink links2:
+	dosym links /usr/bin/links2
 }
 
+
+#pkg_preinst() {
+	# Check if the live filesystem has /usr/bin/links -> /usr/bin/links2
+	# From now on this will be reversed (and links2 will only symlink for
+	# the next couple of iterations, because this package is no longer SLOTted
+#	if [ "`${ROOT}/usr/bin/readlink ${ROOT}/usr/bin/links`" = link2 ]
+#	then
+#		rm ${ROOT}/usr/bin/links{,2}
+#	fi
+#}
 
 pkg_postinst() {
 
