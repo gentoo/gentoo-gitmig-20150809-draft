@@ -1,6 +1,9 @@
-# ChangeLog for app-admin/rkhunter
+# ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.5 2004/09/18 17:01:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.6 2004/09/18 21:56:14 swegener Exp $
+
+  18 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> rkhunter-1.1.7.ebuild:
   Stable on sparc.

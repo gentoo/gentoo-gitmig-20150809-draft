@@ -1,6 +1,9 @@
-# ChangeLog for dev-util/examiner
+# ChangeLog for app-forensics/examiner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.2 2004/09/12 07:26:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.3 2004/09/18 21:51:46 swegener Exp $
+
+  18 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   12 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml:
   added metadata.xml
