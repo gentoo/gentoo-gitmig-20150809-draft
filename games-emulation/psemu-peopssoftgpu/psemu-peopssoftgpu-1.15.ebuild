@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.15.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.15.ebuild,v 1.2 2004/02/13 15:38:00 dholm Exp $
 
 inherit games eutils
 
@@ -10,14 +10,14 @@ SRC_URI="mirror://sourceforge/peops/PeopsSoftGpu${PV//.}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="sdl"
 
 DEPEND="=x11-libs/gtk+-1*
 	dev-util/pkgconfig
 	sdl? ( media-libs/libsdl )
 	virtual/x11
-	dev-lang/nasm"
+	x86? dev-lang/nasm"
 
 S=${WORKDIR}
 
@@ -28,6 +28,11 @@ src_unpack() {
 
 src_compile() {
 	cd src
+
+	if [ "${ARCH}" = "ppc" ]; then
+		sed -i -e "s/^CPU\ =\ i386/CPU = PowerPC/g" makes/mk.x11
+		sed -i -e "s/OBJECTS.*i386.o//g" makes/mk.fpse
+	fi
 
 	emake OPTFLAGS="${CFLAGS}" || die "x11 build failed"
 
