@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.3.ebuild,v 1.3 2003/09/06 22:19:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.6.ebuild,v 1.1 2003/11/09 12:43:53 liquidx Exp $
 
 inherit rpm
 
@@ -10,11 +10,11 @@ SRC_URI="http://www.turbolinux.com.cn/~suzhe/scim/scim-chinese/${P}-1.i586.rpm"
 
 LICENSE="scim-chinese"
 SLOT="0"
-KEYWORDS="x86 -*"
+KEYWORDS="~x86 -*"
 IUSE=""
 
 DEPEND="virtual/x11
-	>=app-i18n/scim-0.5.1"
+	>=app-i18n/scim-0.8.2"
 
 S=${WORKDIR}
 
@@ -56,5 +56,5 @@ src_install() {
 
 	insinto /etc/gconf/schemas
 	doins etc/gconf/schemas/*
-	dodoc usr/share/doc/packages/${PF}/{AUTHORS,COPYING,README}
+	dodoc usr/share/doc/packages/${PN}/{AUTHORS,COPYING,README}
 }
