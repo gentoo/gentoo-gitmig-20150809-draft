@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/leif
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/leif/ChangeLog,v 1.1 2003/09/14 00:36:32 usata Exp $
+
+*leif-11.4.1467 (14 Sep 2003)
+
+  14 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> leif-11.4.1467.ebuild,
+  files/leif-11.4.1467-gentoo.diff:
+  Initial import
+
