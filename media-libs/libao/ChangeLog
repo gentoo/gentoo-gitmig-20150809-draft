@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.24 2004/02/15 20:45:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.25 2004/03/14 18:30:18 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libao-0.8.4-r1.ebuild:
+  Added ~mips keyword.
 
   15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> libao-0.8.4-r1.ebuild:
   Remove libtoolize -c -f, as latest libtool-1.5.2-r3 is fixed and rather run
