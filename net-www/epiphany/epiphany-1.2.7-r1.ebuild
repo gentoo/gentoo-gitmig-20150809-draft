@@ -1,27 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.3.ebuild,v 1.3 2004/06/25 00:52:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.7-r1.ebuild,v 1.1 2004/08/18 21:04:57 foser Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
 HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64 ~ia64"
 IUSE="gnome doc"
 
-RDEPEND=">=dev-libs/glib-2.4
+RDEPEND=">=dev-libs/glib-2.4.1
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/gconf-1.2
 	>=dev-libs/libxml2-2.6.6
-	>=gnome-base/libgnomeui-2
+	>=gnome-base/libgnomeui-2.6.0
 	>=gnome-base/libglade-2.3.1
 	>=gnome-base/libbonoboui-2.2
 	>=gnome-base/ORBit2-2
 	>=gnome-base/gnome-vfs-2.3.1
-	>=net-www/mozilla-1.4
+	>=net-www/mozilla-1.7.2
 	gnome? ( >=gnome-base/nautilus-2.5 )"
 
 DEPEND="${RDEPEND}
@@ -38,6 +38,8 @@ use gnome \
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
+
+
 pkg_setup () {
 
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
@@ -48,3 +50,11 @@ pkg_setup () {
 	fi
 
 }
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/src
+	# Fixing the nautilus view
+	epatch ${FILESDIR}/${P}-nautilus_view.patch
+}
+
