@@ -1,0 +1,13 @@
+--- protector.c	2003-03-11 10:16:52.000000000 +0200
++++ protector.c	2003-04-26 02:43:53.000000000 +0200
+@@ -2004,7 +2004,9 @@
+ 	insn_pushed = FALSE; debuginsn = insn;
+ 	push_frame_in_operand (insn, PATTERN (insn), push_size, boundary);
+ 
+-	if (insn_pushed)
++	if (insn_pushed
++	    /* skip if it is called from purge_address_of */
++	    && cse_not_expected)
+ 	  {
+ 	    rtx after = insn;
+ 	    rtx seq = split_insns (PATTERN (insn), insn);

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.6 2003/03/09 03:23:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.7 2003/04/28 02:40:34 azarah Exp $
 
 function einfo(string)
 {
@@ -67,7 +67,8 @@ BEGIN {
 	assert(((pipe) | getline CHOST), "(" pipe ") | getline CHOST")
 	close(pipe)
 
-	GCCLIB = "/usr/lib/gcc-lib/" CHOST
+	GCCLIBPREFIX = "/usr/lib/gcc-lib/"
+	GCCLIB = GCCLIBPREFIX CHOST
 
 	sub(/\/$/, "",  GCCLIB)
 
@@ -76,13 +77,15 @@ BEGIN {
 	close(pipe)
 	
 	for (x in DIRLIST) {
-		
-		if (DIRLIST[x] ~ GCCLIB) continue
+
+		if (DIRLIST[x] ~ GCCLIBPREFIX) continue
 
 		einfo("  Scanning " DIRLIST[x] "...")
 
 		pipe = "find " DIRLIST[x] "/ -name '*.la' 2>/dev/null"
 		while (((pipe) | getline la_files) > 0) {
+
+			if (la_files ~ GCCLIBPREFIX) continue
 
 			CHANGED = 0
 
