@@ -1,19 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.60-r1.ebuild,v 1.3 2003/11/26 11:14:57 aliz Exp $
-
-IUSE="milter"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.60-r1.ebuild,v 1.4 2004/01/18 01:16:15 vapier Exp $
 
 inherit eutils flag-o-matic
-has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 DESCRIPTION="Clam Anti-Virus Scanner"
-HOMEPAGE="http://clamav.elektrapro.com"
+HOMEPAGE="http://www.clamav.net/"
 SRC_URI="http://prdownloads.sourceforge.net/clamav/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64"
+IUSE="milter"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/antivirus"
@@ -25,12 +23,10 @@ pkg_setup() {
 }
 
 src_compile() {
+	has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 	local myconf
-
 	use milter && myconf="--enable-milter"
-
 	econf ${myconf} || die
-
 	emake || die
 }
 
