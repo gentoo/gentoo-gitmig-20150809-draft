@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/extract-xiso
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/ChangeLog,v 1.1 2004/06/30 02:28:45 chrb Exp $
+
+*extract-xiso-2.4_beta2 (30 Jun 2004)
+
+  30 Jun 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +extract-xiso-2.4_beta2.ebuild:
+  This package was submitted by Trejkaz Xaoza in bug #44693
+
