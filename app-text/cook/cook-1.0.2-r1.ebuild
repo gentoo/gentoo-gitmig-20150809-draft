@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2-r1.ebuild,v 1.1 2004/05/29 01:18:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2-r1.ebuild,v 1.2 2004/06/07 03:36:42 agriffis Exp $
 
 DESCRIPTION="COOK is an embedded language which can be used as a macro preprocessor and for similar text processing."
 HOMEPAGE="http://cook.sourceforge.net/"
@@ -35,6 +35,6 @@ src_install() {
 	) > ${D}/usr/share/doc/${P}/README.Gentoo
 }
 
-pkg_postint() {
+pkg_postinst() {
 	ewarn "/usr/bin/cook has been renamed to /usr/bin/cookproc"
 }
