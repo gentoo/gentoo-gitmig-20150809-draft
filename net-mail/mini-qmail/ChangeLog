@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mini-qmail
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mini-qmail/ChangeLog,v 1.1 2004/02/29 11:09:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mini-qmail/ChangeLog,v 1.2 2004/03/01 05:24:31 vapier Exp $
+
+*mini-qmail-1.05 (01 Mar 2004)
+
+  01 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump already :).
 
 *mini-qmail-1.04 (29 Feb 2004)
 
