@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.ebuild,v 1.3 2004/06/24 23:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.ebuild,v 1.4 2004/07/15 02:52:46 agriffis Exp $
 
 DESCRIPTION="Howl is a cross-platform implementation of the Zeroconf networking standard. Zeroconf brings a new ease of use to IP networking."
 HOMEPAGE="http://www.porchdogsoft.com/products/howl/"
@@ -11,8 +11,6 @@ KEYWORDS="~x86" # Should work on ~sparc but I haven't tested yet. New platform s
 IUSE=""
 DEPEND="sys-libs/glibc" # sys-devel/automake - needed if we remove the html docs from /usr/share
 RDEPEND="sys-libs/glibc"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	# If we wanted to remove the html docs in /usr/share/howl....

@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/linuxsms-0.61.ebuild,v 1.5 2004/06/24 23:54:31 agriffis Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/linuxsms-0.61.ebuild,v 1.6 2004/07/15 02:57:37 agriffis Exp $
 
 DESCRIPTION="A console perl script for sending SMS to cell phones"
 SRC_URI="mirror://sourceforge/linuxsms/${P}.tar.gz"

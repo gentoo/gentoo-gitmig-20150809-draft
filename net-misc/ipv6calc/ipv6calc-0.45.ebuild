@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.45.ebuild,v 1.8 2004/07/01 21:19:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.45.ebuild,v 1.9 2004/07/15 02:54:35 agriffis Exp $
 
-S=${WORKDIR}/${P}
 IUSE=""
 DESCRIPTION="ipv6calc convert a given IPv6 address to the compressed format or to the format used by /proc/net/if_inet6."
 HOMEPAGE="http://www.deepspace6.net/projects/ipv6calc.html"

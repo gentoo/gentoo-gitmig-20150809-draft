@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8.ebuild,v 1.7 2004/06/24 23:49:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8.ebuild,v 1.8 2004/07/15 02:53:55 agriffis Exp $
 
 # This is basically unchanged from the one supplied by Stephane Loeuillet
 # to Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
@@ -9,7 +9,6 @@
 
 IUSE="jpeg"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Client-server fax package for class 1 and 2 fax modems."
 HOMEPAGE="http://www.hylafax.org"
 SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"

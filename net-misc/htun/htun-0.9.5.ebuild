@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/htun-0.9.5.ebuild,v 1.3 2004/07/01 21:08:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/htun-0.9.5.ebuild,v 1.4 2004/07/15 02:53:23 agriffis Exp $
 
 DESCRIPTION="Project to tunnel IP traffic over HTTP"
 HOMEPAGE="http://htun.runslinux.net/"
@@ -14,8 +14,6 @@ IUSE=""
 
 DEPEND="virtual/libc"
 RDEPEND=""
-
-S=${WORKDIR}/${P}
 
 
 src_compile() {
