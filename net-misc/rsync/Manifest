@@ -3,7 +3,7 @@ MD5 fce2ee6aeb781fe2e13c815e45d97f35 rsync-2.6.0-r2.ebuild 2457
 MD5 42cc3e5d0fd0890c3183790bde1df6d7 rsync-2.6.2-r3.ebuild 1987
 MD5 002c3e1685c22f7adef30627b7339bdf rsync-2.6.0-r1.ebuild 2428
 MD5 c61b7d83a41bb8eb4e4e92df2ebcbbf4 ChangeLog 8503
-MD5 fffe88a5c856961bd776fd00c3f847ce rsync-2.6.1.ebuild 1935
+MD5 32c330f99aeedd4c391e279e88039e5f rsync-2.6.1.ebuild 1939
 MD5 9118ed78f07b5bae1f8daa09226771b0 files/2.6.0-sanitize.patch 5842
 MD5 39b5aab74752c74d7d600265dd32de05 files/rsyncd.conf.d 348
 MD5 f7c02cef440a3407d84edd23fff2d379 files/rsyncd.init.d 416

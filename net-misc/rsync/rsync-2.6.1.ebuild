@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.1.ebuild,v 1.3 2004/07/01 21:50:14 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.1.ebuild,v 1.4 2004/07/15 03:28:43 agriffis Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -12,7 +12,7 @@ SRC_URI="http://rsync.samba.org/ftp/rsync/old-versions/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64 s390"
-IUSE="build static acl"
+IUSE="acl build ipv6 static"
 
 RDEPEND="virtual/libc
 	!build? ( >=dev-libs/popt-1.5 )"
