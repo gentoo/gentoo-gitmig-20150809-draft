@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0_rc1.ebuild,v 1.1 2004/08/06 18:39:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0_rc1.ebuild,v 1.2 2004/08/06 18:57:45 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 
 KEYWORDS="~x86 ~amd64"
-IUSE="alsa cdparanoia encode flac oggvorbis speex xine"
+IUSE="alsa audiofile cdparanoia encode flac oggvorbis speex xine"
 
 DEPEND="~kde-base/kdebase-${PV}
+	audiofile? ( media-libs/audiofile )
 	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( media-libs/flac )
 	encode? ( media-sound/lame )
-	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
+	oggvorbis? ( media-sound/vorbis-tools )
 	xine? ( >=media-libs/xine-lib-1_beta12 )
 	alsa? ( media-libs/alsa-lib )
 	speex? ( media-libs/speex )
