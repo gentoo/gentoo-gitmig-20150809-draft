@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.21 2004/11/03 19:20:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.22 2004/11/04 13:29:38 weeve Exp $
+
+  04 Nov 2004; Jason Wever <weeve@gentoo.org> bluez-libs-2.10.ebuild:
+  Stable on sparc wrt bug #69936.
 
   03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> bluez-libs-2.10.ebuild:
   ~alpha keyword.
