@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11l.ebuild,v 1.2 2001/10/12 00:54:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11l.ebuild,v 1.3 2001/12/27 05:18:27 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
-SRC_URI="ftp://ftp.win.tue.nl/pub/linux-local/utils/util-linux/${P}.tar.gz"
+SRC_URI="http://www.kernel.org/pub/linux/utils/util-linux/util-linux-2.11l.tar.gz"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 
