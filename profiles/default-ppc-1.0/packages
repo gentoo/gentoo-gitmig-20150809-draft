@@ -94,7 +94,7 @@ net-misc/rsync
 *sys-apps/hdparm
 *sys-apps/iptables
 *sys-apps/less
-*sys-apps/lsof
+
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/modutils
