@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/sparc32
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.10 2004/12/19 11:18:02 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.11 2005/03/23 17:34:44 eradicator Exp $
+
+  23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  sparc32-1.1-r3.ebuild:
+  Use correct toolchain compiler.
 
 *sparc32-1.1-r3 (19 Dec 2004)
 

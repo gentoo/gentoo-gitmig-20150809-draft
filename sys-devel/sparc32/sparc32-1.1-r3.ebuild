@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/sparc32-1.1-r3.ebuild,v 1.1 2004/12/19 11:18:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/sparc32-1.1-r3.ebuild,v 1.2 2005/03/23 17:34:44 eradicator Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A SPARC32 compilation environment."
 HOMEPAGE=""
@@ -23,7 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install () {
