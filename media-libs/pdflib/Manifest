@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6850537cc3fcaa40e9f588b039562fb5 ChangeLog 5238
-MD5 3398ecdbd9301320441e6228f3e12584 pdflib-5.0.2.ebuild 3061
+MD5 756fd05bd902159b14cbca9aca324903 pdflib-5.0.2.ebuild 3028
+MD5 79f4e6d4aeda9e3c745510e9aaa3a665 ChangeLog 5333
 MD5 9892461f8babed0732b85ef46b5a163b files/digest-pdflib-5.0.2 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvykpHTu7gpaalycRAgZrAJ4tuf335AihPVqdLh4TjHN1fb4b9wCgl68A
-bcMufgnUXMvHK0WW+GT3uOQ=
-=mUOA
------END PGP SIGNATURE-----
