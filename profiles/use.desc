@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.223 2005/02/03 15:24:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.224 2005/02/18 01:44:27 ribosome Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -77,6 +77,7 @@ dvdread - Enables usage of Ogle's libdvdread for DVD playback
 emacs - Adds support for GNU Emacs
 emacs-w3 - Add support for Emacs/W3 where applicable
 #embedded - Reserved flag for the embedded herd
+emboss - Adds support for the European Molecular Biology Open Software Suite
 empress - Adds support for the Empress database server
 empress-bcs - Adds local access support for the Empress database server
 emul-linux-x86 - Pull in binary support libraries for x86 applications
