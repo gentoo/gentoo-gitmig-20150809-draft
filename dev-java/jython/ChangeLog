@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.6 2004/06/24 22:37:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.7 2004/07/16 15:58:45 axxo Exp $
+
+  16 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  fix python.home path in files/jython closes 49841
+  fix path in jythonc (although it still doesn't work, looks like it never did
+  if you know how to fix it, please let me know or file a bug on bugzilla)
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> jython-2.1-r2.ebuild:
   Stable on sparc.
