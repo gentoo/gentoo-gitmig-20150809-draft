@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.8 2004/03/27 21:23:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.9 2004/04/08 05:56:25 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -120,6 +120,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )
 	>=sys-apps/portage-2.0.49-r13
+	!virtual/x11
 	!x11-libs/xft"
 # RDEPEND="${DEPEND}"
 # unzip - needed for savage driver (version 1.1.27t)
