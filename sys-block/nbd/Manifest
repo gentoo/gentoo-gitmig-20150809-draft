@@ -1,21 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dabdea58706743f135bf3326922d2048 nbd-2.7.1.ebuild 991
-MD5 41a7d310ced7d412fc7fce56b4775456 nbd-2.6.0.ebuild 793
-MD5 dfb4b0cbd303a764e3f261b0e8d31d63 nbd-2.7.2.ebuild 991
-MD5 dbc1aeaf86a0007a13eba97437132ce6 ChangeLog 2091
+MD5 e15a3f3b52c8e7b7646f4824fdf1aae0 ChangeLog 2208
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d958e9b80c8885d0368dfe2fe4b3ad37 files/digest-nbd-2.6.0 60
-MD5 61d64bd0afc3756d1b8848e9204f6bb8 files/digest-nbd-2.7.1 127
+MD5 459306acb9adebae600448a4dbed9254 nbd-2.7.3.ebuild 954
+MD5 dfb4b0cbd303a764e3f261b0e8d31d63 nbd-2.7.2.ebuild 991
+MD5 fd3fb561bafa4b382526a90c675be601 files/digest-nbd-2.7.3 127
 MD5 55671361131ffc00d6ab74e8bebbecbd files/digest-nbd-2.7.2 127
 MD5 3c92585e853a1de0f617fc02554655a4 files/docbook2man.patch 585
-MD5 df04bcd5d2490ea5fc2bfffdddd74172 files/nbd-server.1 4432
-MD5 f897737fcb8999f6281a2df960b05119 files/nbd-client.8 3095
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCKvATI1lqEGTUzyQRAo4OAKCSJ/U++X7GH7g44qkVQ3Zl1IQQ8wCgq67Q
-BJzAyVbu7D2nxGgrLdZjaZQ=
-=4eIg
------END PGP SIGNATURE-----
