@@ -1,9 +1,9 @@
-diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2.10/gtk/gtkfilesel.c
-*** gtk+-1.2.10.orig/gtk/gtkfilesel.c	Tue Sep 25 13:32:32 2001
---- gtk+-1.2.10/gtk/gtkfilesel.c	Tue Sep 25 13:44:11 2001
+diff -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2.10/gtk/gtkfilesel.c
+*** gtk+-1.2.10.orig/gtk/gtkfilesel.c	Fri Apr 12 15:40:33 2002
+--- gtk+-1.2.10/gtk/gtkfilesel.c	Fri Apr 12 15:40:15 2002
 ***************
-*** 2337,2342 ****
---- 2337,2343 ----
+*** 2338,2343 ****
+--- 2338,2344 ----
                                (GtkSignalFunc) gtk_button_clicked,
                                GTK_OBJECT (filesel->ok_button));
     gtk_box_pack_start (GTK_BOX (entry_vbox), filesel->selection_entry, TRUE, TRUE, 0);
@@ -12,7 +12,7 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
   
     if (!cmpl_state_okay (filesel->cmpl_state))
 ***************
-*** 2974,2982 ****
+*** 2975,2983 ****
     g_return_val_if_fail (widget != NULL, FALSE);
     g_return_val_if_fail (event != NULL, FALSE);
   
@@ -22,7 +22,7 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
         text = gtk_entry_get_text (GTK_ENTRY (fs->selection_entry));
   
         text = g_strdup (text);
---- 2975,2985 ----
+--- 2976,2986 ----
     g_return_val_if_fail (widget != NULL, FALSE);
     g_return_val_if_fail (event != NULL, FALSE);
   
@@ -35,18 +35,26 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
   
         text = g_strdup (text);
 ***************
-*** 3129,3134 ****
---- 3132,3138 ----
-        else
-  	gtk_entry_set_text (GTK_ENTRY (fs->selection_entry), filename);
+*** 3116,3122 ****
   
-+       gtk_object_set_data (GTK_OBJECT (fs->selection_entry), "last_entry_was_dir_selection", (gpointer) FALSE);
-        g_free (filename);
-      }
-  }
+    if (filename)
+      {
+!       if (bevent)
+  	switch (bevent->type)
+  	  {
+  	  case GDK_2BUTTON_PRESS:
+--- 3119,3126 ----
+  
+    if (filename)
+      {
+!       gtk_object_set_data (GTK_OBJECT (fs->selection_entry), "last_entry_was_dir_selection", (gpointer) FALSE);
+! 			if (bevent)
+  	switch (bevent->type)
+  	  {
+  	  case GDK_2BUTTON_PRESS:
 ***************
-*** 3142,3147 ****
---- 3146,3153 ----
+*** 3143,3148 ****
+--- 3147,3154 ----
   {
     GtkFileSelection *fs = NULL;
     gchar *filename, *temp = NULL;
@@ -56,8 +64,8 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
     g_return_if_fail (GTK_IS_CLIST (widget));
   
 ***************
-*** 3152,3157 ****
---- 3158,3167 ----
+*** 3153,3158 ****
+--- 3159,3168 ----
     gtk_clist_get_text (GTK_CLIST (fs->dir_list), row, 0, &temp);
     filename = g_strdup (temp);
   
@@ -69,7 +77,7 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
       {
         if (bevent)
 ***************
-*** 3162,3175 ****
+*** 3163,3176 ****
   	    break;
   	  
   	  default:
@@ -84,7 +92,7 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
   }
   
   static void
---- 3172,3195 ----
+--- 3173,3196 ----
   	    break;
   	  
   	  default:
@@ -110,7 +118,7 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
   
   static void
 ***************
-*** 3312,3318 ****
+*** 3313,3319 ****
       }
     else
       {
@@ -118,7 +126,7 @@ diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2
   	gtk_entry_set_text (GTK_ENTRY (fs->selection_entry), "");
       }
   
---- 3332,3343 ----
+--- 3333,3344 ----
       }
     else
       {
