@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040304.ebuild,v 1.2 2004/03/05 13:00:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040304.ebuild,v 1.3 2004/03/30 14:05:29 dragonheart Exp $
 
 S=${WORKDIR}/${PN}
 MY_PV=${PV/*_p/}
@@ -23,6 +23,8 @@ DEPEND="virtual/glibc
 	doc? ( app-text/tetex )
 	doc? ( app-office/lyx )
 	doc? ( sys-apps/sed )"
+
+RDEPEND="virtual/glibc"
 
 src_compile() {
 	econf || die "Configure failed"
