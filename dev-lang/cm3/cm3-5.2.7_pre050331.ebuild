@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.7_pre050331.ebuild,v 1.1 2005/04/02 04:30:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.7_pre050331.ebuild,v 1.2 2005/04/02 04:45:42 vapier Exp $
 
 inherit fixheadtails
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.elegosoft.com/cm3/${PN}-src-all-d${MY_PV}.tgz"
 
 LICENSE="CMASS-M3 DEC-M3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="tcltk"
 
 RDEPEND="tcltk? ( dev-lang/tcl )"
