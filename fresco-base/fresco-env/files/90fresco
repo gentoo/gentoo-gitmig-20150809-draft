@@ -1,4 +1,0 @@
-PATH=/opt/berlin/bin:/opt/fresco
-ROOTPATH=/opt/fresco/bin:/opt/fresco
-MANPATH=/opt/fresco/share/man
-LDPATH=/opt/fresco/lib
