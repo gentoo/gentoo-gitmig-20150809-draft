@@ -1,7 +1,16 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.12 2002/07/15 05:52:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.13 2002/07/19 00:28:56 spider Exp $
 
+*blackbox-0.65.0_beta3-r1 (18 Jul 2002)
+    18 Jul 2002; Spider <spider@gentoo.org> blackbox-0.65.0_beta3-r1.ebuild :
+    and the eclass version
+
+
+*blackbox-0.65.0_beta3 (18 Jul 2002)
+  18 Jul 2002; Spider <spider@gentoo.org> blackbox-0.65.0_beta3.ebuild :
+  new version
+  repomaned 
 
 *blackbox-0.62.1-r3 (14 Jul 2002)
 
