@@ -38,7 +38,7 @@ fi
 
 if [ -d /opt/gnome ] ; then
   export GNOMEDIR="/opt/gnome"
-  PATH=$PATH:/opt/gnome/bin
+  PATH=$PATH:/opt/gnome/bin:/opt/gnome/sbin
   MANPATH=$MANPATH:/opt/gnome/man
   INFODIR=$INFODIR:/opt/gnome/info
 fi
