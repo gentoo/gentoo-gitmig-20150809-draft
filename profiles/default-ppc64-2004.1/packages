@@ -11,10 +11,10 @@
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-apps/portage-2.0.35
 <sys-apps/portage-2.0.51
-*<sys-devel/binutils-2.15
-*<sys-devel/gcc-3.4
-*>=sys-libs/glibc-2.3.1-r2
-<sys-libs/glibc-2.3.3_pre20040527
+*>=sys-devel/binutils-2.15
+*>=sys-devel/gcc-3.4.0-r6
+*sys-libs/libstdc++-v3
+*>=sys-libs/glibc-2.3.3_pre20040529
 
 # less critical stuff -- all last checked on Wed Jul 16 11am 
 
