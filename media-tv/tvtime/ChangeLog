@@ -2,6 +2,15 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*tvtime-0.9.10 (14 Sep 2003)
+
+  14 Sep 2003; Seemant Kulleen <seemant@gentoo.org> tvtime-0.9.10.ebuild,
+  files/tvtime-0.9.10-make.patch:
+  version bump. Thanks to: Joel Hill <joelhill@earthlink.net> (hillster on irc),
+  vektor (upstream author) for the ebuild, submitted in bug #27999 Henrik
+  Johansson <henrik_johansson@home.se> who had, in fairness, done an ebuild for
+  0.9.9 that never got added :/
+
 *tvtime-0.9.8.5 (24 Jun 2003)
 
   24 Jun 2003; mkeadle <mkeadle@gentoo.org> tvtime-0.9.8.5.ebuild:
