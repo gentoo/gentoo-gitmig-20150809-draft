@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.110 2005/01/29 13:42:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.111 2005/02/03 15:38:03 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -12,7 +12,7 @@ ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
-IUSE="${IUSE} debug arts xinerama"
+IUSE="${IUSE} debug arts xinerama kdeenablefinal"
 
 DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/autoconf
@@ -96,6 +96,11 @@ kde_src_compile() {
 					myconf="$myconf --enable-debug=full --with-debug"
 				else
 					myconf="$myconf --disable-debug --without-debug"
+				fi
+				if useq kdeenablefinal && [ -n "$KDEBASE" ]; then
+					myconf="$myconf --enable-final"
+				else
+					myconf="$myconf --disable-final"
 				fi
 				[ -z "$KDEBASE" ] && myconf="$myconf $(use_with arts)"
 				[ -n "$KDEBASE" -a "$KDEMINORVER" -ge 3 ] && myconf="$myconf $(use_with arts)"
