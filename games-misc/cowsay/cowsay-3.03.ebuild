@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.8 2005/02/01 17:36:04 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.9 2005/02/06 14:37:54 ka0ttic Exp $
+
+inherit bash-completion
 
 DESCRIPTION="configurable talking ASCII cow (and other characters)"
 HOMEPAGE="http://www.nog.net/~tony/warez/cowsay.shtml"
@@ -35,4 +37,5 @@ src_install() {
 	dosym cowsay.1.gz /usr/share/man/man1/cowthink.1.gz
 	dodir "/usr/share/${P}/cows"
 	cp -r cows "${D}/usr/share/${P}/" || die "cp failed"
+	dobashcompletion ${FILESDIR}/${PN}.bashcomp
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/cowsay
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.8 2005/02/01 17:18:46 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.9 2005/02/06 14:37:54 ka0ttic Exp $
+
+  06 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +files/cowsay.bashcomp,
+  cowsay-3.03.ebuild:
+  Added cowsay command-line completion.
 
   01 Feb 2005; Kito <kito@gentoo.org> cowsay-3.03.ebuild:
   added ~ppc-macos
