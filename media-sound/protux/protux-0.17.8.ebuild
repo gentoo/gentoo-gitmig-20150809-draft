@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.17.8.ebuild,v 1.1 2003/06/22 04:27:55 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.17.8.ebuild,v 1.2 2003/09/08 07:09:44 msterret Exp $
 
 DESCRIPTION="Professional Audio Tools for GNU/Linux"
 HOMEPAGE="http://www.nongnu.org/protux"
