@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.6 2003/11/22 20:39:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.7 2003/11/27 14:51:57 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozcalendar mozaccess mozxmlterm"
+IUSE="${IUSE} mozcalendar mozxmlterm"
 IUSE="${IUSE} moznoirc moznomail moznocompose moznoxft"
 
 inherit flag-o-matic gcc eutils nsplugins
@@ -272,10 +272,12 @@ src_compile() {
 	then
 		myext="${myext},xmlterm"
 	fi
-	if [ -n "`use mozaccess`" ]
-	then
-		myext="${myext},access-builtin"
-	fi
+
+	# Kill mozaccess as it no longer builds, and the above warning is insufficient
+#	if [ -n "`use mozaccess`" ]
+#	then
+#		myext="${myext},access-builtin"
+#	fi
 	if [ -n "`use moznoirc`" ]
 	then
 		myext="${myext},-irc"
