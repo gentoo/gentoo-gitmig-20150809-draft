@@ -1,6 +1,6 @@
 # Copyright 2001 theLeaf sprl/bvba
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.8 2002/10/19 23:22:42 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.9 2002/11/30 22:53:45 vapier Exp $
 
 IUSE="gtk nls esd gnome"
 
@@ -71,7 +71,7 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p ${D}/usr/lib/sawfish/${PV}/sawfish-merlin/sawfish/wm/util
+	dodir /usr/lib/sawfish/${PV}/sawfish-merlin/sawfish/wm/util
 	cp src/.libs/x.* ${D}/usr/lib/sawfish/${PV}/sawfish-merlin
 	cp src/.libs/x.* ${D}/usr/lib/sawfish/${PV}/sawfish-merlin/sawfish/wm/util
 	
