@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r5.ebuild,v 1.2 2004/01/19 01:55:29 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r5.ebuild,v 1.3 2004/01/19 14:36:25 rizzo Exp $
 
 inherit flag-o-matic
 
@@ -33,11 +33,16 @@ src_unpack() {
 	unpack ${P}.tar.bz2 || die
 	cd ${S}
 	epatch ${FILESDIR}/gaim-0.75-static-prpls.patch
-	epatch ${FILESDIR}/gaim-0.76cvs-varargs.diff
+	#epatch ${FILESDIR}/gaim-0.76cvs-varargs.diff
+	epatch ${FILESDIR}/gaim-0.76cvs-signals-varargs.diff
 	use cjk && epatch ${FILESDIR}/gaim-0.74_cjk_gtkconv.patch
 }
 
 src_compile() {
+	einfo "Replacing -Os CFLAG with -O2"
+	replace-flags -Os -O2
+	einfo "Filtering -fstack-protector"
+	filter-flags -fstack-protector
 
 	local myconf
 	use perl || myconf="${myconf} --disable-perl"
@@ -58,10 +63,6 @@ src_compile() {
 
 	econf ${myconf} || die "Configuration failed"
 	use perl && sed -i -e 's:^\(PERL_MM_PARAMS =.*PREFIX=\)\(.*\):\1'${D}'\2:' plugins/perl/Makefile
-
-	einfo "Replacing -Os CFLAG with -O2"
-	replace-flags -Os -O2
-	filter-flags -fstack-protector
 
 	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "Make failed"
 }
