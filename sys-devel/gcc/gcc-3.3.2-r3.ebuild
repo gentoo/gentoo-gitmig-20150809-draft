@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.5 2003/12/11 14:58:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.6 2004/02/26 20:36:49 pappy Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
