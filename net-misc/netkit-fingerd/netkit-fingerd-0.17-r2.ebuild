@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.8 2002/08/18 06:27:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.9 2002/09/21 02:51:02 vapier Exp $
 
 MY_PN=${PN/netkit/bsd}
 MY_PN=${MY_PN/rd/r}
 S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Netkit - fingerd"
 SRC_URI="http://ftp.debian.org/debian/pool/main/b/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz"
-HOMEPAGE="http://packages.debian.org/unstable/net/fingerd.html"
+HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 DEPEND=">=sys-libs/glibc-2.1.3"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="bsd"

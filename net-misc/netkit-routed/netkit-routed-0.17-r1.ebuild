@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r1.ebuild,v 1.8 2002/08/14 12:08:08 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r1.ebuild,v 1.9 2002/09/21 02:51:19 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - routed"
 SRC_URI="http://ftp.debian.org/debian/pool/main/n/netkit-routed/${PN}_${PV}.orig.tar.gz"
-HOMEPAGE="http://packages.debian.org/unstable/net/routed.html"
+HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 KEYWORDS="x86 sparc sparc64"
 LICENSE="bsd"
 SLOT="0"

@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.2 2002/08/14 12:08:08 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.3 2002/09/21 02:46:18 vapier Exp $
 
 S=${WORKDIR}/${P/-utils}
 DESCRIPTION="The IPX Utilities"
-HOMEPAGE="http://foo.bar.com"
+HOMEPAGE="ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ncpfs/"
 SRC_URI="ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ncpfs/${P/-utils}.tar.gz"
 
 LICENSE="Caldera"
