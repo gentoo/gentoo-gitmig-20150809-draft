@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/albumart
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.3 2004/07/20 15:12:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.4 2004/07/20 19:46:06 kloeri Exp $
+
+  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> albumart-1.3.1.ebuild:
+  dev-python/Imaging is now dev-python/imaging - adjust dependencies accordingly.
 
   20 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   albumart-1.3.1.ebuild:

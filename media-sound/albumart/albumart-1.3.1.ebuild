@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.3.1.ebuild,v 1.3 2004/07/20 15:12:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.3.1.ebuild,v 1.4 2004/07/20 19:46:06 kloeri Exp $
 
 DESCRIPTION="Album Cover Art Downloader"
 SRC_URI="http://kempele.fi/~skyostil/projects/albumart/dist/${P}.tar.gz"
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 
 DEPEND=">=dev-python/PyQt-3.0
-	>=dev-python/Imaging-1.0.0"
+	>=dev-python/imaging-1.0.0"
 
 src_compile() {
 	einfo "nothing to compile"
