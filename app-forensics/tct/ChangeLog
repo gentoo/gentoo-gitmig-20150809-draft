@@ -1,0 +1,10 @@
+# ChangeLog for app-forensics/tct
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.1 2004/09/16 16:55:09 ka0ttic Exp $
+
+*tct-1.15 (16 Sep 2004)
+
+  16 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +tct-1.15.ebuild:
+  Initial commit (bug #39934)
+
