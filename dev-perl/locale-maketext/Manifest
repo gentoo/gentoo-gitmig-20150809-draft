@@ -1,8 +1,18 @@
-MD5 3f2917a5bad71736f0f47baee93ad55f ChangeLog 1808
-MD5 d73039682ae52248274fb823ecc5af8d locale-maketext-1.09.ebuild 656
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0251729f984aab44bb7c2c497a8812af ChangeLog 1932
+MD5 20cb2e3c1b4fe7925dd8436710b91ab0 locale-maketext-1.06.ebuild 731
+MD5 80bc12d9559df133e62d2691bad27dba locale-maketext-1.08.ebuild 732
+MD5 3ba74d717ed267d7a2b01e96dfe4e87f locale-maketext-1.09.ebuild 646
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0c1b1aa9ac48afc7061684b1191867c5 locale-maketext-1.08.ebuild 726
-MD5 c0d1f0ff022f355d6a53163be8e5a5c4 locale-maketext-1.06.ebuild 725
-MD5 a3b5536c5be2c15a2cc26f8cf4271ddc files/digest-locale-maketext-1.09 71
-MD5 8a975fbff9a95e168dc4d2c029617d4f files/digest-locale-maketext-1.08 71
 MD5 8279355d476ffd80e57623938958f690 files/digest-locale-maketext-1.06 71
+MD5 8a975fbff9a95e168dc4d2c029617d4f files/digest-locale-maketext-1.08 71
+MD5 a3b5536c5be2c15a2cc26f8cf4271ddc files/digest-locale-maketext-1.09 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCT0wZtG5z4I8BtQoRAqP5AJ9s+4Z+ExJO6Mu7cc/RxnJcq6yWqwCfQSKq
+GJ2IIBDBfnxBCGmGe2tvNjI=
+=W0AA
+-----END PGP SIGNATURE-----
