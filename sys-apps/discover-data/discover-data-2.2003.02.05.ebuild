@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/discover-data-2.2003.02.05.ebuild,v 1.3 2004/02/25 01:21:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/discover-data-2.2003.02.05.ebuild,v 1.4 2004/02/25 01:24:44 ciaranm Exp $
 
 DESCRIPTION="This is a sample skeleton ebuild file"
 HOMEPAGE="http://hackers.progeny.com/discover/"
@@ -8,7 +8,7 @@ SRC_URI="http://archive.progeny.com/progeny/discover/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc mips ~alpha hppa"
+KEYWORDS="x86 ppc -sparc mips ~alpha hppa"
 
 DEPEND="virtual/glibc"
 
