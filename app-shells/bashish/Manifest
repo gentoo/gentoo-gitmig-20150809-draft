@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1075583d672dff761e4bd134d9e4ac1f ChangeLog 527
+MD5 e7e12a7bdfab7b5b5a575007f5924ad5 ChangeLog 705
 MD5 dd3107c74d01f069f78c7a40c87c7a90 bashish-1.9.21.ebuild 799
+MD5 029d1047d29671c1482af4146f749160 bashish-1.9.23.ebuild 764
 MD5 81feb15ed591ce02afc2217b9d11ace5 files/bashish.conf 61
 MD5 be13d9a99e08f849c6aaa0151fc2e645 files/digest-bashish-1.9.21 66
+MD5 126c4e1fcc1d52b0f6bc232d3cbbe20e files/digest-bashish-1.9.23 67
+MD5 d0588587f65a9b0152604a114f8902fa files/1.9.23-fix-install.patch 528
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA4OdwHTu7gpaalycRAl41AKDrDh13uerz2TtFPnyxaT5MZmUntgCgyo1R
-oXS5y21jKUTFnTcA6xq0jF4=
-=TFmX
+iD8DBQFBDvdiHTu7gpaalycRAspaAJkB3TmIN4cyzXZ50cs5+09L2NJw1gCg6YsE
+v0jjJ7DDbalAgSY91P3PWDk=
+=vPF6
 -----END PGP SIGNATURE-----
