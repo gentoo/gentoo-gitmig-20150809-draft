@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.6.12.ebuild,v 1.2 2005/01/29 21:41:15 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.6.12.ebuild,v 1.3 2005/02/06 16:08:27 scandium Exp $
+
+inherit eutils
 
 DESCRIPTION="Mono C# libraries for Portable.NET"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -13,6 +15,13 @@ IUSE=""
 
 DEPEND="=dev-dotnet/pnetlib-${PV}*"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# Fix compilation of ServiceProcess, already fixed upstream
+	epatch ${FILESDIR}/System.ServiceProcess.build.patch
+}
+
 src_compile() {
 	local lib_profile="framework1.1"
 	einfo "Using profile: ${lib_profile}"
@@ -22,6 +31,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
