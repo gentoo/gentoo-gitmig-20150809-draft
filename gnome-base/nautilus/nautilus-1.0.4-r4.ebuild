@@ -3,7 +3,7 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
 # /home/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-1.0.ebuild,v 1.3 2001/04/29 18:42:54 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.4-r4.ebuild,v 1.1 2001/10/06 10:06:50 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.4-r4.ebuild,v 1.2 2001/10/07 20:45:39 azarah Exp $
 
 
 A=${P}.tar.gz
@@ -65,6 +65,10 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	# Fix missing icon in Gnome Spash
+	insinto /usr/share/pixmaps
+	newins nautilus-launch-icon.png gnome-launch-icon.png
 
 	dodoc AUTHORS COPYING* ChangeLog* NEWS TODO
 }
