@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.2 2002/07/03 21:02:54 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.3 2002/07/09 19:15:37 rphillips Exp $
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
@@ -18,6 +18,15 @@
 
   Hmm, and I did not edit the ChangeLog for some reason to say that the mhash
   and mcrypt flags are encapsulated by the crypt flag now.
+
+*mod_php-4.2.1-r4 (09 Jul 2002)
+
+  09 Jul 2002; Roman Weber <gentoo@gonzo.ch>
+
+    Changed dependency from >=net-www/apache-1.3.24-r1 to
+	  >=net-www/apache-1.3.26-r2 (Apache 1.3.26 includes a fix for the
+	  "chunked encoding" issue). Closes bug #4677.
+	added oci8 use variable to support Oracle databases
 
 *mod_php-4.2.1-r3 (02 Jul 2002) 
   02 Jul 2002; Owen Stampflee <owen@gentoo.org>
