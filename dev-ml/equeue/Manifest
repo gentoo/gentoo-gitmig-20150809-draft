@@ -1,5 +1,5 @@
-MD5 e6e63dcb37fc28381e473b16ecfb84f0 equeue-2.0.1.ebuild 957
+MD5 41442f08d86979dc3d001d86236d474a ChangeLog 577
+MD5 c34d4f4025b4ec6c545f11ced3b8e542 equeue-2.0.1.ebuild 961
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 6177b2d3d6fdf7dc5b8215ae15dc3e08 ChangeLog 494
 MD5 f62e8eb44a5cf6aa1efbd0e3ef7771cc files/digest-equeue-2.0.1 64
 MD5 bb85d3c6c3ef8b6804b2634b3aaa2472 files/equeue-2.0.1-bufsize.patch 383
