@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.3.ebuild,v 1.10 2004/09/22 22:30:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.3.ebuild,v 1.11 2004/09/30 01:39:55 eradicator Exp $
 
-IUSE="gnome"
+IUSE="gnome ladcca"
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 
 KEYWORDS="x86 ~ppc amd64 ~sparc"
 
-DEPEND="media-libs/ladcca
+DEPEND="ladcca? ( >=media-libs/ladcca-0.4 )
 	media-libs/liblrdf
 	>=x11-libs/gtk+-2.0.6-r2
 	>=media-libs/ladspa-sdk-1.12
