@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.14-r1.ebuild,v 1.1 2004/02/06 14:30:32 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.14-r1.ebuild,v 1.2 2004/03/10 19:00:35 max Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/mc/mythtv-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="alsa arts dvb directfb lcd lirc nvidia cle266"
 
 DEPEND="virtual/x11
@@ -37,7 +37,7 @@ pkg_setup() {
 	if [ ! "`has mysql ${qt_use}`" ] ; then
 		eerror "Qt is missing MySQL support. Please add"
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
-		die "Qt needs mysql support"
+		die "Qt needs MySQL support"
 	fi
 
 	return 0
@@ -52,9 +52,16 @@ src_unpack() {
 }
 
 src_compile() {
-	local cpu="`get-flag march || get-flag mcpu`"
-	if [ "${cpu}" ] ; then
-		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
+	# Fix bugs 40964 and 42943.
+	filter-flags -fforce-addr -fPIC
+
+	if [ "${ARCH}" == "amd64" ]; then
+		sed -e "s:-march=pentiumpro::" -e "/DEFINES += MMX/d" -i settings.pro
+	else
+		local cpu="`get-flag march || get-flag mcpu`"
+		if [ "${cpu}" ] ; then
+			sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
+		fi
 	fi
 
 	if [ "`use alsa`" ] ; then
