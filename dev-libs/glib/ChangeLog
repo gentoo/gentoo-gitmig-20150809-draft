@@ -1,15 +1,15 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.36 2003/02/22 00:35:21 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.37 2003/02/25 15:58:30 gmsoft Exp $
 
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> glib-1.2.10-r5.ebuild glib-2.2.1.ebuild :
   Added arm to keywords.
 
-  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> glib-1.2.10-r5.ebuild :
-  Added hppa to keywords.
-
 *glib-2.2.1 (04 Feb 2003)
+
+  25 Feb 2003; Guy Martin <gmsoft@gentoo.org> glib-2.2.1.ebuild :
+  Added hppa to keywords.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> glib-2.2.1.ebuild :
   Mark stable on alpha
@@ -55,6 +55,9 @@
 
   
 *glib-1.2.10-r5 (26 Oct 2002)
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> glib-1.2.10-r5.ebuild :
+  Added hppa to keywords.
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
