@@ -1,6 +1,12 @@
 # ChangeLog for app-office/ganttproject
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ChangeLog,v 1.4 2004/09/16 18:58:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ChangeLog,v 1.5 2004/10/12 18:10:10 axxo Exp $
+
+*ganttproject-1.10.1 (12 Oct 2004)
+
+  12 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/1.10.1-ganttproject.desktop, +ganttproject-1.10.1.ebuild:
+  version bump
 
 *ganttproject-1.9.11-r1 (16 Sep 2004)
 
