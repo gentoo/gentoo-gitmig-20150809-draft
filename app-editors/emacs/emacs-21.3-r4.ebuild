@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.12 2004/10/19 17:39:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.13 2004/11/30 20:51:12 swegener Exp $
 
 inherit flag-o-matic eutils alternatives gcc
 
@@ -30,7 +30,7 @@ RDEPEND="sys-libs/ncurses
 		)
 	)
 	nls? ( sys-devel/gettext )
-	!nosendmail ( virtual/mta )"
+	!nosendmail? ( virtual/mta )"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
