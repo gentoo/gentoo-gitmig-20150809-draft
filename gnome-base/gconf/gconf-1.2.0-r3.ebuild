@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.0-r3.ebuild,v 1.1 2002/07/06 23:08:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.0-r3.ebuild,v 1.2 2002/07/06 23:59:25 spider Exp $
 
 inherit gnome2
 
@@ -52,6 +52,9 @@ pkg_preinst () {
 
 	dodir /etc/env.d
 	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' >${D}/etc/env.d/50gconf
+
+	dodir /root/.gconfd
+
 }
 pkg_postinst () {
 	kill_gconf
@@ -62,6 +65,7 @@ pkg_postinst () {
 	find  /etc/gconf/ -type d -exec chmod ugo+rx "{}" \;
 	einfo "changing permissions for gconf files"
 	find  /etc/gconf/ -type f -exec chmod ugo+r "{}" \;
+	
 }
 
 
