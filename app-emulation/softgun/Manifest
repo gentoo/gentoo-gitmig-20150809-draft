@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 5c23e63c28ccfbd3ebe1271f94c28b26 softgun-0.07.ebuild 986
 MD5 5406c9175f2830d2b581369eeb921418 ChangeLog 359
-MD5 2e49d565779a0eaae58986e9ac60ad73 metadata.xml 169
+MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
 MD5 ad6c326f2a31bc17f529c4d0fa6296a1 files/digest-softgun-0.07 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBs9wwroRuSHgZdywRAnHbAJ9+cdyrXsJQhf5H4zBnWMfvNJ/leACePysd
-Wy77uIAtvwpIZlyfucPGq8k=
-=CL7T
+iD8DBQFBs9xQroRuSHgZdywRAmKNAKCRGGVIzGYvGimwpmKRkZlwmw6dWACdENEP
+IHirwaQ0C2OmOsdvtcPXthU=
+=dJwG
 -----END PGP SIGNATURE-----
