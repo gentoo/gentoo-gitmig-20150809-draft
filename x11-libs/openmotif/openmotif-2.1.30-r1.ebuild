@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r1.ebuild,v 1.9 2002/10/04 06:40:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r1.ebuild,v 1.10 2002/11/11 16:28:43 wwoods Exp $
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 HOMEPAGE="http://www.metrolink.com/openmotif/"
 LICENSE="MOTIF"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 ~alpha"
 
 DEPEND="virtual/glibc virtual/x11"
 
