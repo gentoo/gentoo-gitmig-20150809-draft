@@ -1,11 +1,12 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.26 2003/04/08 19:58:09 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.27 2003/04/11 17:02:59 danarmak Exp $
 
 *kdeutils-3.0.5b (08 Apr 2003)
 
   08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdeutils-3.0.5b.ebuild:
-  version bump
+  A security patch release fixing a kghostview vulnerability. See GLSA.
+  Also includes misc other fixes.
 
 *kdeutils-3.1.1 (14 Mar 2003)
 

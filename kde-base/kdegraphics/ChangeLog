@@ -1,17 +1,28 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.39 2003/04/11 00:35:01 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.40 2003/04/11 17:02:59 danarmak Exp $
+
+*kdegraphics-3.1.1a-r1.ebuild (11 Apr 2003)
+
+  11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdegraphics-3.1.1a-r1.ebuild:
+  The 3.1.1a ebuild was mistakenly missing part of the fix; added it all now.
 
 *kdegraphics-2.2.2-r2 (11 Apr 2003)
 
   11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdegraphics-2.2.2-r2.ebuild:
-  security fix
+  The same fix for 2.2.2.
+
+*kdegraphics-3.1.1a (08 Apr 2003)
+
+  08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdegraphics-3.1.1a.ebuild,
+  The same fix for 3.1.1.
 
 *kdegraphics-3.0.5b (08 Apr 2003)
 
   08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdegraphics-3.0.5b.ebuild,
   files/kdegraphics-3.0.5b-kghostviewrc:
-  version bump
+  A security patch release fixing a kghostview vulnerability. See GLSA.
+  Also includes misc other fixes.
 
 *kdegraphics-3.1.1 (14 Mar 2003)
 

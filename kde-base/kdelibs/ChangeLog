@@ -1,17 +1,24 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.73 2003/04/11 00:30:17 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.74 2003/04/11 17:02:59 danarmak Exp $
 
 *kdelibs-2.2.2a-r2 (11 Apr 2003)
 
   11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-2.2.2a-r2.ebuild:
   security fix
 
+*kdelibs-3.1.1a (08 Apr 2003)
+
+  08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1.1a.ebuild:
+  The same security fixes for kde 3.1.1.
+
 *kdelibs-3.0.5b (08 Apr 2003)
 
   08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.0.5b.ebuild,
   files/kdelibs-3.0.5b-libxml2-2.5.2.diff:
-  version bump
+
+  A security patch release fixing a kghostview vulnerability. See GLSA.
+  Also includes misc other fixes.
 
   27 Mar 2003; Dan Armak <danarmak@gentoo.org> all 3.x ebuilds:
   

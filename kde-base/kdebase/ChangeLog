@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.72 2003/04/11 10:22:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.73 2003/04/11 17:02:59 danarmak Exp $
 
   11 Apr 2003; Dan Armak <danarmak@gentoo.org> kdebase-3.1.1a.ebuild:
   Add notice about mtools (bug #4934). See the notice at the end of the ebuild
@@ -10,7 +10,13 @@
 
   11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-2.2.2-r5.ebuild,
   files/2.2.2-r5/startkde-2.2.2-r5-gentoo:
-  security fix
+  The same security fixes for 2.2.2.
+
+*kdeutils-3.1.1a (08 Apr 2003)
+
+  08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-3.1.1a.ebuild,
+  files/3.1.1a/*:
+  The same security fixes for kde 3.1.1.
 
 *kdebase-3.0.5b (08 Apr 2003)
 
@@ -18,7 +24,8 @@
   files/3.0.5b/kdebase-3.0.5b-xft2.0-fix.diff,
   files/3.0.5b/kdebase-3.0.5b-xft_h-fix.diff,
   files/3.0.5b/startkde-3.0.5b-gentoo.diff:
-  version bump
+  A security patch release fixing a kghostview vulnerability. See GLSA.
+  Also includes misc other fixes.
 
   01 Apr 2003; danrmaak <danarmak@gentoo.org> kdebase-3.1.1-r1.ebuild:
   Added stable x86 keyword.
