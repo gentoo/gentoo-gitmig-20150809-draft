@@ -1,26 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.10.ebuild,v 1.5 2004/07/09 22:04:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.10.ebuild,v 1.6 2004/10/19 13:53:52 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="a client that plugs into your handphone"
+HOMEPAGE="http://www.gnokii.org/"
 SRC_URI="http://www.gnokii.org/download/${P}.tar.bz2"
-HOMEPAGE="http://www.gnokii.org"
 
-IUSE="nls X bluetooth irda"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="nls X bluetooth irda"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
 	bluetooth? ( net-wireless/bluez-libs )
 	irda? (	virtual/os-headers )"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -28,17 +25,15 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
 	econf \
 		`use_enable nls` \
 		`use_with X x` \
 	    --enable-security || die "configure failed"
 
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die "install failed"
 
 	dodoc Docs/*

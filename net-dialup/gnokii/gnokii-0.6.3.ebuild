@@ -1,29 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.4 2004/10/17 09:37:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.5 2004/10/19 13:53:52 vapier Exp $
 
 inherit eutils
 
-IUSE="nls X bluetooth irda sms postgres mysql"
-
 DESCRIPTION="a client that plugs into your handphone"
+HOMEPAGE="http://www.gnokii.org/"
 SRC_URI="http://www.gnokii.org/download/${P}.tar.bz2"
-HOMEPAGE="http://www.gnokii.org"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+SLOT="0"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+IUSE="nls X bluetooth irda sms postgres mysql"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
 	bluetooth? ( net-wireless/bluez-libs )
 	irda? ( virtual/os-headers )
 	sms? ( postgres? ( dev-db/postgresql )
 	mysql? ( dev-db/mysql ) )"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +35,7 @@ src_compile() {
 		`use_with X x` \
 	    --enable-security || die "configure failed"
 
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 
 	if use sms
 	then
@@ -55,7 +51,7 @@ src_compile() {
 	fi
 }
 
-src_install () {
+src_install() {
 	einstall || die "make install failed"
 
 	dodoc Docs/*
