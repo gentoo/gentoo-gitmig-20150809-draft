@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/phoenix-cvs-0.5-r2.ebuild,v 1.1 2003/03/30 13:41:09 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/phoenix-cvs-0.5-r2.ebuild,v 1.2 2003/03/30 15:13:21 phoenix Exp $
 
 inherit makeedit flag-o-matic gcc
 
@@ -121,7 +121,7 @@ src_compile() {
    if [ "$(gcc-major-version)" -eq "3" ]; then
       # Currently gcc-3.2 or older do not work well if we specify "-march"
       # and other optimizations for pentium4.
-      replace-flag -march=pentium4 -march=pentium3
+      replace-flags -march=pentium4 -march=pentium3
       # Enable us to use flash, etc plugins compiled with gcc-2.95.3
       if [ "${ARCH}" = "x86" ]; then
           myconf="${myconf} --enable-old-abi-compat-wrappers"
