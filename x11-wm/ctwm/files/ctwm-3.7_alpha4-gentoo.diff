@@ -1,6 +1,6 @@
 diff -urN ctwm-3.7-alpha4.ORIG/Imakefile ctwm-3.7-alpha4/Imakefile
 --- ctwm-3.7-alpha4.ORIG/Imakefile	2003-03-01 01:36:35.000000000 +0900
-+++ ctwm-3.7-alpha4/Imakefile	2003-11-22 22:08:54.000000000 +0900
++++ ctwm-3.7-alpha4/Imakefile	2004-02-07 14:30:25.680991653 +0900
 @@ -161,7 +161,7 @@
  
  AllTarget(ctwm)
@@ -21,8 +21,12 @@ diff -urN ctwm-3.7-alpha4.ORIG/Imakefile ctwm-3.7-alpha4/Imakefile
  	MakeDir($(DESTDIR)$(TWMDIR)/images)
 diff -urN ctwm-3.7-alpha4.ORIG/gram.y ctwm-3.7-alpha4/gram.y
 --- ctwm-3.7-alpha4.ORIG/gram.y	2003-02-21 04:27:28.000000000 +0900
-+++ ctwm-3.7-alpha4/gram.y	2003-11-22 20:15:52.000000000 +0900
-@@ -433,6 +433,7 @@
++++ ctwm-3.7-alpha4/gram.y	2004-02-07 14:30:43.643214568 +0900
+@@ -429,10 +429,10 @@
+ 
+ 		| WINDOW_GEOMETRIES 	 {  }
+ 		  wingeom_list
+-		  ;
  
  		| VIRTUAL_SCREENS      	{ }
  		  geom_list
@@ -30,7 +34,7 @@ diff -urN ctwm-3.7-alpha4.ORIG/gram.y ctwm-3.7-alpha4/gram.y
  
  noarg		: KEYWORD		{ if (!do_single_keyword ($1)) {
  					    twmrc_error_prefix();
-@@ -700,7 +701,8 @@
+@@ -700,7 +700,8 @@
  geom_entries	: /* Empty */
  		| geom_entries geom_entry
  		;
@@ -40,7 +44,7 @@ diff -urN ctwm-3.7-alpha4.ORIG/gram.y ctwm-3.7-alpha4/gram.y
  
  squeeze		: SQUEEZE_TITLE { 
  				    if (HasShape) Scr->SqueezeTitle = TRUE;
-@@ -849,8 +851,7 @@
+@@ -849,8 +850,7 @@
  occupy_workspc_entry	: string {
  				AddToClientsList ($1, client);
  			  }
@@ -50,7 +54,7 @@ diff -urN ctwm-3.7-alpha4.ORIG/gram.y ctwm-3.7-alpha4/gram.y
  occupy_window_list	: LB occupy_window_entries RB {}
  			;
  
-@@ -861,7 +862,7 @@
+@@ -861,7 +861,7 @@
  occupy_window_entry	: string {
  				AddToClientsList (workspace, $1);
  			  }
