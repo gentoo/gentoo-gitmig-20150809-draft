@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/hashalot-0.3.ebuild,v 1.10 2004/10/05 11:46:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/hashalot-0.3.ebuild,v 1.11 2004/11/12 21:26:07 vapier Exp $
 
 DESCRIPTION="CryptoAPI utils"
 HOMEPAGE="http://www.kerneli.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.paranoiacs.org/~sluskyb/hacks/hashalot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc mips alpha ~arm amd64 ia64 hppa ppc"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -22,5 +22,5 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install error"
+	make DESTDIR=${D} install || die "install error"
 }
