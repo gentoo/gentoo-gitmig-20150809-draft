@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.4 2005/01/20 04:22:22 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.5 2005/01/31 03:27:18 mr_bones_ Exp $
 
-inherit games flag-o-matic
+inherit flag-o-matic eutils games
 
 DESCRIPTION="An opengl graphics plugin for the mupen64 N64 emulator"
 HOMEPAGE="http://mupen64.emulation64.com/"
