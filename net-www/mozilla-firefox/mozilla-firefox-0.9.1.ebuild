@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.1.ebuild,v 1.8 2004/08/15 18:27:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.1.ebuild,v 1.9 2004/08/21 21:32:32 foser Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -30,7 +30,7 @@ RDEPEND="virtual/x11
 	app-arch/zip
 	app-arch/unzip
 	gtk2?  ( >=x11-libs/gtk+-2.1.1 >=dev-libs/libIDL-0.8.0 )
-	!gtk2? ( =x11-libs/gtk+-1.2* >=gnome-base/ORBit-0.5.10-r1 )
+	!gtk2? ( =x11-libs/gtk+-1.2* =gnome-base/orbit-0* )
 	java?  ( virtual/jre )
 	>=net-www/mozilla-launcher-1.7-r1"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.14 2004/07/01 22:47:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.15 2004/08/21 21:32:32 foser Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -17,7 +17,7 @@ IUSE="java gtk2 ipv6 gnome moznoxft"
 
 RDEPEND="virtual/x11
 	>=dev-libs/libIDL-0.8.0
-	>=gnome-base/ORBit-0.5.10-r1
+	=gnome-base/orbit-0*
 	virtual/xft
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b

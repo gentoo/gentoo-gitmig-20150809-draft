@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.7-r1.ebuild,v 1.3 2004/08/19 01:25:15 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.7-r1.ebuild,v 1.4 2004/08/21 21:32:32 foser Exp $
 
 inherit eutils gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.4.1
 	>=gnome-base/libgnomeui-2.6.0
 	>=gnome-base/libglade-2.3.1
 	>=gnome-base/libbonoboui-2.2
-	>=gnome-base/ORBit2-2
+	>=gnome-base/orbit-2
 	>=gnome-base/gnome-vfs-2.3.1
 	>=net-www/mozilla-1.7.2
 	gnome? ( >=gnome-base/nautilus-2.5 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.11 2004/08/15 17:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.12 2004/08/21 21:32:32 foser Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -52,7 +52,7 @@ RDEPEND="virtual/x11
 	!gtk2? (
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2*
-		>=gnome-base/ORBit-0.5.10-r1 )
+		=gnome-base/orbit-0* )
 	java?  ( virtual/jre )
 	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.2.1 ) )
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )

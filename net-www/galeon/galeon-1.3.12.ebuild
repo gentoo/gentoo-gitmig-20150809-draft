@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.12.ebuild,v 1.6 2004/06/25 00:52:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.12.ebuild,v 1.7 2004/08/21 21:32:32 foser Exp $
 
 inherit gnome2 debug libtool
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2
 	>=dev-libs/libxml2-2.4
 	>=gnome-base/gconf-2
-	>=gnome-base/ORBit2-2
+	>=gnome-base/orbit-2
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libbonoboui-2.1.1
 	>=gnome-base/libgnomeui-2.0.5
