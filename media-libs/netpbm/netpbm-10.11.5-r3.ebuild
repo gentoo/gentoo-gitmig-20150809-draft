@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r3.ebuild,v 1.1 2003/08/23 23:22:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r3.ebuild,v 1.2 2003/11/02 18:50:14 mholzer Exp $
 
 IUSE="svga"
 
@@ -8,6 +8,7 @@ inherit flag-o-matic
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+RESTRICT="nomirror"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 
 DEPEND=">=media-libs/jpeg-6b
