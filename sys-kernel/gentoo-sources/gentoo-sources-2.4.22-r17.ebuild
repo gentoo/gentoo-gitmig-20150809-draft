@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r16.ebuild,v 1.1 2004/08/14 14:35:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r17.ebuild,v 1.1 2004/11/09 22:23:54 plasmaroo Exp $
 
 ETYPE="sources"
 
 inherit kernel-2
 detect_version
 
+UNIPATCH_STRICTORDER='Y'
 UNIPATCH_LIST="
+	${DISTDIR}/gentoo-sources-${PVR/17/5}.patch.bz2
 	${FILESDIR}/${PN}-2.4.munmap.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-0001.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-0010.patch
@@ -24,16 +26,18 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}-2.4.CAN-2004-0497.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-0535.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-0685.patch
+	${DISTDIR}/${P}-CAN-2004-0814.patch
 	${FILESDIR}/${PN}-2.4.FPULockup-53804.patch
 	${FILESDIR}/${PN}-2.4.cmdlineLeak.patch
-	${DISTDIR}/gentoo-sources-${PVR/16/5}.patch.bz2"
+	${FILESDIR}/${PN}-2.4.XDRWrapFix.patch"
 
 S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://dev.gentoo.org/~iggy/gentoo-sources-${PVR/16/5}.patch.bz2
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
+	http://dev.gentoo.org/~iggy/gentoo-sources-${PVR/17/5}.patch.bz2
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 KEYWORDS="x86 -*"
 IUSE=""
 SLOT="${KV}"

@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.90 2004/09/03 18:54:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.91 2004/11/09 22:23:54 plasmaroo Exp $
+
+*gentoo-sources-2.4.26-r10 (09 Nov 2004)
+
+  09 Nov 2004; <plasmaroo@gentoo.org> -gentoo-sources-2.4.19-r22.ebuild,
+  -gentoo-sources-2.4.20-r25.ebuild, +gentoo-sources-2.4.20-r26.ebuild,
+  -gentoo-sources-2.4.22-r16.ebuild, +gentoo-sources-2.4.22-r17.ebuild,
+  +gentoo-sources-2.4.25-r10.ebuild, -gentoo-sources-2.4.25-r9.ebuild,
+  +gentoo-sources-2.4.26-r10.ebuild, -gentoo-sources-2.4.26-r9.ebuild,
+  -gentoo-sources-2.4.27-r1.ebuild, +gentoo-sources-2.4.27-r2.ebuild,
+  -files/gentoo-sources-2.4.19-CAN-2004-0181.patch,
+  -files/gentoo-sources-2.4.19-gcc33.patch,
+  -files/gentoo-sources-2.4.19-munmap.patch,
+  -files/gentoo-sources-2.4.19-rtc_fix.patch,
+  +files/gentoo-sources-2.4.XDRWrapFix.patch, -files/i810_drm.patch,
+  -files/lcall-DoS.patch, -files/security.patch5:
+  Adding a fix for the 2.4 kNFSd security vulnerability, bug #62524.
+  Also fixed CAN-2004-0814, bug #68421. Obsoleting 2.4.19.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gentoo-sources-2.4.26-r9.ebuild, gentoo-sources-2.4.27-r1.ebuild:
