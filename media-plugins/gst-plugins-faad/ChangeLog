@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/gst-plugins-faad
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.1 2004/04/25 14:13:37 foser Exp $
+
+*gst-plugins-faad-0.8.1 (25 Apr 2004)
+
+  25 Apr 2004; foser <foser@gentoo.org> gst-plugins-faad-0.8.1.ebuild, ChangeLog, metadata.xml :
+  Initial commit, faad plugin for gstreamer (0.8)
+  Added to the gnome herd
