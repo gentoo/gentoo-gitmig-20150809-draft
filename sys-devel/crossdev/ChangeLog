@@ -1,0 +1,10 @@
+# ChangeLog for sys-devel/crossdev
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.1 2003/12/04 09:31:50 kumba Exp $
+
+
+*crossdev-0.2 (04 Dec 2003)
+
+  04 Dec 2003; Joshua Kinard <kumba@gentoo.org> crossdev-0.2.ebuild:
+  Initial introduction of this script/ebuild
+
