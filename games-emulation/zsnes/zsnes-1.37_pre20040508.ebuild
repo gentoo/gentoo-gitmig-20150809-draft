@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.1 2004/05/12 00:58:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.2 2004/05/12 00:59:41 mr_bones_ Exp $
 
-inherit games eutils
+inherit games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
 HOMEPAGE="http://www.zsnes.com/ http://emuhost.com/ipher/zsnes/"
