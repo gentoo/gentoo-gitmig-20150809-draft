@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/unifont
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.1 2003/10/02 22:07:38 usata Exp $
+
+*unifont-1.0 (03 Oct 2003)
+
+  03 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0.ebuild:
+  Initial import. Ebuild submitted by Zhen Lin <lowzl@hotmail.com>
+  See Bug #27700
+
