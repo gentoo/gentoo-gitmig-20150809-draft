@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.24 2003/08/26 00:42:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.25 2003/08/26 01:02:21 taviso Exp $
+
+  26 Aug 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.0.7.ebuild,
+  gnupg-1.2.0.ebuild, gnupg-1.2.1-r1.ebuild, gnupg-1.2.1.ebuild,
+  files/gnupg-1.0.6.diff:
+  cleaning up old ebuilds, all arches have a stable version.
 
 *gnupg-1.2.3 (26 Aug 2003)
 
