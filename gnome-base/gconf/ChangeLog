@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.8 2002/05/30 05:38:27 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.9 2002/06/03 13:49:29 stroke Exp $
+
+*gconf-1.1.11 (3 June 2002)
+
+  3 june 2002; Gabriele Giorgetti <stroke@gentoo.org> gconf-1.1.11.ebuild : 
+
+  New version
+
 
   30 May 2002; Bruce A. Locke <blocke@shivan.org> gconf-1.1.10-r1.ebuild,gconf-1.0.8-r3.ebuild:
 
