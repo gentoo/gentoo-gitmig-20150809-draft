@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.10.0_pre020830.ebuild,v 1.1 2002/09/01 21:42:24 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.10.0_pre020906.ebuild,v 1.1 2002/09/10 19:50:17 verwilst Exp $
 
 S=${WORKDIR}/giFT
 DESCRIPTION="Lets you connect to OpenFT, a decentralised p2p network like FastTrack"
