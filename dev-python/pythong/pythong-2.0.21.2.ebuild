@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.0.21.0.ebuild,v 1.1 2003/05/10 16:28:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.0.21.2.ebuild,v 1.1 2003/05/11 01:11:31 liquidx Exp $
 
 inherit distutils
 
