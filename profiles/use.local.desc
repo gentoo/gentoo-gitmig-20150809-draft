@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.606 2004/09/08 13:10:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.607 2004/09/08 14:19:26 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -540,6 +540,13 @@ sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.bu
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
+www-client/w3m:async - Enables asynchronous fetch
+www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
+www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
+www-client/w3m:migemo - Enables migemo support
+www-client/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
+www-client/w3m-m17n:migemo - Enables migemo support
+www-client/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
