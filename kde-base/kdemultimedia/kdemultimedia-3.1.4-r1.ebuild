@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.4-r1.ebuild,v 1.1 2003/09/19 13:22:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.4-r1.ebuild,v 1.2 2003/09/19 16:58:44 caleb Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
@@ -58,6 +58,11 @@ use cdr		|| KDE_REMOVE_DIR="kaudiocreator"
 [ -z "`use cdr`" ] && KDE_REMOVE_DIR="$KDE_REMOVE_DIR kaudiocreator"
 
 myconf="$myconf $myaudio $myinterface"
+
+src_unpack() {
+	kde_src_unpack
+	cd ${S} && aclocal
+}
 
 src_compile() {
 	kde_src_compile myconf
