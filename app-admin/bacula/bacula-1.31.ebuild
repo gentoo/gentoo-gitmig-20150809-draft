@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.8 2004/02/03 02:18:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.9 2004/05/31 19:21:32 vapier Exp $
 
 NEWP=${P}a
 S=${WORKDIR}/${NEWP}
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
 SRC_URI="mirror://sourceforge/bacula/${NEWP}.tar.gz
-		http://download.sourceforge.net/bacula/${NEWP}.tar.gz"
+	http://download.sourceforge.net/bacula/${NEWP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -83,7 +83,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	rm -rf ${D}/var #empty dir
 
-	dodoc ABOUT-NLS COPYING ChangeLog CheckList INSTALL \
+	dodoc ChangeLog CheckList INSTALL \
 		README ReleaseNotes kernstodo doc/bacula.pdf
 	cp -a examples ${D}/usr/share/doc/${PF}
 	chown -R root:root ${D}/usr/share/doc/${PF} #hrmph :\

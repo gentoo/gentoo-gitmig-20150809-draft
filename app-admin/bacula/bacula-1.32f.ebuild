@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.8 2004/04/14 07:27:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.9 2004/05/31 19:21:32 vapier Exp $
 
 inherit eutils
 
@@ -126,7 +126,7 @@ src_install() {
 
 	rm -rf ${D}/var #empty dir
 
-	dodoc ABOUT-NLS COPYING ChangeLog CheckList INSTALL \
+	dodoc ChangeLog CheckList INSTALL \
 		README ReleaseNotes kernstodo doc/bacula.pdf
 	cp -a examples ${D}/usr/share/doc/${PF}
 	chown -R root:root ${D}/usr/share/doc/${PF} #hrmph :\

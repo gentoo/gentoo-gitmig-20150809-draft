@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.19 2004/02/22 17:40:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.20 2004/05/31 19:21:32 vapier Exp $
 
-IUSE="nls mysql"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
+HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
 SRC_URI="http://www.kneschke.de/projekte/modlogan/download/${P}.tar.gz
 	 http://www.kneschke.de/projekte/modlogan/download/gd-1.8.1.tar.gz"
-HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE="nls mysql"
 
 DEPEND="virtual/x11
 	dev-libs/libxml
@@ -23,7 +21,6 @@ DEPEND="virtual/x11
 	>=dev-libs/libpcre-3.2
 	>=net-libs/adns-1.0
 	mysql? ( >=dev-db/mysql-3.23.26 )"
-
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
@@ -75,7 +72,7 @@ src_install() {
 	newins ${FILESDIR}/modlogan.conf httpd.modlogan
 	dodir /usr/local/httpd/modlogan
 	preplib /usr
-	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
+	dodoc AUTHORS ChangeLog README NEWS TODO
 	dodoc doc/*.txt doc/*.conf doc/glosar doc/stats
 	docinto html
 	dodoc doc/*.html

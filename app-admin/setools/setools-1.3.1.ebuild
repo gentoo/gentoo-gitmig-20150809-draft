@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.3.1.ebuild,v 1.2 2004/05/24 20:21:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.3.1.ebuild,v 1.3 2004/05/31 19:21:33 vapier Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -16,7 +16,6 @@ DEPEND="sys-devel/bison
 	dev-libs/libxml2
 	dev-util/pkgconfig
 	X? ( dev-lang/tk gtk? ( >=gnome-base/libglade-2.0 ) )"
-
 RDEPEND="dev-libs/libxml2
 	X? (
 		dev-lang/tk
@@ -78,7 +77,7 @@ src_compile() {
 src_install() {
 	cd ${S}
 
-	dodoc COPYING ChangeLog-setools README
+	dodoc ChangeLog-setools README
 
 	# some of the Makefiles are broken, and will fail
 	# if ${D}/usr/bin is nonexistant

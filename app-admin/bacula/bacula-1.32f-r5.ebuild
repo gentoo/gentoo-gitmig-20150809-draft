@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.4 2004/04/09 16:39:27 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.5 2004/05/31 19:21:32 vapier Exp $
 
 MY_P="bacula-1.32f-5"
 S="${WORKDIR}/${MY_P}"
@@ -118,7 +118,7 @@ src_install() {
 
 	rm -rf ${D}/var #empty dir
 
-	for a in ${S}/{ABOUT-NLS,COPYING,Changelog,CheckList,INSTALL \
+	for a in ${S}/{Changelog,CheckList,INSTALL \
 			README,ReleaseNotes,kernstodo,doc/bacula.pdf}
 	do
 		dodoc $a

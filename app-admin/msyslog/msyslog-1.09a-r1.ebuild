@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a-r1.ebuild,v 1.5 2004/03/29 23:14:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a-r1.ebuild,v 1.6 2004/05/31 19:21:32 vapier Exp $
 
 inherit eutils
-
-IUSE="postgres mysql"
 
 #lame upstream conventions...
 #archive:    msyslog-1.09a-src.tar.gz
@@ -15,15 +13,15 @@ DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output
 HOMEPAGE="http://sourceforge.net/projects/msyslog/"
 SRC_URI="mirror://sourceforge/msyslog/${P}-src.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc ppc hppa ~mips ~amd64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc ~mips hppa ~amd64"
+IUSE="postgres mysql"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}
 	mysql? ( >=dev-db/mysql-3.23 )
 	postgres? ( >=dev-db/postgresql-7 )"
-
 PROVIDE="virtual/logger"
 
 src_unpack() {
@@ -35,7 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-daemon-name=msyslogd \
+	econf \
+		--with-daemon-name=msyslogd \
 		`use_with mysql` \
 		`use_with postgres pgsql` \
 		${myconf} || die
@@ -57,7 +56,7 @@ src_install() {
 	mv src/man/syslog.conf.5 src/man/msyslog.conf.5
 	doman src/man/*.[85]
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS \
+	dodoc AUTHORS ChangeLog INSTALL NEWS \
 		QUICK_INSTALL README src/TODO doc/*
 	docinto examples ; dodoc src/examples/*
 

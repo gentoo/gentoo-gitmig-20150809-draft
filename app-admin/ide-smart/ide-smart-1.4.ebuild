@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.17 2004/03/12 10:45:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.18 2004/05/31 19:21:32 vapier Exp $
 
 DESCRIPTION="A tool to read SMART information from harddiscs"
-SRC_URI="http://lightside.eresmas.com/${P}.tar.gz"
 HOMEPAGE="http://lightside.eresmas.com/"
+SRC_URI="http://lightside.eresmas.com/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -25,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin ide-smart
+	dobin ide-smart || die
 	doman ide-smart.8
-	dodoc README COPYING
+	dodoc README
 }

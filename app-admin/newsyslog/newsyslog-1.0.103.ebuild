@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.0.103.ebuild,v 1.15 2004/05/04 13:39:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.0.103.ebuild,v 1.16 2004/05/31 19:21:32 vapier Exp $
 
 inherit eutils
 
@@ -8,16 +8,18 @@ DESCRIPTION="An enhanced version of newsyslog originally written by Theodore Ts'
 HOMEPAGE="http://www.weird.com/~woods/projects/newsyslog.html"
 SRC_URI="ftp://ftp.weird.com/pub/local/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~mips"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha hppa"
+IUSE=""
 
 DEPEND="sys-apps/groff"
 RDEPEND="virtual/cron
 	app-arch/gzip"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/newsyslog-html.patch
 }
 
@@ -40,6 +42,6 @@ src_install() {
 
 	rm -rf ${D}/usr/share/man/cat?
 
-	dodoc newsyslog.conf AUTHORS COPYING ChangeLog INSTALL NEWS README.* ToDo
+	dodoc newsyslog.conf AUTHORS ChangeLog INSTALL NEWS README.* ToDo
 	prepalldocs
 }

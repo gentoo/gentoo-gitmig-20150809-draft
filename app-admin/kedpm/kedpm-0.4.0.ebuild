@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.3 2004/04/27 19:10:21 agriffis Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.4 2004/05/31 19:21:32 vapier Exp $
 
 inherit distutils eutils
 
-DESCRIPTION="Ked Password Manager helps to manage large amounts of passwords and related information."
+DESCRIPTION="Ked Password Manager helps to manage large amounts of passwords and related information"
 HOMEPAGE="http://kedpm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="gtk2"
-RESTRICT="nomirror"
+
 DEPEND="virtual/python"
 RDEPEND="dev-python/pycrypto
 	gtk2? ( >=dev-python/pygtk-2 )"
@@ -43,7 +43,7 @@ src_unpack() {
 
 src_install() {
 	distutils_src_install
-	dodoc AUTHORS CHANGES COPYING ChangeLog INSTALL NEWS PKG-INFO README
+	dodoc AUTHORS CHANGES ChangeLog INSTALL NEWS PKG-INFO README
 	cp -r test run_tests ${D}/usr/share/${PN}
 }
 

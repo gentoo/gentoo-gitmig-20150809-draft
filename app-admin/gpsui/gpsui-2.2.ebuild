@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/gpsui-2.2.ebuild,v 1.8 2004/04/28 18:53:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/gpsui-2.2.ebuild,v 1.9 2004/05/31 19:21:32 vapier Exp $
 
 DESCRIPTION="GUI program for managing running processes"
 HOMEPAGE="http://gpsui.sourceforge.net/"
@@ -11,23 +11,18 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
-S="${WORKDIR}/${PN}"
-
 DEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/gnome-libs-1.4*
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
-	local myconf=""
-	use nls \
-		&& myconf="--enable-nls" \
-		|| myconf="--disable-nls"
-	econf ${myconf} || die "econf failed"
+S="${WORKDIR}/${PN}"
 
+src_compile() {
+	econf `use_enable nls` || die "econf failed"
 	emake || die "Compilation failed"
 }
 
 src_install() {
-	einstall
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING README
+	einstall || die
+	dodoc AUTHORS ChangeLog README
 }

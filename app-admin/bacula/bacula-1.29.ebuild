@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.10 2004/02/11 23:38:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.11 2004/05/31 19:21:32 vapier Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
 SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
 SLOT="0"
+KEYWORDS="x86 ~ppc"
 IUSE="readline tcpd ssl gnome mysql sqlite X static"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
@@ -22,7 +22,8 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	mysql? >=dev-db/mysql-3.23
 	sqlite? >=dev-db/sqlite-2.7
 	X? virtual/x11"
-RDEPEND="${DEPEND} sys-apps/mtx app-arch/mt-st"
+RDEPEND="${DEPEND}
+	sys-apps/mtx app-arch/mt-st"
 
 src_compile() {
 	local myconf
@@ -76,8 +77,7 @@ src_install() {
 	rm -rf ${D}/var #empty dir
 
 	dosbin src/console/console
-	dodoc ABOUT-NLS COPYING ChangeLog CheckList INSTALL \
-		README ReleaseNotes kernstodo doc/bacula.pdf
+	dodoc ChangeLog CheckList INSTALL README ReleaseNotes kernstodo doc/bacula.pdf
 	cp -a examples ${D}/usr/share/doc/${PF}
 	chown -R root:root ${D}/usr/share/doc/${PF} #hrmph :\
 	dohtml -r doc/html-manual doc/home-page

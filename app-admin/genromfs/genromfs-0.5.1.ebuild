@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/genromfs-0.5.1.ebuild,v 1.13 2004/04/09 07:12:48 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/genromfs-0.5.1.ebuild,v 1.14 2004/05/31 19:21:32 vapier Exp $
 
 DESCRIPTION="Create space-efficient, small, read-only romfs filesystems"
-SRC_URI="mirror://sourceforge/romfs/${P}.tar.gz"
 HOMEPAGE="http://romfs.sourceforge.net/"
-IUSE=""
+SRC_URI="mirror://sourceforge/romfs/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc s390"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -23,8 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin genromfs
+	dobin genromfs || die
 	doman genromfs.8
-	dodoc COPYING ChangeLog NEWS genromfs.lsm genrommkdev \
-		readme-kernel-patch romfs.txt
+	dodoc ChangeLog NEWS genromfs.lsm genrommkdev readme-kernel-patch romfs.txt
 }

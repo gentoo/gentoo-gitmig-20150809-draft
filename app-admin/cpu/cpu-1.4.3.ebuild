@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.4.3.ebuild,v 1.3 2004/05/28 19:26:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.4.3.ebuild,v 1.4 2004/05/31 19:21:32 vapier Exp $
 
 DESCRIPTION="LDAP user management tool written in C and loosely based on FreeBSD's pw(8)"
 HOMEPAGE="http://cpu.sourceforge.net/"
@@ -9,6 +9,7 @@ SRC_URI="mirror://sourceforge/cpu/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="net-nds/openldap
 	sys-libs/cracklib"
@@ -35,5 +36,5 @@ src_compile() {
 
 src_install() {
 	einstall datadir="${D}/usr/share/doc/${PF}" || die "Einstall failure"
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

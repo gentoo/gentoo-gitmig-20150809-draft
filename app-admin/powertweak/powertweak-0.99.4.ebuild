@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.11 2004/04/26 15:21:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.12 2004/05/31 19:21:32 vapier Exp $
 
 inherit libtool
 
 DESCRIPTION="tune your kernel and hardware settings for optimal performance"
-SRC_URI="mirror://sourceforge/powertweak/${P}.tar.bz2"
 HOMEPAGE="http://powertweak.sourceforge.net/"
+SRC_URI="mirror://sourceforge/powertweak/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 -ppc"
 IUSE="gtk"
 
@@ -17,7 +17,6 @@ DEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	>=dev-libs/libxml-1.8.10
 	sys-devel/autoconf
 	sys-devel/automake"
-
 RDEPEND=">=sys-apps/pciutils-2.1.0
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
@@ -49,7 +48,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 	docinto Documentation
 	dodoc Documentation/* Documentation/Hackers/*
 
@@ -58,6 +57,6 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/powertweakd.rc6 powertweakd
 }
 
-pkg_postins() {
+pkg_postinst() {
 	einfo "This version adds powertweakd to be run at boot to apply changes to system"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.5 2004/02/29 23:05:58 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.6 2004/05/31 19:21:33 vapier Exp $
 
 inherit perl-module
 
@@ -18,10 +18,10 @@ DEPEND="dev-lang/perl
 	dev-perl/DBI
 	mysql? ( dev-db/mysql )"
 
-DOCS="ChangeLog COPYING README* doc/*"
+DOCS="ChangeLog README* doc/*"
 
 src_install() {
-	if [ `use apache2` ] ; then
+	if use apache2 ; then
 		#In case of Apache
 		HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf | cut -d\  -f2`" \
 		HTTPD_USER="`grep '^User' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`" \
@@ -82,7 +82,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		einfo "To load data from mysql, change 'dat' in 'db'" \
 		einfo "in /etc/${PN}/${PN}.conf" \
 		einfo "SQL files for creating these tables are available" \

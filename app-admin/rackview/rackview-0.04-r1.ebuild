@@ -1,22 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.04-r1.ebuild,v 1.5 2004/01/06 11:59:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.04-r1.ebuild,v 1.6 2004/05/31 19:21:33 vapier Exp $
 
 inherit perl-module
 
-DESCRIPTION="rackview is a tool for visualizing the layout of rack-mounted equipment. The purpose of this tool is to assist in planning and tracking of hardware changes to racks in a data center, and to provide a host-oriented interface into other database tools."
+DESCRIPTION="tool for visualizing the layout of rack-mounted equipment"
+HOMEPAGE="http://rackview.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rackview/rackview-${PV}.tar.gz"
-HOMEPAGE="http://rackview.sf.net"
 
+LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86"
-LICENSE="Artistic"
 IUSE="apache2 mysql"
+
 DEPEND="dev-lang/perl
 	dev-perl/GD
 	dev-perl/DBI
 	mysql? ( dev-db/mysql )"
-DOCS="ChangeLog COPYING README* doc/*"
+
+DOCS="ChangeLog README* doc/*"
 
 src_install() {
 	#In case of Apache

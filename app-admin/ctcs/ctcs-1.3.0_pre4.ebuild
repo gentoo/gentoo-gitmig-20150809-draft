@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.16 2004/03/12 10:45:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.17 2004/05/31 19:21:32 vapier Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -12,6 +12,7 @@ SRC_URI="mirror://sourceforge/va-ctcs/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND="dev-util/dialog
 	app-shells/bash
@@ -37,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc CHANGELOG FAQ README.FIRST COPYING README README.TCF runin/README.runtest runin/README.tests
+	dodoc CHANGELOG FAQ README.FIRST README README.TCF runin/README.runtest runin/README.tests
 
 	dodir /usr/ctcs/runin/bin/
 

@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.14 2004/03/12 05:44:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.15 2004/05/31 19:21:32 vapier Exp $
 
 DESCRIPTION="highly configurable service monitoring daemon"
-SRC_URI="mirror://kernel/software/admin/mon/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/software/mon/"
+SRC_URI="mirror://kernel/software/admin/mon/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND=">=dev-perl/Mon-0.9
 	>=dev-perl/Time-HiRes-01.20
@@ -35,7 +36,7 @@ src_install() {
 
 	doman doc/*.1
 	doman doc/*.8
-	dodoc CHANGES COPYING CREDITS KNOWN-PROBLEMS
+	dodoc CHANGES CREDITS KNOWN-PROBLEMS
 	dodoc mon.lsm README TODO VERSION
 	docinto txt ; dodoc doc/README*
 	docinto etc ; dodoc etc/*

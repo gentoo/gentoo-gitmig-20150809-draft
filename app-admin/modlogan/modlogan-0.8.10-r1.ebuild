@@ -1,23 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10-r1.ebuild,v 1.6 2004/05/04 13:35:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10-r1.ebuild,v 1.7 2004/05/31 19:21:32 vapier Exp $
 
-IUSE="nls mysql X"
-
+MY_FILESDIR="${FILESDIR}/${PV%.*}"
 THEMES_VERSION="0.0.5"
 
 DESCRIPTION="Logfile Analyzer"
+HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
 SRC_URI="http://jan.kneschke.de/projects/modlogan/download/${P}.tar.gz
 	 http://jan.kneschke.de/projects/modlogan/download/modlogan-themes-${THEMES_VERSION}.tar.gz
 	 http://www.kneschke.de/projekte/modlogan/download/gd-1.8.1.tar.gz"
 
-HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
-
-MY_FILESDIR="${FILESDIR}/${PV%.*}"
-
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ia64 ~amd64 ~ppc sparc alpha hppa"
+IUSE="nls mysql X"
 
 DEPEND="dev-libs/libxml
 	dev-libs/libxml2
@@ -28,7 +25,6 @@ DEPEND="dev-libs/libxml
 	>=net-libs/adns-1.0
 	X? ( virtual/x11 )
 	mysql? ( >=dev-db/mysql-3.23.26 )"
-
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
@@ -88,7 +84,7 @@ src_install() {
 ###
 	keepdir /var/www/localhost/htdocs/modlogan
 	preplib /usr
-	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
+	dodoc AUTHORS ChangeLog README NEWS TODO
 	dodoc doc/*.txt doc/*.conf doc/*-dist doc/glosar doc/stats
 	dohtml -r html
 

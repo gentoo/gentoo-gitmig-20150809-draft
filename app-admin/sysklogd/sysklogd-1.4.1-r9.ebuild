@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r9.ebuild,v 1.6 2004/03/29 23:20:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r9.ebuild,v 1.7 2004/05/31 19:21:33 vapier Exp $
 
 inherit eutils
 
@@ -8,13 +8,13 @@ DESCRIPTION="Standard log daemons"
 HOMEPAGE="http://www.infodrom.org/projects/sysklogd/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ia64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ia64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 RDEPEND="dev-lang/perl sys-apps/debianutils"
-
 PROVIDE="virtual/logger"
 
 src_unpack() {
@@ -36,7 +36,7 @@ src_install() {
 	doman *.[1-9] ${FILESDIR}/syslogd-listfiles.8
 	exeinto /etc/cron.daily
 	newexe ${FILESDIR}/syslog-cron syslog.cron
-	dodoc ANNOUNCE CHANGES COPYING MANIFEST NEWS README.1st README.linux
+	dodoc ANNOUNCE CHANGES MANIFEST NEWS README.1st README.linux
 	dodoc ${FILESDIR}/syslog.conf
 	insinto /etc
 	doins ${FILESDIR}/syslog.conf

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.1.ebuild,v 1.3 2004/04/27 00:29:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.1.ebuild,v 1.4 2004/05/31 19:21:32 vapier Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -108,7 +108,7 @@ src_install() {
 
 	rm -rf ${D}/var #empty dir
 
-	for a in ${S}/{ABOUT-NLS,COPYING,Changelog,CheckList,INSTALL \
+	for a in ${S}/{Changelog,CheckList,INSTALL \
 			README,ReleaseNotes,kernstodo,doc/bacula.pdf}
 	do
 		dodoc $a

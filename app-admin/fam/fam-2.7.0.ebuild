@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.14 2004/05/14 01:42:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.15 2004/05/31 19:21:32 vapier Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -10,7 +10,8 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc mips alpha hppa ~amd64 ia64"
+IUSE=""
 
 DEPEND=">=net-nds/portmap-5b-r6"
 
@@ -23,12 +24,8 @@ src_unpack() {
 	# Please do not remove this again - fixes $S and $D in libtool linker
 	# scripts (.la files)
 	cd ${S}; elibtoolize
-}
 
-src_compile() {
 	use mips && gnuconfig_update
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -39,7 +36,7 @@ src_install() {
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/famd
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README
+	dodoc AUTHORS ChangeLog INSTALL NEWS TODO README
 }
 
 pkg_postinst() {
