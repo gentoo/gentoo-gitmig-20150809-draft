@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.67 2004/12/29 08:37:07 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.68 2005/01/01 03:37:23 eradicator Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -377,6 +377,7 @@ setup_headers() {
 	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ \
 	-e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/)
 	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH="sparc64"
+	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64-multilib" ] && ARCH="sparc64"
 
 	[ -z "${H_SUPPORTEDARCH}" ] && H_SUPPORTEDARCH="${PN/-*/}"
 	for i in ${H_SUPPORTEDARCH}
