@@ -1,0 +1,20 @@
+--- mod_bandwidth.c.orig	2003-07-13 22:29:57.000000000 -0400
++++ mod_bandwidth.c	2003-07-13 22:30:49.000000000 -0400
+@@ -1236,9 +1236,16 @@
+ { NULL }
+ };
+ 
++#define MOD_BANDWIDTH_VERSION_S "2.0.4"
++
++void bandwidth_module_init(void)
++{
++    ap_add_version_component("mod_bandwidth/" MOD_BANDWIDTH_VERSION_S);
++}
++
+ module bandwidth_module = {
+    STANDARD_MODULE_STUFF,
+-   NULL,                        /* initializer */
++   bandwidth_module_init,       /* initializer */
+    create_bw_config,            /* bw config creater */
+    NULL,                        /* bw merger --- default is to override */
+    create_bw_server_config,     /* server config */
