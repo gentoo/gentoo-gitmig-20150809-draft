@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.41 2004/12/12 10:37:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.42 2004/12/30 12:22:17 vapier Exp $
+
+  30 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/linux26-headers-2.6.8.1-parisc-syscall.patch,
+  linux26-headers-2.6.8.1-r1.ebuild:
+  The syscall() funcs in parisc/unistd.h contained a little syntax error; fix it.
 
   12 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/linux26-headers-2.6.8.1-sparc-glibcsafe.patch:

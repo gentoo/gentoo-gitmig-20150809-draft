@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.19 2004/12/17 05:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.20 2004/12/30 12:22:17 vapier Exp $
 
 # What's in this kernel?
 
@@ -72,6 +72,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-sparc-glibcsafe.patch
 	epatch ${FILESDIR}/${PN}-soundcard-ppc64.patch
 	epatch ${FILESDIR}/${P}-arm-float.patch
+	epatch ${FILESDIR}/${P}-parisc-syscall.patch
 
 	# Fixes
 	headers___fix ${S}/include/asm-ia64/*
