@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.83 2004/08/20 01:35:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.84 2004/08/22 04:32:09 weeve Exp $
+
+  21 Aug 2004; Jason Wever <weeve@gentoo.org> ruby-1.6.8-r11.ebuild,
+  ruby-1.8.2_pre2.ebuild:
+  Stable on sparc wrt security bug #60525.
 
   20 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-1.6.8-r11.ebuild,
   ruby-1.8.2_pre2.ebuild:
