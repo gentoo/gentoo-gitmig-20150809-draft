@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.20-r2.ebuild,v 1.1 2003/01/12 15:32:47 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.20-r2.ebuild,v 1.2 2003/02/03 17:25:48 bjb Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -17,7 +17,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="~alpha"
+KEYWORDS="alpha -sparc -x86 -ppc"
 
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
