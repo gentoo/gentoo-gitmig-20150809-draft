@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.1 2005/03/04 00:19:49 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.2 2005/03/04 18:05:12 beu Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 LICENSE="Apache-2.0"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="apache2 debug doc ldap mpm-leader mpm-metux mpm-peruser mpm-prefork mpm-threadpool mpm-worker no-suexec ssl static-modules threads"
+IUSE="apache2 debug doc ldap mpm-leader mpm-peruser mpm-prefork mpm-threadpool mpm-worker no-suexec ssl static-modules threads"
 
 RDEPEND="dev-lang/perl
 	=dev-libs/apr-0.9.6
@@ -47,7 +47,7 @@ src_unpack() {
 	cat ${GENTOO_PATCHDIR}/patches/config.layout >> config.layout
 	sed -i -e 's:version:${PF}:g' config.layout
 
-	# metux & peruser need to build conf
+	# peruser need to build conf
 	WANT_AUTOCONF=2.5 ./buildconf || die "buildconf failed"
 }
 
@@ -346,7 +346,7 @@ select_mpms() {
 	useq mpm-threadpool && mpms="${mpms} threadpool"
 	useq mpm-leader && mpms="${mpms} leader"
 
-	if useq mpm-metux || useq mpm-peruser; then
+	if useq mpm-peruser; then
 		ewarn "Metux/Peruser are considered more or less insecure"
 		ewarn "and beta staged. Use at your own risk!"
 	fi
