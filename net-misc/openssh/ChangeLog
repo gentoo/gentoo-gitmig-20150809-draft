@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.108 2004/12/29 20:01:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.109 2004/12/30 00:06:48 hardave Exp $
+
+  29 Dec 2004; Hardave Riar <hardave@gentoo.org> openssh-3.9_p1-r1.ebuild:
+  Stable on mips, bug #59361.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
