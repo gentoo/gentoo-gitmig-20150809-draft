@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/openmosix-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.5 2003/02/12 09:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.6 2003/03/26 11:11:20 tantive Exp $
+
+* openmosix-user-0.2.4-r5 (26 Mar 2003)
+
+  26 Mar 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped to make sure everyone gets the new init script.
+  Changed the name of the config file from /etc/mosix.map to
+  /etc/openmosix.map. The ebuild will take care of moving old
+  config files or install a new if no old one is present.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
