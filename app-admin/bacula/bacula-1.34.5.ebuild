@@ -21,6 +21,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	mysql? ( >=dev-db/mysql-3.23 )
 	postgres? ( >=dev-db/postgresql-7.4.0 )
 	X? ( virtual/x11 )
+	wxwindows? ( >=x11-libs/wxGTK-2.4.2 )
 	virtual/mta
 	dev-libs/gmp"
 RDEPEND="${DEPEND}
@@ -38,11 +39,10 @@ src_compile() {
 		`use_enable readline`
 		`use_enable gnome`
 		`use_enable tcpd tcp-wrappers`
-		`use_enable X x`
-		`use_enable wxwindows wx-console`
-		"
-	#not ./configure'able
-	#`use_enable ssl`
+		`use_enable X x`"
+	
+	[ -n "$BUILD_CLIENT_ONLY" ] \
+		 && myconf="${myconf} --enable-client-only"
 
 	# mysql is the reccomended choice ...
 	if use mysql
@@ -58,6 +58,12 @@ src_compile() {
 	then
 		myconf="${myconf/--with-sqlite/}"
 	fi
+
+	if use wxwindows
+	then
+	   myconf="${myconf} --enable-wx-console"
+	 fi
+
 
 	./configure \
 		--enable-smartalloc \
