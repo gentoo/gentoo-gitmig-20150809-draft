@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.1 2005/01/15 02:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.2 2005/01/22 12:12:34 danarmak Exp $
+
+  22 Jan 2005; Dan Armak <danarmak@gentoo.org> kontact-3.4.0_beta1.ebuild:
+  Remove unnecessary dep on akregator. Closes #79061.
 
 *kontact-3.4.0_beta1 (15 Jan 2005)
 
