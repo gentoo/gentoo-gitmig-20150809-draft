@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/ns
+# ChangeLog for net-analyzer/ns
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.1 2004/01/11 12:51:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.2 2004/01/15 05:40:22 vapier Exp $
 
 *ns-2.26 (11 Jan 2004)
 
