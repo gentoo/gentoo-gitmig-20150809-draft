@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.6-r2.ebuild,v 1.4 2001/08/07 02:01:14 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.6-r2.ebuild,v 1.5 2001/08/07 18:05:49 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 
@@ -46,17 +46,20 @@ CLOOPAV=0.61-1
 
 # We use build in /usr/src/linux in case of linux-extras
 # so we need no sources
+
+#Please do not add mosix to the SRC_URI -- it's not supported yet. --drobbins
+
 if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://www.zip.com.au/~akpm/ext3-${EXT3V}.gz
 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz
-	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz
 	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMV}.tar.gz
     http://www.knopper.net/download/knoppix/cloop_${CLOOPAV}.tar.gz"
 fi
 #	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
 #	http://www.netroedge.com/~lm78/archive/i2c-${SENV}.tar.gz
 #	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
+#	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz
 	
 if [ "$PN" != "linux-extras" ]
 then
