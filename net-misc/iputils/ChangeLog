@@ -1,14 +1,17 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.12 2003/07/01 12:44:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.13 2003/07/07 11:50:34 tuxus Exp $
+
+*iputils-020927 (03 Jan 2003)
+
+  7 Jul 2003; Jan Seidel <tuxus@gentoo.org> iputils-020927.ebuild:
+  Mark stable on mips
 
   1 Jul 2003; Luca Barbato <lu_zero@gentoo.org> iputils-020927.ebuild:
   Mark stable on ppc
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> iputils-020927.ebuild:
   Mark stable on alpha
-
-*iputils-020927 (03 Jan 2003)
 
   20 Jun 2003; Jon Portnoy <avenj@gentoo.org> iputils-020927.ebuild :
   Temporarily yanked out all of the USE="doc" stuff until a more
