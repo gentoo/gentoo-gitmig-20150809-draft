@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.46 2004/02/15 08:16:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.47 2004/02/15 12:30:13 darkspecter Exp $
+
+  15 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  java-config-1.2.5.ebuild:
+  set ppc in keywords
 
   15 Feb 2004; David Holm <dholm@gentoo.org> java-config-1.2.5.ebuild:
   Added to ~ppc.
