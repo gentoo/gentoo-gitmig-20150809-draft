@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.194 2003/12/27 19:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.195 2003/12/29 10:34:50 mholzer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -108,6 +108,7 @@ media-libs/libsdl:novideo - Allow users to disable video support completely (at 
 media-libs/sdl-sound:flac - Enable flac support
 media-libs/sdl-sound:speex - Enable speex sound support
 media-libs/sdl-sound:physfs - Enable physfs support
+media-libs/xine-lib:speex - Enable speex sound support
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
