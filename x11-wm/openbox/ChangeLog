@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.1 2002/04/29 11:16:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.2 2002/05/26 00:38:16 seemant Exp $
+
+*openbox-0.99.3 (25 May 2002)
+
+  25 May 2002; Seemant Kulleen <seemant@gentoo.org> openbox-0.99.3.ebuild
+  files/digest-openbox-0.99.3 :
+
+  Version bump.
 
 *openbox-0.99.1 (29 Apr 2002)
 
