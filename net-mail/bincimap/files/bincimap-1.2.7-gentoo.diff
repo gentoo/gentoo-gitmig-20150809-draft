@@ -1,0 +1,13 @@
+diff -Naru bincimap-1.2.7final_org/conf/bincimap.conf bincimap-1.2.7final/conf/bincimap.conf
+--- bincimap-1.2.7final_org/conf/bincimap.conf	2004-04-18 23:10:09.680888894 +0100
++++ bincimap-1.2.7final/conf/bincimap.conf	2004-04-19 00:06:49.237706729 +0100
+@@ -56,7 +56,7 @@
+     type = "Maildir",                              /* only Maildir
+ 						    * support */
+ 
+-    path = "Maildir",                              /* default path */
++    path = ".maildir",                              /* default path */
+ 
+     auto create inbox = "yes",                     /* create INBOX in
+ 						    * given format if
+
