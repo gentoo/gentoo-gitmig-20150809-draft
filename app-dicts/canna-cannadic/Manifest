@@ -2,7 +2,7 @@ MD5 a6820394fb94930be7eb3bbc175eca52 ChangeLog 885
 MD5 4ecbc68325df077c13caaf06148a2e2a canna-cannadic-0.94h.ebuild 1618
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 1f8cf0d0ed42e42dbfb92387b4f190c3 canna-cannadic-0.95.ebuild 1616
-MD5 3fbfc4e36430d84fad6348dba7d7bc17 canna-cannadic-0.95-r1.ebuild 721
+MD5 4b571e7a974df45b80ddc507beb5db65 canna-cannadic-0.95-r1.ebuild 767
 MD5 a1f01c8c2bd1d1ada4026da493bf8777 files/01cannadic.dics.dir 100
 MD5 9bc63f7c23bc828206a4cbd7642d72bb files/digest-canna-cannadic-0.94h 67
 MD5 3dfe1251aaed337409490f5dc3928495 files/05cannadic.dics.dir 101

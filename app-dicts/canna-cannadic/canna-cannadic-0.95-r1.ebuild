@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95-r1.ebuild,v 1.1 2003/09/11 06:59:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95-r1.ebuild,v 1.2 2003/09/12 04:19:08 usata Exp $
 
 inherit cannadic
 
@@ -21,6 +21,7 @@ DEPEND="canna? >=canna-3.6_p3-r1"
 S="${WORKDIR}/${MY_P}"
 
 CANNADICS="gcanna gcannaf"
+DICSDIRFILE="${FILESDIR}/05cannadic.dics.dir"
 
 src_compile() {
 
