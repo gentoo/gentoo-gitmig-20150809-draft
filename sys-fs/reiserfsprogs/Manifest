@@ -3,11 +3,11 @@ MD5 381caedad1d5286be4954152ec37f25e reiserfsprogs-3.6.4-r1.ebuild 1374
 MD5 b43af77642254c858530b2f42f20639a reiserfsprogs-3.6.11.ebuild 829
 MD5 17c5a5f2cea42601e349f5d74f8b0491 reiserfsprogs-3.6.8.ebuild 815
 MD5 222550931a80e6c9b5834828c48bee8f reiserfsprogs-3.6.3.ebuild 681
-MD5 125cb4d4891a73697e3ee4a1172e70d7 reiserfsprogs-3.6.11-r1.ebuild 922
+MD5 aceeb2bb53058d7cb649a4aae6fd128e reiserfsprogs-3.6.11-r1.ebuild 1129
 MD5 112f01b379dcd6ddf4810954c3105b47 reiserfsprogs-3.6.10.ebuild 823
-MD5 9dfcc612eabb916168ad5e0f32a81582 ChangeLog 4564
+MD5 fcff944fe3b0e6693dd955070cc5cc41 ChangeLog 4847
 MD5 7895b3d698cdc1cc5b4aecdfc2c49e30 files/digest-reiserfsprogs-3.6.4-r1 71
-MD5 b65daeab80cbc77635f4f9946b1c39fd files/debug.patch 771
+MD5 b4eeb93b06e335142e6fd3984030f841 files/blk_size.patch 1254
 MD5 209924bdef4a9feb2bd452f3ca3b06dc files/reiserfsprogs-3.6.5-flush_buffers-bug.patch 3086
 MD5 a8b0f4b8e4a5f18892ccfd1dc32cc7d3 files/digest-reiserfsprogs-3.6.3 71
 MD5 f71b5a7289045ceb19f83e04ff079e09 files/digest-reiserfsprogs-3.6.8 71
