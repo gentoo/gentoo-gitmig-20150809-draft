@@ -2,19 +2,21 @@
 Hash: SHA1
 
 MD5 fc003581d1b4801ba5d4bccc4e9cd1cb vmailmgr-0.96.9-r1.ebuild 1620
-MD5 c50e04f4011745abecfee92b7a0b4875 ChangeLog 2138
+MD5 341b5d140b1f1ce16c001cf77d28866f ChangeLog 2420
+MD5 0d5899cdcaff9716e4fa04eae384a634 vmailmgr-0.96.9-r2.ebuild 1644
 MD5 911634f611838bc9b119dfb48b047c35 metadata.xml 250
 MD5 9c31bdc6361d69e632bda1dc65587fb9 files/vmailmgr-0.96.9-gentoo-r1.diff 4249
 MD5 fcb3e0b872a5f1719f7b9aa76eac8eba files/vmailmgr-0.96.9-gcc3.3.patch 3494
 MD5 0279b46d6d44e209fead5769b6fdea30 files/checkvpw-loginfail 45
+MD5 d8e019e2a0047f70578608f16b233489 files/vmailmgr-0.96.9-gentoo-r2.patch 4939
 MD5 3a361d677a497af106a197e48acbc129 files/separators 3
 MD5 dada9de263c4a08a0d043350821a42b4 files/digest-vmailmgr-0.96.9-r1 67
+MD5 dada9de263c4a08a0d043350821a42b4 files/digest-vmailmgr-0.96.9-r2 67
 MD5 bf55605617fc5acfdca3a28a796e82a4 files/socket-file 35
-MD5 c9005c51279499d79e056a5bbab5cac5 files/vmailmgr-0.96.9-gentoo.diff 1349
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCKAVHjiC39V7gKu0RAg9eAKCDvN4dIEnttjanttjpB1+ZOfs9hwCgvmLq
-8ZCD0RJWrMnNWA13nFV1RBo=
-=H5n8
+iD8DBQFCKZ+4jiC39V7gKu0RAt6VAJ4uS8895X9ApOSGE1JL4jnweEReJACfUR2G
+KtIucuKFWeJ7nn8aQCsWacE=
+=m+LJ
 -----END PGP SIGNATURE-----
