@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/qtunit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.9 2003/06/12 20:44:08 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.10 2004/03/20 19:16:54 centic Exp $
+
+*qtunit-0.9.8 (20 Mar 2004)
+
+  20 Mar 2004; Dominik Stadler <centic@gentoo.org> metadata.xml,
+  qtunit-0.9.8.ebuild:
+  Add new Version 0.9.8, use new HOMEPAGE and SRC_URI and try to fix problem
+  with Qt-Sandbox-Violations, see Bug 45220
 
   12 Jun 2003; <msterret@gentoo.org> qtunit-0.9.7.ebuild:
   fix Header

@@ -1,3 +1,6 @@
-MD5 e94682009763126058aa50a765d0d526 ChangeLog 1511
+MD5 6fc867284dfcba9a58c1bf241c731971 ChangeLog 1749
 MD5 1a5c6effd3079fb81314f69907ecac6f qtunit-0.9.7.ebuild 1637
+MD5 694b222760989d1bcaebd22531e78fb4 qtunit-0.9.8.ebuild 1830
+MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 7d14c59e90551c136bbb1bf2396bb986 files/digest-qtunit-0.9.7 64
+MD5 3f79b8e5e392324d04d02d18d9776afd files/digest-qtunit-0.9.8 64
