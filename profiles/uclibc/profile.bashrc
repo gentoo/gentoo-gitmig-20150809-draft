@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/profile.bashrc,v 1.2 2005/02/13 20:53:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/profile.bashrc,v 1.3 2005/02/13 21:24:31 solar Exp $
 
 # file - /etc/portage/package.cflags
 # This gives us per pkg cflags and is auto expaned into the cxxflags.
@@ -100,6 +100,4 @@ if [ "$EBUILD_PHASE" = "/usr/lib/portage/bin/ebuild.sh" -o "$EBUILD_PHASE" = "/u
 			[ "$EBUILD_PHASE" = "postinst" ] && package-distdir-clean
 		;;
 	esac
-else
-	echo "This bashrc does not know anything about $EBUILD_PHASE"
 fi
