@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.9 2004/04/20 16:39:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.10 2004/06/07 21:24:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_install() {
 	dohtml docs/*.html
 }
 
-post_install() {
+pkg_postinst() {
 	einfo "There is a sample openalrc file in /usr/share/doc/${P} which sets up"
 	einfo "4 speaker surround sound with ALSA.  Simply copy it to your ~/.openalrc"
 	einfo "to use it."
