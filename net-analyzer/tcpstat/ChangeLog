@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpstat
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.10 2004/09/26 04:13:13 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.11 2005/01/31 14:24:27 dragonheart Exp $
+
+  31 Jan 2005; Daniel Black <dragonheart@gentoo.org> tcpstat-1.4.ebuild,
+  tcpstat-1.5.ebuild:
+  virtual/libpcap transition
 
   25 Sep 2004; Tom Gall <tgall@gentoo.org> tcpstat-1.5.ebuild:
   added ~ppc64, bug #64104

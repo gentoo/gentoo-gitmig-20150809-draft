@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.12 2004/11/02 15:11:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.13 2005/01/31 14:15:46 dragonheart Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ppc-macos s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=net-libs/libpcap-0.5.2
+	virtual/libpcap
 	sys-devel/autoconf"
 RDEPEND="virtual/libc"
 

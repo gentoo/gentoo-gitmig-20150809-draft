@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.4.ebuild,v 1.12 2004/07/08 23:00:37 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.4.ebuild,v 1.13 2005/01/31 14:24:27 dragonheart Exp $
 
 IUSE="berkdb"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Reports network interface statistics"
 SRC_URI="http://www.frenchfries.net/paul/tcpstat/${P}.tar.gz"
 HOMEPAGE="http://www.frenchfries.net/paul/tcpstat/"
 
-DEPEND=">=net-libs/libpcap-0.5.2
+DEPEND="virtual/libpcap
 	berkdb? ( <sys-libs/db-2 )"
 
 SLOT="0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.40.ebuild,v 1.16 2004/07/01 20:11:05 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.40.ebuild,v 1.17 2005/01/31 14:15:46 dragonheart Exp $
 
 S=${WORKDIR}/${PN}
 IUSE=""
@@ -10,7 +10,7 @@ RESTRICT="nomirror"
 HOMEPAGE="http://ngrep.sourceforge.net"
 
 DEPEND="virtual/libc
-	>=net-libs/libpcap-0.5.2"
+	virtual/libpcap"
 
 RDEPEND="virtual/libc"
 

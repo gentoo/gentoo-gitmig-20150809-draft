@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.1 2005/01/16 04:23:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.2 2005/01/31 14:23:31 dragonheart Exp $
 
 inherit gnuconfig eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	sys-apps/gawk
 	>=sys-devel/libtool-1.4
 	>=sys-libs/gdbm-1.8.0
-	>=net-libs/libpcap-0.5.2
+	virtual/libpcap
 	>=media-libs/gd-2.0.22
 	>=media-libs/libpng-1.2.5
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.41.ebuild,v 1.11 2004/07/08 22:54:37 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.41.ebuild,v 1.12 2005/01/31 14:15:46 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 HOMEPAGE="http://ngrep.sourceforge.net"
 
 DEPEND="virtual/libc
-	>=net-libs/libpcap-0.5.2
+	virtual/libpcap
 	sys-devel/autoconf"
 
 RDEPEND="virtual/libc"

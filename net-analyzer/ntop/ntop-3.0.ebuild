@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.15 2004/10/27 08:41:14 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.16 2005/01/31 14:23:31 dragonheart Exp $
 
 inherit gnuconfig
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc hppa ~amd64 ~ppc64"
 IUSE="ssl readline tcpd"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
-	>=net-libs/libpcap-0.5.2
+	virtual/libpcap
 	>=media-libs/gd-2.0.22
 	>=media-libs/libpng-1.2.5
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )
