@@ -1,0 +1,84 @@
+diff -u -r1.199 -r1.203
+--- gaim/gaim/src/protocols/yahoo/yahoo.c	2004/01/25 22:15:21	1.199
++++ gaim/gaim/src/protocols/yahoo/yahoo.c	2004/02/12 19:17:54	1.203
+@@ -1917,12 +1917,13 @@
+ 	GaimConnection *gc = data;
+ 	GaimAccount *account = gaim_connection_get_account(gc);
+ 	struct yahoo_data *yd = gc->proto_data;
+-	char buf[1024], *i = buf;
++	char buf[2048], *i = buf;
+ 	int len;
+ 	GString *s;
+ 
+ 	len = read(source, buf, sizeof(buf)-1);
+-	if (len <= 0  || strncmp(buf, "HTTP/1.0 302", strlen("HTTP/1.0 302"))) {
++	if (len <= 0  || (strncmp(buf, "HTTP/1.0 302", strlen("HTTP/1.0 302")) &&
++			  strncmp(buf, "HTTP/1.1 302", strlen("HTTP/1.1 302")))) {
+ 		gaim_connection_error(gc, _("Unable to read"));
+ 		return;
+ 	}
+@@ -1932,7 +1933,7 @@
+ 
+ 	while ((i = strstr(i, "Set-Cookie: "))) {
+ 		i += strlen("Set-Cookie: ");
+-		for (;*i != ';'; i++)
++		for (;*i != ';' && *i != '\0'; i++)
+ 			g_string_append_c(s, *i);
+ 
+ 		g_string_append(s, "; ");
+@@ -2082,6 +2083,8 @@
+ 
+ 	gaim_connection_update_progress(gc, _("Connecting"), 1, 2);
+ 
++	gaim_connection_set_display_name(gc, gaim_account_get_username(account));
++
+ 	yd->fd = -1;
+ 	yd->friends = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, yahoo_friend_free);
+ 	yd->confs = NULL;
+--- gaim/gaim/src/protocols/yahoo/yahoo_filexfer.c	2004/01/10 04:04:57	1.6
++++ gaim/gaim/src/protocols/yahoo/yahoo_filexfer.c	2004/02/17 18:45:25	1.8
+@@ -195,13 +195,20 @@
+ 	account = gaim_connection_get_account(gc);
+ 
+ 	if (gaim_xfer_get_type(xfer) == GAIM_XFER_SEND) {
+-		if (gaim_proxy_connect(account, gaim_account_get_string(account, "xfer_host",  YAHOO_XFER_HOST),
+-		                       gaim_account_get_int(account, "xfer_port", YAHOO_XFER_PORT),
+-		                       yahoo_sendfile_connected, xfer) == -1)
+-		{
++		if (gaim_xfer_get_size(xfer) >= 1048577) {
+ 			gaim_notify_error(gc, NULL, _("File Transfer Aborted"),
+-			                 _("Unable to establish file descriptor."));
+-			gaim_xfer_cancel_remote(xfer);
++			                  _("Gaim cannot send files over Yahoo! that are bigger than "
++			                    "One Megabyte (1,048,576 bytes)."));
++			gaim_xfer_cancel_local(xfer);
++		} else {
++			if (gaim_proxy_connect(account, gaim_account_get_string(account, "xfer_host",  YAHOO_XFER_HOST),
++			                       gaim_account_get_int(account, "xfer_port", YAHOO_XFER_PORT),
++			                       yahoo_sendfile_connected, xfer) == -1)
++			{
++				gaim_notify_error(gc, NULL, _("File Transfer Aborted"),
++				                 _("Unable to establish file descriptor."));
++				gaim_xfer_cancel_remote(xfer);
++			}
+ 		}
+ 	} else {
+ 		xfer->fd = gaim_proxy_connect(account, xfer_data->host, xfer_data->port,
+@@ -247,7 +254,7 @@
+ }
+ 
+ 
+-size_t yahoo_xfer_read(char **buffer, GaimXfer *xfer)
++ssize_t yahoo_xfer_read(char **buffer, GaimXfer *xfer)
+ {
+ 	gchar buf[4096];
+ 	ssize_t len;
+@@ -308,7 +315,7 @@
+ 	return len;
+ }
+ 
+-size_t yahoo_xfer_write(const char *buffer, size_t size, GaimXfer *xfer)
++ssize_t yahoo_xfer_write(const char *buffer, size_t size, GaimXfer *xfer)
+ {
+ 	ssize_t len;
+ 	struct yahoo_xfer_data *xd = xfer->data;
