@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.9.ebuild,v 1.5 2003/07/01 20:36:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.9.ebuild,v 1.6 2003/07/01 20:51:46 aliz Exp $
 
 S=${WORKDIR}/${P}
 IUSE=""
@@ -8,7 +8,7 @@ DESCRIPTION="Package maintenance system for Debian (no start-stop-dameon, dselec
 SRC_URI="http://ftp.debian.org/debian/pool/main/d/dpkg/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://packages.debian.org/unstable/base/dpkg.html"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 SLOT="0"
 
