@@ -4,4 +4,4 @@ MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 172cd4695ba49417dc9c6c62d10400b8 files/iiimsf-11.4.1467-gentoo.diff 2283
 MD5 6e7144823c257fd7ec97768e6cb835ef files/htt.conf 4765
 MD5 5db19d1b3aa08ebd6259e5ef6a882b1d files/digest-iiimsf-11.4.1467 71
-MD5 9b28a95add32ff5a71d6362818b5efa0 files/iiim.initd 448
+MD5 4da5512a7540aec500349265848f41c6 files/iiim.initd 443

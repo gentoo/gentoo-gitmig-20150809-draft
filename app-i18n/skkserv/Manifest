@@ -5,5 +5,5 @@ MD5 1df3aea278eee9b2092c36820697e769 skkserv-9.6-r3.ebuild 1000
 MD5 f7ae492754c0a99cb5a29b6473492494 files/skkserv-9.6-inet_ntoa-gentoo.patch 334
 MD5 e024045d7d565a14129a2eaf6dc17b75 files/digest-skkserv-9.6-r2 60
 MD5 e024045d7d565a14129a2eaf6dc17b75 files/digest-skkserv-9.6-r3 60
-MD5 95787af84c6ab5564abccc1ed695e2d2 files/skkserv.initd 459
+MD5 36b940282ed635018208071ac6adde5e files/skkserv.initd 454
 MD5 70c1dee7241cbbc22e632050f07e8f4e files/skkserv-9.6-segfault-gentoo.patch 479
