@@ -4,13 +4,11 @@ Hash: SHA1
 MD5 9dae11ba772c57002aed838ea34d3b25 ChangeLog 2780
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7802909919727d30a6cd8c252b0821c3 xqf-1.0.ebuild 1475
-MD5 b3611157661e74f7241dbdf5ce02d871 xqf-0.9.14.ebuild 1323
 MD5 ea7e5fe663f7343fbbc6607a0d0a6895 files/digest-xqf-1.0 59
-MD5 c23d16df77b63f237b7c00bf208440b8 files/digest-xqf-0.9.14 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBIWJIHTu7gpaalycRApAtAKDIuciu1F0aihdc8NT6BkpfbQp5tACggtQm
-m/cspc2SgBYYqvpE5O6+chs=
-=u9tr
+iD8DBQFBy8Z6roRuSHgZdywRAr2uAJ4o9rgkrgxDWm/AXT9rUZgfLbi3ngCbBsZJ
+IpKu8mna0eC8lB/m6s1ZgiQ=
+=yKaf
 -----END PGP SIGNATURE-----
