@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.35.ebuild,v 1.1 2004/09/29 14:27:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.35.ebuild,v 1.2 2004/09/30 19:46:47 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -68,7 +68,7 @@ if [ -z "${XMLTV_OPTS}" ] || has tv_grab_uk_rt ${XMLTV_OPTS} ; then
 fi
 
 if [ -z "${XMLTV_OPTS}" ] || has tv_grab_bleb ${XMLTV_OPTS} ; then
-	newdepend dev-perl/Archive-Zip dev-perl/IO-Stringy
+	newdepend dev-perl/Archive-Zip dev-perl/IO-stringy
 fi
 
 if [ -z "${XMLTV_OPTS}" ] || has tv_grab_na_dd ${XMLTV_OPTS} ; then
