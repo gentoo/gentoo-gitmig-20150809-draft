@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.137 2004/12/18 22:29:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.138 2004/12/23 19:53:31 absinthe Exp $
+
+  23 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
+  kdemultimedia-3.3.2.ebuild:
+  Omit 64-bit patch for amd64 to close bug 74961.
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org>
   -files/kdemultimedia-3.3.2-64bit.patch, +files/kdemultimedia-64bit.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.2.ebuild,v 1.3 2004/12/18 22:29:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.2.ebuild,v 1.4 2004/12/23 19:53:31 absinthe Exp $
 
 inherit kde-dist flag-o-matic eutils
 
@@ -25,7 +25,10 @@ DEPEND="~kde-base/kdebase-${PV}
 src_unpack() {
 	kde_src_unpack
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-64bit.patch
+	# bug 74961
+	if [ "${ARCH}" != "amd64" ] ; then
+		epatch ${FILESDIR}/${PN}-64bit.patch
+	fi
 }
 
 src_compile() {
