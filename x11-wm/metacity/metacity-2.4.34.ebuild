@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.34.ebuild,v 1.1 2003/02/05 22:54:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.34.ebuild,v 1.2 2003/02/07 16:05:45 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="Small gtk2 WindowManager"
 HOMEPAGE="http://people.redhat.com/~hp/metacity/"
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 # sharp gtk dep is for a certain speed patch
 RDEPEND="virtual/x11

@@ -1,7 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.23 2003/02/05 22:54:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.24 2003/02/07 16:05:45 agriffis Exp $
 
+  07 Feb 2003; Aron Griffis <agriffis@gentoo.org> metacity-2.4.34.ebuild :
+  Add ~alpha to KEYWORDS
 
 *metacity-2.4.34 (05 Feb 2003)
   
