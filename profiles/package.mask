@@ -412,9 +412,6 @@ gnome-apps/gnapster
 app-doc/gmanedit
 app-doc/tkinfo
 
-# Not sure what to do with this:
-dev-libs/libiconv
-
 # Fails with new Java scheme (karltk) 
 =net-www/tomcat-3.2.2
 
