@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/noxmms
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/ChangeLog,v 1.1 2004/01/25 04:33:51 eradicator Exp $
+
+*noxmms-1.2.7 (24 Jan 2004)
+
+  24 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org> noxmms-1.2.7.ebuild:
+  ebuild submitted by Mathias Gumz <gumz@cs.uni-magdeburg.de> in bug #28950.
+  noxmms is a gui-less (command line only) version of xmms
+
