@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.4 2003/07/17 00:14:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.5 2003/11/01 08:00:15 brandy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TkMan man and info page browser"
@@ -18,6 +18,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 	patch -p0 <${FILESDIR}/${PF}-gentoo.diff || die
+
+	# A workaround until app-text/rman-3.1 is stable
+	has_version '>=sys-apps/groff-1.18' \
+		has_version '<app-text/rman-3.1' \
+		&& sed -i -e "s:groff -te -Tlatin1:groff -P -c -te -Tlatin1:" ${S}/Makefile
+
 }
 
 src_compile() {
