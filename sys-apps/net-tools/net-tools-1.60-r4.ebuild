@@ -1,28 +1,33 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.15 2003/01/18 18:20:38 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.16 2003/02/10 09:58:08 seemant Exp $
 
 IUSE="nls build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"
-SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2"
+SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
+	mirror://gentoo/${P}-gentoo-extra.tar.bz2
+	http://cvs.gentoo.org/~seemant/${P}-gentoo-extra.tar.bz2"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
-KEYWORDS="x86 ppc sparc alpha mips"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc alpha mips"
 
-DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
+
+	PATCHDIR=${WORKDIR}/${P}-gentoo
+
 	unpack ${A}
 	cd ${S}
-	cp ${FILESDIR}/config.h .
-	cp ${FILESDIR}/config.make .
+	cp ${PATCHDIR}/config.h .
+	cp ${PATCHDIR}/config.make .
 	touch config.{h,make}		#sync timestamps
 	cp Makefile Makefile.orig
-	sed -e "s/-O2 -Wall -g/${CFLAGS}/" Makefile.orig > Makefile
+	sed "s:-O2 -Wall -g:${CFLAGS}:" Makefile.orig > Makefile
 	cd man
 	cp Makefile Makefile.orig
 	sed -e "s:/usr/man:/usr/share/man:" Makefile.orig > Makefile
@@ -39,8 +44,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# Changing "emake" to "make" closes half of bug #820; configure is run from *inside*
-	# the Makefile, sometimes breaking parallel makes (if ./configure doesn't finish first) 
+	# Changing "emake" to "make" closes half of bug #820; 
+	# configure is run from *inside* the Makefile, sometimes
+	# breaking parallel makes (if ./configure doesn't finish first) 
 	
 	make || die	
 

@@ -1,14 +1,22 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.12 2003/02/09 02:08:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.13 2003/02/10 09:58:08 seemant Exp $
+
+*net-tools-1.60-r5 (16 Jul 2002)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> net-tools-1.60-r4.ebuild
+  net-tools-1.60-r5.ebuild :
+
+  Many things -- moved the files and patches from files/ subdirectory into a
+  tarball and sent it to the mirrors.  Also, changed sed expression
+  delimiters from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> net-tools-1.60-r5.ebuild :
   Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*net-tools-1.60-r5 (16 Jul 2002)
-
   19 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Under heavy loads the timestamps on the config files may cause
   the config process to be re-run requiring user input

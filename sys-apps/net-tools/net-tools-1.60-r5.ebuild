@@ -1,45 +1,49 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r5.ebuild,v 1.11 2003/02/09 02:08:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r5.ebuild,v 1.12 2003/02/10 09:58:08 seemant Exp $
 
 IUSE="nls build"
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"
-SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2"
+SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
+	mirror://gentoo/${P}-gentoo-extra.tar.bz2
+	http://cvs.gentoo.org/~seemant/${P}-gentoo-extra.tar.bz2"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 alpha hppa"
 
-DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
+
+	PATCHDIR=${WORKDIR}/${P}-gentoo
+
 	unpack ${A}
 	
 	cd ${S}
 	# some redhat patches
-	epatch ${FILESDIR}/net-tools-1.57-bug22040.patch
-	epatch ${FILESDIR}/net-tools-1.60-manydevs.patch
-	epatch ${FILESDIR}/net-tools-1.60-miiioctl.patch
+	epatch ${PATCHDIR}/net-tools-1.57-bug22040.patch
+	epatch ${PATCHDIR}/net-tools-1.60-manydevs.patch
+	epatch ${PATCHDIR}/net-tools-1.60-miiioctl.patch
 	
-	cp ${FILESDIR}/net-tools-1.60-config.h config.h
-	cp ${FILESDIR}/net-tools-1.60-config.make config.make
+	cp ${PATCHDIR}/net-tools-1.60-config.h config.h
+	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
 	
 	touch config.{h,make}		# sync timestamps
 	
 	cp Makefile Makefile.orig
-	sed -e "s/-O2 -Wall -g/${CFLAGS}/" Makefile.orig > Makefile
+	sed -e "s:-O2 -Wall -g:${CFLAGS}:" Makefile.orig > Makefile
 	
 	cd man
 	cp Makefile Makefile.orig
 	sed -e "s:/usr/man:/usr/share/man:" Makefile.orig > Makefile
 	
-	cp -f ${FILESDIR}/ether-wake.c ${S}
+	cp -f ${PATCHDIR}/ether-wake.c ${S}
 
 	if [ -z "`use nls`" ]
 	then
@@ -53,8 +57,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# Changing "emake" to "make" closes half of bug #820; configure is run from *inside*
-	# the Makefile, sometimes breaking parallel makes (if ./configure doesn't finish first) 
+	# Changing "emake" to "make" closes half of bug #820; 
+	# configure is run from *inside* the Makefile, sometimes 
+	# breaking parallel makes (if ./configure doesn't finish first) 
 	make || die	
 
 	if [ "`use nls`" ]
@@ -89,4 +94,3 @@ src_install() {
 		rm -f ${D}/bin/{ypdomainname,nisdomainname}
 	fi
 }
-

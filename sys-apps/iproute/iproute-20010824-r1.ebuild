@@ -1,17 +1,23 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.8 2002/12/09 04:37:25 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.9 2003/02/10 09:58:08 seemant Exp $
+
+inherit eutils
+
+IUSE=""
 
 S=${WORKDIR}/iproute2
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
-SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/iproute2-2.4.7-now-ss010824.tar.gz"
+SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/iproute2-2.4.7-now-ss010824.tar.gz
+	mirror://gentoo/iproute-debian-8-htb3.diff.bz2
+	http://cvs.gentoo.org/~seemant/iproute-debian-8-htb3.diff.bz2"
 HOMEPAGE="http://www.worldbank.ro/ip-routing/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
-DEPEND="virtual/linux-sources"
-
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc"
+
+DEPEND="virtual/linux-sources"
 
 pkg_setup() {
 	# Make sure kernel headers are really available
@@ -30,20 +36,21 @@ src_unpack() {
 	# other parts of the source tree are still dependent upon having a kernel
 	# source tree in /usr/src/linux.
 	
-	patch -p1 < ${FILESDIR}/iproute-debian-8-htb3.diff || die
+	epatch ${WORKDIR}/iproute-debian-8-htb3.diff
 	
 	# why was this commented out? were the programs segfaulting/not working?
 	# they seem ok here when i compile with optimisations, so im reenabling
 	# this patch. if theres problems, will glady change back. ~woodchip
 
 	cp Makefile Makefile.orig
-	sed -e "s/-O2/${CFLAGS}/g" \
-	    -e "s/-Werror//g" Makefile.orig > Makefile
+	sed -e "s:-O2:${CFLAGS}:g" \
+	    -e "s:-Werror::g" Makefile.orig > Makefile
 
 	# this next thing is required to enable diffserv (ATM support doesn't compile right now)
 	
 	cp Config Config.orig
-	sed -e 's/DIFFSERV=n/DIFFSERV=y/g' -e 's/ATM=y/ATM=n/g' Config.orig > Config
+	sed -e 's:DIFFSERV=n:DIFFSERV=y:g' \
+		-e 's:ATM=y:ATM=n:g' Config.orig > Config
 }
 
 src_compile() {
