@@ -1,6 +1,15 @@
 # ChangeLog for net-www/raggle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.8 2004/06/25 01:10:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.9 2004/07/04 15:01:42 usata Exp $
+
+*raggle-0.3.1 (04 Jul 2004)
+
+  04 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/raggle-destdir-gentoo.diff, -raggle-0.2.2.ebuild,
+  -raggle-0.2.4.ebuild, -raggle-0.2.5.ebuild, raggle-0.3.0.ebuild,
+  +raggle-0.3.1.ebuild:
+  Version bumped. Ebuild submitted by Michael Kohl <citizen428@cargal.org>,
+  closing bug #54924
 
   12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> raggle-0.2.2.ebuild,
   raggle-0.2.4.ebuild, raggle-0.2.5.ebuild, raggle-0.3.0.ebuild:
