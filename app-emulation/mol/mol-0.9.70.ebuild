@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.8 2004/08/19 23:52:17 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.9 2004/09/30 23:17:53 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -49,7 +49,8 @@ src_compile() {
 
 	# initialize all needed build-files
 	./autogen.sh
-
+	#workaround
+	./configure --disable-png
 	emake defconfig || die "This is a ppc-only package (time to buy that iBook, no?)"
 
 	sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config
