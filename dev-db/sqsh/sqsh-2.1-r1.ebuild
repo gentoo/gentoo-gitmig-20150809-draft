@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.6 2004/06/24 22:01:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.7 2004/06/29 17:45:35 agriffis Exp $
 
 DESCRIPTION="Replacement for the venerable 'isql' program supplied by Sybase."
 HOMEPAGE="http://www.sqsh.org/"
@@ -9,7 +9,7 @@ DEPEND="dev-db/freetds
 	readline? ( sys-libs/readline )
 	X? ( virtual/x11 )
 	motif? ( x11-libs/openmotif )
-	virtual/glibc"
+	virtual/libc"
 SLOT="0"
 SRC_URI="http://www.sqsh.org/${P}-src.tar.gz"
 KEYWORDS="x86 ~amd64"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.7 2004/06/24 22:02:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.8 2004/06/29 17:47:24 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64 ~sparc"
 IUSE="qt gnome"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	gnome? ( gnome-base/gnome-libs )
