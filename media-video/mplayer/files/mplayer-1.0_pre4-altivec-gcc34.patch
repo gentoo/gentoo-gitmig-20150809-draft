@@ -1,0 +1,15 @@
+diff -ruN MPlayer-1.0pre4.orig/postproc/swscale_altivec_template.c MPlayer-1.0pre4/postproc/swscale_altivec_template.c
+--- MPlayer-1.0pre4.orig/postproc/swscale_altivec_template.c	2004-06-17 12:44:17.139771408 +0200
++++ MPlayer-1.0pre4/postproc/swscale_altivec_template.c	2004-06-17 12:45:47.890975128 +0200
+@@ -27,9 +27,9 @@
+   (vector unsigned int)(19, 19, 19, 19);
+ #else
+ static const vector signed int vzero =
+-  (vector signed int){0,0,0,0};
++  (vector const signed int){0,0,0,0};
+ static const vector unsigned int altivec_vectorShiftInt19 =
+-  (vector unsigned int){19, 19, 19, 19};
++  (vector const unsigned int){19, 19, 19, 19};
+ 
+ #endif
+ 

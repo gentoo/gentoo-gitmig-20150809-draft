@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.146 2004/06/16 20:13:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.147 2004/06/17 16:21:07 lu_zero Exp $
+
+  17 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/mplayer-1.0_pre4-altivec-gcc34.patch, mplayer-1.0_pre4-r4.ebuild:
+  gcc-3.4 altivec fix
 
   16 Jun 2004; Martin Schlemmer <azarah@gentoo.org>
   mplayer-1.0_pre4-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.10 2004/06/16 20:13:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.11 2004/06/17 16:21:07 lu_zero Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -112,7 +112,7 @@ src_unpack() {
 
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
-
+	epatch ${FILESDIR}/${P}-altivec-gcc34.patch
 	# fixes for mga driver with kernel 2.6
 	if use matrox; then
 		get_kernel_info
