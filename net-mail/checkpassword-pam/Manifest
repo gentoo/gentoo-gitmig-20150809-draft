@@ -1,6 +1,16 @@
-MD5 309e123a9fdc26ec6ae20896bd96ffec ChangeLog 898
-MD5 f38f6c5be471388124bda19be9cd0024 checkpassword-pam-0.96.ebuild 632
-MD5 2c9e9ad431c8c7670b67b8c250bdd7d4 checkpassword-pam-0.97.ebuild 590
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44982697f8c6f01e86b18d470c1a6b2e ChangeLog 1023
+MD5 efc9c01a0e2b08f4153b41229f6d8c6f checkpassword-pam-0.97.ebuild 588
+MD5 fa22c565811f8c0bf022a9cefdef2787 checkpassword-pam-0.96.ebuild 628
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 547c57be8e5d7e6cfa45ffe3a093fda9 files/digest-checkpassword-pam-0.96 73
 MD5 09e19de544d6677742c84fb71f7c4d1c files/digest-checkpassword-pam-0.97 73
+MD5 547c57be8e5d7e6cfa45ffe3a093fda9 files/digest-checkpassword-pam-0.96 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBvigoQlM6RnzZP+IRAuaoAJ9B/DTPK96+AZwrl7nx7HQvWT65ugCfYDQ0
+hCyiKGD4eaCJSLGNXLbY9o0=
+=LGq3
+-----END PGP SIGNATURE-----
