@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.14 2004/06/24 22:26:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.15 2004/06/27 20:11:46 agriffis Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -121,7 +121,7 @@ src_install() {
 # From sys-apps/pam-login now
 #	insopts -m0644 ; doins ${FILESDIR}/login.defs
 
-	if [ `use pam` ] ; then
+	if use pam ; then
 		insinto /etc/pam.d ; insopts -m0644
 		for x in ${FILESDIR}/pam.d/*
 		do
@@ -149,7 +149,7 @@ src_install() {
 		[ -f ${x} ] && doman ${x}
 	done
 
-	if [ ! `use pam` ] ; then
+	if ! use pam ; then
 		# Dont install the manpage, since we dont use
 		# login with shadow
 		rm -f ${D}/usr/share/man/man1/login.*
