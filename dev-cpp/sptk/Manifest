@@ -1,6 +1,16 @@
-MD5 23b884c603f882c931c051cca89c6a24 ChangeLog 982
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a14ea70026f828e8510de801d092e6b2 ChangeLog 1113
 MD5 623669b964009bb2a2adfc367f12d072 metadata.xml 334
-MD5 2ee4204e428d4ba552dccc45b00bc90b sptk-2.2.ebuild 1080
-MD5 1148be37c8ee06b23dbc0e19de1b798d sptk-2.2.1.ebuild 1081
-MD5 ca482c4334f36836fb9377c2009ce95f files/digest-sptk-2.2 58
+MD5 27793e9f85264bac1dc0a43adc3daf8f sptk-2.2.ebuild 1086
+MD5 707572a6dc747e2175751580e7a3db78 sptk-2.2.1.ebuild 1094
 MD5 005ad61b10481108e76f80f21470a05d files/digest-sptk-2.2.1 60
+MD5 ca482c4334f36836fb9377c2009ce95f files/digest-sptk-2.2 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBj+svugEuf3OQ0akRAq6SAKCIM5SiGaIDbhrelJfodfw6RfVCeACcDhg2
+PNGBUsm4vZx96O9xgzi3zJM=
+=iCdn
+-----END PGP SIGNATURE-----

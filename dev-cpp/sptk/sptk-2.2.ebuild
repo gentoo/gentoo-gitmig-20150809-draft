@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-2.2.ebuild,v 1.1 2004/08/16 02:02:40 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-2.2.ebuild,v 1.2 2004/11/08 21:54:41 kloeri Exp $
 
 IUSE="fltk odbc"
 
@@ -9,7 +9,7 @@ SRC_URI="http://sptk.tts-sf.com/sptk-${PV}.tgz"
 HOMEPAGE="http://sptk.tts-sf.com"
 
 SLOT="2"
-LICENSE="FLTK | GPL-2"
+LICENSE="|| ( FLTK GPL-2 )"
 KEYWORDS="-* ~x86 ~sparc ~mips"
 
 DEPEND="fltk? ( x11-libs/fltk )
