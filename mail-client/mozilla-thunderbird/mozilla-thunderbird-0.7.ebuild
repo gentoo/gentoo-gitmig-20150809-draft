@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.ebuild,v 1.2 2004/06/17 23:25:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.ebuild,v 1.3 2004/06/18 14:52:08 agriffis Exp $
 
 IUSE="gnome gtk2 ipv6 ldap crypt xinerama"
 
@@ -44,8 +44,7 @@ RDEPEND="virtual/x11
 	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	dev-lang/perl"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/mozilla
 
@@ -279,9 +278,18 @@ src_install() {
 	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/thunderbird-icon.png
-		insinto /usr/share/gnome/apps/Internet
+		# Fix bug 54179: Install .desktop file into /usr/share/applications
+		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+		insinto /usr/share/applications
 		doins ${FILESDIR}/icon/mozillathunderbird.desktop
 	fi
+
+	# Normally thunderbird-0.7 must be run as root once before it can
+	# be run as a normal user.  Drop in some initialized files to
+	# avoid this.
+	einfo "Extracting thunderbird-${PV} initialization files"
+	tar xjpf ${FILESDIR}/thunderbird-${PV}-init.tar.bz2 \
+		-C ${D}/usr/lib/MozillaThunderbird
 }
 
 pkg_preinst() {
@@ -292,12 +300,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaThunderbird"
-
-	# Normally thunderbird-0.7 must be run as root once before it can
-	# be run as a normal user.  Drop in some initialized files to
-	# avoid this.
-	einfo "Extracting thunderbird-${PV} initialization files"
-	cd ${MOZILLA_FIVE_HOME} && tar xjpf ${FILESDIR}/thunderbird-${PV}-init.tar.bz2
 
 	# Fix permissions on misc files
 	find ${MOZILLA_FIVE_HOME}/ -perm 0700 -exec chmod 0755 {} \; || :
