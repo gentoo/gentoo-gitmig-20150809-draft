@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.1.ebuild,v 1.4 2004/06/01 04:48:58 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.2.ebuild,v 1.1 2004/06/01 04:48:58 rizzo Exp $
 
 use debug && inherit debug
 
@@ -10,10 +10,10 @@ HOMEPAGE="http://guifications.sourceforge.net/gaim-xmms-remote/"
 SRC_URI="mirror://sourceforge/guifications/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="debug"
 
-DEPEND="~net-im/gaim-0.77
+DEPEND="~net-im/gaim-0.78
 		media-sound/xmms"
 #RDEPEND=""
 
