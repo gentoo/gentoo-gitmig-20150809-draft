@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.165 2004/07/22 19:35:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.166 2004/07/22 19:56:54 chriswhite Exp $
+
+  23 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5.ebuild:
+  Fixed live dependancies.  Fixes Bug #57963.
 
   23 Jul 2004; Chris White <chriswhite@gentoo.org>
   -files/mga-kernel-2.6.patch, +files/mplayer-1.0_pre4-mga-kernel2.6.patch,
