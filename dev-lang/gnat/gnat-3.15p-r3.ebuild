@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.7 2003/12/29 21:49:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.8 2003/12/30 14:55:19 dholm Exp $
 
 inherit gnat
 
@@ -156,7 +156,7 @@ src_install() {
 	rm -f libgnarl.so
 	rm -f liblibgnat.so
 	ln -sf libgnarl-3.15.so libgnarl.so
-	ln -sf libgnat-3.15p.so libgnat.so
+	ln -sf libgnat-3.15.so libgnat.so
 
 	# Install documentation and examples
 	cd ${WORKDIR}/${P}-src
