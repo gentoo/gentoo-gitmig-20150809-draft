@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r2.ebuild,v 1.16 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r2.ebuild,v 1.17 2004/04/11 17:30:05 usata Exp $
 
 IUSE="java guile python tcltk ruby perl"
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.2
 	python? ( >=dev-lang/python-2.0 )
 	java? ( virtual/jdk )
-	ruby? ( >=dev-lang/ruby-1.6.1 )
+	ruby? ( virtual/ruby )
 	guile? ( >=dev-util/guile-1.4 )
 	tcltk? ( >=dev-lang/tk-8.3 )
 	perl? ( >=dev-lang/perl-5.6.1 )"
