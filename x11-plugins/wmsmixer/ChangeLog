@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmsmixer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.2 2003/02/12 09:43:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.3 2003/06/04 23:38:57 robh Exp $
+
+  05 Jun 2003; robh <robh@gentoo.org> files/makefile.diff:
+  corrected diff. thanks to: Georgi Georgiev <chutz@chubaka.net>
+  closes #16385.
 
 *wmsmixer-0.5 (04 Oct 2002)
 
