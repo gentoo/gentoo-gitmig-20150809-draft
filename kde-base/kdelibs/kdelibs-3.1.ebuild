@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.2 2002/11/20 14:06:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.3 2002/11/27 10:13:19 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -63,9 +63,7 @@ src_compile() {
 	use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
 	
-	[ "$ARCH" != "ppc" ] && \
-		[ "$ARCH" != "sparc" ] && [ "$ARCH" != "sparc64" ] && \
-		myconf="$myconf --enable-fast-malloc=full"
+	[ "$ARCH" == "x86" ] && myconf="$myconf --enable-fast-malloc=full"
 	
 	kde_src_compile configure make
 
