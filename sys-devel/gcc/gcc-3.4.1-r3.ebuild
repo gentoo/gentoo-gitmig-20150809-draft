@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.8 2004/11/08 00:27:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.9 2004/12/05 20:37:40 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64"
 
@@ -194,12 +194,7 @@ STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 # $PV, as people upgrading to new gcc layout will not have
 # their old gcc unmerged ...
 # GCC 3.4 introduces a new version of libstdc++
-if [ "${CHOST}" == "${CCHOST}" ]
-then
-	SLOT="${MY_PV}"
-else
-	SLOT="${CCHOST}-${MY_PV}"
-fi
+SLOT="${CTARGET:-${CHOST}}-${MY_PV}"
 
 has_lib64() {
 	use amd64 && return 0

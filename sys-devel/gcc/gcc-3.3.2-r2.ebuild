@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r2.ebuild,v 1.15 2004/11/21 16:58:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r2.ebuild,v 1.16 2004/12/05 20:37:40 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -103,14 +103,7 @@ KEYWORDS="-* ~x86 ~mips ~sparc amd64 -hppa alpha ia64"
 # are not cross compiling, than we want SLOT to only contain
 # $PV, as people upgrading to new gcc layout will not have
 # their old gcc unmerged ...
-if [ "${CHOST}" == "${CCHOST}" ]
-then
-#	SLOT="${MY_PV}"
-	SLOT="3.3"
-else
-#	SLOT="${CCHOST}-${MY_PV}"
-	SLOT="${CCHOST}-3.3"
-fi
+SLOT="${CTARGET:-${CHOST}}-3.3"
 
 # We need the later binutils for support of the new cleanup attribute.
 # 'make check' fails for about 10 tests (if I remember correctly) less
