@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.1 2003/12/29 19:50:14 hanno Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.2 2004/02/02 03:12:07 avenj Exp $
+
+  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> libgpg-error-0.6.ebuld :
+  AMD64 keywords.
 
 *libgpg-error-0.6 (29 Dec 2003)
 

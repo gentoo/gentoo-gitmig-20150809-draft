@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.20 2004/01/01 16:22:26 hanno Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.21 2004/02/02 03:13:49 avenj Exp $
+
+  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> libgcrypt-1.1.91.ebuild :
+  AMD64 keywords.
 
 *libgcrypt-1.1.91 (01 Jan 2004)
 
