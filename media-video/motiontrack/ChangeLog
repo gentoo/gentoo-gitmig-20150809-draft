@@ -1,6 +1,10 @@
 # ChangeLog for media-video/motiontrack
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/ChangeLog,v 1.4 2004/10/20 00:24:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/ChangeLog,v 1.5 2004/10/20 00:34:41 chriswhite Exp $
+
+  19 Oct 2004; Chris White <chriswhite@gentoo.org> motiontrack-0.1.0.ebuild,
+  motiontrack-0.1.2.ebuild:
+  Fixed some QA issues.
 
 *motiontrack-0.1.2 (19 Oct 2004)
 
