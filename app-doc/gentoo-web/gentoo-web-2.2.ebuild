@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.57 2002/05/15 18:36:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.58 2002/05/15 19:09:25 g2boojum Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	python python/gendevlistxml.py txt/devlist.txt xml/devlist.xml
+	python python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml
 }
 
 src_install() {
@@ -46,7 +46,7 @@ src_install() {
 	insinto ${WEBROOT}/doc
 	cd ${S}
 	local x
-	for x in mirroring gentooppc-quickstart use-howto gentoo-security rc-scripts java eclass-howto build desktop xml-guide portage-manual portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial shots ebuild-submit altinstall uml nano-basics-guide build-fr desktop-fr portage-manual-fr portage-user-fr faq-fr nvidia_tsg-fr altinstall-fr rc-scripts-fr devlist
+	for x in mirroring gentooppc-quickstart use-howto gentoo-security rc-scripts java eclass-howto build desktop xml-guide portage-manual portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial shots ebuild-submit altinstall uml nano-basics-guide build-fr desktop-fr portage-manual-fr portage-user-fr faq-fr nvidia_tsg-fr altinstall-fr rc-scripts-fr
 	do
 		xsltproc $TEMPLATE xml/${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
 	done
@@ -109,6 +109,7 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || die
 	python python/genpkgxml.py ${T}/main-packages.xml || die
 	xsltproc $TEMPLATE ${T}/main-packages.xml > ${D}${WEBROOT}/index-packages.html || die
+	xsltproc $TEMPLATE xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
 	doins css/main-new.css css/resume.css
 	
 	#install XSL for later use
