@@ -1,34 +1,29 @@
 # ChangeLog for net-www/netscape-communicator
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.7 2003/02/12 08:51:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.8 2003/03/02 04:33:48 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*netscape-communicator-4.79-r1 (19 August 2002)
+*netscape-communicator-4.79-r1 (19 Aug 2002)
 
-  19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, netscape-communicator-4.79-r1.ebuild :
+  01 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed libflash plugin and depended on newer netscape-flash package to fix #15751.
 
+  19 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, netscape-communicator-4.79-r1.ebuild :
   Added -ppc to the keywords.
 
 *netscape-communicator-4.79-r1 (28 Apr 2002)
 
-  28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, 
-   netscape-communicator-4.79-r1.ebuild  :
-   
+  28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, netscape-communicator-4.79-r1.ebuild  :
   When unpacking .nif files, make sure to use --no-same-owner
   so they are unpacked as root.
   
 *netscape-communicator-4.79 (9 Apr 2002)
 
-  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, 
-   netscape-communicator-4.79.ebuild  :
-   
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, netscape-communicator-4.79.ebuild  :
   The grand re-naming of netscape to netscape-communicator
   
 *netscape-4.78 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

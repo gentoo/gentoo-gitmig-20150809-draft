@@ -1,24 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.79-r1.ebuild,v 1.8 2003/02/13 15:40:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.79-r1.ebuild,v 1.9 2003/03/02 04:34:53 vapier Exp $
 
 S=${WORKDIR}/navigator-v479.x86-unknown-linux2.2
 DESCRIPTION="Netscape Navigator 4.79"
 SRC_URI="ftp://ftp.netscape.com/pub/communicator/english/4.79/unix/supported/linux22/navigator_standalone/navigator-v479-us.x86-unknown-linux2.2.tar.gz"
 HOMEPAGE="http://developer.netscape.com/support/index.html"
-RDEPEND=">=sys-libs/lib-compat-1.0"
+
 SLOT="0"
-KEYWORDS="x86 -ppc sparc "
+KEYWORDS="x86 -ppc sparc"
 LICENSE="NETSCAPE"
+
+RDEPEND=">=sys-libs/lib-compat-1.0
+	net-www/netscape-flash"
 
 src_unpack() {
 	unpack ${A} || die
 	ls -la ${S}
-#        chown -R root:root ${S}
+#	chown -R root:root ${S}
 }
 
 src_install() {								  
-	cd ${S}
 	dodir /opt/netscape
 	dodir /opt/netscape/java/classes
 	dodir /usr/X11R6/bin
@@ -31,8 +33,8 @@ src_install() {
 	cp ${FILESDIR}/netscape ${D}/usr/X11R6/bin/netscape
 	rm ${D}/opt/netscape/netscape-dynMotif
 	rm ${D}/opt/netscape/libnullplugin-dynMotif.so
+	rm ${D}/opt/netscape/plugins/libflashplayer.so
 	insinto /usr/X11R6/bin
 	doins ${FILESDIR}/netscape 
 	chmod +x ${D}/usr/X11R6/bin/netscape
 }
-
