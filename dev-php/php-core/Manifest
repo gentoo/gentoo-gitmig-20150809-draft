@@ -1,2 +1,4 @@
-MD5 77c07a102e1fac4a4690256c1b9cf262 php-core-4.3.4.ebuild 1151
+MD5 a5576a61f0c8426208339092087b7e9f php-core-4.3.4.ebuild 1939
+MD5 4363b8ada7f3f18466fa896a1fefc975 ChangeLog 375
+MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 85d30f5e2707a53bd35b201a29371f05 files/digest-php-core-4.3.4 208
