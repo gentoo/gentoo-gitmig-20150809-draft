@@ -1,8 +1,14 @@
 # ChangeLog for app-i18n/kinput2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.7 2002/11/25 13:41:35 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.8 2002/12/03 08:30:58 nakano Exp $
+
 
 *kinput2-3.1 (25 Nov 2002)
+  03 Dec 2002; Masatomo Nakano <nakano@gentoo.org> : kinput2-3.1.ebuild 
+	ChangeLogs
+
+  Changed "~x86" to "x86".
+
   25 Nov 2002; Masatomo Nakano <nakano@gentoo.org> : kinput2-3.1.ebuild 
 	files/digest-kinput2-3.1 files/kinput2-3.1-gentoo.diff ChangeLogs
 
