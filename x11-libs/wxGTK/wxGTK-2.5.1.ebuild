@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1.ebuild,v 1.5 2004/07/15 00:48:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1.ebuild,v 1.6 2004/07/22 18:04:50 pythonhead Exp $
 
-DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
-SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
+DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
+SRC_URI="mirror://sourceforge/wxwidgets/${P}.tar.bz2"
 HOMEPAGE="http://www.wxwindows.org/"
 
 LICENSE="wxWinLL-3"
@@ -24,10 +24,10 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	gtk2? ( dev-util/pkgconfig )"
 
-# Note 1: Gettext is not runtime dependency even if nls? because wxWindows
+# Note 1: Gettext is not runtime dependency even if nls? because wxWidgets
 #         has its own implementation of it
 # Note 2: We disable unicode support because otherwise it breaks with
-#         some poorly implemented wxWindows apps like xmule and lmule.
+#         some poorly implemented wxWidgets apps like xmule and lmule.
 # Note 3: PCX support is enabled if the correct libraries are detected.
 #         There is no USE flag for this.
 
@@ -41,10 +41,10 @@ src_compile() {
 	myconf="${myconf} `use_enable debug`"
 
 	# here we disable unicode support even thought gtk2 supports it
-	# because too many apps just don't follow the wxWindows guidelines
+	# because too many apps just don't follow the wxWidgets guidelines
 	# for unicode support.
 	#
-	# http://www.wxwindows.org/manuals/2.4.0/wx458.htm#unicode
+	# http://www.wxwidgets.org/manuals/2.4.0/wx458.htm#unicode
 	#
 	# bug #20116 - liquidx@gentoo.org (07 May 2003)
 
