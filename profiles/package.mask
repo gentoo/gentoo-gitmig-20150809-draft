@@ -406,3 +406,8 @@ dev-lang/tcl-tk
 # Masking avi-xmms because it will not compile against avifile-0.6, instead
 # xmms has a hacked native support in it now for avi playing against avifile-0.6
 <media-video/avifile-0.6
+
+#seemant@gentoo.org 19 Mar 2002
+# Masking gkrellm-seti, because it does not compile with the new gkrellm,
+# have contacted the author for a patch
+=x11-misc/gkrellm-seti-0.7.0
