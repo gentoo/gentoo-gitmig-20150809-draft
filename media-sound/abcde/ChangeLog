@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/abcde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.14 2004/06/24 23:48:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.15 2004/08/19 08:00:06 dholm Exp $
+
+  19 Aug 2004; David Holm <dholm@gentoo.org> abcde-2.1.19.ebuild:
+  Added to ~ppc.
 
   21 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> abcde-2.1.19.ebuild:
   keyworded sparc, closes #48098, thanks to Raphael Assenat

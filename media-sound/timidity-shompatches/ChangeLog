@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-shompatches
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.1 2004/07/21 09:11:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.2 2004/08/19 07:55:50 dholm Exp $
+
+  19 Aug 2004; David Holm <dholm@gentoo.org>
+  timidity-shompatches-19960409.ebuild:
+  Added to ~ppc.
 
 *timidity-shompatches-19960409 (21 Jul 2004)
 
