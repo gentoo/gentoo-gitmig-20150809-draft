@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-0.3.ebuild,v 1.2 2005/03/11 22:05:59 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-0.4.ebuild,v 1.1 2005/03/14 16:40:21 ka0ttic Exp $
 
 inherit bash-completion
 
@@ -26,7 +26,7 @@ src_compile() {
 src_install() {
 	keepdir /var/lib/herdstat
 	make DESTDIR="${D}" install || die "make install failed"
-	dobashcompletion ${FILESDIR}/${PN}.bashcomp
+	dobashcompletion bashcomp
 	dodoc AUTHORS ChangeLog README TODO NEWS
 }
 
