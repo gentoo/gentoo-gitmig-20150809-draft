@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 0daa7eb80d7ca5db5e097377ce84b3e6 ChangeLog 681
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 b0565704508a495701eb129a6a40a0d2 rpy-0.3.5.ebuild 733
+MD5 088d2be524d0a4793861f6738f6d0c4e rpy-0.3.5.ebuild 732
 MD5 179eb32e38a74c76d927b363d99e7327 files/digest-rpy-0.3.5 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBc836Rkyva5PS18kRAnEYAKC60k1H9uTpq53FfBYOMspWYs5WsgCgg0xB
-bXp5s37hdaMC+/9Wcrb7klg=
-=cpZ0
+iD8DBQFBhpffugEuf3OQ0akRAsEMAKCClbkxnxj+2A8S2kPT2JVmOo1olQCeM8d3
+iYPp4Aj68vKjyIb0TbeULxA=
+=m4Yi
 -----END PGP SIGNATURE-----

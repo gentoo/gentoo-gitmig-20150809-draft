@@ -1,5 +1,15 @@
-MD5 5a7e465f6c50cb9561c46450ac50a0a5 formkit-0.6.1.ebuild 908
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8cb834a448cdc18b8f66dc662317e017 ChangeLog 373
 MD5 e9bf2ba32d3446e17c5ca45cb3a3be8e metadata.xml 416
+MD5 ac7f456d64ffdc117db97e0521048207 formkit-0.6.1.ebuild 908
 MD5 e58bf5d7826fea7b9db7681854b3cade files/digest-formkit-0.6.1 66
 MD5 29586adf271b0975187ee25fc89451e2 files/0.6.1/setup.py 752
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhpg7ugEuf3OQ0akRAsDBAKCj1lXIC37h5kOzJPLN4lAScpuhxACeJ+W6
+Gz9z24mot+XlvecRNjepAzM=
+=+A69
+-----END PGP SIGNATURE-----
