@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/xmms-smpeg-0.3.5-r1.ebuild,v 1.1 2004/04/22 08:27:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/xmms-smpeg-0.3.5-r1.ebuild,v 1.2 2004/04/26 07:22:38 dholm Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=media-sound/xmms-1.2.4
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
 	unpack ${A}
