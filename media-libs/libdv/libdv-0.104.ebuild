@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104.ebuild,v 1.2 2005/01/12 04:06:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104.ebuild,v 1.3 2005/01/13 02:18:36 weeve Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ia64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ia64 ~x86 ~sparc"
 IUSE="debug gtk sdl xv"
 
 RDEPEND="dev-libs/popt

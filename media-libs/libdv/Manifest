@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 626613d894362ecfd027b6285db2695a ChangeLog 5045
-MD5 a113b083fad2c71bcf2a360548ac7545 libdv-0.102.ebuild 1169
+MD5 3592bace33acfe82a8341b1528417550 ChangeLog 5190
+MD5 6104a924ab9136919a1b0eac2bf586bb libdv-0.101.ebuild 1164
 MD5 9eddaa9f84b052f62b463beadff4dfe7 libdv-0.99-r1.ebuild 1169
 MD5 1427fcf4db28b76b675aae8bac20ab39 metadata.xml 274
-MD5 6104a924ab9136919a1b0eac2bf586bb libdv-0.101.ebuild 1164
-MD5 95f4074d884279a9481527b7fefddacd libdv-0.104.ebuild 1135
-MD5 d577f2ed689030f4f13088422f1fa185 files/digest-libdv-0.102 63
-MD5 3d3bbf2ecd039329fe6b73dc9ada38bf files/digest-libdv-0.99-r1 62
-MD5 db1c07312c8a5de3d64bc80c44b26d6e files/libdv-0.99-disablegtk.patch 3309
-MD5 592d600ce50f0a107ecd5b348d434f9f files/libdv-0.99-2.6.patch 439
+MD5 a113b083fad2c71bcf2a360548ac7545 libdv-0.102.ebuild 1169
+MD5 8266d40d07c80a12ef9ec6854577b434 libdv-0.104.ebuild 1141
 MD5 21abc06a6e969b1a6b5b1ca2f1f09474 files/digest-libdv-0.101 63
+MD5 3d3bbf2ecd039329fe6b73dc9ada38bf files/digest-libdv-0.99-r1 62
+MD5 592d600ce50f0a107ecd5b348d434f9f files/libdv-0.99-2.6.patch 439
+MD5 db1c07312c8a5de3d64bc80c44b26d6e files/libdv-0.99-disablegtk.patch 3309
+MD5 d577f2ed689030f4f13088422f1fa185 files/digest-libdv-0.102 63
 MD5 2524a27d2f6e849452d1d5d1f97580ec files/digest-libdv-0.104 63
 MD5 ccdc17c32d38a07aab1b06d6932a13f8 files/libdv-0.104-amd64reloc.patch 9114
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB5KJrroRuSHgZdywRAi7UAJ0cCNzI8Y4GfIqyR0u6rACYUXSLhgCfeKun
-zdR1ZFzfbMz+SUWyvxtY1Vc=
-=xHQX
------END PGP SIGNATURE-----
