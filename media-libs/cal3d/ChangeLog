@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cal3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.6 2004/07/24 05:55:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.7 2004/08/03 11:22:08 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> cal3d-0.9.1.ebuild:
+  Added to ~ppc.
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cal3d-0.9.1.ebuild:
   Moving auto* out of RDEPEND.
