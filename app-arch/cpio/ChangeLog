@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.4 2004/09/28 02:48:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.5 2004/10/17 02:52:45 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> cpio-2.5.ebuild:
+  Added to ~ppc-macos.
 
   27 Sep 2004; Mike Frysinger <vapier@gentoo.org> cpio-2.4.2-r4.ebuild,
   cpio-2.5.ebuild:
