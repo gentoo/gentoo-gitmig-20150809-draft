@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.49.ebuild,v 1.1 2004/07/09 18:32:19 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.49.ebuild,v 1.2 2004/07/27 01:30:30 latexer Exp $
 
 inherit kernel-mod eutils
 
@@ -21,6 +21,14 @@ DEPEND=""
 RDEPEND=">=sys-apps/hotplug-20030805-r2"
 
 src_unpack() {
+	if ! egrep "^CONFIG_CRYPTO_ARC4=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
+	then
+		eerror ""
+		eerror "New versions of ${PN} require the ARC4 CryptoAPI module from"
+		eerror "the kernel."
+		die "ARC4 Crypto support not detected."
+	fi
+
 	if ! egrep "^CONFIG_FW_LOADER=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
 	then
 		eerror ""
