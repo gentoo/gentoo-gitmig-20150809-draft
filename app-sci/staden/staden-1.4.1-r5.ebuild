@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r4.ebuild,v 1.1 2004/09/16 23:13:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r5.ebuild,v 1.1 2004/09/17 18:25:48 ribosome Exp $
 
 inherit eutils
 
@@ -75,9 +75,17 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-tracediff.patch
 	echo
 
-	# "getopt" is incorrectly included as an extern (for Win32 compatibility).
+
+
+
 	einfo "Patching Staden Package code:"
+	# "getopt" is incorrectly included as an extern (for Win32 compatibility).
 	epatch ${FILESDIR}/${P}-getopt.patch
+	# Compile libraries with fPIC.
+	cd ${S}/src/mk
+	sed -i -e 's/SHLIB_CFLAGS		= -fpic/SHLIB_CFLAGS		= -fPIC/' linux.mk
+	cd ${S}
+	echo
 	echo
 
 	# "CFLAGS" and "FFLAGS" need to be set to the user's values in the build
