@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.14 2003/06/18 02:19:45 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.15 2004/04/28 20:53:03 vapier Exp $
 
 IUSE="tcpd"
 
@@ -9,7 +9,7 @@ DESCRIPTION="NIS SERVER"
 SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.gz"
 HOMEPAGE="http://www.linux-nis.org/nis/"
 
-SLOT="1"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 

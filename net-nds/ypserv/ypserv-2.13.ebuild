@@ -1,16 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.8 2004/04/28 20:53:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.13.ebuild,v 1.1 2004/04/28 20:53:03 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Network Information Service server"
-SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.gz"
 HOMEPAGE="http://www.linux-nis.org/nis/"
+SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.bz2"
 
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc ppc64"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc ppc64"
+IUSE=""
+
 DEPEND=">=sys-libs/gdbm-1.8.0"
 
 src_compile() {
@@ -20,7 +20,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
 
 	insinto /etc
 	doins etc/ypserv.conf etc/netgroup etc/netmasks

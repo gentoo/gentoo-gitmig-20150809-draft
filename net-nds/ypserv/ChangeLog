@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.13 2003/07/12 00:34:46 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.14 2004/04/28 20:53:03 vapier Exp $
+
+*ypserv-2.13 (28 Apr 2004)
+
+  28 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump since older versions have disappeared upstream.
 
   11 Jul 2003; Donny Davies <woodchip@gentoo.org> ypserv-2.8.ebuild:
   Close #24284 and #24281.
