@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.5 2004/10/05 23:06:03 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.6 2004/10/21 04:37:22 pythonhead Exp $
+
+  20 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> metagen-0.3.ebuild:
+  Marked stable x86, removed obsolete version
 
   05 Oct 2004; Dylan Carlson <absinthe@gentoo.org> metagen-0.3.ebuild:
   KEYWORDS ~amd64
