@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/openwrt-cvs/openwrt-cvs-20040807.ebuild,v 1.1 2004/08/15 05:14:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/openwrt-cvs/openwrt-cvs-20040807.ebuild,v 1.2 2004/09/03 15:18:18 dholm Exp $
 
 ECVS_SERVER="openwrt.ksilebo.net:/openwrt"
 ECVS_PASS="anonymous"
@@ -29,7 +29,7 @@ SRC_URI="mirror://gnu/gcc-${GCC_VERSION}/gcc-${GCC_VERSION}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4
