@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 049616eca1c8dcd2c2b7ca3551aaf80d ctorrent-1.3.4.ebuild 548
+MD5 89b3f9ef442aaceb59eade67e3501923 ChangeLog 447
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 6586ffb5b6accaa9fab65ab8b83a5e67 files/digest-ctorrent-1.3.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBS2S2cAgAdbxYsnERArSIAJ4p8X1V+QMfZUIXKLFzIwogq2nnAQCfbBWm
+hdbik72QmMKr4jgmQFWFgb4=
+=IYf8
+-----END PGP SIGNATURE-----
