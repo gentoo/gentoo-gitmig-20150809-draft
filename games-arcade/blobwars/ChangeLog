@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/blobwars
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.1 2003/11/26 08:33:30 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.2 2004/01/19 11:29:14 mr_bones_ Exp $
+
+  19 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> blobwars-0.4.ebuild:
+  mark stable for x86
 
 *blobwars-0.4 (26 Nov 2003)
 
