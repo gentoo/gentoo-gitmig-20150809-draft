@@ -1,6 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.31 2003/05/12 04:02:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.32 2003/05/27 21:43:34 g2boojum Exp $
+
+*openldap-2.1.20 (27 May 2003)
+
+  27 May 2003; Grant Goodyear <g2boojum@gentoo.org> openldap-2.1.20.ebuild,
+  files/gencert.sh:
+  New version w/ a number of changes:
+    * self-signed ssl cert created at install time
+    * order of linking changed so that passwd + ldap works properly
+    # if "berkdb" and "gdbm" in USE then berkdb used in the ebuild.
 
   12 May 2003; Jason Wever <weeve@gentoo.org> openldap-2.0.27-r3.ebuild:
   Added ~sparc to keywords.
