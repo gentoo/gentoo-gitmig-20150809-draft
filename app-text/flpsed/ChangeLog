@@ -1,0 +1,11 @@
+# ChangeLog for app-text/flpsed
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.1 2004/11/07 12:05:12 usata Exp $
+
+*flpsed-0.3 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/Makefile-0.3, +flpsed-0.3.ebuild:
+  Initial import. Ebuild submitted by jochen <jochen.eisinger@gmx.de>;
+  bug #69036.
+

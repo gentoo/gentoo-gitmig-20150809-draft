@@ -1,0 +1,12 @@
+
+OBJECTS=GsWidget.o PSEditWidget.o PSEditor.o PSEditText.o PSEditModel.o Postscript.o flpsed.o
+
+%.o: %.cxx
+	$(CXX) -c $(CXXFLAGS) $*.cxx
+
+flpsed: $(OBJECTS)
+	$(CXX) -o flpsed $(OBJECTS) $(LDFLAGS) -lm
+
+clean:
+	rm -f flpsed $(OBJECTS)
+

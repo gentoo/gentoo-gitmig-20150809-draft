@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26a3c9bb421394393efbdad6af8961b9 flpsed-0.3.ebuild 723
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 e8d0a1fb5fceb4ebd743f8888286df96 ChangeLog 422
+MD5 0378f0e1c9ef58dc1f36cfd191d22575 files/digest-flpsed-0.3 61
+MD5 b86c136c6e3a85fbe44caa37f0cb2689 files/Makefile-0.3 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjg39VWNWqTUmv+0RAv8HAKCcbk1fyPvt7kAfNOHMMHzYXd6/jQCdGvdC
+wjmpgXD1NM4C8aOzF9LxCtc=
+=lD6w
+-----END PGP SIGNATURE-----
