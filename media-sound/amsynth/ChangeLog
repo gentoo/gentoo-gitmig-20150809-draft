@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amsynth
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.1 2003/07/02 11:58:14 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.2 2003/07/13 12:32:10 mholzer Exp $
+
+  13 Jul 2003; Martin Holzer <mholzer@gentoo.org> amsynth-1.0_rc2.ebuild:
+  update x11-libs/gtkmm to dev-cpp/gtkmm
 
 *amsynth-1.0_rc2 (02 Jul 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtkguitune
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.1 2003/06/06 19:44:49 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.2 2003/07/13 12:34:35 mholzer Exp $
+
+  13 Jul 2003; Martin Holzer <mholzer@gentoo.org> gtkguitune-0.6.ebuild:
+  update x11-libs/gtkmm to dev-cpp/gtkmm
 
 *gtkguitune-0.6 (06 Jun 2003)
 
