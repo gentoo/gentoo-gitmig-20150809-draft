@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.8 2004/03/12 15:17:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.9 2004/04/10 07:37:07 mr_bones_ Exp $
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> tar-1.13.25-r3.ebuild,
+  tar-1.13.92-r3.ebuild:
+  don't assign default to S; "`use foo`" -> use foo
 
   12 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> tar-1.13.92-r3.ebuild:
   amd64 unmask.
