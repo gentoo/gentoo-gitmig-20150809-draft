@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c33638b6a0fa23dd58138aceb6dff03 ChangeLog 2154
-MD5 6b747d32a306b38790bdcf7b549c6018 kinput2-3.1-r1.ebuild 1537
+MD5 d93e45113548d19d0cf8e346747a5fc4 kinput2-3.1-r1.ebuild 1535
+MD5 7862f5a3c5f165a6b327f53b60adffa7 ChangeLog 2241
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 1b5bc6a0f8cc7f7aa3476666132d5390 files/digest-kinput2-3.1-r1 64
 MD5 64dca3570f9b42cbeee9fe208f59ec15 files/kinput2-3.1-r1-gentoo.diff 3806
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33lCHTu7gpaalycRAnM9AKCLGa/3DXNIfQAbbLmA+7yCbTJYtACeJ9sG
-IA3xIGYkVYawewqTdPRysXo=
-=KC97
------END PGP SIGNATURE-----
+MD5 1b5bc6a0f8cc7f7aa3476666132d5390 files/digest-kinput2-3.1-r1 64
