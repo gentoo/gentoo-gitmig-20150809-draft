@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.19 2004/02/22 19:55:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.20 2004/06/07 03:26:15 agriffis Exp $
 
 inherit flag-o-matic eutils python
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 src_configure() {
 	# disable extraneous modules with extra dependencies
-	if [ -n "`use build`" ]; then
+	if use build; then
 		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _curses _curses_panel _tkinter"
 		export PYTHON_DISABLE_SSL=1
 	else
@@ -123,7 +123,7 @@ src_install() {
 
 	# If USE tcltk lets install idle
 	# Need to script the python version in the path
-	if [ -n "`use tcltk`" ]; then
+	if use tcltk; then
 		dodir /usr/lib/python${PYVER}/tools
 		cp -r "${S}/Tools/idle" "${D}/usr/lib/python${PYVER}/tools/"
 		dosym /usr/lib/python${PYVER}/tools/idle/idle.py /usr/bin/idle.py

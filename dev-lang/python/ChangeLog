@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.97 2004/06/04 19:34:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.98 2004/06/07 03:26:14 agriffis Exp $
+
+  06 Jun 2004; Aron Griffis <agriffis@gentoo.org> python-2.2.3-r5.ebuild,
+  python-2.3.3-r1.ebuild, python-2.3.4.ebuild, python-2.3.4_rc1.ebuild:
+  Fix use invocation
 
 *python-2.3.4 (04 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.1 2004/06/04 19:34:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.2 2004/06/07 03:26:15 agriffis Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -63,7 +63,7 @@ src_unpack() {
 
 src_configure() {
 	# disable extraneous modules with extra dependencies
-	if [ -n "`use build`" ]; then
+	if use build; then
 		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _curses _curses_panel _tkinter"
 		export PYTHON_DISABLE_SSL=1
 	else
