@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r5.ebuild,v 1.2 2003/09/28 23:46:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r6.ebuild,v 1.1 2003/09/28 23:46:06 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -34,9 +34,9 @@ strip-flags
 export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
 
-NPTL_VER="0.59"
+NPTL_VER="0.60"
 
-BRANCH_UPDATE="20030919"
+BRANCH_UPDATE="20030927"
 
 # Minimum kernel version for --enable-kernel
 export MIN_KV="2.4.1"
@@ -304,7 +304,7 @@ src_unpack() {
 	# they used patches and not modified tarball ...
 	#
 	# <azarah@gentoo.org> (7 Nov 2002).
-	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-stack_end-compat.patch
+#	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-stack_end-compat.patch
 
 	# The mathinline.h header omits the middle term of a ?: expression.  This
 	# is a gcc extension, but since the ISO standard forbids it, it's a
