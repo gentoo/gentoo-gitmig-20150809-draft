@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.46 2003/08/04 21:33:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.47 2003/08/28 22:27:50 mholzer Exp $
+
+*transcode-0.6.9 (29 Aug 2003)
+
+  29 Aug 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.9.ebuild,
+  files/transcode-0.6.9-makefile.patch:
+  Version bumped. Ebuild submitted by José Romildo Malaquias
+  <romildo@uber.com.br> in #26462.
 
   05 Aug 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.ebuild,
   transcode-0.6.6.ebuild, transcode-0.6.7.ebuild, transcode-0.6.8.ebuild:
