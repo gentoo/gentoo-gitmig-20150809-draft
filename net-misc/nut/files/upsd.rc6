@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/files/upsd.rc6,v 1.1 2003/10/16 23:26:27 max Exp $
+
+depend() {
+	need net
+	before upsmon
+}
+
+start() {
+	ebegin "Starting upsd"
+	/sbin/upsdrvctl start
+	start-stop-daemon --start --quiet --startas /usr/sbin/upsd \
+		--pidfile=/var/state/nut/upsd.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping upsd"
+	start-stop-daemon --stop --quiet --pidfile=/var/state/nut/upsd.pid
+	rc=$?
+	/sbin/upsdrvctl stop
+	eend $rc
+}
