@@ -1,6 +1,9 @@
 # ChangeLog for media-video/konverter
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.3 2004/04/04 20:51:41 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.4 2004/04/11 23:35:48 kugelfang Exp $
+
+  12 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> konverter-0.6.ebuild:
+  marked ~amd64
 
 *konverter-0.6 (04 Apr 2004)
 
