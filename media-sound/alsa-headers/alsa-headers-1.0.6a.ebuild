@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.6a.ebuild,v 1.1 2004/08/23 21:45:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.6a.ebuild,v 1.2 2004/08/25 18:14:06 eradicator Exp $
 
 IUSE=""
 
@@ -35,8 +35,8 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${MY_FILESDIR}/${MY_PN}-1.0.5-devfix.patch
-
 	epatch ${MY_FILESDIR}/${MY_PN}-1.0.5a-cs46xx-passthrough.patch
+	epatch ${FILESDIR}/${P}-user.patch
 }
 
 src_compile() {
