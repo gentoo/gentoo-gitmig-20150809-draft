@@ -1,14 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.5 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.6 2003/12/01 16:38:20 seemant Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
+PATCHVER=0.1
+
 DESCRIPTION="X MultiMedia System"
-SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
-	 mmx? ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
 HOMEPAGE="http://www.xmms.org/"
+SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo-patches-${PATCHVER}.tar.bz2
+	mmx? ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -27,15 +30,17 @@ RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"
 
+PATCHDIR=${WORKDIR}/patches
+
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd ${S}
 
 	# Patch to allow external programmes to have the "jump to" dialog box
-	epatch ${FILESDIR}/xmms-jump.patch
+	epatch ${PATCHDIR}/xmms-jump.patch
 
 	# Save playlist, etc on SIGTERM and SIGINT, bug #13604.
-	epatch ${FILESDIR}/xmms-sigterm.patch
+	epatch ${PATCHDIR}/xmms-sigterm.patch
 
 	# The following optimisations are ONLY for x86 platform
 	if [ `use x86` ] ; then
@@ -58,21 +63,21 @@ src_unpack() {
 		if use mmx || use 3dnow
 		then
 			epatch ${DISTDIR}/${P}-mmx.patch.gz
-			use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-mmx.patch
+			use ipv6 && epatch ${PATCHDIR}/xmms-ipv6-20020408-mmx.patch
 		else
-			use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-nommx.patch
+			use ipv6 && epatch ${PATCHDIR}/xmms-ipv6-20020408-nommx.patch
 		fi
 	else
-		use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-nommx.patch
+		use ipv6 && epatch ${PATCHDIR}/xmms-ipv6-20020408-nommx.patch
 	fi
 
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
 	# the Japanese patch and the Russian one overlap, so its one or the other
 	if use cjk; then
-		epatch ${FILESDIR}/${P}-mpg123j.patch
+		epatch ${PATCHDIR}/${P}-mpg123j.patch
 	else
 		# add russian charset support
-		epatch ${FILESDIR}/xmms-russian-charset.patch
+		epatch ${PATCHDIR}/xmms-russian-charset.patch
 	fi
 
 	if [ ! -f ${S}/config.rpath ] ; then
@@ -81,7 +86,7 @@ src_unpack() {
 	fi
 
 	# Add /usr/local/share/xmms/Skins to the search path for skins
-	epatch ${FILESDIR}/${PN}-fhs-skinsdir.patch
+	epatch ${PATCHDIR}/${PN}-fhs-skinsdir.patch
 
 	# We run automake and autoconf here else we get a lot of warning/errors.
 	# I have tested this with gcc-2.95.3 and gcc-3.1.
@@ -89,7 +94,7 @@ src_unpack() {
 
 	if use nls; then
 		if has_version '>=sys-devel/gettext-0.12'; then
-			epatch ${FILESDIR}/${PN}-gettext-fix.patch
+			epatch ${PATCHDIR}/${PN}-gettext-fix.patch
 		fi
 	fi
 
