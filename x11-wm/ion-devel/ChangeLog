@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/ion-devel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.21 2003/12/07 16:07:28 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.22 2003/12/22 18:53:13 twp Exp $
+
+*ion-devel-20031211 (21 Dec 2003)
+
+  21 Dec 2003; Tom Payne <twp@gentoo.org> ion-devel-20031211.ebuild :
+  Version bump. Many ebuild improvements. Install headers and Makefiles instead
+  of using eclass.
 
 *ion-devel-20031121 (03 Dec 2003)
 
