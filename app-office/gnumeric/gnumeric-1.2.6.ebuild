@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.6.ebuild,v 1.1 2004/02/14 14:50:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.6.ebuild,v 1.2 2004/03/01 16:37:53 foser Exp $
 
 #provide Xmake and Xemake
-inherit virtualx libtool gnome2 eutils
+inherit virtualx libtool gnome2 eutils flag-o-matic
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~amd64"
 
 # evolution, perl, guile and gb support disabled currently (or to be removed)
 
@@ -59,6 +59,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# gcc bug (http://bugs.gnome.org/show_bug.cgi?id=128834)
+	filter-flags "-Os"
 
 	econf \
 		`use_with bonobo` \
