@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r18.ebuild,v 1.1 2003/11/27 22:22:19 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r18.ebuild,v 1.2 2003/11/29 00:46:47 carpaski Exp $
 
 IUSE="build"
 
@@ -87,11 +87,12 @@ src_install() {
 
 	doins etc-update.conf dispatch-conf.conf
 
-
 	#python modules
-	cd ${S}/src/python-missingos
-	chmod +x setup.py
-	./setup.py install --root ${D} || die
+	if [ -x "$(which python2.2)" ]; then
+		cd ${S}/src/python-missingos
+		chmod +x setup.py
+		./setup.py install --root ${D} || die "Failed to install missingos module"
+	fi
 
 
 	dodir /usr/lib/portage/pym
@@ -110,7 +111,7 @@ src_install() {
 
 	#install sandbox
 	cd ${S}/src/sandbox-1.1
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "Failed to compile sandbox"
 
 	#symlinks
 	dodir /usr/bin /usr/sbin
