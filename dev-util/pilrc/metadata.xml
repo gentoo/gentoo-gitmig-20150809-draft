@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>pda</herd>
+<longdescription>
+PilRC (which is an abbreviation of PILot Resource Compiler) takes a
+text description of forms, menus, and other instances of Palm OS resources
+and compiles them into the binary form used on Palm OS.
+</longdescription>
 </pkgmetadata>
