@@ -1,13 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.0.ebuild,v 1.3 2001/05/19 15:49:01 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.0.ebuild,v 1.4 2001/08/28 04:17:27 lamer Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org"
-RDEPEND="sys-devel/python gnome-libs/libxslt net-www/apache-ssl"
+RDEPEND="sys-devel/python gnome-libs/libxslt net-www/apache"
 
 src_unpack() {
 	if [ "$MAINTAINER" != "yes" ]
