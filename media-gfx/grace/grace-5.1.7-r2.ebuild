@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.7-r2.ebuild,v 1.11 2003/09/08 20:40:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.7-r2.ebuild,v 1.12 2004/01/11 13:55:22 lanius Exp $
 
 DESCRIPTION="WYSIWYG 2D plotting tool for the X Window System"
 SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/${P}.tar.gz"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc"
 IUSE="pdflib"
 
 DEPEND="virtual/x11
-	virtual/motif
+	x11-libs/openmotif
 	media-libs/libpng
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.4 2003/10/30 08:52:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.5 2004/01/11 13:55:22 lanius Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc"
 IUSE="pdflib"
 
 DEPEND="virtual/x11
-	virtual/motif
+	x11-libs/openmotif
 	media-libs/libpng
 	media-libs/t1lib
 	>=media-libs/tiff-3.5
