@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.1.ebuild,v 1.4 2004/10/14 00:21:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.1.ebuild,v 1.5 2004/10/15 09:59:57 dams Exp $
 
 inherit libtool kde-functions eutils
 
@@ -25,7 +25,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	elibtoolize
-	epatch ${FILESDIR}/${P}-sandbox.patch
+	for name in sandbox mysql_plugin_libs psql_plugin_libs; do
+		epatch ${FILESDIR}/${P}-$name.patch || die "failed applying the patch ${P}-$name.patch"
+	done
 }
 
 src_compile() {
