@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.2 2005/02/24 21:33:40 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.3 2005/02/24 21:46:19 rizzo Exp $
 
 inherit eutils flag-o-matic
 
@@ -128,10 +128,10 @@ src_compile() {
 		|| myconf="${myconf} --disable-nls"
 
 
-	if use icc ; then
-		export CC=icc
-		autoconf
-	fi
+	#if use icc ; then
+		#export CC=icc
+		#autoconf
+	#fi
 
 	econf \
 		--enable-hackdir=/usr/lib/xscreensaver \
