@@ -1,11 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.63 2003/04/19 02:26:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.64 2003/04/19 02:55:27 drobbins Exp $
 
 *postfix-2.0.9 (18 Apr 2003)
 
-  18 Apr 2003; Daniel Robbins <drobbins@gentoo.org>: New experimental
-  release of postfix.
+  18 Apr 2003; Daniel Robbins <drobbins@gentoo.org>: New release of postfix.
+  Added /usr/bin/rmail to close bug #19127. Added "provide mta" to postfix
+  initscript to abide with the recommendation in bug #11455 (not closing since
+  other MTAs are affected.) set CC in ebuild to close bugs #16547 and #17275.
+  Unmasking for x86 since so many bugs are fixed.
 
 *postfix-2.0.7 (22 Mar 2003)
 
