@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2.ebuild,v 1.7 2004/08/06 18:49:34 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2.ebuild,v 1.8 2004/09/03 15:04:48 dholm Exp $
 
 inherit elisp-common eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.complang.tuwien.ac.at/forth/gforth//${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="emacs"
 
 DEPEND="virtual/libc
