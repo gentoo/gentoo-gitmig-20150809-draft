@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.28 2005/02/02 16:26:00 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.29 2005/02/03 22:40:04 stkn Exp $
+
+  03 Feb 2005; Stefan Knoblich <stkn@gentoo.org> files/zaptel.rc6:
+  Fixed zaptel init script (checkconfig returned wrong values, bug #80298),
+  changed config  error messages to use eerror. Using return instead of exit
+  if there's no config file, service won't be in state "started" this way.
 
   02 Feb 2005; Chris Bainbridge <chrb@gentoo.org> zaptel-1.0.4.ebuild:
   Removed failure when PPP isn't found. The ebuild now gives a warning but
