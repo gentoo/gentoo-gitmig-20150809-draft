@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.6-r2.ebuild,v 1.8 2001/08/08 00:57:47 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.6-r2.ebuild,v 1.9 2001/08/08 01:03:33 pete Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 
@@ -50,10 +50,10 @@ if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://www.zip.com.au/~akpm/ext3-${EXT3V}.gz
 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz
-	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz
 	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMV}.tar.gz
     http://www.knopper.net/download/knoppix/cloop_${CLOOPAV}.tar.gz"
 fi
+#	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz
 #	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
 #	http://www.netroedge.com/~lm78/archive/i2c-${SENV}.tar.gz
 #	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
@@ -72,7 +72,8 @@ DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
 #these deps are messed up; fix 'em and add ncurses (required my mosix compile, menuconfig)
 if [ $PN = "linux" ]
 then
-	RDEPEND="mosix? ( ~sys-apps/mosix-user-${MOSV} ) >=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
+#	RDEPEND="mosix? ( ~sys-apps/mosix-user-${MOSV} ) >=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
+	RDEPEND=">=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
 elif [ $PN = "linux-sources" ]
 then
 	if [ "`use build`" ]
@@ -120,17 +121,19 @@ src_unpack() {
 	
 	dodir /usr/src/linux-${KV}-extras
 
-	if [ "`use mosix`" ]
-	then
-		echo "Applying MOSIX patch..."
-		cd ${S2}
-		mkdir MOSIX-${MOSV}
-		cd MOSIX-${MOSV}
-		tar xzf MOSIX-${MOSV}.tar.gz patches.${OKV} kernel.new.${OKV}.tar
-		cd ${S}
-		try cat ${S2}/MOSIX-${MOSV}/patches.${KV} | patch -p0
-		tar -x --no-same-owner -vf ${S2}/MOSIX-${MOSV}/kernel.new.${KV}.tar
-	fi
+#### Mosix
+#	if [ "`use mosix`" ]
+#	then
+#		echo "Applying MOSIX patch..."
+#		cd ${S2}
+# 		mkdir MOSIX-${MOSV}
+# 		cd MOSIX-${MOSV}
+# 		tar xzf MOSIX-${MOSV}.tar.gz patches.${OKV} kernel.new.${OKV}.tar
+# 		cd ${S}
+# 		try cat ${S2}/MOSIX-${MOSV}/patches.${KV} | patch -p0
+# 		tar -x --no-same-owner -vf ${S2}/MOSIX-${MOSV}/kernel.new.${KV}.tar
+# 	fi
+#### Mosix
 	
 	cd ${S}
 	echo "Applying reiserfs-NFS fix..."
@@ -210,21 +213,25 @@ src_unpack() {
 	if [ "`use ext3`" ]
 	then
 		echo "Applying ext3 patch..."
-		if [ "`use mosix`" ]
-		then
-			echo
-			echo "There will be one reject; we will fix it. (no worries)"
-			echo
-		fi
+### Mosix
+# 		if [ "`use mosix`" ]
+# 		then
+# 			echo
+# 			echo "There will be one reject; we will fix it. (no worries)"
+# 			echo
+# 		fi
+### Mosix
 		cd ${S}
 		gzip -dc ${DISTDIR}/ext3-${EXT3V}.gz | patch -l -p1
-		if [ "`use mosix`" ]
-		then
-			echo 
-			echo "Fixing reject in include/linux/sched.h..."
-			echo
-			cp ${FILESDIR}/${PVR}/sched.h include/linux
-		fi
+### Mosix
+# 		if [ "`use mosix`" ]
+# 		then
+# 			echo 
+# 			echo "Fixing reject in include/linux/sched.h..."
+# 			echo
+# 			cp ${FILESDIR}/${PVR}/sched.h include/linux
+# 		fi
+### Mosix
 	fi
 	
 	cd ${S2}
