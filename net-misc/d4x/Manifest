@@ -1,14 +1,26 @@
-MD5 8f77c61d0b4343b0dd5edeaf9a566d09 ChangeLog 4276
-MD5 97cd5f0effc0e050d26dad11f2c8db6f d4x-2.03.ebuild 1509
-MD5 7b5e24a23dcafdcf6bcf81915c0905f8 d4x-2.4.1-r1.ebuild 1983
-MD5 f00b57db1571531f5374d0b85c48fa42 d4x-2.5.0_rc2.ebuild 1807
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c5c6b0e6f9c4a8ec280ee132ecf2ef36 d4x-2.5.0_rc4.ebuild 1874
+MD5 4f58d5602b746fa7ce1d6a080fd8df66 ChangeLog 4391
+MD5 748fc9391fa5324c84050aa202766371 d4x-2.5.0.ebuild 1768
+MD5 7b5e24a23dcafdcf6bcf81915c0905f8 d4x-2.4.1-r1.ebuild 1983
+MD5 97cd5f0effc0e050d26dad11f2c8db6f d4x-2.03.ebuild 1509
 MD5 5d41ee33c5ff557bad7627cbc67c3b6f metadata.xml 224
-MD5 07dde74dfe302bab95327f285a5a16ba files/d4x-2.4.1-fix-statusbar-crash.patch 772
+MD5 f00b57db1571531f5374d0b85c48fa42 d4x-2.5.0_rc2.ebuild 1807
+MD5 4f038da47df5648c8799469e62ec03b6 files/digest-d4x-2.5.0 67
+MD5 7025e0ce352893c55b23ffeea8f87d1c files/d4x-2.5.0_rc4-fix-cast.patch 317
 MD5 5b49dbe10d588970e6f766cfdb310e67 files/d4x-2.5.0_rc2-gtk24.patch 279
-MD5 a9d346bf4f3d64d906935b663747e434 files/d4x-sndserv-bigendian.patch 502
+MD5 145551a0dbe79421f8b102a726996ea7 files/digest-d4x-2.5.0_rc4 65
 MD5 724445bfed12d4bafd7bb97eef1d669c files/digest-d4x-2.03 61
+MD5 a9d346bf4f3d64d906935b663747e434 files/d4x-sndserv-bigendian.patch 502
+MD5 07dde74dfe302bab95327f285a5a16ba files/d4x-2.4.1-fix-statusbar-crash.patch 772
 MD5 3e8783cc051415a9ee4f756fcc45c925 files/digest-d4x-2.4.1-r1 62
 MD5 fc389107a8b5d040a989fe1d220beb3e files/digest-d4x-2.5.0_rc2 65
-MD5 145551a0dbe79421f8b102a726996ea7 files/digest-d4x-2.5.0_rc4 65
-MD5 7025e0ce352893c55b23ffeea8f87d1c files/d4x-2.5.0_rc4-fix-cast.patch 317
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsy9mI7fK2cqeyXkRAuzUAKD2JURnCWZX9+pzOFzFMHInMbQA9QCeLO7X
+PgYG57J5W9weLLrcbXfxrZc=
+=g8C2
+-----END PGP SIGNATURE-----

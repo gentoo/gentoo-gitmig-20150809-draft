@@ -1,5 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/files/lcshutdown.pam,v 1.3 2004/07/18 04:12:20 dragonheart Exp $
-# All clients that are able to send a shutdown command should
-# already be authenticated with the pam service linecontrol.
-# so in this service we do only an additional check.
-auth       required   pam_listfile.so item=user sense=allow file=/etc/linesrv.shutdown.users onerr=fail
