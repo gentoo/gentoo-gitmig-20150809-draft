@@ -1,0 +1,12 @@
+--- mozilla/xpinstall/packager/Makefile.in.orig	2003-02-23 14:41:08.000000000 +0200
++++ mozilla/xpinstall/packager/Makefile.in	2003-02-23 14:41:36.000000000 +0200
+@@ -87,6 +87,9 @@
+ ifeq ($(MOZ_PKG_FORMAT),DEB)
+ PKG_SUFFIX	= .deb
+ endif
++ifeq ($(MOZ_PKG_FORMAT),RAW)
++MAKE_SDK    = echo
++endif
+ 
+ TARGETS		= $(PACKAGE) $(SDK)
+ 

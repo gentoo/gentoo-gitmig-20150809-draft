@@ -1,8 +1,14 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.83 2003/02/12 08:51:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.84 2003/02/23 20:31:54 azarah Exp $
+
+*mozilla-1.3_beta (23 Feb 2003)
+
+  23 Feb 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.3_beta.ebuild :
+  New version.
 
 *mozilla-1.2.1-r5 (19 Jan 2003)
+
   29 Jan 2003; Jack Morgan <jmorgan@gentoo.org> mozilla-1.2.1-r*.ebuild :
   Fixed replace-flags 
 
