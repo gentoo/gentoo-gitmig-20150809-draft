@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/aoi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.1 2003/05/15 09:34:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.2 2003/10/10 11:09:26 brandy Exp $
+
+*aoi-1.6 (10 Oct 2003)
+
+  10 Oct 2003; Brandy Westcott brandy@gentoo.org aoi-1.6.ebuild:
+  Version bump to 1.6. Initial ebuild to install AoI from source.
 
 *aoi-1.4 (15 May 2003)
 
