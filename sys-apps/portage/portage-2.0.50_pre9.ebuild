@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre9.ebuild,v 1.1 2003/12/25 08:42:09 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre9.ebuild,v 1.2 2003/12/30 12:11:10 carpaski Exp $
 
 IUSE="build"
 
@@ -83,7 +83,7 @@ src_install() {
 
 	#This special handling of make.conf is required for catalyst
 	#to function properly.
-	mv ${D}/etc/make.conf ${D}/etc/make.conf.orig
+	mv ${D}/etc/make.conf ${D}/etc/make.conf.example
 
 	doins etc-update.conf dispatch-conf.conf
 
@@ -153,12 +153,7 @@ src_install() {
 pkg_postinst() {
 	local x
 
-	#Only move make.conf into place if one doesn't exist already.
-	#Special handling required for catalyst.
-	if [ ! -f ${ROOT}etc/make.conf ]
-	then
-		cp -a ${ROOT}etc/make.conf.orig ${ROOT}etc/make.conf
-	fi
+	[ -f "${ROOT}etc/make.conf" ] || touch ${ROOT}etc/make.conf
 
 	#disable global sandbox if it's active (it's been deprecated)
 	if [ -f /etc/ld.so.preload ] ; then
