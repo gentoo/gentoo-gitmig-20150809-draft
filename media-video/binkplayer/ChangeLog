@@ -1,6 +1,12 @@
 # ChangeLog for media-video/binkplayer
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.1 2003/11/17 21:42:59 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.2 2004/01/19 11:44:58 mr_bones_ Exp $
+
+*binkplayer-1.6b (19 Jan 2004)
+
+  19 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> binkplayer-1.5y.ebuild,
+  binkplayer-1.6b.ebuild:
+  mark 1.5 stable for x86; version bump for unstable
 
 *binkplayer-1.5y (17 Nov 2003)
 
