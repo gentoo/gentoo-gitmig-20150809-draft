@@ -10,7 +10,7 @@
 -	$(BUILDDIR)/bin/glquake.3dfxgl \
 -	$(BUILDDIR)/bin/quake.x11
 +TARGETS=\
-+	$(BUILDDIR)/bin/glquake.glx
++	$(BUILDDIR)/bin/glquake.SDL
  	# $(BUILDDIR)/bin/unixded
  
  build_debug:
