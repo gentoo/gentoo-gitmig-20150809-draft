@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/pari
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.7 2003/02/12 05:18:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.8 2003/02/13 07:09:50 seemant Exp $
+
+*pari-2.1.4 (08 Nov 2002)
+
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org> pari-2.1.4.ebuild :
+  swedishchef fixes
 
   07 Jan 2003; George Shapovalov <george@gentoo.org> pari-2.1.4.ebuild :
   added IUSE, replaced header with the correct one.
@@ -12,8 +17,6 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*pari-2.1.4 (08 Nov 2002)
-
   08 Nov 2002; Matthew Turk <satai@gentoo.org> :
   Initial import.  Ebuild submitted by Pierre-Henri Jondot
   <Pierre-Henri.Jondot@wanadoo.fr>
