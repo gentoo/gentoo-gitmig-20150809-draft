@@ -1,23 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.12.ebuild,v 1.2 2004/06/24 21:44:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.12.ebuild,v 1.3 2004/06/26 23:09:25 liquidx Exp $
+
+inherit eutils
 
 DESCRIPTION="Libraries and utilities to communicate with a Psion palmtop via serial."
 HOMEPAGE="http://plptools.sourceforge.net"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/plptools/${P}.tar.gz"
-LICENSE="as-is"
+SRC_URI="mirror://sourceforge/plptools/${P}.tar.gz"
+LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="virtual/glibc
-		kde? ( >=kde-base/kdelibs-3.1* )"
+DEPEND="kde? ( >=kde-base/kdelibs-3.1* )"
 
-S="${WORKDIR}/${P}"
 IUSE="kde"
 
-src_compile() {
-	patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die "Patch failed!"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-assert.h.patch
+}
 
+src_compile() {
 	local myconf
 
 	if use kde
