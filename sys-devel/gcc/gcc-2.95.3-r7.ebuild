@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.6 2002/07/03 21:17:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.7 2002/07/08 18:46:26 azarah Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -35,7 +35,7 @@ src_unpack() {
 	libtoolize --copy --force &> ${T}/foo-out
 	
 	# This new patch for the atexit problem occured with glibc-2.2.3 should
-	# work with glibc-2.2.4.  This closes bug #3982.
+	# work with glibc-2.2.4.  This closes bug #3987 and #4004.
 	#
 	# Azarah - 29 Jun 2002
 	#

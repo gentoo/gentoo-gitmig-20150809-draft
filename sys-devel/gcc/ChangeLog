@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.24 2002/07/07 00:08:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.25 2002/07/08 18:46:24 azarah Exp $
 
 *gcc-3.1.1 (07 Jul 2002)
 
@@ -32,7 +32,18 @@
 *gcc-2.95.3-r7 (29 Jun 2002)
 
   29 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
-  Remove texinfo as we have a build again.  Fix the atexit() bug, bug #3982.
+  Remove texinfo as we have an ebuild again. 
+
+  This new patch for the atexit problem occured with glibc-2.2.3 should
+  work with glibc-2.2.4.  This closes bug #3987 and #4004.
+  
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0476.html
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0589.html
+  
+  Something to note, is that this patch makes gcc crash if its given
+  the "-mno-ieee-fp" flag ... libvorbis is an good example of this.
+  This however is on of those which one we want fixed most cases :/
+  
   Also fix bug #3527, which was caused by a stray symlink on downgrading from
   gcc-3.x.
 
