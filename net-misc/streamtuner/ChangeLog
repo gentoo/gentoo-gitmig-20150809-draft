@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/streamtuner
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.4 2004/03/01 21:34:08 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.5 2004/03/31 12:34:02 aliz Exp $
+
+  31 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> streamtuner-0.10.1.ebuild:
+  Adding amd64 keyword, closing #46276.
 
 *streamtuner-0.10.1 (28 Sep 2003)
 
