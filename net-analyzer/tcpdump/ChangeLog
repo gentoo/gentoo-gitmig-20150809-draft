@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.18 2004/01/05 15:49:54 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.19 2004/01/15 14:18:37 gustavoz Exp $
+
+  15 Jan 2004; <gustavoz@gentoo.org> tcpdump-3.8.1.ebuild:
+  marked hppa and sparc, fixes #38206
 
   05 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> tcpdump-3.8.1.ebuild:
   Change optimization levels. Patch by Gustavo Zacarias <gustavoz@gentoo.org> in
