@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.14 2005/01/18 04:56:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.15 2005/01/27 22:07:36 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -13,9 +13,10 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 # has_multilib_profile:
-# Return true if the current profile is a multilib profile.  You might
-# want to use this like 'use multilib || has_multilib_profile' until
-# all profiles utilizing the 'multilib' use flag are removed from portage
+# Return true if the current profile is a multilib profile and lists more than
+# one abi in ${MULTILIB_ABIS}.  You might want to use this like
+# 'use multilib || has_multilib_profile' until all profiles utilizing the
+# 'multilib' use flag are removed from portage
 
 # is_final_abi:
 # Return true if ${ABI} is the final abi to be installed (and thus we are
@@ -84,9 +85,8 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 ### END DOCUMENTATION ###
 
 # has_multilib_profile()
-# Return true if 
 has_multilib_profile() {
-	[ -n "${MULTILIB_ABIS}" ]
+	[ -n "${MULTILIB_ABIS}" -a "${MULTILIB_ABIS}" != "${MULTILIB_ABIS/ /}" ]
 }
 
 # This function simply returns the desired lib directory. With portage
@@ -323,7 +323,7 @@ prep_ml_includes() {
 		if is_final_abi; then
 			base=${T}/gentoo-multilib
 			pushd ${base}
-			find . | cpio -pmd --no-preserve-owner ${D}
+			find . | tar -c -T - -f - | tar -x --no-same-owner -f - -C ${D}
 			popd
 
 			for dir in ${dirs}; do
