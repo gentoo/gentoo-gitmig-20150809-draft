@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+
+<herd>ppc64-kernel</herd>
+
+<maintainer>
+	<email>tgall@gentoo.org</email>
+	<name>Tom Gall</name>
+</maintainer>
+
+<longdescription>
+This kernel is built from the 2.6 ameslab tree, aka bk.linuxppc64.org
+which tends to be 2.6 k.o + ppc64 features.
+</longdescription>
+
+</pkgmetadata>
+	
