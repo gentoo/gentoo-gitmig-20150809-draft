@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r5.ebuild,v 1.4 2004/02/28 15:36:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r6.ebuild,v 1.1 2004/03/20 10:59:48 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,6 +35,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		!noxpm? ( >=media-libs/netpbm-9.12-r4 )
 		>=dev-lang/perl-5.6.1-r10
 		>=sys-libs/zlib-1.1.4-r1
+		sys-apps/debianutils
 		virtual/x11"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
@@ -101,6 +102,10 @@ src_unpack() {
 
 	# FlickeringMoveWorkaround is always ignored, this fix from cvs.
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-flickeringmoveworkaround.diff
+
+	# fvwm-bug uses predictable temporary file names (pid based)
+	# this is fixed in >=fvwm-2.5.10.
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-fvwm-bug-security.diff
 
 	# build fails on alpha with certain options without this.
 	use alpha && append-flags -fPIC
@@ -301,6 +306,9 @@ src_install() {
 	utils/quantize_pixmaps utils/xselection.c
 
 	dodoc ${FILESDIR}/README.transluceny.gz
+
+	# make sure FvwmGtk man page is installed
+	use gtk && doman ${S}/modules/FvwmGtk/FvwmGtk.1
 
 	# fix a couple of symlinks.
 	prepallman

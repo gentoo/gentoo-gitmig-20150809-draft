@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.63 2004/03/19 18:44:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.64 2004/03/20 10:59:48 taviso Exp $
+
+*fvwm-2.5.8-r6 (20 Mar 2004)
+
+  20 Mar 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.10.ebuild,
+  fvwm-2.5.8-r5.ebuild, fvwm-2.5.8-r6.ebuild,
+  files/fvwm-2.5.8-fvwm-bug-security.diff:
+  adding fvwm-bug security fix to stable fvwm.
 
 *fvwm-2.5.10 (19 Mar 2004)
 

@@ -1,0 +1,11 @@
+--- fvwm-2.5.8/bin/fvwm-bug.in	2002-11-10 23:24:12.000000000 +0000
++++ fvwm-2.5.10/bin/fvwm-bug.in	2004-03-19 14:45:59.000000000 +0000
+@@ -53,7 +53,7 @@
+ 
+ : ${EDITOR=emacs}
+ 
+-TEMP=/tmp/fvwm-bug.$$
++TEMP=`mktemp -q "/tmp/fvwm-bug.XXXXXX"`
+ 
+ # Figure out how to echo a string without a trailing newline
+ N=`echo 'hi there\c'`
