@@ -9,7 +9,7 @@ SRC_URI="http://web.wt.net/~billw/gkrellm/Plugins/${P}.tar.gz"
 HOMEPAGE="http://web.wt.net/~billw/gkrellm/Plugins.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="=app-admin/gkrellm-1.2*
 	gnome-base/gnome-libs"

@@ -13,7 +13,7 @@ DEPEND="=app-admin/gkrellm-1.2*"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 	make || die

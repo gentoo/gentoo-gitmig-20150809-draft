@@ -9,7 +9,7 @@ SRC_URI="http://engr.oregonstate.edu/~simonsen/reminder/${MY_P}.tar.gz"
 HOMEPAGE="http://www.engr.orst.edu/~simonsen/reminder"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=app-admin/gkrellm-1.2.1"
 

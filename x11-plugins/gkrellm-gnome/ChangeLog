@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/gkrellm-gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gnome/ChangeLog,v 1.1 2002/08/30 01:49:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gnome/ChangeLog,v 1.2 2002/09/12 04:37:44 owen Exp $
 
 *gkrellm-gnome-0.1 (14 Apr 2002)
+
+  11 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
 
