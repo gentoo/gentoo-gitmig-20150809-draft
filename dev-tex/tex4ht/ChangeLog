@@ -1,0 +1,12 @@
+# ChangeLog for dev-tex/tex4ht
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.1 2004/08/18 15:48:50 usata Exp $
+
+*tex4ht-20040212 (19 Aug 2004)
+
+  19 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +tex4ht-20040212.ebuild:
+  Initial import. Thanks to Maarten Wisse <Maarten.Wisse@urz.uni-heidelberg.de>
+  and Richard Seymour <nutate@yahoo.com> for providing an ebuild. This closes
+  bug #33259.
+
