@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop-bin/fop-bin-0.20.5.ebuild,v 1.2 2004/01/26 16:38:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop-bin/fop-bin-0.20.5.ebuild,v 1.3 2004/02/25 10:31:02 absinthe Exp $
 
 MY_P=${P/-bin/}
 DESCRIPTION="Formatting Objects Processor is a print formatter driven by XSL"
@@ -9,7 +9,7 @@ HOMEPAGE="http://xml.apache.org/fop/"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 
 DEPEND=">=virtual/jdk-1.4"
 
