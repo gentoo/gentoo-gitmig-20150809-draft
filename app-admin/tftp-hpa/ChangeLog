@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/tftp-hpa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/ChangeLog,v 1.2 2002/04/22 00:27:29 rphillips Exp $
+
+*tftp-hpa-0.29 (19 Apr 2002)
+
+  19 Apr 2002; J.Ritchie <jasonr@myrealbox.com> ChangeLog :
+  
+  Updated to work with newest tftp-hpa version.
+  Added /etc/conf.d and /etc/init.d scripts for use with rc-update.
 
 *tftp-hpa-0.16 (1 Feb 2002)
 
