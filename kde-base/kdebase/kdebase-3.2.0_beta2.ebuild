@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta2.ebuild,v 1.1 2003/12/02 02:04:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta2.ebuild,v 1.2 2003/12/24 19:41:32 caleb Exp $
 inherit kde-dist eutils
 
-IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
+IUSE="ldap pam motif encode cups ssl opengl samba java"
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~x86"
@@ -13,7 +13,6 @@ DEPEND="media-sound/cdparanoia
 	pam? ( sys-libs/pam )
 	motif? ( virtual/motif )
 	encode? ( media-sound/lame )
-	oggvorbis? ( media-libs/libvorbis )
 	cups? ( net-print/cups )
 	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
@@ -21,19 +20,14 @@ DEPEND="media-sound/cdparanoia
 	java? ( virtual/jdk )
 	>=media-libs/freetype-2
 	dev-util/pkgconfig"
-#	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
 RDEPEND="sys-apps/eject"
 
 myconf="$myconf --with-dpms --with-cdparanoia"
+myconf="$myconf `use_with ldap` `use_with motif`"
+myconf="$myconf `use_with encode lame` `use_with cups`"
+myconf="$myconf `use_with opengl gl` `use_with ssl`"
 
-use ldap	&& myconf="$myconf --with-ldap" 	|| myconf="$myconf --without-ldap"
-use motif	&& myconf="$myconf --with-motif"	|| myconf="$myconf --without-motif"
-use encode	&& myconf="$myconf --with-lame"		|| myconf="$myconf --without-lame"
-use cups	&& myconf="$myconf --with-cups"		|| myconf="$myconf --disable-cups"
-use oggvorbis 	&& myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vorbis"
-use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
-use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
 use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
 

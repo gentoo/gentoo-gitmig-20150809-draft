@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.101 2003/12/02 02:04:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.102 2003/12/24 19:41:32 caleb Exp $
+
+  24 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdebase-3.2.0_beta2.ebuild:
+  Dependency cleanups.
 
 *kdebase-3.2.0_beta2 (01 Dec 2003)
 
