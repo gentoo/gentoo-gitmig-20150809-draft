@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.5 2004/01/06 05:16:02 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.6 2004/02/29 21:22:19 vapier Exp $
 
 inherit games
 
@@ -8,9 +8,9 @@ DESCRIPTION="Re-Write of the game Drug Wars"
 HOMEPAGE="http://dopewars.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dopewars/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
+SLOT="0"
+KEYWORDS="x86 ppc amd64"
 IUSE="nls ncurses gtk gtk2 gnome esd sdl"
 
 DEPEND=">=sys-apps/sed-4
@@ -61,12 +61,12 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	cd "${D}/${GAMES_DATADIR}"
 	use gnome && mv gnome ../ || rm -rf gnome
 	mv pixmaps ../
-	dohtml -r doc/*/* || die "dohtml failed"
+	dohtml -r doc/*/*
 	rm -rf doc
 	dodir "${GAMES_STATEDIR}" || die "dodir failed"
 	mv dopewars.sco "${D}/${GAMES_STATEDIR}"
