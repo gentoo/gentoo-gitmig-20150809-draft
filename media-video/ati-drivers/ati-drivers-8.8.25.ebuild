@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.1 2005/01/18 08:28:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.2 2005/01/18 09:36:40 lu_zero Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ati.com"
 SRC_URI="http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm"
 SLOT="${KV}"
 LICENSE="ATI"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	app-arch/rpm2targz
