@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.41 2003/07/18 15:10:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.42 2003/07/18 17:20:22 wolf31o2 Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -143,5 +143,28 @@ games_verify_cd() {
 		ewarn "directory containing the files."
 		echo
 		die "You must provide the $* data before running the install"
+	fi
+}
+
+# Unpack .uz(2) files for UT/UT2003
+# $1: directory or file to unpack
+games_ut_unpack() {
+	if [ -z "${ut_unpack}" ]; then
+		die "You must provide an argument to games_ut_unpack"
+	fi
+	if [ -f "${ut_unpack}" ]; then
+		./ucc decompress ${ut_unpack} --nohomedir || die "uncompressing file ${ut_unpack}"
+	fi
+	if [ -d "${ut_unpack}" ]; then
+		for f in `find ${ut_unpack} -name '*.uz' -printf '%f'` ; do
+			./ucc decompress ${ut_unpack}/${f} --nohomedir || die "uncompressing file ${f}"
+			mv System/${f:0:${#f}-3} ${ut_unpack} || die "moving file ${f}
+			rm ${ut_unpack}/${f} || die "deleting compressed file ${f}"
+		done
+		for f in `find ${ut_unpack} -name '*.uz2' -printf '%f'` ; do
+			./ucc decompress ${ut_unpack}/${f} --nohomedir || die "uncompressing file ${f}"
+			#mv System/${f:0:${#f}-4} ${ut_unpack} || die "moving file ${f}
+			rm ${ut_unpack}/${f} || die "deleting compressed file ${f}"
+		done
 	fi
 }
