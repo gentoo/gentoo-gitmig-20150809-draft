@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.2 2003/10/17 20:31:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.3 2004/02/15 12:53:17 dholm Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://triq.net/obexftp.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="gsm
 	>=dev-libs/glib-1.2
