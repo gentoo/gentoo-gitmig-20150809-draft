@@ -4,7 +4,7 @@ MD5 a357995f80c9f0c2a5c928ccf2e22fb6 ruby-1.6.8.ebuild 750
 MD5 557fc0b69af82ee16ef65e0be0cffb2b ruby-1.8.0_pre2.ebuild 810
 MD5 03860f14dbfb94fec12a4b8579f7bc1f ruby-1.8.0_pre2-r1.ebuild 1380
 MD5 74581d9cf84f902656ab173bbf9ce48c ruby-1.8.0_pre2-r2.ebuild 1419
-MD5 36d219c0c8250c35fb763c3adc299cbb ruby-1.8.0_pre2-r3.ebuild 1509
+MD5 59904ebd31b17bdf842d34ecba1f4387 ruby-1.8.0_pre2-r3.ebuild 1524
 MD5 11702b3cb52c88daf5d3934e3a0c2e2a files/digest-ruby-1.6.8-r1 63
 MD5 11702b3cb52c88daf5d3934e3a0c2e2a files/digest-ruby-1.6.8 63
 MD5 2da205db4c1f8df1e100067e6c188543 files/digest-ruby-1.8.0_pre2 137
