@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.19 2004/10/30 11:09:41 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.20 2004/11/26 12:38:14 scandium Exp $
+
+  26 Nov 2004; Rainer Groesslinger <scandium@gentoo.org> pnet-0.6.10.ebuild:
+  stable on all architectures
 
 *pnet-0.6.10 (30 Oct 2004)
 
