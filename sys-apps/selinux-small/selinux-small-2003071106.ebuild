@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003071106.ebuild,v 1.4 2003/09/08 08:01:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003071106.ebuild,v 1.5 2003/09/08 08:02:30 msterret Exp $
 
 DESCRIPTION="SELinux libraries and policy compiler"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
 IUSE="selinux static"
 DEPEND="sys-devel/flex
 	sys-libs/pam
-        || (
-                >=sys-kernel/selinux-sources-2.4.20-r1
-                >=sys-kernel/hardened-sources-2.4.20-r1
-           )"
+	|| (
+		>=sys-kernel/selinux-sources-2.4.20-r1
+		>=sys-kernel/hardened-sources-2.4.20-r1
+	)"
 
 RDEPEND="${DEPEND}
 	>=dev-python/pexpect-0.97

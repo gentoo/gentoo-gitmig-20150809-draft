@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.11.ebuild,v 1.4 2003/09/08 08:03:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.11.ebuild,v 1.5 2003/09/08 08:03:25 msterret Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ IUSE=""
 S=${WORKDIR}/${P}
 
 src_compile() {
-    emake x86info CFLAGS="${CFLAGS}" ||die "emake failed"
+	emake x86info CFLAGS="${CFLAGS}" ||die "emake failed"
 }
 
 src_install() {
@@ -62,7 +62,7 @@ pkg_postinst() {
 	ewarn "         [*] /dev/cpu/*/msr - Model-specific register support"
 	ewarn "         [*] /dev/cpu/*/cpuid - CPU information support"
 	# copied from media-libs/svgalib/svgalib-1.9.17
-    [ "${ROOT}" = "/" ] && /sbin/modules-update &> /dev/null
+	[ "${ROOT}" = "/" ] && /sbin/modules-update &> /dev/null
 }
 
 
