@@ -1,0 +1,12 @@
+# ChangeLog for app-sci/chipmunksystem
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/ChangeLog,v 1.1 2004/05/17 13:25:12 phosphan Exp $
+
+*chipmunksystem-20031105 (17 May 2004)
+
+  17 May 2004; Patrick Kursawe <phosphan@gentoo.org>
+  chipmunksystem-20031105.ebuild, metadata.xml:
+  Initial ebuild by Herton R. Krzesinski <herton@brturbo.com> and
+  olivier.fisette@sympatico.ca with little modifications by phosphan@gentoo.org.
+  See bug #24509.
+
