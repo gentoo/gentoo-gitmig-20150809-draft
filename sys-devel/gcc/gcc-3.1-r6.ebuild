@@ -353,5 +353,9 @@ pkg_postrm() {
 	then
 		ln -sf gcc ${ROOT}/usr/bin/cc
 	fi
+	
+	# Fix ncurses b0rking (if r5 isn't unmerged)
+        find /usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
+
 }
 
