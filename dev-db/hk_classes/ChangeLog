@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.13 2004/03/24 23:54:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.14 2004/05/16 20:28:29 centic Exp $
+
+  16 May 2004; Dominik Stadler <centic@gentoo.org> hk_classes-0.6.2a.ebuild:
+  Remove unnecessary definition of S
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org> hk_classes-0.6.1.ebuild,
   hk_classes-0.6.2a.ebuild, hk_classes-0.6.3_alpha1.ebuild,

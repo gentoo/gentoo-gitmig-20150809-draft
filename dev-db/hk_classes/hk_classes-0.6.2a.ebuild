@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.2a.ebuild,v 1.2 2004/03/24 23:54:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.2a.ebuild,v 1.3 2004/05/16 20:28:29 centic Exp $
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, including API documentation and tutorials."
 HOMEPAGE="http://hk-classes.sourceforge.net/"
@@ -18,7 +18,7 @@ DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"
 
-S=${WORKDIR}/${P}
+#S=${WORKDIR}/${P}
 
 src_compile() {
 	./configure || die "./configure failed"
