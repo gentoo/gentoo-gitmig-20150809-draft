@@ -188,6 +188,7 @@ gnome-apps/gentoo
 gnome-apps/gupsc
 gnome-apps/gwcc
 gnome-apps/netleds_applet
+gnome-apps/gnapster
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
@@ -196,4 +197,3 @@ gnome-apps/netleds_applet
 dev-util/glimmer
 net-www/screem
 media-video/zapping
-media-sound/gnapster
