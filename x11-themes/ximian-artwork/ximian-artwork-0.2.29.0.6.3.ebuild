@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.8 2004/06/24 23:38:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.9 2004/10/04 05:52:40 spyderous Exp $
 
 inherit rpm eutils
 
@@ -49,7 +49,7 @@ src_install () {
 	rm -f ${D}/usr/share/pixmaps/ximian-desktop-stripe.png
 
 	# Set up X11 implementation
-	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
 	X11_IMPLEM="${X11_IMPLEM##*\/}"
 	einfo "X11 implementation is ${X11_IMPLEM}."

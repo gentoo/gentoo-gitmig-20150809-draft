@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.95.ebuild,v 1.8 2004/10/04 02:47:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.95.ebuild,v 1.9 2004/10/04 05:51:36 spyderous Exp $
 
 inherit eutils rpm
 
@@ -163,7 +163,7 @@ src_install () {
 	mv GdmGreeterTheme.desktop.mod GdmGreeterTheme.desktop
 
 	# move cursors to /usr/share/cursors/${X11_IMPL}
-	X11_IMPLEM_P="$(portageq best_version ${ROOT} virtual/x11)"
+	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
 	X11_IMPLEM="${X11_IMPLEM##*\/}"
 

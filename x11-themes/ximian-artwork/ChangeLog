@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ximian-artwork
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.16 2004/06/24 23:38:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.17 2004/10/04 05:52:40 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ximian-artwork-0.2.29.0.6.3.ebuild:
+  Drop useless portageq calls.
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   ximian-artwork-0.2.26.0.6.1-r1.ebuild, ximian-artwork-0.2.29.0.6.2.ebuild,

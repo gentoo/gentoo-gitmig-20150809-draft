@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.38 2004/10/04 02:47:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.39 2004/10/04 05:51:36 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  redhat-artwork-0.73.ebuild, redhat-artwork-0.95.ebuild,
+  redhat-artwork-0.96.ebuild:
+  Drop useless portageq calls.
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   redhat-artwork-0.73.ebuild, redhat-artwork-0.95.ebuild,
