@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.45 2005/02/12 05:25:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.46 2005/02/14 21:29:38 mr_bones_ Exp $
+
+  14 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> readline-4.3-r6.ebuild:
+  macos went away
 
 *readline-5.0-r2 (12 Feb 2005)
 

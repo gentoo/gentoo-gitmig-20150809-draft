@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.10 2005/01/03 00:26:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.11 2005/02/14 21:29:39 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -30,7 +30,6 @@ src_unpack() {
 	do
 		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
 	done
-	use macos && epatch ${FILESDIR}/macos.patch
 	use ppc-macos && epatch ${FILESDIR}/macos.patch
 
 	gnuconfig_update
@@ -57,7 +56,6 @@ src_install() {
 
 	cd ${S}
 
-	if ! use macos; then
 	if ! use ppc-macos; then
 		dodir /$(get_libdir)
 		mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
@@ -73,10 +71,9 @@ src_install() {
 		dosym libreadline.so.${PV/a/} /$(get_libdir)/libreadline.so.4
 		chmod 755 ${D}/$(get_libdir)/*.${PV/a/}
 	fi
-	fi
 
 	# history(3) is MacOS's manpage for editline. We can delete the file as below since we are keeping the .gz. man knows to show both.
-	if (use macos || use ppc-macos); then
+	if use ppc-macos; then
 		rm ${D}/usr/share/man/man3/history.3 || die "Unable to remove conflicting manpage from the image."
 		einfo "Not installing /usr/share/man/man3/history.3 on MacOS"
 	fi
