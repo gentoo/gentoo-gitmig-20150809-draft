@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.25 2004/02/09 17:04:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.26 2004/03/07 10:37:15 kumba Exp $
+
+  07 Mar 2004; Joshua Kinard <kumba@gentoo.org> tcp-wrappers-7.6-r3.ebuild,
+  tcp-wrappers-7.6-r4.ebuild, tcp-wrappers-7.6-r8.ebuild:
+  Marked stable on mips, copyright header fixes.
 
   09 Feb 2004; <gustavoz@gentoo.org> tcp-wrappers-7.6-r8.ebuild:
   stable on sparc

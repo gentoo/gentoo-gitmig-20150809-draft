@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.60 2004/03/01 19:59:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.61 2004/03/07 10:27:33 kumba Exp $
+
+  07 Mar 2004; Joshua Kinard <kumba@gentoo.org> procps-2.0.16-r1.ebuild,
+  procps-3.1.13-r1.ebuild, procps-3.1.15.ebuild:
+  Marked stable on mips, copyright header fixes.
 
   24 Feb 2004; Chris PeBenito <pebenito@gentoo.org> procps-3.2.0.ebuild,
   files/procps-3.2.0-selinux-Z.diff:
