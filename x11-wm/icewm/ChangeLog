@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.72 2004/10/24 13:37:43 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.73 2004/10/24 19:43:02 morfic Exp $
+
+*icewm-1.2.17_pre1 (24 Oct 2004)
+
+  24 Oct 2004; Daniel Goller <morfic@gentoo.org>
+  +files/icewm-1.2.17_pre1.wmtaskbar.cc.patch, +icewm-1.2.17_pre1.ebuild:
+  Rev Bump to 1.2.17_pre1, this should fix composite for xorg 6.8.0
 
   20 Oct 2004; Daniel Goller <morfic@gentoo.org> icewm-1.2.16-r1.ebuild:
   Added libungif dep, closing bug#65929
