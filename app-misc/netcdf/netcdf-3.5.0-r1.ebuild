@@ -1,0 +1,39 @@
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Tod M. Neidt <tneidt@fidnet.com>
+# $Header: /var/cvsroot/gentoo-x86/app-misc/netcdf/netcdf-3.5.0-r1.ebuild,v 1.1 2002/01/05 03:58:44 hallski Exp $
+
+S=${WORKDIR}/${P}/src
+DESCRIPTION="Interface for array oriented data access"
+
+#Note orig source archive does not have version # in filename
+#SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${PN}.tar.Z"
+#but most of the mirrors do.
+SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.Z"
+
+HOMEPAGE="http://www.unidaa.ucar.edu/packages/netcdf/"
+
+DEPEND="virtual/glibc"
+
+src_compile() {
+	export CPPFLAGS=-Df2cFortran
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man || die
+
+	emake || die
+
+	make test || die
+}
+
+src_install() {
+	dodir /usr/{lib,share}
+
+	make prefix=${D}/usr \
+		MANDIR=${D}/usr/share/man \
+		install || die
+
+	dodoc COMPATIBILITY COPYRIGHT INSTALL.html MANIFEST
+	dodoc README RELEASE_NOTES VERSION
+}
+
