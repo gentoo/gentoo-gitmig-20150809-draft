@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.27 2002/11/08 17:09:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.28 2002/11/17 14:01:01 foser Exp $
+
+*xchat-1.9.5 (17 Nov 2002)
+
+  17 Nov 2002; foser <foser@gentoo.org> xchat-1.9.5.ebuild :
+  New version, removed most of the menu item placement hacks
 
 *xchat-1.9.4-r1 (08 Nov 2002)
 
@@ -10,7 +15,7 @@
 *xchat-1.9.4 (05 Nov 2002)
 
   05 Nov 2002; foser <foser@gentoo.org> xchat-1.9.4.ebuild :
-  New version, moved to slot 2.
+  New version, moved to slot 2
   IMPORTANT : xchat-1.8 should move to slot 1 next revision/release 
  
 *xchat-1.9.3-r3.ebuild (02 Nov 2002)
