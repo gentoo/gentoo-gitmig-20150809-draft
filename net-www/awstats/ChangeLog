@@ -1,6 +1,13 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.15 2005/02/24 00:26:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.16 2005/03/21 13:36:21 ka0ttic Exp $
+
+*awstats-6.4 (21 Mar 2005)
+
+  21 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> files/postinst-en.txt,
+  awstats-6.3-r2.ebuild, +awstats-6.4.ebuild:
+  Version bump; cleaned up sed and apachever stuff for bug 83978. Added
+  enhanced postinst-en.txt written by Jakub Moc in bug 81978.
 
   23 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> awstats-6.3-r2.ebuild:
   Upstream strikes again. Fix digest for bug 83085.
