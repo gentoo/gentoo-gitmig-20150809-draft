@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.5 2004/05/14 03:18:30 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.6 2004/06/03 02:30:13 agriffis Exp $
 
 inherit java-pkg
 
@@ -25,18 +25,18 @@ src_compile() {
 
 	echo "commons-collections.jar=`java-config --classpath=commons-collections`" > build.properties
 
-	if [ -n "`use jikes`" ] ; then
+	if use jikes ; then
 		myc="${myc} -Dbuild.compiler=jikes"
 	fi
 
-	if [ -n "`use junit`" ] ; then
+	if use junit ; then
 		echo "junit.jar=`java-config --classpath=junit`" >> build.properties
 		ANT_OPTS=${myc} ant || die "Testing Classes Failed"
 	fi
 
 	ANT_OPTS=${myc} ant dist || die "Compilation Failed"
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		ANT_OPTS=${myc} ant javadoc || die "Unable to create documents"
 	fi
 }
@@ -46,7 +46,7 @@ src_install () {
 	dodoc README.txt
 	dohtml STATUS.html PROPOSAL.html
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dohtml -r dist/docs/*
 	fi
 }
