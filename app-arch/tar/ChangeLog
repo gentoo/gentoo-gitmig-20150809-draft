@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.4 2004/01/04 16:54:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.5 2004/01/11 13:45:33 azarah Exp $
+
+*tar-1.13.92-r2 (11 Jan 2004)
+
+  11 Jan 2004; Martin Schlemmer <azarah@gentoo.org> tar-1.13.92-r2.ebuild,
+  files/tar-1.13.92-dont-strip-dot_slash.patch:
+  Do not strip './' in path elements, as they are valid, bug #37132. This is
+  the proper fix from CVS.
 
 *tar-1.13.92-r1 (04 Jan 2004)
 
