@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r3.ebuild,v 1.2 2004/05/20 04:24:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r4.ebuild,v 1.1 2004/05/20 08:39:50 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -122,8 +122,8 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-*"
-#KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
+#KEYWORDS="-*"
+KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -152,7 +152,7 @@ DEPEND="virtual/glibc
 	hardened? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.8-r1
-	hardened? ( >=sys-devel/binutils-2.15.90.0.1.1-r2 )
+	!amd64? ( hardened? ( >=sys-devel/binutils-2.15.90.0.3 ) )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
@@ -169,21 +169,6 @@ RDEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 PDEPEND="sys-devel/gcc-config"
-
-gcc_compat() {
-	einfo "GCC 3.4 provides a new (incompatible) version of libstdc++, so"
-	einfo "binaries linked to an older libstdc++ will break if that older"
-	einfo "version is uninstalled. To make sure nothing breaks, the libs"
-	einfo "from your previous gcc $@ installation will be backed up and"
-	einfo "included in this install."
-
-	cd ${ROOT} || die "Failed to chdir to root: ${ROOT}"
-	tar cvf ${WORKDIR}/gcc-libs.tar $(find ${ROOT}/${LOC}/lib/gcc-lib/${CCHOST}/$@ -type f -name '*.so*') || die "failed to create tarball"
-	cd ${D} || die "failed to enter \$D: $D"
-	tar -mxvf ${WORKDIR}/gcc-libs.tar || die "failed to extract tarball"
-
-	export BULIB=$@
-}
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
@@ -296,14 +281,10 @@ update_gcc_for_libc_ssp() {
 src_unpack() {
 	local release_version="Gentoo Linux ${PVR}"
 
-	ewarn "GCC 3.4 support in Gentoo is still in an early experimental stage."
-	ewarn "While the compiler itself appears to be pretty solid at this point,"
-	ewarn "there is still a lot of software that will not compile with it. It"
-	ewarn "might be a good idea to keep your older compiler installed. Do not"
-	ewarn "hold gentoo accountable if GCC 3.4 wont compile your favorite piece"
-	ewarn "of software, emits strange and confusing error messages, frustrates"
-	ewarn "you and your porting efforts, eats your cat, humps your leg, or pees"
-	ewarn "on your rug. You have been warned!"
+	ewarn "GCC 3.3 compatibility has been removed. It was always broken, and overall"
+	ewarn "a bad way to do things. I added it as a temporary fix until a real one"
+	ewarn "could be implemented, but it breaks on a number of archs."
+	ewarn "It would be a /very/ good idea to keep gcc 3.3.x or 3.2.x installed."
 	ewarn "NOTE: the piessp patch isnt as complete as the 3.3.3 version"
 
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
@@ -392,10 +373,16 @@ src_unpack() {
 		cp ${WORKDIR}/gcc/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/gcc/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 		cp -R ${WORKDIR}/gcc/testsuite/* ${WORKDIR}/${P}/gcc/testsuite/ || die "testsuite not found"
-		epatch ${FILESDIR}/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch
-		epatch ${WORKDIR}/protectonly.dif
 
-		#use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+		epatch ${FILESDIR}/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch
+
+		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+
+		# we apply only the needed parts of protectonly.dif
+		sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |' \
+			-i gcc/Makefile.in || die "Failed to update crtstuff!"
+		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector-all|' \
+			-i ${S}/gcc/Makefile.in || die "Failed to update libgcc!"
 
 		release_version="${release_version}, ssp-${PP_FVER}"
 
@@ -632,26 +619,6 @@ src_install() {
 	ln -s gcc-lib ${D}/${LOC}/lib/gcc
 	LIBPATH=${LIBPATH/lib\/gcc/lib\/gcc-lib}
 
-	# Due to the fact that GCC 3.4 provides an incompatible version of
-	# libstdc++, we need to provide compatibility for binary-only apps
-	# which are linked against the old version. Every arch should have
-	# one of these marked stable, so lets look for the newest version
-	# first. We need to check for the .so instead of just the directory
-	# because there may or may not be any shared objects to back up...
-	# The PPC-specific gcc 3.3.3 ebuilds for some reason install directly
-	# to /usr/lib/ on PPC64, so we'll have to add logic for this later. :/
-	# Travis Tilley <lv@gentoo.org>
-	if [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.3.3/libstdc++.so ]
-	then
-		gcc_compat 3.3.3
-	elif [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.3.2/libstdc++.so ]
-	then
-		gcc_compat 3.3.2
-	elif [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.2.3/libstdc++.so ]
-	then
-		gcc_compat 3.2.3
-	fi
-
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -842,9 +809,9 @@ src_install() {
 		# having one compiler installed at a time, but since these directories
 		# exist outside the versioned directories, versions from gcc 3.3 and
 		# 3.4 will overwrite each other. not good.
-		cp -pfd ${D}/${LIBPATH}/../lib64/libgcc_s* ${D}/${LIBPATH}
 		use multilib && \
 		cp -pfd ${D}/${LIBPATH}/../lib32/libgcc_s* ${D}/${LIBPATH}
+		cp -pfd ${D}/${LIBPATH}/../lib64/libgcc_s* ${D}/${LIBPATH}
 	fi
 }
 
