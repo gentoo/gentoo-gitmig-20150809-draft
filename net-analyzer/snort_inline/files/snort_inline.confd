@@ -10,4 +10,4 @@ LOGDIR="/var/log/snort_inline"
 CONF=/etc/snort_inline/snort.conf
 
 # This pulls in the options above
-SNORT_OPTS="-D -Q -u snort -l $LOGDIR -c $CONF"
+SNORT_OPTS="-D -Q -u snort_inline -g snort_inline -l $LOGDIR -c $CONF"
