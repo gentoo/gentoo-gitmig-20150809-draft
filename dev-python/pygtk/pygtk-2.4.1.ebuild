@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.12 2005/03/08 13:39:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.13 2005/03/15 12:18:05 liquidx Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -66,7 +66,7 @@ src_test() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize /usr/share/pygtk/2.0/codegen /usr/lib/python${PYVER}/site-packages/gtk-2.0
+	python_mod_optimize /usr/share/pygtk/2.0/codegen /usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0
 	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
 	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
 	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py
@@ -76,8 +76,8 @@ pkg_postrm() {
 	python_version
 	python_mod_cleanup /usr/share/pygtk/2.0/codegen
 	python_mod_cleanup
-	rm -f ${ROOT}/usr/lib/python${PYVER}/site-packages/pygtk.{py,pth}
-	alternatives_auto_makesym /usr/lib/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
-	alternatives_auto_makesym /usr/lib/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
+	rm -f ${ROOT}/usr$(get_libdir)/python${PYVER}/site-packages/pygtk.{py,pth}
+	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
+	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
 }
 

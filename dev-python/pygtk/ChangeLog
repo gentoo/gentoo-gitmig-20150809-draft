@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.75 2005/03/08 18:05:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.76 2005/03/15 12:18:05 liquidx Exp $
+
+  15 Mar 2005; Alastair Tse <liquidx@gentoo.org> pygtk-2.4.1.ebuild,
+  pygtk-2.6.0.ebuild:
+  more multilib fixes
 
   08 Mar 2005; Alastair Tse <liquidx@gentoo.org> pygtk-2.6.0.ebuild:
   add python numeric dep
