@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/tclspice
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/tclspice/ChangeLog,v 1.2 2004/12/27 21:08:07 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/tclspice/ChangeLog,v 1.3 2005/02/16 23:52:46 hansmi Exp $
+
+  17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  tclspice-0.2.17.ebuild:
+  Fixed bug 82279, added to ~ppc.
 
 *tclspice-0.2.17 (27 Dec 2004)
 

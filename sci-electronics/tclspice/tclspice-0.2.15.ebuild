@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/tclspice/tclspice-0.2.15.ebuild,v 1.1 2004/12/27 20:25:42 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/tclspice/tclspice-0.2.15.ebuild,v 1.2 2005/02/16 23:52:46 hansmi Exp $
 
 DESCRIPTION="Spice circuit simulator with TCL scripting language and GUI"
 HOMEPAGE="http://tclspice.sf.net/"
