@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/ha-prosper
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ChangeLog,v 1.1 2004/09/08 18:33:05 usata Exp $
+
+*ha-prosper-4.21 (09 Sep 2004)
+
+  09 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +ha-prosper-4.21.ebuild:
+  Initial import. Ebuild submitted by Adam Piatyszek
+  <ediap@et.put.poznan.pl>, closing bug #63151.
+
