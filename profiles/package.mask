@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# azarah@gentoo.org (17 Jul 2002)
+# needs testing.
+=sys-apps/baselayout-1.8.0
+
 # stubear@gentoo.org (16 Jul 2002)                                              
 # w3m-0.3-r4 - test for multi-byte char support                              
 =net-www/w3m-0.3-r4
