@@ -151,7 +151,7 @@ diff -U 3 -r /src/wepattack.c src/wepattack.c
  		network = 0;
  
  	// if only one should be attacked, remove the others from the list
-@@ -220,14 +272,20 @@
+@@ -220,11 +272,15 @@
  
  	// process command line options
  	// program will terminate, if invalid options are passed
@@ -164,15 +164,10 @@ diff -U 3 -r /src/wepattack.c src/wepattack.c
 +		case 'b':
 +			BSSID = optarg;
 +			is_bssid_set = 1;		
-+			printf("BSSID: %s\n", BSSID);
 +			break;
                  // arg for packet file to read from
  		case 'f':
                          packet_file = optarg;
-+			printf("FILE: %s\n", optarg);
- 			pf = fopen(packet_file,"r");
- 			if (!pf) {
- 				printf("Dumpfile error: No such file or directory!\n\n");
 diff -U 3 -r /src/wepattack.h src/wepattack.h
 --- /src/wepattack.h	2002-10-24 15:14:22.000000000 +0200
 +++ src/wepattack.h	2004-04-07 00:39:51.000000000 +0200
