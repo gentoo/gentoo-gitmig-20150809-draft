@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/squidalyser
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/ChangeLog,v 1.4 2004/09/05 09:15:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/ChangeLog,v 1.5 2004/09/06 01:46:00 swegener Exp $
+
+  06 Sep 2004; Sven Wegener <swegener@gentoo.org> squidalyser-0.2.55.ebuild:
+  Updated SRC_URI and HOMEPAGE. Thanks to Michael-John Anthony
+  <mjanthony@gmail.com> in bug #62960.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

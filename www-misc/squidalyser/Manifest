@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 d7dd06078d4f3a44b46709294cc7bc21 metadata.xml 249
-MD5 e86581634ae75fa981118a3e2fa7d090 squidalyser-0.2.55.ebuild 2690
-MD5 045dfcb755f9e6f379c59271519855d4 ChangeLog 1450
+MD5 1712b389cc3c0eadfc93ce911a8fc1ef squidalyser-0.2.55.ebuild 2696
+MD5 eea3789b587754135730eb7ea1b24c9d ChangeLog 1630
 MD5 4f1639f87240e891fee9650bce40b831 files/digest-squidalyser-0.2.55 145
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOtkhI1lqEGTUzyQRAksCAJ49ZgetQpk+R7HKUafHM/3mdsM4yACfQaDR
-sJhBsJVJskhuHiqx4PV66LM=
-=hWku
+iD8DBQFBO8FiI1lqEGTUzyQRAhPAAJ4wBkuKIUrx7mtzjE6bDbORlFR2cQCbBa8u
+EwAU9HnHgIcYagnmhtG0C6c=
+=dlCc
 -----END PGP SIGNATURE-----
