@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.63 2003/09/12 02:22:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.64 2003/11/11 12:49:40 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -436,7 +436,7 @@ kde_remove_dir(){
 
 
 # is this a kde-base ebuid?
-case $PN in kde-i18n*|arts|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdelibs-apidocs)
+case $PN in kde-i18n|arts|kdeaccessibility|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdelibs-apidocs)
 		debug-print "$ECLASS: KDEBASE ebuild recognized"
 		export KDEBASE="true"
 		;;
