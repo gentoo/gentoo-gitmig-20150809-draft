@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.13 2005/01/02 10:41:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.14 2005/01/03 20:54:42 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sparc x86"
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec xv"
+IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec xv pic"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
@@ -63,10 +63,17 @@ src_unpack() {
 	# fixes bad X11 directories
 	epatch ${FILESDIR}/${PN}-x11.patch
 
+	# fixes bad xv checking
+	epatch ${FILESDIR}/${PN}-configure.ac.patch
+
 	# Fix building on amd64, #49569
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 
 	use pic && epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
+	if use pic && use x86
+	then
+		epatch ${FILESDIR}/${PN}-hardened-mmx.patch
+	fi
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure.ac
