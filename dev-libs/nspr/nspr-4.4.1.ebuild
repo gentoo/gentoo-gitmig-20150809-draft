@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.11 2004/07/28 12:17:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.12 2004/08/14 19:49:46 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="x86 sparc ppc alpha amd64 hppa ia64 ~mips"
+KEYWORDS="x86 sparc ppc alpha amd64 hppa ia64 ~mips ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"
