@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/tpg-3.0.3.ebuild,v 1.1 2004/10/14 00:27:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/tpg-3.0.3.ebuild,v 1.2 2004/10/16 20:25:14 mr_bones_ Exp $
 
 inherit distutils
 
@@ -22,7 +22,7 @@ DOCS="License.txt THANKS"
 
 src_install() {
 	distutils_src_install
-	if use doc ; then 
+	if use doc ; then
 		dohtml doc/*
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*
