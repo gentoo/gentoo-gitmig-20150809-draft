@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.5.ebuild,v 1.2 2004/04/22 17:19:31 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.5.ebuild,v 1.3 2004/04/22 17:27:28 kanaka Exp $
 
 DESCRIPTION="Convert OpenOffice/KOffice to run independently on Linux, OSX, or Windows"
 HOMEPAGE="http://www.indeview.org/"
@@ -40,6 +40,8 @@ _EOF_
 </script:module>
 _EOF_
 
+	cd ${S}/../Creator/KPresenter
+	sed -i -e 's:^ROOT_DATA=unknown:ROOT_DATA=/usr/share/IndeView/ROOT_DATA:' kpr2iv.sh
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/indeview
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.2 2004/04/22 17:19:31 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.3 2004/04/22 17:27:28 kanaka Exp $
+
+  22 Apr 2004; Joel Martin <kanaka@gentoo.org> indeview-0.6.5.ebuild:
+  Fix kpr2iv.sh root data path
 
   22 Apr 2004; Joel Martin <kanaka@gentoo.org> indeview-0.6.5.ebuild:
   Be more graceful about openoffice (non) existence
