@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/kxmleditor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.15 2004/09/24 02:06:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.16 2004/09/25 13:44:12 weeve Exp $
+
+*kxmleditor-1.1.3 (25 Sep 2004)
+
+  25 Sep 2004; Jason Wever <weeve@gentoo.org> kxmleditor-1.1.3.ebuild:
+  Stable on sparc.
 
 *kxmleditor-1.1.0 (23 Sep 2004)
 
