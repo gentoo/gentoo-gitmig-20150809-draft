@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.2.2.ebuild,v 1.1 2003/04/15 23:41:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.2.3.ebuild,v 1.1 2003/04/17 16:24:42 foser Exp $
 
 inherit eutils gnome2
 
