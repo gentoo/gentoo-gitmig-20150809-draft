@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-gnome
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.6 2003/05/03 19:51:59 tberman Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.7 2004/02/21 19:30:16 zx Exp $
+
+*java-gnome-0.8.3 (23 Feb 2004)
+
+  23 Feb 2004; Chris Aniszczyk <zx@gentoo.org> java-gnome-0.8.3.ebuild,
+  files/java-gnome-0.8.3-gentoo.diff:
+  Bug Fix #41421
+  Thanks to <nicolas.mommaerts@beatz.no-ip.org> for the patch.
 
   03 May 2003; Todd Berman <tberman@gentoo.org> java-gnome-0.7.1.ebuild:
   Fixed up ebuild, closed bug #14119.

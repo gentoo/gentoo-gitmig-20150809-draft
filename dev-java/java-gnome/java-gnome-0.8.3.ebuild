@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.1 2004/02/21 04:53:30 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.2 2004/02/21 19:30:16 zx Exp $
+
+inherit eutils
 
 DESCRIPTION="Java bindings for GNOME and GTK libraries that allow GNOME and GTK applications to be written in Java"
 SRC_URI="mirror://sourceforge/java-gnome/${P}.tar.bz2"
@@ -20,6 +22,8 @@ IUSE=""
 S=${WORKDIR}/${P}
 
 src_compile() {
+	epatch ${FILESDIR}/java-gnome-${PV}-gentoo.diff
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
