@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.5 2004/04/07 22:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.6 2004/05/29 21:12:08 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -15,7 +15,7 @@
 # This variable is just simply used to track whether the user is 
 # using a cvs version of a horde ebulid.
 
-inherit webapp-apache
+inherit webapp
 [ "${PN}" != "${PN/-cvs}" ] && inherit cvs
 
 ECLASS=horde
@@ -45,11 +45,9 @@ fi
 HOMEPAGE="http://www.horde.org/${HORDE_PN}"
 
 LICENSE="LGPL-2"
-SLOT="0"
 
 horde_pkg_setup() {
-	webapp-detect || NO_WEBSERVER=1
-	webapp-pkg_setup "${NO_WEBSERVER}"
+	webapp_pkg_setup
 
 	if [ ! -z "${HORDE_PHP_FEATURES}" ] ; then
 		local phpver="`best_version mod_php`"
@@ -77,10 +75,9 @@ horde_src_unpack() {
 }
 
 horde_src_install() {
-	webapp-mkdirs
+	webapp_src_preinst
 
-	local DocumentRoot=${HTTPD_ROOT}
-	local destdir=${DocumentRoot}/horde
+	local destdir=${MY_HTDOCSDIR}/horde
 	[ "${HORDE_PN}" != "horde" ] && destdir=${destdir}/${HORDE_PN}
 
 	dodoc README docs/*
@@ -92,12 +89,10 @@ horde_src_install() {
 	[ "${EHORDE_CVS}" == "true" ] && cd ${HORDE_PN}
 
 	cp -r . ${D}/${destdir}/
-	cd ${D}/${destdir}
 
-	# protecting files
-	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${D}/${destdir}
-	find ${D}/${destdir} -type f -exec chmod 0640 '{}' \;
-	find ${D}/${destdir} -type d -exec chmod 0750 '{}' \;
+	webapp_serverowned ${MY_HTDOCSDIR}
+
+	webapp_src_install
 }
 
 horde_pkg_postinst() {
@@ -118,4 +113,5 @@ horde_pkg_postinst() {
 		ewarn "They tend to break things when working with" 
 		ewarn "the non CVS versions of horde."
 	fi
+	webapp_pkg_postinst
 }
