@@ -10,7 +10,7 @@ DESCRIPTION="JUnit is a simple framework to write repeatable tests."
 SRC_URI="http://download.sourceforge.net/junit/${NP}.zip"
 HOMEPAGE="http://JUnit.org"
 
-DEPEND="virtual/jdk-1.3"
+DEPEND=">=virtual/jdk-1.3"
 
 src_unpack() {
 	unpack ${NP}.zip
