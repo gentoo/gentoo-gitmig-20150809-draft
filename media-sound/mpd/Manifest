@@ -4,7 +4,7 @@ MD5 7eeee75a4f1b489521647df96913d3b5 mpd-0.9.4-r1.ebuild 1667
 MD5 10713136a84d9d1419d1a69d58706c9a mpd-0.10.4.ebuild 1915
 MD5 7f836ed517e151b1e1ba1d2f2181f616 mpd-0.10.3-r1.ebuild 1923
 MD5 76845e94c803c11e2d1724466e36fcbe mpd-0.11.2.ebuild 1914
-MD5 6e1d9f38d2ff85f87da9f519b0320e76 mpd-0.11.1.ebuild 1914
+MD5 5aa2f9bc752974dcf80ea2d4fae2c1ab mpd-0.11.1.ebuild 1913
 MD5 44fea0fb8765646d220cddec1e2f2612 mpd-0.11.0.ebuild 1919
 MD5 727c4148fc9939fdbb4ba6770d2b1249 files/digest-mpd-0.10.3-r1 62
 MD5 b26df5fab168ac4c9bca171911b4dc8c files/digest-mpd-0.9.4-r1 62
