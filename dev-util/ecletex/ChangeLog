@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ecletex
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.8 2004/12/21 21:45:54 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.9 2005/02/10 23:53:52 karltk Exp $
+
+  11 Feb 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/build.properties-0.0.3, files/build.xml-0.0.3,
+  ecletex-0.0.3.ebuild:
+  Partial fix for #81272. Still not resolving gtk jars correctly.
 
   15 Nov 2004; Karl Trygve Kalleberg <karltk@gentoo.org> -files/build.xml-0.0.2,
   -ecletex-0.0.2.ebuild, ecletex-0.0.3.ebuild:
