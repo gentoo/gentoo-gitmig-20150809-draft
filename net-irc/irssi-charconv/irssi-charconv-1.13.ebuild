@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/irssi-charconv-1.13.ebuild,v 1.6 2004/08/11 20:13:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/irssi-charconv-1.13.ebuild,v 1.7 2004/09/02 19:58:30 slarti Exp $
 
 inherit gcc flag-o-matic
 
@@ -34,8 +34,9 @@ src_compile() {
 }
 
 src_install() {
-	libinto /usr/lib/irssi/modules
-	dolib ${T}/libcharconv.so
+	insinto /usr/lib/irssi/modules
+	doins ${T}/libcharconv.so
+	fperms 755 /usr/lib/irssi/modules/libcharconv.so
 
 	dodoc ${FILESDIR}/README
 }
