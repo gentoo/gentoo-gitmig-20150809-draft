@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 940b5402fa88f87c15a718cc4eb2f11f ChangeLog 3247
+MD5 cb11f523faff6e28392cad8e23fdf9b2 ChangeLog 3354
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 514ee3b7b28687395f306f4ce05d6094 minicom-2.1-r1.ebuild 1022
 MD5 67f667abec40aca4b4418ae3937105ff files/digest-minicom-2.1-r1 63
-MD5 a31777cb2fefdf6dde761b58a8076333 files/minicom-2.1-memcpy-bounds.diff 487
 MD5 6362e781f7e7a1300d8a3c7b602ddd6f files/minirc.dfl 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBoD/qjtv59x0+BrURAgQ8AKD1bimQohXdujhZP3ODaygDUajGAwCg2k/o
-ULFl3yA781QaEn4dRv5AlSM=
-=gkFb
------END PGP SIGNATURE-----
+MD5 a31777cb2fefdf6dde761b58a8076333 files/minicom-2.1-memcpy-bounds.diff 487
