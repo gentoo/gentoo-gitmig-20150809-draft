@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.4 2003/03/04 21:52:35 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.5 2003/03/10 21:20:57 agenkin Exp $
+
+*gxine-0.3.1 (10 Mar 2003)
+
+  10 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
 
 *gxine-0.3 (04 Mar 2003)
 
