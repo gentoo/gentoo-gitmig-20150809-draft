@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.5.ebuild,v 1.2 2003/10/07 00:31:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.5.ebuild,v 1.3 2004/03/30 22:44:55 zul Exp $
 
 MY_P="ApacheTop-${PV}"
 S=${WORKDIR}/${MY_P}

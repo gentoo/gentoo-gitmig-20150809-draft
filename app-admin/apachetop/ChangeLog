@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.7 2004/03/29 08:45:41 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.8 2004/03/30 22:44:55 zul Exp $
+
+*apachetop-0.10 (30 Mar 2004)
+
+  30 Mar 2004; Chuck Short <zul@gentoo.org> apachetop-0.10.ebuild,
+  apachetop-0.5.ebuild:
+  Header fixes.
+
+*apachetop-0.10 (30 Mar 2004)
+
+  30 Mar 2004; Chuck Short <zul@gentoo.org> apachetop-0.10.ebuild:
+  Version bump, changed where apachetop is looking for logfiles.
 
   29 Mar 2004; Stuart Herbert <stuart@gentoo.org> apachetop-0.9.ebuild:
   Marked stable on x86
