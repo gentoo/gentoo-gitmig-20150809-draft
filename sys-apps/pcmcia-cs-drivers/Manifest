@@ -1,0 +1,7 @@
+MD5 0ae639a5d82239abd8d1d7bb490efe04 ChangeLog 987
+MD5 9ca18dce623c354a3eae8ba5058a5447 pcmcia-cs-drivers-3.2.3.ebuild 4462
+MD5 4c75a95107c7ad6710b644e2616e27a0 pcmcia-cs-drivers-3.2.4.ebuild 4379
+MD5 166988c95effd8177790227bd751ccf5 files/digest-pcmcia-cs-drivers-3.2.3 132
+MD5 c5fa9638e8a3b92f58f03b662782da1c files/digest-pcmcia-cs-drivers-3.2.4 146
+MD5 6c67e080235f83a3cb14be6cf3d2c872 files/hermes.conf 1859
+MD5 8c814c1d24b600cfaa48cd9a669d0143 files/ppc.config.opts 228

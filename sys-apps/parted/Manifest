@@ -1,0 +1,5 @@
+MD5 5ef11980e8ce9ec9ae831def4e813763 ChangeLog 2494
+MD5 7d3a5481b95231d679083c71e66744ee parted-1.6.4.ebuild 1203
+MD5 345e1d4c5c500f7f20ec6c779ebb69cd parted-1.6.5.ebuild 1228
+MD5 17af4d8fa0f278ea445c6b1f2dc1b922 files/digest-parted-1.6.4 65
+MD5 c4eb5801edd996be57aabfd201b96711 files/digest-parted-1.6.5 65

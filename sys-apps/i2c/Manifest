@@ -1,0 +1,5 @@
+MD5 5b5ada2d5b2c336c1f7f28c69c817c58 ChangeLog 924
+MD5 ef74d0d2b5e580a3c3607d064659a31e i2c-2.6.5-r1.ebuild 1291
+MD5 a164eee0b2b49876740d4ec479cb8c52 i2c-2.7.0.ebuild 1291
+MD5 3576df9f3c7882d48106168eb8f7d51a files/digest-i2c-2.6.5-r1 61
+MD5 2e2470d20cbace5964fe8d32fd87200e files/digest-i2c-2.7.0 61

@@ -1,0 +1,6 @@
+MD5 573b64d913c0ca0ed1b59ed2d0f25686 ChangeLog 613
+MD5 38a04c72e8ad8fcdb8e0046b2d9c2dab discover-data-1.2002.05.23-r1.ebuild 805
+MD5 12e3812b202b418b968cb500a9f73a21 discover-data-1.2002.05.23.ebuild 790
+MD5 c2e821582d57e4f5c7c93ce91412a02c files/digest-discover-data-1.2002.05.23 79
+MD5 c2e821582d57e4f5c7c93ce91412a02c files/digest-discover-data-1.2002.05.23-r1 79
+MD5 6437294b2d605a5f86a119b238d08d15 files/kernel-2.2-2.4.drivername.patch 995

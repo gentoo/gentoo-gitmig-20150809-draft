@@ -1,0 +1,5 @@
+MD5 93f5e446108f590083c70ccd6b4b6be9 ChangeLog 2136
+MD5 ec48444d19d350a99852cfa99c51b48e daemontools-0.76-r3.ebuild 1107
+MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
+MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r3 67
+MD5 a3371b1701f3e6dc1886109db8360edb files/svscan 870

@@ -1,0 +1,7 @@
+MD5 b1868da94161f3ba7b5f49a3dc4ea18a ChangeLog 1544
+MD5 f5bbd1d51b2463b50004c671fcb3bb12 irda-utils-0.9.13.ebuild 1214
+MD5 04de5de0d193a864f5f830694532438b irda-utils-0.9.15.ebuild 1367
+MD5 10a500d681ec4e01d3d614987d5c9068 files/digest-irda-utils-0.9.13 69
+MD5 b853c309634581523261878b433cc4ac files/digest-irda-utils-0.9.15 69
+MD5 fcc3d075e8caf8fdef170d74bf326149 files/irda.conf 92
+MD5 7fccf9657251fe7cc07b9db1aa5e3b18 files/irda.rc 986

@@ -1,0 +1,6 @@
+MD5 ca4c883d06d07aa639338c5a9aa3521c ChangeLog 742
+MD5 6887fd08cefb772151ce46999cbec976 fakeroot-0.4.4-r1.ebuild 851
+MD5 7b8556692ab0217df05dfa36f1070a64 fakeroot-0.4.4.ebuild 736
+MD5 a192b4e65779c0403da6a1868edc5ac3 files/digest-fakeroot-0.4.4 70
+MD5 a192b4e65779c0403da6a1868edc5ac3 files/digest-fakeroot-0.4.4-r1 70
+MD5 c96cefb60bc53da4ca582dae25a479b8 files/fakeroot-gcc3-gentoo.patch 405

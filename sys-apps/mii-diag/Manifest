@@ -1,0 +1,5 @@
+MD5 3fdb1fb35228547791f218f75b001b1f ChangeLog 317
+MD5 1b88ea90c09b5d3530dfeb5fd7ad9259 mii-diag-2.07.ebuild 1012
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.07 0
+MD5 0d54b1cf88229649250ec60887082af2 files/libmii.c-2.04 18026
+MD5 0d616641e571129e984ee0925e898ddd files/mii-diag.c-2.07 17835

@@ -1,0 +1,5 @@
+MD5 b605b25a52427087ce7475309634c52a ChangeLog 658
+MD5 4ac98122a999cd2f93e6e7f88ca7f06a sysvinit-2.83-r1.ebuild 1068
+MD5 b30474663c7b2e49ee358a32671941bb sysvinit-2.83.ebuild 1030
+MD5 f3cc010ab25be0d757030537126157a8 files/digest-sysvinit-2.83 64
+MD5 f3cc010ab25be0d757030537126157a8 files/digest-sysvinit-2.83-r1 64

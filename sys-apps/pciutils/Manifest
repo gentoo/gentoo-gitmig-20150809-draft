@@ -1,0 +1,5 @@
+MD5 4ea15547e3eecc3d3d08a1e2c3dbf3b4 ChangeLog 2052
+MD5 d4cdc610f52334b5011c835fba80f9f9 pciutils-2.1.10-r1.ebuild 1222
+MD5 b53608db34dd28b46470ab2cc8f3a5e1 files/digest-pciutils-2.1.10-r1 67
+MD5 17e4f2b32d39dd0b55c1143461c43cf3 files/pcimodules-pciutils-2.1.8.diff 11527
+MD5 0e0cc5f615816e51add0fdee655d4c82 files/pciutils-2.1.10-pcimodules.patch 1019

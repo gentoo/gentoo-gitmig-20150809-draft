@@ -1,0 +1,7 @@
+MD5 7d9d7f3eb7016c524dd7999e799caad9 ChangeLog 1010
+MD5 bf23f2e878753ab82929e1c9cfe04256 hfsplusutils-1.0.4-r1.ebuild 1151
+MD5 32b71bad407b79ea756b5d051f5d7966 hfsplusutils-1.0.4.ebuild 1056
+MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4 70
+MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4-r1 70
+MD5 55d48aa8e0ed10af513c1ccf3afeb25f files/hfsplusutils-1.0.4-errno.patch 445
+MD5 04d73b3a534085a657c52eee99c5e1d4 files/hfsplusutils-1.0.4-glob.patch 288

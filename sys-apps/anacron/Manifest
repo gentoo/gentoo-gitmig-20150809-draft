@@ -1,0 +1,5 @@
+MD5 98182ca90d83fdc9a5babe4bc4c40a08 ChangeLog 470
+MD5 a3f8a4d5ea8cb3b49edea4705f60d2a9 anacron-2.3.ebuild 1407
+MD5 e4cece3510aa56061a3ce087643c54fc files/anacron.rc6 390
+MD5 950b522f251d3fadc0628372d1f49d68 files/anacrontab 304
+MD5 869189865e4047f742c2d0c7fb853951 files/digest-anacron-2.3 62
