@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (21 Jun 2003)
+# doesn't compile under gcc3 and is unsupported anymore
+sys-devel/spython
+
 # <pauldv@gentoo.org> (19 Jun 2003)
 # It is a beta version
 =app-office/openoffice-bin-1.1_beta2
