@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.9.ebuild,v 1.4 2005/01/20 08:30:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.9.ebuild,v 1.5 2005/01/24 02:35:16 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -43,4 +43,7 @@ pkg_postinst() {
 		[[ -L ${ROOT}/usr/include/g++-v3 ]] && rm -f "${ROOT}"/usr/include/g++-v3
 		[[ ${ROOT} = "/" ]] && gcc-config $(/usr/bin/gcc-config --get-current-profile)
 	fi
+
+	# Make sure old versions dont exist #79062
+	rm -f "${ROOT}"/usr/sbin/gcc-config
 }
