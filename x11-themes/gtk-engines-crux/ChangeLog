@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-crux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-crux/ChangeLog,v 1.5 2004/01/19 23:35:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-crux/ChangeLog,v 1.6 2004/03/28 18:17:10 liquidx Exp $
+
+  28 Mar 2004; Alastair Tse <liquidx@gentoo.org> gtk-engines-crux-1.9.5-r1.ebuild:
+  fixed SRC_URI (#45108)
 
   19 Jan 2004; <gustavoz@gentoo.org> gtk-engines-crux-1.9.5-r1.ebuild:
   stable on hppa and sparc
