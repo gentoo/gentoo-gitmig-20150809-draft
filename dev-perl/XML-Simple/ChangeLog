@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlXML-CatalogChangeLog/dev-perlXML-SimpleChangeLog
+# ChangeLog for dev-perl/XML-Simple
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.6 2002/12/13 10:56:40 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.7 2002/12/17 19:35:22 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
