@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.85 2003/12/03 23:00:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.86 2003/12/15 19:30:41 gmsoft Exp $
+
+  15 Dec 2003; Guy Martin <gmsoft@gentoo.org> apache-2.0.48-r1.ebuild:
+  Marked stable on hppa.
 
   03 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> apache-2.0.48-r1.ebuild:
   properly fix bug #32444
