@@ -5,6 +5,7 @@ MD5 9aa1200bb5192b165843c3251df387ef tightvnc-1.2.7.ebuild 1550
 MD5 aabc422807dc831faa049e754fe2a782 tightvnc-1.2.9.ebuild 1618
 MD5 e3d97376c0f029056522d630552f86f6 tightvnc-1.2.8.ebuild 1614
 MD5 d4f5281c77dff123295a9af7c37a6b57 tightvnc-1.2.9-r1.ebuild 1650
+MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 68903d8d341d5f9a8d576dee0716f4b8 files/README.JavaViewer 18585
 MD5 9138c55d41bebf73ee177ef75fee2cd1 files/digest-tightvnc-1.2.3-r2 76
 MD5 451572c22930322934ee8f6a857f9630 files/digest-tightvnc-1.2.6 76
