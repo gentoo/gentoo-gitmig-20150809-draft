@@ -1,4 +1,4 @@
-MD5 77114687ae3d8310e4bb57566eb474b6 ChangeLog 986
+MD5 14aad447501a168ba9e97563b922c71d ChangeLog 1117
 MD5 2bdf3650be3177e2c14b14a95be6d7b3 cl-tbnl-0.2.12.ebuild 829
 MD5 7ef0646dda8baa631e5ed98d7db5b6d7 cl-tbnl-0.3.10.ebuild 918
 MD5 a2199253dbe57d398c785af8f7744485 metadata.xml 804
@@ -6,7 +6,7 @@ MD5 741ea3f3dc3c79bf46ae27f46d809c94 cl-tbnl-0.3.11.ebuild 923
 MD5 0d1f4e17c59a3b0325807341d6efc04d cl-tbnl-0.3.12.ebuild 923
 MD5 959fd151be631d3deb7c78f314d1cae9 cl-tbnl-0.3.13.ebuild 923
 MD5 93d2851f8c41f2d64497dc6f80fe00bf cl-tbnl-0.4.1.ebuild 922
-MD5 93d2851f8c41f2d64497dc6f80fe00bf cl-tbnl-0.5.1.ebuild 922
+MD5 10735e96e910915989ba829b8c996ab5 cl-tbnl-0.5.1.ebuild 922
 MD5 8bc422e5dac6886c3c688ffd6ed93dd6 files/digest-cl-tbnl-0.2.12 62
 MD5 96bbbd53007caa5cc06cc59bcb68c1ff files/digest-cl-tbnl-0.3.10 62
 MD5 a85a52d1daff75e4574ebd35622844f5 files/digest-cl-tbnl-0.3.11 67
