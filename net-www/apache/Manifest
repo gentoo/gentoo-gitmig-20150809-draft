@@ -8,7 +8,7 @@ MD5 8b0802da8985bebebe0839a0424a1aeb apache-1.3.29-r1.ebuild 7314
 MD5 b7737e1559b3508b5ba3dc679ae33537 apache-2.0.48-r1.ebuild 11662
 MD5 7310b6787d782d8b03439d2f5e52b444 apache-2.0.49.ebuild 12447
 MD5 450d24552a1de4f3c3cafe8f990585a3 apache-2.0.48-r3.ebuild 12060
-MD5 ef714f052fe86bc5690f27801936e39f ChangeLog 20544
+MD5 2f88fe2b3c11a9cf3adf6bee88c5aee1 ChangeLog 20651
 MD5 28e0f7ec35e9ffd32ca9b85eba551071 apache-1.3.28-r1.ebuild 7670
 MD5 bd80c41f0d8d92374c3712c4cac4d2ff metadata.xml 503
 MD5 3604262d4ff6e52fbbb35796df8cd865 apache-2.0.47-r1.ebuild 10758
@@ -86,7 +86,7 @@ MD5 b3a6d1c01772a3623f7d467e9d8ad51c files/2.0.49/apache2-builtin-mods 2210
 MD5 1d10cc98714a34ddc38525743c2989f9 files/2.0.49/41_mod_ssl.default-vhost.conf 8053
 MD5 dc5c8ebe712dc08bdb83fa8563924c96 files/2.0.49/commonapache2.conf 31775
 MD5 4a7d5e937948ff12e82e520baa675745 files/2.0.49/apache2.confd 1950
-MD5 46cefc7dcd7c82cd18c382981bbbc531 files/2.0.49/apache2.initd 2413
+MD5 732dc50b2afa76c98ca0223188643195 files/2.0.49/apache2.initd 2427
 MD5 77785d5ff6e5a7a21425dc69a6162779 files/2.0.49/apache2.conf 7652
 MD5 d9e0ecfbc1591486a698494a388b091c files/2.0.49/vhosts.conf 1695
 MD5 b69bf7c3126e471a2abff013e716367f files/2.0.49/virtual-homepages.conf 780

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.49/apache2.initd,v 1.1 2004/03/22 21:17:57 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.49/apache2.initd,v 1.2 2004/03/26 08:45:49 robbat2 Exp $
 
 opts="${opts} reload"
 
@@ -20,7 +20,7 @@ checkconfig() {
 		if [ ${CONFIGFILE:0:1} = "/" ]; then
 			myconf="${CONFIGFILE}"
 		else
-			myconf="${STARTUPERRORLOG}/${CONFIGFILE}"
+			myconf="${SERVERROOT:-/usr/lib/apache2}/${CONFIGFILE}"
 		fi
 	fi
 	if [ ! -r "${myconf}" ]; then
