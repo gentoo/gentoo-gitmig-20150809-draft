@@ -1,8 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.8 2003/05/30 13:41:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.9 2003/06/01 11:47:54 mcummings Exp $
 
-inherit perl-module
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MakeMaker Perl Module"
@@ -34,6 +33,16 @@ src_install () {
 		INSTALLMAN6DIR=${D}/usr/share/man/man6 \
 		INSTALLMAN7DIR=${D}/usr/share/man/man7 \
 		INSTALLMAN8DIR=${D}/usr/share/man/man8 \
+		INSTALLSITEMAN1DIR=${D}/usr/share/man/man1 \
+		INSTALLSITEMAN2DIR=${D}/usr/share/man/man2 \
+		INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
+		INSTALLSITEMAN4DIR=${D}/usr/share/man/man4 \
+		INSTALLSITEMAN5DIR=${D}/usr/share/man/man5 \
+		INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
+		INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
+		INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
+		INSTALLSITEARCH=${D}/${SITE_ARCH} \
+		INSTALLSCRIPT=${D}/usr/bin \
 		${myinst} \
 		${mytargets} || die
 
@@ -55,5 +64,72 @@ src_install () {
 		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
 		rm -f ${D}/${SITE_LIB}/perllocal.pod
 	fi
+	
+	for FILE in `find ${D} -type f -name "*.html" -o -name ".packlist"`; do
+    	sed -ie "s:${D}:/:g" ${FILE}
+	done
+	
 	dodoc Change* MANIFEST* README* ${mydoc}								 
+}
+
+pkg_setup() {
+
+	perlinfo
+}
+
+
+pkg_preinst() {
+	
+	perlinfo
+}
+
+pkg_postinst() {
+
+	updatepod
+}
+
+pkg_prerm() {
+	
+	updatepod
+}
+
+pkg_postrm() {
+
+	updatepod
+}
+
+perlinfo() {
+
+	if [ -f /usr/bin/perl ]
+	then 
+		eval `perl '-V:installarchlib'`
+		eval `perl '-V:installsitearch'`
+		ARCH_LIB=${installarchlib}
+		SITE_LIB=${installsitearch}
+
+		eval `perl '-V:version'`
+		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
+	fi
+
+}
+
+updatepod() {
+	perlinfo
+
+	if [ -d "${POD_DIR}" ]
+	then
+		for FILE in `find ${POD_DIR} -type f -name "*.pod.arch"`; do
+		   cat ${FILE} >> ${ARCH_LIB}/perllocal.pod
+		   rm -f ${FILE}
+		done
+		for FILE in `find ${POD_DIR} -type f -name "*.pod.site"`; do
+		   cat ${FILE} >> ${SITE_LIB}/perllocal.pod
+		   rm -f ${FILE}
+		done
+				   
+		#cat ${POD_DIR}/*.pod.arch >> ${ARCH_LIB}/perllocal.pod
+		#cat ${POD_DIR}/*.pod.site >> ${SITE_LIB}/perllocal.pod
+		#rm -f ${POD_DIR}/*.pod.site
+		#rm -f ${POD_DIR}/*.pod.site
+	fi
 }
