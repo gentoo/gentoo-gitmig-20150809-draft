@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.32 2005/03/10 00:19:16 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.33 2005/03/11 15:20:52 stkn Exp $
+
+  11 Mar 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.6.ebuild:
+  Fix zaptel Makefile(s) to use /usr/src/linux as the kernel to build for,
+  instead of the one reported by uname -r
 
 *zaptel-1.0.6 (10 Mar 2005)
 

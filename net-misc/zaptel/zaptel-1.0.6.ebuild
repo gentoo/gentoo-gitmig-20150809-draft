@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.6.ebuild,v 1.1 2005/03/10 00:19:16 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.6.ebuild,v 1.2 2005/03/11 15:20:53 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
@@ -108,13 +108,15 @@ src_unpack() {
 			zaphfc/Makefile
 	fi
 
+	# replace `uname -r` with ${KV_FULL} in all Makefiles
+	find ${WORKDIR} -iname "Makefile" -exec sed -i -e "s:\`uname -r\`:${KV_FULL}:g" {} \;
 }
 
 src_compile() {
 	# TODO: bristuff modules
 
 	set_arch_to_kernel
-	make || die
+	make KERNEL_SOURCE=/usr/src/linux || die
 
 	if use bri; then
 		cd ${WORKDIR}/bristuff-${BRI_VERSION}
