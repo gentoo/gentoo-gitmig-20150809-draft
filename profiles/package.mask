@@ -943,3 +943,7 @@ app-cdr/eroaster
 # g2boojum@gentoo.org 16 Jul 2002
 # new net-tools ; needs testing
 =sys-apps/net-tools-1.60-r5
+
+# rphillips@gentoo.org 29 Jul 2002
+# unstable package... masked for future use and testing
+=net-fs/openafs-1.3.2
