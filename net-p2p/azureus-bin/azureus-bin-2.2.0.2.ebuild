@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.3 2005/02/22 07:06:11 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.4 2005/02/22 07:15:52 morfic Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ S=${WORKDIR}/${MY_PN}
 SRC_URI="mirror://gentoo/seda-${MY_DT}.zip
 	x86? ( gtk? ( mirror://sourceforge/${MY_PN}/Azureus_${MY_PV}_linux.GTK.tar.bz2 ) )
 	x86? ( !gtk? ( mirror://sourceforge/${MY_PN}/Azureus_${MY_PV}_linux.Motif.tar.bz2 ) )
-	amd64? ( mirror://sourceforge/${MY_PN}/Azureus_${MY_PV}_linux.AMD64.tar.bz2 )"
+	amd64? ( mirror://sourceforge/${MY_PN}/Azureus_${MY_PV}_linux.AMD64.tar.bz2 )
+	ppc? ( mirror://sourceforge/${MY_PN}/Azureus_${MY_PV}_linux.PPC.tar.bz2 )"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
@@ -45,7 +46,7 @@ src_unpack() {
 		unpack Azureus_${MY_PV}_linux.AMD64.tar.bz2
 	else
 		if use ppc ; then
-		unpack Azureus_${MY_PV}_linux.PPC.tar.bz2
+			unpack Azureus_${MY_PV}_linux.PPC.tar.bz2
 		else
 			if use gtk ; then
 				unpack Azureus_${MY_PV}_linux.GTK.tar.bz2
