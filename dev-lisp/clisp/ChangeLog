@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.28 2004/11/28 02:50:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.29 2004/11/30 21:47:44 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> clisp-2.33.2-r1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   28 Nov 2004; Joseph Jezak <josejx@gentoo.org> clisp-2.33.2-r1.ebuild:
   Marked ppc stable.
