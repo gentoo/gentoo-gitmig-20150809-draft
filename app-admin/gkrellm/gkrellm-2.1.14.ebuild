@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.14.ebuild,v 1.1 2003/06/30 21:30:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.14.ebuild,v 1.2 2003/07/06 18:48:54 azarah Exp $
 
 IUSE="gtk gtk2 nls"
 
@@ -47,7 +47,8 @@ src_install() {
 			INSTALLDIR=${D}/usr/bin \
 			MANDIR=${D}/usr/share/man/man1 \
 			INCLUDEDIR=${D}/usr/include \
-			LOCALEDIR=${D}/usr/share/locale
+			LOCALEDIR=${D}/usr/share/locale \
+			PKGCONFIGDIR=${D}/usr/lib/pkgconfig
 
 		cd ${S}
 		mv gkrellm.1 gkrellm2.1
