@@ -1,8 +1,11 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.8 2004/04/08 22:23:45 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.9 2004/04/09 18:30:54 squinky86 Exp $
 
 *bibletime-1.4.1 (04 Apr 2004)
+
+  09 Apr 2004; Jon Hood <squinky86@gentoo.org>:
+  added pre and post install information for curl support. (bug #47318)
 
   04 Apr 2004; Jon Hood <squinky86@gentoo.org> bibletime-1.4.1.ebuild:
   version bump, thanks to Timothy Stotts for the ebuild, bug #39300
