@@ -3,12 +3,14 @@ Hash: SHA1
 
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 9b4c907ffd65cbf1738a9b4d699bd433 iddev-1.1.ebuild 602
-MD5 d1fa40e69e010a077090a47f26a51b72 ChangeLog 325
+MD5 27e3d45d08a7c4cc09efe66b855b5a1a ChangeLog 454
+MD5 e4fa629804d196ccc760aee3728a67d7 iddev-1.9.ebuild 684
 MD5 36114c36120797439dfdbca13f7e8dbe files/digest-iddev-1.1 59
+MD5 0224fb98effd6aff2382a9438ff4a2c8 files/digest-iddev-1.9 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB+XkogMUyd/cdjWsRAnapAJ9oACbz+2IZRcuvLiet6Otq3nekxgCeIvyy
-Lw+6wyRU219Ec6A7FENekNg=
-=ENhL
+iD8DBQFCPFtCgMUyd/cdjWsRAiReAJ9MTdFBGAjGbV3/WpC8pUpvQA1+uACfeePZ
+sutThWrmlsNQIzUZrYAAMZw=
+=rZHP
 -----END PGP SIGNATURE-----
