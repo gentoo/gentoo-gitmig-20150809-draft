@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r2.ebuild,v 1.1 2002/02/11 04:21:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r3.ebuild,v 1.1 2002/03/05 19:19:32 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -56,7 +56,7 @@ src_install () {
 	# todo: if they are nstalled, move them to /usr
 		
 	insinto /etc
-	newins ${FILESDIR}/pcmcia.conf
+	doins ${FILESDIR}/pcmcia.conf
 	# install our own init script
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pcmcia.rc6 pcmcia
