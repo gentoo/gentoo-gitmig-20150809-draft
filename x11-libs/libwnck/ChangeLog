@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.65 2004/12/19 07:14:43 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.66 2004/12/22 01:48:04 gustavoz Exp $
+
+  21 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> libwnck-2.8.1.ebuild:
+  Stable on sparc
 
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> libwnck-2.8.1.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
