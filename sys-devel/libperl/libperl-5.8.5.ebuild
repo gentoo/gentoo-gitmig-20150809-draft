@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.2 2004/08/14 23:42:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.3 2004/09/06 20:45:30 ciaranm Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -108,7 +108,7 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		ewarn ""
-		sleep 10
+		epause 10
 	else
 		ewarn ""
 		ewarn "PLEASE NOTE: If you want to compile perl-5.8 with"
@@ -118,7 +118,7 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		ewarn ""
-		sleep 10
+		epause 10
 	fi
 }
 
