@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <hanno@gentoo.org> (15 Oct 2002)
+# Masked, because new versions have real version numbers
+=app-misc/sonypid-20010123
+
 # <carpaski@gentoo.org> (15 Oct 2002)
 # Testing! portage-2.0.40-Perfect_alpha1 :)
 =sys-apps/portage-2.0.40
