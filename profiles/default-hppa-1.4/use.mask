@@ -1,3 +1,7 @@
+#06 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# Mozilla is curently not working
+mozilla
+
 # 20 Jun 2003 Guy Martin <gmsoft@gentoo.org>
 # Alsa is not yet tested
 alsa
