@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/egoboo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.8 2004/07/01 11:22:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.9 2004/12/28 23:16:17 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> egoboo-2.22.ebuild:
   virtual/glibc -> virtual/libc
@@ -32,10 +35,10 @@
 
   Filter -march=pentium4 or -march=athlon*. Replace with i686.
     
-  20 Jul 2002: Jose Alberto Suárez López <bass@gentoo.org> egoboo-2.22.ebuild :
+  20 Jul 2002: Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> egoboo-2.22.ebuild :
   Fixed bug #5272. Only moving env variables to other section.
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> egoboo-2.22.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> egoboo-2.22.ebuild :
   Added KEYWORDS.
 
   20 June 2002; George Shapovalov <george@gentoo.org> all :
