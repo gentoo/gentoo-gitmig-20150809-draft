@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.7 2003/09/12 13:59:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.8 2003/09/12 22:43:01 msterret Exp $
 
 inherit eutils
 
@@ -47,9 +47,8 @@ pkg_postinst() {
 
 	einfo
 	einfo "Use wvdialconf to automagically generate a configuration-file."
-	einfo 
+	einfo
 	einfo "Users have to be member of the dialout AND the uucp group"
 	einfo "to use wvdial!"
 	einfo
 }
-
