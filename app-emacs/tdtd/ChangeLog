@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tdtd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.1 2003/10/07 17:11:39 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.2 2004/03/14 12:46:10 dholm Exp $
+
+  14 Mar 2004; David Holm <dholm@gentoo.org> tdtd-0.7.1.ebuild:
+  Added to ~ppc.
 
 *tdtd-0.7.1 (08 Oct 2003)
 

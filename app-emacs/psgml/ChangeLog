@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/psgml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.6 2004/03/11 17:41:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.7 2004/03/14 12:49:06 dholm Exp $
+
+  14 Mar 2004; David Holm <dholm@gentoo.org> psgml-1.2.5-r1.ebuild:
+  Added to ~ppc.
 
   11 Mar 2004; Jason Wever <weeve@gentoo.org> psgml-1.2.5-r1.ebuild:
   Stable on sparc.
