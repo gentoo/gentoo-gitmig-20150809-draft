@@ -1,6 +1,18 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.26 2004/01/29 03:54:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.27 2004/02/27 22:15:36 mkennedy Exp $
+
+*sbcl-0.8.8 (27 Feb 2004)
+
+  27 Feb 2004; <mkennedy@gentoo.org> sbcl-0.8.8.ebuild,
+  files/0.8.8/README.Gentoo, files/0.8.8/customize-target-features.lisp,
+  files/0.8.8/customize-target-features.lisp.no-threads,
+  files/0.8.8/install-clc.lisp,
+  files/0.8.8/posix-tests.lisp-sandbox-gentoo.patch,
+  files/0.8.8/sbcl-asdf-install.1, files/0.8.8/sbcl-gentoo.patch,
+  files/0.8.8/sbcl.sh:
+  New upstream; Move pkg_postinst/pkg_prerm to use the new eclass code; No
+  longer use the Debian package (we keep our own CLC stuff in files now)
 
 *sbcl-0.8.7-r1 (28 Jan 2004)
 
