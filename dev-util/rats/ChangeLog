@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rats
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rats/ChangeLog,v 1.1 2004/01/06 03:15:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rats/ChangeLog,v 1.2 2004/01/08 10:05:02 robbat2 Exp $
+
+  08 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> rats-2.1.ebuild:
+  slight tweaks to ebuild for reusability
 
 *rats-2.1 (05 Jan 2004)
 
