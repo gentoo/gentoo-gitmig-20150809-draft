@@ -10,10 +10,13 @@
 
 use strict;
 use POSIX qw(strftime getcwd);
+
 use Text::Wrap;
+$Text::Wrap::columns = 77;
+$Text::Wrap::unexpand = 0;
 
 my @files = ();
-my ($entry, $user, $date, $text, $version);
+my ($input, $entry, $user, $date, $text, $version);
 my %versions = ();
 
 # Read the current ChangeLog
@@ -56,31 +59,31 @@ while (<C>) {
 close C;
 die "No changed files found (did you forget to cvs add?)\n" unless @files;
 
-# Get the entry from the cmdline or stdin
+# Get the input from the cmdline or stdin
 if ($ARGV[0]) {
-    $entry = "@ARGV";
+    $input = "@ARGV";
 } else {
     local $/ = undef;
     print "Please type the log entry, finish with ctrl-d\n";
-    $entry = <>;
+    $input = <>;
 }
-die "Empty entry; aborting\n" unless $entry =~ /\S/;
+die "Empty entry; aborting\n" unless $input =~ /\S/;
 
-# If there are any long lines, then wrap the entry at 76 chars
+# If there are any long lines, then wrap the input at $columns chars
 # (leaving 2 chars on each end after adding indentation below).
-if ($entry =~ /^.{77}/m) {
-    local $Text::Wrap::columns = 76;
-    local $Text::Wrap::unexpand = 0;
-    $entry = Text::Wrap::fill('', '', $entry);
-}
+$input =~ s/^\s*(.*?)\s*\z/$1/s;  # trim whitespace
+$input = Text::Wrap::fill('', '', $input) if ($input =~ /^.{78}/m);
+$input =~ s/^/  /gm;        # add indentation
 
-# Prepend the user info to the entry
+# Prepend the user info to the input
 $user = $ENV{'ECHANGELOG_USER'} ||
         sprintf("%s <%s\@gentoo.org>", (getpwuid($<))[6,0]);
 $date = strftime("%d %b %Y", localtime);
-$entry =~ s/^\s*(.*?)\s*\z/$1/s; # trim whitespace
-$entry = "$date; $user @files :\n$entry";
-$entry =~ s/^/  /gm;             # add indentation
+$entry = "$date; $user ";
+$entry .= join ', ', grep !/files.digest/, @files;  # don't list digests
+$entry .= ':';
+$entry = Text::Wrap::fill('  ', '  ', $entry);  # does not append a \n
+$entry .= "\n$input";                           # append user input
 
 # Find the version that's highest in the file (or determine if we're
 # adding a new version).
@@ -91,22 +94,32 @@ if (%versions) {
     $version = (sort { $versions{$a} <=> $versions{$b} } keys %versions)[0];
 }
 
+# Each one of these regular expressions will eat the whitespace 
+# leading up to the next entry (excepting the two-space leader on the
+# front of a dated entry), so it needs to be replaced with a double
+# carriage-return.  This helps to normalize the spacing in the
+# ChangeLogs.
 if (!defined $version) {
     # Changing a patch or something, not an ebuild, so put the entry
-    # after the first *version line
-    $text =~ s/^\*.*\n/$&\n$entry\n/m
+    # after the first *version line (really guessing)
+    $text =~ s/^( \*.*? )             # find the *version line
+                \s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
+              /$1\n\n$entry\n\n/mx
         or die "Failed to insert new entry (1)\n";
-    # If we were putting it at the top of the file, the following
-    # regex would work well.
-    # $text =~ s/^.*?\n(?=\s)/$&\n$entry\n/s;
+    #$text =~ s/^(\*.*?)\s*\n(?=  \d|\*|\z)/$1\n\n$entry\n\n/m
 } elsif ($versions{$version} > -1) {
     # Insert after the *version line
-    # Sometimes the version line includes . or even .ebuild
-    $text =~ s/^\*\Q$version\E\.?(?:ebuild)?\s.*\n/$&\n$entry\n/m 
+    $text =~ s/^( \*\Q$version\E )    # find the *version line = $1
+                (?:\.|\.ebuild)?      # some poorly formed entries
+                \s+ ( \(.*\) )        # (date) = $2
+                \s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
+              /$1 $2\n\n$entry\n\n/mx
         or die "Failed to insert new entry (2)\n";
+    #$text =~ s/^\*\Q$version\E\.?(?:ebuild)?\s.*\n/$&\n$entry\n/m 
 } else {
     # Insert at the top with a new version marker
-    $text =~ s/^.*?\n(?=\s)/$&\n*$version ($date)\n\n$entry\n/s
+    # XXX Fix to use a regex similar to above
+    $text =~ s/^(.*?)\n(?=\s)/$&\n*$version ($date)\n\n$entry\n/s
         or die "Failed to insert new entry (3)\n";
 }
 
