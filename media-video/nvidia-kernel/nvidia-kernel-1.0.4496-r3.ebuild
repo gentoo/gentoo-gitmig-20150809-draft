@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r3.ebuild,v 1.1 2003/09/07 14:33:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r3.ebuild,v 1.2 2003/09/20 18:30:39 azarah Exp $
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
@@ -12,7 +12,7 @@ SRC_URI="ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-pkg0.
 # The slow needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/linux-sources"
@@ -97,8 +97,8 @@ src_unpack() {
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch ..." \
 		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-2.6-20030905.diff
-		EPATCH_SINGLE_MSG="Applying pci device name patch ..." \
-		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-2.6-pci_name-20030905.diff
+#		EPATCH_SINGLE_MSG="Applying pci device name patch ..." \
+#		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-2.6-pci_name-20030905.diff
 
 		# Kbuild have issues currently (sandbox related).
 		ln -snf Makefile.nvidia Makefile
