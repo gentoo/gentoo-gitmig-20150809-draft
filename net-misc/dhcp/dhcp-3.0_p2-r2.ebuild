@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.10 2004/01/15 01:04:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.11 2004/03/08 23:02:24 darkspecter Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P/_p/pl}.tar.gz
 
 LICENSE="isc-dhcp"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ppc64 hppa"
+KEYWORDS="x86 ppc sparc ~mips ppc64 hppa"
 IUSE="static"
 
 DEPEND="virtual/glibc
