@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.10 2004/10/30 21:56:03 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.11 2004/10/31 01:27:41 vapier Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -11,18 +11,13 @@ SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha ~arm hppa amd64 ~ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="nls build static uclibc"
 
 DEPEND="nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	if use static ; then
-		append-flags -static
-		append-ldflags -static
-	fi
-
 	PATCHDIR=${WORKDIR}/${P}-gentoo
 
 	unpack ${A}
@@ -52,6 +47,11 @@ src_unpack() {
 
 	cp ${PATCHDIR}/net-tools-1.60-config.h config.h
 	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
+
+	if use static ; then
+		append-flags -static
+		append-ldflags -static
+	fi
 
 	sed -i \
 		-e 's/^libdir:/libdir: version.h/' \
