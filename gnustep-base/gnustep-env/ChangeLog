@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.11 2004/11/23 20:40:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.12 2004/12/13 23:08:33 fafhrd Exp $
+
+  13 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org> gnustep-env-0.1.5.ebuild,
+  -gnustep-env-0.1.ebuild:
+  Cleaned up detection of objc and libff; general cleanups
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gnustep-env-0.1.5.ebuild:

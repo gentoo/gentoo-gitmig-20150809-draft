@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.18 2004/12/05 21:36:57 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.19 2004/12/13 23:06:59 fafhrd Exp $
+
+  13 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org> -files/helloworld.m,
+  gnustep-make-1.10.0-r1.ebuild, -gnustep-make-1.10.0.ebuild,
+  -gnustep-make-1.10.1_pre20041030-r1.ebuild,
+  -gnustep-make-1.10.1_pre20041030.ebuild,
+  -gnustep-make-1.10.1_pre20041116.ebuild,
+  gnustep-make-1.10.1_pre20041203.ebuild:
+  Cleaned up detection of objc and libff; general cleanups
 
   05 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gnustep-make-1.10.1_pre20041203.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.10 2004/12/04 20:19:03 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.11 2004/12/13 23:08:15 fafhrd Exp $
+
+  13 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  gnustep-back-xlib-0.9.4.ebuild, -gnustep-back-xlib-0.9.5_pre20041030.ebuild,
+  -gnustep-back-xlib-0.9.5_pre20041116.ebuild:
+  Cleaned up detection of objc and libff; general cleanups
 
 *gnustep-back-xlib-0.9.5_pre20041203 (03 Dec 2004)
 

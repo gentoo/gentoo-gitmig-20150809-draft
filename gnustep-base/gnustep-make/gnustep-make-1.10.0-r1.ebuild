@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r1.ebuild,v 1.1 2004/11/12 03:46:56 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r1.ebuild,v 1.2 2004/12/13 23:06:59 fafhrd Exp $
 
 inherit gnustep
 
@@ -8,7 +8,7 @@ DESCRIPTION="The makefile package is a simple, powerful and extensible way to wr
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
-KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~alpha"
+KEYWORDS="ppc ~x86 amd64 ~sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -24,11 +24,10 @@ egnustep_install_domain "System"
 pkg_setup() {
 	gnustep_pkg_setup
 
-	# okay, I couldn't figure out how to check if a dependency was
-	#  compiled with a specific use flag, so we do it ./configure
-	#  check-for-lib style ...
-	gcc ${FILESDIR}/helloworld.m -o $TMP/helloworld -lobjc || die \
-		"gcc must be compiled with Objective-C support! See the objc USE flag."
+	if [ "$(objc_available)" == "no" ]; then
+		objc_not_available_info
+		die "ObjC support not available"
+	fi
 
 	if use layout-from-conf-file && use layout-osx-like ; then
 		eerror "layout-from-conf-file and layout-osx-like are mutually exclusive use flags."

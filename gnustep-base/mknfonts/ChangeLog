@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/mknfonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.8 2004/11/23 20:40:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.9 2004/12/13 23:09:06 fafhrd Exp $
+
+  13 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org> mknfonts-0.5.ebuild:
+  Cleaned up detection of objc and libff; general cleanups
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mknfonts-0.5.ebuild:

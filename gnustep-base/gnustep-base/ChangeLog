@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.16 2004/12/05 21:52:07 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.17 2004/12/13 23:07:20 fafhrd Exp $
+
+  13 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org> -files/tryffi.c,
+  -gnustep-base-1.10.0.ebuild, gnustep-base-1.10.1-r1.ebuild,
+  -gnustep-base-1.10.1.ebuild, -gnustep-base-1.10.1_pre20040928.ebuild,
+  -gnustep-base-1.10.2_pre20041116.ebuild,
+  gnustep-base-1.10.2_pre20041203.ebuild:
+  Cleaned up detection of objc and libff; general cleanups
 
   05 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org> +files/tryffi.c,
   gnustep-base-1.10.2_pre20041203.ebuild:

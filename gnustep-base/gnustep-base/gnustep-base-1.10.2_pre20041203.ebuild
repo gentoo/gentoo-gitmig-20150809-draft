@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.2_pre20041203.ebuild,v 1.2 2004/12/05 21:52:07 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.2_pre20041203.ebuild,v 1.3 2004/12/13 23:07:20 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -25,13 +25,15 @@ LICENSE="GPL-2 LGPL-2.1"
 IUSE="${IUSE} doc gcc-libffi"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=gnustep-base/gnustep-make-1.10.1_pre20041203
+	|| (
+		gcc-libffi? ( >=sys-devel/gcc-3.3.2 )
+		>=dev-libs/libffi-3* )
 	>=dev-libs/libxml2-2.6*
 	>=dev-libs/libxslt-1.1*
 	>=dev-libs/gmp-4.1*
 	>=dev-libs/openssl-0.9.7*
-	|| ( gcc-libffi? >=sys-devel/gcc-3.3*
-		>=dev-libs/libffi-3* )
 	>=sys-libs/zlib-1.2*
+	sys-apps/sed
 	${DOC_DEPEND}"
 RDEPEND="${DEPEND}
 	${DOC_RDEPEND}"
@@ -42,14 +44,17 @@ pkg_setup() {
 	gnustep_pkg_setup
 
 	if use gcc-libffi; then
-			eval $(tc-getCC) -lffi ${FILESDIR}/tryffi.c -o ${TMP}/tryffi \
-				|| die "Your FFI libraries and headers seem to be installed incorrectly -- this is not as bad as it sounds -- not many projects use libffi at the moment, and gcc may have installed the headers in an inavailable place.  Especially check for 'ffi.h' in your /usr/lib/gcc/\$CHOST/'gcc-version'/include directory, and that any other ffi related files it #include's (e.g. 'ffitarget.h') are in that directory as well; this can be solved by moving the files, or with a symlink.  This is a quick fix, and newer ebuilds of gcc should install the files in the correct places, but for now, it could save you a recompilation of gcc.  If this still fails for you, consider not using the 'gcc-libffi' USE flag and letting dev-libs/libffi build as a dependency.  It is important that either 'gcj' is a USE flag for gcc, or 'gcj' or 'objc' for >=gcc-3.4.3-r1."
+		if [ "$(ffi_available)" == "no" ]; then
+			ffi_not_available_info
+			die "libffi is not available"
+		fi
 	fi
 }
 
 src_unpack() {
 	cvs_src_unpack ${A}
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/base-user-defaults.patch-1.10.0
+	cd ${S}/Source
 }
 
 src_compile() {
@@ -60,9 +65,9 @@ src_compile() {
 	local myconf
 	myconf="--disable-ffcall --enable-libffi"
 	if use gcc-libffi; then
-		myconfi="${myconf} --with-ffi-library=$(gcc-config -L) --with-ffi-include=$(gcc-config -L | sed 's/:.*//')/include"
+		myconf="${myconf} --with-ffi-library=$(gcc-config -L) --with-ffi-include=$(gcc-config -L | sed 's/:.*//')/include"
 	else
-		myconfi="${myconf} --with-ffi-library=/usr/lib/libffi --with-ffi-include=/usr/include/libffi"
+		myconf="${myconf} --with-ffi-library=/usr/lib/libffi --with-ffi-include=/usr/include/libffi"
 	fi
 	myconf="$myconf --with-xml-prefix=/usr"
 	myconf="$myconf --with-gmp-include=/usr/include --with-gmp-library=/usr/lib"
