@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/gxmame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxmame/ChangeLog,v 1.2 2003/02/12 04:01:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxmame/ChangeLog,v 1.3 2003/03/16 18:55:43 seemant Exp $
 
 *gxmame-0.31 (13 Jan 2003)
+
+  16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gxmame-0.31.ebuild:
+  added src_install function.  closes bug #17477 by Kfir Ozer <ufk2k@yahoo.com>
 
   13 Jan 2003; Ryan Phillips <rphillips@gentoo.org> gxmame-0.31.ebuild:
   Official version
