@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.8.ebuild,v 1.8 2004/02/08 09:53:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.8.ebuild,v 1.9 2004/03/05 03:29:47 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -85,4 +85,7 @@ pkg_postinst() {
 	einfo "Also, remember that all mixer channels will be MUTED by default."
 	einfo "Use the 'alsamixer' program to unmute them."
 	einfo
+
+	einfo "If you are using a SBLive Value and experience problems with alsa-driver-0.9.8,"
+	einfo "please try a newer version."
 }
