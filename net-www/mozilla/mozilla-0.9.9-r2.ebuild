@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r2.ebuild,v 1.3 2002/04/16 10:15:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r2.ebuild,v 1.4 2002/04/24 22:26:41 azarah Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -27,6 +27,8 @@ DEPEND="java?  ( >=dev-java/java-config-0.2.0 )
 	${RDEPEND}
 	virtual/x11
 	sys-devel/perl"
+
+SLOT="0"
 
 # needed by src_compile() and src_install()
 export MOZILLA_OFFICIAL=1
