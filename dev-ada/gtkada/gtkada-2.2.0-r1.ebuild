@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.0-r1.ebuild,v 1.2 2003/10/05 22:05:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.0-r1.ebuild,v 1.3 2003/10/06 00:29:20 dholm Exp $
+
+inherit gnat
 
 Name="GtkAda"
 DESCRIPTION="Gtk+ bindings to the Ada language"
@@ -9,7 +11,7 @@ SRC_URI="http://libre.act-europe.fr/${Name}/${Name}-${PV}.tgz"
 
 LICENSE="GMGPL"
 SLOT="1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls opengl"
 
 DEPEND="dev-lang/gnat
@@ -17,8 +19,6 @@ DEPEND="dev-lang/gnat
 RDEPEND=""
 
 S="${WORKDIR}/${Name}-${PV}"
-
-inherit gnat
 
 src_compile() {
 	local myconf
