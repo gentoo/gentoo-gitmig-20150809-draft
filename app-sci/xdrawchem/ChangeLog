@@ -1,8 +1,18 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.7 2002/11/02 01:02:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.8 2002/11/29 03:34:13 george Exp $
+
+*xdrawchem-1.6 (28 Nov 2002)
+
+  27 Nov 2002; George Shapovalov <george@gentoo.org> xdrawchem-1.6.ebuild, files/digest-xdrawchem-1.6 :
+
+  new version
 
 *xdrawchem-1.5 (01 Nov 2002)
+
+  27 Nov 2002; George Shapovalov <george@gentoo.org> xdrawchem-1.5.ebuild :
+
+  added app-sci/babel to RDEPEND as it provides some essentioal data-convertion functionality
 
   01 Nov 2002; George Shapovalov <george@gentoo.org> xdrawchem-1.5.ebuild :
 
