@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.6 2003/10/21 16:07:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.7 2004/01/07 01:44:47 weeve Exp $
+
+  06 Jan 2004; Jason Wever <weeve@gentoo.org> kmyfirewall-0.9.6.ebuild:
+  Added ~sparc keyword.
 
   22 Oct 2003; Martin Holzer <mholzer@gentoo.org> kmyfirewall-0.4.5.ebuild,
   kmyfirewall-0.9.4.ebuild, kmyfirewall-0.9.5.ebuild,
