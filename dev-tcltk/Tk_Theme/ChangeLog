@@ -1,0 +1,8 @@
+# ChangeLog for dev-tcltk/Tk_Theme
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/ChangeLog,v 1.1 2003/02/01 22:25:03 agenkin Exp $
+
+*Tk_Theme-23 (01 Feb 2003)
+
+  01 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Initial version of the package.
