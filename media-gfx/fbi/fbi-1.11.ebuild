@@ -1,38 +1,37 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.11.ebuild,v 1.1 2001/10/17 17:38:11 ryan Exp $
 
-A=fbi_1.11.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="fbi a framebuffer image viewer"
-SRC_URI="http://www.strusel007.de/linux/misc/"${A}
+SRC_URI="http://www.strusel007.de/linux/misc/`echo ${P} |sed -e 's:-:_:'`.tar.gz"
 HOMEPAGE="http://www.strusel007.de/linux/fbi.html"
 
 DEPEND=">=media-libs/jpeg-6b"
 
+
 src_unpack() {
 
-  unpack ${A}
-  cd ${S}/src
-  cp Makefile Makefile.orig
-  sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
-  cd ${S}/libpcd
-  cp Makefile Makefile.orig
-  sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
-
+	unpack ${A}
+	
+	cd ${S}/src
+	sed -e "s:-O2:${CFLAGS}:" Makefile |cat >Makefile
+	
+	cd ${S}/libpcd
+	sed -e "s:-O2:${CFLAGS}:" Makefile |cat >Makefile
 }
 
 src_compile() {
 
-	try make CC=gcc
-
+	make CC=gcc || die
 }
 
 src_install() {
 
-	dodoc README
-	dobin src/fbi
-	newman src/fbi.man fbi.1
+	make prefix=${D}/usr						\
+	     mandir=${D}/usr/share/man/man1				\
+	     install || die
+	
+	dodoc COPYING README
 
 }
