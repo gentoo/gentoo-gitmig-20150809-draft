@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d9281d63c0a1adf99a94a961feaa81c7 autotoolset-0.11.4.ebuild 794
+MD5 0f7f4122950b82adfb39f8c52322d0b1 ChangeLog 357
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 0963a2c9c0d549d94a10bb67f9770883 files/digest-autotoolset-0.11.4 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBaI60HTu7gpaalycRAqpJAJ0fYe0i9+NX0GAUb7KeLIq59nD+qQCfXKNE
+X03gHO9tnA/kEnhDTf52iFE=
+=acj5
+-----END PGP SIGNATURE-----
