@@ -1,11 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.36 2003/04/12 16:02:23 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.37 2003/04/12 17:30:35 phoenix Exp $
 
 *wine-20020411 (11 Apr 2003)
 
   12 Apr 2002; Tilman Klar <phoenix@gentoo.org> wine-20020411.ebuild :
-  Tagged this version stable ("x86").
+  Tagged this version stable ("x86"). Added support for USE="nptl".
 
   11 Apr 2002; Tilman Klar <phoenix@gentoo.org> wine-20020411.ebuild,
   files/digest-wine-20020411, files/wine-20020411-* :

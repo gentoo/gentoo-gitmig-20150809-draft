@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411.ebuild,v 1.2 2003/04/12 16:02:23 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411.ebuild,v 1.3 2003/04/12 17:30:35 phoenix Exp $
 
 inherit eutils base
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.winehq.com/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc"
-IUSE="nas arts cups opengl alsa tcltk"
+IUSE="nas arts cups opengl alsa tcltk nptl"
 
 DEPEND="sys-devel/gcc
 	sys-devel/flex
@@ -36,7 +36,9 @@ src_compile() {
 	cd ${S}
 	local myconf
 
-	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
+	use opengl && myconf="$myconf --enable-opengl" || myconf="$myconf --disable-opengl"
+	use nptl && myconf="$myconf --with-nptl" || myconf="$myconf --without-nptl"
+
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
 	
