@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.3 2004/01/15 15:19:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.4 2004/01/16 07:30:51 kumba Exp $
 
-inherit eutils flag-o-matic 64-bit
+inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
 
 DESCRIPTION="Linux console display library"
@@ -30,6 +30,9 @@ src_compile() {
 	# Shared objects are compiled properly with -fPIC, but
 	# standard libs also require this.
 	64-bit && append-flags -fPIC
+
+	# Detect mips systems
+	use mips && gnuconfig_update
 
 	# From version 5.3, ncurses also build c++ bindings, and as
 	# we do not have a c++ compiler during bootstrap, disable

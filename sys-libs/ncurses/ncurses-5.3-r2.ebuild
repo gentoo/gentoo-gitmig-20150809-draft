@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r2.ebuild,v 1.14 2004/01/11 14:47:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r2.ebuild,v 1.15 2004/01/16 07:30:51 kumba Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 filter-flags -fno-exceptions
 
 DESCRIPTION="Linux console display library"
@@ -23,6 +23,9 @@ src_unpack() {
 
 src_compile() {
 	[ `use debug` ] && myconf="${myconf} --without-debug"
+
+	# Detect mips systems
+	use mips && gnuconfig_update
 
 	# From version 5.3, ncurses also build c++ bindings, and as
 	# we do not have a c++ compiler during bootstrap, disable
