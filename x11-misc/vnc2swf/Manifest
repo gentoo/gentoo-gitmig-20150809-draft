@@ -1,4 +1,16 @@
-MD5 72e00c038bddcff1cb5cb640aab62633 ChangeLog 853
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e83051f8971ebc2ca886063440346f2a ChangeLog 971
 MD5 427e58a2a402d09cdf22976c7d733f46 metadata.xml 685
 MD5 6575fc1e7f5f53057da8cd8a32e126d8 vnc2swf-0.3.ebuild 697
+MD5 c432388a9aa4e126b7a551e204ae4504 vnc2swf-0.4.2.ebuild 600
 MD5 e05e7fbd6825ae9524ca79ee7b5772fe files/digest-vnc2swf-0.3 63
+MD5 e74ce76e3c172ee7681b82394d3e5002 files/digest-vnc2swf-0.4.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBwFmsroRuSHgZdywRAr16AJ0SQN0vnlIDT5Y7f9QAtSkzdOVtkwCgkIy/
+L2nYA+gCyCov+Ch4+CXdtbU=
+=KXAm
+-----END PGP SIGNATURE-----
