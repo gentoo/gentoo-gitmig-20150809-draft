@@ -1,0 +1,29 @@
+--- src/Overlays.cxx.orig	2005-02-12 13:58:16.527529528 +0100
++++ src/Overlays.cxx	2005-02-12 13:58:47.580808712 +0100
+@@ -490,7 +490,7 @@
+     return;
+   
+   strcpy( arpname, fg_root );
+-  strcat( arpname, "/Airports/default.apt.gz" );
++  strcat( arpname, "/Airports/apt.dat.gz" );
+ 
+   gzFile arp;
+ 
+@@ -580,7 +580,7 @@
+     return;
+   
+   strcpy( navname, fg_root );
+-  strcat( navname, "/Navaids/default.nav.gz" );
++  strcat( navname, "/Navaids/nav.dat.gz" );
+ 
+   gzFile nav;
+ 
+@@ -653,7 +653,7 @@
+     return;
+   
+   strcpy( navname, fg_root );
+-  strcat( navname, "/Navaids/default.fix.gz" );
++  strcat( navname, "/Navaids/fix.dat.gz" );
+ 
+   gzFile fix;
+ 
