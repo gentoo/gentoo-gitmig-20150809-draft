@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/longrun
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.4 2003/04/18 03:37:34 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.5 2003/05/25 14:41:23 mholzer Exp $
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> longrun-0.9-r1.ebuild,
+  longrun-0.9.ebuild:
+  now uses mirror://kernel
 
 *longrun-0.9-r1 (17 Apr 2003)
 
