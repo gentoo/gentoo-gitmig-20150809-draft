@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.135 2004/12/31 11:28:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.136 2005/01/07 11:13:38 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1679,7 +1679,9 @@ get_abi_var() {
 	else
 		return 1
 	fi
-	eval echo \${${flag}_${abi}}
+
+	local var="${flag}_${abi}"
+	echo ${!var}
 }
 
 get_abi_CFLAGS() { get_abi_var CFLAGS $1; }
