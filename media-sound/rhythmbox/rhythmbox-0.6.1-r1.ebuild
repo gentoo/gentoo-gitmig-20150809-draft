@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.1-r1.ebuild,v 1.4 2004/04/03 00:54:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.1-r1.ebuild,v 1.5 2004/04/15 18:11:56 eradicator Exp $
 
-inherit gnome2
+inherit gnome2 flag-o-matic
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://web.rhythmbox.org/"
@@ -52,7 +52,6 @@ G2CONF="${G2CONF} \
 	--disable-schemas-install"
 
 src_unpack( ) {
-
 	unpack ${A}
 
 	cd ${S}
@@ -65,3 +64,10 @@ DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 	  MAINTAINERS NEWS README THANKS TODO"
 
 export GST_INSPECT=/bin/true
+
+src_compile() {
+	filter-flags "-ffast-math"
+	gnome2_src_compile
+}
+
+
