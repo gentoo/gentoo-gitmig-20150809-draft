@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.13 2003/07/19 08:16:46 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.14 2003/07/29 11:55:58 mcummings Exp $
+
+*Net-DNS-0.38 (29 Jul 2003)
+
+  29 Jul 2003; Michael Cummings <mcummings@gentoo.org> Net-DNS-0.38.ebuild:
+  CPAN Version bump
+  Uses Dynaloader instead of XSLoader.
 
 *Net-DNS-0.37-r1 (19 Jul 2003)
 
