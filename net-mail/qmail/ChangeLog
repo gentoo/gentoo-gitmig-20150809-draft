@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.64 2004/03/25 09:48:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.65 2004/04/10 04:45:54 kumba Exp $
+
+  10 Apr 2004; Joshua Kinard <kumba@gentoo.org> qmail-1.03-r15.ebuild:
+  Marked stable on mips.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> qmail-1.03-r15.ebuild:
   Added ~mips to KEYWORDS.

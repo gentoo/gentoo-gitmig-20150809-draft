@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/checkpassword
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/ChangeLog,v 1.13 2004/03/08 21:01:29 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/ChangeLog,v 1.14 2004/04/10 04:38:08 kumba Exp $
+
+  10 Apr 2004; Joshua Kinard <kumba@gentoo.org> checkpassword-0.90-r1.ebuild:
+  Marked stable on mips.
 
   08 Mar 2004; Jon Portnoy <avenj@gentoo.org> checkpassword-0.90-r1.ebuild :
   Stable on AMD64.

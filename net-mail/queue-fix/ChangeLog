@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/queue-fix
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/ChangeLog,v 1.8 2003/12/02 06:02:40 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/ChangeLog,v 1.9 2004/04/10 04:32:34 kumba Exp $
+
+  10 Apr 2004; Joshua Kinard <kumba@gentoo.org> queue-fix-1.4-r2.ebuild:
+  Marked stable on mips.
 
   01 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> queue-fix-1.4-r2.ebuild:
   allow the qmail alternatives, and stable on many arches

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.10 2004/03/25 09:42:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.11 2004/04/10 04:35:19 kumba Exp $
+
+  10 Apr 2004; Joshua Kinard <kumba@gentoo.org> cmd5checkpw-0.22-r1.ebuild:
+  Marked stable on mips.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> cmd5checkpw-0.22-r1.ebuild:
   Added ~mips to KEYWORDS.
