@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-System_Command
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.5 2003/10/14 03:41:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.6 2003/12/25 11:47:47 coredumb Exp $
+
+*PEAR-System_Command-1.0-r1 (25 Dec 2003)
+
+  25 Dec 2003; Tal Peer <coredumb@gentoo.org>
+  PEAR-System_Command-1.0-r1.ebuild:
+  Converted to new eclass.
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
