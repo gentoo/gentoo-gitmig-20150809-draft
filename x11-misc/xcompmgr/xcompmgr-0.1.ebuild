@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-0.1.ebuild,v 1.1 2004/08/21 10:31:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-0.1.ebuild,v 1.2 2004/08/21 10:34:01 seemant Exp $
 
 IUSE="X gnome"
 
@@ -13,8 +13,11 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86"
 
+RDEPEND=">=x11-base/xorg-x11-6.7.99.902"
 
-DEPEND=">=x11-base/xorg-x11-6.7.99.902"
+DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.7
+	>=sys-devel/autoconf-2.5"
 
 src_compile() {
 	export WANT_AUTOCONF=2.5
