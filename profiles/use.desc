@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.110 2003/07/29 20:41:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.111 2003/08/10 14:07:11 wolf31o2 Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -54,7 +54,7 @@ gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gps - Adds support for Global Positioning System
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
-gtk2 - use  gtk+-2.0.0 over gtk+-1.2 in cases where a program supports both. beware that gtk+-2 support can be bad.
+gtk2 - Use gtk+-2.0.0 over gtk+-1.2 in cases where a program supports both. Beware that gtk+-2 support can be bad.
 gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for dev-util/guile (interpreter for Scheme)
 icc - Use the Intel C++ Compiler if the package supports it
@@ -100,6 +100,7 @@ ncurses - Adds ncurses support (console display library)
 nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocardbus - Disables cardbus support in pcmcia-cs
+nocd - Tells emerge to install all files required to run the application without a CD mounted
 oci8 - Adds Oracle Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
 oggvorbis - Adds support for the OggVorbis audio encoding
@@ -143,6 +144,7 @@ tiff - Adds support for the tiff image format
 truetype - Adds support for FreeType and/or FreeType2 fonts
 trusted - used by pcmcia-cs to see if a regular user can add and remove pcmcia cards
 usb - Adds USB support to applications that have optional USB support (e.g. cups)
+videos - Tells portage to install optional video files (used in some games)
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
 wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
 wmf - Adds support for the wmf vector image format
