@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.11 2004/03/02 09:25:00 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.12 2004/03/05 15:23:56 gustavoz Exp $
+
+  05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> tcc-0.9.14.ebuild,
+  tcc-0.9.16.ebuild, tcc-0.9.19.ebuild, tcc-0.9.20.ebuild, tcc-0.9.7.ebuild,
+  tcc-0.9.8.ebuild:
+  marking all -sparc, who marked them sparc / ~sparc ?!?
 
 *tcc-0.9.20 (14 Oct 2003)
 

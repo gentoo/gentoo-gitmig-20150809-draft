@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.20.ebuild,v 1.1 2003/10/14 19:42:23 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.20.ebuild,v 1.2 2004/03/05 15:23:56 gustavoz Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://fabrice.bellard.free.fr/tcc/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 -sparc"
 
 DEPEND="virtual/glibc"
 
