@@ -1,5 +1,6 @@
 app-accessibility
 app-admin
+app-antivirus
 app-arch
 app-benchmarks
 app-cdr
@@ -62,6 +63,9 @@ gnome-base
 gnome-extra
 kde-base
 local
+mail-mta
+mail-server
+mail-client
 media-fonts
 media-gfx
 media-libs
