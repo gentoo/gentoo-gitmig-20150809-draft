@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.26 2004/06/24 22:31:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.27 2004/07/09 19:24:21 agriffis Exp $
 
 inherit gnuconfig eutils
 
@@ -26,7 +26,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gs-time_.h-gentoo.diff
 	epatch ${FILESDIR}/${P}-tcpd-gentoo.diff
 	epatch ${FILESDIR}/${P}-gcc-3.4.diff
-	use amd64 && gnuconfig_update
+
+	# needed for amd64 and alphaev67 at least
+	gnuconfig_update
 }
 
 src_compile() {

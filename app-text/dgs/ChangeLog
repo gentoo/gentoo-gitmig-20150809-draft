@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dgs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.16 2004/06/24 22:31:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.17 2004/07/09 19:24:21 agriffis Exp $
+
+  09 Jul 2004; Aron Griffis <agriffis@gentoo.org> dgs-0.5.10-r1.ebuild:
+  use gnuconfig_update always instead of just for amd64
 
   27 Apr 2004; Travis Tilley <lv@gentoo.org> dgs-0.5.10-r1.ebuild:
   added patch for compiling with gcc 3.4 submitted by Robert Moss
