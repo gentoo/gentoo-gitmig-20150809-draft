@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.23 2004/10/14 03:48:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.24 2004/11/25 03:26:17 usata Exp $
+
+*emacs-cvs-21.3.50-r2 (25 Nov 2004)
+
+  25 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +emacs-cvs-21.3.50-r2.ebuild:
+  Added aqua USE flag. Changed binary suffix to .emacs-${SLOT}; see bug #62991.
 
   14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/emacs-cvs-21.3.50-nofink.diff, emacs-cvs-21.3.50-r1.ebuild:
