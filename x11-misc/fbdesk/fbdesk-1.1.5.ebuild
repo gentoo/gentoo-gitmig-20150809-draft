@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.1.5.ebuild,v 1.1 2003/09/16 18:23:27 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.1.5.ebuild,v 1.2 2003/10/13 15:46:03 tseng Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fluxbox.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~ia64"
 
 DEPEND="media-libs/libpng
 	virtual/x11"
