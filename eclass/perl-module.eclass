@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.51 2003/09/24 20:28:11 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.52 2003/09/25 09:02:19 johnm Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -36,7 +36,7 @@ perl-module_src_prep() {
 			PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
 		else
 			perl Makefile.PL ${myconf} \
-			PREFIX=/usr INSTALLDIRS=vendor
+			PREFIX=${D}/usr INSTALLDIRS=vendor
 		fi
 	fi
 
