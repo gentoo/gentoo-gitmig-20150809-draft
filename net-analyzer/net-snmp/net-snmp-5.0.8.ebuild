@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.8.ebuild,v 1.1 2003/05/26 08:30:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.8.ebuild,v 1.2 2003/06/05 23:45:07 rac Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 
@@ -24,7 +24,11 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+
+	# 5.0.8 compiles without this patch, and the filename doesn't
+	# match anyway, so disabling for now
+	# Robert Coie <rac@gentoo.org> 2003.06.05
+	#patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
 
 # Kerberos support trips with a compile error
 #	use kerberos && {

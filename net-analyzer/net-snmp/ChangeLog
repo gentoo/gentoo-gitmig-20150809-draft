@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.14 2003/05/26 08:30:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.15 2003/06/05 23:45:07 rac Exp $
+
+  05 Jun 2003; <rac@gentoo.org> net-snmp-5.0.6-r1.ebuild,
+  net-snmp-5.0.8.ebuild:
+  Disable the 5.0.6 patch in 5.0.8, as it doesn't exist, and builds without it.
+  Change ${PF} to ${P} so that 5.0.6-r1 finds the patch.
 
 *net-snmp-5.0.8 (26 May 2003)
 
