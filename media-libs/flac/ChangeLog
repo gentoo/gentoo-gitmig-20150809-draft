@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.4 2002/09/11 20:32:32 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.5 2002/10/31 23:31:21 seemant Exp $
+
+*flac-1.0.4 (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> flac-1.0.4.ebuild
+  files/digest-flac-1.0.4 :
+
+  Version bump, from a request by: nisharfi@csupomona.edu (Nathan Sharfi) in
+  bug #8655.  Note that: tagith1394@hotmail.com (Evan Cortens) had submitted
+  an ebuild for 1.0.3 in bug #6966
 
 *flac-1.0.3 (08 Jul 2002) 
 
