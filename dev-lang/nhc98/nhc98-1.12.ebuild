@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cs.york.ac.uk/fp/nhc98/"
 
 SLOT="0"
 LICENSE="nhc98"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="readline? ( >=readline-4.1 )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.10 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.11 2002/12/09 04:20:57 manson Exp $
 
 IUSE="doc tetex opengl"
 
@@ -39,7 +39,7 @@ HOMEPAGE="http://www.haskell.org/ghc/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 # FIXME: Add USE support for parallel haskell (requires PVM)
 #	Get PVM from ftp://ftp.netlib.org/pvm3/

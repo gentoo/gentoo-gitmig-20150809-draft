@@ -1,7 +1,10 @@
 # ChangeLog for dev-lang/clean
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/ChangeLog,v 1.2 2002/08/17 02:27:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/ChangeLog,v 1.3 2002/12/09 04:20:57 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *clean-2.0.1 (18 Jul 2002)
 
   16 Aug 2002; George Shapovalov <george@gentoo.org> clean-2.0.1.ebuild :

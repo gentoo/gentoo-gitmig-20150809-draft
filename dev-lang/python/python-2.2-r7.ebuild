@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r7.ebuild,v 1.9 2002/11/30 00:56:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r7.ebuild,v 1.10 2002/12/09 04:20:58 manson Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
 
 HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
@@ -28,7 +28,7 @@ PROVIDE="virtual/python"
 
 SLOT="2.2"
 
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	# python's config seems to ignore CFLAGS

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.ebuild,v 1.1 2002/12/08 21:47:50 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.ebuild,v 1.2 2002/12/09 04:20:57 manson Exp $
 
 S=${WORKDIR}
 
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/linux-sources-2.4
 		>=sys-libs/glibc-2.2.4"
 
 SLOT="7"
-KEYWORDS="~x86 -ppc -sparc -sparc64"
+KEYWORDS="~x86 -ppc -sparc "
 IUSE=""
 
 src_compile() {

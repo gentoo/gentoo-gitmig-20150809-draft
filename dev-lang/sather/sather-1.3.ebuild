@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.8 2002/11/30 01:19:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.9 2002/12/09 04:20:58 manson Exp $
 
 MY_P="Sather-${PV}"
 DESCRIPTION="Sather is an object oriented language designed to be simple, efficient, safe, flexible and non-proprietary."
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.cs.waikato.ac.nz/sather/ http://www.icsi.berkeley.edu/~sath
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=sys-devel/gcc-2.95.3-r5
 	>=dev-libs/boehm-gc-6.0"

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.31-r1.ebuild,v 1.9 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.31-r1.ebuild,v 1.10 2002/12/09 04:20:58 manson Exp $
 
 IUSE="doc build"
 
@@ -15,7 +15,7 @@ DEPEND="build? ( sys-devel/perl )
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 src_unpack() {
 

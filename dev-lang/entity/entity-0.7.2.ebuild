@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.20 2002/10/20 18:41:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.21 2002/12/09 04:20:57 manson Exp $
 
 IUSE="sdl gnome ssl opengl python tcltk perl"
 
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/imlib-1.9.10-r1
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 
