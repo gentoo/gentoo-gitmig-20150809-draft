@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mg4j
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/ChangeLog,v 1.1 2004/07/30 21:19:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/ChangeLog,v 1.2 2004/08/03 11:42:53 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> mg4j-bin-0.8.2.ebuild:
+  Added to ~ppc.
 
 *mg4j-bin-0.8.2 (30 Jul 2004)
 

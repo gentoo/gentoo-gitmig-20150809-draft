@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2.ebuild,v 1.1 2004/07/30 05:20:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2.ebuild,v 1.2 2004/08/03 11:42:50 dholm Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.drewnoakes.com/code/exif/"
 SRC_URI="http://www.drewnoakes.com/code/exif/metadata-extractor-${PV}-src.jar"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="junit jikes"
 
 DEPEND=">=virtual/jdk-1.4

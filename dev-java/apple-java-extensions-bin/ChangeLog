@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/apple-java-extensions-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.1 2004/07/30 05:14:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.2 2004/08/03 11:31:13 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org>
+  apple-java-extensions-bin-1.2.ebuild:
+  Added to ~ppc.
 
 *apple-java-extensions-bin-1.2 (30 Jul 2004)
 
