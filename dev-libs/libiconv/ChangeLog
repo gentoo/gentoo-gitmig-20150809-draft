@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/libiconv
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.1 2002/05/01 14:08:09 spider Exp $
+
+*libiconv-1-7 (01 May 2002)
+  01 May 2002; Spider <spider@gentoo.org> ChangeLog libiconv-1.7.ebuild :
+  Added libiconv to portage for the first time, this is needed for glib
+in ppc
