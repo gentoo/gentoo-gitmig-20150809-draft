@@ -1,9 +1,15 @@
 # ChangeLog for x11-plugins/wmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.5 2004/06/28 20:36:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.6 2004/08/31 13:57:39 s4t4n Exp $
 
-  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmail-2.0.ebuild:
-  glibc -> libc
+*wmail-2.0-r1 (31 Aug 2004)
+
+  31 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmail-2.0-r1.ebuild:
+  Revision bump, adding support for libdockapp 0.5, see #54580.
+  Change HOMEPAGE to the www.dockapps.org entry, as the 'official' one
+  gives a 404...
+  metadata.xml:
+  Fix herd and longdescription...
 
   13 Mar 2004; David Holm <dholm@gentoo.org> wmail-2.0.ebuild:
   Added to ~ppc.

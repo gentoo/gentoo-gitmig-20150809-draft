@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>desktop-misc</herd>
-<longdescription>
-WebUMake Mail allows for Web-based e-mail with a
-simple browser interface and a secure,
-administered environment. It supports unlimited
-addresses for multiple domains using just a single
-catchall POP account, and can be integrated with
-WebUMake Web.
-</longdescription>
+<herd>desktop-dock</herd>
 </pkgmetadata>
