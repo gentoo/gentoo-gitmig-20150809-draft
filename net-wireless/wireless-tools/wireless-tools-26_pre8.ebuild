@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26_pre8.ebuild,v 1.2 2003/04/28 03:08:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26_pre8.ebuild,v 1.3 2003/05/29 10:33:08 pvdabeel Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P/.pre8/}
@@ -25,7 +25,7 @@ src_unpack() {
 		${T}/Makefile > Makefile
 }
 src_compile() {
-	emake CFLAGS="$CFLAGS" || die
+	emake CFLAGS="$CFLAGS" WARN="" || die
 }
 
 src_install () {

@@ -1,6 +1,6 @@
 # Copyright 2001-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-25.ebuild,v 1.6 2003/03/08 22:31:15 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-25.ebuild,v 1.7 2003/05/29 10:33:08 pvdabeel Exp $
 
 MY_P=wireless_tools.${PV}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc"
 IUSE=""
 
 src_compile() {
-	emake CFLAGS="$CFLAGS" || die
+	emake CFLAGS="$CFLAGS" WARN="" || die
 }
 
 src_install () {
