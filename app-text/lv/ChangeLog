@@ -1,6 +1,11 @@
 # ChangeLog for app-text/lv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.5 2003/05/14 08:55:53 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.6 2003/05/18 14:04:50 nakano Exp $
+
+*lv-4.49.5-r1 (18 May 2003)
+  18 May 2003; Masatomo Nakano <nakano@gentoo.org> : lv-4.49.5-r1.ebuild:
+
+  Fixed bug. Commited as unstable.
 
 *lv-4.49.5 (11 May 2003)
   14 May 2003; Masatomo Nakano <nakano@gentoo.org> : lv-4.49.5.ebuild, ChangeLog:
