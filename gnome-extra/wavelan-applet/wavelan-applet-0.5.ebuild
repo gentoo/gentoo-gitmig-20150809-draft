@@ -1,12 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.1 2001/12/06 16:47:55 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.2 2002/07/25 04:38:36 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Panel applet that shows the strength of a wavelan connection"
 SRC_URI="http://www.eskil.org/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.eskil.org/wavelan-applet/"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 RDEPEND=">=gnome-base/gnome-core-1.2.12
 	 >=gnome-base/eel-1.0.2
