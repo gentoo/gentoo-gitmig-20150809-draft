@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.14 2004/06/24 22:39:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.15 2004/07/03 15:21:05 pyrania Exp $
+
+  03 Jul 2004; <pyrania@gentoo.org> xchm-0.9.1.ebuild:
+  Stable on x86.
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> xchm-0.8.11.ebuild,
   xchm-0.9.1.ebuild, xchm-0.9.ebuild:
