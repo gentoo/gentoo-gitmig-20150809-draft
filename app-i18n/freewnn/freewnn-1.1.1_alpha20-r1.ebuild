@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20-r1.ebuild,v 1.2 2004/07/18 03:00:13 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20-r1.ebuild,v 1.3 2004/08/12 00:30:09 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -27,12 +27,11 @@ src_unpack() {
 	#Change WNNOWNER to root so we don't need to add wnn user
 	sed -i -e "s/WNNOWNER = wnn/WNNOWNER = root/" makerule.mk.in || die
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	gnuconfig_update
+	get_number_of_jobs
 }
 
 src_compile() {
-
-	use ppc64 && gnuconfig_update; get_number_of_jobs
-
 	econf \
 		--disable-cWnn \
 		--disable-kWnn \
@@ -41,7 +40,6 @@ src_compile() {
 		`use_with ipv6` || die "./configure failed"
 
 	emake || die
-	#make || die
 }
 
 src_install() {
