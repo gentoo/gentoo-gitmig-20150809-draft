@@ -2,7 +2,7 @@ MD5 b162cd2eee9e33b6330de487bfeb0ef5 ChangeLog 1916
 MD5 897a7d200c1e7b0159d465d3220c9eff metadata.xml 509
 MD5 652bb8b3ddf461519d23c3c489d77a07 ode-0.039.ebuild 754
 MD5 e9920dbeb8519029283de1338db769dc ode-0.5.ebuild 823
-MD5 269f82ab5090a9e542777fe4ed80a5f1 ode-0.5-r1.ebuild 1645
+MD5 bcb67cc0e04126190909798283d7990d ode-0.5-r1.ebuild 1654
 MD5 d91fbe34bc92b37eaca8d00521fa93cd files/digest-ode-0.039 59
 MD5 24a10f16623003a6f4c8df5d8a0c11f5 files/digest-ode-0.5 57
 MD5 24a10f16623003a6f4c8df5d8a0c11f5 files/digest-ode-0.5-r1 57
