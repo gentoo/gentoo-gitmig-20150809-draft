@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.35 2004/07/24 14:40:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.36 2004/08/04 21:54:01 squinky86 Exp $
+
+  04 Aug 2004; Jon Hood <squinky86@gentoo.org> -files/nagios.cfg-sample,
+  +files/nagios.cfg-sample.gz, nagios-core-1.1-r4.ebuild,
+  nagios-core-1.1-r6.ebuild, nagios-core-1.2-r1.ebuild,
+  nagios-core-1.2-r2.ebuild:
+  QA updates, move enewuser, remove oversized files in FILESDIR, #58526.
 
   24 Jul 2004; Eldad Zack <eldad@gentoo.org> nagios-core-1.2-r2.ebuild:
   Removed redundant configure directive used for db support. Bug #57429.

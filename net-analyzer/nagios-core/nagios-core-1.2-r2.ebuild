@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.2 2004/07/24 14:40:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.3 2004/08/04 21:54:01 squinky86 Exp $
 
 inherit eutils
 
@@ -31,6 +31,16 @@ DEPEND=">=mail-client/mailx-8.1
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_preinst() {
+	enewgroup nagios
+	if use noweb; then
+		enewuser nagios -1 /bin/bash /dev/null nagios
+	else
+		enewuser nagios -1 /bin/bash /dev/null apache
+		usermod -G apache nagios
+	fi
+}
+
 pkg_setup() {
 	# If there's a gd lib on the system, it will try to build with it.
 	# check if gdlib-config is on, and then check its output.
@@ -42,21 +52,14 @@ pkg_setup() {
 			die "pkg_setup failed"
 		fi
 	fi
-
-	enewgroup nagios
-
-	if use noweb; then
-		enewuser nagios -1 /bin/bash /dev/null nagios
-	else
-		enewuser nagios -1 /bin/bash /dev/null apache
-		usermod -G apache nagios
-	fi
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/Makefile-distclean.diff.bz2
+	cp ${FILESDIR}/nagios.cfg-sample.gz ./
+	gunzip nagios.cfg-sample.gz
 }
 
 src_compile() {
@@ -134,7 +137,7 @@ src_install() {
 	dodoc ${D}/etc/nagios/*
 	rm ${D}/etc/nagios/*
 
-	dodoc ${FILESDIR}/nagios.cfg-sample
+	dodoc ${S}/nagios.cfg-sample
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/nagios
