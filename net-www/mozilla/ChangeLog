@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.226 2005/03/23 07:33:49 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.227 2005/03/23 07:47:14 brad Exp $
+
+*mozilla-1.7.6 (23 Mar 2005)
+
+  23 Mar 2005; Brad Laue <brad@gentoo.org> +mozilla-1.7.6.ebuild:
+  Bump to 1.7.6. Security fixes detailed in bug #84074.
 
   23 Mar 2005; Brad Laue <brad@gentoo.org> +files/mozilla-stackgrowth.patch,
   mozilla-1.7.5-r1.ebuild, mozilla-1.7.5.ebuild:
