@@ -1,0 +1,12 @@
+# ChangeLog for app-accessibility/festival-gaim
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.1 2004/03/21 20:57:29 eradicator Exp $
+
+*festival-gaim-0.71 (21 Mar 2004)
+
+  21 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-gaim-0.71.ebuild, metadata.xml,
+  files/festival-gaim-0.71-gentoo.patch:
+  Initial import. Add text-to-speech synthesis to gaim. Ebuild by me. Closes bug
+  #44536.
+

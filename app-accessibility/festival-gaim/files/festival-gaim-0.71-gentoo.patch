@@ -1,0 +1,21 @@
+diff -Naur festival-gaim-0.71.orig/Makefile festival-gaim-0.71/Makefile
+--- festival-gaim-0.71.orig/Makefile	2003-09-05 15:18:52.000000000 -0700
++++ festival-gaim-0.71/Makefile	2004-03-21 12:42:14.000000000 -0800
+@@ -1,7 +1,7 @@
+-FESTIVAL_VOICES_PATH=/usr/share/festival/voices
++FESTIVAL_VOICES_PATH=/usr/lib/festival/voices
+ PLUGIN_GAIM_PATH=/usr/lib/gaim
+ PKG_CONFIG_PATH=/usr/lib/pkgconfig
+-PLUGIN_CFLAGS=`pkg-config gtk+-2.0 --cflags` `pkg-config glib-2.0 --cflags` -DPLUGIN_VERSION=\"$(PLUGIN_VERSION)\" -DFESTIVAL_VOICES_PATH=\"$(FESTIVAL_VOICES_PATH)\" -march=pentium3 -O3 -pipe 
++PLUGIN_CFLAGS=`pkg-config gtk+-2.0 --cflags` `pkg-config glib-2.0 --cflags` -DPLUGIN_VERSION=\"$(PLUGIN_VERSION)\" -DFESTIVAL_VOICES_PATH=\"$(FESTIVAL_VOICES_PATH)\"
+ PLUGIN_LIBS=`pkg-config gtk+-2.0 --libs` `pkg-config glib-2.0 --libs`
+ LIBTOOL=libtool
+ CC= gcc
+@@ -16,6 +16,6 @@
+ 	@rm -f .libs/libtmp$@.*
+ 
+ install:
+-	install festival.so $(PLUGIN_GAIM_PATH)
++	install -d $(DESTDIR)$(PLUGIN_GAIM_PATH) && install festival.so $(DESTDIR)$(PLUGIN_GAIM_PATH)
+ clean:
+ 	rm -f festival.so
