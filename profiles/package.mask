@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <bass@gentoo.org> (16 Aug 2002)
+=app-admin/localepurge-0.2
+
 # <satai@gentoo.org> (16 Aug 2002)
 # Masked for testing
 =app-text/docbook-xml-dtd-4.1.2-r3
