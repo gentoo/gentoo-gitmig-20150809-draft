@@ -1,11 +1,18 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.6 2002/12/13 11:00:42 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.7 2002/12/14 19:18:47 seemant Exp $
+
+*sparc-sources-2.4.21_pre1 (14 Dec 2002)
+
+  14 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  sparc-sources-2.4.21.ebuild files/digest-sparc-sources-2.4.21_pre1 :
+
+  Moved 2.4.20 to stable, and this to the new testing
+
+*sparc-sources-2.4.20 (30 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*sparc-sources-2.4.20 (30 Nov 2002)
-
   30 Nov 2002; Seemant Kulleen <seemant@gentoo.org>
   sparc-sources-2.4.20.ebuild files/digest-sparc-sources-2.4.20 :
 

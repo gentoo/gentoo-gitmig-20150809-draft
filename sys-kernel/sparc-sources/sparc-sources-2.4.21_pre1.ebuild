@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20_pre10.ebuild,v 1.2 2002/12/09 04:37:29 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.21_pre1.ebuild,v 1.1 2002/12/14 19:18:47 seemant Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE="build"
 
 #we use this next variable to avoid duplicating stuff on cvs
-OKV=2.4.19
+OKV=2.4.20
 MY_PVR=${PVR/_/-}
 [ "${PR}" == "r0" ] && KV=${MY_PVR}-sparc || KV=${PV}-sparc-${PR}
 EXTRAVERSION="`echo ${KV}|sed -e 's:[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\):\1:'`"
