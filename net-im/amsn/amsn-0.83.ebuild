@@ -11,7 +11,7 @@ IUSE="gnome kde imlib"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc"
+KEYWORDS="x86 amd64 ~ppc ~sparc hppa"
 
 
 DEPEND=">=dev-lang/tcl-8.3.3
