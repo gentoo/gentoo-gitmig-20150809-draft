@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.6 2003/09/26 21:07:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.7 2003/10/12 22:30:52 zul Exp $
 
 IUSE="crypt"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${PN}23
 HOMEPAGE="ftp://ftp.freesoftware.com/pub/infozip/Zip.html"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 LICENSE="Info-ZIP"
 
 DEPEND="crypt? ( app-arch/unzip )"
