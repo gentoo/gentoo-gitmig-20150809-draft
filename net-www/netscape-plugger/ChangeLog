@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netscape-plugger
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.8 2003/02/12 08:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.9 2003/10/17 12:52:38 weeve Exp $
+
+  17 Oct 2003; Jason Wever <weeve@gentoo.org> netscape-plugger-4.0-r1.ebuild,
+  netscape-plugger-4.0-r2.ebuild:
+  Masked for sparc as it's an x86 binary package at the moment.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
