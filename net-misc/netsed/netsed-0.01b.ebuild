@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/netsed-0.01b.ebuild,v 1.4 2004/07/01 21:38:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/netsed-0.01b.ebuild,v 1.5 2004/08/14 21:16:07 avenj Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dione.ids.pl/~lcamtuf/${PN}.tgz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -20,7 +20,7 @@ src_unpack() {
 	mkdir -p ${S}
 	cd ${S}
 	unpack ${A}
-	epatch ${PN}_0.01c-2.diff
+	epatch ${DISTDIR}/${PN}_0.01c-2.diff.gz
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netsed
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.3 2004/07/01 21:38:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.4 2004/08/14 21:16:07 avenj Exp $
+
+  14 Aug 2004; Jon Portnoy <avenj@gentoo.org> netsed-0.01b.ebuild :
+  Fix patch (bug #60345), add AMD64 keywords.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> netsed-0.01b.ebuild:
   change virtual/glibc to virtual/libc
