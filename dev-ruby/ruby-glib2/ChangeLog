@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-glib2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.9 2004/06/25 01:59:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.10 2004/06/29 17:53:57 usata Exp $
+
+  30 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-glib2-0.7.0.ebuild,
+  -ruby-glib2-0.8.0.ebuild, ruby-glib2-0.8.1.ebuild, ruby-glib2-0.9.1.ebuild:
+  Stable on alpha and ppc
 
   24 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-glib2-0.8.1.ebuild,
   ruby-glib2-0.9.1.ebuild:
