@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.5 2001/08/27 05:28:12 drobbins Exp $
+# Author: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.6 2001/09/01 04:31:39 drobbins Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -11,10 +11,7 @@ SRC_URI="http://www.python.org/ftp/python/2.0/BeOpen-Python-2.0.tar.bz2
 
 HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
 
-DEPEND=">=sys-devel/autoconf-2.13
-        >=sys-libs/zlib-1.1.3
-        readline? ( >=sys-libs/readline-4.1
-                    >=sys-libs/ncurses-5.2 )"
+DEPEND=">=sys-devel/autoconf-2.13 >=sys-libs/zlib-1.1.3 readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 
 RDEPEND="virtual/glibc"
 PROVIDE="virtual/python"
@@ -71,7 +68,6 @@ src_compile() {
 }
 
 src_install() {
-	
     dodir /usr/share/man
     make install prefix=${D}/usr MANDIR=${D}/usr/share/man || die
 	dosym spython /usr/bin/python	
@@ -86,12 +82,16 @@ src_install() {
     if [ "`use build`" ] || [ "`use bootcd`" ]
     then
         rm -rf ${D}/usr/share/man
-		rm -rf ${D}/usr/lib/python${PV}/{test,config}
 		rm -rf ${D}/usr/include
     	cd ${D}/usr/lib/spython2.0
+		#remove test and lib-tk directory; we can do much more cleaning too.
+		rm -rf test lib-tk
 		#clean out byte-compiled stuff.  Not absolutely required, and doing so saves space 
-		find -iname '*.pyc' | xargs rm
-		find -iname '*.pyo' | xargs rm
+		local x
+		for x in `find -iname '*.pyc'; find -iname '*.pyo'`
+		do
+			rm x
+		done
 	fi
 }
 
@@ -101,6 +101,6 @@ pkg_preinst() {
 	do
 	  [ -f ${file} ] || continue
 	  cp -a ${file} ${ROOT}/usr/lib/python2.0/site-packages
-	  rm -f ${file}
+	  rm -f ${file}*  #remove .pyc stuff too
 	done
 }
