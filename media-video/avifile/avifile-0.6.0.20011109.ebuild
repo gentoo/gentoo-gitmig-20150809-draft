@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011109.ebuild,v 1.3 2001/11/15 11:55:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011109.ebuild,v 1.4 2001/11/15 14:30:14 achim Exp $
 
 P0=${PN}-0.6.0-20011109
 S=${WORKDIR}/${P0}
@@ -17,7 +17,6 @@ DEPEND="$RDEPEND app-arch/unzip"
 
 src_unpack() {
   unpack ${P0}.tgz
-  patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
