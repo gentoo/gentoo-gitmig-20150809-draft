@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.4 2004/01/05 12:16:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.5 2004/01/06 18:00:45 plasmaroo Exp $
 
 IUSE="build"
 
@@ -48,7 +48,6 @@ KEYWORDS="x86 -ppc"
 SLOT="${KV}"
 
 src_unpack() {
-	sleep 1
 	unpack linux-${OURKERNEL}.tar.bz2
 	mv linux-${OURKERNEL} linux-${KV} || die
 
@@ -61,7 +60,9 @@ src_unpack() {
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-aa patch failed"
 
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 
 	kernel_universal_unpack
 }

@@ -1,11 +1,18 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.16 2004/01/05 12:16:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.17 2004/01/06 18:00:45 plasmaroo Exp $
+
+  06 Jan 2004; <plasmaroo@gentoo.org> ck-sources-2.4.22-r1.ebuild,
+  ck-sources-2.4.22-r2.ebuild, ck-sources-2.4.22-r3.ebuild,
+  ck-sources-2.4.23-r1.ebuild, files/ck-sources.CAN-2003-0985.patch,
+  files/ck-sources.rtc_fix.patch:
+  Added patches to address the security vulnerabilities in bugs #37292 and
+  #37317.
 
   05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
   ck-sources-2.4.22-r1.ebuild, ck-sources-2.4.22-r2.ebuild,
   ck-sources-2.4.22-r3.ebuild, ck-sources-2.4.23-r1.ebuild:
-  fix bug #37286
+  Fix bug #37286.
 
 *ck-sources-2.4.23-r1 (04 Dec 2004)
 
@@ -24,7 +31,7 @@
   ck-sources-2.4.20-r4.ebuild, ck-sources-2.4.20-r6.ebuild,
   ck-sources-2.4.22-r1.ebuild, ck-sources-2.4.22-r2.ebuild,
   files/do_brk_fix.patch:
-  Fix the 'do_brk' vulnerability
+  Fix the 'do_brk' vulnerability.
 
   21 Oct 2004; <iggy@gentoo.org> ck-sources-2.4.22-r2.ebuild:
   The -ck2 ebuild wasn't applying the fixes correctly.
