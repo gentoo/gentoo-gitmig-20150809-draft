@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.31 2002/01/24 08:17:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.32 2002/02/01 23:22:27 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -20,7 +20,12 @@ src_unpack() {
 		echo "Beware -- maintainers only."
 	fi
 	cd ${WORKDIR}/${P}
-	cvs -d /home/cvsroot co gentoo-src
+	if [ "`hostname`" = "inventor.gentoo.org" ]
+	then
+		ln -s /home/drobbins/gentoo-src gentoo-src
+	else
+		cvs -d /home/cvsroot co gentoo-src
+	fi
 }
 
 src_install() {
