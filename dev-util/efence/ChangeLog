@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/efence
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.4 2003/02/12 06:41:25 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.5 2004/04/10 07:02:10 mr_bones_ Exp $
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> efence-2.2.2.ebuild:
+  error messages; IUSE; doc tidy
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
