@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.3.ebuild,v 1.4 2002/07/27 07:42:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.3.ebuild,v 1.5 2002/08/30 11:33:31 cybersystem Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.roaringpeguin.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=net-dialup/ppp-2.4.1"
 
