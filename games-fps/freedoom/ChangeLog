@@ -1,6 +1,6 @@
-# ChangeLog for app-games/freedoom
+# ChangeLog for games-fps/freedoom
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.2 2003/09/10 16:06:18 vapier Exp $
 
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org> freedoom-1.0.ebuild:
   fix DESCRIPTION
