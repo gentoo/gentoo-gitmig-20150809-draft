@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.3 2003/10/05 21:10:24 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.4 2003/10/28 01:12:17 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 V6PATCH_LEVEL=alpha11
@@ -11,7 +11,7 @@ IUSE="ipv6"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2-r1"
 

@@ -1,11 +1,14 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.15 2003/10/05 21:10:24 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.16 2003/10/28 01:12:17 gmsoft Exp $
 
   05 Oct 2003; Brad House <brad_mssw@gentoo.org> iptraf-2.7.0-r1.ebuild:
   add ~amd64 flag
 
 *iptraf-2.7.0-r1 (03 Aug 2003)
+
+  27 Oct 2003; Guy Martin <gmsoft@gentoo.org> iptraf-2.7.0-r1.ebuild :
+  Marked stable on x86 and hppa.
 
   04 Aug 2003; Guy Martin <gmsoft@gentoo.org> iptraf-2.7.0-r1.ebuild :
   Updated ipv6 patch to alpha11.
