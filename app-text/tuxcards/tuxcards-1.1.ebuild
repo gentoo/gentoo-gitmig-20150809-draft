@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.1.ebuild,v 1.2 2004/10/18 23:40:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.1.ebuild,v 1.3 2004/11/30 21:28:52 swegener Exp $
 
 DESCRIPTION="A heirarchical text editor"
 HOMEPAGE="http://www.tuxcards.de"
@@ -12,7 +12,7 @@ SLOT="0"
 
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=qt-3.1.1"
+DEPEND=">=x11-libs/qt-3.1.1"
 
 src_compile() {
 	sed -e 's:/usr/local:/usr:g' \
