@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.3 2004/03/13 18:41:11 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.4 2004/03/13 18:46:40 taviso Exp $
 
 DESCRIPTION="A very nice and powerful theme for FVWM"
 HOMEPAGE="http://fvwm-crystal.linuxpl.org/"
@@ -48,6 +48,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo ""
 	einfo  "users should run fvwm-crystal.install to configure fvwm-crystal"
+	einfo ""
 }
 
