@@ -11,11 +11,12 @@ MD5 83b70dd75d9c8783e7b29e19cf2f2d5c vanilla-sources-2.4.27.ebuild 472
 MD5 d354a53c79720fe471a144852d850fc3 vanilla-sources-2.0.40.ebuild 2739
 MD5 0f5406c0ec524fa666bc9334a3f81499 vanilla-sources-2.4.22.ebuild 519
 MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
+MD5 9b4eb4b258ac28ddde823f42eeb05c39 vanilla-sources-2.6.11_rc4.ebuild 487
 MD5 64acc4686f01553a3c28e0e322ef5589 vanilla-sources-2.6.11_rc1.ebuild 484
 MD5 7eeaa66d6ef9652cf01be43981c99574 vanilla-sources-2.4.26.ebuild 472
 MD5 7fd084c8e807a3d8b7a26921764e4687 vanilla-sources-2.4.21.ebuild 565
 MD5 447993921185b57a86d870426511e9cf vanilla-sources-2.6.11_rc3.ebuild 487
-MD5 6bd72d2e115eea98c48894f56d15c552 ChangeLog 9892
+MD5 cd71bc73a12c49a49895f6991713d39a ChangeLog 10044
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
 MD5 97ebbee3ab02255ccaa15c4280e8ace2 vanilla-sources-2.4.28.ebuild 472
 MD5 d3fe4307495d4302c375f45795afcca7 vanilla-sources-2.4.23.ebuild 472
@@ -24,6 +25,7 @@ MD5 bf2b609e8cab6460d220b1267db09826 files/vanilla-sources-2.4.24.CAN-2004-0001.
 MD5 3f736d94a8104152db324c680f8d065b files/digest-vanilla-sources-2.6.11_rc1 133
 MD5 8a11e5038184ee7a1f4e6c56b3a565e2 files/digest-vanilla-sources-2.6.11_rc2 133
 MD5 3cd845b90655fbc9b596d3c2d506928f files/digest-vanilla-sources-2.6.11_rc3 133
+MD5 8cd9ac39f6158c3b2a027748609f0332 files/digest-vanilla-sources-2.6.11_rc4 133
 MD5 1d8193a0ded31699ec3b7bf85dd6cbfa files/digest-vanilla-sources-2.0.40 66
 MD5 fa8428c6171dc0e9548f0b722a5db1c2 files/digest-vanilla-sources-2.2.26 67
 MD5 bbc9b6e1761a30c6c7f7a9f8dec1e7e3 files/digest-vanilla-sources-2.4.20 67
@@ -42,7 +44,7 @@ MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-vanilla-sources-2.6.7 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCA5mbchej4aZK9/cRAlHjAJ0a5MVUcBoNkt5ubL9F8fiHMX/eiACZAaAa
-eZEo9BYnH4tzddTjxeSq4QM=
-=YNM0
+iD8DBQFCD0opchej4aZK9/cRAjcpAJ95uhTv/rU6DWDw9eSTCWicsmmr0QCfQ0JG
+3trB2TQ0OukGCAdTVr4w084=
+=+SpV
 -----END PGP SIGNATURE-----
