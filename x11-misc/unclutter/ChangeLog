@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/unclutter
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.1 2003/03/16 19:43:53 seemant Exp $
+
+*unclutter-8 (16 Mar 2003)
+
+  16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> unclutter-8.ebuild:
+  new package which hides the mouse pointer after a certain period of idleness.
+  Thanks to: Kai Grossjohann <kai.grossjohann@uni-duisburg.de> in bug #13026
+
