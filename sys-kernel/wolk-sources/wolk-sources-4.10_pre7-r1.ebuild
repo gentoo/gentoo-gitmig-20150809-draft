@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.10_pre7-r1.ebuild,v 1.2 2003/12/04 00:08:59 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.10_pre7-r1.ebuild,v 1.3 2004/01/06 00:28:57 plasmaroo Exp $
 
 IUSE="build wolk-bootsplash wolk-supermount ipv6"
 
