@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.5.ebuild,v 1.2 2002/10/04 05:56:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.5.ebuild,v 1.3 2002/10/05 05:39:16 drobbins Exp $
+
+IUSE="nls"
 
 DESCRIPTION="GUI interface for the Ogle DVD player."
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"

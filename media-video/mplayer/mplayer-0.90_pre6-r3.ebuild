@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.10 2002/10/04 05:56:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.11 2002/10/05 05:39:16 drobbins Exp $
+
+IUSE="dga x86 oss 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl dvd gtk esd fbcon encode directfb alsa"
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.4.2.ebuild,v 1.3 2002/05/23 06:50:14 seemant Exp
 
+IUSE="gtk qt"
+
 S=${WORKDIR}/${PN}${PV}
 SRC_URI="http://www.evil3d.net/download/${PN}/${PN}${PV}.tar.gz"
 DESCRIPTION="NVIDIA overclocking utility"

@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Heavily modified by Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r2.ebuild,v 1.4 2002/10/04 05:56:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r2.ebuild,v 1.5 2002/10/05 05:39:16 drobbins Exp $
+
+IUSE="gtk mmx sdl X quicktime avi"
 
 inherit libtool
 
