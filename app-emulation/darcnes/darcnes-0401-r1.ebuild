@@ -1,17 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.6 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.7 2002/10/17 00:55:10 vapier Exp $
 
 IUSE="X gtk"
 
 S=${WORKDIR}/darcnes
 DESCRIPTION="A multi-system emulator"
-SRC_URI="http://www.dridus.com/~nyef/darcnes/download/dn9b0401.tgz"
-HOMEPAGE="http://www.netway.com/~nyef"
-LICENSE=""
+SRC_URI="http://www.dridus.com/~nyef/darcnes/download/dn9b${PV}.tgz"
+HOMEPAGE="http://www.netway.com/~nyef/"
 SLOT="0"
 KEYWORDS="x86 -ppc"
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 DEPEND=">=media-libs/svgalib-1.4.2
 	X? ( virtual/x11 )
