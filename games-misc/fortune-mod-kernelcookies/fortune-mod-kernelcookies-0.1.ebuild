@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/fortune-mod-kernelcookies-0.1.ebuild,v 1.2 2003/09/10 18:39:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/fortune-mod-kernelcookies-0.1.ebuild,v 1.3 2003/10/15 20:20:57 vapier Exp $
+
+DESCRIPTION="A collection of funny lines from the Linux kernel"
+HOMEPAGE="http://unattached.i-no.de/software-misc.shtml"
+SRC_URI="http://unattached.i-no.de/pkgs/kernelcookies.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips"
+
+RDEPEND="games-misc/fortune-mod"
 
 S=${WORKDIR}/kernelcookies
-DESCRIPTION="A collection of funny lines from the Linux kernel"
-SRC_URI="http://unattached.i-no.de/pkgs/kernelcookies.tar.gz"
-HOMEPAGE="http://unattached.i-no.de/software-misc.shtml"
-
-SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~mips"
-LICENSE="GPL-2"
-
-DEPEND="virtual/glibc"
-RDEPEND="games-misc/fortune-mod"
 
 src_install() {
 	insinto /usr/share/fortune
