@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.0.ebuild,v 1.7 2004/11/12 04:10:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.0.ebuild,v 1.8 2004/11/21 18:56:48 foser Exp $
 
 inherit gnome2 eutils
 
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.3
 	>=gnome-base/orbit-2.4
 	>=x11-libs/startup-notification-0.5
 	dev-libs/popt
-	app-admin/fam
+	virtual/fam
 	sys-apps/eject
 	cups? ( net-print/libgnomecups
 		net-print/gnome-cups-manager )
@@ -46,7 +46,6 @@ RDEPEND=">=dev-libs/glib-2.3
 		flac? (	>=media-plugins/gst-plugins-flac-0.8 )
 	)"
 
-# FIXME : virtualize fam
 # FIXME : what to do with exif/jpeg config stuff ?
 
 DEPEND="${RDEPEND}
