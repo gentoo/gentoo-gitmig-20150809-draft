@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.83 2004/11/09 16:12:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.84 2004/12/02 14:12:59 vapier Exp $
+
+*wine-20041201 (02 Dec 2004)
+
+  02 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  files/20041019-no-stack.patch, wine-20041019-r3.ebuild,
+  +wine-20041201.ebuild:
+  Version bump #73080 by David Guembel. Fix the no-stack-protector patch
+  #72449 by Malte S. Stretz. Disable maketest (it requires X to be running)
+  #72375 by Sascha Silbe.
 
   09 Nov 2004; Mike Frysinger <vapier@gentoo.org> wine-20041019-r3.ebuild:
   USE=lcms support #70520.

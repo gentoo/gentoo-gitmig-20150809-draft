@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.6 2004/12/02 14:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041201.ebuild,v 1.1 2004/12/02 14:12:59 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,7 +41,7 @@ src_unpack() {
 	epatch ${FILESDIR}/winearts-kdecvs-fix.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 
-	test_flag -fstack-protector && epatch ${FILESDIR}/${PV}-no-stack.patch #66002
+	test_flag -fstack-protector && epatch ${FILESDIR}/20041019-no-stack.patch #66002
 }
 
 config_cache() {

@@ -1,9 +1,9 @@
---- loader/Makefile.in.orig	2004-10-27 21:26:15.663148264 -0400
-+++ loader/Makefile.in	2004-10-27 21:27:44.434652944 -0400
-@@ -55,3 +55,6 @@
- 	$(RM) $(WINE_BINARIES) $(MODULE)
+--- loader/Makefile.in.orig	2004-12-02 08:57:46.540539616 -0500
++++ loader/Makefile.in	2004-12-02 08:57:53.043551008 -0500
+@@ -21,5 +21,6 @@
  
- ### Dependencies:
-+
-+preloader.o:
-+	$(CC) -c  -fno-pic -fno-stack-protector $(ALLCFLAGS) -o $@ preloader.c
+ @MAKE_RULES@
++CFLAGS += -fno-pic -fno-stack-protector
+ 
+ LIBPTHREAD  = @LIBPTHREAD@
+ LDEXECFLAGS = @LDEXECFLAGS@
