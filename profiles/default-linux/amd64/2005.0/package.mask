@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.2 2005/01/10 04:15:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.3 2005/01/11 02:59:11 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to / look in proper $(get_libdir))
@@ -31,3 +31,9 @@
 ~x11-libs/qt-3.3.2
 =x11-libs/qt-3.3.3
 =x11-libs/qt-3.3.3-r1
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Use linux headers which give us asm-i386 headers as well
+<sys-kernel/linux26-headers-2.6.8.1-r3
+<sys-kernel/linux-headers-2.6.8.1-r3
+
