@@ -1,4 +1,6 @@
+MD5 2331ac0f6b67204c1b33ae60490ad483 ChangeLog 8022
 MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
-MD5 f89b4489801b2dcc48e8c65150951247 ChangeLog 7818
 MD5 b4efa2feba8f3bbc3ff31e5e244665e6 mozilla-launcher-1.22.ebuild 864
+MD5 72ae10ad1b1e128ee7514ce72db7e03b mozilla-launcher-1.23.ebuild 874
 MD5 c17f9892a452364378b79aba30e72f3c files/digest-mozilla-launcher-1.22 68
+MD5 69a8e91fd85f00a9e76eed8c9e4bc463 files/digest-mozilla-launcher-1.23 68
