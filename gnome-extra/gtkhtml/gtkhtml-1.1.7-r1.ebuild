@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.7-r1.ebuild,v 1.1 2002/12/22 11:37:30 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.7-r1.ebuild,v 1.2 2002/12/24 21:19:53 azarah Exp $
 
 IUSE="nls gnome"
 
@@ -24,10 +24,12 @@ RDEPEND=">=gnome-extra/gal-0.21
 	>=dev-libs/libunicode-0.4-r1
 	>=gnome-base/gnome-print-0.34
 	>=gnome-base/bonobo-1.0.20
-	gnome? ( <gnome-base/gconf-1.1.0 )
 	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )
-	<gnome-base/libglade-0.99.0"
+	<gnome-base/libglade-0.99.0
+	<gnome-base/gconf-1.1.0"
+#	gnome? ( <gnome-base/gconf-1.1.0 )
+# Borks without gconf in most cases
 
 DEPEND="${RDEPEND}"
 
@@ -46,6 +48,8 @@ src_compile() {
 	#use gnome \
 	#	&& myconf="${myconf} --with-gconf" \
 	#	|| myconf="${myconf} --without-gconf"
+	myconf="${myconf} --with-gconf"
+# Borks without gconf in most cases
 
   	./configure \
 		--host=${CHOST} \
