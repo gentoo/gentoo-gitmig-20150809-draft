@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ksensors
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ksensors/ChangeLog,v 1.4 2003/09/25 20:08:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ksensors/ChangeLog,v 1.5 2003/10/31 17:13:18 caleb Exp $
+
+*ksensors-0.7.2 (31 Oct 2003)
+
+  31 Oct 2003; Caleb Tennis <caleb@gentoo.org> ksensors-0.7.2.ebuild, metadata.xml:
+  New version, will need some testing
 
   25 Sep 2003; Caleb Tennis <caleb@gentoo.org> ksensors-0.7.ebuild:
   Adding crash prevention patch - see bug #29516 - 
