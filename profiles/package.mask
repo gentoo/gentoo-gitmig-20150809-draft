@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (17 Sep 2002)
+# masked for testing of the gcc3 patch I added for this new version
+=media-gfx/kimagemapeditor-0.9.5.1
+
 # <kain@kain.org> (17 Sep 2002)
 # gcc 3.2 and kerberos v5 fixes for cyrus-sasl; still needs wider testing
 =dev-libs/cyrus-sasl-2.1.7-r2
