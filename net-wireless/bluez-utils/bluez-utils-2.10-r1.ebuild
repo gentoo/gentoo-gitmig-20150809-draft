@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.10-r1.ebuild,v 1.3 2004/10/16 17:26:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.10-r1.ebuild,v 1.4 2004/11/11 09:49:44 eradicator Exp $
+
+IUSE="gtk"
 
 inherit eutils
 
@@ -10,8 +12,8 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
-IUSE="gtk"
+KEYWORDS="amd64 ~ppc sparc x86"
+
 RDEPEND=">=net-wireless/bluez-libs-2.10
 	!net-wireless/bluez-pan
 	gtk? ( >=dev-python/pygtk-2.2 )

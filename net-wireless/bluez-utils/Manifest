@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8292608dea413f7a8309609b80e72d73 ChangeLog 5277
-MD5 5b012319f221d1ea2adea1b2f253e7f6 bluez-utils-2.10.ebuild 2294
+MD5 7f0cfc4d48336087579eac808baaaeb0 ChangeLog 5391
+MD5 ed80a378b301103c8715cffda6157d7a bluez-utils-2.10-r1.ebuild 2596
 MD5 43c46462d55ff522368adcca12159bd9 bluez-utils-2.7.ebuild 2276
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
-MD5 abec54f84c7ddd245b12c580f14d4d50 bluez-utils-2.10-r1.ebuild 2593
+MD5 5b012319f221d1ea2adea1b2f253e7f6 bluez-utils-2.10.ebuild 2294
 MD5 44ca243c60a83967c811537a38b92549 files/bluetooth.rc 1166
 MD5 d552cb6515bf251c019ca4a95dd266eb files/bluez-utils-2.3-bluepin-gtk2.patch 3295
 MD5 336de3d1eba238735777d7d8f8e0c282 files/bluez-utils-2.3-bluepin.patch 461
 MD5 ce3b08e1df53875d1060e9e246810907 files/bluez-utils-2.3-rfcomm_fflush.patch 966
-MD5 06aa410f5fe0f8459273a2bcda7db8cc files/digest-bluez-utils-2.10 68
-MD5 8f08bc200ec5740dd96c1043257f776f files/digest-bluez-utils-2.7 67
-MD5 7449a658ef08ac7e86b221b3c43961af files/pin.sample 26
 MD5 06aa410f5fe0f8459273a2bcda7db8cc files/digest-bluez-utils-2.10-r1 68
 MD5 2fcf0c81d0479f85cb7244f2b1900c6d files/bluez-utils-2.10-handsfree.patch 540
+MD5 8f08bc200ec5740dd96c1043257f776f files/digest-bluez-utils-2.7 67
+MD5 7449a658ef08ac7e86b221b3c43961af files/pin.sample 26
+MD5 06aa410f5fe0f8459273a2bcda7db8cc files/digest-bluez-utils-2.10 68
+MD5 cba196ec0ce8e3622a29f93b030ed027 files/2.10-r1/bluetooth.rc 3340
 MD5 e7df7cd2ca07f4f1ab415d457a6e1c13 files/2.10-r1/pin 5
 MD5 992426019dbbd772c9326512d2a0033d files/2.10-r1/pin-helper.sh 49
-MD5 cba196ec0ce8e3622a29f93b030ed027 files/2.10-r1/bluetooth.rc 3340
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeLyVRkyva5PS18kRAkCsAKDDFQTga5214+giUMs/Teiv2bZyMQCeMBcd
-S3TILKlsIq1OYunQicXbEoU=
-=+Oeg
+iD8DBQFBkzXBArHZZzCEUG0RAnODAJwKxN9jkqP9ediMJ/uBi60mvPi8nwCggF+E
+fj/6V/bkrTPFdN004U19/SU=
+=iH1M
 -----END PGP SIGNATURE-----
