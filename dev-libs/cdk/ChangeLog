@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.6 2003/06/19 17:38:45 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.7 2003/06/24 02:43:56 lu_zero Exp $
+
+  24 Jun 2003; Luca Barbato <lu_zero@gentoo.org> cdk-4.9.10.20020430.ebuild:
+  added ppc to KEYWORDS
 
   19 Jun 2003; Will Woods <wwoods@gentoo.org> cdk-4.9.10.20020430.ebuild:
   added alpha to KEYWORDS

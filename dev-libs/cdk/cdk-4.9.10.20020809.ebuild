@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020809.ebuild,v 1.2 2003/02/13 10:34:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020809.ebuild,v 1.3 2003/06/24 02:43:56 lu_zero Exp $
 
 
 MY_P=${P/.2002/-2002}
@@ -12,7 +12,7 @@ HOMEPAGE="http://dickey.his.com/cdk/cdk.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~ppc ~x86 ~sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
