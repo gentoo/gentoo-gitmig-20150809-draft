@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.4 2004/06/27 04:53:47 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.5 2004/06/28 06:13:26 mr_bones_ Exp $
 
 inherit kde eutils gcc
 need-kde 3
@@ -10,7 +10,10 @@ MY_P=${P/_/}
 DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
 HOMEPAGE="http://arson.sourceforge.net/"
 SRC_URI="mirror://sourceforge/arson/${MY_P}.tar.bz2"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="oggvorbis"
 
 DEPEND=">=media-sound/cdparanoia-3.9.8
@@ -23,46 +26,25 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=app-cdr/cdrdao-1.1.5
 	>=media-libs/flac-1.1.0"
 
-# ldd ./usr/bin/arson | cut -f 3 -d ' ' | xargs -n1 qpkg -f | sort | uniq
-# app-admin/fam *
-# dev-libs/expat *
-# kde-base/kdelibs *
-# media-libs/flac *
-# media-libs/fontconfig *
-# media-libs/freetype *
-# media-libs/jpeg *
-# media-libs/libart_lgpl *
-# media-libs/libmng *
-# media-libs/libogg *
-# media-libs/libpng *
-# media-libs/libvorbis *
-# sys-devel/gcc *
-# sys-libs/glibc *
-# sys-libs/zlib *
-# x11-base/xfree *
-# x11-libs/qt *
-
-# Runtime programs.
-#	media-video/vcdimager
-
-KEYWORDS="x86 ~sparc ~amd64"
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 #added base_src_unpack() with conditional fix of code allowing compilation with gcc-3.4.0
 base_src_unpack() {
 	unpack ${A}
 	cd ${S}/src/
-	
+
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
-  		einfo "Compiler used: gcc-3.4.x Applying patch conditionally."
+		einfo "Compiler used: gcc-3.4.x Applying patch conditionally."
 		sed -i "s:(font()):(font):" wizard.cpp
 	fi
 	cd ${S}
 }
 
 src_compile() {
-	use oggvorbis && myconf="$myconf --with-vorbis" || myconf="$myconf --without-vorbis"
+	use oggvorbis \
+		&& myconf="$myconf --with-vorbis" \
+		|| myconf="$myconf --without-vorbis"
 	myconf="$myconf --with-flac"
 	kde_src_compile
 }
