@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.11 2001/08/31 20:39:41 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.12 2001/08/31 22:00:07 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,29 +17,28 @@ DEPEND=">=media-libs/imlib-1.9.10
 	>=gnome-base/gnome-env-1.0"
 
 src_compile() {                           
-  CFLAGS="$CFLAGS -I/usr/include/db1"
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--sysconfdir=/etc/opt/gnome \
-	--mandir=/opt/gnome/man \
-	--localstatedir=/var --enable-prefere-db1
+	CFLAGS="$CFLAGS -I/usr/include/db1"
 
-  try pmake
+	./configure --host=${CHOST} --prefix=/opt/gnome 		\
+		    --sysconfdir=/etc/opt/gnome 			\
+		    --mandir=/opt/gnome/man 				\
+		    --localstatedir=/var --enable-prefere-db1 || die
+
+	emake || die
 }
 
 src_install() {
+	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome 	\
+		mandir=${D}/opt/gnome/man 				\
+		localstatedir=${D}/var install || die
 
-  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome \
-	mandir=${D}/opt/gnome/man \
-	localstatedir=${D}/var install
+	into /opt/gnome
+	dodir /usr/share/doc/${P}
+	mv ${D}/opt/gnome/doc/* ${D}/usr/share/doc/${P}
+	doman ${D}/usr/share/doc/${P}/*.3
+	rm ${D}/usr/share/doc/${P}/*.3
+	gzip ${D}/usr/share/doc/${P}/*
+	rm -rf ${D}/opt/gnome/doc
 
-  into /opt/gnome
-  dodir /usr/share/doc/${P}
-  mv ${D}/opt/gnome/doc/* ${D}/usr/share/doc/${P}
-  doman ${D}/usr/share/doc/${P}/*.3
-  rm ${D}/usr/share/doc/${P}/*.3
-  gzip ${D}/usr/share/doc/${P}/*
-  rm -rf ${D}/opt/gnome/doc
-
-  dodoc AUTHORS COPYING* ChangeLog README NEWS HACKING
-
+	dodoc AUTHORS COPYING* ChangeLog README NEWS HACKING
 }

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.28.ebuild,v 1.2 2001/04/19 16:37:12 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.29.ebuild,v 1.5 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.29.ebuild,v 1.6 2001/08/31 22:02:41 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -11,33 +11,35 @@ DESCRIPTION="gnome-print"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="nls? ( sys-devel/gettext ) 
-        sys-devel/perl
-	>=media-libs/gdk-pixbuf-0.9.0
-	>=gnome-base/libglade-0.13
-        >=app-text/ghostscript-6.50-r2"
-
 RDEPEND=">=media-libs/gdk-pixbuf-0.9.0
+	 >=gnome-base/libglade-0.13
+	 >=media-libs/gdk-pixbuf-0.9.0
 	 >=gnome-base/libglade-0.13"
 
 
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext ) 
+        sys-devel/perl
+        >=app-text/ghostscript-6.50-r2"
+
 src_compile() {
-  local myconf
-  if [ -z "`use nls`" ]
-  then
-    myconf="--disable-nls"
-  fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome
-  try pmake
+	local myconf
+
+	if [ -z "`use nls`" ]
+	then
+		myconf="--disable-nls"
+	fi
+
+	./configure --host=${CHOST} --prefix=/opt/gnome 		\
+		    --sysconfdir=/etc/opt/gnome --mandir=/opt/gnome/man
+
+	emake || die
 }
 
 src_install() {
-  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome install
-  dosed /opt/gnome/share/fonts/fontmap
-  dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome 	\
+	     mandir=${D}/opt/gnome/man install || die
+
+	dosed /opt/gnome/share/fonts/fontmap
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
-
-
-
-
-
