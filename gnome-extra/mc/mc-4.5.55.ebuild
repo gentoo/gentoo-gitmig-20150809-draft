@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55.ebuild,v 1.2 2001/10/06 22:39:31 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55.ebuild,v 1.3 2001/10/06 23:45:03 hallski Exp $
 
 #P=
 A=${P}.tar.gz
@@ -58,7 +58,7 @@ src_compile() {
 }
 
 src_install() {                               
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr sysconfdir=${D}/etc install || die
 
 	dodoc ABOUT-NLS COPYING* FAQ INSTALL* NEWS README*
 }
