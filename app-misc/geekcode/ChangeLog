@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geekcode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.13 2004/12/17 09:59:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.14 2004/12/27 22:23:03 gongloo Exp $
+
+  27 Dec 2004; <gongloo@gentoo.org> geekcode-1.7.3.ebuild:
+  Added ~ppc-macos.
 
   17 Dec 2004; Sven Wegener <swegener@gentoo.org> -geekcode-1.7.ebuild:
   Removed old ebuild.

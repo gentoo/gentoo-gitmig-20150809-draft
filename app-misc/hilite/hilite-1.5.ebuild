@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/hilite-1.5.ebuild,v 1.8 2004/10/26 20:59:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/hilite-1.5.ebuild,v 1.9 2004/12/27 22:17:38 gongloo Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ DESCRIPTION="A utility which highlights stderr text in red"
 SLOT="0"
 
 LICENSE="GPL-2"
-KEYWORDS="sparc mips ~amd64 x86 ~hppa ppc"
+KEYWORDS="sparc mips ~amd64 x86 ~hppa ppc ~ppc-macos"
 S=${WORKDIR}
 
 IUSE=""

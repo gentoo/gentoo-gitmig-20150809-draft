@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r1.ebuild,v 1.9 2004/06/28 01:37:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r1.ebuild,v 1.10 2004/12/27 22:26:00 gongloo Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://matt.immute.net/src/mtail/mtail-${PV}.tgz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 alpha sparc amd64 mips"
+KEYWORDS="x86 alpha sparc amd64 mips ~ppc-macos"
 IUSE=""
 
 DEPEND=""
