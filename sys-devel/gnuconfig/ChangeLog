@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.4 2004/02/15 05:10:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.5 2004/02/19 22:31:48 tgall Exp $
+
+  19 Feb 2004; Tom Gall <tgall@gentoo.org> gnuconfig-20040214.ebuild:
+  ppc64 stable
 
 *gnuconfig-20040214 (14 Feb 2004)
 
