@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.13 2004/10/14 19:06:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.14 2004/10/23 07:57:59 mr_bones_ Exp $
 
 IUSE="debug"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~mips ~ia64 ppc64 macos ppc-macos"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~mips ~ia64 ppc64 ppc-macos"
 
 DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3"

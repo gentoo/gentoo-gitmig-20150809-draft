@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r2.ebuild,v 1.3 2004/10/19 02:42:40 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r2.ebuild,v 1.4 2004/10/23 07:53:58 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 macos ppc-macos ppc64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc-macos ppc64"
 IUSE="lzw-tiff"
 
 DEPEND=">=media-libs/jpeg-6b
