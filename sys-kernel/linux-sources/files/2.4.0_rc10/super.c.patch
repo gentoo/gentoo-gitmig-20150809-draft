@@ -1,0 +1,37 @@
+*** super.c~	Thu Dec  7 12:14:03 2000
+--- super.c	Thu Dec  7 12:18:14 2000
+***************
+*** 759,773 ****
+      if (is_read_only(s->s_dev) && !(s->s_flags & MS_RDONLY)) {
+          printk("clm-7000: Detected readonly device, marking FS readonly\n") ;
+  	s->s_flags |= MS_RDONLY ;
+      }
+-     args.objectid = REISERFS_ROOT_PARENT_OBJECTID ;
+-     root_inode = iget4 (s, REISERFS_ROOT_OBJECTID, 0, (void *)(&args));
+      if (!root_inode) {
+  	printk ("reiserfs_read_super: get root inode failed\n");
+  	goto error;
+      }
+  
+      s->s_root = d_alloc_root(root_inode);  
+      if (!s->s_root) {
+  	iput(root_inode);
+  	goto error;
+--- 759,775 ----
+      if (is_read_only(s->s_dev) && !(s->s_flags & MS_RDONLY)) {
+          printk("clm-7000: Detected readonly device, marking FS readonly\n") ;
+  	s->s_flags |= MS_RDONLY ;
+      }
+      if (!root_inode) {
+  	printk ("reiserfs_read_super: get root inode failed\n");
+  	goto error;
+      }
+  
++     ilabel.ino = REISERFS_ROOT_OBJECTID;
++     ilabel.i_key.reiserfs_ikey.k_dir_id = REISERFS_ROOT_PARENT_OBJECTID;
++     ilabel.i_key.reiserfs_ikey.k_objectid = REISERFS_ROOT_OBJECTID;
++     root_inode = iget4 (s, & ilabel, 0, 0);
+      s->s_root = d_alloc_root(root_inode);  
+      if (!s->s_root) {
+  	iput(root_inode);
+  	goto error;

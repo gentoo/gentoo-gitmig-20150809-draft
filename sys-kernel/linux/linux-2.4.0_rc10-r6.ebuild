@@ -1,9 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r6.ebuild,v 1.1 2000/12/07 16:14:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r6.ebuild,v 1.2 2000/12/08 06:42:08 drobbins Exp $
 
 S=${WORKDIR}/linux
+KV=2.4.0-test10
 if [ "$PN" = "linux" ]
 then
 	DESCRIPTION="Linux kernel, including modules, binary tools, libraries and includes"
@@ -29,12 +30,14 @@ HOMEPAGE="http://www.kernel.org/
 	  http://www.nvidia.com"
 	
 src_compile() {
-
 	cd ${S}
 	try make symlinks
 	try make dep
    	#time to do the special symlink tweak
-	readlink /usr/src/linux > ${T}/linuxlink
+	if [ -e /usr/src/linux ]
+	then
+		readlink /usr/src/linux > ${T}/linuxlink
+	fi
 	rm /usr/src/linux
 	( cd /usr/src; ln -s ${S} linux )
 	#symlink tweak in place
@@ -59,18 +62,24 @@ src_compile() {
 	try ./configure --prefix=/
 	try make
 	#untweak the symlink
-	( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
+	if [ -e ${T}/linuxlink ]
+	then
+		( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
+	fi
 }
 
 src_unpack() {
-	if [ ! -L /usr/src/linux ]
+	if [ -e /usr/src/linux ]
 	then
-		echo '!!!' /usr/src/linux is not a symbolic link.
-		echo '!!!' For ${PF} to compile correctly, /usr/src/linux
-		echo '!!!' needs to be temporarily modified to point to
-		echo '!!!' a temporary build directory.  Please rename your
-		echo '!!!' current directory and restart this build process.
-		exit 1
+		if [ ! -L /usr/src/linux ]
+		then
+			echo '!!!' /usr/src/linux is not a symbolic link.
+			echo '!!!' For ${PF} to compile correctly, /usr/src/linux
+			echo '!!!' needs to be temporarily modified to point to
+			echo '!!!' a temporary build directory.  Please rename your
+			echo '!!!' current directory and restart this build process.
+			exit 1
+		fi
 	fi
     cd ${WORKDIR} 
     unpack linux-2.4.0-test10.tar.bz2
@@ -131,10 +140,9 @@ src_unpack() {
 	cp ${FILESDIR}/${PV}/${PF}.config .config
 	cp ${FILESDIR}/${PV}/${PF}.autoconf include/linux/autoconf.h
 	try make include/linux/version.h
-
-	cd ${S}
 	#fix silly permissions in tarball
-	chown -R root.root *
+	cd ${WORKDIR}
+	chown -R root.root linux 
 }
 
 src_install() {                               
@@ -158,14 +166,14 @@ src_install() {
 	dodir /usr/src
 	if [ "$PN" = "linux" ]
 	then
-		dodir /usr/src/linux-${PV}
+		dodir /usr/src/linux-${KV}
 		cd ${D}/usr/src
-		ln -sf linux-${PV} linux
+		ln -sf linux-${KV} linux
 		#grab includes and documentation only
-		dodir /usr/src/linux-${PV}/include/linux
-		dodir /usr/src/linux-${PV}/include/asm-i386
-		cp -ax ${S}/include ${D}/usr/src/linux-${PV}
-		cp -ax ${S}/Documentation ${D}/usr/src/linux-${PV}
+		dodir /usr/src/linux-${KV}/include/linux
+		dodir /usr/src/linux-${KV}/include/asm-i386
+		cp -ax ${S}/include ${D}/usr/src/linux-${KV}
+		cp -ax ${S}/Documentation ${D}/usr/src/linux-${KV}
 		dodir /usr/include
 		dosym /usr/src/linux/include/linux /usr/include/linux
 		dosym /usr/src/linux/include/asm-i386 /usr/include/asm
@@ -178,26 +186,26 @@ src_install() {
 		try make INSTALL_MOD_PATH=${D} modules_install
 		#install ALSA modules
 		cd ${S}/extras/alsa-driver-0.5.9d
-		dodir /lib/modules/2.4.0-test10/misc
-		cp modules/*.o ${D}/lib/modules/2.4.0-test10/misc
+		dodir /lib/modules/${KV}/misc
+		cp modules/*.o ${D}/lib/modules/${KV}/misc
 		dodir /usr/include/linux
 		insinto /usr/include/linux
 		cd include
 		doins asound.h asoundid.h asequencer.h ainstr_*.h
 		#install nvidia driver
 		cd ${S}/extras/NVIDIA_kernel-0.9-5
-		insinto /lib/modules/2.4.0-test10/video
+		insinto /lib/modules/${KV}/video
 		doins NVdriver
 		#fix symlink
-		cd ${D}/lib/modules/2.4.0-test10
+		cd ${D}/lib/modules/${KV}
 		rm build
-		ln -sf /usr/src/linux-2.4.0-test10 build
+		ln -sf /usr/src/linux-${KV} build
 	else
 		#grab all the sources
 		cd ${WORKDIR}
-		mv linux ${D}/usr/src/linux-${PV}
+		mv linux ${D}/usr/src/linux-${KV}
 		cd ${D}/usr/src
-		ln -sf linux-${PV} linux
+		ln -sf linux-${KV} linux
 		#remove workdir since our install was dirty and modified ${S}
 		#this will cause an unpack to be done next time
 		rm -rf ${WORKDIR}
