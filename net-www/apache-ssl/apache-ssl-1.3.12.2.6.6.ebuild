@@ -1,9 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: 
-/home/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.12.2.6.6.ebuild,v 
-1.1 2000/08/16 17:16:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.12.2.6.6.ebuild,v 1.3 2000/08/28 03:01:54 achim Exp $
 
 P=apache-ssl-1.3.12-2.6.6
 A="apache_1.3.12.tar.gz mod_ssl-2.6.6-1.3.12.tar.gz"
@@ -53,8 +51,10 @@ pkg_config() {
   ${ROOT}/usr/sbin/rc-update add httpd
 
   # Set ServerName and ServerAdmin
+  einfo "Setting Servername to $ServerName..."
   cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
-  sed -e "s/\#ServerName.*/ServerName $ServerName/" \
+  sed -e "s/^\#ServerName.*/ServerName $ServerName/" \
+      -e "s/^ServerName.*/ServerName $ServerName/" \
       -e "s/^ServerAdmin.*/ServerAdmin $ServerAdmin/" \
 	${ROOT}/etc/httpd/httpd.conf.orig > ${ROOT}/etc/httpd/httpd.conf
 
