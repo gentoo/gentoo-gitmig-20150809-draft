@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.7 2002/11/21 13:55:01 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.8 2002/11/28 20:04:34 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -184,6 +184,10 @@ src_unpack() {
 			[ "${x##*/}" = "019_all_4.2.1-ati-radeon-9000-support.patch.bz2" ] \
 				&& popts="${popts} -R"
 
+			# Cause things to break, bug #10507.
+			[ "${x##*/}" = "35_all_4.2.0-tdfx-fix-compiler-warnings.patch.bz2" ] \
+				&& continue
+
 			# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
 			# closing bug #10146.
 			[ "`gcc-version`" = "2.95" ] && \
@@ -278,10 +282,10 @@ src_unpack() {
 	then
 		# should fix bug #4189.  gcc-3.x have problems with -march=pentium4
 		# and -march=athlon-tbird
-		export CFLAGS="${CFLAGS/pentium4/pentium3}"
-		export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
-		export CFLAGS="${CFLAGS/athlon-tbird/athlon}"
-		export CXXFLAGS="${CXXFLAGS/athlon-tbird/athlon}"
+#		export CFLAGS="${CFLAGS/pentium4/pentium3}"
+#		export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
+#		export CFLAGS="${CFLAGS/athlon-tbird/athlon}"
+#		export CXXFLAGS="${CXXFLAGS/athlon-tbird/athlon}"
 
 		# Without this, modules breaks with gcc3
 		if [ "`gcc-version`" = "3.1" ]
@@ -370,14 +374,14 @@ src_install() {
 	einfo "Installing XFree86..."
 	# gcc3 related fix.  Do this during install, so that our
 	# whole build will not be compiled without mmx instructions.
-	if [ "`gcc-version`" != "2.95" ] && [ "${ARCH}" = "x86" ]
-	then
-		make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
-			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
-			install DESTDIR=${D} || die
-	else
+#	if [ "`gcc-version`" != "2.95" ] && [ "${ARCH}" = "x86" ]
+#	then
+#		make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
+#			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
+#			install DESTDIR=${D} || die
+#	else
 		make install DESTDIR=${D} || die
-	fi
+#	fi
 	
 	make install.man DESTDIR=${D} || die
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.63 2002/11/20 18:57:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.64 2002/11/28 20:04:34 azarah Exp $
+
+  28 Nov 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r1.ebuild :
+
+  Do not apply 35_all_4.2.0-tdfx-fix-compiler-warnings.patch.bz2, bug #10507.
 
   20 Nov 2002; Martin Schlemmer <azarah@gentoo.org> files/4.2.1-r1/site.def :
 
