@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.4 2003/07/28 21:38:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.5 2003/09/16 19:10:20 agriffis Exp $
+
+  16 Sep 2003; Aron Griffis <agriffis@gentoo.org> autotrace-0.31.1-r1.ebuild:
+  Add ~alpha
 
 *autotrace-0.31.1-r1 (28 Jul 2003)
 
