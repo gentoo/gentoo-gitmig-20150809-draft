@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kaudiocreator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.1 2005/01/15 02:24:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.2 2005/01/29 11:16:05 danarmak Exp $
+
+  29 Jan 2005; Dan Armak <danarmak@gentoo.org>
+  kaudiocreator-3.4.0_beta1.ebuild:
+  Add optional runtime deps on lame, vorbis-tools (for oggenc) and flac. These
+  are used as encoders by kaudiocreator. Closes bug #79515.
 
 *kaudiocreator-3.4.0_beta1 (15 Jan 2005)
 
