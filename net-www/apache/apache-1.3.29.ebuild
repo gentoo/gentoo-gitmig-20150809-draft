@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29.ebuild,v 1.4 2004/01/29 08:04:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29.ebuild,v 1.5 2004/02/22 16:51:20 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ mod_ssl_ver=2.8.16
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-${PV}.tar.gz"

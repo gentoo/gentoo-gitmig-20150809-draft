@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3.2.2.ebuild,v 1.4 2004/01/04 18:35:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3.2.2.ebuild,v 1.5 2004/02/22 16:56:36 agriffis Exp $
 
 IUSE="gpm cjk imlib ssl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://w3m.sourceforge.net/"
 
 SLOT="0"
 LICENSE="w3m"
-KEYWORDS="x86 ~sparc  ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2

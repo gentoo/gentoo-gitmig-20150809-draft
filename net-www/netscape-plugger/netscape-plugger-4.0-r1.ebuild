@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r1.ebuild,v 1.13 2003/10/17 12:52:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r1.ebuild,v 1.14 2004/02/22 16:53:57 agriffis Exp $
 
 MYP=${P#netscape-}-linux-x86-glibc
 S=${WORKDIR}/plugger-4.0
@@ -8,7 +8,7 @@ DESCRIPTION="Plugger 4.0 streaming media plugin"
 SRC_URI="http://fredrik.hubbe.net/plugger/"${MYP}.tar.gz
 HOMEPAGE="http://fredrik.hubbe.net/plugger.html"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc"
 LICENSE="GPL-2"
 
 src_install() {

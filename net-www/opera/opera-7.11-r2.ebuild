@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.11-r2.ebuild,v 1.4 2004/01/11 13:48:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.11-r2.ebuild,v 1.5 2004/02/22 16:54:30 agriffis Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
@@ -25,7 +25,7 @@ RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	x11-libs/openmotif" #lesstif resolves Bug 25767
 
-KEYWORDS="x86 ~ppc" #please test on x86
+KEYWORDS="x86 ~ppc"#please test on x86
 SLOT="0"
 
 #we can't modify (R)DEPEND info inside an if statement; that breaks metadata caching.

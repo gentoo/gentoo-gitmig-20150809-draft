@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52.ebuild,v 1.12 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52.ebuild,v 1.13 2004/02/22 16:55:17 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="publish files through FTP and HTTP"
 SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/publicfile.html"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 SLOT="0"
 
 LICENSE="as-is"
