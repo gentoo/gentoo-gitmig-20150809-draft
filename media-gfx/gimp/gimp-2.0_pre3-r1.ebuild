@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre3.ebuild,v 1.1 2004/02/11 23:24:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre3-r1.ebuild,v 1.1 2004/02/15 19:07:09 foser Exp $
 
 inherit debug flag-o-matic libtool
 
@@ -39,7 +39,7 @@ RDEPEND=">=dev-libs/glib-2.2
 
 	aalib?	( media-libs/aalib )
 	python?	( >=dev-lang/python-2.2
-		>=dev-python/pygtk-1.99.13 )
+		>=dev-python/pygtk-2 )
 
 	X? ( virtual/x11 )"
 
@@ -50,10 +50,24 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 #	sys-devel/gettext
 
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# Fix linking to older version of gimp if installed - this should
+	# void liquidx's hack, so it is removed.
+	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
+
+	# gcc2 fixes (#41487)
+	epatch ${FILESDIR}/${P}-gcc_2.95.patch
+
+}
+
 src_compile() {
 
 	# Since 1.3.16, fixes linker problems when upgrading
-	elibtoolize --reverse-deps
+	elibtoolize
 
 	# Workaround portage variable leakage
 	local AA=
