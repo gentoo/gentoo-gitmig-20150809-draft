@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.11 2003/03/10 21:23:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.12 2003/08/25 19:51:15 weeve Exp $
+
+  25 Aug 2003; Jason Wever <weeve@gentoo.org> gnuplot-3.7.3.ebuild:
+  Marked stable for sparc.
 
 *gnuplot-3.7.3 (09 Mar 2003)
 
