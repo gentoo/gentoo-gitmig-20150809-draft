@@ -1,23 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c494ca4a7ee9f1a04338f654fe4083c ChangeLog 4109
-MD5 a67ea9d0aba6813bf7099ba0533ba44d advancemame-0.85.0.ebuild 1820
-MD5 c7a56ad2d4cb791e613869debc9e18df advancemame-0.86.0.ebuild 1823
+MD5 dab863f429a2629bfcafe094d9ae92a2 ChangeLog 4268
 MD5 972b8c9f939a33a7074e0819fb55455c metadata.xml 962
-MD5 ebee324f3a2e25e2d43962b10672d214 advancemame-0.87.0.ebuild 1942
 MD5 8cca3de56e63ac1d78313014e53534e4 advancemame-0.88.0.ebuild 1988
 MD5 ad3275724819a8be11f3101c234b053f advancemame-0.89.0.ebuild 1987
-MD5 893791a430019a7eb1c0eaf15758a93f files/0.89.0-pic.patch 344
-MD5 0fcd53e6dc55e784545e640310890175 files/digest-advancemame-0.85.0 72
-MD5 cfcb101ca859965c03e4c39303d3c481 files/digest-advancemame-0.86.0 72
-MD5 2781f763e847a14eef2b5f3520b04231 files/digest-advancemame-0.87.0 72
 MD5 f43f9c3039884207b6e5fc1d91bb46cb files/digest-advancemame-0.88.0 72
+MD5 893791a430019a7eb1c0eaf15758a93f files/0.89.0-pic.patch 344
 MD5 8aaeef301de9a34d24cfb74973b8ef9b files/digest-advancemame-0.89.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBxSCAroRuSHgZdywRAudfAJ9zy5oNqbSd3A/sVcqmzjwBOGHVKwCfVUFm
-5uoD3OeVzyFRNYS2+syZLtg=
-=TPuf
------END PGP SIGNATURE-----
