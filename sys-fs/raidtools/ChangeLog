@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/raidtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.7 2004/07/01 21:50:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.8 2004/07/18 12:44:48 plasmaroo Exp $
+
+  18 Jul 2004; <plasmaroo@gentoo.org> raidtools-1.00.3-r1.ebuild,
+  +files/raidtools-1.00.3-2.6.Headers.patch:
+  Compile fix for 2.6 headers; bug #57096.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   raidtools-0.90-r2.ebuild, raidtools-1.00.3-r1.ebuild:

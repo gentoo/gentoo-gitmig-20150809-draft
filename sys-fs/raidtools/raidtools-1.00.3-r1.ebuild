@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r1.ebuild,v 1.10 2004/07/15 03:41:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r1.ebuild,v 1.11 2004/07/18 12:44:48 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/mkraid.c-gcc33.patch
+	epatch ${FILESDIR}/${P}-2.6.Headers.patch
 }
 
 src_compile() {

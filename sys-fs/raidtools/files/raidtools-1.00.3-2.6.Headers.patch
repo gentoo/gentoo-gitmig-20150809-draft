@@ -1,0 +1,34 @@
+diff -ur raidtools-1.00.3/list.h raidtools-1.00.3.plasmaroo/list.h
+--- raidtools-1.00.3/list.h	2003-01-15 08:58:25.000000000 +0000
++++ raidtools-1.00.3.plasmaroo/list.h	2004-07-18 12:25:15.000000000 +0100
+@@ -14,6 +14,7 @@
+  * using the generic single-entry routines.
+  */
+ 
++#define _LINUX_LIST_H
+ struct list_head {
+ 	struct list_head *next, *prev;
+ };
+diff -ur raidtools-1.00.3/lsraid.c raidtools-1.00.3.plasmaroo/lsraid.c
+--- raidtools-1.00.3/lsraid.c	2003-01-15 08:58:25.000000000 +0000
++++ raidtools-1.00.3.plasmaroo/lsraid.c	2004-07-18 12:25:19.000000000 +0100
+@@ -40,16 +40,15 @@
+ #include <unistd.h>
+ #include <errno.h>
+ 
++/* Local copies of things I use - Clean up later */
++#include "list.h"
++
+ #include <linux/types.h>
+ #include <linux/major.h>
+ #include <linux/fs.h>
+ #include <linux/raid/md_u.h>
+ #include <linux/raid/md_p.h>
+ 
+-/* Local copies of things I use - Clean up later */
+-#include "list.h"
+-
+-
+ /*
+  * Defines
+  */
