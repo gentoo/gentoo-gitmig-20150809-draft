@@ -1,12 +1,15 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.36 2004/11/16 13:24:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.37 2004/11/16 16:09:23 blubb Exp $
 
   16 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> fcron-2.0.2.ebuild:
   Stable on sparc wrt #71311
 
   16 Nov 2004; <SeJo@gentoo.org> fcron-2.0.2.ebuild, fcron-2.9.5.1.ebuild:
   stable on ppc gsla: 71311
+
+  16 Nov 2004; Simon Stelling <blubb@gentoo.org> fcron-2.0.2.ebuild:
+  stable on amd64; bug #71311
 
 *fcron-2.9.5.1 (16 Nov 2004)
 
