@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.3.ebuild,v 1.1 2004/12/19 03:12:21 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.3.ebuild,v 1.2 2004/12/27 18:52:50 gustavoz Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc resperl"
 
@@ -18,7 +18,7 @@ S_SOUNDS=${WORKDIR}/${PN}-sounds-1.0.1
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="dev-libs/newt
 	media-sound/mpg123
