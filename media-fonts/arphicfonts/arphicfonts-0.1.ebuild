@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1.ebuild,v 1.1 2003/06/02 13:45:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1.ebuild,v 1.2 2003/09/06 23:54:58 msterret Exp $
 
 DESCRIPTION="Arphic Fonts"
 SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
@@ -33,7 +33,7 @@ src_install() {
 	insinto /usr/share/fonts/truetype
 	doins *.ttf
 
-#	These don't get downloaded because there is no simple way to 
+#	These don't get downloaded because there is no simple way to
 #	fetch them.. ie if I included the README in SRC_URI above, it would
 #	get saved as ${DISTDIR}/README which doesn't seem like
 #	a really good idea.
@@ -43,6 +43,6 @@ src_install() {
 pkg_postinst() {
 	echo ">>> Making font dirs..."
 	cd /usr/share/fonts/truetype/
-	/usr/X11R6/bin/ttmkfdir > fonts.scale	
+	/usr/X11R6/bin/ttmkfdir > fonts.scale
 	mkfontdir
 }

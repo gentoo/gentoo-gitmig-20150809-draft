@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.2 2003/07/12 16:16:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.3 2003/09/06 23:54:58 msterret Exp $
 
 KCFONTS="zh-kcfonts-1.05.tgz"
 
@@ -31,7 +31,7 @@ src_install() {
 pkg_postinst() {
 	mkfontdir ${CFONTDIR}
 	cd ${CFONTDIR}
-	cat kc_fonts.alias >> fonts.alias ; 
+	cat kc_fonts.alias >> fonts.alias ;
 	cp fonts.alias ..fonts.alias.. ;
 	sort ..fonts.alias.. | uniq > fonts.alias ; rm ..fonts.alias..
 }

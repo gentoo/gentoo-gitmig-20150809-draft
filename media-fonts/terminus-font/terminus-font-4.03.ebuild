@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.03.ebuild,v 1.1 2003/07/30 14:33:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.03.ebuild,v 1.2 2003/09/06 23:54:58 msterret Exp $
 
 DESCRIPTION="A clean fixed font for the console and X11"
 HOMEPAGE="http://www.is-vn.bg/hamster/jimmy-en.htm"
@@ -39,6 +39,6 @@ src_install() {
                 make install-pcf || die
         fi
 
-        dodoc README* 
+        dodoc README*
 }
 

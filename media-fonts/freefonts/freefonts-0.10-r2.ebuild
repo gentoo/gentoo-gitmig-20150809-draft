@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.2 2003/07/12 16:16:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.3 2003/09/06 23:54:58 msterret Exp $
 
 S=${WORKDIR}/freefont
 DESCRIPTION="A Collection of Free True Type Fonts"
@@ -13,7 +13,7 @@ IUSE="X"
 
 src_install () {
 	insinto /usr/share/fonts/freefont
-	doins *.pfb 
+	doins *.pfb
 
 	if [ -n "`use X`" ] ;
 	then
@@ -26,7 +26,7 @@ src_install () {
 }
 
 pkg_postinst() {
-        if [ "${ROOT}" = "/" ] &&  [ -x /usr/bin/fc-cache ] 
+        if [ "${ROOT}" = "/" ] &&  [ -x /usr/bin/fc-cache ]
         then
                 echo
                 einfo "Creating font cache..."

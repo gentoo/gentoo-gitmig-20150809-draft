@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.4 2003/07/30 22:24:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.5 2003/09/06 23:54:58 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Arphic Fonts"
@@ -21,26 +21,26 @@ src_install() {
 	insopts -m0644
 	insinto /usr/share/fonts/ttf/zh_TW
 	doins b*.ttf
-        if test -r /usr/share/fonts/ttf/zh_TW/fonts.scale; then    
-                tail +2 /usr/share/fonts/ttf/zh_TW/fonts.scale > tmp           
+        if test -r /usr/share/fonts/ttf/zh_TW/fonts.scale; then
+                tail +2 /usr/share/fonts/ttf/zh_TW/fonts.scale > tmp
                 tail +2 ${FILESDIR}/TW-fonts.scale >> tmp
-                echo $(sort -u tmp | wc -l) > newfont.scale                     
-                sort -u tmp >> newfont.scale                                    
-                newins newfont.scale fonts.scale                       
-        else               
+                echo $(sort -u tmp | wc -l) > newfont.scale
+                sort -u tmp >> newfont.scale
+                newins newfont.scale fonts.scale
+        else
 		newins ${FILESDIR}/TW-fonts.scale fonts.scale
-	fi	
+	fi
 	insinto /usr/share/fonts/ttf/zh_CN
 	doins g*.ttf
-        if test -r /usr/share/fonts/ttf/zh_CN/fonts.scale; then                 
-                tail +2 /usr/share/fonts/ttf/zh_CN/fonts.scale > tmp           
-                tail +2 ${FILESDIR}/CN-fonts.scale >> tmp                       
-                echo $(sort -u tmp | wc -l) > newfont.scale                     
-                sort -u tmp >> newfont.scale                                    
+        if test -r /usr/share/fonts/ttf/zh_CN/fonts.scale; then
+                tail +2 /usr/share/fonts/ttf/zh_CN/fonts.scale > tmp
+                tail +2 ${FILESDIR}/CN-fonts.scale >> tmp
+                echo $(sort -u tmp | wc -l) > newfont.scale
+                sort -u tmp >> newfont.scale
                 newins newfont.scale fonts.scale
-        else               
+        else
 		newins ${FILESDIR}/CN-fonts.scale fonts.scale
-	fi  
+	fi
 
 #	These don't get downloaded because there is no simple way to
 #	fetch them.. ie if I included the README in SRC_URI above, it would

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.1 2003/06/02 13:46:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.2 2003/09/06 23:54:58 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean Baekmuk Font"
@@ -16,11 +16,11 @@ DEPEND="virtual/x11"
 src_install () {
 	dodir /usr/X11R6/lib/X11/fonts/baekmuk
 	dodir /usr/share/fonts/ttf/korean/baekmuk
-	
+
 	mv ${S}/{*.pcf.gz,fonts.dir,fonts.alias} \
 		${D}/usr/X11R6/lib/X11/fonts/baekmuk/
 	mv ${S}/ttf/* ${D}/usr/share/fonts/ttf/korean/baekmuk/
-	
+
 	dodoc COPYRIGHT COPYRIGHT.ks hconfig.ps
 }
 

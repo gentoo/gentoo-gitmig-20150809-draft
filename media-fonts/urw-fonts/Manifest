@@ -1,6 +1,6 @@
 MD5 6c82d6a222c23d20163f88b738240925 ChangeLog 945
-MD5 27d7c057d5ec0b6544f07d3ec88d5966 urw-fonts-2.0.ebuild 1036
 MD5 c4ed2bd5cb54b944c1231cccb9217c2a urw-fonts-2.0-r1.ebuild 1363
+MD5 e88efa5e4ac577a2820ff3b6c731e474 urw-fonts-2.0.ebuild 1039
 MD5 55bed1fe8e23fa03a0dfc0c4cb6fcbe1 files/digest-urw-fonts-2.0 70
 MD5 55bed1fe8e23fa03a0dfc0c4cb6fcbe1 files/digest-urw-fonts-2.0-r1 70
 MD5 c93a1f8a8417b0864a0b328cca029055 files/fonts.conf 10193

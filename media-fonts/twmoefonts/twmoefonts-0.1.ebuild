@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1.ebuild,v 1.2 2003/07/12 16:16:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1.ebuild,v 1.3 2003/09/06 23:54:58 msterret Exp $
 
 IUSE=""
 DESCRIPTION="Standard tranditional Chinese fonts made by Minister of Education (MOE), Republic of China."
@@ -30,7 +30,7 @@ src_install() {
 		sort -u tmp >> newfont.scale
 		newins newfont.scale fonts.scale
 	else
-		newins ${FILESDIR}/TW-fonts.scale fonts.scale	
+		newins ${FILESDIR}/TW-fonts.scale fonts.scale
 	fi
 }
 

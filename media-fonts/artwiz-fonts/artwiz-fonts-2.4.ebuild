@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.5 2003/08/26 15:03:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.6 2003/09/06 23:54:58 msterret Exp $
 
 S=${WORKDIR}/xfonts-artwiz-2.3/upstream
 DESCRIPTION="Artwiz Fonts"
@@ -28,7 +28,7 @@ src_install() {
 	insinto /usr/share/fonts/artwiz/
 	doins *.pcf.gz
 
-#	These don't get downloaded because there is no simple way to 
+#	These don't get downloaded because there is no simple way to
 #	fetch them.. ie if I included the README in SRC_URI above, it would
 #	get saved as /usr/portage/distfiles/README which doesn't seem like
 #	a really good idea.
@@ -41,7 +41,7 @@ src_install() {
 		insinto /etc/X11/fs
 		doins config
 	fi
-	
+
 }
 
 pkg_postinst() {
