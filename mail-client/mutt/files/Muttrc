@@ -11,7 +11,6 @@ set mbox_type=Maildir
 set folder=~/.maildir
 set spoolfile=~/.maildir/
 set record=~/.maildir-sent/
-unset mbox
 set move=no
 
 # Maybe we shouldn't set index_format here, but this is a recommended
