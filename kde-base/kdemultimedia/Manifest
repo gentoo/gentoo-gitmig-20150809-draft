@@ -15,4 +15,4 @@ MD5 3a378954b5e9a409d7a7037eecf63bae files/digest-kdemultimedia-3.4.0_beta2 74
 MD5 9db7477aae12dc25042c30cf873a240b files/digest-kdemultimedia-3.4.0_beta1 74
 MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0_beta1-amd64.patch 523
 MD5 b9cce2b0015700be978730f7bba11352 files/3.2.3-Makefile-synth.am.diff 537
-MD5 26b97f389c5d2f7f8e5ec4bcd036756d files/digest-kdemultimedia-3.4.0_rc1 77
+MD5 5df31531a06abbf1c3a8d53c21d9452f files/digest-kdemultimedia-3.4.0_rc1 77

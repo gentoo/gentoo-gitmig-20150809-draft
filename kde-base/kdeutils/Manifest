@@ -9,7 +9,7 @@ MD5 3521f7fa667b3826cc1010ad0a6f1b8f kdeutils-3.4.0_beta1.ebuild 649
 MD5 467b43a24a73f26d625e65d6f4a1da44 files/digest-kdeutils-3.2.3 68
 MD5 95a30bd883c334e2f6c5f417ac53c9c9 files/digest-kdeutils-3.3.2 68
 MD5 80408e337e4ee6d198e346202b709f6b files/kdeutils-3.2.2-gcc34-compile.patch 1987
-MD5 43a795d934759cf64381089794574783 files/digest-kdeutils-3.4.0_rc1 72
+MD5 52e55dc937d1f62f3d7f8999beff5403 files/digest-kdeutils-3.4.0_rc1 72
 MD5 24d3d104d4aefe66ba0448dbb6ab3ea5 files/digest-kdeutils-3.4.0_beta2 69
 MD5 802fe65a58c9c51de3ef743cfdad56e2 files/digest-kdeutils-3.4.0_beta1 69
 MD5 5cd96fb39354728fd08f80a66155cd4f files/kdeutils-3.4.0_beta1-snmpfix.patch 923

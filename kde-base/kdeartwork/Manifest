@@ -7,7 +7,7 @@ MD5 aa327b4b6eef79dfc02922ce92fa179e kdeartwork-3.4.0_beta2.ebuild 839
 MD5 29ab0a1e83eab176309fbe96ed1c105b kdeartwork-3.2.3.ebuild 606
 MD5 d720aab0d669beca41c57b080fe79fe3 kdeartwork-3.3.1.ebuild 674
 MD5 750b31061cf39ebc204bbc9b012da76a files/digest-kdeartwork-3.2.3 71
-MD5 407223c97adf57233a5a4029ed54f808 files/digest-kdeartwork-3.4.0_rc1 75
+MD5 1ec1ad161df28f166638bea5f4173bac files/digest-kdeartwork-3.4.0_rc1 75
 MD5 a78e3dcfd0504ff7a053ec4c918c845f files/kdeartwork-3.3.2-gl-kdesavers.patch 711
 MD5 c873bc170c7d49fb989ca559c38de721 files/digest-kdeartwork-3.4.0_beta2 72
 MD5 976327b55d73654f03a7c4545f59d516 files/digest-kdeartwork-3.3.2 71

@@ -8,7 +8,7 @@ MD5 85d9de1daf0ded28988059d846aa0df7 kdenetwork-3.4.0_beta1.ebuild 1340
 MD5 fc193fdc9c2f4ed3191665ec65521aa6 kdenetwork-3.2.3-r1.ebuild 1305
 MD5 c9194b0cda65fd39ff5c53ec0c734ce8 kdenetwork-3.3.2.ebuild 1210
 MD5 71fccce18dbad84d8054b36d08c0ba2c kdenetwork-3.2.3.ebuild 1226
-MD5 a15715ac3d909cbfbc00fc8cf3d6e404 files/digest-kdenetwork-3.4.0_rc1 74
+MD5 f943d9cf7ef24546694871e6d9f2dc96 files/digest-kdenetwork-3.4.0_rc1 74
 MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3-r1 70
 MD5 8dae5eac25d478ebf23279132c4a0ead files/digest-kdenetwork-3.3.2 70
 MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
