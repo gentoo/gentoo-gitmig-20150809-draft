@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.42 2004/10/05 01:44:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.43 2004/10/05 01:47:01 mkennedy Exp $
+
+  04 Oct 2004; <mkennedy@gentoo.org> sbcl-0.8.14.ebuild:
+  Marking 0.8.14 for stable x86
 
 *sbcl-0.8.15 (04 Oct 2004)
 
