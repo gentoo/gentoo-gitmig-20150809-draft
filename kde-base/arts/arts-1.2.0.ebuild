@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.4 2004/02/05 16:32:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.5 2004/02/09 04:36:21 vapier Exp $
+
 inherit kde flag-o-matic
-
-IUSE="alsa oggvorbis esd artswrappersuid mad"
-
 set-kdedir 3.2
 
-SRC_URI="mirror://kde/stable/${PV/1.2.0/3.2}/src/${PN}-${PV}.tar.bz2"
-HOMEPAGE="http://multimedia.kde.org"
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
+HOMEPAGE="http://multimedia.kde.org/"
+SRC_URI="mirror://kde/stable/${PV/1.2.0/3.2}/src/${PN}-${PV}.tar.bz2"
 
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+LICENSE="GPL-2 LGPL-2"
+SLOT="3.2"
+KEYWORDS="~x86 ~ppc ~sparc hppa ~amd64"
+IUSE="alsa oggvorbis esd artswrappersuid mad"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
@@ -25,14 +26,11 @@ DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 if [ "${COMPILER}" == "gcc3" ]; then
 	# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
 	# these.. Even starting a compile shuts down the arts server
-	filter-flags "-fomit-frame-pointer -fstrength-reduce"
+	filter-flags -fomit-frame-pointer -fstrength-reduce
 fi
 
 #fix bug 13453
 filter-flags "-foptimize-sibling-calls"
-
-SLOT="3.2"
-LICENSE="GPL-2 LGPL-2"
 
 myconf="$myconf `use_enable alsa`"
 myconf="$myconf `use_enable oggvorbis vorbis`"
@@ -66,17 +64,14 @@ CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/48kdepaths-3.2.0 # numbe
 
 	# used for realtime priority, but off by default as it is a security hazard
 	use artswrappersuid && chmod +s ${D}/${PREFIX}/bin/artswrapper
-
 }
 
 pkg_postinst() {
-
-if [ -z "`use artswrappersuid`" ]; then
-	einfo "Run chmod +s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
-	einfo "and so avoid possible skips in sound. However, on untrusted systems this"
-	einfo "creates the possibility of a DoS attack that'll use 100% cpu at realtime"
-	einfo "priority, and so is off by default. See bug #7883."
-	einfo "Or, you can set the local artswrappersuid USE flag to make the ebuild do this."
-fi
-
+	if [ ! `use artswrappersuid` ] ; then
+		einfo "Run chmod +s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
+		einfo "and so avoid possible skips in sound. However, on untrusted systems this"
+		einfo "creates the possibility of a DoS attack that'll use 100% cpu at realtime"
+		einfo "priority, and so is off by default. See bug #7883."
+		einfo "Or, you can set the local artswrappersuid USE flag to make the ebuild do this."
+	fi
 }
