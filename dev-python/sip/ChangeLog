@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.16 2003/11/10 14:14:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.17 2003/12/08 21:22:26 caleb Exp $
+
+*sip-4.0_rc1 (08 Dec 2003)
+
+  08 Dec 2003; Caleb Tennis <caleb@gentoo.org> sip-3.9.ebuild, sip-4.0_rc1.ebuild:
+  New versions - thanks Carlo (bug #35368)
 
   10 Nov 2003; Caleb Tennis <caleb@gentoo.org> sip-3.8.ebuild:
   x86 stable
