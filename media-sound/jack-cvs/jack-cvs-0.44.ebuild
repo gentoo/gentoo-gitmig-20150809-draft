@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.44.ebuild,v 1.2 2003/01/08 00:19:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.44.ebuild,v 1.3 2003/01/13 01:21:36 raker Exp $
 
 IUSE="doc"
 
@@ -24,7 +24,8 @@ DEPEND="dev-libs/glib
 	>=media-libs/alsa-lib-0.9.0_rc6
 	>=media-libs/libsndfile-1.0.0
 	>=x11-libs/fltk-1.1.1
-	!media-sound/jack-audio-connection-kit"
+	!media-sound/jack-audio-connection-kit
+	doc? ( app-doc/doxygen )"
 PROVIDE="virtual/jack"
 
 S="${WORKDIR}/${PN/-cvs/}"
@@ -33,12 +34,29 @@ src_compile() {
 	export LDFLAGS="-L/usr/lib/fltk-1.1"                                   	       
 	export CPPFLAGS="-I/usr/include/fltk-1.1"
 	sh autogen.sh
+
+	local myconf
+	use doc \
+		&& myconf="--with-html-dir=/usr/share/doc/${PF}/html" \
+		|| myconf="--without-html-dir"
+
 	econf || die "configure failed"
 	emake || die "parallel make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+
+	use doc && dodir /usr/share/doc/${PF}/html
+
+	make \
+		DESTDIR=${D} \
+		datadir=${D}/usr/share \
+		install || die
+
+	use doc && mv \
+		${D}/usr/share/jack-audio-connection-kit/reference/html/* \
+		${D}/usr/share/doc/${PF}/html
+	use doc && rm -rf ${D}/usr/share/jack-audio-connection-kit
 }
 
 pkg_postinst() {
