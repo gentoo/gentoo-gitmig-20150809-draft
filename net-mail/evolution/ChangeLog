@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.71 2003/08/05 09:03:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.72 2003/08/11 19:38:20 azarah Exp $
+
+*evolution-1.4.4 (11 Aug 2003)
+
+  11 Aug 2003; Martin Schlemmer <azarah@gentoo.org> evolution-1.4.4.ebuild:
+  New version.
 
   18 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.3.ebuild:
   forced to bump 1.4.3 to stable because someone has put a imperfect 1.4.0 to
