@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.6 2004/10/05 08:50:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.7 2004/10/05 08:55:58 eradicator Exp $
 
 IUSE="static"
 
@@ -33,8 +33,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" PREFIX=/usr install
-	use static || rm ${D}/usr/lib/libdaaplib.a
+	make DESTDIR="${D}" \
+	     PREFIX="/usr" \
+	     LIBDEPLOY="/usr/$(get_libdir)" install || die
+
+	use static || rm ${D}/usr/$(get_libdir)/libdaaplib.a
 
 	dodoc ../../COPYING ../../README
 }
