@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.70 2004/04/22 17:11:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.71 2004/04/27 22:01:40 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> linux-headers-2.4.25.ebuild,
+  linux-headers-2.4.26.ebuild, linux-headers-2.6.1.ebuild,
+  linux-headers-2.6.3-r1.ebuild, linux-headers-2.6.4.ebuild,
+  linux-headers-2.6.5.ebuild:
+  Add inherit eutils
 
 *linux-headers-2.4.26 (22 Apr 2004)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.22-r2.ebuild,v 1.6 2004/01/08 06:22:58 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.22-r2.ebuild,v 1.7 2004/04/27 22:05:01 agriffis Exp $
 
 IUSE=""
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"

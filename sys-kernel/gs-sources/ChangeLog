@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.37 2004/04/17 11:17:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.38 2004/04/27 21:59:04 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  gs-sources-2.4.23_pre8-r1.ebuild, gs-sources-2.4.23_pre8-r2.ebuild:
+  Add inherit eutils
 
 *gs-sources-2.4.25_pre7-r4 (17 Apr 2004)
 

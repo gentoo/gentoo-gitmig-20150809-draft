@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/alpha-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.23 2004/04/17 09:07:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.24 2004/04/27 21:57:02 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  alpha-sources-2.4.19-r2.ebuild, alpha-sources-2.4.20-r2.ebuild,
+  alpha-sources-2.4.21-r2.ebuild, alpha-sources-2.4.21-r3.ebuild:
+  Add inherit eutils
 
 *alpha-sources-2.4.21-r6 (17 Apr 2004)
 

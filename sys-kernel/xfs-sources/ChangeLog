@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.45 2004/04/17 15:31:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.46 2004/04/27 22:13:39 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  xfs-sources-2.4.19-r3.ebuild, xfs-sources-2.4.20-r1.ebuild,
+  xfs-sources-2.4.20-r2.ebuild, xfs-sources-2.4.20-r3.ebuild,
+  xfs-sources-2.4.20-r4.ebuild, xfs-sources-2.4.20-r5.ebuild,
+  xfs-sources-2.4.20.ebuild, xfs-sources-2.4.23-r1.ebuild,
+  xfs-sources-2.4.24-r2.ebuild:
+  Add inherit eutils
 
 *xfs-sources-2.4.24-r5 (17 Apr 2004)
 

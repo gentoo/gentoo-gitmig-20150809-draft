@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20-r1.ebuild,v 1.8 2004/01/04 01:22:58 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20-r1.ebuild,v 1.9 2004/04/27 22:13:39 agriffis Exp $
 
 IUSE="build crypt"
 
@@ -17,7 +17,7 @@ IUSE="build crypt"
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 OKV=2.4.20
 EXTRAVERSION=-xfs-r1
 KV=${OKV}${EXTRAVERSION}

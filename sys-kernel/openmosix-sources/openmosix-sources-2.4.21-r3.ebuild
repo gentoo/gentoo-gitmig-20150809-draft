@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.21-r3.ebuild,v 1.1 2004/02/18 23:09:16 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.21-r3.ebuild,v 1.2 2004/04/27 22:03:12 agriffis Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
+
+inherit eutils
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files

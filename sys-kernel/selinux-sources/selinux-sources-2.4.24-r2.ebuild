@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.24-r2.ebuild,v 1.3 2004/02/29 14:34:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.24-r2.ebuild,v 1.4 2004/04/27 22:07:50 agriffis Exp $
 
 IUSE=""
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="-${PN/-*/}"
 [ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"

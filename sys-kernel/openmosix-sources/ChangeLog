@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.43 2004/04/27 08:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.44 2004/04/27 22:03:12 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  openmosix-sources-2.4.20-r8.ebuild, openmosix-sources-2.4.21-r3.ebuild,
+  openmosix-sources-2.4.22-r6.ebuild:
+  Add inherit eutils
 
 *openmosix-sources-2.4.26 (21 Apr 2004)
 

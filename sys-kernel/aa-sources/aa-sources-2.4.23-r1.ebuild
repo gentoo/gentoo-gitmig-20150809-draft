@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.7 2004/02/18 15:38:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.8 2004/04/27 21:56:34 agriffis Exp $
 
 IUSE="build"
 
@@ -8,7 +8,7 @@ IUSE="build"
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 
 # AAV=andrea arcangeli release version
 AAV=aa${PR/r/}

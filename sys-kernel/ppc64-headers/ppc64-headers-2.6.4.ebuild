@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.3 2004/04/02 04:49:44 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.4 2004/04/27 22:04:01 agriffis Exp $
 
 IUSE="build crypt"
 
@@ -17,7 +17,7 @@ IUSE="build crypt"
 
 ETYPE="headers"
 
-inherit kernel
+inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="-${PN/-*/}"
 [ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"

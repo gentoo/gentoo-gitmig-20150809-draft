@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.28 2004/04/18 04:10:43 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.29 2004/04/27 22:10:45 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  vanilla-sources-2.4.20.ebuild, vanilla-sources-2.4.21.ebuild,
+  vanilla-sources-2.4.22.ebuild, vanilla-sources-2.4.24-r1.ebuild:
+  Add inherit eutils
 
   18 Apr 2004; Michael McCabe <randy@gentoo.org>
   vanilla-sources-2.4.21.ebuild:

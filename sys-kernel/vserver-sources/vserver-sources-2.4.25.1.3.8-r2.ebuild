@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.25.1.3.8-r2.ebuild,v 1.1 2004/04/17 14:09:07 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.25.1.3.8-r2.ebuild,v 1.2 2004/04/27 22:11:40 agriffis Exp $
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 OKV=2.4.25
 KV=2.4.25
 

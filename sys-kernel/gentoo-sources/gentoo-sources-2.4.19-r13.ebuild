@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r13.ebuild,v 1.1 2004/04/17 10:59:15 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r13.ebuild,v 1.2 2004/04/27 21:58:33 agriffis Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -21,7 +21,7 @@ IUSE="build crypt xfs acpi4linux"
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="-${PN/-*/}"

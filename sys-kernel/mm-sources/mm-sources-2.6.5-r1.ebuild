@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.5-r1.ebuild,v 1.4 2004/04/07 17:07:20 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.5-r1.ebuild,v 1.5 2004/04/27 22:02:27 agriffis Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 
 ETYPE="sources"
-inherit kernel-2
+inherit kernel-2 eutils
 detect_version
 K_NOSETEXTRAVERSION="don't_set_it"
 DESCRIPTION="Andrew Morton's kernel, mostly fixes for 2.6 vanilla, some vm stuff too"

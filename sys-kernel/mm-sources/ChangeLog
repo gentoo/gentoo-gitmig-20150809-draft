@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.152 2004/04/21 14:58:28 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.153 2004/04/27 22:02:27 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> mm-sources-2.6.5-r1.ebuild:
+  Add inherit eutils
 
 *mm-sources-2.6.6_rc2-r1 (21 Apr 2004)
 

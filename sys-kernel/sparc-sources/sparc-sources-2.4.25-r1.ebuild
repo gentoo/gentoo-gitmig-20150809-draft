@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.25-r1.ebuild,v 1.1 2004/04/15 12:36:43 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.25-r1.ebuild,v 1.2 2004/04/27 22:08:41 agriffis Exp $
 
 IUSE="ultra1"
 
@@ -14,7 +14,7 @@ IUSE="ultra1"
 # similar situation.
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 [ "$OKV" == "" ] && OKV="${PV}"

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.25_p1.ebuild,v 1.1 2004/04/03 16:48:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.25_p1.ebuild,v 1.2 2004/04/27 21:59:50 agriffis Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 OKV="${PV/_p*/}"
 PATCH_LEVEL="${PV/${OKV}_p/}"
 EXTRAVERSION="-pa${PATCH_LEVEL}"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.35 2004/04/17 19:03:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.36 2004/04/27 21:56:34 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> aa-sources-2.4.22-r1.ebuild,
+  aa-sources-2.4.23-r1.ebuild:
+  Add inherit eutils
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> aa-sources-2.4.23-r2.ebuild:
   Fixed IUSE flags.

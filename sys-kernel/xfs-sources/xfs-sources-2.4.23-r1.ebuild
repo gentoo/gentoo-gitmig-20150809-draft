@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.23-r1.ebuild,v 1.3 2004/01/07 13:55:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.23-r1.ebuild,v 1.4 2004/04/27 22:13:39 agriffis Exp $
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="-${PN/-*/}-${PR}"
 KV=${OKV}${EXTRAVERSION}

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/selinux-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.35 2004/04/17 13:35:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.36 2004/04/27 22:07:50 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  selinux-sources-2.4.24-r2.ebuild:
+  Add inherit eutils
 
 *selinux-sources-2.4.25-r2 (17 Apr 2004)
 

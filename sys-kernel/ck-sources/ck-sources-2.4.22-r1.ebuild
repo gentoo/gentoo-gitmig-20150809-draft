@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.5 2004/01/06 18:00:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.6 2004/04/27 21:57:29 agriffis Exp $
 
 IUSE="build"
 
@@ -8,7 +8,7 @@ IUSE="build"
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 
 # CKV=con kolivas release version
 CKV=ck${PR/r/}
