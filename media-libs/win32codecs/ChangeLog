@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.7 2003/02/12 07:17:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.8 2003/07/08 23:40:02 weeve Exp $
+
+  08 Jul 2003; Jason Wever <weeve@gentoo.org> win32codecs-0.90.1-r1.ebuild:
+  Added -sparc to keywords.
 
 *win32codecs-0.90.1-r2 (29 Jan 2003)
 
