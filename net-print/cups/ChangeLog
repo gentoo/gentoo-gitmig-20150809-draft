@@ -1,6 +1,16 @@
 # ChangeLog for net-print/cups
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.108 2004/12/31 20:30:20 hardave Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.109 2005/01/03 16:35:52 lanius Exp $
+
+  03 Jan 2005; Heinrich Wendel <lanius@gentoo.org>
+  -files/cups-1.1.20-str633.patch,
+  -files/cups-1.1.20-xpdf-CESA-2004-007.patch.bz2,
+  -files/cups-1.1.20-xpdf2-underflow.patch,
+  -files/cups-1.1.20-zero-len-udp-dos.patch,
+  -files/cups-1.1.21-xpdf-CESA-2004-007.patch.bz2, -files/cupsd.conf-1.1.18,
+  -files/str920.patch, -cups-1.1.20-r5.ebuild, -cups-1.1.22.ebuild,
+  cups-1.1.23_rc1.ebuild:
+  cleanups; replace hotplug with coldplug
 
   31 Dec 2004; Hardave Riar <hardave@gentoo.org> cups-1.1.23_rc1.ebuild:
   Stable on mips, bug #74479

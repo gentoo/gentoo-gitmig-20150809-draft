@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23_rc1.ebuild,v 1.7 2005/01/02 10:33:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23_rc1.ebuild,v 1.8 2005/01/03 16:35:52 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -87,10 +87,6 @@ src_install() {
 	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt
 	dosym /usr/share/cups/docs /usr/share/doc/${PF}/html
 
-	#seems nobody installs it like this anymore.. security risk?
-	#fowners lp.root /usr/bin/lppasswd
-	#fperms 4755 /usr/bin/lppasswd
-
 	# cleanups
 	rm -rf ${D}/etc/init.d
 	rm -rf ${D}/etc/pam.d
@@ -112,8 +108,6 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.rc6 cupsd
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
 
-	#insinto /etc/cups; newins ${FILESDIR}/cupsd.conf-1.1.18 cupsd.conf
-
 	# allow raw printing
 	sed -i -e "s:#application/octet-stream:application/octet-stream" ${D}/etc/cups/mime.types
 	sed -i -e "s:#application/octet-stream:application/octet-stream" ${D}/etc/cups/mime.conv
@@ -131,8 +125,8 @@ pkg_postinst() {
 	install -m0711 -o lp -d ${ROOT}/etc/cups/certs
 	install -d -m0755 ${ROOT}/etc/cups/{interfaces,ppd}
 
-	einfo "If you're using a USB printer, \"emerge hotplug; rc-update add"
-	einfo "hotplug default\" is something you should probably do. This"
+	einfo "If you're using a USB printer, \"emerge coldplug; rc-update add"
+	einfo "coldplug default\" is something you should probably do. This"
 	einfo "will allow any USB kernel modules (if present) to be loaded"
 	einfo "automatically at boot."
 }
