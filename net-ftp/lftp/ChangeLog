@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.22 2003/03/24 02:02:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.23 2003/03/27 05:07:30 vladimir Exp $
+
+*lftp-2.6.5 (26 Mar 2003)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> lftp-2.6.5.ebuild:
+  Version bump
 
   06 March 2003; Jon Portnoy <avenj@gentoo.org> lftp-2.6.4.ebuild :
   Fixed SRC_URI.
