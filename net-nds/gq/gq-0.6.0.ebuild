@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.2 2003/02/13 15:13:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.3 2003/04/02 12:28:28 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK-based LDAP client"
@@ -10,7 +10,7 @@ IUSE="kerberos jpeg nls ssl"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=net-nds/openldap-2
