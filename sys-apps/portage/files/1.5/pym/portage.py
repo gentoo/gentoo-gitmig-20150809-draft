@@ -1862,15 +1862,18 @@ def pkgmerge(mytbz2):
 
 def ebuild_init():
 	"performs db/variable initialization for the ebuild system.  Not required for other scripts."
-	global roottree, localtree, porttree, ebuild_initialized, root
-	localtree=vartree("/")	
+	global local_virts, root_virts, roottree, localtree, ebuild_initialized, root, virtuals
+	local_virts=getvirtual("/")
 	if root=="/":
-		#root is local, and build dep database is the runtime dep database
+		root_virts=local_virts
+	else:
+		root_virts=getvirtual(root)
+	
+	localtree=vartree("/",local_virts)	
+	if root=="/":
 		roottree=localtree
 	else:
-		#root is non-local, initialize non-local database as roottree
-		roottree=vartree(root)
-	porttree=portagetree("/")
+		roottree=vartree(root,root_virts)
 	ebuild_initialized=1
 
 root=getenv("ROOT")

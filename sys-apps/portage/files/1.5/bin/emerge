@@ -58,7 +58,7 @@ if len(sys.argv)>=2:
 		print "These are the packages that I would merge, in order."
 		print
 		pretend=1
-		delnode sys.argv[1]
+		del sys.argv[1]
 	elif sys.argv[1]=="--help":
 		print "Usage: pkgmerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
 		sys.exit(1)
