@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/gnu-regexp
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.2 2002/10/18 21:44:56 karltk Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.3 2003/02/12 05:52:04 vapier Exp $
 
 *gnu-regexp-1.1.4 (18 Oct 2002)
 

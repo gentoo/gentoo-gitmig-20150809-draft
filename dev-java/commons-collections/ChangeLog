@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-collections
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.6 2002/11/25 01:12:58 strider Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.7 2003/02/12 05:50:47 vapier Exp $
 
 *commons-collections-2.1-r1 (02 Nov 2002)
 

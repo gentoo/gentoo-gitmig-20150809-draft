@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/antlr
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.7 2003/01/12 19:12:51 mkennedy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.8 2003/02/12 05:50:27 vapier Exp $
 
 *antlr-2.7.2_alpha2-r1 (Jan 2003)
 

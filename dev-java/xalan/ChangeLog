@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/xalan
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.8 2002/12/02 23:00:10 strider Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.9 2003/02/12 05:55:01 vapier Exp $
 
 *xalan-2.4.1-r1 (02 Dec 2002)
   02 Dec 2002; Adrian Almenar <strider@gentoo.org> xalan-2.4.1-r1.ebuild files/digest-xalan-2.4.1-r1:
