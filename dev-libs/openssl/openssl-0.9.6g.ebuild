@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6g.ebuild,v 1.9 2003/02/08 23:15:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6g.ebuild,v 1.10 2003/02/09 14:14:02 tuxus Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -17,6 +17,12 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+
+	if [ "${ARCH}" = "mips" ]
+            then
+    	cd ${S}
+    	patch -p1 < ${FILESDIR}/${P}-mips.diff || die
+    	fi
 
 	cp Configure Configure.orig
 	sed -e "s/-O3/$CFLAGS/" -e "s/-m486//" Configure.orig > Configure

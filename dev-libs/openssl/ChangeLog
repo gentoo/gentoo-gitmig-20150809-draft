@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.23 2003/02/08 23:15:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.24 2003/02/09 14:14:02 tuxus Exp $
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
@@ -37,6 +37,9 @@
   Changed openssldir to /etc as suggested by Corporate Gadfly <corporate_gadfly@hotmail.com> in #9315.
 
 *opessl-0.9.6g (29 Aug 2002)
+
+  09 Feb 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added a patch for mips (apache2 with openssl) 
 
   19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
