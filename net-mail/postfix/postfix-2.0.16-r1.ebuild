@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.3 2003/11/04 03:12:08 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.4 2003/11/04 05:13:22 max Exp $
 
 inherit eutils ssl-cert
 
@@ -180,7 +180,7 @@ src_install () {
 		newins "${FILESDIR}/smtp.pam" smtp
 	fi
 	if [ "`use ssl`" ] ; then
-		SSL_ORGANIZATION="Postfix SMTP Server"
+		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Postfix SMTP Server}"
 		insinto /etc/ssl/postfix
 		docert server
 		fowners postfix:mail /etc/ssl/postfix/server.{key,pem}

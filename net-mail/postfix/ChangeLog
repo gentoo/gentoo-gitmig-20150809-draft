@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.92 2003/11/04 00:08:12 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.93 2003/11/04 05:13:22 max Exp $
+
+  03 Nov 2003; Max Kalika <max@gentoo.org> postfix-2.0.16-r1.ebuild:
+  Allow user to set SSL_ORGANIZATION in make.conf.
 
   03 Nov 2003; Max Kalika <max@gentoo.org> postfix-2.0.16-r1.ebuild:
   Switch to ssl-cert.eclass.

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7-r1.ebuild,v 1.1 2003/10/10 17:37:08 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7-r1.ebuild,v 1.2 2003/11/04 05:11:59 max Exp $
+
+inherit ssl-cert
 
 DESCRIPTION="Internet Message Support Protocol (IMSP) server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -24,7 +26,6 @@ S="${WORKDIR}/${PN}-v${PV}"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-
 	epatch "${FILESDIR}/cyrus-imspd-gentoo.patch"
 	epatch "${FILESDIR}/cyrus-imspd-db4.patch"
 
@@ -70,17 +71,9 @@ src_install() {
 
 		dosed "s:#IMSPD_USE_SSL:IMSPD_USE_SSL:" /etc/conf.d/imspd
 
-		ebegin "Generating self-signed test certificate"
-		(yes "" | "${FILESDIR}/gentestcrt.sh") &>/dev/null
-		eend $?
-		ebegin "Generating PEM file"
-		(cat server.key && echo && cat server.crt) > server.pem
-		eend $?
-
+		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Cyrus IMSP Server}"
 		insinto /etc/ssl/imspd
-		doins server.{key,crt,pem}
-		fowners mail:root /etc/ssl/imspd/server.{key,crt,pem}
-		fperms 0400 /etc/ssl/imspd/server.{key,crt,pem}
+		docert server
 	fi
 
 	dodoc README imsp/options.sample notes/*
