@@ -1,14 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020122.ebuild,v 1.2 2002/03/02 17:00:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020228.ebuild,v 1.1 2002/03/05 20:39:21 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.gz"
-	 #http://twine.codeweavers.com/~mpilka/winesetuptk/winesetuptk-${WSV}.tar.gz"
 HOMEPAGE="http://www.winehq.com/"
-	  #http://wine.codeweavers.com/winesetuptk.shtml"
 
 DEPEND="virtual/glibc
     virtual/x11

@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.1 2002/02/01 21:53:01 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.2 2002/03/05 20:39:21 danarmak Exp $
+
+*wine-20020228 (5 Mar 2002)
+
+  5 Mar 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  This is the latest snapshot. I've rewritten the ebuild, fixing all known issues,
+  including the compilation failures.
+  
+  Among the fixes are: install into /usr not /opt/wine, compile and install the manpages,
+  handle the onfig file correctly (there'll be a winesetuptk ebuild sometime soon), and more.
 
 *wine-20011004-r1 (1 Feb 2002)
 
