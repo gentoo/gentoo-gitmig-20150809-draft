@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.99.ebuild,v 1.1 2004/12/25 15:36:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.99.ebuild,v 1.2 2004/12/30 22:40:02 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
 ECVS_MODULE="CS"
@@ -31,7 +31,7 @@ RDEPEND="sys-libs/zlib
 	>=dev-lang/perl-5.6.1"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51
-	dev-util/jam
+	|| ( dev-util/jam dev-util/boost-jam )
 	x86? ( dev-lang/nasm )"
 
 S="${WORKDIR}/${ECVS_MODULE}"
