@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>kumba@gentoo.org</email>
+		<name>Joshua Kinard</name>
+	</maintainer>
+	<herd>no-herd</herd>
+	<longdescription>MIPS 32/64bit Emulator.  Capable of running several OSes across several MIPS platforms.</longdescription>
+</pkgmetadata>
