@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.19 2004/05/03 15:47:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.20 2004/06/23 01:52:42 malc Exp $
+
+  23 Jun 2004; <malc@gentoo.org> jed-0.99.16-r2.ebuild:
+  Mark stable on amd64
 
   03 May 2004; Ferris McCormick <fmccor@gentoo.org> jed-0.99.16-r2.ebuild:
   Marked stable on sparc.
