@@ -1,4 +1,4 @@
-MD5 5b4aa2fc903ab674e550393d3e2d5044 ChangeLog 703
+MD5 7f5161ceed79bf4fd884f36c3a8e157d ChangeLog 864
 MD5 7efefbbe81a05cbc5d4e96203f047fda metadata.xml 245
-MD5 eb814da2d77e45ec5854790977f48838 openttd-20040626.ebuild 2136
-MD5 d843b4d40c78f879ad70c5cc231bd815 files/digest-openttd-20040626 133
+MD5 55ada2a02cb87960dacc8ede385a6827 openttd-0.3.3.ebuild 2075
+MD5 211d365a1cdda11aa6e5e2f7fb307579 files/digest-openttd-0.3.3 130

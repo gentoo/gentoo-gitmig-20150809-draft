@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-20040626.ebuild,v 1.4 2004/07/14 07:38:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.3.ebuild,v 1.1 2004/07/17 19:31:38 dholm Exp $
 
 inherit games
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
 HOMEPAGE="http://www.openttd.com/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
+SRC_URI="mirror://sourceforge/openttd/${P}.tar.bz2
 	mirror://sourceforge/openttd/openttd-useful.zip"
 
 LICENSE="GPL-2"
@@ -56,9 +56,6 @@ src_install() {
 
 	insinto "${GAMES_DATADIR}/${PN}/lang"
 	doins lang/*.lng || die "doins failed"
-
-	insinto /usr/share/pixmaps
-	newins media/icon128.png openttd.png
 
 	make_desktop_entry openttd "OpenTTD" openttd.png
 	dodoc readme.txt changelog.txt docs/Manual.txt
