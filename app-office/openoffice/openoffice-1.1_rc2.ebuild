@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc2.ebuild,v 1.3 2003/09/06 22:21:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc2.ebuild,v 1.4 2003/09/19 20:25:11 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -179,7 +179,7 @@ set_languages () {
 			;;
 		48 | POL ) LANGNO=48; LANGNAME=POL; LFULLNAME=Polish
 			;;
-		49 | GER ) LANGNO=34; LANGNAME=GER; LFULLNAME=German
+		49 | GER ) LANGNO=49; LANGNAME=GER; LFULLNAME=German
 			;;
 		55 | PORTBR ) LANGNO=55; LANGNAME=PORTBR; LFULLNAME="Portuguese brazilian"
 			;;
