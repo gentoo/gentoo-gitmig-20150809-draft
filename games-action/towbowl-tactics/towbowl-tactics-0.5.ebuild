@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.4 2004/06/30 02:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.5 2004/11/03 00:15:03 vapier Exp $
 
 inherit eutils games
 
-S="${WORKDIR}/tbt/src"
 DESCRIPTION="Tow Bowl Tactics is a game based on Games Workshop's Blood Bowl"
 HOMEPAGE="http://www.towbowltactics.com/index_en.html"
 SRC_URI="http://www.towbowltactics.com/download/tbt.${PV}.src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
@@ -21,7 +20,10 @@ RDEPEND="virtual/libc
 	>=media-libs/sdl-image-1.2.3
 	>=media-libs/sdl-mixer-1.2.5"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	>=sys-apps/sed-4"
+
+S="${WORKDIR}/tbt/src"
 
 src_unpack() {
 	local f
