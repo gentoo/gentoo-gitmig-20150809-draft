@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.5 2004/03/30 05:18:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.6 2004/04/26 04:38:59 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -59,11 +59,14 @@ PATCH_VER="1.0"
 # handle _rc versions
 MY_PV=${PV/_alpha/a} 	# handle alpha
 MY_PV=${MY_PV/_beta/b}	# handle beta
+MY_PV=${MY_PV/_rc/rc}	# handle rc
 S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/src/${PN}-source-${MY_PV}-source.tar.bz2
-	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
-			 http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
+	!moznomail? ( crypt? (
+		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
+		http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz 
+	) )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
@@ -91,7 +94,7 @@ RDEPEND="virtual/x11
 		=dev-libs/glib-1.2*
 		>=gnome-base/ORBit-0.5.10-r1 )
 	java?  ( virtual/jre )
-	crypt? ( >=app-crypt/gnupg-1.2.1 )
+	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.2.1 ) )
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
 	net-www/mozilla-launcher"
 

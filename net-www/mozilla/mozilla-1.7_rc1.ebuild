@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1.ebuild,v 1.1 2004/04/23 15:22:57 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1.ebuild,v 1.2 2004/04/26 04:38:59 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -13,7 +13,8 @@ inherit flag-o-matic gcc eutils nsplugins
 strip-flags
 
 # Strip flags which create more documented instability
-filter-flags "-fomit-frame-pointer"
+filter-flags -fstack-protector		# see bug 45671
+filter-flags -fomit-frame-pointer
 filter-flags -ffast-math
 append-flags -s -fforce-addr
 
@@ -63,8 +64,10 @@ MY_PV=${MY_PV/_rc/rc}	# handle rc
 S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/src/${PN}-source-${MY_PV}.tar.bz2
-	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
-			 http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
+	crypt? ( !moznomail? (
+		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
+		http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz 
+	) )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
@@ -92,7 +95,7 @@ RDEPEND="virtual/x11
 		=dev-libs/glib-1.2*
 		>=gnome-base/ORBit-0.5.10-r1 )
 	java?  ( virtual/jre )
-	crypt? ( >=app-crypt/gnupg-1.2.1 )
+	crypt? ( !moznomail ( >=app-crypt/gnupg-1.2.1 ) )
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
 	net-www/mozilla-launcher"
 
@@ -497,19 +500,25 @@ src_install() {
 }
 
 pkg_preinst() {
-	# Stale components and chrome files break when unmerging old
-	rm -rf ${ROOT}/usr/lib/mozilla/components
-	rm -rf ${ROOT}/usr/lib/mozilla/chrome
-
-	# Remove stale component registry.
-	rm -f ${ROOT}/usr/lib/mozilla/component.reg
-	rm -f ${ROOT}/usr/lib/mozilla/components/compreg.dat
-
-	# Make sure these are removed.
-	rm -f ${ROOT}/usr/lib/mozilla/lib{Xft,Xrender}.so*
-
 	# Move old plugins dir
 	pkg_mv_plugins /usr/lib/mozilla/plugins
+
+	if true; then
+		# Remove entire installed instance to solve various problems,
+		# for example see bug 27719
+		rm -rf ${ROOT}/usr/lib/mozilla
+	else
+		# Stale components and chrome files break when unmerging old
+		rm -rf ${ROOT}/usr/lib/mozilla/components
+		rm -rf ${ROOT}/usr/lib/mozilla/chrome
+
+		# Remove stale component registry.
+		rm -f ${ROOT}/usr/lib/mozilla/component.reg
+		rm -f ${ROOT}/usr/lib/mozilla/components/compreg.dat
+
+		# Make sure these are removed.
+		rm -f ${ROOT}/usr/lib/mozilla/lib{Xft,Xrender}.so*
+	fi
 }
 
 pkg_postinst() {

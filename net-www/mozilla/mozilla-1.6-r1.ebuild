@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.8 2004/03/30 05:18:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.9 2004/04/26 04:38:59 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -13,6 +13,7 @@ inherit flag-o-matic gcc eutils nsplugins
 strip-flags
 
 # Strip flags which create more documented instability
+filter-flags -fstack-protector		# see bug 45671
 filter-flags "-fomit-frame-pointer"
 filter-flags -ffast-math
 append-flags -s -fforce-addr
