@@ -1,6 +1,6 @@
 #!/bin/sh
 #RCUPDATE:3 4:75:
-# $Id: jakarta,v 1.1 2000/08/10 01:53:39 achim Exp $
+# $Id: jakarta,v 1.2 2000/08/28 13:48:48 achim Exp $
 
 . /etc/rc.d/config/functions
 
@@ -58,20 +58,13 @@ fi
 
 # Add support for Cocoon if available
 
-if [ -d /opt/jakarta/tomcat/conf/cocoon.properties ]; then
+if [ -f /opt/java/lib/cocoon.jar ]; then
     CLASSPATH=/opt/java/lib/cocoon.jar:${CLASSPATH}
     CLASSPATH=/opt/java/lib/fop_0_12_1.jar:${CLASSPATH}
-    CLASSPATH=/opt/java/lib/xalan_0_19_4.jar:${CLASSPATH}
-    CLASSPATH=/opt/java/lib/xerces_1_0_1.jar:${CLASSPATH}
+    CLASSPATH=/opt/java/lib/xalan_1_0_1.jar:${CLASSPATH}
+    CLASSPATH=/opt/java/lib/xerces_1_0_3.jar:${CLASSPATH}
     CLASSPATH=${CLASSPATH}:/opt/java/jndi.jar
 fi
-
-#if [ "$oldCP" != "" ]; then
-#    CLASSPATH=${CLASSPATH}:${oldCP}
-#fi
-for i in /opt/java/lib/*.jar ; do
-  CLASSPATH=${CLASSPATH}:$i
-done
 
 CLASSPATH=${CLASSPATH}:/opt/java/src.jar:/opt/java/lib
 

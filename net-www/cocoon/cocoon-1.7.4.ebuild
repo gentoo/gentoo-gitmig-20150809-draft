@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7.4.ebuild,v 1.2 2000/08/25 15:49:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7.4.ebuild,v 1.3 2000/08/28 13:48:48 achim Exp $
 
 P=cocoon-1.7.4
 A=Cocoon-1.7.4.tar.gz
@@ -23,8 +23,6 @@ src_compile() {
   export JAVA_HOME=/opt/java
   cd ${S}
   sh build.sh
-  cd build/src
-  jar cf ../classes/cocoon.jar org WEB-INF
 }
 
 src_install() {                               
@@ -35,8 +33,8 @@ src_install() {
   do
      doins  lib/$i.jar
   done
-  doins build/classes/cocoon.jar
-  insinto /opt/jakarta/tomcat/conf
+  doins build/cocoon.jar
+  insinto /opt/jakarta/tomcat/webapps/ROOT
   doins ${O}/files/cocoon.properties
   dodoc README LICENSE
   dodir /usr/doc/${PF}/html

@@ -62,7 +62,7 @@
 		properties
 	    </param-name>
 	    <param-value>
-		/opt/jakarta/tomcat/conf/cocoon.properties
+		cocoon.properties
 	    </param-value>
 	</init-param>
     </servlet>
