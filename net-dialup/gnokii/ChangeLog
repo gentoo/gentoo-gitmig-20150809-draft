@@ -1,0 +1,8 @@
+# ChangeLog for net-dialup/gnokii
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.1 2002/12/10 22:51:55 bass Exp $
+
+*xc-0.4.3 (10 Dec 2002)
+
+  10 Dec 2002; Jose Alberto Suarez Lopez <bass@gentoo.org> :
+  First relase. bug#6438 
