@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60_pre1.ebuild,v 1.1 2001/12/27 22:18:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60_pre1.ebuild,v 1.2 2001/12/30 22:28:42 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -13,6 +13,7 @@ SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu"
 
+# 'encode' in USE for MEncoder
 # Experimental USE flags dvd and decss
 DEPEND="virtual/glibc
         dev-lang/nasm
@@ -29,7 +30,8 @@ DEPEND="virtual/glibc
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
         esd? ( media-sound/esound )
         alsa? ( media-libs/alsa-lib )
-	ogg? ( media-libs/libogg )"
+	ogg? ( media-libs/libogg )
+	encode? ( media-sound/lame )"
 
 RDEPEND="virtual/glibc
         media-libs/win32codecs
@@ -44,7 +46,8 @@ RDEPEND="virtual/glibc
         gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
 	esd? ( media-sound/esound )
         alsa? ( media-libs/alsa-lib )
-	ogg? ( media-libs/libogg )"
+	ogg? ( media-libs/libogg )
+	encode? ( media-sound/lame )"
 
 
 src_unpack() {
@@ -82,11 +85,21 @@ src_compile() {
 	use alsa   || myconf="${myconf} --disable-alsa"
 	use esd    || myconf="${myconf} --disable-esd"
 	use ogg    || myconf="${myconf} --disable-oggvorbis"
-	use decss  && myconf="${myconf} --enable-css"
+	use encode && myconf="${myconf} --enable-mencoder --enable-tv"
+	use encode || myconf="${myconf} --disable-mencoder"
+	use dvd    && myconf="${myconf} --enable-dvdread"
+	use decss  && myconf="${myconf} --enable-dvdread --enable-css"
 	use mga    && myconf="${myconf} --enable-mga"
 	use mga    && \
 	use X      && myconf="${myconf} --enable-xmga"
 
+	# Crashes on start when compiled with most optimizations.
+	# The code have CPU detection code now, with CPU specific
+	# optimizations, so extra should not be needed and is not
+	# recommended by the authors
+	CFLAGS="-O2 -pipe"
+	CXXFLAGS="-O2 -pipe"
+	
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
 		    --mandir=/usr/share/man				\
@@ -114,15 +127,19 @@ src_install() {
 	cp -a DOCS/* ${D}/usr/share/doc/${PF}
 	doalldocs
 
-	# Install the default Skin
+	# Install the default Skin and Gnome menu entry
 	if [ "`use gtk`" ] ; then
 	
 		insinto /usr/share/mplayer/Skin/default
 		doins ${WORKDIR}/default/*
-		
 		# Permissions is fried by default
 		chmod a+rx ${D}/usr/share/mplayer/Skin/default/
 		chmod a+r ${D}/usr/share/mplayer/Skin/default/*
+
+		insinto /usr/share/pixmaps
+		newins ${S}/Gui/mplayer/pixmaps/icon.xpm mplayer.xpm
+		insinto /usr/share/gnome/apps/Multimedia
+		doins ${FILESDIR}/mplayer.desktop
 	fi
 
 	# Install the font used by OSD and the GUI
