@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.11 2003/06/25 01:19:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.12 2003/07/01 12:44:26 lu_zero Exp $
+
+  1 Jul 2003; Luca Barbato <lu_zero@gentoo.org> iputils-020927.ebuild:
+  Mark stable on ppc
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> iputils-020927.ebuild:
   Mark stable on alpha
