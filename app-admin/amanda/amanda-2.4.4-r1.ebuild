@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.2 2003/07/08 20:22:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.3 2003/07/10 21:23:38 robbat2 Exp $
 
 inherit eutils 
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 DEPEND="sys-libs/readline
 		virtual/inetd
 		virtual/mta
@@ -207,10 +207,11 @@ src_install() {
 		sed -re "${sedexpr}" <${i} >${MYFILESDIR}/${filename}
 	done
 
+
+
 	# Build the envdir file
 	# Don't forget this..
 	einfo "Building environment file"
-	echo "CONFIG_PROTECT=${AMANDA_USER_HOMEDIR}/.amandahosts" >${MYFILESDIR}/${ENVDFILE}
 	echo "# These settings are what was present in the environment when this" >>${MYFILESDIR}/${ENVDFILE}
 	echo "# Amanda was compiled.  Changing anything below this comment will" >>${MYFILESDIR}/${ENVDFILE}
 	echo "# have no effect on your application, but it merely exists to" >>${MYFILESDIR}/${ENVDFILE}
@@ -261,9 +262,11 @@ src_install() {
 	# Just make sure it exists for XFS to work...
 	use xfs && keepdir ${D}/var/xfsdump/inventory
 
+    insinto /etc/amanda
+	einfo "Installing .amandahosts File for ${AMANDA_USER_NAME} user"
+    newins ${MYFILESDIR}/amanda-amandahosts amandahosts
+	dosym /etc/amanda/amandahosts ${AMANDA_USER_HOMEDIR}/.amandahosts
 	insinto ${AMANDA_USER_HOMEDIR}
-    einfo "Installing .amandahosts File for ${AMANDA_USER_NAME} user"
-    newins ${MYFILESDIR}/amanda-amandahosts .amandahosts
     einfo "Installing .profile for ${AMANDA_USER_NAME} user"
 	newins ${MYFILESDIR}/amanda-profile .profile
 
