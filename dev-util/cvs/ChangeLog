@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.33 2004/03/11 17:29:57 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.34 2004/03/12 19:29:06 scandium Exp $
+
+*cvs-1.11.14 (12 Mar 2004)
+
+  12 Mar 2004; Rainer Groesslinger <scandium@gentoo.org> cvs-1.11.14.ebuild:
+  new version
 
   11 Mar 2004; Rainer Groesslinger <scandium@gentoo.org> cvs-1.11.13.ebuild:
   stable on amd64, ppc and mips (thanks Kumba)
