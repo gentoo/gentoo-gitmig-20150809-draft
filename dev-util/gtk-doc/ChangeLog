@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.22 2004/01/09 22:28:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.23 2004/01/11 23:19:38 gmsoft Exp $
+
+  12 Jan 2004; Guy Martin <gmsoft@gentoo.org> gtk-doc-1.1.ebuild :
+  Marked stable on hppa.
 
   09 Jan 2004; Jason Wever <weeve@gentoo.org> gtk-doc-1.1.ebuild:
   Marked stable on sparc.
