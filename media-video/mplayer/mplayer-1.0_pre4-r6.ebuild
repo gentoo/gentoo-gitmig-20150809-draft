@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r6.ebuild,v 1.4 2004/07/23 15:56:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r6.ebuild,v 1.5 2004/07/24 05:25:28 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -22,11 +22,7 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
-RDEPEND="xvid? (
-		ppc? ( >=media-libs/xvid-0.9.0 )
-		amd64? ( >=media-libs/xvid-0.9.0 )
-		x86? ( >=media-libs/xvid-0.9.0 )
-		)
+RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	x86? ( divx4linux? (  >=media-libs/divx4linux-20030428 )
 		 >=media-libs/win32codecs-0.60 )
 	aalib? ( media-libs/aalib )
@@ -35,7 +31,7 @@ RDEPEND="xvid? (
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
 	directfb? ( dev-libs/DirectFB )
-	dvdread? ( media-libs/libdvdread )
+	dvd? ( dvdread? ( media-libs/libdvdread ) )
 	encode? ( media-sound/lame
 			>=media-libs/libdv-0.9.5 )
 	esd? ( media-sound/esound )
@@ -131,6 +127,9 @@ src_unpack() {
 	# bug #55936, patch from eradicator- fix caching problems.
 	epatch ${FILESDIR}/cachefill.patch
 
+	#bug #58082.  Fixes LANGUAGE variable issues
+	epatch ${FILESDIR}/mplayer-1.0_pre5-r1-conf_locale.patch
+
 	#Setup the matrox makefile
 	if use matrox; then
 		get_kernel_info
@@ -154,11 +153,16 @@ src_unpack() {
 
 		mv ${WORKDIR}/svgalib_helper ${S}/libdha
 	fi
+
+	#Remove kernel-2.6 workaround as the problem it works around is
+	#fixed, and the workaround breaks sparc
+	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
 }
 
 src_compile() {
 
 	filter-flags -fPIE
+
 	local myconf=
 	################
 	#Optional features#
@@ -168,7 +172,8 @@ src_compile() {
 	myconf="${myconf} $(use_enable dvd mpdvdkit)"
 	myconf="${myconf} $(use_enable edl)"
 	myconf="${myconf} $(use_enable encode mencoder)"
-	myconf="${myconf} $(use_enable gtk gui) $(use_enable gtk x11) $(use_enable gtk xv) $(use_enable gtk vm)"
+	myconf="${myconf} $(use_enable gtk gui)"
+	myconf="${myconf} $(use_enable X x11) $(use_enable X xv) $(use_enable X vm)"
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
@@ -188,7 +193,12 @@ src_compile() {
 	# Codecs #
 	########
 	myconf="${myconf} $(use_enable divx4linux)"
-	myconf="${myconf} $(use_enable gif)"
+	# gif support needs X11 libs, don't build it if there is no X support
+	if use X && use gif ; then
+		myconf="${myconf} --enable-gif"
+	else
+		myconf="${myconf} --disable-gif"
+	fi
 	myconf="${myconf} $(use_enable jpeg)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
 	myconf="${myconf} $(use_enable matroska external-matroska) $(use_enable !matroska internal-matroska)"
@@ -242,9 +252,9 @@ src_compile() {
 	myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
 	myconf="${myconf} $(use_enable altivec)"
 	myconf="${myconf} $(use_enable debug)"
-	myconf="${myconf} $(use_enable mmx) $(use_enable mmx mmx2)"
+	myconf="${myconf} $(use_enable mmx) --disable-mmx2"
 	myconf="${myconf} $(use_enable nls i18n)"
-	myconf="${myconf} $(use_enable sse) $(use_enable sse sse2)"
+	myconf="${myconf} $(use_enable sse) --disable-sse2"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -293,11 +303,13 @@ src_compile() {
 		${myconf} || die
 
 		# config.mak doesn't set GIF_LIB so gif related source files fail
-		if use gif
+		if use gif && use X
 		then
-			sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
-		else
-			sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+			if use gif ; then
+				sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
+			else
+				sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+			fi
 		fi
 
 	einfo "Make"

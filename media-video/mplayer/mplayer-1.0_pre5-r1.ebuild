@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.7 2004/07/23 18:18:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.8 2004/07/24 05:25:28 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -57,7 +57,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	samba? ( >=net-fs/samba-2.2.8a )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
-	!ia64? ( 
+	!ia64? (
 		theora? ( media-libs/libtheora )
 		live? ( =media-plugins/live-2004.03.27 )
 		)
@@ -117,6 +117,9 @@ src_unpack() {
 	#bug #55936, eradicator's cachefill patch.
 	epatch ${FILESDIR}/cachefill.patch
 
+	#bug #58082.  Fixes LANGUAGE variable issues
+	epatch ${FILESDIR}/mplayer-1.0_pre5-r1-conf_locale.patch
+
 	#Setup the matrox makefile
 	if use matrox; then
 		get_kernel_info
@@ -159,7 +162,8 @@ src_compile() {
 	myconf="${myconf} $(use_enable dvd mpdvdkit)"
 	myconf="${myconf} $(use_enable edl)"
 	myconf="${myconf} $(use_enable encode mencoder)"
-	myconf="${myconf} $(use_enable gtk gui) $(use_enable gtk x11) $(use_enable gtk xv) $(use_enable gtk vm)"
+	myconf="${myconf} $(use_enable gtk gui)"
+	myconf="${myconf} $(use_enable X x11) $(use_enable X xv) $(use_enable X vm)"
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
@@ -179,13 +183,18 @@ src_compile() {
 	# Codecs #
 	########
 	myconf="${myconf} $(use_enable divx4linux)"
-	myconf="${myconf} $(use_enable gif)"
+	# gif support needs X11 libs, don't build it if there is no X support
+	if use X && use gif ; then
+		myconf="${myconf} --enable-gif"
+	else
+		myconf="${myconf} --disable-gif"
+	fi
 	myconf="${myconf} $(use_enable jpeg)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
 	myconf="${myconf} $(use_enable matroska external-matroska) $(use_enable !matroska internal-matroska)"
 	myconf="${myconf} $(use_enable mpeg external-faad) $(use_enable !mpeg internal-faad)"
 	myconf="${myconf} $(use_enable oggvorbis vorbis)"
-	if use ia64;  then
+	if use ia64; then
 		myconf="${myconf} --disable-theora"
 	else
 		myconf="${myconf} $(use_enable theora)"
@@ -233,9 +242,9 @@ src_compile() {
 	myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
 	myconf="${myconf} $(use_enable altivec)"
 	myconf="${myconf} $(use_enable debug)"
-	myconf="${myconf} $(use_enable mmx) $(use_enable mmx mmx2)"
+	myconf="${myconf} $(use_enable mmx) --disable-mmx2"
 	myconf="${myconf} $(use_enable nls i18n)"
-	myconf="${myconf} $(use_enable sse) $(use_enable sse sse2)"
+	myconf="${myconf} $(use_enable sse) --disable-sse2"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -283,11 +292,13 @@ src_compile() {
 		${myconf} || die
 
 		# config.mak doesn't set GIF_LIB so gif related source files fail
-		if use gif
+		if use gif && use X
 		then
-			sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
-		else
-			sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+			if use gif; then
+				sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
+			else
+				sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+			fi
 		fi
 
 	einfo "Make"

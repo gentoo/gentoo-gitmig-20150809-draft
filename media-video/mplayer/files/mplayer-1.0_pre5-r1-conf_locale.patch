@@ -1,0 +1,22 @@
+diff -r -u MPlayer-1.0pre5_orig/configure MPlayer-1.0pre5/configure
+--- MPlayer-1.0pre5_orig/configure	2004-07-23 18:06:56.422863704 +0200
++++ MPlayer-1.0pre5/configure	2004-07-23 18:08:05.252400024 +0200
+@@ -2079,15 +2079,15 @@
+     break
+   else
+     echo -n "$i not found, "
+-    _language=`echo $_language | sed "s/$i *//g"`
++    _language=`echo $_language | sed "s/\<$i\> *//g"`
+   fi
+ done
+ test -z "$_language" && _language=en
+ for i in $LANGUAGES ; do
+   if test -f "DOCS/man/$i/mplayer.1" ; then
+-    LANGUAGES=`echo $LANGUAGES | sed "s/$i *//2" | sed 's/ *$//'`
++    LANGUAGES=`echo $LANGUAGES | sed "s/\<$i\> *//2" | sed 's/ *$//'`
+   else
+-    LANGUAGES=`echo $LANGUAGES | sed "s/$i *//g" | sed 's/ *$//'`
++    LANGUAGES=`echo $LANGUAGES | sed "s/\<$i\> *//g" | sed 's/ *$//'`
+   fi
+ done
+ echores "using $_language (man pages: $LANGUAGES)"
