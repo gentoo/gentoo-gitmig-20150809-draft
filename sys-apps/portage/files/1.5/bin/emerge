@@ -158,6 +158,27 @@ if len(sys.argv)>=2:
 	elif sys.argv[1]=="--help":
 		print "Usage: pkgmerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
 		sys.exit(1)
+	elif sys.argv[1]=="rsync":
+		if not os.path.exists("/usr/bin/rsync"):
+			print "!!! /usr/bin/rsync does not exist, so rsync support is disabled."
+			sys.exit(1)
+		rclean=0
+		myportdir=portage.settings["PORTDIR"]
+		if myportdir[-1]=="/":
+			myportdir=myportdir[:-1]
+		if not os.path.exists(myportdir):
+			print ">>>",myportdir,"not found, creating it."
+			os.makedirs(myportdir,0755)	
+		if len(sys.argv)>2:
+			if sys.argv[2]=="clean":
+				#we'll --delete files when we rsync
+				rclean=1
+		mycommand="/usr/bin/rsync -av --stats --progress "
+		if rclean:
+			mycommand=mycommand+"--delete --exclude='distfiles/*' --exclude='packages/*' "
+		mycommand=mycommand+"rsync://cvs.gentoo.org/gentoo-x86-portage/* "+myportdir
+		print ">>> starting rsync with cvs.gentoo.org..."
+		sys.exit(os.system(mycommand))	
 	if sys.argv[1] in ["system","update"]:
 		sysmode=1
 		if sys.argv[1]=="update":
