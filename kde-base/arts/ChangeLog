@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.99 2004/06/10 12:07:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.100 2004/06/11 04:26:28 lv Exp $
+
+  10 Jun 2004; Travis Tilley <lv@gentoo.org> arts-1.2.3.ebuild:
+  fixed epatch line so that it tries to use a patch that actually exists
 
   09 Jun 2004; Caleb Tennis <caleb@gentoo.org> arts-1.2.3.ebuild: 
   Version bump
