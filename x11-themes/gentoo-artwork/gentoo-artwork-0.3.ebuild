@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.3.ebuild,v 1.6 2004/06/24 23:27:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.3.ebuild,v 1.7 2005/01/25 18:43:22 greg_g Exp $
 
 DESCRIPTION="A collection of miscellaneous Gentoo Linux logos and artwork"
 SRC_URI="mirror://gentoo/gentoo-artwork-0.2.tar.bz2 mirror://gentoo/gentoo-artwork-0.3.tar.bz2"
@@ -36,7 +36,7 @@ src_install() {
 
 	if use kde ; then
 		# a Gentoo colour scheme for KDE
-		insinto ${KDEDIR}/share/apps/kdisplay/color-schemes
+		insinto /usr/share/apps/kdisplay/color-schemes
 		doins ${S}/misc/Gentoo.kcsrc
 	fi
 
