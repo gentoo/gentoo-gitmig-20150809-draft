@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.111 2004/01/16 09:50:51 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.112 2004/01/16 22:33:35 iggy Exp $
+
+  16 Jan 2004; Brian Jackson <iggy@gentoo.org> mm-sources-2.6.1-r4.ebuild:
+  added an ewarn about the new cpu config options
 
 *mm-sources-2.6.1-r4 (16 Jan 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1-r4.ebuild,v 1.1 2004/01/16 09:50:51 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1-r4.ebuild,v 1.2 2004/01/16 22:33:35 iggy Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -22,3 +22,6 @@ existing bug. Only create a new bug if you have not found one that matches
 your issue. It is best to do an advanced search as the initial search has a
 very low yield. Please assign your bugs to x86-kernel@gentoo.org.
 Please read the ChangeLog and associated docs for more information."
+
+K_EXTRAEWARN="NOTE: processor selection has changed. You'll need to make sure you
+select the proper cpu type during make oldconfig"
