@@ -1006,13 +1006,10 @@ net-mail/spamassassin
 # works, but can't log in (meaning it really _doesn't_ work)
 =net-mail/courier-imap-1.4.5-r1
 
-<<<<<<< package.mask
 # naz@gentoo.org 16 Jun 2002
 # Works but needs some testing an finishing startxdfb script, hint hint :o).
-#x11-base/xdirectfb
+x11-base/xdirectfb
 
-=======
->>>>>>> 1.925
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
 >=dev-db/mysql-4.0.1_alpha
