@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sharutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.9 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.10 2003/03/11 06:25:41 seemant Exp $
+
+*sharutils-4.2.1-r6 (10 Mar 2003)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> sharutils-4.2.1-r4.ebuild,
+  sharutils-4.2.1-r4.ebuild, sharutils-4.2.1-r5.ebuild,
+  sharutils-4.2.1-r5.ebuild, sharutils-4.2.1-r6.ebuild:
+  use epatch instead
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> sharutuls-4.2.1-r6.ebuild :
   Added arm to keywords.

@@ -1,31 +1,34 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r6.ebuild,v 1.6 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r6.ebuild,v 1.7 2003/03/11 06:25:41 seemant Exp $
+
+inherit eutils
 
 IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools to deal with shar archives"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/sharutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/sharutils/"
-KEYWORDS="x86 ppc sparc alpha hppa arm"
+SRC_URI="ftp://prep.ai.mit.edu/gnu/sharutils/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="GPL-2"
-DEPEND="virtual/glibc 
-	sys-apps/texinfo
+KEYWORDS="x86 ppc sparc alpha hppa arm"
+
+DEPEND="sys-apps/texinfo
 	nls? ( >=sys-devel/gettext-0.10.35 )"
-RDEPEND="virtual/glibc"
 
 
 src_unpack() {
-	 unpack ${A}
-	 cd ${WORKDIR}
-	 patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
-	 cd ${S}/po
-	 mv nl.po nl.po.orig
-	 sed -e 's/aangemaakt/aangemaakt\\n/' nl.po.orig > nl.po
-	 mv pt.po pt.po.orig
-	 sed -e 's/de %dk/de %dk\\n/' pt.po.orig > pt.po
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PF}-gentoo.diff
+
+	cd ${S}/po
+	mv nl.po nl.po.orig
+	sed -e 's/aangemaakt/aangemaakt\\n/' nl.po.orig > nl.po
+	mv pt.po pt.po.orig
+	sed -e 's/de %dk/de %dk\\n/' pt.po.orig > pt.po
 }
 
 src_compile() {
@@ -48,7 +51,7 @@ src_install() {
 	cd ${D}/usr/share/locale
 	for i in *.
 	do
-	   rm -rf ${i}
+	  rm -rf ${i}
 	done
 	rm -rf ${D}/usr/lib
 
