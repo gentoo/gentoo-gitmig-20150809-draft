@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xfce
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/ChangeLog,v 1.17 2004/01/05 20:02:53 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/ChangeLog,v 1.18 2004/03/14 17:04:19 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> xfce-3.8.18-r2.ebuild:
+  Added ~mips keyword.
 
   05 Jan 2004; Jason Wever <weeve@gentoo.org> xfce-3.8.18-r2.ebuild:
   Marked stable on sparc.
