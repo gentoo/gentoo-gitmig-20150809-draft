@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.6.0.ebuild,v 1.4 2004/01/11 13:51:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.6.0.ebuild,v 1.5 2004/01/25 22:12:47 pyrania Exp $
 
 IUSE=""
 
 DESCRIPTION="An implementation of the ViewKit user interface library"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/viewklass/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/viewklass/${P}.tar.gz"
 HOMEPAGE="http://viewklass.sourceforge.net"
 LICENSE="LGPL-2.1"
 
