@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.7 2003/12/06 17:52:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.8 2003/12/30 15:39:44 mcummings Exp $
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org> :
+  gtk2-perl-1.012.ebuild
+  New stable version from CPAN. All older versions are now gone.
 
   06 Dec 2003; <spider@gentoo.org> gtk2-perl-0.12.ebuild,
   gtk2-perl-0.26.ebuild, gtk2-perl-0.90.ebuild, gtk2-perl-0.92.ebuild,
