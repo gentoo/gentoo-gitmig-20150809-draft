@@ -8,5 +8,6 @@ DISTCCD_EXEC=/usr/bin/distccd
 DISTCCD_PIDFILE=/var/run/distccd/distccd.pid
 
 # set this option to run distccd with extra parameters
-# DISTCCD_OPTS="--nice 20"
+# Default port is 3632.  For most people the default is okay.
+# DISTCCD_OPTS="--nice 20 --port 3632"
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.54 2003/07/12 23:02:52 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.55 2003/07/14 02:07:53 lisa Exp $
 
 *distcc-2.8 (09 Jul 2003)
   10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
@@ -13,6 +13,12 @@
   12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
   Oops. :)  `gtk' is preferred over `gtk2'.  Thanks Spider for the 
   heads up!
+
+  13 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  (files/2.8/conf) Added a --port to DISTCC_OPTS (/etc/conf.d/distccd) to 
+  change the running port.
+  (distcc-2.8-r2.ebuild) Added a note to the backup distcc website
+
 
 *distcc-2.7.1 (01 Jul 2003)
 
