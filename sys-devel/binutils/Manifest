@@ -11,6 +11,8 @@ MD5 2e588e007eb122eb471c48aefcb04a41 binutils-2.14.90.0.1-r1.ebuild 5097
 MD5 f6f5a7b9dacfa66f84d1558b2cf96612 binutils-2.14.90.0.2.ebuild 4846
 MD5 e7df35e2bb31fb0268d2150da19b27b9 binutils-2.14.90.0.4.ebuild 4842
 MD5 8303a09e50b83d864db0735fd00cf7bd binutils-2.14.90.0.4.1.ebuild 4851
+MD5 ce37883fe7ecfb6462e0c8ead8e6364b binutils-2.14.90.0.4.1-r1.ebuild 5611
+MD5 32c67690b25b2358a306ee0dafbe435f .binutils-2.14.90.0.4.1-r1.ebuild.swp 20480
 MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
 MD5 f453b3f208b17cd18380bc3653936487 files/binutils-2.12.90.0.14-x86_64-libpic.patch 1184
 MD5 db3f89b51f6961b0cf92bdddf8127ea7 files/digest-binutils-2.11.92.0.12.3-r2 161
@@ -25,6 +27,7 @@ MD5 b7ccd9bdcb0ab7c26bcf2a3e4c2e2afc files/digest-binutils-2.13.90.0.16-r1 75
 MD5 d435975192db69b96d36c62e2ad0876c files/digest-binutils-2.13.90.0.18-r1 160
 MD5 b04e5a5665b4e9987cbef313d24bc349 files/digest-binutils-2.13.90.0.20-r1 172
 MD5 f65088dfe30f5999e2491768b5fdadf8 files/digest-binutils-2.14.90.0.1-r1 169
+MD5 c2028bfe76e16c23a00a4ad36a5a36f2 files/digest-binutils-2.14.90.0.4.1-r1 77
 MD5 ddcb10d9ab716f378c1fe596673a6251 files/2.13/binutils-2.13.90.0.16-tls-strip.patch 5383
 MD5 8e6216c4ee8463ab38d9761a1be712f0 files/2.13/binutils-2.13.90.0.16-stt_tls.patch 6518
 MD5 6dd59bc404c01dd65a21a68cf62c639e files/2.13/binutils-2.13.90.0.16-rodata-cst.patch 974
@@ -56,3 +59,19 @@ MD5 2183b775b86400dd7eda35bf1ccee678 files/2.13/binutils-2.13.90.0.20-gas-mips-g
 MD5 c98edbd5a87f00832a367a40a6e576d1 files/2.14/binutils-2.14.90.0.1-eh-frame-ro.patch 17942
 MD5 e941bf2e41367989d389e2988672f87a files/2.14/binutils-2.14.90.0.1-sparc-nonpic.patch 3147
 MD5 03d6c934577cf40ec75b41bfc38b48a0 files/2.14/binutils-mips-openssl-got-fix.patch 540
+MD5 d232bcf016de028994efd262aa2ff401 files/2.14/new/binutils-2.14.90.0.4-cfi.patch 74784
+MD5 e7283a4967ce5101a016b31e747e8442 files/2.14/new/binutils-2.14.90.0.4-cfi2.patch 18449
+MD5 42ecd945c2269a792b9b7aea542b9a16 files/2.14/new/binutils-2.14.90.0.4-cfi3.patch 13929
+MD5 613770b55db9f6e3c11f040a94c9c4ea files/2.14/new/binutils-2.14.90.0.4-cfi4.patch 11909
+MD5 04ed3642c4bebee3fe6de9e9e6e2f23b files/2.14/new/binutils-2.14.90.0.4-eh-frame-ro.patch 16503
+MD5 60ff948d89725566178e8149375c3f31 files/2.14/new/binutils-2.14.90.0.4-gas-execstack.patch 3379
+MD5 69161dd93a78ddede56256e0de28d282 files/2.14/new/binutils-2.14.90.0.4-gas-pred.patch 1104
+MD5 fed0711b95edc0c64ee93ccfbc8e6268 files/2.14/new/binutils-2.14.90.0.4-ltconfig-multilib.patch 878
+MD5 ee0529757cf72b4d4f8c30733cda49c7 files/2.14/new/binutils-2.14.90.0.4-pie.patch 24448
+MD5 3793ff770ff2fca80a2238f8de0a165e files/2.14/new/binutils-2.14.90.0.4-pie2.patch 1011
+MD5 4aa97425036b8c3fb98975ab06cab3ae files/2.14/new/binutils-2.14.90.0.4-pni.patch 16030
+MD5 b42bde8fcae8815f106b6c1f78e68134 files/2.14/new/binutils-2.14.90.0.4-ppc-bigplt.patch 628
+MD5 f8d0738db8174c369f4f3a6185d8f76b files/2.14/new/binutils-2.14.90.0.4-ppc64-ctors.patch 843
+MD5 5fa7bd6f7e2c4fa50b74367a85f37541 files/2.14/new/binutils-2.14.90.0.4-ppc64-prelink.patch 4721
+MD5 e6f5f65fe3a3998c3c2845b92eef79e8 files/2.14/new/binutils-2.14.90.0.4-pt-gnu-stack.patch 8453
+MD5 e941bf2e41367989d389e2988672f87a files/2.14/new/binutils-2.14.90.0.4-sparc-nonpic.patch 3147
