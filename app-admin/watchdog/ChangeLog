@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/watchdog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/ChangeLog,v 1.1 2002/03/03 16:35:40 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/ChangeLog,v 1.2 2002/07/31 03:16:02 cselkirk Exp $
 
 *watchdog-5.2 (Mar 3, 2002)
+  
+  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> watchdog-5.2.ebuild :
+
+  Added -ppc to KEYWORDS. Added DEPEND and RDEPEND.
 
   3 Mar 2002; Arcady Genkin <agenkin@thpoon.com> watchdog-5.2.ebuild :
 
