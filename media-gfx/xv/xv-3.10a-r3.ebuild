@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.12 2004/02/02 19:46:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.13 2004/06/07 21:52:09 agriffis Exp $
 
 inherit ccc eutils
 
@@ -24,8 +24,11 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	[ `use png` ] && epatch ${WORKDIR}/${P}-naz-gentoo.patch
-	[ `use ppc` ] && [ -z `use png` ] && epatch ${FILESDIR}/xv-${PV}-ppc.patch
+	if use png; then
+		epatch ${WORKDIR}/${P}-naz-gentoo.patch
+	else
+		use ppc && epatch ${FILESDIR}/xv-${PV}-ppc.patch
+	fi
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r6.ebuild,v 1.7 2004/04/17 18:53:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r6.ebuild,v 1.8 2004/06/07 21:52:10 agriffis Exp $
 
 inherit ccc flag-o-matic eutils
 
@@ -24,26 +24,32 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-enhanced-Nu.patch || die
 	epatch ${FILESDIR}/${P}-gentoo-Nu.patch || die
-	[ `use ppc` ] && epatch ${FILESDIR}/${P}-ppc.patch
+	use ppc && epatch ${FILESDIR}/${P}-ppc.patch
 	# This patch is needed to get xv to stop segfaulting on amd64
 	use amd64 && epatch ${FILESDIR}/xv-use-getcwd.patch
 }
 
 src_compile() {
-	[ -z `use jpeg` ] \
-		&& sed -i -e "s:JPEGLIB = -ljpeg:JPEGLIB =:" Makefile \
-		|| append-flags -DDOJPEG
-	[ -z `use png` ] \
-		&& sed -i -e "s:PNGLIB = -lpng:PNGLIB =:" Makefile \
-		&& sed -i -e "s:ZLIBLIB = -lz:ZLIBLIB =:" Makefile \
-		|| append-flags -DDOPNG
-	[ -z `use tiff` ] \
-		&& sed -i -e "s:TIFFLIB = -ltiff:TIFFLIB =:" Makefile \
-		|| append-flags -DDOTIFF
-	sed -i "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" Makefile
-	sed -i "s:COPTS=\t-O:COPTS= ${CFLAGS}:" tiff/Makefile
+	if use jpeg; then
+		append-flags -DDOJPEG
+	else
+		sed -i -e "s:JPEGLIB = -ljpeg:JPEGLIB =:" Makefile || die "sed jpeg failed"
+	fi
+	if use png; then
+		append-flags -DDOPNG
+	else
+		sed -i -e "s:PNGLIB = -lpng:PNGLIB =:" Makefile || die "sed png failed"
+		sed -i -e "s:ZLIBLIB = -lz:ZLIBLIB =:" Makefile || die "sed zlib failed"
+	fi
+	if use tiff; then
+		append-flags -DDOTIFF
+	else
+		sed -i -e "s:TIFFLIB = -ltiff:TIFFLIB =:" Makefile || die "sed tiff failed"
+	fi
+	sed -i 's:CCOPTS = -O:CCOPTS = $(E_CFLAGS):' Makefile || die "sed Makefile failed"
+	sed -i 's:COPTS=\t-O:COPTS= $(E_CFLAGS):' tiff/Makefile || die "sed tiff/Makefile failed"
 	is-ccc && replace-cc-hardcode
-	make || die
+	make E_CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
