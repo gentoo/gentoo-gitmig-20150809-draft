@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.5 2003/06/24 11:55:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.6 2003/07/13 07:40:14 vapier Exp $
+
+*vice-1.12-r1 (13 Jul 2003)
+
+  13 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fixed up nls support #24041, added optional arts support and added games.eclass support.
 
 *vice-1.12 (24 Jun 2003)
 

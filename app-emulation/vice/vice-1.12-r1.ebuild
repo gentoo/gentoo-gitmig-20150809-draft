@@ -1,42 +1,47 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.11.ebuild,v 1.2 2003/03/28 07:37:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.12-r1.ebuild,v 1.1 2003/07/13 07:40:14 vapier Exp $
 
-IUSE="sdl nls gnome"
+inherit games eutils
 
 DESCRIPTION="The Versatile Commodore 8-bit Emulator"
 HOMEPAGE="http://viceteam.bei.t-online.de/"
 SRC_URI="ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="sdl nls gnome arts"
 
 DEPEND=">=x11-base/xfree-4.0
 	sdl? ( media-libs/libsdl )
-	gnome? ( gnome-base/libgnomeui )"
+	gnome? ( gnome-base/libgnomeui )
+	arts? ( kde-base/arts )"
 
-S=${WORKDIR}/${P}
+src_unpack() {
+	unpack ${A}
+	if [ `use nls` ] ; then
+		cd ${S}/po
+		epatch ${FILESDIR}/${PV}-po-Makefile.patch
+	else
+		cd ${S}
+		sed -i '/^SUBDIRS =/s:po::' Makefile.in
+	fi
+}
 
 src_compile() {
-	local myconf="--enable-fullscreen"
-	use sdl && myconf="${myconf} --with-sdl"
-	use gnome && myconf="${myconf} --enable-gnomeui"
-	use nls || myconf="${myconf} --disable-nls"
-
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man ${myconf} || die "./configure failed"
+	egamesconf \
+		--enable-fullscreen \
+		`use_with sdl` \
+		`use_with gnome gnomeui` \
+		`use_with arts` \
+		`use_enable nls` \
+		|| die
 	emake || die
 }
 
-src_install () {
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
+src_install() {
+	make install DESTDIR=${D} || die
 
 	dohtml ${D}/usr/lib/vice/doc/*.html
 	dodoc \
