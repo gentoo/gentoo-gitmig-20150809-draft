@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.3 2004/02/12 15:14:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.4 2004/02/27 03:38:25 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -141,6 +141,48 @@ reregister-all-common-lisp-implementations() {
 	done
 }
 
+# BIG FAT HACK: Since the Portage emerge step kills file timestamp
+# information, we need to compensate by ensuring all FASL files are
+# more recent than their source files.
+
+# The following `impl-*-timestamp-hack' functions SHOULD NOT be used
+# outside of this eclass.
+
+impl-save-timestamp-hack() {
+	local impl=$1
+	dodir /usr/share/${impl}
+	tar cpjf ${D}/usr/share/${impl}/portage-timestamp-compensate -C ${D}/usr/lib/${impl} .
+}
+
+impl-restore-timestamp-hack() {
+	local impl=$1
+	tar xjpfo /usr/share/${impl}/portage-timestamp-compensate -C /usr/lib/${impl}
+}
+
+impl-remove-timestamp-hack() {
+	local impl=$1
+	rm -rf /usr/lib/${impl} &>/dev/null || true
+}
+
+standard-impl-postinst() {
+	local impl=$1
+	rm -rf /usr/lib/common-lisp/${impl}/* &>/dev/null || true
+	chown cl-builder:cl-builder /usr/lib/common-lisp/${impl}
+	impl-restore-timestamp-hack ${impl}
+	chown -R root:root /usr/lib/${impl}
+	/usr/bin/clc-autobuild-impl ${impl} yes
+	register-common-lisp-implementation ${impl}
+}
+
+standard-impl-postrm() {
+	local impl=$1 impl_binary=$2
+	# Since we keep our own time stamps we must manually remove them
+	# here.
+	if [ ! -x ${impl_binary} ]; then
+		impl-remove-timestamp-hack ${impl}
+		rm -rf /usr/lib/common-lisp/${impl}/*
+	fi
+}
 
 
 # Local Variables: ***
