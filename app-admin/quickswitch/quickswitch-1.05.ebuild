@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.05.ebuild,v 1.5 2004/02/29 23:04:06 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.05.ebuild,v 1.6 2004/03/13 17:25:04 weeve Exp $
 
 IUSE="ncurses"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://quickswitch.sf.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc sparc "
 
 DEPEND=">=dev-lang/perl-5.6.0"
 RDEPEND="ncurses? ( dev-perl/CursesWidgets )"
