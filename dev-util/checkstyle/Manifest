@@ -1,4 +1,14 @@
-MD5 2cc027074b26cc903762ef479f22f3e4 checkstyle-3.3.ebuild 1377
-MD5 1525a815a97e32b22aa559fd1b8e25c9 ChangeLog 436
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0110de30cd9555a7d8ca999ab41b99f8 checkstyle-3.3.ebuild 1377
+MD5 a165a0afd6274ab9648a341512ff7cf8 ChangeLog 518
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 3bfc61fcf1ab108f7cf96aef2c3acd0e files/digest-checkstyle-3.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBC3Pz/rLF9B432nYRAtGqAKCKr7xFSVNnht394eLTTHhvxKmcWwCgkloa
+k24Qk0HALjSyZzVc8d4Na2E=
+=yp+H
+-----END PGP SIGNATURE-----
