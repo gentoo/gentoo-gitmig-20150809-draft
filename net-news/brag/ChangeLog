@@ -1,6 +1,11 @@
 # ChangeLog for net-news/brag
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/brag/ChangeLog,v 1.5 2004/05/12 03:32:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/brag/ChangeLog,v 1.6 2004/05/29 21:26:01 mkennedy Exp $
+
+*brag-1.4.1 (29 May 2004)
+
+  29 May 2004; <mkennedy@gentoo.org> +brag-1.4.1.ebuild:
+  New upstream version
 
   11 May 2004; Jason Wever <weeve@gentoo.org> brag-1.2.9-r2.ebuild:
   Added ~sparc keyword.
