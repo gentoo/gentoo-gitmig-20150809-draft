@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r1.ebuild,v 1.1 2005/02/02 14:34:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r1.ebuild,v 1.2 2005/02/04 12:23:15 genstef Exp $
 
 inherit linux-mod
 
@@ -30,7 +30,7 @@ CONFIG_CHECK="NET_RADIO FW_LOADER"
 #BUILD_PARAMS="KERNELVER=${KV_FULL} KERNELDIR=${KV_DIR} KERNEL_BUILD=${KV_DIR}"
 BUILD_PARAMS="-C ${KV_DIR} SUBDIRS=${S}/src WLAN_HOSTIF=WLAN_PCI"
 BUILD_TARGETS="modules"
-MDULESD_ACX_PCI_ADDITIONS="options acx_pci firmware_dir=/lib/firmware"
+MODULESD_ACX_PCI_ADDITIONS="options acx_pci firmware_dir=/lib/firmware"
 
 src_compile() {
 	sed -si "s:KERNEL_VER=\`uname -r\`:KERNEL_VER=${KV_FULL}:" Configure
