@@ -352,7 +352,10 @@ dev-lang/tcl-tk
 # (seems ok to me, as i build a whole system with 1.4.2-r1,
 #  and we need it to fix the relink bug - Azarah [17 March 2002] )
 #
-=sys-devel/libtool-1.4.2
+# Seems we are back to square 1.  libtool-1.4.2 needs autoconf-2.5
+# or later .. masking 1.4.2 again and adding 1.4.1-r2 with the
+# "relink bug" fixed.
+>=sys-devel/libtool-1.4.2
 
 # Failed to build for at least me and "wouzer" Bugzilla issue: #243
 =x11-base/xfree-4.2.0
