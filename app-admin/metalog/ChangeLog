@@ -1,14 +1,16 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.15 2003/09/26 20:45:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.16 2003/09/30 17:44:58 kumba Exp $
 
-*metalog-0.6-r11 (17 Sep 2003)
+
+*metalog-0.7-r1 (17 Sep 2003)
+
+  30 Sep 2003; Joshua Kinard <kumba@gentoo.org> metalog-0.7-r1.ebuild:
+  Changed ~mips to mips in KEYWORDS
 
   17 Sep 2003; Seemant Kulleen <seemant@gentoo.org> metalog-0.6-r11.ebuild,
   metalog-0.7-r1.ebuild:
   version bump to provide virtual/logger
-
-*metalog-0.7-r1 (17 Sep 2003)
 
 *metalog-0.7 (12 Jun 2003)
 
@@ -19,6 +21,8 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*metalog-0.6-r11 (17 Sep 2003)
+
 *metalog-0.6-r10 (15 Jul 2002)
 
   21 Mar 2003; Guy Martin <gmsoft@gentoo.org> :
