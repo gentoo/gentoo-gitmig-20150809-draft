@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.5 2004/09/09 19:58:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.6 2004/10/06 23:26:51 ticho Exp $
+
+*mail-notification-0.7.0 (07 Oct 2004)
+
+  07 Oct 2004; Andrej Kacian <ticho@gentoo.org>
+  +mail-notification-0.7.0.ebuild:
+  Version bump. Added MIME support useflag and appropriate depend on
+  dev-libs/gmime. Removed ~amd64 until gmime gets it too.
 
   09 Sep 2004; Tom Martin <slarti@gentoo.org> mail-notification-0.6.1.ebuild,
   mail-notification-0.6.2.ebuild:
