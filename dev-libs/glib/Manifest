@@ -1,18 +1,28 @@
-MD5 7514ac49a4862a86c7e2e6c04c4ad813 ChangeLog 15630
-MD5 3b34d991b2abc450f6aa972fc5f12ac6 glib-1.2.10-r5.ebuild 1493
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6901ecf48140dd3c71b25f2ad85e0691 glib-2.4.2.ebuild 1042
-MD5 2e9f79c6c2788e44c0837f7be1b29c20 glib-2.6.3.ebuild 1503
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 242a9882e6ff545eee939df0be09a8f9 glib-2.4.8.ebuild 1464
 MD5 1df68769597f0ec7fafd6df3b51df2a8 glib-2.6.0.ebuild 1494
+MD5 9fca211ce41332c25b5ae69f30b1542b ChangeLog 15723
+MD5 3f623ea9b4b30ceceed796c2cbdfda1f glib-2.6.2-r1.ebuild 1495
+MD5 242a9882e6ff545eee939df0be09a8f9 glib-2.4.8.ebuild 1464
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3cef3109de5d8f2e45f3041f4788559a glib-2.6.1.ebuild 1495
-MD5 8f1ff6ae3ad14c3f610fc46edb7129bc glib-2.6.2-r1.ebuild 1496
-MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
-MD5 bb11efe8c19407a4742056f67df25dd7 files/digest-glib-2.4.2 64
-MD5 a260a5af18d5f068411c03f094fdd680 files/digest-glib-2.6.3 64
+MD5 3b34d991b2abc450f6aa972fc5f12ac6 glib-1.2.10-r5.ebuild 1493
+MD5 2e9f79c6c2788e44c0837f7be1b29c20 glib-2.6.3.ebuild 1503
 MD5 2657ca6d0c857b4e97ad93525212ffa1 files/glib-1.2.10-gcc34-fix.patch 2008
-MD5 394ed1e8214a881afbed68f0fa2546c9 files/digest-glib-2.4.8 64
-MD5 c5265ab52225b51ac7feb1d75bbf4266 files/digest-glib-2.6.0 64
-MD5 9a002ab796c6ae648f61aa78d2987450 files/digest-glib-2.6.1 64
+MD5 a260a5af18d5f068411c03f094fdd680 files/digest-glib-2.6.3 64
+MD5 bb11efe8c19407a4742056f67df25dd7 files/digest-glib-2.4.2 64
 MD5 759cd49ef581f9266d68b23a74313e8a files/digest-glib-2.6.2-r1 64
+MD5 394ed1e8214a881afbed68f0fa2546c9 files/digest-glib-2.4.8 64
 MD5 1a4565b760afb02416ff0d674c89c83f files/glib-2-macos.patch 989
+MD5 9a002ab796c6ae648f61aa78d2987450 files/digest-glib-2.6.1 64
+MD5 c5265ab52225b51ac7feb1d75bbf4266 files/digest-glib-2.6.0 64
+MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRcC0ugEuf3OQ0akRAiWNAKCNPz15Gcbs/XPx5Hr1QGeAmG76gwCcDOZR
+W5WJ6Dwt8QGZsJZIS0EfIZU=
+=yNvL
+-----END PGP SIGNATURE-----
