@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.6 2004/06/24 21:52:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.7 2004/09/23 09:02:17 mr_bones_ Exp $
 
 inherit games
 
@@ -24,7 +24,7 @@ dir="${GAMES_DATADIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Modify data paths
 	sed -i \
@@ -61,6 +61,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
+	echo
 	einfo "Sound and music are not enabled by default."
 	einfo "Use the S and M keys to enable them in-game, or start the game with"
 	einfo "the -s and -m switches: battalion -s -m"

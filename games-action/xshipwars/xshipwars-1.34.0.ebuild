@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.8 2004/06/30 02:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.9 2004/09/23 09:04:08 mr_bones_ Exp $
 
 inherit gcc eutils games
 
 MY_P=xsw-${PV}
-S="${WORKDIR}/${MY_P}"
 DESCRIPTION="massively multi-player, ultra graphical, space-oriented gaming system designed exclusively for network play"
+HOMEPAGE="http://wolfpack.twu.net/ShipWars/XShipWars/"
 SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${MY_P}.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/xswdata-1.33d.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/stimages1.7.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/babylon5images1.1.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/stsounds1.4.tgz"
-HOMEPAGE="http://wolfpack.twu.net/ShipWars/XShipWars/"
 
 LICENSE="GPL-2 xshipwars"
 SLOT="0"
@@ -23,11 +22,15 @@ DEPEND="virtual/libc
 	>=media-sound/esound-0.2.23
 	virtual/x11"
 
+S="${WORKDIR}/${MY_P}"
+
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 }
 
 src_compile() {
+	local makefile
+
 	./configure.client Linux --prefix=/usr || die
 	./configure.monitor Linux --prefix=/usr || die
 	./configure.server Linux --prefix=${GAMES_PREFIX} || die
@@ -63,6 +66,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	echo
 	einfo "Before playing, you should get a copy of the installed "
 	einfo "global XShipWars client configuration file and copy it to "
