@@ -1,7 +1,8 @@
+diff -Naur ccmath-2.2.1.orig/cfit/chcof.o ccmath-2.2.1/cfit/chcof.o
 diff -Naur ccmath-2.2.1.orig/makelibs.sh ccmath-2.2.1/makelibs.sh
 --- ccmath-2.2.1.orig/makelibs.sh	2001-11-08 16:57:07.000000000 +0100
-+++ ccmath-2.2.1/makelibs.sh	2004-10-19 23:33:36.745735608 +0200
-@@ -16,23 +16,23 @@
++++ ccmath-2.2.1/makelibs.sh	2004-10-19 23:51:44.000000000 +0200
+@@ -16,23 +16,31 @@
    do
      cd $MDR/$dr
      echo `pwd`
@@ -19,13 +20,22 @@ diff -Naur ccmath-2.2.1.orig/makelibs.sh ccmath-2.2.1/makelibs.sh
  cd $MDR
  
  if [ $F = "y" ]
-   then cd $MDR/matrix
+-  then cd $MDR/matrix
 -    cc -c -O3 solv.s
++  then 
++  cd $MDR/matrix
 +    cc -fPIC -c -O3 solv.s
      mv *.o $LSOD
      cd $MDR/simu
 -    cc -c -O3 *.s
 +    cc -fPIC -c -O3 *.s
++    mv *.o $LSOD
++else
++     cd $MDR/matrix/supp
++    cc -fPIC -c -O3 solv.c
++    mv *.o $LSOD
++    cd $MDR/simu/supp
++    cc -fPIC -c -O3 *.c
      mv *.o $LSOD
  fi
  cd $LSOD
