@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.11.ebuild,v 1.1 2001/07/13 02:13:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.11.ebuild,v 1.2 2001/07/13 04:16:50 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${PV}.tar.bz2"
 HOMEPAGE="http://www.alsa-project.org"
 
 #add kernel includes dependency when we have one
-DEPEND="sys-devel/autoconf virtual/glibc sys-kernel/linux-sources"
+DEPEND="sys-devel/autoconf virtual/glibc sys-kernel/linux-headers"
 PROVIDE="virtual/alsa"
 
 #might be good to roll this into Portage at some point.
@@ -39,7 +39,7 @@ src_compile() {
 
 src_install () {
 	#point this to the kernel headers in the future, not the kernel sources
-	insinto /usr/src/linux/include/linux
+	insinto /usr/include/linux
 	cd ${S}/include
 	doins asound.h asoundid.h asequencer.h ainstr_*.h
 	dodoc INSTALL FAQ

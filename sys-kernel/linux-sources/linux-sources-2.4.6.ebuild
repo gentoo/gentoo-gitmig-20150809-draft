@@ -9,7 +9,7 @@ OKV=2.4.6
 KV=2.4.6
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
-if [ $PN = "linux-extras" ]
+if [ $PN = "linux-extras" ] || [ $PN = "linux-headers" ]
 then
 	KS=/usr/src/linux-${KV}
 	KS2=/usr/src/linux-${KV}-extras
@@ -26,7 +26,7 @@ fi
 # ext3                 Y         ext3              Production-ready
 # MOSIX                Y         mosix             Testing only
 # XFS                  N         xfs               Will add soon
-# PCMCIA-CS            Y         pcmcia            Need to move this to its own ebuild
+# PCMCIA-CS            N         pcmcia            Need to move this to its own ebuild
 # lm-sensors           N         lm_sensors        Need to move this to its own ebuild
 
 LVMV=0.9.1_beta7
@@ -36,7 +36,7 @@ MOSV=1.0.5
 #JFSV=1.0.0
 #KNV="6.g"
 #PIV="1.d"
-PCV="3.1.27"
+#PCV="3.1.27"
 
 [ "${PN}" = "linux" ] && DESCRIPTION="Linux kernel version ${KV}, including modules, binary tools, libraries and includes"
 [ "${PN}" = "linux-sources" ] && DESCRIPTION="Linux kernel version ${KV} - full sources"
@@ -46,7 +46,6 @@ PCV="3.1.27"
 # so we need no sources
 if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
 	http://www.zip.com.au/~akpm/ext3-${EXT3V}.gz
 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz
 	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz
@@ -54,6 +53,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 fi
 #	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
 #	http://www.netroedge.com/~lm78/archive/i2c-${SENV}.tar.gz
+#	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
 	
 if [ "$PN" != "linux-extras" ]
 then
@@ -63,8 +63,7 @@ fi
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
 	  http://www.namesys.com
-	  http://www.sistina.com/lvm/
-	  http://pcmcia-cs.sourceforge.net"
+	  http://www.sistina.com/lvm/"
 
 DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
 #these deps are messed up; fix 'em and add ncurses (required my mosix compile, menuconfig)
@@ -73,40 +72,41 @@ then
 	RDEPEND="mosix? ( ~sys-apps/mosix-user-1.0.5 ) >=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
 elif [ $PN = "linux-sources" ]
 then
-	#ncurses is required for "make menuconfig"
-	RDEPEND=">=sys-libs/ncurses-5.2"
-else
-	#linux extras
-fi
-    DEPEND=">=sys-kernel/linux-sources-${PVR}"
-fi
-if [ "`use build`" ] && [ $PN = "linux-sources" ] ; then
-    DEPEND=""
-    RDEPEND=""
+	if [ "`use build`" ]
+	then
+		DEPEND=""
+		RDEPEND=""
+	else
+		#ncurses is required for "make menuconfig"
+		RDEPEND=">=sys-libs/ncurses-5.2"
+	fi
+elif [ $PN = "linux-extras" ] || [ $PN = "linux-headers" ]
+then
+	#linux-extras/headers requires a rev of the current kernel sources to be installed
+	DEPEND="~sys-kernel/linux-sources-${PV}"
 fi
 
 # this is not pretty...
 LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
 
 src_unpack() {
+	if [ "$PN" = "linux-extras" ] || [ "$PN" = "linux-headers" ]
+	then
+		return
+	fi
 
     mkdir ${S2}
-	
-	# We only need to unpack for linux and linux-sources
 
-    if [ ! "$PN" = "linux-extras" ]
+	#unpack kernel and apply reiserfs-related patches
+	cd ${WORKDIR}
+	unpack linux-${OKV}.tar.bz2
+	try mv linux linux-${KV}
+	cd ${S}
+	if [ "$KV" != "$OKV" ]
 	then
-
-		#unpack kernel and apply reiserfs-related patches
-		cd ${WORKDIR}
-		unpack linux-${OKV}.tar.bz2
-		try mv linux linux-${KV}
-		cd ${S}
-		if [ "$KV" != "$OKV" ]
-		then
-			echo "Applying ${KV} patch..."
-			try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
-		fi
+		echo "Applying ${KV} patch..."
+		try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
+	fi
 #		This patch is just *too* unweildy and creates tons of rejects all over the place (boo!)
 #		echo "Applying XFS patch..."
 #		local x
@@ -114,45 +114,45 @@ src_unpack() {
 #		do
 #			cat ${DISTDIR}/patch-2.4.6-xfs-${x}.bz2 | bzip2 -d | patch -p1
 #		done		
-		
-		dodir /usr/src/linux-${KV}-extras
-
-		if [ "`use mosix`" ]
-		then
-			echo "Applying MOSIX patch..."
-			cd ${S2}
-			mkdir MOSIX-${MOSV}
-			cd MOSIX-${MOSV}
-			tar xzf MOSIX-${MOSV}.tar.gz patches.${OKV} kernel.new.${OKV}.tar
-			cd ${S}
-			try cat ${S2}/MOSIX-${MOSV}/patches.2.4.6 | patch -p0
-			tar -x --no-same-owner -vf ${S2}/MOSIX-${MOSV}/kernel.new.2.4.6.tar
-		fi
-		
-		cd ${S}
-		echo "Applying reiserfs-NFS fix..."
-		try cat ${FILESDIR}/2.4.6/linux-2.4.6-reiserfs-NFS.patch | patch -N -p1
-				
-		if [ "`use lvm`" ]
-		then
-			#create and apply LVM patch.  The tools get built later.
-			cd ${S2}
-			echo "Unpacking and applying LVM patch..."
-			unpack lvm_${LVMV}.tar.gz
-			try cd LVM/${LVMV}
 	
-			# I had to hack this in so that LVM will look in the current linux
-			# source directory instead of /usr/src/linux for stuff - pete
-			try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
-			cd PATCHES
-			try make KERNEL_VERSION=${KV} KERNEL_DIR=${S}
-			cd ${S}
-			# the -l option allows this patch to apply cleanly (ignore whitespace changes)
-			try patch -l -p1 < ${S2}/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
-			cd ${S}/drivers/md
-			try patch -p0 < ${FILESDIR}/${KV}/lvm.c.diff
-		fi
-    
+	dodir /usr/src/linux-${KV}-extras
+
+	if [ "`use mosix`" ]
+	then
+		echo "Applying MOSIX patch..."
+		cd ${S2}
+		mkdir MOSIX-${MOSV}
+		cd MOSIX-${MOSV}
+		tar xzf MOSIX-${MOSV}.tar.gz patches.${OKV} kernel.new.${OKV}.tar
+		cd ${S}
+		try cat ${S2}/MOSIX-${MOSV}/patches.2.4.6 | patch -p0
+		tar -x --no-same-owner -vf ${S2}/MOSIX-${MOSV}/kernel.new.2.4.6.tar
+	fi
+	
+	cd ${S}
+	echo "Applying reiserfs-NFS fix..."
+	try cat ${FILESDIR}/2.4.6/linux-2.4.6-reiserfs-NFS.patch | patch -N -p1
+			
+	if [ "`use lvm`" ]
+	then
+		#create and apply LVM patch.  The tools get built later.
+		cd ${S2}
+		echo "Unpacking and applying LVM patch..."
+		unpack lvm_${LVMV}.tar.gz
+		try cd LVM/${LVMV}
+
+		# I had to hack this in so that LVM will look in the current linux
+		# source directory instead of /usr/src/linux for stuff - pete
+		try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+		cd PATCHES
+		try make KERNEL_VERSION=${KV} KERNEL_DIR=${S}
+		cd ${S}
+		# the -l option allows this patch to apply cleanly (ignore whitespace changes)
+		try patch -l -p1 < ${S2}/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
+		cd ${S}/drivers/md
+		try patch -p0 < ${FILESDIR}/${KV}/lvm.c.diff
+	fi
+
 #		if [ "`use lm_sensors`" ]
 #		then
 #			#unpack and apply the lm_sensors patch
@@ -185,73 +185,72 @@ src_unpack() {
 #			-e \"s#^MANDIR.*#MANDIR := /usr/share/man#\" \
 #			Makefile.orig > Makefile
 #		 fi
-		if [ "`use pcmcia-cs`" ]
-		then
-			echo "Unpacking pcmcia-cs tools..."
-			cd ${S2}
-			unpack pcmcia-cs-${PCV}.tar.gz
-		#	patch -p0 < ${FILESDIR}/${KV}/pcmcia-cs-${PCV}-gentoo.diff
-		fi
-		
-		#JFS patch works; commented out because it's not ready for production use
-		#if [ "`use jfs`" ]
-		#then
-		#	echo "Applying JFS patch..."
-		#	cd ${WORKDIR}
-		#	unpack jfs-${JFSV}-patch.tar.gz
-		#	cd ${S}
-		#	patch -p1 < ${WORKDIR}/jfs-common-v1.0.0-patch
-		#	patch -p1 < ${WORKDIR}/jfs-2.4.5-v1.0.0-patch
-		#fi
-		
-		if [ "`use ext3`" ]
-		then
-			echo "Applying ext3 patch..."
-			if [ "`use mosix`" ]
-			then
-				echo
-				echo "There will be one reject; we will fix it. (no worries)"
-				echo
-			fi
-			cd ${S}
-			gzip -dc ${DISTDIR}/ext3-${EXT3V}.gz | patch -l -p1
-			if [ "`use mosix`" ]
-			then
-				echo 
-				echo "Fixing reject in include/linux/sched.h..."
-				echo
-				cp ${FILESDIR}/${KV}/sched.h include/linux
-			fi
-		fi
-			
-		#get sources ready for compilation or for sitting at /usr/src/linux
-		echo "Preparing for compilation..."
-		cd ${S}
-		#sometimes we have icky kernel symbols; this seems to get rid of them
-		try make mrproper
-
-		#linux-sources needs to be fully configured, too.  Not just linux
-		if [ "${PN}" != "linux-extras" ]
-		then
-			#this is the configuration for the default kernel
-			try cp ${FILESDIR}/${KV}/config.bootcd .config
-			try yes \"\" \| make oldconfig
-			echo "Ignore any errors from the yes command above."
-		fi
-    
-		#fix silly permissions in tarball
-		cd ${WORKDIR}
-		chown -R 0.0 *
-		chmod -R a+r-w+X,u+w *
+#	if [ "`use pcmcia-cs`" ]
+#	then
+#		echo "Unpacking pcmcia-cs tools..."
+#		cd ${S2}
+#		unpack pcmcia-cs-${PCV}.tar.gz
+	#	patch -p0 < ${FILESDIR}/${KV}/pcmcia-cs-${PCV}-gentoo.diff
+#	fi
 	
+	#JFS patch works; commented out because it's not ready for production use
+	#if [ "`use jfs`" ]
+	#then
+	#	echo "Applying JFS patch..."
+	#	cd ${WORKDIR}
+	#	unpack jfs-${JFSV}-patch.tar.gz
+	#	cd ${S}
+	#	patch -p1 < ${WORKDIR}/jfs-common-v1.0.0-patch
+	#	patch -p1 < ${WORKDIR}/jfs-2.4.5-v1.0.0-patch
+	#fi
+	
+	if [ "`use ext3`" ]
+	then
+		echo "Applying ext3 patch..."
+		if [ "`use mosix`" ]
+		then
+			echo
+			echo "There will be one reject; we will fix it. (no worries)"
+			echo
+		fi
+		cd ${S}
+		gzip -dc ${DISTDIR}/ext3-${EXT3V}.gz | patch -l -p1
+		if [ "`use mosix`" ]
+		then
+			echo 
+			echo "Fixing reject in include/linux/sched.h..."
+			echo
+			cp ${FILESDIR}/${KV}/sched.h include/linux
+		fi
 	fi
+		
+	#get sources ready for compilation or for sitting at /usr/src/linux
+	echo "Preparing for compilation..."
+	cd ${S}
+	#sometimes we have icky kernel symbols; this seems to get rid of them
+	try make mrproper
+
+	#linux-sources needs to be fully configured, too.  Not just linux
+	#this is the configuration for the default kernel
+	try cp ${FILESDIR}/${KV}/config.bootcd .config
+	try yes \"\" \| make oldconfig
+	echo "Ignore any errors from the yes command above."
+    
+	#fix silly permissions in tarball
+	cd ${WORKDIR}
+	chown -R 0.0 *
+	chmod -R a+r-w+X,u+w *
 }
 		
 src_compile() {
-	if [ "${PN}" != "linux-sources" ]
+	if [ "${PN}" = "linux-sources" ] || [ "${PN}" = "linux-headers" ]
 	then
+		cd ${KS}
+		try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
+	else
 		if [ $PN = "linux" ]
 		then
+			cd ${KS}
 			try make symlinks
 		fi
 		if [ "`use lvm`" ]
@@ -296,26 +295,23 @@ src_compile() {
 			#LEX=\""flex -l"\" modules
 		fi
 		
-		if [ "`use pcmcia-cs`" ]
-		then
-			cd ${KS2}/pcmcia-cs-${PCV}
-			# This is needed for linux-extras
-			if [ -f "Makefile" ] 
-			then
-				try make clean
-			fi
-			try ./Configure -n --kernel=${KS} --moddir=/lib/modules/${KV} \
-			--notrust --cardbus --nopnp --noapm --srctree --sysv --rcdir=/etc/rc.d/
-			try make all
-		fi
-	else
-		#linux-sources
-		try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
+#		if [ "`use pcmcia-cs`" ]
+#		then
+#			cd ${KS2}/pcmcia-cs-${PCV}
+#			# This is needed for linux-extras
+#			if [ -f "Makefile" ] 
+#			then
+#				try make clean
+#			fi
+#			try ./Configure -n --kernel=${KS} --moddir=/lib/modules/${KV} \
+#			--notrust --cardbus --nopnp --noapm --srctree --sysv --rcdir=/etc/rc.d/
+#			try make all
+#		fi
 	fi
 }
 
 src_install() {
-	if [ "${PN}" != "linux-sources" ]
+	if [ "${PN}" = "linux" ] || [ "${PN}" = "linux-extras" ]
     then
 		dodir /usr/lib
 	
@@ -367,16 +363,17 @@ src_install() {
 			ln -sf /usr/src/linux-${KV} build
 		fi
 
-		if [ "`use pcmcia-cs`" ]
-		then
-			#install PCMCIA modules and utilities
-			cd ${KS2}/pcmcia-cs-${PCV}
-			try make PREFIX=${D} MANDIR=${D}/usr/share/man install  
-			rm -rf ${D}/etc/rc.d
-			exeinto /etc/rc.d/init.d
-			doexe ${FILESDIR}/${KV}/pcmcia
-		fi	    
-	else
+#		if [ "`use pcmcia-cs`" ]
+#		then
+#			#install PCMCIA modules and utilities
+#			cd ${KS2}/pcmcia-cs-${PCV}
+#			try make PREFIX=${D} MANDIR=${D}/usr/share/man install  
+#			rm -rf ${D}/etc/rc.d
+#			exeinto /etc/rc.d/init.d
+#			doexe ${FILESDIR}/${KV}/pcmcia
+#		fi	    
+	elif [ "$PN" = "linux-sources" ]
+	then
 		dodir /usr/src
 		cd ${S}
 
@@ -389,14 +386,35 @@ src_install() {
 			echo ">>> Copying sources..."
 			cp -ax ${WORKDIR}/* ${D}/usr/src
 		fi
-	fi	
-    if [ "$PN" != "linux-extras" ]
-    then
+	elif [ "$PN" = "linux-headers" ]
+	then
+		#the linux-headers package basically takes a "snapshot" of your current linux headers
+		dodir /usr/include/linux
+		cp -ax ${KS}/include/linux/* ${D}/usr/include/linux
+		dodir /usr/include/asm
+		cp -ax ${KS}/include/asm-i386/* ${D}/usr/include/asm
+	fi
+	if [ -d ${D}/usr/src/linux-${KV} ]
+	then
 		#don't overwrite existing .config if present
 		cd ${D}/usr/src/linux-${KV}
 		if [ -e .config ]
 		then
 			cp -a .config .config.eg
+		fi
+	fi
+}
+
+pkg_preinst() {
+	if [ "$PN" = "linux-headers" ]
+	then
+		if [ -L ${ROOT}usr/include/linux ]
+		then
+			rm ${ROOT}usr/include/linux
+		fi
+		if [ -L ${ROOT}usr/include/asm ]
+		then
+			rm ${ROOT}usr/include/asm
 		fi
 	fi
 }
