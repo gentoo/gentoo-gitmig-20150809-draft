@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e86fbce23e99a9bf3f9ce6d6ba2911a ChangeLog 385
+MD5 c6906e312eeda3fa90e3f17e8068465b ChangeLog 509
 MD5 512d7de147c48d8d0614ecf4afb4b8fd PerlIO-via-dynamic-0.02.ebuild 565
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 5af8aafbe3620d6eba09893fd93c6fee PerlIO-via-dynamic-0.11.ebuild 524
 MD5 6ca0aa87d971cbea5dede44ef798cf96 files/digest-PerlIO-via-dynamic-0.02 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYG0/I1lqEGTUzyQRAjY3AKCfDt5LNWY+ECuTwZHxVjbVUCHxIQCg1fR+
-HdzVPe+Ojs9Ri8//9H6Up/U=
-=Ul6r
------END PGP SIGNATURE-----
+MD5 9b31f483b2d60c5b132fe7d1e36d8768 files/digest-PerlIO-via-dynamic-0.11 74
