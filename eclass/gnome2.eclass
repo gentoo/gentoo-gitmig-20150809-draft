@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.27 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.28 2003/02/24 23:23:56 liquidx Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -51,7 +51,7 @@ gnome2_src_install() {
 	# we must delay gconf schema installation due to sandbox
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 
-	einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"
+	einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ " ${@}
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
