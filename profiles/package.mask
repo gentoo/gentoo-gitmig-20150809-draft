@@ -669,3 +669,6 @@ app-misc/todo-manager-bronze
 # mask nforce-net-1.0.0261 for bug 24815
 =net-misc/nforce-net-1.0.0261*
 
+# solar@gentoo.org Sept 24 2003
+# masked for security reasons. bug #26780
+<net-mail/qmail-autoresponder-2.02
