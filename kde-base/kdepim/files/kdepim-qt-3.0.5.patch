@@ -1,0 +1,12 @@
+--- ./knotes/knote.cpp	Mon Jul 22 23:06:49 2002
++++ ./knotes/knote.fix	Mon Jul 22 23:08:07 2002
+@@ -495,7 +495,8 @@
+ 
+         QTextDocument* textDoc = new QTextDocument( 0 );
+         textDoc->setFormatter( new QTextFormatterBreakWords );
+-        textDoc->setDefaultFont( font );        // only needed for the pointsize
++// setDefaultFont was removed in QT 3.05 !!!
++//        textDoc->setDefaultFont( font );        // only needed for the pointsize
+         textDoc->setUnderlineLinks( true );
+         textDoc->setStyleSheet( m_editor->styleSheet() );
+         textDoc->setMimeSourceFactory( m_editor->mimeSourceFactory() );

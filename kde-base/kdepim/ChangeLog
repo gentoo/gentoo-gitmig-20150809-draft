@@ -1,11 +1,16 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.6 2002/07/03 07:57:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.7 2002/07/24 06:47:45 rphillips Exp $
 
 *kdepim-3.0.2 (03 Jul 2002)
 
-  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  : : : : : : : : : : : : :
+  23 Jul 2002; Ryan Phillips <rphillips@gentoo.org> kdepim-3.0.2.ebuild :
 
+  Applied patch so kde compiles with qt-3.0.5.
+  Patches submitted by Richard D. Jackson
+
+  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  : 
+  
   New stability release.
 
 *kdepim-3.0.1.20020604 (4 Jun 2002)
