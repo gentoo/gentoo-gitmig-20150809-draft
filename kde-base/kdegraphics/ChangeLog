@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.110 2004/09/20 03:15:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.111 2004/09/20 03:25:36 caleb Exp $
+
+  19 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.3.0.ebuild:
+  Add jpeg2k use flag to ebuild (Bug #52994)
 
   19 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.3.0.ebuild:
   Add povray dep (Bug #38678)
