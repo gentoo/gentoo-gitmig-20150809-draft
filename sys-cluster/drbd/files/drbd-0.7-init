@@ -1,11 +1,7 @@
 #!/sbin/runscript
-# Distributed under the terms of the GNU General Public License v2
-#
-# kindly provided by Ron O'Hara, see
-# http://thread.gmane.org/gmane.comp.linux.drbd/6429
-#
-# modified by Christian Zoffoli <xmerlin@gentoo.org>
-#
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-0.7-init,v 1.2 2005/01/15 21:01:01 xmerlin Exp $
 
 opts="${opts} reload"
 
