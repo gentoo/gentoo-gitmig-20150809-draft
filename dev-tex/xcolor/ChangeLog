@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/xcolor
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xcolor/ChangeLog,v 1.4 2004/04/13 13:19:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xcolor/ChangeLog,v 1.5 2004/04/21 14:30:32 usata Exp $
+
+*xcolor-1.10 (21 Apr 2004)
+
+  21 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> xcolor-1.10.ebuild:
+  Version bumped. Closing bug #48415
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> xcolor-1.09.ebuild:
   marked ~amd64
