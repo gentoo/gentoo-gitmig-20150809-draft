@@ -1,11 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.12 2003/09/17 17:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.13 2003/11/20 11:45:08 liquidx Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GL Extentions for gtk+"
-SRC_URI="http://www.student.oulu.fi/~jlof/gtkglarea/download/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.student.oulu.fi/~jlof/gtkglarea/"
+# GTKGLArea has been abandoned by the author. We'll continue to mirror the
+# source on Gentoo mirrors.
+
+IUSE=""
 SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
