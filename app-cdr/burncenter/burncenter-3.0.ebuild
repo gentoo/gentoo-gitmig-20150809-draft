@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.0.ebuild,v 1.1 2002/11/02 06:57:28 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.0.ebuild,v 1.2 2002/11/02 06:58:47 agenkin Exp $
 
 DESCRIPTION="Easy-to-use text based interface to the UNIX CD burning tools"
 HOMEPAGE="http://alx14.free.fr/burncenter/"
@@ -23,19 +23,19 @@ S="${WORKDIR}/burncenter3"
 
 
 src_compile() {
-        # Nothing to do.
-        true
+	# Nothing to do.
+	true
 }
 
 src_install() {
-        local modulePath=$(perl -V:installprivlib | \
-                perl -p -e "s/^.*?='(.*?)';/\$1/")
+	local modulePath=$(perl -V:installprivlib | \
+		perl -p -e "s/^.*?='(.*?)';/\$1/")
 
-        exeinto /usr/bin
-        doexe burncenter
+	exeinto /usr/bin
+	doexe burncenter
 
-        insinto ${modulePath}
+	insinto ${modulePath}
 	doins Burncenter.pm
-        
-        dodoc COPYING doc/DEVELOP-FRONTENDS doc/README doc/TODO
+	
+	dodoc COPYING doc/DEVELOP-FRONTENDS doc/README doc/TODO
 }
