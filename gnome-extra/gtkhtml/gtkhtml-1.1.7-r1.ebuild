@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.7-r1.ebuild,v 1.3 2003/01/08 17:33:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.7-r1.ebuild,v 1.4 2003/01/24 20:35:55 foser Exp $
 
 IUSE="nls gnome"
 
@@ -18,8 +18,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 
-RDEPEND="!<net-mail/evolution-1.2.0
-	>=gnome-extra/gal-0.21
+RDEPEND=">=gnome-extra/gal-0.21
 	<gnome-base/control-center-1.99.0
 	>=gnome-base/libghttp-1.0.9-r1
 	>=dev-libs/libunicode-0.4-r1
