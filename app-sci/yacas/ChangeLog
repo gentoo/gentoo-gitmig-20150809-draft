@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/yacas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/yacas/ChangeLog,v 1.8 2004/07/01 19:38:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/yacas/ChangeLog,v 1.9 2004/09/06 13:24:31 phosphan Exp $
+
+  06 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> -yacas-1.0.54.ebuild,
+  -yacas-1.0.55.ebuild, yacas-1.0.56.ebuild:
+  Declaring .56 stable, removing older versions.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> yacas-1.0.54.ebuild,
   yacas-1.0.55.ebuild, yacas-1.0.56.ebuild:
