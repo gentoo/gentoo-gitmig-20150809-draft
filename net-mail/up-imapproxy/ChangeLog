@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.6 2004/10/18 12:24:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.7 2004/11/14 17:56:47 slarti Exp $
+
+*up-imapproxy-1.2.3_rc2 (14 Nov 2004)
+
+  14 Nov 2004; Tom Martin <slarti@gentoo.org>
+  +up-imapproxy-1.2.3_rc2.ebuild:
+  Version bump and marked ~amd64. Resolves bug 70521, solving various
+  vulnerabilities.
 
   18 Oct 2004; David Holm <dholm@gentoo.org> up-imapproxy-1.2.2.ebuild:
   Added to ~ppc.
