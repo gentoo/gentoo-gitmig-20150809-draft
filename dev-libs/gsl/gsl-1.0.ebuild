@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.0.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.0.ebuild,v 1.3 2002/08/01 16:50:26 seemant Exp $
 
 S=${WORKDIR}/${P}
-
 DESCRIPTION="The GNU Scientific Library"
-
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gsl/${P}.tar.gz"
-
 HOMEPAGE="http://sources.redhat.com/gsl/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
@@ -18,31 +19,15 @@ src_compile() {
  	local myconf
  	myconf="--disable-libtool-lock"
 	
-	./configure --infodir=/usr/share/info \
-				--mandir=/usr/share/man \
-				--prefix=/usr \
-				--host=${CHOST} \
-				${myconf} || die
-	
+	econf ${myconf} || die
 	emake || die
 
-#Uncomment the 'make check ...' line if you want to run the test suite.
-#Note that the check.log file will be several megabytes in size.	
-#	make check > check.log 2>&1 || die
-
+	#Uncomment the 'make check ...' line if you want to run the test suite.
+	#Note that the check.log file will be several megabytes in size.	
+	#	make check > check.log 2>&1 || die
 }
 
 src_install () {
-
-	make prefix=${D}/usr \
-	infodir=${D}/usr/share/info \
-	mandir=${D}/usr/share/man \
-	install || die
-	
-	dodoc AUTHORS COPYING ChangeLog INSTALL KNOWN-PROBLEMS MACHINES 
-NEWS
-
+	einstall || die
+	dodoc AUTHORS COPYING ChangeLog INSTALL KNOWN-PROBLEMS MACHINES NEWS
 }
-
-
-

@@ -1,23 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.4 2002/08/01 16:50:26 seemant Exp $
 
 DESCRIPTION="foreign function call libraries"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/directory/ffcall.html"
+
 # "Ffcall is under GNU GPL. As a special exception, if used in GNUstep
 # or in derivate works of GNUstep, the included parts of ffcall are
 # under GNU LGPL." -ffcall author
-LICENSE="GPL-2"
+LICENSE="GPL-2 | LGPL-2"
+SLOT="0"
+KEYWORDS="x86"
+
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
-SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf || die "./configure failed"
 	emake || die
 }
 
