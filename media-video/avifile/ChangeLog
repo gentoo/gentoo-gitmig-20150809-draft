@@ -1,12 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.33 2003/01/31 16:34:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.34 2003/02/01 20:07:17 raker Exp $
 
 *avifile-0.7.27.20030122-r1 (30 Jan 2003)
 
   01 Feb 2003; Nick Hadaway <raker@gentoo.org>
   avifile-0.7.27.20030130-r1.ebuild :
-  Added the missing download link for the patch.
+  Added the missing download link for the patch.  Added dependancies on
+  alsa-lib, esound, and audiofile.
 
   30 Jan 2003; Nick Hadaway <raker@gentoo.org>
   avifile-0.7.27.20030122-r1.ebuild,

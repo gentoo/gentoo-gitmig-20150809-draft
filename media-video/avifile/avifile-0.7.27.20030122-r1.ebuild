@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.3 2003/01/31 16:34:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.4 2003/02/01 20:07:17 raker Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt"
 
@@ -22,6 +22,9 @@ DEPEND=">=media-libs/divx4linux-20020418
 	>=media-sound/mad-0.14
 	>=media-libs/xvid-0.9.0
 	>=media-sound/lame-3.90
+	>=media-libs/alsa-lib-0.9.0_rc2
+	>=media-sound/esound-0.2.28
+	>=media-libs/audiofile-0.2.3
 	freetype? ( >=media-libs/freetype-2.1 )
 	xv? ( >=x11-base/xfree-4.2.1 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
@@ -43,6 +46,7 @@ src_unpack() {
 
 src_compile() {
 
+	export WANT_AUTOCONF_2_5=1
 	./autogen.sh
 	elibtoolize
 
