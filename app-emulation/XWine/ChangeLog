@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/XWine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.11 2004/06/24 22:37:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.12 2004/10/31 02:12:18 vapier Exp $
+
+*XWine-0.3.2-r1 (30 Oct 2004)
+
+  30 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/0.3.2-missing-paren.patch, +files/0.3.2-wine-update.patch,
+  +XWine-0.3.2-r1.ebuild:
+  Fix wine detection bug #67008 by Schrangl Lukas.
 
   20 Nov 2003; Alex Veber <coronalvr@gentoo.org> XWine-0.3.2.ebuild:
   fix for
