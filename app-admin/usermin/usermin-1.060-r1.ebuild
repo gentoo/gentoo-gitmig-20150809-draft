@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.060.ebuild,v 1.1 2004/03/11 04:27:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.060-r1.ebuild,v 1.1 2004/04/07 08:33:50 eradicator Exp $
 
 DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 ~sparc ~alpha ~ppc"
 IUSE="ssl"
 
 DEPEND="dev-lang/perl
@@ -30,6 +30,9 @@ src_install() {
 	newexe ${FILESDIR}/patch/usermin-init usermin-init
 	dosym /usr/libexec/usermin /etc/usermin
 	dosym /usr/libexec/usermin/usermin-init /usr/sbin/usermin
+
+	# Bug #46273
+	cp ${D}/usr/libexec/usermin/quota/generic-linux-lib.pl ${D}/usr/libexec/usermin/quota/gentoo-linux-lib.pl
 
 	insinto /etc/pam.d
 	newins ${FILESDIR}/${PN}.pam ${PN}

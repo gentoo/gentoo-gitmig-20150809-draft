@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.18 2004/03/12 02:38:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.19 2004/04/07 08:33:49 eradicator Exp $
+
+*usermin-1.060-r1 (07 Apr 2004)
+
+  07 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  usermin-1.060-r1.ebuild, usermin-1.060.ebuild:
+  Fix bug #46273 and mark stable on x86.
 
   11 Mar 2004; Jason Wever <weeve@gentoo.org> usermin-1.051.ebuild:
   Marked stable on sparc.
