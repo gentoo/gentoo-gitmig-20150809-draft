@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.6 2004/07/21 11:04:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.7 2004/08/05 12:17:09 plasmaroo Exp $
+
+*xbox-sources-2.4.26-r4 (05 Aug 2004)
+
+  05 Aug 2004; <plasmaroo@gentoo.org> -xbox-sources-2.4.26-r3.ebuild,
+  +xbox-sources-2.4.26-r4.ebuild, -xbox-sources-2.6.7-r3.ebuild,
+  +xbox-sources-2.6.7-r4.ebuild:
+  Added a patch for the CAN-2004-0415 vulnerability, bug #59378.
 
 *xbox-sources-2.6.7-r3 (21 Jul 2004)
 
