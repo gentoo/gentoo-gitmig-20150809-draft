@@ -105,7 +105,7 @@ pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
 pda - Adds support for portable devices.
 pdflib - Adds support for PDF (Portable Document Format)
 perl - Adds support/bindings for the Perl language.
-pic - Adds PIC support to gcc (???)
+pic - Adds PIC support to gcc (required for prelink support)
 plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)
 png - Adds support for libpng (PNG images)
 pnp - Adds support for PNP in pcmcia-cs (Plug-N-Play)
