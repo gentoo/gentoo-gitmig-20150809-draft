@@ -2,6 +2,13 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*speex-1.0 (28 Mar 2003)
+
+  28 Mar 2003; Michael Imhof <tantive@gentoo.org> speex-1.0.ebuild :
+  User submission from Andy Dustman <andy-gentoo.54e552@dustman.net>.
+  Masked it until someone confirms it works as it should.
+  Should close #18396.
+
 *speex-1.0_beta3 (12 Nov 2002)
 
   15 nov 2002; Nick Hadaway <raker@gentoo.org> speex-1.0_beta3.ebuild :
