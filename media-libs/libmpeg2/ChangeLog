@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.22 2004/04/12 03:21:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.23 2004/04/27 09:07:24 aliz Exp $
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> libmpeg2-0.4.0b.ebuild:
   Added ~sparc keyword.
@@ -46,7 +46,7 @@
   libmpeg2-0.3.2_pre20030625.ebuild:
   Marked stable for x86.
 
-*libmpeg2-0.3.2_pre20030625
+*libmpeg2-0.3.2_pre20030625 (26 Jun 2003)
 
   26 Jun 2003; Nick Hadaway <raker@gentoo.org> 
   libmpeg2-0.3.2_pre20030625.ebuild:
