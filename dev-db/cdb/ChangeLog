@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.8 2004/06/24 21:51:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.9 2004/06/29 15:17:56 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> cdb-0.75.ebuild:
+  sync IUSE (missing)
 
   20 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> cdb-0.75.ebuild:
   use sed -i to change head -1 to head -n 1 in Makefile (bug 33980); more error
