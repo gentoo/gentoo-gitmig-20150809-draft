@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.131.ebuild,v 1.1 2004/03/31 22:44:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.131.ebuild,v 1.2 2004/04/06 17:27:33 foser Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/libbonobo-2.2.1
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/gnome-vfs-2
-	>=gnome-base/libgnomeprint-2.3
+	>=gnome-base/libgnomeprint-2.6
 	>=gnome-base/libgnomeprintui-2.2
 	>=gnome-base/libglade-2"
 
