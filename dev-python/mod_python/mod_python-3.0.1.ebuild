@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.1.ebuild,v 1.1 2003/02/03 02:33:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.1.ebuild,v 1.2 2003/02/03 02:42:06 g2boojum Exp $
 
 DESCRIPTION="An Apache2 DSO providing an embedded Python interpreter"
 HOMEPAGE="http://www.modpython.org/"
@@ -24,7 +24,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib/apache2
+	dodir /usr/lib/{apache2,apache2-extramodules}
 	make install DESTDIR=${D} || die
 	mv ${D}/usr/lib/apache2/${PN}.so ${D}/usr/lib/apache2-extramodules
 	rm -rf ${D}/usr/lib/apache2
