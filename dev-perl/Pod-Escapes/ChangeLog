@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Pod-Escapes
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Escapes/ChangeLog,v 1.1 2004/02/16 15:46:07 mcummings Exp $
+
+*Pod-Escapes-1.03 (16 Feb 2004)
+
+  16 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
+  Pod-Escapes-1.03.ebuild, metadata.xml:
+  Dep for Pod-Simple, dep for test-pod, in turn a dep for xml-twig
+
