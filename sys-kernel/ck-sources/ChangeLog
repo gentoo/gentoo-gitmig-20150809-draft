@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.63 2004/11/06 22:13:08 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.64 2004/11/07 01:01:04 swegener Exp $
+
+  07 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digest.
 
 *ck-sources-2.4.27-r1 (06 Nov 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.14 2004/11/06 23:12:37 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.15 2004/11/07 01:05:12 swegener Exp $
+
+  07 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digest.
 
 *xbox-sources-2.6.8.1-r2 (06 Nov 2004)
 
