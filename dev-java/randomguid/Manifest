@@ -1,4 +1,4 @@
-MD5 0d9658599f8e8c8f8c4bd5be29c07ff3 randomguid-1.2.ebuild 1514
-MD5 c7fb79ab61aac108ae64f5111ec32c74 ChangeLog 458
+MD5 a67a98dec75660a4a7b9090888095aff randomguid-1.2.1.ebuild 1536
+MD5 4a69f5a2f31c1389aa2d22fcb6218010 ChangeLog 552
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 6bdfb93cdfa356c8719cd1731135b151 files/digest-randomguid-1.2 58
+MD5 0ba309c1a7d728217d2b8cf9cf859077 files/digest-randomguid-1.2.1 58
