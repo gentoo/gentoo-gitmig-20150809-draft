@@ -23,6 +23,7 @@
              (:file "swank")
 	     (:file "xref")
 	     (:file "swank-clisp")
-	     (:file "swank-gray")))
+	     (:file "swank-gray"))
+    #+sbcl :depends-on #+sbcl (sb-bsd-sockets))
 
 ;; swank.asd ends here
