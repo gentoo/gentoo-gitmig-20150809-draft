@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.53 2005/01/10 15:04:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.54 2005/02/10 15:40:40 swegener Exp $
+
+  10 Feb 2005; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
   10 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> sbcl-0.8.18.ebuild:
   Fixed typo: :sb-threads should have been :sb-thread
