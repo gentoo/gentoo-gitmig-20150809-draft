@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.43-r2.ebuild,v 1.4 2004/08/21 22:55:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.43-r3.ebuild,v 1.1 2004/08/21 22:55:57 kloeri Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	dosbin check_wtmpx chklastlog chkproc chkrootkit chkwtmp ifpromisc \
+	dosbin chkdirs chklastlog chkproc chkrootkit chkwtmp ifpromisc \
 		strings-static || die
 	dodoc README README.chklastlog README.chkwtmp
 }
