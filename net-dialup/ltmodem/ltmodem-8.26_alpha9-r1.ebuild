@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.26_alpha9-r1.ebuild,v 1.6 2003/12/06 17:16:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.26_alpha9-r1.ebuild,v 1.7 2003/12/07 11:36:15 lanius Exp $
 
 MY_P="${P/_alpha/a}"
 DESCRIPTION="Winmodems with Lucent Apollo (ISA) and Mars (PCI) chipsets"
@@ -21,7 +21,7 @@ src_compile() {
 	sed -e 's:make -e:make:' \
 	 -e 's:read -p:echo:' \
 		build_module.orig > build_module
-	FAST="1" ./build_module --with-force=yes || die
+	FAST="1" ./build_module ${KV} --with-force || die
 }
 
 src_install() {
