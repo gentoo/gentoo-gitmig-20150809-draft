@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.24 2004/10/16 08:48:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.25 2004/11/12 12:19:34 axxo Exp $
+
+  12 Nov 2004; Thomas Matthijs <axxo@gentoo.org> kaffe-1.1.4.ebuild:
+  follow ewarn/einfo policy #70872
 
   16 Oct 2004; Dylan Carlson <absinthe@gentoo.org> kaffe-1.1.4.ebuild:
   Stable on amd64.

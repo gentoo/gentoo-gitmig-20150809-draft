@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.11 2004/10/16 08:48:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.12 2004/11/12 12:19:34 axxo Exp $
 
 inherit java
 
@@ -39,14 +39,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "-------------------------------------------------------"
-	ewarn "WARNING WARNING WARNING WARNING WARNING WARNING WARNING"
-	ewarn "-------------------------------------------------------"
 	ewarn "By all means, do not use Kaffe as your default JDK/JRE!"
 	ewarn "Kaffe is currently meant for testing... it should be"
 	ewarn "only be used by developers or bug-hunters willing to deal"
 	ewarn "with oddities that are bound to come up while using Kaffe!"
-	ewarn "-------------------------------------------------------"
-	ewarn
 }
