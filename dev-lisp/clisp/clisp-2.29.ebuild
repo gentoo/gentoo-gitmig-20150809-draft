@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.29.ebuild,v 1.3 2002/10/05 05:39:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.29.ebuild,v 1.4 2003/02/04 16:06:56 nall Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ DEPEND="X? ( x11-base/xfree )"
 RDEPEND="$DEPEND"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 src_compile() {
 	local myconf="--with-dynamic-ffi --with-dynamic-modules --with-export-syscalls --with-module=wildcard --with-module=regexp --with-module=bindings/linuxlibc6"
