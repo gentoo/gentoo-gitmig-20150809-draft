@@ -1,6 +1,13 @@
-# ChangeLog for app-admin/kebuild
+# ChangeLog for app-admin/kemerge
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/ChangeLog,v 1.1 2002/04/19 18:45:08 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/ChangeLog,v 1.2 2002/07/28 17:05:39 danarmak Exp $
+
+*kemerge-0.5 (28 Jul 2002)
+
+  28 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version. No longer depends on kebuild and kebuildpart, which ahe been
+  integrated into the kemerge package. This closes #4870.
 
 * kemerge-0.4 (18 April 2002)
 
