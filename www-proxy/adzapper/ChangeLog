@@ -1,6 +1,11 @@
 # ChangeLog for www-proxy/adzapper
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/ChangeLog,v 1.5 2004/12/29 01:52:31 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/ChangeLog,v 1.6 2005/02/16 22:13:59 mrness Exp $
+
+  17 Feb 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  -adzapper-20031105.ebuild, -adzapper-20040104.ebuild,
+  adzapper-20040408.ebuild:
+  Remove old versions
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/adzapper-20040408.ebuild,v 1.3 2004/09/03 16:06:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/adzapper-20040408.ebuild,v 1.4 2005/02/16 22:13:59 mrness Exp $
 
-DESCRIPTION="redirector for squid that intercepts advertising, page counters and some web bugs"
+DESCRIPTION="Redirector for squid that intercepts advertising, page counters and some web bugs"
 HOMEPAGE="http://adzapper.sourceforge.net/"
 
 MY_P=${P/zapper/zap}
