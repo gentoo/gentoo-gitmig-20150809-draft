@@ -1,10 +1,17 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.18 2002/09/09 19:33:57 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.19 2002/09/13 14:48:23 phoenix Exp $
 
-*wine-20020809 (09 Sep 2002)
+*wine-20020904-r1 (13 Sep 2002)
 
-  09 Sep 2002; phoen][x <phoenix@gentoo.org> wine-20020809.ebuild :
+  13 Sep 2002; phoen][x <phoenix@gentoo.org> wine-20020904-r1.ebuild, ChangeLog :
+
+  Added manpage installation. This installs the manpage of wine as ${PN}.
+  Tidied up the ChangeLog.
+
+*wine-20020904 (09 Sep 2002)
+
+  09 Sep 2002; phoen][x <phoenix@gentoo.org> wine-20020904.ebuild :
 
   Bumped to new version. 
 
@@ -36,19 +43,22 @@
   Updated ebuild so it installs /usr/wine/bin/regapi.  Closes bug #5611.
 
   18 Jun 2002; Michael Cohen <mjc@gentoo.org> wine-20020710.ebuild :
+
   Added ALSA and arts dependencies (Bug #5206 and friends)
 
-*wine-20020710    (17 Jun 2002)
-  17 Jun 2002 ;Michael Cohen <mjc@gentoo.org> wine-20020710.ebuild :
+*wine-20020710 (17 Jun 2002)
+
+  17 Jun 2002; Michael Cohen <mjc@gentoo.org> wine-20020710.ebuild :
+
   Version bump
 
-
 *wine-20020605-r2 (15 Jun 2002)
-  15 Jun 2002 ;Spider <spider@gentoo.org> wine-20020605-r2.ebuild :
-  the /etc/wine stuff wasn't installed so I fixed that (seems the source had moved into documentation/samples )
 
+  15 Jun 2002; Spider <spider@gentoo.org> wine-20020605-r2.ebuild :
 
-  
+  the /etc/wine stuff wasn't installed so I fixed that 
+  (seems the source had moved into documentation/samples)
+
 *wine-20020605-r1 (14 Jun 2002)
 
   14 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
@@ -69,7 +79,6 @@
 
   14 Apr 2002; Dan Armak <danarmak@gentoo.org>: new upstream release
 
-
 *wine-20020310-r1 (29 Mar 2002)
 
   29 Mar 2002; Dan Armak <danarmak@gentoo.org>: fix bug #1373: disable custom optimizations,
@@ -82,8 +91,7 @@
 
   man page/LFH fix submitted by Matthew Kennedy.
 
-
-22 Mar 2002; Dan Armak <danarmak@gentoo.org> Add missing /etc/wine/winedefault.reg file.
+  22 Mar 2002; Dan Armak <danarmak@gentoo.org> Add missing /etc/wine/winedefault.reg file.
 
 *wine-20020310 (12 Mar 2002)
 

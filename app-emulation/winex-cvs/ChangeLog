@@ -1,14 +1,17 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.4 2002/09/13 11:46:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.5 2002/09/13 14:51:07 phoenix Exp $
 
-  13 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+*winex-cvs-2.1 (08 September 20002)
+
+  13 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.1.ebuild :
+
+  Added manpage installation. This installs the manpage of wine as ${PN}.
+
+  13 Sep 2002; Dan Armak <danarmak@gentoo.org> winex-cvs-2.1.ebuild :
 
   Fix issue discussed in comments of bug #7319 where dev-util/cvs was missing
   from the dep list.
-
-
-*winex-cvs-2.1 (08 September 20002)
 
   08 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.1.ebuild,
   files/digest-winex-cvs-2.1, files/winex-cvs-fake_windows.tar.bz2,
@@ -21,6 +24,16 @@
   waste HD space because you didn't fetch different branches in the first place. :)
 
 *winex-cvs-2.0 (08 September 20002)
+
+  13 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.0.ebuild :
+
+  Added manpage installation. This installs the manpage of wine as ${PN}.
+  Removed obsolete RDEPEND tag.
+
+  13 Sep 2002; Dan Armak <danarmak@gentoo.org> winex-cvs-2.0.ebuild :
+
+  Fix issue discussed in comments of bug #7319 where dev-util/cvs was missing
+  from the dep list.
 
   08 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.0.ebuild,
   files/digest-winex-cvs-2.0, files/winex-cvs-fake_windows.tar.bz2,

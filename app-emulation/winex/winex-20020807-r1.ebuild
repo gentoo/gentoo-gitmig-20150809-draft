@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.3 2002/09/13 14:49:38 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807-r1.ebuild,v 1.1 2002/09/13 14:49:38 phoenix Exp $
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
@@ -39,11 +39,11 @@ src_compile() {
 	unset CXXFLAGS
 	
 	./configure --prefix=/usr/lib/winex \
-	--sysconfdir=/etc/winex \
-	--host=${CHOST} \
-	--enable-curses \
-	--with-x \
-	${myconf} || die "configure failed"
+		--sysconfdir=/etc/winex \
+		--host=${CHOST} \
+		--enable-curses \
+		--with-x \
+		${myconf} || die "configure failed"
 
 	# Fixes a winetest issue
 	cd ${S}/programs/winetest
@@ -62,23 +62,23 @@ src_compile() {
 
 src_install () {
 
-	local WINEXMAKEOPTS="prefix=${D}/usr/lib/winex"
+	local WINEXMAKEOPTS="prefix=${D}/usr/lib/${PN}"
 	
-	# Installs winex to /usr/lib/winex
+	# Installs winex to ${D}/usr/lib/${PN}
 	cd ${S}
 	make ${WINEXMAKEOPTS} install || die "make install failed"
 	cd ${S}/programs
 	make ${WINEXMAKEOPTS} install || die "make install failed"
 	
+	# Creates /usr/lib/${PN}/.data with fake_windows in it
+	# This is needed for ~/.${PN} initialization by our 
+	# winex wrapper script
+	mkdir ${D}/usr/lib/${PN}/.data
+	cp -R ${WORKDIR}/fake_windows ${D}/usr/lib/${PN}/.data
+	cp ${FILESDIR}/${P}-config ${D}/usr/lib/${PN}/.data/config
 
-	# Creates /usr/lib/winex/.data with fake_windows in it
-	# This is needed for our new winex wrapper script
-	mkdir ${D}/usr/lib/winex/.data
-	cp -R ${WORKDIR}/fake_windows ${D}/usr/lib/winex/.data
-	cp ${FILESDIR}/${P}-config ${D}/usr/lib/winex/.data/config
-
-	# winedefault.reg doesnt exist anymore
-	cp ${WORKDIR}/wine/winedefault.reg ${D}/usr/lib/winex/.data/winedefault.reg
+	# winedefault.reg -- standard registry setup
+	cp ${WORKDIR}/wine/winedefault.reg ${D}/usr/lib/${PN}/.data/winedefault.reg
 
 	# Install the wrapper script
 	mkdir ${D}/usr/bin
@@ -92,9 +92,14 @@ src_install () {
 	insinto /usr/lib/winex/.data/fake_windows/Windows
 	doins documentation/samples/system.ini
 	doins documentation/samples/generic.ppd
+
+	# Manpage setup
+	cp ${D}/usr/lib/${PN}/man/man1/wine.1 ${D}/usr/lib/${PN}/man/man1/${PN}.1
+	doman ${D}/usr/lib/${PN}/man/man1/${PN}.1
+	rm ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	
 	# Remove the executable flag from those libraries.
-	cd ${D}/usr/lib/winex/bin
+	cd ${D}/usr/lib/${PN}/bin
 	chmod a-x *.so
 		
 }
@@ -105,6 +110,9 @@ pkg_postinst() {
 	einfo "*       This is a wrapper-script which will take care of everything  *"
 	einfo "*       else. If you have further questions, enhancements or patches *"
 	einfo "*       send an email to phoenix@gentoo.org                          *"
+	einfo "*                                                                    *"
+	einfo "*       Manpage has been installed to the system.                    *"
+	einfo "*       \"man winex\" should show it.                                  *"
 	einfo "**********************************************************************"
 }
 

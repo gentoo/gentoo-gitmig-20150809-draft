@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.0.ebuild,v 1.2 2002/09/13 11:46:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.0.ebuild,v 1.3 2002/09/13 14:51:07 phoenix Exp $
 
 # Dont modify the ECVS_BRANCH setting yourself.
 # Instead, make a backup of this ebuild and rename it to
@@ -17,7 +17,6 @@ ECVS_SERVER="cvs.winex.sourceforge.net:/cvsroot/winex"
 ECVS_MODULE="wine"
 ECVS_BRANCH=${PN/cvs/}${PV/./-}
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${ECVS_BRANCH}"
-mkdir -p ${ECVS_TOP_DIR}
 
 inherit cvs
 
@@ -38,8 +37,6 @@ newdepend "virtual/x11
 	dev-lang/tcl dev-lang/tk
 	opengl? ( virtual/opengl )
 	cups? ( net-print/cups )"
-
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd ${S}
@@ -108,6 +105,12 @@ src_install () {
 	doins documentation/samples/system.ini
 	doins documentation/samples/generic.ppd
 	
+	# Manpage setup
+	cp ${D}/usr/lib/${PN}/man/man1/wine.1 ${D}/usr/lib/${PN}/man/man1/${PN}.1
+	doman ${D}/usr/lib/${PN}/man/man1/${PN}.1
+	rm ${D}/usr/lib/${PN}/man/man1/${PN}.1
+
+
 	# Remove the executable flag from those libraries.
 	cd ${D}/usr/lib/winex-cvs/bin
 	chmod a-x *.so
@@ -120,6 +123,9 @@ pkg_postinst() {
 	einfo "*       This is a wrapper-script which will take care of everything  *"
 	einfo "*       else. If you have further questions, enhancements or patches *"
 	einfo "*       send an email to phoenix@gentoo.org                          *"
+	einfo "*                                                                    *"
+	einfo "*       Manpage has been installed to the system.                    *"
+	einfo "*       \"man winex-cvs\" should show it.                              *"
 	einfo "**********************************************************************"
 }
 

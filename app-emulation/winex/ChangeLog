@@ -1,22 +1,31 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.11 2002/09/04 06:06:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.12 2002/09/13 14:49:38 phoenix Exp $
+
+*winex-20020807-r1 (13 Sep 2002)
+  
+  13 Sep 2002; phoen][x <phoenix@gentoo.org> winex-20020807-r1.ebuild :
+
+  Added manpage installation. This installs the manpage of wine as ${PN}.
 
 *winex-20020807 (19 Aug 2002)
+
+  07 Sep 2002; phoen][x <phoenix@gentoo.org> winex-20020807.ebuild :
+  Renamed the regedit wrapper to "/usr/bin/regedit-winex".
 
   04 Sep 2002; Nick Hadaway <raker@gentoo.org> files/81winex,
   files/winex-20020807-config :
   Updated LDPATH, PATH, and ROOTPATH in 81winex and added a drive H
   to the default config.
 
+  06 Aug 2002; phoen][x <phoenix@gentoo.org> winex-20020807.ebuild:
+  Bumped to new CVS Version (WineX 2.1). Lets hope that this
+  will fix some of the weird winex issues.  
+
 *winex-20020804 (04 Aug 2002)
 
   19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, winex-20020804.ebuild :
   Added -ppc to the keywords.
-
-  06 Aug 2002; phoen][x <phoenix@gentoo.org> winex-20020807.ebuild:
-  Bumped to new CVS Version (WineX 2.1). Lets hope that this
-  will fix some of the weird winex issues.
 
   06 Aug 2002; phoen][x <phoenix@gentoo.org> winex-20020804.ebuild:
   Fixed a typo (unset CFLAGS=""); patched tools/wineshelllink to use "winex"
