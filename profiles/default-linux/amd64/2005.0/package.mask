@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.9 2005/01/16 17:56:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.10 2005/01/16 18:03:33 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Force binutils-config versions of binutils
@@ -14,15 +14,6 @@
 ~sys-devel/gcc-3.4.1
 ~sys-devel/gcc-3.4.2
 =sys-devel/gcc-3.4.3
-
-# Jeremy Huddleston <eradicator@gentoo.org>
-# Don't use packages which do ugly symlink hackery for lib/lib64
-=x11-libs/qt-2.3.2-r1
-~x11-libs/qt-3.2.3
-~x11-libs/qt-3.3.1
-~x11-libs/qt-3.3.2
-=x11-libs/qt-3.3.3
-=x11-libs/qt-3.3.3-r1
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Use linux headers which give us asm-i386 headers as well

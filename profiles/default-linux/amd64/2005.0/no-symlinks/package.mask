@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/package.mask,v 1.1 2005/01/13 11:45:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/package.mask,v 1.2 2005/01/16 18:03:33 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to / look in proper $(get_libdir))
@@ -7,3 +7,13 @@
 <dev-lang/tk-8.4.6-r1
 <dev-tcltk/expect-5.42.1
 <net-libs/courier-authlib-0.52
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Don't use packages which do ugly symlink hackery for lib/lib64
+=x11-libs/qt-2.3.2-r1
+~x11-libs/qt-3.2.3
+~x11-libs/qt-3.3.1
+~x11-libs/qt-3.3.2
+=x11-libs/qt-3.3.3
+=x11-libs/qt-3.3.3-r1
+
