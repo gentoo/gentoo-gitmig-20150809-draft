@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3035 2004/07/31 17:12:25 axxo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3036 2004/08/01 09:50:04 axxo Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <axxo@gentoo.org> (Aug 1 2004)
+# Untill 1.5 jdk is unmasked
+=x11-misc/lookingglass-bin-0.5
 
 # <kugelfang@gentoo.org> (Jul 31 2004)
 # Not to be unmasked before all packages of this brand ship out.
