@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0.ebuild,v 1.1 2005/02/19 22:51:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0.ebuild,v 1.2 2005/03/09 21:49:24 luckyduck Exp $
+
+inherit eutils flag-o-matic
 
 IUSE="alsa arts jack"
 
@@ -37,7 +39,7 @@ pkg_setup() {
 		snd_conf="--without-arts"
 	else
 		if use arts; then
-			snd_conf="--without-arts"
+			snd_conf="--with-arts"
 		else
 			ewarn "Neither arts or alsa USE flags selected.  Choosing"
 			ewarn "alsa by default."
@@ -46,7 +48,16 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PV}-dssi.patch
+}
+
 src_compile() {
+	strip-flags -fvisibility-inlines-hidden
+
 	addwrite ${QTDIR}/etc/settings
 	econf ${snd_conf} `use_with jack` \
 		--with-ladspa \

@@ -1,0 +1,17 @@
+diff -urpN rosegarden-4-1.0.orig/gui/audiopluginoscgui.cpp rosegarden-4-1.0/gui/audiopluginoscgui.cpp
+--- rosegarden-4-1.0.orig/gui/audiopluginoscgui.cpp	2005-03-09 22:28:07.476891736 +0100
++++ rosegarden-4-1.0/gui/audiopluginoscgui.cpp	2005-03-09 22:29:07.263802744 +0100
+@@ -24,9 +24,12 @@
+ #ifdef HAVE_LIBLO
+ 
+ #include <lo/lo.h>
+-#include <dssi.h>
+ #include <iostream>
+ 
++#ifdef HAVE_DSSI
++#include <dssi.h>
++#endif
++
+ #include "PluginIdentifier.h"
+ #include "AudioPluginInstance.h"
+ #include "MappedCommon.h"
