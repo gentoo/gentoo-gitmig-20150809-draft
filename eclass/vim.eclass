@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.80 2004/11/28 14:34:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.81 2004/11/29 20:35:18 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -430,12 +430,12 @@ src_install() {
 			rm ${D}/usr/bin/vimtutor
 
 			local keep_colors="default"
-			rm -fr ${vimfiles}/colors/!(${keep_colors}).vim
+			ignore=$(rm -fr ${vimfiles}/colors/!(${keep_colors}).vim )
 
 			local keep_syntax="conf|crontab|fstab|inittab|resolv|sshdconfig"
 			# tinkering with the next line might make bad things happen ...
 			keep_syntax="${keep_syntax}|syntax|nosyntax|synload"
-			rm -fr ${vimfiles}/syntax/!(${keep_syntax}).vim
+			ignore=$(rm -fr ${vimfiles}/syntax/!(${keep_syntax}).vim )
 		fi
 
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
