@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.133 2005/01/14 22:01:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.134 2005/01/16 07:48:26 eradicator Exp $
+
+  15 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  distcc-2.18.3-r1.ebuild:
+  Stable amd64 for 2005.0.
 
   14 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   files/distcc-gentoo-multilib.patch:
