@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.53 2004/09/09 18:07:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.54 2004/09/22 23:36:25 lu_zero Exp $
+
+*gdb-6.2.1 (23 Sep 2004)
+
+  23 Sep 2004; Luca Barbato <lu_zero@gentoo.org> +gdb-6.2.1.ebuild:
+  new version, thanks Pär Karlsson <paer.karlsson@kmstudiosystems.com> for
+  reporting
 
   09 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> gdb-6.2.ebuild:
   Making multilib safe and closing bug #63438.
