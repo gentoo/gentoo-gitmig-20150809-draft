@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/banner
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.1 2003/03/04 16:53:34 mholzer Exp $
+
+*banner-1.2.1 (03 Mar 2003)
+
+  03 Mar 2003; Martin Holzer <mholzer@gentoo.org> banner-1.2.1.ebuild
+  files/digest-banner-1.2.1 ChangeLog :
+  Initial import submitted by Joerg Jost <jjost@nikocity.de> #15659.
