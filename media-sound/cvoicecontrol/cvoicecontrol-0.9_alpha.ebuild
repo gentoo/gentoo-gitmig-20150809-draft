@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.3 2002/10/04 05:52:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.4 2002/10/20 18:49:33 vapier Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,6 @@ HOMEPAGE="http://www.kiecza.de/daniel/linux/cvoicecontrol/index.html"
 SRC_URI="http://www.kiecza.de/daniel/linux/${MY_P}.tar.bz2"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc3.ebuild,v 1.5 2002/10/04 05:52:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc3.ebuild,v 1.6 2002/10/20 18:49:33 vapier Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -20,7 +20,6 @@ DEPEND="sys-devel/autoconf
 	virtual/glibc
 	>=sys-apps/portage-1.9.10
 	>=sys-apps/baselayout-1.7.9"
-RDEPEND="${DEPEND}"
 PROVIDE="virtual/alsa"
 
 SLOT="0.9"

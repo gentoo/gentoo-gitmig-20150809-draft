@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.35.0-r1.ebuild,v 1.2 2002/10/05 05:39:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.35.0-r1.ebuild,v 1.3 2002/10/20 18:49:33 vapier Exp $
 
 IUSE="X alsa"
 
@@ -20,7 +20,6 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	X? ( x11-base/xfree )"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 

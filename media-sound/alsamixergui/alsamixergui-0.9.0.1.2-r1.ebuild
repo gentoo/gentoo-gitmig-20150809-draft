@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r1.ebuild,v 1.3 2002/10/04 05:52:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r1.ebuild,v 1.4 2002/10/20 18:49:33 vapier Exp $
 
 NATIVE_VER=0.9.0rc1-2
 S=${WORKDIR}/${PN}-${NATIVE_VER}
@@ -13,7 +13,6 @@ DEPEND=">=media-sound/alsa-driver-0.9.0_rc1
 	>=media-libs/alsa-lib-0.9.0_rc1
 	>=media-sound/alsa-utils-0.9.0_rc1
 	>=x11-libs/fltk-1.1.0_rc6"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86"

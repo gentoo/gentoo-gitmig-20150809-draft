@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.0.ebuild,v 1.4 2002/10/05 05:39:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.0.ebuild,v 1.5 2002/10/20 18:49:33 vapier Exp $
 
 IUSE="arts oggvorbis"
 
@@ -15,7 +15,6 @@ DEPEND="~x11-libs/wxGTK-2.2.9
 	media-sound/mad
 	media-libs/libsndfile"
 	
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86"

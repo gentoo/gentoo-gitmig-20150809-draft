@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.14.2b-r1.ebuild,v 1.7 2002/10/05 05:39:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.14.2b-r1.ebuild,v 1.8 2002/10/20 18:49:33 vapier Exp $
 
 IUSE="nls esd"
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://mad.sourceforge.net/"
 DESCRIPTION="A high-quality MP3 decoder"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DEPEND="virtual/glibc esd? ( media-sound/esound ) nls? ( sys-devel/gettext )"
-RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
