@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.6 2003/10/02 18:15:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.7 2003/10/03 19:36:08 pappy Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -42,6 +42,8 @@ src_unpack() {
 
 src_compile() {
 	use static && append-flags -static
+	has_version "sys-devel/hardened-gcc" && append-flags -lc
+
 	./configure --prefix="" --sysconfdir=/var/lib --mandir=/usr/share/man || die
 	emake || die
 }
