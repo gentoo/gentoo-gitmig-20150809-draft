@@ -1,0 +1,15 @@
+# ChangeLog for media-plugins/xmms-dflowers
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/ChangeLog,v 1.1 2002/08/30 08:35:31 seemant Exp $
+
+
+*dflowers-1.2,  (22 May 2002)
+
+  30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Relocated to media-plugins
+
+  22 May 2002; George Shapovalov <george@gentoo.org> Changelog :
+
+  Initial release
+

@@ -1,0 +1,13 @@
+--- Makefile.orig	2001-01-20 15:18:28.000000000 +0100
++++ Makefile	2002-05-14 19:45:54.000000000 +0200
+@@ -29,6 +29,7 @@
+ 	rm -f *.o core *~
+ 
+ install:
+-	install libdscope.so $(INSTALL-DIR)
+-	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
+-	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
++	mkdir -p $(DESTDIR)$(INSTALL-DIR)
++	install libdscope.so $(DESTDIR)$(INSTALL-DIR)
++	mkdir -p $(DESTDIR)$(XMMS_DATADIR)/$(THEME_SUBDIR)
++	install bg_*.xpm $(DESTDIR)$(XMMS_DATADIR)/$(THEME_SUBDIR)

@@ -1,0 +1,17 @@
+# ChangeLog for media-plugins/xmms-aalsa
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-aalsa/ChangeLog,v 1.1 2002/08/30 08:35:31 seemant Exp $
+
+*xmms-aalsa-0.5.4-r3 (1 Feb 2002)
+
+  30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Moved to media-plugins
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
