@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.3.1.ebuild,v 1.10 2003/09/09 04:36:03 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.3.1.ebuild,v 1.11 2004/03/11 21:02:39 zx Exp $
 
 At="j2sdk-1_3_1-doc.zip"
 S="${WORKDIR}/docs"
