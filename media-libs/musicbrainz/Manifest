@@ -1,0 +1,7 @@
+MD5 f5d0af435f031f380f8783568b604101 ChangeLog 1837
+MD5 3ceca48d9f43e67091161488c73b6b5b musicbrainz-1.0.1-r1.ebuild 745
+MD5 6899729ac556ff17eea5d638179a7acc musicbrainz-1.1.0.ebuild 745
+MD5 4d7e12efdcf8465ed44696340326a226 musicbrainz-2.0.1.ebuild 1262
+MD5 1eb227a6953871e180db8cc3547f5d9d files/digest-musicbrainz-1.0.1-r1 69
+MD5 13f849be70c83103b136e76e0cd7757e files/digest-musicbrainz-1.1.0 69
+MD5 158cb5b0798d4347d4ef64fb92fa7094 files/digest-musicbrainz-2.0.1 72

@@ -1,14 +1,17 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.10 2003/03/30 17:32:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.11 2003/04/16 14:15:57 mholzer Exp $
+
+*musicbrainz-2.0.1 (23 Mar 2003)
+
+  16 Apr 2003; Martin Holzer <mholzer@gentoo.org> musicbrainz-2.0.1.ebuild:
+  Added export WANT_AUTOCONF_2_5=1. Closes #19418
 
   30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> musicbrainz-2.0.1.ebuild :
   - Regen autoconf/make stuff to fix problems with newer versions of automake.
   - Do not try to install non-existing doc 'NEWS'.
   - Remove CC stuff, as it is not distcc friendly, but rather get it to build
     with our CFLAGS by unsetting the hard-coded ones in configure.in.
-
-*musicbrainz-2.0.1 (23 Mar 2003)
 
   23 Mar 2003; jje <jje@gentoo.org> musicbrainz-2.0.1.ebuild :
   New ebuild for Music Brainz 2.0.1.
