@@ -6,3 +6,4 @@ USE="x86 berkdb crypt libwww mmx ncurses nls pam python readline selinux ssl tcp
 ARCH="x86"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
+POLICYDIR="/etc/security/selinux/src/policy"
