@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.13.ebuild,v 1.1 2002/04/04 10:07:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.14.ebuild,v 1.1 2002/04/04 11:17:09 gbevin Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
