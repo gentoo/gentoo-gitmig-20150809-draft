@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/qcad
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.1 2002/05/02 00:03:52 seemant Exp $
+
+*qcad-1.4.7 (1 May 2002)
+
+  1 May 2002; Seemant Kulleen <seemant@gentoo.org> qcad-1.4.7.ebuild ChangeLog
+  files/digest-qcad-1.4.7 :
+  
+  New package based on simultaneous ebuild submissions from:
+  scott.claridge@bigfoot.com (Scott Claridge) and erics@cfl.rr.com (Eric Sorton)
