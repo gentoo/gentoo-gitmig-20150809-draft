@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.7 2004/04/26 15:27:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.8 2004/04/26 15:33:49 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -13,7 +13,7 @@ inherit flag-o-matic gcc eutils nsplugins
 strip-flags
 
 # Strip flags which create more documented instability
-filter-flags "-fomit-frame-pointer"
+filter-flags -fomit-frame-pointer
 filter-flags -ffast-math
 append-flags -s -fforce-addr
 
@@ -65,7 +65,7 @@ DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/src/${PN}-source-${MY_PV}-source.tar.bz2
 	!moznomail? ( crypt? (
 		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
-		http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz 
+		http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz
 	) )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
@@ -549,10 +549,9 @@ pkg_postrm() {
 		if [[ -x ${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl ]]; then
 			${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl
 			# Fix directory permissions
-			find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
+			find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \;
 			# Fix permissions on chrome files
-			find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
+			find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \;
 		fi
 	fi
 }
-
