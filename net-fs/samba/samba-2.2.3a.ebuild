@@ -1,60 +1,63 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.2-r9.ebuild,v 1.1 2002/03/02 11:20:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.3a.ebuild,v 1.1 2002/03/05 03:04:54 woodchip Exp $
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://samba.org http://www.amherst.edu/~bbstone/howto/samba.html"
 
 S=${WORKDIR}/${P}
 SRC_URI="http://us1.samba.org/samba/ftp/${P}.tar.gz
-	http://www.amherst.edu/~bbstone/recycle_bin/2.2.2/loadparm.c.patch
-	http://www.amherst.edu/~bbstone/recycle_bin/2.2.2/proto.h.patch
-	http://www.amherst.edu/~bbstone/recycle_bin/2.2.2/reply.c.patch"
+	http://www.amherst.edu/~bbstone/recycle_bin/${PV/a/}/loadparm.c.patch
+	http://www.amherst.edu/~bbstone/recycle_bin/${PV/a/}/proto.h.patch
+	http://www.amherst.edu/~bbstone/recycle_bin/${PV/a/}/reply.c.patch"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/pam-0.72
+	acl? ( sys-apps/acl )
 	cups? ( net-print/cups )"
-# needs testing -- ssl? ( >=dev-libs/openssl-0.9.6 )"
-
+	# needs testing -- ssl? ( >=dev-libs/openssl-0.9.6 )
 DEPEND="${RDEPEND}
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 src_unpack() {
 
 	unpack ${P}.tar.gz ; cd ${S}
 	use afs && ( patch -p0 < ${FILESDIR}/samba-2.2.1a-afs.diff || die )
 	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
-	patch -p1 < ${FILESDIR}/samba-2.2.2-XFS-quota.diff || die
+	patch -p1 < ${FILESDIR}/samba-2.2.3a-pam_smbpass.diff || die
+	patch -p1 < ${FILESDIR}/samba-2.2.3a-cli_spoolss_notify.diff || die
 
-	#network recycle bin must be enabled in your smb.conf per share
+	# network recycle bin must be enabled in your smb.conf per share
 	cd ${S}/source
 	patch -p0 < ${DISTDIR}/loadparm.c.patch || die
 	patch -p0 < ${DISTDIR}/proto.h.patch || die
 	patch -p0 < ${DISTDIR}/reply.c.patch || die
 
-	#makes cups not absolutely required
+	# makes cups not absolutely required
 	if [ ! "`use cups`" ] ; then
 		cd ${S}/source
 		cp configure.in configure.in.orig
 		sed -e "s:AC_CHECK_LIB(cups,httpConnect)::" configure.in.orig > configure.in
-		autoconf || die
 	fi
 
-	#fix kerberos include file collision
+	# fix kerberos include file collision
 	cd ${S}/source/include
 	mv profile.h smbprofile.h
 	sed -e "s:profile\.h:smbprofile.h:" includes.h > includes.h.new
 	mv includes.h.new includes.h
+
+	cd ${S}/source
+	autoconf || die
 }
 
 src_compile() {
 
 	local myconf
-	use afs && myconf="--with-afs"
+	use afs && myconf="${myconf} --with-afs"
 	use acl && myconf="${myconf} --with-acl-support"
-	#ssl needs testing...
+	# ssl needs testing...
 	myconf="${myconf} --without-ssl"
 
 	export CFLAGS="${CFLAGS} -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE"
@@ -102,30 +105,29 @@ src_install() {
 		SWATDIR=${D}/usr/share/swat \
 		PRIVATEDIR=${D}/etc/smb/private || die
 
-	#we specified PRIVATEDIR=/etc/smb/private
+	# we specified PRIVATEDIR=/etc/smb/private
 	rm -rf ${D}/usr/private
 	diropts -m 0700 ; dodir /etc/smb/private
 
-	#link /usr/bin/smbmount to /sbin/mount.smbfs which allows it
-	#to work transparently with standard 'mount' command
+	# link /usr/bin/smbmount to /sbin/mount.smbfs which allows it
+	# to work transparently with standard 'mount' command
 	dosym /usr/bin/smbmount /sbin/mount.smbfs
 
-	#handy scripts for user management
+	# handy scripts for user management
 	cd ${S}/source/script
 	exeinto /usr/sbin
 	doexe convert_smbpasswd mknissmbpasswd.sh mknissmbpwdtbl.sh mksmbpasswd.sh
 
-	#place this correctly
+	# place this correctly
 	mv ${D}/usr/bin/pam_smbpass.so ${D}/lib/security/pam_smbpass.so
 
-	#make the smb backend symlink for smb printing support with cups
-	if [ -d /usr/lib/cups/backend ] && [ "`use cups`" ]
-	then
+	# make the smb backend symlink for smb printing support with cups
+	if [ "`use cups`" ] ; then
 		dodir /usr/lib/cups/backend
 		dosym /usr/bin/smbspool /usr/lib/cups/backend/smb
 	fi
 
-	#too many docs to sort through.  install 'em all :>
+	# too many docs to sort through -- install them all :)
 	cd ${S}
 	dodoc COPYING Manifest README Roadmap WHATSNEW.txt
 	docinto full_docs ; cp -a docs/* ${D}/usr/share/doc/${PF}/full_docs
@@ -151,8 +153,8 @@ pkg_prerm() {
 
 pkg_postinst() {
 
-	#we touch ${D}/etc/smb/smb.conf so that people installing samba
-	#just to mount smb shares don't get annoying warnings all the time.
+	# we touch ${D}/etc/smb/smb.conf so that people installing samba
+	# just to mount smb shares don't get annoying warnings all the time.
 	if [ ! -e ${ROOT}etc/smb/smb.conf ] ; then
 		touch ${ROOT}etc/smb/smb.conf
 	fi

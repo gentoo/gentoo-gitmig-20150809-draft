@@ -1,0 +1,13 @@
+diff -ur samba-2.2.3a.orig/source/rpc_client/cli_spoolss_notify.c samba-2.2.3a/source/rpc_client/cli_spoolss_notify.c
+--- samba-2.2.3a.orig/source/rpc_client/cli_spoolss_notify.c	Sat Feb  2 19:46:49 2002
++++ samba-2.2.3a/source/rpc_client/cli_spoolss_notify.c	Sun Mar  3 21:05:20 2002
+@@ -70,8 +70,7 @@
+ 	}
+   
+ 	if (!attempt_netbios_session_request(cli, global_myname, remote_machine, &cli->dest_ip)) {
+-		DEBUG(0,("connect_to_client: machine %s rejected the NetBIOS session request. Error was %s\n", remote_machine, cli_errstr(cli) ));
+-		cli_shutdown(cli);
++		DEBUG(0,("connect_to_client: machine %s rejected the NetBIOS session request.\n", remote_machine));
+ 		return False;
+ 	}
+ 
