@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.62.ebuild,v 1.1 2004/12/23 21:37:02 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.62.ebuild,v 1.2 2005/01/02 15:03:40 ribosome Exp $
 
 inherit gcc
 
 DESCRIPTION="PHYLIP - The PHYLogeny Inference Package"
-HOMEPAGE="http://evolution.genetics.washington.edu/${PN}.html"
+HOMEPAGE="http://evolution.genetics.washington.edu/phylip.html"
 SRC_URI="ftp://evolution.genetics.washington.edu/pub/${PN}/${P}.tar.gz"
 LICENSE="freedist"
 
