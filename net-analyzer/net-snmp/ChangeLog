@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.78 2005/01/30 07:09:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.79 2005/02/02 11:02:53 ka0ttic Exp $
+
+  02 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2-r3.ebuild:
+  Use perl-module.eclass and let it handle perllocal.pod to prevent a file
+  collision - bug 80041.
 
 *net-snmp-5.2-r3 (30 Jan 2005)
 

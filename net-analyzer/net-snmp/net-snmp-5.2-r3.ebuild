@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.1 2005/01/30 07:09:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.2 2005/02/02 11:02:53 ka0ttic Exp $
 
-inherit eutils fixheadtails
+inherit eutils fixheadtails perl-module
 
 DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
@@ -19,10 +19,6 @@ DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	perl? (
-		>=sys-devel/libperl-5.8.0
-		>=dev-perl/ExtUtils-MakeMaker-6.11-r1
-	)
 	lm_sensors? (
 		x86?   ( sys-apps/lm-sensors )
 		amd64? ( sys-apps/lm-sensors )
@@ -103,7 +99,8 @@ src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	if use perl ; then
-		make DESTDIR="${D}" perlinstall || die "make perlinstall failed"
+		mytargets="DESTDIR=${D} perlinstall" perl-module_src_install
+
 		if ! use X ; then
 			rm -f "${D}/usr/bin/tkmib"
 		fi
