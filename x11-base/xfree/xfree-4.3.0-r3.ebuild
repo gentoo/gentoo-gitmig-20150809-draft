@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.92 2004/01/13 05:25:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.93 2004/01/27 11:53:57 cyfred Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -33,6 +33,17 @@ ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe"
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
+
+# Configure for SYNAPTICS support
+if [ "${ARCH}" = "x86" ]
+then
+	if [ -z "${SYNAPTICS}" ]
+	then
+		SYNAPTICS="yes"
+	fi
+else
+	unset SYNAPTICS
+fi
 
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
@@ -103,7 +114,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -126,7 +137,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
 
-PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
+PDEPEND="x86? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -199,10 +210,13 @@ src_unpack() {
 	cd ${S}
 	eend 0
 
-	ebegin "Adding Synaptics touchpad driver"
-	cd ${WORKDIR}
-	unpack synaptics-${SYNDRV_VER}.tar.bz2 > /dev/null
-	eend 0
+	if [ "${SYNAPTICS}" = "yes" ]
+	then
+		ebegin "Adding Synaptics touchpad driver"
+		cd ${WORKDIR}
+		unpack synaptics-${SYNDRV_VER}.tar.bz2 > /dev/null
+		eend 0
+	fi
 	cd ${S}
 
 #	ebegin "Adding VIA driver"
@@ -568,10 +582,13 @@ src_compile() {
 		cd ${S}
 	fi
 
-	ebegin "Building Synaptics driver..."
-	cd ${SYNDIR}
-	make
-	eend 0
+	if [ "${SYNAPTICS}" = "yes" ]
+	then
+		ebegin "Building Synaptics driver..."
+		cd ${SYNDIR}
+		make
+		eend 0
+	fi
 
 }
 
@@ -888,13 +905,16 @@ src_install() {
 	insinto /usr/share/cursors/xfree/gentoo-silver/cursors
 	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
 
-	# Install Synaptics touchpad driver and docs
-	insinto /usr/X11R6/lib/modules/input
-	doins ${SYNDIR}/synaptics_drv.o
-	exeinto /usr/X11R6/bin
-	doexe ${SYNDIR}/synclient
-	docinto synaptics
-	dodoc ${SYNDIR}/{COMPATIBILITY,FEATURES,FILES,INSTALL,INSTALL.DE,LICENSE,NEWS,PARAMETER,TODO,VERSION}
+	if [ "${SYNAPTICS}" = "yes" ]
+	then
+		# Install Synaptics touchpad driver and docs
+		insinto /usr/X11R6/lib/modules/input
+		doins ${SYNDIR}/synaptics_drv.o
+		exeinto /usr/X11R6/bin
+		doexe ${SYNDIR}/synclient
+		docinto synaptics
+		dodoc ${SYNDIR}/{COMPATIBILITY,FEATURES,FILES,INSTALL,INSTALL.DE,LICENSE,NEWS,PARAMETER,TODO,VERSION}
+	fi
 }
 
 pkg_preinst() {

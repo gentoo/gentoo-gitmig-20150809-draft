@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.35 2004/01/13 05:25:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.36 2004/01/27 11:53:57 cyfred Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -38,11 +38,15 @@ replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
-PATCH_VER="1.3"
+PATCH_VER="1.4"
+FILES_VER="0.1"
 FT2_VER="2.1.2"
 FC2_VER="2.1"
 SISDRV_VER="311003-1"
 SAVDRV_VER="1.1.27t"
+
+PATCH_DIR="${WORKDIR}/patch"
+FILES_DIR="${WORKDIR}/files"
 
 BASE_PV="4.2.0"
 MY_SV="${BASE_PV//\.}"
@@ -54,10 +58,9 @@ SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
 
 X_PATCHES="http://ftp.xfree86.org/pub/XFree86/${PV}/patches/${BASE_PV}-${PV}.diff.gz
-	mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
-	http://www.gentoo.org/~azarah/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
-# Need to get this thing up for testing, but ibiblio havent synced in a few
-# hours ...
+	mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
+
+X_FILES="mirror://gentoo/XFree86-${PV}-files-${FILES_VER}.tar.bz2"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
@@ -87,6 +90,7 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	${SRC_PATH1}/X${MY_SV}src-3.tgz
 	http://fontconfig.org/release/fcpackage.${FC2_VER/\./_}.tar.gz
 	${X_PATCHES}
+	${X_FILES}
 	${X_DRIVERS}
 	truetype? ( ${MS_FONT_URLS} )"
 
@@ -125,7 +129,8 @@ src_unpack() {
 
 	unpack X${MY_SV}src-{1,2,3}.tgz \
 		fcpackage.${FC2_VER/\./_}.tar.gz \
-		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2 \
+		XFree86-${PV}-files-${FILES_VER}.tar.bz2
 
 	# Fix permissions
 	chmod -R 0755 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
@@ -157,10 +162,6 @@ src_unpack() {
 		${S}/lib/Xrender/Imakefile.orig > ${S}/lib/Xrender/Imakefile
 	eend 0
 
-	# Need to fix patches for trident driver, bug #10624
-	rm -f ${WORKDIR}/patch/036*
-	cp ${FILESDIR}/${PVR}/036*bug* ${WORKDIR}/patch/
-
 	if [ "`gcc-version`" = "2.95" ]
 	then
 		# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
@@ -170,23 +171,15 @@ src_unpack() {
 
 	# Remove 082 patch which b0rks keycodes,
 	# see bug #13073
-	rm -f ${WORKDIR}/patch/082*
+	rm -f ${PATCH_DIR}/082*
 
 	# Do not disable DRI for 3dfx cards if resolution higher than 1024x768,
 	# bug #15001.
-	rm -f ${WORKDIR}/patch/035*
+	rm -f ${PATCH_DIR}/035*
 
 	# Various Patches from all over
-	epatch ${WORKDIR}/patch/
+	epatch ${PATCH_DIR}
 	unset EPATCH_EXCLUDE
-
-	# Fix bison parse errors with bison-1.50 and up, bug #11595
-	#
-	#   http://www.jg555.com/cvs/cvsweb.cgi/~checkout~/patches/xfree/xfree-4.2.x.-bison.fixes.patch
-	epatch ${FILESDIR}/xfree-4.2.x.-bison.fixes.patch
-
-	# Fix HOME and END keys to work in xterm, bug #15254
-	epatch ${FILESDIR}/xfree-4.2.x-home_end-keys.patch
 
 	# Update the Savage Driver
 	ebegin "Updating Savage driver"
@@ -231,7 +224,7 @@ src_unpack() {
 	fi
 
 	ebegin "Setting up config/cf/host.def"
-	cd ${S}; cp ${FILESDIR}/${PVR}/site.def config/cf/host.def || die
+	cd ${S}; cp ${FILES_DIR}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
 		>> config/cf/host.def
 
@@ -371,7 +364,7 @@ src_install() {
 	fi
 
 	# Make sure the user running xterm can only write to utmp.
-	fowners root:utmp /usr/X11R6/bin/xterm
+	fowners root.utmp /usr/X11R6/bin/xterm
 	fperms 2755 /usr/X11R6/bin/xterm
 
 	# Fix permissions on locale/common/*.so
@@ -396,8 +389,8 @@ src_install() {
 
 	insinto /etc/X11
 	# We still use freetype for now ...
-	doins ${FILESDIR}/${PVR}/XftConfig
-	newins ${FILESDIR}/${PVR}/XftConfig XftConfig.new
+	doins ${FILES_DIR}/XftConfig
+	newins ${FILES_DIR}/XftConfig XftConfig.new
 	# This is if we are using Fontconfig only ...
 	#newins ${S}/lib/Xft1/XftConfig-OBSOLETE XftConfig
 	dosym ../../../../etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
@@ -438,7 +431,7 @@ src_install() {
 
 	# .la files for libtool support
 	insinto /usr/X11R6/lib
-	doins ${FILESDIR}/${PVR}/lib/*.la
+	doins ${FILES_DIR}/lib/*.la
 
 	# Some Xft2.0 checks to ease things a bit
 	if [ -L ${ROOT}/usr/X11R6/lib/libXft.so ]
@@ -486,34 +479,34 @@ src_install() {
 
 	exeinto /etc/X11
 	# new session management script
-	doexe ${FILESDIR}/${PVR}/chooser.sh
+	doexe ${FILES_DIR}/chooser.sh
 	# new display manager script
-	doexe ${FILESDIR}/${PVR}/startDM.sh
+	doexe ${FILES_DIR}/startDM.sh
 	exeinto /etc/X11/Sessions
-	for x in ${FILESDIR}/${PVR}/Sessions/*
+	for x in ${FILES_DIR}/Sessions/*
 	do
 		[ -f ${x} ] && doexe ${x}
 	done
 	insinto /etc/env.d
-	doins ${FILESDIR}/${PVR}/10xfree
+	doins ${FILES_DIR}/10xfree
 	insinto /etc/X11/xinit
-	doins ${FILESDIR}/${PVR}/xinitrc
+	doins ${FILES_DIR}/xinitrc
 	exeinto /etc/X11/xdm
-	doexe ${FILESDIR}/${PVR}/Xsession ${FILESDIR}/${PVR}/Xsetup_0
+	doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
 	insinto /etc/X11/fs
-	newins ${FILESDIR}/${PVR}/xfs.config config
+	newins ${FILES_DIR}/xfs.config config
 	if [ -n "`use pam`" ]
 	then
 		insinto /etc/pam.d
-		newins ${FILESDIR}/${PVR}/xdm.pamd xdm
+		newins ${FILES_DIR}/xdm.pamd xdm
 		# Need to fix console permissions first
-		newins ${FILESDIR}/${PVR}/xserver.pamd xserver
+		newins ${FILES_DIR}/xserver.pamd xserver
 	fi
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PVR}/xdm.start xdm
-	newexe ${FILESDIR}/${PVR}/xfs.start xfs
+	newexe ${FILES_DIR}/xdm.start xdm
+	newexe ${FILES_DIR}/xfs.start xfs
 	insinto /etc/conf.d
-	newins ${FILESDIR}/${PVR}/xfs.conf.d xfs
+	newins ${FILES_DIR}/xfs.conf.d xfs
 
 	# we want libGLU.so* in /usr/lib
 	mv ${D}/usr/X11R6/lib/libGLU.* ${D}/usr/lib
