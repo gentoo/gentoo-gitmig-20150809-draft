@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r9.ebuild,v 1.5 2003/09/08 21:20:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r9.ebuild,v 1.6 2003/09/08 21:21:14 vapier Exp $
 
 IUSE="doc"
 
@@ -31,7 +31,7 @@ src_unpack () {
 		if [ "`${CC} -dumpversion | cut -d. -f1,2`" = "2.95" ] ; then
 			die "This is for gcc 3.x only"
 		fi
-		tail +400 ${DISTDIR}/${A} | tar xjf -
+		tail -n +400 ${DISTDIR}/${A} | tar xjf -
 	else
 		unpack ${A}
 	fi
