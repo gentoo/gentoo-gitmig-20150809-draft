@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.44 2004/07/13 20:36:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.45 2004/07/23 18:07:50 gongloo Exp $
+
+  23 Jul 2004; Hasan Khalil <gongloo@gentoo.org> lame-3.96.ebuild:
+  Stable on macos.
 
   13 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> lame-3.96.ebuild:
   Stable on alpha.
