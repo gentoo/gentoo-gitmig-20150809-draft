@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.33 2004/11/01 17:05:03 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.34 2004/11/01 17:25:29 langthang Exp $
+
+  01 Nov 2004; Tuan Van <langthang@gentoo.org> -files/main.cf,
+  -files/master.cf, -files/smtpd.conf:
+  remove cruft in FILESDIR.
 
   01 Nov 2004; Tuan Van <langthang@gentoo.org>
   -postfix-1.1.11.20020917-r1.ebuild, -postfix-1.1.11.20020917.ebuild,
