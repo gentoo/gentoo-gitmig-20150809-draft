@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.0_beta1.ebuild,v 1.2 2005/01/17 15:38:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.0_beta1.ebuild,v 1.3 2005/02/01 14:58:02 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -9,13 +9,13 @@ inherit kde-meta eutils
 
 DESCRIPTION="The KDE Control Center"
 KEYWORDS="~x86"
-IUSE="ssl arts opengl"
+IUSE="ssl arts ieee1394 opengl"
 PATCHES="$FILESDIR/configure.in.in-kdm-settings.diff"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )
 	opengl? ( virtual/opengl )
-	>=media-libs/freetype-2.1.3
+	ieee1394? ( sys-libs/libraw1394 )
 	dev-libs/libusb" # to support some logitech mice - should get a local useflag
 			 # (this isn't a separate kcm but a part of the input module)
 RDEPEND="${DEPEND}
