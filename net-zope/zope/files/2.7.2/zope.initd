@@ -1,0 +1,18 @@
+#!/sbin/runscript 
+# Zope rc-script for Gentoo Linux
+# Copyright 2004 Jodok Batlogg <batlogg@gentoo.org>
+# Distributed under the terms of the GNU General Public License, v2 or later.
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.7.2/zope.initd,v 1.1 2004/07/24 21:32:42 batlogg Exp $
+
+# simple wrapper to zopectl script
+case $1 in
+    kill|quit|run|start|reload|status|help|restart|show|stop)
+        echo "$1(ing) zope in ${INSTANCE_HOME}"
+        ${INSTANCE_HOME}/bin/zopectl $1
+        ;;
+    *)  
+        echo      "Usage: $0 {kill|quit|run|start|reload|status|help|restart|show|stop}"
+        ;;
+
+esac
+
