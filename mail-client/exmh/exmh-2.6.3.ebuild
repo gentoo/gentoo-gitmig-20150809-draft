@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/exmh-2.6.3.ebuild,v 1.4 2004/06/24 22:15:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/exmh-2.6.3.ebuild,v 1.5 2004/09/22 23:28:24 ticho Exp $
+
+inherit eutils
 
 DESCRIPTION="An X user interface for MH mail"
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/${PN}/${PN}-${PV}.tar.gz"
@@ -8,7 +10,7 @@ HOMEPAGE="http://beedub.com/exmh/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 IUSE="crypt"
 
 DEPEND="mail-client/nmh
@@ -25,7 +27,7 @@ src_unpack() {
 	cd ${S}
 	for i in *.MASTER; do cp $i ${i%%.MASTER}; done
 	mv exmh.l exmh.1
-	patch -p1 < ${FILESDIR}/exmh-2.6.3-conf.patch
+	epatch ${FILESDIR}/exmh-2.6.3-conf.patch
 	cd misc
 	rm -rf RPM *tar* *gbuffy*
 	for i in *

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/exmh-2.6.3-r1.ebuild,v 1.1 2004/08/08 11:24:42 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/exmh-2.6.3-r1.ebuild,v 1.2 2004/09/22 23:28:24 ticho Exp $
 
 inherit eutils
 DESCRIPTION="An X user interface for MH mail"
@@ -9,7 +9,7 @@ HOMEPAGE="http://beedub.com/exmh/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 IUSE="crypt"
 
 DEPEND="mail-client/nmh
