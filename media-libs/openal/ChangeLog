@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.10 2004/02/18 12:23:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.11 2004/02/18 23:23:48 wolf31o2 Exp $
+
+*openal-20040218 (18 Feb 2004)
+
+  18 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  openal-20040218.ebuild, files/openal-20040218-alsa_capture.diff:
+  Updating to new snapshot to fix VoIP problems with ut2004-demo. The new ebuild
+  is hard masked for now, but I will unmask it once I feel it has gotten
+  significant testing. Based on ebuild from floam <floam@ascorbic.com> and
+  modified by myself. Closing bug #41978.
 
   18 Feb 2004; Martin Holzer <mholzer@gentoo.org> openal-20020127.ebuild:
   adding export WANT_AUTOCONF=2.1 closes 41948
