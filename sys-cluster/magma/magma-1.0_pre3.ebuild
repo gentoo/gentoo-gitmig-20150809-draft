@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/magma-1.0_pre3.ebuild,v 1.1 2005/01/27 03:22:15 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/magma-1.0_pre3.ebuild,v 1.2 2005/01/27 03:30:59 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -11,7 +11,7 @@ DESCRIPTION="Magma cluster interface"
 HOMEPAGE="http://sources.redhat.com/cluster/"
 SRC_URI="http://people.redhat.com/cfeist/cluster/tgz/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
