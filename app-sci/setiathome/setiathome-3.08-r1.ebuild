@@ -1,39 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.5 2003/12/06 23:38:00 spyderous Exp $
-
-IUSE="X"
-
-S="${WORKDIR}/${P}"
-
-# Don't know if this is necessary, will have to check the license
-RESTRICT="nomirror"
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.6 2004/01/27 05:19:32 vapier Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
 I=/opt/setiathome
 
 # 3.08 has not yet been released for ppc, sparc or alpha.
-
-SRC_URI="x86? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.i686-pc-linux-gnu.tar
-		ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.i686-pc-linux-gnu.tar )
-	 amd64? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.x86_64-pc-linux-gnu.tar
-		  ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.x86_64-pc-linux-gnu.tar )"
-#	 ppc? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.powerpc-unknown-linux-gnu.tar
-#		ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.powerpc-unknown-linux-gnu.tar )
-#	 sparc? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.sparc-unknown-linux-gnu.tar
-#		  ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.sparc-unknown-linux-gnu.tar )
-#	 alpha? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.alpha-unknown-linux-gnu.tar
-#		  ftp://alien.ssl.berkeley.edu/pub/setiathome-3.03.alpha-unknown-linux-gnu.tar )"
-
 DESCRIPTION="Search for Extraterrestrial Intelligence (SETI) @ home"
 HOMEPAGE="http://setiathome.ssl.berkeley.edu"
+SRC_URI="x86? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.i686-pc-linux-gnu.tar )
+	amd64? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.x86_64-pc-linux-gnu.tar )"
+#	ppc? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.powerpc-unknown-linux-gnu.tar )
+#	sparc? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.sparc-unknown-linux-gnu.tar )
+#	alpha? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-3.03.alpha-unknown-linux-gnu.tar )"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="-* x86 amd64"
+IUSE="X"
+# Don't know if this is necessary, will have to check the license
+RESTRICT="nomirror"
+
 DEPEND=">=sys-apps/baselayout-1.8.0"
 RDEPEND="X? ( x11-base/xfree )"
-
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="x86 -ppc -sparc -alpha ~amd64 -ia64 -mips -hppa"
 
 src_unpack () {
 	cd ${WORKDIR}

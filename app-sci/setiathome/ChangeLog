@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.13 2003/12/06 23:38:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.14 2004/01/27 05:19:32 vapier Exp $
+
+  27 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add wrapper script #24930 and a whole bunch more arch support #33812.
 
   06 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
   setiathome-3.03-r1.ebuild, setiathome-3.08-r1.ebuild,

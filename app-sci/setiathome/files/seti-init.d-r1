@@ -1,7 +1,7 @@
 #!/sbin/runscript
 
 if [ -z "${SETIATHOME_THREADS}" ]; then
-  SETIATHOME_THREADS=$( egrep -c "^bogomips" /proc/cpuinfo )
+	SETIATHOME_THREADS=$( egrep -c "^bogomips" /proc/cpuinfo )
 fi
 
 depend() { 
@@ -9,38 +9,36 @@ depend() {
 }
 
 checkconfig() {
-        if [ ! -e "${SETIATHOME_DIR}" ]
-        then
-                einfo "Creating ${SETIATHOME_DIR}"
-                mkdir "${SETIATHOME_DIR}"
-        fi
+	if [ ! -e "${SETIATHOME_DIR}" ] ; then
+		einfo "Creating ${SETIATHOME_DIR}"
+		mkdir "${SETIATHOME_DIR}"
+	fi
 
-        if [ ! -e "${SETIATHOME_DIR}/user_info.sah" ]
-        then
-                einfo "Setting up SETI@home for the first time"
-                cd "${SETIATHOME_DIR}"
-                /opt/setiathome/setiathome -login ${SETIATHOME_OPTIONS}
-        fi
+	if [ ! -e "${SETIATHOME_DIR}/user_info.sah" ] ; then
+		einfo "Setting up SETI@home for the first time"
+		cd "${SETIATHOME_DIR}"
+		${SETIATHOME_DIR}/setiathome -login ${SETIATHOME_OPTIONS}
+	fi
 
-        if [ "${SETIATHOME_THREADS}" != '1' ]; then
-                cd ${SETIATHOME_DIR}
+	if [ "${SETIATHOME_THREADS}" != '1' ] ; then
+		cd ${SETIATHOME_DIR}
 		for thread in `seq 2 "${SETIATHOME_THREADS}"`; do
 			if [ ! -e "${SETIATHOME_DIR}/thread${thread}" ]; then
 				mkdir "${SETIATHOME_DIR}/thread${thread}"
 				cp "${SETIATHOME_DIR}/user_info.sah" "${SETIATHOME_DIR}/thread${thread}"
 			fi
-                done
-        fi
+		done
+	fi
 }
 
 start() {
-        checkconfig
+	checkconfig
 
-	if [ "${SETIATHOME_THREADS}" = '1' ]; then
-                ebegin "Starting SETI@home"
-        else
+	if [ "${SETIATHOME_THREADS}" = '1' ] ; then
+		ebegin "Starting SETI@home"
+	else
 		ebegin "Starting SETI@home (${SETIATHOME_THREADS} threads)"
-        fi
+	fi
 
 	for thread in `seq 1 "${SETIATHOME_THREADS}"`; do
 		cd "${SETIATHOME_DIR}"
@@ -48,14 +46,15 @@ start() {
 			cd "thread${thread}"
 		fi
 
-		/opt/setiathome/setiathome ${SETIATHOME_OPTIONS} >&/dev/null&
-        done
+		${SETIATHOME_DIR}/setiwrapper ${SETIATHOME_DIR} ${SETIATHOME_OPTIONS} >& setiathome.log &
+	done
 
-        eend $?
+	eend $?
 }
 
 stop() {
-        ebegin "Stopping SETI@home"
-        killall setiathome
-        eend $?
+	ebegin "Stopping SETI@home"
+	killall setiwrapper
+	killall setiathome
+	eend $?
 }
