@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.9 2004/10/01 10:17:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.10 2004/10/03 22:48:22 gmsoft Exp $
+
+  04 Oct 2004; Guy Martin <gmsoft@gentoo.org>
+  evolution-data-server-1.0.1.ebuild:
+  Added ~hppa to KEYWORDS.
 
 *evolution-data-server-1.0.1 (01 Oct 2004)
 
