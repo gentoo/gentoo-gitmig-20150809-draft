@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1ba056ab673c94c3a422ddc23fd15630 ChangeLog 482
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 30bc751205ad8880c76b0eeaa30d550d cecutil-3.ebuild 548
+MD5 186c86ac02a91188b792602a59ce8401 cecutil-3.ebuild 550
 MD5 8840159f3e78e32a0a4715e6546ca0b7 files/digest-cecutil-3 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBN7laLLFUmVNQ7rkRAk83AJ0YOxcMDY6mrn45ArNySsdn2+1aIwCeNEeX
+NxbTUsjibI+HpSQIBPXKlNQ=
+=jA2K
+-----END PGP SIGNATURE-----
