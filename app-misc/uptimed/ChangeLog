@@ -1,11 +1,16 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.6 2003/06/17 12:03:37 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.7 2003/07/01 22:31:32 aliz Exp $
 
 *uptimed-0.3.0 (17 Jun 2003)
 
   17 Jun 2003; John Mylchreest <johnm@gentoo.org>; uptimed-0.3.0.ebuild:
   Bumping to the latest version
+
+*uptimed-0.2.0-r1 (13 Feb 2003)
+
+  01 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *uptimed-0.2.0 (21 Jun 2002)
 

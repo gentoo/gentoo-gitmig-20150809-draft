@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.11-r4.ebuild,v 1.5 2003/02/13 09:08:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.11-r4.ebuild,v 1.6 2003/07/01 22:31:32 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION=" Screen is a full-screen window manager that multiplexes a
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/screen/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 

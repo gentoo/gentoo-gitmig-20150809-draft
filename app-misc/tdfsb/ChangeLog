@@ -1,9 +1,9 @@
 # ChangeLog for app-misc/tdfsb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.3 2003/02/12 05:08:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.4 2003/07/01 22:31:32 aliz Exp $
 
-*app-misc/tdfsb-0.0.7 (12 Dec 2002)
+*tdfsb-0.0.7 (12 Dec 2002)
 
   12 Dec 2002; Seemant Kulleen <seemant@gentoo.org> tdfsb-0.0.7.ebuild
   ChangeLog :

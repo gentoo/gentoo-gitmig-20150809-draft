@@ -1,14 +1,14 @@
 # ChangeLog for app-misc/tinyca
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.4 2003/02/12 05:09:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.5 2003/07/01 22:31:32 aliz Exp $
 
-*tinyca-tinyca-0.4.2.ebuild (11 Sep 2002)
+*tinyca-0.4.2.ebuild (11 Sep 2002)
 
   11 Sep 2002; Guido Bakker <guidob@gentoo.org> ChangeLog  :
 
   Stable update. 
 
-*tinyca-tinyca-0.3.4.ebuild (24 Jun 2002)
+*tinyca-0.3.4.ebuild (24 Jun 2002)
 
   24 Jun 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
 

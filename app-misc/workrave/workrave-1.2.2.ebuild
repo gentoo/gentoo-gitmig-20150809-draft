@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.2.2.ebuild,v 1.1 2003/04/08 05:43:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.2.2.ebuild,v 1.2 2003/07/01 22:31:32 aliz Exp $
 
 DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
 HOMEPAGE="http://workrave.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls xml2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="dev-lang/perl
 	>=dev-libs/libsigc++-1.2
