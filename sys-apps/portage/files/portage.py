@@ -1114,6 +1114,8 @@ def port_insttree():
 	origdir=os.getcwd()
 	os.chdir(dbdir)
 	for x in os.listdir(os.getcwd()):
+		if not os.path.isdir(os.getcwd()+"/"+x):
+			continue
 		for y in os.listdir(os.getcwd()+"/"+x):
 			fullpkg=x+"/"+y
 			mysplit=catpkgsplit(fullpkg)
