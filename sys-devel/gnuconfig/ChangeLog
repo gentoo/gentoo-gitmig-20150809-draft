@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.11 2004/06/24 22:46:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.12 2004/09/03 19:37:35 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnuconfig-20040214.ebuild:
+  Masked gnuconfig-20040214.ebuild stable for ppc
 
   24 Jun 2004; <solar@gentoo.org> gnuconfig-20040214.ebuild,
   files/automake-1.8.5-config-guess-uclibc.patch,

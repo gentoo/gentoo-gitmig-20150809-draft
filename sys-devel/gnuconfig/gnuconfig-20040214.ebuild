@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20040214.ebuild,v 1.10 2004/07/13 03:27:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20040214.ebuild,v 1.11 2004/09/03 19:37:35 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ppc64 sparc mips alpha arm hppa amd64 ~ia64 macos"
+KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ~ia64 macos"
 IUSE="uclibc"
 
 S=${WORKDIR}

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.54 2004/07/29 20:22:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.55 2004/09/03 19:37:35 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  autoconf-2.59-r3.ebuild:
+  Masked autoconf-2.59-r3.ebuild stable for ppc
 
   29 Jul 2004; Guy Martin <gmsoft@gentoo.org> autoconf-2.59-r4.ebuild:
   Stable on hppa.

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.5 2004/06/24 22:44:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.6 2004/09/03 19:37:35 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  crossdev-0.4-r1.ebuild:
+  Masked crossdev-0.4-r1.ebuild stable for ppc
 
 *crossdev-0.4-r1 (26 Feb 2004)
 
