@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.4 2004/12/13 15:29:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.5 2004/12/20 05:29:32 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,6 +43,7 @@ src_unpack() {
 	# Reported upstream, but we don't apply it for now
 	# mv ${PATCHDIR}/mandrake/019* ${PATCHDIR}/excluded
 	mv ${PATCHDIR}/mandrake/025* ${PATCHDIR}/excluded
+	sed -i -e '/rm.*fr/s:\\::' ${PATCHDIR}/mandrake/027_all_coreutils-mdk-build-fix.patch #53881
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
 	epatch ${WORKDIR}/${P}-${I18N_VER}.patch
 
