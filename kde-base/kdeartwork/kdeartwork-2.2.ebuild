@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-2.2.ebuild,v 1.3 2001/08/22 11:57:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-2.2.ebuild,v 1.4 2001/09/29 21:03:25 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Artwork"
@@ -33,10 +33,6 @@ src_compile() {
     if [ "`use qtmt`" ]
     then
       myconf="--enable-mt"
-    fi
-    if [ "`use mitshm`" ]
-    then
-      myconf="$myconf --enable-mitshm"
     fi
 	if [ "`use objprelink`" ] ; then
 	  myconf="$myconf --enable-objprelink"

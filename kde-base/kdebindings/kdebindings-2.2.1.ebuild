@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.1.ebuild,v 1.3 2001/09/19 18:56:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.1.ebuild,v 1.4 2001/09/29 21:03:26 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Bindings"
@@ -34,10 +34,6 @@ src_compile() {
     if [ "`use qtmt`" ]
     then
       myconf="--enable-mt"
-    fi
-    if [ "`use mitshm`" ]
-    then
-      myconf="$myconf --enable-mitshm"
     fi
     if [ -z "`use python`" ] ; then
       myconf="$myconf --without-python"

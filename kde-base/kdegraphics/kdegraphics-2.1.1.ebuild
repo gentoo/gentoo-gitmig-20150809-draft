@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.1.1.ebuild,v 1.6 2001/09/25 03:41:11 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.1.1.ebuild,v 1.7 2001/09/29 21:03:26 danarmak Exp $
 
 
 A=${P}.tar.bz2
@@ -26,10 +26,7 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]                                                                   
-    then
       myconf="$myconf --enable-mitshm"
-    fi
     if [ "`use gphoto2`" ] ; then
       myconf="$myconf --with-gphoto2-includes=/usr/include/gphoto2 --with-gphoto2-libraries=/usr/lib/gphoto2"
     else

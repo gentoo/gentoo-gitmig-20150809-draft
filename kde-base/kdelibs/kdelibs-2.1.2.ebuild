@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.3 2001/06/07 01:45:52 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.8 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.9 2001/09/29 21:03:26 danarmak Exp $
 
 
 V=2.1
@@ -77,10 +77,7 @@ src_compile() {
     then
       myopts="$myopts --enable-mt"
     fi
-    if [ "`use mitshm`" ]
-    then
       myopts="$myopts --enable-mitshm"
-    fi
     try ./configure --prefix=/opt/kde${V} --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myopts
     cd ${S}

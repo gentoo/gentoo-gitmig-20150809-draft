@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias  <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-2.2_beta1.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-2.2_beta1.ebuild,v 1.4 2001/09/29 21:03:26 danarmak Exp $
 
 
 V=2.2beta1
@@ -23,10 +23,6 @@ src_compile() {
     if [ "`use qtmt`" ]
     then
       myconf="--enable-mt"
-    fi
-    if [ "`use mitshm`" ]
-    then
-      myconf="$myconf --enable-mitshm"
     fi
     try ./configure --prefix=${KDEDIR} --host=${CHOST} \
 		--with-qt-dir=$QTBASE --with-xinerama $myconf

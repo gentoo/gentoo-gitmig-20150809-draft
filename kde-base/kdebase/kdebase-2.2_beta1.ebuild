@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2_beta1.ebuild,v 1.3 2001/08/14 16:12:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2_beta1.ebuild,v 1.4 2001/09/29 21:03:26 danarmak Exp $
 
 V="2.2beta1"
 A=${PN}-${V}.tar.bz2
@@ -37,10 +37,6 @@ src_compile() {
     if [ "`use qtmt`" ]
     then
       myconf="$myconf --enable-mt"
-    fi
-    if [ "`use mitshm`" ]
-    then
-      myconf="$myconf --enable-mitshm"
     fi
     if [ -z "`use motif`" ]
     then

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1.ebuild,v 1.2 2001/09/19 18:56:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1.ebuild,v 1.3 2001/09/29 21:03:26 danarmak Exp $
 # NOTE: Now we install into /usr
 # ANOTHER NOTE: we now rely on env.d to provide KDEDIR and QTDIR settings,
 # instead of hardconding them here
@@ -66,10 +66,6 @@ src_compile() {
     if [ "`use qtmt`" ] ; then
       myopts="$myopts --enable-mt"
     fi
-    if [ "`use mitshm`" ] ; then
-      myopts="$myopts --enable-mitshm"
-    fi
-    if [ -z "`use ipv6`" ] ; then
       myopts="$myopts --with-ipv6-lookup=no"
     fi
     if [ "`use objprelink`" ] ; then

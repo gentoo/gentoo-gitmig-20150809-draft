@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-2.1.1.ebuild,v 1.6 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-2.1.1.ebuild,v 1.7 2001/09/29 21:03:26 danarmak Exp $
 
 
 A=${P}.tar.bz2
@@ -23,10 +23,7 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]
-    then
       myconf="$myconf --enable-mitshm"
-    fi
     try CFLAGS="$CFLAGS" ./configure --prefix=$KDEDIR --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myconf
     try make

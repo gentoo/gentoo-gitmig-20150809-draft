@@ -5,7 +5,7 @@ export CXXFLAGS="${CFLAGS}"
 export CHOST="i486-pc-linux-gnu"
 export SYSIMG_ROOT=/tmp/autosysimg
 export STEPS="clean unpack compile install qmerge clean"
-[ -z "${USE}" ] || USE="slang readline gpm tcpd pam libwww ssl nls mitshm perl python oss"
+[ -z "${USE}" ] || USE="slang readline gpm tcpd pam libwww ssl nls perl python oss"
 
 TODAY=`date '+%Y%m%d'`
 
