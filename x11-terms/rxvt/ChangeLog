@@ -1,8 +1,12 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.13 2003/03/20 09:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.14 2003/03/21 19:53:40 seemant Exp $
 
 *rxvt-2.7.8-r6 (20 Mar 2003)
+
+  21 Mar 2003; Seemant Kulleen <seemant@gentoo.org> rxvt-2.7.8-r6.ebuild:
+  added support for all 3 types of scrollbars. Thanks to: Kurt V. Hindenburg
+  <khindenburg@cherrynebula.net> in bug #17948
 
   20 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update. Added Redhat patch.
