@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.7.ebuild,v 1.10 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.7.ebuild,v 1.11 2003/03/27 07:19:54 seemant Exp $
 
 IUSE="ipv6 tcpd"
 
@@ -13,14 +13,17 @@ IUSE="ipv6 tcpd"
 S=${WORKDIR}/${P}
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
-KEYWORDS="x86 ppc sparc"
+SRC_URI="http://www.xinetd.org/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="BSD"
-SRC_URI="http://www.xinetd.org/${P}.tar.gz"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/glibc 
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 RDEPEND="${DEPEND} dev-lang/perl"
+
+PROVIDE="virtual/inetd"
 
 src_compile() {
 	local myconf
