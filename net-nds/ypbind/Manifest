@@ -1,15 +1,25 @@
-MD5 89d6f448e7b60a0d3969a8a5211eb93f ypbind-1.17.2-r1.ebuild 1270
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d6d7a212f610092ec53e1399c688850 ChangeLog 3795
+MD5 cd6f0b3c20e3505c0f6668691748a012 ypbind-1.11-r1.ebuild 944
+MD5 37f0ac7d1fe0bff7d0a89bcf2a38cc2b ypbind-1.12.ebuild 1055
 MD5 c1714c4d7595a06bf4ab51cf0b0b6b50 ypbind-1.17.2.ebuild 1222
 MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
-MD5 0d6d7a212f610092ec53e1399c688850 ChangeLog 3795
-MD5 37f0ac7d1fe0bff7d0a89bcf2a38cc2b ypbind-1.12.ebuild 1055
-MD5 cd6f0b3c20e3505c0f6668691748a012 ypbind-1.11-r1.ebuild 944
-MD5 c5aee6bd628cd668314e4879a2cad696 files/ypbind.confd-r1 112
-MD5 f7d2018bc2060d296bc12767a9f5c58f files/ypbind.confd 117
-MD5 ae54c44d17c3d62194a106e5600313fd files/ypbind.rc6 963
-MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2 69
-MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2-r1 69
-MD5 7d2ecfb4fe17b37926695395e98a2444 files/ypbind.rc5 1039
+MD5 89d6f448e7b60a0d3969a8a5211eb93f ypbind-1.17.2-r1.ebuild 1270
+MD5 4a8f16abe013d049df327a1495db254c files/ypbind.initd 887
 MD5 07fdb01e99c0cb8ab5b3e770d83d7449 files/digest-ypbind-1.11-r1 67
-MD5 433016edb2ebcfcdc18468096dc6687f files/ypbind.initd 878
 MD5 254697d0a1a3eda6978996e737ba3f42 files/digest-ypbind-1.12 67
+MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2 69
+MD5 f7d2018bc2060d296bc12767a9f5c58f files/ypbind.confd 117
+MD5 7d2ecfb4fe17b37926695395e98a2444 files/ypbind.rc5 1039
+MD5 ae54c44d17c3d62194a106e5600313fd files/ypbind.rc6 963
+MD5 c5aee6bd628cd668314e4879a2cad696 files/ypbind.confd-r1 112
+MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBffATArHZZzCEUG0RAgzdAJ99rdOwwuZkioNEIpHy9gMPHhTGNgCfbncY
+S9lKGSOmtMp/ARBgP54+gb4=
+=c03/
+-----END PGP SIGNATURE-----
