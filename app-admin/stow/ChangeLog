@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/stow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/ChangeLog,v 1.7 2004/06/24 21:38:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/ChangeLog,v 1.8 2004/09/24 14:43:50 blubb Exp $
+
+  24 Sep 2004; <blubb@gentoo.org> stow-1.3.3.ebuild:
+  added ~amd64
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   stow-1.3.3.ebuild:
