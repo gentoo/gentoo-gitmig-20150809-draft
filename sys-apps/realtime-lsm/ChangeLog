@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/realtime-lsm
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.4 2004/11/01 04:30:51 fafhrd Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.5 2005/01/05 17:52:00 fafhrd Exp $
+
+*realtime-lsm-0.8.5 (05 Jan 2005)
+
+  05 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  realtime-lsm-0.8.3.ebuild, +realtime-lsm-0.8.5.ebuild:
+  Fixed removed keyword that was inadvertently removed in 0.8.3; version bump
+  to 0.8.5
 
 *realtime-lsm-0.8.3 (31 Oct 2004)
 
