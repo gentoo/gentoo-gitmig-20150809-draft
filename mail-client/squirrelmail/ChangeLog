@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.5 2004/06/02 19:33:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.6 2004/06/03 17:05:30 eradicator Exp $
+
+  03 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  files/squirrelmail-1.4.3-compose.patch:
+  Removed cvs header stuff from the patch so it doesn't bork... bug #52868.
 
   02 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   squirrelmail-1.4.3-r1.ebuild, squirrelmail-1.4.3.ebuild,

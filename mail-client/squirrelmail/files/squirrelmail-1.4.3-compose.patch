@@ -1,14 +1,5 @@
---- compose.php.orig	2004-05-31 22:47:22.000000000 -0700
-+++ compose.php	2004-06-01 09:06:13.286277000 -0700
-@@ -14,7 +14,7 @@
-  *    - Send mail
-  *    - Save As Draft
-  *
-- * $Id: squirrelmail-1.4.3-compose.patch,v 1.1 2004/06/02 19:33:43 eradicator Exp $
-+ * $Id: squirrelmail-1.4.3-compose.patch,v 1.1 2004/06/02 19:33:43 eradicator Exp $
-  */
- 
- /* Path for SquirrelMail required files. */
+--- compose.php.orig	2004-05-24 00:56:51.000000000 -0700
++++ compose.php	2004-06-03 10:00:52.015627918 -0700
 @@ -757,9 +757,9 @@
                sqWordWrap($rewrap_body[$i], ($editor_size));
                  if (preg_match("/^(>+)/", $rewrap_body[$i], $matches)) {
