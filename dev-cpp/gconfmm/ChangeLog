@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.14 2004/07/28 05:49:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.15 2004/10/24 18:49:40 kloeri Exp $
+
+  24 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gconfmm-2.0.2.ebuild:
+  ~alpha keyword.
 
   28 Jul 2004; Travis Tilley <lv@gentoo.org> gconfmm-2.0.2.ebuild:
   removed amd64 fix that isnt needed anymore, fixes bug 53815
