@@ -1,13 +1,18 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.2 2002/08/09 00:28:34 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.3 2002/12/16 23:01:16 drobbins Exp $
+
+*isdn4k-utils-3.2_p1-r1 (12 Dec 2002)
+
+  16 Dec 2002; Daniel Robbins <drobbins@gentoo.org> : new rev. Docs install in
+  the correct place, and device nodes are no longer created (devfs should take
+  care of this.)
 
 *isdn4k-utils-3.2_p1 (9 Aug 2002)
 
-  9 Aug 2002; Bart Verwilst <verwilst@gentoo.org> :
-
-  New working version, just in time for our Gentoo 1.4 release :o)
-  This version will be included on our bootcd.
+  9 Aug 2002; Bart Verwilst <verwilst@gentoo.org> : New working version, just
+  in time for our Gentoo 1.4 release :o) This version will be included on our
+  bootcd.
 
 *isdn4k-utils-3.1_p1-r3 (16 Jul 2002)
 
