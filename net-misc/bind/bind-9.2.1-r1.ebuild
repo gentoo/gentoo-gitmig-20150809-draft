@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>, Parag Mehta <pm@gnuos.org>
-# Update to 9.2.1-r1: Kyle Manna <nitro@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/net-misc/bind/bind-9.2.1.ebuild,v 1.1 2002/05/02 21:46:15 sandymac Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-9.2.1-r1.ebuild,v 1.2 2002/06/22 15:50:34 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="BIND - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND"
 LICENSE="as-is"
+SLOT="0"
 
 DEPEND="virtual/glibc sys-apps/groff"
 RDEPEND="virtual/glibc"
