@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.103 2005/02/07 01:00:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.104 2005/02/09 03:25:06 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -52,6 +52,9 @@ if [[ ${CTARGET} = ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
+is_crosscompile() {
+	[[ ${CHOST} != ${CTARGET} ]]
+}
 
 GCC_RELEASE_VER=$(get_version_component_range 1-3)
 GCC_BRANCH_VER=$(get_version_component_range 1-2)
@@ -112,7 +115,7 @@ elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
 	STDCXX_INCDIR=${STDCXX_INCDIR:-${PREFIX}/include/g++-v3/}
 fi
 
-XGCC=${WORKDIR}/build/gcc/xgcc
+XGCC="${WORKDIR}/build/gcc/xgcc -B${WORKDIR}/build/gcc"
 #----<< globals >>----
 
 
@@ -126,7 +129,7 @@ else
 	# Support upgrade paths here or people get pissed
 	if use multislot ; then
 		SLOT="${CTARGET}-${GCC_CONFIG_VER}"
-	elif [[ ${CTARGET} != ${CHOST} ]] ; then
+	elif is_crosscompile; then
 		SLOT="${CTARGET}-${GCC_BRANCH_VER}"
 	else
 		SLOT="${GCC_BRANCH_VER}"
@@ -446,7 +449,7 @@ libc_has_ssp() {
 	            grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
 	then
 		return 0
-	elif [[ ${CTARGET} != ${CHOST} ]] ; then
+	elif is_crosscompile; then
 		die "'${my_libc}' was detected w/out ssp, that sucks (a lot)"
 	else
 		return 1
@@ -622,10 +625,10 @@ create_gcc_env_entry() {
 		done
 	fi
 
-	local mbits=
-	CC=${XGCC} has_m32 && mbits="${mbits} 32"
-	CC=${XGCC} has_m64 && mbits="${mbits} 64"
-	echo "GCCBITS=\"${mbits:1}\"" >> ${gcc_envd_file}
+	local mbits
+	CC=${XGCC} has_m32 && mbits="${mbits:+${mbits} }32"
+	CC=${XGCC} has_m64 && mbits="${mbits:+${mbits} }64"
+	echo "GCCBITS=\"${mbits}\"" >> ${gcc_envd_file}
 
 	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
@@ -633,8 +636,7 @@ create_gcc_env_entry() {
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
 
 	# Only export CTARGET if cross-compiling (for now ...)
-	[[ ${CTARGET} != ${CHOST} ]] \
-		&& echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
+	is_crosscompile	&& echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
 
 	# Set which specs file to use
 	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
@@ -664,7 +666,7 @@ gcc_pkg_setup() {
 		esac
 
 		#cannot have both n32 & n64 without multilib
-		if use n32 && use n64 && use !multilib; then
+		if use n32 && use n64 && ! use_multilib; then
 			eerror "Please enable multilib if you want to use both n32 & n64";
 			die "Invalid USE flag combination";
 		fi
@@ -693,7 +695,7 @@ gcc-compiler_pkg_preinst() {
 	use multislot && return 0
 
 	# libtool files aren't affected by cross compilers
-	[[ ${CTARGET} != ${CHOST} ]] && return 0
+	is_crosscompile || return 0
 
 	# Now check to see if we already have a version installed in this 
 	# SLOT ... if we do, then bail if it's a minor upgrade (like we 
@@ -735,7 +737,7 @@ gcc-compiler_pkg_prerm() {
 	#fi
 
 	# libtool files aren't affected by cross compilers
-	#[[ ${CTARGET} != ${CHOST} ]] && return 0
+	#is_crosscompile || return 0
 
 	#/sbin/fix_libtool_files.sh ${PV}
 }
@@ -850,9 +852,13 @@ gcc-compiler-configure() {
 	# Add --with-abi flags to enable respective MIPS ABIs
 	case $(tc-arch) in
 		mips)
-		use_multilib && confgcc="${confgcc} --with-abi=32"
-		use n64 && confgcc="${confgcc} --with-abi=n64"
-		use n32 && confgcc="${confgcc} --with-abi=n32"
+		if is_crosscompile; then
+			confgcc="${confgcc} --with-abi=32 --with-abi=n32 --with-abi=n64"
+		else
+			use_multilib && confgcc="${confgcc} --with-abi=32"
+			use n64 && confgcc="${confgcc} --with-abi=n64"
+			use n32 && confgcc="${confgcc} --with-abi=n32"
+		fi
 		;;
 	esac
 
@@ -924,7 +930,7 @@ gcc_do_configure() {
 
 	# All our cross-compile logic goes here !  woo !
 	confgcc="${confgcc} --host=${CHOST}"
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
+	if is_crosscompile; then
 		# Straight from the GCC install doc:
 		# "GCC has code to correctly determine the correct value for target 
 		# for nearly all native systems. Therefore, we highly recommend you
@@ -969,7 +975,7 @@ gcc_do_configure() {
 		--disable-libunwind-exceptions"
 	# When building a stage1 cross-compiler (just C compiler), we 
 	# have to disable shared gcc libs and threads or gcc goes boom
-	if use nocxx && [[ ${CHOST} != ${CTARGET} ]] ; then
+	if use nocxx && is_crosscompile; then
 		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
 	else
 		confgcc="${confgcc} --enable-shared --enable-threads=posix"
@@ -1039,14 +1045,14 @@ gcc_do_make() {
 		append-ldflags -static
 	fi
 
-	STAGE1_CFLAGS=${STAGE1_CFLAGS:--O}
+	STAGE1_CFLAGS=${STAGE1_CFLAGS--O}
 
-	if [[ ${CTARGET} == ${CHOST} ]] ; then
+	if is_crosscompile; then
+		BOOT_CFLAGS=${BOOT_CFLAGS--O2}
+	else
 		# we only want to use the system's CFLAGS if not building a
 		# cross-compiler.
-		BOOT_CFLAGS=${BOOT_CFLAGS:-${CFLAGS}}
-	else
-		BOOT_CFLAGS=${BOOT_CFLAGS:--O2}
+		BOOT_CFLAGS=${BOOT_CFLAGS-${CFLAGS}}
 	fi
 
 	# Fix for libtool-portage.patch
@@ -1056,7 +1062,7 @@ gcc_do_make() {
 	# Set make target to $1 if passed
 	[[ -n $1 ]] && GCC_MAKE_TARGET="$1"
 	# default target
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
+	if is_crosscompile; then
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET:-all}
@@ -1130,11 +1136,18 @@ gcc_do_filter_flags() {
 	filter-flags '-mabi*' -m32 -m64
 
 	# filter *common* flags that will make other gcc's angry
-	if [[ ${GCC_BRANCH_VER} == "3.3" ]] ; then
-		case $(tc-arch) in
-			x86|amd64) filter-flags '-mtune=*';;
-		esac
-	fi
+	case ${GCC_BRANCH_VER} in
+		3.3)
+			case $(tc-arch) in
+				x86|amd64) filter-flags '-mtune=*';;
+			esac
+		;;
+		3.4)
+			case $(tc-arch) in
+				x86|amd64) filter-flags '-mcpu=*';;
+			esac
+		;;
+	esac
 
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
@@ -1247,9 +1260,7 @@ gcc-compiler_src_install() {
 	S=${WORKDIR}/build \
 	make DESTDIR="${D}" install || die
 
-	if [[ ${CHOST} == ${CTARGET} ]] ; then
-		[[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
-	fi
+	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
 
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
@@ -1316,7 +1327,7 @@ gcc-compiler_src_install() {
 			# For some reason, g77 gets made instead of ${CTARGET}-g77... this makes it safe
 			[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
 
-			if [[ ${CHOST} == ${CTARGET} ]] && [[ -f ${CTARGET}-${x} ]] ; then
+			if [[ -f ${CTARGET}-${x} ]] && ! is_crosscompile; then
 				[[ ! -f ${x} ]] && mv ${CTARGET}-${x} ${x}
 				ln -sf ${x} ${CTARGET}-${x}
 			fi
@@ -1341,17 +1352,17 @@ gcc-compiler_src_install() {
 	fi
 
 	cd ${S}
-	if ! use build && [[ ${CHOST} == ${CTARGET} ]] ; then
-		prepman ${DATAPATH}
-		prepinfo ${DATAPATH}
-	else
+	if use build || is_crosscompile; then
 		rm -r "${D}"/usr/share/{man,info}
 		rm -r "${D}"${DATAPATH}/{man,info}
+	else
+		prepman ${DATAPATH}
+		prepinfo ${DATAPATH}
 	fi
 
 	# Rather install the script, else portage with changing $FILESDIR
 	# between binary and source package borks things ....
-	if [[ ${CHOST} == ${CTARGET} ]] ; then
+	if ! is_crosscompile; then
 		insinto /lib/rcscripts/awk
 		doins ${FILESDIR}/awk/fixlafiles.awk
 		exeinto /sbin
@@ -1369,89 +1380,47 @@ gcc_movelibs() {
 	rm -f ${D}${LIBPATH}/libiberty.a
 	rm -f ${D}${LIBPATH}/*/libiberty.a
 
-	#local FROMDIR=${D}/${LIBPATH}/../${GCC_RELEASE_VER}
-	#[ -d "${FROMDIR}" ] && mv ${FROMDIR}/* ${LIBPATH}
+	local multiarg
+	for multiarg in $(${XGCC} -print-multi-lib); do
+		multiarg=${multiarg#*;}
+		multiarg=${multiarg/@/-}
 
-	#FROMDIR=${D}/${PREFIX}/libexec/gcc/${CTARGET}/${GCC_RELEASE_VER}
-	#[ -d "${FROMDIR}" ] && mv ${FROMDIR}/* ${FROMDIR}/../
+		local OS_MULTIDIR=$(${XGCC} ${multiarg} --print-multi-os-directory)
+		local MULTIDIR=$(${XGCC} ${multiarg} --print-multi-directory)
+		local TODIR=${D}/${LIBPATH}/${MULTIDIR}
+		local FROMDIR=
 
-	if has_multilib_profile; then
-		for abi in $(get_all_abis); do
-			local OS_MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-os-directory)
-			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-			local TODIR=${D}/${LIBPATH}/${MULTIDIR}
-			local FROMDIR=
+		[[ -d "${TODIR}" ]] || mkdir -p ${TODIR}
 
-			[ -d "${TODIR}" ] || mkdir -p ${TODIR}
-
-			FROMDIR=${D}/${LIBPATH}/${OS_MULTIDIR}
-			if [ "${FROMDIR}" != "${TODIR}" -a -d "${FROMDIR}" ]; then
-				mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-				rmdir ${FROMDIR}
-			fi
-
-			FROMDIR=${D}/${LIBPATH}/../${MULTIDIR}
-			if [ -d "${FROMDIR}" ]; then
-				mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-				rmdir ${FROMDIR}
-			fi
-
-			FROMDIR=${D}/${PREFIX}/lib/${OS_MULTIDIR}
-			if [ -d "${FROMDIR}" ]; then
-				mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-				rmdir ${FROMDIR}
-			fi
-
-			FROMDIR=${D}/${PREFIX}/lib/${MULTIDIR}
-			if [ -d "${FROMDIR}" ]; then
-				# The only thing that ends up here is libiberty.a (which is deleted)
-				# Lucky for us nothing mistakenly gets placed here that we need...
-				# otherwise we'd have a potential conflict when OS_MULTIDIR=../lib and
-				# MULTIDIR=. for different ABI.  If this happens, the fix is to patch
-				# the gcc Makefiles to behave with LIBDIR properly.
-				#mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-				rmdir ${FROMDIR}
-			fi
-		done
-	else
-		# No multilib or older multilib...
-
-		# we dont want these in freaky non-versioned paths that dont ever get used
-		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
-		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
-
-		# Stupid REALLY old profiles are so freakin' dumb!  I can't wait till we deprecate 2004.3!
-		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used lib
-
-		# and mips is just freaky in general ;p
-		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
-		# and finally, the non-bitdepth-or-ABI-specific freaky path
-
-		if [ -d ${D}/${PREFIX}/lib32 -a -d ${D}/${LIBPATH}/32 ] ; then
-			mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/32/
-		elif [ -d ${D}/${PREFIX}/lib32 -a ! -d ${D}/${LIBPATH}/32 ] ; then
-			mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/
+		FROMDIR=${D}/${LIBPATH}/${OS_MULTIDIR}
+		if [[ "${FROMDIR}" != "${TODIR}" && -d "${FROMDIR}" ]]; then
+			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+			rmdir ${FROMDIR}
 		fi
 
-		if [ -d ${D}/${PREFIX}/lib64 -a -d ${D}/${LIBPATH}/64 ] ; then
-			mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/64/
-		elif [ -d ${D}/${PREFIX}/lib64 -a ! -d ${D}/${LIBPATH}/64 ] ; then
-			mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/
+		FROMDIR=${D}/${LIBPATH}/../${MULTIDIR}
+		if [[ -d "${FROMDIR}" ]]; then
+			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+			rmdir ${FROMDIR}
 		fi
 
-		# and sometimes crap ends up here too :|
-		mv ${D}/${PREFIX}/lib/{*.a,*.so*,*.la} ${D}/${LIBPATH}/
-		mv ${D}/${LIBPATH}/../{*.a,*.so*,*.la} ${D}/${LIBPATH}/
+		FROMDIR=${D}/${PREFIX}/lib/${OS_MULTIDIR}
+		if [[ -d "${FROMDIR}" ]]; then
+			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+			rmdir ${FROMDIR}
+		fi
 
-		rm -rf ${D}/${PREFIX}/lib64
-		rm -rf ${D}/${PREFIX}/lib32
-		rm -rf ${D}/${PREFIX}/lib/o32
-		rm -rf ${D}/${PREFIX}/lib/32
-		rm -rf ${D}/${PREFIX}/lib/64
-		rm -rf ${D}/${LIBPATH}/../o32
-		rm -rf ${D}/${LIBPATH}/../32
-		rm -rf ${D}/${LIBPATH}/../64
-	fi
+		FROMDIR=${D}/${PREFIX}/lib/${MULTIDIR}
+		if [[ -d "${FROMDIR}" ]]; then
+			# The only thing that ends up here is libiberty.a (which is deleted)
+			# Lucky for us nothing mistakenly gets placed here that we need...
+			# otherwise we'd have a potential conflict when OS_MULTIDIR=../lib and
+			# MULTIDIR=. for different ABI.  If this happens, the fix is to patch
+			# the gcc Makefiles to behave with LIBDIR properly.
+			#mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+			rmdir ${FROMDIR}
+		fi
+	done
 
 	# make sure the libtool archives have libdir set to where they actually
 	# -are-, and not where they -used- to be.
@@ -1461,28 +1430,6 @@ gcc_movelibs() {
 #----<< src_* >>----
 
 #---->> unorganized crap in need of refactoring follows
-
-# This is only used by the backwards-compatible stuff above...
-fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
-	# first the multilib case
-	if [ -d ${D}/${LIBPATH}/../$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/$1/
-		rm -rf ${D}/${LIBPATH}/../$1
-	fi
-	if [ -d ${D}/${LIBPATH}/../lib$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/$1/
-		rm -rf ${D}/${LIBPATH}/../lib$1
-	fi
-	# and now to fix up the non-multilib case
-	if [ -d ${D}/${LIBPATH}/../$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../$1
-	fi
-	if [ -d ${D}/${LIBPATH}/../lib$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../lib$1
-	fi
-}
 
 # gcc_quick_unpack will unpack the gcc tarball and patches in a way that is
 # consistant with the behavior of get_gcc_src_uri. The only patch it applies
@@ -1664,7 +1611,7 @@ should_we_gcc_config() {
 	use build && return 0
 
 	# If we're cross-compiling, only run gcc-config the first time
-	if [[ ${CHOST} != ${CTARGET} ]] ; then
+	if is_crosscompile; then
 		return $([[ ! -e ${ROOT}/etc/env.d/gcc/config-${CTARGET} ]])
 	fi
 
@@ -1783,12 +1730,11 @@ fix_libtool_libdir_paths() {
 
 use_multilib() {
 	case $(tc-arch) in
-		amd64|mips|sparc)
-			has_multilib_profile || use multilib
+		amd64|mips|sparc|ppc64)
+			is_crosscompile || has_multilib_profile || use multilib
 		;;
 		*)
 			false
 		;;
 	esac
 }
-
