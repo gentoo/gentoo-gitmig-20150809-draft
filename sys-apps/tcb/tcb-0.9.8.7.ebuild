@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/tcb-0.9.8.3.ebuild,v 1.3 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/tcb-0.9.8.7.ebuild,v 1.1 2004/01/08 22:41:43 method Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 
@@ -13,12 +15,10 @@ DEPEND=">=sys-libs/pam-0.75"
 SLOT="0"
 KEYWORDS="x86 amd64"
 
-pkg_preinst() {
+pkg_setup() {
 	# might want to add these into baselayout eventually...
 	for group in auth chkpwd shadow; do
-		if ! grep -q ^${group}: /etc/group ; then
-			 groupadd ${group} || die "problem adding group $group"
-		fi
+			 enewgroup ${group} || die "error adding group ${group}"
 	done
 }
 
@@ -27,6 +27,9 @@ src_compile () {
 }
 
 src_install () {
-	make FAKEROOT=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc ChangeLog LICENSE
+
+	einfo "You must now run /sbin/tcb_convert to convert your shadow to tcb"
+	einfo "To remove this you must first run /sbin/tcp_unconvert and then unmerge"
 }
