@@ -1,0 +1,12 @@
+diff -urN gnustep-guile-1.0.3/Library/Makefile.postamble gnustep-guile-1.0.3-modified/Library/Makefile.postamble
+--- gnustep-guile-1.0.3/Library/Makefile.postamble	Sat Jan  5 00:05:56 2002
++++ gnustep-guile-1.0.3-modified/Library/Makefile.postamble	Fri Jul 19 14:24:57 2002
+@@ -27,7 +27,7 @@
+ # library to that the <libname>.so symlink points to. That should be the
+ # shared object name of the library.
+ after-install::
+-	@DIRP=$(GNUSTEP_SYSTEM_ROOT)/Libraries/Guile; \
++	@DIRP=${D}/usr/GNUstep/System/Libraries/Guile; \
+ 	$(MKINSTALLDIRS) $$DIRP/languages/gstep-guile; \
+ 	for i in $(SCHEME_FILES); do \
+ 	  $(INSTALL_DATA) $$i $$DIRP/languages/$$i; \
