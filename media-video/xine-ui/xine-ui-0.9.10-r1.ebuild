@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.12.ebuild,v 1.5 2002/07/19 11:28:21 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.10-r1.ebuild,v 1.5 2002/08/06 21:20:03 seemant Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -10,28 +10,20 @@ SRC_URI="http://xine.sourceforge.net/files/${P}.tar.gz"
 DEPEND="media-libs/libpng
 	>=media-libs/xine-lib-${PV}
 	X? ( virtual/x11 )
-	aalib? ( media-libs/aalib )
-	gnome? ( gnome-base/ORBit )
-	directfb? ( media-libs/aalib
-		>=dev-libs/DirectFB-0.9.9 )"
+	directfb? ( >=dev-libs/DirectFB-0.9.9 )
+	gnome? ( gnome-base/ORBit )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+SLOT="0"
+KEYWORDS="x86 ppc"
 
 
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-
-        for file in `grep -l -r "xine_logo.mpg" *`; do
-                sed -e "s:xine_logo.mpg:xine_logo.mpv:g" ${file} \
-                    > ${file}.hacked || die
-                mv ${file}.hacked ${file} || die
-        done
 
 	use directfb || ( \
 		sed -e "s:dfb::" src/Makefile.in \
