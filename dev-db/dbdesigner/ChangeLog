@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/dbdesigner
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/ChangeLog,v 1.1 2004/03/17 16:49:49 rizzo Exp $
+
+*dbdesigner-4.0.5.4 (17 Mar 2004)
+
+  17 Mar 2004; Don Seiler <rizzo@gentoo.org>; dbdesigner-4.0.5.4.ebuild,
+  metadata.xml:
+  Initial import
+
