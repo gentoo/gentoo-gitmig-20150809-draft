@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-agent/feedbackd-agent-0.3.1.ebuild,v 1.5 2004/08/10 02:37:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-agent/feedbackd-agent-0.3.1.ebuild,v 1.6 2004/09/04 17:17:03 axxo Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=dev-libs/libxml2
-	>=dev-lang/perl"
+	dev-libs/libxml2
+	dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
