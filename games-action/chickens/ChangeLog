@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chickens
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.3 2004/07/21 08:00:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.4 2004/07/21 08:01:58 mr_bones_ Exp $
+
+  21 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> -chickens-0.2.0.ebuild:
+  clean older ebuild
 
 *chickens-0.2.4 (21 Jul 2004)
 
