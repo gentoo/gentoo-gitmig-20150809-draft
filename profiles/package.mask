@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <hillster@gentoo.org> (04 Oct 2003)
+# moving glext.h out of distfiles onto mirrors needs testing
+=media-video/mtxdrivers-pro-1.0_beta4-r1
+
 # <usata@gentoo.org> (04 Oct 2003)
 # experimental m17n and nls support which will be included in next release
 >=net-www/w3m-0.4.2-r1
