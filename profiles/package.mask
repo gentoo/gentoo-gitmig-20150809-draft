@@ -1183,10 +1183,6 @@ app-cdr/eroaster
 # masked for testing
 >=media-sound/ecasound-2.0.4
 
-# stroke@gentoo.org 19 Aug 2002
-# Anjuta 1.0-beta1 (preview). masked for testing
->=dev-util/anjuta-0.9.99
-
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
