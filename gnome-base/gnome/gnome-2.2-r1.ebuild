@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.ebuild,v 1.2 2003/02/09 15:25:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2-r1.ebuild,v 1.1 2003/02/10 17:15:09 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -59,7 +59,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/eel-2.2.0.2
 	>=gnome-base/gnome-panel-2.2.0.1
 	>=gnome-base/gnome-desktop-2.2.0.1
-	>=gnome-base/gnome-vfs-2.2
+	>=gnome-base/gnome-vfs-2.2.1
 	>=gnome-base/libbonobo-2.2
 	>=gnome-base/libbonoboui-2.2
 	>=gnome-base/librsvg-2.2.2.1
@@ -89,8 +89,4 @@ pkg_postinst () {
 	einfo "note that to change windowmanager to metacity do: "
 	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
 	einfo "of course this works for all other window managers as well"
-	echo
-	einfo "The theme manager is known to have problems starting up when FAM"
-	einfo "is running. Both the Gentoo and GNOME developers know about this"
-	einfo "problem and are working on a solution"
 }
