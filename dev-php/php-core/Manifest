@@ -2,5 +2,7 @@ MD5 6447184ca27d6bf641d31448cb757993 ChangeLog 617
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 f8689fdb454429ad37f78817dce60c87 php-core-4.3.4.ebuild 1947
 MD5 9ce425d119108f0af199a40a421f558b php-core-4.3.4-r1.ebuild 1950
+MD5 f013db3f2b5287c3adb5dd0271a8f47a php-core-4.3.4-r2.ebuild 2153
 MD5 5547bf31e6a425747226d5984cff04e9 files/digest-php-core-4.3.4 137
 MD5 5547bf31e6a425747226d5984cff04e9 files/digest-php-core-4.3.4-r1 137
+MD5 5547bf31e6a425747226d5984cff04e9 files/digest-php-core-4.3.4-r2 137
