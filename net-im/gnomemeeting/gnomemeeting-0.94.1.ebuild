@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.6 2002/12/09 04:33:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.7 2002/12/09 22:59:02 mholzer Exp $
 
 IUSE="sdl ssl"
 
@@ -42,7 +42,8 @@ DEPEND="=dev-libs/pwlib-1.3.11*
 	>=dev-libs/glib-2.0.0
 	media-libs/freetype
 	dev-libs/expat
-	media-libs/fontconfig"
+	media-libs/fontconfig
+	media-sound/esound"
 
 RDEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.12.0

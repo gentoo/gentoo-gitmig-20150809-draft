@@ -7,7 +7,10 @@
  
 *gnomemeeting-0.94.1 (12 Nov 2002)
 
-  12 Nov 2002; Matt Keadle <mkeadle@gentoo.org
+  10 Dec 2002; Martin Holzer <mholzer@gentoo.org> gnomemeeting-0.94.1.ebuild Changelog
+  added  esound dependency. Fixes #11642
+
+  12 Nov 2002; Matt Keadle <mkeadle@gentoo.org>
   gnomemeeting-*.ebuild:
 
   Changed instances of 'Speex' to 'speex'
