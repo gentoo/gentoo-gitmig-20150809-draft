@@ -1,5 +1,5 @@
 # Configuration file for qmail-smtpd
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/conf-smtpd,v 1.3 2005/01/03 21:31:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/conf-smtpd,v 1.4 2005/01/28 08:15:18 hansmi Exp $
 
 # Stuff to run before tcpserver
 #QMAIL_TCPSERVER_PRE=""
@@ -14,6 +14,7 @@ TCPSERVER_OPTS="${TCPSERVER_OPTS} -R"
 # fixcrio inserts missing CRs at the ends of lines. See:
 # http://cr.yp.to/ucspi-tcp/fixcrio.html
 # http://cr.yp.to/docs/smtplf.html
+# DO NOT enable this, when you are using SSL/TLS (USE=ssl)!
 #QMAIL_SMTP_PRE="${QMAIL_SMTP_PRE} fixcrio"
 
 # You might want to use rblsmtpd with this, but you need to fill in a RBL server here first

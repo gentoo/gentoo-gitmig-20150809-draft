@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.30 2005/01/27 19:19:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.31 2005/01/28 08:15:18 hansmi Exp $
+
+  28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> files/conf-smtpd:
+  Small notice about not enabling fixcrio when using SSL, bug 79799.
 
   27 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r10.ebuild,
   qmail-1.03-r11.ebuild, qmail-1.03-r12.ebuild, qmail-1.03-r13.ebuild,
