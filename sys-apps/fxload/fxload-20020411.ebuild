@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.10 2003/02/13 15:57:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.11 2003/03/25 12:53:09 gmsoft Exp $
 
 # source maintainers named it fxload-YYYY_MM_DD instead of fxload-YYYYMMDD
-OLDP="$P"
-P=`echo $P|sed 's/-\(....\)\(..\)\(..\)/-\1_\2_\3/'`
-S=${WORKDIR}/${P}
+MY_P=`echo $P|sed 's/-\(....\)\(..\)\(..\)/-\1_\2_\3/'`
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="USB firmware uploader"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/linux-hotplug/fxload-2002_04_11.tar.gz"
 HOMEPAGE="http://linux-hotplug.sourceforge.net"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
