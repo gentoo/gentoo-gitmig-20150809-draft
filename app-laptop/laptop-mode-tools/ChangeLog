@@ -1,0 +1,11 @@
+# ChangeLog for app-laptop/laptop-mode-tools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.1 2005/03/22 18:52:40 brix Exp $
+
+*laptop-mode-tools-1.04 (22 Mar 2005)
+
+  22 Mar 2005; <brix@gentoo.org> +metadata.xml,
+  +files/laptop-mode-tools-1.04.init, +laptop-mode-tools-1.04.ebuild:
+  Initial import, fixes bug #45593. Thank you to all who commented on the bug
+  report.
+
