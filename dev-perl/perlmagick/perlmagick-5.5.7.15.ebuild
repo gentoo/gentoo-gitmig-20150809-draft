@@ -1,14 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.7.15.ebuild,v 1.1 2003/12/17 17:19:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.7.15.ebuild,v 1.2 2004/02/14 19:56:10 vapier Exp $
 
-inherit perl-module
-inherit flag-o-matic
-replace-flags k6-3 i586
-replace-flags k6-2 i586
-replace-flags k6 i586
-
-IUSE=""
+inherit perl-module eutils
 
 # Left this the same as ImageMagick for the sake of simplicity
 MY_PN=ImageMagick
@@ -18,20 +12,19 @@ MY_P2=${MY_PN}-${PV%.*}
 
 S=${WORKDIR}/${MY_P2}
 DESCRIPTION="A Perl module to harness the powers of ImageMagick"
-SRC_URI="mirror://sourceforge/imagemagick/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.imagemagick.org/"
+SRC_URI="mirror://sourceforge/imagemagick/${MY_P}.tar.bz2"
 
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND="=media-gfx/imagemagick-${PV}*
 	>=dev-lang/perl-5"
 
 src_compile() {
 	#patch to allow building by perl
-	epatch ${FILESDIR}/perlpatch.diff || die
+	epatch ${FILESDIR}/perlpatch.diff
 
 	cd PerlMagick
 	perl-module_src_prep
