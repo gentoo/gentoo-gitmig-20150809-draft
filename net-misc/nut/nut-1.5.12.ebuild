@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.12.ebuild,v 1.2 2004/04/25 20:44:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.12.ebuild,v 1.3 2004/04/26 18:56:27 agriffis Exp $
 
 inherit fixheadtails
 
@@ -57,7 +57,7 @@ src_compile() {
 		--with-logfacility=LOG_DAEMON \
 		--with-statepath=/var/lib/nut \
 		--with-linux-hiddev \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	sed -e "s:= bestups:= hidups bestups:" \
 		-i drivers/Makefile || die "sed failed"

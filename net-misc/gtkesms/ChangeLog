@@ -1,7 +1,11 @@
 # ChangeLog for net-misc/gtkesms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/ChangeLog,v 1.6 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/ChangeLog,v 1.7 2004/04/26 18:53:28 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> gtkesms-0.0.4.ebuild:
+  Add die following econf for bug 48950
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 

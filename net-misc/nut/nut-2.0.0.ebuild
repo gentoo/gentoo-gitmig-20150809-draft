@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-2.0.0.ebuild,v 1.1 2004/04/01 05:56:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-2.0.0.ebuild,v 1.2 2004/04/26 18:56:27 agriffis Exp $
 
 inherit fixheadtails
 
@@ -49,7 +49,7 @@ src_compile() {
 		--sysconfdir=/etc/nut \
 		--with-logfacility=LOG_DAEMON \
 		--with-statepath=/var/lib/nut \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die "compile problem"
 

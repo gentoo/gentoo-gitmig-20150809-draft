@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.32 2004/04/25 20:44:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.33 2004/04/26 18:56:27 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> nut-1.4.1.ebuild,
+  nut-1.5.12.ebuild, nut-2.0.0.ebuild:
+  Add die following econf for bug 48950
 
   25 Apr 2004; Jon Hood <squinky86@gentoo.org> nut-1.4.1.ebuild,
   nut-1.5.12.ebuild:
