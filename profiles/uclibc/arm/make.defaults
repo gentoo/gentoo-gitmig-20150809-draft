@@ -3,7 +3,7 @@ GRP_STAGE23_USE="arm berkdb ncurses python readline zlib uclibc"
 STAGE1_USE="uclibc"
 
 ARCH="arm"
-LIBC="uclibc"
+PORTAGE_LIBC="uclibc"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="arm"
 
