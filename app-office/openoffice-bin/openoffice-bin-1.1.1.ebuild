@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.2 2004/03/30 23:22:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.3 2004/04/01 11:51:06 suka Exp $
 
 IUSE="kde gnome"
 
@@ -11,7 +11,6 @@ IUSE="kde gnome"
 LOC="/opt"
 
 INSTDIR="${LOC}/OpenOffice.org"
-MY_PV="${PV/.1}"
 MY_P="OOo_${PV}_LinuxIntel_install"
 S="${WORKDIR}/${MY_P}"
 
@@ -111,7 +110,7 @@ src_install() {
 
 	# Install user autoresponse file
 	insinto /etc/openoffice
-	sed -e "s|<pv>|${MY_PV}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
+	sed -e "s|<pv>|${PV}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
 	doins ${T}/autoresponse-${PV}.conf
 
 	# Install wrapper script
