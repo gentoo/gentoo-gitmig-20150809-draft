@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-nsco
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/ChangeLog,v 1.5 2003/10/27 19:35:46 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/ChangeLog,v 1.6 2004/02/28 21:08:35 vapier Exp $
+
+*quake3-nsco-1.91 (28 Feb 2004)
+
+  28 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #43220 by Markus Rothe.
 
 *quake3-nsco-1.45 (29 Nov 2002)
 
