@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.31 2002/07/15 23:57:11 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.32 2002/07/17 19:04:21 azarah Exp $
+
+  17 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Make sure the standard symlinks (/usr/include/X11, etc) will not be removed.
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 

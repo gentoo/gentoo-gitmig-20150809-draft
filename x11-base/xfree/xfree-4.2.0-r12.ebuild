@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.8 2002/07/15 23:57:11 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.9 2002/07/17 19:04:21 azarah Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
@@ -207,10 +207,12 @@ src_install() {
 	tar -xz --no-same-owner -f ${DISTDIR}/truetype.tar.gz || \
 		die "Failed to unpack truetype.tar.gz"
 
-	dodir /usr/bin
-	dosym /usr/X11R6/bin /usr/bin/X11
-
-	dosym /usr/X11R6/lib/X11 /usr/lib/X11
+	# Standard symlinks
+	dodir /usr/{bin,include,lib}
+	dosym ../X11R6/bin /usr/bin/X11
+	dosym ../X11R6/include/X11 /usr/include/X11
+	dosym ../X11R6/include/GL /usr/include/GL
+	dosym ../X11R6/lib/X11 /usr/lib/X11
 
 	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so
 	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so.1
@@ -300,5 +302,16 @@ pkg_postinst() {
 		mkdir -p ${ROOT}/var/lib/xdm
 	fi
 	touch ${ROOT}/var/lib/xdm/.keep
+}
+
+pkg_postrm() {
+	# Fix problematic links
+	if [ -x ${ROOT}/usr/X11R6/bin/XFree86 ]
+	then
+		ln -snf ../X11R6/bin ${ROOT}/usr/bin/X11
+		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
+		ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
+		ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
+	fi
 }
 
