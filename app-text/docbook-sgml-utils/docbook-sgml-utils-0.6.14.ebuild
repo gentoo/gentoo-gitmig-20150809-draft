@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.8 2004/09/03 18:50:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.1 2004/09/03 18:50:21 usata Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${MY_P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~amd64 mips ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~ppc64"
 IUSE="tetex"
 
 DEPEND=">=dev-lang/perl-5
@@ -29,15 +29,13 @@ DEPEND=">=dev-lang/perl-5
 	=app-text/docbook-sgml-dtd-4.0-r1
 	=app-text/docbook-sgml-dtd-4.1-r1
 	tetex? ( app-text/jadetex )
-	|| ( net-www/lynx net-www/links virtual/w3m )"
+	virtual/textbrowser"
 
 # including both xml-simple-dtd 4.1.2.4 and 1.0, to ease
 # transition to simple-dtd 1.0, <obz@gentoo.org>
 
 src_compile() {
-	epatch ${FILESDIR}/${PN}-frontend.patch
-	epatch ${FILESDIR}/${PN}-backend.patch
-	epatch ${FILESDIR}/${PN}-head-jw.patch
+	epatch ${FILESDIR}/${P}-backend.patch
 	econf || die
 	make || die
 }

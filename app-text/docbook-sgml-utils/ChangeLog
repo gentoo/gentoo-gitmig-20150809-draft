@@ -1,6 +1,14 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.26 2004/07/02 20:29:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.27 2004/09/03 18:50:21 usata Exp $
+
+*docbook-sgml-utils-0.6.14 (04 Sep 2004)
+
+  04 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -docbook-sgml-utils-0.6.11-r2.ebuild, docbook-sgml-utils-0.6.12-r2.ebuild,
+  +docbook-sgml-utils-0.6.14.ebuild:
+  Version bumped. Added w3m and elinks support (bug #35166) and removed
+  docbook2pdf if USE="-tetex" (bug #61938).
 
   02 Jul 2004; Tom Gall <tgall@gentoo.org> docbook-sgml-utils-0.6.12-r2.ebuild:
   stable on ppc64, bug #54799

@@ -1,0 +1,17 @@
+diff -urN docbook-utils-0.6.12.orig/backends/txt docbook-utils-0.6.12/backends/txt
+--- docbook-utils-0.6.12.orig/backends/txt	2002-06-28 00:16:44.000000000 +0900
++++ docbook-utils-0.6.12/backends/txt	2004-09-03 23:47:30.000000000 +0900
+@@ -10,6 +10,13 @@
+ then
+   CONVERT=/usr/bin/links
+   ARGS="-dump"
++elif [ -x /usr/bin/w3m ]
++then
++  CONVERT=/usr/bin/w3m
++  ARGS="-dump"
++elif [ -x /usr/bin/elinks ]
++  CONVERT=/usr/bin/elinks
++  ARGS="-dump"
+ else
+   echo >&2 "No way to convert HTML to text found."
+   exit 1
