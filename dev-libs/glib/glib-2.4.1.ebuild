@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.1.ebuild,v 1.6 2004/06/05 14:22:07 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.1.ebuild,v 1.7 2004/06/15 23:20:18 kloeri Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="x86 ~ppc ~sparc mips alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="doc"
 
 DEPEND=">=dev-util/pkgconfig-0.14
