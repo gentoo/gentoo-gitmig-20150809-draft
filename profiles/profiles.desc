@@ -5,22 +5,22 @@
 #layout:
 #arch		profile_directory					status
 
-alpha		default-linux/alpha/2004.3			stable
-amd64		default-linux/amd64/2004.3/lib64		stable
+alpha		default-linux/alpha/2005.0			stable
+amd64		default-linux/amd64/2005.0			stable
 arm			default-linux/arm/2004.3			stable
 hppa		default-linux/hppa/2004.3			stable
-ia64		default-linux/ia64/2004.3			stable
+ia64		default-linux/ia64/2005.0			stable
 m68k		default-linux/m68k					dev
 mips		default-linux/mips/2004.2			stable
-ppc			default-linux/ppc/2004.3			stable
-ppc64			default-linux/ppc64/2005.0			stable
+ppc			default-linux/ppc/2005.0			stable
+ppc64		default-linux/ppc64/2005.0			stable
 ppc-macos	default-darwin/macos/10.3			dev
 ppc-od		default-darwin/od/ppc				dev
 s390		default-linux/s390/2004.3			stable
 sh			default-linux/sh					dev
-sparc		default-linux/sparc/sparc64/2004.3 stable
+sparc		default-linux/sparc/sparc64/2005.0 stable
 sparc		default-linux/sparc/sparc64/dev/gcc33/24headers dev
-x86			default-linux/x86/2004.3			stable
+x86			default-linux/x86/2005.0			stable
 x86-fbsd	default-bsd/fbsd/x86				dev
 x86-obsd	default-x86-obsd-2004				dev
 x86-od		default-darwin/od/x86				dev
