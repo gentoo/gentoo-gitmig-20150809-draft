@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/sphinx2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.9 2004/10/05 10:33:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.10 2004/11/28 23:10:24 eradicator Exp $
+
+  28 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> sphinx2-0.4.ebuild:
+  DESTDIR. Install documentation. USE=static support to toggle building static
+  libs.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> sphinx2-0.4.ebuild:
   Masked sphinx2-0.4.ebuild stable for ppc
