@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/files/exim.rc6,v 1.7 2003/02/14 23:03:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/files/exim.rc6,v 1.8 2004/01/18 14:48:26 mholzer Exp $
 
 depend() {
 	need logger net
+	provide mta
 }
 
 start() {
