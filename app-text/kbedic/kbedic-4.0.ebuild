@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.6 2005/01/01 16:23:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.7 2005/01/29 13:55:01 greg_g Exp $
 
 inherit kde
 
@@ -17,13 +17,19 @@ DEPEND=">=x11-libs/qt-3
 	kde? ( >=kde-base/kdelibs-3 )"
 
 src_compile() {
-	use kde && myconf="$myconf --with-kde" || myconf="$myconf --prefix=/usr"
+	set-qtdir 3
+	set-kdedir 3
+
+	myconf="--prefix=/usr"
+	use kde && myconf="$myconf --with-kde"
 	use kde && kde_src_compile myconf
 	kde_src_compile configure make
 }
 
 src_install() {
 	kde_src_install
-	use kde && install -m 644 -D ${FILESDIR}/kbedic.desktop ${D}/usr/share/applnk/Utilities/kbedic.desktop
+	if use kde; then
+		insinto /usr/share/applnk/Utilities/kbedic.desktop
+		doins ${FILESDIR}/kbedic.desktop
+	fi
 }
-

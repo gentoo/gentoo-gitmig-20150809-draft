@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbedic
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.14 2005/01/01 16:23:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.15 2005/01/29 13:55:01 greg_g Exp $
+
+  29 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> kbedic-4.0.ebuild:
+  Proper usage of kde eclasses, to make sure KDEDIR is defined (#33079).
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kbedic-4.0.ebuild:
   QA: IUSE before inherit
