@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.5 2004/03/06 12:54:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.6 2004/04/26 02:12:32 agriffis Exp $
 
 inherit libtool gnome.org
 
@@ -45,7 +45,7 @@ src_unpack () {
 
 src_compile() {
 	elibtoolize
-	econf $(use_enable nls)
+	econf $(use_enable nls) || die "econf failed"
 	emake || die "make failed"
 }
 
