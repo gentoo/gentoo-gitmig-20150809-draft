@@ -1,11 +1,15 @@
 # ChangeLog for app-admin/powertweak
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.4 2002/10/29 19:16:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.5 2002/11/01 21:55:45 raker Exp $
 
 *powertweak-0.99.5_pre20021029 (Oct 29 2002)
 
+  01 Nov 2002; Nick Hadaway <raker@gentoo.org>
+  powertweak-0.99.5_pre20021029.ebuild :
+  Marked stable.
+
   29 Oct 2002; Nick Hadaway <raker@gentoo.org>
-  powertweak-0.99.5_pre20021029,
+  powertweak-0.99.5_pre20021029.ebuild,
   files/digest-powertweak-0.99.5_pre20021029,
   files/powertweak-0.99.5_pre20021029.diff.bz2 :
   Updated version of powertweak.  diff pulled from cvs on 10/29/2002.

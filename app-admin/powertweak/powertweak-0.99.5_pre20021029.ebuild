@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5_pre20021029.ebuild,v 1.1 2002/10/29 19:16:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5_pre20021029.ebuild,v 1.2 2002/11/01 21:55:45 raker Exp $
 
 IUSE="gtk"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://powertweak.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	>=dev-libs/libxml2-2.3.0
