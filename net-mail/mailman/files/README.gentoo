@@ -17,7 +17,9 @@ ebuild /var/db/pkg/net-mail/mailman-x.x.x/mailman-x.x.x.ebuild config
 
 This will add an Include in your apache.conf to mailman.conf
 
-2) In your /etc/conf.d/apache file add the additional option:
+2) In your /etc/conf.d/apache (for apache 1.x)
+	or /etc/conf.d/apache2 (for apache 2.x) 
+	file add the additional option:
 
 	-D MAILMAN
 
