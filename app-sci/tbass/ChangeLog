@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/tbass
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.7 2003/04/24 07:45:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.8 2003/05/12 04:11:22 george Exp $
+
+  11 May 2003; George Shapovalov <george@gentoo.org> tbass-20030318.ebuild :
+  a bug-fix update (#17514)
+  Thanks to Chris Bainbridge <chrb@dcs.ed.ac.uk> for submission.
 
 *tbass-20030204 (23 Apr 2003)
 
