@@ -1,0 +1,19 @@
+--- unistd-2.6.4.h	2004-04-12 08:33:06.000000000 -0400
++++ unistd.h	2004-08-04 21:58:41.947303328 -0400
+@@ -713,6 +713,8 @@
+ 
+ #endif /* __KERNEL_SYSCALLS__ */
+ 
++
++#ifdef __KERNEL__
+ #ifndef __ASSEMBLY__
+ 
+ #include <linux/linkage.h>
+@@ -731,6 +733,7 @@
+ 				size_t sigsetsize);
+ 
+ #endif	/* __ASSEMBLY__ */
++#endif  /* __KERNEL */
+ 
+ #endif /* __NO_STUBS */
+ 
