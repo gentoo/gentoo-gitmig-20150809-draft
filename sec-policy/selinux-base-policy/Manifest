@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 63848a4a9948375526188fe35319f0cd selinux-base-policy-20040604.ebuild 2684
+MD5 4c89d101643661a466af4ee56b8343a8 selinux-base-policy-20040604.ebuild 2681
 MD5 14ae2a4e98a3db04f290e37cef0c2f4d selinux-base-policy-20040225.ebuild 2225
-MD5 b3750024877d88b475cbf3b0d9d422a2 ChangeLog 7589
+MD5 b238dae92da10ed6b57aeaeb9bb29488 ChangeLog 7696
 MD5 ad5bf779c8659af91a01ad13a078d3ef selinux-base-policy-20040509.ebuild 2681
 MD5 808b5f7f5d6654666e9193672d463229 metadata.xml 473
 MD5 7afea4eea1a3c5611ca773551fbd1bb5 files/digest-selinux-base-policy-20040225 80
@@ -12,7 +12,7 @@ MD5 0671869ee0d92a38cfabe4491da88e1c files/digest-selinux-base-policy-20040509 8
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFAyOJqGFJQsIJWJy4RAvWQAJ95b2SsK+XRv2aCjtzHg52UU49OggCfRX7h
-tGRSHT7q7Fc4oPZ/w1U+em8=
-=2Wj9
+iD8DBQFA0HXnGFJQsIJWJy4RApK4AJ97Lu7K9uoFb7AUuue7XsKouqVZ2gCfUgOa
+o2v98ep1c4qZNSSy8809wRo=
+=PONb
 -----END PGP SIGNATURE-----
