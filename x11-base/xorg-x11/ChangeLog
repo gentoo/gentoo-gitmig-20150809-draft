@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.237 2004/12/07 02:43:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.238 2004/12/07 03:48:15 spyderous Exp $
+
+  06 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  Move from custom is_kernel() in x11.eclass to kernel_is() in
+  linux-info.eclass. It's not maintained by us, and that's a plus in itself.
 
   06 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
