@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*speex-1.0.3 (18 Dec 2003)
+
+  18 Dec 2003; Martin Holzer <mholzer@gentoo.org> speex-1.0.3.ebuild:
+  Version bumped.
+
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> speex-1.0.2.ebuild:
   mark stable on amd64
 
