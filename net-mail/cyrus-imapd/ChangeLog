@@ -1,10 +1,13 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.19 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.20 2003/02/01 19:44:34 raker Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cyrus-imapd-2.1.11 (07 Dec 2002)
+
+  01 Feb 2003; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.11.ebuild :
+  Changed configure options and DEPEND for proper kerberos(krb4) detection.
 
   07 Dec 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.11.ebuild,
   files/digest-cyrus-imapd-2.1.11, files/configure.diff :

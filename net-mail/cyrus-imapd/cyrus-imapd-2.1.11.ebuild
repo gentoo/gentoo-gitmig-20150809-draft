@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.11.ebuild,v 1.3 2002/12/27 22:21:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.11.ebuild,v 1.4 2003/02/01 19:44:39 raker Exp $
 
 DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	kerberos? ( >=app-crypt/krb5-1.2.5 )
+	kerberos? ( >=app-crypt/kth-krb-1.2 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.2
@@ -49,7 +49,7 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-openssl=/usr" \
 		|| myconf="${myconf} --without-openssl"
 
-	use kerberos && myconf="${myconf} --with-krb --with-auth=krb --enable-gssapi" \
+	use kerberos && myconf="${myconf} --with-krb=/usr/athena --with-auth=krb --enable-gssapi" \
 		|| myconf="${myconf} --without-krb --with-auth=unix --disable-gssapi"
 
 	econf \
