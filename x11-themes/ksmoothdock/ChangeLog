@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/ksmoothdock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.8 2004/06/28 20:43:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.9 2004/07/27 20:58:52 malc Exp $
+
+  27 Jul 2004; <malc@gentoo.org> ksmoothdock-3.5.1.ebuild:
+  Add ~amd64 closes bug #57551
 
   28 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> ksmoothdock-3.2.ebuild:
   kde-base is deprecated
