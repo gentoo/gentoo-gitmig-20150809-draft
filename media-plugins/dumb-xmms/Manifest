@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2df3383f21353865919434d94b410f43 ChangeLog 758
-MD5 de2bb6e39eba7fae76ece546e7351cda dumb-xmms-0.1.ebuild 1397
+MD5 b7d260a567518b1c63fd7aac73ff9c28 ChangeLog 838
+MD5 b1196424fb6121163133e381595cbde3 dumb-xmms-0.1.ebuild 1397
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 80f524adfe8ae5ce001195063119b8d8 files/digest-dumb-xmms-0.1 64
 MD5 63311a468ef65ce301f2f1362e741f2e files/dumb-xmms-0.1-PIC.patch 448
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZLScArHZZzCEUG0RAo1PAJ9Ia7+vDKAKoJAodN8D0IY6zxIGRACeLj4h
-n7q/+w9nKp2m4AGyRRcdwsI=
-=36kv
------END PGP SIGNATURE-----
