@@ -1,14 +1,27 @@
-MD5 e6860f57efbbf31175cf19fc839f45f9 ChangeLog 3922
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 696403f18f16c5917e250a684187a850 ChangeLog 4094
 MD5 3b1bff980356c4a65d57cc1b4cf3e0af emacs-cvs-21.3.50.ebuild 3039
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 b0074eda7745eefdefa92a834c69bdfa emacs-cvs-22.0.50.ebuild 4513
 MD5 c923ad49f159d42b7490ed9712314fdd emacs-cvs-22.0.0.ebuild 3008
 MD5 392ad6771838dab0b7a0ac1dd90890c6 emacs-cvs-21.3.50-r2.ebuild 4512
 MD5 04a64867694a98538309b433c80aaa62 files/40aspell-gentoo.el 80
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0
 MD5 0e5a4a35651f5365c6191636a2c26eb7 files/emacs.desktop 190
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.50 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.0 0
-MD5 ffdd28353d4bb08ee9ec653650458a40 files/50emacs-21.3.50.envd 39
-MD5 39e2f957cdbcb0ae028bb9b94312d85b files/emacs-21.3.50.desktop 206
 MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
+MD5 39e2f957cdbcb0ae028bb9b94312d85b files/emacs-21.3.50.desktop 206
+MD5 ffdd28353d4bb08ee9ec653650458a40 files/50emacs-21.3.50.envd 39
+MD5 8e50e760415e106cd168d8709d31b7dc files/emacs-22.0.50.desktop 206
 MD5 277b238c9263aabcc2ef92de1d6d68bb files/emacs-cvs-21.3.50-nofink.diff 1520
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50-r2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCDFn7VWNWqTUmv+0RAtPtAJ43hzDwKso6irFMmPPfYaSxJV1q8ACfWeGh
+ZG+ReOthQyP2SJuZ8e88J0A=
+=ilsq
+-----END PGP SIGNATURE-----
