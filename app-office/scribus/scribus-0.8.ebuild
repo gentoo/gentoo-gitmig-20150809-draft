@@ -1,16 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.8.ebuild,v 1.4 2002/11/28 22:17:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.8.ebuild,v 1.5 2002/11/30 23:38:46 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Scribus is a Layout program"
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid"
 SRC_URI="http://web2.altmuehlnet.de/fschmid/${P}.tar.gz"
-IUSE="kde"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE="kde"
 
 DEPEND="=x11-libs/qt-3*
 	media-libs/freetype
@@ -26,20 +25,18 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "./configure failed"
+	econf
 	emake || die "make failed"
 	mv debian/scribus-debian.xpm debian/scribus.xpm
 }
 
-src_install () {
-
-	einstall destdir=${D} || die "couldn't be installed"
+src_install() {
+	einstall destdir=${D}
 
 	dodoc AUTHORS ChangeLog README TODO
 
 	# Fixing desktop.scribus
-	use kde &&
-	(
+	if [ `use kde` ] ; then
 		inherit kde-functions
 		set-kdedir 3
 		sed -e 's/local\///' desktop.scribus > desktop.scribus.2
@@ -47,7 +44,7 @@ src_install () {
 		cp -f desktop.scribus.2 scribus.desktop
 		insinto ${PREFIX}/share/applnk/Graphics
 		doins scribus.desktop
-	)
+	fi
 	# Copy the pixmaps to the generic place
 	insinto /usr/share/pixmaps/
 	doins debian/scribus.xpm
