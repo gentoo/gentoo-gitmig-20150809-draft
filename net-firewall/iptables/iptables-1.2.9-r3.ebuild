@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r3.ebuild,v 1.2 2004/07/02 09:41:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r3.ebuild,v 1.3 2004/07/02 10:31:32 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -95,12 +95,12 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} MANDIR=/usr/share/man ${myconf} install
+	make DESTDIR=${D} MANDIR=/usr/share/man ${myconf} install || die
 	make DESTDIR=${D} ${myconf} \
 		LIBDIR=/usr/lib \
 		MANDIR=/usr/share/man \
 		INCDIR=/usr/include \
-		install-devel
+		install-devel || die
 
 	dodoc COPYING
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables

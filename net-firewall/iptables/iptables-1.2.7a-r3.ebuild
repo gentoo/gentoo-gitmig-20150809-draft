@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.7a-r3.ebuild,v 1.8 2004/06/28 19:00:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.7a-r3.ebuild,v 1.9 2004/07/02 10:31:32 eradicator Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
 #	dodir /usr/{lib,share/man/man8,sbin}
 
-	make DESTDIR=${D} MANDIR=/usr/share/man install
+	make DESTDIR=${D} MANDIR=/usr/share/man install || die
 
 	dodoc COPYING KNOWN_BUGS
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r1.ebuild,v 1.1 2004/06/28 20:36:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r1.ebuild,v 1.2 2004/07/02 10:31:32 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -102,14 +102,14 @@ src_install() {
 		PREFIX= \
 		DESTDIR=${D} \
 		MANDIR=/usr/share/man \
-		install
+		install || die
 	make COPT_FLAGS="${CFLAGS}" ${myconf} \
 		DESTDIR=${D} \
 		PREFIX= \
 		LIBDIR=/usr/lib \
 		MANDIR=/usr/share/man \
 		INCDIR=/usr/include \
-		install-devel
+		install-devel || die
 
 	dodoc COPYING
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables

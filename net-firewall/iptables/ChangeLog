@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.33 2004/07/02 09:41:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.34 2004/07/02 10:31:32 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  iptables-1.2.11-r1.ebuild, iptables-1.2.7a-r3.ebuild,
+  iptables-1.2.9-r1.ebuild, iptables-1.2.9-r3.ebuild, iptables-1.2.9.ebuild:
+  || die's to make install to avoid problems like we see in bug #55489.
 
   02 Jul 2004; Lars Weiler <pylon@gentoo.org> iptables-1.2.9-r3.ebuild:
   Stable on ppc as iptables-1.2.7a-r3 does not compile any more.
