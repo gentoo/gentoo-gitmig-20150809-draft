@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.24.ebuild,v 1.2 2004/01/23 13:45:46 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.24.ebuild,v 1.3 2004/01/24 22:48:19 pyrania Exp $
 
-IUSE="build ultra1"
+IUSE="ultra1"
 
 # Kernel ebuilds using the kernel.eclass can remove any patch that you
 # do not want to apply by simply setting the KERNEL_EXCLUDE shell

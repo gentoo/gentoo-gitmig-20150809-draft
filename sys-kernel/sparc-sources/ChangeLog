@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.45 2004/01/23 13:45:46 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.46 2004/01/24 22:48:19 pyrania Exp $
+
+  24 Jan 2004; Markus Nigbur <pyrania@gentoo.org>
+  sparc-sources-2.4.23-r1.ebuild, sparc-sources-2.4.24.ebuild:
+  Removed build from IUSE, because the kernel eclass already adds it.
 
   23 Jan 2004; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.24.ebuild:
