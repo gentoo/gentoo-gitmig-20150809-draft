@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.13 2003/04/23 00:12:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.14 2003/04/29 00:39:57 zwelch Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
@@ -13,6 +13,9 @@
   Add ~alpha to KEYWORDS
 
 *libnet-1.0.2a-r2 (02 Oct 2002)
+
+  28 Apr 2003; Zach Welch <zwelch@gentoo.org> libnet-1.0.2a-r2.ebuild:
+  add arm keyword
 
   02 Oct 2002; Seemant Kulleen <seemant@gentoo.org> libnet-1.0.2a-r2.ebuild
   files/digest-libnet-1.0.2a-r2 libnet-1.1.0-r1.ebuild
