@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.3 2004/09/10 16:45:07 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.4 2004/10/14 17:51:54 cretin Exp $
 
 inherit eutils
 
@@ -39,8 +39,10 @@ src_install() {
 
 	dodoc INSTALL TODO ChangeLog THANKS COPYING README AUTHORS NEWS
 
-	insinto /etc
-	doins ${S}/doc/prelink.conf
 	insinto /etc/env.d
 	doins ${S}/60prelink
+}
+
+pkg_postinst() {
+    env-update
 }
