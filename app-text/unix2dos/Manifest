@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 001fc0a00ae4573d9e534772a272f5f4 ChangeLog 1311
-MD5 c1ed0e3f5c9b33286cae94f2dfe5f6d7 unix2dos-2.2.ebuild 770
+MD5 b32ca9957b93470b0b5b878b549342a1 unix2dos-2.2.ebuild 784
 MD5 9b19aa73a3447d0d691bd0e5537f6547 files/digest-unix2dos-2.2 66
 MD5 e7f3673c14b9bbeed71e94730d7ef386 files/unix2dos-2.2-manpage.patch 888
 MD5 fe14e5681bc093d2039290d906023047 files/unix2dos-2.2-segfault.patch 2297
 MD5 c723995df715179f101342647856ed6d files/unix2dos-mkstemp.patch 543
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCDXdHTu7gpaalycRAnk6AKDYbC3gWketx1qKsFj49g/G5P7JegCgqlUk
+wGG3id7N1cw2B3xRPBqqFoQ=
+=b5M5
+-----END PGP SIGNATURE-----

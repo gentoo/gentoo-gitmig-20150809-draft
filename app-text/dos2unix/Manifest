@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 72d1ae8da95198dab262d1c66a0a0b70 ChangeLog 1110
-MD5 a5316986af8f1610d98ef0c6b6eafc94 dos2unix-3.1.ebuild 855
+MD5 476abc7557d70c3229a1c71e430a987d dos2unix-3.1.ebuild 869
 MD5 2b2ff8664186c867d4f5909878ba670c files/digest-dos2unix-3.1 64
 MD5 8fa72bf59beecca125d2b02558fb9175 files/dos2unix-3.1-segfault.patch 2281
 MD5 284eafc62e5d3fe95532af121f5278b7 files/dos2unix-3.1.patch 1146
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCDZ6HTu7gpaalycRAuNhAJ4lvLHuSA6F175g7hnjE0OjEN8MRgCgyDp6
+M6FUeSyktadsvTuodCX3xOw=
+=Jue7
+-----END PGP SIGNATURE-----
