@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.193 2004/08/15 17:58:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.194 2004/08/18 16:31:22 agriffis Exp $
+
+*mozilla-1.7.2-r1 (18 Aug 2004)
+
+  18 Aug 2004; Aron Griffis <agriffis@gentoo.org> +mozilla-1.7.2-r1.ebuild,
+  -mozilla-1.7.2.ebuild:
+  Bump revision to carry out change in mozilla.eclass (Fix bug 60668: Galeon
+  doesn't build without oji enabled, so enable it regardless of USE=java)
 
   15 Aug 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.6-r1.ebuild,
   mozilla-1.7-r1.ebuild, mozilla-1.7.2.ebuild, mozilla-1.7.ebuild:
