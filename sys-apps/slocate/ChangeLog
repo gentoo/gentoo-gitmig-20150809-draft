@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.27 2003/11/01 21:31:10 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.28 2004/01/06 16:13:51 agriffis Exp $
+
+  06 Jan 2004; Aron Griffis <agriffis@gentoo.org> files/updatedb.conf:
+  Add supermount to the list of pruned filesystems
 
   01 Nov 2003; Douglas Russell <puggy@gentoo.org> slocate-2.7-r2.ebuild,
   slocate-2.7-r3.ebuild:
