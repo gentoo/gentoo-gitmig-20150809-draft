@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.9 2004/06/25 00:45:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.10 2004/07/14 22:01:29 agriffis Exp $
 
 MY_P=${PN/-/_}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,7 @@ HOMEPAGE="http://heroine.linuxave.net/toys.html"
 SLOT="0"
 LICENSE="BSD LGPL-2 GPL-2"
 KEYWORDS="x86"
+IUSE="nas"
 
 DEPEND="virtual/x11
 	>=media-libs/jpeg-6b
