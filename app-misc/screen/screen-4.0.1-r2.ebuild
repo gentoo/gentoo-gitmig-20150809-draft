@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.8 2004/04/04 04:12:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.9 2004/04/06 04:24:01 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Screen is a full-screen window manager that multiplexes a physical terminal between several processes"
 HOMEPAGE="http://www.guckes.net/screen/ http://www.gnu.org/software/screen/"
@@ -82,7 +82,7 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	dobin screen || die "dobin failed"
 	keepdir /var/run/screen
 	fowners root:utmp /{usr/bin,var/run}/screen
@@ -106,7 +106,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	chmod 0775 /var/run/screen
+	chmod 0775 ${ROOT}/var/run/screen
 
 	einfo "Some dangerous key bindings have been removed or changed to more safe values."
 	einfo "For more info, please check /etc/screenrc"

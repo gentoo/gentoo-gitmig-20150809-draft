@@ -1,23 +1,24 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.8 2004/02/29 17:19:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.9 2004/04/06 04:10:01 vapier Exp $
+
+inherit eutils
 
 MY_P=cku201
-S=${WORKDIR}
-DESCRIPTION="C-Kermit is a combined serial and network communication software package offering a consistent, medium-independent, cross-platform approach to connection establishment, terminal sessions, file transfer, character-set translation, numeric and alphanumeric paging, and automation of communication tasks."
-SRC_URI="ftp://kermit.columbia.edu/kermit/archives/${MY_P}.tar.gz"
+DESCRIPTION="combined serial and network communication software package offering a consistent, medium-independent, cross-platform approach to connection establishment, terminal sessions, file transfer, character-set translation, numeric and alphanumeric paging, and automation of communication tasks."
 HOMEPAGE="http://www.kermit-project.org/"
+SRC_URI="ftp://kermit.columbia.edu/kermit/archives/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="Kermit"
+SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	net-dialup/xc"
 
-src_unpack() {
+S=${WORKDIR}
 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PF}-gentoo.diff
@@ -25,7 +26,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	make KFLAGS="-DCK_SHADOW" linux || die
 }
 

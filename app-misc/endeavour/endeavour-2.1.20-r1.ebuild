@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.8 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.9 2004/04/06 04:15:45 vapier Exp $
+
+inherit eutils
 
 M=endeavour2-mimetypes
 DESCRIPTION="powerful file and image browser"
@@ -8,8 +10,8 @@ HOMEPAGE="http://wolfpack.twu.net/Endeavour2/"
 SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/${M}.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc"
 
 DEPEND="app-arch/bzip2

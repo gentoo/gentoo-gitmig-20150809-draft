@@ -1,10 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r1.ebuild,v 1.1 2003/12/22 07:54:07 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r1.ebuild,v 1.2 2004/04/06 04:08:53 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Static HTML photo album generator"
 HOMEPAGE="http://bins.sautret.org/"
 SRC_URI="http://jsautret.free.fr/BINS/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~alpha ~ppc amd64"

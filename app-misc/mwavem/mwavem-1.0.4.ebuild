@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.4.ebuild,v 1.1 2004/01/12 23:04:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.4.ebuild,v 1.2 2004/04/06 04:23:28 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="User level application for IBM Mwave modem"
 HOMEPAGE="http://oss.software.ibm.com/acpmodem/"
 SRC_URI="ftp://www-126.ibm.com/pub/acpmodem/1.0.4/${P}.tar.gz"
-IUSE="X"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
+IUSE="X"
 
 DEPEND="virtual/glibc
 	X? ( virtual/x11 )"

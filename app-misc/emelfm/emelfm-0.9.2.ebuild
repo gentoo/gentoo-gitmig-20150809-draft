@@ -1,14 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.11 2004/03/14 10:50:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.12 2004/04/06 04:14:46 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A file manager that implements the popular two-pane design."
-SRC_URI="http://emelfm.sourceforge.net/${P}.tar.gz"
 HOMEPAGE="http://emelfm.sourceforge.net/"
-IUSE="nls"
-SLOT="0"
+SRC_URI="http://emelfm.sourceforge.net/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
@@ -46,5 +49,5 @@ src_install() {
 			install || die
 	fi
 
-	gzip ${D}/usr/share/doc/${P}/*.txt
+	gzip ${D}/usr/share/doc/${PF}/*.txt
 }
