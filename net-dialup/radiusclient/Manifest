@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 299927dfa5261d2fab5022da6fed62c6 metadata.xml 277
-MD5 28061c1dc3dae2c42f6cc65d75e77b1f radiusclient-0.3.2.ebuild 841
+MD5 9d309513ab31740f961344f9f851ffbe radiusclient-0.3.2.ebuild 754
 MD5 68faf3ef0c0ccdd4e3d17f3c9840dbcb ChangeLog 458
 MD5 23e579ca4437008a0ba9250be83364ea files/pkgsysconfdir-install.patch 1612
 MD5 5f9d9dce2806167e9eba3b2fb3262567 files/digest-radiusclient-0.3.2 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoFIHjtv59x0+BrURAj5ZAJ9e/DSW9TOe837gWv4+s3rlyM0VmwCdFhGz
-3eHWXtM9nBj+KgcyQH7fmJU=
-=rmFb
+iD8DBQFBoFUbjtv59x0+BrURAhRMAJ9m0iC3SLiOb5IK8puV4eOxuBcxuACeKwAV
+DQu6LIODmXAnox1W0ROd9WM=
+=/RcJ
 -----END PGP SIGNATURE-----
