@@ -1,0 +1,7 @@
+# ChangeLog for dev-haskell/buddha
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/ChangeLog,v 1.1 2004/11/03 19:10:50 kosmikus Exp $
+
+  03 Nov 2004; Andres Loeh <kosmikus@gentoo.org> :
+  Initial import, thanks to Duncan Coutts (cf. bug #69270).
+
