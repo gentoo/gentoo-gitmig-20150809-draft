@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/scret
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scret/ChangeLog,v 1.1 2004/03/20 16:05:37 centic Exp $
+
+*scret-0.1.3 (20 Mar 2004)
+
+  20 Mar 2004; Dominik Stadler <centic@gentoo.org> scret-0.1.3.ebuild:
+  New ebuild, thanks to Christian Banik <mynews@buschaos.de>, see Bug 36170
+
