@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.17 2003/12/23 10:48:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.18 2003/12/29 19:07:25 vapier Exp $
 
 *dante-1.1.14-r2 (23 Dec 2003)
+
+  29 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add a little ninja sed to fix compilation with 2.6 headers.
 
   23 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> dante-1.1.14-r1.ebuild,
   dante-1.1.14-r2.ebuild, files/dante-sockd-conf-1.1.14-r2,
