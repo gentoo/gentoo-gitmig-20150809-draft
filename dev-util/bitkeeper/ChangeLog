@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/bitkeeper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.8 2003/03/31 17:03:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.9 2003/05/09 15:23:00 mholzer Exp $
 
 *bitkeeper-3.0.1-r1 (31 Mar 2003)
+
+  09 May 2003; Martin Holzer <mholzer@gentoo.org> bitkeeper-3.0.1-r1.ebuild:
+  Marked x86 stable since 3.0 is no more available
 
   31 Mar 2003; Martin Holzer <mholzer@gentoo.org> bitkeeper-3.0.1-r1.ebuild:
   Solves name conflicts between BK man pages and system man pages; also includes
