@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.5 2001/08/21 23:54:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.6 2001/08/22 11:29:04 danarmak Exp $
 
-V=${PV}
-#A=${PN}-${V}.tar.bz2
-S=${WORKDIR}/${PN}-${V}
-DESCRIPTION="KDE ${V} - Base"
-SRC_PATH="kde/stable/${V}/src/${P}.tar.bz2"
+S=${WORKDIR}/${P}
+DESCRIPTION="KDE ${PV} - Base"
+SRC_PATH="kde/stable/${PV}/src/${P}.tar.bz2"
 SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH
@@ -81,7 +79,7 @@ src_compile() {
     if [ -z "`use ssl`" ] ; then
       myconf="$myconf --without-ssl"
     fi
-	
+
 	if [ "`use objprelink`" ] ; then
 	  myconf="$myconf --enable-objprelink"
 	fi
@@ -89,7 +87,7 @@ src_compile() {
     QTBASE=/usr/X11R6/lib/qt
 #    export CFLAGS="${CFLAGS} -I/usr/X11R6/include"
 #    export CXXFLAGS="${CXXFLAGS} -I/usr/X11R6/include"
-    try ./configure --prefix=/opt/kde${V} --host=${CHOST} --with-x \
+    ./configure --prefix=/opt/kde${PV} --host=${CHOST} --with-x \
 		 ${myconf} --with-xinerama \
 		--with-qt-dir=$QTBASE 
     try make
@@ -103,20 +101,24 @@ src_install() {
   newins kde.pamd kde
   cd ${D}/etc/X11/xdm
   mv Xsession Xsession.kde
-  insinto /opt/kde${V}/share/config
+  insinto /opt/kde${PV}/share/config
   doins ${FILESDIR}/kdmrc
-  sed -e "s:^kdmdesktop:/opt/kde${V}/kdmdesktop:" Xsetup_0 > Xsetup
+  sed -e "s:^kdmdesktop:/opt/kde${PV}/kdmdesktop:" Xsetup_0 > Xsetup
   cd ${S}
   dodoc AUTHORS ChangeLog README*
-  sed -e "s:^#\!/bin/sh:#\!/bin/sh --login:" ${D}/opt/kde${V}/bin/startkde > ${D}/opt/kde${V}/bin/startkde.tmp
-  mv ${D}/opt/kde${V}/bin/startkde.tmp ${D}/opt/kde${V}/bin/startkde
-  chmod a+x ${D}/opt/kde${V}/bin/startkde
+  sed -e "s:^#\!/bin/sh:#\!/bin/sh --login:" ${D}/opt/kde${PV}/bin/startkde > ${D}/opt/kde${PV}/bin/startkde.tmp
+  mv ${D}/opt/kde${PV}/bin/startkde.tmp ${D}/opt/kde${PV}/bin/startkde
+  chmod a+x ${D}/opt/kde${PV}/bin/startkde
+  
+  cd ${D}/usr/X11R6/bin/wm
+  cp ${FILESDIR}/kde22 .
+  ln -sf kde22 kde
   
   #install xsession session
   #explanation too long to put in here, mail me for info - danarmak
   insinto /usr/X11R6/bin/wm
   doins ${FILESDIR}/xsession
-  cd ${D}/opt/kde${V}/share/config/kdm
+  cd ${D}/opt/kde${PV}/share/config/kdm
   mv kdmrc kdmrc.orig
   sed -e 's/SessionTypes=/SessionTypes=dan,/' kdmrc.orig > kdmrc
   rm kdmrc.orig

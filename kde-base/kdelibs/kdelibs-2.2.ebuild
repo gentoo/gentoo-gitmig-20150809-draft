@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /home/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.3 2001/06/07 01:45:52 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.ebuild,v 1.7 2001/08/22 11:29:04 danarmak Exp $
 
-V=${PV}
-A=${PN}-${V}.tar.bz2
-S=${WORKDIR}/${PN}-${V}
-DESCRIPTION="KDE ${PV} - libs"
-SRC_PATH="kde/stable/${V}/src/${A}"
+S=${WORKDIR}/${P}
+DESCRIPTION="KDE ${PV} - Libraries"
+SRC_PATH="kde/stable/${PV}/src/${P}.tar.bz2"
 SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH
@@ -74,10 +72,10 @@ src_compile() {
     if [ -z "`use ipv6`" ] ; then
       myopts="$myopts --with-ipv6-lookup=no"
     fi
-	
+
 	use onjprelink && myopts="$myopts --enable-objprelink"
-	
-    try ./configure --prefix=/opt/kde${V} --host=${CHOST} \
+
+    try ./configure --prefix=/opt/kde${PV} --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myopts --with-xinerama \
 		--disable-libfam
     cd ${S}

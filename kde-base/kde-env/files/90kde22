@@ -1,5 +1,5 @@
-PATH=/opt/kde2/bin
-ROOTPATH=/opt/kde2/bin
-LDPATH=/opt/kde2/lib
-KDEDIR=/opt/kde2
-MANPATH=/opt/kde2/share/man
+PATH=/opt/kde2.2/bin
+ROOTPATH=/opt/kde2.2/bin
+LDPATH=/opt/kde2.2/lib
+KDEDIR=/opt/kde2.2
+MANPATH=/opt/kde2.2/share/man
