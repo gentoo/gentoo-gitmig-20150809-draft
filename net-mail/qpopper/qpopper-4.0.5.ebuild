@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.11 2004/11/01 22:38:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.12 2005/02/07 19:08:51 blubb Exp $
 
 IUSE="ssl pam"
 
