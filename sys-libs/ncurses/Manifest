@@ -5,8 +5,8 @@ MD5 6c106fbeea1c453e10d37667cefd35ae ncurses-5.3-r2.ebuild 2459
 MD5 af7a0de2f75ba90257759319bfdda6fc ncurses-5.3-r3.ebuild 2675
 MD5 ac5ab557d506a10a6781d80a16a91408 ncurses-5.3-r4.ebuild 2847
 MD5 db75ec065134459591abd33360d27283 ncurses-5.3-r5.ebuild 3829
-MD5 557fbed523669644a1709463019bd165 ncurses-5.4.ebuild 3781
-MD5 641dc241d9eeca2e3f2725bbc16c9b09 ncurses-5.4-r1.ebuild 3989
+MD5 b75a4b0a48c31fe29a125f63a04fbdcd ncurses-5.4.ebuild 3793
+MD5 e6aaf3bdbb79824257f5a65d9105237b ncurses-5.4-r1.ebuild 4001
 MD5 cd8a694247cfd64ce864e99246a8d87f files/digest-ncurses-5.3-r1 64
 MD5 cd8a694247cfd64ce864e99246a8d87f files/digest-ncurses-5.3-r2 64
 MD5 cd8a694247cfd64ce864e99246a8d87f files/digest-ncurses-5.3-r3 64
