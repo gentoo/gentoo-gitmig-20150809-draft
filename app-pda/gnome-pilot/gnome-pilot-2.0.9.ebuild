@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.9.ebuild,v 1.1 2003/08/30 09:36:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.9.ebuild,v 1.2 2003/08/30 10:13:23 liquidx Exp $
 
 inherit gnome.org gnome2 eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/libgnome-2.0.0
     >=gnome-base/gnome-panel-2.0
     >=gnome-base/gconf-2.0
     >=dev-util/gob-2.0.5
-	>=dev-libs/pilot-link-0.11.7"
+	>=app-pda/pilot-link-0.11.7"
 
 DEPEND="sys-devel/gettext
 		>=dev-lang/perl-5.6.0

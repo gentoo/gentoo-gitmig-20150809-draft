@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.1 2003/08/30 09:36:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.2 2003/08/30 10:13:23 liquidx Exp $
 
 
 DESCRIPTION="Gnome Pilot apps"
@@ -11,7 +11,7 @@ RDEPEND="dev-lang/perl
 	=gnome-base/control-center-1.4*
 	>=gnome-base/gnome-libs-1.4.1.7
 	=gnome-base/gnome-panel-1.4*
-	>=dev-libs/pilot-link-0.11.0
+	>=app-pda/pilot-link-0.11.0
 	=dev-util/gob-1*
 	=gnome-base/libglade-0.17*"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.1 2003/08/30 09:12:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.2 2003/08/30 10:11:58 liquidx Exp $
 
 SYNCMAL="0.71.2"
 MALSYNC="2.1.1"
@@ -20,7 +20,7 @@ KEYWORDS="x86 sparc ~alpha"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2
-	>=dev-libs/pilot-link-0.11.5"
+	>=app-pda/pilot-link-0.11.5"
 
 src_unpack() {
 	unpack ${P}.tar.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.2-r1.ebuild,v 1.1 2003/08/30 09:12:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.2-r1.ebuild,v 1.2 2003/08/30 10:11:58 liquidx Exp $
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	>=dev-libs/pilot-link-0.9.5"
+	>=app-pda/pilot-link-0.9.5"
 
 src_unpack() {
 	unpack ${P}.tar.gz
