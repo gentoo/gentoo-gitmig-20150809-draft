@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.14 2004/06/24 23:10:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.15 2004/07/13 01:12:32 vapier Exp $
 
 inherit libtool eutils flag-o-matic
-MAKEOPTS="-j1" # or the documentation fails. bah!
 
 DESCRIPTION="free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
@@ -43,7 +42,8 @@ src_compile() {
 		|| myconf="${myconf} --disable-docs"
 
 	econf ${myconf} || die "econf failed"
-	emake || die "make failed"
+	# or the documentation fails. bah!
+	emake -j1 || die "make failed"
 }
 
 src_install() {

@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.9 2004/06/24 23:10:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.10 2004/07/13 01:12:32 vapier Exp $
 
 inherit libtool eutils
 
-MAKEOPTS="${MAKEOPTS} -j1" # or the documentation fails.
-
-DESCRIPTION="Library that implements support for numerous digital cameras."
+DESCRIPTION="Library that implements support for numerous digital cameras"
 HOMEPAGE="http://www.gphoto.org/"
 SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
@@ -21,30 +19,25 @@ RDEPEND=">=dev-libs/libusb-0.1.6
 	>=sys-apps/usbutils-0.11-r2
 	sys-apps/hotplug
 	jpeg? ( >=media-libs/libexif-0.5.9 )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 # By default, drivers for all supported cards will be compiled.
-# If you want to only compile for specific card(s), set GPHOTO_LIBS
+# If you want to only compile for specific card(s), set CAMERAS
 # environment to a comma-separated list (no spaces) of drivers that 
 # you want to build.
-#
-# For example:
-#
-#   env GPHOTO_LIBS='canon,ptp2' emerge libgphoto2
-#
-# drivers: agfa-cl20, barbie, canon, casio, digita, dimera,
-#          directory, fuji, gsmart300, jamcam,
-#          jd11, kodak, konica, mustek, largan,
-#          minolta, panasonic, pccam300, pccam600,
-#          polaroid, ptp2, ricoh, samsung, smal,
-#          sierra, sipix, sonydscf1, sonydscf55,
-#          soundvision, spca50x, sq905, stv0680, sx330z
-#
-[ -z "${GPHOTO_LIBS}" ] && GPHOTO_LIBS="all"
+IUSE_CAMERAS="agfa-cl20 barbie canon casio digita dimera directory fuji gsmart300 jamcam jd11 
+kodak konica mustek largan minolta panasonic pccam300 pccam600 polaroid ptp2 ricoh samsung 
+smal sierra sipix sonydscf1 sonydscf55 soundvision spca50x sq905 stv0680 sx330z"
 
+pkg_setup() {
+	if [ -z "${CAMERAS}" ] ; then
+		ewarn "All camera drivers will be built since you did not specify"
+		ewarn "via the CAMERAS variable what camera you use."
+		einfo "libgphoto2 supports: all ${IUSE_CAMERAS}"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -54,23 +47,30 @@ src_unpack() {
 }
 
 src_compile() {
+	local cameras
+	local cam
+	for cam in ${CAMERAS} ; do
+		has ${cam} ${IUSE_CAMERAS} && cameras="${cameras},${cam}"
+	done
+	[ -z "${cameras}" ] \
+		&& cameras="all" \
+		|| cameras="${cameras:1}"
+	einfo $cameras
+
 	elibtoolize
 
 	local myconf
 
 	myconf="--with-rpmbuild=/bin/false"
-
 	myconf="--with-drivers=${GPHOTO_LIBS}"
-
 	use jpeg \
 		&& myconf="${myconf} --with-exif-prefix=/usr" \
 		|| myconf="${myconf} --without-exif"
-
 	myconf="${myconf} `use_enable nls`"
 	myconf="${myconf} `use_enable doc docs`"
-
 	econf ${myconf} || die "econf failed"
-	emake || die "make failed"
+	# or the documentation fails.
+	emake -j1 || die "make failed"
 }
 
 src_install() {

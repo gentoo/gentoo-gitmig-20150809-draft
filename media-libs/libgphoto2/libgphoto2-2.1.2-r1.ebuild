@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.13 2004/06/24 23:10:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.14 2004/07/13 01:12:32 vapier Exp $
 
 inherit libtool eutils
-
-MAKEOPTS="-j1" # or the documentation fails. bah!
 
 DESCRIPTION="free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
@@ -20,7 +18,6 @@ RDEPEND=">=dev-libs/libusb-0.1.6
 	>=sys-apps/usbutils-0.11-r2
 	sys-apps/hotplug
 	jpeg? ( >=media-libs/libexif-0.5.9 )"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/patch-2.5.9
 	dev-util/pkgconfig
@@ -47,7 +44,8 @@ src_compile() {
 	myconf="${myconf} `use_enable doc docs`"
 
 	econf ${myconf} || die "econf failed"
-	emake || die "make failed"
+	# or the documentation fails. bah!
+	emake -j1 || die "make failed"
 }
 
 src_install() {
