@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.24 2004/02/27 14:58:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.25 2004/03/13 23:41:41 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gtk-perl-0.7008-r10.ebuild:
+  Added ~mips keyword.
 
 *gtk-perl-0.7008-r11 (27 Feb 2004)
 
