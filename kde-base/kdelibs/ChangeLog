@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.46 2003/01/30 19:40:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.47 2003/02/01 20:05:56 jmorgan Exp $
+
+  01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdeaddons-3.1.ebuild:
+  added ~sparc to keywords
 
   30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
