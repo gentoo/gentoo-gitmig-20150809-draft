@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.33 2003/03/19 11:54:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.34 2003/03/28 22:57:06 mholzer Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -73,7 +73,7 @@ INHERITED="$INHERITED $ECLASS"
 # add cvs to deps
 DEPEND="$DEPEND dev-util/cvs dev-python/pexpect"
 
-# since we now longer have src_fetch as a redefinable ebuild function,
+# since we no longer have src_fetch as a redefinable ebuild function,
 # we are forced to call this function from cvs_src_unpack
 cvs_fetch() {
 
