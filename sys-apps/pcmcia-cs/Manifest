@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 d94253e6b6db5a107754140b8b5a6384 pcmcia-cs-3.2.4.ebuild 4308
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 9cb0e20339d778261fa9b617a9bd9b6e pcmcia-cs-3.1.34-r8.ebuild 4089
-MD5 1f58a4ab3285a980affca7e0359e331d ChangeLog 15527
-MD5 63dc2764f165913254983ff62eb40f5d pcmcia-cs-3.2.7.ebuild 4729
-MD5 b021686c144e74f9b6fac22eddd2627a pcmcia-cs-3.2.5-r1.ebuild 5231
-MD5 fd0db86b0c8dbe693a607b02d86c3583 pcmcia-cs-3.2.5.ebuild 4399
-MD5 05c0595e3080f17e18624492d6dfc9a8 pcmcia-cs-3.2.7-r1.ebuild 4847
+MD5 335ee5d5602b747e1dbaf19e50c2d462 ChangeLog 15764
+MD5 d264ebebd9b9cc4cf613efe9648b1c08 pcmcia-cs-3.2.7.ebuild 4873
+MD5 f801e40c6bcb9ef932085cb198a8c579 pcmcia-cs-3.2.5-r1.ebuild 5375
+MD5 27b6ad5ee172657a5676ed4137d4132e pcmcia-cs-3.2.5.ebuild 4540
+MD5 8835397e99b1cef65cfd834f0d2363e8 pcmcia-cs-3.2.7-r1.ebuild 4992
 MD5 c1034d56e6decdb7d4f732bfff70088a files/digest-pcmcia-cs-3.1.34-r8 133
 MD5 8662e0e954d0cde8b84f76691c910e7a files/digest-pcmcia-cs-3.2.4 652
 MD5 157ac5bc22e938e1c2268c1f2610420c files/digest-pcmcia-cs-3.2.5-r1 379
@@ -25,7 +25,7 @@ MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBQb3fFhz/XBeRBtARArdJAJ91UIW35Ryax1/igbIFY3cliPEBOACgmqer
-eTD1BM6ORvyeloo+4e5oWCw=
-=yy6L
+iD8DBQFBV6TLFhz/XBeRBtARAo/tAJ9y/qgqUiow08yrLbI7X7oVDTD2VgCfef/Q
+PHm6TAKvTaS3OB8Z5ys+HdQ=
+=yxyV
 -----END PGP SIGNATURE-----

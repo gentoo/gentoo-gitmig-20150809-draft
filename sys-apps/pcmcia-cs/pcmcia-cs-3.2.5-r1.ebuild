@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.11 2004/07/15 02:03:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.12 2004/09/27 05:23:49 cardoe Exp $
 
 inherit eutils
 
@@ -172,6 +172,10 @@ pkg_postinst() {
 		einfo "General Setup is off and Wireless LAN (non-ham radio) is on but"
 		einfo "no modules or drivers turned on under Network Device Support"
 		einfo "if you have wireless."
+		einfo ""
+		einfo "Also note it now appears that you need CONFIG_CRC32 turned on"
+		einfo "These are the CRC32 Library functions in the config"
+
 	else
 		einfo "For 2.5/2.6 kernels, the PCMCIA support from the kernel should"
 		einfo "be used. Enable PCMCIA and any further drivers you need there,"
