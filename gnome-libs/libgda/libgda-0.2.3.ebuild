@@ -11,23 +11,32 @@ HOMEPAGE="http://www.gnome.org/gnome-db"
 
 DEPEND=">=gnome-base/gconf-0.11
 	>=dev-perl/CORBA-ORBit-0.4.3
-	>=dev-db/mysql-3.23.26
-	>=dev-db/unixODBC-1.8.13
-	>=net-nds/openldap-1.2.11"
+	mysql? ( >=dev-db/mysql-3.23.26 )
+        postgres? ( >=dev-db/postgresql-7.1 )
+	odbc? ( >=dev-db/unixODBC-1.8.13 )
+	ldap? ( >=net-nds/openldap-1.2.11 )"
 
-src_unpack() {
-  unpack ${A}
-}
 
 src_compile() {                           
-  cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--with-mysql=/usr --with-ldap=/usr --with-odbc 
+  local myconf 
+  if [ "`use mysql`" ] ; then
+    myconf="--with-mysql=/usr"
+  fi
+  if [ "`use ldap`" ] ; then
+    myconf="$myconf --with-ldap=/usr"
+  fi
+  if [ "`use odbc`" ]; then
+    myconf="$myconf --with-odbc"
+  fi
+  if [ "`use postgres`" ]; then
+    myconf="$myconf --with-postgres=/usr"
+  fi
+  
+  try ./configure --host=${CHOST} --prefix=/opt/gnome $myconf
   try make
 }
 
 src_install() {                               
-  cd ${S}
   try make prefix=${D}/opt/gnome PREFIX=${D}/usr \
 	GDA_oafinfodir=${D}/opt/gnome/share/oaf install
 
