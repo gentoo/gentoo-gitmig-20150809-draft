@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-unix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.11 2004/10/03 21:30:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.12 2004/10/17 11:22:50 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> ucspi-unix-0.36-r1.ebuild:
+  Added to ~ppc.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> ucspi-unix-0.36-r1.ebuild:
   Stable on sparc.
