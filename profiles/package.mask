@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (03 Sep 2002)
+# fixes building with ocaml-3.06, please test
+=dev-ml/lablgl-0.98
+
 # <raker@gentoo.org> (03 Sep 2002)
 # version bump.  fixes.  i suppose you might as well test this... :)
 =net-mail/sendmail-8.12.6
