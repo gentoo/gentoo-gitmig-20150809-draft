@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.17 2004/01/04 06:04:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.18 2004/01/08 07:31:43 solar Exp $
+
+*uclibc-0.9.26-r1 (08 Jan 2004)
+
+  08 Jan 2004; <solar@gentoo.org> uclibc-0.9.26-r1.ebuild,
+  files/0.9.26/uClibc-0.9.26-Makefile.patch,
+  files/0.9.26/uClibc-0.9.26-pie-option.patch:
+  Attached is one patch needed to really enable FORCE_SHAREABLE_SEGMENTS 
+  option, the other is to build uclibc against the installed kernel-headers 
+  (not kernel-source) - Peter S. Mazinger gentoo-embedded mailing list.
 
 *uclibc-0.9.26 (04 Jan 2004)
 
