@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.10f.ebuild,v 1.5 2004/07/07 15:26:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.10f.ebuild,v 1.6 2004/07/08 15:11:03 lu_zero Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://slovakia.shorewall.net/mirror/${PN}/${P}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~amd64"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 DEPEND="virtual/libc
 	net-firewall/iptables
