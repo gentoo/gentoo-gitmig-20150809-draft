@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.3 2002/06/13 16:17:12 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.4 2002/06/19 22:08:13 stroke Exp $
+  
+*pygtk-0.6.9 (19 Jun 2002)
+  19 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> pygtk-0.6.9.ebuild
+  New version, updated dependencies. Close bug #3891
 
 *pygtk-1.99.10 (13 Jun 2002)
   13 Jun 2002; Spider <spider@gentoo.org> pygtk-1.99.10.ebuild :
