@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.4 2003/11/20 15:58:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.5 2003/11/21 20:20:43 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -339,14 +339,16 @@ src_compile() {
 	# Get it to work without warnings on gcc3
 	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
-	# On amd64 we statically set 'safe' CFLAGS. Use those only.
-	# using the standard -O2 will cause segfaults on startup for amd64
-	if [ "${ARCH}" = "amd64" ]
-	then
-		ENABLE_OPTIMIZE="${CFLAGS}"
-	else
-		ENABLE_OPTIMIZE="-O2"
-	fi
+	# On 64-bit we statically set 'safe' CFLAGS. Use those only.
+	# using the standard -O2 will cause segfaults on startup
+	case "${ARCH}" in
+		alpha|amd64|ia64)
+			ENABLE_OPTIMIZE="${CFLAGS}"
+			;;
+		*)
+			ENABLE_OPTIMIZE="-O2"
+			;;
+	esac
 
 	cd ${S}
 	einfo "Configuring Mozilla..."

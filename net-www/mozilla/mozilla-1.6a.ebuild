@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6a.ebuild,v 1.1 2003/11/20 16:25:33 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6a.ebuild,v 1.2 2003/11/21 20:20:43 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -22,9 +22,9 @@ append-flags -s -fforce-addr
 case "${ARCH}" in
 	alpha|ia64)
 		# Anything more than this causes segfaults on startup on 64-bit
-		# (but 33767)
-		export CFLAGS="${CFLAGS//-O?/-O} -Wall -fPIC -pipe"
-		export CXXFLAGS="${CXXFLAGS//-O?/-O} -Wall -fPIC -pipe"
+		# (bug 33767)
+		export CFLAGS="${CFLAGS//-O[1-9s]/-O} -Wall -fPIC -pipe"
+		export CXXFLAGS="${CXXFLAGS//-O[1-9s]/-O} -Wall -fPIC -pipe"
 		;;
 	amd64)
 		# Anything more than this causes segfaults on startup on amd64
@@ -339,14 +339,16 @@ src_compile() {
 	# Get it to work without warnings on gcc3
 	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
-	# On amd64 we statically set 'safe' CFLAGS. Use those only.
-	# using the standard -O2 will cause segfaults on startup for amd64
-	if [ "${ARCH}" = "amd64" ]
-	then
-		ENABLE_OPTIMIZE="${CFLAGS}"
-	else
-		ENABLE_OPTIMIZE="-O2"
-	fi
+	# On 64-bit we statically set 'safe' CFLAGS. Use those only.
+	# using the standard -O2 will cause segfaults on startup
+	case "${ARCH}" in
+		alpha|amd64|ia64)
+			ENABLE_OPTIMIZE="${CFLAGS}"
+			;;
+		*)
+			ENABLE_OPTIMIZE="-O2"
+			;;
+	esac
 
 	cd ${S}
 	einfo "Configuring Mozilla..."
