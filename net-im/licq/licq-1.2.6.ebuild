@@ -1,33 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6.ebuild,v 1.1 2003/04/22 22:36:12 drobbins Exp $
-
-IUSE="ssl socks5 qt kde gtk ncurses"
-
-DESCRIPTION="ICQ Client with v8 support" 
-HOMEPAGE="http://www.licq.org"
-LICENSE="GPL-2"
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6.ebuild,v 1.2 2003/04/25 16:02:44 vapier Exp $
 
 inherit kde-base
 need-kde 3.0
 
-#we can't have conditional dependencies so "use kde && inherit kde-base" 
-#won't work -- messes up dep caching.
-
-#need-kde and their eclass friends inject things into DEPEND. But we only
-#want them enabled if the kde USE flag is set. We get around this in the
-#following dep lines:
-
-RDEPEND="kde? ( $DEPEND )"
-DEPEND="kde? ( $DEPEND )
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	qt?  ( >=x11-libs/qt-3.0.0 )
-	gtk? ( =x11-libs/gtk+-1.2* )
-	ncurses? ( sys-libs/ncurses )"
-
+DESCRIPTION="ICQ Client with v8 support" 
+HOMEPAGE="http://www.licq.org/"
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
+
+LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86"
+IUSE="ssl socks5 qt kde gtk ncurses"
+
+# we can't have conditional dependencies so "use kde && inherit kde-base" 
+# won't work -- messes up dep caching.
+
+# need-kde and their eclass friends inject things into DEPEND. But we only
+# want them enabled if the kde USE flag is set. We get around this in the
+# following dep lines:
+RDEPEND="kde? ( ${DEPEND} )"
+DEPEND="kde? ( ${DEPEND} )
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	qt? ( >=x11-libs/qt-3.0.0 )
+	gtk? ( =x11-libs/gtk+-1.2* )
+	ncurses? ( sys-libs/ncurses )"
 
 src_unpack() {
 	unpack ${A}
@@ -62,14 +60,12 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local first_conf
 	use ssl		|| first_conf="${first_conf} --disable-openssl"
 	use socks5	&& first_conf="${first_conf} --enable-socks5"
 
 	econf ${first_conf} || die
 	emake || die
-
 	
 	# Create the various plug-ins
 
@@ -108,10 +104,10 @@ src_compile() {
 	# Now the console plug-in
 	if [ "`use ncurses `" ]
 	then
-	    cd ${S}/plugins/console
-	    einfo "Compiling the Console plug-in"
-	    econf || die
-	    emake || die
+		cd ${S}/plugins/console
+		einfo "Compiling the Console plug-in"
+		econf || die
+		emake || die
 	fi
 
 	# The Auto-Responder plug-in
@@ -128,8 +124,6 @@ src_compile() {
 }
 
 src_install() {
-
-	cd ${S}
 	make DESTDIR=${D} install || die
 
 	dodoc ChangeLog INSTALL README*
