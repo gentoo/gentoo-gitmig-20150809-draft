@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3-r2.ebuild,v 1.10 2003/09/08 05:22:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3-r2.ebuild,v 1.11 2004/02/22 20:51:10 agriffis Exp $
 
 IUSE="nls alsa"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
 DEPEND="${RDEPEND}

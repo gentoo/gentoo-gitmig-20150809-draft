@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.14.ebuild,v 1.12 2003/02/13 12:16:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.14.ebuild,v 1.13 2004/02/22 20:49:39 agriffis Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 RDEPEND="=dev-libs/glib-1.2*
 	 =x11-libs/gtk+-1.2*

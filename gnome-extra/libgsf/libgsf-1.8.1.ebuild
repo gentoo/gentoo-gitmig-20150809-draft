@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.8.1.ebuild,v 1.6 2003/09/06 23:52:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.8.1.ebuild,v 1.7 2004/02/22 20:52:59 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="The GNOME Structured File Library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 sparc  ppc hppa"
+KEYWORDS="x86 sparc ppc hppa"
 
 # FIXME : should add optional bz2 support
 RDEPEND=">=dev-libs/libxml2-2.4.16

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-1.93-r1.ebuild,v 1.9 2003/09/08 05:22:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-1.93-r1.ebuild,v 1.10 2004/02/22 20:50:08 agriffis Exp $
 
 
 DESCRIPTION="end user documentation for Gnome2 "
 HOMEPAGE="http://www.gnome.org"
 LICENSE="FDL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 DEPEND="virtual/glibc
 	>=app-text/docbook-sgml-utils-0.6.9
 	>=app-text/scrollkeeper-0.3.9"

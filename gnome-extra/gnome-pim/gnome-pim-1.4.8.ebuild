@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.9 2003/09/06 23:52:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.10 2004/02/22 20:51:21 agriffis Exp $
 
 IUSE="pda"
 
@@ -11,7 +11,7 @@ SRC_URI="http://me.in-berlin.de/~jroger/gnome-pim/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnome-pim.shtml"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc "
+KEYWORDS="x86 ~sparc"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
