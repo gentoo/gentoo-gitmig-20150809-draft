@@ -1,16 +1,22 @@
 # ChangeLog for app-text/openjade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.3 2002/04/06 13:06:18 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.4 2002/04/07 20:21:35 azarah Exp $
+
+*openjade-1.3.1-r1 (06 Apr 2002)
+
+  07 Apr 2002; M.Schlemmer <azarah@gentoo.org> openjade-1.3.1-r1.ebuild :
+
+  Another libtool "relink" bug bites the dust ... libtoolized it.
 
 *openjade-1.3.1 (06 Apr 2002)
 
-  06 Apr 2002; Geert Bevin <gbevin@gentoo.org> openjade-1.3.1.ebuild
+  06 Apr 2002; Geert Bevin <gbevin@gentoo.org> openjade-1.3.1.ebuild :
 
   Version upgrade, this version is compatible with gcc 3. 
 
 *openjade-1.3-r2 (21 Mar 2002)
 
-  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> openjade-1.3-r2.ebuild
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> openjade-1.3-r2.ebuild :
 
   HTML documentation no longer gzipped; reported by stefan@mdy.univie.ac.at 
 
