@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.12 2003/11/20 07:55:06 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.13 2004/01/21 13:52:30 gustavoz Exp $
 
 MY_PN=${PN/-sgml/}
 MY_P=${MY_PN}-${PV}
@@ -11,7 +11,7 @@ HOMEPAGE="http://sources.redhat.com/docbook-tools/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="tetex"
 
 DEPEND=">=dev-lang/perl-5
