@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.7 2003/06/09 05:24:14 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.8 2003/07/19 15:39:01 taviso Exp $
+
+  19 Jul 2003; Tavis Ormandy <taviso@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
+  marking ~alpha
 
   08 June 2003; Jack Morgan <jmorgan@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
   added ~sparc keyword
