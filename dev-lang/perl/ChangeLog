@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.15 2003/06/02 07:33:46 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.16 2003/06/04 00:21:23 rac Exp $
+
+*perl-5.8.0-r11 (03 Jun 2003)
+
+  03 Jun 2003; <rac@gentoo.org> perl-5.8.0-r11.ebuild:
+  Clean out libperl bits from ebuild. Grab newer version of Safe.pm from CPAN
+  for security reasons, DB_File for db 4.1 compatibility.
 
 *perl-5.6.1-r12 (02 Jun 2003)
 
