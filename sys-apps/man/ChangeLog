@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.53 2004/08/06 14:08:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.54 2004/08/06 15:14:45 gmsoft Exp $
+
+  06 Aug 2004; Guy Martin <gmsoft@gentoo.org> man-1.5m-r1.ebuild:
+  Stable on hppa.
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> man-1.5m-r1.ebuild:
   Keyworded sparc
