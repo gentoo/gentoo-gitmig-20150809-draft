@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-postfix
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/ChangeLog,v 1.7 2004/12/12 12:39:11 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/ChangeLog,v 1.8 2005/02/25 08:09:05 kaiowas Exp $
+
+*selinux-postfix-20050219 (25 Feb 2005)
+
+  25 Feb 2005; petre rodan <kaiowas@gentoo.org>
+  +selinux-postfix-20050219.ebuild:
+  merge with upstream policy
 
 *selinux-postfix-20041211 (12 Dec 2004)
 
