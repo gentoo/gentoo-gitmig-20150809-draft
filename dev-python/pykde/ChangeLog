@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pykde
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.17 2004/06/25 01:39:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.18 2004/07/02 04:29:15 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> pykde-3.11.1.ebuild:
+  change virtual/glibc to virtual/libc
 
   18 Jun 2004; Carsten Lohrke <carlo@gentoo.org> pykde-3.11_rc1.ebuild:
   rm rc1

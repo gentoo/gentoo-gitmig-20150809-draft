@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.38 2004/06/25 01:42:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.39 2004/07/02 04:24:13 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> PyQt-3.11.ebuild,
+  PyQt-3.12.ebuild, PyQt-3.8.1.ebuild:
+  change virtual/glibc to virtual/libc
 
   24 Jun 2004; Carsten Lohrke <carlo@gentoo.org>
   -files/qt3.1.2-compilation-fix-3.5.diff, -PyQt-3.5.ebuild:

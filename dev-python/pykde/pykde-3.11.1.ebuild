@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.1.ebuild,v 1.2 2004/06/25 01:39:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.1.ebuild,v 1.3 2004/07/02 04:29:15 squinky86 Exp $
 
 inherit eutils distutils
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE="debug doc kjs"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/libtool
 	virtual/python
 	>=dev-python/sip-3.10.2

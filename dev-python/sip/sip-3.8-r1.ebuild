@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8-r1.ebuild,v 1.7 2004/06/25 01:50:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8-r1.ebuild,v 1.8 2004/07/02 04:31:05 squinky86 Exp $
 
 inherit eutils distutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	x11-libs/qt
 	>=dev-lang/python-2.2.1"
 
