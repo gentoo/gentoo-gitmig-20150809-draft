@@ -2,8 +2,8 @@ MD5 10adb971cb6a982eaaf44a8b42040844 geoip-1.3.0.ebuild 735
 MD5 c4bb2e77b1270ff2ef7b5b69e48aece6 geoip-1.3.2.ebuild 725
 MD5 85e3cdf38ab8cebdfa7651d8b7f8cd66 geoip-1.2.1.ebuild 883
 MD5 c22e66ec9842f9bce82cbc63ffce3ec1 metadata.xml 277
-MD5 1f6296dd5f0d69b0d93b162502b451ab ChangeLog 3496
-MD5 645ab6d340e0775f063a9876a40ef882 geoip-1.3.6.ebuild 743
+MD5 608faf26ac8c95ac60e7914c2ec940c2 ChangeLog 3588
+MD5 19296ef2e5340d3e44925800ab5a7013 geoip-1.3.6.ebuild 742
 MD5 39c61fb1e428d4d9ebed66c65bf2918e geoip-1.3.5.ebuild 725
 MD5 a7ff42dbfbcaea43eec4a9aabaeffe00 files/digest-geoip-1.2.1 63
 MD5 e315282e7eb6885cfac3a5555f3aa146 files/digest-geoip-1.3.5 63
