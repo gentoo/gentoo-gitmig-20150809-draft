@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/crypt-dh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.1 2003/06/23 17:26:16 mcummings Exp $
+
+*crypt-dh-0.03 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org> crypt-dh-0.03.ebuild:
+  dep for net-ssh
+
