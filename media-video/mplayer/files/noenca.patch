@@ -1,0 +1,11 @@
+--- libmpdemux/demux_mkv_old.old	2004-07-14 22:44:36.685325824 +0900
++++ libmpdemux/demux_mkv_old.cpp	2004-07-14 22:45:09.691308152 +0900
+@@ -1552,7 +1552,7 @@
+   qt_image_description_t *idesc;
+ 
+ #ifdef USE_ICONV
+-  subcp_open();
++  subcp_open_noenca();
+ #endif
+ 
+   s = demuxer->stream;
