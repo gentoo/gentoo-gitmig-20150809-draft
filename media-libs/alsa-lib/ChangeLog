@@ -1,10 +1,12 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.59 2004/03/27 07:48:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.60 2004/03/27 07:49:34 eradicator Exp $
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-lib-0.9.6.ebuild, alsa-lib-0.9.7.ebuild, alsa-lib-0.9.8.ebuild,
-  alsa-lib-1.0.0_rc2-r1.ebuild, alsa-lib-1.0.1.ebuild:
+  alsa-lib-1.0.0_rc2-r1.ebuild, alsa-lib-1.0.1.ebuild,
+  files/alsa-lib-1.0.0_rc2-notextrel-notrampoline.patch,
+  files/alsa-lib-1.0.1-notextrel-notrampoline.patch:
   Removing old ebuilds.  Removed explicit S= from alsa-lib-0.9.8
 
 *alsa-lib-1.0.3b-r2 (24 Mar 2004)

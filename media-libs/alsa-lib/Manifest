@@ -3,7 +3,7 @@ MD5 88e7d7a1bdef247fc6b175e8ee840dd8 alsa-lib-0.5.10b.ebuild 698
 MD5 75df5b1b2764c1728a43db782123b38a alsa-lib-1.0.2.ebuild 1616
 MD5 835ef265e78730801f31d63657839026 alsa-lib-1.0.3b-r2.ebuild 1332
 MD5 625080376529cda42906a9c004d154bd alsa-lib-0.9.2.ebuild 1119
-MD5 8b3cf5e85d1da6e184e67840b5460f0d ChangeLog 8842
+MD5 d76d265119552942f5b2836cf4f807ee ChangeLog 8952
 MD5 e1147a642867b3b3ea43518a1376f6d2 metadata.xml 250
 MD5 76500cdb32cd661c3963e50029d17704 alsa-lib-1.0.3b-r1.ebuild 1314
 MD5 477c697a35479bcb208db06f896e46cb alsa-lib-0.9.0_rc2.ebuild 1146
@@ -13,8 +13,6 @@ MD5 9070048b85478705fe11a7938a70c419 files/digest-alsa-lib-0.9.0_rc2 70
 MD5 11b938c643aab1b11054f43fdc15f703 files/digest-alsa-lib-1.0.3b-r1 68
 MD5 11b938c643aab1b11054f43fdc15f703 files/digest-alsa-lib-1.0.3b-r2 68
 MD5 e015f7b1e3c316cf8c9dbbd0bf77a5a7 files/digest-alsa-lib-0.5.10b 69
-MD5 b1d7f756d25d6a0b7270610b8730259d files/alsa-lib-1.0.0_rc2-notextrel-notrampoline.patch 1788
-MD5 b1d7f756d25d6a0b7270610b8730259d files/alsa-lib-1.0.1-notextrel-notrampoline.patch 1788
 MD5 3a81898f3853065f59af943b3e1f4df2 files/digest-alsa-lib-0.9.2 67
 MD5 8a3190d9f23acedd006359afb79f60bc files/digest-alsa-lib-0.9.8 67
 MD5 ebf9199686eb993db91c807d7fd90dcb files/digest-alsa-lib-1.0.2 67
