@@ -1,4 +1,6 @@
 MD5 45b5ed3a8e3dbe9a5fef26cea2335452 konqueror-autorefresh-3.4.0_beta1.ebuild 664
+MD5 d9fb4eba662436138179d2ad5f41393d konqueror-autorefresh-3.4.0_beta2.ebuild 654
 MD5 354e5314db1a4191f034646364915666 ChangeLog 500
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-konqueror-autorefresh-3.4.0_beta1 219
+MD5 9009a89a3313cb85f25a0d66683e48ed files/digest-konqueror-autorefresh-3.4.0_beta2 298

@@ -1,4 +1,6 @@
+MD5 0fb0f82b94e5fde79d82702aa3d69765 kdesktop-3.4.0_beta2.ebuild 1196
 MD5 2dcdb2ab6f478d869dddb1aba8ab480a ChangeLog 618
 MD5 7ad1d9f9194c96bcef1a41729243d43d kdesktop-3.4.0_beta1.ebuild 1216
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kdesktop-3.4.0_beta1 216
+MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-kdesktop-3.4.0_beta2 294

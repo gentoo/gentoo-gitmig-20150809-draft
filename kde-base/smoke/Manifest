@@ -1,3 +1,4 @@
+MD5 564a190a0d8e78cb4cabb003a262733f smoke-3.4.0_beta2.ebuild 568
 MD5 6fcb349c256394b716c47823373c241b smoke-3.4.0_beta1.ebuild 597
 MD5 9fc215296147ab0796e36edc34644610 ChangeLog 855
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
@@ -5,4 +6,5 @@ MD5 fdcd3bb5d55a67ca1409c2811137223c smoke-3.3.1.ebuild 593
 MD5 92a2bf7b4c3eebd09d53b684b22513af files/parallel-make.diff 1696
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 4877266a41162d4c439090a71dcc66bc files/digest-smoke-3.4.0_beta1 225
+MD5 5df0d0efdefb5dedceecfbda5539c7ce files/digest-smoke-3.4.0_beta2 307
 MD5 70e20b1b123bf8d012966ea1675c9306 files/digest-smoke-3.3.1 222

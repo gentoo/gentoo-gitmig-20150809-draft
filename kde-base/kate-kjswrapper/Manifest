@@ -1,4 +1,6 @@
+MD5 47ff877a61a447815cbfa163e8e9408a kate-kjswrapper-3.4.0_beta2.ebuild 601
 MD5 5dcb9bab6406539aed67a2ad3f3bd0c8 kate-kjswrapper-3.4.0_beta1.ebuild 616
 MD5 8468d785761b8a04acf15266097403df ChangeLog 476
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-kate-kjswrapper-3.4.0_beta1 219
+MD5 9009a89a3313cb85f25a0d66683e48ed files/digest-kate-kjswrapper-3.4.0_beta2 298

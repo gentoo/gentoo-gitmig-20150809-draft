@@ -1,5 +1,7 @@
 MD5 a12699ebb961855675e7bf7fe9546fe4 kdvi-3.4.0_beta1.ebuild 630
+MD5 33df6d425c4a9b56bea0f4d64bbc636a kdvi-3.4.0_beta2.ebuild 625
 MD5 ef894666444254de259e7a129364d298 ChangeLog 475
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 b415d97354c9487f035eaf2bb2dcf57c files/kdvi-configure-check-freetype.diff 1192
 MD5 2ed7b7cff3ca3ea63807d913c938cf52 files/digest-kdvi-3.4.0_beta1 225
+MD5 541d4705ae9b7241e2705097fae207f8 files/digest-kdvi-3.4.0_beta2 306

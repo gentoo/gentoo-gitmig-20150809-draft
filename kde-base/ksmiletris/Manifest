@@ -1,4 +1,6 @@
 MD5 8c77368740e4773385d6fed1bff3b751 ksmiletris-3.4.0_beta1.ebuild 525
+MD5 dad0d8940d1f8c6e2140c4152c13b33b ksmiletris-3.4.0_beta2.ebuild 520
 MD5 901377ac76ebf90d50784ca6b534a0ef ChangeLog 456
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 039057bfd4af6b157cd2b7b08f08d23d files/digest-ksmiletris-3.4.0_beta1 216
+MD5 9e3853561c1b7e9a926fdc6dd8e5434d files/digest-ksmiletris-3.4.0_beta2 294

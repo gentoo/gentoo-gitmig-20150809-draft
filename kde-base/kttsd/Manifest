@@ -1,4 +1,6 @@
+MD5 46a915aa5aa0c23e46851cff2c3648f6 kttsd-3.4.0_beta2.ebuild 1208
 MD5 087634dc3f8d2cdf8eaa7b4db1c3cd40 kttsd-3.4.0_beta1.ebuild 1213
 MD5 f6bf856599edc636f3dac55e0207cba1 ChangeLog 373
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 c5420b3dc1848daf59305d1f2ff74a83 files/digest-kttsd-3.4.0_beta1 240
+MD5 5e8955cdbfb66ebe90a2ed45352728d2 files/digest-kttsd-3.4.0_beta2 327

@@ -1,4 +1,6 @@
+MD5 a366bc96a6c9017db7f21b90a26d9f62 klinkstatus-3.4.0_beta2.ebuild 401
 MD5 a366bc96a6c9017db7f21b90a26d9f62 klinkstatus-3.4.0_beta1.ebuild 401
 MD5 599ef295ab0b237cc89fc99d63fcbdfa ChangeLog 460
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 07dc9f44e293d1ac9c7b66b68f28492f files/digest-klinkstatus-3.4.0_beta1 219
+MD5 1c27cb8542ca5141b74a04fd72dbb0d4 files/digest-klinkstatus-3.4.0_beta2 299

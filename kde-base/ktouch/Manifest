@@ -1,4 +1,6 @@
 MD5 49b79c922610f4589d6349f60e91a369 ktouch-3.4.0_beta1.ebuild 414
+MD5 49b79c922610f4589d6349f60e91a369 ktouch-3.4.0_beta2.ebuild 414
 MD5 881d789b8427a83665aadab59534964f ChangeLog 440
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 521fc13bde64ce3aa9c5fc4213337476 files/digest-ktouch-3.4.0_beta1 212
+MD5 e85be272b39feb70aaa3d06189cc222a files/digest-ktouch-3.4.0_beta2 289

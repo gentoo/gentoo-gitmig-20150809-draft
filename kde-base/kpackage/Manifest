@@ -1,4 +1,6 @@
 MD5 ee678b8ea2659faec08297fbd9b9a12e kpackage-3.4.0_beta1.ebuild 426
+MD5 ee678b8ea2659faec08297fbd9b9a12e kpackage-3.4.0_beta2.ebuild 426
 MD5 4483d5579861d798200e74aeeb77fc14 ChangeLog 448
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 06d8b082374f502eb28cb4e5681f0bf7 files/digest-kpackage-3.4.0_beta1 215
+MD5 a9fea6bcd37c5357c2d83088b0fcd969 files/digest-kpackage-3.4.0_beta2 293

@@ -1,4 +1,6 @@
+MD5 0916f13aa7bf7c5fc812f25acf039e51 libkonq-3.4.0_beta2.ebuild 384
 MD5 0916f13aa7bf7c5fc812f25acf039e51 libkonq-3.4.0_beta1.ebuild 384
 MD5 84c90c5c74246cc755f8aef7065beb30 ChangeLog 444
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-libkonq-3.4.0_beta1 216
+MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-libkonq-3.4.0_beta2 294

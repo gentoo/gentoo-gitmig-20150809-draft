@@ -1,7 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0_beta1.ebuild,v 1.1 2005/01/15 02:24:29 danarmak Exp $
-MAXKDEVER=$PV
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0_beta1.ebuild,v 1.2 2005/02/05 11:39:14 danarmak Exp $
+MAXKDEVER=3.4.0_beta2
 
 inherit kde-functions
 DESCRIPTION="kde - merge this to pull in all kde packages"

@@ -1,4 +1,6 @@
+MD5 b68e21f46621245673e78fc2c3582931 kstars-3.4.0_beta2.ebuild 791
 MD5 2303d5f6a96b1fabbfc792c2c181eca0 kstars-3.4.0_beta1.ebuild 796
 MD5 fe3f9ee4d652ea39a8ec36e311ae1d7f ChangeLog 440
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 521fc13bde64ce3aa9c5fc4213337476 files/digest-kstars-3.4.0_beta1 212
+MD5 e85be272b39feb70aaa3d06189cc222a files/digest-kstars-3.4.0_beta2 289

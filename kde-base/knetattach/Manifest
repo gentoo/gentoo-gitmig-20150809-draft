@@ -1,4 +1,6 @@
+MD5 1672150aa3f19c1e6062ac0205c4cd9c knetattach-3.4.0_beta2.ebuild 375
 MD5 122d526cd93059bbc4f53015408c8628 ChangeLog 456
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 1672150aa3f19c1e6062ac0205c4cd9c knetattach-3.4.0_beta1.ebuild 375
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-knetattach-3.4.0_beta1 216
+MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-knetattach-3.4.0_beta2 294

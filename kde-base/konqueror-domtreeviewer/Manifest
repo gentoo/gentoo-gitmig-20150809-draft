@@ -1,4 +1,6 @@
+MD5 df7cfc3adb5bcee83c07fc98d44fc945 konqueror-domtreeviewer-3.4.0_beta2.ebuild 665
 MD5 86ff64ec5d0b63380d0128c7fbf113b9 konqueror-domtreeviewer-3.4.0_beta1.ebuild 675
 MD5 ae28b15889d0ff180724392bad1afe47 ChangeLog 508
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-konqueror-domtreeviewer-3.4.0_beta1 219
+MD5 9009a89a3313cb85f25a0d66683e48ed files/digest-konqueror-domtreeviewer-3.4.0_beta2 298

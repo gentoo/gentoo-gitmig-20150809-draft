@@ -1,4 +1,6 @@
+MD5 0495a27f9de77791d34e34ba7609342f libksvg-3.4.0_beta2.ebuild 452
 MD5 0495a27f9de77791d34e34ba7609342f libksvg-3.4.0_beta1.ebuild 452
 MD5 95551c5bc2fecf81e9961170b0395ddd ChangeLog 444
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2ed7b7cff3ca3ea63807d913c938cf52 files/digest-libksvg-3.4.0_beta1 225
+MD5 541d4705ae9b7241e2705097fae207f8 files/digest-libksvg-3.4.0_beta2 306

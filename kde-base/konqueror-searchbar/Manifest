@@ -1,4 +1,6 @@
+MD5 f642477c8c3f68be9dff541fdf8aa3b4 konqueror-searchbar-3.4.0_beta2.ebuild 640
 MD5 22d31e22317ca7af1285eba204ac689e konqueror-searchbar-3.4.0_beta1.ebuild 650
 MD5 53112ce0d1546f326a26d530bf014b52 ChangeLog 492
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-konqueror-searchbar-3.4.0_beta1 219
+MD5 9009a89a3313cb85f25a0d66683e48ed files/digest-konqueror-searchbar-3.4.0_beta2 298

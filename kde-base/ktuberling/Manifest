@@ -1,4 +1,6 @@
+MD5 dfd607c6eba54f64d0284e79f8acf2ad ktuberling-3.4.0_beta2.ebuild 532
 MD5 02fa7af9b3335938cf46b4f16840ec67 ktuberling-3.4.0_beta1.ebuild 537
 MD5 0d39e6cddecb962416c045495c2817ae ChangeLog 456
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 039057bfd4af6b157cd2b7b08f08d23d files/digest-ktuberling-3.4.0_beta1 216
+MD5 9e3853561c1b7e9a926fdc6dd8e5434d files/digest-ktuberling-3.4.0_beta2 294
