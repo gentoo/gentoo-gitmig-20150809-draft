@@ -1,11 +1,21 @@
-MD5 626f1364d6f7b6909865bc8cbd9387ce gluelog-1.0-r2.ebuild 965
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5c8550cbea7eeaaeda2c6a7e8a1f0dc ChangeLog 1045
+MD5 d673b17ab4f0180457fc12080f232fec gluelog-1.0-r2.ebuild 923
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gluelog-1.0-r2 0
+MD5 9a55efc56095eb91e07f2e53184d21c6 files/glueklog.c 1651
 MD5 d26c833022a34ce1a9986c580c724f22 files/README 1891
-MD5 b4197e64e2d56238dc606683ee9b2289 files/syslog-run 71
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gluelog-1.0-r2 0
 MD5 2db1fe5583b01969d036e861ca7a36d9 files/gluelog.c 1742
 MD5 101e99eb414ed4e350eb412605f1ec79 files/klog-run 70
-MD5 7c7a72502fec5632662a43f048b10bbd files/svc-syslog 489
-MD5 9a55efc56095eb91e07f2e53184d21c6 files/glueklog.c 1651
 MD5 eb79cca2bbb6f75888fce5ab4bfe26f4 files/svc-klog 487
+MD5 7c7a72502fec5632662a43f048b10bbd files/svc-syslog 489
+MD5 b4197e64e2d56238dc606683ee9b2289 files/syslog-run 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4iceHTu7gpaalycRAvY5AKCvLVu8rNdoA+Y/tWfwId7YAZUSuACeIkDr
+4nLOk1t3vn7EHhXyFEPaHwc=
+=w6nQ
+-----END PGP SIGNATURE-----
