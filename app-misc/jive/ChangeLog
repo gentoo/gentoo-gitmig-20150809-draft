@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jive
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.1 2003/06/08 18:29:07 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.2 2003/06/09 20:01:05 brad Exp $
+
+  09 Jun 2003; Brad Laue <brad@gentoo.org> jive-1.1.ebuild:
+  Mark stable, add ppc keyword,
 
 *jive-1.1 (08 Jun 2003)
 
