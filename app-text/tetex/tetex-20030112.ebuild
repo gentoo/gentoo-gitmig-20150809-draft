@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20030112.ebuild,v 1.1 2003/01/13 17:55:25 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20030112.ebuild,v 1.2 2003/01/13 23:00:01 satai Exp $
 
 inherit flag-o-matic
 
@@ -10,10 +10,8 @@ TEXMFSRC="teTeX-texmf-beta-20030112.tar.gz"
 
 S=${WORKDIR}/teTeX-src-beta-20030112
 DESCRIPTION="teTeX is a complete TeX distribution"
-SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-beta-${PV}.tar.gz
-	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
-	 http://www.ibiblio.org/gentoo/distfiles/ec-ready-mf-tfm.tar.gz
-	 http://www.ibiblio.org/gentoo/distfiles/teTeX-french.tar.gz"
+SRC_URI="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX-beta/teTeX-src-beta-${PV}.tar.gz
+	 ftp://cam.ctan.org/tex-archive/systems/unix/teTeX-beta/teTeX-texmf-beta-${PV}.tar.gz"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
@@ -41,19 +39,8 @@ src_unpack() {
 	cd ${S}/texmf
 	umask 022
 	pwd
-	echo ">>> Unpacking ${TEXMFSRC}"
+	einfo "Unpacking ${TEXMFSRC}"
 	tar --no-same-owner -xzf ${DISTDIR}/${TEXMFSRC} || die
-	#echo ">>> Unpacking ec-ready-mf-tfm.tar.gz"
-	#tar --no-same-owner -xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C .. || die
-	#echo ">>> Unpacking teTeX-french.tar.gz"
-	#tar --no-same-owner -xzf ${DISTDIR}/teTeX-french.tar.gz || die
-
-	# Fixes from way back ... not sure even Achim will
-	# still know why :/
-	#cd ${WORKDIR}
-	#patch -p0 < ${FILESDIR}/teTeX-1.0-gentoo.diff || die
-	#cd ${S}
-	#patch -p0 < ${FILESDIR}/teTeX-1.0.dif || die
 
 	# Do not run config stuff
 	cd ${WORKDIR}
@@ -62,20 +49,6 @@ src_unpack() {
 
 	# Fix for dvips to print directly.
 	#patch -p1 < ${FILESDIR}/teTeX-1.0-dvips.diff || die
-
-	# Fix problem where the *.fmt files are not generated due to the LaTeX
-	# source being older than a year.
-    #    local x
-    #    for x in `find ${S}/texmf/ -type f -name '*.ini'`
-    #    do
-    #            cp ${x} ${x}.orig
-    #            sed -e '1i \\scrollmode' ${x}.orig > ${x}
-    #            rm -f ${x}.orig
-    #    done
-
-	# IMPORTANT!  If you're having *.fmt problems, do this:
-	# fmtutil --all
-	# after the merge.
 
 }
 
