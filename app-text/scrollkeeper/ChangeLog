@@ -1,15 +1,25 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.8 2002/06/29 21:41:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.9 2002/07/10 20:21:12 seemant Exp $
 
-scrollkeeper-0.3.9-r1 (29 Jun 2002)
+*scrollkeeper-0.3.10 (10 Jul 2002)
+
+  10 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  scrollkeeper-0.3.10.ebuild files/digest-scrollkeeper-0.3.10
+  files/scrollkeeper-0.3.10.diff :
+
+  Version bump. Also ran autoconf and automake, since the diff affects
+  Makefile.in.  Thenks to: christian-neumair@web.de (Christian - Manny
+  Calavera - Neumair) in bug #4822
+
+*scrollkeeper-0.3.9-r1 (29 Jun 2002)
 
   29 Jun 2002; Martin Schlemmer <azarah@gentoo.org> *.ebuild:
   Unfortunately we cannot have both installed, so changed them
   all to have SLOT="0".  Also fixed some syntax errors in the
   0.3.9 ebuild.
 
-scrollkeeper-0.2-r4 (13 Jun 2002)
+*scrollkeeper-0.2-r4 (13 Jun 2002)
   13 Jun 2002; Spider <spider@gentoo.org> scrollkeeper-0.2-r4.ebuild :
   fix the link bug
 
