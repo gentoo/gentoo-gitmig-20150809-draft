@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.9-r1.ebuild,v 1.1 2005/01/26 17:15:16 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.10.ebuild,v 1.1 2005/01/31 13:42:35 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -22,7 +22,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-${MY_MAJ_PV}-module-Makefile.patch || die
-	epatch ${FILESDIR}/${P}-bio_patch_memory_overwrite.patch || die
 }
 
 src_compile() {
