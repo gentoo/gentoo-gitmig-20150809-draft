@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ulrich Eck <ueck@net-labs.de>
 # §Header$
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.2.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

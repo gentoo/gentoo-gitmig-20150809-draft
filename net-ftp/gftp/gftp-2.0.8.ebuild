@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-apps/gedit/gedit-0.9.4.ebuild,v 1.4 2000/11/27 16:20:46 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.8.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

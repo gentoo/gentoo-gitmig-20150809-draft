@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r2.ebuild,v 1.7 2001/06/08 02:32:43 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.00.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 GPV="4.1.1"
 A1=jpegsrc.v6b.tar.gz

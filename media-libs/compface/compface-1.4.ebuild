@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael C Tisltra <tadpol@tadpol.org>
 # $header
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.4.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Reviewed by Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-apps/gnome-utils/gnome-utils-1.2.1-r1.ebuild,v 1.2 2000/11/25 18:30:59 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnome-games/gnome-games-1.4.0.3.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Nazaroff <newandcreative@yahoo.com>
 # net-ftp/ftp/lukemftp-1.5-r1.ebuild,v 1
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lukemftp/lukemftp-1.5-r1.ebuild,v 1.6 2001/08/30 17:31:35 pm Exp $
+
 
 P=lukemftp-1.5
 A=${P}.tar.gz

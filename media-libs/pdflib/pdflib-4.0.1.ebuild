@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Grant Goodyear <g2boojum@hotmail.com>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+
 
 #P=
 A=${P}.tar.gz

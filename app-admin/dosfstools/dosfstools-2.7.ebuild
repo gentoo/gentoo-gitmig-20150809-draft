@@ -2,6 +2,9 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.7.ebuild,v 1.2 2001/08/27 02:13:12 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.7.ebuild,v 1.4 2001/08/30 17:31:35 pm Exp $
+
+
 S=${WORKDIR}/${P}
 DESCRIPTION="dos filesystem tools"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/filesystems/dosfs/${P}.src.tar.gz"

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.1.1-r1.ebuild,v 1.2 2001/05/01 18:29:05 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.3.3.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 P=tcl-tk-8.3.3
 

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-apps/gphoto/gphoto-0.4.3.ebuild,v 1.7 2001/06/11 08:11:28 hallski Exp
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3.ebuild,v 1.10 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.0.8.ebuild,v 1.1 2001/05/06 16:32:43 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.1.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"

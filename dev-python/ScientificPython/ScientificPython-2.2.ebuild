@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Tod M. Neidt <tneidt@fidnet.com>
 # /home/cvsroot/gentoo-x86/dev-python/scientific--python/ScientificPython-2.2.ebuild,v 1.4 2001/06/04 21:57:52 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.2.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

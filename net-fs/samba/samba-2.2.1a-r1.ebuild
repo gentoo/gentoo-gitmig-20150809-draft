@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a.ebuild,v 1.2 2001/07/25 03:20:35 lamer Exp
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a-r1.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@sistina.com> 
 # /home/cvsroot/gentoo-x86/app-cdr/cdrx/cdrx-0.2.ebuild,v 1.1 2001/06/04 19:37:29 blutgens Exp
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha8.ebuild,v 1.5 2001/08/30 17:31:35 pm Exp $
+
 
 A=xcdroast-0.98alpha8.tar.gz
 S=${WORKDIR}/xcdroast-0.98alpha8

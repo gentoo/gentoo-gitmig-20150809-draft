@@ -1,6 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@fet.org>
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.1.1.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The AFS 3 distributed file system  targets the issues  critical to

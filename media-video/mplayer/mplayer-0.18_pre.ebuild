@@ -1,6 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.18_pre.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+
 
 MY_P="MPlayer-0.18pre"
 S=${WORKDIR}/${MY_P}?

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # $Heade
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/powershell/powershell-0.80.ebuild,v 1.6 2001/08/30 17:31:35 pm Exp $
+
 
 P=powershell-0.80
 A=powershell-0.8.tar.gz

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
 # /home/cvsroot/gentoo-x86/skel.ebuild,v 1.1 2000/10/09 18:00:52 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.32.ebuild,v 1.5 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

@@ -1,5 +1,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jules Gagnon <eonwe@users.sourceforge.net>
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.50.1.ebuild,v 1.4 2001/08/30 17:31:35 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

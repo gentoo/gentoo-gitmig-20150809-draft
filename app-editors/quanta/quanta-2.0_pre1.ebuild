@@ -1,6 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0_pre1.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+
 
 A=${PN}-2.0-pr1.tar.bz2
 S=${WORKDIR}/quanta
