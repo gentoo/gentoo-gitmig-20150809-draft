@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.8 2004/08/25 02:18:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.9 2004/11/01 20:13:26 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  rdoc-0.9.0.ebuild:
+  Marked ~ppc64; bug #66442
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> rdoc-0_beta2.ebuild:
   Changed SRC_URI to use mirror:// syntax.
