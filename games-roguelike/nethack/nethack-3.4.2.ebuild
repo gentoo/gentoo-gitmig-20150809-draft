@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.2.ebuild,v 1.5 2004/02/20 06:55:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.2.ebuild,v 1.6 2004/03/31 05:20:53 mr_bones_ Exp $
 
-inherit games eutils flag-o-matic gcc
-append-flags -I../include
+inherit eutils gcc flag-o-matic games
 
 MY_PV=${PV//.}
-
 DESCRIPTION="The ultimate old-school single player dungeon exploration game"
 HOMEPAGE="http://www.nethack.org/"
 SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}.tgz"
@@ -20,13 +18,14 @@ IUSE="X qt gnome"
 DEPEND="virtual/glibc
 	dev-util/yacc
 	>=sys-libs/ncurses-5.2-r5
-	X? ( x11-base/xfree )
+	X? ( virtual/x11 )
 	qt? ( x11-libs/qt )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )"
 
-HACKDIR=${GAMES_DATADIR}/${PN}
+HACKDIR="${GAMES_DATADIR}/${PN}"
 
 src_unpack() {
+	append-flags -I../include
 	unpack ${A}
 
 	# This copies the /sys/unix Makefile.*s to their correct places for 
@@ -39,15 +38,19 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${FILESDIR}/${PV}-default-options.patch
 
-	sed -i "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h || die "setting statedir"
-	sed -i "s:GENTOO_HACKDIR:${HACKDIR}:" include/config.h || die "seting hackdir"
+	sed -i \
+		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h \
+			|| die "setting statedir"
+	sed -i \
+		-e "s:GENTOO_HACKDIR:${HACKDIR}:" include/config.h \
+			|| die "seting hackdir"
 
-	if [ `use X` ] ; then
+	if use X ; then
 		epatch ${FILESDIR}/${PV}-X-support.patch
-		if [ `use qt` ] ; then
+		if use qt ; then
 			epatch ${FILESDIR}/${PV}-QT-support.patch
-			[ `use gnome` ] && epatch ${FILESDIR}/${PV}-QT-GNOME-support.patch
-		elif [ `use gnome` ] ; then
+			use gnome && epatch ${FILESDIR}/${PV}-QT-GNOME-support.patch
+		elif use gnome ; then
 			epatch ${FILESDIR}/${PV}-GNOME-support.patch
 		fi
 	fi
@@ -59,6 +62,7 @@ src_compile() {
 		&& qtver=3 \
 		|| qtver=2
 	cd ${S}/src
+
 	make \
 		QTDIR=/usr/qt/${qtver} \
 		CC="$(gcc-getCC)" \
@@ -79,7 +83,7 @@ src_install() {
 		GAMEDIR=${D}${HACKDIR} \
 		SHELLDIR=${D}/${GAMES_BINDIR} \
 		install \
-		|| die "make install failed"
+			|| die "make install failed"
 	newgamesbin util/recover recover-nethack
 
 	# The final nethack is a sh script.  This fixes the hard-coded
@@ -94,16 +98,16 @@ src_install() {
 	insinto ${HACKDIR}
 	doins ${FILESDIR}/dot.nethackrc
 	local windowtypes="tty"
-	[ `use gnome` ] && windowtypes="${windowtypes} gnome"
-	[ `use qt` ] && windowtypes="${windowtypes} qt"
-	[ `use X` ] && windowtypes="${windowtypes} x11"
+	use gnome && windowtypes="${windowtypes} gnome"
+	use qt && windowtypes="${windowtypes} qt"
+	use X && windowtypes="${windowtypes} x11"
 	set -- ${windowtypes}
 	dosed "s:GENTOO_WINDOWTYPES:${windowtypes}:" ${HACKDIR}/dot.nethackrc
 	dosed "s:GENTOO_DEFWINDOWTYPE:$1:" ${HACKDIR}/dot.nethackrc
 	insinto /etc/skel
 	newins ${D}/${HACKDIR}/dot.nethackrc .nethackrc
 
-	if [ `use X` ] ; then
+	if use X ; then
 		# install nethack fonts
 		cd ${S}/win/X11
 		bdftopcf -o nh10.pcf nh10.bdf || die "Converting fonts failed"
@@ -137,11 +141,9 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	if [ `use qt` ] ; then
-		if has_version '=x11-libs/qt-3.1*' ; then
-			ewarn "the qt frontend may be a little unstable with this version of qt"
-			ewarn "please see Bug 32629 for more information"
-		fi
+	if use qt && has_version '=x11-libs/qt-3.1*' ; then
+		ewarn "the qt frontend may be a little unstable with this version of qt"
+		ewarn "please see Bug 32629 for more information"
 	fi
 	einfo "you may want to look at /etc/skel/.nethackrc for interesting options"
 }
