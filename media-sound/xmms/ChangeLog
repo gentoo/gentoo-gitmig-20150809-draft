@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.35 2002/12/20 03:55:51 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.36 2002/12/27 01:10:32 raker Exp $
+
+*xmms-1.2.7-r17 (26 Dec 2002)
+
+  26 Dec 2002; Nick Hadaway <raker@gentoo.org> xmms-1.2.7-r17.ebuild,
+  files/digest-xmms-1.2.7-r17, files/xmms-ipv6-20020408.patch :
+  New ebuild with ipv6 support.  Now using epatch for all patches.
 
   19 Dev 2002; Dean Bailey <alron@gentoo.org> : removed sparc64 keyword
 
