@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.3 2004/09/09 06:12:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.4 2004/09/09 06:58:33 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -89,8 +89,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-apps/portage-2.0.50_pre9
 	!x11-base/xfree
 	!virtual/xft
-	!virtual/x11
-	dmx? ( app-text/sgmltools-lite )"
+	!virtual/x11"
 # x11-libs/xft -- blocked because of interference with xorg's
 
 PDEPEND="x86? (
@@ -191,6 +190,28 @@ pkg_setup() {
 	use amd64 && get_libdir_override lib64
 	# lib32 isnt a supported configuration (yet?)
 	[ "${CONF_LIBDIR}" == "lib32" ] && get_libdir_override lib
+
+
+	# Echo a message to the user about xprint and bitmap-fonts
+	if ! use bitmap-fonts
+	then
+		ewarn "Please emerge this with USE=\"bitmap-fonts\" to enable"
+		ewarn "75dpi and 100dpi fonts.  Your GTK+-1.2 fonts may look"
+		ewarn "screwy otherwise"
+	fi
+
+	if ! use xprint
+	then
+		ewarn "Please emerge thie with USE=\"xprint\" to enable"
+		ewarn "the Xprint extenstion -- Motif and motif apps will break"
+		ewarn "without it."
+	fi
+
+	if ! use bitmap-fonts || ! use xprint
+	then
+		ebeep 5
+		epause 10
+	fi
 }
 
 host_def_setup() {
@@ -294,17 +315,8 @@ host_def_setup() {
 				echo "#define DoLoadableServer  YES" >> ${HOSTCONF}
 				echo "#define MakeDllModules    YES" >> ${HOSTCONF}
 			fi
-#			use_build dlloader DoLoadableServer && \
-#				einfo "Setting DoLoadable Server to YES."
-#			use_build dlloader MakeDllModules && \
-#				einfo "Setting MakeDllModules to YES."
-
 		fi
 
-#		if use debug
-#		then
-#			echo "#define XFree86Devel	YES" >> ${HOSTCONF}
-#		else
 		use_build debug XFree86Devel
 		use_build debug BuildDebug
 		use_build debug DebuggableLibraries
@@ -324,13 +336,8 @@ host_def_setup() {
 		if [ "`best_version x11-base/xorg-x11`" ]
 		then
 			# If you want to have optional pam support, do it properly ...
-#			echo "#define HasPam YES" >> ${HOSTCONF}
-#			echo "#define HasPamMisc YES" >> ${HOSTCONF}
 			use_build pam HasPam
 			use_build pam HasPamMisc
-#		else
-#			echo "#define HasPam NO" >> ${HOSTCONF}
-#			echo "#define HasPamMisc NO" >> ${HOSTCONF}
 		fi
 
 		if use x86 || use alpha
@@ -348,40 +355,12 @@ host_def_setup() {
 		if use x86
 		then
 			# optimize Mesa for architecture
-#			if use mmx
-#			then
-#				echo "#define HasMMXSupport	YES" >> ${HOSTCONF}
-#				echo "#define MesaUseMMX YES" >> ${HOSTCONF}
-#			else
-#				echo "#define HasMMXSupport	NO" >> ${HOSTCONF}
-#				echo "#define MesaUseMMX NO" >> ${HOSTCONF}
-#			fi
 			use_build mmx HasMMXSupport
 			use_build mmx MesaUseMMX
 
-#			if use 3dnow
-#			then
-#				echo "#define Has3DNowSupport YES" >> ${HOSTCONF}
-#				echo "#define MesaUse3DNow YES" >> ${HOSTCONF}
-#			else
-#				echo "#define Has3DNowSupport NO" >> ${HOSTCONF}
-#				echo "#define MesaUse3DNow NO" >> ${HOSTCONF}
-#			fi
 			use_build 3dnow Has3DNowSupport
 			use_build 3dnow MesaUse3DNow
 
-#			if use sse
-#			then
-#				echo "#define HasKatmaiSupport YES" >> ${HOSTCONF}
-#				echo "#define MesaUseKatmai YES" >> ${HOSTCONF}
-#				echo "#define HasSSESupport YES" >> ${HOSTCONF}
-#				echo "#define MesaUseSSE YES" >> ${HOSTCONF}
-#			else
-#				echo "#define HasKatmaiSupport NO" >> ${HOSTCONF}
-#				echo "#define MesaUseKatmai NO" >> ${HOSTCONF}
-#				echo "#define HasSSESupport NO" >> ${HOSTCONF}
-#				echo "#define MesaUseSSE NO" >> ${HOSTCONF}
-#			fi
 			use_build sse HasKatmaiSupport
 			use_build sse MesaUseKatmai
 			use_build sse HasSSESupport
@@ -443,10 +422,6 @@ host_def_setup() {
 		use_build doc InstallHardcopyDocs
 
 		# enable Japanese docs, optionally
-#		if use cjk
-#		then
-#			echo "#define InstallJapaneseDocs ${DOC}" >> ${HOSTCONF}
-#		fi
 		use doc && use_build cjk InstallJapaneseDocs
 
 		# Native Language Support Fonts
@@ -474,12 +449,9 @@ host_def_setup() {
 
 		if use ipv6
 		then
-#			echo "#define BuildIPv6 YES" >> ${HOSTCONF}
 			# In case Gentoo ever works on a system with IPv6 sockets that don't
 			# also listen on IPv4 (see config/cf/X11.tmpl)
 			echo "#define PreferXdmcpIPv6 YES" >> ${HOSTCONF}
-#		else
-#			echo "#define BuildIPv6 NO" >> ${HOSTCONF}
 		fi
 
 		use_build ipv6 BuildIPv6

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.108 2004/09/09 06:12:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.109 2004/09/09 06:58:33 seemant Exp $
+
+  08 Sep 2004; Seemant Kulleen <seemant@gentoo.org> xorg-x11-6.8.0.ebuild:
+  For users with cascading profiles, the bitmap-fonts and xprint USE flags will
+  not show up yet. So echo a message out
 
   08 Sep 2004; Seemant Kulleen <seemant@gentoo.org> xorg-x11-6.8.0.ebuild:
   fix logic in cjk/nls
