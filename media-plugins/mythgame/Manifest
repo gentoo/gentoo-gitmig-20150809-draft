@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f228e4742dfe8fde3842a9a1b3733976 mythgame-0.15.ebuild 1008
-MD5 35dc0e50811535aa5716e9a0b629a835 mythgame-0.13.ebuild 1984
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 656151c8e9f26d7cb68a3ec6a5bebc16 ChangeLog 2870
 MD5 a2c91a046b00107283592e54761359a7 mythgame-0.14.ebuild 1009
-MD5 b76425d3c8bb466c41a3dcee74a362b0 mythgame-0.16.ebuild 620
-MD5 b2fb16ec79b3ec5d217bc4d12d5701a9 files/digest-mythgame-0.14 65
+MD5 0c2fcf34006a4c11a2c0778b09a458f2 mythgame-0.16.ebuild 619
+MD5 35dc0e50811535aa5716e9a0b629a835 mythgame-0.13.ebuild 1984
+MD5 f228e4742dfe8fde3842a9a1b3733976 mythgame-0.15.ebuild 1008
+MD5 c645274861cbecf3155a6a2ff6b41b69 ChangeLog 3036
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 ba98a6a8ff627a1e603a490d0c21a131 files/digest-mythgame-0.13 65
+MD5 b2fb16ec79b3ec5d217bc4d12d5701a9 files/digest-mythgame-0.14 65
 MD5 e5049b74067dde8ebda7ffbd4938d9b7 files/digest-mythgame-0.15 65
 MD5 f888a89361c8ecaa4657c919f5b95b25 files/digest-mythgame-0.16 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBT7SEFhz/XBeRBtARAm++AJ4nQxIJEngEm65LTRL3eOj9q9+9iwCfbL/W
-PlYOrq2pawNTNJYlqBtzrrM=
-=Jtr7
------END PGP SIGNATURE-----

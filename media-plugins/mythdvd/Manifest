@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da6d3fd4a0d69db93b1c272467eb2290 mythdvd-0.16.ebuild 807
-MD5 888f3e19f104ef11a95ad38e6749e3a8 mythdvd-0.14.ebuild 1296
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 c827585e6f433cb255dd1ab9df071913 mythdvd-0.15.ebuild 1294
-MD5 4ef1e176d22604942c2b80c12f2aaa77 ChangeLog 1842
+MD5 90f8f1373e79ed99612d5a0912f9bafd mythdvd-0.16.ebuild 806
 MD5 f4a6d428642b200ce20415c0428ee3f2 mythdvd-0.13.ebuild 2376
+MD5 c827585e6f433cb255dd1ab9df071913 mythdvd-0.15.ebuild 1294
+MD5 888f3e19f104ef11a95ad38e6749e3a8 mythdvd-0.14.ebuild 1296
+MD5 9ac7c8b67ba9e9fd355684ed7dce6a5e ChangeLog 2174
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 afa9416eab98d5f2ad7a39bc35be2561 files/digest-mythdvd-0.13 65
-MD5 b55c9f7a0cd1aca33657af5716845ae4 files/digest-mythdvd-0.15 65
 MD5 11e5f49a3ebb04645d97007cb08afdd7 files/digest-mythdvd-0.14 65
+MD5 b55c9f7a0cd1aca33657af5716845ae4 files/digest-mythdvd-0.15 65
 MD5 bfb7b02049fa6f765e435f9cdb97199f files/digest-mythdvd-0.16 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBT7cQFhz/XBeRBtARArXuAJ9jwGFvnlx5N1Dq/lX6QL9q0caf7ACeIYzu
-GA4flfYLKF2f6qv6Pg5xeuA=
-=QdZU
------END PGP SIGNATURE-----

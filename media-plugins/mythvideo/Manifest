@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bc8ee7f4bfa0650cbe09c7c5c83c8c4d mythvideo-0.16.ebuild 761
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 813af8cc2f4f2d0b1a9042f8fac551a9 mythvideo-0.14.ebuild 1042
-MD5 749e60f53f97942c288afa89ac1d5a79 ChangeLog 3360
-MD5 56d0a98a784b77d676c10395c387ea23 mythvideo-0.13.ebuild 1771
 MD5 f50dc3297b3b208d166229ab8d47e675 mythvideo-0.15.1.ebuild 1101
-MD5 51fbad420f3d94ef8747f16c24ee8c18 files/digest-mythvideo-0.14 67
-MD5 266d70fb466366df03737135389fbbff files/mythvideo-0.16-gcc34.patch 266
-MD5 149ad98053d263e3e10aa8af927b3cf8 files/digest-mythvideo-0.16 67
+MD5 813af8cc2f4f2d0b1a9042f8fac551a9 mythvideo-0.14.ebuild 1042
+MD5 7aa7b18d2a451c43deecfd1aa123bf76 mythvideo-0.16.ebuild 760
+MD5 56d0a98a784b77d676c10395c387ea23 mythvideo-0.13.ebuild 1771
+MD5 ec2e8abca9c580dba042cfaa591d4b4b ChangeLog 3527
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 a8800f5c5151851b8e57a6a777fde3b0 files/digest-mythvideo-0.13 67
+MD5 51fbad420f3d94ef8747f16c24ee8c18 files/digest-mythvideo-0.14 67
+MD5 149ad98053d263e3e10aa8af927b3cf8 files/digest-mythvideo-0.16 67
+MD5 266d70fb466366df03737135389fbbff files/mythvideo-0.16-gcc34.patch 266
 MD5 e15e758ba887eb0ff1df3ff4f24db090 files/digest-mythvideo-0.15.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBT7Y4Fhz/XBeRBtARAnqzAJ0Z9HBnRGCUGiKVm2thd7vruWabFwCfQT/a
-La3dgUjZ51jJxHyGbEskqjg=
-=Rc8U
------END PGP SIGNATURE-----

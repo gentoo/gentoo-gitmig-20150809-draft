@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b21d714db2a72ec10d2cd266b18ed3b mythnews-0.14.ebuild 1009
-MD5 83559f24c7e43a5364ec7cbe7202664b mythnews-0.15.ebuild 1008
 MD5 39d31e64f0b6ca20f6dbb19a4c9ca9ab mythnews-0.13.ebuild 995
-MD5 b8509c98e0d51aee73afa98399a0562c mythnews-0.16.ebuild 554
+MD5 83559f24c7e43a5364ec7cbe7202664b mythnews-0.15.ebuild 1008
+MD5 1b21d714db2a72ec10d2cd266b18ed3b mythnews-0.14.ebuild 1009
+MD5 e331ba10030583d3419f7c9a40f1f132 ChangeLog 1420
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 55e1e484f1413f564d32636648b6f810 ChangeLog 1254
-MD5 33a5ffe0f2f8797b381ee76faf3940c4 files/digest-mythnews-0.15 65
+MD5 7c7cdfd1025130c2047afdf08a79f861 mythnews-0.16.ebuild 553
 MD5 ba1aaa752cf2b8e1d989d5db1cb23b5d files/digest-mythnews-0.13 65
-MD5 884fcdd1409a7bce37fe7323e4b18942 files/digest-mythnews-0.16 65
 MD5 983d80ea01fdfb7d74da92ccc5dc98a0 files/digest-mythnews-0.14 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBT7WtFhz/XBeRBtARApFgAJ9NihtwFOgATSM9EDA3Ny67tVhMmACgoNH2
-UoeFLrSjNAfv2AqV+ECsTxo=
-=kt8b
------END PGP SIGNATURE-----
+MD5 33a5ffe0f2f8797b381ee76faf3940c4 files/digest-mythnews-0.15 65
+MD5 884fcdd1409a7bce37fe7323e4b18942 files/digest-mythnews-0.16 65

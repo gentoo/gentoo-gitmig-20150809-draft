@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 92bb68198caf7402838af0921dc937d0 mythmusic-0.15.1.ebuild 1642
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 3ad3d2de8af86ca7e4dbdacd75f2f5e5 mythmusic-0.16.ebuild 1186
 MD5 a914d748b9394794e72b5996d954f2ec mythmusic-0.14.ebuild 1802
+MD5 f4652fc87bf3d5dd7f5efdbe3f32fcec mythmusic-0.16.ebuild 1185
 MD5 a796ad53f6dc7ca2d730fe2fbb9780df mythmusic-0.13.ebuild 2293
-MD5 d0b451a6024083ce3a52a23ce130f235 ChangeLog 3980
-MD5 848e6023c9cf8a12929e5dc1bd7468d6 files/digest-mythmusic-0.15.1 69
+MD5 685c9837f2ea3e69cf885de9697b68d2 ChangeLog 4147
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 8f32dd57de13b3cce86d582ecc59c4d2 files/asm_fix.diff 507
+MD5 848e6023c9cf8a12929e5dc1bd7468d6 files/digest-mythmusic-0.15.1 69
 MD5 2019c295b59aab34531f15790e8d79f0 files/digest-mythmusic-0.13 67
-MD5 8042c0bc391d60a2d3842e9956cb6ad7 files/digest-mythmusic-0.16 67
 MD5 47078eb5bb471d527803f268e41c5436 files/digest-mythmusic-0.14 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBT7VRFhz/XBeRBtARAhAEAJ9ugzYb46+VzW8X+Mhv13Z400Rs0QCfSni2
-rdbU7yeWtzgwSnpGsH8TVfE=
-=GonP
------END PGP SIGNATURE-----
+MD5 8042c0bc391d60a2d3842e9956cb6ad7 files/digest-mythmusic-0.16 67

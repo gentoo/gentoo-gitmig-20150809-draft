@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 151efb6f98e3da1118c711e955ee7acf mythgallery-0.16.ebuild 685
-MD5 8e1f8cca9b1ce76606dd6db604cda5f1 mythgallery-0.13.ebuild 1699
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 c47c766feb418009b1791715a2063347 ChangeLog 3411
-MD5 fb248e059d1662cc092747f90dcd8cb8 mythgallery-0.15.ebuild 1154
 MD5 9f150ef40bd00da93d7b91f2e0fa46d7 mythgallery-0.14.ebuild 1138
-MD5 289cc198151b47c06f4b8767ab79d0be files/digest-mythgallery-0.14 68
-MD5 0ca4e7d13c8988f8e2c456d1b4e9c414 files/digest-mythgallery-0.16 68
-MD5 12c009b36daaaa5323bdc46f38c9ff00 files/digest-mythgallery-0.15 68
+MD5 df6f67fe0093fd600cca80807d236d8e mythgallery-0.16.ebuild 684
+MD5 8e1f8cca9b1ce76606dd6db604cda5f1 mythgallery-0.13.ebuild 1699
+MD5 fb248e059d1662cc092747f90dcd8cb8 mythgallery-0.15.ebuild 1154
+MD5 fff4e38348aa2295d60766c82b20d868 ChangeLog 3580
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 be630e30bf64c7e32e3675cdd626bf02 files/digest-mythgallery-0.13 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBT7Q6Fhz/XBeRBtARAmJ5AJ444cB8QNjabQm/pQ0hnxOa8VMylQCdFM4M
-LkVGGmUOHYfuzDXDxF5HZhU=
-=oifo
------END PGP SIGNATURE-----
+MD5 289cc198151b47c06f4b8767ab79d0be files/digest-mythgallery-0.14 68
+MD5 12c009b36daaaa5323bdc46f38c9ff00 files/digest-mythgallery-0.15 68
+MD5 0ca4e7d13c8988f8e2c456d1b4e9c414 files/digest-mythgallery-0.16 68
