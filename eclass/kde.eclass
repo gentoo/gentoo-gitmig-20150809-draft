@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.87 2004/01/21 23:28:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.88 2004/01/23 13:54:40 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -10,7 +10,6 @@
 inherit base kde-functions
 ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
-
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 
@@ -114,7 +113,7 @@ kde_src_compile() {
 				export KDEDIRS="${PREFIX}:${KDEDIR}"
 
 				cd $S
-				./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
+				./configure ${myconf} || configure_die "died running ./configure, $FUNCNAME:configure"
 				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
 				if [ "${ARCH}" = "hppa" ]
 				then
@@ -136,6 +135,23 @@ kde_src_compile() {
 	shift
 	done
 
+}
+
+# This function is to give the user a message when configure dies.  The reason is that the
+# nvidia drivers cause opengl linkage issues with Qt, so if someone hasn't set them up properly
+# Qt is badly linked and they think it's a KDE related bug.
+configure_die()
+{
+	echo $@
+	eerror
+	eerror	"Your KDE program installation died while running the configure script"
+	eerror
+	eerror	"If the error died during the check for Qt, and you have Qt installed, the problem"
+	eerror	"is most likely due to your nvidia drivers being configured improperly."
+	eerror
+	eerror	"Search forums.gentoo.org for help in setting them up properly.  This is NOT a kde bug."
+	eerror
+	die
 }
 
 kde_src_install() {
