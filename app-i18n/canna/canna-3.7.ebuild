@@ -1,46 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_beta1.ebuild,v 1.1 2003/09/29 17:52:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7.ebuild,v 1.1 2003/12/12 17:36:13 usata Exp $
 
 inherit cannadic
 
-IUSE="tetex"
+IUSE="doc"
 
-MY_P="Canna37${PV/*beta/b}"
+MY_P="Canna${PV//./}"
 
 DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://canna.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/canna/6125/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge.jp/canna/7240/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc -alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 -alpha"
 
 DEPEND="virtual/glibc
 	x11-base/xfree
 	>=sys-apps/sed-4
-	tetex? ( app-text/ptex )"
+	doc? ( app-text/ptex )"
 RDEPEND="virtual/glibc"
 
 S="${WORKDIR}/${MY_P}"
-
-pkg_setup() {
-
-	ewarn
-	ewarn "This is a development release! Beware! Vorsicht!!"
-	ewarn "Hit ^C to stop if you are not ready"
-	ewarn
-
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	sleep 8
-}
 
 src_unpack() {
 	unpack ${A}
@@ -49,14 +31,17 @@ src_unpack() {
 	sed -e "s%@cannapkgver@%${PF}%" \
 		${FILESDIR}/${P}-gentoo.diff.in > ${T}/${P}-gentoo.diff
 	epatch ${T}/${P}-gentoo.diff
+	cd dic/phono
+	epatch ${FILESDIR}/${PN}-kpdef-gentoo.diff
 }
 
 src_compile() {
 
 	xmkmf || die
-	make libCannaDir=../lib/canna canna || die
+	#make libCannaDir=../lib/canna canna || die
+	make canna || die
 
-	if [ -n "`use tetex`" ] ; then
+	if [ -n "`use doc`" ] ; then
 		einfo "Compiling DVI, PS (and PDF) document"
 		cd doc/man/guide/tex
 		xmkmf || die
@@ -93,7 +78,7 @@ src_install() {
 
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*
 
-	if [ -n "`use tetex`" ] ; then
+	if [ -n "`use doc`" ] ; then
 		insinto /usr/share/doc/${PF}
 		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
 	fi
