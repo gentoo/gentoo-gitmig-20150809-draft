@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.17 2003/04/03 20:23:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.18 2003/06/21 18:14:12 drobbins Exp $
+
+*linux-headers-2.4.21 (21 Jun 2003)
+
+  21 Jun 2003; Daniel Robbins <drobbins@gentoo.org> new linux-headers-2.4.21 (stock)
+  to be used for amd64.
 
 *linux-headers-2.4.17-r4 (11 Mar 2003)
 
