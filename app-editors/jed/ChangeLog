@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.21 2004/06/24 21:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.22 2004/06/30 02:09:29 tgall Exp $
+
+  29 Jun 2004; Tom Gall <tgall@gentoo.org> jed-0.99.16-r2.ebuild:
+  ~ppc64 bug #55304
 
   23 Jun 2004; <malc@gentoo.org> jed-0.99.16-r2.ebuild:
   Mark stable on amd64
