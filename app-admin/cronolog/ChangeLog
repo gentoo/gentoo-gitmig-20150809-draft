@@ -1,12 +1,15 @@
 # ChangeLog for app-admin/cronolog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.4 2003/10/13 14:06:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.5 2003/10/14 23:31:42 zul Exp $
 
 *cronolog-1.6.2-r1 (13 Oct 2003)
 
   13 Oct 2003; Daniel Ahlberg <aliz@gentoo.org> cronolog-1.6.2-r1.ebuild:
   Added patches from cronolog homepage. Requested by Richard Hensel
   <richhensel@hotmail.com> by email.
+
+  14 Oct 2003; Chuck Short <zul@gentoo.org> cronolog-1.6.2.ebuild:
+  Added ~ia64 to keywords.
 
 *cronolog-1.6.2 (25 Oct 2002)
   
