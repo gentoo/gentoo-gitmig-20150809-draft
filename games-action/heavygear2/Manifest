@@ -1,5 +1,4 @@
-MD5 85056f8ab1b9a0553678bf588f865362 heavygear2-1.0b.ebuild 2441
-MD5 72807554ed92879f5e898be2955fca0c ChangeLog 1023
+MD5 f0e80e2c35028f859f179d3db0b359eb heavygear2-1.0b.ebuild 2331
+MD5 108dd6e1786feb53c46920c95c1e5da1 ChangeLog 1255
 MD5 1060dcea6f845a9b290a401037dfc512 metadata.xml 1002
-MD5 d9fc3c7e9ae39b326a9ca4095c11d122 files/hg2 38
 MD5 a4daa0679d466ded814559d380ea7f42 files/digest-heavygear2-1.0b 68

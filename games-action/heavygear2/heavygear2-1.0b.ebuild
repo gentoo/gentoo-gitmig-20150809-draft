@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.7 2005/03/07 14:04:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.8 2005/03/25 14:34:50 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 IUSE="3dfx videos"
 DESCRIPTION="Heavy Gear II - 3D first-person Mechanized Assault"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 RESTRICT="nostrip"
 
-DEPEND="virtual/libc"
+DEPEND="games-util/loki_patch"
 RDEPEND="${DEPEND}
 	=media-libs/freetype-1*
 	virtual/opengl"
@@ -48,7 +48,7 @@ src_install() {
 	insinto ${dir}
 	use 3dfx && doins ${CDROM_ROOT}/bin/x86/glibc-2.1/LibMesaVoodooGL.so.1.2.030300
 
-	cp ${CDROM_ROOT}/{README,icon.{bmp,xpm}} ${Ddir}
+	doins ${CDROM_ROOT}/{README,icon.{bmp,xpm}}
 	use videos && cp -r ${CDROM_ROOT}/shell ${Ddir}
 
 	cd ${Ddir}
@@ -58,22 +58,19 @@ src_install() {
 	tar xzf ${CDROM_ROOT}/binaries.tar.gz || die "uncompressing binaries"
 
 	cd ${S}
-	bin/Linux/x86/loki_patch --verify patch.dat
-	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+	loki_patch --verify patch.dat
+	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	dodir ${GAMES_BINDIR}
-	dogamesbin ${FILESDIR}/hg2
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/hg2
-	insinto /usr/share/pixmaps
-	newins ${CDROM_ROOT}/icon.xpm HG2.xpm
+	games_make_wrapper hg2 ./hg2 ${dir}
+	newicon ${CDROM_ROOT}/icon.xpm hg2.xpm
 
 	prepgamesdirs
-	make_desktop_entry hg2 "Heavy Gear II" "HG2.xpm"
+	make_desktop_entry hg2 "Heavy Gear II" hg2.xpm
 }
 
 pkg_postinst() {
