@@ -1,0 +1,8 @@
+# ChangeLog for net-www/horde
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.1 2002/10/31 18:18:04 karltk Exp $
+
+*horde-2.1 (21 Oct 2002)
+
+  30 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> horde-2.1.ebuild files/digest-horde-2.1 :
+  Initial import.  Ebuild submitted by Christophe GUILLOUX <cg@rootix.info>.  
