@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012-r1.ebuild,v 1.1 2003/02/14 03:14:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012-r1.ebuild,v 1.2 2003/02/25 19:17:52 latexer Exp $
 
 inherit eutils
 
 DESCRIPTION="HostAP wireless drivers"
 HOMEPAGE="http://hostap.epitest.fi/"
 
-MY_PCMCIA="pcmcia-cs-3.2.1"
+PCMCIA_VERSION="`cardmgr -V 2>&1 | cut -f3 -d' '`"
+MY_PCMCIA="pcmcia-cs-${PCMCIA_VERSION}"
 SRC_URI="http://hostap.epitest.fi/releases/${PN}-2002-10-12.tar.gz
 		pcmcia? ( mirror://sourceforge/pcmcia-cs/${MY_PCMCIA}.tar.gz )"
 
@@ -17,7 +18,8 @@ KEYWORDS="~x86"
 
 IUSE="pcmcia"
 
-DEPEND="pcmcia? ( >=sys-apps/pcmcia-cs-3.2.1* )"
+DEPEND=">=net-wireless/wireless-tools-25
+		pcmcia? ( >=sys-apps/pcmcia-cs-3.2.1* )"
 
 S=${WORKDIR}/${PN}-2002-10-12
 LIB_PATH="/lib/modules/${KV}"
