@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/xmmplayer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/ChangeLog,v 1.1 2003/09/15 00:02:40 seemant Exp $
+
+*xmmplayer-0.2.1 (14 Sep 2003)
+
+  14 Sep 2003; Seemant Kulleen <seemant@gentoo.org> xmmplayer-0.2.1.ebuild:
+  New plugin for xmms, which uses mplayer to play movies. This should replace
+  avi-xmms. Thanks to: archan <archanp@hotpop.com> in bug #26377
+
