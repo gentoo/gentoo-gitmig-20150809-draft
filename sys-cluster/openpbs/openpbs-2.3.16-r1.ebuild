@@ -1,38 +1,32 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.4 2003/09/16 16:20:54 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.5 2003/11/03 06:09:31 spyderous Exp $
 
 NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
-B=${NAME}.tar.gz
 S="${WORKDIR}/${NAME}"
 
 DESCRIPTION="The Portable Batch System (PBS) is a flexible batch queueing and workload management system"
 HOMEPAGE="http://www.openpbs.org/"
 LICENSE="openpbs"
-
+SRC_URI="${NAME}.tar.gz"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="X tcltk crypt doc"
-
+RESTRICT="fetch"
 DEPEND="virtual/glibc
 		X? ( x11-base/xfree )
 		tcltk? ( dev-lang/tcl )"
-RDEPEND="${DEPEND} crypt? ( net-misc/openssh )"
+RDEPEND="${DEPEND}
+		crypt? ( net-misc/openssh )"
 
+pkg_nofetch() {
+	einfo "Please visit http://www.openpbs.org/."
+	einfo "You must register to download the archive."
+	einfo "Place ${A} in ${DISTDIR}."
+}
 
 src_unpack() {
-	if [ ! -e ${DISTDIR}/${B} ] ; then
-		einfo "Due to license issues you have to download"
-		einfo "the appropriate openpbs archive:"
-		einfo "http://www.openpbs.org/UserArea/Download/"${B}
-		einfo ""
-		einfo "The archive should be placed into ${DISTDIR}."
-
-		die "package archive not found"
-	fi
-
-	cd ${WORKDIR}
-	unpack ${B}
+	unpack ${A}
 	cd ${S}
 	# apply a patch I made for gcc3. 
 	# maybe this should be done with sed but I'm too lazy
@@ -70,7 +64,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		PBS_SERVER_HOME=${D}/var/spool/PBS \
