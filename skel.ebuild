@@ -11,6 +11,11 @@
 # will be commited to cvs, the details on that line will be automatically
 # generated to contain the correct data.
 
+# comprehensive list of any and all USE flags leveraged in the build, 
+# with the exception of any ARCH specific flags, i.e. ppc sparc sparc64
+# x86 alpha - this is a required variable
+IUSE="X gnome"
+
 # Short one-line description of this package.
 DESCRIPTION="This is a sample skeleton ebuild file"
 
