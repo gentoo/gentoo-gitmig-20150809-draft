@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.18 2003/02/27 23:28:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.19 2003/03/19 06:14:24 pfeifer Exp $
+
+*gentoo-sources-2.4.20-r2 (19 Mar 2003)
+
+  19 Mar 2003; Jay Pfeifer <pfeifer@gentoo.org> gentoo-sources-2.4.20-r2.ebuild:
+  Package is currently marked unstable.
+
+  * Added ptrace security fix.
+  * Process priorities are now obeyed. :)
+  * pom updated to 20030310
+  * removed aavm
+  * removed ck4 O(1) sched, ll, preempt patch
+  * added rml preempt & ll
+  * update xattr+acl to xattr+acl+trusted 0.8.55
+  * update usbdnet
+  * add dac960 root fix
+  * add sim710 compile fix
 
 *gentoo-sources-2.4.20-r1 (12 Jan 2003)
 
