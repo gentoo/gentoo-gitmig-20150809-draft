@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.5 2002/11/23 02:12:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.6 2002/11/26 14:49:30 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -10,13 +10,14 @@ SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz"
 HOMEPAGE="http://www.perl.org"
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc sparc sparc64 ~alpha"
 
 RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	berkdb? ( >=sys-libs/db-3.2.3h-r3
-		=sys-libs/db-1.85-r1 )"
+	>=sys-libs/db-3.2.3h-r3
+	=sys-libs/db-1.85-r1"
 
 DEPEND="sys-apps/groff
+	sys-devel/ld.so
 	${RDEPEND}"
 
 src_compile() {
@@ -47,6 +48,7 @@ src_compile() {
     sh Configure -des \
 		-Darchname=${CHOST%%-*}-linux \
 		-Dcccdlflags='-fPIC' \
+		-Dcc=gcc \
 		-Dccdlflags='-rdynamic' \
 		-Dprefix=/usr \
 		-Dlocincpth=' ' \
@@ -105,6 +107,7 @@ EOF
 
     sh Configure -des \
 		-Dprefix=/usr \
+		-Dcc=gcc \
 		-Darchname=${CHOST%%-*}-linux \
 		-Duselargefiles \
 		-Dd_dosuid \

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.16 2002/11/23 02:12:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.17 2002/11/26 14:49:30 mcummings Exp $
+
+  26 Nov 2002; Michael Cummings <mcummings@gentoo.org>:
+
+  Corrected deps in perl-5.6.1-r8 per bugs 4116 and 9314
 
 *perl-5.6.1-r8 (13 Oct 2002)
 
