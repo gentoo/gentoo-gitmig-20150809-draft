@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/pyserial
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.1 2003/02/27 02:24:53 liquidx Exp $
+
+*pyserial-1.18 (27 Feb 2002)
+  27 Feb 2002; Alastair Tse <liquidx@gentoo.org> pyserial-1.18.ebuild:
+  Initial Import. Bug #11928
