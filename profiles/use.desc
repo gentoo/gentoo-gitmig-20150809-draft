@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.208 2004/12/16 01:08:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.209 2004/12/19 11:16:55 greg_g Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -41,7 +41,7 @@ calendar - Adds support for calendars (not using mcal!)
 canna - Adds support for the Canna kana to kanji conversion engine
 caps - Use Linux capabilities library to control privileges.
 cdb - Adds support for the CDB database engine from the author of qmail
-cdr - Adds support for CD writer hardware (e.g. compile the koncd app in kdemultimedia)
+cdr - Adds support for CD writer hardware
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 cpdflib -  Adds support for clibpdf
 crypt - Add support for encryption -- using mcrypt or gpg where applicable
