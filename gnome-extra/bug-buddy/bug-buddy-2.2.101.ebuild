@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.101.ebuild,v 1.1 2003/01/31 02:36:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.101.ebuild,v 1.2 2003/01/31 16:48:03 spider Exp $
 
 inherit gnome2
 
@@ -18,10 +18,12 @@ RDEPEND=">=gnome-base/gconf-1.2.0
 	>=x11-libs/pango-1.0.3
 	>=x11-libs/gtk+-2.0.5
 	>=dev-libs/glib-2.0.3
+	>=gnome-base/bonobo-activation-1.0.0
+	>=gnome-base/gnome-desktop-2.0.0
 	>=gnome-base/libbonobo-2.0.0
 	>=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomecanvas-2.0.0
-	>=gnome-base/libgnomeui-2.0.0
+	>=gnome-base/libgnomeui-2.1.0
 	>=gnome-base/ORBit2-2.4.0
 	>=sys-devel/perl-5.0
 	>=sys-devel/gdb-5.1
