@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2800 2004/04/05 07:25:07 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2801 2004/04/05 14:07:39 suka Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -27,10 +27,6 @@
 # versioning change.
 >=games-arcade/pachi-20000000
 
-# <suka@gentoo.org> (2 Apr 2004)
-# New ebuild, needs some testing
->=app-office/openoffice-ximian-bin-1.1.52
-
 # <klieber@gentoo.org> (01 Apr 2004)
 # The following packages contain a remotely-exploitable
 # security vulnerability and have been hard masked accordingly.
@@ -46,19 +42,6 @@ games-fps/unreal-tournament-infiltration
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
-
-# <pauldv@gentoo.org> (1 Apr 2004)
-# Short-term mask of the ximian 1.1.1 build. Configuration file migration is
-# again not working
->=app-office/openoffice-ximian-1.1.52
-
-# <suka@gentoo.org> (31 Mar 2004)
-# Also short term mask the new OOo source build
->=app-office/openoffice-1.1.1
-
-# <suka@gentoo.org> (30 Mar 2004)
-# Short term mask for some testing
->=app-office/openoffice-bin-1.1.1
 
 # <humpback@gentoo.org> (28 Mar 2004)
 # Needs some more testing
@@ -193,10 +176,6 @@ net-p2p/teknap
 # to study new word
 =app-i18n/uim-0.3.1
 
-# <pauldv@gentoo.org> (07 Mar 2004)
-# Release candidate
-=app-office/openoffice-1.1.1_rc1
-
 # <rajiv@gentoo.org> (03 Mar 2004)
 # security problems. see bug #43658.
 <net-ftp/proftpd-1.2.9
@@ -260,10 +239,6 @@ sys-kernel/ppc-sources-crypto
 # with realplayer being masked.
 media-plugins/rmxmms
 media-plugins/realvideo-codecs
-
-# <pauldv@gentoo.org> (08 Feb 2004)
-# Pre-release
-=app-office/openoffice-1.1.1b
 
 # <iggy@gentoo.org> (07 Feb 2004
 # testing stuff, don't use unless I told you to
