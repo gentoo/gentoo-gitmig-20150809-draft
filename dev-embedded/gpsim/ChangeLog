@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.12 2005/01/01 17:52:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.13 2005/01/03 00:32:06 dragonheart Exp $
+
+  03 Jan 2005; Daniel Black <dragonheart@gentoo.org> gpsim-0.21.2.ebuild:
+  updated gnuconfig to solve bug #74997. This will hopefully make this amd64
+  (and others) compatible. Thanks to Aris Adamantiadis <aris@0xbadc0de.be> for
+  the bug report
 
   24 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.

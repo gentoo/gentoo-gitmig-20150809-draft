@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.2.ebuild,v 1.4 2005/01/01 17:52:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.2.ebuild,v 1.5 2005/01/03 00:32:06 dragonheart Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="A simulator for the Microchip PIC microcontrollers"
 HOMEPAGE="http://www.dattalo.com/gnupic/gpsim.html"
@@ -21,7 +23,8 @@ RDEPEND="${DEPEND}
 
 
 
-src_compile(){
+src_compile() {
+	gnuconfig_update
 	econf `use_enable X gui` || die
 	emake || die
 }
