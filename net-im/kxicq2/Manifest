@@ -1,0 +1,6 @@
+MD5 0c77362708af1d836f00926f21036a38 ChangeLog 987
+MD5 dd250fead8f12f843dd24b906c70b689 kxicq2-0.7.6.20020728.ebuild 476
+MD5 17ff1c264bd3ae76435d60da45aae3ce kxicq2-0.7.6.ebuild 440
+MD5 88809db1f3c2e2ed07caacae9e1ea88b files/digest-kxicq2-0.7.6 64
+MD5 c205cb76c16ee22af0c2ecb75ef4fb22 files/digest-kxicq2-0.7.6.20020728 73
+MD5 9892eb9a998981fc0d4de6c30e2056bd files/kxicq2-0.7.6.20020728-gcc3.diff 4417
