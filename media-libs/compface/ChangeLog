@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/compface
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.16 2005/01/06 16:18:24 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.17 2005/01/07 22:30:36 eradicator Exp $
+
+  07 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/compface-1.5-destdir.diff, compface-1.5.ebuild:
+  Fixed destdir patch.
 
 *compface-1.5 (07 Jan 2005)
 

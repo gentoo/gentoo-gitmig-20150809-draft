@@ -1,7 +1,7 @@
-diff -Naur compface-1.4.orig/Makefile.in compface-1.4/Makefile.in
---- compface-1.4.orig/Makefile.in	2000-11-22 05:38:39.000000000 -0800
-+++ compface-1.4/Makefile.in	2004-10-05 02:34:53.307138856 -0700
-@@ -71,18 +71,18 @@
+diff -Naurp compface-1.5.orig/Makefile.in compface-1.5/Makefile.in
+--- compface-1.5.orig/Makefile.in	2004-12-23 22:23:08.000000000 -0800
++++ compface-1.5/Makefile.in	2005-01-07 14:29:46.298182241 -0800
+@@ -71,18 +71,16 @@ dist: $(DISTFILES)
  		$(RM) -rf `cat .fname` .fname
  
  install: 	$(NAME) $(UNNAME) $(LIBNAME)
@@ -19,14 +19,12 @@ diff -Naur compface-1.4.orig/Makefile.in compface-1.4/Makefile.in
 -		$(INSTALL_DATA) $(srcdir)/$(LIBNAME) $(LIBRARY)
 +		$(INSTALL_PROGRAM) $(srcdir)/$(NAME) $(DESTDIR)$(EXECUTABLE) 
 +		-chmod 0755 $(DESTDIR)$(EXECUTABLE)
-+		-strip $(DESTDIR)$(EXECUTABLE)
 +		$(INSTALL_PROGRAM) $(srcdir)/$(UNNAME) $(DESTDIR)$(UNEXECUTABLE)
 +		-chmod 0755 $(DESTDIR)$(UNEXECUTABLE)
-+		-strip $(DESTDIR)$(UNEXECUTABLE)
 +		$(INSTALL_DATA) $(srcdir)/$(NAME).1 $(DESTDIR)$(MAN1DIR)/$(NAME).1
-+		cd $(DESTDIR)$(MAN1DIR) && $(RM) ./$(UNNAME).1 && $(LN_S) $(NAME).1 $(UNNAME).1
++		$(LN_S) $(NAME).1 $(DESTDIR)$(UNNAME).1
 +		$(INSTALL_DATA) $(srcdir)/$(NAME).3 $(DESTDIR)$(MAN3DIR)/$(NAME).3
-+		cd $(DESTDIR)$(MAN3DIR) && $(RM) ./$(UNNAME).3 && $(LN_S) $(NAME).3 $(UNNAME).3
++		$(LN_S) $(NAME).3 $(DESTDIR)$(UNNAME).3
 +		for hdr in $(INSTALLHEADERS); do $(INSTALL_DATA) $(srcdir)/$${hdr} $(DESTDIR)$(INCLUDEDIR)/$${hdr}; done
 +		$(INSTALL_DATA) $(srcdir)/$(LIBNAME) $(DESTDIR)$(LIBRARY)
  
