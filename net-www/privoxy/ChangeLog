@@ -1,6 +1,9 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.16 2004/01/18 14:29:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.17 2004/02/03 11:22:54 mholzer Exp $
+
+  03 Feb 2004; Martin Holzer <mholzer@gentoo.org> privoxy-2.9.14_beta.ebuild:
+  fixing .keep issue. closes 39827
 
   18 Jan 2004; Martin Holzer <mholzer@gentoo.org> privoxy-3.0.0.ebuild,
   privoxy-3.0.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.6 2003/02/13 15:42:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.7 2004/02/03 11:22:54 mholzer Exp $
 
 MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${MY_P}
@@ -49,7 +49,7 @@ src_install () {
 
 	diropts -m 0750 -g privoxy -o privoxy
 	dodir /var/log/privoxy
-	touch ${D}/var/log/privoxy/.keep
+	keepdir /var/log/privoxy
 	dodir /etc/privoxy /etc/privoxy/templates
 
 	insopts -m 0640 -g privoxy -o privoxy
