@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ninja
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.4 2004/02/15 04:14:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.5 2004/03/15 04:31:55 avenj Exp $
+
+  14 Mar 2004; Jon Portnoy <avenj@gentoo.org> ninja-1.5.9_pre9.ebuild :
+  Fixed PV issue.
 
   14 Feb 2004; Jason Wever <weeve@gentoo.org> ninja-1.5.9_pre9.ebuild:
   Added ~sparc keyword.

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre9.ebuild,v 1.5 2004/02/15 04:14:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre9.ebuild,v 1.6 2004/03/15 04:31:55 avenj Exp $
 
 # Get rid of underscore in package name
-PV=`echo ${PV} | sed -e 's/_.*//'`
+MY_PV=`echo ${PV} | sed -e 's/_.*//'`
 
-S=${WORKDIR}/${PN}-${PV}
+S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="Ninja IRC Client"
 HOMEPAGE="http://ninja.qoop.org/"
 SRC_URI="http://ninja.qoop.org/ftp/sources/${P/_/}.tar.gz"
