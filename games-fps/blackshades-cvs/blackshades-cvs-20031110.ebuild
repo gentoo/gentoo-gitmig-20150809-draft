@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.7 2004/07/14 14:43:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.8 2005/03/02 21:34:05 wolf31o2 Exp $
 
 #ECVS_PASS="anonymous"
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -15,7 +15,7 @@ SRC_URI="http://filesingularity.timedoctor.org/Textures.tar.bz2
 
 LICENSE="blackshades"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 RDEPEND="virtual/x11
