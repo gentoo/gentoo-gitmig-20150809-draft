@@ -1,4 +1,16 @@
-MD5 0ab5f1626d43aae7759246a50f46784f ChangeLog 446
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16770145f139c646ade965c860a06c6f ChangeLog 600
 MD5 471b246e4243a498f5a170d8f313549f Curses-UI-0.92.ebuild 560
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 3d32d89d0be294df7caa3f51861a8a4b Curses-UI-0.94.ebuild 574
 MD5 eed6cc5dd6bab6baa8fc826c4e6836ce files/digest-Curses-UI-0.92 66
+MD5 3414af19c7bd8fb5071929bf8f5677b1 files/digest-Curses-UI-0.94 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBgNcYtG5z4I8BtQoRAndnAJ9xqB6CHHDa1WFDRheoojP/hs+AewCeOkRi
+3IArYTAHHmwuiBiGzkRww4I=
+=i29F
+-----END PGP SIGNATURE-----
