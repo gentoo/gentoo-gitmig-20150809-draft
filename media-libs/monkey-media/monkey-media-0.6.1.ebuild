@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/monkey-media-0.6.1.ebuild,v 1.2 2003/02/13 12:52:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/monkey-media-0.6.1.ebuild,v 1.3 2003/03/16 14:51:21 azarah Exp $
 
 IUSE="doc"
 
@@ -18,13 +18,13 @@ KEYWORDS="~x86 ~ppc"
 RDEPEND="
 	>=x11-libs/gtk+-2.0.6
 	>=dev-libs/atk-1.0
-	>=dev-libs/glib-2.0*
+	>=dev-libs/glib-2.0
 	>=media-libs/audiofile-0.2.3
-	=gnome-base/gnome-vfs-2.0*
+	>=gnome-base/gnome-vfs-2.0
 	=media-libs/gstreamer-0.4.2*
 	>=gnome-base/gconf-1.2.0
-	=gnome-base/libglade-2.0*
-	=gnome-base/ORBit2-2.4*
+	>=gnome-base/libglade-2.0
+	>=gnome-base/ORBit2-2.4
 	sys-devel/gettext
 	sys-libs/zlib
 	media-libs/libogg
