@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.3.4.ebuild,v 1.10 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.3.4.ebuild,v 1.11 2002/12/09 11:48:59 jmorgan Exp $
 
 IUSE="esd oggvorbis gnome jpeg mikmod"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gstreamer.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc"
 
 # required packages
 # there are many many optional libraries. features are compiled if the libraries

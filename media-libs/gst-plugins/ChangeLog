@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
 *gst-plugins-0.4.2-r1 (08 Dec 2002)
+
+  08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> gst-plugins-0.4*.ebuild :
+  Removed ~sparc64/sparc64 keywords 
   
   08 Dec 2002; Jon Nall <nall@gentoo.org> gst-plugins-0.4.2-r1.ebuild
   files/digest-gst-plugins-0.4.2-r1
