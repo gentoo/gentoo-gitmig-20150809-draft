@@ -1,13 +1,30 @@
 #!/sbin/runscript
 
+#you can move these into your rc.conf file if you wish
+#MOUSEDEV=/dev/psaux
+#MOUSE=ps2
+
+need() {
+	need localmount
+}
+
+checkconfig() {
+	if [ -z "$MOUSEDEV" ] || [ -z "$MOUSE" ] ; then
+		eerror "You need to setup MOUSEDEV and MOUSE first"
+		return 1
+	fi
+}
+
 start() {
-    ebegin "Starting gpm"
-    start-stop-daemon --start --quiet --exec /usr/sbin/gpm -- -m ${MOUSEDEV} -t ${MOUSE}
-    eend ${?}
+	checkconfig || return 1
+	ebegin "Starting gpm"
+	start-stop-daemon --start --quiet --exec /usr/sbin/gpm \
+		-- -m ${MOUSEDEV} -t ${MOUSE}
+	eend ${?}
 }
 
 stop() {
-    ebegin "Stopping gpm"
-    start-stop-daemon --stop --quiet --pidfile /var/run/gpm.pid
-    eend ${?}
+	ebegin "Stopping gpm"
+	start-stop-daemon --stop --quiet --pidfile /var/run/gpm.pid
+	eend ${?}
 }
