@@ -1,3 +1,13 @@
-MD5 4b3261c0cf3f9f0a4f9b4a7c7ce25450 mkgallery-1.1.ebuild 572
-MD5 4b0e1da061e05cd857c2f7e1e92536d5 ChangeLog 572
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e35b0a7d823fd5a88e7457e35dda2dc2 mkgallery-1.1.ebuild 577
+MD5 a5c8449d380c664e8dba8c5fb3c7bf2a ChangeLog 656
 MD5 a9c6def331b5cc3157fa080c5739e338 files/digest-mkgallery-1.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBMy1SCHk4+ZoBpvsRAp/mAJoDm1P6CGkfzcThKGCtyC3XsR/6wQCgkcrS
+wEvvlYiviLpUban3lYbW9B4=
+=fDtt
+-----END PGP SIGNATURE-----

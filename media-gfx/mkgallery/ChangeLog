@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mkgallery
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mkgallery/ChangeLog,v 1.5 2004/06/24 22:45:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mkgallery/ChangeLog,v 1.6 2004/08/30 13:35:26 slarti Exp $
+
+  30 Aug 2004; Tom Martin <slarti@gentoo.org> mkgallery-1.1.ebuild:
+  Marked ~amd64.
 
   14 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> mkgallery-1.1.ebuild:
   Added ~ppc to KEYWORDS.
