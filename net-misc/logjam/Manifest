@@ -8,5 +8,5 @@ MD5 2903f2d3b78e59f9ed8b9f012c5e2210 files/digest-logjam-4.2.2 64
 MD5 94348f82d3a7b91d9988d1629c4bf2a8 files/digest-logjam-4.3.2 65
 MD5 30945ddb58c8f3eb3780fcf9e48dbda3 files/digest-logjam-4.4.0 65
 MD5 68dac613ab0e68a698fcac1864aeae45 files/logjam-4.4.0-gcc3.4.patch 241
-MD5 403b471dc638f3acfdb9ba6f5c69d440 files/logjam-4.4.0-offline-sync.patch 886
 MD5 30945ddb58c8f3eb3780fcf9e48dbda3 files/digest-logjam-4.4.0-r1 65
+MD5 1a113c3728bec399a937fb09aec13464 files/logjam-4.4.0-offline-sync.patch 870
