@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/curcmdmode
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/curcmdmode/ChangeLog,v 1.4 2004/08/20 16:51:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/curcmdmode/ChangeLog,v 1.5 2004/09/03 01:35:05 ciaranm Exp $
+
+  03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> curcmdmode-1.0.ebuild:
+  Help text, bug #62559
 
   20 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> curcmdmode-1.0.ebuild:
   Stable on x86
