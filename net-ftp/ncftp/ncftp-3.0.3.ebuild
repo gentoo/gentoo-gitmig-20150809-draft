@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.0.3.ebuild,v 1.2 2001/07/21 07:52:47 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.0.3.ebuild,v 1.3 2001/07/22 04:46:35 jerry Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -24,5 +24,7 @@ src_install() {
         READLINE-README README WHATSNEW-3.0
 
     cd ${D}/usr/bin
-    ln -s ncftp ftp
+    if [ ! -e ${D}/usr/bin/ftp ] ;then
+        ln -s ncftp ftp
+    fi
 }
