@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <hannes@gentoo.org> (09 Feb 2003)
+# doesn't work with kde, bug #15245
+=dev-libs/libxml2-2.5.2
+
 # <carpaski@gentoo.org> (07 Feb 2003)
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
 >=sys-apps/portage-2.0.47_pre1
