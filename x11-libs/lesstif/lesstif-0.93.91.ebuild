@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.lesstif.org/"
 LICENSE="LGPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
-SLOT="0"
+SLOT="1.2"
 
 DEPEND="virtual/glibc
 	virtual/x11"

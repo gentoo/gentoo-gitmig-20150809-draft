@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.15 2003/11/19 16:54:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.16 2003/11/23 13:45:27 lanius Exp $
+
+  23 Nov 2003; Heinrich Wendel <lanius@gentoo.org> lesstif-0.93.91.ebuild:
+  added slot
 
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> lesstif-0.93.91.ebuild:
   next attemp to cleanup
