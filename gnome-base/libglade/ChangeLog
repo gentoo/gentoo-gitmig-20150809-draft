@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.2 2002/03/30 01:02:51 seemant Exp $
+
+*libglade-0.17-r4 (29 Mar 2002)
+
+  29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> libglade-0.17-r4.ebuild :
+
+  gnome is now an optional dependency, and USE dependent bonobo support
+  is now compilable, because the libglade dependency in gnome-print has been
+  sorted out.  This means the end of circular dependencies, hopefully.
 
 *libglade-0.17-r3 (1 Feb 2002)
 
