@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.12 2004/07/30 20:48:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.13 2004/08/08 06:29:14 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -46,6 +46,10 @@ HOMEPAGE="http://www.horde.org/${HORDE_PN}"
 
 LICENSE="LGPL-2"
 
+# INSTALL_DIR is used by webapp.eclass when USE=-vhosts
+INSTALL_DIR="/horde"
+[ "${HORDE_PN}" != "horde" ] && INSTALL_DIR="${INSTALL_DIR}/${HORDE_PN}"
+
 horde_pkg_setup() {
 	webapp_pkg_setup
 
@@ -80,7 +84,6 @@ horde_src_install() {
 	webapp_src_preinst
 
 	local destdir=${MY_HTDOCSDIR}
-	[ "${HORDE_PN}" != "horde" ] && destdir=${destdir}/${HORDE_PN}
 
 	# Work-around when dealing with CVS sources
 	[ "${EHORDE_CVS}" == "true" ] && cd ${HORDE_PN}
@@ -112,6 +115,12 @@ horde_pkg_postinst() {
 		ewarn "Use these CVS versions at your own risk."
 		ewarn "They tend to break things when working with" 
 		ewarn "the non CVS versions of horde."
+	fi
+	if use vhost ; then
+		echo
+		ewarn "When installing horde into a vhost dir, you will"
+		ewarn "need to use the -d option so that it is installed"
+		ewarn "into the proper location."
 	fi
 	webapp_pkg_postinst
 }
