@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.29 2004/10/11 04:42:55 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.30 2004/10/11 05:16:41 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -557,27 +557,29 @@ do_gcc_config() {
 	# some packages with one compiler and others with another. besides, it's
 	# just plain rude. ;)
 	# ...unless we're bootstrapping and NEED a compiler with c++!
-	local current_gcc_libpath="$(gcc-config -L)"
-	if [ -e ${ROOT}${current_gcc_libpath%:*}/specs -a -e ${ROOT}/etc/env.d/gcc/${current_gcc_config} ] && use !bootstrap && use !build ; then
-		local current_gcc_version="$(echo ${current_gcc_config} | awk -F - '{ print $5 }')"
-		if [ "${current_gcc_version}" != "${MY_PV_FULL}" ] ; then
-			# if we're installing a genuinely different compiler version, we
-			# should probably tell the user -how- to switch to the new gcc
-			# version if we're not going to do it for him/her.
-			einfo "The current gcc config appears valid, so it will not be"
-			einfo "automatically switched for you. If you would like to switch"
-			einfo "to the newly installed gcc version, do the following:"
-			echo
-			einfo "gcc-config ${CCHOST}-${MY_PV_FULL}${use_specs}"
-			einfo "source /etc/profile"
-			echo
-			ebeep
-			epause
-		else
-			einfo "The current gcc config appears to be valid, not running"
-			einfo "gcc-config..."
+	if use !bootstrap && use !build ; then
+		local current_gcc_libpath="$(gcc-config -L)"
+		if [ -e ${ROOT}${current_gcc_libpath%:*}/specs -a -e ${ROOT}/etc/env.d/gcc/${current_gcc_config} ] ; then
+			local current_gcc_version="$(echo ${current_gcc_config} | awk -F - '{ print $5 }')"
+			if [ "${current_gcc_version}" != "${MY_PV_FULL}" ] ; then
+				# if we're installing a genuinely different compiler version, we
+				# should probably tell the user -how- to switch to the new gcc
+				# version if we're not going to do it for him/her.
+				einfo "The current gcc config appears valid, so it will not be"
+				einfo "automatically switched for you. If you would like to switch"
+				einfo "to the newly installed gcc version, do the following:"
+				echo
+				einfo "gcc-config ${CCHOST}-${MY_PV_FULL}${use_specs}"
+				einfo "source /etc/profile"
+				echo
+				ebeep
+				epause
+			else
+				einfo "The current gcc config appears to be valid, not running"
+				einfo "gcc-config..."
+			fi
+			return 0
 		fi
-		return 0
 	fi
 
 	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}${use_specs} ] ; then
