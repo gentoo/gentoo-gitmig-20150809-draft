@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.16 2005/01/20 00:36:37 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.17 2005/02/12 18:25:31 kloeri Exp $
+
+  12 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  +files/spim-7.0-font.patch, spim-7.0.ebuild:
+  Fix bug 73510.
 
   19 Jan 2005; <gongloo@gentoo.org> spim-7.0.ebuild:
   Keyworded ~ppc-macos.

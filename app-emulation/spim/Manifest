@@ -1,8 +1,19 @@
-MD5 3a3eea09e8ec6866620da7bae140a9d8 ChangeLog 1932
-MD5 5bce967b291189eb41d909bceba08ade spim-6.5-r1.ebuild 1331
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d65b70c6fb0fb48180cfa40a91b992d2 spim-7.0.ebuild 1461
+MD5 e8f39f4bf6d57a3a0b4e60db62558cf2 ChangeLog 2049
 MD5 78dabd2ee8e26a7b7aff6c3313d69751 spim-6.5.ebuild 1329
-MD5 1a0e8ec928ee78f1dd71f97d31bf3580 spim-7.0.ebuild 1393
-MD5 d71d66b98121e4e42ca59fa94310ed1e files/6.5-parser.patch 266
+MD5 5bce967b291189eb41d909bceba08ade spim-6.5-r1.ebuild 1331
 MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5 60
-MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60
 MD5 e2af6a0e5ca4267cfad9f1bf5e954655 files/digest-spim-7.0 60
+MD5 d07cf1bbff97319734f9f85a3395ffa8 files/spim-7.0-font.patch 441
+MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60
+MD5 d71d66b98121e4e42ca59fa94310ed1e files/6.5-parser.patch 266
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDkonugEuf3OQ0akRArhnAJ0Tjb80nhUJt6RLGAgBCJLL9VeLUgCePDCH
+Um7ohd7iPFi2zyUHfbwBVXo=
+=OBt/
+-----END PGP SIGNATURE-----
