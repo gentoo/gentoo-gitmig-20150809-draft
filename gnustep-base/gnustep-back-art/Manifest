@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 67c672ddcd0ee7c381c797f16d562224 ChangeLog 4540
-MD5 d006ca7083cd5cc9f199c8f4b65b0333 gnustep-back-art-0.9.4-r1.ebuild 1284
+MD5 538027cd8db6decb0eb651132ce682d3 ChangeLog 4674
+MD5 d3bb0615087f791aa85424f93340b6ec gnustep-back-art-0.9.4-r1.ebuild 1285
 MD5 34e6ee9bb772f088fb44fcfa45e44026 gnustep-back-art-0.9.4.ebuild 1196
 MD5 553d07f18b4a27341aea593774a89b9b gnustep-back-art-0.9.5_pre20050312.ebuild 1491
 MD5 e2bc2a5b2bdec3808102e5a2caf41f7f metadata.xml 1030
@@ -15,7 +15,7 @@ MD5 1a11b68ef3b40eefd6f0d2ae207a80c1 files/gnustep-back-art-0.9.4-ft219-backport
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCUah1KRy60XGEcJIRArjTAJ9XoVk/4+d9FDJ4yjqjSgfMkhsPZACggPOH
-9KOuKaqlsxixwQOd/zgVkEc=
-=t58n
+iD8DBQFCUeL7KRy60XGEcJIRAq+2AJ0cRvFiz3k6TkmOzSqP4gXs7jiJzwCfdIBW
+UbMiUcL9Sgy46piZiSxLwFg=
+=7r+c
 -----END PGP SIGNATURE-----

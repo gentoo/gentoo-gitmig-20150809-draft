@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.4-r1.ebuild,v 1.1 2005/03/17 20:54:20 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.4-r1.ebuild,v 1.2 2005/04/05 00:59:28 gustavoz Exp $
 
 inherit gnustep
 
@@ -10,7 +10,7 @@ DESCRIPTION="libart_lgpl back-end component for the GNUstep GUI Library."
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
-KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~alpha"
+KEYWORDS="~ppc ~x86 ~amd64 sparc ~alpha"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
