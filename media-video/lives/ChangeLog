@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lives
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.4 2004/03/19 08:48:04 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.5 2004/03/30 09:29:06 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> lives-0.8.1.ebuild:
+  Adding amd64 keyword. Closing #44305.
 
 *lives-0.8.1 (23 Dec 2003)
 
