@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.3 2003/08/08 05:17:21 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.4 2003/08/18 18:03:40 max Exp $
+
+*mythgame-0.11 (18 Aug 2003)
+
+  18 Aug 2003; Max Kalika <max@gentoo.org> mythgame-0.11.ebuild:
+  Bump version to 0.11. Change make install to einstall.
 
   07 Aug 2003; Max Kalika <max@gentoo.org> mythgame-0.10.ebuild:
   Depend on either mythtv or mythfrontend.

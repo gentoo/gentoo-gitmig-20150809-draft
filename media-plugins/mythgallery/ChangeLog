@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.3 2003/08/08 05:16:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.4 2003/08/18 18:00:55 max Exp $
+
+*mythgallery-0.11 (18 Aug 2003)
+
+  18 Aug 2003; Max Kalika <max@gentoo.org> mythgallery-0.11.ebuild:
+  Bump version to 0.11. Change make install to einstall.
 
   07 Aug 2003; Max Kalika <max@gentoo.org> mythgallery-0.10.ebuild:
   Depend on either mythtv or mythfrontend.

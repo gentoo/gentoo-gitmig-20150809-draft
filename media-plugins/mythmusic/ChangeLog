@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.4 2003/08/08 00:05:23 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.5 2003/08/18 18:04:36 max Exp $
+
+*mythmusic-0.11 (18 Aug 2003)
+
+  18 Aug 2003; Max Kalika <max@gentoo.org> mythmusic-0.11.ebuild:
+  Bump version to 0.11. Change mad DEPEND to just libmad and libid3tag. Add
+  versions to some DEPENDs. Change make install to einstall.
 
   07 Aug 2003; Max Kalika <max@gentoo.org> mythmusic-0.10.ebuild:
   Depend on either mythtv or mythfrontend.
