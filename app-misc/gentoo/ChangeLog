@@ -1,8 +1,14 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.15 2002/12/23 09:47:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.16 2003/01/16 12:59:48 seemant Exp $
 
 *gentoo-0.11.34 (21 Dec 2002)
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.34.ebuild :
+
+  The config files are supposed to be installed in /etc/gentoo, but were
+  being thrown into /etc instead.  Thanks to: alain@rexorient.com (Alain
+  Penders) for finding and fixing in bug #13724.
 
   23 Dec 2002; Brandon Low <lostlogic@gentoo.org> gentoo-0.11.34.ebuild :
   Marked stable, and ebuild fixes, it werks now :)

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.34.ebuild,v 1.3 2002/12/23 09:47:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.34.ebuild,v 1.4 2003/01/16 12:59:48 seemant Exp $
 
 IUSE="nls gnome"
 
@@ -28,7 +28,8 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	einstall \
+		sysconfdir=${D}/etc/gentoo || die
 
 	if use gnome ; then
 		insinto /usr/share/pixmaps
