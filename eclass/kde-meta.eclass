@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.26 2005/02/26 19:24:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.27 2005/02/26 19:54:02 motaboy Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
-# Simone Gotti <simone.gotti@email.it>
+# Simone Gotti <motaboy@gentoo.org>
 #
 # This is the kde-meta eclass which supports broken-up kde-base packages.
 
