@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.2.ebuild,v 1.9 2004/07/01 07:54:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.2.ebuild,v 1.10 2004/07/14 18:48:54 agriffis Exp $
 
 inherit libtool
 
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.alsa-project.org/"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha amd64 -sparc"
+IUSE=""
 LICENSE="GPL-2 LGPL-2.1"
 
 DEPEND="virtual/libc
@@ -16,7 +17,6 @@ DEPEND="virtual/libc
 	>=sys-devel/autoconf-2.57-r1"
 
 SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${P}.tar.bz2"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	elibtoolize
