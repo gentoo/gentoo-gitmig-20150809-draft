@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r5.ebuild,v 1.12 2004/12/12 16:41:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r5.ebuild,v 1.13 2005/01/04 15:03:50 corsair Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -145,6 +145,9 @@ src_compile() {
 	fi
 
 	use xml || myconf="${myconf} --disable-cdindex"
+
+	# Please see Bug 58092 for details
+	use ppc64 && replace-flags "-O[2-9]" "-O1"
 
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \

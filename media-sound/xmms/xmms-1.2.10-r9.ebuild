@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.6 2004/12/09 09:40:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.7 2005/01/04 15:03:50 corsair Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -81,6 +81,9 @@ src_compile() {
 			--with-dev-dsp=/dev/sound/dsp \
 			--with-dev-mixer=/dev/sound/mixer"
 	fi
+
+	# Please see Bug 58092 for details
+	use ppc64 && replace-flags "-O[2-9]" "-O1"
 
 	econf	`use_enable oggvorbis vorbis` \
 		`use_enable esd` \

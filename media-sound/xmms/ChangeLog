@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.153 2004/12/12 16:41:15 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.154 2005/01/04 15:03:50 corsair Exp $
+
+  04 Jan 2005; Markus Rothe <corsair@gentoo.org> xmms-1.2.10-r5.ebuild,
+  xmms-1.2.10-r9.ebuild:
+  Optimazion >-O1 won't work on ppc64
 
   12 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r5.ebuild:
