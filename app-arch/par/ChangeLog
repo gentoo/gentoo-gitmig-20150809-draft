@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/par
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/ChangeLog,v 1.8 2003/06/29 15:40:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/ChangeLog,v 1.9 2003/09/25 01:31:05 robbat2 Exp $
+
+  24 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> :
+  version bump for par2 support, bug #25087
 
   07 Jun 2003; <msterret@gentoo.org> par-1.1.ebuild:
   DEPEND on sed >= 4
