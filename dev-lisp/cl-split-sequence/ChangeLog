@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-split-sequence
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/ChangeLog,v 1.5 2004/06/24 23:55:03 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/ChangeLog,v 1.6 2005/02/03 05:43:38 mkennedy Exp $
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-split-sequence-20011114.1-r1.ebuild,
+  -cl-split-sequence-20011114.1.ebuild:
+  Tagging stable keywords for x86
 
   23 Jun 2004; <mkennedy@gentoo.org> cl-split-sequence-20011114.1-r1.ebuild:
   Adding ~ppc.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-sha1
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sha1/ChangeLog,v 1.4 2004/06/24 23:54:52 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sha1/ChangeLog,v 1.5 2005/02/03 05:39:01 mkennedy Exp $
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-sha1-1.0-r1.ebuild,
+  -cl-sha1-1.0.ebuild:
+  Override src_compile()
 
 *cl-sha1-1.0-r1 (12 Feb 2004)
 
