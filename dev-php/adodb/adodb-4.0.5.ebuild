@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.0.5.ebuild,v 1.4 2004/06/25 01:16:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.0.5.ebuild,v 1.5 2004/07/04 23:19:27 robbat2 Exp $
 
 inherit php-lib
 
@@ -10,7 +10,7 @@ MY_P=${PN}${PV//./}
 SRC_URI="http://phplens.com/lens/dl/${MY_P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 IUSE=""
 DEPEND=""
 RDEPEND=">=virtual/php-4.0.5"

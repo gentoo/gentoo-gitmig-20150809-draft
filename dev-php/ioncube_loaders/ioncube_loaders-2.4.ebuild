@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ioncube_loaders-2.4.ebuild,v 1.3 2004/06/25 01:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ioncube_loaders-2.4.ebuild,v 1.4 2004/07/04 23:19:27 robbat2 Exp $
 
 MY_P="${PN}"
 PHP_VER="4.3"
@@ -11,7 +11,7 @@ IONCUBE_URL="http://www.ioncube.com/loader_download.php?atype=gz&loader_os[]=lin
 SRC_URI="${MY_P}.tar.gz"
 LICENSE="${PN}"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/php
 	!dev-php/turck-mmcache"

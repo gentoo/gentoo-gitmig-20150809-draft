@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/php-accelerator-1.3.3-r1.ebuild,v 1.4 2004/06/27 14:22:22 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/php-accelerator-1.3.3-r1.ebuild,v 1.5 2004/07/04 23:19:27 robbat2 Exp $
 
 DESCRIPTION="The ionCube PHP Accelerator"
 HOMEPAGE="http://www.php-accelerator.co.uk/"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha ~x86"
+KEYWORDS="~alpha x86"
 IUSE=""
 RESTRICT="nomirror nostrip"
 DEPEND="!dev-php/turck-mmcache

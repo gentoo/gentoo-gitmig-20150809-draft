@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/ioncube_loaders
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ChangeLog,v 1.5 2004/06/25 01:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ChangeLog,v 1.6 2004/07/04 23:19:27 robbat2 Exp $
+
+  04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
+  ioncube_loaders-2.4.ebuild:
+  stable on x86.
 
   04 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
   ioncube_loaders-2.4.ebuild:
