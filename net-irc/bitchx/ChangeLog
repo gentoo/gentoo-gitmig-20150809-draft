@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.26 2003/08/20 02:08:36 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.27 2003/09/05 17:58:54 solar Exp $
+
+*bitchx-1.0.19-r6 (05 Sep 2003)
+
+  05 Sep 2003; <solar@gentoo.org> bitchx-1.0.19-r6.ebuild,
+  files/bitchx-1.0.19-freenode.patch,
+  files/bitchx-1.0.19-nickcomp-nocolor.patch:
+  per almost every gentoo developers request we are removing the bold out of the
+  default NICK_COMP fset, and switching freenode to be the default network. two
+  minor patches added added to handle this.
 
   19 Aug 2003; Greg Fitzgerald <gregf@gentoo.org> bitchx-1.0.19-r5.ebuild,
   files/bitchx-1.0.19-hebrew.patch:
