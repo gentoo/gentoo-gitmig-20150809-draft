@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.44 2004/07/12 13:23:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.45 2004/07/14 16:57:46 eradicator Exp $
+
+  14 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rhythmbox-0.8.5.ebuild:
+  -sparc
 
 *rhythmbox-0.8.5 (12 Jul 2004)
 
