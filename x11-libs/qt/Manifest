@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7daec76f47482903184ed2b6d6d5640f qt-3.3.3-r1.ebuild 8039
 MD5 f48889277f11c39d5f2160b262e7c314 qt-2.3.2-r1.ebuild 2289
 MD5 048c159df273b9caf9ab683e542c3c4f qt-4.0.0_beta1-r3.ebuild 5840
-MD5 498884f1cb0ff4ad1ba1838e3f3462ac qt-3.3.4-r2.ebuild 8343
-MD5 c7f66e3c55ac0422cd2d9272da66b778 ChangeLog 33418
+MD5 8b326b9cd9d7f99e5a1f7e185de2e837 qt-3.3.4-r2.ebuild 8344
+MD5 cbfad52a81eef7ad144fc8a80c186964 ChangeLog 33520
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 3f30d4e96664ba2574dfb069b708f4a1 qt-3.3.3.ebuild 6897
 MD5 2a5d402b9d5ceff465069a1651f3b329 qt-2.3.2-r2.ebuild 2765
@@ -32,3 +35,10 @@ MD5 3e5e045d0c1448839a8dc1c82aeef21b files/qt-3.3.4-qclipboard-hack.patch 1662
 MD5 da2eb517a4c29a58002e92864ff966e5 files/qt-no-rpath-uic.patch 294
 MD5 471c09f2792eec732d715a983b7f7244 files/qt-3.3.3-immodule-20040819-event-inversion-20040908.diff 4150
 MD5 e0a483959b1d3dad0fc58adc242624c1 files/qt-3.3.3-amd64-fullscreen.patch 1220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJJatM+I1L6GK/u4RAlWgAJ9yZlZnzoY+BRPTprEIy+MEDFr6xgCfS9AF
+IGrim87ymn7CKnzZmlzKYNE=
+=XIk4
+-----END PGP SIGNATURE-----
