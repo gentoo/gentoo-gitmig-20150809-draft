@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.9 2004/04/06 03:38:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.10 2004/05/03 20:32:56 centic Exp $
 
 inherit kde-base eutils
 need-kde 3
@@ -11,7 +11,7 @@ SRC_URI="http://freenux.org/${PN}/${P//_}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="alpha x86 sparc ~ppc ~amd64"
-IUSE="python gpm nls ruby perl"
+IUSE="python gpm nls ruby perl cscope ncurses"
 
 DEPEND=">=app-editors/vim-core-6.2
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
