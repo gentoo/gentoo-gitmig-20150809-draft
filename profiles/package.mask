@@ -676,6 +676,7 @@ dev-lang/tcl-tk
 >=x11-libs/rep-gtk-20020419
 >=dev-libs/librep-20020201
 
+>=gnome-base/gnome-2.0.0_beta5
 >=gnome-extra/gnome-utils-1.100.0
 >=gnome-base/eel-1.1.0
 >=gnome-base/nautilus-1.1.0
