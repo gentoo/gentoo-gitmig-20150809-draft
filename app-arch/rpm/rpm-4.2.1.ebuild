@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.14 2004/04/11 11:12:37 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.15 2004/05/31 19:41:37 vapier Exp $
 
 inherit python flag-o-matic libtool eutils
 
@@ -66,7 +66,7 @@ src_install() {
 	keepdir /usr/src/pc/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
 	keepdir /usr/src/pc/RPMS/{noarch,i{3,4,5,6}86,athlon}
 	keepdir /usr/src/pc
-	dodoc CHANGES COPYING CREDITS GROUPS README* RPM* TODO
+	dodoc CHANGES CREDITS GROUPS README* RPM* TODO
 
 	use nls || rm -rf ${D}/usr/share/man/{ko,ja,fr,pl,ru,sk}
 

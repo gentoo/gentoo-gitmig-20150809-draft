@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.18.ebuild,v 1.3 2004/03/02 13:50:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.18.ebuild,v 1.4 2004/05/31 19:41:37 vapier Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc"
+IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/ncurses-5.2-r7
@@ -33,5 +34,5 @@ src_install() {
 	dodir /etc/alternatives
 	insinto /etc/alternatives
 	doins scripts/README.alternatives
-	dodoc ABOUT-NLS COPYING ChangeLog INSTALL THANKS TODO
+	dodoc ChangeLog INSTALL THANKS TODO
 }

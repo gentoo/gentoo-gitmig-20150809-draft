@@ -1,15 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.1.ebuild,v 1.3 2003/11/14 11:39:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.1.ebuild,v 1.4 2004/05/31 19:41:37 vapier Exp $
 
-DESCRIPTION="Flexible backup script using perl."
+DESCRIPTION="Flexible backup script using perl"
 HOMEPAGE="http://flexbackup.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="dev-lang/perl
 	sys-apps/findutils
@@ -28,7 +28,7 @@ src_install() {
 	dosed "/^\$type = /s:'afio':'tar':" /etc/flexbackup.conf
 	dosed "/^\$buffer = /s:'buffer':'false':" /etc/flexbackup.conf
 
-	dodoc CHANGES COPYING CREDITS INSTALL README TODO
+	dodoc CHANGES CREDITS INSTALL README TODO
 	dohtml faq.html
 }
 

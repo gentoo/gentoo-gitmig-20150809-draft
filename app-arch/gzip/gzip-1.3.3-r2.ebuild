@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.3-r2.ebuild,v 1.7 2004/04/27 04:56:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.3-r2.ebuild,v 1.8 2004/05/31 19:41:37 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -74,7 +74,7 @@ src_install() {
 		ln -s gzip.1.gz gzcat.1.gz
 		cd ${S}
 		rm -rf ${D}/usr/man ${D}/usr/lib
-		dodoc ChangeLog COPYING NEWS README THANKS TODO
+		dodoc ChangeLog NEWS README THANKS TODO
 		docinto txt
 		dodoc algorithm.doc gzip.doc
 	else

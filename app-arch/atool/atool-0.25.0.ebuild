@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/atool-0.25.0.ebuild,v 1.6 2004/01/30 13:07:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/atool-0.25.0.ebuild,v 1.7 2004/05/31 19:41:37 vapier Exp $
 
 DESCRIPTION="script for managaging file archives of various types (atr,tar+gzip,zip,etc)"
-SRC_URI="http://www.student.lu.se/~nbi98oli/src/${P}.tar.gz"
 HOMEPAGE="http://www.student.lu.se/~nbi98oli/"
+SRC_URI="http://www.student.lu.se/~nbi98oli/src/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND="dev-lang/perl"
 
 src_install() {
-	dobin acat adiff als apack atool aunpack
-	dodoc ChangeLog TODO README COPYING
+	dobin acat adiff als apack atool aunpack || die
+	dodoc ChangeLog TODO README
 	doman atool.1
 }

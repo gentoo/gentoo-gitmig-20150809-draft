@@ -1,21 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.4.3.ebuild,v 1.3 2004/03/07 17:29:39 iluxa Exp $
-
-S=${WORKDIR}/${P/_alpha[0-9][0-9]}
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.4.3.ebuild,v 1.4 2004/05/31 19:41:37 vapier Exp $
 
 DESCRIPTION="An enhanced (world's fastest) tar, as well as enhanced mt/rmt"
-
+HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
 #This URI for alpha versions
 #SRC_URI="ftp://ftp.berlios.de/pub/${PN}/alpha/${PN}-${PV/_alpha/a}.tar.bz2"
 #This URI for non-alpha versions
 SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.bz2"
 
-HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
-KEYWORDS="x86 amd64 ppc ~sparc ~mips"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc ~mips amd64"
+IUSE=""
+
 DEPEND="virtual/glibc"
+
+S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
 src_unpack() {
 	unpack ${A}
@@ -36,7 +37,7 @@ src_install() {
 	# install mt as mt.star to not conflict with other packages
 	mv ${D}/usr/bin/mt ${D}/usr/bin/mt.star
 
-	dodoc BUILD COPYING Changelog AN-1.* README README.* PORTING TODO
+	dodoc BUILD Changelog AN-1.* README README.* PORTING TODO
 	rm ${D}/usr/man/man1/match*
 	dodir /usr/share/
 	mv ${D}/usr/man/ ${D}/usr/share

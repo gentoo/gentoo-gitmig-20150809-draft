@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.4.2-r4.ebuild,v 1.2 2004/02/22 06:03:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.4.2-r4.ebuild,v 1.3 2004/05/31 19:41:37 vapier Exp $
 
 DESCRIPTION="A file archival tool which can also read and write tar files"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/cpio/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/cpio/cpio.html"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64"
-SLOT="0"
+SRC_URI="ftp://prep.ai.mit.edu/gnu/cpio/${P}.tar.gz"
+
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -19,16 +21,16 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --host=${CHOST} \
+	./configure \
+		--host=${CHOST} \
 		--prefix=/usr || die
 	emake || die
 }
 
 src_install() {
 	#our official mt is now the mt in app-arch/mt-st (supports Linux 2.4, unlike this one)
-	dobin cpio
+	dobin cpio || die
 	doman cpio.1
 	doinfo cpio.info
-	dodoc COPYING* ChangeLog NEWS README
+	dodoc ChangeLog NEWS README
 }
-

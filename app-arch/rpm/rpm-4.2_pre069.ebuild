@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.9 2004/04/07 22:51:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.10 2004/05/31 19:41:37 vapier Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -25,8 +25,6 @@ RDEPEND="=sys-libs/db-3.2*
 	!dev-libs/beecrypt"
 S=${WORKDIR}/rpm-4.2
 
-strip-flags
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -34,6 +32,8 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-flags
+
 	elibtoolize
 
 	unset LD_ASSUME_KERNEL
@@ -62,7 +62,7 @@ src_install() {
 	keepdir /usr/src/pc/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
 	keepdir /usr/src/pc/RPMS/{noarch,i{3,4,5,6}86,athlon}
 	keepdir /usr/src/pc
-	dodoc CHANGES COPYING CREDITS GROUPS README* RPM* TODO
+	dodoc CHANGES CREDITS GROUPS README* RPM* TODO
 
 	use nls || rm -rf ${D}/usr/share/man/{ko,ja,fr,pl,ru,sk}
 
