@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-0.95.ebuild,v 1.1 2004/07/12 04:34:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-0.95.ebuild,v 1.2 2004/07/15 05:27:09 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,11 +10,9 @@ SRC_URI="http://www.chillispot.org/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~x86"
-IUSE="debug pic"
+IUSE="pic"
 
 DEPEND="virtual/libc >=sys-apps/sed-4*"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
