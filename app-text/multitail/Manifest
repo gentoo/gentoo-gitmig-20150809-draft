@@ -1,3 +1,5 @@
-MD5 46bbeefea490b5254197cf0a16d6687a files/digest-multitail-2.8 61
-MD5 4837b16ead7f9cf4d13ce01f90a17f8c ChangeLog 401
 MD5 d5d69b9b38fb94ddcca6185b222517d7 multitail-2.8.ebuild 592
+MD5 4837b16ead7f9cf4d13ce01f90a17f8c ChangeLog 401
+MD5 d5d69b9b38fb94ddcca6185b222517d7 multitail-2.9.1.ebuild 592
+MD5 46bbeefea490b5254197cf0a16d6687a files/digest-multitail-2.8 61
+MD5 3ea2ed5be9de1e174f4c7459464ba5a2 files/digest-multitail-2.9.1 63

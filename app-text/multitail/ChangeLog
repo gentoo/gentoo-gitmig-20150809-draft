@@ -1,6 +1,11 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.1 2003/06/11 20:13:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.2 2003/07/22 20:27:47 avenj Exp $
+
+*multitail-2.9.1 (22 Jul 2003)
+
+  22 Jul 2003; Jon Portnoy <avenj@gentoo.org> multitail-2.9.1.ebuild :
+  Version bump.
 
 *multitail-2.8 (11 Jun 2003)
 
