@@ -1,0 +1,60 @@
+diff -ur qcad-2.0.1.0-1.src/qcad/Makefile qcad-2.0.1.0-1.src-gentoo/qcad/Makefile
+--- qcad-2.0.1.0-1.src/qcad/Makefile	2003-10-08 10:09:05.000000000 +1300
++++ qcad-2.0.1.0-1.src-gentoo/qcad/Makefile	2003-10-21 15:28:49.000000000 +1300
+@@ -20,7 +20,7 @@
+ 
+ qcad: src/Makefile src/*.h src/*.cpp ../dxflib/lib/libdxf.a ../qcadguiqt/lib/libqcadguiqt.a ../qcadlib/lib/libqcad.a
+ 	- rm qcad
+-	cd src && $(MAKE)
++	cd src && $(MAKE) CXXFLAGS="$(CXXFLAGS) -Wall -D_REENTRANT -DQT_NO_DEBUG -DQT_THREAD_SUPPORT"
+ 
+ src/Makefile: src/qcad.pro
+ 	cd src && qmake qcad.pro
+diff -ur qcad-2.0.1.0-1.src/qcadactions/Makefile qcad-2.0.1.0-1.src-gentoo/qcadactions/Makefile
+--- qcad-2.0.1.0-1.src/qcadactions/Makefile	2003-10-08 10:09:03.000000000 +1300
++++ qcad-2.0.1.0-1.src-gentoo/qcadactions/Makefile	2003-10-21 14:27:13.000000000 +1300
+@@ -29,7 +29,7 @@
+ 
+ ./lib/libqcadactions.a: src/Makefile
+ 	$(MAKE) src/Makefile
+-	cd src && $(MAKE)
++	cd src && $(MAKE) CXXFLAGS="$(CXXFLAGS) -Wall -DRS_OPT_PYTHON -DQT_NO_DEBUG"
+ 
+ src/Makefile:
+ 	cd src && qmake qcadactions.pro
+diff -ur qcad-2.0.1.0-1.src/qcadcmd/Makefile qcad-2.0.1.0-1.src-gentoo/qcadcmd/Makefile
+--- qcad-2.0.1.0-1.src/qcadcmd/Makefile	2003-10-08 10:09:03.000000000 +1300
++++ qcad-2.0.1.0-1.src-gentoo/qcadcmd/Makefile	2003-10-21 14:24:06.000000000 +1300
+@@ -29,7 +29,7 @@
+ 
+ ./lib/libqcadcmd.a: src/Makefile
+ 	$(MAKE) src/Makefile
+-	cd src && $(MAKE)
++	cd src && $(MAKE) CXXFLAGS="$(CXXFLAGS) -Wall -DQT_NO_DEBUG"
+ 
+ src/Makefile:
+ 	cd src && qmake qcadcmd.pro
+diff -ur qcad-2.0.1.0-1.src/qcadguiqt/Makefile qcad-2.0.1.0-1.src-gentoo/qcadguiqt/Makefile
+--- qcad-2.0.1.0-1.src/qcadguiqt/Makefile	2003-10-08 10:09:04.000000000 +1300
++++ qcad-2.0.1.0-1.src-gentoo/qcadguiqt/Makefile	2003-10-21 14:53:40.000000000 +1300
+@@ -89,7 +89,7 @@
+ 	done )
+ 
+ ./lib/libqcadguiqt.a: src/Makefile
+-	cd src && $(MAKE)
++	cd src && $(MAKE) CXXFLAGS="$(CXXFLAGS) -Wall -DQT_NO_DEBUG"
+ 
+ src/Makefile:
+ 	cd src && qmake qcadguiqt.pro
+diff -ur qcad-2.0.1.0-1.src/qcadlib/Makefile qcad-2.0.1.0-1.src-gentoo/qcadlib/Makefile
+--- qcad-2.0.1.0-1.src/qcadlib/Makefile	2003-10-08 10:09:02.000000000 +1300
++++ qcad-2.0.1.0-1.src-gentoo/qcadlib/Makefile	2003-10-21 14:23:55.000000000 +1300
+@@ -29,7 +29,7 @@
+ 
+ ./lib/libqcad.a: src/Makefile
+ 	$(MAKE) src/Makefile
+-	cd src && $(MAKE)
++	cd src && $(MAKE) CXXFLAGS="$(CXXFLAGS) -Wall -DQT_NO_DEBUG"
+ 
+ src/Makefile:
+ 	cd src && qmake qcadlib.pro
