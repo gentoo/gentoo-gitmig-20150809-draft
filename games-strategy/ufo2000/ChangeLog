@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/ufo2000
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.1 2004/01/23 02:27:28 mr_bones_ Exp $
+
+*ufo2000-0.4.0_beta321 (22 Jan 2004)
+
+  22 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ufo2000-0.4.0_beta321.ebuild:
+  initial commit; ebuild based off the one provided by upstream at
+  http://ufo2000.sourceforge.net/ (Bug 28965)
+
