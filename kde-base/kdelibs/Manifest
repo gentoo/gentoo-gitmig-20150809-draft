@@ -5,15 +5,14 @@ MD5 3b0f0a331b55c353e8f081c08ada9557 kdelibs-3.0.4-r1.ebuild 2294
 MD5 ce7978a012d0358df342c9286b4ce08e .#kdelibs-3.1.ebuild.1.11 2049
 MD5 6d7ef21b5c69861561d1d3a418a4f931 kdelibs-3.1.1-r1.ebuild 2583
 MD5 08d7d42db0459201047dc9d05fd05642 kdelibs-3.1.1.ebuild 2452
-MD5 cbd5a6c42abdf4e1594288d8fc61f706 .kdelibs-2.2.2a-r2.ebuild.swp 12288
 MD5 0b73767b0a43bffe91801ea7fb959308 kdelibs-3.1.1a.ebuild 2572
 MD5 bc5823268f69692a5b041b3cc486e048 kdelibs-3.0.5b.ebuild 1895
 MD5 ef38008345821fcc6be40403b715713f .#kdelibs-3.1_rc6.ebuild.1.3 2100
 MD5 1982b8a373789563820363da234db618 .#kdelibs-3.1_rc6.ebuild.1.5 2269
 MD5 4ff73de0a5444a14c8e231da87bd8459 kdelibs-3.1-r3.ebuild 2653
-MD5 af03887e58b48a7d820e5fc60805fdd8 kdelibs-2.2.2a-r2.ebuild 2526
+MD5 75d088d67b05b9f945bf62e0c99f66d0 kdelibs-2.2.2a-r2.ebuild 2532
 MD5 76d59819eec552a98feadb81e991739b kdelibs-3.0.5a-r1.ebuild 2035
-MD5 33a2f1f3bddca088c3bec3f5ab98b1f6 ChangeLog 12609
+MD5 0731f74d12fbdd10b72dbf1142a9008a ChangeLog 12735
 MD5 3c178889822836378fcf526195b86814 files/kdelibs-3.1.1-kio_http.diff 5257
 MD5 24190dc0508cd29ea5adecc4cefc0db2 files/kdelibs-2.2.2a-crosside.diff 1267
 MD5 980d79084b85a6f32099fc9c20667aba files/.#digest-kdelibs-3.1.1.4 66
