@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.6 2004/08/25 13:44:28 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.7 2004/08/30 23:27:34 dholm Exp $
+
+  31 Aug 2004; David Holm <dholm@gentoo.org> pomap-2.9.4.ebuild:
+  Added to ~ppc.
 
   25 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> -pomap-2.9.1.ebuild,
   pomap-2.9.4.ebuild:
