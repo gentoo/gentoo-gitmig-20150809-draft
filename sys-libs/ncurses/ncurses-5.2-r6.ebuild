@@ -1,48 +1,63 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020112a-r1.ebuild,v 1.4 2002/08/14 04:08:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r6.ebuild,v 1.1 2002/09/03 21:11:29 azarah Exp $
+
+inherit flag-o-matic
+
+filter-flags "-fno-exceptions"
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Linux console display library"
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.gz"
+DESCRIPTION="Linux console display libarary"
+SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
-DEPEND="virtual/glibc"
+
 KEYWORDS="x86 sparc sparc64"
 LICENSE="MIT"
 SLOT="5"
 
+DEPEND="virtual/glibc"
+
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# Do not compile tests
+	rm -rf test/*
+	echo "all:" > test/Makefile.in
+	echo "install:" >> test/Makefile.in
+}
+
 src_compile() {
-	if [ -z "$DEBUG" ]
-	then
-		myconf="${myconf} --without-debug"
-	fi
-	rm -rf test
-	./configure --prefix=/usr --libdir=/lib --mandir=/usr/share/man --enable-symlinks --enable-termcap --with-shared --with-rcs-ids --host=${CHOST}  ${myconf} || die
-	echo "all:" > test/Makefile
-	# fix to make apps using ncurses compile correctly with gcc3
-	mv include/unctrl.h include/unctrl.h_orig
-	sed -e "s:#include <curses.h>:#include <curses.h>\n#include <ncurses_dll.h>:" \
-		include/unctrl.h_orig > include/unctrl.h
-	# Parallel make fails sometimes so I removed MAKEOPTS
+
+	[ -z "${DEBUG}" ] && myconf="${myconf} --without-debug"
+	
+	econf --libdir=/lib \
+		--enable-symlinks \
+		--disable-termcap \
+		--with-shared \
+		--with-rcs-ids \
+		${myconf} || die
+	
+	#emake still doesn't work circa 25 Mar 2002
 	make || die
 }
 
 src_install() {
+
 	dodir /usr/lib
-	echo "install:" >> ${S}/test/Makefile
 	make DESTDIR=${D} install || die
 
 	cd ${D}/lib
-	ln -s libncurses.a libcurses.a
+	dosym libncurses.a /lib/libcurses.a
 	chmod 755 ${D}/lib/*.${PV}
-	dodir /usr/lib
 	mv libform* libmenu* libpanel* ../usr/lib
 	mv *.a ../usr/lib
 
 	#with this fix, the default xterm has color as it should
 	cd ${D}/usr/share/terminfo/x
 	mv xterm xterm.orig
-	ln -s xterm-color xterm
+	dosym xterm-color /usr/share/terminfo/x/xterm
 
 	if [ "`use build`" ]
 	then
@@ -75,6 +90,4 @@ src_install() {
 #		dodoc doc/html/man/*.html
 	fi
 }
-
-
 

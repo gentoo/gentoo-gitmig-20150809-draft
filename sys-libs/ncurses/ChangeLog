@@ -1,7 +1,16 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.12 2002/08/04 16:25:48 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.13 2002/09/03 21:11:29 azarah Exp $
 
+*ncurses-5.2.20020511-r2 (3 Sep 2002)
+*ncurses-5.2-r6 (3 Sep 2002)
+
+  3 Sep 2002; Martin Schlemmer <azarah@gentoo.org> ncurses-5.2.20020511-r2,
+                                                   ncurses-5.2-r6 :
+  
+  Change --enable-termcap to --disable-termcap.  This fixes the starup
+  problems in screen with the presence of /etc/termcap.  This should
+  close bug #7060.  NOTE: remerge screen after ncurses update.
 
 *ncurses-5.2.20020511-r1 (9 Jun 2002)
 	
