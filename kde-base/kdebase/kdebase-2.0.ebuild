@@ -1,14 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0_rc2.ebuild,v 1.2 2000/10/23 11:27:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0.ebuild,v 1.1 2000/10/29 20:42:02 achim Exp $
 
-P=${PN}-2.0rc2
 A="${P}.tar.bz2"
 S=${WORKDIR}/${P}
-DESCRIPTION="KDE 2 FinalBeta - base"
-SRC_URI="ftp://ftp.kde.org/pub/kde/unstable/distribution/2.0RC2/tar/src/${A}
-	 ftp://ftp.sourceforge.net/pub/mirrors/kde/unstable/distribution/2.0RC2/tar/src/${A}"
+DESCRIPTION="KDE 2.0 - base"
+SRC_PATH="kde/stable/2.0/distribution/tar/generic/src/${A}"
+SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
+	 ftp://ftp://ftp.twoguys.org/pub/$SRC_PATH
+	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
 src_compile() {
