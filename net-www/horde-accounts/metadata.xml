@@ -3,6 +3,17 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-<email>vapier@gentoo.org</email>
+ <email>vapier@gentoo.org</email>
 </maintainer>
+<longdescription>
+Accounts is a very simple module which provides two functions:
+
+    * To display some user account information ("My Account" summary) 
+including, if possible, an "at a glance" summary of the current forwards 
+and vacation module status.
+    * To provide a method for grouping some related modules (passwd, 
+forwards, and vacation) together in order to minimize the number of 
+icons on the Horde menu bar (so it will not exceed a reasonable screen 
+width).
+</longdescription>
 </pkgmetadata>

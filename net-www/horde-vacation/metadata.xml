@@ -3,6 +3,21 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-<email>vapier@gentoo.org</email>
+ <email>vapier@gentoo.org</email>
 </maintainer>
+<longdescription>
+Vacation is a Horde module for managing user e-mail "vacation notices" 
+or "auto-responders." It works via a local vacation program which must 
+be installed and functioning on the server. It supports vacation 
+programs using the .forward-style forwarding mechanism supported by 
+several popular mailers, as well as qmail and sql based implementations. 
+While it has been released and is in production use at many sites, it is 
+also under heavy development in an effort to expand and improve the 
+module.
+
+Right now, Vacation provides fairly complete support for managing 
+.forward-style vacation notices on sendmail or courier mail based 
+systems via an FTP transport. It also has some support for qmail and 
+exim sql based servers.
+</longdescription>
 </pkgmetadata>

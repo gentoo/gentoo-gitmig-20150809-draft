@@ -3,6 +3,17 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-<email>vapier@gentoo.org</email>
+ <email>vapier@gentoo.org</email>
 </maintainer>
+<longdescription>
+Forwards is a Horde module for setting user e-mail forwards with support 
+for several popular mailers. While it has been released and is in 
+production use at many sites, it is also still under development in an 
+effort to expand and improve the module.
+
+Right now, Forwards provides fairly complete support for setting 
+.forward style forwards on sendmail or courier mail based systems via an 
+FTP transport. It now also supports for mdaemon, and qmail and exim sql 
+based systems.
+</longdescription>
 </pkgmetadata>

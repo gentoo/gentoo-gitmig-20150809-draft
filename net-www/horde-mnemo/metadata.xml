@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-<email>vapier@gentoo.org</email>
+ <email>vapier@gentoo.org</email>
 </maintainer>
+<longdescription>
+Mnemo is a note manager.
+</longdescription>
 </pkgmetadata>

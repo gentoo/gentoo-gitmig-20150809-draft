@@ -3,6 +3,16 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-<email>vapier@gentoo.org</email>
+ <email>vapier@gentoo.org</email>
 </maintainer>
+<longdescription>
+Sork is comprised of four Horde modules:
+
+    * Accounts to manage the other modules.
+    * Forwards to set e-mail forwards.
+    * Passwd for changing passwords.
+    * Vacation to set vacation notices.
+
+Collectively these modules now comprise what is known as sork.
+</longdescription>
 </pkgmetadata>

@@ -3,6 +3,13 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-<email>vapier@gentoo.org</email>
+ <email>vapier@gentoo.org</email>
 </maintainer>
+<longdescription>
+Horde 2.x, IMP 3.x, and all other Horde applications make use of the 
+PEAR libraries to handle such tasks as database abstraction, mail 
+delivery and logging. These libraries come bundled with PHP4. However, 
+since PEAR is a rapidly evolving target, not everyone who has a workable 
+version of PHP4 has a recent enough PEAR installation.
+</longdescription>
 </pkgmetadata>
