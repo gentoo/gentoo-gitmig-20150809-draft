@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.01.ebuild,v 1.2 2002/10/18 01:52:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.01.ebuild,v 1.3 2002/11/20 15:55:38 vapier Exp $
 
 IUSE="doc mozilla"
 
@@ -16,8 +16,7 @@ SLOT="1.4"
 KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
-	doc? ( =dev-java/java-sdk-docs-1.4.0* )"
-RDEPEND="$DEPEND"
+	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
 
 PROVIDE="virtual/jre-1.4
 	virtual/jdk-1.4
