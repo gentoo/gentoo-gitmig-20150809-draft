@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/emu10k1
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.4 2002/12/13 10:59:41 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.5 2002/12/30 03:58:23 drobbins Exp $
+
+  29 Dec 2002; Daniel Robbins <drobbins@gentoo.org> : updated pkg_postinst() blurb to 
+  be more detailed/accurate.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
