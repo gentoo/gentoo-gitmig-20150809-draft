@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.1-r2.ebuild,v 1.1 2003/06/04 13:49:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r1.ebuild,v 1.1 2003/06/05 00:32:11 robh Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
@@ -12,6 +12,7 @@ SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${MY_P}.tar.gz
 HOMEPAGE="http://www.windowmaker.org/"
 
 DEPEND="virtual/x11
+	media-libs/hermes
 	>=media-libs/tiff-3.5.5
 	gif? ( >=media-libs/giflib-4.1.0-r3 
 		>=media-libs/libungif-4.1.0 )
@@ -26,8 +27,8 @@ KEYWORDS="x86 ppc sparc alpha"
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/${P}-gentoo.patch
+	cd ${S}
+	patch -p1 < ${FILESDIR}/${PN}-0.80.1-gentoo.patch
 }
 
 src_compile() {
@@ -69,12 +70,11 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/X11 \
-		--localstatedir=/var/state/WindowMaker \
 		--with-x \
 		--enable-newstyle \
 		--enable-superfluous \
 		--enable-usermenu \
-		--with-appspath=/usr/share/GNUstep \
+		--with-appspath=/usr/lib/GNUstep \
 		--with-pixmapdir=/usr/share/pixmaps \
 		${myconf} || die
 	
@@ -87,6 +87,15 @@ src_compile() {
 	cp Makefile Makefile.orig
 	sed 's:zh_TW.*::' \
 		Makefile.orig > Makefile
+
+	cd ${S}
+	for file in ${S}/WindowMaker/*menu*; do
+        	if [ -r $file ]; then
+                	sed -e 's/\/usr\/local\/GNUstep/\/usr\/lib\/GNUstep/g;
+                        	s/\/usr\/local\/share\/WindowMaker/\/usr\/share\/WindowMaker/g;' < $file > $file.tmp;
+                	mv $file.tmp $file;
+        	fi;
+	done;
 	
 	cd ${S}
 	#0.80.1-r2 did not work with make -j4 (drobbins, 15 Jul 2002)
@@ -104,9 +113,9 @@ src_install() {
 
 	einstall \
 		sysconfdir=${D}/etc/X11 \
-		wprefsdir=${D}/usr/share/GNUstep/WPrefs.app \
-		wpdatadir=${D}/usr/share/GNUstep/WPrefs.app \
-		wpexecbindir=${D}/usr/share/GNUstep/WPrefs.app || die
+		wprefsdir=${D}/usr/lib/GNUstep/WPrefs.app \
+		wpdatadir=${D}/usr/lib/GNUstep/WPrefs.app \
+		wpexecbindir=${D}/usr/lib/GNUstep/WPrefs.app || die
 
 	cp -f WindowMaker/plmenu ${D}/etc/X11/WindowMaker/WMRootMenu
 
@@ -129,4 +138,8 @@ src_install() {
 pkg_postinst() {
 	einfo "You need to emerge media-libs/xpm to get transparent globes or"
 	einfo "other transparent elements."
+	einfo
+	einfo "/usr/share/GNUstep/ has moved to /usr/lib/GNUstep/"
+	einfo "this means the WPrefs app has moved. If you have"
+	einfo "entries for this in your menus, please correct them"
 }
