@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041113.ebuild,v 1.3 2004/11/18 01:37:39 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041113.ebuild,v 1.4 2004/11/18 04:39:15 swtaylor Exp $
 
 inherit eutils
 
@@ -23,14 +23,14 @@ DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
-	fax? (	>=media-libs/netpbm-9.12 virtual/ghostscript >=net-dialup/mgetty-1.1.28 )
+	fax? ( >=media-libs/netpbm-9.12 virtual/ghostscript >=net-dialup/mgetty-1.1.28 )
 	pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	spell? ( virtual/aspell-dict )
-	!mailwrapper? ( !virtual/mta )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
+	!mailwrapper? ( !virtual/mta )
 	!virtual/mda
 	!virtual/imapd"
 
@@ -51,18 +51,14 @@ src_compile() {
 	myconf="`use_with spell ispell` `use_with ipv6` \
 			`use_with ldap ldapaliasd` `use_enable ldap maildropldap` \
 			`use_enable nls` `use_enable nls unicode ${ENABLE_UNICODE}`"
-
 	use ldap && myconf="${myconf} --with-ldapconfig=/etc/courier/maildropldap.conf"
-	#"--with-ldapconfig=/etc/courier/maildrop.ldaprc"
 
 	[ -e /etc/apache/conf/mime.types ] && \
 		myconf="${myconf} --enable-mimetypes=/etc/apache/conf/mime.types"
-
 	[ -e /etc/apache2/conf/mime.types ] && \
 		myconf="${myconf} --enable-mimetypes=/etc/apache2/conf/mime.types"
 
-	einfo "Building courier with: ${myconf}"
-
+	einfo "Configuring courier: `echo ${myconf} | xargs echo`"
 	./configure \
 		--prefix=/usr \
 		--disable-root-check \
@@ -80,19 +76,13 @@ src_compile() {
 		--with-db=gdbm \
 		--disable-autorenamesent \
 		--cache-file=${S}/configuring.cache \
-		--host=${CHOST} ${myconf} debug=true || die "bad ./configure"
-
+		--host=${CHOST} ${myconf} debug=true || die "./configure"
 	emake || die "Compile problem"
 }
 
-chg_cfg() {
-	file="${1}" ; key="${2}" ; value="${3}"
-	grep -q "${key}" "${file}" && einfo "Changing ${file}: ${key} to ${value}"
-	sed -i -e"/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
-}
-
 etc_courier() {
-	# Import existing file if it exists. Add option only if it was not already set
+	# Import existing /etc/courier/file if it exists.
+	# Add option only if it was not already set or even commented out
 	file="${1}" ; word="`echo \"${2}\" | sed -e\"s|=.*$||\" -e\"s|^.*opt ||\"`"
 	[ ! -e "${D}/etc/courier/${file}" ] && [ -e "/etc/courier/${file}" ] && \
 			cp "/etc/courier/${file}" "${D}/etc/courier/${file}"
@@ -100,56 +90,19 @@ etc_courier() {
 		echo "${2}" >> "${D}/etc/courier/${file}"
 }
 
-set_mime() {
-	local files=$*
-	chk_badmime='##NAME: BOFHBADMIME:0'
-	pos_badmime='##NAME: NOADDMSGID:0'
-	ins_badmime='\
-##NAME: BOFHBADMIME:0\
-#\
-# set BOFHBADMIME\
-#   to \"reject\" to return mail with invalid MIME header\
-#   to \"wrap\" to wrap mail with invalid MIME header in an attachmant\
-#   to \"accept\" to pass mail with invalid MIME header untouched\
-\
-BOFHBADMIME=accept\
-'
-
-	local f
-	for f in ${files}
-	do
-		if ! grep -q "${chk_badmime}" ${f}
-		then
-			einfo "Adding parameter ${chk_badmime} to ${f}"
-			sed -i -e"/${pos_badmime}/ i ${ins_badmime}" ${f}
-		fi
-	done
+etc_courier_chg() {
+	file="${1}" ; key="${2}" ; value="${3}"
+	grep -q "${key}" "${file}" && einfo "Changing ${file}: ${key} to ${value}"
+	sed -i -e"/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
+	#sed -i.x -e"/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
+	#diff "${file}.x" "${file}" ; rm "${file}.x"
 }
 
 set_maildir() {
-	local files=$*
-
+	local f ; local files=$*
 	origmaildir='Maildir'
 	newmaildir='.maildir'
-
-	local f
-	for f in ${files}
-	do
-		grep -q "${origmaildir}" "${f}" && \
-			einfo "Changing ${origmaildir} in ${f} to ${newmaildir}"
-		sed -i -e"/^[^\#]/ s/${origmaildir}/${newmaildir}/g" ${f}
-	done
-}
-
-set_dollarmaildir() {
-	local files=$*
-
-	origmaildir='Maildir'
-	newmaildir='$MAILDIRPATH'
-
-	local f
-	for f in ${files}
-	do
+	for f in ${files} ; do
 		grep -q "${origmaildir}" "${f}" && \
 			einfo "Changing ${origmaildir} in ${f} to ${newmaildir}"
 		sed -i -e"/^[^\#]/ s/${origmaildir}/${newmaildir}/g" ${f}
@@ -163,20 +116,10 @@ src_install() {
 	dodir /var/run/courier
 	make install DESTDIR=${D} || die "install"
 	make install-configure || die "install-configure"
-	#mkdir -p ${D}/var/run/courier
 	diropts -o mail -g mail
 	for dir2keep in `(cd ${D} && find . -type d)` ; do
 		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
 	done
-
-	cd ${D}/etc/courier
-	mv imapd.authpam imap.authpam ; mv pop3d.authpam pop3.authpam
-	for f in *.authpam ; do mv "${f}" "${D}/etc/pam.d/${f%%.authpam}" ; done
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/courier-init courier
-	`grep DAEMONLIST /etc/init.d/courier >&/dev/null` && \
-		newexe ${FILESDIR}/courier courier-old
 
 	einfo "Setting up maildirs in the account skeleton ..."
 	diropts -m 755 -o root -g root
@@ -185,41 +128,62 @@ src_install() {
 	keepdir /var/spool/mail
 	${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
 
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/courier-init courier
+	`grep DAEMONLIST /etc/init.d/courier >&/dev/null` && \
+		newexe ${FILESDIR}/courier courier-old
+
+	cd ${D}/etc/courier
 	insinto /etc/courier
-	touch ${D}/etc/courier/locallowercase
 	newins ${FILESDIR}/apache-sqwebmail.inc apache-sqwebmail.inc
-	( [ -e /etc/courier/sizelimit ] && cat /etc/courier/sizelimit || echo 0 ) > ${D}/etc/courier/sizelimit
-	touch esmtproutes
-	touch backuprelay
-	touch maildroprc
+	mv imapd.authpam imap.authpam ; mv pop3d.authpam pop3.authpam
+	for f in *.authpam ; do mv "${f}" "${D}/etc/pam.d/${f%%.authpam}" ; done
+	for f in *.dist ; do cp ${f} ${f%%.dist} ; done
+	[ -e ldapaliasrc ] && chown mail:root ldapaliasrc
+	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
+
+	( [ -e /etc/courier/sizelimit ] && cat /etc/courier/sizelimit || echo 0 ) \
+		> ${D}/etc/courier/sizelimit
+	etc_courier maildroprc ""
+	etc_courier esmtproutes ""
+	etc_courier backuprelay ""
+	etc_courier locallowercase ""
 	etc_courier bofh "opt BOFHBADMIME=accept"
 	etc_courier bofh "opt BOFHSPFTRUSTME=1"
 	etc_courier bofh "opt BOFHSPFHELO=pass,neutral,unknown,none,error,softfail,fail"
-	#etc_courier bofh "opt BOFHSPFHELO=pass,none,neutral,unknown"
+	etc_courier bofh "opt BOFHSPFHELO=pass,neutral,unknown,none"
 	etc_courier bofh "opt BOFHSPFFROM=all"
 	etc_courier bofh "opt BOFHSPFMAILFROM=all"
 	etc_courier bofh "#opt BOFHSPFHARDERROR=fail"
+	etc_courier esmtpd "BOFHBADMIME=accept"
+	etc_courier esmtpd-ssl "BOFHBADMIME=accept"
+	etc_courier esmtpd-msa "BOFHBADMIME=accept"
+	etc_courier_chg esmtpd ESMTPDSTART YES
+	etc_courier_chg esmtpd-msa ESMTPDSTART YES
+	etc_courier_chg esmtpd-ssl ESMTPDSSLSTART YES
+	etc_courier_chg imapd IMAPDSTART YES
+	etc_courier_chg imapd-ssl IMAPDSSLSTART YES
+	etc_courier_chg pop3d POP3DSTART YES
+	etc_courier_chg pop3d-ssl POP3DSSLSTART YES
 
 	cd ${S}
 	cp imap/README README.imap
 	use nls && cp unicode/README README.unicode
 	dodoc AUTHORS BENCHMARKS COPYING* ChangeLog* INSTALL NEWS README* TODO courier/doc/*.txt
+	dodoc tcpd/README.couriertls
 	echo "See /usr/share/courier/htmldoc/index.html for docs in html format" \
 		>> ${D}/usr/share/doc/${P}/README.htmldocs
 
 	insinto /usr/lib/courier/courier
 	insopts -m  755 -o mail -g mail
 	doins ${S}/courier/webmaild
-
-	# file which describes the webadmin password file
 	insinto /etc/courier/webadmin
 	insopts -m 400 -o mail -g mail
 	doins ${FILESDIR}/password.dist
 
-	echo "MAILDIR=\$HOME/.maildir" >> ${D}/etc/courier/courierd
-
-	# we change the names of the binaries, but webadmin is still looking
-	# for the old names
+	# avoid name collisions in /usr/sbin, make webadmin match
+	cd ${D}/usr/sbin
+	for f in imapd imapd-ssl pop3d pop3d-ssl ; do mv ${f} courier-${f} ; done
 	sed -i -e 's:\$sbindir\/imapd:\$sbindir\/courier-imapd:g' \
 		-e 's:\$sbindir\/imapd-ssl:\$sbindir\/courier-imapd-ssl:g' \
 		${D}/usr/share/courier/courierwebadmin/admin-40imap.pl \
@@ -229,23 +193,6 @@ src_install() {
 		${D}/usr/share/courier/courierwebadmin/admin-45pop3.pl \
 		|| ewarn "failed to fix webadmin"
 
-	# avoid name collisions in /usr/sbin
-	local y
-	cd ${D}/usr/share/courier
-	set_dollarmaildir imapd imapd-ssl pop3d pop3d-ssl
-
-	cd ${D}/usr/sbin
-	for y in imapd imapd-ssl pop3d pop3d-ssl ; do mv ${y} courier-${y} ; done
-
-	cd ${D}/etc/courier
-	for y in *.dist ; do cp ${y} ${y%%.dist} ; done
-	[ -e ldapaliasrc ] && chown mail:root ldapaliasrc
-	chg_cfg imapd-ssl COURIERTLS /usr/bin/couriertls
-	#chg_cfg authdaemonrc authmodulelist authpam
-	#chg_cfg authdaemonrc version authdaemond.plain
-	set_mime esmtpd esmtpd-ssl esmtpd-msa
-	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
-
 	if use mailwrapper ; then
 		mv ${D}/usr/bin/sendmail ${D}/usr/bin/sendmail.courier
 		rm ${D}/usr/bin/rmail
@@ -254,10 +201,6 @@ src_install() {
 	else
 		dosym /usr/bin/sendmail /usr/sbin/sendmail
 	fi
-}
-
-pkg_postinst() {
-	cd ${S}
 }
 
 pkg_config() {
