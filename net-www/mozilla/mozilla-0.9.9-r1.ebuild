@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r1.ebuild,v 1.3 2002/03/25 19:24:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r1.ebuild,v 1.4 2002/03/26 23:51:09 drobbins Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -42,7 +42,8 @@ export BUILD_OFFICIAL=1
 src_compile() {
 
 	chown -R root.root *
-
+	#This should enable parallel builds, I hope
+	export MAKE="emake"
 	local myconf
 	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
 	#       tested ok -- azarah

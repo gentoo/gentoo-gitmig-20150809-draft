@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.ebuild,v 1.1 2002/01/13 14:33:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.ebuild,v 1.2 2002/03/26 23:51:09 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Application Libraries"
@@ -26,19 +26,19 @@ src_compile() {
 		myconf="--disable-nls"
 	fi
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
+	./configure --host=${CHOST}	\
+		    --prefix=/usr \
+		    --sysconfdir=/etc \
+		    --localstatedir=/var/lib \
 		     ${myconf} || die
 
 	make || die # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
+	make prefix=${D}/usr \
+	     sysconfdir=${D}/etc \
+	     localstatedir=${D}/var/lib	\
 	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README

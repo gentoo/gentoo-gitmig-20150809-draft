@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.4 2002/03/21 07:05:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.5 2002/03/26 23:51:09 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -38,7 +38,6 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		$myconf || die "./configure failed"
-		
 	emake || die
 }
 

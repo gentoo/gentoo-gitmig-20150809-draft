@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r5.ebuild,v 1.1 2002/03/21 09:59:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r5.ebuild,v 1.2 2002/03/26 23:51:09 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux console display libarary"
@@ -18,7 +18,7 @@ src_compile() {
 	rm -rf test
 	./configure --prefix=/usr --libdir=/lib --mandir=/usr/share/man --enable-symlinks --enable-termcap --with-shared --with-rcs-ids --host=${CHOST}  ${myconf} || die
 	echo "all:" > test/Makefile
-	# Parallel make fails sometimes so I removed MAKEOPTS
+	#emake still doesn't work circa 25 Mar 2002
 	make || die
 }
 
