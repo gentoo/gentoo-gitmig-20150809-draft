@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/sqlite-php-0.0.5.ebuild,v 1.1 2003/07/25 10:47:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/sqlite-php-0.0.5.ebuild,v 1.2 2003/07/25 17:44:50 stuart Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PHP bindings for SQLite"
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 PHP_EXT_NAME="sqlite"
 PHP_ZEND_EXT=
 
-inherit php-ext-source php-ext-base
+inherit php-ext-source
 
 src_compile() {
 	myconf="${myconf} --with-sqlite=shared"
