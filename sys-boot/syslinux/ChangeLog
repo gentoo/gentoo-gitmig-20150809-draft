@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.8 2004/10/02 15:37:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.9 2004/12/04 21:51:09 iggy Exp $
+
+*syslinux-2.11 (04 Dec 2004)
+
+  04 Dec 2004; Brian Jackson <iggy@gentoo.org> +syslinux-2.11.ebuild:
+  version bump; we now build differently, more inline with what hpa suggests
 
   11 May 2004; <solar@gentoo.org> syslinux-2.06.ebuild, syslinux-2.09.ebuild:
   add ssp check before patching in nossp patches. This prevents breakage if your
