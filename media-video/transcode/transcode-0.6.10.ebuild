@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.1 2003/09/24 22:03:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.2 2003/10/10 17:13:14 mholzer Exp $
 
 inherit libtool flag-o-matic eutils
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
@@ -16,10 +16,10 @@ SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="sdl mmx mpeg sse encode X quicktime avi altivec"
 
-DEPEND=">=media-libs/a52dec-0.7.3
+DEPEND=">=media-libs/a52dec-0.7.4
 	>=media-libs/libdv-0.99
 	x86? ( >=dev-lang/nasm-0.98.36 )
 	>=media-libs/libdvdread-0.9.0
@@ -28,13 +28,13 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-video/mjpegtools-1.6.0
 	>=dev-libs/lzo-1.08
 	>=media-libs/libfame-0.9.0
-	>=media-gfx/imagemagick-5.4.9.0
+	>=media-gfx/imagemagick-5.5.6.0
 	media-libs/netpbm
 	X? ( virtual/x11 )
 	avi? (	>=media-video/avifile-0.7.38 )
 	avi? ( x86? ( >=media-libs/divx4linux-20030428 ) )
 	mpeg? ( media-libs/libmpeg3 )
-	encode? ( >=media-sound/lame-3.89 )
+	encode? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
 	quicktime? ( virtual/quicktime media-libs/openquicktime )"
 
@@ -44,9 +44,8 @@ src_unpack() {
 	if has_version  '>=media-libs/netpbm-9.13'
 	then
 		einfo "New netbpm (>9.12)..."
-		cp ${S}/contrib/subrip/Makefile ${S}/contrib/subrip/Makefile.orig
-		sed -e 's:-lppm:-lnetpbm:' \
-			${S}/contrib/subrip/Makefile.orig > ${S}/contrib/subrip/Makefile
+		sed -i 's:-lppm:-lnetpbm:' \
+			${S}/contrib/subrip/Makefile
 	else
 		einfo "Old netbpm (<=9.12)..."
 	fi
