@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc3-oracle
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.2 2003/07/11 21:41:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.3 2003/10/04 00:54:04 strider Exp $
+
+  03 Oct 2003; Adrian Almenar <strider@gentoo.org> jdbc3-oracle-9.2.0.1.ebuild,
+  jdbc3-oracle-9.2.0.3.ebuild:
+  Fixes for bug #27351 (was not installing jar files)
 
 *jdbc3-oracle-9.2.0.3 (14 May 2003)
  

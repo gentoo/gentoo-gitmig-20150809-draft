@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.4 2003/10/04 00:54:04 strider Exp $
 
 inherit java-pkg
 
@@ -78,5 +78,5 @@ src_install() {
 		dohtml -r ${S}/javadoc/
 	fi
 	java-pkg_dojar ${S}/*.zip
+	java-pkg_dojar ${S}/*.jar
 }
-
