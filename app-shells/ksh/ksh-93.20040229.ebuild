@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.8 2004/09/14 17:59:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.9 2004/09/23 08:10:09 taviso Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -36,6 +36,7 @@ src_unpack() {
 
 	# `package read` will unpack any tarballs put in place.
 	${S}/bin/package read || die
+	epatch ${FILESDIR}/ksh-build-problems.diff || die
 }
 
 src_compile() {
