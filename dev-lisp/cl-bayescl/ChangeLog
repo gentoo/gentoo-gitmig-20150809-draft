@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-bayescl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bayescl/ChangeLog,v 1.1 2004/11/21 20:28:07 mkennedy Exp $
+
+*cl-bayescl-20041121 (21 Nov 2004)
+
+  21 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-bayescl-20041121.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
