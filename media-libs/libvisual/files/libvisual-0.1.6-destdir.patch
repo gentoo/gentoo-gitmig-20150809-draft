@@ -1,0 +1,28 @@
+diff -Naur libvisual-0.1.6.orig/Makefile.am libvisual-0.1.6/Makefile.am
+--- libvisual-0.1.6.orig/Makefile.am	2004-08-25 15:01:00.000000000 -0700
++++ libvisual-0.1.6/Makefile.am	2004-09-16 09:22:31.617768717 -0700
+@@ -6,8 +6,8 @@
+ pkgconfig_DATA = libvisual.pc
+ 
+ install-exec-local: libvisual/lvconfig.h 
+-	        $(mkinstalldirs) $(prefix)/include/libvisual
+-	        file=$(prefix)/include/libvisual/lvconfig.h; \
++	        $(mkinstalldirs) $(DESTDIR)$(includedir)/libvisual
++	        file=$(DESTDIR)$(includedir)/libvisual/lvconfig.h; \
+ 	        if test -r $$file && cmp -s libvisual/lvconfig.h $$file; then :; \
+ 	        else $(INSTALL_DATA) libvisual/lvconfig.h $$file; fi
+ 
+diff -Naur libvisual-0.1.6.orig/Makefile.in libvisual-0.1.6/Makefile.in
+--- libvisual-0.1.6.orig/Makefile.in	2004-09-08 13:50:59.000000000 -0700
++++ libvisual-0.1.6/Makefile.in	2004-09-16 09:23:10.939264580 -0700
+@@ -641,8 +641,8 @@
+ 
+ 
+ install-exec-local: libvisual/lvconfig.h 
+-	        $(mkinstalldirs) $(prefix)/include/libvisual
+-	        file=$(prefix)/include/libvisual/lvconfig.h; \
++	        $(mkinstalldirs) $(DESTDIR)$(includedir)/libvisual
++	        file=$(DESTDIR)$(includedir)/libvisual/lvconfig.h; \
+ 	        if test -r $$file && cmp -s libvisual/lvconfig.h $$file; then :; \
+ 	        else $(INSTALL_DATA) libvisual/lvconfig.h $$file; fi
+ 

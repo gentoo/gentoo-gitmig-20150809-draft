@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.1.6.ebuild,v 1.1 2004/09/15 21:16:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.1.6.ebuild,v 1.2 2004/09/16 16:34:52 eradicator Exp $
 
 IUSE="pic static"
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-libdir.patch
+	epatch ${FILESDIR}/${P}-destdir.patch
 }
 
 src_compile() {
@@ -36,5 +37,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog HACKING MANIFESTO NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
