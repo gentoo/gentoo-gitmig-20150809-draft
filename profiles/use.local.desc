@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.639 2004/09/22 22:38:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.640 2004/09/23 15:03:13 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -248,6 +248,7 @@ games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/aabrowse:geoip - lookup countries by IP addresses via the GeoIP library
 games-util/xqf:geoip - Add geoip support
+gnome-base/gnome:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-base/gnome-vfs:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-extra/nautilus-cd-burner:hal - Enable Hardware Abstraction Layer (HAL) support
