@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.0_beta4-r2.ebuild,v 1.2 2001/06/05 19:43:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.0_beta4-r2.ebuild,v 1.3 2001/06/11 08:11:28 hallski Exp $
 
 P=gdm-2.0beta4
 A=${P}.tar.gz
@@ -30,7 +30,7 @@ src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--sysconfdir=/etc/X11 --localstatedir=/var/lib
 
-  try make
+  try pmake
 }
 
 src_install() {                               

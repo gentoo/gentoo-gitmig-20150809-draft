@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gphoto/gphoto-2.0_beta1.ebuild,v 1.1 2001/06/05 19:43:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gphoto/gphoto-2.0_beta1.ebuild,v 1.2 2001/06/11 08:11:28 hallski Exp $
 
 A=${PN}-2.0beta1.tar.gz
 S=${WORKDIR}/${PN}-2.0beta1
@@ -19,8 +19,7 @@ src_compile() {
    try CFLAGS=\"${CFLAGS/-pipe/}\" ./configure --prefix=/usr --sysconfdir=/etc
    cd ..
    try CFLAGS=\"${CFLAGS/-pipe/}\" ./configure --prefix=/usr --sysconfdir=/etc
-   # -j does not work
-   try make
+   try pmake
 }
 
 src_install() {

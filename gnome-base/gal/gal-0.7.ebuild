@@ -26,7 +26,7 @@ src_compile() {
     myconf="--disable-nls"
   fi
   try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
-  try make
+  try make  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {

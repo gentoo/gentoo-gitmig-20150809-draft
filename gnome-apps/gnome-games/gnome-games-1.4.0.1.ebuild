@@ -22,7 +22,7 @@ src_compile() {
   fi
   try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome \
         --with-ncurses $myconf
-  try make
+  try pmake
 }
 
 src_install() {

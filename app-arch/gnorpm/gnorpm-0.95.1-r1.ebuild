@@ -21,7 +21,7 @@ RDEPEND="virtual/glibc
 
 src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome --disable-rpmfind
-  try make
+  try make # Doesn't work with make -j 4 (hallski)
 }
 
 src_install() {

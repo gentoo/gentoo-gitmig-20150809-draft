@@ -25,7 +25,7 @@ src_compile() {
      myconf="--disable-nls"
   fi
   try ./configure --host=${CHOST} --prefix=/opt/gnome ${myconf}
-  try make
+  try pmake
 }
 
 src_install() {

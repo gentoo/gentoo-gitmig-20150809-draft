@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc"
 src_compile() {                           
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--sysconfdir=/etc/opt/gnome
-  try make
+  try pmake
 }
 
 src_install() {

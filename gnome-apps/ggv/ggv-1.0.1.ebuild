@@ -31,7 +31,7 @@ src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	$myconf
   # bonobo support does not work yet
-  try make
+  try pmake
 }
 
 src_install() {

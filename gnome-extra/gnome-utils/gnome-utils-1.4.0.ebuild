@@ -27,7 +27,7 @@ src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--with-ncurses --with-messages=/var/log/syslog.d/current \
 	--with-sysconfdir=/etc/opt/gnome $myconf
-  try make
+  try pmake
 }
 
 src_install() {

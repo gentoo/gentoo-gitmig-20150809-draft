@@ -27,7 +27,7 @@ src_compile() {
     try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--sysconfdir=/etc/opt/gnome \
 	--enable-gnome --enable-gnome-print ${myconf}
-    try make
+    try pmake
 
 }
 

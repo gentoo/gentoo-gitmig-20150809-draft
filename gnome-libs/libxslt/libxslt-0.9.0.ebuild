@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-libs/libxslt/libxslt-0.9.0.ebuild,v 1.1 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-libs/libxslt/libxslt-0.9.0.ebuild,v 1.2 2001/06/11 08:11:28 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc
 src_compile() {
 
   try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
-  try make
+  try make  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {                               

@@ -26,7 +26,7 @@ src_compile() {
     try ./configure --prefix=/usr --mandir=/usr/share --infodir=/usr/share/info \
 	--enable-static-rnd=linux --enable-m-guard --host=${CHOST}\
 	${myconf}
-    try make
+    try pmake
 
 }
 

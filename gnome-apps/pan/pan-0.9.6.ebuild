@@ -16,7 +16,7 @@ src_compile() {
 
 	try ./configure --prefix=/opt/gnome
 	try make clean
-	try make ${MAKEOPTS}
+	try make # Doesn't work with -j 4 (hallski)
 
 }
 

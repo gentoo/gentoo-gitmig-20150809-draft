@@ -16,7 +16,7 @@ DEPEND="virtual/glibc"
 src_compile() {                           
   cd ${S}
   try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try make
+  try pmake
 }
 
 src_install() {                               

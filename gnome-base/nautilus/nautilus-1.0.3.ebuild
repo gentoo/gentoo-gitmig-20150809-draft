@@ -51,7 +51,7 @@ src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
         --sysconfdir=/etc/opt/gnome --infodir=/opt/gnome/info \
 	--mandir=/opt/gnome/man --enable-eazel-services=1 ${myconf}
-  try make
+  try pmake
 }
 
 src_install() {

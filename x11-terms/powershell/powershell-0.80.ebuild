@@ -19,7 +19,7 @@ src_unpack() {
 src_compile() {                           
   cd ${S}
   LDFLAGS="-L/opt/gnome/lib"  try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try make
+  try pmake
 }
 
 src_install() {                               

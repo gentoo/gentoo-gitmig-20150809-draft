@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.22-r2.ebuild,v 1.1 2001/04/21 04:27:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.22-r2.ebuild,v 1.2 2001/06/11 08:11:28 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -38,7 +38,7 @@ src_compile() {
 
   try ./configure --host=${CHOST} --prefix=/usr \
 		  --sysconfdir=/etc/esd $myconf
-  try make
+  try pmake
 }
 
 src_install() {                               

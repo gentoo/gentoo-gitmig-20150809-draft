@@ -21,7 +21,7 @@ src_compile() {
           myconf="$myconf --enable-html"
         fi
 	try ./configure --prefix=/opt/gnome $myconf
-	try make
+	try make   # Doesn't work with -j 4 (hallski)
 
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnofin/gnofin-0.8.4.ebuild,v 1.2 2001/06/04 21:57:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnofin/gnofin-0.8.4.ebuild,v 1.3 2001/06/11 08:11:28 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ DEPEND=">=gnome-base/gnome-libs-1.2.4
 
 src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome 
-  try make
+  try pmake
 }
 
 src_install() {                               

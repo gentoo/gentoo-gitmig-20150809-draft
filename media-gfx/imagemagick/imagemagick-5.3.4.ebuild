@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.3.4.ebuild,v 1.2 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.3.4.ebuild,v 1.3 2001/06/11 08:11:28 hallski Exp $
 
 P=ImageMagick-${PV}
 A=${P}.tar.gz
@@ -35,7 +35,7 @@ src_compile() {
 		--without-xml --without-lcms --enable-lzw --with-ttf --without-fpx \
                 --without-gslib --without-hdf --without-jbig --without-wmf
 		--enable-shared --with-threads --mandir=/usr/X11R6/man $myconf
-    try make
+    try pmake
 
 }
 

@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/freetype-2.0.1
 src_compile() {                           
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--sysconfdir=/etc/opt/gnome
-  try make
+  try make  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {                               

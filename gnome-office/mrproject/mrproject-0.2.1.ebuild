@@ -23,7 +23,7 @@ src_compile() {
     fi
     try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--sysconfdir=/etc/opt/gnome --disable-more-warnings $myconf
-    try make ${MAKEOPTS}
+    try pmake
 
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r1.ebuild,v 1.1 2000/11/25 13:01:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r1.ebuild,v 1.2 2001/06/11 08:11:28 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ DEPEND=">=gnome-base/gnome-libs-1.2.8"
 src_compile() {                           
   cd ${S}
   try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try make
+  try pmake
 }
 
 src_install() {                               

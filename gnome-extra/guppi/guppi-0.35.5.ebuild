@@ -47,7 +47,7 @@ src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome --enable-gnumeric \
 	${myconf}
 
-  try make ${MAKEOPTS}
+  try make  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {                               

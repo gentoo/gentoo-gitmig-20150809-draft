@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/seahorse/seahorse-0.5.0.ebuild,v 1.4 2001/06/07 05:22:23 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/seahorse/seahorse-0.5.0.ebuild,v 1.5 2001/06/11 08:11:28 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc virtual/x11
 
 src_compile() {                           
   try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try make
+  try pmake
 }
 
 src_install() {

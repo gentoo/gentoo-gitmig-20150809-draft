@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-libs/libxml2/libxml2-2.3.9.ebuild,v 1.1 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-libs/libxml2/libxml2-2.3.9.ebuild,v 1.2 2001/06/11 08:11:28 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 src_compile() {
   local myconf
   try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc --with-zlib 
-  try make
+  try pmake
 }
 
 src_install() {

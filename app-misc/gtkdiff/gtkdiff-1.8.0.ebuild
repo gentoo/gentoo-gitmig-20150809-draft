@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtkdiff/gtkdiff-1.8.0.ebuild,v 1.1 2001/06/04 10:34:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtkdiff/gtkdiff-1.8.0.ebuild,v 1.2 2001/06/11 08:11:28 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK Frontend for diff"
@@ -13,7 +13,7 @@ DEPEND=">=gnome-base/gnome-libs-1.2.8"
 src_compile() {
 
     try ./configure --prefix=/opt/gnome --host=${CHOST}
-    try make
+    try pmake
 
 }
 

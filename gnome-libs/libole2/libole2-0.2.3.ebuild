@@ -14,7 +14,7 @@ DEPEND=">=dev-libs/glib-1.2.8"
 
 src_compile() {                           
   try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try make
+  try pmake
 }
 
 src_install() {                               
