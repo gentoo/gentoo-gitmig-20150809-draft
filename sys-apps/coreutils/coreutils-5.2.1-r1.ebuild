@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r1.ebuild,v 1.2 2004/07/13 07:09:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r1.ebuild,v 1.3 2004/07/23 20:55:53 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,6 +68,9 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/extra
 
 	use selinux && EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/selinux
+
+	# Sparc32 SMP bug fix -- see bug #46593
+	use sparc && echo -ne "\n\n" >> ${S}/src/pr.c
 }
 
 src_compile() {
