@@ -3,6 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<description>Maintained by Tom Gall -- tgall@gentoo.org</description>
+	<email>tgall@gentoo.org</email>
+	<name>Tom Gall</name>
+	<description>primary maintainer</description>
 </maintainer>
 </pkgmetadata>

@@ -1,4 +1,14 @@
-MD5 874e5fe908cf3edaf0204638885224df ChangeLog 919
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9fdc5cd409f5f3f8730a4d46aa149f59 ChangeLog 1026
 MD5 a07976079e5d038c2c2be8e30a66300a dirdiff-1.6.ebuild 723
-MD5 9e19e2dcabcd312fe03169a4edb948df metadata.xml 258
+MD5 b3be53e56cb7f6130855f11239c05bd8 metadata.xml 290
 MD5 fa3fef9af93e43c88bf0c6ef1911cda4 files/digest-dirdiff-1.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHiwPI1lqEGTUzyQRAp4yAJ4iGyRbeI4dnMAErqwJW4sXq6U3YQCfR4Rt
+q/sKd/eHLZ5hJ05kG/ySmt0=
+=mbSg
+-----END PGP SIGNATURE-----
