@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.70.ebuild,v 1.1 2004/04/17 20:25:30 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.70.ebuild,v 1.2 2004/04/29 18:36:57 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/clamav/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha hppa ~amd64 ~ia64"
 IUSE="milter crypt"
 
 DEPEND="virtual/glibc
