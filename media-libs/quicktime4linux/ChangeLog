@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/quicktime4linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.11 2003/06/13 23:17:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.12 2003/06/13 23:21:01 seemant Exp $
+
+  13 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  quicktime4linux-1.5.5-r1.ebuild:
+  block libquicktime specifically
 
   13 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
   quicktime4linux-1.5.5-r1.ebuild:
