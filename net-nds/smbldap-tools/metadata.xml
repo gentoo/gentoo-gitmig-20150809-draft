@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>samba@gentoo.org</email>
+	<name>Samba Team</name>
+</maintainer>
+<longdescription>
+smbldap-tools is a Idealx contribution to samba database management through ldap
+backend.
+</longdescription>
+</pkgmetadata>

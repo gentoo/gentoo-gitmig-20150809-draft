@@ -1,0 +1,6 @@
+MD5 27ae34e19662eb2ec1ac0440b169a5df smbldap-tools-0.8.7.ebuild 2558
+MD5 fd7b77a2a94102b1ec1c2b1e42617b08 ChangeLog 357
+MD5 ec0194fe323a6bea2905c0b4ed98b1ce metadata.xml 372
+MD5 1b90a2b5a53bd90c8a682e775f8821c5 smbldap-tools-0.8.6.ebuild 2558
+MD5 1bc5bcf921de35c1f98ad557642fa53f files/digest-smbldap-tools-0.8.6 68
+MD5 03035f043a4eb25331508a7a6aa60d72 files/digest-smbldap-tools-0.8.7 68
