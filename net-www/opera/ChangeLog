@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.63 2004/05/25 02:16:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.64 2004/05/28 21:53:45 kugelfang Exp $
+
+  28 May 2004; Danny van Dyk <kugelfang@gentoo.org> opera-7.50-r1.ebuild:
+  Refixed dependency problem on amd64 (BUG #51281).
 
   24 May 2004; Jason Wever <weeve@gentoo.org> opera-7.50-r1.ebuild:
   Stable on sparc wrt bug #50857.
