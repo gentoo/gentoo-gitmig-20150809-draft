@@ -3,7 +3,10 @@
 # $Header
 
 *synergy-1.0.2 (25 Jan 2003)
-  
+
+  18 Mar 2003; Jason Wever <weeve@gentoo.org> synergy-1.0.2.ebuild:
+  Added ~sparc to keywords.
+
   25 Jan 2003; Brad Cowan <bcowan@gentoo.org> synergy-1.0.2.ebuild,
   files/digest-synergy-1.0.2:
   Version bump.
