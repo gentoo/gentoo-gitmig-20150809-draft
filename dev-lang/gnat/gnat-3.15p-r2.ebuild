@@ -1,25 +1,33 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.2 2003/09/14 17:19:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.3 2003/09/17 23:10:00 dholm Exp $
 
-DESCRIPTION="GNAT Ada Compiler"
-DEPEND="app-shells/tcsh"
+DESCRIPTION="The GNU Ada Toolkit"
+DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
 RDEPEND=""
 SRC_URI="http://gd.tuwien.ac.at/languages/ada/gnat/${PV}/${P}-src.tgz
 	http://gd.tuwien.ac.at/languages/ada/gnat/${PV}/${P}-unx-docs.tar.gz
-	http://gd.tuwien.ac.at/languages/ada/gnat/${PV}/${P}-i686-pc-redhat71-gnu-bin.tar.gz
-	ftp://gcc.gnu.org/pub/gcc/old-releases/gcc-2/gcc-2.8.1.tar.bz2"
+	ftp://gcc.gnu.org/pub/gcc/old-releases/gcc-2/gcc-2.8.1.tar.bz2
+	x86? ( http://gd.tuwien.ac.at/languages/ada/gnat/${PV}/${P}-i686-pc-redhat71-gnu-bin.tar.gz )
+	ppc? ( mirror://gentoo/${P}-powerpc-unknown-linux-gnu.tar.bz2 )"
 HOMEPAGE="http://www.gnat.com/"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GMGPL"
 IUSE=""
 
 S="${WORKDIR}/gcc-2.8.1"
 GNATDIR="${WORKDIR}/${P}-src"
-GNATBOOT="${WORKDIR}/boot"
-GNATBOOTINST="${WORKDIR}/${P}-i686-pc-linux-gnu-bin"
+
+case ${ARCH} in
+	x86)	GNATBOOT="${WORKDIR}/boot"
+			GNATBOOTINST="${WORKDIR}/${P}-i686-pc-linux-gnu-bin"
+			;;
+	ppc)
+			GNATBOOT="${WORKDIR}/${P}-powerpc-unknown-linux-gnu"
+			;;
+esac
 
 inherit gnat
 
@@ -27,9 +35,11 @@ src_unpack() {
 	unpack ${A}
 
 	# Install the bootstrap compiler
-	cd "${GNATBOOTINST}"
-	echo $'\n'3$'\n'${GNATBOOT}$'\n' | ./doconfig > doconfig.log 2>&1
-	./doinstall
+	if [ "${ARCH}" = "x86" ]; then
+		cd "${GNATBOOTINST}"
+		echo $'\n'3$'\n'${GNATBOOT}$'\n' | ./doconfig > doconfig.log 2>&1
+		./doinstall
+	fi
 
 	# Prepare the gcc source directory
 	cd "${S}"
@@ -39,18 +49,18 @@ src_unpack() {
 	cd "${S}/ada"
 	bzcat "${FILESDIR}/${P}-gentoo.patch.bz2" | patch -p3
 	touch treeprs.ads a-[es]info.h nmake.ad[bs]
+
+	if [ "${ARCH}" != "x86" ]; then
+		cd "${S}"
+		bzcat "${FILESDIR}/${P}-gentoo-nonx86.patch.bz2" | patch -p1
+	fi
 }
 
 src_compile() {
-	# GCC 2.8.1 doesn't like fancy flags
-	local CFLAGS="-O0"
-
-	# Set some paths to our bootstrap compiler.
-	local GCC_EXEC_PREFIX="${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1"
-	local ADA_INCLUDE_PATH="${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1/adainclude"
-	local ADA_OBJECTS_PATH="${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1/adalib"
 	local PATH="${GNATBOOT}/bin:${PATH}"
-	local LDFLAGS="-L${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1 -L${GNATBOOTINST}"
+	if [ -z ${GNATBOOTINST} ]; then
+		local LDFLAGS="-L${GNATBOOTINST}"
+	fi
 
 	# Make $local_prefix point to $prefix
 	sed -i -e "s/@local_prefix@/@prefix@/" "${S}/Makefile.in"
@@ -66,15 +76,17 @@ src_compile() {
 
 	# Compile it by first using the bootstrap compiler and then bootstrapping
 	# our own version. Finally compile the libraries and tools.
-	make CC="gcc" LANGUAGES="c ada gcov"
-	make CC="gcc" LANGUAGES="c ada gcov" bootstrap
-	make CC="gcc" GNATLIBCFLAGS="-O0 -fPIC" gnatlib-shared
-	make CC="gcc" gnattools
+	make CC="gcc" CFLAGS="-O0" LANGUAGES="c ada gcov"
+	make CC="gcc" CFLAGS="-O0" LANGUAGES="c ada gcov" bootstrap
+	make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0 -fPIC" gnatlib-shared
+	make CC="gcc" CFLAGS="-O0" gnattools
 }
 
 src_install() {
 	local PATH="${GNATBOOT}/bin:${PATH}"
-	local LDFLAGS="-L${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1 -L${GNATBOOTINST}"
+	if [ -z ${GNATBOOTINST} ]; then
+		local LDFLAGS="-L${GNATBOOTINST}"
+	fi
 
 	# Install gnatgcc, tools and native threads library
 	make prefix="${D}/usr" libdir="${D}/usr/lib/ada" \
@@ -82,35 +94,39 @@ src_install() {
 		install-common install-libgcc install-gnatlib install-driver || die
 	touch "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1/include/float.h"
 
-	# Install the FSU threads library
-	cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
-	mkdir rts-native
-	mkdir rts-fsu
+	if [ "${ARCH}" = "x86" ]; then
+		# Install the FSU threads library
+		cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
+		mkdir rts-native
+		mkdir rts-fsu
 
-	# Move the native threads library
-	mv adalib adainclude rts-native
-	cd ${S}
+		# Move the native threads library
+		mv adalib adainclude rts-native
+		cd ${S}
 
-	# Compile and install the FSU threads library
-	rm stamp-gnatlib1
-	make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0 -fPIC" \
-		THREAD_KIND="fsu" gnatlib-shared
-	make prefix="${D}/usr" libdir="${D}/usr/lib/ada" install-gnatlib
-	cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
-	mv adalib adainclude rts-fsu
-	cd ${S}
+		# Compile and install the FSU threads library
+		rm stamp-gnatlib1
+		make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0 -fPIC" \
+			THREAD_KIND="fsu" gnatlib-shared
+		make prefix="${D}/usr" libdir="${D}/usr/lib/ada" install-gnatlib
+		cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
+		mv adalib adainclude rts-fsu
+		cd ${S}
 
-	# Install the precompiled FSU library from the binary distribution
-	cp "${GNATBOOTINST}/libgthreads.a" "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
-	cp "${GNATBOOTINST}/libmalloc.a" "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
+		# Install the precompiled FSU library from the binary distribution
+		cp "${GNATBOOTINST}/libgthreads.a" "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
+		cp "${GNATBOOTINST}/libmalloc.a" "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
 
-	# Make native threads the default
-	cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
-	ln -s rts-native/adalib adalib
-	ln -s rts-native/adainclude adainclude
+		# Make native threads the default
+		cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
+		ln -s rts-native/adalib adalib
+		ln -s rts-native/adainclude adainclude
+	fi
 
-	cp "${GNATBOOTINST}/gnathtml.pl" "${D}/usr/bin"
-	chmod +x "${D}/usr/bin"
+	if [ -z ${GNATBOOTINST} ]; then
+		cp "${GNATBOOTINST}/gnathtml.pl" "${D}/usr/bin"
+		chmod +x "${D}/usr/bin"
+	fi
 
 	# Install documentation and examples
 	cd ${WORKDIR}/${P}-src
@@ -137,11 +153,13 @@ src_install() {
 pkg_postinst() {
 	# Notify the user what changed
 	einfo ""
-	einfo "Both the native-threads and the FSU-threads runtimes have been"
-	einfo "installed. The native-threads version is the default on linux."
-	einfo "If you want to use FSU-threads (required if you are using Annex D)"
-	einfo "simply use the following switch: --RTS=fsu"
-	einfo ""
+	if [ "${ARCH}" = "x86" ]; then
+		einfo "Both the native-threads and the FSU-threads runtimes have been"
+		einfo "installed. The native-threads version is the default on linux."
+		einfo "If you want to use FSU-threads (required if you are using"
+		einfo "Annex D) simply use the following switch: --RTS=fsu"
+		einfo ""
+	fi
 	einfo "The compiler has been installed as gnatgcc, and the coverage testing"
 	einfo "tool as gnatgcov."
 	einfo ""
