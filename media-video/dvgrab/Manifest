@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 854c64eacaff5f014f743dbb8263a47c dvgrab-1.5.ebuild 1018
-MD5 741cfff3bc11f4ad923bca011c32bdd3 ChangeLog 733
+MD5 e014cc7c2ab9a68bdf5db0bb94ebf135 dvgrab-1.5.ebuild 1020
+MD5 63c2e36472276ee96a2132af6693fc61 dvgrab-1.7.ebuild 1170
+MD5 ede7d6306649ff2266f963945ec586b8 ChangeLog 1063
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 ec8a599b8a5508fbe911ca55c2e18b4d files/digest-dvgrab-1.5 62
+MD5 6663dc9efe632cad636cfb38c0f19dfa files/digest-dvgrab-1.7 62
 MD5 a08ba987defdbb8b7889fb778ef01033 files/dvgrab_gcc34_fix 383
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB1IyJI1lqEGTUzyQRAj3gAJ9IREuuT1vAUtB8zzfRuBztf+/1ewCfU/hD
-oSFFT2m/kdkjyRNzmIQk/mw=
-=6vqJ
------END PGP SIGNATURE-----

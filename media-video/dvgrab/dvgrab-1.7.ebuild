@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.5.ebuild,v 1.6 2005/01/20 13:44:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.7.ebuild,v 1.1 2005/01/20 13:44:33 luckyduck Exp $
 
 inherit eutils
 
@@ -25,9 +25,15 @@ DEPEND="sys-libs/libavc1394
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd ${WORKDIR}
 
 	epatch ${FILESDIR}/dvgrab_gcc34_fix || die
+	mv ${PN}-1.5 ${P} # the directory is still ...1.5.
+}
+
+src_compile() {
+	econf ${myconf} || die "./configure failed"
+	emake || die "make failed"
 }
 
 src_install () {
