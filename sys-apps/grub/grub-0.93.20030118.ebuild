@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.1 2003/01/18 11:23:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.2 2003/01/18 11:31:49 woodchip Exp $
 
 inherit mount-boot
 
@@ -47,6 +47,7 @@ src_install() {
 
 	insinto /boot/grub
 	doins ${FILESDIR}/splash.xpm.gz
+	newins docs/menu.lst grub.conf.sample
 
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
 	newdoc docs/menu.lst grub.conf.sample
