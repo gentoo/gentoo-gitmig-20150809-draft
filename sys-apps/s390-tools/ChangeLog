@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/s390-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.6 2004/07/01 21:37:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.7 2004/08/24 03:30:52 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> s390-tools-1.2.4.ebuild,
+  s390-tools-1.3.0.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   s390-tools-1.2.4.ebuild, s390-tools-1.3.0.ebuild:
