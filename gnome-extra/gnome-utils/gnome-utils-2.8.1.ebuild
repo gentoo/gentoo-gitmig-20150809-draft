@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.8.1.ebuild,v 1.5 2004/12/24 00:30:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.8.1.ebuild,v 1.6 2004/12/29 13:41:59 joem Exp $
 
 inherit gnome2 eutils
 
@@ -41,3 +41,5 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.6.2-gfloppymajor.patch
 
 }
+
+USE_DESTDIR="1"
