@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.40 2004/10/17 11:03:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.41 2004/11/06 15:12:17 lanius Exp $
+
+*xosd-2.2.12 (06 Nov 2004)
+
+  06 Nov 2004; <heino@gentoo.org> -files/2.2.4-font-align.patch,
+  +files/bmp-dlg_config.patch, +xosd-2.2.12.ebuild:
+  version bump, add bmp mediaplayer support, bug #69213
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xosd-2.2.8-r1.ebuild:
   stable on amd64.

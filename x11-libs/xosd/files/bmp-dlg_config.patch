@@ -1,0 +1,11 @@
+--- dlg_config.c.orig	2003-10-02 19:09:32.000000000 -0500
++++ dlg_config.c	2004-10-28 22:29:26.737862128 -0500
+@@ -278,7 +279,7 @@
+ 
+   read_config();
+ 
+-  configure_win = gtk_window_new(GTK_WINDOW_DIALOG);
++  configure_win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+ 
+   gtk_signal_connect(GTK_OBJECT(configure_win), "destroy",
+                      GTK_SIGNAL_FUNC(gtk_widget_destroyed), &configure_win);
