@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.2.ebuild,v 1.1 2003/04/21 15:04:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.2.ebuild,v 1.2 2003/04/23 22:16:47 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -168,12 +168,9 @@ src_compile() {
 
 src_install() {
 
-	# omf docs missing in evo-1.3.1
-	#cd omf-install
-	#cp Makefile Makefile.old
-	#sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
-	#rm Makefile.old
-    
+	# get ready for scrollkeeper
+	dodir /var/lib/scrollkeeper
+
     # fix kde shortcut otherwise make install fails (evo-1.3.1)
     cd ${S}/data
     cp Makefile Makefile.old
@@ -181,29 +178,13 @@ src_install() {
     rm Makefile.old
 
 	cd ${S}
-
-	# Install with $DESTDIR, as in some rare cases $D gets hardcoded
-	# into the binaries (seems like a ccache problem at present),
-	# because everything is recompiled with the "new" PREFIX, if
-	# $DESTDIR is _not_ used.
-	make DESTDIR=${D} \
-		prefix=/usr \
-		mandir=/usr/share/man \
-		infodir=/usr/share/info \
-		datadir=/usr/share \
-		sysconfdir=/etc \
-		localstatedir=/var/lib \
-		KDE_APPLNK_DIR=/usr/share/applnk \
-		install || die
+	export USE_DESTDIR="1"
+	export DOCS="AUTHORS COPYING* ChangeLog HACKING MAINTAINERS NEWS README"
+	gnome2_src_install "KDE_APPLNK_DIR=/usr/share/applnk"
 	
 	# remove kde applnk if -kde
 	if [ -z "`use kde`" ]; then
 		rm -rf ${D}/usr/share/applnk
 	fi
-	
-	dodoc AUTHORS COPYING* ChangeLog HACKING MAINTAINERS
-	dodoc NEWS README
-}
 
-# evo-1.3.1 doesn't seem to have any OMFs
-SCROLLKEEPER_UPDATE="0"
+}
