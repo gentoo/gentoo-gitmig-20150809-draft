@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-showdesktop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/ChangeLog,v 1.13 2004/06/24 22:02:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/ChangeLog,v 1.14 2004/09/19 04:17:32 tgall Exp $
+
+  18 Sep 2004; Tom Gall <tgall@gentoo.org> xfce4-showdesktop-0.3.0.ebuild:
+  stable on ppc64, bug #57744
 
   05 Apr 2004; Guy Martin <gmsoft@gentoo.org> xfce4-showdesktop-0.3.0.ebuild:
   Marked stable on hppa.
