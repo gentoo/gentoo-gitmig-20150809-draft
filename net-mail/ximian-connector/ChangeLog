@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/ximian-connector
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.11 2003/07/14 08:33:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.12 2003/09/12 09:53:06 liquidx Exp $
+
+*ximian-connector-1.4.4.0.6.1 (12 Sep 2003)
+
+  12 Sep 2003; Alastair Tse <liquidx@gentoo.org>
+  ximian-connector-1.4.0.0.6.2.ebuild, ximian-connector-1.4.4.0.6.1.ebuild:
+  version bump to work for 1.4.4
 
   14 Jul 2003; Alastair Tse <liquidx@gentoo.org>
   ximian-connector-1.2.1_p2-r1.ebuild, ximian-connector-1.4.0.0.6.2.ebuild:
