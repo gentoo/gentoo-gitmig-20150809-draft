@@ -1,17 +1,20 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r4.ebuild,v 1.2 2003/11/30 08:11:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r5.ebuild,v 1.1 2004/01/04 18:35:30 usata Exp $
 
-IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk"
-#IUSE="canna"
+IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk async"
+#IUSE="canna nls unicode"
 
 W3M_CVS_PV="1.890"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
 
 DESCRIPTION="Text based WWW browser, supports tables and frames"
+PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
 SRC_URI="mirror://gentoo/${W3M_CVS_P}.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}.tar.gz
-	http://www.page.sannet.ne.jp/knabe/w3m/${W3M_CVS_P}-async-3.diff.gz"
+	async? ( ${PATCH_PATH}/${W3M_CVS_P}-async-5.diff.gz )
+	${PATCH_PATH}/${W3M_CVS_P}-nls-4.diff
+	${PATCH_PATH}/${W3M_CVS_P}-ja.po.diff"
 # canna? ( http://www.j10n.org/files/${W3M_CVS_P}-canna.patch )"
 
 HOMEPAGE="http://w3m.sourceforge.net/"
@@ -60,9 +63,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-m17n-search-gentoo.diff
-	epatch ${DISTDIR}/${W3M_CVS_P}-async-3.diff.gz
-	epatch ${FILESDIR}/${PN}-async-gpm-gentoo.diff
-	epatch ${FILESDIR}/${PN}-async-dlpanel-gentoo.diff
+	epatch ${DISTDIR}/${W3M_CVS_P}-nls-4.diff
+	epatch ${DISTDIR}/${W3M_CVS_P}-ja.po.diff
+	use async && epatch ${DISTDIR}/${W3M_CVS_P}-async-5.diff.gz
 	#use canna && epatch ${DISTDIR}/${W3M_CVS_P}-canna.patch
 }
 
