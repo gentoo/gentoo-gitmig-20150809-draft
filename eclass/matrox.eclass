@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.9 2004/10/09 00:58:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.10 2004/10/14 03:27:38 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -68,6 +68,8 @@ matrox_pkg_setup() {
 }
 
 matrox_src_compile() {
+	# 2.6 builds use the ARCH variable
+	set_arch_to_kernel
 	export PARHELIUX="${PWD}/src"
 	cd ${S}/src/kernel/parhelia
 	ln -sf ../../../kernel/mtx_parhelia.o .
@@ -75,6 +77,7 @@ matrox_src_compile() {
 	# Can't use emake here
 	make clean
 	make || die "make failed"
+	set_arch_to_portage
 }
 
 matrox_base_src_install() {
