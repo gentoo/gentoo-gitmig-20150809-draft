@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_pre20021217.ebuild,v 1.1 2002/12/19 13:07:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_pre20021217.ebuild,v 1.2 2003/01/26 23:29:10 nall Exp $
 IUSE="kde esd ipv6 ssl"
 inherit kde-base
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.kvirc.net"
 
 SLOT="3"
 LICENSE="kvirc"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 use kde && need-kde 3 || need-qt 3
 

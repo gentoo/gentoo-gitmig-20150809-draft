@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.5 2003/01/10 12:51:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.6 2003/01/26 23:29:10 nall Exp $
 
 *kvirc-3.0.0_beta2 (10 Jan 2003)
 
@@ -14,6 +14,9 @@
   Some fixes.
 
 *kvirc-3.0.0_pre20021217 (19 Dec 2002)
+
+  26 Jan 2003; Jon Nall <nall@gentoo.org> kvirc-3.0.0_pre20021217.ebuild :
+  added ~ppc
 
   19 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
