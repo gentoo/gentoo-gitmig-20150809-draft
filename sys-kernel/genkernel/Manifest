@@ -1,4 +1,6 @@
+MD5 727a4b385cf336028379d79ff6f8dce4 genkernel-1.6.ebuild 589
 MD5 1acd0e4ab1fc582502170d1596d4a46b genkernel-1.5.ebuild 590
-MD5 f8f72c99bc0b82bff4c96571823ef612 ChangeLog 828
+MD5 faf276d29da1636e86f8e33811830c26 ChangeLog 994
 MD5 4e611a633363995ddc515d0f5c26fb46 files/README 288
 MD5 403712f20bd8a945c0123bb83f6536d6 files/digest-genkernel-1.5 66
+MD5 440e33e8603dd4aad622093a60c7e32e files/digest-genkernel-1.6 66
