@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/rarpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/ChangeLog,v 1.1 2002/08/28 21:24:48 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/ChangeLog,v 1.2 2002/09/03 14:08:49 murphy Exp $
 
 *rarpd-1.1 (28 Aug 2002)
+
+  03 Sep 2002; Maarten Thibaut <murphy@gentoo.org> rarpd-1.1.ebuild: Fixed libnet
+  dependency, needs libnet 1.0.2a for correct compilation. Added x86 and PPC keywords.
 
   28 Aug 2002; Maarten Thibaut <murphy@gentoo.org> rarpd-1.1.ebuild: Initial 
   import. Ebuild submitted by Dean Bailey <alron@gentoo.org>, see Bug #5082.
