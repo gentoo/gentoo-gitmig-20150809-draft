@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.6 2003/08/05 18:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.7 2003/09/01 11:29:06 weeve Exp $
 
 IUSE="doc"
 
@@ -80,6 +80,10 @@ src_install () {
 		PLATFORM="i386"
 	fi
 
+	if [ "${ARCH}" = "sparc" ] ; then
+		PLATFORM="sparc"
+	fi
+
 	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so 
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
@@ -89,6 +93,12 @@ src_install () {
 	
 	# install env into /etc/env.d
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
+
+	# Fix for bug 26629
+	if [ "${PROFILE_ARCH}" = "sparc64" ]
+	then
+		dosym /opt/${P}/jre/lib/sparc /opt/${P}/jre/lib/sparc64
+	fi
 }
 
 pkg_postinst () {
