@@ -1,8 +1,11 @@
 # ChangeLog for app-office/sc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.4 2003/02/12 05:14:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.5 2003/02/13 18:42:45 seemant Exp $
 
 *sc-7.12 (1 Feb 2002)
+
+  13 Feb 2003; Seemant Kulleen <seemant@gentoo.org> sc-7.12.ebuild :
+  fixed  in man page. Thanks to Martin Kuehl <perdix@web.de> in bug #15635
 
   19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
   Added HOMEPAGE variable
