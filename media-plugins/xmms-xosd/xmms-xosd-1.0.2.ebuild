@@ -13,7 +13,7 @@ DEPEND="virtual/x11
 RDEPEND="${DEPEND}"
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	econf || die
