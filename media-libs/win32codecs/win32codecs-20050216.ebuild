@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050216.ebuild,v 1.1 2005/03/13 22:45:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050216.ebuild,v 1.2 2005/03/13 22:58:05 luckyduck Exp $
 
 
 DESCRIPTION="Win32 binary codecs for video and audio playback support"
@@ -26,6 +26,10 @@ src_install() {
 		insinto /usr/lib/real
 		doins *so.6.0
 
+		# copy newly introduced codecs from realplayer10
+		# see the ChangeLog online
+		doins *.so
+
 		# fix bug #80321
 		ln -s ${D}/usr/lib/real/* ${D}/usr/lib/win32/
 	fi
@@ -37,4 +41,6 @@ src_install() {
 	fi
 
 	doins *.dll *.ax *.xa *.acm *.vwp *.drv *.DLL
+
+	dodoc README
 }
