@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.1.4.ebuild,v 1.4 2004/06/25 15:59:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.1.4.ebuild,v 1.5 2004/08/03 11:34:38 dholm Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/cocoon/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.4
