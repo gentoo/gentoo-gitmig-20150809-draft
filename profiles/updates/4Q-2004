@@ -224,3 +224,4 @@ move app-sci/udunits sci-libs/udunits
 move dev-libs/buddy sci-libs/buddy
 move dev-libs/cfitsio sci-libs/cfitsio
 move dev-libs/cln sci-libs/cln
+move dev-libs/djbfft sci-libs/djbfft
