@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/lha
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.18 2004/06/28 01:25:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.19 2004/09/07 13:18:13 usata Exp $
+
+*lha-114i-r4 (07 Sep 2004)
+
+  07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +files/lha-114i-malloc.patch,
+  +files/lha-114i-symlink.patch, +files/lha-command_buffer.patch,
+  +files/lha-dir_length_bounds_check.patch, +lha-114i-r4.ebuild:
+  Fixed multiple vulnerabilities; bug #62618. Thanks to vorlon
+  <vorlon@vorlons.info>.
 
   26 Jun 2004; Tom Gall <tgall@gentoo.org> lha-114i-r3.ebuild:
   stable ppc64, bug #55236
