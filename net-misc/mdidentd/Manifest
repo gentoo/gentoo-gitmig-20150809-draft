@@ -1,5 +1,5 @@
-MD5 e8e746047f1414bdfecb5381e93ffadc mdidentd-1.04a.ebuild 1070
-MD5 05c2dd48689ae8dd503fcc75f9b5ed0d ChangeLog 379
+MD5 1487f58e75d7a25468b273287292c7fc mdidentd-1.04a.ebuild 1078
+MD5 a38be29c179ca33a4a4dfc27844436ea ChangeLog 500
 MD5 d7572cb16b773d52a8cf96fab95c9d44 files/mdidentd.init.d 493
 MD5 bb24159ce9ff81560bf15e634d686e1e files/1.04a-pidfile.patch 483
 MD5 77781fdeabcd004ae4478c14971a9644 files/digest-mdidentd-1.04a 66
