@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta1.ebuild,v 1.1 2003/07/14 04:36:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta1.ebuild,v 1.2 2003/07/14 22:31:41 sindian Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -100,8 +100,12 @@ pkg_postinst() {
 	ewarn "Also, note that you must compile in support for" 
 	ewarn "input devices (Input device support->Input devices),"
 	ewarn "the virtual terminal (Character Devices->Virtual terminal),"
+	ewarn "vga_console (Graphics Support->Console...->VGA text console)"
 	ewarn "and the vt_console (Character Devices->Support for console...)."
 	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""
 	ewarn "error."
+	echo
+	einfo "Consult http://www.codemonkey.org.uk/post-halloween-2.5.txt"
+	einfo "for more info about the development series."
 	echo
 }
