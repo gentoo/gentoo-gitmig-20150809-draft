@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.7 2004/07/13 17:11:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.8 2004/07/14 21:50:14 mr_bones_ Exp $
 
 MY_P="${P/_beta/beta}"
 S="${WORKDIR}/${MY_P}"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE="doc"
 DEPEND="doc? ( net-www/lynx )
-	>=sys-libs/pam-0.72" 
+	>=sys-libs/pam-0.72"
 
 src_compile() {
 	local myconf
@@ -23,7 +23,7 @@ src_compile() {
 		myconf="--enable-lynx"
 	else
 		myconf="--disable-lynx"
-	fi	
+	fi
 
 	econf ${myconf} || die
 	emake || die
