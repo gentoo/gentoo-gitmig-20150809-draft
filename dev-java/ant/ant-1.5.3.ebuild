@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3.ebuild,v 1.1 2003/04/15 21:10:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3.ebuild,v 1.2 2003/04/17 21:58:30 mholzer Exp $
 
 S=${WORKDIR}/apache-ant-${PV}
 DESCRIPTION="Build system for Java"
-SRC_URI="http://www.apache.org/dist/ant/binaries/apache-ant-${PV}-bin.tar.bz2"
+SRC_URI="mirror://gentoo/apache-ant-${PV}-bin.tar.bz2"
 HOMEPAGE="http://jakarta.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
