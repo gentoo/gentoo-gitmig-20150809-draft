@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.14 2004/12/17 05:23:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.15 2004/12/24 07:51:59 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -16,16 +16,17 @@
 # using a cvs version of a horde ebulid.
 
 inherit webapp eutils
-[ "${PN}" != "${PN/-cvs}" ] && inherit cvs
+[[ ${PN} != ${PN/-cvs} ]] && inherit cvs
 
 ECLASS=horde
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_install pkg_postinst
 
-[ -z "${HORDE_PN}" ] && HORDE_PN="${PN/horde-}"
+[[ -z ${HORDE_PN} ]] && HORDE_PN="${PN/horde-}"
+[[ -z ${HORDE_MAJ} ]] && HORDE_MAJ=""
 
-if [ "${PN}" != "${PN/-cvs}" ] ; then
+if [[ ${PN} != ${PN/-cvs} ]] ; then
 	ECVS_SERVER="anoncvs.horde.org:/repository"
 	ECVS_MODULE="${HORDE_PN}"
 	ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
@@ -39,8 +40,8 @@ if [ "${PN}" != "${PN/-cvs}" ] ; then
 	S=${WORKDIR}/${ECVS_MODULES}
 else
 	EHORDE_CVS="false"
-	SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/${HORDE_PN}-${PV/_/-}.tar.gz"
-	S=${WORKDIR}/${HORDE_PN}-${PV/_/-}
+	SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/${HORDE_PN}${HORDE_MAJ}-${PV/_/-}.tar.gz"
+	S=${WORKDIR}/${HORDE_PN}${HORDE_MAJ}-${PV/_/-}
 fi
 HOMEPAGE="http://www.horde.org/${HORDE_PN}"
 
@@ -48,7 +49,7 @@ LICENSE="LGPL-2"
 
 # INSTALL_DIR is used by webapp.eclass when USE=-vhosts
 INSTALL_DIR="/horde"
-[ "${HORDE_PN}" != "horde" ] && INSTALL_DIR="${INSTALL_DIR}/${HORDE_PN}"
+[[ ${HORDE_PN} != "horde" ]] && INSTALL_DIR="${INSTALL_DIR}/${HORDE_PN}"
 
 horde_pkg_setup() {
 	webapp_pkg_setup
@@ -64,13 +65,13 @@ horde_pkg_setup() {
 }
 
 horde_src_unpack() {
-	if [ "${EHORDE_CVS}" == "true" ] ; then
+	if [[ ${EHORDE_CVS} = "true" ]] ; then
 		cvs_src_unpack
 	else
 		unpack ${A}
 	fi
 	cd ${S}
-	[ -f test.php ] && chmod 000 test.php
+	[[ -f test.php ]] && chmod 000 test.php
 }
 
 horde_src_install() {
@@ -79,7 +80,7 @@ horde_src_install() {
 	local destdir=${MY_HTDOCSDIR}
 
 	# Work-around when dealing with CVS sources
-	[ "${EHORDE_CVS}" == "true" ] && cd ${HORDE_PN}
+	[[ ${EHORDE_CVS} = "true" ]] && cd ${HORDE_PN}
 
 	dodoc README docs/*
 	rm -rf COPYING LICENSE README docs
@@ -92,18 +93,18 @@ horde_src_install() {
 }
 
 horde_pkg_postinst() {
-	if [ -e ${ROOT}/usr/share/doc/${PF}/INSTALL.gz ] ; then
+	if [[ -e ${ROOT}/usr/share/doc/${PF}/INSTALL.gz ]] ; then
 		einfo "Please read /usr/share/doc/${PF}/INSTALL.gz"
 	fi
 	einfo "Before this package will work, you have to setup"
 	einfo "the configuration files.  Please review the"
 	einfo "config/ subdirectory of ${HORDE_PN} in the webroot."
-	if [ "${HORDE_PN}" != "horde" ] ; then
+	if [[ ${HORDE_PN} != "horde" ]] ; then
 		ewarn
 		ewarn "Make sure ${HORDE_PN} is accounted for in horde's root"
 		ewarn "    config/registry.php"
 	fi
-	if [ "${EHORDE_CVS}" == "true" ] ; then
+	if [[ ${EHORDE_CVS} = "true" ]] ; then
 		ewarn
 		ewarn "Use these CVS versions at your own risk."
 		ewarn "They tend to break things when working with" 
