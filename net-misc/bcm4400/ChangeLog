@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bcm4400
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.6 2003/12/07 12:08:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.7 2003/12/23 13:46:25 genone Exp $
+
+  23 Dec 2003; Marius Mauch <genone@gentoo.org> bcm4400-3.0.7.ebuild:
+  added missing app-arch/unzip dependency, thanks to Arto Kuiri for
+  reporting it (bug #36354)
 
 *bcm4400-3.0.7 (07 Dec 2003)
 
