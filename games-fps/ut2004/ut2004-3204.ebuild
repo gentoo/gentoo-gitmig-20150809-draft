@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.8 2004/06/03 11:31:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.9 2004/06/16 12:17:33 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://mirror1.icculus.org/ut2004/ut2004-lnxpatch3204.tar.bz2"
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 RESTRICT="nostrip"
 IUSE="opengl dedicated"
 
@@ -135,6 +135,18 @@ src_install() {
 	# Removing uneccessary files in Sounds
 	rm -f ${Ddir}/Sounds/*.{det,est,frt,itt,kot,smt,tmt}_uax.uz2
 
+	# installing patch files
+	cp ${S}/UT2004-Patch/Help/* ${Ddir}/Help
+	cp ${S}/UT2004-Patch/System/* ${Ddir}/System
+	cp ${S}/UT2004-Patch/Textures/* ${Ddir}/Textures
+
+	use amd64 && rm ${Ddir}/System/ucc-bin ${Ddir}/System/ut2004-bin \
+		&& mv ${Ddir}/System/ucc-bin-linux-amd64 ${Ddir}/System/ucc-bin \
+		&& mv ${Ddir}/System/ut2004-bin-linux-amd64 ${Ddir}/System/ut2004-bin \
+		&& chmod ug+x ${Ddir}/System/ucc-bin ${Ddir}/System/ut2004-bin
+	use x86 && rm ${Ddir}/System/ucc-bin-linux-amd64 \
+		${Ddir}/System/ut2004-bin-linux-amd64
+
 	# uncompressing files
 	einfo "Uncompressing files... this *will* take a while..."
 	for j in {Animations,Maps,Sounds,StaticMeshes,Textures} ; do
@@ -161,18 +173,6 @@ src_install() {
 	# creating .loki/installed links
 	mkdir -p ${D}/root/.loki/installed
 	dosym ${dir}/.manifest/${PN}.xml ${D}/root/.loki/installed/${PN}.xml
-
-	# installing patch files
-	cp ${S}/UT2004-Patch/Help/* ${Ddir}/Help
-	cp ${S}/UT2004-Patch/System/* ${Ddir}/System
-	cp ${S}/UT2004-Patch/Textures/* ${Ddir}/Textures
-
-	use amd64 && rm ${Ddir}/System/ucc-bin ${Ddir}/System/ut2004-bin \
-		&& mv ${Ddir}/System/ucc-bin-linux-amd64 ${Ddir}/System/ucc-bin \
-		&& mv ${Ddir}/System/ut2004-bin-linux-amd64 ${Ddir}/System/ut2004-bin \
-		&& chmod ug+x ${Ddir}/System/ucc-bin ${Ddir}/System/ut2004-bin
-	use x86 && rm ${Ddir}/System/ucc-bin-linux-amd64 \
-		${Ddir}/System/ut2004-bin-linux-amd64
 
 	games_make_wrapper ut2004 ./ut2004 ${dir}
 

@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.8 2004/06/03 11:31:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.9 2004/06/16 12:17:33 wolf31o2 Exp $
+
+  16 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3204.ebuild:
+  Moved patch and amd64 ucc-bin/ut2004-bin renames to before uncompressing to
+  attempt to solve problems with installation on amd64. Marked stable on x86 and
+  closing bug #54028.
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> ut2004-3204.ebuild:
   fix dir -> die typo; skip unnecessary dodirs
