@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.6 2004/06/24 22:25:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.7 2004/07/18 14:50:08 aliz Exp $
 
-inherit games
+inherit games gnuconfig
 
 DESCRIPTION="A Linux/SDL-Port of the famous DGen MegaDrive/Genesis-Emulator"
 HOMEPAGE="http://www.pknet.com/~joe/dgen-sdl.html"
@@ -20,6 +20,8 @@ DEPEND="${DEPEND}
 	dev-lang/nasm"
 
 src_compile() {
+	gnuconfig_update
+
 	egamesconf \
 		$(use_with opengl) \
 		$(use_with X x) \
