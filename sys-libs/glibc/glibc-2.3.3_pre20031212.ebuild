@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031212.ebuild,v 1.1 2003/12/14 14:22:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031212.ebuild,v 1.2 2003/12/14 14:23:46 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -381,7 +381,7 @@ src_unpack() {
 	if [ "${ARCH}" = "hppa" ]
 	then
 		local x=
-		
+
 		cd ${WORKDIR}
 		unpack ${P}-hppa-patches-p1.tar.bz2
 		cd ${S}
