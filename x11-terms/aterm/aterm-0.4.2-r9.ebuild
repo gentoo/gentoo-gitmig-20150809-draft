@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.12 2004/07/29 00:28:20 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.13 2004/08/03 14:38:46 spock Exp $
 
 inherit eutils
 
@@ -69,8 +69,8 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 
-	fperms g+s /usr/bin/aterm
 	fowners root:utmp /usr/bin/aterm
+	fperms g+s /usr/bin/aterm
 
 	doman doc/aterm.1
 	dodoc ChangeLog INSTALL doc/BUGS doc/FAQ doc/README.*
