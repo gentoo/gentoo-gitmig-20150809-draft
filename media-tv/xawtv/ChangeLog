@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.1 2003/06/18 12:00:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.2 2003/06/27 14:21:37 seemant Exp $
+
+  27 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xawtv-3.86-r1.ebuild:
+  issue with remote display -- fix by CJ Kucera <gentoo@apocalyptech.com> in bug
+  #18999
 
 *xawtv-3.88 (18 Jun 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.86-r1.ebuild,v 1.1 2003/06/18 12:00:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.86-r1.ebuild,v 1.2 2003/06/27 14:21:37 seemant Exp $
 
 inherit virtualx
 
@@ -68,7 +68,7 @@ src_compile() {
 	make || die
 
 	cd ${WORKDIR}/${MY_FONT}
-	Xmake || die "tvfonts failed"
+	DISPLAY="" Xmake || die "tvfonts failed"
 }
 
 src_install() {
