@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.3.ebuild,v 1.2 2004/12/11 23:45:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.3.ebuild,v 1.3 2004/12/16 21:03:48 kloeri Exp $
 
 inherit eutils libtool
 
@@ -42,6 +42,7 @@ pkg_setup() {
 
 src_compile() {
 	elibtoolize
+
 	econf `use_enable python` || die "configure failed"
 	emake || die "make failed"
 }
@@ -50,11 +51,10 @@ src_install() {
 	make install DESTDIR=${D} || die "install failed"
 
 	if use doc; then
-		insinto /usr/share/doc/${PF}
-		exeinto /usr/share/doc/${PF}
-		doins README
-		newins demo/main.cpp example.cpp
-		doexe demo/wxMozillaDemo
-		doins wxPython/demo/*.py
+		dodoc README
+		newdoc demo/main.cpp example.cpp
+		if use python; then
+			dodoc wxPython/demo/*.py
+		fi
 	fi
 }
