@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/vimcommander
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.2 2004/03/15 20:03:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.3 2004/03/28 20:01:47 ciaranm Exp $
+
+*vimcommander-1.54.2.2 (28 Mar 2004)
+
+  28 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  vimcommander-1.54.2.2.ebuild:
+  Version bump, thanks to Daniel Webert in bug #46013
 
   15 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> vimcommander-1.52.ebuild:
   Stable on sparc
