@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.15 2004/05/17 10:19:34 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.16 2004/06/13 10:47:47 kosmikus Exp $
+
+*darcs-0.9.21 (13 Jun 2004)
+
+  13 Jun 2004; Andres Loeh <kosmikus@gentoo.org> darcs-0.9.17.ebuild,
+  darcs-0.9.20.ebuild, darcs-0.9.21.ebuild:
+  Marked 0.9.20 stable for x86 (bug #53293). Added new version 0.9.21.
 
 *darcs-0.9.20 (17 May 2004)
 
