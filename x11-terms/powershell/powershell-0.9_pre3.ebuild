@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/powershell-0.9_pre3.ebuild,v 1.3 2002/10/17 15:33:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/powershell-0.9_pre3.ebuild,v 1.4 2002/10/20 18:55:39 vapier Exp $
 
 S=${WORKDIR}/${P/_pre*/}
 DESCRIPTION="Terminal emulator, supports multiple terminals in a single window"
@@ -11,7 +11,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
-RDEPEND="${DEPEND}"
 
 src_compile() { 
 	./configure --host=${CHOST} \
