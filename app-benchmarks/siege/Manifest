@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 904a71f83c784ae52d61439531dbbd0b siege-2.59.ebuild 1043
-MD5 d0987a052902752a09388d28a5cc5d5e siege-2.60.ebuild 1051
+MD5 4941c2f15a22961fa45982defe227443 siege-2.60.ebuild 1051
 MD5 a42805f753e9a301535d6c443e52a5f2 siege-2.58.ebuild 1042
 MD5 bdb6314b7b3d6743ef6569d5a91b8fe9 siege-2.55.ebuild 1045
-MD5 a5b1b5aa48c595927ee7a60940f7b114 ChangeLog 883
+MD5 2f3162b3bc9a36ec216bdc5756c2c49e ChangeLog 1034
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 4aebf8c1efbfd38b632e0861ccff739d files/siege-gentoo_openssl.patch 304
 MD5 f2fd20cd35c2a0514b5e37150182f32b files/digest-siege-2.55 62
@@ -15,7 +15,7 @@ MD5 1185a0d2d8ac987001f575f8eb302327 files/digest-siege-2.60 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBSs1PEZCkKN40op4RAjr1AJ9SPynNK2SW1ATt4MBzc3/yTgmFowCgv44P
-mcYFgbg/zs44gXjOiBIgDnw=
-=4XHz
+iD8DBQFBTDdoEZCkKN40op4RAtIyAJ4l6ZLtxeAItxGbKbZfwfocEHylPACfZ6CL
+zuwVw1CNgPPZcrLRTf2yrEU=
+=bBPR
 -----END PGP SIGNATURE-----
