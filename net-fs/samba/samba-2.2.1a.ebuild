@@ -26,7 +26,7 @@ src_unpack() {
     unpack ${A}
     if [ "`use afs`" ]; then
       cd ${S}
-      cat ${FILESDIR}/patch.221a.08 | patch -p0
+      cat ${FILESDIR}/patch.221a.10 | patch -p0
     fi
 }
 

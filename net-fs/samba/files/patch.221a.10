@@ -1,13 +1,13 @@
 diff -u -r -N source/Makefile.in source.patched/Makefile.in
 --- source/Makefile.in	Sun Jul  8 13:29:34 2001
-+++ source.patched/Makefile.in	Tue Jul 17 15:57:01 2001
++++ source.patched/Makefile.in	Thu Aug 16 11:59:36 2001
 @@ -8,7 +8,8 @@
  mandir=@mandir@
  sysconfdir=@sysconfdir@
  
 -LIBS=@LIBS@
 +OPENSSL_DIR=/oper/oper4/jvrobert/scratch/enc/openssl-0.9.6
-+LIBS=-L/usr/afsws/lib -L/usr/afsws/lib/afs @LIBS@ -lkauth -lprot -lubik -lauth -lrxkad -lsys -ldes -lrx -llwp -lcom_err -laudit /usr/afsws/lib/afs/util.a -L$(OPENSSL_DIR) -lcrypto -lresolv
++LIBS=-L/usr/afsws/lib -L/usr/afsws/lib/afs @LIBS@ -lkauth -lprot -lubik -lauth -lrxkad -lvolser -lvldb -lcmd -lsys -ldes -lrx -llwp -lcom_err -laudit /usr/afsws/lib/afs/util.a -L$(OPENSSL_DIR) -lcrypto -lresolv
  CC=@CC@
  CFLAGS=@CFLAGS@
  CPPFLAGS=@CPPFLAGS@
@@ -30,7 +30,7 @@ diff -u -r -N source/Makefile.in source.patched/Makefile.in
                   rpc_server/srv_pipe.o rpc_server/srv_dfs.o rpc_server/srv_dfs_nt.o \
 diff -u -r -N source/include/ntdomain.h source.patched/include/ntdomain.h
 --- source/include/ntdomain.h	Thu Jul  5 19:01:26 2001
-+++ source.patched/include/ntdomain.h	Tue Jul 17 15:57:01 2001
++++ source.patched/include/ntdomain.h	Thu Aug 16 11:59:36 2001
 @@ -295,6 +295,9 @@
  #include "rpc_wkssvc.h"
  #include "rpc_spoolss.h"
@@ -43,7 +43,7 @@ diff -u -r -N source/include/ntdomain.h source.patched/include/ntdomain.h
  #endif /* _NT_DOMAIN_H */
 diff -u -r -N source/include/proto.h source.patched/include/proto.h
 --- source/include/proto.h	Sun Jul  8 13:29:43 2001
-+++ source.patched/include/proto.h	Tue Jul 17 15:57:02 2001
++++ source.patched/include/proto.h	Thu Aug 16 11:59:37 2001
 @@ -3611,6 +3611,12 @@
  uint32 _dfs_enum(pipes_struct *p, DFS_Q_DFS_ENUM *q_u, DFS_R_DFS_ENUM *r_u);
  uint32 _dfs_get_info(pipes_struct *p, DFS_Q_DFS_GET_INFO *q_u, DFS_R_DFS_GET_INFO *r_u);
@@ -59,7 +59,7 @@ diff -u -r -N source/include/proto.h source.patched/include/proto.h
  BOOL api_ntlsa_rpc(pipes_struct *p);
 diff -u -r -N source/include/rpc_afstoken.h source.patched/include/rpc_afstoken.h
 --- source/include/rpc_afstoken.h	Wed Dec 31 17:00:00 1969
-+++ source.patched/include/rpc_afstoken.h	Tue Jul 17 15:57:02 2001
++++ source.patched/include/rpc_afstoken.h	Thu Aug 16 11:59:37 2001
 @@ -0,0 +1,37 @@
 +/* 
 +   Unix SMB/Netbios implementation.
@@ -100,7 +100,7 @@ diff -u -r -N source/include/rpc_afstoken.h source.patched/include/rpc_afstoken.
 +#endif /* _RPC_AFSTOKEN_H */
 diff -u -r -N source/include/smb.h source.patched/include/smb.h
 --- source/include/smb.h	Thu Jul  5 19:01:30 2001
-+++ source.patched/include/smb.h	Tue Jul 17 15:57:02 2001
++++ source.patched/include/smb.h	Thu Aug 16 11:59:37 2001
 @@ -302,6 +302,9 @@
  #define PIPE_LSARPC   "\\PIPE\\lsarpc"
  #define PIPE_SPOOLSS  "\\PIPE\\spoolss"
@@ -113,7 +113,7 @@ diff -u -r -N source/include/smb.h source.patched/include/smb.h
  typedef struct nttime_info
 diff -u -r -N source/param/loadparm.c source.patched/param/loadparm.c
 --- source/param/loadparm.c	Thu Jul  5 19:01:44 2001
-+++ source.patched/param/loadparm.c	Tue Jul 17 15:57:02 2001
++++ source.patched/param/loadparm.c	Thu Aug 16 11:59:38 2001
 @@ -228,6 +228,9 @@
  	BOOL sslReqServerCert;
  	BOOL sslCompatibility;
@@ -159,7 +159,7 @@ diff -u -r -N source/param/loadparm.c source.patched/param/loadparm.c
  FN_GLOBAL_BOOL(lp_dns_proxy, &Globals.bDNSproxy)
 diff -u -r -N source/passdb/pass_check.c source.patched/passdb/pass_check.c
 --- source/passdb/pass_check.c	Thu Jul  5 19:01:46 2001
-+++ source.patched/passdb/pass_check.c	Tue Jul 17 15:57:02 2001
++++ source.patched/passdb/pass_check.c	Thu Aug 16 11:59:38 2001
 @@ -33,8 +33,31 @@
  
  #ifdef WITH_AFS
@@ -194,7 +194,7 @@ diff -u -r -N source/passdb/pass_check.c source.patched/passdb/pass_check.c
  check on AFS authentication
 diff -u -r -N source/rpc_parse/parse_rpc.c source.patched/rpc_parse/parse_rpc.c
 --- source/rpc_parse/parse_rpc.c	Mon Mar 12 14:09:53 2001
-+++ source.patched/rpc_parse/parse_rpc.c	Tue Jul 17 15:57:02 2001
++++ source.patched/rpc_parse/parse_rpc.c	Thu Aug 16 11:59:38 2001
 @@ -132,6 +132,18 @@
          }, 0x03                             \
  }
@@ -226,31 +226,32 @@ diff -u -r -N source/rpc_parse/parse_rpc.c source.patched/rpc_parse/parse_rpc.c
  
 diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afstoken.c
 --- source/rpc_server/srv_afstoken.c	Wed Dec 31 17:00:00 1969
-+++ source.patched/rpc_server/srv_afstoken.c	Tue Jul 17 15:57:03 2001
-@@ -0,0 +1,589 @@
++++ source.patched/rpc_server/srv_afstoken.c	Thu Aug 16 11:59:38 2001
+@@ -0,0 +1,649 @@
 +#define OLD_NTDOMAIN 1
-+/* 
-+ *  Unix SMB/Netbios implementation.
-+ *  Version 1.9.
-+ *  RPC Pipe client / server routines
-+ *  Copyright (C) Andrew Tridgell              1992-1997,
-+ *  Copyright (C) Luke Kenneth Casson Leighton 1996-1997,
-+ *  Copyright (C) Paul Ashton                       1997.
-+ *  
-+ *  This program is free software; you can redistribute it and/or modify
-+ *  it under the terms of the GNU General Public License as published by
-+ *  the Free Software Foundation; either version 2 of the License, or
-+ *  (at your option) any later version.
-+ *  
-+ *  This program is distributed in the hope that it will be useful,
-+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-+ *  GNU General Public License for more details.
-+ *  
-+ *  You should have received a copy of the GNU General Public License
-+ *  along with this program; if not, write to the Free Software
-+ *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-+ */
++/*
++	Copyright 2001 Intel Corporation
++
++	Portions Copyright 2000, International Business Machines Corporation and
++    others.  All Rights Reserved.  From OpenAFS 1.1.1, released under the
++    IBM Public License.  For details see:
++    http://www.openafs.org/dl/license10.html
++
++    This program is free software; you can redistribute it and/or modify
++    it under the terms of the GNU General Public License as published by
++    the Free Software Foundation; either version 2 of the License, or
++    (at your option) any later version.
++
++    This program is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++    GNU General Public License for more details.
++
++    You should have received a copy of the GNU General Public License
++    along with this program; if not, write to the Free Software
++    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++*/
++
 +
 +#include <openssl/rsa.h>
 +#include <openssl/evp.h>
@@ -272,7 +273,10 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +#define XDR_FREE BROKEN_AFS11
 +#define XDR BROKEN_AFS12
 +#include <afs/stds.h>
++#include <afs/ptint.h>
++#include <afs/ptserver.h>
 +#include <afs/kautils.h>
++extern int UV_SetSecurity();
 +#undef des_cblock
 +#undef des_ks_struct
 +#undef des_key_schedule
@@ -289,10 +293,14 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +#ifdef SUNOS5
 +#define SAVEME _FILE_OFFSET_BITS
 +#undef _FILE_OFFSET_BITS
++#define prheader PROLDHEADER
 +#include <procfs.h>
++#undef prheader
 +#define _FILE_OFFSET_BITS SAVEME
 +#undef SAVEME
 +#endif
++
++#define AFS_CONF_DIR "/usr/vice/etc"
 +
 +#define AFSTOKEN_VERSION 2
 +
@@ -305,6 +313,40 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +    int deleted;
 +};
 +
++int id2name(afs_int32 id, char *name, char *cell) {
++    struct idlist tIds;
++    struct namelist tNames;
++    afs_int32 errCode;
++
++    /* We have to initialize ubik client to work with UBIK */
++    errCode = pr_Initialize(UV_SetSecurity, AFS_CONF_DIR, cell);
++    if(errCode) {
++	DEBUG(3, ("id2name(): pr_Initialize() failed\n"));
++        return -1;
++    }
++    
++    /* we have to translate name to ID */
++    tIds.idlist_len = 1;
++    tIds.idlist_val = (afs_int32 *)malloc(sizeof(afs_int32));
++    tIds.idlist_val[0] = id;
++    tNames.namelist_len = 0;
++    tNames.namelist_val = 0;
++    errCode = pr_IdToName(&tIds, &tNames);
++    pr_End();
++    strncpy(name,tNames.namelist_val[0],PR_MAXNAMELEN);
++    
++    if(tNames.namelist_val) free(tNames.namelist_val);
++    if(tIds.idlist_val) free(tIds.idlist_val);
++
++    if(errCode || (id == ANONYMOUSID) ) {
++        DEBUG(3, ("id2name(): can't translate %d to name (error %u)\n", id, errCode));
++        return -1;
++    }
++    return 0;
++}
++
++/* From OpenAFS 1.1.1 - Copyright IBM.  Released under IBM Public License */
++/* Modified by Jason Robertson, Intel Corp. */
 +BOOL unlog_NormalizeCellNames(char **list, int size) {
 +      char *newCellName, *lcstring();
 +      unsigned index;
@@ -347,7 +389,8 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +}
 +
 +
-+/* From unlog.c in AFS */
++/* From OpenAFS 1.1.1 - Copyright IBM.  Released under IBM Public License */
++/* Modified by Jason Robertson, Intel Corp. */
 +unlog_ForgetCertainTokens(char **list, int listSize) {
 +      unsigned count, index, index2, number;
 +      afs_int32 code;
@@ -421,6 +464,8 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +      return 1;
 +}
 +
++/* From OpenAFS 1.1.1 - Copyright IBM.  Released under IBM Public License */
++/* Modified by Jason Robertson, Intel Corp. */
 +unlog_CheckUnlogList(char **list, int count, struct ktc_principal *principal) {
 +      do {
 +          if(strcmp(*list, principal->cell) == 0)
@@ -432,6 +477,8 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +      return 0;
 +}
 +
++/* From OpenAFS 1.1.1 - Copyright IBM.  Released under IBM Public License */
++/* Modified by Jason Robertson, Intel Corp. */
 +unlog_VerifyUnlog(char **cellList, int cellListSize, struct tokenInfo *tokenList, int tokenListSize) {
 +      int index;
 +
@@ -553,6 +600,7 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +	struct ktc_token tok;
 +	int i;
 +	int offset = 0;
++	char name[PR_MAXNAMELEN + 64];
 +
 +	buf[0] = '\0';
 +
@@ -563,10 +611,22 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +			DEBUG(3, ("enum_tokens: start %d end %d\n", tok.startTime, tok.endTime));
 +#undef sprintf
 +			if ( ! strcmp(service.name, "afs") ) {
++				afs_int32 id = 0;
++				strncpy(name, client.name, sizeof(name));
++				DEBUG(3, ("enum_tokens: name pre-scan %s\n", name));
++				if (sscanf(name, "AFS ID %d", &id) != 0 && id) {
++					DEBUG(3, ("enum_tokens: AFS ID %d\n", id));
++					id2name(id, name, client.cell); /* we don't care much if it fails */
++					DEBUG(3, ("enum_tokens: AFS MAPS TO %s\n", name));
++
++				}
++				else {
++					DEBUG(3, ("enum_tokens: NO MATCH on SCANF\n"));
++				}
 +				safe_strcat(buf + offset, client.cell, size - offset - 1);
 +				offset += strlen(buf + offset) + 1;
 +				buf[offset] = '\0';
-+				safe_strcat(buf + offset, client.name, size - offset - 1);
++				safe_strcat(buf + offset, name, size - offset - 1);
 +				offset += strlen(buf + offset) + 1;
 +				buf[offset] = '\0';
 +				sprintf(buf + offset, "%d", tok.endTime);
@@ -819,7 +879,7 @@ diff -u -r -N source/rpc_server/srv_afstoken.c source.patched/rpc_server/srv_afs
 +#undef OLD_NTDOMAIN
 diff -u -r -N source/rpc_server/srv_pipe.c source.patched/rpc_server/srv_pipe.c
 --- source/rpc_server/srv_pipe.c	Thu Jul  5 19:01:53 2001
-+++ source.patched/rpc_server/srv_pipe.c	Tue Jul 17 15:57:03 2001
++++ source.patched/rpc_server/srv_pipe.c	Thu Aug 16 11:59:39 2001
 @@ -496,6 +496,9 @@
  #ifdef WITH_MSDFS
      { "netdfs",   "netdfs" , api_netdfs_rpc },
@@ -830,9 +890,20 @@ diff -u -r -N source/rpc_server/srv_pipe.c source.patched/rpc_server/srv_pipe.c
      { NULL,       NULL,      NULL }
  };
  
+diff -u -r -N source/smbd/ipc.c source.patched/smbd/ipc.c
+--- source/smbd/ipc.c	Thu Jul  5 19:02:00 2001
++++ source.patched/smbd/ipc.c	Thu Aug 16 12:00:07 2001
+@@ -342,6 +342,7 @@
+ 	    strequal(name,"SRVSVC") ||
+ 	    strequal(name,"WINREG") ||
+ 	    strequal(name,"SAMR") ||
++	    strequal(name,"AFSTOKEN") ||
+ 	    strequal(name,"LSARPC"))
+ 	{
+ 		DEBUG(4,("named pipe command from Win95 (wow!)\n"));
 diff -u -r -N source/smbd/nttrans.c source.patched/smbd/nttrans.c
 --- source/smbd/nttrans.c	Thu Jul  5 19:02:00 2001
-+++ source.patched/smbd/nttrans.c	Tue Jul 17 15:57:03 2001
++++ source.patched/smbd/nttrans.c	Thu Aug 16 11:59:39 2001
 @@ -44,6 +44,9 @@
  #ifdef WITH_MSDFS
    "\\netdfs",
@@ -845,7 +916,7 @@ diff -u -r -N source/smbd/nttrans.c source.patched/smbd/nttrans.c
  
 diff -u -r -N source/smbd/process.c source.patched/smbd/process.c
 --- source/smbd/process.c	Thu Jul  5 19:02:02 2001
-+++ source.patched/smbd/process.c	Tue Jul 17 15:59:43 2001
++++ source.patched/smbd/process.c	Thu Aug 16 11:59:39 2001
 @@ -1190,6 +1190,10 @@
  	time_t last_timeout_processing_time = time(NULL);
  	unsigned int num_smbs = 0;
@@ -859,7 +930,7 @@ diff -u -r -N source/smbd/process.c source.patched/smbd/process.c
  	if ((InBuffer == NULL) || (OutBuffer == NULL)) 
 diff -u -r -N source/smbd/reply.c source.patched/smbd/reply.c
 --- source/smbd/reply.c	Wed Jul 11 13:08:46 2001
-+++ source.patched/smbd/reply.c	Tue Jul 17 15:57:03 2001
++++ source.patched/smbd/reply.c	Thu Aug 16 11:59:40 2001
 @@ -1030,6 +1030,11 @@
      }
    }
