@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-fasttrack
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.21 2004/12/10 18:12:13 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.22 2005/02/02 16:57:27 squinky86 Exp $
+
+  02 Feb 2005; Jon Hood <squinky86@gentoo.org> gift-fasttrack-0.8.8.ebuild:
+  Fix postinstall information.
 
 *gift-fasttrack-0.8.8 (10 Dec 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.8.ebuild,v 1.1 2004/12/10 18:12:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.8.ebuild,v 1.2 2005/02/02 16:57:27 squinky86 Exp $
 
 IUSE=""
 
@@ -34,8 +34,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To run giFT with FastTrack support, run:"
-	einfo "\tgiFT -p /usr/lib/giFT/libFastTrack.so"
+	einfo "It is recommended that you re-run gift-setup as"
+	einfo "the user you will run the giFT daemon as:"
+	einfo "\tgift-setup"
 	echo
 	einfo "Alternatively you can add the following line to"
 	einfo "your ~/.giFT/giftd.conf configuration file:"

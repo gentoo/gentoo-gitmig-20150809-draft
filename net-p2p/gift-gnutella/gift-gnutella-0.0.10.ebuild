@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.10.ebuild,v 1.1 2005/01/14 20:50:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.10.ebuild,v 1.2 2005/02/02 16:56:09 squinky86 Exp $
 
 inherit eutils
 
@@ -34,8 +34,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To run giFT with Gnutella support, run:"
-	einfo "\tgiFT -p /usr/lib/giFT/libGnutella.so"
+	einfo "It is recommended that you re-run gift-setup as"
+	einfo "the user you will run the giFT daemon as:"
+	einfo "\tgift-setup"
 	echo
 	einfo "Alternatively you can add the following line to"
 	einfo "your ~/.giFT/giftd.conf configuration file:"
