@@ -1,11 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0015e363dbbf96d1777d9780941b9791 perlmagick-6.1.3.2.ebuild 999
 MD5 a4152927ae5f877507ec65b9ccd84159 perlmagick-6.1.3.4.ebuild 999
 MD5 9ac57feabcaf2f74f6fb436990a6bddf perlmagick-6.1.6.0.ebuild 1006
-MD5 d7b9a802f7c9fbad383eb4254c2e134b ChangeLog 6754
+MD5 5a4064e5dc2a2a7055440a18b72dca87 perlmagick-6.2.0.4.ebuild 1009
+MD5 0993a4e12d38eb0012067f50aa7d4a5a ChangeLog 6903
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 bbca613cd3c1a3b9a720957a8fcad63f perlmagick-6.1.8.8.ebuild 1000
 MD5 2dd9ba895922b7d6bb513572bb851254 files/digest-perlmagick-6.1.3.2 73
 MD5 88435dc2f0a4064ae49313f41419695d files/digest-perlmagick-6.1.3.4 73
 MD5 4dbe04f2c27a20911e1080d591674997 files/digest-perlmagick-6.1.6.0 73
 MD5 42fd34630ded62400ed31be1426e3b32 files/digest-perlmagick-6.1.8.8 73
+MD5 a886688e5d996646404d58caab5d908e files/digest-perlmagick-6.2.0.4 73
 MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJlV1Z/iYVBmujdURAkchAKDzmZ5XkoJg8ujG4d58nC+VQtrvUQCaA19e
+WA82IRwrNmNa6ZPkvDCeEC8=
+=BamO
+-----END PGP SIGNATURE-----
