@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.8 2003/03/09 20:25:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.9 2003/05/25 11:30:15 aliz Exp $
+
+*libesmtp-1.0-r1 (25 May 2003)
+
+  25 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  New ebuild that can be built with gcc-2.95.3. Contribution by Kevin L. Ford <klford@c-bog.com> 
+  in #20199.
 
 *libesmtp-1.0 (09 Mar 2003)
 

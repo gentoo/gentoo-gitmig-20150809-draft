@@ -1,0 +1,7 @@
+MD5 b8d25717087485fc6ac3c33ba4c1d2af ChangeLog 1229
+MD5 9b62da9461e0417514f38309c9950b5e libesmtp-0.8.12.ebuild 957
+MD5 a80a8f0189485f1d6c2d2ca8f316a2b4 libesmtp-1.0.ebuild 953
+MD5 4936649e43646d658a176dfef7dd0ac7 libesmtp-1.0-r1.ebuild 1168
+MD5 395e602b515d970eab3a9d7ef8a2016f files/digest-libesmtp-0.8.12 68
+MD5 b6be4562678d38b5d76400ddc254e37a files/digest-libesmtp-1.0 65
+MD5 b6be4562678d38b5d76400ddc254e37a files/digest-libesmtp-1.0-r1 65
