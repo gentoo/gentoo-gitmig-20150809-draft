@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.2 2003/10/27 05:05:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.3 2003/10/27 05:44:40 solar Exp $
+
+  27 Oct 2003; <solar@gentoo.org> paxtest-0.9.3.ebuild, paxtest-0.9.4.ebuild:
+  removed paxtest-0.9.3 in favor of 0.9.4
+
+*paxtest-0.9.4 (27 Oct 2003)
+
+  27 Oct 2003; <solar@gentoo.org> paxtest-0.9.4.ebuild:
+  paxtest 0.9.4 came out.. version bump
 
 *paxtest-0.9.3 (26 Oct 2003)
 
