@@ -16,7 +16,7 @@ MD5 6f4b970b6e64b99a49d7c2ac35817d38 gcc-3.3.3.ebuild 22398
 MD5 bd281971d3658dd49f02f647b97c4eeb gcc-3.3.1-r5.ebuild 18002
 MD5 b6a375116a668edbe10b2ac2e1f9fc6d gcc-3.0.4-r6.ebuild 8577
 MD5 9788cb185cfaeecac7c683d7fd7d58d2 gcc-3.3.3-r6.ebuild 25262
-MD5 70b0acbe2ea53c298b49466eaed934b5 gcc-3.4.0-r6.ebuild 28917
+MD5 1f09cea7c6dc7f4c54f63d13fc3c8a3f gcc-3.4.0-r6.ebuild 28911
 MD5 68da62e17a31058a92822721b553eca9 gcc-3.1.1-r1.ebuild 9424
 MD5 14cf69f1206d85356781dd2ad63eb7ca gcc-3.3.2-r4.ebuild 20741
 MD5 c7e55fc7f4bfd637f45786c0c5fbb365 gcc-2.95.3-r8.ebuild 9095
