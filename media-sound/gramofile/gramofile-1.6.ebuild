@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.8 2004/03/01 05:37:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.9 2004/03/09 19:01:07 eradicator Exp $
 
-DESCRIPTION="Gramofile"
+DESCRIPTION="Gramofile is an audio recording/editing program whose main goal is to allow recording of analog audio for digital remastering."
 HOMEPAGE="http://panic.et.tudelft.nl/~costar/gramofile/"
 SRC_URI="http://panic.et.tudelft.nl/~costar/gramofile/${P}.tar.gz
 	http://panic.et.tudelft.nl/~costar/gramofile/tappin3a.patch
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses \
-	dev-libs/fftw"
+	=dev-libs/fftw-2*"
 
 S=${WORKDIR}/${P}
 

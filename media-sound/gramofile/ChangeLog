@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gramofile
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.5 2004/03/01 05:37:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.6 2004/03/09 19:01:07 eradicator Exp $
+
+  09 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> gramofile-1.6.ebuild:
+  DESCRIPTION update. fftw DEPEND is now =dev-libs/fftw-2*.  This closes bug #44097.
 
 *gramofile-1.6 (02 Mar 2003)
 
@@ -15,7 +18,7 @@
   03 Mar 2003; <vladimir@gentoo.org> gramofile-1.6.ebuild:
   Fixed small LICENSE problem
 
-  02 Mar 2003; root <root@gentoo.org> gramofile-1.6.ebuild:
+  02 Mar 2003; jje <jje@gentoo.org> gramofile-1.6.ebuild:
   Initial revision.
 
   Submitted by Georg Sauthoff.
