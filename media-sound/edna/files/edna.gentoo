@@ -1,11 +1,11 @@
 #!/sbin/runscript
 #
-# Startup script for the edna mp3 mini server 
+# Startup script for the edna audio server 
 #
-# description: edna is a mini mp3 webserver
+# description: edna is a mini mp3/ogg webserver
 # processname: python
 # pidfile: /var/run/ednad.pid
-# config:
+# config: /etc/edna/edna.conf
 
 export PYTHONPATH=/usr/lib/edna
 EDNA=/usr/bin/edna

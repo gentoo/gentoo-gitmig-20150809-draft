@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.12 2004/10/15 16:59:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.13 2004/10/26 16:25:13 nerdboy Exp $
+
+  26 Oct 2004; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
+  files/edna.gentoo, edna-0.5-r3.ebuild, edna-0.5-r4.ebuild:
+  added USE flag for oggvorbis support, update comments and einfo
 
   15 Oct 2004; Sven Wegener <swegener@gentoo.org> edna-0.5-r3.ebuild:
   Added inherit eutils for get_libdir. Thanks to Thomas Kirchner
@@ -23,7 +27,7 @@
 
 *edna-0.5-r3 (14 Dec 2003)
 
-  14 Dec 2003; <sarnold@gentoo.org> edna-0.5-r3.ebuild, files/edna.gentoo:
+  14 Dec 2003; <nerdboy@gentoo.org> edna-0.5-r3.ebuild, files/edna.gentoo:
   finally fixed init script and env stuff
 
 *edna-0.5-r2 (14 Dec 2003)
