@@ -1,10 +1,11 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.24 2003/08/01 18:18:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.25 2003/08/01 18:48:39 taviso Exp $
 
-  01 Aug 2003; Tavis Ormandy <taviso@gentoo.org> :
+  01 Aug 2003; Tavis Ormandy <taviso@gentoo.org> diffutils-2.8.4-r4.ebuild::
   typo in diff.c causes core dump with the --tabsize option.
   closing #24238
+  version bump.
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> diffutils-2.8.4-r3.ebuild:
   Mark stable on alpha

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.1 2003/08/01 18:18:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.2 2003/08/01 18:48:39 taviso Exp $
 
 IUSE="nls build static"
 
@@ -50,7 +50,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-sdiff-no-waitpid.patch
 
 	# --tabsize option, undocumented in diff but used in sdiff, makes
-	# diff dump core.
+	# diff dump core, closing #24238.
 	# <taviso@gentoo.org> (1 Aug 2003)
 	epatch ${FILESDIR}/${P}-tabsize-dumps-core.diff
 }
