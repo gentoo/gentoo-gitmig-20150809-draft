@@ -579,20 +579,6 @@ diff -ur linux-2.6.4/include/linux/compiler-gcc3.h linux-2.6.4-gentoo/include/li
  #endif
 +
 +#endif /* __KERNEL__ */
-diff -ur linux-2.6.4/include/linux/fb.h linux-2.6.4-gentoo/include/linux/fb.h
---- linux-2.6.4/include/linux/fb.h	2004-03-13 13:04:57.989940488 +0000
-+++ linux-2.6.4-gentoo/include/linux/fb.h	2004-03-13 13:17:54.987818856 +0000
-@@ -380,8 +380,8 @@
- 	u32 access_align;	/* alignment per read/write		*/
- 	u32 flags;		/* see FB_PIXMAP_*			*/
- 				/* access methods			*/
--	void (*outbuf)(struct fb_info *info, u8 *addr, u8 *src, unsigned int size);
--	u8   (*inbuf) (struct fb_info *info, u8 *addr);
-+	void (*outbuf)(struct fb_info *info, __u8 *addr, __u8 *src, unsigned int size);
-+	u8   (*inbuf) (struct fb_info *info, __u8 *addr);
- };
- 
-     /*
 diff -ur linux-2.6.4/include/linux/mroute.h linux-2.6.4-gentoo/include/linux/mroute.h
 --- linux-2.6.4/include/linux/mroute.h	2004-03-13 13:04:54.084534200 +0000
 +++ linux-2.6.4-gentoo/include/linux/mroute.h	2004-03-13 13:14:04.356880088 +0000

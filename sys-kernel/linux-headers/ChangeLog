@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.57 2004/04/03 16:30:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.58 2004/04/06 23:55:50 plasmaroo Exp $
+
+*linux-headers-2.6.5 (07 Apr 2004)
+
+  07 Apr 2004; <plasmaroo@gentoo.org> +linux-headers-2.6.5.ebuild:
+  Version bump.
 
   03 Apr 2004; Jason Wever <weeve@gentoo.org> linux-headers-2.4.23.ebuild:
   Stable on sparc.
