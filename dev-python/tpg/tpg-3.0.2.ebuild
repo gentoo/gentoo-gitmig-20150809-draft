@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/tpg-3.0.2.ebuild,v 1.1 2004/05/01 22:52:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/tpg-3.0.2.ebuild,v 1.2 2004/05/02 12:00:47 dholm Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://christophe.delord.free.fr/soft/tpg/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
 DEPEND="virtual/python"
