@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/files/ypserv.rc,v 1.1 2003/07/11 03:34:38 woodchip Exp $
+
+depend() {
+	need net portmap
+}
+
+checkconfig() {
+    [ -n "$YP_DOMAIN" ] && return 0
+    eerror "You need to setup YP_DOMAIN in /etc/conf.d/ypserv"
+    return 1
+}
+
+start() {
+    checkconfig || return 1
+	ebegin "Starting NIS Server"
+    ypdomainname "$YP_DOMAIN"
+	start-stop-daemon --start --quiet --exec /usr/sbin/ypserv
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping NIS Server"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/ypserv
+	eend $?
+}

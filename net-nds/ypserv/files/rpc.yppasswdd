@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	need net portmap ypserv
+}
+
+start() {
+	ebegin "Starting rpc.yppasswdd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/rpc.yppasswdd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping rpc.yppasswdd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/rpc.yppasswdd
+	eend $?
+}

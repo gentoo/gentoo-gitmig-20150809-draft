@@ -1,0 +1,4 @@
+# Config file for /etc/init.d/ypserv
+
+# NIS domain (not necessarily the same as DNS domain)
+#YP_DOMAIN=my.nis.domain
