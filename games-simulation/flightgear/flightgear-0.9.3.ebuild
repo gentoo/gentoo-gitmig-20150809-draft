@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.3.ebuild,v 1.2 2003/10/28 07:59:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.3.ebuild,v 1.3 2003/11/11 02:52:26 seemant Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
 
-DEPEND=">=dev-games/simgear-0.3.4
+DEPEND="=dev-games/simgear-0.3.4*
 	>=sys-apps/sed-4"
 
 src_unpack() {
