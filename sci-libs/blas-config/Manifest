@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6219c1ab760329661aadda942c2f1c86 ChangeLog 2261
-MD5 e20a724d73b422fdd3b4f273d562017b blas-config-1.0.0.ebuild 603
+MD5 70bfbc22f383d53a7685af8bd8837be9 blas-config-1.0.1.ebuild 634
+MD5 dd3d8deb55cd54c34e764b7ce529200c blas-config-1.0.0.ebuild 606
+MD5 e527d2d5b55f19edd79fe5ec80426bf4 ChangeLog 2536
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 3bc6f4bb86c9e960d73fc802d5401b50 blas-config-1.0.1.ebuild 631
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-blas-config-1.0.1 0
-MD5 ceed97ad324cc3b866d8208b02b06bde files/blas-config-1.0.1.bz2 1978
-MD5 e084269dce220d05fa189c9d7baace1f files/blas-config.bz2 1900
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-blas-config-1.0.0 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxVqeugEuf3OQ0akRAh5pAJ9jeMCkCo9hkICjk1CPSYrBpMMzvACglllv
-FuSotuBODBcw3IryImyoAzM=
-=KfFY
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-blas-config-1.0.1 0
+MD5 e084269dce220d05fa189c9d7baace1f files/blas-config.bz2 1900
+MD5 ceed97ad324cc3b866d8208b02b06bde files/blas-config-1.0.1.bz2 1978
