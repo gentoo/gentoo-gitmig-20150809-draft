@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.8 2004/10/26 21:15:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.9 2004/10/28 20:12:52 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -8,7 +8,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+s
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa -ppc"
+KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ~ppc"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # we also need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
