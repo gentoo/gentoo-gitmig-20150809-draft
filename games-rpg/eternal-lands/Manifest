@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b01d69bed60277cd7d3bccbf30c89da eternal-lands-1.0.0.ebuild 1975
-MD5 d7bd68723e17ecc4cc875d14f52c40e0 ChangeLog 605
+MD5 d297a30b0973849e5c91922c61e32f25 ChangeLog 796
 MD5 f14047c98a46008d55322cc6df542db0 metadata.xml 218
+MD5 7ec6587351e4ce4cb7c471d2530293e5 eternal-lands-1.0.0.ebuild 1976
+MD5 b9e8e95377f6f4a8b710ad441f115053 eternal-lands-1.0.1.ebuild 3970
 MD5 13332eb34e0c35e33cfd4e40064f1672 files/digest-eternal-lands-1.0.0 113
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBrB/fI1lqEGTUzyQRAg2eAJ9xOMaIrTwTUAMRwbagLWCRAKjKaQCgqz+e
-wZUKC6tRPLc6J6AacKLhoAI=
-=2237
------END PGP SIGNATURE-----
+MD5 cd095b45439a8c74608347887c8eb72a files/digest-eternal-lands-1.0.1 236
