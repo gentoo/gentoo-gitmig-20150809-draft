@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>java</herd>
-  <maintainer>
-    <email>strider@gentoo.org</email>
-    <name>Adrian Almenar</name>
-    <description>Maintainer</description>
-  </maintainer>
   <longdescription>Sun Java Development Kit Package. AKA.J2SE</longdescription>
 </pkgmetadata>
