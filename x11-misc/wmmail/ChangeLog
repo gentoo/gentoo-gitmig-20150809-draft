@@ -1,9 +1,0 @@
-# ChangeLog for x11-misc/wmmail
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmmail/ChangeLog,v 1.2 2002/02/19 16:48:05 agenkin Exp $
-
-*wmmail-0.64 (19-Feb-2002)
-
-  19 Feb 2002; Arcady Genkin <agenkin@thpoon.com> wmmail-0.64.ebuild :
-
-  Initial version of this package.

@@ -1,9 +1,0 @@
-# ChangeLog for x11-misc/wmapm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmifs/ChangeLog,v 1.1 2002/02/03 13:46:51 vitaly Exp $
-
-*wmifs-1.3_beta1 (3 Feb 2002)
-
-  3 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org>:
-  
-  Initial ebuild revision.
