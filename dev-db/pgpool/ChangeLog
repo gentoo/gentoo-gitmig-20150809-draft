@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgpool
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/ChangeLog,v 1.10 2004/07/18 07:46:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/ChangeLog,v 1.11 2004/07/20 14:20:42 matsuu Exp $
+
+*pgpool-2.0.5 (20 Jul 2004)
+
+  20 Jul 2004; <matsuu@gentoo.org> +pgpool-2.0.5.ebuild:
+  Version bumped.
+  Fixed some issues.
 
 *pgpool-2.0.4 (18 Jul 2004)
 
