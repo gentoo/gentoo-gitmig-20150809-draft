@@ -1,7 +1,11 @@
 # ChangeLog for net-dialup/fbgetty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fbgetty/ChangeLog,v 1.4 2004/07/01 22:05:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fbgetty/ChangeLog,v 1.5 2004/11/07 20:47:27 mrness Exp $
 
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  fbgetty-0.1.698.ebuild:
+  correct HOMEPAGE, see bug #67567
+  
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   fbgetty-0.1.698.ebuild:
   virtual/glibc -> virtual/libc
