@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.23 2004/10/31 19:49:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.24 2004/11/14 16:00:10 max Exp $
+
+  14 Nov 2004; <max@gentoo.org> device-mapper-1.00.07-r1.ebuild,
+  device-mapper-1.00.07.ebuild, device-mapper-1.00.08-r1.ebuild,
+  device-mapper-1.00.08.ebuild, device-mapper-1.00.17-r1.ebuild,
+  device-mapper-1.00.17.ebuild, device-mapper-1.00.18-r1.ebuild,
+  device-mapper-1.00.18.ebuild, device-mapper-1.00.19.ebuild:
+  Add empty IUSE to silence repoman errors. Fix SRC_URI as per bug #65807.
 
   31 Oct 2004; Jason Wever <weeve@gentoo.org>
   device-mapper-1.00.17-r1.ebuild:

@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.17-r1.ebuild,v 1.3 2004/10/31 19:49:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.17-r1.ebuild,v 1.4 2004/11/14 16:00:10 max Exp $
 
 inherit eutils
 
 DESCRIPTION="Device mapper ioctl library for use with LVM2 utilities."
 HOMEPAGE="http://sources.redhat.com/dm/"
-SRC_URI="ftp://sources.redhat.com/pub/dm/${PN}.${PV}.tgz"
+SRC_URI="ftp://sources.redhat.com/pub/dm/old/${PN}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ppc64"
+IUSE=""
 
 DEPEND="virtual/linux-sources"
 
