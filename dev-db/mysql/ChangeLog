@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.11 2002/07/25 08:25:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.12 2002/07/26 03:01:13 jnelson Exp $
+
+*mysql-3.23.51-r3 (25 Jul 2002)
+
+  25 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r3.ebuild files/digest-mysql-3.23.51-r3 files/mysql.init:
+
+  Fixed 5152 - used some fancy awk to extract the datadir from
+   /etc/mysql/my.cnf -- new init file is mysql.init
+  Removed mysql-3.23.49.ebuild, mysql-3.23.51-r2.ebuild and assoc. digests
+  Removed files/mysql.rc6
 
 *mysql-3.23.51-r2 (07 Jul 2002)
 
