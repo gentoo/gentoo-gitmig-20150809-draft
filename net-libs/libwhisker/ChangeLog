@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwhisker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.5 2004/03/21 14:26:11 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.6 2004/03/29 14:53:05 mcummings Exp $
+
+  29 Mar 2004; Michael Cummings <mcummings@gentoo.org> libwhisker-1.8.ebuild:
+  fixed SRC_URI
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> libwhisker-1.8.ebuild:
   QA: Unnecessary definition of S and RDEPEND removed. Adding categories to
