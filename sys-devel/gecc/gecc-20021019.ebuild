@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.8 2004/07/15 03:26:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.9 2004/08/24 04:00:55 swegener Exp $
+
+inherit eutils
 
 # comprehensive list of any and all USE flags leveraged in the build,
 # with the exception of any ARCH specific flags, i.e. ppc sparc sparc64
@@ -13,12 +15,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 DEPEND="sys-devel/gcc"
-RDEPEND="$DEPEND"
 
 src_compile() {
 	rm -rf test
 	econf || die "configure failed"
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	emake || die "make failed"
 }
 

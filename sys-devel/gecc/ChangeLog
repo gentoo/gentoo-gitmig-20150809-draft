@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gecc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/ChangeLog,v 1.6 2004/06/24 22:46:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/ChangeLog,v 1.7 2004/08/24 04:00:55 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> gecc-20021019.ebuild,
+  gecc-20021102.ebuild:
+  Use epatch for patching and removed RDEPEND="${DEPEND}"
 
 *gecc-20021102 (16 Nov 2002)
 
