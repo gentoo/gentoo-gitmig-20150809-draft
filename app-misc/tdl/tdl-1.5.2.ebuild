@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.9 2004/10/05 13:34:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.10 2004/10/13 20:14:27 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,7 +40,8 @@ src_compile() {
 		sed -i 's#-lncurses##g' ${S}/configure
 	fi
 
-	./configure ${myconf} || die "configure failed, sorry!"
+	# XXX: do not replace with econf.
+	${S}/configure ${myconf} || die "configure failed, sorry!"
 	emake all tdl.info tdl.html tdl.txt || die
 	use doc && emake tdl.dvi tdl.ps tdl.pdf
 }
