@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ollie Rutherfurd <oliver@rutherfurd.net>
 # :mode=shellscript:noTabs=true:
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.7.5.ebuild,v 1.2 2001/08/03 17:22:17 kabau Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
