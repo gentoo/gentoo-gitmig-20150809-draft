@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/musicbrainz
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.44 2004/12/29 00:58:36 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.45 2005/02/22 08:47:39 hardave Exp $
+
+  22 Feb 2005; Hardave Riar <hardave@gentoo.org> musicbrainz-2.1.1.ebuild:
+  Marked ~mips
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
