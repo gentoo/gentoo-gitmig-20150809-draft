@@ -1,6 +1,8 @@
 Follow these instructions to finish setting up mailman. This file and the
 original ebuild were tweaked by me <lamer@gentoo.org> but were graciously
-submitted by Joby Walker (YOU RULE!)
+submitted by Joby Walker (YOU RULE!) 
+2003 Jul 09: updated by Jesus Perez and re-tweaked by me <raker@gentoo.org>
+for 2.1.x.
 
 Please view the documentation on Mailman at: http://www.list.org/
 
@@ -15,33 +17,109 @@ ebuild /var/db/pkg/net-mail/mailman-x.x.x/mailman-x.x.x.ebuild config
 
 This will add an Include in your apache.conf to mailman.conf
 
-2) And then in you /etc/conf.d/apache file add the additional option:
+2) In your /etc/conf.d/apache file add the additional option:
 
--D MAILMAN
+	-D MAILMAN
 
 3) Make sure mailman is a part of the cron group
 
-4) The rest must be done as user mailman so:
+4) This must be done as user mailman:
 
-su - mailman
+	su - mailman
 
-5) Add the cron jobs:
+Add the cron jobs:
 
-cd cron
-crontab crontab.in
-cd ..
+	cd cron
+	crontab crontab.in
+	cd ..
 
-6) create the site password:
+Create the site password:
 
-bin/mmsitepass
+	bin/mmsitepass
 
-From here you just need to add lists as per the documentation. I placed the
-INSTALL file in /usr/share/doc/mailman-$VERSION/ 
+and main list:
 
-Remember:
+	bin/newlist mailman
 
-Do everything as user "mailman".  If root you will cause mailman to fail,
-but it is correctable by running "bin/check_perms -f" from the root
-mailman directory (/usr/local/mailman).
 
-NOTE TO ORIGINAL AUTHOR: Once again thanks for the submission, you rule!
+5) Change back to root:
+
+	exit
+
+Add this to /etc/mail/aliases (and see point 9 for notes):
+     mailman:              "|/usr/local/mailman/mail/mailman post mailman"
+     mailman-admin:        "|/usr/local/mailman/mail/mailman admin mailman"
+     mailman-bounces:      "|/usr/local/mailman/mail/mailman bounces mailman"
+     mailman-confirm:      "|/usr/local/mailman/mail/mailman confirm mailman"
+     mailman-join:         "|/usr/local/mailman/mail/mailman join mailman"
+     mailman-leave:        "|/usr/local/mailman/mail/mailman leave mailman"
+     mailman-owner:        "|/usr/local/mailman/mail/mailman owner mailman"
+     mailman-request:      "|/usr/local/mailman/mail/mailman request mailman"
+     mailman-subscribe:    "|/usr/local/mailman/mail/mailman subscribe mailman"
+     mailman-unsubscribe:  "|/usr/local/mailman/mail/mailman unsubscribe mailman"
+  
+Run newaliases.
+
+	newaliases
+    
+Copy the web icons:
+     cp /usr/local/mailman/icons/* /home/httpd/icons
+
+6) Start the mailman daemon:
+
+	/etc/init.d/mailman start
+
+and add it to default runlevel (optional but recommended):
+
+	rc-update add mailman default
+
+7) For each list created (either with web interface or with bin/newlist) 
+this must be added to /etc/mail/aliases (see smrsh notes below)
+replace <list-name> with the name of the list:
+
+	<list-name>: "|/usr/local/mailman/mail/mailman post <list-name>"
+	<list-name>-admin: "|/usr/local/mailman/mail/mailman admin <list-name>"
+	<list-name>-bounces: "|/usr/local/mailman/mail/mailman bounces <list-name>"
+     	<list-name>-confirm: "|/usr/local/mailman/mail/mailman confirm <list-name>"
+     	<list-name>-join: "|/usr/local/mailman/mail/mailman join <list-name>"
+	<list-name>-leave: "|/usr/local/mailman/mail/mailman leave <list-name>"
+	<list-name>-owner: "|/usr/local/mailman/mail/mailman owner <list-name>"
+	<list-name>-request: "|/usr/local/mailman/mail/mailman request <list-name>"
+     	<list-name>-subscribe: "|/usr/local/mailman/mail/mailman subscribe <list-name>"
+	<list-name>-unsubscribe: "|/usr/local/mailman/mail/mailman unsubscribe <list-name>"
+
+Run newaliases:
+
+	newaliases
+
+smrsh notes
+-----------
+(if you use sendmail, you are surely using srmsh) you must note that 
+sendmail won't run any program outside of EBINDIR. I tried to change 
+EBINDIR using,define(`confEBINDIR', `/usr/local/mailman/mail')dnl in 
+sendmail.mc but it didn't work, so mailman must be placed in EBINDIR, 
+which in Gentoo is /usr/adm/sm.bin, so you must run as root:
+
+     ln -s /usr/local/mailman/mail/mailman /usr/adm/sm.bin/mailman
+
+And the lines in /etc/mail/aliases which refer to 
+/usr/local/mailman/mail/mailman must be changed to mailman:
+
+     <list-name>:              "|mailman post <list-name>"
+     <list-name>-admin:        "|mailman admin <list-name>"
+     <list-name>-bounces:      "|mailman bounces <list-name>"
+     <list-name>-confirm:      "|mailman confirm <list-name>"
+     <list-name>-join:         "|mailman join <list-name>"
+     <list-name>-leave:        "|mailman leave <list-name>"
+     <list-name>-owner:        "|mailman owner <list-name>"
+     <list-name>-request:      "|mailman request <list-name>"
+     <list-name>-subscribe:    "|mailman subscribe <list-name>"
+     <list-name>-unsubscribe:  "|mailman unsubscribe <list-name>"
+
+
+Other Helpful things to know...
+-------------------------------
+run "bin/check_perms -f" from the root mailman directory
+(/usr/local/mailman) to check and fix permission problems.
+
+The INSTALL file is located in /usr/share/doc/mailman-$VERSION/ 
