@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cgdb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.8 2005/01/12 11:52:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.9 2005/04/03 06:20:44 ka0ttic Exp $
+
+*cgdb-0.5.1 (03 Apr 2005)
+
+  03 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +cgdb-0.5.1.ebuild:
+  Version bump.
 
   12 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> cgdb-0.5.0.ebuild:
   Marked stable on x86.
