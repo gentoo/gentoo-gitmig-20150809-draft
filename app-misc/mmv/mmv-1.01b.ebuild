@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.7 2004/06/14 09:01:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.8 2004/06/14 17:43:09 aliz Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/m/mmv/${P/-/_}.orig.tar.gz
 LICENSE="freedist"
 SLOT="0"
 
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 S=${WORKDIR}/${P}.orig
