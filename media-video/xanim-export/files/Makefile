@@ -535,7 +535,7 @@ XA_MISC_DEFS = $(XA_CMAP) $(XA_XTPTR) $(XA_SHARED) $(XA_MULTIBUF) $(XA_MACH_DEFS
 #  FINAL CFLAGS and OTHER_LIBS
 #
 
-XA_DEFS = $(XA_MISC_DEFS) $(XA_MOD_DEFS) $(XA_AUDIO_DEFS) -DXA_PETUNIA -DXA_KPCD -DXA_EXPORT_QT
+XA_DEFS = $(XA_MISC_DEFS) $(XA_MOD_DEFS) $(XA_AUDIO_DEFS) -DXA_PETUNIA -DXA_KPCD -DXA_EXPORT -DXA_EXPORT_QT
 XA_LIBS = $(XA_X11R6_LIBS) $(XA_MACH_LIBS) $(XA_MOD_LIBS) $(XA_AUDIO_LIBS) -lpthread quicktime/quicktime/libquicktime.a -ljpeg -lpng -lz
 XA_INCS = $(INCLUDE) $(XA_VIDEO_INCS) $(XA_AUDIO_INCS) -Iquicktime/quicktime
 CFLAGS	=  $(DEBUG) $(OPTIMIZE)
@@ -634,3 +634,4 @@ xa_wav.o: xanim.h xa_config.h xa_avi.h xa_wav.c
 xa_8svx.o: xanim.h xa_8svx.h xa_8svx.c
 xa_x11.o:  xanim.h xa_config.h xa_x11.h xa_x11.c
 xa_gsm.o: xanim.h xa_gsm_state.h xa_gsm.h xa_gsm.c
+
