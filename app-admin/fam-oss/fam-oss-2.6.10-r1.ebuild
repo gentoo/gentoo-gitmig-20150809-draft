@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.10-r1.ebuild,v 1.8 2003/11/15 23:25:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.10-r1.ebuild,v 1.9 2003/12/07 19:30:26 spider Exp $
 
 IUSE=""
 
@@ -54,4 +54,10 @@ src_install() {
 	doexe ${FILESDIR}/fam
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README*
+}
+
+pkg_postinst () {
+	einfo "For desktop use, do 'rc-update add fam default' "
+	einfo "this will start fam at boot, and thereby enable konqueror and "
+	einfo "nautilus to take advantage of it."
 }
