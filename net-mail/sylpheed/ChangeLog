@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.3 2002/04/05 22:26:48 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.4 2002/04/16 01:05:15 seemant Exp $
+
+*sylpheed-0.7.4-r1 (15 Apr 2002)
+
+  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.7.4-r1.ebuild :
+
+  Changed the gpg USE flag to crypt USE flag instead, which is more general
 
 *sylpheed-0.7.4-r1 (05 Apr 2002)
   05 Apr 2002; Spider  <spider@gentoo.org>
