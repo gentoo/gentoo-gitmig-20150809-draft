@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.38 2004/03/01 19:04:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.39 2004/03/23 10:12:13 kumba Exp $
+
+  23 Mar 2004; Joshua Kinard <kumba@gentoo.org> phpmyadmin-2.5.6.ebuild,
+  phpmyadmin-2.5.6_rc1.ebuild:
+  Don't ever recall testing this package on mips, thus it causes a bunch of dep
+  issues with repoman. Removing mips keywords until this gets tested.
 
 *phpmyadmin-2.5.6 (01 Mar 2004)
 
