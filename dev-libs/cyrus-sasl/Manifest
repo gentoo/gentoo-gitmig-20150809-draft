@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fd793424adfedf7c2cbbcda3d09c1648 ChangeLog 19214
+MD5 9d8d289b250c087a6e31e1946167bad9 ChangeLog 19315
 MD5 b6b628180f01eae601d52e9ca5faf725 cyrus-sasl-2.1.19-r1.ebuild 7156
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 04ab88578310e66a55032b38819541a1 cyrus-sasl-2.1.18-r2.ebuild 5427
-MD5 97209eb0ef10fc23c507720fee274660 cyrus-sasl-2.1.20.ebuild 7329
+MD5 888ff0ec58f34193c69acc689393dc9b cyrus-sasl-2.1.20.ebuild 7328
 MD5 bc046561db59ed3f4d0cc417b099c2f9 files/java.README.gentoo 934
 MD5 72c9252fd0ccb3fc369c60ec233f4218 files/2.1.14-mysql.patch 730
 MD5 41c1024f02bc0725406a23eeff93edd5 files/saslauthd-2.1.20.conf 906
@@ -42,7 +42,7 @@ MD5 b398dd3696347604a52a40bf1a77291b files/2.1.14-db4.patch 2032
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBwdpwugEuf3OQ0akRAtlpAJ4kwoPpj4NSHG4QrRAzp+5/iGW0sQCffLr6
-lzCikMGzeR524iVHqYA7Qig=
-=1Vu8
+iD8DBQFByFnEugEuf3OQ0akRAm4OAJ9Text5q7OdSCAwQVcIbpE48fkcKQCfXZN6
+NhBCQOOeezj1jh6iHexjAfE=
+=HSIi
 -----END PGP SIGNATURE-----
