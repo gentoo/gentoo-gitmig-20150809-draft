@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0.ebuild,v 1.4 2004/07/02 02:45:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0.ebuild,v 1.5 2004/07/19 23:33:26 squinky86 Exp $
 
 inherit kde eutils
 
@@ -20,7 +20,9 @@ export MAKEOPTS="$MAKEOPTS -j1"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-nokde.patch
+	if ! use kde; then
+		epatch ${FILESDIR}/${PV}-nokde.patch
+	fi
 }
 
 src_compile() {
