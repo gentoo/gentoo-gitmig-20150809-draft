@@ -1,10 +1,10 @@
---- server/dia/main.c.orig	2004-07-10 19:36:15.429535192 +0200
-+++ server/dia/main.c	2004-07-10 19:36:38.645005904 +0200
-@@ -64,6 +64,7 @@
- #include "site.h"
- #include "globals.h"
- #include "nasconf.h"
-+#include <stdlib.h>
+--- server/dia/main.c.orig	2004-07-11 18:58:59.908589544 +0200
++++ server/dia/main.c	2004-07-11 18:59:33.562473376 +0200
+@@ -52,6 +52,7 @@
+  */
  
- extern void     OsInit(), InitClient(), ResetWellKnownSockets(),
-                 Dispatch(), FreeAllResources();
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <audio/audio.h>
+ #include <audio/Aproto.h>
+ #include "NasConfig.h"
