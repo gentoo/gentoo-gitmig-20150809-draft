@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/mosml-2.01.ebuild,v 1.5 2004/07/14 13:44:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/mosml-2.01.ebuild,v 1.6 2005/01/23 18:55:02 luckyduck Exp $
 
 S="${WORKDIR}/${PN}/src"
 DESCRIPTION="Moscow ML - a lightweight implementation of Standard ML (SML)"
@@ -8,7 +8,7 @@ SRC_URI="http://www.dina.kvl.dk/~sestoft/mosml/mos201src.tar.gz"
 HOMEPAGE="http://www.dina.dk/~sestoft/mosml.html"
 LICENSE="GPL-2"
 DEPEND=""
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 SLOT="0"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mosml
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.4 2004/06/24 22:52:15 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.5 2005/01/23 18:55:02 luckyduck Exp $
+
+  23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> mosml-2.01.ebuild:
+  added ~amd64 to KEYWORDS. fixes #Bug 71083
 
   22 Jun 2004; David Holm <dholm@gentoo.org> mosml-2.01.ebuild:
   Added to ~ppc.
