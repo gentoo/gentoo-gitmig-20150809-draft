@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/gulm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/ChangeLog,v 1.2 2005/01/27 18:19:33 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/ChangeLog,v 1.3 2005/03/19 16:12:41 xmerlin Exp $
+
+*gulm-1.0_pre25 (19 Mar 2005)
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +gulm-1.0_pre25.ebuild:
+  gulm-1.0_pre25 in portage
 
 *gulm-1.0_pre2 (28 Jan 2005)
 
