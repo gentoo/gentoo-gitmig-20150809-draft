@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.0_pre2.ebuild,v 1.2 2005/01/27 16:12:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.0_pre2.ebuild,v 1.3 2005/01/27 18:19:33 xmerlin Exp $
 
 inherit eutils linux-mod
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="This is the gfs global locking manager"
+DESCRIPTION="Redundant server-based cluster and lock manager for GFS"
 HOMEPAGE="http://sources.redhat.com/cluster/"
 SRC_URI="http://people.redhat.com/cfeist/cluster/tgz/${MY_P}.tar.gz"
 IUSE=""
