@@ -1,8 +1,11 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.1 2003/04/08 10:31:38 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.2 2003/05/21 15:54:48 twp Exp $
 
 *narray-0.5.7 (08 Apr 2003)
 
-  08 Apr 2003; Tom Payne <twp@gentoo.org> :
+  21 May 2003; Tom Payne <twp@gentoo.org> narray-0.5.7-r1.ebuild :
+  Install documentation. Marked stable on all ARCHes.
+
+  08 Apr 2003; Tom Payne <twp@gentoo.org> narray-0.5.7.ebuild :
   Initial import (bug # 18611).
