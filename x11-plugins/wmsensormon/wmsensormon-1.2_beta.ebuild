@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2_beta.ebuild,v 1.3 2003/04/01 22:19:56 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2_beta.ebuild,v 1.4 2003/05/29 09:38:48 seemant Exp $
 
 S=${WORKDIR}/${P/_/-}/${PN}
 DESCRIPTION="WindowMaker DockApp: Monitors sensors using lm_sensors"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 DEPEND="virtual/x11
-	sys-apps/lm_sensors"
+	sys-apps/lm-sensors"
 
 src_compile() {
 	cd ${S}
