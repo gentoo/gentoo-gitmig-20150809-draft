@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041129.ebuild,v 1.1 2004/12/01 10:08:29 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041129.ebuild,v 1.2 2004/12/01 18:09:28 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -49,6 +49,7 @@ src_unpack() {
 			autoconf ||  die "recreate bdbobj/configure failed"
 		eend $?
 	fi
+	sed -i -e'/for dir in/a\\t\t\/etc\/courier-imap \\' ${S}/authmigrate.in
 	sed -i -e'/for dir in/a\\t\t\/etc\/courier\/authlib \\' ${S}/authmigrate.in
 }
 
