@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.14 2004/04/08 07:35:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.15 2004/06/07 22:57:48 agriffis Exp $
 
 inherit gnuconfig
 inherit flag-o-matic
@@ -20,24 +20,23 @@ LICENSE="LGPL-2.1 | LGPL-2"
 KEYWORDS="x86 amd64 hppa sparc ~mips alpha ia64"
 
 src_compile() {
-	filter-flags -Os
-
 	local myconf
-	myconf="--enable-af" # include AudioFile driver
 
-	[ -z `use esd` ]  || myconf="${myconf} --enable-esd"
-	[ -z `use alsa` ] || myconf="${myconf} --enable-alsa"
-	[ -z `use oss` ]  || myconf="${myconf} --enable-oss"
+	myconf="--enable-af" # include AudioFile driver
+	myconf="${myconf} $(use_enable esd)"
+	myconf="${myconf} $(use_enable alsa)"
+	myconf="${myconf} $(use_enable oss)"
 
 	# alpha, amd64 and ia64 (at least) need gnuconfig_update
 	gnuconfig_update
+
+	filter-flags -Os
 
 	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING* NEWS README TODO

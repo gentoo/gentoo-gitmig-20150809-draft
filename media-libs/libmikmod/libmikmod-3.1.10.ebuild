@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10.ebuild,v 1.20 2004/04/08 07:35:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10.ebuild,v 1.21 2004/06/07 22:57:48 agriffis Exp $
 inherit gnuconfig
 
 IUSE="oss esd alsa"
@@ -18,23 +18,21 @@ LICENSE="LGPL-2.1 | LGPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
 src_compile() {
-
 	local myconf
+
 	myconf="--enable-af" # include AudioFile driver
+	myconf="${myconf} $(use_enable esd)"
+	myconf="${myconf} $(use_enable alsa)"
+	myconf="${myconf} $(use_enable oss)"
 
-	[ -z `use esd` ]  || myconf="${myconf} --enable-esd"
-	[ -z `use alsa` ] || myconf="${myconf} --enable-alsa"
-	[ -z `use oss` ]  || myconf="${myconf} --enable-oss"
-
-	use alpha && gnuconfig_update
-	use amd64 && gnuconfig_update
+	# needed for alpha and amd64
+	gnuconfig_update
 
 	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING* NEWS README TODO

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.24 2004/05/21 18:48:52 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.25 2004/06/07 22:57:48 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> libmikmod-3.1.10-r1.ebuild,
+  libmikmod-3.1.10.ebuild, libmikmod-3.1.11-r1.ebuild,
+  libmikmod-3.1.11.ebuild:
+  Fix use invocation, use use_enable when appropriate
 
 *libmikmod-3.1.11-r1 (21 May 2004)
 
