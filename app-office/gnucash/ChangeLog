@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.23 2003/05/16 17:36:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.24 2003/05/18 09:31:57 liquidx Exp $
+
+*gnucash-1.8.3-r1 (18 May 2003)
+
+  18 May 2003; Alastair Tse <liquidx@gentoo.org> gnucash-1.8.3-r1.ebuild,
+  files/gnucash-1.8.3-qif-file.patch:
+  adds fix for qif import thanks to Chris Lyttle (#17277)
 
 *gnucash-1.8.3 (14 May 2003)
 
