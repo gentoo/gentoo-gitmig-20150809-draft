@@ -18,12 +18,12 @@ MD5 6e6d82cdd260691a8eaad33158b15a6a files/Makefile.am-0.94 1447
 MD5 0da68c6735405f53dc2a1365d5b929fa files/digest-gambas-0.94a 66
 MD5 da3cd57f803b4dc0717bdedde046da20 files/non-symlink-0.94.patch 2658
 MD5 39016f3bbaf4069a963b10796d8f48f1 files/WebHome.html 692
-MD5 a70e52834210d33ecde4e6933afe6e39 files/digest-gambas-0.95 65
+MD5 ecaa2d7dc30481f5ac7ff194a37d5555 files/digest-gambas-0.95 65
 MD5 8f6c4de24a80ef81fd184b62358b8c89 files/non-symlink-0.95.patch 2384
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA/ETq6J2i8a8J4okRAjD/AKCw7Qel2lJqZQj90L9Q0l9LrQmjsgCdEI4C
-hJVRZA0s6izzYXcGJgkmrFs=
-=HMty
+iD8DBQFA/xPR6J2i8a8J4okRAodlAJ0XHE7xYeu0wShzfJc1tABY1GTjQQCfaNjW
+aqRbCA1H0SoxGTyNCeRVR7Q=
+=9dgr
 -----END PGP SIGNATURE-----
