@@ -1,9 +1,10 @@
-# This file created automagically by scripts/generate-packages.sh on Thu Apr 18 01:55:51 CEST 2002
+# This file created automagically by scripts/generate-packages.sh on Thu Apr 18 13:17:44 CEST 2002
 
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
 
-USE="xv slang readline gpm berkdb mmx 3dnow gdbm tcpd pam libwww ssl nls mitshm arts lame perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde motif opengl avi png tiff gif"
-ARCH="sparc"
+USE="xv slang readline gpm berkdb mmx 3dnow gdbm tcpd pam libwww ssl nls mitshm arts lame perl python esd imlib sdl oggvorbis gnome gtk X qt kde motif opengl avi jpeg png tiff gif"
+ARCH="x86"
+
 # These lines added by scripts/generate-packages.sh -----------------------
 # End of lines added by scripts/generate-packages.sh ----------------------
