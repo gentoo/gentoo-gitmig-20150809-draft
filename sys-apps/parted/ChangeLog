@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.36 2004/04/12 16:48:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.37 2004/04/23 05:02:11 npmccallum Exp $
+
+*parted-1.6.9 (23 Apr 2004)
+
+  23 Apr 2004; Nathaniel McCallum <npmccallum@gentoo.org>
+  +parted-1.6.9.ebuild:
+  Added parted-1.6.9 (which now has the pyparted patch!)
 
   12 Apr 2004; David Holm <dholm@gentoo.org> parted-1.6.8-r1.ebuild:
   Bumped to stable on ppc.
