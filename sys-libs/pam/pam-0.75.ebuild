@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.5 2001/08/16 04:14:30 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.6 2002/02/22 05:33:14 blocke Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -19,7 +19,7 @@ src_compile() {
   try ./configure --prefix= --host=${CHOST} \
 	--sbindir=/usr/sbin --mandir=/usr/share/man \
 	--enable-fakeroot=${D} \
-	--enable-read-both-confs
+	--enable-read-both-confs --enable-static-libpam
 
 
   cp Makefile Makefile.orig
