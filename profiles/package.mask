@@ -52,7 +52,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1151 2002/08/02 07:17:19 lostlogic Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1152 2002/08/02 09:20:04 danarmak Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -334,26 +334,6 @@ sys-apps/mkisofs
 # cardoe@gentoo.org (12 Jul 2002)
 # new beta of pcmcia-cs
 =sys-apps/pcmcia-cs-3.1.35_beta2
-
-# danarmak@gentoo.org (12 Jul 2002)
-# these are the kde 3.1 prereleases
-=kde-base/arts-1.0.6
-=kde-base/kde-3.1_alpha1
-=kde-base/kdeaddons-3.1_alpha1
-=kde-base/kdeadmin-3.1_alpha1
-=kde-base/kdeartwork-3.1_alpha1
-=kde-base/kdebase-3.1_alpha1
-=kde-base/kdebindings-3.1_alpha1
-=kde-base/kdeedu-3.1_alpha1
-=kde-base/kdegames-3.1_alpha1
-=kde-base/kdegraphics-3.1_alpha1
-=kde-base/kdelibs-3.1_alpha1
-=kde-base/kdemultimedia-3.1_alpha1
-=kde-base/kdenetwork-3.1_alpha1
-=kde-base/kdepim-3.1_alpha1
-=kde-base/kdesdk-3.1_alpha1
-=kde-base/kdetoys-3.1_alpha1
-=kde-base/kdeutils-3.1_alpha1
 
 # cardoe@gentoo.org (12 Jul 2002)
 # masked cause it has not been tested enough
