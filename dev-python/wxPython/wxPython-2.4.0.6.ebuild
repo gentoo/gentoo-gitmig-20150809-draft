@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.6.ebuild,v 1.3 2003/03/26 11:49:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.6.ebuild,v 1.4 2003/05/07 10:26:30 liquidx Exp $
 
 IUSE="opengl gtk2"
 
@@ -26,7 +26,7 @@ pkg_setup() {
     
     # make sure if you want gtk2, you have wxGTK with gtk2, and vice versa
     if [ -n "`use gtk2`" ]; then
-    	if [ ! -f "/usr/bin/wxgtk2u-2.4-config" ]; then
+    	if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" ]; then
         	eerror "You need x11-libs/wxGTK compiled with GTK+2 support."
             eerror "Either emerge wxGTK with 'gtk2' in your USE flags or"
             eerror "emerge wxPython without 'gtk2' in your USE flags."

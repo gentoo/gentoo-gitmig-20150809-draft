@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.24 2003/04/27 00:39:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.25 2003/05/07 10:26:30 liquidx Exp $
+
+  07 May 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.6.ebuild,
+  wxPython-2.4.0.7.ebuild:
+  Detect non-unicode wxGTK
 
 *wxPython-2.4.0.7 (27 Apr 2003)
 
