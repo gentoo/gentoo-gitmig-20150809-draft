@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.9.ebuild,v 1.2 2003/10/25 05:20:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.9.ebuild,v 1.3 2003/11/10 02:05:08 zhen Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	[ -f ${FILESDIR}/${P}-gentoo.diff ] && epatch ${FILESDIR}/${P}-gentoo.diff
 	cd ${S}
 	if [ "$PV" = "1.9" ]; then
-		einfo "Patching Makefile.in to avoid sanbox problems"
+		einfo "Patching Makefile.in to avoid sandbox problems"
 		sed -e s:"INSTALL) -d /var":"INSTALL) -d \$(DESTDIR)/var":g < Makefile.in > Makefile.out && mv Makefile.{out,in}
 	fi
 }
