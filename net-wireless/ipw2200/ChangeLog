@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.3 2004/08/17 03:31:17 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.4 2004/08/17 04:14:02 jbms Exp $
+
+*ipw2200-0.4-r1 (17 Aug 2004)
+
+  17 Aug 2004; Jeremy Maitin-Shepard <jbms@gentoo.org> ipw2200-0.3.ebuild,
+  +ipw2200-0.4-r1.ebuild, ipw2200-0.4.ebuild:
+  A block on net-wireless/ipw2100 was added to all versions, at the
+  request of latexer, because the ieee80211 module is built by both
+  packages.
+  WPA support is now built, starting with 0.4-r1.
 
   16 Aug 2004; Jeremy Maitin-Shepard <jbms@gentoo.org> ipw2200-0.4.ebuild:
   Added a check for ARC4 cryptographic support in the kernel.

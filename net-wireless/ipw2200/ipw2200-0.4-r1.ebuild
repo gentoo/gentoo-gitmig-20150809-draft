@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-0.4.ebuild,v 1.3 2004/08/17 04:14:02 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-0.4-r1.ebuild,v 1.1 2004/08/17 04:14:02 jbms Exp $
 
 inherit kernel-mod eutils
 
@@ -62,7 +62,9 @@ src_unpack() {
 
 src_compile() {
 	unset ARCH
-	emake KSRC=${ROOT}/usr/src/linux all || die
+
+	# Build WPA support
+	emake KSRC=${ROOT}/usr/src/linux all CONFIG_IEEE80211_WPA=y || die
 }
 
 src_install() {
@@ -77,6 +79,7 @@ src_install() {
 
 	insinto /lib/modules/${KV}/net
 	doins ieee80211_crypt.${KV_OBJ} ieee80211_crypt_wep.${KV_OBJ} \
+		ieee80211_crypt_ccmp.${KV_OBJ} ieee80211_crypt_tkip.${KV_OBJ} \
 		ieee80211.${KV_OBJ} ${PN}.${KV_OBJ}
 
 	insinto /usr/lib/hotplug/firmware
