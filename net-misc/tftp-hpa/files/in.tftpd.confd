@@ -2,4 +2,4 @@
 # Remove the -l if you use [x]inetd
 
 INTFTPD_PATH="/tftproot"
-INTFTPD_OPTS="-l ${INTFTPD_PATH}"
+INTFTPD_OPTS="-l -s ${INTFTPD_PATH}"
