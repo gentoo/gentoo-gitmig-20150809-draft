@@ -1,11 +1,17 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.8 2003/10/16 18:18:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.9 2003/10/19 20:52:54 karltk Exp $
 
+*gentoolkit-0.1.32-r1 (19 Oct 2003)
+
+  19 Oct 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  gentoolkit-0.1.32-r1.ebuild, files/scripts/revdep-rebuild:
+  Fixed --help, patch submitted by Stanislav Brabec <utx@gentoo.org>.
+  
 *gentoolkit-0.1.32 (17 Oct 2003)
 
   17 Oct 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.32.ebuild,
-  files/scripts/qpkg:
+  files/scripts/qpkg:  
   adding patch from Eldad Zack <eldad@stoneshaft.ath.cx>. Closes #31290.
 
   30 Sep 2003; Martin Holzer <mholzer@gentoo.org> files/scripts/qpkg,

@@ -1,6 +1,8 @@
-MD5 b221b99003f33d184a24bde6c839ce00 ChangeLog 21302
+MD5 1f7703fd8f3578685653b6a5d1de67ee ChangeLog 21532
 MD5 2342f8711f0a4ecb063556c25fde9add metadata.xml 605
 MD5 1c7fb88fc36be67a61f1ee985b521791 gentoolkit-0.1.32.ebuild 2710
+MD5 df46236ae71dda0447c748ed7c324534 gentoolkit-0.1.32-r1.ebuild 2712
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.32-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.32 0
 MD5 643c63442c088517b4648a3e865dfc55 files/euse/ChangeLog 112
 MD5 8ac906ab7791d60344eb357af4002247 files/euse/README 4404
@@ -31,6 +33,6 @@ MD5 18cb80b264de19fa91ee69f213dcbfef files/scripts/pkg-clean 2863
 MD5 ed6713f4f45b71ee207a2511627d9bca files/scripts/pkg-size 1226
 MD5 63572dd6bcaf3535fb38094d7fd4a432 files/scripts/qpkg 14451
 MD5 ac41939247058bc3d14dadeb9026e494 files/scripts/qpkg.1 3476
-MD5 cf5ca7f72196d949451a860ae7dc7f74 files/scripts/revdep-rebuild 10968
+MD5 fec7a8826834d45de7c2d0cbd614a77e files/scripts/revdep-rebuild 11077
 MD5 347e69e1c9fba8b60fa631d92ea0a8f2 files/scripts/useflag 16164
 MD5 0a120feea2b79a3731c7912926421a27 files/scripts/useflag.1 5461

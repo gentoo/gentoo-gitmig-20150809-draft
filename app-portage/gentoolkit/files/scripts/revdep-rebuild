@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.2 2003/09/30 19:39:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.3 2003/10/19 20:52:54 karltk Exp $
 
 # revdep-rebuild: Reverse dependency rebuilder.
 # Author: Stanislav Brabec <utx@gentoo.org>
@@ -58,7 +58,8 @@ while : ; do
 		echo
 		echo "  -X, --package-names  recompile based on package names, not exact versions"
 		echo "      --soname SONAME  recompile packages using library with SONAME instead"
-		echo "                       of broken library"
+		echo "                       of broken library (SONAME providing library must be"
+		echo "                       present in the system)"
 		echo "      --soname-regexp SONAME"
 		echo "                       the same as --soname, but accepts grep-style regexp"
 		echo "  -q, --quiet          be less verbose"
@@ -301,7 +302,7 @@ if [ -z "$REBUILD_LIST" ] ; then
 fi
 
 IS_REAL_MERGE=true
-echo " $* " | grep -q '\( -p \| --pretend \)' && IS_REAL_MERGE=false
+echo " $* " | grep -q '\( -p \| --pretend \| -f \| --fetchonly \)' && IS_REAL_MERGE=false
 
 echo
 echo -e "${GR}All prepared. Starting rebuild...${NO}"
