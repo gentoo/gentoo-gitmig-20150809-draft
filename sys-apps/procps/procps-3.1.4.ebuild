@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.4.ebuild,v 1.1 2002/12/15 08:49:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.4.ebuild,v 1.2 2002/12/15 10:44:23 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools -ps top tload snice vmstat free w watch uptime pmap skill pkill kill pgrep sysctl"
@@ -11,7 +11,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND} >=sys-devel/gettext-0.10.35"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 
 src_unpack() {

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.12 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.13 2002/12/15 10:44:23 bjb Exp $
 
 MY_P=${P/vcron/vixie-cron}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The Vixie cron daemon"
 SRC_URI="ftp://ftp.vix.com/pub/vixie/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.vix.com/"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 LICENSE="as-is"
 

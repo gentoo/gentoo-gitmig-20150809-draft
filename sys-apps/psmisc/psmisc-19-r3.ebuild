@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-19-r3.ebuild,v 1.12 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-19-r3.ebuild,v 1.13 2002/12/15 10:44:23 bjb Exp $
 
 S=${WORKDIR}/psmisc
 DESCRIPTION="Handy process-related utilities from Debian"
 SRC_URI="ftp://lrcftp.epfl.ch/pub/linux/local/psmisc/${P}.tar.gz"
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 HOMEPAGE="http://psmisc.sourceforge.net/"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
 

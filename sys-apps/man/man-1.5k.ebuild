@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.7 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.8 2002/12/15 10:44:23 bjb Exp $
 
 NV=1.5k
 S=${WORKDIR}/${PN}-${NV}
@@ -14,7 +14,7 @@ RDEPEND="sys-apps/cronbase
 	sys-apps/groff"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 
 src_unpack() {
