@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3238 2004/10/11 08:09:05 spyderous Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3239 2004/10/12 00:44:59 latexer Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <latexer@gentoo.org> (11 Oct 2004)
+# Broken, soon to be removed pending reworking.
+sys-kernel/config-kernel
 
 # <spyderous@gentoo.org (12 Oct 2004)
 # work in progress
