@@ -1,6 +1,9 @@
 # ChangeLog for app-gnustep/affiche
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/affiche/ChangeLog,v 1.1 2003/07/17 15:19:32 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/affiche/ChangeLog,v 1.2 2003/07/28 06:52:56 phosphan Exp $
+
+  28 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> affiche-0.6.0.ebuild:
+  Little description line fix because of bug #25403
 
 *affiche-0.6.0 (17 Jul 2003)
 
