@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.25 2004/08/07 04:26:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.26 2004/08/24 00:10:08 mr_bones_ Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -15,6 +15,8 @@
 # All files in the source tree ($S) with the given name(s) will be replaced
 # with the newest available versions chosen from the list of locations in
 # gnuconfig_findnewest(), below.
+#
+# gnuconfig_update should generally be called from src_unpack()
 
 ECLASS=gnuconfig
 INHERITED="$INHERITED $ECLASS"
@@ -89,6 +91,6 @@ gnuconfig_findnewest() {
 	local lt_location="/usr/share/libtool/config.sub"
 
 	[ -f "${lt_location}" ] && locations="${locations} ${lt_location}"
-	
+
 	grep -s '^timestamp' ${locations} | sort -n -t\' -k2 | tail -n 1 | sed 's,/config.sub:.*$,,'
 }
