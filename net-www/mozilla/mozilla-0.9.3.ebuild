@@ -35,11 +35,11 @@ src_compile() {
     try ./configure --prefix=/opt/mozilla --host=${CHOST} \
 	$myconf --disable-tests --disable-debug --enable-jsd
     try make
-    if [ ! "`use mozqt`" ] ; then
-      cd extensions/irc
-      try make
-      cd ../..
-    fi
+#    if [ ! "`use mozqt`" ] ; then
+#      cd extensions/irc
+#      try make
+#      cd ../..
+#    fi
 
     try ./configure --prefix=/opt/mozilla --host=${CHOST} \
 	$myconf --disable-tests --disable-debug
