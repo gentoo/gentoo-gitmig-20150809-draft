@@ -23,18 +23,18 @@ sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/xemacs			app-editors/xemacs
 virtual/pppd			net-dialup/ppp
 virtual/sylpheed		net-mail/sylpheed
-virtual/php         	dev-php/mod_php
+virtual/php	 	dev-php/mod_php
 virtual/textbrowser		net-www/links
 virtual/mda				net-mail/procmail
 virtual/krb5			app-crypt/heimdal
-virtual/motif           x11-libs/openmotif
+virtual/motif	   x11-libs/openmotif
 virtual/bootloader		sys-apps/silo
 virtual/editor			app-editors/nano
 virtual/os-headers		sys-kernel/linux-headers
-virtual/ghc             dev-lang/ghc-bin
+virtual/ghc	     dev-lang/ghc-bin
 virtual/modutils 		sys-apps/modutils
 virtual/inetd			sys-apps/xinetd
-virtual/aspell-dict           app-dicts/aspell-en
+virtual/aspell-dict	   app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
 virtual/snmp		net-analyzer/net-snmp
 virtual/imap-c-client	net-libs/c-client
@@ -45,4 +45,5 @@ virtual/quicktime	media-libs/libquicktime
 virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
 
-virtual/ssh                                net-misc/openssh
+virtual/ssh				net-misc/openssh
+virtual/gzip		app-arch/gzip

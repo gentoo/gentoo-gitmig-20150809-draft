@@ -22,4 +22,4 @@ virtual/semi		app-emacs/semi
 virtual/tetex		app-text/tetex
 virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
-
+virtual/gzip		app-arch/gzip

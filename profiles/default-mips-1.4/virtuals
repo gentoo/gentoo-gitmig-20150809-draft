@@ -45,3 +45,4 @@ virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
 virtual/commonlisp	dev-lisp/sbcl
 virtual/tftp		net-misc/tftp-hpa
+virtual/gzip		app-arch/gzip

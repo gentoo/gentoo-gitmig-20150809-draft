@@ -52,3 +52,4 @@ virtual/tetex		app-text/tetex
 virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
 virtual/tftp			net-misc/tftp-hpa
+virtual/gzip		app-arch/gzip
