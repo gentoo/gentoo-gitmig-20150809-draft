@@ -1,4 +1,16 @@
-MD5 7c848a4158e331c54da8862801c51300 ChangeLog 561
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0b2549639269406742bd6dbb73003201 fluxbox-syntax-1.4.ebuild 968
+MD5 4f13545fc29918e9a39d353f28f24a29 ChangeLog 740
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 5d2f1ff9d3da02c5274ede4a2bf1788c fluxbox-syntax-1.5.ebuild 1006
+MD5 1662d5e68f1e7435dd03c6b4827f674e files/digest-fluxbox-syntax-1.5 69
 MD5 99aabccf3697502be5d6a1a726563d35 files/digest-fluxbox-syntax-1.4 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnOzHLLFUmVNQ7rkRAoonAJ9hIND81sw0qngs8Od8c15Vi32AfwCffgWo
+h+MOl2/E9AycIgRRTUJsv40=
+=V6kE
+-----END PGP SIGNATURE-----
