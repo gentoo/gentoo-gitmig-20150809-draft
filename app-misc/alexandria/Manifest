@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e386f17a9e3d3ee78fed479d56b9b1a6 alexandria-0.5.0.ebuild 1453
+MD5 96ab91936ac46a27d2915329a9eedc36 ChangeLog 1049
 MD5 50ece31e344c9ce16866317850d2971e alexandria-0.4.0.ebuild 1442
-MD5 942f920db2ca3a888dd7d4f7a89a0801 ChangeLog 979
+MD5 196ef9ed31f3000cc479d3601ce598ea alexandria-0.5.0.ebuild 1455
 MD5 8efa6365a12e903001e60e3f38150264 metadata.xml 274
 MD5 341d3725f27c89e493daf66c2d07217d files/digest-alexandria-0.4.0 67
 MD5 aafb80203d611fa22e8152615b0f004f files/digest-alexandria-0.5.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQq5w/UDVUK2NELYRArzbAJ9b5q3A/NVONFP+vqjeAOuolpV+2gCffETA
-SjO08ZWF08Tn8w3SrrZtU0Y=
-=X9CH
------END PGP SIGNATURE-----
