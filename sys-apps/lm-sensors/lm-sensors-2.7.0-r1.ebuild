@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.5 2003/10/18 17:11:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.6 2003/10/18 17:40:39 mholzer Exp $
 
 inherit flag-o-matic
 
@@ -51,6 +51,7 @@ src_install() {
 	newexe ${FILESDIR}/rc lm_sensors
 	dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS COPYING INSTALL \
 		QUICKSTART README* RPM TODO
+	cp -a doc/* ${D}/usr/share/doc/${PF}
 }
 
 pkg_postinst() {
