@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.6 2004/08/19 10:57:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.7 2004/09/12 02:56:15 mr_bones_ Exp $
+
+  11 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> -files/0.4-jpeg.patch,
+  -files/0.4-opengl.patch, -files/0.4-system-libs.patch, -irrlicht-0.4.ebuild,
+  -irrlicht-0.6.ebuild:
+  clean older ebuilds
 
   19 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +files/0.6-matrix4.patch, irrlicht-0.6.ebuild:
