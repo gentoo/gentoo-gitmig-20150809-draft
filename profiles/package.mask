@@ -728,6 +728,9 @@ gnome-extra/libgnomeuimm
 # Snapshot, 2.0 is newer.
 >=x11-wm/sawfish-20020419
 
+# snapshot
+>=x11-libs/rep-gtk-20020201
+
 # LEAVE THESE MASKED, or GNUCash will break!!!
 >=dev-util/guile-1.5
 >=dev-libs/g-wrap-1.3
