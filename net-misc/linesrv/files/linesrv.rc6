@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/linesrv.conf ] ; then
+		eerror "You  need  an  /etc/linesrv.conf file first"
+		eerror "There is a sample in /usr/share/doc/linesrv
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting linesrv"
+	start-stop-daemon --start --quiet --exec /usr/sbin/linesrv -- ${LINESRV_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping linesrv"
+	start-stop-daemon --stop --signal 3 --quiet --pidfile /var/run/linesrv.pid
+	eend $?
+}
