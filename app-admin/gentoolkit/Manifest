@@ -1,5 +1,5 @@
-MD5 0dc2620100f1125d8eb856d72df65cc9 gentoolkit-0.1.29.ebuild 2813
-MD5 bc3e78d988d826cc5a0163c63f6a437f ChangeLog 18779
+MD5 df6bcbacbdaf9e7ecb72677b98d91fae gentoolkit-0.1.29.ebuild 2808
+MD5 86be4efa34b4253ca513a36f5b8b962d ChangeLog 19061
 MD5 ec277c09c15ef65b2424012425dc4741 gentoolkit-0.1.26-r3.ebuild 2728
 MD5 3ffa5545275b4cf241f17f656dcc9e9d gentoolkit-0.1.27.ebuild 2727
 MD5 f7528012d49840755927e81d4f4b0dd6 gentoolkit-0.1.28.ebuild 2728
@@ -19,7 +19,7 @@ MD5 66c792cf569cddd351bcccedd69d659f files/scripts/echangelog 6106
 MD5 990536b35649142ebeddebd3f411efee files/scripts/ChangeLog 2215
 MD5 ae1ecff118b5583eac443b6afbccb0fd files/scripts/dep-clean.1 5645
 MD5 08871c6fedbd9385ef8a55e1f72f3a14 files/scripts/ekeyword 917
-MD5 3689fbbb0854c1bb889236efc0ac92c3 files/scripts/revdep-rebuild-1 10571
+MD5 bfa3fc19461c44974be9d2f6ba19590b files/scripts/revdep-rebuild-1 10573
 MD5 907aec00ccefd07a5801e35f135ed83f files/scripts/echangelog.1 9275
 MD5 63305561ae679ea9ae5db64252c0b296 files/scripts/echangelog.pod 5055
 MD5 54e3eb30d548e0e816163b2e899877be files/scripts/etcat 33700
