@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging-py21/imaging-py21-1.1.4.ebuild,v 1.1 2004/07/20 18:13:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging-py21/imaging-py21-1.1.4.ebuild,v 1.2 2004/09/02 17:27:48 pythonhead Exp $
 
 PYTHON_SLOT_VERSION="2.1"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.effbot.org/downloads/${P_NEW}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 ~sparc ~alpha ~ppc"
 IUSE="tcltk"
 
 DEPEND=">=media-libs/jpeg-6a
