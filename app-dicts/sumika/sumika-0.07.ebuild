@@ -1,26 +1,23 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.02.01.ebuild,v 1.2 2003/10/07 00:20:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.07.ebuild,v 1.1 2004/01/06 10:05:33 usata Exp $
 
 IUSE="nls"
 
-MY_P="${PN}-${PV%.*}"
-
 DESCRIPTION="Sumika is a management utility for dictionaries of Anthy, SKK, Canna and PRIME"
 HOMEPAGE="http://sumika.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/5714/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/7448/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${P}"
 
 DEPEND="virtual/glibc
 	>=x11-libs/gtk+-2.2
 	>=dev-libs/glib-2.2
-	canna? ( app-i18n/canna
-		<app-i18n/canna-3.6_p4 )
+	dev-libs/gdome2
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
