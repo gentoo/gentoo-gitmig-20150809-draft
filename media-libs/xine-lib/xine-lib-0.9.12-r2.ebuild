@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r2.ebuild,v 1.8 2003/03/27 05:28:19 vladimir Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r2.ebuild,v 1.9 2003/03/29 14:44:52 mholzer Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
@@ -30,10 +30,6 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
 
 src_unpack() {
 

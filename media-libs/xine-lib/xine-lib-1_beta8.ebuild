@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta8.ebuild,v 1.1 2003/03/08 20:46:19 lostlogic Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta8.ebuild,v 1.2 2003/03/29 14:44:52 mholzer Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -111,7 +111,7 @@ pkg_postinst() {
 	einfo
 	einfo "This library version 1 is incompatible with the plugins,"
 	einfo "designed for the prior library versions (such as xine-d4d,"
-	einfo "xine-d5d, xine-dmd, and xind-dvdnav."
+	einfo "xine-d5d, xine-dmd, and xine-dvdnav."
 	einfo 
 	einfo "Also make sure to remove your ~/.xine if upgrading from"
 	einfo "a previous version."
