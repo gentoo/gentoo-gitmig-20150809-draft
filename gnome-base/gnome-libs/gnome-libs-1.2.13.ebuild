@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.8 2001/07/27 23:19:50 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.9 2001/08/08 08:55:57 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,8 +17,8 @@ DEPEND=">=media-libs/imlib-1.9.10
 	<sys-libs/db-2"
 
 src_compile() {                           
-
-  try CFLAGS=\"$CFLAGS -I/usr/include/db1\" ./configure --host=${CHOST} --prefix=/opt/gnome \
+  CFLAGS="$CFLAGS -I/usr/include/db1"
+  try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--sysconfdir=/etc/opt/gnome \
 	--mandir=/opt/gnome/man \
 	--localstatedir=/var --enable-prefere-db1
