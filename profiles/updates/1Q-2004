@@ -4,3 +4,4 @@ move dev-libs/libpq++ dev-cpp/libpqpp
 move dev-python/4Suite dev-python/4suite
 move dev-python/Cheetah dev-python/cheetah
 move dev-python/Cheetah-docs dev-python/cheetah-docs
+move app-text/psgml app-emacs/psgml
