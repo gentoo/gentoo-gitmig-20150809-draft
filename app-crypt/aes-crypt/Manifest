@@ -1,3 +1,13 @@
-MD5 157fa9951f3ecd6d15f1103fc2a353ab aes-crypt-1.0.7.ebuild 803
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3006e7be38b505e13acb762f24bc6d2c ChangeLog 464
+MD5 f113c0a4253555133341e705ec4f55d7 aes-crypt-1.0.7.ebuild 800
 MD5 205e43c13b641ee04450eff1b26c434d files/digest-aes-crypt-1.0.7 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3zvLHTu7gpaalycRAlpLAJ0Qb4zicqFcAz1lD+fSpqPkX6nTSACfaLW3
+Tx2vaF6srA87KXUG6ZkvzAY=
+=03pO
+-----END PGP SIGNATURE-----
