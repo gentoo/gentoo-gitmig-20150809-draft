@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.1.ebuild,v 1.9 2005/01/19 15:44:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.4.ebuild,v 1.1 2005/01/19 15:44:19 luckyduck Exp $
 
 IUSE=""
-
-inherit eutils
 
 MY_P="${P/x/X}"
 S="${WORKDIR}/${MY_P}"
@@ -23,12 +21,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/id3lib
 	media-libs/flac"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc34.patch
-}
-
 src_install () {
 	dodoc CHANGES COPYING FAQ INSTALL README* TODO
 
@@ -39,4 +31,7 @@ src_install () {
 	plugins/ripperX_plugin-lame plugins/ripperX_plugin-mp3enc plugins/ripperX_plugin-oggenc \
 	plugins/ripperX_plugin-xingmp3enc plugins/ripperX_plugin_tester \
 	plugins/ripperX_plugin-flac
+
+	insinto /usr
+	newbin ${FILESDIR}/${P}-wrapper ripperX-wrapper
 }

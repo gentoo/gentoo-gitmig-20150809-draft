@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ripperx
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.15 2004/12/19 06:42:40 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.16 2005/01/19 15:44:19 luckyduck Exp $
+
+*ripperx-2.6.4 (19 Jan 2005)
+
+  19 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/ripperx-2.6.4-wrapper, +ripperx-2.6.4.ebuild:
+  version bump. added wrapper script, thanks to: James Le Cuirot
+  <chewi@ffaura.com>. fixes bug #78440.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ripperx-2.6.1.ebuild:
