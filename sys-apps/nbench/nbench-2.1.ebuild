@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/nbench-2.1.ebuild,v 1.7 2004/02/24 02:29:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/nbench-2.1.ebuild,v 1.8 2004/03/15 01:57:38 seemant Exp $
 
 MY_P="${PN}-byte-${PV}"
 DESCRIPTION="Linux/Unix of release 2 of BYTE Magazine's BYTEmark benchmark"
@@ -15,10 +15,6 @@ DEPEND="virtual/glibc"
 #RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-}
 
 src_compile() {
 
@@ -35,5 +31,3 @@ src_install() {
 
 	dodoc Changes README* bdoc.txt
 }
-
-
