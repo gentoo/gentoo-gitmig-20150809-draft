@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.7 2003/10/17 23:34:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.8 2003/12/09 22:06:38 vapier Exp $
+
+*enemy-territory-2.56-r2 (09 Dec 2003)
+
+  09 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Sync the dedication server stuff to the way the q3 stuff works and fix #29285.
 
 *enemy-territory-2.56-r1 (17 Oct 2003)
 
