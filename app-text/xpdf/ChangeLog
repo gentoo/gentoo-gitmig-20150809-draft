@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.48 2004/10/25 07:30:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.49 2004/10/25 19:48:24 agriffis Exp $
+
+  27 Oct 2004; Aron Griffis <agriffis@gentoo.org> xpdf-3.00-r4.ebuild:
+  stable on ia64 #68661
 
   25 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> xpdf-2.03.ebuild,
   xpdf-3.00-r1.ebuild, xpdf-3.00-r2.ebuild, xpdf-3.00-r3.ebuild,
