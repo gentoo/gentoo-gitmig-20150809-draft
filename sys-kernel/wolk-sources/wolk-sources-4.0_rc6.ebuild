@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc6.ebuild,v 1.1 2003/04/27 04:53:39 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc6.ebuild,v 1.2 2003/04/27 15:47:19 livewire Exp $
 
 IUSE="build"
 
@@ -30,6 +30,12 @@ src_unpack() {
 	bzcat ${DISTDIR}/linux-2.4.20-wolk4.0s-rc4.patch.bz2 | patch -p1 || die
 	bzcat ${DISTDIR}/linux-2.4.20-wolk4.0s-rc4-to-rc5.patch.bz2 | patch -p1 || die
 	bzcat ${DISTDIR}/linux-2.4.20-wolk4.0s-rc5-to-pre-final.patch.bz2 |patch -p1 || die
+	cd ${S}
+	mv Makefile Makefile.orig
+	sed -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
+	Makefile.orig >Makefile || die # test, remove me if Makefile ok
+        rm Makefile.orig
+
 	echo "KV=${KV}" >/tmp/KV
 }
 src_install() {
