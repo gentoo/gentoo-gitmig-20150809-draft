@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.1.11.ebuild,v 1.7 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.1.11.ebuild,v 1.8 2002/09/12 18:51:29 g2boojum Exp $
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
@@ -8,7 +8,8 @@ DESCRIPTION="The /bin/mail program, which is used to send mail via shell scripts
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/m/mailx/mailx_${MX_VER}.orig.tar.gz"
 HOMEPAGE="http://www.debian.org"
 
-DEPEND=">=net-libs/liblockfile-1.03"
+DEPEND=">=net-libs/liblockfile-1.03 
+        virtual/mta"
 
 SLOT="0"
 LICENSE="GPL-2"
