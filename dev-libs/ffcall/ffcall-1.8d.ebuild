@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.10 2004/01/29 15:13:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.11 2004/01/29 15:50:29 agriffis Exp $
 
 DESCRIPTION="foreign function call libraries"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
@@ -16,8 +16,7 @@ KEYWORDS="x86 sparc ~hppa ~alpha"
 DEPEND="virtual/glibc"
 
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	#Fix hppa asm
 	use hppa && (cd ${S}; epatch ${FILESDIR}/ffcall_hppa_1.8-4.2.diff.gz)
@@ -25,8 +24,14 @@ src_unpack()
 }
 
 src_compile() {
+	# Because CHOST is set to (for example)
+	# alphaev67-unknown-linux-gnu, CPU gets set to alphaev67 which
+	# doesn't work in the Makefile (29 Jan 2004 agriffis)
+	local cpu_setting
+	[[ $ARCH == alpha ]] && cpu_setting='CPU=alpha'
+
 	econf || die "./configure failed"
-	make || die
+	make ${cpu_setting} || die
 }
 
 src_install () {
