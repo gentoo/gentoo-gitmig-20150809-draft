@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.7 2004/09/18 10:19:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.8 2004/09/18 10:21:40 aliz Exp $
 
 inherit myth flag-o-matic
 
@@ -33,14 +33,14 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/mythtv-${PV}"
 
 pkg_setup() {
-        if use X; then
-                QTP=x11-libs/qt
-        elif use directfb; then
-                QTP=x11-libs/qt-embedded
-        else
-                eerror "You must have either X or directfb in USE"
-                die "No QT library selected"
-        fi
+	if use X; then
+		QTP=x11-libs/qt
+	elif use directfb; then
+		QTP=x11-libs/qt-embedded
+	else
+		eerror "You must have either X or directfb in USE"
+		die "No QT library selected"
+	fi
 	local qt_use="$(</var/db/pkg/`best_version ${QTP}`/USE)"
 	if ! has mysql ${qt_use} ; then
 		eerror "Qt is missing MySQL support. Please add"
