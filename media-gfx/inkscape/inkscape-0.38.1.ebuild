@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.38.1.ebuild,v 1.2 2004/05/02 23:46:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.38.1.ebuild,v 1.3 2004/05/25 10:11:13 zypher Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.2.4
 	dev-libs/popt
 	sys-libs/zlib
 	media-libs/libpng
-	>=dev-libs/libsigc++-1.2
+	=dev-libs/libsigc++-1.2*
 	gnome? ( >=gnome-base/libgnomeprint-2.2
 		>=gnome-base/libgnomeprintui-2.2 )"
 
