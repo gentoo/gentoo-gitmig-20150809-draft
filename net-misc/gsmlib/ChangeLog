@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/gsmlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.6 2004/07/01 21:04:20 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.7 2004/07/24 20:43:42 liquidx Exp $
+
+*gsmlib-1.10-r1 (24 Jul 2004)
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gsmlib-1.10-fd-leak-fix.patch, +files/gsmlib-1.10-include-fix.patch,
+  +gsmlib-1.10-r1.ebuild:
+  added new revision of stable version with gcc33 patches plus some mem leak
+  fixes. thanks to Zach Bagnall <yem@y3m.net> (#54993)
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> gsmlib-1.10.ebuild,
   gsmlib-1.11_pre030826.ebuild:
