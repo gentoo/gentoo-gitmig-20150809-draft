@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r4.ebuild,v 1.1 2002/07/12 15:35:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r4.ebuild,v 1.2 2002/07/15 20:47:57 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
 SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
-	http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}-gentoo.diff.bz2"
+	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell.html"
 
 DEPEND="sys-devel/bison
