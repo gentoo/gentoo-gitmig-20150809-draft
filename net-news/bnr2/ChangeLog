@@ -1,6 +1,13 @@
 # ChangeLog for net-news/bnr2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/ChangeLog,v 1.16 2004/07/10 14:54:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/ChangeLog,v 1.17 2004/08/11 13:06:51 swegener Exp $
+
+*bnr2-0.14.1 (11 Aug 2004)
+
+  11 Aug 2004; Sven Wegener <swegener@gentoo.org> files/bnr2,
+  +bnr2-0.14.1.ebuild:
+  Version bump. Thanks to y0zza <furry.goat@gmail.com> for notification in bug
+  #60010.
 
 *bnr2-0.12.7 (10 Jul 2004)
 
