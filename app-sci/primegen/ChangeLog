@@ -1,8 +1,8 @@
 # ChangeLog for app-sci/primegen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/primegen/ChangeLog,v 1.1 2003/03/13 08:53:37 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/primegen/ChangeLog,v 1.2 2004/03/19 08:59:43 aliz Exp $
 
-*primegen-0.97.ebuild (13 Mar 2003)
+*primegen-0.97 (13 Mar 2003)
 
   13 Mar 2003; George Shapovalov <george@gentoo.org> ChangeLog, primegen-0.97.ebuild, files/{digest-primegen-0.97} :
   initial release (#16300)

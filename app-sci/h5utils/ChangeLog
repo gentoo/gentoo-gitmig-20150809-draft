@@ -1,11 +1,11 @@
 # ChangeLog for app-sci/h5utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/h5utils/ChangeLog,v 1.2 2004/03/03 16:46:40 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/h5utils/ChangeLog,v 1.3 2004/03/19 08:59:43 aliz Exp $
 
   03 Mar 2004; Peter Bienstman <pbienst@gentoo.org> h5utils-1.7.2.ebuild:
   mark stable on x86
 
-*h5utils-1.7.2.ebuild (16 Jan 2004)
+*h5utils-1.7.2 (16 Jan 2004)
 
   16 Jan 2004; George Shapovalov <george@gentoo.org> h5utils-1.7.2.ebuild, Manifest, files/{digest-h5utils-1.7.2} :
   initial release (#36378)

@@ -1,13 +1,13 @@
 # ChangeLog for app-sci/blas-reference
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.2 2004/02/10 22:34:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.3 2004/03/19 08:59:43 aliz Exp $
 
   01 Feb 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild, files/* :
   as per discussion in #30453 renaming (plain) blas to blas-reference.
   Will stay package-masked until the whole move is complete, at which point pre-move/pre-virtual versions
   will be removed. Preserving the history in this ChangeLog
 
-*blas-19940131 (27 Oct 2003)
+*blas-reference-19940131 (27 Oct 2003)
 
   27 Oct 2003; George Shapovalov <george@gentoo.org> blas-19940131.ebuild, files/{Makefile.bz2,f77-reference} :
   a "real" version (#30462), 
@@ -20,7 +20,7 @@
   02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> blas-19980702.ebuild:
   marked stable for x86
 
-*blas-19980702 (31 Oct 2002)
+*blas-reference-19980702 (31 Oct 2002)
 
   31 Oct 2002; Hannes Mehnert <hannes@gentoo.org> blas-19980702.ebuild,
   ChangeLog: Initial ebuild.

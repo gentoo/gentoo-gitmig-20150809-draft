@@ -1,8 +1,8 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.1 2004/02/02 19:09:43 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.2 2004/03/19 08:59:43 aliz Exp $
 
-*blas-atlas-3.4.2.ebuild (02 Feb 2004)
+*blas-atlas-3.4.2 (02 Feb 2004)
 
   02 Feb 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.4.2.ebuild, Manifest, files/{atlas-gentoo.patch.bz2,c-ATLAS,c-threaded-ATLAS,digest-blas-atlas-3.4.2,f77-ATLAS,f77-threaded-ATLAS,war} :
   initial release (#30453)
