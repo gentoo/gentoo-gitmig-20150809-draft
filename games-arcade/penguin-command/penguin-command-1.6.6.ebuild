@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.1 2003/09/19 17:31:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.2 2003/09/19 23:28:00 vapier Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc"
 IUSE="nls"
 
 DEPEND="media-libs/libpng
-	media-libs/jpeg-6b
+	media-libs/jpeg
 	>=media-libs/libsdl-1.1.5
 	media-libs/sdl-mixer"
 
