@@ -9,7 +9,6 @@ SLOT="0"
 KEYWORDS="x86 sparc sparc64 ppc"
 
 DEPEND=">=x11-libs/gtk+-2.0.0"
-RDEPEND="${DEPEND}"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 

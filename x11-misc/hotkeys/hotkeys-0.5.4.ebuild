@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.4.ebuild,v 1.6 2002/10/04 06:43:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.4.ebuild,v 1.7 2002/10/20 18:55:28 vapier Exp $
 
 NAME="hotkeys"
 S=${WORKDIR}/${P}
@@ -18,7 +18,6 @@ DEPEND="virtual/x11
 	>=sys-libs/db-3.2.3
 	=x11-libs/xosd-0.7.0"
 
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
