@@ -1,5 +1,6 @@
 MD5 d25ffc7e82003a26e025471ca8df299c gcc-3.2.1-r7.ebuild 14774
 MD5 77dabd76c2610078ebdb9566f8b54503 gcc-3.2.2-r2.ebuild 15843
+MD5 4d20468233a8fe77879ae732c0e8c946 gcc-3.3.2-r2.ebuild 17951
 MD5 6d0d6b9214ecb88e26a54b70901c50b4 gcc-2.95.3-r7.ebuild 5436
 MD5 4f05cb3e384da16a22aeba15ebfa97a7 ChangeLog 30780
 MD5 3f796d926d7c63b50910a657cb67a358 gcc-3.1.1-r1.ebuild 9595
@@ -28,6 +29,7 @@ MD5 4a4be6eb294e00da7fef14ec597dcf13 files/digest-gcc-3.0.4-r6 128
 MD5 a84561f46d573c1c835b1c4d2510cc07 files/gcc-3-deopt.patch 588
 MD5 40e6872c09149a81973f01a78c80bbb7 files/digest-gcc-3.2.3-r2 279
 MD5 385267d11aa8b32522d1585b2d520476 files/gcc-3-deopt-doc.patch 819
+MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
 MD5 b1a242694f56184cbcdd40ba25800d50 files/gcc-2.95.3-alpha.diff 14345
 MD5 cd99b576d23043d02ee0b47a63c0c95e files/digest-gcc-3.2.2 64
 MD5 12d4b0c4fc49fad52850ab007c3c7371 files/digest-gcc-3.3-r1 353
