@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10q-r1.ebuild,v 1.1 2001/02/07 15:51:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10q-r1.ebuild,v 1.2 2001/02/10 11:17:25 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
@@ -17,14 +17,22 @@ src_unpack() {
     unpack ${P}.tar.bz2
     cd ${S}
     cp MCONFIG MCONFIG.orig
-    sed -e "s/-pipe -O2 -m486 -fomit-frame-pointer/${CFLAGS}/" \
-        -e "s/CPU=.*/CPU=${CHOST%%-*}/" \
-        -e "s/HAVE_PAM=no/HAVE_PAM=yes/" \
-	-e "s/HAVE_SLN=no/HAVE_SLN=yes/" \
-	-e "s/HAVE_TSORT=no/HAVE_TSORT=yes/" \
+    sed -e "s:-pipe -O2 -m486 -fomit-frame-pointer:${CFLAGS}:" \
+        -e "s:CPU=.*:CPU=${CHOST%%-*}:" \
+        -e "s:HAVE_PAM=no:HAVE_PAM=yes:" \
+	-e "s:HAVE_SLN=no:HAVE_SLN=yes:" \
+	-e "s:HAVE_TSORT=no:HAVE_TSORT=yes:" \
         -e "s:usr/man:usr/share/man:" \
         -e "s:usr/info:usr/share/info:" \
 	MCONFIG.orig > MCONFIG.orig2
+     if [ "`use simpleinit`" ]
+     then
+	sed -e "s:HAVE_SYSVINIT=yes:HAVE_SYSVINIT=no:" \
+	    -e "s:HAVE_SYSVINIT_UTILS=yes:HAVE_SYSVINIT_UTILS=no:" \
+	MCONFIG.orig2 > MCONFIG
+     else
+        mv MCONFIG.orig2 MCONFIG
+     fi
 
 }
 

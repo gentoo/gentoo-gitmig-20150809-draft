@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.2-r1.ebuild,v 1.2 2001/02/08 21:39:47 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.2-r1.ebuild,v 1.3 2001/02/10 11:17:25 achim Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz truetype.tar.gz gatos.tar.gz"
 S=${WORKDIR}/xc
@@ -47,7 +47,7 @@ src_install() {
     try make install DESTDIR=${D}
     try make install.man DESTDIR=${D}
 
-    cd ${WORKDIR}/gatos-ati/ati.2
+    cd ${WORKDIR}/gatos-ati/ati_xv/ati.2
     try make install DESTDIR=${D}
 
     insinto /usr/X11R6/lib/X11
