@@ -1,11 +1,15 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.4 2002/06/21 09:25:48 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.5 2002/06/23 17:37:19 bangert Exp $
+#
+# 23 Jun 2002; Jon Nelson <jnelson@gentoo.org> run-crons:
+#
+# fixed a race condition, where cron jobs and run-crons wanted to delete
+# touch files
 #
 # 20 Apr 2002; Thilo Bangert <bangert@gentoo.org> run-crons:
 #
 # moved lastrun directory to /var/spool/cron/lastrun
-#
 #
 # Author: Achim Gottinger <achim@gentoo.org>
 #
@@ -19,31 +23,17 @@ mkdir -p /var/spool/cron/lastrun
 
 #
 
-for CRONDIR in /etc/cron.{hourly,daily,weekly,monthly}
+for BASE in hourly daily weekly monthly
 do
-   
-    test -d $CRONDIR || continue
-    BASE=${CRONDIR##*/}
-    test -e /var/spool/cron/lastrun/$BASE && {
+    CRONDIR=/etc/cron.${BASE}
 
-	case $BASE in
-	    cron.hourly)
-		#> 59 min =~ >= 60 min
-		TIME="-cmin  +59 " ;;
-	    cron.daily)
-		#>= 1 day
-		TIME="-ctime +1  -or -ctime 1"  ;;
-	    cron.weekly)
-		#>= 7 days
-		TIME="-ctime +7  -or -ctime 7"  ;;
-	    cron.monthly)
-		#>= 30 days
-		TIME="-ctime +30 -or -ctime 30" ;;
-	esac
-	find /var/spool/cron/lastrun/$BASE $TIME -exec rm {} \;
-    }
-    if test ! -e /var/spool/cron/lastrun/$BASE ; then
-	touch /var/spool/cron/lastrun/$BASE
+    test -d $CRONDIR || continue
+
+    # if there is no touch file, make one then run the scripts 
+    if test ! -f /var/spool/cron/lastrun/cron.$BASE
+    then
+
+	touch /var/spool/cron/lastrun/cron.$BASE
 
 	set +e
 	for SCRIPT in $CRONDIR/*
@@ -59,5 +49,5 @@ done
 #
 
 touch /var/spool/cron/lastrun
-find /var/spool/cron/lastrun -newer /var/spool/cron/lastrun -exec rm {} \;
+find /var/spool/cron/lastrun -newer /var/spool/cron/lastrun -exec /bin/rm -f {} \;
 
