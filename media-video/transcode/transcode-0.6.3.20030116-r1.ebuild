@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. 
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.20030116-r1.ebuild,v 1.1 2003/02/14 04:25:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.20030116-r1.ebuild,v 1.2 2003/02/14 22:57:01 vapier Exp $
 
 inherit libtool flag-o-matic
 
