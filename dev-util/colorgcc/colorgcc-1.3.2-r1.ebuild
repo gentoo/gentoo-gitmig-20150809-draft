@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r1.ebuild,v 1.13 2004/06/25 02:23:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r1.ebuild,v 1.14 2004/07/14 22:54:09 agriffis Exp $
 
 DESCRIPTION="Adds color to gcc output"
 HOMEPAGE="http://packages.debian.org/testing/devel/colorgcc.html"
@@ -10,6 +10,7 @@ SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 DEPEND="dev-lang/perl"
 
