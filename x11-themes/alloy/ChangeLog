@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.5 2004/04/17 12:26:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.6 2004/06/19 13:36:58 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> alloy-0.5.ebuild:
+  Stable on x86.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> alloy-0.3.ebuild,
   alloy-0.4.1a.ebuild, alloy-0.5.ebuild:

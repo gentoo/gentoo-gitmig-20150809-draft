@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.ebuild,v 1.3 2004/04/17 12:26:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.ebuild,v 1.4 2004/06/19 13:36:58 pyrania Exp $
 
 inherit kde
 need-kde 3.2
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 DEPEND=">=kde-base/kdebase-3.2
 	>=x11-libs/qt-3.3.0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 
 pkg_postinst(){
 	ewarn "HOW TO USE THIS THEME FOR KDE:"
