@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r10.ebuild,v 1.2 2005/03/02 17:23:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r10.ebuild,v 1.3 2005/03/02 17:28:41 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -128,7 +128,7 @@ src_install() {
 
 
 	einfo "Fixing binaries"
-	dodir  /usr/share/openmotif-2.1
+	dodir /usr/share/openmotif-2.1
 	for file in `ls ${D}/usr/bin`
 	do
 		mv ${D}/usr/bin/${file} ${D}/usr/share/openmotif-2.1/
