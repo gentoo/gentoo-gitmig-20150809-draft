@@ -1,0 +1,2 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/24headers/package.mask,v 1.1 2005/04/06 06:05:45 eradicator Exp $
+-<sys-boot/silo-1.4.9

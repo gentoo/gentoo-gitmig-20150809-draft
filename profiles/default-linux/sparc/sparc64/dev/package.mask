@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/package.mask,v 1.1 2005/04/06 06:05:45 eradicator Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Earlier versions aren't patched to work with 2.6 headers
+<sys-boot/silo-1.4.9
