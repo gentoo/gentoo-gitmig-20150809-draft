@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.ebuild,v 1.6 2003/08/04 21:33:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.ebuild,v 1.7 2003/08/06 13:37:27 vapier Exp $
 
 inherit libtool flag-o-matic
 
@@ -8,13 +8,15 @@ inherit libtool flag-o-matic
 filter-mfpmath "sse" 
 filter-flags -fPIC
 
-IUSE="sdl mmx mpeg sse encode X quicktime avi"
 DESCRIPTION="video stream processing tool"
-SRC_URI="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode/pre/${P}.tar.gz"
 HOMEPAGE="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode"
-SLOT="0"
+SRC_URI="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode/pre/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 -ppc"
+IUSE="sdl mmx mpeg sse encode X quicktime avi"
+
 DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.9.5
 	>=dev-lang/nasm-0.98.34

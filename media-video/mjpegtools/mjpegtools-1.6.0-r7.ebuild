@@ -1,15 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.14 2003/08/04 18:34:53 mholzer Exp $
-
-IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.15 2003/08/06 13:35:58 vapier Exp $
 
 inherit eutils gcc libtool flag-o-matic base
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
-
 # Portage currently chokes on the following nested conditional.
 #	SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
 #		quicktime? ( !alpha? (
@@ -23,6 +19,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
 LICENSE="as-is"
 SLOT="1"
 KEYWORDS="x86 ~ppc alpha ~sparc"
+IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
@@ -31,12 +28,11 @@ RDEPEND="media-libs/jpeg
 	sdl? ( media-libs/libsdl )
 	media-libs/libdv
 	arts? ( kde-base/arts )"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	x86? ( media-libs/libmovtar )
 	avi? ( media-video/avifile )
-	quicktime? ( !alpha? ( >=media-libs/quicktime4linux-1.5.5-r1 ) )
+	quicktime? ( !alpha? ( virtual/quicktime ) )
 	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )
 	mmx? ( dev-lang/nasm )
 	3dnow? ( dev-lang/nasm )
@@ -44,7 +40,6 @@ DEPEND="${RDEPEND}
 	media-libs/libdv
 	svga? ( media-libs/svgalib )
 	arts? ( kde-base/arts )"
-
 
 src_unpack() {
 	base_src_unpack

@@ -1,24 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.7.ebuild,v 1.4 2003/08/04 21:33:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.7.ebuild,v 1.5 2003/08/06 13:37:27 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
 filter-mfpmath sse 
 filter-flags -fPIC
-
-filter-flags "-maltivec -mabi=altivec"
+filter-flags -maltivec -mabi=altivec
 
 MY_P="${P/_pre/.}"
 S=${WORKDIR}/${MY_P}
-IUSE="sdl mmx mpeg sse encode X quicktime avi altivec"
 DESCRIPTION="video stream processing tool"
-SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
 HOMEPAGE="http://zebra.fh-weingarten.de/~transcode/"
-SLOT="0"
+SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE="sdl mmx mpeg sse encode X quicktime avi altivec"
+
 DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.99
 	x86? ( >=dev-lang/nasm-0.98.34 )
