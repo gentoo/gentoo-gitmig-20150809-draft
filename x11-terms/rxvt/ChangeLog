@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.31 2004/12/09 19:10:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.32 2004/12/29 17:08:40 usata Exp $
+
+  30 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> rxvt-2.7.10-r1.ebuild:
+  Step back to unstable; bug #74805 and bug #74262.
 
   09 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> rxvt-2.7.10-r1.ebuild:
   Stable on sparc
