@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.1 2003/07/16 14:04:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.2 2003/07/16 17:42:54 lanius Exp $
 
 inherit eutils
 
@@ -99,7 +99,7 @@ src_install() {
 	fi
 
 	# Install ijs
-	cd ijs
+	cd ${S}/ijs
 	dodir /usr/bin /usr/include /usr/lib
 	einstall install_prefix=${D}
 }
