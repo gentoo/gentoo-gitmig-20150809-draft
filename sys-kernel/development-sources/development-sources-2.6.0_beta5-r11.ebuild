@@ -1,33 +1,37 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.71.ebuild,v 1.4 2003/09/11 22:15:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta5-r11.ebuild,v 1.1 2003/09/25 09:49:09 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
-OKV=${PV}
-KV=${PV}
-S=${WORKDIR}/linux-${KV}
+OKV=${PV/_beta/-test}
+
+PKV=${PF/_beta/-test}
+PKV=${PKV/-r/-bk}
+PKV=${PKV//${PN}-}
+
+KV=${PV/_beta/-test}
+
+S=${WORKDIR}/linux-${PKV}
 ETYPE="sources"
 
-# What's in this kernel?
-
-# INCLUDED:
-# beta ${PV} linux kernel sources with
-
+IUSE="alsa"
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
-SRC_URI="mirror://kernel/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}"
-PROVIDE="virtual/linux-sources"
-[ -n "$(use alsa)" ] && PROVIDE="${PROVIDE} virtual/alsa"
+PATCH_URI="http://www.kernel.org/pub/linux/kernel/v2.6/snapshots/patch-${PKV}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI}"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
-SLOT="${KV}"
-KEYWORDS="x86 ppc"
+SLOT="${PKV}"
+KEYWORDS="-* ~x86"
+PROVIDE="virtual/linux-sources"
+[ -n "$(use alsa)" ] && PROVIDE="${PROVIDE} virtual/alsa"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl
-		 sys-devel/make"
+		 sys-devel/make
+		 sys-apps/module-init-tools"
 fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
@@ -36,7 +40,9 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 
+	mv linux-${OKV} linux-${PKV}
 	cd ${S}
+	epatch ${DISTDIR}/patch-${PKV}.bz2
 
 	unset ARCH
 	#sometimes we have icky kernel symbols; this seems to get rid of them
@@ -46,7 +52,6 @@ src_unpack() {
 	cd ${WORKDIR}
 	chown -R 0.0 *
 	chmod -R a+r-w+X,u+w *
-
 }
 
 src_compile() {
@@ -87,6 +92,22 @@ pkg_postinst() {
 	if [ ! -e ${ROOT}usr/src/linux-beta ]
 	then
 
-		ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
+		ln -sf linux-${PKV} ${ROOT}/usr/src/linux-beta
 	fi
+
+	echo
+	ewarn "Please note that ptyfs support has been removed from devfs"
+	ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
+	ewarn "or else you will get errors when trying to open a pty."
+	ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
+	ewarn "filesystem."
+	echo
+	ewarn "Also, note that you must compile in support for"
+	ewarn "input devices (Input device support->Input devices),"
+	ewarn "the virtual terminal (Character Devices->Virtual terminal),"
+	ewarn "vga_console (Graphics Support->Console...->VGA text console)"
+	ewarn "and the vt_console (Character Devices->Support for console...)."
+	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""
+	ewarn "error."
+	echo
 }
