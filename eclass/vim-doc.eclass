@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.1 2003/07/30 18:47:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.2 2003/07/30 18:53:54 agriffis Exp $
 #
 # This eclass is used by vim.eclass and vim-plugin.eclass to update
 # the documentation tags.  This is necessary since vim doesn't look in
@@ -24,7 +24,7 @@ update_vim_helptags() {
 	local vim=`which vim 2>/dev/null`
 	[[ -z "$vim" ]] && vim=`which gvim 2>/dev/null`
 	[[ -z "$vim" ]] && vim=`which kvim 2>/dev/null`
-	if [[ -z "$vim" ]]; then
+	if [[ -z "$vim" -a $PN != vim-core ]]; then
 		ewarn "No suitable vim binary to rebuild documentation tags"
 	fi
 
@@ -35,7 +35,7 @@ update_vim_helptags() {
 
 		# Remove links, and possibly remove stale dirs
 		find $d/doc -name \*.txt -type l | while read s; do
-			[[ `readlink "$s"` = ${vimfiles}/* ]] && rm -f "$s"
+			[[ `readlink "$s"` = $vimfiles/* ]] && rm -f "$s"
 		done
 		if [[ -f "$d/doc/tags" && 
 				$(find "$d" | wc -l | awk '{print $1}') = 3 ]]; then
@@ -48,8 +48,8 @@ update_vim_helptags() {
 		fi
 
 		# Re-create / install new links
-		if [[ -d ${vimfiles}/doc ]]; then
-			ln -s ${vimfiles}/doc/*.txt $d/doc 2>/dev/null
+		if [[ -d $vimfiles/doc ]]; then
+			ln -s $vimfiles/doc/*.txt $d/doc 2>/dev/null
 		fi
 
 		# Update tags; need a vim binary for this
