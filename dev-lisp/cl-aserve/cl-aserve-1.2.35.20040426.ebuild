@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.35.20040426.ebuild,v 1.1 2004/05/08 23:17:42 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.35.20040426.ebuild,v 1.2 2004/05/09 14:53:00 dholm Exp $
 
 inherit common-lisp
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://packages.debian.org/unstable/web/cl-aserve.html"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-portable-aserve/cl-portable-aserve_${MY_PV}+cvs.${CVS_PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	=dev-lisp/cl-acl-compat-${PV}
