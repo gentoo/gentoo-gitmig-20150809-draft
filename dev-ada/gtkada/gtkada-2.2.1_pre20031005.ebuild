@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1_pre20031005.ebuild,v 1.1 2003/10/06 00:29:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1_pre20031005.ebuild,v 1.2 2003/10/28 14:48:26 dholm Exp $
 
 inherit gnat
 
@@ -13,7 +13,7 @@ SLOT="1"
 KEYWORDS="~x86 ~ppc"
 IUSE="nls opengl"
 
-DEPEND="dev-lang/gnat
+DEPEND=">=dev-lang/gnat-3.14p
 	>=x11-libs/gtk+-2.2.0"
 RDEPEND=""
 
@@ -56,5 +56,20 @@ src_install() {
 	mv doc/${Name}/* share/${PN}/examples/ share/doc/${PF}
 	rm -rf doc/ share/${PN}/
 	cd ${S} #in case need to add anything afterwards
+
+	#set up environment
+	dodir /etc/env.d
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" \
+		> ${D}/etc/env.d/55gtkada
+	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" \
+		>> ${D}/etc/env.d/55gtkada
+}
+
+pkg_postinst() {
+	einfo "The envaironment has been set up to make gnat automatically find files for"
+	einfo "GtkAda. In order to immediately activate these settings please do:"
+	einfo "env-update"
+	einfo "source /etc/profile"
+	einfo "Otherwise the settings will become active next time you login"
 }
 
