@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.6 2002/08/13 15:13:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.7 2002/08/14 03:40:44 raker Exp $
+
+*cyrus-imapd-2.1.5-r1 (13 Aug 2002)
+
+  13 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-imapd-2.1.5-r1.ebuild, files/digest-cyrus-imapd-2.1.5-r1 :
+  Updated ebuild with fixes provided by Dominik Westner.  Enabled perl and
+  cyradm in configure if use perl is set.  This will install cyradm and
+  sieveshell scripts and the perl modules for cyrus imapd.
 
 *cyrus-imapd-2.1.5 (13 Jul 2002)
 
