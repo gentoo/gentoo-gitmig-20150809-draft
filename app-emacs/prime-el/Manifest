@@ -1,3 +1,5 @@
-MD5 6f0830769ff01a171c1839e521e70052 prime-el-1.2.0.ebuild 887
-MD5 a6e9dc761a05be1097baf0ad92ad5a67 files/50prime-el-gentoo.el 62
+MD5 b5fdfdb443a94c51bb339c56188361e9 metadata.xml 175
+MD5 76c9aaa9d203ca68cd3f97bfb6abc0a5 ChangeLog 454
+MD5 790609938d87e20f9d32b08597bfe00e prime-el-1.2.0.ebuild 985
 MD5 d8282da36c7c3a4f251db15f0be741db files/digest-prime-el-1.2.0 66
+MD5 a6e9dc761a05be1097baf0ad92ad5a67 files/50prime-el-gentoo.el 62
