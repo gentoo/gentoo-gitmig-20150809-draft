@@ -1,40 +1,32 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.4 2004/04/14 01:34:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.5 2004/04/19 07:55:51 vapier Exp $
+
+inherit gcc
 
 MY_P=${P/_alpha/-a}
-
 DESCRIPTION="Suite of simple, portable benchmarks"
-
 HOMEPAGE="http://www.bitmover.com/lmbench/whatis_lmbench.html"
-
 SRC_URI="ftp://ftp.bitmover.com/lmbench/${MY_P}.tgz"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="x86 ppc"
-
 IUSE=""
 
 DEPEND="virtual/glibc"
 
-#RDEPEND=""
-
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-
 	sed -e "s#^my \$distro =.*#my \$distro = \"`uname -r`\";#" \
 		-e 's#^@files =#chdir "/usr/share/lmbench"; @files =#' \
 		-e "s#../../CONFIG#/etc/bc-config#g" ${FILESDIR}/bc_lm.pl > bc_lm.pl
 
-	emake CC=${CC} MAKE=make OS=`scripts/os` build || die
+	emake CC=$(gcc-getCC) MAKE=make OS=`scripts/os` build || die
 }
 
 src_install() {
-
 	cd src ; make BASE=${D}/usr install || die
 
 	dodir /usr/share
@@ -56,5 +48,4 @@ src_install() {
 	chmod 777 ${D}/usr/share/lmbench/results
 	dodir /usr/share/lmbench/bin
 	chmod 777 ${D}/usr/share/lmbench/bin
-
 }
