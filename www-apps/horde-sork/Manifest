@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 22e8d5d094d65fdfaec8b60263e1a32f horde-sork-0.ebuild 591
-MD5 2f11fff2aabbcd5b418d4e419a3a3a6b metadata.xml 525
 MD5 4ee5c563cab58e69d1dd15e300fd6e8c ChangeLog 774
+MD5 38c074f07eccc40ff46b98d7ca03d415 horde-sork-0.ebuild 605
+MD5 2f11fff2aabbcd5b418d4e419a3a3a6b metadata.xml 525
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-horde-sork-0 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOtG0I1lqEGTUzyQRAmuaAJ9XimAsdxZa34IZI96RECb238RHhQCgnc11
-sMoOETpgrH3BE9yX2FnqIHg=
-=p1JT
------END PGP SIGNATURE-----
