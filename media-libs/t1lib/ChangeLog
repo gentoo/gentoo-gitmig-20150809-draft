@@ -2,11 +2,12 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.2 2002/04/16 01:14:04 seemant Exp
 
-  13 Jan 2003; Aron Griffis <agriffis@gentoo.org> t1lib-1.3.1.ebuild :
-  Add alpha to KEYWORDS
+*t1lib-5.0.0-r1 (03 Aug 2003)
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+  03 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> t1lib-5.0.0-r1.ebuild:
+  Fixed hardcoded t1lib library filename (which referred to 1.3.1
+  and therefore failed to install).  Changed DEPEND to virtual/tetex.
+
 *t1lib-5.0.0 (31 Jul 2003)
 
   31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> t1lib-5.0.0.ebuild :
@@ -20,6 +21,11 @@
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> t1lib-1.3.1.ebuild :
   Added hppa to KEYWORDS.
 
+  13 Jan 2003; Aron Griffis <agriffis@gentoo.org> t1lib-1.3.1.ebuild :
+  Add alpha to KEYWORDS
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
   1 May 2002; Roman Weber <gentoo@gonzo.ch> t1lib-1.3.1.ebuild :
   
   Update to new version and fixed libtool bug. Fixes #2316
