@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/nucleo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/ChangeLog,v 1.1 2004/07/24 04:03:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/ChangeLog,v 1.2 2004/08/03 15:02:30 usata Exp $
+
+*nucleo-0.1-r1 (04 Aug 2004)
+
+  04 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +nucleo-0.1-r1.ebuild:
+  Updated to the latest dated tarball.
 
 *nucleo-0.1 (24 Jul 2004)
 

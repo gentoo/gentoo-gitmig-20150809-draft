@@ -1,4 +1,6 @@
 MD5 a523716f93dd90de2f1588fdb010f5c2 nucleo-0.1.ebuild 748
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
-MD5 3cd214b4a4f64b42e3ed47f1f7e29c6c ChangeLog 479
+MD5 013baaacab21bced094d45dbbc0bd1fd ChangeLog 621
+MD5 1d2ed2edb147c40116cf214ecdd6e577 nucleo-0.1-r1.ebuild 751
 MD5 b7561db113b09ec66dc2377f6d2f1c25 files/digest-nucleo-0.1 72
+MD5 62ea22d5eff98ff9d6070953441b6b1e files/digest-nucleo-0.1-r1 72
