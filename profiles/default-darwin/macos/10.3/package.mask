@@ -20,6 +20,4 @@ sys-devel/flex
 ##
 
 
-#masked until the save problem is fixed.
-app-editors/nano
 app-arch/cpio
