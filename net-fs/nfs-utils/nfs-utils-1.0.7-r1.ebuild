@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.1 2005/03/15 05:43:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.2 2005/03/15 12:30:04 seemant Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="nonfsv4 tcpd"
+IUSE="nonfsv4 tcpd kerberos"
 
 RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	>=net-nds/portmap-5b-r6
