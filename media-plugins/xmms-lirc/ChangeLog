@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-lirc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.12 2004/12/31 09:13:41 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.13 2005/02/06 18:42:11 corsair Exp $
+
+  06 Feb 2005; Markus Rothe <corsair@gentoo.org> xmms-lirc-1.4.ebuild:
+  Stable on ppc64
 
   31 Dec 2004; Markus Rothe <corsair@gentoo.org> xmms-lirc-1.4.ebuild:
   Added ~ppc64 to KEYWORDS
