@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.5.ebuild,v 1.3 2002/08/01 11:58:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.5.ebuild,v 1.4 2002/08/02 05:03:34 seemant Exp $
 
 S=${WORKDIR}/qt-x11-free-$PV
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.gz"
@@ -17,10 +17,10 @@ src_compile() {
 src_install() {
 	QTBASE=/usr/qt/3
 	export QTDIR=${S}
-    cd ${S}
-    # misc
-    insinto /etc/env.d
-    doins ${FILESDIR}/45qt-docs3
+	cd ${S}
+	# misc
+	insinto /etc/env.d
+	doins ${FILESDIR}/45qt-docs3
 
 	# docs
 	cd ${S}/doc
