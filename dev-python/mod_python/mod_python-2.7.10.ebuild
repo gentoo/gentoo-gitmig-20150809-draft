@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.10.ebuild,v 1.5 2004/06/25 01:34:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.10.ebuild,v 1.6 2005/02/11 19:45:40 pythonhead Exp $
 
 inherit python
 
