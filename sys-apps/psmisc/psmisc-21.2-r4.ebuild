@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.3 2003/10/18 18:46:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.4 2003/10/29 03:14:07 pebenito Exp $
+
+SELINUX_PATCH="psmisc-21.2-selinux.diff.bz2"
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
-SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz
-	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
+SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -13,18 +14,26 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ia64"
 IUSE="nls selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+	selinux? ( sys-libs/libselinux )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Necessary selinux patch
-	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
+	if use selinux; then
+		# Necessary selinux patch
+		epatch ${FILESDIR}/${SELINUX_PATCH}
+	else
+		# Fix gcc-3.3 compile issues.
+		# <azarah@gentoo.org> (18 May 2003)
 
-	# Fix gcc-3.3 compile issues.
-	# <azarah@gentoo.org> (18 May 2003)
-	epatch ${FILESDIR}/${P}-gcc33.patch
+		# the section that this patch fixes
+		# is deleted by the above selinux patch
+		# so should only needed for ! use selinux
+		# <pebenito@gentoo.org> (09 Aug 2003)
+
+		epatch ${FILESDIR}/${P}-gcc33.patch
+	fi
 
 	# Killall segfault if an command is longer than 128 bytes, as
 	# the realloc call is not done in such an way to update the

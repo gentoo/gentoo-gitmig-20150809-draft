@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.59 2003/10/09 18:59:21 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.60 2003/10/29 03:14:07 pebenito Exp $
+
+  28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> util-linux-2.12.ebuild,
+  files/util-linux-2.12-selinux.diff.bz2:
+  Add new API SELinux patch
 
   09 Oct 2003; Alexander Gabert <pappy@gentoo.org> util-linux-2.11z-r6.ebuild:
   removed hardened-gcc appendix flags again

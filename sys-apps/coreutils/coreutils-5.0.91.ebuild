@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.4 2003/10/06 15:23:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.5 2003/10/29 03:14:07 pebenito Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="nls build acl selinux static"
 
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 PATCHDIR="${WORKDIR}/patch"
-SELINUX_PATCH="coreutils-5.0.91-selinux.patch.bz2"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
@@ -16,8 +15,7 @@ HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/coreutils/${P}.tar.bz2
 	mirror://gnu/coreutils/${P}.tar.bz2
 	mirror://coreutils/${P}.tar.bz2
-	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
-	selinux? mirror://gentoo/${SELINUX_PATCH}"
+	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -30,7 +28,7 @@ DEPEND="virtual/glibc
 	sys-apps/help2man
 	nls? ( sys-devel/gettext )
 	acl? ( sys-apps/acl )
-	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+	selinux? ( sys-libs/libselinux )"
 
 src_unpack() {
 	unpack ${A}
@@ -78,8 +76,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
-	use selinux && epatch ${DISTDIR}/${SELINUX_PATCH}
-
+	use selinux && EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/selinux
 }
 
 src_compile() {

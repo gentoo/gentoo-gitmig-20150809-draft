@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r2.ebuild,v 1.1 2003/10/17 03:42:09 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r2.ebuild,v 1.2 2003/10/29 03:14:07 pebenito Exp $
 
 inherit eutils
 
 IUSE="selinux"
 
+SELINUX_PATCH="vcron-3.0.1-selinux.diff.bz2"
+
 MY_P=${P/vcron/vixie-cron}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The Vixie cron daemon"
-SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
-	 selinux? mirror://gentoo/${P}-selinux.patch.bz2"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 HOMEPAGE=""
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~arm ~mips ~hppa ~ia64"
 SLOT="0"
@@ -18,12 +19,12 @@ LICENSE="as-is"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
-	selinux? ( sys-apps/selinux-small )"
+	selinux? ( sys-libs/libselinux )"
 
 RDEPEND="!virtual/cron
 	 sys-apps/cronbase
 	 virtual/mta
-	 selinux? ( sys-apps/selinux-small )"
+	 selinux? ( sys-libs/libselinux )"
 
 PROVIDE="virtual/cron"
 
@@ -35,7 +36,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${MY_P}-gentoo.patch
 	epatch ${FILESDIR}/${P}-close_stdin.diff
 
-	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 
 	sed -i "s:-O2:${CFLAGS}:" Makefile
 }

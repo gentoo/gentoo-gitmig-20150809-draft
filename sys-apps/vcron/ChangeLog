@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.17 2003/10/17 03:42:09 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.18 2003/10/29 03:14:07 pebenito Exp $
+
+  28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> vcron-3.0.1-r1.ebuild,
+  vcron-3.0.1-r2.ebuild, files/vcron-3.0.1-selinux.diff.bz2:
+  Switch SELinux patch from old API to new API.
 
 *vcron-3.0.1-r2 (16 Oct 2003)
 

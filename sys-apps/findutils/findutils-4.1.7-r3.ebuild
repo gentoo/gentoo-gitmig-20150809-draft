@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.7 2003/09/07 01:34:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.8 2003/10/29 03:14:07 pebenito Exp $
 
-IUSE="nls build afs selinux"
+IUSE="nls build afs"
 
 inherit eutils
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="GNU utilities to find files"
-SRC_URI="ftp://alpha.gnu.org/gnu/${P}.tar.gz
-	selinux? mirror://gentoo/${P}-2003011510-selinux-gentoo.patch.bz2"
+SRC_URI="ftp://alpha.gnu.org/gnu/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 
@@ -20,13 +19,11 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
-	afs? ( net-fs/openafs )
-	selinux? ( sys-apps/selinux-small )"
+	afs? ( net-fs/openafs )"
 RDEPEND="virtual/glibc"
 
 src_compile() {
 
-	use selinux && epatch ${DISTDIR}/${P}-2003011510-selinux-gentoo.patch.bz2
 	local myconf
 
 	use nls || myconf="${myconf} --disable-nls"

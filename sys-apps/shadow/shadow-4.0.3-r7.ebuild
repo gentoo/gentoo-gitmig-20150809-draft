@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r7.ebuild,v 1.5 2003/09/26 19:55:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r7.ebuild,v 1.6 2003/10/29 03:14:07 pebenito Exp $
 
-IUSE=""
+IUSE="selinux"
 
 inherit eutils libtool gnuconfig
 
 FORCE_SYSTEMAUTH_UPDATE="yes"
+
+SELINUX_PATCH="shadow-4.0.3-selinux.diff"
 
 S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
@@ -19,10 +21,12 @@ KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	selinux? ( sys-libs/libselinux )"
 
 RDEPEND=">=sys-libs/pam-0.75-r4
-	>=sys-libs/cracklib-2.7-r3"
+	>=sys-libs/cracklib-2.7-r3
+	selinux? ( sys-libs/libselinux )"
 
 
 pkg_preinst() {
@@ -33,6 +37,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+
 	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
 	# else the session entries in /etc/pam.d/su never get executed, and
 	# pam_xauth for one, is then never used.  This should close bug #8831.

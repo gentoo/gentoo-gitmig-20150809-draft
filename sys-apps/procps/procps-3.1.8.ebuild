@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.8.ebuild,v 1.8 2003/09/07 00:40:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.8.ebuild,v 1.9 2003/10/29 03:14:07 pebenito Exp $
 
-IUSE="selinux"
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools -ps top tload snice vmstat free w watch uptime pmap skill pkill kill pgrep sysctl"
-SRC_URI="http://${PN}.sf.net/${P}.tar.gz
-	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
+SRC_URI="http://${PN}.sf.net/${P}.tar.gz"
 HOMEPAGE="http://procps.sourceforge.net/"
 
 inherit flag-o-matic
@@ -20,14 +19,11 @@ KEYWORDS="x86 amd64 ppc sparc ~alpha ~hppa arm ~mips"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND}
-	>=sys-devel/gettext-0.10.35
-	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+	>=sys-devel/gettext-0.10.35"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
 
 	# Use the CFLAGS from /etc/make.conf.
 	for file in `find . -iname "Makefile"`;do

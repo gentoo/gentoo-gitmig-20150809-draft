@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.1 2003/10/23 20:00:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.2 2003/10/29 03:14:07 pebenito Exp $
 
-IUSE="nls build afs selinux"
+IUSE="nls build afs"
 
 inherit eutils
 
@@ -12,8 +12,7 @@ HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 # Note this doesn't point to gnu.org because alpha.gnu.org has quit
 # supplying the development versions.  If it comes back in the future
 # then we might want to redirect the link.  See bug 18729
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	selinux? mirror://gentoo/${P}-2003011510-selinux-gentoo.patch.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 KEYWORDS="x86 amd64 ppc sparc hppa ~arm alpha ia64"
 SLOT="0"
@@ -22,8 +21,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
-	afs? ( net-fs/openafs )
-	selinux? ( sys-apps/selinux-small )"
+	afs? ( net-fs/openafs )"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -36,8 +34,6 @@ src_unpack() {
 
 	#get a bigger environment as ebuild.sh is growing large
 	epatch ${FILESDIR}/findutils-env-size.patch
-
-	use selinux && epatch ${DISTDIR}/${P}-2003011510-selinux-gentoo.patch.bz2
 }
 
 src_compile() {

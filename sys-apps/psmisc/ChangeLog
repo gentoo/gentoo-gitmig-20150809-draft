@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.20 2003/09/14 16:18:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.21 2003/10/29 03:14:07 pebenito Exp $
+
+*psmisc-21.2-r4 (28 Oct 2003)
+
+  28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> psmisc-21.2-r3.ebuild,
+  psmisc-21.2-r4.ebuild, files/psmisc-21.2-selinux.diff.bz2:
+  Switch SELinux patch from old API to new API.
 
   14 Sep 2003; Martin Schlemmer <azarah@gentoo.org> :
   Killall segfault if an command is longer than 128 bytes, as the realloc call

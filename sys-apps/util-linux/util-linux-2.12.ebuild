@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12.ebuild,v 1.4 2003/09/20 05:14:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12.ebuild,v 1.5 2003/10/29 03:14:07 pebenito Exp $
 
-IUSE="crypt nls static pam"
+IUSE="crypt nls static pam selinux"
 
 inherit eutils flag-o-matic
 
@@ -17,6 +17,7 @@ esac
 
 S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${PN}-2.11z-crypt-gentoo"
+SELINUX_PATCH="util-linux-2.12-selinux.diff.bz2"
 DESCRIPTION="Various useful Linux utilities"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
 	ftp://ftp.cwi.nl/pub/aeb/${PN}/${P}.tar.gz
@@ -30,6 +31,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2-r2
+	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )"
 
 RDEPEND="${DEPEND} dev-lang/perl
@@ -74,6 +76,8 @@ src_unpack() {
 
 	#enable pam only if we use it
 	use pam && sed -i "s:HAVE_PAM=no:HAVE_PAM=yes:" MCONFIG
+
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 
 	sed -i \
 		-e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
