@@ -1,9 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.1 2001/12/29 17:41:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.2 2002/01/09 19:13:24 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die 
-use kde && ( inherit kde-base || die )
+use kde && inherit kde-base
 
 S=${WORKDIR}/${P}-1
 DESCRIPTION="A Qt-based front-end to mpg123"
@@ -21,7 +21,7 @@ src_unpack() {
    unpack apollo-src-1.1.1-1.tar.bz2
    cd ${S}
    mv install.sh install.sh.orig
-   cat install.sh.orig | sed -e 's:$PREFIX/local:$PREFIX:g' > install.sh
+   cat install.sh.orig | sed -e 's:$PREFIX/local:$PREFIX:g' -e 's:BINDIR=$dir::' > install.sh
 }
 
 src_compile() {
@@ -34,8 +34,7 @@ src_install () {
 
     if [ "`use kde`" ]
     then
-        myconf="$myconf --with-kde=${KDEDIR}"
-        dodir /usr/share/applnk/Multimedia
+        myconf="$myconf --with-kde=${D}/${KDEDIR}"
     fi
     
     dodir usr/bin
