@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.8 2002/09/11 22:57:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.9 2002/09/14 15:57:02 azarah Exp $
+
+  14 Sep 2002; Martin Schlemmer <azarah@gentoo.org>:
+  Remove ftp in SRC_URI, as it seems to give some people problems.
 
 *nvidia-kernel-1.0.3123 (12 Sep 2002)
 

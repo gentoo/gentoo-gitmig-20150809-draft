@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.3123.ebuild,v 1.1 2002/09/11 22:57:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.3123.ebuild,v 1.2 2002/09/14 15:57:24 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  Need both lines for
 # Portage 1.8.9+
@@ -11,8 +11,7 @@ NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_GLX-${NV_V}"
 S="${WORKDIR}/NVIDIA_GLX-${NV_V}"
 DESCRIPTION="XFree86 GLX libraries for the NVIDIA's X driver"
-SRC_URI="ftp://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz
-	http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
+SRC_URI="http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
 HOMEPAGE="http://www.nvidia.com/"
 
 LICENSE="NVIDIA"

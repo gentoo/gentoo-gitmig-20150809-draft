@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.11 2002/09/11 22:57:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.12 2002/09/14 15:57:24 azarah Exp $
+
+  14 Sep 2002; Martin Schlemmer <azarah@gentoo.org>:
+  Remove ftp from SRC_URI, as it seems to give problems to some people.
 
 *nvidia-glx-1.0.3123 (12 Sep 2002)
 
