@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gconf-sharp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.1 2004/11/19 03:29:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.2 2004/12/05 04:31:23 latexer Exp $
+
+  04 Dec 2004; Peter Johanson <latexer@gentoo.org> gconf-sharp-1.0.4.ebuild:
+  Marking ~ppc, as it's really just a pice of gtk-sharp.
 
 *gconf-sharp-1.0.4 (18 Nov 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gnome-sharp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.5 2004/12/04 12:33:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.6 2004/12/05 04:30:27 latexer Exp $
+
+  04 Dec 2004; Peter Johanson <latexer@gentoo.org> gnome-sharp-1.0.4.ebuild:
+  Marking ~ppc, as it's really just a pice of gtk-sharp.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> gnome-sharp-1.0.4.ebuild:
   Fixed invalid atoms in *DEPEND.

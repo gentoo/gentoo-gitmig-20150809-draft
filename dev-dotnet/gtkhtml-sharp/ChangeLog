@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.4 2004/12/04 12:33:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.5 2004/12/05 04:34:02 latexer Exp $
+
+  04 Dec 2004; <peter@gentoo.org> gtkhtml-sharp-1.0.4.ebuild:
+  Marking ~ppc, as it's really just a pice of gtk-sharp.
 
 *gtkhtml-sharp-1.0.4 (18 Nov 2004)
 
