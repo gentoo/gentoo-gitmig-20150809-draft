@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/sumika
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/ChangeLog,v 1.14 2004/11/22 13:04:34 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/ChangeLog,v 1.15 2005/01/01 13:03:14 eradicator Exp $
 
   22 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> sumika-0.12.ebuild:
   Changed einstall to make DESTDIR=${D} install; bug #72017.

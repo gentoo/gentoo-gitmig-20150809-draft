@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/aspell-he
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.5 2004/12/18 19:22:49 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.6 2005/01/01 12:43:10 eradicator Exp $
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> aspell-he-0.8.0.ebuild:
   added forgotten IUSE=""

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.1.ebuild,v 1.8 2004/10/05 12:31:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.1.ebuild,v 1.9 2005/01/01 12:57:40 eradicator Exp $
 
 inherit gnome2
 

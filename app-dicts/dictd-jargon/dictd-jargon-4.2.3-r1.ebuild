@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-jargon/dictd-jargon-4.2.3-r1.ebuild,v 1.10 2004/06/24 21:38:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-jargon/dictd-jargon-4.2.3-r1.ebuild,v 1.11 2005/01/01 12:49:43 eradicator Exp $
 
 MY_P=${PN/dictd-/}_${PV}
 DESCRIPTION="Jargon lexicon"

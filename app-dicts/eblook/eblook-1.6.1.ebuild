@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.6.1.ebuild,v 1.3 2004/11/22 12:45:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.6.1.ebuild,v 1.4 2005/01/01 12:51:03 eradicator Exp $
 
 IUSE=""
 

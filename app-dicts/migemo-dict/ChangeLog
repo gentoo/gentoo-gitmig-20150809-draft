@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/migemo-dict
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.10 2004/09/11 16:52:30 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.11 2005/01/01 12:56:46 eradicator Exp $
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> migemo-dict-200309.ebuild:
   Stable on amd64.

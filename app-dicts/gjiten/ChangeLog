@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/gjiten
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.9 2004/11/04 11:39:27 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.10 2005/01/01 12:52:19 eradicator Exp $
 
   04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> -gjiten-2.1.ebuild,
   -gjiten-2.2.ebuild, gjiten-2.3.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/bookview
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/ChangeLog,v 1.5 2004/12/09 10:56:23 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/ChangeLog,v 1.6 2005/01/01 12:47:12 eradicator Exp $
 
   09 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> bookview-3.2.1.ebuild:
   Stable on x86.

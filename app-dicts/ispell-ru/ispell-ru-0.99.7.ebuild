@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.7.ebuild,v 1.9 2004/10/05 12:30:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.7.ebuild,v 1.10 2005/01/01 12:55:52 eradicator Exp $
 
 MY_PV=$(echo ${PV} | sed 's/\.\([0-9]\)$/f\1/')
 S="${WORKDIR}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-1.7.0.ebuild,v 1.7 2004/11/22 13:32:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-1.7.0.ebuild,v 1.8 2005/01/01 12:56:19 eradicator Exp $
 
 DESCRIPTION="Graphical Canna style dictionary editor written for KDE"
 HOMEPAGE="http://linux-life.net/program/cc/kde/app/kannadic/"

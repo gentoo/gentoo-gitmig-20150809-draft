@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-elements/dictd-elements-2000.22.07-r1.ebuild,v 1.10 2004/06/24 21:37:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-elements/dictd-elements-2000.22.07-r1.ebuild,v 1.11 2005/01/01 12:49:04 eradicator Exp $
 
 MY_P=elements-20001107-pre
 DESCRIPTION="The elements database for dict"

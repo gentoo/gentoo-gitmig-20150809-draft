@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.2 2004/06/24 21:38:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.3 2005/01/01 12:50:10 eradicator Exp $
 
 pkg_dte="December 2003"
 

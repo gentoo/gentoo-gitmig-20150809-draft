@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-0.99.4.ebuild,v 1.2 2004/08/21 02:39:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-0.99.4.ebuild,v 1.3 2005/01/01 12:54:32 eradicator Exp $
 
 MY_P=magyarispell-${PV}
 S=${WORKDIR}/${MY_P}

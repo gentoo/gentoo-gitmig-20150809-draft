@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/edictionary
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.4 2004/08/23 21:49:56 kugelfang Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.5 2005/01/01 12:51:28 eradicator Exp $
 
   23 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> edictionary-1.2.ebuild:
   Marked ~amd64.

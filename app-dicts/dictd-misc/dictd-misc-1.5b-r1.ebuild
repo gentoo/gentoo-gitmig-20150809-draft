@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-misc/dictd-misc-1.5b-r1.ebuild,v 1.10 2004/06/24 21:38:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-misc/dictd-misc-1.5b-r1.ebuild,v 1.11 2005/01/01 12:49:56 eradicator Exp $
 
 MY_P=${P/dictd/dict}-pre
 DESCRIPTION="Easton's 1897 Bible Dictionary for dict"

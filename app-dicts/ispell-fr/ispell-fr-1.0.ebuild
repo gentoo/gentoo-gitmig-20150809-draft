@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fr/ispell-fr-1.0.ebuild,v 1.10 2004/06/24 21:42:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fr/ispell-fr-1.0.ebuild,v 1.11 2005/01/01 12:54:06 eradicator Exp $
 
 MY_P="Francais-GUTenberg-v${PV}"
 S=${WORKDIR}/${MY_P}

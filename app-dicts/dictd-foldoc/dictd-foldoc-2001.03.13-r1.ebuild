@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-foldoc/dictd-foldoc-2001.03.13-r1.ebuild,v 1.10 2004/06/24 21:38:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-foldoc/dictd-foldoc-2001.03.13-r1.ebuild,v 1.11 2005/01/01 12:49:17 eradicator Exp $
 
 MY_P=foldoc-20010313
 DESCRIPTION="The Free On-line Dictionary of Computing for dict"
