@@ -6,6 +6,7 @@ afs
 acpi
 3dfx
 3dnow
+3dnowex
 directfb
 avi
 icc
@@ -13,6 +14,7 @@ icc-pgo
 ifc
 krb4
 mmx
+mmx2
 mplayer
 pda
 prelude
