@@ -1,0 +1,8 @@
+# ChangeLog for x11-wm/ion3-svn
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ChangeLog,v 1.1 2004/04/12 11:50:56 twp Exp $
+
+*ion3-svn (12 Apr 2004)
+
+  12 Apr 2004; Tom Payne <twp@gentoo.org> ion3-svn-20040412.ebuild :
+  Initial release.

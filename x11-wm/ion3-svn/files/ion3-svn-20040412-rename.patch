@@ -1,0 +1,52 @@
+diff -Naur ion3-svn-20040412/configure.ac ion3-svn/configure.ac
+--- ion3-svn-20040412/configure.ac	2004-04-07 09:15:37.000000000 +0200
++++ ion3-svn/configure.ac	2004-04-07 22:14:37.741378408 +0200
+@@ -5,7 +5,7 @@
+ AC_INIT([Ion Window Manager],
+         [ION_VERSION],
+         [tuomov@iki.fi],
+-        [ion])
++        [ion3])
+ AC_PREREQ([2.58])
+ AC_REVISION([$Revision: 1.1 $])
+ 
+diff -Naur ion3-svn-20040412/man/ion.1.in ion3-svn/man/ion.1.in
+--- ion3-svn-20040412/man/ion.1.in	2004-02-14 01:18:06.000000000 +0100
++++ ion3-svn/man/ion.1.in	2004-04-07 22:14:08.540817568 +0200
+@@ -2,7 +2,7 @@
+ .SH NAME
+ Ion - an X11 window manager
+ .SH SYNOPSIS
+-.B ion
++.B ion3
+ .I "[options]"
+ .SH "DESCRIPTION"
+ 
+@@ -432,7 +432,7 @@
+ .PP
+ .I DOCDIR/
+ .PP
+-\fIX(7x)\fP, \fIpwm(1)\fP, \fIjoe(1)\fP
++\fIX(7x)\fP, \fIpwm3(1)\fP, \fIjoe(1)\fP
+ 
+ .SH AUTHOR
+ Ion was written by Tuomo Valkonen <tuomov at iki.fi>.
+diff -Naur ion3-svn-20040412/man/pwm.1.in ion3-svn/man/pwm.1.in
+--- ion3-svn-20040412/man/pwm.1.in	2004-01-25 19:05:05.000000000 +0100
++++ ion3-svn/man/pwm.1.in	2004-04-07 22:14:18.730268536 +0200
+@@ -2,7 +2,7 @@
+ .SH NAME
+ PWM - An X11 window manager
+ .SH SYNOPSIS
+-.B pwm
++.B pwm3
+ .I "[options]"
+ .SH "DESCRIPTION"
+ 
+@@ -75,5 +75,5 @@
+ .SH SEE ALSO
+ 
+ For more information, see
+-\fIion(1)\fP.
++\fIion3(1)\fP.
+ 
