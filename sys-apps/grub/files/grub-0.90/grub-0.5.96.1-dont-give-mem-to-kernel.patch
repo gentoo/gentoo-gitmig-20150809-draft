@@ -1,0 +1,30 @@
+--- grub-0.5.96.1/stage2/boot.c.pix	Mon Oct 16 16:42:08 2000
++++ grub-0.5.96.1/stage2/boot.c	Fri Feb 23 16:40:29 2001
+@@ -322,7 +322,18 @@
+ 
+ 	    while (((int) dest) < CL_MY_END_ADDR && *src)
+ 	      *(dest++) = *(src++);
+-	    
++
++/* don't add ``mem='' for 2.4 kernels :
++
++Newer machines have several regions of reserved memory outside and
++inside these regions.  grub's actions are suicide on newer laptops,
++and machines like servers with lots of memory.  Laptops have special
++sections of memory above 1MB which must be reserved... Ditto for
++ACPI tables.  Using mem=XXX completely eliminates any information
++that the BIOS has provided to the OS.
++
++*/
++#if 0	    
+ 	    /* Add a mem option automatically only if the user doesn't
+ 	       specify it explicitly.  */
+ 	    if (! grub_strstr (arg, "mem=")
+@@ -337,6 +348,7 @@
+ 		dest = convert_to_ascii (dest, 'u', (extended_memory + 0x400));
+ 		*(dest++) = 'K';
+ 	      }
++#endif
+ 
+ 	    *dest = 0;
+ 	  }
