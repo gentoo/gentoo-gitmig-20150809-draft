@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.141 2005/01/14 23:11:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.142 2005/01/19 12:31:10 carlo Exp $
+
+*kdegraphics-3.4.0_beta1-r1 (19 Jan 2005)
+
+  19 Jan 2005; Carsten Lohrke <carlo@gentoo.org> +files/CAN-2005-0064.patch,
+  +files/CAN-2005-0064_kde-3.4.patch, +kdegraphics-3.2.3-r4.ebuild,
+  +kdegraphics-3.3.2-r2.ebuild, +kdegraphics-3.4.0_beta1-r1.ebuild:
+  fix for xpdf makeFileKey2 stack overflow, #78619
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org>
   kdegraphics-3.4.0_beta1.ebuild:
