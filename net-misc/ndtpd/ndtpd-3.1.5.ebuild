@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.3 2003/09/10 17:49:25 usata Exp $
 
 inherit eutils
 
@@ -30,14 +30,14 @@ src_install() {
 	einstall || die
 
 	# getent doesn't exist on FreeBSD system
-	if ! $(cut -d':' -f3 /etc/group | grep 2010 >/dev/null 2>&1) ; then
-		enewgroup ndtpgrp 2010
+	if ! $(cut -d':' -f3 /etc/group | grep 402 >/dev/null 2>&1) ; then
+		enewgroup ndtpgrp 402
 	else
 		enewgroup ndtpgrp
 	fi
 
-	if ! $(cut -d':' -f3 /etc/passwd | grep 2010 >/dev/null 2>&1) ; then
-		enewuser ndtpuser 2010 /bin/false /usr/share/dict ndtpgrp
+	if ! $(cut -d':' -f3 /etc/passwd | grep 402 >/dev/null 2>&1) ; then
+		enewuser ndtpuser 402 /bin/false /usr/share/dict ndtpgrp
 	else
 		enewuser ndtpuser -1 /bin/false /usr/share/dict ndtpgrp
 	fi
