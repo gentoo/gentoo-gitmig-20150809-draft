@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.369 2004/12/07 03:59:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.370 2004/12/28 21:54:22 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-4.3.0-r7.ebuild, xfree-4.3.0-r8.ebuild:
@@ -44,7 +47,7 @@
   22 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r7.ebuild:
   x86 (#64152).
 
-  18 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> xfree-4.3.0-r7.ebuild:
+  18 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> xfree-4.3.0-r7.ebuild:
   Stable on alpha, bug 64152.
 
   17 Sep 2004; Travis Tilley <lv@gentoo.org> xfree-4.3.0-r5.ebuild,
@@ -111,7 +114,7 @@
   13 Jun 2004; Stephen P. Becker <geoman@gentoo.org> xfree-4.3.0-r6.ebuild:
   Stable on mips - bug 53226
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xfree-4.3.0-r6.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xfree-4.3.0-r6.ebuild:
   alpha keyword, bug #53226.
 
   11 Jun 2004; Ferris McCormick <fmccor@gentoo.org> xfree-4.3.0-r6.ebuild:

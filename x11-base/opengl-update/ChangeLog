@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.52 2004/12/27 00:11:43 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.53 2004/12/28 21:53:10 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Andrew Bevitt <cyfred@gentoo.org>
   -opengl-update-1.7.1.ebuild, -opengl-update-1.8.1-r1.ebuild,
@@ -140,7 +143,7 @@
   14 Jun 2004; Tom Gall <tgall@gentoo.org> opengl-update-1.7.1.ebuild:
   ~ppc64, initial x support bug #53763
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> opengl-update-1.7.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> opengl-update-1.7.ebuild:
   Stable on alpha.
 
   10 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;

@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.254 2004/12/24 19:37:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.255 2004/12/28 21:55:48 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; David Holm <dholm@gentoo.org> xorg-x11-6.8.1.901.ebuild:
   Added to ~ppc.
@@ -770,7 +773,7 @@
   xorg-x11-6.8.0-r1.ebuild:
   Removed build of unneeded drivers. 6.7.0-r2 Stable on hppa.
 
-  18 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  18 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   xorg-x11-6.8.0-r1.ebuild:
   Add ~alpha to keywords.
 
@@ -785,7 +788,7 @@
   17 Sep 2004; Travis Tilley <lv@gentoo.org> xorg-x11-6.7.0-r2.ebuild:
   stable on amd64
 
-  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  17 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   xorg-x11-6.7.0-r2.ebuild:
   Stable on alpha, bug 64152.
 
@@ -1127,7 +1130,7 @@
   13 Jun 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
   Added ~mips keyword -- bug 53226
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
   ~alpha keyword, bug #53226.
 
   11 Jun 2004; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
