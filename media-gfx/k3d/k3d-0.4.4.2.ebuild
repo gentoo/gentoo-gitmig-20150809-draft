@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.4.4.2.ebuild,v 1.1 2005/03/15 13:44:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.4.4.2.ebuild,v 1.2 2005/03/25 12:56:09 lu_zero Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ src_compile()
 		|| myconf="${myconf} --without-ruby"
 
 
-	econf "CXXFLAGS=${CXXFLAGS}" || die
+	econf "CXXFLAGS=${CXXFLAGS}" $myconf || die
 	emake || die
 
 }

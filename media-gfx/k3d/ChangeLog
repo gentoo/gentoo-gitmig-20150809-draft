@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.10 2005/03/15 13:44:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.11 2005/03/25 12:56:09 lu_zero Exp $
+
+  25 Mar 2005; Luca Barbato <lu_zero@gentoo.org> k3d-0.4.4.2.ebuild:
+  Fix myconf
 
 *k3d-0.4.4.2 (15 Mar 2005)
 
