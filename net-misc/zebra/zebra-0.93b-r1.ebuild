@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.1 2003/05/31 19:31:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.2 2003/06/01 01:12:14 solar Exp $
 
 S=${WORKDIR}/${P}
 IUSE="pam snmp ipv6 ospfapi"
@@ -10,14 +10,18 @@ SRC_URI="ftp://ftp.zebra.org/pub/zebra/${P}.tar.gz \
 		ospfapi? ( http://www.tik.ee.ethz.ch/~keller/ospfapi/src/ospfapi-release_0_93b-2003-01-25.tar.gz )"
 
 HOMEPAGE="http://www.zebra.org"
+# Homepage for ospfapi
 HOMEPAGE="${HOMEPAGE} http://www.tik.ee.ethz.ch/~keller/ospfapi"
-
 KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/glibc
-	pam? ( >=pam-0.75-r11 )"
+	sys-devel/binutils
+	pam? ( >=pam-0.75-r11 )
+	snmp? ( virtual/snmp )"
+
+RDEPEND="virtual/glibc sys-devel/binutils"
 
 src_unpack() {
 	unpack ${A} || die
@@ -40,9 +44,10 @@ src_unpack() {
 src_compile() {
 	local myconf="--enable-vtysh --enable-tcp-zebra"
 
-	use  pam || myconf="${myconf} --disable-pam"
-	use snmp || myconf="${myconf} --disable-snmp"
-	use ipv6 || myconf="${myconf} --disable-ipv6"
+	# use libpam for PAM support in vtysh
+	use  pam && myconf="${myconf} --with-libpam" || myconf="${myconf} --disable-pam"
+	use snmp && myconf="${myconf} --enable-snmp" || myconf="${myconf} --disable-snmp"
+	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --disable-ipv6"
 
 	use ospfapi && myconf="${myconf} --enable-opaque-lsa --enable-ospf-te \
 		--enable-nssa"
@@ -70,7 +75,8 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		install || die "zebra installation failed"
 
-	dodir ${D}/etc/ {D}/etc/zebra/ ${D}/etc/zebra/sample
+	mkdir -p ${D}/etc/zebra/sample
+	# dodir ${D}/etc/ {D}/etc/zebra/ ${D}/etc/zebra/sample
 	cp */*.conf.sample* ${D}/etc/zebra/
 	mv ${D}/etc/zebra/*.conf.sample* ${D}/etc/zebra/sample
 
