@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vsound
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.3 2004/02/27 06:55:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.4 2004/04/01 08:43:35 eradicator Exp $
+
+  01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> vsound-0.5.ebuild:
+  nomirror.  Removed explicit S=
 
   26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
   vsound-0.5.ebuild:
