@@ -36,7 +36,7 @@ load avifile_player begin
  fourcc CRAM msvidc32.dll
  fourcc MSVC msvidc32.dll
 # And the path to look for dlls
-  path /usr/libexec/avifiles/win32
+  path /usr/libexec/avifile/win32
 end
 
 load avidev_player
@@ -56,6 +56,7 @@ lib_path /lib:/usr/lib:/usr/local/lib:/usr/X11R6/lib
 lib libjpeg.so
 lib libpng.so
 load quicktime_player
+
 
 
 

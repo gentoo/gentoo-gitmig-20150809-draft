@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.46.1.ebuild,v 1.2 2000/09/08 20:33:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.46.1.ebuild,v 1.3 2000/09/13 14:07:49 achim Exp $
 
 A="${P}.tar.gz binaries.zip"
 S=${WORKDIR}/${P}
@@ -12,14 +12,39 @@ SRC_URI="http://divx.euro.ru/${P}.tar.gz
 HOMEPAGE="http://divx.euro.ru/"
 
 src_unpack () {
-  unpack ${P}.tar.gz
+
+    WIN32=/usr/libexec/avifile/win32
+
+    unpack ${P}.tar.gz
+
+    cd ${S}
+
+    cp configure configure.orig
+    sed -e "s:/usr/lib/win32:$WIN32:" configure.orig > configure
+
+    cd ${S}/lib/loader
+
+    cp elfdll.c elfdll.c.orig
+    sed -e "s:/usr/lib/win32:$WIN32:" elfdll.c.orig > elfdll.c
+
+    cd ../audiodecoder
+
+    cp audiodecoder.cpp audiodecoder.cpp.orig
+    sed -e "s:/usr/lib/win32:$WIN32:" audiodecoder.cpp.orig > audiodecoder.cpp
+
+    cd ${S}/player
+
+    cp mywidget.cpp mywidget.cpp.orig
+    sed -e "s:/usr/lib/win32:$WIN32:" mywidget.cpp.orig > mywidget.cpp
+
+
 }
 
 src_compile() {
 
     cd ${S}
-    ./configure --prefix=/usr/X11R6 --host=${CHOST} \
-	--with-win32-path=/usr/libexec/avifile/win32
+    ./configure --prefix=/usr/X11R6 --host=${CHOST} 
+
     make
 
 }
@@ -38,6 +63,7 @@ src_install () {
     dodoc CREDITS EXCEPTIONS FreeBSD LICENSING TODO
     dodoc VIDEO-PERFORMANCE WARNINGS
 }
+
 
 
 
