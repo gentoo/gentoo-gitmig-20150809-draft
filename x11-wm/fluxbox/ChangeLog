@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.46 2002/12/09 17:15:13 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.47 2002/12/09 23:33:15 mkeadle Exp $
+
+*fluxbox-0.1.14 (09 Dec 2002)
+
+  09 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.14.ebuild
+  files/digest-fluxbox-0.1.14
+
+  Bump to latest stable. Unpatch release tarball.
 
 *fluxbox-0.1.13-r8 (09 Dec 2002)
 
