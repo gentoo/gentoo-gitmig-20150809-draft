@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.139 2005/01/01 13:35:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.140 2005/01/10 15:04:48 agriffis Exp $
+
+  10 Jan 2005; Aron Griffis <agriffis@gentoo.org>
+  vim-7.0_alpha20041211.ebuild:
+  add ~alpha
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
