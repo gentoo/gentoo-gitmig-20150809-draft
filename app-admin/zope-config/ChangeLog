@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.6 2003/11/16 01:01:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.7 2003/11/16 01:04:49 robbat2 Exp $
+
+  15 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> files/0.2/zope-config:
+  forgot to put a variable in place!
 
 *zope-config-0.2 (15 Nov 2003)
 

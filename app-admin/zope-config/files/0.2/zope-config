@@ -8,7 +8,7 @@
 #
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.2/zope-config,v 1.1 2003/11/16 01:01:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.2/zope-config,v 1.2 2003/11/16 01:04:49 robbat2 Exp $
 
 VERSION="0.2"
 
@@ -139,7 +139,7 @@ zinst_dir_set()
 	while : ; do
 		ZINST_DIR=$(dialog --stdout \
 			--backtitle "Need a uniqe name for zinstance directory.(Also the name of the rcscript.)" \
-			--inputbox "Enter a new zinstance name:" 0 0 )
+			--inputbox "Enter a new zinstance name:" 0 0 ${DEFAULT_ZINSTANCENAME} )
 		RESULT=$?
 		if [ ${RESULT} -ne 0 ] ; then
 			break
