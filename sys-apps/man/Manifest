@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 3bd65831671771511c11d46616c6a1ea ChangeLog 8769
-MD5 fd4e0d5958b6e7cddc620a02b47552eb man-1.5m-r2.ebuild 3950
+MD5 97d89ba8d19a4a4dc203fcc9e7309367 man-1.5m-r2.ebuild 4056
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3267a6e7795edfc9c830e42c4b95f026 man-1.5m-r1.ebuild 3844
 MD5 7e4bd368680d1c95bdaa6c6d5ee556f1 files/man-1.5m-locale-order.patch 454
@@ -22,7 +22,7 @@ MD5 d8990b0dc5c9670156737c7012de3e9e files/man-1.5m-wrong-quotes.patch 411
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBX6/RHTu7gpaalycRAoJVAJ9r7lgnkw2Qds4ooLdnPKYo9ZmqJQCeJuWW
-KfFupl7ZES4THdE3334sOzg=
-=psQh
+iD8DBQFBY3OGHTu7gpaalycRAgxtAJ0fp8CDO3PitEjYTIQ2ogfaxeX5kACfaase
+JhEkUiV2cE0ImkWE7tV41mc=
+=S1uO
 -----END PGP SIGNATURE-----

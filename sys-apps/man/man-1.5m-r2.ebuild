@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r2.ebuild,v 1.1 2004/10/03 07:52:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r2.ebuild,v 1.2 2004/10/06 04:24:25 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,9 +31,10 @@ src_unpack() {
 		-e 's!/usr/bin:/usr/ucb:!/usr/bin:!' \
 		-e 's/n l p o/n l p 0p 1p 3p o/' \
 		configure || die "configure sed failed"
-
 	sed -i -e 's:cc -o:$(CC) -o:' gencat/Makefile \
 		|| die "gencat/Makefile sed failed"
+	sed -i -e "/^CFLAGS /s:-O$: ${CFLAGS}:" man2html/Makefile.in \
+		|| die "man2html/Makefile.in sed failed"
 
 	# security fix
 	epatch ${FILESDIR}/${P}-security.patch
