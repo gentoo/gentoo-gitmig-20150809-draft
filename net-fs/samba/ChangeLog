@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.129 2004/11/13 10:38:47 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.130 2004/11/15 10:12:30 satya Exp $
+
+*samba-3.0.8-r1 (15 Nov 2004)
+
+  15 Nov 2004; Christian Andreetta <satya@gentoo.org> +samba-3.0.8-r1.ebuild:
+  bug #71223: win9x/Me lanman printing. bug #70628: 3.0.8 docs upstream
+  permission error
 
   13 Nov 2004; Christian Andreetta <satya@gentoo.org>
   files/samba-3.0.x-python-setup.patch:
