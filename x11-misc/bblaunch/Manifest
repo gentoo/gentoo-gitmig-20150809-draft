@@ -1,4 +1,5 @@
-MD5 29bdc5e4ffddce48013b44628e1e710e bblaunch-0.0.3.ebuild 614
-MD5 2eb1e6744e09e1b925804d2ae8e36ce9 ChangeLog 674
+MD5 4f83e190b9c2af709d424bdf8ce04bfb ChangeLog 828
+MD5 1405f9b8c9424e899046e2758c5feb23 bblaunch-0.0.3.ebuild 644
 MD5 580d557c1c2b3bd5e562cc2f0c9b89f6 metadata.xml 245
+MD5 416d89e078248831269e2ea45c4b3d73 files/bblaunch-0.0.3.patch 311
 MD5 2d5dcbb74f5171cd56a7dfc981d4afe9 files/digest-bblaunch-0.0.3 65

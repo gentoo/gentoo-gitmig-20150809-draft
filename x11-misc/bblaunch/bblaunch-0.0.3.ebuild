@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bblaunch/bblaunch-0.0.3.ebuild,v 1.8 2004/06/24 22:12:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bblaunch/bblaunch-0.0.3.ebuild,v 1.9 2004/07/03 13:51:05 pyrania Exp $
 
 IUSE=""
 DESCRIPTION="An application launcher for Blackbox type window managers"
@@ -13,6 +13,7 @@ KEYWORDS="x86 ppc"
 DEPEND="virtual/blackbox"
 
 src_compile () {
+	epatch ${FILESDIR}/${P}.patch
 	econf || die
 	emake || die
 }
