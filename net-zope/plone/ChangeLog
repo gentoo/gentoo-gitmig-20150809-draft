@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.4 2003/06/21 07:27:05 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.5 2003/06/21 07:51:53 kutsuya Exp $
+
+*plone-1.0.3 (21 Jun 2003)
+
+  21 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> plone-1.0.3.ebuild:
+  Version bump.
 
 *plone-1.0.2 (21 Jun 2003)
 
