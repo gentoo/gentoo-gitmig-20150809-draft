@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.2 2004/05/25 17:00:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.3 2004/05/26 16:32:05 lv Exp $
 
 IUSE="nls"
 
@@ -66,7 +66,7 @@ HOMEPAGE="http://gcc.gnu.org/libstdc++/"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-*"
+KEYWORDS="-* ~amd64"
 
 if [ "${CHOST}" == "${CCHOST}" ]
 then
