@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2924 2004/06/09 13:57:05 rizzo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2925 2004/06/10 01:56:11 george Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -145,11 +145,6 @@ app-admin/msyslog
 # <squinky86@gentoo.org> (01 May 2004)
 # accessibility testing for development purposes
 app-accessibility/speechd-up
-
-# <george@gentoo.org> (29 Apr 2004)
-# masking work in progress (see #30453)
-app-sci/lapack-config
-app-sci/lapack-atlas
 
 # <lu_zero@gentoo.org> (257 Apr 2004)
 # Working fine on ppc, but needs -fno-strict-aliasing to behave.
