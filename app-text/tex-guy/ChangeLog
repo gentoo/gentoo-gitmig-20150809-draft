@@ -1,0 +1,11 @@
+# ChangeLog for app-text/tex-guy
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tex-guy/ChangeLog,v 1.1 2004/10/23 12:36:31 usata Exp $
+
+*tex-guy-1.3.0 (23 Oct 2004)
+
+  23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +tex-guy-1.3.0.ebuild:
+  Initial import. Thanks to MATSUU Takuto <matsuu@gentoo.org> at GentooJP
+  EbuildJP, http://ebuild.gentoo.gr.jp/.
+
