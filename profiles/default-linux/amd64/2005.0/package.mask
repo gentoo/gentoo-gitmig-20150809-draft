@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.8 2005/01/14 00:43:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.9 2005/01/16 17:56:20 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Force binutils-config versions of binutils
@@ -35,12 +35,12 @@
 <app-emulation/emul-linux-x86-glibc-1000
 
 # Jeremy Huddleston <eradicator@gentoo.org>
-# Unmasking 2.6 kernel stuff
-->=sys-kernel/gentoo-sources-2.6
-->=sys-kernel/vanilla-sources-2.6
-->=sys-kernel/linux-headers-2.6
-
-# Jeremy Huddleston <eradicator@gentoo.org>
 # Non multilib-friendly baselayouts
 =sys-apps/baselayout-1.11.7-r2
 =sys-apps/baselayout-1.11.8
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# These perl versions grep in /usr/include for things that are in
+# gentoo-multilib
+<sys-devel/libperl-5.8.5
+<dev-lang/perl-5.8.5-r2
