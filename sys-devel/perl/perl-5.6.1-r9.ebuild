@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r9.ebuild,v 1.3 2002/12/10 23:08:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r9.ebuild,v 1.4 2002/12/11 01:05:00 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -190,6 +190,8 @@ src_install() {
 #		--man3dir=${D}/usr/share/man/man3 \
 #		--man3ext=3
 
+	# This is a poor fix for CPAN to have a default config
+	cp ${FILESDIR}/Config.pm ${D}/usr/lib/perl5/5.6.1/CPAN/
 
 	# This removes ${D} from Config.pm
 
@@ -213,7 +215,7 @@ pkg_postinst() {
 #########################################
 	cd /usr/include; h2ph *.h sys/*.h
 	#This is an attempt to get MakeMaker into the perl build 
-	echo "n" | perl -MCPAN -e 'CPAN::Shell->install(ExtUtils::MakeMaker)'
+	echo "no" | perl -MCPAN -e 'CPAN::Shell->install(ExtUtils::MakeMaker)'
 
 #########################################
 
