@@ -2,12 +2,16 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
 # Author: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.0_beta5.ebuild,v 1.1 2002/04/14 11:08:11 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.0.ebuild,v 1.1 2002/05/30 05:27:35 seemant Exp $
 
-S=${WORKDIR}/rar
+LICENSE="RAR"
 
+S=${WORKDIR}/${PN}
+
+MY_P=${PN}linux-${PV}
+SLOT="0"
 DESCRIPTION="RAR compressor/uncompressor"
-SRC_URI="ftp://ftp.elf.stuba.sk/pub/pc/pack/rarl30b5.tgz"
+SRC_URI="http://www.rarlab.com/rar/${MY_P}.tar.gz"
 HOMEPAGE="http://www.rarsoft.com"
 
 RDEPEND="virtual/glibc"
