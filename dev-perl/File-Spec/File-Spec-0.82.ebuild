@@ -12,5 +12,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/R/RB/RBS/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="alpha arm hppa mips ppc sparc x86"
+KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc x86"
 
