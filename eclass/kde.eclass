@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.39 2002/02/07 18:52:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.40 2002/02/12 17:35:46 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base
 ECLASS=kde
@@ -39,7 +39,7 @@ kde_src_compile() {
 			if [ ! -f "./configure" ]; then
 			    for x in Makefile.cvs admin/Makefile.common; do
 				if [ -f "$x" ]; then
-				    make -f $x
+				    emake -f $x
 				    break
 				fi
 			    done
@@ -52,7 +52,7 @@ kde_src_compile() {
 		make)
 			export PATH="${KDEDIR}/bin:${PATH}"
 			debug-print-section make
-			make || die "died running make, $FUNCNAME:make"
+			emake || die "died running emake, $FUNCNAME:make"
 			;;
 		all)
 			debug-print-section all
