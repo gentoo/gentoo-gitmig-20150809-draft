@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/pari
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.21 2004/06/24 22:14:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.22 2004/09/12 00:11:44 kloeri Exp $
+
+  12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> pari-2.1.5-r3.ebuild:
+  Fix fPIC issue on alpha.
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> pari-2.1.5-r3.ebuild:
   Marked stable on amd64.

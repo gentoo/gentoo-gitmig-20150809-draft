@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r3.ebuild,v 1.4 2004/06/24 22:14:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r3.ebuild,v 1.5 2004/09/12 00:11:44 kloeri Exp $
 
 inherit eutils
 
@@ -39,6 +39,12 @@ src_compile() {
 		emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
 		einfo "Building executables..."
 		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building exectuables failed!"
+	elif use alpha; then
+		einfo "Building shared library..."
+		cd Olinux-alpha
+		emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
+		einfo "Building executables..."
+		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building exec  tu  ables failed!"
 	else
 		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp || die
 	fi
