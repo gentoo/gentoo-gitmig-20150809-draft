@@ -1,0 +1,183 @@
+<jabber>
+
+  <service id="sessions">
+
+    <host>localhost</host>
+
+    <jsm xmlns="jabber:config:jsm">
+
+      <filter>
+          <default/>
+          <max_size>100</max_size>
+          <allow>
+              <conditions>
+                  <ns/>
+                  <unavailable/>
+                  <from/>
+                  <resource/>
+                  <subject/>
+                  <body/>
+                  <show/>
+                  <type/>
+                  <roster/>
+                  <group/>
+              </conditions>
+              <actions>
+                  <error/>
+                  <offline/>
+                  <forward/>
+                  <reply/>
+                  <continue/>
+                  <settype/>
+              </actions>
+          </allow>
+      </filter>
+
+      <vCard>
+        <FN>localhost</FN>
+        <DESC>localhost</DESC>
+        <URL>http://localhost/</URL>
+      </vCard>
+
+      <!-- commented out so no one can register!!! -->
+      <register notify="yes">
+        <instructions>Choose a username and password to register with this server.</instructions>
+        <name/>
+        <email/>
+      </register>
+      <!-- -->
+
+      <welcome>
+        <subject>Welcome!</subject>
+        <body>Welcome to the Private Jabber server at localhost -- we hope you enjoy this service! For Questions and Remarks, please contact Foo Bar [ foobar@localhost ]. </body>
+      </welcome>
+
+      <admin>
+        <read>foobar@localhost</read>
+        <write>foobar@localhost</write>
+        <reply>
+          <subject>Auto Reply</subject>
+          <body>This is a special administrative address.  Your message was received and forwarded to server administrators.</body>
+        </reply>
+      </admin>
+
+      <!--<update><jabberd:cmdline flag="h">localhost</jabberd:cmdline></update>-->
+
+      <vcard2jud/>
+
+
+    </jsm>
+
+    <load main="jsm">
+      <jsm>/usr/lib/jabberd/jsm.so</jsm>
+      <mod_echo>/usr/lib/jabberd/jsm.so</mod_echo>
+      <mod_roster>/usr/lib/jabberd/jsm.so</mod_roster>
+      <mod_time>/usr/lib/jabberd/jsm.so</mod_time>
+      <mod_vcard>/usr/lib/jabberd/jsm.so</mod_vcard>
+      <mod_last>/usr/lib/jabberd/jsm.so</mod_last>
+      <mod_version>/usr/lib/jabberd/jsm.so</mod_version>
+      <mod_announce>/usr/lib/jabberd/jsm.so</mod_announce>
+      <mod_agents>/usr/lib/jabberd/jsm.so</mod_agents>
+      <mod_browse>/usr/lib/jabberd/jsm.so</mod_browse>
+      <mod_admin>/usr/lib/jabberd/jsm.so</mod_admin>
+      <mod_filter>/usr/lib/jabberd/jsm.so</mod_filter>
+      <mod_offline>/usr/lib/jabberd/jsm.so</mod_offline>
+      <mod_presence>/usr/lib/jabberd/jsm.so</mod_presence>
+      <mod_auth_plain>/usr/lib/jabberd/jsm.so</mod_auth_plain>
+      <mod_auth_digest>/usr/lib/jabberd/jsm.so</mod_auth_digest>
+      <mod_auth_0k>/usr/lib/jabberd/jsm.so</mod_auth_0k>
+      <mod_log>/usr/lib/jabberd/jsm.so</mod_log>
+<!-- commented out so no one can register!!! -->
+      <mod_register>/usr/lib/jabberd/jsm.so</mod_register>
+<!-- -->
+      <mod_xml>/usr/lib/jabberd/jsm.so</mod_xml>
+    </load>
+
+  </service>
+
+  <xdb id="xdb">
+    <host/>
+    <load>
+      <xdb_file>/usr/lib/jabberd/xdb_file.so</xdb_file>
+    </load>
+    <xdb_file xmlns="jabber:config:xdb_file">
+      <spool><jabberd:cmdline flag='s'>/var/spool/jabber</jabberd:cmdline></spool>
+    </xdb_file>
+  </xdb>
+
+  <service id="c2s">
+    <load>
+      <pthsock_client>/usr/lib/jabberd/pthsock_client.so</pthsock_client>
+    </load>
+    <pthcsock xmlns='jabber:config:pth-csock'>
+      <authtime/>
+      <karma>
+        <init>10</init>
+        <max>10</max>
+        <inc>1</inc>
+        <dec>1</dec>
+        <penalty>-6</penalty>
+        <restore>10</restore>
+      </karma>
+      <ip port="5222"/>
+      <ssl port="5223"/><!-- 10.1.2.3</ssl> -->
+	
+	 </pthcsock>
+  </service>
+
+  <log id='elogger'>
+    <host/>
+    <logtype/>
+    <format>%d: [%t] (%h): %s</format>
+    <file>/var/log/jabber/error.log</file>
+    <stderr/>
+  </log>
+
+  <log id='rlogger'>
+    <host/>
+    <logtype>record</logtype>
+    <format>%d %h %s</format>
+    <file>/var/log/jabber/record.log</file>
+  </log>
+
+  <service id="dnsrv">
+    <host/>
+    <load>
+      <dnsrv>/usr/lib/jabberd/dnsrv.so</dnsrv>
+    </load>
+    <dnsrv xmlns="jabber:config:dnsrv">
+    	<resend service="_jabber._tcp">s2s</resend> <!-- for supporting SRV records -->
+    	<resend>s2s</resend>
+    </dnsrv>
+  </service>
+
+  <service id="s2s">
+    <load>
+      <dialback>/usr/lib/jabberd/dialback.so</dialback>
+    </load>
+    <dialback xmlns='jabber:config:dialback'>
+      <legacy/>
+      <ip port="5269"/>
+      <karma>
+        <init>50</init>
+        <max>50</max>
+        <inc>4</inc>
+        <dec>1</dec>
+        <penalty>-5</penalty>
+        <restore>50</restore>
+      </karma>
+    </dialback>
+  </service>
+
+
+
+  <io>
+    <rate points="10" time="25"/>
+    <ssl>
+      <key ip="64.57.168.155">/etc/jabber/gentoo.pem</key>
+    </ssl>
+  </io>
+
+  <pidfile>/var/run/jabber.pid</pidfile>
+
+</jabber>

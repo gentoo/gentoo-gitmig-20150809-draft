@@ -1,0 +1,35 @@
+<xdb id="xdb_ldap">
+  <ns>jabber:iq:auth:0k</ns>
+  <ns>jabber:iq:auth</ns>
+  <ns>vcard-temp</ns>
+  <ns>jabber:jud:users</ns>
+  <host/>
+  <load>
+    <xdb_ldap>/usr/lib/jabberd/xdb_ldap.so</xdb_ldap>
+  </load>
+  <xdb_ldap xmlns="jabberd:xdb_ldap:config">
+    <connection>
+      <host>localhost</host>
+      <port></port>
+      <rootdn>o=idx-jabber,c=fr</rootdn>
+      <uniqattr>cn</uniqattr>
+      <binddn>cn=jabberadmin, o=idx-jabber, c=fr</binddn>
+      <bindpw>secret</bindpw>
+    </connection>
+    <spool><jabberd:cmdline flag='s'>/var/spool/jabber</jabberd:cmdline></spool>
+  </xdb_ldap>
+</xdb>
+<xdb id="xdb_other">
+  <ns>jabber:iq:roster</ns>
+  <ns>jabber:iq:private</ns>
+  <ns>jabber:iq:register</ns>
+  <ns>jabber:iq:filter</ns>
+  <ns>jabber:x:offline</ns>
+  <host/>
+  <load>
+    <xdb_file>./xdb_file/xdb_file.so</xdb_file>
+  </load>
+  <xdb_file xmlns="jabber:config:xdb_file">
+    <spool><jabberd:cmdline flag='s'>/var/spool/jabber</jabberd:cmdline></spool>
+  </xdb_file>
+</xdb>

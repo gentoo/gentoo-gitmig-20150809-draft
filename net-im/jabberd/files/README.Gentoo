@@ -1,0 +1,22 @@
+This is a small help to get you started with Jabber in Gentoo.
+Edit /etc/jabber/multiple.xml . This is the main jabber server config file.
+There change all references to localhost with the FQDN (Fully Qualified Domain 
+Name) for your server.
+If you are going to use SSL you must change the line:
+ <ssl port="5223"/> <!-- 10.1.2.3</ssl> -->
+To:
+<ssl port="5223">10.1.2.3</ssl>
+Where 10.1.2.3 is your machines IP (not name, IP here).
+Also, edit:
+<ssl>
+      <key ip="10.1.2.3">/etc/jabber/gentoo.pem</key>
+</ssl>
+
+at the end of the file to your IP.
+
+You can now test your setup with the command:
+jabberd -c /etc/jabber/multiple.xml -D
+
+And try to connect to your new server with a jabber client. If all goes well
+kill your jabber server (control-c) and if you have installed transports go
+configure them now.
