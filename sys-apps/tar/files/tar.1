@@ -1,5 +1,5 @@
-.\" @(#)tar.1 1.13.14 2000/10/30 Bero;
-.TH TAR 1 "30 October 2000"
+.\" @(#)tar.1 1.11.1 93/19/22 PJV;
+.TH TAR 1 "22 September 1993"
 .SH NAME
 tar \- The GNU version of the tar archiving utility
 .SH SYNOPSIS
@@ -45,7 +45,7 @@ tar \- The GNU version of the tar archiving utility
 .B -i, --ignore-zeros
 ]
 [
-.B -j, --bzip
+.B -j, --bzip2
 ]
 [
 .B --ignore-failed-read
@@ -81,7 +81,7 @@ tar \- The GNU version of the tar archiving utility
 .B -p, --same-permissions, --preserve-permissions
 ]
 [
-.B -P, --absolute-paths
+.B -P, --absolute-names
 ]
 [
 .B --preserve	
@@ -99,10 +99,13 @@ tar \- The GNU version of the tar archiving utility
 .B --same-owner
 ]
 [
+.B --numeric-owner
+]
+[
 .B -S, --sparse
 ]
 [
-.B -T, -I, --files-from=F
+.B -T, --files-from F
 ]
 [
 .B --null	
@@ -126,7 +129,7 @@ tar \- The GNU version of the tar archiving utility
 .B -W, --verify	
 ]
 [
-.B --exclude FILE
+.B --exclude=FILE
 ]
 [
 .B -X, --exclude-from FILE
@@ -142,6 +145,9 @@ tar \- The GNU version of the tar archiving utility
 ]
 [
 .B --block-compress
+]
+[
+.B --rsh-command=CMD
 ]
 [
 .B -[0-7][lmh]	
@@ -173,6 +179,16 @@ The final arguments to
 are the names of the files or directories which should be archived. The use
 of a directory name always implies that the subdirectories below should be
 included in the archive.
+.SH EXAMPLES
+.TP
+.B tar -xvvf foo.tar
+extract foo.tar
+.TP
+.B tar -xvvzf foo.tar.gz
+extract gzipped foo.tar.gz
+.TP
+.B tar -cvvf foo.tar foo/
+tar contents of folder foo in foo.tar
 .SH "FUNCTION LETTERS"
 .TP
 .B One of the following options must be used:
@@ -218,7 +234,7 @@ change to directory DIR
 print directory names while reading the archive
 .TP
 .B -f, --file [HOSTNAME:]F	
-use archive file or device F (default /dev/rmt0)
+use archive file or device F (default "-", meaning stdin/stdout)
 .TP
 .B --force-local		
 archive file is local even if has a colon
@@ -238,8 +254,8 @@ don't dump symlinks; dump the files they point to
 .B -i, --ignore-zeros	
 ignore blocks of zeros in archive (normally mean EOF)
 .TP
-.B -j, --bzip
-filter the archive through bzip2
+.B -j, --bzip2
+filter archive through bzip2, use to decompress .bz2 files
 .TP
 .B --ignore-failed-read	
 don't exit with non-zero status on unreadable files
@@ -292,10 +308,13 @@ list of names to extract is sorted to match archive
 .B --same-owner		
 create extracted files with the same ownership 
 .TP
+.B --numeric-owner
+always use numbers for user/group names
+.TP
 .B -S, --sparse		
 handle sparse files efficiently
 .TP 
-.B -T, -I, --files-from=F	
+.B -T, --files-from F	
 get names to extract or create from file F
 .TP
 .B --null			
@@ -319,7 +338,7 @@ ask for confirmation for every action
 .B -W, --verify		
 attempt to verify the archive after writing it
 .TP
-.B --exclude FILE		
+.B --exclude=FILE		
 exclude file FILE
 .TP
 .B -X, --exclude-from FILE	
@@ -333,3 +352,25 @@ filter the archive through gzip
 .TP
 .B --use-compress-program PROG
 filter the archive through PROG (which must accept -d)
+.TP
+.B --block-compress	
+block the output of compression program for tapes
+.TP
+.B --rsh-command=CMD
+Use remote COMMAND instead of `rsh'.  This option exists so that
+people who use something other than the standard `rsh' (e.g., a
+Kerberized `rsh') can access a remote device.
+.TP
+.B -[0-7][lmh]		
+specify drive and density
+.SH BUGS
+.LP
+The GNU folks, in general, abhor man pages, and create info documents instead.
+The maintainer of tar falls into this category.  This man page is neither
+complete, nor current, and was included in the Debian Linux packaging of tar
+entirely to reduce the frequency with which the lack of a man page gets
+reported as a bug in our defect tracking system.
+
+If you really want to understand tar, then you should run info and read the
+tar info pages, or use the info mode in emacs.
+
