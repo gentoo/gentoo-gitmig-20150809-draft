@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/aolserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.5 2005/01/05 23:35:42 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.6 2005/01/27 20:55:47 port001 Exp $
+
+*aolserver-4.0.10 (27 Jan 2005)
+
+  27 Jan 2005; Ian Leitch <port001@gentoo.org>
+  +files/4.0.10/Makefile.global, +files/4.0.10/aolserver-4.0.10-nptl.patch,
+  +files/4.0.10/aolserver.init, +files/4.0.10/config.tcl,
+  +aolserver-4.0.10.ebuild:
+  Version bump
 
 *aolserver-4.0.9-r1 (05 Jan 2005)
 

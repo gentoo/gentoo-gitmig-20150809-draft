@@ -1,11 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a381f6e74167a47557d29fb40332c50b aolserver-4.0.10.ebuild 5792
 MD5 52a089f9435da0e3f5d5997199819e90 aolserver-4.0.9.ebuild 4793
 MD5 32d190764bcc56d2b9a2808ae0543d3b aolserver-4.0.8.ebuild 4793
 MD5 60532f7cd0495fbbc6c83a04422bec1a aolserver-4.0.9-r1.ebuild 5794
-MD5 b7620fd23a4572f59b25edd010ace35a ChangeLog 1734
+MD5 6d4de30ba79ba0270369cfd46124a5cb ChangeLog 1992
 MD5 c47b641a14c525426948f6d60a4f6fae metadata.xml 403
+MD5 b993284955fc1d2d6bf6bf8da7ce1c05 files/digest-aolserver-4.0.10 72
 MD5 5bae3a9adad37c840794ce22eb4cb5b0 files/digest-aolserver-4.0.9-r1 71
 MD5 fbf53d85d098f4b3782760c5c8b90b63 files/digest-aolserver-4.0.8 71
 MD5 5bae3a9adad37c840794ce22eb4cb5b0 files/digest-aolserver-4.0.9 71
@@ -17,10 +16,7 @@ MD5 ef896c9186113d2882eb14aeb7a0e0a6 files/4.0.9/aolserver.init 475
 MD5 188da2cbedb4c37b6932a413fd21fead files/4.0.9/Makefile.global 127
 MD5 8283909c0fc2061c5c4d4af284ffc3e9 files/4.0.9/config.tcl 16784
 MD5 59ce0f4269f077b1875ce2ea11169904 files/4.0.9/aolserver-4.0.9-nptl.patch 440
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB3HnbUxGWrFYv8KQRAmcUAKCHngP6fxLsJXIT2XRZ6hTsdaFDuQCg1nrv
-ag6ay1DU01fOoD0jEKPgNFI=
-=JFxP
------END PGP SIGNATURE-----
+MD5 ef896c9186113d2882eb14aeb7a0e0a6 files/4.0.10/aolserver.init 475
+MD5 188da2cbedb4c37b6932a413fd21fead files/4.0.10/Makefile.global 127
+MD5 396640ec2ff59ade15577e8e9670e806 files/4.0.10/config.tcl 16785
+MD5 5990b903db3f64b02306f84e37dc3c11 files/4.0.10/aolserver-4.0.10-nptl.patch 444
