@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.4 2005/03/19 22:39:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.5 2005/03/29 22:21:16 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -119,6 +119,8 @@ pkg_postinst() {
 	einfo "    nano /etc/modules.d/fcdsl"
 	einfo "    update-modules"
 	einfo "    /etc/init.d/capi restart"
+	ewarn 
+	ewarn "drdsl does NOT work with capi4k-utils-2005* because its binary incompatible"
 	epause 10
 }
 
