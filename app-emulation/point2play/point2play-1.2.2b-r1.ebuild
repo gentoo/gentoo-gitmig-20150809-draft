@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.2b.ebuild,v 1.1 2004/05/12 04:58:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.2b-r1.ebuild,v 1.1 2004/05/16 04:27:01 vapier Exp $
 
 MY_P=${PN}-1.2.2.b
 DESCRIPTION="graphical frontend for WineX"
