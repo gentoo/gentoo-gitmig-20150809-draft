@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Heap
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.1 2003/01/03 03:08:13 mcummings Exp $
+
+*XML-XUpdate-LibXML-0.3.0 (02 Jan 2003)
+
+  02 Jan 2003; Michael Cummings <mcummings@gentoo.org>
+  XML-XUpdate-LibXML-0.3.0.ebuild:
+
+  Initial import. bug 12148
