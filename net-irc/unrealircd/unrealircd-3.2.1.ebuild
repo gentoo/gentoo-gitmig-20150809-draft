@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1.ebuild,v 1.3 2004/07/24 20:37:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1.ebuild,v 1.4 2004/07/25 02:45:33 swegener Exp $
 
 inherit eutils ssl-cert
 
@@ -53,8 +53,9 @@ src_compile() {
 		|| die "econf failed"
 
 	sed -i \
-		-e s:${D}:: \
-		include/setup.h
+		-e "s:${D}::" \
+		include/setup.h \
+		ircdcron/ircdchk
 
 	emake IRCDDIR=/etc/unrealircd || die "emake failed"
 }

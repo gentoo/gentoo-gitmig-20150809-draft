@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.17 2004/07/24 20:37:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.18 2004/07/25 02:45:33 swegener Exp $
+
+  25 Jul 2004; Sven Wegener <swegener@gentoo.org> unrealircd-3.2.1.ebuild:
+  Fixed wrong path in ircdchk cron script.
 
   24 Jul 2004; Sven Wegener <swegener@gentoo.org> unrealircd-3.2.1.ebuild:
   Configuration files need to be owned by user unrealircd.
