@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.9.ebuild,v 1.2 2004/01/14 18:52:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.9.ebuild,v 1.3 2004/01/15 05:36:05 avenj Exp $
 
 IUSE="nls"
 MY_P=${P/-/_}
@@ -9,7 +9,7 @@ SRC_URI="http://www.linux.it/~md/software/${MY_P}.tar.gz"
 HOMEPAGE="http://www.linux.it/~md/software/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips hppa ~arm ~ia64 ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips hppa ~arm ~ia64 ~alpha amd64"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/perl-5"
