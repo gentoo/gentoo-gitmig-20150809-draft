@@ -1,6 +1,16 @@
-MD5 61713f89610d1c4e070fcb6241e3f8e9 webapp-config-1.9-r2.ebuild 1141
-MD5 e36ab1a9ab54e790c4f5ba1b401f32aa webapp-config-1.10-r2.ebuild 1397
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d0a52da9c5380fbf51be3c98a501d207 ChangeLog 5408
 MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
+MD5 61713f89610d1c4e070fcb6241e3f8e9 webapp-config-1.9-r2.ebuild 1141
+MD5 97b98d3c2e5d30a246cd1b5b5961f9ce webapp-config-1.10-r2.ebuild 1386
 MD5 0c1ae4fd2fcc6de80a24f04993a63d80 files/digest-webapp-config-1.9-r2 72
 MD5 6de3add921ada350b2dd768bc46a6e80 files/digest-webapp-config-1.10-r2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4BJHHTu7gpaalycRAqNxAJkBb6wtaTidMgQqAzHNOQHoyN3BKQCdHhyi
+UHoJSYFL31y94C4B7+bPpAA=
+=Pnje
+-----END PGP SIGNATURE-----
