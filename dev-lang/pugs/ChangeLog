@@ -1,0 +1,13 @@
+# ChangeLog for dev-lang/pugs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pugs/ChangeLog,v 1.1 2005/03/14 14:43:20 mcummings Exp $
+
+*pugs-6.0.11 (14 Mar 2005)
+
+  14 Mar 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +pugs-6.0.11.ebuild:
+  Introducing pugs, an implementation of the not yet released perl6 language
+  using haskell. Ebuild worked on tirelessly by Adrian Lambeck
+  <adrian@basicsedv.de> in bug 8335. This is being added to dev-lang since
+  currently it is a seperate entity from dev-lang/perl.
+
