@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.12 2004/08/15 07:00:16 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.13 2004/12/26 21:48:30 vapier Exp $
+
+*bzip2-1.0.2-r4 (26 Dec 2004)
+
+  26 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.0.2-NULL-ptr-check.patch, +files/1.0.2-makefile-CFLAGS.patch,
+  +bzip2-1.0.2-r4.ebuild:
+  Add a NULL-ptr check fix by Mihai Limbasan #75305.
 
   14 Aug 2004; Travis Tilley <lv@gentoo.org> bzip2-1.0.2-r3.ebuild:
   added CONF_LIBDIR support for installing libbz2 to lib64/lib32
