@@ -1,12 +1,22 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.125 2003/04/15 11:47:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.126 2003/04/18 12:09:16 seemant Exp $
 
 *xfree-4.3.0-r2 (08 Apr 2003)
 
   15 Apr 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
   changed default to core (black) pointer instead of whiteglass, at vlado's
-  request
+  request.  The patch version is updated.  The previous patchset caused the
+  compilation to fail on virgin systems (ie, those without X already
+  installed).  Thanks to Bret Towe (Magnade in #gentoo-dev), the problem is
+  fixed (the parallel make patch was a little wonky).  I want to express my
+  thanks to lu_zero for helping out with the ATi stuff, the lads in #gentoo
+  and the forums, and the chix0rs in #linuxchics for testing this
+  extensively and pointing out my mistakes.  Please note that for this
+  ebuild, Xinerama extensions on DRI enabled Radeon displays is disabled.  I
+  will get to try and fixing this (one of the crucial patches for Radeon
+  users disables this) for the more advanced users.  Everyone else -- enjoy!
+  Also added newest SiS driver. Note that patch version is now 1.1.0
 
   15 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
   xfree-4.3.0-r2.ebuild:
