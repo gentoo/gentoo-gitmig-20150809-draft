@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.71 2004/09/09 01:40:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.72 2004/09/09 02:51:58 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -104,7 +104,7 @@ prepgamesdirs() {
 		) >& /dev/null
 	done
 	local f=""
-	for f in `find ${D}/${GAMES_STATEDIR} -type f -printf '%P ' 2>/dev/null` ; do
+	for f in $(find ${D}/${GAMES_STATEDIR} -type f -printf '%P ' 2>/dev/null) ; do
 		if [ -e "${ROOT}/${GAMES_STATEDIR}/${f}" ] ; then
 			cp -p "${ROOT}/${GAMES_STATEDIR}/${f}" "${D}/${GAMES_STATEDIR}/${f}"
 			touch "${D}/${GAMES_STATEDIR}/${f}"
@@ -126,6 +126,11 @@ games_pkg_setup() {
 		enewuser "${GAMES_USER}" 35 /bin/false /usr/games "${GAMES_GROUP}"
 	[ "${GAMES_USER_DED}" != "root" ] && \
 		enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
+
+	# Dear carpaski and portage-dev team, we are so sorry.  Lot's of love, games team
+	# See Bug #61680
+	[ "$(getent passwd ${GAMES_USER_DED} | cut -f7 -d:)" == "/bin/false" ] && \
+		usermod "${GAMES_USER_DED}" -l /bin/bash
 }
 
 games_src_compile() {
@@ -156,7 +161,7 @@ games_ut_unpack() {
 			|| die "uncompressing file ${ut_unpack}"
 	fi
 	if [ -d "${ut_unpack}" ]; then
-		for f in `find ${ut_unpack} -name '*.uz*' -printf '%f '` ; do
+		for f in $(find ${ut_unpack} -name '*.uz*' -printf '%f ') ; do
 			uz2unpack ${ut_unpack}/${f} ${ut_unpack}/${f/.uz2} >/dev/null 2>&1 \
 				|| die "uncompressing file ${f}"
 			rm -f ${ut_unpack}/${f} || die "deleting compressed file ${f}"
@@ -182,7 +187,7 @@ games_make_wrapper() {
 	local wrapper="$1" ; shift
 	local bin="$1" ; shift
 	local chdir="$1" ; shift
-	local tmpwrapper="`mymktemp ${T}`"
+	local tmpwrapper="$(mymktemp ${T})"
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir}"
