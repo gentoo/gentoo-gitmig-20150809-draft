@@ -34,29 +34,29 @@ src_compile() {
 	
 	cp doc/Makefile doc/Makefile.orig
 	sed -e 's:$(GRACE_HOME)/doc:$(PREFIX)/share/doc/$(PF)/html:g'	\
-		doc/Makefile.orig >doc/Makefile
+		doc/Makefile.orig >doc/Makefile || die
 
 	cp auxiliary/Makefile auxiliary/Makefile.orig
 	sed -e 's:$(GRACE_HOME)/bin:$(PREFIX)/bin:g'			\
-		auxiliary/Makefile.orig >auxiliary/Makefile
+		auxiliary/Makefile.orig >auxiliary/Makefile || die
 
 	cp grconvert/Makefile grconvert/Makefile.orig
 	sed -e 's:$(GRACE_HOME)/bin:$(PREFIX)/bin:g'			\
-		grconvert/Makefile.orig >grconvert/Makefile
+		grconvert/Makefile.orig >grconvert/Makefile || die
 
 	cp src/Makefile src/Makefile.orig
 	sed -e 's:$(GRACE_HOME)/bin:$(PREFIX)/bin:g'			\
-		src/Makefile.orig >src/Makefile
+		src/Makefile.orig >src/Makefile || die
 
 	cp grace_np/Makefile grace_np/Makefile.orig
 	sed -e 's:$(GRACE_HOME)/lib:$(PREFIX)/lib:g'			\
 		-e 's:$(GRACE_HOME)/include:$(PREFIX)/include:g'	\
-		grace_np/Makefile.orig >grace_np/Makefile
+		grace_np/Makefile.orig >grace_np/Makefile || die
 
 	cp examples/Makefile examples/Makefile.orig
 	sed -e 's:/examples:/share/doc/$(PF)/examples:g'		\
 		-e 's:$(GRACE_HOME):$(PREFIX):g'			\
-		examples/Makefile.orig >examples/Makefile
+		examples/Makefile.orig >examples/Makefile || die
 
 	emake || die
 }
