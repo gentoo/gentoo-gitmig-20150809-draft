@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (7 May 2003)
+# New branch, not backwards compatible.
+>=net-libs/gnet-2
+
 # <danarmak@gentoo.org> (7 May 2003)
 # not yet released, ebuilds in testing
 =kde-base/arts-1.1.2
