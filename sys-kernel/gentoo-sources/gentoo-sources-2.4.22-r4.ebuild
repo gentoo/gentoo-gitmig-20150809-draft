@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r1.ebuild,v 1.4 2004/01/06 15:17:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r4.ebuild,v 1.1 2004/01/09 06:40:36 iggy Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -19,12 +19,11 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://dev.gentoo.org/~iggy/gentoo-sources-${PVR}.patch.bz2"
+	http://dev.gentoo.org/~iggy/${PF}.patch.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -alpha -hppa -mips -arm ~amd64 ~ia64"
+KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips -arm ~amd64 ~ia64"
 SLOT="${KV}"
-
 
 src_unpack() {
 	unpack ${A}
@@ -34,18 +33,15 @@ src_unpack() {
 
 	cd linux-${KV}
 
-	bzcat ${DISTDIR}/gentoo-sources-${PVR}.patch.bz2 | patch -p1 \
-		|| die "Failed to patch kernel, please file a bug at bugs.gentoo.org"
+	epatch ${DISTDIR}/${PF}.patch.bz2 \
+		|| die "Failed to patch kernel"
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-${OKV}-kmsgdump.patch
 
-	make mrproper || die "make mrproper failed"
-	make include/linux/version.h || die "make include/linux/version.h failed"
+	kernel_universal_unpack
 }
 
 pkg_postinst() {
-
 	kernel_pkg_postinst
 
 	einfo "If there are issues with this kernel, search http://bugs.gentoo.org/ for an"
@@ -54,5 +50,4 @@ pkg_postinst() {
 	einfo "very low yield. Please assign your bugs to x86-kernel@gentoo.org."
 	echo
 	einfo "Please read the ChangeLog and associated docs for more information."
-
 }
