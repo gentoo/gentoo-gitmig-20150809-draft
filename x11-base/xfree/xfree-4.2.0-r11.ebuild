@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r11.ebuild,v 1.5 2002/05/31 15:38:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r11.ebuild,v 1.6 2002/06/02 15:43:57 azarah Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
@@ -46,7 +46,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
 	
 RDEPEND=">=sys-libs/ncurses-5.1
-	>=x11-base/opengl-update-1.2"
+	>=x11-base/opengl-update-1.3"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -172,15 +172,20 @@ src_install() {
 		cd ${S}
 	fi
 
-	#we zap the host.def file which gets hard-coded with our CFLAGS, messing up other things that use xmkmf
-	echo > ${D}/usr/X11R6/lib/X11/config/host.def
-	#theoretically, /usr/X11R6/lib/X11/config is a possible candidate for config file management.
-	#If we find that people really worry about imake stuff, we may add it.  But for now, we leave
-	#the dir unprotected.
+	# we zap the our CFLAGS in the host.def file, as hardcoded CFLAGS can
+	# mess up other things that use xmkmf
+	cp ${D}/usr/X11R6/lib/X11/config/host.def \
+		${D}/usr/X11R6/lib/X11/config/host.def.orig
+	grep -v OptimizedCDebugFlags ${D}/usr/X11R6/lib/X11/config/host.def.orig > \
+		${D}/usr/X11R6/lib/X11/config/host.def
+	rm -f ${D}/usr/X11R6/lib/X11/config/host.def.orig
+	# theoretically, /usr/X11R6/lib/X11/config is a possible candidate for
+	# config file management. If we find that people really worry about imake
+	# stuff, we may add it.  But for now, we leave the dir unprotected.
 
 	insinto /etc/X11
 	doins ${FILESDIR}/${PVR}/XftConfig
-	dosym ../../../.././etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
+	dosym ../../../../etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
 	cd ${D}/usr/X11R6/lib/X11/fonts
 	tar -xz --no-same-owner -f ${DISTDIR}/truetype.tar.gz || \
 		die "Failed to unpack truetype.tar.gz"
@@ -193,7 +198,8 @@ src_install() {
 	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so
 	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so.1
 	dosym libGL.so.1.2 /usr/X11R6/lib/libMesaGL.so
-	dosym ../X11R6/lib/libGLU.so.1.3 /usr/lib/libMesaGLU.so
+	# We move libGLU to /usr/lib now
+	dosym libGLU.so.1.3 /usr/lib/libMesaGLU.so
 
 	# .la files for libtool support
 	insinto /usr/X11R6/lib
@@ -239,8 +245,17 @@ src_install() {
 }
 
 pkg_preinst() {
-	#this changed from a file to a symlink
-	rm -rf ${ROOT}/usr/X11R6/lib/X11/XftConfig
+	#this changed from a directory/file to a symlink
+	if [ ! -L ${ROOT}/usr/X11R6/lib/X11/XftConfig ] && \
+	   [ -f ${ROOT}/usr/X11R6/lib/X11/XftConfig ]
+	then
+		rm -rf ${ROOT}/usr/X11R6/lib/X11/XftConfig
+	fi
+	if [ ! -L ${ROOT}/usr/X11R6/lib/X11/app-defaults ] && \
+	   [ -d ${ROOT}/usr/X11R6/lib/X11/app-defaults ]
+	then
+		mv f ${ROOT}/usr/X11R6/lib/X11/app-defaults ${ROOT}/etc/X11
+	fi
 
 	#clean the dinamic libGL stuff's home to ensure
 	#we dont have stale libs floating around

@@ -1,8 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.20 2002/05/31 15:38:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.21 2002/06/02 15:43:57 azarah Exp $
 
 *xfree-4.2.0-r11 (28 May 2002)
+
+  2 Jun 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
+
+  Some more symlink cleanups.  Dont nuke the host.def, just filter our
+  hardcoded CFLAGS.
 
   30 May 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild,
                                                     xfs.start, xfs.conf.d,
