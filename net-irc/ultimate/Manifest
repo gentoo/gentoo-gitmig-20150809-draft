@@ -1,8 +1,20 @@
-MD5 ef051207150aa2567a42416c50bf214d ultimate-2.8.7.ebuild 3216
-MD5 3d3b2b7684a474f0891eeb30a000056f ChangeLog 1114
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8130d4985ae5486fb3c30a7115a146fb ChangeLog 1309
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 f5a2aba502288cb15b694827eafb5c37 files/ultimateircd.rc 508
-MD5 8af0419297384fbb53922f83cc7d85df files/setup.h 483
-MD5 d12ee5419076de0ff640cb473be5e842 files/ultimateircd.conf 173
-MD5 ce59cd0657a697f03f1798d4ab24192a files/digest-ultimate-2.8.7 65
+MD5 b8419ce68ef8468fc0517c696bd72170 ultimate-2.8.7.ebuild 3213
+MD5 c74c4715aa43fb7091cd34373ae712ec ultimate-2.8.8.ebuild 2819
 MD5 772b4c0818bb9082f29f266cb6c3c3ad files/Ultimate-2.8.7-gentoo.patch 434
+MD5 ce59cd0657a697f03f1798d4ab24192a files/digest-ultimate-2.8.7 65
+MD5 8af0419297384fbb53922f83cc7d85df files/setup.h 483
+MD5 cb44cd30cf715767610fdf9c27763d21 files/ultimateircd.conf 280
+MD5 a69beeeedc19c5edb2c13086dd9d92b6 files/ultimateircd.rc 520
+MD5 319444542064bf000cfd6490417ac8a0 files/digest-ultimate-2.8.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+RtmAXomK8S72HoRAkg2AJ9kfLFKroylecG4LFzYGUU3o+8YVACfWB9m
+wJ+eeZQ1UZqaKOEf/HCQbDI=
+=d1Hm
+-----END PGP SIGNATURE-----
