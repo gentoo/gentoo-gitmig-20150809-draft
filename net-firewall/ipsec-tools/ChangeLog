@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.18 2005/01/11 23:48:30 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.19 2005/03/09 03:35:00 latexer Exp $
+
+*ipsec-tools-0.5 (08 Mar 2005)
+
+  08 Mar 2005; Peter Johanson <latexer@gentoo.org> +ipsec-tools-0.5.ebuild:
+  Bump. Removed --enable-samode-unspec per bug #77369.
 
   11 Jan 2005; John Mylchreest <johnm@gentoo.org>
   ipsec-tools-0.5_rc1.ebuild:
