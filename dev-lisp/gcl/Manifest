@@ -1,6 +1,7 @@
 MD5 29e92c25f0bc663902efb758e2f7e43d gcl-2.4.0.ebuild 1339
 MD5 8c799e2d46e1f2d6efa432f12f166e31 gcl-2.6.2.ebuild 1989
 MD5 845b5ed2b1a28adf108ab63eecf10058 gcl-2.4.3.ebuild 2122
+MD5 1be8f86d9513328d4284d0317c577a83 gcl-2.6.4.ebuild 2326
 MD5 6e2df427db74fc0608117017db2a77cd gcl-2.5.3.ebuild 1791
 MD5 1be8f86d9513328d4284d0317c577a83 gcl-2.6.3.ebuild 2326
 MD5 ea024131a545fa4a5fc712bd871b3c42 gcl-2.5.2.ebuild 1570
@@ -8,6 +9,7 @@ MD5 fec3213b902d53254df6a792cf78cf96 ChangeLog 3257
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 6d1f14e922df6f4c5dc85add92b3ae45 files/digest-gcl-2.5.3 62
 MD5 156148113705b926d9ef1c4bf5611c80 files/digest-gcl-2.4.3 59
+MD5 cce80e0951bd17957cf0d108e54c8fb5 files/digest-gcl-2.6.4 62
 MD5 56a2d3ad5e0c6efc29def8d13cae414c files/digest-gcl-2.6.3 62
 MD5 0a7011ac48a39981a19619ec9f53e37d files/digest-gcl-2.5.2 62
 MD5 ebf9ac3ed9129b8c967416164e1b8dcf files/digest-gcl-2.4.0 59
