@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.15 2004/06/01 17:25:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.16 2004/06/02 21:45:18 aliz Exp $
+
+  02 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> mythfrontend-0.15.1.ebuild:
+  + Added check for OpenGL implementation, closing #52722.
+  + Added directfb patch by Scott Alfer <gentoo@salfter.dyndns.org> from #52154.
 
 *mythfrontend-0.15.1 (01 Jun 2004)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1.ebuild,v 1.1 2004/06/01 17:08:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1.ebuild,v 1.2 2004/06/02 21:45:17 aliz Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project."
 HOMEPAGE="http://www.mythtv.org/"
@@ -17,7 +17,6 @@ DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
 	>=x11-libs/qt-3.1
 	dev-db/mysql
-	>=media-tv/xmltv-0.5.34
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	>=sys-apps/sed-4
 	arts? ( kde-base/arts )
@@ -26,7 +25,9 @@ DEPEND=">=media-libs/freetype-2.0
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )
-	cle266? ( media-libs/libddmpeg )"
+	cle266? ( media-libs/libddmpeg )
+	opengl? ( >=x11-base/opengl-update-1.7 )
+	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )"
 
 RDEPEND="${DEPEND}
 	!media-tv/mythfrontend"
@@ -38,7 +39,17 @@ pkg_setup() {
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
 		die "Qt needs MySQL support"
 	fi
-
+	if [ `use opengl` ] ; then
+		local gl_implementation="$( opengl-update --get-implementation )"
+		if [ "$gl_implementation" == "xfree" ] || [ "$gl_implementation" == "xorg-x11" ] ; then
+			return 0
+		else
+			eerror "OpenGL implementation must be set to either xfree or xorg-x11 to allow compilation."
+			eerror "to change opengl implemantation use opengl-update <your xserver>."
+			eerror "After mythtv has been merged you can switch back to the preferred implementation.."
+			die "Incompatible OpenGL implementation."
+		fi
+	fi
 	return 0
 }
 
@@ -48,6 +59,8 @@ src_unpack() {
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:usr/local:usr:g" -i "${i}" || die "sed failed"
 	done
+
+	use directfb && epatch ${FILESDIR}/mythtv-0.15-directfb.patch
 }
 
 src_compile() {
@@ -172,4 +185,6 @@ pkg_postinst() {
 	einfo "   /usr/share/doc/${PF}/README.gz"
 	einfo "   /usr/share/doc/${PF}/UPGRADING.gz"
 	echo
+	einfo "You need to emerge xmltv manually since it is no longer needed"
+	einfo "if the internal DataDirect implementation is to be used."
 }

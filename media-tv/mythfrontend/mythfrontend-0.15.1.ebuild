@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.15.1.ebuild,v 1.1 2004/06/01 17:25:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.15.1.ebuild,v 1.2 2004/06/02 21:45:18 aliz Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project frontend."
 HOMEPAGE="http://www.mythtv.org/"
@@ -25,7 +25,8 @@ DEPEND="virtual/x11
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )
-	cle266? ( media-libs/libddmpeg )"
+	cle266? ( media-libs/libddmpeg )
+	opengl? ( >=x11-base/opengl-update-1.7 )"
 
 RDEPEND="${DEPEND}
 	!media-tv/mythtv"
@@ -40,6 +41,17 @@ pkg_setup() {
 		die "Qt needs MySQL support"
 	fi
 
+	if [ `use opengl` ] ; then
+		local gl_implementation="$( opengl-update --get-implementation )"
+		if [ "$gl_implementation" == "xfree" ] || [ "$gl_implementation" == "xorg-x11" ] ; then
+			return 0
+		else
+			eerror "OpenGL implementation must be set to either xfree or xorg-x11 to allow compilation."
+			eerror "to change opengl implemantation use opengl-update <your xserver>."
+			eerror "After mythfrontend has been compiled you can switch back to the preferred implementation.."
+			die "Incompatible OpenGL implementation."
+		fi
+	fi
 	return 0
 }
 
@@ -49,6 +61,8 @@ src_unpack() {
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:usr/local:usr:g" -i "${i}" || die "sed failed"
 	done
+
+	use directfb && epatch ${FILESDIR}/mythtv-0.15-directfb.patch
 }
 
 src_compile() {
