@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.4 2004/07/21 16:24:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.5 2004/07/23 10:41:10 chrb Exp $
 
 inherit kernel-mod flag-o-matic eutils
 
@@ -44,6 +44,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
 
 	epatch ${FILESDIR}/${P}-cs46xx-passthrough.patch
+
+	if [ "${PROFILE_ARCH}" == "xbox" ]; then
+		epatch ${FILESDIR}/${P}-xbox-ac97.patch
+	fi
 
 	if kernel-mod_is_2_6_kernel || kernel-mod_is_2_5_kernel; then
 		FULL_KERNEL_PATH="${ROOT}/usr/src/${KV_DIR}"

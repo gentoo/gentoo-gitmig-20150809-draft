@@ -1,0 +1,16 @@
+diff -cr alsa-driver-1.0.5a.orig/alsa-kernel/pci/ac97/ac97_codec.c alsa-driver-1.0.5a/alsa-kernel/pci/ac97/ac97_codec.c
+*** alsa-driver-1.0.5a.orig/alsa-kernel/pci/ac97/ac97_codec.c	Sun May 30 17:40:04 2004
+--- alsa-driver-1.0.5a/alsa-kernel/pci/ac97/ac97_codec.c	Fri Jul 23 10:45:09 2004
+***************
+*** 1877,1882 ****
+--- 1877,1886 ----
+  		if ((err = snd_ac97_read(ac97, AC97_REC_GAIN)) == 0x8a06)
+  			ac97->scaps |= AC97_SCAP_AUDIO;
+  	}
++ 
++ 	// xbox fails test because of no audio input or mixer hardware, so force audio on
++ 	ac97->scaps |= AC97_SCAP_AUDIO;
++ 
+  	if (ac97->scaps & AC97_SCAP_AUDIO) {
+  		ac97->caps = snd_ac97_read(ac97, AC97_RESET);
+  		ac97->ext_id = snd_ac97_read(ac97, AC97_EXTENDED_ID);
