@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.1.ebuild,v 1.2 2003/09/10 01:42:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.1.ebuild,v 1.3 2003/10/27 10:54:52 aliz Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -9,7 +9,7 @@ SRC_URI="http://gregory.kokanosky.free.fr/v4/linux/${PN}.tgz"
 HOMEPAGE="http://gregory.kokanosky.free.fr/v4/linux/nrg2iso.en.html"
 
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
