@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.9 2002/08/16 03:02:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.10 2002/09/01 20:20:07 mkennedy Exp $
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
@@ -15,8 +15,7 @@ DEPEND="virtual/glibc"
 
 RDEPEND="!virtual/cron
 	sys-apps/cronbase
-	virtual/mta
-	app-editors/vim"
+	virtual/mta"
 
 PROVIDE="virtual/cron"
 
@@ -39,7 +38,7 @@ src_compile() {
 	--with-etcdir=/etc/fcron \
 	--with-spooldir=/var/spool/cron \
 	--with-sendmail=/usr/sbin/sendmail \
-	--with-editor=/usr/bin/vim \
+	--with-editor=/usr/bin/nano \
 	--with-cflags="${CFLAGS}" --host=${CHOST} || die "bad configure"
 
 	emake || die "compile problem"
