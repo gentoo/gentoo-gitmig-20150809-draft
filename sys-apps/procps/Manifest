@@ -4,7 +4,7 @@ MD5 e3b3f57a3f6f7e586cd3a23a5689cc30 procps-2.0.16-r1.ebuild 2002
 MD5 416c9134bb5282ee2d9e86b81826f55d procps-3.1.13-r1.ebuild 1185
 MD5 83faec0e015c1a0876a225e8a50a0ae0 procps-3.2.2-r1.ebuild 1069
 MD5 d9a8450ad971e60a33b45788f89a0718 procps-3.2.0.ebuild 1149
-MD5 b5c4854a41155eceba980ab6ed84d107 ChangeLog 11492
+MD5 edde164707bc768decf54d63b5104701 ChangeLog 11519
 MD5 5dbeadf75302e75297ff2fd9605cd50e procps-3.1.12-r1.ebuild 1342
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 e8320bb8f3dafed943fd15207648cf7f files/procps-3.1.11-multipids.patch 515
