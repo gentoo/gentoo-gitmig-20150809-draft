@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-0.11.4.6.ebuild,v 1.1 2004/11/26 08:37:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-0.11.4.6.ebuild,v 1.2 2004/11/26 14:27:14 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -34,12 +34,12 @@ src_install() {
 	dobin pftp
 	dodoc .pftp/config .pftp/keymap README.MEW old/*
 	cd ${WORKDIR}
-	mv irssi  mIRC-mew  pftpfxp-autoconnect ${DOCDESTTREE}
+	mv irssi  mIRC-mew  pftpfxp-autoconnect ${D}/usr/share/doc/${PF}
 }
 
 pkg_postinst() {
 	einfo "In order to use pftp-mew you need to create these files:"
 	einfo "    ~/.pftp/config"
 	einfo "    ~/.pftp/keymap"
-	einfo "Refer to the examples in ${DOCDESTTREE} for more information."
+	einfo "Refer to the examples in /usr/share/doc/${PF} for more information."
 }
