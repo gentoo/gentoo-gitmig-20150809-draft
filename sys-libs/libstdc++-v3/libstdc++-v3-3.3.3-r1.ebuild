@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.9 2004/07/12 04:19:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.10 2004/07/13 14:02:20 lv Exp $
 
 IUSE="nls"
 
@@ -46,6 +46,12 @@ do_filter_flags() {
 	# gcc 3.3 doesnt support -mtune on numerous archs, so xgcc will fail
 	mtsetting="`get-flag mtune`"
 	[ ! -z "${mtsetting}" ] && filter-flags -mtune="${mtsetting}"
+
+	# xgcc wont understand gcc 3.4 flags...
+	filter-flags -fno-unit-at-a-time
+	filter-flags -funit-at-a-time
+	filter-flags -fweb
+	filter-flags -fno-web
 
 	# ...sure, why not?
 	strip-unsupported-flags
