@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.0-r4.ebuild,v 1.1 2002/11/26 00:45:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.0-r4.ebuild,v 1.2 2002/11/30 22:32:01 azarah Exp $
 
 inherit debug eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 	# subdirectories could get lost from ~/.fonts.cache
 	epatch ${PPREFIX}-2.0-subdir.patch
 	# Fix problem with italic fonts if no map file present
-	epatch ${PPREFIX}-2.0-font-matrix.patch
+#	epatch ${PPREFIX}-2.0-font-matrix.patch
 	# Fix config script to alway include X11 fontpath and remove date
 	epatch ${PPREFIX}-2.0-x11fontpath-date-configure.patch 
 }
@@ -70,7 +70,7 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]
 	then
 		einfo "Creating font cache..."
-		/usr/bin/fc-cache
+		HOME="/root" /usr/bin/fc-cache -f
 	fi
 }
 
