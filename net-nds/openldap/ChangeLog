@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.13 2002/10/11 20:51:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.14 2002/11/26 02:57:25 raker Exp $
+
+openldap-2.1.8 (25 Nov 2002)
+
+  25 Nov 2002; Nick Hadaway <raker@gentoo.org> openldap-2.1.8.ebuilod,
+  files/digest-openldap-2.1.8 :
+  New ebuild of openldap.  Lots of configure updates.  Needs lots of
+  testing.  The ebuild depends on db4 so all arches are marked - until
+  db4 is marked unstable for testing.
 
 *openldap-2.0.25-r3 (21 Sept 2002)
 
