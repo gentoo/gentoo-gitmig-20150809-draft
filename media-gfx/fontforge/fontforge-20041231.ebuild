@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20040930.ebuild,v 1.2 2005/01/06 15:37:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20041231.ebuild,v 1.1 2005/01/06 15:37:24 matsuu Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="postscript font editor and converter"
 HOMEPAGE="http://fontforge.sourceforge.net/"
-SRC_URI="http://fontforge.sourceforge.net/${PN}_full-${PV}.tgz"
+SRC_URI="mirror://sourceforge/fontforge/${PN}_full-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
