@@ -34,10 +34,10 @@ show path to currently selected JRE
 \fB--java-version\fI
 query current JVM for version
 .TP
-\fB--classpath[=package-name]\fI
+\fB--classpath[=package1,package2,...]\fI
 calculate classpath for a package.
 .TP
-\fB--full-classpath[=package-name]\fI
+\fB--full-classpath[=package1,package2,...]\fI
 calculate classpath with absolute paths ready to be assigned to CLASSPATH.
 .TP
 \fB--exec=filename\fI
@@ -65,6 +65,14 @@ sets the system-wide default JVM.
 \fB--set-user-vm=<vm-id>\fI
 sets the user-specific JVM by putting all necessary env vars into 
 .I $HOME/.gentoo/java-env
+.TP
+\fB--set-system-classpath=package1,package2,...\fI
+sets the system-wide default CLASSPATH.
+.TP
+\fB--set-user-classpath=package1,package2,...\fI
+sets the user-specific CLASSPATH by putting all necessary env vars into 
+.I $HOME/.gentoo/java-env-classpath
+(sourced from $HOME/.gentoo/java-env).
 .
 
 .SH AUTHORS
