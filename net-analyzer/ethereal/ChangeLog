@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.74 2004/07/09 14:40:19 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.75 2004/07/09 15:33:19 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> ethereal-0.10.5-r1.ebuild:
+  updated snmp dependency (bug #56542)
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> -ethereal-0.10.2.ebuild,
   -ethereal-0.10.3.ebuild, -ethereal-0.10.4.ebuild, -ethereal-0.9.14.ebuild,
