@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.4 2004/06/24 23:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.5 2004/06/25 16:18:30 solar Exp $
 
 inherit eutils gnuconfig db
 
@@ -54,15 +54,20 @@ src_compile() {
 	# Mips needs a gnuconfig update so obscure things like mips64 are known
 	# db-4.1.25_p1 extracts to ${WORKDIR}/db-4.1.25, so we need to strip the _p1
 	if use mips || use uclibc  ; then
-		einfo "Updating config.{guess,sub} for mips"
+		einfo "Updating config.{guess,sub} for mips or uclibc"
 		local OLDS="${S}"
 		S="${S}/../dist"
 		gnuconfig_update
 		S="${OLDS}"
 	fi
 
+	use uclibc \
+		&& local myconf="--disable-rpc" \
+		|| local myconf="--enable-rpc"
 
-	use uclibc && local myconf="--disable-rpc" || local myconf="--enable-rpc"
+	use uclibc \
+		&& myconf="${myconf} --disable-cxx" \
+		|| myconf="${myconf} --enable-cxx"
 
 	use amd64 &&  myconf="${myconf} --with-mutex=x86/gcc-assembly"
 
@@ -89,7 +94,6 @@ src_compile() {
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
 		--enable-compat185 \
-		--enable-cxx \
 		--with-uniquename \
 		--host=${CHOST} \
 		${myconf} || die
@@ -111,6 +115,8 @@ src_install () {
 
 	dodir /usr/sbin
 	mv ${D}/usr/bin/berkeley_db_svc ${D}/usr/sbin/berkeley_db41_svc
+
+	use uclibc && rm -f ${D}/usr/include/db*/*cxx*
 }
 
 pkg_postinst () {
