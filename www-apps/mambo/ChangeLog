@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.5 2005/01/09 21:07:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.6 2005/02/10 17:26:25 ka0ttic Exp $
+
+*mambo-4.5-r1 (10 Feb 2005)
+
+  10 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +mambo-4.5-r1.ebuild,
+  -mambo-4.5.ebuild:
+  Revision bump for sec bug 80578.
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org> mambo-4.5.ebuild:
   Added ~sparc keyword.

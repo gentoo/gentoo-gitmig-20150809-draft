@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.ebuild,v 1.5 2005/01/09 21:07:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5-r1.ebuild,v 1.1 2005/02/10 17:26:25 ka0ttic Exp $
 
-inherit webapp
+inherit webapp eutils
 
+MY_P="${PN/M/m}V${PV}-Stable-1.0.9"
 DESCRIPTION="Mambo is yet another CMS"
-SRC_URI="http://mamboforge.net/frs/download.php/1145/MamboV4.5-Stable-1.0.9.tar.gz"
 HOMEPAGE="http://www.mamboserver.com/"
+SRC_URI="http://mamboforge.net/frs/download.php/2039/${MY_P}.tar.gz
+	http://mamboforge.net/frs/download.php/3839/Mambo450SecurityPatchFeb05a.zip"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
@@ -17,10 +19,18 @@ IUSE=""
 RDEPEND="dev-db/mysql
 	>=virtual/php-4.1
 	net-www/apache"
+DEPEND="app-arch/unzip"
 
 pkg_setup () {
 	webapp_pkg_setup
 	einfo "Please make sure that your PHP is compiled with zlib, XML, and MySQL support"
+}
+
+src_unpack() {
+	unpack ${MY_P}.tar.gz
+	cd ${S}
+	# sec bug 80578
+	unpack Mambo450SecurityPatchFeb05a.zip
 }
 
 src_install () {
