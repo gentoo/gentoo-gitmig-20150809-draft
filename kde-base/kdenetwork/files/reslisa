@@ -1,24 +1,20 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/files/reslisa,v 1.2 2003/02/14 22:44:51 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/files/reslisa,v 1.3 2004/03/04 18:46:10 vapier Exp $
 
 depend() {
     use net
 }
 
 start() {
-
     ebegin "Starting reslisa"
     start-stop-daemon --start -x _KDEDIR_/bin/reslisa -q -- 1>/dev/null
     eend $? "Failed to start reslisa"
-
 }
 
 stop() {
-
     ebegin "Stopping reslisa"
     start-stop-daemon --stop -x _KDEDIR_/bin/reslisa -q
     eend $? "Failed to stop reslisa"
-
 }
