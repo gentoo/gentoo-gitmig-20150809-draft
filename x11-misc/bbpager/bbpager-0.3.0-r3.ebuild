@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/bbpager-0.3.0-r3.ebuild,v 1.8 2003/09/05 23:18:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/bbpager-0.3.0-r3.ebuild,v 1.9 2004/04/13 18:01:34 tseng Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An understated pager for Blackbox."
@@ -25,14 +25,4 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 	dodoc README TODO NEWS ChangeLog
-}
-
-pkg_postinst() {
-	if [ "`use gnome`" ] ; then
-		cd ${ROOT}usr/X11R6/bin/wm
-		if [ ! "`grep bbpager blackbox`" ] ; then
-		sed -e "s:.*blackbox:exec /usr/bin/bbpager \&\n&:" \
-			blackbox | cat > blackbox
-		fi
-	fi
 }
