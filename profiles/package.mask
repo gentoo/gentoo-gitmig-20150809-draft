@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3651 2005/02/23 16:59:15 lu_zero Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3652 2005/02/23 18:32:31 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -170,7 +170,6 @@ media-video/spca50x
 
 # Tom Payne <twp@gentoo.org> (4 Feb 2005)
 # Masked pending resolution of bug # 79640
-=x11-libs/cairo-0.3.0
 =media-libs/glitz-0.4.0
 
 #Gustavo Felisberto <humpback@gentoo.org> (4 Feb 2005)
