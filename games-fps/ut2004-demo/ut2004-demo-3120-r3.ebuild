@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r3.ebuild,v 1.4 2004/03/16 06:03:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r3.ebuild,v 1.5 2004/03/16 12:11:59 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -13,7 +13,7 @@ SRC_URI="x86? ( ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 	http://icculus.org/~icculus/tmp/${PN}-lnx-tts-pingpatch.tar.bz2
 	http://icculus.org/~icculus/tmp/please_test_with_ut2004-2.tar.bz2 )
 	amd64? ( mirror://gentoo/ut2004-lnx64-demo-${PV}.run.bz2
-	http://icculus.org/~icculus/tmp/${PN}-lnx64-tts-pingpatch.tar.bz2 )"
+	http://icculus.org/~icculus/tmp/${PN}-lnx64-tts-pingpatch2.tar.bz2 )"
 
 IUSE="alsa"
 LICENSE="as-is"
