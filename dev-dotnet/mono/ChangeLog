@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.50 2005/02/21 18:07:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.51 2005/02/22 14:30:10 latexer Exp $
+
+  22 Feb 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.4.ebuild:
+  Change pnet blocker to allow people to install a new enough pnet along side
+  mono-1.1.4
 
 *mono-1.0.5-r4 (21 Feb 2005)
 
