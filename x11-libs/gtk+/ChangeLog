@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.70 2003/07/01 17:04:49 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.71 2003/07/01 18:11:58 gmsoft Exp $
 
 *gtk+-2.2.2-r1 (12 Jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> gtk+-2.2.2-r1.ebuild :
+  Added ~hppa to KEYWORDS.
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> gtk+-2.2.2-r1.ebuild :
   set stable on sparc
@@ -35,6 +38,9 @@
 
 *gtk+-1.2.10-r10 (08 Mar 2003)
 
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> gtk+-1.2.10-r10.ebuild :
+  Marked stable on hpp.
+
   04 Apr 2003; Jason Wever <weeve@gentoo.org> gtk+-1.2.10-r10.ebuild:
   Changed ~sparc keyword to sparc.
 
@@ -56,6 +62,9 @@
   Related gentoo bugs #10529, #16883
 
 *gtk+-2.2.1 (04 Feb 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> gtk+-2.2.1.ebuild :
+  Added hppa to KEYWORDS.
 
   04 Mar 2003; Jason Wever <weeve@gentoo.org> gtk+-2.2.1.ebuild:
   Added sparc to keywords.
