@@ -16,7 +16,7 @@ HOMEPAGE="http://www.licq.org"
 
 DEPEND="virtual/glibc sys-devel/gcc
         >=sys-libs/ncurses-5.2
-        =net-im/licq-1.0.3"
+        =net-im/licq-1.0.3-r1"
 
 RDEPEND="virtual/glibc sys-devel/gcc
         >=sys-libs/ncurses-5.2"
