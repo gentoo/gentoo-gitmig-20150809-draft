@@ -1104,90 +1104,6 @@ def getgeneral(mycatpkg):
 	else:
 		return string.join([mysplit[0],mysplit[1]],"/")
 
-# some old code
-#def dep_depreduce(mypkgdep):
-#	global installcache
-#	#installcache holds a cached dictionary containing all installed packages
-##	if not installcache:
-#		installcache=port_insttree()
-#		#initialize cache
-#
-#	if mypkgdep[0]=="!":
-#		#this is an exact package match
-#		if isinstalled(mypkgdep[1:]):
-#			return 0
-#		else:
-#			return 1
-#	elif mypkgdep[0]=="=":
-#		#this is an exact package match
-#		if isspecific(mypkgdep[1:]):
-#			if isinstalled(mypkgdep[1:]):
-#				return 1
-#			else:
-#				return 0
-#		else:
-#			return None
-#	elif mypkgdep[0:2]==">=":
-#		#this needs to check against multiple packages
-#		if not isspecific(mypkgdep[2:]):
-#			return None
-#		if isinstalled(getgeneral(mypkgdep[2:])):
-#			mycatpkg=catpkgsplit(mypkgdep[2:])
-#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-#			if not installcache.has_key(mykey):
-#				return 0
-#			for x in installcache[mykey]:
-#				if pkgcmp(x[1][1:],mycatpkg[1:])>=0:
-#					return 1
-#		return 0
-#	elif mypkgdep[0:2]=="<=":
-#		#this needs to check against multiple packages
-#		if not isspecific(mypkgdep[2:]):
-#			return None
-#		if isinstalled(getgeneral(mypkgdep[2:])):
-#			mycatpkg=catpkgsplit(mypkgdep[2:])
-#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-#			if not installcache.has_key(mykey):
-#				return 0
-#			for x in installcache[mykey]:
-#				if pkgcmp(x[1][1:],mycatpkg[1:])<=0:
-#					return 1
-#		return 0
-#	elif mypkgdep[0]=="<":
-#		#this needs to check against multiple packages
-#		if not isspecific(mypkgdep[2:]):
-#			return None
-#		if isinstalled(getgeneral(mypkgdep[2:])):
-#			mycatpkg=catpkgsplit(mypkgdep[2:])
-#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-#			if not installcache.has_key(mykey):
-#				return 0
-#			for x in installcache[mykey]:
-#				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
-#					return 1
-#		return 0
-#	elif mypkgdep[0]==">":
-#		#this needs to check against multiple packages
-#		if not isspecific(mypkgdep[2:]):
-#			return None
-#		if isinstalled(getgeneral(mypkgdep[2:])):
-#			mycatpkg=catpkgsplit(mypkgdep[2:])
-#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-#			if not installcache.has_key(mykey):
-#				return 0
-#			for x in installcache[mykey]:
-#				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
-##					return 1
-#		return 0
-#	if not isspecific(mypkgdep):
-#		if isinstalled(mypkgdep):
-#			return 1
-#		else:
-#			return 0
-##	else:
-#		return None
-#		
-
 def dep_parenreduce(mysplit,mypos=0):
 	"Accepts a list of strings, and converts '(' and ')' surrounded items to sub-lists"
 	while (mypos<len(mysplit)): 
@@ -1445,28 +1361,6 @@ def dep_listcleanup(deplist):
 				newlist.append(x)
 	return newlist
 	
-#I believe it's ok to depreciate this now
-#def dep_parse(depstring):
-#	"Evaluates a dependency string"
-#	myusesplit=string.split(getsetting("USE"))
-#	mysplit=string.split(depstring)
-#	#convert parenthesis to sublists
-#	mysplit=dep_parenreduce(mysplit)
-#	#mysplit can't be None here, so we don't need to check
-#	mysplit=dep_opconvert(mysplit,myusesplit)
-#	#if mysplit==None, then we have a parse error (paren mismatch or misplaced ||)
-#	if mysplit==None:
-#		return [0,"Parse Error (parenthesis mismatch or || abuse?)"]
-#	mysplit2=mysplit[:]
-#	mysplit2=dep_wordreduce(mysplit2)
-#	if mysplit2==None:
-#		return [0,"Invalid token"]
-#	myeval=dep_eval(mysplit2)
-#	if myeval:
-#		return [1,None]
-#	else:
-#		return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
-
 def merge_check(mycatpkg):
 	if roottree.exists_specific(mycatpkg):
 		return 1
@@ -1500,72 +1394,6 @@ def dep_frontend(mytype,depstring):
 #		This is the semi-working auto-ebuild stuff, disabled for now
 #		dep_print_resolve(myparse[1])		
 	return 1
-
-#depreciated
-#def port_currtree():
-#	"""
-#	This function builds a dictionary of current (recommended) packages on the system,
-#	based on the contents of CURRENTFILE.  Dictionary format is:
-#	mydict["cat/pkg"]=[
-#					["cat/fullpkgname",["cat","pkg","ver","rev"]
-#					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
-#					]
-#	"""
-#	currentdict={}
-#	currentfile=getsetting("CURRENTFILE")
-#	if not os.path.isfile(currentfile):
-#		return
-#	mycurrent=open(currentfile,"r")
-#	mylines=mycurrent.readlines()
-#	for x in mylines:
-#		if x[:2]!="./":
-#			continue
-#		myline=string.split(string.strip(x)[2:-7],"/")
-#		if len(myline)!=3:
-#			continue
-#		fullpkg=string.join([myline[0],myline[2]],"/")
-#		mysplit=catpkgsplit(fullpkg)
-#		mykey=mysplit[0]+"/"+mysplit[1]
-#		if not currentdict.has_key(mykey):
-#			currentdict[mykey]=[]
-#		currentdict[mykey].append([fullpkg,mysplit])
-#	mycurrent.close()
-#	return currentdict
-
-#depreciated
-#def port_insttree():
-#	"""
-#	This function builds a dictionary of installed packages on the system, based on
-#	the contents of /var/db/pkg Dictionary format is:
-#	mydict["cat/pkg"]=[
-#					["cat/fullpkgname",["cat","pkg","ver","rev"]
-#					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
-#					]
-#	"""
-#	installeddict={}
-#	dbdir="/var/db/pkg"
-#	prep_dbdir()	
-#	origdir=os.getcwd()
-#	os.chdir(dbdir)
-#	for x in os.listdir(os.getcwd()):
-#		if not os.path.isdir(os.getcwd()+"/"+x):
-#			continue
-#		for y in os.listdir(os.getcwd()+"/"+x):
-#			if x=="virtual":
-#				#virtual packages don't require versions, if none is found, add a "1.0" to the end
-#				if isjustname(y):
-#					fullpkg=x+"/"+y+"-1.0"
-#				else:
-#					fullpkg=x+"/"+y
-#			else:
-#				fullpkg=x+"/"+y
-#			mysplit=catpkgsplit(fullpkg)
-#			mykey=x+"/"+mysplit[1]
-#			if not installeddict.has_key(mykey):
-#				installeddict[mykey]=[]
-#			installeddict[mykey].append([fullpkg,mysplit])
-#	os.chdir(origdir)
-#	return installeddict
 
 def port_porttree():
 	"""
@@ -1941,7 +1769,7 @@ class binarytree(packagetree):
 					self.tree[mykey]=[]
 				self.tree[mykey].append([fullpkg,mysplit])
 		self.populated=1
-	def getname(pkgname):
+	def getname(self,pkgname):
 		"returns file location for this particular package"
 		return self.root+"/"+pkgname+".tbz2"
 
