@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.11 2004/09/29 20:59:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.12 2004/10/15 09:33:44 sejo Exp $
 
 inherit java eutils
 
@@ -27,9 +27,9 @@ RDEPEND=" !ppc64? sys-libs/lib-compat"
 
 IUSE="X doc javacomm mozilla"
 
-if use ppc; then
+if useq ppc; then
 	S="${WORKDIR}/IBMJava2-ppc-142"
-elif use ppc64; then
+elif useq ppc64; then
 	S="${WORKDIR}/IBMJava2-ppc64-142"
 else
 	S="${WORKDIR}/IBMJava2-142"
@@ -46,14 +46,14 @@ src_install() {
 	cp -a ${S}/{demo,src.jar} ${D}opt/${P}/share/
 
 	# setting the ppc stuff
-	if use ppc; then
+	if useq ppc; then
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc.so
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc_g.so
 		insinto /etc
 		doins ${FILESDIR}/cpuinfo
 	fi
 
-	if use mozilla && ! use ppc; then
+	if useq mozilla && ! useq ppc; then
 		local plugin="libjavaplugin_oji.so"
 		if has_version '>=gcc-3*' ; then
 			plugin="libjavaplugin_ojigcc3.so"
@@ -70,7 +70,7 @@ src_install() {
 
 pkg_postinst() {
 	java_pkg_postinst
-	if ! use X; then
+	if ! useq X; then
 		echo
 		eerror "You're not using X so its possible that you dont have"
 		eerror "a X server installed, please read the following warning: "
