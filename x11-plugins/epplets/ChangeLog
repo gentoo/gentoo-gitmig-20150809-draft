@@ -1,0 +1,13 @@
+# ChangeLog for x11-misc/epplet-base
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.1 2003/11/06 15:40:14 vapier Exp $
+
+*epplets-0.7 (06 Nov 2003)
+
+  06 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Name change and new version #32866 !
+
+*epplet-base-0.5 (26 Apr 2002)
+
+  26 Apr 2002; Tod Neidt <tod@gentoo.org> epplet-base-0.5.ebuild :
+  Initial commit. Ebuild submitted by Paul Fleischer.
