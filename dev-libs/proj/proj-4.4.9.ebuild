@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.9.ebuild,v 1.1 2004/12/12 04:03:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.9.ebuild,v 1.2 2004/12/12 06:15:48 kingtaco Exp $
 
 inherit eutils
 N=${S}/nad
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/proj/${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ppc64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa amd64 ~ppc64 ~s390"
 IUSE=""
 
 DEPEND="virtual/libc"
