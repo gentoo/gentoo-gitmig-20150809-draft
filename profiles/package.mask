@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+
+# <lu_zero@gentoo.org> (28 Jan 2003)
+#not sure that it works now, sorry
+gnome-extra/nautilus-cd-burner
+
 # <vapier@gentoo.org> (28 Jan 2003)
 # overwrites glibc and breaks other packages :/
 # Bugs #14378 #14459
