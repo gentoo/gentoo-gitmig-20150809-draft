@@ -1,10 +1,16 @@
-MD5 a17bd7ebf2d98eff36b84be0fe1a8292 mpg123-0.59s-r6.ebuild 2871
-MD5 125d7ad49336252f01bea89794e0adc0 mpg123-0.59s-r8.ebuild 2877
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 52e8e71391526eca7fff1b2c60649307 ChangeLog 12519
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 811fcc686288c15abc954400232fe11d ChangeLog 12364
-MD5 318e86cc42ab954a63b7716bc5375055 mpg123-0.59s-r7.ebuild 2882
+MD5 125d7ad49336252f01bea89794e0adc0 mpg123-0.59s-r8.ebuild 2877
 MD5 c7e494eaf78f41e996144dd540d4106a mpg123-0.59s-r9.ebuild 2878
 MD5 12a16d9aafab05a0ad9eace12cf3596a files/digest-mpg123-0.59s-r8 141
-MD5 3a48e002f75bdd43f080f34013db8517 files/digest-mpg123-0.59s-r7 141
 MD5 e48d719ce128060016792fed8c38db07 files/digest-mpg123-0.59s-r9 141
-MD5 792c4eea53fd8d57facf635a93c11d5d files/digest-mpg123-0.59s-r6 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3kEUArHZZzCEUG0RAmqoAJ42mj1h80Regd8yRpHWylrYbyppWACeOTpJ
+us84X5YxMsuEBvFq7imq9xg=
+=KcwV
+-----END PGP SIGNATURE-----
