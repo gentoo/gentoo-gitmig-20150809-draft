@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.10 2005/03/22 14:02:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.11 2005/03/22 15:59:38 kloeri Exp $
+
+  22 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  herdstat-1.0_rc1.ebuild:
+  Add ~alpha keyword.
 
 *herdstat-1.0_rc1 (22 Mar 2005)
 
