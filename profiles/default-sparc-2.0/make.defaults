@@ -1,14 +1,17 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Portage system
-USE="sparc 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
+USE="oss sparc 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
 java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
 opengl pam pdflib png python qt qtmt quicktime readline sdl slang spell ssl
  tcpd truetype X xml2 xmms xv zlib"
 COMPILER="gcc3"
 #
-# $Id: make.defaults,v 1.1 2002/08/29 01:24:59 murphy Exp $
+# $Id: make.defaults,v 1.2 2002/09/03 22:41:02 drobbins Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.1  2002/08/29 01:24:59  murphy
+# Initial update
+#
 #
 ARCH="sparc"
 CHOST=sparc-unknown-linux-gnu
