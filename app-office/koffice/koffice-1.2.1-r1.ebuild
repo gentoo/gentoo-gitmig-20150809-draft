@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.4 2003/05/19 13:02:52 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.5 2003/05/19 13:16:05 brain Exp $
 inherit kde-base flag-o-matic
 
 filter-flags "-fomit-frame-pointer"
@@ -17,8 +17,7 @@ KEYWORDS="x86 ~ppc ~sparc"
 DEPEND="$DEPEND
 	>=dev-lang/python-2.2.1
 	>=media-libs/libart_lgpl-2.3.9
-	>=media-gfx/imagemagick-5.4.5
-	dev-util/pkgconfig"
+	>=media-gfx/imagemagick-5.4.5"
 
 PATCHES="$FILESDIR/${P}-kword-crashes.diff"
 
