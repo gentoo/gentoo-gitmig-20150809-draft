@@ -1,5 +1,15 @@
-MD5 281791ac61555008c049705dd354c8cf ChangeLog 1110
-MD5 8101beeb09a60050b19be5a8382d0bde gnus-cvs-5.11.ebuild 1467
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5460ed16f736a86dc1d3396290675fa9 gnus-cvs-5.11.ebuild 1470
+MD5 3fc9148789957924bb4c7e4584b5193f ChangeLog 1238
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 e4585970dba5b3fe1ed52d9b7a45fc26 files/70gnus-cvs-gentoo.el 107
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnus-cvs-5.11 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4QrcI1lqEGTUzyQRAobDAKDR4sy1DfAzEnTV8zS/nAnGnDr/HACcDW/e
+g8ywO9jDT7t24DWobd7ckpk=
+=nuMX
+-----END PGP SIGNATURE-----

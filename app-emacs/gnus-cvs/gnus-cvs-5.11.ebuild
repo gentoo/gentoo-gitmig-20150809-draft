@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.6 2005/01/01 13:46:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.7 2005/01/09 10:43:34 swegener Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -25,7 +25,7 @@ SANDBOX_DISABLED="1"
 RESTRICT="$RESTRICT nostrip"
 
 DEPEND="virtual/emacs
-emacs-w3? app-emacs/w3"
+	emacs-w3? ( app-emacs/w3 )"
 
 src_compile() {
 	local myconf
