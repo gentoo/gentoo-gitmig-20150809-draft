@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.16 2005/02/09 21:34:25 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.17 2005/02/10 14:15:23 nakano Exp $
+
+  10 Feb 2005; Masatomo Nakano <nakano@gentoo.org>
+  -files/pygresql-3.6-gentoo.patch, +files/pygresql-3.6.1-gentoo.patch,
+  pygresql-3.6.1.ebuild:
+  Fixed server path error. (#81475)
 
 *pygresql-3.6.1 (09 Feb 2005)
 

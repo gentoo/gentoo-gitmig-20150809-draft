@@ -1,6 +1,6 @@
-diff -Naru PyGreSQL-3.6.org/setup.py PyGreSQL-3.6/setup.py
---- PyGreSQL-3.6.org/setup.py	2004-08-30 01:12:24.000000000 +0100
-+++ PyGreSQL-3.6/setup.py	2004-08-30 17:09:49.246320540 +0100
+diff -Naru PyGreSQL-3.6.1.org/setup.py PyGreSQL-3.6.1/setup.py
+--- PyGreSQL-3.6.1.org/setup.py	2004-08-30 01:12:24.000000000 +0100
++++ PyGreSQL-3.6.1/setup.py	2004-08-30 17:09:49.246320540 +0100
 @@ -36,7 +36,7 @@
  	optional_libs=[ 'libpqdll', 'wsock32', 'advapi32' ]
  	data_files = [ 'libpq.dll' ]
