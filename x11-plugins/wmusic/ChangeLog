@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmusic
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/ChangeLog,v 1.6 2004/06/28 21:46:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/ChangeLog,v 1.7 2004/07/24 10:54:28 s4t4n Exp $
+
+*wmusic-1.5.0 (24 Jul 2004)
+
+  24 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmusic-1.5.0.ebuild:
+  Version bump.
+  wmusic-1.4.11.ebuild:
+  Stable on x86
+  wmusic-1.4.10.ebuild:
+  Wipe out old ebuild.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmusic-1.4.10.ebuild,
   wmusic-1.4.11.ebuild:
