@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.17 2004/10/05 10:24:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.18 2004/11/09 22:23:34 mr_bones_ Exp $
 
 MESA_VER="4.0.1"
 S=${WORKDIR}/Mesa-${MESA_VER}
@@ -9,8 +9,8 @@ SRC_URI="mirror://sourceforge/mesa3d/MesaLib-${MESA_VER}.tar.bz2
 	mirror://sourceforge/mesa3d/MesaDemos-${MESA_VER}.tar.bz2"
 HOMEPAGE="http://www.opengl.org/developers/documentation/glut/"
 
+LICENSE="|| ( X11 GPL-2 )"
 SLOT="0"
-LICENSE="X11 | GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 

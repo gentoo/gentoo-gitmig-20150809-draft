@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.29 2004/09/23 20:16:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.30 2004/11/09 22:22:50 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${P}.tar.gz
 	 ftp://prtr-13.ucsc.edu/pub/libungif/${P}.tar.gz"
 
-LICENSE="as-is | BSD"
+LICENSE="|| ( as-is BSD )"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 IUSE="X gif"
