@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.4.ebuild,v 1.4 2004/12/08 08:52:50 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.4.1.2.ebuild,v 1.1 2004/12/08 08:52:50 voxus Exp $
 
 inherit kde
 
