@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.36-r1.ebuild,v 1.1 2005/01/03 12:41:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.36-r1.ebuild,v 1.2 2005/01/04 13:19:28 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -122,4 +122,11 @@ src_install() {
 
 	dodoc COPYING INSTALL README
 
+}
+
+pkg_preinst(){
+	if [ -h "/usr/lib/blender/plugins/include" ];
+	then 
+	rm -f /usr/lib/blender/plugins/include
+	fi
 }
