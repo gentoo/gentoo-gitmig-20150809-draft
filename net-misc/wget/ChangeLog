@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.31 2003/11/27 15:19:49 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.32 2003/12/01 01:59:23 gregf Exp $
+
+*wget-1.9.1-r2 (30 Nov 2003)
+
+  30 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> wget-1.9.1-r2.ebuild:
+  Fix german locale, closes bug #34515
 
   27 Nov 2003; Brad House <brad_mssw@gentoo.org> wget-1.9-r1.ebuild,
   wget-1.9.1-r1.ebuild:
