@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.4.4.ebuild,v 1.2 2002/10/20 18:52:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.4.4.ebuild,v 1.3 2002/11/30 21:11:00 vapier Exp $
 
 S=${WORKDIR}/GNUnet-${PV}
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
@@ -17,22 +17,21 @@ DEPEND=">=dev-libs/openssl-0.9.6d
 	=x11-libs/gtk+-1.2*
 	>=dev-libs/libextractor-0.1.0"
 
-
-src_compile () {
-	econf || die "./configure failed"
+src_compile() {
+	econf
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING INSTALL NEWS README
-	mkdir ${D}/usr/share/gnunet
+	dodir /usr/share/gnunet
 	cp ${S}/contrib/gnunet.conf* ${D}/usr/share/gnunet
 	cp ${FILESDIR}/gnunet ${D}/usr/share/gnunet
 	
 }
 
-pkg_postinstall () {
+pkg_postinst() {
 	einfo "Default configuration files are provided in /usr/share/gnunet"
 	einfo "An example rc script for gentoo is also available and "
 	einfo "should be run by permanent nodes."
