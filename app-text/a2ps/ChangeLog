@@ -1,9 +1,11 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.7 2003/02/12 05:21:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.8 2003/05/23 23:18:28 agriffis Exp $
+
+  23 May 2003; Aron Griffis <agriffis@gentoo.org> a2ps-4.13b-r4.ebuild:
+  Mark stable on alpha
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
 *a2ps-4.13b-r4 (14 May 2002)
 
@@ -11,11 +13,9 @@
   Added ppc to keywords
 
   14 May 2002; Jon Nelson <jnelson@gentoo.org> a2ps-4.13b-r4.ebuild :
-
   Brought ebuild in compliance with latest lintool.
   Fixed bug in make install (Closes Bug 2492)
   
-
 *a2ps-4.13b-r3 (12 Apr 2002)
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> a2ps-4.13b-r3.ebuild :
