@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.2 2005/03/29 01:52:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.3 2005/03/30 07:53:37 chriswhite Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-linux26-headers.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {

@@ -1,7 +1,18 @@
-MD5 459931efb4f71fb2c2fe367a76c7a315 ChangeLog 1849
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2be90c65bb7dc90883257aebfe5b703 ChangeLog 1975
 MD5 f1333d34a1518084a01745f896fbefc2 libgii-0.8.1.ebuild 1007
-MD5 d72e5ffb39d3a80b5a3bb1d2896f519c libgii-0.9.0.ebuild 1055
+MD5 e1a5c00cd15af12eb39ff2b01f9f5a1e libgii-0.9.0.ebuild 1096
 MD5 fdf3bfd43030906b7ee6b8c918575f0d files/digest-libgii-0.8.1 65
 MD5 3547639e381b37fef548f22dca2bd248 files/libgii-linux-headers-2.6.patch 1478
 MD5 376051220c890effb2b6679a25bd6ea1 files/digest-libgii-0.9.0 68
+MD5 887768231d487e1a3221af502844af42 files/libgii-0.9.0-gcc34.patch 314
 MD5 87872067beb306c082b41bfb0d3b6163 files/libgii-0.9.0-linux26-headers.patch 419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSlNyFdQwWVoAgN4RAs6MAKDsf4DXNL0JMeURyDLkmN8QIUedPACg9ply
+4jNiArVs13tFfLNa+zl+IKA=
+=MGiB
+-----END PGP SIGNATURE-----

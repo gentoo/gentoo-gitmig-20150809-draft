@@ -1,0 +1,10 @@
+--- gg/ptsched.c.old	2005-03-28 10:20:21.000000000 +0200
++++ gg/ptsched.c	2005-03-28 10:20:45.000000000 +0200
+@@ -198,6 +198,7 @@
+ 		}
+ 		pthread_cond_wait(&_gg_task_thread.tick, &_gg_task_thread.mtx);
+ 	skip:
++		;
+ 		pthread_cleanup_pop(1);
+ 		if (done) return myid;
+ 		if (!_gg_task_thread.running) return myid;
