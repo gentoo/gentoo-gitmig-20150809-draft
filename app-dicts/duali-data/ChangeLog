@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/duali-data
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.1 2003/09/24 03:02:26 seemant Exp $
+
+*duali-data-0.1b (23 Sep 2003)
+
+  23 Sep 2003; Seemant Kulleen <seemant@gentoo.org> duali-data-0.1b.ebuild:
+  Arabic language dictionary. To be used with app-text/duali dictionary
+  program. The request was made by the upstream author, Mohammed Elzubeir
+  <elzubeir@arabeyes.org>, in bug #26908
+
