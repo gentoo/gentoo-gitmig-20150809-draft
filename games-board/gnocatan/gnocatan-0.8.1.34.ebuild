@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.34.ebuild,v 1.1 2004/09/07 18:52:29 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.34.ebuild,v 1.2 2004/09/10 19:13:47 rizzo Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="http://gnocatan.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 RDEPEND=">=gnome-base/libgnomeui-2.2*
