@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.18.ebuild,v 1.4 2004/01/02 20:17:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.19.ebuild,v 1.1 2004/01/02 20:17:16 mr_bones_ Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ DEPEND="virtual/x11
 	sys-devel/automake
 	media-libs/libpng
 	>=net-libs/libpcap-0.6.2
-	>=x11-libs/qt-3.0.5
+	>=x11-libs/qt-3.1
 	>=sys-libs/gdbm-1.8.0
 	>=sys-apps/sed-4"
 
