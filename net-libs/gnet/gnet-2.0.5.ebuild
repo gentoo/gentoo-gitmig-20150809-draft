@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.5.ebuild,v 1.8 2004/06/24 23:11:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.5.ebuild,v 1.9 2004/07/07 19:28:51 lv Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc sparc ~alpha hppa ~ia64"
+KEYWORDS="x86 ppc sparc ~alpha hppa ~ia64 amd64"
 
 IUSE=""
 RDEPEND=">=dev-libs/glib-1.2"
