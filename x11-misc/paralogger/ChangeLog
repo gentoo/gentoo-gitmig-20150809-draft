@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/paralogger
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/ChangeLog,v 1.4 2004/06/24 22:30:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/ChangeLog,v 1.5 2004/12/05 15:57:26 pyrania Exp $
+
+  05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> paralogger-1.0.3.ebuild:
+  HOMEPAGE updated.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> paralogger-1.0.3.ebuild:
   Add die following econf for bug 48950
