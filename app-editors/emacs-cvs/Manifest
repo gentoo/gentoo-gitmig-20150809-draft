@@ -1,5 +1,5 @@
-MD5 bdb61ed41c67681952b6d4d5b63be002 ChangeLog 2581
-MD5 2a25fbfcf40be27efd445ef3bf226cf2 emacs-cvs-21.3.50.ebuild 3050
+MD5 309712f0d0b230fc329593859ebac22a ChangeLog 2708
+MD5 127b376bb07b67457a4a49389ed08e71 emacs-cvs-21.3.50.ebuild 3056
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 04a64867694a98538309b433c80aaa62 files/40aspell-gentoo.el 80
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0
