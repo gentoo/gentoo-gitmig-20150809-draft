@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/seq24
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.15 2005/01/07 20:08:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.16 2005/01/09 09:59:11 jnc Exp $
+
+*seq24-0.6.0_rc5 (09 Jan 2005)
+
+  09 Jan 2005; Eric Shattow <jnc@gentoo.org> +seq24-0.6.0_rc5.ebuild:
+  version bump. fix typo, allows jack functionality.
 
   07 Jan 2005; Tony Vroon <chainsaw@gentoo.org> seq24-0.6.0_rc3.ebuild:
   DEPEND update, closes bug #77015.
