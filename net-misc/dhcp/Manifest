@@ -1,17 +1,30 @@
-MD5 b0de173ad7421c26fb21ae878db5df1e dhcp-3.0_p2-r4.ebuild 2816
-MD5 9fbe0943b14ad2d19bd43c3d712b6817 dhcp-3.0_p2-r6.ebuild 4088
-MD5 2f76f34fe4ff64bc333356f9f67ff410 dhcp-3.0_p2-r5.ebuild 3924
-MD5 4aa0af7abad79be203f333ab3da2a7ac ChangeLog 6809
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a090774a90afbcd6e234c005e95772dc ChangeLog 7090
+MD5 5250753d0fb3a61e74980954958e1556 dhcp-3.0.1.ebuild 3825
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
-MD5 66cba8d85e40bdd4312c9a70b1fe9254 files/dhcp.conf 634
-MD5 498a3eb0e9deaf705f17fff3834f5b90 files/dhclient.c-3.0-dw-cli-fix.patch 734
-MD5 c2433edf6a800843b0d55c9086de1252 files/dhcrelay.rc6 564
+MD5 b0de173ad7421c26fb21ae878db5df1e dhcp-3.0_p2-r4.ebuild 2816
+MD5 cfb1b7d604eca6d6fb13f4effe6707ed dhcp-3.0_p2-r5.ebuild 3846
+MD5 5fc020f90a14d90c6d6c4703feb750f6 dhcp-3.0_p2-r6.ebuild 4010
 MD5 a4fc0a5a40c8ec22f3301945fc744516 files/conf.dhcpd 381
-MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2-r4 63
-MD5 a941fa952582373e42b07b61bd66a168 files/digest-dhcp-3.0_p2-r5 129
-MD5 a941fa952582373e42b07b61bd66a168 files/digest-dhcp-3.0_p2-r6 129
-MD5 1a902e3332707119032d7bc229b91001 files/dhcrelay.conf 505
+MD5 498a3eb0e9deaf705f17fff3834f5b90 files/dhclient.c-3.0-dw-cli-fix.patch 734
+MD5 28ebabb4ad513afb04314634ecd9db25 files/dhcp-3.0pl2-user-option-fix.patch 1519
+MD5 66cba8d85e40bdd4312c9a70b1fe9254 files/dhcp.conf 634
 MD5 6fac614e84b5c2856503f0a62d10c1fa files/dhcp.rc6 1100
 MD5 5222ad8424cca071c3dfa8901d9383c3 files/dhcp.rc7 767
-MD5 28ebabb4ad513afb04314634ecd9db25 files/dhcp-3.0pl2-user-option-fix.patch 1519
+MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2-r4 63
+MD5 7f1859e6517a23f87c8e83c68a15a537 files/digest-dhcp-3.0.1 62
 MD5 d909d81a4d4ea39ddfc9898d33488c73 files/dhcp-3.0pl2-fix-perms.patch 485
+MD5 1a902e3332707119032d7bc229b91001 files/dhcrelay.conf 505
+MD5 c2433edf6a800843b0d55c9086de1252 files/dhcrelay.rc6 564
+MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2-r5 63
+MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2-r6 63
+MD5 66becf9870e0293bbd35d1fba770751a files/dhcp-3.0+paranoia.patch 5366
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA+hKGHTu7gpaalycRAubCAJ48lmjDNrISDTnF+Jesokzjk2nZswCg6LbV
+3TjNa9cfpJ6GPufP0ONALVA=
+=IUZN
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 0e655262b741cb0cb109e6d5dfcf0847 snitch-0.0.1.ebuild 778
-MD5 845bb37df134cf22fc8ad19657938c97 ChangeLog 735
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4ec75f32938fe541721a28d2fe09a08d ChangeLog 825
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 1a69c5796e8f2fb5939a39c29ce5b19b snitch-0.0.1.ebuild 779
 MD5 aaa8dbd23fc6ec2a7b08134bf717437d files/digest-snitch-0.0.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+hQYmdTrptrqvGERAtzFAJ9vn4Qekwgj8EHLCUWfUfALNrRiOgCfWq0Q
+nRMps6QnoWz3/A+AfBoemP8=
+=fscW
+-----END PGP SIGNATURE-----
