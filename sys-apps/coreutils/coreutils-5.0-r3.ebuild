@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r3.ebuild,v 1.5 2003/09/12 12:14:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r3.ebuild,v 1.6 2003/09/12 15:16:24 seemant Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64 ~ppc ~sparc alpha hppa ~arm ~mips"
 
-DEPEND=">=sys-apps/portage-2.0.48-r3
+DEPEND=">=sys-apps/portage-2.0.49
 	virtual/glibc
 	nls? ( sys-devel/gettext )
 	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
