@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.17 2004/01/19 11:42:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.18 2004/02/05 14:43:50 lanius Exp $
+
+  05 Feb 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre2.ebuild,
+  files/lircd.conf:
+  added /etc/conf.d/lircd
 
   19 Jan 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre2.ebuild,
   files/lirc-0.7.0_pre2-i2c.patch.gz:

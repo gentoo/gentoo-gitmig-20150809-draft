@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.11 2004/01/19 11:42:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.12 2004/02/05 14:43:50 lanius Exp $
 
 inherit eutils kernel-mod
 
@@ -148,6 +148,9 @@ src_install() {
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/lircd
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/lircd.conf lircd
 
 	dohtml doc/html/*.html
 }
