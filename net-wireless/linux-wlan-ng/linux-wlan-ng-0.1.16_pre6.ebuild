@@ -1,3 +1,7 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre6.ebuild,v 1.3 2003/02/11 19:35:13 latexer Exp $
+
 # linux-wlan-ng requires a configured pcmcia-cs source tree.  
 # unpack/configure it in WORKDIR.  No need to compile it though.
 
@@ -9,13 +13,13 @@ MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The linux-wlan Project"
 SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.gz 
-         pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )"
+		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )"
 
 HOMEPAGE="http://linux-wlan.org"
 DEPEND="sys-kernel/linux-headers
 		dev-libs/openssl
 		sys-apps/baselayout
-        pcmcia?	( sys-apps/pcmcia-cs )"
+		pcmcia?	( sys-apps/pcmcia-cs )"
 RDEPEND=""
 SLOT="0"
 LICENSE="MPL-1.1"
