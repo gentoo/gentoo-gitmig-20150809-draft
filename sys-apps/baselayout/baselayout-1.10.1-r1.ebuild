@@ -1,34 +1,31 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.1.ebuild,v 1.3 2004/06/24 21:59:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1-r1.ebuild,v 1.1 2004/06/29 21:19:13 agriffis Exp $
 
 inherit flag-o-matic eutils
 
-SV=1.4.12		# rc-scripts version
+SV=1.5.1 		# rc-scripts version
 SVREV=			# rc-scripts rev
-SVIV=2.84		# sysvinit version
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
-S2="${WORKDIR}/sysvinit-${SVIV}"
-DESCRIPTION="Base layout for Gentoo Linux (incl. initscripts and sysvinit)"
+DESCRIPTION="Filesystem baselayout and init scripts"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
-	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz
-	mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2"
+SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
+	http://dev.gentoo.org/~agriffis/rc-scripts/rc-scripts-${SV}${SVREV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 s390"
-IUSE="bootstrap build livecd static selinux"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+IUSE="bootstrap build livecd static selinux uclibc"
 
-DEPEND="virtual/os-headers
-	selinux? ( sys-libs/libselinux )"
+DEPEND="virtual/os-headers"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 RDEPEND="${DEPEND}
 	!build? ( !bootstrap? (
+		>=sys-apps/sysvinit-2.84
 		>=sys-apps/gawk-3.1.1-r2
 		>=sys-apps/util-linux-2.11z-r6
 	) )"
@@ -36,44 +33,9 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 
-	#
-	# Baselayout setup
-	#
-	cd ${S}/etc
-
 	# Fix Sparc specific stuff
 	if [[ ${ARCH} == sparc ]]; then
-		sed -i -e 's:KEYMAP="us":KEYMAP="sunkeymap":' rc.conf || die
-	fi
-
-	# Add serial console for arches that typically have it
-	case ${ARCH} in
-		sparc|mips|hppa|alpha|ia64)
-			sed -i -e \
-				's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
-				inittab || die
-			;;
-	esac
-
-	#
-	# sysvinit setup
-	#
-	if ! use build; then
-		cd ${S2}/src
-
-		# Note that if sysvinit is ever built with USE=build, need to
-		# refrain from building sulogin as it needs libcrypt which is
-		# not in the build image:
-		# sed -i -e '/^PROGS/s/ sulogin//' Makefile || die
-
-		# Selinux patch for sysvinit
-		if use selinux; then
-			if has_version '>=sys-libs/libselinux-1.6'; then
-				epatch ${FILESDIR}/sysvinit-${SVIV}-selinux1.patch
-			else
-				epatch ${FILESDIR}/sysvinit-${SVIV}-selinux.patch
-			fi
-		fi
+		sed -i -e 's:KEYMAP="us":KEYMAP="sunkeymap":' ${S}/etc/rc.conf || die
 	fi
 }
 
@@ -83,25 +45,13 @@ src_compile() {
 	echo "${ROOT}" > ${T}/ROOT
 
 	cd ${S}/src
-	einfo "Building utilities..."
 	make CC="${CC:-gcc}" LD="${CC:-gcc} ${LDFLAGS}" \
-		CFLAGS="${CFLAGS}" || die "problem compiling utilities"
-
-	if ! use build; then
-		# Build sysvinit stuff
-		cd ${S2}/src
-		einfo "Building sysvinit..."
-		emake CC="${CC:-gcc}" LD="${CC:-gcc}" \
-			LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS} -D_GNU_SOURCE" || die "problem compiling sysvinit"
-	else
-		einfo "Not building sysvinit because USE=build"
-	fi
+		CFLAGS="${CFLAGS}" || die
 }
 
 # ${PATH} should include where to get MAKEDEV when calling this
 # function
 create_dev_nodes() {
-
 	case ${ARCH} in
 		# amd64 must use generic-i386 because amd64/x86_64 does not have
 		# a generic option at this time, and the default 'generic' ends
@@ -240,6 +190,8 @@ src_install() {
 	kdir /var/state
 	kdir -m 1777 /var/tmp
 
+	use ppc64 && kdir /sys
+
 	dodir /etc/init.d		# .keep file might mess up init.d stuff
 	dodir /var/db/pkg		# .keep file messes up Portage when looking in /var/db/pkg
 
@@ -300,6 +252,10 @@ src_install() {
 		done
 	fi
 
+	# As of baselayout-1.10-1-r1, sysvinit is its own package again, and
+	# provides the inittab itself
+	rm -f ${D}/etc/inittab
+
 	# We do not want to overwrite the user's settings during
 	# bootstrap;  put this somewhere for safekeeping until pkg_postinst
 	mv ${D}/etc/hosts ${D}/usr/share/baselayout
@@ -336,6 +292,9 @@ src_install() {
 	#
 	cd ${S}/bin
 	dobin rc-status
+	if use livecd; then
+		dobin bashlogin
+	fi
 
 	#
 	# Setup files in /sbin
@@ -396,31 +355,9 @@ src_install() {
 	# Install baselayout utilities
 	#
 	cd ${S}/src
-	einfo "Installing utilities..."
-	make DESTDIR="${D}" install || die "problem installing utilities"
+	make DESTDIR="${D}" install || die
 
-	#
-	# Install sysvinit
-	#
-	if ! use build; then
-		cd ${S2}/src
-		einfo "Installing sysvinit..."
-		into /
-		dosbin init halt killall5 runlevel shutdown sulogin
-		dosym init /sbin/telinit
-		dobin last mesg utmpdump wall
-		dosym killall5 /sbin/pidof
-		dosym halt /sbin/reboot
-		dosym halt /sbin/poweroff
-		dosym last /bin/lastb
-		insinto /usr/include
-		doins initreq.h
-		# sysvinit docs
-		cd ${S2}
-		doman man/*.[1-9]
-		docinto sysvinit-${SVIV}
-		dodoc COPYRIGHT README doc/*
-	fi
+	use uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	# Hack to fix bug 9849, continued in pkg_postinst
 	unkdir
@@ -553,7 +490,8 @@ pkg_postinst() {
 	# This is also written in src_install (so it's in CONTENTS), but
 	# write it here so that the new version is immediately in the file
 	# (without waiting for the user to do etc-update)
-	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
+	rm -f ${ROOT}/etc/._cfg????_gentoo-release
+	echo "Gentoo Base System version ${SV}" > ${ROOT}/etc/gentoo-release
 
 	echo
 	einfo "Please be sure to update all pending '._cfg*' files in /etc,"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1.ebuild,v 1.1 2004/06/28 20:08:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1.ebuild,v 1.2 2004/06/29 21:19:13 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,7 +32,8 @@ RDEPEND="${DEPEND}
 	!build? ( !bootstrap? (
 		>=sys-apps/gawk-3.1.1-r2
 		>=sys-apps/util-linux-2.11z-r6
-	) )"
+	) )
+	!sys-apps/sysvinit"
 
 src_unpack() {
 	unpack ${A}
