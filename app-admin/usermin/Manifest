@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 edc9ed5ac9acc6e9c609a0399fe8794f ChangeLog 5773
+MD5 4919c57275a108cf3800f0661ef08429 ChangeLog 5883
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 8fa115b0807cd48800828d853c3c0480 usermin-1.100.ebuild 2212
+MD5 f60ed9671ec6e0a7de2ad233adc7e1c7 usermin-1.100.ebuild 2209
 MD5 64c324d876af78b5ae970340f00290a3 usermin-1.090.ebuild 2219
 MD5 b3ae782d361d5f450212191c25bf4623 files/digest-usermin-1.100 66
 MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
@@ -13,7 +13,7 @@ MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/usermin.pam 431
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBm+AkArHZZzCEUG0RArPtAJ964pjoHCnU5IU+5ETd39shAKKqdwCePYiD
-KV3tio0VbVR7rqJAXOWUa9Q=
-=zVic
+iD8DBQFBxSwJArHZZzCEUG0RAlQFAJ9VkUo17+BUv1ECn1sOrcPoO0X8XACfeuLv
+HnM2ASxaNZ4F7og9M4VDXd4=
+=umHQ
 -----END PGP SIGNATURE-----
