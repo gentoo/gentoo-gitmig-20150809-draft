@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.1.ebuild,v 1.4 2004/04/11 17:38:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.1.ebuild,v 1.5 2004/06/02 20:39:45 pvdabeel Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://snd.sourceforge.net"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ppc"
 
 DEPEND="X? ( virtual/x11 )
 	dev-libs/gsl
