@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
+MD5 f0bcb66446a0cee4d862b22d28d49f76 ChangeLog 2499
 MD5 dc62eecaeab96215017957f6ab1625e2 squashfs-tools-1.3.ebuild 811
-MD5 dc110761aaacce58ef0b66f47266b09e squashfs-tools-2.0.ebuild 818
+MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 92296552e44012e3744bb5da32931fa7 squashfs-tools-2.0_alpha.ebuild 860
-MD5 81328e7908e1fa29cf5d77e5e549d57a ChangeLog 2249
+MD5 dc110761aaacce58ef0b66f47266b09e squashfs-tools-2.0.ebuild 818
+MD5 7033c89e1cd5da236941517233533b11 squashfs-tools-2.0_p2.ebuild 1887
 MD5 fee0a11be0b39d332785d9a85127fb49 files/digest-squashfs-tools-1.3 64
-MD5 904e2540d89ef36e9816f7f2a035f996 files/digest-squashfs-tools-2.0 63
 MD5 6f131952e2ae3dd6c6c9735557d35fc3 files/digest-squashfs-tools-2.0_alpha 69
+MD5 904e2540d89ef36e9816f7f2a035f996 files/digest-squashfs-tools-2.0 63
+MD5 86ce054d32ff035a76b26bbf0bd90fb2 files/digest-squashfs-tools-2.0_p2 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBOs2wI1lqEGTUzyQRAh4oAKDDA0JUNNyrBPdPKmk1+0jdyqB1+ACcDn7s
-ptYJ0WM/43o/RkmYKTMRBfE=
-=C1vX
+iD8DBQFBPUXnmdTrptrqvGERAqpmAJwLbV2qpxPs+d1Mzg4eT3A0o8MaEQCfVl89
+AhuqoIibFRREGHU52VueVqE=
+=ZVbi
 -----END PGP SIGNATURE-----
