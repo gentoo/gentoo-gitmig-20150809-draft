@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/bitscope
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bitscope/ChangeLog,v 1.1 2004/08/20 17:36:07 fvdpol Exp $
+
+  20 Aug 2004; <frank@gentoo.org> :
+  New ebuild submitted by  
+  ron widler <ron@einfach.org>. Closes #60818
+
