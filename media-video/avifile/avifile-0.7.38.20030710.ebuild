@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.12 2004/03/09 23:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.13 2004/03/30 04:51:18 spyderous Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:0:6}
@@ -28,12 +28,12 @@ DEPEND=">=media-libs/jpeg-6b
 	>=media-sound/mad-0.14.2b
 	>=sys-devel/patch-2.5.9
 	truetype? ( >=media-libs/freetype-2.1 )
-	xv? ( >=x11-base/xfree-4.2.1 )
+	xv? ( virtual/x11 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	dvd? ( >=media-libs/a52dec-0.7 )
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
-	X? ( >=x11-base/xfree-4.2.0 virtual/xft )
+	X? ( virtual/x11 virtual/xft )
 	qt? ( >=x11-libs/qt-3.0.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	esd? ( >=media-sound/esound-0.2.28 )"

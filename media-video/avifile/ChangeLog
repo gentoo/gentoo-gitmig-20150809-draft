@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.64 2004/03/09 23:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.65 2004/03/30 04:51:18 spyderous Exp $
+
+  29 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  avifile-0.7.32.20030219.ebuild, avifile-0.7.37.20030522-r2.ebuild,
+  avifile-0.7.38.20030710.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   09 Mar 2004; <agriffis@gentoo.org> avifile-0.7.38.20030710.ebuild:
   stable on alpha and ia64
