@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.7 2003/09/07 00:02:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.8 2003/09/11 01:19:38 msterret Exp $
 
 IUSE=""
 
@@ -22,11 +22,11 @@ DEPEND="media-sound/xmms
 
 pkg_setup() {
 	if [ "`gcc-major-version`" -eq "3" ]; then
-    	eerror "This plugin will not work when compiled with gcc-3.x"
+		eerror "This plugin will not work when compiled with gcc-3.x"
 		eerror "Either install and select a gcc-2.95.x compiler with"
 		eerror  "gcc-config, or give up."
 		die "Doesn't work with gcc-3.xx"
-    fi
+	fi
 }
 
 src_unpack () {
@@ -56,9 +56,9 @@ src_unpack () {
 
 src_compile () {
 	# patch Makefiles to use -lgcc
-    cd ${S}/rmxmms
-    sed -e 's/^LIBS =/LIBS = -lgcc/' Makefile.in > Makefile.in.new
-    sed -e 's/^LDFLAGS =/LDFLAGS = -lgcc/' Makefile.in.new > Makefile.in
+	cd ${S}/rmxmms
+	sed -e 's/^LIBS =/LIBS = -lgcc/' Makefile.in > Makefile.in.new
+	sed -e 's/^LDFLAGS =/LDFLAGS = -lgcc/' Makefile.in.new > Makefile.in
 
 	cd ${S}
 	econf "--with-realsdk-dir=${WORKDIR}/realsdk/rmasdk_6_0" || die
