@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r6.ebuild,v 1.6 2004/01/14 19:42:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r6.ebuild,v 1.7 2004/01/28 14:17:44 max Exp $
 
 IUSE="kerberos"
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="x86 ppc ~sparc "
+KEYWORDS="x86 ppc ~sparc"
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.11 2004/01/18 18:23:47 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.12 2004/01/28 14:17:44 max Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 	# http://bugzilla.andrew.cmu.edu/cgi-bin/cvsweb.cgi/src/sasl/plugins/mysql.c.diff?r1=1.10&r2=1.11
 	epatch ${FILESDIR}/2.1.14-mysql.patch
 
-	# Updated the cyrus-sasl-2.1.12-db4.patch
+	# Updated the cyrus-sasl-2.1.14-db4.patch
 	epatch ${FILESDIR}/2.1.14-db4.patch
 }
 

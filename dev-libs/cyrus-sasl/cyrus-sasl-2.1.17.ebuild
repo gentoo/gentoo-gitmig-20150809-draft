@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.3 2004/01/15 22:00:12 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.4 2004/01/28 14:17:44 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -126,7 +126,7 @@ src_install () {
 
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/pwcheck.rc6" pwcheck
-	newexe "${FILESDIR}/saslauthd.rc6" saslauthd
+	newexe "${FILESDIR}/saslauthd2.rc6" saslauthd
 	insinto /etc/conf.d
-	newins "${FILESDIR}/saslauthd.conf" saslauthd
+	newins "${FILESDIR}/saslauthd2.conf" saslauthd
 }
