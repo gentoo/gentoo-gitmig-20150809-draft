@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/pvm-povray
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/ChangeLog,v 1.1 2003/09/09 19:45:09 tantive Exp $
+
+*pvm-povray-3.1g (09 Sep 2003)
+
+  09 Sep 2003; Michael Imhof <tantive@gentoo.org> pvm-povray-3.1g.ebuild:
+  Initial release. Submitted by Jean-François Richard
+  <jean-francois@richard.name>.Closes #22215.
+
