@@ -1,5 +1,5 @@
-MD5 4333f90739c757e32161beb576e4fb2b asbutton-0.3.ebuild 759
-MD5 a8ccd2ba8cfae99840553f8b2d6ea04e asbutton-0.3-r1.ebuild 806
+MD5 cdd3893496a6dc956274de61dd3b1fd9 asbutton-0.3.ebuild 755
+MD5 f20fbc235ed5121f5d818ebd4ae41aa6 asbutton-0.3-r1.ebuild 802
 MD5 65766d75fd4f95f82800aaabd57bea13 ChangeLog 646
 MD5 fdf751b1bc524954a5ad14c19e3eeccc files/asbutton-0.3-r1-gentoo.patch 520
 MD5 43c35a2adc1d4b41bdb9a1dd199d3666 files/digest-asbutton-0.3 64

@@ -1,5 +1,5 @@
-MD5 693c24d1bc9345415bb3439d3e57f340 asapm-2.11.ebuild 639
-MD5 500df70a8d19675a56c9888b540644d8 asapm-2.10.ebuild 763
+MD5 e8b1eaed6d569afec53ac1b5c3901e64 asapm-2.11.ebuild 635
+MD5 0a6f56a846884bfec758dc21ffd3ef7f asapm-2.10.ebuild 759
 MD5 ff9ee836c0d663d309aa0819fb9fd668 ChangeLog 990
 MD5 fda28a37f9d22eaab623916850ab8559 files/asapm-2.10-gentoo.diff 625
 MD5 8421c0b48b3a26caa0993a6d56c448b0 files/digest-asapm-2.10 61
