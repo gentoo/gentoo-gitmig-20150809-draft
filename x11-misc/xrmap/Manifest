@@ -1,6 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6bd05844ceb19ac3609cd429533f0bd4 ChangeLog 769
-MD5 476df3b9d9b564ca8ed13b7f16219f01 xrmap-2.10.ebuild 1740
 MD5 8ba2ce5804e99570cf1936fbcb8d0d83 xrmap-2.29.ebuild 2034
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 a6a793c0c22c5a0b6255f93bed17b0a4 files/digest-xrmap-2.29 185
-MD5 d3d071db1ec04cf25a797313b25b8f49 files/digest-xrmap-2.10 121
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHgdHTu7gpaalycRApWkAJ9Th7f3MrmQICqe+/6CjqSoanyy3gCgjceT
+N6R2h8erBcS8EbOKo3oGHcc=
+=ZXTt
+-----END PGP SIGNATURE-----
