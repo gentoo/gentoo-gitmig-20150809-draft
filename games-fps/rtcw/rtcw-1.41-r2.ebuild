@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.2 2004/09/20 03:53:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.3 2004/12/30 20:28:19 wolf31o2 Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/Missions/wolf-l
 
 LICENSE="RTCW"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="opengl dedicated"
 RESTRICT="nostrip nomirror"
 
@@ -46,7 +46,7 @@ src_install() {
 	exeinto ${dir}
 	doexe bin/Linux/x86/*.x86 openurl.sh
 
-	games_make_wrapper wolf ./wolf.x86 ${dir}
+	games_make_wrapper wolfmp ./wolf.x86 ${dir}
 	games_make_wrapper wolfsp ./wolfsp.x86 ${dir}
 
 	if use dedicated;
@@ -60,10 +60,11 @@ src_install() {
 	insinto ${dir}
 	doins WolfMP.xpm WolfSP.xpm INSTALL QUICKSTART CHANGES RTCW-README-1.4.txt
 	insinto /usr/share/pixmaps
-	doins WolfMP.xpm
+	doins WolfMP.xpm WolfSP.xpm
 
 	prepgamesdirs
-	make_desktop_entry wolf "Return to Castle Wolfenstein" WolfMP.xpm
+	make_desktop_entry wolfmp "Return to Castle Wolfenstein (MP)" WolfMP.xpm
+	make_desktop_entry wolfsp "Return to Castle Wolfenstein (SP)" WolfSP.xpm
 }
 
 pkg_postinst() {

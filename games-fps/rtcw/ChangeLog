@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/rtcw
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.17 2004/09/20 03:53:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.18 2004/12/30 20:28:19 wolf31o2 Exp $
+
+  30 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> -rtcw-1.41-r1.ebuild,
+  rtcw-1.41-r2.ebuild:
+  Fixed output and made ebuild create 2 .desktop entries.
 
   19 Sep 2004; Travis Tilley <lv@gentoo.org> rtcw-1.41-r2.ebuild:
   added ~amd64 keyword
