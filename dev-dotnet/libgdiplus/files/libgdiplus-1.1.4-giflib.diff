@@ -1,0 +1,59 @@
+diff -aur libgdiplus-1.1.4-cairo-fix-orig/configure.in libgdiplus-1.1.4-cairo-fix/configure.in
+--- libgdiplus-1.1.4-cairo-fix-orig/configure.in	2005-03-20 20:58:49.000000000 -0500
++++ libgdiplus-1.1.4-cairo-fix/configure.in	2005-03-20 20:49:51.000000000 -0500
+@@ -140,7 +140,7 @@
+ AC_ARG_WITH(libtiff,
+ 	[AC_HELP_STRING([--without-libtiff], [disable TIFF file IO])])
+ AC_ARG_WITH(libungif,
+-	[AC_HELP_STRING([--without-libungif], [disable GIF file IO])])
++	[AC_HELP_STRING([--without-libgif], [disable GIF file IO])])
+ AC_ARG_WITH(libpng,
+ 	[AC_HELP_STRING([--without-libpng], [disable PNG file IO])])
+ 
+@@ -197,17 +197,17 @@
+ fi
+ 
+ dnl Test for libungif
+-  if test x$with_libungif != xno && test -z "$LIBUNGIF"; then
+-    AC_CHECK_LIB(ungif, DGifOpenFileName,
++  if test x$with_libgif != xno && test -z "$LIBGIF"; then
++    AC_CHECK_LIB(gif, DGifOpenFileName,
+       [AC_CHECK_HEADER(gif_lib.h,
+-        UNGIF='ungif'; LIBUNGIF='-lungif',
+-	AC_MSG_WARN(*** GIF loader will not be built (ungiflibrary not found) ***))],
+-      AC_MSG_WARN(*** GIF loader will not be built (ungiflibrary not found) ***))
++        GIF='ungif'; LIBGIF='-lgif',
++	AC_MSG_WARN(*** GIF loader will not be built (giflibrary not found) ***))],
++      AC_MSG_WARN(*** GIF loader will not be built (giflibrary not found) ***))
+   fi
+ 
+-if test x$UNGIF != x; then
+-  GDIPLUS_LIBS="$GDIPLUS_LIBS $LIBUNGIF"
+-  AC_DEFINE(HAVE_LIBUNGIF, 1, Define if gif support is available)
++if test x$GIF != x; then
++  GDIPLUS_LIBS="$GDIPLUS_LIBS $LIBGIF"
++  AC_DEFINE(HAVE_LIBGIF, 1, Define if gif support is available)
+ fi
+ 
+ dnl Test for libpng
+@@ -271,7 +271,7 @@
+ echo $ECHO_N "      - JPEG: "
+ test ! x$JPEG = x && echo yes || echo no 
+ echo $ECHO_N "      - GIF: "
+-test ! x$UNGIF = x && echo yes || echo no 
++test ! x$GIF = x && echo yes || echo no 
+ echo $ECHO_N "      - PNG: "
+ test ! x$PNG = x && echo yes || echo no 
+ echo ""
+diff -aur libgdiplus-1.1.4-cairo-fix-orig/src/gifcodec.c libgdiplus-1.1.4-cairo-fix/src/gifcodec.c
+--- libgdiplus-1.1.4-cairo-fix-orig/src/gifcodec.c	2005-01-26 20:33:54.000000000 -0500
++++ libgdiplus-1.1.4-cairo-fix/src/gifcodec.c	2005-03-20 21:13:18.000000000 -0500
+@@ -34,7 +34,7 @@
+ #include "gdipImage.h"
+ #include "gifcodec.h"
+ 
+-#ifdef HAVE_LIBUNGIF
++#ifdef HAVE_LIBGIF
+ 
+ #include <gif_lib.h>
+ 
