@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 88f1d38c6bdef8453ce9bed99c8a0d07 avalon-framework-4.2.0.ebuild 1209
-MD5 3b8df70f5d69620fb99542f6bae2885c avalon-framework-4.1.5.ebuild 1190
 MD5 66d2da9a04e8f90bc72f44d3db9a5135 ChangeLog 893
+MD5 3b8df70f5d69620fb99542f6bae2885c avalon-framework-4.1.5.ebuild 1190
+MD5 209622a99fa683b957124b7a298cee81 avalon-framework-4.2.0.ebuild 1210
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 5807e384e64fab8fd562ba9d3e171916 files/digest-avalon-framework-4.1.5 77
 MD5 3c945053b5c79d286570b89c81418996 files/build.xml 1838
+MD5 5807e384e64fab8fd562ba9d3e171916 files/digest-avalon-framework-4.1.5 77
 MD5 56cf84c7d1a8b0f6e856ab1390bae920 files/digest-avalon-framework-4.2.0 77
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCRNtkKRy60XGEcJIRAvzOAJ4nLBoSqVy5H85cQ+J2UOCQG/aDegCZAXaS
-kn/VgHTC+Xb9L4cpQs/WmK4=
-=WHCD
+iD8DBQFCT6mmMXMsRNMHhmARAoNqAJ90L6opzU5VMS4x9Osh8ZiWyXJZzgCeLjll
+YIIyFdM1XVPh9EKvvq0Hmok=
+=Ukkw
 -----END PGP SIGNATURE-----
