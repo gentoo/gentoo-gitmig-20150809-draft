@@ -1,4 +1,5 @@
-MD5 cabb18f4f6ae01e5b4885b4c0ca8fed3 ChangeLog 340
-MD5 3c98133047e05202f6972ad50ff4b7fd cl-parse-number-1.0.ebuild 851
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 c11fbda95964cf8609651544a81c83b9 cl-parse-number-1.0.ebuild 970
+MD5 7b7d08dbda1c24f60fe5d54effb11cef ChangeLog 467
 MD5 2ba56f942aafd98fade34ce2bf682811 files/digest-cl-parse-number-1.0 74
 MD5 c7b550097b3f46b519c05d3a7ca315ca files/parse-number.asd 96
