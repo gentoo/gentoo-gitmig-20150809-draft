@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfmedia
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.3 2005/01/02 17:24:38 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.4 2005/01/07 05:39:27 bcowan Exp $
+
+*xfmedia-0.6.0-r1 (07 Jan 2005)
+
+  07 Jan 2005; Brad Cowan <bcowan@gentoo.org> +xfmedia-0.6.0-r1.ebuild:
+  Update for xfce4 eclass.
 
 *xfmedia-0.6.0 (02 Jan 2005)
 
