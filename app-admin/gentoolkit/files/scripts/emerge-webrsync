@@ -41,8 +41,10 @@ sync_local() {
 	rm -f $file
 	# Make sure user and group file ownership is root
 	chown -R root:root portage
+	cd portage
 	rsync -av --progress --stats --delete --delete-after \
-	--exclude='distfiles/*' --exclude='packages/*' . /usr
+	--exclude='distfiles/*' --exclude='packages/*' . /usr/portage
+	cd ..
 	rm -rf portage
 }
 
