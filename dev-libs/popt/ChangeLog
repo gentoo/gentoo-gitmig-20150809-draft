@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.9 2003/01/18 18:44:33 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.10 2003/02/05 23:59:47 lu_zero Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *popt-1.7 (19 Nov 2002)
+  
+   6 Feb 2003; Luca Barbato <lu_zero@gentoo.org> :
+  added elibtoolize
 
   19 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Version bump/added pic support
