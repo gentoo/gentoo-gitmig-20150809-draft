@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.7 2002/10/27 14:04:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.8 2002/11/13 00:03:03 foser Exp $
+
+*atk-1.1.1 (12 Nov 2002)
+
+  12 Nov 2002; foser <foser@gentoo.org> atk-1.1.1.ebuild :
+  Gnome 2.1.2 release
 
 *atk-1.1.0 (27 Oct 2002)
 
