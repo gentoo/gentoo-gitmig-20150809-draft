@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/ruby-libglade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.3 2002/07/08 02:18:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.4 2002/07/08 02:55:59 agriffis Exp $
 
 *ruby-libglade-0.29 (06 Jul 2002)
 
@@ -23,6 +23,10 @@
 	ekarttun@cs.helsinki.fi (Einar Karttunen) submitted this much needed
 	update in bug #1258.  This version of the package is not a ruby-gnome
 	package, but actually a ruby-libglade package.
+
+	07 Jul 2002; Aron Griffis <agriffis@gentoo.org> ruby-libglade-1.2.ebuild:
+
+	Added LICENSE, KEYWORDS, SLOT.
 
 *ruby-libglade-0.27
 
