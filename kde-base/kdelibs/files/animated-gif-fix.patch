@@ -1,0 +1,8 @@
+--- khtml/misc/loader.cpp  #1.168:1.168.2.1
+@@ -338,5 +338,5 @@ class ImageSource : public QDataSource
+ public:
+     ImageSource(QByteArray buf)
+-        : buffer( buf ), pos( 0 ), eof( false ), rew(false ), rewable( false )
++        : buffer( buf ), pos( 0 ), eof( false ), rew(false ), rewable( true )
+         {}
+

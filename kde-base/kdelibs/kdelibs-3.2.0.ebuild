@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.2 2004/02/03 14:40:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.3 2004/02/05 13:17:32 caleb Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -38,6 +38,11 @@ RDEPEND="$DEPEND
 	cups? ( net-print/cups )
 	doc? ( app-doc/doxygen )
 	dev-lang/python"
+
+src_unpack() {
+	kde_src_unpack
+	epatch ${FILESDIR}/animated-gif-fix.patch
+}
 
 src_compile() {
 
