@@ -1,0 +1,11 @@
+--- encrypt.c.orig	2004-04-22 11:15:40.576477904 -0500
++++ encrypt.c	2004-04-22 11:17:05.246606088 -0500
+@@ -1110,7 +1110,7 @@
+ 
+ static GaimPluginInfo info =
+ {
+-	2,                                                /**< api_version    */
++	GAIM_PLUGIN_API_VERSION,                          /**< api_version    */
+ 	GAIM_PLUGIN_STANDARD,                             /**< type           */
+ 	GAIM_GTK_PLUGIN_TYPE,                             /**< ui_requirement */
+ 	0,                                                /**< flags          */
