@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/mikachan-font
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.8 2004/02/04 00:19:33 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.9 2004/06/21 13:41:03 usata Exp $
+
+*mikachan-font-8.9-r1 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +mikachan-font-8.9-r1.ebuild:
+  font.eclassify
 
   03 Feb 2004; <augustus@gentoo.org> mikachan-font-8.9.ebuild:
   Added ~amd64 keyword.
