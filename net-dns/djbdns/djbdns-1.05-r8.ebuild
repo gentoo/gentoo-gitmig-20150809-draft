@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r8.ebuild,v 1.6 2003/11/16 21:39:33 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r8.ebuild,v 1.7 2003/11/17 14:15:17 pyrania Exp $
 
 IUSE="ipv6 static"
 
@@ -28,7 +28,7 @@ src_unpack() {
 	epatch ${DISTDIR}/djbdns-1.04-fwdzone.patch
 	epatch ${DISTDIR}/round-robin.patch
 	epatch ${FILESDIR}/${PV}-errno.patch
-	epatch ${FILESDIR}/djndnsheadtail.patch
+	epatch ${FILESDIR}/headtail.patch
 	use ipv6 && epatch ${WORKDIR}/djbdns-1.05-ipv6-gentoo-${PATCHVER}.diff
 }
 
