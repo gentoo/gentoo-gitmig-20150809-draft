@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.69 2004/06/29 17:56:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.70 2004/07/03 04:00:17 solar Exp $
+
+  02 Jul 2004; <solar@gentoo.org> perl-5.8.4.ebuild:
+  don't call perl to install manfiles when FEATURES=noman is set. testing of the
+  perl can be disable now with restrictions
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> perl-5.8.2-r1.ebuild,
   perl-5.8.3.ebuild, perl-5.8.4.ebuild:

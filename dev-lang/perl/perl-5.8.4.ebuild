@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.14 2004/06/29 17:56:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.15 2004/07/03 04:00:17 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -196,7 +196,10 @@ src_compile() {
 
 	MAKEOPTS="${MAKEOPTS} -j1" emake || die "Unable to make"
 
-	emake -i test CCDLFLAGS=
+	if ! hasq maketest $RESTRICT; then
+		use uclibc && export MAKEOPTS="${MAKEOPTS} -j1"
+		emake -i test CCDLFLAGS=
+	fi
 }
 
 src_install() {
@@ -248,8 +251,12 @@ EOF
 	dosed 's:./miniperl:/usr/bin/perl:' /usr/bin/xsubpp
 	fperms 0755 /usr/bin/xsubpp
 
-	./perl installman \
-		--destdir="${D}" --man1ext='1' --man3ext='3'
+	if ! hasq noman $FEATURES; then
+		# executing a binary we just built is not very cross
+		# compiler friendly.
+		./perl installman \
+			--destdir="${D}" --man1ext='1' --man3ext='3'
+	fi
 
 	# This removes ${D} from Config.pm and .packlist
 	for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do
@@ -257,6 +264,10 @@ EOF
 		sed -e "s:${D}::" ${i} > ${i}.new &&\
 			mv ${i}.new ${i} || die "Sed failed"
 	done
+
+	# Note: find out from psm why we would need/want this.
+	# ( use berkdb && has_version '=sys-libs/db-1*' ) || 
+	#	find ${D} -name "*NDBM*" | xargs rm -f
 
 	dodoc Changes* Artistic Copying README Todo* AUTHORS
 
