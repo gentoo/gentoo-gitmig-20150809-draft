@@ -1,5 +1,5 @@
-MD5 28f18559cfc1541c7a12bcfd0f9b1622 ChangeLog 806
+MD5 59e60385ec194df5dbee049a0de15cb5 ChangeLog 906
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 1714f27f0f45fbf276672c8e3a20f56d tuxmathscrabble-2.4a.ebuild 1047
+MD5 58bb8d40bb70cc44d126797f8f920c94 tuxmathscrabble-2.4a.ebuild 1047
 MD5 506d7f95703bf2dfa51f5027c26a2da2 files/2.4a-fix-setup.patch 755
 MD5 d11b50f889944822a0c5f8214039deb0 files/digest-tuxmathscrabble-2.4a 70
