@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.4 2004/10/12 14:10:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.5 2005/02/02 13:48:31 kugelfang Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -8,6 +8,8 @@
 inherit eutils
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
+
+IUSE="debug"
 
 #DEPEND="virtual/fortran" # Let's aim for this...
 
@@ -17,7 +19,7 @@ export FORTRANC
 # These are the options to ./configure / econf that enable the usage
 # of a specific Fortran Compiler. If your package uses a different
 # option that the one listed here, overwrite it in your ebuild.
-f77_CONF="--with-f77"
+g77_CONF="--with-f77"
 f2c_CONF="--with-f2c"
 
 # This function prints the necessary options for the currently selected
@@ -30,7 +32,7 @@ fortran_conf() {
 #  profiles = <profile> ... <profile>
 #
 #  profile:
-#   * f77 - GCC Fortran 77
+#   * g77 - GCC Fortran 77
 #   * f2c - Fortran 2 C Translator
 #   * ifc - Intel Fortran Compiler
 #
@@ -45,9 +47,9 @@ need_fortran() {
 	local PROFILE
 	for PROFILE in $@; do
 		case ${PROFILE} in
-			f77)
+			g77)
 				if [ -x "$(which g77 2> /dev/null)" ]; then
-					AVAILABLE="${AVAILABLE} f77"
+					AVAILABLE="${AVAILABLE} g77"
 				fi
 				;;
 			f2c)
@@ -59,7 +61,7 @@ need_fortran() {
 				case ${ARCH} in
 					x86|ia64)
 						if [ -x "$(which if2 2> /dev/null)" ]; then
-							AVAILABLE="${FORTRAN} ifc"
+							AVAILABLE="${AVAILABLE} ifc"
 						fi
 						;;
 					*)
@@ -69,13 +71,15 @@ need_fortran() {
 		esac
 	done
 	AVAILABLE="${AVAILABLE/^[[:space:]]}"
+	use debug && echo ${AVAILABLE}
+	use
 	if [ -z "${AVAILABLE}" ]; then
 		eerror "None of the needed Fortran Compilers ($@) is installed."
 		eerror "To install one of these, choose one of the following steps:"
 		i=1
 		for PROFILE in $@; do
 			case ${PROFILE} in
-				f77)
+				g77)
 					eerror "[${i}] USE=\"f77\" emerge sys-devel/gcc"
 					;;
 				f2c)
@@ -108,22 +112,24 @@ need_fortran() {
 			elif [ -n "${F2C}" ]; then
 				MY_FORTRAN="$(basename ${F2C})"
 			fi
-			case ${MY_FORTRAN} in
-				g77)
-					TEST="${AVAILABLE%f77}"
-					FORTRANC="f77"
-					;;
-				ifc|f2c)
-					TEST="${AVAILABLE%${MY_FORTRAN}}"
-					FORTRANC="${MY_FORTRAN}"
-					;;
-			esac
-			if [ "${TEST}" == "${AVAILABLE}" ]; then
-				eerror "Current Fortan Compiler is set to ${MY_FORTRAN}, which is not usable with this package !"
-				die "Wrong Fortran Compiler !"
-			fi
 		fi
+		
+		# default to g77
+		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
+		MY_FORTRAN=${MY_FORTRAN:=g77}
+		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
+		
+		if ! hasq ${MY_FORTRAN} ${AVAILABLE}; then
+			eerror "Current Fortan Compiler is set to ${MY_FORTRAN}, which is not usable with this package !"
+			die "Wrong Fortran Compiler !"
+		fi
+		
+		case ${MY_FORTRAN} in
+			g77|ifc|f2c)
+				FORTRANC="${MY_FORTRAN}"
+		esac
 	fi
+	use debug && echo "FORTRANC: \"${FORTRANC}\""
 }
 
 # patch_fortran():
@@ -147,7 +153,7 @@ patch_fortran() {
 #  can be used for the ebuild.
 #  If not set in ebuild, FORTRAN will default to f77
 fortran_pkg_setup() {
-	need_fortran ${FORTRAN:=f77}
+	need_fortran ${FORTRAN:=g77}
 }
 
 # fortran_src_unpack():
