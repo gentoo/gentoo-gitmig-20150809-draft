@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r1.ebuild,v 1.4 2001/06/05 22:15:42 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r1.ebuild,v 1.5 2001/06/06 16:55:51 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,19 +14,15 @@ DEPEND=">=media-libs/fnlib-0.5
 	=media-libs/freetype-1.3.1-r2
 	>=gnome-base/libghttp-1.0.7"
 
-src_unpack() {
-  unpack ${A}
-}
 
-src_compile() {                           
-  cd ${S}
+src_compile() {
+  
   try CFLAGS="\"${CFLAGS} -I/opt/gnome/include\"" LDFLAGS="-L/opt/gnome/lib" \
-	./configure --host=${CHOST} --prefix=/usr/X11R6 --with-catgets
+	./configure --host=${CHOST} --prefix=/usr/X11R6
   try make
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
   try make prefix=${D}/usr/X11R6 localedir=${D}/usr/X11R6/enlightenment/locale \
 	gnulocaledir=${D}/usr/X11R6/enlightenment/locale install
   insinto /etc/env.d

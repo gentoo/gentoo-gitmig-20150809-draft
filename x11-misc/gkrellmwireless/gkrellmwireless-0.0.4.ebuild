@@ -21,7 +21,8 @@ src_compile() {
 
 src_install () {
 
-    try make DESTDIR=${D} install
+    exeinto /usr/share/gkrellm/plugins
+    doexe wireless.so
     dodoc README ChangeLog
 }
 

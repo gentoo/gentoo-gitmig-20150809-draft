@@ -11,8 +11,8 @@ DESCRIPTION="A mixer control plugin for gkrellm"
 SRC_URI="http://gkrellm.luon.net/files/volume-${PV}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/volume.phtml"
 
-DEPEND=">=app-admin/gkrellm-1.0.6
-        >=media-sound/xmms-1.2.4"
+DEPEND=">=app-admin/gkrellm-1.0.6"
+        #>=media-sound/xmms-1.2.4"
 
 src_compile() {
 
@@ -22,7 +22,8 @@ src_compile() {
 
 src_install () {
 
-    try make DESTDIR=${D} install
+    exeinto /usr/share/gkrellm/plugins
+    doexe volume.so
     dodoc README Changelog
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.1 2001/05/18 20:05:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.2 2001/06/06 16:55:51 achim Exp $
 
 V=2.1
 A=${P}.tar.bz2
@@ -14,11 +14,11 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 
 HOMEPAGE="http://www.kde.org/"
 
-DEPEND=">=sys-devel/gcc-2.95.2
+DEPEND=">=sys-devel/gcc-2.95.2  sys-devel/perl
 	>=media-libs/audiofile-0.1.9
 	>=media-libs/tiff-3.5.5
 	>=x11-libs/qt-x11-2.3.0
-	app-text/sgml-common
+        >=sys-apps/bzip2-1.0.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	mysql? ( >=dev-db/mysql-3.23.30 )
 	postgres? ( >=dev-db/postgresql-7.0.3 )
@@ -27,8 +27,12 @@ DEPEND=">=sys-devel/gcc-2.95.2
 
 RDEPEND=">=sys-devel/gcc-2.95.2
 	 >=media-libs/audiofile-0.1.9
+         >=sys-apps/bzip2-1.0.1
 	 >=x11-libs/qt-x11-2.3.0
-     =kde-base/kde-env-2.1"
+         =kde-base/kde-env-2.1
+         app-text/sgml-common
+         alsa? ( >=media-libs/alsa-lib-0.5.9 )
+         ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_unpack() {
     unpack ${A}
@@ -43,7 +47,7 @@ src_compile() {
     QTBASE=/usr/X11R6/lib/qt
 
     local myopts
-    if [ "`use ssl`" ] 
+    if [ "`use ssl`" ]
     then
       myopts="--with-ssl-dir=/usr"
     else
@@ -88,11 +92,17 @@ src_install() {
 
 
 pkg_postinst() {
-    install-catalog --add /etc/sgml/kde-docbook.cat /usr/share/sgml/docbook/kde-customizations/catalog
-    install-catalog --add /etc/sgml/kde-docbook.cat /etc/sgml/sgml-docbook.cat
+     if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
+      install-catalog --add /etc/sgml/kde-docbook.cat /usr/share/sgml/docbook/kde-customizations/catalog
+      install-catalog --add /etc/sgml/kde-docbook.cat /etc/sgml/sgml-docbook.cat
+    fi
 }
 
 pkg_prerm() {
-    install-catalog --remove /etc/sgml/kde-docbook.cat /usr/share/sgml/docbook/kde-customizations/catalog
-    install-catalog --remove /etc/sgml/kde-docbook.cat /etc/sgml/sgml-docbook.cat
+    if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
+      if [ -e "/etc/sgml/kde-docbook.cat" ] ; then
+        install-catalog --remove /etc/sgml/kde-docbook.cat /usr/share/sgml/docbook/kde-customizations/catalog
+        install-catalog --remove /etc/sgml/kde-docbook.cat /etc/sgml/sgml-docbook.cat
+      fi
+    fi
 }

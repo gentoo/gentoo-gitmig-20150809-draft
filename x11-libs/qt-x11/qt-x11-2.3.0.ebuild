@@ -54,20 +54,16 @@ src_compile() {
       myconf="${myconf} -release"
     fi
 
+    try SYSCONF_CFLAGS=\"$CFLAGS\" SYSCONF_CXXFLAGS=\"$CXXFLAGS\" \
     ./configure -sm -thread -system-zlib -system-jpeg ${myconf} \
-	-system-libmng -system-libpng -gif -platform linux-g++ -ldl -lpthread
+	-system-libmng -system-libpng -gif -platform linux-g++ \
+        -ldl -lpthread -no-g++-exceptions
 
-    cd ${S}/src
-    cp Makefile Makefile.orig
-    sed -e "s/-O2/${CFLAGS}/" Makefile.orig > Makefile
-    cd ${S}/tools
-    cp Makefile Makefile.orig
-    sed -e "s/-O2/${CFLAGS}/" Makefile.orig > Makefile
-    cd ${S}/src/moc
-    cp Makefile Makefile.orig
-    sed -e "s/-pipe -O2/${CFLAGS}/" Makefile.orig > Makefile
     cd ${S}
-    try make symlinks src-moc src-mt sub-src sub-tools
+    try make SYSCONF_CFLAGS=\"$CFLAGS\" SYSCONF_CXXFLAGS=\"$CXXFLAGS\" \
+    symlinks src-moc src-mt sub-src sub-tools
+
+    # leave out src-tools for testing !
 }
 
 src_install() {

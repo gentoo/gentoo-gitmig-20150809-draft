@@ -11,7 +11,13 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gnome-core-1.2.4
 	>=gnome-base/libgtop-1.0.10
+        >=sys-apps/e2fsprogs-1.19-r2
+        >=dev-util/guile-1.4
+        >=sys-apps/shadow-20000000
         nls? ( sys-devel/gettext )"
+RDEPEND=">=gnome-base/gnome-core-1.2.4
+	>=gnome-base/libgtop-1.0.10
+        >=sys-apps/e2fsprogs-1.19-r2"
 
 src_compile() {                           
   local myconf

@@ -8,8 +8,11 @@ DESCRIPTION="Gnome ICQ Client"
 SRC_URI="http://download.sourceforge.net/gnomeicu/${A}"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
 
-DEPEND=">=x11-libs/gtk+-1.2.0
-	>=gnome-base/gnome-core-1.2.4"
+DEPEND="virtual/glibc sys-devel/gettext
+	>=gnome-base/gnome-core-1.2.4
+        >=sys-libs/gdbm-1.8.0"
+RDEPEND="=gnome-base/gnome-core-1.2.4
+        >=sys-libs/gdbm-1.8.0"
 
 src_unpack() {
   unpack ${A}

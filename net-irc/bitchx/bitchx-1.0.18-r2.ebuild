@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r2.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r2.ebuild,v 1.3 2001/06/06 16:55:51 achim Exp $
 
 P=
 A=ircii-pana-1.0c18.tar.gz
@@ -10,12 +10,12 @@ DESCRIPTION="An IRC Client"
 SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${A}"
 HOMEPAGE="http://www.bitchx.com/"
 
-DEPEND=">=sys-libs/glibc-2.1.3
-	>=sys-libs/gpm-1.19.3
+DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
-	>=dev-libs/openssl-0.9.6
-	gnome? ( >=gnome-base/gnome-libs-1.2.4 
-		 >=media-sound/esound-0.2.22 )"
+        >=media-libs/audiofile-0.2.1
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	gnome? ( >=gnome-base/gnome-libs-1.2.4 )
+        esd? ( >=media-sound/esound-0.2.22 )"
 
 src_unpack() {
   unpack ${A}
@@ -28,12 +28,20 @@ src_compile() {
     local myopts
     if [ -n "`use gnome`" ]
     then
-	myopts="--with-gtk --with-sound --prefix=/opt/gnome --with-esd"
+	myopts="--with-gtk  --prefix=/opt/gnome"
     else
 	myopts="--prefix=/usr"
     fi
-    try ./configure ${myopts} --host=${CHOST} \
-	--enable-cdrom --with-plugins
+    if [ -n "`use esd`" ]
+    then
+	myopts="$myopts --with-esd"
+    fi
+    if [ -n "`use ssl`" ]
+    then
+	myopts="$myopts --with-ssl"
+    fi
+    try ./configure ${myopts} --host=${CHOST}  --build=${CHOST}\
+	--enable-cdrom --enable-ipv6 --with-plugins --enable-sound
     try make
 
 }
