@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.0.ebuild,v 1.2 2003/09/21 17:33:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.0.ebuild,v 1.3 2003/09/25 22:52:07 todd Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils debug
@@ -9,7 +9,7 @@ DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 # evolution, perl, guile and gb support disabled currently (or to be removed)
 

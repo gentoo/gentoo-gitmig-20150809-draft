@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.40 2003/09/21 17:33:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.41 2003/09/25 22:52:07 todd Exp $
+
+  25 Sep 2003; Todd Sunderlin <todd@gentoo.org> gnumeric-1.2.0.ebuild:
+  added ~sparc keyword
 
 *gnumeric-1.2.0 (17 Sep 2003)
 
