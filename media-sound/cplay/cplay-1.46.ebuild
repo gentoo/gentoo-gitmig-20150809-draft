@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.45.ebuild,v 1.1 2002/12/12 22:16:19 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.46.ebuild,v 1.1 2002/12/17 19:19:53 blauwers Exp $
 
 DESCRIPTION="A Curses front-end for various audio players."
-SRC_URI="http://www.tf.hut.fi/~flu/cplay/${P}.tar.gz"
-HOMEPAGE="http://www.tf.hut.fi/~flu/cplay/"
+SRC_URI="http://www.tf.hut.fi/~flu/hacks/cplay/${P}.tar.gz"
+HOMEPAGE="http://www.tf.hut.fi/~flu/hacks/cplay/"
 
 SLOT="0"
 LICENSE="GPL-2"
