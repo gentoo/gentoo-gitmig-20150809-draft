@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.10 2003/07/31 19:08:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.6.3.ebuild,v 1.1 2003/07/31 19:08:15 rphillips Exp $
 
 DESCRIPTION="An X user interface for MH mail"
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/${PN}/${PN}-${PV}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://beedub.com/exmh/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc "
+KEYWORDS="~x86 ~sparc "
 IUSE="crypt"
 
 DEPEND="net-mail/nmh

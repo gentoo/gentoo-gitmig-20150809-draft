@@ -1,10 +1,18 @@
 # ChangeLog for net-mail/exmh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/ChangeLog,v 1.4 2003/02/12 08:10:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/ChangeLog,v 1.5 2003/07/31 19:08:15 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*exmh-2.6.3 (31 Jul 2003)
+
+  31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> exmh-2.6.3.ebuild :
+  updated version and added net-mail/metamail deps
  
 *exmh-2.5 (31 May 2002)
+
+  31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> exmh-2.5.ebuild :
+  Added net-mail/metamail to deps
   
   31 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
 
