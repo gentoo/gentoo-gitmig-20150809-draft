@@ -1,0 +1,7 @@
+MD5 a2230db7294c4bec7149cf8b04a97f71 ChangeLog 765
+MD5 368e3b81226ac1bac7e2d2792d6a161b zwiki-0.15.0.ebuild 441
+MD5 da449e15d24f64397c0ea9d3e2a06f01 zwiki-0.16.0.ebuild 446
+MD5 3afa68a6b61bc423770c406c9d3be9b9 zwiki-0.17.0.ebuild 446
+MD5 d329d542f455ffd5d582d3f504dd9842 files/digest-zwiki-0.15.0 61
+MD5 682391e0d1fe5cb7fc3e45db7ea9770a files/digest-zwiki-0.16.0 61
+MD5 b6bacbebb7018a450cd7521bfd0ed1d8 files/digest-zwiki-0.17.0 123
