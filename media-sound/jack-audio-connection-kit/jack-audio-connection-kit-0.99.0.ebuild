@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.5 2004/09/22 21:52:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.6 2004/09/23 15:22:16 kito Exp $
 
-IUSE="doc debug jack-tmpfs caps alsa oss portaudio"
+IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
 inherit flag-o-matic eutils
 
@@ -20,21 +20,23 @@ RDEPEND=">=media-libs/libsndfile-1.0.0
 	dev-util/pkgconfig
 	sys-libs/ncurses
 	!ppc64? ( !alpha? ( !ia64? ( portaudio? ( media-libs/portaudio ) ) ) )
-	!ppc-macos? ( !sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) ) )
-	!ppc-macos? ( caps? ( sys-libs/libcap ) )
+	!sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) )
+	caps? ( sys-libs/libcap )
 	!media-sound/jack-cvs"
 
 DEPEND="${RDEPEND}
-	sys-devel/autoconf
+	!ppc-macos? ( sys-devel/autoconf )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Add doc option and fix --march=pentium2 in caps test
-	epatch ${FILESDIR}/${PN}-0.98.1-configure.patch
-	WANT_AUTOCONF=2.5 autoconf || die
+	if use !ppc-macos ; then
+		# Add doc option and fix --march=pentium2 in caps test
+		epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && WANT_AUTOCONF=2.5 autoconf \
+			|| die
+	fi
 }
 
 src_compile() {
@@ -56,11 +58,9 @@ src_compile() {
 
 	use caps && myconf="${myconf} --enable-capabilities --enable-stripped-jackd"
 	use debug && myconf="${myconf} --enable-debug"
-	use ppc-macos && myconf="${myconf} --enable-altivec"
-
 	myconf="${myconf} --enable-optimize --with-gnu-ld"
 
-	myconf="${myconf} `use_enable oss` `use_enable portaudio` `use_enable alsa`"
+	myconf="${myconf} `use_enable alitvec` `use_enable alsa` `use_enable oss` `use_enable portaudio`"
 
 	econf ${myconf} || die "configure failed"
 	emake || die "compilation failed"
