@@ -1,6 +1,18 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.14 2002/08/16 12:57:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.15 2002/09/18 18:54:25 raker Exp $
+
+*ghostscript-7.05.5 (18 Sep 2002)
+
+  18 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  ghostscript-7.05.5.ebuild, files/digest-ghostscript-7.05.5 :
+  Version bump.  The 7.05.5 release fixes some problems in the configure
+  script, makes several drivers more portable, and updates several drivers 
+  including the CUPS, Deskjet, and Lexmark drivers. IJS (hp inkjet) and
+  OMNI (IBM) support enabled.  Installs gimp-print driver if X is
+  enabled in use variables.  (Didn't want to create another use
+  variable and gimp-print is important to high quality printing)
+  Currently masked.  Please test especially in a cups environment.
 
 *ghostscript-7.05.3 (19 Jul 2002)
 

@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (18 Sep 2002)
+# New verison of ghostscript.
+# Please test and report on bug #7787
+=app-text/ghostscript-7.05.5
+
 # <tantive@gentoo.org> (18 Sep 2002)
 # Version bumped, masked due to freeze
 =sys-kernel/openmosix-sources-2.4.19-r5
