@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.4.6.ebuild,v 1.1 2003/10/10 06:23:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.4.6.ebuild,v 1.2 2003/12/02 18:22:13 robbat2 Exp $
 
 DESCRIPTION="A daemon to control laptop power consumption via cpufreq and disk standby"
 HOMEPAGE="http://mnm.uib.es/~gallir/${PN}/"
@@ -20,6 +20,7 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/cpudyn.init cpudyn
 	insinto /etc/conf.d
+	cat ${FILESDIR}/cpudyn.conf.extra >>debian/cpudyn.conf
 	newins debian/cpudyn.conf cpudyn
 
 	into /usr

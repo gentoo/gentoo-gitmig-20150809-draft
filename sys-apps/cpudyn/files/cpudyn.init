@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/files/cpudyn.init,v 1.2 2003/10/22 01:17:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/files/cpudyn.init,v 1.3 2003/12/02 18:22:13 robbat2 Exp $
 #
 # Based on the Debian init script written by Celso Gonzalez <celso@bulma.net>,
 # and on the cpufreqd Gentoo init script written by Robert Gogolok <robertgogolok@web.de>.
@@ -17,9 +17,6 @@ depend() {
 }
 
 checkconfig() {
-	local CPUFREQ_24="/proc/cpufreq"
-	local CPUFREQ_25="/sys/devices/system/cpu/cpu0/cpufreq /sysfs/devices/system/cpu/cpu0/cpufreq"
-	local CPUFREQ_ACPI="/proc/acpi/processor/CPU0/throttling"
 	local CPUFREQ_FILES="${CPUFREQ_24} ${CPUFREQ_25} ${CPUFREQ_ACPI}"
 	local CPUFREQ_FILE=""
 	for i in ${CPUFREQ_FILES}; do [ -e ${i} ] && CPUFREQ_FILE="${i}" && break ; done
