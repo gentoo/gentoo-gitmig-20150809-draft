@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.17 2004/06/24 21:33:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.18 2004/07/21 19:09:18 wschlich Exp $
+
+*dvd+rw-tools-5.20.4.10.8 (21 Jul 2004)
+
+  21 Jul 2004; Wolfram Schlich <wschlich@gentoo.org>
+  dvd+rw-tools-5.20.4.10.8.ebuild, metadata.xml:
+  version bump, change app-cdr/cdrtools DEPEND to virtual/cdrtools so it works
+  also with app-cdr/dvdrtools, add metadata.xml
 
   08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   dvd+rw-tools-5.12.4.7.4.ebuild, dvd+rw-tools-5.14.4.7.4.ebuild,
