@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.7.ebuild,v 1.1 2004/06/16 18:20:44 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.7.ebuild,v 1.2 2004/06/18 14:52:32 pvdabeel Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.kernel.org/"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}"
 UNIPATCH_LIST="${ARCH_PATCH}"
 
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ppc ~amd64"
 
 pkg_postinst() {
 	postinst_sources
