@@ -1,0 +1,16 @@
+# ChangeLog for app-sci/tbass
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.1 2002/10/30 08:32:18 george Exp $
+
+*tbass-20020729 (29 Oct 2002)
+  
+  29 Oct 2002; George Shapovalov <george@gentoo.org> tbass-20020729.ebuild :
+
+  initial release. 
+
+  The Balsa Asynchronous Synthesis System
+  Balsa is both a framework for synthesising asynchronous (clockless) hardware systems and the 
+  language for describing such systems. 
+  
+  ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>,
+  updated by  Dave Nellans <dnellans@cs.utah.edu>
