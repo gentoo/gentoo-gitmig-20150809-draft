@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmclockmon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.16 2004/06/30 11:43:11 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.17 2004/09/01 02:16:07 tgall Exp $
+
+  31 Aug 2004; Tom Gall <tgall@gentoo.org> wmclockmon-0.8.0.ebuild:
+  stable on ppc64, bug #61760
 
   30 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> wmclockmon-0.8.0.ebuild:  
   Stable on x86.
