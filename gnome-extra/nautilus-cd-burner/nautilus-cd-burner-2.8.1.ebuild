@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.1.ebuild,v 1.1 2004/09/17 15:18:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.1.ebuild,v 1.2 2004/09/18 01:05:50 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -27,6 +27,5 @@ DEPEND=">=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.9.0
 	${RDEPEND}"
 
-DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README TODO"
-
 G2CONF="${G2CONF} $(use_enable hal)"
+DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README TODO"
