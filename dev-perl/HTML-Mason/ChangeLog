@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.18 2004/02/07 18:32:55 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.19 2004/03/21 09:15:38 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> HTML-Mason-1.20.ebuild,
+  HTML-Mason-1.22.ebuild, HTML-Mason-1.25.ebuild:
+  adding categorie. see 45110 for details
 
 *HTML-Mason-1.25 (07 Feb 2004)
 
