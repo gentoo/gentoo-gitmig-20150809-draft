@@ -1,8 +1,11 @@
 # ChangeLog for dev-php/xdebug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.2 2003/06/20 04:14:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.3 2003/07/20 17:56:24 coredumb Exp $
  
 *xdebug-1.2.0 (16 May 2003)
+
+  20 Jul 2003; Tal Peer <coredumb@gentoo.org> xdebug-1.2.0.ebuild:
+  Use $P in SRC_URI.
 
   16 May 2003; Tal Peer <coredumb@gentoo.org> xdebug-1.2.0.ebuild:
   Initial import, uses the new php-ext eclass.
