@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1.ebuild,v 1.8 2005/02/03 17:16:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1.ebuild,v 1.9 2005/02/06 01:51:52 luckyduck Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="doc junit"
 
 src_unpack() {
