@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/files/chipcardd2,v 1.1 2005/02/01 23:26:35 hanno Exp $
+
+start() {
+    ebegin "Starting chipcard2 daemon"
+    start-stop-daemon --start --quiet --exec /usr/sbin/chipcardd2
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping chipcard2 daemon"
+    start-stop-daemon --stop --quiet --exec /usr/sbin/chipcardd2
+    eend $?
+}
