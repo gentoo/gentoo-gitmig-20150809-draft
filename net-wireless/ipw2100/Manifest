@@ -1,3 +1,4 @@
+MD5 64df9f7be17c96b466f939076dcbeb98 ipw2100-0.55.ebuild 2949
 MD5 bb9888bcaee0c37159b0dcbbb3e84aca ipw2100-0.50.ebuild 2349
 MD5 af2bd708c29ad112cea5def61fd8727d ipw2100-0.46.ebuild 2308
 MD5 2f891ac2012d4e7de0bfe1ff02b4ffd5 ipw2100-0.41.ebuild 2221
@@ -7,9 +8,9 @@ MD5 da1e52d1f749c685e506e86cd0ae5bc2 ipw2100-0.54.ebuild 2773
 MD5 aab8cce25eb67e7f98bb8139d17abb3c ipw2100-0.45.ebuild 2306
 MD5 60c860f649d9decb003e05d718275ea6 ipw2100-0.46-r1.ebuild 2437
 MD5 2d41d2e845e3dbe54f2667f4e96617b5 ipw2100-0.51.ebuild 2349
-MD5 391b3467ac9e8855fe980ab66209b078 ChangeLog 5488
+MD5 ddbc81d5ff8dfd468986f70c0c44fd77 ChangeLog 5626
 MD5 6b9b3aeeb719bd5691f538b4e5c9fed8 ipw2100-0.49.ebuild 2338
-MD5 db76d51212bff92212cb8dd316a0931d metadata.xml 222
+MD5 8a68b74057e911e6804f77dc21959e80 metadata.xml 282
 MD5 78f6d8f071cd7615df4ad78abf3e55d0 ipw2100-0.44.ebuild 2305
 MD5 a8f45ac36d3629f7fd90082355b44d89 files/ipw2100-0.38-resume.patch 717
 MD5 1cf135e6f2a48d58c39f62e3e49ccfd3 files/ipw2100-0.33-acpi-fix.diff 863
@@ -27,5 +28,6 @@ MD5 d553cf666c0072c4d33abb3b80a03c44 files/digest-ipw2100-0.50 124
 MD5 9eef4f93b11769107b862d4a115567d4 files/digest-ipw2100-0.51 124
 MD5 5fef6b2b360e0580f27a2b1a37bfa3bf files/digest-ipw2100-0.52 124
 MD5 674152317ec0021f718398ba7a213b0d files/digest-ipw2100-0.54 124
+MD5 b3a600a244bd8a64fd8ade3036a390e1 files/digest-ipw2100-0.55 124
 MD5 1939e18b58d29ee8ec02ce6777ebaa4e files/ipw2100-0.33-makefile-fix.diff 2275
 MD5 99cced47568e9cb3fd2e3ceaed896c88 files/hostap_crypt.h 1344
