@@ -1,13 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.3 2004/01/06 04:27:19 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.4 2004/02/12 05:10:30 vapier Exp $
 
 inherit libtool flag-o-matic
-replace-flags k6-3 i586
-replace-flags k6-2 i586
-replace-flags k6 i586
-
-IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig"
 
 MY_PN=ImageMagick
 
@@ -19,13 +14,13 @@ MY_P2=${MY_PN}-${PV%.*}
 
 S=${WORKDIR}/${MY_P2}
 DESCRIPTION="A collection of tools and libraries for many image formats"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.imagemagick.org/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
+IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig"
 
 DEPEND=">=sys-apps/sed-4
 	>=app-arch/bzip2-1
@@ -44,6 +39,10 @@ DEPEND=">=sys-apps/sed-4
 	jbig? ( media-libs/jbigkit )"
 
 src_compile() {
+	replace-flags k6-3 i586
+	replace-flags k6-2 i586
+	replace-flags k6 i586
+
 	elibtoolize
 
 	local myconf=""
