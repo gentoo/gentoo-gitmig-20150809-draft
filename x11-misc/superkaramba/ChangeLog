@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/superkaramba
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.9 2003/10/14 09:26:42 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.10 2003/10/21 15:03:05 mholzer Exp $
+
+*superkaramba-0.33 (22 Oct 2003)
+
+  22 Oct 2003; Martin Holzer <mholzer@gentoo.org> superkaramba-0.33.ebuild:
+  Version bumped. Closes #31631.
 
 *superkaramba-0.32b (14 Oct 2003)
 
