@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.47 2004/02/15 12:30:13 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.48 2004/02/18 04:40:58 aether Exp $
+
+*java-config-1.2.6 (17 Feb 2004)
+
+  17 Feb 2004; Jason A Mobarak <aether@gentoo.org> java-config-1.2.5.ebuild,
+  java-config-1.2.6.ebuild:
+  New version, should fix bug #41481
 
   15 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   java-config-1.2.5.ebuild:
