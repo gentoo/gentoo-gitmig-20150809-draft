@@ -1,9 +1,14 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.8 2002/11/06 21:08:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.9 2002/11/09 00:02:51 spider Exp $
 
 *anjuta-1.0.0 (06 Nov 2002)
 
+  09 Nov 2002; Spider <spider@gentoo.org> anjuta-1.0.0.ebuild :
+  Went over the dependencies to match configure.in and configure. works with 
+  mixed install of gnome1 and gnome2.
+  
+  
   06 Nov 2002; Brandon Low <lostlogic@gentoo.org> anjuta-1.0.0.ebuild :
   Update to 1.0.0 final, change deps to match those described in
   package readme, combined with those known.  This needs testing 

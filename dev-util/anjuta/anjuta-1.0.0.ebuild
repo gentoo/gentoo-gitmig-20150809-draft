@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.0.ebuild,v 1.2 2002/11/08 03:29:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.0.ebuild,v 1.3 2002/11/09 00:02:51 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
@@ -17,7 +17,11 @@ DEPEND=">=gnome-base/ORBit-0.5.0
 	>=dev-libs/libxml-1.4.0
 	dev-util/pkgconfig
 	>=app-text/scrollkeeper-0.1.4
-	>=gnome-base/gnome-print-0.35"
+	>=gnome-base/gnome-print-0.35
+	=gnome-base/gnome-vfs-1.0*
+	>=gnome-base/bonobo-1.0
+	>=sys-devel/bison-1.0"
+	
 	
 RDEPEND="dev-util/glade
 	 media-gfx/gnome-iconedit
@@ -37,7 +41,7 @@ src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
 
-	econf ${myconf} || die
+	econf ${myconf} --enable-final || die
 	emake || die
 }
 
