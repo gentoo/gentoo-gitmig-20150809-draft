@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r10.ebuild,v 1.8 2003/04/05 20:05:25 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r10.ebuild,v 1.9 2003/04/29 15:57:26 carpaski Exp $
 
 IUSE="build"
 
@@ -17,22 +17,10 @@ KEYWORDS="alpha arm hppa mips ppc sparc x86"
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
 
-get_portver() {
-	python -c "import portage,string; print string.join(portage.pkgsplit(portage.best(portage.db[\"${ROOT}\"][\"vartree\"].dbapi.match(\"sys-apps/portage\"))))"
-}
-
-compare_pver() {
-	if python -c "import portage,string,sys; sys.exit(portage.pkgcmp(string.split(\"$1\"),string.split(\"$2\"))>=0)"; then
-		return 0
-	fi
-	return 1
-}
-
 src_unpack() {
 	cd ${WORKDIR}
 	echo tar xjf ${DISTDIR}/${PF}.tar.bz2
 	tar xjf ${DISTDIR}/${PF}.tar.bz2 || die "No portage tarball in distfiles."
-	#get_portver > ${WORKDIR}/previous-version
 }
 
 src_compile() {
@@ -182,7 +170,7 @@ pkg_postinst() {
 	echo
 	einfo "Please 'emerge sync' after merging portage to update some permissions."
 	echo
-	if [ -z $PORTAGE_TEST ]; then
+	if [ -z "$PORTAGE_TEST" ]; then
 		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
 		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
 		sleep 5
@@ -210,7 +198,7 @@ pkg_postinst() {
 	fi # PORTAGE_TESTING
 
 	#fix cache (could contain staleness)
-	if [ ! -d ${ROOT}var/cache/edb/dep ]
+	if [ ! -d "${ROOT}var/cache/edb/dep" ]
 	then
 		#upgrade /var/db/pkg library; conditional required for build image creation
 		if [ -d ${ROOT}var/db/pkg ]
@@ -247,7 +235,7 @@ pkg_postinst() {
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 
-	if has ccache $FEATURES && has userpriv $FEATURES; then
+	if has ccache $FEATURES &>/dev/null && has userpriv $FEATURES &>/dev/null; then
 		chown -R portage:portage /var/tmp/ccache &> /dev/null
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
