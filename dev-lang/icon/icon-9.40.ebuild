@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.14 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.15 2004/06/03 15:28:46 agriffis Exp $
 
 MY_PV=${PV/./}
 SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v${MY_PV}src.tgz"
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "`use X`" ]; then
+	if use X; then
 		make X-Configure name=intel_linux || die
 	else
 		make Configure name=intel_linux || die
