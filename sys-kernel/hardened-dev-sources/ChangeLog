@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.3 2004/03/20 05:01:49 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.4 2004/03/20 06:51:01 solar Exp $
+
+  20 Mar 2004; <solar@gentoo.org> :
+  digest fix
 
 *hardened-dev-sources-2.6.4-r1 (20 Mar 2004)
 
