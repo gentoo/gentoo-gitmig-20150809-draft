@@ -26,3 +26,5 @@ move media-video/smpeg-xmms media-plugins/xmms-smpeg
 move media-sound/mppdec media-sound/musepack-tools
 move dev-lang/squeak-vm dev-lang/squeak-fullimage
 move net-fs/kasablanca net-ftp/kasablanca
+move media-sound/mad media-sound/madplay
+
