@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/jediacademy-ded/jediacademy-ded-1.01.ebuild,v 1.4 2004/06/24 23:20:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/jediacademy-ded/jediacademy-ded-1.01.ebuild,v 1.5 2004/11/03 00:33:16 vapier Exp $
 
 inherit games eutils
 
@@ -10,9 +10,12 @@ SRC_URI="jalinuxded_1.0.zip"
 
 LICENSE="jedioutcast-ded"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="fetch"
+
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
 S=${WORKDIR}
 

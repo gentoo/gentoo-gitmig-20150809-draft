@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-clanmod/halflife-clanmod-1.81.24e.ebuild,v 1.5 2004/06/24 23:18:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-clanmod/halflife-clanmod-1.81.24e.ebuild,v 1.6 2004/11/03 00:31:47 vapier Exp $
 
 inherit games eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="-* x86"
 IUSE=""
 
 RDEPEND="games-server/halflife-metamod"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/cm-${PV}/addons/clanmod"
 
