@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.6 2003/05/29 10:39:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.7 2003/05/29 20:25:21 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -785,6 +785,9 @@ src_install() {
 		sed "s:/usr/X11R6/lib/X11/fonts:/usr/share/fonts:g" \
 			${ROOT}/etc/X11/fs/config > ${D}/etc/X11/fs/config
 	fi
+
+	sed -i "s:/usr/X11R6/lib/X11/fonts:/usr/share/fonts:g" \
+		${D}/etc/X11/XF86Config.example
 }
 
 pkg_preinst() {
