@@ -1,9 +1,13 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.41 2004/12/21 13:26:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.42 2004/12/22 00:03:54 eradicator Exp $
 
   22 Dec 2004; Joseph Jezak <josejx@gentoo.org> timidity++-2.13.2.ebuild:
   Marked ppc stable.
+
+  21 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/timidity++-2.13.2-gtk26.patch, timidity++-2.13.2.ebuild:
+  Added patch for gtk-2.6 from bug #75208.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   timidity++-2.13.2.ebuild:

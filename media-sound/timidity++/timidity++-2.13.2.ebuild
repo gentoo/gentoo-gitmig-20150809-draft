@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.4 2004/12/21 13:26:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.5 2004/12/22 00:03:54 eradicator Exp $
 
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa arts jack portaudio emacs"
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -37,6 +37,12 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	X? ( tcltk? ( >=dev-lang/tk-8.1 ) )
 	emacs? ( virtual/emacs )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gtk26.patch
+}
 
 src_compile() {
 	local myconf
