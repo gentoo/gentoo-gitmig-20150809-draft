@@ -1,0 +1,2127 @@
+--- chinput-3.0.2.orig/resource/Makefile
++++ chinput-3.0.2/resource/Makefile
+@@ -3,5 +3,5 @@
+ all:
+ 
+ install:
+-	mkdir -p $(prefix)/lib/ZWinPro
+-	cp -f Chinput.ad $(prefix)/lib/ZWinPro/Chinput.ad
++	mkdir -p $(prefix)/share/chinput
++	cp -f Chinput.ad $(etc_prefix)/Chinput.ad
+--- chinput-3.0.2.orig/src/Makefile
++++ chinput-3.0.2/src/Makefile
+@@ -11,11 +11,11 @@
+ LIBIMLIB = -lImlib
+ 
+ #CFLAGS =  -Wall -g -DFOR_PILOT_COMPAT -O2 -fno-strength-reduce  -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L -D_POSIX_SOURCE -D_XOPEN_SOURCE=500L -D_BSD_SOURCE -D_SVID_SOURCE   -DFUNCPROTO=15 -DNARROWPROTO
+-CFLAGS =  -Wall -g -DFOR_PILOT_COMPAT -O2 -fno-strength-reduce
++CFLAGS =  -Wall -DFOR_PILOT_COMPAT -O2 -fno-strength-reduce
+ 
+ INC = -I./include -I./IMdkit/include -I/usr/include -I/usr/X11R6/include   
+ 
+-LIB = -L/usr/X11R6/lib -lXext -lX11 ./IMdkit/lib/libXimd.a -L/usr/lib/unicon2 -limmclient -Wl,-rpath=/usr/lib/unicon2 -limm_server -lpth -ldl
++LIB = -L/usr/X11R6/lib -lXext -lX11 ./IMdkit/lib/libXimd.a -L/usr/lib/unicon -limmclient -Wl,-rpath=/usr/lib/unicon -limm_server -lpth -ldl
+ 
+ SRC = chinput.c init.c server.c config.c color.c util.c convert.c IC.c XIM.c focus.c root.c overspot.c onspot.c offspot.c voice.c keyboard.c handw.c hwengine.c loop.c 
+ 
+--- chinput-3.0.2.orig/src/color.c
++++ chinput-3.0.2/src/color.c
+@@ -215,7 +215,7 @@
+         /* Access font */
+         if ((*font_info = XLoadQueryFont(display,fontname)) == NULL)
+         {
+-                (void) fprintf( stderr, "Basic: Cannot open font %s\\n",
++                (void) fprintf( stderr, "Basic: Cannot open font %s\n",
+                         fontname);
+                 exit( -1 );
+         }
+--- chinput-3.0.2.orig/src/config.c
++++ chinput-3.0.2/src/config.c
+@@ -222,6 +222,7 @@
+ 	}
+ 	if(HZServer.hzVKwin.onflag)
+ 		XMapRaised(display, window3);
++
+ }
+ 
+ void proc_hide_window()
+@@ -251,6 +252,8 @@
+ 	}
+ 	if(HZServer.hzVKwin.onflag)
+ 		XUnmapWindow(display, window3);
++	if(!strcmp(chinputime[cur_inputmethod].name,"ZNPY"))
++		IMM_FlushUserPhrase(chinput_imm);
+ }
+ 
+ void HZprocToggleWindow(void)
+--- chinput-3.0.2.orig/src/hwengine.c
++++ chinput-3.0.2/src/hwengine.c
+@@ -58,10 +58,10 @@
+ 
+ 		if(getenv("LC_ALL") && strstr(getenv("LC_ALL"), "zh_TW"))
+ 			execlp ("kpengine","/usr/bin/kpengine", 
+-				"/usr/lib/ZWinPro/hzbig5.dat", NULL);
++				"/usr/share/chinput/hzbig5.dat", NULL);
+ 		else
+ 			execlp ("kpengine","/usr/bin/kpengine", 
+-				"/usr/lib/ZWinPro/hzgb.dat", NULL);
++				"/usr/share/chinput/hzgb.dat", NULL);
+ 	} else if (engine_pid < (pid_t) 0) /* failure */
+ 		fprintf(stderr, "Fork failed.\n");
+ 
+--- chinput-3.0.2.orig/src/init.c
++++ chinput-3.0.2/src/init.c
+@@ -19,7 +19,7 @@
+ */
+ 
+ #include "all.h"
+-
++#include "config.h"
+ #ifdef IMLIB
+ #include "icons/chinput.xpm"
+ #include "icons/123.xpm"
+@@ -103,6 +103,7 @@
+ 	char fontname[256];
+ 
+ 	//create font set
++/*
+ 	if(strcmp(setlocale(LC_ALL, gb18030locale), gb18030locale) || 	
+ 		!XSupportsLocale()){
+ 		if(strcmp(setlocale(LC_ALL, gbklocale), gbklocale) ||
+@@ -114,6 +115,8 @@
+ 			}
+ 		}
+ 	}
++*/
++	setlocale(LC_ALL, gblocale);
+ 	sprintf(fontname, "%s,%s", font_latin, font_gb);
+        	if((fontset_gb = XCreateFontSet(display, fontname, 
+ 		&missing_list, &missing_count, &def_string)) == NULL) {
+@@ -394,7 +397,7 @@
+ 	}
+ 
+ 	flag_corner = False;	//half
+-	flag_punct = False;	//chinese punctuation
++	flag_punct = False;	//english punctuation
+ 	flag_lock = LOCK_NONE;	//encoding not locked
+ 	flag_ec  = True;	//chinese output
+ 	flag_english = False;	//no english
+@@ -407,7 +410,7 @@
+ 	hmode = HZSERVER_HMODE_NO;
+ 	strcpy(input_method_gb, "ZNPY");
+ 	strcpy(input_method_big5, "PY");
+-	strcpy(dict_path, "/usr/dict");
++	strcpy(dict_path, IMDIR);
+ 	cur_inputmethod = 0;
+ 	flag_showime = True;
+ 	flag_automode = True;
+@@ -465,7 +468,7 @@
+ 
+ 	// system ad file
+ 	if(fp == NULL){
+-        	if((fp = fopen("/usr/lib/ZWinPro/Chinput.ad", "r")) == NULL){
++        	if((fp = fopen(RESOURCEFILE, "r")) == NULL){
+                 	printf("chinput: Chinput.ad not found.\n");
+ 			exit(1);
+         	}
+@@ -522,11 +525,11 @@
+ 				flag_client = HZSERVER_AREAMODE_SERVER;
+ 		} else if(!mystrcmp(line, "chinput.dictionary")){
+                 	strcpy(dict_path, get_value(line));
+-		} else if(!mystrcmp(line, "chinput.showime")){
+-			if(!strcmp(get_value(line), "YES"))
+-				flag_showime = 1;
+-			else
+-				flag_showime = 0;
++		} else if(!mystrcmp(line, "chinput.punct")){
++			if(!strcasecmp(get_value(line), "CHINESE"))
++				flag_punct = True;
++			else if(!strcasecmp(get_value(line), "WESTERN"))
++				flag_punct = False;
+ 		} else if(!mystrcmp(line, "chinput.font")){
+                 	strcpy(font_latin, get_value(line));
+         	} else if(!mystrcmp(line, "chinput.gbfont")){
+@@ -563,7 +566,9 @@
+ Boolean file_exist(char *fname)
+ {
+ 	char name[256];
+-	if(!strcmp(fname, "gb")) return True;		//ZNPY
++//	if(!strcmp(fname, "gb")) return True;		//ZNPY
++	if((!strcmp(fname,"gb"))||(strstr(fname,"pyinput"))
++			||(!strcmp(fname,"cce"))) return True;  //ZNPY
+ 	sprintf(name, "%s/%s", dict_path, fname);
+ 
+ 	if(access(name, F_OK) == 0) return True;
+@@ -582,7 +587,7 @@
+ 	sprintf(fname, "%s/.chinput", getenv("HOME"));
+ 	fp = fopen(fname, "r");
+ 	if(!fp){
+-		fp = fopen("/usr/lib/ZWinPro/Chinput.ad", "r");
++		fp = fopen("/etc/Chinput.ad", "r");
+ 		if(!fp) {
+ 			printf("Cannot open resource file Chinput.ad\n");
+ 			exit(1);
+--- chinput-3.0.2.orig/src/offspot.c
++++ chinput-3.0.2/src/offspot.c
+@@ -244,7 +244,7 @@
+ 		if(flag_corner) strcat(buf, "【全");
+ 		else strcat(buf, "【半");
+ 		if(flag_punct)  strcat(buf, "ｏ】");
+-		else  strcat(buf, "·】");
++		else  strcat(buf, " .】");
+ 		strcat(buf, chinputime[cur_inputmethod].namegb);
+ 		strcat(buf, ": ");
+ 	} else {
+--- chinput-3.0.2.orig/src/onspot.c
++++ chinput-3.0.2/src/onspot.c
+@@ -255,7 +255,7 @@
+         if(flag_corner) strcat(tmp, "【全");
+         else strcat(tmp, "【半");
+         if(flag_punct)  strcat(tmp, "ｏ】");
+-        else  strcat(tmp, "·】");
++        else  strcat(tmp, " .】");
+ 	strcat(tmp, chinputime[cur_inputmethod].namegb);
+ 
+ 	//if popup candidate window, then we need not put selection on 
+--- chinput-3.0.2.orig/src/overspot.c
++++ chinput-3.0.2/src/overspot.c
+@@ -460,6 +460,7 @@
+ 	if(flag_found)HZoverspotDrawCandidateButton();
+ }
+ 
++
+ void HZoverspotResizeStatusWindow(IC *ic)
+ {
+         Window win = (Window)0;
+@@ -583,7 +584,7 @@
+ 		if(flag_corner) strcat(buf, "【全");
+ 			else strcat(buf, "【半");
+ 		if(flag_punct) strcat(buf, "ｏ】");
+-			else  strcat(buf, "·】");
++			else  strcat(buf, " .】");
+ 		strcat(buf, chinputime[cur_inputmethod].namegb);
+ 	} else {
+ 		if(flag_corner) strcat(buf, "");
+@@ -666,7 +667,7 @@
+                 if(flag_corner) strcat(buf, "【全");
+                 else strcat(buf, "【半");
+                 if(flag_punct)  strcat(buf, "ｏ】");
+-                else  strcat(buf, "·】");
++                else  strcat(buf, " .】");
+                 strcat(buf, chinputime[cur_inputmethod].namegb);
+         } else {
+                 strcpy(buf, "");
+@@ -700,7 +701,7 @@
+ 
+ 	//auxiliary window flush
+ 	HZoverspotCandidateFlush();
+-
++	
+ 	//status window flush, this function only happens if
+ 	//the client use XIMPreeditPosition|XIMStatusArea style
+ 	HZoverspotStatusFlush();
+--- chinput-3.0.2.orig/src/root.c
++++ chinput-3.0.2/src/root.c
+@@ -123,7 +123,7 @@
+ status_button gb_sbutton[] = {
+ 	{XOFF,		YOFF,	True,	"中",	"英"},
+ 	{XOFF+18,	YOFF,	False,	"半",	"全"},
+-	{XOFF+36,	YOFF,	False,	"ｏ"	"·"},
++	{XOFF+36,	YOFF,	False,	"ｏ"	" ."},
+ 	{XOFF+54,	YOFF,	True,	"简",	"繁"}
+ };
+ 
+@@ -269,7 +269,7 @@
+ 		   HZServer.encoding == HZSERVER_ENCODING_GBK ||
+ 		   HZServer.encoding == HZSERVER_ENCODING_GB18030)
+ 		draw_button_label(dpy, win, panelgc,
+-			p_x1, p_y1, p_x2, p_y2, offset, "·", 2);
++			p_x1, p_y1, p_x2, p_y2, offset, " .", 2);
+ 		else if(HZServer.encoding == HZSERVER_ENCODING_BIG5)
+ 		draw_button_label(dpy, win, panelgc,
+ 			p_x1, p_y1, p_x2, p_y2, offset, "", 2);
+@@ -484,7 +484,7 @@
+ 		   HZServer.encoding == HZSERVER_ENCODING_GBK ||
+ 		   HZServer.encoding == HZSERVER_ENCODING_GB18030)
+ 		draw_button_label(dpy, win, panelgc,
+-			p_x1, p_y1, p_x2, p_y2, offset, "·", 2);
++			p_x1, p_y1, p_x2, p_y2, offset, " .", 2);
+ 		else if(HZServer.encoding == HZSERVER_ENCODING_BIG5)
+ 		draw_button_label(dpy, win, panelgc,
+ 			p_x1, p_y1, p_x2, p_y2, offset, "", 2);
+@@ -518,7 +518,7 @@
+                	   HZServer.encoding == HZSERVER_ENCODING_GBK ||
+                	   HZServer.encoding == HZSERVER_ENCODING_GB18030)
+                 	draw_button_label(dpy, win, panelgc,
+-                        	p_x1, p_y1, p_x2, p_y2, offset, "·", 2);
++                        	p_x1, p_y1, p_x2, p_y2, offset, " .", 2);
+                	else if(HZServer.encoding == HZSERVER_ENCODING_BIG5)
+                 	draw_button_label(dpy, win, panelgc,
+                         	p_x1, p_y1, p_x2, p_y2, offset, "", 2);
+--- chinput-3.0.2.orig/src/util.c
++++ chinput-3.0.2/src/util.c
+@@ -271,7 +271,7 @@
+      		case '.':  return(XK_period);
+      		case '\b': return(XK_BackSpace);
+      		case '\t': return(XK_Tab);
+-     		case '\n': return(XK_Return);
++//     		case '\n': return(XK_Return);
+      		default:   return((KeySym)i);
+      	} /* End switch */
+      	/* I have no idea, so we'll just cast it and hope we're right.  :) */
+--- chinput-3.0.2.orig/src/IMdkit/include/Xi18n.h
++++ chinput-3.0.2/src/IMdkit/include/Xi18n.h
+@@ -318,7 +318,7 @@
+     int		minor_code;
+     CARD16	connect_id;
+     CARD16	icid;
+-    CARD32	flag;
++    CARD32	filter_event_mask;
+     CARD32	intercept_event_mask;
+     CARD32	select_event_mask;
+     CARD32	forward_event_mask;
+@@ -400,6 +400,14 @@
+     XIMStringConversionCallbackStruct strconv;
+ } IMStrConvCBStruct;
+ 
++typedef struct
++{
++    int		major_code;
++    int		minor_code;
++    CARD16	connect_id;
++    CARD16	icid;
++} IMSyncXlibStruct;
++
+ typedef union _IMProtocol
+ {
+     int	major_code;
+@@ -427,6 +435,7 @@
+     IMPreeditCBStruct preedit_callback;
+     IMStatusCBStruct status_callback;
+     IMStrConvCBStruct strconv_callback;
++    IMSyncXlibStruct sync_xlib;
+     long pad[32];
+ } IMProtocol;
+ 
+--- chinput-3.0.2.orig/src/IMdkit/include/IMdkit.h
++++ chinput-3.0.2/src/IMdkit/include/IMdkit.h
+@@ -97,11 +97,12 @@
+     Status	(*closeIM) (XIMS);
+     char*	(*setIMValues) (XIMS, XIMArg *);
+     char*	(*getIMValues) (XIMS, XIMArg *);
+-    Status	(*forwardEvent) (XIMS, ...);
+-    Status	(*commitString) (XIMS, ...);
+-    int		(*callCallback) (XIMS, ...);
+-    int		(*preeditStart) (XIMS, ...);
+-    int		(*preeditEnd) (XIMS, ...);
++    Status	(*forwardEvent) (XIMS, XPointer);
++    Status	(*commitString) (XIMS, XPointer);
++    int		(*callCallback) (XIMS, XPointer);
++    int		(*preeditStart) (XIMS, XPointer);
++    int		(*preeditEnd) (XIMS, XPointer);
++    int		(*syncXlib) (XIMS, XPointer);
+ } IMMethodsRec, *IMMethods;
+ 
+ typedef struct
+@@ -114,6 +115,7 @@
+ {
+     IMMethods	methods;
+     IMCoreRec	core;
++    Bool	sync;
+     void	*protocol;
+ } XIMProtocolRec;
+ 
+@@ -129,5 +131,6 @@
+ int IMCallCallback (XIMS, XPointer);
+ int IMPreeditStart (XIMS, XPointer);
+ int IMPreeditEnd (XIMS, XPointer);
++int IMSyncXlib (XIMS, XPointer);
+ 
+ #endif /* IMdkit_h */
+--- chinput-3.0.2.orig/src/IMdkit/lib/FrameMgr.c
++++ chinput-3.0.2/src/IMdkit/lib/FrameMgr.c
+@@ -314,6 +314,8 @@
+             fm->idx += 8;
+             break;
+ #endif
++	default:
++	    break;
+         }
+         /*endswitch*/
+         _FrameMgrPutToken(fm, data, data_size);
+@@ -465,6 +467,8 @@
+         
+     case EOL:
+         return FmEOD;
++    default:
++	break;
+     }
+     /*endswitch*/
+     return (FmStatus) NULL;  /* Should never be reached */
+@@ -484,7 +488,7 @@
+ 
+     if (type & COUNTER_MASK)
+     {
+-        int end;
++        int end=0;
+         FrameIter client_data;
+ 
+         type &= ~COUNTER_MASK;
+@@ -507,6 +511,8 @@
+             end = Swap64 (fm, *(CARD64 *) (fm->area + fm->idx));
+             break;
+ #endif
++	default:
++	    break;
+         }
+         /*endswitch*/
+         
+@@ -685,6 +691,8 @@
+ 
+     case EOL:
+         return FmEOD;
++    default:
++	break;
+     }
+     /*endswitch*/
+     return (FmStatus) NULL;  /* Should never be reached */
+@@ -779,6 +787,8 @@
+             
+         case EOL:
+             return FmEOD;
++	default:
++	    break;
+         }
+         /*endswitch*/
+     }
+@@ -909,8 +919,8 @@
+             register int offset, iter_idx;
+ 
+             info->counter.is_byte_len =
+-                (((int) fi->template[fi->cur_no].data & 0xFF)) == FmCounterByte;
+-            offset = ((int) fi->template[fi->cur_no].data) >> 8;
++                (((long) fi->template[fi->cur_no].data & 0xFF)) == FmCounterByte;
++            offset = ((long) fi->template[fi->cur_no].data) >> 8;
+             iter_idx = fi->cur_no + offset;
+             if (fi->template[iter_idx].type == ITER)
+             {
+@@ -958,8 +968,8 @@
+             register int size;
+             register int i;
+ 
+-            unit = _UNIT ((int) fi->template[fi->cur_no].data);
+-            number = _NUMBER ((int) fi->template[fi->cur_no].data);
++            unit = _UNIT ((long) fi->template[fi->cur_no].data);
++            number = _NUMBER ((long) fi->template[fi->cur_no].data);
+ 
+             i = fi->cur_no;
+             size = 0;
+@@ -1028,6 +1038,8 @@
+             /*endif*/
+         }
+         break;
++    default:
++	break;
+     }
+     /*endswitch*/
+     return ret_type;
+@@ -1058,8 +1070,8 @@
+ 	    register int iter_idx;
+ 
+             info->counter.is_byte_len =
+-                (((int) fi->template[fi->cur_no].data) & 0xFF) == FmCounterByte;
+-            offset = ((int)fi->template[fi->cur_no].data) >> 8;
++                (((long) fi->template[fi->cur_no].data) & 0xFF) == FmCounterByte;
++            offset = ((long)fi->template[fi->cur_no].data) >> 8;
+             iter_idx = fi->cur_no + offset;
+             if (fi->template[iter_idx].type == ITER)
+             {
+@@ -1101,12 +1113,12 @@
+         if (info)
+         {
+             register int unit;
+-            register number;
+-            register size;
+-            register i;
++            register int number;
++            register int size;
++            register int i;
+ 
+-            unit = _UNIT ((int) fi->template[fi->cur_no].data);
+-            number = _NUMBER ((int) fi->template[fi->cur_no].data);
++            unit = _UNIT ((long) fi->template[fi->cur_no].data);
++            number = _NUMBER ((long) fi->template[fi->cur_no].data);
+ 
+             i = fi->cur_no;
+             size = 0;
+@@ -1161,6 +1173,8 @@
+             else
+                 ret_type = sub_type;
+             /*endif*/
++	default:
++	    break;
+         }
+         break;
+     }
+@@ -1325,6 +1339,8 @@
+                 return FmSuccess;
+             /*endif*/
+             break;
++	default:
++	    break;
+         }
+         /*endswitch*/
+         i = _FrameInstIncrement(fi->template, i);
+@@ -1377,6 +1393,8 @@
+                 return ret_size;
+             /*endif*/
+             break;
++	default:
++	    break;
+         }
+         /*endswitch*/
+         i = _FrameInstIncrement (fi->template, i);
+@@ -1421,6 +1439,9 @@
+                 return FmSuccess;
+             /*endif*/
+             break;
++
++	default:
++	    break;
+         }
+         /*endswitch*/
+         i = _FrameInstIncrement (fi->template, i);
+@@ -1561,6 +1582,9 @@
+             ChainMgrFree (&it->cm);
+         }
+         break;
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     Xfree (it);
+@@ -1712,6 +1736,9 @@
+             /*endif*/
+ 	    return ret_type;
+         }
++
++    default:
++	return (XimFrameType) NULL;
+     }
+     /*endswitch*/
+     return (XimFrameType) NULL;  /* This should never occur */
+@@ -1786,6 +1813,9 @@
+             /*endif*/
+             return (ret_type);
+         }
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     /* Reaching here is a bug! */
+@@ -1906,6 +1936,9 @@
+             /*endif*/
+         }
+         return FmNoMoreData;
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     return FmNoMoreData;
+@@ -1966,6 +1999,9 @@
+         }
+         /*endfor*/
+         return NO_VALID_FIELD;
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     return NO_VALID_FIELD;
+@@ -2051,6 +2087,9 @@
+         }
+         /*endif*/
+         break;
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     return FmNoMoreData;
+@@ -2143,6 +2182,9 @@
+         }
+         /*endfor*/
+         break;
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     return  size;
+@@ -2171,6 +2213,9 @@
+         /*endwhile*/
+         ChainIterFree (&ci);
+         break;
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     it->cur_no = 0;
+@@ -2260,6 +2305,8 @@
+         
+     case ITER:
+         return _FrameInstIncrement (frame, count + 1);
++    default:
++	break;
+     }
+     /*endswitch*/
+     return - 1;    /* Error */
+@@ -2304,6 +2351,8 @@
+         }
+         /*endwhile*/
+         return 0;
++    default:
++	break;
+     }
+     /*enswitch*/
+     return - 1;    /* Error */
+@@ -2350,8 +2399,8 @@
+             register int size;
+             register int i;
+ 
+-            unit = _UNIT ((int) fi->template[cur_no].data);
+-            number = _NUMBER ((int) fi->template[cur_no].data);
++            unit = _UNIT ((long) fi->template[cur_no].data);
++            number = _NUMBER ((long) fi->template[cur_no].data);
+ 
+             i = cur_no;
+             size = 0;
+@@ -2395,6 +2444,9 @@
+             /*endif*/
+             return sub_size;
+         }
++
++    default:
++	break;
+     }
+     /*endswitch*/
+     return NO_VALUE;
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nAttr.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nAttr.c
+@@ -30,8 +30,10 @@
+ ******************************************************************/
+ 
+ #include <X11/Xlib.h>
++#include <X11/Xresource.h>
+ #include "IMdkit.h"
+ #include "Xi18n.h"
++#include "XimFunc.h"
+ 
+ typedef struct 
+ {
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nClbk.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nClbk.c
+@@ -33,6 +33,7 @@
+ #include "IMdkit.h"
+ #include "Xi18n.h"
+ #include "FrameMgr.h"
++#include "XimFunc.h"
+ 
+ int _Xi18nGeometryCallback (XIMS ims, IMProtocol *call_data)
+ {
+@@ -168,14 +169,10 @@
+     FrameMgrPutToken (fm, preedit_CB->icid);
+     FrameMgrPutToken (fm, draw->caret);
+     FrameMgrPutToken (fm, draw->chg_first);
+-FrameMgrPutToken(fm, draw->chg_length);
++    FrameMgrPutToken (fm, draw->chg_length);
+     FrameMgrPutToken (fm, status);
+-FrameMgrPutToken(fm, draw->text->length);
+-if( draw->text->length )
++    FrameMgrPutToken (fm, draw->text->length);
+     FrameMgrPutToken (fm, draw->text->string);
+-FrameMgrPutToken(fm, feedback_count);
+-
+-
+     for (i = 0;  i < feedback_count;  i++)
+         FrameMgrPutToken (fm, draw->text->feedback[i]);
+     /*endfor*/
+@@ -325,10 +322,10 @@
+ int _Xi18nStatusDrawCallback (XIMS ims, IMProtocol *call_data)
+ {
+     Xi18n i18n_core = ims->protocol;
+-    FrameMgr fm;
++    FrameMgr fm = (FrameMgr)0;
+     extern XimFrameRec status_draw_text_fr[];
+     extern XimFrameRec status_draw_bitmap_fr[];
+-    register int total_size;
++    register int total_size = 0;
+     unsigned char *reply = NULL;
+     IMStatusCBStruct *status_CB =
+         (IMStatusCBStruct *) &call_data->status_callback;
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nIc.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nIc.c
+@@ -33,6 +33,7 @@
+ #include "IMdkit.h"
+ #include "Xi18n.h"
+ #include "FrameMgr.h"
++#include "XimFunc.h"
+ 
+ #define IC_SIZE 64
+ 
+@@ -104,6 +105,7 @@
+         return;
+     /*endif*/
+     FrameMgrGetToken (fm, base_name);
++    FrameMgrFree(fm);
+     strncpy (buf, base_name, base_length);
+     buf[base_length] = (char) 0;
+ 
+@@ -536,10 +538,7 @@
+                     attr_ret[n].attribute_id = xic_attr[j].attribute_id;
+                     attr_ret[n].name_length = xic_attr[j].length;
+                     attr_ret[n].name = malloc (xic_attr[j].length + 1);
+-                    memcpy (attr_ret[n].name,
+-			    xic_attr[j].name,
+-			    xic_attr[j].length);
+-		    attr_ret[n].name[xic_attr[j].length] = '\0';
++		    strcpy(attr_ret[n].name, xic_attr[j].name);
+                     attr_ret[n].type = xic_attr[j].type;
+                     n++;
+                     i++;
+@@ -560,10 +559,7 @@
+                 attr_ret[n].attribute_id = xic_attr[j].attribute_id;
+                 attr_ret[n].name_length = xic_attr[j].length;
+                 attr_ret[n].name = malloc (xic_attr[j].length + 1);
+-                memcpy (attr_ret[n].name,
+-			xic_attr[j].name,
+-			xic_attr[j].length);
+-		attr_ret[n].name[xic_attr[j].length] = '\0';
++		strcpy(attr_ret[n].name, xic_attr[j].name);
+                 attr_ret[n].type = xic_attr[j].type;
+                 n++;
+                 break;
+@@ -651,6 +647,7 @@
+         FrameMgrGetToken (fm, value);
+         attrib_list[attrib_num].value = (void *) malloc (value_length + 1);
+         memmove (attrib_list[attrib_num].value, value, value_length);
++	((char *)attrib_list[attrib_num].value)[value_length] = '\0';
+         attrib_num++;
+     }
+     /*endwhile*/
+@@ -720,9 +717,23 @@
+ 
+     if (i18n_core->address.improto)
+     {
+-        if (!(i18n_core->address.improto(ims, call_data)))
++	int ret, i;
++
++	ret = i18n_core->address.improto(ims, call_data);
++	for (i=0; i<preedit_ic_num; i++) {
++	    if (pre_attr[i].value_length)
++		free(pre_attr[i].value);
++	}
++	for (i=0; i<status_ic_num; i++) {
++	    if (sts_attr[i].value_length)
++		free(sts_attr[i].value);
++	}
++	for (i=0; i<ic_num; i++) {
++	    if (ic_attr[i].value_length)
++		free(ic_attr[i].value);
++	}
++	if (ret == 0)
+             return;
+-        /*endif*/
+     }
+     /*endif*/
+     if (create_flag == True)
+@@ -797,6 +808,7 @@
+     }
+     /*endif*/
+     FrameMgrFree (fm);
++    XFree(reply);
+ }
+ 
+ /* called from GetICValueMessageProc */
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nMethod.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nMethod.c
+@@ -39,6 +39,7 @@
+ #include "FrameMgr.h"
+ #include "IMdkit.h"
+ #include "Xi18n.h"
++#include "XimFunc.h"
+ 
+ extern Xi18nClient *_Xi18nFindClient (Xi18n, CARD16);
+ 
+@@ -47,11 +48,12 @@
+ static Status xi18n_closeIM (XIMS);
+ static char *xi18n_setIMValues (XIMS, XIMArg *);
+ static char *xi18n_getIMValues (XIMS, XIMArg *);
+-static Status xi18n_forwardEvent (XIMS, IMForwardEventStruct *);
+-static Status xi18n_commit (XIMS, IMCommitStruct *);
+-static Status xi18n_callCallback (XIMS, IMProtocol *);
+-static Status xi18n_preeditStart (XIMS, IMProtocol *);
+-static Status xi18n_preeditEnd (XIMS, IMProtocol *);
++static Status xi18n_forwardEvent (XIMS, XPointer);
++static Status xi18n_commit (XIMS, XPointer);
++static int xi18n_callCallback (XIMS, XPointer);
++static int xi18n_preeditStart (XIMS, XPointer);
++static int xi18n_preeditEnd (XIMS, XPointer);
++static int xi18n_syncXlib (XIMS, XPointer);
+ 
+ #ifndef XIM_SERVERS
+ #define XIM_SERVERS "XIM_SERVERS"
+@@ -71,6 +73,7 @@
+     xi18n_callCallback,
+     xi18n_preeditStart,
+     xi18n_preeditEnd,
++    xi18n_syncXlib,
+ };
+ 
+ extern Bool _Xi18nCheckXAddress (Xi18n, TransportSW *, char *);
+@@ -79,8 +82,10 @@
+ TransportSW _TransR[] =
+ {
+     {"X",               1, _Xi18nCheckXAddress},
++#ifdef TCPCONN
+     {"tcp",             3, _Xi18nCheckTransAddress},
+     {"local",           5, _Xi18nCheckTransAddress},
++#endif
+ #ifdef DNETCONN
+     {"decnet",          6, _Xi18nCheckTransAddress},
+ #endif
+@@ -543,6 +548,7 @@
+             break;
+         }
+     }
++
+     if (found == False) {
+         XSetSelectionOwner (dpy, atom, ims_win, CurrentTime);
+         XChangeProperty (dpy,
+@@ -576,6 +582,83 @@
+     return (XGetSelectionOwner (dpy, atom) == ims_win);
+ }
+ 
++static int DeleteXi18nAtom(Xi18n i18n_core)
++{
++    Display *dpy = i18n_core->address.dpy;
++    Window root = RootWindow (dpy, DefaultScreen (dpy));
++    Atom realtype;
++    int realformat;
++    unsigned long bytesafter;
++    long *data=NULL;
++    unsigned long length;
++    Atom atom;
++    int i, ret;
++    int found;
++    char buf[256];
++
++    (void)sprintf(buf, "@server=%s", i18n_core->address.im_name);
++    if ((atom = XInternAtom(dpy, buf, False)) == 0)
++        return False;
++    i18n_core->address.selection = atom;
++
++    if (XIM_Servers == None)
++        XIM_Servers = XInternAtom (dpy, XIM_SERVERS, False);
++    XGetWindowProperty (dpy,
++                        root,
++                        XIM_Servers,
++                        0L,
++                        1000000L,
++                        False,
++                        XA_ATOM,
++                        &realtype,
++                        &realformat,
++                        &length,
++                        &bytesafter,
++                        (unsigned char **) (&data));
++    if (realtype != XA_ATOM || realformat != 32) {
++        if (data != NULL)
++            XFree ((char *) data);
++        return False;
++    }
++
++    found = False;
++    for (i = 0; i < length; i++) {
++        if (data[i] == atom) {
++            found = True;
++            break;
++        }
++    }
++
++    if (found == True) {
++        for (i=i+1; i<length; i++)
++            data[i-1] = data[i];
++        XChangeProperty (dpy,
++                         root,
++                         XIM_Servers,
++                         XA_ATOM,
++                         32,
++                         PropModeReplace,
++                         (unsigned char *)data,
++                         length-1);
++        ret = True;
++    }
++    else {
++        XChangeProperty (dpy,
++                         root,
++                         XIM_Servers,
++                         XA_ATOM,
++                         32,
++                         PropModePrepend,
++                         (unsigned char *)data,
++                         0);
++        ret = False;
++    }
++    if (data != NULL)
++        XFree ((char *) data);
++    return ret;
++}
++
++
+ /* XIM protocol methods */
+ static void *xi18n_setup (Display *dpy, XIMArg *args)
+ {
+@@ -686,7 +769,7 @@
+                             SelectionRequest,
+                             SelectionRequest,
+                             WaitXSelectionRequest,
+-                            ims);
++                            (XPointer)ims);
+     XFlush(dpy);
+     return True;
+ }
+@@ -694,74 +777,20 @@
+ static Status xi18n_closeIM(XIMS ims)
+ {
+     Xi18n i18n_core = ims->protocol;
+-    Window ims_win = i18n_core->address.im_window;
+     Display *dpy = i18n_core->address.dpy;
+-    Atom atom = i18n_core->address.selection;
+-    Window root = RootWindow (dpy, DefaultScreen (dpy));
+-    Atom realtype;
+-    int realformat;
+-    unsigned long length;
+-    unsigned long bytesafter;
+-    long *data, *new_data;
+-    int i, j;
+ 
++    DeleteXi18nAtom(i18n_core);
+     if (!i18n_core->methods.end (ims))
+         return False;
+-    /*endif*/
+     
+     _XUnregisterFilter (dpy,
+                         i18n_core->address.im_window,
+                         WaitXSelectionRequest,
+-                        ims);
+-/*
+- *  Now we should delete the atom list in XIM_Servers property of Root Window
+- */
+-/*
+-    XGetWindowProperty (dpy,
+-                        root,
+-                        XIM_Servers,
+-                        0L,
+-                        1000000L,
+-                        False,
+-                        XA_ATOM,
+-                        &realtype,
+-                        &realformat,
+-                        &length,
+-                        &bytesafter,
+-                        (unsigned char **) (&data));
+-    if (realtype == XA_ATOM && realformat == 32 && length>0) {
+-        new_data = malloc(sizeof(long) * length);
+-        memset(new_data, 0, sizeof(long) * length);
+-
+-        for (i=0, j=0; i<length; i++) {
+-            if (data[i] != atom) {
+-		new_data[j] = data[i];
+-		j ++;
+-	    }
+-        }
+-	XDeleteProperty (dpy,
+-			 root,
+-			 XIM_Servers);
+-	if (j > 0)
+-            XChangeProperty (dpy,
+-                             root,
+-                             XIM_Servers,
+-                             XA_ATOM,
+-                             32,
+-			     PropModePrepend,
+-                             (unsigned char *)new_data,
+-                             j);
+-	free(new_data);
+-    }
+-    XFlush(dpy);
+-
+-    if (data != NULL)
+-        XFree ((char *) data);
++                        (XPointer)ims);
+     XFree (i18n_core->address.im_name);
+     XFree (i18n_core->address.im_locale);
+     XFree (i18n_core->address.im_addr);
+     XFree (i18n_core);
+-*/
+     return True;
+ }
+ 
+@@ -817,9 +846,10 @@
+     /*endswitch*/
+ }
+ 
+-static Status xi18n_forwardEvent (XIMS ims, IMForwardEventStruct *call_data)
++static Status xi18n_forwardEvent (XIMS ims, XPointer xp)
+ {
+     Xi18n i18n_core = ims->protocol;
++    IMForwardEventStruct *call_data = (IMForwardEventStruct *)xp;
+     FrameMgr fm;
+     extern XimFrameRec forward_event_fr[];
+     register int total_size;
+@@ -879,9 +909,10 @@
+     return True;
+ }
+ 
+-static Status xi18n_commit (XIMS ims, IMCommitStruct *call_data)
++static Status xi18n_commit (XIMS ims, XPointer xp)
+ {
+     Xi18n i18n_core = ims->protocol;
++    IMCommitStruct *call_data = (IMCommitStruct *)xp;
+     FrameMgr fm;
+     extern XimFrameRec commit_chars_fr[];
+     extern XimFrameRec commit_both_fr[];
+@@ -974,8 +1005,9 @@
+     return True;
+ }
+ 
+-static int xi18n_callCallback (XIMS ims, IMProtocol *call_data)
++static int xi18n_callCallback (XIMS ims, XPointer xp)
+ {
++    IMProtocol *call_data = (IMProtocol *)xp;
+     switch (call_data->major_code)
+     {
+     case XIM_GEOMETRY:
+@@ -1010,8 +1042,9 @@
+ }
+ 
+ /* preeditStart and preeditEnd are used only for Dynamic Event Flow. */
+-static int xi18n_preeditStart (XIMS ims, IMProtocol *call_data)
++static int xi18n_preeditStart (XIMS ims, XPointer xp)
+ {
++    IMProtocol *call_data = (IMProtocol *)xp;
+     Xi18n i18n_core = ims->protocol;
+     IMPreeditStateStruct *preedit_state =
+         (IMPreeditStateStruct *) &call_data->preedit_state;
+@@ -1036,8 +1069,9 @@
+     return True;
+ }
+ 
+-static int xi18n_preeditEnd (XIMS ims, IMProtocol *call_data)
++static int xi18n_preeditEnd (XIMS ims, XPointer xp)
+ {
++    IMProtocol *call_data = (IMProtocol *)xp;
+     Xi18n i18n_core = ims->protocol;
+     int on_key_num = i18n_core->address.on_keys.count_keys;
+     int off_key_num = i18n_core->address.off_keys.count_keys;
+@@ -1057,3 +1091,39 @@
+                         0);
+     return True;
+ }
++
++static int xi18n_syncXlib (XIMS ims, XPointer xp)
++{
++    IMProtocol *call_data = (IMProtocol *)xp;
++    Xi18n i18n_core = ims->protocol;
++    IMSyncXlibStruct *sync_xlib;
++
++    extern XimFrameRec sync_fr[];
++    FrameMgr fm;
++    CARD16 connect_id = call_data->any.connect_id;
++    int total_size;
++    unsigned char *reply;
++
++    sync_xlib = (IMSyncXlibStruct *) &call_data->sync_xlib;
++    fm = FrameMgrInit (sync_fr, NULL,
++                       _Xi18nNeedSwap (i18n_core, connect_id));
++    total_size = FrameMgrGetTotalSize(fm);
++    reply = (unsigned char *) malloc (total_size);
++    if (!reply) {
++        _Xi18nSendMessage (ims, connect_id, XIM_ERROR, 0, 0, 0);
++        return False;
++    }
++    memset (reply, 0, total_size);
++    FrameMgrSetBuffer (fm, reply);
++
++    /* input input-method ID */
++    FrameMgrPutToken (fm, connect_id);
++    /* input input-context ID */
++    FrameMgrPutToken (fm, sync_xlib->icid);
++    _Xi18nSendMessage (ims, connect_id, XIM_SYNC, 0, reply, total_size);
++
++    FrameMgrFree (fm);
++    XFree(reply);
++    return True;
++}
++
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nPtHdr.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nPtHdr.c
+@@ -29,6 +29,10 @@
+  
+ ******************************************************************/
+ 
++#ifdef HAVE_CONFIG_H
++#  include "config.h"
++#endif
++
+ #include <stdlib.h>
+ #include <sys/param.h>
+ #include <X11/Xlib.h>
+@@ -40,6 +44,8 @@
+ #include "FrameMgr.h"
+ #include "IMdkit.h"
+ #include "Xi18n.h"
++#include "XimFunc.h"
++
+ 
+ extern Xi18nClient *_Xi18nFindClient (Xi18n, CARD16);
+ 
+@@ -556,6 +562,17 @@
+     FrameMgrFree (fm);
+ 
+     client->sync = False;
++
++    if (ims->sync == True) {
++	ims->sync = False;
++	if (i18n_core->address.improto) {
++	    call_data->sync_xlib.major_code = XIM_SYNC_REPLY;
++	    call_data->sync_xlib.minor_code = 0;
++	    call_data->sync_xlib.connect_id = input_method_ID;
++	    call_data->sync_xlib.icid = input_context_ID;
++	    i18n_core->address.improto(ims, call_data);
++	}
++    }
+ }
+ 
+ static void GetIMValueFromName (Xi18n i18n_core,
+@@ -703,7 +720,10 @@
+     register int j;
+     int number;
+     CARD16 *im_attrID_list;
++    char **name_list;
++    CARD16 name_number;
+     XIMAttribute *im_attribute_list;
++    IMGetIMValuesStruct *getim = (IMGetIMValuesStruct *)&call_data->getim;
+     CARD16 connect_id = call_data->any.connect_id;
+     CARD16 input_method_ID;
+ 
+@@ -716,6 +736,8 @@
+     FrameMgrGetToken (fm, byte_length);
+     im_attrID_list = (CARD16 *) malloc (sizeof (CARD16)*20);
+     memset (im_attrID_list, 0, sizeof (CARD16)*20);
++    name_list = (char **)malloc(sizeof(char *) * 20);
++    memset(name_list, 0, sizeof(char *) * 20);
+     number = 0;
+     while (FrameMgrIsIterLoopEnd (fm, &status) == False)
+     {
+@@ -724,32 +746,26 @@
+     }
+     FrameMgrFree (fm);
+ 
+-#ifdef PROTOCOL_RICH
+-    if (i18n_core->address.improto) {
+-        IMGetIMValuesStruct *getim = (IMGetIMValuesStruct *) &call_data->getim;
+-        char **name_list;
+-        CARD16 name_number;
+-
+-        name_list = (char **) malloc (sizeof (char *)*20);
+-        memset (name_list, 0, sizeof (char *)*20);
+-        name_number = 0;
+-        for (i = 0;  i < number;  i++) {
+-            for (j = 0;  j < i18n_core->address.im_attr_num;  j++) {
+-                if (i18n_core->address.xim_attr[j].attribute_id ==
++    name_number = 0;
++    for (i = 0;  i < number;  i++) {
++        for (j = 0;  j < i18n_core->address.im_attr_num;  j++) {
++            if (i18n_core->address.xim_attr[j].attribute_id ==
+                     im_attrID_list[i]) {
+-                    name_list[name_number++] = 
++                name_list[name_number++] = 
+ 			i18n_core->address.xim_attr[j].name;
+-                    break;
+-                }
++                break;
+             }
+         }
+-        getim->number = name_number;
+-        getim->im_attr_list = name_list;
+-        if (!(i18n_core->address.improto (ims, call_data))) {
+-    	    XFree (name_list);
++    }
++    getim->number = name_number;
++    getim->im_attr_list = name_list;
++    XFree (name_list);
++
++
++#ifdef PROTOCOL_RICH
++    if (i18n_core->address.improto) {
++        if (!(i18n_core->address.improto (ims, call_data)))
+             return;
+-	}
+-        XFree (name_list);
+     }
+ #endif  /* PROTOCOL_RICH */
+ 
+@@ -805,6 +821,8 @@
+     FrameMgrFree (fm);
+     XFree (reply);
+ 
++    for (i = 0; i < iter_count; i++)
++        XFree(im_attribute_list[i].value);
+     XFree (im_attribute_list);
+ }
+ 
+@@ -950,6 +968,7 @@
+                        0,
+                        reply,
+                        total_size);
++    XFree(reply);
+     FrameMgrFree (fm);
+ }
+ 
+@@ -1007,6 +1026,7 @@
+ 
+     FrameMgrPutToken (fm, input_method_ID);
+     FrameMgrPutToken (fm, resetic->icid);
++    FrameMgrPutToken(fm, resetic->length);
+     FrameMgrPutToken (fm, resetic->commit_string);
+ 
+     _Xi18nSendMessage (ims,
+@@ -1016,6 +1036,7 @@
+                        reply,
+                        total_size);
+     FrameMgrFree (fm);
++    XFree(reply);
+ }
+ 
+ static int WireEventToEvent (Xi18n i18n_core,
+@@ -1299,7 +1320,7 @@
+     Xi18nAddressRec *address = (Xi18nAddressRec *) & i18n_core->address;
+     XIMEncodings *p;
+     int i, j;
+-    int enc_index;
++    int enc_index=0;
+ 
+     p = (XIMEncodings *) &address->encoding_list;
+     for (i = 0;  i < (int) p->count_encodings;  i++)
+@@ -1617,58 +1638,72 @@
+     switch (call_data.major_code)
+     {
+     case XIM_CONNECT:
++	//DebugLog(4, ("-- XIM_CONNECT\n"));
+         ConnectMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_DISCONNECT:
++	//DebugLog(4, ("-- XIM_DISCONNECT\n"));
+         DisConnectMessageProc (ims, &call_data);
+         break;
+ 
+     case XIM_OPEN:
++	//DebugLog(4, ("-- XIM_OPEN\n"));
+         OpenMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_CLOSE:
++	//DebugLog(4, ("-- XIM_CLOSE\n"));
+         CloseMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_QUERY_EXTENSION:
++	//DebugLog(4, ("-- XIM_QUERY_EXTENSION\n"));
+         QueryExtensionMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_GET_IM_VALUES:
++	//DebugLog(4, ("-- XIM_GET_IM_VALUES\n"));
+         GetIMValuesMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_CREATE_IC:
++	//DebugLog(4, ("-- XIM_CREATE_IC\n"));
+         CreateICMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_SET_IC_VALUES:
++	//DebugLog(4, ("-- XIM_SET_IC_VALUES\n"));
+         SetICValuesMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_GET_IC_VALUES:
++	//DebugLog(4, ("-- XIM_GET_IC_VALUES\n"));
+         GetICValuesMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_SET_IC_FOCUS:
++	//DebugLog(4, ("-- XIM_SET_IC_FOCUS\n"));
+         SetICFocusMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_UNSET_IC_FOCUS:
++	//DebugLog(4, ("-- XIM_UNSET_IC_FOCUS\n"));
+         UnsetICFocusMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_DESTROY_IC:
++	//DebugLog(4, ("-- XIM_DESTROY_IC\n"));
+         DestroyICMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_RESET_IC:
++	//DebugLog(4, ("-- XIM_RESET_IC\n"));
+         ResetICMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_FORWARD_EVENT:
++	//DebugLog(4, ("-- XIM_FORWARD_EVENT\n"));
+         if (client->sync == True)
+         {
+             AddQueue (client, p);
+@@ -1681,34 +1716,42 @@
+         break;
+ 
+     case XIM_EXTENSION:
++	//DebugLog(4, ("-- XIM_EXTENSION\n"));
+         ExtensionMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_SYNC:
++	//DebugLog(4, ("-- XIM_SYNC\n"));
+         break;
+ 
+     case XIM_SYNC_REPLY:
++	//DebugLog(4, ("-- XIM_SYNC_REPLY\n"));
+         SyncReplyMessageProc (ims, &call_data, p1);
+         ProcessQueue (ims, connect_id);
+         break;
+ 
+     case XIM_TRIGGER_NOTIFY:
++	//DebugLog(4, ("-- XIM_TRIGGER_NOTIFY\n"));
+         TriggerNotifyMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_ENCODING_NEGOTIATION:
++	//DebugLog(4, ("-- XIM_ENCODING_NEGOTIATION\n"));
+         EncodingNegotiatonMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_PREEDIT_START_REPLY:
++	//DebugLog(4, ("-- XIM_PREEDIT_START_REPLY\n"));
+         PreeditStartReplyMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_PREEDIT_CARET_REPLY:
++	//DebugLog(4, ("-- XIM_PREEDIT_CARET_REPLY\n"));
+         PreeditCaretReplyMessageProc (ims, &call_data, p1);
+         break;
+ 
+     case XIM_STR_CONVERSION_REPLY:
++	//DebugLog(4, ("-- XIM_STR_CONVERSION_REPLY\n"));
+         StrConvReplyMessageProc (ims, &call_data, p1);
+         break;
+     }
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nTr.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nTr.c
+@@ -177,11 +177,11 @@
+     /*endif*/
+     return (unsigned char *) p;
+ 
+-    //TODO: Get rid of this label, and the goto's
++    /* TODO: Get rid of this label, and the goto's  */
+ read_error:
+     _XUnregisterInternalConnection (i18n_core->address.dpy, fd);
+-    _XimdXTransDisconnect (tr_client->accept_conn);
+-    _XimdXTransClose (tr_client->accept_conn);
++    _XimXTransDisconnect (tr_client->accept_conn);
++    _XimXTransClose (tr_client->accept_conn);
+     return (unsigned char *) NULL;
+ }
+ 
+@@ -200,7 +200,7 @@
+         return False;
+     }
+     /*endif*/
+-    fd = _XimdXTransGetConnectionNumber(spec->trans_conn);
++    fd = _XimXTransGetConnectionNumber(spec->trans_conn);
+     return _XRegisterInternalConnection(i18n_core->address.dpy, fd,
+                                         (_XInternalConnectionProc)Xi18nWaitTransListen,
+                                         (XPointer)ims);
+@@ -212,13 +212,13 @@
+     TransSpecRec *spec = (TransSpecRec *) i18n_core->address.connect_addr;
+     int fd;
+ 
+-    fd = _XimdXTransGetConnectionNumber (spec->trans_conn);
++    fd = _XimXTransGetConnectionNumber (spec->trans_conn);
+     if (fd == 0)
+         return False;
+     /*endif*/
+     _XUnregisterInternalConnection (i18n_core->address.dpy, fd);
+-    _XimdXTransDisconnect (spec->trans_conn);
+-    _XimdXTransClose (spec->trans_conn);
++    _XimXTransDisconnect (spec->trans_conn);
++    _XimXTransClose (spec->trans_conn);
+ 
+     XFree (spec->port);
+     XFree (spec);
+@@ -255,7 +255,7 @@
+     Xi18n i18n_core = ims->protocol;
+     Xi18nClient *client = _Xi18nFindClient(i18n_core, connect_id);
+     TransClient *tr_client = (TransClient *)client->trans_rec;
+-    int fd = _XimdXTransGetConnectionNumber(tr_client->accept_conn);
++    int fd = _XimXTransGetConnectionNumber(tr_client->accept_conn);
+ 
+     for (;;)
+     {
+@@ -294,8 +294,8 @@
+ 
+     _XUnregisterInternalConnection (i18n_core->address.dpy,
+                                     tr_client->accept_fd);
+-    _XimdXTransDisconnect (tr_client->accept_conn);
+-    _XimdXTransClose (tr_client->accept_conn);
++    _XimXTransDisconnect (tr_client->accept_conn);
++    _XimXTransClose (tr_client->accept_conn);
+     XFree (tr_client);
+     _Xi18nDeleteClient (i18n_core, connect_id);
+     return True;
+@@ -308,7 +308,7 @@
+ {
+     int len;
+ 
+-    if ((len = _XimdXTransRead (accept_conn, buf, buf_len)) <= 0)
++    if ((len = _XimXTransRead (accept_conn, buf, buf_len)) <= 0)
+         return False;
+     /*endif*/
+     *ret_len = len;
+@@ -321,7 +321,7 @@
+ 
+     while (len > 0)
+     {
+-        if ((nbyte = _XimdXTransWrite (accept_conn, buf, len)) <= 0)
++        if ((nbyte = _XimXTransWrite (accept_conn, buf, len)) <= 0)
+             return False;
+         /*endif*/
+         len -= nbyte;
+@@ -387,7 +387,7 @@
+     tr_client = (TransClient *) malloc (sizeof (TransClient));
+ 
+     tr_client->accept_conn = accept_conn;
+-    tr_client->accept_fd = _XimdXTransGetConnectionNumber (accept_conn);
++    tr_client->accept_fd = _XimXTransGetConnectionNumber (accept_conn);
+     client->trans_rec = tr_client;
+ 
+     return ((TransClient *) tr_client);
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nUtil.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nUtil.c
+@@ -33,9 +33,11 @@
+ #include "IMdkit.h"
+ #include "Xi18n.h"
+ #include "FrameMgr.h"
++#include "XimFunc.h"
+ 
+ Xi18nClient *_Xi18nFindClient (Xi18n, CARD16);
+ 
++int
+ _Xi18nNeedSwap (Xi18n i18n_core, CARD16 connect_id)
+ {
+     CARD8 im_byteOrder = i18n_core->address.im_byteOrder;
+@@ -47,20 +49,23 @@
+ Xi18nClient *_Xi18nNewClient(Xi18n i18n_core)
+ {
+     static CARD16 connect_id = 0;
++    int new_connect_id;
+     Xi18nClient *client;
+ 
+     if (i18n_core->address.free_clients)
+     {
+         client = i18n_core->address.free_clients;
+         i18n_core->address.free_clients = client->next;
++	new_connect_id = client->connect_id;
+     }
+     else
+     {
+         client = (Xi18nClient *) malloc (sizeof (Xi18nClient));
++	new_connect_id = ++connect_id;
+     }
+     /*endif*/
+     memset (client, 0, sizeof (Xi18nClient));
+-    client->connect_id = ++connect_id;
++    client->connect_id = new_connect_id;
+     client->pending = (XIMPending *) NULL;
+     client->sync = False;
+     client->byte_order = '?'; 	/* initial value */
+@@ -226,6 +231,7 @@
+                        reply,
+                        total_size);
+     FrameMgrFree (fm);
++    XFree(reply);
+ }
+ 
+ void _Xi18nSetEventMask (XIMS ims,
+@@ -266,4 +272,5 @@
+                        total_size);
+ 
+     FrameMgrFree (fm);
++    XFree(reply);
+ }
+--- chinput-3.0.2.orig/src/IMdkit/lib/i18nX.c
++++ chinput-3.0.2/src/IMdkit/lib/i18nX.c
+@@ -35,6 +35,7 @@
+ #include "IMdkit.h"
+ #include "Xi18n.h"
+ #include "Xi18nX.h"
++#include "XimFunc.h"
+ 
+ extern Xi18nClient *_Xi18nFindClient(Xi18n, CARD16);
+ extern Xi18nClient *_Xi18nNewClient(Xi18n);
+@@ -70,7 +71,7 @@
+ {
+     Xi18n i18n_core = ims->protocol;
+     Xi18nClient *client = i18n_core->address.clients;
+-    XClient *x_client;
++    XClient *x_client = NULL;
+     FrameMgr fm;
+     extern XimFrameRec packet_header_fr[];
+     unsigned char *p = NULL;
+@@ -195,7 +196,7 @@
+                             ClientMessage,
+                             ClientMessage,
+                             WaitXIMProtocol,
+-                            ims);
++                            (XPointer)ims);
+     event.xclient.type = ClientMessage;
+     event.xclient.display = dpy;
+     event.xclient.window = new_client;
+@@ -232,7 +233,7 @@
+                             ClientMessage,
+                             ClientMessage,
+                             WaitXConnectMessage,
+-                            ims);
++                            (XPointer)ims);
+     return True;
+ }
+ 
+@@ -244,7 +245,7 @@
+     _XUnregisterFilter (dpy,
+                         i18n_core->address.im_window,
+                         WaitXConnectMessage,
+-                        ims);
++                        (XPointer)ims);
+     return True;
+ }
+ 
+@@ -417,7 +418,7 @@
+     _XUnregisterFilter (dpy,
+ 		        x_client->accept_win,
+                         WaitXIMProtocol,
+-		        ims);
++		        (XPointer)ims);
+     XFree (x_client);
+     _Xi18nDeleteClient (i18n_core, connect_id);
+     return True;
+--- chinput-3.0.2.orig/src/IMdkit/lib/IMConn.c
++++ chinput-3.0.2/src/IMdkit/lib/IMConn.c
+@@ -30,7 +30,8 @@
+ ******************************************************************/
+ 
+ #include <X11/Xlib.h>
+-#include <malloc.h>
++#include <stdlib.h>
++#include <string.h>
+ #include "IMdkit.h"
+ #include <stdarg.h>
+ 
+@@ -44,7 +45,7 @@
+ 
+     for (attr = va_arg (var, char*);  attr;  attr = va_arg (var, char*))
+     {
+-	va_arg (var, XIMArg *);
++	(void)va_arg (var, XIMArg *);
+ 	++(*total_count);
+     }
+     /*endfor*/
+--- chinput-3.0.2.orig/src/IMdkit/lib/IMMethod.c
++++ chinput-3.0.2/src/IMdkit/lib/IMMethod.c
+@@ -57,3 +57,9 @@
+ {
+     return (ims->methods->preeditEnd) (ims, call_data);
+ }
++
++int IMSyncXlib(XIMS ims, XPointer call_data)
++{
++    ims->sync = True;
++    return (ims->methods->syncXlib) (ims, call_data);
++}
+--- chinput-3.0.2.orig/src/IMdkit/lib/IMValues.c
++++ chinput-3.0.2/src/IMdkit/lib/IMValues.c
+@@ -29,6 +29,7 @@
+  
+ ******************************************************************/
+ 
++#include <stdlib.h>
+ #include <X11/Xlib.h>
+ #include "IMdkit.h"
+ #include <stdarg.h>
+@@ -43,7 +44,7 @@
+ 
+     for (attr = va_arg (var, char *);  attr;  attr = va_arg (var, char *))
+     {
+-	va_arg (var, XIMArg *);
++	(void)va_arg (var, XIMArg *);
+ 	++(*total_count);
+     }
+     /*endfor*/
+--- chinput-3.0.2.orig/src/IMdkit/lib/Makefile
++++ chinput-3.0.2/src/IMdkit/lib/Makefile
+@@ -1,7 +1,7 @@
+ 
+ CC = gcc
+ #CFLAGS =  -c -O2 -fno-strength-reduce -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L -D_POSIX_SOURCE -D_XOPEN_SOURCE=500L -D_BSD_SOURCE -D_SVID_SOURCE   -DFUNCPROTO=15 -DNARROWPROTO   -DUNIXCONN -DTCPCONN -DXIM_t -DTRANS_SERVER
+-CFLAGS =  -c -O2 -fno-strength-reduce -DXIM_t -DTRANS_SERVER
++CFLAGS =  -c -O2 -fno-strength-reduce -DXIM_t -DTRANS_SERVER 
+ INC = -I../include -I/usr/X11R6/include   
+ 
+ 
+--- chinput-3.0.2.orig/src/IMdkit/lib/XimFunc.h
++++ chinput-3.0.2/src/IMdkit/lib/XimFunc.h
+@@ -0,0 +1,72 @@
++/******************************************************************
++ 
++         Copyright 1994, 1995 by Sun Microsystems, Inc.
++         Copyright 1993, 1994 by Hewlett-Packard Company
++ 
++Permission to use, copy, modify, distribute, and sell this software
++and its documentation for any purpose is hereby granted without fee,
++provided that the above copyright notice appear in all copies and
++that both that copyright notice and this permission notice appear
++in supporting documentation, and that the name of Sun Microsystems, Inc.
++and Hewlett-Packard not be used in advertising or publicity pertaining to
++distribution of the software without specific, written prior permission.
++Sun Microsystems, Inc. and Hewlett-Packard make no representations about
++the suitability of this software for any purpose.  It is provided "as is"
++without express or implied warranty.
++ 
++SUN MICROSYSTEMS INC. AND HEWLETT-PACKARD COMPANY DISCLAIMS ALL
++WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED
++WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
++SUN MICROSYSTEMS, INC. AND HEWLETT-PACKARD COMPANY BE LIABLE FOR ANY
++SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER
++RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
++CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
++IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
++ 
++  Author: Hidetoshi Tajima(tajima@Eng.Sun.COM) Sun Microsystems, Inc.
++
++    This version tidied and debugged by Steve Underwood May 1999
++ 
++******************************************************************/
++
++#ifndef _XimFunc_h
++#define _XimFunc_h
++
++/* i18nAttr.c */
++void _Xi18nInitAttrList (Xi18n i18n_core);
++void _Xi18nInitExtension(Xi18n i18n_core);
++
++/* i18nClbk.c */
++int _Xi18nGeometryCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nPreeditStartCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nPreeditDrawCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nPreeditCaretCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nPreeditDoneCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nStatusStartCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nStatusDrawCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nStatusDoneCallback (XIMS ims, IMProtocol *call_data);
++int _Xi18nStringConversionCallback (XIMS ims, IMProtocol *call_data);
++
++/* i18nIc.c */
++void _Xi18nChangeIC (XIMS ims, IMProtocol *call_data, unsigned char *p,
++                     int create_flag);
++void _Xi18nGetIC (XIMS ims, IMProtocol *call_data, unsigned char *p);
++
++/* i18nUtil.c */
++int _Xi18nNeedSwap (Xi18n i18n_core, CARD16 connect_id);
++Xi18nClient *_Xi18nNewClient(Xi18n i18n_core);
++Xi18nClient *_Xi18nFindClient (Xi18n i18n_core, CARD16 connect_id);
++void _Xi18nDeleteClient (Xi18n i18n_core, CARD16 connect_id);
++void _Xi18nSendMessage (XIMS ims, CARD16 connect_id, CARD8 major_opcode,
++                        CARD8 minor_opcode, unsigned char *data, long length);
++void _Xi18nSendTriggerKey (XIMS ims, CARD16 connect_id);
++void _Xi18nSetEventMask (XIMS ims, CARD16 connect_id, CARD16 im_id,
++                         CARD16 ic_id, CARD32 forward_mask, CARD32 sync_mask);
++
++/* Xlib internal */
++void _XRegisterFilterByType(Display*, Window, int, int,
++		Bool (*filter)(Display*, Window, XEvent*, XPointer), XPointer);
++void _XUnregisterFilter(Display*, Window, 
++		Bool (*filter)(Display*, Window, XEvent*, XPointer), XPointer);
++
++#endif
+--- chinput-3.0.2.orig/src/config.h
++++ chinput-3.0.2/src/config.h
+@@ -0,0 +1,5 @@
++#ifndef CONFIG_H
++#define CONFIG_H
++#define RESOURCEFILE    "/etc/Chinput.ad"
++#define IMDIR           "/usr/dict/"
++#endif
+--- chinput-3.0.2.orig/handwriting/Makefile
++++ chinput-3.0.2/handwriting/Makefile
+@@ -26,9 +26,9 @@
+ 	perl conv_jdata.pl < strokedata_big5.h > hzbig5.dat
+ 
+ install: kpengine hzgb.dat hzbig5.dat
+-	mkdir -p $(prefix)/lib/ZWinPro
+-	cp -f hzgb.dat $(prefix)/lib/ZWinPro/hzgb.dat
+-	cp -f hzbig5.dat $(prefix)/lib/ZWinPro/hzbig5.dat
++	mkdir -p $(prefix)/share/chinput
++	cp -f hzgb.dat $(prefix)/share/chinput/hzgb.dat
++	cp -f hzbig5.dat $(prefix)/share/chinput/hzbig5.dat
+ 	cp -f kpengine $(prefix)/bin/kpengine
+ 
+ clean:
+--- chinput-3.0.2.orig/debian/README.Debian
++++ chinput-3.0.2/debian/README.Debian
+@@ -0,0 +1,39 @@
++Chinput for Debian
++----------------------
++  For more information about Debian Chinese support, please visit:
++  http://www.debian.org/intl/zh 
++
++  Before you use Chinput, may be you need to do some configuration.
++  Under Bash shell:
++  For GB2312:
++     export LANG=zh_CN.GB2312
++     export LC_CTYPE=zh_CN.GB2312
++     export XMODIFIERS=@im=Chinput
++  
++  For Big5:
++     export LANG=zh_TW.Big5
++     export LC_CTYPE=zh_TW.Big5
++     export XMODIFIERS=@im=Chinput
++  Chinput also support GBK, but I haven't tested it.
++
++  Ctrl+Space to activate chinput.
++  Notice: Only when the program support XIM protocol, the Chinput 
++could be activated.
++  
++  TIP: For libc6(>=2.1.94 && <2.2), you maybe need to make a link by 
++hand:
++  cd /usr/lib/locale; ln -s zh_CN zh_CN.GB2312; ln -s zh_TW zh_TW.Big5
++
++  Enjoy it!!
++
++ -- Yu Guanghui <ygh@debian.org>, Tue, 17 Oct 2000 00:47:01 +0800
++
++ Notice: Chinput only can use 16 point fonts.
++ Thanks for Forrest Cahoon <forrest@pconline.com> 's report.
++ 
++ -- Yu Guanghui <ygh@debian.org>, Wed, 19 Oct 2001 17:47:01 +0800
++
++  You can copy /etc/Chinput.ad to ~/.chinput in order to custom configure.
++
++ -- Yu Guanghui <ygh@debian.org>, Sat, 10 May 2003 20:26:01 +0800
++ 
+--- chinput-3.0.2.orig/debian/changelog
++++ chinput-3.0.2/debian/changelog
+@@ -0,0 +1,155 @@
++chinput (3.0.2-13) unstable; urgency=low
++
++  * Changed /usr/lib/ZWinPro to /usr/share/chinput 
++  * Moved Chinput.ad to /etc
++
++ -- Yu Guanghui <ygh@debian.org>  Sat, 10 May 2003 20:25:07 +0800
++
++chinput (3.0.2-12) unstable; urgency=low
++
++  * Build with new unicon-im.
++
++ -- Yu Guanghui <ygh@debian.org>  Fri,  9 May 2003 18:19:08 +0800
++
++chinput (3.0.2-11) unstable; urgency=low
++
++  * Built with libpth2 (closes:Bug#184675)
++  * maybe it's libpth2's bug, I have to depend on libpth2 by hand.
++
++ -- Yu Guanghui <ygh@debian.org>  Wed, 12 Mar 2003 21:26:20 +0800
++
++chinput (3.0.2-10) unstable; urgency=low
++
++  * Using XCIN's IMdkit instead of the old one, expect some memory 
++    leaks can be fixed. 
++
++ -- Yu Guanghui <ygh@debian.org>  Mon, 10 Jun 2002 20:49:01 +0800
++
++chinput (3.0.2-9) unstable; urgency=low
++
++  * Changed WuBi input method from turbo to cce. 
++
++ -- Yu Guanghui <ygh@debian.org>  Sat, 11 May 2002 21:35:29 +0800
++
++chinput (3.0.2-8) unstable; urgency=low
++
++  * Compiled with libpth14 
++
++ -- Yu Guanghui <ygh@debian.org>  Tue, 15 Jan 2002 22:44:00 +0800
++
++chinput (3.0.2-7) unstable; urgency=low
++
++  * This patch is from John R. Daily [jdaily@progeny.com].
++    Thank you very much. (closes:Bug#119884)
++  * Add ia64 back into control (changed arch to any)
++  * FrameMgr.c: Changed dangerous pointer->int cast to pointer->uintptr_t,
++    a new type defined by C99 to be an integer the same size as a pointer.
++  * IMValues.c: Added stdlib.h header for malloc(3) to avoid pointer
++    truncation issues on ia64.
++
++ -- Yu Guanghui <ygh@debian.org>  Sat, 17 Nov 2001 08:29:26 +0800
++
++chinput (3.0.2-6) unstable; urgency=low
++
++  * Removed IA64 from the support listing. It will be added 
++    in future if unicon supports IA64.
++
++ -- Yu Guanghui <ygh@debian.org>  Wed, 24 Oct 2001 15:51:50 +0800
++
++chinput (3.0.2-5) unstable; urgency=low
++
++  * My stupid mistake. Forgot to change back fontname in color.c
++   and default fonts in Chinput.ad after testing a bug of the 
++   defoma package. (closes:Bug#116232)
++  * Notice: The chinput only can use 16 points fonts.
++
++ -- Yu Guanghui <ygh@debian.org>  Fri, 19 Oct 2001 17:41:33 +0800
++
++chinput (3.0.2-4) unstable; urgency=low
++
++  * Fonts problem workround. (just simple don't use
++    medium fonts now)
++  * Depend latest unicon-im 3.0.4-2 now.
++
++ -- Yu Guanghui <ygh@debian.org>  Mon, 17 Sep 2001 23:09:38 +0800
++
++chinput (3.0.2-3) unstable; urgency=low
++
++  * Fixed Big5 locale name from zh_TW.BIG5 to zh_TW.Big5. 
++
++ -- Yu Guanghui <ygh@debian.org>  Sun, 12 Aug 2001 09:50:47 +0800
++
++chinput (3.0.2-2) unstable; urgency=low
++
++  * Fixed display problem with xf4.1.0. (not a good way, but it work).
++
++ -- Yu Guanghui <ygh@debian.org>  Fri,  3 Aug 2001 21:00:55 +0800
++
++chinput (3.0.2-1) unstable; urgency=low
++
++  * New upstream release
++
++ -- Yu Guanghui <ygh@debian.org>  Thu, 19 Jul 2001 17:54:47 +0800
++
++chinput (3.0.1-9) unstable; urgency=low
++
++  * New patch for couldn't switch to ZNPY in some cases. Thanks to
++    moonlight (www.linuxforum.net).
++
++ -- Yu Guanghui <ygh@debian.org>  Sat,  7 Jul 2001 08:07:19 +0800
++
++chinput (3.0.1-8) unstable; urgency=low
++
++  * Apply chinese from Shu Jingxiang<hashao@china.com>.
++  * Depended unicon 3.0.3-4 now.
++
++ -- Yu Guanghui <ygh@debian.org>  Fri,  6 Jul 2001 15:21:36 +0800
++
++chinput (3.0.1-7) unstable; urgency=low
++
++  * Fixed user phrase support. 
++  * chinput will depend unicon 3.0.3-3 for the user phrase support.
++
++ -- Yu Guanghui <ygh@debian.org>  Thu,  5 Jul 2001 22:57:22 +0800
++
++chinput (3.0.1-6) unstable; urgency=low
++
++  * Merged with miniChinput <http://www.yichang.net.cn/~bozhang/>. 
++
++ -- Yu Guanghui <ygh@debian.org>  Wed, 30 May 2001 00:26:43 +0800
++
++chinput (3.0.1-5) unstable; urgency=low
++
++  * Because xfonts-arphic-* will be replaced by ttf-arphic-*, changed 
++    depend from xfonts-arphic-* to ttf-arphic-*.(closes:Bug#98878)
++
++ -- Yu Guanghui <ygh@debian.org>  Sun, 27 May 2001 19:07:17 +0800
++
++chinput (3.0.1-4) unstable; urgency=low
++
++  * Fixed for unicon-3.0.2.
++
++ -- Yu Guanghui <ygh@debian.org>  Wed,  2 May 2001 02:15:34 +0800
++
++chinput (3.0.1-3) unstable; urgency=low
++
++  * Add lintian override file, make lintian happy. :)
++
++ -- Yu Guanghui <ygh@debian.org>  Tue, 20 Feb 2001 22:56:01 +0800
++
++chinput (3.0.1-2) unstable; urgency=low
++
++  * Change Build-depends to unicon-im (>=3.0-3), chinput can't be 
++    compiled and work with the old one.
++
++ -- Yu Guanghui <ygh@debian.org>  Mon, 19 Feb 2001 22:27:20 +0800
++
++chinput (3.0.1-1) unstable; urgency=low
++
++  * Initial Release.
++
++ -- Yu Guanghui <ygh@debian.org>  Tue, 17 Oct 2000 00:47:01 +0800
++
++Local variables:
++mode: debian-changelog
++End:
+--- chinput-3.0.2.orig/debian/copyright
++++ chinput-3.0.2/debian/copyright
+@@ -0,0 +1,14 @@
++This package was debianized by Yu Guanghui <ygh@debian.org> on
++Tue, 17 Oct 2000 00:47:01 +0800.
++
++It was downloaded from http://turbolinux.com.cn/~justiny/project-chinput.html
++
++Upstream Author: Yu Mingjian <justiny@turbolinux.com.cn>
++
++Copyright:
++
++The programs in this package may be copied under the terms of the GNU  
++General Public Licence (see below).
++
++On Debian systems, you can find the complete GNU GPL at
++/usr/share/common-licenses/GPL.
+--- chinput-3.0.2.orig/debian/menu
++++ chinput-3.0.2/debian/menu
+@@ -0,0 +1,3 @@
++?package(chinput):needs="x11" section="XShells"\
++  title="Chinput" command="/usr/bin/chinput" \
++  longtitle="Chinese input server for X Window System with XIM support"
+--- chinput-3.0.2.orig/debian/dirs
++++ chinput-3.0.2/debian/dirs
+@@ -0,0 +1,4 @@
++etc/
++usr/bin
++usr/sbin
++usr/share/lintian/overrides
+--- chinput-3.0.2.orig/debian/override
++++ chinput-3.0.2/debian/override
+@@ -0,0 +1,4 @@
++chinput: binary-or-shlib-defines-rpath ./usr/bin/chinput /usr/lib/unicon
++chinput: binary-without-manpage chinput
++chinput: binary-without-manpage kpengine
++chinput: package-has-a-duplicate-relation unicon-im
+--- chinput-3.0.2.orig/debian/control
++++ chinput-3.0.2/debian/control
+@@ -0,0 +1,17 @@
++Source: chinput
++Section: utils
++Priority: optional
++Build-depends: debhelper, libpth-dev, imlib-dev, unicon-im (>= 3.0.4-9)
++Maintainer: Yu Guanghui <ygh@debian.org>
++Standards-Version: 3.5.8
++
++Package: chinput
++Architecture: any
++Depends: ${shlibs:Depends}, ttf-arphic-gbsn00lp | ttf-arphic-bsmi00lp, libpth2
++Conflicts: unicon-im (<< 3.0.4-9)
++Description: Chinese XIM Input Server
++ This package contains the Chinput Chinese input server with XIM support.
++ It supports both Big5 (traditional Chinese) and GB (simplified Chinese)
++ character sets. 
++ .
++ Author: Yu Mingjian <justiny@turbolinux.com.cn>
+--- chinput-3.0.2.orig/debian/rules
++++ chinput-3.0.2/debian/rules
+@@ -0,0 +1,78 @@
++#!/usr/bin/make -f
++# Sample debian/rules that uses debhelper.
++# GNU copyright 1997 to 1999 by Joey Hess.
++
++# Uncomment this to turn on verbose mode.
++#export DH_VERBOSE=1
++
++# This is the debhelper compatability version to use.
++export DH_COMPAT=1
++
++build: build-stamp
++build-stamp:
++	dh_testdir
++
++	
++	# Add here commands to compile the package.
++	#$(MAKE)
++
++	touch build-stamp
++
++clean:
++	dh_testdir
++	dh_testroot
++	rm -f build-stamp
++
++	# Add here commands to clean up after the build process.
++	-$(MAKE) clean
++
++	dh_clean
++
++install: build
++	dh_testdir
++	dh_testroot
++	dh_clean -k
++	dh_installdirs
++
++	# Add here commands to install the package into debian/tmp.
++	$(MAKE) install prefix=`pwd`/debian/tmp/usr  etc_prefix=`pwd`/debian/tmp/etc
++	cp -f debian/override `pwd`/debian/tmp/usr/share/lintian/overrides/chinput
++
++
++# Build architecture-independent files here.
++binary-indep: build install
++# We have nothing to do by default.
++
++# Build architecture-dependent files here.
++binary-arch: build install
++#	dh_testversion
++	dh_testdir
++	dh_testroot
++#	dh_installdebconf	
++	dh_installdocs
++	dh_installexamples
++	dh_installmenu
++#	dh_installemacsen
++#	dh_installpam
++#	dh_installinit
++	dh_installcron
++	dh_installmanpages
++	dh_installinfo
++#	dh_undocumented
++	dh_installchangelogs  doc/CHANGES
++	dh_link
++	dh_strip
++	dh_compress
++	dh_fixperms
++	# You may want to make some executables suid here.
++#	dh_suidregister
++#	dh_makeshlibs
++	dh_installdeb
++#	dh_perl
++	dh_shlibdeps
++	dh_gencontrol
++	dh_md5sums
++	dh_builddeb
++
++binary: binary-indep binary-arch
++.PHONY: build clean binary-indep binary-arch binary install
+--- chinput-3.0.2.orig/debian/docs
++++ chinput-3.0.2/debian/docs
+@@ -0,0 +1,5 @@
++doc/API
++doc/BUGS
++doc/FAQ
++doc/README
++doc/USAGE
+--- chinput-3.0.2.orig/debian/conffiles
++++ chinput-3.0.2/debian/conffiles
+@@ -0,0 +1 @@
++/etc/Chinput.ad
+--- chinput-3.0.2.orig/debian/patches/ia64.patch
++++ chinput-3.0.2/debian/patches/ia64.patch
+@@ -0,0 +1,78 @@
++diff -Naur chinput.orig/src/IMdkit/lib/FrameMgr.c chinput-3.0.2/src/IMdkit/lib/FrameMgr.c
++--- chinput.orig/src/IMdkit/lib/FrameMgr.c	Sat Jul  1 21:01:01 2000
+++++ chinput-3.0.2/src/IMdkit/lib/FrameMgr.c	Fri Nov 16 15:28:48 2001
++@@ -28,6 +28,7 @@
++ 
++ #include <X11/Xlibint.h>
++ #include <stdlib.h>
+++#include <stdint.h> /* uintptr_t */
++ #include "FrameMgr.h"
++ 
++ /* Convenient macro */
++@@ -909,8 +910,8 @@
++             register int offset, iter_idx;
++ 
++             info->counter.is_byte_len =
++-                (((int) fi->template[fi->cur_no].data & 0xFF)) == FmCounterByte;
++-            offset = ((int) fi->template[fi->cur_no].data) >> 8;
+++                (((uintptr_t) fi->template[fi->cur_no].data & 0xFF)) == FmCounterByte;
+++            offset = ((uintptr_t) fi->template[fi->cur_no].data) >> 8;
++             iter_idx = fi->cur_no + offset;
++             if (fi->template[iter_idx].type == ITER)
++             {
++@@ -958,8 +959,8 @@
++             register int size;
++             register int i;
++ 
++-            unit = _UNIT ((int) fi->template[fi->cur_no].data);
++-            number = _NUMBER ((int) fi->template[fi->cur_no].data);
+++            unit = _UNIT ((uintptr_t) fi->template[fi->cur_no].data);
+++            number = _NUMBER ((uintptr_t) fi->template[fi->cur_no].data);
++ 
++             i = fi->cur_no;
++             size = 0;
++@@ -1058,8 +1059,8 @@
++ 	    register int iter_idx;
++ 
++             info->counter.is_byte_len =
++-                (((int) fi->template[fi->cur_no].data) & 0xFF) == FmCounterByte;
++-            offset = ((int)fi->template[fi->cur_no].data) >> 8;
+++                (((uintptr_t) fi->template[fi->cur_no].data) & 0xFF) == FmCounterByte;
+++            offset = ((uintptr_t)fi->template[fi->cur_no].data) >> 8;
++             iter_idx = fi->cur_no + offset;
++             if (fi->template[iter_idx].type == ITER)
++             {
++@@ -1105,8 +1106,8 @@
++             register size;
++             register i;
++ 
++-            unit = _UNIT ((int) fi->template[fi->cur_no].data);
++-            number = _NUMBER ((int) fi->template[fi->cur_no].data);
+++            unit = _UNIT ((uintptr_t) fi->template[fi->cur_no].data);
+++            number = _NUMBER ((uintptr_t) fi->template[fi->cur_no].data);
++ 
++             i = fi->cur_no;
++             size = 0;
++@@ -2350,8 +2351,8 @@
++             register int size;
++             register int i;
++ 
++-            unit = _UNIT ((int) fi->template[cur_no].data);
++-            number = _NUMBER ((int) fi->template[cur_no].data);
+++            unit = _UNIT ((uintptr_t) fi->template[cur_no].data);
+++            number = _NUMBER ((uintptr_t) fi->template[cur_no].data);
++ 
++             i = cur_no;
++             size = 0;
++
++diff -Naur chinput.orig/src/IMdkit/lib/IMValues.c chinput-3.0.2/src/IMdkit/lib/IMValues.c
++--- chinput.orig/src/IMdkit/lib/IMValues.c	Sat Jul  1 21:01:01 2000
+++++ chinput-3.0.2/src/IMdkit/lib/IMValues.c	Fri Nov 16 15:22:14 2001
++@@ -32,6 +32,7 @@
++ #include <X11/Xlib.h>
++ #include "IMdkit.h"
++ #include <stdarg.h>
+++#include <stdlib.h> /* malloc(3) ! */
++ 
++ #define Va_start(a,b) va_start(a,b)
++ 

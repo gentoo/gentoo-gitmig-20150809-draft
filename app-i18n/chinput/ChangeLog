@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/chinput
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/chinput/ChangeLog,v 1.1 2003/05/25 15:10:52 liquidx Exp $
+
+*chinput-3.0.2 (25 May 2003)
+
+  25 May 2003; Alastair Tse <liquidx@gentoo.org> chinput-3.0.2.ebuild,
+  files/chinput-3.0.2-config.patch, files/chinput-3.0.2-debian.patch:
+  New ebuild. Another good Chinese Input method.
+

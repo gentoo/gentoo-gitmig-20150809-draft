@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/scim-chinese
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/ChangeLog,v 1.1 2003/05/25 15:10:52 liquidx Exp $
+
+*scim-chinese-0.2.1 (25 May 2003)
+
+  25 May 2003; Alastair Tse <liquidx@gentoo.org> scim-chinese-0.2.1.ebuild:
+  Initial ebuild. Distribution of this ebuild is allowed by the author, but
+  the binary must not be mirrored or used for commercial purposes.
+

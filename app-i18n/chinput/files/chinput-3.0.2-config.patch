@@ -1,0 +1,262 @@
+--- chinput-3.0.2/resource/Chinput.ad
++++ chinput-3.0.2/resource/Chinput.ad
+@@ -25,10 +25,10 @@
+ ! locales
+ !
+ 
+-chinput.gblocale	=	zh_CN
+-chinput.gbklocale	=	zh_CN.gbk
+-chinput.gb18030locale	=	zh_CN.gb18030
+-chinput.big5locale	=	zh_TW.big5
++chinput.gblocale	=	zh_CN.gb2312
++chinput.gbklocale	=	zh_CN.GBK
++chinput.gb18030locale	=	zh_CN.GB18030
++chinput.big5locale	=	zh_TW.Big5
+ 
+ !
+ ! input style: AUTO, ROOT, OVERSPOT, ONSPOT, OFFSPOT
+@@ -57,15 +57,21 @@
+ ! for big5: PY, ETZY, ZOZY, Simplex, CangJie, 
+ !	    English, 4Corner, HSU, ARRAY30, Boshiamy
+ !
+-chinput.dictionary		=	/usr/lib/unicon2
++chinput.dictionary		=	/usr/lib/unicon/modules/
+ chinput.inputmethod.gb		=	ZNPY
+ chinput.inputmethod.big5	=	PY
++
++! Default setting for CHINESE/WESTERN punctuation marks.
++chinput.punct			=	WESTERN
++
+ !
+ ! 16 point font set
+ !
+ chinput.font			=	8x16
+-chinput.gbfont			=	-*-song-medium-r-normal--16-*-*-*-*-*-gb2312.1980-0
+-chinput.big5font		=	-*-song-medium-r-normal--16-*-*-*-*-*-big5-0
++!chinput.gbfont			=	-default-song-medium-r-normal--16-*-*-*-*-*-gb2312.1980-0
++!chinput.big5font		=	-default-ming-medium-r-normal--16-*-*-*-*-*-big5-0
++chinput.gbfont			=	-*-*-*-*-*--16-*-*-*-*-*-gb2312.1980-0
++chinput.big5font		=	-*-*-*-*-*--16-*-*-*-*-*-big5-0
+ !
+ !
+ ! inputbar width in chars
+@@ -103,175 +109,175 @@
+ IMENAME		=	ÖÇÄÜÆ´Òô
+ IMENAME		=	´¼¯à«÷­µ
+ ENCODING	=	GB
+-FILE		=	freepy
+-MODULE		=	/usr/lib/unicon2/cce_pinyin.so
++FILE		=	cce/dict
++MODULE		=	/usr/lib/unicon/modules/cce/cce_pinyin.so
+ FAVORITE	=	YES
+ 
+ [PY]
+ IMENAME		=	GBKÆ´Òô
+ IMENAME		=	µL½Õ«÷­µ
+ ENCODING	=	GB
+-FILE		=	gbk/gbkpy_mb.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gbk/gbkpy_mb.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [TONEPY]
+ IMENAME		=	´øµ÷Æ´Òô
+ IMENAME		=	±a½Õ«÷­µ
+ ENCODING	=	GB
+-FILE		=	gb/TONEPY.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/TONEPY.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [CCDOSPY]
+ IMENAME		=	ËõÐ´Æ´Òô
+ IMENAME		=	ÁY¼g«÷­µ
+ ENCODING	=	GB
+-FILE		=	gb/CCDOSPY.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/CCDOSPY.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [WuBi]
+ IMENAME		=	Îå±Ê×ÖÐÍ
+ IMENAME		=	¤­µ§¦r«¬
+ ENCODING	=	GB
+-FILE		=	gb/WuBi.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	cce/dict/wubi.tab
++MODULE		=	/usr/lib/unicon/modules/cce/cce_hzinput.so
+ FAVORITE	=	YES
+ 
+ [CangJie]
+ IMENAME		=	²Ôò¡ÊäÈë
+ IMENAME		=	»a¾e¿é¤J
+ ENCODING	=	GB
+-FILE		=	gb/CangJie.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/CangJie.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [English]
+ IMENAME		=	Ó¢ººÊäÈë
+ IMENAME		=	­^º~¿é¤J
+ ENCODING	=	GB
+-FILE		=	gb/English.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/English.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [CTLau]
+ IMENAME		=	ÁõÊÏÔÁÒô
+ IMENAME		=	¼B¤ó¸f­µ
+ ENCODING	=	GB
+-FILE		=	gb/CTLau.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/CTLau.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [SW]
+ IMENAME		=	Ê×Î²Âë
+ IMENAME		=	­º§À½X
+ ENCODING	=	GB
+-FILE		=	gb/SW.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/SW.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [QianMa]
+ IMENAME		=	Ç®ÂëÊäÈë
+ IMENAME		=	¿ú½X¿é¤J
+ ENCODING	=	GB
+-FILE		=	gb/QianMa.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/QianMa.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [ZRM]
+ IMENAME		=	×ÔÈ»Âë
+ IMENAME		=	¦ÛµM½X
+ ENCODING	=	GB
+-FILE		=	gb/zrm-2.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/zrm-2.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [MGM]
+ IMENAME		=	Âë¸ùÂë
+ IMENAME		=	½X®Ú½X
+ ENCODING	=	GB
+-FILE		=	gb/mgm.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/gb/mgm.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	NO
+ 
+ [PY]
+ IMENAME		=	Æ´ÒôÊäÈë
+ IMENAME		=	«÷­µ¿é¤J
+ ENCODING	=	BIG5
+-FILE		=	big5/pinyin.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/pinyin.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [ETZY]
+ IMENAME		=	ÒÐÌì×¢Òô
+ IMENAME		=	­Ê¤Ñª`­µ
+ ENCODING	=	BIG5
+-FILE		=	big5/ETZY.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/ETZY.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [ZOZY]
+ IMENAME		=	ÁãÒ»×¢Òô
+ IMENAME		=	¹s¤@ª`­µ
+ ENCODING	=	BIG5
+-FILE		=	big5/ZOZY.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/ZOZY.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [Simplex]
+ IMENAME		=	¼òÒ×ÊäÈë
+ IMENAME		=	Â²©ö¿é¤J
+ ENCODING	=	BIG5
+-FILE		=	big5/simplex.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/simplex.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	NO
+ 
+ [CangJie]
+ IMENAME		=	²Öò¡ÊäÈë
+ IMENAME		=	­Ü¾e¿é¤J
+ ENCODING	=	BIG5
+-FILE		=	big5/cj.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/cj.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [English]
+ IMENAME		=	Ó¢ººÊäÈë
+ IMENAME		=	­^º~¿é¤J
+ ENCODING	=	BIG5
+-FILE		=	big5/English.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/English.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	NO
+ 
+ [4Corner]
+ IMENAME		=	ËÄ½ÇºÅÂë
+ IMENAME		=	¥|¨¤¸¹½X
+ ENCODING	=	BIG5
+-FILE		=	big5/4Corner.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/4Corner.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	NO
+ 
+ [HSU]
+ IMENAME		=	ÐíÊÏÔÁÒô
+ IMENAME		=	³\¤ó¸f­µ
+ ENCODING	=	BIG5
+-FILE		=	big5/HSU.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/HSU.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	NO
+ 
+ [ARRAY30]
+ IMENAME		=	ÐÐÁÐ£³£°
+ IMENAME		=	¦æ¦C¢²¢¯
+ ENCODING	=	BIG5
+-FILE		=	big5/array30.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/array30.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 
+ [Boshiamy]
+ IMENAME		=	ÎÞÏºÃ×
+ IMENAME		=	µL½¼¦Ì
+ ENCODING	=	BIG5
+-FILE		=	big5/Boshiamy.tab
+-MODULE		=	/usr/lib/unicon2/TL_hzinput.so
++FILE		=	turbo/dict/big5/Boshiamy.tab
++MODULE		=	/usr/lib/unicon/modules/turbo/TL_hzinput.so
+ FAVORITE	=	YES
+ 

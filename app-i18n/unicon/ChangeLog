@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/unicon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/ChangeLog,v 1.1 2003/05/25 15:10:52 liquidx Exp $
+
+*unicon-3.0.4 (25 May 2003)
+
+  25 May 2003; Alastair Tse <liquidx@gentoo.org> unicon-3.0.4.ebuild,
+  files/unicon-3.0.4-debian.patch, files/unicon-3.0.4-gentoo.patch:
+  New ebuild. Contains required IM methods for Chinput.
+

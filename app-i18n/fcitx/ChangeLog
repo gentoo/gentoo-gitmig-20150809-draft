@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/fcitx
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.1 2003/05/25 15:10:52 liquidx Exp $
+
+*fcitx-1.8.5 (25 May 2003)
+
+  25 May 2003; Alastair Tse <liquidx@gentoo.org> fcitx-1.8.5.ebuild:
+  New ebuild for Chinese Input for X
+
