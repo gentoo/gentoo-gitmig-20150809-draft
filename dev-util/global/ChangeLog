@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.8 2004/06/25 02:33:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.9 2004/06/28 05:35:41 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> global-4.6.1.ebuild:
+  Added ~sparc, ~mips
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> global-4.5.3.ebuild:
   Fix use invocation

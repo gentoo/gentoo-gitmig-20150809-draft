@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/hxd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.3 2004/06/25 02:35:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.4 2004/06/28 05:39:23 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> hxd-0.70.ebuild:
+  Added ~sparc, ~mips
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hxd-0.70.ebuild:
   Don't assign default to S; header fix
