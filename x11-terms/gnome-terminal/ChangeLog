@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.83 2005/03/09 03:22:15 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.84 2005/03/09 06:50:05 joem Exp $
+
+*gnome-terminal-2.10.0 (09 Mar 2005)
+
+  09 Mar 2005; Joe McCann <joem@gentoo.org> +gnome-terminal-2.10.0.ebuild:
+  gnome-2.10 release
 
   09 Mar 2005; Mike Gardiner <obz@gentoo.org> gnome-terminal-2.8.2.ebuild:
   Keyworded x86 ppc
