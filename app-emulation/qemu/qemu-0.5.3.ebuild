@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.5.3.ebuild,v 1.3 2004/04/28 16:47:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.5.3.ebuild,v 1.4 2004/06/04 17:55:07 mr_bones_ Exp $
 
 DESCRIPTION="Multi-platform & multi-targets dynamic translator"
 SRC_URI="http://fabrice.bellard.free.fr/qemu/${P}.tar.gz"
@@ -36,7 +36,7 @@ src_install() {
 		mandir=${D}/usr/share/man || die
 }
 
-pkg_postinstall() {
+pkg_postinst() {
 	echo ">> You will need the Universal TUN/TAP driver compiled into"
 	echo ">> kernel or as a module to use the virtual network device."
 }
