@@ -1,9 +1,8 @@
 # ChangeLog for gnome-extra/mc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.1 2002/12/13 03:03:24 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.2 2002/12/13 10:56:13 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *mc-4.5.55-r7 (06 Dec 2002)
   

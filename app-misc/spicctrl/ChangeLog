@@ -2,8 +2,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
 *spicctrl-1.5 (04 Dez 2002)
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
   04 Dez 2002; Hanno Boeck <hanno@gentoo.org> spicctrl-1.5.ebuild :
