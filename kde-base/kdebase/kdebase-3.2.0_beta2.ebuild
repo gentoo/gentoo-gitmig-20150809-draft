@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta2.ebuild,v 1.6 2004/01/04 15:30:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta2.ebuild,v 1.7 2004/01/11 13:47:10 lanius Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode cups ssl opengl samba java"
@@ -11,7 +11,7 @@ KEYWORDS="~x86 ~sparc"
 DEPEND="media-sound/cdparanoia
 	ldap? ( net-nds/openldap )
 	pam? ( sys-libs/pam )
-	motif? ( virtual/motif )
+	motif? ( x11-libs/openmotif )
 	encode? ( media-sound/lame )
 	cups? ( net-print/cups )
 	ssl? ( dev-libs/openssl )
