@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.2313.ebuild,v 1.4 2001/12/07 01:04:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.2313.ebuild,v 1.5 2001/12/07 02:12:59 azarah Exp $
 
 #NOTE: devfs support is already included, so we dont have to patch the
 #      kernel modules's source anymore !
@@ -29,13 +29,13 @@ KV=${KV/linux-/}
 
 src_compile() {
 
-	cd ${S}/NVIDIA_kernel-${MYV}
+	cd ${S}/NVIDIA_kernel-1.0-2314 #${MYV}
 	make KERNDIR="${KV}" NVdriver
 }
 
 src_install () {
 
-	cd ${S}/NVIDIA_kernel-${MYV}
+	cd ${S}/NVIDIA_kernel-1.0-2314 #${MYV}
 	insinto /lib/modules/${KV}/kernel/video
 	doins NVdriver
 	
