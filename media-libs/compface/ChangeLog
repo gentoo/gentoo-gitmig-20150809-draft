@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/compface
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.14 2004/10/01 04:58:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.15 2004/10/05 09:39:09 eradicator Exp $
+
+  05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/compface-1.4-destdir.diff:
+  Made a DESTDIR patch and use that to fix installation on multilib systems.
 
   01 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> compface-1.4.ebuild:
   Added to ~ppc-macos; bug #65610.
