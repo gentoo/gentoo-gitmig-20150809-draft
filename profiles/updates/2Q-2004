@@ -56,3 +56,4 @@ move net-mail/spruce mail-client/spruce
 move net-mail/squirrelmail mail-client/squirrelmail
 move net-mail/sylpheed mail-client/sylpheed
 move net-mail/sylpheed-claws mail-client/sylpheed-claws
+move net-mail/xfmail mail-client/xfmail
