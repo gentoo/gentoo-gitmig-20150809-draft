@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.10 2004/12/12 05:14:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.11 2004/12/26 17:52:30 seemant Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -40,7 +40,8 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	app-text/docbook-xsl-stylesheets
 	=app-text/docbook-xml-dtd-4.1.2*
 	=sys-libs/db-1*
-	ofx? ( >=dev-libs/libofx-0.6.4 )
+	ofx? ( >=dev-libs/libofx-0.6.4
+		<dev-libs/libofx-0.7.0 )
 	hbci? ( >=net-libs/openhbci-0.9.13 )
 	quotes? ( dev-perl/DateManip
 		dev-perl/Finance-Quote

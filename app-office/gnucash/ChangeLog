@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.53 2004/12/12 05:14:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.54 2004/12/26 17:52:30 seemant Exp $
+
+*gnucash-1.8.10 (26 Dec 2004)
+
+  26 Dec 2004; Seemant Kulleen <seemant@gentoo.org> +gnucash-1.8.10.ebuild,
+  gnucash-1.8.9.ebuild:
+  version bump, thanks to: Martin Gramatke <xmit@gmx.de> and Urs Joss
+  <tschenturs@gmx.ch> in bug #73702
 
   11 Dec 2004; Jason Wever <weeve@gentoo.org> gnucash-1.8.9.ebuild:
   Stable on sparc.
