@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc1.ebuild,v 1.5 2004/09/22 00:24:49 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc1.ebuild,v 1.6 2004/09/22 05:09:59 usata Exp $
 
 IUSE="build multilib selinux"
 
@@ -65,11 +65,12 @@ src_compile() {
 			check_multilib
 			make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
 			;;
-		"macos")
-			ewarn "NOT BUILDING SANDBOX ON $ARCH"
-			;;
 		*)
-		make || die
+			if use macos || use ppc-macos ; then
+				ewarn "NOT BUILDING SANDBOX ON Mac OS X"
+			else
+				make || die
+			fi
 			;;
 	esac
 	cd ${S}/bin
@@ -119,17 +120,14 @@ src_install() {
 	dosym emake /usr/lib/portage/bin/pmake
 	doexe ${S}/src/tbz2tool
 
-	case "$ARCH" in
-		macos)
-			ewarn "Not installing sandbox on $ARCH"
-			;;
-		*)
-			#install sandbox
-			cd ${S}/src/sandbox-1.1
-			make DESTDIR=${D} HAVE_64BIT_ARCH="${MULTILIB}" \
-				install || die "Failed to compile sandbox"
-			;;
-	esac
+	if use macos || use ppc-macos ; then
+		ewarn "Not installing sandbox on Mac OS X"
+	else
+		#install sandbox
+		cd ${S}/src/sandbox-1.1
+		make DESTDIR=${D} HAVE_64BIT_ARCH="${MULTILIB}" \
+			install || die "Failed to compile sandbox"
+	fi
 
 	#symlinks
 	dodir /usr/bin /usr/sbin
