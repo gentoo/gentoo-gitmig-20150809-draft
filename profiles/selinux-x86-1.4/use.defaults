@@ -39,7 +39,7 @@ tcpd		sys-apps/tcp-wrappers
 pam		sys-libs/pam
 libwww		net-libs/libwww
 ssl		dev-libs/openssl
-perl		sys-devel/perl
+perl		dev-lang/perl
 python		dev-lang/python
 esd		media-sound/esound
 imlib		media-libs/imlib
