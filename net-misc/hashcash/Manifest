@@ -1,10 +1,23 @@
-MD5 dce3c44b192e5b062dec4cedd1dbe0f5 hashcash-0.27.ebuild 772
-MD5 1f4d985588ca3c1af433d4c8271a52c5 ChangeLog 1329
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 95faf4e56c277fdee8a648e0bcaa8180 hashcash-1.16-r1.ebuild 851
+MD5 b17309ace87f4689d784066b93ee93e9 ChangeLog 1514
 MD5 3d4ff62a799a78821c08196a1581cf55 hashcash-1.02.ebuild 750
-MD5 3e535ae2e91ba63f40454ea02f6458f3 hashcash-1.13.ebuild 751
 MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
+MD5 dce3c44b192e5b062dec4cedd1dbe0f5 hashcash-0.27.ebuild 772
 MD5 d2f9388d5d5b31fd96de828a5c0a87d1 hashcash-1.16.ebuild 757
-MD5 16b3bf4afa6be029dcb2f921e988f698 files/digest-hashcash-0.27 61
-MD5 574981d65f92a3870bb9b254ebcf31d5 files/digest-hashcash-1.02 62
+MD5 3e535ae2e91ba63f40454ea02f6458f3 hashcash-1.13.ebuild 751
 MD5 b8945440c5d5fc363304c85279d43771 files/digest-hashcash-1.13 62
+MD5 bbbb9afa01623d57687863a50253f858 files/hashcash-1.16-format-string.diff 382
+MD5 7feef9e0dbfa8622b9c284116e4bbbc6 files/digest-hashcash-1.16-r1 62
+MD5 574981d65f92a3870bb9b254ebcf31d5 files/digest-hashcash-1.02 62
+MD5 16b3bf4afa6be029dcb2f921e988f698 files/digest-hashcash-0.27 61
 MD5 7feef9e0dbfa8622b9c284116e4bbbc6 files/digest-hashcash-1.16 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCJhXyugEuf3OQ0akRAsb8AJ9tjB6dCJbXPn2NG+vRxSwHAzeQkQCfbk29
+UfyVRC3/Eo9i1gD1UzAyHaI=
+=t3sB
+-----END PGP SIGNATURE-----
