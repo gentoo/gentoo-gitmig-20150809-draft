@@ -1,28 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta1-r1.ebuild,v 1.1 2003/05/22 07:52:33 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta1-r1.ebuild,v 1.2 2003/08/03 03:34:50 vapier Exp $
 
-IUSE="kde esd ipv6"
 inherit kde-base
 
 MYP=${P//_/-}
 MYPV=${PV//_/-}
 S=${WORKDIR}/${MYP}
 DESCRIPTION="An advanced IRC Client"
+HOMEPAGE="http://www.kvirc.net/"
 SRC_URI="ftp://ftp.kvirc.net/kvirc/${MYPV}/source/${MYP}.tar.gz"
-HOMEPAGE="http://www.kvirc.net"
 
-SLOT="3"
 LICENSE="kvirc"
+SLOT="3"
 KEYWORDS="x86"
+IUSE="kde esd ipv6"
 
 use kde && need-kde 3 || need-qt 3
-
 newdepend "esd? ( media-sound/esound )"
 #	   ssl? ( dev-libs/openssl )"
 use kde || newdepend "arts? ( kde-base/arts )"
 
-[ -n "$DEBUG" ]		&& myconf="$myconf --with-debug-symbols"
+[ `use debug` ]		&& myconf="$myconf --with-debug-symbols"
 
 #The assembly seems to be less than stable
 #[ "$ARCH" == "x86" ]	&& myconf="$myconf --with-ix86-asm"
@@ -46,28 +45,21 @@ use esd			&& myconf="$myconf --with-esd-support" \
 myconf="$myconf --with-aa-fonts"
 
 src_compile() {
+	use kde && kde_src_compile myconf
 
-    use kde && kde_src_compile myconf
+	# always install into /usr regardless of kde support
+	# kvirc doesn't have a kde-like installed file structure anyway
+	myconf="$myconf --prefix=/usr -v"
 
-    # always install into /usr regardless of kde support
-    # kvirc doesn't have a kde-like installed file structure anyway
-    myconf="$myconf --prefix=/usr -v"
-    
-    # make sure we disable kde support as the configure script can auto-enable
-    # it when it isn't wanted
-    use kde || export KDEDIR=""
-    
-    kde_src_compile configure make    
+	# make sure we disable kde support as the configure script can auto-enable
+	# it when it isn't wanted
+	use kde || export KDEDIR=""
 
+	kde_src_compile configure make
 }
 
-src_install () {
-    
-    make install DESTDIR=${D} || die
-    make docs DESTDIR=${D} || die
-
-    dodoc ChangeLog INSTALL README TODO
-    
+src_install() {
+	make install DESTDIR=${D} || die
+	make docs DESTDIR=${D} || die
+	dodoc ChangeLog INSTALL README TODO
 }
-
-
