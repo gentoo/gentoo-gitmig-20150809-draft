@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.1.0.ebuild,v 1.2 2004/06/20 14:38:19 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.1.0.ebuild,v 1.3 2004/06/20 15:28:12 fvdpol Exp $
 
 DESCRIPTION="A Qt application to control FluidSynth"
 HOMEPAGE="http://qsynth.sf.net/"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 src_compile() {
 	addwrite ${QTDIR}/etc/settings
 	econf || die
-	einstall || die
+	emake || die
 }
 
 src_install () {
