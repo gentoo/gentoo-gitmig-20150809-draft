@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.27 2005/01/01 16:22:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.28 2005/01/04 04:46:59 vapier Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/jadetex/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 # virtual/tetex comes from latex-package
