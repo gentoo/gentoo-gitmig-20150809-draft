@@ -1,8 +1,16 @@
-MD5 1a463b040df21241da2c9038bbc00e4f ChangeLog 2850
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d4b2f0f8efaaff7ebbcb77bc1258334 gift-openft-0.2.1.3.ebuild 1198
-MD5 815b54d86d891e6d314f1ef1aeb2b016 gift-openft-0.2.1.2.ebuild 1191
+MD5 8f30614882f34b5ad2c0695513aa03a6 gift-openft-0.2.1.4.ebuild 1241
+MD5 d90f8957edd12cf9f219087117f002c7 ChangeLog 3001
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
-MD5 b98995d9ba236eabbd6a82fd972659c7 gift-openft-0.2.1.4.ebuild 1239
 MD5 79751211679f0e879c97aa37a46d9d68 files/digest-gift-openft-0.2.1.3 72
 MD5 4df11e57302a8164df847367820d27ba files/digest-gift-openft-0.2.1.4 72
-MD5 f0e27500c8a903516dd369113d3fc905 files/digest-gift-openft-0.2.1.2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBLNN9cAgAdbxYsnERAlGVAJ9avEPzKMBMd5kr4t6J9TQGOGvrKgCfUU7E
+7h9+HS6uVlroiYC/Qgk8HCw=
+=0WsX
+-----END PGP SIGNATURE-----
