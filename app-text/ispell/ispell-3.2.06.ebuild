@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06.ebuild,v 1.1 2002/03/15 05:37:36 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06.ebuild,v 1.2 2002/03/15 23:20:04 tod Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
@@ -32,6 +32,9 @@ src_install () {
 		-e "s:^\(MAN4DIR='\)\(.*\):\1${D}\2:" \
 		config.sh.orig > config.sh
 	
+	#Need to create the directories to install into
+	#before 'make install'. Build environment **doesn't**
+	#check for existence and create if not already there.
 	dodir /usr/bin /usr/lib/ispell /usr/share/info \
 		/usr/share/man/man1 /usr/share/man/man5
 
