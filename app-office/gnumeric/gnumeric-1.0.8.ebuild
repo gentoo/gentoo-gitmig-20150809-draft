@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.10 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.11 2003/03/16 13:45:05 liquidx Exp $
 
 IUSE="nls libgda gb evo python bonobo guile perl"
 
@@ -34,7 +34,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	perl?   ( >=dev-lang/perl-5.6 )
 	python? ( >=dev-lang/python-2.0 )
 	gb?     ( ~gnome-extra/gb-0.0.17 )
-	libgda? ( >=gnome-extra/libgda-0.2.91
+	libgda? ( <gnome-extra/libgda-0.10.0
 	          >=gnome-base/bonobo-1.0.17 )
 	evo?    ( >=net-mail/evolution-0.13 )"
 	 
