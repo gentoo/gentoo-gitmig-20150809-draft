@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.36.ebuild,v 1.1 2005/02/06 21:57:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.36.ebuild,v 1.2 2005/02/06 23:17:08 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -21,12 +21,14 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	# Fix a cosmetic error in mk_cmds's help output.
-	cd ${S}; epatch ${FILESDIR}/e2fsprogs-1.32-mk_cmds-cosmetic.patch
+	epatch ${FILESDIR}/e2fsprogs-1.32-mk_cmds-cosmetic.patch
+	# Patch to make the configure and sed scripts more friendly to, 
+	# for example, the Estonian locale
+	epatch ${FILESDIR}/${P}-sed-locale.patch
 	# Userpriv fix. Closes #27348
 	chmod u+w po/*.po
-
-	gnuconfig_update
 
 	# Use -fPIC compiled shared files in .a files. Fix kdelibs-3.3.0 compilation on hppa.
 	use static || sed -e '/ARUPD/s:$(OBJS):elfshared/*.o:' -i ${S}/lib/Makefile.library
@@ -37,16 +39,17 @@ src_unpack() {
 		configure e2fsck/journal.c e2fsck/recovery.c \
 		e2fsck/unix.c lib/ext2fs/kernel-jbd.h \
 		|| die "sed jbd debug failed"
-}
 
-src_compile() {
 	# building e2fsprogs on sparc results in silo breaking
-	[ "${ARCH}" = "sparc" ] && filter-flags -fstack-protector
+	[[ ${ARCH} == "sparc" ]] && filter-flags -fstack-protector
 
+	# Keep the package from doing silly things
 	export LDCONFIG=/bin/true
 	export CC=$(tc-getCC)
 	export STRIP=/bin/true
+}
 
+src_compile() {
 	local myconf
 	use static \
 		&& myconf="${myconf} --with-ldopts=-static" \
