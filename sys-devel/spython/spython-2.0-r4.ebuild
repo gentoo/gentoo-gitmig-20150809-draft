@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r4.ebuild,v 1.4 2001/04/06 15:21:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r4.ebuild,v 1.5 2001/04/28 08:24:12 achim Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum
 DEPEND=">=sys-libs/zlib-1.1.3 readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 
 RDEPEND="virtual/glibc"
-PROVIDE="virtual/python-2.0"
+PROVIDE="virtual/python"
 
 src_unpack() {
 
