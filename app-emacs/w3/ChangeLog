@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/w3
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.3 2003/05/19 15:30:25 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.4 2004/02/15 17:38:20 weeve Exp $
+
+  15 Feb 2004; Jason Wever <weeve@gentoo.org> w3-4.0_pre47-r1.ebuild:
+  Added ~sparc keyword to fix the broken dependencies of app-emacs/gnus.
 
 *w3-4.0_pre47-r1 (19 May 2003)
 
