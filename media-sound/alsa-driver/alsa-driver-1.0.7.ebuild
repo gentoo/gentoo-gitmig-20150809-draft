@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.9 2004/11/21 23:07:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.10 2004/11/22 21:45:00 eradicator Exp $
 
 IUSE="oss doc"
 
@@ -125,9 +125,11 @@ src_install() {
 	if use doc; then
 		docinto doc
 		dodoc doc/*
+		rm ${D}/usr/share/doc/${PF}/doc/Makefile.gz
 
 		docinto DocBook
 		dodoc doc/DocBook/*
+		rm ${D}/usr/share/doc/${PF}/DocBook/Makefile.gz
 
 		docinto Documentation
 		dodoc sound/Documentation/*
