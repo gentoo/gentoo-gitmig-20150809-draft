@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.3 2003/12/12 09:27:17 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.4 2003/12/15 04:53:16 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -29,15 +29,14 @@ src_unpack() {
 
 src_compile() {
 	egamesconf --datadir=${GAMES_DATADIR_BASE} || die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install         || die "make install failed"
+	dodoc AUTHORS CHANGES NEWS README || die "dodoc failed"
+	dohtml doc/*.html                 || die "dohtml failed"
 	rm -rf ${D}/usr/share/tuxkart/
-
-	dodoc AUTHORS  CHANGES  COPYING  LICENSE  NEWS  README
-	dohtml doc/*.html
 
 	prepgamesdirs
 }

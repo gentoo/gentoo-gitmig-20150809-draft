@@ -1,6 +1,9 @@
 # ChangeLog for games-action/tuxkart
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.4 2003/12/12 09:27:17 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.5 2003/12/15 04:53:16 mr_bones_ Exp $
+
+  14 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> tuxkart-0.2.0.ebuild:
+  more error checking/messages
 
   12 Dec 2003; Jon Portnoy <avenj@gentoo.org> tuxkart-0.2.0.ebuild :
   AMD64 keywords.
