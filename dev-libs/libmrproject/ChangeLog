@@ -1,0 +1,7 @@
+# ChangeLog for dev-libs/libmrproject
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.1 2002/05/23 00:18:33 spider Exp $
+
+*libmrproject-0.2 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> libmrproject-0.2.ebuild :
+  initial package, dependency of gnome2 port of app-office/mrproject
