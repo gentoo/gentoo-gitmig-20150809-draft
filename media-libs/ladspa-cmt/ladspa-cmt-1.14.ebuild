@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.14.ebuild,v 1.1 2002/08/19 00:21:39 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.14.ebuild,v 1.2 2002/09/24 05:34:19 rphillips Exp $
 
 DESCRIPTION="CMT (computer music toolkit) Lasdpa library plugins"
 HOMEPAGE="http://www.ladspa.org/"
@@ -19,8 +19,8 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	sed -e "/^CFLAGS/ s/-O3/${CFLAGS}/" \
-		-e 's|/usr/local/include|/usr/include|g' \
-		-e 's|/usr/local/lib|/usr/lib|g' \
+		-e 's|/usr/local/include||g' \
+		-e 's|/usr/local/lib||g' \
 		makefile > makefile.new
 		mv makefile.new makefile
 
