@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11-r1.ebuild,v 1.2 2002/09/15 07:05:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11-r1.ebuild,v 1.3 2002/09/21 11:49:09 bjb Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://scrollkeeper.sourceforge.net"
 
 SLOT="0"
 LICENSE="FDL-1.1 LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 RDEPEND=">=dev-libs/libxml2-2.4.19
 	>=dev-libs/libxslt-1.0.14
