@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnocatan
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.16 2004/09/10 19:13:47 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.17 2004/09/27 01:10:07 rizzo Exp $
+
+*gnocatan-0.8.1.36 (26 Sep 2004)
+
+  26 Sep 2004; Don Seiler <rizzo@gentoo.org> +gnocatan-0.8.1.36.ebuild:
+  Version bump
 
   10 Sep 2004; Don Seiler <rizzo@gentoo.org>
   -files/gnocatan-reject_trade_2x.patch, -gnocatan-0.8.1.30-r1.ebuild,
