@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/janus/janus-0.4.5.ebuild,v 1.6 2004/07/14 19:50:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/janus/janus-0.4.5.ebuild,v 1.7 2004/12/22 18:28:40 gustavoz Exp $
 
 IUSE="gtk"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.worldforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -sparc"
 
 DEPEND=">=dev-libs/libsigc++-1.0*
 	>=media-libs/libsdl-1.2.3-r1
