@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.13 2005/02/03 21:09:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.14 2005/02/04 17:43:17 luckyduck Exp $
+
+  04 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> files/1.6.2-ant:
+  added commons-collections to the java-config -p call in the ant wrapper. see
+  #72932
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +files/1.6.2-scp.patch,
   ant-core-1.6.2.ebuild:
