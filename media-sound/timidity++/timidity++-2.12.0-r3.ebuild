@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r1.ebuild,v 1.1 2003/05/08 10:30:00 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.1 2003/07/21 03:51:37 jje Exp $
 
 IUSE="nas esd motif X gtk oggvorbis tcltk slang alsa"
 
@@ -31,7 +31,9 @@ src_compile() {
 	local interfaces
 	
 	interfaces="dynamic,ncurses,emacs,vt100"
-	#audios="oss"
+	if [ "`use oss`" ]; then \
+		audios="oss";
+	fi
 	
 	use X \
 		&& myconf="${myconf} --with-x \
@@ -70,6 +72,18 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
+	dodir /usr/share/timidity/config
+	insinto /usr/share/timidity/config
+	doins ${FILESDIR}/timidity.cfg
 	dodoc AUTHORS COPYING ChangeLog* INSTALL*
 	dodoc NEWS README*
+}
+
+pkg_postinst () {
+	einfo ""
+	einfo "A timidity config file has been installed in"
+	einfo "/usr/share/timitidy/config/timidity.cfg. This"
+	einfo "file must to copied into /usr/share/timidity/"
+	einfo "and edited to match your configuration."
+	einfo ""
 }
