@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.3 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.4 2003/06/27 12:15:29 pylon Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Sendfile is a SAFT implementation for UNIX and serves as a tool for asynchronous sending of files in the Internet"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.belwue.de/pub/unix/sendfile/${P}.tar.gz"
 HOMEPAGE="http://www.belwue.de/projekte/saft/sendfile-us.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_compile() {
 	./makeconfig "CFLAGS=\"${CFLAGS}\" BINDIR=/usr/bin MANDIR=/usr/share/man \
