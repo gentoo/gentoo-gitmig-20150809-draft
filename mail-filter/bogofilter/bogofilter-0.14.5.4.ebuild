@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.14.5.4.ebuild,v 1.2 2004/06/24 22:20:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.14.5.4.ebuild,v 1.3 2004/07/01 19:50:30 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/db-3"
 
 src_install() {
