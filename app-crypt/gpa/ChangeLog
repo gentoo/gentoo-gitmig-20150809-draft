@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.25 2004/10/02 21:24:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.26 2004/11/15 21:01:42 dragonheart Exp $
+
+  16 Nov 2004; Daniel Black <dragonheart@gentoo.org> -gpa-0.6.1.ebuild,
+  gpa-0.7.0-r2.ebuild:
+  cleanup of old ebuild that depend on old gpgme versions in the deletion queue
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gpa-0.7.0-r2.ebuild:
   Keyword ~alpha, requested in bug 64485.
