@@ -1,0 +1,10 @@
+# ChangeLog for net-www/phoenix-cvs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.1 2003/03/28 05:01:39 sethbc Exp $
+
+*phoenix-cvs-0.5-r1 (28 Mar 2003)
+
+  28 Mar 2003; Seth Chandler <sethbc@gentoo.org>; phoenix-cvs-0.5-r1.ebuild,
+  files/phoenix:
+  added phoenix-cvs
+
