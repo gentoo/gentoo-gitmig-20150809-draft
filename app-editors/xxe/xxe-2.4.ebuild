@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.4.ebuild,v 1.1 2003/08/21 17:53:16 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.4.ebuild,v 1.2 2003/10/27 13:26:45 aliz Exp $
 
 S="${WORKDIR}/xxe-std-24"
 DESCRIPTION="Java-based XML Editor"
@@ -10,7 +10,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RESTRICT="nostrip nomirror"
 RDEPEND=">=virtual/jdk-1.4.1"
