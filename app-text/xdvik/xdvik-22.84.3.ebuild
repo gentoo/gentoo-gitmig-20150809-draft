@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.3.ebuild,v 1.1 2004/10/16 10:26:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.3.ebuild,v 1.2 2004/10/24 12:24:45 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz
 HOMEPAGE="http://sourceforge.net/projects/xdvi/
 	http://xdvi.sourceforge.jp/"
 
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64 ppc-macos"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -75,8 +75,7 @@ src_compile () {
 		toolkit="xaw"
 	fi
 
-	econf --enable-xdvietcdir=/usr/share/texmf/xdvi \
-		--disable-multiplatform \
+	econf --disable-multiplatform \
 		--with-system-t1lib \
 		$(use_enable cjk freetype) \
 		$(use_with libwww system-wwwlib) \
@@ -94,7 +93,6 @@ src_install () {
 
 	cd ${S}/texk/xdvik
 	einstall texmf=${D}/usr/share/texmf \
-		XDVIETCDIR=${D}/usr/share/texmf/xdvi \
 		|| die "install failed"
 
 	dodoc ANNOUNCE BUGS FAQ README.*
