@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.1.1.ebuild,v 1.1 2005/03/13 12:05:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.2.ebuild,v 1.1 2005/03/14 20:08:42 swegener Exp $
 
-inherit kde eutils versionator
+inherit kde versionator
 
 DESCRIPTION="KDE Linux Binaries Downloader"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f2f1404cdb67962760ebce1157c16cb klibido-0.2.1.1.ebuild 779
-MD5 94c028c6043cc258beac494835852076 ChangeLog 1151
+MD5 e1af9c1b86a3590f72dee56243a285a9 klibido-0.2.2.ebuild 770
+MD5 bea3b56fbf6bb3bcd46e33d2cb3db54e ChangeLog 1298
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 6ac27d7417368cc0fcb31b5f4d98b3d4 files/digest-klibido-0.2.1.1 67
+MD5 62b755236a60a6e2de9021bf68be7b89 files/digest-klibido-0.2.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCNC2QI1lqEGTUzyQRAo8VAJ49QNtPWkz5I2niRCnXPnNF1Nl5cgCdFisj
-nZsXL0lqvsf4NSbtCZ2ujWk=
-=OANd
+iD8DBQFCNe9ZI1lqEGTUzyQRAgFlAJ9bxS5L9OPsJa4QaegC5nyxl22chQCghy8l
+5MeIF8WAUNdO3GtiAc17vkU=
+=Ffog
 -----END PGP SIGNATURE-----
