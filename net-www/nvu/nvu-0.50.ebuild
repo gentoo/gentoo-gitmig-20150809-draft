@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.2 2004/10/15 05:05:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.3 2004/10/15 05:13:57 chriswhite Exp $
 
 inherit eutils mozilla flag-o-matic
 
@@ -22,7 +22,7 @@ src_compile() {
 
 	# I had to manually edit the mozconfig.linux file as it
 	# has some quirks... just copy the darn thing over :) - Chris
-	cp ${FILESDIR}/.mozconfig ${S}
+	cp ${FILESDIR}/mozconfig ${S}/.mozconfig
 
 	# It "sort of" has a standard configure system
 	# Here's how I fix the prefix issue. - Chris
