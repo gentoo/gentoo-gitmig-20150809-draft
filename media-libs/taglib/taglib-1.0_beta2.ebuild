@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.0_beta2.ebuild,v 1.2 2003/12/09 20:17:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.0_beta2.ebuild,v 1.3 2003/12/10 13:45:46 caleb Exp $
 inherit kde flag-o-matic
 
 need-kde 3
@@ -16,7 +16,11 @@ replace-flags "-O3 -O2"
 
 src_compile()
 {
-	cd ${S} && WANT_AUTOMAKE=1.7 make -f Makefile.cvs
+	cd ${S}
+	rm -rf autom4te.cache
+	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOMAKE=1.7
+	aclocal && autoconf && automake
 	econf
 	emake
 }
