@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.2-r5.ebuild,v 1.14 2004/02/16 18:42:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.2-r5.ebuild,v 1.15 2004/02/17 01:54:38 agriffis Exp $
 
 inherit vim
 
@@ -21,12 +21,11 @@ PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}
 	virtual/x11
-	gtk?
-		( gtk2?
-			( >=x11-libs/gtk+-2.1 virtual/xft ) :
-			( gnome?
-				( gnome-base/gnome-libs ) :
-				( =x11-libs/gtk+-1.2* )
-			)
-		) :
-		( motif? ( x11-libs/openmotif ) )"
+	gtk? (
+		gtk2? ( >=x11-libs/gtk+-2.1 virtual/xft )
+		!gtk2? (
+			gnome? ( gnome-base/gnome-libs )
+			!gnome? ( =x11-libs/gtk+-1.2* )
+		)
+	)
+	!gtk? ( motif? ( x11-libs/openmotif ) )"
