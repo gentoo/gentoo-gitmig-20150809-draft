@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r2.ebuild,v 1.7 2004/06/24 22:10:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r2.ebuild,v 1.8 2004/06/28 03:16:37 agriffis Exp $
 
 DESCRIPTION="Free computer algebra environment, based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -23,14 +23,14 @@ RDEPEND=">=dev-lang/tk-8.3.3"
 
 src_compile() {
 	local myconf=""
-	if [ -n "$(use cmucl)" ] || [ -n "$(use clisp)" ] || [ -n "$(use gcl)" ]; then
-		if [ -n "$(use cmucl)" ]; then
+	if use cmucl || use clisp || use gcl; then
+		if use cmucl; then
 			myconf="${myconf} --enable-cmucl"
 		fi
-		if [ -n "$(use clisp)" ]; then
+		if use clisp; then
 			myconf="${myconf} --enable-clisp"
 		fi
-		if [ -n "$(use gcl)" ]; then
+		if use gcl; then
 			myconf="${myconf} --enable-gcl"
 		fi
 	else
