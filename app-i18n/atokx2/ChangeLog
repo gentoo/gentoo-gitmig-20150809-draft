@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/atokx2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.1 2005/02/10 11:54:47 usata Exp $
+
+*atokx2-17.0 (10 Feb 2005)
+
+  10 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/atokx2.initd, +files/iiim.confd, +files/iiim.initd,
+  +atokx2-17.0.ebuild:
+  Initial import.
+
