@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16.ebuild,v 1.4 2004/04/14 20:34:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16.ebuild,v 1.5 2004/06/24 23:32:56 agriffis Exp $
 
 inherit perl-module
 
