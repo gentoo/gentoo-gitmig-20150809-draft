@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.19.ebuild,v 1.1 2003/06/12 18:10:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.24.ebuild,v 1.1 2003/07/28 01:57:34 vapier Exp $
 
 inherit eutils
 
@@ -10,12 +10,7 @@ SRC_URI="http://math.libtomcrypt.org/files/ltm-${PV}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ppc"
-
-src_unpack() {
-	unpack ${A} ; cd ${S}
-	epatch ${FILESDIR}/${PV}-doc-fix.patch
-}
+KEYWORDS="~x86 ~ppc"
 
 src_compile() {
 	emake || die
