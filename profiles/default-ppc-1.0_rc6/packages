@@ -103,7 +103,6 @@
 *sys-devel/autoconf
 *>=sys-devel/automake-1.6.1-r5
 *sys-devel/bc
-*sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
 *sys-devel/gettext
