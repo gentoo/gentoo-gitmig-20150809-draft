@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.904 2005/01/25 06:22:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.905 2005/01/25 12:53:46 angusyoung Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -503,6 +503,13 @@ media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager desig
 media-video/vlc:vorbis - Enables vorbis audio codec support
 media-video/winki:css - Enables ripping of encrypted dvds
 media-video/winki:vcd - Enables creation of vcds mime preprocessor.
+net-analyzer/echoping:http - enable support for http protocol.
+net-analyzer/echoping:icp - enable support for ICP (used to monitor proxies).
+net-analyzer/echoping:idn - enable support for Internalized Domain Names.
+net-analyzer/echoping:priority - enable socket priority support.
+net-analyzer/echoping:smtp - enable supprt for SMTP protocol.
+net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
+net-analyzer/echoping:ttcp - enable support for T/TCP protocol.
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
