@@ -1,4 +1,6 @@
-MD5 1215638c01163c9a11d753eae9d4fc7e ChangeLog 1605
+MD5 bce25cce854a9ed7ab0a403e57ec9fbb ChangeLog 1907
 MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
 MD5 9da7c07e97d7e02a5aece5cb12e8627d gromacs-3.1.4-r1.ebuild 1417
+MD5 76479670c978b2f8e8386d6efb46160c gromacs-3.1.4-r2.ebuild 1567
 MD5 5322e3229934a2776885a05df3606fb0 files/digest-gromacs-3.1.4-r1 66
+MD5 5322e3229934a2776885a05df3606fb0 files/digest-gromacs-3.1.4-r2 66
