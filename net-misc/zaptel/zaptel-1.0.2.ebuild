@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.2.ebuild,v 1.1 2004/11/10 02:53:40 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.2.ebuild,v 1.2 2004/12/19 00:30:10 stkn Exp $
 
 IUSE="devfs26"
 
@@ -8,7 +8,7 @@ inherit eutils kernel-mod
 
 DESCRIPTION="Pseudo-TDM engine"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/zaptel-${PV}.tar.gz"
+SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/old/zaptel-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
