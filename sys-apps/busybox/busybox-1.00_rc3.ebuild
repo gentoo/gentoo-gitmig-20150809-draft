@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_rc3.ebuild,v 1.9 2004/10/07 05:41:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_rc3.ebuild,v 1.10 2004/10/13 12:29:13 solar Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.busybox.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~mips ~arm ~amd64 ~sparc hppa"
+KEYWORDS="x86 ppc ~mips arm ~amd64 ~sparc hppa"
 IUSE="debug uclibc static savedconfig netboot make-busybox-symlinks"
 #IUSE="${IUSE} cross"
 

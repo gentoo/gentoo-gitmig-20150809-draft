@@ -1,25 +1,36 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.13 2004/10/07 01:13:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00.ebuild,v 1.1 2004/10/13 12:29:13 solar Exp $
 
 inherit eutils
 
-MY_PV=${PV/_/-}
-MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Utilities for rescue and embedded systems"
+#SNAPSHOT=20040726
 HOMEPAGE="http://www.busybox.net/"
-SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~mips arm ~amd64"
-IUSE="debug static uclibc savedconfig make-busybox-symlinks"
+KEYWORDS="~x86 ~ppc ~mips ~arm ~amd64 ~sparc ~hppa"
+IUSE="debug uclibc static savedconfig netboot make-busybox-symlinks"
+#IUSE="${IUSE} cross"
+
+MY_PV=${PV/_/-}
+
+if [ "$SNAPSHOT" != "" ]; then
+	MY_P=${PN}
+	SRC_URI="http://www.busybox.net/downloads/snapshots/${PN}-${SNAPSHOT}.tar.bz2"
+else
+	MY_P=${PN}-${MY_PV}
+	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
+fi
+
+S=${WORKDIR}/${MY_P}
 
 DEPEND="virtual/libc
 	!amd64? ( uclibc? ( dev-libs/uclibc ) )
 	>=sys-apps/sed-4"
 RDEPEND="!static? ( ${DEPEND} )"
+
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )
 
@@ -37,8 +48,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
-
 	# check for a busybox config before making one of our own.
 	# if one exist lets return and use it.
 	# fine grained config control for user defined busybox configs.
@@ -46,7 +55,13 @@ src_unpack() {
 	# [package]-[version].config
 	# [package].config
 
-	if use savedconfig ; then
+	if use netboot ; then
+		cp ${FILESDIR}/config-netboot .config
+		sed -i \
+			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
+			networking/udhcp/libbb_udhcp.h \
+			|| die "fixing netboot/udhcpc"
+	elif use savedconfig ; then
 		[ -r .config ] && rm .config
 		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
 			configfile=/etc/${PN}/${CHOST}/${conf}.config
@@ -67,6 +82,11 @@ src_unpack() {
 	make allyesconfig > /dev/null
 	busybox_config_option n DMALLOC
 	busybox_config_option n FEATURE_SUID
+
+	# If these are not set and we are using a uclibc/busybox setup
+	# all calls to system() will fail.
+	busybox_config_option y FEATURE_SH_IS_ASH
+	busybox_config_option n FEATURE_SH_IS_NONE
 
 	# setting the cross compiler from here would be somewhat of a
 	# pain do to as we would need a multiline sed expression which
@@ -103,6 +123,8 @@ src_unpack() {
 			busybox_config_option n INSMOD
 			busybox_config_option n MODPROBE
 			busybox_config_option n RMMOD;;
+		hppa)
+			 busybox_config_option n INSMOD;;
 		*) ;;
 	esac
 
@@ -112,16 +134,18 @@ src_unpack() {
 	#for f in $busybox_features; do
 	#	has $f ${FEATURES} && busybox_config_option y `echo ${f/busybox_/}|tr [a-z] [A-Z]`
 	#done
-	echo | make clean oldconfig > /dev/null
+	( echo | make clean oldconfig > /dev/null ) || :
 }
 
 busybox_set_cross_compiler() {
-	if use uclibc ; then
-		case ${ARCH} in
-			x86*) CROSS="/usr/i386-linux-uclibc/bin/i386-uclibc-";;
-			*) ;;
-		esac
-	fi
+	return 0
+	# revisit this another day.
+	#if use cross ; then
+	#	case ${ARCH} in
+	#		x86*) CROSS="/usr/i386-linux-uclibc/bin/i386-uclibc-";;
+	#		*) ;;
+	#	esac
+	#fi
 	[ -n "${CROSS}" ] && einfo "Setting cross compiler prefix to ${CROSS}"
 }
 
@@ -136,12 +160,15 @@ src_install() {
 
 	into /
 	dobin busybox
-	if use make-busybox-symlinks ;
-	then
+	if use netboot ; then
+		dosym busybox /bin/sh
+		return 0
+	fi
+	if use make-busybox-symlinks ; then
 		if [ ! "${VERY_BRAVE_OR_VERY_DUMB}" = "yes" ] && [ "${ROOT}" = "/" ];
 		then
 			ewarn "setting USE=make-busybox-symlinks and emerging to / is very dangerous."
-			ewarn "It WILL overwrite lots of system programs like: ls bash awk grep (bug 60805 for full list)."
+			ewarn "it WILL overwrite lots of system programs like: ls bash awk grep (bug 60805 for full list)."
 			ewarn "If you are creating a binary only and not merging this is probably ok."
 			ewarn "set env VERY_BRAVE_OR_VERY_DUMB=yes if this is realy what you want."
 			die "silly options will destroy your system"
@@ -162,7 +189,7 @@ src_install() {
 		cd ${S}
 	fi
 
-	dodoc AUTHORS Changelog LICENSE README TODO
+	dodoc AUTHORS Changelog README TODO
 
 	cd docs || die
 	docinto txt
@@ -183,7 +210,7 @@ src_install() {
 	dodoc bootfloppy.txt display.txt mkdevs.sh etc/* etc/init.d/* 2>/dev/null
 
 	cd ../../ || die
-	if [ `has buildpkg ${FEATURES}` -a `has keepwork ${FEATURES}` ]; then
+	if has buildpkg ${FEATURES} && has keepwork ${FEATURES} ; then
 		cd ${S}
 		# this should install to the ./_install/ dir by default.
 		# we make a micro pkg of busybox that can be used for

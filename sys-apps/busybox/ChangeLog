@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.45 2004/09/28 13:30:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.46 2004/10/13 12:29:13 solar Exp $
+
+*busybox-1.00 (13 Oct 2004)
+
+  13 Oct 2004; <solar@gentoo.org> -files/busybox-1.00_pre8-amd64.patch,
+  -busybox-0.60.5-r1.ebuild, -busybox-0.60.5-r2.ebuild, +busybox-1.00.ebuild,
+  -busybox-1.00_pre8.ebuild, busybox-1.00_rc3.ebuild:
+  The highly anticipated release of BusyBox 1.00 has arrived after 3 years in
+  development. (arches please test and mark stable so we can clean out files/*)
 
   28 Sep 2004; Guy Martin <gmsoft@gentoo.org> busybox-1.00_rc3.ebuild:
   Removed build of insmod for hppa. Marked stable on hppa.
