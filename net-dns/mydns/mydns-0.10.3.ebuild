@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-0.10.3.ebuild,v 1.2 2004/04/30 22:18:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-0.10.3.ebuild,v 1.3 2004/06/09 21:26:13 agriffis Exp $
 
 DESCRIPTION="A DNS-Server which gets its data from mysql-databases"
 HOMEPAGE="http://mydns.bboy.net/"
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bison"
 
 src_compile() {
-	if [ ! "`use mysql`" -a ! "`use postgres`" ] ; then
+	if ! use mysql && ! use postgres; then
 		eerror "MyDNS needs either MySQL or PostgreSQL."
 		eerror "Please set USE=\"mysql\" or USE=\"postgres\", and try again."
 		die
@@ -54,13 +54,13 @@ pkg_postinst() {
 	einfo
 	einfo "# /usr/sbin/mydns --dump-config > /etc/mydns.conf"
 	einfo "# chmod 0600 /etc/mydns.conf"
-	if [ "`use mysql`" ] ; then
+	if use mysql ; then
 		einfo "# mysqladmin -u <username> -p create mydns"
 		einfo "# /usr/sbin/mydns --create-tables | mysql -u <user> -p mydns"
 		einfo
 		einfo "to create the tables in the MySQL-Database."
 		einfo "For more info see QUICKSTART.mysql."
-	elif [ "`use postgres`" ] ; then
+	elif use postgres ; then
 		einfo "# createdb mydns"
 		einfo "# /usr/sbin/mydns --create-tables | psql mydns"
 		einfo
