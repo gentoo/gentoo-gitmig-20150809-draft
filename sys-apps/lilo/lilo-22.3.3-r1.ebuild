@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.3.3-r1.ebuild,v 1.1 2002/09/22 21:48:31 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.3.3-r1.ebuild,v 1.2 2002/09/30 00:55:18 woodchip Exp $
 
 inherit mount-boot
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/${P}.tar.gz
+SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 DEPEND="virtual/glibc dev-lang/nasm >=sys-devel/bin86-0.15.5"
@@ -45,26 +45,32 @@ src_install() {
 pkg_preinst() {
 	if [ ! -L $ROOT/boot/boot.b -a -f $ROOT/boot/boot.b ]
 	then
-	    einfo "Saving old boot.b..."
-	    mv $ROOT/boot/boot.b $ROOT/boot/boot.old
+		einfo "Saving old boot.b..."
+		mv -f $ROOT/boot/boot.b $ROOT/boot/boot.old
 	fi
 
 	if [ ! -L $ROOT/boot/chain.b -a -f $ROOT/boot/chain.b ]
 	then
-	    einfo "Saving old chain.b..."
-	    mv $ROOT/boot/chain.b $ROOT/boot/chain.old
+		einfo "Saving old chain.b..."
+		mv -f $ROOT/boot/chain.b $ROOT/boot/chain.old
+	fi
+
+	if [ ! -L ${ROOT}/boot/mbr.b -a -f ${ROOT}/boot/mbr.b ]
+	then
+		einfo "Saving old mbr.b..."
+		mv -f ${ROOT}/boot/mbr.b ${ROOT}/boot/mbr.old
 	fi
 
 	if [ ! -L $ROOT/boot/os2_d.b -a -f $ROOT/boot/os2_d.b ]
 	then
-	    einfo "Saving old os2_d.b..."
-	    mv $ROOT/boot/os2_d.b $ROOT/boot/os2_d.old
+		einfo "Saving old os2_d.b..."
+		mv -f $ROOT/boot/os2_d.b $ROOT/boot/os2_d.old
 	fi
 }
 
 pkg_postinst() {
 	einfo "Activating boot-menu..."
-	ln -sf boot-menu.b $ROOT/boot/boot.b
+	ln -snf boot-menu.b $ROOT/boot/boot.b
 
 	einfo
 	einfo "You can get some animations at:"

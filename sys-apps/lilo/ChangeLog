@@ -1,13 +1,14 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.11 2002/09/22 21:48:31 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.12 2002/09/30 00:55:18 woodchip Exp $
 
 *lilo-22.3.3-r1 (22 Sep 2002)
 
+  29 Sep 2002; Donny Davies <woodchip@gentoo.org> :
+  Several fixes + cosmetic issues.  #7898, #8057, #7903.
+
   22 Sep 2002; Donny Davies <woodchip@gentoo.org> :
-  Now using mount-boot.eclass.  Added more docs, added the samples,
-  added the mkrescue and activate programs.  Created new patch for
-  boot animations; http://www.gamers.org/~quinet/lilo/index.html.
+  Now uses mount-boot.eclass.  Created new patch a la Suse.
 
 *lilo-22.3.3 (3 Sep 2002)
 
@@ -26,18 +27,14 @@
   lilo-21.7.5-r1.ebuild, lilo-22.1-r2.ebuild :
   Sync pkg_setup() with lilo-22.1-r3 and added the sample lilo.conf.
 
+*lilo-22.1-r3 (5 Apr 2002)
+
   14 Jul 2002; phoen][x <phoenix@gentoo.org> lilo-22.1-r3.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
   Removed the stale ebuilds.
 
-*lilo-22.1-r3 (5 Apr 2002)
-
   5 Apr 2002; M.Schlemmer <azarah@gentoo.org> lilo-22.1-r3.ebuild :
   Fix the /boot issue finally (hopefully :P).  Add $ROOT checking afterwards.
-
-  18 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r1.ebuild :  
-  ATTN Maintainers:  This lilo has the patches from SuSe for animated boot
-  logos.
 
 *lilo-22.1-r2 (4 Feb 2002)
 
@@ -50,7 +47,6 @@
 
   2 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-22.1-r1.ebuild:
   Added several patches from SuSE for animated boot logos.
-  Get animations at: http://www.gamers.org/~quinet/lilo/index.html.
 
 *lilo-22.1-r1 (1 Feb 2002)
 
