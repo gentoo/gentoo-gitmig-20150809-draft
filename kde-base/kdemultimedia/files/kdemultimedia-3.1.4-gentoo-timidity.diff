@@ -1,0 +1,21 @@
+diff -ru kdemultimedia-2.2.1.orig/kmidi/TIMIDITY/motif_p.c kdemultimedia-2.2.1/kmidi/TIMIDITY/motif_p.c
+--- kmidi/TIMIDITY/motif_p.c	Mon Feb 28 19:07:37 2000
++++ kmidi/TIMIDITY/motif_p.c	Fri Oct 19 04:00:10 2001
+@@ -22,6 +22,7 @@
+     pipe communication between motif interface and sound generator
+
+     */
++#include <sys/errno.h>
+ #ifdef IA_MOTIF
+
+ #include <stdio.h>
+--- kmidi/TIMIDITY/tk_c.c       2002-04-04 21:15:35.000000000 -0600
++++ kmidi/TIMIDITY/tk_c.c       2002-04-04 21:17:06.000000000 -0600
+@@ -12,6 +12,7 @@
+  *================================================================*/
+ #ifdef TCLTK
+
++#include <sys/errno.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
