@@ -1,8 +1,20 @@
-MD5 cf1011ff77da02cfb50076b32f50899d ruby-gstreamer-0.9.1.ebuild 520
-MD5 f62f402a61301282070be585144d178d ruby-gstreamer-0.8.1.ebuild 509
-MD5 42e7fec49d2fd01bfd2d04b023ec9cad ChangeLog 1257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fb9ee9069a8d1b3fffa44de6cac485e7 ChangeLog 1396
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 f62f402a61301282070be585144d178d ruby-gstreamer-0.8.1.ebuild 509
+MD5 cf1011ff77da02cfb50076b32f50899d ruby-gstreamer-0.9.1.ebuild 520
+MD5 9866d3154699f3110aae0aa021cdd5b1 ruby-gstreamer-0.11.0.ebuild 593
 MD5 97a573ba21f941574306b02063e0fbec ruby-gstreamer-0.10.1.ebuild 687
-MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gstreamer-0.10.1 74
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gstreamer-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gstreamer-0.9.1 73
+MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gstreamer-0.11.0 75
+MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gstreamer-0.10.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpVjgVWNWqTUmv+0RAi26AKCDp2Hz8RbaIvYSwocRkAxtYvxmlgCfaXST
+5JtxDYZ2kr0TXKA5t9w/Zcs=
+=XJYz
+-----END PGP SIGNATURE-----
