@@ -24,17 +24,10 @@ LICENSE="LGPL-2"
 # Depends on MySQL being installed, duh! :-)
 DEPEND="mysql ( >=mysql-3.23.49 )"
 
-src_unpack() {
-
-	# unpack a bunck of stuff and exit
-	unpack ${A} ; cd ${S}
+src_compile() {
 	patch -p1 < ${DISTFILES}/mysql++-gcc-3.0.patch || die
 	patch -p1 < ${FILESDIR}/mysql++-gcc-3.2.patch || die
 	patch -p1 < ${FILESDIR}/mysql++-1.7.9_example.patch || die
-}
-
-
-src_compile() {
 
 	# not including the directives to where MySQL is because it seems to find it
 	# just fine without
