@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5336-r2.ebuild,v 1.1 2004/04/08 05:14:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5336-r2.ebuild,v 1.2 2004/04/13 16:28:21 cyfred Exp $
 
 PKG_V="pkg1"
 NV_V="${PV/1.0./1.0-}"
@@ -74,6 +74,9 @@ src_install() {
 	doins usr/X11R6/lib/libXvMCNVIDIA.a
 	exeinto /usr/X11R6/lib
 	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
+
+	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
+	rm -f usr/include/GL/glext.h
 
 	# Includes
 	insinto ${NV_ROOT}/include
