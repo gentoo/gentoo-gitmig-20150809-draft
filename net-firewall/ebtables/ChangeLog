@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.5 2004/07/20 02:45:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.6 2004/07/24 12:09:47 solar Exp $
+
+  24 Jul 2004; <solar@gentoo.org> ebtables-2.0.6.ebuild:
+  update for ebtables -p support. bug 58116. Reported by Andrej Kacian
 
   19 Jul 2004; Travis Tilley <lv@gentoo.org>
   +files/ebtables-2.0.6-gcc34.patch, ebtables-2.0.6.ebuild:

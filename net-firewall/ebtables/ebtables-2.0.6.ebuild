@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.6.ebuild,v 1.7 2004/07/20 02:45:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.6.ebuild,v 1.8 2004/07/24 12:09:47 solar Exp $
 
 DESCRIPTION="Utility that enables basic Ethernet frame filtering on a Linux bridge, MAC NAT and brouting."
 SRC_URI="mirror://sourceforge/${PN}/${PN}-v${PV}.tar.gz"
@@ -15,6 +15,12 @@ inherit eutils
 S=${WORKDIR}/${PN}-v${PV}/
 
 DEPEND="virtual/libc"
+
+src_compile() {
+	# this needs to be here, otherwise einstall below will fail with
+	# sandbox violation
+	emake || die "emake failed"
+}
 
 src_unpack() {
 	unpack ${A}
