@@ -1,23 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.1.ebuild,v 1.2 2003/02/10 16:23:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.1.ebuild,v 1.3 2003/02/11 12:10:33 kutsuya Exp $
 
 IUSE="ncurses"
 
 # RSBAC Adming packet name
-ADMIN=rsbac-admin-v1.2.1
+ADMIN=rsbac-admin-v${PV}
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rule Set Based Access Control Admin Tools"
 HOMEPAGE="http://www.rsbac.org"
-SRC_URI="http://www.rsbac.org/code/rsbac-admin-v1.2.1.tar.bz2" 
+SRC_URI="http://www.rsbac.org/code/rsbac-admin-v${PV}.tar.bz2" 
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND="sys-kernel/rsbac-sources
-	app-misc/dialog"
+	dev-util/dialog"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 
