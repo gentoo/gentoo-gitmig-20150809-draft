@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.19 2004/02/17 06:49:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.20 2004/02/26 13:59:48 gustavoz Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ppc sparc alpha ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha ~amd64 ~ia64 ~mips hppa"
 
 DEPEND="virtual/glibc
 	app-arch/zip
