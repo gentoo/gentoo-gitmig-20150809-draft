@@ -1,0 +1,8 @@
+# ChangeLog for net-www/webcpp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/webcpp/ChangeLog,v 1.1 2003/02/17 02:10:27 vapier Exp $
+
+*webcpp-0.8.0 (16 Feb 2003)
+
+  16 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
