@@ -2,6 +2,9 @@
 source /etc/profile
 export PATH="/usr/lib/portage/bin:${PATH}"
 source /etc/rc.d/config/functions
+#if no perms are specified, dirs/files will have decent defaults
+#(not secretive, but not stupid)
+umask 022
 export DESTTREE=/usr
 export INSDESTTREE=""
 export EXEDESTTREE=""
