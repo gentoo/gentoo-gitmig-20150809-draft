@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.ebuild,v 1.4 2004/12/14 19:39:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.ebuild,v 1.5 2004/12/20 21:26:29 mr_bones_ Exp $
 
 inherit wxwidgets games
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/libsdl-1.0.1
 	media-libs/sdl-net
 	media-libs/sdl-mixer
 	>=x11-libs/wxGTK-2.3.4
-	media-libs/freetype
+	>=media-libs/freetype-2
 	>=sys-libs/zlib-1.1.4
 	mysql? ( dev-db/mysql )"
 
