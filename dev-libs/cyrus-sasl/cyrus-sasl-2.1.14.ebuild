@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.1 2003/07/09 07:53:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.2 2003/07/09 08:37:13 raker Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa"
-IUSE="gdbm berkdb ldap mysql kerberos static ssl java pam" #add otp
+IUSE="gdbm berkdb ldap mysql kerberos static ssl java pam" #otp krb4
 
 RDEPEND=">=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
@@ -21,6 +21,7 @@ RDEPEND=">=sys-libs/db-3.2
 	ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	kerberos? ( virtual/krb5 )
+	krb4? ( app-crypt/kth-krb )
 	java? ( virtual/jdk )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
@@ -37,6 +38,9 @@ src_unpack() {
 	# Fix for compatibility with MySQL 4.x
 	# http://bugzilla.andrew.cmu.edu/cgi-bin/cvsweb.cgi/src/sasl/plugins/mysql.c.diff?r1=1.10&r2=1.11
 	epatch ${FILESDIR}/2.1.14-mysql.patch
+
+	# Updated the cyrus-sasl-2.1.12-db4.patch
+	epatch ${FILESDIR}/2.1.14-db4.patch
 }
 
 src_compile() {
@@ -75,7 +79,8 @@ src_compile() {
 	# Kerberos 4 support doesn't compile.. and i'm not sure why
 	# If you want to test/fix for me, emerge kth-krb
 	# and have at it. :) -raker 02/07/2003
-	#if [ "$ENABLE_KRB4" = "yes" ]; then
+	#
+	#if [ "`use krb4`" ]; then
 	#	myconf="${myconf} --enable-krb4=/usr/athena"
 	#else
 		myconf="${myconf} --disable-krb4"
@@ -85,8 +90,7 @@ src_compile() {
 
 	use pam || myconf="${myconf} --without-pam"
 
-
-	# otp support via opie is not in portage yet
+	# opie is not in portage yet so no otp support
 	myconf="${myconf} --disable-otp"
 	# use otp && myconf="${myconf} --with-opie=/usr"
 
