@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/txt2regex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/ChangeLog,v 1.7 2004/10/15 23:54:26 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/ChangeLog,v 1.8 2004/11/14 15:43:13 ciaranm Exp $
+
+  14 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> txt2regex-0.8.ebuild:
+  sparc, mips, x86 stable
 
   16 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Added to the shell-tools herd for ciaranm.
