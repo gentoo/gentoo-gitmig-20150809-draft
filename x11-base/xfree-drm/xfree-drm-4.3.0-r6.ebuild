@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.17 2004/02/09 01:54:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.18 2004/04/12 02:17:02 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -43,7 +43,7 @@ LICENSE="X11"
 KEYWORDS="x86 alpha ppc ia64"
 
 # Need new portage for USE_EXPAND
-DEPEND=">=x11-base/xfree-${PV}
+DEPEND="virtual/x11
 	virtual/linux-sources
 	>=sys-apps/portage-2.0.49-r13"
 

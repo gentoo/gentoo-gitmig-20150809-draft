@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r8.ebuild,v 1.3 2004/04/08 23:09:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r8.ebuild,v 1.4 2004/04/12 02:17:02 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -42,7 +42,7 @@ LICENSE="X11"
 KEYWORDS="~x86"
 
 # Need new portage for USE_EXPAND
-DEPEND=">=x11-base/xfree-${PV}
+DEPEND="virtual/x11
 	virtual/linux-sources
 	>=sys-apps/portage-2.0.49-r13"
 
