@@ -1,4 +1,14 @@
-MD5 d7ac9f70f04c3956eff8a4bccdbe8402 ChangeLog 871
-MD5 8528fd302351bca7360e7dde9848e5b3 GD-SVG-0.25.ebuild 618
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77d6e977c7f4ecee711e6f0c7d215725 ChangeLog 965
+MD5 6f34d7a696fa7c0e033f97b7a1f44f62 GD-SVG-0.25.ebuild 627
 MD5 6e68c6f8969db95e88c2d534b06489dd metadata.xml 217
 MD5 68ce0edca85ee67b7dded2e18ce904d2 files/digest-GD-SVG-0.25 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCSyV8KRy60XGEcJIRAryOAKCspaF/++VkgnGTUyyIrot5bShaPQCgo8wW
+WagBeUsGlLiEK9sJSdsBPJI=
+=lHuG
+-----END PGP SIGNATURE-----

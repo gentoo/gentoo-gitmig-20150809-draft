@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVG
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.8 2004/12/30 00:27:58 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.9 2005/03/30 22:14:56 gustavoz Exp $
+
+  30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> SVG-2.32.ebuild:
+  Stable on sparc
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

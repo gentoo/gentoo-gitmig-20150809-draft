@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/SVG-2.32.ebuild,v 1.1 2004/10/17 18:21:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/SVG-2.32.ebuild,v 1.2 2005/03/30 22:14:56 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,4 +10,4 @@ HOMEPAGE="http://search.cpan.org/~ronan/${P}/"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc sparc"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/SVG-2.28.ebuild,v 1.7 2004/08/03 11:23:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/SVG-2.28.ebuild,v 1.8 2005/03/30 22:14:56 gustavoz Exp $
 
 inherit perl-module
 
