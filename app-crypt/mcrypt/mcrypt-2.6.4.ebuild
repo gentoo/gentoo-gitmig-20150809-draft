@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.4.ebuild,v 1.9 2004/09/02 18:13:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.4.ebuild,v 1.10 2004/11/22 05:42:37 robbat2 Exp $
 
 DESCRIPTION="replacement of the old unix crypt(1)"
 HOMEPAGE="http://mcrypt.sourceforge.net/"
@@ -22,6 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "install error"
+	emake install DESTDIR="${D}" || die "install error"
 	dodoc README NEWS AUTHORS THANKS TODO
 }

@@ -1,6 +1,17 @@
-MD5 85c80ba3426257b2cb109ec3ef7b05f9 ChangeLog 1233
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 adb00e32e7610a982367e5af498614bf mcrypt-2.6.2.ebuild 672
-MD5 dd7fdaf8020c02c3361c45f0a594a766 mcrypt-2.6.4.ebuild 724
+MD5 463c346dcec9c5e6568dfadb31aad0a6 mcrypt-2.6.4.ebuild 744
+MD5 85c80ba3426257b2cb109ec3ef7b05f9 ChangeLog 1233
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 820553aa023dd8d013a81bd67213b3ef files/digest-mcrypt-2.6.2 64
 MD5 835b3e96079ca07cfd4fa13143912778 files/digest-mcrypt-2.6.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBoXxPPpIsIjIzwiwRApjUAJ9bONIVNrYFMkUL78UX0N2dagYJIgCgtJ45
+DDIRwZqSsdsFgP2fFAtevrg=
+=Yct9
+-----END PGP SIGNATURE-----
