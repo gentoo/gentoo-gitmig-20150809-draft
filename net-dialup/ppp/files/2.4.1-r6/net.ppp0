@@ -11,7 +11,7 @@ PERSIST="no"			# Redial after being dropped
 ONDEMAND="no"			# Only bring the interface up on demand?
 MODEMPORT="/dev/ttyS0"		# TTY device modem is connected to
 LINESPEED="115200"		# Speed pppd should try to connect at
-INITSTRING="AT&S2=255"		# Extra init string for the modem
+INITSTRING=""			# Extra init string for the modem
 DEFROUTE="yes"			# Must pppd set the default route?
 HARDFLOWCTL="yes"		# Use hardware flow control?
 ESCAPECHARS="yes"		# Use escape caracters ?
@@ -56,6 +56,7 @@ DEVICE="${1##*.}"
 
 
 CMD_LINE=""
+FUNCT="${2}"
 
 checkconfig() {
 
@@ -64,13 +65,20 @@ checkconfig() {
 		return 1
 	fi
 
-	if [ -e "/var/run/ppp-${DEVICE}.pid" ] && [ "${1}" = "start" ] ; then
+	if [ -e "/var/run/ppp-${DEVICE}.pid" ] && [ "${FUNCT}" = "start" ] ; then
 		eerror "ppp0 is already up"
 		return 1
 	fi
 
-	if [ ! -e "/var/run/ppp-${DEVICE}.pid" ] && [ "${1}" = "stop" ] ; then
+	if [ ! -e "/var/run/ppp-${DEVICE}.pid" ] && [ "${FUNCT}" = "stop" ] ; then
+
 		eerror "ppp0 not up"
+		
+		# Do our own cleanup
+		if [ -e /dev/shm/.init.d/started/net.${DEVICE} ] ; then
+			rm -f /dev/shm/.init.d/started/net.${DEVICE}
+		fi
+
 		return 1
 	fi
 						
@@ -102,8 +110,14 @@ stop() {
 
 	ebegin "Bringing ${DEVICE} down"
 	if [ -x "`which ifconfig`" ]; then
+
+		if [ ! "`/sbin/ifconfig |grep ${DEVICE}`" ] ; then
+			eerror "Interface seems to be down already"
+			return 1
+		fi
+		
 		/sbin/ifconfig ${DEVICE} down
-		kill "`cat /var/run/ppp-${DEVICE}.pid`"
+		kill "`cat /var/run/ppp-${DEVICE}.pid |grep -v ${DEVICE}`"
 	fi
 	eend
 }
@@ -176,10 +190,16 @@ setup_cfg_files() {
 		chmod 660 /etc/ppp/pap-secrets
 
 		# Setup the chat file
-		sed -e "9i\\'OK\' \'${INITSTRING}\'" \
-			-e "s:\$NUMBER:${NUMBER}:" \
-			/usr/lib/ppp/chat-default \
-			>/etc/ppp/chat-${PEER}
+		if [ -n "${INITSTRING}" ] ; then
+			sed -e "9i\\'OK\' \'${INITSTRING}\'" \
+				-e "s:\$NUMBER:${NUMBER}:" \
+				/usr/lib/ppp/chat-default \
+				>/etc/ppp/chat-${PEER}
+		else
+			sed -e "s:\$NUMBER:${NUMBER}:" \
+				/usr/lib/ppp/chat-default \
+				>/etc/ppp/chat-${PEER}
+		fi
 
 		# Setup the ip-scripts so long
 		echo '#!/bin/bash' >/etc/ppp/ip-up
