@@ -1,0 +1,95 @@
+--- configure.in.orig	2004-11-11 18:56:27.471755550 -0500
++++ configure.in	2004-11-11 18:57:19.607238324 -0500
+@@ -151,25 +151,28 @@
+ fi
+ 
+ AC_CACHE_CHECK([location of utmp], shadow_cv_utmpdir,
+-[for utmpdir in /var/run /var/adm /usr/adm /etc none; do
++[for shadow_cv_utmpdir in /var/run /var/adm /usr/adm /etc none; do
+ 	if test -f $shadow_cv_utmpdir/utmp; then
+ 		break
+ 	fi
+ done])
+ if test "$shadow_cv_utmpdir" = "none"; then
+ 	AC_MSG_WARN(utmp file not found)
++else
++	AC_DEFINE_UNQUOTED(_UTMP_FILE, "$shadow_cv_utmpdir/utmp")
+ fi
+-AC_DEFINE_UNQUOTED(_UTMP_FILE, "$shadow_cv_utmpdir/utmp")
+ 
+ AC_CACHE_CHECK([location of faillog/lastlog/wtmp], shadow_cv_logdir,
+ [for shadow_cv_logdir in /var/log /var/adm /usr/adm /etc; do
+-	if test -d $logdir; then
++	if test -d $shadow_cv_logdir; then
+ 		break
+ 	fi
+ done])
+-AC_DEFINE_UNQUOTED(_WTMP_FILE, "$shadow_cv_logdir/wtmp")
+-AC_DEFINE_UNQUOTED(LASTLOG_FILE, "$shadow_cv_logdir/lastlog")
+-AC_DEFINE_UNQUOTED(FAILLOG_FILE, "$shadow_cv_logdir/faillog")
++if test "$shadow_cv_logdir" != "none"; then
++	AC_DEFINE_UNQUOTED(_WTMP_FILE, "$shadow_cv_logdir/wtmp")
++	AC_DEFINE_UNQUOTED(LASTLOG_FILE, "$shadow_cv_logdir/lastlog")
++	AC_DEFINE_UNQUOTED(FAILLOG_FILE, "$shadow_cv_logdir/faillog")
++fi
+ 
+ AC_CACHE_CHECK([location of the passwd program], shadow_cv_passwd_dir,
+ [if test -f /usr/bin/passwd; then
+--- configure.orig	2004-11-11 18:57:46.546320649 -0500
++++ configure	2004-11-11 18:57:55.968600631 -0500
+@@ -22326,7 +22324,7 @@
+ if test "${shadow_cv_utmpdir+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+-  for utmpdir in /var/run /var/adm /usr/adm /etc none; do
++  for shadow_cv_utmpdir in /var/run /var/adm /usr/adm /etc none; do
+ 	if test -f $shadow_cv_utmpdir/utmp; then
+ 		break
+ 	fi
+@@ -22337,11 +22335,12 @@
+ if test "$shadow_cv_utmpdir" = "none"; then
+ 	{ echo "$as_me:$LINENO: WARNING: utmp file not found" >&5
+ echo "$as_me: WARNING: utmp file not found" >&2;}
+-fi
+-cat >>confdefs.h <<_ACEOF
++else
++	cat >>confdefs.h <<_ACEOF
+ #define _UTMP_FILE "$shadow_cv_utmpdir/utmp"
+ _ACEOF
+ 
++fi
+ 
+ echo "$as_me:$LINENO: checking location of faillog/lastlog/wtmp" >&5
+ echo $ECHO_N "checking location of faillog/lastlog/wtmp... $ECHO_C" >&6
+@@ -22349,25 +22348,27 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   for shadow_cv_logdir in /var/log /var/adm /usr/adm /etc; do
+-	if test -d $logdir; then
++	if test -d $shadow_cv_logdir; then
+ 		break
+ 	fi
+ done
+ fi
+ echo "$as_me:$LINENO: result: $shadow_cv_logdir" >&5
+ echo "${ECHO_T}$shadow_cv_logdir" >&6
+-cat >>confdefs.h <<_ACEOF
++if test "$shadow_cv_logdir" != "none"; then
++	cat >>confdefs.h <<_ACEOF
+ #define _WTMP_FILE "$shadow_cv_logdir/wtmp"
+ _ACEOF
+ 
+-cat >>confdefs.h <<_ACEOF
++	cat >>confdefs.h <<_ACEOF
+ #define LASTLOG_FILE "$shadow_cv_logdir/lastlog"
+ _ACEOF
+ 
+-cat >>confdefs.h <<_ACEOF
++	cat >>confdefs.h <<_ACEOF
+ #define FAILLOG_FILE "$shadow_cv_logdir/faillog"
+ _ACEOF
+ 
++fi
+ 
+ echo "$as_me:$LINENO: checking location of the passwd program" >&5
+ echo $ECHO_N "checking location of the passwd program... $ECHO_C" >&6

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.87 2004/11/08 06:03:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.88 2004/11/12 00:34:46 vapier Exp $
+
+*shadow-4.0.6 (11 Nov 2004)
+
+  11 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.6-fix-configure.patch, +shadow-4.0.6.ebuild:
+  Version bump #70757 by Lindsay Jack.
 
 *shadow-4.0.5-r3 (07 Nov 2004)
 
