@@ -1,6 +1,11 @@
 # ChangeLog for media-video/okle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.5 2004/07/03 21:46:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.6 2004/11/29 10:10:58 motaboy Exp $
+
+  29 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/okle-0.4-configure-arts.patch, okle-0.4.ebuild:
+  Added a patch to the configure script to honor the arts USE flag. Fixes bug
+  #72786.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> okle-0.4.ebuild:
   QA: need-kde after R/DEPEND

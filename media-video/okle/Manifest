@@ -1,4 +1,5 @@
-MD5 51cf91b406af02c7e22aa943a7ebc38c okle-0.4.ebuild 476
-MD5 4ba3d0d3f695c87e80b0b83d4cb05c17 ChangeLog 648
+MD5 29a6f45cdffb89da698b2142c920acef okle-0.4.ebuild 578
+MD5 ee72e76f2b0ec93f185c2359fa19457c ChangeLog 845
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 ddb8f00ae2c33de8bc330973437f5961 files/digest-okle-0.4 60
+MD5 05d7b669aba3bbebf5f98561d2e096da files/okle-0.4-configure-arts.patch 3567
