@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.17 2005/04/02 01:22:12 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.18 2005/04/02 20:49:05 latexer Exp $
+
+  02 Apr 2005; Peter Johanson <latexer@gentoo.org>
+  gtkhtml-sharp-1.9.2.ebuild:
+  Fix dep to handle either libgtkhtml SLOT.
 
 *gtkhtml-sharp-1.9.2 (02 Apr 2005)
 
