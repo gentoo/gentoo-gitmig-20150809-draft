@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ae3db1fea260999ca8f4c85b812cfe91 ChangeLog 1630
 MD5 3232a150a609badfdd35fb6a079575f5 bluez-hcidump-1.9.ebuild 626
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
 MD5 a4d142bd57a50bc360e8092194830c13 bluez-hcidump-1.16.ebuild 632
+MD5 7e336e82a328ebee1457896abc0306a2 bluez-hcidump-1.18.ebuild 632
 MD5 2014055b5c0c94458fe30f0d332f2dba files/digest-bluez-hcidump-1.9 69
 MD5 87ae66aeee8338f11aa35da28df27fb4 files/digest-bluez-hcidump-1.16 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxzEIRkyva5PS18kRAmNsAKChlro6o1zMdMa958GdLw9fWT50dwCgyLD5
-slRv9gFDjvvwa73pZnzw7vU=
-=y76T
------END PGP SIGNATURE-----
+MD5 91eabaa589a79a5d83011ea6cff179a8 files/digest-bluez-hcidump-1.18 70

@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-hcidump
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.12 2004/12/20 20:06:43 liquidx Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.13 2005/03/08 15:34:47 liquidx Exp $
+
+*bluez-hcidump-1.18 (08 Mar 2005)
+
+  08 Mar 2005; Alastair Tse <liquidx@gentoo.org> +bluez-hcidump-1.18.ebuild:
+  version bump
 
 *bluez-hcidump-1.16 (20 Dec 2004)
 
