@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.4 2003/02/12 06:16:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.5 2003/04/22 22:58:14 rac Exp $
+
+*Devel-StackTrace-1.03 (22 Apr 2003)
+
+  22 Apr 2003; <rac@gentoo.org> Devel-StackTrace-1.02.ebuild,
+  Devel-StackTrace-1.02.ebuild, Devel-StackTrace-1.03.ebuild:
+  Version bump, thanks to Joshua J. Berry <condor-gentoo@condordes.net> in bug
+  #18200
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
