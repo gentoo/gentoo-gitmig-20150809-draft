@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.9.0.ebuild,v 1.6 2004/07/15 02:38:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.9.0.ebuild,v 1.7 2004/07/26 22:38:13 stkn Exp $
 
-IUSE="alsa doc gtk mmx mysql noiax nopri nozaptel"
+IUSE="alsa doc gtk mmx mysql nopri nozaptel"
 
 inherit eutils webapp-apache
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.asterisk.org/pub/telephony/asterisk/old-releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/libc
 	media-sound/mpg123
@@ -21,7 +21,6 @@ DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	!noiax? ( >=net-libs/iax-0.2.2 )
 	!nopri? ( >=net-libs/libpri-0.4 )
 	!nozaptel? ( >=net-misc/zaptel-0.9.1
 		     >=net-libs/zapata-0.9.1 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.5 2004/07/01 22:13:54 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.6 2004/07/26 22:37:02 stkn Exp $
 
 inherit eutils
 
@@ -8,11 +8,11 @@ IUSE="devfs26"
 
 DESCRIPTION="Pseudo-TDM engine"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/zaptel-${PV}.tar.gz"
+SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/old/zaptel-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/libc
 	virtual/linux-sources
@@ -91,7 +91,11 @@ src_compile() {
 		addwrite /usr/src/linux
 	fi
 
-	make ARCH=${MY_ARCH} || die
+	if use x86; then
+		make ARCH=${MY_ARCH} || die
+	else
+		make || die
+	fi
 }
 
 src_install() {
