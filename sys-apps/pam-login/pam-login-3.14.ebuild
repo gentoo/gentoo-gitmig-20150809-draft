@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.17 2004/06/30 22:20:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.18 2004/10/02 02:24:34 mr_bones_ Exp $
 
 inherit gnuconfig eutils
-
-IUSE="livecd nls selinux"
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -13,12 +11,13 @@ FORCE_LOGIN_DEFS="no"
 MY_PN="${PN/pam-/pam_}"
 S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Based on the sources from util-linux, with added pam and shadow features"
-SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 HOMEPAGE="http://www.thkukuk.de/pam/pam_login/"
+SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ppc64 s390 ia64"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ppc64 s390 ia64"
+IUSE="livecd nls selinux"
 
 DEPEND="virtual/libc
 	sys-libs/pam
@@ -40,21 +39,19 @@ src_unpack() {
 	use livecd || epatch ${FILESDIR}/pam-login-3.14-query_user_context.diff
 
 	use ppc64 && epatch ${FILESDIR}/pam_login-Werror-off-ppc64.patch
+	# Fix configure scripts to recognize linux-mips
+	# (imports updated config.sub and config.guess)
+	gnuconfig_update
 }
 
 src_compile() {
 	local myconf=
 
-	# Fix configure scripts to recognize linux-mips
-	# (imports updated config.sub and config.guess)
-	gnuconfig_update
-
 	use nls || myconf="${myconf} --disable-nls"
 	use selinux && myconf="${myconf} --enable-selinux"
 
 	econf ${myconf} || die
-
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -65,18 +62,18 @@ src_install() {
 
 	insinto /etc
 	insopts -m0644
+	doins "${FILESDIR}/login.defs"
 
-	doins ${FILESDIR}/login.defs
 	# Also install another one that we can use to check if
 	# we need to update it if FORCE_LOGIN_DEFS = "yes"
 	[ "${FORCE_LOGIN_DEFS}" = "yes" ] \
-		&& newins ${FILESDIR}/login.defs login.defs.new
+		&& newins "${FILESDIR}/login.defs" login.defs.new
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README THANKS
+	dodoc AUTHORS ChangeLog NEWS README THANKS
 }
 
 pkg_preinst() {
-	rm -f ${ROOT}/etc/login.defs.new
+	rm -f "${ROOT}/etc/login.defs.new"
 }
 
 pkg_postinst() {

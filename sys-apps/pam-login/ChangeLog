@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.41 2004/06/30 22:20:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.42 2004/10/02 02:24:34 mr_bones_ Exp $
+
+  01 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> pam-login-3.14.ebuild:
+  gnuconfig_update in src_unpack; tidy
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> pam-login-3.10.ebuild,
   pam-login-3.11-r1.ebuild, pam-login-3.11.ebuild, pam-login-3.12-r1.ebuild,
