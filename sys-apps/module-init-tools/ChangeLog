@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.61 2004/05/07 22:00:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.62 2004/05/12 08:24:32 aliz Exp $
 
 *module-init-tools-3.0-r2 (07 May 2004)
 
@@ -9,7 +9,8 @@
   Add patch to allow --assume-kernel option to generate-modprobe.conf for bug
   49926
 
-*module-init-tools-3.0-r1
+*module-init-tools-3.0-r1 (03 May 2004)
+
   03 May 2004; Jon Portnoy <avenj@gentoo.org> module-init-tools-3.0-r1.ebuild :
   Install static insmod for 2.4 kernels. Fix from Sascha Silbe in bug
   #45279.
