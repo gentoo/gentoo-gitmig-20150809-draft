@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r2.ebuild,v 1.1 2002/10/31 22:40:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r2.ebuild,v 1.2 2002/11/04 19:21:25 hannes Exp $
 inherit kde-dist
 
-IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba qt31patch"
+IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
 
@@ -61,10 +61,13 @@ src_unpack() {
     # Also note that kdebase 3.0.3 will compile just fine with all version of QT.
     # However kdebase 3.0.4 introduced an nspluginviewer fix that necessitates this
     # additional patch to work with qt 3.1.
-    if [ -n "`use qt31patch`" ]; then
+
+	# is also needed for qt-3.0.5 (#10062), so i uncommented the use qt31patch.
+	
+    #if [ -n "`use qt31patch`" ]; then
 	cd $S
 	/bin/zcat "$FILESDIR/$P-nspluginviewer-qt31.diff.gz" | patch -p0 --
-    fi
+    #fi
 
 	# Apply this only if we are using a hacked Xft-1.1 Xft.h.
 	if [ -n "`grep "End of Gentoo hack" /usr/X11R6/include/X11/Xft/Xft.h`" ]
