@@ -1,8 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/alsa/packages,v 1.1 2005/01/04 12:06:13 eradicator Exp $
-
-# We use 2.6 headers           
--*<sys-kernel/linux-headers-2.5
-#*<sys-kernel/linux-headers-2.7
-*virtual/os-headers

@@ -1,7 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/packages,v 1.6 2005/03/07 00:09:22 eradicator Exp $
-
-# Since we're running a sparc64 kernel w/ 32bit (v9) userland,
-# we need gcc-sparc64 for kernels.
-*sys-devel/gcc-sparc64

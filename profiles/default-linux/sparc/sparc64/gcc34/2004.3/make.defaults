@@ -1,6 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/make.defaults,v 1.11 2005/03/09 00:35:07 vapier Exp $
-
-# USE settings
-USE="alsa arts avi berkdb bitmap-fonts crypt cups dlloader encode esd font-server fortran fbcon foomaticdb gdbm gcc64 gif gtk gtk2 gnome imlib jack jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xv xml2 xmms zlib"
