@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r1.ebuild,v 1.2 2001/07/05 00:32:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r1.ebuild,v 1.3 2001/07/07 20:02:28 achim Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -33,7 +33,8 @@ DEPEND="virtual/glibc
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	imap? ( virtual/imap )
-	flash? ( media-libs/libswf )"
+	flash? ( media-libs/libswf media-libs/ming )
+	xml2? ( gnome-libs/libxml2 )"
 
 RDEPEND="virtual/glibc
 	>=dev-libs/gmp-3.1.1
@@ -53,6 +54,7 @@ RDEPEND="virtual/glibc
 	qt? ( >=x11-libs/qt-x11-2.3.0 )
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
+	xml2? ( gnome-libs/libxml2 )
 	imap? ( virtual/imap )"
 
 src_compile() {
@@ -97,11 +99,14 @@ src_compile() {
       myconf="$myconf --disable-xml"
     fi
     if [ "`use flash`" ] ; then
-      myconf="$myconf --with-swf=/usr"
+      myconf="$myconf --with-swf=/usr --with-ming=/usr"
     fi
     if [ "`use xml`" ] ; then
       export LIBS="-lxmlparse -lxmltok"
       myconf="$myconf --with-sablot=/usr"
+    fi
+    if [ "`use xml2`" ] ; then
+      myconf="$myconf --with-dom"
     fi
 
     LDFLAGS="$LDFLAGS -ltiff -ljpeg"
