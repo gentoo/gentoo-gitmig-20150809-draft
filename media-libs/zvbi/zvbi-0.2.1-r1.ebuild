@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.1-r1.ebuild,v 1.2 2002/10/04 05:51:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.1-r1.ebuild,v 1.3 2002/11/04 22:45:42 seemant Exp $
+
+IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VBI Decoding Library for Zapping"
@@ -11,13 +13,20 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND="virtual/x11 sys-devel/gettext"
+DEPEND="virtual/x11
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	
+	local myconf
+
+	use nls || myconf="${myconf} --disable-nls"
+	
 	econf ${myconf} || die
+
 	cp doc/zdoc-scan doc/zdoc-scan.orig 
-	sed -e 's:usr\/local\/share\/gtk-doc:usr\/share\/gtk-doc:' doc/zdoc-scan.orig > doc/zdoc-scan 
+	sed -e 's:usr/local/share/gtk-doc:usr/share/gtk-doc:' \
+		doc/zdoc-scan.orig > doc/zdoc-scan 
 	emake || die
 }
 
