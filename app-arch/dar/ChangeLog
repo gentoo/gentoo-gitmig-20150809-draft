@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/dar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.4 2004/01/29 15:36:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.5 2004/02/10 16:58:50 matsuu Exp $
+
+*dar-2.0.4-r1 (11 Feb 2004)
+
+  11 Feb 2004; MATSUU Takuto <matsuu@gentoo.org> dar-2.0.0.ebuild,
+  dar-2.0.4-r1.ebuild, dar-2.0.4.ebuild, dar-2.1.0.ebuild:
+  Version bumped.
+  Added acl to IUSE.
+  Removed old versions.
 
 *dar-2.0.4 (30 Jan 2004)
 
