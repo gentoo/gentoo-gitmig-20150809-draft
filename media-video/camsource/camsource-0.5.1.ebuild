@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.5.1.ebuild,v 1.12 2004/06/25 00:37:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.5.1.ebuild,v 1.13 2004/07/14 21:31:28 agriffis Exp $
 
 DESCRIPTION="Camsource grabs images from a video4linux device and makes them available
 			to various plugins for processing or handling. Camsource can also be used
@@ -17,7 +17,6 @@ DEPEND=">=dev-libs/libxml2-2.4.22
 		>=media-libs/jpeg-6b"
 
 RDEPEND=""
-S=${WORKDIR}/${P}
 
 src_compile() {
 
