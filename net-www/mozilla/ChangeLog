@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.38 2002/09/28 19:22:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.39 2002/10/03 19:17:12 azarah Exp $
+
+*mozilla-1.0.1-r1 (03 Oct 2002)
+  03 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Remove '--disable-dtd-debug' from configure, as it seems
+  to fix the unstability in mozilla.  Bug #4715 related.
 
 *mozilla-1.0.1 (28 Sep 2002)
   28 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
