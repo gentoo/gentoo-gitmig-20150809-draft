@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9020c94e756e3c51303606f298d03f8e ChangeLog 2837
+MD5 8437ba0a2d889f98ec8828bcaf39485c ChangeLog 2837
 MD5 fe11e0ded7a0d23a1974e46851c11442 ed-0.2-r6.ebuild 1535
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r6 58
@@ -10,7 +10,7 @@ MD5 549e2478edb18002261ae5dd055bcf5b files/0.2-info-dir.patch 373
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4rTnroRuSHgZdywRAtiqAKCQuO9YKde1/8Klt65yCxq4gnC0agCfSRLS
-czKhhzN5vbQq8F+pRcv9h7o=
-=HAkF
+iD8DBQFB4ra0roRuSHgZdywRApcDAJ4tbOAxoPYZNfYMSMTGGoNrRahLNgCgj7AS
+eV4DtyW+HfuDHNSoSEvkKiA=
+=Lj+Y
 -----END PGP SIGNATURE-----
