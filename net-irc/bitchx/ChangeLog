@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.32 2004/03/23 23:47:49 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.33 2004/03/28 14:14:16 zul Exp $
+
+  28 Mar 2004; Chuck Short <zul@gentoo.org> bitchx-1.0.19-r5.ebuild,
+  bitchx-1.0.19-r6.ebuild:
+  New version of bitchx is out, updated src_uri, partially fixes 45974.
 
   23 Mar 2004; Chuck Short <zul@gentoo.org> bitchx-1.0.19-r5.ebuild,
   bitchx-1.0.19-r6.ebuild:
