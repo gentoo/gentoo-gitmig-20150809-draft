@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r2.ebuild,v 1.3 2003/10/30 17:54:03 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r3.ebuild,v 1.1 2003/11/13 03:09:09 pebenito Exp $
 
 inherit eutils
 
