@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.10.ebuild,v 1.1 2004/11/22 13:07:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.10.ebuild,v 1.2 2005/02/11 13:29:39 caleb Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A plugin for cachegrind that adds call-graph profiling, needed by k
 HOMEPAGE="http://kcachegrind.sourceforge.net/"
 SRC_URI="http://kcachegrind.sourceforge.net/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
