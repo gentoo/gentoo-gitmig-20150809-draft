@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt/Math-BigInt-1.65.ebuild,v 1.2 2004/02/16 14:00:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt/Math-BigInt-1.65.ebuild,v 1.3 2004/04/16 00:02:18 randy Exp $
 
 inherit perl-module
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-POP3Client
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.4 2004/02/25 00:45:21 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.5 2004/04/16 00:06:28 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org>
+  Mail-POP3Client-2.7-r2.ebuild:
+  adding s390 keywords
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org>
   Mail-POP3Client-2.15.ebuild:
