@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.9_pre1.ebuild,v 1.1 2002/02/08 19:35:45 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.9_pre1.ebuild,v 1.2 2002/02/08 22:37:07 gbevin Exp $
 
 S=${WORKDIR}/svn
 S_APACHE=${WORKDIR}/httpd-2.0
@@ -241,12 +241,12 @@ pkg_config() {
         echo "A subversion repository already exists and I will not overwrite it."
 		echo "Delete /var/lib/svn first if you're sure you want to have a clean version."
 	else
-		einfo ">>> Creating repository directory ..."
-		chown -Rf nobody.nobody /var/lib/svn
-		chmod -Rf 755 /var/lib/svn
-		
 		einfo ">>> Populating repository directory ..."
 		# create initial repository
 		LD_LIBRARY_PATH="/usr/svn/lib:$LD_LIBRARY_PATH" /usr/svn/bin/svnadmin create /var/lib/svn
+
+		einfo ">>> Setting repository permissions ..."
+		chown -Rf nobody.nobody /var/lib/svn
+		chmod -Rf 755 /var/lib/svn
 	fi
 }
