@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.14 2004/07/14 17:03:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.15 2004/08/03 17:04:19 usata Exp $
 
 S=${WORKDIR}
-DESCRIPTION="Arphic Fonts"
+DESCRIPTION="Chinese TrueType Arphic Fonts"
 HOMEPAGE="http://www.arphic.com.tw/"
 SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 	 ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/bkai00mp.ttf.gz

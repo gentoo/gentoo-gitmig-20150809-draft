@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r2.ebuild,v 1.4 2004/07/29 02:34:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r2.ebuild,v 1.5 2004/08/03 17:04:19 usata Exp $
 
 inherit font
 
 IUSE="X"
 
-DESCRIPTION="Arphic Fonts"
+DESCRIPTION="Chinese TrueType Arphic Fonts"
 HOMEPAGE="http://www.arphic.com.tw/"
 SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 	 ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/bkai00mp.ttf.gz
