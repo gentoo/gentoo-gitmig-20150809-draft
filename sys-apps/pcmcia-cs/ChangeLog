@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.76 2004/10/21 14:44:49 latexer Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.77 2005/01/08 03:31:58 dragonheart Exp $
+
+  08 Jan 2005; Daniel Black <dragonheart@gentoo.org> files/ppc.config.opts:
+  Bad char in config file as per bug #77085. Thanks to Hugo Herbelin
+  <Hugo.Herbelin@inria.fr>
 
   21 Oct 2004; <peter@gentoo.org> files/pcmcia.conf:
   Make yenta_socket the socket driver to try first when starting pcmcia services.
