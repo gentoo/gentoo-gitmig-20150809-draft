@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.46 2004/09/06 20:48:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.47 2004/11/23 00:07:49 swegener Exp $
+
+  23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed digest.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> vpopmail-5.2.1-r5.ebuild,
   vpopmail-5.2.1-r6.ebuild, vpopmail-5.2.1-r7.ebuild,
