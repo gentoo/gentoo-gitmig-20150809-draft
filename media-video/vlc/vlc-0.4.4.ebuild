@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.2 2002/08/15 14:44:25 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.3 2002/08/17 13:08:07 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VideoLAN Client - DVD/video player"
@@ -30,6 +30,13 @@ RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
+
+# get kde and arts paths
+if [ -n "`use kde`" -o -n "`use arts`" ]; then
+    inherit kde-functions
+    set-kdedir 3
+    # $KDEDIR is now set to arts/kdelibs location
+fi
 
 src_unpack() {
 
