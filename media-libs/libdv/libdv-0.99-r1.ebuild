@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99-r1.ebuild,v 1.9 2004/01/17 05:32:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99-r1.ebuild,v 1.10 2004/01/29 18:13:17 gustavoz Exp $
 
 DESCRIPTION="Software codec for dv-format video (camcorders etc)."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://libdv.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ~sparc alpha hppa"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa"
 IUSE="debug gtk sdl xv"
 
 DEPEND="dev-libs/popt
