@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1cc56f29612db831023dccacb485d540 libextractor-0.3.3.ebuild 897
+MD5 91bc81f83b20f383cda831f1d0ee2d77 ChangeLog 3506
 MD5 37992a8de9dd0702aac52b8f25a23651 libextractor-0.2.2.ebuild 949
-MD5 555e1f76faeb0b847b02ca16e336443a libextractor-0.3.5.ebuild 817
-MD5 48162d87dac740d0a5a4737cd5dd3213 libextractor-0.3.7.ebuild 818
-MD5 90c5b28d3e2775590cda73501bd05672 ChangeLog 3417
+MD5 b48abf895aa209c378c58092cf56a288 libextractor-0.3.5.ebuild 812
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 48162d87dac740d0a5a4737cd5dd3213 libextractor-0.3.7.ebuild 818
+MD5 1cc56f29612db831023dccacb485d540 libextractor-0.3.3.ebuild 897
 MD5 b90f0423c61f6eb4c163b2c40074012d files/digest-libextractor-0.2.2 71
-MD5 1ea1d4b11ffc88ff52337b6be2c18bdd files/digest-libextractor-0.3.3 72
 MD5 d23f8f18934cc39aac8c79d79103427c files/digest-libextractor-0.3.5 72
-MD5 50b33c38f49cd6a827c2763e19f572c5 files/digest-libextractor-0.3.7 72
+MD5 1ea1d4b11ffc88ff52337b6be2c18bdd files/digest-libextractor-0.3.3 72
 MD5 32663ad54db490287bc8276e29dea25b files/libextractor-0.2.2-vorbisfile.patch 499
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXOptcAgAdbxYsnERAg2IAJ4+FuS4nRWw9LIPQ9bymmVEecxlOACfRN36
-tV2CYflie+GjkW4ByWrCnkg=
-=UcMk
------END PGP SIGNATURE-----
+MD5 50b33c38f49cd6a827c2763e19f572c5 files/digest-libextractor-0.3.7 72
