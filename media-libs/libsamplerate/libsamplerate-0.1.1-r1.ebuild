@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.1-r1.ebuild,v 1.4 2004/10/01 22:56:21 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.1-r1.ebuild,v 1.5 2004/12/29 02:43:08 ribosome Exp $
 
 IUSE="sndfile static"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha ~ia64 amd64 ~ppc-macos"
 
-DEPEND=">=dev-libs/fftw-3.0.1
+DEPEND=">=sci-libs/fftw-3.0.1
 	sndfile? ( >=media-libs/libsndfile-1.0.2 )
 	>=dev-util/pkgconfig-0.14.0"
 
