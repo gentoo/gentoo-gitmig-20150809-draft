@@ -1,4 +1,4 @@
-MD5 e5ff8d91fc6526814d89bfa92e76c7bc postgis-0.7.5-r2.ebuild 1829
-MD5 c74cb56e83e953b16b2077df2ebd860d ChangeLog 1550
+MD5 68f40c6d806ac151535f5ccc1eefcf69 postgis-0.7.5-r2.ebuild 1823
+MD5 638829abf7e2b1e0ec63526626d501a9 ChangeLog 1544
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 e02da1081e84b4266aff297f0e422688 files/digest-postgis-0.7.5-r2 135

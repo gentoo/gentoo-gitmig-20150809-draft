@@ -1,4 +1,4 @@
-MD5 15f38087502e3a26ae76cfd56406d334 ChangeLog 491
-MD5 e4f8907c24338ed16faa5916d065837d pgeasy-3.0.1.ebuild 896
-MD5 bfe8974eeabbe4d6362d3949d33b70a8 files/Makefile-gentoo.patch 395
+MD5 274a44592509591e65be1604f33687cb pgeasy-3.0.1.ebuild 886
+MD5 b5a71b7c2888d5d3800137d78577f4c9 ChangeLog 481
 MD5 4016912a424a60d58ea0174086e3f6c9 files/digest-pgeasy-3.0.1 62
+MD5 bfe8974eeabbe4d6362d3949d33b70a8 files/Makefile-gentoo.patch 395
