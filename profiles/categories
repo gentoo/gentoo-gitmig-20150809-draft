@@ -54,6 +54,7 @@ net-p2p
 net-print 
 net-wireless
 net-www 
+net-zope
 packages
 sys-apps 
 sys-cluster
