@@ -227,8 +227,11 @@ global $uid, $dbusername, $show_privates, $list; ?>
 	<tr>
 		<td bgcolor="white" colspan=2>
 			<p style="padding:0;margin:0;"><?=$longdesc;?></p>
-			<p align="right" style="padding:5px 0 0 0;margin:0;"><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)<br><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> on <?=$team;?><?=$branch;?></p>
 		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e0e0e0"><p><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</td>
+		<td bgcolor="#e0e0e0" align="right"><p><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> on <?=$team;?><?=$branch;?></p></td>
 	</tr>
 	</table>
 	</td></tr></table>

@@ -52,7 +52,7 @@ if ( !$xuid ) {
 		<li> <a href="useredit.php?xuid=new">Create new user</a>
 	<?php
 
-	$result = mysql_query( "select uid,username from users" );
+	$result = mysql_query( "select uid,username from users order by username" );
 
 	while ( list($xuid,$dude) = mysql_fetch_row($result) ) {
 		?>
