@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta1.ebuild,v 1.2 2003/11/03 20:27:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta1.ebuild,v 1.3 2003/11/08 22:09:26 caleb Exp $
 inherit kde
 
 MY_PV=3.1.93
@@ -16,7 +16,6 @@ SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
-#RDEPEND="doc? ( ~app-doc/kdelibs-apidocs-$PV )"
 DEPEND="dev-lang/perl
 	>=media-libs/audiofile-0.1.9
 	>=sys-apps/bzip2-1.0.1
@@ -38,8 +37,8 @@ newdepend "/autotools"
 RDEPEND="$RDEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
+	doc? ( app-doc/doxygen )
 	dev-lang/python"
-
 
 qtver-from-kdever ${PV}
 need-qt $selected_version
@@ -70,14 +69,27 @@ src_compile() {
 	use x86 && myconf="$myconf --enable-fast-malloc=full"
 
 	kde_src_compile configure make
+
+	use doc && make apidox
 }
 
 src_install() {
 	kde_src_install
 	dohtml *.html
 
-	# kdelibs-apidocs is provided by kdelibs-apidocs ebuild, kdelibs ebuild
-	# shouldn't install anything into kdelibs-apidocs (bug #15102)
-	rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
+	if [ `use doc` ]; then
+		einfo "Copying API documentation..."
+		dodir ${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs
+		cp -r ${S}/apidocs/* ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
+	else
+		rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
+	fi
 }
 
+pkg_postinst() {
+	if [ `use doc` ]; then
+		rm $KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
+		ln -sf $KDEDIR/share/doc/HTML/en/common \
+			$KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
+	fi
+}
