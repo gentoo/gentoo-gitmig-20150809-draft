@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.7 2004/02/25 09:01:43 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.8 2004/03/22 23:17:16 zx Exp $
+
+*jdbc-mysql-3.0.11 (22 Mar 2004)
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jdbc-mysql-2.0.14.ebuild,
+  jdbc-mysql-3.0.11.ebuild, jdbc-mysql-3.0.8.ebuild, jdbc-mysql-3.0.9.ebuild:
+  Clean up + QA fixes
 
   25 Feb 2004; Dylan Carlson <absinthe@gentoo.org> jdbc-mysql-3.0.9.ebuild:
   Added amd64 keyword.
