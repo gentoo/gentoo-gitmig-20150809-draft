@@ -1,6 +1,6 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.84 2003/02/23 20:31:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.85 2003/03/04 21:35:29 weeve Exp $
 
 *mozilla-1.3_beta (23 Feb 2003)
 
@@ -8,6 +8,10 @@
   New version.
 
 *mozilla-1.2.1-r5 (19 Jan 2003)
+
+  04 Mar 2003; Jason Wever <weeve@gentoo.org> mozilla-1.2.1-r5.ebuild:
+  Changing ~sparc to sparc as this works well, has no reported bugs, and the
+  current stable mozilla (1.0.1-r3) breaks during compile.
 
   29 Jan 2003; Jack Morgan <jmorgan@gentoo.org> mozilla-1.2.1-r*.ebuild :
   Fixed replace-flags 
