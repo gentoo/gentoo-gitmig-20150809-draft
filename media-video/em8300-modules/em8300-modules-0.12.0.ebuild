@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.10 2002/07/19 10:47:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.11 2002/07/22 01:29:00 lostlogic Exp $
 
 S="${WORKDIR}/${P}/modules"
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
@@ -76,7 +76,7 @@ pkg_postinst () {
 	einfo "to have the modules load at startup, add em8300, bt865, adv717x"
 	einfo "to your /etc/modules.autoload they may need module options to "
 	einfo "work correctly on your system.  You will also need to add"
-	einfo "the contents of /usr/share/doc/em8300-0.12.0/devfs_symlinks"
+	einfo "the contents of /usr/share/doc/${P}/devfs_symlinks.gz"
 	einfo "to your devfsd.conf so that the em8300 devices will be linked"
 	einfo "correctly."
 	einfo 
