@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/elicit/elicit-0.8.0.20040313.ebuild,v 1.2 2004/03/21 15:31:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/elicit/elicit-0.8.0.20040424.ebuild,v 1.1 2004/04/26 05:57:39 vapier Exp $
 
 inherit enlightenment
 
