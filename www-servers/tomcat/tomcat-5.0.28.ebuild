@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28.ebuild,v 1.9 2005/02/13 23:46:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28.ebuild,v 1.10 2005/02/14 00:11:02 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -32,9 +32,10 @@ RDEPEND=">=virtual/jdk-1.4
 	   dev-java/jmx
 	   >=dev-java/log4j-1.2.8
 	   >=dev-java/regexp-1.3
+	   >=dev-java/saxpath-1.0
 	   ~dev-java/servletapi-2.4
 	   =dev-java/struts-1.1*
-	   >=dev-java/saxpath-1.0
+	   dev-java/sun-jaf-bin
 	   >=dev-java/xerces-2.6.2-r1
 		jikes? ( dev-java/jikes )"
 IUSE="doc jikes"
