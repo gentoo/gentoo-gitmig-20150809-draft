@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.31 2004/07/25 15:59:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.32 2004/07/26 23:12:36 agriffis Exp $
+
+  26 Jul 2004; Aron Griffis <agriffis@gentoo.org> files/run-crons-0.3.1:
+  Polish that locking 'til it gleams
 
 *cronbase-0.3.1 (25 Jul 2004)
 
