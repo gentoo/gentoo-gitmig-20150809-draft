@@ -31,7 +31,7 @@ x11-themes/redhat-artwork
 
 # <seemant@gentoo.org> (31 Aug 2002)
 # masked while readline upgrade issues are sorted with bash
-=sys-libs/readline-4.3
+=sys-libs/readline-4.3*
 >=sys-apps/bash-2.05b
 
 # <cselkirk@gentoo.org> (31 Aug 2002)
