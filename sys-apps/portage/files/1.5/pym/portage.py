@@ -148,6 +148,8 @@ endversion={"pre":-2,"p":0,"alpha":-4,"beta":-3,"rc":-1}
 
 def env_update():
 	global root
+	if not os.path.exists(root+"etc/env.d"):
+		os.makedirs(root+"etc/env.d")
 	fns=os.listdir(root+"etc/env.d")
 	fns.sort()
 	pos=0
