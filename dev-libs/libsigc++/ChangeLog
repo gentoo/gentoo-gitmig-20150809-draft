@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.15 2003/05/16 12:57:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.16 2003/07/11 20:13:59 gmsoft Exp $
 
 *libsigc++-1.2.5 (16 May 2003)
 
@@ -32,6 +32,9 @@
   New development release of the 1.2 branch
   
 *libsigc++-1.0.4-r2 (21 Jun 2002)
+
+  11 Jul 2003; Guy Martin <gmsoft@gentoo.org> libsigc++-1.0.4-r2 :
+  Added hppa to KEYWORDS.
 
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
   Added ppc to keywords
