@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.1-r1.ebuild,v 1.9 2004/06/24 22:32:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.1-r1.ebuild,v 1.10 2004/06/29 13:04:34 tgall Exp $
 
 inherit sgml-catalog
 
@@ -12,7 +12,7 @@ LICENSE="X11"
 
 SLOT="4.1"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
 
 DEPEND=">=app-arch/unzip-5.41"
 RDEPEND="app-text/sgml-common"
