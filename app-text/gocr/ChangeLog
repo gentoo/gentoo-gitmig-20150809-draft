@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.14 2004/03/12 06:21:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.15 2004/03/21 19:16:43 usata Exp $
+
+  22 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> gocr-0.3.6-r2.ebuild,
+  gocr-0.3.6-r3.ebuild, gocr-0.37.ebuild, gocr-0.39.ebuild:
+  Marked 0.3.6-r3 as stable, closing bug #45242
+  Changed netpbm dependency to not require 10
 
 *gocr-0.39 (12 Mar 2004)
 

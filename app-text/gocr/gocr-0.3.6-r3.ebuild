@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r3.ebuild,v 1.1 2004/03/12 06:21:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r3.ebuild,v 1.2 2004/03/21 19:16:43 usata Exp $
 
 DESCRIPTION="Converts PNM to ASCII"
 SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://jocr.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 IUSE="doc"
 
 RDEPEND=">=media-libs/netpbm-9.12"
