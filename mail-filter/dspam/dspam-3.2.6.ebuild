@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.4.ebuild,v 1.4 2005/01/20 00:00:40 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.6.ebuild,v 1.1 2005/01/20 00:00:40 st_lim Exp $
 
 inherit eutils
 
@@ -138,12 +138,10 @@ src_install () {
 	keepdir ${HOMEDIR}
 
 	# keeps dspam data in /var
-	diropts -m0775 -o dspam -g dspam
 	dodir ${DATADIR}
 	keepdir ${DATADIR}
 
 	# keeps dspam log in /var/log
-	diropts -m0775 -o dspam -g dspam
 	dodir ${LOGDIR}
 	keepdir ${LOGDIR}
 	# ${HOMEDIR}/data is a symlink to ${DATADIR}
@@ -269,21 +267,18 @@ src_install () {
 	insopts -m644 -o dspam -g dspam
 	doins ${T}/dspam.conf
 
+	# installs the logrotation scripts to the logrotate.d directory
+	dodir /etc/logrotate.d
+	keepdir /etc/logrotate.d
+	insinto /etc/logrotate.d
+	newins ${FILESDIR}/logrotate.dspam dspam
+
 	# installs the cron job to the cron directory
-	diropts -m0755 -o dspam -g dspam
 	dodir /etc/cron.daily
 	keepdir /etc/cron.daily
 	exeinto /etc/cron.daily
 	exeopts -m0755 -o dspam -g dspam
 	doexe ${FILESDIR}/dspam.cron
-
-	# installs the logrotation scripts to the logrotate.d directory
-	diropts -m0755 -o dspam -g dspam
-	dodir /etc/logrotate.d
-	keepdir /etc/logrotate.d
-	insinto /etc/logrotate.d
-	insopts -m0755 -o dspam -g dspam
-	newins ${FILESDIR}/logrotate.dspam dspam
 
 	# dspam enviroment
 	echo -ne "CONFIG_PROTECT_MASK=\"${HOMEDIR}\"\n\n" > ${T}/40dspam
