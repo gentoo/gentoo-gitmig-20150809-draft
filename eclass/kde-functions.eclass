@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.106 2005/02/11 16:43:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.107 2005/02/11 17:37:39 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -62,6 +62,7 @@ kde-base/kdeaddons kde-base/noatun-nexscope
 kde-base/kdeaddons kde-base/noatun-noatunmadness
 kde-base/kdeaddons kde-base/noatun-oblique
 kde-base/kdeaddons kde-base/noatun-pitchablespeed
+kde-base/kdeaddons kde-base/noatun-plugins
 kde-base/kdeaddons kde-base/noatun-synaescope
 kde-base/kdeaddons kde-base/noatun-tippercanoe
 kde-base/kdeaddons kde-base/noatun-tyler
