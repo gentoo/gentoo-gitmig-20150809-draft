@@ -4,7 +4,7 @@
 <title>Gentoo Linux HOWTO</title>
 <author title="Author"><mail link="pete@gentoo.org">Peter Gavin</mail></author>
 <abstract>This document is a work in progress, and is constantly being
-updated and changed. It is by no means complete.  </abstract><!--  blah, blah, blah... (I'll fill this in later) -->
+updated and changed. It is by no means complete.</abstract>
 
 <version>0.51</version>
 <date>9 Apr 2001</date>
@@ -66,46 +66,46 @@ yourself should be compressed.
 <tr><ti><path>app-emulation</path></ti><ti>packages for emulating other systems/OSes </ti></tr>
 <tr><ti><path>app-misc</path></ti><ti>applications that don't fit anywhere else </ti></tr>
 <tr><ti><path>app-office</path></ti><ti>office-type (word processing, spreadsheet, etc.) packages </ti></tr>
-<tr><ti><path>app-shells </path></ti><ti>non-critical shells and command interpreters </ti></tr>
-<tr><ti><path>app-text  </path></ti><ti>text processing, spell checkers, and document formatting packages </ti></tr>
-<tr><ti><path>dev-db  </path></ti><ti>database libraries </ti></tr>
-<tr><ti><path>dev-java  </path></ti><ti>java classes/packages/etc.  </ti></tr>
-<tr><ti><path>dev-lang  </path></ti><ti>compilers and interpreters for different languages </ti></tr>
-<tr><ti><path>dev-libs  </path></ti><ti>miscellaneous developer's libraries </ti></tr>
-<tr><ti><path>dev-perl  </path></ti><ti>perl modules </ti></tr>
-<tr><ti><path>dev-python  </path></ti><ti>python modules </ti></tr>
-<tr><ti><path>dev-ruby </path></ti><ti>ruby modules </ti></tr>
-<tr><ti><path>dev-util </path></ti><ti>various developers utilities </ti></tr>
-<tr><ti><path>gnome-apps  </path></ti><ti>applications for GNOME </ti></tr>
-<tr><ti><path>gnome-base  </path></ti><ti>base GNOME packages </ti></tr>
-<tr><ti><path>gnome-libs  </path></ti><ti>non-essential GNOME libraries </ti></tr>
-<tr><ti><path>gnome-office </path></ti><ti>office packages for gnome </ti></tr>
-<tr><ti><path>kde-apps  </path></ti><ti>applications for KDE </ti></tr>
-<tr><ti><path>kde-base  </path></ti><ti>base KDE packages </ti></tr>
-<tr><ti><path>kde-i18n  </path></ti><ti>KDE internationalization packages </ti></tr>
-<tr><ti><path>media-gfx  </path></ti><ti>graphics-related programs </ti></tr>
-<tr><ti><path>media-libs  </path></ti><ti>  libraries for manipulating different media, including accessing multimedia peripherals of your computer (sound card, video card, etc.) </ti></tr>
-<tr><ti><path>media-sound  </path></ti><ti>programs related to sound, including cd-audio and sound encoding </ti></tr>
-<tr><ti><path>media-video </path></ti><ti>programs related to video, including video codecs and players </ti></tr>
-<tr><ti><path>net-analyzer </path></ti><ti>network usage statistics monitors/analyzers </ti></tr>
-<tr><ti><path>net-dialup </path></ti><ti>network dialup clients and servers such as pppd </ti></tr>
-<tr><ti><path>net-fs </path></ti><ti>network filesystems </ti></tr>
-<tr><ti><path>net-ftp </path></ti><ti>ftp servers and clients </ti></tr>
-<tr><ti><path>net-irc </path></ti><ti>irc servers and clients </ti></tr>
-<tr><ti><path>net-libs </path></ti><ti>networking-related libraries </ti></tr>
-<tr><ti><path>net-mail </path></ti><ti>MTAs and MUAs </ti></tr>
-<tr><ti><path>net-misc </path></ti><ti>miscellaneous servers, clients, firewalls, etc. </ti></tr>
-<tr><ti><path>net-nds </path></ti><ti>NIS/NIS+ and other network directory services </ti></tr>
-<tr><ti><path>net-print </path></ti><ti>print servers and clients </ti></tr>
-<tr><ti><path>net-www </path></ti><ti>http/www servers and clients </ti></tr>
-<tr><ti><path>sys-apps </path></ti><ti>system-critical applications and utilities </ti></tr>
-<tr><ti><path>sys-devel </path></ti><ti>base development packages, such as gcc and make </ti></tr>
-<tr><ti><path>sys-kernel </path></ti><ti>Linux kernels and kernel source packages </ti></tr>
-<tr><ti><path>sys-libs </path></ti><ti>system-critical libraries such as glibc </ti></tr>
-<tr><ti><path>x11-base </path></ti><ti>base X packages, such as XFree86 and drivers for various video cards </ti></tr>
-<tr><ti><path>x11-libs </path></ti><ti>widget sets and other X-specific libraries</ti></tr>
-<tr><ti><path>x11-terms </path></ti><ti>X-based terminal emulators </ti></tr>
-<tr><ti><path>x11-wm </path></ti><ti>X window managers </ti></tr>
+<tr><ti><path>app-shells</path></ti><ti>non-critical shells and command interpreters </ti></tr>
+<tr><ti><path>app-text</path></ti><ti>text processing, spell checkers, and document formatting packages </ti></tr>
+<tr><ti><path>dev-db</path></ti><ti>database libraries </ti></tr>
+<tr><ti><path>dev-java</path></ti><ti>java classes/packages/etc.  </ti></tr>
+<tr><ti><path>dev-lang</path></ti><ti>compilers and interpreters for different languages </ti></tr>
+<tr><ti><path>dev-libs</path></ti><ti>miscellaneous developer's libraries </ti></tr>
+<tr><ti><path>dev-perl</path></ti><ti>perl modules </ti></tr>
+<tr><ti><path>dev-python</path></ti><ti>python modules </ti></tr>
+<tr><ti><path>dev-ruby</path></ti><ti>ruby modules </ti></tr>
+<tr><ti><path>dev-util</path></ti><ti>various developers utilities </ti></tr>
+<tr><ti><path>gnome-apps</path></ti><ti>applications for GNOME </ti></tr>
+<tr><ti><path>gnome-base</path></ti><ti>base GNOME packages </ti></tr>
+<tr><ti><path>gnome-libs</path></ti><ti>non-essential GNOME libraries </ti></tr>
+<tr><ti><path>gnome-office</path></ti><ti>office packages for gnome </ti></tr>
+<tr><ti><path>kde-apps</path></ti><ti>applications for KDE </ti></tr>
+<tr><ti><path>kde-base</path></ti><ti>base KDE packages </ti></tr>
+<tr><ti><path>kde-i18n</path></ti><ti>KDE internationalization packages </ti></tr>
+<tr><ti><path>media-gfx</path></ti><ti>graphics-related programs </ti></tr>
+<tr><ti><path>media-libs</path></ti><ti>  libraries for manipulating different media, including accessing multimedia peripherals of your computer (sound card, video card, etc.) </ti></tr>
+<tr><ti><path>media-sound</path></ti><ti>programs related to sound, including cd-audio and sound encoding </ti></tr>
+<tr><ti><path>media-video</path></ti><ti>programs related to video, including video codecs and players </ti></tr>
+<tr><ti><path>net-analyzer</path></ti><ti>network usage statistics monitors/analyzers </ti></tr>
+<tr><ti><path>net-dialup</path></ti><ti>network dialup clients and servers such as pppd </ti></tr>
+<tr><ti><path>net-fs</path></ti><ti>network filesystems </ti></tr>
+<tr><ti><path>net-ftp</path></ti><ti>ftp servers and clients </ti></tr>
+<tr><ti><path>net-irc</path></ti><ti>irc servers and clients </ti></tr>
+<tr><ti><path>net-libs</path></ti><ti>networking-related libraries </ti></tr>
+<tr><ti><path>net-mail</path></ti><ti>MTAs and MUAs </ti></tr>
+<tr><ti><path>net-misc</path></ti><ti>miscellaneous servers, clients, firewalls, etc. </ti></tr>
+<tr><ti><path>net-nds</path></ti><ti>NIS/NIS+ and other network directory services </ti></tr>
+<tr><ti><path>net-print</path></ti><ti>print servers and clients </ti></tr>
+<tr><ti><path>net-www</path></ti><ti>http/www servers and clients </ti></tr>
+<tr><ti><path>sys-apps</path></ti><ti>system-critical applications and utilities </ti></tr>
+<tr><ti><path>sys-devel</path></ti><ti>base development packages, such as gcc and make </ti></tr>
+<tr><ti><path>sys-kernel</path></ti><ti>Linux kernels and kernel source packages </ti></tr>
+<tr><ti><path>sys-libs</path></ti><ti>system-critical libraries such as glibc </ti></tr>
+<tr><ti><path>x11-base</path></ti><ti>base X packages, such as XFree86 and drivers for various video cards </ti></tr>
+<tr><ti><path>x11-libs</path></ti><ti>widget sets and other X-specific libraries</ti></tr>
+<tr><ti><path>x11-terms</path></ti><ti>X-based terminal emulators </ti></tr>
+<tr><ti><path>x11-wm</path></ti><ti>X window managers </ti></tr>
 </table>
 </body>
 </section>
@@ -188,28 +188,32 @@ number, e.g. <c>package-4.5.3</c> and default to a revision of zero.
 
 <section>
 <title>Contents of an ebuild File</title>
-<body><p>1. Variable Settings:
-</p><p>The first part of every ebuild file is made up of a number of
+<body><p>1. Variable Settings:</p>
+<p>The first part of every ebuild file is made up of a number of
 variable settings. The variables you can set are:</p>
-<ul>
-<li>P - the name name and version of the package; you should not need to set this, as it is determined from the name of the ebuild file
-</li><li>A - the name (without the path) of the main archive file for your package
-</li><li>S - the source directory for your package; normally ${WORKDIR}/${P}
-</li><li>DESCRIPTION - a short, one line description of your package
-</li><li>SRC_URI - the URIs for every source file in your package, separated by whitespace; normally the first one is something like "ftp://ftp.company.com/pub/somepackage/${A}"
-</li><li>HOMEPAGE - your package's homepage
-</li><li>DEPEND - build dependencies; see the section <uri link="#dependencies">Package Dependencies</uri>
-</li><li>RDEPEND - runtime dependencies; see the section <uri link="#dependencies">Package Dependencies</uri>
-</li></ul>
-<p></p>
+<table>
+<tr><ti><c>P</c></ti><ti>the name name and version of the package; you should not need to set this, as it is determined from the name of the ebuild file</ti></tr>
+<tr><ti><c>A</c></ti><ti>the name (without the path) of the main archive file for your package</ti></tr>
+<tr><ti><c>S</c></ti><ti>the source directory for your package; normally ${WORKDIR}/${P}</ti></tr>
+<tr><ti><c>DESCRIPTION</c></ti><ti>a short, one line description of your package</ti></tr>
+<tr><ti><c>SRC_URI</c></ti><ti>the URIs for every source file in your package, separated by whitespace; normally the first one is something like &quot;ftp://ftp.company.com/pub/somepackage/${A}&quot;</ti></tr>
+<tr><ti><c>HOMEPAGE</c></ti><ti>your package's homepage</ti></tr>
+<tr><ti><c>DEPEND</c></ti><ti>build dependencies; see the section <uri link="#dependencies">Package Dependencies</uri></ti></tr>
+<tr><ti><c>RDEPEND</c></ti><ti>runtime dependencies; see the section <uri link="#dependencies">Package Dependencies</uri></ti></tr>
+<p>2. ebuild Functions</p>
+<p>There are a number of different functions that you can define in ebuild files that control the building and installation process of your package.</p>
+<table>
+</table>
 </body>
 </section>
 
 <section>
 <title>Rules for writing an ebuild File</title>
-<body><p>(TODO)<!-- todo -->
-</p></body>
-</section>	
+<body><p>Since ebuild files are really just shell scripts, you should use your editor's
+shell-script mode for editing them. You should use proper indentation, using only tab characters &emd;
+no spaces. Make sure you set up your editor to put tabstops at 4 spaces. Always make sure you use braces around your environment variables; e.g. <c>${P}</c> instead of just <c>$P</c>.
+TODO: add stuff about emacs & vi.</p></body>
+</section>
 </chapter>
 
 <chapter>
@@ -227,8 +231,14 @@ specification go to <uri>http://www.ibiblio.org/pub/Linux/docs/fhs/</uri>.</p>
 
 <section>
 <title>How to fit your packages into the filesystem</title>
-<body><p>(TODO)<!-- todo -->
-</p></body>
+<body><p>Usually, if the package uses autoconf and automake, the
+default installation destinations are fine, with a few exceptions:</p>
+<ul>
+<li>most packages go into prefix <path>/usr</path>; X11 specific programs and libraries can go into prefix <path>/usr/X11R6</path>; GNOME packages go into <path>/opt/gnome</path>; and KDE packages go into <path>/opt/kde</path></li>
+<li>man pages always go into <path>${prefix}/share/man</path>, not <path>${prefix}/man</path>; you can set this with <c>./configure --mandir=${prefix}/share/man</c></li>
+<li>info pages always go into <path>${prefix}/share/info</path>, not <path>${prefix}/info</path>; you can set this with <c>./configure --mandir=${prefix}/share/info</c></li>
+</ul>
+</body>
 </section>
 </chapter>
 
@@ -239,7 +249,8 @@ specification go to <uri>http://www.ibiblio.org/pub/Linux/docs/fhs/</uri>.</p>
 <title>Public scripts</title>
 <body><p>These are scripts used by the system-administrator to install and remove packages, and maintain the package database.</p>
 <ul>
-<li>ebuild - the main engine of the Portage system; performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages </li>
+<li>ebuild - the main engine of the Portage system; performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages</li>
+<li>emerge - recursively merges a package and all of its dependencies
 <li>pkgmerge - merges a pre-packaged .tbz2 file for a package
 </li></ul>
 </body>
