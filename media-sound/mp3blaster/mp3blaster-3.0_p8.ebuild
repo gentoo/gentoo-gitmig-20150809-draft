@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.0_p8.ebuild,v 1.1 2001/09/05 06:01:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.0_p8.ebuild,v 1.2 2001/09/07 02:56:52 woodchip Exp $
 
 A=${PN}-3.0p8.tar.gz
 S=${WORKDIR}/${PN}-3.0p8
@@ -30,7 +30,7 @@ src_compile() {
 	fi
 
 	# parallel make does not work
-	make || die
+	make CC="gcc ${CFLAGS}" CXX="c++ ${CXXFLAGS}" || die
 }
 
 src_install () {
