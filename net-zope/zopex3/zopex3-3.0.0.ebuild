@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.1 2004/11/08 09:31:28 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.2 2005/02/18 21:44:23 radek Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="ZPL"
 SLOT="${PV}"
 IUSE=""
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="=dev-lang/python-2.3*"
 python='python2.3'
