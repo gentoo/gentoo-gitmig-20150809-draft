@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Sablot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/ChangeLog,v 1.11 2003/07/14 22:35:18 mcummings Exp $
+
+*XML-Sablot-0.98 (14 Jul 2003)
+
+  14 Jul 2003; Michael Cummings <mcummings@gentoo.org> XML-Sablot-0.98.ebuild:
+  CPAN Version bump; ready for testing
 
 *XML-Sablot-0.90-r1 (21 Jun 2003)
  
