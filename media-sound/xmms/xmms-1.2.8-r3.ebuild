@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.8 2004/01/29 03:23:18 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.9 2004/01/29 04:15:00 agriffis Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~sparc ~alpha ~hppa ~mips amd64"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~hppa ~mips amd64 ~ia64"
 
 DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
