@@ -1,6 +1,23 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.184 2004/06/10 20:58:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.185 2004/06/11 07:38:36 kumba Exp $
+
+*glibc-2.3.4.20040605-r1 (11 Jun 2004)
+
+  11 Jun 2004; Joshua Kinard <kumba@gentoo.org>
+  +glibc-2.3.4.20040605-r1.ebuild:
+  MASSIVE cleanup to glibc's ebuild. Starting with 2.3.4.20040605, the following
+  changes were made:
+  - Moved PaX patches into its own function
+  - Moved all arch-specific patches into their own arch-specific 
+    functions
+  - Archs that lack any patches have empty arch-specific functions 
+    for later use
+  - Hardened/relro/nptl related tweaks moved into its own function
+  - Cleaned up 'if' conditionals and some spacing
+  - Added some missing tweaks that fixed an issue on non-hardened 
+    toolchains w/ nptl where the build would segfault during the 
+    sunrpc subsection of glibc
 
   10 Jun 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040605.ebuild:
   passes "make check" on ppc64, adding ~ppc64 keyword
