@@ -1,0 +1,518 @@
+diff -ru gpsim-0.20.14/cli/command.h gpsim-0.20.14-works-with-gcc3.2/cli/command.h
+--- gpsim-0.20.14/cli/command.h	Sat Dec 29 06:36:02 2001
++++ gpsim-0.20.14-works-with-gcc3.2/cli/command.h	Sat Sep 21 13:22:22 2002
+@@ -20,7 +20,8 @@
+ 
+ #if !defined (__COMMAND_H_)
+ #define __COMMAND_H_
+-
++#include <string>
++using namespace std;
+ #include <unistd.h>
+ #include <glib.h>
+ #include "misc.h"
+diff -ru gpsim-0.20.14/cli/parse.yy gpsim-0.20.14-works-with-gcc3.2/cli/parse.yy
+--- gpsim-0.20.14/cli/parse.yy	Sat Jan  5 10:10:24 2002
++++ gpsim-0.20.14-works-with-gcc3.2/cli/parse.yy	Sat Sep 21 13:20:39 2002
+@@ -21,12 +21,13 @@
+ Boston, MA 02111-1307, USA.  */
+ 
+ #include <stdio.h>
+-#include <iostream.h>
+-#include <iomanip.h>
++#include <iostream>
++#include <iomanip>
+ #include <string>
+ #include <vector>
+ #include <unistd.h>
+ #include <glib.h>
++using namespace std;
+ 
+ #include "misc.h"
+ #include "command.h"
+Only in gpsim-0.20.14-works-with-gcc3.2/cli: y.output
+diff -ru gpsim-0.20.14/gpsim/main.cc gpsim-0.20.14-works-with-gcc3.2/gpsim/main.cc
+--- gpsim-0.20.14/gpsim/main.cc	Wed Nov 28 15:38:48 2001
++++ gpsim-0.20.14-works-with-gcc3.2/gpsim/main.cc	Sat Sep 21 14:20:31 2002
+@@ -131,7 +131,7 @@
+ }
+ 
+ 
+-void 
++int
+ main (int argc, const char *argv[])
+ {
+ 
+@@ -267,4 +267,5 @@
+ 
+   exit_gpsim();
+ 
++  return 0;
+ }
+diff -ru gpsim-0.20.14/modules/binary_indicator.cc gpsim-0.20.14-works-with-gcc3.2/modules/binary_indicator.cc
+--- gpsim-0.20.14/modules/binary_indicator.cc	Wed Nov 28 15:39:00 2001
++++ gpsim-0.20.14-works-with-gcc3.2/modules/binary_indicator.cc	Sat Sep 21 14:21:25 2002
+@@ -132,7 +132,7 @@
+ //--------------------------------------------------------------
+ // construct
+ 
+-ExternalModule * Binary_Indicator::construct(char *new_name = NULL)
++ExternalModule * Binary_Indicator::construct(char *new_name)
+ {
+ 
+   cout << " Binary Indicator \n";
+diff -ru gpsim-0.20.14/modules/paraface.cc gpsim-0.20.14-works-with-gcc3.2/modules/paraface.cc
+--- gpsim-0.20.14/modules/paraface.cc	Wed Nov 28 15:39:02 2001
++++ gpsim-0.20.14-works-with-gcc3.2/modules/paraface.cc	Sat Sep 21 14:25:12 2002
+@@ -83,7 +83,7 @@
+ // tracing, stimulus interface, etc.). The ParafacePort class extends
+ // IOPORT by redirecting changes to the paraface.
+ 
+-Paraface_Port::Paraface_Port (unsigned int _num_iopins=8) : IOPORT(_num_iopins)
++Paraface_Port::Paraface_Port (unsigned int _num_iopins) : IOPORT(_num_iopins)
+ {
+ 
+ }
+@@ -93,7 +93,7 @@
+     IOPORT::setbit(bit_number, new_value);
+ }
+ 
+-OutputPort::OutputPort (unsigned int _num_iopins=8) : Paraface_Port(_num_iopins)
++OutputPort::OutputPort (unsigned int _num_iopins) : Paraface_Port(_num_iopins)
+ {
+ 
+ }
+diff -ru gpsim-0.20.14/modules/resistor.cc gpsim-0.20.14-works-with-gcc3.2/modules/resistor.cc
+--- gpsim-0.20.14/modules/resistor.cc	Wed Nov 28 15:39:00 2001
++++ gpsim-0.20.14-works-with-gcc3.2/modules/resistor.cc	Sat Sep 21 14:22:21 2002
+@@ -193,7 +193,7 @@
+ //--------------------------------------------------------------
+ // construct
+ 
+-ExternalModule * Resistor::construct(char *new_name = NULL)
++ExternalModule * Resistor::construct(char *new_name)
+ {
+ 
+   cout << " Resistor construct \n";
+@@ -300,7 +300,7 @@
+ 
+ //--------------------------------------------------------------
+ 
+-ExternalModule * PullupResistor::pu_construct(char *new_name = NULL)
++ExternalModule * PullupResistor::pu_construct(char *new_name)
+ {
+ 
+   cout << "Pullup Resistor construct \n";
+@@ -321,7 +321,7 @@
+ }
+ 
+ //--------------------------------------------------------------
+-ExternalModule * PullupResistor::pd_construct(char *new_name = NULL)
++ExternalModule * PullupResistor::pd_construct(char *new_name)
+ {
+ 
+   cout << "Pulldown Resistor construct \n";
+diff -ru gpsim-0.20.14/modules/usart.cc gpsim-0.20.14-works-with-gcc3.2/modules/usart.cc
+--- gpsim-0.20.14/modules/usart.cc	Wed Nov 28 15:39:00 2001
++++ gpsim-0.20.14-works-with-gcc3.2/modules/usart.cc	Sat Sep 21 14:24:05 2002
+@@ -1246,7 +1246,7 @@
+ }
+ 
+ //--------------------------------------------------------------
+-void USART_CORE::initialize(USART_IOPORT *new_iop=NULL)
++void USART_CORE::initialize(USART_IOPORT *new_iop)
+ {
+ 
+   port = new_iop;
+@@ -1364,7 +1364,7 @@
+ 
+ //--------------------------------------------------------------
+ 
+-ExternalModule * USARTModule::USART_construct(char *new_name = NULL)
++ExternalModule * USARTModule::USART_construct(char *new_name)
+ {
+ 
+   cout << "USART construct \n";
+@@ -1394,7 +1394,7 @@
+ }
+ 
+ 
+-USARTModule::USARTModule(char *_name = NULL)
++USARTModule::USARTModule(char *_name)
+ {
+ 
+   port = NULL;
+diff -ru gpsim-0.20.14/src/14bit-tmrs.cc gpsim-0.20.14-works-with-gcc3.2/src/14bit-tmrs.cc
+--- gpsim-0.20.14/src/14bit-tmrs.cc	Mon Dec 31 02:42:09 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/14bit-tmrs.cc	Sat Sep 21 13:35:31 2002
+@@ -932,7 +932,7 @@
+ // mode.
+ //
+ 
+-void TMR2::update(int ut = TMR2_DONTCARE_UPDATE)
++void TMR2::update(int ut)
+ {
+ 
+   //cout << "TMR2 update. cpu cycle " << cpu->cycles.value <<'\n';
+diff -ru gpsim-0.20.14/src/attribute.h gpsim-0.20.14-works-with-gcc3.2/src/attribute.h
+--- gpsim-0.20.14/src/attribute.h	Wed Nov 28 15:39:05 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/attribute.h	Sat Sep 21 13:39:32 2002
+@@ -24,6 +24,7 @@
+ //-------------------------------------------------------------------
+ 
+ #include <list>
++#include <iostream>
+ 
+ #include "xref.h"
+ 
+diff -ru gpsim-0.20.14/src/breakpoints.cc gpsim-0.20.14-works-with-gcc3.2/src/breakpoints.cc
+--- gpsim-0.20.14/src/breakpoints.cc	Sun Jan  6 08:57:18 2002
++++ gpsim-0.20.14-works-with-gcc3.2/src/breakpoints.cc	Sat Sep 21 13:43:17 2002
+@@ -37,7 +37,7 @@
+ 
+ Breakpoints bp;
+ 
+-unsigned int Breakpoints::set_breakpoint(BREAKPOINT_TYPES break_type, pic_processor *cpu,unsigned int arg1, unsigned arg2, BreakCallBack *f1 = NULL)
++unsigned int Breakpoints::set_breakpoint(BREAKPOINT_TYPES break_type, pic_processor *cpu,unsigned int arg1, unsigned arg2, BreakCallBack *f1)
+ {
+   file_register *fr;
+   int i;
+@@ -246,12 +246,12 @@
+   return(set_breakpoint (Breakpoints::NOTIFY_ON_EXECUTION, cpu, address, 0, f1));
+ }
+ 
+-unsigned int  Breakpoints::set_profile_start_break(pic_processor *cpu, unsigned int address, BreakCallBack *f1 = NULL)
++unsigned int  Breakpoints::set_profile_start_break(pic_processor *cpu, unsigned int address, BreakCallBack *f1)
+ {
+   return(set_breakpoint (Breakpoints::PROFILE_START_NOTIFY_ON_EXECUTION, cpu, address, 0, f1));
+ }
+ 
+-unsigned int  Breakpoints::set_profile_stop_break(pic_processor *cpu, unsigned int address, BreakCallBack *f1 = NULL)
++unsigned int  Breakpoints::set_profile_stop_break(pic_processor *cpu, unsigned int address, BreakCallBack *f1)
+ {
+   return(set_breakpoint (Breakpoints::PROFILE_STOP_NOTIFY_ON_EXECUTION, cpu, address, 0, f1));
+ }
+@@ -266,7 +266,7 @@
+   return(set_breakpoint (Breakpoints::BREAK_ON_REG_WRITE, cpu, register_number, 0));
+ }
+ 
+-unsigned int  Breakpoints::set_read_value_break(pic_processor *cpu, unsigned int register_number,unsigned int value, unsigned int mask=0xff)
++unsigned int  Breakpoints::set_read_value_break(pic_processor *cpu, unsigned int register_number,unsigned int value, unsigned int mask)
+ {
+   if(mask == 0)
+     mask = 0xff;
+@@ -278,7 +278,7 @@
+   return(set_breakpoint (Breakpoints::BREAK_ON_REG_READ_VALUE, cpu, register_number, value));
+ }
+ 
+-unsigned int  Breakpoints::set_write_value_break(pic_processor *cpu, unsigned int register_number,unsigned int value, unsigned int mask=0xff)
++unsigned int  Breakpoints::set_write_value_break(pic_processor *cpu, unsigned int register_number,unsigned int value, unsigned int mask)
+ {
+   if(mask == 0)
+     mask = 0xff;
+@@ -290,7 +290,7 @@
+   return(set_breakpoint (Breakpoints::BREAK_ON_REG_WRITE_VALUE, cpu, register_number, value));
+ }
+ 
+-unsigned int  Breakpoints::set_cycle_break(pic_processor *cpu, guint64 future_cycle, BreakCallBack *f1 = NULL)
++unsigned int  Breakpoints::set_cycle_break(pic_processor *cpu, guint64 future_cycle, BreakCallBack *f1)
+ {
+ 
+   return(set_breakpoint (Breakpoints::BREAK_ON_CYCLE, cpu, future_cycle & 0xffffffff, future_cycle>>32,f1));    
+@@ -328,7 +328,7 @@
+   return(set_breakpoint (Breakpoints::NOTIFY_ON_REG_WRITE, cpu, register_number, 0));
+ }
+ unsigned int Breakpoints::set_notify_read_value(pic_processor *cpu, unsigned int register_number, 
+-						unsigned int value, unsigned int mask=0xff)
++						unsigned int value, unsigned int mask)
+ {
+   if(mask == 0)
+     mask = 0xff;
+@@ -341,7 +341,7 @@
+ }
+ 
+ unsigned int Breakpoints::set_notify_write_value(pic_processor *cpu, unsigned int register_number,
+-						   unsigned int value, unsigned int mask=0xff)
++						   unsigned int value, unsigned int mask)
+ {
+   if(mask == 0)
+     mask = 0xff;
+diff -ru gpsim-0.20.14/src/fopen-path.cc gpsim-0.20.14-works-with-gcc3.2/src/fopen-path.cc
+--- gpsim-0.20.14/src/fopen-path.cc	Wed Nov 28 15:39:04 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/fopen-path.cc	Sat Sep 21 13:56:01 2002
+@@ -61,7 +61,8 @@
+ 	if (':' == *cp) ++pathLen;
+     }
+     ++pathLen;				// always one more segments than colons
+-    searchPath = (char *[])calloc (pathLen, sizeof (char *));
++    // searchPath = (char *[])calloc (pathLen, sizeof (char *));
++    searchPath = static_cast<char **>(calloc (pathLen, sizeof (char *)));
+     assert (NULL != searchPath);
+ 
+     for (cp = path, pathStr = searchPath, ii = 0, tp = strchr (path, ':');
+diff -ru gpsim-0.20.14/src/gpsim_time.cc gpsim-0.20.14-works-with-gcc3.2/src/gpsim_time.cc
+--- gpsim-0.20.14/src/gpsim_time.cc	Fri Jan  4 09:18:03 2002
++++ gpsim-0.20.14-works-with-gcc3.2/src/gpsim_time.cc	Sat Sep 21 13:58:18 2002
+@@ -59,7 +59,7 @@
+ // value of 'future_cycle' is compared against the values in the
+ // 'active' list.
+ 
+-bool Cycle_Counter::set_break(guint64 future_cycle, BreakCallBack *f=NULL, unsigned int bpn=MAX_BREAKPOINTS)
++bool Cycle_Counter::set_break(guint64 future_cycle, BreakCallBack *f, unsigned int bpn)
+ {
+ 
+   Cycle_Counter_breakpoint_list  *l1 = &active, *l2;
+@@ -130,7 +130,7 @@
+ // set a cycle counter break point relative to the current cpu cycle value. Return 1 if successful.
+ //
+ 
+-bool Cycle_Counter::set_break_delta(guint64 delta, BreakCallBack *f=NULL, unsigned int bpn=MAX_BREAKPOINTS)
++bool Cycle_Counter::set_break_delta(guint64 delta, BreakCallBack *f, unsigned int bpn)
+ {
+ 
+ #ifdef __DEBUG_CYCLE_COUNTER__
+@@ -194,7 +194,7 @@
+ // For example, if tmr0 is set to roll over on a certain cycle and the program changes the
+ // pre-scale value, then the break point has to be moved to the new cycle.
+ 
+-bool Cycle_Counter::reassign_break(guint64 old_cycle, guint64 new_cycle, BreakCallBack *f=NULL)
++bool Cycle_Counter::reassign_break(guint64 old_cycle, guint64 new_cycle, BreakCallBack *f)
+ {
+ 
+   Cycle_Counter_breakpoint_list  *l1 = &active, *l2;
+diff -ru gpsim-0.20.14/src/interface.cc gpsim-0.20.14-works-with-gcc3.2/src/interface.cc
+--- gpsim-0.20.14/src/interface.cc	Sat Jan  5 09:12:20 2002
++++ gpsim-0.20.14-works-with-gcc3.2/src/interface.cc	Sat Sep 21 14:02:41 2002
+@@ -1712,7 +1712,7 @@
+ //
+ //
+ //--------------------------------------------------------------------------
+-Interface::Interface(gpointer new_object=NULL)
++Interface::Interface(gpointer new_object)
+ {
+ 
+   interface_id = 0;
+diff -ru gpsim-0.20.14/src/ioports.cc gpsim-0.20.14-works-with-gcc3.2/src/ioports.cc
+--- gpsim-0.20.14/src/ioports.cc	Thu Jan  3 01:19:08 2002
++++ gpsim-0.20.14-works-with-gcc3.2/src/ioports.cc	Sat Sep 21 14:05:05 2002
+@@ -506,13 +506,13 @@
+ 
+ //-------------------------------------------------------------------
+ //-------------------------------------------------------------------
+-PIC_IOPORT::PIC_IOPORT(unsigned int _num_iopins=8) : IOPORT(_num_iopins)
++PIC_IOPORT::PIC_IOPORT(unsigned int _num_iopins) : IOPORT(_num_iopins)
+ {
+   tris = NULL;
+ 
+ }
+ 
+-IOPORT::IOPORT(unsigned int _num_iopins=8)
++IOPORT::IOPORT(unsigned int _num_iopins)
+ {
+   break_point = 0;
+   stimulus_mask = 0;
+diff -ru gpsim-0.20.14/src/modules.cc gpsim-0.20.14-works-with-gcc3.2/src/modules.cc
+--- gpsim-0.20.14/src/modules.cc	Wed Nov 28 15:39:03 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/modules.cc	Sat Sep 21 14:05:43 2002
+@@ -461,7 +461,7 @@
+ 
+ }
+ 
+-void module_load_module(char *module_type, char *module_name=NULL)
++void module_load_module(char *module_type, char *module_name)
+ {
+ 
+ 
+diff -ru gpsim-0.20.14/src/pic-instructions.cc gpsim-0.20.14-works-with-gcc3.2/src/pic-instructions.cc
+--- gpsim-0.20.14/src/pic-instructions.cc	Wed Dec 19 16:26:21 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/pic-instructions.cc	Sat Sep 21 14:11:29 2002
+@@ -54,7 +54,7 @@
+ 
+ };
+ 
+-invalid_instruction::invalid_instruction(pic_processor *new_cpu=NULL,unsigned int new_opcode=0)
++invalid_instruction::invalid_instruction(pic_processor *new_cpu,unsigned int new_opcode)
+ {
+   cpu=new_cpu;
+   opcode=new_opcode;
+diff -ru gpsim-0.20.14/src/pic-processor.cc gpsim-0.20.14-works-with-gcc3.2/src/pic-processor.cc
+--- gpsim-0.20.14/src/pic-processor.cc	Fri Jan  4 03:03:05 2002
++++ gpsim-0.20.14-works-with-gcc3.2/src/pic-processor.cc	Sat Sep 21 14:10:19 2002
+@@ -1087,7 +1087,7 @@
+ // placed in the file register map. 
+ 
+ void pic_processor::add_sfr_register(sfr_register *reg, unsigned int addr,
+-				      unsigned int por_value=0, char *new_name=NULL)
++				      unsigned int por_value, char *new_name)
+ {
+ 
+   reg->cpu         = this;
+diff -ru gpsim-0.20.14/src/pic-processor.h gpsim-0.20.14-works-with-gcc3.2/src/pic-processor.h
+--- gpsim-0.20.14/src/pic-processor.h	Fri Jan  4 00:56:44 2002
++++ gpsim-0.20.14-works-with-gcc3.2/src/pic-processor.h	Sat Sep 21 13:33:20 2002
+@@ -23,6 +23,8 @@
+ #include <unistd.h>
+ #include <glib.h>
+ 
++using namespace std;
++
+ #include "gpsim_classes.h"
+ #include "modules.h"
+ 
+diff -ru gpsim-0.20.14/src/stimuli.cc gpsim-0.20.14-works-with-gcc3.2/src/stimuli.cc
+--- gpsim-0.20.14/src/stimuli.cc	Wed Nov 28 15:39:03 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/stimuli.cc	Sat Sep 21 14:16:06 2002
+@@ -209,7 +209,7 @@
+ 
+ //========================================================================
+ 
+-Stimulus_Node::Stimulus_Node(char *n=NULL)
++Stimulus_Node::Stimulus_Node(char *n)
+ {
+ 
+   stimuli = NULL;
+@@ -374,7 +374,7 @@
+ 
+ }
+ 
+-stimulus::stimulus(char *n = NULL)
++stimulus::stimulus(char *n)
+ {
+   strcpy(name_str,"stimulus");
+ 
+@@ -406,7 +406,7 @@
+ //========================================================================
+ 
+ 
+-square_wave::square_wave(unsigned int p, unsigned int dc, unsigned int ph, char *n=NULL)
++square_wave::square_wave(unsigned int p, unsigned int dc, unsigned int ph, char *n)
+ {
+       
+   //cout << "creating sqw stimulus\n";
+@@ -435,7 +435,7 @@
+ 
+ // Create a square wave given only a (possibly) a name
+ 
+-square_wave::square_wave(char *n=NULL)
++square_wave::square_wave(char *n)
+ {
+   square_wave(0,0,0,n);
+ }
+@@ -455,7 +455,7 @@
+ //
+ // triangle_wave
+ 
+-triangle_wave::triangle_wave(unsigned int p, unsigned int dc, unsigned int ph, char *n=NULL)
++triangle_wave::triangle_wave(unsigned int p, unsigned int dc, unsigned int ph, char *n)
+ {
+       
+   //cout << "creating sqw stimulus\n";
+@@ -507,7 +507,7 @@
+ 
+ // Create a triangle wave given only a (possibly) a name
+ 
+-triangle_wave::triangle_wave(char *n=NULL)
++triangle_wave::triangle_wave(char *n)
+ {
+   triangle_wave(0,0,0,n);
+ }
+@@ -785,7 +785,7 @@
+ // Note that most of the stimulus' initialization must be performed outside
+ // of the constructor.
+ 
+-asynchronous_stimulus::asynchronous_stimulus(char *n=NULL)
++asynchronous_stimulus::asynchronous_stimulus(char *n)
+ {
+   cpu = NULL;
+ 
+@@ -939,7 +939,7 @@
+ 
+ //========================================================================
+ //
+-IO_input::IO_input(IOPORT *i, unsigned int b,char *opt_name=NULL)
++IO_input::IO_input(IOPORT *i, unsigned int b,char *opt_name)
+   : IOPIN(i,b,opt_name)
+ {
+ 
+@@ -1084,7 +1084,7 @@
+ 
+ //========================================================================
+ //
+-IO_bi_directional::IO_bi_directional(IOPORT *i, unsigned int b,char *opt_name=NULL)
++IO_bi_directional::IO_bi_directional(IOPORT *i, unsigned int b,char *opt_name)
+   : IO_input(i,b,opt_name)
+ {
+   //  source = new source_stimulus();
+@@ -1142,7 +1142,7 @@
+   cout << "IO_bi_directional constructor shouldn't be called\n";
+ }
+ 
+-IO_bi_directional_pu::IO_bi_directional_pu(IOPORT *i, unsigned int b,char *opt_name=NULL)
++IO_bi_directional_pu::IO_bi_directional_pu(IOPORT *i, unsigned int b,char *opt_name)
+   : IO_bi_directional(i, b,opt_name)
+ {
+ 
+@@ -1250,7 +1250,7 @@
+ }
+ 
+ 
+-IO_open_collector::IO_open_collector(IOPORT *i, unsigned int b,char *opt_name=NULL)
++IO_open_collector::IO_open_collector(IOPORT *i, unsigned int b,char *opt_name)
+   : IO_input(i,b,opt_name)
+ {
+ 
+diff -ru gpsim-0.20.14/src/stimuli.h gpsim-0.20.14-works-with-gcc3.2/src/stimuli.h
+--- gpsim-0.20.14/src/stimuli.h	Wed Nov 28 15:39:03 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/stimuli.h	Sat Sep 21 14:26:06 2002
+@@ -25,6 +25,7 @@
+ #include <string>
+ #include <unistd.h>
+ #include <glib.h>
++using namespace std;
+ 
+ #include "gpsim_classes.h"
+ #include "breakpoints.h"
+diff -ru gpsim-0.20.14/src/tmr0.cc gpsim-0.20.14-works-with-gcc3.2/src/tmr0.cc
+--- gpsim-0.20.14/src/tmr0.cc	Fri Jan  4 09:28:44 2002
++++ gpsim-0.20.14-works-with-gcc3.2/src/tmr0.cc	Sat Sep 21 14:17:13 2002
+@@ -47,7 +47,7 @@
+   new_name("tmr0");
+ }
+ 
+-void TMR0::start(int restart_value, int sync=0)
++void TMR0::start(int restart_value, int sync)
+ {
+ 
+   value = restart_value;
+diff -ru gpsim-0.20.14/src/trace.cc gpsim-0.20.14-works-with-gcc3.2/src/trace.cc
+--- gpsim-0.20.14/src/trace.cc	Fri Dec 28 11:12:27 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/trace.cc	Sat Sep 21 14:18:02 2002
+@@ -603,7 +603,7 @@
+ // int Trace::dump(unsigned int n=0)
+ //
+ 
+-int Trace::dump(unsigned int n=0, FILE *out_stream=NULL, int watch_reg=-1)
++int Trace::dump(unsigned int n, FILE *out_stream, int watch_reg)
+ {
+ 
+   char a_string[50];
+@@ -1108,7 +1108,7 @@
+   trace.dump_raw(numberof);
+ }
+ //--------------------------------------------
+-void trace_enable_logging(char *file=0)
++void trace_enable_logging(char *file)
+ {
+   if (file)
+     trace_log.enable_logging(file);
+diff -ru gpsim-0.20.14/src/xref.h gpsim-0.20.14-works-with-gcc3.2/src/xref.h
+--- gpsim-0.20.14/src/xref.h	Wed Nov 28 15:39:03 2001
++++ gpsim-0.20.14-works-with-gcc3.2/src/xref.h	Sat Sep 21 13:38:53 2002
+@@ -24,6 +24,7 @@
+ //-------------------------------------------------------------------
+ 
+ #include <list>
++using namespace std;
+ 
+ class XrefObject {
+     unsigned int *data;
