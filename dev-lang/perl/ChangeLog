@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.26 2003/07/15 17:11:00 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.27 2003/07/17 05:54:42 rac Exp $
+
+  16 Jul 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild, perl-5.8.1_rc1.ebuild:
+  Add portage depend on version that fixes bug 23546, so the blocking depends
+  will be guaranteed to work even if people are upgrading
 
   15 Jul 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild, perl-5.8.1_rc1.ebuild:
   Fiddle with the module block depends a bit, largely to ensure that File-Spec
