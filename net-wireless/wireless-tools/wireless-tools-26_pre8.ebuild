@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26_pre8.ebuild,v 1.4 2003/05/30 00:40:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26_pre8.ebuild,v 1.5 2003/05/31 04:34:30 latexer Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P/.pre8/}
@@ -22,7 +22,6 @@ src_unpack() {
 
 	mv Makefile ${T}
 	sed -e "s:# KERNEL_SRC:KERNEL_SRC:" \
-		-e "s:WARN:WT_WARN:g" \
 		${T}/Makefile > Makefile
 }
 src_compile() {
