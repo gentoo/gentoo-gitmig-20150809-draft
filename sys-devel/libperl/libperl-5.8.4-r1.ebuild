@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.4-r1.ebuild,v 1.12 2004/09/22 18:00:12 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.4-r1.ebuild,v 1.13 2004/09/27 11:33:08 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,7 +52,7 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb gdbm ithreads uclibc"
+IUSE="berkdb debug gdbm ithreads uclibc"
 
 inherit eutils flag-o-matic
 
@@ -180,6 +180,12 @@ src_compile() {
 		# <rac@gentoo.org> 2003.06.26
 		myconf="${myconf} -Dd_u32align"
 	fi
+
+	if use debug
+	then
+		CFLAGS="${CFLAGS} -g"
+	fi
+
 	if use sparc
 	then
 		myconf="${myconf} -Ud_longdbl"
