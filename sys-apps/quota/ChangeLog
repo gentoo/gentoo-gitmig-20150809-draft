@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/quota
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.6 2002/08/23 06:18:23 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.7 2002/12/03 17:00:08 styx Exp $
+
+  3 Dec 2002; Joachim Blaabjerg <styx@gentoo.org> quota-3.03.ebuild
+  quota-3.04.ebuild :
+
+  Removed old ebuilds. I assumed it was safe, as none of them were keyworded
+  any different than 3.06, so I assumed they were obsolete. Kick me in the
+  nuts if I'm wrong.
 
 *quota-3.06 (23 Aug 2002)
 
