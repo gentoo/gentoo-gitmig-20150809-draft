@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.17 2003/08/16 23:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.18 2003/08/21 04:17:16 vapier Exp $
+
+*libnet-1.1.0-r3 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Stick libnet into better SLOT's ... that is, 1.0.x is deprecated so
+  libnet-1.1.x now occupies libnet.a, libnet.h, and libnet-config ... #17772
+
+*libnet-1.0.2a-r3 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  While libnet-1.0.x now occupies libnet-1.0.a, libnet-1.0.h, and
+  libnet-1.0-config ... #17772
 
 *libnet-1.1.0-r2 (16 Aug 2003)
 
