@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.30.ebuild,v 1.2 2003/08/26 18:20:21 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.31.ebuild,v 1.1 2003/08/26 18:20:21 coronalvr Exp $
 
 inherit kde-base
 
