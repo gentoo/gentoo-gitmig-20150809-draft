@@ -1,6 +1,10 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# unreproducable weird problems so we are trying new ximian and redhat
+# patches -- blocke, 5/27/02
+>=x11-libs/gtk+-1.2.10-r8
+
 # old version isn't available, new version doesn't compile
 media-libs/nurbs++
 
