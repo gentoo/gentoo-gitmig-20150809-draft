@@ -1,3 +1,5 @@
-MD5 5f1f6ba2e032e122f424f707df1a35d7 bossogg-0.13.5.ebuild 1074
+MD5 2e3293a48b85d6d678c89a3d6133147a files/bossogg.initd 616
 MD5 5744dec050eb39224fe02fcdd1e74bed files/digest-bossogg-0.13.5 66
-MD5 8a9d691f2fa54f64626613d8e88804f4 files/bossogg.initd 554
+MD5 cf1909e0ccaa5883b298ddacea8a682a ChangeLog 462
+MD5 3abd45f838751603bd29adb873ff978b bossogg-0.13.5.ebuild 1475
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158

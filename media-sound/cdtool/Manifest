@@ -1,4 +1,4 @@
-MD5 6c21c5b0259e8e7dfadbfc8fbc9de80a ChangeLog 375
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 9e075a3a8f0d877bd10fcc529038df80 cdtool-2.1.5.ebuild 923
 MD5 d29e321ea1fc813d76ee1f28bf711a47 files/digest-cdtool-2.1.5 63
+MD5 e93905981e3604d2634e8627880172d4 ChangeLog 381
+MD5 cf1a826ac46a738860ad51b8a99fd5f6 cdtool-2.1.5.ebuild 925
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
