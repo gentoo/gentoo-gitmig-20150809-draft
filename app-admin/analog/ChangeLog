@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.14 2003/03/28 09:12:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.15 2003/04/05 07:10:17 woodchip Exp $
+
+*analog-5.32 (06 Apr 2003)
+
+  06 Apr 2003; Donny Davies <woodchip@gentoo.org> analog-5.32.ebuild:
+  Bump, #18610.
 
 *analog-5.31 (29 Jan 2003)
 
