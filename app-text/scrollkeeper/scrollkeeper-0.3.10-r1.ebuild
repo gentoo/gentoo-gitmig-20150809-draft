@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.10-r1.ebuild,v 1.2 2002/07/16 04:03:02 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.10-r1.ebuild,v 1.3 2002/07/24 01:02:36 gerk Exp $
 
 inherit libtool
 
@@ -22,7 +22,6 @@ http://belnet.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://scrollkeeper.sourceforge.net"
 SLOT="0"
 LICENSE="FDL-1.1 LGPL-2.1"
-KEYWORDS="x86"
 
 RDEPEND=">=dev-libs/libxml2-2.4.19
 	>=dev-libs/libxslt-1.0.14
