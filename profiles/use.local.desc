@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.900 2005/01/24 14:04:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.901 2005/01/24 18:26:47 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -88,6 +88,7 @@ app-office/grisbi:print - Enable TeX and printing support
 app-office/imposter:iksemel - Enable externel iksemel parsing support.
 app-office/magicpoint:m17n-lib - Enable m17n-lib (Multilingual Library) support.
 app-pda/multisync:bluetooth - Enable Bluetooth support with IRMC
+app-pda/multisync:evo2 - Enable Evolution 2 support
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:kdepim - Adds support for KDEPIM sync.
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
@@ -559,7 +560,7 @@ net-im/gnomemeeting:howl - Enable howl (Zeroconf) support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:kadu-modules - Enables modules in kadu
 net-im/kadu:kadu-voice - Enables voice chat in kadu
-net-im/psi:vanilla - Refrain from adding non official patches
+net-im/psi:extras - Refrain from adding non official patches
 net-im/silc-toolkit:client - Enables silc client
 net-im/silc-toolkit:server - Enables silc server
 net-irc/bitchx:cdrom - Enables CD-ROM support
