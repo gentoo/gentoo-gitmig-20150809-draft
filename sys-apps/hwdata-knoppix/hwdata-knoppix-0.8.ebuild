@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.8.ebuild,v 1.5 2003/09/07 02:53:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.8.ebuild,v 1.6 2004/03/20 20:19:40 zhen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="data hwsetup program"
@@ -11,8 +11,8 @@ KEYWORDS="x86 amd64 -ppc -sparc alpha -mips"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="sys-apps/kudzu"
-RDEPEND="virtual/glibc"
+DEPEND=""
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
