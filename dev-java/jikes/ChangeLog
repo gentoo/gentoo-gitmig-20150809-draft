@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.18 2004/02/17 22:03:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.19 2004/03/22 04:37:30 zx Exp $
+
+  21 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jikes-1.19.ebuild:
+  Marking stable on all archs except hppa, hppa is marked unstabled. Fixed issue
+  with depend.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> jikes-1.19.ebuild:
   add ~alpha and ~ia64
