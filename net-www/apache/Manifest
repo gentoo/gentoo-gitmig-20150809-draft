@@ -5,7 +5,7 @@ MD5 0db141c3deb9681139e541aa52beb768 apache-2.0.49-r1.ebuild 12686
 MD5 9d3cd5b23a0e528a8df05a9bd39a4a5f apache-1.3.31-r2.ebuild 6840
 MD5 99f48c117f6f2088663e4e7660a51ae3 apache-2.0.49-r3.ebuild 12997
 MD5 560a017fb276c511c94a69ffe8f1b736 apache-1.3.31-r1.ebuild 6711
-MD5 009f3861cf2102ed73cf37d5b670a921 ChangeLog 36821
+MD5 bde0e10a8165647411ac019abe5ad40a ChangeLog 36906
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 d4b8a4908870107e15cc1edbd0ec6ebb files/apache-1.3.29_mod_auth_db.patch 729
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
@@ -31,7 +31,7 @@ MD5 b7c4fabdcb3845c4218b770acb792f73 files/apache-2.0.49-gentoo.diff 6316
 MD5 2ab9f43e3c8529e441e139bdd64074f4 files/apachedelmod 3184
 MD5 04f0aad038773b082474ecf38c9e76f1 files/apache2 323
 MD5 bb36b429c433a5cbf2712605a76ce8fb files/digest-apache-1.3.31 139
-MD5 02cade3322a9c08c9821f281f7c87470 files/apachesplitlogfile 5067
+MD5 8b5e7c3c7da4ebb58471f917a693e047 files/apachesplitlogfile 5068
 MD5 b9ff3534313dae1b8ac96df0e3e01373 files/httpd-2.0.48-ipv6.patch 865
 MD5 29a5597d5dcdaf32abee2720fdef1999 files/apache.confd 997
 MD5 d52999376f67a872ee48cbae72db0160 files/httpd-2.0.49-cgi.patch 10319

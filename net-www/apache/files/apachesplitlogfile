@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/apachesplitlogfile,v 1.4 2004/06/14 02:28:39 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/apachesplitlogfile,v 1.5 2004/06/14 15:44:23 zul Exp $
 
 ## ====================================================================
 ## The Apache Software License, Version 1.1
@@ -81,7 +81,7 @@
 # will be appended to any existing log files.
 #
 
-use post qw(strftime);
+use POSIX qw(strftime);
 
 while (<STDIN>) {
     #
