@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.16 2003/06/19 17:28:12 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.17 2003/07/18 21:29:29 tester Exp $
+
+inherit gnuconfig
 
 IUSE="qt"
 
@@ -9,7 +11,7 @@ DESCRIPTION="ODBC Interface for Linux"
 SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 HOMEPAGE="http://www.unixodbc.org"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc hppa sparc alpha"
+KEYWORDS="x86 ppc hppa sparc alpha ~amd64"
 SLOT="0"
 DEPEND="virtual/glibc
         >=sys-libs/readline-4.1
@@ -30,6 +32,8 @@ src_unpack() {
 	libtoolize
 	aclocal
 	autoreconf-2.13
+
+	use amd64 && gnuconfig_update
 }
 
 src_compile() {
