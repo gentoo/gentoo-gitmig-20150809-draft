@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15r.ebuild,v 1.2 2004/04/27 18:17:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15r.ebuild,v 1.3 2004/06/15 05:05:57 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,18 +9,17 @@ S="${WORKDIR}/sv7"
 DESCRIPTION="Musepack audio compression tools"
 HOMEPAGE="http://www.uni-jena.de/~pfk/mpp/ http://corecodec.org/projects/mpc/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-RESTRICT="nomirror"
 IUSE="static esd oss"
 SRC_URI="http://corecodec.org/download.php/196/mpcsv7-src-${PV}.tar.gz"
 
 RDEPEND="media-sound/esound
-	media-libs/id3lib"
+	 media-libs/id3lib"
 
 DEPEND="${RDEPEND}
-	virtual/glibc"
+	dev-lang/nasm"
 
 src_unpack() {
 	if (! use esd && ! use oss); then
@@ -30,8 +29,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	#Cosmetic changes mainly to allow using of custom CFLAGS
+	# Cosmetic changes mainly to allow using of custom CFLAGS
 	epatch ${FILESDIR}/${P}-Makefile.patch
+
+	# Get rid of -mpreferred-stack-boundary=2 as it breaks amd64
+	sed -i 's:-mpreferred-stack-boundary=2::' Makefile
 
 	use oss || sed -i 's/#define USE_OSS_AUDIO/#undef USE_OSS_AUDIO/' mpp.h
 
