@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
+MD5 02e7376f4ccaefb5998fb62905f3b1fa ChangeLog 383
+MD5 2139d061f368a8da068746aa5257507b tcl-gtk-0.08.ebuild 633
+MD5 cca46034238171c80635514040fe7dad files/digest-tcl-gtk-0.08 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBLDFyFhz/XBeRBtARAiwjAJwOj7qBItNGohWG7KcCL7JrBmjRCgCgt7iE
+CDRxgUQkJUKiarQ+oE2NuTE=
+=I7wW
+-----END PGP SIGNATURE-----
