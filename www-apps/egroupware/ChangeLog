@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.3 2004/08/25 07:43:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.4 2004/08/25 08:34:56 rl03 Exp $
+
+*egroupware-1.0.00.004 (25 Aug 2004)
+
+  25 Aug 2004; Renat Lumpau <rl03@gentoo.org> +egroupware-1.0.00.004.ebuild:
+  Version bump (security update, bug #61510)
 
   25 Aug 2004; Renat Lumpau <rl03@gentoo.org> egroupware-1.0.00.003.ebuild:
   Removed sleep. Fixed pkg_compile insanity.
