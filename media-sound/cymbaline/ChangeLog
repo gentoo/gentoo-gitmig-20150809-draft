@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/cymbaline
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cymbaline/ChangeLog,v 1.1 2003/04/02 15:43:38 phosphan Exp $
+
+*cymbaline-0.9r (02 Apr 2003)
+
+  02 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> ChangeLog,
+  cymbaline-0.9r.ebuild, files/digest-cymbaline-0.9r,
+  files/cymbaline-0.9r.patch :
+  Initial import. Closes bug #676 which was a submission by
+  Mark <mwdilla@ilstu.edu>, modified by 
+  Tobias Klausmann <klausman-gentoo@schwarzvogel.de> and me.
