@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Ebuild by AutoBot (autobot@midsouth.rr.com)
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-0.6.0.ebuild,v 1.9 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-0.6.0.ebuild,v 1.10 2004/10/03 22:01:36 swegener Exp $
 
 IUSE=""
 DESCRIPTION="dockapp that monitors one or more mailboxes."
