@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.8 2003/11/13 01:41:30 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.9 2003/11/29 22:04:22 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> gst-plugins-mad-0.6.4.ebuild:
+  mark stable on amd64
 
   12 Nov 2003; Todd Sunderlin <todd@gentoo.org> gst-plugins-mad-0.6.3.ebuild:
   added sparc keyword
