@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.32 2004/11/10 19:37:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.33 2004/11/20 18:46:27 lu_zero Exp $
+
+  20 Nov 2004; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
+  Fixes bug #71854, -wxwindows now works correctly
 
   10 Nov 2004; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
   Fixed the wxGTK dependency

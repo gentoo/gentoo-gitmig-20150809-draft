@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.14 2004/11/10 19:37:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.15 2004/11/20 18:46:27 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -36,11 +36,13 @@ src_unpack() {
 }
 
 src_compile() {
+	use wxwindows && \
 	if ! use gtk2 ; then
 		need-wxwidgets gtk
 	else
 		need-wxwidgets gtk2
 	fi
+
 	[ "$ARCH" == "x86" ] \
 		&& myconf="--enable-idle-hack --enable-fast-function-calls"
 	myconf="${myconf} `use_with sdl`"
