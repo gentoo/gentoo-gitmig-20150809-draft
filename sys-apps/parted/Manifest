@@ -5,7 +5,7 @@ MD5 00e4c00119b7b037d217ecc4baf6ac06 parted-1.6.18.ebuild 1416
 MD5 20b32ec035beaa81e6e7285f11d7e9b8 ChangeLog 10833
 MD5 6a60a479b678b4e38ea1dfd7db3d04d8 parted-1.6.15.ebuild 1410
 MD5 cc3fe980186b567eed98f76d37dfc14a parted-1.6.10-r2.ebuild 1326
-MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
+MD5 2b0b0623d889932d22c276713b4b8d7d metadata.xml 223
 MD5 0df9004e28daa2db544ed65f852d695c files/digest-parted-1.6.10-r2 141
 MD5 b020ac3a8080ad690bb3ce376e5273bb files/digest-parted-1.6.6 136
 MD5 73a4f22213522b9db8d93884318e917b files/digest-parted-1.6.15 138
