@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.19.1.ebuild,v 1.1 2003/08/22 14:47:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.19.1.ebuild,v 1.2 2003/08/29 13:19:14 foser Exp $
 
 DESCRIPTION="rss news aggregator"
 HOMEPAGE="http://www.nongnu.org/straw/"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${PN}.pkg/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="virtual/python
 	>=gnome-base/libglade-2
