@@ -1,6 +1,12 @@
 # ChangeLog for net-print/lprng
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.31 2004/12/29 21:03:27 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.32 2005/01/28 18:26:28 lanius Exp $
+
+*lprng-3.8.27-r1 (28 Jan 2005)
+
+  28 Jan 2005; lanius@gentoo.org -lprng-3.8.22.ebuild, -lprng-3.8.26.ebuild,
+  +lprng-3.8.27-r1.ebuild:
+  security bump, bug #75484
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

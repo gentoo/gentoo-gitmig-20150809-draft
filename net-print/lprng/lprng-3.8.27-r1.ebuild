@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.26.ebuild,v 1.9 2004/11/09 21:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27-r1.ebuild,v 1.1 2005/01/28 18:26:28 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ MY_PN=LPRng
 S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Extended implementation of the Berkeley LPR print spooler"
 HOMEPAGE="http://www.lprng.com/"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64 ~mips"
 SRC_URI="ftp://ftp.lprng.com/pub/${MY_PN}/${MY_PN}/${MY_PN}-${PV}.tgz"
 
 PROVIDE="virtual/lpr"
@@ -26,6 +26,12 @@ RDEPEND="virtual/libc
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-certs.diff
+}
 
 src_compile() {
 	local myconf
@@ -70,6 +76,7 @@ src_install() {
 
 	insinto /etc/lprng
 	doins ${FILESDIR}/printcap lpd.conf lpd.perms
+	dosym /etc/lprng/printcap /etc/printcap
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/lprng-init lprng
 }

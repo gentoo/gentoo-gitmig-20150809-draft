@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27.ebuild,v 1.10 2004/11/09 21:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27.ebuild,v 1.11 2005/01/28 18:26:28 lanius Exp $
 
 inherit eutils flag-o-matic
 
