@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.18 2005/03/17 19:49:04 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.19 2005/03/20 19:32:59 weeve Exp $
+
+  20 Mar 2005; Jason Wever <weeve@gentoo.org> pygresql-3.6.1.ebuild:
+  Stable on SPARC.
 
   17 Mar 2005; Masatomo Nakano <nakano@gentoo.org> pygresql-3.6.1.ebuild:
   Marked stable.
