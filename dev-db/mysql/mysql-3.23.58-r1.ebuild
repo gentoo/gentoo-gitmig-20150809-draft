@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.5 2004/08/26 05:30:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.6 2004/08/29 04:56:48 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa"
 IUSE="berkdb debug innodb perl readline ssl static tcpd"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
