@@ -36,6 +36,23 @@
  # include a dependency file if one exists
 --- svgalib-1.4.3.orig/Makefile	Wed Apr 18 10:35:51 2001
 +++ svgalib-1.4.3/Makefile	Thu Jun 28 10:25:12 2001
+@@ -109,11 +109,11 @@
+ .PHONY: indent-gnu configaout
+
+ installheaders:
+-	@echo Installing header files in $(includedir).
+-	@if [ -f /usr/include/vga.h ]; then \
+-		rm -f /usr/include/vga.h /usr/include/vgagl.h; \
+-		echo Old header files in /usr/include removed.; \
+-	fi
++#	@echo Installing header files in $(includedir).
++#	@if [ -f /usr/include/vga.h ]; then \
++#		rm -f /usr/include/vga.h /usr/include/vgagl.h; \
++#		echo Old header files in /usr/include removed.; \
++#	fi
+ 	mkdir -p $(includedir)
+ 	@cp $(srcdir)/src/vga.h $(includedir)/vga.h
+ 	@chmod a+r $(includedir)/vga.h
 @@ -134,11 +134,11 @@
  		chmod a+r $(libdir)/$$foo; \
  	done

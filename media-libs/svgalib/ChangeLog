@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.5 2002/11/20 08:38:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.6 2002/12/03 18:30:29 azarah Exp $
+
+*svgalib-1.4.3-r3 (03 Dec 2002)
+
+  03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.4.3-r3.ebuild :
+  Add preplib to src_install() to fix bug #10383.
+
+  21 Nov 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.9.16.ebuild :
+  Add missing 'dodir /etc/modules.d'.
 
 *svgalib-1.9.16 (20 Nov 2002)
 
