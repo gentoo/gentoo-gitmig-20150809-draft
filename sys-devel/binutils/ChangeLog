@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.161 2004/10/06 23:09:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.162 2004/10/11 09:48:09 lv Exp $
+
+*binutils-2.15.92.0.2-r1 (11 Oct 2004)
+
+  11 Oct 2004; Travis Tilley <lv@gentoo.org> +binutils-2.15.92.0.2-r1.ebuild:
+  removed a few unused patches from the tarball. removed an old ppc -fPIC patch
+  that was causing the compile to fail, closes bug 66738. updated a few patches
+  borrowed from fedora to their latest versions, closes bug 66871. updated pax
+  patch to the latest version available on pax.grsecurity.net, version
+  2.15.91.0.2-200410091215
 
   06 Oct 2004; Travis Tilley <lv@gentoo.org> binutils-2.15.92.0.2.ebuild:
   added ~x86 keyword, as requested in bug 66555
