@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.17 2004/10/22 05:26:30 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.18 2004/10/24 01:36:10 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmx2 mpeg mythtv nas network nls oggvorbis opengl oss png rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmx2 mpeg mythtv nas network nls oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -61,8 +61,12 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	svga? ( media-libs/svgalib )
 	!ia64? (
 		theora? ( media-libs/libtheora )
-		live? ( >=media-plugins/live-2004.03.27 )
+		live? (
+			x86? ( >=media-plugins/live-2004.07.20 )
+			amd64? ( >=media-plugins/live-2004.03.27 )
+			alpha? ( >=media-plugins/live-2004.03.27 )
 		)
+	)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
 	xmms? ( media-sound/xmms )
@@ -112,6 +116,12 @@ src_unpack() {
 
 	#adds mythtv support to mplayer
 	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
+
+	#fixes a live api bug
+	if use live && use x86
+	then
+		epatch ${FILESDIR}/mplayer-1.0_pre5-live.patch
+	fi
 
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
@@ -212,14 +222,15 @@ src_compile() {
 	myconf="${myconf} $(use_enable mmx)"
 	myconf="${myconf} $(use_enable mmx2)"
 
-	if [ -d /opt/RealPlayer9/Real/Codecs ]; then
-		einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
-		REALLIBDIR="/opt/RealPlayer9/Real/Codecs"
-	elif [ -d /opt/RealPlayer8/Codecs ]; then
-		einfo "Setting REALLIBDIR to /opt/RealPlayer8/Codecs..."
-		REALLIBDIR="/opt/RealPlayer8/Codecs"
-	else
-		REALLIBDIR="/usr/lib/real"
+	if use real
+	then
+		if [ -d /usr/lib/win32 ]
+		then
+			REALLIBDIR="/usr/lib/win32"
+		else
+			eerror "Real libs not found!  Install a stable version of win32codecs"
+			die "Real libs not found"
+		fi
 	fi
 
 	if [ -e /dev/.devfsd ]; then
