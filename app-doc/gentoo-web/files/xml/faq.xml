@@ -5,7 +5,7 @@
 
 <abstract>This FAQ is a collection of questions and answers collected from the gentoo-dev mailing list and from IRC -- if you have any questions (or answers!) to add, please contact an author.</abstract>
 
-<version>1.0</version>
+<version>1.0.1</version>
 <date>20 April 2001</date>
 
 <chapter>
@@ -35,6 +35,19 @@
 	<section>
 		<title>What's the default root password after installation?</title>
 		<body><p>The default password is blank; hit enter.</p></body>
+	</section>
+
+	<section>
+		<title>Why can't a user su to root?</title>
+		<body><p>For security reasons, users may only <c>su</c> to root if they belong to the <e>wheel</e> group. To add a <i>username</i> to the <e>wheel</e> group, issue the following command as root:</p>
+		<pre># <i>usermod -G users,wheel username</i></pre>
+</body>
+	</section>
+
+	<section>
+		<title>How do I get <path>/dev/dsp</path>?</title>
+		<body><p>You can create it by typing the following as root:</p>
+		<pre># <i>MAKEDEV /dev/audio</i></pre></body>
 	</section>
 </chapter>
 
@@ -135,7 +148,7 @@ that you can build apps from sources. We generally only build binaries for relea
 
 	<section>
 		<title>How oftern are new releases made?</title>
-		<body><p>New releases are announced on the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</uri> mailing lists<!-- TODO: approximatley every X months-->.</p></body>
+		<body><p>New releases are announced on the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</uri> mailing lists<!-- TODO: approximatley every X months -->.</p></body>
 	</section>
 
 	<section>
@@ -153,7 +166,7 @@ that you can build apps from sources. We generally only build binaries for relea
 <title>Resources</title>
 	<section>
 		<title>Where can I find more about supervise?</title>
-		<body><p>TODO: <uri>http://cr.yp.to</uri></p></body>
+		<body><p><!-- TODO: --><uri>http://cr.yp.to</uri></p></body>
 	</section>
 
 	<section>
