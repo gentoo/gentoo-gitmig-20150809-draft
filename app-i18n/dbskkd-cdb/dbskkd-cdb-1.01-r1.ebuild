@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-1.01-r1.ebuild,v 1.7 2004/06/28 01:42:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-1.01-r1.ebuild,v 1.8 2004/08/28 14:31:58 usata Exp $
+
+inherit gcc
 
 DESCRIPTION="Yet another Dictionary server for the SKK Japanese-input software"
 HOMEPAGE="http://www.ne.jp/asahi/bdx/info/software/jp-dbskkd.html"
@@ -8,7 +10,7 @@ SRC_URI="http://www.ne.jp/asahi/bdx/info/software/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE=""
 
 DEPEND="dev-db/freecdb"
@@ -21,7 +23,7 @@ src_compile() {
 		SERVERDIR=/usr/sbin \
 		COMPAT="-DJISHO_FILE=\\\"/usr/share/skk/SKK-JISYO.L.cdb\\\"" \
 		LDFLAGS="-lutil -lfreecdb" \
-		CC="cc ${CFLAGS}" || die
+		CC="$(gcc-getCC) ${CFLAGS}" || die
 }
 
 src_install() {
