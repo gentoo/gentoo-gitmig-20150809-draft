@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r8.ebuild,v 1.2 2003/05/24 09:58:57 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r8.ebuild,v 1.3 2003/08/16 11:26:12 taviso Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://cr.yp.to/djbdns.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~sparc ~ppc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~sparc ~ppc alpha ~mips ~hppa"
 IUSE="ipv6 static"
 
 RDEPEND=">=sys-apps/daemontools-0.70
