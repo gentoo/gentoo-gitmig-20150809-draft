@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.8 2004/11/22 23:11:25 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.9 2004/11/28 02:26:56 josejx Exp $
+
+  28 Nov 2004; Joseph Jezak <josejx@gentoo.org> fcgi-2.4.0.ebuild:
+  Marked ppc stable.
 
   22 Nov 2004; Nick Dimiduk <ndimiduk@gentoo.org> fcgi-2.4.0.ebuild:
   Keyworded ~ppc-macos
