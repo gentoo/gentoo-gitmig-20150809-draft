@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/basket
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.1 2004/06/20 19:43:23 port001 Exp $
+
+*basket-0.4.0d (20 Jun 2004)
+
+  20 Jun 2004; Ian Leitch <port001@gentoo.org> +metadata.xml,
+  +basket-0.4.0d.ebuild:
+  Initial commit, thanks to those in #36719
+
