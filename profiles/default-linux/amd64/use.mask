@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.8 2004/11/03 23:08:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.9 2004/11/05 22:28:18 mr_bones_ Exp $
 
 #unknowns
 afs
@@ -89,3 +89,5 @@ solid
 sybase
 sybase-ct
 
+# dev-lang/tcc won't build
+tcc
