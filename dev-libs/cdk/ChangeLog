@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.11 2004/03/05 12:50:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.12 2004/04/16 13:37:15 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org>
+  cdk-4.9.10.20020809.ebuild:
+  Adding s390 keywords
 
   05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   cdk-4.9.10.20020809.ebuild:
