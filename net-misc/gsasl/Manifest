@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0210ad1a79d8a6dfb13165ba07c5ae82 gsasl-0.1.1.ebuild 1174
-MD5 f810012c55de6856522bc239c982bd96 gsasl-0.2.3.ebuild 1223
-MD5 eb930913442533d42988d436e6368d18 gsasl-0.2.0.ebuild 1222
-MD5 010b0a30fcb97bed636368c11fd46e56 ChangeLog 1418
+MD5 a664b9ba56af6786298051383c0eebe4 ChangeLog 1504
 MD5 9a3024665c04c1eb6ef0f20c66b451dc metadata.xml 252
+MD5 0210ad1a79d8a6dfb13165ba07c5ae82 gsasl-0.1.1.ebuild 1174
 MD5 028fc806a54eff2eef1ecea56651f8c6 gsasl-0.1.4.ebuild 1174
+MD5 b033155d2035cd5e518b7a7118b7451f gsasl-0.2.0.ebuild 1220
+MD5 f810012c55de6856522bc239c982bd96 gsasl-0.2.3.ebuild 1223
+MD5 82045137f4572bd6d9dc2cd30bad8990 files/digest-gsasl-0.2.0 64
 MD5 6f459b6dcf5ae7b72eeab7e098d7ce95 files/digest-gsasl-0.1.1 64
 MD5 c7e9afdbaed8d21536ef08e05e95e59e files/digest-gsasl-0.1.4 64
-MD5 82045137f4572bd6d9dc2cd30bad8990 files/digest-gsasl-0.2.0 64
 MD5 7d929a6a9bbfc8e1f94fa474c704dc17 files/digest-gsasl-0.2.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBzWYsCHk4+ZoBpvsRAub8AJ9ZNGVE8t6BGy8egp/FdlkNiu5JIwCfbvr8
-BpTmrkFAasDQwUNjwgZcODQ=
-=T7bq
+iD8DBQFBzXZfQlM6RnzZP+IRAsjgAJ0SAeTUokqHaxCF73TSezjzy66yaQCePnTg
+hCojLIozQCq3Hqd/dgclrMU=
+=2fD9
 -----END PGP SIGNATURE-----
