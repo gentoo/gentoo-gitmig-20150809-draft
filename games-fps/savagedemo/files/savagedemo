@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /opt/savagedemo
+export LD_LIBRARY_PATH="libs:${LD_LIBRARY_PATH}"
+exec ./savage.bin "$@"
