@@ -1,0 +1,12 @@
+--- jttl_sound-1.2/Makefile.orig	2004-07-15 23:02:26.402954048 +0000
++++ jttl_sound-1.2/Makefile	2004-07-15 23:03:09.946334448 +0000
+@@ -1,8 +1,5 @@
+ CC = gcc
+-#CFLAGS = -g -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon `gtk-config --cflags` -DUSE_GTK -Wall `sdl-config --cflags` -lm `sdl-config --libs`
+-CFLAGS = -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon `gtk-config --cflags` -DUSE_GTK -Wall `sdl-config --cflags`
+-
+-#CFLAGS = -g -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon `gtk-config --cflags` -DUSE_GTK -Wall
++CFLAGS = `gtk-config --cflags` -DUSE_GTK `sdl-config --cflags`
+ 
+ LD = gcc
+ LDFLAGS = -shared -Wl,-Bsymbolic `gtk-config --libs` -lpthread -lm `sdl-config --libs`
