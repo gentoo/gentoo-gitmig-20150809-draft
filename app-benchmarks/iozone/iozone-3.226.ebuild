@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.222.ebuild,v 1.1 2004/10/28 10:14:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.226.ebuild,v 1.1 2004/11/25 11:03:40 dragonheart Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
@@ -36,12 +36,6 @@ RDEPEND="virtual/libc"
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/3.221-gcc.patch
-}
-
 src_compile() {
 	cd src/current
 
@@ -70,8 +64,7 @@ src_install() {
 	dodoc src/current/Changes.txt
 	doman docs/iozone.1
 
-	dodir /usr/share/${PF}
-	insinto /usr/share/${PF}
+	insinto /usr/share/doc/${PF}
 	cd src/current
 	doins Generate_Graphs Gnuplot.txt gengnuplot.sh gnu3d.dem
 

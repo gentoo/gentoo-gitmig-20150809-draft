@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 38761ff380a2c45cfef311798f25f70a iozone-3.222.ebuild 2064
+MD5 9d94d2a8cf33968fb10f9ab50e5bfe20 iozone-3.226.ebuild 1968
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 e284b34309ed4c45b2a2ce133a79bdc2 ChangeLog 2276
+MD5 6d4460aed2472885370e6d170d481098 ChangeLog 2495
 MD5 931f50b82967e91df86101d1d2103e70 iozone-3.221.ebuild 1960
 MD5 64dc5f2ef940455df0f584d92be79f96 iozone-3.221-r1.ebuild 2077
-MD5 09f6cc5f40249824fd731b80d960f709 files/digest-iozone-3.222 61
+MD5 12fc9646500c0b8c87299cfd1e222779 files/digest-iozone-3.226 61
 MD5 2f97f7c83ee517e3716bfe9273022e21 files/digest-iozone-3.221 61
 MD5 2f97f7c83ee517e3716bfe9273022e21 files/digest-iozone-3.221-r1 61
 MD5 19fa5141eb3eec9357704d234cdc2d31 files/3.221-gcc.patch 469
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBgMZymdTrptrqvGERAvhAAJ0d6m422/s934YVo9hg1JfnHmSgvwCdEFhP
-FvfjX3P5YT3E6rT/8vtDvN0=
-=uPk6
+iD8DBQFBpbwSmdTrptrqvGERAgLMAJwNB7kL0oSuQoP9WGUOGEwG3Y2/VgCfTPp4
+jVKQlcNk1CZturF7q+2Q/vU=
+=fDLf
 -----END PGP SIGNATURE-----
