@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.4.0.353.ebuild,v 1.2 2004/06/24 23:29:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.4.0.353.ebuild,v 1.3 2004/06/28 21:46:38 mr_bones_ Exp $
 
 inherit games
 
@@ -10,9 +10,9 @@ SRC_URI="http://ufo2000.lxnt.info/files/${P}-src.tar.bz2
 	ftp://ftp.microprose.com/pub/mps-online/x-com/xcomdemo.zip
 	ftp://ftp.microprose.com/pub/mps-online/demos/terror.zip"
 
-KEYWORDS="-* x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="-* x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc
