@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.10 2004/10/17 08:01:53 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.11 2004/12/31 00:46:52 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   wxpython-docs-2.4.2.4.ebuild:
@@ -24,7 +27,7 @@
   wxpython-docs-2.4.2.4.ebuild:
   Fixed DOCDIR. Closes bug# 57237
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   wxpython-docs-2.4.0.7.ebuild, wxpython-docs-2.4.1.2.ebuild,
   wxpython-docs-2.4.2.4.ebuild:
   wxPython is now wxpython.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.5 2004/10/18 14:02:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.6 2004/12/31 00:34:54 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Oct 2004; Alastair Tse <liquidx@gentoo.org> rpy-0.3.5.ebuild:
   fix problem with undefined reference to MAIN__ if using libf2c
@@ -8,12 +11,12 @@
   18 Oct 2004; Alastair Tse <liquidx@gentoo.org> rpy-0.3.5.ebuild:
   added dev-lang/R dep and fix to find libR properly
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> rpy-0.3.5.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> rpy-0.3.5.ebuild:
   Remove default S.
 
 *rpy-0.3.5 (21 Feb 2004)
 
-  21 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org> metadata.xml,
+  21 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> metadata.xml,
   rpy-0.3.5.ebuild:
   Initial import.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.14 2004/12/11 20:25:33 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.15 2004/12/31 00:45:30 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Dec 2004; Rob Cakebread <pythonhead@gentoo.org>
   wxpython-2.5.3.1.ebuild:
@@ -45,7 +48,7 @@
   This version runs both +gtk2, -gtk2.  Also, it (and wxGTK) build with
   gcc-3.3.3, hardened gcc-3.3.4-r1 as of the date of this entry, and run.
 
-  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> wxpython-2.4.0.7.ebuild,
+  20 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> wxpython-2.4.0.7.ebuild,
   wxpython-2.4.1.2.ebuild, wxpython-2.4.2.4.ebuild:
   dev-python/PyOpenGL is now dev-python/pyopengl - adjust dependencies
   accordingly.
@@ -53,13 +56,13 @@
   05 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> wxpython-2.4.2.4.ebuild:
   Clarified USE='gtk2' messages. Bug# 56153
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> wxpython-2.4.0.7.ebuild,
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> wxpython-2.4.0.7.ebuild,
   wxpython-2.4.1.2.ebuild, wxpython-2.4.2.4.ebuild:
   Fix error messages.
 
 *wxpython-2.4.2.4 (03 Jul 2004)
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> +wxpython-2.4.0.7.ebuild,
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +wxpython-2.4.0.7.ebuild,
   +wxpython-2.4.1.2.ebuild, +wxpython-2.4.2.4.ebuild:
   Follow naming policy, rename wxPython to wxpython.
 

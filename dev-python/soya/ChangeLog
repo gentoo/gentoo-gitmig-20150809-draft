@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soya
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.8 2004/12/29 23:44:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.9 2004/12/31 00:39:34 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *soya-0.9.1 (30 Dec 2004)
 
@@ -15,16 +18,16 @@
 
 *soya-0.8.1 (16 Oct 2004)
 
-  16 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> +soya-0.8.1.ebuild:
+  16 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +soya-0.8.1.ebuild:
   Version bump, bug 66329.
 
-  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> soya-0.3.1.ebuild,
+  01 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> soya-0.3.1.ebuild,
   soya-0.5.ebuild, soya-0.6.1.ebuild:
   Mark 0.6.1 stable on x86, change homepage + src_uri, remove old version.
 
 *soya-0.6.1 (21 Dec 2003)
 
-  21 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> soya-0.6.1.ebuild:
+  21 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> soya-0.6.1.ebuild:
   Version bump
 
 *soya-0.5 (05 Dec 2003)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tpg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/ChangeLog,v 1.5 2004/12/06 23:28:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/ChangeLog,v 1.6 2004/12/31 00:41:08 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *tpg-3.0.4 (07 Dec 2004)
 
@@ -17,7 +20,7 @@
 
 *tpg-3.0.2 (02 May 2004)
 
-  02 May 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  02 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +metadata.xml,
   +tpg-3.0.2.ebuild:
   Initial import, bug #48538.
 

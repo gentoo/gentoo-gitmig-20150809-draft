@@ -1,11 +1,14 @@
 # ChangeLog for dev-python/rtgraph
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/ChangeLog,v 1.5 2004/11/05 22:07:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/ChangeLog,v 1.6 2004/12/31 00:35:45 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org> rtgraph-0.70.ebuild:
   Marked ~amd64.
 
-  10 May 2004; Bryan Østergaard <kloeri@gentoo.org> rtgraph-0.70.ebuild:
+  10 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> rtgraph-0.70.ebuild:
   Remove default RDEPEND.
 
   04 Apr 2004; David Holm <dholm@gentoo.org> rtgraph-0.70.ebuild:
@@ -13,7 +16,7 @@
 
 *rtgraph-0.70 (03 Apr 2004)
 
-  03 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> metadata.xml,
+  03 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> metadata.xml,
   rtgraph-0.70.ebuild:
   Initial import, ebuild by Lukasz Strzygowski <lucass@gentoo.pl>.
 

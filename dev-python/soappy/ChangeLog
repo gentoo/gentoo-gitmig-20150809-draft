@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.7 2004/12/07 03:28:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.8 2004/12/31 00:38:47 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Dec 2004; Jason Wever <weeve@gentoo.org> soappy-0.11.6.ebuild:
   Added ~sparc keyword.
@@ -19,12 +22,12 @@
 
 *soappy-0.11.3 (10 Apr 2004)
 
-  10 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> soappy-0.11.1.ebuild,
+  10 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> soappy-0.11.1.ebuild,
   soappy-0.11.3.ebuild:
   Mark 0.11.1 stable on x86, add 0.11.3 to portage.
 
 *soappy-0.11.1 (03 Jan 2004)
 
-  03 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org> soappy-0.11.1.ebuild:
+  03 Jan 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> soappy-0.11.1.ebuild:
   Initial import
 
