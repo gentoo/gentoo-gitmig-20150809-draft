@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.7 2004/10/24 09:04:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.8 2004/10/25 06:58:08 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="2.1.2"
+PATCHVER="2.1.3"
 
 PATCHDIR="${WORKDIR}/patches"
 
