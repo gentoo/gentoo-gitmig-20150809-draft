@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (03 Dec 2002)
+# this fix removes some functionality from graphviz but seems to be necessary if we are to
+# clean-up all that libpng mess
+# should be unmasked *prior* to libpng-1.0* removal!!!
+=media-gfx/graphviz-1.8.10-r1
+
 # <danarmak@gentoo.org> (03 Dec 2002)
 # masked until release
 =app-office/kofice-1.2.1
