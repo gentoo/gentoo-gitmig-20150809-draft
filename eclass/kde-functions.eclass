@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.66 2004/04/16 00:26:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.67 2004/04/16 01:00:48 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -59,10 +59,6 @@ need-kde() {
 
 	# ask for autotools
 	case "$KDEVER" in
-		2*)
-			need-autoconf 2.1
-			need-automake 1.4
-			;;
 		3.1.[234])	# Newer 3.1.x versions are built with automake 1.7, and have errors when using 1.6
 			need-automake 1.7
 			need-autoconf 2.5
@@ -96,27 +92,14 @@ need-kde() {
 		# all kinds of special cases live here.
 		# goes to show this code is awfully inflexible, i guess.
 		# maybe i should look at relocating it...
-		if [ "$PV" == "3.0.3" ]; then
-			RDEPEND="${RDEPEND} =kde-base/kdelibs-3.0.3*"
-		elif [ "$PV" == "3.1.3" ]; then
-			RDEPEND="${RDEPEND} =kde-base/kdelibs-3.1.3*"
-		elif [ "$PV" == "3.1.2" ]; then
-			RDEPEND="${RDEPEND} =kde-base/kdelibs-3.1.2*"
-		elif [ "$PV" == "3.1.1" ]; then
-			RDEPEND="${RDEPEND} =kde-base/kdelibs-3.1.1*"
-		elif [ "$PV" == "2.2.2" ]; then
-			RDEPEND="${RDEPEND} =kde-base/kdelibs-2.2.2*"
-		else
-			RDEPEND="${RDEPEND} ~kde-base/kdelibs-${KDEVER}"
-		fi
+
+		RDEPEND="${RDEPEND} ~kde-base/kdelibs-${KDEVER}"
+
 	else
 		# everything else only needs a minimum version
-		if [ "$KDEMAJORVER" == "2" ]; then
-			RDEPEND="${RDEPEND} =kde-base/kdelibs-2.2*"
-		else
-			min-kde-ver $KDEVER
-			RDEPEND="${RDEPEND} >=kde-base/kdelibs-${selected_version}"
-		fi
+		min-kde-ver $KDEVER
+		RDEPEND="${RDEPEND} >=kde-base/kdelibs-${selected_version}"
+
 	fi
 
 	qtver-from-kdever $KDEVER
@@ -258,7 +241,6 @@ set-qtdir() {
 	# a .qtrc.lock file in that directory. It's easiest to allow them to do so.
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	addpredict "$QTDIR/etc/settings"
-
 }
 
 # returns minimal qt version needed for specified kde version
@@ -294,26 +276,13 @@ min-kde-ver() {
 	debug-print-function $FUNCNAME $*
 
 	case $1 in
-		2*)				selected_version="2.2.2";;
-		3.0_beta1)		selected_version="3.0_beta1";;
-		3.0_beta2)		selected_version="3.0_beta2";;
-		3.0_rc1)			selected_version="3.0_rc1";;
-		3.0_rc2)			selected_version="3.0_rc2";;
-		3.0_rc3)			selected_version="3.0_rc3";;
-		3.0)				selected_version="3.0";;
+		2*)			selected_version="2.2.2";;
 		3.0.*)			selected_version="3.0";;
-		3.1_alpha1)		selected_version="3.1_alpha1";;
-		3.1_beta1)		selected_version="3.1_beta1";;
-		3.1_beta2)		selected_version="3.1_beta2";;
-		3.1_rc1)		selected_version="3.1_rc1";;
-		3.1_rc2)		selected_version="3.1_rc2";;
-		3.1_rc3)		selected_version="3.1_rc3";;
-		3.1_rc5)		selected_version="3.1_rc5";;
-		3.1_rc6)		selected_version="3.1_rc6";;
 		3.1.*)			selected_version="3.1";;
-		3*)				selected_version="3.0";;
-		5)					selected_version="5";;
-		*)					echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
+		3.2.*)			selected_version="3.2";;
+		3*)			selected_version="3.0";;
+		5)			selected_version="5";;
+		*)			echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
 }
