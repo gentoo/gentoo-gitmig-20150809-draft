@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r1.ebuild,v 1.1 2003/01/13 07:54:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r1.ebuild,v 1.2 2003/01/13 08:37:36 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
@@ -25,9 +25,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use static && myconf="${myconf} DOSTATIC=true"
-	INSTLIBC="`best_version virtual/glibc`"
-	UCLIBC="dev-libs/uclibc"
-	if [ ${INSTLIBC:0:${#UCLIBC}}  = $UCLIBC ]; then
+	if [ "$LINK_LIBC" = "uclibc" ]; then
 		myconf="${myconf} \
 			CC=/usr/i386-linux-uclibc/bin/i386-uclibc-gcc \
 			USE_SYSTEM_PWD=false"

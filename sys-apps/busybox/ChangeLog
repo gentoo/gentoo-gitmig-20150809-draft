@@ -1,12 +1,14 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.9 2003/01/13 07:54:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.10 2003/01/13 08:37:36 raker Exp $
 
 *busybox-0.60.5-r1 (13 Jan 2003)
 
   13 Jan 2003; Nick Hadaway <raker@gentoo.org> busybox-0.60.5-r1.ebuild :
   Added some logic for detection of uclibc which needs to be tested.
-  Please comment on bug #13517.
+  Please comment on bug #13517.  2 hours later: New local environment
+  variable $LINK_LIBC.  Set to "uclibc" to link against uclibc instead
+  of glibc.
 
 *busybox-0.60.5 (20 Dec 2002)
 
