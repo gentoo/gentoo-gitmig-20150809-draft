@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/mapm-4.9.ebuild,v 1.3 2004/06/24 23:27:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/mapm-4.9.ebuild,v 1.4 2004/07/14 15:00:33 agriffis Exp $
 
 DESCRIPTION="Mike's Arbitrary Precision Math Library"
 HOMEPAGE="http://www.tc.umn.edu/~ringx004/mapm-main.html"
@@ -9,6 +9,7 @@ SRC_URI="http://www.tc.umn.edu/~ringx004/${P}.tar.gz"
 LICENSE="mapm"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
+IUSE=""
 
 DEPEND=""
 
