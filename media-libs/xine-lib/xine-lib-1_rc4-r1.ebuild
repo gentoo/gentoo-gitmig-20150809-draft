@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.19 2004/07/06 19:30:47 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.20 2004/07/10 16:24:35 vapier Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -91,7 +91,7 @@ src_compile() {
 		append-flags -funit-at-a-time #55202
 	fi
 
-	replace-flags -O0 -O1 #31243
+	is-flag -O? || append-flags -O1 #31243
 
 	# fix build errors with sse2 #49482
 	if use x86 ; then
