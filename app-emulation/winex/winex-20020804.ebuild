@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.6 2002/10/05 05:39:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.7 2002/10/16 23:46:47 vapier Exp $
 
 IUSE="cups opengl"
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-         mirror://gentoo/${P}-fake_windows.tar.bz2"
+	mirror://gentoo/${P}-fake_windows.tar.bz2"
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="0"
@@ -23,12 +23,13 @@ DEPEND="virtual/x11
 	cups? ( net-print/cups )
 	>=media-libs/freetype-2.0.0
 	dev-lang/tcl dev-lang/tk"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	# Azarah's patches
 	#patch -p0 < ${FILESDIR}/${P}-opengl.patch || die "opengl-patch failed"
     
-        cd ${S}
+	cd ${S}
 	local myconf
 
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
@@ -100,11 +101,11 @@ src_install () {
 }
 
 pkg_postinst() {
-        einfo "**********************************************************************"
+	einfo "**********************************************************************"
 	einfo "* NOTE: Use /usr/bin/winex to start winex.                           *"
 	einfo "*       This is a wrapper-script which will take care of everything  *"
 	einfo "*       else. If you have further questions, enhancements or patches *"
-        einfo "*       send an email to phoenix@gentoo.org                          *"
-        einfo "**********************************************************************"
+	einfo "*       send an email to phoenix@gentoo.org                          *"
+	einfo "**********************************************************************"
 }
 
