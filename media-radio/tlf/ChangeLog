@@ -1,6 +1,25 @@
 # ChangeLog for media-radio/tlf
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.6 2004/12/09 01:11:39 killsoft Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.7 2005/02/16 05:00:48 killsoft Exp $
+
+  15 Feb 2005; Robb Romans <killsoft@gentoo.org> :
+  * New upstream version 0.9.22
+  
+  * This release fixes a bug to make it compatible with
+    gcc-4.0 / AMD64
+  
+  * The (local swedish) ssa_mt contest has changed its
+    exchange format into serial number + 4-character grid
+    field. This made it necessary to make a new parameter
+    called SERIAL+GRID4. Tlf extracts the first 4 characters
+    for the multiplier.
+    
+  * Input format:
+    e.g. 01 JO21QI, the mult will be JO21.
+  
+  * The rules file has also been updated.
+  
+  * Man page updated for version 0.9.22.
 
   08 Dec 2004; Robb Romans <killsoft@gentoo.org> :
   Changes:
