@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ld.so-1.9.11-r2.ebuild,v 1.10 2002/10/04 06:34:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ld.so-1.9.11-r2.ebuild,v 1.11 2002/10/20 13:52:22 bjb Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://freshmeat.net/projects/ld.so/"
 RDEPEND="sys-libs/lib-compat"
 LICENSE="LD.SO"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_unpack() {
 
