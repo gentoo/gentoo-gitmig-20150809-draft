@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Magic command to take the printer out of the Epson packet mode
+# communication protocol (whatever that is) and enable normal data
+# transfer
+printf '\000\000\000\033\001@EJL 1284.4\n@EJL     \n\033@'
+
+# Reset the printer
+printf '\033@'
+
+# Recode standard input to IBM PC characters
+if type -p recode >/dev/null 2>&1; then
+    recode --silent latin1..ibmpc
+else
+    cat
+fi
+
+# Eject the page
+printf '\014'
+
+# Finally, reset the printer
+printf '\033@'

@@ -1,0 +1,14 @@
+--- magicfilter-1.2/filters/Makefile.in.orig	Wed Sep 26 08:51:27 2001
++++ magicfilter-1.2/filters/Makefile.in	Wed Sep 26 08:49:15 2001
+@@ -52,7 +52,10 @@
+ 		StylusColor-800@720dpi-filter \
+ 		StylusColor-800@1440dpi-filter \
+ 		StylusColor-1520@1440dpi-filter \
+-		StylusColor-generic-filter
++		StylusColor-generic-filter \
++		StylusColor-777@360dpi-filter \
++		StylusColor-777@720dpi-filter \
++		StylusColor-777@1440dpi-filter
+ 
+ .SUFFIXES:
+ .SUFFIXES:	.x .xc .h .xh .mh .xt
