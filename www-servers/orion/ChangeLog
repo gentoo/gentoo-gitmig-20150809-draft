@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/orion
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.5 2004/10/16 23:12:02 axxo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.6 2005/01/08 01:59:21 karltk Exp $
+
+*orion-2.0.5 (08 Jan 2005)
+
+  08 Jan 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/2.0.5/2.0.5-gentoo.patch, +files/2.0.5/orion.conf,
+  +files/2.0.5/orion.init, +files/2.0.5/start_orion.sh,
+  +files/2.0.5/stop_orion.sh, +orion-2.0.5.ebuild:
+  New upstream version. Partial fix for #76906.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> orion-2.0.1.ebuild,
   orion-2.0.2.ebuild:

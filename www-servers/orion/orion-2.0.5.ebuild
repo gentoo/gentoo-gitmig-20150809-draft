@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.2.ebuild,v 1.3 2005/01/08 01:59:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.1 2005/01/08 01:59:21 karltk Exp $
 
 inherit eutils java-pkg
 
@@ -27,9 +27,6 @@ src_unpack() {
 pkg_preinst() {
 	enewgroup orion
 	enewuser orion -1 /bin/bash /opt/orion orion
-	chown -R orion:orion ${D}/opt/${PN}
-	chown -R orion:orion ${D}/var/log/${PN}
-	fowners orion:orion /etc/conf.d/orion
 }
 
 src_install() {
@@ -66,7 +63,7 @@ src_install() {
 	keepdir /opt/${PN}/persistence
 
 	# INSTALL EXTRA FILES
-	local dirs="applications database default-web-app demo lib persistence autoupdate.properties"
+	local dirs="applications default-web-app demo lib persistence autoupdate.properties"
 	for i in $dirs ; do
 		cp -a ${i} ${D}/opt/${PN}/
 	done
@@ -92,6 +89,11 @@ src_install() {
 }
 
 pkg_postinst() {
+
+	chown -R orion:orion /opt/${PN} || die "Failed to chown in /opt"
+	chown -R orion:orion /var/log/${PN} || die "Failed to chown in /var/log"
+	chown orion:orion /etc/conf.d/orion
+
 	einfo " "
 	einfo " NOTICE!"
 	einfo " User and group 'orion' have been added."
