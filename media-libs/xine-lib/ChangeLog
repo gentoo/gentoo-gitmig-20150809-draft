@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.23 2002/11/28 16:17:40 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.24 2002/12/01 14:45:01 mholzer Exp $
 
 *xine-lib-1_alpha2 (28 Nov 2002)
 
@@ -10,11 +10,17 @@
 	
 *xine-lib-0.9.13-r2 (02 Nov 2002)
 
+  01 Dec 2002; Martin Holzer <mholzer@gentoo.org> xine-0.9.13-r2.ebuild :
+  Updated SRC_URI to pull from SF mirrors.
+
   02 Nov 2002; Arcady Genkin <agenkin@gentoo.org> xine-0.9.13-r2.ebuild :
   Fixed installation location of a few files that were previously
   misplaced.
 	
 *xine-lib-0.9.13-r1 (09 Aug 2002)
+
+  01 Dec 2002; Martin Holzer <mholzer@gentoo.org> xine-0.9.13-r1.ebuild : 
+  Updated SRC_URI to pull from SF mirrors.
 
   29 Sep 2002; Mark Guertin <gerk@gentoo.org> xine-0.9.13-r1.ebuild :
   fixups of -maltivec flag filters (added mabi=altivec as well), done
@@ -38,7 +44,10 @@
 
 *xine-lib-0.9.13 (06 Aug 2002)
 
-  06 Aug 2002; Brandon Low <lostlogic@gentoo.org> xne-lib-0.9.13.ebuild:
+  01 Dec 2002; Martin Holzer <mholzer@gentoo.org> xine-0.9.13.ebuild : 
+  Updated SRC_URI to pull from SF mirrors.
+
+  06 Aug 2002; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.13.ebuild:
 
   New xine version, looks like a lot more configure options
   are actually working now, but I give no guarantees on that.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.8 2002/11/02 05:23:52 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.9 2002/12/01 14:45:01 mholzer Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
@@ -13,7 +13,7 @@ filter-flags "-maltivec -mabi=altivec"
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="http://xine.sourceforge.net/files/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
