@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.19 2004/03/16 03:39:15 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.20 2004/03/22 21:00:21 seemant Exp $
+
+  22 Mar 2004; Seemant Kulleen <seemant@gentoo.org> jpeg-6b-r3.ebuild:
+  switch to sed -i syntax, and move the replace-flags statements to src_compile
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> jpeg-6b-r3.ebuild:
   Marked stable on mips.

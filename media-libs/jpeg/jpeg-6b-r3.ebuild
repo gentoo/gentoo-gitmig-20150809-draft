@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.20 2004/03/16 03:39:15 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.21 2004/03/22 21:00:21 seemant Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -13,19 +13,17 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
 
-DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc"
 
-replace-flags k6-3 i586
-replace-flags k6-2 i586
-replace-flags k6 i586
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 
 	# allow /etc/make.conf's HOST setting to apply
 	cd ${S}
-	cp configure configure.orig
-	sed 's/ltconfig.*/& $CHOST/' configure.orig > configure
+	sed -i 's/ltconfig.*/& $CHOST/' configure
 	use alpha && gnuconfig_update
 	use hppa && gnuconfig_update
 	use amd64 && gnuconfig_update
@@ -34,6 +32,10 @@ src_unpack() {
 }
 
 src_compile() {
+	replace-flags k6-3 i586
+	replace-flags k6-2 i586
+	replace-flags k6 i586
+
 	econf --enable-shared --enable-static
 
 	make || die
