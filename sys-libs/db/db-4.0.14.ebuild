@@ -1,34 +1,50 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.9 2002/10/04 06:36:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.10 2002/10/23 02:51:15 seemant Exp $
 
-S=${WORKDIR}/${P}
+IUSE="tcltk java"
+
+S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB"
-
-SRC_URI="http://www.sleepycat.com/update/${PV}/${P}.tar.gz"
+SRC_URI="http://www.sleepycat.com/update/snapshot/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
 SLOT="4"
 LICENSE="DB"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND="virtual/glibc"
+DEPEND="tcltk? ( dev-lang/tcl )
+	java? ( virtual/jdk )"
 
 src_compile() {
 
-	cd dist
+	local myconf
+
+	use java \
+		&& myconf="${myconf} --enable-java" \
+		|| myconf="${myconf} --disable-java"
+
+	use tcltk \
+		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/lib" \
+		|| myconf="${myconf} --disable-tcl"
 	
-	./configure \
-		--host=${CHOST} \
+	../dist/configure \
 		--prefix=/usr \
+		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die
-	emake || die
+		--datadir=/usr/share \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
+		--enable-compat185 \
+		--enable-cxx \
+		--enable-posixmutexes \
+		${myconf} || die
+
+	emake || make || die
 }
 
 src_install () {
-	cd dist
 
-	make prefix=${D}/usr install || die
+	einstall || die
 	
 	dodir /usr/share/doc/${PF}/html
 	mv ${D}/usr/docs/* ${D}/usr/share/doc/${PF}/html/
