@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/artresources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.9 2005/01/10 20:29:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.10 2005/04/04 20:45:09 gustavoz Exp $
+
+  04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  artresources-0.1.2.ebuild:
+  Stable on sparc
 
   10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
   artresources-0.1.2.ebuild:
