@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/files/folding-init.d-r1,v 1.1 2004/03/01 13:09:09 phosphan Exp $
+
+start() {
+	ebegin "Starting Folding@home"
+	if [ ! -f /opt/foldingathome/client.cfg ]; then
+		eerror "Can't start without initial configuration."
+		eerror "For first run configuration, please run"
+		eerror "/opt/foldingathome/initfolding"
+		return 1
+	fi
+	cd /opt/foldingathome
+	su foldingathome ./folding.sh
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Folding@Home"
+	cd /opt/foldingathome
+	for I in FahCore*.exe
+	do
+		killall -q $I >/dev/null
+	done
+	killall foldingathome >/dev/null
+	eend $?
+}
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /opt/foldingathome
+su foldingathome -c "./foldingathome -config"

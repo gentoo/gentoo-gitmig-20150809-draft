@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/foldingathome
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.6 2003/05/05 20:03:38 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.7 2004/03/01 13:09:09 phosphan Exp $
+
+*foldingathome-3.24-r1 (01 Mar 2004)
+
+  01 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
+  foldingathome-3.24-r1.ebuild, files/folding-init.d-r1, files/folding.sh,
+  files/initfolding:
+  Running as seperate user now.
 
   05 May 2003; Daniel Ahlberg <aliz@gentoo.org> files/folding-init.d :
   Fixed stop() in init script. Fix by 
