@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/SmarTagger
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/SmarTagger/ChangeLog,v 1.1 2004/08/27 03:44:46 chriswhite Exp $
+
+*SmarTagger-0.1 (27 Aug 2004)
+
+  27 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +SmarTagger-0.1.ebuild:
+  Initial import to the tree. Thanks to Itamar Ravid <iravid@inter.net.il> for
+  submitting. This closes bug #45298.
+
