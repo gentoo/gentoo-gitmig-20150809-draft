@@ -1,5 +1,5 @@
-MD5 35c56f1dd98e742f675c0367ff01ed4f ChangeLog 630
-MD5 2ef9a814947d9eb7be4fcecf194f1854 bsd-games-2.13.ebuild 3731
+MD5 ba2bdaad41071486c5c8cc0066457b4b ChangeLog 777
+MD5 c6d0986ba27d53b7f86d15ba3cab8d57 bsd-games-2.13.ebuild 3868
 MD5 49c481f8746cf44f3fe40302e6ffd77e files/bsdgames-2.13-gentoo.diff 253
 MD5 81250dd8b2e30e4076c1e3de43f669ad files/bsdgames_2.13-11.diff 40228
 MD5 582347263c44f4dce3b7d0b7cd8f5cc8 files/config.params-gentoo 1232
