@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.7 2004/03/11 20:27:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.8 2004/06/03 22:55:21 mr_bones_ Exp $
 
 DESCRIPTION="Port of ID's doom to SDL"
 HOMEPAGE="http://firehead.org/~jessh/lsdldoom/"
@@ -10,6 +10,7 @@ SRC_URI="http://www.lbjhs.net/~jessh/lsdldoom/src/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
+IUSE=""
 
 DEPEND=">=media-libs/sdl-mixer-1.2.0
 	media-sound/timidity++"
@@ -32,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${FILESDIR}/lsdldoom
+	dobin "${FILESDIR}/lsdldoom"
 	exeinto /usr/share/doom
 	doexe src/lsdldoom src/lxdoom-game-server
 	insinto /usr/share/doom/

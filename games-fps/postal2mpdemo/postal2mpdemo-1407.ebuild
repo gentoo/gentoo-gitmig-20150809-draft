@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.2 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.3 2004/06/03 22:55:45 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -11,6 +11,7 @@ SRC_URI="postal2mpdemo-lnx-${PV}.tar.bz2"
 LICENSE="postal2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 RESTRICT="fetch"
 
 RDEPEND="virtual/x11

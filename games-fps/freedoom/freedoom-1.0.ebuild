@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-1.0.ebuild,v 1.2 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-1.0.ebuild,v 1.3 2004/06/03 22:51:09 mr_bones_ Exp $
 
 inherit games
 
@@ -18,13 +18,14 @@ SRC_URI="mirror://sourceforge/freedoom/doom1.wad.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=""
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_install() {
-	insinto ${GAMES_DATADIR}/freedoom
+	insinto "${GAMES_DATADIR}/freedoom"
 	doins *.wad
 	prepgamesdirs
 }
