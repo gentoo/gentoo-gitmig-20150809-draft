@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.7.ebuild,v 1.1 2005/02/19 04:38:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.7.ebuild,v 1.2 2005/02/19 05:31:28 josejx Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die "sorry, failed to configure pbbuttonsd"
-	make || die "sorry, failed to compile pbbuttonsd"
+	emake || die "sorry, failed to compile pbbuttonsd"
 }
 
 src_install() {
