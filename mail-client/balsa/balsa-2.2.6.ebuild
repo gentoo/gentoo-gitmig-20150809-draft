@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.2.6.ebuild,v 1.4 2005/03/27 15:24:20 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.2.6.ebuild,v 1.5 2005/03/29 23:25:33 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -13,11 +13,16 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-RDEPEND="net-mail/mailbase
-	>=gnome-base/libgnomeui-2
+RDEPEND=">=gnome-base/libgnome-2.0
+	>=gnome-base/libgnomeui-2.0
+	>=gnome-vfs-2.0
+	=dev-libs/gmime-2.1.9*
+	>=gnome-base/libbonobo-2.0
+	>=gnome-base/libgnomeprint-2.1.4
 	>=gnome-base/libgnomeprintui-2.1.4
+	>=x11-libs/gtk+-2
+	net-mail/mailbase
 	>=net-libs/libesmtp-1.0-r1
-	=dev-libs/gmime-2.1.9-r1
 	sys-devel/libtool
 	virtual/aspell-dict
 	ssl? ( dev-libs/openssl )
@@ -26,33 +31,36 @@ RDEPEND="net-mail/mailbase
 	ldap? ( net-nds/openldap )
 	kerberos? ( app-crypt/mit-krb5 )
 	sqlite? ( >=dev-db/sqlite-2.8 )
-	crypt? ( >=app-crypt/gpgme-0.9.0 )"
+	crypt? ( >=app-crypt/gpgme-0.9.0 )
+	"
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
-	app-text/scrollkeeper
+	>=app-text/scrollkeeper-0.1.4
 	doc? ( dev-util/gtk-doc )
 	"
 
 USE_DESTDIR="1"
 
-src_compile() {
-	local myconf
+src_unpack(){
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/balsa-2.2.6-deprecation.fix.patch
+}
 
-	use crypt && myconf="${myconf} --with-gpgme=gpgme-config"
+use crypt \
+	&& G2CONF="${G2CONF} --with-gpgme=gpgme-config" \
+	|| G2CONF="${G2CONF} --without-gpgme"
 
-	econf \
+G2CONF="${G2CONF} \
 		$(use_with ssl) \
 		$(use_with ldap) \
 		$(use_with sqlite) \
 		$(use_with kerberos gss) \
-		$(use_enable gtkhtml ) \
-		$(use_enable threads ) \
-		$(use_enable pcre ) \
-		${myconf} || die "configure failed"
-
-	emake || die "emake failed"
-}
+		$(use_enable gtkhtml) \
+		$(use_enable threads) \
+		$(use_enable pcre) \
+		"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README TODO docs/*"

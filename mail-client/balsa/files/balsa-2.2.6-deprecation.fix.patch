@@ -1,0 +1,96 @@
+--- balsa-2.2.6.orig/libbalsa/Makefile.am	2005-03-27 21:49:44.951892656 -0500
++++ balsa-2.2.6/libbalsa/Makefile.am	2005-03-27 21:52:24.558628744 -0500
+@@ -129,15 +129,7 @@
+ 	-I${top_srcdir}/libbalsa/imap \
+ 	$(BALSA_CFLAGS)
+ 
+-DEFS =                                   \
+-       -DG_DISABLE_DEPRECATED            \
+-       -DGDK_DISABLE_DEPRECATED          \
+-       -DGDK_PIXBUF_DISABLE_DEPRECATED   \
+-       -DGNOME_DISABLE_DEPRECATED        \
+-       -DGNOME_DISABLE_DEPRECATED_SOURCE \
+-       -DGNOME_VFS_DISABLE_DEPRECATED    \
+-       -DGTK_DISABLE_DEPRECATED          \
+-       -DPANGO_DISABLE_DEPRECATED
++DEFS =
+ 
+ #Signal marshallers
+ marshal_prefix = libbalsa
+--- balsa-2.2.6.orig/libbalsa/Makefile.in	2005-03-27 21:49:44.951892656 -0500
++++ balsa-2.2.6/libbalsa/Makefile.in	2005-03-27 21:52:46.696263312 -0500
+@@ -156,15 +156,6 @@
+ CXXFLAGS = @CXXFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+-DEFS = \
+-       -DG_DISABLE_DEPRECATED            \
+-       -DGDK_DISABLE_DEPRECATED          \
+-       -DGDK_PIXBUF_DISABLE_DEPRECATED   \
+-       -DGNOME_DISABLE_DEPRECATED        \
+-       -DGNOME_DISABLE_DEPRECATED_SOURCE \
+-       -DGNOME_VFS_DISABLE_DEPRECATED    \
+-       -DGTK_DISABLE_DEPRECATED          \
+-       -DPANGO_DISABLE_DEPRECATED
+ 
+ DEPDIR = @DEPDIR@
+ ECHO = @ECHO@
+--- balsa-2.2.6.orig/libinit_balsa/Makefile.am	2005-03-27 21:49:44.923896912 -0500
++++ balsa-2.2.6/libinit_balsa/Makefile.am	2005-03-27 21:53:13.864133168 -0500
+@@ -23,6 +23,4 @@
+ 	-I$(top_srcdir)/src \
+         $(BALSA_CFLAGS)
+ 
+-DEFS = -DG_DISABLE_DEPRECATED   \
+-       -DGTK_DISABLE_DEPRECATED \
+-       -DGNOME_DISABLE_DEPRECATED
++DEFS =
+--- balsa-2.2.6.orig/libinit_balsa/Makefile.in	2005-03-27 21:49:44.924896760 -0500
++++ balsa-2.2.6/libinit_balsa/Makefile.in	2005-03-27 21:53:43.276661784 -0500
+@@ -108,9 +108,6 @@
+ CXXFLAGS = @CXXFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+-DEFS = -DG_DISABLE_DEPRECATED   \
+-       -DGTK_DISABLE_DEPRECATED \
+-       -DGNOME_DISABLE_DEPRECATED
+ 
+ DEPDIR = @DEPDIR@
+ ECHO = @ECHO@
+--- balsa-2.2.6.orig/src/Makefile.am	2005-03-27 21:49:44.886902536 -0500
++++ balsa-2.2.6/src/Makefile.am	2005-03-27 21:54:10.076587576 -0500
+@@ -82,15 +82,7 @@
+ 	-I$(top_srcdir)/libbalsa \
+ 	$(BALSA_CFLAGS)
+ 
+-DEFS =                                   \
+-       -DG_DISABLE_DEPRECATED            \
+-       -DGDK_DISABLE_DEPRECATED          \
+-       -DGDK_PIXBUF_DISABLE_DEPRECATED   \
+-       -DGNOME_DISABLE_DEPRECATED        \
+-       -DGNOME_DISABLE_DEPRECATED_SOURCE \
+-       -DGNOME_VFS_DISABLE_DEPRECATED    \
+-       -DGTK_DISABLE_DEPRECATED          \
+-       -DPANGO_DISABLE_DEPRECATED
++DEFS =
+ 
+ balsa_LDADD = \
+ 	$(top_builddir)/libinit_balsa/libinit_balsa.a \
+--- balsa-2.2.6.orig/src/Makefile.in	2005-03-27 21:49:44.887902384 -0500
++++ balsa-2.2.6/src/Makefile.in	2005-03-27 21:54:27.291970440 -0500
+@@ -137,15 +137,6 @@
+ CXXFLAGS = @CXXFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+-DEFS = \
+-       -DG_DISABLE_DEPRECATED            \
+-       -DGDK_DISABLE_DEPRECATED          \
+-       -DGDK_PIXBUF_DISABLE_DEPRECATED   \
+-       -DGNOME_DISABLE_DEPRECATED        \
+-       -DGNOME_DISABLE_DEPRECATED_SOURCE \
+-       -DGNOME_VFS_DISABLE_DEPRECATED    \
+-       -DGTK_DISABLE_DEPRECATED          \
+-       -DPANGO_DISABLE_DEPRECATED
+ 
+ DEPDIR = @DEPDIR@
+ ECHO = @ECHO@
