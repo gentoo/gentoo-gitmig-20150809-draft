@@ -16,7 +16,7 @@
         <NAME>Yahoo Transport</NAME>
       </vCard>
       <instructions>Enter your YAHOO! Messenger Username and Password to register with the gateway.</instructions>
-      <server>scs.yahoo.com</server>
+      <server>scs.msg.yahoo.com</server>
       <port>5050</port>
       <charmap>CP1252</charmap>
     </config>
