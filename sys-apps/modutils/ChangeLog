@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.28 2003/07/06 09:17:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.29 2003/09/06 14:47:53 pappy Exp $
 
+  06 Sep 2003; Alexander Gabert <pappy@gentoo.org> modutils-2.4.25.ebuild:
+  added hardened-gcc exclude flags
 
 *modutils-2.4.25 (31 Mar 2003)
 
