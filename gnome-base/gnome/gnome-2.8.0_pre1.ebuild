@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.4 2004/09/19 12:29:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.5 2004/09/23 14:58:26 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -131,7 +131,7 @@ RDEPEND="!gnome-base/gnome-core
 # gtk-doc
 
 RDEPEND="${RDEPEND}
-	>=gnome-base/gnome-volume-manager-1.0.2
+	hal? ( >=gnome-base/gnome-volume-manager-1.0.2 )
 	>=net-misc/vino-2.8
 
 	>=gnome-extra/gal-2.2.1
