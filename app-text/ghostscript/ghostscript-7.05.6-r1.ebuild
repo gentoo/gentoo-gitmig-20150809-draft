@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r1.ebuild,v 1.8 2004/10/01 12:08:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r1.ebuild,v 1.9 2004/10/04 22:53:48 lu_zero Exp $
 
 inherit eutils
 
@@ -50,9 +50,9 @@ src_unpack() {
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.05/$(get_libdir):"\
-	src/Makefile.in || die "sed failed"
+	${S}/src/Makefile.in || die "sed failed"
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
-	src/Makefile.in || die "sed failed"
+	${S}/src/Makefile.in || die "sed failed"
 
 }
 
