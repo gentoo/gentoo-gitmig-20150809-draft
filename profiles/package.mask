@@ -553,3 +553,7 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 17 Apr 2002
 # ispell-de needs to be checked
 =ispell-de-20011124
+
+# mkennedy@gentoo.org 19 Apr 2002
+# not fit for release (working on it though)
+app-cdr/cddump
