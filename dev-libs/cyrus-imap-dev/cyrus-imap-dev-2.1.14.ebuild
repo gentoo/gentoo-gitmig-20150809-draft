@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.1 2003/07/09 09:56:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.2 2003/07/13 20:32:32 raker Exp $
 
 inherit eutils
 
@@ -15,13 +15,13 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc "
 
 DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	kerberos? ( virtual/krb5 )
+	kerberos? ( >=app-crypt/mit-krb5-1.2.6 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.12
@@ -70,6 +70,7 @@ src_compile() {
 	# Kerberos IV is not working in cyrus-sasl so it's not enabled here.  Only Kerberos V.
 	#use kerberos && myconf="${myconf} --with-krb=/usr/athena --with-auth=krb --enable-gssapi" \
 	#	|| myconf="${myconf} --without-krb --with-auth=unix --disable-gssapi"
+
 	use kerberos && myconf="${myconf} --with-auth=krb --enable-gssapi" \
 		|| myconf="${myconf} --without-krb --with-auth=unix --disable-gssapi"
 
