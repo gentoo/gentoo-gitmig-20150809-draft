@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.21.ebuild,v 1.1 2003/09/01 13:12:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.21.ebuild,v 1.2 2003/09/02 12:46:39 dholm Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -63,4 +63,7 @@ src_unpack() {
 
 pkg_postinst() {
 	kernel_pkg_postinst
+
+	ewarn "Preemption can cause problems on PPC. Please only enable it if you are sure"
+	ewarn "that you know what you are doing!"
 }
