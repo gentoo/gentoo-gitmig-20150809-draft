@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.55 2003/07/18 08:25:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.56 2003/07/18 08:46:47 seemant Exp $
 
 *xmms-1.2.7-r23 (18 Jul 2003)
 
@@ -8,7 +8,8 @@
   files/xmms-fhs-skinsdir.patch, files/xmms-gettext-fix.patch:
   fix for gettext-0.12 and nls in USE, closing bug #24472 by: Lisa Marie
   <lisa@gentoo.org>. Note that the fix for that was provided by Paul
-  DeVrieze <pauldv@gentoo.org>  Also, added /usr/local/share/xmms/Skins to the
+  DeVrieze <pauldv@gentoo.org> based on the work by Alvari Figueroa
+  <fede2@fuerzag.ulatina.ac.cr>  Also, added /usr/local/share/xmms/Skins to the
   search path for skins -- local sysadmins should create that directory and
   add systemwide skins to there 
 
