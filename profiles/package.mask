@@ -267,10 +267,6 @@ x11-libs/gtkmm-addons
 =app-i18n/kde-i18n-zh_TW-3.1_beta2
 =app-i18n/kde-i18n-zu-3.1_beta2
 
-# <agenkin@gentoo.org> (30 Sep 2002)
-# Masking pending unfreeze.
->=app-cdr/cdrtools-1.11.35
-
 # <satai@gentoo.org> (29 Sep 2002)
 # Waiting for freeze to end.
 =dev-util/cweb-3.63-r1
