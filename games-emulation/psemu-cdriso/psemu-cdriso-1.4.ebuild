@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.2 2003/11/14 20:06:25 seemant Exp $
 
 inherit games eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="sys-libs/zlib
-	sys-apps/bzip2
+	app-arch/bzip2
 	=x11-libs/gtk+-1*
 	dev-util/pkgconfig"
 
