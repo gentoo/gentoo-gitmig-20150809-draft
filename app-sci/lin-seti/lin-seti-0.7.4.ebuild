@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.7.2.ebuild,v 1.4 2003/06/12 20:19:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.7.4.ebuild,v 1.1 2003/07/10 11:29:31 tantive Exp $
 
 DESCRIPTION="A Seti@Home cache manager, cache-compatible with Seti Driver. Can be run as system daemon."
 HOMEPAGE="http://lin-seti.sourceforge.net/"
@@ -28,18 +28,16 @@ src_install() {
 
 	# Let's see if this file already exists: if so we will not install it
 	if [ -a "/opt/setiathome/cache/1/user_info.sah" ]; then rm ${D}opt/setiathome/cache/1/user_info.sah; fi
-        # Otherwise the ebuild will overwrite this file!
+  # Otherwise the ebuild will overwrite this file!
 	# And THAT is bad: if the client runs in daemon mode, 
 	# when switching to that dir it will wait forever for someone to give it
 	# some info (which would be impossible, being detached from all terminals)!
+}
+
+pkg_postinst () {
 
 	einfo "NOTICE: If you use SETI Driver for Windows"
 	einfo "to share the cache make sure it is"
 	einfo "version 1.6.4.0 or higher!"
-	einfo
-	einfo "If you are updating from a version of lin-seti"
-	einfo "prior of 0.7.0, PLEASE update your /etc/lin-seti/lin-setirc"
-	einfo "otherwise the program will crash on start!"
-	sleep 5
-	
+	sleep 5		
 }
