@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.8 2004/09/03 17:17:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.9 2004/11/26 19:33:59 eradicator Exp $
+
+*qsynth-0.2.2 (26 Nov 2004)
+
+  26 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +qsynth-0.2.2.ebuild:
+  Version bump and added to ~sparc.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> qsynth-0.2.1.ebuild:
   Stable amd64, x86.

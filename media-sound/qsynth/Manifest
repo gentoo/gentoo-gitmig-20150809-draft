@@ -1,6 +1,18 @@
-MD5 5228e4ec029f1a7c1b9bab9b3db02ff2 ChangeLog 3620
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6b0c186c141220dc5cb9d63dd45a93eb ChangeLog 3767
 MD5 bed98f5cc72fd626b638bfcae4593ce6 metadata.xml 647
 MD5 ca1a491e4fc999a031bd12bc505024fb qsynth-0.1.0.ebuild 668
 MD5 2f3f2245840e9b401fd2beb970484b1d qsynth-0.2.1.ebuild 672
+MD5 e31ec9c58022f2e27999db4bb7825722 qsynth-0.2.2.ebuild 681
 MD5 fde45970ba4d6681ef829f9fde4b7e72 files/digest-qsynth-0.1.0 63
 MD5 0ad37e882f8d5b9c5e58810f9e646468 files/digest-qsynth-0.2.1 63
+MD5 c8736c07a5030eb5fe6ffac7629d16de files/digest-qsynth-0.2.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBp4U5ArHZZzCEUG0RArmoAJ9wDTLK2OR0+GnOAuvAc+3XG/Dr5QCfYiJT
+pkS4F2oUGjWipG6byePn8hU=
+=0Ov2
+-----END PGP SIGNATURE-----
