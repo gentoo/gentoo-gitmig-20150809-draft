@@ -107,3 +107,4 @@ move app-sci/orsa sci-astronomy/orsa
 move app-sci/predict sci-astronomy/predict
 move app-sci/setiathome sci-astronomy/setiathome
 move x11-misc/tkseti sci-astronomy/tkseti
+move app-sci/setimgr sci-astronomy/setimgr
