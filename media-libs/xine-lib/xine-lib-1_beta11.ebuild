@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta11.ebuild,v 1.1 2003/04/29 07:30:30 lostlogic Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta11.ebuild,v 1.2 2003/05/09 15:28:59 mholzer Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -51,7 +51,7 @@ src_compile() {
 	if [ -f /usr/lib/libxine.so.0 ]
 	then
 		einfo "Please uninstall older xine libraries.";
-		einfo "The compilation cannot procede.";
+		einfo "The compilation cannot proceed.";
 		die
 	fi
 
