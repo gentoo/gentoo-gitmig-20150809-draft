@@ -64,6 +64,10 @@ KEYWORDS="~x86"
 # use any USE flags, set to "".
 IUSE="X gnome"
 
+# A space delimited list of portage features to restrict. man 5 ebuild
+# for details.  Usually not needed.
+#RESTRICT="nostrip"
+
 # Build-time dependencies, such as
 #    ssl? ( >=dev-libs/openssl-0.9.6b )
 #    >=dev-lang/perl-5.6.1-r1
