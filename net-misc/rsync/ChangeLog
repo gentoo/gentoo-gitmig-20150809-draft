@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.34 2003/12/04 09:14:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.35 2004/01/03 16:34:38 vapier Exp $
+
+*rsync-2.6.0 (03 Jan 2003)
+
+  03 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage #37009.
 
 *rsync-2.5.7 (04 Dec 2003)
 
