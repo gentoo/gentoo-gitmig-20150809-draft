@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.14 2005/02/13 07:21:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.15 2005/02/13 07:25:15 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -1148,6 +1148,12 @@ src_install() {
 				dosym ${target} /usr/$(get_libdir)/${basef}
 			fi
 		done
+
+		sed -i "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/lib{c,pthread}.so
+
+		if use nptl && use !nptlonly; then
+			sed -i "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/nptl/lib{c,pthread}.so
+		fi
 	fi
 }
 
