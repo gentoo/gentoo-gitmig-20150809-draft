@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.15 2004/10/02 23:38:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.16 2004/12/30 21:10:46 ciaranm Exp $
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> bsddb3-3.4.0-r1.ebuild:
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  03 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bsddb3-3.4.0-r1.ebuild:
   Fix failed patch, bug 64280.
 
   26 Sep 2004; Alastair Tse <liquidx@gentoo.org>
