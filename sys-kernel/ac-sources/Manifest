@@ -4,8 +4,8 @@ MD5 ab627ee13ca5e4846f8fd69d4edf7513 ac-sources-2.4.21_rc4-r1.ebuild 1135
 MD5 31638d92ed9a9efaa8c982b1a9b95591 ac-sources-2.4.21_rc6-r2.ebuild 1135
 MD5 b8e6d5b4203b7efd7f5fdf7297fc6d8b ac-sources-2.4.21_rc7-r1.ebuild 1135
 MD5 3052f8c9b352aa0fcfd0d4e17dfd7cb0 ac-sources-2.4.21-r1.ebuild 2080
-MD5 7a41a80cbdd41555f2ceb5210f341164 ChangeLog 3218
-MD5 cf43ce06cd33f28adf23bf3e59f5eff9 ac-sources-2.4.21-r3.ebuild 2080
+MD5 7396b073f99eafc1d3a3a79dd8cb8bad ChangeLog 3342
+MD5 87327fa2c5b00497e2b6ab670c36218f ac-sources-2.4.21-r3.ebuild 2080
 MD5 0c0a3f16d05ddcc0d8c9b9c1460e11c0 files/digest-ac-sources-2.4.21-r1 133
 MD5 6778f2b1e8bcf6653828be79365fa447 files/digest-ac-sources-2.4.21-r2 133
 MD5 f1920a944ef04d36695bd6b3cf3dc43c files/digest-ac-sources-2.4.21-r3 133
