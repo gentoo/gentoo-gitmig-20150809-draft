@@ -1,8 +1,11 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.25 2003/02/22 04:44:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.26 2003/03/01 14:47:16 weeve Exp $
 
-*ggv-1.99.98 (04 Feb 2003) 
+*ggv-1.99.98 (04 Feb 2003)
+
+  01 Mar 2003; Jason Wever <weeve@gentoo.org> ggv-1.99.98.ebuild:
+  Added ~sparc to keywords.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> ggv-1.99.98.ebuild :
   Mark stable on Alpha
