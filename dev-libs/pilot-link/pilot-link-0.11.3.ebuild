@@ -1,29 +1,6 @@
-head	1.1;
-access;
-symbols;
-locks; strict;
-comment	@# @;
-
-
-1.1
-date	2002.08.12.06.37.56;	author root;	state Exp;
-branches;
-next	;
-
-
-desc
-@pilot-link-0.11.3.ebuild
-@
-
-
-1.1
-log
-@Initial revision
-@
-text
-@# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.3.ebuild,v 1.1 2002/08/12 06:40:04 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.3.ebuild,v 1.2 2002/08/12 06:55:06 satai Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A suite of tools contains a series of conduits for moving
@@ -72,4 +49,3 @@ src_install() {
 	dodoc ChangeLog README TODO NEWS AUTHORS
 
 }
-@
