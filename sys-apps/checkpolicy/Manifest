@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb98678057cdd4f575ce2ce8f5caa8c5 ChangeLog 2719
+MD5 96f13a5f9e324e8c7d67738e646616e7 ChangeLog 2855
 MD5 13d9ff592213aed3164e009e1db46608 checkpolicy-1.10.ebuild 728
 MD5 ae8c52fc05cbdf7fb08cd108b2a119b8 checkpolicy-1.14.ebuild 728
 MD5 90c1b8c5598f41b24a3aca4f338b0321 checkpolicy-1.4-r1.ebuild 764
 MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
+MD5 9bfd4b162b2aef9e000416afd4fbfd34 checkpolicy-1.16.ebuild 750
 MD5 66e39152aa61af44ae6671a355da6959 files/checkpolicy-1.4-negset.diff 2482
 MD5 80ba921a677d6b02bc9d49f246af2546 files/digest-checkpolicy-1.10 64
 MD5 fa01f34ec563792d4ff66110b4f733a3 files/digest-checkpolicy-1.14 64
 MD5 344c1bdea2908053273f77fb584a7074 files/digest-checkpolicy-1.4-r1 63
+MD5 f2b40ebba90e0bef0a570012d5a16965 files/digest-checkpolicy-1.16 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBO7sBGFJQsIJWJy4RApSbAJ9Wzuy3B+dkTGheCNLuOXHLpGCXtQCdF0LT
-On8rCV84MYvtLsnFNWprB3k=
-=B3dU
+iD8DBQFBPlV0GFJQsIJWJy4RAmafAJ95ouPpm5gUzdo3TPjGEateReYPfgCfXfXz
+rycKY9IrYE9QsjWmnYQDIbg=
+=tYKQ
 -----END PGP SIGNATURE-----
