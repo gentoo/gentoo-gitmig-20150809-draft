@@ -1,0 +1,11 @@
+# ChangeLog for app-text/active-dvi
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.1 2003/11/06 15:43:35 obz Exp $
+
+*active-dvi-1.4.0 (06 Nov 2003)
+
+  06 Nov 2003; Mike Gardiner <obz@gentoo.org> active-dvi-1.4.0.ebuild,
+  metadata.xml:
+  First version of active-dvi in the tree. This has been requested in bug
+  #22549, and thanks to <mattam@altern.org> for his ebuild submission.
+
