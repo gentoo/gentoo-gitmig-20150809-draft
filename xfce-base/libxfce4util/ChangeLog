@@ -1,6 +1,6 @@
-# ChangeLog for x11-libs/libxfce4util
+# ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.2 2003/07/22 07:14:35 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.3 2003/07/26 07:41:38 vapier Exp $
 
 *libxfce4util-3.99.2 (22 Jul 2003)
 
