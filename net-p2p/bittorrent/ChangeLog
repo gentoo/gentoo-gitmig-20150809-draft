@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.26 2004/03/15 00:34:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.27 2004/04/06 20:05:36 mholzer Exp $
+
+*bittorrent-3.4.2 (06 Apr 2004)
+
+  06 Apr 2004; Martin Holzer <mholzer@gentoo.org> bittorrent-3.4.2.ebuild:
+  Version bumped.
 
   14 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   bittorrent-3.3.0.ebuild, bittorrent-3.4.1.ebuild, bittorrent-3.4.1a.ebuild:
