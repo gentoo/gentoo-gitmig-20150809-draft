@@ -23,11 +23,11 @@ src_compile() {
 }
 
 src_install () {
-	exeinto /usr/bin
+	exeinto /usr/sbin
 	doexe qmail-notify
 
 	exeinto /etc/cron.hourly
-	newexe cron.hourly qmail-notify.cron
+	doexe ${FILESDIR}/qmail-notify.cron
 
 	dodoc README ANNOUNCEMENT TODO cron.hourly
 }
@@ -36,7 +36,8 @@ src_install () {
 pkg_postinst() {
 
     echo
-    einfo "A qmail-notify.cron was put in /etc/cron.hourly!"
+    einfo "Edit qmail-notify.cron in /etc/cron.hourly"
+    einfo "to activate qmail-notify!"
     echo
 
 
