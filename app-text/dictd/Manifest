@@ -2,7 +2,7 @@ MD5 a6e1b87aa66c4d3be43d779589b11a6f ChangeLog 3312
 MD5 1decf95d3640e888fcfc4fc4b048c628 dictd-1.8.0.ebuild 1536
 MD5 8d457fd5e3d23b393b569f8734ca5a0c dictd-1.9.11-r1.ebuild 1260
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
-MD5 e990f38237a2448b3d3f1b7f14a88da9 dictd-1.9.14.ebuild 1261
+MD5 82d27c0aebf6e95a7f3f3a07cb627312 dictd-1.9.14.ebuild 1270
 MD5 a97d38377255fef9ec22c3bf4c23fd6b files/dictd-1.8.0-gcc33-multiline-string-fix.patch 542
 MD5 7182349beb0e6f90f1d2c46cc8c5a3bc files/digest-dictd-1.8.0 63
 MD5 acfe9cbde6329db158f6a1b458be342c files/digest-dictd-1.9.11-r1 64
