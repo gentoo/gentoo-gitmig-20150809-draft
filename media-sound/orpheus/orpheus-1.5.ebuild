@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.9 2004/10/20 05:49:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.10 2004/10/30 10:58:27 eradicator Exp $
 
 IUSE="oggvorbis"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://konst.org.ua/en/orpheus"
@@ -44,7 +44,7 @@ src_compile() {
 	myconf="${myconf}"
 
 	econf ${myconf} || die
-	make CC="gcc ${CFLAGS}" CXX="c++ ${CXXFLAGS}" || die
+	make CC="$(tc-getCC) ${CFLAGS}" CXX="$(tc-getCXX) ${CXXFLAGS}" || die
 }
 
 src_install() {
