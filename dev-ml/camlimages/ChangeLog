@@ -1,0 +1,13 @@
+# ChangeLog for dev-ml/camlimages
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.1 2003/06/20 06:33:44 george Exp $
+
+*camlimages-2.11 (10 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> camlimages-2.11.ebuild :
+  initial import (#22548)
+  Camlimages is a library for manipulating various image formats in Objective Caml.
+  ebuild submitted by Matthieu Sozeau
+  
+  10 Jun 2003; Matthieu Sozeau <mattam@altern.org> camlimages-2.11.ebuild: 
+  Ebuild creation.
