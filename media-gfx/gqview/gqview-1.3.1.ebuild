@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.1.ebuild,v 1.3 2003/04/06 01:49:12 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.1.ebuild,v 1.4 2003/04/25 23:35:18 avenj Exp $
 
 IUSE="nls"
 
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 DEPEND="media-libs/libpng
-	>=media-libs/gdk-pixbuf-0.10
 	>=x11-libs/gtk+-2.0.1"
 	
 RDEPEND="nls? ( sys-devel/gettext )"

@@ -1,10 +1,13 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.10 2003/03/04 03:57:07 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.11 2003/04/25 23:35:18 avenj Exp $
+
+  25 Apr 2003; Jon Portnoy <avenj@gentoo.org> gqview-1.3.1.ebuild :
+  gdk-pixbuf dependency fix in 1.3 ebuilds, fixes bug #17392.
 
 *gqview-1.3.1 (3 March 2003)
 
-  03 March 2003; Jon Portnoy <avenj@gentoo.org> gqview-1.3.1.ebuild
+  03 March 2003; Jon Portnoy <avenj@gentoo.org> gqview-1.3.1.ebuild :
   Version bump, latest unstable (gtk2) gqview.
 
   02 March 2003; Jon Portnoy <avenj@gentoo.org> gqview-1.2.1.ebuild
