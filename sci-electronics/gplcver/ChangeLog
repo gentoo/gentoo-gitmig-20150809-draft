@@ -1,0 +1,15 @@
+# ChangeLog for app-sci/gplcver
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/ChangeLog,v 1.1 2004/12/27 19:22:27 ribosome Exp $
+
+*gplcver-1.10j (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +gplcver-1.10j.ebuild:
+  Moved from app-sci/gplcver to sci-electronics/gplcver.
+
+*gplcver-1.10j (26 Jul 2004)
+
+  26 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +gplcver-1.10j.ebuild:
+  New package submitted by Brian Korsedal, bug #35370
+
