@@ -1,14 +1,43 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.5 2004/07/22 07:48:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.6 2004/07/25 06:24:21 lv Exp $
 
+# WON'T BUILD - SECTION
+
+# 2004/06/22 - Taken from 2004.0 profile
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build
 svga
 
-# There is no JDK for x86_64 yet
-#java
-#jikes
-#junit
+# 2004/06/22 - Taken from 2004.0 profile
+# Firebird doesnt build on amd64
+firebird
 
+# 2004/06/22 - Taken from 2004.0 profile
+# x86 binary only, used by php
+fdftk
+
+# 2004/06/22 - Danny van Dyk <kugelfang@gentoo.org>
+# version in portage does not work on amd64 yet
+uclibc
+
+# 2004/06/22 - Taken from 2004.0 profile
+# versions that are in portage do not support amd64,
+# will be removed when Intel issues an update and it gets into portage
+# (it seems to be in the works)
+icc
+ifc
+
+# 2004/06/22 - Taken from 2004.0 profile
+# masked
+3dfx
+
+# 2004/07/22 - Danny van Dyk <kugelfang@gentoo.org>
+# libcaca part of libSDL causes breakage due to missing shared object.
+# BUG #53857
+libcaca
+
+# NOT NECESSARY - SECTION
+
+# 2004/06/22 - Taken from 2004.0 profile
 # Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
 # make them useful on amd64. Anyway, all amd64 cpus have them, so they should
 # not be many flag dependant in this case
@@ -17,29 +46,16 @@ sse
 sse2
 3dnow
 
-# x86 binary only for now
-icc
-
-# Firebird doesnt build on amd64
-firebird
-
-# Updated 03/21/2004, Jason Huebel <jhuebel@gentoo.org>
-# DirectFB works now
-# DirectFB doesnt build on amd64
-# directfb
-
+# 2004/06/22 - Taken from 2004.0 profile
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
 
-# x86 binary only, used by php
-fdftk
-
-# masked
-3dfx
+# 2004/06/25 - Danny van Dyk <kugelfang@gentoo.org>
+# Known BUGs (#54760) + lack of brain/man power to maintain "hardened" in the
+# default profile. Use the hardened profile instead.
+hardened
 uclibc
 
 # altivec is a ppc instruction set.
 altivec
-
-ifc
