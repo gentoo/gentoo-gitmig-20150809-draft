@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.40 2004/07/11 20:38:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.41 2004/08/22 11:38:02 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -132,6 +132,12 @@ universal_unpack() {
 		mv linux-${OKV} linux-${KV} || die "Unable to move source tree to ${KV}."
 	fi
 	cd ${S}
+	
+	# change incorrect install path
+	mv Makefile Makefile.orig
+	sed	-e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
+		Makefile.orig > Makefile
+	rm Makefile.orig
 
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
@@ -149,8 +155,7 @@ unpack_set_extraversion() {
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly and fix EXTRAVERSION
 	cd ${S}
 	mv Makefile Makefile.orig
-	sed	-e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-		-e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
+	sed	-e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 		Makefile.orig > Makefile
 	rm Makefile.orig
 }
@@ -368,9 +373,13 @@ unipatch() {
 	local PATCH_DEPTH
 	local ELINE
 	local STRICT_COUNT
+	local PATCH_LEVEL
 
 	[ -z "${KPATCH_DIR}" ] && KPATCH_DIR="${WORKDIR}/patches/"
 	[ ! -d ${KPATCH_DIR} ] && mkdir -p ${KPATCH_DIR}
+
+	# We're gonna need it when doing patches with a predefined patchlevel
+	shopt -s extglob
 
 	# This function will unpack all passed tarballs, add any passed patches, and remove any passed patchnumbers
 	# usage can be either via an env var or by params
@@ -385,6 +394,7 @@ unipatch() {
 		if [ -n "$(echo ${i} | grep -e "\.tar" -e "\.tbz" -e "\.tgz")" ]
 		then
 			extention=${i/*./}
+			extention=${extention/:*/}
 			case ${extention} in
 				tbz2) PIPE_CMD="tar -xvjf";;
 				 bz2) PIPE_CMD="tar -xvjf";;
@@ -398,20 +408,22 @@ unipatch() {
 			then
 				STRICT_COUNT=$((${STRICT_COUNT} + 1))
 				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-				${PIPE_CMD} ${i} -C ${KPATCH_DIR}/${STRICT_COUNT}/ 1>/dev/null
+				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR}/${STRICT_COUNT}/ 1>/dev/null
 			else
-				${PIPE_CMD} ${i} -C ${KPATCH_DIR} 1>/dev/null
+				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR} 1>/dev/null
 			fi
 
 			if [ $? == 0 ]
 			then
 				einfo "${i/*\//} unpacked"
+				[ -n "$(echo ${i} | grep ':')" ] && echo ">>> Strict patch levels not currently supported for tarballed patchsets"
 			else
-				eerror "Failed to unpack ${i}"
+				eerror "Failed to unpack ${i/:*/}"
 				die "unable to unpack patch tarball"
 			fi
 		else
 			extention=${i/*./}
+			extention=${extention/:*/}
 			PIPE_CMD=""
 			case ${extention} in
 				    bz2) PIPE_CMD="bzip2 -dc";;
@@ -419,8 +431,11 @@ unipatch() {
 				   diff) PIPE_CMD="cat";;
 				 gz|Z|z) PIPE_CMD="gzip -dc";;
 				ZIP|zip) PIPE_CMD="unzip -p";;
-				      *) UNIPATCH_DROP="${UNIPATCH_DROP} ${i}";;
+				      *) UNIPATCH_DROP="${UNIPATCH_DROP} ${i/:*/}";;
 			esac
+
+			PATCH_LEVEL=${i/*([^:])?(:)}
+			i=${i/:*/}
 			x=${i/*\//}
 			x=${x/\.${extention}/}
 	
@@ -440,9 +455,9 @@ unipatch() {
 				then
 					STRICT_COUNT=$((${STRICT_COUNT} + 1))
 					mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch)
+					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch${PATCH_LEVEL})
 				else
-					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch)
+					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch${PATCH_LEVEL})
 				fi
 			fi
 		fi
@@ -474,13 +489,18 @@ unipatch() {
 	# and now, finally, we patch it :)
 	for x in ${KPATCH_DIR}
 	do
-		for i in $(find ${x} -maxdepth 1 -iname "*.patch" -or -iname "*.diff" | sort -n)
+		for i in $(find ${x} -maxdepth 1 -iregex ".*\.patch[0-9]*" -or -iname "*.diff" | sort -n)
 		do
 			STDERR_T="${T}/${i/*\//}"
-			STDERR_T="${STDERR_T/.patch/.err}"
-		
-			PATCH_DEPTH=0
-			ebegin "Applying ${i/*\//}"
+			STDERR_T="${STDERR_T/.patch*/.err}"
+
+			PATCH_DEPTH=${i/*.patch/}
+
+			if [ -z "${PATCH_DEPTH}" ]; then
+				PATCH_DEPTH=0
+			fi
+
+			ebegin "Applying ${i/*\//} (-p${PATCH_DEPTH}+)"
 			while [ ${PATCH_DEPTH} -lt 5 ]
 			do
 				echo "Attempting Dry-run:" >> ${STDERR_T}
