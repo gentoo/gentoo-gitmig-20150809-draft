@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.39 2003/09/24 16:25:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.40 2003/09/24 23:18:04 liquidx Exp $
+
+*gnome-applets-2.4.1-r1 (25 Sep 2003)
+
+  25 Sep 2003; Alastair Tse <liquidx@gentoo.org>
+  gnome-applets-2.4.1-r1.ebuild, files/battstat-acpi-events-2.3.90.diff:
+  added acpi patch for battstat from
+  http://www.its.caltech.edu/~dmoore/battstat/ (#26229). Needs "acpi" in
+  useflag to activate.
 
   23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org>
   gnome-applets-2.2.2.ebuild:
