@@ -1,10 +1,18 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.4 2003/02/12 06:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.5 2003/03/28 19:24:43 gmsoft Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*ucl-1.01-r1 (28 Mar 2003)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> : ucl-1.01-r1.ebuild, files/digest-ucl-1.01-r1 :
+  Removed the copy of the sources in /usr/src. Marked unstable for x86, sparc and hppa.
  
 *ucl-1.01 (21 Jun 2002)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> ucl-1.01.ebuild :
+  Added hppa to KEYWORDS.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
