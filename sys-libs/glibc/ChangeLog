@@ -1,11 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.56 2003/04/06 18:49:02 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.57 2003/04/19 19:37:34 method Exp $
 
   06 Apr 2003; Martin Schlemmer <azarah@gentoo.org> :
   Fix all 2.3 ebuild to install timezone data if 'build' in USE, bug #16530.
 
 *glibc-2.3.2-r1 (06 Apr 2003)
+
+  19 Apr 2003; Joshua Brindle <method@gentoo.org> glibc-2.3.1-r4.ebuild:
+  give error and die if both sandbox and -fstack-protector are enabled
 
   06 Apr 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild :
   Fix calculation problems in allocate_static_tls that caused a TLS
@@ -20,6 +23,9 @@
   and up) needs glibc-2.3.3 snapshot.
 
 *glibc-2.3.1-r4 (21 Mar 2003)
+
+  14 Apr 2003; Joshua Brindle <method@gentoo.org> glibc-2.3.1-r4.ebuild:
+  give error and die if both sandbox and -fstack-protector are enabled
 
   06 Apr 2003; Zach Welch <zwelch@gentoo.org> glibc-2.3.1-r4.ebuild:
   add arm keyword
