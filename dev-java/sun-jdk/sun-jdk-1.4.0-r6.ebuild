@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r6.ebuild,v 1.4 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r6.ebuild,v 1.5 2002/10/17 14:31:08 blizzy Exp $
 
 IUSE="doc mozilla"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
 HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
 LICENSE="sun-bcla"
 SLOT="1.4"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.4.0* )"
