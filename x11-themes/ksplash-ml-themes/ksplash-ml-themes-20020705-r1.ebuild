@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705-r1.ebuild,v 1.1 2002/10/01 14:20:50 danarmak Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705-r1.ebuild,v 1.2 2002/10/04 06:47:35 vapier Exp $
 inherit kde-functions
 
 set-kdedir 3
