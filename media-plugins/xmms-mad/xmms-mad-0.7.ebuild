@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.7.ebuild,v 1.1 2004/12/08 07:23:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.7.ebuild,v 1.2 2004/12/09 09:32:49 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xmms-mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 sparc x86"
 
 RDEPEND="media-sound/xmms
 	 media-libs/libid3tag
