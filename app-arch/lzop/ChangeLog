@@ -1,21 +1,19 @@
 # ChangeLog for app-arch/lzop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.7 2003/02/12 02:57:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.8 2003/09/12 03:33:37 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*lzop-1.01 (11 Sep 2003)
+
+  11 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix gcc3 compile bugs #28334.
 
 *lzop-1.00,  (03 May 2002)
 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
- 
   Added ppc keyword
 
   25 Jul 2002; George Shapovalov <george@gentoo.org> lzop-1.00.ebuild :
-
   fixed sandbox violaion
 
   03 May 2002; George Shapovalov <george@gentoo.org> lzop-1.00.ebuild, files/digest-lzop-1.00 :
-  
   Initial release
-
