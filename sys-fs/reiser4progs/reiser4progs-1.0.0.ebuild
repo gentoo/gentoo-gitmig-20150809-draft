@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.0.ebuild,v 1.1 2004/08/14 08:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.0.ebuild,v 1.2 2004/09/08 15:11:13 ciaranm Exp $
 
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
@@ -8,7 +8,7 @@ SRC_URI="http://thebsh.namesys.com/pub/reiser4progs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="x86 ppc amd64 -sparc"
 IUSE="static debug readline"
 
 DEPEND=">=sys-libs/libaal-1.0.0
