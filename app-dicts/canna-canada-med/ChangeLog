@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/canna-canada-med
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/ChangeLog,v 1.3 2004/08/14 11:10:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/ChangeLog,v 1.4 2004/09/01 15:51:44 tgall Exp $
+
+  01 Sep 2004; Tom Gall <tgall@gentoo.org> canna-canada-med-20030309.ebuild:
+  stable on ppc64, bug #61775
 
   14 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
   canna-canada-med-20030309.ebuild:
