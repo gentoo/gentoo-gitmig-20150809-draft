@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdplay
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.8 2004/06/07 17:09:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.9 2004/06/11 01:24:17 pylon Exp $
+
+  11 Jun 2004; Lars Weiler <pylon@gentoo.org> libdvdplay-1.0.1.ebuild:
+  Stable on ppc.
 
   07 Jun 2004; Travis Tilley <lv@gentoo.org> libdvdplay-1.0.1.ebuild:
   stable on amd64
