@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r4.ebuild,v 1.4 2004/02/03 01:14:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r4.ebuild,v 1.5 2004/02/22 16:46:14 brad_mssw Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rumsey.org/xgal.html"
 SRC_URI="http://http.us.debian.org/debian/pool/main/x/${PN}/${PN}_${PV}.orig.tar.gz
 	http://http.us.debian.org/debian/pool/main/x/${PN}/${PN}_${PV}-27.diff.gz"
 
-KEYWORDS="x86 ppc alpha ~sparc"
+KEYWORDS="x86 ppc alpha ~sparc amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
