@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.1 2004/07/17 08:48:36 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.2 2004/07/28 17:28:44 st_lim Exp $
 
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net/"
@@ -63,6 +63,21 @@ src_install () {
 	# Install documentation
 	dodoc README CHANGES COPYING
 	dohtml README.html
+
+	# Install the contribs
+	docinto contrib
+	cd ${S}/contrib
+	dodoc spamc-nice.eml
+	dodoc test-clamd.pl
+	dodoc test-trophie.pl
+	dodoc sub-avpdaemon.pl
+	dodoc logging_first_80_chars.eml
+	dodoc spamc-nasty.eml
+	dodoc avpdeamon.init
+	dodoc test_installation.sh
+	dodoc sub-sender-cache.pl
+	dodoc test-sophie.pl
+	dodoc reformime-test.eml
 }
 
 pkg_postinst () {
@@ -74,3 +89,4 @@ pkg_postinst () {
 	einfo "/var/qmail/control/conf-common file and set:"
 	einfo "QMAILQUEUE=/var/qmail/bin/qmail-scanner-queue.pl"
 }
+

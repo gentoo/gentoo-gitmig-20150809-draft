@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.22-r1.ebuild,v 1.2 2004/07/18 08:28:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.22-r1.ebuild,v 1.3 2004/07/28 17:28:44 st_lim Exp $
 
 inherit fixheadtails gcc eutils
 
@@ -120,8 +120,22 @@ src_install () {
 	dohtml README.html FAQ.php TODO.php configure-options.php manual-install.php perlscanner.php
 
 	docinto contrib
-	cd contrib
-	dodoc qs2mrtg.pl mrtg-qmail-scanner.cfg
+	cd ${S}/contrib
+	dodoc spamc-nice.eml
+	dodoc test-trophie.pl
+	dodoc logrotate.qmailscanner
+	dodoc sub-avpdaemon.pl
+	dodoc logging_first_80_chars.eml
+	dodoc spamc-nasty.eml
+	dodoc avpdeamon.init
+	dodoc test_installation.sh
+	dodoc test-sophie.pl
+	dodoc reformime-test.eml
+	dodoc sub-sender-cache.pl
+	dodoc rbl_scanner.txt
+	dodoc test-clamd.pl
+	dodoc qs2mrtg.pl
+	dodoc mrtg-qmail-scanner.cfg
 }
 
 pkg_postinst () {
