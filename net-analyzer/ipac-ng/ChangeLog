@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipac-ng
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.6 2004/07/01 19:52:45 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.7 2004/07/11 10:15:48 eldad Exp $
+
+  11 Jul 2004; Eldad Zack <eldad@gentoo.org> ipac-ng-1.27_p1-r2.ebuild:
+  marked x86 stable
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> ipac-ng-1.27_p1-r1.ebuild,
   ipac-ng-1.27_p1-r2.ebuild:

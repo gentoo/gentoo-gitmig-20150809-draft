@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.5 2004/06/24 22:06:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.6 2004/07/11 10:18:23 eldad Exp $
+
+  11 Jul 2004; Eldad Zack <eldad@gentoo.org> linkchecker-1.12.0.ebuild,
+  linkchecker-1.12.1.ebuild:
+  marked x86 stable
 
   25 Apr 2004; David Holm <dholm@gentoo.org> linkchecker-1.12.1.ebuild:
   Added to ~ppc.

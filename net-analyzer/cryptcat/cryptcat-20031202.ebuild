@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.4 2004/07/01 17:28:19 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.5 2004/07/11 10:05:49 eldad Exp $
 
 inherit eutils
 
@@ -9,11 +9,11 @@ MY_P=${PN}_${PV}
 DESCRIPTION="TCP/IP swiss army knife extended with twofish encryption"
 HOMEPAGE="http://farm9.org/Cryptcat/"
 SRC_URI="http://farm9.org/Cryptcat/${MY_P}.tar.gz
-	http://ftp.debian.org/debian/pool/main/c/cryptcat/${MY_P}-${DEB_PVER}.diff.gz"
+	mirror://debian/pool/main/c/cryptcat/${MY_P}-${DEB_PVER}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
 DEPEND="virtual/libc
