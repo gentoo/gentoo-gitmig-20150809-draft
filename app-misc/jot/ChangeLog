@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/jot
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/ChangeLog,v 1.1 2003/04/22 21:11:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/ChangeLog,v 1.2 2003/06/21 14:19:02 liquidx Exp $
+
+*jot-9.0 (21 Jun 2003)
+
+  21 Jun 2003; Alastair Tse <liquidx@gentoo.org> jot-9.0.ebuild:
+  converted to use rpm.eclass and other cleanups
 
 *jot-0.9 (22 Apr 2003)
 
