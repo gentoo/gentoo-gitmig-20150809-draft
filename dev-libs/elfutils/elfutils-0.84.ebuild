@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.8 2003/12/14 01:22:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.9 2004/02/22 19:13:21 tuxus Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	done
 
 	use alpha && epatch ${FILESDIR}/${P}-atime.diff
+	use mips && epatch ${FILESDIR}/${P}-atime.diff
 }
 
 src_compile() {
