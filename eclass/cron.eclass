@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.3 2005/03/04 23:25:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.4 2005/03/16 10:51:16 ka0ttic Exp $
 
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 #
@@ -47,7 +47,7 @@ PROVIDE="virtual/cron"
 docrondir() {
 	# defaults
 	local perms="-m0750 -o root -g cron" dir="/var/spool/cron/crontabs"
-	
+
 	if [[ -n "$1" ]] ; then
 		case "$1" in
 			*/*)
@@ -137,7 +137,7 @@ docrontab() {
 	fi
 }
 
-cron-pkg_postinst() {
+cron_pkg_postinst() {
 	echo
 	# vixie is the only daemon that has a true system crontab
 	if [[ "${PN}" != "vixie-cron" ]] ; then
@@ -147,7 +147,7 @@ cron-pkg_postinst() {
 		einfo "!!! That will replace root's current crontab !!!"
 		einfo
 	fi
-	
+
 	einfo "You may wish to read the Gentoo Linux Cron Guide, which can be"
 	einfo "found online at:"
 	einfo "    http://www.gentoo.org/doc/en/cron-guide.xml"
