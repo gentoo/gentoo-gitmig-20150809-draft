@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.13 2003/12/12 15:24:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.14 2004/01/01 01:37:23 lu_zero Exp $
 
 inherit gcc eutils
 
@@ -45,7 +45,8 @@ src_compile() {
 	local myconf
 
 	use X && myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --without-x"
+		|| myconf="${myconf} --without-x"\
+		&& CFLAGS="${CFLAGS} -DX_DISPLAY_MISSING"
 
 	econf ${myconf} || die
 
