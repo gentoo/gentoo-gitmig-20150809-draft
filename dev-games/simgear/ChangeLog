@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.5 2004/04/12 18:16:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.6 2004/04/19 12:25:10 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> simgear-0.3.4.ebuild,
+  simgear-0.3.5.ebuild:
+  Adding IUSE.
 
   12 Apr 2004; Jason Wever <weeve@gentoo.org> simgear-0.3.5.ebuild:
   Added ~sparc keyword.

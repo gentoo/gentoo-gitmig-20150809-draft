@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/libmt_client-0.1.98.ebuild,v 1.3 2004/02/20 07:44:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/libmt_client-0.1.98.ebuild,v 1.4 2004/04/19 12:22:13 wolf31o2 Exp $
 
 DESCRIPTION="backend library for the maitretarot clients"
 HOMEPAGE="http://www.nongnu.org/maitretarot/"
@@ -9,6 +9,7 @@ SRC_URI="http://savannah.nongnu.org/download/maitretarot/${PN}.pkg/${PV}/${P}.ta
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="=dev-libs/glib-2*
 	dev-libs/libxml2

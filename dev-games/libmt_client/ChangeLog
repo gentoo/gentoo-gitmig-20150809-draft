@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/libmt_client
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/ChangeLog,v 1.1 2003/07/14 00:42:16 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/ChangeLog,v 1.2 2004/04/19 12:22:13 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  libmt_client-0.1.98.ebuild:
+  Adding IUSE.
 
 *libmt_client-0.1.98 (13 Jul 2003)
 

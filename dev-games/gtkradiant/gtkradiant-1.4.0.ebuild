@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.4 2004/03/10 14:22:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.5 2004/04/19 12:18:22 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/qeradiant/GtkRadiant/GtkRadiant-1_4/Li
 LICENSE="qeradiant"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 RDEPEND="media-libs/libpng
 	sys-libs/zlib
