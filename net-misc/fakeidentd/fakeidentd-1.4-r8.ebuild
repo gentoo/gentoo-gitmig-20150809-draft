@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-1.4-r8.ebuild,v 1.1 2002/05/04 04:11:14 woodchip Exp $
+# $Header:
 
 # This identd is nearly perfect for a NAT box. It runs in one
 # process (doesn't fork()) and isnt very susceptible to DOS attack.
@@ -14,6 +14,7 @@ SRC_URI="http://www.ajk.tele.fi/~too/sw/releases/identd.c
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 	mkdir ${P} ; cd ${S}
