@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/TkZinc/TkZinc-3.2.100.ebuild,v 1.1 2004/08/08 00:41:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/TkZinc/TkZinc-3.2.100.ebuild,v 1.2 2004/08/08 14:52:54 cardoe Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ S=${WORKDIR}/Tkzinc
 
 src_compile() {
 	epatch ${FILESDIR}/without-opengl.patch
+	epatch ${FILESDIR}/fix-makefile.patch
 
 	local myconf
 	if use opengl ; then

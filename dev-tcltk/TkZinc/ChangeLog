@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/TkZinc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/TkZinc/ChangeLog,v 1.1 2004/08/08 00:41:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/TkZinc/ChangeLog,v 1.2 2004/08/08 14:52:54 cardoe Exp $
+
+  08 Aug 2004; Doug Goldstein <cardoe@gentoo.org> TkZinc-3.2.100.ebuild:
+  Added fix for window popping up during build.
+  bug #56790 from Ming Zhao
 
   07 Aug 2004; Doug Goldstein <cardoe@gentoo.org> TkZinc-3.2.100.ebuild:
   New ebuild added as per request in bug #56790
