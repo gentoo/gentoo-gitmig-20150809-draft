@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/mylibrary
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/mylibrary/ChangeLog,v 1.1 2004/09/25 21:17:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/mylibrary/ChangeLog,v 1.2 2004/10/17 09:55:51 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> mylibrary-0.4.5g.ebuild:
+  Added to ~ppc.
 
 *mylibrary-0.4.5g (25 Sep 2004)
 
