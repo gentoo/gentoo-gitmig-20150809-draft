@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.3_p1.ebuild,v 1.3 2004/06/06 15:49:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.3_p1.ebuild,v 1.4 2004/06/14 02:09:22 dragonheart Exp $
 
 DESCRIPTION="BCWipe secure file removal utility"
 HOMEPAGE="http://www.jetico.com/"
-SRC_URI="http://www.jetico.com/linux/BCWipe-${PV/_p/-}.tar.gz
+SRC_URI="mirror://gentoo/linux/BCWipe-${PV/_p/-}.tar.gz
 	http://www.jetico.com/linux/BCWipe.doc.tgz"
 
 LICENSE="bestcrypt"

@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.5 2004/06/06 15:59:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.6 2004/06/14 02:09:22 dragonheart Exp $
+
+  14 Jun 2004; Daniel Black <dragonheart@gentoo.org> bcwipe-1.3_p1.ebuild,
+  -bcwipe-1.2_p3.ebuild:
+  BCWipe-1.3-1.tar.gz, and older versions, nolonger on web site. 
+  Documentation is the same for all versions. Digests updated to reflect 
+  this. This solves bug #53833 logged by Boris Wachtmeister 
+  <sirro@nurfuerspam.de>.
 
 *bcwipe-1.5_p2 (07 Jun 2004)
 
