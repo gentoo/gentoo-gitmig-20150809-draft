@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x11-ssh-askpass
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/ChangeLog,v 1.8 2003/04/18 03:48:20 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/ChangeLog,v 1.9 2003/07/08 22:38:37 mholzer Exp $
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org>
+  x11-ssh-askpass-1.2.2-r1.ebuild, x11-ssh-askpass-1.2.2.ebuild:
+  Updated Homepage. Closes #23862
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
