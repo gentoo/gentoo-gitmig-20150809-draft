@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <woodchip@gentoo.org> (23 Feb 2003)
+# It is alpha after all.
+>=net-fs/samba-3.0_alpha
+
 # <carpaski@gentoo.org> (22 Feb 2003)
 # Testing the fixes.
 =sys-apps/portage-2.0.47-r3
