@@ -1,13 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r1.ebuild,v 1.2 2003/08/13 20:12:55 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r1.ebuild,v 1.3 2003/09/17 01:53:17 max Exp $
 
 inherit flag-o-matic
 
-IUSE=""
 DESCRIPTION="ISC Dynamic Host Configuration Protocol."
 HOMEPAGE="http://www.isc.org/products/DHCP"
-
 SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P/_p/pl}.tar.gz
 	http://www.episec.com/people/edelkind/patches/dhcp/dhcp-3.0+paranoia.patch"
 
@@ -22,7 +20,6 @@ S="${WORKDIR}/${P/_p/pl}"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-
 	epatch "${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch"
 	epatch "${DISTDIR}/dhcp-3.0+paranoia.patch"
 }
@@ -85,6 +82,7 @@ src_install() {
 	newexe "${FILESDIR}/dhcp.rc6" dhcp
 
 	keepdir /var/lib/dhcp
+	fowners dhcp:dhcp /var/lib/dhcp
 }
 
 pkg_postinst() {
