@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcdaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.17 2005/04/05 02:28:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.18 2005/04/05 14:52:25 corsair Exp $
+
+  05 Apr 2005; Markus Rothe <corsair@gentoo.org> libcdaudio-0.99.10-r1.ebuild:
+  Stable on ppc64; bug #84936
 
 *libcdaudio-0.99.10-r1 (05 Apr 2005)
 
