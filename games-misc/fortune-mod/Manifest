@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3310b8ade229ae04ca91613f0a1ab85f ChangeLog 3617
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 674c09ae2a6d4b491f2c8401700e43f9 fortune-mod-1.0.9708-r1.ebuild 1499
+MD5 4360b85d5656b95b8750f77dc2b4608f ChangeLog 3727
 MD5 e18493d89180df8c2308ac4e1b551995 fortune-mod-1.99.1.ebuild 1487
-MD5 69ebce3aec1f10dead82c52fd02c1350 files/9708-Makefile.patch 1305
-MD5 53d07a3874dcef229e5e19296a9d8db1 files/9708-ppc-rot.patch 226
-MD5 45891a0eae39a7ec90b6f2433147874f files/digest-fortune-mod-1.0.9708-r1 69
+MD5 674c09ae2a6d4b491f2c8401700e43f9 fortune-mod-1.0.9708-r1.ebuild 1499
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 5ff47d4205e2b0ea5e0a538115a58237 files/digest-fortune-mod-1.99.1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBU5zqHTu7gpaalycRAuBrAKCI1jzO6QgkvQRskuXUpr35TZfibQCfa2gK
-Pt9IFHgtmfd8dq7hlOQ76Oc=
-=e5zd
------END PGP SIGNATURE-----
+MD5 69ebce3aec1f10dead82c52fd02c1350 files/9708-Makefile.patch 1305
+MD5 45891a0eae39a7ec90b6f2433147874f files/digest-fortune-mod-1.0.9708-r1 69
+MD5 53d07a3874dcef229e5e19296a9d8db1 files/9708-ppc-rot.patch 226
