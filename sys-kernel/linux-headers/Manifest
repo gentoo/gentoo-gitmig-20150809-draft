@@ -1,4 +1,4 @@
-MD5 46bd8389eeca1b309cde2ea4ddb0da67 ChangeLog 23278
+MD5 a6a67217d2439876a3e2ff3ebe1a06f5 ChangeLog 23341
 MD5 b3099588e509bea5bf8c12f2b3882f58 linux-headers-2.2.26.ebuild 2509
 MD5 c2c4eec01b604c30d0826e73ac02cac4 linux-headers-2.4.23.ebuild 3482
 MD5 608fe99985244b0445f76cee44c9ae14 metadata.xml 290
@@ -22,7 +22,7 @@ MD5 45ff5cde07cfe93ecbb514226def606f files/generate-asm-sparc 1661
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-linux-headers-2.2.26 67
 MD5 6ef3887ee4018c06c18e8726767189c7 files/digest-linux-headers-2.4.22 67
 MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-linux-headers-2.0.40 66
-MD5 338a2d93977c3187c75b65c6c188b3b9 files/linux-headers-2.6.8.1-appCompat.patch 60558
+MD5 bcc6c6ebdba1fe999e710f26c6f403ce files/linux-headers-2.6.8.1-appCompat.patch 60685
 MD5 2574d3f1b776f2df365737f456bfe435 files/digest-linux-headers-2.4.26 67
 MD5 57e8b81485f8a1ba10d41dd7949d40a8 files/linux-headers-2.6.8.1-strict-ansi-fix.patch 4132
 MD5 602f7309c0163c018627f06b5f1ace3a files/linux-headers-2.6.8.1-arm-float.patch 640
