@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3072 2004/08/17 22:35:12 squinky86 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3073 2004/08/17 23:56:10 latexer Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <latexer@gentoo.org> (17 Aug 2004)
+# This version of mono includes (broken) NPTL support (bug #54603)
+>=dev-dotnet/mono-1.0.1-r2
 
 # <squinky86@gentoo.org> (17 Aug 2004)
 # Masked by request of upstream developers.
