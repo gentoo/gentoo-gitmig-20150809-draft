@@ -5,7 +5,7 @@
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="apc ups daemon with integrated tcp/ip remote shutdown"
-SRC_URI="http://www.sibbald.com/apcupsd/download/${A}"
+SRC_URI="http://www.sibbald.com/apcupsd/download/oldversions/${A}"
 HOMEPAGE="http://www.sibbald.com/apcupsd/"
  
 DEPEND="virtual/glibc"
