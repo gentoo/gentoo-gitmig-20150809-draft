@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pmud 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.2 2002/04/29 21:33:03 pvdabeel Exp $
+# $Id: ChangeLog,v 1.3 2002/04/30 01:29:43 kain Exp $
+
+*pmud-0.10-r2 <kain@kain.org> ChangeLog:
+	
+	Mon Apr 29 10:12 2002 CST; kain <kain@kain.org>
+	Fixed the format of the X dependency line in pmud-0.10.1-r1.ebuild
 
 *pmud-0.10-r1 <pvdabeel@gentoo.org> ChangeLog:
  	
