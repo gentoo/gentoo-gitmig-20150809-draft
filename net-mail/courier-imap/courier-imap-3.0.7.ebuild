@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.17 2005/01/02 05:24:56 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.18 2005/03/03 18:57:31 ciaranm Exp $
 
 inherit eutils gnuconfig
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-lang/perl
-	sys-apps/procps"
+	sys-process/procps"
 PROVIDE="virtual/imapd"
 
 pkg_setup() {
