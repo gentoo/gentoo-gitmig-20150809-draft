@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.1.ebuild,v 1.4 2004/01/30 06:50:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.1.ebuild,v 1.5 2004/03/21 13:10:46 mboman Exp $
 
 DESCRIPTION="Prelude-IDS NIDS"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -15,7 +15,6 @@ RDEPEND="!dev-libs/libprelude-cvs
 	doc? ( dev-util/gtk-doc )"
 
 DEPEND="${RDEPEND} >=sys-devel/autoconf-2.58"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf

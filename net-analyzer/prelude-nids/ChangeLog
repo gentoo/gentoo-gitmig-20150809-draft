@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/prelude-nids
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.10 2004/02/28 20:50:32 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.11 2004/03/21 13:10:46 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> prelude-nids-0.8.1-r1.ebuild,
+  prelude-nids-0.8.1.ebuild, prelude-nids-0.8.4.ebuild,
+  prelude-nids-0.8.5.ebuild:
+  QA: Unnecessary definition of S and RDEPEND removed.
 
   29 Feb 2004; Michael Boman <mboman@gentoo.org> metadata.xml:
   Moving the package to 'netmon' herd.
