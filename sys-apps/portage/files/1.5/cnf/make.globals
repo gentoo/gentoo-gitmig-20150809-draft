@@ -10,7 +10,10 @@ GENTOO_MIRRORS="http://www.ibiblio.org/gentoo"
 # Host-type
 CHOST=i686-pc-linux-gnu
 
-PORTAGE_TMPDIR=${ROOT}/var/tmp
+#PORTAGE_TMPDIR=${ROOT}/var/tmp
+PORTAGE_TMPDIR=/var/tmp
+#/var/tmp without ${ROOT} seems more appropriate
+
 # Directory used for the build process 
 BUILD_PREFIX=${PORTAGE_TMPDIR}/portage
 PKG_TMPDIR=${PORTAGE_TMPDIR}/portage-pkg

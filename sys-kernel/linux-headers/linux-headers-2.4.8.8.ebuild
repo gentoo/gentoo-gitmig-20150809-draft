@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.8.8.ebuild,v 1.1 2001/08/22 21:36:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.8.8.ebuild,v 1.2 2001/08/23 19:26:06 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 
@@ -50,7 +50,9 @@ if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://www.kernel.org/pub/linux/kernel/people/alan/linux-2.4/${OKV}/patch-${KV}.bz2
 	ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${LVMV}.tar.gz
-    http://www.knopper.net/download/knoppix/cloop_${CLOOPAV}.tar.gz"
+    http://www.knopper.net/download/knoppix/cloop_${CLOOPAV}.tar.gz
+	http://www.ibiblio.org/gentoo/distfiles/lvm-1.0.1-rc1-2.4.8-ac8.patch.bz2
+	http://www.ibiblio.org/gentoo/distfiles/lvm_perl_to_bash.patch.bz2"
 fi
 #	http://www.zip.com.au/~akpm/ext3-${EXT3V}.gz
 #	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz
@@ -136,17 +138,22 @@ src_unpack() {
 		cd ${S2}
 		echo "Unpacking and applying LVM patch..."
 		unpack lvm_${LVMV}.tar.gz
-		cd LVM/${LVMV}
-
+		#cd LVM/${LVMV}
+		#We need to convert those 1.0.1-rc1 perl scripts to bash;  This'll be fixed in 1.0.1 final.  Thanks AJ :)
+		#cat ${DISTDIR}/lvm_perl_to_bash.patch.bz2 | bzip2 -d | patch -p1 || die
+		
 		# I had to hack this in so that LVM will look in the current linux
 		# source directory instead of /usr/src/linux for stuff - pete
-		CFLAGS="${CFLAGS} -I${S}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}" || die
-		cd PATCHES
-		make KERNEL_VERSION=${KV} KERNEL_DIR=${S} || die
-		cd ${S}
+		#CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}" || die
+		#cd PATCHES
+		#make KERNEL_VERSION=${KV} KERNEL_DIR=${S} || die
+		#cd ${S}
 		# the -l option allows this patch to apply cleanly (ignore whitespace changes)
 		# the -N option is an "auto no" to previously applied stuff.  Needed for 2.4.8-ac8
-		patch -N -l -p1 < ${S2}/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch 
+		
+		#patch -N -l -p1 < ${S2}/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch 
+		cd ${S}
+		cat ${DISTDIR}/lvm-1.0.1-rc1-2.4.8-ac8.patch.bz2 | bzip2 -d | patch -N -l -p1 
 		#|| die
 		#we removed || die because any stuff that hits -N causes an error code of 1
 	fi
@@ -251,12 +258,12 @@ src_compile() {
 	if [ "${PN}" = "linux-sources" ] || [ "${PN}" = "linux-headers" ]
 	then
 		cd ${KS}
-		try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep
+		make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep || die
 	else
 		if [ $PN = "linux" ]
 		then
 			cd ${KS}
-			try make symlinks
+			make symlinks || die
 		fi
 		if [ "`use lvm`" ]
 		then
@@ -266,12 +273,12 @@ src_compile() {
 			# This is needed for linux-extras
 			if [ -f "Makefile" ]
 			then
-				try make clean
+				make clean || die
 			fi
 			# I had to hack this in so that LVM will look in the current linux
 			# source directory instead of /usr/src/linux for stuff - pete
-			CFLAGS="${CFLAGS} -I${KS}/include" try ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}"
-			try make
+			CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}" || die
+			make || die
 		fi
 	
 #		if [ "`use lm_sensors`" ]
@@ -294,9 +301,9 @@ src_compile() {
 		if [ "$PN" == "linux" ]
 		then
 			cd ${KS}
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" bzImage
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" modules
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep || die
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" bzImage || die
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" modules || die
 		fi
 		
 #		if [ "`use pcmcia-cs`" ]
