@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.69 2005/01/14 02:30:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.70 2005/01/16 11:58:31 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -31,7 +31,7 @@ show_status() {
 # semi-transparent resuming
 progressfile=/var/run/bootstrap-progress
 [[ -e ${progressfile} ]] && source ${progressfile}
-export BOOTSTRAP_STAGE="${BOOTSTRAP_STAGE:-1}"
+export BOOTSTRAP_STAGE=${BOOTSTRAP_STAGE:-1}
 set_bootstrap_stage() {
 	[[ -z ${STRAP_RUN} ]] && return 0
 	export BOOTSTRAP_STAGE=$1
@@ -75,7 +75,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.69 2005/01/14 02:30:51 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.70 2005/01/16 11:58:31 vapier Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -96,7 +96,7 @@ if [[ -n ${STRAP_RUN} ]]  ; then
 		einfo "Press enter to continue or CTRL+C to abort ..."
 		read
 		set_bootstrap_stage 1
-	else
+	elif [ ${BOOTSTRAP_STAGE} -gt 1 ] ; then
 		einfo "Resuming bootstrap at internal stage #${BOOTSTRAP_STAGE} ..."
 	fi
 else
