@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.31 2004/02/08 22:08:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.32 2004/02/10 06:43:34 darkspecter Exp $
+
+  10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  scrollkeeper-0.3.14.ebuild:
+  set ppc in keywords
 
   08 Feb 2004; <spider@gentoo.org> scrollkeeper-0.3.14.ebuild:
   x86 stable
