@@ -1,6 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/SimpleParse/SimpleParse-1.0.ebuild,v 1.9 2003/02/13 11:33:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/SimpleParse/SimpleParse-1.0.ebuild,v 1.10 2003/04/04 01:38:39 liquidx Exp $
+
+IUSE=""
+
+inherit distutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Parser Generator for mxTextTools."
@@ -12,12 +16,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc alpha"
 
-src_compile() {
-	python setup.py build || die
-}
-
 src_install() {
-	python setup.py install --root=${D} --prefix=/usr --install-data=SIMPLEPARSE_DOCS || die
-	find ${D}/SIMPLEPARSE_DOCS -type f -exec dodoc {} \;
-	rm -rf ${D}/SIMPLEPARSE_DOCS
+	distutils_src_install --install-data=/usr/share/doc/${PF}
 }
