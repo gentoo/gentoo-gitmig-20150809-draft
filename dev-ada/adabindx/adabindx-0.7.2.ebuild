@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2.ebuild,v 1.6 2003/10/28 13:31:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2.ebuild,v 1.7 2003/12/01 08:03:29 dholm Exp $
 #
 
 inherit gnat
@@ -20,7 +20,7 @@ IUSE=""
 src_unpack() {
 	unpack "${P}.tar.bz2"
 	cd "${S}"
-	patch -p1 < ${FILESDIR}/${P}.diff
+	bzip2 -cd ${FILESDIR}/${P}.diff.bz2 | patch -p1
 	sed -i -e "s/-O3.*/\${ADACFLAGS}/g" Local.conf
 }
 
