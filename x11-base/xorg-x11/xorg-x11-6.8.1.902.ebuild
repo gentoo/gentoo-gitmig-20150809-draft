@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.12 2005/01/21 08:58:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.13 2005/01/21 16:33:43 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -110,10 +110,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	!virtual/x11"
 # x11-libs/xft -- blocked because of interference with xorg's
 
-# app-text/dgs overlaps libdps.{a,so} libdpstk.{a,so} libpsres.{a,so}
-# need to test X's libs w/ imagemagick, graphicsmagick and gtkDPS
 RDEPEND="
-		!app-text/dgs
 		>=sys-libs/zlib-1.1.3-r2
 		>=sys-devel/flex-2.5.4a-r5
 		>=dev-libs/expat-1.95.3

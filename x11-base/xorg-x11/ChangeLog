@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.287 2005/01/21 14:40:56 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.288 2005/01/21 16:33:43 spyderous Exp $
+
+  21 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.901-r1.ebuild,
+  xorg-x11-6.8.1.902.ebuild:
+  Drop blocker on app-text/dgs, which no longer exists in the tree. Apparently
+  this breaks things for some people, although I'm unable to reproduce it.
 
   21 Jan 2005; Stephen P. Becker <geoman@gentoo.org>
   xorg-x11-6.8.0-r4.ebuild:
