@@ -1,8 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.24 2002/09/04 12:18:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.25 2002/09/05 04:34:53 seemant Exp $
 
-*fluxbox-0.1.11 (04 Sep 2002)
+*fluxbox-0.1.11-r1 (04 Sep 2002)
+
+  04 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.11-r1.ebuild
+  files/digest-fluxbox-0.1.11-r1 :
+
+  menu is now back in /usr/share/commonbox/menu and translation files in
+  /usr/share/locale
 
   04 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.11.ebuild
   files/digest-fluxbox-0.1.11 :

@@ -1,117 +1,120 @@
 --- sh-utils-2.0.15/src/uname.c	Thu Jul 18 15:32:33 2002
-+++ sh-utils-2.0.15-linux_uname/src/uname.c	Mon Aug 19 20:05:55 2002
-@@ -130,6 +130,91 @@
++++ sh-utils-2.0.15-carlos/src/uname.c	Wed Sep  4 15:02:01 2002
+@@ -44,6 +44,11 @@
+ # endif
+ #endif
+ 
++#if defined (__linux__)
++#define USE_PROCINFO	
++#define UNAME_HARDWARE_PLATFORM
++#endif
++
+ #include "system.h"
+ #include "error.h"
+ #include "closeout.h"
+@@ -130,6 +135,65 @@
    exit (status);
  }
  
 +/* Carlos E. Gorges <carlos@techlinux.com.br> - return vendor_id from proc cpuinfo */
-+
-+#ifdef __linux__
-+
-+char *
-+cmpdup (char *cstr, char *cmpstr, char *dstr) {
-+	if ( (cstr && cmpstr) && !strcmp(cstr, cmpstr) ) 
-+					return strdup(dstr);
-+	return NULL;
-+}
-+
-+char * 
-+__sysinfo_processor_type (void) 
++#if defined(USE_PROCINFO)
++/* x==0, processor type | x==1, hardware-platform */
++int
++__linux_procinfo (int x, char *fstr) 
 +{
 +	FILE *ffd;
-+	char 	*cstr=calloc(1,sizeof(char)*64),
-+		*dstr=calloc(1,sizeof(char)*128),
-+		*fstr=calloc(1,sizeof(char)*256),
-+		*model,*vendor;
-+		
-+	model=vendor=NULL;
-+	
++	char 	*cstr=calloc(64,sizeof(char)),
++		*dstr=calloc(257,sizeof(char)),
++		*retr=NULL;
++
 +	if ( ffd=fopen("/proc/cpuinfo", "r") )
 +	{
 +		while ( fscanf(ffd, "%[^:\t]\t: %[^\n]\n", cstr, dstr) != EOF )
 +		{
-+			if(!cstr || !dstr) 
-+					break;		// ????
-+
-+			#if defined(__i386__)
-+				if(!vendor) 
-+					vendor = cmpdup(cstr, "vendor_id", dstr);
-+				if(!model) 
-+					model = cmpdup(cstr, "model name", dstr);
-+			#endif
-+			#if defined(__ia64__) || defined(__x86_64__)
-+				if(!vendor) 
-+					vendor = cmpdup(cstr, "vendor", dstr);
-+				if(!model) 
-+					model = cmpdup(cstr, "model", dstr);			
-+			#endif
-+			#if defined(__alpha__)
-+				if(!vendor) 
-+					vendor = strdup("Alpha");
-+				if(!model)
-+					 model = cmpdup(cstr, "cpu model", dstr);
-+			#endif
-+			#if defined(sparc) || defined(__sparc__)
-+				if(!vendor) 
-+					vendor = cmpdup(cstr, "cpu", dstr);
-+				if(!model)
-+					model = cmpdup(cstr, "type", dstr);
-+			#endif
-+			#if defined(__mips__)
-+				if(!vendor) 
-+					vendor = cmpdup(cstr, "system type", dstr);
-+				if(!model) 
-+					model = cmpdup(cstr, "cpu model", dstr);
-+			#endif
-+			#if defined(PPC)
-+				if(!vendor) 
-+					vendor = cmpdup(cstr, "cpu", dstr);
-+				if(!model) 
-+					model = cmpdup(cstr, "processor", dstr);
-+			#endif
++			char *sdata[] = 
++			{
++				#if defined(__i386__)
++					"model name", "vendor_id"
++				#endif
++				#if defined(__ia64__) || defined(__x86_64__)
++					"model", "vendor"
++				#endif
++				#if defined(__alpha__)
++					"cpu model", "???"
++				#endif
++				#if defined(sparc) || defined(__sparc__)
++					"type", "cpu"
++				#endif
++				#if defined(__mips__)
++					"processor", "system type"
++				#endif
++				#if defined(PPC)
++					"processor", "cpu"
++				#endif
++			};
++				
++			if(!retr)
++			{
++				if (!strcmp(cstr, sdata[x])) 
++						retr = strdup(dstr);
++			} else
++				break;
++			
 +		}
-+
 +		fclose(ffd);
 +
-+		if(vendor || model) {
-+			if(vendor) {
-+				strcat(fstr,vendor);
-+				strcat(fstr," ");
-+			}
-+			if(model) 
-+				strcat(fstr,model);
-+			return fstr;
++		if(retr)
++		{
++			strncpy(fstr,retr,257);
++			return 1;
 +		}
 +	}
-+		
-+	return NULL;	
++	return 0;
 +}
++
 +#endif
 +
 +
  /* Print ELEMENT, preceded by a space if something has already been
     printed.  */
  
-@@ -246,7 +331,16 @@
+@@ -240,13 +304,19 @@
+   if (toprint & PRINT_PROCESSOR)
+     {
+       char const *element = unknown;
+-#if HAVE_SYSINFO && defined SI_ARCHITECTURE
++#if ( HAVE_SYSINFO && defined SI_ARCHITECTURE ) || defined(USE_PROCINFO)
+       {
+ 	static char processor[257];
++#if HAVE_SYSINFO && defined SI_ARCHITECTURE
  	if (0 <= sysinfo (SI_ARCHITECTURE, processor, sizeof processor))
++#endif
++#if defined(USE_PROCINFO)
++	if( 0 <= __linux_procinfo(0, processor))
++#endif
  	  element = processor;
        }
-+#else
-+	#ifdef __linux__
-+	{
-+	  char *processor;
-+	  if( processor=__sysinfo_processor_type() ) 
-+				element = processor;
-+	}
-+	#endif
  #endif
 +
  #ifdef UNAME_PROCESSOR
        if (element == unknown)
  	{
-@@ -291,3 +385,4 @@
+@@ -275,9 +345,13 @@
+       if (element == unknown)
+ 	{
+ 	  static char hardware_platform[257];
++#if ! defined (USE_PROCINFO)
+ 	  size_t s = sizeof hardware_platform;
+ 	  static int mib[] = { CTL_HW, UNAME_HARDWARE_PLATFORM };
+ 	  if (sysctl (mib, 2, hardware_platform, &s, 0, 0) >= 0)
++#else
++	  if( 0 <= __linux_procinfo(1, hardware_platform))
++#endif
+ 	    element = hardware_platform;
+ 	}
+ #endif
+@@ -291,3 +365,4 @@
  
    exit (0);
  }
 +
-

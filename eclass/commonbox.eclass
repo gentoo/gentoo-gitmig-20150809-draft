@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.8 2002/09/04 12:18:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.9 2002/09/05 04:34:53 seemant Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -14,7 +14,8 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
 
-DEPEND="x11-misc/commonbox-utils
+DEPEND="sys-apps/supersed
+	x11-misc/commonbox-utils
 	x11-themes/commonbox-styles"
 
 RDEPEND="nls? ( sys-devel/gettext )"
@@ -33,22 +34,30 @@ commonbox_src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}
-	cp Makefile.am Makefile.am.orig
-	sed 's/data //' Makefile.am.orig > Makefile.am
+	ssed -i 's:data ::' ${S}/Makefile.am
 
-	cd ${S}/util
-	cp Makefile.am Makefile.am.orig
-	sed -e 's/bsetbg//' \
-		-e 's/bsetroot//' \
-		Makefile.am.orig > Makefile.am
+	ssed -i \
+		-e 's:bsetbg::' \
+		-e 's:bsetroot::' \
+		${S}/util/Makefile.am
 
+	ssed -i \
+		-e 's:bsetroot.1::' \
+		-e 's:bsetbg.1::' \
+		${S}/doc/Makefile.am
 
-	cd ${S}/doc
-	cp Makefile.am Makefile.am.orig
-	sed -e "s:bsetroot.1::" \
-		-e "s:bsetbg.1::" \
-		Makefile.am.orig > Makefile.am
+	for i in `find ${S} -name 'Makefile.am'`
+	do
+		ssed -i 's:$(pkgdatadir)/nls:/usr/share/locale:' ${i}
+	done
+
+	for i in `find ${S}/nls -name 'Makefile.am'`
+	do
+		ssed -i \
+			-e "s:blackbox.cat:${MYBIN}.cat:g" \
+			-e "s:${PN}.cat:${MYBIN}.cat:g" \
+			${i}
+	done
 
 	einfo ${MYBIN}
 
@@ -81,7 +90,7 @@ commonbox_src_compile() {
 		${myconf} || die
 	
 	emake \
-		pkgdatadir=/usr/share/commonbox/${MYBIN} || die
+		pkgdatadir=/usr/share/commonbox || die
 		
 }
 
@@ -89,8 +98,8 @@ commonbox_src_compile() {
 commonbox_src_install() {
 
 	dodir /usr/share/commonbox
-	einstall \
-		pkgdatadir=${D}/usr/share/commonbox/${MYBIN} || die
+
+	make DESTDIR=${D} install || die
 
 	# move the ${PN} binary to ${MYBIN}
 
@@ -137,4 +146,6 @@ commonbox_pkg_postinst() {
 		einfo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		einfo
 	fi
+
+	commonbox-menugen -kg
 }
