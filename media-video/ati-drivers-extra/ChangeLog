@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.24 2005/02/06 16:45:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.25 2005/02/16 22:23:09 lu_zero Exp $
+
+*ati-drivers-extra-8.10.19 (16 Feb 2005)
+
+  16 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-8.10.19-improvements.patch.bz2,
+  +ati-drivers-extra-8.10.19.ebuild:
+  New version, thanks to Erdroh Moshan <ErDroh@gmx.de> for the updated patch
 
   06 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
   ati-drivers-extra-8.8.25.ebuild:
