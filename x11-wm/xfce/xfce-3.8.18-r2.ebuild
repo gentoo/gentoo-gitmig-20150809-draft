@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.13 2004/06/24 23:46:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.14 2004/07/15 01:27:05 agriffis Exp $
 
 IUSE="arts gtk gnome nls tcltk"
 inherit gnuconfig
@@ -26,7 +26,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 src_compile() {
 
 	# Allow configure to detect mipslinux systems
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	local myconf
 
