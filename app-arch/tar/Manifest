@@ -1,6 +1,6 @@
 MD5 4fe32b09a760c4d1de6bac54810cdfbe tar-1.13.92-r3.ebuild 1599
 MD5 d418a6adff927faf1c52c02306df0692 tar-1.13.25-r3.ebuild 1409
-MD5 9bd6853e0b8e6008dd36770ebd26169f tar-1.13.94.ebuild 1314
+MD5 40fc7620fdc68aaa2a3f07fb337d5330 tar-1.13.94.ebuild 1317
 MD5 60749b8ee8a97408fb0ec7865a3b989d ChangeLog 5577
 MD5 e05d36a6f2aeb7f6374d04d61872bd53 files/tar-1.13.92-fix-one_file_system.patch 547
 MD5 a5f8c5da7a9465ea1978145f3ef0610c files/tar.1 7113
