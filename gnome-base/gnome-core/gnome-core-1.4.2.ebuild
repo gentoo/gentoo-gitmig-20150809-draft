@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2.ebuild,v 1.6 2004/02/22 20:46:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2.ebuild,v 1.7 2004/06/03 22:46:02 agriffis Exp $
 
 IUSE="kde nls cups"
 
@@ -55,7 +55,7 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 
-	if [ "`use kde`" ]
+	if use kde
 	then
 		myconf="${myconf} --with-kde-datadir=/usr/share"
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.19 2004/05/14 04:03:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.20 2004/06/03 22:51:34 agriffis Exp $
 
 inherit gnome.org
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myconf="--disable-nls"
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.1-r1.ebuild,v 1.4 2004/04/27 21:09:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.1-r1.ebuild,v 1.5 2004/06/03 22:50:50 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -41,7 +41,7 @@ src_unpack() {
 
 	# http://bugzilla.gnome.org/show_bug.cgi?id=88553
 	# http://www.its.caltech.edu/~dmoore/battstat/
-	if [ -n "`use acpi`" ]; then
+	if use acpi; then
 		EPATCH_OPTS="-d ${S}/battstat"
 		epatch ${FILESDIR}/battstat-acpi-events-2.3.90.diff
 	fi

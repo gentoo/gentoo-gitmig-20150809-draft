@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.21 2004/05/29 03:46:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.22 2004/06/03 22:49:20 agriffis Exp $
 
 IUSE="doc nls kde"
 
@@ -71,7 +71,7 @@ src_compile() {
 
 	#do the docs (maby add a use variable or put in seperate
 	#ebuild since it is mostly developer docs?)
-	if [ -n "`use doc`" ]
+	if use doc
 	then
 		cd ${S}/devel-docs
 		emake || die
