@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-other/gnu-gs-fonts-other-6.0.ebuild,v 1.1 2003/06/02 14:02:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-other/gnu-gs-fonts-other-6.0.ebuild,v 1.2 2003/12/09 18:08:03 lanius Exp $
 
 DESCRIPTION="Ghostscript Extra Fonts"
 HOMEPAGE="http://www.cups.org/"
@@ -9,7 +9,7 @@ LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="x86 sparc alpha"
 IUSE=""
-DEPEND="app-text/ghostscript"
+DEPEND="virtual/ghostscript"
 #RDEPEND=""
 S=${WORKDIR}/fonts
 
