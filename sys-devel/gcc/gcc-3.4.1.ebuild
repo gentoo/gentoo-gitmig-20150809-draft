@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.7 2004/07/13 19:44:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.8 2004/07/14 23:28:59 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk2 f77 objc hardened uclibc n32 n64"
 
@@ -197,7 +197,7 @@ chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
 	local OLD_GCC_VERSION="`gcc -dumpversion`"
 	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
-	                       sed -e 's:^.*/gcc-lib/\([^/]*\)/[0-9]\+.*$:\1:')"
+	                       sed -e 's:^.*/gcc[^/]*/\([^/]*\)/[0-9]\+.*$:\1:')"
 
 	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
 	then
