@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/angband
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.9 2004/09/23 09:31:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.10 2004/10/18 21:11:22 gustavoz Exp $
+
+  18 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> angband-3.0.5.ebuild:
+  Keyworded ~sparc wrt #67950
 
   23 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> angband-3.0.5.ebuild:
   restore missing ~amd64 keyword
