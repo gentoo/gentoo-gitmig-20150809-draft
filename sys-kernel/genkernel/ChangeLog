@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.50 2004/07/15 20:50:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.51 2004/07/18 14:48:42 tgall Exp $
+
+  18 Jul 2004; Tom Gall <tgall@gentoo.org> genkernel-3.0.2d.ebuild:
+  stable on ppc64, bug #57487
 
 *genkernel-3.0.2d (15 Jul 2004)
 
