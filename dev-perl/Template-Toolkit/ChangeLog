@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Template-Toolkit
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.2 2003/06/08 04:21:54 rac Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.3 2004/04/10 03:03:39 esammer Exp $
+
+*Template-Toolkit-2.13 (09 Apr 2004)
+
+  09 Apr 2004; Eric Sammer <esammer@gentoo.org> Template-Toolkit-2.09.ebuild,
+  Template-Toolkit-2.13.ebuild:
+  Bumped from 2.09 to 2.13 - closes bug #47257. Updated copyright headers to
+  make repoman happy.
 
   07 Jun 2003; <rac@gentoo.org> Template-Toolkit-2.09.ebuild:
   Add IUSE
