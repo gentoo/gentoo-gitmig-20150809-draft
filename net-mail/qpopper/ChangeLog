@@ -2,9 +2,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: Enrico Morelli <morelli@cerm.unifi.it>
 # Maintaniner: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.1 2002/06/21 16:28:54 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.2 2002/08/24 20:40:21 bass Exp $
 
 *qpopper-4.0.4 (20 Jun 2002)
 
-20 Jun 2002; J.Alberto S.L. <bass@gentoo.org> qpopper-4.0.4:
+  24 Aug 2002; J.Alberto S.L. <bass@gentoo.org> qpopper-4.0.4:
+  fix some bugs #6864 (thanks Pau Oliva)
+
+  20 Jun 2002; J.Alberto S.L. <bass@gentoo.org> qpopper-4.0.4:
   First relase.
