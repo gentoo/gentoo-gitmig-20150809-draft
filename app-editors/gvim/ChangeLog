@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.41 2003/10/01 15:20:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.42 2003/11/01 01:09:54 rphillips Exp $
 
   01 Oct 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.2-r3.ebuild,
   gvim-6.2_pre1.ebuild, gvim-6.2_pre2.ebuild, gvim-6.2_pre3.ebuild,
@@ -10,6 +10,12 @@
 
   24 Sep 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.2-r3.ebuild:
   Mark stable on all arches
+
+*gvim-6.2-r5 (31 Oct 2003)
+
+  31 Oct 2003; Ryan Phillips <rphillips@gentoo.org> gvim-6.2-r5.ebuild:
+  added patches up to 140.  Skipped to -r5 to sync vim-core with vim/ 
+  and gvim/.
 
 *gvim-6.2-r3 (18 Sep 2003)
 
