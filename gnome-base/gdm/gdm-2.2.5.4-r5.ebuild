@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.1 2002/03/06 02:25:59 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.2 2002/06/02 20:08:57 azarah Exp $
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -120,8 +120,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-        echo ">>> Updating Scrollkeeper database..."
-        scrollkeeper-update >/dev/null 2>&1
+	echo ">>> Updating Scrollkeeper database..."
+	scrollkeeper-update >/dev/null 2>&1
 
 	# Attempt to restart GDM softly by use of the fifo.  Wont work on older
 	# then 2.2.3.1 versions but should work nicely on later upgrades.
@@ -142,6 +142,14 @@ pkg_postinst() {
 				(echo;echo SOFT_RESTART) >> $FIFOFILE
 			fi
 		fi
+	fi
+
+	# unmerge nukes sometimes
+	if [ ! -d ${ROOT}/var/lib/gdm ]
+	then
+		mkdir -p ${ROOT}/var/lib/gdm
+		chown gdm.gdm ${ROOT}/var/lib/gdm
+		chmod 0750 ${ROOT}/var/lib/gdm
 	fi
 
 	echo

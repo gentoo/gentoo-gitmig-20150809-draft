@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.3.90.4.ebuild,v 1.1 2002/05/30 01:59:04 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.3.90.4.ebuild,v 1.2 2002/06/02 20:08:57 azarah Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -154,6 +154,14 @@ pkg_postinst() {
 				(echo;echo SOFT_RESTART) >> $FIFOFILE
 			fi
 		fi
+	fi
+
+	# unmerge nukes sometimes
+	if [ ! -d ${ROOT}/var/lib/gdm ]
+	then
+		mkdir -p ${ROOT}/var/lib/gdm
+		chown gdm.gdm ${ROOT}/var/lib/gdm
+		chmod 0750 ${ROOT}/var/lib/gdm
 	fi
 
 	echo
