@@ -1,26 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.8 2004/02/27 05:50:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.9 2004/03/06 04:49:09 vapier Exp $
 
 inherit eutils gnuconfig
 
-DESCRIPTION="MIT Kerberos V"
-HOMEPAGE="http://web.mit.edu/kerberos/www/"
-
 MY_P=${PN/mit-}-${PV}
 S=${WORKDIR}/${MY_P/_/-}/src
+DESCRIPTION="MIT Kerberos V"
+HOMEPAGE="http://web.mit.edu/kerberos/www/"
 SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${MY_P/_/-}.tar.gz"
-IUSE="krb4 static"
-SLOT="0"
+
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 sparc ppc alpha hppa ia64 amd64 ~mips"
-PROVIDE="virtual/krb5"
+IUSE="krb4 static"
+
 DEPEND="virtual/glibc
 	sys-devel/autoconf"
+PROVIDE="virtual/krb5"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-res_search.patch
 }
 
@@ -121,7 +122,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 
 	cd ..
