@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.0.103.ebuild,v 1.11 2004/03/29 23:15:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.0.103.ebuild,v 1.12 2004/04/05 14:38:11 lanius Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 src_compile() {
 	myconf="--with-syslogd_pid=/var/run/syslog.pid"
 
-	pkglist | grep -q syslog-ng \
+	has_version 'app-admin/syslog-ng' \
 	    && myconf="--with-syslogd_pid=/var/run/syslog-ng.pid"
 
 	econf \
