@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.2 2004/11/16 00:21:04 karltk Exp $
 
 inherit eutils java-pkg
 
@@ -33,7 +33,7 @@ src_unpack() {
 		einfo "Unpacking ${i} to ${S}"
 		unzip ${i} &> /dev/null
 	done
-	
+
 	use mozilla && cp library/*.cpp ${S} || die "Failed copy *.cpp"
 
 	mkdir src && mv org src/
@@ -57,7 +57,7 @@ src_compile() {
 	gtk_libs=`pkg-config --libs gtk+-2.0 | sed -e "s:-Wl,--export-dynamic:--export-dynamic:"`
 	gtk_lib=`pkg-config --libs gtk+-2.0 gthread-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export-dynamic:--export-dynamic:"`
 	atk_lib=`pkg-config --libs atk gtk+-2.0 | sed -e "s:-Wl,--export-dynamic:--export-dynamic:"`
-	
+
 	sed -e :a -e '/\\$/N; s/\\\n//; ta' make_linux.mak > makefile.mak
 	moz_cflags="-O -fno-rtti -fno-exceptions -fPIC -Wall -Wno-non-virtual-dtor -DNO_nsEmbedString_1Equals \
 		-DXPCOM_GLUE=1 -DMOZILLA_STRICT_API=1 -DSWT_VERSION=\$(SWT_VERSION) \$(NATIVE_STATS) \
@@ -71,7 +71,7 @@ src_compile() {
 		-I\$(MOZILLA_FIVE_HOME)/include/embed_base -I\$(MOZILLA_FIVE_HOME)/include/embed_base/include \
 		-I\$(MOZILLA_FIVE_HOME)/include/embedstring -I\$(MOZILLA_FIVE_HOME)/include/embedstring/include"
 	moz_libs="-shared -Wl,--version-script=mozilla_exports -Bsymbolic -L\$(MOZILLA_FIVE_HOME) -lgtkembedmoz"
-	
+
 	sed -e "s:\`pkg-config --libs gtk+-2.0\`:${gtk_libs}:" \
 		-e "s:\`pkg-config --libs atk gtk+-2.0\`:${atk_lib}:" \
 		-e "s:\`pkg-config --libs gnome-vfs-module-2.0 libgnome-2.0 libgnomeui-2.0\`:${gnome_libs}:" \
