@@ -1,0 +1,124 @@
+--- configure.in.orig	2005-01-10 23:05:06.867089352 +0930
++++ configure.in	2005-01-10 23:07:32.461660456 +0930
+@@ -686,20 +686,20 @@
+         fi
+ 
+         LIBNET_INC_DIR=""
+-        AC_MSG_CHECKING("for libnet.h version 1.0.x")
++        AC_MSG_CHECKING("for libnet-1.0.h version 1.0.x")
+         libnet_dir="/usr/include /usr/local/include"
+         for i in $libnet_dir; do
+-            if test -r $i/libnet.h; then
++            if test -r $i/libnet-1.0.h; then
+                 LIBNET_INC_DIR=$i
+             fi
+         done
+ 
+         if test "$LIBNET_INC_DIR" != ""; then
+-            if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0 >/dev/null"; then
+-                FAIL_MESSAGE("libnet 1.0.x (libnet.h)", $tmp)
++            if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0 >/dev/null"; then
++                FAIL_MESSAGE("libnet 1.0.x (libnet-1.0.h)", $tmp)
+             fi
+-            CFLAGS="${CFLAGS} `libnet-config --defines` `libnet-config --cflags`"
+-            LIBS="${LIBS} `libnet-config --libs`"
++            CFLAGS="${CFLAGS} `libnet-1.0-config --defines` `libnet-1.0-config --cflags`"
++            LIBS="${LIBS} `libnet-1.0-config --libs`"
+             CPPFLAGS="${CPPFLAGS} -I${LIBNET_INC_DIR}"
+             AC_MSG_RESULT($i)
+         else
+@@ -711,26 +711,26 @@
+ 
+ AC_ARG_ENABLE(flexresp,
+ [  --enable-flexresp       Flexible Responses on hostile connection attempts],
+-[ CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-config --defines --cflags`" LDFLAGS="${LDFLAGS} `libnet-config --libs`"],)
++[ CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-1.0-config --defines --cflags`" LDFLAGS="${LDFLAGS} `libnet-1.0-config --libs`"],)
+                 
+ 
+ if test "$enable_flexresp" != "no" -a "$enable_flexresp" = "yes"; then
+ 
+-  if test `libnet-config --cflags | wc -c` = "1"; then
++  if test `libnet-1.0-config --cflags | wc -c` = "1"; then
+     CPPFLAGS="${CPPFLAGS} -I/usr/local/include -I/sw/include"
+     LIBNET_CONFIG_BROKEN_CFLAGS=yes
+   fi
+ 
+-  if test `libnet-config --libs | wc -c` = "1"; then
+-    AC_MSG_WARN(libnet-config --libs is broken on your system.  If you)
++  if test `libnet-1.0-config --libs | wc -c` = "1"; then
++    AC_MSG_WARN(libnet-1.0-config --libs is broken on your system.  If you)
+     AC_MSG_WARN(are using a precompiled package please notify the) 
+     AC_MSG_WARN(maintainer.)
+     LDFLAGS="${LDFLAGS} -L/usr/local/lib -L/sw/lib"
+-    LIBS="${LIBS} -lnet"
++    LIBS="${LIBS} -lnet-1.0"
+   fi
+ 
+   LNET=""
+-  AC_CHECK_HEADERS(libnet.h,, LNET="no")
++  AC_CHECK_HEADERS(libnet-1.0.h,, LNET="no")
+   if test "$LNET" = "no"; then
+     echo
+     echo "   ERROR!  Libnet header not found, go get it from"
+@@ -748,33 +748,33 @@
+       libnet_dir="/usr/include /usr/local/include /sw/include"
+     fi
+   else
+-    libnet_dir=`libnet-config --cflags | cut -dI -f2`
++    libnet_dir=`libnet-1.0-config --cflags | cut -dI -f2`
+   fi
+ 
+   LIBNET_INC_DIR=""
+   for i in $libnet_dir; do
+-    if test -r $i/libnet.h; then
++    if test -r $i/libnet-1.0.h; then
+       LIBNET_INC_DIR=$i
+     fi
+   done
+ 
+   if test "$LIBNET_INC_DIR" != ""; then
+-    if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0.2a >/dev/null"; then
++    if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0.2a >/dev/null"; then
+       AC_MSG_RESULT(no)
+       echo
+       echo "   ERROR!  Snort with --enable-flexresp will *only* work with"
+       echo "   libnet version 1.0.2a, go get it from"
+       echo "   http://www.packetfactory.net/projects/libnet/"
+-      FAIL_MESSAGE("libnet 1.0.2a (libnet.h)", $LIBNET_INC_DIR)
++      FAIL_MESSAGE("libnet 1.0.2a (libnet-1.0.h)", $LIBNET_INC_DIR)
+     fi
+     AC_MSG_RESULT(yes)
+   else
+     AC_MSG_RESULT(no)
+-    FAIL_MESSAGE("libnet 1.0.2a (libnet.h)", $libnet_dir)
++    FAIL_MESSAGE("libnet 1.0.2a (libnet-1.0.h)", $libnet_dir)
+   fi
+ 
+   LNET=""
+-  AC_CHECK_LIB(net, libnet_build_ip,, LNET="no")
++  AC_CHECK_LIB(net-1.0, libnet_build_ip,, LNET="no")
+   if test "$LNET" = "no"; then
+     echo
+     echo "   ERROR!  Libnet library not found, go get it from"
+--- ./src/detection-plugins/sp_react.c.orig	2005-01-10 23:11:17.253602680 +0930
++++ ./src/detection-plugins/sp_react.c	2005-01-10 23:12:01.073940976 +0930
+@@ -57,7 +57,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
+-#include <libnet.h>
++#include <libnet-1.0.h>
+ 
+ #include "rules.h"
+ #include "decode.h"
+--- ./src/detection-plugins/sp_respond.c.orig	2005-01-10 23:11:29.457747368 +0930
++++ ./src/detection-plugins/sp_respond.c	2005-01-10 23:12:01.074940824 +0930
+@@ -34,7 +34,7 @@
+ 
+ 
+ #ifdef ENABLE_RESPONSE
+-#include <libnet.h>
++#include <libnet-1.0.h>
+ 
+ #include "decode.h"
+ #include "rules.h"
