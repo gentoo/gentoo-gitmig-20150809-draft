@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.8.ebuild,v 1.7 2004/10/09 20:21:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.8.ebuild,v 1.8 2004/11/01 03:18:49 weeve Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mailcrypt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mailcrypt/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ~sparc"
+KEYWORDS="x86 amd64 ppc sparc"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
