@@ -1,22 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.8.ebuild,v 1.1 2003/06/25 11:46:55 liquidx Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.8.ebuild,v 1.2 2003/08/07 03:00:49 vapier Exp $
 
 inherit distutils
 
 MY_P="Pyrex-${PV}"
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="a language for writing Python extension modules."
-SRC_URI="http://www.cosc.canterbury.ac.nz/~greg/python/Pyrex/${MY_P}.tar.gz"
+DESCRIPTION="a language for writing Python extension modules"
 HOMEPAGE="http://www.cosc.canterbury.ac.nz/~greg/python/Pyrex"
-LICENSE="as-is"
+SRC_URI="http://www.cosc.canterbury.ac.nz/~greg/python/Pyrex/${MY_P}.tar.gz"
 
-DEPEND="virtual/python"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
 
-src_install () {
+DEPEND="virtual/python"
+
+src_install() {
 	mydoc="CHANGES.txt INSTALL.txt README.txt USAGE.txt"
 	distutils_src_install
 	

@@ -1,22 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.6.ebuild,v 1.2 2003/07/02 20:47:33 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.6.ebuild,v 1.3 2003/08/07 03:02:12 vapier Exp $
 
-IUSE="gtk2 doc"
+inherit distutils
 
-S=${WORKDIR}/Twisted-${PV}
-DESCRIPTION="Twisted is a collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included." 
-SRC_URI="http://twisted.sourceforge.net/Twisted-${PV}.tar.bz2"
+DESCRIPTION="collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included." 
 HOMEPAGE="http://www.twistedmatrix.com/"
+SRC_URI="http://twisted.sourceforge.net/Twisted-${PV}.tar.bz2"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="x86 alpha sparc"
+IUSE="gtk2 doc"
+
 DEPEND=">=dev-lang/python-2.2*
 	>=dev-python/pycrypto-1.9_alpha4
 	gtk? ( =dev-python/pygtk-0.6* )
 	gtk2? ( >=dev-python/pygtk-1.99* )"
-KEYWORDS="x86 alpha sparc"
 
-inherit distutils
+S=${WORKDIR}/Twisted-${PV}
 
 src_install() {
 	distutils_src_install
@@ -38,6 +40,4 @@ src_install() {
 			-e 's/manhole\.run()/manhole2.run()/' \
 			-i ${D}/usr/bin/manhole
 	fi
-
 }
-
