@@ -1,35 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.11 2004/07/02 09:32:03 eradicator Exp $
-
-IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.12 2004/07/20 18:33:46 vapier Exp $
 
 inherit eutils flag-o-matic libtool
 
-# Compile problems with these (bug #6641 among others)...
-#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
-
-# Recently there has been a lot of stability problem in Gentoo-land.  Many
-# things can be the cause to this, but I believe that it is due to gcc3
-# still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
-#
-# This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the tests to fail miserbly.
-#
-# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
-# knows what he is talking about:
-#
-#   People really shouldn't force code-specific options on... It's a
-#   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
-#
-# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
-# you do not like it, comment it, but do not bugreport if you run into
+# The next command strips most flags from CFLAGS/CXXFLAGS.  If you do 
+# not like it, comment it out, but do not file bugreports if you run into
 # problems.
-#
-# <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+do_filter_flags() {
+	strip-flags
+
+	# In general gcc does not like optimization ... we'll add -O2 where safe
+	filter-flags -O?
+
+	# Compile problems with these (bug #6641 among others)...
+	#filter-flags -fno-exceptions -fomit-frame-pointer -fforce-addr
+}
 
 # gcc produce unstable binaries if compiled with a different CHOST.
 [ "${ARCH}" = "hppa" ] && export CHOST="hppa-unknown-linux-gnu"
@@ -107,9 +93,9 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64 ~ppc64 ~s390"
 KEYWORDS="-* arm"
+IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -422,7 +408,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf=
 	local gcc_lang=
 
@@ -489,13 +474,8 @@ src_compile() {
 		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions"
 	fi
 
-	# In general gcc does not like optimization, and add -O2 where
-	export CFLAGS="$(echo "${CFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"
-	einfo "CFLAGS=\"${CFLAGS}\""
-	export CXXFLAGS="$(echo "${CXXFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"
-	einfo "CXXFLAGS=\"${CXXFLAGS}\""
-	export GCJFLAGS="$(echo "${GCJFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"
-	einfo "GCJFLAGS=\"${GCJFLAGS}\""
+	# Make sure we have sane CFLAGS
+	do_filter_flags
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
