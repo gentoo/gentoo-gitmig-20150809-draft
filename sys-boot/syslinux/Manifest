@@ -3,23 +3,17 @@ Hash: SHA1
 
 MD5 0bf1a1696767cc23af51074e00a02601 ChangeLog 3140
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 acd4a9b003a0cb31ddec5cdf5be4fded syslinux-2.05.ebuild 757
-MD5 e14d65c5fcef44ee2b26312ddc0ec57f syslinux-2.06.ebuild 963
-MD5 a65afb807734fe361ce6a622edb00b0a syslinux-2.09.ebuild 953
-MD5 cc5a4c080f75efdb5c400415b494726e syslinux-2.11.ebuild 937
+MD5 be91e91e8fbb5560f3cbd9adc6a38677 syslinux-2.11.ebuild 959
 MD5 fad406869474fc3a7cfde4203eb896fe syslinux-1.76.ebuild 760
 MD5 5c685d9bd473e15d95fd52707ff69cfa files/2.06-nasm.patch 1159
 MD5 26489361fe682baf353e4b7cef7bba16 files/digest-syslinux-1.76 65
-MD5 cec0b5961400b850b9a5e42fac2e8a73 files/digest-syslinux-2.05 66
-MD5 12b2f15ac9a150bd439145bca82fd320 files/digest-syslinux-2.06 66
-MD5 c1fedca0dc3d60aae3efd8edfe2f4e8c files/digest-syslinux-2.09 66
 MD5 cef56845517154743833aa8ced0d52a6 files/syslinux-2.06-nossp.patch 1535
 MD5 f38ec993dba486ddbaf4a50773db388e files/syslinux-2.09-nossp.patch 2257
 MD5 437dcea1ca8e2c9469874b045a9e76cb files/digest-syslinux-2.11 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4cvjroRuSHgZdywRAtJNAJ9+oBWxj1RilyZhYuZUrJfkBJkFtQCcD0v1
-B8ajrQqbFgSrESKR+5VzEYo=
-=rnQe
+iD8DBQFB4cxdroRuSHgZdywRAlaHAJ9K/igNYZzLOMt3ILukCM3Cn+VwjQCfROEr
+d3H0aKGCrl8lUQyXjSJ7UNE=
+=ZOGF
 -----END PGP SIGNATURE-----
