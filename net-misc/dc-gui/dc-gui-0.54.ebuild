@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Jeffry Molanus <Gila@home.nl>
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dc-gui/dc-gui-0.54.ebuild,v 1.2 2002/04/22 18:31:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dc-gui/dc-gui-0.54.ebuild,v 1.3 2002/04/25 06:26:48 mkennedy Exp $
 
 S=${WORKDIR}/${P/-/_}
 DESCRIPTION="GUI for DCTC"
@@ -11,22 +11,22 @@ HOMEPAGE="http://ac2i.tzo.com/dctc"
 
 DEPEND="virtual/glibc
 	=dev-libs/glib-1.2*
+	=gnome-base/gnome-1.4*
 	=sys-libs/db-3.2*
 	=x11-libs/gtk+-1.2*
 	>=net-misc/dctc-0.79.1
-	gnome? ( gnome-base/gnome )
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf
 
-	use gnome && myconf="--with-gnome" || myconf="--without-gnome"
 	use nls && myconf="${myconf} --enable-nls" || myconf="${myconf} --disable-nls"
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--mandir=/usr/share/man \
 		--host=${CHOST} \
+		--with-gnome \
 		${myconf} || die
 
 	emake || die
