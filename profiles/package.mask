@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3636 2005/02/17 10:13:40 hollow Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3637 2005/02/18 10:00:14 hattya Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1215,6 +1215,7 @@ net-misc/zebra
 # <hattya@gentoo.org> (05 Feb 2005)
 # development branch.
 =mail-client/sylpheed-1.9.1
+=mail-client/sylpheed-1.9.2
 
 # <robbat2@gentoo.org> (30 Nov 2003)
 # Need external testing
