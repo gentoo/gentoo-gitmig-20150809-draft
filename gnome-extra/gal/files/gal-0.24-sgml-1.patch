@@ -1,0 +1,53 @@
+--- gal-0.24/docs/gal-api.sgml	2001-01-12 07:25:25.000000000 +0000
++++ gal-0.24/docs/gal-api.sgml	2003-05-04 00:16:06.000000000 +0100
+@@ -148,7 +148,7 @@
+   </chapter>
+ 
+   <chapter id="e-text">
+-    <title>E-text<title>
++    <title>E-text</title>
+       &EText;
+       &ETextEventProcessor;
+       &ETextEventProcessorEmacsLike;
+@@ -156,12 +156,12 @@
+   </chapter>
+ 
+   <chapter id="e-font">
+-    <title>E-Font<title>
++    <title>E-Font</title>
+       &gal-e-font;
+   </chapter>
+   
+   <chapter id="view-configurationt">
+-    <title>View configuration<title>
++    <title>View configuration</title>
+       &GalViewFactoryEtable;
+       &GalDefineViewsDialog;
+       &GalView;
+@@ -173,7 +173,7 @@
+   </chapter>
+ 
+   <chapter id="combo-boxes">
+-    <title>Combo Boxes and associated utilities<title>
++    <title>Combo Boxes and associated utilities</title>
+     &GtkComboStack;
+     &GtkComboText;
+     &PixmapCombo;
+@@ -183,7 +183,7 @@
+   </chapter>
+   
+   <chapter id="utility-widgets">
+-    <title>Extended GNOME widgets and utilities<title>
++    <title>Extended GNOME widgets and utilities</title>
+       &ECanvas;
+       &ECanvasVbox;
+       &gal-e-canvas-utils;
+@@ -208,7 +208,7 @@
+   </chapter>
+   
+   <chapter id="cut-and-paste">
+-    <title>Cut and Paste code<title>
++    <title>Cut and Paste code</title>
+       &EHPaned;
+       &EVPaned;
+       &EPaned;
