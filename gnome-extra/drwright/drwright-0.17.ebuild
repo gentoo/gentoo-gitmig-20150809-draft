@@ -1,13 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.5 2004/07/03 18:38:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.6 2004/08/19 22:58:30 foser Exp $
 
 inherit gnome2 flag-o-matic gcc
 
 DESCRIPTION="A GNOME2 Applet that forces you to take regular breaks to prevent RSI."
 HOMEPAGE="http://www.imendio.com/projects/drwright/"
-
-[ "`gcc-version`" = "3.3" ] && append-flags -Wno-strict-aliasing
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,3 +23,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
+
+src_compile() {
+
+	[ "`gcc-version`" = "3.3" ] && append-flags -Wno-strict-aliasing
+
+	gnome2_src_compile
+
+}
+

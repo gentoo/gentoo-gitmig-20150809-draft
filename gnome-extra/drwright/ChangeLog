@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/drwright
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.6 2004/07/03 18:38:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.7 2004/08/19 22:58:30 foser Exp $
+
+  19 Aug 2004; foser <foser@gentoo.org> drwright-0.17.ebuild :
+  Fix QA issue (#48366)
 
   03 Jul 2004; Tom Martin <slarti@gentoo.org> drwright-0.17.ebuild:
   Added to ~amd64.
