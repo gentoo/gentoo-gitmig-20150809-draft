@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.7 2003/03/24 21:31:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.8 2003/03/24 22:07:22 method Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -184,12 +184,12 @@ src_unpack() {
 	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
 
 	# ProPolice Stack Smashing protection
-	epatch ${FILESDIR}/3.2/protector.patch
+	epatch ${FILESDIR}/3.2/protector.patch || die "propolice patch failed"
 	# The following patch enables protection by default.  We don't
 	# want this as it causes problems with things like the kernel
 	# (among others).
-	cp ${FILESDIR}/3.2/protector.c ${WORKDIR}/${P}/gcc/
-	cp ${FILESDIR}/3.2/protector.h ${WORKDIR}/${P}/gcc/
+	cp ${FILESDIR}/3.2/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
+	cp ${FILESDIR}/3.2/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 
 
 	# GCC bugfixes ...
