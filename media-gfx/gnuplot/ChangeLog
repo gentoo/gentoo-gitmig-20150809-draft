@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.27 2004/07/31 03:26:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.28 2004/08/07 19:44:50 ribosome Exp $
+
+*gnuplot-4.0-r1 (07 Aug 2004)
+
+  07 Aug 2004; Olivier Fisette <ribosome@gentoo.org> gnuplot-4.0-r1.ebuild:
+  Moved help and demo files to "/usr/share/gnuplot".
+  Added gnuplot tutorial.
+  Added documentation and files related to PostScript
+  creation. (Fixes bug #41729.)
+  Provided access to /dev/svga from inside the sandbox 
+  environment. (Fixes bug #41711.)
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> gnuplot-3.8j.ebuild:
   stable on ppc64, bug #57147
