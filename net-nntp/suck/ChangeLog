@@ -1,6 +1,6 @@
-# ChangeLog for net-news/suck
+# ChangeLog for net-nntp/suck
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/ChangeLog,v 1.1 2005/01/17 20:17:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/ChangeLog,v 1.2 2005/01/17 21:51:29 swegener Exp $
 
 *suck-4.3.2 (17 Jan 2005)
 

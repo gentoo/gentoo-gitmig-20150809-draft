@@ -1,6 +1,6 @@
-# ChangeLog for net-news/newspost
+# ChangeLog for net-nntp/newspost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/ChangeLog,v 1.1 2005/01/17 19:59:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/ChangeLog,v 1.2 2005/01/17 21:42:30 swegener Exp $
 
 *newspost-2.0 (17 Jan 2005)
 

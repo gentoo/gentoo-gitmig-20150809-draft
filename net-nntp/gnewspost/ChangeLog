@@ -1,6 +1,6 @@
-# ChangeLog for net-news/gnewspost
+# ChangeLog for net-nntp/gnewspost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/ChangeLog,v 1.2 2005/01/17 20:00:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/ChangeLog,v 1.3 2005/01/17 21:37:37 swegener Exp $
 
   17 Jan 2005; Sven Wegener <swegener@gentoo.org> gnewspost-0.6.ebuild:
   Dependency update. Moved net-news/newspost to net-nntp/newspost.

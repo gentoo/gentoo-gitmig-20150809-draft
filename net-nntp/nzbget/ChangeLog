@@ -1,6 +1,6 @@
-# ChangeLog for net-news/nzbget
+# ChangeLog for net-nntp/nzbget
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.1 2005/01/17 20:05:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.2 2005/01/17 21:46:09 swegener Exp $
 
 *nzbget-0.1.2 (17 Jan 2005)
 

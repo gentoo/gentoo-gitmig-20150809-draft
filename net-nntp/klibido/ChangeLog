@@ -1,6 +1,6 @@
-# ChangeLog for net-news/klibido
+# ChangeLog for net-nntp/klibido
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.1 2005/01/17 19:47:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.2 2005/01/17 21:39:08 swegener Exp $
 
 *klibido-0.2.0 (17 Jan 2005)
 

@@ -1,6 +1,6 @@
-# ChangeLog for net-news/xrn
+# ChangeLog for net-nntp/xrn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/ChangeLog,v 1.1 2005/01/17 20:26:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/ChangeLog,v 1.2 2005/01/17 21:56:01 swegener Exp $
 
 *xrn-9.02 (17 Jan 2005)
 
