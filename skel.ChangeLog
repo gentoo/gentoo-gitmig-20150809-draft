@@ -4,7 +4,7 @@
 
 *<PACKAGE_NAME>-<PACKAGE_VERSION>-<PACKAGE_RELEASE> (DD MMM YYYY)
 
-  01 Feb 2002; G.Bevin <gbevin@gentoo.org> skel.ChangeLog :
+  DD MMM YYYY; YOUR_NAME <YOUR_EMAIL> changed_file1, changed_file2:
 
   Initial import.
 
