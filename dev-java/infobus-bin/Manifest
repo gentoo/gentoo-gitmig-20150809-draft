@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e77349f7d75383179b2998754d0a6be6 infobus-bin-1.2.ebuild 1108
-MD5 f22e429c6c06f9c58c01affe02103cef ChangeLog 1063
+MD5 918db4b1e499f4db39533b942f381486 ChangeLog 1178
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9df765b3421ce6657ce0a31ed93fb97f infobus-bin-1.2.ebuild 1117
 MD5 15a231f78014048eb979c4e059965832 files/digest-infobus-bin-1.2 53
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVeN/rLF9B432nYRAuRPAJ47LRHdTs8CxkORRnBGl695J+g25QCgv1wh
-lXK5U+kyCypnTpH1XRdaltk=
-=I1p/
------END PGP SIGNATURE-----

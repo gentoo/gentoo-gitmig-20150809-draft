@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/plugspud/plugspud-0.4.5.20040917.ebuild,v 1.2 2004/09/18 16:37:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/plugspud/plugspud-0.4.5.20040917.ebuild,v 1.3 2004/10/20 08:19:19 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gruntspud.sourceforge.net/"
 SRC_URI="mirror://gentoo/plugspud-gentoo-cvs-20040917.tar.bz2 http://dev.gentoo.org/~axxo/distfiles/plugspud-gentoo-cvs-20040917.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.3
 		dev-java/ant

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdiffplugin/jdiffplugin-1.4.2.ebuild,v 1.1 2004/09/17 09:36:07 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdiffplugin/jdiffplugin-1.4.2.ebuild,v 1.2 2004/10/20 08:18:36 absinthe Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://plugins.jedit.org/plugins/?JDiffPlugin"
 SRC_URI="mirror://sourceforge/jedit-plugins/JDiffPlugin-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND=">=app-editors/jedit-4.2
 		dev-java/ant"
