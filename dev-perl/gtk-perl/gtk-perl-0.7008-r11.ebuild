@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r11.ebuild,v 1.4 2004/07/14 17:45:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r11.ebuild,v 1.5 2004/10/15 09:21:08 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -25,7 +25,7 @@ DEPEND="${DEPEND}
 mydoc="VERSIONS WARNING NOTES"
 
 use gnome || myconf="${myconf} --without-gnome --without-gnomeprint --without-applets"
-use opengl || mycong="${myconf} --without-gtkglarea"
+use opengl || myconf="${myconf} --without-gtkglarea"
 
 src_unpack() {
 
