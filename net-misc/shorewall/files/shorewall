@@ -1,0 +1,26 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	need net
+	provide firewall
+}
+
+start() {
+	ebegin "Starting firewall"
+	/sbin/shorewall start 1>/dev/null
+	eend $? 
+}
+
+stop() {
+	ebegin "Stopping firewall"
+	/sbin/shorewall stop 1>/dev/null
+	eend $?
+}
+
+restart() {
+	ebegin "Restarting firewall"
+	/sbin/shorewall restart
+	eend $?
+}
