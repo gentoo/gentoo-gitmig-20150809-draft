@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.3 2005/01/09 14:56:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.4 2005/01/14 18:20:26 kugelfang Exp $
 
 inherit eutils
 
@@ -28,10 +28,12 @@ src_compile() {
 	# added libtoolize, add "-I scripts" to aclocal, autoconf before econf
 	# all these changes are necessary on amd64
 	# Danny van Dyk (kugelfang@gentoo.org)
-	libtoolize -c -f --automake
-	aclocal -I scripts
-	automake --gnu --add-missing
-	autoconf
+	if use amd64; then
+		libtoolize -c -f --automake
+		aclocal -I scripts
+		automake --gnu --add-missing
+		autoconf
+	fi
 	econf ${myconf} || die
 	emake || die "emake failure"
 }
