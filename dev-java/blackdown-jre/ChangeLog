@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.35 2004/06/18 08:05:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.36 2004/06/21 19:00:03 karltk Exp $
+
+  21 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  blackdown-jre-1.4.2_rc1.ebuild: Added proper symlink to mozilla
+  plugin, thanks to Elie De Brauwer <elie@de-brauwer.be> and Andy Daniels
+  <danielsa@uwstout.edu>. Fixes #52876.
 
   18 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   blackdown-jre-1.4.1.ebuild: Regen'ed digest for 2.95.bin, fixes #53657.

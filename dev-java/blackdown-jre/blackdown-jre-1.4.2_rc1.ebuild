@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.8 2004/06/10 23:43:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.9 2004/06/21 19:00:03 karltk Exp $
 
 IUSE="doc"
 
@@ -104,7 +104,7 @@ src_install () {
 		ppc) platform="ppc" ;;
 		sparc*) platform="sparc" ;;
 	esac
-	inst_plugin /opt/${P}/jre/plugin/${platform}/mozilla/javaplugin_oji.so
+	inst_plugin /opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
 
 	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/jre/lib/font.properties
 
