@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 746ffdf1e2364ed5471502a3098a39a0 ChangeLog 9514
-MD5 e0756ec0db478f23e7a909f789199ac4 kdeartwork-3.2.2.ebuild 502
-MD5 2eae0880d6725acaf0724db1b8b1758a kdeartwork-3.1.5.ebuild 586
-MD5 3429e29e9686c04446a89ddd3861965f kdeartwork-3.2.1.ebuild 497
-MD5 5105a3c8349552cd642ede0ed75caded kdeartwork-3.3.0_alpha1.ebuild 476
-MD5 7d9b42e1ff04aa0e5161e009805f8fbd kdeartwork-3.2.3.ebuild 509
+MD5 4339938d95ac2de3bbcb67e02f969e33 kdeartwork-3.1.5.ebuild 578
+MD5 5d1847c4a8ad9313f69ae7ffbc3f300d kdeartwork-3.2.3.ebuild 503
+MD5 8ca410cf2ad980f70f163c70840e3630 kdeartwork-3.2.0.ebuild 492
+MD5 c80df9d421ac816b67918a45ce3a77ad kdeartwork-3.2.2.ebuild 499
+MD5 eb650126047ca9097c0c9a33c836417a kdeartwork-3.3.0_alpha1.ebuild 474
+MD5 bedd057f116dece7dbd1bb1b3862bb35 ChangeLog 9509
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 4156baaae305601de07f26f191dbc416 kdeartwork-3.2.0.ebuild 500
+MD5 d27dd0893ccd63a6c32821cace99b99a kdeartwork-3.2.1.ebuild 494
 MD5 4affe90f3e8d7a728eb0089811b613fc files/digest-kdeartwork-3.1.5 71
-MD5 b1917d58e026721bef996f7238f91fd0 files/digest-kdeartwork-3.2.2 71
 MD5 c34d3074ca608e62d2de9eba80a3cb2c files/digest-kdeartwork-3.2.0 71
-MD5 750b31061cf39ebc204bbc9b012da76a files/digest-kdeartwork-3.2.3 71
 MD5 ca4fa121a8a9bf75bddf426a2374fcc4 files/digest-kdeartwork-3.2.1 71
-MD5 874bc3899ae7794547a3757f584518d0 files/digest-kdeartwork-3.3.0_alpha1 72
+MD5 b1917d58e026721bef996f7238f91fd0 files/digest-kdeartwork-3.2.2 71
+MD5 750b31061cf39ebc204bbc9b012da76a files/digest-kdeartwork-3.2.3 71
 MD5 1579545755bc63505fd6c670f9e70bdc files/xsaver-conflicting-typedefs.diff 510
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzbmJHTu7gpaalycRAuE5AKDYgghGo092QxH9uACngLHWpTHm5ACcDagW
-jauNPpTblIaI8cyN+8w13B8=
-=P9tn
------END PGP SIGNATURE-----
+MD5 874bc3899ae7794547a3757f584518d0 files/digest-kdeartwork-3.3.0_alpha1 72

@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bcf7676c979861fdddf2c1c236beb3ce ChangeLog 10467
-MD5 3083ac5fede13f44a81490f67a3841a5 kdeadmin-3.2.2.ebuild 1043
-MD5 c4e85f16edf91d3c43d9aacf9a8dd212 kdeadmin-3.1.5.ebuild 1371
-MD5 732181640993bb7c586d7b0980223fe6 kdeadmin-3.2.3.ebuild 1050
-MD5 c590b7fbc55d5ae22fbe8c8dce68ecc5 kdeadmin-3.2.1.ebuild 1044
-MD5 41462e4c3d1d702012109a607c558fc4 kdeadmin-3.3.0_alpha1.ebuild 1023
+MD5 57f8c78987c11b45baf3c9fa24a5326b kdeadmin-3.2.0.ebuild 1039
+MD5 3df4431f173d74f5e39f0182445349a0 kdeadmin-3.2.2.ebuild 1040
+MD5 90a56afd40b85eebfa0274333c5bfb8d kdeadmin-3.3.0_alpha1.ebuild 1021
+MD5 7981c84295d870693947aaf53d973f85 kdeadmin-3.2.1.ebuild 1041
+MD5 8571a901f19eddc7aabceaa67dba1510 kdeadmin-3.1.5.ebuild 1363
+MD5 9fa6aadab0afddfe250b65beb1a375f3 kdeadmin-3.2.3.ebuild 1044
+MD5 0c37ae764aacdb447690a5213c8628ca ChangeLog 10462
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 946513821d39135234b40ee8ed426c81 kdeadmin-3.2.0.ebuild 1047
 MD5 89f969232ae263ab1480a42928ebf694 files/digest-kdeadmin-3.1.5 68
-MD5 5d0d459a05046ff68758318ca1cb4420 files/digest-kdeadmin-3.2.2 68
 MD5 40ca1bb54c0e19d62b6480615807544b files/digest-kdeadmin-3.2.0 68
-MD5 32fd62a326dd9a4724496ea209ebd263 files/digest-kdeadmin-3.2.3 68
 MD5 555fdf8e5232c1549aa935dca216a3bf files/digest-kdeadmin-3.2.1 68
+MD5 5d0d459a05046ff68758318ca1cb4420 files/digest-kdeadmin-3.2.2 68
+MD5 32fd62a326dd9a4724496ea209ebd263 files/digest-kdeadmin-3.2.3 68
 MD5 080f49b37d48c197ab8bd651f97ca719 files/digest-kdeadmin-3.3.0_alpha1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzeUSHTu7gpaalycRAg5aAKCSvwQeRyw5mCr+Ly3OKL/HcSINkgCgvv3r
-v702Um4iojL0H0Z8nhDjIKA=
-=1SMT
------END PGP SIGNATURE-----
