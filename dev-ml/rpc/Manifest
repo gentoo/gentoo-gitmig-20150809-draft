@@ -1,0 +1,5 @@
+MD5 c79db4e525104378a413d0d8cdca5fcf rpc-0.4.1.ebuild 1525
+MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
+MD5 5bc0121dd71d10d78b6c8e1558ac8e59 ChangeLog 454
+MD5 6c96519c2eaa540cbf4a847d694aad06 files/digest-rpc-0.4.1 61
+MD5 5ac175b0a62d4fb3064745c41e1eff02 files/ocamlrpcgen.1 1021

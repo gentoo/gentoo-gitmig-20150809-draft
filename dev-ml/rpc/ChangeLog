@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/rpc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/rpc/ChangeLog,v 1.1 2005/03/27 15:30:56 mattam Exp $
+
+*rpc-0.4.1 (27 Mar 2005)
+
+  27 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> +metadata.xml,
+  +files/ocamlrpcgen.1, +rpc-0.4.1.ebuild:
+  A Sun RPC implementation for ocaml. Thanks to Thomas de Grenier de Latour
+  <degrenier@easyconnect.fr> for initial ebuild.
+

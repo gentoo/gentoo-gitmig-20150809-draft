@@ -1,0 +1,42 @@
+.TH ocamlrpcgen 1 "2004"
+.SH NAME
+ocamlrpcgen \- Ocaml module generator for RPC message handling
+.SH SYNOPSIS
+.B ocamlrpcgen
+[\fIOPTION\fR] \fIfile.xdr\fR...
+.SH DESCRIPTION
+.B ocamlrpcgen
+is a command-line tool that generates O'Caml modules which greatly
+simplify the creation and invocation of remote procedures. It uses
+description files in the XDR format.
+.TP
+\fB\-aux\fR
+Generates file_aux.ml file
+.TP
+\fB\-clnt\fR
+Generates file_clnt.ml file
+.TP
+\fB\-srv\fR
+Generates file_srv.ml file
+.TP
+\fB\-int v\fR
+Set the default variant of the language mapping of int
+.TP
+\fB\-hyper v\fR
+Set the default variant of the language mapping of hyper
+.TP
+\fB\-cpp p\fR
+Call the command p as preprocessor
+.TP
+\fB\-D var=value\fR
+Define the preprocessor variable var
+.TP
+\fB\-U var\fR
+Undefine the preprocessor variable var
+.TP
+\fB\-help\fR, \fB\--help\fR
+Display the list of options
+.SH AUTHOR
+This manual page was written by Thomas Petazzoni
+<thomas.petazzoni@enix.org> for the Debian GNU/Linux system (but may
+be used by others).
