@@ -1,9 +1,12 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.9 2003/01/25 20:01:53 alain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.10 2003/02/02 21:50:06 jmorgan Exp $
 
 *tcsh-6.12-r1 (25 Jan 2003)
 
+  02 Feb 2003; Jack Morgan <jmorgan@gentoo.org> tcsh-6.12-r1.ebuild :
+  Changed ~sparc to sparc
+ 
   25 Jan 2003; Alain Penders <alain@gentoo.org> : Totally new default tcsh
   scripts.
  
@@ -11,8 +14,6 @@
 
   21 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version, closes bug
   #6406.
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *tcsh-6.11 (09 Jul 2002)
 
