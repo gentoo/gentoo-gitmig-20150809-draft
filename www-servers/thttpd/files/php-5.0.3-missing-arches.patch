@@ -1,0 +1,13 @@
+Silly php devs forgot about poor old ia64/s390 :(
+
+--- php-5.0.3/Zend/zend_strtod.c
++++ php-5.0.3/Zend/zend_strtod.c
+@@ -99,7 +99,7 @@
+     defined(__mips__) || defined(__ns32k__) || defined(__alpha__) || \
+     defined(__powerpc__) || defined(__ppc__) || defined(__m88k__) || \
+     defined(__hppa__) || defined(__x86_64__) || (defined(__arm__) && \
+-    defined(__VFP_FP__))
++    defined(__VFP_FP__)) || defined(__ia64__) || defined(__s390__)
+ #include <sys/types.h>
+ #if BYTE_ORDER == BIG_ENDIAN
+ #define IEEE_BIG_ENDIAN

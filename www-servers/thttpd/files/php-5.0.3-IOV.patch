@@ -1,0 +1,12 @@
+diff -u --recursive php-5.0.3-orig/sapi/thttpd/thttpd.c php-5.0.3/sapi/thttpd/thttpd.c
+--- php-5.0.3-orig/sapi/thttpd/thttpd.c	2005-03-27 17:25:59.491818008 +0100
++++ php-5.0.3/sapi/thttpd/thttpd.c	2005-03-27 17:26:36.943124544 +0100
+@@ -107,7 +107,7 @@
+ {
+ 	int n;
+ 
+-	assert(nvec <= IOV_MAX);
++	/* assert(nvec <= IOV_MAX); */
+ 
+ 	if (TG(sbuf).c == 0) {
+ 		PHP_SYS_CALL(n = writev(TG(hc)->conn_fd, vec, nvec););

@@ -2,7 +2,7 @@ MD5 a1f47f6df2e0465c19194579f3b8c943 ChangeLog 1947
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
 MD5 01cfdda0a52d777aa2c814dcf4ba9d95 thttpd-2.25b.ebuild 1188
 MD5 9638e3f16ce376f6259c3963fe78da43 thttpd-2.25b-r1.ebuild 1234
-MD5 28476b1f3d427e754067720238c3fdff thttpd-2.25b-r2.ebuild 2088
+MD5 3275e777a332a1525de88c1b458009c5 thttpd-2.25b-r2.ebuild 2088
 MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25b 64
 MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25b-r1 64
 MD5 6f77a5ae06c1e805c8ba4f18ef210040 files/digest-thttpd-2.25b-r2 126
