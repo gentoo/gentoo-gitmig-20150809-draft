@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/bonobo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.11 2003/02/12 06:48:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.12 2003/03/09 19:53:20 agriffis Exp $
 
   06 Feb 2003; Aron Griffis <agriffis@gentoo.org> bonobo-1.0.22.ebuild :
   Added ~alpha to KEYWORDS
@@ -9,6 +9,9 @@
   Added gdk-pixbuf dep (#13901)
 
 *bonobo-1.0.22 (23 Dec 2002)
+
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> bonobo-1.0.22.ebuild:
+  Mark stable on alpha
 
   26 Dec 2002; Jack Morgan <jmorgan@gentoo.org> bonobo-1.0.22.ebuild :
   Removed ~sparc64 keyword
