@@ -1,6 +1,8 @@
 # Add USE flags that don't work on Mac OS X here
 
 adabas
+# alsa will more than likely never compile on os x
+alsa
 birdstep
 cpdflib
 db2
