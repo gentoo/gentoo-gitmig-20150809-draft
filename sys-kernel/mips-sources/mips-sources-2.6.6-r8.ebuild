@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.4-r7.ebuild,v 1.1 2004/08/06 04:48:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.6-r8.ebuild,v 1.1 2004/08/11 09:48:22 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040311"
+CVSDATE="20040604"
 COBALTPATCHVER="1.4"
-SECPATCHVER="1.1"
-IP32DIFFDATE="20040229"
+SECPATCHVER="1.2"
+IP32DIFFDATE="20040402"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
@@ -22,9 +22,9 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 11 Mar 2004
-# 3) Patch to tweak arch/mips/Makefile to build proper kernels under binutils-2.15.x
-# 4) Iluxa's minimal O2 patchset
+# 2) linux-mips.org CVS snapshot diff from 04 Jun 2004
+# 3) Patch to fix the Swap issue in 2.6.5+ (Credit: Peter Horton <cobalt@colonel-panic.org>
+# 4) Iluxa's minimal O2 Patchset
 # 5) Security Fixes
 # 6) Patches for Cobalt support
 
@@ -66,11 +66,10 @@ src_unpack() {
 	# Update the vanilla sources with linux-mips CVS changes
 	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
-	# Binutils-2.14.90.0.8 and up does some magic with page alignment
-	# that prevents the kernel from booting.  This patch fixes it.
+	# Bug in 2.6.6 that triggers a kernel oops when swap is activated
 	echo -e ""
 	einfo ">>> Generic Patches"
-	epatch ${FILESDIR}/mipscvs-2.6.x-no-page-align.patch
+	epatch ${FILESDIR}/mipscvs-2.6.5-swapbug-fix.patch
 
 	# In order to use arcboot on IP32, the kernel entry address needs to be
 	# set to 0x98000000, not 0xa8000000.
@@ -87,18 +86,13 @@ src_unpack() {
 	# Security Fixes
 	echo -e ""
 	ebegin ">>> Applying Security Fixes"
-		epatch ${WORKDIR}/security/CAN-2004-0075-2.6-vicam_usb.patch
-		epatch ${WORKDIR}/security/CAN-2004-0109-2.6-iso9660.patch
-		epatch ${WORKDIR}/security/CAN-2004-0181-2.6-jfs_ext3.patch
-		epatch ${WORKDIR}/security/CAN-2004-0228-cpufreq.patch
-		epatch ${WORKDIR}/security/CAN-2004-0229-fb_copy_cmap.patch
-		epatch ${WORKDIR}/security/CAN-2004-0415-2.6.4-file_offset_pointers.patch
-		epatch ${WORKDIR}/security/CAN-2004-0427-2.6-do_fork.patch
+		epatch ${WORKDIR}/security/CAN-2004-0415-2.6.6-file_offset_pointers.patch
 		epatch ${WORKDIR}/security/CAN-2004-0495_0496-2.6-sparse.patch
 		epatch ${WORKDIR}/security/CAN-2004-0497-attr_gid.patch
 		epatch ${WORKDIR}/security/CAN-2004-0596-2.6-eql.patch
 		epatch ${WORKDIR}/security/CAN-2004-0626-death_packet.patch
 		epatch ${WORKDIR}/security/security-2.6-attr_check.patch
+		epatch ${WORKDIR}/security/security-2.6-proc_race.patch
 	eend
 
 	# Cobalt Patches
