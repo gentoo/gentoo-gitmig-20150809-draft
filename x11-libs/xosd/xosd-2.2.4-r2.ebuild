@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.4-r2.ebuild,v 1.2 2003/09/15 19:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.4-r2.ebuild,v 1.3 2004/01/30 06:01:28 raker Exp $
 
 IUSE="xmms"
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/x/xosd/${PN}_${PV}.orig.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ~sparc ~ppc ~alpha ~hppa"
 
 DEPEND="virtual/x11
 	xmms? ( media-sound/xmms

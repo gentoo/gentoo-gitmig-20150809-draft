@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.24 2003/12/10 18:28:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.25 2004/01/30 06:01:28 raker Exp $
+
+*xosd-2.2.5-r1 (29 Jan 2004)
+
+  29 Jan 2004; Nick Hadaway <raker@gentoo.org> xosd-2.2.5-r1.ebuild:
+  Added xinerama to IUSE.  Properly set configure options for the xmms
+  plugin.  Delete the "no" directory if created.  See bug #39800.
 
   10 Dec 2003; Heinrich Wendel <lanius@gentoo.org> xosd-2.2.5.ebuild:
   stable on x86
