@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.0_rc3.ebuild,v 1.1 2003/07/27 01:37:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.0.ebuild,v 1.1 2003/08/03 18:06:42 usata Exp $
 
 inherit elisp
 
