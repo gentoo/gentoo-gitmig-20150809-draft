@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/brutefir
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.1 2004/08/17 22:55:24 fvdpol Exp $
+
+  18 Aug 2004; <frank@gentoo.org> :
+  New ebuild for brutefir 1.0 submitted by Ed Wildgoose <gentoo@wildgooses.com>.
+  Closes bug #58554.
+
