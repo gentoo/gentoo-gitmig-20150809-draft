@@ -1,7 +1,0 @@
-MD5 59255b39681c3cbfec3fa2b78ea95755 nvrec-0.1_pre20030316.ebuild 2305
-MD5 b2658e6b994747221e1ad74ea0e57a50 ChangeLog 1839
-MD5 1f9c85db0d6c69303599cd2aa52055d5 metadata.xml 244
-MD5 fd5ab470c2dbe255f27e304b6e28f428 files/get_ffmpeg_functions.sh 127
-MD5 844b9f64f50b3675da6f5d08c092c15e files/20030217.patch 392
-MD5 cc26ae8979fa46f7c4e018ecfb751ebb files/digest-nvrec-0.1_pre20030316 130
-MD5 46ff5131bc5f5d08163ee1f80a8027d6 files/20030316.patch 900
