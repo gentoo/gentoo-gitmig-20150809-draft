@@ -1,0 +1,5 @@
+MD5 fd85252f02f5af45be1fe9d6c24cd2ae emacspeak-ss-1.9.1.ebuild 885
+MD5 e30672dade96ab7fcd76f62e268c92c8 ChangeLog 483
+MD5 e206f7cd655afe2644bb78cc9d15bd7f metadata.xml 166
+MD5 34acab277b2c64c19f4cdb5fa7f0b5e2 files/digest-emacspeak-ss-1.9.1 69
+MD5 ae296ee62005f5d9624f59cc47f78716 files/gentoo-apollo-fix.patch 1003
