@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-perl/Safe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.1 2002/12/19 14:58:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.2 2002/12/27 21:09:17 vapier Exp $
 
 *Safe-2.09 (19 Dec 2002)
 
