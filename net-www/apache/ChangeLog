@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.221 2004/07/04 17:46:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.222 2004/07/07 18:46:01 agriffis Exp $
+
+  07 Jul 2004; Aron Griffis <agriffis@gentoo.org> apache-2.0.49-r4.ebuild:
+  stable on ia64 #5541
 
   04 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> apache-2.0.49-r4.ebuild:
   Stable on ppc.
