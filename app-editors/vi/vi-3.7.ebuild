@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7.ebuild,v 1.3 2002/07/11 06:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7.ebuild,v 1.4 2002/07/16 02:43:19 owen Exp $
 
 MY_P=ex-020403
 S=${WORKDIR}/${MY_P}
@@ -12,6 +12,7 @@ LICENSE="Caldera"
 DEPEND="virtual/glibc sys-libs/ncurses"
 SLOT="0"
 RDEPEND=$DEPEND
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	make DESTDIR=/usr \

@@ -1,8 +1,14 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.3 2002/06/22 09:51:07 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.4 2002/07/16 02:43:19 owen Exp $
 
 vi-3.7-r1 (12 May 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
+
+
   12 May 2002; Michael Nazaroff <naz@gentoo.org> :
     Added a addpredict line to hopefully fix 3038.  Which is a sandbox violation
     that seems to occur when logged in via ssh and trying to merge vi.  The
