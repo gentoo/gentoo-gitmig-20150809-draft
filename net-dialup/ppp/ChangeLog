@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.30 2003/09/05 20:51:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.31 2003/09/06 11:11:27 seemant Exp $
+
+  06 Sep 2003; Seemant Kulleen <seemant@gentoo.org> files/net.ppp0:
+  surround username with quotes for the secrets file generation. This helps with
+  users who have funky characters in the usernames. Thanks to choenig__ in
+  #gentoo-bugs (Christian Hoenig <gentoo@christianhoenig.de>)
 
   06 Sep 2003; Martin Holzer <mholzer@gentoo.org> ppp-2.4.1-r14.ebuild:
   removing pppatm
