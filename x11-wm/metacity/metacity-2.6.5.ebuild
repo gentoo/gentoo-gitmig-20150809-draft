@@ -1,24 +1,22 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.1.ebuild,v 1.7 2003/11/08 17:08:42 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.5.ebuild,v 1.1 2004/02/17 16:32:23 foser Exp $
 
 inherit gnome2
 
 DESCRIPTION="Gnome default windowmanager"
 HOMEPAGE="http://www.gnome.org/"
+LICENSE="GPL-2"
 
 SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~alpha sparc ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
+IUSE=""
 
 # not parallel-safe; see bug #14405
 MAKEOPTS="${MAKEOPTS} -j1"
 
-# FIXME : more useflagging possible
-IUSE=""
-
 # sharp gtk dep is for a certain speed patch
-RDEPEND="
+RDEPEND="virtual/x11
 	>=x11-libs/pango-1.2
 	>=x11-libs/gtk+-2.2.0-r1
 	>=gnome-base/gconf-2
@@ -26,12 +24,14 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	>=dev-util/intltool-0.21"
+	>=dev-util/intltool-0.29"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README"
 
 src_unpack(){
+
 	unpack ${A}
+
 	# causes ICE on ppc w/ gcc (still)
 	cd ${S}
 	use ppc && (
@@ -40,4 +40,5 @@ src_unpack(){
 			patch -p0 < ${FILESDIR}/metacity-2.4.3-ppc-gcc3.2.diff || die "patch failed"
 		fi
 	)
+
 }
