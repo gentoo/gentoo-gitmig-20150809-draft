@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.6 2003/09/07 00:16:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.7 2003/09/11 01:26:29 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK-based LDAP client"
@@ -27,13 +27,13 @@ src_compile() {
 
 	use kerberos && myconf="${myconf} --with-kerberos-prefix=/usr"
 
-    econf $myconf || die "./configure failed"
+	econf $myconf || die "./configure failed"
 
-    emake || die "Compilation failed"
+	emake || die "Compilation failed"
 }
 
 src_install() {
-    einstall || die "Installation failed"
+	einstall || die "Installation failed"
 
-    dodoc ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README* TODO
+	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README* TODO
 }
