@@ -1,6 +1,5 @@
-diff -r -C2 sharutils-4.2.1.orig/doc/remsync.texi sharutils-4.2.1/doc/remsync.texi
-*** sharutils-4.2.1.orig/doc/remsync.texi	Thu Nov 30 18:15:37 1995
---- sharutils-4.2.1/doc/remsync.texi	Fri Aug  3 18:57:02 2001
+*** sharutils-4.2.1/doc/remsync.texi
+--- sharutils-4.2.1/doc/remsync.texi
 ***************
 *** 8,11 ****
 --- 8,15 ----
@@ -12,9 +11,8 @@ diff -r -C2 sharutils-4.2.1.orig/doc/remsync.texi sharutils-4.2.1/doc/remsync.te
 + @end direntry
   This file documents the @code{remsync} command and friends, which have
   the purpose of synchronizing remote directory trees using email.
-diff -r -C2 sharutils-4.2.1.orig/doc/sharutils.texi sharutils-4.2.1/doc/sharutils.texi
-*** sharutils-4.2.1.orig/doc/sharutils.texi	Fri Nov 24 21:42:52 1995
---- sharutils-4.2.1/doc/sharutils.texi	Fri Aug  3 18:29:43 2001
+*** sharutils-4.2.1/doc/sharutils.texi
+--- sharutils-4.2.1/doc/sharutils.texi
 ***************
 *** 16,31 ****
   
@@ -41,8 +39,8 @@ diff -r -C2 sharutils-4.2.1.orig/doc/sharutils.texi sharutils-4.2.1/doc/sharutil
 ! @end direntry
   @end ifinfo
   
---- sharutils-4.2.1/src/uudecode.c.orig Sat Apr 13 01:26:31 2002
-+++ sharutils-4.2.1/src/uudecode.c      Sat Apr 13 01:30:32 2002
+--- sharutils-4.2.1/src/uudecode.c
++++ sharutils-4.2.1/src/uudecode.c
 @@ -81,6 +81,9 @@
  /* Single character decode.  */
  #define        DEC(Char) (((Char) - ' ') & 077)
@@ -87,19 +85,4 @@ diff -r -C2 sharutils-4.2.1.orig/doc/sharutils.texi sharutils-4.2.1/doc/sharutil
    if (strcmp (outname, "/dev/stdout") != 0 && strcmp (outname, "-") != 0
 
 
-
---- sharutils-4.2.1/src/mailshar.in.orig        Fri May 11 21:45:29 2001
-+++ sharutils-4.2.1/src/mailshar.in     Fri May 11 21:50:40 2001
-@@ -33,7 +33,11 @@
- If none of -MTBzZ are given, -z is automatically selected if *none*
- of the FILEs have an .arc, .exz, .gif, .z, .gz, .Z, .zip or .zoo suffix."
-
--temp=/usr/tmp/$$.shar
-+temp=`mktemp -q /tmp/$0.XXXXXX`
-+if [ $? -ne 0 ]; then
-+    echo "$0: Can't create temp file, exiting..."
-+    exit 1
-+fi
-
- ### Decode the options.
 
