@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.5 2004/04/06 03:19:45 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.6 2004/04/19 15:05:31 dragonheart Exp $
+
+  20 Apr 2004; Daniel Black <dragonheart@gentoo.org> ppmd-9.1.ebuild:
+  QA - removed runtime dependance on automake, autoconf and sed
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> ppmd-9.1.ebuild:
   Stable on hppa
