@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.5.ebuild,v 1.1 2003/12/12 22:03:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.5.ebuild,v 1.2 2003/12/12 22:04:59 vapier Exp $
 
 inherit games eutils
 
@@ -15,8 +15,8 @@ KEYWORDS="x86"
 RDEPEND="virtual/x11
 	=x11-libs/gtk+-1*
 	|| (
-		>=games-emulation/ps2emu-cddvdlinuz-0.3
-		>=games-emulation/ps2emu-cdvdiso-0.3
+		>=games-emulation/ps2emu-cddvdlinuz-0.3-r1
+		>=games-emulation/ps2emu-cdvdiso-0.3-r1
 	)
 	>=games-emulation/ps2emu-gssoft-0.61
 	>=games-emulation/ps2emu-padxwin-0.5
