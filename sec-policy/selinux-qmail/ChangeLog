@@ -1,0 +1,11 @@
+# ChangeLog for sec-policy/selinux-qmail
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-qmail/ChangeLog,v 1.1 2004/02/05 20:59:20 pebenito Exp $
+
+*selinux-qmail-20040205 (05 Feb 2004)
+
+  05 Feb 2004; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
+  selinux-qmail-20040205.ebuild:
+  Initial commit. Submitted by Petre Rodan. This still needs enhancements to use
+  serialmail and qmail-pop3.
+
