@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.30 2003/06/29 05:26:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.31 2003/06/30 01:26:19 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -15,6 +15,9 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup
 
+DESCRIPTION="Based on the ${ECLASS} eclass"
+IUSE="dedicated"
+
 export GAMES_PREFIX="/usr/games"
 export GAMES_PREFIX_OPT="/opt"
 export GAMES_DATADIR="/usr/share/games"
@@ -27,6 +30,7 @@ export GAMES_ENVD="90games"
 # if you want to use a different user/group than games.games,
 # just add these two variables to your environment (aka /etc/profile)
 export GAMES_USER="${GAMES_USER:-games}"
+export GAMES_USER_DED="${GAMES_USER_DED:-games-ded}"
 export GAMES_GROUP="${GAMES_GROUP:-games}"
 
 egamesconf() {
