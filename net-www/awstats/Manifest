@@ -1,5 +1,5 @@
-MD5 430b9583acf9d3cd9b996ae67f29b6ae ChangeLog 771
+MD5 ede0017e263ff4d3928bedd1a614b1b9 ChangeLog 847
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
-MD5 3423b223217d0f5ab9c2b238a4465ca7 awstats-6.1.ebuild 4034
+MD5 08d9eb3c34bed430c19dcf3a20fb77f8 awstats-6.1.ebuild 4023
 MD5 2e2bdf14564309eeb8366a8b6b65b54c files/digest-awstats-6.1 60
 MD5 10127a480be4fd2c2eb40cbe88f10ad0 files/awstats-6.1-r1.diff 564
