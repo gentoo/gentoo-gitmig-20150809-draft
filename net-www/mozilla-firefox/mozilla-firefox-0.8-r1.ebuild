@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r1.ebuild,v 1.1 2004/03/07 17:24:51 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r1.ebuild,v 1.2 2004/03/16 06:26:56 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -88,7 +88,7 @@ src_compile() {
 		--disable-ldap \
 		--disable-toolkit-qt \
 		--disable-toolkit-xlib \
-		--enable-extensions=default,-inspector,-irc,-venkman,-content-packs,-help"
+		--enable-extensions=default,-irc,-venkman,-content-packs,-help"
 
 	if [ -n "`use gtk2`" ] ; then
 		myconf="${myconf} --enable-toolkit-gtk2 \
