@@ -1,8 +1,0 @@
-# /etc/fstab: static file system information.
-#
-# <fs>          <mountpoint>    <type>  <opts>      		<dump/pass>
-/dev/#ROOT#     /               reiserfs defaults    		1 1
-/dev/#SWAP#	none            swap    sw          		0 0
-proc            /proc           proc    defaults    		0 0
-/dev/cdrom	/mnt/cdrom	iso9660 noauto,ro   		0 2
-none		/dev/pts	devpts	mode=620		0 0
