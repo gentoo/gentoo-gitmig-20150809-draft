@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.10 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.11 2004/04/20 01:24:52 mr_bones_ Exp $
+
+  19 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  libxklavier-1.02.ebuild:
+  use flag update usage; tidy
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libxklavier-1.00.ebuild,
   libxklavier-1.02.ebuild:
