@@ -144,8 +144,9 @@ sys-apps/mkisofs
 #bad versions:
 =sys-apps/portage-2.0.14
 =sys-apps/portage-2.0.15
-#versions for testing:
 =sys-apps/portage-2.0.16
+#versions for testing:
+=sys-apps/portage-2.0.17
 
 # lamer@gentoo.org (15 Jul 2002)
 # Needs socks testing
