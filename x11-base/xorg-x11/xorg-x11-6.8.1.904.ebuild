@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.904.ebuild,v 1.16 2005/02/10 06:45:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.904.ebuild,v 1.17 2005/02/11 01:00:38 eradicator Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -37,7 +37,7 @@
 #			ebuild functions, no direct code, no functions of more than 60 lines
 #		Generalize any functions that make sense to generalize (i.e., anything
 #			that might realistically see use elsewhere, or repetitively here)
-inherit eutils flag-o-matic toolchain-funcs x11 linux-info
+inherit eutils flag-o-matic toolchain-funcs x11 linux-info multilib
 
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
@@ -209,11 +209,6 @@ src_install() {
 	fi
 
 	etc_files_install
-
-	# We move libGLU to /usr/lib now
-	if use opengl; then
-		dosym libGLU.so.1.3 /usr/$(get_libdir)/libMesaGLU.so
-	fi
 
 	if use opengl; then
 		dynamic_libgl_install
@@ -443,7 +438,7 @@ setup_multilib() {
 	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
 	# created by the emul lib ebuild in order for adobe acrobat, staroffice,
 	# and a few other apps to work.
-	if [ -z "${MULTILIB_ABIS}" ]; then
+	if ! has_multilib_profile; then
 		use amd64 && get_libdir_override lib64
 		# lib32 isnt a supported configuration (yet?)
 		[ "$(get_libdir)" == "lib32" ] && get_libdir_override lib
@@ -1101,6 +1096,16 @@ libtool_archive_install() {
 		# (#67729) Needs to be lib, not $(get_libdir)
 		doins ${FILES_DIR}/lib/*.la
 	fi
+
+	fix_libtool_libdir_paths "$(find ${D} -name *.la)"
+}
+
+fix_libtool_libdir_paths() {
+	local dirpath
+	for archive in ${*} ; do
+		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
+		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
+	done
 }
 
 compose_files_install() {
