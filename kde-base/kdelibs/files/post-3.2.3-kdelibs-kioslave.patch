@@ -1,0 +1,18 @@
+diff -b -p -u -r1.192.2.3 -r1.192.2.4
+--- kioslave/ftp/ftp.cc	15 Feb 2004 21:15:27 -0000	1.192.2.3
++++ kioslave/ftp/ftp.cc	26 Dec 2004 00:31:31 -0000	1.192.2.4
+@@ -652,6 +652,14 @@ bool Ftp::ftpSendCmd( const QCString& cm
+ {
+   assert( sControl > 0 );
+ 
++  if ( cmd.find( '\r' ) != -1 || cmd.find( '\n' ) != -1)
++  {
++    kdWarning(7102) << "Invalid command received (contains CR or LF): "
++                    << cmd.data() << endl;
++    error( ERR_UNSUPPORTED_ACTION, m_host );
++    return false;
++  }
++
+   QCString buf = cmd;
+   buf += "\r\n";
+ 
