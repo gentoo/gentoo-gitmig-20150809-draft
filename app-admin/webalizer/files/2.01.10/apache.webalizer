@@ -1,0 +1,15 @@
+#
+# This is the config snippet for Webalizer
+#
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/files/2.01.10/apache.webalizer,v 1.1 2003/11/02 22:32:59 tantive Exp $
+
+Alias /webalizer "/var/www/webalizer"
+
+<Directory "/var/www/webalizer">
+  Options None
+  AllowOverride None
+  Order allow,deny
+  Allow from all
+</Directory>
+
+
