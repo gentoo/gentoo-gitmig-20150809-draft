@@ -25,7 +25,7 @@ virtual/inetd		sys-apps/xinetd
 virtual/jdk	     dev-java/ibm-jdk-bin
 virtual/jre	     dev-java/ibm-jre-bin
 virtual/kernel	  sys-kernel/linux-headers
-virtual/krb5		app-crypt/heimdal
+virtual/krb5		app-crypt/mit-krb5
 virtual/linux-sources   sys-kernel/ppc-sources
 virtual/logger		app-admin/sysklogd
 virtual/lpr	     net-print/cups

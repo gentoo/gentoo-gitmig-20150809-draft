@@ -29,7 +29,7 @@ virtual/php             dev-php/mod_php
 virtual/textbrowser		net-www/links
 virtual/mda				net-mail/procmail
 virtual/xft				x11-base/xorg-x11
-virtual/krb5			app-crypt/heimdal
+virtual/krb5			app-crypt/mit-krb5
 virtual/bootloader		sys-boot/grub-static
 virtual/editor			app-editors/nano
 virtual/jack			media-sound/jack-audio-connection-kit
