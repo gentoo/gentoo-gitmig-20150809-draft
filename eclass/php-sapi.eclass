@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.53 2005/01/13 12:08:39 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.54 2005/01/22 02:31:59 trapni Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -275,6 +275,27 @@ php-sapi_src_unpack() {
 }
 
 
+# this function shall maybe go into flag-o-matic.eclass
+lfs-flags() {
+	echo -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+}
+
+# returns true, if LFS is supported (and supposed to be bugfree ;) by current system
+supports-lfs() {
+	# for some reason (I do not know who wrote this) we do not want LFS on glibc-2.2
+	# maybe it's broken then
+
+	has_version '>=sys-libs/glibc-2.3*' && return 0
+	has_version '=sys-libs/glibc-2.2*'  && return 1
+	return 0
+}
+
+set_filter_flags() {
+	CFLAGS="${CFLAGS/  / }"
+
+	supports-lfs && append-lfs-flags || filter-lfs-flags
+}
+
 php-sapi_src_compile() {
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
 
@@ -493,13 +514,14 @@ php-sapi_src_compile() {
 
 	php-sapi_is_providerbuild || myconf="${myconf} --without-pear"
 
-# 	# DISABLED filter-flags below, since now we activiely intend to support LFS
-# 	# on Apache httpd and related modules (trapni@gentoo.org), Jan 13 2005
-#	#fixes bug #24373 
-#	filter-flags "-D_FILE_OFFSET_BITS=64"
-#	filter-flags "-D_FILE_OFFSET_BITS=32"
-#	filter-flags "-D_LARGEFILE_SOURCE=1"
-#	filter-flags "-D_LARGEFILE_SOURCE"
+	if ! supports-lfs
+	then
+		#shall still fix bug #24373
+		filter-flags "-D_FILE_OFFSET_BITS=64"
+		filter-flags "-D_FILE_OFFSET_BITS=32"
+		filter-flags "-D_LARGEFILE_SOURCE=1"
+		filter-flags "-D_LARGEFILE_SOURCE"
+	fi
 
 	#fixes bug #14067
 	# changed order to run it in reverse for bug #32022 and #12021 
