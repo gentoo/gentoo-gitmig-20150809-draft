@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.1 2003/10/14 04:03:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.2 2003/12/29 05:32:36 vapier Exp $
 
 inherit games eutils
 
@@ -13,11 +13,13 @@ SRC_URI="mirror://sourceforge/doomlegacy/legacy_${PV/./}_src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE="sdl"
 
 DEPEND="x86? ( >=dev-lang/nasm-0.98 )
 	>=sys-apps/sed-4
 	virtual/opengl
-	virtual/x11"
+	virtual/x11
+	sdl? ( media-libs/libsdl media-libs/sdl-mixer )"
 
 S=${WORKDIR}/legacy_${PV//.}_src
 
@@ -47,12 +49,15 @@ src_compile() {
 	# this is ugly but it's late (here) and it works
 	local useasm=
 	[ `use x86` ] && useasm="USEASM=1"
+	local usesdl=
+	[ `use sdl` ] && usesdl="SDL=1"
 	local redosnd=0
 	make \
 		EXTRAOPTS="${CFLAGS}" \
 		LINUX=1 \
 		X=1 \
 		${useasm} \
+		${usesdl} \
 		|| redosnd=1
 	if [ ${redosnd} -eq 1 ] ; then
 		cd linux_x/sndserv
@@ -65,6 +70,7 @@ src_compile() {
 		LINUX=1 \
 		X=1 \
 		${useasm} \
+		${usesdl} \
 		|| die "build failed"
 }
 
@@ -73,6 +79,7 @@ src_install() {
 		linux_x/musserv/linux/musserver \
 		linux_x/sndserv/linux/llsndserv \
 		${WORKDIR}/bin/llxdoom
+	use sdl && dogamesbin ${WORKDIR}/bin/lsdldoom
 	exeinto ${GAMES_LIBDIR}/${PN}
 	doexe ${WORKDIR}/bin/r_opengl.so
 
