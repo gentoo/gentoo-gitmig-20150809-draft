@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.2 2002/08/06 01:55:21 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.3 2002/08/06 14:33:29 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="BIND - Name Server"
@@ -13,22 +13,22 @@ SLOT="0"
 
 DEPEND="sys-apps/groff
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
-	
+
 RDEPEND="${DEPEND}"
 
-src_compile() {                           
+src_compile() {
 	local myconf
 
 	use ssl && myconf="${myconf} --with-openssl"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
+		--prefix=/usr \ 
+		--host=${CHOST} \ 
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--enable-threads \
-		--with-libtool \
+		--with-libtool \ 
 		${myconf} || die "failed to configure bind"
 
 	make || die "failed to compile bind"
@@ -40,7 +40,8 @@ src_install() {
 	for x in `grep -l -d recurse -e '/etc/named.conf' -e '/etc/rndc.conf' -e '/etc/rndc.key' ${D}/usr/man`; do
 		cp ${x} ${x}.orig
 		sed -e 's:/etc/named.conf:/etc/bind/named.conf:g' \
-			-e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' ${x}.orig > ${x}
+			-e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
+			-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' ${x}.orig > ${x}
 		rm ${x}.orig
 	done
 	
@@ -90,29 +91,29 @@ pkg_postinst() {
 pkg_config() {
 	# chroot concept contributed by j2ee (kevin@aptbasilicata.it)
 
-	mkdir -p /chroot/dns/dev /chroot/dns/etc /chroot/dns/var /chroot/dns/var/run/named
+	mkdir -p /chroot/{dns/{dev,etc,var/run/named}}
 	chown -R named:named /chroot/dns/var/run/named
 	cp -R /etc/bind /chroot/dns/etc/
 	cp /etc/localtime /chroot/dns/etc/localtime
 	chown named:named /chroot/dns/etc/bind/rndc.key
 	cp -R /var/bind /chroot/dns/var/
 	mknod /chroot/dns/dev/zero c 1 5
-	chmod 666 /chroot/dns/dev/zero
 	mknod /chroot/dns/dev/random c 1 8
-	chmod 666 /chroot/dns/dev/random
+	chmod 666 /chroot/dns/dev/{random,zero}
 	cp -a /dev/log /chroot/dns/dev/log
 
-	# Maybe do a `chattr +i etc etc/localtime var` here?  What about a non-ext2 fs?
-	
-	chmod 700 /chroot
+	chmod 700 /{chroot,chroot/dns}
 	chown named:named /chroot/dns
-	chmod 700 /chroot/dns
 
 	cp /etc/conf.d/named /etc/conf.d/named.orig
 	sed -e 's:^#CHROOT="/chroot/dns"$:CHROOT="/chroot/dns":' \
 		/etc/conf.d/named.orig > /etc/conf.d/named
 	rm -f /etc/conf.d/named.orig
 
-	einfo "Add the following to your root .bashrc or .bash_profile:"
-	einfo "alias rndc='rndc -k /chroot/dns/etc/bind/rndc.key'"
+	einfo "Check your config files in /chroot/dns"
+	einfo "Add the following to your root .bashrc or .bash_profile: "
+	einfo "   alias rndc='rndc -k /chroot/dns/etc/bind/rndc.key'"
+	einfo "Then do the following: "
+	einfo "   source /root/.bashrc or .bash_profile"
+	echo
 }
