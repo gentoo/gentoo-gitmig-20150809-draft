@@ -16,7 +16,7 @@ sys-apps/console-tools
 sys-apps/cpio
 sys-apps/dcron
 sys-apps/debianutils
-#sys-apps/devfsd
+sys-apps/devfsd
 sys-apps/diffutils
 sys-apps/e2fsprogs
 sys-apps/ed
