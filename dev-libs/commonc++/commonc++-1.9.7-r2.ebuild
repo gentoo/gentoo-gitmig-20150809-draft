@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.13 2004/07/14 14:10:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.14 2004/08/21 00:43:49 mr_bones_ Exp $
 
 inherit eutils
 
-S=${WORKDIR}/CommonC++-1.9.7
-DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
-threading, sockets, file access, daemons, persistence, serial I/O, XML parsing,\
-and system services"
-SRC_URI="mirror://gnu/commonc++/${P}.tar.gz"
+DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for threading, sockets, file access, daemons, persistence, serial I/O, XML parsing, and system services"
 HOMEPAGE="http://www.gnu.org/software/commonc++/"
+SRC_URI="mirror://gnu/commonc++/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="sys-libs/zlib
 	dev-libs/libxml2"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
-IUSE=""
+S="${WORKDIR}/CommonC++-1.9.7"
 
 src_unpack() {
 	unpack ${A}
