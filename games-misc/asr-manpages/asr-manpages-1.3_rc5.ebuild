@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/asr-manpages-1.3_rc5.ebuild,v 1.3 2004/03/28 06:28:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/asr-manpages-1.3_rc5.ebuild,v 1.4 2004/03/31 22:33:34 mr_bones_ Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_R="5"
 MY_P="${PN}_${PV/_rc5/}"
 DESCRIPTION="set of humorous manual pages developed on alt.sysadmin.recovery"
 HOMEPAGE="http://debian.org/"
-SRC_URI="http://ftp.debian.org/debian/pool/main/a/asr-manpages/${MY_P}.orig.tar.gz
+SRC_URI="mirror://debian/pool/main/a/asr-manpages/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/a/asr-manpages/${MY_P}-${MY_R}.diff.gz"
 
 LICENSE="as-is"
