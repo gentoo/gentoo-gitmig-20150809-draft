@@ -4,6 +4,7 @@
 #
 DESCRIPTION="data for discover. list of pci ids. pnp ids etc."
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/d/discover-data/${PN}_${PV}-1.tar.gz"
+HOMEPAGE="http://hackers.progeny.com/discover/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"

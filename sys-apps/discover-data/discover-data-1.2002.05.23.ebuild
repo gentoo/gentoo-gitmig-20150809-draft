@@ -7,6 +7,7 @@
 DESCRIPTION="data for discover. list of pci ids. pnp ids etc."
 
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/d/discover-data/discover-data_1.2002.05.23-1.tar.gz"
+HOMEPAGE="http://hackers.progeny.com/discover/"
 
 LICENSE="GPL"
 SLOT="1"
