@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.189 2005/03/18 23:08:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.190 2005/03/22 16:09:54 matsuu Exp $
+
+  23 Mar 2005; MATSUU Takuto <matsuu@gentoo.org> postgresql-8.0.1-r2.ebuild:
+  filter-flags -feliminate-dwarf2-dups, #86878
 
 *postgresql-8.0.1-r2 (19 Mar 2005)
 

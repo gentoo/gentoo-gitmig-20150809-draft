@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.1-r2.ebuild,v 1.1 2005/03/18 23:08:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.1-r2.ebuild,v 1.2 2005/03/22 16:09:54 matsuu Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -70,7 +70,7 @@ src_unpack() {
 }
 
 src_compile() {
-	filter-flags -ffast-math
+	filter-flags -ffast-math -feliminate-dwarf2-dups
 
 	local myconf
 	use tcltk && myconf="--with-tcl"
