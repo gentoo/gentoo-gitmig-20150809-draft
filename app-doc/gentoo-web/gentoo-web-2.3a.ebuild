@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.3 2002/07/03 15:52:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.4 2002/07/04 05:05:58 drobbins Exp $
  
  
 S=${WORKDIR}/gentoo-src/gentoo-web
@@ -10,33 +10,39 @@ DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
 RDEPEND="virtual/python dev-libs/libxslt"
-WEBROOT=/www/virtual/www.gentoo.org/htdocs
 
 src_unpack() {
+	cd ${WORKDIR}/${P}
+	
 	local myhost
 	myhost=`hostname`
 	if [ "$myhost" = "laptop.kicks-ass.net" ]
 	then
-		export GENTOO_SRCDIR=/home/meekrob/gentoo-src
-		WEBROOT=/home/httpd/htdocs
 		echo -e "\e[32;1mMEEKROB detected.\e[0m"
-		echo "Setting GENTOO_SRCDIR to $GENTOO_SRCDIR"
-		echo "Setting WEBROOT to $WEBROOT"
+		GENTOO_SRCDIR=/home/meekrob/gentoo-src
+		WEBROOT=/home/httpd/htdocs
+	elif [ "$myhost" = "inventor.gentoo.org" ]
+	then
+		echo -e "\e[32;1mDROBBINS detected.\e[0m"
+		GENTOO_SRCDIR=/home/drobbins/gentoo-src
+		WEBROOT=/home/httpd/htdocs
+	elif [ "$myhost" = "chiba.3jane.net" ]
+	then
+		echo -e "\e[32;1mCHIBA detected.\e[0m"
+		cvs -d /home/cvsroot co gentoo-src
+		WEBROOT=/www/virtual/www.gentoo.org/htdocs
 	fi
+
+	echo "Setting GENTOO_SRCDIR to $GENTOO_SRCDIR"
+	echo "Setting WEBROOT to $WEBROOT"
+		
 	if [ "$MAINTAINER" != "yes" ]
 	then
 		echo "This will zap stuff in ${WEBROOT}."
 		echo "Beware -- maintainers only."
 	fi
-	cd ${WORKDIR}/${P}
-	if [ "$myhost" = "inventor.gentoo.org" ]
-	then
-		echo -e "\e[32;1mCHIBA detected.\e[0m"
-		ln -s /home/drobbins/gentoo-src gentoo-src
-	elif [ "$myhost" = "chiba.3jane.net" ]
-	then
-		cvs -d /home/cvsroot co gentoo-src
-	elif [ -n "$GENTOO_SRCDIR" ]
+	
+	if [ -n "$GENTOO_SRCDIR" ]
 	then
 		ln -s ${GENTOO_SRCDIR} gentoo-src || die
 	else
