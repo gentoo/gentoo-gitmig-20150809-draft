@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkennedy@gentoo.org> (01 Oct 2003)
+# deprecated in favour of dev-lisp/cmucl (source package)
+dev-lisp/cmucl-bin
+
 # <usata@gentoo.org> (30 Sep 2003)
 # Testing needed, beta version.
 =app-i18n/canna-3.7*
