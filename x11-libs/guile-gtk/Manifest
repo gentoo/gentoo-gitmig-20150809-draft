@@ -1,6 +1,6 @@
 MD5 c5494537dc87d60f344ef1630ab3902d guile-gtk-0.19.ebuild 777
 MD5 a6eaaf9418cd44eb512c29fdaa976605 guile-gtk-1.2.0.31.ebuild 887
-MD5 172ba77f6371d0374cdf1d2a7c5ef10c guile-gtk-0.19-r1.ebuild 776
+MD5 b0be1380fc00e88fbc054d1bec6d2dda guile-gtk-0.19-r1.ebuild 751
 MD5 9453be5cd40a2c2b1aa3c7e699b78edc ChangeLog 1043
 MD5 a9180c05c39b2c45beaf67462ce81fad files/digest-guile-gtk-0.19 66
 MD5 56c2eb09ecb192e29a3dcf4ae7f397cb files/guile-gtk-0.19-Makefile.in.patch 556
