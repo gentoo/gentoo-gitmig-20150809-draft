@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.30 2004/05/06 14:07:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.31 2004/05/23 03:06:57 weeve Exp $
+
+  22 May 2004; Jason Wever <weeve@gentoo.org> quanta-3.2.2.ebuild:
+  Stable on sparc.
 
 *quanta-3.3_pre20040506 (06 May 2004)
 
