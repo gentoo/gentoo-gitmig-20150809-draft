@@ -1,7 +1,16 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.8 2003/06/09 13:24:17 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.9 2003/06/09 22:39:55 absinthe Exp $
 
+  09 Jun 2003; Dylan Carlson <absinthe@gentoo.org> idesk-0.3.5-r2.ebuild,
+  files/idesk.1, files/ideskrc.5:
+  DAMN IT, BRAD.  I wish I would have seen that a few hours ago.
+
+  *sigh* ... well, after wasting time creating manpages for 0.3.5 and a website,
+  I'm posting them anyway. The new website for 0.5.5 is focused on the new 
+  version -- so my webpage is still relevant, particularly for hosting the
+  click patch and man pages.
+  
 *idesk-0.5.5 (09 Jun 2003)
 
   09 Jun 2003; Brad Cowan <bcowan@gentoo.org> idesk-0.5.5.ebuild:

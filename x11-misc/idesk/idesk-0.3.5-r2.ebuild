@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2              
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.3.5-r2.ebuild,v 1.1 2003/06/09 07:07:33 absinthe Exp $                                                                    
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.3.5-r2.ebuild,v 1.2 2003/06/09 22:39:55 absinthe Exp $                                                                    
 DESCRIPTION="Utility to place icons on the root window"                         
                                                                                 
-HOMEPAGE="http://linuxhelp.hn.org/idesk.php"                           
-SRC_URI="http://linuxhelp.hn.org/${P}.tar.gz"                  
-                                                                                
+HOMEPAGE="http://cvs.gentoo.org/~absinthe/idesk/index.html"
+SRC_URI="http://cvs.gentoo.org/~absinthe/idesk/${P}.tar.gz"                  
 LICENSE="BSD"                                                                   
 SLOT="0"                                                                        
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
                                                                                 
 DEPEND=">media-libs/imlib-1.9.14
 	virtual/x11
@@ -36,6 +35,7 @@ src_install() {
 	exeinto /usr/bin
 	doexe idesk	                                  
 	dodoc README
+	doman ${FILESDIR}/idesk.1 ${FILESDIR}/ideskrc.5
 }                                                                               
 
 pkg_postinst() {
