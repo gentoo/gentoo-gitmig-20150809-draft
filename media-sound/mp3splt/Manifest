@@ -1,6 +1,18 @@
-MD5 61b2b19467bd653e911750704ca175cf ChangeLog 1145
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d276820a5838df925bae136666fc25c2 ChangeLog 1270
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 f755f435e58a6ce93dae23484bf9b0c9 mp3splt-1.9.ebuild 622
 MD5 fba4adeaee07a29531ebbbef5d465598 mp3splt-2.0.ebuild 659
+MD5 764d33c28c0efbcd9ff0d5eb516a027f mp3splt-2.1.ebuild 780
 MD5 ec72cb8362f4c7c6639a753caae578c5 files/digest-mp3splt-1.9 67
 MD5 d36042050af0b92de170e23cd2240e19 files/digest-mp3splt-2.0 67
+MD5 cad024d0f5e134b2da7e63f728f73cdd files/digest-mp3splt-2.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoQvbArHZZzCEUG0RAn2kAJ4x4mT6H4RphdwnsFpeV1EKMA6hLQCghFEp
+xDcTbr4oR/HYz+ksU8R1nl8=
+=E3vw
+-----END PGP SIGNATURE-----
