@@ -1,6 +1,20 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.6 2002/07/26 20:03:47 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.7 2002/08/22 14:38:12 raker Exp $
+
+*nessus-1.2.4 (22 Aug 2002)
+
+  22 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  nessus-1.2.3.ebuild, files/digest-nessus-1.2.4.ebuild :
+  Version bump.
+  (important notes from upstream ChangeLog)
+  Reverted back to autoconf 2.13. 
+  Bug fix in nessus-core/nessusd/pluginlaunch.c
+   - under some circumstances, data might be lost in the reports 
+  Fixed a bug in several plugins for web checks 
+   -under some circumstances, a plugin would do N x N checks against 
+   the remote web servers (where N equals to the number of web servers 
+   running on the remote host) 
 
 *nessus-1.2.3 (26 Jul 2002)
 
