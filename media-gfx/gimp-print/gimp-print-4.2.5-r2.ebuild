@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5-r2.ebuild,v 1.2 2003/07/31 14:16:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5-r2.ebuild,v 1.3 2003/09/03 12:59:02 lanius Exp $
 
 IUSE="nls gtk readline cups foomaticdb ppds"
 
@@ -35,7 +35,7 @@ src_compile() {
 	use gtk \
 		&& myconf="${myconf} --enable-lexmarkutil" \
 		|| myconf="${myconf} --disable-lexmarkutil"
-	
+
 	has_version =media-gfx/gimp-1.2* \
 		&& myconf="${myconf} --with-gimp" \
 		|| myconf="${myconf} --without-gimp"
@@ -45,7 +45,7 @@ src_compile() {
 	else
 		myconf="${myconf} --without-cups"
 	fi
-	
+
 	use foomaticdb \
 		&& myconf="${myconf} --with-foomatic3" \
 		|| myconf="${myconf} --without-foomatic"
