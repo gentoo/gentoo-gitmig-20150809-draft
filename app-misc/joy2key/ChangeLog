@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/joy2key
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.8 2005/01/01 15:09:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.9 2005/03/22 20:15:23 sekretarz Exp $
+
+  22 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/fix-configure.in.diff, joy2key-1.6.ebuild:
+  Fixed issue with blank -L blocking -lX11, bug #82685. Thanks to Joshua Baergen.
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> joy2key-1.6.ebuild:
   Marked ~amd64.

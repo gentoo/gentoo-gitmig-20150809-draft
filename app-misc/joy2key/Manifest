@@ -1,3 +1,14 @@
-MD5 a1c68ec503ae498c77119c1adc250132 ChangeLog 814
-MD5 e8a51ed1723fee827d494a453a954d0e joy2key-1.6.ebuild 771
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac7408a79bbc7a1aaab8359d8be24d66 joy2key-1.6.ebuild 996
+MD5 c97a4f9759263ce2942aebbbec98fc37 ChangeLog 1002
+MD5 86397ad9fe231a1baa8fbde88136645f files/fix-configure.in.diff 908
 MD5 bcacfecb034a3c6f8df6113978d45906 files/digest-joy2key-1.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCQIseZ/iYVBmujdURAqzwAKCiCSBaJZ/7ALcAgpskYTqnRX/cLgCgzluZ
+Qwg7Yb7vF1MZTOqqNZsjBxY=
+=RBL6
+-----END PGP SIGNATURE-----
