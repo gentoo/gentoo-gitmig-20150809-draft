@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc6,v 1.4 2002/07/17 03:11:56 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc6,v 1.5 2002/08/14 21:03:39 raker Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/auto.master, then a YP
@@ -25,7 +25,7 @@ getmounts() {
 #
 if [ -f /etc/autofs/auto.master ]
 then
-    cat /etc/autofs/auto.master | sed -e '/^#/d' -e '/^$/d'| (
+    cat /etc/autofs/auto.master | sed -e '/^ *[^# ]/!d'| (
 	while read dir map options
 	do
 	    if [ ! -z "$dir" -a ! -z "$map" \
