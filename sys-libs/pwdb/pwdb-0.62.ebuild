@@ -1,13 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.18 2004/11/12 21:08:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.19 2005/01/04 04:18:05 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Password database"
-HOMEPAGE="http://www.firstlinux.com/cgi-bin/package/content.cgi?ID=6886"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	http://nl.lunar-linux.org/lunar/sources/sources/${P}.tar.gz"
+HOMEPAGE="http://packages.gentoo.org/ebuilds/?pwdb-${PVR}"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
