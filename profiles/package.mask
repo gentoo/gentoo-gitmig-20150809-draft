@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3014 2004/07/21 23:59:21 langthang Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3015 2004/07/22 05:15:23 squinky86 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -65,10 +65,6 @@ app-portage/deltup
 # <genone@gentoo.org> (7 July 2004)
 # broken with current portage versions, no upstream available.
 app-portage/rmerge2
-
-# <squinky86@gentoo.org> (5 July 2004)
-# no frontend support yet, see bug #50189
-net-p2p/donkey
 
 # <langthang@gentoo.org> (4 July 2004)
 # mask in preparing to remove from tree.
