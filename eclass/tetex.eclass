@@ -1,11 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.35 2005/02/18 14:22:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.36 2005/04/05 17:07:45 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
-# A generic eclass to install tetex distributions.
+# A generic eclass to install tetex distributions. This shouldn't be
+# inherited directly in any ebuilds. It should be inherited from
+# tetex-{2,3}.eclass.
 
 inherit eutils flag-o-matic
 
@@ -79,9 +81,6 @@ tetex_src_unpack() {
 
 			mkdir ${S}/texmf; cd ${S}/texmf
 			umask 022
-			if [ "${TETEX_PV}" == "2.0.2" ] ; then
-				unpack ${TETEX_TEXMF_SRC}
-			fi
 			unpack ${TETEX_TEXMF}
 
 			# create update script
@@ -119,9 +118,6 @@ echo
 echo "Use 'texconfig font ro' to disable font generation for users"
 echo
 EOF
-			if [ "${TETEX_PV}" == "2.0.2" ] ; then
-				sed -i -e "s/-sys//g" ${T}/texmf-update
-			fi
 			;;
 		patch)
 			# Do not run config. Also fix local texmf tree.
@@ -132,18 +128,6 @@ EOF
 
 			if useq ppc-macos ; then
 				sed -i -e "/^HOMETEXMF/s:\$HOME/texmf:\$HOME/Library/texmf:" ${S}/texk/kpathsea/texmf.in || die "sed texmf.in failed."
-			fi
-
-			if [ "${TETEX_PV}" == "2.0.2" ] ; then
-				# fix up misplaced listings.sty in the 2.0.2 archive. 
-				# this should be fixed in the next release <obz@gentoo.org>
-				mv texmf/source/latex/listings/listings.sty texmf/tex/latex/listings/
-				# need to fix up the hyperref driver, see bug #31967
-				sed -i -e "/providecommand/s/hdvips/hypertex/" \
-					${S}/texmf/tex/latex/config/hyperref.cfg
-			else
-				sed -i -e "/providecommand/s/hdvips/hypertex/" \
-					${S}/texmf/tex/latex/hyperref/hyperref.cfg
 			fi
 			;;
     		all)
@@ -217,12 +201,6 @@ tetex_src_install() {
 			einfo "Installing texmf ..."
 			cp -Rv texmf ${D}/usr/share
 
-			if [ "${TETEX_PV}" == "2.0.2" ] ; then
-				# bug #47004
-				insinto /usr/share/texmf/tex/latex/a0poster
-				doins ${S}/texmf/source/latex/a0poster/a0poster.cls || die
-				doins ${S}/texmf/source/latex/a0poster/a0size.sty || die
-			fi
 			# Install teTeX files
 			einfo "Installing teTeX ..."
 			dodir ${TEXMF_PATH:-/usr/share/texmf}/web2c
@@ -276,12 +254,6 @@ tetex_src_install() {
 			rm -f ${D}/bin/readlink
 			rm -f ${D}/usr/bin/readlink
 
-			if [ "${TETEX_PV}" == "2.0.2" ] ; then
-				# --without-texi2html doesn't exist
-				rm -f ${D}/usr/bin/texi2html
-				rm -f ${D}/usr/share/man/man1/texi2html.1
-			fi
-
 			#add /var/cache/fonts directory
 			dodir /var/cache/fonts
 
@@ -292,87 +264,11 @@ tetex_src_install() {
 			chown -R 0:0 ${D}/usr/share/texmf
 			find ${D} -name "ls-R" -exec rm {} \;
 			;;
-		link)	# link is for tetex-beta
-			dodir /etc/env.d
-			echo 'CONFIG_PROTECT_MASK="/etc/texmf/web2c"' > ${D}/etc/env.d/98tetex
-			# populate /etc/texmf
-			keepdir /etc/texmf/web2c
-			cd ${D}/usr/share/texmf		# not ${TEXMF_PATH}
-			for d in $(find . -name config -type d | sed -e "s:\./::g") ; do
-				dodir /etc/texmf/${d}
-				for f in $(find ${D}usr/share/texmf/$d -maxdepth 1 -mindepth 1); do
-					mv $f ${D}/etc/texmf/$d || die "mv $f failed"
-					dosym /etc/texmf/$d/$(basename $f) /usr/share/texmf/$d/$(basename $f)
-				done
-			done
-			cd -
-			cd ${D}${TEXMF_PATH}
-			for f in $(find . -name '*.cnf' -o -name '*.cfg' -type f | sed -e "s:\./::g") ; do
-				if [ "${f/config/}" != "${f}" ] ; then
-					continue
-				fi
-				dodir /etc/texmf/$(dirname $f)
-				mv ${D}${TEXMF_PATH}/$f ${D}/etc/texmf/$(dirname $f) || die "mv $f failed."
-				dosym /etc/texmf/$f ${TEXMF_PATH}/$f
-			done
-
-			# take care of updmap.cfg, fmtutil.cnf and texmf.cnf
-			dodir /etc/texmf/{updmap.d,fmtutil.d,texmf.d}
-			#cp ${D}/usr/share/texmf/web2c/updmap.cfg ${D}/etc/texmf/updmap.d/00updmap.cfg
-			dosym /etc/texmf/web2c/updmap.cfg ${TEXMF_PATH}/web2c/updmap.cfg
-			mv ${D}/usr/share/texmf/web2c/updmap.cfg ${D}/etc/texmf/updmap.d/00updmap.cfg
-			mv ${D}/etc/texmf/web2c/fmtutil.cnf ${D}/etc/texmf/fmtutil.d/00fmtutil.cnf
-			mv ${D}/etc/texmf/web2c/texmf.cnf ${D}/etc/texmf/texmf.d/00texmf.cnf
-
-			# xdvi
-			if useq X ; then
-				dodir /etc/X11/app-defaults /etc/texmf/xdvi
-				mv ${D}${TEXMF_PATH}/xdvi/XDvi ${D}/etc/X11/app-defaults || die "mv XDvi failed"
-				dosym /etc/X11/app-defaults/XDvi ${TEXMF_PATH}/xdvi/XDvi
-			fi
-			cd -
-			;;
-		cnf)	# cnf is for tetex-2.0.2
-			dodir /etc/env.d/
-			echo 'CONFIG_PROTECT="/usr/share/texmf/tex/generic/config/ /usr/share/texmf/tex/platex/config/ /usr/share/texmf/dvips/config/ /usr/share/texmf/dvipdfm/config/ /usr/share/texmf/xdvi/"' > ${D}/etc/env.d/98tetex
-
-			#fix for texlinks
-			local src dst
-			sed -e '/^#/d' -e '/^$/d' -e 's/^ *//' \
-				${D}/usr/share/texmf/web2c/fmtutil.cnf > ${T}/fmtutil.cnf || die
-			while read l; do
-				dst=/usr/bin/`echo $l | awk '{ print $1 }'`
-				src=/usr/bin/`echo $l | awk '{ print $2 }'`
-				if [ ! -f ${D}$dst -a "$dst" != "$src" ] ; then
-					einfo "Making symlinks from $src to $dst"
-					dosym $src $dst
-				fi
-			done < ${T}/fmtutil.cnf
-			;;
 		all)
-			tetex_src_install base doc fixup cnf
-			#tetex_src_install base doc fixup link
+			tetex_src_install base doc fixup
 			;;
 	esac
 	shift
-	done
-}
-
-tetex_pkg_preinst() {
-
-	if [ "${TETEX_PV}" != "2.0.2" ] ; then
-		ewarn "Removing ${ROOT}usr/share/texmf/web2c"
-		rm -rf "${ROOT}usr/share/texmf/web2c"
-	fi
-
-	# take care of config protection, upgrade from <=tetex-2.0.2-r4
-	for conf in updmap.cfg texmf.cnf fmtutil.cnf
-	do
-		if [ ! -d "${ROOT}etc/texmf/${conf/.*/.d}" -a -f "${ROOT}etc/texmf/${conf}" ]
-		then
-			mkdir "${ROOT}etc/texmf/${conf/.*/.d}"
-			cp "${ROOT}etc/texmf/${conf}" "${ROOT}etc/texmf/00${conf/.*/.d}"
-		fi
 	done
 }
 
