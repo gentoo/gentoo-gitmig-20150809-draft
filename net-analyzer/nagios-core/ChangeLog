@@ -1,0 +1,7 @@
+# ChangeLog for net-analyzer/nagios-core
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.1 2002/11/02 05:55:41 alron Exp $
+
+*nagios-core-1.0_beta6	(1 Nov 2002)
+  1 Nov 2002; Dean Bailey <alron@gentoo.org> nagios-core-1.0_beta6 :
+  Initial import. Ebuild submitted by Dean Bailey <alron@gentoo.org>.

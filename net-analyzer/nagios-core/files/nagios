@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	need net
+	use dns logger
+}
+
+start() {
+	ebegin "Starting nagios"
+	su - nagios -c "touch /var/nagios/nagios.log /var/nagios/status.sav"
+	rm -f /var/nagios/rw/nagios.cmd
+	start-stop-daemon -o --quiet --start --startas /usr/nagios/bin/nagios \
+		--pidfile /var/nagios/nagios.lock -- -d /etc/nagios/nagios.cfg
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping nagios"
+	start-stop-daemon -o --quiet --stop --pidfile /var/nagios/nagios.lock
+	rm -f /var/nagios/status.log /var/nagios/nagios.tmp /var/nagios/nagios.lock /var/nagios/rw/nagios.cmd
+	eend $?
+}
+
+svc_restart() {
+	ebegin "Restarting nagios"
+	svc_stop
+	svc_start
+	eend $?
+}
