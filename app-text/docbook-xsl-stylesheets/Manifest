@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 4cbcecb864362b22bce6b32010ac2c44 ChangeLog 6077
+MD5 7abf31d6e6640fa02b16df6e7c116ef9 ChangeLog 6166
 MD5 c4f70f035f2e2f82f4495ac3bbe1886e docbook-xsl-stylesheets-1.62.4.ebuild 2956
 MD5 bfe8c640e813c75a5de0b7b122a2f484 docbook-xsl-stylesheets-1.65.1.ebuild 1652
-MD5 8ef3d86c8d119b915f34533b6c739934 docbook-xsl-stylesheets-1.66.1.ebuild 1654
-MD5 29ba7520d88bff1a7bd1497f2c379121 files/digest-docbook-xsl-stylesheets-1.65.1 71
+MD5 51bee12ac9c65e8261a82d04335ec5f5 docbook-xsl-stylesheets-1.66.1.ebuild 1650
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 f7c1ddd6c8db312fadd3db1ab11fd65d files/digest-docbook-xsl-stylesheets-1.62.4 71
+MD5 29ba7520d88bff1a7bd1497f2c379121 files/digest-docbook-xsl-stylesheets-1.65.1 71
 MD5 f417ba6045c3ea9fffe8dd97ee167acc files/digest-docbook-xsl-stylesheets-1.66.1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNfDDKRy60XGEcJIRAjmPAKCPxel4ubL32kIbrzi9t+I7+9LVBwCfd7N4
-4tb42tJDa0vHSuGwoDhkWB0=
-=XLO1
------END PGP SIGNATURE-----
