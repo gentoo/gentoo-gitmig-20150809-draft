@@ -1,6 +1,19 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.122 2004/04/10 19:25:58 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.123 2004/04/15 13:48:45 zul Exp $
+
+*apache-2.0.49-r1 (15 Apr 2004)
+
+  15 Apr 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r1.ebuild,
+  files/httpd-2.0.49-ipv6.patch, files/common/apr-config.layout,
+  files/common/apr-util-config.layout, files/common/config.layout:
+  Version bump.
+  Bunch of fixes for reported bugs with apache:
+  - Added ipv6 patch. Closes 42007.
+  - Added UserDIR detection. Closes #46772.
+  - Added the threads use flag. Closes #35568.
+  - Added berkely db version detection. Closes #39562.
+  Ebuild cleanus as well.
 
   10 Apr 2004; Chuck Short <zul@gentoo.org> files/apache2:
   Improved apache2 rottelog format.
