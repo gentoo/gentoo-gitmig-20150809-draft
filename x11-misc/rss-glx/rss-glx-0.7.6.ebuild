@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.15 2004/10/04 22:45:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.16 2004/10/31 05:28:44 vapier Exp $
 
 inherit flag-o-matic eutils kde
 
@@ -17,7 +17,6 @@ IUSE="kde sse 3dnow openal"
 
 DEPEND="virtual/x11
 	virtual/opengl
-	>=sys-apps/sed-4
 	>=media-gfx/imagemagick-5.5.7
 	kde? ( kde-base/kdeartwork )
 	!kde? ( x11-misc/xscreensaver )
