@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.1 2005/03/11 16:20:09 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.2 2005/03/17 01:07:13 st_lim Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ MY_PV=${PV/_/}
 SRC_URI="mirror://sourceforge/hibernate/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://hibernate.bluemars.net"
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="3"
 KEYWORDS="~x86 ~amd64"
 RDEPEND="
 		>=virtual/jre-1.4

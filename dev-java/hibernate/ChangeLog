@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.16 2005/03/11 16:20:09 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.17 2005/03/17 01:07:13 st_lim Exp $
+
+  17 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> -hibernate-2.1.4.ebuild,
+  -hibernate-2.1.6.ebuild, hibernate-2.1.7.ebuild, hibernate-2.1.8.ebuild,
+  hibernate-3.0_rc1.ebuild:
+  Fixed 2.1.8 and retired 2.1.4 and 2.1.6
+
+  16 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> :
+  Fixed hibernate-2.1.8
 
 *hibernate-2.1.8 (11 Mar 2005)
 
