@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.3 2004/06/25 03:15:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.4 2004/07/16 02:14:41 tgall Exp $
 
 inherit perl-module eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://cpan.org/modules/by-authors/id/NI-S/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/x11"
