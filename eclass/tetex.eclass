@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.20 2004/10/23 16:08:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.21 2004/10/25 18:07:44 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -51,7 +51,6 @@ RDEPEND="${DEPEND}
 	!dev-tex/extsizes
 	>=dev-lang/perl-5.2
 	dev-util/dialog"
-#PDEPEND="X? ( app-text/xdvik )"
 PROVIDE="virtual/tetex"
 
 tetex_src_unpack() {
@@ -101,6 +100,14 @@ tetex_src_compile() {
 
 	einfo "Building teTeX"
 
+	local xdvik
+
+	if useq X ; then
+		xdvik="--with-xdvik --with-oxdvik"
+	else
+		xdvik="--without-xdvik --without-oxdvik"
+	fi
+
 	econf --bindir=/usr/bin \
 		--datadir=${S} \
 		--with-system-wwwlib \
@@ -119,9 +126,7 @@ tetex_src_compile() {
 		--with-ps=gs \
 		--enable-ipc \
 		--with-etex \
-		--without-xdvik \
-		--without-oxdvik \
-		`use_with X x` \
+		$(use_with X x) \
 		${xdvik} \
 		${myconf} || die
 
@@ -198,9 +203,6 @@ tetex_src_install() {
 			rm -f ${D}/bin/readlink
 			rm -f ${D}/usr/bin/readlink
 
-			#fix for conflicting XDvi file:
-			rm -f ${D}/usr/share/texmf/xdvi/XDvi
-
 			#fix for conflicting texi2html perl script:
 			local v
 			v=$(${D}/usr/bin/texi2html --version)
@@ -247,6 +249,14 @@ tetex_src_install() {
 					|| die "ln -s ${cfg} failed."
 				cd -
 			done
+			if useq X ; then
+				dodir /etc/texmf/xdvi
+				mv ${D}/usr/share/texmf/xdvi/{xdvi.cfg,XDvi} \
+					${D}/etc/texmf/xdvi \
+					|| die "mv xdvi failed."
+				dosym {/etc,/usr/share}/texmf/xdvi/xdvi.cfg
+				dosym {/etc,/usr/share}/texmf/xdvi/XDvi
+			fi
 			;;
 		cnf)	# cnf is for tetex-2.0.2
 			dodir /etc/env.d/
