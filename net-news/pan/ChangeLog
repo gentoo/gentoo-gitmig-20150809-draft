@@ -1,25 +1,27 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.11 2002/06/30 23:55:35 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.12 2002/07/13 14:07:44 phoenix Exp $
+
+*pan-0.12.1 (13 July 2002)
+
+  13 Jul 2002; phoen][x <phoenix@gentoo.org> pan-0.12.1.ebuild:
+  Version bump (bug #4937), added KEYWORDS.
 
 *pan-0.12.0-r2 (01 Jul 2002)
 
   01 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> pan-0.12.0-r2.ebuild:
-
   Fixed a problem with the libxml-2 dependence. Closes bug #4368  
 
 
 *pan-0.12.0-r1 (23 Jun 2002)
 
   23 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> pan-0.12.0-r1.ebuild:
-
   Removed libgnome depencence. Closes bug #4003
 
 
 *pan-0.12.0 (19 Jun 2002)
 
   19 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> pan-0.12.0.ebuild:
-
   New version, and dependencies update.
 
 
@@ -41,14 +43,12 @@
 *pan-0.11.2.91 (6 Apr 2002)
 
   6 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> pan-0.11.2.91.ebuild :
-
   Added latest pan, is technically a development version, but it seems stable
   and has support for the new yenc usenet encoding format.
 	
 *pan-0.11.2-r1 (22 Mar 2002)
 
   22 Mar 2002; Seemant Kulleen <seemant@gentoo.org> pan-0.11.2-r1.ebuild :
-
   Matthew Kennedy submitted a fix for disabled nls compilation (USE dependent).
 
 *pan-0.11.2 (17 Feb 2002)
@@ -57,8 +57,7 @@
 
 *pan-0.11.1.93 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

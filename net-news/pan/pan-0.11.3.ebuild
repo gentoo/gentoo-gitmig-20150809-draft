@@ -6,6 +6,9 @@ DESCRIPTION="A newsreader for GNOME."
 SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com/"
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/x11 
 	nls? ( sys-devel/gettext )
