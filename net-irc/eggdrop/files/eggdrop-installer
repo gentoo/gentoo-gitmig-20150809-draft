@@ -68,7 +68,7 @@ install_eggdrop()
 
       einfo "Finished..."
       
-      einfo "Please edit your $HOME/.eggdrop/$botname/eggdrop.conf "
+      einfo "Please edit your $HOME/.eggdrop/$bot_name/eggdrop.conf "
       einfo "If you need any help pleaese refer to the man page, or "
       einfo "eggdrop website at http://www.egghelper.org"
       
