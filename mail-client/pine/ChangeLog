@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.10 2004/07/22 22:22:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.11 2004/07/24 13:59:16 alexander Exp $
+  
+  24 Jun 2004; Alexander Plank <alexander@gentoo.org> pine-4.58-r3.ebuild:
+  add -macos; doesn't compile correctly
 
   22 Jul 2004; Tom Gall <tgall@gentoo.org> pine-4.58-r3.ebuild:
   stable on ppc64, bug #57588
