@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.20 2005/02/13 20:26:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.21 2005/02/14 03:12:49 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -866,6 +866,13 @@ use_multilib() {
 # Setup toolchain variables that would be defined in the profiles for these archs.
 crosscompile_setup() {
 	if tc-is-cross-compiler; then
+		local VAR="CFLAGS_"${CHOST//-/_}
+		local VAL=${!VAR}
+
+		if [[ -n "${VAL}" ]]; then
+			CFLAGS="${VAL}"
+		fi
+
 		if use_multilib; then
 			case $(tc-arch) in
 				amd64)
@@ -995,6 +1002,7 @@ pkg_setup() {
 
 src_unpack() {
 	crosscompile_setup
+	export ABI="${DEFAULT_ABI}"
 
 	case $(tc-arch) in
 		hppa)
