@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.8.1.ebuild,v 1.1 2003/06/18 11:59:47 seemant Exp $
+# $Header
 
 S=${WORKDIR}/${P}
 DESCRIPTION="High quality television application for use with video capture cards."
@@ -10,14 +10,20 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
 
-IUSE=""
+IUSE="lirc"
+
+myconf="--with-fifogroup=video --localstatedir=/var"
 
 DEPEND="virtual/x11
-		app-misc/lirc"
+		>=media-libs/freetype-2*
+		sys-libs/zlib
+		media-libs/libpng
+		dev-libs/libxml2
+		lirc? ( app-misc/lirc )"
 
 src_compile() {
 
-	econf || die
+	econf ${myconf} || die
 	emake || die
 	
 }
@@ -35,8 +41,8 @@ src_install () {
 pkg_postinst() {
 	ewarn
 	ewarn "              :: !!Attention!! ::"
-	ewarn "The format of the config file has changed since the"
-	ewarn "last version. Please migrate your changes to the"
+	ewarn "The latest versions of ${PN} use a new XML config"
+	ewarn "file format. Please migrate your changes to the"
 	ewarn "new format!"
 	ewarn
 	einfo "A default setup for ${PN} has been saved as"
