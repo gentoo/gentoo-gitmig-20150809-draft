@@ -5,8 +5,7 @@
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
-need-kdelibs 2.2
-need-qt 2.2
+need-kde 2.2
 
 DESCRIPTION="CDBakeOven, KDE CD Writing Software"
 SRC_URI="http://prdownloads.sourceforge.net/cdbakeoven/cdbakeoven_generic-${PV}.tar.bz2"
@@ -14,14 +13,11 @@ HOMEPAGE="http://cdbakeoven.sourceforge.net"
 
 S=${WORKDIR}/cdbakeoven_generic-${PV}
 
-NEWDEPEND=">=kde-base/kdebase-2.2
+newdepend ">=kde-base/kdebase-2.2
 	>=media-libs/libogg-1.0_rc2
 	>=media-sound/mpg123-0.59
 	>=media-sound/cdparanoia-3.9.8
 	>=app-cdr/cdrtools-1.11"
-
-DEPEND="$DEPEND $NEWDEPEND"
-RDEPEND="$RDEPEND $NEWDEPEND"
 
 src_unpack() {
 

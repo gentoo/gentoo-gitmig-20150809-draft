@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.ebuild,v 1.10 2001/12/08 17:27:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.ebuild,v 1.11 2001/12/23 21:35:15 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
-need-kdelibs 2.2
+need-kde 2.2
 
 DESCRIPTION="KDE ${PV} - KOffice"
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kstars/kstars-0.6-r1.ebuild,v 1.2 2001/11/16 12:50:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kstars/kstars-0.6-r1.ebuild,v 1.3 2001/12/23 21:35:15 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
-need-kdelibs 2.1
+need-kde 2.1
 
 DESCRIPTION="A fun and educational desktop planetarium program for KDE2"
 HOMEPAGE="http://kstars.sourceforge.net"

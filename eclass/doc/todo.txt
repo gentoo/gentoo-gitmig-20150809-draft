@@ -4,4 +4,4 @@
 - eclasses that support kde/qt 2/3/... equally well, without a default major number.
 - cvs/cvsup support :-)
 - update docs
-
+- sort out local var declares

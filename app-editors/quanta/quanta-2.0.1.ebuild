@@ -1,13 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0.1.ebuild,v 1.2 2001/12/13 22:29:49 verwilst Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0.1.ebuild,v 1.3 2001/12/23 21:35:15 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass
 inherit kde-base || die
 
-need-kdelibs 2.1
+need-kde 2.1
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Quanta - HTML editor for KDE2"
 
 SRC_URI="http://prdownloads.sourceforge.net/quanta/${P}.tar.bz2

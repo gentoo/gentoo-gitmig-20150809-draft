@@ -1,13 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.4 2001/12/08 12:09:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.5 2001/12/23 21:35:15 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
 DESCRIPTION="${DESCRIPTION}Multimedia"
 
-NEWDEPEND=">=sys-libs/ncurses-5.2
+newdepend ">=sys-libs/ncurses-5.2
     >=media-sound/cdparanoia-3.9.8
     >=media-libs/libvorbis-1.0_beta4
 	>=media-video/xanim-2.80.1
@@ -18,9 +18,6 @@ NEWDEPEND=">=sys-libs/ncurses-5.2
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
 	slang? ( >=sys-libs/slang-1.4.4 )"
 #	tcltk? ( =dev-lang/tcl-tk.8.0.5-r2 )
-
-DEPEND="$DEPEND $NEWDEPEND"
-RDEPEND="$RDEPEND $NEWDEPEND"
 
 src_unpack() {
 

@@ -1,4 +1,49 @@
 23/12
+v5
+This adds full support for multi-version coexistence, e.g. kde/qt 2/3/...
+There have been many many changes. Some of the are:
+
+A good conformist inheriting ebuild shuold now look something like this:
+------------
+# 4 header lines
+. /usr/portage/eclass/inherit.eclass || die
+inherit kde-something || die	# inherit kde-base for most ebuilds, kde-dst/kde-i18n etc. for others
+need-kde x.y.z	# must be present!
+
+# any code after this is not required and extends/overrides only
+need-qt x.y.z
+myconf="$myconf --mysetting=yes"
+<change other variables, functions>
+------------
+
+depend.eclass has been merged into kde.eclass due to cross-dependencies between the two.
+
+Note: need-kdelibs() is now called need-kde().
+
+need-kdelibs() exports:
+KDEVER			version number required/matching
+KDEMAJORVER		major version component (2, 3...)
+KDEVER[]			array with components of KDEVER as elements (output of separate-string())
+					major is element 0, minor is element 1... alpha, beta, pre, rc are resolved to
+					-4, -3, -2, -1. There are always 5 elements; any missing ones are set to 0.
+					
+If/when you want to do some kde2/3 specific stuff, just branch based on $KDEMAJORVER and/or $KDEVER, $KDEVER[].
+
+need-kdelibs() also adds KDEVER to DEPEND/RDEPEND and calls set-kdedir() which hasn't changed since v4.9.
+need-kdelibs() also calls qtver-from-kdever(), a new function that matches a qt version number to the supplied
+kde version number. Then need-kdelibs() calls need-qt() with the version number supplied by qtver-from-kdever().
+
+If you need a non-standard qt version, you can call need-q(0 yourself (after calling need-kde()) to override.
+need-qt() works exactly the same as need-kdelibs().
+
+Again: you must call need-kde, and you must supply *some* version.
+
+All inheriting ebuilds have been updated to use the new scheme.
+
+Only ebuilds inheriting from kde-base or directly from kde need to call need-kde(); the kde-dist, kde-i18n
+and koffice-i18n eclasses do it for you.
+
+23/12
 v4.9
 This extends depend.eclass a lot, adds function select-version(). I will now work on eclasses
 that will support qt/kde 2/3/... equally well and that will be v5. I will also update and clarify
