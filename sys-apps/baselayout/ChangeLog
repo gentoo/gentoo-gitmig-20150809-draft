@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.47 2002/12/09 22:05:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.48 2002/12/10 20:10:24 seemant Exp $
 
 *baselayout-1.8.5.5 (09 Dec 2002)
+
+  10 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  baselayout-1.8.5.5.ebuild :
+
+  Removed references to sparc64 ARCH/KEYWORD as it is deprecated until we
+  have a 64 bit userland implementation.
 
   09 Dec 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.5.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.1 2002/12/09 22:05:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.2 2002/12/10 20:10:24 seemant Exp $
 
 IUSE="bootstrap build"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="sys-kernel/linux-headers
 	>=sys-apps/portage-2.0.23"
@@ -79,7 +79,7 @@ src_unpack() {
 	fi
 	
 	# Fix Sparc specific stuff
-	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]
+	if [ "${ARCH}" = "sparc" ]
 	then
 		cd ${S}/etc
 		cp rc.conf rc.conf.orig
@@ -428,7 +428,7 @@ pkg_postinst() {
 				einfo "Using generic-powerpc to make device nodes..."
 				${ROOT}/usr/sbin/MAKEDEV generic-powerpc
 				;;
-			sparc|sparc64)
+			sparc)
 				einfo "Using generic-sparc to make device nodes..."
 				${ROOT}/usr/sbin/MAKEDEV generic-sparc
 				;;
