@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r2.ebuild,v 1.8 2005/01/01 12:46:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r2.ebuild,v 1.9 2005/01/24 10:23:53 angusyoung Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://fjolliton.free.fr/babytrans/test/${P}.tar.gz"
 HOMEPAGE="http://fjolliton.free.fr/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 RDEPEND="=x11-libs/gtk+-1.2*
