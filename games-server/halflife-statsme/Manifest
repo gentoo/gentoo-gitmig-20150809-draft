@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 e80166047201c0d9cc57c37f02f59865 ChangeLog 472
-MD5 67f34fd8ed635a93410e75e4e9a101cb halflife-statsme-2.7.1.ebuild 1860
+MD5 1385b9a40f4cd74b326db0f8bfc37b79 halflife-statsme-2.7.1.ebuild 1856
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 aceace1c6cd2d9bfb16fb9a6b4e143d1 files/2.7.1-cstrike-gentoo.patch 1546
 MD5 7a993e740e1fc1663a01586d6fab08e1 files/2.7.1-dod-gentoo.patch 1352
@@ -10,9 +10,9 @@ MD5 7a993e740e1fc1663a01586d6fab08e1 files/2.7.1-tfc-gentoo.patch 1352
 MD5 e32b27a9e2015eed8a9b57bac39d641f files/digest-halflife-statsme-2.7.1 437
 MD5 b7293f88a553696f45250f811a1e12af files/modsetup 1491
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA+e5CmdTrptrqvGERAnXtAJ0WaI8gQYUPIT/ZRN7jKhQRLVS1+ACeKmOb
-QDDQjR+4F01Me/BIXFmfUC0=
-=KjZc
+iD8DBQFA/KTsHTu7gpaalycRAiZKAJ9A4qFZ0ueY0bTR/Sp6ZJSWtzEsCwCeK3HU
+RqcZjrQpVh3N87urZALgzvs=
+=epAj
 -----END PGP SIGNATURE-----
