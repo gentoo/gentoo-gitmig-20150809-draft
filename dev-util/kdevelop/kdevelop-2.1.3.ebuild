@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3.ebuild,v 1.5 2002/10/04 20:58:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3.ebuild,v 1.6 2002/11/15 01:06:15 vapier Exp $
 
 inherit kde-base
 need-kde 3
@@ -15,10 +15,8 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	mirror://gentoo/c_cpp_reference-1.0.tar.gz
 	mirror://gentoo/kdelibs-kdevelop-docs-3.0.1.tar.bz2"
 
-
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
-
 
 DEPEND="$DEPEND
 	sys-devel/flex
@@ -37,44 +35,43 @@ newdepend ">=kde-base/kdebase-3
 # -j2 and greater fails - see bug #6199
 export MAKEOPTS="$MAKEOPTS -j1"
 
-src_unpack() {
-    base_src_unpack
-    cd ${S}/kdevelop
-    for x in *.desktop; do
-	mv $x $x.2
-	sed -e 's:Exec=kdevelop:Exec=env WANT_AUTOMAKE_1_4=1 WANT_AUTOCONF_2_5=1 kdevelop:g' $x.2 > $x
-	rm $x.2
-    done
+APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
+[ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
 
+src_unpack() {
+	base_src_unpack
+	cd ${S}/kdevelop
+	for x in *.desktop; do
+		mv $x $x.2
+		sed -e 's:Exec=kdevelop:Exec=env WANT_AUTOMAKE_1_4=1 WANT_AUTOCONF_2_5=1 kdevelop:g' $x.2 > $x
+		rm $x.2
+	done
 }
 
 src_install() {
+	kde_src_install
 
-    kde_src_install
-    
-    # setup htdig for use with kdevelop out-of-the-box (sort of)
-    sed -e "s:_KDEDIR_:${PREFIX}:g" ${FILESDIR}/htdig.conf > ${D}/${PREFIX}/share/apps/kdevelop/tools/htdig.conf
-    dodir ${PREFIX}/share/apps/kdevelop/htdig/db
-    
-    # kdelibs documentation - pregenerated so we don't need kdelibs sources etc
-    cp -r ${WORKDIR}/KDE-Documentation ${D}/${PREFIX}/share/apps/kdevelop/
-    
-    # c/cpp reference package
-    dodir ${PREFIX}/share/doc/HTML/en/kdevelop/reference
-    cp -r ${WORKDIR}/c_cpp_reference-1.0/reference/{C,CPLUSPLUS,GRAPHICS} ${D}/${PREFIX}/share/doc/HTML/en/kdevelop/reference/
+	# setup htdig for use with kdevelop out-of-the-box (sort of)
+	sed -e "s:_KDEDIR_:${PREFIX}:g" \
+	 -e "s:/home/httpd/htdocs:${APACHE_ROOT}:" \
+		${FILESDIR}/htdig.conf > ${D}/${PREFIX}/share/apps/kdevelop/tools/htdig.conf
+	dodir ${PREFIX}/share/apps/kdevelop/htdig/db
 
+	# kdelibs documentation - pregenerated so we don't need kdelibs sources etc
+	cp -r ${WORKDIR}/KDE-Documentation ${D}/${PREFIX}/share/apps/kdevelop/
+
+	# c/cpp reference package
+	dodir ${PREFIX}/share/doc/HTML/en/kdevelop/reference
+	cp -r ${WORKDIR}/c_cpp_reference-1.0/reference/{C,CPLUSPLUS,GRAPHICS} ${D}/${PREFIX}/share/doc/HTML/en/kdevelop/reference/
 }
 
 pkg_postinst() {
-
-einfo "Don't run the kdevelop setup! It will try to generate the kdelibs documentation,"
-einfo "but a pregenerated package of it has been installed with this ebuild."
-einfo "Instead, run kdevelop, go to Options->Kdevelop Setup, Documentation tab, and change"
-einfo "the value of KDE-Libraries-Doc to $PREFIX/share/apps/kdevelop/KDE-Documentation/ ."
-einfo ""
-einfo "Oh, and if you think of a nice way to automate this from the ebuild, pray tell"
-einfo "(but test first!) :-)"
-
-
+	einfo "Don't run the kdevelop setup! It will try to generate the kdelibs documentation,"
+	einfo "but a pregenerated package of it has been installed with this ebuild."
+	einfo "Instead, run kdevelop, go to Options->Kdevelop Setup, Documentation tab, and change"
+	einfo "the value of KDE-Libraries-Doc to $PREFIX/share/apps/kdevelop/KDE-Documentation/ ."
+	einfo
+	einfo "Oh, and if you think of a nice way to automate this from the ebuild, pray tell"
+	einfo "(but test first!) :-)"
 }
 
