@@ -1,6 +1,12 @@
 # ChangeLog for net-www/webcpp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webcpp/ChangeLog,v 1.6 2004/07/01 22:51:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webcpp/ChangeLog,v 1.7 2004/07/18 00:21:26 vapier Exp $
+
+*webcpp-0.8.4 (17 Jul 2004)
+
+  17 Jul 2004; Mike Frysinger <vapier@gentoo.org> -webcpp-0.8.0-r1.ebuild,
+  -webcpp-0.8.0.ebuild, +webcpp-0.8.4.ebuild:
+  Version bump #57211 by sekretarz.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   webcpp-0.8.0-r1.ebuild, webcpp-0.8.0.ebuild, webcpp-0.8.2.ebuild:
