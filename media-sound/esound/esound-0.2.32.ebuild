@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.32.ebuild,v 1.7 2003/10/22 16:57:42 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.32.ebuild,v 1.8 2003/11/08 16:46:24 todd Exp $
 
 IUSE="tcpd alsa ipv6"
 
@@ -11,7 +11,7 @@ DESCRIPTION="The Enlightened Sound Daemon"
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~sparc ppc alpha ~hppa amd64"
+KEYWORDS="x86 sparc ppc alpha ~hppa amd64"
 
 DEPEND=">=media-libs/audiofile-0.1.5
 	alsa? ( >=media-libs/alsa-lib-0.5.10b )
