@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.3.ebuild,v 1.1 2003/07/20 20:44:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.3.ebuild,v 1.2 2003/07/29 10:42:50 pauldv Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -39,14 +39,14 @@ use mad || myconf="$myconf --disable-libmad"
 # patch to configure.in.in that makes the vorbis, libmad deps optional
 # has no version number in its filename because it's the same for all
 # arts versions - the patched file hasn't changed in a year's time
-#PATCHES="$FILESDIR/optional-deps.diff"
-PATCHES=""
+PATCHES="$FILESDIR/optional-deps.diff"
 
 src_unpack() {
 	kde_src_unpack
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
-	#rm $S/configure
+	rm $S/configure
+	kde_fix_autodetect
 }
 
 src_install() {

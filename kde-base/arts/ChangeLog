@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.51 2003/07/20 20:44:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.52 2003/07/29 10:42:50 pauldv Exp $
+
+  29 Jul 2003; Paul de Vrieze <pauldv@gentoo.org> arts-1.1.3.ebuild:
+  Fix some braindamage in the automake detection script, so that we can apply
+  our patch again
 
 *arts-1.1.3 (20 Jul 2003)
 
