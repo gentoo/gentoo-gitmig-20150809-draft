@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/fluxconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.1 2002/04/26 11:40:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.2 2002/07/15 01:42:13 seemant Exp $
+
+*fluxconf-0.8.5 (14 Jul 2002)
+
+  14 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxconf-0.8.5.ebuild
+  files/digest-fluxconf-0.8.5 :
+
+  Much needed version bump.
 
 *fluxconf-0.6 (26 Apr 2002)
 
