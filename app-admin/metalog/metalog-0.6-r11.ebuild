@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r11.ebuild,v 1.3 2004/03/12 10:45:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r11.ebuild,v 1.4 2004/04/06 03:26:49 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
-SRC_URI="mirror://sourceforge/metalog/${P}.tar.gz"
 HOMEPAGE="http://metalog.sourceforge.net/"
+SRC_URI="mirror://sourceforge/metalog/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
 
 DEPEND=">=dev-libs/libpcre-3.4"
-
 PROVIDE="virtual/logger"
 
 src_unpack() {
@@ -26,15 +27,10 @@ src_unpack() {
 		metalog.8
 }
 
-src_compile() {
-	econf
-	emake || die
-}
-
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeLog README
+	dodoc AUTHORS ChangeLog README
 	newdoc metalog.conf metalog.conf.sample
 
 	insinto /etc/metalog ; doins ${FILESDIR}/metalog.conf

@@ -1,24 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.3 2004/01/11 02:05:58 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.4 2004/04/06 03:27:27 vapier Exp $
+
+inherit eutils
 
 # pax flags are not strip safe.
 RESTRICT="nostrip"
 FEATURES="-distcc"
 
-S=${WORKDIR}/${P}
-
 DESCRIPTION="PaX regression test suite"
-SRC_URI="http://pageexec.virtualave.net/paxtest-${PV}.tar.gz"
 HOMEPAGE="http://pageexec.virtualave.net"
-KEYWORDS="x86"
+SRC_URI="http://pageexec.virtualave.net/paxtest-${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
-IUSE=""
 DEPEND="virtual/glibc
 	>=sys-apps/chpax-0.5"
-
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +33,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR=${D} BINDIR=/usr/bin RUNDIR=/usr/lib/paxtest install
-	for doc in Changelog COPYING LICENCE README ;do
+	for doc in Changelog LICENCE README ;do
 		[ -f "${doc}" ] && dodoc ${doc}
 	done
 }

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.26.ebuild,v 1.2 2004/02/24 18:35:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.26.ebuild,v 1.3 2004/04/06 03:25:59 vapier Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
@@ -26,15 +28,14 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	if [ ! "`use nls`" ]; then
+	if ! use nls ; then
 		sed -i "s:enable_nls=1:enable_nls=0:" Makefile
 	fi
 
 	sed -i 's:INSTALLROOT ?= /usr/local:INSTALLROOT ?= ${D}/usr:' Makefile
 
-	if use X
-	then
-	use ssl || myconf="without-ssl=yes"
+	if use X ; then
+		use ssl || myconf="without-ssl=yes"
 		PREFIX=/usr emake ${myconf} || die
 	else
 		cd ${S}/server
@@ -79,6 +80,6 @@ src_install() {
 	insinto /etc
 	doins server/gkrellmd.conf
 
-	dodoc COPYRIGHT CREDITS INSTALL README Changelog
+	dodoc CREDITS INSTALL README Changelog
 	dohtml *.html
 }
