@@ -1,6 +1,6 @@
 # ChangeLog for app-text/dgs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.10 2003/08/03 05:30:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.11 2003/08/04 19:18:39 gmsoft Exp $
 
   03 Aug 2003; Olivier Crete <tester@gentoo.org> dgs-0.5.10-r1.ebuild:
   Add gnuconfig_update for amd64, mark stable on amd64
@@ -11,6 +11,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *dgs-0.5.10-r1 (1 Feb 2002)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> dgs-0.5.10-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   11 Oct 2002; Seemant Kulleen <seemant@gentoo.org> dgs-0.5.10-r1.ebuild :
 
