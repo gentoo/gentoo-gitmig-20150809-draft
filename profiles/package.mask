@@ -636,61 +636,11 @@ dev-lang/tcl-tk
 # spider@gentoo.org ; 21 May 2002; 
 # this is the gnome2 mask!
 # (gnome-2 that is ;)
->=gnome-base/libglade-1.99.10-r1
->=app-text/scrollkeeper-0.3.0
->=gnome-base/gnome-2.0.0_beta5
->=gnome-extra/gnome-utils-1.100.0
->=gnome-base/eel-1.1.0
->=gnome-base/nautilus-1.1.0
->=gnome-extra/bug-buddy-2.1.0
-x11-libs/libzvt
-x11-libs/libwnck
-gnome-base/bonobo-activation
->=gnome-base/control-center-1.99.10
-gnome-base/gail
->=gnome-base/gnome-applets-1.100.0
-gnome-base/gnome-common
-gnome-base/gnome-desktop
-gnome-base/gnome-panel
-gnome-base/gnome-session
->=gnome-base/gnome-vfs-1.9.0
-gnome-base/libbonobo
-gnome-base/libbonobui
-gnome-base/libgnome
-gnome-base/libgnomecanvas
-gnome-base/libgnomeui
->=gnome-base/libgtop-1.90.0
->=gnome-base/librsvg-1.1.0
->=gnome-extra/gnome-games-1.90.0
->=gnome-extra/gnome-media-1.547.0
-gnome-extra/gnome-system-monitor
-gnome-base/libgnomeprint
-gnome-base/libgnomeprintui
-gnome-extra/libgtkhtml
-x11-terms/gnome-terminal
->=media-gfx/eog-0.110.0
->=app-editors/gedit-1.110.0
-gnome-extra/yelp
->=gnome-base/gdm-2.3.90.3
-gnome-extra/libgail-gnome
-gnome-extra/at-spi
-gnome-extra/at-poke
-
-
->=x11-wm/sawfish-2.0
->=x11-libs/rep-gtk-0.16
-
->=x11-libs/gtk-engines-1.9.0
-gnome-extra/gconf-editor
-gnome-extra/gnome-vfs-extras
 
 
 ## Non gnome-core packages, applications, extra libraries and so on
 
->=net-news/pan-0.11.90
 >=media-gfx/gimp-1.3.5
-gnome-extra/metatheme
-gnome-extra/nautilus-gtkhtml
 gnome-extra/gal2
 >=app-text/ggv-1.99.0
 dev-libs/libmrproject
