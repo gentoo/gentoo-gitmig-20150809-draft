@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.34.ebuild,v 1.2 2001/04/06 18:45:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.34.ebuild,v 1.3 2001/04/06 22:28:29 drobbins Exp $
 
 A="${P}.tar.gz netman-20000610.tgz"
 S=${WORKDIR}/${P}
@@ -34,7 +34,7 @@ src_install() {
 	do
 		doman man$x/*.[1-9]
 	done
-	dodoc man-pages-1.31.Announce README
+	dodoc man-pages-1.34.Announce README
 	docinto netman
 	dodoc netman/FIXME netman/README
 }
