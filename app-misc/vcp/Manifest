@@ -1,6 +1,16 @@
-MD5 d71872d3b1e0c3361fc3c731fd9a65d7 ChangeLog 1083
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 595cf3ba69d2ebbcbd3021504069cbf2 vcp-2.2.ebuild 800
 MD5 2f7852dcf6bc66019efe06d751d11d4f vcp-1.7.2.ebuild 751
+MD5 b604f36907fe02e3c78cf48d8d9ce0a7 ChangeLog 1170
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 c2c7b6f02a6dde340b081d1b1d2a1a82 vcp-2.2.ebuild 804
 MD5 a3303d0fa9b3bdbe6a68d08be57bdbb7 files/digest-vcp-1.7.2 60
 MD5 5f2c424b8efb0175aaa9880aadd2d69a files/digest-vcp-2.2 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5Q76EZCkKN40op4RApkSAJ9H1AwhDYF8EvIb23wcHTeQHdNhNQCcC5SJ
+EM9Vx0L4RvPAoCB/yvz7Gxk=
+=+sVS
+-----END PGP SIGNATURE-----
