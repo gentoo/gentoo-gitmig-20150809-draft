@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.3 2003/07/19 22:55:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.4 2003/07/23 18:58:01 gmsoft Exp $
 
 inherit libtool sgml-catalog
 
@@ -18,7 +18,7 @@ RDEPEND="app-text/sgml-common
 DEPEND="dev-lang/perl
 	${RDEPEND}"
 
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 hppa"
 
 src_unpack() {
 	unpack ${A}
@@ -33,6 +33,14 @@ src_compile() {
 	# docbook-sgml-utils among other things.
 	CFLAGS=""
 	CXXFLAGS=""
+
+	# Default CFLAGS and CXXFLAGS is -O2 but this make openjade segfault
+	# on hppa. Using -O1 works fine. So I force it here.                                                                                                                          
+	if [ "${ARCH}" = "hppa" ]
+	then
+		CFLAGS="-O1 -pipe"
+		CXXFLAGS="-O1 -pipe"
+	fi
 
 	ln -s config/configure.in configure.in
 	elibtoolize
