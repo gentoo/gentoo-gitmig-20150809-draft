@@ -1,26 +1,29 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.6 2002/07/27 16:57:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.7 2002/08/13 21:55:03 raker Exp $
+
+*dump-0.4.31 (13 Aug 2002)
+
+  13 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  dump-0.4.31.ebuild, files/digest-dump-0.4.31 :
+  Version bump.
 
 *dump-0.4.30 (27 Jul 2002)
 
   27 Jul 2002; Nick Hadaway <raker@gentoo.org>
-  dump-0.4.30.ebuild, files/digest-dump-0.4.30
-
+  dump-0.4.30.ebuild, files/digest-dump-0.4.30 :
   Version bump.
 
 *dump-0.4.29 (11 Jul 2002)
 
   11 Jul 2002; Seemant Kulleen <seemant@gentoo.org> dump-0.4.29.ebuild
   files/digest-dump-0.4.29 :
-
   Version bump.
 
 *dump-0.4.28-r1 (5 Jun 2002)
 
   5 Jun 2002; Seemant Kulleen <seemant@gentoo.org> dump-0.4.28-r1.ebuild
   files/digest-dump-0.4.28-r1 :
-
   Fixed the dumpdates directory to /etc/dumpdates instead of /etc, and also
   made readline an optional dependency.  Closes bug #3403 by
   shane@trontech.net (Shane Hyde)
@@ -29,14 +32,12 @@
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> dump-0.4.28.ebuild
   files/digest-dump-0.4.28, dump-0.4.24-r1.ebuild :
-
   Cleaned up the old ebuild to give a better example, and version bumped.
 
 *dump-0.4.24-r1 (24 Apr 2002)
 
   24 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   dump-0.4.24-r1.ebuild, files/digest-dump-0.4.24-r1 :
-
   Fixed sandbox violations. Create statically linked binaries (dump
   uses bzip2 whose libs are on /usr). Resovles #1873, #1986. Thanks to
   kingsqueak@kingsqueak.org for the initial patch.
@@ -45,7 +46,6 @@
 *dump-0.4.24 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
