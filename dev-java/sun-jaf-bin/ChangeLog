@@ -1,0 +1,27 @@
+# ChangeLog for dev-java/jaf
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/ChangeLog,v 1.1 2004/05/02 01:07:45 karltk Exp $
+
+*sun-jaf-bin-1.0.2 (02 May 2004)
+
+  02 May 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  sun-jaf-bin-1.0.2.ebuild: Moved from dev-java/jaf.
+
+  10 Feb 2004; Adrian Almenar <strider@gentoo.org> jaf-1.0.2.ebuild:
+  Removed alpha keyword.
+
+  19 Jan 2004; Adrian Almenar <strider@gentoo.org> jaf-1.0.2.ebuild:
+  Added amd64 keyword.
+
+  16 Jan 2004; Adrian Almenar <strider@gentoo.org> jaf-1.0.2.ebuild:
+  Updated Digest, added RESTRICT="fetch" and pkg_nofetch(), removed
+  mips hppa arm keywords.
+
+  24 May 2003; Dylan Carlson <absinthe@gentoo.org> jaf-1.0.2.ebuild:
+  License fix.
+
+*jaf-1.0.2 (14 May 2003)
+
+  14 May 2003; Dylan Carlson <absinthe@gentoo.org> jaf-1.0.2.ebuild:
+  Initial import.
+
