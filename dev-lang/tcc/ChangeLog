@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.3 2002/12/11 07:18:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.4 2002/12/13 10:56:26 blizzy Exp $
 
 *tcc-0.9.14 (10 Dec 2002)
   
@@ -11,7 +11,7 @@
   Thanks to Per Wigren <wigren@home.se> for an update
 
 * Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *tcc-0.9.7 (19 Jul 2002)
 

@@ -1,9 +1,8 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.11 2002/12/09 04:20:58 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.12 2002/12/13 10:56:26 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *nasm-0.98.34 (08 Sep 2002)
   
