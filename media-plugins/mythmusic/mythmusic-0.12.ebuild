@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.12.ebuild,v 1.1 2003/10/20 03:30:45 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.12.ebuild,v 1.2 2003/10/28 16:45:55 max Exp $
 
 inherit flag-o-matic
 
@@ -39,7 +39,10 @@ src_compile() {
 	myconf="${myconf} `use_enable opengl`"
 	myconf="${myconf} `use_enable sdl`"
 
-	local cpu="`get-flag march`"
+	# Fix bug 31952
+	replace-flags mcpu=pentium4 mcpu=pentium3
+	replace-flags march=pentium4 march=pentium3
+	local cpu="`get-flag march || get-flag mcpu`"
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi
