@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.71-r1.ebuild,v 1.4 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.77.ebuild,v 1.1 2001/06/04 06:41:14 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.4-r1.ebuild,v 1.1 2001/03/09 16:32:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.4-r1.ebuild,v 1.2 2001/06/04 06:41:14 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,8 +14,7 @@ DEPEND=">=media-gfx/gimp-1.2
 
 src_compile() {
 
-    cd ${S}
-    try ./configure --prefix=/usr/X11R6 --mandir=/usr/X11R6/share/man \
+    try ./configure --prefix=/usr/X11R6 --mandir=/usr/X11R6/man \
 		--datadir=/usr/X11R6/share/misc --host=${CHOST}
     try make
 
@@ -23,9 +22,8 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
     try make prefix=${D}/usr/X11R6 datadir=${D}/usr/X11R6/share/misc \
-	mandir=${D}/usr/X11R6/share/man install
+	mandir=${D}/usr/X11R6/man install
     dodir /usr/X11R6/lib/gimp/1.2/plug-ins
     dosym /usr/X11R6/bin/xscanimage /usr/X11R6/lib/gimp/1.2/plug-ins/xscanimage
 

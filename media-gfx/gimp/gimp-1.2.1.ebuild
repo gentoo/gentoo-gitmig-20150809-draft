@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.1.ebuild,v 1.3 2001/04/30 19:19:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.1.ebuild,v 1.4 2001/06/04 06:41:14 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -14,12 +14,14 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-base/gnome-libs-1.2.4
 	>=media-libs/mpeg-lib-1.3.1
 	aalib? ( >=media-libs/aalib-1.2 )
-	>=dev-perl/PDL-2.2
-	>=dev-perl/Parse-RecDescent-1.80"
+	perl? ( >=dev-perl/PDL-2.2.1
+	>=dev-perl/Parse-RecDescent-1.80 )"
 
 RDEPEND=">=sys-libs/slang-1.4.2
 	 >=gnome-base/gnome-libs-1.2.4
-	 aalib? ( >=media-libs/aalib-1.2i )"
+	 aalib? ( >=media-libs/aalib-1.2i )
+         perl? ( >=dev-perl/PDL-2.2.1
+	>=dev-perl/Parse-RecDescent-1.80 )"
 
 
 src_compile() {                           
@@ -28,7 +30,11 @@ src_compile() {
   then
     myconf="--disable-nls"
   fi
-  try ./configure --host=${CHOST} --prefix=/usr/X11R6 --sysconfdir=/etc ${myconf}
+  if [ -z "`use perl`" ]
+  then
+    myconf="--disable-perl"
+  fi
+  try ./configure --host=${CHOST} --prefix=/usr/X11R6 --sysconfdir=/etc --with-mp ${myconf}
   try make 
 }
 
@@ -36,7 +42,7 @@ src_install() {
 
   dodir /usr/X11R6/lib/gimp/1.2/plug-ins
   try make prefix=${D}/usr/X11R6 gimpsysconfdir=${D}/etc/gimp/1.2 \
-	mandir=${D}/usr/X11R6/share/man PREFIX=${D}/usr install
+	mandir=${D}/usr/X11R6/man PREFIX=${D}/usr install
   preplib /usr/X11R6
   dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
   dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz

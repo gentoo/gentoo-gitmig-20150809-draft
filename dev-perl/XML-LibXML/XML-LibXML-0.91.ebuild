@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.03.ebuild,v 1.2 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-0.91.ebuild,v 1.1 2001/06/04 06:41:14 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,8 +10,7 @@ SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc
 HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.readme"
 
 DEPEND=">=sys-devel/perl-5
-	>=gnome-libs/libxslt-0.9
-	>=dev-perl/XML-LibXML-0.9"
+	>=gnome-libs/libxml2-2.3.9"
 
 src_compile() {
 

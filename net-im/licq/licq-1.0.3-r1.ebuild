@@ -13,7 +13,7 @@ SRC_URI="http://download.sourceforge.net/${PN}/${A}
 	 ftp://mirror.itcnet.ro/pub/${PN}/srcs/${A}"
 HOMEPAGE="http://www.licq.org"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/glibc ssl? ( >=dev-libs/openssl-0.9.6 )
         qt? ( >=x11-libs/qt-x11-2.2.1 )"
 
 src_unpack() {
