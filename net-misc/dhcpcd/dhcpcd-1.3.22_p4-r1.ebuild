@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.4 2003/09/17 09:12:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.5 2003/09/17 23:04:23 avenj Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz http://dev.gentoo.org/~dr
 HOMEPAGE="http://www.phystech.com/download/"
 DEPEND=""
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa arm mips amd64"
+KEYWORDS="x86 ppc sparc alpha hppa arm mips amd64 ia64"
 LICENSE="GPL-2"
 IUSE="build"
 
@@ -20,6 +20,7 @@ src_unpack() {
 	use alpha && gnuconfig_update
 	use amd64 && gnuconfig_update
 	use hppa && gnuconfig_update
+	use ia64 && gnuconfig_update
 
 	cd ${S}
 	#Started working on this patch from an older version I found; then
