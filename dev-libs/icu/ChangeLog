@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.12 2004/03/10 13:40:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.13 2004/03/27 01:16:44 zul Exp $
+
+  27 Mar 2004; Chuck Short <zul@gentoo.org> icu-2.6.ebuild:
+  Stable on sparc.
 
   10 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> icu-2.8.ebuild:
   Adding amd64 keyword.
