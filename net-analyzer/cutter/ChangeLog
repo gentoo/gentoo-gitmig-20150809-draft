@@ -1,0 +1,8 @@
+# ChangeLog for net-analyzer/cutter
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cutter/ChangeLog,v 1.1 2003/07/02 07:30:48 aliz Exp $
+
+*cutter-1.02 (02 Jul 2003)
+
+  02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> cutter-1.02.ebuild :
+  Initial import. Ebuild contributed by Matthias F. Brandstetter <haim@gentoo.org> in #23723.
