@@ -1,0 +1,111 @@
+#!/sbin/runscript
+##
+## description: The vservers service is used to start and stop all
+##              the virtual servers.
+## to configure see:
+##	- /etc/vservers/*.conf
+##	- /etc/vservers.conf
+
+USR_SBIN=/usr/sbin
+
+depend() {
+	need net rebootmgr
+}
+
+## we need to call this _before_ starting any vserver!
+proc_security() {
+	## the following does not seem to work (maybe "old-style" only?):
+	### from: http://vserver.strahlungsfrei.de/tiki-index.php?page=VServerGentooNew
+	## enable (parts of) the proc filesystem
+	#vproc -e /proc/cmdline
+	#vproc -e /proc/loadavg
+	#vproc -e /proc/meminfo
+	### invalid ioctl for /proc/mounts!!
+	##vproc -e /proc/mounts
+	#vproc -e /proc/stat
+	#vproc -e /proc/uptime
+	## (vproc -e /proc/version)
+	## (useful and harmless: cpuinfo, slabinfo, interrupts)
+	#vproc -e /proc/cpuinfo
+	#vproc -e /proc/slabinfo
+	#vproc -e /proc/interrupts
+
+	## anyway, we use the following for now:
+	/usr/sbin/setattr -R --~hide /proc/*
+}
+
+# Print the vserver name in priority/alpha order
+sortserver(){
+	(
+	cd /etc/vservers
+	for serv in *.conf
+	do
+	        test -f "$serv" || continue
+
+		PRIORITY=100
+		. $serv
+		test "$ONBOOT" || continue
+		printf "%03d %s\n" $PRIORITY `basename $serv .conf`
+	done
+	) | sort $* | (while read a b; do echo $b; done)
+}
+
+startservers(){
+	echo "Starting the virtual servers"
+	cd /etc/vservers
+	for name in `sortserver`
+	do
+		ONBOOT=
+		. $name.conf
+		if [ "$ONBOOT" = "yes" ] ; then
+			echo; echo
+			echo "*** starting vserver \"$name\" ($(date)) ***"
+			$USR_SBIN/vserver $name start
+		else
+			echo "*** vserver \"$name\" not configured for on boot start ***"
+		fi
+	done
+}
+
+BACKGROUND=off
+if [ -f /etc/vservers.conf ] ; then
+	. /etc/vservers.conf
+fi
+
+
+# See how we were called.
+start() {
+	proc_security
+	if [ "$BACKGROUND" = "yes" ] ; then
+		einfo "asynchronous start of vserver on tty8"
+		echo "vserver startup on $(date)" 2>&1 </dev/tty8 | tee /var/log/vservers.boot >/dev/tty8
+		#startservers >/dev/tty8 </dev/tty8 2>/dev/tty8 &
+		startservers 2>&1 </dev/tty8 | tee /var/log/vservers.boot >/dev/tty8 &
+	else
+		estart "synchronous vserver-start"
+		startservers | tee /var/log/vservers.boot
+		eend $?
+	fi
+}
+
+stop() {
+	echo "Stopping the virtual servers"
+	cd /etc/vservers
+	for name in `sortserver -r`
+	do
+		$USR_SBIN/vserver $name stop
+	done
+}
+
+## TODO: finish our status()-function
+my_status() {
+	cd /etc/vservers
+	for serv in *.conf
+	do
+		ONBOOT=no
+		name=`basename $serv .conf`
+		. $serv
+		echo -n ONBOOT=$ONBOOT " "
+		$USR_SBIN/vserver $name running
+	done
+}

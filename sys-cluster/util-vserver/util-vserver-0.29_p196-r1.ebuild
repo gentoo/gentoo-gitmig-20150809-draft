@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.29_p196-r1.ebuild,v 1.1 2004/03/25 20:03:29 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.29_p196-r1.ebuild,v 1.2 2004/03/29 12:11:05 tantive Exp $
 
 MY_P="${P/_p/.}"
 DESCRIPTION="Vserver admin-tools."
@@ -40,4 +40,8 @@ src_install() {
 
 	## remove the non-gentoo init-scripts:
 	rm -r ${D}/etc/init.d
+	## ... and install gentoo'ized ones:
+	insinto /etc/init.d/
+	doins ${FILESDIR}/vservers.initd
+	doins ${FILESDIR}/rebootmgr.initd
 }
