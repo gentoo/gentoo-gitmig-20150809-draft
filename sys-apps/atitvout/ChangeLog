@@ -1,8 +1,0 @@
-# ChangeLog for sys-apps/atitvout
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/atitvout/ChangeLog,v 1.1 2002/11/07 16:52:56 hanno Exp $
-
-*atitvout-0.4 (07 Nov 2002)
-
-  07 Nov 2002; Hanno Boeck <hanno@gentoo.org> atitvout-0.4.ebuild :
-  Added ebuild for atitvout, a little tool to enable the TV-Out of ATI cards.
