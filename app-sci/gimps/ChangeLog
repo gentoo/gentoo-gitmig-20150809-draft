@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/gimps
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/ChangeLog,v 1.1 2004/01/23 16:20:13 spock Exp $
+
+*gimps-23.5 (23 Jan 2004)
+
+  23 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org>
+  gimps-23.5.ebuild, metadata.xml:
+  Initial commit, closes bug #38010.
+
