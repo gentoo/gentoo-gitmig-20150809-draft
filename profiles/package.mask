@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (19 Sep 2003)
+# 2.60 is still in the rc stage
+=dev-perl/Mail-SpamAssassin-2.60
+
 # <avenj@gentoo.org> (18 Sep 2003)
 # Not available to non-premier users yet
 =dev-lang/icc-7.1.029
