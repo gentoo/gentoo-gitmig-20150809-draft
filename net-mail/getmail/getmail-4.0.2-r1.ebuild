@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.0.2-r1.ebuild,v 1.3 2004/08/13 15:09:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.0.2-r1.ebuild,v 1.4 2004/09/14 21:17:36 ticho Exp $
 
 inherit distutils
 IUSE=""
@@ -10,7 +10,7 @@ SRC_URI="http://www.qcc.ca/~charlesc/software/getmail-4/${P}.tar.gz"
 
 SLOT="4"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc sparc ~alpha amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha amd64"
 
 DEPEND=">=dev-lang/python-2.3.3"
 
