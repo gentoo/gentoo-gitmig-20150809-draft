@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.7 2003/03/12 21:52:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.8 2003/03/18 16:41:31 sethbc Exp $
 
 IUSE="nls perl spell"
 
@@ -23,7 +23,7 @@ DEPEND="=sys-libs/db-1*
 
 inherit cvs
 
-ECVS_SERVER="cvs.gaim.sourceforge.net:/cvsroot/gaim"
+ECVS_SERVER="cvs.sourceforge.net:/cvsroot/gaim"
 ECVS_MODULE="gaim"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 S=${WORKDIR}/${ECVS_MODULE}
