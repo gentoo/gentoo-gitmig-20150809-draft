@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67018089868b28ad2fc12d972fae0b04 hardlink++-0.02.ebuild 752
+MD5 c5049f4cd90f23968ab84ee2e1a6f962 ChangeLog 492
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 84a1c00d3dcb95d9c619a4e68a945f76 files/hardlink++-0.02-gcc34-optimize-help.patch 1877
+MD5 967cd8f8801983fa8efb0b3a9b8a445d files/digest-hardlink++-0.02 63
+MD5 2b45a799b2462929aedb9d5de1125c6a files/hardlink++-0.02-sane-makefile.patch 413
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFB/GJXPpIsIjIzwiwRAjtLAKDuYTqUuU7jiGz4lWLlejKxA6NYqgCfeqA7
+hYY5bLhzTfYf3dqCS6PMBJ8=
+=K6DH
+-----END PGP SIGNATURE-----

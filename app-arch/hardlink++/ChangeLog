@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/hardlink++
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink++/ChangeLog,v 1.1 2005/01/30 04:27:49 robbat2 Exp $
+
+*hardlink++-0.02 (29 Jan 2005)
+
+  29 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +files/hardlink++-0.02-gcc34-optimize-help.patch,
+  +files/hardlink++-0.02-sane-makefile.patch, +hardlink++-0.02.ebuild:
+  New package, by Robin H. Johnson <robbat2@gentoo.org>
+
