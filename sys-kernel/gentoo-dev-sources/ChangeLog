@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.129 2004/12/01 23:59:50 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.130 2004/12/02 00:02:51 dsd Exp $
+
+*gentoo-dev-sources-2.6.9-r8 (02 Dec 2004)
+
+  02 Dec 2004; Daniel Drake <dsd@gentoo.org>
+  +gentoo-dev-sources-2.6.9-r8.ebuild:
+  Add AF_UNIX security fix
 
 *gentoo-dev-sources-2.6.7-r18 (02 Dec 2004)
 
