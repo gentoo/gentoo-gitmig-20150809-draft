@@ -874,3 +874,4 @@ x11-base/xdirectfb
 #seemant@gentoo.org 04 Jul 2002
 # masked, coz there are some sgml issues with this
 sys-libs/libieee1284
+=media-gfx/sane-backends-1.0.8-r2
