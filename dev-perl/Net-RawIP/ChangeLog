@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-RawIP
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.3 2003/05/08 16:53:46 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.4 2003/06/07 04:39:47 rac Exp $
+
+  06 Jun 2003; <rac@gentoo.org> Net-RawIP-0.09d.ebuild:
+  Add IUSE, sed-4 dependency.
 
 *Net-RawIP-0.09d (30 Jan 2003)
 
