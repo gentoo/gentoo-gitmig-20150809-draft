@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.5.ebuild,v 1.7 2004/07/12 15:07:34 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.5.ebuild,v 1.8 2004/07/20 18:22:45 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="${KV}"
 
-KEYWORDS="~amd64 -ppc -sparc ~x86"
+KEYWORDS="~amd64 -ppc -sparc x86"
 IUSE=""
 LICENSE="GPL-2"
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.33 2004/07/13 12:27:21 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.34 2004/07/20 18:22:45 plasmaroo Exp $
+
+  20 Jul 2004; <plasmaroo@gentoo.org> lm-sensors-2.8.2.ebuild,
+  lm-sensors-2.8.3.ebuild, lm-sensors-2.8.4.ebuild, lm-sensors-2.8.5.ebuild,
+  lm-sensors-2.8.6.ebuild, lm-sensors-2.8.7.ebuild:
+  "x86" stabilization - should solve bug #52098.
 
   13 Jul 2004; <plasmaroo@gentoo.org> files/rc:
   Added a patch to the rc script to run sensors -s at start time. Closes bug
