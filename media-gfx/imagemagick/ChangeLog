@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.66 2004/08/20 17:25:25 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.67 2004/08/30 08:01:40 sekretarz Exp $
+
+  30 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  imagemagick-6.0.5.2.ebuild:
+  Marked unstable on ppc sparc alpha hppa amd64 mips ppc64
 
 *imagemagick-6.0.5.2 (20 Aug 2004)
 
