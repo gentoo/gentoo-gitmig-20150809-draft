@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-gd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.11 2005/03/10 00:52:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.12 2005/03/16 17:39:32 mkennedy Exp $
+
+*cl-gd-0.4.5 (16 Mar 2005)
+
+  16 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-gd-0.4.5.ebuild:
+  New upstream version.
 
 *cl-gd-0.4.4 (09 Mar 2005)
 
