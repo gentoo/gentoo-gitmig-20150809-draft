@@ -1,13 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.46 2003/01/19 23:18:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.47 2003/01/19 23:47:42 raker Exp $
 
 *postfix-2.0.2 (19 Jan 2003)
 
   19 Jan 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.2.ebuild,
   files/digest-postfix-2.0.2 :
   Version bump.  Re-incorporated tls functionality.  IPV6 is next.
-  10 minutes later... ipv6 added. :)
+  10 minutes later... ipv6 added. :) and changed so
+  /var/spool/postfix/tmp is created.
 
 *postfix-2.0.0 (23 Dec 2002)
 
