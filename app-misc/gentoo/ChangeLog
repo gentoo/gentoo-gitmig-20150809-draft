@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.17 2003/02/12 04:59:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.18 2003/05/15 14:29:45 weeve Exp $
+
+  15 May 2003; Jason Wever <weeve@gentoo.org> gentoo-0.11.34.ebuild:
+  Added ~sparc to keywords.
 
 *gentoo-0.11.34 (21 Dec 2002)
 
