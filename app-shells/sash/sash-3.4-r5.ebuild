@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r5.ebuild,v 1.6 2002/09/14 15:51:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r5.ebuild,v 1.7 2002/09/29 16:52:47 drobbins Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="A small static UNIX Shell with readline suppport"
+DESCRIPTION="A small static UNIX Shell with readline support"
 SRC_URI="http://www.canb.auug.org.au/~dbell/programs/${P}.tar.gz
          http://dimavb.st.simbirsk.su/vlk/sash-3.x-readline.diff.gz"
 HOMEPAGE="http://www.canb.auug.org.au/~dbell/ http://dimavb.st.simbirsk.su/vlk/"
