@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.90.0.ebuild,v 1.3 2003/09/08 05:08:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.90.0.ebuild,v 1.4 2003/09/12 20:45:08 liquidx Exp $
 
 IUSE=""
 
@@ -17,7 +17,6 @@ RDEPEND=">=gnome-extra/libgda-0.12.0
 	>=x11-libs/gtk+-2.0.6
 	>=gnome-base/libglade-2.0.0
 	>=gnome-base/libgnomeui-2.0.0
-	>=gnome-base/bonobo-activation-2.0
 	>=gnome-base/libbonoboui-2.0.0"
 # optionally needs gtksourceview but not in portage
 
