@@ -16,8 +16,9 @@ addpredict /usr/lib64/python2.4/
 addpredict /usr/lib64/python2.5/
 addpredict /usr/lib64/python3.0/
 
-if [ -n "${IWANTTOTRASHMYSYSTEM}" ]; then
+if [ -z "${IWANTTOTRASHMYSYSTEM}" ]; then
 	echo "You are using a VERY development profile.  You probably"
 	echo "shouldn't be doing this.  Please see the README in"
 	echo "/usr/portage/profiles/default-linux/sparc/sparc64-multilib/dev"
+	exit 1
 fi

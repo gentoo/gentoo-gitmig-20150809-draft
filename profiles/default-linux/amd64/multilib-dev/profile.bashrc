@@ -25,9 +25,9 @@ elif [ -f /dev/null ] ; then
 	exit 1
 fi
 
-if [ -n "${IWANTTOTRASHMYSYSTEM}" ]; then
+if [ -z "${IWANTTOTRASHMYSYSTEM}" ]; then
 	echo "You are using a VERY development profile.  You probably"
 	echo "shouldn't be doing this.  Please see the README in"
 	echo "/usr/portage/profiles/default-linux/amd64/multilib-dev"
+	exit 1
 fi
-
