@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.8 2004/04/30 01:11:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.9 2004/04/30 12:54:25 dholm Exp $
+
+  30 Apr 2004; David Holm <dholm@gentoo.org> tor-0.0.6_rc1.ebuild:
+  Added to ~ppc.
 
 *tor-0.0.6_rc1 (29 Apr 2004)
 
