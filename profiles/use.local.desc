@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.181 2003/12/05 04:02:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.182 2003/12/07 03:18:19 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -201,6 +201,7 @@ net-www/w3m:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdispl
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
+sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tinylogin:uclibc - Compile with uclibc :)
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
