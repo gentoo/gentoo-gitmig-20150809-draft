@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.21.ebuild,v 1.9 2004/11/07 23:29:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.21.ebuild,v 1.10 2004/11/09 14:18:21 urilith Exp $
 
 MY_P=${P}-1.3.32
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ~ia64 mips ppc sparc x86"
 IUSE=""
 
-DEPEND="|| ( =net-www/apache-1.3.32* =net-www/apache-1.3.33* )
+DEPEND="|| ( =net-www/apache-1.3.32 =net-www/apache-1.3.33 )
 	>=dev-libs/openssl-0.9.6k"
 
 src_unpack() {
