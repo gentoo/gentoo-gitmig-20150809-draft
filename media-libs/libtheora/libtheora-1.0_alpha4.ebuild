@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha4.ebuild,v 1.4 2005/02/06 17:00:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha4.ebuild,v 1.5 2005/02/22 19:48:22 luckyduck Exp $
 inherit flag-o-matic
 
 DESCRIPTION="The Theora Video Compression Codec"
@@ -10,10 +10,12 @@ SRC_URI="http://downloads.xiph.org/releases/theora/${P/_}.tar.bz2"
 LICENSE="xiph"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
-IUSE=""
+IUSE="encode pic doc"
 
-DEPEND=">=media-libs/libogg-1.1.0
+RDEPEND=">=media-libs/libogg-1.1.0
 	>=media-libs/libvorbis-1.0.1"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${P/_}
 
@@ -26,7 +28,14 @@ src_unpack() {
 src_compile() {
 	# bug #75403, -O3 needs to be filtered to -O2
 	replace-flags -O3 -O2
-	econf --enable-shared || die
+
+	use doc ||
+		export ac_cv_prog_HAVE_DOXYGEN="false"
+
+	econf \
+		$(use_enable encode) \
+		$(use_with pic) \
+		--enable-shared --disable-dependency-tracking || die
 	emake || die
 }
 

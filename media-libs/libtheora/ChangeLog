@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.23 2005/02/06 17:00:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.24 2005/02/22 19:48:22 luckyduck Exp $
+
+  22 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  libtheora-1.0_alpha4.ebuild:
+  applied patch which was suggested by Diego Pettenò
+  <dgp85@users.sourceforge.net>. fixes #82745
 
   07 Feb 2005; Chris White <chriswhite@gentoo.org>
   libtheora-1.0_alpha3.ebuild, libtheora-1.0_alpha4.ebuild:
