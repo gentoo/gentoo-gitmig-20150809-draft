@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.12 2002/12/20 23:22:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.13 2002/12/21 06:59:59 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -16,7 +16,7 @@ SAVDRV_VER="1.1.26t"
 
 MY_V=${PV}
 S=${WORKDIR}/xc
-S_XFT2="${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xft"
+#S_XFT2="${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xft"
 DESCRIPTION="Xfree86: famous and free X server"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${PV}/source"
@@ -80,11 +80,11 @@ PROVIDE="virtual/x11
 src_unpack () {
 
 	unpack X${MY_V}-{1,2,3,4}.tar.bz2 \
-		fcpackage.${FC2_VER/\./_}.tar.gz \
 		freetype-${FT2_VER}.tar.bz2
+	#	fcpackage.${FC2_VER/\./_}.tar.gz \
 
 	# Fix permissions
-	chmod -R 0755 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
+	# chmod -R 0755 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
 	
 
 	# Deploy our custom freetype2.  We want it static for stability,
