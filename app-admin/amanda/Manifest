@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9e3bac518c50528fbf94874c987c036 amanda-2.4.4-r3.ebuild 11287
 MD5 a148574a8ecd216969f0edf1de34cfee amanda-2.4.4_p2.ebuild 11337
 MD5 05864406ff2212b5ea87bd635aa3c3ba ChangeLog 5679
@@ -20,3 +23,10 @@ MD5 89f98efbd6fee9891cd6c39d52e5d7a8 files/amanda-devfs 349
 MD5 0c1121f81cee9a50018b96c615b4554b files/digest-amanda-2.4.4_p2 67
 MD5 7e3ebbf89155432d9ee2e0ede8d4d8d6 files/example_amanda.conf 635
 MD5 a98390eb2ab16398b7332c42560c190f files/amanda-cron 419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCNzy0LLFUmVNQ7rkRAipgAKCRTYUm2xyqRQvRZSsLJKt1sXnDbQCdG9B9
+MvDJvjw5U0MfuhflTIrq0x4=
+=nOx+
+-----END PGP SIGNATURE-----
