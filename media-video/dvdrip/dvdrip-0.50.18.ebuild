@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.18.ebuild,v 1.4 2004/10/17 11:32:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.18.ebuild,v 1.5 2004/11/22 16:11:56 vapier Exp $
 
 inherit perl-module
 
@@ -36,11 +36,17 @@ RDEPEND="${DEPEND}
 	>=media-video/mjpegtools-1.6.0
 	sys-apps/eject"
 
-src_install () {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i 's:cc :$(CC) :' src/Makefile || die "sed failed"
+}
+
+src_install() {
 	perl-module_src_install
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	einfo "If you want to use the cluster-mode, you need to SUID fping"
 	einfo "chmod u+s /usr/sbin/fping"
 	einfo
