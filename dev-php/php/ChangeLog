@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.142 2005/02/11 23:01:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.143 2005/02/21 20:36:37 hardave Exp $
+
+  21 Feb 2005; Hardave Riar <hardave@gentoo.org> php-4.3.10.ebuild:
+  Stable on mips
 
   11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
   +files/php-5.0.3-missing-arches.patch, php-5.0.3.ebuild:
