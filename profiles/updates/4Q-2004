@@ -193,3 +193,4 @@ move app-sci/ginac sci-mathematics/ginac
 move app-sci/glpk sci-mathematics/glpk
 move app-sci/gturing sci-mathematics/gturing
 move app-sci/kalamaris sci-mathematics/kalamaris
+move app-sci/koctave sci-mathematics/koctave
