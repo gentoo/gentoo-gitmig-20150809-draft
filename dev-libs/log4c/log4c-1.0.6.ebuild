@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Matthew Kennedy <mkennedy@gentoo.org>
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.6.ebuild,v 1.1 2002/05/03 01:32:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.6.ebuild,v 1.2 2002/05/14 18:28:37 g2boojum Exp $
 
 LICENSE="LGPL-2.1"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Log4c is a library of C for flexible logging to files, syslog and other destinations. It is modeled after the Log for Java library (http://jakarta.apache.org/log4j/), staying as close to their API as is reasonable."
-SRC_URI="http://prdownloads.sourceforge.net/log4c/${P}.tar.gz"
+SRC_URI="http://unc.dl.sourceforge.net/sourceforge/log4c/${P}.tar.gz"
 HOMEPAGE="http://www.cimai.com/opensource/log4c/index.html"
 
 DEPEND="virtual/glibc
