@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.3 2003/07/09 23:22:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.4 2003/07/11 15:05:30 aliz Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -36,7 +36,7 @@ src_unpack() {
 		&& libsopts="${libsopts} -lXpm -lX11"
 
 	compopts="${compopts} -DHAVE_LIBPNG -DHAVE_LIBJPEG"
-	libsopts="${libsopts} -lpng -jpeg"
+	libsopts="${libsopts} -lpng -ljpeg"
 
 	if [ `use freetype-version-1` ] ; then
 		compopts="${compopts} -DHAVE_LIBTTF"
