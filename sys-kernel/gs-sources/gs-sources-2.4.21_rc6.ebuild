@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_rc6.ebuild,v 1.2 2003/06/01 18:23:14 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_rc6.ebuild,v 1.3 2003/06/01 20:15:02 livewire Exp $
 
 IUSE="build crypt"
 
@@ -31,15 +31,14 @@ DESCRIPTION="This kernel stays up to date with current kernel -pres,
 	     with recent acpi,evms,win3lin ,futexes,aic79xx,
              superfreeswan,preempt/ll, and various hw fixes."
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 mirror://gentoo/patches-${KV}.tar.bz2"
+	 http://gentoo.lostlogicx.com/patches-${KV}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc "
 SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-
-	cd ${KV}
+	cd ${KV} || die
 	# Kill patches we aren't suppposed to use, don't worry about 
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
@@ -54,4 +53,7 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
+	 cd ${WORKDIR}/linux-${KV} || die
+        patch -p1 <${FILESDIR}/00_3.5-useraddress.patch || die
+
 }
