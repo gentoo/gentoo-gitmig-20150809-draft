@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/foldingathome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.13 2004/06/07 07:34:00 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.14 2004/06/12 18:00:08 kugelfang Exp $
+
+  12 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  foldingathome-4.0.0-r2.ebuild:
+  Marked ~amd64.
 
 *foldingathome-4.0.0-r2 (07 Jun 2004)
 
