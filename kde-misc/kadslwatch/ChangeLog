@@ -1,0 +1,13 @@
+# ChangeLog for kde-misc/kadslwatch
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/ChangeLog,v 1.1 2004/10/29 14:12:24 motaboy Exp $
+
+*kadslwatch-01.00.05 (29 Oct 2004)
+
+  29 Oct 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +files/kadslwatch-01.00.05-Makefiles.patch,
+  +files/kadslwatch-01.00.05-configure.patch, +kadslwatch-01.00.05.ebuild:
+  New Ebuild, thanks to tuXXer and Stefan Briesenick. Closes bug #23051. Added
+  a patch for the configure script to honor the 'arts' USE flag, and a patch
+  to fix a sandbox violation
+
