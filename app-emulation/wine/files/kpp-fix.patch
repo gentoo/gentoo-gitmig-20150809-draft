@@ -1,0 +1,29 @@
+revision 1.95
+date: 2003/05/13 22:15:26;  author: julliard;  state: Exp;  lines: +0 -2
+Dmitry Timoshkov <dmitry_at_codeweavers.com>
+Remove redundant ITypeLib2_AddRef's. Makes
+LoadTypeLib/ITypeLib2_Release work.
+Index: typelib.c
+===================================================================
+RCS file: /home/wine/wine/dlls/oleaut32/typelib.c,v
+retrieving revision 1.94
+retrieving revision 1.95
+diff -u -r1.94 -r1.95
+--- typelib.c   13 May 2003 00:41:58 -0000      1.94
++++ typelib.c   13 May 2003 22:15:26 -0000      1.95
+@@ -1844,7 +1844,6 @@
+                       pcx->pTblDir->pTypeInfoTab.offset+count*sizeof(tiBase));
+ /* this is where we are coming from */
+     ptiRet->pTypeLib = pLibInfo;
+-    ITypeLib2_AddRef((ITypeLib2 *)pLibInfo);
+     ptiRet->index=count;
+ /* fill in the typeattr fields */
+     FIXME("Assign constructor/destructor memid\n");
+@@ -3055,7 +3054,6 @@
+       }
+       *ppTypeInfoImpl = (ITypeInfoImpl*)ITypeInfo_Constructor();
+       (*ppTypeInfoImpl)->pTypeLib = pTypeLibImpl;
+-         ITypeLib2_AddRef((ITypeLib2 *)pTypeLibImpl);
+       (*ppTypeInfoImpl)->index = i;
+       (*ppTypeInfoImpl)->Name = TLB_MultiByteToBSTR(
+                                             pOtherTypeInfoBlks[i].name_offs +
