@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (20 May 2003)
+# Quick masking session to ensure that
+# the 48-proper release is good to go.
+=sys-apps/portage-2.0.48
+
 # <pauldv@gentoo.org> (17 May 2003)
 # Masking this version as the "standard" version is testing and this new
 # ebuild has quite some changes, so I don't want it to be testing immediately
