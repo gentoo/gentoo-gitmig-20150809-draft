@@ -522,10 +522,6 @@ net-misc/nt
 # masked for extensive testing
 x11-libs/qt-embedded
 
-# <bass@gentoo.org> (16 Aug 2002)
-# test it please
-=app-admin/localepurge-0.2
-
 # <blizzy@gentoo.org> (14 Aug 2002)
 # masked since there doesn't seem to be a download location
 =net-misc/netstat-nat-1.3
