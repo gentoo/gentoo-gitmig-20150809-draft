@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.0.1.ebuild,v 1.2 2003/08/26 17:18:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.0.1.ebuild,v 1.3 2003/09/11 00:57:18 msterret Exp $
 
 DESCRIPTION="Desktop Publishing (DTP) and Layout program for Linux."
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"
@@ -15,7 +15,7 @@ DEPEND="=x11-libs/qt-3*
 	>=media-libs/freetype-2.1
 	>=media-libs/lcms-1.09
 	sys-libs/zlib
-        !media-plugins/scribus-svg"
+	!media-plugins/scribus-svg"
 
 src_compile() {
 	econf || die

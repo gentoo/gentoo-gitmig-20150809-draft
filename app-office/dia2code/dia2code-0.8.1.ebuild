@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.1.ebuild,v 1.6 2003/02/13 09:15:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.1.ebuild,v 1.7 2003/09/11 00:57:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Convert UML diagrams produced with Dia to various source code flavours."
@@ -22,7 +22,7 @@ src_compile () {
 	# libxml2 header fix
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
 	./configure --prefix=/usr \
-                --host="${CHOST}"
+				--host="${CHOST}"
 	emake || die
 }
 
