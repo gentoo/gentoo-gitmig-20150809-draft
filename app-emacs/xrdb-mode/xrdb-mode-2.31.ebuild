@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/xrdb-mode-2.31.ebuild,v 1.4 2004/06/24 22:28:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/xrdb-mode-2.31.ebuild,v 1.5 2004/10/09 19:50:33 usata Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.python.org/emacs/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/emacs"
 
