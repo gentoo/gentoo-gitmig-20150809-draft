@@ -1,0 +1,33 @@
+===================================================================
+RCS file: /home2/webcvs/mirror/kdeaddons/konq-plugins/Makefile.am,v
+retrieving revision 1.12
+retrieving revision 1.13
+diff -u -p -r1.12 -r1.13
+--- konq-plugins/Makefile.am	2002/06/24 22:34:10	1.12
++++ konq-plugins/Makefile.am	2002/11/28 14:08:20	1.13
+@@ -1,2 +1,2 @@
+-SUBDIRS = khtmlsettingsplugin kimgalleryplugin dirfilter uachanger \
++SUBDIRS = crashes khtmlsettingsplugin kimgalleryplugin dirfilter uachanger \
+           babelfish validators domtreeviewer webarchiver sidebar kuick smbmounter
+===================================================================
+RCS file: /home2/webcvs/mirror/kdeaddons/konq-plugins/crashes/crashesplugin.cpp,v
+retrieving revision 1.8
+retrieving revision 1.9
+diff -u -p -r1.8 -r1.9
+--- konq-plugins/crashes/crashesplugin.cpp	2002/09/18 09:37:52	1.8
++++ konq-plugins/crashes/crashesplugin.cpp	2002/11/28 14:08:20	1.9
+@@ -135,12 +135,12 @@ void CrashesPlugin::slotAboutToShow()
+ 
+ void CrashesPlugin::newBookmarkCallback( const QString & text, const QCString & url, const QString & additionnalInfo )
+ {
+-  m_crashesList << qMakePair(text,url);
++  m_crashesList.prepend(qMakePair(text,url));
+ }
+ 
+ void CrashesPlugin::endFolderCallback( )
+ {
+-  m_crashesList << qMakePair(QString("-"),QCString("-"));
++  m_crashesList.prepend(qMakePair(QString("-"),QCString("-")));
+ }
+ 
+ void CrashesPlugin::slotClearCrashes() {
