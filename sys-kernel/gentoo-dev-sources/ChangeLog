@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.28 2004/01/11 22:53:51 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.29 2004/01/12 20:51:33 brad_mssw Exp $
+
+*gentoo-dev-sources-2.6.1-r1 (12 Jan 2004)
+
+  12 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  gentoo-dev-sources-2.6.1-r1.ebuild:
+  Genpatches experimental changes. KEYWORDed -* for now until further testing is
+  complete
 
   11 Jan 2004; John Mylchreest <johnm@gentoo.org> :
   cleanup in prep for eclass migration
