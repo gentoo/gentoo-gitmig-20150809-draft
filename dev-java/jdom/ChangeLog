@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.6 2003/05/26 09:09:53 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.7 2003/05/26 11:20:19 absinthe Exp $
+
+*jdom-1.0_beta8-r4 (26 May 2003)
+
+  26 May 2003; Dylan Carlson <absinthe@gentoo.org> jdom-1.0_beta8-r4.ebuild:
+  In this version, ant.jar will not be installed. Also JDOM will DEPEND on xalan
+  and xerces separately, and those JARs will not be installed either. So be sure
+  to add those packages to your CLASSPATH via java-config if you want JDOM to
+  function. Closes #20066.
 
 *jdom-1.0_beta8-r3 (26 May 2003)
 
