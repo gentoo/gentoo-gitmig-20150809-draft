@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.9 2003/10/26 22:05:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.10 2003/10/27 17:56:55 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -273,7 +273,7 @@ src_install() {
 	done
 	chmod go-rwx ${D}/etc/shadow
 	# We do not want to overwrite the user's settings
-	[ -f "${ROOT}/etc/hosts" ] && rm -f ${ROOT}/etc/hosts
+	[ -f "${ROOT}/etc/hosts" ] && rm -f ${D}/etc/hosts
 
 	keepdir_mount /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
