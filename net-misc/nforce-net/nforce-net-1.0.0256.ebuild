@@ -1,31 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0256.ebuild,v 1.5 2003/08/04 13:07:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0256.ebuild,v 1.6 2003/08/04 13:12:33 vapier Exp $
 
 inherit gcc
-
-# Make sure Portage does _NOT_ strip symbols.  Need both lines for
-# Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_nforce-${NV_V}"
 S="${WORKDIR}/nforce"
 DESCRIPTION="Linux kernel module for the NVIDIA's nForce network chip"
-SRC_URI="http://download.nvidia.com/XFree86/nforce/${NV_V}/${NV_PACKAGE}.tar.gz"
 HOMEPAGE="http://www.nvidia.com/"
+SRC_URI="http://download.nvidia.com/XFree86/nforce/${NV_V}/${NV_PACKAGE}.tar.gz"
 
-# The slow needs to be set to $KV to prevent unmerges of
-# modules for other kernels.
+# The SLOT needs to be set to $KV to prevent unmerges of modules for other kernels
 LICENSE="NVIDIA"
 SLOT="${KV}"
 KEYWORDS="-* x86"
+RESTRICT="nostrip"
 
-DEPEND="virtual/linux-sources >=sys-apps/portage-1.9.10"
+DEPEND="virtual/linux-sources"
 
 src_compile() {
-	# Portage should determine the version of the kernel sources
 	check_KV
 	cd ${S}/nvnet
 	make KERNSRC="/usr/src/linux" || die
@@ -53,4 +47,3 @@ pkg_postinst() {
 	einfo "use the 'hotplug' package ('emerge hotplug' then 'rc-update add"
 	einfo "hotplug default') to auto-detect and load \"nvnet\" on startup."
 }
-
