@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/aqmoney
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aqmoney/ChangeLog,v 1.3 2004/03/14 10:48:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aqmoney/ChangeLog,v 1.4 2004/04/10 16:18:35 zx Exp $
+
+  10 Apr 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml:
+  Adding missing metadata.xml
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> aqmoney-0.6.1.ebuild,
   aqmoney-0.6.2.ebuild:
