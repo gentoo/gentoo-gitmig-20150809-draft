@@ -1,20 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r2.ebuild,v 1.1 2004/07/23 15:33:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0_pre1.ebuild,v 1.1 2004/09/07 08:31:10 usata Exp $
 
-inherit perl-module 64-bit flag-o-matic
+inherit perl-module flag-o-matic
+
+MY_P="${P/_pre/-preview}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Japanese Morphological Analysis System, ChaSen"
 HOMEPAGE="http://chasen.aist-nara.ac.jp/"
-SRC_URI="http://chasen.aist-nara.ac.jp/stable/chasen/${P}.tar.gz"
+SRC_URI="http://chasen.aist-nara.ac.jp/stable/chasen/${MY_P}.tar.gz"
 
 LICENSE="chasen"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 IUSE="perl"
 
-DEPEND="${DEPEND}
-	>=dev-libs/darts-0.2"
+DEPEND=">=dev-libs/darts-0.2"
 PDEPEND=">=app-dicts/ipadic-2.6.1"
 
 src_unpack() {
@@ -27,7 +29,8 @@ src_unpack() {
 }
 
 src_compile() {
-	64-bit && append-flags -fPIC
+	# Unconditional use of -fPIC (#55238)
+	append-flags -fPIC
 	econf || die
 	emake || die
 	if use perl ; then

@@ -1,6 +1,13 @@
 # ChangeLog for app-text/chasen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.11 2004/08/30 10:14:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.12 2004/09/07 08:31:10 usata Exp $
+
+*chasen-2.4.0_pre1 (07 Sep 2004)
+
+  07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -chasen-2.3.1.ebuild,
+  -chasen-2.3.2.ebuild, -chasen-2.3.3-r1.ebuild, -chasen-2.3.3-r2.ebuild,
+  +chasen-2.4.0_pre1.ebuild:
+  Added development version. Cleaned out ebuilds.
 
 *chasen-2.3.3-r3 (30 Aug 2004)
 
