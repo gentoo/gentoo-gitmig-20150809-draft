@@ -1,0 +1,7 @@
+# ChangeLog for sys-cluster/cman
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.4 2005/01/27 04:37:56 xmerlin Exp $
+
+  27 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> :
+  new in portage
+
