@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.43 2003/07/18 15:29:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.44 2003/07/18 18:42:10 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -476,7 +476,6 @@ enewuser() {
 		eerror "No username specified !"
 		die "Cannot call enewuser without a username"
 	fi
-	einfo "Adding user '${euser}' to your system ..."
 
 	# setup a file for testing usernames/groups
 	local tmpfile="`mktemp -p ${T}`"
@@ -486,9 +485,9 @@ enewuser() {
 
 	# see if user already exists
 	if [ "${euser}" == "${realuser}" ] ; then
-		einfo "${euser} already exists on your system :)"
 		return 0
 	fi
+	einfo "Adding user '${euser}' to your system ..."
 
 	# options to pass to useradd
 	local opts=""
@@ -588,7 +587,6 @@ enewgroup() {
 		eerror "No group specified !"
 		die "Cannot call enewgroup without a group"
 	fi
-	einfo "Adding group '${egroup}' to your system ..."
 
 	# setup a file for testing groupname
 	local tmpfile="`mktemp -p ${T}`"
@@ -598,9 +596,9 @@ enewgroup() {
 
 	# see if group already exists
 	if [ "${egroup}" == "${realgroup}" ] ; then
-		einfo "${egroup} already exists on your system :)"
 		return 0
 	fi
+	einfo "Adding group '${egroup}' to your system ..."
 
 	# options to pass to useradd
 	local opts=""
