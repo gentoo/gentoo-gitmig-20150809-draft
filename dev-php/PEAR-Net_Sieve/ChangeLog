@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.16 2005/02/12 15:45:55 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.17 2005/03/08 17:15:34 sebastian Exp $
+
+  08 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-Net_Sieve-0.8.1-r1.ebuild, -PEAR-Net_Sieve-0.8.1.ebuild,
+  -PEAR-Net_Sieve-1.0.1.ebuild:
+  Cleanup.
 
 *PEAR-Net_Sieve-1.1.1 (12 Feb 2005)
 
