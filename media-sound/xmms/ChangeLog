@@ -1,12 +1,15 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.41 2003/03/04 23:09:35 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.42 2003/03/09 19:49:09 agriffis Exp $
 
   19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r18.ebuild :
   Add patch to save playlist, etc on SIGTERM and SIGINT, bug #13604.
 
 *xmms-1.2.7-r19 (04 March 2003)
-  
+
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> xmms-1.2.7-r19.ebuild:
+  Mark stable on alpha
+
   04 March 2003; Spider <spider@gentoo.org> xmms-1.2.7-r19.ebuild :
   okay, I got a headache here, seems that einstall changed to include 
   "libdir=${D}/usr/lib" in here, this caused xmms to install files into
