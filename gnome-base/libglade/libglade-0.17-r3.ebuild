@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r3.ebuild,v 1.1 2001/12/13 18:19:02 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r3.ebuild,v 1.2 2001/12/14 04:36:45 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libglade"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=dev-libs/libxml-1.8.15
-	 >=gnome-base/gnome-libs-1.4.1.2-r1
+	 >=gnome-base/gnome-libs-1.4.1.2-r1"
 #	 bonobo? ( >=gnome-base/bonobo-1.0.9-r1 )"
 
 DEPEND="${RDEPEND}
