@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.9 2005/01/11 20:28:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.10 2005/01/28 15:49:13 luckyduck Exp $
 
 inherit eutils gcc
 
@@ -19,7 +19,8 @@ IUSE=""
 KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND="virtual/x11
 	>=media-libs/libsdl-1.2.6-r3
-	>=x11-libs/qt-3.3.0-r1"
+	>=x11-libs/qt-3.3.0-r1
+	media-libs/libmpeg2"
 
 
 src_unpack() {

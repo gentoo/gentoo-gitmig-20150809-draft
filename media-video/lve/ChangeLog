@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lve
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.9 2005/01/11 20:28:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.10 2005/01/28 15:49:13 luckyduck Exp $
+
+  28 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> lve-040322.ebuild:
+  added missing libmpeg2 dependency. fixes #69229
 
   12 Jan 2005; Chris White <chriswhite@gentoo.org> lve-040322.ebuild:
   Fixed lots of broken things as far as CFLAGS and configuration.
