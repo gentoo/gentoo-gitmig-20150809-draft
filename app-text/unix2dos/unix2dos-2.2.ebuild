@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.1 2002/12/01 06:03:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.2 2002/12/01 16:59:08 vapier Exp $
 
 DESCRIPTION="unix2dos - UNIX to DOS text file format converter"
 HOMEPAGE=""
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=""
-RDEPEND="!app-text/hd2u"
+RDEPEND=""
 
 S=${WORKDIR}
 

@@ -10,7 +10,7 @@ KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
-RDEPEND="!app-text/unix2dos"
+RDEPEND="!app-text/dos2unix"
 
 src_compile() {
 	econf
