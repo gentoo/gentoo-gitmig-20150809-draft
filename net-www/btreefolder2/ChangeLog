@@ -1,9 +1,0 @@
-# ChangeLog for net-www/btreefolder2
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/btreefolder2/ChangeLog,v 1.1 2003/02/28 00:42:57 kutsuya Exp $
-
-*btreefolder2-0.5.0 (27 Feb 2003)
-
-  27 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> btreefolder2-0.5.0.ebuild:
-  Inital import. Ebuild submitted by Dominik (#16286).
-
