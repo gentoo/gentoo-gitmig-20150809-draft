@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.89 2003/10/10 18:44:08 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.90 2003/10/13 15:22:06 taviso Exp $
+
+  13 Oct 2003; Tavis Ormandy <taviso@gentoo.org> glibc-2.3.2-r1.ebuild:
+  Downgrading glibc had some unintentional side effects, stable again.
 
   10 Oct 2003; Alexander Gabert <pappy@gentoo.org> glibc-2.3.1-r4.ebuild,
   glibc-2.3.2-r1.ebuild:
