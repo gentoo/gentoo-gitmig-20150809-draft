@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.4 2002/12/19 00:51:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.5 2003/01/02 07:21:20 raker Exp $
 
 *gnump3d-1.0 (18 Dec 2002)
+
+  01 Jan 2002; Nick Hadaway <raker@gentoo.org> gnump3d-1.0.ebuild :
+  new rc scripts, removed a debian-specific gnump3d-config, and
+  gnump3d-specific libraries are now in /usr/lib/gnump3d instead of
+  /usr/lib.  Ebuild now creates /var/log/gnump3d. 
 
   18 Dec 2002; Nick Hadaway <raker@gentoo.org> gnump3d-1.0.ebuild,
   files/digest-gnump3d-1.0 :
