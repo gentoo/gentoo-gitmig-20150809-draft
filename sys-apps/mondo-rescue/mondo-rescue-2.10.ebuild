@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.2 2004/08/13 12:21:56 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.3 2004/08/13 13:49:38 pfeifer Exp $
 
 inherit libtool
 
@@ -43,6 +43,8 @@ src_compile() {
 src_install() {
 	#make install DESTDIR=${D} || die "make install failed"
 	einstall || die "Install failed"
+	exeinto /usr/share/mondo
+	doexe mondo/autorun
 }
 
 pkg_postinst() {
