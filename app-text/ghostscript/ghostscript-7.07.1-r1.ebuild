@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.14 2004/09/02 21:09:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.15 2004/09/02 21:50:07 kugelfang Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -55,8 +55,10 @@ src_unpack() {
 	epatch ${FILESDIR}/gs7.05.6-gdevpx.patch
 
 	# search path fix
-	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):" Makefile.in
-	sed -i -e 's:$(gsdir)/fonts:/usr/share/ghostscript/fonts:' Makefile.in
+	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):" \
+	Makefile.in || die "sed failed"
+	sed -i -e 's:$(gsdir)/fonts:/usr/share/ghostscript/fonts:' \
+	Makefile.in || die "sed failed"
 }
 
 src_compile() {
