@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.45 2004/02/17 21:52:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.46 2004/03/25 06:46:30 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> wxGTK-2.4.0.ebuild,
+  wxGTK-2.4.1-r1.ebuild:
+  don't use deprecated ? : use syntax
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> wxGTK-2.4.2.ebuild:
   stable on ia64
