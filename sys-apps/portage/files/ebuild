@@ -27,6 +27,7 @@ initvars() {
 	export INSOPTIONS="-m0644"
 	export EXEOPTIONS="-m0755"	
 	export LIBOPTIONS="-m0644"
+	export DIROPTIONS="-m0755"
 	export MOPREFIX=${PN}
 	export KVERS=`uname -r`
 }
@@ -405,6 +406,15 @@ insopts() {
         fi
     done
     export INSOPTIONS
+}
+
+diropts() {
+    DIROPTIONS=""
+    for x in $*
+    do
+	DIROPTIONS="${DIROPTIONS} $x"
+    done
+    export DIROPTIONS
 }
 
 doins() {
