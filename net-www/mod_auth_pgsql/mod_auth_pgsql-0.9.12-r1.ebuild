@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-0.9.12-r1.ebuild,v 1.1 2005/02/20 00:29:23 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-0.9.12-r1.ebuild,v 1.2 2005/02/20 00:42:16 nakano Exp $
 
 inherit apache-module
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.giuseppetanzilli.it/mod_auth_pgsql/dist/${P}.tar.gz"
 HOMEPAGE="http://www.giuseppetanzilli.it/mod_auth_pgsql/"
 KEYWORDS="~x86"
 LICENSE="freedist"
-SLOT="0"
+SLOT="1"
 DEPEND="dev-db/postgresql"
 IUSE=""
 
