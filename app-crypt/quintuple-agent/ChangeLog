@@ -1,0 +1,8 @@
+# ChangeLog for app-crypt/quintuple-agent
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/ChangeLog,v 1.1 2003/02/07 14:57:12 jrray Exp $
+
+*quintuple-agent-1.0.3 (07 Feb 2003)
+
+  07 Feb 2003; J Robert Ray <jrray@gentoo.org> : Initial ebuild,
+  contributed by Clemens Oertel <gentoo-bugzilla@kriegste.net>.
