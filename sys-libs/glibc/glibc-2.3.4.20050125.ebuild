@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.16 2005/02/13 10:35:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.17 2005/02/13 10:51:04 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -433,7 +433,7 @@ EOF
 
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
-	fperms 4711 /usr/lib/misc/pt_chown
+	fperms 4711 $(alt_prefix)/libexec/pt_chown
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().
