@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/savirc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/savirc/ChangeLog,v 1.1 2004/09/27 00:59:49 swegener Exp $
+
+*savirc-1.99 (27 Sep 2004)
+
+  27 Sep 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +savirc-1.99.ebuild:
+  Initial import, ebuild submitted by Sander van Grieken <sander@3v8.net> in bug
+  #63193.
+
