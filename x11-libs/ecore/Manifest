@@ -5,14 +5,14 @@ MD5 97061826a4036214d1527cc8b786ae94 ChangeLog 663
 MD5 4b1e3ea96592a8c94e9c4b42ffe048f9 ecore-1.0.0_pre7.ebuild 886
 MD5 f37911494b2f19fda2bf5b9d9a17f1e4 metadata.xml 611
 MD5 8656a5133c1116bd9ed59d7945f755ef ecore-1.0.0.20041016_pre7.ebuild 857
-MD5 ad13526527e540f9e02b6fe0cb5b81af ecore-9999.ebuild 842
+MD5 ce2e019cc8975ace6391f61965a45ef4 ecore-9999.ebuild 856
 MD5 00fa41b36a959f747a98865239e822c6 files/digest-ecore-1.0.0_pre7 68
 MD5 d15589c3b950287cb1746cdbf3bd213a files/digest-ecore-1.0.0.20041016_pre7 79
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ecore-9999 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeBhbHTu7gpaalycRAobKAKD3i3tLQ3bvQB0xb+5fcFxHzifSOACeMstb
-TWae23b2lU/R9x36toO1e0Y=
-=6FGc
+iD8DBQFBeBiuHTu7gpaalycRAnshAJ95Xjh7zbU/XZxhmsAWMvtU8JXT8wCgjB+f
+zAfPdnd1JXB7AdDCqZEM24o=
+=ZNby
 -----END PGP SIGNATURE-----
