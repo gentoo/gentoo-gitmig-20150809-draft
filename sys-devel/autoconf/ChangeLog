@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.5 2002/05/19 17:45:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.6 2002/05/22 22:51:59 azarah Exp $
+
+autoconf-2.53a (22 May 2002)
+
+  22 May 2002; M.Schlemmer <azarah@gentoo.org> autoconf-2.53a.ebuild :
+
+  Update in hope of fixing the gcc3 build problem (somewhere with
+  m4 version detection, bug #2929.  I am not sure, as I could not
+  get feedback if working or not.
 
 autoconf-2.53-r1 (19 May 2002)
 
