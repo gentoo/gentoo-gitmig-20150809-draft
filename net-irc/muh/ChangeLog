@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/muh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/ChangeLog,v 1.1 2003/09/30 19:14:16 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/ChangeLog,v 1.2 2003/10/02 00:44:59 hhg Exp $
+
+  02 Oct 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> muh-2.1_rc1.ebuild:
+  added a notice about the config file -- suggested by Ævar Arnfjörð Bjarmason
+  <avar@simnet.is>, see bug #30035
 
 *muh-2.1_rc1 (30 Sep 2003)
 
