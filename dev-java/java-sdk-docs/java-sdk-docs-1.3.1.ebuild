@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.3.1.ebuild,v 1.12 2004/06/24 22:31:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.3.1.ebuild,v 1.13 2004/07/14 02:18:13 agriffis Exp $
 
 At="j2sdk-1_3_1-doc.zip"
 S="${WORKDIR}/docs"
@@ -10,6 +10,7 @@ HOMEPAGE="http://java.sun.com/j2se/1.3/docs.html"
 LICENSE="sun-j2sl"
 SLOT="1.3"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 DEPEND=">=app-arch/unzip-5.50-r1"
 RESTRICT="fetch"
 
