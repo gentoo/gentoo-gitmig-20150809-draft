@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 98ace825a47cf44aba479bf54c7b6cab pymacs-0.22.ebuild 953
+MD5 28a3738adbdb90e4e938d4a841711582 ChangeLog 530
 MD5 21c241bbefde20d6fea4b612da378963 metadata.xml 178
-MD5 79cdfcaad735f6fedce9c66726a25889 ChangeLog 437
-MD5 f7d73dd21b3da6c8dc519bcb4cbea18c files/digest-pymacs-0.22 63
+MD5 0b3147cfcfa7f44275dd0d0a8de9d469 pymacs-0.22.ebuild 964
 MD5 bda0b79a6ef909ba726d0f9a9a7e84c0 files/50pymacs-gentoo.el 191
+MD5 f7d73dd21b3da6c8dc519bcb4cbea18c files/digest-pymacs-0.22 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.6 (Darwin)
 
-iD8DBQFBkQwLVWNWqTUmv+0RAldDAKCWgETk/WYSxxEqyFFJwlKbx5RRSgCgiYsd
-zIXyWjYoyBsvFk4f6wZuVCo=
-=K7h9
+iD8DBQFBkz6PVWNWqTUmv+0RArD7AJ9U1cKMyAN8YTWv9t3mDnhZ5Ww4JQCgjxwb
+kaRtDCHUwpzP6ZZQ8HGlUyQ=
+=bFIw
 -----END PGP SIGNATURE-----
