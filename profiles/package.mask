@@ -151,6 +151,7 @@ dev-lisp/cmucl-bin
 
 # <caleb@gentoo.org> (10 Sep 2003)
 # new kde versions mask
+=kde-base/kde-3.2.0_beta1
 =kde-base/kdeaccessibility_3.2.0_beta1
 =kde-base/kdeaddons-3.2.0_beta1
 =kde-base/kdeedu-3.2.0_beta1
