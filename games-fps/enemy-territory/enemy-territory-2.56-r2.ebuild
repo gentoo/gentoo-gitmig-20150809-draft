@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.9 2004/07/05 23:58:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.10 2004/07/19 13:41:45 augustus Exp $
 
 inherit games
 
@@ -12,14 +12,15 @@ SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers4/games/wolfensteinet/et-linux-$
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 IUSE="dedicated opengl"
 RESTRICT="nomirror nostrip"
 
 DEPEND="virtual/libc"
 RDEPEND="dedicated? ( app-misc/screen )
 	!dedicated? ( virtual/opengl )
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S="${WORKDIR}"
 dir="${GAMES_PREFIX_OPT}/${PN}"

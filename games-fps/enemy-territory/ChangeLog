@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.14 2004/07/05 23:58:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.15 2004/07/19 13:41:45 augustus Exp $
+
+  19 Jul 2004; <augustus@gentoo.org> enemy-territory-2.56-r2.ebuild:
+  Added amd64 keyword and added RDEPEND on emul-linux-x86-xlibs for amd64. Bug
+  #57561.
 
   05 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   enemy-territory-2.56-r2.ebuild:
