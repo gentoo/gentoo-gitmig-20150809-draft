@@ -1,0 +1,38 @@
+# ChangeLog for dev-libs/pnetlib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.1 2003/07/25 01:02:39 scandium Exp $
+
+*pnetlib-0.5.8 (25 Jul 2003)
+
+  25 Jul 2003; Rainer Groesslinger <scandium@gentoo.org> metadata.xml,
+  pnetlib-0.5.8.ebuild, files/Xsharp.patch, files/configure-X11.patch:
+  Move to dev-dotnet
+
+  02 Jul 2003; Rainer Groesslinger <scandium@gentoo.org> pnetlib-0.5.8.ebuild,
+  files/Xsharp.patch, files/configure-X11.patch:
+  Added X USE flag,
+  Added Patches for fixing Xsharp compilation on systems without X11
+
+*pnetlib-0.5.8 (17 Jun 2003)
+
+  17 Jun 2003; Rainer Groesslinger <scandium@gentoo.org> pnetlib-0.5.8.ebuild:
+  new version
+
+*pnetlib-0.5.6 (03 May 2003)
+
+  03 May 2003; Rainer Groesslinger <scandium@gentoo.org> pnetlib-0.5.6.ebuild:
+  version bump
+
+*pnetlib-0.5.4 (19 Apr 2003)
+
+  19 Apr 2003; Sascha Schwabbauer <cybersystem@gentoo.org>
+  pnetlib-0.5.4.ebuild:
+  Version bump to version 0.5.4, see bug #18634
+
+*pnetlib-0.5.2 (24 Feb 2003)
+
+  24 Feb 2003; foser <foser@gentoo.org> pnetlib-0.5.2.ebuild ChangeLog :
+  Initial commit
+  Ebuild adapted from the ones provided by 
+  Rainer Groesslinger <rainer.groesslinger@gmx.net> in bug #14148
+
