@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libiiimcf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimcf/ChangeLog,v 1.5 2004/09/13 19:52:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimcf/ChangeLog,v 1.6 2004/10/06 12:10:03 usata Exp $
+
+  06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  libiiimcf-12.0.1_pre1891.ebuild:
+  Requires eimil-${PV}
 
 *libiiimcf-12.0.1_pre1891 (14 Sep 2004)
 *libiiimcf-11.4_p1467 (14 Sep 2003)
