@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.6.0.ebuild,v 1.2 2003/09/15 12:18:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.6.0.ebuild,v 1.3 2003/09/15 17:22:47 seemant Exp $
 
 IUSE=""
 
@@ -10,6 +10,7 @@ DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound syste
 HOMEPAGE="http://www.xmms.org/plugins.php"
 SRC_URI="http://havardk.xmms.org/plugins/arts_output/${MY_P}.tar.gz"
 
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
