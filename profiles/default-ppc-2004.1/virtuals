@@ -29,6 +29,7 @@ virtual/krb5		app-crypt/mit-krb5
 virtual/linux-sources   sys-kernel/ppc-sources
 virtual/logger		app-admin/sysklogd
 virtual/lpr	     	net-print/cups
+virtual/mailx		mail-client/mailx
 virtual/mda		mail-filter/procmail
 virtual/modutils 	sys-apps/modutils
 virtual/mta	     	mail-mta/ssmtp
