@@ -1,0 +1,17 @@
+Index: proc/slab.c
+===================================================================
+RCS file: /cvsroot/procps/procps/proc/slab.c,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -u -r1.4 -r1.5
+--- proc/slab.c	5 Jan 2005 21:46:22 -0000	1.4
++++ proc/slab.c	10 Jan 2005 05:59:41 -0000	1.5
+@@ -293,7 +294,7 @@
+ 		return 1;
+ 	}
+ 
+-	if (major == 2 && minor == 0)
++	if (major == 2)
+ 		ret = parse_slabinfo20(list, stats, slabfile);
+ 	else if (major == 1 && minor == 1)
+ 		ret = parse_slabinfo11(list, stats, slabfile);
