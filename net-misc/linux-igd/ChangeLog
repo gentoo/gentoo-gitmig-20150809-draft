@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/linux-igd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.5 2003/03/11 22:20:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.6 2003/06/17 12:32:40 johnm Exp $
+
+*linux-igd-0.92 (17 Jun 2003)
+
+  17 Jun 2003; John Mylchreest <johnm@gentoo.org>; linux-igd-0.92.ebuild:
+  Bumping to latest version. fixes #22934?
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
