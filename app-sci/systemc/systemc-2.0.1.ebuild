@@ -1,11 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.1 2002/12/06 19:59:00 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.2 2002/12/18 14:43:08 vapier Exp $
 
-IUSE=""
-
-DESCRIPTION="A C++ based modeling platform for VLSI and system-level co-design."
-HOMEPAGE="http://www.systemc.org"
+DESCRIPTION="A C++ based modeling platform for VLSI and system-level co-design"
+HOMEPAGE="http://www.systemc.org/"
 SRC_URI="systemc-2.0.1.tgz"
 
 SLOT="0"
@@ -20,7 +18,7 @@ dyn_fetch() {
 		einfo "${PN} developes require end-users to accept their license agreement"
 		einfo "by registering on their site (http://www.systemc.org)"
 		einfo "Please download ${P} manually and place it in ${DISTDIR}"
-		exit 1
+		die
 	fi
 }
 
@@ -33,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+	econf
 	emake || die
 	cd ${S}/src/systemc/kernel
 	ar cru ../../../src/libsystemc.a sc_attribute.o sc_cor_fiber.o sc_cor_qt.o sc_event.o sc_kernel_ids.o sc_lambda.o sc_main.o sc_module.o sc_module_name.o sc_module_registry.o sc_name_gen.o sc_object.o sc_object_manager.o sc_process_int.o sc_runnable.o sc_sensitive.o sc_simcontext.o sc_time.o sc_ver.o sc_wait.o sc_wait_cthread.o
@@ -53,7 +51,7 @@ src_compile() {
 	ar cru ../../../src/libsystemc.a sc_exception.o sc_hash.o sc_list.o sc_mempool.o sc_pq.o sc_report.o sc_report_handler.o sc_stop_here.o sc_string.o sc_utils_ids.o sc_vector.o
 }
 
-src_install () {
+src_install() {
 	cd ${S}/src
 	dolib.a libsystemc.a
 	dodir /usr/include/systemc
@@ -69,7 +67,3 @@ src_install () {
 	sed -e "s:LIBDIR =:#LIBDIR =:g" Makefile.defs.orig > Makefile.defs.1
 	sed -e "s:\$(EXE).*:\$(EXE)\: \$(OBJS):g" Makefile.defs.1 > Makefile.defs
 }
-
-
-
-

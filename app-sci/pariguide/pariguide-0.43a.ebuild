@@ -1,28 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pariguide/pariguide-0.43a.ebuild,v 1.1 2002/12/15 23:07:28 george Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pariguide/pariguide-0.43a.ebuild,v 1.2 2002/12/18 14:44:51 vapier Exp $
 
 DESCRIPTION="PariGUIde, a GUI for the math. program Pari-GP"
 HOMEPAGE="http://www.skalatan.de/pariguide/"
-SRC_URI="ftp://ftp.sourceforge.net/pub/sourceforge/pariguide/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pariguide/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND=">=qt-2.2.0
-		virtual/x11"
-
-RDEPEND=">=pari-2.1.0"
-
-S="${WORKDIR}/${P}"
+DEPEND=">=x11-libs/qt-2.2.0
+	virtual/x11"
+RDEPEND=">=app-sci/pari-2.1.0"
 
 src_compile() {
-	#./configure \
-	#	--host=${CHOST} \
-	econf || die "configure failed"
+	econf
 	emake || die
 }
 
