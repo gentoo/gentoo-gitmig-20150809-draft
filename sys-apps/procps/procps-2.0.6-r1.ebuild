@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.6-r1.ebuild,v 1.2 2001/05/16 23:17:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.6-r1.ebuild,v 1.3 2001/05/16 23:21:46 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ src_unpack() {
     unpack ${A}
 
     cd ${S}
-    patch -p0 < ${FILESDIR}/${P}.diff
+    #patch -p1 < ${FILESDIR}/${P}.diff
 
     mv Makefile Makefile.orig
     sed -e "s/-O3/${CFLAGS}/" -e 's/all: config/all: /' \
