@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3.ebuild,v 1.1 2003/10/28 18:39:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3.ebuild,v 1.2 2003/12/29 17:13:54 weeve Exp $
 
 DESCRIPTION="A GNU implementation of the Secure Shell protocols"
 HOMEPAGE="http://www.lysator.liu.se/~nisse/lsh/"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.lysator.liu.se/pub/security/lsh/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 IUSE="kerberos pam tcpd ipv6 zlib X"
 
 DEPEND="dev-libs/gmp
