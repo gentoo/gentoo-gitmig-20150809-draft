@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.2.ebuild,v 1.10 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.2.ebuild,v 1.11 2003/10/19 14:11:51 lanius Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Giblib, graphics library"
@@ -23,5 +23,5 @@ src_compile() {
 src_install () {
 	make prefix=${D}/usr install || die
 	rm -rf ${D}/usr/doc
-	dodoc TODO README AUTHORS ChangeLog
+	dodoc README AUTHORS ChangeLog
 }
