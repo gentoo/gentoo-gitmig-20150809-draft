@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.0.12.ebuild,v 1.9 2005/02/14 13:34:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.0.12.ebuild,v 1.10 2005/02/19 11:34:30 dragonheart Exp $
 
 inherit eutils
 
@@ -26,10 +26,7 @@ src_compile() {
 src_install() {
 	make \
 		DESTDIR=${D} \
-		prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/lib \
-		mandir=${D}/usr/share/man \
 		install || die "Install failed libnasl"
+
 	dodoc COPYING TODO
 }

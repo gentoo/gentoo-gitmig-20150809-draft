@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.42 2005/02/16 00:51:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.43 2005/02/19 11:34:30 dragonheart Exp $
+
+  19 Feb 2005; Daniel Black <dragonheart@gentoo.org> libnasl-2.0.12.ebuild,
+  libnasl-2.2.0.ebuild:
+  Fixed broken install routines as per bug #82364. Thanks to mrgoby
+  <mrgoby@gmail.com>
 
   15 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> libnasl-2.3.0.ebuild:
   Use virtual/tetex rather than app-text/tetex for bug 82072.
