@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.01.ebuild,v 1.1 2004/11/26 20:46:35 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.01.ebuild,v 1.2 2005/01/06 16:02:45 dams Exp $
 
 IUSE=""
 

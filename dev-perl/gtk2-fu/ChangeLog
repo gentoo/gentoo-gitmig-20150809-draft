@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gtk2-fu
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.2 2004/11/29 22:52:46 dams Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.3 2005/01/06 16:02:45 dams Exp $
+
+*gtk2-fu-0.03 (06 Jan 2005)
+
+  06 Jan 2005; <dams@gentoo.org> +gtk2-fu-0.03.ebuild:
+  version 0.03 (MakeMaker)
+  corrected 2005 headers
 
 *gtk2-fu-0.02 (30 Nov 2004)
 
