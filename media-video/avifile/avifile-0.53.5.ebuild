@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.53.5.ebuild,v 1.4 2001/06/07 21:10:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.53.5.ebuild,v 1.5 2001/08/08 10:47:10 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for AVI-Files"
@@ -26,7 +26,7 @@ src_compile() {
 	LDFLAGS="-L/usr/X11R6/lib -lXt"
     fi
     export CFLAGS=${CFLAGS/-O?/-O2}
-    try LDFLAGS=\"$LDFLAGS\" ./configure --prefix=/usr/X11R6 --host=${CHOST} --disable-tsc $myconf
+    try LDFLAGS="$LDFLAGS" ./configure --prefix=/usr/X11R6 --host=${CHOST} --disable-tsc $myconf
     cp Makefile Makefile.orig
     sed -e "s:/usr/lib/win32:${D}/usr/lib/win32:" \
 	Makefile.orig > Makefile
