@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.14.ebuild,v 1.1 2004/10/19 14:10:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.14.ebuild,v 1.2 2004/10/20 15:26:13 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -23,7 +23,7 @@ DEPEND="${DEPEND}
 	dev-perl/GD-Graph3d )
 	mysql? ( dev-perl/DBI
 	dev-perl/DBD-mysql )
-	postgres? (dev-perl/DBI
+	postgres? ( dev-perl/DBI
 	dev-perl/DBD-Pg )
 	>=dev-perl/AppConfig-1.55"
 
