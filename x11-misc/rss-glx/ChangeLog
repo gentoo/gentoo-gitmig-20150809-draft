@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.3 2003/06/04 14:11:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.4 2003/06/04 14:13:46 liquidx Exp $
 
 *rss-glx-0.7.4-r1 (04 Jun 2003)
 
@@ -8,7 +8,7 @@
   files/rss-glx-0.7.4-gcc33.patch, files/rss-glx-0.7.4-kdedesktop.patch:
   - added gcc3.3 patch, thanks to Jason Rhinelander (#22034).
   - automatically adds itself to xscreensaver config. 
-  - fix kde xscreensaver installation issues.
+  - fix kde screensaver Makefile issues.
   - added kde .desktop patches and 3dnow/sse useflags. thanks to Daniel Black
     (#18675)
 
