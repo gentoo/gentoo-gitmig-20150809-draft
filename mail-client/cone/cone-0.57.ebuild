@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.57.ebuild,v 1.2 2004/05/30 09:09:36 robbat2 Exp $
 
 DESCRIPTION="Cone: COnsole News reader and Emailer"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
