@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.20_p0-r1.ebuild,v 1.2 2001/08/29 04:37:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.20_p0-r1.ebuild,v 1.3 2001/09/29 23:23:22 drobbins Exp $
 
 MYV=1.3.20-pl0
 S=${WORKDIR}/${PN}-${MYV}
@@ -18,15 +18,12 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	if [ -z "`use bootcd`" ] && [ =z "`use build`" ]
+	[ -z "`use build`" ]
 	then
 		dodoc AUTHORS COPYING ChangeLog NEWS README 
 	else
 		rm -rf ${D}/usr/share
 	fi
-	if [ "`use pcmcia`" ] || [ "`use pcmcia-cs`" ]
-	then
-		insinto /etc/pcmcia
-		doins pcmcia/network*
-	fi
+	insinto /etc/pcmcia
+	doins pcmcia/network*
 }
