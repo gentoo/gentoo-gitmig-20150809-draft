@@ -21,3 +21,4 @@ move app-misc/kdiff3 kde-misc/kdiff3
 move app-misc/krusader kde-misc/krusader
 move sys-apps/filelight kde-misc/filelight
 move x11-misc/komics kde-misc/komics
+move app-misc/kfish kde-misc/kfish
