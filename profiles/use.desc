@@ -38,7 +38,6 @@ encode - Adds support for MEncoder or LaME encoder, wherever applicable
 esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
 evo - Adds support for evolution in gnumeric
 fbcon - Adds framebuffer support for the console, via the kernel
-fbdev - Adds framebuffer support
 flash - Adds support for creating flash files using Ming
 gb - Adds support for Gnome Basic to gnumeric
 gd - Adds support for sys-libs/gdbm (GNU database libraries)
