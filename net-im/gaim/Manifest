@@ -1,5 +1,5 @@
 MD5 0e7e912e84a644bb51137bdb43ad24f4 gaim-0.76-r2.ebuild 4024
-MD5 87d95a81dd3a83e57564f6cfb538f77d gaim-0.77.ebuild 3930
+MD5 de6cd4ffa5115e9cc94e4a69ef272080 gaim-0.77.ebuild 4008
 MD5 3f83632c7a4343c69d51cbcff885c441 gaim-0.75-r10.ebuild 3673
 MD5 f3a63237b5ea4728df57b605937db3dd ChangeLog 27106
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
@@ -10,6 +10,7 @@ MD5 227bbaed75eb1c3130c70dfd919bd148 files/gaim-0.76-spellchk.diff 694
 MD5 3a5e6167d13c4a44a8618c12629d777e files/gaim-0.77-c99.patch 4790
 MD5 a714a5babbb4387f5a5516f75548528a files/gaim-0.76cvs-yahoo-misc-fixes-1.diff 3105
 MD5 68525b8389e356a5d05d531b84fb1ada files/gaim-0.74-gnome-url-handler.patch 1854
+MD5 a8234ce30b90015d2798a6f576982857 files/gaim-0.78cvs-novelltweaks5.patch 715
 MD5 8e59c66d91c79a3323e350a9c41d4ecb files/gevolution.h 2745
 MD5 8b152d59a54ab95627c4c0cd52758d75 files/digest-gaim-0.75-r8 63
 MD5 3f77b441979d00929ef77b64d4b4725c files/digest-gaim-0.76-r2 63
