@@ -1,0 +1,11 @@
+# ChangeLog for gnome-extra/evolution-data-server
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.1 2004/08/06 19:31:17 liquidx Exp $
+
+*evolution-data-server-0.0.97 (06 Aug 2004)
+
+  06 Aug 2004; Alastair Tse <liquidx@gentoo.org>
+  +evolution-data-server-0.0.97.ebuild:
+  initial commit for evolution-data-server ebuild. based on ebuild submitted buy
+  Joe McCann <joe@breakmygentoo.net> (#35456)
+
