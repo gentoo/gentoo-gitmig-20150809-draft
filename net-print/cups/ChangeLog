@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.6 2002/02/17 01:39:07 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.7 2002/03/07 14:26:21 gbevin Exp $
+
+*cups-1.1.14-r1 (7 Mar 2002)
+
+  7 Mar 2002; Geert Bevin <gbevin@gentoo.org>:
+  
+  Added support for the foomagic printer filters.
 
 *cups-1.1.14 (16 Feb 2002)
 

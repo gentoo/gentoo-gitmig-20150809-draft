@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14.ebuild,v 1.1 2002/02/17 01:39:07 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14-r1.ebuild,v 1.1 2002/03/07 14:26:21 gbevin Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -84,6 +84,11 @@ src_install() {
 	chown lp.root ${D}/etc/cups/certs ; chmod 711 ${D}/etc/cups/certs
 	chown lp.root ${D}/var/spool/cups ; chmod 0700 ${D}/var/spool/cups
 	chown lp.root ${D}/var/spool/cups/tmp ; chmod 01700 ${D}/var/spool/cups/tmp
+
+	# foomatic cups filters
+	insinto /usr/lib/cups/filter
+	doexe ${FILESDIR}/cupsomatic
+	doexe ${FILESDIR}/foomatic-gswrapper
 
 	# gentoo config stuff
 	insinto /etc/pam.d ; newins ${FILESDIR}/cups.pam cups
