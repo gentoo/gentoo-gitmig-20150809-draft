@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/jaxp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.2 2002/04/28 23:22:23 karltk Exp $
+
+*jaxp-1.2-r1 (29 Apr 2002)
+
+  29 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> jaxp-1.2-r1.ebuild files/digest-jaxp-1.2-r1:
+
+  Upstream package was updated. Direct URL is now in the ebuild so we can 
+  download directly. The jaxp license is _very_ restrictive, so a warning
+  is now issued when the package has been installed. 
+
+  This will have to be updated when the ACCEPT_LICENSE functionality goes 
+  into Portage.
+
+  Removed jaxp-1.2.ebuild files/digest-jaxp-1.2
 
 *jaxp-1.2 (1 Feb 2002)
 
