@@ -1,13 +1,23 @@
-MD5 a832dde562ee94b5616063fc2aee3651 ChangeLog 1631
-MD5 3fc0cad1de9b0234fc797cefe3dd486f lxdvdrip-1.10_pre2.ebuild 810
-MD5 221b05dfe72b22608cf78d7918babef7 lxdvdrip-1.10_pre5.ebuild 810
-MD5 3bfdf02b9ab39c3669cc01b503c4dee6 lxdvdrip-1.20_pre1-r1.ebuild 897
-MD5 972e933593d0117bcb321c61eb543c0d lxdvdrip-1.20_pre1.ebuild 819
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8533f49b7a2c3b5d3e5dae5a1a01a119 lxdvdrip-1.20_pre1.ebuild 835
+MD5 fe8231ded9b49bc8a3ca5eb93ea6a858 lxdvdrip-1.20_pre1-r1.ebuild 907
+MD5 d66ea9e179998b1b150e0b51919a6c21 lxdvdrip-1.30_pre4.ebuild 825
+MD5 7134111c116bfd1343cf59fb32d93443 lxdvdrip-1.10_pre5.ebuild 823
+MD5 d8a52f18cd6198c8bd92bb4beb274405 ChangeLog 1861
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 cfe98f8380095e9adfdf8b5e39dd5ec7 lxdvdrip-1.30_pre4.ebuild 811
+MD5 3a3c93006465271cea3287188ed44d1f lxdvdrip-1.10_pre2.ebuild 823
+MD5 10cbb6fe087db5e0ce75173d95d03df0 files/digest-lxdvdrip-1.30_pre4 67
+MD5 57482d8cce4aacca938b4e43c345e578 files/digest-lxdvdrip-1.20_pre1-r1 67
+MD5 9b28c10d15e06eb087911a837ec3a97c files/lxdvdrip-1.20_pre1-overflow.patch 752
 MD5 877c7bda100ae6f083ce5137aae3e5b1 files/digest-lxdvdrip-1.10_pre2 67
 MD5 cd76c64399dac2e89416dd89ccf32dda files/digest-lxdvdrip-1.10_pre5 67
 MD5 57482d8cce4aacca938b4e43c345e578 files/digest-lxdvdrip-1.20_pre1 67
-MD5 57482d8cce4aacca938b4e43c345e578 files/digest-lxdvdrip-1.20_pre1-r1 67
-MD5 9b28c10d15e06eb087911a837ec3a97c files/lxdvdrip-1.20_pre1-overflow.patch 752
-MD5 10cbb6fe087db5e0ce75173d95d03df0 files/digest-lxdvdrip-1.30_pre4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrPCWI1lqEGTUzyQRAm2pAJ9EFP4pwZRJdKXX8iycEKEqBJG5uwCggxB9
+hoSXlTkbs6f1kXi3b18uDow=
+=6KsB
+-----END PGP SIGNATURE-----
