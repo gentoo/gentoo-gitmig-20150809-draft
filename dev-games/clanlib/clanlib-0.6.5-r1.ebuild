@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r1.ebuild,v 1.6 2004/02/08 02:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r1.ebuild,v 1.7 2004/02/08 06:12:19 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,7 +45,7 @@ src_compile() {
 	econf \
 		--libdir=/usr/lib/${P} \
 		--enable-network \
-		--enable-asm386 \
+		`use_enable x86 asm386` \
 		--enable-dyn \
 		`use_enable X x11` \
 		`use_enable directfb` \
