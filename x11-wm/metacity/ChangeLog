@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.89 2005/02/23 08:08:27 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.90 2005/03/09 03:23:03 obz Exp $
+
+  09 Mar 2005; Mike Gardiner <obz@gentoo.org> metacity-2.8.8.ebuild:
+  Keyworded x86 ppc
 
 *metacity-2.8.13 (23 Feb 2005)
 
