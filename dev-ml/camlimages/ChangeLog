@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/camlimages
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.4 2004/06/25 00:01:21 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.5 2005/02/06 15:28:50 mattam Exp $
+
+*camlimages-2.20 (06 Feb 2005)
+
+  06 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> +files/META,
+  camlimages-2.11-r1.ebuild, -camlimages-2.11.ebuild, +camlimages-2.20.ebuild:
+  Removed old version, make 2.11 stable on ppc and add latest version 2.20 with
+  new install scheme.
 
   12 May 2004; David Holm <dholm@gentoo.org> camlimages-2.11-r1.ebuild:
   Added to ~ppc.
