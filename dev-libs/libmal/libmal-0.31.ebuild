@@ -1,26 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.10 2004/07/02 04:47:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.11 2004/10/19 18:03:46 vapier Exp $
 
-IUSE=""
-
-DESCRIPTION="libmal is a convenience library of the functions malsync distribution"
+DESCRIPTION="convenience library of the functions malsync distribution"
 HOMEPAGE="http://jasonday.home.att.net/code/libmal/libmal.html"
 SRC_URI="http://jasonday.home.att.net/code/libmal/${P}.tar.gz"
 
 LICENSE="MPL-1.0"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="amd64 ppc sparc x86"
+IUSE=""
 
-DEPEND="virtual/libc \
-		>=app-pda/pilot-link-0.11.7-r1"
-
-src_compile() {
-	econf || die "./configure failed"
-	emake || die
-}
+DEPEND="virtual/libc
+	>=app-pda/pilot-link-0.11.7-r1"
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL License.txt NEWS README
+	dodoc AUTHORS ChangeLog INSTALL License.txt NEWS README
 }
