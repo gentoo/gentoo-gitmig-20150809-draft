@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sidplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.7 2004/07/01 07:58:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.8 2004/07/03 08:19:01 eradicator Exp $
+
+*sidplay-2.0.9 (03 Jul 2004)
+
+  03 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  -sidplay-2.0.8.ebuild, +sidplay-2.0.9.ebuild:
+  Version bump.  Removing broken version.  Added ~amd64.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> sidplay-2.0.8.ebuild:
   virtual/glibc -> virtual/libc
