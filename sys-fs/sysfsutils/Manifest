@@ -1,13 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
 MD5 bd9192959c87d8c5931bb95b071e323d sysfsutils-0.3.0.ebuild 988
+MD5 760001c19f7c888bf89f78ca01cabc17 ChangeLog 2019
+MD5 95e6a30b01b41a89bf67fbc87745cc40 sysfsutils-0.2.0.ebuild 969
 MD5 560823181d9681ad32d00e8033f67d65 sysfsutils-0.4.0.ebuild 1009
 MD5 1cc66092671f5e4b3cefcdcac2672962 sysfsutils-1.0.0.ebuild 1164
-MD5 95e6a30b01b41a89bf67fbc87745cc40 sysfsutils-0.2.0.ebuild 969
-MD5 50f99ef887764bf54fbf5a37759fe966 sysfsutils-1.2.0.ebuild 956
-MD5 166d07e0743002c0f54dded5dd655e4b ChangeLog 1922
-MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
+MD5 ea8b8ae9c30f9b5055d44ba3397a3c30 sysfsutils-1.2.0.ebuild 961
+MD5 e3fe8d4ec06f785ffc6cf54df2ca4599 files/digest-sysfsutils-1.0.0 68
+MD5 5a161d5fa015560dcecb0f489399350d files/sysfsutils-1.0.0-dont-check-for-libsysfs.patch 386
+MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0 68
+MD5 ae9dcbf820cd304b04eb37505fbc3831 files/digest-sysfsutils-0.4.0 68
 MD5 3aeda907194d0ce63ad841586ea3187f files/digest-sysfsutils-0.2.0 67
 MD5 0384b6e5908a20cdcd66447733b28194 files/digest-sysfsutils-0.3.0 68
-MD5 ae9dcbf820cd304b04eb37505fbc3831 files/digest-sysfsutils-0.4.0 68
-MD5 e3fe8d4ec06f785ffc6cf54df2ca4599 files/digest-sysfsutils-1.0.0 68
-MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0 68
-MD5 5a161d5fa015560dcecb0f489399350d files/sysfsutils-1.0.0-dont-check-for-libsysfs.patch 386
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB1KFKugEuf3OQ0akRAsYxAJ9IxZq4ml4NHyhCiarGF76kwE7ICACaAit1
+SlKYnHLQGMnaGw+YihNdt4U=
+=zzsv
+-----END PGP SIGNATURE-----
