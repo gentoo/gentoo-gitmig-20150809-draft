@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/tdb-1.0.6.ebuild,v 1.12 2003/10/04 14:53:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/tdb-1.0.6.ebuild,v 1.13 2003/10/22 17:02:15 darkspecter Exp $
 
 inherit gnuconfig
 
@@ -8,7 +8,7 @@ DESCRIPTION="A Trivial Database"
 SRC_URI="mirror://sourceforge/tdb/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/tdb"
 
-KEYWORDS="x86 sparc ~alpha"
+KEYWORDS="x86 sparc ~alpha ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
