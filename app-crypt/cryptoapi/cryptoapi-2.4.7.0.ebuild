@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Preston A. Elder <prez@goth.net>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.2 2002/04/30 06:06:30 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.3 2002/05/01 01:03:02 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Modules that add encryption ability at the kernel level."
@@ -33,10 +33,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo " "
+	echo  " "
 	einfo "Please add cryptoloop to your /etc/modules.autoload."
-	einfo "If you would like to enable the module now:"
-	einfo "    depmod"
-	einfo "    modprobe cryptoloop"
-	einfo " "
+	echo  "   If you would like to enable the module now:"
+	echo  "       depmod"
+	echo  "       modprobe cryptoloop"
+	einfo "Make sure loopback support is included within your kernel."
+	echo  " "
 }

@@ -1,8 +1,13 @@
 # ChangeLog for app-crypt/cryptoapi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.2 2002/04/30 06:06:30 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.3 2002/05/01 01:03:02 rphillips Exp $
 
-*cryptoapi-2.4.7.0 (29 Apr 2002)
+*cryptoapi-2.4.7.0 (25 Apr 2002)
+
+  30 Apr 2002; Ryan Phillips <rphillips@gentoo.org> cryptoapi-2.4.7.0.ebuild :
+
+  modified trailing text to tell users to make sure loopback is installed
+  into the kernel
 
   29 Apr 2002; Ryan Phillips <rphillips@gentoo.org> cryptoapi-2.4.7.0.ebuild :
 
