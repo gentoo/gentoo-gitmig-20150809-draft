@@ -1,14 +1,22 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.8 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.9 2002/08/14 14:16:49 seemant Exp $
+
+*sh-utils-2.0.14 (14 Aug 2002)
+
+  14 Aug 2002; Seemant Kulleen <seemant@gentoo.org> sh-utils-2.0.14.ebuild :
+
+  Version bump, as requested by: klebermass@limtec.de (Martin Klebermass) in
+  bug #6035.  The uname function has undergone some changes, so while this
+  is masked for testing, I am waiting for a patch from Carlos for uname.
+
+*sh-utils-2.0.11-r5 (21 Jun 2002)
 
   09 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   files/sh-utils-2.0.11-gentoo.patch :
 
   Added one line to the Carlos E Gorges <carlos@techlinux.com.br> patch to
   show correct output for ppc as well.
-
-*sh-utils-2.0.11-r5 (21 Jun 2002)
 
   21 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
   Remove /usr/bin/hostname to install if "build" in USE, as it do not get
