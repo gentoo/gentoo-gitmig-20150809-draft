@@ -1,6 +1,16 @@
-MD5 c4f9fb1910326609185b5a3a15591d7d links-2.1_pre15.ebuild 3727
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cefee36c7e2d6a12c1954bafbe7ee11c ChangeLog 10023
 MD5 56d78ea6a5d49e31ea36cdc98b0b48ad metadata.xml 352
+MD5 a6f71740b3dc45711b44023e6edae3de links-2.1_pre15.ebuild 3731
 MD5 52bed2c64a669feed86577cb52f8cbb5 files/links-0.96-r2-gentoo.patch 1400
 MD5 c41fc5981244d82657e4a2dac584b264 files/digest-links-2.1_pre15 68
 MD5 de31f407e5d2303f42c527efdc8712de files/links-2.1pre15-utf8.diff.bz2 4093
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCYPHTu7gpaalycRAtRrAJ9WiN8Q789nyjYJvdvB9zzJx7mwgQCeIHiz
+PKFhv+KfzQF7glgHkuCkEMA=
+=bQa3
+-----END PGP SIGNATURE-----
