@@ -1,11 +1,16 @@
 # ChangeLog for games-arcade/emilia-pinball
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.3 2003/10/06 18:52:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.4 2004/01/03 20:13:59 vapier Exp $
+
+*emilia-pinball-0.3.1 (03 Jan 2004)
+
+  03 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #35900.
+
+*emilia-pinball-0.3.0 (16 Jul 2003)
 
   06 Oct 2003; Aron Griffis <agriffis@gentoo.org> emilia-pinball-0.3.0.ebuild:
   Stable on alpha
-
-*emilia-pinball-0.3.0 (16 Jul 2003)
 
   16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump + cleanup #20166.  Thanks to TGL for finishing it off.
