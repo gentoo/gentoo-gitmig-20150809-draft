@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.8 2003/12/30 01:02:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.9 2004/01/05 06:51:07 zhen Exp $
+
+  05 Jan 2004; zhen <zhen@gentoo.org> metadata.xml:
+  adding to net-fs herd
 
   30 Dec 2003; Luca Barbato <lu_zero@gentoo.org> shfs-0.32.ebuild:
   Minor fix (bug #35309)
