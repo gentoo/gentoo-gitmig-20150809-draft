@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.1 2003/03/20 04:17:30 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.2 2003/05/29 00:34:42 weeve Exp $
 
 S=${WORKDIR}/${P}
 
@@ -8,7 +8,8 @@ DESCRIPTION="Real Time mp3 player"
 SRC_URI="http://www.mpg123.de/mpg123/${P}.tar.gz"
 HOMEPAGE="http://www.mpg123.de/"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sparc? ( media-sound/esound ) "
 
 SLOT="0"
 LICENSE="as-is"
