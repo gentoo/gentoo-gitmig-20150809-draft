@@ -1,0 +1,58 @@
+# ChangeLog for net-www/monkeyd
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.1 2004/08/08 17:41:38 stuart Exp $
+
+*monkeyd-0.8.2 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/monkeyd.conf.d, +files/monkeyd.init.d, +monkeyd-0.8.2.ebuild,
+  +monkeyd-0.8.3.ebuild, +monkeyd-0.8.4.ebuild:
+  Moved from net-www/monkeyd to www-servers/monkeyd.
+
+  07 Jul 2004; Jason Wever <weeve@gentoo.org> monkeyd-0.8.4.ebuild:
+  Added ~sparc keyword.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> monkeyd-0.8.2.ebuild,
+  monkeyd-0.8.3.ebuild, monkeyd-0.8.4.ebuild:
+  virtual/glibc -> virtual/libc
+
+*monkeyd-0.8.4 (20 Jun 2004)
+
+  20 Jun 2004; Mike Frysinger <vapier@gentoo.org> +monkeyd-0.8.4.ebuild:
+  Version bump #54461 by Marc-Éric Dupuis.
+
+  19 Jun 2004; David Holm <dholm@gentoo.org> monkeyd-0.8.3.ebuild:
+  Added to ~ppc.
+
+*monkeyd-0.8.3 (19 Jun 2004)
+
+  19 Jun 2004; Mike Frysinger <vapier@gentoo.org> +monkeyd-0.8.3.ebuild:
+  Version bump #53164 by Mauricio Bahamonde.
+
+*monkeyd-0.8.2 (10 Feb 2004)
+
+  22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add php setup automagically #42442.
+
+  10 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix #41156.
+
+*monkeyd-0.8.0 (25 Dec 2003)
+
+  25 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + move to /var/www + index.html overwrite fix #35712.
+
+*monkeyd-0.7.1 (13 Jun 2003)
+
+  13 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + init script (#22081).
+
+*monkeyd-0.6.3 (16 Apr 2003)
+
+  16 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
+
+*monkeyd-0.6.1 (03 Mar 2003)
+
+  03 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Ido Rosen <ido@cs.columbia.edu> #14941.
