@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.1.ebuild,v 1.10 2004/09/03 03:51:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.1.ebuild,v 1.11 2004/10/10 20:35:14 eradicator Exp $
 
 IUSE=""
 
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog INSTALL README TODO docs/mb_howto.txt
 }
