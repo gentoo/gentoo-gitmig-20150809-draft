@@ -1,3 +1,5 @@
-MD5 06a765320b2de46e8c79f54e772dc6e2 ChangeLog 467
 MD5 e3c5346773f5d4d9bffd49c7131b5db2 gtk-systrace-0.1-r1.ebuild 932
+MD5 0be73aa5b0e0b58362aa09e6b855d187 ChangeLog 623
+MD5 62db4808042f5b719487477d4d834007 gtk-systrace-0.1-r2.ebuild 893
 MD5 d2d8bfec1705db8fc5f8956d2d350e53 files/digest-gtk-systrace-0.1-r1 74
+MD5 eeb53fce3a39aecd1c593f0b0053f53f files/digest-gtk-systrace-0.1-r2 75
