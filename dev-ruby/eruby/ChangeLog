@@ -1,21 +1,21 @@
 # ChangeLog for dev-ruby/eruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.4 2003/04/11 09:33:35 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.5 2003/05/12 23:35:36 twp Exp $
 
 *eruby-1.0.3 (11 Apr 2003)
 
-  11 Apr 2003; Tom Payne <twp@gentoo.org> eruby-1.0.3.ebuild :
+  13 May 2003; Tom Payne <twp@gentoo.org> eruby-1.0.3-r1.ebuild :
+  Tidy ebuild.
 
+  11 Apr 2003; Tom Payne <twp@gentoo.org> eruby-1.0.3.ebuild :
   Version bump.
 
 *eruby-0.9.7 ( 4 Mar 2002 )
 
   4 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> all :
-  
   mod_ruby embeds the Ruby interpreter into the Apache web server, allowing 
   Ruby CGI scripts to be executed natively. These scripts will start up much
   faster than without mod_ruby.
 
   07 Jul 2002; Aron Griffis <agriffis@gentoo.org> eruby:
-
   Updated with LICENSE, KEYWORDS, SLOT.
