@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.5.ebuild,v 1.1 2003/10/04 20:25:07 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.5.ebuild,v 1.2 2003/10/07 00:31:49 weeve Exp $
 
 MY_P="ApacheTop-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ IUSE="apache2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="!apache2? ( >=net-www/apache-1.3.28 )
 	apache2? ( >=net-www/apache-2.0.47 )
