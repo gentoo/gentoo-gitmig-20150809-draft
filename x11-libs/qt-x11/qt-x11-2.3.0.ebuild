@@ -53,13 +53,13 @@ src_compile() {
       myconf="${myconf} -release"
     fi
 
-    try SYSCONF_CFLAGS=\"$CFLAGS\" SYSCONF_CXXFLAGS=\"$CXXFLAGS\" \
+    try SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
     ./configure -sm -thread -system-zlib -system-jpeg ${myconf} \
 	-system-libmng -system-libpng -gif -platform linux-g++ \
         -ldl -lpthread -no-g++-exceptions
 
     cd ${S}
-    try make SYSCONF_CFLAGS=\"$CFLAGS\" SYSCONF_CXXFLAGS=\"$CXXFLAGS\" \
+    try make SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
     symlinks src-moc src-mt sub-src sub-tools
 
     # leave out src-tools for testing !
