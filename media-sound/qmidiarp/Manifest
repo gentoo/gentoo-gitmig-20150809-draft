@@ -1,5 +1,15 @@
-MD5 cdb6d9f5de81a2f38e1e89a744614d38 ChangeLog 592
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 623bd998e7c91097dc38a073e4ed31c0 ChangeLog 699
 MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
-MD5 fd077e5a0a1fc49c0dafc71ff91f9026 qmidiarp-0.0.2.ebuild 750
+MD5 6d3ec231a6f004fbb121de45ae5ec9d9 qmidiarp-0.0.2.ebuild 743
 MD5 19bf8edcb576fd4989a3dd037226cd72 files/digest-qmidiarp-0.0.2 66
 MD5 c12d23f0f4c6059ce7c29fc4c8ff2414 files/qmidiarp-0.0.2-fix_qtdir_in_makefile.patch 426
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlIH7ArHZZzCEUG0RAmdVAJ9UmCz9/50IELawbTZsTK/GLfNWbwCfepIS
+zxBplXeDt5O4J/JhT62eoGs=
+=7RjU
+-----END PGP SIGNATURE-----
