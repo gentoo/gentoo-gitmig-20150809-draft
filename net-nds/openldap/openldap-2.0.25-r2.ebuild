@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r2.ebuild,v 1.1 2002/08/15 19:30:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r2.ebuild,v 1.2 2002/09/07 09:14:44 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -17,12 +17,12 @@ DEPEND="virtual/glibc
 	ssl?	  ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
 	sasl?     ( >=dev-libs/cyrus-sasl-1.5.27 )
-	ldap-berkdb? ( >=sys-libs/db-3.2.9 )
-	ldap-gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
+	berkdb? ( >=sys-libs/db-3.2.9 )
+	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
 
 RDEPEND="virtual/glibc
-        >=sys-libs/ncurses-5.1
-        ldap-gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+	>=sys-libs/ncurses-5.1
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 src_compile() {
 	local myconf
@@ -48,15 +48,13 @@ src_compile() {
 		|| myconf="${myconf} --disable-cyrus-sasl"
 
 
-	./configure --host=${CHOST} \
+	econf \
 		--enable-passwd \
 		--enable-shell \
 		--enable-shared \
 		--enable-static \
-		--prefix=/usr \
-		--sysconfdir=/etc \
+		--sysconfdir=/etc/openldap \
 		--localstatedir=/var/state/openldap \
-		--mandir=/usr/share/man \
 		--libexecdir=/usr/lib/openldap \
 		${myconf} || die "bad configure"
 
@@ -66,12 +64,11 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
+	einstall \
 		sysconfdir=${D}/etc/openldap \
 		localstatedir=${D}/var/state/openldap \
-		mandir=${D}/usr/share/man \
 		libexecdir=${D}/usr/lib/openldap \
-		install || die "install problem"
+		|| die "install problem"
 
 	#fix ${D} in manpages
 	cd ${S}/doc/man
@@ -92,4 +89,3 @@ src_install() {
 		dosed $i
 	done
 }
-
