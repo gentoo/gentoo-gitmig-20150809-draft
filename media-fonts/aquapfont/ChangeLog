@@ -1,0 +1,25 @@
+# ChangeLog for media-fonts/aquapfont
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.5 2004/01/13 05:57:59 spyderous Exp $
+
+*aquapfont-2.5 (13 Jan 2004)
+
+  13 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>; aquapfont-2.5.ebuild:
+  Re-adding from attic. It was pulled based on incorrect information in bug
+  #36391 saying it was a duplicate, however bug #37704 indicated that the 'p' in
+  the name is for proportional.
+
+*aquapfont-2.5 (28 Jul 2003)
+
+  15 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5.ebuild:
+  Marked stable on all arch
+
+  31 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5.ebuild:
+  Added ~alpha, ~sparc and ~ppc to KEYWORDS, virtual/x11 to (R)DEPEND
+
+  28 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5.ebuild:
+  Initial import. Original ebuild submitted by Atzm WATANABE
+  <sitosito@p.chan.ne.jp> at GentooJP BugTrack. Redistribution
+  courtesy of the author, Aqua <aquablue@m12.milkcafe.to>
+  See /usr/portage/licenses/aquafont before using the software.
+
