@@ -1,17 +1,21 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.8 2003/10/23 13:51:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.9 2003/10/24 12:46:37 aliz Exp $
 
   05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> pth-1.4.1.ebuild:
   set ~ppc in keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*pth-1.4.0 (13 Nov 2002); Bart Verwilst <verwilst@gentoo.org>:
+*pth-1.4.0 (13 Nov 2002)
+
+  13 Nov 2002; Bart Verwilst <verwilst@gentoo.org>:
 
   Re-added 1.4.0, and masked 1.4.1, since it b0rks jabber-server :$
 
-*pth-1.4.1 (1 Oct 2002); Bart Verwilst <verwilst@gentoo.org>:
+*pth-1.4.1 (1 Oct 2002)
+
+  01 Oct 2002; Bart Verwilst <verwilst@gentoo.org>:
 
   New version, bugfix release
 
