@@ -1,6 +1,6 @@
-# Copyright 2002 Maik Schreiber
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/merlin-cpufire/merlin-cpufire-0.1.0-r1.ebuild,v 1.3 2002/12/09 04:22:40 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/merlin-cpufire/merlin-cpufire-0.1.0-r1.ebuild,v 1.4 2003/09/29 21:21:55 mholzer Exp $
 
 DESCRIPTION="Gnome applet that displays CPU usage as burning fire"
 HOMEPAGE="http://nitric.com/freeware"
