@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.71.ebuild,v 1.4 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.95.ebuild,v 1.1 2003/10/04 00:36:57 seemant Exp $
 
 IUSE=""
 
@@ -9,14 +9,14 @@ inherit nsplugins
 S="${WORKDIR}/mplayerplug-in"
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
 DESCRIPTION="mplayer plug-in for Mozilla"
-SRC_URI="mirror://sourceforge/${PN}/${PN}_v${PV}.tar.gz
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/mini.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
-DEPEND=">=media-video/mplayer-0.90_rc4"
+DEPEND=">=media-video/mplayer-0.91"
 
 src_compile() {
 	[ -z "${CC}" ] && CC="gcc"
@@ -47,6 +47,12 @@ use-gui=no
 #vo=x11
 fs=no
 zoom=yes
+
+# Disable some video formats
+#enable-real=0
+#enable-qt=0
+#enable-wm=0
+#enable-mpeg=0
 END
 
 	dodoc TODO ChangeLog INSTALL README
