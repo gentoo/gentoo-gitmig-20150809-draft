@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.12 2004/01/26 13:45:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.13 2004/02/21 22:54:05 brad_mssw Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ RDEPEND="virtual/glibc
 	jpeg? ( media-libs/jpeg )
 
 	canna? ( app-i18n/canna )
-	freewnn? ( app-i18n/freewnn )"
+	!amd64? ( freewnn? ( app-i18n/freewnn ) )"
 
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
@@ -59,7 +59,7 @@ PROVIDE="virtual/xemacs virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha sparc"
+KEYWORDS="amd64 x86 ~ppc alpha sparc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
