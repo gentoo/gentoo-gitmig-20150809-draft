@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.3.ebuild,v 1.3 2003/05/20 19:22:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.3.ebuild,v 1.4 2003/05/26 00:17:21 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -28,11 +28,8 @@ DEPEND="${RDEPEND}
 VPOPMAIL_DIR=`cat /etc/passwd | grep ^vpopmail | cut -d: -f6`
 if [ -n "${VPOPMAIL_DIR}" ]; then
 	VPOPMAIL_ERROR=
-	if [ "`has userpriv ${FEATURES}`" ]; then 
-		VPOPMAIL_ERROR=1
-	fi
+	has userpriv ${FEATURES} && [ -d "${VPOPMAIL_DIR}" ] && VPOPMAIL_ERROR=1
 fi
-
 
 src_unpack() {
 	unpack ${A}
