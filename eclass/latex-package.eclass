@@ -3,7 +3,6 @@
 # directory and call latex-package_src_doinstall all, or leave
 # the src_install function as-is if the system is single-directory.
 
-. /usr/portage/eclass/inherit.eclass || die
 inherit base
 
 newdepend ">=app-text/tetex-1.0.7"
