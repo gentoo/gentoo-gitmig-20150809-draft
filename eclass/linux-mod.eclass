@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.18 2005/01/15 20:40:14 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.19 2005/01/15 21:19:02 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -302,6 +302,7 @@ linux-mod_src_compile() {
 	local modulename libdir srcdir objdir i n
 	
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
+	MODULE_NAMES=${MODULE_NAMES//${MODULE_IGNORE}}
 
 	for i in ${MODULE_NAMES}
 	do

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.16 2005/01/06 13:58:15 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.17 2005/01/15 21:19:02 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -392,7 +392,7 @@ check_modules_supported() {
 }
 
 check_extra_config() {
-local	config negate error local_error
+	local	config negate error local_error i n temp_config
 
 	# if we haven't determined the version yet, we need too.
 	get_version;
@@ -412,6 +412,27 @@ local	config negate error local_error
 					eerror "  CONFIG_${config}:\tshould not be set in the kernel configuration, but it is."
 				error=1
 			fi
+		elif [ "${negate}" == "@" ];
+		then
+			# we never call this unless we are using MODULE_NAMES
+
+			config="${config:1}"
+			temp_config="${config//*:}"
+			config="${config//:*}"
+			if linux_chkconfig_present ${config}
+			then
+				local_error="${config}_ERROR"
+				local_error="${!local_error}"
+				[ -n "${local_error}" ] && eerror "  ${local_error}" || \
+					eerror "  CONFIG_${config}:\tshould not be set in the kernel configuration, but it is."
+
+				for i in ${MODULE_NAMES}
+				do
+					n="${i//${temp_config}}"
+					[ -z "${n//(*}" ] && MODULE_IGNORE="${MODULE_IGNORE} ${i}"
+				done
+				error=0
+			fi
 		else
 			if ! linux_chkconfig_present ${config}
 			then
@@ -424,7 +445,7 @@ local	config negate error local_error
 		fi
 	done
 
-	if [ -n "${error}" ] ;
+	if [ "${error}" == 1 ] ;
 	then
 		eerror "Please check to make sure these options are set correctly."
 		eerror "Once you have satisfied these options, please try merging"
