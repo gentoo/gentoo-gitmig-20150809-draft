@@ -4,12 +4,12 @@ MD5 11c4331cb3a68b4bd5250959127e31c0 file-3.39.ebuild 1008
 MD5 864d9d78ae48573d790cc598fcc4bc40 file-3.41.ebuild 1025
 MD5 20dd962c51a7b039d867a7a99645fbb5 file-4.01.ebuild 936
 MD5 e593a4a7dea3146bb413dea1737d48b6 file-4.02.ebuild 1093
-MD5 039265293ed955591797adeb653bb9c3 file-4.03.ebuild 1099
-MD5 8a94349d0574b8fdb31ba08f31c8f5a7 files/digest-file-4.03 61
+MD5 eaf31df54d9fcbb759afd4c5e6dcfc7e file-4.03.ebuild 1102
 MD5 3a18c97dfcc727e6c1b701cc8c03af47 files/digest-file-3.37 267
 MD5 950dd57055e8275bd852869557035f42 files/digest-file-3.39 268
+MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673
 MD5 eabc698678353b52ea7d9bfb724d4e1e files/digest-file-3.41 268
+MD5 aff834708f034a4995abba4192e79583 files/file-3.41-mips-gentoo.diff 4673
 MD5 419df5c3f794f6f0b42d8d78d5f9a0da files/digest-file-4.01 267
 MD5 fd38ae2f761ce496f7caedf3226166ae files/digest-file-4.02 61
-MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673
-MD5 aff834708f034a4995abba4192e79583 files/file-3.41-mips-gentoo.diff 4673
+MD5 8a94349d0574b8fdb31ba08f31c8f5a7 files/digest-file-4.03 61

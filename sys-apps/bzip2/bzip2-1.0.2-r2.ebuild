@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.23 2003/09/07 02:49:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.24 2003/09/17 23:56:39 avenj Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
 SRC_URI="ftp://sources.redhat.com/pub/bzip2/v102/${P}.tar.gz"
 HOMEPAGE="http://sources.redhat.com/bzip2/"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
 SLOT="0"
 LICENSE="BZIP2"
 

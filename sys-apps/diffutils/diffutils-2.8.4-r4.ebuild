@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.3 2003/09/07 02:28:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.4 2003/09/18 00:01:14 avenj Exp $
 
 IUSE="nls build static"
 
@@ -16,7 +16,7 @@ DESCRIPTION="Tools to make diffs and compare files"
 SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/diffutils/diffutils.html"
 
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ia64"
 SLOT="0"
 LICENSE="GPL-2"
 

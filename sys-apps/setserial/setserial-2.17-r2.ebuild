@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.17 2003/09/07 01:21:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.18 2003/09/18 00:16:26 avenj Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Configure your serial ports with it"
 SRC_URI="ftp://tsx-11.mit.edu/pub/linux/sources/sbin/${P}.tar.gz
 	 ftp://ftp.sunsite.org.uk/Mirrors/tsx-11.mit.edu/pub/linux/sources/sbin/${P}.tar.gz"
 HOMEPAGE="http://setserial.sourceforge.net/"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa ia64"
 SLOT="0"
 LICENSE="GPL-2"
 

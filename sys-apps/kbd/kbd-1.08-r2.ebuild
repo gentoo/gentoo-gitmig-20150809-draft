@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r2.ebuild,v 1.3 2003/09/07 02:47:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r2.ebuild,v 1.4 2003/09/17 23:58:40 avenj Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.cwi.nl/pub/aeb/kbd/${P}.tar.gz
 	ftp://ftp.win.tue.nl/pub/home/aeb/linux-local/utils/kbd/${P}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/kbd/"
 
-KEYWORDS="~x86 ~amd64 -ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="~x86 ~amd64 -ppc ~sparc ~alpha ~mips ~hppa ~arm ia64"
 SLOT="0"
 LICENSE="GPL-2"
 

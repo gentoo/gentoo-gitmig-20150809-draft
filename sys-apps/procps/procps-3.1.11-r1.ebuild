@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.11-r1.ebuild,v 1.2 2003/09/07 00:40:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.11-r1.ebuild,v 1.3 2003/09/18 00:15:19 avenj Exp $
 
 IUSE="selinux"
 
@@ -16,7 +16,7 @@ replace-flags "-O3" "-O2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ia64"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND}
