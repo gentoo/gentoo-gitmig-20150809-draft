@@ -1,3 +1,4 @@
-MD5 b87385edf2de8fb945ac02b7d0b12444 ChangeLog 493
-MD5 1d97d06075112df277d3ae60b1a19a47 zpsycopgda-1.1.2.ebuild 641
+MD5 912f2e6e9092dd1707425db3decc2353 zpsycopgda-1.1.2.ebuild 640
+MD5 ebf0a68b31f2f544a4b70fa3b2add036 ChangeLog 492
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 0e0fba2dc583ebd312d49f4d3891df90 files/digest-zpsycopgda-1.1.2 131
