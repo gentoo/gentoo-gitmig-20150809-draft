@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.1 2004/12/06 22:20:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.2 2004/12/07 17:10:33 ka0ttic Exp $
 
 inherit eutils
 
@@ -93,7 +93,7 @@ src_compile() {
 src_install() {
 	dodir /usr/share/fluxbox
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc README* AUTHORS TODO* COPYING
+	dodoc README* AUTHORS TODO* COPYING ChangeLog NEWS
 
 	dodir /usr/share/xsessions
 	insinto /usr/share/xsessions
