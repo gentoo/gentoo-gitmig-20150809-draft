@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2737 2004/03/07 12:13:56 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2738 2004/03/07 16:55:56 usata Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,11 @@
 ##
 ##   End example
 ##
+
+# <usata@gentoo.org> (08 Mar 2004)
+# uim-skk included in this version messes up user dictionary if it fails
+# to study new word
+=app-i18n/uim-0.3.1
 
 # <pauldv@gentoo.org> (07 Mar 2004)
 # Release candidate
