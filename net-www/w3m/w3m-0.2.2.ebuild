@@ -1,18 +1,18 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.2.2.ebuild,v 1.1 2001/12/05 17:12:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.2.2.ebuild,v 1.2 2001/12/29 03:15:03 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
 SRC_URI="http://prdownloads.sourceforge.net/w3m/${P}.tar.gz"
 HOMEPAGE="http://w3m.sourceforge.net/"
 
-DEPEND=">=sys-libs/glibc-2.2.4-r2
-		>=sys-libs/ncurses-5.2-r3
-		>=sys-libs/zlib-1.1.3-r2
-		gpm? ( >=sys-libs/gpm-1.19.3-r5 )
-		ssl? ( >=dev-libs/openssl-0.9.6b )"
+DEPEND="virtual/glibc
+	>=sys-libs/ncurses-5.2-r3
+	>=sys-libs/zlib-1.1.3-r2
+	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
+	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 src_compile() {
 	# It seems to be hard to configure this program in any reasonable
