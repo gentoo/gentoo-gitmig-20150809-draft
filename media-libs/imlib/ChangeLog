@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.2 2002/03/17 21:45:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.3 2002/03/21 09:26:45 seemant Exp $
+
+*imlib-1.9.13-r1 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> imlib-1.9.13-r1.ebuild :
+
+  stefan@mdy.univie.ac.at pointed out the fact that html documentation gets 
+  gzipped.  This is fixed now.
 
 *imlib-1.9.13 (16 Mar 2002)
 
