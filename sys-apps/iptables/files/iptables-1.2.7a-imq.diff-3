@@ -33,7 +33,7 @@ diff -urN iptables-1.2.6a-clean/extensions/libip6t_IMQ.c iptables-1.2.6a-imq/ext
 +	printf(
 +"IMQ target v%s options:\n"
 +"  --todev <N>		enqueue to imq<N>, defaults to 0\n", 
-+NETFILTER_VERSION);
++IPTABLES_VERSION);
 +}
 +
 +static struct option opts[] = {
@@ -102,7 +102,7 @@ diff -urN iptables-1.2.6a-clean/extensions/libip6t_IMQ.c iptables-1.2.6a-imq/ext
 +struct ip6tables_target imq
 += { NULL,
 +    "IMQ",
-+    NETFILTER_VERSION,
++    IPTABLES_VERSION,
 +    IP6T_ALIGN(sizeof(struct ip6t_imq_info)),
 +    IP6T_ALIGN(sizeof(struct ip6t_imq_info)),
 +    &help,
@@ -139,7 +139,7 @@ diff -urN iptables-1.2.6a-clean/extensions/libipt_IMQ.c iptables-1.2.6a-imq/exte
 +	printf(
 +"IMQ target v%s options:\n"
 +"  --todev <N>		enqueue to imq<N>, defaults to 0\n", 
-+NETFILTER_VERSION);
++IPTABLES_VERSION);
 +}
 +
 +static struct option opts[] = {
@@ -208,7 +208,7 @@ diff -urN iptables-1.2.6a-clean/extensions/libipt_IMQ.c iptables-1.2.6a-imq/exte
 +struct iptables_target imq
 += { NULL,
 +    "IMQ",
-+    NETFILTER_VERSION,
++    IPTABLES_VERSION,
 +    IPT_ALIGN(sizeof(struct ipt_imq_info)),
 +    IPT_ALIGN(sizeof(struct ipt_imq_info)),
 +    &help,
