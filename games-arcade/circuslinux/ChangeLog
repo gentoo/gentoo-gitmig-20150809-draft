@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/circuslinux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.5 2004/05/30 15:43:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.6 2004/06/18 19:02:06 jhuebel Exp $
+
+  18 Jun 2004; Jason Eric Huebel <jhuebel@gentoo.org>
+  circuslinux-1.0.3.ebuild:
+  added gnuconfig_update, ~amd64
 
   30 May 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   circuslinux-1.0.3.ebuild:
