@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 583674dd4cb6b5f39fc66a7cb5e1073e ChangeLog 1290
-MD5 e8f8081803e1b635396fb865224262c1 cvm-vmailmgr-0.3.ebuild 1155
-MD5 f91dd579c1ed1f0c37d073688a7b789d cvm-vmailmgr-0.4.ebuild 1236
+MD5 97368aa2a7464f1cc3d9ee5b5df23c2d cvm-vmailmgr-0.4.ebuild 1230
+MD5 65aba72b23853cc4169fcd01ecc30bc8 cvm-vmailmgr-0.6.ebuild 1433
+MD5 0d1a0e35facffff0689fed570fb16633 cvm-vmailmgr-0.3.ebuild 1149
+MD5 1b4d95f447e088ed123f7d2a68482da6 ChangeLog 1285
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 30057093943092bbdd837bfc29cc106c cvm-vmailmgr-0.6.ebuild 1439
 MD5 d407c0da26495a6bd20e05660d072f12 files/cvm-vmailmgr-socket 38
+MD5 c53399f65cbf0bdd2cf58091b981fd32 files/run-cvm-vmailmgr-log 32
 MD5 3e3dd7be102ce19be7ed3eea95929c10 files/digest-cvm-vmailmgr-0.3 67
 MD5 56f350315e9e3437a06dcb9d5a9e1b3a files/digest-cvm-vmailmgr-0.4 67
-MD5 131288d05976368d37ab8e7f56507798 files/run-cvm-vmailmgr 85
-MD5 c53399f65cbf0bdd2cf58091b981fd32 files/run-cvm-vmailmgr-log 32
 MD5 2d24adab782a25a7b6c2f482a4c3ee48 files/digest-cvm-vmailmgr-0.6 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA09YPHTu7gpaalycRAokYAKDe6B+AqnM+NGg3jT1i6Ex8jAtrOACgiAKL
-NiDXowJayE61SxujFJ/OHRI=
-=HyKm
------END PGP SIGNATURE-----
+MD5 131288d05976368d37ab8e7f56507798 files/run-cvm-vmailmgr 85
