@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.31 2003/02/22 17:35:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.32 2003/02/26 04:42:00 latexer Exp $
+
+*pcmcia-cs-3.2.3-r4 (25 Feb 2003)
+
+  25 Feb 2003; Peter Johanson <latexer@gentoo.org> pcmcia-cs-3.2.1-r4 :
+  Version bump to use latest ornico driver (0.13b)
 
   27 Jan 2003; Chad Huneycutt <chadh@gentoo.org> : old ebuilds
   Removed old ebuilds.  If you really need something, let me know, and I will
