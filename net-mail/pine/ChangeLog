@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.16 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.17 2003/01/03 09:27:07 raker Exp $
+
+*pine-4.51 (03 Jan 2002)
+
+  03 Jan 2002; Nick Hadaway <raker@gentoo.org> pine-4.51.ebuild,
+  files/digest-pine-4.51 :
+  Version bump.  No maildir patch yet. Includes the entire Eduardo
+  Chappa patch collection for 4.51.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
