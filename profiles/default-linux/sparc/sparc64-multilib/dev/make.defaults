@@ -1,0 +1,33 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.1 2004/12/11 02:12:13 eradicator Exp $
+
+ARCH="sparc"
+ACCEPT_KEYWORDS="${ARCH}"
+
+# Used in ebuilds for verifying 64bit userland
+PROFILE_ARCH="sparc64-multilib"
+
+CHOST="sparc64-unknown-linux-gnu"
+PLATFORM="sparc64-unknown-linux-gnu"
+
+# Compiler flags
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+# Misc
+FEATURES="sandbox ccache autoconfig"
+
+# Catalyst stage/grp USE
+GRP_STAGE23_USE="berkdb gpm ipv6 -java multislot multilib ncurses nls -nptl pam perl python readline ssl tcpd zlib"
+
+# Sane, minimal USE settings
+USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups fortran f77 fbcon gif jpeg nls png tiff truetype usb xpm xrandr xv"
+
+CONF_LIBDIR="lib64"
+CONF_MULTILIBDIR="lib"
+
+CHOST32="sparc-unknown-linux-gnu"
+ARCH_WRAPPER="sparc32"
+CC32="gcc32"
+CPP32="g++32"

@@ -1,0 +1,20 @@
+This profile is purely for development purposes only and is subject to break or
+even disappear.  If if destroys your system, sorry, but you were warned...
+Please let us know, so we can fix the problem, but you ae entering this at
+your own risk.
+
+This profile exists to help in development of a pure 64bit userland and a
+multilib option.  This profile should be "relatively" safe to use if you want
+a pure 64bit environment, but as multilib support in portage is evolving, so
+will this profile.  This means that as updates are made to portage, this
+profile is subject to change WITHOUT REGARD FOR BACKWARDS COMPATIBILITY.  Any
+such drastic change will first be discussed on the gentoo-sparc mailing list.
+
+If you are not 100% certain you know what you're getting into by using this
+profile, then don't.  It may render your machine utterly useless and will break
+things, so if you DO use it, you should only use it in a chroot jail.
+
+If you use this profile or you have any questions, please contact me on IRC.
+
+--Jeremy
+eradicator@gentoo.org

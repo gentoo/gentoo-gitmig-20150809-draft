@@ -1,0 +1,21 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/package.mask,v 1.1 2004/12/11 02:12:13 eradicator Exp $
+
+# Jeremy Huddleston <eradicator@dev.gentoo.org>
+# Masking to prevent accidental emerge of unsafe alsa drivers.
+# To use these kernels, add them to /etc/portage/package.unmask,
+# but do not use the in-kernel alsa drivers.  Instead, emerge
+# media-sound/alsa-driver
+<=sys-kernel/gentoo-dev-sources-2.6.7-r14
+=sys-kernel/gentoo-dev-sources-2.6.8
+=sys-kernel/gentoo-dev-sources-2.6.8-r1
+=sys-kernel/gentoo-dev-sources-2.6.8-r2
+=sys-kernel/gentoo-dev-sources-2.6.8-r3
+=sys-kernel/gentoo-dev-sources-2.6.8-r4
+=sys-kernel/gentoo-dev-sources-2.6.8-r5
+=sys-kernel/gentoo-dev-sources-2.6.8-r6
+=sys-kernel/gentoo-dev-sources-2.6.8-r7
+=sys-kernel/gentoo-dev-sources-2.6.8-r8
+=sys-kernel/gentoo-dev-sources-2.6.8-r9
+=sys-kernel/gentoo-dev-sources-2.6.8-r10
+>=sys-kernel/gentoo-dev-sources-2.6.9
+sys-kernel/development-sources
