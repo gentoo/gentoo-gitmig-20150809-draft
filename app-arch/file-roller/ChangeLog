@@ -1,11 +1,15 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.10 2002/07/11 14:26:46 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.11 2002/07/18 19:49:18 spider Exp $
 
 *file-roller-1.109 (11 Jul 2002)
   11 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> file-roller-1.109.ebuild:
   new version
 
+  18 Jul 2002; Spider <spider@gentoo.org> 
+  update to use mirror://
+  fix KEYWORDS
+  
 *file-roller-1.108 (06 Jul 2002)
   06 Jul 2002; Spider <spider@gentoo.org> file-roller-1.108.ebuild:
   eclassified
