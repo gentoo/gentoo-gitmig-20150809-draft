@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.3 2003/10/08 21:47:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.4 2003/11/22 07:22:16 obz Exp $
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="A gnome/wm applet displaying comical fish"
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 # if gtk2 is enabled, it infers to build for gnome2
 # it's not possible to cross build (eg, gtk1 and gnome2)
 # as outlined in the INSTALL file provided with the source
-IUSE="gtk gtk2 sdl"
+IUSE="gtk2 sdl"
 
 DEPEND="x11-base/xfree
 		!gtk2? (  =x11-libs/gtk+-1.2*
