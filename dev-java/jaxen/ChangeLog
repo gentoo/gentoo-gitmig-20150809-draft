@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxen
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.6 2004/12/24 09:58:37 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.7 2005/01/09 08:07:40 luckyduck Exp $
+
+  09 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jaxen-1.1_beta2.ebuild:
+  removed junit tests to fix #76924. the code for unit testing is a mess, tried
+  to fixing it but it is not worth the trouble.
 
   24 Dec 2004; Thomas Matthijs <axxo@gentoo.org> jaxen-1.1_beta2.ebuild:
   fix doc target

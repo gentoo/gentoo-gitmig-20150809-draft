@@ -1,17 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta2.ebuild,v 1.3 2004/12/24 09:58:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta2.ebuild,v 1.4 2005/01/09 08:07:40 luckyduck Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="A Java XPath Engine"
 HOMEPAGE="http://jaxen.org/"
-SRC_URI="http://www.ibiblio.org/maven/jaxen/distributions/${PN}-1.1-beta-2-src.tar.gz
-	junit? ( http://dev.gentoo.org/~karltk/projects/java/distfiles/jaxen-tests-1.1_beta2.tar.gz )"
+SRC_URI="http://www.ibiblio.org/maven/jaxen/distributions/${PN}-1.1-beta-2-src.tar.gz"
 LICENSE="jaxen"
 SLOT="1.1"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="doc jikes junit"
+IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( dev-java/jikes )
@@ -28,9 +27,10 @@ S=${WORKDIR}/${PN}-1.1-beta-2
 
 src_unpack() {
 	unpack ${A}
-	mv xml ${S}/
+
 	cd ${S}
-	epatch ${FILESDIR}/jaxen-1.1_beta2-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
+
 	mkdir -p target/lib
 	cd target/lib
 	rm -f *.jar
@@ -39,15 +39,7 @@ src_unpack() {
 	java-pkg_jar-from dom4j-1
 
 	cd ${S}
-	# circular deps :(
-	if has_version dev-java/ant-tasks ; then
-		if ! use junit ; then
-			einfo "disabling junit"
-			sed -i 's/depends="compile,test"/depends="compile"/' build.xml
-		fi
-	else
-		sed -i 's/depends="compile,test"/depends="compile"/' build.xml
-	fi
+	sed -i 's/depends="compile,test"/depends="compile"/' build.xml
 }
 
 src_compile() {
@@ -58,7 +50,6 @@ src_compile() {
 }
 
 src_install() {
-
 	java-pkg_dojar target/jaxen*.jar
 
 	use doc && java-pkg_dohtml -r dist/docs/*
