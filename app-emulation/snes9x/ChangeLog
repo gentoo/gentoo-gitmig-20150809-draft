@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/snes9x
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.7 2002/10/17 01:05:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.8 2002/11/02 23:39:56 gerk Exp $
 
 *snes-139-r1 (27 Jul 2002) 
+
+  02 Nov 2002: Mark Guertin <gerk@gentoo.org> snes-139-r1.ebuild :
+  set -ppc in keywords
 
   16 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Changed 'glide' to '3dfx' since only 3dfx cards use glide and '3dfx' is the correct USE
