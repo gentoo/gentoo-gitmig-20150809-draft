@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.8 2005/03/21 08:08:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.9 2005/03/25 15:18:19 blubb Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -37,3 +37,4 @@ sys-boot/grub
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
+app-benchmarks/cpuburn
