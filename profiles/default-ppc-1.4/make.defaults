@@ -16,7 +16,7 @@ FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
 # Global configure options
 
 # C Compiler flags
-CFLAGS="-O3 -pipe -fsigned-char"
+CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
