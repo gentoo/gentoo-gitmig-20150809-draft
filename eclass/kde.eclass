@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.77 2003/04/02 10:46:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.78 2003/04/13 21:46:44 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -98,10 +98,12 @@ kde_src_compile() {
 				# This can happen with e.g. a cvs snapshot			
 				if [ ! -f "./configure" ]; then
 					for x in Makefile.cvs admin/Makefile.common; do
-					if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
+						if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
 					done
-					debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
-					make -f $makefile
+					if [ -f "$makefile" ]; then
+						debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
+						make -f $makefile
+					fi
 					[ -f "./configure" ] || die "no configure script found, generation unsuccessful"
 				fi
 
