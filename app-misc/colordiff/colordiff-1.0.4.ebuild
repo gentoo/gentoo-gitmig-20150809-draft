@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.4.ebuild,v 1.7 2004/06/24 22:06:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.4.ebuild,v 1.8 2004/06/28 01:00:49 ciaranm Exp $
 
 DESCRIPTION="Colorizes output of diff"
 HOMEPAGE="http://colordiff.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/colordiff/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 alpha sparc"
+KEYWORDS="~x86 alpha sparc ~mips"
 IUSE=""
 
 DEPEND="sys-apps/diffutils"
