@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.3 2004/10/20 09:06:08 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.4 2004/10/29 03:13:14 weeve Exp $
+
+  28 Oct 2004; Jason Wever <weeve@gentoo.org> javacup-0.10k.ebuild:
+  Added ~sparc keyword.
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> javacup-0.10k.ebuild:
   Keywords ~amd64.

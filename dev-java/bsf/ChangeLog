@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.12 2004/10/20 07:17:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.13 2004/10/29 03:13:56 weeve Exp $
+
+  28 Oct 2004; Jason Wever <weeve@gentoo.org> bsf-2.3.0-r2.ebuild:
+  Added ~sparc keyword.
 
   20 Oct 2004; Thomas Matthijs <axxo@gentoo.org> bsf-2.3.0-r2.ebuild:
   honor use flags better
