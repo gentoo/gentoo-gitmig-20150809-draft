@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.43 2004/08/24 03:09:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.44 2004/09/01 10:17:24 lv Exp $
+
+  01 Sep 2004; Travis Tilley <lv@gentoo.org> gawk-3.1.3-r1.ebuild:
+  made gawk use $(get_libdir)
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> gawk-3.1.3-r1.ebuild:
   Changed SRC_URI to use mirror:// syntax.

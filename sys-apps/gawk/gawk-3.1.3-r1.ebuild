@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.18 2004/08/24 03:09:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.19 2004/09/01 10:17:24 lv Exp $
 
 inherit eutils gnuconfig
 
@@ -37,7 +37,7 @@ src_compile() {
 	[ -z "${CBUILD}" ] || myconf="${myconf} --build=${CBUILD}"
 	./configure \
 		--prefix=/usr \
-		--libexecdir=/usr/lib/awk \
+		--libexecdir=/usr/$(get_libdir)/awk \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--host=${CHOST} \
@@ -58,7 +58,7 @@ src_install() {
 		bindir=${D}/bin \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
-		libexecdir=${D}/usr/lib/awk \
+		libexecdir=${D}/usr/$(get_libdir)/awk \
 		install || die "install failed"
 
 	cd ${WORKDIR}/filefuncs
