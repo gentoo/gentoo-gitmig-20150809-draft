@@ -1,0 +1,81 @@
+diff -r -U4 -N pvm-3.4.4-root/usr/share/pvm3/src/pvmd.c pvm-3.4.4-root-segfault/usr/share/pvm3/src/pvmd.c
+--- pvm-3.4.4-root/usr/share/pvm3/src/pvmd.c	2001-09-28 08:43:18.000000000 -0400
++++ pvm-3.4.4-root-segfault/usr/share/pvm3/src/pvmd.c	2003-11-18 10:34:30.000000000 -0500
+@@ -603,9 +603,9 @@
+ #ifdef WIN32
+ #include "pvmwin.h"
+ #include <time.h>
+ #else
+-#include <sys/time.h>
++#include <time.h>
+ #include <sys/wait.h>
+ #include <sys/socket.h>
+ #include <sys/signal.h>
+ #include <netinet/in.h>
+@@ -998,9 +998,9 @@
+ 		PVM_TIMET time_temp;
+ 		gettimeofday(&tnow, (struct timezone*)0);
+ 		pvmlogprintf("version %s ddpro %d tdpro %d sdpro %d\n",
+ 				PVM_VER, DDPROTOCOL, TDPROTOCOL, SDPROTOCOL);
+-		time_temp = (PVM_TIMET) tnow.tv_sec;
++		time_temp = tnow.tv_sec;
+ 		pvmlogprintf(ctime(&time_temp));
+ 		for (i = 0; i < argc; i++)
+ 			pvmlogprintf("argv[%d]=\"%s\"\n", i, argv[i]);
+ 		exit(0);
+@@ -1612,17 +1612,20 @@
+ #endif
+ 
+ 	gettimeofday(&tnow, (struct timezone*)0);
+ 	if (pvmdebmask || myhostpart) {
+-		PVM_TIMET time_temp;
++                char *my_time;
++                PVM_TIMET time_temp;	
+ 		pvmlogprintf("%s (%s) %s %s\n",
+ 				hosts->ht_hosts[hosts->ht_local]->hd_name,
+ 				inadport_decimal(&hosts->ht_hosts[hosts->ht_local]->hd_sad),
+ 				myarchname,
+ 				PVM_VER);
+ 		pvmlogprintf("ready ");
+-		time_temp = (PVM_TIMET) tnow.tv_sec;
+-		pvmlogprintf(ctime(&time_temp));
++		time_temp = tnow.tv_sec; 
++                my_time = ctime(&time_temp);
++                if(my_time != NULL)
++		   pvmlogprintf("%s\n",my_time);
+ 	}
+ 
+ 	/*
+ 	* check for default plug-in modules (& start them)
+diff -r -U4 -N pvm-3.4.4-root/usr/share/pvm3/src/pvmlog.c pvm-3.4.4-root-segfault/usr/share/pvm3/src/pvmlog.c
+--- pvm-3.4.4-root/usr/share/pvm3/src/pvmlog.c	2001-09-26 17:23:56.000000000 -0400
++++ pvm-3.4.4-root-segfault/usr/share/pvm3/src/pvmlog.c	2003-11-18 07:41:21.000000000 -0500
+@@ -153,9 +153,13 @@
+  * Revision 1.1  1993/08/30  23:26:51  manchek
+  * Initial revision
+  *
+  */
+-
++#if defined (__STDC__) || defined(IMA_WIN32_WATCOM)
++#include <stdarg.h>
++#else
++#include <varargs.h>
++#endif
+ #include <stdio.h>
+ #include <pvm3.h>
+ #include <errno.h>
+ #include <sys/types.h>
+@@ -167,13 +171,8 @@
+ #else
+ #include <strings.h>
+ #define	CINDEX(s,c)	index(s,c)
+ #endif
+-#if defined (__STDC__) || defined(IMA_WIN32_WATCOM)
+-#include <stdarg.h>
+-#else
+-#include <varargs.h>
+-#endif
+ 
+ #ifndef PVMDLOGMAX
+ #define PVMDLOGMAX 1000000			/* (approx) max chars to log to file */
+ #endif

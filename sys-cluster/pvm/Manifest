@@ -4,5 +4,7 @@ MD5 66c7d8928accf5d72e0fa51aaa8bfdf7 ChangeLog 1401
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 726a6a69ba5fb9e140e8f7e1a85c9c9d files/pvm-3.4.4-gentoo.diff 608
 MD5 61db9ccafbe3d9f647e98823ba30fd55 files/pvm-3.4.4-amd64.patch 2188
+MD5 cb7593c1f1921b55cd0eee8447204ba8 files/pvm-3.4.4-s390.patch 886
+MD5 1f52ad91cea65624c2bed0e33db5f7b4 files/pvm-3.4.4-x86_64-segfault.patch 2478
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r1 57
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r2 57
