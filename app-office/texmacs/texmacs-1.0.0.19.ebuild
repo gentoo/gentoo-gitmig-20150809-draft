@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 
 DEPEND=">=app-text/tetex-1.0.7-r7
 	>=dev-util/guile-1.3.4
-	sys-apps/supersed
+	=sys-apps/sed-4*
 	virtual/x11"
 
 RDEPEND="${DEPEND}
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 src_compile() {
 	
 	econf
-	ssed -i "s:\(^CXXOPTIMIZE = \).*:\1${CXXFLAGS}:" src/common.makefile
+	sed -i "s:\(^CXXOPTIMIZE = \).*:\1${CXXFLAGS}:" src/common.makefile
 
 	cd ${S}
 	make || die

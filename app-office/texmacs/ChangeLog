@@ -1,8 +1,12 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.8 2003/03/17 17:17:57 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.9 2003/04/23 00:09:13 lostlogic Exp $
 
 *texmacs-1.0.1 (02 Jan 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> texmacs-1.0.0.19.ebuild,
+  texmacs-1.0.1.ebuild:
+  Change supersed dependencies
 
   17 Mar 2003; Graham Forest <vladimir@gentoo.org> texmacs-1.0.1.ebuild:
   set ~ppc in keywords
