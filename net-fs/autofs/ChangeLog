@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.22 2003/11/21 18:35:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.23 2004/01/05 06:29:57 zhen Exp $
+
+  05 Jan 2004; zhen <zhen@gentoo.org> metadata.xml:
+  changed herd to net-fs
 
   21 Nov 2003; <rphillips@gentoo.org> autofs-4.0.0.ebuild:
   added Ervin Nemeth's sed entry to allow for portage controlled CFLAGS.
