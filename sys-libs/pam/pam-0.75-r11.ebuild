@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.26 2004/05/12 13:26:01 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.27 2004/06/24 23:08:12 agriffis Exp $
 
 inherit gcc eutils flag-o-matic
 

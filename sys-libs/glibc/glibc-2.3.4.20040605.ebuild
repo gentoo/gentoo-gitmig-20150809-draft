@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.15 2004/06/22 07:16:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.16 2004/06/24 23:04:10 agriffis Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-0.9.1-r1.ebuild,v 1.5 2004/04/10 21:32:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-0.9.1-r1.ebuild,v 1.6 2004/06/24 23:05:07 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."

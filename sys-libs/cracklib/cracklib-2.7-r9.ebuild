@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r9.ebuild,v 1.6 2004/06/22 19:41:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r9.ebuild,v 1.7 2004/06/24 23:02:51 agriffis Exp $
 
 inherit flag-o-matic eutils
 

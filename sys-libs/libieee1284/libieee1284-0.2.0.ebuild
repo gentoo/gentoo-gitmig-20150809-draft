@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.0.ebuild,v 1.7 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.0.ebuild,v 1.8 2004/06/24 23:05:28 agriffis Exp $
 
 inherit libtool
 

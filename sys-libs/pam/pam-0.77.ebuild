@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.20 2004/03/09 23:41:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.21 2004/06/24 23:08:12 agriffis Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"

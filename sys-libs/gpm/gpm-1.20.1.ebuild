@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.17 2004/05/23 23:50:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.18 2004/06/24 23:04:23 agriffis Exp $
 
 # Please use this variable to keep patch names sane for our patches!
 PATCH_VER="1.0"

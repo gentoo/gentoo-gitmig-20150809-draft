@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/libnss-mysql
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/ChangeLog,v 1.6 2004/05/03 19:41:30 dholm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/ChangeLog,v 1.7 2004/06/24 23:05:50 agriffis Exp $
 
   03 May 2004; David Holm <dholm@gentoo.org> libnss-mysql-1.2.ebuild:
   Added to ~ppc.

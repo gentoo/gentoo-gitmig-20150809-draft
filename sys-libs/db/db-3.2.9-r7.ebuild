@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.12 2004/06/17 01:47:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.13 2004/06/24 23:03:02 agriffis Exp $
 
 IUSE=""
 

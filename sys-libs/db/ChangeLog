@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/db
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.92 2004/06/20 02:56:56 solar Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.93 2004/06/24 23:03:02 agriffis Exp $
 
 *db-4.1.25_p1-r4 (19 Jun 2004)
 

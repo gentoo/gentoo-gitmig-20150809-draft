@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/slang
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.25 2004/06/06 16:52:12 usata Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.26 2004/06/24 23:09:42 agriffis Exp $
 
 *slang-1.4.9-r1 (07 Jun 2004)
 

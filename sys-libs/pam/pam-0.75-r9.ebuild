@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r9.ebuild,v 1.13 2004/01/30 07:30:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r9.ebuild,v 1.14 2004/06/24 23:08:12 agriffis Exp $
 
 IUSE="berkdb"
 

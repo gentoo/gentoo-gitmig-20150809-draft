@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.17.ebuild,v 1.4 2004/05/30 02:44:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.17.ebuild,v 1.5 2004/06/24 23:03:24 agriffis Exp $
 
 DESCRIPTION="Device mapper ioctl library for use with LVM2 utilities."
 HOMEPAGE="http://sources.redhat.com/dm/"

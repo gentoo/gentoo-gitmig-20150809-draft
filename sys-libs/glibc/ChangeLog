@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.196 2004/06/22 07:16:56 solar Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.197 2004/06/24 23:04:10 agriffis Exp $
 
   22 Jun 2004; <solar@gentoo.org> glibc-2.2.5-r9.ebuild,
   glibc-2.3.1-r5.ebuild, glibc-2.3.2-r10.ebuild, glibc-2.3.2-r2.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.5-r2.ebuild,v 1.24 2004/06/06 16:52:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.5-r2.ebuild,v 1.25 2004/06/24 23:09:42 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console display library used by most text viewer"
