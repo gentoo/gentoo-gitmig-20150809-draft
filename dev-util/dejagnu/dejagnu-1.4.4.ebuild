@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4.ebuild,v 1.1 2004/02/29 19:36:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4.ebuild,v 1.2 2004/03/01 11:27:14 dholm Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/dejagnu/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc ~mips ~ppc"
 
 DEPEND="virtual/glibc
 	dev-lang/tcl
