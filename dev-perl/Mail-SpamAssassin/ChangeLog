@@ -1,0 +1,60 @@
+# ChangeLog for net-mail/spamassassin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.6 2002/07/07 04:04:39 seemant Exp $
+
+*Mail-SpamAssassin-2.31-r3 (05 Jul 2002)
+
+  05 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  Mail-SpamAssassin-2.31-r3.ebuild files/digest-Mail-SpamAssassin-2.31-r3 :
+
+  Fixed the way the install process went for this.
+
+*Mail-SpamAssassin-2.31-r2 (04 Jul 2002)
+
+  04 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  Adding spamd init stuff (thanks to Marcelo Fontenele S Santos); removing
+  old versions
+
+*Mail-SpamAssassin-2.31-r1 (02 Jul 2002)
+
+  02 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  added Time-HiRes dep
+
+*Mail-SpamAssassin-2.31 (28 Jun 2002)
+
+  28 Jun 2002; Bruce A. Locke <blocke@shivan.org> Mail-SpamAssassin-2.31.ebuild:
+  
+  Version Bump
+
+*Mail-SpamAssassin-2.20 (2 Jun 2002)
+
+  2 Jun 2002; Preston A. Elder <prez@gentoo.org> Mail-SpamAssassin-2.20.ebuild:
+
+  new ebuild
+
+*spamassassin-2.20 (21 May 2002)
+
+  21 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Version bump.  Also dodoc'd some useful files.
+
+*spamassassin-2.11-r1 (12 Apr 2002)
+
+  12 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Fixed sandbox violation.
+
+*spamassassin-2.11 (15 Mar 2002)
+
+  15 Mar 2002; Bruce A. Locke <blocke@shivan.org> spamassassin-2.11.ebuild :
+
+  Update to 2.11
+
+*spamassassin-2.01 (24 Feb 2002)
+
+  24 Feb 2002; Bruce A. Locke <blocke@shivan.org> spamassassin-2.01.ebuild :
+
+  Ebuild contributed by Marc Soda <marc@aspre.net>
+
