@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_pam/poppassd_pam-1.0.ebuild,v 1.3 2004/06/19 06:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_pam/poppassd_pam-1.0.ebuild,v 1.4 2004/06/25 03:11:03 agriffis Exp $
 
 inherit eutils gcc
 

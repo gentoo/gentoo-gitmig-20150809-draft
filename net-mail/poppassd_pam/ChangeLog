@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/poppassd_pam
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_pam/ChangeLog,v 1.1 2003/02/18 19:19:52 raker Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_pam/ChangeLog,v 1.2 2004/06/25 03:11:03 agriffis Exp $
 
 *poppassd_pam-1.0 (18 Feb 2003)
 
