@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.13 2004/04/07 08:52:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.14 2004/04/07 21:02:47 spyderous Exp $
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.12.5.ebuild:
+  Missing space in DEPEND.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   synaptics-0.12.5.ebuild:
