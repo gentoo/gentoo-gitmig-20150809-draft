@@ -1,0 +1,8 @@
+# ChangeLog for games-kids/tuxtype2
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/ChangeLog,v 1.1 2005/01/04 13:47:14 vapier Exp $
+
+*tuxtype2-1.5.3 (30 Dec 2004)
+
+  30 Dec 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by will@johnstonclan.net #45715.
