@@ -1,4 +1,16 @@
-MD5 94e45469567c0f1ad4574ae4e6707d4c baselayout-lite-1.0_pre1.ebuild 2065
-MD5 74b2c77a4510552156a3251de6916b91 ChangeLog 819
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 827c9b7fd870a997ec0608cf148b1d88 baselayout-lite-1.0_pre1.ebuild 2094
+MD5 e1c752a04df488680b0e7a6555d91ad3 ChangeLog 939
 MD5 80eb89a0e028f94140bee79817433941 metadata.xml 367
 MD5 865feeaee968ccbfa160d6b31ea179e1 files/digest-baselayout-lite-1.0_pre1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iQCVAwUBQiUBlZ4WFLgrx1GWAQIXTgP/dtcWdx8IdwM6QZLW/B/7MZBpCbNHI4Gv
+aUWPCqygIRBjSY2wnEoPnkhrg6Z0Z3tsXTKmcPYxmdoO6yvES4SKec35jgKCR2Oo
+5I5XcUqqGXeiNWfqCQmMobTH/1fW/OkTWp7LaFOG9H8hkZnEB+g7biMtZsylvicb
+Gjt7T47Wcqc=
+=A30q
+-----END PGP SIGNATURE-----

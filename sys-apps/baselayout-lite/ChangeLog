@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baselayout-lite
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.4 2004/07/23 22:26:09 solar Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.5 2005/03/01 23:58:46 solar Exp $
+
+  01 Mar 2005; <solar@gentoo.org> baselayout-lite-1.0_pre1.ebuild:
+  - make baselayout-lite provide virtual/baselayout
 
   23 Jul 2004; <solar@gentoo.org> baselayout-lite-1.0_pre1.ebuild:
   Moved device node creation to src_install() so that we can get the device nods
