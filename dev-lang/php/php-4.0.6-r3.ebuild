@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.7 2002/01/24 19:39:32 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.8 2002/02/03 21:50:06 danarmak Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -29,7 +29,7 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	X? ( virtual/x11 )
-	qt? ( >=x11-libs/qt-2.3.0 )
+	qt? ( =x11-libs/qt-2.3* )
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	imap? ( virtual/imap )

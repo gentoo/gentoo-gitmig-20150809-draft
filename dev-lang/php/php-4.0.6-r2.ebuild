@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r2.ebuild,v 1.4 2001/11/17 07:35:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r2.ebuild,v 1.5 2002/02/03 21:50:06 danarmak Exp $
 
 S=${WORKDIR}/${PN}-4.0.6
 DESCRIPTION="HTML embedded scripting language"
@@ -27,7 +27,7 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	X? ( virtual/x11 )
-	qt? ( >=x11-libs/qt-x11-2.3.0 )
+	qt? ( =x11-libs/qt-x11-2.3* )
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	imap? ( virtual/imap )
