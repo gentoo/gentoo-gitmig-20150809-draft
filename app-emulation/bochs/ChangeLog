@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.14 2003/10/01 11:41:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.15 2003/11/22 05:28:24 mr_bones_ Exp $
+
+  21 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> bochs-2.0.2.ebuild:
+  inherit eutils for epatch; more error checking/messages
 
   29 Sep 2003; Martin Holzer <mholzer@gentoo.org> bochs-2.0.2.ebuild,
   files/bochs-2.0.2-gcc3.patch:

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.7 2003/11/12 14:15:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.8 2003/11/22 05:28:24 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="a LGPL-ed pc emulator"
 HOMEPAGE="http://bochs.sourceforge.net/"
@@ -23,10 +25,10 @@ src_unpack() {
 	cd ${S}
 
 	sed -i \
-	-e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
-	-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
-	-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in || \
-		die "sed Makefile.in failed"
+		-e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
+		-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
+		-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in || \
+			die "sed Makefile.in failed"
 	epatch ${FILESDIR}/${P}-gcc3.patch || die
 }
 
@@ -35,15 +37,17 @@ src_compile() {
 	myconf="${myconf} `use_with sdl`"
 	myconf="${myconf} `use_with gtk wx`"
 
-	./configure --enable-fpu --enable-cdrom --enable-control-panel \
-	--enable-ne2000 --enable-sb16=linux --enable-slowdown --prefix=/usr \
-	--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} \
-	--with-x11 $myconf || die "configure failed"
+	./configure \
+		--enable-fpu --enable-cdrom --enable-control-panel \
+		--enable-ne2000 --enable-sb16=linux --enable-slowdown --prefix=/usr \
+		--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} \
+		--with-x11 $myconf || \
+			die "configure failed"
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc CHANGES COPYING CVS README TESTFORM.txt
+	make DESTDIR=${D} install || die "make install failed"
+	dodoc CHANGES CVS README TESTFORM.txt || die "dodoc failed"
 }
