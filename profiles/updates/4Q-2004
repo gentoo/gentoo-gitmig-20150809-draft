@@ -209,3 +209,4 @@ move app-sci/yacas sci-mathematics/yacas
 move app-sci/ksimus sci-mathematics/ksimus
 move app-sci/ksimus-boolean sci-mathematics/ksimus-boolean
 move app-sci/ksimus-datarecorder sci-mathematics/ksimus-datarecorder
+move app-sci/ksimus-floatingpoint sci-mathematics/ksimus-floatingpoint
