@@ -1,6 +1,10 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.17 2005/01/11 22:45:06 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.18 2005/01/12 16:48:56 slarti Exp $
+
+  12 Jan 2005; Tom Martin <slarti@gentoo.org> crm114-20041231.ebuild:
+  Install osbf-util, resolving bug 77600. Thanks to John Hampton
+  <pacopablo@pacopablo.com> for reporting.
 
 *crm114-20041231 (11 Jan 2005)
 
