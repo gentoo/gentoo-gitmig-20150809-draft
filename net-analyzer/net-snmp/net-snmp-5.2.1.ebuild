@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.1 2005/02/09 14:54:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.2 2005/02/17 12:26:49 dragonheart Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64 ~mips"
-IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc"
+IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc rpm elf"
 
 PROVIDE="virtual/snmp"
 DEPEND="virtual/libc
@@ -22,7 +22,15 @@ DEPEND="virtual/libc
 	lm_sensors? (
 		x86?   ( sys-apps/lm-sensors )
 		amd64? ( sys-apps/lm-sensors )
+	)
+	!ppc64? ( rpm? ( app-arch/rpm
+		dev-libs/popt
+		app-arch/bzip2
+		)
+		elf? ( dev-libs/elfutils )
 	)"
+	#ppc64 keyword awaiting bug #82341
+
 RDEPEND="${DEPEND}
 	dev-perl/TermReadKey
 	perl? ( X? ( dev-perl/perl-tk ) )
@@ -56,6 +64,8 @@ src_unpack() {
 		|| die "sed configure.in failed"
 
 	ht_fix_all
+
+	epatch ${FILESDIR}/${P}-conf-elf-rpm-bz2.patch || die "patch failed"
 }
 
 src_compile() {
@@ -81,6 +91,9 @@ src_compile() {
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
 		--with-zlib \
+		`use_with rpm` \
+		`use_with rpm bzip2` \
+		`use_with elf` \
 		--with-install-prefix="${D}" \
 		${myconf} || die "econf failed"
 
