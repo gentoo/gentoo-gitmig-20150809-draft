@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!-- 
+
+This is the example metadata file.
+The root element of this file is <pkgmetadata>. Within this element a 
+number of subelements are allowed: herd, maintainer, and 
+longdescription. herd is a required subelement.
+
+For a full description look at:
+http://www.gentoo.org/proj/en/metastructure/herds
+
+
+Before committing, please remove the comments from this file. They are 
+not relevant for general metadata.xml files.
+-->
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>vapier@gentoo.org</email>
+</maintainer>
+<longdescription>
+Eterm is a color vt102 terminal emulator intended as a replacement for 
+xterm. It is designed with a Freedom of Choice philosophy, leaving as 
+much power, flexibility, and freedom as possible in the hands of the 
+user. It is designed to look good and work well, but takes a 
+feature-rich approach rather than one of minimalism while still 
+maintaining speed and efficiency.
+</longdescription>
+</pkgmetadata>
