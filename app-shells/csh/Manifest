@@ -1,5 +1,5 @@
-MD5 6cbedb846fcedeab473455648f92d59c csh-1.29.ebuild 3789
-MD5 55777b960a6a64596e4a5bad592c78af ChangeLog 386
+MD5 768105d7bf56e87e93437404159b8460 csh-1.29.ebuild 3798
+MD5 e4a376127a3cbe6a75b67a2761e63024 ChangeLog 463
 MD5 49c0a95e6881eb7e2932d149f62f0de2 files/mksignames.c 10722
 MD5 49ee962115384f8a0acedfcf225fd27a files/digest-csh-1.29 148
 MD5 213922a7d6fdee0a89e9a349653be22d files/linux-vs-bsd.diff 7483

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.1 2003/05/28 21:24:25 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.2 2003/05/29 14:09:47 taviso Exp $
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
@@ -30,7 +30,7 @@ IUSE="static doc"
 DEPEND="virtual/glibc
 	sys-devel/pmake
 	>=sys-apps/sed-4
-	sys-apps/groff"
+	doc? ( sys-apps/groff )"
 RDEPEND="virtual/glibc"
 
 ECVS_SERVER="anoncvs.netbsd.org:/cvsroot"
