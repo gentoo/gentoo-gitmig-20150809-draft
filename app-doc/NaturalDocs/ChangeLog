@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/NaturalDocs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.5 2004/07/15 12:18:52 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.6 2004/11/12 18:19:26 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> NaturalDocs-1.22-r1.ebuild:
+  stable on amd64
 
   15 Jul 2004; Josh Glover <jmglov@gentoo.org> NaturalDocs-1.22-r1.ebuild:
   marking stable on x86
