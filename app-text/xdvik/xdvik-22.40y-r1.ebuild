@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r1.ebuild,v 1.4 2003/09/28 13:57:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r1.ebuild,v 1.5 2003/10/14 12:38:15 usata Exp $
 
 inherit eutils
 
@@ -35,14 +35,18 @@ src_unpack () {
 
 src_compile () {
 
-	use cjk && export CPPFLAGS="${CPPFLAGS} -I/usr/include/freetype2"
+	local myconf
+
+	if [ -n "`use cjk`" ] ; then
+		 export CPPFLAGS="${CPPFLAGS} -I/usr/include/freetype2"
+		 myconf="${myconf} --with-vflib=vf2ft"
+	fi
 
 	econf --enable-xdvietcdir=/usr/share/texmf/xdvi \
 		--disable-multiplatform \
 		--with-system-t1lib \
 		`use_with libwww system-wwwlib` \
-		`use_with cjk vflib=vf2ft` \
-		|| die "econf failed"
+		${myconf} || die "econf failed"
 
 	cd texk/xdvik
 	make || die
