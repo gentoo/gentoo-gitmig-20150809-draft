@@ -21,7 +21,7 @@ src_compile() {
 
 src_install () {
 
-    exeinto /usr/share/gkrellm/plugins
+    exeinto /usr/lib/gkrellm/plugins
     doexe wireless.so
     dodoc README ChangeLog
 }
