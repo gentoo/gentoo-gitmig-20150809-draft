@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.0.5.ebuild,v 1.1 2004/06/08 19:57:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.0.5.ebuild,v 1.2 2004/06/08 20:02:48 dholm Exp $
 
-inherit eutils
+inherit games
 
 DESCRIPTION="A Sega Saturn emulator"
 HOMEPAGE="http://yabause.sourceforge.net/"
@@ -15,6 +15,6 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-image"
 
 src_install() {
-	einstall || die "einstall failed"
-	dodoc AUTHORS COPYING ChangeLog TODO README
+	egamesinstall || die "egamesinstall failed"
+	dodoc AUTHORS ChangeLog TODO README
 }
