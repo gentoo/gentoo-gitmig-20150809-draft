@@ -1,19 +1,37 @@
-#!/bin/sh
+#!/bin/bash
 
 ##########################################################################
 # Program: /usr/sbin/adduser
 # Purpose: Interactive front end to /usr/sbin/useradd for Slackware Linux
-# Author:  Stuart Winter <stuart@polplex.co.uk>
-#          based on the original Slackware adduser by Hrvoje Dogan
+# Author : Stuart Winter <stuart@polplex.co.uk>
+#          Based on the original Slackware adduser by Hrvoje Dogan
 #          with modifications by Patrick Volkerding
-# Version: 1.05
+# Version: 1.08
+##########################################################################
+# Usage..: adduser [<new_user_name>]
 ##########################################################################
 # History #
 ###########
+# v1.08 - 25/04/04
+#       * Disallow user names that begin with a numeric because useradd 
+#         (from shadow v4.03) does not allow them. <sw>
+# v1.07 - 07/03/03
+#       * When supplying a null string for the uid (meaning 'Choose next available'), 
+#         if there were file names in the range 'a-z' in the pwd then the 
+#         egrep command considered these files rather than the null string. 
+#         The egrep expression is now in quotes.  
+#         Reported & fixed by Vadim O. Ustiansky <sw>
+# v1.06 - 31/03/03
+#       * Ask to chown user.group the home directory if it already exists.
+#         This helps reduce later confusion when adding users whose home dir
+#         already exists (mounted partition for example) and is owned
+#         by a user other than the user to which the directory is being
+#         assigned as home.  Default is not to chown.
+#         Brought to my attention by mRgOBLIN. <sw>
 # v1.05 - 04/01/03
 #       * Advise & prevent users from creating logins with '.' characters
-#         in the user name.
-#       * Made pending account creation info look neater
+#         in the user name. <sw>
+#       * Made pending account creation info look neater <sw>
 # v1.04 - 09/06/02
 #       * Catered for shadow-4.0.3's 'useradd' binary that no longer
 #         will let you create a user that has any uppercase chars in it
@@ -32,8 +50,6 @@
 # v1.00 - 22/03/02
 #       * Created
 #######################################################################
-# Syntax: adduser [<new_user_name>]
-#######################################################################
 
 # Path to files
 pfile=/etc/passwd
@@ -50,24 +66,25 @@ chmod=/bin/chmod
 defhome=/home
 defshell=/bin/bash
 defchmod=711 # home dir permissions - may be preferable to use 701, however.
+defgroup=users
 
 # Determine what the minimum UID is (for UID recycling)
 # (we ignore it if it's not at the beginning of the line (i.e. commented out with #))
-export recycleUIDMIN="$(grep ^UID_MIN /etc/login.defs | awk {'print $2'} 2>/dev/null)"
+export recycleUIDMIN="$(grep ^UID_MIN /etc/login.defs | awk '{print $2}' 2>/dev/null)"
 # If we couldn't find it, set it to the default of 1000
 if [ -z "$recycleUIDMIN" ]; then
-   export recycleUIDMIN=1000  # this is the default from /etc/login.defs
+   export recycleUIDMIN=1000  # this is the default from Slackware's /etc/login.defs
 fi
 
 
 # This setting enables the 'recycling' of older unused UIDs.
 # When you userdel a user, it removes it from passwd and shadow but it will
-# never get used again unless you specify it expliticly -- useradd just
-# (appears to) looks at the last line in passwd and increments the uid
-# I like the idea of recycling uids but you may have very good reasons not to
-# (old forgotten confidential files still on the system could then be owned by
-# this new user).  We'll set this to no because this is what the original
-# adduser shell script did and it's what users expect.
+# never get used again unless you specify it expliticly -- useradd (appears to) just
+# look at the last line in passwd and increment the uid.  I like the idea of 
+# recycling uids but you may have very good reasons not to (old forgotten
+# confidential files still on the system could then be owned by this new user).
+# We'll set this to no because this is what the original adduser shell script
+# did and it's what users expect.
 recycleuids=no
 
 # Function to read keyboard input.
@@ -76,7 +93,7 @@ recycleuids=no
 function get_input() { 
   local output
   if [ "`echo $BASH_VERSION | cut -b1`" = "1" ]; then
-    echo -n "${1} " >&2 ; # fudge for use with bash v1
+    echo -n "${1} " >&2 # fudge for use with bash v1
     read output
   else # this should work with any other /bin/sh
     read -ep "${1} " output
@@ -136,6 +153,9 @@ while [ ! -z $needinput ]; do
   if [ $? -eq 0 ]; then
     echo "- User '$LOGIN' already exists; please choose another"
     unset LOGIN
+  elif [ ! -z "$( echo $LOGIN | grep "^[0-9]" )" ]; then
+    echo "- User names cannot begin with a number; please choose another"
+    unset LOGIN
   elif [ ! "$LOGIN" = "`echo $LOGIN | tr A-Z a-z`" ]; then # useradd does not allow uppercase
     echo "- User '$LOGIN' contains illegal characters (uppercase); please choose another"
     unset LOGIN
@@ -165,7 +185,7 @@ while [ ! -z "$needinput" ]; do
   grep -v "^$" $pfile | awk -F: '{print $3}' | grep "^${_UID}$" >/dev/null 2>&1
   if [ $? -eq 0 ]; then
     echo "- That UID is already in use; please choose another"
-  elif [ ! -z "$(echo $_UID | egrep [A-Za-z])" ]; then
+  elif [ ! -z "$(echo $_UID | egrep '[A-Za-z]')" ]; then
     echo "- UIDs are numerics only"         
   else
     unset needinput
@@ -187,7 +207,7 @@ fi
 echo
 needinput=yes
 while [ ! -z "$needinput" ]; do
-  GID="$(get_input "Initial group [ users ]:")"
+  GID="$(get_input "Initial group [ ${defgroup} ]:")"
   check_group "$GID"
   if [ $? -gt 0 ]; then
     echo "- Please choose another"
@@ -197,7 +217,7 @@ while [ ! -z "$needinput" ]; do
 done
 # Syntax the variable ready for useradd
 if [ -z "$GID" ]; then
-  GID="-g users"
+  GID="-g ${defgroup}"
 else
   GID="-g ${GID}"
 fi
@@ -208,7 +228,7 @@ echo
 needinput=yes
 while [ ! -z "$needinput" ]; do
   AGID="$(get_input "Additional groups (comma separated) []:")"
-  AGID="$(echo "$AGID" | tr -d ' ' | tr , ' ')" ; # fix up for parsing 
+  AGID="$(echo "$AGID" | tr -d ' ' | tr , ' ')" # fix up for parsing 
   if [ ! -z "$AGID" ]; then
     check_group "$AGID"  # check all groups at once (treated as N # of params)
     if [ $? -gt 0 ]; then
@@ -234,9 +254,14 @@ while [ ! -z "$needinput" ]; do
   # Warn the user if the home dir already exists
   if [ -d "$HME" ]; then
     echo "- Warning: '$HME' already exists !"
-    getyn="$(get_input "  Do you wish to change the home directory path? (Y/n) ")"
+    getyn="$(get_input "  Do you wish to change the home directory path ? (Y/n) ")"
     if [ "$(echo $getyn | grep -i "n")" ]; then
       unset needinput
+      # You're most likely going to only do this if you have the dir *mounted* for this user's $HOME
+      getyn="$(get_input "  Do you want to chown $LOGIN.$( echo $GID | awk '{print $2}') $HME ? (y/N) ")"
+      if [ "$(echo $getyn | grep -i "y")" ]; then
+         CHOWNHOMEDIR=$HME # set this to the home directory
+      fi
     fi
   else
     unset needinput
@@ -263,7 +288,7 @@ while [ ! -z "$needinput" ]; do
     got_error=yes
   fi
   if [ ! -z "$got_error" ]; then
-    getyn="$(get_input "  Do you wish to change the shell? (Y/n) ")"
+    getyn="$(get_input "  Do you wish to change the shell ? (Y/n) ")"
     if [ "$(echo $getyn | grep -i "n")" ]; then
       unset needinput
     fi
@@ -323,7 +348,13 @@ if [ $? -gt 0 ]; then
   echo "(cmd: $CMD)"
   exit 1
 fi
-   
+
+# chown the home dir ?  We can only do this once the useradd has
+# completed otherwise the user name doesn't exist.
+if [ ! -z "${CHOWNHOMEDIR}" ]; then
+  chown "$LOGIN"."$( echo $GID | awk '{print $2}')" "${CHOWNHOMEDIR}"
+fi
+
 # Set the finger information
 $chfn "$LOGIN"
 if [ $? -gt 0 ]; then
@@ -348,3 +379,4 @@ echo
 echo
 echo "Account setup complete."
 exit 0
+
