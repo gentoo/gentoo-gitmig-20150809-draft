@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.7.ebuild,v 1.2 2005/01/21 01:09:22 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.7.ebuild,v 1.3 2005/01/21 17:46:35 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -34,11 +34,11 @@ src_compile() {
 	einfo "If otherwise -> build will fail."
 	einfo ""
 
-	emake KDIR=${KERNEL_DIR} || die
+	emake KDIR=${KERNEL_DIR} || die "compile problem"
 }
 
 src_install() {
-	make PREFIX=${D} install
+	make PREFIX=${D} install || die "install problem"
 
 	# gentoo-ish init-script
 	dodir /etc/init.d
