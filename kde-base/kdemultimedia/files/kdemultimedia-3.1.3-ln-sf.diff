@@ -1,0 +1,29 @@
+--- kmidi/TIMIDITY/makelinks	Sat Aug 24 11:36:27 2002
++++ kmidi/TIMIDITY/makelinks	Sat Aug 24 11:36:15 2002
+@@ -3,7 +3,7 @@ srcdir=$1
+ for header in common config controls ctl effects filter instrum mix \
+               output playmidi readmidi resample sbk sflayer tables \
+               version ; do
+-    if [ ! -h ${header}.h ]; then ln -s ${srcdir}/${header}.h . ; fi
++    if [ ! -h ${header}.h ]; then ln -sf ${srcdir}/${header}.h . ; fi
+ done
+ 
+ for cfile in alsa_a arts_a b_out bag bsd20_a celeste_e chorus_e \
+@@ -13,14 +13,14 @@ for cfile in alsa_a arts_a b_out bag bsd
+ 	     playmidi raw_a readmidi readsbk resample resample_f \
+ 	     resample_l reverb_e sbktext sf2cfg slang_c sndfont \
+ 	     sun_a tables timidity wav2pat wave_a ; do
+-    if [ ! -h ${cfile}.c ]; then ln -s ${srcdir}/${cfile}.cpp ${cfile}.c ; fi
++    if [ ! -h ${cfile}.c ]; then ln -sf ${srcdir}/${cfile}.cpp ${cfile}.c ; fi
+ done
+ 
+ for lfile in cfg ; do
+-    if [ ! -h ${lfile}.l ]; then ln -s ${srcdir}/${lfile}.l . ; fi
++    if [ ! -h ${lfile}.l ]; then ln -sf ${srcdir}/${lfile}.l . ; fi
+ done
+ 
+ # LEAVE THIS ONE AT THE END!!
+ for other in BITMAPS ; do
+-    if [ ! -h ${other} ]; then ln -s ${srcdir}/${other} . ; fi
++    if [ ! -h ${other} ]; then ln -sf ${srcdir}/${other} . ; fi
+ done
