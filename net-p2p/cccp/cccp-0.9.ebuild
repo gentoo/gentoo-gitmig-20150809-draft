@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/cccp-0.9.ebuild,v 1.1 2004/07/22 05:11:45 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/cccp-0.9.ebuild,v 1.2 2004/07/22 21:08:28 dholm Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://members01.chello.se/hampasfirma/cccp/${PN}.${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=net-p2p/dctc-0.83"
 
