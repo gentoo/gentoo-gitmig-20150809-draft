@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.6 2003/11/07 16:44:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.7 2004/01/19 18:27:58 azarah Exp $
 
 IUSE="nls objc"
 
@@ -118,8 +118,9 @@ src_install() {
 
 	# These includes and libs are in binutils already
 	rm -f ${D}/usr/lib/libbfd.*
-	rm -r ${D}/usr/lib/libiberty.*
+	rm -f ${D}/usr/lib/libiberty.*
 	rm -f ${D}/usr/lib/libopcodes.*
+	rm -f ${D}/usr/share/info/{bfd,configure,standards}.info*
 
 	rm -rf ${D}/usr/include
 

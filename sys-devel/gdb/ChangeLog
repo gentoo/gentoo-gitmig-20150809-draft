@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.26 2003/10/18 21:34:47 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.27 2004/01/19 18:27:58 azarah Exp $
+
+  19 Jan 2004; Martin Schlemmer <azarah@gentoo.org> gdb-5.1.1-r2.ebuild,
+  gdb-5.2.1.ebuild, gdb-5.3.90.ebuild, gdb-5.3.ebuild, gdb-6.0.ebuild:
+  Do not install configure, bfd, and standards info manuals, as binutils provide
+  them.
 
   18 Oct 2003; Jason Wever <weeve@gentoo.org> gdb-5.3.90.ebuild,
   gdb-6.0.ebuild:
