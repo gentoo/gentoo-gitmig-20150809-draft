@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.13 2004/08/21 22:06:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.14 2004/09/15 20:21:27 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -287,7 +287,11 @@ mozilla_conf() {
 		use mozdevelop && myext="${myext},venkman"
 		use gnome && myext="${myext},gnomevfs"
 	else
-		myext="pref,spellcheck,universalchardet,wallet"
+		if [[ ${PV} < 0.8 ]]; then
+			myext="pref,spellcheck,universalchardet,wallet"
+		else
+			myext="pref,spellcheck,universalchardet,wallet,xmlextras"
+		fi
 	fi
 	myconf="${myconf} --enable-extensions=${myext}"
 
