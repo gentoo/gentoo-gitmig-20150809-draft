@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.ebuild,v 1.7 2001/08/22 11:29:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.ebuild,v 1.8 2001/08/22 11:57:19 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Libraries"
@@ -39,12 +39,12 @@ RDEPEND=">=sys-devel/gcc-2.95.2
 	sys-devel/perl dev-lang/python"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
+
+	cd ${WORKDIR}
+	unpack ${P}.tar.bz2
+	cd ${S}
 	use objprelink && patch -p0 < ${DISTDIR}/kde-admin-acinclude.patch
-#    patch -p0 < ${FILESDIR}/${PN}-2.1.1-ksgmltools-gentoo.diff
-#    rm configure
-#    autoconf
+
 }
 
 src_compile() {

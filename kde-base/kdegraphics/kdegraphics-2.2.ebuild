@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.ebuild,v 1.4 2001/08/22 11:29:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.ebuild,v 1.5 2001/08/22 11:57:19 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Graphics"
@@ -21,9 +21,13 @@ DEPEND=">=kde-base/kdelibs-${PV} sys-devel/perl
 RDEPEND=">=kde-base/kdelibs-${PV} gphoto2? ( >=gnome-apps/gphoto-2.0_beta1 >=media-libs/libgpio-20010607 )"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
-    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+
+	cd ${WORKDIR}
+	unpack ${P}.tar.bz2
+	cd ${S}
+	 patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	use objprelink && patch -p0 < ${DISTDIR}/kde-admin-acinclude.patch
+
 }
 
 src_compile() {

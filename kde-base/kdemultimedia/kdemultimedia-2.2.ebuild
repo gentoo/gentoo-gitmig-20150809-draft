@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.ebuild,v 1.3 2001/08/22 11:29:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.ebuild,v 1.4 2001/08/22 11:57:19 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Multimedia"
@@ -27,10 +27,15 @@ DEPEND=">=kde-base/kdelibs-${PV}
 #	tcltk? ( =dev-lang/tcl-tk.8.0.5-r2 )
 
 RDEPEND=$DEPEND
+
 src_unpack() {
-	unpack ${A}
+
+	cd ${WORKDIR}
+	unpack ${P}.tar.bz2
 	cd ${S}
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	use objprelink && patch -p0 < ${DISTDIR}/kde-admin-acinclude.patch
+
 }
 
 src_compile() {
