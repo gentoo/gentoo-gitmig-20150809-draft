@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.28 2002/10/31 21:37:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.29 2002/11/01 11:38:07 verwilst Exp $
+
+  1 Nov 2002; Bart Verwilst <verwilst@gentoo.org> Changelog  :
+
+  Make sure cups support is enabled when cups is in USE.
 
   31 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0_pre20021024.ebuild,v 1.2 2002/10/31 21:37:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0_pre20021024.ebuild,v 1.3 2002/11/01 11:38:07 verwilst Exp $
 
 # the qt-copy snapshotfrfom 20021024 distibuted with kde 3.1 rc1
 
@@ -29,7 +29,8 @@ COMMONDEPEND="virtual/x11
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( >=dev-db/postgresql-7.2 )"
+	postgres? ( >=dev-db/postgresql-7.2 )
+	cups? ( >=net-print/cups-1.1.14 )"
 	
 DEPEND="$DEPEND $COMMONDEPEND"
 RDEPEND="$RDEPEND $COMMONDEPEND"
@@ -63,6 +64,7 @@ src_compile() {
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
+	use cups        && myconf="${myconf} -cups"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
