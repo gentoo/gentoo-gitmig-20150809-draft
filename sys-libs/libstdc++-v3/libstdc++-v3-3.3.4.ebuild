@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.2 2004/09/01 10:03:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.3 2004/09/11 22:22:47 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -80,11 +80,12 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-* ~x86 ~mips ~amd64 ~ppc64 ~ppc"
 IUSE="nls"
 
+# 3.2.3 -> 3.3.x install .so.5, so lets slot to 5
 if [ "${CHOST}" == "${CCHOST}" ]
 then
-	SLOT="3.3.3"
+	SLOT="5"
 else
-	SLOT="${CCHOST}-3.3.3"
+	SLOT="${CCHOST}-5"
 fi
 
 DEPEND="virtual/libc
