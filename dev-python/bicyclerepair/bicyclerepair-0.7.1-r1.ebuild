@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.7.1-r1.ebuild,v 1.1 2004/01/16 01:24:23 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.7.1-r1.ebuild,v 1.2 2004/01/16 01:32:40 pythonhead Exp $
 
 inherit distutils
 mydoc="NEWS DESIGN"
@@ -37,6 +37,7 @@ pkg_postinst() {
 	fi
 	einfo " "
 	einfo "To use bicyclerepair with Xemacs or GNU Emacs you must be in Python"
-	einfo "mode and add /usr/share/bicyclerepair/bike.el to your .emacs or .init.el"
+	einfo "mode and add this to your .emacs or .init.el:"
+	einfo "(load-library '/usr/share/bicyclerepair/bike.el')"
 }
 
