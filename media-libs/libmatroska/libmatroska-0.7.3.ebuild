@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.3.ebuild,v 1.1 2004/08/25 19:32:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.3.ebuild,v 1.2 2004/10/08 10:29:50 eradicator Exp $
 
-inherit flag-o-matic gcc
+IUSE=""
+
+inherit flag-o-matic gcc eutils
 
 DESCRIPTION="Extensible multimedia container format based on EBML"
 HOMEPAGE="http://www.matroska.org/"
@@ -11,10 +13,15 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
-IUSE=""
 
-DEPEND="virtual/libc
-	>=dev-libs/libebml-0.7.1"
+DEPEND=">=dev-libs/libebml-0.7.1"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}/make/linux
+	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
+}
 
 src_compile() {
 	cd ${S}/make/linux
@@ -25,8 +32,6 @@ src_compile() {
 	use amd64 && append-flags -fPIC
 	use ppc && append-flags -fPIC
 
-	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
-
 	#fixes locale for gcc3.4.0 to close bug 52385
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
@@ -35,11 +40,12 @@ src_compile() {
 
 	make PREFIX=/usr \
 		LIBEBML_INCLUDE_DIR=/usr/include/ebml \
-		LIBEBML_LIB_DIR=/usr/lib || die "make failed"
+		LIBEBML_LIB_DIR=/usr/$(get_libdir) || die "make failed"
 }
 
 src_install() {
 	cd ${S}/make/linux
-	einstall || die "make install failed"
-	dodoc ${S}/LICENSE.*
+
+	einstall libdir="${D}/usr/$(get_libdir)" || die "make install failed"
+	dodoc ../../ChangeLog
 }
