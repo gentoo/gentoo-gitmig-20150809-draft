@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3.ebuild,v 1.2 2004/01/20 20:32:58 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3.ebuild,v 1.3 2004/02/29 21:04:19 vapier Exp $
 
 inherit games eutils gcc flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE="X qt gnome"
 
 DEPEND="virtual/glibc
@@ -34,7 +34,6 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
-#	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${FILESDIR}/${PV}-default-options.patch
 
 	sed -i "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h || die "setting statedir"
