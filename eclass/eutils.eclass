@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.134 2004/12/30 21:48:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.135 2004/12/31 11:28:18 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -56,9 +56,6 @@ ebeep() {
 #   fall back on old behavior.  Any profile that has these set should also
 #   depend on a newer version of portage (not yet released) which uses these
 #   over CONF_LIBDIR in econf, dolib, etc...
-#
-#   For now, this is restricted to the sparc64-multilib ${PROFILE_ARCH} as it
-#   is still in testing.
 get_libdir() {
 	LIBDIR_TEST=$(type econf)
 	if [ ! -z "${CONF_LIBDIR_OVERRIDE}" ] ; then
@@ -73,7 +70,7 @@ get_libdir() {
 	#	# and friends from portage 2.0.50 wont be too happy otherwise.
 	#	CONF_LIBDIR="lib"
 	#fi
-	elif [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then # Using eradicator's LIBDIR_<abi> approach...
+	elif [ -n "$(get_abi_LIBDIR)" ]; then # Using eradicator's LIBDIR_<abi> approach...
 		CONF_LIBDIR="$(get_abi_LIBDIR)"
 	elif [ "${LIBDIR_TEST/CONF_LIBDIR}" == "${LIBDIR_TEST}" ]; then # we don't have CONF_LIBDIR support
 		# will be <portage-2.0.51_pre20
@@ -85,7 +82,7 @@ get_libdir() {
 }
 
 get_multilibdir() {
-	[ "${PROFILE_ARCH}" = "sparc64-multilib" ] && die "get_multilibdir called, but it shouldn't be needed on sparc64-multilib"
+	[ -n "$(get_abi_LIBDIR)" ] && die "get_multilibdir called, but it shouldn't be needed with the new multilib approach.  Please file a bug at http://bugs.gentoo.org and assign it to eradicator@gentoo.org"
 	echo ${CONF_MULTILIBDIR:=lib32}
 }
 
@@ -101,7 +98,7 @@ get_multilibdir() {
 #
 # Travis Tilley <lv@gentoo.org> (31 Aug 2004)
 get_libdir_override() {
-	[ "${PROFILE_ARCH}" = "sparc64-multilib" ] && die "get_libdir_override called, but it shouldn't be needed on sparc64-multilib..."
+	[ -n "$(get_abi_LIBDIR)" ] && die "get_libdir_override called, but it shouldn't be needed with the new multilib approach.  Please file a bug at http://bugs.gentoo.org and assign it to eradicator@gentoo.org"
 	CONF_LIBDIR="$1"
 	CONF_LIBDIR_OVERRIDE="$1"
 }
@@ -1659,10 +1656,6 @@ epunt_cxx() {
 # get_abi_var <VAR> [<ABI>]
 # returns the value of ${<VAR>_<ABI>} which should be set in make.defaults
 #
-# This code is for testing purposes only with the sparc64-multilib ${PROFILE_ARCH}
-# and getting a more multilib-aware portage layout.  It may end up being used, but for now
-# it is subject to removal if a better way is worked out.
-# 
 # ex:
 # CFLAGS=$(get_abi_var CFLAGS sparc32) # CFLAGS=-m32
 #
