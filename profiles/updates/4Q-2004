@@ -234,3 +234,4 @@ move dev-libs/io_lib sci-libs/io_lib
 move dev-libs/libctl sci-libs/libctl
 move dev-libs/libtifiles sci-libs/libtifiles
 move dev-libs/libticalcs sci-libs/libticalcs
+move dev-libs/mkl sci-libs/mkl
