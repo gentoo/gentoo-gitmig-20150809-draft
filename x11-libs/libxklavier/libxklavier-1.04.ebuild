@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-1.04.ebuild,v 1.1 2004/10/27 15:23:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-1.04.ebuild,v 1.2 2004/11/02 23:21:32 foser Exp $
 
 inherit eutils
 
@@ -31,7 +31,8 @@ src_unpack() {
 
 src_compile() {
 
-	econf $(use_enable doc doxygen) || die
+	econf --with-xkb_base=/usr/X11R6/lib/X11/xkb \
+		$(use_enable doc doxygen) || die
 	emake || die "emake failed"
 
 }
