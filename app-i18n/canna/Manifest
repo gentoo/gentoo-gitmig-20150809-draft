@@ -1,17 +1,23 @@
-MD5 3878b9774da189af305745b3eb98cd5a ChangeLog 7249
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ebdbb4141f3587373010f35ad64496f0 ChangeLog 7365
 MD5 7cd8950ba0ed57a188100540f5d07be9 canna-3.6_p4.ebuild 2884
-MD5 3876db3285e602f6309582b94373e6cf canna-3.7.ebuild 3422
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 a4703e60950050eb354ba625a0d61a19 canna-3.7_p1.ebuild 3437
 MD5 21522055008d2a5e97142a8c92262c13 canna-3.7_p2.ebuild 3369
-MD5 d77588a06485914d6bab3aab2a1985fb files/canna-3.6_p4-gentoo.diff 5587
 MD5 2b13f6b61d303f6bf273a325ff3bc411 files/canna-3.7-gentoo.diff.in 5263
 MD5 d817072e9bb7181804fdde1b52427a3f files/canna-kpdef-gentoo.diff 255
+MD5 d77588a06485914d6bab3aab2a1985fb files/canna-3.6_p4-gentoo.diff 5587
 MD5 c7949e9a4baa711a7088b00df56327fa files/canna.confd 299
 MD5 d60168a33fd321ad1a29382cafcb60d3 files/canna.hosts 5
 MD5 1bddc843aac5df610cf99b180a83352c files/canna.initd 999
-MD5 928c920864a62989dc12b294fa01aac5 files/digest-canna-3.7_p1 63
-MD5 300a4fe937c6c06bda8fe832906b672c files/digest-canna-3.7_p2 63
 MD5 c48de658742361ca5549edaddebb3e94 files/digest-canna-3.6_p4 62
-MD5 167b6b59b36ffe7d7ebda5ddd85c930a files/digest-canna-3.7 61
 MD5 0d09a45d1074f9f4801a48bf8ec3208a files/update-canna-dics_dir 1101
+MD5 300a4fe937c6c06bda8fe832906b672c files/digest-canna-3.7_p2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSkjoVWNWqTUmv+0RAknlAKCq/hAPPW4TtcjyiWbGhUqZsPMkOACeLiaO
+l/6ZPg1dubJzq3H7UQS7s9Q=
+=T07Z
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.47 2005/01/17 20:46:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.48 2005/03/30 06:46:26 usata Exp $
+
+  30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> -canna-3.7.ebuild,
+  -canna-3.7_p1.ebuild:
+  Removed old ebuilds.
 
   17 Jan 2005; Simon Stelling <blubb@gentoo.org> canna-3.7_p2.ebuild:
   stable on amd64
