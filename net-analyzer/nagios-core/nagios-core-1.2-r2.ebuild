@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.10 2004/10/25 03:03:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.11 2004/10/29 19:58:52 eldad Exp $
 
 inherit eutils
 
@@ -170,9 +170,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	einfo "Sample config files installed by default will always"
-	einfo "include cgi.cfg"
-	einfo "The sample configs can be found in /usr/share/doc/${PF}/sample-configs/"
+	keepdir /etc/nagios
 
 	enewgroup nagios
 
@@ -192,7 +190,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	einfo
-	einfo "Remember to edit the config files in /etc/nagios"
+	einfo "The example config files are located at /usr/share/doc/${PF}/sample-configs/."
+	einfo
 	einfo "Also, if you want nagios to start at boot time"
 	einfo "remember to execute:"
 	einfo "	 rc-update add nagios default"
