@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ppc-sources-crypto
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.8 2004/01/08 19:57:47 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.9 2004/02/19 00:31:26 plasmaroo Exp $
+
+*ppc-sources-crypto-2.4.20-r3 (19 Feb 2004)
+
+  19 Feb 2004; <plasmaroo@gentoo.org> ppc-sources-crypto-2.4.20-r3.ebuild:
+  Added the patch for the mremap/munmap vulnerability. Bug #42024. Old
+  versions removed.
 
 *ppc-sources-crypto-2.4.20-r2 (08 Jan 2004)
 
