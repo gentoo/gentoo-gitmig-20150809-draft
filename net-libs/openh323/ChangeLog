@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.47 2004/09/06 19:46:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.48 2004/09/18 21:02:17 weeve Exp $
+
+  18 Sep 2004; Jason Wever <weeve@gentoo.org> openh323-1.13.2-r1.ebuild:
+  Stable on sparc.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> openh323-1.12.2-r2.ebuild,
   openh323-1.13.2-r1.ebuild, openh323-1.13.2.ebuild, openh323-1.13.5.ebuild:

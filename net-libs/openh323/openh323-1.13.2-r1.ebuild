@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.13 2004/09/06 19:46:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.14 2004/09/18 21:02:17 weeve Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc amd64 ~ppc"
+KEYWORDS="x86 sparc amd64 ~ppc"
 IUSE="ssl"
 
 DEPEND=">=sys-apps/sed-4
