@@ -1,10 +1,20 @@
-MD5 cf9d1075c90e69843f64b119cf251bed libtheora-1.0_alpha4.ebuild 860
-MD5 64158d08dc1d210d4a1ad8787499611d libtheora-1.0_alpha3.ebuild 840
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7c3aac31ffe6fe9f6bde47f263d62ba0 ChangeLog 2866
 MD5 c0f2735e4500394caa3395eadb9e77cd libtheora-1.0_alpha2-r1.ebuild 835
 MD5 1bda603a66c9a018d9c926099761b3c5 libtheora-1.0_alpha2.ebuild 744
-MD5 7c82550c1531b4053a219fcf374c04b5 ChangeLog 2730
+MD5 5cd390daa69c4b3a98e62c4d7e975e71 libtheora-1.0_alpha3.ebuild 920
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 43363432588af784deac91552ac3a636 files/digest-libtheora-1.0_alpha2-r1 71
+MD5 3d4708c67eb612d197f8727aa3a86fb8 libtheora-1.0_alpha4.ebuild 956
 MD5 43363432588af784deac91552ac3a636 files/digest-libtheora-1.0_alpha2 71
+MD5 43363432588af784deac91552ac3a636 files/digest-libtheora-1.0_alpha2-r1 71
 MD5 a9f9ea68a0659a1bd63f423e5028d5bf files/digest-libtheora-1.0_alpha3 72
 MD5 f828864823910f80ec4368be981c0a61 files/digest-libtheora-1.0_alpha4 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBkqDFdQwWVoAgN4RAjA4AKCHVPjReXDFrGCeOPB31RoXdXj9egCfXYy9
+dcoHHfMtem2CWhHX1COMW9A=
+=y4bK
+-----END PGP SIGNATURE-----

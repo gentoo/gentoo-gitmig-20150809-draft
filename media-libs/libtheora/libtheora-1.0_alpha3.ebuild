@@ -1,6 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha3.ebuild,v 1.19 2005/01/04 10:18:44 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha3.ebuild,v 1.20 2005/02/06 17:00:26 chriswhite Exp $
+inherit flag-o-matic
 
 DESCRIPTION="The Theora Video Compression Codec"
 HOMEPAGE="http://www.theora.org/"
@@ -23,6 +24,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug #75403, filter -O3 to -O2
+	replace-flags -O3 -O2
 	econf --enable-shared || die
 	emake || die
 }
