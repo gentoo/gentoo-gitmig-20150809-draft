@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-calendar
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/ChangeLog,v 1.1 2004/07/15 09:03:43 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/ChangeLog,v 1.2 2004/07/16 09:34:05 dholm Exp $
+
+  16 Jul 2004; David Holm <dholm@gentoo.org> desklet-calendar-0.2.5.2.ebuild:
+  Added to ~ppc.
 
 *desklet-calendar-0.2.5.2 (15 Jul 2004)
 

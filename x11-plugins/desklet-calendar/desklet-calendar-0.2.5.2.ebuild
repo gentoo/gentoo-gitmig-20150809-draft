@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/desklet-calendar-0.2.5.2.ebuild,v 1.1 2004/07/15 09:03:43 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/desklet-calendar-0.2.5.2.ebuild,v 1.2 2004/07/16 09:34:05 dholm Exp $
 
 DESKLET_NAME="Calendar"
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.26
 	>=x11-plugins/desklet-psisensors-20040420
