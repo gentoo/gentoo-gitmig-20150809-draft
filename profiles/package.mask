@@ -695,6 +695,9 @@ dev-lang/tcl-tk
 # this is the gnome2 mask!
 # (gnome-2 that is ;)
 
+# dependencies for theese arent fixed yet:
+>=x11-libs/gtkmm-1.3.0
+>=dev-libs/libsigc-1.1.0
 
 ## Non gnome-core packages, applications, extra libraries and so on
 
