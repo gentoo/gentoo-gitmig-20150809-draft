@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-0.9.1.ebuild,v 1.3 2005/02/18 16:01:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.0.2.ebuild,v 1.1 2005/02/18 16:01:57 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -10,11 +10,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 HOMEPAGE="http://jtds.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="0.9"
-KEYWORDS="x86 amd64"
-IUSE="doc jikes"
+KEYWORDS="~x86 ~amd64"
+IUSE="doc jikes source"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	jikes? ( >=dev-java/jikes-1.21 )"
+	jikes? ( >=dev-java/jikes-1.21 )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/ant-1.6.2
 	=dev-java/crimson-1.1*
@@ -28,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/buildxml-gentoo.patch
+	epatch ${FILESDIR}/${PV}-buildxml.patch
 
 	cd ${S}/lib
 	rm -f *
@@ -44,12 +45,9 @@ src_unpack() {
 
 src_compile() {
 	local antflags="jar"
-	if use doc; then
-		antflags="${antflags} javadoc"
-	fi
-	if use jikes; then
-		antflags="${antflags} -Dbuild.compiler=jikes"
-	fi
+	use doc && antflags="${antflags} javadoc"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	use source && antflags="${antflags} sourcezip"
 	ant ${antflags} || die "failed to build"
 }
 
@@ -59,5 +57,10 @@ src_install() {
 	dodoc CHANGELOG README LICENSE
 	if use doc; then
 		java-pkg_dohtml -r build/doc/*
+	fi
+
+	if use source; then
+	    dodir /usr/share/doc/${PF}/source
+		cp dist/${PN}-src.zip ${D}usr/share/doc/${PF}/source
 	fi
 }

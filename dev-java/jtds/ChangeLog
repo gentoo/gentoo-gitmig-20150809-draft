@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jtds
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.1 2004/12/22 23:56:43 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.2 2005/02/18 16:01:57 luckyduck Exp $
+
+*jtds-1.0.2 (18 Feb 2005)
+
+  18 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/1.0.2-buildxml.patch, jtds-0.9.1.ebuild, +jtds-1.0.2.ebuild:
+  marked old version stable, added new upstream release. fixes #82373
 
 *jtds-0.9.1 (23 Dec 2004)
 
