@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netkit-bootpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.9 2004/06/24 23:58:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.10 2004/09/19 08:41:59 dragonheart Exp $
+
+*netkit-bootpd-0.17-r2 (19 Sep 2004)
+
+  19 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/0.17-jumpstart.patch, +netkit-bootpd-0.17-r2.ebuild:
+  Patch applied to make this compatible with jumpstart. Patch by Steve-o
+  <fnjordy@gmail.com> in bug #63940
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

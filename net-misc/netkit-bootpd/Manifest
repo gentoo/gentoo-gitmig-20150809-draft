@@ -1,3 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 db5ef69e9ee7206493923b7a3f0ba2d0 ChangeLog 1379
 MD5 0d1e04d4f16edae8ed199f5c24e49dc8 netkit-bootpd-0.17-r1.ebuild 888
-MD5 6e2c72674ffad78bebad526a0759c22c ChangeLog 1112
+MD5 1f52cf064718cb294789545645a25d08 netkit-bootpd-0.17-r2.ebuild 1056
 MD5 0fff8ed5c4395d99043f3f50422826bb files/digest-netkit-bootpd-0.17-r1 78
+MD5 6d9cf6a3cff3c0b1c71ce938a7a5fc6a files/0.17-jumpstart.patch 1163
+MD5 0fff8ed5c4395d99043f3f50422826bb files/digest-netkit-bootpd-0.17-r2 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBTUZemdTrptrqvGERAqwjAJ9DWf9mAbHbqPqQLF5lFETBj5By9QCeKPdB
+ic42J50PmJ1k/PpqOiSNVVE=
+=tSt+
+-----END PGP SIGNATURE-----
