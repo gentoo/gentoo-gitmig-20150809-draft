@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.6 2002/11/12 18:25:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.7 2002/11/25 04:20:07 vapier Exp $
 # This eclass is for general purpose functions that most ebuilds
-# have to implement themselfs.
+# have to implement themselves.
 #
 # NB:  If you add anything, please comment it!
 
