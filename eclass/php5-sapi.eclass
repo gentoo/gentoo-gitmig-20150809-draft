@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.28 2004/09/15 07:45:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.29 2004/09/22 18:35:48 vapier Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -12,7 +12,7 @@
 #
 # ========================================================================
 
-inherit confutils
+inherit confutils libtool
 
 ECLASS=php5-sapi
 INHERITED="$INHERITED $ECLASS"
@@ -325,6 +325,9 @@ php5-sapi_src_unpack () {
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
 		sed -i.orig -e 's,-i -a -n php5,-i -n php5,g' $i
 	done
+
+	# fix configure scripts to recognize uClibc
+	uclibctoolize
 
 	# Just in case ;-)
 	chmod 755 configure
