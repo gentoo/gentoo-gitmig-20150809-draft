@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.7 2003/06/16 22:38:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.8 2003/06/17 10:29:12 liquidx Exp $
 
-IUSE="pam kerberos gtk gtk2 gnome opengl jpeg xinerama"
+IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama"
 
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -38,7 +38,7 @@ RDEPEND="virtual/x11
 	!gtk? ( virtual/motif
 		>=media-libs/gdk-pixbuf-0.18 )
 	pam? ( sys-libs/pam )
-	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
+	kerberos? ( krb4? ( >=app-crypt/mit-krb5-1.2.5 ) )
 	jpeg? ( media-libs/jpeg )
 	opengl? ( virtual/opengl
 	          >=media-libs/gle-3.0.1 )"
@@ -48,6 +48,18 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	gtk2? ( dev-util/pkgconfig )
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	if [ -n "`use kerberos`" -a -z "`use krb4`" ]; then
+		ewarn "You have enabled kerberos without krb4 support. Kerberos will be"
+		ewarn "disabled unless kerberos 4 support has been compiled with your"
+		ewarn "kerberos libraries. To do that, you should abort now and do:"
+		ewarn ""
+		ewarn " USE=\"krb4\" emerge mit-krb5"
+		ewarn
+		sleep 2
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -76,7 +88,7 @@ src_compile() {
 		&& myconf="${myconf} --with-pam" \
 		|| myconf="${myconf} --without-pam"
 
-	use kerberos \
+	use kerberos && use krb4 \
 		&& myconf="${myconf} --with-kerberos" \
 		|| myconf="${myconf} --without-kerberos"
 
