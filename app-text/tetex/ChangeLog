@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.19 2003/01/03 03:53:38 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.20 2003/01/03 04:17:43 satai Exp $
+
+  02 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Added a fix to generate all missing format files upon installation.
 
   02 Jan 2003; Matthew Turk <satai@gentoo.org> :
   Added a fix to allow dvips to recognize when secure mode is turned off.
