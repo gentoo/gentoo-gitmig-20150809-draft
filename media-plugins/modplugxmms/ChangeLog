@@ -1,8 +1,13 @@
 # ChangeLog for media-plugins/modplugxmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.2 2002/12/16 07:20:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.3 2003/01/16 14:58:04 seemant Exp $
 
 *modplugxmms-2.03 (15 Dec 2002)
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> modplugxmms-2.03.ebuild :
+
+  Installs the plugin into XMMS's plugin directory. Closes bug #12230 by
+  davidslists@gmx.net (David Blue)
 
   15 Dec 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog
   modplugxmms-2.03.ebuild files/digest-modplugxmms-2.03 :

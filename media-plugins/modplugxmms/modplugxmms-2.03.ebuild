@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.03.ebuild,v 1.2 2002/12/16 07:20:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.03.ebuild,v 1.3 2003/01/16 14:58:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XMMS plugin for MOD-like music files"
@@ -14,7 +14,8 @@ KEYWORDS="~x86"
 DEPEND=">=media-sound/xmms-1.2.5-r1"
 
 src_install () {
-	make DESTDIR=${D} install || die
+	einstall \
+		plugindir=${D}/usr/lib/xmms/Input || die
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 }
 
