@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.4.2.ebuild,v 1.6 2004/07/23 19:47:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.4.2.ebuild,v 1.7 2004/09/11 15:34:52 aliz Exp $
 
 IUSE="idl"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.die-offenbachs.de/detlev/files/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 python_version
 IDIR="/usr/lib/python${PYVER}/site-packages/eric3/"
