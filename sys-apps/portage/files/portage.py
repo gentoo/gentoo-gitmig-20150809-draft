@@ -71,7 +71,7 @@ import shutil
 categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-emulation", "app-games", "app-misc", 
 			"app-office", "app-shells", "app-text", "dev-db", "dev-java", "dev-lang", "dev-libs", "dev-perl", 
 			"dev-python", "dev-ruby", "dev-util", "gnome-apps", "gnome-base", "gnome-libs", 
-			"gnome-office","kde-apps", "kde-base", "kde-libs", "kde-i18n", "media-gfx", "media-libs", "media-sound", "media-video", 
+			"gnome-office","kde-apps", "kde-base", "kde-libs", "media-gfx", "media-libs", "media-sound", "media-video", 
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm","virtual")
@@ -1501,70 +1501,71 @@ def dep_frontend(mytype,depstring):
 #		dep_print_resolve(myparse[1])		
 	return 1
 
-def port_currtree():
-	"""
-	This function builds a dictionary of current (recommended) packages on the system,
-	based on the contents of CURRENTFILE.  Dictionary format is:
-	mydict["cat/pkg"]=[
-					["cat/fullpkgname",["cat","pkg","ver","rev"]
-					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
-					]
-	"""
-	currentdict={}
-	currentfile=getsetting("CURRENTFILE")
-	if not os.path.isfile(currentfile):
-		return
-	mycurrent=open(currentfile,"r")
-	mylines=mycurrent.readlines()
-	for x in mylines:
-		if x[:2]!="./":
-			continue
-		myline=string.split(string.strip(x)[2:-7],"/")
-		if len(myline)!=3:
-			continue
-		fullpkg=string.join([myline[0],myline[2]],"/")
-		mysplit=catpkgsplit(fullpkg)
-		mykey=mysplit[0]+"/"+mysplit[1]
-		if not currentdict.has_key(mykey):
-			currentdict[mykey]=[]
-		currentdict[mykey].append([fullpkg,mysplit])
-	mycurrent.close()
-	return currentdict
+#depreciated
+#def port_currtree():
+#	"""
+#	This function builds a dictionary of current (recommended) packages on the system,
+#	based on the contents of CURRENTFILE.  Dictionary format is:
+#	mydict["cat/pkg"]=[
+#					["cat/fullpkgname",["cat","pkg","ver","rev"]
+#					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
+#					]
+#	"""
+#	currentdict={}
+#	currentfile=getsetting("CURRENTFILE")
+#	if not os.path.isfile(currentfile):
+#		return
+#	mycurrent=open(currentfile,"r")
+#	mylines=mycurrent.readlines()
+#	for x in mylines:
+#		if x[:2]!="./":
+#			continue
+#		myline=string.split(string.strip(x)[2:-7],"/")
+#		if len(myline)!=3:
+#			continue
+#		fullpkg=string.join([myline[0],myline[2]],"/")
+#		mysplit=catpkgsplit(fullpkg)
+#		mykey=mysplit[0]+"/"+mysplit[1]
+#		if not currentdict.has_key(mykey):
+#			currentdict[mykey]=[]
+#		currentdict[mykey].append([fullpkg,mysplit])
+#	mycurrent.close()
+#	return currentdict
 
-
-def port_insttree():
-	"""
-	This function builds a dictionary of installed packages on the system, based on
-	the contents of /var/db/pkg Dictionary format is:
-	mydict["cat/pkg"]=[
-					["cat/fullpkgname",["cat","pkg","ver","rev"]
-					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
-					]
-	"""
-	installeddict={}
-	dbdir="/var/db/pkg"
-	prep_dbdir()	
-	origdir=os.getcwd()
-	os.chdir(dbdir)
-	for x in os.listdir(os.getcwd()):
-		if not os.path.isdir(os.getcwd()+"/"+x):
-			continue
-		for y in os.listdir(os.getcwd()+"/"+x):
-			if x=="virtual":
-				#virtual packages don't require versions, if none is found, add a "1.0" to the end
-				if isjustname(y):
-					fullpkg=x+"/"+y+"-1.0"
-				else:
-					fullpkg=x+"/"+y
-			else:
-				fullpkg=x+"/"+y
-			mysplit=catpkgsplit(fullpkg)
-			mykey=x+"/"+mysplit[1]
-			if not installeddict.has_key(mykey):
-				installeddict[mykey]=[]
-			installeddict[mykey].append([fullpkg,mysplit])
-	os.chdir(origdir)
-	return installeddict
+#depreciated
+#def port_insttree():
+#	"""
+#	This function builds a dictionary of installed packages on the system, based on
+#	the contents of /var/db/pkg Dictionary format is:
+#	mydict["cat/pkg"]=[
+#					["cat/fullpkgname",["cat","pkg","ver","rev"]
+#					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
+#					]
+#	"""
+#	installeddict={}
+#	dbdir="/var/db/pkg"
+#	prep_dbdir()	
+#	origdir=os.getcwd()
+#	os.chdir(dbdir)
+#	for x in os.listdir(os.getcwd()):
+#		if not os.path.isdir(os.getcwd()+"/"+x):
+#			continue
+#		for y in os.listdir(os.getcwd()+"/"+x):
+#			if x=="virtual":
+#				#virtual packages don't require versions, if none is found, add a "1.0" to the end
+#				if isjustname(y):
+#					fullpkg=x+"/"+y+"-1.0"
+#				else:
+#					fullpkg=x+"/"+y
+#			else:
+#				fullpkg=x+"/"+y
+#			mysplit=catpkgsplit(fullpkg)
+#			mykey=x+"/"+mysplit[1]
+#			if not installeddict.has_key(mykey):
+#				installeddict[mykey]=[]
+#			installeddict[mykey].append([fullpkg,mysplit])
+#	os.chdir(origdir)
+#	return installeddict
 
 def port_porttree():
 	"""
@@ -1918,14 +1919,16 @@ class currenttree(packagetree):
 
 class binarytree(packagetree):
 	"this tree scans for a list of all packages available in PKGDIR"
+	def __init__(self):
+		self.root=getsetting("PKGDIR")
+		packagetree.__init__(self)
 	def populate(self):
 		"popules the binarytree"
-		root=getsetting("PKGDIR")
-		if (not os.path.isdir(root)):
+		if (not os.path.isdir(self.root)):
 			return 0
 		for mycat in categories:
 			try:
-				mypkgs=os.listdir(root+"/"+mycat)
+				mypkgs=os.listdir(self.root+"/"+mycat)
 			except:
 				continue
 			for mypkg in mypkgs:
@@ -1938,7 +1941,11 @@ class binarytree(packagetree):
 					self.tree[mykey]=[]
 				self.tree[mykey].append([fullpkg,mysplit])
 		self.populated=1
+	def getname(pkgname):
+		"returns file location for this particular package"
+		return self.root+"/"+pkgname+".tbz2"
 
+		
 def depgrab(myfilename,depmark):
 	"""
 	Will grab the dependency string from an ebuild file, using

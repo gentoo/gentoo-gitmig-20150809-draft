@@ -1,39 +1,42 @@
-#!/usr/bin/spython
+#!/usr/bin/env python
 
 import portage
 import sys
 import os
-"""
-ALMOST done, but not quite.
+
+bintree=portage.binarytree()
 def pkgmerge_recurse(mypkg):
 	if not os.path.exists(mypkg):
-	print "!!! Error:",mypkg,"not found."
+		print "!!! Error:",mypkg,"not found."
+		return 1	
 	mydeps=portage.pkgmerge(mypkg)
-	if not mydeps:
+	if mydeps==None:
+		print "!!! Error merging this package."
+		return 1
+	elif mydeps=="":
 		return
 	mycheck=portage.roottree.depcheck(mydeps)
 	if mycheck[0]==0:
 		print "!!! Error: RDEPEND string formatted incorrectly:",mydeps
+		return 1
 	if mycheck[1]==None:
 		#no deps, package installed
 		return
 	#we have deps
 	for mydep in mycheck[1]:
-		matches=portage.bintree.dep_match(mydep)
+		matches=bintree.dep_match(mydep)
 		if len(matches)==0:
 			#some way to abort this package merge process is needed, like a boolean return value
 			print "!!! Error: can't find a package that satisfies this dependency:",mydep
 			return
 		elif len(matches)==1:
-			#single match, install it (call pkgmerge_recurse again)
+			pkgmerge_recurse(bintree.getname(matches[0]))	
 		else:
 			#multiple matches, prompt user, then call pkgmerge_recurse again
-"""
+			print "MULTIPLES!  DYING"
+			return 1
+
 for x in sys.argv[1:]:
 	x=os.path.abspath(x)
-
-	if not os.path.exists(x):
-		print "!!! Error:",x,"not found."
-		continue
-	print portage.pkgmerge(x)
-
+	print x
+	pkgmerge_recurse(x)
