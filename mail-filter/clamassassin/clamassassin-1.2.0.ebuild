@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.0.ebuild,v 1.1 2004/08/04 23:15:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/clamassassin-1.2.0.ebuild,v 1.2 2004/08/06 11:56:30 slarti Exp $
 
 DESCRIPTION="clamassassin is a simple script for virus scanning (through clamav) an e-mail message as a
 filter (like spamassassin)"
@@ -18,7 +18,7 @@ DEPEND=">=app-antivirus/clamav-0.71
 					 # dependency?
 
 src_compile() {
-	econf `use_enable subject_rewrite` || die
+	econf $(use_enable subjectrewrite) || die
 }
 
 src_install() {
