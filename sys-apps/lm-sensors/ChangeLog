@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.48 2005/01/29 17:22:08 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.49 2005/02/24 22:57:04 brix Exp $
+
+  24 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> metadata.xml:
+  Transferred ownership.
 
   29 Jan 2005; <plasmaroo@gentoo.org> lm-sensors-2.8.7.ebuild:
   Remove conditional x86 rrdtool depend; bug #79741.
