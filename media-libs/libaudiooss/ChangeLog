@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaudiooss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/ChangeLog,v 1.2 2003/07/12 18:05:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/ChangeLog,v 1.3 2003/12/11 03:07:05 avenj Exp $
+
+  10 Dec 2003; Jon Portnoy <avenj@gentoo.org> libaudiooss-1.1.0-r1.ebuild :
+  AMD64 keyworded.
 
 *libaudiooss-1.1.0-r1 (26 June 2003)
 
