@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
 # /home/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.4.3.ebuild,v 1.1 2001/05/02 14:31:06 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.4.9.ebuild,v 1.12 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.4.9.ebuild,v 1.13 2001/09/02 20:06:16 drobbins Exp $
 
 
 #OKV=original kernel version, KV=patched kernel version
@@ -97,7 +97,7 @@ src_unpack() {
 		#unpack kernel and apply reiserfs-related patches
 		cd ${WORKDIR}
 		unpack linux-${OKV}.tar.bz2
-		try mv linux linux-${KV}
+		mv linux linux-${KV} || die
 		cd ${S}
 		echo "Applying ${KV} patch..."
 		bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1 || die
@@ -130,18 +130,18 @@ src_unpack() {
 			cd ${S}/extras
 			echo "Unpacking and applying LVM patch..."
 			unpack lvm_${LVMVARC}.tar.gz
-			try cd LVM/${LVMV}
+			cd LVM/${LVMV} || die
 	
 			# I had to hack this in so that LVM will look in the current linux
 			# source directory instead of /usr/src/linux for stuff - pete
-			try CFLAGS="${CFLAGS} -I${S}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+			CFLAGS="${CFLAGS} -I${S}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}" || die
 			cd PATCHES
-			try make KERNEL_VERSION=${KV} KERNEL_DIR=${S}
+			make KERNEL_VERSION=${KV} KERNEL_DIR=${S} || die
 			cd ${S}
 			# the -l option allows this patch to apply cleanly (ignore whitespace changes)
-			try patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
+			patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch || die
 			cd ${S}/drivers/md
-			try patch -p0 < ${FILESDIR}/${KV}/lvm.c.diff
+			patch -p0 < ${FILESDIR}/${KV}/lvm.c.diff || die
 		fi
     
 		if [ "`use alsa`" ]
@@ -158,14 +158,14 @@ src_unpack() {
 			echo "Unpacking and applying lm_sensors patch..."
 			cd ${S}/extras
 			unpack lm_sensors-${SENV}.tar.gz
-			try cd lm_sensors-${SENV}
-			try mkpatch/mkpatch.pl . ${S} > ${S}/lm_sensors-patch
-			try rmdir src
-			try ln -s ../.. src
-			try cp -a Makefile Makefile.orig
+			cd lm_sensors-${SENV} || die
+			mkpatch/mkpatch.pl . ${S} > ${S}/lm_sensors-patch || die
+			rmdir src || die
+			ln -s ../.. src || die
+			cp -a Makefile Makefile.orig || die
 
 			cd ${S}
-			try patch -p1 < lm_sensors-patch
+			patch -p1 < lm_sensors-patch || die
 		fi
 		if [ "`use pcmcia-cs`" ]
 		then
@@ -178,14 +178,14 @@ src_unpack() {
 		echo "Preparing for compilation..."
 		cd ${S}
 		#sometimes we have icky kernel symbols; this seems to get rid of them
-		try make mrproper
+		make mrproper || die
 
 		#linux-sources needs to be fully configured, too.  Not just linux
 		if [ "${PN}" != "linux-extras" ]
 		then
 			#this is the configuration for the default kernel
-			try cp ${FILESDIR}/${KV}/config.bootcomp .config
-			try yes "" | make oldconfig
+			cp ${FILESDIR}/${KV}/config.bootcomp .config || die
+			yes "" | make oldconfig || die
 			echo "Ignore any errors from the yes command above."
 		fi
     
@@ -209,7 +209,7 @@ src_compile() {
     	fi
 		if [ $PN = "linux" ]
 		then
-			try make symlinks
+			make symlinks || die
 		fi
 		if [ "`use lvm`" ]
 		then
@@ -219,36 +219,36 @@ src_compile() {
 			# This is needed for linux-extras
 			if [ -f "Makefile" ]
 			then
-				try make clean
+				make clean || die
 			fi
 			# I had to hack this in so that LVM will look in the current linux
 			# source directory instead of /usr/src/linux for stuff - pete
-			try CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}"
-			try make 
+			CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}" || die
+			make || die
 		fi
 	
 		if [ "`use lm_sensors`" ]
 		then
 			cd ${KS}/extras/lm_sensors-${SENV}
-			try sed -e "s:^LINUX=.*:LINUX=src:" \
+			sed -e "s:^LINUX=.*:LINUX=src:" \
 			-e "s/^COMPILE_KERNEL.*/COMPILE_KERNEL := 0/" \
 			-e "s:^I2C_HEADERS.*:I2C_HEADERS=src/include:" \
 			-e "s#^DESTDIR.*#DESTDIR := ${D}#" \
 			-e "s#^PREFIX.*#PREFIX := /usr#" \
 			-e "s#^MANDIR.*#MANDIR := /usr/share/man#" \
-			Makefile.orig > Makefile
+			Makefile.orig > Makefile || die
 
-			try make
+			make || die
 		fi
 	
 		cd ${S}
 	
 		if [ "$PN" == "linux" ]
 		then
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" bzImage
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep || die
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" bzImage || die
 			#LEX=\""flex -l"\" bzImage
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" modules
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" modules || die
 			#LEX=\""flex -l"\" modules
 		fi
 	    
@@ -259,10 +259,10 @@ src_compile() {
 			# This is needed for linux-extras
 			if [ -f "Makefile.conf" ] 
 			then
-				try make clean
+				make clean || die
 			fi
-			try ./configure --with-kernel="${KS}" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
-			try make
+			./configure --with-kernel="${KS}" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all || die
+			make || die
 		fi
 		if [ "`use pcmcia-cs`" ]
 		then
@@ -270,15 +270,15 @@ src_compile() {
 			# This is needed for linux-extras
 			if [ -f "Makefile" ] 
 			then
-				try make clean
+				make clean || die
 			fi
-			try ./Configure -n --kernel=${KS} --moddir=/lib/modules/${KV} \
-			--notrust --cardbus --nopnp --noapm --srctree --sysv --rcdir=/etc/rc.d/
-			try make all
+			./Configure -n --kernel=${KS} --moddir=/lib/modules/${KV} \
+			--notrust --cardbus --nopnp --noapm --srctree --sysv --rcdir=/etc/rc.d/ || die
+			make all || die
 		fi
     else
 		#linux-sources
-		try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep
+		make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep || die
 	fi
 }
 
@@ -313,8 +313,8 @@ src_install() {
 		then
 			cd ${KS}/extras/LVM/${LVMV}/tools
 	    
-			try CFLAGS="${CFLAGS} -I${KS}/include" make install -e prefix=${D} mandir=${D}/usr/share/man \
-			sbindir=${D}/sbin libdir=${D}/lib
+			CFLAGS="${CFLAGS} -I${KS}/include" make install -e prefix=${D} mandir=${D}/usr/share/man \
+			sbindir=${D}/sbin libdir=${D}/lib || die
 			#no need for a static library in /lib
 			mv ${D}/lib/*.a ${D}/usr/lib
 		fi
@@ -347,7 +347,7 @@ src_install() {
 			# Meanwhile we use this quick fix (achim)
 	    
 			install -d ${D}/lib/modules/`uname -r`
-			try make INSTALL_MOD_PATH=${D} modules_install
+			make INSTALL_MOD_PATH=${D} modules_install || die
 	    
 			depmod -b ${D} -F ${S}/System.map ${KV}	
 			#rm -rf ${D}/lib/modules/`uname -r`
@@ -369,7 +369,7 @@ src_install() {
 		then
 			#install PCMCIA modules and utilities
 			cd ${KS}/extras/pcmcia-cs-${PCV}
-			try make PREFIX=${D} MANDIR=${D}/usr/share/man install  
+			make PREFIX=${D} MANDIR=${D}/usr/share/man install || die 
 			rm -rf ${D}/etc/rc.d
 			exeinto /etc/rc.d/init.d
 			doexe ${FILESDIR}/${KV}/pcmcia
