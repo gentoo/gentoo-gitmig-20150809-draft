@@ -1,4 +1,14 @@
-MD5 ed770fcbcc4b194ee4ab966a220844f6 ChangeLog 580
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 877e3797f182359b7eed68e7bc034353 ChangeLog 684
+MD5 a1d3e26cb724b7df5986670a949fbfec Class-WhiteHole-0.04.ebuild 540
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 09976b78054e98c2492c1a2ff6f89cee Class-WhiteHole-0.04.ebuild 536
 MD5 e1c431f513a58130568071f6a5e1d43d files/digest-Class-WhiteHole-0.04 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5deWKRy60XGEcJIRArZOAKCUSap0DbeS2AsArbSbpa52Pr7+BgCfYL8n
+OdZdBoxGWmlLGE3IL0a7/yg=
+=p1Xs
+-----END PGP SIGNATURE-----
