@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.28 2004/03/16 05:06:00 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.29 2004/04/10 15:33:25 mholzer Exp $
+
+*libdv-0.102 (10 Apr 2004)
+
+  10 Apr 2004; Martin Holzer <mholzer@gentoo.org> libdv-0.101.ebuild,
+  libdv-0.102.ebuild:
+  Version bumped.
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libdv-0.101.ebuild:
   Added ~mips keyword.
