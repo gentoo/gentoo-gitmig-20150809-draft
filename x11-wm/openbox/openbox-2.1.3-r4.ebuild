@@ -4,6 +4,8 @@
 
 inherit commonbox
 
+IUSE="gnome kde nls xinerama"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
 SRC_URI="http://icculus.org/${PN}/releases/${P}.tar.gz"
@@ -17,7 +19,6 @@ DEPEND="$DEPEND"
 
 MYBIN="${PN}"
 mydoc="CHANGE* TODO LICENSE data/README*"
-myconf="--enable-xinerama"
 BOOTSTRAP="1"
 
 src_unpack() {

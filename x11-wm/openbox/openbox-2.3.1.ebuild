@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.1.ebuild,v 1.1 2003/05/08 03:04:49 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.1.ebuild,v 1.2 2003/05/20 21:39:09 mkeadle Exp $
 
-IUSE="nls"
+IUSE="gnome kde nls xinerama"
 
 inherit commonbox eutils
 
@@ -13,13 +13,12 @@ HOMEPAGE="http://icculus.org/openbox/"
 
 SLOT="2"
 LICENSE="BSD"
-KEYWORDS="~x86 ppc sparc"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="$DEPEND
 	virtual/xft"
 
 mydoc="CHANGE* TODO LICENSE data/README*"
-myconf="--enable-xinerama"
 
 src_unpack() {
 
@@ -28,12 +27,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-epist.patch
 
 }
-
-#src_compile() {
-
-#	commonbox_src_compile
-
-#}
 
 src_install() {
 
