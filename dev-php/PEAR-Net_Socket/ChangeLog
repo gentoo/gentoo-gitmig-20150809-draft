@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/PEAR-Net_Socket
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.5 2002/12/13 10:56:43 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.6 2003/01/27 19:10:03 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -10,6 +10,10 @@
   Finally had a chance to test this. Unmasked for x86
 
 *PEAR-Net_Socket-1.0.1 (18 Nov 2002)
+
+  27 Jan 2003; Ryan Phillips <rpillips@gentoo.org> PEAR-Net_Socket-1.0.1.ebuild :
+  Changed install directory
+
 
   18 Nov 2002;  <mcummings@gentoo.org> PEAR-Net_Socket-1.0.1.ebuild :
   Initial import.  Ebuild submitted by Nathan 'Nato' Uno 

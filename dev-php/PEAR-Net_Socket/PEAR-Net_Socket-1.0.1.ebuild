@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/PEAR-Net_Socket-1.0.1.ebuild,v 1.4 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/PEAR-Net_Socket-1.0.1.ebuild,v 1.5 2003/01/27 19:10:03 rphillips Exp $
 
 P=${PN/PEAR-//}-${PV}
 DESCRIPTION="Net_Socket is a class interface to TCP sockets."
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P}
 
 src_install () {
-	insinto /usr/lib/php/
+	insinto /usr/lib/php/Net
 	doins Socket.php
 }
 
