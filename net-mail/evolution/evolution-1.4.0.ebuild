@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.3 2003/06/12 01:07:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.4 2003/07/07 02:19:55 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -48,6 +48,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4.1-r1
 	>=dev-util/intltool-0.20
 	sys-devel/gettext
+	app-text/scrollkeeper	
 	doc? ( dev-util/gtk-doc )"
 
 pkg_setup() {

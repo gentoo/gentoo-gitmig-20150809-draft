@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.66 2003/07/06 11:49:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.67 2003/07/07 02:19:55 liquidx Exp $
+
+  07 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.0.ebuild:
+  add scrolllkeeper dep
 
   12 Jun 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.0.ebuild:
   added fix for scrollkeeper_docs sandbox violations (#22600)
