@@ -271,19 +271,12 @@ sys-apps/utempter
 # Masked (incomplete)
 app-emacs/monk
 
-# <danarmak@gentoo.org> (29 Oct 2002)
-# fix for bug #9423, in testing
-=kde-base/kdebase-3.0.4-r1
-#=kde-base/kdebase-3.0.4-r2
-
 # <azarah@gentoo.org> (28 Oct 2002)
 # Initial version that support alpha version of new multi version/arch
 # scheme.  Very ALPHA, so use at your own risk!!
 =sys-devel/gcc-3.2.1-r5
 =sys-devel/gcc-3.2-r3
 =sys-devel/gcc-3.2-r5
-#=sys-devel/gcc-2.95.3-r8
-
 
 # <foser@gentoo.org> (27 Oct 2002)
 # Unstable GNOME2 tree mask (2.1)
@@ -302,11 +295,6 @@ gnome-extra/gcalctool
 # see bug 7242.  Until it is checked, it should remain masked
 =sys-apps/pcmcia-cs-3.2.1-r2
 
-# <azarah@gentoo.org> (21 Oct 2002)
-# have portage issues (this was fs corruption)
-# test fine now, so unmasking for masses to test (still in unstable profile)
-#=sys-devel/flex-2.5.22
-
 # <blizzy@gentoo.org> (20 Oct 2002)
 # breaks xfree
 =sys-devel/bison-1.75
@@ -322,13 +310,6 @@ gnome-extra/gcalctool
 # <george@gentoo.org> (15 Oct 2002)
 # new version has some issues with gcc-3.2
 =dev-lisp/gcl-2.4.3
-
-# <seemant@gentoo.org> (15 Oct 2002)
-# b0rked beyond belief.
-# ExtUtils-MakeMaker is now a part of the default system profile
-# so now perl and MakeMaker will be hand in hand on every system by
-# default anyway
-#=sys-devel/perl-5.6.1-r8
 
 # <blizzy@gentoo.org> (15 Oct 2002)
 # b0rked
@@ -346,20 +327,9 @@ gnome-extra/gcalctool
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
 
-# <kain@gentoo.org> (10 Oct 2002)
-# Newer ppc kernel; wants more testing.
-=sys-kernel/ppc-sources-2.4.20-r1
-
 # <satai@gentoo.org> (29 Sep 2002)
 # Waiting for freeze to end.
 =dev-util/cweb-3.63-r1
-
-# <azarah@gentoo.org> (28 Sep 2002)
-# Test please, as this is going to be the next stable
-# moz (also for galeon-1.2.6)
-# worksforme // Spider
-# need this out to get 1.2 in tree. <azarah@gentoo.org>
-#>=net-www/mozilla-1.0.2
 
 # <raker@gentoo.org> (25 Sep 2002)
 # version bump.  ssl and other fixes
@@ -379,10 +349,6 @@ x11-libs/gtkmm-addons
 =dev-libs/cyrus-sasl-1.5.27-r5
 =dev-libs/cyrus-sasl-2.1.7-r2
 
-# <blocke@shivan.org> (16 Sep 2002)
-# Masked due to freeze
-#=net-www/galeon-1.2.6
-
 # <mkennedy@gentoo.org> (15 Sep 2002)
 # Upstream too buggy to use. Doesn't seem to be a stable or pre
 # release that actually works.
@@ -398,12 +364,6 @@ x11-terms/powershell
 # Masking gaim-0.59.2 because it segfaults all the time
 =net-im/gaim-0.59.2
 
-# <carpaski@gentoo.org> (12 Sep 2002)
-# Masked for testing
-# Using KEYWORDS masking instead.. hopefully unbreak emerge -up world
-# --woodchip (29 Nov 2002)
-#>=net-www/apache-2.0.0
-
 # <raker@gentoo.org> (11 Sep 2002)
 # New qmail ebuild.  Please test tls, smtp-auth, and ldap support
 =net-mail/qmail-1.03-r9
@@ -411,10 +371,6 @@ x11-terms/powershell
 # <seemant@gentoo.org> (10 Sep 2002)
 # masked coz all our packages only use the old version
 >=net-libs/libnet-1.1.0
-
-# <azarah@gentoo.org> (08 Sep 2002)
-# Get things ready for new xfree release.
-#=x11-base/xfree-4.2.1
 
 # <phoenix@gentoo.org> (02 Sep 2002)
 # This needs a lot of testing
@@ -933,13 +889,6 @@ app-cdr/cddump
 # the old ebuild of puregui was mis-versioned to 1, when it was actually
 # 0.0.1
 =app-admin/puregui-1-r1
-
-# jnelson@gentoo.org 1 May 2002
-# mask ntp 4.1.72* as they are alpha
-=net-misc/ntp-4.1.72*
-# jnelson@gentoo.org 4 May 2002
-# add 4.1.71* too
-=net-misc/ntp-4.1.71*
 
 # spider@gentoo.org 9 May 2002
 # Security update see:
