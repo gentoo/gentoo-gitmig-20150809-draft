@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-chan_capi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.1 2005/02/21 01:32:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.2 2005/03/29 15:29:47 stkn Exp $
+
+  29 Mar 2005; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-chan_capi-0.3.5.ebuild:
+  Added chan_capi fax patch from http://mlkj.net/asterisk/.
 
 *asterisk-chan_capi-0.3.5 (21 Feb 2005)
 
