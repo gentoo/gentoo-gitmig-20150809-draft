@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.3 2003/02/12 18:29:07 ykoehler Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.4 2003/03/28 09:18:02 pvdabeel Exp $
 
 *bacula-1.29 (29 Jan 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> bacula-1.29.ebuild :
+  Ready for some testing on ppc: ~ppc
 
   12 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> bacula-1.29.ebuild :
   Added the static flag to IUSE.
