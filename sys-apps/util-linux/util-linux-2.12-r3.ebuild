@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r3.ebuild,v 1.8 2004/06/24 22:32:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r3.ebuild,v 1.9 2004/06/28 01:46:31 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -57,7 +57,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.11z-agetty-domainname-option.patch
 
 	# Add NFS4 support (kernel 2.5/2.6).
-#	if [ ! -z "`use crypt`" ] ; then
+#	if use crypt ; then
 #		epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4-crypt.dif
 #	else
 		epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4.dif
@@ -96,7 +96,7 @@ src_unpack() {
 		-e "s:SUIDMODE=.*4755:SUIDMODE=4711:" \
 		MCONFIG || die "MCONFIG sed"
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		sed -i -e 's/DISABLE_NLS=no/DISABLE_NLS=yes/' MCONFIG ||
 			die "MCONFIG nls sed"
 	fi
@@ -106,7 +106,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "`use static`" ] ; then
+	if use static ; then
 		export LDFLAGS="${LDFLAGS} -static"
 	fi
 

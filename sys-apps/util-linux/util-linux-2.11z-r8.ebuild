@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r8.ebuild,v 1.5 2004/06/24 22:32:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r8.ebuild,v 1.6 2004/06/28 01:46:31 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 	cd ${S}
 
-	if [ ! -z "`use crypt`" ] ; then
+	if use crypt ; then
 		epatch ${DISTDIR}/${CRYPT_PATCH_P}.patch.bz2
 	fi
 
@@ -94,7 +94,7 @@ src_compile() {
 
 	filter-flags -fPIC
 
-	if [ "`use static`" ] ; then
+	if use static ; then
 		append-ldflags "-static"
 	fi
 

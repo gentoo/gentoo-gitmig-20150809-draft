@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.3.ebuild,v 1.5 2004/06/24 22:33:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.3.ebuild,v 1.6 2004/06/28 01:47:00 agriffis Exp $
 
 inherit gnuconfig
 
@@ -24,7 +24,7 @@ src_compile() {
 
 	econf || die "Configure failed"
 	emake DEFS="$DEFS -DLINUX" CFLAGS="$CFLAGS \$(INCLUDES) \$(DEFS)" mbmon || die "Make mbmon failed"
-	if [ `use X` ] ; then
+	if use X ; then
 		emake DEFS="$DEFS -DLINUX" CFLAGSX="$CFLAGS \$(INCLUDES) \$(DEFS)" xmbmon || die "Make xmbmon failed"
 	fi
 }
@@ -34,7 +34,7 @@ src_install() {
 	fperms 4555 /usr/sbin/mbmon
 	fowners root:wheel /usr/sbin/mbmon
 
-	if [ `use X` ] ; then
+	if use X ; then
 		dosbin xmbmon
 		fperms 4555 /usr/sbin/xmbmon
 		fowners root:wheel /usr/sbin/xmbmon
