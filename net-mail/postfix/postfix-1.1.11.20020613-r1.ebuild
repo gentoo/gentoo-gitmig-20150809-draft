@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020613-r1.ebuild,v 1.2 2002/08/15 22:38:43 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020613-r1.ebuild,v 1.3 2002/08/15 22:53:00 raker Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -15,7 +15,7 @@ DEPEND=">=sys-libs/db-3.2
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.6 )
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( >=dev-db/mysql-3.23.28 )
-	ssl? ( >=dev-libs/openssl-0.9.6d )
+	ssl? ( >=dev-libs/openssl-0.9.6e )
         pam? ( sys-libs/pam )"
 RDEPEND="${DEPEND} 
 	>=net-mail/mailbase-0.00
@@ -33,7 +33,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	if [ "`use ipv6`" || "`use ssl`" ]
+	if [ "`use ipv6`" ] || [ "`use ssl`" ]
 	then
 		cd ${S}
 		patch -p1 < ${FILESDIR}/tls+ipv6.diff || die
