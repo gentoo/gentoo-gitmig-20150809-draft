@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.104 2005/01/17 20:56:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.105 2005/01/18 17:25:32 suka Exp $
+
+  18 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-1.1.4.ebuild, +files/1.1.4/nptl.patch:
+  Some fixes for nptl-systems
 
   17 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   +files/1.1.4/gcc34-sal-link-to-libsupc++.diff, openoffice-1.1.4.ebuild:

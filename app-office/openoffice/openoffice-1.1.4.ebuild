@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.12 2005/01/17 21:25:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.13 2005/01/18 17:25:32 suka Exp $
 
 # Notes:
 #
@@ -231,6 +231,10 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/STLport-vector.patch
 	fi
 
+	if use nptl; then
+		epatch ${FILESDIR}/${PV}/nptl.patch
+	fi
+
 	#Fix for newer Freetype
 	epatch ${FILESDIR}/${PV}/freetype-217.patch
 
@@ -329,6 +333,11 @@ src_compile() {
 
 	# Build as minimal as possible
 	export BUILD_MINIMAL="${LANGNO}"
+
+	# Embedded python dies without Home set
+	if test "z${HOME}" = "z"; then
+		export HOME=""
+	fi
 
 	#Get info for parallel build
 	export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
