@@ -8,4 +8,17 @@
 <maintainer>
   <email>lucass@gentoo.org</email>
 </maintainer>
+<longdescription>
+kf is a Jabber client for GNU/Linux operating system. It aims
+to be both simple and powerful and is designed for advanced user.
+Some of it's features are:
+ - AutoAway support
+ - Block List
+ - vCard editing
+ - Spell checker
+ - Custom statuses settings
+ - Account registration
+ - SSL/Proxy support
+ - Multi User Chat support
+</longdescription>
 </pkgmetadata>
