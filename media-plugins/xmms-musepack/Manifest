@@ -1,3 +1,6 @@
-MD5 ca0a1f64fed42cf0484891210e99156d ChangeLog 384
 MD5 6497444c45707adc926fdc89246bea9c xmms-musepack-0.94.ebuild 778
+MD5 abbd57294f01dc37d47dfba133704c77 ChangeLog 679
+MD5 25ef24f4a0827dd56097fbf79212e874 xmms-musepack-0.94-r1.ebuild 1195
 MD5 a9df10edf2898414b6f2958643b63477 files/digest-xmms-musepack-0.94 70
+MD5 a9df10edf2898414b6f2958643b63477 files/digest-xmms-musepack-0.94-r1 70
+MD5 ed030d04fa02f984be113732ad39b061 files/xmms-musepack-0.94-bad-makefile.patch 956

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.1 2003/03/15 09:24:50 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.2 2003/06/03 12:03:27 robh Exp $
+
+*xmms-musepack-0.94-r1 (03 Jun 2003)
+
+  03 Jun 2003; robh <robh@gentoo.org> xmms-musepack-0.94-r1.ebuild,
+  files/xmms-musepack-0.94-bad-makefile.patch:
+  fix silly makefile and filter flags which cause weird whining noises.
+  fixes #20972 submitted by Kerin Millar <kerin@recruit2recruit.net>
 
 *xmms-musepack-0.94 (15 Mar 2003)
 
