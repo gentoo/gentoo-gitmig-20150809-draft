@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1-r2.ebuild,v 1.5 2004/12/17 20:58:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1-r2.ebuild,v 1.6 2004/12/17 21:25:15 corsair Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 		cd ${S}
 		epatch ${FILESDIR}/${PN}-${PV}-hppa.patch
 	fi
+	epatch ${FILESDIR}/${PN}-${PV}-ppc64.patch
 }
 src_compile() {
 	cd ${S}/build
