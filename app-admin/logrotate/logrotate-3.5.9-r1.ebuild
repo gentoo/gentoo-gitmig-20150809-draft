@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.5.9-r1.ebuild,v 1.11 2003/02/13 05:26:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.5.9-r1.ebuild,v 1.12 2003/08/05 14:25:57 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Rotates, compresses, and mails system logs"
-SRC_URI="http://ftp.debian.org/debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
+SRC_URI="http://ftp.debian.org/debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz"
 
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=dev-libs/popt-1.5"
 
