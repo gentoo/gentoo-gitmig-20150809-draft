@@ -27,7 +27,7 @@
 
 # <aliz@gentoo.org> (25 Aug 2002)
 # Masked until 1.2.7a is out
-=>sys-apps/iptables-1.2.7
+>=sys-apps/iptables-1.2.7
 
 # <woodchip@gentoo.org> (25 Aug 2002)
 # Latest stable release, test.
