@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
-S=${WORKDIR}/${P}
 DESCRIPTION="XPVM: A graphical console and monitor for PVM"
 SRC_URI="http://www.netlib.org/pvm3/xpvm/XPVM.src.1.2.5.tgz"
 HOMEPAGE="http://www.csm.ornl.gov/pvm/pvm_home.html"
@@ -61,4 +60,3 @@ pkg_postinst() {
 	ewarn "Environment Variables have changed. Do not forget to reboot or perform"
 	ewarn "source /etc/profile before using xpvm !"
 }
-

@@ -4,7 +4,6 @@
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="XPVM: A graphical console and monitor for PVM"
 SRC_URI="http://www.netlib.org/pvm3/xpvm/XPVM.src.1.2.5.tgz"
 HOMEPAGE="http://www.csm.ornl.gov/pvm/pvm_home.html"
