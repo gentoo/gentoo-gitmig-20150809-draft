@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.4 2004/01/16 20:47:02 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.5 2004/01/16 23:00:46 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
+  manifest fix
 
   16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> sysfsutils-0.4.0.ebuild:
   set ppc in keywords
