@@ -2,13 +2,9 @@
 Hash: SHA1
 
 MD5 92f01c1f4f17ca32af6d05e135791d17 ChangeLog 3669
-MD5 bf7ad8342c8a4a2ebbf978a85f884b3b flex-2.5.23.ebuild 880
 MD5 7f450ba3d60ff7e52f6ea764a994df09 flex-2.5.31-r1.ebuild 1002
-MD5 4688ae9156a18f877a3329ad07f1a1bb flex-2.5.31.ebuild 897
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1c833ebad5eafca71b4b3a40308e0ffa flex-2.5.4a-r5.ebuild 1327
-MD5 16e4a9013f877177d2fc9ba784ae9959 files/digest-flex-2.5.23 63
-MD5 46a5f0c3323bbf9d46b3682cf9b39263 files/digest-flex-2.5.31 64
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 46a5f0c3323bbf9d46b3682cf9b39263 files/digest-flex-2.5.31-r1 64
 MD5 a50411d58e9407414db98087253bdacd files/digest-flex-2.5.4a-r5 63
 MD5 b15be3f047c018fe805fe4c5b4243b93 files/flex-2.5.31-yytext_ptr.patch 265
@@ -17,9 +13,9 @@ MD5 497470663c67fc14a2eb95b51f7f9614 files/flex-2.5.4a-gcc3.patch 277
 MD5 de46348f431a1b72e51b8f2253ebcaf3 files/flex-2.5.4a-gcc31.patch 3189
 MD5 28010d818ed73f21c9d37fd955c9f25b files/flex-2.5.4a-skel.patch 350
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB72r8ArHZZzCEUG0RAh3pAJ9FHAV2hLQ162G17N3ylOq4brdY0gCfbc9N
-MiQk11pN1GA+iytLQGwuJgo=
-=wkeK
+iD8DBQFB8DwVroRuSHgZdywRAtGRAJ9AOjabKD5EDr42Ab0QCTLaJpZEsACfeafk
+Q+nIV6Y+6K7KOwHfTCH4p10=
+=D0rJ
 -----END PGP SIGNATURE-----
