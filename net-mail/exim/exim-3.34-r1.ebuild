@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.34.ebuild,v 1.1 2002/01/18 15:12:06 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.34-r1.ebuild,v 1.1 2002/04/01 17:17:35 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.exim.org/"
 DEPEND="virtual/glibc
 		>=sys-libs/db-3.2
 		>=sys-devel/perl-5.6.0
+		>=dev-libs/libpcre-3.4
 		pam? ( >=sys-libs/pam-0.75 )
 		tcpd? ( sys-apps/tcp-wrappers )
 		mta-tls? ( >=dev-libs/openssl-0.9.6 )
@@ -80,6 +81,7 @@ src_unpack() {
 		sed -e "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" \
 			-e "s:# LOOKUP_LIBS=-L/usr/local/lib -lldap -llber -lmysqlclient -lpq:LOOKUP_LIBS=-L/usr/lib -lldap -llber -lmysqlclient -lpq:" Local/Makefile.tmp >| Local/Makefile
 	fi
+	cat Makefile | sed -e 's/^buildname=.*/buildname=exim-gentoo/g' > Makefile.gentoo && mv -f Makefile.gentoo Makefile
 }
 
 
@@ -90,7 +92,7 @@ src_compile() {
 
 src_install () {
 
-	cd ${S}/build-Linux-i386
+	cd ${S}/build-exim-gentoo
 	insopts -o root -g root -m 4755
 	insinto /usr/sbin
 	doins exim
