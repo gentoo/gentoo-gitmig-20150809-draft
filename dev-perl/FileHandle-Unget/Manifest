@@ -1,6 +1,16 @@
-MD5 321d2709b8c434efe1db38430ee06df5 FileHandle-Unget-0.14.ebuild 566
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 58a4fa0c9cccd95d3216ff47c156bec8 FileHandle-Unget-0.14.ebuild 571
 MD5 ae363e8c2fb55eed9772faeb6f87c32d FileHandle-Unget-0.11.ebuild 532
-MD5 beb5f7f54cb21eaf13690689265ff674 ChangeLog 754
+MD5 9024f597c5449ac275ec2962ad99004f ChangeLog 846
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e4ef0eb254c65a903cefa458b922a37b files/digest-FileHandle-Unget-0.11 72
 MD5 26d00edd7142bbcaf03c965bdb69df69 files/digest-FileHandle-Unget-0.14 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOKMRCHk4+ZoBpvsRAsDDAJ4jo+9oRgfN6rhGvSslrpE5/YUl6gCgghA0
+bDxTVRuy2MXTUhE/ISoJvm0=
+=+b+o
+-----END PGP SIGNATURE-----
