@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.2.3.ebuild,v 1.6 2003/09/15 17:53:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.2.3.ebuild,v 1.7 2003/09/23 15:51:24 darkspecter Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Utilities for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha ~sparc hppa amd64"
+KEYWORDS="x86 ppc ~alpha ~sparc hppa amd64"
 
 RDEPEND=">=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2.1
