@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/yacas
+# ChangeLog for dev-lang/yacas
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yacas/ChangeLog,v 1.1 2003/04/18 03:31:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yacas/ChangeLog,v 1.2 2003/04/22 10:21:39 vapier Exp $
 
 *yacas-1.0.54.ebuild (17 Apr 2003)
 
