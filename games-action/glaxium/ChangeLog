@@ -1,6 +1,10 @@
 # ChangeLog for games-action/glaxium
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/ChangeLog,v 1.8 2004/06/25 03:22:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/ChangeLog,v 1.9 2004/09/03 10:02:41 mr_bones_ Exp $
+
+  03 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +files/0.5-rc.patch,
+  glaxium-0.5.ebuild:
+  added the rc patch from Loz Hygate via bug #58289
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> glaxium-0.5.ebuild:
   Added IUSE.

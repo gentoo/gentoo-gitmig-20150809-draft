@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.10 2004/06/25 03:22:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.11 2004/09/03 10:02:41 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc games
 
@@ -21,29 +21,32 @@ DEPEND=">=media-libs/libsdl-1.1.5
 	virtual/glut
 	>=media-libs/libpng-1.0.0"
 
-S=${WORKDIR}/${PN}_${PV}
+S="${WORKDIR}/${PN}_${PV}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	$(gcc-getCXX) ${FILESDIR}/glx-test.c >& /dev/null
 	if [ $? -ne 0 ] ; then
-		epatch ${FILESDIR}/${PV}-glx.patch
+		epatch "${FILESDIR}/${PV}-glx.patch"
 		append-flags -DGL_GLEXT_LEGACY
 	fi
-	has_version '>=media-video/nvidia-glx-1.0.5328' && epatch ${FILESDIR}/${PV}-another-glx.patch
+	has_version '>=media-video/nvidia-glx-1.0.5328' \
+		&& epatch "${FILESDIR}/${PV}-another-glx.patch"
+	epatch "${FILESDIR}/${PV}-rc.patch"
 }
 
 src_compile() {
-	egamesconf --datadir=${GAMES_DATADIR_BASE} || die
-	emake || die
+	egamesconf \
+		--datadir="${GAMES_DATADIR_BASE}" || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	dodir ${GAMES_BINDIR}
+	dodir "${GAMES_BINDIR}"
 	egamesinstall \
-		exec_prefix=${D}/${GAMES_PREFIX} \
-		datadir=${D}/${GAMES_DATADIR_BASE} \
+		exec_prefix="${D}/${GAMES_PREFIX}" \
+		datadir="${D}/${GAMES_DATADIR_BASE}" \
 		|| die
 	dodoc README.txt CHANGES.txt
 	prepgamesdirs
