@@ -1,0 +1,5 @@
+#!/bin/sh
+cd /usr/lib/documancer/backend
+DOCUMANCER_DATA=`pwd`
+export DOCUMANCER_DATA
+/usr/bin/python python/backend.py
