@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.46 2004/08/02 22:30:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.47 2004/08/08 01:42:18 agriffis Exp $
+
+  07 Aug 2004; Aron Griffis <agriffis@gentoo.org> files/bashrc:
+  Restore red prompt for root #59678
 
   02 Aug 2004; Aron Griffis <agriffis@gentoo.org>
   files/bash-3.0-invisible.patch:
