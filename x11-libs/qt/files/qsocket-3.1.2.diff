@@ -1,12 +1,5 @@
 --- src/network/qsocket.cpp.orig	2003-02-24 09:30:06.000000000 +0100
 +++ src/network/qsocket.cpp	2002-12-09 10:40:38.000000000 +0100
-@@ -1,5 +1,5 @@
- /****************************************************************************
--** $Id: qsocket-3.1.2.diff,v 1.1 2003/04/12 23:20:25 brain Exp $
-+** $Id: qsocket-3.1.2.diff,v 1.1 2003/04/12 23:20:25 brain Exp $
- **
- ** Implementation of QSocket class.
- **
 @@ -112,9 +112,7 @@
  public:
      QSocketPrivate();
