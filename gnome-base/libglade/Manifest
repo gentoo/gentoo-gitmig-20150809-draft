@@ -1,11 +1,21 @@
-MD5 75153e7fd8859b6875b806742be30ee3 libglade-2.0.1.ebuild 1471
-MD5 16ad3de95cea520a3ac769d2106fa4b0 libglade-0.17-r6.ebuild 1439
-MD5 947607846b14c19469a4ae70e923aace libglade-2.4.0.ebuild 1277
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c9c567f99da32febb2688fa89d74308 ChangeLog 6756
-MD5 5a1ce061d1868574920ffeafcf238182 libglade-2.3.6.ebuild 1271
+MD5 16ad3de95cea520a3ac769d2106fa4b0 libglade-0.17-r6.ebuild 1439
+MD5 75153e7fd8859b6875b806742be30ee3 libglade-2.0.1.ebuild 1471
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 ebce5aca51974615f3db3e4a2c027635 libglade-2.3.6.ebuild 1270
+MD5 1c85d0eb48def6b3df84955ccd752713 libglade-2.4.0.ebuild 1276
+MD5 ba2eb9b8a5caed325917e267ef33d8ac files/Makefile.in.am-xmlcatalog.patch 958
+MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
 MD5 77fafb164d53dc862957a5bd2b7511e4 files/digest-libglade-2.0.1 67
 MD5 0e14f0bbde2cbecd9f66ac06ff331b5b files/digest-libglade-2.3.6 67
 MD5 a3f0933d4f32dd139bedca018221f4dd files/digest-libglade-2.4.0 67
-MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
-MD5 ba2eb9b8a5caed325917e267ef33d8ac files/Makefile.in.am-xmlcatalog.patch 958
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPkJ+HTu7gpaalycRAjj7AKDJT9sMfkJ+ySWES9rYQDtxvO3YvQCfXKrx
+48X1A4l3/yjRmSt1ZarSk+0=
+=AQDw
+-----END PGP SIGNATURE-----
