@@ -1,12 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.122 2003/09/08 22:39:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.123 2003/09/12 09:51:27 kumba Exp $
+
+
+*gcc-3.3.1-r1 (07 Sep 2003)
+
+  12 Sep 2003; Joshua Kinard <kumba@gentoo.org> gcc-3.3.1.ebuild:
+  Added ~sparc to Keywords, should only affect users using the gcc33-sparc64-1.4
+  testing profile.  Yell if otherwise.
 
   09 Sep 2003; George Shapovalov <george@gentoo.org> gcc-3.3.1.ebuild, gcc-3.3.1-r1.ebuild, gcc-3.2.1-r7.ebuild, gcc-3.2.2.ebuild, gcc-3.2.2-r2.ebuild: :
   Removed "ada" from gcc_lang as month ago for previous versions.
   Also removed gcc32-ada-make.patch and corresponding epatch invocations
-
-*gcc-3.3.1-r1 (07 Sep 2003)
 
   07 Sep 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r1.ebuild:
   Update snapshot to 20030904. Fix coreutils patch - it did not catch all broken
