@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.5.ebuild,v 1.9 2005/01/13 17:03:59 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.5.ebuild,v 1.10 2005/01/18 22:52:05 pythonhead Exp $
 
 inherit eutils kde wxwidgets
 
@@ -46,9 +46,9 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install \
-		datadir=${D}/usr/share \
-		GNOME_DATA_DIR=${D}/usr/share \
-		KDE_DATA_DIR=${D}/${KDEDIR-/usr}/share || die
+		datadir=/usr/share \
+		GNOME_DATA_DIR=/usr/share \
+		KDE_DATA_DIR=/${KDEDIR-/usr}/share || die
 
 	dodoc AUTHORS LICENSE NEWS README TODO
 }

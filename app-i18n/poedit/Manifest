@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d3d368282fb570579198bab7aec962d4 poedit-1.2.3.ebuild 1291
-MD5 7c0bbdc0b3f8966192f8c195178f2de7 poedit-1.2.4.ebuild 1323
-MD5 d7b5862ccd5636721f0f953d821f0251 poedit-1.2.5.ebuild 1480
+MD5 7f3de5f63b33e538ad34a74603594b4c poedit-1.2.3.ebuild 1279
+MD5 dc4afee82bca9697be5841eafbc7fcad poedit-1.2.4.ebuild 1311
+MD5 db946967c05b62002591cb94e8a6f965 poedit-1.2.5.ebuild 1469
 MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
-MD5 ef5bf1fb4adc30b228548d6ccb4c798f ChangeLog 4453
-MD5 2dffda94f85547286b779aeb20f85c14 poedit-1.3.1.ebuild 1427
-MD5 e5d54830c4a4b91f224b52afe1717dcf poedit-1.3.0.ebuild 1429
+MD5 76d45ff2fad52d594fcd64578f2e1415 ChangeLog 4715
+MD5 335d522d41ad727b43bf04f001f9099a poedit-1.3.1.ebuild 1415
+MD5 19c27ece084261a105ddd356536a8a69 poedit-1.3.0.ebuild 1417
 MD5 b3d482db4c3c5e91531023382d99bd3c files/digest-poedit-1.2.3 65
 MD5 666026abf1982aa37ec3fc7f1a84f40a files/digest-poedit-1.2.4 65
 MD5 d21fc6db7a90c2f1ea8a0697c2ff7db8 files/digest-poedit-1.3.0 65
@@ -16,7 +16,7 @@ MD5 d2cb56c317c63cb5d3a69370e25a138c files/digest-poedit-1.2.5 143
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB5qwzz2gxt1z4IGYRAqFyAKCWlArSBteDka0KSbH1jsadCcvcNQCgsA47
-pn+cMuHezVuq95fWtjoron4=
-=8bR/
+iD8DBQFB7ZM+z2gxt1z4IGYRAhXoAKCMzUzgLl0hDjSTrPQV9mVXNGnW0QCeMYec
+Bkpl7kII2tR6LN8iQjzjw7E=
+=eD/c
 -----END PGP SIGNATURE-----
