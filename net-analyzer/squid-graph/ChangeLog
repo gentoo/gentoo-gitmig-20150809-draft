@@ -1,8 +1,13 @@
 # ChangeLog for net-analyzer/squid-graph
 # Copyright 2001-2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.1 2002/08/12 08:55:39 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.2 2002/10/19 05:41:48 seemant Exp $
 
 * squid-graph-3.0 (12 August 2002)
+
+  18 Oct 2002; Seemant Kulleen <seemant@gentoo.org> squid-graph-3.0.ebuild :
+
+  Updated DEPEND to dev-perl/GD. Thanks to: gaarde@yahoo.com (Paul Belt) in
+  bug #9327.
 
   12 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, squid-graph-3.0.ebuild, files/digest-squid-graph-3.0 :
  
