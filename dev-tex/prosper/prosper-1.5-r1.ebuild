@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.5-r1.ebuild,v 1.1 2004/09/21 13:08:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.5-r1.ebuild,v 1.2 2004/10/23 08:56:33 usata Exp $
 
 inherit latex-package
 
@@ -13,20 +13,9 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://sourceforge/prosper/${CONTRIB}.tar.gz"
 LICENSE="LPPL-1.2"	# has been changed since 1.5
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-DEPEND="virtual/tetex"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 S=${WORKDIR}/${PN}
 IUSE=""
-
-#src_unpack() {
-#	# needs contrib package for some image files
-#	unpack ${CONTRIB}.tar.gz
-#	mkdir -p ${S}/contrib/img
-#	mv ${CONTRIB}/*.sty ${S}/contrib
-#	mv ${CONTRIB}/img/* ${S}/contrib/img
-#
-#	unpack ${P}.tar.gz
-#}
 
 src_install(){
 	cd ${S}
