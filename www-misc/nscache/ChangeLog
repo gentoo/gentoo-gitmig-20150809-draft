@@ -1,0 +1,10 @@
+# ChangeLog for www-misc/nscache
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/nscache/ChangeLog,v 1.1 2005/01/05 14:11:50 port001 Exp $
+
+*nscache-1.5 (05 Jan 2005)
+
+  05 Jan 2005; Ian Leitch <port001@gentoo.org> +metadata.xml,
+  +nscache-1.5.ebuild:
+  Initial commit
+

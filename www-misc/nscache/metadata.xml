@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer>
+                <email>port001@gentoo.org</email>
+                <name>Ian Leitch</name>
+                <description>Maintainer</description>
+        </maintainer>
+        <longdescription>Distributed cache module for aolserver</longdescription>
+</pkgmetadata>
