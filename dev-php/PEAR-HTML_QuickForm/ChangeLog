@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.5 2003/10/14 03:41:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.6 2003/12/23 21:42:10 coredumb Exp $
+
+*PEAR-HTML_QuickForm-3.2 (23 Dec 2003)
+
+  23 Dec 2003; Tal Peer <coredumb@gentoo.org> PEAR-HTML_QuickForm-3.2.ebuild:
+  Version bump, uses new eclass.
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
