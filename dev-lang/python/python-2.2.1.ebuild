@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.3 2002/07/21 00:59:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.4 2002/07/23 04:40:42 george Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -25,6 +25,7 @@ RDEPEND="$DEPEND dev-python/python-fchksum"
 PROVIDE="virtual/python"
 
 SLOT="2.2"
+KEYWORDS="x86"
 
 src_compile() {
 	# python's config seems to ignore CFLAGS
@@ -36,7 +37,7 @@ src_compile() {
 	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' $t.orig > $t
         
         # turn **on** shared
-        echo '*shared*' >> Modules/Setup.local
+		echo '*shared*' >> Modules/Setup.local
        
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++

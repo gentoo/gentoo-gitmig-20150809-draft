@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.2 2002/07/21 00:59:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.3 2002/07/23 04:40:42 george Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -24,6 +24,7 @@ RDEPEND="$DEPEND"
 
 PROVIDE="virtual/python-2.1"
 SLOT="2.1"
+KEYWORDS="x86"
 
 src_compile() {
 	export OPT="$CFLAGS"
