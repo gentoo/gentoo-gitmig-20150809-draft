@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.2 2004/03/13 01:00:50 vapier Exp $
 
 MY_P=${P/_}+IOS12
 DEB_PVER=3
@@ -29,12 +29,9 @@ src_compile() {
 }
 
 src_install() {
-	dobin mrouted
+	dobin mrouted || die
 	doman mrouted.8
 
-	insinto /etc/conf.d
-	newins ${S}/mrouted.conf
-
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/mrouted
+	insinto /etc ; doins mrouted.conf
+	exeinto /etc/init.d ; newexe ${FILESDIR}/mrouted.rc mrouted
 }
