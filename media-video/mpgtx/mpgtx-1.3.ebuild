@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.5 2004/08/20 00:03:22 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.6 2004/09/29 22:05:00 pkdawson Exp $
 
 DESCRIPTION="mpgtx a command line MPEG audio/video/system file toolbox"
 SRC_URI="mirror://sourceforge/mpgtx/${P}.tgz"
@@ -13,8 +13,14 @@ LICENSE="GPL-2"
 
 DEPEND="sys-libs/glibc"
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
+
 src_compile() {
 	./configure --parachute --prefix=/usr
+	sed -i "s:O3:O1:" Makefile
 	emake || die "emake failed"
 }
 
