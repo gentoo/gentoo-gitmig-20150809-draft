@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.66 2003/07/19 03:02:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.67 2003/07/19 03:11:05 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -284,11 +284,12 @@ php_src_compile() {
 	use tiff || [ -n "${REQUIRETIFF}" ] && myconf="${myconf} --with-tiff-dir=/usr" LDFLAGS="${LDFLAGS} -ltiff" || myconf="${myconf} --without-tiff"
 
 	#use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
-	if [ -n "`use mysql`" ] ; then
+	if use mysql; then
 		if [ -n "`mysql_config | grep '4.1'`" ] ; then
 			myconf="${myconf} --with-mysqli=/usr"
 		else
 			myconf="${myconf} --with-mysql=/usr"
+			myconf="${myconf} --with-mysql-sock=`mysql_config --socket`"
 		fi
 	else
 		myconf="${myconf} --without-mysql"
