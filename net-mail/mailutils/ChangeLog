@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailutils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.14 2004/09/29 18:07:08 langthang Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.15 2005/02/01 17:08:09 langthang Exp $
+
+*mailutils-0.6 (01 Feb 2005)
+
+  01 Feb 2005; Tuấn Văn <langthang@gentoo.org>
+  +files/mailutils-0.6-mh-Makefile.in.patch, +mailutils-0.6.ebuild:
+  Version bump.
 
   29 Sep 2004; Tuan Van <langthang@gentoo.org> :
   stable on x86. Remove old ebuild.
