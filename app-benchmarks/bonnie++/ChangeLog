@@ -1,0 +1,41 @@
+# ChangeLog for app-misc/bonnie++
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.1 2003/06/25 20:51:56 mholzer Exp $
+
+*bonnie++-1.02c-r1 (25 Jun 2003)
+
+  25 Jun 2003; Martin Holzer <mholzer@gentoo.org> bonnie++-1.02c-r1.ebuild,
+  bonnie++-1.03.ebuild:
+  Moved app-misc/bonnie++ to app-benchmarks/bonnie++
+
+*bonnie++-1.03 (6 Dec 2002)
+
+  08 Jan 2003; Jack Morgan <jmorgan@gentoo.org> bonnie++-1.03.ebuild :
+  Removed sparc64 keyword 
+
+  4 Jan 2003; George Shapovalov <george@gentoo.org> bonnie++-1.03.ebuild :
+  for whatever reason got this one assigned to me.
+  Checked and committed.
+
+  5 Dec 2002; William McArthur <sandymac@gentoo.org> bonnie++-1.03.ebuild :
+
+  Bummped the ebuild file name and added IUSE and DEPEND lines.
+
+*bonnie++-1.02c-r1 (14 Oct 2002)
+
+  14 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  In gcc3.x, 'vector.h' is detected as not being installed (due to the
+  fact that you're *supposed* to call it 'vector') ... and zcav is not
+  built.  if you force the compilation ('make zcav') it will work, just
+  complain that you're using an old header file (#9073)
+  The version bump is because the install would continue even if zcav
+  wasnt created/installed
+
+*bonnie++-1.02c (26 Apr 2002)
+
+  26 Apr 2002; William McArthur <sandymac@gentoo.org> bonnie++-1.02c.ebuild :
+  Just renamed the ebuild for a newer version of the upstream package. Version
+  1.02c fixes "a very serious bug in reporting of seek test results."
+
+*bonnie++-1.02a (1 Feb 2002)
+
