@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r6.ebuild,v 1.1 2002/04/23 13:53:06 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r6.ebuild,v 1.2 2002/04/24 23:17:06 azarah Exp $
 
 #provide Xmake and Xemake
 . /usr/portage/eclass/inherit.eclass
@@ -73,8 +73,8 @@ src_unpack() {
 	fi
 	[ -z "`use pda`" ] && libtoolize --copy --force
 	aclocal -I macros
-	autoconf
 	automake --add-missing
+	autoconf
 }
 
 src_compile() {
