@@ -2,4 +2,4 @@ MD5 441e57ac78570dd1cec087460be7febe xparts-3.3.1.ebuild 1242
 MD5 d7c481ff42f014c0dbd85b8ed7bed1c4 ChangeLog 985
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 664013043bb1362df44abe44210e6166 files/digest-xparts-3.3.1 298
+MD5 70e20b1b123bf8d012966ea1675c9306 files/digest-xparts-3.3.1 222

@@ -3,5 +3,5 @@ MD5 6f75a5248e453cf40763e8898bd33f04 qtjava-3.3.1.ebuild 874
 MD5 d69a1fda007888895242a0b6e17c5d5e ChangeLog 1104
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 bf97e365e48acdde2af0fadfcf414414 files/digest-qtjava-3.3.1 298
-MD5 997a17fb9a55c54abd85e6a2334c9814 files/digest-qtjava-3.3.2 230
+MD5 70e20b1b123bf8d012966ea1675c9306 files/digest-qtjava-3.3.1 222
+MD5 10ed49fd5738679f78bf8008f8975537 files/digest-qtjava-3.3.2 301

@@ -2,4 +2,4 @@ MD5 0b17c3533d59b6c8ead4eea62ce26684 dcopjava-3.3.1.ebuild 817
 MD5 88c2ee805cea318661ae9b678a1dc29d ChangeLog 1126
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 4ed500d857695c546e771eac1fbd8a55 files/digest-dcopjava-3.3.1 300
+MD5 70e20b1b123bf8d012966ea1675c9306 files/digest-dcopjava-3.3.1 222
