@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.1.20041026.ebuild,v 1.1 2004/10/28 11:58:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.1.20041026.ebuild,v 1.2 2004/11/03 05:39:34 usata Exp $
 
 inherit tetex eutils flag-o-matic
 
@@ -18,7 +18,9 @@ HOMEPAGE="http://tug.org/teTeX/"
 SRC_PATH_TETEX=ftp://cam.ctan.org/tex-archive/systems/unix/teTeX-beta
 SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF}
-	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}"
+	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}
+	mirror://gentoo/${P}-gentoo.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/${P}-gentoo.tar.gz"
 
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
 IUSE="motif lesstif Xaw3d"
@@ -35,11 +37,6 @@ pkg_setup() {
 
 	ebeep
 	epause
-}
-
-src_unpack() {
-	tetex_src_unpack
-	epatch ${FILESDIR}/${P}-etex.diff
 }
 
 src_compile() {
