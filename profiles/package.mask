@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (28 Jun 2003)
+# cjkcodecs replaces koreancodecs and possibly japanesecodecs
+dev-python/koreancodecs
+dev-python/japanesecodecs
+
 # <rac@gentoo.org> (24 Jun 2003)
 # proof of concept for the vendor directory changes made possible with
 # perl-5.8.0-r12
