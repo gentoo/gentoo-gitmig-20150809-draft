@@ -4,16 +4,18 @@ Hash: SHA1
 MD5 fe7572fc819ce3107211018b6d9e05d5 ndiswrapper-0.10.ebuild 2833
 MD5 d2db2238e9f978b035e2e311c9c34c1c ndiswrapper-0.9.ebuild 2675
 MD5 dc5ced1ce83104f2ed649ac51e4ff15b ndiswrapper-0.11.ebuild 2860
+MD5 1afb1b7b27c4f755f1db304d3606e0cb ndiswrapper-0.12.ebuild 2938
 MD5 0dfb45e6e16bf37b171169afca958121 metadata.xml 429
-MD5 8a39bbb001480d6e72f38db9f045c293 ChangeLog 2842
+MD5 47ded4bc6d9a092adcf58b8a2e601e67 ChangeLog 2967
 MD5 aa232482ba4fdfef2b472bebd374b93d files/digest-ndiswrapper-0.9 66
 MD5 e88eaf152c6824984685f326bca63a91 files/ndiswrapper-0.9-modules.d 293
 MD5 0dc46f89e3f6f6bffc28f1da22926f35 files/digest-ndiswrapper-0.10 67
 MD5 3fcbe2978a1fcde2e180b254492b9672 files/digest-ndiswrapper-0.11 68
+MD5 f0f10bcbf8311cd3d857b85c57eb1187 files/digest-ndiswrapper-0.12 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZ5ONFhz/XBeRBtARAn31AJ4/3LIgHs9uEkH6NvotMQL475TQogCgubZk
-H8wnn8ZPNJvuIGY0kLWHnow=
-=Bgzh
+iD8DBQFBtfzPFhz/XBeRBtARAjYaAJ4yNcsa2R84KlU8dkMT71iNNrU3egCgiECD
+vTABfeOyzkujF0sheV2FQ9U=
+=xNRz
 -----END PGP SIGNATURE-----
