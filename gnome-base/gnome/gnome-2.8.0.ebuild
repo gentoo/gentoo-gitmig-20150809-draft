@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0.ebuild,v 1.1 2004/10/08 22:30:11 foser Exp $
-
-# UPDATE TRACKER : GNOME TEAM ONLY
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0.ebuild,v 1.2 2004/10/08 23:09:44 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -13,18 +11,8 @@ SLOT="2.0"
 IUSE="accessibility cdr dvdr hal"
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~hppa"
 
-#  Note to developers:
-#  This is a wrapper for the complete Gnome2 desktop,
-#  This means all components that a user expects in Gnome2 are present
-#  please do not reduce this list further unless
-#  dependencies pull in what you remove.
-#  With "emerge gnome" a user expects the full "standard" distribution of Gnome and should be provided with that, consider only installing the parts needed for smaller installations.
-
-
-# LV masked libbonobo-2.6.2 on amd64. 
-# excepting it here, hopefully that can be removed in the future.
 RDEPEND="!gnome-base/gnome-core
 
 	>=dev-libs/glib-2.4.6
@@ -93,8 +81,6 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnomeprint-2.8
 	>=gnome-base/libgnomeprintui-2.8
 
-	>=gnome-extra/libgtkhtml-3.2.1
-
 	>=gnome-extra/gnome-utils-2.8
 	>=gnome-extra/gnome-games-2.6
 
@@ -115,6 +101,20 @@ RDEPEND="!gnome-base/gnome-core
 	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.2 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.2 )
 
+	hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 )
+
+	>=gnome-extra/evolution-data-server-1
+	>=mail-client/evolution-2
+	>=gnome-extra/evolution-webcal-2
+	>=gnome-extra/gal-2.2.1
+	>=gnome-extra/libgtkhtml-3.2.1
+
+	>=net-misc/vino-2.8
+
+	>=app-admin/gnome-system-tools-1
+
+	>=net-analyzer/gnome-nettool-0.99.3
+
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.1
 		>=gnome-base/gail-1.8
@@ -129,20 +129,6 @@ RDEPEND="!gnome-base/gnome-core
 # pkgconfig
 # intltool
 # gtk-doc
-
-RDEPEND="${RDEPEND}
-	hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 )
-	>=net-misc/vino-2.8
-
-	>=gnome-extra/gal-2.2.1
-
-	>=gnome-extra/evolution-data-server-1
-	>=mail-client/evolution-2
-	>=gnome-extra/evolution-webcal-2
-
-	>=app-admin/gnome-system-tools-1
-
-	>=net-analyzer/gnome-nettool-0.99.3"
 
 pkg_postinst () {
 
