@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@cvs.gentoo.org>
 # Author Tod Neidt <tneidt@fidnet.com>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gperiodic/gperiodic-1.3.2.ebuild,v 1.2 2001/10/18 21:55:37 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.1 2002/05/07 01:35:08 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GPeriodic is a periodic table application for Linux."
