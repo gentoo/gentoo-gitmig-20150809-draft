@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.22 2005/03/11 20:17:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.23 2005/03/27 14:09:46 gmsoft Exp $
+
+  27 Mar 2005; Guy Martin <gmsoft@gentoo.org> glib-perl-1.062.ebuild:
+  Stable on hppa.
 
   11 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> glib-perl-1.062.ebuild:
   Stable on sparc
