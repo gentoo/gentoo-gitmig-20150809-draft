@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gentoo-stats
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.7 2002/10/15 04:27:47 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.8 2002/10/15 04:29:54 blizzy Exp $
+
+*gentoo-stats-0.3 (15 Oct 2002)
+
+  15 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
+  Changes in this release:
+    - Reports the Gentoo Linux profile you are using.
 
   15 Oct 2002; Maik Schreiber <blizzy@gentoo.org>
   gentoo-stats-0.1.ebuild, gentoo-stats-0.2.ebuild: Added IUSE.
