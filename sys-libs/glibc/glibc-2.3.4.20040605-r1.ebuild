@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.3 2004/06/11 09:46:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.4 2004/06/12 06:10:26 kumba Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${P}.tar.bz2
 HOMEPAGE="http://sources.redhat.com/glibc/"
 SLOT="2.2"
 LICENSE="LGPL-2"
-KEYWORDS="-*"
+KEYWORDS="-* ~mips"
 
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -100,17 +100,31 @@ setup_flags() {
 
 
 want_nptl() {
-	(use amd64 || use ppc || use ppc64 || use sparc || use s390 || \
-		use ia64 || use alpha) && return 0
-	use x86 && if [ "${CHOST/-*}" = "i486" -o "${CHOST/-*}" = "i586" -o \
-		"${CHOST/-*}" = "i686" ] ; then return 0 ; fi
+	# Archs that can use NPTL
+	if use amd64 || use alpha || use ia64 || use ppc || \
+	   use ppc64 || use s390 || use sparc; then
+		return 0
+	fi
+
+	# Specific x86 CHOSTS that can use NPTL
+	if use x86; then
+		case "${CHOST/-*}" in
+			i486|i586|i686)	return 0 ;;
+		esac
+
+	fi
+
 	return 1
 }
 
 
 want_tls() {
-	(use amd64 || use ia64 || use s390 || use alpha || use sparc || \
-		use ppc || use ppc64 || use x86) && return 0
+	# Archs that can use TLS (Thread Local Storage)
+	if use amd64 || use alpha || use ia64 || use ppc || \
+	   use ppc64 || use s390 || use sparc || use x86; then
+		return 0
+	fi
+
 	return 1
 }
 
@@ -143,7 +157,7 @@ install_locales() {
 
 
 setup_locales() {
-	if (use nls || use makecheck); then
+	if use nls || use makecheck; then
 		einfo "nls or makecheck in USE, installing -ALL- locales..."
 		install_locales
 	elif [ -e /etc/locales.build ]; then
@@ -189,7 +203,7 @@ pkg_setup() {
 			echo "yes"
 		fi
 
-	elif use nptl &> /dev/null; then
+	elif use nptl; then
 		echo
 		# Just tell the user not to expect too much ...
 		ewarn "You have \"nptl\" in your USE, but your kernel version or"
@@ -288,7 +302,10 @@ do_arch_mips_patches() {
 	epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
 	epatch ${FILESDIR}/2.3.3/semtimedop.diff
 	epatch ${FILESDIR}/2.3.3/mips-sysify.diff
-	epatch ${FILESDIR}/2.3.4/mips-sysdep-cancel.diff
+
+	if use n32 || use n64; then
+		epatch ${FILESDIR}/2.3.4/mips-sysdep-cancel.diff
+	fi
 
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.
@@ -335,10 +352,13 @@ do_hardened_fixes() {
 	# disable binutils -as-needed
 	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
 
+	# disable relro usage for ld.so
 	# mandatory, if binutils supports relro and the kernel is pax/grsecurity enabled
-	# solves almost all segfaults building the locale files on grsecurity enabled kernels
-	use build && sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
-	use build || (use hardened && sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig)
+	# solves almost all segfaults building the locale files on grsecurity enabled kernels and
+	# Inconsistency detected by ld.so: dl-fini.c: 69: Assertion `i == _rtld_local dl_nloaded' failed!
+	# the real tested conditions, where this definitely has to be applied are for now:
+	# use build || use bootstrap || use hardened || <pax/grsec kernel>
+	sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
 
 	# disables building nscd as pie
 	use hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
@@ -429,7 +449,7 @@ src_compile() {
 	use erandom || myconf="${myconf} --disable-dev-erandom"
 	use hardened && myconf="${myconf} --enable-bind-now"
 
-	if (use nptl && want_nptl && want_tls); then
+	if use nptl && want_nptl && want_tls; then
 		myconf="${myconf} \
 		--enable-add-ons=nptl \
 		--with-tls --with-__thread \
@@ -528,7 +548,7 @@ EOF
 			timezone/install-others -C ${WORKDIR}/build || die
 	fi
 
-	if (use pic && use !amd64); then
+	if use pic && use !amd64; then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
 		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/lib \;

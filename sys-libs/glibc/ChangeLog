@@ -1,6 +1,18 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.187 2004/06/11 09:46:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.188 2004/06/12 06:10:26 kumba Exp $
+
+  12 Jun 2004; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.3.4.20040605-r1.ebuild:
+    - Clean up the usage of paranthesis around groups 
+      of use flag checks (unecessarily invokes a subshell)
+    - And allow a sed command that unconditionally disables 
+      relro for ld.so to fire (it previously only fired if 
+      use build == true or use build == false AND 
+      use hardened == true)
+    - Apply one of the mips patches only if use n32 or 
+      use n64 is true
+    - Add ~mips to KEYWORDS
 
   11 Jun 2004; Joshua Kinard <kumba@gentoo.org>
   glibc-2.3.4.20040605-r1.ebuild:
