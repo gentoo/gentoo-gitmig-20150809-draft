@@ -47,10 +47,10 @@ src_compile() {
     echo "Ignore any errors from the yes command above."
     
     cd ${S}
-    # try without the hostflags thing
+    # try without the hostflags thing sometime and see what happens
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
     try make symlinks
-    
+
 }
 
 src_install() {
