@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r3.ebuild,v 1.1 2002/08/03 09:25:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r3.ebuild,v 1.2 2002/08/03 10:27:19 cardoe Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SDL MPEG Player Library"
@@ -19,9 +19,11 @@ src_unpack() {
 
 	unpack ${P}.tar.gz
 	
-	## GCC 3.1 fix from bug #5558 (cardoe 08/03/02
+	## GCC 3.1 fix from bug #5558 (cardoe 08/03/02)
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gcc-3.1.patch || die
+	if [ `gcc -dumpversion | cut -d"." -f1` == "3" ] ; then
+		patch -p1 < ${FILESDIR}/${P}-gcc-3.1.patch || die
+	fi
 
 }
 
