@@ -6,8 +6,7 @@
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Application Libraries"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
-         ftp://gnome.eazel.com/pub/gnome/unstable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
