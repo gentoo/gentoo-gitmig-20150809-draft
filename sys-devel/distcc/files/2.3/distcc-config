@@ -1,0 +1,322 @@
+#!/bin/bash
+#
+# distcc-config - helper script for distcc and distccd
+#
+# Copyright 2003 Superlucidity Services, LLC 
+# This program licensed under the GNU GPL version 2.
+#
+# This script developed by Zachary T Welch at Superlucidity Services, LLC
+#  based on ideas from irc discussion and the clear need for this support
+# 
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.3/distcc-config,v 1.1 2003/05/21 10:15:09 zwelch Exp $
+
+
+[ -z "${ROOT}" ] && ROOT=/
+
+# distcc-config manges the DISTCC_{HOSTS,LOG,VERBOSE} settings here
+# moved to accomodate 02ccache and leave 0[14]* free
+DCCC_ENV_FILE="${ROOT}etc/env.d/02distcc"
+DCCC_OLD_ENV="${ROOT}etc/env.d/04distcc"
+
+is_super_user() {
+	[ "$(id -u)" = 0 ]
+}
+# this should be getopt'd someday (override with DCCC_QUIET)
+DCCC_VERBOSE=1
+
+source /sbin/functions.sh
+
+dccc_echo() {
+	[ -z "${DCCC_QUIET}" -a -n "${DCCC_VERBOSE}" ] && echo "$*"
+}
+dccc_exit() {
+	dccc_echo "$*"
+	exit 1
+}
+
+# create the appropriate configuration directory 
+is_super_user && \
+	DCCC_HOSTS_FILE="/etc/distcc/hosts" || \
+	DCCC_HOSTS_FILE="${HOME}/.distcc/hosts"
+mkdir -p $(dirname ${DCCC_HOSTS_FILE}) || \
+	dccc_exit "unable to create configuration directory"
+
+
+###
+# the following functions manage the distcc symlinks
+#  they allow the user or other scripts (namely gcc-config) to
+#  automatically update distcc's links when upgrading toolchains
+#
+dccc_remove_link() {
+	local t="${ROOT}usr/lib/distcc/bin/${1}"
+	if [ -L ${t} ]; then
+		dccc_echo "Removing ${t}..."
+		rm -f "${t}"
+	fi
+}
+dccc_install_link() {
+	# Search the PATH for the specified compiler
+	#  then create shadow link in ${ROOT}usr/lib/distcc/bin to distcc
+	#  note: this `type' doesn't do the right thing if ROOT != /
+	if [ -n "$(type -p ${1})" ]; then 
+		# first be sure any old link is removed
+		DCCC_QUIET=1 dccc_remove_link "${1}"
+
+		# then create the new link
+		local t="${ROOT}usr/lib/distcc/bin/${1}"
+		dccc_echo "Creating distcc shadow link: ${t}..."
+		ln -s /usr/bin/distcc "${t}"
+	fi
+}
+dccc_links() {
+	local a
+	for a in gcc cc c++ g++ ; do
+		[ -n "${2}" ] && a="${2}-${a}"
+		eval "dccc_${1}_link" "${a}"
+	done
+}
+
+dccc_install_user() {
+	# update or create, depending on whether user already exists
+	einfo "Updating or creating distcc user..."
+	local USERFIX
+	id distcc >/dev/null 2>&1 && USERFIX=usermod || USERFIX=useradd
+	USERFIX="/usr/sbin/${USERFIX}"
+	if [ -x "${USERFIX}" ]
+	then
+		if ! ${USERFIX} -g daemon -s /bin/false -d /dev/null \
+				-c "distccd" distcc 
+		then
+			dccc_exit "unable to create or modify user"
+		fi
+	elif [ "${USERFIX}" = "/usr/sbin/useradd" ]
+	then
+		ewarn "${USERFIX} not found: You need to add the distcc user"
+		ewarn "to /etc/passwd by hand.  Add the following line:\n"
+		ewarn "  distcc:x:240:2:distccd:/dev/null:/bin/false\n"
+		ewarn "and then run 'distcc-config --install' again root."
+		dccc_exit "Unable to create distcc user!"
+	fi
+
+	for d in ${ROOT}usr/lib/distcc/bin ${ROOT}var/run/distccd ; do
+		einfo "Configuring $d..."
+		chown distcc:daemon $d && chmod 0755 $d || \
+			dccc_exit "Unable to configure ${d}!"
+	done
+}
+
+dccc_guess_chost() {
+	echo "$(grep CHOST /etc/make.conf | \
+		grep -v '^#' | sed 's,^.*=\"\(.*\)\",\1,')"
+
+}
+
+######
+# routines for manipulating ${DCCC_ENV_FILE}
+
+dccc_install_env() {
+	[ -f ${DCCC_OLD_ENV} ] && mv ${DCCC_OLD_ENV} ${DCCC_ENV_FILE}
+	[ -f ${DCCC_ENV_FILE} ] && return
+	einfo "Creating ${DCCC_ENV_FILE}..."
+	cat <<_EOF_ > ${DCCC_ENV_FILE} || \
+		dccc_exit "Unable to create ${DCCC_ENV_FILE}..."
+# This file is managed by distcc-config; use it to change these settings.
+DISTCC_HOSTS="localhost"
+# DISTCC_VERBOSE is not set
+# DISTCC_LOG is not set
+# DCCC_PATH is not set
+_EOF_
+}
+
+dccc_show_env() {
+	grep -v '^#' ${DCCC_ENV_FILE} | sed -e 's,^,export ,'
+}
+
+dccc_test_env() {
+	dccc_show_env | grep "$1" | tail -1 | sed -e "s,${1}=,,"
+}
+
+dccc_load_defaults() {
+	rm -f ${DCCC_ENV_FILE}
+	dccc_install_env
+}
+
+dccc_set_env() {
+	local xxENV="${1}"
+	shift
+	dccc_install_env
+	mv -f ${DCCC_ENV_FILE} ${DCCC_ENV_FILE}.tmp
+	if [ -n "${*}" ]; then
+		einfo "Setting ${xxENV}=\"${*}\""
+	else
+		einfo "Clearing ${xxENV}"
+	fi
+	# redirect the following block to create new file
+	{
+		egrep -v "${xxENV}[= ]" ${DCCC_ENV_FILE}.tmp
+		if [ -n "${*}" ]; then
+			echo "${xxENV}=\"${*}\""
+		else
+			echo "# ${xxENV} is not set" 
+		fi 
+	} >> ${DCCC_ENV_FILE}
+	rm -f ${DCCC_ENV_FILE}.tmp
+}
+dccc_regen_env() {
+	env-update
+	if [ -z "${DCCC_NO_WARN}" ]; then
+	  einfo "If you want to use these new settings in an existing shell,"
+	  einfo "you need to 'source /etc/profile' to get the changes."
+	fi
+}
+
+dccc_get_env() {
+	if [ -f ${DCCC_ENV_FILE} ]; then
+		local xxENV="$(grep ${1} ${DCCC_ENV_FILE} | \
+			grep -v '^#' | tail -1)"
+		echo ${xxENV#*=} | sed -e 's,^",,;s,"$,,'
+	elif [ -n "${2}" ]; then
+		echo "${2}"
+	fi
+}
+
+dccc_set_hosts() {
+	echo "${*}" > $DCCC_HOSTS_FILE
+}
+dccc_get_hosts() {
+	cat $DCCC_HOSTS_FILE
+}
+
+dccc_set_verbose() {
+	dccc_set_env DISTCC_VERBOSE ${1}
+	dccc_regen_env
+}
+dccc_get_verbose() {
+	dccc_get_env DISTCC_VERBOSE
+}
+
+dccc_set_log() {
+	dccc_set_env DISTCC_LOG ${1}
+	dccc_regen_env
+}
+dccc_get_log() {
+	dccc_get_env DISTCC_LOG
+}
+
+dccc_set_j() {
+	local j="$(echo ${1} | sed -e 's,[^0-9],,g')"
+	[ -z "${j}" ] && \
+		dccc_exit "$0: invalid -j option (must be a number)"
+	dccc_set_env MAKEOPTS "-j${j}"
+	dccc_regen_env
+}
+dccc_get_j() {
+	dccc_get_env MAKEOPTS
+}
+
+####
+# main install routine
+
+dccc_install() {
+	local xxCHOST
+	dccc_install_user
+	dccc_links install ""
+	for f in make.conf make.globals make.profile/make.defaults
+	do
+		xxCHOST="$(dccc_guess_chost /etc/${f})"
+		if [ -n "${xxCHOST}" ]; then
+			dccc_links install "${xxCHOST}"
+			break
+		fi
+	done
+
+	dccc_install_env
+}
+
+
+###
+# main routine
+
+# helper checks that user has privs
+must_be_root() {
+	if ! is_super_user
+	then
+		[ -n "${1}" -a "${1}" = "${2}" ] && return
+		dccc_exit "$0 $1 must be run by root"
+	fi
+}
+
+
+# The --no-profile-warning option is meant to be used with
+#   the following helper function (add to ~/.bashrc)
+#
+# distcc-config() {
+#   command distcc-config --no-profile-warning "$@" && \
+#	source /etc/profile
+# }
+
+if [ "${1}" = "--no-profile-warning" ]; then
+	DCCC_NO_WARN=1
+	shift
+fi
+
+case "${1}" in
+	--get-* )
+		eval "dccc_$(echo ${1} | sed -e 's/^--//;s/-/_/g')"
+		;;
+	--set-* )
+		must_be_root "--set-hosts" "${1}"
+		SET_FUNC="$(echo ${1} | sed -e 's/^--//;s/-/_/g')"
+		shift
+		[ "${#}" -eq 0 ] && dccc_exit "argument required"
+		eval "dccc_${SET_FUNC} ${*}"
+		;;
+	--has-path )
+		dccc_test_env DCCC_PATH
+		;;
+	--add-path )
+		must_be_root
+		dccc_set_env DCCC_PATH "/usr/lib/distcc/bin"
+		dccc_regen_env
+		if [ -z "${DCCC_NO_WARN}" ]; then
+			einfo "You must then set PATH=\"${DCCC_PATH}/\${PATH}\""
+		fi
+		;;
+	--no-path )
+		must_be_root
+		dccc_set_env DCCC_PATH ""
+		dccc_regen_env
+		;;
+	--show-env )
+		dccc_show_env
+		;;
+	--load-defaults )
+		must_be_root 
+		dccc_load_defaults
+		;;
+	--install )
+		must_be_root 
+		dccc_install
+		;;
+	--install-user )
+		must_be_root 
+		dccc_install_user
+		;;
+	--install-links )
+		must_be_root 
+		dccc_links install "${2}"
+		;;
+	--remove-links )
+		must_be_root 
+		dccc_links remove "${2}"
+		;;
+	* )
+		echo "usage: ${0} --set-hosts DISTCC_HOSTS | --get-hosts"
+		echo "       ${0} --set-verbose { 0 | 1 }   | --get-verbose"
+		echo "       ${0} --set-log FILE  | --get-log" 
+		echo "       ${0} --add-path      | --no-path"
+#		echo "       ${0} --install-links | --remove-links } [ CHOST ]"
+		exit 1
+		;;
+esac
+
