@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.2 2003/06/05 11:18:16 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.3 2003/06/06 08:32:52 kosmikus Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -28,10 +28,13 @@ DEPEND="virtual/ghc
 
 RDEPEND=""
 
+# extend path to /opt/ghc/bin to guarantee that ghc-bin is found
+GHCPATH="${PATH}:/opt/ghc/bin"
+
 src_compile() {
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
-	SGML_CATALOG_FILES="" econf
+	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf
 	# using make because emake behaved strangely on my machine
 	make || die
 
