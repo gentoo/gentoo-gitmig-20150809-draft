@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.1 2003/09/30 18:13:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.2 2003/09/30 18:28:28 usata Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 	app-dicts/migemo-dict"
 RDEPEND="virtual/glibc
 	app-dicts/migemo-dict
-	emacs? ( app-text/migemo )"
+	emacs? ( >=app-text/migemo-0.40-r1 )"
 
 src_unpack() {
 

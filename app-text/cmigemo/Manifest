@@ -1,5 +1,5 @@
-MD5 0c2b881e2b7a42eaf2e22880c2de8abf cmigemo-1.1.013.ebuild 1620
+MD5 fbbab2e0cc182374b1cfccd77ac4fdad cmigemo-1.1.013.ebuild 1630
 MD5 212b6ec56b7acb3a4cc0bb8ddd2f95ef metadata.xml 247
-MD5 0c3ac6f7b4ffa16f15f04e9d620d4b2f ChangeLog 451
+MD5 45bfa6ad91045559707a11419a7bafe1 ChangeLog 584
 MD5 fc686616b2e4c30d95c2492da560a48e files/cmigemo-1.1.013-migemo-dict.diff 844
 MD5 d703741eecd66b99d2ee5f6528d18492 files/digest-cmigemo-1.1.013 67
