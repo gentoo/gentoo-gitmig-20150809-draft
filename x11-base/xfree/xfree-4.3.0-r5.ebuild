@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.19 2004/07/26 20:13:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.20 2004/08/02 01:27:20 spyderous Exp $
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -992,6 +992,8 @@ pkg_preinst() {
 
 	# clean out old fonts.* and encodings.dir files, as we
 	# will regenerate them
+	local G_FONTDIR
+	local G_FONTDIRS="100dpi 75dpi Speedo TTF Type1 encodings local misc util"
 	for G_FONTDIR in ${G_FONTDIRS}
 	do
 		find ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
