@@ -1,0 +1,18 @@
+--- ngrep-1.41/configure.orig	2003-11-03 00:15:04.716684800 +0200
++++ ngrep-1.41/configure	2003-11-03 00:15:32.848408128 +0200
+@@ -1764,7 +1764,6 @@
+ #line 1765 "configure"
+ #include "confdefs.h"
+ 
+-int main() {
+ #ifndef __FAVOR_BSD
+ #define __FAVOR_BSD
+ #endif
+@@ -1775,6 +1774,7 @@
+ 
+ #include <netinet/udp.h>
+ 
++int main() {
+ struct udphdr foo;
+ unsigned short bar = foo.uh_sport;
+ 

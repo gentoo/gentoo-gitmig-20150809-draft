@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.7 2003/08/11 02:01:26 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.8 2003/11/02 22:20:53 azarah Exp $
+
+  03 Nov 2003; Martin Schlemmer <azarah@gentoo.org> ngrep-1.41.ebuild,
+  files/ngrep-1.41-fix-HAVE_DUMB_UDPHDR-test.patch:
+  Fix test for HAVE_DUMB_UDPHDR to be in proper C format, closing bug #32535.
 
 *ngrep-1.41 (10 Aug 2003)
 
