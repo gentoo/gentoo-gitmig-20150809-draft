@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.5.0-r1.ebuild,v 1.6 2004/07/15 03:17:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.5.0-r1.ebuild,v 1.7 2004/08/25 02:52:16 swegener Exp $
 
 IUSE="ssl pthreads"
 
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."
-SRC_URI="http://easynews.dl.sourceforge.net/sourceforge/openvpn/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/openvpn/${P}.tar.gz"
 HOMEPAGE="http://openvpn.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
