@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.2 2002/04/13 11:54:10 danarmak Exp $
+
+*knetload-1.94 (13 Apr 2002)
+
+  13 Apr 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  New (KDE3) version.  
 
 *knetload-1.91-r2 (1 Feb 2002)
 
