@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/tinyqt-3.0.2.ebuild,v 1.1 2002/02/26 10:45:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyqt/tinyqt-3.0.3.ebuild,v 1.1 2002/03/26 10:52:55 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}

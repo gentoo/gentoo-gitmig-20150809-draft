@@ -1,6 +1,6 @@
---- configure_orig	2002-02-26 11:28:25.000000000 +0100
-+++ configure	2002-02-26 11:42:31.000000000 +0100
-@@ -1053,127 +1053,6 @@
+--- configure_orig	2002-03-26 09:12:28.000000000 +0100
++++ configure	2002-03-26 09:14:53.000000000 +0100
+@@ -1086,127 +1086,6 @@
  # tests that don't need qmake (must be run before displaying help)
  #-------------------------------------------------------------------------------
  
@@ -46,13 +46,13 @@
 -fi
 -
 -# auto-detect NIS support
--    if [ "$CFG_NIS" != "no" ]
--    then
--	CFG_NIS=yes
--	$unixtests/nis.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && CFG_NIS=no
--    else
--	CFG_NIS=no
--    fi
+-if [ "$CFG_NIS" != "no" ]
+-then
+-    CFG_NIS=yes
+-    $unixtests/nis.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && CFG_NIS=no
+-else
+-    CFG_NIS=no
+-fi
 -
 -# x11
 -if [ "$X11_PLATFORM" = "yes" ]
@@ -128,7 +128,7 @@
  #-------------------------------------------------------------------------------
  # help - interactive parts of the script _after_ this section please
  #-------------------------------------------------------------------------------
-@@ -1487,7 +1366,7 @@
+@@ -1519,7 +1398,7 @@
  	echo "Type 'no' to decline this license offer."
  	echo
  	echo "Do you accept the terms of $affix license?"
@@ -137,11 +137,3 @@
  	if [ "$acceptance" = "yes" ]
  	then
  	    break
-@@ -1662,6 +1541,7 @@
-     (cd $outpath/qmake; $MAKE || (echo "QMake failed to build. Aborting." && exit 2)) || exit 2
- fi
- 
-+exit 0
- 
- #-------------------------------------------------------------------------------
- # tests that need qmake
