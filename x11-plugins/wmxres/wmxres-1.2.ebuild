@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.1 2004/08/26 22:27:09 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.2 2004/09/03 15:34:27 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 S="${WORKDIR}/${PN}.app"
 
