@@ -1,0 +1,11 @@
+# ChangeLog for net-print/npadmin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/npadmin/ChangeLog,v 1.1 2005/02/26 09:46:12 robbat2 Exp $
+
+*npadmin-0.8.7 (26 Feb 2005)
+
+  26 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +files/npadmin-0.8.7-stdlib.patch, +npadmin-0.8.7.ebuild:
+  Initial version. Based on ebuild submitted by Andre Kloth
+  <bugs-gentoo@blubbmon.de>. Bug #82956.
+
