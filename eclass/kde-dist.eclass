@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.59 2005/01/13 16:56:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.60 2005/01/15 16:06:10 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -38,3 +38,8 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="$KDEMAJORVER.$KDEMINORVER"
 
+# add blockers on split packages derived from this one
+for x in $(get-child-packages ${CATEGORY}/${PN}); do
+	DEPEND="${DEPEND} !=${x}-${SLOT}*"
+	RDEPEND="${RDEPEND} !=${x}-${SLOT}*"
+done
