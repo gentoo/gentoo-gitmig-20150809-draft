@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28.ebuild,v 1.3 2003/03/27 02:16:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28.ebuild,v 1.4 2003/03/27 02:45:07 seemant Exp $
 
 IUSE="ssl X gtk gnome mozilla socks5 nls"
 
@@ -68,6 +68,7 @@ src_install() {
 	then
 		sed -i 's:GNOME_PREFIX = /usr:GNOME_PREFIX = ${D}usr:' Makefile
 		sed -i 's:GNOME_PREFIX = /usr:GNOME_PREFIX = ${D}usr:' icons/Makefile
+	fi
 
 	einstall || die
 
