@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/bsd-games
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.4 2003/11/06 07:03:22 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.5 2004/01/08 02:44:18 avenj Exp $
+
+  07 Jan 2004; Jon Portnoy <avenj@gentoo.org> bsd-games-2.13.ebuild :
+  AMD64 keywords.
 
   05 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> bsd-games-2.13.ebuild:
   fix wargames to look in the right place for the games (bug 32822)
