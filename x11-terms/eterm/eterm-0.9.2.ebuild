@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2.ebuild,v 1.1 2002/11/03 02:41:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2.ebuild,v 1.2 2002/11/03 18:38:34 vapier Exp $
 
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A vt102 terminal emulator for X"
 SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
-	 http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz
-	 http://www.eterm.org/themes/${PV}/glass-${MY_PN}-theme.tar.gz"
+	 http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz"
 HOMEPAGE="http://www.eterm.org/"
 
 SLOT="0"

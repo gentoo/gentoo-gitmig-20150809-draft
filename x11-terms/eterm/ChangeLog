@@ -1,8 +1,13 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.7 2002/11/03 02:44:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.8 2002/11/03 18:38:34 vapier Exp $
 
 *eterm-0.9.2 (02 Nov 2002)
+
+  03 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed glass theme from SRC_URI.  if people want the theme they can
+  install it themselves.  its not version tagged, so version bumping
+  is a pain.
 
   02 Nov 2002; Brandon Low <lostlogic@gentoo.org> eterm-0.9.2.ebuild:
   New version from eterm.org, about time, check out the Eterm -U and -Z
@@ -11,11 +16,10 @@
 *eterm-0.9.1-r5 (18 Jun 2002)
 
   18 Jun 2002; Michael Nazaroff <naz@gentoo.org> eterm-0.9.1-r5.ebuild:
-
-      #4051 eterm needs imlib other wise it will not compile, I'm not sure why
-      there is --with-imlib option in ./configure, other then now in the cvs
-      version that option does work, maybe they where added it in the future?
-      Thanx to the guys on #e for helping me out on this :o).
+  #4051 eterm needs imlib other wise it will not compile, I'm not sure why
+  there is --with-imlib option in ./configure, other then now in the cvs
+  version that option does work, maybe they where added it in the future?
+  Thanx to the guys on #e for helping me out on this :o).
 
 *eterm-0.9.1-r4 (18 Jun 2002)
 
