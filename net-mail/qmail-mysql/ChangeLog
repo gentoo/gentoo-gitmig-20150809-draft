@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.4 2003/12/05 21:10:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.5 2003/12/26 01:13:53 robbat2 Exp $
+
+  25 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-mysql-1.03.ebuild:
+  change to keepdir as per bug #35308
 
   05 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-mysql-1.03.ebuild:
   fix chown . to : as per bug #35127

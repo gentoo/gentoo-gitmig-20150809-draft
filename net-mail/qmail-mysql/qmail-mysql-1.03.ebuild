@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.8 2003/12/05 21:10:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.9 2003/12/26 01:13:53 robbat2 Exp $
 
 inherit eutils
 
@@ -88,8 +88,7 @@ src_install() {
 		dodir /var/qmail/${i}
 	done
 
-	dodir /var/qmail/users
-	touch ${D}/var/qmail/users/.keep
+	keepdir /var/qmail/users
 
 	diropts -m 755 -o alias -g qmail
 	dodir /var/qmail/alias
@@ -181,12 +180,7 @@ src_install() {
 	chmod +t ${D}/var/qmail/supervise/qmail-send
 	chmod +t ${D}/var/qmail/supervise/qmail-smtpd
 	diropts -m 755 -o qmaill
-	dodir /var/log/qmail
-	touch ${D}/var/log/qmail/.keep
-	dodir /var/log/qmail/qmail-send
-	touch ${D}/var/log/qmail/qmail-send/.keep
-	dodir /var/log/qmail/qmail-smtpd
-	touch ${D}/var/log/qmail/qmail-smtpd/.keep
+	keepdir /var/log/qmail /var/log/qmail/qmail-send /var/log/qmail/qmail-smtpd
 
 	insinto /var/qmail/supervise/qmail-send
 	newins ${FILESDIR}/${PV}/run-qmailsend run

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.3 2003/12/14 23:11:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.4 2003/12/26 01:14:58 robbat2 Exp $
 
 IUSE="ssl"
 
@@ -109,8 +109,7 @@ src_install() {
 		dodir /var/qmail/${i}
 	done
 
-	dodir /var/qmail/users
-	touch ${D}/var/qmail/users/.keep
+	keepdir /var/qmail/users
 
 	diropts -m 755 -o alias -g qmail
 	dodir /var/qmail/alias
@@ -202,14 +201,7 @@ src_install() {
 	chmod +t ${D}/var/qmail/supervise/qmail-smtpd
 	chmod +t ${D}/var/qmail/supervise/qmail-pop3d
 	diropts -m 755 -o qmaill
-	dodir /var/log/qmail
-	touch ${D}/var/log/qmail/.keep
-	dodir /var/log/qmail/qmail-send
-	touch ${D}/var/log/qmail/qmail-send/.keep
-	dodir /var/log/qmail/qmail-smtpd
-	touch ${D}/var/log/qmail/qmail-smtpd/.keep
-	dodir /var/log/qmail/qmail-pop3d
-	touch ${D}/var/log/qmail/qmail-pop3d/.keep
+	keepdir /var/log/qmail /var/log/qmail/qmail-send /var/log/qmail/qmail-smtpd /var/log/qmail/qmail-pop3d
 
 	insinto /var/qmail/supervise/qmail-send
 	newins ${FILESDIR}/supervise/run-qmailsend run

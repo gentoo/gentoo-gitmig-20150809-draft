@@ -1,10 +1,11 @@
-MD5 0656ef78ced4c3d9249444b25997130a ChangeLog 2642
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/Manifest,v 1.14 2003/12/26 01:13:01 robbat2 Exp $
+MD5 6a751b012b43a28eef1026c7f636b80f mailbase-0.00-r4.ebuild 779
+MD5 b1b4631f37ec1b7ee9dcc74e05a4495b mailbase-0.00-r6.ebuild 889
+MD5 7e3b842ce080ab3da27bf9975756f1e5 mailbase-0.00-r5.ebuild 879
+MD5 53f88b8b2c55c9552408608b441e3a0d ChangeLog 2759
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 660b8d248bd5e57afdf45ba0e201217b mailbase-0.00-r4.ebuild 810
-MD5 e54158f5e507f59b448f62d1a64d7972 mailbase-0.00-r5.ebuild 880
-MD5 4c340411c97690b8474db70672ebd96d mailbase-0.00-r6.ebuild 890
-MD5 a5623a262865054bd43c914e740a2e52 files/aliases 809
-MD5 df65e6e407e866c7e6721e79f731ae6a files/mailcap 2235
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r6 0
+MD5 df65e6e407e866c7e6721e79f731ae6a files/mailcap 2235
+MD5 a5623a262865054bd43c914e740a2e52 files/aliases 809
