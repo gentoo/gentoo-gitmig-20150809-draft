@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.29 2003/08/06 18:48:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.30 2003/09/03 20:58:39 lostlogic Exp $
+
+  03 Sep 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r5.ebuild:
+  x86 keyword
 
   06 Aug 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r5.ebuild:
   Make reconfiguration a bit smarter
