@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.38 2005/02/21 21:07:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.39 2005/03/10 01:00:46 stkn Exp $
+
+*asterisk-1.0.6 (10 Mar 2005)
+
+  10 Mar 2005; Stefan Knoblich <stkn@gentoo.org> +asterisk-1.0.6.ebuild:
+  New version. Adds speex use-flag and bristuff support; disables res_perl for
+  now. Sounds add-on has been split from the main package, they're now in
+  asterisk-sounds if you need them.
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> asterisk-1.0.5-r1.ebuild
   added ~amd64
