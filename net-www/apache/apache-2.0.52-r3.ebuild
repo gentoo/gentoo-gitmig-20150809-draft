@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.5 2005/02/04 13:55:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.6 2005/02/05 09:03:20 trapni Exp $
 
 inherit eutils gnuconfig
 
@@ -139,13 +139,17 @@ src_compile() {
 }
 
 src_install () {
+	# setup apache user and group
+	enewgroup apache 81
+	enewuser apache 81 /bin/false /var/www apache
+
+	# general install
 	make DESTDIR=${D} install || die
 	dodoc ABOUT_APACHE CHANGES INSTALL LAYOUT LICENSE README* ${GENTOO_PATCHDIR}/docs/robots.txt
 
 	# protect the suexec binary
 	if ! useq no-suexec; then
-		local gid=`id -g apache`
-		fowners root:${gid:-81} /usr/sbin/suexec
+		fowners root:apache /usr/sbin/suexec
 		fperms 4710 /usr/sbin/suexec
 	fi
 
