@@ -1,3 +1,4 @@
+MD5 550422ec0307fb7434cd09a8c55a8895 epm-0.8.3.ebuild 588
 MD5 e7bbaec4373e974bf0bf5e00873afd25 epm-0.8.ebuild 509
 MD5 550422ec0307fb7434cd09a8c55a8895 epm-0.8.2.ebuild 588
 MD5 aa7e2078ec26198efaf943a5db592ccf epm-0.7.ebuild 499
@@ -7,3 +8,4 @@ MD5 a23df5cf6c7227f1b8c1bfb9d5fc0d81 files/digest-epm-0.7 57
 MD5 e07e63b6edc728a793bf5efcb4a3ea52 files/digest-epm-0.8 57
 MD5 d12f30127e28a76ffda9bfe2a4bef8a5 files/digest-epm-0.8.1 59
 MD5 a8f0dd58a2a4a0b63ab6179f8c9cd8e4 files/digest-epm-0.8.2 59
+MD5 752ec417deff468ff7fa0c200d078322 files/digest-epm-0.8.3 59
