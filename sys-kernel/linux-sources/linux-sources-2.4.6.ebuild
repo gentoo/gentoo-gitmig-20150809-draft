@@ -4,34 +4,39 @@
 # /home/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.4.3.ebuild,v 1.1 2001/05/02 14:31:06 achim Exp
 
 #OKV=original kernel version, KV=patched kernel version
+
 OKV=2.4.6
 KV=2.4.6
 S=${WORKDIR}/linux-${KV}
+S2=${WORKDIR}/linux-${KV}-extras
+if [ $PN = "linux-extras" ]
+then
+	KS=/usr/src/linux-${KV}
+	KS2=/usr/src/linux-${KV}-extras
+else
+	KS=${S}
+	KS2=${S2}
+fi
 
-# Versions of LVM
+# Kernel Features      Enabled   USE Variable      Status
+#
+# Reiserfs             Y         -                 Production-ready
+# JFS                  N         jfs               Testing-only (commented out for now)
+# LVM                  Y         lvm               Production-ready
+# ext3                 Y         ext3              Production-ready
+# MOSIX                Y         mosix             Testing only
+# XFS                  N         xfs               Will add soon
+# PCMCIA-CS            Y         pcmcia            Need to move this to its own ebuild
+# ALSA                 N         alsa              Need to move this to its own ebuild
+# lm-sensors           N         lm_sensors        Need to move this to its own ebuild
+
 LVMV=0.9.1_beta7
-
-LVMVARC=0.9.1_beta7
-
-# alsa is coming out of the kernel
-# Versions of alsa
+EXT3V=2.4-0.9.1-246
+MOSV=1.0.5
 # AV=0.5.11
-
-# Versionos of jfs
-JFSV=1.0.0
-
-# Versions of lm_sensors
-#SENV=2.6.0
-
-# Versions of reiserfs
-RV=20010327
-KNV="6.g"
-PIV="1.d"
-
-# Versions of xmlprocfs
-XMLV=0.3
-
-# Versions of pcmcia-cs
+#JFSV=1.0.0
+#KNV="6.g"
+#PIV="1.d"
 PCV="3.1.27"
 
 [ "${PN}" = "linux" ] && DESCRIPTION="Linux kernel version ${KV}, including modules, binary tools, libraries and includes"
@@ -43,13 +48,13 @@ PCV="3.1.27"
 if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
-	http://www.zip.com.au/~akpm/ext3-2.4-0.9.1-246.gz
+	http://www.zip.com.au/~akpm/ext3-${EXT3V}.gz
 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz
-	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-1.0.5.tar.gz"
+	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz"
+	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMV}.tar.gz
 fi
 #	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
 #	http://www.netroedge.com/~lm78/archive/i2c-${SENV}.tar.gz
-#	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz
 #	ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
 	
 if [ "$PN" != "linux-extras" ]
@@ -109,18 +114,22 @@ src_unpack() {
 #			cat ${DISTDIR}/patch-2.4.6-xfs-${x}.bz2 | bzip2 -d | patch -p1
 #		done		
 		
-		mkdir ${S}/extras
+		dodir /usr/src/linux-${KV}-extras
 
 		if [ "`use mosix`" ]
 		then
 			echo "Applying MOSIX patch..."
-			cd ${S}/extras
-			mkdir MOSIX-1.0.5
-			cd MOSIX-1.0.5
-			unpack MOSIX-1.0.5.tar.gz
+			cd ${S2}
+			mkdir MOSIX-${MOSV}
+			cd MOSIX-${MOSV}
+			unpack MOSIX-${MOSV}.tar.gz
 			cd ${S}
-			try cat extras/MOSIX-1.0.5/patches.2.4.6 | patch -p0
-			tar -x --no-same-owner -vf extras/MOSIX-1.0.5/kernel.new.2.4.6.tar
+			try cat ${S2}/MOSIX-${MOSV}/patches.2.4.6 | patch -p0
+			tar -x --no-same-owner -vf ${S2}/MOSIX-${MOSV}/kernel.new.2.4.6.tar
+			cd ${S2}
+			mkdir user
+			tar -x --no-same-owner -vf user.tar -C user
+			rm user.tar
 		fi
 		
 		cd ${S}
@@ -130,9 +139,9 @@ src_unpack() {
 		if [ "`use lvm`" ]
 		then
 			#create and apply LVM patch.  The tools get built later.
-			cd ${S}/extras
+			cd ${S2}
 			echo "Unpacking and applying LVM patch..."
-			unpack lvm_${LVMVARC}.tar.gz
+			unpack lvm_${LVMV}.tar.gz
 			try cd LVM/${LVMV}
 	
 			# I had to hack this in so that LVM will look in the current linux
@@ -142,7 +151,7 @@ src_unpack() {
 			try make KERNEL_VERSION=${KV} KERNEL_DIR=${S}
 			cd ${S}
 			# the -l option allows this patch to apply cleanly (ignore whitespace changes)
-			try patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
+			try patch -l -p1 < ${S2}/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
 			cd ${S}/drivers/md
 			try patch -p0 < ${FILESDIR}/${KV}/lvm.c.diff
 		fi
@@ -190,7 +199,7 @@ src_unpack() {
 		if [ "`use pcmcia-cs`" ]
 		then
 			echo "Unpacking pcmcia-cs tools..."
-			cd ${S}/extras
+			cd ${S2}
 			unpack pcmcia-cs-${PCV}.tar.gz
 		#	patch -p0 < ${FILESDIR}/${KV}/pcmcia-cs-${PCV}-gentoo.diff
 		fi
@@ -216,7 +225,7 @@ src_unpack() {
 				echo
 			fi
 			cd ${S}
-			gzip -dc ${DISTDIR}/ext3-2.4-0.9.1-246.gz | patch -l -p1
+			gzip -dc ${DISTDIR}/ext3-${EXT3V}.gz | patch -l -p1
 			if [ "`use mosix`" ]
 			then
 				echo 
@@ -248,17 +257,10 @@ src_unpack() {
 	
 	fi
 }
-
+		
 src_compile() {
-
 	if [ "${PN}" != "linux-sources" ]
 	then
-		if [ $PN = "linux-extras" ]
-			then
-			KS=/usr/src/linux
-		else
-			KS=${S}
-		fi
 		if [ $PN = "linux" ]
 		then
 			try make symlinks
@@ -266,7 +268,7 @@ src_compile() {
 		if [ "`use lvm`" ]
 		then
 			#LVM tools are included in the linux and linux-extras pakcages
-			cd ${KS}/extras/LVM/${LVMV}
+			cd ${KS2}/LVM/${LVMV}
 	
 			# This is needed for linux-extras
 			if [ -f "Makefile" ]
@@ -321,8 +323,7 @@ src_compile() {
 		
 		if [ "`use mosix`" ]
 		then
-			cd ${KS}/extras/MOSIX-1.0.5
-			tar -x --no-same-owner -vf user.tar -C ${T}
+			cd ${KS2}/MOSIX-${MOSV}
 			local x
 			for x in lib/moslib sbin/setpe sbin/tune bin/mosrun usr.bin/mon usr.bin/migrate usr.bin/mosctl
 			do
@@ -334,7 +335,7 @@ src_compile() {
 
 		if [ "`use pcmcia-cs`" ]
 		then
-			cd ${KS}/extras/pcmcia-cs-${PCV}
+			cd ${KS2}/pcmcia-cs-${PCV}
 			# This is needed for linux-extras
 			if [ -f "Makefile" ] 
 			then
@@ -351,12 +352,6 @@ src_compile() {
 }
 
 src_install() {
-
-    if [ $PN = "linux-extras" ] ; then
-        KS=/usr/src/linux
-    else
-        KS=${S}
-    fi
     # We install the alsa headers in all three packages
 #   if [ "`use alsa`" ]
 #	then
@@ -369,17 +364,11 @@ src_install() {
 
 	if [ ! "${PN}" = "linux-sources" ]
     then
-		if [ $PN = "linux" ]
-		then
-			KS=${S}
-		else
-			KS=/usr/src/linux
-		fi
 		dodir /usr/lib
 	
 		if [ "`use mosix`" ]
 		then
-			cd ${T}
+			cd ${KS2}/MOSIX-${MOSV}
 			dodir /usr/lib /usr/include
 			dolib.a libmos.a
 			dolib.so libmos.so.0
@@ -420,11 +409,19 @@ src_install() {
 
 			exeinto /etc/rc.d/init.d
 			newexe ${FILESDIR}/${KV}/mosix.init mosix
+		
+			cd ${KS2}/MOSIX-${MOSV}
+			for x in lib/moslib sbin/setpe sbin/tune bin/mosrun usr.bin/mon usr.bin/migrate usr.bin/mosctl
+			do
+				cd ${x}
+				make clean
+				cd ../..
+			done
 		fi
 		
 		if [ "`use lvm`" ]
 		then
-			cd ${KS}/extras/LVM/${LVMV}/tools
+			cd ${KS2}/LVM/${LVMV}/tools
 	    
 			try CFLAGS=\""${CFLAGS} -I${KS}/include"\" make install -e prefix=${D} mandir=${D}/usr/share/man \
 			sbindir=${D}/sbin libdir=${D}/lib
@@ -482,7 +479,7 @@ src_install() {
 		if [ "`use pcmcia-cs`" ]
 		then
 			#install PCMCIA modules and utilities
-			cd ${KS}/extras/pcmcia-cs-${PCV}
+			cd ${KS2}/pcmcia-cs-${PCV}
 			try make PREFIX=${D} MANDIR=${D}/usr/share/man install  
 			rm -rf ${D}/etc/rc.d
 			exeinto /etc/rc.d/init.d
