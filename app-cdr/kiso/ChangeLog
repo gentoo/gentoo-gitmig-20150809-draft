@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/kiso
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.10 2004/11/23 15:24:00 carlo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.11 2005/01/01 12:16:37 eradicator Exp $
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kiso-0.7b.ebuild:
   QA: missing "inherit eutils"

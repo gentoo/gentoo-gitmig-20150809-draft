@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.9 2004/06/27 21:14:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.10 2005/01/01 12:12:37 eradicator Exp $
 
 DESCRIPTION="A set of tools for DVD+RW/-RW drives"
 HOMEPAGE="http://fy.chalmers.se/~appro/linux/DVD+RW/"

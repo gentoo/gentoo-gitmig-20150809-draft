@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mdf2iso/mdf2iso-0.1.ebuild,v 1.1 2004/12/03 04:46:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mdf2iso/mdf2iso-0.1.ebuild,v 1.2 2005/01/01 12:18:27 eradicator Exp $
 
 DESCRIPTION="A very simple utility to convert an Alcohol 120% bin image to the standard ISO-9660 format."
 HOMEPAGE="http://mdf2iso.berlios.de/"

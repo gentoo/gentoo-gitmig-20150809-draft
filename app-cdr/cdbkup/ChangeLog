@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/cdbkup
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/ChangeLog,v 1.10 2004/10/05 11:22:55 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/ChangeLog,v 1.11 2005/01/01 12:08:53 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> cdbkup-1.0.ebuild:
   Masked cdbkup-1.0.ebuild stable for ppc

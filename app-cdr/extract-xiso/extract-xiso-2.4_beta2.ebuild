@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.8 2004/11/12 20:27:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.9 2005/01/01 12:13:14 eradicator Exp $
 
 MY_PV=${PV/_beta/b}
 DESCRIPTION="Tool for extracting and creating optimised Xbox ISO images"

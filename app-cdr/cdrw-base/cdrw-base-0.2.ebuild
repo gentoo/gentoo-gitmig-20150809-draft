@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/cdrw-base-0.2.ebuild,v 1.9 2004/10/05 11:22:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/cdrw-base-0.2.ebuild,v 1.10 2005/01/01 12:11:09 eradicator Exp $
 
 DESCRIPTION="Configuration files to make CD recording easier"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/gtoaster
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.17 2004/12/18 19:15:33 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.18 2005/01/01 12:14:12 eradicator Exp $
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> gtoaster-1.0_beta6.ebuild:
   sync IUSE (-nls)

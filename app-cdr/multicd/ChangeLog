@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/multicd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/ChangeLog,v 1.4 2004/06/24 21:35:28 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/ChangeLog,v 1.5 2005/01/01 12:20:06 eradicator Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   multicd-1.7.2.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/extract-xiso
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/ChangeLog,v 1.7 2004/11/12 20:27:49 blubb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/ChangeLog,v 1.8 2005/01/01 12:13:14 eradicator Exp $
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org>
   extract-xiso-2.4_beta2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.54.ebuild,v 1.9 2004/10/05 11:22:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.54.ebuild,v 1.10 2005/01/01 12:13:37 eradicator Exp $
 
 DESCRIPTION="A GUI for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen."
 HOMEPAGE="http://www.abo.fi/~jmunsin/gcombust/"

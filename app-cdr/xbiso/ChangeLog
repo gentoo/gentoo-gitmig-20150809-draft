@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/xbiso
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.3 2004/10/16 14:55:41 chrb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.4 2005/01/01 12:21:50 eradicator Exp $
 
   16 Oct 2004; Chris Bainbridge <chrb@gentoo.org> xbiso-0.6.0.ebuild:
   mark stable

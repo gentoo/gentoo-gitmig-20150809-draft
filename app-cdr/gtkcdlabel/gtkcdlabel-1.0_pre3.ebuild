@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre3.ebuild,v 1.7 2004/10/05 11:22:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre3.ebuild,v 1.8 2005/01/01 12:13:58 eradicator Exp $
 
 MY_P=${P/_}
 DESCRIPTION="A GTK+ frontend to cdlabelgen for easy and fast cd cover creation"

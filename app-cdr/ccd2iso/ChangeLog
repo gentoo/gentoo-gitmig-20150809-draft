@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/ccd2iso
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.5 2004/11/24 19:32:39 kito Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.6 2005/01/01 12:08:39 eradicator Exp $
 
   22 Nov 2004; <jhuebel@gentoo.org> ccd2iso-0.1.ebuild:
   ~amd64

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuetools/cuetools-0.6.ebuild,v 1.2 2004/07/16 09:33:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuetools/cuetools-0.6.ebuild,v 1.3 2005/01/01 12:11:49 eradicator Exp $
 
 DESCRIPTION="Utilities to manipulate and convert .CUE- and .TOC-files"
 HOMEPAGE="http://cuetools.sourceforge.net/"
