@@ -1,0 +1,22 @@
+diff -Naur memtest86-3.0-orig/memsize.c memtest86-3.0/memsize.c
+--- memtest86-3.0-orig/memsize.c	2002-05-21 23:07:01.000000000 +0200
++++ memtest86-3.0/memsize.c	2004-02-01 20:19:08.779217664 +0100
+@@ -18,6 +18,7 @@
+ 
+ extern ulong p1, p2;
+ extern volatile ulong *p;
++extern struct vars * const v;
+ 
+ static void sort_pmap(void);
+ static int check_ram(void);
+diff -Naur memtest86-3.0-orig/test.h memtest86-3.0/test.h
+--- memtest86-3.0-orig/test.h	2002-05-21 23:06:16.000000000 +0200
++++ memtest86-3.0/test.h	2004-02-01 20:19:00.885417704 +0100
+@@ -277,7 +277,6 @@
+ #define FIRMWARE_PCBIOS    1
+ #define FIRMWARE_LINUXBIOS 2
+ 
+-extern struct vars * const v;
+ extern unsigned char _start[], _end[], startup_32[];
+ extern unsigned char _size, _pages;
+ 
