@@ -4,6 +4,10 @@
 
 *rar-3.0 (29 May 2002)
 
+  31 Oct 2002; Mark Guertin <gerk@gentoo.org> rar-3.0.ebuild :
+  set -ppc in keywords, this provides an x86 binary that
+  is not executable.
+
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ppc keyword
 
