@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/rfcview
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.1 2003/10/31 22:34:09 mkennedy Exp $
+
+*rfcview-0.5 (31 Oct 2003)
+
+  31 Oct 2003; <mkennedy@gentoo.org> metadata.xml, rfcview-0.5.ebuild,
+  files/50rfcview-gentoo.el:
+  initial import. ebuild submitted by Matthew Kennedy <mkennedy@gentoo.org>
+
