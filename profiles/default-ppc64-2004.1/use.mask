@@ -18,6 +18,8 @@ tcltk
 tcl
 X
 vim-with-x
+sqlite
+firebird
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
