@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <brad@gentoo.org> (22 Nov 2003)
+# Mask mandrake-artwork-0.9.6 until it works with KDE
+=x11-themes/mandrake-artwork-0.9.6
+
 # <brad@gentoo.org> (20 Nov 2003)
 # Mask the experimental Mozilla's
 >net-www/mozilla-1.5-r1
