@@ -1,0 +1,17 @@
+# ChangeLog for media-tv/atitvout
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/atitvout/ChangeLog,v 1.1 2003/06/18 11:58:44 seemant Exp $
+
+*atitvout-0.4 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org> atitvout-0.4.ebuild:
+  moved to media-tv
+
+  05 Dez 2002; Hanno Boeck <hanno@gentoo.org> :
+  Moved from sys-apps/atitvout to media-tv/atitvout.
+  Resolves bug #11518.
+
+*atitvout-0.4 (07 Nov 2002)
+
+  07 Nov 2002; Hanno Boeck <hanno@gentoo.org> atitvout-0.4.ebuild :
+  Added ebuild for atitvout, a little tool to enable the TV-Out of ATI cards.
