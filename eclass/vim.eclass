@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.68 2004/09/08 22:59:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.69 2004/09/09 03:05:08 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -8,13 +8,33 @@
 # 	Aron Griffis <agriffis@gentoo.org>
 # 	Ciaran McCreesh <ciaranm@gentoo.org>
 
+# This eclass handles vim, gvim and vim-core. Starting with vim 7, it will also
+# handle kvim. Support for -cvs ebuilds is included in the eclass, since it's
+# rather easy to do, but there are no official vim*-cvs ebuilds in the tree.
+
+# gvim's GUI preference order is as follows:
+# carbon                          CARBON (not yet)
+# -carbon gtk gtk2 gnome          GNOME2 (6.3-r1+, earlier uses GTK2)
+# -carbon gtk gtk2 -gnome         GTK2
+# -carbon gtk -gtk2 gnome         GNOME1
+# -carbon gtk -gtk2 -gnome        GTK1
+# -carbon -gtk motif              MOTIF
+# -carbon -gtk -motif             ATHENA
+
 inherit eutils vim-doc flag-o-matic
 
-# This isn't a conditional inherit from portage's perspective, since $PN is
+# Support -cvs ebuilds, even though they're not in the official tree.
+MY_PN="${PN%-cvs}"
+
+# This isn't a conditional inherit from portage's perspective, since $MY_PN is
 # constant at cache creation time. It's therefore legal and doesn't break
 # anything. I even checked with carpaski first :) (08 Sep 2004 ciaranm)
-if [[ "${PN}" != "vim-core" ]] ; then
+if [[ "${MY_PN}" != "vim-core" ]] ; then
 	inherit debug
+fi
+
+if [[ "${PN##*-}" == "cvs" ]] ; then
+	inherit cvs
 fi
 
 ECLASS=vim
@@ -23,7 +43,7 @@ EXPORT_FUNCTIONS src_unpack
 
 IUSE="$IUSE selinux ncurses nls acl"
 
-if [ ${PN} != vim-core ]; then
+if [[ "${MY_PN}" != "vim-core" ]] ; then
 	IUSE="$IUSE cscope gpm perl python ruby"
 	DEPEND="$DEPEND
 		cscope?  ( dev-util/cscope )
@@ -42,11 +62,11 @@ if [ ${PN} != vim-core ]; then
 		acl?     ( sys-apps/acl )
 		ruby?    ( dev-lang/ruby )"
 
-	if [ ${PN} = vim ] ; then
+	if [[ "${MY_PN}" == "vim" ]] ; then
 		IUSE="$IUSE vim-with-x minimal"
 		DEPEND="$DEPEND vim-with-x? ( virtual/x11 )"
 		RDEPEND="$RDEPEND vim-with-x? ( virtual/x11 )"
-	elif [ ${PN} = gvim ] ; then
+	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		IUSE="$IUSE gnome gtk gtk2 motif"
 	fi
 fi
@@ -129,17 +149,26 @@ apply_vim_patches() {
 vim_src_unpack() {
 	unpack ${A}
 
-	# Apply any patches available from vim.org for this version
-	[ -n "$VIM_ORG_PATCHES" ] && apply_vim_patches
+	if [[ "${PN##*-}" == "cvs" ]] ; then
+		ECVS_SERVER="cvs.sourceforge.net:/cvsroot/vim"
+		ECVS_PASS=""
+		ECVS_MODULE="vim"
+		ECVS_TOP_DIR="${DISTDIR}/cvs-src/${ECVS_MODULE}"
+		cvs_src_unpack
 
-	# Unpack the runtime snapshot if available (only for vim-core)
-	if [ -n "$VIM_RUNTIME_SNAP" ]; then
-		cd ${S} || die
-		ebegin "Unpacking vim runtime snapshot"
-		rm -rf runtime
-		bzip2 -dc ${DISTDIR}/${VIM_RUNTIME_SNAP} | tar xf -
-		assert  # this will check both parts of the pipeline; eend would not
-		eend 0
+	else
+		# Apply any patches available from vim.org for this version
+		[[ -n "$VIM_ORG_PATCHES" ]] && apply_vim_patches
+
+		# Unpack the runtime snapshot if available (only for vim-core)
+		if [[ -n "$VIM_RUNTIME_SNAP" ]] ; then
+			cd ${S} || die
+			ebegin "Unpacking vim runtime snapshot"
+			rm -rf runtime
+			bzip2 -dc ${DISTDIR}/${VIM_RUNTIME_SNAP} | tar xf -
+			assert  # this will check both parts of the pipeline; eend would not
+			eend 0
+		fi
 	fi
 
 	# Another set of patches borrowed from src rpm to fix syntax errors etc.
@@ -201,7 +230,8 @@ src_compile() {
 		addwrite $file
 	done
 
-	if [ ${PN} = vim-core ] || ( [ ${PN} = vim ] && use minimal ); then
+	if [[ "${MY_PN}" == "vim-core" ]] ||
+			( [[ "${MY_PN}" == "vim" ]] && use minimal ); then
 		myconf="--with-features=tiny \
 			--enable-gui=no \
 			--without-x \
@@ -232,29 +262,30 @@ src_compile() {
 				die "couldn't disable cscope"
 		fi
 
-		if [ ${PN} = vim ]; then
+		if [[ "${MY_PN}" == "vim" ]] ; then
 			# don't test USE=X here... see bug #19115
 			# but need to provide a way to link against X... see bug #20093
 			myconf="${myconf} --enable-gui=no `use_with vim-with-x x`"
-		elif [ ${PN} = gvim ] ; then
+
+		elif [[ "${MY_PN}" == "gvim" ]] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
-			if use gtk && use gtk2; then
+			if use gtk && use gtk2 ; then
 				myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
-			elif use gnome; then
+			elif use gnome ; then
 				myconf="${myconf} --enable-gui=gnome"
-			elif use gtk; then
+			elif use gtk ; then
 				myconf="${myconf} --enable-gui=gtk"
-			elif use motif; then
+			elif use motif ; then
 				myconf="${myconf} --enable-gui=motif"
 			else
 				myconf="${myconf} --enable-gui=athena"
 			fi
 		else
-			die "vim.eclass doesn't understand PN=${PN}"
+			die "vim.eclass doesn't understand MY_PN=${MY_PN}"
 		fi
 	fi
 
-	if [ ${PN} = vim ] && use minimal; then
+	if [[ "${MY_PN}" == "vim" ]] && use minimal ; then
 		myconf="${myconf} --disable-nls --disable-multibyte --disable-acl"
 	else
 		myconf="${myconf} `use_enable nls` `use_enable acl`"
@@ -273,7 +304,7 @@ src_compile() {
 	# The following allows emake to be used
 	make -C src auto/osdef.h objects || die "make failed"
 
-	if [ "${PN}" = "vim-core" ]; then
+	if [[ "${MY_PN}" == "vim-core" ]] ; then
 		emake tools || die "emake tools failed"
 		rm -f src/vim
 	else
@@ -282,7 +313,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ "${PN}" = "vim-core" ]; then
+	if [[ "${MY_PN}" == "vim-core" ]] ; then
 		dodir /usr/{bin,share/{man/man1,vim}}
 		cd src || die "cd src failed"
 		make \
@@ -315,7 +346,7 @@ src_install() {
 		# both vim and gvim
 		insinto /etc/vim/
 		doins ${FILESDIR}/vimrc
-	elif [ "${PN}" = "gvim" ]; then
+	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		dobin src/gvim
 		dosym gvim /usr/bin/gvimdiff
 		dosym gvim /usr/bin/evim
@@ -369,7 +400,7 @@ pkg_postinst() {
 	update_vim_helptags
 
 	einfo
-	if [ ${PN} = gvim ] ; then
+	if [[ "${MY_PN}" == "gvim" ]] ; then
 		einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
 		einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
 		einfo ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
@@ -379,24 +410,32 @@ pkg_postinst() {
 		einfo
 		einfo "Then, set read encoding to UTF-8:"
 		einfo ":set encoding=utf-8"
-	elif [ ${PN} = vim ] ; then
+	elif [[ "${MY_PN}" == "vim" ]] ; then
 		einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
 	fi
 	einfo
 
-	if [ ${PN} != "vim-core" ] ; then
+	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		einfo "To see what's new in this release, use :help version${VIM_VERSION/.*}.txt"
 		einfo
 	fi
 
 	# Warn about VIMRUNTIME
-	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/.}" ]; then
+	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/.}" ] ; then
 		ewarn
 		ewarn "WARNING: You have VIMRUNTIME set in your environment from an old"
 		ewarn "installation.  You will need to either unset VIMRUNTIME in each"
 		ewarn "terminal, or log out completely and back in.  This problem won't"
 		ewarn "happen again since the ebuild no longer sets VIMRUNTIME."
 		ewarn
+	fi
+
+	# Scream loudly if the user is using a -cvs ebuild
+	if [[ -z "${PN/*-cvs}" ]] ; then
+		ewarn "You are using a -cvs ebuild. Be warned that this is not"
+		ewarn "officially supported and may not work."
+		ewarn " "
+		ebeep 5
 	fi
 
 	# Make convenience symlinks
@@ -413,7 +452,7 @@ pkg_postrm() {
 
 src_test() {
 
-	if [ "${PN}" == "vim-core" ] ; then
+	if [[ "${MY_PN}" == "vim-core" ]] ; then
 		einfo "No testing needs to be done for vim-core"
 		return
 	fi
@@ -431,7 +470,7 @@ src_test() {
 	# Don't let vim talk to X
 	unset DISPLAY
 
-	if [ "${PN}" == "gvim" ] ; then
+	if [[ "${MY_PN}" == "gvim" ]] ; then
 		# Make gvim not try to connect to X. See :help gui-x11-start
 		# in vim for how this evil trickery works.
 		ln -s ${S}/src/gvim ${S}/src/testvim
