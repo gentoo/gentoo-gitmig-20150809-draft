@@ -1,3 +1,4 @@
-MD5 c3d360f3cbab2b7d54f8f40283a5af5f ChangeLog 614
-MD5 eb4f5c33357cc3b1e8ba8b7935b42b2f bwmon-1.3.ebuild 815
+MD5 3e8ebda16d68932025a9747a1dfd0522 ChangeLog 763
+MD5 d38a2706fbf9325d415b15981f565b63 bwmon-1.3.ebuild 802
+MD5 77c8b03a338439080559f1aed8e76835 metadata.xml 227
 MD5 270ff1875fead6fcabdd180f8b24aa82 files/digest-bwmon-1.3 59
