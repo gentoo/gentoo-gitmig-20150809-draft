@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.8-r11.ebuild,v 1.1 2004/12/04 10:35:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.8-r11.ebuild,v 1.2 2004/12/05 07:47:38 eradicator Exp $
 
 ETYPE="sources"
 AMD64_URI="ftp://ftp.x86-64.org/pub/linux/v2.6/x86_64-2.6.8-1.bz2"
@@ -41,5 +41,10 @@ pkg_postinst() {
 			einfo "network interface, please emerge the kernel using the"
 			einfo "following command: USE=ultra1 emerge ${PN}"
 		fi
+
+		echo
+		ewarn "SMP Support is broken in this kernel for sparc32 and sparc64."
+		ewarn "If you need SMP on sparc64, please use development-sources-2.6.6"
+		ewarn "or sparc-sources (2.4 kernel)."
 	fi
 }

@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e8b7adfb950362e746dcded1801f4992 ChangeLog 28126
+MD5 a5845b1c66614b0f6a6d6dcb28485657 ChangeLog 28298
 MD5 de01a0fea9dc2f379a9e1aac1c7fae40 gentoo-dev-sources-2.6.1-r2.ebuild 2246
 MD5 f74d5a342844d9358722ccb68568bcec gentoo-dev-sources-2.6.7-r10.ebuild 1005
 MD5 d476249f58f0ffe5d3409290514187f9 gentoo-dev-sources-2.6.7-r11.ebuild 1406
@@ -36,9 +36,9 @@ MD5 1b8c89170c8fd1603b5f09adfa0ed5e9 metadata.xml 549
 MD5 caf8d4697e8ba79cd557bdfe90dda3fe gentoo-dev-sources-2.6.7-r18.ebuild 1463
 MD5 c4d01996a9d520e08f381b5e7956174a gentoo-dev-sources-2.6.9-r7.ebuild 1556
 MD5 d289c7fc0d1472c14a14cc5a80bde42c gentoo-dev-sources-2.6.9-r8.ebuild 1582
-MD5 85074e21acbebaa6367625b7101524c1 gentoo-dev-sources-2.6.7-r19.ebuild 1456
+MD5 e1c4910c0c38e0e7685f76b39aa83497 gentoo-dev-sources-2.6.7-r19.ebuild 1660
 MD5 5f7c173cec5b10fd6079afe3fac9071a gentoo-dev-sources-2.6.9-r9.ebuild 1582
-MD5 0d2d190f1f820e49805a506eb1377c51 gentoo-dev-sources-2.6.8-r11.ebuild 1571
+MD5 aef87d6c804b151e8e0d4d6b4e0020c4 gentoo-dev-sources-2.6.8-r11.ebuild 1767
 MD5 980949de52189c7d9c1d791b7f5cc27e files/2.6-do_munmap.patch 743
 MD5 150fc6d514e8cb2b07a3a7b14b8d92ef files/digest-gentoo-dev-sources-2.6.1-r2 138
 MD5 5505dba36be29cd0c4521e6e6dac8978 files/digest-gentoo-dev-sources-2.6.7-r10 221
@@ -79,7 +79,7 @@ MD5 3e08d31b9f65e97fa82d6e88f1401825 files/digest-gentoo-dev-sources-2.6.8-r11 2
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsZLoArHZZzCEUG0RAi81AKCCZTlOQWw6MAxksvYVTt6ExXjT5wCZAcil
-/IJ2WVHGFzzeMmXBJLFRt4U=
-=vGXG
+iD8DBQFBsr0lArHZZzCEUG0RAhJeAJ94AAH3piDS+i91c47cviHDz+CNqQCfe5c9
+4Ov3XkcqFovW8t7zV5P6inE=
+=2t8O
 -----END PGP SIGNATURE-----

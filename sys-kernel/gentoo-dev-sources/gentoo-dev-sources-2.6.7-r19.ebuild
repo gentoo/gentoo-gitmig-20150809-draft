@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.7-r19.ebuild,v 1.1 2004/12/03 11:09:35 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.7-r19.ebuild,v 1.2 2004/12/05 07:47:38 eradicator Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -30,14 +30,18 @@ use sparc && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4905_speakup-20040618.patch"
 pkg_postinst() {
 	postinst_sources
 
-	echo
-
 	if [ "${ARCH}" = "sparc" ]; then
 		if [ x"`cat /proc/openprom/name 2>/dev/null`" \
 			 = x"'SUNW,Ultra-1'" ]; then
+			echo
 			einfo "For users with an Enterprise model Ultra 1 using the HME"
 			einfo "network interface, please emerge the kernel using the"
 			einfo "following command: USE=ultra1 emerge ${PN}"
 		fi
+
+		echo
+		ewarn "SMP Support is broken in this kernel for sparc32 and sparc64."
+		ewarn "If you need SMP on sparc64, please use development-sources-2.6.6"
+		ewarn "or sparc-sources (2.4 kernel)."
 	fi
 }
