@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/crypt-cbc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.1 2003/06/24 00:45:24 mcummings Exp $
+
+*crypt-cbc-2.08 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org> crypt-cbc-2.08.ebuild:
+  dep for crypt-rsa, which is a dep for net-ssh
+
