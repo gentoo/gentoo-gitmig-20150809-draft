@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pmud/pmud-0.10.1-r2.ebuild,v 1.2 2004/06/24 21:59:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pmud/pmud-0.10.1-r2.ebuild,v 1.3 2004/07/09 21:53:37 lv Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://penguinppc.org/"
 KEYWORDS="ppc -x86 -amd64 -alpha -hppa -mips -sparc"
 SLOT="0"
 LICENSE="GPL-2"
-DEPEND="sys-kernel/linux-headers
+DEPEND="virtual/os-headers
 	X? ( virtual/x11 )"
 RDEPEND="sys-apps/util-linux"
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pmud 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.3 2004/06/24 21:59:07 agriffis Exp $
+# $Id: ChangeLog,v 1.4 2004/07/09 21:53:37 lv Exp $
+
+  09 Jul 2004; Travis Tilley <lv@gentoo.org> pmud-0.10.1-r2.ebuild,
+  pmud-0.10.1-r3.ebuild:
+  switch linux-headers dependency to virtual/os-headers
 
 *pmud-0.10.1-r3 (04 Mar 2004)
 
