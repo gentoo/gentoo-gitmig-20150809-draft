@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.10 2004/02/10 03:29:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.11 2004/02/22 09:55:49 vapier Exp $
 
 inherit eutils
 
@@ -39,9 +39,13 @@ src_unpack() {
 
 src_compile() {
 	local vidcards
-	[ -z "${VIDEO_CARDS}" ] \
+	local card
+	for card in ${VIDEO_CARDS} ; do
+		has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
+	done
+	[ -z "${vidcards}" ] \
 		&& vidcards="all" \
-		|| vidcards="${VIDEO_CARDS// /,}"
+		|| vidcards="${vidcards:1}"
 
 	local mycppflags
 	use mpeg && mycppflags="-I/usr/include/libmpeg3"
