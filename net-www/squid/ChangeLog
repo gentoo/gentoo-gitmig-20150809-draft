@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.24 2003/09/19 02:12:19 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.25 2003/10/18 18:46:47 mholzer Exp $
+
+  18 Oct 2003; Martin Holzer <mholzer@gentoo.org> squid-2.5.4.ebuild:
+  using epatch.
 
 *squid-2.5.4 (18 Sep 2003)
 
