@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef14b82f69b2d7692edb9c77b41d94c8 ChangeLog 399
+MD5 499f4ffa169e7c6cddc64e949def6746 metadata.xml 277
+MD5 465e1af301817e2efe741e7f0107d2f2 wxmozilla-0.5.3.ebuild 1529
+MD5 cd769d652989e37dddd923b336b2fbb3 files/digest-wxmozilla-0.5.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuy9QugEuf3OQ0akRAruBAJ9kE2xLraDdkYszbvGaptmnNnJDegCgl2Sm
+hNDgGlnni8VpoOIT16dhysI=
+=XWLU
+-----END PGP SIGNATURE-----
