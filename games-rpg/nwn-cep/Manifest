@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b55ea59568d8259d463d012b38e592ec nwn-cep-1.50.ebuild 1495
+MD5 caf552afc18dad55f432440b0796fd84 ChangeLog 375
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 c017eb9709b6ed5cec61ee4d9f7faca0 files/digest-nwn-cep-1.50 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB78UhI1lqEGTUzyQRAkA9AKCCeool6GpXaTqQrRAghxwHmQTO6QCgiI9Q
+b/e4I/aWKSR/i5+ViqPgeTM=
+=9GjU
+-----END PGP SIGNATURE-----
