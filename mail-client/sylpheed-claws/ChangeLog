@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.13 2004/08/19 02:40:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.14 2004/08/25 07:57:05 genone Exp $
+
+*sylpheed-claws-0.9.12a (25 Aug 2004)
+
+  25 Aug 2004; <genone@gentoo.org> -sylpheed-claws-0.9.12.ebuild,
+  -sylpheed-claws-0.9.12-r1.ebuild, +sylpheed-claws-0.9.12a.ebuild:
+  version bump including several new plugins for maildir, mbox and pgpmime.
 
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org>
   sylpheed-claws-0.9.11.ebuild:
@@ -24,7 +30,7 @@
 
   30 Jul 2004; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.12.ebuild:
   Name has changed upstream, so removing the sed line from src_unpack.
-  Runs good enough for ~ærch, so unmasking now.
+  Runs good enough for ~arch, so unmasking now.
 
   01 Jul 2004; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.9.11.ebuild:
   Stable on sparc.

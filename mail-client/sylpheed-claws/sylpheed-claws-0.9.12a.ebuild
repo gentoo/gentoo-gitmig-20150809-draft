@@ -1,40 +1,58 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12.ebuild,v 1.3 2004/08/11 13:37:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12a.ebuild,v 1.1 2004/08/25 07:57:05 genone Exp $
 
-IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
+IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir mbox"
 
 inherit eutils
 
+# setting up plugin related variables
 GS_PN=ghostscript-viewer
-GS_PV=0.6
+GS_PV=0.7
+
+PGP_PN=pgpinline
+PGP_PV=0.1
+
+MAILDIR_PN=maildir
+MAILDIR_PV=0.6
+
+MBOX_PN=mailmbox
+MBOX_PV=0.9
+
 MY_GS=${GS_PN}-${GS_PV}
-MY_P="sylpheed-${PV}claws"
-S2=${S}/src/plugins/${MY_GS}
+MY_PGP=${PGP_PN}-${PGP_PV}
+MY_MAILDIR=${MAILDIR_PN}-${MAILDIR_PV}
+MY_MBOX=${MBOX_PN}-${MBOX_PV}
+
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	pdflib? ( mirror://sourceforge/${PN}/${MY_GS}.tar.bz2 )"
+	pdflib? ( mirror://sourceforge/${PN}/${MY_GS}.tar.bz2 )
+	maildir? ( mirror://sourceforge/${PN}/${MY_MAILDIR}.tar.bz2 )
+	mbox? ( http://${PN}.sourceforge.net/downloads/${MY_MBOX}.tar.gz )"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
-DEPEND=">=sys-apps/sed-4
-	=x11-libs/gtk+-1.2*
+COMMONDEPEND="=x11-libs/gtk+-1.2*
 	pda? ( >=app-pda/jpilot-0.99 )
-	ssl? ( >=dev-libs/openssl-0.9.6b )
+	ssl? ( >=dev-libs/openssl-0.9.7 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
-	crypt? ( =app-crypt/gpgme-0.3.14 )
+	crypt? ( =app-crypt/gpgme-0.3.14-r1 )
 	dillo? ( net-www/dillo )
 	gnome? ( >=media-libs/gdk-pixbuf-0.16 )
 	imlib? ( >=media-libs/imlib-1.9.10 )
 	spell? ( virtual/aspell-dict )
-	xface? ( >=media-libs/compface-1.4 )
 	pdflib? ( virtual/ghostscript )
-	nls? ( >=sys-devel/gettext-0.12 )"
+	nls? ( >=sys-devel/gettext-0.12 )
+	maildir? ( >=sys-libs/db-4.1 )"
 
-RDEPEND="${DEPEND}
+DEPEND="${COMMONDEPEND}
+	>=media-libs/compface-1.4
+	>=sys-apps/sed-4"
+
+RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	net-mail/metamail
 	x11-misc/shared-mime-info"
@@ -44,17 +62,34 @@ PROVIDE="virtual/sylpheed"
 src_unpack() {
 	unpack ${A}
 
-	mv ${WORKDIR}/${MY_GS} ${S}/src/plugins
+	for plugin in ${MY_GS} ${MY_MAILDIR} ${MY_MBOX}; do
+		mv ${WORKDIR}/${plugin} ${S}/src/plugins
+	done
 
 	# use shared-mime-info
 	cd ${S}/src
 	epatch ${FILESDIR}/procmime.patch
+}
 
-	# procmime API was changed between 0.9.6 and 0.9.7, 
-	# default Makefile uses installed (=old) headers
-	if use pdflib; then
-		cd ${S2}
-		epatch ${FILESDIR}/gv-procmime-Makefile.in.patch
+plugin_compile() {
+	if [ -z "${2}" ] || use ${2}; then
+		cd ${S}/src/plugins/${1}
+		einfo "Compiling plugin: ${1}"
+		PKG_CONFIG_PATH=${S} \
+		CFLAGS="-I${S} -I${S}/src -I${S}/src/common -I${S}/src/gtk ${CFLAGS}" \
+		CXXFLAGS="${CFLAGS}" \
+			econf --with-sylpheed-dir=../.. || die "plugin configure failed: ${1}"
+
+		emake || die "plugin compile failed: ${1}"
+	fi
+}
+
+plugin_install() {
+	if [ -z "${2}" ] || use ${2}; then
+		cd ${S}/src/plugins/${1}
+		make DESTDIR="${D}" plugindir="/usr/lib/${PN}/plugins" install || die "plugin install failed: ${1}"
+		docinto ${1}
+		dodoc AUTHORS ChangeLog INSTALL NEWS README
 	fi
 }
 
@@ -72,32 +107,25 @@ src_compile() {
 	myconf="${myconf} `use_enable nls`"
 	myconf="${myconf} `use_enable dillo dillo-viewer-plugin`"
 	myconf="${myconf} `use_enable clamav clamav-plugin`"
-	myconf="${myconf} `use_enable xface compface`"
+	myconf="${myconf} `use_enable crypt pgpmime-plugin`"
 
-	echo ${myconf}
-
+	export GPGME_CONFIG=${ROOT}/usr/bin/gpgme3-config
 	econf \
 		--program-suffix=-claws \
 		--enable-spamassassin-plugin \
+		--enable-compface \
 		${myconf} || die "./configure failed"
 
-	make || die
+	emake || die
 
 	# build the extra tools
 	cd ${S}/tools
 	emake || die
 
-	# build the ghostscript-viewer plugin
-	if use pdflib; then
-		cd ${S2}
-		einfo "Compiling ghostscript-viewer plugin"
-		PKG_CONFIG_PATH=${S} \
-		CFLAGS="-I${S} -I${S}/src -I${S}/src/common -I${S}/src/gtk ${CFLAGS}" \
-		CXXFLAGS="${CFLAGS}" \
-			econf --with-sylpheed-dir=../.. || die
-
-		emake || die
-	fi
+	# build external plugins
+	plugin_compile ${MY_GS} pdflib
+	plugin_compile ${MY_MAILDIR} maildir
+	plugin_compile ${MY_MBOX} mbox
 
 	cd ${S}
 }
@@ -124,16 +152,13 @@ src_install() {
 	# install the extra tools
 	cd ${S}/tools
 	exeinto /usr/lib/${PN}/tools
-	doexe *.pl *.py *.rc *.conf gpg-sign-syl
-	doexe launch_firebird tb2sylpheed update-po uudec
+	doexe *.pl *.py *.rc *.conf *.sh gpg-sign-syl
+	doexe tb2sylpheed update-po uudec
 
-	# install the ghostscipt-viewer plugin
-	if use pdflib; then
-		cd ${S2}
-		make plugindir=${D}/usr/lib/${PN}/plugins install || die
-		docinto ${MY_GS}
-		dodoc AUTHORS ChangeLog INSTALL NEWS README
-	fi
+	# install external plugins
+	plugin_install ${MY_GS} pdflib
+	plugin_install ${MY_MAILDIR} maildir
+	plugin_install ${MY_MBOX} mbox
 }
 
 pkg_postinst() {
