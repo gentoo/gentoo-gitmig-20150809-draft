@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.22 2005/03/05 03:04:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.23 2005/03/05 03:05:47 eradicator Exp $
 
-FEATURES="sandbox ccache autoconfig multilib-strict"
+FEATURES="sandbox ccache autoconfig"
 
 # Catalyst stage/grp USE
 GRP_STAGE23_USE="berkdb gpm ipv6 -java ncurses nls pam perl python readline ssl tcpd zlib"
@@ -27,5 +27,5 @@ CTARGET_ALIASES_sparc32="sparcv9-unknown-linux-gnu"
 CDEFINE_sparc32="!__arch64__"
 LIBDIR_sparc32="lib"
 
-MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib"
-MULTILIB_STRICT_DENY="64-bit.*shared object"
+#MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib"
+#MULTILIB_STRICT_DENY="64-bit.*shared object"
