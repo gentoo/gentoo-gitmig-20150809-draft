@@ -1,5 +1,5 @@
-MD5 3e452b08588e169745a6284aa3c107c3 ChangeLog 383
+MD5 0263d04d64a577e8a92747120cc0189f ChangeLog 504
 MD5 7546a9e4ed7154299cf37f873a6ab74e blassic-0.5.4.ebuild 552
-MD5 80843ab458783689842e1f8df53aec4b blassic-0.6.1.ebuild 505
+MD5 a8ff0163add161fca00f6532fc523835 blassic-0.6.1.ebuild 604
 MD5 d23bf719eb32ac00cfa4f5a2799d7c65 files/digest-blassic-0.5.4 62
 MD5 b91917efc18926a75060fcf77cd10312 files/digest-blassic-0.6.1 62
