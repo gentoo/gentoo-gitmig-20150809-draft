@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030724.ebuild,v 1.2 2003/07/24 18:41:50 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030724.ebuild,v 1.3 2003/07/24 19:31:55 rizzo Exp $
 
 RESTRICT="${RESTRICT} nostrip"
 
+IUSE="offensive"
 DESCRIPTION="Snapshot of Available Gaim Smiley Themes"
 HOMEPAGE="http://gaim.sourceforge.net/themes.php"
 # use absolute links rather than php-redirects from gaim.sf.net
@@ -26,7 +27,7 @@ SRC_URI="http://www.ics.uci.edu/~swrobel/Jimmac.tar.gz
 	http://www.fr3nd.net/nis/nis.tar.gz
 	http://www.madcowworld.com/gaim/mwes-1.0.16.tar.gz
 	http://www.kde-look.org/content/files/6704-gaimcrystal.tar.gz
-	http://itaka.sourceforge.net/files/Liberacion-1.5.tar.gz"
+	offensive? ( http://itaka.sourceforge.net/files/Liberacion-1.5.tar.gz )"
 
 LICENSE="as-is"
 SLOT="0"
