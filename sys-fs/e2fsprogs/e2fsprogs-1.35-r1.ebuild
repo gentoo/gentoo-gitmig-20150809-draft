@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.11 2004/11/23 07:09:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.12 2004/12/07 01:07:40 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -33,6 +33,13 @@ src_unpack() {
 
 	# Use -fPIC compiled shared files in .a files. Fix kdelibs-3.3.0 compilation on hppa.
 	use static || sed -e '/ARUPD/s:$(OBJS):elfshared/*.o:' -i ${S}/lib/Makefile.library
+
+	# kernel headers use the same defines as e2fsprogs and can cause issues #48829
+	sed -i \
+		-e 's:CONFIG_JBD_DEBUG:__CONFIG_JBD_DEBUG__E2FS:g' \
+		configure e2fsck/journal.c e2fsck/recovery.c \
+		e2fsck/unix.c lib/ext2fs/kernel-jbd.h \
+		|| die "sed jbd debug failed"
 }
 
 src_compile() {
