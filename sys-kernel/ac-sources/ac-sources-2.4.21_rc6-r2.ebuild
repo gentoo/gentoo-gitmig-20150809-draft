@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.21_rc2-r2.ebuild,v 1.1 2003/05/20 22:12:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.21_rc6-r2.ebuild,v 1.1 2003/06/04 00:08:22 lostlogic Exp $
 
 IUSE="build"
 
