@@ -4,7 +4,7 @@
 #MOUSEDEV=/dev/psaux
 #MOUSE=ps2
 
-need() {
+depend() {
 	need localmount
 }
 
