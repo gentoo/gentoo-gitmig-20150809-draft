@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r2.ebuild,v 1.4 2003/11/02 10:44:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2.ebuild,v 1.4 2003/11/02 10:44:52 gmsoft Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -47,11 +47,11 @@ STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # ProPolice version
 PP_VER="3_3"
-PP_FVER="${PP_VER//_/.}-5"
+PP_FVER="${PP_VER//_/.}-4"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
-PATCH_VER="1.0"
+PATCH_VER=
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
@@ -61,7 +61,7 @@ SNAPSHOT=
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 
 #BRANCH_UPDATE="20021208"
-BRANCH_UPDATE="20031022"
+BRANCH_UPDATE=
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -88,14 +88,14 @@ then
 	SRC_URI="${SRC_URI}
 		http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
 fi
-SRC_URI="${SRC_URI}
-	mirror://gentoo/${P}-manpages.tar.bz2"
+#SRC_URI="${SRC_URI}
+#	mirror://gentoo/${P}-manpages.tar.bz2"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~x86 ~mips ~sparc ~amd64 -hppa ~alpha"
+KEYWORDS="-* ~hppa"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -197,17 +197,15 @@ src_unpack() {
 	if [ -n "${PATCH_VER}" ]
 	then
 		mkdir -p ${WORKDIR}/patch/exclude
-		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
-
-		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
-		then
-			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
-			bzip2 -c ${FILESDIR}/gcc331_use_multilib.amd64.patch > \
-				${WORKDIR}/patch/06_amd64_gcc331-use-multilib.patch.bz2
-		fi
 
 		epatch ${WORKDIR}/patch
 	fi
+
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		epatch ${FILESDIR}/gcc331_use_multilib.amd64.patch
+	fi
+
 
 	if [ -z "${PP_VER}" ]
 	then
@@ -219,8 +217,6 @@ src_unpack() {
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
 	then
 		# ProPolice Stack Smashing protection
-		EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
-		epatch ${FILESDIR}/3.3.1/gcc331-pp-fixup.patch
 		epatch ${WORKDIR}/protector.dif
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
@@ -230,10 +226,10 @@ src_unpack() {
 	fi
 
 	# Install our pre generated manpages if we do not have perl ...
-	if [ ! -x /usr/bin/perl ]
-	then
-		cd ${S}; unpack ${P}-manpages.tar.bz2
-	fi
+#	if [ ! -x /usr/bin/perl ]
+#	then
+#		cd ${S}; unpack ${P}-manpages.tar.bz2
+#	fi
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
