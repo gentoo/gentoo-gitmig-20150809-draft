@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.7 2002/10/25 12:09:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.8 2002/12/03 11:30:20 leonardop Exp $
+
+*xpad-1.7 (03 Dec 2002)
+
+  03 Dec 2002; L. Boshell <leonardop@gentoo.org> : New version. Thanks to
+  Michael Terry for letting us know about it on bug #11181.
 
 *xpad-1.6.1 (25 Oct 2002)
 
