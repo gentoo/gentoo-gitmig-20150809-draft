@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.19 2004/03/07 10:08:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.20 2004/03/09 23:41:52 agriffis Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
@@ -47,7 +47,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.ta
 	berkdb? ( http://www.sleepycat.com/update/snapshot/db-${BDB_VER}.tar.gz )"
 
 LICENSE="PAM"
-KEYWORDS="amd64 x86 ppc sparc ~alpha mips hppa ~ia64 ppc64 s390"
+KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64 s390"
 SLOT="0"
 IUSE="berkdb pwdb selinux"
 
