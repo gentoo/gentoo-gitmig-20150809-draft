@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19-r1.ebuild,v 1.1 2004/08/30 04:46:26 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19-r1.ebuild,v 1.2 2004/08/30 23:39:42 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -84,7 +84,7 @@ src_unpack() {
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
-	rm -f configure config.h.in saslauthd/configure
+	rm -rf configure config.h.in autom4te.cache saslauthd/configure saslauthd/autom4te.cache
 	ebegin "Recreating configure"
 	aclocal -I cmulocal -I config && autoheader && autoconf || \
 		die "recreate configure failed"
