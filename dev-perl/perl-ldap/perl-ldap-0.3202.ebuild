@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.3202.ebuild,v 1.1 2004/07/30 15:37:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.3202.ebuild,v 1.2 2004/08/01 02:33:23 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -20,13 +20,12 @@ DEPEND="dev-perl/Convert-ASN1
 	ssl? ( >=dev-perl/IO-Socket-SSL-0.81 )"
 
 src_compile() {
-        if [ "${MMSIXELEVEN}" ]; then
-                echo 'n' | perl Makefile.PL ${myconf} \
-                PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
-        else
-                echo 'n' | perl Makefile.PL ${myconf} \
-                PREFIX=${D}/usr INSTALLDIRS=vendor
-        fi
-        perl-module_src_test
+	if [ "${MMSIXELEVEN}" ]; then
+		echo 'n' | perl Makefile.PL ${myconf} \
+		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
+	else
+		echo 'n' | perl Makefile.PL ${myconf} \
+		PREFIX=${D}/usr INSTALLDIRS=vendor
+	fi
+	perl-module_src_test
 }
-
