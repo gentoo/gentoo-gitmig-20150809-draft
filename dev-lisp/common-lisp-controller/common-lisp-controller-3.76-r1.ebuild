@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76-r1.ebuild,v 1.1 2003/11/25 07:18:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76-r1.ebuild,v 1.2 2003/11/25 09:04:29 mkennedy Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
@@ -17,10 +17,10 @@ DEPEND="dev-lisp/cl-defsystem3
 
 S=${WORKDIR}/${PN}
 
-# src_unpack() {
-# 	unpack ${A}
-# 	epatch ${FILESDIR}/clc-gentoo-${PV}.patch.gz || die
-# }
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-coreutils-gentoo.patch || die
+}
 
 # src_compile() {
 # 	make clc-build-daemon-standalone clc-send-command-standalone || die
@@ -74,6 +74,8 @@ EOF
 }
 
 pkg_postinst() {
+	userdel cl-builder &>/dev/null || true
+	groupdel cl-builder &>/dev/null || true
 	enewgroup  cl-builder 407
 	enewuser cl-builder 407 /bin/sh /usr/lib/common-lisp cl-builder
 	chown root:root /usr/lib/common-lisp

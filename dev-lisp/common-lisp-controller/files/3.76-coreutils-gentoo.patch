@@ -1,0 +1,42 @@
+diff -ur common-lisp-controller.orig/clc-autobuild-check common-lisp-controller/clc-autobuild-check
+--- common-lisp-controller.orig/clc-autobuild-check	2003-05-08 13:47:52.000000000 -0500
++++ common-lisp-controller/clc-autobuild-check	2003-11-25 02:44:06.600594488 -0600
+@@ -1,4 +1,4 @@
+-#!/bin/sh 
++#!/bin/sh
+ set -e
+ # Checks if a package should be autobuild for an implementation
+ # Written by Kevin Rosenberg <kmr@debian.org>
+@@ -12,11 +12,11 @@
+         cat >&2 <<END
+ Usage: $progname impl library [OPTIONS]
+ 
+-$progname checks if a library should be auto-built for a 
++$progname checks if a library should be auto-built for a
+ particular implementation. It returns a status code of 0 for "yes"
+ and 1 for "no". Returns 2 for a usage error.
+ 
+-Options: 
++Options:
+   -h                  Print this short help message
+ END
+ }
+@@ -31,7 +31,7 @@
+ 	return
+     fi
+     if [ -r $file ]; then
+-	first_line="$(cat $file | head -1)"
++	first_line="$(cat $file | head -n 1)"
+ 	if [ "$first_line" ]; then
+ 	    first_line="$(echo "$first_line" | tr "[A-Z]" "[a-z]")"
+ 	    if [ "$(expr "$first_line" : ".*\(yes\).*")" ]; then
+@@ -48,7 +48,7 @@
+ 
+ clc_bin_dir=/usr/lib/common-lisp/bin
+ 
+-if [ $# -lt 2 ]; then 
++if [ $# -lt 2 ]; then
+   echo "Error: too few arguments" >&2
+   usage
+   exit 2
+Only in common-lisp-controller: clc-autobuild-check.~1.4.~
