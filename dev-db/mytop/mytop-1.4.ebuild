@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.4 2004/06/29 17:07:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.5 2004/11/09 22:18:19 mr_bones_ Exp $
 
 inherit perl-module
 
 DESCRIPTION="mytop - a top clone for mysql"
-SRC_URI="http://jeremy.zawodny.com/mysql/mytop/${P}.tar.gz"
 HOMEPAGE="http://jeremy.zawodny.com/mysql/mytop/"
-SLOT="0"
-LICENSE="Artistic | GPL-2"
+SRC_URI="http://jeremy.zawodny.com/mysql/mytop/${P}.tar.gz"
+
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+SLOT="0"
 IUSE=""
+
 DEPEND="dev-perl/DBD-mysql
 	dev-perl/Getopt-Long
 	dev-perl/TermReadKey
