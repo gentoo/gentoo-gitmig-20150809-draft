@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c333d6e984939913f57b91219264e32 ChangeLog 9665
+MD5 57936852b070bcfa6066259fedc946e2 ChangeLog 9757
 MD5 2793c4049916cbc600a5625f1bbb1c4c gnome-terminal-2.4.2.ebuild 1185
-MD5 bf9f3f4ae52850d866f9b3970fdd78fe gnome-terminal-2.8.0.ebuild 1156
+MD5 cf24c0066571fbdd0d4cb003d7025ce3 gnome-terminal-2.8.0.ebuild 1153
 MD5 be88af273f2aaa445d9b25fb58aba95c gnome-terminal-2.6.1.ebuild 1225
 MD5 099012657f64466338b3dd4fd3814ce0 gnome-terminal-2.7.3.ebuild 1168
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -18,10 +15,3 @@ MD5 206e36d5520f43272f029d6411af6332 files/gnome-terminal-2-dnd_url_add_space.pa
 MD5 307641ad0c36aecafbe97053c944098f files/gnome-terminal-2.4.2-shortcuts_fix.patch 1037
 MD5 235667e1b2901cfe549fc106471ecc38 files/gnome-terminal-2.6.1-gcc34_eggcell.patch 850
 MD5 e0fc64188ba086229362c19960003ffc files/gnome-terminal-2.6.1-select.patch 2071
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByOcUKRy60XGEcJIRAj1VAJ4/Imr7dBEi4mKwF0DDHTM8mRS1NgCfU2tJ
-x1XjPSHybjR3i3dNoR4vfhQ=
-=NU9l
------END PGP SIGNATURE-----
