@@ -37,7 +37,7 @@ cleanup() {
 #USE may be set from the environment so we back it up for later.
 export ORIGUSE="`$PYTHON -c 'import portage; print portage.settings["USE"];'`"
 export GENTOO_MIRRORS="`$PYTHON -c 'import portage; print portage.settings["GENTOO_MIRRORS"];'`"
-export USE="build"
+export USE="-* build bootstrap"
 #get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
 #overwritten
 cp /etc/make.conf /etc/make.conf.build
@@ -70,7 +70,7 @@ cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
 emerge $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #make.conf has been overwritten, so we explicitly export our original settings
-export USE="$ORIGUSE"
+export USE="$ORIGUSE bootstrap"
 emerge $myGLIBC $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #restore original make.conf
 cleanup 0
