@@ -1,7 +1,13 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.3 2002/12/17 19:16:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.4 2002/12/27 03:12:47 bcowan Exp $
 
+*mc-4.6.0_pre2 (26 Dec 2002)
+
+  26 Dec 2002; Brad Cowan <bcowan@gentoo.org> mc-4.6.0_pre2.ebuild,    
+  files/digest-mc-4.6.0_pre2:
+  Version bump with many bugfixes and feature additions.
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *mc-4.5.55-r7 (06 Dec 2002)
