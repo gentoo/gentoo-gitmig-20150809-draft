@@ -1,0 +1,12 @@
+--- include/rsbac/aci.h.ori   2004-11-13 13:39:21.092404152 +0100
++++ include/rsbac/aci.h 2004-11-13 13:42:13.402209080 +0100
+@@ -39,7 +39,7 @@
+ extern void rsbac_off(void);
+
+ /* For other kernel parts to check, whether RSBAC was initialized correctly */
+-extern inline boolean rsbac_is_initialized(void);
++extern boolean rsbac_is_initialized(void);
+
+ /* When mounting a device, its ACI must be read and added to the ACI lists. */
+ extern int rsbac_mount(struct super_block * sb_p, struct dentry * d_covers);
+
