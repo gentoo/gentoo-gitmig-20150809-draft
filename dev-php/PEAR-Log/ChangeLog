@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.19 2004/08/03 20:08:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.20 2004/08/14 13:35:39 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> PEAR-Log-1.1.ebuild,
+  PEAR-Log-1.2.ebuild:
+  Fixed CVS Header.
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-Log-1.8.3.ebuild,
   PEAR-Log-1.8.4.ebuild:
