@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.32-r2.ebuild,v 1.1 2004/02/02 15:13:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.32-r2.ebuild,v 1.2 2004/04/01 08:24:41 eradicator Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://streamripper.sourceforge.net/files/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/glibc"
 

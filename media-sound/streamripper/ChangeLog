@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/streamripper
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.5 2004/02/02 15:13:02 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.6 2004/04/01 08:24:41 eradicator Exp $
+
+  01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  streamripper-1.32-r1.ebuild, streamripper-1.32-r2.ebuild:
+  Stable x86.
 
 *streamripper-1.32-r2 (02 Feb 2004)
 
