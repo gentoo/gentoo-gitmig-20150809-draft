@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.4 2005/01/14 01:26:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.5 2005/02/07 19:43:13 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
 
-inherit eutils mono
+inherit eutils mono multilib
 
 ECLASS="gtk-sharp-component"
 INHERITED="$INHERITED $ECLASS"
@@ -66,7 +66,7 @@ gtk-sharp-component_src_unpack() {
 	GAPI_DIR="${ROOT}/usr/share/gapi${GTK_SHARP_COMPONENT_SLOT_DEC}"
 	GAPI_FIXUP="gapi${GTK_SHARP_COMPONENT_SLOT}-fixup"
 	GAPI_CODEGEN="gapi${GTK_SHARP_COMPONENT_SLOT}-codegen"
-	GTK_SHARP_LIB_DIR="${ROOT}/usr/lib/mono/gtk-sharp${GTK_SHARP_COMPONENT_SLOT_DEC}"
+	GTK_SHARP_LIB_DIR="${ROOT}/usr/$(get_libdir)/mono/gtk-sharp${GTK_SHARP_COMPONENT_SLOT_DEC}"
 
 	unpack ${A}
 	cd ${S}
@@ -132,7 +132,7 @@ gtk-sharp-component_src_compile() {
 
 gtk-sharp-component_src_install() {
 	cd ${GTK_SHARP_COMPONENT_BUILD_DIR}
-	make GACUTIL_FLAGS="/root ${D}/usr/lib /gacdir /usr/lib /package gtk-sharp${GTK_SHARP_COMPONENT_SLOT_DEC}" \
+	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package gtk-sharp${GTK_SHARP_COMPONENT_SLOT_DEC}" \
 		DESTDIR=${D} install || die
 }
 
