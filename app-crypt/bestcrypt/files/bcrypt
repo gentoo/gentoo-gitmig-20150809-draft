@@ -4,10 +4,13 @@
 #
 # Version:      1.2
 #
-# Revision:  $Id: bcrypt,v 1.1 2002/11/14 02:09:14 lostlogic Exp $
+# Revision:  $Id: bcrypt,v 1.2 2003/10/27 11:01:24 aliz Exp $
 #
 # Author:       Jetico Inc. (support@jetico.com)
 #
+# Modified by Stefan Tittel (with thanks to steveb) to work around
+# the "xargs: environment too large for exec"-error occuring in
+# the gentoo 1.4 linux distribution.
 
 # chkconfig: 2345 85 98
 # description: BestCrypt init script
@@ -78,7 +81,13 @@ start() {
 
 stop() {
 	ebegin "Unmounting encrypted filesystems"
-	grep BestCrypt /etc/mtab |awk '{print $2}'|xargs -r -n 1 bctool umount
+
+# The original line causing the "xargs: environment too large for exec error".	
+	# grep BestCrypt /etc/mtab |awk '{print $2}'|xargs -r -n 1 bctool umount
+
+# The line for which it work's fine now.
+	for i in $(grep BestCrypt /etc/mtab | awk '{print $2}') ; do bctool umount ${i} ; done
+
 	eend $?
 	ebegin "Shutting down BestCrypt modules"
 	for i in `lsmod |egrep "^bc_.*" |awk '{print $1}' `; do 
