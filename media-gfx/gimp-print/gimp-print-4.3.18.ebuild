@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.18.ebuild,v 1.2 2003/07/16 14:55:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.18.ebuild,v 1.3 2003/07/16 18:21:44 lanius Exp $
 
 IUSE="nls gtk readline cups foomaticdb ppds"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 
 DEPEND="cups? ( >=net-print/cups-1.1.14 )
 	media-gfx/imagemagick
-	>=app-text/ghostscript-7.0.6-r3
+	>=app-text/ghostscript-7.05.6-r3
 	sys-libs/readline
 	gtk? ( =x11-libs/gtk+-1.2* )
 	dev-lang/perl
