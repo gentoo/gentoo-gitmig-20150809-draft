@@ -1,25 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.00.4.ebuild,v 1.8 2004/06/25 02:17:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.5.ebuild,v 1.1 2004/09/08 17:57:28 usata Exp $
 
 inherit latex-package
 
 DESCRIPTION="Prosper is a LaTeX class for writing transparencies"
 HOMEPAGE="http://prosper.sf.net/"
-SRC_URI="mirror://sourceforge/prosper/${P}.tar.gz
-	mirror://sourceforge/prosper/PPRblends.sty.gz"
-LICENSE="GPL-2"
+# Taken from: ftp://ftp.dante.de/tex-archive/macros/latex/contrib/${PN}.tar.gz
+SRC_URI="mirror://gentoo/${P}.tar.gz"
+LICENSE="LPPL-1.2"	# has been changed since 1.5
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
-DEPEND=""
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+DEPEND="virtual/tetex"
 S=${WORKDIR}/${PN}
 IUSE=""
-
-src_unpack(){
-	unpack ${A}
-	unpack PPRblends.sty.gz
-	mv PPRblends.sty ${S}/contrib/
-}
 
 src_install(){
 	cd ${S}
