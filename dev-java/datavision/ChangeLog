@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/datavision
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.6 2004/12/04 17:55:01 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.7 2004/12/04 20:05:16 swegener Exp $
+
+  04 Dec 2004; Sven Wegener <swegener@gentoo.org> datavision-0.8.2.ebuild:
+  Fixed invalid atoms in *DEPEMD.
 
 *datavision-0.8.2 (04 Dec 2004)
 

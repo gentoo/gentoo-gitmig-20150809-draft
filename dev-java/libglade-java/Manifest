@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 af8505b511150249c7a4362d44ad4d99 libglade-java-2.8.2.ebuild 3281
-MD5 719aa77815e0cfb7fdc65248fc7288bf ChangeLog 639
+MD5 6772e62e9bd34d535242663aebe424d7 ChangeLog 643
 MD5 25131e29d5a6eb23196ff70fdf259706 metadata.xml 1306
 MD5 eda99aeb347c072151e20c330b8cc3c4 files/digest-libglade-java-2.8.2 71
 MD5 c068d53842b2d7d7efdca61acf5d72ca files/libglade-java-2.8.2_gentoo-PN-SLOT.patch 1190
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBshjOI1lqEGTUzyQRArbCAJ4gAK8FGNLMENvzVscTPewj00JmiQCeJSfO
+aK+KoK3dLmwaaJV4x5n74NM=
+=4jnJ
+-----END PGP SIGNATURE-----

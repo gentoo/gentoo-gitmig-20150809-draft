@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.1 2004/12/04 17:55:01 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.2 2004/12/04 20:05:16 swegener Exp $
 
 inherit java-pkg
 
@@ -20,8 +20,8 @@ RDEPEND=">=virtual/jre-1.4
 	=dev-java/gnu-regexp-1.1*
 	=dev-java/jcalendar-1.2*
 	=dev-java/minml2-0.3*
-	mysql? ( >=jdbc-mysql-3.0 )
-	postgres? ( >=jdbc2-postgresql-7.3 )"
+	mysql? ( >=dev-java/jdbc-mysql-3.0 )
+	postgres? ( >=dev-java/jdbc2-postgresql-7.3 )"
 
 src_unpack() {
 	unpack ${A}
