@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.1 2002/12/23 03:02:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.2 2002/12/26 02:08:28 jmorgan Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ DESCRIPTION="A set of language and system independant CORBA interfaces"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
