@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.9.ebuild,v 1.2 2004/07/06 11:07:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.9.ebuild,v 1.3 2004/09/03 17:11:02 eradicator Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND="virtual/libc
 	>=x11-libs/qt-3.1.1
