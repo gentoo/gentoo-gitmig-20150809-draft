@@ -1,6 +1,6 @@
-# ChangeLog for net-ftp/pycurl
+# ChangeLog for dev-python/pycurl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.1 2003/06/13 22:21:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.2 2003/06/13 22:27:44 liquidx Exp $
 
 *pycurl-7.10.4 (09 Apr 2003)
 
