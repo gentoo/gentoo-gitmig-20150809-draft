@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.46 2005/02/14 17:23:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.47 2005/02/14 19:25:23 blubb Exp $
+
+  14 Feb 2005; Simon Stelling <blubb@gentoo.org> rp-pppoe-3.5-r7.ebuild:
+  stable on amd64 wrt bug 81702
 
   14 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> rp-pppoe-3.5-r7.ebuild:
   Stable on sparc wrt #81702

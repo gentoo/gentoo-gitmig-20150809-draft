@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r7.ebuild,v 1.3 2005/02/14 17:23:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r7.ebuild,v 1.4 2005/02/14 19:25:23 blubb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.roaringpenguin.com/penguin/pppoe/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ppc sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ppc sparc x86"
 IUSE="X tcltk"
 
 DEPEND="net-dialup/ppp
