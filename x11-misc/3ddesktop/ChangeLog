@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  15 May 2003; Lars Weiler <pylon@gentoo.org> 3ddesktop-0.2.4.ebuild:
+  Set ~ppc in KEYWORDS
+
 *3ddesktop-0.2.4 (01 Dec 2002)
 
   26 Mar 2003; Graham Forest <vladimir@gentoo.org> 3ddesktop-0.2.4.ebuild:
