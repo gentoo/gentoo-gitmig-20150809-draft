@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.7.ebuild,v 1.3 2003/04/20 21:22:03 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.7.ebuild,v 1.4 2003/04/21 23:43:57 method Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 		|| myconf="${myconf} --without-krb4 --disable-krb4"
 
 	econf \
-                --with-ccopts=${CFLAGS} \
+                --with-ccopts="${CFLAGS}" \
 		--mandir=/usr/share/man \
 		--localstatedir=/etc \
 		--enable-shared \
