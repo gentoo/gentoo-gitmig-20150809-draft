@@ -21,6 +21,13 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (03 Sep 2002)
+# gnustep updates... unstable moved to stable branch
+=dev-util/gnustep-make-1.4.0
+=dev-util/gnustep-base-1.4.0
+=dev-util/gnustep-back-0.8.0
+=dev-util/gnustep-gui-0.8.0
+
 # <george@gentoo.org> (03 Sep 2002)
 # fixes building with ocaml-3.06, please test
 =dev-ml/lablgl-0.98
