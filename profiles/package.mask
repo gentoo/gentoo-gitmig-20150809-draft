@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <usata@gentoo.org> (04 Oct 2003)
+# experimental m17n and nls support which will be included in next release
+>=net-www/w3m-0.4.2-r1
+
 # <lanius@gentoo.org> (3. Oct 2003)
 # Beta release, not completly working
 =net-dialup/ppp-2.4.2_beta3
