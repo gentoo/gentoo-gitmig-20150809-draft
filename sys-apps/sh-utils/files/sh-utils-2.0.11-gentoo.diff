@@ -106,7 +106,7 @@ diff -ur ./src/uname.c ./src/uname.c.new
 +		while ( fscanf(ffd, "%s :", temp_string) != EOF)
 +			if ( (!(strcmp(temp_string, "vendor_id"))) || 
 +				(!(strcmp(temp_string, "cpu" ))) ) {
-+					fscanf(ffd, "%*[^0-9]%[^ ,]", final_string);
++					fscanf(ffd, "%s", final_string);
 +					break;
 +			}
 +		fclose(ffd);
