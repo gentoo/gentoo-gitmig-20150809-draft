@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 153ac76f3ce6f66c852ee729b7a5a2bd ChangeLog 664
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 4d67468560163130f6aadc7d0da5b5dc ChangeLog 772
 MD5 6fb8c92bd6d6a66415b96029004bca78 rtgraph-0.70.ebuild 841
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 72b9c47b878289b2a6c072cfe5046e66 files/digest-rtgraph-0.70 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBi/m3CHk4+ZoBpvsRApONAKC2vqnZmuRWafkrRrl9pyeDfHI+iACeKSdS
-yxl9xW8XEusHT8ulGE1P3GY=
-=vMZj
------END PGP SIGNATURE-----
