@@ -30,7 +30,7 @@ KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
-	          sys-devel/gettext )"
+			  nls? ( sys-devel/gettext ) )"
 			  
 RDEPEND="virtual/glibc 
 	>=sys-libs/zlib-1.1.4
