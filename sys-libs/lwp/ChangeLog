@@ -1,0 +1,8 @@
+# ChangeLog for sys-libs/lwp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.1 2002/07/23 21:48:04 lostlogic Exp $
+
+*lwp-1.9 (30 Jun 2002)
+
+  30 Jun 2002; Greg Briggs <gb006k@mail.rochester.edu> lwp-1.9.ebuild: Created
+  ebuild for this package.
