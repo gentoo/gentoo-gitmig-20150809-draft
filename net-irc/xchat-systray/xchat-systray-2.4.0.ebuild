@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.0.ebuild,v 1.1 2004/01/04 02:11:53 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.0.ebuild,v 1.2 2004/01/11 00:41:56 pyrania Exp $
 
 S=${WORKDIR}/${PN}-integration-${PV}
 DESCRIPTION="System tray plugin for X-Chat."
@@ -9,7 +9,7 @@ HOMEPAGE="http://blight.altervista.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.3
