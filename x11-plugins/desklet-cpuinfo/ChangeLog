@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-cpuinfo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cpuinfo/ChangeLog,v 1.2 2003/09/14 12:03:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cpuinfo/ChangeLog,v 1.3 2003/09/28 05:24:49 obz Exp $
+
+*desklet-cpuinfo-0.1.4-r1 (28 Sep 2003)
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-cpuinfo-0.1.4-r1.ebuild:
+  Updated dependency to -core-0.22, and removed fontselector
 
   14 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-cpuinfo-0.1.4.ebuild:
   Added dep to -core >= 0.21.2 and removed external sensor depend
