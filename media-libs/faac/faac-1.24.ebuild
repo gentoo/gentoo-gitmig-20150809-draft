@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.1 2004/07/10 18:32:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.2 2004/07/26 03:00:17 chriswhite Exp $
 
 inherit libtool
 
@@ -15,8 +15,7 @@ SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 
-RDEPEND=">=media-libs/libsndfile-1.0.0
-	 >=media-libs/faad2-2.0-r3"
+RDEPEND=">=media-libs/libsndfile-1.0.0"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.3.5

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faac
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.14 2004/07/10 18:32:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.15 2004/07/26 03:00:16 chriswhite Exp $
+
+  26 Jul 2004; Chris White <chriswhite@gentoo.org> faac-1.24.ebuild:
+  Fixes circular blocks on mpeg4ip by removing faad2 deps (faad2 is not required
+  as a runtime lib, or a build lib).
 
 *faac-1.24 (10 Jul 2004)
 
