@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r7.ebuild,v 1.1 2005/01/13 15:30:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r7.ebuild,v 1.2 2005/01/15 00:59:35 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="bootstrap build livecd static selinux uclibc"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
