@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/sheepshaver/sheepshaver-20040319.ebuild,v 1.2 2004/06/02 11:53:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/sheepshaver/sheepshaver-20040319.ebuild,v 1.3 2004/06/02 11:54:23 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 IUSE="gtk esd"
 
 DEPEND="gtk? ( x11-libs/gtk+ )
