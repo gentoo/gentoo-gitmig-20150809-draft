@@ -1,32 +1,37 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.12 2004/09/04 16:10:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r2.ebuild,v 1.1 2004/09/04 16:10:13 mcummings Exp $
 
 IUSE="opengl"
 
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="PDL Perl Module"
 SRC_URI="http://cpan.valueclick.com/modules/by-module/PDL/${P}.tar.gz"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
-
 SLOT="0"
 LICENSE="Artistic as-is"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips"
 
-DEPEND="${DEPEND}
-	>=sys-libs/ncurses-5.2
+DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Filter
-	dev-perl/File-Spec
+	|| ( dev-perl/File-Spec >=dev-lang/perl-5.8.0-r12 )
 	dev-perl/Inline
 	>=dev-perl/ExtUtils-F77-1.13
 	dev-perl/Text-Balanced
 	opengl? ( virtual/opengl virtual/glu )
 	>=sys-apps/sed-4"
 
-mydoc="DEPNDENCIES DEVELOPMENT MANIFEST* COPYING Release_Notes TODO"
+mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* COPYING Release_Notes TODO"
 
 
+pkg_setup() {
+	echo ""
+	einfo "If you want GSL library support in PDL,"
+	einfo "you need to emerge dev-libs/gsl first."
+	echo ""
+	sleep 5
+}
 src_unpack() {
 
 	unpack ${A}
@@ -41,25 +46,28 @@ src_unpack() {
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
-	# fPIC has to be applied unconditonally !
-	# BUG #55238
-	# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
-	# if use hppa || use amd64; then
-	cd ${S}/Lib/Slatec
-	sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL
-	# fi
+	if use hppa || use amd64; then
+		cd ${S}/Lib/Slatec
+		sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL
+	fi
+	# The below patch was supplied by Karl Steddom <k-steddom@tamu.edu>
+	# in bug 33936 to correct PDL's inability to detect GSL libraries
+	# correctly. 
+	# -mcummings
+	cd ${S}
+	epatch ${FILESDIR}/gsl.patch || die
 }
 
 src_install () {
 
 	perl-module_src_install
-	mkdir -p ${D}/usr/doc/${P}/html
+	dodir /usr/share/doc/${PF}/html
 	eval `perl '-V:version'`
 	PERLVERSION=${version}
 	mv ${D}/usr/lib/perl5/site_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/HtmlDocs/PDL \
-		${D}/usr/doc/${P}/html
+		${D}/usr/share/doc/${PF}/html
 
-	mydir=${D}/usr/doc/${P}/html/PDL
+	mydir=${D}/usr/share/doc/${PF}/html/PDL
 
 	for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/*
 	do
