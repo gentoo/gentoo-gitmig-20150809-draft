@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/serlook
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/serlook/ChangeLog,v 1.3 2004/06/25 00:10:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/serlook/ChangeLog,v 1.4 2004/07/11 12:35:19 carlo Exp $
+
+  11 Jul 2004; Carsten Lohrke <carlo@gentoo.org> serlook-0.2.4.ebuild:
+  stable on x86
 
 *serlook-0.2.4 (04 Jun 2004)
 
