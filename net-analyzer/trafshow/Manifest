@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 53db34060fe70e2a0226ea1de9bb1308 ChangeLog 1293
 MD5 2d4d99792f8584b9a6cd9cc11c8c5fbc trafshow-3.1-r1.ebuild 1028
 MD5 8e8b9393d38df263f07c394765553b01 metadata.xml 243
-MD5 9d3c3c98cbc7db1b72b86585bc68dc0b trafshow-4.0.ebuild 1006
+MD5 6aa065fba0f673919fc7aea25f61e948 trafshow-4.0.ebuild 1031
 MD5 d8609a48097c656e14cb38dc49dbf629 files/digest-trafshow-3.1-r1 60
 MD5 de937e07ac952efc66dbe67616befc58 files/trafshow-3.1-gentoo.patch 492
-MD5 380aa4a8d3cba82c48aaf59eb5955f68 files/trafshow-4.0-gentoo.patch 522
+MD5 18731bc84348a4cbb851177332ba3596 files/trafshow-4.0-gentoo.patch 745
 MD5 0eaa3123d4ab8173d4f7a1a4be4e1e0f files/digest-trafshow-4.0 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB37fxmdTrptrqvGERAk90AKCRNBRffJkROFmpdwGNt/vej6q9qwCfT1jG
-26wg4PYTxGc8JSJ98/idh4c=
-=hFYm
+iD8DBQFB37okmdTrptrqvGERAkjKAJ9lLQ68fndG2yw+6wfVj3jri9VgRwCeJJNo
+qdQhGRlhZDzLDtSKhiAvVFM=
+=fVOH
 -----END PGP SIGNATURE-----
