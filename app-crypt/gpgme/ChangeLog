@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.49 2004/10/02 20:36:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.50 2004/10/03 01:46:57 dragonheart Exp $
+
+*gpgme-1.0.0-r1 (03 Oct 2004)
+
+  03 Oct 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/gpgme-1.0.0-testconfigure.patch, +gpgme-1.0.0-r1.ebuild,
+  +gpgme-1.0.0.ebuild:
+  version bump. 1.0.0 without smime support and 1.0.0-r1 with smime support
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gpgme-0.9.0-r1.ebuild:
   Stable on alpha, requested in bug 64485.
