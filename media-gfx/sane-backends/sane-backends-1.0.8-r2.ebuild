@@ -1,12 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.8-r2.ebuild,v 1.1 2002/07/04 00:13:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.8-r2.ebuild,v 1.2 2002/07/05 17:12:27 seemant Exp $
 
 DESCRIPTION="Scanner Access Now Easy - Backends"
 HOMEPAGE="http://www.mostang.com/sane/"
 
+ADDDEP=""
+
+if [ `arch` != "ppc" ] ; then
+	ADDDEP="sys-libs/libieee1284"
+fi
+
 DEPEND=">=media-libs/jpeg-6b
-	sys-libs/libieee1284"
+	${ADDDEP}"
 
 SRC_URI="ftp://ftp.mostang.com/pub/sane/sane-$PV/$P.tar.gz"
 S=${WORKDIR}/${P}
