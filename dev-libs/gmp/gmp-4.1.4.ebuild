@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.9 2005/01/27 21:14:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.10 2005/01/27 21:39:01 eradicator Exp $
 
 inherit flag-o-matic libtool eutils multilib
 
@@ -43,8 +43,8 @@ src_unpack () {
 
 	if use ppc64 || has_multilib_profile; then
 		export WANT_AUTOCONF=2.5
-		libtoolize --copy --force
-		autoreconf || die
+		libtoolize --copy --force || die "libtoolize --copy --force failed"
+		autoreconf || die "autoreconf failed"
 	else
 		elibtoolize
 	fi
