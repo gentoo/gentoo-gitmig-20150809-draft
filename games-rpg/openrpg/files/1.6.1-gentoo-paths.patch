@@ -1,0 +1,42 @@
+diff -ur openrpg1.orig/start.py openrpg1/start.py
+--- openrpg1.orig/start.py	2003-09-18 15:15:42.793028328 -0400
++++ openrpg1/start.py	2003-09-18 15:15:43.010995192 -0400
+@@ -1,5 +1,10 @@
+ #!/usr/bin/env python
+ 
++from os import chdir;
++chdir("GENTOO_DATADIR");
++from sys import path;
++path.append("GENTOO_LIBDIR");
++
+ import pyver
+ pyver.checkPyVersion()
+ 
+diff -ur openrpg1.orig/start_server.py openrpg1/start_server.py
+--- openrpg1.orig/start_server.py	2003-09-18 15:15:42.793028328 -0400
++++ openrpg1/start_server.py	2003-09-18 15:15:43.011995040 -0400
+@@ -1,5 +1,10 @@
+ #!/usr/bin/env python
+ 
++from os import chdir;
++chdir("GENTOO_DATADIR");
++from sys import path;
++path.append("GENTOO_LIBDIR");
++
+ import pyver
+ import sys
+ pyver.checkPyVersion()
+diff -ur openrpg1.orig/start_server_gui.py openrpg1/start_server_gui.py
+--- openrpg1.orig/start_server_gui.py	2003-09-18 15:15:42.794028176 -0400
++++ openrpg1/start_server_gui.py	2003-09-18 15:15:43.012994888 -0400
+@@ -1,5 +1,10 @@
+ #!/usr/bin/env python
+ 
++from os import chdir;
++chdir("GENTOO_DATADIR");
++from sys import path;
++path.append("GENTOO_LIBDIR");
++
+ import pyver
+ pyver.checkPyVersion()
+ 
