@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.3 2003/09/05 02:38:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.4 2003/10/18 04:48:20 raker Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xmailserver.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/mta"
