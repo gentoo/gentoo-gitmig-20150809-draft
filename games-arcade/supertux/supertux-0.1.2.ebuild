@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.2.ebuild,v 1.6 2005/01/19 00:20:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.2.ebuild,v 1.7 2005/02/10 20:08:52 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A game similar to Super Mario Bros."
 HOMEPAGE="http://super-tux.sourceforge.net"
@@ -18,6 +18,13 @@ DEPEND="virtual/opengl
 	>=media-libs/libsdl-1.1.5
 	>=media-libs/sdl-image-1.2.2
 	>=media-libs/sdl-mixer-1.2.5"
+
+pkg_setup() {
+	if ! built_with_use media-libs/sdl-mixer mikmod ; then
+		die "Please emerge sdl-mixer with USE=mikmod"
+	fi
+	games_pkg_setup
+}
 
 src_compile() {
 	egamesconf \
