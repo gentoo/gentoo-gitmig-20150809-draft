@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.6 2003/10/22 20:53:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.7 2003/12/07 13:29:45 lanius Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -31,10 +31,10 @@ kernel-mod_getversion ()
 	if [ -h ${KERNEL_DIR} ] ; then
 		einfo "${KERNEL_DIR} is a symbolic link"
 		einfo "Determining the real directory of the Linux kernel source code"
-		KV_DIR="`ls -ld ${KERNEL_DIR} | awk '{ print $11 }'`"
+		KV_DIR="`ls -ld --full-time ${KERNEL_DIR} | awk '{ print $11 }'`"
 	elif [ -d ${KERNEL_DIR} ] ; then
 		einfo "${KERNEL_DIR} is a real directory"
-		KV_DIR="`ls -ld ${KERNEL_DIR} | awk '{ print $9 }'`"
+		KV_DIR="`ls -ld --full-time ${KERNEL_DIR} | awk '{ print $9 }'`"
 	else
 		eerror "Directory '${KERNEL_DIR}' cannot be found"
 		die
