@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/simplecdrx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/ChangeLog,v 1.9 2003/03/28 12:09:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/ChangeLog,v 1.10 2003/07/18 01:29:52 raker Exp $
+
+*simplecdrx-1.2.2-r1 (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> simplecdrx-1.2.2-r1.ebuild:
+  Changed from media-sound/mad to media-libs/{libmad,libid3tag}
 
 *simplecdrx-1.2.2 (25 Dec 2002)
 
