@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3.ebuild,v 1.2 2000/11/13 19:52:43 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3.ebuild,v 1.3 2000/11/13 20:26:47 achim Exp $
 
 #P=
 A="${P}.tar.gz"
@@ -19,9 +19,9 @@ src_compile() {
 
     cd ${S}
     try ./configure --prefix=/usr --host=${CHOST} \
-        --with-mysql-includes=/usr/include/mysql \
-        --with-mysql-libraries=/usr/lib/mysql/lib \
-        --enable-smbalerts --enable-pthreads
+         --enable-smbalerts --enable-pthreads \
+         --with-mysql-includes=/usr/include/mysql \
+        --with-mysql-libraries=/usr/lib/mysql/lib
     try make
 
 }
@@ -30,7 +30,9 @@ src_install () {
 
     cd ${S}
     try make DESTDIR=${D} install
+    into /usr/lib/snort/bin
+    doins contrib/create_mysql contrib/*.pl contrib/snortlog
     dodoc AUTHORS BUGS ChangeLog COPYING CREDITS NEWS README.*
-    dodoc RULES.SAMPLE USAGE
+    dodoc RULES.SAMPLE USAGE contrib/pgsql.php3
 }
 
