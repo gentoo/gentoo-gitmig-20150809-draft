@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.50 2002/07/12 21:42:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.51 2002/07/15 22:20:53 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -26,6 +26,8 @@ kde_src_compile() {
 		myconf)
 			debug-print-section myconf
 			myconf="$myconf --prefix=${PREFIX} --host=${CHOST} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
+			# calculate dependencies separately from compiling, enables ccache to work on kde compiles
+			myconf="$myconf --disable-dependency-tracking"
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug=full --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
 			debug-print "$FUNCNAME: myconf: set to ${myconf}"
