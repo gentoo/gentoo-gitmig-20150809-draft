@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.13 2004/06/24 21:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.14 2004/06/28 23:43:29 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> gok-0.10.0.ebuild,
+  gok-0.10.2.ebuild, gok-0.9.1.ebuild, gok-0.9.3.ebuild:
+  add sed-4 dep
 
   16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> gok-0.10.2.ebuild:
   Stable on alpha.

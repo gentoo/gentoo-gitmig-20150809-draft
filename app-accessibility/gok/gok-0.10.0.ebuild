@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.0.ebuild,v 1.9 2004/06/24 21:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.0.ebuild,v 1.10 2004/06/28 23:43:29 agriffis Exp $
 
 inherit gnome2
 
@@ -25,7 +25,8 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27.3
 	dev-util/pkgconfig
-	app-text/scrollkeeper"
+	app-text/scrollkeeper
+	>=sys-apps/sed-4"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
