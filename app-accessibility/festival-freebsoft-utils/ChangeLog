@@ -1,0 +1,8 @@
+# ChangeLog for app-accessibility/festival-freebsoft-utils
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.1 2004/04/04 23:57:58 dmwaters Exp $
+
+  04 Apr 2004; Deedra Waters,,, <dmwaters@gentoo.org> :
+  Initial ebuild
+  Thanks to John Hood for this ebuild
+
