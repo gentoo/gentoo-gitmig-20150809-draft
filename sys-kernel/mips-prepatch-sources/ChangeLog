@@ -1,11 +1,14 @@
 # ChangeLog for sys-kernel/mips-prepatch-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/ChangeLog,v 1.3 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/ChangeLog,v 1.4 2003/11/21 00:40:46 kumba Exp $
 
-  20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
-  mips-prepatch-sources-2.4.22_rc2-r1.ebuild:
-  Move version handling logic to after inherit kernel, or insert it where
-  necessary
+*mips-prepatch-sources-2.4.23_rc2 (20 Nov 2003)
+
+  20 Nov 2003; Joshua Kinard <kumba@gentoo.org>
+  mips-prepatch-sources-2.4.22_rc2-r1.ebuild,
+  mips-prepatch-sources-2.4.23_rc2.ebuild:
+  New revision containing 2.4.23-rc2 cvs snap from 20031120 from linux-mips.org
+  anoncvs
 
 *mips-prepatch-sources-2.4.22_rc2-r1 (14 Aug 2003)
 
