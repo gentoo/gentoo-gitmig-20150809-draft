@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.4.ebuild,v 1.4 2004/11/18 08:10:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.4.ebuild,v 1.5 2004/11/24 11:40:50 eradicator Exp $
 
 IUSE="gtk gtk2 tcltk sdk"
 
@@ -12,7 +12,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+# Removing ~amd64 until I figure out why xorg-x11-6.8.0 doesn't like it...
+#KEYWORDS="~amd64 x86"
+KEYWORDS="x86"
 
 RDEPEND="virtual/x11
 	gtk? (

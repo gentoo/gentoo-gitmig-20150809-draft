@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.17 2004/11/18 08:05:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.18 2004/11/24 11:40:50 eradicator Exp $
+
+  24 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  linuxwacom-0.6.4.ebuild:
+  Removing ~amd64 because of some problems I'm seeing with my intuos2 and
+  xorg-x11-6.8.0
 
   18 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/linuxwacom-0.6.4-nonx86.patch, linuxwacom-0.6.4.ebuild:
