@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-recode/irssi-recode-1.36.ebuild,v 1.5 2004/07/24 01:35:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-recode/irssi-recode-1.36.ebuild,v 1.6 2004/09/12 02:56:30 swegener Exp $
 
 inherit gcc flag-o-matic
 
@@ -11,7 +11,8 @@ SRC_URI="http://irssi.org/files/irssi-${IRSSI}.tar.bz2"
 HOMEPAGE="http://lefort.be.eu.org/irssi/"
 
 DEPEND=">=net-irc/irssi-${IRSSI}
-	>=dev-libs/glib-2.0"
+	>=dev-libs/glib-2.0
+	!>=net-irc/irssi-0.8.10_rc5"
 #Irssi needs to be compiled with glib-2
 
 SLOT="0"
