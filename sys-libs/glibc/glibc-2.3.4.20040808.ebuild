@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.6 2004/08/11 16:30:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.7 2004/08/11 21:39:24 iluxa Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -349,18 +349,9 @@ do_arch_mips_patches() {
 	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
 	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
 	# <iluxa@gentoo.org> add n32/n64 patches, remove pread patch
-	#epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
-	#epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
-	#epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-dl-machine-calls.diff
-	#epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
 	epatch ${FILESDIR}/2.3.3/mips-addabi.diff
-	#epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
-	#epatch ${FILESDIR}/2.3.3/semtimedop.diff
-	#epatch ${FILESDIR}/2.3.3/mips-sysify.diff
-
-	#if use n32 || use n64; then
-	#	epatch ${FILESDIR}/2.3.4/mips-sysdep-cancel.diff
-	#fi
+	epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
+	epatch ${FILESDIR}/2.3.3/mips-sysify.diff
 
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.

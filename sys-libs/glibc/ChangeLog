@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.232 2004/08/11 11:10:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.233 2004/08/11 21:39:24 iluxa Exp $
+
+  11 Aug 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  glibc-2.3.4.20040808.ebuild:
+  Latest GLIBC cvs has most of what is needed for N32/N64
 
   11 Aug 2004; Michael Hanselmann <hansmi@gentoo.org>
   glibc-2.3.3.20040420-r1.ebuild:
