@@ -1,10 +1,13 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.25 2003/02/23 18:52:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.26 2003/03/05 17:24:11 lordvan Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*ghostscript-7.05.6 (05 Mar 2003)
+  05 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org>: new version
+	
 
 *ghostscript-7.05.5-r2 (28 Jan 2003)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   23 Feb 2003; foser <foser@gentoo.org> ghostscript-7.05.5[-r1,-r2].ebuild :
   Removed gnome USE flag (gimp-print) because of #15464 
