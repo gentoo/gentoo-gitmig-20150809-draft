@@ -1,0 +1,31 @@
+--- src/Makefile.am.orig	2004-11-29 10:27:33.000000000 +0000
++++ src/Makefile.am	2004-11-29 10:28:01.000000000 +0000
+@@ -25,7 +25,7 @@
+ bin_PROGRAMS = komics
+ komics_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ komics_SOURCES = main.cpp
+-komics_LDADD = $(top_builddir)/src/libkomics.la $(LIB_KDEUI) $(LIB_KIO)
++komics_LDADD = libkomics.la $(LIB_KDEUI) $(LIB_KIO)
+ 
+ #komics_bin_DATA = komics-bin.desktop
+ #komics_bindir = $(kde_datadir)/komics
+--- src/Makefile.in.orig	2004-11-29 10:27:45.000000000 +0000
++++ src/Makefile.in	2004-11-29 10:27:58.000000000 +0000
+@@ -273,7 +273,7 @@
+ bin_PROGRAMS = komics
+ komics_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ komics_SOURCES = main.cpp
+-komics_LDADD = $(top_builddir)/src/libkomics.la $(LIB_KDEUI) $(LIB_KIO)
++komics_LDADD = libkomics.la $(LIB_KDEUI) $(LIB_KIO)
+ 
+ #komics_bin_DATA = komics-bin.desktop
+ #komics_bindir = $(kde_datadir)/komics
+@@ -307,7 +307,7 @@
+ #>- komics_OBJECTS = $(am_komics_OBJECTS)
+ #>+ 1
+ komics_OBJECTS = main.$(OBJEXT)
+-komics_DEPENDENCIES = $(top_builddir)/src/libkomics.la
++komics_DEPENDENCIES = libkomics.la
+ 
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/komics-1.4.ebuild,v 1.1 2004/11/28 18:39:36 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/komics-1.4.ebuild,v 1.2 2004/11/29 16:08:57 motaboy Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.orson.it/~domine/komics/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="arts"
+IUSE=""
 
 S=${WORKDIR}/komics
 
@@ -25,5 +25,6 @@ src_unpack() {
 	kde_src_unpack
 
 	epatch ${FILESDIR}/${P}-gcc3.4.patch
+	epatch ${FILESDIR}/${P}-Makefiles.patch
 }
 
