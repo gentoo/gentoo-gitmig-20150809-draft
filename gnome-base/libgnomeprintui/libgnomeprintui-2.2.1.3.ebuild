@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.2.1.3.ebuild,v 1.7 2003/09/23 15:50:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.2.1.3.ebuild,v 1.8 2003/10/09 20:54:51 foser Exp $
 
 inherit gnome2 eutils
 
@@ -13,7 +13,7 @@ SLOT="2.2"
 KEYWORDS="x86 ppc ~alpha ~sparc ~hppa ~amd64"
 LICENSE="GPL-2 LGPL-2.1"
 
-RDEPEND=">=gnome-base/libgnomeprint-${PV}*
+RDEPEND="=gnome-base/libgnomeprint-${PV}*
 	>=gnome-base/libgnomecanvas-2"
 
 DEPEND="${RDEPEND}
