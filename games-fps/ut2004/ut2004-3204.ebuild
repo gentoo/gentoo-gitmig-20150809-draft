@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.1 2004/05/20 20:39:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.2 2004/05/21 12:31:13 wolf31o2 Exp $
 
 inherit games
 
@@ -33,13 +33,9 @@ pkg_setup() {
 	if [ -n "${CD_ROOT}" ]; then
 		[ -d "${CD_ROOT}/CD1" ] && USE_DVD=1
 	else
-		local cd_dir="$(dirname ${@})"
-		local file="$(basename ${@})"
 		local mline=""
 		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
-			[ -d "${mline}/${cd_dir}" ] || continue
-			[ ! -z "$(find ${mline}/${cd_dir} -iname ${file} -maxdepth 1)" ] \
-				&& [ -d "${mline}/CD1" ] && USE_DVD=1
+			[ -d "${mline}/CD1" ] && USE_DVD=1
 		done
 	fi
 	if [ ${USE_DVD} ]; then
