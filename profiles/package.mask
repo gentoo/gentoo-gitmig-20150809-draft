@@ -1166,10 +1166,6 @@ x11-libs/gdkxft
 # Masked because installs headers in wrong location
 =media-libs/id3lib-3.8.0_pre2-r2
 
-# naz@gentoo.org 16 Jun 2002
-# Works but needs some testing an finishing startxdfb script, hint hint :o).
-x11-base/xdirectfb
-
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
 >=dev-db/mysql-4.0.1_alpha
