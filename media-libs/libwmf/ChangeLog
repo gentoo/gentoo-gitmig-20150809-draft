@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.14 2003/03/24 02:57:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.15 2003/05/13 05:18:22 vladimir Exp $
 
 *libwmf-0.2.8 (24 Mar 2003)
+
+  12 May 2003; Graham Forest <vladimir@gentoo.org> libwmf-0.2.8.ebuild:
+  set ppc in keywords
 
   24 Mar 2003; Alastair Tse <liquidx@gentoo.org> libwmf-0.2.8.ebuild:
   Version Bump

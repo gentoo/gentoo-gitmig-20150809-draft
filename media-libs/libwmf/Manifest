@@ -1,0 +1,7 @@
+MD5 5738c84713dd19f9765ee264042e5353 ChangeLog 2493
+MD5 e938c26582efb18c0bbc7e754f522c95 libwmf-0.2.6.ebuild 1253
+MD5 0274ca3694169eadc0aee7311fdb8761 libwmf-0.2.8.ebuild 1684
+MD5 04c184e0095bc678be901ef1a9ff36f1 libwmf-0.2.7-r2.ebuild 1687
+MD5 788d19b5038f90a8c1eb2669b41d7464 files/digest-libwmf-0.2.6 65
+MD5 476554b8bd5bd3fdb61867e3236706ae files/digest-libwmf-0.2.7-r2 65
+MD5 61f2f3c6fe5cbadfdb746d5f03c5f578 files/digest-libwmf-0.2.8 65
