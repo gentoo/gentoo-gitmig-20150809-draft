@@ -1,0 +1,28 @@
+--- pmud.orig	2004-01-22 21:49:48.351629584 +0100
++++ pmud.c	2004-01-22 21:53:45.464582936 +0100
+@@ -360,10 +360,10 @@
+ 
+ 	chk(pmu_fd < 0, "Couldn't open " PMU_FILE " or " PMU_DEVFS_FILE);
+ 
+-	chk(fcntl(pmu_fd, F_GETFL, &fl) < 0, "fcntl(F_GETFL)");
++	chk( (fl = fcntl(pmu_fd, F_GETFL)) < 0, "fcntl(F_GETFL)");
+ 
+ 	fl |= O_NONBLOCK;
+-	chk(fcntl(pmu_fd, F_SETFL, &fl) < 0, "fcntl(F_SETFL)");
++	chk(fcntl(pmu_fd, F_SETFL, fl) < 0, "fcntl(F_SETFL)");
+ 
+ 	add_fd(pmu_fd, POLLIN, pmu_intr, NULL);
+ 
+@@ -1194,10 +1194,10 @@
+ 	struct sockstate *ss;
+ 
+ 	fe = accept(fd, NULL, 0);
+-	chk(fcntl(fe, F_GETFL, &fl) < 0, "fcntl(F_GETFL)");
++	chk((fl =fcntl(fe, F_GETFL)) < 0, "fcntl(F_GETFL)");
+ 
+ 	fl |= O_NONBLOCK;
+-	chk(fcntl(fe, F_SETFL, &fl) < 0, "fcntl(F_SETFL)");
++	chk(fcntl(fe, F_SETFL, fl) < 0, "fcntl(F_SETFL)");
+ 
+ 	ss = malloc(sizeof(*ss));
+ 	if (ss == 0) 
