@@ -5,6 +5,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with \
 input data corruption."
 SRC_URI="http://www.ibiblio.org/pub/linux/system/backup/${P}.tgz"
+SLOT="0"
 HOMEPAGE="http://freshmeat.net/projects/afio/"
 LICENSE="Artistic|LGPL"
 

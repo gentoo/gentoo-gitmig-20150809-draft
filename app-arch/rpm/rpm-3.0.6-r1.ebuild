@@ -1,10 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.6-r1.ebuild,v 1.7 2002/07/11 06:30:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.6-r1.ebuild,v 1.8 2002/07/17 20:44:57 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Red Hat Package Management Utils"
 SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-3.0.x/${P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://www.rpm.org/"
 LICENSE="GPL|LGPL"
 

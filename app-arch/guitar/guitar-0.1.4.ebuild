@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.3 2002/07/11 06:30:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.4 2002/07/17 20:44:57 drobbins Exp $
 
 
 MY_P=guiTAR-${PV}
@@ -8,6 +8,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Extraction tool, supports the tar, tar.Z, tar.gz, tar.bz2, lha,
 lzh, rar, arj, zip, and slp formats."
 SRC_URI="http://artemis.efes.net/disq/${PN}/${MY_P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://artemis.efes.net/disq/guitar/"
 
 LICENSE="GPL-2"

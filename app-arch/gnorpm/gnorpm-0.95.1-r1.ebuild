@@ -5,6 +5,7 @@
 S=${WORKDIR}/${P}
 DESCRIPTION="A Gnome RPM Frontend"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 

@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.28-r1.ebuild,v 1.2 2002/07/11 06:30:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.28-r1.ebuild,v 1.3 2002/07/17 20:44:57 drobbins Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Dump/restore ext2fs backup utilities"
 SRC_URI="http://download.sourceforge.net/dump/${MY_P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://dump.sourceforge.net"
 
 DEPEND=">=sys-apps/e2fsprogs-1.27
