@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_injection
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/ChangeLog,v 1.4 2004/04/04 22:50:44 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/ChangeLog,v 1.5 2004/04/26 15:33:05 zul Exp $
+
+*mod_injection-0.3.1 (27 Apr 2004)
+
+  27 Apr 2004; Chuck Short <zul@gentoo.org> mod_injection-0.3.1.ebuild:
+  Version bump.
 
   04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
   mod_injection-0.3.0.ebuild:
