@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r1.ebuild,v 1.5 2005/02/14 19:13:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r1.ebuild,v 1.6 2005/02/14 19:26:06 lanius Exp $
 
 inherit libtool flag-o-matic multilib
 
@@ -75,10 +75,13 @@ src_install() {
 	rm -fR ${D}/usr/$(get_libdir)/lesstif/LessTif/
 	rm -fR ${D}/usr/$(get_libdir)/X11/
 
-	# install profile
-	echo "$P" > ${D}/usr/lib/motif/lesstif
 }
 
+# Profile stuff
 pkg_postinst() {
-	motif-config lesstif
+	motif-config --install lesstif
+}
+
+pkg_postrm() {
+	motif-config --uninstall lesstif
 }
