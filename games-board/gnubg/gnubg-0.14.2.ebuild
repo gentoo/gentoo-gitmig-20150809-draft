@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.6 2004/12/10 03:21:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.7 2004/12/17 08:40:51 dholm Exp $
 
 inherit gnuconfig flag-o-matic games
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 #-amd64: segfault on game start -- eradicator
-KEYWORDS="~x86 ~sparc -amd64"
+KEYWORDS="~x86 ~sparc -amd64 ~ppc"
 IUSE="gtk gtk2 readline python guile X gdbm truetype nls png esd arts nas"
 
 # FIXME does this need to DEPEND on netpbm?
