@@ -1,0 +1,22 @@
+--- extra.h.orig	2005-01-24 09:02:43.587224432 +0100
++++ extra.h	2005-01-24 09:03:11.704949888 +0100
+@@ -28,6 +28,10 @@
+ 
+ #define LIBGNUTLS_EXTRA_VERSION LIBGNUTLS_VERSION
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ /* Openpgp certificate stuff 
+  */
+ 
+@@ -76,4 +80,8 @@
+  */
+ const char* gnutls_extra_check_version( const char *req_version);
+ 
++#ifdef __cplusplus
++}
++#endif
++
+ #endif
