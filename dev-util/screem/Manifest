@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb84c2b3969e72b6189ec832a36e0156 ChangeLog 3795
+MD5 24331af5fea457f484272e94713a184b ChangeLog 3883
 MD5 08399687f3bc72a64b13c092c3b8e7e0 metadata.xml 281
-MD5 97e8985036c17c4a946fa0cfa73bf027 screem-0.10.2-r1.ebuild 1531
+MD5 9e4ca3705b352868b301a6dd696f4a93 screem-0.10.2-r1.ebuild 1536
 MD5 5162e952edf5fb8138a4d39a8ecfd09f screem-0.10.2.ebuild 1459
 MD5 6615ff57711f87f404dadcec64d2863e screem-0.4.1-r2.ebuild 1933
 MD5 fa043909dd86fe3fdbd67e03e923d4b6 screem-0.6.0.ebuild 1434
@@ -16,12 +13,5 @@ MD5 c0014bc2b1634015fdf4186f2d5311f2 files/digest-screem-0.4.1-r2 65
 MD5 d3ccd218010b7dbf41ca451d32bba29c files/digest-screem-0.6.0 65
 MD5 3beed928c0c988ad2b67a66d15754376 files/digest-screem-0.6.2 65
 MD5 d10ea61a9667f79982676c70cc75be58 files/digest-screem-0.8.1 65
-MD5 76c7e22a917deca493bb0f34bd7db6c1 files/screem-0.8.1-makefile-fix.patch 546
 MD5 577877e1ca757290a226d3e5bb49bf8b files/screem-0.10.2-eggtoolbar.patch 677
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD4DBQFBcvCKRkyva5PS18kRArW8AJduPx8AM3wIvE47kkYnLvJreRyvAJ4/l7lX
-mkKicxLeJqjNtKMJopDOeQ==
-=ArVI
------END PGP SIGNATURE-----
+MD5 76c7e22a917deca493bb0f34bd7db6c1 files/screem-0.8.1-makefile-fix.patch 546

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.10.2-r1.ebuild,v 1.2 2004/10/17 22:21:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.10.2-r1.ebuild,v 1.3 2004/11/12 20:33:39 blubb Exp $
 
 
 inherit gnome2 eutils
@@ -11,7 +11,7 @@ integrated environment of the creation and maintenance of websites and
 pages"
 SRC_URI="mirror://sourceforge/screem/${P}.tar.gz"
 HOMEPAGE="http://www.screem.org"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="ssl zlib"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/screem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.4 2004/10/17 22:21:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.5 2004/11/12 20:33:39 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> screem-0.10.2-r1.ebuild:
+  added ~amd64
 
   17 Oct 2004; Alastair Tse <liquidx@gentoo.org>
   +files/screem-0.10.2-eggtoolbar.patch, screem-0.10.2-r1.ebuild:
