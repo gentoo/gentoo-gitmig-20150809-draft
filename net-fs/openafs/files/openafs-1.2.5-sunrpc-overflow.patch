@@ -1,14 +1,5 @@
 --- openafs/src/rx/xdr_array.c	2001/08/08 00:03:57	1.4
 +++ openafs/src/rx/xdr_array.c	2002/07/31 23:13:49	1.4.2.1
-@@ -29,7 +29,7 @@
- #include <afsconfig.h>
- #include <afs/param.h>
- 
--RCSID("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-1.2.5-sunrpc-overflow.patch,v 1.2 2002/08/02 22:58:23 aliz Exp $");
-+RCSID("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-1.2.5-sunrpc-overflow.patch,v 1.2 2002/08/02 22:58:23 aliz Exp $");
- 
- #ifndef	NeXT
- 
 @@ -84,7 +84,10 @@
  	register caddr_t target = *addrp;
  	register u_int c;  /* the actual element count */
@@ -33,4 +24,31 @@
  
  RXOBJS = rx_clock.o rx_event.o rx_user.o rx_lwp.o rx.o rx_null.o rx_globals.o \
  	rx_getaddr.o rx_misc.o rx_packet.o rx_rdwr.o  rx_trace.o rx_conncache.o \
+
+--- openafs/src/rx/xdr.c	2002/06/08 04:47:43	1.3.4.1
++++ openafs/src/rx/xdr.c	2002/07/31 23:13:49	1.3.4.2
+@@ -557,6 +557,8 @@
+ 	register char *sp = *cpp;  /* sp is the actual string pointer */
+ 	u_int size;
+ 	u_int nodesize;
++
++        if (maxsize > ((~0) >> 1) - 1) maxsize = ((~0) >> 1) - 1;
+ 
+ 	/*
+ 	 * first deal with the length since xdr strings are counted-strings
+
+--- openafs/src/rx/xdr_arrayn.c	2001/08/08 00:03:57	1.4
++++ openafs/src/rx/xdr_arrayn.c	2002/07/31 23:13:49	1.4.2.1
+@@ -89,7 +89,10 @@
+ 	register caddr_t target = *addrp;
+ 	register u_int c;  /* the actual element count */
+ 	register bool_t stat = TRUE;
+-	register int nodesize;
++	register u_int nodesize;
++
++        i = ((~0) >> 1) / elsize;
++        if (maxsize > i) maxsize = i;
+ 
+ 	/* like strings, arrays are really counted arrays */
+ 	if (! xdr_u_int(xdrs, sizep)) {
 
