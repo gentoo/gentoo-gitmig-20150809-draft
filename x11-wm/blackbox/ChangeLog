@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/blackbox
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.31 2003/12/26 15:20:52 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.32 2004/02/17 22:55:58 gustavoz Exp $
+
+  17 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  blackbox-0.65.0-r3.ebuild:
+  stable on hppa
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> blackbox-0.65.0-r3.ebuild:
   Marked stable on sparc.
