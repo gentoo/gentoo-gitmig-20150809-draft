@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/linksys-tftp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linksys-tftp/ChangeLog,v 1.1 2004/03/18 07:30:14 dragonheart Exp $
+
+*linksys-tftp-1.2.1 (18 Mar 2004)
+
+  18 Mar 2004; Daniel Black <dragonheart@gentoo.org>
+  linksys-tftp-1.2.1.ebuild:
+  Inital ebuild by Justin Whitney <ripple@ripple.be> in bug #44090
+
