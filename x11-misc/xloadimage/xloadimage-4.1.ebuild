@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1.ebuild,v 1.2 2002/07/21 19:29:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1.ebuild,v 1.3 2002/07/22 06:17:36 aliz Exp $
 
-A=xloadimage.${PV}
-S=${WORKDIR}/${A}
+MY_P=${P/-/.}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Xloadimage is a utility which will view many different types of images under X11"
-SRC_URI="ftp://ftp.x.org/R5contrib/${A}.tar.gz"
+SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz"
 HOMEPAGE="http://gopher.std.com/homepages/jimf/xloadimage.html"
 LICENSE="MIT"
 SLOT="0"
@@ -17,7 +17,7 @@ DEPEND="x11-base/xfree
 #RDEPEND=""
 
 src_unpack() {
-	unpack ${A}.tar.gz
+	unpack ${MY_P}.tar.gz
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
 	
