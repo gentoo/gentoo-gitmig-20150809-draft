@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.16 2004/12/17 20:48:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.17 2005/02/18 17:34:23 slarti Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,12 +35,14 @@ src_unpack() {
 		configure
 
 	# Fix for amd64
-	[ "${ARCH}" = "amd64" ] && epatch ${FILESDIR}/${P}-64bit_goodness.patch
+	use amd64 && epatch ${FILESDIR}/${P}-64bit_goodness.patch
+
+	libtoolize --copy --force
 }
 
 src_compile() {
 	# Fix for amd64
-	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+	use amd64 && append-flags -fPIC
 
 	econf \
 		--datadir=/usr/share/${PN} \
