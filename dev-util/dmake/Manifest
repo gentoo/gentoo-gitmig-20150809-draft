@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9e1a22b471778ba99370e7d03d20ec6f ChangeLog 1068
-MD5 4d654091e5810542533fa716d2dea2b2 dmake-4.1-r1.ebuild 869
-MD5 20b8c36878d5b34899cc75dfcbd15c14 files/dmake-4.1-r1.diff 5005
+MD5 60379fbd41c59f15092481f13344b603 dmake-4.1-r1.ebuild 902
+MD5 1177696a555ae3b30e3c0864d0aec5c0 ChangeLog 1185
 MD5 1bae9786df720c3594a79dacd9e9c172 files/digest-dmake-4.1-r1 89
+MD5 20b8c36878d5b34899cc75dfcbd15c14 files/dmake-4.1-r1.diff 5005
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBjPOwI7fK2cqeyXkRAhknAJ4qiC6B0ChCa1xjHxsAsJ3WD+OddgCdFt4T
-7QGOIXxEAm5G+AEDYP1/AUU=
-=KhON
+iD8DBQFBvHbcI1lqEGTUzyQRAtw+AKC+2LfjvFCfPn+k5xGip0ZdJHty9QCghsCL
+y4PmMx/cpsTWPfLfFtKVSis=
+=h4ug
 -----END PGP SIGNATURE-----

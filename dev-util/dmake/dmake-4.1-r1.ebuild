@@ -1,47 +1,37 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.14 2004/12/12 11:12:21 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.15 2004/12/12 16:50:26 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="Improved make"
-SRC_URI="http://plg.uwaterloo.ca/~ftp/dmake/dmake-v4.1-src-export.all-unknown-all.tar.gz"
+SRC_URI="http://plg.uwaterloo.ca/~ftp/dmake/${PN}-v${PV}-src-export.all-unknown-all.tar.gz"
 HOMEPAGE="http://www.scri.fsu.edu/~dwyer/dmake.html"
 
 SLOT="0"
 LICENSE="GPL-1"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 IUSE=""
 
 DEPEND="sys-apps/groff"
 
+S=${WORKDIR}/${PN}
+
 src_unpack() {
-
-	cd ${WORKDIR}
-	unpack dmake-v4.1-src-export.all-unknown-all.tar.gz
-
-	mv dmake ${P}
-
+	unpack ${A}
 	cd ${S}
 
 	epatch ${FILESDIR}/${PF}.diff || die "epatch failed."
 }
 
 src_compile() {
-
-	sh unix/linux/gnu/make.sh
-	cp man/dmake.tf man/dmake.1
-
+	sh unix/linux/gnu/make.sh || die "sh unix/linux/gnu/make.sh failed"
 }
 
 src_install () {
-
-	into /usr
-
-	doman man/dmake.1
-	dobin dmake
+	dobin dmake || die "dobin failed"
+	newman man/dmake.tf dmake.1 || die "newman failed"
 
 	insinto /usr/share/dmake/startup
-	doins startup/{startup.mk,config.mk} startup/unix
-
+	doins -r startup/{{startup,config}.mk,unix} || die "doins failed"
 }
