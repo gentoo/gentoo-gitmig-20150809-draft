@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.30 2004/05/28 12:56:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.31 2004/05/31 13:15:41 karltk Exp $
+
+  28 May 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-3.0.0_pre9.ebuild, eclipse-sdk-3.0.0_pre8-r3.ebuild: Added check
+  to ensure it's only compiled with 1.4.2 JDKs and newer. Works with
+  blackdown-jdk-1.4.2_rc1. Removed eclipse-sdk-3.0.0_pre8-r2.ebuild
 
 *eclipse-sdk-3.0.0_pre9 (28 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre9.ebuild,v 1.1 2004/05/28 12:56:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre9.ebuild,v 1.2 2004/05/31 13:15:41 karltk Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="3"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
 
-RDEPEND=">=virtual/jdk-1.3
+RDEPEND=">=virtual/jdk-1.4.2
 	|| (
 		gtk? ( >=x11-libs/gtk+-2.2.4 )
 		kde? ( kde-base/kdelibs x11-libs/openmotif )
@@ -34,9 +34,18 @@ pkg_setup() {
 	ewarn "If you are using Eclipse 2.1.x for any serious work, stop now."
 	ewarn "You cannot expect to be productive with this packaging of 3.0!"
 
-	if [ ! -z "$(which java | grep blackdown)" ] ; then
-		ewarn "M9 does not appear to build with blackdown-jdk-1.4.1. Hit Ctrl-C now and switch to sun-jdk!"
-		sleep 5
+	# karltk: refactor, put in java-pkg.eclass?
+	local version="$(java-config --java-version | grep 'java version' | sed -r 's/java version \"(.*)\"/\1/')"
+	local ver_rx="([0-9]+)\.([0-9]+)\.([0-9]+)(.*)"
+	local major=$(echo ${version} | sed -r "s/${ver_rx}/\1/")
+	local minor=$(echo ${version} | sed -r "s/${ver_rx}/\2/")
+	local patch=$(echo ${version} | sed -r "s/${ver_rx}/\3/")
+	local extra=$(echo ${version} | sed -r "s/${ver_rx}/\4/")
+
+	if [ ${major} -ge 1 ]  && [ ${minor} -ge 4 ] && [ ${patch} -ge 2 ] ; then
+		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
+	else
+		die "Detected JDK is too old to compile Eclipse, need at least 1.4.2!"
 	fi
 }
 
@@ -72,7 +81,7 @@ src_unpack() {
 	cd ${S}
 	unpack ${A}
 
-	epatch ${FILESDIR}/01-distribute_ant_target-3.0.patch
+#	epatch ${FILESDIR}/01-distribute_ant_target-3.0.patch
 
 	# karltk: doesn't work, is it required anymore?
 #	if use kde ; then
@@ -81,6 +90,7 @@ src_unpack() {
 
 	# Needed for the IBM JDK
 	addwrite "/proc/self/maps"
+	addwrite "/proc/cpuinfo"
 
 	# Clean up all pre-built code
 	ant -q -DinstallWs=gtk -DinstallOs=linux clean
@@ -122,17 +132,6 @@ src_unpack() {
 		-e "s:MOZILLACFLAGS = -O:MOZILLACFLAGS = -O -fPIC:" \
 		-e "s:\$(JAVA_HOME)/jre/bin:\$(JAVA_HOME)/jre/lib/i386:" \
 		-i make_gtk.mak
-
-	# Extra patching if the gtk+ installed is 2.4 or newer
-	# for users with the 2.3 series, they should upgrade, dunno which 2.3.x all this
-	#  stuff broke in anyway.
-	if pkg-config --atleast-version 2.4 gtk+-2.0 ; then
-		einfo "Applying gtk+-2.4 patches"
-		sed -r \
-			-e "s:#define GTK_DISABLE_DEPRECATED::g" \
-			-e "s:(^void gtk_progress_bar_set_bar_style.*):/* \1 */:" \
-			-i os.h
-	fi
 
 	cd ${S}/"${motif_swt_src_dir}"
 	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT/common/library/* .
@@ -199,6 +198,7 @@ build_motif_frontend() {
 src_compile() {
 
 	addwrite "/proc/self/maps"
+	addwrite "/proc/cpuinfo"
 
 	# Figure out correct boot classpath
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then

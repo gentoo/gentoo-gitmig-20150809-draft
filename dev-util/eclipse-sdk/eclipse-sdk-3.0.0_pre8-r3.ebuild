@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8-r3.ebuild,v 1.1 2004/05/26 22:50:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8-r3.ebuild,v 1.2 2004/05/31 13:15:41 karltk Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="3"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
 
-RDEPEND=">=virtual/jdk-1.3
+RDEPEND=">=virtual/jdk-1.4.2
 	|| (
 		gtk? ( >=x11-libs/gtk+-2.2.4 )
 		kde? ( kde-base/kdelibs x11-libs/openmotif )
@@ -33,6 +33,21 @@ pkg_setup() {
 	ewarn "This package is _highly_ experimental."
 	ewarn "If you are using Eclipse 2.1.x for any serious work, stop now."
 	ewarn "You cannot expect to be productive with this packaging of 3.0!"
+
+	# karltk: refactor, put in java-pkg.eclass?
+	local version="$(java-config --java-version | grep 'java version' | sed -r 's/java version \"(.*)\"/\1/')"
+	local ver_rx="([0-9]+)\.([0-9]+)\.([0-9]+)(.*)"
+	local major=$(echo ${version} | sed -r "s/${ver_rx}/\1/")
+	local minor=$(echo ${version} | sed -r "s/${ver_rx}/\2/")
+	local patch=$(echo ${version} | sed -r "s/${ver_rx}/\3/")
+	local extra=$(echo ${version} | sed -r "s/${ver_rx}/\4/")
+
+	if [ ${major} -ge 1 ]  && [ ${minor} -ge 4 ] && [ ${patch} -ge 2 ] ; then
+		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
+	else
+		die "Detected JDK is too old to compile Eclipse, need at least 1.4.2!"
+	fi
+
 }
 
 set_dirs() {
