@@ -256,27 +256,14 @@ sys-fs/mkisofs
 # deprecated in favour of dev-lisp/cmucl (source package)
 dev-lisp/cmucl-bin
 
-# <avenj@gentoo.org> (25 Sep 2003)
-# Severly borks due to bad pam.d/login, see bug 29563
-=sys-apps/pam-login-3.12
-
 # <strider@gentoo.org> (21 Sep 2003)
 # ant 1.5.4 the ebuild is ok but ant
 # script its no working too well
 =dev-java/ant-1.5.4
 
-# <avenj@gentoo.org> (18 Sep 2003)
-# Not available to non-premier users yet
-=dev-lang/icc-7.1.029
-
 # msterret@gentoo.org (17 Sep 2003)
 # No need for the cvs snap anymore since the beta is out.
 =games-strategy/freeciv-1.15.0_alpha20030901
-
-# <avenj@gentoo.org> (16 Sep 2003)
-# Produces broken code. See bug 28875.
-=sys-devel/gcc-3.3.1-r2
-
 
 # <caleb@gentoo.org> (10 Sep 2003)
 # new kde versions mask
