@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vanessa-adt
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.1 2003/03/15 07:52:26 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.2 2004/03/19 09:49:25 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  vanessa-adt-0.0.4_beta4.ebuild:
+  fix depend (bug #45110); tidy
 
 *vanessa-adt-0.0.4_beta4.ebuild (14 Mar 2003)
 

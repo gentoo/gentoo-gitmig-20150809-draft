@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ntl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.3 2004/03/14 12:24:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.4 2004/03/19 09:48:18 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ntl-5.3.ebuild:
+  fix depend (bug #45110); tidy
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ntl-5.3.ebuild:
   Don't assign default to S; header fix
