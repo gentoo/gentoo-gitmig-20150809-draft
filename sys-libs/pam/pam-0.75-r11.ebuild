@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.11 2003/05/21 13:02:12 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.12 2003/06/04 23:30:48 drobbins Exp $
 
 IUSE="berkdb"
-
-inherit gcc eutils flag-o-matic
 
 PATCH_LEVEL=""
 
@@ -26,6 +24,9 @@ DEPEND=">=sys-libs/cracklib-2.7-r3
 	>=sys-devel/automake-1.6
 	>=sys-devel/flex-2.5.4a-r5
 	berkdb? ( >=sys-libs/db-3.2.9 )"
+
+#inherit needs to be after DEPEND definition to protect RDEPEND
+inherit gcc eutils flag-o-matic
 
 src_unpack() {
 	unpack ${A}
