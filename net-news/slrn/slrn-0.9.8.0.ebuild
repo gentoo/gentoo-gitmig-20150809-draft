@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Added ssl support and new patches
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0.ebuild,v 1.8 2004/02/29 00:24:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0.ebuild,v 1.9 2004/06/19 01:56:49 swegener Exp $
 
 IUSE="ssl nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="s-lang Newsreader"
 PATCH_URI="http://slrn.sourceforge.net/patches"
 SRC_URI="mirror://sourceforge/slrn/${P}.tar.bz2"
