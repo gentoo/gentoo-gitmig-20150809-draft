@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/wl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.16 2003/09/21 22:05:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.17 2003/09/22 01:07:42 usata Exp $
+
+*wl-2.11.16.20030921 (22 Sep 2003)
+
+  22 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.11.16.20030921.ebuild:
+  Updated CVS snapshot
 
 *wl-2.11.13.20030915 (22 Sep 2003)
 
