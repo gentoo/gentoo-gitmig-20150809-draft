@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4.ebuild,v 1.2 2004/01/23 16:32:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4.ebuild,v 1.3 2004/01/23 16:42:28 agriffis Exp $
 
 DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
 HOMEPAGE="http://developer.intel.com/technology/efi"
@@ -42,6 +42,7 @@ src_compile() {
 src_install() {
 	dodir /usr/lib/elilo || die
 	dodir /usr/sbin || die
+	dodir /etc || die
 
 	# install the efi executable in a known location
 	install -m755 elilo.efi ${D}/usr/lib/elilo || die
@@ -55,5 +56,6 @@ src_install() {
 
 	# install the debian elilo script
 	install -m755 elilo ${D}/usr/sbin || die
+	install -m644 ${FILESDIR}/elilo.conf.sample ${D}/etc || die
 	doman elilo.8 || die
 }

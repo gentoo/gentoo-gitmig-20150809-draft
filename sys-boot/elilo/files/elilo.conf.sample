@@ -1,0 +1,9 @@
+boot=/dev/sda1
+install=/usr/lib/elilo/elilo.efi
+delay=20
+default=Gentoo
+
+image=/boot/vmlinuz-2.4.22
+	label=Gentoo Linux
+        root=/dev/sda3
+        read-only
