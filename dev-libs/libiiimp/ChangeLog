@@ -1,9 +1,9 @@
 # ChangeLog for dev-libs/libiiimp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimp/ChangeLog,v 1.1 2003/09/14 00:18:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimp/ChangeLog,v 1.2 2003/09/14 01:45:36 usata Exp $
 
 *libiiimp-11.4.1467 (14 Sep 2003)
 
   14 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> libiiimp-11.4.1467.ebuild:
-  Initial import
+  Initial import.  See Bug #28272
 
