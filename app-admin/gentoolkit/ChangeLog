@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.85 2003/06/12 19:47:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.86 2003/06/13 07:21:27 rajiv Exp $
+
+*gentoolkit-0.1.26-r3 (13 Jun 2003)
+
+  13 Jun 2003; Rajiv Manglani <rajiv@gentoo.org> gentoolkit-0.1.26-r3.ebuild,
+  files/scripts/qpkg:
+  fixed typo. corrects bug #22694. patch from #22432 works now.
 
 *gentoolkit-0.1.26-r2 (12 Jun 2003)
 
