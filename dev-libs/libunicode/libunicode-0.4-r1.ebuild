@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.16 2003/02/07 16:47:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.17 2003/02/07 21:24:54 wwoods Exp $
+
+inherit gnuconfig
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Unicode library"
@@ -12,6 +14,12 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc"
+
+src_unpack() {
+        unpack ${A} || die
+        cd ${S}
+        use alpha && gnuconfig_update
+}
 
 src_compile() {                           
 	econf || die
