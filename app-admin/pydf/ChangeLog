@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.4 2004/10/05 02:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.5 2004/12/29 15:33:42 slarti Exp $
+
+  29 Dec 2004; Tom Martin <slarti@gentoo.org> pydf-0.9.6.ebuild:
+  Marked ~amd64, resolves bug 75863.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> pydf-0.9.6.ebuild:
   Masked pydf-0.9.6.ebuild stable for ppc
