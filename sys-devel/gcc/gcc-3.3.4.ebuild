@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4.ebuild,v 1.3 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4.ebuild,v 1.4 2004/06/27 18:26:57 lu_zero Exp $
 
 IUSE="static nls bootstrap build X multilib gcj f77 objc pic hardened uclibc debug"
 
@@ -353,7 +353,7 @@ src_unpack() {
 
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
 	then
-		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
+		epatch ${FILESDIR}/3.3.3/gcc333_pre20040408-stack-size.patch
 	fi
 
 	if [ "${ARCH}" = "arm" ]
