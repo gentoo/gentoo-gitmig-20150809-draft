@@ -1,7 +1,9 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.9 2003/06/29 18:24:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.10 2003/08/02 16:56:23 todd Exp $
 
+  02 Aug 2003; Todd Sunderlin <todd@gentoo.org> vile-9.2z.ebuild:
+  Marked stable on sparc
 
 *vile-9.3h (22 Dec 2002)
 
