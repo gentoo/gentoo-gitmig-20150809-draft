@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gaim-encryption
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.38 2004/10/21 09:35:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.39 2004/10/21 15:22:15 kloeri Exp $
+
+  21 Oct 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  gaim-encryption-2.32.ebuild:
+  Stable on alpha, bug 68271.
 
   21 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gaim-encryption-2.32.ebuild:
