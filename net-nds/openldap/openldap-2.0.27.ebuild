@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27.ebuild,v 1.10 2003/06/21 15:59:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27.ebuild,v 1.11 2003/08/03 04:09:45 vapier Exp $
 
 DESCRIPTION="LDAP suite of application and development tools"
 SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.OpenLDAP.org/"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 LICENSE="OPENLDAP"
-IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
+IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc debug"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
@@ -26,13 +26,7 @@ RDEPEND="virtual/glibc
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 src_compile() {
-	local myconf
-
-	if [ -n "$DEBUG" ]; then
-		myconf="--enable-debug"
-	else
-		myconf="--disable-debug"
-	fi
+	local myconf="`use_enable debug`"
 
 	use kerberos \
 		&& myconf="${myconf} --with-kerberos --enable-kpasswd" \
