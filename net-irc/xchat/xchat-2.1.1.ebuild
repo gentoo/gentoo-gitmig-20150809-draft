@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.1.0.ebuild,v 1.1 2004/07/24 00:31:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.1.1.ebuild,v 1.1 2004/08/05 22:59:19 swegener Exp $
 
 inherit flag-o-matic eutils
 
