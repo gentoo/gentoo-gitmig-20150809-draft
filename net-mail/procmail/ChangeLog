@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.9 2002/12/09 04:33:14 manson Exp $
+# $Header:
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
@@ -14,6 +14,10 @@
   /etc/procmailrc entry my mail was being delivered to ~/.maildir but not
   in maildir form (meaning messages were dumped into ~/.maildir instead of
   ~/.maildir/new.  So, I restored the creation of /etc/procmailrc.
+
+  09 Dec 2002; Jon Portnoy <avenj@gentoo.org> procmail-3.22-r5.ebuild :
+
+  Updated ebuild to respect icc USE flag, no revision bump necessary.
 
 *procmail-3.22-r4 (5 Sep 2002)
 	

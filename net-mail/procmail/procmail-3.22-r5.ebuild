@@ -1,14 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r5.ebuild,v 1.2 2002/12/09 04:33:14 manson Exp $
+# $Header:
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
 SRC_URI="http://www.procmail.org/${P}.tar.gz"
 HOMEPAGE="http://www.procmail.org/"
 
+IUSE="icc"
+
 DEPEND="virtual/glibc
-		virtual/mta"
+	virtual/mta
+	icc? ( >=dev-lang/icc-7.0 )"
 
 RDEPEND="virtual/glibc"
 
@@ -16,7 +19,7 @@ PROVIDE="virtual/mda"
 
 SLOT="0"
 LICENSE="Artistic | GPL"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 
@@ -42,6 +45,7 @@ src_compile() {
 		echo 'DEFAULT=/var/spool/mail/$LOGNAME' >> ${S}/procmailrc
 	fi
 
+	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
 	emake || die
 }
 
