@@ -1,0 +1,27 @@
+# Copyright 2001-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.0/2.4/packages,v 1.1 2004/12/03 14:36:49 wolf31o2 Exp $
+
+# For instructions on how this file works (as an inclusion mask, primarily),
+# please refer to ${PORTDIR}/profiles/base/packages
+
+# Use this file to lock down specific versions of packages ONLY TO THIS
+# SPECIFIC PROFILE!
+
+# You can also add files to the base system itself if you prefix them with a
+# *
+
+<ac-sources-2.5
+<ck-sources-2.5
+<gentoo-sources-2.5
+<grsec-sources-2.5
+<hardened-sources-2.5
+<openmosix-sources-2.5
+<rsbac-sources-2.5
+<uclinux-sources-2.5
+<usermode-sources-2.5
+<vanilla-sources-2.5
+<win4lin-sources-2.5
+<xbox-sources-2.5
+
+<linux-headers-2.5
