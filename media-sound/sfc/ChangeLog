@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/sfc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.1 2003/06/13 10:21:48 robh Exp $
+
+*sfc-0.012 (13 Jun 2003)
+
+  13 Jun 2003; robh <robh@gentoo.org> sfc-0.012.ebuild:
+  Initial version. Submitted by: Josep Andreu, closes #22216
+
