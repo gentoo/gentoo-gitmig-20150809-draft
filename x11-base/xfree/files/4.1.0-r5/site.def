@@ -1,0 +1,20 @@
+#define HasZlib YES
+#define HasGcc2ForCplusplus YES
+#define ForceNormalLib YES
+#define BuildXinerama YES
+#define SharedLibXau YES
+#define BuildRman NO
+#define BuildHtmlManPages NO
+#define BuildAllSpecsDocs NO
+#define BuildSpecsDocs NO
+#define BuildGLULibrary NO
+#define SharedLibGLU NO
+#define NormalLibGLU NO
+/* binutils-2.9 */
+#define LinuxBinUtilsMajorVersion 29
+/* glibc-2.2 (6.2 because glibc is considered libc-6) */
+#define LinuxCLibMajorVersion 6
+#define LinuxClibMinorVersion 2
+#define HasTk NO
+#define HasTcl NO
+#define FSUseSyslog YES
