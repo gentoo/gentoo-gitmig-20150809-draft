@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.7 2003/09/29 22:54:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.8 2004/02/01 23:40:20 vapier Exp $
 
 inherit flag-o-matic
-filter-flags -fPIC
 use kde && inherit kde
 
 MY_P=${PN/-/_}-${PV}
@@ -29,6 +28,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fPIC
+
 	local myconf
 
 	myconf="${myconf} --bindir=/usr/lib/xscreensaver" \
