@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.1 2004/04/29 18:02:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.2 2004/04/30 06:13:28 mr_bones_ Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -294,7 +294,7 @@ src_compile() {
 		if [[ $(gcc-major-version) -eq 3 ]]; then
 			# gcc-3 prior to 3.2.3 doesn't work well for pentium4
 			# see bug 25332
-			if [[ $(gcc-minor-version) -lt 2 || 
+			if [[ $(gcc-minor-version) -lt 2 ||
 				( $(gcc-minor-version) -eq 2 && $(gcc-micro-version) -lt 3 ) ]]
 			then
 				replace-flags -march=pentium4 -march=pentium3
