@@ -1,9 +1,9 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-0.12.ebuild,v 1.4 2002/11/12 05:28:14 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-0.12.ebuild,v 1.5 2002/11/12 07:59:49 seemant Exp $
 
 HOMEPAGE="http://distcc.samba.org/"
-SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.gz"
+SRC_URI="http://distcc.samba.org/ftp/${PN}/${P}.tar.gz"
 DESCRIPTION="a program to distribute compilation of C code across several machines on a network"
 LICENSE="GPL-2"
 SLOT="0"
