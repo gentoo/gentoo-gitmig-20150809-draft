@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.1 2004/09/23 09:32:59 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.2 2004/09/30 00:07:19 liquidx Exp $
 
 inherit perl-module eutils
 
@@ -29,6 +29,8 @@ src_unpack() {
 	else
 		epatch ${FILESDIR}/${P}-javapath.patch
 	fi
+	# bug #62873
+	cd ${S}/libpisock; epatch ${FILESDIR}/${P}-netsync.patch
 }
 
 src_compile() {
