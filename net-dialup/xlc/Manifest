@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 0bc36e384ee8c8146278bf9abb762382 xlc-1.0.6.ebuild 701
-MD5 e7cbfb91ea095ef8461289042d3a6d95 metadata.xml 230
+MD5 7073c6099bb609bb22dd70a505273cfa metadata.xml 232
 MD5 6cabeb7a52e7f968ce4c537ccd796c37 ChangeLog 382
 MD5 ae81e5e1458d13ddd929134a056b8d04 files/digest-xlc-1.0.6 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBqav/jtv59x0+BrURAgK0AKDD5nLgMroqy/sZwtO2GvdVl+qGjgCgiouN
-GrXYFtJ81V1IBpAchdF/5HA=
-=65n/
+iD8DBQFBqa24jtv59x0+BrURAvoRAJ4nbyvohTocOoW4riG7DN1h8R8tCgCdE+ZU
+EUn/EhDRYHiRf8gILI+OXJg=
+=cxK4
 -----END PGP SIGNATURE-----
