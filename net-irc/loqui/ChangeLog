@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/loqui
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.4 2004/02/21 02:48:54 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.5 2004/03/01 12:37:36 aliz Exp $
 
 *loqui-0.2.3 (20 Feb 2004)
 
@@ -18,6 +18,8 @@
   05 Feb 2004; Chuck Short <zul@gentoo.org> loqui-0.2.2.ebuild:
   Version bump, added depend on dev-perl/XML-Parser.
   Closes #40290.
+
+*loqui-0.1.19 (30 Sep 2003)
 
   30 Sep 2003; Chuck Short <zul@gentoo.org> metadata.xml:
   Version bump, closed bug #29979.

@@ -1,6 +1,8 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.28 2004/02/05 22:26:29 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.29 2004/03/01 12:37:36 aliz Exp $
+
+*epic4-1.2.6 (05 Feb 2004)
 
   05 Feb 2004; Chuck Short <zul@gentoo.org> :
   Version bump, updated SRC_URI. Closes #40349.
