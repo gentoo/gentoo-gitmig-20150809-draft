@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-strikeforce/unreal-tournament-strikeforce-1.81.ebuild,v 1.5 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-strikeforce/unreal-tournament-strikeforce-1.81.ebuild,v 1.6 2004/06/03 23:10:38 mr_bones_ Exp $
 
 inherit games
 
@@ -16,8 +16,11 @@ SRC_URI="mirror://gentoo/sf_180_server_files.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
-DEPEND="|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty )"
+DEPEND="|| (
+	games-fps/unreal-tournament
+	games-fps/unreal-tournament-goty )"
 
 S="${WORKDIR}"
 
