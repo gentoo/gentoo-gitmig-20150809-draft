@@ -61,7 +61,6 @@ virtual/os-headers
 *sys-apps/fbset
 *sys-apps/file
 *sys-apps/findutils
-*sys-apps/slocate
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff

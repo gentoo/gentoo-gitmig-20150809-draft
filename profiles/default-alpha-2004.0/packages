@@ -69,7 +69,6 @@
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5
-*sys-apps/slocate
 *>=sys-apps/texinfo-4.2-r5
 *sys-apps/util-linux
 *sys-apps/which
