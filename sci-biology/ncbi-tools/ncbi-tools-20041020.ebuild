@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20041020.ebuild,v 1.1 2005/01/19 00:16:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20041020.ebuild,v 1.2 2005/01/30 16:50:04 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -40,8 +40,9 @@ src_unpack() {
 
 	if ! use X; then
 		cd ${S}/make
-		sed -e "s:\#set HAVE_OGL=0:set HAVE_OGL=0:" -i makedis.csh
-		sed -e "s:\#set HAVE_MOTIF=0:set HAVE_MOTIF=0:" -i makedis.csh
+		sed -e "s:\#set HAVE_OGL=0:set HAVE_OGL=0:" \
+			-e "s:\#set HAVE_MOTIF=0:set HAVE_MOTIF=0:" \
+			-i makedis.csh || die
 	else
 		if use x86; then
 			# X applications segfault on startup on x86 with -O3.
@@ -52,40 +53,45 @@ src_unpack() {
 	# Apply user C flags...
 	cd ${S}/platform
 	# ... on x86...
-	sed -i -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" linux-x86.ncbi.mk
-	sed -i -e "s/NCBI_LDFLAGS1 = -O3 -mcpu=pentiumpro/NCBI_LDFLAGS1 = ${CFLAGS}/" linux-x86.ncbi.mk
-	sed -i -e "s/NCBI_OPTFLAG = -O3 -mcpu=pentiumpro/NCBI_OPTFLAG = ${CFLAGS}/" linux-x86.ncbi.mk
+	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3 -mcpu=pentiumpro/NCBI_LDFLAGS1 = ${CFLAGS}/" \
+		-e "s/NCBI_OPTFLAG = -O3 -mcpu=pentiumpro/NCBI_OPTFLAG = ${CFLAGS}/" \
+		-i linux-x86.ncbi.mk || die
 	# ... on alpha...
-	sed -i -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" linux-alpha.ncbi.mk
-	sed -i -e "s/NCBI_LDFLAGS1 = -O3 -mieee/NCBI_LDFLAGS1 = -mieee ${CFLAGS}/" linux-alpha.ncbi.mk
-	sed -i -e "s/NCBI_OPTFLAG = -O3 -mieee/NCBI_OPTFLAG = -mieee ${CFLAGS}/" linux-alpha.ncbi.mk
+	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3 -mieee/NCBI_LDFLAGS1 = -mieee ${CFLAGS}/" \
+		-e "s/NCBI_OPTFLAG = -O3 -mieee/NCBI_OPTFLAG = -mieee ${CFLAGS}/" \
+		-i linux-alpha.ncbi.mk || die
 	# ... on hppa...
-	sed -i -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" hppalinux.ncbi.mk
-	sed -i -e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS}/" hppalinux.ncbi.mk
-	sed -i -e "s/NCBI_OPTFLAG = -O2/NCBI_OPTFLAG = ${CFLAGS}/" hppalinux.ncbi.mk
+	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS}/" \
+		-e "s/NCBI_OPTFLAG = -O2/NCBI_OPTFLAG = ${CFLAGS}/" \
+		-i hppalinux.ncbi.mk || die
 	# ... on ppc...
-	sed -i -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" ppclinux.ncbi.mk
-	sed -i -e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS}/" ppclinux.ncbi.mk
-	sed -i -e "s/NCBI_OPTFLAG = -O2/NCBI_OPTFLAG = ${CFLAGS}/" ppclinux.ncbi.mk
+	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS}/" \
+		-e "s/NCBI_OPTFLAG = -O2/NCBI_OPTFLAG = ${CFLAGS}/" \
+		-i ppclinux.ncbi.mk || die
 	# ... on generic Linux.
-	sed -i -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" linux.ncbi.mk
-	sed -i -e "s/NCBI_LDFLAGS1 = -O3/NCBI_LDFLAGS1 = ${CFLAGS}/" linux.ncbi.mk
-	sed -i -e "s/NCBI_OPTFLAG = -O3/NCBI_OPTFLAG = ${CFLAGS}/" linux.ncbi.mk
+	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3/NCBI_LDFLAGS1 = ${CFLAGS}/" \
+		-e "s/NCBI_OPTFLAG = -O3/NCBI_OPTFLAG = ${CFLAGS}/" \
+		-i linux.ncbi.mk || die
 
 	# Put in our MAKEOPTS (doesn't work).
 	# sed -e "s:make \$MFLG:make ${MAKEOPTS}:" -i ncbi/make/makedis.csh
 
 	# Set C compiler...
 	# ... on x86...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux-x86.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux-x86.ncbi.mk || die
 	# ... on alpha...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux-alpha.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux-alpha.ncbi.mk || die
 	# ... on hppa...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" hppalinux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" hppalinux.ncbi.mk || die
 	# ... on ppc...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" ppclinux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" ppclinux.ncbi.mk || die
 	# ... on generic Linux.
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux.ncbi.mk || die
 }
 
 src_compile() {
