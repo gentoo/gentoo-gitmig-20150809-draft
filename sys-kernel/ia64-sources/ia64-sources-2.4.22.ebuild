@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.5 2003/12/02 03:48:50 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.6 2004/01/06 20:30:35 plasmaroo Exp $
 
 IUSE=""
 
@@ -48,7 +48,11 @@ src_unpack() {
 #	cat ${DISTDIR}/cset-${MYCSET}.txt.gz | gzip -d | patch -f -p1
 	[ ! -e ${DISTDIR}/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2 ] && die "patch not found"
 	cat ${DISTDIR}/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2 | bzip2 -d | patch -f -p1
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+
 	kernel_universal_unpack
 }
 
