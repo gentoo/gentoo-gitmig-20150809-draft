@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.5 2003/03/04 19:41:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.6 2003/03/07 14:01:32 latexer Exp $
 
 NOCO_VERSION="0.13b"
 
@@ -87,7 +87,9 @@ src_compile() {
 	else
 		myconf="$myconf --cardbus"
 	fi
-
+	if [ -n "`use build`" ] ; then
+		myconf="$myconf --force"
+	fi
 	#use $CFLAGS for user tools, but standard kernel optimizations for the kernel modules (for compatibility)
 	./Configure -n \
 		--target=${D} \
