@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2885 2004/05/29 19:01:11 squinky86 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2886 2004/05/30 02:22:32 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -820,18 +820,6 @@ app-admin/va-systemimager-client
 # broken
 >=net-www/konqueror-embedded-20010207
 >=media-video/mpeg2-movie-1.5
-
-# seems to be incompatible with autoconf 2.13, / Hallski
-# (seems ok to me, as i build a whole system with 1.4.2-r1,
-#  and we need it to fix the relink bug - Azarah [17 March 2002] )
-#
-# Seems we are back to square 1.  libtool-1.4.2 needs autoconf-2.5
-# or later .. masking 1.4.2 again and adding 1.4.1-r2 with the
-# "relink bug" fixed.
-#>=sys-devel/libtool-1.4.2
-=sys-devel/libtool-1.4.2-r2
-
-=dev-ruby/mod-ruby-0.9.7
 
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
