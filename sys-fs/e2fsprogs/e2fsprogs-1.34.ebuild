@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.3 2003/09/20 05:21:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.4 2003/09/20 05:22:19 seemant Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	local myconf
 
 	use static \
