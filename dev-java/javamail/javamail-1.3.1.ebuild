@@ -1,15 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javamail/javamail-1.3.1.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javamail/javamail-1.3.1.ebuild,v 1.4 2004/01/16 12:31:49 strider Exp $
 
 inherit java-pkg
 
 At="${PN}-${PV//./_}.zip"
 S=${WORKDIR}/${P}
 DESCRIPTION="A Java-based framework to build multiplatform mail and messaging applications."
-SRC_URI=""
+SRC_URI="${At}"
 HOMEPAGE="http://java.sun.com/products/javamail/index.html"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="sun-bcla-javamail"
 SLOT="0"
 DEPEND=">=app-arch/unzip-5.50-r1"
@@ -18,6 +18,17 @@ RDEPEND=">=virtual/jdk-1.2
 IUSE="doc"
 DEP_APPEND="jaf"
 RESTRICT="fetch"
+
+pkg_nofetch() {
+	einfo " "
+	einfo " Due to license restrictions, we cannot fetch the"
+	einfo " distributables automagically."
+	einfo " "
+	einfo " 1. Visit ${HOMEPAGE}"
+	einfo " 2. Download ${At}"
+	einfo " 3. Move file to ${DISTDIR}"
+	einfo " "
+}
 
 src_unpack() {
 	if [ ! -f "${DISTDIR}/${At}" ] ; then
@@ -47,4 +58,3 @@ src_install() {
 	use doc && dohtml -r docs/
 	java-pkg_dojar mail.jar lib/*.jar
 }
-
