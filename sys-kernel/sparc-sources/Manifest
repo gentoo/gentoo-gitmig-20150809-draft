@@ -1,9 +1,8 @@
-MD5 80b3fccff7c048360ee7c859b28389f3 sparc-sources-2.4.22-r1.ebuild 2234
 MD5 084b1528fa23bc2836219c1b5d0644a6 sparc-sources-2.4.21-r1.ebuild 2229
 MD5 34a347e2b0eaa4ac76faa335675407f9 sparc-sources-2.4.23.ebuild 2150
 MD5 29de7eebe8a32ba875514a32f6f95d07 sparc-sources-2.4.20-r8.ebuild 2395
 MD5 754c42fba6640866b8dbbac53d24fe8d sparc-sources-2.4.22.ebuild 2226
-MD5 c87d402997488a0c3705915dd7c267b3 ChangeLog 6487
+MD5 13d2a236024ab6a5d4a0301ed4a7b4d6 ChangeLog 6598
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
 MD5 afd982621a7d4faba455607353e659c9 files/digest-sparc-sources-2.4.22 140
 MD5 8c8598fb61743bb94c3a9eaf3ff339f4 files/digest-sparc-sources-2.4.23 140
@@ -12,6 +11,5 @@ MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 25553b42e5daa2638570a8b019a35069 files/generate-asm-sparc 1656
 MD5 5cc2d0aaf480b0f39d42e04133d4138a files/digest-sparc-sources-2.4.20-r8 143
 MD5 78fb563990b579b7408f77a65ca176a0 files/digest-sparc-sources-2.4.21-r1 143
-MD5 afd982621a7d4faba455607353e659c9 files/digest-sparc-sources-2.4.22-r1 140
 MD5 89fb52efc9018f970ceeeaadac9c0f9e files/2.4.19/sparc64-asm_offsets.h 35521
 MD5 13f20ae89e814fb87621b471e4d2ca68 files/2.4.19/sparc-asm_offsets.h 23156
