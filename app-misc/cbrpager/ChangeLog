@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/cbrpager
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/ChangeLog,v 1.1 2005/03/08 23:52:41 vapier Exp $
+
+*cbrpager-0.9.11 (08 Mar 2004)
+
+  08 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Sander Sweers #69628.
