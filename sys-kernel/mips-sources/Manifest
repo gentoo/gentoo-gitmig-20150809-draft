@@ -1,4 +1,4 @@
-MD5 15572ddb932f6fa1d2b823e978c6bcb5 ChangeLog 9994
+MD5 4958baf2228f3edc4e0309124f9aef55 ChangeLog 10135
 MD5 ad25a2a0b6ade60c13ad8040f3c319c6 metadata.xml 378
 MD5 f68ccd8232d3fad9033d4bad71f68dbf mips-sources-2.4.21-r7.ebuild 2311
 MD5 827706c9fd682fa87523068eae0ae756 mips-sources-2.4.22-r10.ebuild 2139
@@ -25,6 +25,6 @@ MD5 1f646066ee81f7aea1f79a79e38a252d files/rtc-fixes.patch 2125
 MD5 de2c00e2df9c2bf74e5c090ade2c23b0 files/digest-mips-sources-2.4.25 217
 MD5 147fec50180ad91b6260fc7201dcb90f files/CAN-2004-0010-ncpfs.patch 6050
 MD5 174438d215b70cad5ffb00ca8123c062 files/CAN-2004-0077-do_munmap.patch 837
-MD5 cb37cacd47cc28dfd7fa3d1e16504f4a files/digest-mips-sources-2.6.3-r1 216
-MD5 87920142747e774c5c3949b91ebabdfc files/digest-mips-sources-2.6.3-r2 299
-MD5 ddbe29ad6a5452bccbd05a9ec1a00f0c files/digest-mips-sources-2.6.3 216
+MD5 de4d75d6d76f866f89e2fca35d161416 files/digest-mips-sources-2.6.3-r1 216
+MD5 214c73bd9aa640a54b52196c8f2c5433 files/digest-mips-sources-2.6.3-r2 299
+MD5 ef0bb5537d7c6e052bd16a86adec9240 files/digest-mips-sources-2.6.3 216
