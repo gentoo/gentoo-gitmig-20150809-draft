@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.12 2004/09/24 01:01:30 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.13 2004/09/24 17:32:37 fafhrd Exp $
 
 inherit eutils flag-o-matic
 
@@ -122,7 +122,8 @@ egnustep_install() {
 }
 
 egnustep_doc() {
-	if [ -d ./Documentation ] ; then
+	if [ -f ./Documentation/GNUmakefile -o -f ./Documentation/[mM]akefile ]
+	then
 		cd Documentation
 			make HOME=${TMP} \
 				GNUSTEP_USER_ROOT=${TMP}/GNUstep \
