@@ -1,0 +1,12 @@
+# ChangeLog for sys-devel/pmake
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.1 2002/12/03 09:45:28 bcowan Exp $
+
+*pmake-1.4.5-r2 (27 Nov 2002)
+
+  27 Nov 2002; Brad Cowan <bcowan@gentoo.org> pmake-1.4.5-r2.ebuild,
+  files/digest-pmake-1.4.5-r2, ChangeLog:
+  
+  Initial import, thanks to Spider's work for getting it 100% :).
+  
+
