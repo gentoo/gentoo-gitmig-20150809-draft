@@ -73,7 +73,7 @@ src_compile() {
 
   try ./configure --mandir=/usr/share/man --prefix=`cat ${T}/myprefix` --host=${CHOST} ${myconf}
 
-  try make OPTFLAGS=\"${CFLAGS}\" all
+  try make OPTFLAGS="${CFLAGS}" all
 
   echo "${myprefix}" > ${T}/myprefix
 

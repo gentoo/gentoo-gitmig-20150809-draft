@@ -26,7 +26,7 @@ src_unpack() {
  
 src_compile() {
 
-    try make EXTRA_CFLAGS=\"$CFLAGS\"
+    try make EXTRA_CFLAGS="$CFLAGS"
 
 }
 

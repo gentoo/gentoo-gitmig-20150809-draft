@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/glide/glide-3.0.20000312.ebuild,v 1.1 2001/03/13 22:27:56 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/glide/glide-3.0.20000312.ebuild,v 1.2 2001/08/11 03:50:11 drobbins Exp $
 
 #P=
 A=${P}.tar.bz2
@@ -21,12 +21,14 @@ src_compile() {
     cd build
     try ../configure --prefix=/usr --host=${CHOST} \
 	--enable-fx-glide-hw=h3 --enable-fx-build-dri
-    try make -f makefile.autoconf GLIDE_DEBUG_GCFLAGS=\""${CFLAGS}"\"
+    try make -f makefile.autoconf GLIDE_DEBUG_GCFLAGS="${CFLAGS}"
 }
 
 src_install () {
     cd ${S}/build
-    try make -f makefile.autoconf GLIDE_DEBUG_GCFLAGS=\""${CFLAGS}"\" DESTDIR=${D} install
+	#OK, shouldn't need to specify GCFLAGS below, removed (DR)
+    #try make -f makefile.autoconf GLIDE_DEBUG_GCFLAGS="${CFLAGS}" DESTDIR=${D} install
+    try make -f makefile.autoconf DESTDIR=${D} install
     
     cd ${S}
     dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README

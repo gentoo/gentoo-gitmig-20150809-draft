@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4.ebuild,v 1.5 2001/06/08 01:08:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4.ebuild,v 1.6 2001/08/11 03:50:11 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound system"
@@ -26,7 +26,7 @@ src_compile() {
 	else
 	  myconf="--prefix=/usr/X11R6"
 	fi
-	try CFLAGS=\"$CFLAGS -I/usr/X11R6/include -I/opt/gnome/include\" ./configure $myconf --host=${CHOST}
+	try CFLAGS="$CFLAGS -I/usr/X11R6/include -I/opt/gnome/include" ./configure $myconf --host=${CHOST}
 	try make
 }
 
