@@ -200,10 +200,6 @@ net-www/mod_pcgi
 net-www/scgi
 net-www/mod_scgi
 
-# <g2boojum@gentoo.org> 28 May 2003 	 
-# Masking >=openldap-2.1 until db4 stuff gets settled 	 
->=net-nds/openldap-2.1
-
 # pebenito@gentoo.org (03 Aug 2003)
 # new api/userland for selinux
 >=dev-python/python-selinux-2.0
