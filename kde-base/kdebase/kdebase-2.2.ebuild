@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.7 2001/08/23 16:59:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.8 2001/08/23 17:09:05 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Base"
@@ -58,9 +58,7 @@ src_compile() {
       myconf="$myconf --without-motif"
     fi
 
-    if [ "`use lame`" ] ; then
-      myconf="$myconf --with-lame=/usr"
-    else
+    if [ -z "`use lame`" ] ; then
       myconf="$myconf --without-lame"
     fi
 
