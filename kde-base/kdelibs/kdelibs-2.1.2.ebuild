@@ -29,7 +29,7 @@ RDEPEND=">=sys-devel/gcc-2.95.2
          >=media-libs/tiff-3.5.5
          >=sys-apps/bzip2-1.0.1
 	 >=x11-libs/qt-x11-2.3.0
-         =kde-base/kde-env-2.1-r1
+         >=kde-base/kde-env-2.1-r1
          app-text/sgml-common
          alsa? ( >=media-libs/alsa-lib-0.5.9 )
          ssl? ( >=dev-libs/openssl-0.9.6 )"

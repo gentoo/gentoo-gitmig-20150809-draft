@@ -11,7 +11,7 @@ HOMEPAGE="http://gnomeicu.sourceforge.net/"
 DEPEND="virtual/glibc sys-devel/gettext
 	>=gnome-base/gnome-core-1.2.4
         >=sys-libs/gdbm-1.8.0"
-RDEPEND="=gnome-base/gnome-core-1.2.4
+RDEPEND=">=gnome-base/gnome-core-1.2.4
         >=sys-libs/gdbm-1.8.0"
 
 src_unpack() {

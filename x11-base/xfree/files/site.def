@@ -4,4 +4,7 @@
 #define ForceNormalLib YES
 #define BuildXinerama YES
 #define SharedLibXau YES
+#define BuildGLULibrary NO
+#define SharedLibGLU NO
+#define NormalLibGLU NO
 

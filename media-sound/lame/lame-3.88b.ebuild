@@ -15,7 +15,7 @@ DEPEND="virtual/glibc dev-lang/nasm >=sys-libs/ncurses-5.2
         #vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2
-	gtk+ ( >=x11-libs/gtk+-1.2.8 )"
+	gtk? ( >=x11-libs/gtk+-1.2.8 )"
         #vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 src_unpack () {
