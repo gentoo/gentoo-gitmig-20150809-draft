@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.8.1.ebuild,v 1.2 2004/12/02 23:28:28 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.8.1.ebuild,v 1.3 2004/12/02 23:37:18 joem Exp $
 
 inherit gnome2
 
@@ -14,6 +14,7 @@ IUSE=""
 
 RDEPEND=">=gnome-base/gail-0.17
 	>=x11-libs/gtk+-2.4
+	dev-libs/popt
 	>=dev-libs/atk-1
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/libgnomeprintui-2.2"
