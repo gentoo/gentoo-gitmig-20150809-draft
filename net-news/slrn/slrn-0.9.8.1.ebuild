@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0_p1.ebuild,v 1.1 2004/10/02 19:26:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.1.ebuild,v 1.1 2004/10/09 21:14:10 swegener Exp $
 
 inherit eutils
 
-MY_P="${P/_p/pl}"
-
 DESCRIPTION="s-lang Newsreader"
 HOMEPAGE="http://slrn.sourceforge.net/"
-SRC_URI="http://slrn.sourceforge.net/patches/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/slrn/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +20,6 @@ RDEPEND="virtual/mta
 DEPEND="${RDEPEND}
 	uudeview? ( dev-libs/uulib )
 	nls? ( sys-devel/gettext )"
-
-S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
