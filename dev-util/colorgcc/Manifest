@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 3f8e8d8bfa282bf6e8e77385b9840d90 colorgcc-1.3.2-r2.ebuild 1508
-MD5 df33bf00e41131d389dc9fd3c2f26d1f colorgcc-1.3.2-r4.ebuild 1914
+MD5 b02cd9fc7d2a50a9e1dac81da0bfe868 colorgcc-1.3.2-r4.ebuild 2131
 MD5 f51d2cf7a27743750f69be61399eac66 colorgcc-1.3.2-r1.ebuild 1312
-MD5 f791eb8fb2f0b83ae51bf339ec17a2e7 ChangeLog 2241
+MD5 5633fcbce42933023aba68879272365f ChangeLog 2341
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 0a8e4c4ef77cfe93c9da6ba03ffa844e colorgcc-1.3.2-r3.ebuild 1641
 MD5 a7e0ce3a863e959031d6ebc250a24cd0 files/colorgcc-1.3.2-gentoo-one.patch 6576
@@ -17,7 +17,7 @@ MD5 a25cb38b04323bc5db5f0a442a905f4d files/colorgcc-1.3.2-gentoo-two.patch 1953
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBd9RJEZCkKN40op4RAuLQAJ0bm7bVlNENwEVgM/k2yMfD3rzVlgCgkQHd
-AiqFQGD3wuNCc0sjRw+U14s=
-=AseR
+iD8DBQFBqzvSEZCkKN40op4RAm/sAJ9bM4Itb3l5b0gPWN8oQcUrfQyvhgCeNE8L
+WZI/IFXoSC/6oW5tc3N/UPs=
+=DsyQ
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.5 2004/06/25 02:23:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.6 2004/11/29 15:10:00 ka0ttic Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mindspring.com/~jamoyers/software/colorgcc/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~mips ~ppc ~amd64"
 
 DEPEND="dev-lang/perl"
 
@@ -45,6 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	echo
 	einfo "If you have existing \$HOME/.colorgccrc files that set the location"
 	einfo "of the compilers, you should remove those lines for maximum"
 	einfo "flexibility.  The colorgcc script now knows how to pass the command"
@@ -52,8 +53,13 @@ pkg_postinst() {
 	einfo "easier to use with things like ccache and distcc on a conditional"
 	einfo "basis.  You can tweak the /etc/colorgcc/colorgccrc file to change"
 	einfo "the default settings for everyone (or copy this file as a basis for"
-	einfo "a custom \$HOME/.colorgccrc file).  NOTE also that the symlinks for"
-	einfo "colorgcc are now in the /usr/lib/colorgcc/bin dir NOT the"
-	einfo "/usr/bin/wrapper dir.  You'll need to change any PATH settings that"
-	einfo "referred to the old location."
+	einfo "a custom \$HOME/.colorgccrc file)."
+	einfo
+	einfo "NOTE: the symlinks for colorgcc are now located in"
+	einfo "/usr/lib/colorgcc/bin *NOT* /usr/bin/wrappers.  You'll need to"
+	einfo "change any PATH settings that referred to the old location."
+	echo
+	# portage won't delete the old symlinks for users that are upgrading
+	# because the old symlinks still point to /usr/bin/colorgcc which exists...
+	[ -d ${ROOT}/usr/bin/wrappers ] && rm -fr ${ROOT}/usr/bin/wrappers
 }
