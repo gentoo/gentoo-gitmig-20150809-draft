@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.12 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.13 2003/09/08 23:49:43 usata Exp $
 
 inherit flag-o-matic
 filter-flags "-fstack-protector"
@@ -26,7 +26,9 @@ DEPEND="sys-apps/ed
 	ncurses? ( sys-libs/ncurses )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )
 	zlib? ( sys-libs/zlib )"
-RDEPEND=">=dev-lang/perl-5.2
+RDEPEND="${DEPEND}
+	!virtual/tetex
+	>=dev-lang/perl-5.2
 	dev-util/dialog"
 PROVIDE="virtual/tetex"
 
@@ -34,7 +36,7 @@ src_unpack() {
 	unpack teTeX-src-${PV}.tar.gz
 
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+	patch -p1 < ${FILESDIR}/${P}-dvips-secure.diff
 
 	mkdir ${S}/texmf
 	cd ${S}/texmf

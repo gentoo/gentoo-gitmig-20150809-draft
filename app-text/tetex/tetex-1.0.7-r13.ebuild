@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.2 2003/09/07 07:01:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.3 2003/09/08 23:49:43 usata Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 filter-flags "-fstack-protector"
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
@@ -26,7 +26,9 @@ DEPEND="sys-apps/ed
 	sys-libs/ncurses
 	>=net-libs/libwww-5.3.2-r1
 	sys-libs/zlib"
-RDEPEND="$DEPEND >=dev-lang/perl-5.2
+RDEPEND="${DEPEND}
+	!virtual/tetex
+	>=dev-lang/perl-5.2
 	dev-util/dialog"
 PROVIDE="virtual/tetex"
 
@@ -34,7 +36,7 @@ src_unpack() {
 	unpack teTeX-src-${PV}.tar.gz
 
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${P}-dvips-secure.diff
 
 	mkdir ${S}/texmf
 	cd ${S}/texmf
@@ -49,15 +51,15 @@ src_unpack() {
 	# Fixes from way back ... not sure even Achim will
 	# still know why :/
 	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/teTeX-1.0-gentoo.diff || die
+	epatch ${FILESDIR}/teTeX-1.0-gentoo.diff
 	cd ${S}
-	patch -p0 < ${FILESDIR}/teTeX-1.0.dif || die
+	epatch ${FILESDIR}/teTeX-1.0.dif
 
 	# Do not run config stuff
-	patch -p1 < ${FILESDIR}/${P}-dont-run-config.diff || die
+	epatch ${FILESDIR}/${P}-dont-run-config.diff
 
 	# Fix for dvips to print directly.
-	patch -p1 < ${FILESDIR}/teTeX-1.0-dvips.diff || die
+	epatch ${FILESDIR}/teTeX-1.0-dvips.diff
 
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.
@@ -72,7 +74,6 @@ src_unpack() {
 	# IMPORTANT!  If you're having *.fmt problems, do this:
 	# fmtutil --all
 	# after the merge.
-
 }
 
 src_compile() {
@@ -102,7 +103,7 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	# emake seems to not work (18 Jan 2003 agriffis)
-	make
+	make || die
 }
 
 src_install() {

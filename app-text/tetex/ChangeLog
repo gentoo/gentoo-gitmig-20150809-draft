@@ -1,6 +1,14 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.44 2003/09/07 01:01:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.45 2003/09/08 23:49:43 usata Exp $
+
+  09 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r12.ebuild,
+  tetex-1.0.7-r13.ebuild, tetex-2.0.2-r1.ebuild, tetex-2.0.2.ebuild,
+  files/tetex-1.0.7-dvips-secure.diff, files/tetex-1.0.7-r11-gentoo.diff,
+  files/tetex-1.0.7-r12-gentoo.diff, files/tetex-2.0-dont-run-config.diff,
+  files/tetex-2.0.diff, files/texmf.dif:
+  Simplified tetex-1.0.7-r??-gentoo.diff.  This closes Bug #28136.
+  Removed old unnecessary patches.
 
   06 Sep 2003; Daniel Robbins <drobbins@gentoo.org> tetex-2.0.2-r1.ebuild,
   tetex-1.0.7-r13.ebuild: removed png, libwww and ncurses USE variables, which
