@@ -2,6 +2,14 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+*xcdroast-0.98_alpha14-r1 (17 Jul 2003)
+
+  17 Jul 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha14-r1.ebuild:
+  Adding two patches from the xcdroast author as described in Bug 22042. Thanks
+  to digex@web.de for the ebuild.
+  
+  Further masking stable on ppc.
+
 *xcdroast-0.98_alpha14 (14 Jun 2003)
 
   14 Jun 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha13.ebuild,
