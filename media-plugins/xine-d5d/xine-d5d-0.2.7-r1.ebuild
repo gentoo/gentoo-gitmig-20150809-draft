@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-d5d/xine-d5d-0.2.7-r1.ebuild,v 1.3 2002/12/01 23:24:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-d5d/xine-d5d-0.2.7-r1.ebuild,v 1.4 2002/12/12 09:28:15 agenkin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Captain CSS menu plugin for the xine media player"
 HOMEPAGE="http://www.captaincss.tk/"
 SRC_URI="http://debianlinux.net/${P}.tgz"
 
-DEPEND=">=media-libs/xine-lib-0.9.12"
+DEPEND="=media-libs/xine-lib-0.9*"
 
 SLOT="0"
 LICENSE="LGPL-2.1"

@@ -1,8 +1,11 @@
 # ChangeLog for media-video/xine-d5d
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-d5d/ChangeLog,v 1.2 2002/12/01 23:19:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-d5d/ChangeLog,v 1.3 2002/12/12 09:28:15 agenkin Exp $
 
 *xine-d5d-0.2.7 (08 Jul 2002)
+
+  12 Dec 2002; Arcady Genkin <agenkin@thpoon.com> xine-d5d-0.2.7-r1.ebuild :
+  Fixed dependency on xine-lib 0.9.
 
   02 Dec 2002; Martin Holzer <mholzer@gentoo.org> xine-d5d-0.2.7-r1.ebuild:
   Updated SRC_URI, package now named as the ebuild so changed unpack
