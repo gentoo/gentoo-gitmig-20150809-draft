@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0292-r1.ebuild,v 1.1 2005/03/07 21:19:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0292-r1.ebuild,v 1.2 2005/03/12 16:16:49 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/${NV_PACKAGE}-${PKG_V}/nvsound
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 ~amd64"
 RESTRICT="nostrip"
 IUSE=""
 
