@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.2 2004/06/28 04:25:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.3 2004/06/28 13:48:12 wolf31o2 Exp $
 
 inherit flag-o-matic eutils games
 
@@ -8,7 +8,7 @@ DATAFILE="d2shar10"
 DESCRIPTION="Descent 2"
 HOMEPAGE="http://icculus.org/d2x/"
 SRC_URI="http://icculus.org/d2x/src/${P}.tar.gz
-	http://icculus.org/d2x/data/${DATAFILE}.tar.gz"
+	!cdinstall? ( http://icculus.org/d2x/data/${DATAFILE}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,15 +25,17 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 pkg_setup() {
-	if ! [ -e ${DISTDIR}/descent2.sow ] ; then
+	if use cdinstall ; then
+		if ! [ -e ${DISTDIR}/descent2.sow ] ; then
 		cdrom_get_cds d2data
-		if [ -e ${CDROM_ROOT}/d2data/descent2.sow ] ; then
-			export CDROM_ROOT=${CDROM_ROOT}/d2data
-			einfo "Found the original Descent2 CD"
-			einfo "Copying descent2.sow to ${DISTDIR}"
-			cp ${CDROM_ROOT}/descent2.sow ${DISTDIR}/descent2.sow
-		else
-			die "You need the original Descent2 CD"
+			if [ -e ${CDROM_ROOT}/d2data/descent2.sow ] ; then
+				export CDROM_ROOT=${CDROM_ROOT}/d2data
+				einfo "Found the original Descent2 CD"
+				einfo "Copying descent2.sow to ${DISTDIR}"
+				cp ${CDROM_ROOT}/descent2.sow ${DISTDIR}/descent2.sow
+			else
+				die "You need the original Descent2 CD"
+			fi
 		fi
 	fi
 	games_pkg_setup
