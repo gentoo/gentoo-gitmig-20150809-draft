@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.168 2004/06/29 23:05:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.169 2004/06/30 18:38:04 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -89,8 +89,8 @@ freewnn - Adds support for FreeWnn kana to kanji conversion engine
 frontbase - Adds support for the frontbase sql server
 ftp - Adds FTP support
 gb - Adds support for Gnome Basic to gnumeric
-gd - Adds support for media-libs/libgd (to generate graphics on the fly)
-gd-external - Use the external version of libgd rather than the bundled one (possibly dangerous)
+gd - Adds support for media-libs/gd (to generate graphics on the fly)
+gd-external - Use the external version of gd rather than the bundled one (possibly dangerous)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 gif - Adds GIF image support
