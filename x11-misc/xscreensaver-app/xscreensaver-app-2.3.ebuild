@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3.ebuild,v 1.3 2004/06/24 22:44:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3.ebuild,v 1.4 2005/03/05 19:45:54 blubb Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.asleep.net/hacking/XScreenSaver.App/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 DEPEND="virtual/x11
 	x11-libs/libdockapp"
