@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.31 2004/07/12 15:07:34 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.32 2004/07/12 15:27:53 plasmaroo Exp $
+
+  12 Jul 2004; <plasmaroo@gentoo.org> lm-sensors-2.6.5.ebuild,
+  +files/lm-sensors-2.6.5-hk-longstring.patch:
+  Added a compile fix for lm-sensors-2.6.5 on newer GCCs. Closes bug #50635.
 
 *lm-sensors-2.8.7 (12 Jul 2004)
 

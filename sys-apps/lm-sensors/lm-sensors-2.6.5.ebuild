@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.6.5.ebuild,v 1.10 2004/06/30 17:36:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.6.5.ebuild,v 1.11 2004/07/12 15:27:53 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/no-isadump-ppc.patch
+	epatch ${FILESDIR}/${P}-hk-longstring.patch || die "Failed to apply GCC 3.3 compilation patch!"
 }
 
 src_compile()  {
