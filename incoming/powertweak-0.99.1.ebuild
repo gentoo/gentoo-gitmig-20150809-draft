@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-admin/powerteak/powertweak-0.99.1.ebuild
-# $Header: /var/cvsroot/gentoo-x86/incoming/powertweak-0.99.1.ebuild,v 1.4 2001/10/06 11:24:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/incoming/powertweak-0.99.1.ebuild,v 1.5 2001/10/06 14:36:55 azarah Exp $
 
 
 A=${P}.tar.bz2
@@ -12,7 +12,7 @@ SRC_URI="http://download.sourceforge.net/powertweak/${A}"
 HOMEPAGE="http://powertweak.sourceforge.net"
 
 DEPEND=">=x11-libs/gtk+-1.2.10-r4
-	>=dev-libs/libxml-1.8.10"
+	>=dev-libs/libxml-1.8.15"
 
 src_compile() {
 # fix minor bug in textmode/Makefile.am with no -L<path> to libxml.so

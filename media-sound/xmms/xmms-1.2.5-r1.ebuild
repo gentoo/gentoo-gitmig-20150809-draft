@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.5-r1.ebuild,v 1.1 2001/10/06 10:08:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.5-r1.ebuild,v 1.2 2001/10/06 14:36:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz"
 HOMEPAGE="http://www.xmms.org/"
 
 DEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
-	>=dev-libs/libxml-1.8.10
+	>=dev-libs/libxml-1.8.15
 	>=media-libs/libmikmod-3.1.9
     >=media-sound/esound-0.2.22
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
@@ -17,7 +17,7 @@ DEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
 	virtual/opengl"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
-	 >=dev-libs/libxml-1.8.10
+	 >=dev-libs/libxml-1.8.15
   	 >=media-libs/libmikmod-3.1.9
 	 >=media-sound/esound-0.2.22
 	 vorbis? ( >=media-libs/libvorbis-1.0_beta4 )

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1.ebuild,v 1.6 2001/10/03 01:23:06 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1.ebuild,v 1.7 2001/10/06 14:36:55 azarah Exp $
 # NOTE: Now we install into /usr
 # ANOTHER NOTE: we now rely on env.d to provide KDEDIR and QTDIR settings,
 # instead of hardcoding them here
@@ -20,7 +20,7 @@ DEPEND=">=sys-devel/gcc-2.95.2  sys-devel/perl
 	>=x11-libs/qt-x11-2.3.0
         >=sys-apps/bzip2-1.0.1
 	>=dev-libs/libpcre-3.4
-	>=gnome-libs/libxml2-2.4.1
+	>=dev-libs/libxml2-2.4.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	cups? ( net-print/cups )

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.88.1.ebuild,v 1.6 2001/07/29 11:02:25 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.88.1.ebuild,v 1.7 2001/10/06 14:36:55 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,13 +9,13 @@ DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
 
-DEPEND=">=gnome-base/libxml-1.8.13 nls? ( sys-devel/gettext )
+DEPEND=">=dev-libs/libxml-1.8.13 nls? ( sys-devel/gettext )
         >=media-libs/gdk-pixbuf-0.11.0
         >=dev-libs/popt-1.5
 	bonobo? ( >=gnome-base/bonobo-1.0.4 )
 	python? ( dev-lang/python-2.0 )"
 
-RDEPEND=">=gnome-base/libxml-1.8.13
+RDEPEND=">=dev-libs/libxml-1.8.13
         >=media-libs/gdk-pixbuf-0.11.0
         >=dev-libs/popt-1.5
 	bonobo? ( >=gnome-base/bonobo-1.0.4 )"

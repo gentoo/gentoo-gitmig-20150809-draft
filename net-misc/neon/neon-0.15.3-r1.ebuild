@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.15.3.ebuild,v 1.1 2001/09/15 23:06:03 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.15.3-r1.ebuild,v 1.1 2001/10/06 14:36:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.webdav.org/neon/neon-0.15.3.tar.gz"
 
 HOMEPAGE="http://www.webdav.org/neon"
 
-DEPEND="gnome-libs/libxml2"
+DEPEND="dev-libs/libxml2"
 
 src_compile() {
 	local myconf

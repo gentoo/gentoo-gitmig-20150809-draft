@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1-r1.ebuild,v 1.1 2001/10/03 17:10:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1-r1.ebuild,v 1.2 2001/10/06 14:36:55 azarah Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -17,7 +17,7 @@ COMMONDEPEND=">=sys-devel/gcc-2.95.2
 			>=x11-libs/qt-x11-2.3.0
 			>=sys-apps/bzip2-1.0.1
 			>=dev-libs/libpcre-3.4
-			>=gnome-libs/libxml2-2.4.1
+			>=dev-libs/libxml2-2.4.1
 			ssl? ( >=dev-libs/openssl-0.9.6 )
 			alsa? ( >=media-libs/alsa-lib-0.5.9 )
 			cups? ( net-print/cups )
