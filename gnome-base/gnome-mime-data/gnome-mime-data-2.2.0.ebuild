@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/gnome-mime-data-2.2.0.ebuild,v 1.6 2003/03/01 14:45:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/gnome-mime-data-2.2.0.ebuild,v 1.7 2003/04/09 10:52:31 todd Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="MIME database for Gnome"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="x86 ~ppc alpha sparc"
 
 RDEPEND="virtual/glibc"
 
