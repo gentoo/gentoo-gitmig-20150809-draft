@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.6 2005/04/05 23:50:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.7 2005/04/06 00:49:19 halcy0n Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -58,6 +58,9 @@ src_unpack() {
 	# should fix NX segfaulting on amd64 and x86_64 by Peter Jones
 	# http://lists.gnu.org/archive/html/bug-grub/2005-03/msg00011.html
 	epatch "${FILESDIR}"/${P}-nxstack.patch
+
+	# gcc4 patches; bug #85016
+	epatch ${FILESDIR}/${P}-r1-gcc4.patch
 
 	# a bunch of patches apply to raw autotool files
 	autoconf || die "autoconf failed"

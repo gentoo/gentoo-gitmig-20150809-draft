@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.36 2005/04/05 21:41:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.37 2005/04/06 00:49:19 halcy0n Exp $
+
+  06 Apr 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/grub-0.96-r1-gcc4.patch, grub-0.96-r1.ebuild:
+  Updated gcc4 patch to apply to grub-0.96-r1
 
   05 Apr 2005; Mark Loeser <halcy0n@gentoo.org> +files/grub-0.96-gcc4.patch,
   grub-0.96.ebuild:

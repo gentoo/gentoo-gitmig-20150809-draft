@@ -1,26 +1,37 @@
-MD5 e0c147ccf4a0efe2479dfde0b0d260ba ChangeLog 12399
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b3f00f0f8b91b2300528931c72573bb ChangeLog 12549
 MD5 3b7a994ffe338fd8de16df033684e924 grub-0.92-r1.ebuild 2519
-MD5 b0eacbb6edb031d87f33ed0b08f5916d metadata.xml 226
 MD5 adcde4d1dce3d1e2ef2c466f860c6875 grub-0.93.20030118.ebuild 2539
 MD5 138bf4b71e6daf1c47dd24c453f5faeb grub-0.94-r1.ebuild 3595
 MD5 6f64ad4c1842218eafe2ebdd908fcc85 grub-0.94-r2.ebuild 3711
 MD5 a0f235ac986f99960ed542e2982c3640 grub-0.95.20040823.ebuild 4185
-MD5 c80389488f9d53b410a27ea3ab68f6fa grub-0.96-r1.ebuild 5091
 MD5 b992ca57dedad689b4e2514062cd58c8 grub-0.96.ebuild 4173
+MD5 b0eacbb6edb031d87f33ed0b08f5916d metadata.xml 226
+MD5 8dd6dbd739452056de796ad043786d7d grub-0.96-r1.ebuild 5160
 MD5 16039704cf1e6b6f46b4413532af082c files/digest-grub-0.92-r1 133
 MD5 5d1c8e582496db9d7a9b77e76f09f7d8 files/digest-grub-0.93.20030118 139
-MD5 8d898cd9d1928916596cc3f9883eac67 files/grub-0.93-gcc3.3.diff 639
-MD5 cdd6c89d48982ecd544c0b4774755afd files/splash.xpm.gz 33856
 MD5 0b52e1b3a6a9f3c9b86742580eabf28d files/digest-grub-0.94-r1 131
-MD5 e9e73f57d9f9d5c550792980b2635f94 files/grub-0.94-gcc3.4.patch 479
 MD5 0b52e1b3a6a9f3c9b86742580eabf28d files/digest-grub-0.94-r2 131
-MD5 7357395b0d223c0bbf0675a9af31f9c3 files/grub-0.94-grub.conf.patch 7574
 MD5 3a653f86b731c2a17482d25f57b2d041 files/digest-grub-0.95.20040823 149
-MD5 9c1ec8bfdc5f20ce965c2d2167a43162 files/grub-0.95.20040823-warnings.patch 2529
 MD5 2170f54e53dea24426369c0154d46fc0 files/digest-grub-0.96 140
-MD5 904c3dec402e5c7f0e62ab970dcdf5b2 files/grub-0.96-PIC.patch 1925
+MD5 8d898cd9d1928916596cc3f9883eac67 files/grub-0.93-gcc3.3.diff 639
+MD5 e9e73f57d9f9d5c550792980b2635f94 files/grub-0.94-gcc3.4.patch 479
+MD5 7357395b0d223c0bbf0675a9af31f9c3 files/grub-0.94-grub.conf.patch 7574
+MD5 9c1ec8bfdc5f20ce965c2d2167a43162 files/grub-0.95.20040823-warnings.patch 2529
+MD5 cdd6c89d48982ecd544c0b4774755afd files/splash.xpm.gz 33856
 MD5 2170f54e53dea24426369c0154d46fc0 files/digest-grub-0.96-r1 140
+MD5 904c3dec402e5c7f0e62ab970dcdf5b2 files/grub-0.96-PIC.patch 1925
 MD5 3f3995353a0995c56d996d2218570160 files/grub-0.96-i2o-raid.patch 1597
 MD5 8082c035a4ba98d0935b6b045827fb2c files/grub-0.96-nxstack.patch 18920
 MD5 e5978f58eb732289c47b1e0093db4e73 files/grub-0.96-bounced-checks.patch 505
 MD5 7c2804e6a538b2dbcbb851b9614424fd files/grub-0.96-gcc4.patch 6871
+MD5 3f141147f2ded9c02b300eaf8361f3d5 files/grub-0.96-r1-gcc4.patch 5568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUzIZCRZPokWLroQRAkSBAJoCqv5E6EX1Vpq/DggbTTxGyIkz6ACfdxsC
+uHajGTwNxsYcrUtTouAhqpc=
+=Xi1I
+-----END PGP SIGNATURE-----
