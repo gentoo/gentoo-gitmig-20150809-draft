@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.3.1.ebuild,v 1.1 2004/04/21 12:01:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.3.1.ebuild,v 1.2 2004/04/22 08:36:16 phosphan Exp $
 
 inherit kde-functions eutils
 
@@ -69,3 +69,11 @@ src_install () {
 	dohtml -r qcad/doc
 }
 
+pkg_postinst () {
+	if ! has_version "app-sci/qcad-parts"; then
+	einfo
+	einfo "The QCad parts library is available as a seperate package."
+	einfo "emerge app-sci/qcad-parts to get it."
+	einfo
+	fi
+}
