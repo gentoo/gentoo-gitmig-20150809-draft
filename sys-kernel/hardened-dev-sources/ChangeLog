@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.48 2004/12/25 00:50:28 plasmaroo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.49 2005/01/11 21:15:57 tocharian Exp $
+
+*hardened-dev-sources-2.6.10 (11 Jan 2005)
+
+  11 Jan 2005; Adam Mondl <tocharian@gentoo.org>
+  +hardened-dev-sources-2.6.10.ebuild:
+  Update the patchset for 2.6.10 to fix several vulnerabilities. Uses -ac8 as
+  the new kernel base.
 
 *hardened-dev-sources-2.6.7-r18 (25 Dec 2004)
 
