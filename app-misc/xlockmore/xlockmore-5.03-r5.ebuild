@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03-r5.ebuild,v 1.3 2002/04/30 11:28:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03-r5.ebuild,v 1.4 2002/06/03 21:55:30 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Just another screensaver application for X"
@@ -22,7 +22,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-pam --enable-xlockrc"
 	use nas || myconf="${myconf} --without-nas"
 	use esd && myconf="${myconf} --with-esound"
-	use opengl || myconf="${myconf} --without-opengl"
+	use opengl || myconf="${myconf} --without-opengl --without-gltt --without-mesa"
 	use truetype || myconf="${myconf} --without-ttf"
 
 	#use motif || myconf="${myconf} --without-motif"

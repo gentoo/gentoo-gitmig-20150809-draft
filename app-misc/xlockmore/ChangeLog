@@ -1,8 +1,13 @@
 # ChangeLog for app-misc/xlockmore
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.7 2002/04/24 19:54:57 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.8 2002/06/03 21:55:30 lostlogic Exp $
 
 *xlockmore-5.03-r5 (24 Apr 2002)
+
+  3 Jun 2002; Brandon Low <lostlogic@gentoo.org> xlockmore-5.03-r5.ebuild :
+  
+  Doesn't warrant a new revision just a fix for people with USE=-opengl
+  ensures that it doesn't try to use any existing opengl libraries.  
 
   24 Apr 2002; Tod Neidt <tod@gentoo.org> xlockmore-5.03-r5.ebuild :
 
