@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.6 2002/11/12 22:43:38 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.7 2002/11/20 08:49:35 lostlogic Exp $
+
+*sed-4.0.2.ebuild (20 Nov 2002)
+
+  20 Nov 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.2.ebuild :
+
+  Minor bug fix release over 4.0.1
 
   12 Nov 2002; Mark Guertin <gerk@gentoo.org> sed-4.0.ebuild, sed-4.0.1.ebuild :
   set both of these as -ppc.  PLEASE DONT UPGRADE TO STABLE WITHOUT TESTING.
