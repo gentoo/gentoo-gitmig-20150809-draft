@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.10 2004/03/24 04:24:28 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.11 2004/04/01 08:15:28 eradicator Exp $
+
+  01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> snd-7.1.ebuild:
+  Stable x86.
 
   23 Mar 2004; Dylan Carlson <absinthe@gentoo.org> snd-7.1.ebuild:
   Added ~amd64 to KEYWORDS.
