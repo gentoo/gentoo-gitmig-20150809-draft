@@ -1,6 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.9 2003/07/10 17:27:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.10 2003/07/16 14:52:53 hanno Exp $
+
+*epiphany-0.8.0 (16 Jul 2003)
+
+  16 Jul 2003; Hanno Boeck <hanno@gentoo.org> epiphany-0.8.0.ebuild:
+  Version bump.
 
 *epiphany-0.7.3-r1 (10 Jul 2003)
 
