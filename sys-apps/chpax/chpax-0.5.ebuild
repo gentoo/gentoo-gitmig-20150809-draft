@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.5.ebuild,v 1.3 2003/10/27 23:23:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.5.ebuild,v 1.4 2003/12/05 12:22:01 weeve Exp $
 
 # S=${WORKDIR}/chpax
 
 DESCRIPTION="Manages various PaX related flags for ELF32, ELF64, and a.out binaries."
 SRC_URI="http://pageexec.virtualave.net/chpax-${PV}.tar.gz"
 HOMEPAGE="http://pageexec.virtualave.net"
-KEYWORDS="x86 ~amd64 ~sparc ~ppc ~hppa ia64"
+KEYWORDS="x86 ~amd64 sparc ~ppc ~hppa ia64"
 LICENSE="public-domain"
 SLOT="0"
 
