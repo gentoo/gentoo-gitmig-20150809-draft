@@ -1,11 +1,11 @@
 # ChangeLog for dev-python/pygtk
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.13 2002/12/13 10:56:45 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.14 2003/01/04 11:02:43 seemant Exp $
+
+*pygtk-0.6.11 (06 Dec 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*pygtk-0.6.11 (06 Dec 2002)
-
   06 Dec 2002; foser <foser@gentoo.org> pygtk-0.6.11.ebuild :
   New version
 
