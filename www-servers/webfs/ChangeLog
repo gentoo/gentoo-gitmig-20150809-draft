@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/webfs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.6 2005/01/23 21:05:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.7 2005/02/16 15:58:36 ka0ttic Exp $
+
+*webfs-1.21 (16 Feb 2005)
+
+  16 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +files/webfs.confd,
+  +files/webfs.initd, webfs-1.20.ebuild, +webfs-1.21.ebuild:
+  Version bump; added threads support via USE=threads. Also added init/conf
+  scripts thanks to Adam Chodorowski in bug 59427.
 
   23 Jan 2005; Simon Stelling <blubb@gentoo.org> webfs-1.20.ebuild:
   added ~amd64
