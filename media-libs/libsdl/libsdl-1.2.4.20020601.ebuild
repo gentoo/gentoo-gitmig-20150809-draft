@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.9 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.10 2002/10/05 17:59:14 gerk Exp $
 
-IUSE="arts x86 xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
+IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
 
 S=${WORKDIR}/SDL12
 DESCRIPTION="Simple Direct Media Layer"
