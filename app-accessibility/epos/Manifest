@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92b58dec8c2adb3a4acc0da994c717aa ChangeLog 757
-MD5 64aba134858ffc1676280ce2efe2151f epos-2.5.23.ebuild 617
-MD5 050ab8f1df8b68e12e804df6698c533d metadata.xml 231
 MD5 6a21d9c18f4f4640c506fc4b98cdb634 epos-2.5.23-r1.ebuild 753
-MD5 d41676ea75dabd569433cfca8d1f2bf2 files/README.gentoo 108
+MD5 64aba134858ffc1676280ce2efe2151f epos-2.5.23.ebuild 617
+MD5 92b58dec8c2adb3a4acc0da994c717aa ChangeLog 757
+MD5 050ab8f1df8b68e12e804df6698c533d metadata.xml 231
+MD5 ab56a6d2d8704c792114afd7bbf3743a files/epos 546
 MD5 44bb6900b1cf61e43f4397bacc00adf1 files/digest-epos-2.5.23 63
-MD5 75f25776a1ba17680290adb2fa0ddd00 files/epos 555
+MD5 d41676ea75dabd569433cfca8d1f2bf2 files/README.gentoo 108
 MD5 44bb6900b1cf61e43f4397bacc00adf1 files/digest-epos-2.5.23-r1 63
 MD5 0de01cc62d24c39fab9e80bde38db840 files/epos-waveform.patch 433
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3EvtHTu7gpaalycRArQWAJkBTq8Tl7yj8RmVgMhUNaqVEYkycgCgws8r
-SWach66NEfSOse2n/KjCtUI=
-=B58x
------END PGP SIGNATURE-----
