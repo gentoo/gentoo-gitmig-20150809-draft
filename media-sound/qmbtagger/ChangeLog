@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/qmbtagger
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.1 2004/02/11 20:56:13 anti Exp $
+
+*qmbtagger-0.04 (11 Feb 2004)
+
+  11 Feb 2004; Ray Russell Reese III <anti@gentoo.org> metadata.xml,
+  qmbtagger-0.04.ebuild:
+  Initial Import, Thanks to Rob Smith <gentoo@kormoc.com> for submitting this
+  ebuild.
+
