@@ -1169,3 +1169,5 @@ elif root[-1]!="/":
 	root=root+"/"
 #dep_print( dep_parse(">=net-misc/openssh-2.2.0 >=sys-libs/slang-1.4.2")[1])
 #dep_print( dep_parse("=sys-libs/pam-0.72-r1 bar/foo || ( sys-libs/zlib foo/bar )")[1])
+ERRPKG=""
+ERRVER=""

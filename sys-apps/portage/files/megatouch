@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
-source /etc/make.conf 
+export PATH="/usr/lib/portage/bin:${PATH}"
+eval `import-settings DISTDIR PORTDIR`
 echo -n "Source archive pruning started "
 date
 touch ${DISTDIR}/.cleaned 
-sleep 3
-for x in `find /usr/portage/ -iname *.ebuild` 
+sleep 1
+cd ${PORTDIR}
+for x in `find ${PORTDIR}/ -iname '*.ebuild'` 
 do
+	echo "touching files for ${x}"
 	ebuild ${x} touch
 done
 if [ ! -d ${DISTDIR}-old ]
