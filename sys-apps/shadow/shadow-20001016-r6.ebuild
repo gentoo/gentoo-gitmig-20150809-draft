@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r6.ebuild,v 1.1 2001/12/08 18:41:40 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r6.ebuild,v 1.2 2001/12/27 05:09:38 karltk Exp $
 
 DESCRIPTION="Utilities to deal with user accounts"
-SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
+SRC_URI="ftp://ftp.pld.org.pl/software/shadow/old/${P}.tar.gz"
 S=${WORKDIR}/${P}
 
 DEPEND=">=sys-libs/pam-0.73

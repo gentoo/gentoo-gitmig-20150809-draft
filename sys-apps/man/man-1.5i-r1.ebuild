@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.3 2001/09/09 20:20:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.4 2001/12/27 05:05:12 karltk Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
 DESCRIPTION="Standard commands to read man pages"
-SRC_URI="ftp://ftp.win.tue.nl/pub/linux-local/utils/man/${PN}-${NV}.tar.gz"
+SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-1.5i2.tar.bz2"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc sys-apps/groff"
