@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.74.1-r1.ebuild,v 1.2 2003/09/10 05:08:45 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1-r1.ebuild,v 1.1 2003/12/09 16:33:06 torbenh Exp $
 
 inherit flag-o-matic
 
-IUSE="doc debug jack-tmpfs"
+IUSE="doc debug jack-tmpfs jack-caps"
 
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://jackit.sourceforge.net/"
@@ -19,6 +19,7 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 	dev-libs/glib
 	dev-util/pkgconfig
 	sys-libs/ncurses
+	jack-caps? ( sys-libs/libcap )
 	doc? ( app-doc/doxygen )
 	!media-sound/jack-cvs"
 
@@ -40,6 +41,7 @@ src_compile() {
 		|| myconf="--without-html-dir"
 
 	use jack-tmpfs && myconf="${myconf} --with-default-tmpdir=/dev/shm"
+	use jack-caps && myconf="${myconf} --enable-capabilities --enable-stripped-jackd"
 	use debug && myconf="${myconf} --enable-debug"
 
 	myconf="${myconf} --enable-optimize --with-gnu-ld"
