@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.2 2003/09/25 22:49:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.3 2003/10/06 11:33:05 genone Exp $
 
 IUSE="nls gnome gtk2 xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -10,7 +10,7 @@ GS_PN=ghostscript-viewer
 GS_PV=0.4
 MY_GS=${GS_PN}-${GS_PV}
 MY_P="sylpheed-${PV}claws"
-PATCHVER=20030914
+PATCHVER=20030917
 S=${WORKDIR}/${MY_P}
 S2=${WORKDIR}/${MY_GS}
 DESCRIPTION="Bleeding edge version of Sylpheed"
