@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.6 2004/12/21 08:21:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.7 2005/02/15 11:05:02 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,11 +26,9 @@ DEPEND="virtual/x11
 	media-libs/libsdl
 	virtual/libc
 	sys-libs/zlib
-	!sparc? ( media-libs/svgalib )
 	!sparc? ( media-libs/alsa-lib )"
 
 #
-# Note about !sparc? ( media-libs/svgalib ) and alsa-lib too
 # I did a ldd /usr/bin/anim-flame /usr/bin/hqi-flame /usr/bin/pick-flame /usr/bin/convert-flame \
 #   /usr/bin/mpeg2dec_onroot /usr/bin/electricsheep | cut -f3 -d ' ' | xargs -n 1 qpkg -f -v | sort | uniq
 #
@@ -46,12 +44,11 @@ RDEPEND="virtual/x11
 	media-libs/jpeg
 	media-libs/libpng
 	media-libs/libsdl
-	!sparc? ( media-libs/svgalib )
 	!sparc? ( media-libs/alsa-lib )
 	virtual/libc
 	sys-libs/zlib"
 
-# Also detects and ties in sys-libs/slang, media-libs/aalib
+# Also detects and ties in sys-libs/slang, media-libs/aalib media-libs/svgalib and nas
 # if they exist on the user machine although these aren't deps.
 
 src_unpack() {
