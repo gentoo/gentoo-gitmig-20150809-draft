@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.63 2005/01/01 12:35:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.64 2005/01/01 20:37:53 blubb Exp $
+
+  01 Jan 2005; Simon Stelling <blubb@gentoo.org>
+  +files/mit-krb5-1.3.6-64bit.patch, -files/mit-krb5-1.3.6-ppc64.patch,
+  mit-krb5-1.3.6-r1.ebuild:
+  stable on amd64; bug #75143
 
 *mit-krb5-1.3.6-r1 (31 Dec 2004)
 
@@ -8,7 +13,7 @@
   mit-krb5-1.3.6.ebuild:
   implemented Koon's suggestions from bug #75143
 
-  30 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mit-krb5-1.3.6.ebuild:
+  30 Dec 2004; Bryan ÃƒÂ˜stergaard <kloeri@gentoo.org> mit-krb5-1.3.6.ebuild:
   Stable on alpha, bug 75143.
 
   30 Dec 2004; Markus Rothe <corsair@gentoo.org>
@@ -48,7 +53,7 @@
   15 Oct 2004; Jason Wever <weeve@gentoo.org> mit-krb5-1.3.4-r1.ebuild:
   Stable on sparc wrt security bug #66359.
 
-  15 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mit-krb5-1.3.4-r1.ebuild:
+  15 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mit-krb5-1.3.4-r1.ebuild:
   Stable on alpha, bug 66359.
 
   15 Oct 2004; <SeJo@gentoo.org> mit-krb5-1.3.4-r1.ebuild:
@@ -91,7 +96,7 @@
   02 Sep 2004; Hardave Riar <hardave@gentoo.org> mit-krb5-1.3.4.ebuild:
   Stable on mips. Bug #62417
 
-  02 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> mit-krb5-1.3.4.ebuild:
+  02 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mit-krb5-1.3.4.ebuild:
   Stable on alpha, bug 62417.
 
   01 Sep 2004; <SeJo@gentoo.org> mit-krb5-1.3.4.ebuild:
@@ -143,7 +148,7 @@
   17 Jun 2004; Jason Wever <weeve@gentoo.org> mit-krb5-1.3.3-r1.ebuild:
   Marked stable on sparc wrt bug #52744.
 
-  17 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> mit-krb5-1.3.3-r1.ebuild:
+  17 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mit-krb5-1.3.3-r1.ebuild:
   Stable on alpha, see bug #52744.
 
 *mit-krb5-1.3.3-r1 (15 Jun 2004)
@@ -237,7 +242,7 @@
   Added Martti Rannajarvi's fixes. Fixes #3480
 
   07 Dec 2002; Dave Love <dlove@cashmeresoftware.com>, 
-  Martti Rannanjärvi <grypt@kapsi.net>:
+  Martti RannanjÃ¤rvi <grypt@kapsi.net>:
   
   Optional kerberos4 support by krb4 USE flag, default configuration
   files and an init.d script. --localstatedir to /etc.
