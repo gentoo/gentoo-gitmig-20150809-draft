@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2.ebuild,v 1.4 2003/06/05 20:06:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2.ebuild,v 1.5 2003/06/30 10:05:50 robbat2 Exp $
 
+use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
 inherit php eutils
 
 IUSE="${IUSE} apache2"
@@ -17,6 +18,7 @@ DEPEND="${DEPEND}
 	>=net-www/apache-1.3.26-r2
 	apache2? ( >=net-www/apache-2.0.43-r1 )
 	)"
+
 
 src_compile() {
 	#no readline on server SAPI
@@ -74,7 +76,16 @@ src_install() {
 }
 
 apache2msg() {
-		einfo "Edit /etc/conf.d/apache2 and add \"-D PHP\""
+		ewarn "Edit /etc/conf.d/apache2 and add \"-D PHP4\""
+		ewarn "This is a CHANGE from previous behavior, which was \"-D PHP\""
+		ewarn "This is for the upcoming PHP5 support. The ebuild will attempt"
+		ewarn "to make this update between PHP and PHP4 automatically"
+}
+
+pkg_preinst() {
+	php_pkg_preinst
+	einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
+	dosed 's,-D PHP,-D PHP4,' /etc/conf.d/apache2
 }
 
 pkg_postinst() {
@@ -84,7 +95,7 @@ pkg_postinst() {
 	else
 		einfo "1. Execute the command:"
 		einfo " \"ebuild /var/db/pkg/dev-php/${PF}/${PF}.ebuild config\""
-		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP\""
+		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\""
 		einfo "That will include the php mime types in your configuration"
 		einfo "automagically and setup Apache to load php when it starts."
 	fi

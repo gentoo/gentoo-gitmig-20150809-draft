@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r1.ebuild,v 1.1 2003/06/10 19:14:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r1.ebuild,v 1.2 2003/06/30 10:05:50 robbat2 Exp $
 
+use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
 inherit php eutils
 
 IUSE="${IUSE} apache2"

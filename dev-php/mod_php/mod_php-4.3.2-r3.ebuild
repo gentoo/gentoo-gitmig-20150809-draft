@@ -1,9 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r2.ebuild,v 1.5 2003/06/30 10:05:50 robbat2 Exp $
-
-use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
-inherit php eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r3.ebuild,v 1.1 2003/06/30 10:05:50 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -15,7 +12,6 @@ EXCLUDE_PEAR_FIX=1
 DEPEND="${DEPEND}
 	>=net-www/apache-1.3.26-r2
 	apache2? ( >=net-www/apache-2.0.43-r1 ) "
-
 
 detectapache() {
 	local domsg=
@@ -53,7 +49,12 @@ detectapache
 SLOT="${APACHEVER}"
 [ "${APACHEVER}" -eq '2' ] && USE_APACHE2='2' || USE_APACHE2='' 
 
+PHPSAPI="apache${APACHEVER}"
+
+inherit php eutils
+
 src_unpack() {
+	multiinstwarn
 	detectapache domsg
 	php_src_unpack
 }
@@ -87,45 +88,67 @@ src_compile() {
  
 src_install() {
 	php_src_install
+	einfo "Adding extra symlink to php.ini for Apache${USE_APACHE2}"
+	dodir /etc/apache${USE_APACHE2}/conf/
+	dodir ${PHPINIDIRECTORY}
+	dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/apache${USE_APACHE2}/conf/${PHPINIFILENAME}
 
-	cp php.ini-dist php.ini
-	insinto /etc/php4
-	doins php.ini
-	dosym /etc/php4/php.ini /etc/apache${USE_APACHE2}/conf/php.ini
-
-	dosym /usr/lib/apache${USE_APACHE2}-extramodules /etc/php4/lib
+	einfo "Adding extra symlink to Apache${USE_APACHE2} extramodules for PHP"
+	dosym /usr/lib/apache${USE_APACHE2}-extramodules ${PHPINIDIRECTORY}/lib
 	exeinto /usr/lib/apache${USE_APACHE2}-extramodules
+	einfo "Installing mod_php shared object now"
 	doexe .libs/libphp4.so
 
 	if [ -n "${USE_APACHE2}" ] ; then
+		einfo "Installing a Apache2 config for PHP (70_mod_php.conf)"
 		insinto /etc/apache2/conf/modules.d
 		doins ${FILESDIR}/70_mod_php.conf
 	else
+		einfo "Installing a Apache config for PHP (mod_php.conf)"
 		insinto /etc/apache/conf/addon-modules
 		doins ${FILESDIR}/mod_php.conf
-		dosym /etc/php4/php.ini /etc/apache/conf/addon-modules/php.ini
+		dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/apache/conf/addon-modules/${PHPINIFILENAME}
 	fi
 }
 
 apache2msg() {
-		einfo "Edit /etc/conf.d/apache2 and add \"-D PHP\""
+	einfo "Edit /etc/conf.d/apache2 and add \"-D PHP4\""
+	ewarn "This is a CHANGE from previous behavior, which was \"-D PHP\""
+	ewarn "This is for the upcoming PHP5 support. The ebuild will attempt"
+	ewarn "to make this update between PHP and PHP4 automatically"
+}
+
+multiinstwarn() {
+	ewarn "Due to some previous bloopers with PHP and slotting, you may have"
+	ewarn "multiple copies of mod_php installed. Please look at the autoclean"
+	ewarn "output at the end of the emerge and unmerge all but relevant"
+	ewarn "copies."
+}
+
+pkg_preinst() {
+	multiinstwarn
+	php_pkg_preinst
+	einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
+	dosed 's,-D PHP,-D PHP4,' /etc/conf.d/apache2
 }
 
 pkg_postinst() {
 	php_pkg_postinst
+	multiinstwarn
 	einfo "To have Apache run php programs, please do the following:"
 	if [ "`use apache2`" ] ; then
 		apache2msg
 	else
 		einfo "1. Execute the command:"
 		einfo " \"ebuild /var/db/pkg/dev-php/${PF}/${PF}.ebuild config\""
-		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP\""
+		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\""
 		einfo "That will include the php mime types in your configuration"
 		einfo "automagically and setup Apache to load php when it starts."
 	fi
 }
 
 pkg_config() {
+	multiinstwarn
 	if [ -n "${USE_APACHE2}" ] ; then
 		apache2msg
 	else
