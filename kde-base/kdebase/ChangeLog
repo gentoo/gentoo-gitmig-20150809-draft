@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.152 2004/10/04 14:49:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.153 2004/10/12 23:44:45 caleb Exp $
+
+*kdebase-3.3.1 (12 Oct 2004)
+
+  12 Oct 2004; Caleb Tennis <caleb@gentoo.org> +files/3.3.1/Xsetup,
+  +files/3.3.1/backgroundrc, +files/3.3.1/kdmrc,
+  +files/3.3.1/startkde-3.3.1-gentoo.diff, +kdebase-3.3.1.ebuild:
+  Version bump
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> kdebase-3.3.0.ebuild:
   Stable on hppa.
