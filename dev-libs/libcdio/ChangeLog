@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.20 2004/11/30 16:41:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.21 2004/12/05 03:22:25 eradicator Exp $
+
+  04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libcdio-0.70.ebuild:
+  QA: Keep libiso9660.so.0 around until the user deletes it.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Fixed herd in metadata.xml.
