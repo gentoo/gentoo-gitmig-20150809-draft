@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8.ebuild,v 1.1 2004/10/12 15:38:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.1 2004/11/03 14:42:20 foser Exp $
 
 inherit gnome2 eutils
 
@@ -80,5 +80,7 @@ src_unpack()
 
 	# Make it possible for gst rb to load shorten files
 	epatch ${FILESDIR}/${PN}-0.8.7-gst_shn_support.patch
+	# fix ipod crasher
+	epatch ${FILESDIR}/${P}-ipod.patch
 
 }
