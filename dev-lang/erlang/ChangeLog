@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.14 2004/08/03 01:25:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.15 2004/10/08 18:20:17 george Exp $
+
+*erlang-10.2.0 (07 Oct 2004)
+
+  07 Oct 2004; George Shapovalov <george@gentoo.org> erlang-10.2.0.ebuild :
+  new version out, adjusted versioning scheme as was previously discussed 
+  (retaining 1st number, then letters A->1, B->2, ... and adding the "revision")
+  thus this corresponds to R10B-0
+  also adjusted openssl dependency to point to >=0.9.7d
 
 *erlang-9c-r3 (02 Aug 2004)
 
