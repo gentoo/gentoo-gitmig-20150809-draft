@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/qtvba-0.2.ebuild,v 1.3 2004/06/24 22:35:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/qtvba-0.2.ebuild,v 1.4 2004/11/11 01:53:40 josejx Exp $
 
 inherit eutils kde-functions
 need-qt 3
@@ -13,7 +13,7 @@ DEPEND="x11-libs/qt"
 RDEPEND=">=games-emulation/visualboyadvance-1.5.1"
 IUSE=""
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="ppc"
 
 src_unpack() {
 	unpack ${A}
