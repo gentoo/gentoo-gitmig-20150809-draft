@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.5 2004/07/09 17:50:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.6 2004/10/11 16:44:23 slarti Exp $
+
+*libgsasl-0.1.4 (11 Oct 2004)
+
+  11 Oct 2004; Tom Martin <slarti@gentoo.org> libgsasl-0.1.1.ebuild,
+  +libgsasl-0.1.4.ebuild:
+  Marked 0.1.1 stable on amd64, version bumped -> 0.1.4.
 
   09 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> libgsasl-0.1.1.ebuild:
   Added to ~ppc.
