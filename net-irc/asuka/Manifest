@@ -1,6 +1,16 @@
-MD5 c7948aae988cd0903885a8daf0b86053 asuka-1.0.6.ebuild 1363
-MD5 1728bdf83871c1db2fb5a82032ab825c ChangeLog 1008
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a33c1d14c9e5b7e2f3e7d49f53459b8b ChangeLog 1098
+MD5 640ca716475e2fbc2a94f06519291d70 asuka-1.0.6.ebuild 1350
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 cf3c13839aa46dd2a1d1cabecdc5caa3 files/asuka.conf.d 270
 MD5 e16e825d8c77e6be15d46140714bccca files/asuka.init.d 560
 MD5 b6b9f176be538c92cd9eeb70dd6f768d files/digest-asuka-1.0.6 64
+MD5 cf3c13839aa46dd2a1d1cabecdc5caa3 files/asuka.conf.d 270
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAcJNAXomK8S72HoRArTxAJsGV5UWXP0MiL8+hvkZel7n8uAiLgCdFggZ
+pg7UHxrEi0sVKE0LxWEnzB0=
+=LQ/L
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/cwirc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.10 2004/07/22 01:13:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.11 2004/07/24 01:55:32 swegener Exp $
+
+  24 Jul 2004; Sven Wegener <swegener@gentoo.org> cwirc-1.7.1.ebuild,
+  cwirc-1.8.3.ebuild, cwirc-1.8.5.ebuild, cwirc-1.8.6.ebuild:
+  Added >=sys-apps/sed-4 dependency.
 
 *cwirc-1.8.6 (22 Jul 2004)
 

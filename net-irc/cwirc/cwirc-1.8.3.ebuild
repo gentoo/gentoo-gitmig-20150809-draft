@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.3.ebuild,v 1.2 2004/06/24 23:02:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.3.ebuild,v 1.3 2004/07/24 01:55:32 swegener Exp $
 
 inherit eutils
 
@@ -11,8 +11,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="x11-libs/gtk+
+
+RDEPEND="x11-libs/gtk+
 	>=net-irc/xchat-2.0.1"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -28,6 +31,7 @@ src_compile() {
 
 src_install() {
 	einstall || die "einstall failed"
+
 	dodoc README RELEASE_NOTES Changelog
 	cp -R schematics/ ${D}/usr/share/doc/${PF}/schematics/
 }
