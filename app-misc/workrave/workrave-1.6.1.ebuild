@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.1.ebuild,v 1.1 2004/05/26 06:49:24 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.1.ebuild,v 1.2 2004/05/30 19:40:31 khai Exp $
 
 inherit eutils gnome2
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
-	>=dev-cpp/gtkmm-2
+	=dev-cpp/gtkmm-2.2.11
 	>=dev-libs/libsigc++-1.2
 	distribution? ( >=net-libs/gnet-2 )
 	gnome? ( >=gnome-base/libgnomeui-2

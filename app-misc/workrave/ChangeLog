@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.18 2004/05/26 06:49:24 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.19 2004/05/30 19:40:31 khai Exp $
+
+  30 May 2004; Yi Qiang <khai@gentoo.org> workrave-1.4.0-r1.ebuild,
+  workrave-1.6.1.ebuild:
+  Fixed gtkmm deps.
 
 *workrave-1.6.1 (26 May 2004)
 
