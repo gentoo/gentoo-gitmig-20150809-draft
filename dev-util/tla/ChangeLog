@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/tla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.8 2004/02/28 23:52:41 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.9 2004/03/29 18:25:05 rphillips Exp $
+
+*tla-1.2-r1 (29 Mar 2004)
+
+  29 Mar 2004; Ryan Phillips <rphillips@gentoo.org> tla-1.2-r1.ebuild:
+  patched src/tla/=gpg-check.awk to find the correct gawk, and installed it into
+  /usr/bin/tla-gpg-check.awk
 
 *tla-1.2 (28 Feb 2004)
 
