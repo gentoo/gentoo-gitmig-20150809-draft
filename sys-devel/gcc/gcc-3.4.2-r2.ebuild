@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.7 2004/10/04 21:58:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.8 2004/10/05 03:34:41 lv Exp $
 
-IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
+IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -27,7 +27,7 @@ DEPEND="virtual/libc
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
-	amd64? ( !nomultilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	!build? ( gcj? ( gtk? ( >=x11-libs/gtk+-2.2 ) ) )
 	!build? ( gcj? ( >=media-libs/libart_lgpl-2.1 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
@@ -37,7 +37,7 @@ RDEPEND="virtual/libc
 	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
 	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
 	>=sys-devel/gcc-config-1.3.1
-	amd64? ( !nomultilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -101,7 +101,7 @@ gcc_do_filter_flags() {
 
 	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
 	# build of non-default-abi libraries.
-	use mips && use !nomultilib && filter-flags "-mabi*"
+	use mips && use multilib && filter-flags "-mabi*"
 
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
@@ -134,6 +134,18 @@ chk_gcc_version() {
 }
 
 src_unpack() {
+	# if sandbox is enabled, and multilib is enabled, but we dont have a 32bit
+	# sandbox... installing gcc will fail as soon as it starts configuring the
+	# 32bit libstdc++. not fun.
+	if use amd64 && use multilib && hasq sandbox $FEATURES && [ ! -e /lib32/libsandbox.so ] ; then
+		eerror "You need a 32bit sandbox to install 32bit code with sandbox"
+		eerror "enabled. Either add FEATURES=-sandbox or disable multilib."
+		eerror "After installing a multilib gcc, you can re-emerge portage"
+		eerror "to get a 32bit sandbox, and this problem will go away."
+		ebeep
+		die "no 32bit sandbox"
+	fi
+
 	gcc_src_unpack
 
 	# misc patches that havent made it into a patch tarball yet
@@ -141,7 +153,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gcc-spec-env.patch
 
 	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
-	if use mips && use nomultilib; then
+	if use mips && use !multilib; then
 		use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
 		use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
 	fi
@@ -158,7 +170,7 @@ src_unpack() {
 	epatch ${FILESDIR}/3.4.2/gcc34-m32-no-sse2.patch
 	epatch ${FILESDIR}/3.4.2/gcc34-fix-sse2_pinsrw.patch
 
-	if use amd64 && use !nomultilib ; then
+	if use amd64 && use multilib ; then
 		# this should hack around the GCC_NO_EXECUTABLES bug
 		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
 		cd ${S}/libstdc++-v3
@@ -399,7 +411,7 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	if use !nomultilib && [ "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
@@ -411,7 +423,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	if use !nomultilib && [ "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
