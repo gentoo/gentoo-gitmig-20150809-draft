@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.2 2004/08/08 13:31:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.3 2004/08/16 13:57:19 usata Exp $
+
+*scim-qtimm-0.6_pre20040813 (16 Aug 2004)
+
+  16 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -scim-qtimm-0.5_pre20040719.ebuild, +scim-qtimm-0.6_pre20040813.ebuild:
+  New svn snapshot. You need to install the latest scim and recompile
+  qt-3.3.2 to get this version work.
 
   08 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
   scim-qtimm-0.5_pre20040719.ebuild:
