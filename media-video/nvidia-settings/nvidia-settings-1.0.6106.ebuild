@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.ebuild,v 1.3 2004/07/26 05:09:29 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.6106.ebuild,v 1.1 2004/08/16 12:15:21 cyfred Exp $
 
 inherit eutils
 
 DESCRIPTION="NVIDIA Linux X11 Settings Utility"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="http://download.nvidia.com/XFree86/${PN}/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~cyfred/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,14 +14,12 @@ KEYWORDS="-* ~x86 ~amd64"
 RESTRICT=""
 IUSE=""
 
-NVIDIA_VERSION="1.0.6106"
-
 DEPEND="virtual/libc
 	virtual/x11
 	>=x11-libs/gtk+-2*
 	amd64? ( app-arch/bzip2 )"
-RDEPEND=">=media-video/nvidia-glx-${NVIDIA_VERSION}
-	>=media-video/nvidia-kernel-${NVIDIA_VERSION}"
+RDEPEND=">=media-video/nvidia-glx-${PV}
+	>=media-video/nvidia-kernel-${PV}"
 
 src_unpack() {
 	unpack ${A}
