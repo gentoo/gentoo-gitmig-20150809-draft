@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.12 2004/08/27 12:41:08 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.13 2004/09/23 05:30:24 usata Exp $
+
+*ecb-2.27 (23 Sep 2004)
+
+  23 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/ecb-help.el-ecb-1.96-gentoo.diff, -ecb-1.96.ebuild, ecb-2.24.ebuild,
+  +ecb-2.27.ebuild:
+  Version bumped. Added app-emacs/cedet as an alternative to speedbar,
+  eieio and semantic; bug #64395.
 
   27 Aug 2004; Jared Hudson <jhhudso@gentoo.org> : Added ~amd64 keyword
 	
