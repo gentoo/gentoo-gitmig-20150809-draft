@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.16 2004/07/04 23:08:59 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.17 2005/02/22 21:26:18 chriswhite Exp $
 
 inherit gnuconfig eutils
 

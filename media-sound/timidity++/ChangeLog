@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.42 2004/12/22 00:03:54 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.43 2005/02/22 21:26:18 chriswhite Exp $
+
+  23 Feb 2005; Chris White <chriswhite@gentoo.org>
+  timidity++-2.13.0-r1.ebuild, timidity++-2.13.0-r2.ebuild,
+  timidity++-2.13.2.ebuild:
+  Fixed ppc portaudio logic and /lib hardcoding (not using get_libdir...)
 
   22 Dec 2004; Joseph Jezak <josejx@gentoo.org> timidity++-2.13.2.ebuild:
   Marked ppc stable.

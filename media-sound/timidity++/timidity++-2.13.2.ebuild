@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.5 2004/12/22 00:03:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.6 2005/02/22 21:26:18 chriswhite Exp $
 
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa arts jack portaudio emacs"
 
@@ -66,10 +66,10 @@ src_compile() {
 	use oss && audios="${audios},oss"
 	use esd && audios="${audios},esd"
 	use oggvorbis && audios="${audios},vorbis"
-	use nas && { audios="${audios},nas"; myconf="${myconf} --with-nas-library=/usr/X11R6/lib/libaudio.so"; }
+	use nas && { audios="${audios},nas"; myconf="${myconf} --with-nas-library=/usr/X11R6/$(get_libdir)/libaudio.so"; }
 	use arts && audios="${audios},arts"
 	use jack && audios="${audios},jack"
-	use portaudio && audios="${audios},portaudio"
+	use portaudio && use !ppc && audios="${audios},portaudio"
 
 	use alsa \
 		&& audios="${audios},alsa" \
