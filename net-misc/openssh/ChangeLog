@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.2 2002/03/07 17:11:05 m0rpheus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.3 2002/03/13 20:07:37 azarah Exp $
+
+ 13 Mar 2002; M.Schlemmer <azarah@gentoo.org> openssh-3.1_p1-r1.ebuild :
+
+ Update rc-script not to fail on restart if there is open sessions.
 
 *openssh-3.1_p1 (7 Mar 2002)
 
