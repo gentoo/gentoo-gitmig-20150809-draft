@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.2 2004/04/26 16:25:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.3 2004/04/28 10:57:47 lanius Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
-IUSE="X cups cjk"
+IUSE="X cups cjk emacs"
 
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
@@ -92,8 +92,11 @@ src_install() {
 	rm -fr ${D}/usr/share/ghostscript/7.07/doc || die
 	dodoc doc/README doc/COPYING doc/COPYING.LGPL
 	dohtml doc/*.html doc/*.htm
-	insinto /usr/share/emacs/site-lisp
-	doins doc/gsdoc.el || die
+
+	if [ `use emacs` ]; then
+		insinto /usr/share/emacs/site-lisp
+		doins doc/gsdoc.el
+	fi
 
 	if [ `use cjk` ] ; then
 		dodir /usr/share/ghostscript/Resource
