@@ -1,8 +1,19 @@
 # ChangeLog for sys-apps/rsbac-admin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.5 2004/06/25 03:08:35 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.6 2004/06/29 01:37:06 kang Exp $
+
+*rsbac-admin-1.2.3 (26 Jun 2004)
+
+  26 Jun 2004; Guillaume Destuynder <kang@gentoo.org> rsbac-admin-1.2.3.ebuild
+  Version bump. Minor modifications: now using egroup, now depending on
+  corresponding kernels.
 
 *rsbac-admin-1.2.3_pre5 (15 Jun 2004)
+
+  17 Jun 2004; Guillaume Destuynder <kang@gentoo.org> files/rsbac.conf,
+  rsbac-admin-1.2.3_pre5.ebuild:
+  Fixed rsbac.conf to conform documentation.
+  Fixed ebuild to add this rsbac.conf to the installation
 
   15 Jun 2004; Guillaume Destuynder <kang@gentoo.org>
   rsbac-admin-1.2.3_pre5.ebuild, files/rsbac.conf, files/rklogd.init:
