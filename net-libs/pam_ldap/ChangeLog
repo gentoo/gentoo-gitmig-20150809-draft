@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/pam_ldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.2 2002/04/20 23:03:48 rphillips Exp $
+
+*pam_ldap-134-r1 (18 Apr 2002)
+
+  18 Apr 2002; Ryan Phillips <rphillips@gentoo.org> pam_ldap-134-r1 :
+
+  Resolved bug (#1944)
 
 *pam_ldap-134 (1 Feb 2002)
 
