@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.7 2004/08/12 19:01:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.8 2004/08/15 03:09:36 vapier Exp $
 
 inherit games eutils flag-o-matic
 
@@ -38,12 +38,16 @@ multilib_check() {
 }
 
 src_unpack() {
-	local f
-
 	unpack ${A}
+
+	local f
 	for f in * ; do
-		mv ${f} ${f/zsnes\\\\}
+		# bug with older bash #60138
+		[ "${BASH_VERSINFO}" == "3" ] \
+			&& mv ${f} ${f/zsnes\\} \
+			&& mv ${f} ${f/zsnes\\\\}
 	done
+
 	cd src
 	aclocal || die "aclocal failed"
 	env WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"

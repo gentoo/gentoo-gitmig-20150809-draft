@@ -1,7 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66ba92d0029fdb38bdc8c2689fab8b49 ChangeLog 3640
-MD5 8c1a379dff1b3df750bf69ef17f339a2 zsnes-1.36.ebuild 883
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 c875452c6ea214d11c3ab8e6bca29acc zsnes-1.37_pre20040508.ebuild 1665
-MD5 980377ed128117b995b7a42757bc4cb6 files/digest-zsnes-1.37_pre20040508 64
+MD5 8c1a379dff1b3df750bf69ef17f339a2 zsnes-1.36.ebuild 883
+MD5 0d872fc3c81230d4f7949c03a388ba96 zsnes-1.37_pre20040508.ebuild 1761
 MD5 b828464647d2d51e3a08b60e05795f1d files/digest-zsnes-1.36 63
-MD5 658c1c5cabe7d4bdd5ea5de5f6690cb8 files/zsnes-1.35-cvs.patch 21246
+MD5 980377ed128117b995b7a42757bc4cb6 files/digest-zsnes-1.37_pre20040508 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBHtQrHTu7gpaalycRAhFMAJ9ZQw5C4PdLa4IPH1mmaWWo55eFmwCg+ksU
+4cAgudtEtH3cLd5iWyqKe0c=
+=jKQk
+-----END PGP SIGNATURE-----
