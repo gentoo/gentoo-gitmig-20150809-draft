@@ -1,4 +1,15 @@
-MD5 060cf5a184892f3f3188ad1597d989a9 ocurl-0.1.6.ebuild 582
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 78f3fff0a5f16fe4dd4bf4045bd9fc7b ocurl-0.1.6.ebuild 703
+MD5 cb824a445971aab48e85c11ee2c28e50 ChangeLog 358
 MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
 MD5 b3ad04549e513bda899ad2c0b85bd1c1 files/digest-ocurl-0.1.6 59
 MD5 e5efa2a77ab5e531258715d1254fb7f5 files/0.1.6-curl-helper.patch 750
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLoT6I1lqEGTUzyQRAjV5AJ9/rBjZkkylvY+mOHu90UhnYWgL7wCghFIO
+ODyjiNIiNELvDtW2vYyA+l8=
+=Gz/H
+-----END PGP SIGNATURE-----
