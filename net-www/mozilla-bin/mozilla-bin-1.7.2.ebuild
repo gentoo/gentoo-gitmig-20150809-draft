@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-bin/mozilla-bin-1.7.2.ebuild,v 1.1 2004/08/05 03:06:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-bin/mozilla-bin-1.7.2.ebuild,v 1.2 2004/09/21 20:53:38 swtaylor Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -54,9 +54,9 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/icon/mozilla-bin-icon.png
+	doins ${FILESDIR}/mozilla-bin-icon.png
 	insinto /usr/share/applications
-	doins ${FILESDIR}/icon/mozilla-bin.desktop
+	doins ${FILESDIR}/mozilla-bin.desktop
 }
 
 pkg_preinst() {

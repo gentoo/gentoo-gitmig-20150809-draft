@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-bin/ChangeLog,v 1.4 2004/09/15 22:27:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-bin/ChangeLog,v 1.5 2004/09/21 20:53:38 swtaylor Exp $
+
+  21 Sep 2004; Scott W Taylor <swtaylor@gentoo.org> mozilla-bin-1.7.2.ebuild,
+  mozilla-bin-1.7.3.ebuild:
+  icon/desktop not in "files/icon/"
 
   15 Sep 2004; Olivier Crete <tester@gentoo.org> mozilla-bin-1.7.3.ebuild:
   Stable on x86 per security bug 63996
