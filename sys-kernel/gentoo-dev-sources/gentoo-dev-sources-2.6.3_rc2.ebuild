@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.3_rc2.ebuild,v 1.2 2004/02/10 15:58:44 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.3_rc2.ebuild,v 1.3 2004/02/14 21:20:44 brad_mssw Exp $
 
 #version of gentoo patchset
 GPV=2.19
@@ -17,6 +17,8 @@ detect_version
 
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GPV_SRC}"
+
+DEPEND="${DEPEND} dev-libs/ucl"
 
 pkg_postinst() {
 	postinst_sources
