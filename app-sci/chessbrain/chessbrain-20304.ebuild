@@ -1,27 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/chessbrain-20304.ebuild,v 1.1 2003/03/12 16:32:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/chessbrain-20304.ebuild,v 1.2 2003/04/23 14:34:35 vapier Exp $
 
-
-DESCRIPTION="This is a client for ChessBrain, a distibuted computing project."
-
+MY_PV=${PV}-01
+DESCRIPTION="distibuted computing project client"
 HOMEPAGE="http://www.chessbrain.net/"
-PV=${PV}-01
-SRC_URI="http://www.chessbrain.net/client${PV}-lin.tgz"
+SRC_URI="http://www.chessbrain.net/client${MY_PV}-lin.tgz"
 
 LICENSE="GPL-2"
-
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE=""
+S=${WORKDIR}
 
-DEPEND=""
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
 I=/opt/chessbrain
-S=${WORKDIR}
-src_install () {
+
+src_install() {
 	dodir ${I}
 	cp {cbspn,cbspn.conf} ${D}/${I}
 	chown nobody.nogroup ${D}/${I}
@@ -33,7 +29,7 @@ src_install () {
 	echo "CHESSBRAIN_DIR=${I}">> ${D}/etc/conf.d/chessbrain
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	einfo "To run ChessBrain in the background at boot:"
 	einfo " Edit ${I}/cbspn.conf for information relevant to ChessBrain"
 	einfo "  See http://www.chessbrain.net/peernodenotes.html"
@@ -42,4 +38,4 @@ pkg_postinst () {
 	einfo "Otherwise remember to cd into the directory"
 	einfo "where it should keep its data files first, like so:"
 	einfo " cd ${I} && ./cbspn"
-}	
+}
