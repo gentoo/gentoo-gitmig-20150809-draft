@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.28 2005/02/27 17:42:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.29 2005/02/27 17:52:52 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -193,7 +193,7 @@ function change_makefiles() {
 	
 	dirlistfullpath=
 	for item in *; do
-		if [ -d $item ] && [ ! $item = "CVS" ] && [ ! "$S/$item" = "$S/admin" ]; then
+		if [ -d "$item" ] && [ "$item" != "CVS" ] && [ "$S/$item" != "$S/admin" ]; then
 			# add it to the dirlist, with the FULL path and an ending "/"
 			dirlistfullpath="$dirlistfullpath ${1}/${item}"
 		fi
