@@ -1,4 +1,4 @@
-MD5 68f1ee9b1c187f470710b17535cae1cb ChangeLog 3065
+MD5 71fa8f2707e0e1cf4e3fa0708bb99768 ChangeLog 3184
 MD5 7f7cb43efce676543149273d8b9ddc6c hydrogen-0.8.1-r1.ebuild 2036
 MD5 759f4774e29964c003d91f8ad983ddc8 hydrogen-0.8.1.ebuild 748
 MD5 fe09c65964167850a9e330d16ec64aa5 hydrogen-0.8.2.ebuild 2032
@@ -7,7 +7,7 @@ MD5 7cb9559dca012df14bc78894162a6596 hydrogen-0.8.2-r1.ebuild 2094
 MD5 f15b9e01294831da0b6590d83835ae48 hydrogen-0.8.2-r2.ebuild 2143
 MD5 28d4fd260a0e21490ace9375ec1f0e2d hydrogen-0.8.2-r3.ebuild 2985
 MD5 9ff30bf99842ee7690bd6cfe508a5a23 hydrogen-0.8.2-r4.ebuild 3022
-MD5 f5c94e11091a452cf92068b5f87c72aa hydrogen-0.9.0_beta1.ebuild 3003
+MD5 eea68f2d9637a1cdb22b30fa0acb6b04 hydrogen-0.9.0_beta1.ebuild 3026
 MD5 799a80da707ff5ef9c2fe1b48ae0a6df files/digest-hydrogen-0.8.1 67
 MD5 dd475b26d81eb9e7275870a121454e24 files/digest-hydrogen-0.8.1-r1 319
 MD5 09d97690a9335d98d3bdbb5625b65efa files/digest-hydrogen-0.8.2 319

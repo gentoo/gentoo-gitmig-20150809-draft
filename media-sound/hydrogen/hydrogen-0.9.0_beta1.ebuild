@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0_beta1.ebuild,v 1.1 2004/08/18 02:06:20 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0_beta1.ebuild,v 1.2 2004/08/20 18:11:13 fvdpol Exp $
 
 inherit eutils
 
@@ -28,7 +28,8 @@ RDEPEND="virtual/x11
 	>=media-libs/audiofile-0.2.3 \
 	alsa? ( media-libs/alsa-lib ) \
 	jack? ( media-sound/jack-audio-connection-kit ) \
-	>=x11-libs/qt-3"
+	>=x11-libs/qt-3 \
+	>=media-libs/flac-1"
 
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
