@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.16 2002/10/09 20:11:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.17 2002/10/12 01:44:41 seemant Exp $
+
+  11 Oct 2002; Seemant Kulleen <seemant@gentoo.org> glibc-2.2.5-r7.ebuild
+  files/glibc-2.2.5-sparc-misc.diff files/glibc-2.2.5-sparc64-fixups.diff :
+
+  Added patches from debian's patch set to fix miscellaneous issues on sparc
+  and sparc64.  One indication of the hassle with sparc64 was the mozilla
+  compile failure.  That _should_ be sorted out now.
 
   09 Oct 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r7.ebuild,
                                                     glibc-2.2.5-divdi3.diff :
