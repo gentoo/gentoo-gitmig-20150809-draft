@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/prc-tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.3 2003/10/29 17:38:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.4 2003/11/05 18:25:25 plasmaroo Exp $
+
+  05 Nov 2003; <plasmaroo@gentoo.org> prc-tools-2.3.ebuild:
+  Added fix the compile error when not upgrading because of broken includes in
+  prc-tools.
 
 *prc-tools-2.3 (29 Oct 2003)
 
