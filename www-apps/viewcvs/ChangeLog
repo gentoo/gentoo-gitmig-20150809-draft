@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/viewcvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.8 2004/10/04 21:14:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.9 2004/12/07 15:01:33 stuart Exp $
+
+  07 Dec 2004; Stuart Herbert <stuart@gentoo.org> :
+  Two rev bumps (one for the released viewcvs, one for the cvs snapshot) to
+  address security bug #72461
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org>
   viewcvs-0.9.2_p20040831.ebuild:
