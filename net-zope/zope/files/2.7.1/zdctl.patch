@@ -1,0 +1,14 @@
+--- lib/python/zdaemon/patched_zdctl.py    2004-02-18 23:01:12.000000000 +0100
++++ lib/python/zdaemon/zdctl.py    2003-10-24 23:32:59.000000000 +0200
+@@ -208,9 +208,9 @@
+             args += self._get_override("-z", "directory")
+             args.extend(self.options.program)
+             if self.options.daemon:
+-                flag = os.P_WAIT
+-            else:
+                 flag = os.P_NOWAIT
++            else:
++                flag = os.P_WAIT
+             os.spawnvp(flag, args[0], args)
+         elif not self.zd_pid:
+             self.send_action("start")
