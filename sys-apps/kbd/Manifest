@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca9f2399229e7049461105a416c668be ChangeLog 6266
-MD5 2d472508f72264b52b8b0ed4baf6d0f7 kbd-1.12-r4.ebuild 2328
+MD5 63c7eb210ae073232511598003383e51 kbd-1.12-r3.ebuild 2200
+MD5 fe04a9a95dd007b3dc5924e2caa0c800 ChangeLog 6373
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b392b9b6ce5edd6e37767cecb3d97187 kbd-1.12-r2.ebuild 1891
-MD5 30167daa10662ae7de91710f712ce89a kbd-1.12-r3.ebuild 2199
-MD5 2fff8da17e566c258df2888fbc599c23 files/kbd-1.12-cz-qwerty-map.patch 5821
-MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
-MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r4 118
-MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
-MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
-MD5 7c826f293d2f1ae5c4de4031c19cd47d files/digest-kbd-1.12-r2 60
+MD5 380ea52f3a0ff1e56ef2fe427d40416c kbd-1.12-r4.ebuild 2329
+MD5 9b0d39e8aadcbc2852faf9f5d35cd9fc kbd-1.12-r2.ebuild 1892
 MD5 6e007f04a80358ea81b27c80498a4808 files/kbd-1.08-terminal.patch 925
 MD5 58617e4171ee3357153c9793be062524 files/kbd-1.12-it-euro-map.patch 501
+MD5 7c826f293d2f1ae5c4de4031c19cd47d files/digest-kbd-1.12-r2 60
+MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
+MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
 MD5 5f28051ad309ee4e481ef3b2b9cc9714 files/kbd-1.12-kbd_repeat-v2.patch 809
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0xZlroRuSHgZdywRAuhkAJ0ZK4NDNqP78P++iPdSLWQM3/+S9ACfVxXX
-CAMzMJOeBKpGnfqvOFg3Ya0=
-=pkuV
------END PGP SIGNATURE-----
+MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r4 118
+MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
+MD5 2fff8da17e566c258df2888fbc599c23 files/kbd-1.12-cz-qwerty-map.patch 5821
