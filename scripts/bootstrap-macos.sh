@@ -1,13 +1,15 @@
 #!/bin/bash
 # Copyright 2004 The Gentoo Foundation, Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.1 2004/07/13 00:14:34 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.2 2004/07/13 00:18:49 pvdabeel Exp $
 
 source /usr/lib/portage/bin/functions.sh
 
 # This is currently a Mac OS only script. But it could easily be reused
 # for Operating systems such as Solaris, ... If your interested in doing
 # such a port, contact Pieter Van den Abeele at pvdabeel@gentoo.org 
+
+# Note: for complete darwin bootstraps, we'll reuse the regular portage bootstrap.sh
 
 trap 'exit 1' TERM KILL INT QUIT ABRT
 
