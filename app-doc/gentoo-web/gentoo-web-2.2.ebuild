@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.58 2002/05/15 19:09:25 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.59 2002/05/15 19:49:45 g2boojum Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -50,6 +50,7 @@ src_install() {
 	do
 		xsltproc $TEMPLATE xml/${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
 	done
+	cp txt/firewall ${D}${WEBROOT}/doc/
 	dodir ${WEBROOT}/images
 	insinto ${WEBROOT}/images
 	cp -a ${S}/images ${D}/${WEBROOT}
