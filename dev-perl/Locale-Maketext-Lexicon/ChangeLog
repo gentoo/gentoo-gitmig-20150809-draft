@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Locale-Maketext-Lexicon
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-Maketext-Lexicon/ChangeLog,v 1.1 2004/11/27 05:32:14 pclouds Exp $
+
+*Locale-Maketext-Lexicon-0.45 (27 Nov 2004)
+
+  27 Nov 2004; <pclouds@gentoo.org> +Locale-Maketext-Lexicon-0.45.ebuild:
+  New ebuild
+
