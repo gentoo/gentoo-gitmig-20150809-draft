@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.6 2004/09/27 21:01:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.7 2004/10/17 20:56:51 dholm Exp $
 
 inherit fixheadtails ssl-cert eutils libtool flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz
 	http://mauricem.com/inn_db4.tar.gz"
 SLOT="0"
 LICENSE="as-is BSD GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ipv6 kerberos sasl ssl perl python tcltk berkdb inntaggedhash innkeywords"
 
 RDEPEND="virtual/mta

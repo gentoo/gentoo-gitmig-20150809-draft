@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c5dec1c2b1d0559e6ae2122331cd801 inn-2.4.1.ebuild 8191
+MD5 92eade8ea983c3b5aee3b56ed8362512 ChangeLog 2679
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 80caddea64596ea99718c832da9c952e ChangeLog 2601
-MD5 12b5b155a7df558664f522f72ab5f723 files/digest-inn-2.4.1 118
+MD5 13c9fb371216ef57405b76b04f282d4e inn-2.4.1.ebuild 8193
 MD5 9bfea7a0644e2f3adc2738d86bfa2254 files/innd 436
 MD5 69e1740d0d4d85a272e0491fa1a7ddb7 files/2.4.1-berkdb.patch 1393
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXekpI1lqEGTUzyQRAiiiAKCeE764chp6bzEVQrJ2iMxx6dK5LQCeLmII
-W4PZ5pBbZfaqjiPn5WLMxQo=
-=e9pc
------END PGP SIGNATURE-----
+MD5 12b5b155a7df558664f522f72ab5f723 files/digest-inn-2.4.1 118
