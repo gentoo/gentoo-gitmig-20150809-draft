@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.53 2003/09/20 14:04:35 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.54 2003/09/22 23:42:00 tseng Exp $
+
+*openbox-3.0_beta4 (22 Sep 2003)
+
+  22 Sep 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_beta4.ebuild:
+  version bump, some config files + themes have moved once again, see
+  openbox.org for details.
 
   20 Sep 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_beta1.ebuild,
   openbox-3.0_beta2.ebuild, openbox-3.0_beta3.ebuild:
