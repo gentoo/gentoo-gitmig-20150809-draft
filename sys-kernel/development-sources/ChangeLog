@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.165 2005/01/20 17:22:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.166 2005/01/22 14:45:11 chainsaw Exp $
+
+*development-sources-2.6.11_rc2 (22 Jan 2005)
+
+  22 Jan 2005; Tony Vroon <chainsaw@gentoo.org>
+  +development-sources-2.6.11_rc2.ebuild:
+  Version bump to -rc2. Breaks nvidia-kernel for now with a kernel BUG at
+  arch/i386/mm/pageattr.c:136
 
 *development-sources-2.6.5 (20 Jan 2005)
 
@@ -19,8 +26,7 @@
   12 Jan 2005; Tony Vroon <chainsaw@gentoo.org>
   -development-sources-2.6.5.ebuild, -development-sources-2.6.6.ebuild,
   -development-sources-2.6.7.ebuild:
-  Old ebuilds cleaned. nVidia binary driver users please be aware that
-  2.6.11-rc1 is not compatible with nvidia-kernel.
+  Old ebuilds cleaned.
 
 *development-sources-2.6.11_rc1 (12 Jan 2005)
 
