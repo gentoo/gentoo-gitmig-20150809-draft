@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r1.ebuild,v 1.2 2002/12/09 04:37:29 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r1.ebuild,v 1.3 2002/12/12 22:12:00 tuxus Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
 	 ftp://gatekeeper.dec.com/pub/GNU/readline/${P}.tar.gz"
 HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 SLOT="0"
 LICENSE="GPL-2"
 

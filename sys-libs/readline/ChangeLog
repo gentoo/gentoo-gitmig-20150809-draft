@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.11 2002/12/09 22:32:22 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.12 2002/12/12 22:12:00 tuxus Exp $
+
+ 12 Dec 2002; Jan Seidel <tuxus@gentoo.org> readline-4.2a-r1.ebuild :
+   Added mips to keywords.
 
 *readline-4.3-r4 (09 Dec 2002)
   09 Dec 2002; Jon Portnoy <avenj@gentoo.org> readline-4.3-r4.ebuild :
