@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3b.ebuild,v 1.1 2004/08/18 21:16:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3b.ebuild,v 1.2 2004/08/19 08:32:15 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
