@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r2.ebuild,v 1.2 2004/08/07 21:01:55 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r2.ebuild,v 1.3 2004/08/08 01:03:23 langthang Exp $
 
 inherit eutils
 IUSE="apache2"
@@ -115,10 +115,6 @@ pkg_postinst() {
 	einfo "Running \`${INSTALLDIR}/bin/check_perms -f\` *"
 	einfo "*********************************************** *"
 	bin/check_perms -f
-	einfo "************************************************************* *"
-	einfo "Running \`${INSTALLDIR}/bin/check_perms_grsecurity.py -f\` *"
-	einfo "************************************************************* *"
-	cd bin; python check_perms_grsecurity.py -f
 	einfo ""
 	einfo "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"
 	einfo "Setup information, mailman will NOT run unless you follow"
