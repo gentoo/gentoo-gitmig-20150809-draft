@@ -1,0 +1,947 @@
+--- chkrootkit-0.41/chkrootkit	2003-06-21 04:09:09.000000000 +0200
++++ chkrootkit	2003-07-11 23:33:59.763190408 +0200
+@@ -10,6 +10,15 @@
+ # (C)1997-2003 Nelson Murilo, Pangeia Informatica, AMS Foundation and others.
+ # All rights reserved
+ 
++# Gentoo specific : Could use `type <command> | cut -f 3 -d " "`
++IFPROMISC="/usr/sbin/ifpromisc"
++CHKLASTLOG="/usr/sbin/chklastlog"
++CHKPROC="/usr/sbin/chkproc"
++CHKWTMP="/usr/sbin/chkwtmp"
++CHECK_WTMPX="/usr/sbin/check_wtmpx"
++# ebuild doesn't install chkrootkit's strings; use gnus.
++STRINGS="/usr/bin/strings"
++
+ ### workaround for some Bourne shell implementations
+ unalias login > /dev/null 2>&1
+ unalias ls > /dev/null 2>&1
+@@ -116,7 +125,7 @@
+ 
+     if [ "${EXPERT}" = "t" ]; then
+         expertmode_output "${egrep} ^asp ${ROOTDIR}etc/inetd.conf"
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+@@ -132,7 +141,7 @@
+         STATUS=${INFECTED}
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${ASP_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${ASP_LABEL}" >/dev/null 2>&1
+        then
+           echo "INFECTED"
+           STATUS=${INFECTED}
+@@ -150,22 +159,22 @@
+        return ${NOT_TESTED}
+     fi
+ 
+-    if [ ! -x ./ifpromisc ]; then
+-      echo "not tested: can't exec ./ifpromisc"
++    if [ ! -x ${IFPROMISC} ]; then
++      echo "not tested: can't exec ${IFPROMISC}"
+       return ${NOT_TESTED}
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "./ifpromisc"
++        expertmode_output "${IFPROMISC}"
+         return 5
+     fi
+     echo
+-    [ "${QUIET}" != "t" ] && ./ifpromisc || ./ifpromisc -q
++    [ "${QUIET}" != "t" ] && ${IFPROMISC} || ${IFPROMISC} -q
+ }
+ 
+ z2 () {
+-    if [ ! -x ./chklastlog ]; then
+-      echo "not tested: can't exec ./chklastlog"
++    if [ ! -x ${CHKLASTLOG} ]; then
++      echo "not tested: can't exec ${CHKLASTLOG}"
+       return ${NOT_TESTED}
+     fi
+ 
+@@ -173,31 +182,31 @@
+     LASTLOG=`loc lastlog lastlog "${ROOTDIR}var/log ${ROOTDIR}var/adm"`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "./chklastlog -f ${WTMP} -l ${LASTLOG}"
++        expertmode_output "${CHKLASTLOG} -f ${WTMP} -l ${LASTLOG}"
+         return 5
+     fi
+ 
+-    if ./chklastlog -f ${WTMP} -l ${LASTLOG}
++    if ${CHKLASTLOG} -f ${WTMP} -l ${LASTLOG}
+     then
+       if [ "${QUIET}" != "t" ]; then echo "nothing deleted"; fi
+     fi
+ }
+ 
+ wted () {
+-    if [ ! -x ./chkwtmp ]; then
+-      echo "not tested: can't exec ./chkwtmp"
++    if [ ! -x ${CHKWTMP} ]; then
++      echo "not tested: can't exec ${CHKWTMP}"
+       return ${NOT_TESTED}
+     fi
+ 
+    if [ "$SYSTEM" = "SunOS" ]; then
+-       if [ ! -x ./check_wtmpx ]; then
+-          echo "not tested: can't exec ./check_wtmpx"
++       if [ ! -x ${CHECK_WTMPX} ]; then
++          echo "not tested: can't exec ${CHECK_WTMPX}"
+        else
+           if [ "${EXPERT}" = "t" ]; then
+-             expertmode_output "./check_wtmpx"
++             expertmode_output "${CHECK_WTMPX}"
+               return 5
+           fi
+-          if ./check_wtmpx
++          if ${CHECK_WTMPX}
+              then
+              if [ "${QUIET}" != "t" ]; then \
+                 echo "nothing deleted in /var/adm/wtmpx"; fi
+@@ -207,12 +216,12 @@
+        WTMP=`loc wtmp wtmp "${ROOTDIR}var/log ${ROOTDIR}var/adm"`
+ 
+        if [ "${EXPERT}" = "t" ]; then
+-          expertmode_output "./chkwtmp -f ${WTMP}"
++          expertmode_output "${CHKWTMP} -f ${WTMP}"
+           return 5
+        fi
+     fi
+ 
+-    if ./chkwtmp -f ${WTMP}
++    if ${CHKWTMP} -f ${WTMP}
+     then
+       if [ "${QUIET}" != "t" ]; then echo "nothing deleted"; fi
+     fi
+@@ -251,7 +260,7 @@
+     prog=""
+     if [  \( "${SYSTEM}" = "Linux"  -o \( "${SYSTEM}" = "FreeBSD" -a \
+        ${V} -gt 43 \) \) -a "${ROOTDIR}" = "/" ]; then
+-      [ ! -x ./chkproc ] && prog="./chkproc"
++      [ ! -x ${CHKPROC} ] && prog="${CHKPROC}"
+       [ ! -x ./chkdirs ] && prog="$prog ./chkdirs"
+       if [ "$prog" != "" ]; then
+ #        echo "not tested: can't exec $prog"
+@@ -261,7 +270,7 @@
+       if [ "${EXPERT}" = "t" ]; then
+          [ -r /proc/ksyms ] &&  ${egrep} -i "adore|sebek" < /proc/ksyms 2>/dev/null
+          [ -d /proc/knark ] &&  ${ls} -la /proc/knark 2> /dev/null
+-          expertmode_output "./chkproc -v -v"
++          expertmode_output "${CHKPROC} -v -v"
+           return 5
+       fi
+ 
+@@ -282,7 +291,7 @@
+          echo "Warning: Knark LKM installed"
+       fi
+ 
+-      if ./chkproc
++      if ${CHKPROC}
+       then
+            if [ "${QUIET}" != "t" ]; then echo "nothing detected"; fi
+       else
+@@ -454,7 +463,7 @@
+       ${egrep} "\.hk" ${ROOTDIR}etc/rc.d/init.d/network 2>/dev/null
+ 
+       ## Suckit rootkit
+-      expertmode_output "${strings} ${ROOTDIR}sbin/init | ${egrep} HOME"
++      expertmode_output "${STRINGS} ${ROOTDIR}sbin/init | ${egrep} HOME"
+ 
+       ## Volc  rootkit
+       expertmode_output "${ls} ${ROOTDIR}usr/bin/volc"
+@@ -863,7 +872,7 @@
+    ### Suckit
+    if [ -f /sbin/init ]; then
+       if [ "${QUIET}" != "t" ];then printn "Searching for Suckit rootkit ... "; fi
+-      if ${strings} /sbin/init | ${egrep} HOME >/dev/null 2>&1 ; then
++      if ${STRINGS} /sbin/init | ${egrep} HOME >/dev/null 2>&1 ; then
+         echo "Warning: /sbin/init INFECTED"
+       else
+          if [ "${QUIET}" != "t" ]; then echo "nothing found"; fi
+@@ -1008,19 +1017,19 @@
+     CMD=`loc chfn chfn $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+     case "${SYSTEM}" in
+        Linux)
+-          if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" \
++          if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" \
+              >/dev/null 2>&1
+           then
+              STATUS=${INFECTED}
+           fi;;
+        FreeBSD)
+-          if [ `${strings} -a ${CMD} | \
++          if [ `${STRINGS} -a ${CMD} | \
+                 ${egrep} -c "${GENERIC_ROOTKIT_LABEL}"` -ne 2 ]
+           then
+              STATUS=${INFECTED}
+@@ -1035,16 +1044,16 @@
+     REDHAT_PAM_LABEL="*NOT*"
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+     case "${SYSTEM}" in
+        Linux)
+-          if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" \
++          if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" \
+           >/dev/null 2>&1
+              then
+-             if ${strings} -a ${CMD} | ${egrep} "${REDHAT_PAM_LABEL}" \
++             if ${STRINGS} -a ${CMD} | ${egrep} "${REDHAT_PAM_LABEL}" \
+              >/dev/null 2>&1
+                 then
+                 :
+@@ -1053,7 +1062,7 @@
+              fi
+           fi;;
+        FreeBSD)
+-          if [ `${strings} -a ${CMD} | ${egrep} -c "${GENERIC_ROOTKIT_LABEL}"` -ne 2 ]
++          if [ `${STRINGS} -a ${CMD} | ${egrep} -c "${GENERIC_ROOTKIT_LABEL}"` -ne 2 ]
+              then
+              STATUS=${INFECTED}
+           fi;;
+@@ -1066,13 +1075,13 @@
+     CMD=`loc login login $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+     if [ "$SYSTEM" = "SunOS" ]; then
+       TROJED_L_L="porcao|/bin/xstat"
+-      if ${strings} -a ${CMD} | ${egrep} "${TROJED_L_L}" >/dev/null 2>&1 ]; then
++      if ${STRINGS} -a ${CMD} | ${egrep} "${TROJED_L_L}" >/dev/null 2>&1 ]; then
+           return ${INFECTED}
+        else
+           return ${NOT_TESTED}
+@@ -1080,7 +1089,7 @@
+     fi
+     GENERAL="^root$"
+     TROJED_L_L="vejeta|xlogin|^@\(#\)klogin\.c|lets_log|sukasuka|/usr/lib/.ark?|SucKIT"
+-    ret=`${strings} -a ${CMD} | ${egrep} -c "${GENERAL}"`
++    ret=`${STRINGS} -a ${CMD} | ${egrep} -c "${GENERAL}"`
+     if [ ${ret} -gt 0 ]; then
+         case ${ret} in
+         1) [ "${SYSTEM}" = "OpenBSD" -a ${V} -le 27 -o ${V} -ge 30 ] && \
+@@ -1091,7 +1100,7 @@
+         *) STATUS=${INFECTED};;
+         esac
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${TROJED_L_L}" 2>&1 >/dev/null
++    if ${STRINGS} -a ${CMD} | ${egrep} "${TROJED_L_L}" 2>&1 >/dev/null
+        then
+         STATUS=${INFECTED}
+     fi
+@@ -1107,14 +1116,14 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-       expertmode_output "${strings} -a ${CMD}"
++       expertmode_output "${STRINGS} -a ${CMD}"
+     fi
+ 
+     if [ "${SYSTEM}" = "OpenBSD" -o "${SYSTEM}" = "SunOS" ]
+     then
+        return ${NOT_TESTED}
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}|/lib/security" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}|/lib/security" \
+     >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1132,11 +1141,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" \
+     >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1155,11 +1164,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${SYSLOG_I_L}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${SYSLOG_I_L}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1176,11 +1185,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${HDPARM_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${HDPARM_INFECTED_LABEL}" \
+        >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1198,11 +1207,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GPM_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GPM_INFECTED_LABEL}" \
+        >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1220,11 +1229,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${MINGETTY_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${MINGETTY_INFECTED_LABEL}" \
+        >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1242,11 +1251,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${SENDMAIL_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${SENDMAIL_INFECTED_LABEL}" \
+        >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1260,11 +1269,11 @@
+     CMD=`loc ls ls $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${LS_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${LS_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1277,11 +1286,11 @@
+     CMD=`loc du du $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${DU_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${DU_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1301,11 +1310,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${NAMED_I_L}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${NAMED_I_L}" \
+     >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1319,11 +1328,11 @@
+     CMD=`loc netstat netstat $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${NETSTAT_I_L}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${NETSTAT_I_L}" \
+     >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -1338,11 +1347,11 @@
+    CMD=`loc ps ps $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${PS_I_L}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${PS_I_L}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1360,11 +1369,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${PSTREE_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${PSTREE_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1382,11 +1391,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1404,11 +1413,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1426,11 +1435,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1469,11 +1478,11 @@
+    CMD=`loc basename basename $pth`
+ 
+    if [ "${EXPERT}" = "t" ]; then
+-       expertmode_output "${strings} -a ${CMD}"
++       expertmode_output "${STRINGS} -a ${CMD}"
+        expertmode_output "${ls} -l ${CMD}"
+        return 5
+    fi
+-   if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++   if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+    then
+        STATUS=${INFECTED}
+    fi
+@@ -1493,11 +1502,11 @@
+     CMD=`loc dirname dirname $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1518,11 +1527,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1534,12 +1543,12 @@
+     CMD=`loc rpcinfo rpcinfo $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1555,12 +1564,12 @@
+     CMD=`loc date date $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1576,12 +1585,12 @@
+     CMD=`loc echo echo $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1597,12 +1606,12 @@
+     CMD=`loc env env $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1624,11 +1633,11 @@
+        fi
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1642,11 +1651,11 @@
+        return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1661,11 +1670,11 @@
+        return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${INIT_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${INIT_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1679,11 +1688,11 @@
+        return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1697,11 +1706,11 @@
+         return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1713,12 +1722,12 @@
+     CMD=`loc write write $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" | grep -v locale > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" | grep -v locale > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1735,11 +1744,11 @@
+     W_INFECTED_LABEL="uname -a"
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${W_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${W_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1755,11 +1764,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${VDIR_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${VDIR_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1791,7 +1800,7 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+     STATUS=${INFECTED}
+@@ -1808,12 +1817,12 @@
+     MAIL_INFECTED_LABEL="sh -i"
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${MAIL_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${MAIL_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1833,12 +1842,12 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GENERIC_ROOTKIT_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1855,11 +1864,11 @@
+     CMD=`loc egrep egrep $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${EGREP_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${EGREP_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1872,12 +1881,12 @@
+     CMD=`loc grep grep $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         expertmode_output "${ls} -l ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${GREP_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${GREP_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -1899,11 +1908,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${TOP_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1921,10 +1930,10 @@
+        fi
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${RLOGIN_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${RLOGIN_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1939,10 +1948,10 @@
+          return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${LSOF_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${LSOF_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1957,10 +1966,10 @@
+          return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${AMD_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${AMD_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1975,10 +1984,10 @@
+          return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${SLOGIN_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${SLOGIN_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -1997,10 +2006,10 @@
+         return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${CRON_INFECTED_LABEL}" >/dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${CRON_INFECTED_LABEL}" >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+     fi
+@@ -2012,18 +2021,18 @@
+     CMD="${ROOTDIR}sbin/ifconfig"
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+     IFCONFIG_NOT_INFECTED_LABEL="PROMISC"
+     IFCONFIG_INFECTED_LABEL="/dev/tux|/session.null"
+-    if ${strings} -a ${CMD} | ${egrep} "${IFCONFIG_NOT_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${IFCONFIG_NOT_INFECTED_LABEL}" \
+     >/dev/null 2>&1
+     then
+        STATUS=${NOT_INFECTED}
+     fi
+-    if ${strings} -a ${CMD} | ${egrep} "${IFCONFIG_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${IFCONFIG_INFECTED_LABEL}" \
+     >/dev/null 2>&1
+     then
+        STATUS=${INFECTED}
+@@ -2043,12 +2052,12 @@
+        return ${NOT_FOUND}
+     fi
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+     RSHD_INFECTED_LABEL="HISTFILE"
+-    if ${strings} -a ${CMD} | ${egrep} "${RSHD_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${RSHD_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+         if ${egrep} "^#.*rshd" ${ROOTDIR}etc/inetd.conf >/dev/null 2>&1 -o \
+@@ -2084,11 +2093,11 @@
+     CMD=${ROOTDIR}${CMD}
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${TCPD_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${TCPD_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -2105,11 +2114,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${SSHD2_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${SSHD2_INFECTED_LABEL}" \
+        > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+@@ -2126,11 +2135,11 @@
+     CMD=`loc su su $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${SU_INFECTED_LABEL}" > /dev/null 2>&1
++    if ${STRINGS} -a ${CMD} | ${egrep} "${SU_INFECTED_LABEL}" > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+     fi
+@@ -2150,11 +2159,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${FINGER_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${FINGER_INFECTED_LABEL}" \
+ > /dev/null 2>&1
+     then
+         STATUS=${INFECTED}
+@@ -2202,11 +2211,11 @@
+     fi
+ 
+     if [ "${EXPERT}" = "t" ]; then
+-        expertmode_output "${strings} -a ${CMD}"
++        expertmode_output "${STRINGS} -a ${CMD}"
+         return 5
+     fi
+ 
+-    if ${strings} -a ${CMD} | ${egrep} "${TELNETD_INFECTED_LABEL}" \
++    if ${STRINGS} -a ${CMD} | ${egrep} "${TELNETD_INFECTED_LABEL}" \
+        >/dev/null 2>&1
+     then
+         STATUS=${INFECTED}
