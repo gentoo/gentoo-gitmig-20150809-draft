@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040117.ebuild,v 1.4 2004/02/24 18:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040117.ebuild,v 1.5 2004/04/18 09:22:54 vapier Exp $
 
 IUSE="nls pic build nptl"
 
@@ -244,7 +244,7 @@ pkg_setup() {
 
 src_unpack() {
 
-	local P="${PN}-${MY_PV}"
+	local LOCAL_P="${PN}-${MY_PV}"
 
 	unpack glibc-${MY_PV}.tar.bz2
 
@@ -266,9 +266,9 @@ src_unpack() {
 
 	if use_nptl
 	then
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-nptl-fixes.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-redhat-nptl-fixes.patch
 	else
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-linuxthreads-fixes.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-redhat-linuxthreads-fixes.patch
 	fi
 
 	# To circumvent problems with propolice __guard and
@@ -277,7 +277,7 @@ src_unpack() {
 	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" ]
 	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-propolice-guard-functions-v2.patch
+		cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-propolice-guard-functions-v2.patch
 	fi
 
 	# With latest versions of glibc, a lot of apps failed on a PaX enabled
@@ -328,11 +328,11 @@ src_unpack() {
 	#
 	#   http://bugs.gentoo.org/show_bug.cgi?id=27142
 	#
-#	cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-fix-omitted-operand-in-mathinline_h.patch
+#	cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-fix-omitted-operand-in-mathinline_h.patch
 
 	# We do not want name_insert() in iconvconfig.c to be defined inside
 	# write_output() as it causes issues with PaX.
-	cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-iconvconfig-name_insert.patch
+	cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-iconvconfig-name_insert.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.
@@ -344,9 +344,9 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-add-n32-n64-sysdep-cancel.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-configure-for-n64-symver.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-pread-linux2.5.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-add-n32-n64-sysdep-cancel.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-configure-for-n64-symver.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-pread-linux2.5.patch
 	fi
 
 	if [ "${ARCH}" = "alpha" ]
@@ -355,15 +355,15 @@ src_unpack() {
 		# Fix compatability with compaq compilers by ifdef'ing out some
 		# 2.3.2 additions.
 		# <taviso@gentoo.org> (14 Jun 2003).
-		epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-decc-compaq.patch
 
 		# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
-		epatch ${FILESDIR}/2.3.2/${P}-alpha-pwrite.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-alpha-pwrite.patch
 	fi
 
 	if [ "${ARCH}" = "amd64" ]
 	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-amd64-nomultilib.patch
+		cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-amd64-nomultilib.patch
 	fi
 
 	if [ "${ARCH}" = "ia64" ]
@@ -374,7 +374,7 @@ src_unpack() {
 		#
 		#   http://sources.redhat.com/ml/libc-alpha/2003-09/msg00165.html
 		#
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
+		cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-ia64-LOAD_ARGS-fixup.patch
 	fi
 
 	if [ "${ARCH}" = "hppa" ]
@@ -382,14 +382,14 @@ src_unpack() {
 		local x=
 
 		cd ${WORKDIR}
-		unpack ${P}-hppa-patches-p1.tar.bz2
+		unpack ${LOCAL_P}-hppa-patches-p1.tar.bz2
 		cd ${S}
 		EPATCH_EXCLUDE="010* 020* 030* 040* 050* 055* 130* 190* 200*"
 		for x in ${EPATCH_EXCLUDE}
 		do
-			rm -f ${WORKDIR}/${P}-hppa-patches/${x}
+			rm -f ${WORKDIR}/${LOCAL_P}-hppa-patches/${x}
 		done
-		for x in ${WORKDIR}/${P}-hppa-patches/*
+		for x in ${WORKDIR}/${LOCAL_P}-hppa-patches/*
 		do
 			epatch ${x}
 		done
