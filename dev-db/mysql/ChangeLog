@@ -1,8 +1,14 @@
 # ChangeLog for home/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.24 2002/11/29 11:00:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.25 2002/12/07 05:52:56 jmorgan Exp $
 
 *mysql-4.0.5_beta (29 Nov 2002)
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> mysql-3.23.52-r1.ebuild : 
+  Changed sparc64 to sparc keyword
+ 
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> mysql-3.23.53.ebuild :
+  Changed ~sparc64 to ~sparc keyword
 
   29 Nov 2002; Donny Davies <woodchip@gentoo.org> : Chase latest.
   Closes #11011, #11233.  The new initscript still needs to be synced with
