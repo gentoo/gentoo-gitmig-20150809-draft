@@ -1,8 +1,17 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.14 2004/10/06 02:25:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.15 2004/10/06 02:36:05 pylon Exp $
 
-  06 Oct 2004; Lars Weiler,,, <lars@gentoo.org>
+  06 Oct 2004; Lars Weiler <pylon@gentoo.org>
+  -files/pbbuttonsd-0.5.10-compat.patch,
+  -files/pbbuttonsd-0.5.2-replace_pmud.patch, -files/pbbuttonsd.rc5,
+  -pbbuttonsd-0.4.10a.ebuild, -pbbuttonsd-0.5.10-r1.ebuild,
+  -pbbuttonsd-0.5.10.ebuild, -pbbuttonsd-0.5.2-r1.ebuild,
+  -pbbuttonsd-0.5.8.ebuild, -pbbuttonsd-0.5.9-r1.ebuild,
+  -pbbuttonsd-0.5.9.ebuild:
+  Tidy up unneeded versions.
+
+  06 Oct 2004; Lars Weiler <pylon@gentoo.org>
   +files/pbbuttonsd-0.6.5-backlight.patch, pbbuttonsd-0.6.5.ebuild:
   Added upstream patch from bug #64591 as long as it is not fixed upstream.
 
