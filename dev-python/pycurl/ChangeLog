@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycurl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.14 2004/12/30 23:09:12 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.15 2005/01/17 10:55:29 liquidx Exp $
+
+*pycurl-7.12.3 (17 Jan 2005)
+
+  17 Jan 2005; Alastair Tse <liquidx@gentoo.org> +pycurl-7.12.3.ebuild:
+  version bump (#77926)
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
