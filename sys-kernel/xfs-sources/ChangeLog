@@ -1,11 +1,19 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.16 2003/01/15 05:56:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.17 2003/01/15 17:24:26 livewire Exp $
 
 *xfs-sources-2.4.20_pre5 (14 Jan 2003)
+
+  14 Jan 2003; Bob Johnson <livewire@gentoo.org>:
   
-  14 Jan 2003; Bob Johnson <livewire_@ameritech.net>:
-  Minor updates
+  Changes from _pre4
+  - Proconfig added
+  - Ntfs-2.1.0a read support added
+  - Segfault fix for vm86
+  - AC patch that may help some motherboards from crashing on bootup
+  - Network card updates: 3c59x,cb_shim,eepro100,epic100,hamachi,intel-gige
+  -	                 myson803,natsemi,ns820,rtl8139,starfire,sundance
+  -                      tulip,via-rhine,winbond,yellowfin
 
 *xfs-sources-2.4.20_pre4 (10 Jan 2003)
   
