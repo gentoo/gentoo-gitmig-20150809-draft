@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dgs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.14 2004/04/15 17:54:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.15 2004/04/28 03:16:14 lv Exp $
+
+  27 Apr 2004; Travis Tilley <lv@gentoo.org> dgs-0.5.10-r1.ebuild:
+  added patch for compiling with gcc 3.4 submitted by Robert Moss
 
   16 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> dgs-0.5.10-r1.ebuild,
   files/dgs-0.5.10-tcpd-gentoo.diff:
