@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/class-loader
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/ChangeLog,v 1.1 2003/06/23 17:23:07 mcummings Exp $
+
+*class-loader-2.02 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  class-loader-2.02.ebuild:
+  dep for crypt-random
+
