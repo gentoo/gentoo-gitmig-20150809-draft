@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.42 2004/01/09 21:58:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.43 2004/01/15 05:37:20 avenj Exp $
+
+  15 Jan 2004; Jon Portnoy <avenj@gentoo.org> irssi-0.8.9.ebuild :
+  Stable on AMD64.
 
   09 Jan 2004; Jason Wever <weeve@gentoo.org> irssi-0.8.9.ebuild:
   Marked stable on sparc.
