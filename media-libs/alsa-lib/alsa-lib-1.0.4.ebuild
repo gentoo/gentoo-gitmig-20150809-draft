@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.3b-r1.ebuild,v 1.1 2004/03/15 00:19:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.4.ebuild,v 1.1 2004/04/04 19:01:18 eradicator Exp $
 
 inherit libtool
 
@@ -24,10 +24,11 @@ SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 RESTRICT="nomirror"
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
 	elibtoolize
-	econf || die "./configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
@@ -37,7 +38,7 @@ src_install() {
 	#Without this library just about everything even remotely
 	#linked to previous versions of alsa-lib will break.
 	#Fortunately, libasound.so.2 seems to be backwards
-	#compatible with libasound.so.2 and a simple link
+	#compatible with libasound.so.1 and a simple link
 	#fixes the problem (fingers crossed)
 	dosym /usr/lib/libasound.so.2 /usr/lib/libasound.so.1
 	dodoc ChangeLog COPYING TODO

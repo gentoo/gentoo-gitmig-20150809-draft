@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.3b-r2.ebuild,v 1.1 2004/03/24 18:18:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.3b-r2.ebuild,v 1.2 2004/04/04 19:01:18 eradicator Exp $
 
 inherit libtool eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 -sparc ~ia64"
+KEYWORDS="x86 ~ppc ~alpha ~amd64 -sparc ~ia64"
 LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="jack"
@@ -26,6 +26,8 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
+
+	cd ${S}
 	elibtoolize
 
 	cd ${S}/src/pcm
