@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmfishtime
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.7 2004/09/01 02:22:46 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.8 2005/03/29 12:50:22 s4t4n Exp $
+
+*wmfishtime-1.24 (29 Mar 2005)
+
+  29 Mar 2005; Michele Noberasco <s4t4n@gentoo.org> wmfishtime-1.24.ebuild:
+  Version bump. Closes #86805.
+  wmfishtime-1.23-r1.ebuild:
+  Wiped out older ebuild.
 
   31 Aug 2004; Tom Gall <tgall@gentoo.org> wmfishtime-1.23-r2.ebuild:
   stable on ppc64, bug #61762

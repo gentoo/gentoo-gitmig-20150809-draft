@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.23-r2.ebuild,v 1.11 2004/09/01 02:22:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.23-r2.ebuild,v 1.12 2005/03/29 12:50:22 s4t4n Exp $
 
 # to make this work in KDE, run it with the -b option :)
 IUSE=""
