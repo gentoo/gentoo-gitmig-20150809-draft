@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.8.ebuild,v 1.5 2004/03/18 18:47:57 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.8.ebuild,v 1.6 2004/06/02 01:53:19 agriffis Exp $
 
 IUSE="doc"
 
@@ -38,7 +38,7 @@ src_install() {
 	cp ${FILESDIR}/registerme.sh ${D}/opt/win4lin/
 	cp ${FILESDIR}/win4lin.initd.new ${D}/opt/win4lin/
 
-#    if [ -n "`use doc`" ]
+#    if use doc
 #    then
 #        dodoc ${DISTDIR}/Win4Lin-4.0.0-manual.pdf
 #    fi

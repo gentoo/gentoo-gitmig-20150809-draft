@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.10 2004/03/26 09:45:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.11 2004/06/02 01:52:19 agriffis Exp $
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://www.srcf.ucam.org/~pak21/spectrum/fuse.html"
@@ -40,13 +40,13 @@ DEPEND="dev-lang/perl
 
 src_compile() {
 	local guiflag
-	if [ `use X` ] ; then
+	if use X ; then
 		guiflag="--with-x"
-	elif [ `use sdl` ] ; then
+	elif use sdl ; then
 		guiflag="--without-x --with-sdl"
-	elif [ `use svga` ] ; then
+	elif use svga ; then
 		guiflag="--without-x --with-svgalib"
-	elif [ `use fbcon` ] ; then
+	elif use fbcon ; then
 		guiflag="--without-x --with-fb"
 	else
 		guiflag="--with-x"
