@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.76 2004/11/26 17:20:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.77 2004/11/30 23:50:33 carlo Exp $
+
+  01 Dec 2004; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
+  QA: brain is not a Gentoo dev anymore
 
   26 Nov 2004; Jason Wever <weeve@gentoo.org> koffice-1.3.4-r1.ebuild:
   Stable on sparc.
