@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.8 2004/07/01 21:50:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.9 2004/07/02 20:47:49 matsuu Exp $
+
+*scponly-3.11-r1 (03 Jul 2004)
+
+  03 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +scponly-3.11-r1.ebuild:
+  Fixed chroot problem.
+  Added passwd file in ${myhome}/etc/.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> scponly-3.11.ebuild,
   scponly-3.7.ebuild, scponly-3.8.ebuild:
