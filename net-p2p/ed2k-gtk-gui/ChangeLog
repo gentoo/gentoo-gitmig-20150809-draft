@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ed2k-gtk-gui
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ChangeLog,v 1.6 2004/06/02 13:47:54 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ChangeLog,v 1.7 2004/06/20 18:15:01 squinky86 Exp $
+
+  19 Jun 2004; Jon Hood <squinky86@gentoo.org> ed2k-gtk-gui-0.6.2.ebuild:
+  add gtk-doc to the dependencies irt #54504, thanks to Bastian Voigt
+  <bavoigt@inf.fu-berlin.de>
 
   02 Jun 2004; Jon Hood <squinky86@gentoo.org> ed2k-gtk-gui-0.6.2.ebuild:
   stable on x86
