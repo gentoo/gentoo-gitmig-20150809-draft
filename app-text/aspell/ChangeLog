@@ -1,6 +1,15 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.38 2004/06/06 21:31:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.39 2004/06/09 20:40:32 seemant Exp $
+
+*aspell-0.50.5-r1 (09 Jun 2004)
+
+  09 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  +files/aspell-buffer-fix.patch, +aspell-0.50.5-r1.ebuild:
+  Apply a patch to fix the buffer overflow reported in:
+  http://www.securityfocus.com/archive/1/365479. This should close bug #53389
+  by: Florian Schilhabel <florian.schilhabel@gmx.net>. Other arches need to push
+  this to stable
 
   06 Jun 2004; Travis Tilley <lv@gentoo.org> aspell-0.50.5.ebuild:
   stable on amd64 for gcc 3.4 fix
