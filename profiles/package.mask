@@ -23,6 +23,7 @@
 ##
 
 
+
 # <woodchip@gentoo.org> 24 Jul 2002
 # apparently fatally flawed.
 net-www/fakeidentd
@@ -32,7 +33,7 @@ net-www/fakeidentd
 # as it uses less RAM during compile
 # but shouldn't be unmasked just for this
 # only changes the buildprocess
-net-www/mozilla-1.0-r4
+=net-www/mozilla-1.0-r4
 
 # <g2boojum@gentoo.org> 24 Jul 2002
 # waiting on copyright 
