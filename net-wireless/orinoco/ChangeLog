@@ -1,0 +1,7 @@
+# ChangeLog for net-wireless/orinoco
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.1 2004/11/01 12:22:47 brix Exp $
+
+  01 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml:
+  Initial check-in, ebuild by me. Thanks to all who commented on bug #57031.
+
