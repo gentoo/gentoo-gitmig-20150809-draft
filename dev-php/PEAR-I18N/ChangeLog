@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-I18N
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18N/ChangeLog,v 1.6 2004/08/03 20:01:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18N/ChangeLog,v 1.7 2004/10/23 03:45:34 weeve Exp $
+
+  22 Oct 2004; Jason Wever <weeve@gentoo.org> PEAR-I18N-0.8.6.ebuild:
+  Stable on sparc.
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-I18N-0.8.6-r1.ebuild,
   PEAR-I18N-0.8.6.ebuild:
