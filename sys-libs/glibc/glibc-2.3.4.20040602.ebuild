@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.7 2004/06/04 05:11:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.8 2004/06/04 07:30:53 iluxa Exp $
 
-IUSE="nls pic build nptl erandom hardened makecheck"
+IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
 inherit eutils flag-o-matic gcc
 
@@ -62,6 +62,9 @@ RDEPEND="virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
 PROVIDE="virtual/glibc"
+
+# theoretical x-compiler support
+[ -z "${CCHOST}" ] && CCHOST="${CHOST}"
 
 setup_flags() {
 	# -freorder-blocks for all but ia64 s390 s390x
@@ -274,16 +277,21 @@ src_unpack() {
 	# do can be found in the patch headers.
 	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
 	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
+	# <iluxa@gentoo.org> add n32/n64 patches, remove pread patch
 	if [ "${ARCH}" = "mips" ]
 	then
 		cd ${S}
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
-		epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-mips-add-n32-n64-sysdep-cancel.patch
-		epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-mips-configure-for-n64-symver.patch
-		epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-mips-pread-linux2.5.patch
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-dl-machine-calls.diff
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
+		epatch ${FILESDIR}/2.3.3/mips-addabi.diff
+		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
+		epatch ${FILESDIR}/2.3.3/semtimedop.diff
+		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+		# Need to install into /lib for n32-only userland for now.
+		# Propper solution is to make all userland /lib{32|64}-aware.
+		use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
 	fi
 
 	if [ "${ARCH}" = "alpha" ]
@@ -365,7 +373,10 @@ src_compile() {
 	rm -rf ${WORKDIR}/build
 	mkdir -p ${WORKDIR}/build
 	cd ${WORKDIR}/build
-	${S}/configure --disable-profile \
+	${S}/configure \
+		--build=${CHOST} \
+		--host=${CCHOST} \
+		--disable-profile \
 		--without-gd \
 		--without-cvs \
 		--with-headers=/usr/include \

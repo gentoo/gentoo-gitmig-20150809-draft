@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.8 2004/06/04 03:33:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.9 2004/06/04 07:30:53 iluxa Exp $
 
-IUSE="nls pic build nptl erandom hardened"
+IUSE="nls pic build nptl erandom hardened multilib"
 
 inherit eutils flag-o-matic gcc
 
@@ -33,6 +33,9 @@ strip-flags
 
 # Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
 export CFLAGS="${CFLAGS//-O?} -O2"
+# Clear -f-unit-at-a-time, which kills gcc-3.4.0
+export CFLAGS="${CFLAGS//-funit-at-a-time} -fno-unit-at-a-time"
+
 export CXXFLAGS="${CFLAGS}"
 export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 
@@ -377,16 +380,22 @@ src_unpack() {
 	# do can be found in the patch headers.
 	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
 	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
+	# <iluxa@gentoo.org> add n32/n64 patches, remove pread patch
 	if [ "${ARCH}" = "mips" ]
 	then
 		cd ${S}
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
-		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-add-n32-n64-sysdep-cancel.patch
 		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-configure-for-n64-symver.patch
-		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-pread-linux2.5.patch
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-dl-machine-calls.diff
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
+		epatch ${FILESDIR}/2.3.3/mips-addabi.diff
+		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
+		epatch ${FILESDIR}/2.3.3/semtimedop.diff
+		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+		# Need to install into /lib for n32-only userland for now.
+		# Propper solution is to make all userland /lib{32|64}-aware.
+		use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
 	fi
 
 	if [ "${ARCH}" = "alpha" ]

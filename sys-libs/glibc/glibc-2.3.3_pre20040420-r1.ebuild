@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420-r1.ebuild,v 1.4 2004/06/02 21:23:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420-r1.ebuild,v 1.5 2004/06/04 07:30:53 iluxa Exp $
 
-IUSE="nls pic build nptl erandom"
+IUSE="nls pic build nptl erandom n32 n64"
 
 inherit eutils flag-o-matic gcc
 
@@ -387,9 +387,13 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
 		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-add-n32-n64-sysdep-cancel.patch
 		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-configure-for-n64-symver.patch
-		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-pread-linux2.5.patch
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-dl-machine-calls.diff
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
+		epatch ${FILESDIR}/2.3.3/mips-addabi.diff
+		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
+		epatch ${FILESDIR}/2.3.3/semtimedop.diff
+		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+		epatch ${FILESDIR}/2.3.3/mips-n32n64regs.diff
 	fi
 
 	if [ "${ARCH}" = "alpha" ]
