@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.13.ebuild,v 1.3 2005/03/23 04:27:56 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.13.ebuild,v 1.4 2005/03/29 01:34:28 vapier Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
@@ -10,21 +10,13 @@ SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~arm ~amd64"
+KEYWORDS="~amd64 arm ~ppc ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-libs/db-3.2
+DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/openssl-0.9.6k"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update ${S}
-}
-
 src_compile() {
-
 	# Enforce /var/cfengine for historical compatibility
 	econf \
 		--with-workdir=/var/cfengine \
@@ -37,11 +29,10 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/cfservd.rc6" cfservd
+	newinitd "${FILESDIR}"/cfservd.rc6 cfservd
 
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING README TODO
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README TODO
 
 	# Manually install doc and inputs
 	doinfo doc/*.info*
