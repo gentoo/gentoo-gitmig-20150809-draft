@@ -2,7 +2,7 @@ MD5 7226a185b85b8dd36ce1eefb89ec2505 ppp-2.4.1-r14.ebuild 4617
 MD5 0d9fb833e610743144bd048027130f2d ppp-2.4.2-r2.ebuild 4233
 MD5 95d3256716602c7b97dfaad35c67f78b ppp-2.4.2.ebuild 3892
 MD5 13ce70cb136faad07fee54ae82a5f812 ppp-2.4.2-r1.ebuild 4232
-MD5 59461b2869d493cac1b4cd98b57aaa45 ChangeLog 9380
+MD5 4b7859951dbef06d96eb9948331260bc ChangeLog 9816
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
 MD5 86cdaf133f7a79fb464f02d83afc7734 files/plog 146
@@ -42,16 +42,3 @@ MD5 09fcad33830cb2af02446902cf6883c6 files/2.4.2/ip-down 801
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.2/pppoe.html 7605
 MD5 bc88eaf56862e5ebf8f45ec5ada4bb90 files/2.4.2/cflags.patch 1857
 MD5 bd6bee3df13537a8550d2f39131eab0d files/2.4.2/pppoatm-2.diff.gz 3489
-MD5 2890b47660f967a07ac5b211850e46c5 files/2.4.2b3/options-pptp 238
-MD5 7004513b8b14aad3e2f598535e672af4 files/2.4.2b3/chat-default 351
-MD5 7fd76d97cb9a07a6b23b3ab7a0c5cc2c files/2.4.2b3/ip-up 1168
-MD5 1c6a75aa9390438f483e2885ea40ca72 files/2.4.2b3/killaddr-smarter.patch 6225
-MD5 12500a756925e9d8f4b2b655e95a2541 files/2.4.2b3/confd.ppp0 2784
-MD5 fa2a5b8df496922fa2fb592115953b6b files/2.4.2b3/options-pppoe 53
-MD5 bf0ee7e6765e3b18dbe3964be6cd4500 files/2.4.2b3/mpls.patch 10506
-MD5 acb0f867e42e9a380eaf8e1c312ad63b files/2.4.2b3/net.ppp0 4343
-MD5 1fd88dda7f4996799c69a9501d42cc23 files/2.4.2b3/README.mpls 530
-MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/2.4.2b3/modules.ppp 268
-MD5 cb8bde7fab636f046c94e7aa52234ef2 files/2.4.2b3/ip-down 914
-MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.2b3/pppoe.html 7605
-MD5 0e16e7bb8ae71505e719fe5471bd2097 files/2.4.2b3/cflags.patch 3403

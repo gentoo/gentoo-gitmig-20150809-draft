@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.55 2004/04/26 10:49:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.56 2004/04/26 10:52:06 lanius Exp $
+
+  26 Apr 2004; Heinrich Wendel <lanius@gentoo.org> files/2.4.2b3/README.mpls,
+  files/2.4.2b3/cflags.patch, files/2.4.2b3/chat-default,
+  files/2.4.2b3/confd.ppp0, files/2.4.2b3/ip-down, files/2.4.2b3/ip-up,
+  files/2.4.2b3/killaddr-smarter.patch, files/2.4.2b3/modules.ppp,
+  files/2.4.2b3/mpls.patch, files/2.4.2b3/net.ppp0,
+  files/2.4.2b3/options-pppoe, files/2.4.2b3/options-pptp,
+  files/2.4.2b3/pppoe.html:
+  remove old version
 
   26 Apr 2004; Heinrich Wendel <lanius@gentoo.org> files/2.4.2/modules.ppp:
   update pppoatm patch, bug #47574
