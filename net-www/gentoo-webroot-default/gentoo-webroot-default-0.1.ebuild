@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.1.ebuild,v 1.9 2005/01/29 02:36:31 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.1.ebuild,v 1.10 2005/02/27 18:17:57 vericgar Exp $
 
 DESCRIPTION="This is the default Gentoo WebServer content"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PF}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~hppa ~ia64 ~mips ~ppc64 ~sparc"
 IUSE="no-htdocs"
 DEPEND=""
 S=${WORKDIR}/${PF}

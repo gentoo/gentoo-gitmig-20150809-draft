@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gentoo-webroot-default
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.6 2005/01/29 02:36:31 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.7 2005/02/27 18:17:57 vericgar Exp $
+
+  27 Feb 2005; Michael Stewart <vericgar@gentoo.org>
+  gentoo-webroot-default-0.1.ebuild:
+  Bring keywords in line with Apache as this package is not platform dependant
+  and Apache depends on it
 
   29 Jan 2005; Christian Parpart <trapni@gentoo.org>
   gentoo-webroot-default-0.1.ebuild:
