@@ -1,5 +1,5 @@
-MD5 0b354c9b1b77daf1710c152902e2f62b amp-0.7.6.ebuild 723
-MD5 95fb99ba3244df9acf89be803da2f8ad ChangeLog 380
+MD5 08ec59151e0f3a1cf57ad8fbdb0635c6 amp-0.7.6.ebuild 492
+MD5 9895c33990c903679e32404515ef63d9 ChangeLog 474
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 dfa9cfdfc2fdefe0a9a21f46d270707b files/digest-amp-0.7.6 61
 MD5 2bb79d0ff57876221f93b8ee0ef7fdb7 files/amp-0.7.6-gentoo.diff 512
