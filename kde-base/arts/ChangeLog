@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.65 2003/12/24 19:23:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.66 2003/12/28 03:32:32 caleb Exp $
+
+  27 Dec 2003; Caleb Tennis <caleb@gentoo.org> arts-1.1.4.ebuild,
+  arts-1.2.0_beta2.ebuild:
+  more minor dep changes
 
   24 Dec 2003; Caleb Tennis <caleb@gentoo.org> arts-1.2.0_beta2.ebuild:
   ebuild cleanup - add esound as a optional dependency

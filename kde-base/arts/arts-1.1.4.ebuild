@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.9 2003/11/21 01:17:45 vapier Exp $
-inherit kde-base flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.10 2003/12/28 03:32:32 caleb Exp $
+inherit kde flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
 
@@ -14,7 +14,7 @@ DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manag
 
 KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
 
-newdepend "alsa? ( media-libs/alsa-lib )
+DEPEND="alsa? ( media-libs/alsa-lib )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
@@ -41,13 +41,6 @@ use mad || myconf="$myconf --disable-libmad"
 # arts versions - the patched file hasn't changed in a year's time
 PATCHES="$FILESDIR/optional-deps.diff"
 
-src_compile() {
-	kde_src_compile myconf
-	kde_fix_head_instances acinclude.m4 aclocal.m4 admin/cvs.sh admin/libtool.m4 debian/rules
-	kde_src_compile configure
-	kde_src_compile make
-}
-
 src_unpack() {
 	kde_src_unpack
 	kde_sandbox_patch ${S}/soundserver
@@ -56,6 +49,13 @@ src_unpack() {
 	kde_fix_autodetect
 	cd ${S}
 	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
+}
+
+src_compile() {
+	kde_src_compile myconf
+	kde_fix_head_instances acinclude.m4 aclocal.m4 admin/cvs.sh admin/libtool.m4 debian/rules
+	kde_src_compile configure
+	kde_src_compile make
 }
 
 src_install() {
