@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.2-r1.ebuild,v 1.8 2002/10/17 00:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.2-r1.ebuild,v 1.9 2002/10/17 14:16:48 aliz Exp $
 
 SYNCMAL="0.71"
 MALSYNC="2.0.7"
@@ -10,6 +10,7 @@ SRC_URI="http://jpilot.org/${P}.tar.gz
 	http://www.tomw.org/malsync/malsync_${MALSYNC}.src.tar.gz
 	http://jasonday.home.att.net/code/syncmal/jpilot-syncmal_${SYNCMAL}.tar.gz"
 HOMEPAGE="http://jpilot.org/"
+IUSE="nls"
 
 # In order to use the malsync plugin you'll need to refer to the homepage
 # for jpilot-syncmal http://jasonday.home.att.net/code/syncmal/

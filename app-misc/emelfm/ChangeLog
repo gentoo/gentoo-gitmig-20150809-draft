@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/emelfm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/ChangeLog,v 1.1 2002/04/19 09:21:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/ChangeLog,v 1.2 2002/10/17 14:16:48 aliz Exp $
 
 *emelfm-0.9.2 (19 Apr 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> emelfm-0.9.2.ebuild :
+  Added IUSE.
 
   19 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
   emelfm-0.9.2.ebuild, ChangeLog, files/digest-emelfm-0.9.2

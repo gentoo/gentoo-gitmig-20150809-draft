@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/gtypist
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.1 2002/04/08 03:52:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.2 2002/10/17 14:16:48 aliz Exp $
 
 *gtypist-2.5 (7 Apr 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gtypist-2.5.ebuild :
+  Added IUSE.
 
   7 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   gtypist-2.5.ebuild, files/digest-gtypist-2.5 :

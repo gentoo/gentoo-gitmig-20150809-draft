@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/gtktrain
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktrain/ChangeLog,v 1.1 2002/06/10 02:01:53 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktrain/ChangeLog,v 1.2 2002/10/17 14:16:48 aliz Exp $
 
 *gtktrain-0.9b (09 June 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gtktrain-0.9b.ebuild :
+  Added IUSE.
 
   09 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   

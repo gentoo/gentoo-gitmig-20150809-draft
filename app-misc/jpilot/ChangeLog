@@ -1,12 +1,15 @@
 # ChangeLog for app-misc/jpilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.4 2002/07/22 17:02:52 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.5 2002/10/17 14:16:48 aliz Exp $
 
   22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
   Fixed Various to make package Repoman Complaint.
 
 *jpilot-0.99.2-r1 (27 May 2002)
 
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> jpilot-0.99.2-r1.ebuild :
+  Added IUSE.
+ 
   27 May 2002; Seemant Kulleen <seemant@gentoo.org> jpilot-0.99.2-r1.ebuild
   files/digest-jpilot-0.99.2-r1 :
 
@@ -17,6 +20,9 @@
   the syncmal plugin.
 
 *jpilot-0.99.2 (12 Feb 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> jpilot-0.99.2.ebuild :
+  Added IUSE.
 
   12 Feb 2002; Bruce A. Locke <blocke@shivan.org> ChangeLog :
 
