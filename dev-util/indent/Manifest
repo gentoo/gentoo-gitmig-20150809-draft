@@ -1,3 +1,13 @@
-MD5 1f2b865d7666dc641194a054afb605f6 ChangeLog 2442
-MD5 eb2d5e38969cbc2ee9b0cf876a642e21 indent-2.2.9-r1.ebuild 771
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fddf3e8a5a493d969c872d45f58c12a2 indent-2.2.9-r1.ebuild 835
+MD5 67d108312af773ed221610b349b39ffe ChangeLog 2576
 MD5 0301409622291766d3a875aebcfed9b5 files/digest-indent-2.2.9-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD4DBQFBVy+j94CCfB4KcwwRAq+ZAJdOyXPil5Qa0mZPQxjR7JnCzt7RAJ9hFGP+
+QrYiqhgDapT48obVRpU2pQ==
+=95ex
+-----END PGP SIGNATURE-----

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9-r1.ebuild,v 1.2 2004/09/12 01:17:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9-r1.ebuild,v 1.3 2004/09/26 21:08:38 solar Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Indent program source files"
 HOMEPAGE="http://www.gnu.org/software/indent/indent.html"
@@ -12,6 +14,11 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips s390 ppc64"
 IUSE="nls"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	gnuconfig_update
+}
 
 src_compile() {
 	econf \
