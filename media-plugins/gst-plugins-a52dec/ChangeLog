@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-a52dec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.11 2005/03/08 20:00:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.12 2005/03/10 02:05:58 gustavoz Exp $
+
+  09 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-a52dec-0.8.7.ebuild:
+  Stable on sparc
 
 *gst-plugins-a52dec-0.8.8 (08 Mar 2005)
 

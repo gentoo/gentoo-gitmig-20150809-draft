@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gnomevfs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.34 2005/03/08 20:00:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.35 2005/03/10 02:04:23 gustavoz Exp $
+
+  09 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-gnomevfs-0.8.7.ebuild:
+  Stable on sparc
 
 *gst-plugins-gnomevfs-0.8.8 (08 Mar 2005)
 

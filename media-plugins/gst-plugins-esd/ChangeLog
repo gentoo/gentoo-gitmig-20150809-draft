@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-esd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.33 2005/03/09 03:53:27 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.34 2005/03/10 01:57:24 gustavoz Exp $
+
+  09 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-esd-0.8.7.ebuild:
+  Stable on sparc
 
   09 Mar 2005; Mike Gardiner <obz@gentoo.org> gst-plugins-esd-0.8.7.ebuild:
   Keyworded ppc
