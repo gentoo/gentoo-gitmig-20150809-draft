@@ -9,7 +9,7 @@ DESCRIPTION="The Gnome Application Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">sys-libs/glibc-2.1.3"
+DEPEND=">=sys-libs/glibc-2.1.3"
 
 src_unpack() {
   unpack ${A}

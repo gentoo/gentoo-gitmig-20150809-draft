@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r5.ebuild,v 1.1 2000/11/19 15:37:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r5.ebuild,v 1.2 2000/11/20 08:07:05 achim Exp $
 
 P=linux-UP-2.2.17
 A="linux-2.2.17.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
@@ -140,17 +140,20 @@ src_unpack() {
 }
 
 src_install() {                               
-    dodir /usr/src/linux
-    dodir /usr/src/linux/include/linux
-    dodir /usr/src/linux/include/asm-i386
-    cp -ax ${S}/include ${D}/usr/src/linux
-    dodir /usr/src/linux/Documentation
-    cp -ax ${S}/Documentation ${D}/usr/src/linux
+
+    dodir /usr/src/${PF}
+    dodir /usr/src/${PF}/include/linux
+    dodir /usr/src/${PF}/include/asm-i386
+    cp -ax ${S}/include ${D}/usr/src/${PF}
+    dodir /usr/src/${PF}/Documentation
+    cp -ax ${S}/Documentation ${D}/usr/src/${PF}
     cd ${S}/Documentation
     find . -type f -exec gzip {} \;
     dodir /usr/include
-    dosym /usr/src/linux/include/linux /usr/include/linux
-    dosym /usr/src/linux/include/asm-i386 /usr/include/asm
+    dosym /usr/src/${PF} /usr/src/linux-2.2
+    dosym /usr/src/${PF} /usr/src/linux
+    dosym /usr/src/${PF}/include/linux /usr/include/linux
+    dosym /usr/src/${PF}/include/asm-i386 /usr/include/asm
     insinto /
     cd ${S}
     doins arch/i386/boot/bzImage
