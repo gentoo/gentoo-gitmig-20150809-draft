@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010326.ebuild,v 1.1 2001/04/12 08:24:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010326.ebuild,v 1.2 2001/04/23 19:59:23 drobbins Exp $
 
 A=Wine-${PV}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.winehq.com"
 DEPEND="virtual/glibc
         virtual/x11
          >=sys-libs/ncurses-5.2
-         opengl? ( media-libs/mesa-glue )"
+         opengl? ( media-libs/mesa-glu )"
 
 src_compile() {
 
