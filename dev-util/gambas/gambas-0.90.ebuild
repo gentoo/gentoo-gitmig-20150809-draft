@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.90.ebuild,v 1.2 2004/02/27 02:19:52 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.90.ebuild,v 1.3 2004/02/28 03:03:16 genone Exp $
 
 inherit eutils
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://gambas.sourceforge.net"
 SRC_URI="http://gambas.sourceforge.net/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
-IUSE="kde postgres mysql sdl doc qt curl debug"
+KEYWORDS="~x86"
+IUSE="postgres mysql sdl doc curl debug"
 DEPEND=">=sys-devel/automake-1.7.5
 	>=x11-base/xfree-4.3.0
 	>=x11-libs/qt-3.2
-	kde? ( >=kde-base/kdelibs-3.2 )
+	>=kde-base/kdelibs-3.2
 	sdl? ( media-libs/libsdl )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
@@ -23,7 +23,7 @@ DEPEND=">=sys-devel/automake-1.7.5
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i 's:^ *CFLAGS=.*-Os.*::' 's:^ *CXXFLAGS=.*-Os.*::' configure
+	sed -i 's:-Os::' configure
 	# replace braindead Makefile
 	rm Makefile*
 	cp "${FILESDIR}/Makefile.am-${PV}" ./Makefile.am
@@ -35,12 +35,12 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	myconf="${myconf} `use_enable kde`"
+	myconf="${myconf} --enable-kde --enable-qt"
 	myconf="${myconf} `use_enable mysql`"
 	myconf="${myconf} `use_enable postgres`"
 	myconf="${myconf} `use_enable sdl`"
 	myconf="${myconf} `use_enable curl`"
-	myconf="${myconf} `use_enable qt`"
+
 	if use debug; then
 		myconf="${myconf} --disable-optimization --enable-debug"
 	else
@@ -56,7 +56,6 @@ src_install() {
 	export PATH="${D}/usr/bin:${PATH}"
 	einstall || die
 
-	cd ${S}
 	dodoc README INSTALL NEWS AUTHORS ChangeLog COPYING TODO
 
 	# only install the API docs and examples with USE=doc
