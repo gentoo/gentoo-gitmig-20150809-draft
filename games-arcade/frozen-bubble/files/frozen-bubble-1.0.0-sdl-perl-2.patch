@@ -52,6 +52,18 @@ http://bugs.gentoo.org/show_bug.cgi?id=74844
  	    $sound{$_}->volume(80);
  	} else {
  	    print STDERR "Warning, could not create new sound from `$sound_path'.\n";
+@@ -233,6 +233,11 @@
+ 
+ #- ----------- graphics related stuff --------------------------------------
+ 
++# Perhaps this should be exported by SDL::SFont
++sub SDL_TEXTWIDTH {
++	SDL::SFont::SDL_TEXTWIDTH(@_);
++}
++
+ sub add_default_rect($) {
+     my ($surface) = @_;
+     $rects{$surface} = SDL::Rect->new(-width => $surface->width, -height => $surface->height);
 @@ -304,10 +304,28 @@
      return $save;
  }
