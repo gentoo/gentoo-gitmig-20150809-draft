@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r2.ebuild,v 1.2 2004/07/18 23:47:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r2.ebuild,v 1.3 2004/07/20 23:10:47 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,12 +27,12 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	python? ( dev-lang/python )
-	tcltk? ( dev-lang/tcl )
-	nls? ( sys-devel/gettext )"
+	tcltk? ( dev-lang/tcl )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
