@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r1.ebuild,v 1.2 2005/02/14 19:17:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r1.ebuild,v 1.3 2005/03/13 10:07:49 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,6 +37,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-0.9.7-arm-big-endian.patch
 	epatch ${FILESDIR}/${PN}-0.9.7-hppa-fix-detection.patch
 	epatch ${FILESDIR}/${PN}-0.9.7-alpha-default-gcc.patch
+	epatch ${FILESDIR}/${PN}-0.9.7e-no-fips.patch
 
 	case $(gcc-version) in
 		3.2)
@@ -207,7 +208,7 @@ src_install() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 	make INSTALL_PREFIX=${D} MANDIR=/usr/share/man install || die
-	dodoc CHANGES* FAQ LICENSE NEWS README
+	dodoc CHANGES* FAQ NEWS README
 	dodoc doc/*.txt
 	dohtml doc/*
 	insinto /usr/share/emacs/site-lisp

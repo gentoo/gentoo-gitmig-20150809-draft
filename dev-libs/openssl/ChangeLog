@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.105 2005/03/03 02:12:39 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.106 2005/03/13 10:07:49 vapier Exp $
+
+  13 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-0.9.7e-no-fips.patch, openssl-0.9.7e-r1.ebuild:
+  Dont install the fips stuff #80878 by Kaiting Chen.
 
   02 Mar 2005; Daniel Goller <morfic@gentoo.org> openssl-0.9.7e.ebuild:
   Stable on ppc
