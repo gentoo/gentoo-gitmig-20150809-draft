@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2684 2004/02/07 21:13:52 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2685 2004/02/08 14:35:07 pauldv Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <pauldv@gentoo.org> (08 Feb 2004)
+# Pre-release
+=app-office/openoffice-1.1.1b
 
 # <iggy@gentoo.org> (07 Feb 2004
 # testing stuff, don't use unless I told you to
