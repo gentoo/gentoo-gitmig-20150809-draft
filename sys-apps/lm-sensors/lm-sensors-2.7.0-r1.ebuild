@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.4 2003/06/23 12:26:33 phosphan Exp $
 
 inherit flag-o-matic
 
 MY_P=${PN/-/_}-${PV}
 
 S="${WORKDIR}/${MY_P}"
+MYI2C="${WORKDIR}/i2c-headers"
+
 DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"
 SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${MY_P}.tar.gz
 	mirror://gentoo/${P}-sensors-detect-gentoo.diff.bz2"
@@ -30,7 +32,9 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	patch -p 1 <../${P}-sensors-detect-gentoo.diff || die
-	patch -p 0 < ${FILESDIR}/${PV}-wrong-headers.patch || die
+	# get the right i2c includes without dropping the kernel includes
+	mkdir -p ${MYI2C}/linux
+	cp /usr/include/linux/i2c* ${MYI2C}/linux/
 }
 
 src_compile()  {
@@ -38,7 +42,7 @@ src_compile()  {
 
 	filter-flags -fPIC
 
-	emake clean all || die "lm_sensors requires the source of a compatible kernel\nversion installed in /usr/src/linux and >=i2c-2.7.0 support built as a modules this support is included in gentoo-sources as of 2.4.20-r1"
+	emake I2C_HEADERS=${MYI2C} clean all || die "lm_sensors requires the source of a compatible kernel\nversion installed in /usr/src/linux and >=i2c-2.7.0 support built as a modules this support is included in gentoo-sources as of 2.4.20-r1"
 }
 
 src_install() {
