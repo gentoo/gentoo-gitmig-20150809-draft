@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lostlogic@gentoo.org> (03 Sep 2002)
+# New xfs-sources, please test.
+=sys-kernel/gentoo-sources-2.4.19-r9
+
 # <george@gentoo.org> (03 Sep 2002)
 # fixes some run-time issues, please test
 =dev-lisp/gcl-2.4.3
