@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/pymacs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.1 2004/11/09 18:33:47 usata Exp $
+
+*pymacs-0.22 (10 Nov 2004)
+
+  10 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/50pymacs-gentoo.el, +pymacs-0.22.ebuild:
+  Initial import. Ebuild submitted by Nick Savchenko <rust@voliacable.com>;
+  bug #69323.
+
