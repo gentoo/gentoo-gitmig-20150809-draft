@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/secure-delete
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.13 2005/01/02 21:30:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.14 2005/04/01 03:30:47 agriffis Exp $
+
+  31 Mar 2005; Aron Griffis <agriffis@gentoo.org> secure-delete-3.0.ebuild:
+  stable on ia64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
