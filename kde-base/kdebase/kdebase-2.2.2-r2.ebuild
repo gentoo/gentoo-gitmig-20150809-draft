@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r2.ebuild,v 1.3 2002/03/10 21:50:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r2.ebuild,v 1.4 2002/03/16 15:46:03 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -84,9 +84,9 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 pkg_postinst() {
     
     # an empty dir that would otherwise be unmerged with the previous instance
-    #dodir ${KDEDIR}/share/templates/.source/emptydir
-    echo "i am here"
-    echo "KDEDIR=$KDEDIR"
-    mkdir -p ${D}/${KDEDIR}/share/templates/.source/emptydir
+    # dodir ${KDEDIR}/share/templates/.source/emptydir
+    # temorary fix (bug #846) until portage tracks merged dirs' mtimes
+    addwrite ${KDEDIR}/share/templates/.source
+    mkdir -p ${KDEDIR}/share/templates/.source/emptydir
 
 }
