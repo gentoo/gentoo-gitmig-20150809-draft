@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e86f719701a0e9d114fd2eee3d46b7b libtar-1.2.11.ebuild 534
+MD5 f8bacfe1cce1d4ab452f191a659e69d8 ChangeLog 344
+MD5 8222231d3be4acfcf023691f41950afe files/digest-libtar-1.2.11 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBaOk7HTu7gpaalycRAqEhAJ9C/ZedpaxjzDjQha+3viqqs4sWbgCeLFSl
+Us4a0jfMhHl63FGBgK54XpM=
+=277U
+-----END PGP SIGNATURE-----
