@@ -1,6 +1,9 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.76 2004/11/12 04:09:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.77 2004/11/13 17:18:02 plasmaroo Exp $
+
+  13 Nov 2004; <plasmaroo@gentoo.org> epiphany-1.2.9-r1.ebuild:
+  Marking stable on IA64.
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.4.4.ebuild:
   Stable on sparc
