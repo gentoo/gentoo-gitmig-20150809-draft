@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.7 2004/03/25 16:15:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.8 2004/03/25 21:39:12 weeve Exp $
 
 inherit eutils flag-o-matic fixheadtails gcc
 
@@ -24,6 +24,9 @@ src_unpack() {
 	# depending on glibc to provide guard symbols, does not work with -nostdlib building
 	filter-flags "-fstack-protector"
 	filter-flags "fstack-protector-all"
+
+	# Fix for 45716
+	replace-sparc64-flags
 
 	sed -i \
 		-e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
