@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.19 2004/07/28 02:51:44 tgall Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.20 2005/03/09 06:36:28 joem Exp $
+
+*gtk-engines-2.6.2 (09 Mar 2005)
+
+  09 Mar 2005; Joe McCann <joem@gentoo.org> +gtk-engines-2.6.2.ebuild:
+  gnome-2.10 version
 
   27 Jul 2004; Tom Gall <tgall@gentoo.org> gtk-engines-2.2.0.ebuild:
   stable on ppc64, bug #58191
