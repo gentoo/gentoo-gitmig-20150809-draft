@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.2 2002/07/11 02:36:26 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.3 2002/07/17 04:20:06 seemant Exp $
+
+*lbdb-0.26-r1 (16 Jul 2002)
+
+  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> libdb-0.26-r1.ebuild
+  files/digest-lbdb-0.26-r1 :
+
+  Added USE dependent p5-Palm DEPEND in list.
 
 *lbdb-0.26 (10 Jul 2002)
 
