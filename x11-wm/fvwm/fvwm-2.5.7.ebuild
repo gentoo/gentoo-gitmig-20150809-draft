@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.11 2003/07/31 15:14:38 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.12 2003/07/31 15:23:09 taviso Exp $
 
 inherit gnuconfig
 
@@ -168,6 +168,7 @@ pkg_postinst() {
 	ewarn "The following features that you did not request are now"
 	ewarn "controlled via USE flags, and not enabled automatically:"
 	use readline	|| ewarn "	Readline support in FvwmConsole [readline]"
+	use ncurses		|| ewarn "	Ncurses support in FvwmConsole [ncurses]"
 	use stroke		|| ewarn "	Mouse Gestures [stroke]"
 	use xinerama	|| ewarn "	Xinerama Support [xinerama]"
 	use cjk			|| ewarn "	Multibyte Character Support [cjk]"
