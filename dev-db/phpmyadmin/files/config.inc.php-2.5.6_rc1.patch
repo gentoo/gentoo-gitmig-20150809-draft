@@ -1,5 +1,5 @@
---- phpMyAdmin-2.5.5/config.inc.php	2003-12-02 21:59:24.000000000 +0000
-+++ phpMyAdmin/config.inc.php	2003-12-29 01:09:58.000000000 +0000
+--- config.inc.php.org	2003-12-02 21:59:24.000000000 +0000
++++ config.inc.php	2003-12-29 01:09:58.000000000 +0000
 @@ -72,14 +72,15 @@
  $cfg['Servers'][$i]['connect_type']  = 'tcp';       // How to connect to MySQL server ('tcp' or 'socket')
  $cfg['Servers'][$i]['compress']      = FALSE;       // Use compressed protocol for the MySQL connection
