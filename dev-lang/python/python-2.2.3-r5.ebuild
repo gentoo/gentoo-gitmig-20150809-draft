@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.9 2003/11/25 22:16:11 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.10 2003/11/27 15:20:30 aliz Exp $
 
 inherit flag-o-matic eutils python
 
@@ -44,7 +44,7 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-disable_modules_and_ssl.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
 	epatch ${FILESDIR}/${PN}-2.2.3-gentoo_py_dontcompile.patch
-	[ "${ARCH}" = "amd64" ] && EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-fPIC.patch
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_configure() {
@@ -72,9 +72,7 @@ src_configure() {
 src_compile() {
 	filter-flags -malign-double
 
-	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
-	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
-	[ "${ARCH}" = "amd64" ] && export CFLAGSFORSHARED="-fPIC"
+	export CFLAGSFORSHARED="-fPIC"
 	export OPT="${CFLAGS}"
 
 	# adjust makefile to install pydoc into ${D} correctly
