@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.5 2004/06/24 22:28:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.6 2004/08/15 06:16:06 solar Exp $
+
+*pax-utils-0.0.4 (15 Aug 2004)
+
+  15 Aug 2004; <solar@gentoo.org> metadata.xml, pax-utils-0.0.4.ebuild:
+  version bump, adds some new utils and removes the obsolete isetdyn
 
   02 May 2004; <solar@gentoo.org> pax-utils-0.0.1.ebuild,
   pax-utils-0.0.2.ebuild:
