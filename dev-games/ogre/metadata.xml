@@ -18,9 +18,9 @@ Productivity features
     * Simple, easy to use OO interface designed to minimise the effort required to render 3D scenes, and to be independent of 3D implementation e.g. Direct3D/OpenGL/Glide etc.
     * Extensible example framework makes getting your application running is quick and simple
     * Common requirements like render state management, hierarchical culling, dealing with transparency are done for you automatically saving you valuable time
-    * Clean, uncluttered design and full documentation of all engine classes 
+    * Clean, uncluttered design and full documentation of all engine classes
 
-Platform & 3D API support
+Platform and 3D API support
 
     * Direct3D and OpenGL support
     * Windows (all major versions), Linux and Mac OSX support
@@ -34,7 +34,7 @@ Material / Shader support
     * Unbounded number of texture layers with many texture blending effects, animated textures
     * Multitexturing hardware used to best effect automatically, combined with automatic fallback to mulitpass rendering
     * Object transparency and other scene-level blending effects
-    * All defineable through text scripts to allow you to set up & tweak advanced materials without recompiling
+    * All defineable through text scripts to allow you to set up and tweak advanced materials without recompiling
 
 Meshes
 
@@ -57,7 +57,7 @@ Special Effects
     * Particle Systems, including easily extensible emitters and affectors (customisable through plugins). Systems can be defined in text scripts for easy tweaking. Automatic use of particle pooling for maximum performance
     * Support for skyboxes, skyplanes and skydomes, very easy to use
     * Billboarding for sprite graphics
-    * Transparent objects automatically managed (rendering order & depth buffer settings all set up for you)
+    * Transparent objects automatically managed (rendering order and depth buffer settings all set up for you)
 
 Misc features
 
@@ -65,7 +65,7 @@ Misc features
     * Flexible plugin architecture allows engine to be extended without recompilation
     * 'Controllers' allow you to easily organise derived values between objects e.g. changing the colour of a ship based on shields left
     * Debugging memory manager for identifying memory leaks
-    * ReferenceAppLayer provides an example of how to combine OGRE with other libraries, for example ODE for collision & physics
+    * ReferenceAppLayer provides an example of how to combine OGRE with other libraries, for example ODE for collision and physics
     * XMLConverter to convert efficient runtime binary formats to/from XML for interchange or editing
 
 Exporters
