@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.6 2003/03/15 19:07:30 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.7 2003/04/24 22:57:29 azarah Exp $
 
 inherit flag-o-matic eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="${CC}" CXX="${CXX}"|| die "Make failed"
+	emake CC="${CC:-gcc}" CXX="${CXX:-g++}" || die "Make failed"
 }
 
 src_install() {
