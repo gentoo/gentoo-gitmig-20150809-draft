@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c23a66e1587dc09e1060ccac8dac251c ChangeLog 948
 MD5 cf55184a84d96ab9285ef10a7cade3aa fapg-0.22.ebuild 629
+MD5 bb3c5ffe5efc021f9edfd83b1f628cca ChangeLog 1060
+MD5 70a5132a14081fde3cb8553db56e6dc1 fapg-0.30.ebuild 614
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
 MD5 9bfbe301dd02f72bf1161e8c551528e5 files/digest-fapg-0.22 60
+MD5 9a29e9fac459746a8e85af7fe70eb336 files/digest-fapg-0.30 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdMKjArHZZzCEUG0RAjoEAJoD5aQc/K7heiEuWpLLU3w09dgUDgCeJSTD
-iAKW6aYIUUd0IZmtfA9KF4I=
-=JDta
+iD8DBQFBfDebE67gNkjlZFIRAvfhAJwIJ5a9EcynHZ7ZIGF0DtdgUw+SDACgzq+w
+83KpHcxG6sUi2kJGe7nsYSQ=
+=PpxV
 -----END PGP SIGNATURE-----
