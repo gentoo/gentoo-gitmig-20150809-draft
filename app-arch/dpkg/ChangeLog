@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.2 2002/12/15 10:56:39 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.3 2002/12/15 20:08:40 gerk Exp $
+
+  15 Dec 2002; Mark Guertin <gerk@gentoo.org>: dpkg-1.10.9.ebuild
+  Added ~ppc to keywords
 
 *dpkg-1.10.9 (15 Dec 2002)
 	15 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>
