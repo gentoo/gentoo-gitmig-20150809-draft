@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.12 2003/01/22 17:31:51 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.13 2003/01/31 09:27:19 jmorgan Exp $
+ 
+*ruby-1.6.8 (26 Dec 2002)
+
+  30 Jan 2003; Jack Morgan <jmorgan@gentoo.org> ruby-1.6.8.ebuild :
+  Added sparc keywords as per bug #14430 (Thanks to Ferris McCormick)
 
   22 Jan 2003; Will Woods <wwoods@gentoo.org> ruby-1.6.8.ebuild :
   changed ~alpha to alpha
@@ -10,7 +15,6 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*ruby-1.6.8 (26 Dec 2002)
 
   30 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ruby-1.6.8.ebuild 
   Remove fomit-frame-pointer from CFLAGS. It causes crashes on the compile. Fixes #12930
