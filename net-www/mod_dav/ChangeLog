@@ -1,18 +1,19 @@
 # ChangeLog for net-www/mod_dav
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.3 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.4 2002/09/14 03:23:52 woodchip Exp $
 
 *mod_dav-1.0.3-r1 (4 May 2002)
+
+  13 Sep 2002; Donny Davies <woodchip@gentoo.org> mod_dav.conf :
+  Fix #7500; thanks Dominik Westner.
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> mod_dav-1.0.3-r1.ebuild :
   Added KEYWORDS.
   
   4 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Added LICENSE, SLOT, clarify the pkg_postinst message.
 
 *mod_dav-1.0.3 (9 Apr 2002)
 
   9 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   New package to go along with the rewritten apache ebuild.
