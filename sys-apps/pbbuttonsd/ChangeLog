@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pbbuttonsd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.15 2003/12/12 23:04:47 lu_zero Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.16 2004/01/09 23:41:43 lu_zero Exp $
+
+*pbbuttonsd-0.5.7 (10 Jan 2004)
+
+  10 Jan 2004; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.7.ebuild:
+  New version, should fix bug #37729
 
 *pbbuttonsd-0.5.6-r1 (12 Dec 2003)
 
