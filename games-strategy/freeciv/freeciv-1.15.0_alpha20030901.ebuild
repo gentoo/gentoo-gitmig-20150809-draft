@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.15.0_alpha20030901.ebuild,v 1.2 2003/10/13 19:17:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.15.0_alpha20030901.ebuild,v 1.3 2003/10/13 22:09:31 vapier Exp $
 
 inherit games
 
@@ -11,8 +11,7 @@ SRC_URI="ftp://ftp.freeciv.org/freeciv/latest/freeciv-cvs-Sep-01.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
-
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="X Xaw3d gtk gtk2 sdl nls"
 
 DEPEND=">=sys-devel/gettext-0.10.36
