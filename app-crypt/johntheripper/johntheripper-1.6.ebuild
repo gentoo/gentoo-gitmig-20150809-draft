@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.18 2003/10/01 09:39:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.19 2003/10/01 19:50:48 taviso Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.openwall.com/john/dl/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc ~alpha ~mips hppa"
+KEYWORDS="x86 sparc ppc alpha ~mips hppa"
 IUSE="mmx"
 
 DEPEND=">=sys-devel/binutils-2.8.1.0.15"
