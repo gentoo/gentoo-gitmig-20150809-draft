@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.43 2005/01/12 17:05:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.44 2005/02/11 05:10:38 vapier Exp $
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org> +files/5.0-solaris.patch,
+  readline-5.0-r1.ebuild:
+  Add patch by Sunil to fix solaris linking #81058.
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

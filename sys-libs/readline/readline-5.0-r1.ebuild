@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.9 2005/01/12 17:05:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.10 2005/02/11 05:10:38 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -31,6 +31,7 @@ src_unpack() {
 		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
 	done
 	epatch ${FILESDIR}/bash-3.0-etc-inputrc.patch
+	epatch ${FILESDIR}/${PV}-solaris.patch
 
 	# force ncurses linking #71420
 	sed -i -e 's:^SHLIB_LIBS=:SHLIB_LIBS=-lncurses:' support/shobj-conf || die "sed"
