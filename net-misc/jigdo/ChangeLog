@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jigdo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.5 2004/09/15 02:26:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.6 2004/09/15 02:32:03 weeve Exp $
+
+  14 Sep 2004; Jason Wever <weeve@gentoo.org> jigdo-0.7.0.ebuild:
+  Fixed the HOMEPAGE and SRC_URI values in 0.7.0 to reflect new homepage.
 
 *jigdo-0.7.1 (14 Sep 2004)
 
