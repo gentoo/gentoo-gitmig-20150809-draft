@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.8 2005/01/01 14:01:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.9 2005/01/06 19:40:25 mkennedy Exp $
+
+*slime-1.0.20050106 (06 Jan 2005)
+
+  06 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/1.0.20050106/70slime-gentoo.el,
+  +files/1.0.20050106/swank-loader.lisp, +files/1.0.20050106/swank.asd,
+  slime-1.0.20041010.ebuild, +slime-1.0.20050106.ebuild:
+  New upstream version (patch from SLIME 1.0 to 2005-01-06); Moved Gentoo
+  files to ${FILESDIR}/${PV}; Mark 1.0.20041010 as stable for x86
 
 *slime-1.0.20041010 (10 Oct 2004)
 

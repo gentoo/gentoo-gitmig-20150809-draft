@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.0.20041010.ebuild,v 1.3 2005/01/06 19:40:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.0.20050106.ebuild,v 1.1 2005/01/06 19:40:25 mkennedy Exp $
 
-inherit common-lisp elisp
+inherit common-lisp elisp eutils
 
 MY_PV_CVS=${PV:4:4}-${PV:8:2}-${PV:10:2}
 MY_PV_BASE=${PV:0:3}
@@ -13,7 +13,7 @@ SRC_URI="http://www.common-lisp.net/project/slime/slime-${MY_PV_BASE}.tar.gz
 	mirror://gentoo/slime-${MY_PV_BASE}-CVS-${MY_PV_CVS}-gentoo.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="doc"
 
 # The doc USE flag governs the creation of PostScript and PDF
@@ -42,10 +42,10 @@ src_compile() {
 }
 
 src_install() {
-	elisp-install ${PN} *.{el,elc} ${FILESDIR}/swank-loader.lisp
-	elisp-site-file-install ${FILESDIR}/70slime-gentoo.el
-	dodoc ChangeLog HACKING NEWS README* PROBLEMS
-	common-lisp-install *.lisp ${FILESDIR}/swank.asd
+	elisp-install ${PN} *.{el,elc} ${FILESDIR}/${PV}/swank-loader.lisp
+	elisp-site-file-install ${FILESDIR}/${PV}/70slime-gentoo.el
+	dodoc ChangeLog HACKING NEWS PROBLEMS README
+	common-lisp-install *.lisp ${FILESDIR}/${PV}/swank.asd ${FILESDIR}/${PV}/swank-loader-init.lisp
 	common-lisp-system-symlink
 	insinto /usr/share/emacs/site-lisp/slime
 	doins ChangeLog
