@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.3.ebuild,v 1.5 2004/06/01 14:09:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.3.ebuild,v 1.6 2004/06/15 08:14:34 kloeri Exp $
 
 inherit elisp
 
@@ -14,9 +14,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/emacs"
-
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}

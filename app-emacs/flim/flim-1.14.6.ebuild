@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.6.ebuild,v 1.3 2004/03/11 17:43:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.6.ebuild,v 1.4 2004/06/15 08:28:11 kloeri Exp $
 
 inherit elisp
 
@@ -19,7 +19,6 @@ DEPEND="virtual/emacs
 	>=app-emacs/apel-10.3"
 
 PROVIDE="virtual/flim"
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	make PREFIX=${D}/usr \

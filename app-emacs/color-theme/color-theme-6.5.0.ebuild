@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.0.ebuild,v 1.3 2004/05/11 03:54:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.0.ebuild,v 1.4 2004/06/15 08:20:10 kloeri Exp $
 
 inherit elisp
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/emacs"
-
-S="${WORKDIR}/${P}"
 
 SITEFILE=50color-theme-gentoo.el
 
