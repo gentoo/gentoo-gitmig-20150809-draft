@@ -3,7 +3,10 @@
 # Magic command to take the printer out of the Epson packet mode
 # communication protocol (whatever that is) and enable normal data
 # transfer
-printf '\000\000\000\033\001@EJL 1284.4\n@EJL     \n\033@'
+printf '\000\000\000\033\001@EJL 1284.4\n@EJL     \n'
+
+# Sleep to let things settle in the printer
+sleep 1
 
 # Reset the printer
 printf '\033@'

@@ -36,8 +36,8 @@
 0	\033	cat \000\000\000\033\001@EJL\ 1284.4\n@EJL\ \ \ \ \ \n\033@ \014\033@
 
 %ifdef HAVE_GHOSTSCRIPT
-%define HANDLE_PS	pipe	PATH_GHOSTSCRIPT -sDEVICE=stp -sModel=escp2-777 -sQuality="720 DPI Softweave" -r720x720 -sDither="Adaptive Hybrid" -sInkType="Four Color Standard" -sMediaType="Plain Paper" -dImageType=1 -dNOPAUSE -dSAFER -q -sOutputFile=- - -c quit
-%define HANDLE_PDF	fpipe	PATH_GHOSTSCRIPT -sDEVICE=stp -sModel=escp2-777 -sQuality="720 DPI Softweave" -r720x720 -sDither="Adaptive Hybrid" -sInkType="Four Color Standard" -sMediaType="Plain Paper" -dImageType=1 -dNOPAUSE -dSAFER -q -sOutputFile=- $FILE -c quit
+%define HANDLE_PS	pipe	PATH_GHOSTSCRIPT -sDEVICE=stp -sModel=escp2-777 -sQuality="720 D""PI Softweave" -r720x720 -sDither="Adaptive Hybrid" -sInkType="Four Color Standard" -sMediaType="Plain Paper" -dImageType=1 -dNOPAUSE -dSAFER -q -sOutputFile=- - -c quit
+%define HANDLE_PDF	fpipe	PATH_GHOSTSCRIPT -sDEVICE=stp -sModel=escp2-777 -sQuality="720 D""PI Softweave" -r720x720 -sDither="Adaptive Hybrid" -sInkType="Four Color Standard" -sMediaType="Plain Paper" -dImageType=1 -dNOPAUSE -dSAFER -q -sOutputFile=- $FILE -c quit
 %endif
 %define HANDLE_TEXT	/usr/share/magicfilter/stc777-text-helper
 
@@ -51,6 +51,7 @@
 # needed and are not documented in the GhostScript manual page since they are
 # specific to the GhostScript device drivers.
 %endif
+
 %include <stdconv.mh>
 
 # Default entry for normal (text) files.  This must be the last entry!
