@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.83 2004/12/01 14:56:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.84 2004/12/06 16:28:44 ka0ttic Exp $
+
+*bash-completion-20041017-r3 (06 Dec 2004)
+
+  06 Dec 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +bash-completion-20041017-r3.ebuild:
+  Revision bump. New gentoo-bashcomp release which includes new ekeyword
+  completion (thanks ciaranm) in addition to fixing bug 73266. Also, as of
+  this release, the gentoo completions file is installed into
+  /usr/share/bash-completion, with a symlink taking its old location
+  (/etc/bash_completion.d).
 
   01 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   bash-completion-20041017-r1.ebuild:
