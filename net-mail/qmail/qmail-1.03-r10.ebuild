@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.10 2003/02/13 14:37:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.11 2003/02/15 19:16:01 raker Exp $
 
 inherit eutils
 
@@ -11,8 +11,9 @@ HOMEPAGE="http://www.qmail.org/
 	http://www.jedi.claranet.fr/qmail-tuning.html"
 SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	http://members.elysium.pl/brush/qmail-smtpd-auth/dist/qmail-smtpd-auth-0.31.tar.gz
+	http://www.qmail.org/qmailqueue-patch
+	http://qmail.null.dk/big-todo.103.patch
 	http://www.jedi.claranet.fr/qmail-link-sync.patch
-	http://www.nrg4u.com/qmail/ext_todo-20030105.patch
 	http://www.qmail.org/big-concurrency.patch
 	http://www.suspectclass.com/~sgifford/qmail/qmail-0.0.0.0.patch"
 
@@ -51,12 +52,16 @@ src_unpack() {
 	# TLS support and an EHLO patch
 	use ssl && bzcat ${FILESDIR}/${PV}-${PR}/tls.patch.bz2 | patch || die
 
+	# patch so an alternate queue processor can be used
+	# i.e. - qmail-scanner
+	epatch ${DISTDIR}/qmailqueue-patch	
+
+	# a patch for faster queue processing
+	epatch ${DISTDIR}/big-todo.103.patch
+
 	# Account for Linux filesystems lack of a synchronus link()
 	cd ${S}
 	epatch ${DISTDIR}/qmail-link-sync.patch
-
-	# Speeds up processing of large amounts of queue'd messages
-	epatch ${DISTDIR}/ext_todo-20030105.patch
 
 	# Increase limits for large mail systems
 	epatch ${DISTDIR}/big-concurrency.patch
@@ -112,7 +117,7 @@ src_install() {
 	doins home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
  
 	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY 
-	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION EXTTODO
+	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
 	dodoc ${FILESDIR}/${PV}-${PR}/tls-patch.txt 
 
 	insopts -o qmailq -g qmail -m 4711
@@ -135,7 +140,7 @@ src_install() {
 	qmail-popup qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-smtpd \
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
 	condredirect bouncesaying except maildirmake maildir2mbox \
-	maildirwatch qail elq pinq config-fast qmail-todo
+	maildirwatch qail elq pinq config-fast
 
 	into /usr
 	for i in *.1 *.5 *.8
