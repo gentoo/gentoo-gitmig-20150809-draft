@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.1 2003/09/06 12:17:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.2 2003/09/06 13:46:56 taviso Exp $
 
 IUSE="nls"
 
@@ -64,6 +64,12 @@ src_unpack() {
 	# <grant.mcdorman@sympatico.ca> for the patch, (bug #21018). 
 	# 	-taviso@gentoo.org
 	epatch ${FILESDIR}/${P}-LL-linelength.patch
+
+	# makewhatis traverses manpages twice, as default manpath
+	# contains two directories that are symlinked together
+	# (bug 23848)
+	#  -taviso@gentoo.org
+	epatch ${FILESDIR}/${P}-defmanpath-symlinks.patch
 }
 
 src_compile() {
@@ -101,5 +107,5 @@ src_install() {
 	keepdir /var/cache/man
 
 	exeinto /etc/cron.daily
-	newexe ${FILESDIR}/${P}-makewhatis.cron makewhatis.cron
+	doexe ${FILESDIR}/makewhatis.cron
 }

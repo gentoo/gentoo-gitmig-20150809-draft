@@ -1,0 +1,21 @@
+diff -urN man-1.5m2.orig/src/makewhatis.sh man-1.5m2/src/makewhatis.sh
+--- man-1.5m2.orig/src/makewhatis.sh	2003-09-06 14:57:10.000000000 +0100
++++ man-1.5m2/src/makewhatis.sh	2003-09-06 14:57:52.000000000 +0100
+@@ -41,7 +41,7 @@
+ # and should be first.
+ # It is a bug to add /var/cache/man to DEFCATPATH.
+ dm=
+-for d in /usr/share/man /usr/X11R6/man /usr/local/man /usr/man
++for d in /usr/share/man /usr/X11R6/man /usr/local/man
+ do
+     if [ -d $d ]; then
+ 	if [ x$dm = x ]; then dm=$d; else dm=$dm:$d; fi
+@@ -49,7 +49,7 @@
+ done
+ DEFMANPATH=$dm
+ dc=
+-for d in /var/cache/man /usr/share/man/preformat /usr/man/preformat
++for d in /var/cache/man /usr/share/man/preformat
+ do
+     if [ -d $d ]; then
+ 	if [ x$dc = x ]; then dc=$d; else dc=$dc:$d; fi
