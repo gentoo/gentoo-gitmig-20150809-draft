@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/lintool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/ChangeLog,v 1.5 2004/01/23 00:31:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/ChangeLog,v 1.6 2004/03/19 23:18:16 aliz Exp $
+
+  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> lintool-0.2.4-r1.ebuild:
+  Adding amd64 keyword.
 
   23 Jan 2004; Alastair Tse <liquidx@gentoo.org> lintool-0.2.3-r1.ebuild,
   lintool-0.2.4-r1.ebuild, lintool-0.2.4.ebuild,
