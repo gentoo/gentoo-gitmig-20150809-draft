@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.10 2003/02/15 19:45:54 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.11 2003/02/22 00:42:19 zwelch Exp $
+
+  21 Feb 2003; Zach Welch <zwelch@gentoo.org> sash-3.4-r5.ebuild :
+  Added arm to keywords
 
   15 Feb 2003; Jan Seidel <tuxus@gentoo.org> sash-3.4-r5.ebuild :
   Added mips to keywords
