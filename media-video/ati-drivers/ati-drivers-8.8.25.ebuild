@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.3 2005/01/18 22:23:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.4 2005/01/19 12:49:40 lu_zero Exp $
 
 IUSE="multilib" #doc
 
@@ -130,9 +130,11 @@ src_install() {
 	doexe ${WORKDIR}/usr/X11R6/${native_dir}/modules/dri/fglrx_dri.so
 	exeinto ${X11_LIB_DIR}/modules/linux
 	doexe ${WORKDIR}/usr/X11R6/${native_dir}/modules/linux/libfglrxdrm.a
+
 	# same as the xorg implementation
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
 	dosym ../../${X11_IMPLEM}/lib/libGL.la ${ATI_ROOT}/lib/libGL.la
+	dosym ../${X11_IMPLEM}/include ${ATI_ROOT}/include
 
 	#apps
 	insinto /etc/env.d
