@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.1 2002/11/06 04:35:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.2 2002/11/06 04:46:56 vapier Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -54,6 +54,8 @@ src_install() {
 
 	# clean up the scripts
 	dosed 's:$BASE_PATH/etc:/etc:g' /usr/bin/emu-script
+	dosed 's:$BASE_PATH/etc:/etc:g' /usr/bin/audigy-script
+	dosed 's:.aumixrc:aumixrc:g' /usr/bin/audigy-script
 	dosed 's:/bin/aumix-minimal:/usr/bin/aumix:g' /usr/bin/audigy-script
 	dosed 's:/etc/.aumixrc:/etc/aumixrc:g' /usr/bin/audigy-script
 
