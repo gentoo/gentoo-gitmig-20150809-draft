@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.59 2004/12/02 20:34:29 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.60 2004/12/02 21:22:15 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -47,6 +47,8 @@ ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
+export CTARGET="${CTARGET:-${CHOST}}"
+
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 IUSE="${IUSE} build doc"
@@ -88,6 +90,12 @@ kernel_is_2_4() {
 kernel_is_2_6() {
 	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && \
 		return 0 || return 1
+}
+
+kernel_header_destdir() {
+	[ "${CTARGET}" = "${CHOST}" ] \
+		&& echo /usr/include \
+		|| echo /usr/${CTARGET}/include
 }
 
 # Capture the sources type and set DEPENDs
@@ -191,20 +199,21 @@ install_universal() {
 
 install_headers() {
 	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
-	
+
+	local ddir=$(kernel_header_destdir)
 	cd ${S}
-	dodir /usr/include/linux
+	dodir ${ddir}/linux
 	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-	cp -ax ${S}/include/linux/* ${D}/usr/include/linux
-	rm -rf ${D}/usr/include/linux/modules
+	cp -ax ${S}/include/linux/* ${D}/${ddir}/linux
+	rm -rf ${D}/${ddir}/linux/modules
 	
-	dodir /usr/include/asm
-	cp -ax ${S}/include/asm/* ${D}/usr/include/asm
+	dodir ${ddir}/asm
+	cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
 	
 	if [ $(kernel_is_2_6) $? == 0 ]
 	then
-		dodir /usr/include/asm-generic
-		cp -ax ${S}/include/asm-generic/* ${D}/usr/include/asm-generic
+		dodir ${ddir}/asm-generic
+		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
 	fi
 }
 
@@ -268,8 +277,9 @@ install_manpages() {
 # pkg_preinst functions
 #==============================================================
 preinst_headers() {
-	[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
-	[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
+	local ddir=$(kernel_header_destdir)
+	[[ -L ${ROOT}${ddir}/linux ]] && rm "${ROOT}"${ddir}/linux
+	[[ -L ${ROOT}${ddir}/asm ]] && rm "${ROOT}"${ddir}/asm
 }
 
 # pkg_postinst functions
