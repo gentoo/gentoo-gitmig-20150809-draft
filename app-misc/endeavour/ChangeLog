@@ -1,11 +1,10 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# Author: Pedro Fiol <fiocolpe@softhome.net>
-# Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.1 2002/05/17 06:36:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.2 2002/11/02 07:08:00 seemant Exp $
 
 *endeavour-2.1.14.ebuild (16 May 2002)
 
-	16 May 2002; George Shapovalov <george@gentoo.org> endeavour-2.1.14.ebuild,Changelog,files/digest-endeavour-2.1.14 :
+  16 May 2002; George Shapovalov <george@gentoo.org> endeavour-2.1.14.ebuild 
+  Changelog files/digest-endeavour-2.1.14 :
 
-	Initial release
+  Initial release
