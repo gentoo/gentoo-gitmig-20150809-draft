@@ -24,7 +24,7 @@ java-utils_pkg_setup() {
 java-utils_setup-vm() {
 
 	local vendor=`java-utils_get-vm-vendor`
-	if [ ${vendor} = "sun-jdk" ] && java-utils_is-vm-version 1 5; then
+	if [ ${vendor} = "sun-jdk" ] && java-utils_is-vm-version-ge 1 5; then
 		addpredict "/dev/random"
 	elif [[ ${vendor} = "ibm-jdk-bin" ]]; then
 		addwrite "/proc/self/maps"
