@@ -1,6 +1,13 @@
 # ChangeLog for net-www/netscape-plugger
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.2 2002/03/09 08:45:54 guidob Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.3 2002/04/05 04:31:41 tod Exp $
+
+*netscape-plugger-4.0-r1 (4 Apr 2002)
+
+  9 Mar 2002; Tod Neidt <tod@gentoo.org> ebuild:
+
+  Added 'use mozilla' check to add symlink to /usr/lib/mozilla/plugins
+  if true.  Enables plugin for moz and galeon users. Syntax and tabs update.
 
 *netscape-plugger-4.0 (9 Mar 2002)
 
