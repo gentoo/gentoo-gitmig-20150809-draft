@@ -1,0 +1,11 @@
+--- libaux/gauge.c.orig	2004-07-13 12:51:10.000000000 +0200
++++ libaux/gauge.c	2004-07-13 12:50:00.000000000 +0200
+@@ -4,7 +4,7 @@
+    gauge.c -- common for all progs gauge metods. */
+ 
+ #ifndef ENABLE_STAND_ALONE
+-#include <aal/aal.h>
++#include <aal/libaal.h>
+ #include <aux/gauge.h>
+ 
+ aal_gauge_handler_t aux_gauge_handlers[GT_LAST];
