@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.10 2004/12/06 06:18:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.11 2004/12/07 22:30:24 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -59,22 +59,24 @@ tc-getGCJ() { tc-getPROG GCJ gcj; }
 # Returns the name of the C compiler for build
 tc-getBUILD_CC() {
 	if [ -n "${CC_FOR_BUILD}" ] ; then
+		export BUILD_CC="${CC_FOR_BUILD}"
 		echo "${CC_FOR_BUILD}"
 		return 0
 	fi
 
 	local search=
-	if [ -n "${CTARGET}" ] ; then
-		search="$(type -p "${CTARGET}-gcc")"
-	elif [ -n "${CHOST}" ] ; then
-		search="$(type -p "${CHOST}-gcc")"
+	if [ -n "${CBUILD}" ] ; then
+		search="$(type -p "${CBUILD}-gcc")"
 	fi
 
 	if [ -n "${search}" ] ; then
-		echo "${search##*/}"
+		search="${search##*/}"
 	else
-		echo "gcc"
+		search="gcc"
 	fi
+
+	export BUILD_CC="${search}"
+	echo "${search}"
 }
 
 # Quick way to export a bunch of vars at once
