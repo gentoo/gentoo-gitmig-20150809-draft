@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.29 2003/12/15 00:45:06 avenj Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.30 2004/02/11 13:53:52 lisa Exp $
+
+*anjuta-1.2.1 (11 Feb 2004)
+
+  11 Feb 2004; Lisa Seelye <lisa@gentoo.org> anjuta-1.2.1.ebuild:
+  version bump to cure bug #40113
 
   14 Dec 2003; Jon Portnoy <avenj@gentoo.org> anjuta-1.2.0 ebuild :
   AMD64 keywords.
