@@ -1,0 +1,20 @@
+diff -ur gtkpod-0.72.orig/src/mp3file.c gtkpod-0.72/src/mp3file.c
+--- gtkpod-0.72.orig/src/mp3file.c	2004-01-17 04:37:48.000000000 -0500
++++ gtkpod-0.72/src/mp3file.c	2004-01-23 13:17:39.000000000 -0500
+@@ -1296,6 +1296,7 @@
+ {
+     Track *track = NULL;
+     File_Tag filetag;
++    mp3info *mp3info;
+ 
+     track = g_malloc0 (sizeof (Track));
+ 
+@@ -1370,7 +1371,7 @@
+     }
+ 
+     /* Get additional info (play time and bitrate */
+-    mp3info *mp3info = mp3file_get_info (name);
++    mp3info = mp3file_get_info (name);
+     if (mp3info)
+     {
+ 	track->tracklen = mp3info->milliseconds;

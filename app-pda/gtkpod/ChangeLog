@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.7 2004/01/21 19:07:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.8 2004/02/05 16:24:19 tester Exp $
+
+  05 Feb 2004; <tester@gentoo.org> gtkpod-0.72.ebuild,
+  files/gtkpod-0.72-c89_fix.patch:
+  Added patch to make gtkpod compilable with gcc 2.95 from bug #39177
 
 *gtkpod-0.72 (21 Jan 2004)
 

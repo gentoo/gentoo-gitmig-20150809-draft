@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.72.ebuild,v 1.1 2004/01/21 19:07:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.72.ebuild,v 1.2 2004/02/05 16:24:19 tester Exp $
 
 DESCRIPTION="GUI for iPod using GTK2"
 
@@ -29,6 +29,7 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/gtkpod-0.72-c89_fix.patch
 	cp ${DISTDIR}/mp4file.c ${S}/src
 }
 
