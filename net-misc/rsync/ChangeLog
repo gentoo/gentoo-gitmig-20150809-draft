@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.56 2004/07/09 22:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.57 2004/07/10 10:11:07 hansmi Exp $
+
+  10 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> rsync-2.6.0-r2.ebuild:
+  Stable on ppc. Bug 49534.
 
 *rsync-2.6.0-r2 (09 Jul 2004)
 
