@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.26 2004/07/29 18:30:48 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.27 2004/08/04 21:20:27 liquidx Exp $
+	
+*opencdk-0.5.5 (04 Aug 2004)
+
+  04 Aug 2004; Alastair Tse <liquidx@gentoo.org> +opencdk-0.5.5.ebuild:
+  version bump
 
   29 Jul 2004; Stephen P. Becker <geoman@gentoo.org> opencdk-0.5.3.ebuild:
   Stable on mips.
