@@ -1,0 +1,11 @@
+# ChangeLog for app-text/queequeg
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.1 2004/10/17 10:27:37 hattya Exp $
+
+*queequeg-0.91 (17 Oct 2004)
+
+  17 Oct 2004; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
+  +queequeg-0.91.ebuild:
+  Initial import. Based on the ebuild from Atzm Watanabe
+  <sitosito@p.chan.ne.jp> at GentooJP ebuild Project, and modified by me.
+
