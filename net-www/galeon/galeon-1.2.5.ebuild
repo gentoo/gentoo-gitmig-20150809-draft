@@ -8,7 +8,7 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 HOMEPAGE="http://galeon.sourceforge.net"
 
 LICENSE="gpl-2"
-KEYWORDS="*"
+KEYWORDS="x86"
 SLOT="0"
 
 # dont merge mozilla-1.0, as it wont work with galeon, rather start
@@ -60,11 +60,7 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 	# use bonobo && myconf="${myconf} --enable-gnome-file-selector"
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib \
+	econf \
 		--with-mozilla-libs=${MOZILLA_FIVE_HOME} \
 		--with-mozilla-includes=${MOZILLA_FIVE_HOME}/include \
 		--without-debug	--disable-werror \
@@ -73,7 +69,7 @@ src_compile() {
 		--enable-nautilus-view=no \
 		${myconf} || die
 
-	emake || die
+	emake || make || die
 }
 
 src_install() {
@@ -83,11 +79,7 @@ src_install() {
 	# fine without it (at least it seems like it... *sigh*)
 	#gconftool --shutdown
 
-	make prefix=${D}/usr \
-	     mandir=${D}/usr/share/man \
-	     sysconfdir=${D}/etc \
-	     localstatedir=${D}/var/lib \
-	     install || die
+	einstall || die
 
 	dodoc AUTHORS ChangeLog COPYING* FAQ NEWS README TODO THANKS
 }
