@@ -23,7 +23,6 @@
 *app-arch/sharutils
 *app-arch/tar
 *app-shells/bash
-*app-shells/sash
 *dev-lang/perl
 *dev-libs/popt
 *dev-perl/ExtUtils-MakeMaker
@@ -46,7 +45,6 @@
 *sys-apps/hdparm
 *sys-apps/kbd
 *sys-apps/less
-*sys-apps/mac-fdisk
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/net-tools
@@ -85,10 +83,3 @@
 *virtual/modutils
 *virtual/os-headers
 *virtual/ssh
-
-# Notes: python 2.3 + portage combination needed unless
-#        if portage with python 2.3 support is still
-#        pre release portage. Comment to be removed
-#        for the release
-
-
