@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.6 2002/10/26 21:31:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.7 2002/10/26 21:38:54 vapier Exp $
 
 IUSE="pic X mmx truetype opengl nls"
 
@@ -113,7 +113,7 @@ src_compile() {
 	### ewd ###
 	cd ${S}/libs/ewd
 	./autogen.sh ${baseconf} || die "could not autogen ewd"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ewd"
+	make || die "could not make ewd"
 
 	### ebits ###
 	cd ${S}/libs/ebits
