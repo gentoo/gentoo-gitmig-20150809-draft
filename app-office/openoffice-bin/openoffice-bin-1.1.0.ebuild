@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.4 2003/11/07 09:43:53 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.5 2003/11/14 16:51:58 brad_mssw Exp $
 
 IUSE="kde gnome"
 
@@ -28,7 +28,8 @@ DEPEND="sys-apps/findutils
 	app-arch/zip
 	app-arch/unzip
 	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
-	!app-office/openoffice"
+	!app-office/openoffice
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 RDEPEND="virtual/glibc
 	>=dev-lang/perl-5.0
@@ -36,11 +37,12 @@ RDEPEND="virtual/glibc
 	app-arch/zip
 	app-arch/unzip
 	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
-	!app-office/openoffice"
+	!app-office/openoffice
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc ~amd64"
 
 src_install() {
 	# Sandbox issues; bug #8587
