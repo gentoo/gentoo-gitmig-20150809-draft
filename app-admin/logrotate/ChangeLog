@@ -1,17 +1,21 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.6 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.7 2002/12/19 23:32:00 blizzy Exp $
+
+*logrotate-3.6.5 (20 Dec 2002)
+
+  20 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*logrotate-3.5.9-r1 (8 Jun 2002)
 
   29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> logrotate-3.5.9-r1.ebuild :
 
   Added ppc to KEYWORDS.
 
-  8 Jun 2002; Seemant Kulleen <seemant@gentoo.org> logrotate-3.5.9-r1.ebuild
-  files/digest-logrotate-3.5.9-r1 :
+*logrotate-3.5.9-r1 (08 Jun 2002)
+
+  08 Jun 2002; Seemant Kulleen <seemant@gentoo.org> logrotate-3.5.9-r1.ebuild,
+  files/digest-logrotate-3.5.9-r1:
 
   mailx is removed from RDEPEND list, and instead a note in pkg_setup() to
   inform the user to emerge mailx if they would like reports to be e-mailed.
