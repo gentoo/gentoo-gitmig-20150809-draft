@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53.ebuild,v 1.2 2002/03/21 08:47:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53.ebuild,v 1.3 2002/03/21 13:17:08 azarah Exp $
 
 OLD_PV=2.13
 OLD_P=${PN}-${OLD_PV}
@@ -12,8 +12,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
-DEPEND=">=sys-devel/automake-1.5
-	>=sys-devel/m4-1.4p
+DEPEND=">=sys-devel/m4-1.4p
 	sys-devel/perl"
 
 src_unpack() {
