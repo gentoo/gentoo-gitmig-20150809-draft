@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r1.ebuild,v 1.3 2003/10/31 15:41:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r2.ebuild,v 1.1 2003/10/31 15:41:06 usata Exp $
 
 IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk"
 
-W3M_CVS_PV="1.877"
+W3M_CVS_PV="1.890"
 W3M_CVS_P="${P}+cvs-${W3M_CVS_PV}"
 
 DESCRIPTION="Text based WWW browser, supports tables and frames"
@@ -73,9 +73,8 @@ w3m_src_compile() {
 		migemo_command="no"
 	fi
 
-	# You can't disable nls and cjk at the moment(compile fails)
+	# You can't disable nls at the moment(w3mhelper hangs)
 	# `use_enable nls`
-	# `use_enable cjk m17n`
 	econf --enable-keymap=w3m \
 		--with-editor=/usr/bin/nano \
 		--with-mailer=/bin/mail \
@@ -83,6 +82,7 @@ w3m_src_compile() {
 		--with-termlib=ncurses \
 		--with-imglib="${imglib}" \
 		--with-migemo="${migemo_command}" \
+		`use_enable cjk m17n` \
 		`use_enable gpm mouse` \
 		`use_enable ssl digest-auth` \
 		`use_with ssl` \
@@ -98,9 +98,9 @@ src_unpack() {
 	unpack ${W3M_CVS_P}.tar.gz
 	cd ${S}
 	#epatch ${FILESDIR}/${PF}-gentoo.diff
-	epatch ${FILESDIR}/${P}-w3mman-gentoo.diff
+	#epatch ${FILESDIR}/${P}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
-	epatch ${FILESDIR}/${P}-imglib-gentoo.diff
+	#epatch ${FILESDIR}/${P}-imglib-gentoo.diff
 }
 
 src_compile() {
