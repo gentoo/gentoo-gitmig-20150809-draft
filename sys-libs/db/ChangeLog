@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.33 2003/06/22 19:13:11 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.34 2003/06/30 06:50:56 pauldv Exp $
+
+  26 Jun 2003; Paul de Vrieze <pauldv@gentoo.org> db-4.0.14.ebuild,
+  db-4.1.24.ebuild, db-4.1.25.ebuild:
+  Make sure that latest db.h gets linked to /usr/include/db.h. Also add
+  db_185.h link to /usr/include
 
   22 Jun 2003; Paul de Vrieze <pauldv@gentoo.org> db-3.2.9-r5.ebuild,
   db-4.0.14.ebuild, db-4.1.24.ebuild, db-4.1.25.ebuild:
