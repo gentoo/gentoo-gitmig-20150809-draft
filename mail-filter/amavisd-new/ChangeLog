@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/amavisd-new
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.4 2004/06/15 14:51:24 lordvan Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.5 2004/06/24 22:19:39 agriffis Exp $
 
   15 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org>
   amavisd-new-20030616_p8.ebuild, amavisd-new-20030616_p9.ebuild:

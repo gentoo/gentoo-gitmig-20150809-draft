@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.4 2004/06/15 14:51:24 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.5 2004/06/24 22:19:39 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/scmail
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/ChangeLog,v 1.1 2004/06/03 07:30:00 seemant Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/ChangeLog,v 1.2 2004/06/24 22:22:12 agriffis Exp $
 
 *scmail-1.1 (03 Jun 2004)
 

@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author: Enrico Morelli - 05/08/2002
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/rblcheck-1.5.ebuild,v 1.1 2004/06/03 07:28:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/rblcheck-1.5.ebuild,v 1.2 2004/06/24 22:22:01 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Perform lookups in RBL-styles services."

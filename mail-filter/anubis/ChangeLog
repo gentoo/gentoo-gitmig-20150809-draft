@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/anubis
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.1 2004/06/03 07:00:48 seemant Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.2 2004/06/24 22:20:01 agriffis Exp $
 
 *anubis-3.6.2 (03 Jun 2004)
 
