@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/putty
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.1 2003/06/03 15:57:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.2 2003/06/14 09:28:04 taviso Exp $
+
+  14 Jun 2003; Tavis Ormandy <taviso@gentoo.org> putty-20030603.ebuild:
+  Fix some typos, minor tweaks, and some more informational messages.
+
+  added a doc USE flag.
 
 *putty-20030603 (03 Jun 2003)
 
