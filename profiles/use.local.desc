@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.533 2004/08/06 18:38:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.534 2004/08/06 22:04:57 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -166,6 +166,7 @@ dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
+dev-lisp/gcl:ansi - build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-ml/lablgl:glut - Enable glut support.
