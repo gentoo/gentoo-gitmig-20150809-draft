@@ -4,17 +4,17 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.8 2002/04/27 12:11:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.9 2002/05/13 22:24:47 karltk Exp $
 
 version=0.2.0
 all_params="$*"
 
 SYSTEM_ARCH=`echo $ARCH |\
-  sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
-if [ -z "$SYSTEM_ARCH" ]
-then
+	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+
+if [ -z "$SYSTEM_ARCH" ] ; then
 	SYSTEM_ARCH=`uname -m |\
-     sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
 fi 
 
 PFORM="i386"
@@ -27,16 +27,20 @@ case $SYSTEM_ARCH in
 	arm)    PFORM="arm";;
 esac
 
-if [ -e /etc/env.d/20java ] ; then
+if [ -f $HOME/.gentoo/java-env ] ; then
+	. $HOME/.gentoo/java-env
+elif  [ -f /etc/env.d/20java ] ; then
 	oldpath=$PATH
 	. /etc/env.d/20java
 	PATH=$oldpath:$PATH
 fi
 
-
-if [ -z "$JAVA_HOME" ] ; then
+svm=`echo $1|egrep "\-\-set-(system|user)-vm"`
+if [ -z "$JAVA_HOME" ] && [ -z "$svm" ] && [ "$1" != "--help" ]; then
 	echo "!!! No Java installation found" > /dev/stderr
 	echo "!!! Use --set-system-vm to select default system JVM" > /dev/stderr
+	echo "!!! Alternatively, use --set-user-vm to select default system JVM" > /dev/stderr
+	exit 1
 fi
 
 usage() {

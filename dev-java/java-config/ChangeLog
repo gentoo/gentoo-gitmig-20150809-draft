@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.4 2002/04/10 15:46:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.5 2002/05/13 22:24:47 karltk Exp $
+
+*java-config-0.2.3 (14 May 2002)
+
+  14 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> java-config-0.2.3.ebuild files/java-config:
+
+  Now java-config sources $HOME/.gentoo/java-env before trying to source 
+  /etc/env.d/20java.
+
+  A warning is no longer output when running --set-user-vm or --set-system-vm
+  for the first time.
+
+  Also, some platform accomodations seem to have snuck in without any notice 
+  in this ChangeLog nor any version bump. 
 
 *java-config-0.2.2 (10 Apr 2002)
 
