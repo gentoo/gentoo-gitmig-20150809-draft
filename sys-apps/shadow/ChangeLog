@@ -1,10 +1,17 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.23 2003/01/18 14:14:46 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.24 2003/01/19 19:55:40 azarah Exp $
+
+  19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r3.ebuild :
+  
+  Patch the useradd manpage to be a bit more clear, closing bug #13203.
+  Thanks to Guy <guycad@mindspring.com>.
+
 
 *shadow-4.0.3-r3 (25 Dec 2002)
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+
   Added mips to keywords
 
   25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r3.ebuild :

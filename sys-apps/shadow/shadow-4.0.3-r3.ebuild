@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.2 2003/01/18 14:14:46 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.3 2003/01/19 19:55:40 azarah Exp $
 
 IUSE=""
 
-inherit libtool
+inherit eutils libtool
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -37,7 +37,11 @@ src_unpack() {
 	# pam_xauth for one, is then never used.  This should close bug #8831.
 	#
 	# <azarah@gentoo.org> (19 Oct 2002)
-	cd ${S}; patch -p1 < ${FILESDIR}/${P}-su-pam_open_session.patch-v2 || die
+	cd ${S}; epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
+
+	# Patch the useradd manpage to be a bit more clear, closing bug #13203.
+	# Thanks to Guy <guycad@mindspring.com>.
+	cd ${S}; epatch ${FILESDIR}/${P}-useradd-manpage-update.patch
 }
 
 src_compile() {
