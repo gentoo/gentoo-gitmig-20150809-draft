@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.3 2005/03/05 16:06:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.4 2005/03/19 22:39:45 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -68,7 +68,7 @@ src_unpack() {
 		tar xzf ${DISTDIR}/${FCDSL_FILES[CARD]}.tar.gz
 		mv fritz ${FCDSL_MODULES[CARD]/fc/fritz.}
 		cd ${FCDSL_MODULES[CARD]/fc/fritz.}/src
-		patch -p0 < ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff
+		[ -f ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff ] && patch -p0 < ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff
 		cd ../..
 	done
 

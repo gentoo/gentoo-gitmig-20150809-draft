@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.12 2005/03/09 05:53:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.13 2005/03/19 22:39:45 genstef Exp $
+
+  19 Mar 2005; Stefan Schweizer <genstef@gentoo.org> -files/fcdslusb.diff,
+  fcdsl-2.6.20.7-r4.ebuild:
+  Removing fcdslusb patch.. it does not work and is not needed.
 
   09 Mar 2005; Alin Nastac <mrness@gentoo.org> -fcdsl-2.6.20.7-r2.ebuild,
   -fcdsl-2.6.20.7-r3.ebuild:
