@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r2.ebuild,v 1.2 2002/08/30 04:42:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r2.ebuild,v 1.3 2002/09/01 22:24:44 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
@@ -14,14 +14,14 @@ DEPEND="virtual/glibc
 		>=dev-libs/libpcre-3.4
 		pam? ( >=sys-libs/pam-0.75 )
 		tcpd? ( sys-apps/tcp-wrappers )
-		mta-tls? ( >=dev-libs/openssl-0.9.6 )
-		mta-ldap? ( >=net-nds/openldap-2.0.7 )
-		mta-mysql? ( >=dev-db/mysql-3.23.28 )
-		mta-pgsql? ( >=dev-db/postgresql-7 )"
+		ssl? ( >=dev-libs/openssl-0.9.6 )
+		ldap? ( >=net-nds/openldap-2.0.7 )
+		mysql? ( >=dev-db/mysql-3.23.28 )
+		pgsql? ( >=dev-db/postgresql-7 )"
 
 RDEPEND="${DEPEND}
-		 !virtual/mta
-		 >=net-mail/mailbase-0.00"
+		!virtual/mta
+		>=net-mail/mailbase-0.00"
 
 PROVIDE="virtual/mta"
 
@@ -35,8 +35,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	
-	# Don't need this in exim4 dir exists
-	#mkdir Local
 	sed -e "48i\CFLAGS=${CFLAGS}" \
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
@@ -74,7 +72,7 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	if use mta-tls; then
+	if use ssl; then
 		cp Local/Makefile Local/Makefile.tmp
 		sed -e "s:# SUPPORT_TLS=yes:SUPPORT_TLS=yes:" \
 			-e "s:# TLS_LIBS=-lssl -lcrypto:TLS_LIBS=-lssl -lcrypto:" Local/Makefile.tmp > Local/Makefile
@@ -83,7 +81,7 @@ src_unpack() {
 	LOOKUP_INCLUDE=
 	LOOKUP_LIBS=
 
-	if use mta-ldap; then
+	if use ldap; then
 		cp Local/Makefile Local/Makefile.tmp
 		sed -e "s:# LOOKUP_LDAP=yes:LOOKUP_LDAP=yes:" \
 			-e "s:# LDAP_LIB_TYPE=OPENLDAP2:LDAP_LIB_TYPE=OPENLDAP2:" \
@@ -92,7 +90,7 @@ src_unpack() {
 		LOOKUP_LIBS="-L/usr/lib -lldap -llber"
 	fi
 
-	if use mta-mysql; then
+	if use mysql; then
 		cp Local/Makefile Local/Makefile.tmp
 		sed -e "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" \
 			Local/Makefile.tmp >| Local/Makefile
@@ -100,7 +98,7 @@ src_unpack() {
 		LOOKUP_LIBS="$LOOKUP_LIBS -L/usr/lib -lmysqlclient"
 	fi
 
-	if use mta-pgsql; then
+	if use pgsql; then
 		cp Local/Makefile Local/Makefile.tmp
 		sed -e "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" \
 			Local/Makefile.tmp >| Local/Makefile
@@ -131,7 +129,9 @@ src_unpack() {
 }
 
 src_compile() {
+
 	make || die
+
 }
 
 
@@ -156,14 +156,6 @@ src_install () {
 		doexe $i
 	done
 	
-	# This stuff shows up in ${S}/exim-build-gentoo now. Wierd.
-	#cd ${S}/util
-	#exeinto /usr/sbin
-	#for i in exigrep eximstats exiqsumm
-	#do
-	#	doexe $i
-	#done
-
 	dodir /etc/exim
 	
 	cd ${S}/src
@@ -192,9 +184,13 @@ src_install () {
 pkg_config() {
 
 	${ROOT}/usr/sbin/rc-update add exim
+
 }
+
 pkg_postinst() {
+
 	einfo "Read the bottom of /etc/exim/system_filter.exim for usage."
 	einfo "/usr/share/doc/${P}/auth_conf.sub.gz contains the configuration sub for using smtp auth."
 	einfo "Please create /etc/exim/configure from /etc/exim/configure.default."
+
 }
