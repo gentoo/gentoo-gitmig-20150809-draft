@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.10 2004/07/28 03:35:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.11 2004/08/07 14:08:14 hansmi Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
-inherit gnome.org eutils libtool
+inherit gnome.org eutils libtool gnuconfig
 
 DESCRIPTION="The GIMP Toolkit"
 HOMEPAGE="http://www.gtk.org/"
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI} http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gento
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ~ppc ~sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ~ppc ~sparc mips alpha arm hppa amd64 ia64 ppc64 ~macos"
 IUSE="nls debug"
 
 RDEPEND="virtual/x11
@@ -29,6 +29,9 @@ src_unpack() {
 	# locale fix by sbrabec@suse.cz
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.2-locale_fix.patch
+
+	# Required for Mac OS X
+	gnuconfig_update
 }
 
 src_compile() {
