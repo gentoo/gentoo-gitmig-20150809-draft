@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.6a.ebuild,v 1.1 2004/07/18 06:22:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.6a.ebuild,v 1.2 2004/07/18 06:36:47 dragonheart Exp $
 
 inherit kde
 
@@ -27,17 +27,15 @@ RDEPEND="sys-libs/zlib
 	media-libs/libart_lgpl
 	media-libs/libmng
 	media-libs/libpng
-	media-libs/nas
 	sys-devel/gcc
 	dev-embedded/gputils
 	app-admin/fam
 	virtual/libc"
 
-# build system uses some perl
-DEPEND="${RDEPEND}
-	dev-lang/perl
-	>=sys-devel/gcc-3
-	>=sys-apps/sed-4"
+# Ebuild will evily link to these if present
+#	media-libs/nas
+
+DEPEND="${RDEPEND}"
 
 need-kde 3
 
