@@ -1,6 +1,11 @@
 # ChangeLog for net-www/straw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.14 2003/11/03 22:28:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.15 2003/11/15 18:02:16 foser Exp $
+
+*straw-0.21.1 (15 Nov 2003)
+
+  15 Nov 2003; foser <foser@gentoo.org> straw-0.21.1.ebuild :
+  New release
 
   03 Nov 2003; Alastair Tse <liquidx@gentoo.org> straw-0.20.ebuild:
   removed pyxml dep
