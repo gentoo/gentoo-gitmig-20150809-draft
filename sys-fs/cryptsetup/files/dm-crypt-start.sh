@@ -1,5 +1,7 @@
-# /lib/rcscripts/dm-crypt-start.sh:
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.1 2005/03/01 23:25:14 azarah Exp $
+# /lib/rcscripts/addons/dm-crypt-start.sh
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.2 2005/03/02 15:16:39 vapier Exp $
 
 # Setup mappings for an individual mount/swap
 #

@@ -1,5 +1,7 @@
 # /lib/rcscripts/addons/dm-crypt-stop.sh
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-stop.sh,v 1.1 2005/03/01 23:25:14 azarah Exp $
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-stop.sh,v 1.2 2005/03/02 15:16:39 vapier Exp $
 
 # Try to remove any dm-crypt mappings
 if [ -f /etc/conf.d/cryptfs ] && [ -x /bin/cryptsetup ]
