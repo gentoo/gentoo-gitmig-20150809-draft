@@ -1,8 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.7 2002/10/06 03:46:50 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.8 2002/11/06 04:30:51 leonardop Exp $
 
 *gnucash-1.6.8 (05 Sep 2002)
+
+  05 Nov 2002; L. Boshell <leonardop@gentoo.org> gnucash-1.6.8.ebuild :
+  Fixed guile dep (bug #10306).
+  
   05 Sep 2002; Chris Houser <chouser@gentoo.org> gnucash-1.6.8.ebuild :
   Bump up to latest version of gnucash.  Both 1.6.7 and this version failed to
   build for me with "postgres" in my use settings.  I added a patch to this

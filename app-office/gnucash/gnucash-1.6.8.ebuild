@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.1 2002/10/06 03:46:50 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.2 2002/11/06 04:30:51 leonardop Exp $
 
 IUSE="nls postgres"
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	>=dev-libs/g-wrap-1.1.5
 	<gnome-base/libglade-2
 	media-libs/gdk-pixbuf
-	dev-util/guile
+	<dev-util/guile-1.4.1
 	gnome-base/libghttp
 	nls? ( sys-devel/gettext )"
 
