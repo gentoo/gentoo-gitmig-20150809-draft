@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ReadLine-Perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.4 2003/02/13 20:39:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.5 2003/06/09 05:12:35 rac Exp $
+
+  08 Jun 2003; <rac@gentoo.org> Term-ReadLine-Perl-1.0203.ebuild:
+  Stabilize URL, fix header, add IUSE
 
 *Term-ReadLine-Perl-1.0203 (02 Jan 2003)
 
