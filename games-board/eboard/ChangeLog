@@ -1,6 +1,11 @@
 # ChangeLog for games-board/eboard
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.3 2003/10/13 20:46:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.4 2004/01/02 02:16:32 vapier Exp $
+
+*eboard-0.9.5 (01 Jan 2003)
+
+  01 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #35793.
 
 *eboard-0.9.0 (13 Oct 2003)
 
