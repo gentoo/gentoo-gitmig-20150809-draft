@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.1 2004/08/22 15:04:54 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.2 2004/08/24 10:21:51 sekretarz Exp $
+
+  24 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org> libgadu-20040820.ebuild:
+  Corrected DESCRIPTION
 
   22 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   +libgadu-20040820.ebuild:
