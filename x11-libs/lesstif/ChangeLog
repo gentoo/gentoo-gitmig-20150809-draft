@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/lesstif
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.38 2004/12/28 21:59:58 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.39 2005/02/01 18:31:24 lanius Exp $
+
+*lesstif-0.94.0 (01 Feb 2005)
+
+  01 Feb 2005; Heinrich Wendel <lanius@gentoo.org> +lesstif-0.94.0.ebuild:
+  version bump; provide virtual/motif; fix security bug #78483
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94.ebuild,v 1.7 2004/10/06 11:41:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94.ebuild,v 1.8 2005/02/01 18:31:24 lanius Exp $
 
 inherit libtool
 
