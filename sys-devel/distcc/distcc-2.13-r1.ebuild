@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.13-r1.ebuild,v 1.4 2004/04/18 04:20:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.13-r1.ebuild,v 1.5 2004/04/26 13:17:23 vapier Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -15,27 +15,27 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa mips ia64 amd64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa ia64 amd64"
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
 	sys-apps/shadow
 	dev-util/pkgconfig"
-
-RDEPEND="!mips? ( gnome? ( >=x11-libs/gtk+-2.0.0
-		  >=gnome-base/libgnome-2.0.0
-		  >=gnome-base/libgnomeui-2.0.0.0
-		  >=gnome-base/libglade-2.0.0
-		  x11-libs/pango
-		 )
-	       )
-	!mips? (
-		gtk?	(
+RDEPEND="
+	!arm? ( !mips? (
+	gnome? (
+		>=x11-libs/gtk+-2.0.0
+		>=gnome-base/libgnome-2.0.0
+		>=gnome-base/libgnomeui-2.0.0.0
+		>=gnome-base/libglade-2.0.0
+		x11-libs/pango
+	)
+	gtk? (
 		>=x11-libs/gtk+-2.0.0
 		x11-libs/pango
-		)
-		)
+	)
+	) )
 	selinux? ( sec-policy/selinux-distcc )"
 
 src_compile() {
