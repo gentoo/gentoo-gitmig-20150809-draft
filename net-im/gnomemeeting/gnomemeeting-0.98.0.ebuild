@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.0.ebuild,v 1.5 2004/03/09 07:11:32 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.0.ebuild,v 1.6 2004/03/09 07:12:15 ferringb Exp $
 
 IUSE="sdl ssl ipv6"
 
 inherit gnome.org gnome2
 
-#SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/${P}.tar.gz"
 HOMEPAGE="http://www.gnomemeeting.org"
 DESCRIPTION="Gnome NetMeeting client"
 
