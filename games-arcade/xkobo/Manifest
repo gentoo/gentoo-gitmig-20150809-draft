@@ -1,4 +1,4 @@
-MD5 86e6f1232cf6089fe6fe84ce3ab9459a ChangeLog 729
-MD5 ad2d1664211bf16eb010193860c985a7 xkobo-1.11.ebuild 1251
-MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
 MD5 a740cf14722c9825991d0c1ab67dd2e8 files/digest-xkobo-1.11 65
+MD5 86e6f1232cf6089fe6fe84ce3ab9459a ChangeLog 729
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 abeda2861f715e24966c815fc0c14201 xkobo-1.11.ebuild 1237

@@ -1,4 +1,4 @@
-MD5 3aef51cb5edce31c86fc8c48344e365a ChangeLog 523
-MD5 db02fb146619580ee26eae9a9f2aca38 netris-0.52.ebuild 783
-MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
 MD5 e1563bb4d53b0f0c5edba1d530b934f8 files/digest-netris-0.52 126
+MD5 3aef51cb5edce31c86fc8c48344e365a ChangeLog 523
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 88ba0db9797e7fcdc6250fb9710df125 netris-0.52.ebuild 778

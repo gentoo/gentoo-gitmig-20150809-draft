@@ -1,4 +1,4 @@
-MD5 8b7bd56aae70e429d0f3a6a1171d4cbe cob-0.9.ebuild 686
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 92ce78f6f7b1a19c5b9ff58b3c620b14 ChangeLog 374
 MD5 09914fc65d6866e0aa4e7731b5a56869 files/digest-cob-0.9 59
+MD5 92ce78f6f7b1a19c5b9ff58b3c620b14 ChangeLog 374
+MD5 fdda5983e2fe787516c9eadfa4343d12 cob-0.9.ebuild 593
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
