@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc., Emil Sköldberg (see ChangeLog)
+# Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.14 2003/10/09 18:09:35 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.15 2003/10/11 17:55:19 scandium Exp $
 
 inherit flag-o-matic
 
