@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/poedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/ChangeLog,v 1.7 2003/03/25 02:14:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/ChangeLog,v 1.8 2003/03/26 00:56:27 liquidx Exp $
 
 *poedit-1.2.1 (08 Mar 2003)
+
+  26 Mar 2003; Alastair Tse <liquidx@gentoo.org> poedit-1.2.1.ebuild:
+  really fix the KDEDIR problem. Bug #17981.
 
   25 Mar 2003; Alastair Tse <liquidx@gentoo.org> poedit-1.2.1.ebuild:
   added correct KDE install paths

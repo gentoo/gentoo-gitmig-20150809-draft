@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.3 2003/03/25 02:14:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.4 2003/03/26 00:56:27 liquidx Exp $
 
 inherit eutils kde
 
@@ -15,26 +15,25 @@ KEYWORDS="x86 ~sparc"
 DEPEND=">=x11-libs/wxGTK-2.3.4
 	>=sys-libs/db-3"
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo_make_paths.patch
-}
-
 src_compile() {
-	autoconf
-	automake
-
 	econf || die
 	emake || die
 }
 
 src_install () {
+
+	# in case KDEDIR is empty
+	local MY_KDEDIR
+    if [ -n "${KDEDIR}" ]; then
+    	MY_KDEDIR=${KDEDIR}
+    else
+    	MY_KDEDIR=/usr
+	fi 
+    
 	einstall \
 		datadir=${D}/usr/share \
-		GNOME_DATA_DIR=${D}/usr/share || die
-        KDE_DATA_DIR=${D}/${KDEDIR}/share || die
+		GNOME_DATA_DIR=${D}/usr/share \
+		KDE_DATA_DIR=${D}/${MY_KDEDIR}/share || die
 
 	dodoc AUTHORS LICENSE NEWS README TODO
 }
