@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.208 2004/11/17 18:04:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.209 2004/11/17 18:24:04 spyderous Exp $
+
+  17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  PATCH_VER 0.2.8. Update Newport acceleration patch to
+  5200_all_6.8.0-newport-accel-v3.patch (#38549). This fixes a red/blue swap
+  for applications using RENDER acceleration such as gnome-terminal, gvim and
+  xchat2.
 
 *xorg-x11-6.8.0-r4 (17 Nov 2004)
 
