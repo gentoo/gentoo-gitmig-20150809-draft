@@ -1,6 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.1 2002/06/01 02:55:47 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.2 2002/06/01 03:09:29 blocke Exp $
+
+# Authors:
+# Bruce A. Locke <blocke@shivan.org>
+# Spidler <spidler@gentoo.org>
 
 # Gnome 2 ECLASS
 ECLASS="gnome2"
@@ -13,10 +17,16 @@ RESTRICT="nostrip"
 CFLAGS="${CFLAGS} -g"
 CXXFLAGS="${CXXFLAGS} -g"
 
+G2CONF="--enable-debug=yes"
 
 gnome2_src_compile() {
 
-	libtoolize --copy --force
+	use doc && G2CONF="${G2CONF} --enable-gtk-doc" || G2CONF="${G2CONF} --disable-gtk-doc"
+	
+	if [ ${LIBTOOL_FIX} -eq 1 ]
+	then
+		libtoolize --copy --force
+	fi
 
 	econf "${1} --enable-debug=yes" || die "./configure failure"
 	emake || die "compile failure"
@@ -30,7 +40,7 @@ gnome2_src_install() {
 	# manual document installation
 	if [ -n "${DOC}" && use doc ]
 	then
-		for x in $DOC; do dodoc $x; done
+		dodoc ${DOC}
 	fi
 
 }
@@ -48,6 +58,6 @@ gnome2_pkg_postinst() {
 	fi
 }
 
-
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst
 
 
