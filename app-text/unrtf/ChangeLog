@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unrtf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.7 2004/03/12 08:50:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.8 2004/03/27 10:40:15 dholm Exp $
+
+  27 Mar 2004; David Holm <dholm@gentoo.org> unrtf-0.19.3.ebuild:
+  Added to ~ppc.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> :
   Don't assign default to S; header fix
