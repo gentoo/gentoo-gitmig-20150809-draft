@@ -1,7 +1,16 @@
 # ChangeLog for sys-apps/lvm-user
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.3 2002/04/10 03:11:19 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.4 2002/06/24 13:01:44 jnelson Exp $
 
+*lvm-user-1.0.4 (23 Jun 2002)
+
+ 23 Jun 2002; Jon Nelson <jnelson@gentoo.org>: lvm-user-1.0.4.ebuild
+ Update to 1.0.4
+ 1.0.4 vgscan creates /etc/lvmtab and /etc/lvmtab.d by default (closes #2293)
+ 
+ LVM is under the GPL version 2
+ The LVM library is under the LGPL version 2
+ 
 *lvm-user-1.0.3 (9 Apr 2002)
 
  9 Apr 2002; Jon Nelson <jnelson@jamponi.net>: lvm-user-1.0.3.ebuild
