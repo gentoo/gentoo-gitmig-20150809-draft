@@ -1,6 +1,9 @@
 # ChangeLog for net-www/khttrack
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.1 2003/07/07 17:30:23 ykoehler Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.2 2004/03/14 17:30:32 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> khttrack-0.10.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *khttrack-0.10 (07 Jul 2003)
 
