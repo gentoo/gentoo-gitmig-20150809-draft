@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8444128e4b1c4809e7331519429bde0c ChangeLog 4018
+MD5 6cee818d3893f212e3d794b44bf0cdbb ChangeLog 4122
 MD5 0e0016865e514e87266db998b33bd851 sudo-1.6.6.ebuild 877
 MD5 8c94167c21e8ef1c80a87dd4a7d448bf sudo-1.6.7_p5-r1.ebuild 1371
 MD5 c4364dcfd263577598949e28a081203a sudo-1.6.7_p5.ebuild 976
 MD5 81fb337f88166432ab3ab058a6f9df0e sudo-1.6.8_p1-r1.ebuild 1433
 MD5 10739407a2bc68ce76fe7e694e3cbd73 sudo-1.6.8_p1.ebuild 1053
+MD5 ccd69f74f75b4d14dc0cacd0ab14a4a1 sudo-1.6.7_p5-r2.ebuild 1485
 MD5 0209e0398b74dcb8dfd570e1fa4d8b56 sudo-1.6.8_p1-r2.ebuild 1552
 MD5 0f185b7b157c9e687deea2c4066a57e9 sudo-1.6.8_p2.ebuild 1508
-MD5 b166bc051078a1d4b8e9ffe22973f25f sudo-1.6.7_p5-r2.ebuild 1487
 MD5 d3a1edd41e6a44e7dae35d250aea266e files/digest-sudo-1.6.6 62
 MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5 64
 MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r1 64
@@ -24,10 +21,3 @@ MD5 4362800877ccb8e27de5437707d8a954 files/sudo-strip-bash-functions.diff 1335
 MD5 5a53154802d130d3ea39a324290c7515 files/sudoers 841
 MD5 2a0f63ce27c6d8b9d304ece23ca43a5e files/digest-sudo-1.6.8_p2 64
 MD5 b906eb71f7564707384cfa9fc80c1b5f files/sudo-1.6.7_p5-strip-bash-functions.diff 1101
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBm1DAPQS8wXCOFl8RArxhAJ0bnqXEeexUgRFZOdPxfqWy6ObcGQCgi05I
-j8zn+P4ihQ8LJz/avEZnLjU=
-=hbrl
------END PGP SIGNATURE-----
