@@ -1,6 +1,11 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for media-gfx/fbgrab
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.1 2003/01/20 13:09:35 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.2 2003/01/21 06:28:49 tad Exp $
+
+*fbgrab-1.0_beta1-r1 (21 JAN 2003)
+
+  21 JAN 2003; Troy Dack <tad@gentoo.org> fbgrab-1.0_beta1-r1.ebuild:
+  Man page now installed in /usr/share/doc/fbgrab
 
 *fbgrab-1.0_beta1-r0 (20 JAN 2003)
 
