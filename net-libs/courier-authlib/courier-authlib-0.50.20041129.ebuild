@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041129.ebuild,v 1.2 2004/12/01 18:09:28 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041129.ebuild,v 1.3 2004/12/01 18:24:46 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~mips"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt uclibc debug"
 
 DEPEND="virtual/libc
