@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-arnesi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/ChangeLog,v 1.7 2004/12/28 20:54:42 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/ChangeLog,v 1.8 2005/02/17 08:47:14 mkennedy Exp $
+
+*cl-arnesi-1.2_p47 (17 Feb 2005)
+
+  17 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +cl-arnesi-1.2_p47.ebuild:
+  New snapshot based on the version included in the latest UCW (0.3.6); New
+  Portage versioning scheme
 
 *cl-arnesi-1.2.3 (28 Dec 2004)
 
