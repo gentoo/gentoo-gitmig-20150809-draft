@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 cb7f849c761ae800dd80a8f87c8a7d29 ChangeLog 741
-MD5 efd7a23790a96a77ff67e02c7ec17215 openntpd-20040719p.ebuild 865
-MD5 932f08319266d17471ce7d5bd30cb0a4 openntpd-20040824p.ebuild 874
+MD5 982c6682ee49bd7f3a21b12d8dc507c3 openntpd-20040719p.ebuild 871
+MD5 ac3f8da3a2e40e64e2f9df7ee4dd31e8 openntpd-20040824p.ebuild 881
 MD5 884500fac6f116fe62dda8c2ba097934 files/digest-openntpd-20040719p 70
 MD5 190d5fd10b61033efb925f9d1fa5dd60 files/openntpd.rc 902
 MD5 b93fd6f96d2cf25cb967393fc1502784 files/openntpd.conf.d 243
@@ -11,7 +11,7 @@ MD5 6629cc381ff1007852deb4dfc2303b20 files/digest-openntpd-20040824p 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBNyPbHTu7gpaalycRAqaaAKDtNEWkaoOrU4aVfwm3hZZfQct43wCeLPC7
-EQquC9xbRJjJLg6GAxZCAjw=
-=YeYx
+iD8DBQFBUkGaHTu7gpaalycRAgpLAJ416ZPkRSd4d0p0UbsehlycTk+UcgCffuGf
+2ytNoPpZ3RMOpS9qpDs5HYU=
+=3SvE
 -----END PGP SIGNATURE-----

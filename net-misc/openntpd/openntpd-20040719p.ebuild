@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20040719p.ebuild,v 1.5 2004/08/24 21:01:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20040719p.ebuild,v 1.6 2004/09/23 03:22:56 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openntpd.org/dist/portable/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="alpha ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
