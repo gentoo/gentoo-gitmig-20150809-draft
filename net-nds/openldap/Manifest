@@ -7,6 +7,7 @@ MD5 228e3ed7b74f4090d52d5d766ac35d3e openldap-2.1.21.ebuild 5292
 MD5 61f7489f4f592e69a6ee79a5a845632d ChangeLog 11079
 MD5 4d29062be2f73fa15f9bd0f184eba498 openldap-2.0.25-r3.ebuild 6258
 MD5 e19f6635f7d8e8e7b5469e9dc94c7c84 openldap-2.0.27-r4.ebuild 6421
+MD5 47104263b39077ee597f1025ddb8821a openldap-2.1.23.ebuild 6036
 MD5 ab26c55b61650f4081e4a9c28f972671 files/openldap-2.1.22-perlsedfoo.patch 1029
 MD5 646fd34831ae403ecda2103b01f49a0f files/slapd-2.1.conf 278
 MD5 32822e9d47a48af3b1da7e5a3c5c6229 files/digest-openldap-2.0.25-r1 65
@@ -24,6 +25,7 @@ MD5 8a8a025bf2de63f76d33f244624c3851 files/kerberos-2.0.diff.bz2 385
 MD5 bc676758f2d1726b75e1d04fd936d029 files/digest-openldap-2.0.27 65
 MD5 43181f48b522ce05011ff4d0a0b061f7 files/digest-openldap-2.1.21 65
 MD5 d4aef53a2d2ebe6e6df8cfcf33494908 files/digest-openldap-2.1.22 65
+MD5 d1d8e016f9e53ab6886a5d507537f3d1 files/digest-openldap-2.1.23 65
 MD5 618aff7f8ec17a4090f07c56d461e775 files/slapd.rc6 590
 MD5 56c55ee6e524dd55c3d38531e792eaa2 files/slurpd.rc6 503
 MD5 1de3e9592a8549c165bd43ba11b887f4 files/kerberos-2.1.diff.bz2 402
