@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.30 2004/02/15 21:10:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.31 2004/02/15 21:40:34 eradicator Exp $
+
+*mpg123-0.59s-r2 (15 Feb 2004)
+
+  15 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  mpg123-0.59r-r2.ebuild, mpg123-0.59r-r3.ebuild, mpg123-0.59s-r1.ebuild,
+  mpg123-0.59s-r2.ebuild:
+  PROVIDE="virtual/mpg123" for bug #14940.
 
   15 Feb 2004; <solar@gentoo.org> mpg123-0.59r-r2.ebuild,
   mpg123-0.59r-r3.ebuild, files/mpg123-0.59s-heapfix.diff:
