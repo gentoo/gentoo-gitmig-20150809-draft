@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.221 2004/04/27 06:11:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.222 2004/04/27 12:27:39 lu_zero Exp $
+
+*gcc-3.3.3_pre20040426 (27 Apr 2004)
+
+  27 Apr 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/3.3.3/gcc333_pre20040426-gentoo-branding.patch,
+  +gcc-3.3.3_pre20040426.ebuild:
+  New snapshot
 
   27 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.4.0.ebuild:
   cleanup flag stuff and remove CHOST setting with hppa gcc-3.4.0.ebuild
