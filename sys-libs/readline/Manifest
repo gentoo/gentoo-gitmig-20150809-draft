@@ -1,10 +1,20 @@
-MD5 d9947115c3ce12d1c0dfcb46c2cba885 readline-4.3-r6.ebuild 3175
-MD5 42bcacc568976cb72f4f766166c1766a readline-5.0-r1.ebuild 2393
-MD5 bb966ebabac0505c197c8bcd388368c6 readline-4.3-r5.ebuild 2643
-MD5 9d323176e5e6eee11b61ca584c707711 ChangeLog 6378
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 53b106f22ca9161b272fb1baf38c1857 ChangeLog 6269
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
-MD5 9905e333ead392447a670e0f2374651a files/macos.patch 504
+MD5 bb966ebabac0505c197c8bcd388368c6 readline-4.3-r5.ebuild 2643
+MD5 d9947115c3ce12d1c0dfcb46c2cba885 readline-4.3-r6.ebuild 3175
+MD5 93e18a2ef4dd245d48bf041994a75e08 readline-5.0-r1.ebuild 2391
 MD5 cca21eb56279efff8356d028b1b39dd8 files/digest-readline-4.3-r5 348
 MD5 cca21eb56279efff8356d028b1b39dd8 files/digest-readline-4.3-r6 348
+MD5 9905e333ead392447a670e0f2374651a files/macos.patch 504
+MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
 MD5 e3ee94eed45baf4ca76736da56d72bad files/digest-readline-5.0-r1 350
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB5VkCroRuSHgZdywRAquaAJ4jmFBwNHHpIsRiK3dZqAxVTnlphgCfWYfQ
+ZILKGe9eFNyhfRpqicXvEwA=
+=MDvz
+-----END PGP SIGNATURE-----
