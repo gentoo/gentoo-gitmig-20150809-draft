@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/gkrellmpc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gkrellmpc/ChangeLog,v 1.1 2005/01/05 20:01:03 ticho Exp $
+
+*gkrellmpc-0.1_beta9 (05 Jan 2005)
+
+  05 Jan 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +gkrellmpc-0.1_beta9.ebuild:
+  Initial import, ebuild submitted by Mina Naguib <webmaster@topfx.com>.
+  Closes #74960.
+
