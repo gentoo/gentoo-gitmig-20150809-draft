@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Common
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.10 2004/10/23 03:34:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.11 2004/11/29 10:54:01 blubb Exp $
+
+  29 Nov 2004; Simon Stelling <blubb@gentoo.org>
+  PEAR-HTML_Common-1.2.1.ebuild:
+  added ~amd64
 
   22 Oct 2004; Jason Wever <weeve@gentoo.org> PEAR-HTML_Common-1.2.1.ebuild:
   Stable on sparc.
