@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100.ebuild,v 1.3 2004/12/19 13:53:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100.ebuild,v 1.4 2004/12/28 17:14:07 eradicator Exp $
 
 IUSE="ssl"
 
@@ -51,17 +51,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	/etc/init.d/usermin stop >& /dev/null
+	${ROOT}/etc/init.d/usermin stop >& /dev/null
 	stopstatus=$?
 
-	cd /usr/libexec/usermin
-	config_dir=/etc/usermin
-	var_dir=/var/log/usermin
-	perl=/usr/bin/perl
+	cd ${ROOT}/usr/libexec/usermin
+	config_dir=${ROOT}/etc/usermin
+	var_dir=${ROOT}/var/log/usermin
+	perl=${ROOT}/usr/bin/perl
 	autoos=1
 	port=20000
 	login=root
-	crypt=`grep "^root:" /etc/shadow | cut -f 2 -d :`
+	crypt=`grep "^root:" ${ROOT}/etc/shadow | cut -f 2 -d :`
 	host=`hostname`
 	use ssl && ssl=1 || ssl=0
 	atboot=0
@@ -71,20 +71,20 @@ pkg_postinst() {
 	nouninstall=1
 	noperlpath=1
 	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath
-	perl /usr/libexec/usermin/maketemp.pl
-	./setup.sh > /tmp/.webmin/usermin-setup.out 2>&1
+	perl ${ROOT}/usr/libexec/usermin/maketemp.pl
+	./setup.sh > ${ROOT}/tmp/.webmin/usermin-setup.out 2>&1
 
 	if [ "$stopstatus" = "0" ]; then
 		# Start if it was running before
-		/etc/init.d/usermin start
+		${ROOT}/etc/init.d/usermin start
 	fi
 
-	sed -i 's:^pidfile=.*$:pidfile=/var/run/usermin.pid:' /etc/usermin/miniserv.conf
+	sed -i 's:^pidfile=.*$:pidfile=${ROOT}/var/run/usermin.pid:' ${ROOT}/etc/usermin/miniserv.conf
 
 	einfo "Add usermin to your boot-time services with 'rc-update add usermin'."
 	einfo "Point your web browser to http://localhost:20000 to use usermin."
 }
 
 pkg_prerm() {
-	/etc/init.d/usermin stop >& /dev/null
+	${ROOT}/etc/init.d/usermin stop >& /dev/null
 }

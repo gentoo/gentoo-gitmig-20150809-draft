@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r1.ebuild,v 1.3 2004/12/19 07:20:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r1.ebuild,v 1.4 2004/12/28 17:12:32 eradicator Exp $
 
 IUSE="ssl apache2 webmin-minimal"
 
@@ -85,16 +85,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	/etc/init.d/webmin stop >/dev/null 2>&1
+	${ROOT}/etc/init.d/webmin stop >/dev/null 2>&1
 	stopstatus=$?
-	cd /usr/libexec/webmin
-	config_dir=/etc/webmin
-	var_dir=/var/log/webmin
-	perl=/usr/bin/perl
+	cd ${ROOT}/usr/libexec/webmin
+	config_dir=${ROOT}/etc/webmin
+	var_dir=${ROOT}/var/log/webmin
+	perl=${ROOT}/usr/bin/perl
 	autoos=1
 	port=10000
 	login=root
-	crypt=`grep "^root:" /etc/shadow | cut -f 2 -d :`
+	crypt=`grep "^root:" ${ROOT}/etc/shadow | cut -f 2 -d :`
 	host=`hostname`
 	use ssl && ssl=1 || ssl=0
 	atboot=0
@@ -104,20 +104,20 @@ pkg_postinst() {
 	nouninstall=1
 	noperlpath=1
 	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath
-	perl /usr/libexec/webmin/maketemp.pl
-	./setup.sh >/tmp/.webmin/webmin-setup.out 2>&1
+	perl ${ROOT}/usr/libexec/webmin/maketemp.pl
+	./setup.sh > ${ROOT}/tmp/.webmin/webmin-setup.out 2>&1
 
 	if [ "$stopstatus" = "0" ]; then
 		# Start if it was running before
-		/etc/init.d/webmin start
+		${ROOT}/etc/init.d/webmin start
 	fi
 
-	sed -i 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' /etc/webmin/miniserv.conf
+	sed -i 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' ${ROOT}/etc/webmin/miniserv.conf
 
 	einfo "Add webmin to your boot-time services with 'rc-update add webmin'."
 	einfo "Point your web browser to http://localhost:10000 to use webmin."
 }
 
 pkg_prerm() {
-	/etc/init.d/webmin stop >& /dev/null
+	${ROOT}/etc/init.d/webmin stop >& /dev/null
 }
