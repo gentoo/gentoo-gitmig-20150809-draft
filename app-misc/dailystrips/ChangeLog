@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/dailystrips
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.2 2002/06/05 05:42:22 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.3 2002/10/13 16:29:03 sunflare Exp $
 
-*dailystrips-1.0.24-r1 <05 June 2002>
+*dailystrips-1.0.25 <13 Oct 2002>
+  13 Oct 2002; Phil Bordelon <sunflare@gentoo.org> dailystrips-1.0.25.ebuild:
+  Version bump.  Bump submitted by Daniel Sabo <danielsabo@myrealbox.com>; see
+  Bug #7189.
+
+*dailystrips-1.0.24-r1 <05 Jun 2002>
 
   05 June 2002; Nicholas Jones <carpaski@gentoo.org>
 	
