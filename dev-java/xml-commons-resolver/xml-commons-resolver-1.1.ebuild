@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.9 2005/03/13 19:22:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.10 2005/03/16 18:34:20 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -26,7 +26,6 @@ src_unpack() {
 src_compile() {
 	local antflags="jar"
 	use doc && antflags="${antflags} docs"
-	use source && antflags="${antflags} sourcezip"
 	ant ${antflags} || die "ant build failed"
 }
 
@@ -37,8 +36,6 @@ src_install() {
 	use doc && java-pkg_dohtml -r docs/*
 
 	if use source; then
-		dodir /usr/share/doc/${PF}/source/
-		cp dist/${PN}-src.zip ${D}/usr/share/doc/${PF}/source/
+		java-pkg_dosrc ${S}/src/*
 	fi
-
 }
