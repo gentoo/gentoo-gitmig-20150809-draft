@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.1.ebuild,v 1.4 2004/05/16 22:07:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.1.ebuild,v 1.5 2004/05/21 13:10:09 kugelfang Exp $
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.3"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 IUSE="debug"
 
 DEPEND="virtual/glibc"
@@ -18,10 +18,14 @@ src_compile() {
 	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
-
-	econf ${myconf} || die
-	aclocal
+	# added libtoolize, add "-I scripts" to aclocal, autoconf before econf
+	# all these changes are necessary on amd64
+	# Danny van Dyk (kugelfang@gentoo.org)
+	libtoolize -c -f --automake
+	aclocal -I scripts
 	automake --gnu --add-missing
+	autoconf
+	econf ${myconf} || die
 	emake || die "emake failure"
 }
 
