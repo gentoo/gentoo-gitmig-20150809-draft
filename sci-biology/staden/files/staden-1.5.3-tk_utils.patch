@@ -1,0 +1,19 @@
+--- src/tk_utils/Makefile.old	2004-11-09 04:53:26.000000000 -0500
++++ src/tk_utils/Makefile	2005-01-08 22:47:41.659544072 -0500
+@@ -105,16 +105,6 @@
+ 
+ .PRECIOUS:	.links
+ .links:
+-	ln -s ../licence/boxes.h .
+-	ln -s ../licence/licence.h .
+-	ln -s ../licence/check_licence.c .
+-	ln -s ../licence/licence_utils.c .
+-	ln -s ../licence/licence_utils.h .
+-	ln -s ../licence/md52.c .
+-	ln -s ../licence/md52.h .
+-	ln -s ../licence/valid_seq.c .
+-	ln -s ../tcl8.4.6/unix/tclAppInit.c .
+-	ln -s ../tk8.4.6/winMain.c .
+ 	touch .links
+ 	$(MAKE) $(MFLAGS)
+ 

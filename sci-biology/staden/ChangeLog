@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/staden
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.6 2005/01/09 11:39:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.7 2005/01/15 02:37:04 ribosome Exp $
+
+*staden-1.5.3 (14 Jan 2005)
+
+  14 Jan 2005; Olivier Fisette <ribosome@gentoo.org>
+  +files/staden-1.5.3-getopt.patch, +files/staden-1.5.3-text_utils.patch,
+  +files/staden-1.5.3-tk_utils.patch, +files/staden-1.5.3-top.patch,
+  +staden-1.5.3.ebuild:
+  New version.
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> staden-1.4.1-r7.ebuild:
   Added missing parentheses in SRC_URI/*DEPEND/LICENSE.

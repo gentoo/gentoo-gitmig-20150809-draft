@@ -1,24 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 900e6d2666d723e0354fc7c334cdc9e4 staden-1.5.3.ebuild 9903
 MD5 fe19fbd7368ca77e37fab8ee461dddda staden-1.4.1-r7.ebuild 9894
-MD5 84a0707094ea555a0375ea854b7e326b ChangeLog 3264
+MD5 47b7572195599c28701e1ad577f035a8 ChangeLog 3529
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+MD5 6ce4d77a48d0377a1ada09f1990fb2af files/staden-1.5.3-text_utils.patch 478
 MD5 e908bf4692dd3494ec22f07db2e7a9f5 files/staden-1.4.1-env 225
 MD5 3699a9d368068d835cbd8568d50d23e5 files/staden-1.4.1-gap4.patch 463
 MD5 ccf3b22c1399cd7f80f3f6f1caec2cda files/staden-1.4.1-tracediff.patch 334
 MD5 1026629ee4b47aea8043dd7f35eb2ffe files/staden-1.4.1-staden_help.new 159
 MD5 bd82265e893628c1b46329d77e1f11d8 files/staden-1.4.1-iwidgetsrc.new 445
 MD5 8650f58c55b83838846447c89543255d files/staden-1.4.1-getopt.patch 375
+MD5 0857e0bf79953bfa46b1224f6218701a files/staden-1.5.3-top.patch 230
 MD5 7717f77ecd800d0b3049974db3fcd0a9 files/staden-1.4.1-prefinish.patch 362
+MD5 daf40c222b80ffc48d9a2ac2544ab631 files/staden-1.5.3-getopt.patch 367
 MD5 a8ceefd2b3b2c1c0053a504561635379 files/staden-1.4.1-mutscan.patch 328
 MD5 cd40ea0a473054769a0963e708257f98 files/digest-staden-1.4.1-r7 213
 MD5 708ea4c4b4cbc7e2b6b88b5a09e1b564 files/staden-1.4.1-top.patch 230
+MD5 1ead6fa1e26351872c3404ab9da21416 files/staden-1.5.3-tk_utils.patch 547
+MD5 e3ce8053514641a26df3ca33f2962e55 files/digest-staden-1.5.3 338
 MD5 ea4a62a1cd5070014d2c9352eeecf06a files/staden-1.4.1-tk_utils.patch 368
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB4RfnI1lqEGTUzyQRAt91AJ4ixMNhfdKXPKTUQB9tuca2+aoMfACeI213
-8dbPMEJvBypWr3qct4kHe5w=
-=Skmm
------END PGP SIGNATURE-----
