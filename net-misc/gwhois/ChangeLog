@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/gwhois
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.1 2005/01/16 00:46:43 wschlich Exp $
+
+*gwhois-20050115 (16 Jan 2005)
+
+  16 Jan 2005; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +files/gwhois.xinetd, +gwhois-20050115.ebuild:
+  initial import
+
