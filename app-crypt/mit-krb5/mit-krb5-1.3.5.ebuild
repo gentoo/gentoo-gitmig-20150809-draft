@@ -1,34 +1,39 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.15 2004/09/14 10:26:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.5.ebuild,v 1.1 2004/09/14 10:26:48 aliz Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 MY_P=${PN/mit-}-${PV}
-S=${WORKDIR}/${MY_P/_/-}/src
+S=${WORKDIR}/${MY_P}/src
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
-SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${MY_P/_/-}.tar.gz"
+SRC_URI="http://web.mit.edu/kerberos/dist/krb5/1.3/${MY_P}.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc ppc alpha hppa ia64 amd64 mips s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="krb4 static"
+RESTRICT="nomirror"
 
 DEPEND="virtual/libc
-	sys-devel/autoconf"
-RDEPEND="virtual/libc"
+	sys-devel/autoconf
+	!virtual/krb5"
+RDEPEND="virtual/libc
+	!virtual/krb5"
 PROVIDE="virtual/krb5"
 
 src_unpack() {
 	unpack ${A}
+	tar -zxf ${MY_P}.tar.gz
 	cd ${S}
+
 	epatch ${FILESDIR}/${P}-res_search.patch.bz2
+	epatch ${FILESDIR}/${P}-autoheader.patch.bz2
+	epatch ${FILESDIR}/${P}-suid_fix.patch.bz2
 }
 
 src_compile() {
-	gnuconfig_update
-
 	ebegin "Updating configure"
 		autoconf
 		cd ${S}/util/et

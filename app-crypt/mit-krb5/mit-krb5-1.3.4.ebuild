@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.4.ebuild,v 1.7 2004/09/05 20:24:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.4.ebuild,v 1.8 2004/09/14 10:26:48 aliz Exp $
 
 inherit eutils
 
@@ -30,8 +30,8 @@ src_unpack() {
 	epatch ${FILESDIR}/2004-002-patch_${PV}.txt
 	epatch ${FILESDIR}/2004-003-patch_${PV}.txt
 
-	epatch ${FILESDIR}/${P}-res_search.patch
-	epatch ${FILESDIR}/${P}-autoheader.patch
+	epatch ${FILESDIR}/${P}-res_search.patch.bz2
+	epatch ${FILESDIR}/${P}-autoheader.patch.bz2
 }
 
 src_compile() {
