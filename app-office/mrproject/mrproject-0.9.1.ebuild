@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.9.1.ebuild,v 1.5 2003/08/09 11:19:09 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.9.1.ebuild,v 1.6 2003/08/21 01:39:44 agriffis Exp $
 
 
 inherit gnome2
@@ -10,7 +10,7 @@ HOMEPAGE="http://mrproject.codefactory.se/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.5

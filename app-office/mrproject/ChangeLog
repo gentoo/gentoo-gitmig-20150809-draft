@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mrproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.18 2003/08/09 11:19:09 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.19 2003/08/21 01:39:44 agriffis Exp $
+
+  20 Aug 2003; Aron Griffis <agriffis@gentoo.org> mrproject-0.9.1.ebuild:
+  Add ~alpha to KEYWORDS
 
   09 Aug 2003; <spider@gentoo.org> mrproject-0.9.1.ebuild:
   Tweaked the dep for libmrproject
