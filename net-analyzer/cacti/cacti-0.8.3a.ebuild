@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.7 2003/12/15 20:19:30 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.8 2004/02/24 07:48:52 mr_bones_ Exp $
 
 inherit eutils webapp-apache
 
@@ -21,9 +21,8 @@ RDEPEND="net-www/apache
 	dev-php/php
 	dev-php/mod_php"
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
