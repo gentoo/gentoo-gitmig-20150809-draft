@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.3 2002/10/18 21:15:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.4 2002/10/19 06:05:37 seemant Exp $
+
+*joe-2.9.8_pre1 (18 Oct 2002)
+
+  18 Oct 2002; Seemant Kulleen <seemant@gentoo.org> joe-2.9.8_pre1.ebuild
+  files/digest-joe-2.9.8_pre1 :
+
+  Version bump, as it works better in rxvt terminal types. Thanks to:
+  whit@transpect.com (Whit Blauvelt) in bug #9295 for informing us.
 
 *joe-2.9.5 (1 Feb 2002)
 
