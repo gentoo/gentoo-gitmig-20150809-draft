@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.6 2004/02/03 21:39:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.7 2004/02/04 00:26:22 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/quake/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 IUSE="debug 3dfx fbcon opengl sdl svga X ncurses oggvorbis zlib ipv6 xv dga xmms alsa oss"
 RESTRICT="nouserpriv"
 
