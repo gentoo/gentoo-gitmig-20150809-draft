@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnome-media/gnome-media-1.2.0-r1.ebuild,v 1.1 2000/11/25 13:01:56 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnome-media/gnome-media-1.2.0-r1.ebuild,v 1.2 2000/12/11 06:29:38 drobbins Exp $
 
 P=gnome-media-1.2.0
 A=${P}.tar.gz
@@ -10,8 +10,7 @@ DESCRIPTION="gnome-media"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-media/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-libs-1.2.4
-	>=gnome-base/libghttp-1.0.7"
+DEPEND=">=gnome-base/gnome-1.2.4"
 
 src_compile() {                           
   cd ${S}

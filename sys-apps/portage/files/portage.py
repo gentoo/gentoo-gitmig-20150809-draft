@@ -76,7 +76,7 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 
 def gen_archnames():
 	"generate archive names from URL list"
-	myurls=os.environ["SRC_URI"]
+	myurls=getenv("SRC_URI")
 	a=string.split(myurls)
 	returnme=""
 	for x in a:
