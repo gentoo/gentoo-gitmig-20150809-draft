@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.6 2003/03/09 01:49:33 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.7 2003/03/09 02:48:03 jje Exp $
+
+*jack-cvs-0.6 (09 Mar 2003)
+
+  09 Mar 2003; jje <jje@gentoo.org> jack-cvs-0.6.ebuild:
+  Version bump.
 
 *jack-cvs-0.44 (02 Jan 2003)
 
