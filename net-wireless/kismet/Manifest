@@ -1,5 +1,5 @@
-MD5 af69f82ac9e9fc54665a764c5e8800f0 kismet-2004.10.1-r1.ebuild 2261
-MD5 b1edd3d0f274be488842db5ccb5f9bec ChangeLog 7824
+MD5 0ed37efc2442b25f6de3a3ee7a4510e6 kismet-2004.10.1-r1.ebuild 2260
+MD5 c36bbecc61d079097b0f9fae974b7172 ChangeLog 8066
 MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
 MD5 ac3f64df09253e57accaee015fdd60bb files/kismet-2004.10.1-conf.d 805
 MD5 0d620d9840f740fd0914006eaf1a636d files/kismet-2004.10.1-init.d 1131
