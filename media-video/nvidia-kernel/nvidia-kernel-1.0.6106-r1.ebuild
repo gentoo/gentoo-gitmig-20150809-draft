@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6106-r1.ebuild,v 1.1 2004/07/26 13:15:27 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6106-r1.ebuild,v 1.2 2004/08/02 10:53:55 cyfred Exp $
 
 inherit eutils kmod
 
@@ -10,7 +10,7 @@ NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${NV_V}"
 
-DESCRIPTION="Linux kernel module for then NVIDIA X11 driver"
+DESCRIPTION="Linux kernel module for the NVIDIA X11 driver"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? (ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-${X86_PKG_V}.run)
 	amd64? (http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run)"
