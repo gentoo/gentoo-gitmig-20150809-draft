@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.37.0.ebuild,v 1.4 2004/02/05 10:06:37 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.37.0.ebuild,v 1.5 2004/02/05 10:19:11 pauldv Exp $
 
 inherit elisp-common libtool
 
@@ -37,7 +37,10 @@ RDEPEND="python? ( >=dev-lang/python-2.0 )
 	berkdb? ( =sys-libs/db-4* )"
 
 DEPEND="${RDEPEND}
-	!=sys-devel/autoconf-2.58*"
+	|| (
+		=sys-devel/autoconf-2.57*
+		>=sys-devel/autoconf-2.59
+	)"
 
 pkg_setup() {
 	if has_version '<dev-util/subversion-0.34.0' && [ "${SVN_DUMPED}" == "" ]; then
