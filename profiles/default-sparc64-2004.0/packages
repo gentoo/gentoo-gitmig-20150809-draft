@@ -131,5 +131,5 @@
 *sys-libs/slang
 *sys-libs/zlib
 *net-misc/openssh
-*sys-fs/devfsd
+*virtual/dev-manager
 *sys-devel/sparc32

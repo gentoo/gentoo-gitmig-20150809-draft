@@ -99,4 +99,4 @@ virtual/os-headers
 *sys-libs/readline  
 *sys-libs/zlib
 *virtual/ssh
-*sys-fs/devfsd
+*virtual/dev-manager

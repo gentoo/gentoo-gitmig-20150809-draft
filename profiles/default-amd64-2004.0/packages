@@ -66,5 +66,5 @@
 *sys-libs/readline  
 *sys-libs/zlib
 *net-misc/openssh
-*sys-fs/devfsd
+*virtual/dev-manager
 *sys-apps/linux32
