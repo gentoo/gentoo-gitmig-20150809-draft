@@ -1,0 +1,11 @@
+--- cyrus-sasl-1.5.24/aclocal.m4.fred	Wed Jun 13 10:00:31 2001
++++ cyrus-sasl-1.5.24/aclocal.m4	Wed Jun 13 10:02:06 2001
+@@ -204,7 +204,7 @@
+     LDFLAGS="-R /usr/lib"
+     AC_TRY_LINK([],[],[andrew_runpath_switch="-R"], [
+   	LDFLAGS="-Wl,-rpath,/usr/lib"
+-    AC_TRY_LINK([],[],[andrew_runpath_switch="-Wl,-rpath,"],
++    AC_TRY_LINK([],[],[andrew_runpath_switch="none"],
+     [andrew_runpath_switch="none"])
+     ])
+   LDFLAGS="${SAVE_LDFLAGS}"

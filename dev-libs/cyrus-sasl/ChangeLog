@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/cyrus-sasl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.1 2002/02/19 00:36:20 woodchip Exp $
+
+*cyrus-sasl-1.5.27 (18 Feb 2002)
+
+  18 Feb 2002; Donny Davies <woodchip@gentoo.org>:
+  
+  Initial checkin of this package.  Postfix now compiles with this
+  library by default, and I have tested successfully with *outbound*
+  smtp authentication.  Should you discover a bug, or any issues with
+  *inbound* authentication, lemme know.

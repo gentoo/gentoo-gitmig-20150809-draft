@@ -1,0 +1,20 @@
+# Config file for /etc/init.d/saslauthd
+
+# Authentications mechanism (for list see saslauthd -v)
+SASL_AUTHMECH=pam
+
+# Hostname for remote IMAP server (if rimap auth mech is used)
+SASL_RIMAP_HOSTNAME=""
+
+# Honour time-of-day login restrictions (if shadow auth mech is used)
+# Make this ="" to turn it off.  Putting =no will turn it on!
+SASL_TIME_OF_DAY_LOGIN_RESTRICTIONS=yes
+
+
+# Tack the above options together
+[ -n ${SASL_AUTHMECH} ] && \
+	SASLAUTHD_OPTS="-a ${SASL_AUTHMECH}"
+[ -n ${SASL_RIMAP_HOSTNAME} ] && \
+	SASLAUTHD_OPTS="${SASLAUTHD_OPTS} -H ${SASL_RIMAP_HOSTNAME}"
+[ -n ${SASL_TIME_OF_DAY_LOGIN_RESTRICTIONS} ] && \
+	SASLAUTHD_OPTS="${SASLAUTHD_OPTS} -T"
