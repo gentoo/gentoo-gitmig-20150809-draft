@@ -1,6 +1,9 @@
 # ChangeLog for media-video/quickrip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.14 2004/08/20 21:13:00 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.15 2004/12/29 01:17:41 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> quickrip-0.7.ebuild,
   quickrip-0.8.ebuild:
@@ -20,7 +23,7 @@
   11 May 2004; Patrick Kursawe <phosphan@gentoo.org> quickrip-0.6.ebuild:
   Adjusted HOMEPAGE for latest stable
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> quickrip-0.4.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> quickrip-0.4.ebuild,
   quickrip-0.5.ebuild, quickrip-0.6.ebuild, quickrip-0.7.ebuild:
   Add missing IUSE.
 

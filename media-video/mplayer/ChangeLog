@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.247 2004/12/27 14:23:31 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.248 2004/12/29 01:17:02 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre6.ebuild:
   Fixed dts -> libdts configure option as per bug #75762.
@@ -134,7 +137,7 @@
   19 Oct 2004; Chris White <chriswhite@gentoo.org> :
   Did filter flags on a few problematic flags as per Bug #67903.
 
-  17 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  17 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   mplayer-1.0_pre5-r3.ebuild:
   alpha happiness, bug 66571.
 
@@ -268,7 +271,7 @@
   31 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r2.ebuild:
   Took pre5-r2 down to unstable.  See Bug #55456 for more information.
 
-  30 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   mplayer-1.0_pre4-r7.ebuild:
   Stable on alpha, see bug #55456.
 
@@ -399,7 +402,7 @@
   Fixed mplayer pre4-r5 compiling issues with undefined str* references and
   re-stabilized for gui vuln bug for amd64. Added fullscreen patch as well.
 
-  16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mplayer-1.0_pre5.ebuild:
+  16 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mplayer-1.0_pre5.ebuild:
   Stable on alpha, see bug #55456.
 
 *mplayer-1.0_pre4-r5 (18 Jul 2004)
@@ -556,7 +559,7 @@
   02 May 2004; Jason Wever <weeve@gentoo.org> mplayer-1.0_pre4-r1.ebuild:
   Changed -sparc keyword back to ~sparc.
 
-  30 Apr 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   mplayer-1.0_pre4-r1.ebuild:
   Stable on alpha.
 
