@@ -3,7 +3,7 @@ MD5 d54031e8b16d6088e49399e3fb1c9bb0 alsa-patch-bay-0.5.1-r1.ebuild 1292
 MD5 c9b9ba0510373130c44d8d3b9de81235 alsa-patch-bay-0.5.2.ebuild 1288
 MD5 70b4c105f6eaa621f1969751b868d86e alsa-patch-bay-1.0.0.ebuild 1288
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
-MD5 61ef475bcdca6656cbfa2e78c45d94e9 alsa-patch-bay-1.0.0-r1.ebuild 1403
+MD5 a94bcee9c81c983b8debdb0984ae56dc alsa-patch-bay-1.0.0-r1.ebuild 1399
 MD5 bfec7a0de573dbb491c54db40d35c72a files/digest-alsa-patch-bay-0.5.1-r1 72
 MD5 11f03dd459155cae2e7d8d0ed0ba44cf files/digest-alsa-patch-bay-0.5.2 72
 MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0 72
