@@ -3,6 +3,7 @@ MD5 386feaadb9e0172652bce0ae1a7175b1 mixxx-0.9.1.ebuild 696
 MD5 64148867aba96ceec7794c18b59f2fba mixxx-0.9.2.ebuild 719
 MD5 eaf44f848b1abdc69bef2e4f71f8bb13 mixxx-1.1.ebuild 941
 MD5 bf3d70dba6c55e31ce57e8786616b4f5 mixxx-1.0.ebuild 925
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 fe687b7ed7c86c8b9274ecfef35bb107 files/digest-mixxx-1.1 62
 MD5 7070a236d2f7c217c751a35c5a234065 files/digest-mixxx-0.9.1 63
 MD5 940b03d92d814ef3ab091d118fe837d6 files/digest-mixxx-0.9.2 63
