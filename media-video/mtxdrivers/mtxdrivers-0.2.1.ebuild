@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
 # Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.6 2003/04/20 02:32:13 darkspecter Exp $                     
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.7 2003/04/20 02:43:20 darkspecter Exp $                     
 
 RELEASE=2002
 SRC_URI="ftp://ftp.matrox.com/pub/mga/archive/linux/${RELEASE}/${P/-/_}.tgz"
@@ -10,7 +10,6 @@ HOMEPAGE="http://www.matrox.com/mga/products/parhelia/home.cfm"
 DEPEND=">=x11-base/xfree-4.1.0
 	virtual/kernel"
 
-IUSE="rmaphack"
 SLOT="0"
 LICENSE="Matrox"
 KEYWORDS="x86"
@@ -26,7 +25,7 @@ src_compile() {
 	cd ${S}
 
 	# hack to make mtx.o compile with rmap enabled kernels
-	if use rmaphack; then
+	if [ ${RMAPHACK} = "yes" ]; then
 		cp kernel/src/mtx_vm.c kernel/src/mtx_vm.c.orig
 		sed -e "s:pte_offset:pte_offset_kernel:g" kernel/src/mtx_vm.c.orig > kernel/src/mtx_vm.c
 	fi
@@ -71,6 +70,6 @@ pkg_postinst() {
 	echo
 	einfo "In case you have a kernel with rmap VM the mtx.o"
 	einfo "module needs a little hack to work. Remerge this"
-	einfo "ebuild liek this:"
-	einfo "USE=\"rmaphack\" emerge mtxdrivers"
+	einfo "ebuild like this:"
+	einfo "RMAPHACK=\"yes\" emerge mtxdrivers"
 }
