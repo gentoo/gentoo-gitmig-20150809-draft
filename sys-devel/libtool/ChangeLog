@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.40 2004/03/31 01:42:50 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.41 2004/04/09 05:09:07 lv Exp $
+
+  09 Apr 2004; Travis Tilley <lv@gentoo.org> libtool-1.5.2-r5.ebuild:
+  stable on amd64
 
   30 Mar 2004; Todd Sunderlin <todd@gentoo.org> libtool-1.5.2-r5.ebuild:
   set stable on sparc
