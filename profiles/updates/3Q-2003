@@ -508,3 +508,4 @@ move dev-libs/progsreiserfs sys-fs/progsreiserfs
 move x11-libs/gtkglextmm dev-cpp/gtkglextmm
 move sys-apps/nictools-pci sys-apps/nictools
 move app-emacs/migemo app-text/migemo
+move media-video/dvb-mpegtools media-video/libdvb
