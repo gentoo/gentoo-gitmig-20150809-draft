@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1-r1.ebuild,v 1.1 2004/03/08 04:17:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1-r1.ebuild,v 1.2 2004/03/09 00:32:41 robbat2 Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,7 @@ PDEPEND="dev-tcltk/iwidgets"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	# fix an undefined const glitch for Tcl8.3
 	sed -i '1004h;1004d;1006G' ${S}/itcl/generic/itcl_class.c
 }
