@@ -1,15 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d8c7c9672bd9a51dd44f0a45659cb45c ChangeLog 8751
+MD5 0893e11f99229cc9dc06ecc7e4230634 ChangeLog 8888
 MD5 783162523dd92f0cf8f28fd35e43c7a9 autoconf-2.57-r1.ebuild 3195
 MD5 2d1737f84f7850beca2ebec100547cb1 autoconf-2.57a-r1.ebuild 3350
-MD5 fc0263a13002802a60fa6f21253d55c8 autoconf-2.58.ebuild 3459
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b60a0afb07111a2baa39f64c2a8a7bfd autoconf-2.59-r3.ebuild 3455
 MD5 08d9c9b51271a8545700a8d5cda4f53d autoconf-2.58-r1.ebuild 3461
+MD5 fc0263a13002802a60fa6f21253d55c8 autoconf-2.58.ebuild 3459
+MD5 6d9160afdf1af58dde216ef7a12ec3dd autoconf-2.59-r3.ebuild 3455
 MD5 e189b7fb5191eeedbcbe64f8f80422d8 autoconf-2.59-r4.ebuild 3446
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1afb97b888b8302d8083fc7a794b0e39 files/ac-wrapper-2.pl 2527
+MD5 6a3f9163d26cfd51653d90bebda1cb5d files/ac-wrapper-3.pl 2769
+MD5 c07cd3cad0342c7c9ccafdb4f0ae8b03 files/ac-wrapper-4.pl 2785
 MD5 28795f22763ef0683a8a1e72e8dd4646 files/ac-wrapper.pl 2133
 MD5 12f8fb67eaf50f87ed7825356503e8d7 files/autoconf-2.13-configure-gentoo.diff 958
 MD5 f935499520b964a1fcfc23b68d8c8558 files/autoconf-2.13-configure.in-gentoo.diff 443
@@ -21,15 +20,6 @@ MD5 372cd1fdd18a95f5a6af7cb36bfd12de files/autoconf-2.58-infopage-namechange.pat
 MD5 cff703b5ddfcb647f18aeed0111b8138 files/digest-autoconf-2.57-r1 131
 MD5 f2802f3155defa9299baf6e5d0d79571 files/digest-autoconf-2.57a-r1 132
 MD5 d7f6caec3dfd602a77238546246b91b7 files/digest-autoconf-2.58 131
-MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59-r3 131
-MD5 6a3f9163d26cfd51653d90bebda1cb5d files/ac-wrapper-3.pl 2769
 MD5 d7f6caec3dfd602a77238546246b91b7 files/digest-autoconf-2.58-r1 131
-MD5 c07cd3cad0342c7c9ccafdb4f0ae8b03 files/ac-wrapper-4.pl 2785
+MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59-r3 131
 MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59-r4 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBGuKtHTu7gpaalycRAp9YAJ4r0nVxDKZTpVqHhe0JFM3iQrx14ACgzz0b
-OuQzdDpQ0JWdxIeppaQCcc0=
-=OxJp
------END PGP SIGNATURE-----
