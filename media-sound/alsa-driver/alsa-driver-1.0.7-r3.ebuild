@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r3.ebuild,v 1.4 2004/12/05 12:44:55 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r3.ebuild,v 1.5 2004/12/08 09:54:15 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -17,15 +17,33 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/modutils
-		~media-sound/alsa-headers-${PV}"
+	 ~media-sound/alsa-headers-${PV}"
 
 DEPEND="${RDEPEND}
-		sys-devel/patch
-		virtual/linux-sources
-		>=sys-devel/autoconf-2.50
-		sys-apps/debianutils"
+	sys-devel/patch
+	virtual/linux-sources
+	>=sys-devel/autoconf-2.50
+	sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
+
+pkg_setup() {
+	CONFIG_CHECK="SOUND !SND !SOUND_PRIME"
+	SND_ERROR="ALSA is already compiled into the kernel."
+	SOUND_ERROR="Your kernel doesn't have sound support enabled."
+	SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.  Please disable them and re-emerge alsa-driver."
+
+	linux-mod_pkg_setup
+
+	# By default, drivers for all supported cards will be compiled.
+	# If you want to only compile for specific card(s), set ALSA_CARDS
+	# environment to a space-separated list of drivers that you want to build.
+	# For example:
+	#
+	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
+	#
+	[ -z "${ALSA_CARDS}" ] && ALSA_CARDS=all
+}
 
 src_unpack() {
 	unpack ${A}
@@ -105,23 +123,6 @@ src_install() {
 		docinto Documentation
 		dodoc sound/Documentation/*
 	fi
-}
-
-pkg_setup() {
-	CONFIG_CHECK="SOUND !SND"
-	SND_ERROR="ALSA is already compiled into the kernel."
-	SOUND_ERROR="Your kernel doesn't have sound support enabled."
-
-	linux-mod_pkg_setup
-
-	# By default, drivers for all supported cards will be compiled.
-	# If you want to only compile for specific card(s), set ALSA_CARDS
-	# environment to a space-separated list of drivers that you want to build.
-	# For example:
-	#
-	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
-	#
-	[ -z "${ALSA_CARDS}" ] && ALSA_CARDS=all
 }
 
 pkg_postinst() {
