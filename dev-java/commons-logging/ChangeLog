@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.18 2004/07/19 10:06:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.19 2004/07/30 18:43:29 axxo Exp $
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org>
+  commons-logging-1.0.3-r1.ebuild, commons-logging-1.0.4.ebuild:
+  move dev-java/avalon-logkit dev-java/avalon-logkit-bin
 
   19 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   commons-logging-1.0.3-r1.ebuild, commons-logging-1.0.4.ebuild:

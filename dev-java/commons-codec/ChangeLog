@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-codec
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.5 2004/06/27 16:57:18 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.6 2004/07/30 18:45:40 axxo Exp $
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> commons-codec-1.2.ebuild:
+  move dev-java/avalon-logkit dev-java/avalon-logkit-bin
 
   27 Jun 2004; Chris Aniszczyk <zx@gentoo.org> commons-codec-1.2.ebuild:
   Marking stable on x86 and ppc
