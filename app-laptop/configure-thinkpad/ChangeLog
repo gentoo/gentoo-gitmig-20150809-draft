@@ -1,0 +1,17 @@
+# ChangeLog for sys-apps/configure-thinkpad
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/ChangeLog,v 1.1 2004/03/08 04:48:09 latexer Exp $
+
+*configure-thinkpad-0.1-r3 (07 Mar 2004)
+
+  07 Mar 2004; Peter Johanson <latexer@gentoo.org>
+  configure-thinkpad-0.1-r3.ebuild, metadata.xml:
+  Moved to app-laptop
+
+*configure-thinkpad-0.1-r3 (26 Feb 2004)
+
+  26 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  configure-thinkpad-0.1-r3.ebuild:
+  Initial import. Credits to Andrea Cerrito <cerrito@centromultimediale.it> and
+  António Meireles <datashark@gentoo.org> (dev in zombie mode) in bug 34495.
+
