@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.56 2004/12/27 14:11:20 lu_zero Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.57 2005/01/08 08:26:11 lu_zero Exp $
+
+  08 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/8.08-kernel-2.6.10.patch:
+  Adding the official patch
 
   27 Dec 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.14.6.ebuild:
   Marked x86

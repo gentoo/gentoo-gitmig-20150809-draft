@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.15 2004/07/26 20:34:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.16 2005/01/08 08:26:11 lu_zero Exp $
 
 IUSE="qt"
 

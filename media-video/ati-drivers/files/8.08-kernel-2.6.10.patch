@@ -1,0 +1,163 @@
+--- agpgart_be.c 2005-01-06 9:05:02.000000000 +0100
++++ agpgart_be.c 2005-01-06 9:19:16.000000000 +0100
+
+@@ -255,6 +255,12 @@
+ }
+ #endif
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10) 
++#define firegl_pci_find_class(class,from) pci_get_class(class,from)
++#else
++#define firegl_pci_find_class(class,from) pci_find_class(class,from)
++#endif
++
+ int agp_backend_acquire(void)
+ {
+ 	if (agp_bridge.type == NOT_SUPPORTED) {
+@@ -718,7 +724,7 @@
+ 	 *        AGP devices and collect their data.
+ 	 */
+ 
+-	while ((device = pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
++	while ((device = firegl_pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
+ 					device)) != NULL) {
+ 		pci_read_config_dword(device, 0x04, &scratch);
+ 
+@@ -794,6 +800,13 @@
+ 				command &= ~0x00000001;
+ 		}
+ 	}
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10) 
++            // the reference count has been increased in agp_backend_initialize.
++        if (device)
++            pci_dev_put(device); 
++#endif
++
+ 	/*
+ 	 * PASS2: Figure out the 4X/2X/1X setting and enable the
+ 	 *        target (our motherboard chipset).
+@@ -839,8 +852,9 @@
+ 	 *        command registers.
+ 	 */
+ 
+-	while ((device = pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
++	while ((device = firegl_pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
+ 					device)) != NULL) {
++
+ 		pci_read_config_dword(device, 0x04, &scratch);
+ 
+ 		if (!(scratch & 0x00100000))
+@@ -871,6 +885,12 @@
+         }
+ 	}
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10) 
++            // the reference count has been increased in agp_backend_initialize.
++        if (device)
++            pci_dev_put(device); 
++#endif
++
+     return 0; /* success */
+ }
+ 
+@@ -5119,8 +5139,9 @@
+ 	 *        AGP devices and collect their data.
+ 	 */
+ 
+-	while ((device = pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
++	while ((device = firegl_pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
+ 					device)) != NULL) {
++
+ 		pci_read_config_dword(device, 0x04, &scratch);
+ 
+ 		if (!(scratch & 0x00100000))
+@@ -5187,6 +5208,13 @@
+ 				command &= ~0x00000001;
+ 		}
+ 	}
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10) 
++            // the reference count has been increased in agp_backend_initialize.
++        if (device)
++            pci_dev_put(device); 
++#endif
++
+ 	/*
+ 	 * PASS2: Figure out the 4X/2X/1X setting and enable the
+ 	 *        target (our motherboard chipset).
+@@ -5217,8 +5245,9 @@
+ 	 *        command registers.
+ 	 */
+ 
+-	while ((device = pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
++	while ((device = firegl_pci_find_class(PCI_CLASS_DISPLAY_VGA << 8,
+ 					device)) != NULL) {
++
+ 		pci_read_config_dword(device, 0x04, &scratch);
+ 
+ 		if (!(scratch & 0x00100000))
+@@ -5249,6 +5278,12 @@
+         }
+ 	}
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10) 
++            // the reference count has been increased in agp_backend_initialize.
++        if (device)
++            pci_dev_put(device); 
++#endif
++
+     return(0); /* success */
+ }
+ 
+@@ -6494,10 +6529,10 @@
+     // locate host bridge device
+ #ifdef __x86_64__
+     do {
+-        dev = pci_find_class(PCI_CLASS_BRIDGE_HOST << 8, dev);
++        dev = firegl_pci_find_class(PCI_CLASS_BRIDGE_HOST << 8, dev);
+     } while((dev) && !agp_check_supported_device(dev));
+ #else
+-    if ((dev = pci_find_class(PCI_CLASS_BRIDGE_HOST << 8, NULL)) == NULL)
++    if ((dev = firegl_pci_find_class(PCI_CLASS_BRIDGE_HOST << 8, NULL)) == NULL)
+         return -ENODEV;
+ #endif
+ 
+@@ -7040,8 +7075,12 @@
+                     &agp_bridge.mode);
+ 				return hp_zx1_setup(dev);
+ 			}
+-			dev = pci_find_class(PCI_CLASS_BRIDGE_HOST << 8, dev);
++			dev = firegl_pci_find_class(PCI_CLASS_BRIDGE_HOST << 8, dev);
+ 		} while (dev);
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10) 
++                if(dev) pci_dev_put(dev);
++#endif
+ 		return -ENODEV;
+ 	}
+ #endif	/* __ia64__ */
+@@ -7462,6 +7501,11 @@
+ 	agp_bridge.free_gatt_table();
+ 	vfree(agp_bridge.key_list);
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
++        // decrease the reference count.
++        pci_dev_put(agp_bridge.dev);
++#endif
++
+ 	if (agp_bridge.needs_scratch_page == TRUE) {
+ 		agp_bridge.scratch_page &= ~(0x00000fff);
+ 		agp_bridge.agp_destroy_page((unsigned long)
+
+
+--- firegl_public.c 2005-01-06 9:05:02.000000000 +0100
++++ firegl_public.c 2005-01-06 9:19:16.000000000 +0100
+@@ -88,6 +88,7 @@
+ #include <linux/smp_lock.h>
+ // newer SuSE kernels need this
+ #include <linux/highmem.h>
++#include <linux/pagemap.h> // for lock_page and unlock_page
+ 
+ #if defined(__ia64__)
+ #include <linux/vmalloc.h>
