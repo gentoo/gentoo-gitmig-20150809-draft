@@ -132,7 +132,8 @@ x11-themes/gtk-xfce-engine
 >=gnome-base/libbonoboui-2.0.1
 >=gnome-extra/libgtkhtml-2.0.1
 >=gnome-extra/yelp-1.0.2
-
+>=gnome-extra/gnome-utils-2.0.2
+>=gnome-extra/gnome-games-2.0.2
 # Gabriele Giorgetti <stroke@gentoo.org> (05 Aug 2002)
 # other gnome2 packages masked for testing
 >=gnome-base/gdm-2.4.0.5
