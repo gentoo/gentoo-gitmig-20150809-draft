@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.31 2004/06/25 00:51:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.32 2004/07/14 19:58:58 eradicator Exp $
+
+  14 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  totem-0.99.8-r2.ebuild:
+  Adding to ~sparc but forcing xine backend.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> totem-0.99.8-r2.ebuild:
   Add inherit eutils

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.8-r2.ebuild,v 1.8 2004/06/25 00:51:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.8-r2.ebuild,v 1.9 2004/07/14 19:58:58 eradicator Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.hadess.net/totem.php3"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="gstreamer lirc curl"
 
 # specific gtk dep is needed for a certain xfree patch (#21336)
@@ -23,13 +23,16 @@ RDEPEND=">=dev-libs/glib-2.1
 	!gstreamer? ( >=media-libs/xine-lib-1_rc0
 		curl? ( >=net-misc/curl-7.9.8 )
 	)
-	gstreamer? ( =media-libs/gstreamer-0.6*
+	sparc? ( >=media-libs/xine-lib-1_rc0
+		curl? ( >=net-misc/curl-7.9.8 )
+	)
+	!sparc? ( gstreamer? ( =media-libs/gstreamer-0.6*
 		=media-libs/gst-plugins-0.6*
 		=media-plugins/gst-plugins-gnomevfs-0.6*
 		=media-plugins/gst-plugins-colorspace-0.6*
 		=media-plugins/gst-plugins-xvideo-0.6*
 		mad? ( =media-plugins/gst-plugins-mad-0.6* )
-		)"
+		) )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.20
