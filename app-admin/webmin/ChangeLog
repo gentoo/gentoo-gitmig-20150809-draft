@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.28 2003/11/09 11:55:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.29 2003/11/09 12:24:32 mholzer Exp $
+
+*webmin-1.121 (09 Nov 2003)
+
+  09 Nov 2003; Martin Holzer <mholzer@gentoo.org> webmin-1.121.ebuild:
+  Version bumped
 
 *webmin-1.120 (05 Nov 2003)
 
