@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.11 2004/11/06 15:55:55 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.12 2004/11/08 23:54:08 carlo Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Purdue Compiler Construction Tool Set is an embedded C/C++ parser generator"
@@ -16,8 +18,8 @@ DEPEND="app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
-
-	patch ${FILESDIR}/${PF}-gentoo.diff || die "epatch failed."
+	cd ${S}
+	epatch ${FILESDIR}/${PF}-gentoo.diff || die "epatch failed."
 }
 
 src_compile() {
