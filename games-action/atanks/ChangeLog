@@ -1,6 +1,9 @@
 # ChangeLog for games-action/atanks
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.5 2004/03/24 04:38:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.6 2004/03/24 04:39:53 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> atanks-1.1.0.ebuild:
+  don't rdepend on sed
 
   23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> atanks-0.9.9d.ebuild,
   atanks-1.0.0.ebuild:

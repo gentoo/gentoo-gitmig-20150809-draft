@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.1 2004/02/05 23:21:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.2 2004/03/24 04:39:53 mr_bones_ Exp $
 
 inherit games
 
@@ -14,10 +14,11 @@ KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/x11
-	>=sys-apps/sed-4
+RDEPEND="virtual/x11
 	>=media-libs/allegro-4.0.3
 	>=media-libs/allegttf-2.0"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +34,6 @@ src_install() {
 	dodir "${DATA_DIR}"
 	cp {credits,gloat,instr,revenge}.txt *dat "${D}${DATA_DIR}" || \
 		die "cp failed"
-
 	dodoc BUGS Changelog Help.txt tanks.txt README TODO || die "dodoc failed"
 	prepgamesdirs
 }
