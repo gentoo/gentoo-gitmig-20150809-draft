@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.10 2004/02/05 02:52:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.11 2004/02/06 15:58:08 agriffis Exp $
 
 inherit gcc
 
@@ -31,11 +31,12 @@ src_compile() {
 	[[ $ARCH == amd64 ]] && append-flags -O0
 
 	# Bug 29017 says that bison has compile-time issues with
-	# -march=k6 and -march=k6-2 prior to 3.4CVS.  Use -march=i586
-	# instead (04 Feb 2004 agriffis)
+	# -march=k6* prior to 3.4CVS.  Use -march=i586 instead 
+	# (04 Feb 2004 agriffis)
 	if [[ $(gcc-major-version) == 3 && $(gcc-minor-version) < 4 ]]; then
-		CFLAGS=${CFLAGS//-march=k6-2/-march=i586}
-		CFLAGS=${CFLAGS//-march=k6/-march=i586}
+		CFLAGS=" ${CFLAGS} "
+		CFLAGS=${CFLAGS// -march=k6-? / -march=i586 }
+		CFLAGS=${CFLAGS// -march=k6 / -march=i586 }
 	fi
 
 	econf $(use_enable nls) || die
