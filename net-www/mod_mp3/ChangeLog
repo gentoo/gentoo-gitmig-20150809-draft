@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_mp3
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.9 2003/02/12 08:50:29 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.10 2004/03/02 03:16:12 weeve Exp $
+
+  01 Mar 2004; Jason Wever <weeve@gentoo.org> mod_mp3-0.39.ebuild:
+  You don't know the power of the ~sparc side.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
