@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-2.25.6-r1.ebuild,v 1.5 2004/06/24 23:25:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-2.25.6-r1.ebuild,v 1.6 2004/10/23 12:28:51 usata Exp $
 
 inherit gcc eutils
 
@@ -16,8 +16,7 @@ LICENSE="LGPL-2 GPL-2"
 SLOT="2"
 KEYWORDS="x86 alpha ppc sparc"
 
-DEPEND=">=media-libs/freetype-1.1
-	<media-libs/freetype-2
+DEPEND="=media-libs/freetype-1*
 	virtual/x11"
 RDEPEND="${DEPEND}
 	media-fonts/kochi-substitute"
