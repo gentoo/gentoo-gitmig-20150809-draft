@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.3.2.ebuild,v 1.12 2003/05/15 00:51:48 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.3.2.ebuild,v 1.13 2003/07/02 03:35:31 seemant Exp $
 
 inherit libtool
 inherit perl-module
@@ -23,7 +23,8 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~ppc ~sparc alpha mips hppa"
 
-DEPEND="media-libs/jbigkit
+DEPEND=">=sys-apps/sed-4
+	media-libs/jbigkit
 	>=sys-apps/bzip2-1
 	sys-libs/zlib
 	X? ( virtual/x11 
@@ -53,11 +54,10 @@ src_compile() {
 	use truetype || myconf="${myconf} --without-ttf"
 
 	# Netscape is still used ?  More people should have Mozilla
-	cp configure configure.orig
-	sed -e 's:netscape:mozilla:g' configure.orig > configure
+	sed -i 's:netscape:mozilla:g' configure
 
 	#patch to allow building by perl
-	patch -p0 < ${FILESDIR}/perlpatch.diff
+	epatch ${FILESDIR}/perlpatch.diff
 
 	econf \
 		--enable-shared \
@@ -69,7 +69,7 @@ src_compile() {
 		--with-wmf \
 		--with-threads \
 		--with-bzlib \
-		${myconf}
+		${myconf} || die
 	emake || die "compile problem"
 
 	# More perl stuff 

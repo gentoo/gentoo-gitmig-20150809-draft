@@ -1,11 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.4-r1.ebuild,v 1.6 2003/04/28 16:51:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.4-r1.ebuild,v 1.7 2003/07/02 03:35:31 seemant Exp $
 
 IUSE="perl X cups xml2 lcms"
 
-inherit libtool
-inherit perl-module
+inherit libtool perl-module eutils
 
 MY_PN=ImageMagick
 MY_P=${MY_PN}-${PV%.*}-${PV#*.*.*.}
@@ -18,7 +17,8 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa"
 
-DEPEND="media-libs/libpng
+DEPEND=">=sys-apps/sed-4
+	media-libs/libpng
 	>=sys-apps/bzip2-1
 	>=sys-libs/zlib-1.1.3
 	>=media-libs/freetype-2.0
@@ -41,11 +41,10 @@ src_compile() {
 	use X    || myconf="${myconf} --with-x=no"
 
 	# Netscape is still used ?  More people should have Mozilla
-	cp configure configure.orig
-	sed -e 's:netscape:mozilla:g' configure.orig > configure
+	sed -i 's:netscape:mozilla:g' configure
 
 	#patch to allow building by perl
-	patch -p0 < ${FILESDIR}/perlpatch.diff
+	epatch ${FILESDIR}/perlpatch.diff
 
 	econf \
 		--enable-shared \
