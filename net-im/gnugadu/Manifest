@@ -1,10 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07cccd6795112b4a9914a7b69dc9e07b gnugadu-2.2.0.ebuild 1611
-MD5 c7c6f0781462ffe8129950b0f14bb4c8 gnugadu-2.0.6.ebuild 1613
-MD5 ff665d452faa6efdcadfaa7a0017662a gnugadu-2.0.5.ebuild 1613
-MD5 1fad11bd82cfdcfb093b7499b60799f8 ChangeLog 4083
+MD5 1de5732cac71d63bf8fda7047767fda4 gnugadu-2.2.2.ebuild 1618
+MD5 1ad2d3a85327405f02ff93e78c8bc2a5 ChangeLog 4286
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 2725ed841eaf9dcc8f749e8a7b6a0f00 gnugadu-2.2.1.ebuild 1622
-MD5 8785333b8cac4f85424dd57b133ff275 files/digest-gnugadu-2.0.5 62
-MD5 fe366f7737ad55e66f707209f6617a08 files/digest-gnugadu-2.0.6 62
 MD5 5f5efab8f464157178c4781651d220fb files/digest-gnugadu-2.2.0 62
 MD5 aaf0cb808f9d77d6e5a5e3d75806f9d1 files/digest-gnugadu-2.2.1 62
+MD5 642d016260985530b90ab05acf11a0a7 files/digest-gnugadu-2.2.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjNwQchej4aZK9/cRAqCnAJ9XbsdEdS98ZTlPV25hd05EZnfGKwCeOMO7
+nQjzAv6xhFkMTq8eoov3Kws=
+=OMv8
+-----END PGP SIGNATURE-----
