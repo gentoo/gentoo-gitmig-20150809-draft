@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.1 2002/07/04 18:37:07 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.2 2002/07/09 21:43:55 nitro Exp $
 
 P="nomadII-utils-$PV"
 S=${WORKDIR}/${P}
@@ -9,6 +9,7 @@ DESCRIPTION="Supports for Creative Nomad II, IIc and II MG under Linux running U
 HOMEPAGE="http://nomadii.sourceforge.net/"
 SRC_URI="mirror://sourceforge/nomadii/${P}.tgz"
 
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
