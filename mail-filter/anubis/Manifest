@@ -1,11 +1,17 @@
-MD5 c56ad68d7dff1ee79e3e12fb6cfea3a6 ChangeLog 1723
-MD5 440248c06909e9de01aa5923fc8fce5c anubis-3.6.2-r1.ebuild 1078
-MD5 0659c041706fe6b4040981be8fcc4602 anubis-3.6.2.ebuild 977
-MD5 7cb7cc5397e185d0deacd369457ce801 anubis-3.9.95.ebuild 1920
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9c85de13250da7342e9e67a0f7c2320 ChangeLog 1903
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 a345a52e49034f67fe700e0464804933 files/3.6.2-secfixes.patch.gz 1455
-MD5 b2320df43592e63e327683a3e82928b1 files/3.9.95-authmode.c.patch 438
+MD5 1e69577237956f04a8fe807f342bb65f anubis-3.9.95.ebuild 1916
 MD5 cc4ec1af9779d9945e617204d549a19f files/3.9.95-transmode.c.patch 321
-MD5 24def86bd1cfb613e6c0dcf55194d449 files/digest-anubis-3.6.2 64
-MD5 24def86bd1cfb613e6c0dcf55194d449 files/digest-anubis-3.6.2-r1 64
+MD5 b2320df43592e63e327683a3e82928b1 files/3.9.95-authmode.c.patch 438
 MD5 82fb55fcc52a9af0d23fc2085979e467 files/digest-anubis-3.9.95 65
+MD5 a345a52e49034f67fe700e0464804933 files/3.6.2-secfixes.patch.gz 1455
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBqHVl10xuJSrg3/sRAgEaAJ4uggjEHlMvhdPVJF302BShMMdcPgCfTmUd
+zAg7bUkm839/5pqMpNa8kVY=
+=XIJl
+-----END PGP SIGNATURE-----

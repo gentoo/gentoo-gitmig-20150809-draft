@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/anubis
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.6 2004/09/15 21:06:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.7 2004/11/27 12:38:50 ticho Exp $
+
+  27 Nov 2004; Andrej Kacian <ticho@gentoo.org> -anubis-3.6.2-r1.ebuild,
+  -anubis-3.6.2.ebuild, anubis-3.9.95.ebuild:
+  3.9.95 stable on x86 as per bug #72618. Removed older versions.
 
   16 Sep 2004; Daniel Black <dragonheart@gentoo.org> anubis-3.6.2-r1.ebuild,
   anubis-3.6.2.ebuild:
