@@ -1,0 +1,11 @@
+--- 1/generate-modprobe.conf	2004-02-02 00:05:39.000000000 +0200
++++ 2/generate-modprobe.conf	2004-02-01 18:10:42.000000000 +0200
+@@ -145,7 +145,7 @@
+ 	;;
+ 
+     alias)
+-	if [ x"$REST" = xoff -o x"$REST" = xnull ]; then
++	if [ x"${REST// /}" = xoff -o x"$REST" = xnull ]; then
+ 	    INSTALL_COMMANDS="$INSTALL_COMMANDS $MODULE"
+ 	    eval install_$MODNAME=\"/bin/true\"
+ 	else
