@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.6.ebuild,v 1.1 2004/12/31 21:40:35 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.6.ebuild,v 1.2 2005/01/01 01:52:19 eradicator Exp $
 
 IUSE="gtk gtk2 tcltk sdk"
 
@@ -104,14 +104,17 @@ src_compile() {
 	fi
 
 	if use sdk; then
-		myconf="--enable-wacomdrv --enable-wacdump --enable-xsetwacom --with-xf86=/usr/X11R6/$(get_libdir)/Server $withgtk $withtcltk"
+		myconf="--enable-wacomdrv --enable-wacdump --enable-xsetwacom $withgtk $withtcltk"
+		if [ -f "/usr/$(get_libdir)/Server/include/xf86Version.h" ]; then
+			myconf="${myconf} --with-xf86=/usr/$(get_libdir)/Server --with-xorg-sdk=/usr/$(get_libdir)/Server"
+		else
+			myconf="${myconf} --with-xf86=/usr/X11R6/$(get_libdir)/Server --with-xorg-sdk=/usr/X11R6/$(get_libdir)/Server"
+		fi
+
 		econf ${myconf} || die "configure failed."
 
 		# Makefile fix for build against SDK
 		cd ${S}/src
-		cp Makefile Makefile.orig
-		sed -i -e "s:XF86_DIR = .*:XF86_DIR = /usr/X11R6/$(get_libdir)/Server:" Makefile
-		sed -i -e "s:XF86_V3_DIR = .*:XF86_V3_DIR = /usr/X11R6/$(get_libdir)/Server:" Makefile
 		sed -i -e "s:/include/extensions:/include:g" Makefile
 	else
 		myconf="--disable-wacomdrv --enable-wacdump --enable-xsetwacom $withgtk $withtcltk"
