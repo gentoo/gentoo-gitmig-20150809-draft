@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/crimson
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/ChangeLog,v 1.9 2004/06/24 23:26:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/ChangeLog,v 1.10 2004/08/07 06:15:47 mr_bones_ Exp $
+
+*crimson-0.4.3 (06 Aug 2004)
+
+  06 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> +crimson-0.4.3.ebuild:
+  version bump
 
   04 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> crimson-0.4.0.ebuild:
   clean older ebuild
