@@ -1,6 +1,9 @@
-MD5 7c4d4cab62890508c981b02217f66b58 wpa-supplicant-0.2.5.ebuild 1899
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0088a7950f7cfa40c5619b06fee54afc wpa-supplicant-0.2.5.ebuild 1908
 MD5 578c24ee4c98a3b40d83a35a0f2d05a6 wpa-supplicant-0.2.4.ebuild 1486
-MD5 111cdbbe972ac36143ff627d115b85f0 ChangeLog 1092
+MD5 3b56c43c82a38fe863458c274640ced3 ChangeLog 1187
 MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
 MD5 1f91b0edd54ee435426f50cd10807c6d files/digest-wpa-supplicant-0.2.4 156
 MD5 a9249a7ed61a912ddd1b561317e76f43 files/digest-wpa-supplicant-0.2.5 235
@@ -9,3 +12,10 @@ MD5 b2bb8e6d5a1663945c4ce0d9b4c70ba1 files/wpa-supplicant-0.2.5-config 606
 MD5 61ce9cacb6827fa1c2552515fad9d1d1 files/wpa_supplicant-0.2.5-conf.d 398
 MD5 dedbc9631142e73e7c7b5d26cf4a1a4a files/wpa_supplicant-0.2.5-init.d 974
 MD5 a0d0816840e412152255c4a62bfde94c files/wpa-supplicant-0.2.4-config 582
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsQRLCHk4+ZoBpvsRAtHfAJ9+LIHrdsAdmMqwOOK7VSRjk9sCMQCggkK+
+rMJ1T8rGZjWqkvzkT/ICWyY=
+=Qu5J
+-----END PGP SIGNATURE-----
