@@ -4,7 +4,7 @@
 # System-wide defaults for the Portage system
 
 USE="3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
-ipv6 java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
+java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
 oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl
 slang spell ssl svga tcpd truetype X xml2 xmms xv" 
 
@@ -13,9 +13,12 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.12 2002/07/04 14:13:49 murphy Exp $
+# $Id: make.defaults,v 1.13 2002/07/24 17:23:04 g2boojum Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.12  2002/07/04 14:13:49  murphy
+# Major fixes from the x86 tree
+#
 # Revision 1.4  2002/07/04 13:39:46  murphy
 # Fixing to use ACCEPT_KEYWORDS
 #
