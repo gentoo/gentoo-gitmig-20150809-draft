@@ -1,4 +1,4 @@
-MD5 296020687ba9c84e0c071ca775fddc12 ChangeLog 457
-MD5 f65b458e6919541a981e2ff69a6116cb pythondialog-1.0.ebuild 770
 MD5 80e5ace6de9868fe7574d8f566d85cdf files/00_all_setup.py.patch.bz2 322
 MD5 8d47d64d3782fd31b429258c21b66dc5 files/digest-pythondialog-1.0 53
+MD5 296020687ba9c84e0c071ca775fddc12 ChangeLog 457
+MD5 1640f0347680c7d734e6dcf6df83a46a pythondialog-1.0.ebuild 770
