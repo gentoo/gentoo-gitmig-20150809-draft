@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.3.ebuild,v 1.1 2002/10/16 23:21:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.3.ebuild,v 1.2 2002/10/16 23:53:54 foser Exp $
 
 IUSE="perl nls gnome build spell jpeg xml2"
 
@@ -21,8 +21,8 @@ DEPEND="virtual/x11
 	spell? ( >=app-text/aspell-0.50 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 		>=gnome-extra/gal-0.13-r1 
-		>=gnome-base/bonobo-1.0.9-r1 )"
-
+		>=gnome-base/bonobo-1.0.9-r1 )
+	!app-shells/bash-completion"
 
 fix_perl_env() {
 	# new configure scripts is a bit broken
