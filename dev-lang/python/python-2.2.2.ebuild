@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.15 2004/07/02 04:30:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.16 2004/07/14 13:46:04 agriffis Exp $
 
-IUSE="readline tcltk berkdb bootstrap"
+IUSE="berkdb bootstrap build readline tcltk"
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -97,4 +97,3 @@ src_install() {
 		dosym /usr/lib/python${PYVER}/tools/idle/idle.py /usr/bin/idle.py
 	fi
 }
-

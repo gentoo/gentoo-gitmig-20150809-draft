@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.23 2004/07/02 04:30:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.24 2004/07/14 13:46:04 agriffis Exp $
 
 inherit flag-o-matic eutils python
 
-IUSE="ncurses gdbm readline tcltk berkdb build doc ssl"
+IUSE="berkdb bootstrap build doc gdbm ncurses readline ssl tcltk"
 
 PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
