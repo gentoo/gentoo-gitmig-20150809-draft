@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140-r1.ebuild,v 1.6 2004/05/22 22:58:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140-r1.ebuild,v 1.7 2004/05/31 07:51:50 eradicator Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	# Bug #47020
 	epatch ${FILESDIR}/${PN}-1.130-webalizer.patch
 
-	# Bug #50810
+	# Bug #50810, #51943
 	if use apache2; then
 		epatch ${FILESDIR}/${PN}-1.140-apache2.patch
 	fi

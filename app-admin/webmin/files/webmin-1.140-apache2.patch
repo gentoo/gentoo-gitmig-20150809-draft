@@ -1,5 +1,6 @@
---- apache/config-gentoo-linux.orig	2004-05-15 00:49:39.000000000 -0700
-+++ apache/config-gentoo-linux	2004-05-15 00:50:21.000000000 -0700
+diff -Naur webmin-1.140.orig/apache/config-gentoo-linux webmin-1.140/apache/config-gentoo-linux
+--- webmin-1.140.orig/apache/config-gentoo-linux	2004-04-05 16:24:24.000000000 -0700
++++ webmin-1.140/apache/config-gentoo-linux	2004-05-31 00:48:39.000000000 -0700
 @@ -1,11 +1,11 @@
  show_list=0
 -httpd_dir=/etc/apache
@@ -18,3 +19,12 @@
  show_order=0
  max_servers=100
  test_config=1
+diff -Naur webmin-1.140.orig/webalizer/config-gentoo-linux webmin-1.140/webalizer/config-gentoo-linux
+--- webmin-1.140.orig/webalizer/config-gentoo-linux	2004-04-05 16:25:23.000000000 -0700
++++ webmin-1.140/webalizer/config-gentoo-linux	2004-05-31 00:49:06.000000000 -0700
+@@ -1,4 +1,4 @@
+ webalizer=webalizer
+-webalizer_conf=/etc/apache/conf/webalizer.conf
++webalizer_conf=/etc/apache2/conf/webalizer.conf
+ auto=apache,squid
+ su_shell=1
