@@ -1,9 +1,13 @@
 # ChangeLog for dev-libs/pilot-link
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.13 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.14 2003/01/16 20:28:47 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*pilot-link-0.11.7 (16 Jan 2003)
+
+  16 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + remove all fixes since upstream added them for this
+  release (except for perl ... but its supposed to be in for 0.11.8).
+
 *pilot-link-0.11.5-r1 (17 Nov 2002)
 
   17 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
