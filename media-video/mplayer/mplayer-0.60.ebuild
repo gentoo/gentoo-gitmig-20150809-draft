@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60.ebuild,v 1.1 2002/01/04 18:33:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60.ebuild,v 1.2 2002/01/05 00:08:39 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -122,6 +122,8 @@ src_install() {
 		# Permissions is fried by default
 		chmod a+rx ${D}/usr/share/mplayer/Skin/default/
 		chmod a+r ${D}/usr/share/mplayer/Skin/default/*
+	fi
+	if [ "`use gnome`" ] ; then
 
 		insinto /usr/share/pixmaps
 		newins ${S}/Gui/mplayer/pixmaps/icon.xpm mplayer.xpm
