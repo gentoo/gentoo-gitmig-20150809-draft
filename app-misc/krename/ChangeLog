@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.26 2004/06/12 14:20:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.27 2004/06/18 13:59:23 carlo Exp $
+
+  18 Jun 2004; Carsten Lohrke <carlo@gentoo.org> krename-3.0.0_rc2.ebuild:
+  remove rc2 in favor of rc3 because of a silent tarball update
 
 *krename-3.0.0_rc3 (12 Jun 2004)
 
