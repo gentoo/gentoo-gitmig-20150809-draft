@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/gpp-0.5c.ebuild,v 1.1 2003/10/16 18:24:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/gpp-0.5c.ebuild,v 1.2 2003/11/19 03:57:43 leonardop Exp $
 
 # No real need to inherit from gnome2 eclass (yet)
 #inherit gnome2
@@ -11,7 +11,7 @@ SRC_URI="http://www.fogman.de/${PN}/${P}.tgz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/libgnomeui-2
