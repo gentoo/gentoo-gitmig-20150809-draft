@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/athcool-0.3.7.ebuild,v 1.3 2004/09/06 00:31:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/athcool-0.3.8.ebuild,v 1.1 2004/12/14 22:28:47 lisa Exp $
 
 inherit eutils
 
@@ -25,6 +25,8 @@ src_install() {
 	einstall || die
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/athcool
+
+	dodoc COPYING README ChangeLog
 }
 
 pkg_postinst() {
