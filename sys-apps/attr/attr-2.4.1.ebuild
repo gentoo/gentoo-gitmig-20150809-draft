@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.1.ebuild,v 1.8 2003/12/10 04:34:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.1.ebuild,v 1.9 2004/01/25 00:29:08 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="xfs extended attributes tools"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
