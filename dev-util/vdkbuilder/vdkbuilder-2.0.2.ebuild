@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.10 2003/09/06 08:39:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.11 2003/09/06 20:28:41 msterret Exp $
 
 IUSE="nls gnome"
 
@@ -23,8 +23,7 @@ DEPEND="dev-libs/atk
 	gnome? ( gnome-base/libgnome )"
 
 src_compile() {
-
-    local myconf
+	local myconf
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"

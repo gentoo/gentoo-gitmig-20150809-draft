@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-6.4-r2.ebuild,v 1.8 2003/09/06 08:39:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-6.4-r2.ebuild,v 1.9 2003/09/06 20:28:41 msterret Exp $
 
 
 S=${WORKDIR}/${P}
@@ -24,7 +24,7 @@ src_install() {
 	# We need to do this 'cause the tcl install requires X to be running
 	# and the user that runs emerge to have DISPLAY set and working
 	cat tkcvs/tkcvs.blank | sed -e {s/_TCDIR_/"\/usr\/lib"/} \
-       	    > ${D}/usr/bin/tkcvs
+		> ${D}/usr/bin/tkcvs
 	chmod 755 ${D}/usr/bin/tkcvs
 	chmod 755 ${S}/tkdiff/tkdiff
 	dobin tkdiff/tkdiff

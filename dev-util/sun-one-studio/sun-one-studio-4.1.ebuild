@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio/sun-one-studio-4.1.ebuild,v 1.3 2003/07/12 14:28:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio/sun-one-studio-4.1.ebuild,v 1.4 2003/09/06 20:28:41 msterret Exp $
 
 DESCRIPTION="Sun ONE Studio Community Edition"
 HOMEPAGE="http://wwws.sun.com/software/sundev/jde/features/ce-features.html"
@@ -24,6 +24,6 @@ src_install() {
 	addwrite "/var/lib/rpm/__db.Name."
 	addwrite "/var/lib/rpm/Name"
 	java -DjdkHome=`java-config --jdk-home` -DforteHome="${D}/opt/s1studioce/" run -silent
-        insinto /usr/share/gnome/apps/Development
-        doins ${FILESDIR}/sunone.desktop
+	insinto /usr/share/gnome/apps/Development
+	doins ${FILESDIR}/sunone.desktop
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.2.ebuild,v 1.10 2003/02/13 12:00:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.2.ebuild,v 1.11 2003/09/06 20:28:41 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A filemanager for shell scripts"
@@ -22,7 +22,7 @@ src_unpack () {
 
 	cp sel.c sel.c.orig
 	sed -e "s:/usr/local/share/sel/help\.txt:/usr/share/sel/help\.txt:" \
-       	    sel.c.orig > sel.c
+		sel.c.orig > sel.c
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.3.0.ebuild,v 1.2 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.3.0.ebuild,v 1.3 2003/09/06 20:28:40 msterret Exp $
 
 HOMEPAGE="http://www.akhphd.au.dk/~bertho/cvsgraph"
 KEYWORDS="~x86 ~sparc ~ppc"
@@ -30,8 +30,8 @@ src_compile() {
 }
 
 src_install () {
-        dobin ${S}/cvsgraph
+	dobin ${S}/cvsgraph
 	insinto /etc
-        doins ${S}/cvsgraph.conf
-        doman ${S}/cvsgraph.1 ${S}/cvsgraph.conf.5
+	doins ${S}/cvsgraph.conf
+	doman ${S}/cvsgraph.1 ${S}/cvsgraph.conf.5
 }

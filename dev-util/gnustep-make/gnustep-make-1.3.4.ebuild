@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.10 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.11 2003/09/06 20:28:40 msterret Exp $
 
 IUSE=""
 
@@ -30,49 +30,49 @@ src_compile() {
 src_install () {
 	dodir   /usr/GNUstep/System \
 		/usr/GNUstep/System/Makefiles \
-        	/usr/GNUstep/System/Makefiles/ix86 \
-       		/usr/GNUstep/System/Makefiles/ix86/linux-gnu \
-        	/usr/GNUstep/System/Makefiles/Additional \
-        	/usr/GNUstep/System/Makefiles/Master \
-        	/usr/GNUstep/System/Makefiles/Instance \
-        	/usr/GNUstep/System/Makefiles/Instance/Shared \
-        	/usr/GNUstep/System/Tools \
-        	/usr/GNUstep/System/share \
-        	/usr/GNUstep/System/Applications \
-        	/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
-        	/usr/GNUstep/System/Libraries/Resources \
-        	/usr/GNUstep/System/Libraries/Java \
-        	/usr/GNUstep/System/Headers/ix86/linux-gnu \
-        	/usr/GNUstep/System/Tools/ix86/linux-gnu/gnu-gnu-gnu \
-        	/usr/GNUstep/System/Tools/Java \
-        	/usr/GNUstep/System/Library/Bundles \
-        	/usr/GNUstep/System/Library/Colors \
-        	/usr/GNUstep/System/Library/Frameworks \
-        	/usr/GNUstep/System/Library/PostScript \
-        	/usr/GNUstep/System/Library/Services \
-        	/usr/GNUstep/System/Documentation/Developer \
-        	/usr/GNUstep/System/Documentation/User \
+		/usr/GNUstep/System/Makefiles/ix86 \
+		/usr/GNUstep/System/Makefiles/ix86/linux-gnu \
+		/usr/GNUstep/System/Makefiles/Additional \
+		/usr/GNUstep/System/Makefiles/Master \
+		/usr/GNUstep/System/Makefiles/Instance \
+		/usr/GNUstep/System/Makefiles/Instance/Shared \
+		/usr/GNUstep/System/Tools \
+		/usr/GNUstep/System/share \
+		/usr/GNUstep/System/Applications \
+		/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
+		/usr/GNUstep/System/Libraries/Resources \
+		/usr/GNUstep/System/Libraries/Java \
+		/usr/GNUstep/System/Headers/ix86/linux-gnu \
+		/usr/GNUstep/System/Tools/ix86/linux-gnu/gnu-gnu-gnu \
+		/usr/GNUstep/System/Tools/Java \
+		/usr/GNUstep/System/Library/Bundles \
+		/usr/GNUstep/System/Library/Colors \
+		/usr/GNUstep/System/Library/Frameworks \
+		/usr/GNUstep/System/Library/PostScript \
+		/usr/GNUstep/System/Library/Services \
+		/usr/GNUstep/System/Documentation/Developer \
+		/usr/GNUstep/System/Documentation/User \
 		/usr/GNUstep/System/Documentation/info \
-        	/usr/GNUstep/System/Documentation/man \
-        	/usr/GNUstep/System/Developer/Palettes \
-        	/usr/GNUstep/Local/Applications \
-        	/usr/GNUstep/Local/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
-        	/usr/GNUstep/Local/Libraries/Resources \
-        	/usr/GNUstep/Local/Libraries/Java \
-        	/usr/GNUstep/Local/Headers/ix86/linux-gnu \
-        	/usr/GNUstep/Local/Tools/ix86/linux-gnu/gnu-gnu-gnu \
-        	/usr/GNUstep/Local/Tools/Java \
-        	/usr/GNUstep/Local/Library/Bundles \
-        	/usr/GNUstep/Local/Library/Colors \
-        	/usr/GNUstep/Local/Library/Frameworks \
-        	/usr/GNUstep/Local/Library/PostScript \
-        	/usr/GNUstep/Local/Library/Services \
-        	/usr/GNUstep/Local/Documentation/Developer \
-        	/usr/GNUstep/Local/Documentation/User \
-        	/usr/GNUstep/Local/Developer/Palettes \
-        	/usr/GNUstep/Local/Users \
-        	/usr/GNUstep/Local/Users/Administrator \
-        	/usr/GNUstep/Network
+		/usr/GNUstep/System/Documentation/man \
+		/usr/GNUstep/System/Developer/Palettes \
+		/usr/GNUstep/Local/Applications \
+		/usr/GNUstep/Local/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
+		/usr/GNUstep/Local/Libraries/Resources \
+		/usr/GNUstep/Local/Libraries/Java \
+		/usr/GNUstep/Local/Headers/ix86/linux-gnu \
+		/usr/GNUstep/Local/Tools/ix86/linux-gnu/gnu-gnu-gnu \
+		/usr/GNUstep/Local/Tools/Java \
+		/usr/GNUstep/Local/Library/Bundles \
+		/usr/GNUstep/Local/Library/Colors \
+		/usr/GNUstep/Local/Library/Frameworks \
+		/usr/GNUstep/Local/Library/PostScript \
+		/usr/GNUstep/Local/Library/Services \
+		/usr/GNUstep/Local/Documentation/Developer \
+		/usr/GNUstep/Local/Documentation/User \
+		/usr/GNUstep/Local/Developer/Palettes \
+		/usr/GNUstep/Local/Users \
+		/usr/GNUstep/Local/Users/Administrator \
+		/usr/GNUstep/Network
 
 	insinto /usr/GNUstep/System/Makefiles/ix86/linux-gnu
 	insopts -m 755
@@ -81,9 +81,9 @@ src_install () {
 	insinto /usr/GNUstep/System/Makefiles
 	insopts -m 755
 	doins config.guess config.sub install-sh mkinstalldirs \
-        	clean_cpu.sh clean_os.sh clean_vendor.sh cpu.sh \
+		clean_cpu.sh clean_os.sh clean_vendor.sh cpu.sh \
 		ld_lib_path.sh os.sh transform_paths.sh vendor.sh \
-        	ld_lib_path.csh fixpath.sh relative_path.sh \
+		ld_lib_path.csh fixpath.sh relative_path.sh \
 		GNUstep.sh GNUstep-reset.sh GNUstep.csh
 
 	insinto /usr/GNUstep/System/Tools

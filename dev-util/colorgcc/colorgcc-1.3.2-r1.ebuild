@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r1.ebuild,v 1.9 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r1.ebuild,v 1.10 2003/09/06 20:28:40 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Adds color to gcc output"
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install() {
 	exeinto /usr/bin
-        doexe colorgcc
+	doexe colorgcc
 	dodir /usr/bin/wrappers
 	dosym /usr/bin/colorgcc /usr/bin/wrappers/gcc
 	dosym /usr/bin/colorgcc /usr/bin/wrappers/g++

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.2-r1.ebuild,v 1.3 2003/09/06 08:39:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.2-r1.ebuild,v 1.4 2003/09/06 20:28:41 msterret Exp $
 
 inherit libtool
 
@@ -237,7 +237,7 @@ pkg_config() {
 	fi
 	einfo ">>> Initializing the database ..."
 	if [ -f ${SVN_REPOS_LOC}/repos ] ; then
-        echo "A subversion repository already exists and I will not overwrite it."
+		echo "A subversion repository already exists and I will not overwrite it."
 		echo "Delete ${SVN_REPOS_LOC}/repos first if you're sure you want to have a clean version."
 	else
 		mkdir -p ${SVN_REPOS_LOC}

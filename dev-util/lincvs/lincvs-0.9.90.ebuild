@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.9.90.ebuild,v 1.9 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.9.90.ebuild,v 1.10 2003/09/06 20:28:41 msterret Exp $
 
 IUSE="kde"
 
@@ -20,15 +20,12 @@ RDEPEND="${DEPEND}
 	dev-util/cvs"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	patch -p1 < ${FILESDIR}/nodefaults.diff
-
 }
 
 src_compile() {
-
 	if [ "`use kde`" ] ; then
 		myconf="${myconf} --with-kde2-support=yes"
 	else
@@ -49,15 +46,13 @@ src_compile() {
 
 	cd ${S}/src
 	cp Makefile Makefile.orig
-        sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
 	cd ${S}
 
 	make || die "make failed"
-
 }
 
 src_install () {
-
 	into /usr
 	dobin src/lincvs tools/*.sh
 	insinto /usr/share/doc/${P}
@@ -65,7 +60,4 @@ src_install () {
 	doins AUTHORS COPYING ChangeLog INSTALL \
 		README SSH.txt VERSION THANKS
 	dosym /usr/share/doc/${P} /usr/share/${PN}
-
 }
-
-

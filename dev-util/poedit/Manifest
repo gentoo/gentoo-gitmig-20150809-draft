@@ -1,6 +1,6 @@
 MD5 44b65b58cb0882a98bc3619f88022f7d ChangeLog 1610
 MD5 bcdc7701ec5a4ea99026d7c9c955740d poedit-1.1.8.ebuild 860
-MD5 e1b05bd248abccd98ae2878de3642a4e poedit-1.2.1.ebuild 862
+MD5 56611ea1e59101ec6a0ee008642c1164 poedit-1.2.1.ebuild 850
 MD5 c4586cce6fe0dba3cd10f69fbd0515ca metadata.xml 221
 MD5 86138182d9385a7700a3d6b983661904 poedit-1.2.2.ebuild 747
 MD5 81873b36bb8d3779c1a18b8d1873101e files/digest-poedit-1.1.8 65

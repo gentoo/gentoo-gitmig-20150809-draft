@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha4-r1.ebuild,v 1.3 2003/06/18 15:45:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha4-r1.ebuild,v 1.4 2003/09/06 20:28:41 msterret Exp $
 
 inherit kde-base
 need-kde 3
@@ -28,14 +28,14 @@ newdepend ">=dev-lang/perl-5.0.4
 
 myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
 if [ "`use java`" ]; then
-    myconf="$myconf --enable-javasupport --with-java=`java-config --jdk-home`"
+	myconf="$myconf --enable-javasupport --with-java=`java-config --jdk-home`"
 else
-    myconf="$myconf --disable-javasupport"
+	myconf="$myconf --disable-javasupport"
 fi
 if [ "`use python`" ]; then
-    myconf="$myconf --enable-scripting --with-pythondir=/usr/lib/python2.2"
+	myconf="$myconf --enable-scripting --with-pythondir=/usr/lib/python2.2"
 else
-    myconf="$myconf --disable-scripting"
+	myconf="$myconf --disable-scripting"
 fi
 
 pkg_postinst() {

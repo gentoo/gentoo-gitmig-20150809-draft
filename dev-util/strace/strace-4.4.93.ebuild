@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.93.ebuild,v 1.5 2003/07/12 14:28:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.93.ebuild,v 1.6 2003/09/06 20:28:41 msterret Exp $
 
 inherit eutils
 
@@ -17,10 +17,10 @@ KEYWORDS="x86 ~ppc ~sparc alpha ~hppa mips"
 DEPEND="virtual/glibc >=sys-devel/autoconf-2.54"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
-    # the patch change the autoconf dep to 2.54
-    epatch ${FILESDIR}/${P}-configure.ac.patch
+	unpack ${A}
+	cd ${S}
+	# the patch change the autoconf dep to 2.54
+	epatch ${FILESDIR}/${P}-configure.ac.patch
 }
 
 src_compile() {
