@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.57 2005/01/02 19:21:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.58 2005/01/18 14:53:59 cryos Exp $
+
+  18 Jan 2005; Marcus Hanwell <cryos@gentoo.org> heimdal-0.6.3-r1.ebuild:
+  Added a second call to elibtoolize to fix bug 73140, as requested by seemant.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
