@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.20 2005/01/10 04:12:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.21 2005/02/27 06:24:26 genstef Exp $
+
+*madwifi-driver-0.1_pre20050224 (27 Feb 2005)
+
+  27 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
+  +madwifi-driver-0.1_pre20050224.ebuild:
+  New madwifi cvs-snapshot, bug 81766, and module build order restructure, bug
+  82752
 
   09 Jan 2005; <solar@gentoo.org> madwifi-driver-0.1_pre20050107.ebuild:
   - removing masking and put ebuild in ~arch
