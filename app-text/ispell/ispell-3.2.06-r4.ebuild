@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r2.ebuild,v 1.5 2002/07/12 00:26:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r4.ebuild,v 1.1 2002/07/12 15:35:01 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
@@ -25,20 +25,24 @@ src_unpack() {
 }
 
 src_compile() {
-	make || die
-}
-
-src_install() {
+	make config.sh || die
 
 	#Fix config.sh to install to ${D}
-	cp config.sh config.sh.orig
+	cp -p config.sh config.sh.orig
 	sed \
 		-e "s:^\(BINDIR='\)\(.*\):\1${D}\2:" \
 		-e "s:^\(LIBDIR='\)\(.*\):\1${D}\2:" \
 		-e "s:^\(MAN1DIR='\)\(.*\):\1${D}\2:" \
 		-e "s:^\(MAN4DIR='\)\(.*\):\1${D}\2:" \
-		config.sh.orig > config.sh
+		< config.sh > config.sh.install
 	
+	make || die
+}
+
+src_install() {
+	
+	cp -p  config.sh.install config.sh
+
 	#Need to create the directories to install into
 	#before 'make install'. Build environment **doesn't**
 	#check for existence and create if not already there.
@@ -52,4 +56,6 @@ src_install() {
 	rmdir ${D}/usr/share/info
 	
 	dodoc Contributors README WISHES
+
+	dosed ${D}/usr/share/man/man1/ispell.1
 }
