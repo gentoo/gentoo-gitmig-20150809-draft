@@ -1,0 +1,17 @@
+Index: string
+===================================================================
+RCS file: /var/cvs/uClibc++/include/string,v
+retrieving revision 1.15
+retrieving revision 1.16
+diff -u -r1.15 -r1.16
+--- include/string	9 Jan 2005 06:10:45 -0000	1.15
++++ include/string	9 Jan 2005 21:58:36 -0000	1.16
+@@ -354,7 +354,7 @@
+ 			++position;
+ 		}
+ //		--vector<Ch, A>::elements;
+-		pop_back();
++		vector<Ch, A>::pop_back();
+ 		return temp;
+ 	}
+ 
