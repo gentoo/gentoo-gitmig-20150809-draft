@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.21 2004/03/14 19:22:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.22 2004/04/01 19:23:14 randy Exp $
+
+  01 Apr 2004; <randy@gentoo.org> mailbase-0.00-r6.ebuild:
+  Adding s390 keywords
 
   14 Mar 2004; Tom Gall <tgall@gentoo.org> mailbase-0.00-r6.ebuild:
   stable on ppc64
