@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/wdm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.1 2003/02/19 07:14:55 bcowan Exp $
+
+*wdm-1.22 (19 Feb 2003)
+
+  19 Feb 2003; Brad Cowan <bcowan@gentoo.org> wdm-1.22.ebuild, 
+  ChangeLog, files/digest-wdm-1.22, wdm :
+  
+  Initial import.  Ebuild submitted by Don Seiler <don@seiler.us>.
+  
