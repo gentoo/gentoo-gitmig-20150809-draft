@@ -1,11 +1,17 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.21 2003/03/01 14:45:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.22 2003/07/04 21:01:41 gmsoft Exp $
 
   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> libwnck-2.2.1.ebuild :
   Add ~alpha to KEYWORDS
 
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> libwnck-2.2.2.ebuild :
+  Added ~hppa to KEYWORDS.
+
 *libwnck-2.2.1 (06 Feb 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> libwnck-2.2.1.ebuild :
+  Added hppa to KEYWORDS.
 
   01 Mar 2003; Jason Wever <weeve@gentoo.org> libwnck-2.2.1.ebuild:
   Added ~sparc to keywords.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.2.1.ebuild,v 1.7 2003/05/30 12:15:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.2.1.ebuild,v 1.8 2003/07/04 21:01:41 gmsoft Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="A window navigation construction kit"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc"
+KEYWORDS="x86 ppc alpha ~sparc hppa"
 
 RDEPEND="virtual/glibc
 	>=dev-libs/glib-2
