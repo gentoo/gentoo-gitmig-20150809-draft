@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r2.ebuild,v 1.5 2004/08/18 02:36:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r2.ebuild,v 1.6 2004/08/19 22:51:03 pvdabeel Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha hppa amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ~ia64 ppc64"
 IUSE="doc"
 
 RDEPEND="virtual/libc"
