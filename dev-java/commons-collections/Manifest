@@ -1,4 +1,6 @@
+MD5 e36342fe21bb670f251a02c57f080737 commons-collections-3.1.ebuild 1100
 MD5 35138ed29a4dc0c781bca03fc9e5307b commons-collections-3.0-r1.ebuild 985
-MD5 4f077c47b526f140ed7d41ee98ef3fa9 ChangeLog 3089
+MD5 d8850e758d7d236078422f17961144ab ChangeLog 3225
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 384d7c4e44a87df342f5270dcaccd3f1 files/digest-commons-collections-3.0-r1 80
+MD5 d6999c3ed2ac2f04284b7b49641afcc9 files/digest-commons-collections-3.1 80
