@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 629443c84268b68a139f62cbb458c4c7 ChangeLog 812
 MD5 d5205ced86134105efea604b2e4bd4cd gtkterm-0.99.3.ebuild 625
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 02d82a946aa697de60a373c955b008e8 gtkterm-0.99.4.ebuild 626
+MD5 81f2292869aef34055ae50c13612be92 gtkterm-0.99.4.ebuild 640
 MD5 bbc54e5d94abd22c3d8f4ebbd336e6ae files/digest-gtkterm-0.99.3 66
 MD5 c8d58fdaa9be726aaf30d6c81001a041 files/digest-gtkterm-0.99.4 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBnm/Djtv59x0+BrURAvvzAJoCevtzqlLS/JTj9ATXjZHtf3UKNQCg9waz
-82H1tdvwiGrUtoYSecJQFkE=
-=+QKr
+iD8DBQFBpDB2jtv59x0+BrURAs5bAJ9LZICxYWZFhtu1R/F81KvF0aByLgCg3mUg
+9LZPgp+OEeaX0CwRq0GDy3U=
+=mwW1
 -----END PGP SIGNATURE-----
