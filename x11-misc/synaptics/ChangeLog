@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/synaptics
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.1 2003/10/13 21:36:01 spyderous Exp $
+
+*synaptics-0.11.8 (13 Oct 2003)
+
+  13 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml,
+  synaptics-0.11.8.ebuild, files/synaptics-0.11.8-makefile-fixup.patch:
+  Initial commit of standalone Synaptics touchpad driver, to be used in future
+  XFree revisions.
+

@@ -1,0 +1,5 @@
+MD5 a4de292547a7d4fbe157a4ecb4ce2193 metadata.xml 821
+MD5 a796eef9cf5b2e17847694e8d61b7c52 ChangeLog 127
+MD5 27252dfc65919a3caa0ab184226f48a7 synaptics-0.11.8.ebuild 1198
+MD5 3d1779930e1b7a5ee311d6fe5d208ba4 files/synaptics-0.11.8-makefile-fixup.patch 651
+MD5 c3238ddaf0b0d3f560cb54e5c113bfef files/digest-synaptics-0.11.8 69
