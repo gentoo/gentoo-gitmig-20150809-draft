@@ -1,25 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-2.96-r2.ebuild,v 1.1 2001/10/07 17:29:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-2.96-r2.ebuild,v 1.2 2001/10/23 22:51:01 hallski Exp $
 
-
-A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ based Audio CD Ripper"
-SRC_URI="http://www.nostatic.org/grip/${A}"
+SRC_URI="http://www.nostatic.org/grip/${P}.tgz"
 HOMEPAGE="http://www.nostatic.org/grip"
 
 DEPEND="media-sound/cdparanoia"
-
-# Seems to be fixed...
-#src_unpack() {
-#
-#   # author forgot to gzip his tgz file... sigh
-#   cd ${WORKDIR}
-#   tar xvf ${DISTDIR}/${P}.tgz
-#
-#}
 
 src_compile() {
 
