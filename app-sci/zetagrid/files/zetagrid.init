@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/files/zetagrid.init,v 1.11 2003/12/11 19:43:10 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/files/zetagrid.init,v 1.12 2003/12/12 18:40:17 tantive Exp $
 
 opts="${opts} progress"
 ZETADIR=/opt/zetagrid/
@@ -12,7 +12,7 @@ start() {
         cd ${ZETADIR}
 	JAVA_HOME="`/bin/grep -e "JAVA_HOME" /etc/profile.env | sed -e "s/^.*'\(.*\)'$/\1/"`"
 	export PATH=$PATH:$JAVA_HOME/bin
-        ./zeta.sh >> /var/log/zetagrid.log >2&1
+        ./zeta.sh >> /var/log/zetagrid.log 2>&1
         eend $? "Failed to start zetagrid"
 }
 
