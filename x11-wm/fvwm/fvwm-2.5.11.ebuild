@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.2 2004/09/30 17:43:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.3 2004/09/30 17:59:20 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -288,14 +288,14 @@ pkg_postinst() {
 		fi
 	fi
 	echo
-	einfo "If you have been using the 'ShowOnlyIcons never' syntax in FvwmIconMan,"
-	einfo "please update your configuration to use the new officially supported"
-	einfo "'ShowNoIcons' option."
+	einfo "If you have been using the 'ShowOnlyIcons never' syntax in"
+	einfo "FvwmIconMan, please update your configuration to use the new "
+	einfo "officially supported 'ShowNoIcons' option."
 	echo
 	einfo "The recommended name for your primary configuration file is now"
-	einfo "~/.fvwm/config, of course, all previously supported locations"
-	einfo "are stlil supported, and this can be overridden on the command line"
+	einfo "~/.fvwm/config, of course, all previously supported locations are"
+	einfo "stlil supported, and this can be overridden on the command line."
 	echo
-	einfo "For in depth information about all changes in this release, please read"
-	einfo "the ChangeLog"
+	einfo "For in depth information about all changes in this release, please"
+	einfo "refer to the ChangeLog."
 }
