@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3391 2004/12/13 23:54:16 tove Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3392 2004/12/14 07:30:01 genone Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -133,10 +133,6 @@ media-video/bcast
 # www-client/prozilla: multiple vulnerabilities bug #70090
 # Security masked and will probably be removed.
 www-client/prozilla
-
-# <genone@gentoo.org> (22 Nov 2004)
-# Will be removed, upstream is dead, SRC_URI and HOMEPAGE unreachable.
-app-editors/zoinks
 
 # <swegener@gentoo.org> (22 Nov 2004)
 # Masked because of dependency on >=dev-db/mysql-4.1 which is also p.mask'ed
@@ -660,10 +656,6 @@ net-misc/zebra
 # But it works. sorta. :)
 =mail-client/sylpheed-0.9.12-r6
 =mail-client/sylpheed-0.9.99-r1
-
-# <genone@gentoo.org> (30 Nov 2003)
-# Service is down, current versions won't work with the new service
-<=app-portage/gentoo-stats-0.4
 
 # <robbat2@gentoo.org> (30 Nov 2003)
 # Need external testing
