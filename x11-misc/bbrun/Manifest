@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21a732f3cdfccef6005871398b40171b ChangeLog 2067
-MD5 a09cca8d943f6148988470038994449f bbrun-1.3.ebuild 969
-MD5 9a7c9c1ce7cbdd204f1f5f7d49d16ef2 bbrun-1.4.ebuild 779
-MD5 2e428cfb774b8b48254e13bc0af271bf metadata.xml 246
-MD5 1cd216d94b1fb15af4c4286181720179 files/digest-bbrun-1.3 60
+MD5 8c3309c572fee38196b4a813cb868a62 bbrun-1.4.ebuild 795
+MD5 bd819b2bb8fd93163b5886a6335d34f7 bbrun-1.6.ebuild 736
+MD5 f2adb41dabda5495e9c41457b8f2c9bf ChangeLog 2395
+MD5 6d984fdc3a2bfe09ec7cb86b38267de3 metadata.xml 256
 MD5 b94011cb198e7e8080531bc1ab4533e4 files/digest-bbrun-1.4 60
+MD5 06a0a7096e93b02ded875028969d8cb9 files/digest-bbrun-1.6 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBHihpI1lqEGTUzyQRAhhVAJwJyfQfC/swUWG2/IcOOriqFLXxWwCeJchG
-n3hQCeABt7tvw9DzCLwUMdE=
-=Qpgs
+iD8DBQFB359nEZCkKN40op4RAqO7AJ9+iUD1rqK2SbqLq3TDlmYd05U1zwCgsayA
+1KS2h8cQkuqNv57OQh2sAoE=
+=TmZ3
 -----END PGP SIGNATURE-----

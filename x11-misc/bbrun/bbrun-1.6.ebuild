@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.4.ebuild,v 1.8 2005/01/08 08:52:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.6.ebuild,v 1.1 2005/01/08 08:52:45 ka0ttic Exp $
 
 DESCRIPTION="blackbox program execution dialog box"
 SRC_URI="http://www.darkops.net/${PN}/${P}.tar.gz"
@@ -8,16 +8,15 @@ HOMEPAGE="http://www.darkops.net/bbrun/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1.2*"
+DEPEND=">=x11-libs/gtk+-2"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/bbrun
-	mv Makefile Makefile.orig
-	sed '/CFLAGS =/ s:$: -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 '"${CFLAGS}"':' Makefile.orig > Makefile || die
+	sed -i "s:-g -c -O2:-c ${CFLAGS}:" Makefile || die "sed Makefile failed"
 }
 
 src_compile() {
@@ -27,5 +26,5 @@ src_compile() {
 
 src_install () {
 	dobin bbrun/bbrun || die "failed to install bbrun"
-	dodoc README COPYING
+	dodoc Changelog README COPYING
 }
