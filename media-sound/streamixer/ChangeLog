@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/streamixer
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamixer/ChangeLog,v 1.1 2004/03/18 15:45:12 eradicator Exp $
+
+*streamixer-1.19.0 (18 Mar 2004)
+
+  18 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  streamixer-1.19.0.ebuild:
+  Ebuild submitted by Joel Yliluoma <bisqwit@iki.fi> in bug #28460..
+
