@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.221-r1.ebuild,v 1.1 2004/09/11 15:26:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.221-r1.ebuild,v 1.2 2004/09/23 12:21:37 vapier Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
@@ -26,7 +26,7 @@ SRC_URI="http://www.iozone.org/src/current/${PN}${PV/./_}.tar"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc
@@ -49,34 +49,20 @@ src_compile() {
 		-e "s:[/a-z]*cc.*-Dunix:${CC} ${CFLAGS} -Dunix:g" makefile
 
 	case ${ARCH} in
-		x86|alpha)
-			PLATFORM="linux"
-			;;
-		arm)
-			PLATFORM="linux-arm"
-			;;
-		ppc)
-			PLATFORM="linux-powerpc"
-			;;
-		amd64)
-			PLATFORM="linux-AMD64"
-			;;
-		ia64)
-			PLATFORM="linux-IA64"
-			;;
-		s390)
-			PLATFORM="linux-S390"
-			;;
-		*)
-			PLATFORM="linux-${ARCH}"
-			;;
+		x86|alpha)	PLATFORM="linux";;
+		arm)		PLATFORM="linux-arm";;
+		ppc)		PLATFORM="linux-powerpc";;
+		amd64)		PLATFORM="linux-AMD64";;
+		ia64)		PLATFORM="linux-IA64";;
+		s390)		PLATFORM="linux-S390";;
+		*)			PLATFORM="linux-${ARCH}";;
 	esac
 
 	emake ${PLATFORM} || die "Compile failed"
 }
 
 src_install() {
-	dosbin src/current/iozone
+	dosbin src/current/iozone || die
 	dodoc docs/I*
 	dodoc docs/Run_rules.doc
 	dodoc src/current/Changes.txt
