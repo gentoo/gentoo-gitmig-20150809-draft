@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.25 2005/02/17 17:17:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.26 2005/03/30 16:15:29 hansmi Exp $
+
+  30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> adodb-4.55.ebuild:
+  Stable on ppc.
 
   17 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> adodb-4.0.5.ebuild:
   Bug #69831: Ensure unzip is in DEPEND.
