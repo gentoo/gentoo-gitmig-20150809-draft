@@ -1,0 +1,9 @@
+# ChangeLog for net-p2p/ed2k_hash
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.1 2003/10/23 18:35:49 lanius Exp $
+
+*ed2k_hash-0.3.3 (23 Oct 2003)
+
+  23 Oct 2003; Heinrich Wendel <lanius@gentoo.org> ed2k_hash-0.3.3.ebuild:
+  initial revision, thx to Sven Wegener <sven.wegener@stealer.net> #31520
+
