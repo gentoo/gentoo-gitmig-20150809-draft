@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.4 2004/07/01 20:53:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.5 2004/07/15 02:42:27 agriffis Exp $
 
 inherit eutils
 
@@ -21,8 +21,6 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	virtual/linux-sources"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
