@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 79742254305819c3ce971dd6404b26f7 ChangeLog 5055
-MD5 4789df19c91fdc50291390790c31fec9 devfsd-1.3.25-r8.ebuild 1215
+MD5 74e290492054656ce753a7ded13af4f5 ChangeLog 5177
+MD5 2759f6235aec311389c0e9b7e3fc9dc9 devfsd-1.3.25-r8.ebuild 1269
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 72d324e2b484a8ba4087e16c46e6e2bf files/devfsd.conf 5139
 MD5 d580e9efc3658a0e71a165b3b531d415 files/devfsd 245
@@ -13,7 +13,7 @@ MD5 3df00d60f0ad517c5489f558c1a95056 files/devfsd-1.3.25-no-nis.patch 2142
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBmP9PHTu7gpaalycRArAiAKDCyhXOtsXf+k5gcjUY/EJ1mm6DawCg2Vsr
-0xAlJxmvoVuDNDrfdtcsujE=
-=wgr6
+iD8DBQFBsSUmroRuSHgZdywRAheZAJoDEstw9Jy5vCA8czpiLHqoTIYBcwCfWSee
+8+75mbVKYgQpRQ/5wZPgCTE=
+=uXRs
 -----END PGP SIGNATURE-----
