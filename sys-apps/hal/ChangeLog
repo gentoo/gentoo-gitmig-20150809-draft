@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.22 2005/01/11 23:58:03 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.23 2005/01/12 14:54:54 foser Exp $
+
+  12 Jan 2005; foser <foser@gentoo.org> hal-0.4.4-r1.ebuild :
+  Change the iso label patch for a somewhat cleaner one
+
+  12 Jan 2005; foser <foser@gentoo.org> hal-0.4.2-r1.ebuild :
+  Fix SRC_URI (#77478) thnx to Gudleik Rasch for noticing
 
   11 Jan 2005; John Mylchreest <johnm@gentoo.org> hal-0.2.98-r1.ebuild,
   hal-0.4.1-r1.ebuild, hal-0.4.2-r1.ebuild, hal-0.4.4-r1.ebuild:

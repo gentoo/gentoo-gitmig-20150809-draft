@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.2-r1.ebuild,v 1.4 2005/01/12 14:22:15 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.2-r1.ebuild,v 1.5 2005/01/12 14:54:54 foser Exp $
 
 inherit eutils python
 
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
-SRC_URI="http://freedesktop.org/~david/${P}.tar.gz"
+SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
