@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tpctl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/ChangeLog,v 1.8 2005/01/08 21:40:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/ChangeLog,v 1.9 2005/03/31 20:45:23 blubb Exp $
+
+  31 Mar 2005; <blubb@gentoo.org> tpctl-4.8.ebuild:
+  stable on amd64
 
 *tpctl-4.16 (08 Jan 2005)
 
