@@ -29,6 +29,7 @@ sqlite
 firebird
 mzscheme
 chasen
+fdftk
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
