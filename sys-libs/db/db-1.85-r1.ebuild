@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.8 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.9 2002/07/16 04:19:53 gerk Exp $
 
 S=${WORKDIR}/db.${PV}
 DESCRIPTION="db 1.85 -- required for RPM 4.0 to compile; that's about it."
@@ -10,7 +10,7 @@ DEPEND="virtual/glibc"
 RDEPEND=$DEPEND
 SLOT="1"
 LICENSE="DB"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 

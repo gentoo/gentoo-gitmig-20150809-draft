@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 #        Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.4 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.5 2002/07/16 04:15:55 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
@@ -9,7 +9,7 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/gdbm/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND="virtual/glibc

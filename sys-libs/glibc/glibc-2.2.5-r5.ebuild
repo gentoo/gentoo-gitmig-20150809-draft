@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r5.ebuild,v 1.4 2002/07/13 06:42:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r5.ebuild,v 1.5 2002/07/16 04:15:00 gerk Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
@@ -10,7 +10,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
-KEYWORDS="*"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="2.2"
 
