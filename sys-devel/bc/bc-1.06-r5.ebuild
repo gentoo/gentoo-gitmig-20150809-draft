@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.10 2003/09/17 19:05:54 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.11 2003/11/28 15:55:30 aliz Exp $
 
 IUSE="readline"
 
@@ -53,6 +53,10 @@ src_compile() {
 
 	# -Os causes segfaults on x86
 	use x86 && replace-flags "-Os" "-O2"
+
+	# >= -O2 crashes bc -l and -O1 produces no output
+	use amd64 && replace-flags "-O[1-9]" "-O0"
+
 	local myconf=""
 	use readline && myconf="--with-readline"
 
