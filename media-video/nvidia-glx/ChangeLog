@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.52 2004/07/13 16:06:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.53 2004/07/17 03:28:57 cyfred Exp $
+
+*nvidia-glx-1.0.6106-r1 (17 Jul 2004)
+
+  17 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +files/1.0.6106/NVIDIA_glx-1.0.6106-glheader.patch,
+  +nvidia-glx-1.0.6106-r1.ebuild:
+  See bug #54984 -- Changing TLS, glext.h, patching gl.h
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> nvidia-glx-1.0.6106.ebuild:
   the previous amd64 nvidia drivers arent exactly what i would call stable, but

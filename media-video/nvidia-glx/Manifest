@@ -2,11 +2,12 @@ MD5 30625d4053cb03c505077141edf94976 nvidia-glx-1.0.5336-r2.ebuild 3443
 MD5 37e94c0213dc16d73d122ac22df67b78 nvidia-glx-1.0.6106.ebuild 4855
 MD5 c79e7c8a94dd542020eec47fcc960e9b nvidia-glx-1.0.5332-r2.ebuild 3686
 MD5 d40244500cd750887c4c2074678b91df nvidia-glx-1.0.4499.ebuild 2726
+MD5 94acbb107b57f0a9b51743c5e38b4167 nvidia-glx-1.0.6106-r1.ebuild 5351
 MD5 65ab1b807374ee2f065e75be6ce4c587 nvidia-glx-1.0.4496.ebuild 3056
 MD5 5eb20c5294063f5553d246f3c97bf8cd nvidia-glx-1.0.4496-r1.ebuild 3376
 MD5 01ed7d4ae6ca52293e63a39723d83eb6 nvidia-glx-1.0.4363.ebuild 2984
 MD5 ec76697170ba0841f10a3f4b2901a1bb nvidia-glx-1.0.5328-r1.ebuild 3231
-MD5 7ec043a27899370b58190152ef79dc4c ChangeLog 9879
+MD5 b7d2e31412eb74fb955ab12c394fdd3e ChangeLog 10118
 MD5 cf991042be5789d00fe389f31166412a metadata.xml 290
 MD5 97f35a7b23f2e60d2abc5eff121bea3f files/nvidia-glx-1.0.4499-defines.patch 437
 MD5 cea66cc5b458a313a9ac72b56e32e10b files/README.gentoo 200
@@ -26,6 +27,8 @@ MD5 3d8b3ecb3827e2e3a9a45ac6c3210a0a files/nvidia-glx-1.0.5328-defines.patch 437
 MD5 497ffcbd6a91ed9447dfdf7b736925bd files/digest-nvidia-glx-1.0.5328-r1 80
 MD5 cf7b2bb276c568f0f66d10951b4ce3ad files/digest-nvidia-glx-1.0.5332-r2 83
 MD5 1316f73c0eecd8832bb362a3d5ca4892 files/digest-nvidia-glx-1.0.5336-r2 80
+MD5 50ffea0f5eb12d252905f379bc7be2d6 files/digest-nvidia-glx-1.0.6106-r1 163
 MD5 c3afc69f917a783ebd53cf2de38065dc files/09nvidia 61
+MD5 dc042e58fec2cdaab035e7cc41307f46 files/1.0.6106/NVIDIA_glx-1.0.6106-glheader.patch 428
 MD5 3d8b3ecb3827e2e3a9a45ac6c3210a0a files/1.0.6106/NVIDIA_glx-1.0.6106-defines.patch 437
 MD5 6f55327ce020f7ed0d433ea99dacb315 files/1.0.6106/NVIDIA_glx-1.0.6106-makefile.patch 593

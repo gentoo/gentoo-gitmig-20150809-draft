@@ -1,0 +1,15 @@
+--- usr/include/GL/gl.h.old	2004-07-14 16:29:58.602003368 +1000
++++ usr/include/GL/gl.h	2004-07-14 16:34:21.478040136 +1000
+@@ -48,6 +48,12 @@
+ # define __DEFINED_GLAPI
+ #endif
+ 
++/* Defining what we have in this file version wise */
++#define GL_VERSION_1_2
++#define GL_VERSION_1_3
++#define GL_VERSION_1_4
++#include <GL/glext.h>
++
+ /*************************************************************/
+ 
+ typedef unsigned int GLenum;
