@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.116 2004/10/07 06:02:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.117 2004/10/09 18:25:43 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -543,18 +543,27 @@ get_number_of_jobs() {
 # does not exist on the users system
 # vapier@gentoo.org
 #
-# Takes just 1 parameter (the directory to create tmpfile in)
-mymktemp() {
+# Takes just 1 optional parameter (the directory to create tmpfile in)
+emktemp() {
 	local topdir="$1"
 
-	[ -z "${topdir}" ] && topdir=/tmp
-	if [ "`which mktemp 2>/dev/null`" ]
+	if [ -z "${topdir}" ]
 	then
-		mktemp -p ${topdir}
+		[ -z "${T}" ] \
+			&& topdir="/tmp" \
+			|| topdir="${T}"
+	fi
+
+	if [ -z "$(type -p mktemp)" ]
+	then
+		local tmp=/
+		while [ -e "${tmp}" ] ; do
+			tmp="${topdir}/tmp.${RANDOM}.${RANDOM}.${RANDOM}"
+		done
+		touch "${tmp}"
+		echo "${tmp}"
 	else
-		local tmp="${topdir}/tmp.${RANDOM}.${RANDOM}.${RANDOM}"
-		touch ${tmp}
-		echo ${tmp}
+		mktemp -p "${topdir}"
 	fi
 }
 
@@ -1028,7 +1037,7 @@ unpack_pdv() {
 	local tailskip=`tail -c $((${sizeoff_t}*2)) ${src} | head -c ${sizeoff_t} |  hexdump -e \"%i\"`
 
 	# grab metadata for debug reasons
-	local metafile="`mymktemp ${T}`"
+	local metafile="$(emktemp)"
 	tail -c +$((${metaskip}+1)) ${src} > ${metafile}
 
 	# rip out the final file name from the metadata
@@ -1036,7 +1045,7 @@ unpack_pdv() {
 	datafile="`basename ${datafile}`"
 
 	# now lets uncompress/untar the file if need be
-	local tmpfile="`mymktemp ${T}`"
+	local tmpfile="$(emktemp)"
 	tail -c +$((${tailskip}+1)) ${src} 2>/dev/null | head -c 512 > ${tmpfile}
 
 	local iscompressed="`file -b ${tmpfile}`"
@@ -1148,7 +1157,7 @@ unpack_makeself() {
 	esac
 
 	# lets grab the first few bytes of the file to figure out what kind of archive it is
-	local tmpfile="$(mymktemp "${T}")"
+	local tmpfile="$(emktemp)"
 	eval ${exe} 2>/dev/null | head -c 512 > "${tmpfile}"
 	local filetype="$(file -b "${tmpfile}")"
 	case ${filetype} in
@@ -1205,7 +1214,7 @@ check_license() {
 	done
 	set +o noglob; set -$shopts #reset old shell opts
 
-	local licmsg="`mymktemp ${T}`"
+	local licmsg="$(emktemp)"
 	cat << EOF > ${licmsg}
 **********************************************************
 The following license outlines the terms of use of this
