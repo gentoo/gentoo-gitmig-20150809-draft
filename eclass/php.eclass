@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.42 2003/06/12 08:45:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.43 2003/06/12 08:50:41 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -200,6 +200,9 @@ php_src_unpack() {
 
 
 php_src_compile() {
+	# Stuart, test this (just uncomment it):
+	# use ldap && use kerberos && LIBS="${LIBS} -lkrb4"
+	
 	# Control the extra SAPI stuff that can be built in addition to any usual SAPI
 #	[ -z "${PHP_CGI}" ] && PHP_CGI=0
 #	[ -z "${PHP_CLI}" ] && PHP_CLI=0
@@ -343,9 +346,9 @@ php_src_compile() {
 		--enable-versioning \
 		--with-config-file-path=/etc/php4" 
 
-	econf \
+	LIBS="${LIBS}" econf \
 		${myconf} || die "bad ./configure"
-
+	
 	emake || die "compile problem"
 
 }
