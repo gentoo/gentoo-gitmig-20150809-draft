@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.21 2004/06/03 16:07:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.22 2004/06/06 16:31:25 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> fftw-2.1.5-r1.ebuild,
+  fftw-3.0.1-r1.ebuild:
+  Marked stable on amd64.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> fftw-3.0.1-r1.ebuild,
   fftw-3.0.1.ebuild:
