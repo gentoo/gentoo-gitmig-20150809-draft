@@ -1,5 +1,15 @@
 #! /bin/sh
 
+if [ -f $HOME/.gentoo/java-env ] ; then
+  envfile=$HOME/.gentoo/java-env
+elif [ -f /etc/env.d/20java ] ; then
+  envfile=/etc/env.d/20java
+else
+  echo "!!! /etc/env.d/20java not found, please configure your system VM with java-config"
+fi
+
+JAVA_HOME=`grep JAVA_HOME $envfile | sed "s/JAVA_HOME=//"`
+
 if [ -f $HOME/.antrc ] ; then 
   . $HOME/.antrc
 fi

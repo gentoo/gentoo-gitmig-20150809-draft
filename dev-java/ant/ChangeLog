@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.2 2002/04/10 12:10:43 karltk Exp $
+
+*ant-1.4.1-r2 (10 Apr 2002)
+
+  10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r2.ebuild files/digest-ant-1.4.1-r2:
+
+  The JAVA_HOME env var is now picked from $HOME/.gentoo/java-env if it exists,
+  /etc/env.d/20java if not. An error is emitted if both files are missing.
+
+  Removed ant-1.4.1-r1.ebuild files/digest-ant-1.4.1-r1
 
 *ant-1.4.1-r1 (1 Feb 2002)
 
