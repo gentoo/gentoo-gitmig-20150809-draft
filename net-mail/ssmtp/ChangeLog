@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.12 2003/04/18 20:33:13 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.13 2003/06/10 00:10:35 raker Exp $
+
+*ssmtp-2.60.3 (09 Jun 2003)
+
+  09 Jun 2003; Nick Hadaway <raker@gentoo.org> ssmtp-2.60.3.ebuild,
+  files/digest-ssmtp-2.60.3, files/starttls.diff:
+  Version bump.  Major features added upstream and included in the
+  ebuild.  Many thanks to ferdy@ferdyx.org for the updates.
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
