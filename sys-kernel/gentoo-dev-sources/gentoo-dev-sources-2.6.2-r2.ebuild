@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.2-r1.ebuild,v 1.1 2004/02/15 18:12:49 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.2-r2.ebuild,v 1.1 2004/02/19 19:17:45 johnm Exp $
 
 #version of gentoo patchset
 GPV=2.21
@@ -10,7 +10,7 @@ GPV_SRC="http://dev.gentoo.org/~johnm/files/genpatches-2.6-${GPV}.tar.bz2"
 RESTRICT="nomirror"
 KEYWORDS="amd64 x86"
 
-UNIPATCH_LIST="${DISTDIR}/genpatches-2.6-${GPV}.tar.bz2"
+UNIPATCH_LIST="${DISTDIR}/genpatches-2.6-${GPV}.tar.bz2  ${FILESDIR}/2.6-do_munmap.patch"
 UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/README"
 
 ETYPE="sources"
