@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/xindice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.5 2004/08/23 07:37:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.6 2004/08/27 10:16:52 phosphan Exp $
+
+*xindice-1.0-r2 (27 Aug 2004)
+
+  27 Aug 2004; Patrick Kursawe <phosphan@gentoo.org>
+  +files/xindice-1.0-r2.patch, +files/xindice-r1, +xindice-1.0-r2.ebuild:
+  Compilation problems (bug #61131) force to use external ant.
+  Start script was referring to old location in /usr/lib.
 
   23 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> xindice-1.0-r1.ebuild:
   Warning about JVM in setup now
