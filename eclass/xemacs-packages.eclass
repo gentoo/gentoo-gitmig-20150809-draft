@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-packages.eclass,v 1.2 2003/01/01 11:29:33 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-packages.eclass,v 1.3 2003/01/06 14:00:30 rendhalver Exp $
 
 # xemacs-packages eclass inherited by all xemacs packages
 # $PKG_CAT need's to be set before inheriting xemacs-packages
@@ -29,10 +29,10 @@ esac
 if [ -n "$EXPERIMENTAL" ]
 then
 	[ -z "$SRC_URI" ] && SRC_URI="ftp://ftp.xemacs.org/beta/experimental/packages/${P}-pkg.tar.gz"
-	KEYWORDS="x86 -ppc alpha sparc"
+	KEYWORDS="~x86 -ppc ~alpha ~sparc"
 else
 	[ -z "$SRC_URI" ] && SRC_URI="ftp://ftp.xemacs.org/packages/${P}-pkg.tar.gz"
-	KEYWORDS="~x86 -ppc ~alpha ~sparc"
+	KEYWORDS="x86 -ppc alpha sparc"
 fi
 [ -n "$DEBUG" ] && einfo "SRC_URI is ${SRC_URI}"
 
