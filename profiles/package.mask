@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (19 Sep 2003)
-# Test phase for portage-2.0.49-r5
->=sys-apps/portage-2.0.49-r5
-
 # <aliz@gentoo.org> (19 Sep 2003)
 # 2.60 is still in the rc stage
 =dev-perl/Mail-SpamAssassin-2.60
