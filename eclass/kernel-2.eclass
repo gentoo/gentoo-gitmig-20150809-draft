@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.84 2005/01/14 12:15:15 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.85 2005/01/16 19:36:27 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -367,11 +367,11 @@ install_sources() {
 }
 
 install_manpages() {
-	env -u ARCH	sed -ie "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
+	sed -ie "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
 	ebegin "Installing manpages"
 	env -u ARCH make installmandocs
 	eend $?
-	env -u ARCH sed -ie "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
+	sed -ie "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
 }
 
 # pkg_preinst functions
@@ -803,7 +803,7 @@ detect_arch() {
 
 	ARCH_URI=""
 	ARCH_PATCH=""
-	ALL_ARCH="X86 PPC PPC64 SPARC MIPS ALPHA ARM HPPA AMD64 IA64 X86OBSD S390"
+	ALL_ARCH="X86 PPC PPC64 SPARC MIPS ALPHA ARM HPPA AMD64 IA64 X86OBSD S390 SH"
 
 	for LOOP_ARCH in ${ALL_ARCH}
 	do
