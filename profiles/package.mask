@@ -324,8 +324,6 @@ media-libs/id3lib-docs
 >=sys-libs/db-3.2.9
 >=sys-libs/db-3.3
 
-# Test ncurses fix0rs
-=sys-devel/gcc-3.1-r6
 #this gcc's new atexit() fix that is supposed to be wonderful, doesn't work....
 =sys-devel/gcc-2.95.3-r2
 # needs to be tested
