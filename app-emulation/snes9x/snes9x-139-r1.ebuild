@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.13 2003/02/23 10:26:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.14 2003/02/24 01:16:50 vapier Exp $
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
@@ -11,7 +11,7 @@ KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE="X svga 3dfx opengl"
 
-DEPEND="x86? (dev-lang/nasm)
+DEPEND="x86? ( dev-lang/nasm )
 	X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )
 	opengl? ( virtual/opengl )
