@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.10.ebuild,v 1.2 2003/04/30 06:38:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.10.ebuild,v 1.3 2003/06/10 12:51:14 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -25,7 +25,7 @@ RDEPEND="net-mail/mailbase
 	virtual/aspell-dict
 	ssl? ( dev-libs/openssl )
 	perl? ( >=dev-libs/libpcre-3.4 )
-	gtkhtml? ( >=gnome-extra/libgtkhtml-2 )
+	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
 	ldap? ( net-nds/openldap )"
 
 DEPEND="dev-util/pkgconfig
