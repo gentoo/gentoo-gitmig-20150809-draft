@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.35 2004/10/19 06:59:47 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.36 2004/10/19 07:11:42 brix Exp $
+
+*ipw2100-0.56-r1 (19 Oct 2004)
+
+  19 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +files/ipw2100-0.56-ieee80211_scan_age.2.patch,
+  +files/ipw2100-0.56-wpa_eapol_fix.patch, +ipw2100-0.56-r1.ebuild,
+  ipw2100-0.56.ebuild:
+  Added ieee80211_scan_age and wpa_eapol_fix patches from the ipw2100-devel
+  mailing list. Fixed typo in error message.
 
   19 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> ipw2100-0.56.ebuild:
   Fixed CRYPTO_AES_586 error message.

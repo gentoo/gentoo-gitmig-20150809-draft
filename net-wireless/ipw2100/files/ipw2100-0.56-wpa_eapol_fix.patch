@@ -1,0 +1,12 @@
+diff -urp ipw2100-0.56/ieee80211_tx.c ipw2100-0.56-wpa_eapol_fix/ieee80211_tx.c
+--- ipw2100-0.56/ieee80211_tx.c	2004-10-13 21:06:57.000000000 +0200
++++ ipw2100-0.56-wpa_eapol_fix/ieee80211_tx.c	2004-10-16 21:11:26.759132272 +0200
+@@ -274,7 +274,7 @@ struct ieee80211_txb *ieee80211_skb_to_t
+ #ifdef CONFIG_IEEE80211_CRYPT
+ 	crypt = ieee->crypt[ieee->tx_keyidx];
+ 
+-	encrypt = (ether_type != ETH_P_PAE && ieee->host_encrypt && crypt && crypt->ops);
++	encrypt = !(ether_type == ETH_P_PAE && ieee->ieee_802_1x) && ieee->host_encrypt && crypt && crypt->ops;
+ 
+ #ifdef CONFIG_IEEE80211_WPA
+ 	if (!encrypt && ieee->ieee_802_1x &&

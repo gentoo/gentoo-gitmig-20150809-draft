@@ -1,0 +1,46 @@
+Index: ieee80211_wx.c
+===================================================================
+RCS file: /usr/src/repository/wireless/ipw2100/ieee80211_wx.c,v
+retrieving revision 1.43
+retrieving revision 1.47
+diff -u -p -r1.43 -r1.47
+--- ieee80211_wx.c	7 Oct 2004 20:57:30 -0000	1.43
++++ ieee80211_wx.c	14 Oct 2004 18:21:12 -0000	1.47
+@@ -258,9 +258,17 @@ int ieee80211_wx_get_scan(struct ieee802
+ 	
+ 	list_for_each_entry(network, &ieee->network_list, list) {
+ 		i++;
+-/*		if (ieee->scan_age == 0 ||
+-		jiffies - network->last_scanned < ieee->scan_age) */
+- 			ev = ipw2100_translate_scan(ieee, ev, stop, network);
++		if (ieee->scan_age == 0 ||
++		    (jiffies - network->last_scanned) < ieee->scan_age) 
++			ev = ipw2100_translate_scan(ieee, ev, stop, network);
++		else 
++			IEEE80211_DEBUG_SCAN(
++				"Not showing network '%s (" 
++				MAC_FMT ")' due to age (%lums).\n",
++				escape_essid(network->ssid, 
++					     network->ssid_len),
++				MAC_ARG(network->bssid),
++				(jiffies - network->last_scanned) / (HZ / 100));
+ 	}
+ 
+ 	spin_unlock_irqrestore(&ieee->lock, flags);
+Index: ieee80211.h
+===================================================================
+RCS file: /usr/src/repository/wireless/ipw2100/ieee80211.h,v
+retrieving revision 1.53
+retrieving revision 1.55
+diff -u -p -r1.53 -r1.55
+--- ieee80211.h	13 Oct 2004 15:40:07 -0000	1.53
++++ ieee80211.h	14 Oct 2004 18:31:32 -0000	1.55
+@@ -594,7 +590,7 @@ enum ieee80211_state {
+ 	IEEE80211_SHUTDOWN
+ };
+ 
+-#define DEFAULT_MAX_SCAN_AGE (5 * HZ) 
++#define DEFAULT_MAX_SCAN_AGE (15 * HZ) 
+ #define DEFAULT_FTS 2342
+ #define MAC_FMT "%02x:%02x:%02x:%02x:%02x:%02x"
+ #define MAC_ARG(x) ((u8*)(x))[0],((u8*)(x))[1],((u8*)(x))[2],((u8*)(x))[3],((u8*)(x))[4],((u8*)(x))[5]

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56.ebuild,v 1.3 2004/10/19 07:11:42 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56-r1.ebuild,v 1.1 2004/10/19 07:11:42 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -87,6 +87,10 @@ src_unpack() {
 		cd ${S}
 		epatch ${WORKDIR}/${P}-2.4-v1.patch
 	fi
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-wpa_eapol_fix.patch
+	epatch ${FILESDIR}/${P}-ieee80211_scan_age.2.patch
 
 	einfo "Patching Makefile to enable WPA"
 	sed -i "s:^# CONFIG_IEEE80211_WPA=:CONFIG_IEEE80211_WPA=:" \
