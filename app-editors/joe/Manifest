@@ -1,3 +1,4 @@
-MD5 8115b4ae2f2702a436c3008f32ae6ca4 files/digest-joe-3.0-r1 59
 MD5 e00f55d444efcf5f1357d2871253ba30 ChangeLog 3097
-MD5 953d025b6217eeadfa74b826747509e3 joe-3.0-r1.ebuild 1291
+MD5 f5d862d93d67b979f726a76d2d289761 metadata.xml 777
+MD5 5f74a1846fdf4be3c8d5eb9fa7dd4a34 joe-3.0-r1.ebuild 1290
+MD5 8115b4ae2f2702a436c3008f32ae6ca4 files/digest-joe-3.0-r1 59

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>joker@gentoo.org</email>
+  <name>Christian Birchinger</name>
+  <description>Basic ebuild maintenance only. Feel free to take over maintainership.</description>
+</maintainer>
+<longdescription>
+  JOE (Joe's own editor) has the feel of most IBM PC text editors: The
+  key-sequences are reminiscent of WordStar and Turbo-C. JOE is much more
+  powerful than those editors, however. JOE has all of the features a UNIX
+  user should expect: full use of termcap/terminfo, excellent screen update
+  optimizations, simple installation, and all of the UNIX-integration features
+  of VI.
+</longdescription>
+</pkgmetadata>
