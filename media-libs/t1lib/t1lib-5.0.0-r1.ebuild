@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r1.ebuild,v 1.2 2003/08/04 15:17:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r1.ebuild,v 1.3 2003/08/15 13:04:39 lanius Exp $
 
 inherit gnuconfig
 
@@ -76,7 +76,7 @@ pkg_postinst () {
 
 	ewarn 
 	ewarn "You must rebuild other packages depending on t1lib."
-	ewarn "You may use revdep-rebuild (from app-admin/gentoolkit)"
+	ewarn "You may use revdep-rebuild (from app-portage/gentoolkit)"
 	ewarn "to do all necessary tricks."
 	ewarn
 }
