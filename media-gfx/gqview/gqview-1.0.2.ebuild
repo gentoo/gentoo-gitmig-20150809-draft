@@ -1,11 +1,11 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Santa Clause <sc@arctic.np>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.0.ebuild,v 1.1 2001/12/16 12:31:47 azarah Exp $
+# Maintainer: Santa Clause <sc@arctic.np>
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.0.2.ebuild,v 1.1 2002/02/02 17:12:48 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME image browser"
-SRC_URI="http://download.sourceforge.net/gqview/${P}.tar.gz"
+SRC_URI="http://prdownloads.sourceforge.net/gqview/${P}.tar.gz"
 HOMEPAGE="http://gqview.sourceforge.net/"
 
 DEPEND="virtual/glibc
