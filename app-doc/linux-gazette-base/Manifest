@@ -1,3 +1,13 @@
-MD5 b41758b110c1b264c0b07e033c34a419 linux-gazette-base-99.ebuild 736
-MD5 e2da288e6558a84527c7edb4cd2c44aa ChangeLog 735
-MD5 c2abc60a8cc9c11fc250db05aad45521 files/digest-linux-gazette-base-99 63
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2f96efc8242c2852daa80b2cf4bb2795 ChangeLog 395
+MD5 164768a4a3fd18427e9a951cfcbe70e6 linux-gazette-base-105.ebuild 737
+MD5 4871a91cad408cb52668d04a45c5e56b files/digest-linux-gazette-base-105 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBKqyXHTu7gpaalycRAra8AKDtJsUp13wDAMTlZ6ZKYp0/WI6PzwCg6adO
+gxwPs7LqfK68Wu5oT9YwHEA=
+=E7l/
+-----END PGP SIGNATURE-----
