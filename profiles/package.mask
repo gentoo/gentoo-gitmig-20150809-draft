@@ -180,6 +180,7 @@ dev-embedded/picptk
 # <strider@gentoo.org> (18 Oct 2003)
 # Brand new building system for ant needs a lot of testing
 =dev-java/ant-1.5.4-r2
+=dev-java/ant-1.6.0-r1
 
 # <mkennedy@gentoo.org> (15 Oct 2003)
 # uncertain status
