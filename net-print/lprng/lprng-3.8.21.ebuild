@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.21.ebuild,v 1.2 2003/07/23 09:29:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.21.ebuild,v 1.3 2003/07/25 09:01:37 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,6 +19,8 @@ DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc !virtual/lpr"
 LICENSE="GPL-2 | Artistic"
 SLOT="0"
+
+has_version net-print/foomatic && newdepend ">=net-print/foomatic-3.0.0"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -67,10 +69,4 @@ src_install() {
 	doins ${FILESDIR}/printcap lpd.conf lpd.perms
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/lprng-init lprng
-}
-
-pkg_postinst() {
-	einfo
-	einfo "You will need foomatic >= 3.0 to work with this version of lprng"
-	einfo
 }
