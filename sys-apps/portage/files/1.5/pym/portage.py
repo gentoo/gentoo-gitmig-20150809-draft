@@ -1224,6 +1224,11 @@ class portagetree(packagetree):
 					returnme=returnme+" "+x[:-1]
 				return returnme
 		return ""
+	def getname(self,pkgname):
+		"returns file location for this particular package"
+		mysplit=string.split(pkgname,"/")
+		psplit=pkgsplit(mysplit[1])
+		return self.root+"/"+mysplit[0]+"/"+psplit[0]+"/"+mysplit[1]+".ebuild"
 
 class currenttree(packagetree):
 	"this tree will scan a current package file located at root (passed to init)"
