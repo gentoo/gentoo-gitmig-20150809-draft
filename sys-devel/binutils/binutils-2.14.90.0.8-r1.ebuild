@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.24 2004/09/28 15:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.25 2004/10/20 17:30:41 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha ~hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="alpha amd64 ~hppa ~ia64 mips ~ppc ~ppc64 s390 sparc x86"
 IUSE="nls bootstrap build multitarget uclibc"
 
 DEPEND="virtual/libc
