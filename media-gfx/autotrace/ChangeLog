@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/Changelog,v 1.1 2002/05/25 08:37:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
 
   23 May 2002; George Shapovalov <george@gentoo.org> Changelog, autotrace-0.30.ebuild :
   added to cvs
