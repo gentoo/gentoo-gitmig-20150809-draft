@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.5 2004/02/23 00:36:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.6 2004/02/25 18:53:24 tgall Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Access control list utilities, libraries and headers"
@@ -9,7 +9,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~amd64 ~ppc sparc alpha ~hppa ~mips ia64"
+KEYWORDS="~x86 ~amd64 ~ppc sparc alpha ~hppa ~mips ia64 ppc64"
 
 RDEPEND=">=sys-apps/attr-2.4
 		 nls? ( sys-devel/gettext )"
