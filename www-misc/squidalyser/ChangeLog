@@ -1,0 +1,31 @@
+# ChangeLog for net-www/squidalyser
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/ChangeLog,v 1.1 2004/08/15 18:14:16 stuart Exp $
+
+*squidalyser-0.2.55 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +squidalyser-0.2.55.ebuild:
+  Moved from net-www/squidalyser to www-misc/squidalyser.
+
+  23 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; +metadata.xml:
+  Adding metadata.xml
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> squidalyser-0.2.55.ebuild:
+  Stable on alpha.
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> squidalyser-0.2.55.ebuild:
+  fixing depend qa issue. see 45343.
+
+*squidalyser-0.2.55 (22 Dec 2002)
+
+  18 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  squidalyser-0.2.55.ebuild:
+  added missing patch from the original submission. Thanks to: Alberto Ornaghi
+  <alor@antifork.org> in bug #19534
+
+  22 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  squidalyser-0.2.55.ebuild:
+
+  Initial import.  Ebuild submitted by bnelson@itministry.org (Brian
+  Nelson) in bug 10111.
