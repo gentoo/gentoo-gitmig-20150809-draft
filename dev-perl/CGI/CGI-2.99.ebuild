@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-2.99.ebuild,v 1.4 2004/02/07 17:49:52 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-2.99.ebuild,v 1.5 2004/03/20 02:52:05 esammer Exp $
 
 inherit perl-module
 
@@ -14,4 +14,4 @@ IUSE=""
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~mips"
-newdepend ">=perl-5.8.0-r12"
+newdepend ">=dev-lang/perl-5.8.0-r12"
