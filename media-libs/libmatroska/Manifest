@@ -4,7 +4,7 @@ MD5 dd67452cc7502dee0a6f742598518b89 libmatroska-0.5.2.ebuild 798
 MD5 1be73c5b1a49e1afa1a1a05f2d33b981 libmatroska-0.7.1.ebuild 1272
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 6f7373b6e5601004c3705913ba64c22b libmatroska-0.6.2.ebuild 843
-MD5 2a8911e5cfff712df903d15fa02984a7 libmatroska-0.6.3.ebuild 1053
+MD5 c96d809a3c308401c46827078d4da2c1 libmatroska-0.6.3.ebuild 1051
 MD5 53ca9a7acdd8e2c10b020f81eba5b0c4 libmatroska-0.7.2.ebuild 1272
 MD5 4218db6fb72d62286bdd9f0760f47fff libmatroska-0.7.3.ebuild 1269
 MD5 4529e58fa584a5c14c77777cb6b57671 files/digest-libmatroska-0.7.0 69
