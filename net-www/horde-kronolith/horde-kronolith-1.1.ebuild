@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.3 2003/10/18 18:59:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.4 2003/11/12 20:25:39 mholzer Exp $
+
+inherit webapp-apache
 
 DESCRIPTION="Kronolith ${PV} is the Horde calendar application"
 HOMEPAGE="http://www.horde.org"
@@ -10,21 +12,14 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DEPEND=""
-RDEPEND=">=net-www/horde-2.2.1"
+RDEPEND=">=net-www/horde-2.2.4"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
-find_http_root() {
-	export HTTPD_ROOT=`grep apache /etc/passwd | cut -d: -f6`/htdocs
-	if [ -z "${HTTPD_ROOT}" ]; then
-		eerror "HTTPD_ROOT is null! Using defaults."
-		eerror "You probably want to check /etc/passwd"
-		HTTPD_ROOT="/home/httpd/htdocs"
-	fi
+webapp-detect || NO_WEBSERVER=1
 
-	export REGISTRY=${HTTPD_ROOT}/horde/config/registry.php
-	[ -f ${REGISTRY} ] || REGISTRY=${HTTPD_ROOT}/horde/config/registry.php.dist
-}
+HTTPD_USER="apache"
+HTTPD_GROUP="apache"
 
 pkg_setup() {
 	GREPSQL=`grep sql /var/db/pkg/dev-php/mod_php*/USE`
@@ -35,32 +30,28 @@ pkg_setup() {
 		eerror "Missing SQL or LDAP support in mod_php !"
 		die "aborting..."
 	fi
-	find_http_root
-	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
 src_install () {
 
-	# detecting apache usergroup
-	GID=`grep apache /etc/group |cut -d: -f3`
-	if [ -z "${GID}" ]; then
-		einfo "Using default GID of 81 for Apache"
-		GID=81
-	fi
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/horde/kronolith
 
-	find_http_root
 	dodoc COPYING README docs/*
 	rm -rf COPYING README docs
-	dodir ${HTTPD_ROOT}/horde/kronolith
-	cp -r . ${D}/${HTTPD_ROOT}/horde/kronolith
+
+	dodir ${destdir}
+	cp -r . ${D}${destdir}
+	cd ${D}/${HTTPD_ROOT}/horde
 
 	# protecting files
-	chown -R apache.${GID} ${D}/${HTTPD_ROOT}/horde/kronolith
-	find ${D}/${HTTPD_ROOT}/horde/kronolith/ -type f -exec chmod 0640 {} \;
-	find ${D}/${HTTPD_ROOT}/horde/kronolith/ -type d -exec chmod 0750 {} \;
+	chown -R ${HTTPD_USER}.${HTTPD_GROUP} kronolith
+	find ${D}/${destdir} -type f -exec chmod 0640 {} \;
+	find ${D}/${destdir} -type d -exec chmod 0750 {} \;
 }
 
 pkg_postinst() {
-	find_http_root
 	einfo "Please read /usr/share/doc/${PF}/INSTALL.gz"
 }
