@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.4.0_rc1.ebuild,v 1.1 2005/02/27 20:21:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.4.0_rc1.ebuild,v 1.2 2005/02/28 20:35:11 caleb Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/kalyptus kalyptus/*.pm"
@@ -16,7 +16,8 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-lang/perl"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff
-$FILESDIR/parallel-make.diff" # bugs.kde.org 92362
+$FILESDIR/parallel-make.diff
+$FILESDIR/no_knotifywidgetbase.diff" # bugs.kde.org 92362
 
 # enable-final works, but requires at least 1.5GB of RAM to complete without swapping,
 # so it's best to turn it off here. (I don't have that much RAM, so can't estimate
