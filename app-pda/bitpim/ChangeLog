@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/bitpim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/bitpim/ChangeLog,v 1.1 2005/03/04 18:01:31 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/bitpim/ChangeLog,v 1.2 2005/03/07 16:38:53 rizzo Exp $
+
+  07 Mar 2005; Don Seiler <rizzo@gentoo.org> bitpim-0.7.27.ebuild:
+  Adding nostrip after correspondence with author
 
 *bitpim-0.7.27 (04 Mar 2005)
 

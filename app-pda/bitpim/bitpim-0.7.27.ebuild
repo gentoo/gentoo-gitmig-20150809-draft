@@ -1,26 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/bitpim/bitpim-0.7.27.ebuild,v 1.1 2005/03/04 18:01:31 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/bitpim/bitpim-0.7.27.ebuild,v 1.2 2005/03/07 16:38:53 rizzo Exp $
 
 inherit eutils rpm
 DESCRIPTION="BitPim is a program that allows you to view and manipulate data on
 selected cellular phones."
-
-# Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="http://www.bitpim.org"
-
 SRC_URI="mirror://sourceforge/${PN}/${P}-0.i386.rpm"
-
 LICENSE="GPL-2"
 
 SLOT="0"
-
 KEYWORDS="~x86"
-
 IUSE=""
-
-#RESTRICT="nostrip"
-
+RESTRICT="${RESTRICT} nostrip"
 DEPEND="sys-libs/lib-compat"
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
@@ -40,5 +32,4 @@ src_install() {
 	cd ${S}/usr/lib/${P}
 	exeinto /usr/lib/${P}
 	doexe bp
-
 }
