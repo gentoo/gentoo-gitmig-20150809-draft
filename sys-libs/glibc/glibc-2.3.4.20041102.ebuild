@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.34 2005/01/18 06:34:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.35 2005/01/18 08:36:50 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -697,11 +697,7 @@ glibc_do_configure() {
 			--infodir=$(alt_prefix)/share/info
 			--libexecdir=$(alt_prefix)/lib/misc"
 
-	if [ -n "${ABI}" ]; then
-		GBUILDDIR="${WORKDIR}/build-${ABI}-${CTARGET}-$1"
-	else
-		GBUILDDIR="${WORKDIR}/build-${CTARGET}-$1"
-	fi
+	GBUILDDIR="${WORKDIR}/build-${ABI}-${CTARGET}-$1"
 	mkdir -p ${GBUILDDIR}
 	cd ${GBUILDDIR}
 	einfo "Configuring GLIBC for $1 with: ${myconf}"
@@ -723,6 +719,8 @@ src_compile() {
 		return 0
 	fi
 	unset MLTEST
+
+	ABI=${ABI:=default}
 
 	# do the linuxthreads build unless we're using nptlonly
 	if use !nptlonly ; then
@@ -785,6 +783,8 @@ src_install() {
 	fi
 	unset MLTEST
 
+	ABI=${ABI:=default}
+
 	setup_flags
 
 	# Need to dodir first because it might not exist (bad amd64 profiles)
@@ -795,19 +795,19 @@ src_install() {
 	unset LANGUAGE LANG LC_ALL
 
 	if use nptlonly ; then
-		MYMAINBUILDDIR=build-${CTARGET}-nptl
+		MYMAINBUILDDIR=build-${ABI}-${CTARGET}-nptl
 	else
-		MYMAINBUILDDIR=build-${CTARGET}-linuxthreads
+		MYMAINBUILDDIR=build-${ABI}-${CTARGET}-linuxthreads
 	fi
 
 	if use !nptlonly ; then
-		cd ${WORKDIR}/build-${CTARGET}-linuxthreads
+		cd ${WORKDIR}/build-${ABI}-${CTARGET}-linuxthreads
 		einfo "Installing GLIBC with linuxthreads..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			install || die
 	elif use nptlonly ; then
-		cd ${WORKDIR}/build-${CTARGET}-nptl
+		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
 		einfo "Installing GLIBC with NPTL..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
@@ -820,7 +820,7 @@ src_install() {
 
 	if use !nptlonly && want_nptl ; then
 		einfo "Installing NPTL to $(get_libdir)/tls/..."
-		cd ${WORKDIR}/build-${CTARGET}-nptl
+		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
 		mkdir -p ${D}/$(get_libdir)/tls/
 
 		libcsofile=$(basename ${D}/$(get_libdir)/libc-*.so)
