@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.4 2002/10/05 05:39:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.5 2002/10/17 01:06:18 vapier Exp $
 
 IUSE="X readline svga"
 
 DESCRIPTION="48k ZX Spectrum Emulator"
 HOMEPAGE="http://kempelen.iit.bme.hu/~mszeredi/spectemu/spectemu.html"
-LICENSE="GPL | LGPL"
+LICENSE="GPL-2 | LGPL-2"
 SRC_URI="http://home.gwi.net/~plemon/sources/spectemu-0.94.tar.gz"
 KEYWORDS="x86"
 SLOT="0"   
