@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ext2resize
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ChangeLog,v 1.4 2004/03/20 13:56:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ChangeLog,v 1.5 2004/06/05 20:31:04 vapier Exp $
+
+*ext2resize-1.1.17-r2 (05 Jun 2004)
+
+  05 Jun 2004; Mike Frysinger <vapier@gentoo.org>
+  +ext2resize-1.1.17-r2.ebuild:
+  Version bump to clean up the sources and make sure custom $CFLAGS are applied.
 
   20 Mar 2004; <plasmaroo@gentoo.org> ext2resize-1.1.17-r1.ebuild,
   files/ext2resize-1.1.17-gcc3.3.patch:
