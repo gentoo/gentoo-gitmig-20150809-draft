@@ -1,8 +1,19 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.25 2003/01/30 00:18:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.26 2003/02/04 07:14:21 raker Exp $
+
+*openldap-2.1.12 (04 Feb 2003)
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> openldap-2.1.12.ebuild,
+  files/digest-openldap-2.1.12, files/kerberos-2.1.diff.bz2 :
+  Fixed typos like in 2.0.27-r2 and added the kainz kerberos diff for 2.1
+  2.1.12 is now considered stable so when db4 moves, so will openldap.
 
 *openldap-2.0.27-r2 (29 Jan 2003)
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r2.ebuild,
+  files/kerberos-2.0.diff.bz2 :
+  Added a kerberos configure change as suggested by kainz.
 
   29 Jan 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r2.ebuild,
   files/digest-openldap-2.0.27-r2 files/slapd-2.1-r1.rc6,
