@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.19 2004/10/05 12:16:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.20 2004/11/23 11:42:59 hattya Exp $
+
+  23 Nov 2004; Akinori Hattori <hattya@gentoo.org> nkf-2.0.4.ebuild:
+  stable on ia64.
 
   05 Oct 2004; Akinori Hattori <hattya@gentoo.org> nkf-2.0.4.ebuild:
   add ~ia64.
