@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/ruby-dbi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.6 2003/02/12 06:36:11 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.7 2004/03/31 19:02:42 usata Exp $
+
+*ruby-dbi-0.0.21 (01 Apr 2004)
+*ruby-dbi-0.0.18-r1 (01 Apr 2004)
+*ruby-dbi-0.0.16-r1 (01 Apr 2004)
+
+  01 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-dbi-0.0.16-r1.ebuild,
+  ruby-dbi-0.0.16.ebuild, ruby-dbi-0.0.18-r1.ebuild, ruby-dbi-0.0.18.ebuild,
+  ruby-dbi-0.0.21.ebuild, files/ruby-dbi-destdir-gentoo.diff:
+  Version bumped. Fixed hardcoded rubydir, closing bug #46237
 
 *ruby-dbi-0.0.18 (27 Jul 2002)
 
