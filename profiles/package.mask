@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+
+# <lu_zero@gentoo.org> (23 Jan 2003)
+#Not enough mature
+media-video/lumiere
+
 # <vapier@gentoo.org> (22 Jan 2003)
 # package is no longer distributed
 dev-libs/libtomcrypt
