@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.2 2002/11/04 19:54:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.3 2002/11/06 10:56:11 tantive Exp $
 
 NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
 A=${NAME}.tar.gz
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openpbs.org/"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X tcltk"
 
 DEPEND="virtual/glibc
