@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.1 2005/01/08 20:18:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.2 2005/01/11 23:59:36 eradicator Exp $
 
 STAGE1_USE="multilib"
 GRP_STAGE23_USE="${STAGE1_USE} multislot ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java -nptl"
@@ -11,7 +11,7 @@ USE="${GRP_STAGE23_USE} bitmap-fonts truetype-fonts type1-fonts oss alsa crypt f
 # that point.
 FEATURES="sandbox autoconfig -multilib-pkg"
 
-MULTILIB_ABIS="amd64 x86"
+MULTILIB_ABIS="x86 amd64"
 DEFAULT_ABI="amd64"
 
 CFLAGS_amd64="-m64"
