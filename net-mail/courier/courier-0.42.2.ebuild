@@ -14,18 +14,18 @@ HOMEPAGE="http://www.courier-mta.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc"
-IUSE="gdbm tcltk postgres ldap berkdb mysql pam nls tcltk ipv6 spell"
+IUSE="gdbm tcltk postgres ldap berkdb mysql pam nls tcltk ipv6 spell fax crypt ssl"
 
 PROVIDE="virtual/mta
 	 virtual/imapd"
 
 RDEPEND="virtual/glibc
-	>=app-crypt/gnupg-1.0.4
-	>=dev-libs/openssl-0.9.6
 	>=dev-tcltk/expect-5.33.0
-	>=media-libs/netpbm-9.12
-	>=app-text/ghostscript-7.05.5
-	>=net-dialup/mgetty-1.1.28
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	crypt? ( >=app-crypt/gnupg-1.0.4 )
+	fax? (	>=media-libs/netpbm-9.12
+		>=app-text/ghostscript-7.05.5
+		>=net-dialup/mgetty-1.1.28 )
 	pam? ( >=sys-libs/pam-0.75 )
 	berkdb? ( >=sys-libs/db-3.2 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
