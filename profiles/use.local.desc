@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.282 2004/03/20 21:03:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.283 2004/03/21 04:37:45 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -235,17 +235,17 @@ net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/memcached:php - Include the PHP API for memcached
 net-www/monkeyd:php - Include support for php scripts
-net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille)
-net-www/mozilla:mozcalendar - Enable mozilla calendar extension
+net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
+net-www/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
-net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
-net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
-net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
+net-www/mozilla:moznocompose - Disable building of mozilla's web page composer
+net-www/mozilla:moznoirc - Disable building of mozilla's IRC client
+net-www/mozilla:moznomail - Disable building mozilla's mail client
 net-www/mozilla:moznoxft - Disable XFT support in mozilla and/or firefox
-net-www/mozilla:mozp3p - Enable privacy practices standardization
-net-www/mozilla:mozsvg - Enable SVG support in mozilla and/or firefox
-net-www/mozilla:mozxmlterm - Enable XML-based command-line terminal
-net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla and/or firefox
+net-www/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
+net-www/mozilla:mozsvg - Enable SVG support in mozilla and/or firefox, http://mozilla.org/projects/svg/
+net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
+net-www/mozilla-firefox:moznoxft - Disable XFT support in and/or firefox
 net-www/mozilla-firefox:mozsvg - Enable SVG support in Mozilla and/or Firefox
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 net-www/tinyproxy:transparent-proxy - enable support for transparent proxies
