@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnome-blog
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.1 2003/10/31 10:28:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.2 2003/12/10 19:57:51 leonardop Exp $
+
+  10 Dec 2003; L. Boshell <leonardop@gentoo.org> gnome-blog-0.7.ebuild:
+  Marked as stable on x86.
 
 *gnome-blog-0.7 (31 Oct 2003)
 
