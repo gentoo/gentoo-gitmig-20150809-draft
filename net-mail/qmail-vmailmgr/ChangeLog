@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-vmailmgr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/ChangeLog,v 1.5 2003/02/12 08:15:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/ChangeLog,v 1.6 2003/12/27 02:34:32 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> qmail-vmailmgr-0.0.1-r1.ebuild:
+  Changed sparc keyword to ~sparc as not all dependencies could be met.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

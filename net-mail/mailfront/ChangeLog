@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailfront
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.7 2003/05/09 17:55:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.8 2003/12/27 02:33:20 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> mailfront-0.76.ebuild:
+  Changed sparc keyword to ~sparc as not all dependencies could be met.
 
 *mailfront-0.85 (09 May 2003)
 

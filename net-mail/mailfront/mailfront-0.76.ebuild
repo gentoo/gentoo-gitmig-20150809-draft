@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.76.ebuild,v 1.7 2003/02/13 14:33:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.76.ebuild,v 1.8 2003/12/27 02:33:20 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail server network protocol front-ends."
@@ -16,7 +16,7 @@ RDEPEND="net-mail/cvm-vmailmgr
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 ~sparc "
 
 src_compile() {
 	cd ${S}
