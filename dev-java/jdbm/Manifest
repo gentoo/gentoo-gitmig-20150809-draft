@@ -1,0 +1,5 @@
+MD5 57b567c8f6c570ca130d65b8a4e7ff48 jdbm-0.12.ebuild 1033
+MD5 7a52ef1de792cf5c0ee2840e2f91f5cb ChangeLog 421
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 05e6cb1009ca10279b6991417778254b files/jdbm-0.12-buildfile.patch 2260
+MD5 cdc880fb1002d9e6832ae598f4398b16 files/digest-jdbm-0.12 62
