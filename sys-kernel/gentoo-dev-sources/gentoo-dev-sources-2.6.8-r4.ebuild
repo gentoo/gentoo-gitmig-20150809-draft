@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.8-r4.ebuild,v 1.1 2004/09/08 15:12:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.8-r4.ebuild,v 1.2 2004/09/26 19:34:08 lu_zero Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -12,7 +12,7 @@ GPV=8.50
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
 
-KEYWORDS="~x86 amd64 -ppc ~ppc64 ~ia64 ~alpha"
+KEYWORDS="~x86 amd64 ~ppc ~ppc64 ~ia64 ~alpha"
 
 UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	       ${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2

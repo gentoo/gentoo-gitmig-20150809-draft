@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.92 2004/09/24 18:41:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.93 2004/09/26 19:34:08 lu_zero Exp $
+
+  26 Sep 2004; Luca Barbato <lu_zero@gentoo.org>
+  gentoo-dev-sources-2.6.8-r4.ebuild:
+  Tested, should work fine on ppc again.
 
   24 Sep 2004; Sven Wegener <swegener@gentoo.org>
   gentoo-dev-sources-2.6.5.ebuild:
