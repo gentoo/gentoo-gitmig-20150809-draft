@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.77 2004/10/05 04:01:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.78 2004/10/05 23:45:52 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -17,15 +17,15 @@ EXPORT_FUNCTIONS pkg_postinst src_compile pkg_setup
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-export GAMES_PREFIX="/usr/games"
-export GAMES_PREFIX_OPT="/opt"
-export GAMES_DATADIR="/usr/share/games"
-export GAMES_DATADIR_BASE="/usr/share" # some packages auto append 'games'
-export GAMES_SYSCONFDIR="/etc/games"
-export GAMES_STATEDIR="/var/games"
-export GAMES_LOGDIR="/var/log/games"
-export GAMES_LIBDIR="/usr/games/lib"
-export GAMES_BINDIR="/usr/games/bin"
+export GAMES_PREFIX="${GAMES_PREFIX:-/usr/games}"
+export GAMES_PREFIX_OPT="${GAMES_PREFIX_OPT:-/opt}"
+export GAMES_DATADIR="${GAMES_DATADIR:-/usr/share/games}"
+export GAMES_DATADIR_BASE="${GAMES_DATADIR_BASE:-/usr/share}" # some packages auto append 'games'
+export GAMES_SYSCONFDIR="${GAMES_SYSCONFDIR:-/etc/games}"
+export GAMES_STATEDIR="${GAMES_STATEDIR:-/var/games}"
+export GAMES_LOGDIR="${GAMES_LOGDIR:-/var/log/games}"
+export GAMES_LIBDIR="${GAMES_LIBDIR:-/usr/games/lib}"
+export GAMES_BINDIR="${GAMES_BINDIR:-/usr/games/bin}"
 export GAMES_ENVD="90games"
 # if you want to use a different user/group than games.games,
 # just add these two variables to your environment (aka /etc/profile)
