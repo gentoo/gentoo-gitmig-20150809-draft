@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.0.ebuild,v 1.1 2004/10/08 00:43:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.0.ebuild,v 1.2 2004/10/10 18:53:14 kugelfang Exp $
 
-inherit 64-bit
+inherit 64-bit fortran
 
-IUSE="blas lapack X tcltk gnome zlib bzlib pcre f2c"
+IUSE="blas lapack X tcltk gnome zlib bzlib pcre"
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
@@ -23,7 +23,6 @@ DEPEND="virtual/libc
 		>=media-libs/libpng-1.2.1
 		blas? ( virtual/blas )
 		lapack? ( virtual/lapack )
-		f2c? ( dev-lang/f2c >=dev-libs/libf2c-20021004-r1 )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		pcre? ( dev-libs/libpcre )
@@ -40,26 +39,9 @@ DEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-*"
-#KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
 
-pkg_setup() {
-	if [ -z "$(which g77 2>/dev/null)" ]; then
-		einfo "Couldn't find g77 Fortran Compiler."
-		if 64-bit && use f2c; then
-			eerror "You can't use f2c for dev-lang/R on 64-bit arches."
-			eerror "Please remerge gcc with USE=\"g77\""
-			die "dev-lang/R is incompatible with f2c on 64-bit arches."
-		fi
-		if ! use f2c; then
-			eerror "Trying to emerge this packet w/o fortran compiler."
-			eerror "Try again with USE=\"f2c\" emerge dev-lang/R."
-			die "No fortran compiler, no f2c."
-		else
-			einfo "Using f2c to translate fortran sources."
-		fi
-	fi
-}
+64-bit || FORTRAN="f77 f2c" # No f2c on 64-bit systems :-/
 
 src_unpack() {
 	unpack ${A}
@@ -78,7 +60,6 @@ src_compile() {
 
 	# Using the blas USE flag now instead atlas, as atlas now
 	# has been broken into blas-atlas and lapack-atlas.
-	# Danny van Dyk <kugelfang@gentoo.org> 2004/07/11
 	use blas || myconf="${myconf} --without-blas" #default enabled
 	use lapack && myconf="${myconf} --with-lapack" #default disabled
 
@@ -93,7 +74,7 @@ src_compile() {
 
 	use gnome && myconf="${myconf} --with-gnome" #default disabled
 
-	./configure \
+	econf \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
@@ -101,7 +82,6 @@ src_compile() {
 		${myconf} || die "./configure failed"
 
 	emake || die
-
 }
 
 src_install () {
