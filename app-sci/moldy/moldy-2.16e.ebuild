@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/moldy-2.16e.ebuild,v 1.11 2004/03/30 20:02:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/moldy-2.16e.ebuild,v 1.12 2004/05/17 15:26:58 usata Exp $
 
 IUSE="X"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc
-	app-text/tetex
+	virtual/tetex
 	X? ( virtual/x11 )"
 
 addwrite /var/cache/fonts
