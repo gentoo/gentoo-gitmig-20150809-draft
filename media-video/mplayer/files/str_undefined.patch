@@ -1,0 +1,68 @@
+--- MPlayer-1.0pre4/configure	2004-04-26 18:44:06.000000000 +0900
++++ MPlayer-1.0pre5/configure	2004-07-15 07:04:42.000000000 +0900
+@@ -2649,6 +2766,34 @@
+ fi
+ echores "$_strsep"
+ 
++echocheck "strlcpy()"
++cat > $TMPC << EOF
++#include <string.h>
++int main (void) { char *s = "Hello, world!", t[20]; (void) strlcpy(t, s, sizeof( t )); return 0; }
++EOF
++_strlcpy=no
++cc_check && _strlcpy=yes
++if test "$_strlcpy" = yes ; then
++ _def_strlcpy='#define HAVE_STRLCPY 1'
++else
++ _def_strlcpy='#undef HAVE_STRLCPY'
++fi
++echores "$_strlcpy"
++
++echocheck "strlcat()"
++cat > $TMPC << EOF
++#include <string.h>
++int main (void) { char *s = "Hello, world!", t[20]; (void) strlcat(t, s, sizeof( t )); return 0; }
++EOF
++_strlcat=no
++cc_check && _strlcat=yes
++if test "$_strlcat" = yes ; then
++ _def_strlcat='#define HAVE_STRLCAT 1'
++else
++ _def_strlcat='#undef HAVE_STRLCAT'
++fi
++echores "$_strlcat"
++
+ echocheck "fseeko()"
+ cat > $TMPC << EOF
+ #include <stdio.h>
+@@ -6272,6 +6448,18 @@
+ /* Define this if your system has strsep */
+ $_def_strsep
+ 
++/* Define this if your system has strlcpy */
++$_def_strlcpy
++#ifndef HAVE_STRLCPY
++unsigned int strlcpy (char *dest, char *src, unsigned int size);
++#endif
++
++/* Define this if your system has strlcat */
++$_def_strlcat
++#ifndef HAVE_STRLCAT
++unsigned int strlcat (char *dest, char *src, unsigned int size);
++#endif
++
+ /* Define this if your system has fseeko */
+ $_def_fseeko
+ #ifndef HAVE_FSEEKO
+--- MPlayer-1.0pre4/osdep/Makefile	2004-03-27 00:21:44.000000000 +0900
++++ MPlayer-1.0pre5/osdep/Makefile	2004-06-28 02:54:31.000000000 +0900
+@@ -3,7 +3,8 @@
+ 
+ LIBNAME = libosdep.a
+ 
+-SRCS= shmem.c strsep.c vsscanf.c scandir.c gettimeofday.c fseeko.c # timer.c
++SRCS= shmem.c strsep.c strl.c vsscanf.c scandir.c gettimeofday.c fseeko.c \
++      # timer.c
+ 
+ ifeq ($(TARGET_ARCH_X86),yes)
+ ifeq ($(TARGET_OS),Linux)

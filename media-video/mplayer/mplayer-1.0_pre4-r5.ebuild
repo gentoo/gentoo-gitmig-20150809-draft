@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r5.ebuild,v 1.2 2004/07/18 22:42:50 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r5.ebuild,v 1.3 2004/07/19 04:24:07 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -107,8 +107,12 @@ src_unpack() {
 	cd ${S}
 
 
-	# fixes bug #55456 for amd64
-	use amd64 && epatch ${FILESDIR}/amd64_fix_the_blue_love.patch
+	# fixes bug #55456 for amd64 and fullscreen Bug #43010
+	epatch ${FILESDIR}/gui_vuln_code.patch
+
+	# fixes missing str* linking bugs
+	cp ${FILESDIR}/strl.c ${S}/osdep
+	epatch ${FILESDIR}/str_undefined.patch
 
 	# Fix head/tail call for new coreutils
 	epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch

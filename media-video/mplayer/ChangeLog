@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.162 2004/07/18 06:46:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.163 2004/07/19 04:24:07 chriswhite Exp $
+
+  19 Jul 2004; Chris White <chriswhite@gentoo.org> +files/gui_vuln_code.patch,
+  +files/str_undefined.patch, +files/strl.c, mplayer-1.0_pre4-r5.ebuild:
+  Fixed mplayer pre4-r5 compiling issues with undefined str* references and
+  re-stabilized for gui vuln bug for amd64. Added fullscreen patch as well.
 
   16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mplayer-1.0_pre5.ebuild:
   Stable on alpha, see bug #55456.
