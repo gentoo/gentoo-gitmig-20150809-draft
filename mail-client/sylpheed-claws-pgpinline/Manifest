@@ -1,6 +1,16 @@
-MD5 de9712abbc9a3cc2693c65a51661dd61 sylpheed-claws-pgpinline-0.2.ebuild 851
-MD5 b45b2fe86ea8710370014e6bb8f811d3 ChangeLog 1165
-MD5 5fafd9f136976dc5aba6c3e10fa18759 sylpheed-claws-pgpinline-0.5.ebuild 852
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+MD5 dd49746d4129570a9f79cecc61ecf954 ChangeLog 1299
+MD5 978220357eba7c9246ea45e82f919ddd sylpheed-claws-pgpinline-0.2.ebuild 851
+MD5 550bce0e74efc855521ded2d9c88bbb5 sylpheed-claws-pgpinline-0.5.ebuild 850
 MD5 1dd92c0fba5c46245655a25e093c95e3 files/digest-sylpheed-claws-pgpinline-0.2 65
 MD5 37698a2e1113f7b90ebb97a82e70df14 files/digest-sylpheed-claws-pgpinline-0.5 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDsM96J2i8a8J4okRAvVwAKCUGxRhPMiv18Q3CXksWetwZD9STACgjuod
+p2ZO4JyczetGK73b0Oo7I3s=
+=yxyS
+-----END PGP SIGNATURE-----
