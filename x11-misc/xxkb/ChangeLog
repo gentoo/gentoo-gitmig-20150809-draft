@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xxkb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.3 2003/05/20 08:16:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.4 2004/02/04 13:15:28 phosphan Exp $
+
+  04 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> xxkb-1.10.ebuild:
+  Updated homepage and source URI.
 
   20 May 2003; Patrick Kursawe <phosphan@gentoo.org> xxkb-1.10.ebuild:
   Used it for a few days, looks stable for x86.
