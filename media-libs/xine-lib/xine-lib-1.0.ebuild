@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.23 2005/03/17 10:13:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.24 2005/03/28 14:05:27 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -81,7 +81,6 @@ src_unpack() {
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 
 	epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
-	use x86 && epatch ${FILESDIR}/${PN}-hardened-mmx.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
@@ -107,6 +106,8 @@ src_compile() {
 
 	#prevent quicktime crashing
 	append-flags -frename-registers
+
+	use x86 && has_pic && append-flags -UHAVE_MMX
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		append-flags -fno-web #49509

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.197 2005/03/17 10:13:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.198 2005/03/28 14:05:27 chriswhite Exp $
+
+  28 Mar 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
+  Fixed the pic logic that was breaking lots of stuff.
 
   17 Mar 2005; Sven Wegener <swegener@gentoo.org> xine-lib-1.0.ebuild:
   Fixed invalid atoms in *DEPEND.
