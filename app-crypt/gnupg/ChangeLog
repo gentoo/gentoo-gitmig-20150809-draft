@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.16 2002/12/17 00:34:18 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.17 2002/12/26 21:43:39 blizzy Exp $
+
+  26 Dec 2002; Maik Schreiber <blizzy@gentoo.org> gnupg-1.2.1-r1.ebuild:
+  Changed "~x86" to "x86" in KEYWORDS.
 
 *gnupg-1.2.1-r1 (16 Dec 2002)
 
