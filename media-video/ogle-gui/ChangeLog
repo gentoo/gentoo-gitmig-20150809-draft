@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ogle-gui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.3 2002/03/27 05:59:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.4 2002/06/15 00:28:15 seemant Exp $
+
+*ogle-gui-0.8.3 (14 Jun 2002)
+
+  14 Jun 2002; Seemant Kulleen <seemant@gentoo.org> ogle-gui-0.8.3.ebuild
+  files/digest-0.8.3 :
+
+  Version bump thanks to bsaslinux@globo.com (Bernardo S. A. Silva) in bug #
+  3676
 
 *ogle-gui-0.8.2-r3 (26 Mar 2002)
 
