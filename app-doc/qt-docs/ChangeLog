@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/qt-docs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.9 2002/12/16 02:22:30 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.10 2002/12/17 17:54:33 hannes Exp $
+
+*qt-docs-3.1.1 (17 Dec 2002)
+
+  17 Dec 2002; Hannes Mehnert <hannes@gentoo.org> qt-docs-3.1.1.ebuild:
+  version bump
 
   15 Dec 2002; Hannes Mehnert <hannes@gentoo.org> qt-docs-3.1.0.ebuild:
   changed KEYWORDS to stable for all archs. Thanks to gilles_gros@yahoo.com
