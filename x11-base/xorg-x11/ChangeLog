@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.105 2004/09/06 20:59:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.106 2004/09/07 22:21:02 lv Exp $
+
+  07 Sep 2004; Travis Tilley <lv@gentoo.org> xorg-x11-6.7.99.904.ebuild:
+  create lib symlink in /usr/$(get_libdir)/opengl/xorg-x11/ if $(get_libdir) !=
+  lib. fixes bug 62990
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> xorg-x11-6.7.0-r1.ebuild,
   xorg-x11-6.7.0-r2.ebuild, xorg-x11-6.7.99.902.ebuild,
