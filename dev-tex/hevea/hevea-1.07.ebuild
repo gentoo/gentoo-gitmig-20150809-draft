@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.07.ebuild,v 1.3 2004/02/09 20:34:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.07.ebuild,v 1.4 2004/02/17 01:09:58 mattam Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/moscova/hevea/${P}.tar.gz"
 
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=dev-lang/ocaml-3.07"
 

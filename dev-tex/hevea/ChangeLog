@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.3 2004/02/09 20:34:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.4 2004/02/17 01:09:58 mattam Exp $
+
+  17 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> hevea-1.07.ebuild:
+  Put back ~x86 keyword as ocaml-3.07 is unstable.
 
   09 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> hevea-1.07.ebuild,
   metadata.xml:
