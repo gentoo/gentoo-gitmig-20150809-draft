@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.9.0-r1.ebuild,v 1.3 2003/09/25 20:35:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.9.0-r1.ebuild,v 1.4 2003/12/06 23:29:17 lanius Exp $
 
 IUSE="doc gtk nls xv alsa"
 
@@ -17,7 +17,7 @@ DEPEND="dev-libs/glib
 	=gnome-base/gnome-panel-1.4.1
 	xv? ( dev-lang/nasm )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	alsa? ( >media-sound/alsa-driver-0.5 )"
+	alsa? ( >media-libs/alsa-lib-0.5 )"
 
 src_compile() {
 
