@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.1 2003/08/18 00:46:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.2 2003/08/24 02:52:26 rac Exp $
 
 inherit base
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linux.kernel.org/pub/linux/libs/security/linux-privs/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${P}.tar.bz2"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86 ~arm ~mips ~hppa ~sparc ~ppc ~alpha"
+KEYWORDS="~x86 ~arm ~mips ~hppa ~sparc ~ppc ~alpha ~amd64"
 IUSE="python"
 
 #patch is in recent 2.2 kernels so it works there
@@ -39,7 +39,7 @@ src_compile() {
 	fi
 	
 	# all 64 bit platforms need to get -fPIC
-	use alpha || use mips && append-flags -fPIC
+	use alpha || use mips || use amd64 && append-flags -fPIC
 	
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
 }
