@@ -20,7 +20,7 @@ if [ ${#} -lt 1 ]
 		    strip ${x}
                 fi
 	    fi
-	    install -m0754 ${x} ${D}${DESTTREE}/sbin
+	    install -m0755 ${x} ${D}${DESTTREE}/sbin
 	else
 	    echo "${0}: ${x} is not executable or does not exist"
 	fi
