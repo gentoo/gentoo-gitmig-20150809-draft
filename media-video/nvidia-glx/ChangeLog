@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.30 2003/12/26 07:48:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.31 2004/01/05 19:47:09 spyderous Exp $
+
+*nvidia-glx-1.0.5328-r1 (05 Jan 2004)
+
+  05 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  nvidia-glx-1.0.5328-r1.ebuild:
+  Fixing TLS test for bug #36551. Thanks to Ronald Hummelink
+  <gentoo-bugzilla@hummelink.xs4all.nl> for the patch.
 
   26 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Adding metadata.xml.
