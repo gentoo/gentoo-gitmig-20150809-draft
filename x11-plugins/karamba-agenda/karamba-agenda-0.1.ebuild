@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-agenda/karamba-agenda-0.1.ebuild,v 1.1 2003/05/04 01:58:58 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-agenda/karamba-agenda-0.1.ebuild,v 1.2 2003/05/04 02:23:26 prez Exp $
 
 DESCRIPTION="Current Agenda plugin for Karamba"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5793"
@@ -22,8 +22,8 @@ src_compile () {
 
 src_install () {
 	dodir /usr/share/karamba/bin /usr/share/karamba/themes
-	sed -e 's#/home/petros/.kde/share/apps/karamba/agenda/agenda.txt#$HOME/agenda.txt#' agenda.sh \
-		> ${D}/usr/share/karamba/bin/agenda.sh
+	sed -e 's#/home/petros/.kde/share/apps/karamba/agenda/agenda.txt#$HOME/.karamba/agenda.txt#' \
+		agenda.sh > ${D}/usr/share/karamba/bin/agenda.sh
 	chmod 755 ${D}/usr/share/karamba/bin/agenda.sh
 
 	dodir /usr/share/karamba/themes/agenda
