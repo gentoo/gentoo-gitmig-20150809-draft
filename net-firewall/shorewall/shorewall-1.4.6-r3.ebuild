@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.6-r3.ebuild,v 1.4 2003/09/24 20:20:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.6-r3.ebuild,v 1.5 2003/10/21 15:54:39 mholzer Exp $
 
 DESCRIPTION="Full state iptables firewall"
 HOMEPAGE="http://www.shorewall.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}c.tgz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
