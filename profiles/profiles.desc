@@ -1,0 +1,12 @@
+# default profile list
+x86 default-x86-1.4
+ppc default-ppc-1.4
+ppc64 default-ppc64-1.4
+sparc default-sparc-1.4
+mips default-mips-1.4
+alpha default-alpha-1.4
+arm default-arm-1.4
+hppa default-hppa-1.4
+amd64 default-amd64-1.4
+ia64 default-ia64-1.4
+x86obsd default-x86obsd-1.4
