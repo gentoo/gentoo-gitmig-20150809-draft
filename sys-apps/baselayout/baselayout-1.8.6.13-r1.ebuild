@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.4 2004/03/02 16:43:09 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.5 2004/03/03 19:53:40 vapier Exp $
 
 IUSE="bootstrap build livecd static selinux"
 
@@ -69,6 +69,10 @@ src_unpack() {
 			rm -f inittab.orig
 			;;
 	esac
+
+	# temp gcc2 patch #43097
+	cd ${WORKDIR}
+	epatch ${FILESDIR}/${PF}-gcc2.patch
 }
 
 src_compile() {

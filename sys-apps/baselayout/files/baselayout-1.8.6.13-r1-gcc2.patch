@@ -1,0 +1,14 @@
+diff -Naur rc-scripts-1.4.3.13p1.orig/src/runscript.c rc-scripts-1.4.3.13p1/src/runscript.c
+--- rc-scripts-1.4.3.13p1.orig/src/runscript.c	2004-02-09 13:40:44.000000000 -0500
++++ rc-scripts-1.4.3.13p1/src/runscript.c	2004-02-27 09:17:06.000000000 -0500
+@@ -16,9 +16,9 @@
+ 
+ int main(int argc, char **argv) {
+ 	char *myargs[32];
++	void *lib_handle;
+ 	int new = 1;
+ 	myargs[0] = "runscript";
+-	void *lib_handle;
+ 	
+ /*	if (argc < 3)
+ 		exit(1);
