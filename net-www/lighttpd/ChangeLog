@@ -1,6 +1,14 @@
 # ChangeLog for net-www/lighttpd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/ChangeLog,v 1.8 2004/06/25 20:10:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/ChangeLog,v 1.9 2004/06/27 00:21:42 stuart Exp $
+
+*lighttpd-1.2.2 (27 Jun 2004)
+
+  27 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  +files/lighttpd-1.2.2-php.diff, +files/lighttpd-1.2.2.initd,
+  +lighttpd-1.2.2.ebuild:
+  Version bump; php support now available; thanks to Boris Wachtmeister
+  <sirro@nurfuerspam.de>; see bug #55049
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> lighttpd-1.1.8-r1.ebuild,
   lighttpd-1.1.8.ebuild:
