@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.58 2004/11/30 20:56:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.59 2004/12/14 00:30:44 vapier Exp $
+
+  13 Dec 2004; Mike Frysinger <vapier@gentoo.org> parted-1.6.15.ebuild:
+  Clean up and push into stable.
 
   30 Nov 2004; Luca Barbato <lu_zero@gentoo.org> parted-1.6.15.ebuild:
   Fix libtool, research and fix from Joe Jezak <josejx@gentoo.org>, solves bug
