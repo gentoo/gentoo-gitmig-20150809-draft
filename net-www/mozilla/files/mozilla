@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export MOZILLA_FIVE_HOME=/usr/lib/mozilla
+
+if [ -f $MOZILLA_FIVE_HOME/mozilla ]
+then
+   $MOZILLA_FIVE_HOME/mozilla "$@"
+fi

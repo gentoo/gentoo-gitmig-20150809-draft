@@ -1,0 +1,31 @@
+--- mozilla/widget/src/gtk2/nsWindow.cpp.orig	2002-11-17 21:04:42.000000000 +0900
++++ mozilla/widget/src/gtk2/nsWindow.cpp	2002-11-20 02:17:53.000000000 +0900
+@@ -2094,7 +2094,7 @@
+         }
+ #ifdef USE_XIM
+         // get mIMEShellWindow and keep it
+-        IMEGetShellWindow();
++//        IMEGetShellWindow();
+ #endif
+     }
+         break;
+@@ -2144,6 +2144,8 @@
+     if (mShell) {
+         // init GtkIMContext for shell
+         IMECreateContext(mShell->window);
++    } else if (mDrawingarea) {
++        IMECreateContext(mDrawingarea->inner_window);
+     }
+ #endif
+ 
+--- mozilla/widget/src/gtk2/Makefile.in.orig	2002-11-17 21:04:40.000000000 +0900
++++ mozilla/widget/src/gtk2/Makefile.in	2002-11-20 02:19:26.000000000 +0900
+@@ -88,7 +88,7 @@
+ CFLAGS		+= $(MOZ_GTK2_CFLAGS)
+ CXXFLAGS	+= $(MOZ_GTK2_CFLAGS)
+ 
+-#DEFINES         += -DUSE_XIM
++DEFINES         += -DUSE_XIM
+ 
+ INCLUDES	+= \
+ 		-I$(srcdir)/../xpwidgets \
