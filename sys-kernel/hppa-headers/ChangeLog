@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hppa-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.4 2003/04/22 10:26:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.5 2003/10/27 22:05:56 gmsoft Exp $
+
+*hppa-headers-2.4.21_p13 (27 Oct 2003)
+
+  27 Oct 2003; Guy Martin hppa-headers-2.4.21_p13.ebuild :
+  New hppa-headers for glibc-2.3.2. It also fix ntp-4.1.2 compilation problem.
 
 *hppa-headers-2.4.20_p32 (03 Apr 2003)
 
