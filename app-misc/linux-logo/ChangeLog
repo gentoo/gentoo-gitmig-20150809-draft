@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.7 2004/06/02 02:12:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.8 2004/06/17 21:29:40 spock Exp $
+
+  17 Jun 2004; Michal Januszewski <spock@gentoo.org> linux-logo-4.09.ebuild:
+  Stable on x86.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> linux-logo-4.07-r1.ebuild,
   linux-logo-4.09.ebuild:
