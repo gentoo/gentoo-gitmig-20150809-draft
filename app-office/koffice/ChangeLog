@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.10 2002/08/14 11:19:12 pvdabeel Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.11 2002/09/15 09:43:07 danarmak Exp $
+
+  15 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Replace bogus --enable-all flag with --enable-final.
 
 *koffice-1.2_rc1 (11 Aug 2002) Bart Verwilst <verwilst@gentoo.org>
 
