@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/fluxbox-styles-fluxmod
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.8 2004/09/10 03:12:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.9 2004/09/15 14:28:37 ciaranm Exp $
+
+*fluxbox-styles-fluxmod-20040809-r1 (15 Sep 2004)
+
+  15 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/styles-menu-fluxmod, +fluxbox-styles-fluxmod-20040809-r1.ebuild:
+  Changed the install location to fit in with fluxbox-0.9.10-r3's improved
+  styles directory handling
 
   07 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   fluxbox-styles-fluxmod-20040809.ebuild:
