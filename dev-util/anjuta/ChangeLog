@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.37 2004/04/30 19:28:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.38 2004/05/02 17:46:11 kugelfang Exp $
+
+  02 May 2004; Danny van Dyk <kugelfang@gentoo.org> anjuta-1.2.2.ebuild:
+  Marked ~amd64.
 
   30 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> anjuta-1.2.2.ebuild:
   Stable on sparc
