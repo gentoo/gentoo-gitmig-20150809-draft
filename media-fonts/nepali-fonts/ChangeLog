@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/nepali-fonts
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/nepali-fonts/ChangeLog,v 1.1 2004/01/19 06:31:50 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/nepali-fonts/ChangeLog,v 1.2 2004/06/21 16:11:44 usata Exp $
+
+*nepali-fonts-1-r1 (22 Jun 2004)
+
+  22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +nepali-fonts-1-r1.ebuild:
+  font.eclassify
 
 *nepali-fonts-1 (19 Jan 2004)
 
