@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.41 2004/03/12 17:29:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.42 2004/03/17 00:52:55 geoman Exp $
+
+  16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> pygtk-2.0.0-r1.ebuild:
+  Added ~mips keyword.
 
   12 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> pygtk-2.0.0-r1.ebuild:
   stable on sparc
