@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.198 2005/01/09 20:58:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.199 2005/01/13 13:08:57 trapni Exp $
+
+*mod_php-5.0.2-r1 (13 Jan 2005)
+
+  13 Jan 2005; Christian Parpart <trapni@gentoo.org>
+  +mod_php-4.3.10-r1.ebuild, +mod_php-5.0.2-r1.ebuild,
+  +mod_php-5.0.3-r1.ebuild:
+  apache herd package refresh
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org> mod_php-5.0.3.ebuild:
   Added ~sparc keyword.
