@@ -8,6 +8,7 @@ acpi
 3dnowex
 directfb
 avi
+emboss
 icc
 icc-pgo
 ifc
