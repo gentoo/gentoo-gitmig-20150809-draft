@@ -95,3 +95,4 @@ move net-www/thttpd www-servers/thttpd
 move net-www/tomcat www-servers/tomcat
 move net-www/tux www-servers/tux
 move net-www/webfs www-servers/webfs
+move net-www/bozohttpd www-servers/bozohttpd
