@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnomba
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.6 2003/02/12 08:22:37 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.7 2004/03/19 10:10:00 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gnomba-0.6.2.ebuild:
+  fix depend (bug #45110); tidy
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
