@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libextractor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.6 2003/02/12 06:05:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.7 2003/03/23 01:32:05 spider Exp $
+
+*libextractor-0.2.2 (23 mar 2003)
+
+  23 mar 2003; <spider@gentoo.org> libextractor-0.2.2.ebuild:
+  Updated version, this one actually builds on my system
 
 *libextractor-0.2.0 (05 Feb 2003)
 
