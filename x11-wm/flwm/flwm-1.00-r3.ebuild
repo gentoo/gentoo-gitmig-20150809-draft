@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r3.ebuild,v 1.5 2003/02/13 17:48:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r3.ebuild,v 1.6 2003/09/04 04:35:39 msterret Exp $
 
 IUSE="opengl"
 
@@ -19,8 +19,8 @@ DEPEND=">=x11-base/xfree-4.0.1
 	opengl? ( virtual/opengl )"
 
 	#Configuration of the appearance and behavior of flwm
-	#must be done at compile time, i.e. there is 
-	#no .flwmrc file or interactive configuring while 
+	#must be done at compile time, i.e. there is
+	#no .flwmrc file or interactive configuring while
 	#running. To quote the man page, "gcc is your friend,"
 	#so this type of configuration must be done at compile
 	#time by editing the config.h file.  I can't see any
@@ -29,21 +29,21 @@ DEPEND=">=x11-base/xfree-4.0.1
 	#and edit the config.h to their liking.
 
 src_compile() {
-    
+
 	use opengl && export X_EXTRA_LIBS=-lGL
-	
+
 	export CXXFLAGS="${CXXFLAGS} -I/usr/include/fltk-1.0"
 	export LIBS="-L/usr/lib/fltk-1.0"
-	
+
 	econf || die
 	make || die
 }
 
 src_install() {
-    
+
 	doman flwm.1
 	dodoc README flwm_wmconfig
-    
+
 	into /usr
 	dobin flwm
 }
