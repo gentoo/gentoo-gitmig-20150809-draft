@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/pppconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.4 2003/04/22 06:22:01 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.5 2003/10/02 01:11:30 zul Exp $
+
+*pppconfig-2.2.0 (01 Oct 2003)
+
+  01 Oct 2003; Chuck Short <zul@gentoo.org> pppconfig-2.2.0.ebuild:
+  Version bump, closes #29973.
 
 *pppconfig-2.1 (21 Apr 2003)
 
