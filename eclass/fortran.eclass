@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.1 2004/10/01 12:08:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.2 2004/10/10 12:59:01 kugelfang Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -9,6 +9,8 @@ ECLASS=fortran
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
+
+#DEPEND="virtual/fortran" # Let's aim for this...
 
 # need_fortran(<profiles>):
 #  profiles = <profile> ... <profile>
@@ -23,9 +25,9 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Checks also if F77 (the fortran compiler to use) is available
 # on the System.
 need_fortran() {
-	if [ -z "$@" ]; then
+	if [ -z "$*" ]; then
 		eerror "Call need_fortran with at least one argument !"
-	fi 
+	fi
 	local AVAILABLE=""
 	for PROFILE in $@; do
 		case ${PROFILE} in
@@ -52,6 +54,7 @@ need_fortran() {
 				;;
 		esac
 	done
+	AVAILABLE="${AVAILABLE:1}"
 	if [ -z "${AVAILABLE}" ]; then
 		eerror "None of the needed Fortran Compilers ($@) is installed."
 		eerror "To install one of these, choose one of the following steps:"
@@ -78,29 +81,48 @@ need_fortran() {
 		die "Install a Fortran Compiler !"
 	else
 		einfo "You need one of these Fortran Compilers: $@"
-		einfo "Installed are:${AVAILABLE}"
-		if [ -n "${F77}" ]; then
-			MY_F77="$(basename ${F77})"
-			case ${MY_F77} in
+		einfo "Installed are: ${AVAILABLE}"
+		if [ -n "${F77}" -o -n "${FC}" -o -n "${F2C}" ]; then
+			if [ -n "${F77}" ]; then
+				FC="${F77}" # F77 overwrites FC
+			fi
+			if [ -n "${FC}" -a -n "${F2C}" ]; then
+				ewarn "Using ${FC} and f2c is impossible. Disabling f2c !"
+				F2C=""
+				MY_FORTRAN="$(basename ${FC})"
+				EXTRA_ECONF="${EXTRA_ECONF} --with-f77"
+			elif [ -n "${F2C}" ]; then
+				MY_FORTRAN="$(basename ${F2C})"
+				EXTRA_ECONF="${EXTRA_ECONF} --with-f2c"
+			fi
+			case ${MY_FORTRAN} in
 				g77)
-					TEST="${AVAILABLE:-f77}"
+					TEST="${AVAILABLE%f77}"
+					FORTRANC="f77"
 					;;
 				ifc|f2c)
-					TEST="${AVAILABLE:-${MY_F77}}"
+					TEST="${AVAILABLE%${MY_FORTRAN}}"
+					FORTRANC="${MY_FORTRAN}"
+					;;
 			esac
 			if [ "${TEST}" == "${AVAILABLE}" ]; then
-				warn "F77 is set to ${F77}, which is not available \
-					on this System !"
-				F77=${AVAILABLE##\ *}
+				echo ${MY_FORTRAN}
+				echo ${TEST}
+				echo ${AVAILABLE}
+				eerror "Current Fortan Compiler is set to ${MY_FORTRAN}, which is not usable with this package !"
+				die "Wrong Fortran Compiler !"
 			fi
 		fi
 	fi
 }
 
 # patch_fortran():
-#  Apply necessary patches for ${F77}
+#  Apply necessary patches for ${FORTRANC}
 patch_fortran() {
-	PATCHES=${FILESDIR}/${P}-$(basename ${F77})*
+	if [ -z "${FORTRANC}" ]; then
+		return
+	fi
+	PATCHES=${FILESDIR}/${P}-${FORTRANC}*
 	if [ -n "${PATCHES}" ]; then
 		for PATCH in ${PATCHES}; do
 			epatch ${PATCH}
@@ -111,10 +133,9 @@ patch_fortran() {
 # fortran_pkg_setup():
 #  Set FORTRAN to indicate the list of Fortran Compiler that
 #  can be used for the ebuild.
-#  If not set in ebuild, FORTRAN will default to:
-FORTRAN="f77"
+#  If not set in ebuild, FORTRAN will default to f77
 fortran_pkg_setup() {
-	need_fortran ${FORTRAN}
+	need_fortran ${FORTRAN:=f77}
 }
 
 # fortran_src_unpack():
