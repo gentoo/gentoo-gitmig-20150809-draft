@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/showimg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.17 2004/07/17 22:11:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.18 2004/09/13 20:39:35 carlo Exp $
+
+  13 Sep 2004; Carsten Lohrke <carlo@gentoo.org> showimg-0.9.3.ebuild:
+  missing kdebase dependency, missing ~archs, stable on x86
 
 *showimg-0.9.3 (06 Jul 2004)
 
