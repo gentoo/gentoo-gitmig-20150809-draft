@@ -1,36 +1,36 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dd63b195126cbb97a07e1f2809170714 ChangeLog 11443
-MD5 b8350765f0144bf65c8276feed3224c3 pine-4.60.ebuild 4700
+MD5 a9075d829cdc9276922f0a210fdf6f06 pine-4.61-r2.ebuild 4963
 MD5 f623f7141b8ee7869d27f6ba2b5a9151 pine-4.50-r4.ebuild 3482
-MD5 17df06f0e8588abbdb144fba9e2a32d5 pine-4.61-r2.ebuild 4960
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 75179604ac64f4cbf6325ac71a96e536 pine-4.61-r1.ebuild 4777
 MD5 3cae58d7b2e4d49133262affba989f9f pine-4.58-r3.ebuild 4350
-MD5 3eb735b51e3192ee78b7b556e83256b3 files/transparency.patch 447
-MD5 aed38f617192b6de2ada1847c48cabe7 files/pine-4.33-whitespace.patch 337
-MD5 4c1ce6a4925676bcfe5c53a2cf05b7f7 files/digest-pine-4.61-r2 139
-MD5 4c1ce6a4925676bcfe5c53a2cf05b7f7 files/digest-pine-4.61-r1 139
-MD5 b0aee0d39a268c8f0c85e774f7408509 files/pine-4.21-passwd.patch 448
-MD5 e11e8fb4fba9fc54b7c0f302d79458bf files/pine-4.40-boguswarning.patch 512
-MD5 4239f06fa5f26e5cf181bb4cd5d96035 files/imap-4.7c2-flock.patch 531
-MD5 e2791bad5a20d4429dcd4a928714558f files/flock.c 1182
-MD5 5eb69ed43326ebdca20e77b988d0b19b files/pine-4.21-fixhome.patch 830
-MD5 921f1e2837b3d3aaaff0ff9b78432e92 files/pine-4.30-ldap.patch 420
-MD5 c0d53400c157de12da7e429dd0f21185 files/imap-2000-time.patch 1646
-MD5 21aa4bed99713a0b9c9971226fda0807 files/digest-pine-4.58-r3 429
-MD5 6fca405df4fd22a5708ddf83e8081716 files/pine-4.40-lockfile-perm.patch 932
+MD5 fb6e45c547f230353fd7863a95fbc36d ChangeLog 11553
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 b8350765f0144bf65c8276feed3224c3 pine-4.60.ebuild 4700
 MD5 de52689ee75160c695bf4659ee956845 files/imap-4.7c2-flock_4.60.patch 537
+MD5 c47b08cab6132957eef9c0d61862f951 files/digest-pine-4.50-r4 131
+MD5 21aa4bed99713a0b9c9971226fda0807 files/digest-pine-4.58-r3 429
+MD5 4c1ce6a4925676bcfe5c53a2cf05b7f7 files/digest-pine-4.61-r1 139
+MD5 4c1ce6a4925676bcfe5c53a2cf05b7f7 files/digest-pine-4.61-r2 139
+MD5 921f1e2837b3d3aaaff0ff9b78432e92 files/pine-4.30-ldap.patch 420
 MD5 36fbad9153bc6b61adb00767d199d284 files/imap-4.7c2-flock+maildir.patch 551
 MD5 3803bda87f35ee20456ab2b363460db9 files/pine-4.31-segfix.patch 460
-MD5 c47b08cab6132957eef9c0d61862f951 files/digest-pine-4.50-r4 131
-MD5 74f43c70f061a3fb9378d7800b64ccaa files/digest-pine-4.60 136
+MD5 c0d53400c157de12da7e429dd0f21185 files/imap-2000-time.patch 1646
+MD5 4239f06fa5f26e5cf181bb4cd5d96035 files/imap-4.7c2-flock.patch 531
+MD5 aed38f617192b6de2ada1847c48cabe7 files/pine-4.33-whitespace.patch 337
+MD5 5eb69ed43326ebdca20e77b988d0b19b files/pine-4.21-fixhome.patch 830
+MD5 e11e8fb4fba9fc54b7c0f302d79458bf files/pine-4.40-boguswarning.patch 512
+MD5 e2791bad5a20d4429dcd4a928714558f files/flock.c 1182
+MD5 6fca405df4fd22a5708ddf83e8081716 files/pine-4.40-lockfile-perm.patch 932
 MD5 dadc9e153e023ad3b24d8cefd4bf5a2b files/pine-4.56-passfile.patch 504
+MD5 b0aee0d39a268c8f0c85e774f7408509 files/pine-4.21-passwd.patch 448
+MD5 74f43c70f061a3fb9378d7800b64ccaa files/digest-pine-4.60 136
+MD5 3eb735b51e3192ee78b7b556e83256b3 files/transparency.patch 447
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo4Wv10xuJSrg3/sRAtPOAJ9h+p53AlCcMddGZI27YrVlc84w6wCfRKE5
-C1fhjZddUgr4ss8FcaLKiGI=
-=2Wcq
+iD8DBQFBo6NvZ/iYVBmujdURAl9WAJ9VBfhjqOl9kceyoxEvuTHc94wfQACgn2my
+mIT4KKtNQ1/JEn+2MZH7GrY=
+=ljB6
 -----END PGP SIGNATURE-----
