@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.9 2003/07/18 15:29:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.10 2003/08/07 20:55:40 lisa Exp $
+
+  07 Aug 2003; Lisa Seelye <lisa@gentoo.org> zip-2.3-r2.ebuild:
+  Changed make to emake for bug 26149
 
   18 Jul 2003; Martin Holzer <mholzer@gentoo.org> zip-2.3-r2.ebuild:
   Added DEPEND. Closes #24739.
