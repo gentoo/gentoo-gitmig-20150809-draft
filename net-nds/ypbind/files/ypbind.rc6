@@ -1,0 +1,39 @@
+#!/sbin/runscript
+
+depend() {
+	need net portmap
+}
+
+checkconfig() {
+	if [ -z "$YP_DOMAIN" ] ; then
+		eerror "You need to setup YP_DOMAIN /etc/rc.conf"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting ypbind"
+	ypdomainname "$YP_DOMAIN"
+	start-stop-daemon --start --quiet --exec /usr/sbin/ypbind
+	if [ -n "$?" ] ; then
+		notfound=1
+		for i in 0 1 2 3 4 5 6 7 8 9
+		do
+			ypwhich &>/dev/null && { notfound=0; break; }
+			sleep 1
+		done
+		if [ $notfound -eq 1 ] ; then
+			eend 1 "No NIS server found"
+		fi
+	else
+		eend $?
+	fi
+}
+
+stop() {
+	ebegin "Stopping ypbind"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/ypbind
+	# Remove binding files, if ypbind "forgets" it
+	rm -f /var/yp/binding/*
+}
