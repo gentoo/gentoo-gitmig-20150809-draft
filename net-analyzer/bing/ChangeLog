@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bing
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bing/ChangeLog,v 1.1 2003/09/06 23:33:49 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bing/ChangeLog,v 1.2 2003/09/07 07:12:08 msterret Exp $
+
+  07 Sep 2003; Michael Sterrett <msterret@gentoo.org> bing-1.1.3.ebuild:
+  use sed -i; sed in unpack; error message for emake; Readme.txt, not Readme
 
 *bing-1.1.3 (06 Sep 2003)
 
