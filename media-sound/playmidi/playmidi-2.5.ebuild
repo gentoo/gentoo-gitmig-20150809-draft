@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5.ebuild,v 1.1 2004/01/25 09:40:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5.ebuild,v 1.2 2004/02/06 08:16:08 eradicator Exp $
 
 DESCRIPTION="Command Line and GUI based MIDI Player"
 HOMEPAGE="http://sourceforge.net/projects/playmidi/"
@@ -9,11 +9,12 @@ LICENSE="GPL-2"
 IUSE="svga X gtk"
 
 DEPEND="sys-libs/ncurses
-        svga? ( media-libs/svgalib )
-        gtk? ( =dev-libs/glib-1*
-               =x11-libs/gtk+-1* )
-        X? ( virtual/x11 )"
+	svga? ( media-libs/svgalib )
+	gtk? ( =dev-libs/glib-1*
+		=x11-libs/gtk+-1* )
+	X? ( virtual/x11 )"
 
+SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 
 S=${WORKDIR}/${P/2.5/2.4}
