@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 #        Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.16 2003/02/13 16:48:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.17 2003/02/20 22:00:24 zwelch Exp $
 
 inherit gnuconfig
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
 	use alpha && gnuconfig_update
+	use arm && gnuconfig_update
 }
 
 src_compile() {

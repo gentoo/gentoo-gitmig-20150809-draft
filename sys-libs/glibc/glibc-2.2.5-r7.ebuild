@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.28 2003/02/13 16:48:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.29 2003/02/20 22:00:24 zwelch Exp $
 
 IUSE="nls pic build"
 
@@ -36,7 +36,7 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha arm"
 SLOT="2.2"
 LICENSE="GPL-2"
 
@@ -153,6 +153,15 @@ src_unpack() {
 		einfo "Applying nall's sparc32-semctl patch..."
 		cd ${S} 
 		patch -p1 < ${FILESDIR}/${PV}/${P}-sparc32-semctl.patch > /dev/null || die
+	fi
+	
+	# Some patches to fixup build on arm
+	if [ "${ARCH}" = "arm" ]; then
+		cd ${S}
+		einfo "Applying ARM sysdep patch..."
+		patch -p0 < ${FILESDIR}/${PV}/${P}-arm-sysdeps-fix.diff || die
+		einfo "Applying ARM errlist patch..."
+		patch -p0 < ${FILESDIR}/${PV}/${P}-arm-errlist-fix.diff || die
 	fi
 }
 
