@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.16.ebuild,v 1.1 2002/10/10 17:44:06 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.16.ebuild,v 1.2 2002/10/25 05:17:25 woodchip Exp $
 
 IUSE="ssl slp pam"
 
@@ -24,16 +24,20 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
-
-	unpack ${A} ; cd ${S}
-	# make sure libcupsimage gets linked with libjpeg
+	unpack ${A} || die
+	cd ${S} || die
+	#make sure libcupsimage gets linked with libjpeg
 	patch -p0 < ${FILESDIR}/configure-jpeg-buildfix-1.1.15.diff || die
 	patch -p1 < ${FILESDIR}/disable-strip.patch || die
-
+	#known problem, probably will be fixed next release //woodchip; #9188
+	cd pdftops && cp Makefile Makefile.orig
+	sed -e 's|FTFont.o||' \
+		-e 's|SFont.o||' \
+		-e 's|T1Font.o||' \
+		-e 's|TTFont.o||' Makefile.orig > Makefile
 }
 
 src_compile() {
-
 	local myconf
 	use pam || myconf="${myconf} --disable-pam"
 	use ssl || myconf="${myconf} --disable-ssl"
@@ -49,7 +53,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /var/spool /var/log/cups /etc/cups
 
 	make \
@@ -104,11 +107,9 @@ src_install() {
 	insinto /etc/pam.d ; newins ${FILESDIR}/cups.pam cups
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.rc6 cupsd
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
-
 }
 
 pkg_postinst() {
-
 	install -d -m0755 ${ROOT}/var/log/cups
 	install -d -m0755 ${ROOT}/var/spool
 	install -m0700 -o lp -d ${ROOT}/var/spool/cups
@@ -120,5 +121,4 @@ pkg_postinst() {
 	einfo "emerge >=app-text/ghostscript-7.05-r1 if you need to print"
 	einfo "to a non-postscript printer"
 	einfo
-
 }
