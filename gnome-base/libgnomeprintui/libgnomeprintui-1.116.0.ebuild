@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-1.116.0.ebuild,v 1.10 2003/02/13 12:13:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-1.116.0.ebuild,v 1.11 2003/09/21 18:32:49 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="user interface libraries for gnome print"
@@ -20,3 +20,11 @@ DEPEND="${RDEPEND} >=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
 
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-1-syntax_fix.patch
+
+}

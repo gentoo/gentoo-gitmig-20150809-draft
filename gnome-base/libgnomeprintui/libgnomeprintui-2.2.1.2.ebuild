@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.2.1.2.ebuild,v 1.7 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.2.1.2.ebuild,v 1.8 2003/09/21 18:32:49 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 IUSE="doc"
 
@@ -22,3 +22,12 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.10 )"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-2-syntax_fix.patch
+
+}
