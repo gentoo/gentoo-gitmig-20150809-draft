@@ -1,0 +1,31 @@
+# ChangeLog for app-gnustep/terminal
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.1 2004/07/23 13:32:56 fafhrd Exp $
+
+*terminal-0.9.4 (23 Jul 2004)
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  +terminal-0.9.4.ebuild:
+  Moved from app-gnustep/terminal to gnustep-apps/terminal.
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  terminal-0.9.4.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  terminal-0.9.4.ebuild:
+  Changing the eclass to gnustep-old
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> terminal-0.9.4.ebuild:
+  Added IUSE=
+
+  18 Oct 2003; Nick Hadaway <raker@gentoo.org> terminal-0.9.4.ebuild:
+  Fixed the policy violation of setting ${A}
+
+  28 Jul 2003; Nick Hadaway <raker@gentoo.org> terminal-0.9.4.ebuild:
+  Changed the description as noted on bug #25402.
+
+*terminal-0.9.4 (16 Jul 2003)
+
+  16 Jul 2003; Michele Balistreri <brain@gentoo.org> terminal-0.9.4.ebuild:
+  New ebuild.
