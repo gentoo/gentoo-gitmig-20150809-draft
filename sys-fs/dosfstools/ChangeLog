@@ -1,24 +1,29 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.9 2004/02/15 17:31:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.10 2004/03/25 00:02:46 plasmaroo Exp $
+
+  25 Mar 2004; <plasmaroo@gentoo.org> dosfstools-2.10.ebuild,
+  files/dosfstools-2.10-2.6.headers.patch:
+  Added a patch to solve compilation issues on 2.6 headers.
+  Closes bug #44888.
 
   15 Feb 2004; Dylan Carlson <absinthe@gentoo.org> dosfstools-2.9.ebuild:
-  added ~amd64 keyword.
+  Added ~amd64 keyword.
 
   23 Jan 2004; <gustavoz@gentoo.org> dosfstools-2.10.ebuild:
-  stable on sparc
+  Stable on sparc.
 
   23 Jan 2004; <agriffis@gentoo.org> dosfstools-2.10.ebuild:
-  stable on ia64 for elilo
+  Stable on ia64 for elilo.
 
   09 Jan 2004; <gustavoz@gentoo.org> dosfstools-2.10.ebuild:
-  stable for hppa
+  Stable for hppa.
 
   07 Jan 2004; Jon Portnoy <avenj@gentoo.org> dosfstools-2.10.ebuild :
   AMD64 keywords.
 
   01 Jan 2004; Martin Holzer <mholzer@gentoo.org> dosfstools-2.10.ebuild:
-  x86 stable
+  X86 stable.
 
 *dosfstools-2.10 (21 Dec 2003)
 
@@ -32,7 +37,7 @@
 
   16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> dosfstools-2.8-r3.ebuild,
   dosfstools-2.9.ebuild, files/errno.patch:
-  move to sys-fs
+  Moved to sys-fs.
 
 *dosfstools-2.9 (08 Sep 2003)
 
@@ -57,7 +62,6 @@
   Fixed HOMEPAGE
 
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Add LICENSE, SLOT.
 
 *dosfstools-2.8-r1 (1 Feb 2002)

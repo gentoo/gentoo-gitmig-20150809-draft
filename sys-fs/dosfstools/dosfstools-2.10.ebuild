@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.10.ebuild,v 1.7 2004/02/23 15:56:47 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.10.ebuild,v 1.8 2004/03/25 00:02:46 plasmaroo Exp $
 
 inherit eutils
 
@@ -15,8 +15,9 @@ KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ia64"
 DEPEND="virtual/glibc"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/errno.patch
+	epatch ${FILESDIR}/${P}-2.6.headers.patch
 	sed -i "s:PREFIX\ \=:PREFIX\ \=\ \/usr:" Makefile
 	sed	-i "s:\/usr\/man:\/share\/man:" Makefile
 

@@ -1,0 +1,12 @@
+--- dosfsck/boot.org   2004-03-04 06:45:51.368946816 +0000
++++ dosfsck/boot.c   2004-03-04 06:45:24.838979984 +0000
+@@ -14,6 +14,10 @@
+ #include "io.h"
+ #include "boot.h"
+ 
++#ifndef MSDOS_FAT12
++#define MSDOS_FAT12 MAX_FAT12
++#endif // !MSDOS_FAT12
++
+ #define ROUND_TO_MULTIPLE(n,m) ((n) && (m) ? (n)+(m)-1-((n)-1)%(m) : 0)
+     /* don't divide by zero */ 

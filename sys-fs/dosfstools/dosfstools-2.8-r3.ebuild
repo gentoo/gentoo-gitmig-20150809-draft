@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.8-r3.ebuild,v 1.1 2003/09/17 02:43:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.8-r3.ebuild,v 1.2 2004/03/25 00:02:46 plasmaroo Exp $
 
 inherit eutils
 
