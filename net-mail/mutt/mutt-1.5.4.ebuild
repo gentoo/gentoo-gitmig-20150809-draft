@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.6 2003/03/29 15:07:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.7 2003/03/31 15:38:19 agriffis Exp $
 
 IUSE="ssl nls slang cjk crypt imap"
 
@@ -24,7 +24,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc -alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 inherit flag-o-matic
 
@@ -45,10 +45,9 @@ src_unpack() {
 
 src_compile() {
 	# See Bug #11170
-	if [ "${ARCH}" = "ppc" ]
-	then
-		replace-flags "-O[3-9]" "-O2"
-	fi
+	case ${ARCH} in
+		alpha|ppc) replace-flags "-O[3-9]" "-O2" ;;
+	esac
 
 	local myconf
 	myconf="`use_enable nls` `use_with ssl` \

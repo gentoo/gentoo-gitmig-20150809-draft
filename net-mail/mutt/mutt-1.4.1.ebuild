@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4.1.ebuild,v 1.3 2003/03/29 14:13:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4.1.ebuild,v 1.4 2003/03/31 15:38:19 agriffis Exp $
 
 IUSE="ssl nls slang cjk"
 
@@ -37,10 +37,10 @@ src_unpack() {
 
 src_compile() {
 	# See Bug #11170
-	if [ "${ARCH}" = "ppc" ]
-	then
-		replace-flags "-O[3-9]" "-O2"
-	fi
+	# See Bug #11170
+	case ${ARCH} in
+		alpha|ppc) replace-flags "-O[3-9]" "-O2" ;;
+	esac
 
 	local myconf
 	use nls \
