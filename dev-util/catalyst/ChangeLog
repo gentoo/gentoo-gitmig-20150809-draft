@@ -1,6 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.2 2004/02/19 01:10:18 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.3 2004/02/19 21:04:37 zhen Exp $
+
+*catalyst-1.0.1-r1 (19 Feb 2004)
+
+  19 Feb 2004; John Davis <zhen@gentoo.org> catalyst-1.0.1-r1.ebuild:
+  fix for bug #42173
 
 *catalyst-1.0.1 (18 Feb 2004)
 
