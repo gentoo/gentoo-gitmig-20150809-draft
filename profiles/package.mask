@@ -67,14 +67,6 @@ dev-util/gst-editor
 # badly broken here - masking until resolved
 =dev-util/ccache-2.1.1-r2
 
-# <phoenix@gentoo.org> (24 Feb 2003)
-# Masked for forward compatibility
-# ( 0.6.3 < 0.6.3.200* )
-=media-video/transcode-0.6.3.20021205-r1
-=media-video/transcode-0.6.3.20021219   
-=media-video/transcode-0.6.3.20030116  
-=media-video/transcode-0.6.3.20030116-r1
-
 # <azarah@gentoo.org> (24 Feb 2003)
 # This one is a fix that I did not think about
 # and could be a security hole.
