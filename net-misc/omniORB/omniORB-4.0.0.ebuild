@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.0.ebuild,v 1.1 2002/12/14 09:54:11 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.0.ebuild,v 1.2 2002/12/15 18:35:05 lordvan Exp $
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 SRC_URI="mirror://sourceforge/omniorb/${PF}.tar.gz"
@@ -35,7 +35,7 @@ src_compile() {
 src_install () {
 
 	cd ${S}/build
-	emake DESTDIR=${D} install 
+	emake DESTDIR=${D} install
 
 	cd ${S}
 	dodoc COPYING* CREDITS README* ReleaseNotes* 		
@@ -51,7 +51,14 @@ src_install () {
 	dodir /etc/env.d/
 	echo "PATH=/usr/share/omniORB/bin/scripts" > ${D}/etc/env.d/90omniORB
 	echo "OMNIORB_CONFIG=/etc/omniorb/omniORB.cfg" >> ${D}/etc/env.d/90omniORB
-
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/omniORB-4.0.0 omniORB
+	
+	cp ${S}/sample.cfg ${S}/omniORB.cfg
+	dodir /etc/omniorb
+	insinto /etc/omniorb	
+	doins ${S}/omniORB.cfg
+	
 }
 
 pkg_postinst() {
@@ -61,5 +68,5 @@ pkg_postinst() {
 		echo "ORBInitialHost `uname -n`" > ${ROOT}etc/omniorb/omniORB.cfg
 		echo "ORBInitialPort 2809" >> ${ROOT}etc/omniorb/omniORB.cfg
 	fi
-
+	#/usr/bin/python ${ROOT}usr/share/doc/${PF}/mkomnistubs.py
 }
