@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.8 2004/05/18 23:49:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.9 2004/05/25 20:06:56 squinky86 Exp $
 
-inherit eutils fixheadtails
+inherit eutils fixheadtails gcc
 
 MY_P=${P/-/_}
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
@@ -25,7 +25,12 @@ src_unpack() {
 	cd ${S}
 	use doc && unpack festdoc-1.4.2.tar.gz && mv festdoc-1.4.2 festdoc
 
-	epatch ${FILESDIR}/${PV}-gcc3.4.patch
+	if [ "$(gcc-version)" == "3.3" ]; then
+		epatch ${FILESDIR}/${PN}-gcc3.3.diff
+	fi
+	if [ "$(gcc-version)" == "3.4" ]; then
+		epatch ${FILESDIR}/${PV}-gcc3.4.patch
+	fi
 	ht_fix_file config.guess
 	sed -i 's:-O3:$(OPTIMISE_CXXFLAGS):' base_class/Makefile
 
