@@ -1,8 +1,11 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.3 2003/07/19 19:41:10 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.4 2003/08/08 00:05:23 max Exp $
 
-  19 Jul 2003; Nick Hadaway <raker@gentoo.org> :
+  07 Aug 2003; Max Kalika <max@gentoo.org> mythmusic-0.10.ebuild:
+  Depend on either mythtv or mythfrontend.
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
   Reverts back to 0.10
 
 *mythmusic-0.10-r1 (17 Jul 2003)
@@ -10,29 +13,29 @@
   17 Jul 2003; Nick Hadaway <raker@gentoo.org> mythmusic-0.10-r1.ebuild:
   Replaced media-sound/mad with media-libs/{libmad,libid3tag}
 
-  03 Jul 2003; Max Kalika <max@lsit.ucsb.edu> mythmusic-0.8.ebuild:
+  03 Jul 2003; Max Kalika <max@gentoo.org> mythmusic-0.8.ebuild:
   Set KEYWORDS to ~x86.
 
 *mythmusic-0.10 (01 Jul 2003)
 
-  01 Jul 2003; Max Kalika <max@lsit.ucsb.edu> mythmusic-0.10.ebuild:
+  01 Jul 2003; Max Kalika <max@gentoo.org> mythmusic-0.10.ebuild:
   Bump version to 0.10. Add similar note as mythtv regarding the importance of
   keeping database up to date between upgrades.
 
-  22 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythmusic-0.9.ebuild:
+  22 Jun 2003; Max Kalika <max@gentoo.org> mythmusic-0.9.ebuild:
   Cleanup and consistancy: depend on sed-4, die if sed fails. Drop unused
   myconf setting.
 
-  18 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythmusic-0.9.ebuild:
+  18 Jun 2003; Max Kalika <max@gentoo.org> mythmusic-0.9.ebuild:
   Change depend to media-tv/mythtv.
 
 *mythmusic-0.9 (09 Jun 2003)
 
-  09 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythmusic-0.9.ebuild:
+  09 Jun 2003; Max Kalika <max@gentoo.org> mythmusic-0.9.ebuild:
   Bump to 0.9.  Make all sed operations inline.  Drop all config file handling
   as it is all done online in the database now.
 
 *mythmusic-0.8 (27 Mar 2003)
 
-  26 Mar 2003; Max Kalika <max@lsit.ucsb.edu> mythmusic-0.9.ebuild:
+  26 Mar 2003; Max Kalika <max@gentoo.org> mythmusic-0.9.ebuild:
   Initial import.
