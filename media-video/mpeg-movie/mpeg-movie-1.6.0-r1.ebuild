@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.10 2004/07/14 22:01:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.11 2005/01/09 06:18:29 luckyduck Exp $
+
+inherit eutils
 
 MY_P=${PN/-/_}
 S=${WORKDIR}/${MY_P}
@@ -20,6 +22,9 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/${PF}-gentoo.patch
+
 	for i in video_in video_out
 	do
 		cd ${S}/${i}
@@ -81,7 +86,6 @@ src_unpack() {
 		mpeg_export.h.orig > mpeg_export.h
 }
 src_compile() {
-
 	emake || make || die
 
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg-movie
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.7 2004/08/12 20:46:10 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.8 2005/01/09 06:18:29 luckyduck Exp $
+
+  09 Jan 2005; <lucky@gentoo.org> +files/mpeg-movie-1.6.0-r1-gentoo.patch,
+  mpeg-movie-1.6.0-r1.ebuild:
+  added patch to make it compile again. fixes #60695
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.

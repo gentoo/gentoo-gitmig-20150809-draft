@@ -1,0 +1,41 @@
+diff -urpN mpeg_movie.orig/video_in/headers/libpnmrw.h mpeg_movie/video_in/headers/libpnmrw.h
+--- mpeg_movie.orig/video_in/headers/libpnmrw.h	2005-01-09 05:49:31.570006416 +0100
++++ mpeg_movie/video_in/headers/libpnmrw.h	2005-01-09 05:55:37.625357544 +0100
+@@ -19,10 +19,12 @@
+ ** malloc.h at all.  A sad situation.  If you have compilation problems
+ ** that point here, feel free to tweak or remove these declarations.
+ */
++/*
+ #include <malloc.h>
+ #if !defined(sco)  &&  !defined(sgi) && !defined(IRIX)
+ extern char* malloc();
+-#endif
++#endif 
++*/
+ /* End of configurable definitions. */
+ 
+ 
+diff -urpN mpeg_movie.orig/video_in/libpnmrw.c mpeg_movie/video_in/libpnmrw.c
+--- mpeg_movie.orig/video_in/libpnmrw.c	2005-01-09 05:49:31.571006264 +0100
++++ mpeg_movie/video_in/libpnmrw.c	2005-01-09 06:46:37.986111992 +0100
+@@ -32,6 +32,7 @@
+ 
+ /* if don't have string.h, try strings.h */
+ #include <string.h>
++#include <errno.h>
+ #define rindex(s,c) strrchr(s,c)
+ 
+ 
+@@ -126,11 +127,10 @@ static void
+   pm_perror( reason )
+ char* reason;
+ {
+-  extern const char *const sys_errlist[];
+   extern int errno;
+   char* e;
+ 
+-  e = sys_errlist[errno];
++  e = strerror(errno);
+ 
+   if ( reason != 0 && reason[0] != '\0' )
+     (void) fprintf( stderr, "%s: %s - %s\n", progname, reason, e );
