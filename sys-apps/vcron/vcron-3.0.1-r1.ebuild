@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.19 2003/04/12 17:01:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.20 2003/04/20 21:57:29 gmsoft Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ DESCRIPTION="The Vixie cron daemon"
 SRC_URI="ftp://ftp.vix.com/pub/vixie/${MY_P}.tar.bz2
 	 selinux? mirror://gentoo/${P}-selinux.patch.bz2"
 HOMEPAGE="http://www.vix.com/"
-KEYWORDS="x86 ppc sparc alpha arm mips"
+KEYWORDS="x86 ppc sparc alpha arm mips hppa"
 SLOT="0"
 LICENSE="as-is"
 

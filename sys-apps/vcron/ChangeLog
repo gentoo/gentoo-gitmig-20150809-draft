@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.14 2003/04/13 12:52:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.15 2003/04/20 21:57:29 gmsoft Exp $
 
 *vcron-3.0.1-r1 (20 Apr 2002)
+
+  21 Apr 2003; Guy Martin <gmsoft@gentoo.org vcron-3.0.1-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   13 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
   files/vixie-cron-3.0.1-gentoo.patch:
