@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.55 2003/04/06 09:59:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.56 2003/04/06 18:49:02 zwelch Exp $
 
   06 Apr 2003; Martin Schlemmer <azarah@gentoo.org> :
   Fix all 2.3 ebuild to install timezone data if 'build' in USE, bug #16530.
@@ -20,6 +20,9 @@
   and up) needs glibc-2.3.3 snapshot.
 
 *glibc-2.3.1-r4 (21 Mar 2003)
+
+  06 Apr 2003; Zach Welch <zwelch@gentoo.org> glibc-2.3.1-r4.ebuild:
+  add arm keyword
 
   06 Apr 2003; Christian Birchinger <joker@gentoo.org> glibc-2.3.1-r4.ebuild:
   Changed replace-flags for sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.5 2003/04/06 09:59:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.6 2003/04/06 18:49:02 zwelch Exp $
 
 IUSE="nls pic build"
 
@@ -44,7 +44,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${PV}.tar.gz
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="GPL-2"
