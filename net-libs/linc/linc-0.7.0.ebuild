@@ -1,22 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.7.0.ebuild,v 1.1 2002/10/27 15:10:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.7.0.ebuild,v 1.2 2002/12/01 18:29:10 foser Exp $
 
-IUSE="doc"
+IUSE="doc ssl"
 
 inherit libtool gnome.org debug
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library to ease the writing of networked applications"
-#SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86"
 
-RDEPEND=">=dev-libs/glib-2.0.6
-	>=dev-libs/openssl-0.9.6"
+RDEPEND=">=dev-libs/glib-2
+	ssl? ( dev-libs/openssl )"
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )
@@ -28,9 +27,9 @@ src_compile() {
 	use doc \
 		&& myconf="${myconf} --enable-gtk-doc" \
 		|| myconf="${myconf} --disable-gtk-doc"
-
-	# if this is disabled (use) ORBit2 will fail to build. Just force it on	
-	myconf="${myconf} --with-openssl"
+	use ssl \
+		&& myconf="${myconf} --with-openssl" \
+		|| myconf="${myconf} --without-openssl"
 
 	econf ${myconf} || die
 	emake || die
