@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 7fec6b81eabe4a2f9445de8b6a59c978 isdn-firmware-2004.4.5.ebuild 982
+MD5 930fafbc197f35d50cf4f7997504976a ChangeLog 444
+MD5 89ba560b85c0e4aaaec2e36831fa2470 files/digest-isdn-firmware-2004.4.5 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoRJ3jtv59x0+BrURAji1AJ9iMMWB3eHswL4PlSRfU8IONeXQ/ACdHvaE
+zrCSwAUAS1bKK9YpBu6B71M=
+=gxND
+-----END PGP SIGNATURE-----
