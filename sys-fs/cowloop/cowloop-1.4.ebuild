@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-1.4.ebuild,v 1.1 2005/01/01 21:30:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-1.4.ebuild,v 1.2 2005/01/01 21:51:36 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -9,14 +9,15 @@ HOMEPAGE="http://www.atconsultancy.nl/cowloop/"
 SRC_URI="http://www.atconsultancy.nl/cowloop/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="2.4"
+# get-version
+# SLOT="${KV_MAJOR}.${MINOR}"
 KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/linux-sources"
 
-MODULE_NAMES="cowloop(misc:${S})"
-BUILD_PARAMS="-C ${KERNEL_DIR} SUBDIRS=${S} -I."
+MODULE_NAMES="cowloop(fs:)"
+BUILD_PARAMS="-C ${KV_DIR} SUBDIRS=${S} -I."
 BUILD_TARGETS="modules"
 
 
@@ -32,8 +33,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	$(tc-getCC) -O2 -s -I. -D__KERNEL__ -DLINUX -DMODULE -DCOWMAJOR=241 \
-		-I${KERNEL_DIR}/include ${CFLAGS} -c cowloop.c \
+	$(tc-getCC) -s -I. -D__KERNEL__ -DLINUX -DMODULE -DCOWMAJOR=241 \
+		-I${KV_DIR}/include ${CFLAGS} -c cowloop.c \
 		|| die "module compile failure"
 }
 
