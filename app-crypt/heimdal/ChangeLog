@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.20 2004/02/27 08:34:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.21 2004/03/17 22:09:51 aliz Exp $
+
+  17 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.6.ebuild:
+  Stable on amd64, closing #44174.
 
   27 Feb 2004; Joshua Kinard <kumba@gentoo.org> heimdal-0.6.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps.
