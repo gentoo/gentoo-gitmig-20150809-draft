@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.16 2002/12/13 11:00:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.17 2002/12/13 21:13:11 tuxus Exp $
+
+*db-1.85-r1.ebuild , db-3.2.9-r1.ebuild (13 Dec 2002)
+
+  13 Dec 2002; Jan Seidel <tuxus@gentoo.org> db-1.85-r1.ebuild , db-3.2.9-r1.ebuild :
+  Added mips to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
