@@ -1,4 +1,4 @@
-MD5 5ce8636066050e2f771d61ae751ecf9b ChangeLog 2756
+MD5 c9bec6ee187d62578de78c70e54d59f0 ChangeLog 2902
 MD5 a768f20366d412feaf748b4ac46b046e metadata.xml 350
 MD5 49a0cfa3284e5edf96bb23ad771bb17d pegasos-sources-2.6.10-r1.ebuild 753
 MD5 e8a29073e80e7fd9a95a1913e5afdd80 pegasos-sources-2.6.8.1-r2.ebuild 832
@@ -9,6 +9,7 @@ MD5 3a6d5b471f34b6b88a45dba4439cd142 pegasos-sources-2.6.11.ebuild 751
 MD5 2279fed0291bb0fd8d6bf585bdae0823 pegasos-sources-2.6.11-r1.ebuild 754
 MD5 b55d7994b8f30d6a8b4b496d2e620495 pegasos-sources-2.6.11-r2.ebuild 754
 MD5 2bc620c9efc561a19b0fdc771ecc06c5 pegasos-sources-2.6.10-r3.ebuild 752
+MD5 99c6fa09e99144e51fad6512b550f11a pegasos-sources-2.6.10-r4.ebuild 754
 MD5 55c967d175ece9bc37715a8a47442e26 files/digest-pegasos-sources-2.6.10-r1 139
 MD5 b03f2054a7c8d904d9f7d2a10867aa09 files/digest-pegasos-sources-2.6.8.1-r2 141
 MD5 152f36d2b5a67c4dc78118f6d6b4009d files/digest-pegasos-sources-2.6.9-r4 137
@@ -18,3 +19,4 @@ MD5 d79c375533a70bbbdbff656a407b39ca files/digest-pegasos-sources-2.6.11 139
 MD5 5689dc0532a52e74eceef7eaedfca81e files/digest-pegasos-sources-2.6.11-r1 139
 MD5 2e1d0143c2ff828ca9af730c5c69d1da files/digest-pegasos-sources-2.6.11-r2 139
 MD5 91ed98313cb39460d2f17b2274989497 files/digest-pegasos-sources-2.6.10-r3 139
+MD5 ee1c9f280296a6d23fca9f8e41fb239e files/digest-pegasos-sources-2.6.10-r4 139

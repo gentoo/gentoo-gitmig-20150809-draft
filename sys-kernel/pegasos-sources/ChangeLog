@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/pegasos-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/ChangeLog,v 1.14 2005/03/17 19:56:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/ChangeLog,v 1.15 2005/03/18 22:35:51 dholm Exp $
+
+*pegasos-sources-2.6.10-r4 (18 Mar 2005)
+
+  18 Mar 2005; David Holm <dholm@gentoo.org>
+  +pegasos-sources-2.6.10-r4.ebuild:
+  Fixed broken patch
 
   17 Mar 2005; David Holm <dholm@gentoo.org>
   pegasos-sources-2.6.10-r3.ebuild:
