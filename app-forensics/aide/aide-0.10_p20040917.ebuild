@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917.ebuild,v 1.1 2004/09/18 14:22:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917.ebuild,v 1.2 2004/09/18 16:25:35 ka0ttic Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_compile() {
 
 src_test() {
 	# aide abort()'s inside the sandbox for some reason
-	if ! hasq sandbox ${FEATURES};
+	if ! has sandbox ${FEATURES};
 	then
 		src/aide --init -c doc/aide.conf -V20 \
 			|| die "failed to initialise database"
@@ -84,7 +84,7 @@ pkg_postinst() {
 	einfo "Read the aide.conf(5) manual page for more information."
 	echo
 
-	if useq postgres; then
+	if use postgres; then
 		einfo "Due to a bad assumption by aide, you must issue the following"
 		einfo "command after the database initialization (aide --init ...):"
 		einfo
