@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdmp3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.4 2004/07/06 07:11:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.5 2004/11/04 20:42:04 corsair Exp $
+
+  04 Nov 2004; Markus Rothe <corsair@gentoo.org> cdmp3-0.4.1.ebuild:
+  Marked ~ppc64; bug #70048
 
   06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cdmp3-0.4.1.ebuild:
   ~amd64 ~sparc.
