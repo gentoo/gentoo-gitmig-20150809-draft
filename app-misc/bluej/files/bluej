@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "`java-config --javac | grep sun `" ]; then
+	`java-config --java` -cp "`java-config --classpath=bluej`:`java-config --jdk-home`/lib/tools.jar" bluej.Main $*	
+else
+	echo "You must be running the sun jdk for this application to work properly."
+fi
