@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.13.ebuild,v 1.1 2003/03/24 11:48:06 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.13.ebuild,v 1.2 2003/04/01 23:10:52 spider Exp $
 
 IUSE="doc python aalib"
 
@@ -33,7 +33,6 @@ RDEPEND=">=x11-libs/gtk+-2
 
 	perl?	( dev-lang/perl )"
 
-#	media-libs/xpm
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
