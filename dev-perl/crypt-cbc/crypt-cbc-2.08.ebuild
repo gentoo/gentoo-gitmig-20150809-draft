@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.08.ebuild,v 1.4 2004/02/26 06:15:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.08.ebuild,v 1.5 2004/05/27 23:08:10 kloeri Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/L/LD/LDS/${MY_P}.tar.gz"
 
 LICENSE="Artistic | GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa ~amd64 ~mips"
 
 DEPEND="dev-perl/Digest-MD5"

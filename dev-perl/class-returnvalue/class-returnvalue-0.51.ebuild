@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.51.ebuild,v 1.2 2003/12/30 13:04:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.51.ebuild,v 1.3 2004/05/27 22:58:06 kloeri Exp $
 
 inherit perl-module
 

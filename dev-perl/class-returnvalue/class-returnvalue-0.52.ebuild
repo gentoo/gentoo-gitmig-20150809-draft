@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.52.ebuild,v 1.2 2004/02/20 22:33:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.52.ebuild,v 1.3 2004/05/27 22:58:06 kloeri Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cpan.org/authors/id/J/JE/JESSE/${MY_P}.tar.gz"
 
 LICENSE="Artistic | GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc alpha hppa ~amd64"
 
 DEPEND="dev-perl/Devel-StackTrace
 	dev-perl/Test-Inline"
