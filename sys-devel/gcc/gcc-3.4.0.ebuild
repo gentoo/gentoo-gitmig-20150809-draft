@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.12 2004/04/28 22:13:14 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.13 2004/04/28 22:26:57 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -332,6 +332,9 @@ src_unpack() {
 
 	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
+
+	# apps like openoffice break without this
+	cd ${S} ; epatch ${FILESDIR}/3.4.0/gcc-3.4.0-fno-for-scope.patch
 
 	# Install our pre generated manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.227 2004/04/28 22:13:14 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.228 2004/04/28 22:26:57 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.0/gcc-3.4.0-fno-for-scope.patch, gcc-3.4.0.ebuild:
+  added fix for bug 49174
 
   28 Apr 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0.ebuild:
   fixed things up a bit and added a check that changes the deprecated -mcpu
