@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.52 2003/06/11 23:07:52 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.53 2003/06/12 21:21:21 rac Exp $
+
+*mysql-4.0.13-r3 (12 Jun 2003)
+
+  12 Jun 2003; <rac@gentoo.org> mysql-4.0.13-r3.ebuild,
+  files/mysql-4.0.13-thrssl.patch:
+  Attempt to make libmysqlclient_r.so link with -lssl
 
 *mysql-4.0.13-r2 (11 Jun 2003)
 
