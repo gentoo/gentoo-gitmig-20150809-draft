@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.2.ebuild,v 1.1 2003/08/02 05:27:28 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.2.ebuild,v 1.2 2003/08/03 16:53:37 sediener Exp $
 
 IUSE="mysql gd"
 
 inherit perl-module
+inherit eutils
 
 S=${WORKDIR}/${P}
 CATEGORY="app-sci"
