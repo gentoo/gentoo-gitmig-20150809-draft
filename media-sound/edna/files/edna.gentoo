@@ -13,8 +13,8 @@ depend() {
 
 start() {
     ebegin "Starting ednad mp3 server"
-    start-stop-daemon -b -m --quiet --start --exec /usr/bin/ednad \
-	--pidfile /var/run/ednad.pid
+    start-stop-daemon -m --quiet --pidfile /var/run/ednad.pid --start --exec \
+	/usr/bin/edna -- --daemon /etc/edna/edna.conf
     eend $?
 }
 
