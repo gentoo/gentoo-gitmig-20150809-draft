@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1_rc4.ebuild,v 1.3 2003/11/21 17:46:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1_rc4.ebuild,v 1.4 2003/11/24 09:49:58 mholzer Exp $
 
 inherit webapp-apache
 
@@ -42,7 +42,7 @@ src_install() {
 
 	cp -r . ${D}/${HTTPD_ROOT}/${PN}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${PN}
 	# Fix permissions
 	find ${D}${destdir} -type d | xargs chmod 755
 	find ${D}${destdir} -type f | xargs chmod 644
