@@ -172,10 +172,6 @@ net-www/zope
 # This is more a java-config bug ....
 =net-www/mozilla-0.9.9
 
-# Masked the new ebuild out pending a little testing.
-# agenkin@gentoo.org, 13 May 2002.
-=net-www/mozilla-1.0_rc2
-
 # New orinoco_cs 0.11a driver -- karltk (01/05/2002)
 #
 # Only tested with the SMC2632W card, should unmask
