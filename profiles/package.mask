@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3173 2004/09/22 13:01:53 hattya Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3174 2004/09/22 13:09:28 hattya Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -553,7 +553,6 @@ net-misc/zebra
 # But it works. sorta. :)
 =mail-client/sylpheed-claws-0.9.5-r1
 =mail-client/sylpheed-0.9.12-r4
-=mail-client/sylpheed-0.9.12-r5
 =mail-client/sylpheed-0.9.12-r6
 
 # <genone@gentoo.org> (30 Nov 2003)
