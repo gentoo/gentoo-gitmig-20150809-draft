@@ -48,6 +48,7 @@ net-www/zope
 >=net-misc/kio_fish-1.1
 >=x11-misc/mosfet-liquid-widgets-0.9.1
 >=net-misc/kbiff-3.6
+>=app-cdr/k3b-0.6.0_pre2
 
 # These two have compile problems -- Azarah (24/03/2002)
 #
