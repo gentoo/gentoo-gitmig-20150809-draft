@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.13 2003/05/23 03:54:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.14 2003/05/31 21:41:21 robbat2 Exp $
 
 inherit flag-o-matic 
 
@@ -55,11 +55,20 @@ DEPEND="|| (
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	gd? ( media-libs/libgd )
-	java? ( =virtual/jdk-1.4* )
+	java? ( =virtual/jdk-1.4* dev-java/java-config )
 	"
 # Only needed by CGI-Version
 #	readline? ( >=sys-libs/ncurses-5.1
 #		>=sys-libs/readline-4.1 )"
+
+php_check_java_config() {
+	JDKHOME="`java-config --jdk-home`"
+	NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
+	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+		eerror "${NOJDKERROR}"
+		die "${NOJDKERROR}"
+	fi
+}
 
 RDEPEND="
 	xml? ( >=app-text/sablotron-0.97 )
@@ -106,6 +115,8 @@ src_unpack() {
 }
 
 src_compile() {
+
+	php_check_java_config
 
 	local myconf
 
