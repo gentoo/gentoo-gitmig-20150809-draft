@@ -11,7 +11,8 @@ HOMEPAGE="http://www.samba.org"
 DEPEND="virtual/glibc sys-devel/autoconf
         cups? ( net-print/cups )
 	pam? ( >=sys-libs/pam-0.72 )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 RDEPEND="virtual/glibc
         cups? ( net-print/cups )"
@@ -40,6 +41,17 @@ src_compile() {
 #  else
     myconf="--without-pam"
 #  fi
+
+# Samba doesn't seem to work well with ssl support but I'll add the check 
+# anyway (otherwise it seems to be built with ssl if it finds it). This should # tested. I'll mail gentoo-dev and add a todo in wiki. /Hallski
+
+#  if [ "`use ssl`" ]
+#  then
+#     myconf="${myconf} --with-ssl"
+#  else
+     myconf="${myconf} --without-ssl"
+#  fi
+
   cd ${S}/source
   if [ ! "`use cups`" ] ; then
     cp configure.in configure.in.orig
