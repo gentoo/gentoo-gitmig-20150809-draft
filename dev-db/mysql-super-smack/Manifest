@@ -1,5 +1,5 @@
-MD5 c5c52252d25b0339a4c72acfb61e9d9b mysql-super-smack-1.2.ebuild 1148
-MD5 fe38b6d7fad1aa160ae7359122307909 ChangeLog 456
+MD5 ea3cfd8591a816628ea30f735c4078de mysql-super-smack-1.2.ebuild 1277
+MD5 aee2245ee387b63f7ae8ff397a79c93f ChangeLog 567
 MD5 18305c2e9baf5f34bd63aea812485de0 metadata.xml 230
 MD5 ffe9980a4253d6b885b1c20fb2de06e5 files/digest-mysql-super-smack-1.2 66
 MD5 d070039b24303c845cbcbf72ed2e088f files/mysql-super-smack-1.2.destdir.patch 420

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.2.ebuild,v 1.3 2004/06/24 21:57:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.2.ebuild,v 1.4 2004/07/20 03:14:55 robbat2 Exp $
 
 inherit eutils
 
@@ -12,13 +12,17 @@ SRC_URI="http://jeremy.zawodny.com/mysql/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="mysql postgres"
 
 DEPEND="mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	use !mysql && use !postgres && die "You need to use at least one of USE=mysql or USE=postgres for benchmarking!"
+}
 
 src_unpack() {
 	unpack ${A}
