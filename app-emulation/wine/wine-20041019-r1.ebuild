@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r1.ebuild,v 1.3 2004/10/28 01:35:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r1.ebuild,v 1.4 2004/10/31 00:50:20 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -113,7 +113,7 @@ src_install() {
 	# copying the wine.inf into .data (used to be winedefault.reg)
 	cd ${S}
 	insinto /usr/share/wine/data
-	doins documentation/sample/config
+	doins documentation/samples/config || die "doins config"
 	doins tools/wine.inf
 	insinto /usr/share/wine/data/fake_windows/Windows/System
 	doins tools/wine.inf
