@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.1-r1.ebuild,v 1.3 2004/02/07 03:11:56 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.1-r1.ebuild,v 1.4 2004/02/07 19:39:17 vapier Exp $
 
 inherit kde
 need-kde 3.1
@@ -8,10 +8,9 @@ need-kde 3.1
 DESCRIPTION="K3b, KDE CD Writing Software"
 HOMEPAGE="http://k3b.sourceforge.net/"
 SRC_URI="mirror://sourceforge/k3b/${P}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="debug dvdr kde oggvorbis mad flac encode"
 
 DEPEND="${DEPEND}
@@ -21,7 +20,6 @@ DEPEND="${DEPEND}
 	flac? ( media-libs/flac )
 	mad? ( >=media-sound/mad-0.14.2b )
 	oggvorbis? ( media-libs/libvorbis )"
-
 RDEPEND="${RDEPEND}
 	>=app-cdr/cdrtools-1.11
 	>=app-cdr/cdrdao-1.1.7-r3
