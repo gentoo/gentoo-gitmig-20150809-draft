@@ -1,5 +1,15 @@
-MD5 ff4f8b4c07760aa354ef7494af8c41c7 ChangeLog 586
-MD5 2ca1b8ebaa5bd594108ba0ef1e8180ea gnuplot-mode-0.6.0.ebuild 1016
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b6627dc4a7cebf873811205688fe96e7 ChangeLog 737
+MD5 3f8c63446215c0961ebc55a9505fea30 gnuplot-mode-0.6.0.ebuild 955
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 9104d3e1bf17537135670e236df189e4 files/50gnuplot-gentoo.el 139
+MD5 87c352d048271d9502fef6f73377a840 files/50gnuplot-gentoo.el 406
 MD5 8a8cfa291853d00fac0d679ca2bcd20e files/digest-gnuplot-mode-0.6.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcgT8VWNWqTUmv+0RAubOAKCxItPPNdaDACpSvenP4NqyywkoGACgtUDv
+FpF3V6zwmsThVii6RZzYck8=
+=YmRO
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.6.0.ebuild,v 1.3 2004/08/26 14:35:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.6.0.ebuild,v 1.4 2004/10/17 05:42:24 usata Exp $
 
 inherit elisp
 
@@ -31,8 +31,6 @@ src_install() {
 	PATH=./:$PATH make install lispdir=$D/usr/share/emacs/site-lisp/${PN} || die
 	elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
 
-	mv gnuplot.info gnuplot-mode.info
-	doinfo gnuplot-mode.info
 	dodoc ChangeLog README
 }
 
