@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-MDK-Common/perl-MDK-Common-1.0.4.ebuild,v 1.1 2003/04/11 15:56:50 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-MDK-Common/perl-MDK-Common-1.0.4.ebuild,v 1.2 2003/04/22 11:17:12 dams Exp $
 
 inherit perl-module
 
@@ -12,8 +12,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 
-DEPEND="dev-lang/ocaml
-	dev-lang/perl"
+DEPEND="dev-lang/perl"
+RDEPEND=$DEPEND
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
