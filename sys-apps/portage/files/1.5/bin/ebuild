@@ -5,4 +5,7 @@ if len(sys.argv)<=2:
 	print "expecting two arguments."
 	sys.exit(1)
 for x in sys.argv[2:]:
-	portage.doebuild(sys.argv[1],x)
+	a=portage.doebuild(sys.argv[1],x)
+	if a:
+		sys.exit(a)
+		
