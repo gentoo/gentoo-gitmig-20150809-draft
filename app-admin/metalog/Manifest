@@ -1,8 +1,3 @@
-MD5 7fce0430fa195061ee04dca3d6f3d455 ChangeLog 3832
-MD5 ba0fc2baa869728db35c18b7a07d0b4f metalog-0.6-r10.ebuild 1208
-MD5 a972d16a9481ca657f243fec8f038041 metalog-0.6-r11.ebuild 1240
-MD5 fd90e1cd352f3e7b3c82e10aa8ca54e0 metalog-0.7-r1.ebuild 1309
-MD5 32b6f16ad66cb90cdc0685e9d5c58331 metalog-0.8_pre20031130.ebuild 1395
 MD5 2a4834a861e0ed954124316c2a0ad8e9 files/consolelog.sh 191
 MD5 a25ad551b1c77f423d1de78425f1b0ad files/digest-metalog-0.6-r10 63
 MD5 a25ad551b1c77f423d1de78425f1b0ad files/digest-metalog-0.6-r11 63
@@ -12,3 +7,8 @@ MD5 3e19c05da6bed4a092412095406b0bda files/metalog-0.6-gentoo.patch 3252
 MD5 51abba82ab154b01507327b826f9b842 files/metalog.conf 1713
 MD5 83efa326f58d568d66a3506852aa9528 files/metalog.confd 512
 MD5 5dbc35025f97a8cc6b9a9b1d5137c371 files/metalog.rc6 668
+MD5 7fce0430fa195061ee04dca3d6f3d455 ChangeLog 3832
+MD5 a088d1837bd4d29e55270ce29df4875e metalog-0.6-r10.ebuild 1173
+MD5 48a2fae3ce926f5f300f6f04bc49e513 metalog-0.6-r11.ebuild 1204
+MD5 fd90e1cd352f3e7b3c82e10aa8ca54e0 metalog-0.7-r1.ebuild 1309
+MD5 32b6f16ad66cb90cdc0685e9d5c58331 metalog-0.8_pre20031130.ebuild 1395
