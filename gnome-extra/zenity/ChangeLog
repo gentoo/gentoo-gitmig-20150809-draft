@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.34 2004/09/13 16:29:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.35 2004/09/17 15:18:18 foser Exp $
+
+*zenity-2.8.0 (17 Sep 2004)
+
+  17 Sep 2004; foser <foser@gentoo.org> zenity-2.8.0.ebuild :
+  Gnome 2.8 release
 
 *zenity-2.6.3 (14 Sep 2004)
 
