@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/portfwd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.2 2003/11/20 19:20:05 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.3 2003/12/03 21:22:18 avenj Exp $
+
+*portfwd-0.26_rc6-r1 (03 Dec 2003)
+
+	03 Dec 2003; Jon Portnoy <avenj@gentoo.org> portfwd-0.26_rc6.ebuild,
+		files/portfwd.init, files/portfwd.confd :
+	Lots more fixes from Alessandro Pisani. Bug #33994.
+	Changed init script to check for proper config, added conf.d file,
+	lots of init script fixes...
 
 	20 Nov 2003; Jon Portnoy <avenj@gentoo.org> files/portfwd.init :
 	Fixed init script, bug #33918.
