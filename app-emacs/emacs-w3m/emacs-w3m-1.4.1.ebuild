@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.1_rc1.ebuild,v 1.1 2004/06/28 09:52:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.1.ebuild,v 1.1 2004/07/08 16:49:20 usata Exp $
 
 inherit elisp
 
@@ -39,7 +39,7 @@ src_install () {
 
 	elisp-site-file-install ${FILESDIR}/70emacs-w3m-gentoo.el
 
-	dodoc ChangeLog* README* TIPS* FAQ*
+	dodoc ChangeLog* README*
 }
 
 pkg_postinst() {
