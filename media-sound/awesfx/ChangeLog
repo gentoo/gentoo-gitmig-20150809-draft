@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/awesfx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.10 2004/07/01 07:48:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.11 2004/07/21 19:55:23 eradicator Exp $
+
+*awesfx-0.5.0c (21 Jul 2004)
+
+  21 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +awesfx-0.5.0c.ebuild:
+  Version bump closes bug #57503.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> awesfx-0.4.4.ebuild,
   awesfx-0.5.0b.ebuild:
