@@ -815,8 +815,9 @@ app-arch/gnorpm
 #   GPM-1.20.0 dependency is currently masked.  The ebuild
 #   breaks on an --update world if GPM is in the USE vars.
 #   masks links-2.0_pre4 also.
-=net-www/links-2.0_pre3
-=net-www/links-2.0_pre4
+# 
+#   Slots do not work with the new 2.0_pre4-r1 ebuild
+>=net-www/links-2.0_pre3
 
 # seemant@gentoo.org 26 May 2002
 # masked because there are two ebuilds in two different categories
