@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 047ccd47f7353cf2bc59ecdefb3fd03e ChangeLog 10207
+MD5 46a5f246c1fc7ef31791743cea5bcfe8 ChangeLog 10333
 MD5 b26350a505e3bbc5b41e0d8b73379270 avidemux-2.0.28.ebuild 2350
 MD5 4c24428398acd26c384e724f5e2cd71a avidemux-2.0.24.ebuild 2482
 MD5 2db6e1fe58118f49019049f62e10e35c avidemux-2.0.32.ebuild 2317
@@ -33,7 +33,7 @@ MD5 ed8344c0d166e56f3f15948d7488abbb files/digest-avidemux-2.0.26 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBgg/sRPjscZbntocRAkgTAJ4tfWQAOVmr5g0JiRPS6foms28PdwCffbwD
-wABiCcNckDxqRAyJf8sFGOI=
-=NAYq
+iD8DBQFBghCERPjscZbntocRAn6ZAJ91TSfPGdw7/nJZIIkFQrm5oYVISgCgh23f
+06wPnhFh9bMARd5eyBejOIg=
+=hMGA
 -----END PGP SIGNATURE-----
