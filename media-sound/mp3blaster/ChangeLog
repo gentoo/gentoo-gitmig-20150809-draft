@@ -1,7 +1,14 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.3 2002/07/10 18:24:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.4 2002/08/13 17:23:19 agenkin Exp $
 
+*mp3blaster-3.1.1 (13 Aug 2002)
+
+  13 Aug 2002; Arcady Genkin <agenkin@thpoon.com> mp3blaster-3.1.1.ebuild :
+
+  Updated the ebuild for 3.1.1 to exclude support for NAS, as it appears
+  to be broken (see bug 5183).
+	
 *mp3blaster-3.1 (10 Jun 2002)
 
   10 Jun 2002; Ryan Phillips <rphillips@gentoo.org> mp3blaster-3.1.ebuild :

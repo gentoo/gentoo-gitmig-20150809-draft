@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.4 2002/07/21 15:20:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.5 2002/08/13 17:23:19 agenkin Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="MP3 command line player"
-SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${P}.tar.gz"
-HOMEPAGE="http://www.stack.nl/~brama/mp3blaster"
+DESCRIPTION="Command line MP3 player."
+HOMEPAGE="http://www.stack.nl/~brama/mp3blaster/"
+LICENSE="GPL-2"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	nas? ( >=media-libs/nas-1.4.1 )
@@ -13,12 +12,16 @@ DEPEND=">=sys-libs/ncurses-5.2
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
 
 SLOT="0"
-LICENSE="GPL-2"
 KEYWORDS="x86"
+SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${P}.tar.gz"
+S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf
-	use nas && myconf="${myconf} --with-nas"
+	### Looks like NAS support is broken, at least with NAS 1.5 and
+	### mp3player 3.1.1 (Aug 13, agenkin@thpoon.com)
+	#use nas && myconf="${myconf} --with-nas"
+	myconf="${myconf} --disable-nas"
 	use mysql && myconf="${myconf} --with-mysql"
 	use oggvorbis || myconf="${myconf} --without-oggvorbis"
 
@@ -26,14 +29,15 @@ src_compile() {
 
 	econf ${myconf} || die
 
-	use nas && ( \
-		cd src
-		sed -e "s:^INCLUDES =:INCLUDES = -I/usr/X11R6/include:" \
-			-e "s:^splay_LDADD =:splay_LDADD = \$(NAS_LIBS):" \
-			Makefile | cat > Makefile
-
-		cd ${S}
-	)
+	### See comment above
+	#use nas && ( \
+	#	cd src
+	#	sed -e "s:^INCLUDES =:INCLUDES = -I/usr/X11R6/include:" \
+	#		-e "s:^splay_LDADD =:splay_LDADD = \$(NAS_LIBS):" \
+	#		Makefile | cat > Makefile
+	#
+	#	cd ${S}
+	#)
 
 	# parallel make does not work
 	make CC="gcc ${CFLAGS}" CXX="c++ ${CXXFLAGS}" || die
