@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.6 2003/08/30 05:22:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.7 2003/09/07 13:16:13 obz Exp $
+
+*libexif-0.5.10 (07 Sep 2003)
+
+  07 Sep 2003; Mike Gardiner <obz@gentoo.org> libexif-0.5.10.ebuild,
+  libexif-0.5.12.ebuild:
+  Marked stable on x86. 0.5.9 is broken, but remains the only stable version for
+  archs !x86
 
   29 Aug 2003; Seemant Kulleen <seemant@gentoo.org> libexif-0.5.12.ebuild:
   a blank /usr/share/locale directory was getting created for both nls and
