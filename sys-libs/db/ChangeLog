@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.54 2003/10/02 18:28:11 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.55 2003/10/05 01:59:58 brad_mssw Exp $
+
+  04 Oct 2003; Brad House <brad_mssw@gentoo.org> db-4.0.14-r2.ebuild,
+  db-4.1.25.ebuild, db-4.1.25_p1-r1.ebuild, db-4.1.25_p1.ebuild:
+  db-4.1.25 is not very palatable for many apps, and at this point causes many
+  problems. Not sure why amd64 was set to stable with this. The only other
+  platform that was also is ia64. Remove the stable flag, don't even turn on the
+  ~amd64 flag as it causes too many problems. Make 4.0.14-r2 the stable
+  4.0 series.
 
   02 Oct 2003; Brad House <brad_mssw@gentoo.org> db-3.2.9-r7.ebuild:
   add ~amd64 flag
