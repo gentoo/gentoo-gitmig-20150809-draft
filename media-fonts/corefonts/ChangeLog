@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/corefonts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.13 2004/10/01 12:52:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.14 2004/11/01 17:44:58 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  corefonts-1-r2.ebuild:
+  Marked ~ppc64; bug #68103
 
 *corefonts-1-r2 (01 Oct 2004)
 

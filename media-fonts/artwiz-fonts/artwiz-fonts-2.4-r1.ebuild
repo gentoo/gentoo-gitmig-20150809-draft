@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r1.ebuild,v 1.6 2004/07/14 17:04:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r1.ebuild,v 1.7 2004/11/01 17:39:16 corsair Exp $
 
 S=${WORKDIR}/xfonts-artwiz-2.3
 DESCRIPTION="Artwiz Fonts"
@@ -9,7 +9,7 @@ HOMEPAGE="http://fluxbox.sourceforge.net/docs/artwiz-fonts.php"
 
 SLOT=0
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips amd64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/x11

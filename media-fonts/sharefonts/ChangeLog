@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/sharefonts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/ChangeLog,v 1.13 2004/10/17 11:19:20 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/ChangeLog,v 1.14 2004/11/01 17:49:24 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  sharefonts-0.10-r3.ebuild:
+  Marked ~ppc64; bug #68103
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   sharefonts-0.10-r3.ebuild:
