@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff/diff-0.4.ebuild,v 1.2 2004/09/03 00:33:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff/diff-0.4.ebuild,v 1.3 2004/11/14 10:14:23 usata Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://users.cybercity.dk/~dsl8950/ruby/diff.html"
 SRC_URI="http://www.rubynet.org/mirrors/diff/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 IUSE=""
 

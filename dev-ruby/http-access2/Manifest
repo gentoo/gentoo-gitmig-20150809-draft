@@ -1,6 +1,14 @@
-MD5 ceb787feec7101b71466673db1e503be http-access2-0j-r1.ebuild 640
-MD5 4ad1e3dd98c353cb577e931aa1435121 http-access2-0j.ebuild 712
-MD5 f593565c80fbe3e6f8ab58201b8230f8 ChangeLog 746
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b082cab4f344928df9ab6cd79cd9c8c http-access2-0j-r1.ebuild 619
+MD5 d4dfb136c55f314424c791fff6e35a61 ChangeLog 887
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 80379557873407fe4a5bcc33fe79b73b files/digest-http-access2-0j 130
 MD5 42359ccc381663d33e31f98f2e9a54fe files/digest-http-access2-0j-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBlzCcVWNWqTUmv+0RAtpNAJ9vYSzQAhd7LQRJR6pDIXvKiXBV+ACdHYeE
+BOFzCgZ6ALIS6tpLM1Zuv74=
+=GstO
+-----END PGP SIGNATURE-----
