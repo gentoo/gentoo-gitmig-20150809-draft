@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.20 2005/03/02 09:20:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.21 2005/03/03 03:22:26 cardoe Exp $
+
+  02 Mar 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.2.0_rc3-r2.ebuild:
+  removed dep on snd-bt87x
 
 *ivtv-0.2.0_rc3-r2 (02 Mar 2005)
 
