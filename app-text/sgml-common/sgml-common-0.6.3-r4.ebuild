@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.11 2004/03/04 17:51:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.12 2004/03/16 18:50:26 usata Exp $
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
 SRC_URI="mirror://kde/devel/docbook/SOURCES/${P}.tgz"
@@ -13,6 +13,7 @@ IUSE=""
 KEYWORDS="ia64 ~x86 ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 
 DEPEND=">=sys-devel/automake-1.6"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
