@@ -1,13 +1,14 @@
 # ChangeLog for media-libs/hermes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.1 2002/04/14 07:44:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.2 2002/04/14 07:49:47 seemant Exp $
 
 *hermes-1.3.2-r2 (14 Apr 2002)
 
   14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> all files
 
   This selection was moved to media-libs from app-games, since it is not
-  a game, but a game/graphics library for use by games.
+  a game, but a game/graphics library for use by games.  Artem from
+  the previous ChangeLog entry brought this to my attention.
 
 *hermes-1.3.2-r2 (14 Apr 2002)
 
