@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.21 2003/11/08 17:20:51 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.22 2003/11/19 18:22:46 mholzer Exp $
+
+*libpcre-4.4 (19 Nov 2003)
+
+  19 Nov 2003; Martin Holzer <mholzer@gentoo.org> libpcre-4.4.ebuild:
+  Version bumped. Closes #28976
 
   08 Nov 2003; Brad House <brad_mssw@gentoo.org> libpcre-4.2-r1.ebuild:
   append-flags -fPIC for amd64
