@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r2.ebuild,v 1.1 2004/07/10 17:21:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r2.ebuild,v 1.2 2004/07/29 02:30:57 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://radscan.com/nas.html"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha ~amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha ~amd64 ~ia64 ~mips ppc64"
 
 IUSE="static"
 

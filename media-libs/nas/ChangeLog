@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.27 2004/07/18 14:15:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.28 2004/07/29 02:30:57 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> nas-1.6c-r2.ebuild:
+  stable on ppc64
 
 *nas-1.6c-r2 (10 Jul 2004)
 
