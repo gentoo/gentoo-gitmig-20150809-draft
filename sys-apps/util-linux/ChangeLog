@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.50 2003/07/21 11:15:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.51 2003/07/24 06:19:08 azarah Exp $
+
+*util-linux-2.12 (24 Jul 2003)
+
+  24 Jul 2003; Martin Schlemmer <azarah@gentoo.org> util-linux-2.12.ebuild:
+  New version, bug #24880.
 
   21 Jul 2003; <solar@gentoo.org> util-linux-2.11z-r7.ebuild:
   verified -fPIC works with this pkg on x86, sparc64, ppc and hppa
