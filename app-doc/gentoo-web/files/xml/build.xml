@@ -205,9 +205,10 @@ Linux's (at that time) brand new VM implementation.  Ext3 itself is solid,
 it's just that 2.4.10's ext3 and VM clashed.  If you want to use ext3 filesystems,
 just install on ext2 filesystems.  Specify a type of <c>auto</c> in your <path>/etc/fstab</path>
 and be sure to compile ext3 support into your kernel (we'll compile a kernel in just
-a bit).  Then, before your reboot, type <c>mke2fs -j /dev/hdXX</c> for all your
+a bit).  Then, before your reboot, type <c>tune2fs -j /dev/hdXX</c> for all your
 ext3 filesystems -- your filesystems can be mounted or unmounted when you type
-this; it doesn't matter.  Then, when you reboot into your newly bootstrapped
+this; it doesn't matter, and the <c>tune2fs</c> command will be available after
+you <c>emerge system</c>.  Then, when you reboot into your newly bootstrapped
 Gentoo Linux system, you will have working and rock-solid ext3 filesystems!
 This problem will be fixed as soon as I have enough time to roll up a new ISO
 image. --Daniel</warn>
