@@ -1,13 +1,14 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.16 2003/01/20 00:23:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.17 2003/01/20 01:49:24 raker Exp $
 
 *sendmail-8.12.7 (02 Jan 2003)
 
   19 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7.ebuild,
   files/sendmail :
   Added the clientmqueue daemon as suggested by Andrea Barisani on
-  bug #13836.  Log files are now tagged by sm-mta or sm-cm.
+  bug #13836.  Log files are now tagged by sm-mta or sm-cm.  Added
+  an extra check to clear xf* from /var/spool/mqueue on start.
 
   02 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7.ebuild,
   files/digest-sendmail-8.12.7 :
