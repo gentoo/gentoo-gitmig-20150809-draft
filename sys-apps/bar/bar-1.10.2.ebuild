@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.10.2.ebuild,v 1.1 2004/12/06 17:57:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.10.2.ebuild,v 1.2 2004/12/11 20:27:11 swegener Exp $
 
 DESCRIPTION="Console Progress Bar"
 HOMEPAGE="http://clpbar.sourceforge.net/"
@@ -12,6 +12,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 DEPEND="doc? ( >=app-doc/doxygen-1.3.5 )"
+RDEPEND=""
 
 src_compile() {
 	econf || die "econf failed"
