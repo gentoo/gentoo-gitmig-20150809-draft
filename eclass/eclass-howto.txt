@@ -1,0 +1,323 @@
+
+
+eclass howto
+
+Dan Armak
+
+30/9/01
+
+1 Introduction
+
+eclasses are parts of ebuilds; that is, they have the same
+syntax ebuilds do, but do not define all the required variables
+and functions. ebuilds can inherit from eclasses, and eclasses
+can inherit from other eclasses. As in OOP, this is used
+to ensure maximum code reuse among similar ebuilds.
+
+The most similar group of ebuilds is the kde apps. These
+have been selected to be the test case for this first incarnation
+of eclasses. Currently test ebuilds are available for all
+of kde-2.2.1 (as kde*-2.2.1-r1), kdevelop-2.0.1 and koffice-1.1.
+Many others will follow.
+
+Section two explains how eclasses work.Section three shows
+a sample inheriting ebuild.
+
+1.1 Notes on this document
+
+* ebuild variables/functions refers to those used in std.
+  ebuilds e.g. $S, $P, src_unpack()...
+
+2 The eclasses
+
+The best way of becoming familiar with the current eclass
+structure is an explanation of what each eclass does.
+
+2.1 inherit.eclass
+
+Defines inherit() function which handles sourcing of eclasses.
+
+Syntax of inheriting: we define a simple function inherit():
+
+ECLASSDIR=/usr/portage/eclass
+
+inherit() {
+
+    while [ "$1" ]; do
+
+        source ${ECLASSDIR}/${1}.eclass
+
+    shift
+
+    done
+
+}
+
+This function simply sources files from a hard-coded location.
+If, in the future, we will decide to move eclasses to a
+different location or to introduce more "formats"
+(like drobbins' projected xbuilds), any name-to-file resolution
+code will go in here.
+
+This function is the entire contents of inherit.eclass. In
+the future, once eclasses are considered to be stable, this
+function will live in ebuild.sh, and every ebuild will be
+able to use it. For now, we don't want to make a new version
+of portage just for this, so we put this function in a separate
+eclass. Every inheriting ebuild begins with these two lines:
+
+. /usr/portage/eclass/inherit.eclass || die
+
+inherit kde-base || die
+
+Once the inherit() function goes into ebuild.sh, we can drop
+the first line; there will be no further change necessary.
+
+Eclasses do not need this first line, since they are always
+sourced from an ebuild which has it.
+
+2.2 virtual.eclass
+
+Defines empty variables and functions; defines EXPORT_FUNCTIONS().
+
+This eclass is inherited by most other eclasses e.g. base,
+kde*. As a rule, any eclass that defines some of the base
+functions needs it. Therefore the only ebuilds which don't
+get it are the ones that only inherit one of the smaller
+eclasses e.g. c, autoconf.
+
+It defines all ebuild vars and funcs to be empty.
+
+It also defines the EXPORT_FUNCTIONS() function which looks
+like this:
+
+EXPORT_FUNCTIONS() {
+
+    while [ "$1" ]; do
+
+        eval "$1() { ${ECLASS}_$1 ; }" > /dev/null
+
+    shift
+
+    done
+
+}
+
+This means that after foo.eclass has defined e.g. src_unpack()
+and src_install(), it says:
+
+ECLASS=foo
+
+EXPORT_FUNCTIONS src_unpack src_install
+
+Actually, the ECLASS setting is put at the beginning of the
+eclass, directly after the inherit statements. It will in
+the future be used by other functions as well. Someday we
+will (I hope) adapt the portage ebuild filename->name algorithm
+and get the ECLASS setting the same way we do $P and $PN.
+
+EXPORT_FUNCTIONS() creates stub functions called ${ECLASS}_blah
+for every parameter blah passed to it. The stub function
+does nothing but call blah.
+
+When you inherit more than one eclass (almost always), your
+ebuild functions are those defined by the 1st eclass inherited.
+Since eclasses usually inherit other eclasses, you do not
+want to keep track of that. Instead, you prefix all your
+functions from foo.eclass with foo_, or ${ECLASS}_. This
+way, people can call a specific function from a specific
+eclass and know what they are going to get.
+
+Because you still want default functions to be defined with
+the original ebuild names, you call EXPORT_FUNCTIONS() at
+the end of every eclass. This makes sure that the default
+functions you passed as parameters are stubs calling the
+ones you just defined.
+
+I looked at adding ${EBUILD}_ instead of literal strings
+to the actual function definitions, but the bash syntax
+for that is too ugly.
+
+2.2.1 ebuild function sections
+
+Although this is not an integral part of eclasses, this is
+a good place to introduce function sections. 
+
+One rarely uses predefined functions as-is; you usually want
+to extend them. Once they have unique names (foo_src_unpack)
+it's easy to add code that executes before or after them.
+Function sections break them down and allow code to execute
+between any two sections.
+
+The implementation is simple. Let's take as an example the
+src_compile() function from base.eclass. It looks like this:
+
+base_src_compile() {
+
+./configure || die
+
+make || die
+
+}
+
+Here is the same function, divided into sections:
+
+base_src_compile() {
+
+ 
+
+    [ -z "$1" ] && base_src_compile all
+
+ 
+
+    while [ "$1" ]; do
+
+        case $1 in
+
+           
+configure)
+
+                ./configure
+|| die;;
+
+           
+make)
+
+                make
+|| die;;
+
+           
+all)
+
+                base_src_compile
+configure make;;
+
+        esac
+
+    shift
+
+    done
+
+ 
+
+}
+
+The code has been divided into two "sections":
+configure and make. In our simple example, they correspond
+to the two commands in the original function.
+
+In the center of the new function is a while;case...esac;shift;done
+block. This block matches the parameters to the functions
+with the defined section names and executes the corresponding
+lines of code.
+
+The special case all calls the same function recursively
+with a list of sections in order. It's up to the eclass's
+author to maintain this list, which is very important.
+
+The line before the block says that a call without parameters
+should be treated the same as a call with the single parameter
+all. As you see, this function recurses a lot. Note, however,
+that the call base_src_compile configure all make is also
+legal; it will execute base_src_compile configure configure
+make make.
+
+Now, in your ebuild (or eclass) that inherits from base.eclass,
+you get the stub function src_compile which calls base_src_compile
+without parameters. This makes base_src_compile execute
+all, that is, all its sections. You can leave it as-is.
+If you wish to extend it, you define a new src_compile and
+call base_src_compile a section at a time:
+
+src_compile() {
+
+    myfunc1
+
+    base_src_compile configure
+
+    myfunc2
+
+    base_src_compile make
+
+}
+
+The only way to know what functions contain what sections
+is to read the eclasses.
+
+2.3 base.eclass
+
+This eclass defines some default variables and functions,
+similar to those you'd get by default in a non-inheriting
+ebuild. For example, it defines:
+
+base_src_unpack() { unpack ${A}; }
+
+Only with sections, of course.
+
+It is inherited by higher-level eclasses like the kde ones.
+
+2.4 kde.eclass
+
+Used by all kde apps, whether directly or indirectly. This
+is a higher-level eclass, which is intended to provide not
+only sensible defaults but functions which can be used as-is
+more often then not. 
+
+It inherits c, autoconf and base.
+
+Read it to find out what it defines. It is quite self-explanatory.
+
+Briefly, it handles all standard kde-2.1* and 2.2* apps that
+need configure/make/make install cycles. It handles all
+the std. configure options e.g. objprelink. It also adds
+kdelibs and qt to DEPEND.
+
+2.5 kde-base.eclass
+
+Meant for kde apps part of the core kde distribution.
+
+Differences from kde.eclass:
+
+* Sets appropriate DESCRIPTION and HOMEPAGE=www.kde.org.
+
+* Sets default download path to the correct location on ftp.kde.org
+  and several of its mirrors.
+
+2.6 kde-i18n.eclass
+
+Meant for the kde-i18n-* packages. Niche use.
+
+In fact, all kde-i18n ebuilds are completely identical and
+so all they have to do is inherit from this eclass.
+
+Differences from kde.eclass:
+
+Many. Doesn't inherit c. Doesn't depend on qt. Provides virtual/kde-i18n-${PV}.
+Doesn't have myconf section in src_compile(). Doesn't have
+any sections in src_install(). Probably something else I
+forgot as well.
+
+2.7 c.eclass
+
+Adds gcc and glibc to DEPEND and RDEPEND. Not meant to be
+used alone, inherited by kde*.
+
+2.8 autoconf.eclass
+
+Adds make/automake/autoconf to DEPEND. Not meant to be used
+alone, inherited by kde*.
+
+2.9 debug.eclass
+
+Will be written soon. Will provide verbose debug output functions
+to centralise the numerous echos I have scattered around
+the eclasses.
+
+3 The inheriting ebuilds
+
+Not much here as yet. Look at the kde*-2.2.1-r1 ebuilds for
+examples. As a rule, read the eclass you are inheriting
+from and put any necessary changes in your ebuild.
+
+Remember: always extend variables and fnctions. You should
+almost never need to replace them.

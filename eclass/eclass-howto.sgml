@@ -1,0 +1,317 @@
+<!doctype chapter public "-//OASIS//DTD DocBook V3.1//EN">
+
+<chapter lang="en">
+<!-- DocBook file was created by LyX 1.1
+  See http://www.lyx.org/ for more information -->
+   <title>
+   eclass howto
+  </title>
+  <author>
+   Dan Armak
+  </author>
+  <date>
+   30/9/01
+  </date>
+  <sect1>
+   <title>
+   Introduction
+  </title>
+  <para>
+   eclasses are parts of ebuilds; that is, they have the same syntax ebuilds do, but do not define all the required variables and functions. ebuilds can inherit from eclasses, and eclasses can inherit from other eclasses. As in OOP, this is used to ensure maximum code reuse among similar ebuilds.
+  </para>
+  <para>
+   The most similar group of ebuilds is the kde apps. These have been selected to be the test case for this first incarnation of eclasses. Currently test ebuilds are available for all of kde-2.2.1 (as kde*-2.2.1-r1), kdevelop-2.0.1 and koffice-1.1. Many others will follow.
+  </para>
+  <para>
+   Section two explains how eclasses work.Section three shows a sample inheriting ebuild.
+  </para>
+   <sect2>
+    <title>
+    Notes on this document
+   </title>
+   <itemizedlist>
+    <listitem>
+    <para>
+    ebuild variables/functions</emphasis> refers to those used in std. ebuilds e.g. &dollar;S, &dollar;P, src_unpack()...
+    </para>
+   </listitem>
+   </itemizedlist>
+   </sect2>
+  </sect1>
+  <sect1>
+   <title>
+   The eclasses
+  </title>
+  <para>
+   The best way of becoming familiar with the current eclass structure is an explanation of what each eclass does.
+  </para>
+   <sect2>
+    <title>
+    inherit.eclass
+   </title>
+   <para>
+    Defines inherit() function which handles sourcing of eclasses.
+   </para>
+   <para>
+    Syntax of inheriting: we define a simple function inherit():
+   </para>
+   <programlisting>
+<![ CDATA [ECLASSDIR=/usr/portage/eclass
+]]><![ CDATA [inherit() {
+]]><![ CDATA [    while [ "$1" ]; do
+]]><![ CDATA [        source ${ECLASSDIR}/${1}.eclass
+]]><![ CDATA [    shift
+]]><![ CDATA [    done
+]]><![ CDATA [}
+]]>   </programlisting>
+   <para>
+    This function simply sources files from a hard-coded location. If, in the future, we will decide to move eclasses to a different location or to introduce more &ldquo;formats&rdquo; (like drobbins' projected <emphasis>xbuilds</emphasis>), any name-to-file resolution code will go in here.
+   </para>
+   <para>
+    This function is the entire contents of inherit.eclass. In the future, once eclasses are considered to be stable, this function will live in ebuild.sh, and every ebuild will be able to use it. For now, we don't want to make a new version of portage just for this, so we put this function in a separate eclass. Every inheriting ebuild begins with these two lines:
+   </para>
+   <para>
+    . /usr/portage/eclass/inherit.eclass || die
+   </para>
+   <para>
+    inherit kde-base || die
+   </para>
+   <para>
+    Once the inherit() function goes into ebuild.sh, we can drop the first line; there will be no further change necessary.
+   </para>
+   <para>
+    Eclasses do not need this first line, since they are always sourced from an ebuild which has it.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    virtual.eclass
+   </title>
+   <para>
+    Defines empty variables and functions; defines EXPORT_FUNCTIONS().
+   </para>
+   <para>
+    This eclass is inherited by most other eclasses e.g. base, kde*. As a rule, any eclass that defines some of the base functions needs it. Therefore the only ebuilds which don't get it are the ones that only inherit one of the smaller eclasses e.g. c, autoconf.
+   </para>
+   <para>
+    It defines all ebuild vars and funcs to be empty.
+   </para>
+   <para>
+    It also defines the EXPORT_FUNCTIONS() function which looks like this:
+   </para>
+   <programlisting>
+<![ CDATA [EXPORT_FUNCTIONS() {
+]]><![ CDATA [    while [ "$1" ]; do
+]]><![ CDATA [        eval "$1() { ${ECLASS}_$1 ; }" > /dev/null
+]]><![ CDATA [    shift
+]]><![ CDATA [    done
+]]><![ CDATA [}
+]]>   </programlisting>
+   <para>
+    This means that after foo.eclass has defined e.g. src_unpack() and src_install(), it says:
+   </para>
+   <para>
+    ECLASS=foo
+   </para>
+   <para>
+    EXPORT_FUNCTIONS src_unpack src_install
+   </para>
+   <para>
+    Actually, the ECLASS setting is put at the beginning of the eclass, directly after the inherit statements. It will in the future be used by other functions as well. Someday we will (I hope) adapt the portage ebuild filename-&gt;name algorithm and get the ECLASS setting the same way we do &dollar;P and &dollar;PN.
+   </para>
+   <para>
+    EXPORT_FUNCTIONS() creates stub functions called &dollar;&lcub;ECLASS&rcub;_blah for every parameter blah passed to it. The stub function does nothing but call blah.
+   </para>
+   <para>
+    When you inherit more than one eclass (almost always), your ebuild functions are those defined by the 1st eclass inherited. Since eclasses usually inherit other eclasses, you do not want to keep track of that. Instead, you prefix all your functions from foo.eclass with foo_, or &dollar;&lcub;ECLASS&rcub;_. This way, people can call a specific function from a specific eclass and know what they are going to get.
+   </para>
+   <para>
+    Because you still want default functions to be defined with the original ebuild names, you call EXPORT_FUNCTIONS() at the end of every eclass. This makes sure that the default functions you passed as parameters are stubs calling the ones you just defined.
+   </para>
+   <para>
+    I looked at adding &dollar;&lcub;EBUILD&rcub;_ instead of literal strings to the actual function definitions, but the bash syntax for that is too ugly.
+   </para>
+    <sect3>
+     <title>
+     ebuild function sections
+    </title>
+    <para>
+     Although this is not an integral part of eclasses, this is a good place to introduce function sections. 
+    </para>
+    <para>
+     One rarely uses predefined functions as-is; you usually want to extend them. Once they have unique names (foo_src_unpack) it's easy to add code that executes before or after them. Function sections break them down and allow code to execute between any two sections.
+    </para>
+    <para>
+     The implementation is simple. Let's take as an example the src_compile() function from base.eclass. It looks like this:
+    </para>
+    <programlisting>
+<![ CDATA [base_src_compile() {
+]]><![ CDATA [./configure || die
+]]><![ CDATA [make || die
+]]><![ CDATA [}
+]]>    </programlisting>
+    <para>
+     Here is the same function, divided into sections:
+    </para>
+    <programlisting>
+<![ CDATA [base_src_compile() {
+]]><![ CDATA [ 
+]]><![ CDATA [    [ -z "$1" ] && base_src_compile all
+]]><![ CDATA [ 
+]]><![ CDATA [    while [ "$1" ]; do
+]]><![ CDATA [
+]]><![ CDATA [        case $1 in
+]]><![ CDATA [            configure)
+]]><![ CDATA [                ./configure || die;;
+]]><![ CDATA [            make)
+]]><![ CDATA [                make || die;;
+]]><![ CDATA [            all)
+]]><![ CDATA [                base_src_compile configure make;;
+]]><![ CDATA [        esac
+]]><![ CDATA [
+]]><![ CDATA [    shift
+]]><![ CDATA [    done
+]]><![ CDATA [ 
+]]><![ CDATA [}
+]]>    </programlisting>
+    <para>
+     The code has been divided into two &ldquo;sections&rdquo;: <emphasis>configure</emphasis> and <emphasis>make</emphasis>. In our simple example, they correspond to the two commands in the original function.
+    </para>
+    <para>
+     In the center of the new function is a while;case...esac;shift;done block. This block matches the parameters to the functions with the defined section names and executes the corresponding lines of code.
+    </para>
+    <para>
+     The special case <emphasis>all</emphasis> calls the same function recursively with a list of sections in order. It's up to the eclass's author to maintain this list, which is very important.
+    </para>
+    <para>
+     The line before the block says that a call without parameters should be treated the same as a call with the single parameter <emphasis>all. </emphasis>As you see, this function recurses a lot. Note, however, that the call <emphasis>base_src_compile configure all make </emphasis>is also legal; it will execute <emphasis>base_src_compile configure configure make make</emphasis>.
+    </para>
+    <para>
+     Now, in your ebuild (or eclass) that inherits from base.eclass, you get the stub function src_compile which calls base_src_compile without parameters. This makes base_src_compile execute <emphasis>all</emphasis>, that is, all its sections. You can leave it as-is. If you wish to extend it, you define a new src_compile and call base_src_compile a section at a time:
+    </para>
+    <programlisting>
+<![ CDATA [src_compile() {
+]]><![ CDATA [    myfunc1
+]]><![ CDATA [    base_src_compile configure
+]]><![ CDATA [    myfunc2
+]]><![ CDATA [    base_src_compile make
+]]><![ CDATA [}
+]]>    </programlisting>
+    <para>
+     The only way to know what functions contain what sections is to read the eclasses.
+    </para>
+    </sect3>
+   </sect2>
+   <sect2>
+    <title>
+    base.eclass
+   </title>
+   <para>
+    This eclass defines some default variables and functions, similar to those you'd get by default in a non-inheriting ebuild. For example, it defines:
+   </para>
+   <programlisting>
+<![ CDATA [base_src_unpack() { unpack ${A}; }
+]]>   </programlisting>
+   <para>
+    Only with sections, of course.
+   </para>
+   <para>
+    It is inherited by higher-level eclasses like the kde ones.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    kde.eclass
+   </title>
+   <para>
+    Used by all kde apps, whether directly or indirectly. This is a higher-level eclass, which is intended to provide not only sensible defaults but functions which can be used as-is more often then not. 
+   </para>
+   <para>
+    It inherits c, autoconf and base.
+   </para>
+   <para>
+    Read it to find out what it defines. It is quite self-explanatory.
+   </para>
+   <para>
+    Briefly, it handles all standard kde-2.1* and 2.2* apps that need configure/make/make install cycles. It handles all the std. configure options e.g. objprelink. It also adds kdelibs and qt to DEPEND.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    kde-base.eclass
+   </title>
+   <para>
+    Meant for kde apps part of the core kde distribution.
+   </para>
+   <para>
+    Differences from kde.eclass:
+   </para>
+   <itemizedlist>
+    <listitem>
+    <para>
+    Sets appropriate DESCRIPTION and HOMEPAGE=www.kde.org.
+    </para>
+   </listitem>
+    <listitem>
+    <para>
+    Sets default download path to the correct location on ftp.kde.org and several of its mirrors.
+    </para>
+   </listitem>
+   </itemizedlist>
+   </sect2>
+   <sect2>
+    <title>
+    kde-i18n.eclass
+   </title>
+   <para>
+    Meant for the kde-i18n-* packages. Niche use.
+   </para>
+   <para>
+    In fact, all kde-i18n ebuilds are completely identical and so all they have to do is inherit from this eclass.
+   </para>
+   <para>
+    Differences from kde.eclass:
+   </para>
+   <para>
+    Many. Doesn't inherit c. Doesn't depend on qt. Provides virtual/kde-i18n-&dollar;&lcub;PV&rcub;. Doesn't have <emphasis>myconf </emphasis>section in src_compile(). Doesn't have any sections in src_install(). Probably something else I forgot as well.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    c.eclass
+   </title>
+   <para>
+    Adds gcc and glibc to DEPEND and RDEPEND. Not meant to be used alone, inherited by kde*.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    autoconf.eclass
+   </title>
+   <para>
+    Adds make/automake/autoconf to DEPEND. Not meant to be used alone, inherited by kde*.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    debug.eclass
+   </title>
+   <para>
+    Will be written soon. Will provide verbose debug output functions to centralise the numerous <emphasis>echo</emphasis>s I have scattered around the eclasses.
+   </para>
+   </sect2>
+  </sect1>
+  <sect1>
+   <title>
+   The inheriting ebuilds
+  </title>
+  <para>
+   Not much here as yet. Look at the kde*-2.2.1-r1 ebuilds for examples. As a rule, read the eclass you are inheriting from and put any necessary changes in your ebuild.
+  </para>
+  <para>
+   Remember: always extend variables and fnctions. You should almost never need to replace them.
+  </para>
+  </sect1>
+
+
+</chapter>

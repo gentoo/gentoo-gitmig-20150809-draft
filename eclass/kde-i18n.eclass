@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gentoo.ogr>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.1 2001/09/29 12:35:38 danarmak Exp $
+# Author Dan Armak <danarmak@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.2 2001/09/30 21:43:05 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit autoconf base || die
 ECLASS=kde-i18n
