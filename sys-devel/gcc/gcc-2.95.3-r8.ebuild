@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.39 2005/01/15 03:03:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.40 2005/03/14 23:06:54 eradicator Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator fixheadtails
 
@@ -39,7 +39,7 @@ DATAPATH="${LOC}/share/gcc-data/${CTARGET}/${GCC_BRANCH_VER}"
 # We will handle /usr/include/g++/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++"
 
-PATCH_VER=1.0
+PATCH_VER=1.1
 DESCRIPTION="Modern C/C++ compiler written by the GNU people"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -79,6 +79,8 @@ src_unpack() {
 	[[ $(tc-arch ${CTARGET}) == "alpha" ]] \
 		&& epatch 2.95.3/${P}-alpha.diff \
 		|| epatch 2.95.3/${P}-new-atexit.diff
+
+	epatch 2.95.3/${P}-gcc34compile.diff
 
 	# Fix outdated head/tails format #65668
 	ht_fix_file configure gcc/Makefile.in

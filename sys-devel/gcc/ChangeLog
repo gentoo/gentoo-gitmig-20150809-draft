@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.385 2005/03/07 11:13:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.386 2005/03/14 23:06:54 eradicator Exp $
+
+  14 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-2.95.3-r8.ebuild:
+  Patched to compile usilg gcc-3.4.
 
 *gcc-4.0.0_beta20050305 (07 Mar 2005)
 
