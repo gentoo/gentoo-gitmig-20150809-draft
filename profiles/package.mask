@@ -95,10 +95,6 @@ dev-perl/CDDB-File
 =net-www/lynx-2.8.4a-r4
 
 # <aliz@gentoo.org> (25 Aug 2002)
-# Masked for testing
-=sys-apps/yard-2.2
-
-# <aliz@gentoo.org> (25 Aug 2002)
 # Masked until 1.2.7a is out
 >=sys-apps/iptables-1.2.7
 
@@ -354,10 +350,6 @@ x11-themes/gtk-xfce-engine
 # PLEASE DO NOT UNMASK ON SERVER! Insted please let me know if it tested Ok
 # (with USE="-tcltk").
 =dev-lang/ocaml-3.04-r2
-
-# <drobbins@gentoo.org> (03 Aug 2002)
-# this version by aliz has 2 rejects
-=sys-apps/pciutils-2.1.10
 
 # Doug Goldstein <cardoe@gentoo.org> (03 Aug 2002)
 # masked for testing
