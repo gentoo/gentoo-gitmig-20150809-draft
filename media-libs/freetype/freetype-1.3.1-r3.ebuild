@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.21 2004/03/19 07:56:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.22 2004/04/03 23:37:19 spyderous Exp $
 
 IUSE="nls"
 
@@ -55,7 +55,7 @@ src_compile() {
 	econf ${myconf} || die
 
 	# Make a small fix to disable tests
-	# Now xfree is no longer required
+	# Now X11 is no longer required
 	cp Makefile Makefile.orig
 	sed -e "s:ttlib tttest ttpo:ttlib ttpo:" Makefile.orig > Makefile
 
