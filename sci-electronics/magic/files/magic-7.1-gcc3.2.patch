@@ -1,0 +1,12 @@
+diff -uNr tmp/magic-7.1/textio/txInput.c other/magic-7.1/textio/txInput.c
+--- tmp/magic-7.1/textio/txInput.c	2002-10-02 16:36:25.000000000 -0500
++++ other/magic-7.1/textio/txInput.c	2002-10-02 16:36:59.000000000 -0500
+@@ -579,7 +579,7 @@
+ 
+   free(line);
+ 
+-  matches = (completion_func) ? completion_matches(text, completion_func) : (char **)NULL;
++  matches = (completion_func != NULL) ? completion_matches(text, completion_func) : (char **)NULL;
+ 
+   /* If we match nothing, inhibit any matching, except when matching files */
+   rl_attempted_completion_over = (matches == (char **)NULL &&

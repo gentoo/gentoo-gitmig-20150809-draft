@@ -1,0 +1,29 @@
+diff -uNr tmp/magic-7.1/misc/paths.h other/magic-7.1/misc/paths.h
+--- tmp/magic-7.1/misc/paths.h	2001-04-16 09:43:43.000000000 -0500
++++ other/magic-7.1/misc/paths.h	2002-04-30 23:07:48.000000000 -0500
+@@ -27,18 +27,18 @@
+  *
+  */
+ 
+-#define	EXT_PATH	"~cad/lib/magic/%s ~cad/lib/magic/tutorial"
+-#define DOT_MAGIC_PATH	"~cad/lib/magic/sys ~ ."
++#define	EXT_PATH	"~cad/share/lib/magic/%s ~cad/share/lib/magic/tutorial"
++#define DOT_MAGIC_PATH	"~cad/share/lib/magic/sys ~ ."
+ 
+ /*
+  * Paths used by 'magic'.
+  *
+  */
+-#define MAGIC_CMOS_PATH	"~cad/lib/magic/cmos ~cad/lib/magic/tutorial"
+-#define MAGIC_NMOS_PATH	"~cad/lib/magic/nmos ~cad/lib/magic/tutorial"
+-#define MAGIC_SYS_PATH	". ~cad/lib/magic/sys ~cad/lib/magic/sys/current"
+-#define MAGIC_SYS_DOT	"~cad/lib/magic/sys/.magic"
+-#define MAGIC_LIB_PATH	"~cad/lib/magic/%s ~cad/lib/magic/tutorial"
++#define MAGIC_CMOS_PATH	"~cad/share/lib/magic/cmos ~cad/share/lib/magic/tutorial"
++#define MAGIC_NMOS_PATH	"~cad/share/lib/magic/nmos ~cad/share/lib/magic/tutorial"
++#define MAGIC_SYS_PATH	". ~cad/share/lib/magic/sys ~cad/share/lib/magic/sys/current"
++#define MAGIC_SYS_DOT	"~cad/share/lib/magic/sys/.magic"
++#define MAGIC_LIB_PATH	"~cad/share/lib/magic/%s ~cad/share/lib/magic/tutorial"
+ #define HELPER_PATH	". ~cad/bin"	/* Used by graphics drivers */
+ 
+ /*
