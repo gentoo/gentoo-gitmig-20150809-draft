@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.4 2002/07/09 11:28:56 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.5 2002/10/31 23:07:04 hannes Exp $
+
+  31 Oct 2002; Hannes Mehnert <hannes@gentoo.org> whois-4.5.31.ebuild,
+  files/digest-whois-4.5.31: version bump
 
 *whois-4.5.28-r1 (1 Jul 2002)
 
