@@ -1,13 +1,79 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman.rc,v 1.4 2005/03/22 13:54:16 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman.rc,v 1.5 2005/03/25 02:11:08 xmerlin Exp $
 
 depend() {
 	use net
 	need ccs
 	provide cluster-manager
 }
+
+umount_gfs_filesystems() {
+	local sig retry
+	local remaining="$(awk '$3 ~ /gfs/ { print $2 }' /proc/mounts | sort -r)"
+
+	if [ -n "${remaining}" ]
+	then
+	        sig=
+	        retry=3
+	        while [ -n "${remaining}" -a "${retry}" -gt 0 ]
+	        do
+	                if [ "${retry}" -lt 3 ]
+			then
+	                        ebegin "Unmounting GFS filesystems (retry)"
+	                        umount ${remaining} &>/dev/null
+	                        eend $? "Failed to unmount GFS filesystems this retry"
+	                else
+	                        ebegin "Unmounting GFS filesystems"
+	                        umount ${remaining} &>/dev/null
+	                        eend $? "Failed to unmount GFS filesystems"
+	                fi
+	                remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+	                [ -z "${remaining}" ] && break
+	                /bin/fuser -k -m ${sig} ${remaining} &>/dev/null
+	                sleep 5
+	                retry=$((${retry} -1))
+	                sig=-9
+	        done
+	fi
+}
+
+load_modules() {
+	local module modules
+	modules=$1
+	
+	for module in ${modules}; do
+		ebegin "Loading ${module} kernel module"
+		modprobe ${module} > /dev/null
+		eend $? "Failed to load ${module} kernel module"
+	done
+}
+
+unload_modules() {
+	local module modules
+	modules=$1
+	
+	for module in ${modules}; do
+		ebegin "Unloading ${module} kernel module"
+		modprobe -r ${module} > /dev/null
+		eend $? "Failed to unload ${module} kernel module"
+	done
+}
+
+unload_gfs_modules() {
+	if [ -f /proc/fs/gfs ]; then
+		modules="gfs lock_harness"
+	fi
+	if [ -d /proc/cluster/lock_dlm ]; then
+		modules="${modules} lock_dlm"
+	fi
+	if [ -d /proc/cluster/lock_gulm ]; then
+		modules="${modules} lock_gulm"
+	fi
+	unload_modules ${modules}
+}
+
 
 start() {
 	if grep -qE "<[[:space:]]*gulm([[:space:]]|[>]|$)" /etc/cluster/cluster.conf
@@ -16,9 +82,7 @@ start() {
 	fi
 
 	if [ ! -d /proc/cluster/config/cman ]; then
-		ebegin "Loading cman module"
-		modprobe cman
-		eend $?
+		load_modules cman
 	fi
 
 	ebegin "Starting cman"
@@ -40,19 +104,67 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping cman"
-	/sbin/cman_tool -t ${CMAN_SHUTDOWN_TIMEOUT} \
-		-w leave ${CMAN_LEAVE_OPTS} > /dev/null
 	
-	if [ "$?" -ne 0 ]
-	then
-		ewend 1 "Failed to stop cman"
+	# umount GFS filesystems
+	umount_gfs_filesystems
+	
+	# shutdown clvm, fenced services
+	# need to be fixed (clvm missing)
+	local fence_status="$(cman_tool services | awk '$1 ~ /Fence/ { print $3 }')"
+	if [ -n "${fence_status}" ]; then
+		if [ -x /sbin/fence_tool ]; then
+			ebegin "Stopping fence domain"
+			/sbin/fence_tool leave > /dev/null 2>&1
+			eend $?
+		fi
+	fi
+	
+	# shutdown dlm, gfs
+	unload_gfs_modules
+	
+	ebegin "Stopping cman"
+	local retry stat
+	local cman_status
+	cman_status="$(cman_tool status | awk '$1 ~ /Membership/ { print $3 }')"
+	
+	if [ "${cman_status}" != "Not-in-Cluster" -a -d /proc/cluster/config/cman ]; then
+		retry=2
+		stat=1
+		while [ "${stat}" -eq 1 -a "${retry}" -gt 0 ]
+		do
+			/sbin/cman_tool -w -t ${CMAN_SHUTDOWN_TIMEOUT} \
+				leave ${CMAN_LEAVE_OPTS} > /dev/null
+				
+			stat=$?
+			retry=$((${retry} -1))
+		done
+		
+		#if [ "${stat}" -ne 0 ]; then
+		#	/sbin/cman_tool -w -t 2 leave force > /dev/null
+		#fi
+		
+		#if [ "$?" -ne 0 ]
+		#then
+		#	ewend 1 "Failed to stop cman"
+		#else
+		#	eend 0
+		#fi
 	else
 		eend 0
-		ebegin "Unloading cman kernel module"
-		modprobe -r cman
-		eend $?
 	fi
-
+	eend $?
+	
+	sleep 1s
+	
+	local module="cman"
+	ebegin "Unloading ${module} kernel module"
+	modprobe -r ${module} &> /dev/null || return 0
+	if [ "$?" -ne 0 ]
+	then
+		ewend 1 "Failed to unload ${module} kernel module"
+	else
+		eend 0
+	fi
+	#unload_modules cman || return 0
 }
 

@@ -1,13 +1,36 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-client.rc,v 1.3 2005/03/23 14:40:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-client.rc,v 1.4 2005/03/25 02:17:29 xmerlin Exp $
 
 depend() {
 	use dns logger
 	need net
 	need fenced
 }
+
+load_modules() {
+	local module modules
+	modules=$1
+	
+	for module in ${modules}; do
+		ebegin "Loading ${module} kernel module"
+		modprobe ${module}
+		eend $? "Failed to load ${module} kernel module"
+	done
+}
+
+unload_modules() {
+	local module modules
+	modules=$1
+	
+	for module in ${modules}; do
+		ebegin "Unloading ${module} kernel module"
+		modprobe -r ${module}
+		eend $? "Failed to unload ${module} kernel module"
+	done
+}
+
 
 start() {
 	if [ ! -f /etc/gnbdtab ] ; then
@@ -16,9 +39,7 @@ start() {
 		return 1
 	fi
 
-	ebegin "Loading needed kernel modules for gnbd"
-	modprobe gnbd
-	eend $? "Failed to load needed kernel modules for gnbd"
+	load_modules gnbd
 	
 	GNBD=`cat /etc/gnbdtab | egrep '^import'`
 	if [ -n "$GNBD" ] ; then
@@ -31,12 +52,13 @@ start() {
 
 stop() {
 
+	# umount manually mounted gfs filesystems
 	local sig retry
-	local remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+	local remaining="$(awk '$3 ~ /gfs/ && $1 ~ /\/dev\/gnbd\// { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
 
 	if [ -z "${remaining}" ]
 	then
-		ebegin "Unmounting GFS filesystems"
+		ebegin "Unmounting GFS filesystems (GNBDs imported devices)"
 		eend 0
 	else
 	        sig=
@@ -53,7 +75,7 @@ stop() {
 	                        umount ${remaining} &>/dev/null
 	                        eend $? "Failed to unmount GFS filesystems"
 	                fi
-	                remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+	                remaining="$(awk '$3 ~ /gfs/ && $1 ~ /\/dev\/gnbd\// { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
 	                [ -z "${remaining}" ] && break
 	                /bin/fuser -k -m ${sig} ${remaining} &>/dev/null
 	                sleep 5
@@ -61,8 +83,6 @@ stop() {
 	                sig=-9
 	        done
 	fi
-
-
 
 	local GNBD_MONITOR_PROC
 
@@ -76,8 +96,6 @@ stop() {
 		killall gnbd_monitor &> /dev/null
 		eend $?
 	fi
-
-	ebegin "Unloading gnbd kernel module"
-	modprobe -r gnbd
-	eend $? "Failed to unload gnbd kernel module"	
+	
+	unload_modules gnbd
 }
