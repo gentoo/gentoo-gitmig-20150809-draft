@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.6 2005/01/10 12:24:44 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.7 2005/01/12 02:32:20 stkn Exp $
 
 IUSE="ssl novideo noaudio debug"
 
@@ -13,7 +13,6 @@ DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protoc
 HOMEPAGE="http://www.openh323.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src-tar.gz"
 
-RESTRICT="nomirror"
 SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="~x86 ~sparc ~alpha"
