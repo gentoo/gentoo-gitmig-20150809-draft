@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/athcool
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/ChangeLog,v 1.9 2004/08/02 17:15:35 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/ChangeLog,v 1.10 2004/08/22 19:22:02 lisa Exp $
+
+  22 Aug 2004; Lisa Seelye <lisa@gentoo.org> -athcool-0.3.5.ebuild,
+  athcool-0.3.7.ebuild:
+  bump to x86
 
 *athcool-0.3.7 (02 Aug 2004)
 
