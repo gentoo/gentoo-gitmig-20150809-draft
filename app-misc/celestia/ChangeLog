@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/celestia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/ChangeLog,v 1.9 2003/09/30 19:42:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/ChangeLog,v 1.10 2003/12/10 14:34:15 phosphan Exp $
+
+*celestia-1.3.0-r1 (10 Dec 2003)
+
+  10 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> celestia-1.3.0-r1.ebuild:
+  Enabled building without gnome or kde.
 
   30 Sep 2003; George Shapovalov <george@gentoo.org> celestia-1.3.0.ebuild :
   added ~ppc flag as per test report by Fernando Usero <fusero@wanadoo.es>
