@@ -386,10 +386,6 @@ media-plugins/avi-xmms
 # Has issues
 =media-video/ati-drivers-2.9.6
 
-# <danarmak@gentoo.org> (06 Apr 2003)
-# permamasked and will be removed from portage at some point since unmaintained usptream
-media-plugins/xmms-arts
-
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
 net-dialup/hcfusbmodem
