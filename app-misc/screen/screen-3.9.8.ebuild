@@ -38,6 +38,9 @@ src_install () {
     dodoc README ChangeLog INSTALL COPYING TODO
     docinto doc
     cd doc
-    dodoc FAQ README.DOTSCREEN fdpat.ps window_to_display.ps
+    dodoc FAQ README.DOTSCREEN 
+    docinto print
+    cd print
+    dodoc fdpat.ps window_to_display.ps
 }
 
