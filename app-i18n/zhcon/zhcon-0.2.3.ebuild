@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.3.ebuild,v 1.2 2004/04/06 04:06:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.3.ebuild,v 1.3 2004/04/25 14:15:39 usata Exp $
 
 inherit eutils
+
+IUSE=""
 
 DESCRIPTION="A Fast CJK (Chinese/Japanese/Korean) Console Environment"
 HOMEPAGE="http://zhcon.sourceforge.net/"
@@ -10,9 +12,11 @@ SRC_URI="mirror://sourceforge/zhcon/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sys-devel/autoconf"
+RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}

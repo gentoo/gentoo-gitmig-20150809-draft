@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.1 2004/03/14 11:27:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.2 2004/04/25 14:15:39 usata Exp $
+
+  25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> zhcon-0.2.3.ebuild:
+  Marked stable on x86
 
 *zhcon-0.2.3 (14 Mar 2004)
 
