@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-0.4.20.ebuild,v 1.1 2004/01/11 04:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-0.4.20.ebuild,v 1.2 2004/01/11 09:29:08 mr_bones_ Exp $
 
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
@@ -20,12 +20,12 @@ src_unpack() {
 
 src_compile() {
 	./prepare || die "prepare failed"
-    econf --sbindir=/sbin --libdir=/lib || die "configure failed"
-    emake || die "make failed"
+	econf --sbindir=/sbin --libdir=/lib || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
-    emake DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 	dodir /usr/lib
 	mv ${D}/lib/lib{reiser4,repair}.{a,la} ${D}/usr/lib/
 	dodoc AUTHORS BUGS CREDITS ChangeLog NEWS README THANKS TODO
