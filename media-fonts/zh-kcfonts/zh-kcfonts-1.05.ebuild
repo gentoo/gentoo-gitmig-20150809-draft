@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.1 2003/06/02 13:48:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.2 2003/07/12 16:16:15 aliz Exp $
 
 KCFONTS="zh-kcfonts-1.05.tgz"
 
@@ -10,7 +10,7 @@ HOMEPAGE=""	#No homepage exists that I am aware of or able to find
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="x11-base/xfree"
 S=${WORKDIR}/${PN}
