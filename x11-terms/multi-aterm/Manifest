@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bef4e283aeba7c4f6a3ee0a984bdd0bd ChangeLog 1715
+MD5 4701405f08bdb501e8c8dd5e30e05d0c ChangeLog 1801
+MD5 1ca6156c415291abc16599adc017e5cf multi-aterm-0.2.1.ebuild 1230
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 83445048ca9fac73d21f0aeb66bedee8 multi-aterm-0.1.ebuild 1085
-MD5 f22d63d70de9608f870827c86ae99c88 multi-aterm-0.2.1.ebuild 1232
+MD5 fa69e499e52e79504a20153441067dbe files/digest-multi-aterm-0.2.1 69
 MD5 c708bc86aa357759bdc964efa2c91167 files/digest-multi-aterm-0.1 67
 MD5 381bfb6500ddb60af1c102bd3e40d2f5 files/0.2.1-initialize-vars.patch 511
-MD5 fa69e499e52e79504a20153441067dbe files/digest-multi-aterm-0.2.1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOTnkI1lqEGTUzyQRAgsfAJ9sZeUXWGt7Rw0ZUg92UOYOKeo5pwCeIfki
-DI+ofUw7fBdynWVIXTCUH/k=
-=ZtEx
+iD8DBQFBjPujI7fK2cqeyXkRAqJ1AKDBXZAGOMUt7vEZtI2RDm1ZQyjYHgCgyyvq
+SZC35hbk1xUKxe5e2ePwXQQ=
+=9BIZ
 -----END PGP SIGNATURE-----
