@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop3
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/ChangeLog,v 1.4 2004/06/28 21:30:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/ChangeLog,v 1.5 2004/07/25 21:11:36 s4t4n Exp $
+
+  25 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmpop3-0.5.6a.ebuild:
+  Stable for x86.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmpop3-0.5.6a.ebuild:
   glibc -> libc, add sed-4 dep
