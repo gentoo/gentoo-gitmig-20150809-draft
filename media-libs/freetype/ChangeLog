@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.40 2004/02/21 15:07:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.41 2004/02/23 20:27:04 bazik Exp $
+
+  23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> freetype-2.1.5-r1.ebuild:
+  Stable on sparc. At least for me :P
 
   21 Feb 2004; Guy Martin <gmsoft@gentoo.org> :
   Marked stable on hppa.
