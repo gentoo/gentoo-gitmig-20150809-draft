@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.2 2004/03/24 17:19:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.3 2004/04/01 04:05:26 jhuebel Exp $
 
 S=${WORKDIR}
 URL="http://tcts.fpms.ac.be/synthesis/mbrola"
@@ -18,7 +18,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="MBROLA"
-KEYWORDS="x86 -sparc"
+KEYWORDS="x86 -sparc ~amd64"
 
 src_install () {
 
