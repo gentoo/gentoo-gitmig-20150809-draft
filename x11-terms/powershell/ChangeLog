@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/powershell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/ChangeLog,v 1.2 2002/09/15 06:56:01 mkennedy Exp $
+
+*powershell-0.9_pre3 (15 Sep 2002)
+
+  15 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  powershell-0.9_pre3.ebuild, files/digest-powershell-0.9_pre3 :
+
+  Resolves bug 7904.
 
 *powershell-0.8 (1 Feb 2002)
 
