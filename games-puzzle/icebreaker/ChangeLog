@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/icebreaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.2 2003/09/10 15:46:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.3 2003/09/28 08:07:35 mr_bones_ Exp $
+
+*icebreaker-1.9.5 (28 Sep 2003)
+
+  28 Sep 2003; Michael Sterrett <msterret@gentoo.org> icebreaker-1.9.5.ebuild:
+  version bump
 
 *icebreaker-1.9.2 (21 May 2002)
 
