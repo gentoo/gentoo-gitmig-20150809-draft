@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.9 2004/08/29 02:06:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.10 2004/12/31 01:14:00 swegener Exp $
+
+*ngircd-0.8.1 (31 Dec 2004)
+
+  31 Dec 2004; Sven Wegener <swegener@gentoo.org> +ngircd-0.8.1.ebuild:
+  Version bump. Bug #76064 by Daniel Webert.
 
   29 Aug 2004; Sven Wegener <swegener@gentoo.org> -ngircd-0.7.7.ebuild:
   Removed old ebuild.

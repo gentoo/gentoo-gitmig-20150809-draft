@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 455c821f9f806d2abc8116ffb2dc00e4 ChangeLog 1095
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 c95f11def00be7322a3a0a3b8483a992 ngircd-0.8.0.ebuild 1291
-MD5 ebc2472c14cff12e0907bbdfafab981a files/digest-ngircd-0.8.0 64
+MD5 45a76d7c4d433f9da0ceb6ff0d1eaf62 ngircd-0.8.1.ebuild 1292
+MD5 0ead2fb3f4218b8721b04adad0a1610c ChangeLog 1243
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 fa4e12b2d48dabe2da1de13d80c3266c files/ngircd.init.d 521
+MD5 ebc2472c14cff12e0907bbdfafab981a files/digest-ngircd-0.8.0 64
+MD5 a515815a087109695b43ba798a2bcdb3 files/digest-ngircd-0.8.1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBMToiI1lqEGTUzyQRAjCYAJ9BY7ZPJnd4WTqb8Bf86FmalBCxMwCeLUse
-HDYwLvZSwFBhZ7NbrYVip7Q=
-=FAkU
+iD8DBQFB1KfhI1lqEGTUzyQRAqU9AKDT85sn7WgfyKOoRuxuIOMaWCRVlQCgiiBW
+OEOS0xPzhyamgJudzN5wYhE=
+=a0nm
 -----END PGP SIGNATURE-----
