@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0.ebuild,v 1.3 2003/03/18 04:20:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0.ebuild,v 1.4 2003/03/25 14:50:01 azarah Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -15,11 +15,16 @@ inherit eutils
 DEBUG="yes"
 RESTRICT="nostrip"
 
-S=${WORKDIR}/linux/drm/kernel
+SNAPSHOT="20030306"
+
+S="${WORKDIR}/drm"
 DESCRIPTION="Xfree86 Kernel DRM modules"
 HOMEPAGE="http://www.xfree.org"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://cvs.gentoo.org/~seemant/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz"
+# Latest tarball of DRM sources can be found here:
+#
+#   http://www.xfree86.org/~alanh/
+#
 
 LICENSE="X11"
 SLOT="0"

@@ -1,10 +1,16 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.12 2003/03/18 04:20:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.13 2003/03/25 14:50:01 azarah Exp $
+
+  24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> xfree-drm-4.3.0.ebuild :
+  Update to rather use the "more official" DRM sources from
+  http://www.xfree86.org/~alanh/.  I did though rather create a date versioned
+  tarball on ibibilo, as they are only versioned on that site with the release
+  version of XFree86, and might change in future (bugfixes, etc).
 
 *xfree-drm-4.3.0-r1 (02 Mar 2003)
 
-  15 Mar 2003; Mark Guertin <gerk@gentoo.org> xfree-drm-4.3.0-r1.ebuild:
+  15 Mar 2003; Mark Guertin <gerk@gentoo.org> xfree-drm-4.3.0-r1.ebuild :
   set ppc in keywords
 
   02 Mar 2003; Mark Guertin <gerk@gentoo.org> xfree-drm-4.3.0-r1.ebuild files/digest-xfree-drm-4.3.0-r1 :
