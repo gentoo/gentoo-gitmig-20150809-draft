@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.5.3.ebuild,v 1.5 2005/03/27 20:39:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.5.3.ebuild,v 1.6 2005/03/29 15:23:04 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -19,7 +19,7 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/ant-core-1.5
 	>=dev-java/adaptx-0.9.5.3
 	>=dev-java/commons-logging-1.0.4
-	>=dev-java/oro-2.0.5
+	=dev-java/jakarta-oro-2.0*
 	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/jta-1.0.1
 	>=dev-java/ldapsdk-4.1.7
@@ -41,9 +41,8 @@ src_unpack() {
 	cd ${S}/lib
 	rm -f *.jar
 	java-pkg_jar-from adaptx-0.9
-	java-pkg_jar-from ant-core ant.jar
 	java-pkg_jar-from commons-logging
-	java-pkg_jar-from oro
+	java-pkg_jar-from jakarta-oro-2.0 jakarta-oro.jar oro.jar
 	java-pkg_jar-from jakarta-regexp-1.3 jakarta-regexp.jar regexp.jar
 	java-pkg_jar-from jta
 	java-pkg_jar-from junit
@@ -57,7 +56,6 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/src
-
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
