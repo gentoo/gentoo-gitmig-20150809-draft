@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.16 2004/06/24 21:50:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.17 2004/07/13 22:51:56 foser Exp $
+
+  14 Jul 2004; foser <foser@gentoo.org> libgnomeuimm-2.0.0.ebuild :
+  2.0 : Fix *mm deps to get the right slots (#56789)
+  2.6 : Make the SLOT more logical
 
   12 Jun 2004; Travis Tilley <lv@gentoo.org> libgnomeuimm-2.0.0.ebuild:
   stable on amd64
