@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.6 2002/10/21 03:48:18 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.7 2002/10/30 03:50:33 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts PNM to ASCII"
 SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
-HOMEPAGE="http://altmark.nat.uni-magdeburg.de/~jschulen/ocr/"
+HOMEPAGE="http://jocr.sourceforge.net/"
 
 RDEPEND=">=media-libs/netpbm-9.12-r1"
 
@@ -21,7 +21,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
-
 	unpack ${A}
 	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 	cd ${S}
