@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.6 2003/03/01 22:55:56 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.7 2003/08/03 15:23:54 gmsoft Exp $
 
 *hping-2.0.0_rc2 (03 March 2003)
+
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> hping-2.0.0_rc2.ebuild :
+  Added hppa to KEYWORDS.
 
   03 March 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2.ebuild :
   Version bump.
