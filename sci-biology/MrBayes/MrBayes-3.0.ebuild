@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/MrBayes/MrBayes-3.0.ebuild,v 1.1 2005/01/20 00:34:38 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/MrBayes/MrBayes-3.0.ebuild,v 1.2 2005/01/30 16:35:05 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ src_unpack() {
 	sed -i \
 		-e "s:-O4:${CFLAGS}:" \
 		-e "s:gcc:${CC}:" \
-		Makefile
+		Makefile || die
 }
 
 src_compile() {
