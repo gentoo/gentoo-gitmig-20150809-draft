@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.6 2003/09/07 00:50:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.7 2003/09/08 02:25:17 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -25,14 +25,11 @@ DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.23"
 # We need at least portage-2.0.23 to handle these DEPEND's properly.
 
-RDEPEND="${DEPEND}
-	|| ( >=sys-apps/gawk-3.1.1-r1
-	     ( !build? ( >=sys-apps/gawk-3.1.1-r1 ) )
-	     ( !bootstrap? ( >=sys-apps/gawk-3.1.1-r1 ) )
-	   )"
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
+RDEPEND="${DEPEND}
+	!build? ( !bootstrap? ( >=sys-apps/gawk-3.1.1-r2 ) )"
 
 
 # This ebuild needs to be merged "live".  You can't simply make a package
