@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.85 2004/03/25 23:06:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.86 2004/03/30 19:44:32 avenj Exp $
+
+  30 Mar 2004; Jon Portnoy <avenj@gentoo.org> nautilus-2.4.2.ebuild :
+  Stable on AMD64.
 
   25 Mar 2004; foser <foser@gentoo.org> nautilus-2.{4.0,4.2,6.0}.ebuild :
   2.4 : Add patch to fix build with gtk+2.4 (#45391)
