@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dejagnu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.9 2004/10/30 03:59:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.10 2004/11/10 01:53:24 vapier Exp $
+
+  09 Nov 2004; Mike Frysinger <vapier@gentoo.org> dejagnu-1.4.4-r1.ebuild,
+  -dejagnu-1.4.4.ebuild:
+  Clean up and move to stable for #42939.
 
   31 Oct 2004; Aron Griffis <agriffis@gentoo.org> dejagnu-1.4.4-r1.ebuild:
   add ~alpha and ~ia64
