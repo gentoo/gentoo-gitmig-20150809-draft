@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/showmarks
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.16 2004/09/19 19:50:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.17 2004/10/19 09:57:55 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> showmarks-2.2.ebuild:
+  Stable on amd64.
 
   19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> showmarks-2.2.ebuild:
   Stable on alpha.
