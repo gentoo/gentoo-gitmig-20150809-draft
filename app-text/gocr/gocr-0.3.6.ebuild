@@ -1,7 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.4.ebuild,v 1.4 2002/06/28 18:19:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6.ebuild,v 1.1 2002/06/28 18:19:07 rphillips Exp $
+
+# this is just TEMPORARY until we can get to the core of the problem
+# The problem is in the generation of the fonts
+SANDBOX_DISABLED="1"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts PNM to ASCII"
@@ -32,7 +36,7 @@ src_unpack() {
 		gocr.orig > gocr.tcl
 	cd ../src
 	cp database.c database.orig
-	sed -e "s:\./db/:/usr/share/gocr/db/:" database.orig > database.c
+	sed -e "s:\./db/:${D}/usr/share/gocr/db/:" database.orig > database.c
 	cd ../examples
 	cp Makefile Makefile.orig
 	sed -e "s:polish.pbm man.pbm:polish.pbm:" Makefile.orig > Makefile
@@ -44,13 +48,14 @@ src_compile() {
 	export CFLAGS="${CFLAGS} -I/usr/include/pbm"
 	./configure --prefix=/usr --host=${CHOST} || die
 	make src frontend database
-	use tetex && make \ 
+	use tetex && (\
+		make \ 
 		prefix=${D}/usr \
         sysconfdir=/${D}/etc \
         mandir=${D}/usr/share/man \
         datadir=${D}/usr/share \					
-		doc || die
-
+	 	 doc || die 
+	)
 }
 
 src_install () {

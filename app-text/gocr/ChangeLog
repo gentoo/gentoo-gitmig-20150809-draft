@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.2 2002/06/28 18:19:07 rphillips Exp $
+
+*gocr-0.3.6 (28 Jun 2002)
+
+  28 Jun 2002; Ryan Phillips <rphillips@gentoo.org> gocr-0.3.6.ebuild :
+
+  Added a new version, and disabled the sandbox temporarily.  The 
+  sandbox fails on latex font installations.  Anybody know a workaround?
 
 *gocr-0.3.4 (1 Feb 2002)
 
