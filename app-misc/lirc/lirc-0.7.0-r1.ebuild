@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.3 2004/12/09 21:37:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.4 2004/12/26 02:51:20 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -76,6 +76,7 @@ src_compile() {
 	fi
 
 	# Patch bad configure for /usr/src/linux
+	libtoolize --copy --force || die "libtoolize failed"
 	sed -si "s|/usr/src/kernel\-source\-\`uname \-r\` /usr/src/linux\-\`uname \-r\` ||" \
 		acinclude.m4 aclocal.m4 configure || die "/usr/src/linux sed failed"
 
