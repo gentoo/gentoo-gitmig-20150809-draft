@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/wmpop
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.1 2003/12/16 22:00:35 port001 Exp $
+
+*wmpop-0.53 (16 Dec 2003)
+
+  16 Dec 2003; Ian Leitch <port001@gentoo.org> wmpop-0.53.ebuild:
+  Initial commit, thanks to Jeff Stuart <jstuart@computer-city.net> for the
+  ebuild. #21288
+
