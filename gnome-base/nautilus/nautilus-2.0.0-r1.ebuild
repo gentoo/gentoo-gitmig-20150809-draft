@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.0.0-r1.ebuild,v 1.1 2002/06/11 18:59:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.0.0-r1.ebuild,v 1.2 2002/06/15 14:43:11 spider Exp $
 
 inherit gnome2
 
@@ -11,7 +11,8 @@ HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
 
-RDEPEND=">=dev-libs/glib-2.0.1
+RDEPEND="app-admin/fam-oss
+	>=dev-libs/glib-2.0.1
 	>=gnome-base/gconf-1.1.11
 	>=x11-libs/gtk+-2.0.2
 	>=dev-libs/libxml2-2.4.22

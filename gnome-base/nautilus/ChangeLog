@@ -1,8 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.16 2002/06/11 18:59:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.17 2002/06/15 14:43:11 spider Exp $
 
+natutils-2.0.0-r1 (15 Jun 2002)
+  15 Jun 2002 ; Spider <spider@gentoo.org> natutils-2.0.0-r1.ebuild :
+  Adding fam-oss as a depend, speedgain is quite good
 
+  
 *natutils-2.0.0-r1 (11 Jun 2002)
   11 Jun 2002; Spider <spider@gentoo.org> natutils-2.0.0-r1.ebuild :
   finally a working version with updated dependencies.
