@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.16 2004/08/30 19:19:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.17 2004/10/24 07:14:33 fafhrd Exp $
+
+*windowmaker-0.90.0 (24 Oct 2004)
+
+  24 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  +windowmaker-0.90.0.ebuild:
+  Version bump; keyworded for ~ppc; new version supports anti-aliased fonts --
+  finally ;-) -- as well as NETWM support for better GNOME 2 and KDE 3 use.
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   windowmaker-0.80.2-r3.ebuild, windowmaker-0.80.2-r4.ebuild:
