@@ -1,0 +1,15 @@
+# ChangeLog for app-arch/gzip-x86
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip-x86/ChangeLog,v 1.1 2003/11/14 22:25:21 seemant Exp $
+
+*gzip-x86-0.90 (14 Nov 2003)
+
+  14 Nov 2003; Seemant Kulleen <seemant@gentoo.org> gzip-x86-0.90.ebuild:
+  moved from sys-apps/gzip_x86 to app-arch/gzip-x86 and added a provide for
+  virtual/gzip
+
+*gzip_x86-0.90 (01 Jan 2002)
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Add missing changelog.  Add missing -arch keywords
+
