@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.23 2004/12/03 22:31:43 fafhrd Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.24 2005/03/05 10:44:24 corsair Exp $
+
+  05 Mar 2005; Markus Rothe <corsair@gentoo.org> libffi-3.4.3.ebuild:
+  Added ~ppc64 to KEYWORDS and don't use multilib on ppc64; bug #72258
 
 *libffi-3.4.3 (03 Dec 2004)
 
