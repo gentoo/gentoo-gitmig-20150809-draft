@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.17 2003/05/19 22:47:27 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.18 2003/05/20 20:11:56 rac Exp $
+
+  20 May 2003; <rac@gentoo.org> mod_perl-1.99.09.ebuild:
+  Eliminate "|| die" from the make test line, to address bug #21325.
 
 *mod_perl-1.99.09 (19 May 2003)
 
