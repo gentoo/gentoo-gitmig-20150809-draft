@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.9 2004/06/24 21:53:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.10 2004/06/29 16:00:50 agriffis Exp $
 
 DESCRIPTION="A fast, reliable, simple package for creating and reading constant databases"
 SRC_URI="mirror://debian/pool/main/f/freecdb//${P/-/_}.tar.gz"
@@ -10,6 +10,7 @@ SLOT="0"
 PROVIDE="virtual/cdb"
 LICENSE="public-domain"
 KEYWORDS="x86 ppc sparc alpha amd64"
+IUSE=""
 
 DEPEND="sys-devel/make
 	dev-lang/perl"
