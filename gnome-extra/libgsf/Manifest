@@ -1,14 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ed8b611b623acd8579b8d9eaa571c8f6 ChangeLog 4687
-MD5 40e23e00dd8649b64d1909ba5e7e538c libgsf-1.10.0.ebuild 816
 MD5 f779e6d09ddc34eacba44c8da29a7669 libgsf-1.6.0.ebuild 1129
 MD5 4d0f53f1de9f43a3e95131fef88919ac libgsf-1.8.1.ebuild 1007
 MD5 d5794fccd77173b08a375e63d72e8c4b libgsf-1.8.2.ebuild 969
-MD5 f36a34f3ef06946c75e07c8cf9fb7ea1 libgsf-1.9.0.ebuild 949
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 48ba00c01cd5336f9bb0c6e1050a8756 files/digest-libgsf-1.10.0 66
+MD5 43e3b9cd9323286dac74c3490ca99e81 libgsf-1.9.0.ebuild 950
+MD5 1414c980e18d391fcd49ab811d98f27e libgsf-1.10.0.ebuild 822
 MD5 ec1b3e9e3fc3f4373d56d58ca0335f3d files/digest-libgsf-1.6.0 65
 MD5 d0ce1181cf5d820cd7630c65aefe3025 files/digest-libgsf-1.8.1 65
 MD5 b5115c032d14e47d1895c04bc07ae06b files/digest-libgsf-1.8.2 65
-MD5 b6358f064a77a6797a70a56a7f601b7e files/digest-libgsf-1.9.0 65
 MD5 9bb1a07d9b94f96998a19f49544066cf files/libgsf-1.8.2-gtkdoc_fix.patch 830
+MD5 b6358f064a77a6797a70a56a7f601b7e files/digest-libgsf-1.9.0 65
 MD5 d975c673fd2f44d6fc627e041b827658 files/libgsf-1.9.0-gtkdoc_fixes.patch 968
+MD5 48ba00c01cd5336f9bb0c6e1050a8756 files/digest-libgsf-1.10.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiq1SHTu7gpaalycRAu7/AJ9beQjZVCrKYgvBrgd+UHUaQQNIGACdECqK
+yPOHDThLlAC4l8ipVvBqI88=
+=c5Uw
+-----END PGP SIGNATURE-----
