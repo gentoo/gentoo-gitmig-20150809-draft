@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3251 2004/10/16 19:34:24 liquidx Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3252 2004/10/16 19:55:48 liquidx Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <liquidx@gentoo.org> (16 Oct 2004)
+# Deprecate old unsupported gphoto-0.4.3. use gphoto2.
+media-gfx/gphoto
 
 # <liquidx@gentoo.org> (16 Oct 2004)
 # Deprecated bluez modules
