@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.40 2003/10/03 00:11:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.41 2003/11/12 22:22:36 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -197,7 +197,7 @@ src_compile() {
 			myconf="${myconf} --enable-gui=no `use_with vim-with-x x`"
 		elif [ ${PN} = gvim ]; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
-			if use gtk2; then
+			if use gtk && use gtk2; then
 				myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
 			elif use gnome; then
 				myconf="${myconf} --enable-gui=gnome"
