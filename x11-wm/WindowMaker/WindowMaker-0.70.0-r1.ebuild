@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.70.0-r1.ebuild,v 1.4 2001/12/02 03:25:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.70.0-r1.ebuild,v 1.5 2001/12/29 21:45:09 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -29,6 +29,8 @@ src_compile() {
 		myconf="--enable-gnome"
 	fi
 	if [ "`use kde`" ] ; then
+		# hope this helps for linking against kdelibs, I'm not testing other wms right now
+		export KDEDIR=/usr/kde/2
 		myconf="$myconf --enable-kde"
 	fi
 	if [ "`use nls`" ] ; then
