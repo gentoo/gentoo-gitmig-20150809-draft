@@ -1,14 +1,16 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.71 2003/12/06 18:42:05 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.72 2003/12/15 03:18:50 nakano Exp $
+
+*postgresql-7.4-r1 (25 Nov 2003)
+  15 Dec 2003; Masatomo Nakano <nakano@gentoo.org> files/digest-postgresql-7.4-r1:
+  Updated digest file since pg-hier patch was updated in upstream.
 
   06 Dec 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.2.ebuild,
   postgresql-7.3.3.ebuild, postgresql-7.3.4.ebuild, postgresql-7.3.ebuild,
   postgresql-7.4.ebuild, files/pgsql, files/postgres, files/postgresql,
   files/postmaster-wrapper, files/7.3/postgresql, files/7.3.2/postgresql:
   Removed old ebuilds/files.
-
-*postgresql-7.4-r1 (25 Nov 2003)
 
   25 Nov 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4-r1.ebuild,
   files/postgresql.init-7.4:
@@ -34,6 +36,8 @@
   Version bump as unstable.
 
 *postgresql-7.3.4-r1 (06 Nov 2003)
+  15 Dec 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.4-r1.ebuild:
+  Fixed DEPEND/RDEPEND in amd64/hppa.
 
   17 Nov 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.4-r1.ebuild:
   Marked as stable.

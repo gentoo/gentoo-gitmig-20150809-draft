@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.3 2003/11/20 02:23:21 vapier Exp $
-
-inherit flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.4 2003/12/15 03:18:58 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
+
+RESTRICT="nomirror"
+P_HIERPG="hier-Pg7.3-0.3"
 HOMEPAGE="http://www.postgresql.org/ http://gppl.terminal.ru/index.eng.html"
 SRC_URI="mirror://postgresql/v${PV}/${P}.tar.gz
-	pg-hier? ( http://gppl.terminal.ru/hier-Pg7.3-0.3.tar.gz )"
+	pg-hier? ( http://gppl.terminal.ru/${P_HIERPG}.tar.gz )"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
@@ -22,8 +23,8 @@ DEPEND="virtual/glibc
 	readline? ( >=sys-libs/readline-4.1 )
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
-	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
-	java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 )
+	python? ( !ppc? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base ) )
+	java? ( !amd64? ( !hppa? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 ) ) )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )"
 # java dep workaround for portage bug
@@ -32,8 +33,8 @@ RDEPEND="virtual/glibc
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
-	python? ( >=dev-lang/python-2.2 )
-	java? ( >=virtual/jdk-1.3* )
+	python? ( !ppc? ( >=dev-lang/python-2.2 ) )
+	java? ( !amd64? ( !hppa? ( >=virtual/jdk-1.3* ) ) )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 PG_DIR="/var/lib/postgresql"
@@ -51,6 +52,18 @@ pkg_setup() {
 			die
 		fi
 	fi
+
+	if [ "`use java`" ]; then
+		if [ "`use amd64`" -o "`use hppa`" ]; then
+			ewarn "Ignore USE=\"java\" in amd64/hppa"
+		fi
+	fi
+
+	if [ "`use python`" ]; then
+		if [ "`use ppc`" ]; then
+			ewarn "Ignore USE=\"python\" in ppc"
+		fi
+	fi
 }
 
 check_java_config() {
@@ -66,7 +79,7 @@ src_unpack() {
 	unpack ${A} || die
 	if [ "`use pg-hier`" ]; then
 		cd ${WORKDIR} || die
-		mv readme.html README-hier-Pg7.3-0.3.html || die
+		mv readme.html README-${P_HIERPG}.html || die
 		cd ${S} || die
 		epatch ${WORKDIR}/hier-Pg7.3.1-0.3.diff || die
 	fi
@@ -76,13 +89,13 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	use java && check_java_config
+	use java && use amd64 || use hppa || check_java_config
 
 	local myconf
 	use tcltk && myconf="--with-tcl"
-	use python && myconf="$myconf --with-python"
+	use python && use ppc || myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	use java && myconf="$myconf --with-java"
+	use java && use amd64 || use hppa || myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
@@ -129,7 +142,7 @@ src_install() {
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	cd ${S}
 	if [ "`use pg-hier`" ]; then
-		dodoc ${WORKDIR}/README-hier-Pg7.3-0.3.html
+		dodoc ${WORKDIR}/README-${P_HIERPG}.html
 	fi
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
 	dodoc contrib/adddepend/*
@@ -145,7 +158,7 @@ src_install() {
 	rm -rf ${D}/usr/doc ${D}/mnt
 	exeinto /usr/bin
 
-	if [ `use java` ]; then
+	if [ "`use java`" -a ! "`use amd64`" -a ! "`use hppa`" ]; then
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
