@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.5.0_pre20041205.ebuild,v 1.2 2005/01/01 17:59:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.5.0_pre20041205.ebuild,v 1.3 2005/03/20 19:34:41 vapier Exp $
 
 inherit eutils games rpm
 
@@ -16,16 +16,18 @@ IUSE=""
 
 RDEPEND="media-libs/libpng
 	sys-libs/zlib
+	app-crypt/mhash
 	=dev-libs/glib-2*
 	=x11-libs/gtk+-2*
 	dev-libs/atk
 	x11-libs/pango
 	x11-libs/gtkglext
 	dev-libs/libxml2
+	sys-libs/glibc
 	virtual/x11
 	virtual/opengl"
 
-S="${WORKDIR}/opt/${PN}"
+S=${WORKDIR}/opt/${PN}
 
 src_install() {
 	local dir="${GAMES_PREFIX_OPT}/${PN}"
