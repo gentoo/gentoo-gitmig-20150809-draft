@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.ebuild,v 1.7 2004/01/04 02:31:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.ebuild,v 1.8 2004/01/07 20:01:07 mholzer Exp $
 IUSE="ssl crypt"
 
 S=${WORKDIR}/${P}
 QV="2.0"
 SRC_URI="mirror://sourceforge/psi/${P}.tar.bz2
 	mirror://sourceforge/psi/qssl-${QV}.tar.bz2"
+RESTRICT="nomirror"
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http://psi.affinix.com"
 
