@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.17 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.18 2003/03/13 18:39:24 doctomoe Exp $
+
+  13 mar 2003; Olivier Reisch <doctomoe@gentoo.org> man-1.5k-r1.ebuild :
+  Marked ppc stable
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> man-1.5k-r1.ebuild :
   Added arm to keywords.
