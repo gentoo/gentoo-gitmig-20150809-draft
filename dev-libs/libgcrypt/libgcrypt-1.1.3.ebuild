@@ -20,6 +20,8 @@ src_compile() {
 		--prefix=/usr	\
 		--sysconfdir=/etc	\
 		--host=${CHOST}	\
+		--enable-m-guard	\
+		--enable-static	\
 		${myconf} || die
 	
 	emake  || die
@@ -29,5 +31,5 @@ src_install () {
 	
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING INSTALL KNOW-BUGS NEWS README THANKS TODO doc/README.* doc/example.c
+	dodoc AUTHORS BUGS COPYING INSTALL NEWS README* THANKS VERSION 
 }
