@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.8.1.ebuild,v 1.7 2004/07/18 23:54:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.8.1.ebuild,v 1.8 2004/11/14 20:00:31 kloeri Exp $
 
 IUSE=""
 MY_P=${P/rellm-/}
@@ -13,7 +13,7 @@ DEPEND="=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
 	make || die
