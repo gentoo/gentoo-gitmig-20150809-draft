@@ -1,8 +1,11 @@
-MD5 bfbd716101b6fbb11494bb0d514e598f hal-0.4.2-r1.ebuild 2685
-MD5 4aad3f8d293e5588d0710b7dceaca116 hal-0.4.1-r1.ebuild 2530
-MD5 3e506a597274c818f662edbe0c7d2b59 hal-0.2.98-r1.ebuild 2062
-MD5 f94b574eba8e2839db320ac27d9d0fe1 hal-0.4.4-r1.ebuild 2710
-MD5 b15e1384fff30816a3fde4ed4b7a94f2 ChangeLog 3028
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77964829c4e4c80e13c4c666cfa57e7c hal-0.4.2-r1.ebuild 2723
+MD5 40fe0cb8ed4114cabb633aa17fee91cc hal-0.4.1-r1.ebuild 2567
+MD5 06cf8b990aaa4971f14787097aaa7e33 hal-0.2.98-r1.ebuild 2102
+MD5 fbdfc063d1af974df2438c388e16d280 hal-0.4.4-r1.ebuild 2748
+MD5 b9e0da31e9b94e9669dcc977874315ae ChangeLog 3240
 MD5 731695e9263a5a2e1eeba290b36078d5 metadata.xml 219
 MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
 MD5 715f2a2e9a6980bae0823241ea50787f files/hal-0.4.0-allow-floppy-drives.patch 738
@@ -17,3 +20,10 @@ MD5 314ebeadb0a53e448e74ad6a3eead3f8 files/hal-0.4.4-check_ide_floppy_for_zip_fd
 MD5 2b00af86c624d74107035a007ac3c9da files/hal-0.4.4-volume_id_fat.patch 849
 MD5 eeb1838cdb78726ab674194f0d268270 files/hal-0.4.2-fstab_sync_crash.patch 468
 MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5Ggum/TpOlox+n8RAl+ZAJ0ZXMk8FByDXn5VRPZtYKNRR+u3VwCaAtYR
+GvR3pL8YQOEmkmiBe8xKQlo=
+=Jdwy
+-----END PGP SIGNATURE-----
