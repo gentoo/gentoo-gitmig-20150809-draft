@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.3 2002/02/09 01:44:32 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.4 2002/02/20 06:23:31 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
@@ -11,9 +11,9 @@ HOMEPAGE="http://www.alsa-project.org"
 #virtual/glibc should depend on specific kernel headers
 DEPEND="sys-devel/autoconf virtual/glibc"
 PROVIDE="virtual/alsa"
-KV=""
 
-pkg_setup() {
+setkv() {
+	KV=""
 	KV=`readlink /usr/src/linux`
 	if [ $? -ne 0 ] ; then
 		echo
@@ -35,8 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
-	try ./configure --with-kernel="${ROOT}usr/src/linux-${KV}" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
-	try emake
+	setkv
+	./configure --with-kernel="${ROOT}usr/src/linux-${KV}" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all || die
+	emake || die
 }
 
 src_install () {
