@@ -1,3 +1,5 @@
+# WARNNING! This profile is not production ready
+
 # uClibc defaults for the gcc portage
 
 USE="x86 embedded uclibc"
