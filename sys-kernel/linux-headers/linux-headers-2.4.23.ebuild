@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.23.ebuild,v 1.1 2003/11/29 04:45:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.23.ebuild,v 1.2 2003/11/29 04:48:35 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -14,7 +14,6 @@ EXTRAVERSION=""
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) patch for big-endian machines to fix header issue (currently sparc only)
 
 DESCRIPTION="Linux ${OKV} headers from kernel.org"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
