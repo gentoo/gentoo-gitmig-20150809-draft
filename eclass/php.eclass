@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.52 2003/06/19 04:10:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.53 2003/06/20 03:05:22 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -49,7 +49,6 @@ RDEPEND="
 	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
 	curl? ( >=net-ftp/curl-7.10.2 )
 	firebird? ( >=dev-db/firebird-1.0 )
-	flash? ( media-libs/libswf >=media-libs/ming-0.2a )
 	freetds? ( >=dev-db/freetds-0.53 )
 	|| (
 		gd-bundled? ( "" )
@@ -78,6 +77,11 @@ RDEPEND="
 	dev-libs/expat
 	sys-libs/zlib 
 	virtual/mta"
+
+# libswf is ONLY available on x86
+RDEPEND="${RDEPEND}
+	flash? ( x86? ( media-libs/libswf ) >=media-libs/ming-0.2a )"
+	
 	
 	# Testing per bug #13382
 if runningunstable; then
