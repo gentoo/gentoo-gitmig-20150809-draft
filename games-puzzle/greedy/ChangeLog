@@ -1,6 +1,6 @@
 # ChangeLog for games-puzzle/greedy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/ChangeLog,v 1.2 2003/09/10 15:47:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/ChangeLog,v 1.3 2003/09/14 04:23:43 vapier Exp $
 
 *greedy-0.2.0-r1 (27 Aug 2003)
 
@@ -13,10 +13,8 @@
   Added KEYWORDS, SLOT.
 
    5 May 2002; Mike Jones <ashmodai@gentoo.org> ChangeLog, greedy-0.2.0.ebuild
-   
    Added initial ChangeLog which should be updated whenever the package is
    updated in any way. This changelog is targetted to users. This means that the
    comments should well explained and written in clean English. The details about
    writing correct changelogs are explained in the skel.ChangeLog file which you
    can find in the root directory of the portage repository.
-	   
