@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0-r1.ebuild,v 1.2 2004/08/12 11:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0-r1.ebuild,v 1.3 2004/08/13 20:48:14 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -57,7 +57,8 @@ DESCRIPTION="Apache module for PHP 5"
 # provides all base PHP extras (eg PEAR, extension building stuff)
 DEPEND_EXTRA=">=${PHP_PROVIDER_PKG}-5.0.0-r1
 			  >=net-www/apache-1.3.26-r2
-			  apache2? ( >=net-www/apache-2.0.43-r1 )"
+			  apache2? ( >=net-www/apache-2.0.50 )
+			  || ( >=net-www/apache-1.3.26-r2 >=net-www/apache-2.0.50 )"
 DEPEND="${DEPEND} ${DEPEND_EXTRA}"
 RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 IUSE="${IUSE} debug"
