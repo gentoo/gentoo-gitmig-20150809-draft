@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.8 2004/08/07 22:12:15 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.9 2004/10/17 07:45:36 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  logilab-common-0.5.0.ebuild:
+  keywords ~amd64; closes #60986.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> logilab-common-0.3.4.ebuild,
   logilab-common-0.4.4.ebuild, logilab-common-0.5.0.ebuild:
