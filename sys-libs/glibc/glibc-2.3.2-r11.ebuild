@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r11.ebuild,v 1.12 2004/08/28 04:02:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r11.ebuild,v 1.13 2004/09/24 12:52:54 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -131,28 +131,28 @@ use_nptl() {
 	return 1
 }
 
-pkg_setup() {
+glibc_setup() {
 	# Check if we are going to downgrade, we don't like that
-	local old_version
-
-	old_version="`best_version glibc`"
-	old_version="${old_version/sys-libs\/glibc-/}"
-
-	if [ "$old_version" ]; then
-		if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
-			if [ "${FORCE_DOWNGRADE}" ]; then
-				ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
-			else
-				eerror "Downgrading glibc is not supported and we strongly recommend that"
-				eerror "you don't do it as it WILL break all applications compiled against"
-				eerror "the new version (most likely including python and portage)."
-				eerror "If you are REALLY sure that you want to do it set "
-				eerror "     FORCE_DOWNGRADE=1"
-				eerror "when you try it again."
-				die "glibc downgrade"
-			fi
-		fi
-	fi
+	#local old_version
+	#
+	#old_version="`best_version glibc`"
+	#old_version="${old_version/sys-libs\/glibc-/}"
+	#
+	#if [ "$old_version" ]; then
+	#	if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
+	#		if [ "${FORCE_DOWNGRADE}" ]; then
+	#			ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
+	#		else
+	#			eerror "Downgrading glibc is not supported and we strongly recommend that"
+	#			eerror "you don't do it as it WILL break all applications compiled against"
+	#			eerror "the new version (most likely including python and portage)."
+	#			eerror "If you are REALLY sure that you want to do it set "
+	#			eerror "     FORCE_DOWNGRADE=1"
+	#			eerror "when you try it again."
+	#			die "glibc downgrade"
+	#		fi
+	#	fi
+	#fi
 
 	# We need gcc 3.2 or later ...
 	if [ "`gcc-major-version`" -ne "3" -o "`gcc-minor-version`" -lt "2" ]
@@ -243,6 +243,9 @@ pkg_setup() {
 src_unpack() {
 
 	unpack glibc-${MY_PV}.tar.bz2
+
+	# we only need to check this one time. Bug #61856
+	glibc_setup
 
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
