@@ -1,9 +1,12 @@
-MD5 17242ccd09d213d7b6de98f0962634d2 ChangeLog 17817
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 035807d97f4d502818a05a7e15c7dc8c ChangeLog 17930
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
 MD5 aec43e5b3a4401a4acb51363c755a729 openssh-3.7.1_p2-r1.ebuild 4113
 MD5 5f87f18a24efe616d1dfcc5e9848946b openssh-3.8.1_p1-r1.ebuild 4241
 MD5 b4353850fbc9705f26093f98055cfc69 openssh-3.8.1_p1-r2.ebuild 4266
-MD5 275ae61596e28c55ad931d5b3083cfca openssh-3.9_p1-r1.ebuild 4487
+MD5 025a8863944ea4ea53578df07638cdaa openssh-3.9_p1-r1.ebuild 4487
 MD5 6cbb30e34e71177ff3c5058b21308e63 openssh-3.9_p1.ebuild 4421
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r1 142
 MD5 2cce94a742ab0721d87b1ff63c32d0f9 files/digest-openssh-3.9_p1-r1 136
@@ -37,3 +40,10 @@ MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
 MD5 b912e51afc37c43afef30d1f4aaee55a files/openssh-skeychallenge-args.diff.bz2 424
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 0a1428803057b7d25e624c6b297980d8 files/sshd.rc6 1281
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0seZKRy60XGEcJIRAmgAAJ9hVW0JhP9pEYW5h79wnXgW8KACtwCdFofy
+rQQ6GhMirlo+4NXj+fh65C8=
+=2B/k
+-----END PGP SIGNATURE-----
