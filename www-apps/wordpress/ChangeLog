@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.4 2004/09/08 13:12:50 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.5 2004/10/08 20:17:13 stuart Exp $
+
+*wordpress-1.2.1 (08 Oct 2004)
+
+  08 Oct 2004; Stuart Herbert <stuart@gentoo.org> +wordpress-1.2.1.ebuild:
+  Version bump; fixes security bug #65798; thanks to Peter Westwood
+  <peter.westwood@ftwr.co.uk> for testing
 
   08 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
   Fixed herd name
