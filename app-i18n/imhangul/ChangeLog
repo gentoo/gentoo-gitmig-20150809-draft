@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/imhangul
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.8 2003/11/16 13:28:16 jayskwak Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.9 2004/01/02 16:33:49 usata Exp $
+
+*imhangul-0.9.9 (03 Jan 2004)
+
+  03 Jan 2004: Mamoru KOMACHI <usata@gentoo.org> imhangul-0.9.9.ebuild :
+  Version bumped. Closing bug #34110
 
 *imhangul-0.9.7 (16 Nov 2003)
   16 Nov 2003: Jay Kwak <jayskwak@gentoo.org> imhangul-0.9.7.ebuild :
