@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.5 2004/08/17 15:40:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.6 2004/09/06 00:15:36 ciaranm Exp $
 
 inherit fixheadtails eutils gnuconfig
 
@@ -37,7 +37,7 @@ pkg_setup() {
 		ewarn "don't bother filing libsdl-related bugs until trying to remerge"
 		ewarn "libsdl without the no* flags in USE.  You need to know what"
 		ewarn "you're doing to selectively turn off parts of libsdl."
-		sleep 30
+		epause 30
 	fi
 }
 
