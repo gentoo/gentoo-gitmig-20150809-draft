@@ -1,0 +1,15 @@
+--- kaffeine/http.c.orig	2004-11-02 23:55:11.735826752 +0100
++++ kaffeine/http.c	2004-11-02 23:55:14.000000000 +0100
+@@ -521,10 +521,10 @@
+ 	    this->contentlength = contentlength;
+ 	  }
+         }
+-        if (sscanf(this->buf, "Content-Type: %s", mime_type) == 1) {
++        /*if (sscanf(this->buf, "Content-Type: %s", mime_type) == 1) {
+ 	  printf ("http: content type = '%s'\n", mime_type);
+ 	  strcpy(this->mime_type, mime_type);
+-	}	
++	}*/	
+ 	if (!strncasecmp(this->buf, "Location: ", 10)) {
+       	  printf ("http: Location redirection not implemented\n");
+ 	  free (this);

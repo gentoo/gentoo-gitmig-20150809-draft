@@ -1,6 +1,14 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.20 2004/10/17 10:47:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.21 2004/11/02 23:29:37 motaboy Exp $
+
+*kaffeine-0.4.3b-r1 (03 Nov 2004)
+
+  03 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kaffeine-0.4.3b-SecurityTracker-1011936.patch,
+  +files/kaffeine-0.5_rc1-SecurityTracker-1011936.patch,
+  +kaffeine-0.4.3b-r1.ebuild, +kaffeine-0.5_rc1-r1.ebuild:
+  Buffer Overflow in Processing Content-Type Headers fix, bug #69663
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> kaffeine-0.5_rc1.ebuild:
   keywords ~amd64.
