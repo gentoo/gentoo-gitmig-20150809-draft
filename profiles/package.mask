@@ -21,6 +21,15 @@
 ##   End example
 ##
 
+
+# <tantive@gentoo.org> (28 Aug 2002)
+# masked because there is a freeze, and to test them.
+=sys-kernel/openmosix-sources-2.4.18-r2
+=sys-kernel/openmosix-sources-2.4.18-r3
+=sys-kernel/openmosix-sources-2.4.18-r4
+=sys-kernel/openmosix-sources-2.4.19-r1
+=sys-kernel/openmosix-sources-2.4.19-r2
+
 # <tantive@gentoo.org> (28 Aug 2002)
 # masked because there is a FREEZE
 =sys-apps/openmosix-user-0.2.4
