@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.2 2004/03/05 02:17:44 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.3 2004/03/06 02:22:12 zul Exp $
 
 MY_P=Unreal3.2-RC1
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
@@ -57,6 +57,9 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die
+
+	# DPATH and SPATH is hardcoded in include/setup.h
+	sed -i 's:/var/tmp/portage/unrealircd-3.2_rc1/image/::' include/setup.h
 
 	emake || die
 }
