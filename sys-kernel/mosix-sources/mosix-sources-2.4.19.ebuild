@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/mosix-sources-2.4.19.ebuild,v 1.3 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/mosix-sources-2.4.19.ebuild,v 1.4 2003/02/13 16:40:03 vapier Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs

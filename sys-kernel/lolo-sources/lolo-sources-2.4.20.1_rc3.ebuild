@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_rc3.ebuild,v 1.2 2003/01/08 02:04:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_rc3.ebuild,v 1.3 2003/02/13 16:39:34 vapier Exp $
 
 IUSE="build crypt xfs"
 

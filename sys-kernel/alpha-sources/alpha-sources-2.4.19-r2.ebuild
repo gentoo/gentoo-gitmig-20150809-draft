@@ -1,4 +1,4 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc. 
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
