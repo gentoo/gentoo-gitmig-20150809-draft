@@ -1,0 +1,12 @@
+# ChangeLog for media-video/fame
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/fame/ChangeLog,v 1.1 2002/11/15 15:33:20 phoenix Exp $
+
+*fame-0.9.0 (15 Nov 2002)
+
+  15 Nov 2002; phoen][x <phoenix@gentoo.org> fame-0.9.0.ebuild, 
+  files/digest-fame-0.9.0, ChangeLog :
+
+  Initial import of fame.
+  Ebuild submitted by Rigo Ketelings <rigo@home.nl>. Thanks for the 
+  contribution.
