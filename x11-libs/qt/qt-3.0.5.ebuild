@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5.ebuild,v 1.1 2002/07/18 09:30:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5.ebuild,v 1.2 2002/07/18 19:10:59 danarmak Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -24,7 +24,7 @@ DEPEND="virtual/x11
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( =dev-db/postgresql-7.1.3* )"
+	postgres? ( >=dev-db/postgresql-7.2 )"
 	
 
 QTBASE=/usr/qt/3
@@ -57,7 +57,7 @@ src_compile() {
 	use nas		&& myconf="${myconf} -nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
-	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql -I/usr/include/postgresql/libpq -L/usr/lib"
+	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
 	
