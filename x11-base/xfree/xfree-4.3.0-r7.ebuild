@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.13 2004/10/21 01:04:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.14 2004/11/11 06:50:47 spyderous Exp $
 
 inherit eutils flag-o-matic toolchain-funcs x11
 
@@ -167,12 +167,6 @@ pkg_setup() {
 		then
 			die "The static USE flag is incompatible with the sdk USE flag."
 		fi
-	fi
-
-	# Check for existence of $CC, we use it later
-	if [ -z "${CC}" ]
-	then
-		die "Please set the CC variable to your compiler. export CC=gcc."
 	fi
 }
 
@@ -381,7 +375,7 @@ src_unpack() {
 	# this is needed for ./configure and runtime linking and building not to fall into falsely believing
 	# that there are some headers and functions for builtin video drivers or font libraries present
 
-	echo "#define CcCmd ${CC}" >> config/cf/host.def
+	echo "#define CcCmd $(tc-getCC)" >> config/cf/host.def
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
 
