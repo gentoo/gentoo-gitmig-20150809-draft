@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/zuul
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/ChangeLog,v 1.10 2004/10/02 15:32:25 swegener Exp $
 
   20 Apr 2004; Jon Hood <squinky86@gentoo.org> zuul-1.0.0.ebuild,
   zuul-1.1.2.ebuild:
