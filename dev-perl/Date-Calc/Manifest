@@ -1,4 +1,4 @@
-MD5 b35419f9e744f26fb3daf10f603c98b1 files/digest-Date-Calc-5.3 65
-MD5 bdf95906b7fbc19cef6decb8fbcb2c67 Date-Calc-5.3.ebuild 568
-MD5 d9e8b87e7fc2dbe80b31ec6e62868a57 ChangeLog 1911
+MD5 eaea2d837dc12c67e8f6546c6114a95e ChangeLog 2004
+MD5 4d164407ae622ae9a139267b7a0bdee8 Date-Calc-5.3.ebuild 572
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 b35419f9e744f26fb3daf10f603c98b1 files/digest-Date-Calc-5.3 65

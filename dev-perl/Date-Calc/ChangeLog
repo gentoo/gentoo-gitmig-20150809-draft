@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Calc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.14 2003/12/24 22:54:06 mcummings Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.15 2004/04/15 21:13:45 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> Date-Calc-5.3.ebuild:
+  added s390 to keywords
 
   24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
   Date-Calc-5.0-r2.ebuild, Date-Calc-5.0-r3.ebuild, Date-Calc-5.0-r4.ebuild:
