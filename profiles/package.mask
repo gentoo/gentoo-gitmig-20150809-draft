@@ -57,11 +57,6 @@
 # bug #34599
 <app-misc/screen-4.0.1-r1
 
-# <pyrania@gentoo.org> (07 Dec 2003)
-# see bug #32469
-# preparing to drop
-x11-misc/bbkeysconf
-
 # <scox@gentoo.org> (03 Dec 2003)
 # see bug #33033
 >=sys-kernel/xfs-sources-2.4.23
