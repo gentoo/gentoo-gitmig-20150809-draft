@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.554 2004/08/14 21:54:51 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.555 2004/08/14 22:05:00 zx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -8,9 +8,9 @@
 # Keep it sorted.
 
 app-accessibility/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
+app-accessibility/freetts:mbrola - Adds support for mbrola voices
 app-accessibility/gnome-speech:freetts - Adds support for the freetts speech driver
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
-app-accessibility/mbrola:freetts - Adds support for the freetts speech driver
 app-admin/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
