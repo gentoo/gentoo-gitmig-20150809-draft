@@ -23,6 +23,6 @@ src_compile() {
 src_install () {
 
 	make DESTDIR=${D} install || die
-	dodoc README AUTHORS COPYING TODO NEWS Changelog
+	dodoc README AUTHORS COPYING TODO ChangeLog README.windowmanagers
 
 }
