@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11.ebuild,v 1.2 2002/08/16 02:42:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11.ebuild,v 1.3 2002/08/27 20:55:17 azarah Exp $
 
 inherit libtool
 KEYWORDS="x86 ppc sparc sparc64"
@@ -37,7 +37,11 @@ src_compile() {
 
 	local myconf=""
 
-	use nls || myconf="${myconf} --disable-nls"
+	use nls || {
+		myconf="${myconf} --disable-nls"
+		# Not existing can cause ./configure to fail in some cases.
+		touch ${S}/intl/libintl.h
+	}
 
 	# hack around some to make sure we find the libxml2 includes. odd bug.
 	#CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
