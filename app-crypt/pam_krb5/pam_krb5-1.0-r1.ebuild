@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0-r1.ebuild,v 1.1 2004/07/15 19:49:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0-r1.ebuild,v 1.2 2004/08/19 22:19:51 kugelfang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.fcusack.com/"
 
 SLOT="0"
 LICENSE="BSD GPL-2 as-is"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~amd64"
 IUSE=""
 
 DEPEND="app-crypt/mit-krb5
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make CFLAGS="$CFLAGS" || die
+	emake || die
 }
 
 src_install() {
