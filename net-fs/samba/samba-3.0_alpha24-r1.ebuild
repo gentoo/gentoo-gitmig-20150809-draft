@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0_alpha24-r1.ebuild,v 1.2 2003/05/29 09:07:12 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0_alpha24-r1.ebuild,v 1.3 2003/05/30 14:08:15 woodchip Exp $
 
 inherit eutils
 
@@ -136,7 +136,7 @@ src_compile() {
 		--with-configdir=/etc/samba \
 		--with-logfilebase=/var/log/samba \
 		\
-		--enable-shared \
+		--enable-static --enable-shared \
 		--with-manpages-langs=en \
 		--with-sendfile-support \
 		--without-spinlocks \
