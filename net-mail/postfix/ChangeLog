@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.54 2003/02/03 01:18:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.55 2003/02/09 21:18:44 raker Exp $
 
 *postfix-2.0.3 (28 Jan 2003)
+
+  09 Feb 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.3.ebuild :
+  moved the post-install file to the doc directory.
 
   02 Feb 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.3.ebuild :
   Removed spurious main.cf{~,orig}.  Thanks to Phil Richards on bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.3 2003/02/03 01:18:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.4 2003/02/09 21:18:44 raker Exp $
 
 TLS_P="pfixtls-0.8.13-2.0.3-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.3"
@@ -179,6 +179,7 @@ src_install () {
 		rm main.cf.prembox
 	fi
 	rm main.cf~
+	mv post-install ${D}/usr/share/doc/${P}
 	cd ${S}
 }
 
