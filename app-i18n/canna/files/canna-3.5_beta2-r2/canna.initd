@@ -7,7 +7,7 @@
 
 start() {
 	ebegin "Starting canna"
-	/usr/sbin/cannaserver
+	/usr/sbin/cannaserver ${CANNASERVER_OPTS}
 	eend $? "Failed to start canna"
 }
 
