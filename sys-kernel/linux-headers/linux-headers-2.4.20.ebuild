@@ -28,7 +28,7 @@ then
 fi 
 
 # Download the latest hppa patch
-HPPA_PATCH_LEVEL="23"
+HPPA_PATCH_LEVEL="26"
 if [ `use hppa` ]
 then
 	SRC_URI="${SRC_URI} http://ftp.parisc-linux.org/cvs/patch-${OKV}-pa${HPPA_PATCH_LEVEL}.diff.gz"
