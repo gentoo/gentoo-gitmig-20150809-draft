@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce6b8c82ac22b52e2e413ec8d4a4129b komics-1.4-r1.ebuild 775
+MD5 008cbf1da93d06db889908f36cb21d02 komics-1.4-r1.ebuild 774
 MD5 3557b9a75f37b933e9ddb76ef54da1a4 komics-1.3.ebuild 807
 MD5 eca151f12315a62ee5ebbb4952aacfae komics-1.0.ebuild 590
 MD5 f9de1aa7587190c831211711c311d2df komics-1.2.ebuild 734
-MD5 15256e7338ece16f28d431a87a7d9e0b ChangeLog 2892
+MD5 293bd6c0449c94a983f9f838a701a83c ChangeLog 2980
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 78250fa508313c0d5d704b4398b04880 files/digest-komics-1.0 63
 MD5 1287f8b8cc536896a4a3db94d29d10c9 files/digest-komics-1.2 63
@@ -15,10 +12,3 @@ MD5 af3b9a959c22def6991fc0eeb5a2d955 files/komics-1.3-gcc34.patch 293
 MD5 fa8ba7139b31187b660ce22badd75289 files/digest-komics-1.4-r1 63
 MD5 27931c65c3407925b26fed69e1d68098 files/komics-1.4-gcc3.4.patch 366
 MD5 3cd58a3315a7690b2e36a622209a8199 files/komics-1.4-Makefiles.patch 1182
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB2GN0I1lqEGTUzyQRAoc+AKCA/yDcyTw4oH0zQeGMdcKTmXfjcQCgsFcY
-DicXC+36j0HNOG0Qg+RektY=
-=54iF
------END PGP SIGNATURE-----
