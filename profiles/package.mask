@@ -43,6 +43,7 @@ net-www/zope
 
 # committed to facilitate testing by several devs, mostly Verwilst and me.
 # testing should be over in 24h so don't unmask without good reason.
+# added kdeadmin, kdeaddons as well // Spider 
 >=kde-base/arts-1.0.0
 >=kde-base/kdelibs-3.0
 >=kde-base/kdebase-3.0
@@ -60,6 +61,9 @@ net-www/zope
 >=kde-base/kdeutils-3.0
 >=kde-base/kdoc-3.0
 >=dev-util/kdevelop-2.1
+>=kde-base/kdeaddons-3.0
+>=kde-base/kdeadmin-3.0
+
 
 >=app-i18n/kde-i18n-3.0
 >=app-i18n/kde-i18n-af-3.0
