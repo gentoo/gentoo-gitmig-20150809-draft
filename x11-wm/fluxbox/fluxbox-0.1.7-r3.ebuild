@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.1 2002/03/15 15:06:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.2 2002/03/16 16:36:46 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -55,4 +55,9 @@ src_install () {
 	dodoc ChangeLog AUTHORS COPYING INSTALL README TODO NEWS
 	docinto data
 	dodoc data/README*
+
+	dodir /etc/X11/Sessions
+	echo "/usr/bin/fluxbox" > ${D}/etc/X11/Sessions/fluxbox
+	chmod +x ${D}/etc/X11/Sessions/fluxbox
+
 }

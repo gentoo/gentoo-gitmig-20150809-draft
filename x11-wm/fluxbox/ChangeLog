@@ -1,8 +1,18 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.6 2002/03/15 15:06:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.7 2002/03/16 16:36:46 karltk Exp $
 
-*fluxbox-0.1.7-r2 (15 Mar 2002)
+*fluxbox-0.1.7-r3 (15 Mar 2002)
+
+  16 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> fluxbox-0.1.7-r3.ebuild :
+
+  Added /etc/X11/Sessions/fluxbox pointer. Didn't bother updating revision 
+  as the fix is so small.
+
+  Removed old revisions.
+
+*fluxbox-0.1.7-r3 (15 Mar 2002)
+
   15 Mar 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.7-r3.ebuild :
 
   This package now provides virtual/fluxbox, so as to allow blackbox
