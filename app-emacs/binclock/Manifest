@@ -1,5 +1,5 @@
-MD5 8858ba8f57e875c9c0da583b024a7882 ChangeLog 485
-MD5 7ffa7b590637e0b0ed16fe9bcd1095c4 binclock-1.7.ebuild 830
+MD5 08c97a99dc6d3c0bd3e8a14753845285 ChangeLog 580
+MD5 6f3c3713fb3d60ce151f8d459428211b binclock-1.7.ebuild 836
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 eb6d3198a32071f5911e336e77bc9220 files/50binclock-gentoo.el 107
 MD5 1bca833d248ce850cce2dc0fdb470eff files/digest-binclock-1.7 63
