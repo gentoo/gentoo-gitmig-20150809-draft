@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcl-gtk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-gtk/ChangeLog,v 1.1 2004/08/25 06:27:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-gtk/ChangeLog,v 1.2 2004/08/25 06:43:30 cardoe Exp $
+
+  25 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tcl-gtk-0.08.ebuild:
+  meant emake not make
 
 *tcl-gtk-0.08 (25 Aug 2004)
 

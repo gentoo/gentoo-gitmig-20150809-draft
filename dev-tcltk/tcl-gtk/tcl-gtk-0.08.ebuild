@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-gtk/tcl-gtk-0.08.ebuild,v 1.1 2004/08/25 06:27:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-gtk/tcl-gtk-0.08.ebuild,v 1.2 2004/08/25 06:43:30 cardoe Exp $
 
 IUSE=""
 DESCRIPTION="GTK bindings for TCL"
@@ -15,7 +15,7 @@ DEPEND=">=dev-lang/tcl-8.4
 
 src_compile() {
 	econf || die "./configure failed"
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install () {
