@@ -1,6 +1,10 @@
 # ChangeLog for net-www/kaffeine-mozilla-plugin
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/ChangeLog,v 1.4 2004/10/11 22:53:43 carlo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/ChangeLog,v 1.5 2005/03/18 19:48:14 seemant Exp $
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  kaffeine-mozilla-plugin-0.2.ebuild:
+  Dependency update: net-www/mozilla-firefox -> www-client/mozilla-firefox.
 
   12 Oct 2004; Carsten Lohrke <carlo@gentoo.org>
   kaffeine-mozilla-plugin-0.2.ebuild:
