@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-bdb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.5 2004/10/11 01:51:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.6 2004/12/07 07:26:19 usata Exp $
+
+*ruby-bdb-0.5.3 (07 Dec 2004)
+
+  07 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-bdb-0.5.0.ebuild,
+  +ruby-bdb-0.5.3.ebuild:
+  Version bumped; bug #73509.
 
   10 Oct 2004; Jason Wever <weeve@gentoo.org> ruby-bdb-0.5.0.ebuild:
   Added ~sparc keyword.

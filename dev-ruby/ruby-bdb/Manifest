@@ -1,6 +1,18 @@
-MD5 89370a566fe5e3aca2df7270e6e4b303 ChangeLog 735
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be7f138915b6fd22cc113e0dc93e3fc1 ChangeLog 895
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 c0070e103a5a5902eb83987b192c017d ruby-bdb-0.4.8.ebuild 614
-MD5 ac3e1974b7d1938cc3ecff4f6518ff66 ruby-bdb-0.5.0.ebuild 624
+MD5 97cf6da50a9145cd1b22797155c902c5 ruby-bdb-0.5.0.ebuild 611
+MD5 682c33f1aef4be65e161db95eda2e67f ruby-bdb-0.5.3.ebuild 613
 MD5 935d460409aeeec4ad6fd8a701b2d474 files/digest-ruby-bdb-0.4.8 61
 MD5 cd23d63b34f8fbc8713f3397864aa14b files/digest-ruby-bdb-0.5.0 61
+MD5 2f2fdb9119efb71ea044ed8535d013cc files/digest-ruby-bdb-0.5.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtVlwVWNWqTUmv+0RAi9pAKCHgIMOIZFRSS90EvbGiSckRraKswCfZwus
+0+k2b+3wzPfy+NKP9kgHnP0=
+=5+L7
+-----END PGP SIGNATURE-----
