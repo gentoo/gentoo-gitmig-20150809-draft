@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.1 2004/10/06 11:40:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.2 2004/11/04 11:23:18 usata Exp $
 
 inherit elisp-common eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mew.org/mgp/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc ~amd64"
+KEYWORDS="x86 alpha ~sparc ppc ~amd64"
 IUSE="cjk nls m17n-lib emacs truetype gif imlib"
 
 DEPEND="virtual/x11
