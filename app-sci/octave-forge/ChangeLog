@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/octave-forge
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/ChangeLog,v 1.4 2003/10/09 21:11:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/ChangeLog,v 1.5 2003/10/18 16:49:33 zul Exp $
+
+  18 Oct 2003; Chuck Short <zul@gentoo.org> octave-forge-2003.06.02.ebuild:
+  Added ~sparc to keywords.
 
   09 Oct 2003; David Holm <dholm@gentoo.org> octave-forge-2003.06.02.ebuild:
   Added to ~ppc.
