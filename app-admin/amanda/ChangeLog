@@ -1,0 +1,15 @@
+# ChangeLog for app-admin/amanda
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.1 2003/06/26 19:47:53 robbat2 Exp $
+
+*amanda-2.4.4 (26 Jun 2003)
+
+  26 June 2003; Robin Johnson <robbat2@gentoo.org> Manifest,
+  files/amanda-devfs, files/example_disklist, files/amanda-cron,
+  files/amanda-xinetd, files/amanda-profile, files/example_amanda.conf,
+  files/amanda-amandahosts, files/digest-amanda-2.4.4,
+  files/example_global.conf, amanda-2.4.4.ebuild, ChangeLog:
+  Initial import. Russell Adams <demo@demosthenes.org> submitted a reasonable
+  ebuild for amanda in bug #19403. I have merged the good elements of all
+  available amanda ebuild into this new ebuild. Bugs #10782, #13948, #16118,
+  #18466, #19403.
