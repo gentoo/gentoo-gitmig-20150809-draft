@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r1.ebuild,v 1.3 2002/07/11 06:30:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r1.ebuild,v 1.4 2002/07/16 00:52:14 owen Exp $
 
 # note to self: check for java deps
 
@@ -16,6 +16,7 @@ RDEPEND="=sys-libs/db-3.2.3h-r4
 	>=dev-libs/popt-1.6"
 
 DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 

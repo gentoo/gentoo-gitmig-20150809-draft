@@ -1,8 +1,12 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.4 2002/06/29 22:01:43 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.5 2002/07/16 00:52:14 owen Exp $
 
 *rpm-4.0.4-r2 (29 Jun 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added PPC to KEYWORDS.
 
   29 May 2002; Jon Nelson <jnelson@gentoo.org> rpm-4.0.4-r2.ebuild:
 

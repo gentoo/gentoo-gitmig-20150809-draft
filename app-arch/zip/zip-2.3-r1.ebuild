@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.5 2002/07/11 06:30:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.6 2002/07/16 00:54:22 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Info ZIP"
@@ -9,6 +9,7 @@ HOMEPAGE="ftp://ftp.freesoftware.com/pub/infozip/Zip.html"
 LICENSE="Info-ZIP"
 
 DEPEND="virtual/glibc"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 
