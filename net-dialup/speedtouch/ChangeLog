@@ -1,8 +1,11 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.4 2003/04/17 18:41:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.5 2003/05/23 07:47:11 killian Exp $
 
 *speedtouch-1.1 (30 Aug 2002)
+
+  23 May 2003; Chuck Brewer <killian@gentoo.org>:
+  Added manifest.
 
   17 Apr 2003; Guy Martin <gmsoft@gentoo.org> speedtouch-1.1.ebuild :
   Added ~hppa to KEYWORDS.
@@ -13,6 +16,5 @@
   30 Aug 2002; phoen][x <phoenix@gentoo.org> ChangeLog, speedtouch-1.1.ebuild
   files/adsl.sample, files/digest-speedtouch-1.1, files/speedtouch.confd,
   files/speedtouch.rc6: 
-
   Initial import. Ebuild submitted by Maurizio Disimino <kevin@aptbasilicata.it>.
   Thanks for the contribution. This closes bug 2300.
