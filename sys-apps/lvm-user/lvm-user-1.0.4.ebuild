@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.4.ebuild,v 1.11 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.4.ebuild,v 1.12 2003/09/02 20:41:43 max Exp $
 
 NV=1.0.4
 S=${WORKDIR}/LVM/${NV}
@@ -11,7 +11,8 @@ KEYWORDS="x86 amd64 -ppc sparc "
 
 DEPEND="virtual/glibc
 	virtual/linux-sources"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/glibc
+	!sys-apps/lvm2"
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
 

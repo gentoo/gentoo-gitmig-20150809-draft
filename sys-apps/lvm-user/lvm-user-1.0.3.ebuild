@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.3.ebuild,v 1.10 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.3.ebuild,v 1.11 2003/09/02 20:41:43 max Exp $
 
 NV=1.0.3
 S=${WORKDIR}/LVM/${NV}
@@ -12,6 +12,8 @@ SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}
+	!sys-apps/lvm2"
 
 KS=/usr/src/linux
 
