@@ -1,3 +1,4 @@
-MD5 677bd4b5819772163122392b91b779a6 bashish-1.9.19.ebuild 1357
-MD5 49ea64cd89d7996dd604b4452aa964a6 ChangeLog 459
-MD5 6ce225c1c67736d4f4eb4e199f647637 files/digest-bashish-1.9.19 66
+MD5 be13d9a99e08f849c6aaa0151fc2e645 files/digest-bashish-1.9.21 66
+MD5 81feb15ed591ce02afc2217b9d11ace5 files/bashish.conf 61
+MD5 16ec58308d837b0555fad0cea1497c3b ChangeLog 534
+MD5 31d206ffa558c2d32321a9c9b86739e6 bashish-1.9.21.ebuild 762
