@@ -98,7 +98,9 @@ class depgraph:
 		for x in mylist:
 			os.environ["ROOT"]=x[0]
 			print ">>> emerge",x[1],"to",x[0]
-			retval=portage.doebuild(self.db[x[0]]["porttree"].getname(x[1]),"merge")
+			#the last argument in the portage.doebuild() tells doebuild to *not* do dep checking
+			#(emerge is already handling that)
+			retval=portage.doebuild(self.db[x[0]]["porttree"].getname(x[1]),"merge",0)
 			if retval:
 				print "!!! emerge aborting."
 				sys.exit(1)
