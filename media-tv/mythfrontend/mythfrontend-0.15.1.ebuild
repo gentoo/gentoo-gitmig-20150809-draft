@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.15.1.ebuild,v 1.6 2004/09/21 04:49:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.15.1.ebuild,v 1.7 2005/01/18 20:00:33 cardoe Exp $
 
 inherit flag-o-matic eutils gcc
 

@@ -1,17 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.11 2005/01/18 20:00:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.20050115.ebuild,v 1.1 2005/01/18 20:00:33 cardoe Exp $
 
 inherit myth flag-o-matic
 
 DESCRIPTION="Homebrew PVR project frontend."
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://www.mythtv.org/mc/mythtv-${PV}.tar.bz2"
+SRC_URI="mirror://gentoo/mythtv-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
-IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss debug mmx nls"
+KEYWORDS="~x86 ~amd64"
+IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss mmx"
+
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -24,13 +25,12 @@ DEPEND=">=media-libs/freetype-2.0
 	dvb? ( media-libs/libdvb )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
-	nvidia? ( media-video/nvidia-glx )
-	cle266? ( media-libs/libddmpeg )"
+	nvidia? ( media-video/nvidia-glx )"
 
 RDEPEND="${DEPEND}
 	!media-tv/mythtv"
 
-S="${WORKDIR}/mythtv-${PV}"
+S="${WORKDIR}/mythtv"
 
 pkg_setup() {
 	if use X; then
@@ -129,6 +129,12 @@ setup_pro() {
 			-i 'settings.pro' || die "enable cle266 sed failed"
 	fi
 
+	if ! use cle266 ; then
+		sed -e 's:CONFIG += using_xvmc using_xvmc_vld:#CONFIG += using_xvmc using_xvmc_vld:' \
+			-e 's:DEFINES += USING_XVMC USING_XVMC_VLD:#DEFINES += USING_XVMC USING_XVMC_VLD:' \
+			-i 'settings.pro' || die "disable VLD XvMC sed failed"
+	fi
+
 	if use directfb ; then
 		sed -e 's:#CONFIG += using_directfb:CONFIG += using_directfb:' \
 			-e 's:#EXTRA_LIBS += `directfb:EXTRA_LIBS += `directfb:' \
@@ -142,6 +148,7 @@ setup_pro() {
 			-i 'settings.pro' || die "enable opengl sed failed"
 	fi
 
+	#Gentoo X ebuilds always have XrandrX
 	sed -e 's:#CONFIG += using_xrandr:CONFIG += using_xrandr:' \
 		-e 's:#DEFINES += USING_XRANDR:DEFINES += USING_XRANDR:' \
 		-i 'settings.pro' || die "enable xrandr sed failed"
@@ -155,7 +162,6 @@ src_unpack() {
 	is-flag "-march=pentium4" && replace-flags "-O3" "-O2"
 
 	myth_src_unpack
-	sed -i '32i #include <cmath>' ${S}/libs/libmythtv/dvbdiseqc.cpp
 }
 
 src_compile() {
@@ -168,6 +174,8 @@ src_compile() {
 	make qmake || die
 	emake -C libs/libavcodec || die
 	emake -C libs/libavformat || die
+	emake -C libs/libmythsamplerate || die
+	emake -C libs/libmythsoundtouch || die
 	emake -C libs/libmyth || die
 	emake -C libs/libmythtv || die
 	emake -C libs || die
