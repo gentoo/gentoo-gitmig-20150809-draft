@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spectromatic/spectromatic-1.0.ebuild,v 1.3 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spectromatic/spectromatic-1.0.ebuild,v 1.4 2004/04/19 12:29:08 phosphan Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -18,7 +20,7 @@ DEPEND=">=dev-libs/gsl-1.2
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 src_compile() {
 	emake || die
