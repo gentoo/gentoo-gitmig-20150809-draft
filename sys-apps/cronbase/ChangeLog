@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.4 2002/06/23 17:37:19 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.5 2002/06/26 09:48:04 bangert Exp $
+
+  23 Jun 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
+  
+  rethought rewrite and fixed a race. thanks go to jnelseon and george
+
+
+*cronbase-0.2 (24 Jun 2002)
 
   23 Jun 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
   
@@ -9,6 +16,7 @@
   20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
   
   moved lastrun to /var/spool/cron/lastrun
+
 
 *cronbase-0.01 (19 Apr 2002)
 

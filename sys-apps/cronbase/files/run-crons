@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.5 2002/06/23 17:37:19 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.6 2002/06/26 09:48:04 bangert Exp $
 #
 # 23 Jun 2002; Jon Nelson <jnelson@gentoo.org> run-crons:
 #
@@ -28,6 +28,25 @@ do
     CRONDIR=/etc/cron.${BASE}
 
     test -d $CRONDIR || continue
+
+    if test -e /var/spool/cron/lastrun/cron.$BASE
+    then
+	case $BASE in
+	    hourly)
+		#>= 65 min -=> +64 min
+		TIME="-cmin +64" ;;
+	    daily)
+		#>= 1 day, 5 min -=> +1444 min
+		TIME="-cmin +1444"  ;;
+	    weekly)
+		#>= 1 week, 5 min -=> +10084 min
+		TIME="-cmin +10085"  ;;
+	    monthly)
+		#>= 30 days, 5 min -=> +43204 min
+		TIME="-cmin +43204" ;;
+	esac
+	find /var/spool/cron/lastrun/cron.$BASE $TIME -exec rm {} \;
+    fi
 
     # if there is no touch file, make one then run the scripts 
     if test ! -f /var/spool/cron/lastrun/cron.$BASE
