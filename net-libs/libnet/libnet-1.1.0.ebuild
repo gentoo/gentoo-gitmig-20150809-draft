@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0.ebuild,v 1.4 2003/02/13 14:19:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0.ebuild,v 1.5 2003/03/21 11:17:06 azarah Exp $
 
 S=${WORKDIR}/Libnet-latest
 DESCRIPTION="library to provide an API for commonly used low-level network
@@ -25,7 +25,7 @@ src_install () {
 
 	einstall || die
 
-	doexe libnet-config
+	dobin libnet-config
 
 	dodoc VERSION README doc/{CHANGELOG,COPYING,DESIGN_NOTES,PACKET_BUILDING}
 	dodoc doc/{RAWSOCKET_NON_SEQUITUR,TODO,BUGS,CONTRIB,MIGRATION,PORTED,SUPPORTED_PROTOCOLS}
