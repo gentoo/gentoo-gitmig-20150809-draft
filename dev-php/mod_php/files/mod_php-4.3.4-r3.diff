@@ -22,3 +22,30 @@
  			return DECLINED;
  		}
  	}
+--- sapi/apache2handler/sapi_apache2.c.old	2004-01-31 22:40:29.000000000 +0000
++++ sapi/apache2handler/sapi_apache2.c	2004-01-31 22:42:23.000000000 +0000
+@@ -474,15 +474,24 @@
+ 
+ 	/* handle situations where user turns the engine off */
+ 	if (!AP2(engine)) {
++		zend_try {
++			zend_ini_deactivate(TSRMLS_C);
++		} zend_end_try();
+ 		return DECLINED;
+ 	}
+ 
+ 	if (r->finfo.filetype == 0) {
+ 		php_apache_sapi_log_message("script not found or unable to stat");
++		zend_try {
++			zend_ini_deactivate(TSRMLS_C);
++		} zend_end_try();
+ 		return HTTP_NOT_FOUND;
+ 	}
+ 	if (r->finfo.filetype == APR_DIR) {
+ 		php_apache_sapi_log_message("attempt to invoke directory as script");
++		zend_try {
++			zend_ini_deactivate(TSRMLS_C);
++		} zend_end_try();
+ 		return HTTP_FORBIDDEN;
+ 	}
+ 
