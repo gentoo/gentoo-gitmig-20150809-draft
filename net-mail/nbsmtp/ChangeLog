@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for net-mail/nbsmtp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nbsmtp/ChangeLog,v 1.1 2002/02/22 02:58:28 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nbsmtp/ChangeLog,v 1.2 2002/11/06 06:26:14 vapier Exp $
 
 *<PACKAGE_NAME>-<PACKAGE_VERSION>-<PACKAGE_RELEASE> (<DATE>)
 
