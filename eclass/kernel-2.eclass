@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.48 2004/11/25 15:41:06 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.49 2004/11/25 23:05:30 dsd Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -149,11 +149,11 @@ universal_unpack() {
 	then
 		mv linux-${OKV} linux-${KV} || \
 		die "Unable to move source tree to ${KV}."
-
-		# since pkg_setup sets S, and then portage resets S we
-		# need to re-set S= or it wont be correct.
-		S="${WORKDIR}/linux-${KV}"
 	fi
+
+	# since pkg_setup sets S, and then portage resets S we
+	# need to re-set S= or it wont be correct.
+	S="${WORKDIR}/linux-${KV}"
 
 	cd ${S}
 	# change incorrect install path
