@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.11 2001/08/09 15:52:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.12 2001/08/10 02:38:19 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -30,7 +30,7 @@ src_install() {
 	dodir /usr/local/httpd/htdocs/images
 	insinto /usr/local/httpd/htdocs/images
 	cd ${FILESDIR}/images
-	doins gtop-s.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif
+	doins gtop-s.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif
 	insinto /usr/local/httpd/htdocs
 	doins favicon.ico
 	#dynamic firewalls tools page

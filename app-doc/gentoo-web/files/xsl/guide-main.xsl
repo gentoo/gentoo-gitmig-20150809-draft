@@ -30,19 +30,16 @@
 </head>
 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
 	<!--<table border="0" width="100%" cellspacing="0" cellpadding="0">-->
-	<table border="0" cellspacing="0" cellpadding="0">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tr>
-			<td valign="top" height="125" width="1%" bgcolor="#45347b">
-				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-<!--					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img border="0" src="/images/gtop-new.jpg"/></a></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img border="0" src="/images/gbot-new.gif"/></a></td></tr> -->
+			<td valign="top" height="125" bgcolor="#45347b">
+				<table cellspacing="0" cellpadding="0" border="0" width="193">
 					<tr><td class="logobg" valign="top" align="center" height="88"><a href="/index.html"><img border="0" src="/images/gtop-s.jpg"/></a></td></tr>
 					<tr><td class="logobg" valign="top" align="center" height="36"><a href="/index.html"><img border="0" src="/images/gbot-s.gif"/></a></td></tr>
 				</table>
 			</td>
-			<td valign="bottom" height="168" bgcolor="#000000">
-				<!--Netscape 4.7 table hack-->
-				<table class="menu" border="0" cellpadding="10" cellspacing="0" width="100%">
+<!--			<td width="99%" valign="bottom" bgcolor="#000000">
+				<table class="menu" border="0" cellpadding="10" cellspacing="0">
 				<tr>
 					<td valign="top">
 						<xsl:variable name="mylink"><xsl:value-of select="/guide/@link"/></xsl:variable>
@@ -54,20 +51,9 @@
 						&#160;<a class="oldlink" href="/index-projects.html">Projects</a><br/> 
 						<br/>
 					</td>
-					<td valign="top">
-						toc ::<br/>	
-						<xsl:for-each select="chapter">
-						<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
-						&#160;<a class="oldlink" href="#{$chapid}"><xsl:value-of select="title"/></a><br/>
-						</xsl:for-each>		
-					</td>
-					<td valign="top">
-						summary ::<br/>
-							<font color="#00ff00"><xsl:apply-templates select="abstract"/></font>
-					</td>
 				</tr>
 				<tr>
-					<td colspan="3">
+					<td>
 						<xsl:choose>
 						<xsl:when test="/guide/@type='project'">
 							projects
@@ -91,15 +77,16 @@
 				</tr>
 				</table>
 			</td>
+		-->
 		</tr>
 		<tr>
-			<td colspan="2" valign="top" align="right" bgcolor="#ffffff">
+			<td valign="top" align="right" bgcolor="#ffffff">
 		
 <!--content begin-->
 
 <!--Netscape 4.7 hack table start-->
 <!--<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">-->
-<table border="0" cellspacing="5" cellpadding="0" width="100%">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
 <tr><td class="content" valign="top" align="left">
 			<br/>
 			<p class="dochead">
@@ -112,20 +99,98 @@
 				</xsl:otherwise>
 			</xsl:choose>
 			</p>
-		<p>
+<!--		<p>
 			<xsl:apply-templates select="author"/>
 
-		</p>
+		</p> -->
+<form>
+	<b>Contents</b>:
+	<select name="url" size="1" OnChange="location.href=form.url.options[form.url.selectedIndex].value" style="font-family:Arial,Helvetica, sans-serif; font-size:10">
+	<xsl:for-each select="chapter">
+		<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
+<!--		<xsl:variable name="me"><xsl:value-of select="/guide/@link"/></xsl:variable>-->
+		<option value="#{$chapid}"><xsl:number/>. <xsl:value-of select="title"/></option>
+<!--
+		&#160;<xsl:number/>&#160;<a class="altlink" href="#{$chapid}"><xsl:value-of select="title"/></a><br/>
+	<xsl:value-of select="/guide/@link"/>
+	<option value="showdoc.html?i=1514&p=1">Select											
+
+				-->
+				</xsl:for-each>		
+	</select>
+</form>
+	
+
+
 <xsl:apply-templates select="chapter"/> 
 <br/>
 <br/>
 <!--content end-->
-</td></tr></table>
+</td>
+			<td width="1%" bgcolor="#dddaec" valign="top">
+				<table border="0" cellspacing="5" cellpadding="0">
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
+				<td class="alttext">
+					<font size="-1">Updated <xsl:value-of select="/guide/date"/></font>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
+					<td class="alttext">
+							<b>Summary:</b>&#160;<xsl:apply-templates select="abstract"/>
+					</td>
+				</tr> <!--
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
+				<td class="altmenu">
+					Contents:<br/>	
+						<xsl:for-each select="chapter">
+						<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
+						&#160;<xsl:number/>&#160;<a class="altlink" href="#{$chapid}"><xsl:value-of select="title"/></a><br/>
+						</xsl:for-each>		
+					</td>
+				</tr> -->
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
+				<td>
+					<a href="http://www.qksrv.net/click-477620-5032687" target="_top" >
+					<img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
+				</td></tr>
+			<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+					</table>
+			</td>
+
+
+
+
+
+</tr></table>
 <!--Netscape 4.7 hack end-->
 			</td>
 		</tr>
 		<tr>
-			<td align="right" class="infohead" width="100%" colspan="2" bgcolor="#7a5ada">
+			<td align="right" class="infohead" width="100%" bgcolor="#7a5ada">
 			Copyright 2001 Gentoo
 		Technologies, Inc.  Questions, Comments, Corrections?  Email <a class="highlight"
 		href="mailto:gentoo-dev@gentoo.org">gentoo-dev@gentoo.org</a>.
@@ -205,7 +270,6 @@
 						<p class="altmenu">
 						Download Mirrors:<br/>
 							<a class="altlink" href="http://www.ibiblio.org/gentoo">ibiblio.org (USA)</a><br/>
-							<a class="altlink" href="http://download.sourceforge.net/pub/mirrors/metalab/Linux/distributions/gentoo/">SourceForge (USA)</a><br/>
 							<a class="altlink" href="http://cfx5.tgv.net/gentoo/www.ibiblio.org/pub/linux/distributions/gentoo/">tgv.net (France, high speed)</a><br/><br/>
 <a href="http://www.qksrv.net/click-477620-5033206" target="_top" >
 <img src="http://www.qksrv.net/image-477620-5033206" width="88" height="31" alt="Factory-direct memory upgrades" border="0"/></a><br/><br/>
@@ -238,53 +302,61 @@ User Docs:<br/>
 					</td></tr>
 				</table>
 			</td>
-			<xsl:choose>
-				<xsl:when test="/mainpage/standout">
-					<td valign="top" align="right" bgcolor="#ffffff">
-						<table border="0" cellspacing="5" cellpadding="0" width="100%">
-						<tr>
-							<td class="content" valign="top" align="left">
-								<img src="/images/gentoo-new.gif"/><br/>
-								<p class="subhead"><xsl:value-of select="/mainpage/title"/></p>
-								<xsl:apply-templates select="chapter"/> 
-								<br/>
-								<br/>
-								<!--content end-->
-							</td>
-						</tr>
-						</table>
+			<td valign="top" align="right" bgcolor="#ffffff">
+				<table border="0" cellspacing="5" cellpadding="0" width="100%">
+				<tr>
+					<td class="content" valign="top" align="left">
+				<!--		<img src="/images/gentoo-new.gif"/><br/>
+						<p class="subhead"><xsl:value-of select="/mainpage/title"/></p> -->
+						<br/>
+						<xsl:apply-templates select="chapter"/> 
+						<br/>
+						<br/>
+						<!--content end-->
 					</td>
-					<td width="15%" class="infotext" valign="top" align="left" bgcolor="#ddddff">
-						<table border="0" cellspacing="5" cellpadding="0" width="100%">
-						<tr>
-							<td>
-								<br/>
-								<p><xsl:value-of select="/mainpage/standout/title"/></p>
-								<p>
-								<xsl:apply-templates select="/mainpage/standout/body"/>
-								</p>
-							</td>
-						</tr>
-						</table>
+				</tr>
+				</table>
+			</td>
+			<td width="1%" bgcolor="#dddaec" valign="top">
+				<table border="0" cellspacing="5" cellpadding="0">
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
+				<td class="alttext">
+					Updated <xsl:value-of select="/mainpage/date"/>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+<tr>
+				<td>
+					<a href="http://www.qksrv.net/click-477620-5032687" target="_top" >
+					<img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
+				</td></tr>
+			<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+					</table>
+			</td>
+			<!--
+			<td width="15%" class="infotext" valign="top" align="left" bgcolor="#ddddff">
+				<table border="0" cellspacing="5" cellpadding="0" width="100%">
+				<tr>
+					<td>
+						<br/>
 					</td>
-				</xsl:when>
-				<xsl:otherwise>
-					<td colspan="2" valign="top" align="right" bgcolor="#ffffff">
-						<table border="0" cellspacing="0" cellpadding="0" width="100%">
-						<tr>
-							<td class="content" valign="top" align="left">
-								<img src="/images/gentoo-new.gif"/><br/>
-								<p class="subhead"><xsl:value-of select="/mainpage/title"/></p>
-								<xsl:apply-templates select="chapter"/> 
-								<br/>
-								<br/>
-								<!--content end-->
-							</td>
-						</tr>
-						</table>
-					</td>
-				</xsl:otherwise>
-			</xsl:choose>
+				</tr>
+			</table>
+			</td>
+			-->
 		</tr>
 		<tr>
 			<td align="right" class="infohead" width="100%" colspan="3" bgcolor="#7a5ada">
@@ -363,7 +435,14 @@ User Docs:<br/>
 	</td></tr></table>
 	<br/>
 </xsl:template>
-	
+
+<!--figure without a caption; just a graphical element-->
+<xsl:template match="fig">
+	<img src="{@link}" alt="{@short}"/>
+</xsl:template>
+
+<xsl:template match="br"><br/></xsl:template>
+
 <xsl:template match="note">
 	<table class="ncontent" width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr><td bgcolor="#bbffbb">

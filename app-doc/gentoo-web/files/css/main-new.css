@@ -1,7 +1,6 @@
 BODY {
-	background: white; 
 	color: black; 
-	font-family: Georgia, Verdana, Arial, Helvetica; 
+	font-family: Verdana, Arial, Helvetica; 
 	font-size: 1.0em;
 }
 
@@ -61,7 +60,6 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
 	padding-right: 1.0em;
 	padding-top: 0.5em;
 	padding-bottom: 0.75em;
-/*	background: black; */
 }
 
 .altmenu {
@@ -71,14 +69,17 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
 	color: #000000;
 	padding-left: 1.0em;
 	padding-right: 1.0em;
-/*	background: black; */
+}
+
+.alttext {
+	font-size: 0.65em;
+	font-family: Verdana, Arial, Helvetica;
+	color: #000000;
+	padding-left: 1.0em;
+	padding-right: 1.0em;
 }
 
 .infotab {
-	background: #ddddff;
-	/*
-	background: #e7e6ea;	
-	*/
 	padding: 0.5em;
 	margin-top: 1.0em;
 	margin-left: 1.0em;
@@ -95,7 +96,6 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
 	margin-left: 1.0em;
 	color: #ffffff;
 	font-weight: bold;
-	background: #7a5ada;
 }
 
 .infosub {
@@ -117,7 +117,6 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
 }
 
 .infogfx {
-	background: #e7e6ea;
 	padding: 0em;
 }
 
@@ -142,7 +141,6 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
         font-size: 0.7em;
         font-family: Verdana, Arial, Helvetica;
 	text-align: right;
-	background: #ffffff;
 	color: #808080;
 }
 
@@ -163,7 +161,7 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
 }
 
 .subhead {
-	font-family: Georgia, Verdana, Arial, Helvetica;
+	font-family: Verdana, Arial, Helvetica;
 	font-size: 1.2em;
 	font-weight: bold;
 	/*margin: 0.5em 0% 0.5em 0%;*/
@@ -174,8 +172,8 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
 	padding-top: 0em;
 	padding-left: 1.0em;
 	padding-right: 1.0em; 
-	font-family: Georgia, Times, Sans-serif;
-	font-size: 0.9em;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 0.8em;
 }
 
 .ntable {
@@ -189,13 +187,12 @@ a.altlink:active { color: #7a5ada; text-decoration: underline; }
 	padding: 0em;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	font-family: Georgia, Times, Sans-serif;
+	font-family: Times, Sans-serif;
 	font-size: 0.9em;
 }
 
 PRE {
 	padding: 0.5em;
-	background: #ddddff;
 	font-family: Lucida Console, Courier;
 	color: #000000;
 	font-size: 0.75em;
@@ -225,17 +222,14 @@ PRE {
 }
 
 P.note {
-	background: #bbffbb;
 	padding: 0.5em;
 }
 
 P.impo {
-	background: #ffffbb;
 	padding: 0.5em;
 }
 
 P.warn {
-	background: #ffbbbb;
 	padding: 0.5em;
 }
 
