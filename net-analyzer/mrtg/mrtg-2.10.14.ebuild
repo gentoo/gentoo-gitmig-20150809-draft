@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.10.14.ebuild,v 1.1 2004/06/08 21:41:08 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.10.14.ebuild,v 1.2 2004/06/16 19:29:10 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 SRC_URI="http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/${P}.tar.gz"
 HOMEPAGE="http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
