@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d5a3612de8db0a68ba389f72460554b8 icecream-0.6.20040829.ebuild 3053
+MD5 ea60760140f2090a5cd09bf0c896b729 icecream-0.6.20040829.ebuild 3074
 MD5 821ac28605bc2f1fa3c102ef193e0c14 ChangeLog 459
 MD5 b5b8e00fbdd696a2030334749ab1184b files/icecreamscheduler 366
 MD5 2767711be1cec7b6ab1aa9a23cb7851d files/digest-icecream-0.6.20040829 74
@@ -11,7 +11,7 @@ MD5 11da9aee8c0bd3a91fdf7a5d883846ea files/icecreamdaemon 387
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB5FXKKtJO8LeSoosRAuKwAJ9ebUS34jEnbo1F1TSFjLn8beG3aQCfSLqV
-3JYc53wiwiSnhiyqxppOvT4=
-=q1CJ
+iD8DBQFB5FySKtJO8LeSoosRAiv6AKCgxByLZK2kg/oUi0tV46jCDUiMDgCdExXw
+Rn3krdT+V2wDMx6O74AgGUM=
+=TuNA
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.6.20040829.ebuild,v 1.1 2005/01/11 22:40:00 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.6.20040829.ebuild,v 1.2 2005/01/11 23:08:56 tantive Exp $
 inherit eutils
 DESCRIPTION="Icecream is a program for distributed compiling of C(++) code across several machines based on ideas and code by distcc."
 HOMEPAGE="http://wiki.kde.org/icecream"
@@ -68,7 +68,7 @@ pkg_postinst() {
 	einfo "to install the appropriate icecream-chroot package."
 	einfo "To use icecream with gentoo/ebuild use"
 	einfo " PREROOTPATH=/opt/icecream/bin"
-	einfo " (e.g. in /etc/profile)."
+	einfo " (e.g. add this line in your /etc/make.conf)."
 	einfo "To use it with normal make use"
 	einfo ' PATH=/opt/icecream/bin:$PATH'
 	einfo "Right now it doesn't work with ccache without some special work."
