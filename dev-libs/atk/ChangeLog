@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.45 2004/04/24 16:48:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.46 2004/04/29 00:39:35 avenj Exp $
+
+  28 Apr 2004; Jon Portnoy <avenj@gentoo.org> atk-1.6.0.ebuild :
+  Stable on AMD64.
 
 *atk-1.6.1 (24 Apr 2004)
 
