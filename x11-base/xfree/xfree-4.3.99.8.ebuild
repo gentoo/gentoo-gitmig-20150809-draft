@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.8.ebuild,v 1.5 2003/07/31 09:27:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.8.ebuild,v 1.6 2003/08/03 04:44:28 vapier Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
-DEBUG="yes"
 RESTRICT="nostrip"
 
 IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6"

@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0.ebuild,v 1.2 2003/07/18 22:57:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0.ebuild,v 1.3 2003/08/03 04:43:30 vapier Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
-DEBUG="yes"
 RESTRICT="nostrip"
 
 IUSE="sse mmx 3dnow ipv6 xinerama type1 truetype fbdev"
