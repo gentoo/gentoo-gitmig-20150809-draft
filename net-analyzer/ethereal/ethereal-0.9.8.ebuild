@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8.ebuild,v 1.1 2002/12/11 23:17:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8.ebuild,v 1.2 2002/12/12 23:16:17 bcowan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}
 	>=net-libs/libpcap-0.7.1"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
@@ -67,11 +66,8 @@ src_compile() {
 src_install() {
 	dodir /usr/lib/ethereal/plugins/${PV}
 
-	einstall \
-		datadir=${D}/usr/share \
-		sysconfdir=${D}/etc/ethereal \
-		plugindir=${D}/usr/lib/ethereal/plugins/${PV} || die
-
+	make DESTDIR=${D} install
+	
 	dodoc AUTHORS COPYING ChangeLog INSTALL.* NEWS README* TODO
 }
 
