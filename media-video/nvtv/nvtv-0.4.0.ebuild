@@ -1,22 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/nvtv-0.4.0.ebuild,v 1.6 2002/10/23 17:41:57 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/nvtv-0.4.0.ebuild,v 1.7 2002/11/06 15:29:16 vapier Exp $
 
-IUSE="X gtk"
-S=${WORKDIR}/${PN}
-DESCRIPTION="TV-Out for NVidia cards."
-HOMEPAGE="http://sourceforge.net/projects/nv-tv-out"
+DESCRIPTION="TV-Out for NVidia cards"
+HOMEPAGE="http://sourceforge.net/projects/nv-tv-out/"
 SRC_URI="mirror://sourceforge/nv-tv-out/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="X gtk"
 
 DEPEND="sys-apps/pciutils
 	gtk? ( =x11-libs/gtk+-1.2* )
 	X? ( >=x11-base/xfree-4.0 )"
-RDEPEND="${DEPEND}"
-
+S="${WORKDIR}/${PN}"
 
 src_compile() {
 	local myconf
@@ -25,18 +23,13 @@ src_compile() {
 	use gtk && myconf="${myconf} --with-gtk" || myconf="${myconf} --without-gtk"
 	use X && myconf="${myconf} --with-x" || myconf="${myconf} --without-x"
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		${myconf} || die "./configure failed"
+	econf ${myconf}
 
 	# The CFLAGS don't seem to make it into the Makefile.
 	emake CXFLAGS="${CFLAGS}" || die
 }
 
-src_install () {
+src_install() {
 	dobin src/nvtv
 	dosbin src/nvtvd
 
