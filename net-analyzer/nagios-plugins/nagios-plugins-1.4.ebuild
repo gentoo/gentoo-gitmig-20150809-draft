@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.2 2005/02/26 03:53:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.3 2005/03/10 10:40:26 ka0ttic Exp $
 
 inherit eutils
 
@@ -50,10 +50,10 @@ src_compile() {
 	#fi
 
 	./configure \
-		`use_with mysql` \
-		`use_with postgress` \
-		`use with ssl openssl` \
-		`use with ipv6` \
+		$(use_with mysql) \
+		$(use_with postgres) \
+		$(use_with ssl openssl) \
+		$(use_with ipv6) \
 		--host=${CHOST} \
 		--prefix=/usr/nagios \
 		--with-nagios-user=nagios \
@@ -64,19 +64,21 @@ src_compile() {
 	#fix problem with additional -
 	sed -i -e 's:/bin/ps -axwo:/bin/ps axwo:g' config.h || die "sed failed"
 
-	make || die
+	make || die "make failed"
 }
 
 src_install() {
 	mv ${S}/contrib/check_compaq_insight.pl ${S}/contrib/check_compaq_insight.pl.msg
 	chmod +x ${S}/contrib/*.pl
 
-	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' ${S}/contrib/*.pl
-	sed -i -e '30s/use lib utils.pm;/use utils;/' ${S}/contrib/check_file_age.pl
+	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' ${S}/contrib/*.pl || die "sed failed"
+	sed -i -e '30s/use lib utils.pm;/use utils;/' ${S}/contrib/check_file_age.pl \
+		|| die "sed failed"
 
-	dodoc ABOUT-NLS ACKNOWLEDGEMENTS AUTHORS BUGS CHANGES CODING COPYING
-	Changelog FAQ INSTALL LEGAL NEWS README REQUIREMENTS SUPPORT
-	make DESTDIR=${D} install || die
+	dodoc ABOUT-NLS ACKNOWLEDGEMENTS AUTHORS BUGS CHANGES CODING COPYING \
+		Changelog FAQ INSTALL LEGAL NEWS README REQUIREMENTS SUPPORT
+
+	make DESTDIR="${D}" install || die "make install failed"
 
 	if use mysql || use postgres; then
 		dodir /usr/nagios/libexec

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.32 2005/02/26 03:53:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.33 2005/03/10 10:40:26 ka0ttic Exp $
+
+  10 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> nagios-plugins-1.4.ebuild:
+  It's called use_with not 'use with'.. also, it's postgres not postgress.
 
   26 Feb 2005; Daniel Black <dragonheart@gentoo.org>
   nagios-plugins-1.4.ebuild:
