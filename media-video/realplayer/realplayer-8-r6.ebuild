@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.13 2004/07/01 08:41:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.14 2005/01/20 21:20:55 chriswhite Exp $
 
 inherit nsplugins
 
