@@ -1,6 +1,6 @@
 MD5 6f5c1e85a305bc70f9b2aa7883126a59 ChangeLog 5897
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 76e0f24e5f43917d3e42285e81d9550b sendmail-8.12.10.ebuild 5567
+MD5 4f52a7eb46746574a11bffe2a781b64a sendmail-8.12.10.ebuild 5566
 MD5 197f9878518b74fd0554b6ebbf196cdb sendmail-8.12.8.ebuild 5140
 MD5 f582ee4620d3d5cf4f024472d9b719cf sendmail-8.12.9-r1.ebuild 5497
 MD5 1ae89cd7275080b4f9cbdddbcfcc8a44 sendmail-8.12.9-r2.ebuild 5573
