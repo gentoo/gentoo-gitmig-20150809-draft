@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.7 2004/10/06 12:50:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.8 2004/10/06 13:05:06 gustavoz Exp $
 
 inherit eutils gnuconfig gcc mono
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos s390 sparc ~x86"
 IUSE="bootstrap emacs nls"
 
 DEPEND="virtual/libc"
@@ -20,7 +20,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use bootstrap && epatch ${WORKDIR}/${P}-bootstrap.patch
-	use sparc && epatch ${FILESDIR}/${P}-without_java.patch
+	if use sparc; then
+		epatch ${FILESDIR}/${P}-without_java.patch
+		epatch ${FILESDIR}/${P}-no-java-tests.patch
+	fi
 	gnuconfig_update
 }
 
