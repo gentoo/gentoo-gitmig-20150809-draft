@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.8 2004/06/25 00:14:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.9 2004/12/07 21:00:22 mr_bones_ Exp $
+
+  07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> telnet-bsd-1.0.ebuild:
+  support nls for bug #73630; DESTDIR install; tidy
 
   18 Apr 2004; Travis Tilley <lv@gentoo.org> telnet-bsd-1.0.ebuild:
   stable on amd64
