@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.531 2004/08/06 12:02:16 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.532 2004/08/06 13:08:35 caleb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -116,9 +116,7 @@ dev-dotnet/mono:nptl - Enable/Disable the Native POSIX Threading Library support
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
-dev-games/crystalspace-cvs:mng - Enables mng support in CrystalSpace
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
-dev-games/crystalspace:mng - Enables mng support in CrystalSpace
 dev-java/ant-optional:antlr - Enable ANTLR support
 dev-java/ant-optional:bcel - Enable jakarta-bcel support
 dev-java/ant-optional:bsh - Enable BeanShell support
@@ -248,10 +246,8 @@ mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-gfx/blender:blender-game - Adds game engine support to blender
 media-gfx/blender:fmod - Adds mod support to blender
-media-gfx/gimageview:mng - Enable mng format support
 media-gfx/gimageview:mplayer - Enable mplayer support
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
-media-gfx/gimp:mng - Enable MNG support
 media-gfx/gnuplot:xemacs - Add lisp files for emacs
 media-gfx/graphicsmagick:gs - enable ghostscript support
 media-gfx/graphicsmagick:jbig - enable jbig support

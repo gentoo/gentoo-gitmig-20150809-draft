@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.177 2004/08/06 02:30:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.178 2004/08/06 13:08:35 caleb Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -161,6 +161,7 @@ mime - Adds MIME support
 ming - Adds support for ming library for creating flash format files
 mmap - Adds mmap support
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
+mng - Adds support for libmng (MNG images)
 mnogosearch - Adds support for the mnoGoSearch search engine
 motif - Adds motif support (x11-libs/openmotif x11-libs/lesstif)
 mozilla - Adds mozilla support
