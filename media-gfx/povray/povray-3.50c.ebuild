@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.3 2003/03/30 20:06:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.4 2003/04/01 14:30:29 malverian Exp $
 
 IUSE="icc X svga"
 
@@ -15,6 +15,8 @@ KEYWORDS="x86 ppc alpha"
 inherit gcc
 
 DEPEND="media-libs/libpng
+	media-libs/tiff
+	media-libs/jpeg
 	sys-libs/zlib
 	X?	  ( virtual/x11 )
 	icc?	( dev-lang/icc )
@@ -22,10 +24,10 @@ DEPEND="media-libs/libpng
 
 pkg_setup() {
 
-        if [ "$(gcc-version)" != "3.2" ]
-		        then
-				eerror "This build needs gcc-3.2 or later"
-				die
+	if [ "$(gcc-version)" != "3.2" ]
+		then
+			eerror "This build needs gcc-3.2 or later"
+			die
 		fi
 }
 

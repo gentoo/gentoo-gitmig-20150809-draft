@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.19 2003/03/30 20:06:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.20 2003/04/01 14:30:29 malverian Exp $
 
 *povray-3.50c (26 Mar 2003)
+
+  1 Apr 2003; Philip Walls <malverian@gentoo.org> povray-3.50c.ebuild:
+  Added jpeg and tiff libraries to DEPEND, fixes bug #18457
 
   30 Mar 2003; Martin Holzer <mholzer@gentoo.org> povray-3.50c.ebuild:
   Added gcc-version check cause it doesn't compile on gcc-2.95
