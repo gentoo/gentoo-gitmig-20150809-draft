@@ -1,21 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.10 2003/08/06 12:40:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.11 2003/08/20 02:08:36 gregf Exp $
 
 inherit flag-o-matic eutils
-replace-flags -O[3-9] -O2
-[ "${ARCH}" = "alpha" ] && append-flags -fPIC
-[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+
+IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
 
 MY_P=ircii-pana-${PV/.0./.0c}
+S=${WORKDIR}/BitchX
 DESCRIPTION="An IRC Client"
-HOMEPAGE="http://www.bitchx.org/"
-SRC_URI="http://bitchx.org/files/source/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
+HOMEPAGE="http://www.bitchx.com/"
 
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
-IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk debug"
+
+replace-flags -O[3-9] -O2
+
+# BitchX needs to be merged with -fPIC on alpha boxes
+# This fixes bug 10932
+[ "${ARCH}" = "alpha" ] && append-flags "-fPIC"
+
+# hppa need -fPIC too
+[ "${ARCH}" = "hppa" ] && append-flags "-fPIC"
 
 DEPEND=">=sys-libs/ncurses-5.1 
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -27,28 +35,41 @@ DEPEND=">=sys-libs/ncurses-5.1
 		>=media-libs/imlib-1.9.10-r1 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
-S=${WORKDIR}/BitchX
-
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
 
 	use cjk && epatch ${FILESDIR}/${P}-cjk.patch
 	epatch ${FILESDIR}/${P}-gcc-3.3.patch
-	epatch ${FILESDIR}/${P}-security.patch
-	epatch ${FILESDIR}/${P}-security2.patch
+	epatch ${FILESDIR}/${P}-security.patch || die
+	epatch ${FILESDIR}/${P}-security2.patch || die
+	epatch ${FILESDIR}/${P}-hebrew.patch || die
 }
 
 src_compile() {
 	local myconf
+
+	if [ "${DEBUG}" ]
+	then
+		einfo "debugging"
+		myconf="${myconf} --enable-debug"
+	fi
+
+	use ssl \
+		&& myconf="${myconf} --with-ssl" \
+		|| myconf="${myconf} --without-ssl"
 
 	use esd && use gtk \
 		&& myconf="${myconf} --enable-sound" \
 		|| myconf="${myconf} --disable-sound"
 	
 	use gtk && use gnome\
-		&& myconf="${myconf} --with-gtk" \
+	    && myconf="${myconf} --with-gtk" \
 		|| myconf="${myconf} --without-gtk"
+
+	use ipv6 \
+		&& myconf="${myconf} --enable-ipv6" \
+		|| myconf="${myconf} --disable-ipv6"
 
 	#not tested
 	#use ncurses \
@@ -71,13 +92,9 @@ src_compile() {
 		einfo "gtkBitchX will be built, if you want BitchX please issue"
 		einfo "USE="-gtk" emerge bitchx" 
 		sleep 10
-	) && CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
+		) && CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
 	
-	econf \
-		CFLAGS="${CFLAGS}" \
-		`use_enable debug` \
-		`use_with ssl` \
-		`use_enable ipv6` \
+	econf CFLAGS="${CFLAGS}" \
 		--enable-cdrom \
 		--with-plugins \
 		${myconf} || die
@@ -85,7 +102,8 @@ src_compile() {
 
 }
 
-src_install() {
+src_install () {
+
 	einstall || die
 
 	rm ${D}/usr/share/man/man1/BitchX*
