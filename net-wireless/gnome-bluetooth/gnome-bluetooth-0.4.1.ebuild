@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.4.1.ebuild,v 1.7 2004/02/12 18:39:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.4.1.ebuild,v 1.8 2004/04/10 14:59:44 liquidx Exp $
 
 inherit gnome2
 
@@ -36,3 +36,10 @@ DEPEND="${RDEPEND}
 
 DOCS="README NEWS AUTHORS COPYING ChangeLog"
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/libegg/libegg
+	epatch ${FILESDIR}/${P}-gtk24.patch
+	cp ${S}/libegg/libegg/util/eggmarshelers.h ${S}/libegg/libegg/toolbar
+}
