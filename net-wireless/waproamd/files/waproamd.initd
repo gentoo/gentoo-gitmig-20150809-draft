@@ -5,6 +5,10 @@
 # Configuration resides in /etc/conf.d/waproamd.conf instead of
 # /etc/waproamd/waproamd.conf
 
+depend() {
+        use hotplug pcmcia
+}
+
 get_config() {
 	if [ -z "${INTERFACES}" -o "x${INTERFACES}" = "xauto" ]
 	then
@@ -29,7 +33,7 @@ start() {
 stop() {
 	INTERFACES="$(get_options 'ifaces')"
         ebegin "Stopping Wireless Access Point Roaming Daemon:"
-        for IF in $INTERFACES ; do 
+        for IF in $INTERFACES ; do
 	    ebegin " ${IF}"
             /usr/sbin/waproamd -k -i $IF
 	    eend $?
