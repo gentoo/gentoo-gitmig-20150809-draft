@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0-r1.ebuild,v 1.7 2004/08/25 02:47:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0-r1.ebuild,v 1.8 2004/10/01 08:08:27 phosphan Exp $
+
+inherit eutils
 
 DESCRIPTION="Camsource grabs images from a video4linux webcam device."
 
@@ -14,8 +16,13 @@ IUSE=""
 DEPEND=">=dev-libs/libxml2-2.4.22
 		>=media-libs/jpeg-6b"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc34.patch
+}
 
+src_compile() {
 	econf || die
 	emake || die
 }

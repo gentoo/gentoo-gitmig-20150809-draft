@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camsource
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.9 2004/08/25 02:47:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.10 2004/10/01 08:08:27 phosphan Exp $
+
+  01 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +files/gcc34.patch,
+  camsource-0.7.0-r1.ebuild:
+  Added a missing semicolon (failed with gcc 3.4).
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> camsource-0.5.1.ebuild,
   camsource-0.7.0-r1.ebuild, camsource-0.7.0.ebuild:
