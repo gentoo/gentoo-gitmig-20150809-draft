@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.2 2004/01/11 14:47:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.3 2004/01/15 15:19:29 agriffis Exp $
 
 inherit eutils flag-o-matic 64-bit
 filter-flags -fno-exceptions
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="5"
-KEYWORDS="~amd64 ~x86 ppc ~sparc ~alpha hppa ~arm ~mips ~ia64 ~ppc64"
+KEYWORDS="~amd64 ~x86 ppc ~sparc alpha hppa ~arm ~mips ia64 ~ppc64"
 IUSE="debug"
 
 DEPEND="virtual/glibc"
