@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821-r1.ebuild,v 1.19 2004/07/12 03:16:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-0.990821-r1.ebuild,v 1.1 2004/09/07 05:23:21 robbat2 Exp $
 
 inherit flag-o-matic
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821.ebuild,v 1.19 2004/07/01 21:49:34 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-0.990821.ebuild,v 1.1 2004/09/07 05:23:21 robbat2 Exp $
 
 IUSE=""
 DESCRIPTION="use TCP or UDP to retrieve the current time of another machine"
