@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysqlcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.15 2004/03/30 08:38:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.16 2004/05/09 10:06:09 sejo Exp $
+
+  09 May 2004; <SeJo@gentoo.org> mysqlcc-0.9.4.ebuild:
+  added ~ppc keyword
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> mysqlcc-0.9.4.ebuild:
   Adding amd64 keyword. Closing #43597.
