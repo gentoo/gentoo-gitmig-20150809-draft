@@ -1,5 +1,5 @@
-MD5 78fe913d63fe80e3964efde028589ff1 ChangeLog 995
-MD5 39330e0ecb1a7045e31453871b37520c driftnet-0.1.6.ebuild 1238
+MD5 87f615a1cfd60dca0cde1a67301baf83 ChangeLog 1082
+MD5 b91c60395367c7d48aeb71fc114ff5ed driftnet-0.1.6.ebuild 1244
 MD5 fe5d2611299b3a390d7681e92ff4d5c5 metadata.xml 287
 MD5 c0c08c9836402b53a0eb51c3b6c6201a files/digest-driftnet-0.1.6 65
 MD5 8768d05471c8332731ad3d51f7f18ff6 files/driftnet-0.1.6-nogtk.patch 996
