@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e5db7beb4fee1b5148cfa9ea89f9a950 gigaset-isdn-0.4.0.ebuild 1042
+MD5 bcb8da102fb210674bba37f6ae00d38f metadata.xml 271
+MD5 dc955104e7d785c7e211c22d07f1bf7e ChangeLog 490
+MD5 a283ea44b003b4bf0c6fd0dfcb336b22 files/digest-gigaset-isdn-0.4.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjpddjtv59x0+BrURApNoAJ0eBax2wPz8sgN7+erD0WM8gtP56ACfax6i
+KgqZZPdGdo24o+2CY7t7a+0=
+=NPza
+-----END PGP SIGNATURE-----

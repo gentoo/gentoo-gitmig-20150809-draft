@@ -1,0 +1,11 @@
+# ChangeLog for net-dialup/gigaset-isdn
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/ChangeLog,v 1.1 2004/11/07 21:44:26 mrness Exp $
+
+*gigaset-isdn-0.4.0 (07 Nov 2004)
+
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org> 
+  +gigaset-isdn-0.4.0.ebuild, +metadata.xml :
+  Initial import.  Thanks goes to Florian Zwoch <zwoch@backendmedia.com>
+  who submitted the first version of this ebuild (see bug #58660).
+  
