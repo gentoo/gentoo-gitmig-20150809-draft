@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.8 2003/09/14 23:01:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.9 2003/11/02 13:58:41 liquidx Exp $
 
 inherit nsplugins
 
@@ -44,6 +44,8 @@ RESTRICT="nostrip fetch"
 BASE="/opt/RealPlayer8"
 S=${WORKDIR}
 
+# note: we don't use pkg_nofetch because there is one file we can autofetch
+#       without the license
 pkg_setup() {
 	if [ ! -f ${DISTDIR}/${MY_A} ]; then
 		eerror "Please go to:"
@@ -62,6 +64,11 @@ pkg_setup() {
 }
 
 src_unpack() {
+	if [ ! -r "${DISTDIR}/${MY_A}" ]; then
+		eerror "${DISTDIR}/${MY_A} is not readable. Please check the permissions"
+		die "unreadable ${MY_A}"
+	fi		
+
 	if use x86 ; then
 		BYTECOUNT=4799691
 		RP8_BIN=`echo ${MY_A} | awk '{ print $1 }'`
