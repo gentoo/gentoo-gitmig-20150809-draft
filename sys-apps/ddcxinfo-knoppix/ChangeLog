@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/ddcxinfo-knoppix
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ChangeLog,v 1.1 2004/01/03 17:31:21 port001 Exp $
+
+*ddcxinfo-knoppix-0.6 (03 Jan 2004)
+
+  03 Jan 2004; Ian Leitch <port001@gentoo.org> ddcxinfo-knoppix-0.6.ebuild:
+  Initial commit. Thanks to Liam Helmer <liamh@thevenue.org>, #32244
+
