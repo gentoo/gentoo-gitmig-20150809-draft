@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/gtypist
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.1 2002/04/08 03:52:02 mkennedy Exp $
+
+*gtypist-2.5 (7 Apr 2002)
+
+  7 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  gtypist-2.5.ebuild, files/digest-gtypist-2.5 :
+
+  New ebuild. GNU Typist (also called gtypist) is a universal typing
+  tutor.
