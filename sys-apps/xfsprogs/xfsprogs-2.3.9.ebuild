@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.5 2003/06/10 16:16:45 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.6 2003/06/10 16:21:38 lostlogic Exp $
 
 inherit flag-o-matic
 
@@ -15,18 +15,18 @@ LICENSE="LGPL-2.1"
 S=${WORKDIR}/${P}
 
 DEPEND="sys-apps/e2fsprogs
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	cp include/builddefs.in include/builddefs.in.orig
-	sed -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
-	    -e 's:-O1::' -e '/-S $(PKG/d' \
-	    -e 's:^PKG_\(.*\)_DIR[[:space:]]*= \(.*\)$:PKG_\1_DIR = $(DESTDIR)\2:' \
-	    include/builddefs.in.orig > include/builddefs.in || die "sed failed"
 	chmod u+w include/builddefs.in
+	sed -i -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
+	       -e 's:-O1::' -e '/-S $(PKG/d' \
+	       -e 's:^PKG_\(.*\)_DIR[[:space:]]*= \(.*\)$:PKG_\1_DIR = $(DESTDIR)\2:' \
+	       include/builddefs.in || die "sed failed"
 }	
 
 src_compile() {
