@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/blueglass-xcursors
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.13 2004/10/04 03:09:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.14 2004/11/24 02:39:14 geoman Exp $
+
+  23 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
+  blueglass-xcursors-0.4.ebuild:
+  moved directly to stable on mips wrt bug 45613
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   -blueglass-xcursors-0.3-r1.ebuild, -blueglass-xcursors-0.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/silver-xcursors
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.11 2004/10/04 03:03:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.12 2004/11/24 02:41:37 geoman Exp $
+
+  23 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
+  silver-xcursors-0.4.ebuild:
+  moved directly to stable on mips wrt bug 45613
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   -silver-xcursors-0.3-r1.ebuild, -silver-xcursors-0.3.ebuild:
