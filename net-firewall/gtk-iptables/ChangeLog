@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/gtk-iptables
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gtk-iptables/ChangeLog,v 1.1 2003/03/14 10:06:48 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gtk-iptables/ChangeLog,v 1.2 2004/06/09 09:04:00 seemant Exp $
+
+*gtk-iptables-0.4.2 (09 Jun 2004)
+
+  09 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  +gtk-iptables-0.4.2.ebuild:
+  Version bump, thanks to: #gentoo.pl Team - sekretarz <sekretarz@dukato.net> in
+  bug #51648
 
 *gtk-iptables-0.3.4 (14 Mar 2003)
 
