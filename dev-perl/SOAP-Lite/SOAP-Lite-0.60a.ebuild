@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a.ebuild,v 1.4 2004/07/14 20:27:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a.ebuild,v 1.5 2004/09/27 09:08:20 mcummings Exp $
 
 IUSE="jabber ssl"
 
@@ -11,8 +11,8 @@ MY_P=SOAP-Lite-${MY_PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Provides a simple and lightweight interface to the SOAP protocol (sic) both on client and server side."
 
-SRC_URI="http://cpan.valueclick.com/modules/by-module/SOAP/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-module/SOAP/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/B/BY/BYRNE/SOAP/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~byrne/${P}"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
@@ -30,7 +30,7 @@ DEPEND="${DEPEND}
 	jabber? ( dev-perl/Net-Jabber )
 	ssl? ( dev-perl/IO-Socket-SSL )
 	dev-perl/Compress-Zlib
-	>=dev-perl/MIME-tools-6.2002"
+	>=dev-perl/MIME-tools-5.413"
 
 src_compile() {
 	(echo yes) | perl-module_src_compile || perl-module_src_compile || die "compile failed"
