@@ -1,6 +1,13 @@
 # ChangeLog for net-print/xprint
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/ChangeLog,v 1.6 2003/12/13 13:31:54 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/ChangeLog,v 1.7 2004/02/04 12:36:52 lanius Exp $
+
+  04 Feb 2004; Heinrich Wendel <lanius@gentoo.org> xprint-008-r1.ebuild,
+  xprint-008-r2.ebuild:
+  remove -r1
+
+  04 Feb 2004; Heinrich Wendel <lanius@gentoo.org> xprint-008-r2.ebuild:
+  fixed einfo in pkg_postinst, bug #40195
 
   13 Dec 2003; Heinrich Wendel <lanius@gentoo.org> xprint-008-r2.ebuild,
   files/xprint.rc6:
