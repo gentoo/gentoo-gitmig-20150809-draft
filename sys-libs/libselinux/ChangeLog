@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.3 2003/08/14 15:28:31 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.4 2003/08/14 22:03:25 pebenito Exp $
+
+*libselinux-1.1-r1 (14 Aug 2003)
+
+  14 Aug 2003; Chris PeBenito <pebenito@gentoo.org> libselinux-1.1-r1.ebuild,
+  libselinux-1.1.ebuild, files/libselinux-1.1-linkfix.diff:
+  Add fix for a random linking problem that causes libselinux to work
+  incorrectly.
 
 *libselinux-1.1 (14 Aug 2003)
 

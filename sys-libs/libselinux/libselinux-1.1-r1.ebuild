@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.1.ebuild,v 1.1 2003/08/14 15:28:31 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.1-r1.ebuild,v 1.1 2003/08/14 22:03:25 pebenito Exp $
 
 IUSE=""
 
@@ -12,7 +12,6 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc
-	!sys-apps/selinux-small
 	sys-apps/attr"
 
 S=${WORKDIR}/${P}
@@ -22,14 +21,15 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-linkfix.diff
 }
 
 src_compile() {
 	cd ${S}/src
-	emake EXTRA_CFLAGS="${CFLAGS}"
+	emake EXTRA_CFLAGS="${CFLAGS}" || die "libselinux compile failed."
 
 	cd ${S}/utils
-	emake EXTRA_CFLAGS="${CFLAGS}"
+	emake EXTRA_CFLAGS="${CFLAGS}" || die "Utilities compile failed."
 }
 
 src_install() {
