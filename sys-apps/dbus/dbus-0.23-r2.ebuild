@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23-r2.ebuild,v 1.1 2005/02/06 17:09:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23-r2.ebuild,v 1.2 2005/02/08 05:04:53 eradicator Exp $
 
 # because of the experimental nature debug by default
-inherit debug eutils mono python
+inherit debug eutils mono python multilib
 
 # FIXME : fix docs
 #IUSE="X gtk qt python mono doc xml2"
@@ -49,6 +49,15 @@ src_unpack() {
 	# add missing include (#78617)
 	epatch ${FILESDIR}/${P}-fd_set.patch
 
+	# It stupidly tries to install python stuff to platform-independent
+	# libdir
+	epatch ${FILESDIR}/dbus-0.23-pyexecdir.patch
+
+	# Don't rerun auto*
+	sleep 1
+	touch ${S}/python/Makefile.in
+	sleep 1
+	touch ${S}/configure
 }
 
 src_compile() {
