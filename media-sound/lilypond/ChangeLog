@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/lilypond
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.4 2003/01/18 17:16:17 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.5 2003/02/12 07:30:19 vapier Exp $
 
   18 Jan 2003; Aron Griffis <agriffis@gentoo.org> lilypond-1.6.6.ebuild :
   Fix bug 13396 by requiring tetex-1.0.7-r12 which should fix the missing

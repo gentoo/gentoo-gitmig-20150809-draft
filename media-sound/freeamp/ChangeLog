@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/freeamp
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/ChangeLog,v 1.5 2002/12/29 23:48:16 lordvan Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/ChangeLog,v 1.6 2003/02/12 07:28:00 vapier Exp $
 
 *freeamp-2.2.1 (30 Dec 2002)
   30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>:

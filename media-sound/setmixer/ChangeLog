@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/setmixer
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/ChangeLog,v 1.1 2003/01/04 09:44:38 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/ChangeLog,v 1.2 2003/02/12 07:33:24 vapier Exp $
 
 *setmixer-19941227_rc7 (04 Jan 2003)
 

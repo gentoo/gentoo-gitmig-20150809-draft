@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/alsa-utils
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.13 2003/02/04 20:34:09 agenkin Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.14 2003/02/12 07:24:04 vapier Exp $
 
 *alsa-utils-0.9.0_rc7 (04 Feb 2003)
 

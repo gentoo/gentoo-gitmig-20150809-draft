@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/pmidi
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/ChangeLog,v 1.1 2002/12/21 04:03:58 agenkin Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/ChangeLog,v 1.2 2003/02/12 07:32:40 vapier Exp $
 
 *pmidi-1.5.5 (20 Dec 2002)
 

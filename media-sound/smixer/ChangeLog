@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/smixer
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.2 2002/09/06 21:26:22 owen Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.3 2003/02/12 07:33:44 vapier Exp $
 
 *smixer-1.0.1 (1 Feb 2002)
   6 Sep 2002; Owen Stampflee <owen@gentoo.org> smixer-1.0.1.ebuild:
