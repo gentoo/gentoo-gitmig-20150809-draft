@@ -1,6 +1,16 @@
-MD5 9fce2dbb69ab942362d1858cff6d7ded Graph-0.20101.ebuild 539
-MD5 67fc342fb1859932992f91ee34dab994 ChangeLog 973
-MD5 fbc25ef8835845dd8c590850da28ed10 Graph-0.20105.ebuild 555
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a41a6cfa22a152d62bb76cfb2f505382 ChangeLog 1068
+MD5 4c49dbec59b2b140d72a77201e0d13d8 Graph-0.20101.ebuild 543
+MD5 b50267e630325386ab3cff7ae344629b Graph-0.20105.ebuild 560
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 a71dcc0962a8adef82720ed56da486be files/digest-Graph-0.20101 64
 MD5 6b956a3803d81868f15408ac1e2a3561 files/digest-Graph-0.20105 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCSyf+KRy60XGEcJIRAohBAKCs2DrJd9NPgvopnXfKvmvZJ+1hugCfRf0C
+uWD1gbpz8SdOcR7YE39fd5g=
+=wgQt
+-----END PGP SIGNATURE-----
