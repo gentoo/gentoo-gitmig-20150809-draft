@@ -47,10 +47,23 @@ dev-dotnet/glib-sharp
 
 # <caleb@gentoo.org> (20 July 2003)
 # pre-release testing
+# <pauldv@gentoo.org> (29 July 2003)
+# Add more of them
 =app-doc/kdelibs-apidocs-3.1.3
 =kde-base/arts-1.1.3
 =kde-base/kdelibs-3.1.3
 =kde-base/kdebase-3.1.3
+=kde-base/addons-3.1.3
+=kde-base/admin-3.1.3
+=kde-base/artwork-3.1.3
+=kde-base/edu-3.1.3
+=kde-base/games-3.1.3
+=kde-base/graphics-3.1.3
+=kde-base/multimedia-3.1.3
+=kde-base/network-3.1.3
+=kde-base/pim-3.1.3
+=kde-base/toys-3.1.3
+=kde-base/utils-3.1.3
 
 # <scandium@gentoo.org> (18 July 2003)
 # package is obsolete and unsupported
