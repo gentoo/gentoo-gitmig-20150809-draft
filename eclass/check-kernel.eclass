@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.3 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.4 2004/08/28 03:24:15 vapier Exp $
 
 # Author: Martin Schlemmer <azarah@gentoo.org>
 # Eclass'd by: Seemant Kulleen <seemant@gentoo.org>
@@ -23,13 +23,15 @@ check_version_h() {
 		eerror "to your current kernel sources, and that you did run:"
 		eerror
 		eerror "  # make dep"
+		eerror
+		eerror "(${ROOT}/usr/src/linux/include/linux/version.h does not exist)"
 		die "/usr/src/linux symlink not setup!"
 	fi
 }
 
 get_KV_info() {
 	check_version_h
-	
+
 	# Get the kernel version of sources in /usr/src/linux ...
 	export KV_full="$(awk '/UTS_RELEASE/ { gsub("\"", "", $3); print $3 }' \
 		"${ROOT}/usr/src/linux/include/linux/version.h")"
@@ -69,4 +71,8 @@ is_2_6_kernel() {
 	else
 		return 1
 	fi
+}
+
+kernel_supports_modules() {
+	grep '^CONFIG_MODULES=y$' ${ROOT}/usr/src/linux/include/linux/autoconf.h >& /dev/null
 }
