@@ -57,8 +57,9 @@
 *sys-apps/sed
 *sys-apps/setserial
 *sys-apps/sh-utils
-*<sys-apps/shadow-5
-*sys-apps/pam-login
+*<sys-apps/shadow-5A
+#newer pam-login won't compile with gcc 2.95.x and glibc 2.2.5 on sparc64
+*<=sys-apps/pam-login-3.7
 *sys-apps/sharutils
 *sys-apps/tar
 #only needed by xinetd, and it's out.  So tcp-wrappers is out too
@@ -138,7 +139,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.36 2003/04/01 13:39:34 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.37 2003/04/01 23:45:56 joker Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
