@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.10.1-r1.ebuild,v 1.1 2004/03/28 23:13:36 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.10.1-r1.ebuild,v 1.2 2004/06/11 09:09:05 kloeri Exp $
 
 inherit webapp-apache
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc alpha"
 IUSE=""
 
 DEPEND=">=net-www/apache-1.3.27-r1
