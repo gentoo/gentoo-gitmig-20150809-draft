@@ -1,0 +1,157 @@
+project-root  ;
+
+import python ;
+
+extension _PythonMagickDrawable :
+    DrawableModule.cpp 
+    ./classes/class_DrawableBase.cpp
+    ./classes/class_Drawable.cpp
+    ./classes/class_DrawableAffine.cpp
+    ./classes/class_DrawableArc.cpp
+    ./classes/class_DrawableBezier.cpp
+    ./classes/class_DrawablePopClipPath.cpp
+    ./classes/class_DrawablePushClipPath.cpp
+    ./classes/class_DrawableClipPath.cpp
+    ./classes/class_DrawableCircle.cpp
+    ./classes/class_DrawableColor.cpp
+    ./classes/class_DrawableCompositeImage.cpp
+    ./classes/class_DrawableEllipse.cpp
+    ./classes/class_DrawableFillColor.cpp
+    ./classes/class_DrawableFillRule.cpp
+    ./classes/class_DrawableFillOpacity.cpp
+    ./classes/class_DrawableFont.cpp
+    ./classes/class_DrawableGravity.cpp
+    ./classes/class_DrawableLine.cpp
+    ./classes/class_DrawableMatte.cpp
+    ./classes/class_DrawablePath.cpp
+    ./classes/class_DrawablePoint.cpp
+    ./classes/class_DrawablePointSize.cpp
+    ./classes/class_DrawablePolygon.cpp
+    ./classes/class_DrawablePolyline.cpp
+    ./classes/class_DrawablePopGraphicContext.cpp
+    ./classes/class_DrawablePushGraphicContext.cpp
+    ./classes/class_DrawablePopPattern.cpp
+    ./classes/class_DrawablePushPattern.cpp
+    ./classes/class_DrawableRectangle.cpp
+    ./classes/class_DrawableRotation.cpp
+    ./classes/class_DrawableRoundRectangle.cpp
+    ./classes/class_DrawableScaling.cpp
+    ./classes/class_DrawableSkewX.cpp
+    ./classes/class_DrawableSkewY.cpp
+    ./classes/class_DrawableDashOffset.cpp
+    ./classes/class_DrawableStrokeLineCap.cpp
+    ./classes/class_DrawableStrokeLineJoin.cpp
+    ./classes/class_DrawableMiterLimit.cpp
+    ./classes/class_DrawableStrokeAntialias.cpp
+    ./classes/class_DrawableStrokeColor.cpp
+    ./classes/class_DrawableStrokeOpacity.cpp
+    ./classes/class_DrawableStrokeWidth.cpp
+    ./classes/class_DrawableText.cpp
+    ./classes/class_DrawableTextAntialias.cpp
+    ./classes/class_DrawableTextDecoration.cpp
+    ./classes/class_DrawableTextUnderColor.cpp
+    ./classes/class_DrawableTranslation.cpp
+    ./classes/class_DrawableViewbox.cpp
+	: <include>$(MAGICK_SRC_PATH)/Magick++/lib
+	<include>$(MAGICK_SRC_PATH)
+	<library-path>$(MAGICK_LIB_PATH)
+	<library-path>/usr/lib 
+    <vc7><*><define>WIN32
+    <vc7><*><define>NeedFunctionPrototypes
+    <vc7><*><define>_VISUALC_
+    <vc7><*><define>_MAGICKMOD_
+    <vc7><*><define>_DLL
+    <vc7><*><find-library>CORE_RL_Magick++_
+    <vc7><*><find-library>CORE_RL_magick_
+    <gcc><*><find-library>GraphicsMagick++
+    <gcc><*><find-library>GraphicsMagick
+    <gcc><*><find-library>GraphicsMagick
+    <gcc><*><find-library>boost_python 
+	<define>HAVE_IOSFWD
+	;
+
+extension _PythonMagickPath :
+    PathModule.cpp
+    ./classes/class_VPathBase.cpp
+    ./classes/class_VPath.cpp
+    ./classes/class_PathArcArgs.cpp
+    ./classes/class_PathArcAbs.cpp
+    ./classes/class_PathArcRel.cpp
+    ./classes/class_PathClosePath.cpp
+    ./classes/class_PathCurvetoArgs.cpp
+    ./classes/class_PathCurvetoAbs.cpp
+    ./classes/class_PathCurvetoRel.cpp
+    ./classes/class_PathSmoothCurvetoAbs.cpp
+    ./classes/class_PathSmoothCurvetoRel.cpp
+    ./classes/class_PathQuadraticCurvetoArgs.cpp
+    ./classes/class_PathQuadraticCurvetoAbs.cpp
+    ./classes/class_PathQuadraticCurvetoRel.cpp
+    ./classes/class_PathSmoothQuadraticCurvetoAbs.cpp
+    ./classes/class_PathSmoothQuadraticCurvetoRel.cpp
+    ./classes/class_PathLinetoAbs.cpp
+    ./classes/class_PathLinetoRel.cpp
+    ./classes/class_PathLinetoHorizontalAbs.cpp
+    ./classes/class_PathLinetoHorizontalRel.cpp
+    ./classes/class_PathLinetoVerticalAbs.cpp
+    ./classes/class_PathLinetoVerticalRel.cpp
+    ./classes/class_PathMovetoAbs.cpp
+    ./classes/class_PathMovetoRel.cpp
+        : <include>$(MAGICK_SRC_PATH)/Magick++/lib
+	<include>$(MAGICK_SRC_PATH)
+	<library-path>$(MAGICK_LIB_PATH)
+	<library-path>/usr/lib
+    <vc7><*><define>WIN32
+    <vc7><*><define>NeedFunctionPrototypes
+    <vc7><*><define>_VISUALC_
+    <vc7><*><define>_MAGICKMOD_
+    <vc7><*><define>_DLL
+    <vc7><*><find-library>CORE_RL_Magick++_
+    <vc7><*><find-library>CORE_RL_magick_
+    <gcc><*><find-library>GraphicsMagick++
+    <gcc><*><find-library>GraphicsMagick
+    <gcc><*><find-library>boost_python 
+	<define>HAVE_IOSFWD
+	;
+
+extension _PythonMagick : PythonMagick.cpp
+    Enums.cpp
+    StlWrappers.cpp
+    ./classes/class_Blob.cpp
+    ./classes/class_Color.cpp
+    ./classes/class_ColorHSL.cpp
+    ./classes/class_ColorGray.cpp
+    ./classes/class_ColorMono.cpp
+    ./classes/class_ColorRGB.cpp
+    ./classes/class_ColorYUV.cpp
+    ./classes/class_Geometry.cpp
+    ./classes/class_Coordinate.cpp
+    ./classes/class_Image.cpp
+    ./classes/class_Image_ctors.cpp
+    ./classes/class_Image_methods1.cpp
+    ./classes/class_Image_methods2.cpp
+    ./classes/class_Image_methods3.cpp
+    ./classes/class_Image_properties1.cpp
+    ./classes/class_Image_properties2.cpp
+    ./classes/class_TypeMetric.cpp
+        : <include>$(MAGICK_SRC_PATH)/Magick++/lib
+	<include>$(MAGICK_SRC_PATH)
+	<library-path>$(MAGICK_LIB_PATH)
+	<library-path>/usr/lib
+    <vc7><*><define>WIN32
+    <vc7><*><define>NeedFunctionPrototypes
+    <vc7><*><define>_VISUALC_
+    <vc7><*><define>_MAGICKMOD_
+    <vc7><*><define>_DLL
+    <vc7><*><find-library>CORE_RL_Magick++_
+    <vc7><*><find-library>CORE_RL_magick_
+    <gcc><*><find-library>GraphicsMagick++
+    <gcc><*><find-library>GraphicsMagick
+    <gcc><*><find-library>boost_python 
+	<define>HAVE_IOSFWD
+	;
+
+
+stage bin-stage :
+    <pyd>_PythonMagick     
+    <pyd>_PythonMagickDrawable
+    <pyd>_PythonMagickPath : : ;        

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.3 2004/12/31 00:11:56 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.4 2005/04/02 17:17:14 fserb Exp $
+
+  02 Apr 2005; Fernando Serboncini <fserb@gentoo.org> +files/Jamfile,
+  +files/Jamrules, +files/boost-build.jam:
+  Added missing files. Bug #35279.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

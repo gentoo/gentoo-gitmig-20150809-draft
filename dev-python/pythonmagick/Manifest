@@ -1,4 +1,17 @@
-MD5 58e90c21173ed4a29db77039fca02f74 pythonmagick-0.5-r1.ebuild 1198
-MD5 e50daa977e46d9ed43b3115a4594cbe9 ChangeLog 532
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fee0979fd50cc19e56e644542bfcba39 ChangeLog 679
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 58e90c21173ed4a29db77039fca02f74 pythonmagick-0.5-r1.ebuild 1198
 MD5 1d9347346738216ca13fbed79caf2790 files/digest-pythonmagick-0.5-r1 67
+MD5 a4d7bf1371445f799f0be802d9b97ce1 files/boost-build.jam 76
+MD5 95b6569c575aabe4ae12d9a10654ea0f files/Jamfile 5718
+MD5 8036dc2f4f11efbbf0927ab541c5e4fe files/Jamrules 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTtPHxtZcznfol0URAhcvAJwJSrUcHR29f7BpwWPgDINLOyGQ9ACgmzN2
+xZq6qvrrvP3jZtUZ1Y8sbSU=
+=z2GK
+-----END PGP SIGNATURE-----

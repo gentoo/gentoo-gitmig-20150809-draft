@@ -1,0 +1,2 @@
+# Specify path to the boost build system
+boost-build /usr/share/boost/v1 ;

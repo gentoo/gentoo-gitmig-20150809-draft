@@ -1,0 +1,2 @@
+path-global BOOST_ROOT : . ;
+project boost : $(BOOST_ROOT) ;
