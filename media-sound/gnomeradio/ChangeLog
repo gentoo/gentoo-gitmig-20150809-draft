@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/gnomeradio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.5 2003/02/15 16:11:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.6 2003/08/23 14:15:47 foser Exp $
 
 *gnomeradio-1.4 (15 Feb 2003)
+
+  23 Aug 2003; foser <foser@gentoo.org> gnomeradio-1.4.ebuild :
+  Added lirc USE flag stuff (#9072)
+  fix (R)DEP order
 
   15 Feb 2003; foser <foser@gentoo.org> gnomeradio-1.4.ebuild :
   New version, fixed deps
