@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.310 2004/03/31 06:36:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.311 2004/04/01 23:44:54 spyderous Exp $
+
+  01 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  Change fontdir definition to host.def setting.
 
   31 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.1-r4.ebuild:
   Drop 4.2. It's two years old.

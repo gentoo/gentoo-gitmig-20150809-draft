@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.14 2004/03/29 08:08:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.15 2004/04/01 23:44:54 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -364,9 +364,10 @@ src_unpack() {
 	echo "#define SharedLibraryLoadFlags  -shared -Wl,-z,defs" \
 		>> config/cf/host.def
 
-	# FHS install locations for docs
+	# FHS/rational install locations
 	echo "#define ManDirectoryRoot /usr/share/man" >> config/cf/host.def
 	echo "#define DocDir /usr/share/doc/${PF}" >> config/cf/host.def
+	echo "#define FontDir /usr/share/fonts" >> config/cf/host.def
 
 	# Make man4 and man7 stuff get 'x' suffix like everything else
 	# Necessary so we can install to /usr/share/man without overwriting
@@ -610,8 +611,7 @@ src_compile() {
 
 	einfo "Building XFree86..."
 	cd ${S}
-	FAST=1 emake World FONTDIR="/usr/share/fonts" || die
-#	FAST=1 emake World FONTDIR="${S}/fonts" || die
+	FAST=1 emake World || die
 
 	if use nls
 	then
@@ -631,12 +631,12 @@ src_install() {
 	# whole build will not be compiled without mmx instructions.
 	if [ "`gcc-version`" != "2.95" ] && use x86
 	then
-		make install DESTDIR=${D} FONTDIR="/usr/share/fonts" || \
+		make install DESTDIR=${D} || \
 		make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
 			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
-			install DESTDIR=${D} FONTDIR="/usr/share/fonts" || die
+			install DESTDIR=${D} || die
 	else
-		make install DESTDIR=${D} FONTDIR="/usr/share/fonts" || die
+		make install DESTDIR=${D} || die
 	fi
 
 	if use sdk || use gatos
