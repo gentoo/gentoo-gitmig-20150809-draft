@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  10 May 2004; Luca Barbato <lu_zero@gentoo.org> mc-4.6.0-r7.ebuild:
+  Marked ppc
+
   09 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> mc-4.6.0-r7.ebuild:
   Stable on hppa & sparc wrt #49990
 
