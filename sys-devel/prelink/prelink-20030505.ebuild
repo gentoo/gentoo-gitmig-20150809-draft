@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030505.ebuild,v 1.1 2003/05/18 10:47:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030505.ebuild,v 1.2 2003/05/21 19:34:35 cretin Exp $
 
 IUSE=""
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-no-undosyslibs-test.patch
-	epatch ${FILESDIR}/${PN}-20030217-glibc231.patch
+	epatch ${FILESDIR}/${P}-glibc231.patch
 }
 
 src_compile() {

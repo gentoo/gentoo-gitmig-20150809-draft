@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.18 2003/05/18 10:47:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.19 2003/05/21 19:34:35 cretin Exp $
 
 *prelink-20030505 (18 May 2003)
+
+  21 May 2003; Stefan Jones <cretin@gentoo.org> :
+  Added the glibc231 patch so it now compiles on older glibc versions.
 
   18 May 2003; Martin Schlemmer <azarah@gentoo.org> prelink-20030505.ebuild,
   files/prelink-20030505-no-undosyslibs-test.patch:
