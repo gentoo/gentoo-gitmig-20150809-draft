@@ -1,11 +1,13 @@
 # ChangeLog for app-admin/superadduser
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.5 2002/08/18 00:17:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.6 2002/09/04 21:21:46 karltk Exp $
 
 *superadduser-1.0-r2 (18 Aug 2002)
 
-  18 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> superadduser-1.0-r2.ebuild files/digest-superadduser-1.0-r2:
+  04 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> superadduser-1.0-r2.ebuild files/digest-superadduser-1.0-r2:
+  Fixed a bug when chowning home directories. Fixes #7464.
 
+  18 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> superadduser-1.0-r2.ebuild files/digest-superadduser-1.0-r2:
   Fixed script so that the home directories are properly chowned. Script 
   files moved to files/1.0.
 

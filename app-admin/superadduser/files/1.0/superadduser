@@ -101,7 +101,7 @@ echo Making new account...
 /usr/sbin/useradd $GHME -m $GEXP $GGID $GAGID $GSHL $GUID $LOGIN
 if [ -d $HME ]; then
   chmod 711 $HME
-  chown $LOGIN:$GGID $HME
+  chown $LOGIN:$GID $HME
 fi
 echo
 /usr/bin/chfn $LOGIN
