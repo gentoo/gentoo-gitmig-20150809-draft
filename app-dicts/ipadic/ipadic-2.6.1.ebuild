@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.1.ebuild,v 1.2 2003/10/01 09:44:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.1.ebuild,v 1.3 2004/02/25 23:03:51 mr_bones_ Exp $
 
 DESCRIPTION="Japanese dictionary for ChaSen"
 HOMEPAGE="http://chasen.aist-nara.ac.jp/"
 SRC_URI="http://chasen.aist-nara.ac.jp/stable/ipadic/${P}.tar.gz"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 SLOT="0"
 IUSE=""
 
