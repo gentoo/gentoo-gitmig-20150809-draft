@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.5 2004/01/23 18:28:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.6 2004/01/24 23:56:27 bazik Exp $
+
+  25 Jan 2004; Sven Blumenstein <bazik@gentoo.org> debootstrap-0.2.4.ebuild:
+  Stable on sparc. Hooray, we can downgr^H^H^H^H^H^Hmigrate to Debian now :P
 
   23 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
   debootstrap-0.1.17.30.ebuild, debootstrap-0.2.23.ebuild,
