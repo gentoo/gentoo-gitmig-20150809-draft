@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.51_pre.ebuild,v 1.2 2004/12/10 06:54:18 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.51_pre.ebuild,v 1.3 2004/12/15 22:26:52 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -106,10 +106,10 @@ orderfirst() {
 }
 
 src_install() {
-	dodir /var/lib/courier
+	dodir /var/lib/courier/authdaemon
 	dodir /etc/courier/authlib
 	dodir /etc/init.d
-	keepdir /var/lib/courier
+	keepdir /var/lib/courier/authdaemon
 	keepdir /etc/courier/authlib
 	emake install DESTDIR="${D}" || die "install"
 	emake install-migrate DESTDIR="${D}" || die "migrate"
