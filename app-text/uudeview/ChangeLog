@@ -1,6 +1,9 @@
 # ChangeLog for app-text/uudeview
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.17 2004/06/02 16:05:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.18 2004/06/19 17:59:43 kugelfang Exp $
+
+  19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> uudeview-0.5.20.ebuild:
+  Marked ~amd64.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> uudeview-0.5.20.ebuild:
   Fix use invocation
