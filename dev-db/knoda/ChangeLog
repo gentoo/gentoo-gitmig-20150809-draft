@@ -1,8 +1,18 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.1 2003/04/23 13:38:28 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.2 2003/04/24 12:30:25 pauldv Exp $
+
+*knoda-0.6_pre3 (24 Apr 2003)
+
+  24 Apr 2003; Paul de Vrieze pauldv@gentoo.org Manifest, knoda-0.5.6.ebuild,
+  knoda-0.6_pre3.ebuild:
+  New version of knoda that works around some segfaults caused by newer kde libs.
+  Courtessy of: Peter Ruskin <aoyu93@dsl.pipex.com>
 
 *knoda-0.5.6 (23 Apr 2003)
+
+  24 Apr 2003; Paul de Vrieze pauldv@gentoo.org Manifest, knoda-0.5.6.ebuild:
+  Changed the ebuild to depend on its own version of hk_classes
 
   23 Apr 2003; Paul de Vrieze pauldv@gentoo.org knoda-0.5.6.ebuild:
   Initial import. Courtessy of: Peter Ruskin <aoyu93@dsl.pipex.com>
