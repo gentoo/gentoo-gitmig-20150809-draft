@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r2.ebuild,v 1.2 2003/10/31 17:14:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r2.ebuild,v 1.3 2003/11/23 13:48:30 agriffis Exp $
 
 IUSE="ruby18"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="1.6"
-KEYWORDS="x86 alpha ppc sparc hppa amd64 ia64"
+KEYWORDS="x86 alpha ppc sparc hppa amd64 -ia64"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
