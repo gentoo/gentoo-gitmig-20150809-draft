@@ -1,0 +1,19 @@
+# ChangeLog for net-www/awstats
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.1 2004/05/21 16:10:44 zul Exp $
+
+*awstats-6.1 (22 May 2004)
+
+  22 May 2004; Chuck Short <zul@gentoo.org> awstats-6.1.ebuild, metadata.xml,
+  files/awstats-6.1-r1.diff:
+  Initial version, ebuild written/modified by the following:
+  Brian Arledge < trogdor45 @ go.com >
+  Daniel Seyffer < gentoo-bugs @ seyffer.com >
+  Federico Moro < zayer @ frikis.org >
+  Markus Luisser < mluisser @ mail.zserv.tuwien.ac.at >
+  Richard Freeman < freemanrich @ yahoo.com > 
+  Michael Schmid < meschmid @ gmx.net > 
+  Perolo Silantico < per.sil @ gmx.it >
+  and me < zul @ gentoo.org >
+  Finally closes # 19382.
+
