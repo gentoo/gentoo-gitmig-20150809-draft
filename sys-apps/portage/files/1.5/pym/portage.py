@@ -463,7 +463,7 @@ def doebuild(myebuild,mydo,checkdeps=1):
 		return spawn("/usr/sbin/ebuild.sh fetch unpack")
 	elif mydo=="compile":
 		return spawn("/usr/sbin/ebuild.sh fetch unpack compile")
-	elif mydo in ["prerm","postrm","preinst","postinst","config","touch","clean","fetch","digest","unmerge","install"]:
+	elif mydo in ["prerm","postrm","preinst","postinst","config","touch","clean","fetch","digest","install"]:
 		return spawn("/usr/sbin/ebuild.sh "+mydo)
 	elif mydo=="qmerge": 
 		#qmerge is specifically not supposed to do a runtime dep check
