@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gens
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.10 2005/01/02 02:41:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.11 2005/03/26 04:21:24 mr_bones_ Exp $
+
+  25 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> gens-2.12b.ebuild:
+  fix deps for bug #86724
 
 *gens-2.12b (01 Jan 2005)
 
