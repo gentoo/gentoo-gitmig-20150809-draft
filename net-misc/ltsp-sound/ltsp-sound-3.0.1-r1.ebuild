@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-sound/ltsp-sound-3.0.1-r1.ebuild,v 1.5 2004/06/24 23:55:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-sound/ltsp-sound-3.0.1-r1.ebuild,v 1.6 2004/09/25 20:44:13 mr_bones_ Exp $
 
 IUSE="gnome"
 S=${WORKDIR}/ltsp_sound
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="=net-misc/ltsp-core-3.0*
+DEPEND="=net-misc/ltsp-3.0*
 		media-libs/libaudiooss
 		media-libs/nas
 		gnome? ( media-sound/esound )"
