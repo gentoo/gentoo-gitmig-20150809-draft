@@ -1,2 +1,4 @@
-MD5 04bc7ed7c73828c0d5c3822b90e7c076 oracle-instantclient-jdbc-10.1.0.2.ebuild 1010
+MD5 65ddc0a5b33a73de50a0c38c365467fc ChangeLog 472
+MD5 be21f1b8658247ec78eba9d3e7c37537 metadata.xml 422
+MD5 7d1cc2284fd9e60944f2937eff9e02e2 oracle-instantclient-jdbc-10.1.0.2.ebuild 1179
 MD5 2a2ab5b81985a1c6bbd57468f6c23cd4 files/digest-oracle-instantclient-jdbc-10.1.0.2 91
