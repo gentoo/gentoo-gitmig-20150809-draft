@@ -513,6 +513,7 @@ dev-lang/tcl-tk
 # spider@gentoo.org ; 11 Apr 2002
 # Masked until we can solve the dependency issues =x11-libs/gtk+-1.2* doesn't work
 >=x11-libs/gtk+-2.0.0
+>=gnome-base/libglade-1.99.10-r1
 
 # spider@gentoo.org ; 18 Apr 2002
 # development branch against gtk+-2.0 (libsigc++ is dependency)
