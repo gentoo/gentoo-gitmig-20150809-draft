@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/gngb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngb/ChangeLog,v 1.4 2002/09/03 15:00:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngb/ChangeLog,v 1.5 2002/10/13 19:41:59 hanno Exp $
+
+*gngb-20020819 (13 Oct 2002)
+
+ 13 Oct 2002; Hanno Boeck <hanno@gentoo.org> gngb-20020819.ebuild :
+
+ Version updated.
 
 *gngb-20020111 (27 Jul 2002)
 
