@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <mr_bones_@gentoo.org> (29 Sep 2003)
-# masked because I screwed up the USE flags.  grrrr.
-=games-board/gnubg-0.13.0-r1
-
 # <solar@gentoo.org> (29 Sep 2003)
 # masked for security reasons bug 26787
 # masked <=r, as seen here:
