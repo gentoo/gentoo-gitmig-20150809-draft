@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.4 2004/06/07 20:52:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.5 2004/06/12 01:22:02 g2boojum Exp $
+
+  11 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> ssmtp-2.60.7-r1.ebuild:
+  Marking stable on all arch's to fix the 
+  inconsistent-mailwrapper issues.
 
 *ssmtp-2.60.9 (07 Jun 2004)
 
