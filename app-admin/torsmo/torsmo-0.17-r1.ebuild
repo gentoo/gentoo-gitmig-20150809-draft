@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17-r1.ebuild,v 1.1 2004/12/02 20:46:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17-r1.ebuild,v 1.2 2004/12/04 04:16:47 dragonheart Exp $
 
 inherit eutils kernel-mod
 
@@ -30,6 +30,11 @@ src_unpack() {
 	then
 		epatch ${FILESDIR}/${P}-kernel2.4.patch
 	fi
+}
+
+src_compile() {
+	econf || die "failed to configure"
+	emake || die "failed to compile"
 }
 
 src_install() {
