@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.6 2003/04/15 21:19:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.7 2003/05/23 04:39:18 killian Exp $
 
 IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
@@ -89,8 +89,14 @@ src_install() {
 	doins etc.ppp/pap-secrets etc.ppp/chap-secrets
 	insopts -m0644
 	doins etc.ppp/options
+	doins ${FILESDIR}/chat-default
 	insopts -m0755
 	doins ${FILESDIR}/ip-up
+        exeinto /etc/init.d/
+        doexe ${FILESDIR}/net.ppp0
+        insinto /etc/conf.d
+        insopts -m0600
+        newins ${FILESDIR}/confd.ppp0 net.ppp0
 
 	dolib.so pppd/plugins/minconn.so
 	dolib.so pppd/plugins/passprompt.so
