@@ -1,0 +1,12 @@
+--- include/libxml/xmlerror.h.orig	Mon Nov 12 23:55:40 2001
++++ include/libxml/xmlerror.h	Mon Nov 12 23:55:48 2001
+@@ -1,7 +1,7 @@
++#include <libxml/parser.h>
++
+ #ifndef __XML_ERROR_H__
+ #define __XML_ERROR_H__
+-
+-#include <libxml/parser.h>
+ 
+ #ifdef __cplusplus
+ extern "C" {
