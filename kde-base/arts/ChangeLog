@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.84 2004/03/24 19:34:12 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.85 2004/04/07 18:10:37 eradicator Exp $
+
+  07 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> arts-1.2.1.ebuild:
+  filter -fomit-frame-pointer on sparc to close bug #41980
 
   24 Mar 2004; Jason Huebel <jhuebel@gentoo.org> files/arts-1.2.1-buffer.patch,
   arts-1.2.1.ebuild

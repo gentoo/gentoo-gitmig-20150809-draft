@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.7 2004/03/24 19:34:12 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.8 2004/04/07 18:10:37 eradicator Exp $
 
 inherit kde flag-o-matic
 set-kdedir 3.2
@@ -47,6 +47,9 @@ src_compile() {
 
 	#fix bug 13453
 	filter-flags -foptimize-sibling-calls
+
+	#fix bug 41980
+	use sparc && filter-flags -fomit-frame-pointer
 
 	myconf="$myconf `use_enable alsa`"
 	myconf="$myconf `use_enable oggvorbis vorbis`"
