@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/wifiscanner
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/ChangeLog,v 1.1 2005/02/26 17:39:35 genstef Exp $
+
+*wifiscanner-0.9.6 (26 Feb 2005)
+
+  26 Feb 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +wifiscanner-0.9.6.ebuild:
+  New ebuild thanks to Andreas Kobara <abusch@gmx.net> in bug 61748
+
