@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.6 2003/02/21 23:49:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.7 2003/02/23 10:25:54 vapier Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_compile() {
 		--with-mhash \
 		--sysconfdir=/etc/aide \
 		--with-extra-lib=/usr/lib \
-		${myconf}
+		${myconf} \
 		|| die
 	emake || die
 }
