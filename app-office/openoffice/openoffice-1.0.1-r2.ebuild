@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.2 2002/12/02 14:40:07 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.3 2002/12/02 14:43:59 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -241,7 +241,7 @@ src_unpack() {
 
 	# Seth -- Dec 1 2002
         einfo "Patching for jdk >= 1.4.0..."
-        patch -p 0 < ${FILESDIR}/${PV}/${P}-fix-jdk-1.4.0.patch || die
+        epatch ${FILESDIR}/${PV}/${P}-fix-jdk-1.4.0.patch
 }
 
 get_EnvSet() {
