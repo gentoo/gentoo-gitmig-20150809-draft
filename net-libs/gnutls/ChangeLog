@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.30 2004/08/07 09:18:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.31 2004/08/07 16:05:55 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> gnutls-1.0.17.ebuild:
+  Stable on amd64, bug 59231.
 
   07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gnutls-1.0.17.ebuild:
   Stable on alpha, bug 59231.
