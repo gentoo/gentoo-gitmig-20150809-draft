@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/qmail-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.1 2003/02/05 06:20:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.2 2003/03/28 23:14:04 mholzer Exp $
 
 *qmail-mysql-1.03 (05 Feb 2003)
+
+  29 Mar 2003; Martin Holzer <mholzer@gentoo.org> qmail-mysql-1.03.ebuild:
+  changed homepage. closes #18379.
 
   05 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-mysql-1.03.ebuild,
   files/digest-qmail-mysql-1.03, files/1.03/* :

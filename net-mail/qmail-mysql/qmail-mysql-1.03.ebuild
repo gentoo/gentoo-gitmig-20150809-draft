@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.4 2003/03/01 03:12:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.5 2003/03/28 23:14:04 mholzer Exp $
 
 inherit eutils
 
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes mysql, and queue optimization"
 HOMEPAGE="http://www.qmail.org/
-	http://lain.cx/unix/qmail/mysql.php
+	http://iain.cx/qmail/mysql/
 	http://www.jedi.claranet.fr/qmail-tuning.html"
 SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	http://www.jedi.claranet.fr/qmail-link-sync.patch
