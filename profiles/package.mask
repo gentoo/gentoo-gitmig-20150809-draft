@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <pebenito@gentoo.org> (02 Oct 2003)
+# for new selinux api
+>=dev-python/python-selinux-2.0
+
 # <agenkin@gentoo.org> (02 Oct 2003)
 # deprecated.  now comes as part of app-cdf/cdrtools
 # bug #18539
