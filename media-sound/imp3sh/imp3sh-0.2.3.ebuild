@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.10 2004/06/25 00:06:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.11 2004/07/06 08:09:45 eradicator Exp $
 
 IUSE="oggvorbis"
+
+inherit gnuconfig
 
 DESCRIPTION="flexible playlist manipulation shell and song player/streamer"
 HOMEPAGE="http://www.geocities.com/kman_can/"
@@ -15,6 +17,13 @@ KEYWORDS="x86"
 DEPEND="sys-libs/ncurses
 	oggvorbis? ( media-libs/libvorbis
 	             media-libs/libao )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	gnuconfig_update
+}
 
 src_compile() {
 	econf || die
