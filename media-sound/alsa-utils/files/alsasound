@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.10 2004/02/19 08:53:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.11 2004/02/21 00:12:24 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -100,6 +100,7 @@ start() {
 		for DRIVER in ${DRIVERS}
 		do
 			TMP=${DRIVER##snd-}
+			TMP=${TMP##snd_}
 			[ -x "${alsascrdir}/${TMP}" ] && ${alsascrdir}/${TMP}
 		done
 		
@@ -158,7 +159,7 @@ terminate() {
 	ossdevs="/dev/admmidi? /dev/adsp? /dev/amidi? /dev/audio* /dev/dmfm* \
 			/dev/dmmidi? /dev/dsp* /dev/dspW* /dev/midi0? /dev/mixer? /dev/music \
 			/dev/patmgr? /dev/sequencer* /dev/sndstat"
-	alsadevs="/proc/asound/dev/*"
+	alsadevs="/proc/asound/dev/* /dev/sound/* /dev/snd/*"
 	fuser -k $ossdevs $alsadevs 2> /dev/null 1>/dev/null
 	
 	#
