@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-0.0.3.20031225.ebuild,v 1.1 2003/12/25 05:54:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-0.0.3.20040103.ebuild,v 1.1 2004/01/04 06:55:00 vapier Exp $
 
 EHACKAUTOGEN=y
 inherit enlightenment flag-o-matic
@@ -14,3 +14,9 @@ DEPEND=">=media-libs/edje-0.0.1.20031013
 	>=x11-libs/ecore-1.0.0.20031213_pre4
 	>=dev-libs/ewd-0.0.1.20031013
 	>=media-libs/etox-0.0.2.20031013"
+
+src_unpack() {
+	enlightenment_src_unpack
+	cd ${S}/src
+	sed -i 's:-pg::' Makefile.am
+}
