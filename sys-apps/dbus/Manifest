@@ -1,2 +1,4 @@
-MD5 9ac76de7edbf78199600fd282e163d88 dbus-0.11.ebuild 471
+MD5 1b1cd45362cb2a2dda5e3759a417151d dbus-0.11.ebuild 941
+MD5 515b15a5ba71c365e44bf188d388e907 ChangeLog 413
+MD5 3e8cc0d0ca4fb3916d8d4dc67f0e745f files/dbus-0.11-cvs-update.patch 184293
 MD5 b034e8f25d00e0214f5598e374516546 files/digest-dbus-0.11 61
