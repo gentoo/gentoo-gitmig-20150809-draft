@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.26 2004/04/01 01:36:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.27 2004/04/01 19:55:41 gustavoz Exp $
+
+  01 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-python-2.0.0-r1.ebuild:
+  stable on sparc
 
   01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org>
   gnome-python-1.4.4-r1.ebuild, gnome-python-2.0.0-r1.ebuild:
