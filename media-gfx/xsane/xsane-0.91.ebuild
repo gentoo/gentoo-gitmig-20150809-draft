@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.91.ebuild,v 1.2 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.91.ebuild,v 1.3 2003/09/22 17:01:18 brad Exp $
 
 DESCRIPTION="graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
@@ -19,12 +19,18 @@ DEPEND="media-gfx/sane-backends
 	"
 
 src_compile() {
+
+if use gtk2; then
+	einfo "xsane will be built with GTK+ 2.0, but will exclude the GIMP plugin!"
+	myconf="${myconf} --enable-gtk2 --disable-gimp"
+fi
+
 	econf \
 		`use_enable nls` \
 		`use_enable jpeg` \
 		`use_enable png` \
 		`use_enable tiff` \
-		`use_enable gtk2` \
+		${myconf} \
 		|| die
 	emake || die
 }

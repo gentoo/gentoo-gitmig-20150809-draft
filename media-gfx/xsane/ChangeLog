@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.10 2003/07/22 18:33:36 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.11 2003/09/22 17:01:18 brad Exp $
+
+  22 Sep 2003; Brad Laue <brad@gentoo.org> xsane-0.91.ebuild:
+  Small change - dont check for GIMP if gtk2 is used, since this prevents the
+  GTK+ 2.0 frontend from building.
 
 *xsane-0.91 (22 Jul 2003)
 
