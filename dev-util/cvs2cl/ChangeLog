@@ -74,3 +74,6 @@
 
 	* .frozen: Add frozen lock support
 
+  21 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Added metadata.xml
+
