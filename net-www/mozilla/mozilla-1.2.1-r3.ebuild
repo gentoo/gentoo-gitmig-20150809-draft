@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.4 2002/12/19 20:27:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.5 2002/12/23 20:18:10 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -636,13 +636,15 @@ pkg_postinst() {
 
 	# Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" -a "`gcc-major-version`" -ne "3" \
-	     -a ! -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ]
+	if [ "`use java`" -a "`gcc-major-version`" -ne "3" ]
 	then
-		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
+		if [ ! -L "${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla`" ]
 		then
-			ln -snf `java-config --full-browser-plugin-path=mozilla` \
-				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
+			if [ -e "`java-config --full-browser-plugin-path=mozilla`" ]
+			then
+				ln -snf `java-config --full-browser-plugin-path=mozilla` \
+					${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
+			fi
 		fi
 	fi
 
