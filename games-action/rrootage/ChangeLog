@@ -1,0 +1,10 @@
+# ChangeLog for games-action/rrootage
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/ChangeLog,v 1.1 2004/09/27 09:08:10 mr_bones_ Exp $
+
+*rrootage-0.23a (27 Sep 2004)
+
+  27 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +rrootage-0.23a.ebuild:
+  initial commit - ebuild submitted by Atzm Watanabe via bug #53225
+
