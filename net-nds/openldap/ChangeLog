@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.91 2004/12/02 04:39:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.92 2004/12/02 04:54:33 robbat2 Exp $
+
+*openldap-2.1.30-r4 (01 Dec 2004)
+
+  01 Dec 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.1.30-tls-activedirectory-hang-fix.patch,
+  files/2.0/slapd, +openldap-2.1.30-r4.ebuild:
+  Fix bugs #67080 (2.1.30-r4) and #71268 (init-script).
 
 *openldap-2.2.19 (01 Dec 2004)
 

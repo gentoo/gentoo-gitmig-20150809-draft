@@ -1,0 +1,39 @@
+diff --recursive --context=3 openldap-2.1.30/libraries/libldap/result.c openldap-2.1.30.patched/libraries/libldap/result.c
+*** openldap-2.1.30/libraries/libldap/result.c	Fri Mar 26 22:34:27 2004
+--- openldap-2.1.30.patched/libraries/libldap/result.c	Mon Oct 11 12:32:02 2004
+***************
+*** 297,302 ****
+--- 297,303 ----
+          if( (*result = chkResponseList(ld, msgid, all)) != NULL ) {
+              rc = (*result)->lm_msgtype;
+          } else {
++ 			int found_msg = 0;
+  
+  			for ( lc = ld->ld_conns; lc != NULL; lc = nextlc ) {
+  				nextlc = lc->lconn_next;
+***************
+*** 304,314 ****
+  						LBER_SB_OPT_DATA_READY, NULL ) ) {
+  					rc = try_read1msg( ld, msgid, all, lc->lconn_sb,
+  						&lc, result );
+  				    break;
+  				}
+  	        }
+  
+! 		    if ( lc == NULL ) {
+  			    rc = ldap_int_select( ld, tvp );
+  
+  
+--- 305,316 ----
+  						LBER_SB_OPT_DATA_READY, NULL ) ) {
+  					rc = try_read1msg( ld, msgid, all, lc->lconn_sb,
+  						&lc, result );
++ 					found_msg = 1;
+  				    break;
+  				}
+  	        }
+  
+! 		    if ( !found_msg ) {
+  			    rc = ldap_int_select( ld, tvp );
+  
+  

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/2.0/slapd,v 1.6 2004/07/15 00:18:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/2.0/slapd,v 1.7 2004/12/02 04:54:33 robbat2 Exp $
 
 depend() {
 	need net
@@ -15,6 +15,6 @@ start() {
 
 stop() {
 	ebegin "Stopping ldap-server"
-	start-stop-daemon --stop --quiet --pidfile /var/run/openldap/slapd.pid 
+	start-stop-daemon --stop --signal 2 --quiet --pidfile /var/run/openldap/slapd.pid 
 	eend $?
 }
