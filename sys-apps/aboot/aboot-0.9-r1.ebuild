@@ -1,17 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/aboot/aboot-0.9-r1.ebuild,v 1.4 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/aboot/aboot-0.9-r1.ebuild,v 1.5 2003/01/06 09:35:57 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Alpha Linux boot loader for srm"
 SRC_URI="http://aboot.sourceforge.net/tarballs/aboot-0.9bpre.tar.bz2"
 HOMEPAGE="http://aboot.sourceforge.net/"
 
-KEYWORDS="alpha"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="alpha -x86 -ppc -sparc"
 
 DEPEND="virtual/glibc"
+
+PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}

@@ -1,22 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.10 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.11 2003/01/06 09:34:05 seemant Exp $
 
 inherit mount-boot
 
 S="${WORKDIR}/quik-2.0"
 HOMEPAGE=""
-SLOT="0"
-LICENSE="GPL-2"
 DESCRIPTION="OldWorld PowerMac Bootloader"
-
 MY_P="quik_2.0e.orig.tar.gz"
 DEB_P="quik_2.0e-1.diff"
 DEB_URI="ftp://ftp.debian.org/debian/pool/main/q/quik"
 SRC_URI="${DEB_URI}/${MY_P} ${DEB_URI}/${DEB_P}.gz"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="ppc -x86 -alpha -sparc"
+
 DEPEND="virtual/glibc"
-KEYWORDS="ppc"
+
+PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	cd ${WORKDIR}
