@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.48 2004/07/19 18:58:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.49 2004/07/28 23:54:43 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -102,7 +102,7 @@ kernel_universal_unpack() {
 		cd ${S}
 	fi
 
-	if [ $(kernel_is_2_4) $? == 0 -o ${ETYPE} == "headers" ]
+	if kernel_is_2_4 || [ ${ETYPE} == "headers" ]
 	then
 		# this file is required for other things to build properly, 
 		# so we autogenerate it
