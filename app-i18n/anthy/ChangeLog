@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.13 2004/03/13 11:05:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.14 2004/03/28 10:25:31 hattya Exp $
+
+  28 Mar 2004; Akinori Hattori <hattya@gentoo.org> anthy-4300b.ebuild,
+  anthy-4700.ebuild, anthy-5100.ebuild, anthy-5100b.ebuild:
+  removed unnecessary $S. mark 5100b stable.
 
   13 Mar 2004; Akinori Hattori <hattya@gentoo.org> anthy-5100.ebuild:
   marked stable on x86.

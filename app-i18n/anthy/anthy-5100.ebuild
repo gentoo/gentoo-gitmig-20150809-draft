@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5100.ebuild,v 1.2 2004/03/13 11:05:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5100.ebuild,v 1.3 2004/03/28 10:25:31 hattya Exp $
 
 inherit elisp-common
 
@@ -14,7 +14,6 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 SLOT="0"
-S="${WORKDIR}/${P}"
 
 DEPEND="emacs? ( virtual/emacs )
 	!app-i18n/anthy-ss"
