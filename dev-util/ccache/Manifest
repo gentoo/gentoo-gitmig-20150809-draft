@@ -1,7 +1,17 @@
-MD5 54fa2e64bd7ff5f0fcfb2c3d49145924 ChangeLog 4230
-MD5 72f5e3c3ab7a9598b9e86d21640c201f ccache-2.2.ebuild 2123
-MD5 9d6696b774841e3c2a9294551cabc0e4 ccache-2.3.ebuild 1912
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a4b3d534b28b45e458025ce96bf6cc4 ccache-2.3.ebuild 1910
 MD5 23e270dc8b1687e8a41e37e1383b473d metadata.xml 390
+MD5 99a08d285d1837c5697b16f310ced327 ChangeLog 4303
+MD5 72f5e3c3ab7a9598b9e86d21640c201f ccache-2.2.ebuild 2123
+MD5 6bbfd5ad2a75fbaf4b4a5e42fc61270a files/digest-ccache-2.3 61
 MD5 3a5de45f5094320a0ce4eb5201506042 files/ccache-config 1554
 MD5 0dfb58c5d312454e0c766c14f3d76dad files/digest-ccache-2.2 61
-MD5 6bbfd5ad2a75fbaf4b4a5e42fc61270a files/digest-ccache-2.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgsGBKtJO8LeSoosRAlovAJoD1rWBARJ0NilWPSpnIlNbWRdXYACeJ/ky
+9AOHLgAKPuzj3lH+Mc3uz1g=
+=q/Jt
+-----END PGP SIGNATURE-----

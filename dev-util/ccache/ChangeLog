@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.33 2004/07/02 05:03:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.34 2004/10/29 22:17:28 tantive Exp $
+
+  30 Oct 2004; Michael Imhof <tantive@gentoo.org> :
+  Added ~s390 keyword.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ccache-2.2.ebuild,
   ccache-2.3.ebuild:
