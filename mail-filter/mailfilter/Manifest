@@ -1,22 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a4530a0415969e8339e896e737031620 ChangeLog 2058
+MD5 db79a2d23e7156896b1819c0e170b72f ChangeLog 2298
 MD5 3ad29ff136a04e622ec31da1088d48bb mailfilter-0.4.0.ebuild 754
 MD5 bca40a463ac1788693b56ea6028bba8c mailfilter-0.6.1.ebuild 767
 MD5 a726356ce63c6b13d0f02c7c01bdf1fc mailfilter-0.6.ebuild 758
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 95b1586f835ec06da1b1eff8987141ea mailfilter-0.7.1.ebuild 777
 MD5 40e32c84999e738ee17e7ef6398c2326 mailfilter-0.6.2.ebuild 768
 MD5 cf24facc40700b1105ed164678ea9c31 files/digest-mailfilter-0.6 66
 MD5 99319faac6b64efd8bd8b5eeac8cdde7 files/digest-mailfilter-0.4.0 68
 MD5 03103aee47aedcbd4808f9c025b5ec65 files/digest-mailfilter-0.6.2 68
 MD5 aaf9b3f667ef284b9780d357f8299768 files/digest-mailfilter-0.6.1 68
-MD5 24547a38bf50c5c24811a8ac677ce1a7 files/rcfile.example1 3478
-MD5 d457aec252645036a2747352e8fd82b5 files/rcfile.example2 4197
+MD5 dbe5cd837ea37123cf7a7be08d9c3264 files/digest-mailfilter-0.7.1 68
+MD5 7a7f0ff9df118aba4bf9fc845736dc75 files/rcfile.example1 4010
+MD5 80c8b3f080ea3338649f7bd79393a000 files/rcfile.example2 4551
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFBYRez10xuJSrg3/sRAoiGAJjx69cIPurFeuMHh+TOqYHCtQmHAJ0UQsxA
-DainWGX10rgSCmBrxqEu/g==
-=NVRC
+iD8DBQFBuNoAQlM6RnzZP+IRAhmoAKCxfgWbw4du6IBL77i2HbTYUVjRYgCfZbrw
+HIWcW9ZHbVSppLj1vheHR7U=
+=yDq+
 -----END PGP SIGNATURE-----
