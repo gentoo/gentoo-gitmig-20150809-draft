@@ -1,10 +1,13 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.9 2003/02/12 08:06:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.10 2003/02/15 19:23:28 dragon Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *libpcap-0.7.1-r2 (3 Jan 2003)
+
+  15 Feb 2003; Nicholas Wourms <dragon@gentoo.org> libpcap-0.7.1-r2.ebuild :
+  Added mips keyword to ebuild.
 
   10 Feb 2003; Peter Johanson <latexer@gentoo.org> libpcap-0.7.1-r2.ebuild :
   Added ~alpha to KEYWORDS
@@ -13,6 +16,9 @@
   Added -fpic to the CFLAGS to aid prelinking.
 
 *libpcap-0.7.1-r1 (31 Aug 2002) 
+
+  15 Feb 2003; Nicholas Wourms <dragon@gentoo.org> libpcap-0.7.1-r1.ebuild :
+  Added mips keyword to ebuild.
 
   02 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> libpcap-0.7.1-r1.ebuild :
 
@@ -25,6 +31,10 @@
   Airsnort (and other wireless packet sniffers) to work.
 
 *libpcap-0.7.1 (11 May 2002)
+
+  15 Feb 2003; Nicholas Wourms <dragon@gentoo.org> libpcap-0.7.1.ebuild :
+  Added mips keyword to ebuild.
+
   11 May 2002; Spider <spider@gentoo.org> libpcap-0.7.1.ebuild :
   version bump for the new tcpdump
   
