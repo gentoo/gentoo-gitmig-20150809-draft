@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.764 2004/11/29 12:37:00 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.765 2004/11/29 12:43:43 zypher Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -448,6 +448,7 @@ media-video/tcvp:faad - Enables faad2 support
 media-video/tcvp:ffmpeg - Enable ffmpeg support
 media-video/transcode:a52 - Enables support for decoding ATSC A/52 streams used in DVD
 media-video/transcode:dv - Enables support for a codec used by many camcorders
+media-video/transcode:freetype - Enables Freetype font support
 media-video/transcode:network - Enables network streaming support
 media-video/transcode:pvm - Enables private virtual machine support
 media-video/transcode:v4l - Enables video4linux support
