@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.5 2004/09/03 16:06:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.6 2005/01/26 20:00:50 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.squidguard.org"
 SRC_URI="http://ftp.teledanmark.no/pub/www/proxy/squidGuard/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~ppc64"
 IUSE=""
 
 RDEPEND="www-proxy/squid
