@@ -1,12 +1,12 @@
 # ChangeLog for dev-php/php-accelerator
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/ChangeLog,v 1.3 2003/10/10 09:34:40 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/ChangeLog,v 1.4 2003/10/23 13:56:04 aliz Exp $
 
   10 Oct 2003; Stuart Herbert <stuart@gentoo.org>
   php-accelerator-1.3.3.ebuild:
   Added blocker on PECL's APC module
 
-*php-accelerator-1.3.3 (24 07 2003)
+*php-accelerator-1.3.3 (24 Jul 2003)
 
   24 Jul 2003: Stuart Herbert <stuart@gentoo.org> php-accelerator-1.3.3.ebuild
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/turck-mmcache
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.13 2003/10/22 23:01:54 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.14 2003/10/23 13:56:04 aliz Exp $
 
 *turck-mmcache-2.4.3 (22 Oct 2003)
 
@@ -40,7 +40,7 @@
   Updated the ebuild to version 2.3.22.  Added 'mmcache.shm_only = 0' config
   setting.  Ebuild submitted by Klavs Klavsen <kl@vsen.dk> ;-)
 
-*turck-mmcache-2.3.21 (03 08 2003)
+*turck-mmcache-2.3.21 (03 Aug 2003)
 
   03 08 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.21.ebuild
   Updated the ebuild to version 2.3.21.  Thanks to Klavs Klavsen <kl@vsen.dk>
@@ -48,7 +48,7 @@
 
   Also added a block against ioncube_loaders and php-accelerator.
 
-*turck-mmcache-2.3.20 (29 07 2003)
+*turck-mmcache-2.3.20 (29 Jul 2003)
 
   29 07 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.20.ebuild
   Updated the ebuild to version 2.3.20 - added the mmcache.compress="0" option.
@@ -57,7 +57,7 @@
   21 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> turck-mmcache-2.3.19.ebuild:
   Abstract the MMcache directory, and correct 'fowner' -> 'fowners'.
 
-*turck-mmcache-2.3.19 (20 07 2003)
+*turck-mmcache-2.3.19 (20 Jul 2003)
 
   20 07 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.19.ebuild
   Changed src_install() to make more use of the ${D} installation directory
@@ -65,14 +65,14 @@
 
   Thanks to Mike Gardiner (driver@iinet.net.au) for the patch.
 
-*turck-mmcache-2.3.19 (19 07 2003)
+*turck-mmcache-2.3.19 (19 Jul 2003)
 
   19 07 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.19.ebuild
   Moved cache dir from /tmp/mmcache to /var/cache/mmcache, and changed
   permissions to make sure (on multi-user machines) that cache files can't
   be replaced to inject other code
 
-*turck-mmcache-2.3.19 (11 07 2003)
+*turck-mmcache-2.3.19 (11 Jul 2003)
 
   11 07 2003; Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.19.ebuild:
   Initial add; contributed by Klavs Klavsen <kl@vsen.dk> (see bug #23360)
