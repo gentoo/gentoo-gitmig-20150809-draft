@@ -11,4 +11,5 @@ FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at  sta
 ARCH=`uname -m`				# Architecture
 
 
-
+FTPUSER="ftp"                           # User to run oftpd as
+FTPROOT="/home/ftp"             # Set this to your ftproot for oftpd

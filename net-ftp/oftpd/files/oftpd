@@ -1,0 +1,31 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:75:This line is required for script management
+
+. /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
+
+SERVICE="oftpd"
+opts="start stop restart"
+PIDFILE=/var/run/oftpd.pid
+EXE=/usr/sbin/oftpd
+
+start() {
+
+		ebegin "Starting $SERVICE"
+     		start-stop-daemon --start --quiet --exec $EXE $FTPUSER $FTPROOT
+		eend $? "Started $SERVICE." "Error starting $SERVICE."
+}
+
+stop() {
+
+		ebegin "Stopping $SERVICE"
+		start-stop-daemon --stop --quiet -n $SERVICE --exec $EXE
+		eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
+}
+
+restart() {
+		stop
+		start
+}
+
+doservice ${@}
