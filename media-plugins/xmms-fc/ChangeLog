@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-fc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/ChangeLog,v 1.6 2004/07/03 07:21:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/ChangeLog,v 1.7 2004/07/06 23:54:10 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-fc-0.5.3.ebuild:
+  Added ~sparc
 
   03 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-fc-0.5.3.ebuild:
   ~amd64.

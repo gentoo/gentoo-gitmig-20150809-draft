@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-gdancer/xmms-gdancer-0.4.6.ebuild,v 1.4 2004/06/24 23:40:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-gdancer/xmms-gdancer-0.4.6.ebuild,v 1.5 2004/07/06 23:54:39 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://figz.com/gdancer/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 
 DEPEND="media-sound/xmms"
 
