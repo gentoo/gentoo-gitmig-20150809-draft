@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.33.ebuild,v 1.1 2003/09/17 08:30:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.33.ebuild,v 1.2 2003/09/19 08:02:19 msterret Exp $
 
 
 inherit distutils
@@ -16,15 +16,16 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-lang/python
+	>=sys-apps/sed-4
 	>=app-text/ghostscript-7.05.5"
 
 S=${WORKDIR}/${MY_P}
 DOCS="README.txt"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
-    sed -i -e "s/unevenbars.py//" demos/Makefile || die "sed failed on Makefile"
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s/unevenbars.py//" demos/Makefile || die "sed failed on Makefile"
 }
 
 src_install() {
@@ -33,4 +34,3 @@ src_install() {
 	insinto /usr/share/doc/${PF}/demos
 	doins demos/*
 }
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychart
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.1 2003/09/17 08:30:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.2 2003/09/19 08:02:19 msterret Exp $
+
+  19 Sep 2003; Michael Sterrett <msterret@gentoo.org> pychart-1.33.ebuild:
+  sed -i requires sed >= 4; repoman: whitespace cleanup
 
 *pychart-1.33 (17 Sep 2003)
 
