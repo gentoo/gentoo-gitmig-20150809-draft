@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.26 2004/12/22 21:46:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.27 2005/03/23 20:48:49 brad Exp $
 #
 # You probably don't want to change this eclass.  Newer ebuilds use
 # mozconfig.eclass instead.
@@ -37,7 +37,7 @@ RDEPEND="virtual/x11
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2*
 		=gnome-base/orbit-0* )
-	>=net-www/mozilla-launcher-1.22"
+	>=www-client/mozilla-launcher-1.22"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
