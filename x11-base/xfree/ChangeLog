@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.96 2003/02/17 19:44:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.97 2003/02/23 19:27:02 agriffis Exp $
 
   17 Feb 2003; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
 
@@ -37,6 +37,10 @@
   and kdelibs.
 
 *xfree-4.2.99.4 (02 Feb 2003)
+
+  23 Feb 2003; Aron Griffis <agriffis@gentoo.org> xfree-4.2.99.4.ebuild :
+  Fix minor error in the ebuild where "die" could be called from within
+  a subshell.
 
   15 Feb 2003; Mark Guertin <gerk@gentoo.org> xfree-4.2.99.4.ebuild :
   added patch to enable nv driver on ppc, thanks DarkSpecter.
