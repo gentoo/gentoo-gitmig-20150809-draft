@@ -3,7 +3,7 @@ MD5 c06db8bbd5bb6030cc4f41c35a7bfc67 php-4.3.0-r4.ebuild 8032
 MD5 32e507e008f3a07bf40463b7e8b0d1fe php-4.3.0-r3.ebuild 6737
 MD5 70c4aff8641931b5be8397696e68d520 php-4.3.1.ebuild 8189
 MD5 82c31a660af5431b5abd96f70ece4854 php-4.3.1-r2.ebuild 2436
-MD5 d0471f285d4fa646f5a1df18c4044ec6 ChangeLog 6609
+MD5 c394fbea1f7e76eb7c2a423ab8c4ef97 ChangeLog 6621
 MD5 3604218eee0ba5f7a1eac325de001eb1 files/digest-php-4.3.0-r3 63
 MD5 3604218eee0ba5f7a1eac325de001eb1 files/digest-php-4.3.0-r4 63
 MD5 316366d60770de4c45957483cde50fe8 files/digest-php-4.3.1-r1 63
