@@ -1,11 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1498f8b6c0b399a069b41c1a963a6226 capi4k-utils-20041006-r3.ebuild 3238
-MD5 9828ad1bf70322c228f7c56e6b9daab1 capi4k-utils-20041006-r5.ebuild 3738
+MD5 bb40291f1bb1ee5bce01f7c5a733a3d9 capi4k-utils-20041006-r5.ebuild 3742
 MD5 016c6cb21ab68060b9dffe7c55f8545d capi4k-utils-20041006-r4.ebuild 3738
-MD5 99100c326b27095f6e7907d18720cbc3 ChangeLog 4773
+MD5 f7c3ade0b5cc6799bf7c5e518edb026e ChangeLog 4947
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 4607b3504bc1d4aa7a97c4913b85d8f3 files/capi.conf 592
 MD5 5567e0f076f3d1faafcd0d4fa39a1c4e files/digest-capi4k-utils-20041006-r3 156
 MD5 5567e0f076f3d1faafcd0d4fa39a1c4e files/digest-capi4k-utils-20041006-r4 156
 MD5 5567e0f076f3d1faafcd0d4fa39a1c4e files/digest-capi4k-utils-20041006-r5 156
@@ -18,10 +16,3 @@ MD5 fa4cf0be46c4a16a2ef6fd178ed54c01 files/20041006/capi.usermap 1504
 MD5 2fe94d2623c5b129780b72bacaf4a7bc files/20041006/rcapid.xinetd 236
 MD5 650c413593fe44524150e1365965cdb3 files/20041006/capi.blacklist 455
 MD5 2ddf9c04a03949cb2301888586096bfe files/20041006/capi.hotplug 2435
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB3YDejiC39V7gKu0RAsuSAJ470fKy/Om12zRWQYxkUvy7J8sUnQCeOBX4
-tP4tcbyQ272FISN6I+O1ZoQ=
-=gqy+
------END PGP SIGNATURE-----
