@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c80f207bcb6d007a3d7cc9aa4e627fef ChangeLog 6401
+MD5 f662ee47ccb33c2240619dd8e09418e3 ChangeLog 6573
 MD5 7d89d912a4ff159de9a97d0df6a00ae0 grep-2.5.1-r7.ebuild 2072
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 6986697c96b387013718a4a61d38c121 grep-2.5.1-r6.ebuild 2200
@@ -10,16 +10,16 @@ MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r7 62
 MD5 b43c763953a7b7d3345fc0dd625f299c files/grep-2.5.1-fgrep.patch.bz2 1678
 MD5 294f8a32ae3036ebbf393610a286d80e files/grep-2.5.1-gofast.patch.bz2 4389
 MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r6 62
-MD5 0f1fff27ddb2ad479129fb130301d035 files/2.5.1-tests.patch 531
+MD5 16d6cd54c93041d4f4bef59a9e327d04 files/2.5.1-tests.patch 1786
 MD5 f2f8cec983dc49b399880ab8eae882cb files/grep-2.5.1-i18n.patch.bz2 2903
 MD5 575345b799197d6c79fe93c757664262 files/grep-2.5.1-oi.patch.bz2 831
 MD5 a6f56755c0a2460bc62e7db7d78b7fef files/grep-2.5.1-restrict_arr.patch 549
 MD5 e39e9fd198a2c0a5984f2c7d188b3c49 files/2.5.1-utf8-case.patch 933
 MD5 792f6cb13959979de2b10537067603bb files/2.5.1-manpage-line-buffering.patch 477
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB3M5jroRuSHgZdywRArYlAJ9kD1Phq7aFEB8YZ43EKV6WYIvNsACeNUdR
-kyJizQQHmH+Fp48k2hCXQY8=
-=9N/L
+iD8DBQFB3y1broRuSHgZdywRAkMIAJ9vWNEguN5fOfCKsrE7Qpy69MsHbQCghmtv
+VHPb3KXd2TU8jqiHw2NbXXY=
+=sz90
 -----END PGP SIGNATURE-----

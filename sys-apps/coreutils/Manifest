@@ -5,7 +5,7 @@ MD5 0694dfcd303f0a2559e6c745fe042d66 ChangeLog 22484
 MD5 83efa457e8e155248c2ebc6899dc6646 coreutils-5.2.1.ebuild 4149
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 cc6fe5a82e8d5d973c1df141e7fff7bd coreutils-5.2.1-r3.ebuild 4204
-MD5 dcfa6c9d25651f57abb9b9324ef6cfb4 coreutils-5.2.1-r2.ebuild 4384
+MD5 0a532171a448adf8d523ca631e388f3b coreutils-5.2.1-r2.ebuild 4383
 MD5 d3828e48aebb7452db7a8f8b025da0ff files/DIR_COLORS 4041
 MD5 36e1cce43ca15be334d54801e1dbb286 files/digest-coreutils-5.2.1 224
 MD5 5336abda618b9eaa721564d34bb6de9b files/digest-coreutils-5.2.1-r3 225
@@ -17,7 +17,7 @@ MD5 569870ec2f958c2a2a716a7f695deb42 files/coreutils-5.2.1-unamefix.patch 485
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB3ysWroRuSHgZdywRAqOKAJ9Rx3jJlClF6nKJvw0MDgN9qMfQUgCeLtF1
-TSnYH8yMYxSedUpnmFUTI9I=
-=1WdR
+iD8DBQFB3yz/roRuSHgZdywRAqMpAKCTdkNqpdmxxd1pJQYIUDKMBqXQTgCcCor7
+gZk0ip7vfvsGZ4sxeWitT7I=
+=rxAc
 -----END PGP SIGNATURE-----
