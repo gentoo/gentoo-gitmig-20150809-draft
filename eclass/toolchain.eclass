@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.63 2004/12/07 00:09:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.64 2004/12/07 01:42:33 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -31,6 +31,11 @@ toolchain_pkg_setup() {
 
 #---->> globals <<----
 export CTARGET="${CTARGET:-${CHOST}}"
+if [[ ${CTARGET} = ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET="${CATEGORY/cross-}"
+	fi
+fi
 
 MY_PV_FULL="$(get_version_component_range 1-3)"
 MY_PV="$(get_version_component_range 1-2)"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.53 2004/12/03 19:20:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.54 2004/12/07 01:42:33 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -14,6 +14,11 @@ ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 export CTARGET="${CTARGET:-${CHOST}}"
+if [[ ${CTARGET} = ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET="${CATEGORY/cross-}"
+	fi
+fi
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
