@@ -3,10 +3,10 @@ Hash: SHA1
 
 MD5 c70aa2eafab8da5100e86a0245d253aa alsa-lib-0.9.8.ebuild 1584
 MD5 6b11458adc5a923dd38d150f500179a1 alsa-lib-1.0.2.ebuild 1609
-MD5 29f1d68399c83a43cd1a3d9714c72c75 alsa-lib-1.0.6.ebuild 1857
+MD5 e43c316d024dedf2f4de7296d9065525 alsa-lib-1.0.6.ebuild 1911
 MD5 da7b73e5cce5af9fb86504ad43613f7d alsa-lib-1.0.5.ebuild 1734
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e0e2eaeac58325a5ea2eb387b2777b47 ChangeLog 13557
+MD5 6275ff345847ceae25f073f9a80a86ae ChangeLog 13661
 MD5 819916b5aecdc585b5add5d587bc8342 alsa-lib-1.0.5-r3.ebuild 1762
 MD5 7866cccb2308203280e2a4382cbddee4 files/alsa-lib-1.0.3b-rate-capture.patch 565
 MD5 190a6c4ffe2eef20e3095ab70ea34941 files/configure.diff 586
@@ -18,7 +18,7 @@ MD5 446ddecdcb2f56eec8683f1294749061 files/digest-alsa-lib-1.0.5-r3 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBh+lmArHZZzCEUG0RAm+oAJ0XiKFCIWR2XdlPvNf56OupjLhY+wCfenbE
-FyRN1xJ5dksE3MmOKM7wuqs=
-=MsFR
+iD8DBQFBjpXCArHZZzCEUG0RAkbtAJ9qkZ1ROrmeheVgh/G1H+hYDq/GWQCggTcq
+pmmbHIpzgQyZsIbIiinNSWw=
+=0aCk
 -----END PGP SIGNATURE-----

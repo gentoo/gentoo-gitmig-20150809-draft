@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.6 2004/11/02 20:09:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.7 2004/11/07 21:37:58 eradicator Exp $
 
 IUSE="static jack"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 -sparc ~ia64 ~ppc64 ~hppa ~mips"
+KEYWORDS="x86 ~ppc ~alpha amd64 -sparc ~ia64 ~ppc64 ~hppa ~mips"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND="virtual/alsa
@@ -70,9 +70,9 @@ src_install() {
 pkg_postinst() {
 	preserve_old_lib_notify /usr/$(get_libdir)/libasound.so.1
 
-	einfo "If you are using an emu10k1 based sound card, you will need to"
-	einfo "recompile packages that link against alsa-lib due to some ABI"
-	einfo "changes between 1.0.5 and 1.0.6 unique to that hardware. See"
-	einfo "the following URL for more information:"
+	einfo "If you are using an emu10k1 based sound card, and you are upgrading"
+	einfo "from a version of alsalib <1.0.6, you will need to recompile packages"
+	einfo "that link against alsa-lib due to some ABI changes between 1.0.5 and"
+	einfo "1.0.6 unique to that hardware. See the following URL for more information:"
 	einfo "http://bugs.gentoo.org/show_bug.cgi?id=65347"
 }
