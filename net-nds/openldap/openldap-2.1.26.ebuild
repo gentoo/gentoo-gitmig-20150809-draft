@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.4 2004/02/12 03:42:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.5 2004/02/16 07:40:02 robbat2 Exp $
 
 inherit eutils
 
@@ -193,12 +193,14 @@ pkg_postinst() {
 	chmod 0640 /etc/openldap/slapd.conf.default
 	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
 
-	# notes from bug 41297
+	# notes from bug #41297, bug #41039
 	ewarn "If you are upgrading from OpenLDAP 2.0, major changes have occured:"
 	ewarn "- bind_anon_dn is now disabled by default for security"
 	ewarn "  add 'allow bind_anon_dn' to your config for the old behavior."
 	ewarn "- Default schemas have changed, you should slapcat your entire DB to"
-	ewarn "  a file, delete your DB, and then slapadd it again."
+	ewarn "  a file, delete your DB, and then slapadd it again. Alternatively"
+	ewarn "  you can try slapindex which should work in almost all cases. Be"
+	ewarn "  sure to check the permissions on the database files afterwards!"
 	if use ssl; then
 		ewarn "- Self-signed SSL certificates are treated harshly by OpenLDAP 2.1"
 		ewarn "  add 'TLS_REQCERT never' if you want to use them."

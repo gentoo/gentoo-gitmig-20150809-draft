@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.60 2004/02/12 03:42:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.61 2004/02/16 07:40:02 robbat2 Exp $
+
+  15 Feb 2004; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.26.ebuild:
+  add more notes on  bug #41297 fix, from bug #41039.
 
   11 Feb 2004; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.26.ebuild:
   fix bug #41297. fix bug #31202.
