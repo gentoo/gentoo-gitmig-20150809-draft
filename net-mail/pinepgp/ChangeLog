@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/pinepgp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pinepgp/ChangeLog,v 1.2 2002/08/14 19:27:55 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pinepgp/ChangeLog,v 1.3 2002/10/17 18:24:10 blizzy Exp $
+
+  17 Oct 2002; Maik Schreiber <blizzy@gentoo.org> pinepgp-0.18.0.ebuild,
+  pinepgp-0.18.0-r1.ebuild: Changed KEYWORDS to phase out of
+  package.mask.
 
 *pinepgp-0.18.0-r1 (14 Aug 2002)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.5 2002/09/21 18:39:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.6 2002/10/17 18:24:10 blizzy Exp $
+
+  17 Oct 2002; Maik Schreiber <blizzy@gentoo.org> gradm-1.4.ebuild:
+  Changed KEYWORDS to phase out of package.mask.
 
 *gradm-1.5 (21 Sep 2002)
 
