@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.4.ebuild,v 1.11 2003/09/10 05:36:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.4.ebuild,v 1.12 2003/09/26 22:25:43 hhg Exp $
 
 DESCRIPTION="Starting and stopping daemontools managed services."
 HOMEPAGE="http://untroubled.org/supervise-scripts/"
@@ -13,6 +13,7 @@ KEYWORDS="x86 amd64 ppc sparc"
 RDEPEND=">=sys-apps/daemontools-0.70"
 
 src_compile() {
+	echo '/usr/bin' > conf-bin
 	emake || die
 }
 
@@ -20,5 +21,8 @@ src_install() {
 	dobin \
 		svc-add svc-isdown svc-isup svc-remove \
 		svc-start svc-status svc-stop \
-		svc-waitdown svc-waitup svscan-add-to-inittab
+		svc-waitdown svc-waitup svscan-add-to-inittab \
+		svscan-start svscan-stopall
+	dodoc ANNOUNCEMENT COPYING ChangeLog NEWS README TODO VERSION
+	doman *.[0-9]
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.3 2003/09/23 04:28:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.4 2003/09/26 22:25:43 hhg Exp $
 
 inherit fixheadtails
 DESCRIPTION="Starting and stopping daemontools managed services."
@@ -19,6 +19,7 @@ DEPEND=">=sys-apps/daemontools-0.70
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	echo '/usr/bin' > conf-bin
 	echo '/usr/lib/bglibs/lib' > conf-bglibs
 	echo '/usr/lib/bglibs/include' > conf-bgincs
 	echo "${CC} ${CFLAGS}" >conf-cc
