@@ -1,27 +1,32 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1.ebuild,v 1.3 2001/08/21 23:54:43 danarmak Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/qt-${PV}
-DESCRIPTION="QT 2.2"
-SRC_PATH="kde/stable/2.0/distribution/tar/generic/src/${A}"
-SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/${A}"
-HOMEPAGE="http://www.kde.org/"
+DESCRIPTION="QT ${PV}"
+SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/${P}.tar.gz \
+http://www.research.att.com/~leonb/objprelink/qt-configs.patch"
+HOMEPAGE="http://www.trolltech.com/"
 
 DEPEND=">=media-libs/libpng-1.0.9
 	>=media-libs/libmng-1.0.0
 	opengl? ( virtual/opengl virtual/glu )
 	nas? ( >=media-sound/nas-1.4.1 )
+	objprelink? ( dev-util/objprelink )
 	virtual/x11"
 
 export QTDIR=${S}
 
 src_unpack() {
-  unpack ${A}
+  unpack ${P}.tar.gz
   cd ${S}
   cp configure configure.orig
   sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
+  if [ "`use objprelink`" ]
+  then
+	patch -p0 < ${DISTDIR}/qt-configs.patch
+  fi
 }
 
 src_compile() {
@@ -52,7 +57,7 @@ src_compile() {
     else
       myconf="${myconf} -release"
     fi
-
+	
     try SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
     ./configure -sm -thread -system-zlib -system-jpeg ${myconf} \
 	-system-libmng -system-libpng -gif -platform linux-g++ \

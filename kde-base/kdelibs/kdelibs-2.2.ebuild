@@ -10,7 +10,8 @@ DESCRIPTION="KDE ${PV} - libs"
 SRC_PATH="kde/stable/${V}/src/${A}"
 SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
-	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
+	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH
+	 http://www.research.att.com/~leonb/objprelink/kde-admin-acinclude.patch"
 
 HOMEPAGE="http://www.kde.org/"
 
@@ -23,6 +24,7 @@ DEPEND=">=sys-devel/gcc-2.95.2  sys-devel/perl
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	cups? ( net-print/cups )
+	objprelink? ( dev-util/objprelink )
 	sys-devel/autoconf"
 
 RDEPEND=">=sys-devel/gcc-2.95.2
@@ -41,6 +43,7 @@ RDEPEND=">=sys-devel/gcc-2.95.2
 src_unpack() {
     unpack ${A}
     cd ${S}
+	use objprelink && patch -p0 < ${DISTDIR}/kde-admin-acinclude.patch
 #    patch -p0 < ${FILESDIR}/${PN}-2.1.1-ksgmltools-gentoo.diff
 #    rm configure
 #    autoconf
@@ -71,6 +74,9 @@ src_compile() {
     if [ -z "`use ipv6`" ] ; then
       myopts="$myopts --with-ipv6-lookup=no"
     fi
+	
+	use onjprelink && myopts="$myopts --enable-objprelink"
+	
     try ./configure --prefix=/opt/kde${V} --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myopts --with-xinerama \
 		--disable-libfam

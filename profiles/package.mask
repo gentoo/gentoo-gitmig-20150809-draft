@@ -1,3 +1,6 @@
+#experimental objprelink, used by qt/kde, may be unstable
+dev-util/objprelink
+
 #moved away
 kde-apps/cervisia
 kde-apps/kbear

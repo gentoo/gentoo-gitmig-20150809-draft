@@ -1,16 +1,17 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.4 2001/08/17 23:31:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.5 2001/08/21 23:54:43 danarmak Exp $
 
 V=${PV}
-A=${PN}-${V}.tar.bz2
+#A=${PN}-${V}.tar.bz2
 S=${WORKDIR}/${PN}-${V}
 DESCRIPTION="KDE ${V} - Base"
-SRC_PATH="kde/stable/${V}/src/${A}"
+SRC_PATH="kde/stable/${V}/src/${P}.tar.bz2"
 SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
-	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
+	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH
+	 http://www.research.att.com/~leonb/objprelink/kde-admin-acinclude.patch"
 HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=kde-base/kdelibs-${PV}
@@ -21,7 +22,17 @@ DEPEND=">=kde-base/kdelibs-${PV}
 	lame? ( =media-sound/lame-3.88b-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )
 	cups? ( net-print/cups )
-	ssl? ( dev-libs/openssl )"
+	ssl? ( dev-libs/openssl )
+	objprelink? ( dev-util/objprelink )"
+
+src_unpack() {
+	
+	cd ${WORKDIR}
+	unpack ${P}.tar.bz2
+	cd ${S}
+	use objprelink && patch -p0 < ${DISTDIR}/kde-admin-acinclude.patch
+	
+}
 
 src_compile() {
     local myconf
@@ -70,6 +81,10 @@ src_compile() {
     if [ -z "`use ssl`" ] ; then
       myconf="$myconf --without-ssl"
     fi
+	
+	if [ "`use objprelink`" ] ; then
+	  myconf="$myconf --enable-objprelink"
+	fi
 
     QTBASE=/usr/X11R6/lib/qt
 #    export CFLAGS="${CFLAGS} -I/usr/X11R6/include"
