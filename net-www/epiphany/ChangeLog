@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.59 2004/08/01 16:16:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.60 2004/08/03 19:32:52 spider Exp $
+
+  03 Aug 2004; <spider@gentoo.org> epiphany-1.2.6.ebuild,
+  epiphany-1.2.7.ebuild:
+  Fixes for glib version dependency. Thanks to Andrew Cowie who pointed it out.
 
 *epiphany-1.2.7 (01 Aug 2004)
 
