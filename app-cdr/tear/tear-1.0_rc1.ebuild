@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/tear-1.0_rc1.ebuild,v 1.9 2003/09/05 01:31:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/tear-1.0_rc1.ebuild,v 1.10 2003/09/20 20:46:10 aliz Exp $
 
 DESCRIPTION="T.E.A.R. Encodes And Rips CDs into mp3 or ogg files."
 HOMEPAGE="http://tear.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/tear/${P}.tar.bz2"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc"

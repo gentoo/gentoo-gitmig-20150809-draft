@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.11 2003/09/05 01:27:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.12 2003/09/20 20:46:10 aliz Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.src.tar.gz"
+SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,6 @@
-# Copyright 2002 Felix Kurth <felix@fkurth.de>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.3.1.ebuild,v 1.11 2002/12/09 04:17:37 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.3.1.ebuild,v 1.12 2003/09/20 20:46:10 aliz Exp $
 
 DESCRIPTION="Creates CD-Covers via Latex by fetching cd-info from freedb.org or local file"
 HOMEPAGE="http://www.liacs.nl/~jvhemert/disc-cover/"

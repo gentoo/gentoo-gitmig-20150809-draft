@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.16 2003/04/12 21:26:30 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.17 2003/09/20 20:46:10 aliz Exp $
 
 *arson-0.9.7-r3 (12 Apr 2003)
   12 Apr 2003; Michele Balistreri <brain@gentoo.org> : arson-0.9.7-r3.ebuild :
@@ -27,14 +27,19 @@
   Inherit kde before setting local settings, so that overrides are done in
   the correct direction.
 
-*arson-0.9.7-r1 (25 Nov 2002) Arcady Genkin <agenkin@gentoo.org>
-	arson-0.9.7-r1.ebuild:
+*arson-0.9.7-r1 (25 Nov 2002) 
+
+  25 Nov 2002; Arcady Genkin <agenkin@gentoo.org> arson-0.9.7-r1.ebuild:
   Added a patch to fix a missing dialog when chosing an ISO image.
   Submitted by anders@bruun-olsen.net (Anders Bruun Olsen).
 	
-*arson-0.9.7 (31 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
+*arson-0.9.7 (31 Okt 2002) 
 
-*arson-0.9.6 (28 Jun 2002) Bart Verwilst <verwilst@gentoo.org>
+  31 Oct 2002; Bart Verwilst <verwilst@gentoo.org>
+
+*arson-0.9.6 (28 Jun 2002) 
+
+  28 Jun 2002; Bart Verwilst <verwilst@gentoo.org>
 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
 
