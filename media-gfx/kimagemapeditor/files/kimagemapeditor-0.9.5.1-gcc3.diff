@@ -1,0 +1,17 @@
+--- kimagemapeditor/kimecommon.h	Tue Apr 23 23:08:15 2002
++++ kimagemapeditor/kimecommon.h	Tue Sep 17 12:56:29 2002
+@@ -34,12 +34,14 @@
+ 		return i;
+ }
+ 
++/* disable for gcc3 because the std. round() function gets included when using gcc3, but not gcc2
+ inline int round(double d) {
+ 	if ( (d-((int) d)) < 0.5 )
+ 		return (int) d;
+ 	else
+ 		return ((int) d)+1;
+ }
++*/
+ 
+ inline int roundUp(double d)
+ {
