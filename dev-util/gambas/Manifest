@@ -3,7 +3,7 @@ MD5 ecdae4ffa95a5944525415805e9ddbf3 gambas-0.92-r1.ebuild 1951
 MD5 d789a2705e1837a4dd658ab24051a861 gambas-0.92.ebuild 1867
 MD5 622720c5c5e309d4457ff037f8a4175f metadata.xml 222
 MD5 f264731190b7c2ceac40cca0e78206dc ChangeLog 2583
-MD5 0e1d4ad55883607591335380473abff4 gambas-0.93b.ebuild 2088
+MD5 e7c8b53451ce64218ab81516c5155564 gambas-0.93b.ebuild 2064
 MD5 964111dfc43bdc4aab2276817f8f57df files/Makefile.am-0.90 1370
 MD5 59e95678efba2286221a1040cf515aa3 files/digest-gambas-0.91 65
 MD5 71bcff61006d8528abb1b438a23c66f8 files/digest-gambas-0.92 65
