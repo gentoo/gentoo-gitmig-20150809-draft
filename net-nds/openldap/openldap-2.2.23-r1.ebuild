@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.23-r1.ebuild,v 1.2 2005/02/15 20:13:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.23-r1.ebuild,v 1.3 2005/02/17 17:44:57 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -170,6 +170,8 @@ src_compile() {
 	myconf="${myconf} `use_with ssl tls` `use_with samba lmpasswd`"
 
 	econf \
+		--enable-static \
+		--enable-shared \
 		--libexecdir=/usr/lib/openldap \
 		${myconf} || die "configure failed"
 
