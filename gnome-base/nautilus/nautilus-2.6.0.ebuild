@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.5.91.ebuild,v 1.1 2004/03/20 23:04:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.0.ebuild,v 1.1 2004/03/22 22:36:59 foser Exp $
 
 inherit gnome2
 
@@ -31,11 +31,11 @@ RDEPEND=">=dev-libs/glib-2.3
 	dev-libs/popt
 	app-admin/fam
 	sys-apps/eject
-	cups? ( net-print/libgnomecups
-		>=net-print/gnome-cups-manager-0.17-r03202004 )
+	cups? ( net-print/libgnomecups )
 	!gstreamer? ( oggvorbis? ( media-sound/vorbis-tools ) )
 	gstreamer? ( >=media-libs/gstreamer-0.6
 		>=media-libs/gst-plugins-0.6 )"
+#		>=net-print/gnome-cups-manager-0.17-r03202004 )
 
 # FIXME : what to do with exif/jpeg config stuff ?
 
@@ -70,3 +70,17 @@ src_unpack() {
 	fi
 
 }
+
+pkg_postinst() {
+
+	gnome2_pkg_postinst
+
+	einfo "Nautilus moved to a new spatial browsing model."
+	einfo "If you are unhappy with this behaviour you can revert to the"
+	einfo "old browerslike behaviour by issueing the following command :"
+	einfo "gconftool-2  -s /apps/nautilus/preferences/always_use_browser -t bool FALSE"
+	echo
+
+}
+
+
