@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/gnu-regexp-1.1.4.ebuild,v 1.8 2004/10/16 17:15:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/gnu-regexp-1.1.4.ebuild,v 1.9 2004/10/20 07:18:18 absinthe Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ S=${WORKDIR}/${MY_P}
 LICENSE="LGPL-2.1"
 SLOT="1"
 DEPEND=">=virtual/jdk-1.2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 src_compile() {

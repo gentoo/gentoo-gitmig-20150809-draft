@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-regexp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.7 2004/10/16 17:15:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.8 2004/10/20 07:18:18 absinthe Exp $
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gnu-regexp-1.1.4.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> gnu-regexp-1.1.4.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
