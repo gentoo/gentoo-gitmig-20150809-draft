@@ -1,4 +1,6 @@
 MD5 dbef85d560826086311e4e5ab161a471 Getopt-Long-2.33.ebuild 585
 MD5 24b8d98003f84d2f648325149dc7e1db ChangeLog 386
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 8e827befe7f67bc54f588bf18943c570 Getopt-Long-2.34.ebuild 476
 MD5 b8ba1a3160df47f03b0254e047b3b858 files/digest-Getopt-Long-2.33 67
+MD5 ef72aad0758beb5a213eecdce43e9835 files/digest-Getopt-Long-2.34 67
