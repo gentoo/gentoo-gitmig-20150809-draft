@@ -1,0 +1,46 @@
+diff -Nuar ipmiutil-1.6.0.orig/Makefile.am ipmiutil-1.6.0/Makefile.am
+--- ipmiutil-1.6.0.orig/Makefile.am	2005-02-10 07:29:37.000000000 -0800
++++ ipmiutil-1.6.0/Makefile.am	2005-03-25 01:40:42.817933112 -0800
+@@ -1,5 +1,5 @@
+ 
+-SUBDIRS = doc freeipmi util
++SUBDIRS = doc util
+ PKGDIR = /usr/src/redhat
+ SOURCEDIR = $(PKGDIR)/SOURCES
+ BUILDDIR = $(PKGDIR)/BUILD
+diff -Nuar ipmiutil-1.6.0.orig/Makefile.in ipmiutil-1.6.0/Makefile.in
+--- ipmiutil-1.6.0.orig/Makefile.in	2005-03-07 12:25:58.000000000 -0800
++++ ipmiutil-1.6.0/Makefile.in	2005-03-25 01:40:53.444317656 -0800
+@@ -63,7 +63,7 @@
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ 
+-SUBDIRS = doc freeipmi util
++SUBDIRS = doc util
+ PKGDIR = /usr/src/redhat
+ SOURCEDIR = $(PKGDIR)/SOURCES
+ BUILDDIR = $(PKGDIR)/BUILD
+diff -Nuar ipmiutil-1.6.0.orig/util/Makefile.am ipmiutil-1.6.0/util/Makefile.am
+--- ipmiutil-1.6.0.orig/util/Makefile.am	2005-03-07 12:14:03.000000000 -0800
++++ ipmiutil-1.6.0/util/Makefile.am	2005-03-25 01:41:27.013214408 -0800
+@@ -3,7 +3,7 @@
+ AM_CPPFLAGS = -DLINUX -DLOCALEDIR=\"$(localedir)\"
+ INCLUDES = -I..
+ CMDMOD = ipmicmd.c imbapi.c ipmimv.c ipmignu.c ipmild.c 
+-LDFLAGS = -lfreeipmi -L../freeipmi 
++LDFLAGS = -lfreeipmi
+ # To build without gnu freeipmi, uncomment the following two lines.
+ # LDFLAGS = 
+ # CMDMOD = ipmicmd.c imbapi.c ipmimv.c ipmignustub.c
+diff -Nuar ipmiutil-1.6.0.orig/util/Makefile.in ipmiutil-1.6.0/util/Makefile.in
+--- ipmiutil-1.6.0.orig/util/Makefile.in	2005-03-07 12:26:04.000000000 -0800
++++ ipmiutil-1.6.0/util/Makefile.in	2005-03-25 01:41:28.650965432 -0800
+@@ -67,7 +67,7 @@
+ AM_CPPFLAGS = -DLINUX -DLOCALEDIR=\"$(localedir)\"
+ INCLUDES = -I..
+ CMDMOD = ipmicmd.c imbapi.c ipmimv.c ipmignu.c ipmild.c 
+-LDFLAGS = -lfreeipmi -L../freeipmi 
++LDFLAGS = -lfreeipmi
+ # To build without gnu freeipmi, uncomment the following two lines.
+ # LDFLAGS = 
+ # CMDMOD = ipmicmd.c imbapi.c ipmimv.c ipmignustub.c

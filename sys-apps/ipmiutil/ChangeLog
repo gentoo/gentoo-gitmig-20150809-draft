@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/ipmiutil
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.1 2005/03/25 10:12:47 robbat2 Exp $
+
+*ipmiutil-1.6.0 (25 Mar 2005)
+
+  25 Mar 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ipmiutil-1.6.0-link-external-freeipmi.diff, +ipmiutil-1.6.0.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

@@ -1,0 +1,5 @@
+MD5 a2cc0298c99de1f3f5b9946258a00d41 ipmiutil-1.6.0.ebuild 1176
+MD5 6a4dff89de982b1a02e6fc84440abd35 ChangeLog 437
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 26555fccc3acf12bb91ab2b43478209c files/ipmiutil-1.6.0-link-external-freeipmi.diff 1904
+MD5 96a84a3afc0b7d84cd30d6134a389be1 files/digest-ipmiutil-1.6.0 67
