@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/rox-session
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.1 2004/11/26 18:43:55 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.2 2004/11/26 18:48:26 sergey Exp $
+
+  26 Nov 2004; Sergey Kuleshov <svyatogor@gentoo.org>
+  rox-session-0.1.20.ebuild, rox-session-0.1.21.ebuild:
+  Update dependencies, due to move from app-misc/ to rox-base
 
 *rox-session-0.1.21 (26 Nov 2004)
 
