@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/drivel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.11 2004/10/23 09:34:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.12 2004/12/06 06:04:52 joem Exp $
+
+*drivel-1.2.3 (06 Dec 2004)
+
+  06 Dec 2004; Joe McCann <joem@gentoo.org> +drivel-1.2.3.ebuild:
+  Bugfix release. Added spell useflag for optional gtkspell support
 
   23 Oct 2004; Alastair Tse <liquidx@gentoo.org> drivel-1.0.2.ebuild,
   drivel-1.2.1.ebuild:

@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e7ce7c62388e01bd64b7679e8eb5a45a ChangeLog 1630
+MD5 68e0cc4e4275b778abd85b6ec487ac41 ChangeLog 1791
 MD5 1a89eb5afb4f31ea4c306778588bf2d3 drivel-1.0.2.ebuild 921
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f3051299da153f750fd6aa9427c5f662 drivel-1.2.1.ebuild 1096
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 983b7706f601bd1710088b139e5ede3d drivel-1.2.3.ebuild 1013
 MD5 9d367202ed4bbec4c030f6e8f515e375 files/digest-drivel-1.0.2 65
 MD5 57c3ea5b48e01746bae0f8954c3843bf files/digest-drivel-1.2.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBeiXGRkyva5PS18kRArR4AJ40VVXaRpp0GeBLRYFFcnMl4aGLIACfXNWe
-mOFnAkF6I2yl3ke1GOonUtI=
-=HpGV
------END PGP SIGNATURE-----
+MD5 a91f1dc3993ecd2da62732132f915baa files/digest-drivel-1.2.3 65
