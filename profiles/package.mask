@@ -340,5 +340,3 @@ dev-lang/tcl-tk
 # reiserfs
 >=sys-apps/grub-0.91
 
-# [aeoo] testing
->x11-wm/blackbox-0.61.1-r1
