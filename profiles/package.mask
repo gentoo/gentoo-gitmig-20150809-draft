@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+
+# <tantive@gentoo.org> (10 Oct 2002)
+# Enabled the autodiscovery daemon (omdiscd).
+=sys-apps/openmosix-user-0.2.4-r2
+
 # <kain@gentoo.org> (10 Oct 2002)
 # Newer ppc kernel; wants more testing.
 =sys-kernel/ppc-sources-2.4.20-r1
