@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d59dfbe01ceeed11f51bfcda1d47504 ChangeLog 2476
+MD5 0d573a7805bc8f83a1dc3aa25b2e9cd6 ChangeLog 2554
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 fd8c8dd15bb4935e15f7e418cf69b296 mod_auth_mysql-2.0.0_pre20030510.ebuild 1508
-MD5 d88bc2d15ac34b12207e8f62e686278d mod_auth_mysql-2.8.1.ebuild 874
+MD5 a8ef1e2f588ed302f1af1e4502dbeb0d mod_auth_mysql-2.8.1.ebuild 880
 MD5 01cc878ba30a6e2ad327de787e21a999 files/12_mod_auth_mysql.conf 3571
 MD5 a9f56734948e06d5ed5f4b7eea9f6cd5 files/digest-mod_auth_mysql-2.0.0_pre20030510 61
 MD5 a6cfd8f7d972e23afa55e33bb478e1bc files/digest-mod_auth_mysql-2.8.1 71
 MD5 dd4f31c36839f4faadcf855915e348c3 files/mod_auth_mysql.patch 357
 MD5 d6baa28feeb088701ed677185d61b93d files/2.8.1/12_mod_auth_mysql.conf 3566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFKpAmPFBzbX68WERAqcsAJ0YOrb0UaVOtKlifurffmrzq+6C2ACbBzan
-uUEfEdlic5c9iqbAG9wRbiQ=
-=wwXe
------END PGP SIGNATURE-----
