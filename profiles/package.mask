@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3298 2004/11/01 21:51:22 bcowan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3299 2004/11/05 10:20:59 eradicator Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -214,11 +214,6 @@ dev-perl/libapreq2
 # Karl Trygve Kalleberg <karltk@gentoo.org> (23 Sep 2004)
 # upstream is unstable
 >=dev-util/eclipse-sdk-3.1_pre
-
-# Jeremy Huddleston <eradicator@gentoo.org> (18 Sep 2004)
-# 1.1 versions have problems with 100% CPU usage with
-# gstreamer.
->=media-sound/amarok-1.1_beta2
 
 # <foser@gentoo.org> (14 Sep 2004)
 # Big GNOME 2.8 mask
