@@ -1,28 +1,22 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-5.0.47-r2.ebuild,v 1.1 2001/10/29 05:24:18 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-5.0.47-r2.ebuild,v 1.2 2001/12/07 21:14:22 drobbins Exp $
 
 S=${WORKDIR}/flash_linux
 DESCRIPTION="Macromedia Shockwave Flash Player"
-SRC_URI="http://download.macromedia.com/pub/shockwave/flash/english/linux/5.0r47/flash_linux.tar.gz"
+MANUAL_SRC_URI="http://download.macromedia.com/pub/shockwave/flash/english/linux/5.0r47/flash_linux.tar.gz"
 HOMEPAGE="http://www.macromedia.com"
 
 dyn_fetch() {
-  
-	for y in ${A}
-	do
-	digest_check ${y} || failed_digest
-	done
+	[ ! -e ${DISTDIR}/flash_linux.tar.gz ] && failed_digest
 }
 
 failed_digest() {
-
 	einfo "Please download this manually into ${DISTDIR}"
-	einfo "`echo ${SRC_URI}`"
+	einfo "`echo ${MANUAL_SRC_URI}`"
 	exit 1 
 }
-
 
 src_install() {                               
   dodir /opt/netscape/plugins
