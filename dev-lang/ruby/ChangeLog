@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.34 2003/10/11 20:32:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.35 2003/10/31 16:27:07 usata Exp $
+
+*ruby-1.8.1_pre2 (01 Nov 2003)
+
+  01 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.1_pre2.ebuild:
+  New upstream preview release.
 
 *ruby-1.8.0-r1 (12 Oct 2003)
 
