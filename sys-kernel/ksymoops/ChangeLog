@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.17 2004/07/02 08:43:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.18 2004/08/14 23:22:40 plasmaroo Exp $
+
+  15 Aug 2004; <plasmaroo@gentoo.org> ksymoops-2.4.9.ebuild:
+  /sbin/ksymoops >> /usr/bin/ksymoops; bug #47482.
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ksymoops-2.4.5.ebuild, ksymoops-2.4.7.ebuild, ksymoops-2.4.8.ebuild,
