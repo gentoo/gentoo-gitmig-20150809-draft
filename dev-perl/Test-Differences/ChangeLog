@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-Differences
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/ChangeLog,v 1.1 2004/03/29 10:27:19 mcummings Exp $
+
+*Test-Differences-0.47 (29 Mar 2004)
+
+  29 Mar 2004; Michael Cummings <mcummings@gentoo.org>
+  Test-Differences-0.47.ebuild, metadata.xml:
+  Dep for a dep of bricolage, bug 21549
+
