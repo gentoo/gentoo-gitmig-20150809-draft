@@ -2120,7 +2120,7 @@ if root != "/":
 		sys.exit(1)
 if not os.path.exists(root+"tmp"):
 	print ">>> "+root+"tmp doesn't exist, creating it..."
-	os.path.mkdir(root+"tmp",01777)
+	os.mkdir(root+"tmp",01777)
 settings=config()
 ebuild_initialized=0
 
