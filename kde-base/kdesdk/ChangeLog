@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.62 2004/08/30 15:45:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.63 2004/09/03 13:37:52 caleb Exp $
+
+  03 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdesdk-3.3.0.ebuild:
+  Add cvs as a runtime dep of kdesdk
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kdesdk-3.1.5.ebuild, kdesdk-3.2.0.ebuild, kdesdk-3.2.1.ebuild,
