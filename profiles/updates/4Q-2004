@@ -139,3 +139,4 @@ move app-sci/nmrview sci-chemistry/nmrview
 move app-sci/openbabel sci-chemistry/openbabel
 move app-sci/pymol sci-chemistry/pymol
 move app-sci/rasmol sci-chemistry/rasmol
+move app-sci/raster3d sci-chemistry/raster3d
