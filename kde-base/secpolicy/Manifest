@@ -1,8 +1,18 @@
-MD5 0519bcc94262f5f22a4ce3a103677b4a secpolicy-3.4.0_rc1.ebuild 451
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf5db331a5bed42601d741b2882a34fc secpolicy-3.4.0_rc1.ebuild 455
 MD5 064b9f328bce9a4020565b4c8d9d9a2d secpolicy-3.4.0_beta2.ebuild 453
 MD5 3b8bc4432d4cdc75a711cf4eb03c9c0d secpolicy-3.4.0_beta1.ebuild 453
-MD5 f3b545795c79071a5c68729611e1d916 ChangeLog 814
+MD5 c361bba81f0868b8730b182941d518e9 ChangeLog 988
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 361b4361884418de6b9a13b860ed6a67 files/digest-secpolicy-3.4.0_rc1 376
 MD5 06d8b082374f502eb28cb4e5681f0bf7 files/digest-secpolicy-3.4.0_beta1 215
 MD5 a9fea6bcd37c5357c2d83088b0fcd969 files/digest-secpolicy-3.4.0_beta2 293
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCM6OhntT9W3vfTuoRAoNSAJ4sSnHoi/ffsPmnCuLM4l7x/aKlngCgqIOd
+/yINnRWy0IBOK33djK3T/2Y=
+=5tDl
+-----END PGP SIGNATURE-----
