@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1d.ebuild,v 1.4 2004/06/14 17:04:23 kloeri Exp $
 
 inherit distutils eutils
 
