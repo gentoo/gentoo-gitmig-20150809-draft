@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.3 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.4 2002/07/16 03:55:40 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TeX macros used by Jade TeX output."
@@ -10,6 +10,7 @@ HOMEPAGE="http://jadetex.sourceforge.net/"
 DEPEND=">=app-text/openjade-1.3.1
 	>=app-text/tetex-1.0.7"
 
+KEYWORDS="x86 ppc"
 
 src_compile() {
 
