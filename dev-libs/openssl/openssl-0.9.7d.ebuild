@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.5 2004/04/19 19:10:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.6 2004/04/21 03:51:06 tgall Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -65,6 +65,9 @@ set +x
 		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure
 	done
 	IFS=$OLDIFS
+	if [ "${ARCH}" = "ppc64" ]; then
+		epatch ${FILESDIR}/addppc64support.diff
+	fi
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
@@ -134,9 +137,7 @@ src_compile() {
 
 	einfo "Compiling ${P}"
 	emake all || die
-	if [ "`use !ppc64`" ]; then
-		make test || die
-	fi
+	make test || die
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
