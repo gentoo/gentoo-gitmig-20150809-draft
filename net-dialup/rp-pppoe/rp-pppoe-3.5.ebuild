@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.2 2002/12/12 00:07:34 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.3 2002/12/28 14:50:09 pvdabeel Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
@@ -11,7 +11,7 @@ DEPEND=">=net-dialup/ppp-2.4.1
 	X? ( virtual/x11 )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="X"
 
 src_compile() {
