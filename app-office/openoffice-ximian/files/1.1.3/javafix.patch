@@ -1,0 +1,27 @@
+--- connectivity/source/drivers/jdbc/DriverPropertyInfo.cxx	24 Apr 2003 13:20:29 -0000	1.4
++++ connectivity/source/drivers/jdbc/DriverPropertyInfo.cxx	27 Dec 2004 09:35:38 -0000
+@@ -184,7 +184,12 @@
+ 	{
+ 		jfieldID id = t.pEnv->GetFieldID(java_sql_DriverPropertyInfo::getMyClass(),"choices","[Ljava/lang/String;");
+ 		if(id)
+-			return copyArrayAndDelete(t.pEnv,(jobjectArray)t.pEnv->GetObjectField( object, id), ::rtl::OUString(),java_lang_String(NULL,NULL));
++			return copyArrayAndDelete(
++                t.pEnv,
++                (jobjectArray)t.pEnv->GetObjectField( object, id),
++                static_cast< const ::rtl::OUString* >( NULL ),
++                static_cast< const java_lang_String* >( NULL )
++            );
+ 	} //t.pEnv
+ 	return Sequence< ::rtl::OUString>();
+ }
+--- connectivity/source/inc/java/tools.hxx	1 Nov 2002 10:58:49 -0000	1.5
++++ connectivity/source/inc/java/tools.hxx	27 Dec 2004 09:35:42 -0000
+@@ -101,7 +101,7 @@
+ 
+ 	java_util_Properties* createStringPropertyArray(JNIEnv *pEnv,const ::com::sun::star::uno::Sequence< ::com::sun::star::beans::PropertyValue >& info ) throw(::com::sun::star::sdbc::SQLException, ::com::sun::star::uno::RuntimeException);
+ 
+-    template<class T,class JT> ::com::sun::star::uno::Sequence< T > copyArrayAndDelete(JNIEnv *pEnv,jobjectArray _Array,const  T& _rD1,const  JT& _rD2)
++    template<class T,class JT> ::com::sun::star::uno::Sequence< T > copyArrayAndDelete(JNIEnv *pEnv,jobjectArray _Array, const T*, const JT* )
+ 	{
+                 ::com::sun::star::uno::Sequence< T > xOut;
+ 		if(_Array)

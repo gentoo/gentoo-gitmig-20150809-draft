@@ -1,10 +1,14 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.89 2005/01/14 15:28:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.90 2005/01/14 15:34:24 suka Exp $
+
+  14 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.3/javafix.patch, openoffice-ximian-1.3.7.ebuild:
+  Another fix for java build problems, closes bug #77866
 
   14 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   files/1.1.3/gentoo-1.3.7.patch:
-  Fix for building with -gnome and -kde
+  Fix for building with -gnome and -kde, closes bug#77911
 
 *openoffice-ximian-1.3.7 (13 Jan 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.1 2005/01/12 23:05:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.2 2005/01/14 15:34:24 suka Exp $
 
 # Notes:
 #
@@ -247,6 +247,9 @@ src_unpack() {
 	if use ppc; then
 		epatch ${FILESDIR}/${OO_VER}/STLport-vector.patch
 	fi
+
+	#Another java problem
+	epatch ${FILESDIR}/${OO_VER}/javafix.patch
 
 	#Add our own splash screen
 	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
