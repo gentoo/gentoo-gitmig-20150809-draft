@@ -1,0 +1,22 @@
+diff -ruN powerpc-utils-1.1.3.orig/backlight.c powerpc-utils-1.1.3/backlight.c
+--- powerpc-utils-1.1.3.orig/backlight.c	2004-08-25 11:34:57.273947544 +0200
++++ powerpc-utils-1.1.3/backlight.c	2004-08-25 11:33:21.153560064 +0200
+@@ -24,7 +24,6 @@
+ #include <sys/types.h>
+ #include <linux/ioctl.h>
+ #include <linux/types.h>
+-#include <linux/adb_mouse.h>
+ #include <linux/cuda.h>
+ #include <linux/adb.h>
+ #include <linux/pmu.h>
+diff -ruN powerpc-utils-1.1.3.orig/trackpad.c powerpc-utils-1.1.3/trackpad.c
+--- powerpc-utils-1.1.3.orig/trackpad.c	2004-08-25 11:34:57.267948456 +0200
++++ powerpc-utils-1.1.3/trackpad.c	2004-08-25 11:33:07.261671952 +0200
+@@ -18,7 +18,6 @@
+ #include <unistd.h>
+ #include <errno.h>
+ #include <fcntl.h>
+-#include <linux/adb_mouse.h>
+ #include <linux/cuda.h>
+ #include <linux/adb.h>
+ 
