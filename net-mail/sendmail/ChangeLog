@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.23 2003/01/27 07:15:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.24 2003/02/03 06:24:14 raker Exp $
+
+*sendmail-8.12.7-r5 (03 Feb 20003)
+
+  03 Feb 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r5.ebuild,
+  files/digest-sendmail-8.12.7-r5, files/sendmail-r5 :
+  Changed /usr/sbin/sendmail to sendmail in the stop portion of the
+  script and added some changes for proper SASL2 usage as suggested
+  by Alessandro Pisani on bug #14411.
 
 *sendmail-8.12.7-r4 (26 Jan 2003)
 
