@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/labplot/labplot-1.3.0.ebuild,v 1.2 2004/12/28 20:29:12 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/labplot/labplot-1.3.0.ebuild,v 1.3 2004/12/29 02:40:19 ribosome Exp $
 
 inherit eutils gnuconfig kde
 
@@ -18,7 +18,7 @@ IUSE="fftw imagemagick tiff"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 DEPEND=">=sci-libs/gsl-1.3
-	fftw? ( >=dev-libs/fftw-2.1.5 )
+	fftw? ( >=sci-libs/fftw-2.1.5 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6-r1 )
 	x86? ( >=media-gfx/pstoedit-3.33 )
 	tiff? ( >=media-libs/tiff-3.5.5 )
