@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.80.ebuild,v 1.5 2004/11/06 16:49:27 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.80.ebuild,v 1.6 2005/02/21 21:24:44 luckyduck Exp $
 
 MY_P=${PN/-/_}2-${PV}
 DESCRIPTION="GUI for dctc"
@@ -9,7 +9,7 @@ SRC_URI="http://brainz.servebeer.com/dctc/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="nls"
 
 DEPEND="=dev-libs/glib-2*
