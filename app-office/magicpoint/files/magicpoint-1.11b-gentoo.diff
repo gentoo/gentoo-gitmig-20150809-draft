@@ -29,9 +29,9 @@ diff -urN magicpoint-1.10a.ORIG/sample/default.mgp magicpoint-1.10a/sample/defau
 -%deffont "standard"   tfont "standard.ttf",   tmfont "kochi-mincho.ttf"
 -%deffont "thick"      tfont "thick.ttf",      tmfont "goth.ttf"
 -%deffont "typewriter" tfont "typewriter.ttf", tmfont "goth.ttf"
-+%deffont "standard"	xfont "times"
-+%deffont "thick"	xfont "arial-bold"
-+%deffont "typewriter"	xfont "courier"
++%deffont "standard"	xfont "serif" "iso10646"
++%deffont "thick"	xfont "sans-serif" "iso10646"
++%deffont "typewriter"	xfont "monospace" "iso10646"
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %%
  %% Default settings per each line numbers.

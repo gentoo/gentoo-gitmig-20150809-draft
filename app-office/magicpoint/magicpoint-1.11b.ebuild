@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11a.ebuild,v 1.1 2004/09/15 09:42:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.1 2004/10/06 11:40:30 usata Exp $
 
 inherit elisp-common eutils
 
 DESCRIPTION="an X11 based presentation tool"
-SRC_URI="ftp://ftp.mew.org/pub/MagicPoint/${P}.tar.gz"
+SRC_URI="ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/${P}.tar.gz
+	ftp://ftp.mew.org/pub/MagicPoint/${P}.tar.gz"
 HOMEPAGE="http://www.mew.org/mgp/"
 
 LICENSE="BSD"
@@ -21,7 +22,7 @@ DEPEND="virtual/x11
 	m17n-lib? ( dev-libs/m17n-lib )"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )
-	truetype? ( cjk? ( media-fonts/kochi-substitute ) )"
+	truetype? ( cjk? ( media-fonts/sazanami ) )"
 
 SITELISP=/usr/share/emacs/site-lisp
 SITEFILE=50mgp-mode-gentoo.el
@@ -91,6 +92,12 @@ src_install() {
 
 pkg_postinst() {
 	has_emacs && elisp-site-regen
+	einfo
+	einfo "If you enabled xft2 support (default) you may specify xfont directive by"
+	einfo "font name and font registry."
+	einfo "e.g.)"
+	einfo '%deffont "standard" xfont "sazanami mincho" "jisx0208.1983"'
+	einfo
 }
 
 pkg_postrm() {
