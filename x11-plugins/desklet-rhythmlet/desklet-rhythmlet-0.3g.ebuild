@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rhythmlet/desklet-rhythmlet-0.3g.ebuild,v 1.2 2004/07/18 11:36:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rhythmlet/desklet-rhythmlet-0.3g.ebuild,v 1.3 2004/07/20 19:48:07 kloeri Exp $
 
 DESKLET_NAME="Rhythmlet"
 
@@ -21,7 +21,7 @@ DEPEND=">=gnome-extra/gdesklets-core-0.26
 	>=x11-plugins/desklet-psisensors-20040420
 	>=dev-python/gnome-python-2.0
 	>=dev-python/soappy-0.11
-	>=dev-python/Imaging-1.0
+	>=dev-python/imaging-1.0
 	>=media-sound/rhythmbox-0.8.5"
 
 DOCS="ChangeLog INSTALL README"
