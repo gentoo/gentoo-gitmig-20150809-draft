@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.9.ebuild,v 1.1 2004/10/19 13:40:44 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.9.ebuild,v 1.2 2004/10/21 16:50:40 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -92,7 +92,7 @@ src_unpack() {
 	autoconf
 	(cd apr; autoconf)
 	(cd apr-util; autoconf)
-	sed -i -e 's,\(subversion/svnversion/svnversion\)\(>.*svn-revision.txt\),echo "external" \2,' Makefile.in
+	sed -i -e 's,\(subversion/svnversion/svnversion.*\)\(>.*svn-revision.txt\),echo "exported" \2,' Makefile.in
 }
 
 src_compile() {
