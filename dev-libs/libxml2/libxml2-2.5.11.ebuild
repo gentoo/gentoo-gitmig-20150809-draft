@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.11.ebuild,v 1.6 2003/10/18 22:54:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.11.ebuild,v 1.7 2003/10/21 02:57:42 agriffis Exp $
 
 inherit eutils libtool gnome.org flag-o-matic
 
@@ -15,7 +15,7 @@ DEPEND="sys-libs/zlib
 
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa amd64"
 
 src_compile() {
 	elibtoolize
