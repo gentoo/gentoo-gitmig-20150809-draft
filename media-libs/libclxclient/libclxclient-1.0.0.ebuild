@@ -1,8 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/libclxclient-1.0.0.ebuild,v 1.2 2004/10/15 05:47:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/libclxclient-1.0.0.ebuild,v 1.3 2004/11/17 22:47:22 eradicator Exp $
+
+IUSE=""
 
 inherit eutils
+
+S="${WORKDIR}/clxclient-${PV}"
 
 DESCRIPTION="An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>"
 HOMEPAGE="http://users.skynet.be/solaris/linuxaudio"
@@ -10,10 +14,7 @@ SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/clxclient-${PV}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
-
-S="${WORKDIR}/clxclient-${PV}"
+KEYWORDS="~amd64 ~sparc x86"
 
 DEPEND="virtual/libc
 	virtual/x11
