@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.6 2003/08/03 23:10:11 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.7 2003/08/18 12:54:30 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -23,7 +23,7 @@ EXPORT_FUNCTIONS src_install
 
 # Wether the extensions is a Zend Engine extension
 #(defaults to "no" and if you don't know what is it, you don't need it.)
-[ -z "$PHP_EXT_ZENDEXT" ] && PHP_EXT_ZENDEXT="no" || PHP_EXT_ZENDEXT="yes"
+[ -z "$PHP_EXT_ZENDEXT" ] && PHP_EXT_ZENDEXT="no"
 
 # Wether or not to add a line in the php.ini for the extension
 # (defaults to "yes" and shouldn't be changed in most cases)
