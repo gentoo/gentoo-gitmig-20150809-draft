@@ -1,7 +1,7 @@
 #!/bin/bash
 USER=drobbins
 HOMEDIR=/home/${USER}
-SSHAGENTFILE=${HOMEDIR}/.ssh-agent
+SSHAGENTFILE=${HOMEDIR}/.ssh-agent-cvs.gentoo.org
 CVSDIR=${HOMEDIR}/gentoo/gentoo-x86
 OUTLOG=${HOMEDIR}/gentoo/xmlcvslog.txt
 OUTMAIL=${HOMEDIR}/gentoo/cvslog.txt
