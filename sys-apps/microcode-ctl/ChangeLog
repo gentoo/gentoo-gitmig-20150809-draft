@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/microcode-ctl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.4 2004/04/09 15:46:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.5 2004/05/23 20:40:56 dragonheart Exp $
+
+*microcode-ctl-1.07 (24 May 2004)
+
+  24 May 2004; Daniel Black <dragonheart@gentoo.org>
+  +microcode-ctl-1.07.ebuild, -microcode-ctl-1.06.ebuild,
+  microcode-ctl-1.06-r1.ebuild:
+  Version bump as per bug #51553. Thanks to ryszard <ryszardzonk@yahoo.com>
+  for the notification. QA IUSE fix in microcode-ctl-1.06-r1.ebuild
 
 *microcode-ctl-1.06-r1 (09 Apr 2004)
 

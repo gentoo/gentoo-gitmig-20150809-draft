@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.06.ebuild,v 1.4 2004/04/09 15:46:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.07.ebuild,v 1.1 2004/05/23 20:40:57 dragonheart Exp $
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Intel IA32 microcode update utility"
 HOMEPAGE="http://www.urbanmyth.org/microcode"
 SRC_URI="http://www.urbanmyth.org/microcode/${MY_P}.tar.gz
-	mirror://gentoo/${P}-gentoo.tar.bz2"
-
+	mirror://gentoo/${PN}-1.06-r1-gentoo.tar.bz2"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 -ppc -sparc -hppa -mips -alpha"
+KEYWORDS="~x86 ~amd64 -ppc -sparc -hppa -mips -alpha"
 
 DEPEND="virtual/linux-sources"
 
@@ -25,9 +25,9 @@ src_install() {
 	doman microcode_ctl.8
 	dodoc Changelog README
 	insinto /etc/
-	doins ${WORKDIR}/${PV}/microcode.dat
+	doins ${WORKDIR}/1.06/microcode.dat
 	exeinto /etc/init.d/
-	doexe ${WORKDIR}/${PV}/microcode_ctl
+	doexe ${WORKDIR}/1.06/microcode_ctl
 }
 
 pkg_postinst() {
