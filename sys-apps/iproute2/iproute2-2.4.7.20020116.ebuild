@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.1 2004/04/20 19:31:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.2 2004/04/21 20:33:12 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -61,7 +61,7 @@ src_unpack() {
 		-e 's:-I\.\./include-glibc::g' \
 		-e 's:db3:db1:g' \
 		Makefile || die "sed Makefile failed"
-	sed -i 's:-ldb:-ldb-1:' misc/Makefile || die "sed misc/Makefile failed"
+	sed -i 's:-ldb:-ldb1:' misc/Makefile || die "sed misc/Makefile failed"
 
 	# Enable diffserv/atm support
 	if use atm ; then
