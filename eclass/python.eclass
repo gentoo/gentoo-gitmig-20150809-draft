@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.4 2003/10/09 15:11:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.5 2003/10/17 07:14:26 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -22,6 +22,14 @@ inherit alternatives
 ECLASS="python"
 INHERITED="$INHERITED $ECLASS"
 
+#
+# name:   python_disable/enable_pyc
+# desc:   tells python not to automatically recompile modules to .pyc/.pyo
+#         even if the timestamps/version stamps don't match. this is
+#         done to protect sandbox.
+#
+# note:   supported by >=dev-lang/python-2.2.3-r3 only.
+#
 python_disable_pyc() {
 	export PYTHON_DONTCOMPILE=1
 }
@@ -99,10 +107,17 @@ python_mod_exists() {
 #         python_mod_compile ${ROOT}usr/lib/python2.3/site-packages/pygoogle.py
 #
 python_mod_compile() {
+	# allow compiling for older python versions
+	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
+		PYVER=${PYTHON_OVERRIDE_PYVER}
+	else		
+		python_version
+	fi
+	
 	if [ -f "$1" ]; then
-		python -c "import py_compile; py_compile.compile('${1}')" || \
+		python${PYVER} -c "import py_compile; py_compile.compile('${1}')" || \
 			ewarn "Failed to compile ${1}"
-		python -O -c "import py_compile; py_compile.compile('${1}')" || \
+		python${PYVER} -O -c "import py_compile; py_compile.compile('${1}')" || \
 			ewarn "Failed to compile ${1}"			
 	else
 		ewarn "Unable to find ${1}"
@@ -121,10 +136,24 @@ python_mod_compile() {
 #         python_mod_optimize ${ROOT}usr/share/codegen
 #
 python_mod_optimize() {
-	python_version
-	einfo "Byte Compiling Python modules for ${PYVER} .."
-	python ${ROOT}usr/lib/python${PYVER}/compileall.py -q $@
-	python -O ${ROOT}usr/lib/python${PYVER}/compileall.py -q $@
+	# allow compiling for older python versions
+	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
+		PYVER=${PYTHON_OVERRIDE_PYVER}
+	else		
+		python_version
+	fi
+	
+	# set opts
+	if [ "${PYVER}" = "2.2" ]; then
+		compileopts=""
+	else
+		compileopts="-q"
+	fi
+	
+	ebegin "Byte Compiling Python modules for ${PYVER} .."
+	python${PYVER} ${ROOT}usr/lib/python${PYVER}/compileall.py ${compileopts} $@
+	python${PYVER} -O ${ROOT}usr/lib/python${PYVER}/compileall.py ${compileopts} $@
+	eend $?
 }
 
 #
@@ -139,13 +168,15 @@ python_mod_optimize() {
 python_mod_cleanup() {
 	local SEARCH_PATH
 
-	for path in $@; do
-		SEARCH_PATH="${SEARCH_PATH} ${ROOT}${dir}"
-	done		
-
-	for path in ${ROOT}usr/lib/python*/site-packages; do
-		SEARCH_PATH="${SEARCH_PATH} ${path}"
-	done
+	if [ $# -gt 0 ]; then
+		for path in $@; do
+			SEARCH_PATH="${SEARCH_PATH} ${ROOT}${path#/}"
+		done		
+	else
+		for path in ${ROOT}usr/lib/python*/site-packages; do
+			SEARCH_PATH="${SEARCH_PATH} ${path}"
+		done
+	fi
 	
 	for path in ${SEARCH_PATH}; do
 		einfo "Searching ${path} .."
