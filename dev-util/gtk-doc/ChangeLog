@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.33 2004/09/18 10:10:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.34 2004/11/23 18:51:19 leonardop Exp $
+
+  23 Nov 2004; Leonardo Boshell <leonardop@gentoo.org> gtk-doc-1.2-r1.ebuild:
+  Don't use einstall. Marked stable on x86.
 
 *gtk-doc-1.2-r1 (18 Sep 2004)
 
