@@ -48,6 +48,7 @@
  "# Change \"XkbModel\" to \"macintosh_old\" if you are using\n"
  "# the deprecated adb keycodes.\n"
 -"	Option		\"XkbRules\"	\"xfree86\"\n"
- "	Option		\"XkbModel\"	\"macintosh\"\n"
+-"	Option		\"XkbModel\"	\"macintosh\"\n"
++"	Option		\"XkbModel\"	\"pc104\"\n"
  "	Option		\"XkbLayout\"	\"us\"\n"
  "EndSection\n\n";

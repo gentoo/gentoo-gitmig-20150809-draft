@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/Xautoconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/ChangeLog,v 1.13 2004/10/07 19:38:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/ChangeLog,v 1.14 2004/10/12 13:00:38 pylon Exp $
+
+  12 Oct 2004; Lars Weiler <pylon@gentoo.org> files/XF4text.h.diff:
+  XkbModel pc104 should be used, as this works better on NewWorld machines.
 
 *Xautoconfig-0.22-r2 (07 Oct 2004)
 
