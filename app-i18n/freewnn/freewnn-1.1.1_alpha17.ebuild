@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha17.ebuild,v 1.1 2004/05/10 22:08:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha17.ebuild,v 1.2 2004/05/10 22:10:26 lv Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ src_unpack() {
 	sed -i -e "s/WNNOWNER = wnn/WNNOWNER = root/" ${S}/makerule.mk.in
 
 	cd ${S}
-	epatch ${FILESDIR}/a017/FreeWnn-fsstnd.patch
 	epatch ${FILESDIR}/a017/FreeWnn-ja.patch
 	epatch ${FILESDIR}/a017/FreeWnn-sighandler.patch
 	epatch ${FILESDIR}/a017/FreeWnn-uum.patch
