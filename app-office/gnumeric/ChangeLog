@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.2 2002/02/02 18:52:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.3 2002/02/19 08:28:39 azarah Exp $
+
+  19 Feb 2002; M.Schlemmer <azarah@gentoo.org> gnumeric-1.0.4-r1.ebuild :
+
+  Enable Gnome Basic support that was broken for a while.
 
 *gnumeric-1.0.4 (2 Feb 2002)
 
