@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f20c67b95dd00bf798aa3d3bb1c9dce ChangeLog 2788
-MD5 4aab8751e57136f1a0a2e5ab43dbd93f jabref-1.5.ebuild 1231
+MD5 310e73376e1b8a7c7ef1e926ef80abdc jabref-1.7.ebuild 1431
 MD5 e8b5277258845685bdde530884df2154 jabref-1.6.ebuild 1353
+MD5 ff1ae2ed5ea1cc6a188214d9c20c37de ChangeLog 2901
+MD5 cc17dbe257be6932f361acfed83e1eb3 jabref-1.5.ebuild 1170
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 938e2577a4d3f32232775793d226f00c jabref-1.7.ebuild 1470
+MD5 3d6ae9f90fac167b5ab3261cb88584d4 files/jabref-1.7-nojarbundler.patch 3153
 MD5 1f8c47f49e81868dd718727defee12fa files/digest-jabref-1.5 68
 MD5 a6ad712fbe4fb345a95ff1a70c128a16 files/digest-jabref-1.6 68
 MD5 d229ae67e003f0be52f27a896f6bdeac files/digest-jabref-1.7 68
-MD5 3d6ae9f90fac167b5ab3261cb88584d4 files/jabref-1.7-nojarbundler.patch 3153
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCT8MMMXMsRNMHhmARArrxAJizx9XEFBcIFBrSRMV8Q6fHPyuBAJ9GL+E2
-0qNZdVnDuzSzvY/1UnK6qQ==
-=/HTs
+iD4DBQFCT8Zj/rLF9B432nYRAg8qAJ9Kl1x7iHh+pHV4rGC7+OqVMh7XLQCYuikZ
+gJa+h+hXO1BwAheIEO6Bxg==
+=Pf7T
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.5.ebuild,v 1.7 2005/03/31 02:46:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.5.ebuild,v 1.8 2005/04/03 10:32:14 axxo Exp $
 
 inherit java-pkg
 
@@ -27,11 +27,7 @@ src_unpack() {
 	rm -f antlr.jar looks*.jar
 
 	java-pkg_jar-from antlr
-	java-pkg_jar-from jgoodies-looks-1.2
-
-	cd ${S}
-	sed -i 's:looks-1.2.2.jar:looks.jar:' build.xml \
-		|| die	"sed failed"
+	java-pkg_jar-from jgoodies-looks-1.2 looks.jar looks-1.2.2.jar
 }
 
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.24 2005/04/03 10:18:48 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.25 2005/04/03 10:32:14 axxo Exp $
+
+  03 Apr 2005; Thomas Matthijs <axxo@gentoo.org> jabref-1.5.ebuild,
+  jabref-1.7.ebuild:
+  change jar-from back
 
   03 Apr 2005; <SeJo@gentoo.org> jabref-1.7.ebuild:
   added ~ppc keyword
