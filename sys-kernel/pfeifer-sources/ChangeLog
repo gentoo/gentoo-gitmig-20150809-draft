@@ -1,10 +1,11 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.7 2003/05/08 21:24:02 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.8 2003/05/08 21:35:16 dragon Exp $
 
   TODO:
     better ide chipset support (ie. CSB6)
     fine tune gcc optimizations (yes, there is a bit more to look @)
+    XFS support (Dragon is working on this...)
     
   * Maybe:
     RSBAC
