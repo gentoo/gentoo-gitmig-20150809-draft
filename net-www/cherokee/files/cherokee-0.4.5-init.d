@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/files/cherokee-0.4.5-init.d,v 1.1 2003/10/05 12:45:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/files/cherokee-0.4.5-init.d,v 1.2 2003/10/05 14:55:44 stuart Exp $
 #
 
 PIDFILE=/var/run/cherokee.pid
@@ -22,7 +22,7 @@ start() {
 }
 
 stop() {
-    ebegin "Stopping Perforce SCM"
+    ebegin "Stopping Cherokee Web Server"
     if [ -f ${PIDFILE} ]; then
         start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
     fi
