@@ -1,9 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.0b-r1.ebuild,v 1.2 2003/02/01 20:59:40 latexer Exp $
 
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
 SRC_URI="http://www.kismetwireless.net/code/${P}.tar.gz
+		kismet-inits-${PV}.tar.gz
 	 ethereal? (http://www.ethereal.com/distribution/ethereal-0.9.8.tar.bz2)"
 
 LICENSE="GPL-2"
@@ -61,4 +63,9 @@ src_install () {
 		ETC=${D}/etc/kismet MAN=${D}/usr/share/man \
 		SHARE=${D}/usr/share/${PN} install || die
 	dodoc CHANGELOG FAQ README docs/*
+
+	exeinto /etc/init.d
+	newexe ${WORKDIR}/kismet.initd kismet
+	insinto /etc/conf.d
+	newins ${WORKDIR}/kismet.confd kismet
 }
