@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.3 2004/06/24 22:04:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.4 2004/07/08 17:48:21 lv Exp $
+
+inherit 64-bit
 
 DESCRIPTION="LIBrary of Assorted Spiffy Things"
 HOMEPAGE="http://www.eterm.org/download/"
@@ -15,6 +17,12 @@ DEPEND="virtual/x11
 	=media-libs/freetype-1*
 	X? ( imlib? ( media-libs/imlib2 ) )
 	perl? ( dev-libs/libpcre )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	64-bit && epatch ${FILESDIR}/libast-64bit.patch
+}
 
 src_compile() {
 	local myconf

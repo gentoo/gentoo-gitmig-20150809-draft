@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libast
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.10 2004/06/24 22:04:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.11 2004/07/08 17:48:21 lv Exp $
+
+  08 Jul 2004; Travis Tilley <lv@gentoo.org> +files/libast-64bit.patch,
+  libast-0.5-r2.ebuild:
+  added 64bit fix. see bug #52634 for more information
 
 *libast-0.5-r2 (22 Feb 2004)
 
