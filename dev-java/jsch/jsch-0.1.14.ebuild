@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.13.ebuild,v 1.7 2004/03/23 20:28:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.14.ebuild,v 1.1 2004/03/27 05:44:15 zx Exp $
 
 inherit java-pkg
 
 DESCRIPTION="JSch is a pure Java implementation of SSH2."
 HOMEPAGE="http://www.jcraft.com/jsch/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.zip"
-
 LICENSE="jcraft"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -20,19 +19,15 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jdk-1.4"
 
 src_compile() {
-	epatch ${FILESDIR}/build.xml-dstamp.patch.gz
-
-	local myc
-
-	if [ -n "`use jikes`" ] ; then
-		myc="${myc} -Dbuild.compiler=jikes"
-	fi
-
-	ANT_OPTS=${myc} ant || die "Failed Compiling"
+	local antflags="dist"
+	use doc && antflags="${antflags} javadoc"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	ant ${antflags} || die "compilation failed"
 }
 
 src_install() {
-	java-pkg_dojar dist/lib/jsch.jar || die "Failed Installing"
+	mv dist/lib/jsch{*,}.jar
+	java-pkg_dojar dist/lib/jsch.jar || die "installation failed"
+	use doc && dohtml -r javadoc/*
 	dodoc LICENSE.txt README ChangeLog
-	cp -r examples ${D}/usr/share/doc/${PN}-${PV}
 }
