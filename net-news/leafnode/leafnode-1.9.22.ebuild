@@ -1,6 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.4 2002/07/17 02:39:13 seemant Exp $
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.4 2002/07/17 02:39:13 seemant Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
@@ -9,7 +9,10 @@ HOMEPAGE="http://www.leafnode.org"
 
 # leafnode uses pcre
 DEPEND=">=dev-libs/libpcre-3.5"
-#RDEPEND=""
+
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86"
 
 src_compile() {
 	use ipv6 && myconf="--with-ipv6"

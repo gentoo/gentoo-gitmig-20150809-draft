@@ -1,13 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r1.ebuild,v 1.3 2002/04/27 21:25:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r1.ebuild,v 1.4 2002/07/17 02:39:13 seemant Exp $
 
 MY_P=${PN}-1.0b.1
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A threaded newsreader for X."
 SRC_URI="http://www.matematik.su.se/~kjj/${MY_P}.tar.gz"
 HOMEPAGE="http://www.matematik.su.se/~kjj/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=x11-base/xfree-4.0
 	>=media-libs/jpeg-6

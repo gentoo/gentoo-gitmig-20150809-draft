@@ -9,8 +9,10 @@ PATCH_URI="http://slrn.sourceforge.net/patches"
 SRC_URI="mirror://sourceforge/slrn/${P}.tar.bz2
 ${PATCH_URI}/${P}-mem_leak.diff
 ${PATCH_URI}/${P}-popup_win.diff"
+
+SLOT="0"
 LICENSE="GPL-2"
-SLOT=""
+KEYWORDS="x86"
 
 HOMEPAGE="http://slrn.sourceforge.net/"
 DEPEND="virtual/glibc
@@ -43,6 +45,3 @@ src_install () {
 	make DESTDIR=${D} DOCDIR=/usr/share/doc/${P} install || die
 	find $D/usr/share/doc -type f | xargs gzip
 }
-
-
-
