@@ -1,8 +1,11 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.13 2003/03/26 09:32:40 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.14 2003/03/26 11:46:37 seo Exp $
 
 *dia-0.91 (26 Mar 2003)
+
+  26 Mar 2003: Jungmin Seo <seo@gentoo.org> dia-0.91.ebuild :
+  Fixed 'SRC_URI'
 
   26 Mar 2003; Jungmin Seo <seo@gentoo.org> dia-0.91.ebuild :
   New version. now supports gtk+-2. 
