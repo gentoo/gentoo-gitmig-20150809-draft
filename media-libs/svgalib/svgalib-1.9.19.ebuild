@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19.ebuild,v 1.8 2004/07/19 17:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19.ebuild,v 1.9 2004/07/26 22:01:59 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="build"
 DEPEND="virtual/libc"
 
 kernel_supports_modules() {
-	grep '^CONFIG_MODULES=y$' /usr/src/linux/.config >& /dev/null
+	grep '^CONFIG_MODULES=y$' ${ROOT}/usr/src/linux/.config >& /dev/null
 }
 
 pkg_setup() {
@@ -31,7 +31,7 @@ src_unpack() {
 
 	# Get it to work with kernel 2.6
 	epatch ${FILESDIR}/${P}-linux2.6.patch
-	sed -i '/^KDIR/s:=.*:=/usr/src/linux:' ${S}/kernel/svgalib_helper/Makefile
+	sed -i '/^KDIR/s:=.*:=${ROOT}/usr/src/linux:' ${S}/kernel/svgalib_helper/Makefile
 
 	# Fix include bug #54198
 	epatch ${FILESDIR}/${PN}-1.9.18-utils-include.patch
@@ -77,7 +77,7 @@ src_compile() {
 		cd ${S}/kernel/svgalib_helper
 		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
 			env -u ARCH \
-				make -f Makefile.alt INCLUDEDIR="/usr/src/linux/include" \
+				make -f Makefile.alt INCLUDEDIR="${ROOT}/usr/src/linux/include" \
 					clean modules || die "Failed to build kernel module!"
 		else
 			env -u ARCH make || die "Failed to build kernel module!"
@@ -104,7 +104,7 @@ src_install() {
 		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
 			env -u ARCH \
 				make -f Makefile.alt TOPDIR=${D} \
-					INCLUDEDIR="/usr/src/linux/include" \
+					INCLUDEDIR="${ROOT}/usr/src/linux/include" \
 					modules_install || die "Failed to install svgalib module!"
 		else
 			insinto /lib/modules/${KV}/kernel/misc
