@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.6-r1.ebuild,v 1.14 2004/03/21 11:23:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.6-r1.ebuild,v 1.15 2004/06/15 06:26:16 solar Exp $
 
 inherit eutils gnuconfig
 
@@ -18,6 +18,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	epatch ${FILESDIR}/xmlstatus.patch
+	cd ${S}
+	epatch ${FILESDIR}/expat-1.95.6-uclibc.patch
 }
 
 src_compile() {

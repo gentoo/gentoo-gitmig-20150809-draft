@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/popt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.17 2003/03/28 07:07:30 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.18 2004/06/15 06:29:42 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> popt-1.7-r1.ebuild,
+  files/popt-1.7-uclibc.patch:
+  added uclibc patch for configure target
 
 *popt-1.7-r1 (20 Mar 2003)
 

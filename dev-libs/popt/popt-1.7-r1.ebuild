@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.10 2004/04/26 01:15:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.11 2004/06/15 06:29:43 solar Exp $
 
 inherit libtool gnuconfig
 
@@ -14,6 +14,11 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-uclibc.patch
+}
 
 src_compile() {
 	gnuconfig_update
