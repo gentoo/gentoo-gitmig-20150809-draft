@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.12.ebuild,v 1.5 2004/09/07 07:40:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.12.ebuild,v 1.6 2004/11/22 13:04:34 usata Exp $
 
 DESCRIPTION="management utility for dictionaries of Anthy, SKK, Canna and PRIME"
 HOMEPAGE="http://sumika.sourceforge.jp/"
@@ -18,12 +18,12 @@ DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	econf `use_enable nls` || die
+	econf $(use_enable nls) || die
 	emake || die
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	# we have our own place for docs
 	dodir /usr/share/doc
