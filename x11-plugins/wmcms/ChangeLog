@@ -1,15 +1,16 @@
 # ChangeLog for x11-plugins/wmcms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/ChangeLog,v 1.1 2002/08/30 07:44:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/ChangeLog,v 1.2 2002/10/18 05:20:27 raker Exp $
 
 *wmcms-0.3.5 (1 Feb 2002)
 
-  29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
+  Oct 18 2002; Nick Hadaway <raker@gentoo.org> wmcms-0.3.5.ebuild :
+  Added IUSE and updated dependancy from docklib to libdockapp.
 
+  29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
   Relocated to x11-plugins
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
