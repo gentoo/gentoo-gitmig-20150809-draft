@@ -275,17 +275,6 @@ def pathstrip(x,mystart):
     cpref=os.path.commonprefix([x,mystart])
     return [root+x[len(cpref)+1:],x[len(cpref):]]
 
-def pkgscript(x,myebuildfile):
-	myresult=getstatusoutput("/usr/sbin/ebuild "+myebuildfile+" "+x)
-	if myresult[0] or myresult[1]:
-		print
-	if myresult[0]:
-		print "Error code from",pkgname,x,"script --",myresult[0]
-	if myresult[1]:
-		print "Output from",myebuildfile,x,"script:"
-		print
-		print myresult[1]
-
 def merge(cat,pkg,mystart,myinfostart):
 	mylink=dblink(cat,pkg)
 	if not mylink.exists():
