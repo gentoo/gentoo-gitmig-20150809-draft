@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.1 2002/04/24 11:42:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.2 2002/07/07 08:06:20 phoenix Exp $
 
 S=${WORKDIR}/${P}
 MYSED=sed-3.02
@@ -9,6 +9,9 @@ PATCHES=${WORKDIR}/patches
 DESCRIPTION="Fax package for class 1 and 2 fax modems."
 SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 HOMEPAGE="http://www.hylafax.org"
+KEYWORDS="x86"
+LICENSE="hylafax"
+SLOT="0"
 
 DEPEND="net-dialup/mgetty
 	sys-libs/zlib

@@ -1,18 +1,22 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.3 2002/04/26 02:55:00 tutor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.4 2002/07/07 08:12:08 phoenix Exp $
 
 *icecast-1.3.12 (25 Apr 2002)
 
-  25 Apr 2002: M.Jones <ashmodai@gentoo.org> icecast-1.3.12.tar.gz :
+  07 Jul 2002: phoen][x <phoenix@gentoo.org> icecast-1.3.12.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
 
+  25 Apr 2002: M.Jones <ashmodai@gentoo.org> icecast-1.3.12.ebuild :
   This is the latest version of Icecast. It contains security updates
   and network fixes for streams over 160kbps.
 
 *icecast-1.3.11 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  07 Jul 2002: phoen][x <phoenix@gentoo.org> icecast-1.3.11.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

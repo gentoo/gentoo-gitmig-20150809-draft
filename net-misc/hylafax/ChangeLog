@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.3 2002/04/24 11:42:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.4 2002/07/07 08:06:20 phoenix Exp $
 
 *hylafax-4.1.2-r1 (24 Apr 2002)
+
+  06 Jul 2002; phoen][x <phoenix@gentoo.org> hylafax-4.1.2-r1.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
 
   24 Apr 2002; Seemant Kulleen <seemant@gentoo.org> hylafax-4.1.2-r1.ebuild
   files/hylafax-4.1.2-r1-gentoo-diffs.tar.bz2 files/digest-hylafax-4.1.2-r1 :
@@ -15,6 +18,9 @@
 
 *hylafax-4.1.2 (23 Apr 2002)
 
+  06 Jul 2002; phoen][x <phoenix@gentoo.org> hylafax-4.1.2.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+
   23 Apr 2002; Seemant Kulleen <seemant@gentoo.org> hylafax-4.1.2.ebuild
   files/hylafax-4.1.2-gentoo-diffs.tar.bz2 files/digest-hylafax-4.1.2 :
 
@@ -26,8 +32,8 @@
 
 *hylafax-cvs-000614-r1 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog : 
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

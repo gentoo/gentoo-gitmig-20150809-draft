@@ -7,6 +7,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Icecast is an Internet based broadcasting system based on the Mpeg Layer III streaming technology."
 SRC_URI="http://www.icecast.org/releases/${P}.tar.gz"
 HOMEPAGE="http://www.icecast.org"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/glibc"
 
