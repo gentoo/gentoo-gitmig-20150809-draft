@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc7.ebuild,v 1.1 2004/10/20 03:06:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc7.ebuild,v 1.2 2005/03/12 15:18:28 corsair Exp $
 
 inherit wxwidgets
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc64"
 IUSE="debug gtk2 nls remote stats unicode gd"
 
 DEPEND="remote? ( =x11-libs/wxGTK-2.4* )
