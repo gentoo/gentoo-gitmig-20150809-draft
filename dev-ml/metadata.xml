@@ -5,5 +5,9 @@
 		The dev-ml category contains libraries and utilities relevant to the
 		ML programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-ml enthält Bibliotheken und Werkzeuge für die 
+		Programmiersprache ML.
+	</longdescription>
 </catmetadata>
 
