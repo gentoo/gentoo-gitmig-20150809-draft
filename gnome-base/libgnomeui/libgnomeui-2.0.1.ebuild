@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.0.1.ebuild,v 1.2 2002/07/19 13:18:12 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.0.1.ebuild,v 1.3 2002/07/23 21:28:24 gerk Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="User interface part of libgnome"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2 LGPL-2.1" 
 
 RDEPEND=">=x11-libs/gtk+-2.0.2

@@ -9,7 +9,7 @@ DESCRIPTION="Gnome Virtual Filesystem"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND="=dev-libs/glib-2.0*
