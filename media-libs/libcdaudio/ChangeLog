@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcdaudio
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.12 2004/04/24 17:39:14 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.13 2004/04/26 03:08:53 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libcdaudio-0.99.10.ebuild,
+  libcdaudio-0.99.6-r2.ebuild, libcdaudio-0.99.9.ebuild:
+  Add die following econf for bug 48950
 
 *libcdaudio-0.99.10 (24 Apr 2004)
 
