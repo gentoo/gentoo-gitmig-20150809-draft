@@ -266,13 +266,6 @@ x11-libs/qt-embedded
 # test it please
 =app-admin/localepurge-0.2
 
-# <aliz@gentoo.org> (16 Aug 2002)
-# Masked for testing
-=app-admin/fam-oss-2.6.9
-# I messed up <spider@gentoo.org>
-=app-admin/fam-oss-2.6.9-r1
-
-
 # <styx@gentoo.org> (16 Aug 2002)
 # Masked for testing
 >=sys-apps/quota-3.04
