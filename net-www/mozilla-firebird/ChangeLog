@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.17 2003/08/18 19:17:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.18 2003/08/27 13:29:42 agriffis Exp $
+
+  27 Aug 2003; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firebird-0.6.1.ebuild:
+  Mark stable on alpha
 
   18 Aug 2003; Jason Wever <weeve@gentoo.org> mozilla-firebird-0.6.1.ebuild:
   Marked stable for sparc
