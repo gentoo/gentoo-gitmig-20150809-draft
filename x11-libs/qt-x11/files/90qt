@@ -1,6 +1,0 @@
-QTDIR=/usr/X11R6/lib/qt
-PATH=/usr/X11R6/lib/qt/bin
-ROOTPATH=/usr/X11R6/lib/qt/bin
-LDPATH=/usr/X11R6/lib/qt/lib
-MANPATH=/usr/X11R6/lib/qt/share/man
-
