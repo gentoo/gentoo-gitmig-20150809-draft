@@ -1,0 +1,17 @@
+# Copyright 2001-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /home/cvsroot/gentoo-x86/profiles/default/x86/2004.0/packages,v
+# 1.2 2004/03/18 00:16:43 seemant Exp $
+
+# This mask affects only THIS profile!
+
+
+sys-fs/ntfsprogs
+media-video/cinelerra
+dev-util/gnustep-back
+dev-util/gnustep-base
+dev-util/gnustep-gui
+dev-util/gnustep-guile
+dev-util/gnustep-make
+dev-libs/elfutils
+sys-devel/prelink
