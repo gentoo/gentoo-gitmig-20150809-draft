@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.5.ebuild,v 1.4 2002/08/16 02:42:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.5.ebuild,v 1.5 2002/09/20 20:10:52 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Convert files between various character sets."
 SRC_URI="ftp://gnu.wwc.edu/recode/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/"
+HOMEPAGE="http://www.gnu.org/software/recode/"
 KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc

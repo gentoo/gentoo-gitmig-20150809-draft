@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.7 2002/08/28 12:39:35 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.8 2002/09/20 20:10:52 vapier Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ replace-flags "-march=pentium4" "-march=pentium3"
 S=${WORKDIR}/${P}
 DESCRIPTION="Convert files between various character sets."
 SRC_URI="ftp://gnu.wwc.edu/recode/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/"
+HOMEPAGE="http://www.gnu.org/software/recode/"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
