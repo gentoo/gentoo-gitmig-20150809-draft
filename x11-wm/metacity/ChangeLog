@@ -1,11 +1,14 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.31 2003/05/29 22:15:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.32 2003/07/01 19:17:55 gmsoft Exp $
 
   29 May 2003; Luca Barbato <lu_zero@gentoo.org> metacity-2.4.34.ebuild :
   Add ppc to KEYWORDS
 
 *metacity-2.4.55 (22 May 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> metacity-2.4.55.ebuild :
+  Added ~hppa to KEYWORDS.
 
   22 May 2003; foser <foser@gentoo.org> metacity-2.4.55.ebuild :
   New version, removed libglade dep, added IUSE 
@@ -15,6 +18,9 @@
   Add ~alpha to KEYWORDS
 
 *metacity-2.4.34 (05 Feb 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> metacity-2.4.34.ebuild :
+  Added hppa to KEYWORDS.
 
   09 Apr 2003; Todd Sunderlin <todd@gentoo.org> metacity-2.4.34.ebuild:
   Marked stable for sparc.
