@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.115 2004/05/05 22:51:18 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.116 2004/05/10 01:15:58 weeve Exp $
+
+  09 May 2004; Jason Wever <weeve@gentoo.org> xine-lib-1_rc4.ebuild:
+  Stable on sparc wrt bug #49387.
 
   05 May 2004; Josh Grebe <squash@gentoo.org> xine-lib-1_rc4.ebuild,
   files/xine-lib-1-rc4-sparc_missing_include.patch,
