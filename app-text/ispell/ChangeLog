@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ispell
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.17 2003/10/02 02:42:04 brandy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.18 2004/02/25 00:14:00 kumba Exp $
+
+  24 Feb 2004; Joshua Kinard <kumba@gentoo.org> ispell-3.2.06-r5.ebuild:
+  Mark stable for mips to clear up repoman deps.
 
   02 Oct 2003; Brandy Westcott brandy@gentoo.org ispell-3.2.06-r6.ebuild:
   Removed byacc dependency in favour of bison
