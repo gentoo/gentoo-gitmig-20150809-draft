@@ -4,8 +4,8 @@
 <herd>sound</herd>
 
 <maintainer>
-	<name>George Shapovalov</name>
 	<email>george@gentoo.org</email>
+	<name>George Shapovalov</name>
 	<description>
 		Looks like I am the only dev with this player, so I guess I'll have to take care of 
 		this package. Besides I also reated a minimalistic gui for the tool :).

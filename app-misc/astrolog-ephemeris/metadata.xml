@@ -4,8 +4,8 @@
 <herd>sci</herd>
 
 <maintainer>
-	<name>George Shapovalov</name>
 	<email>george@gentoo.org</email>
+	<name>George Shapovalov</name>
 	<description>
 		I'll be taking care of it. But since we need to have a herd in metadata
 		I've put sci there, as it seems the most related one.

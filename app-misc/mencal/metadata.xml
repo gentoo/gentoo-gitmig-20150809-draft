@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<name>Roman Valls</name>
 	<email>brainstorm@menta.net</email>
+	<name>Roman Valls</name>
 	<description>Indirectly maintaining through seemant@gentoo.org</description>
 </maintainer>
 </pkgmetadata>
