@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e0f4ea4eb361994b283c6a5aa64573ee vtun-2.5-r2.ebuild 2031
 MD5 25f9520437df67890446af9d5edb9356 vtun-2.5.ebuild 1705
 MD5 fc4e7ab6fa8b4129bd91fb123ba326e2 vtun-2.5-r1.ebuild 1928
-MD5 dc43f6502513d2de6e936e4d77553c5b ChangeLog 2590
+MD5 23c0ad161671b24a432bad2a931d0463 ChangeLog 2663
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
-MD5 7f61e7b1e8c4e3b3b3d7c9a3d5ac5108 vtun-2.6.ebuild 1740
+MD5 6e709658ed5c7ebcc2edf14711ca3476 vtun-2.6.ebuild 1736
 MD5 a806782ec385a60514f85833ed455fbc files/vtund-start.conf 1174
 MD5 e5c8a47e7b30540f4094b1aa6d3f6e5f files/digest-vtun-2.5 59
 MD5 f6c794a4c6d2965b321514400900e5ef files/digest-vtun-2.6 59
@@ -14,3 +17,10 @@ MD5 e5c8a47e7b30540f4094b1aa6d3f6e5f files/digest-vtun-2.5-r2 59
 MD5 e19e6e833add738ce8f46e18c7d7d060 files/vtun.rc 772
 MD5 1e46f74e06c298440ef80e55ea493cbb files/vtun-2.5-r2-gentoo-gcc3.1.patch 767
 MD5 49170c19de7a8830d2d2135f244b750a files/vtun-2.6-makefile.patch 1919
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBcdcW94CCfB4KcwwRAntnAKCbbxNPV8qfc4gWWI+/GxGKItEBQACbBYyJ
+woXu0AVLxCyhVnMFrus0N5U=
+=Yw1E
+-----END PGP SIGNATURE-----
