@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/nhc98
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/ChangeLog,v 1.10 2004/03/02 09:25:00 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/ChangeLog,v 1.11 2004/06/24 22:52:46 agriffis Exp $
 
   12 Jun 2003; <msterret@gentoo.org> nhc98-1.12.ebuild:
   fix Header

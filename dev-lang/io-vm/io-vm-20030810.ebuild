@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/io-vm-20030810.ebuild,v 1.3 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/io-vm-20030810.ebuild,v 1.4 2004/06/24 22:51:12 agriffis Exp $
 
 MY_P=IoVM-2003-08-10
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1-r1.ebuild,v 1.1 2004/06/15 13:14:27 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1-r1.ebuild,v 1.2 2004/06/24 22:49:10 agriffis Exp $
 
 #Some explanation of bootstrap logic:
 #

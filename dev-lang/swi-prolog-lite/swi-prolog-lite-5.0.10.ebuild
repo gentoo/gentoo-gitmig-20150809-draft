@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.0.10.ebuild,v 1.8 2004/05/15 08:50:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.0.10.ebuild,v 1.9 2004/06/24 22:57:41 agriffis Exp $
 
 DESCRIPTION="free, small, and standards compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"

@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/mmix
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.5 2003/12/18 18:14:53 zul Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.6 2004/06/24 22:52:03 agriffis Exp $
 
   18 Dec 2003; Chuck Short <zul@gentoo.org> mmix-20020216.ebuild:
   Added dependcy, need ghostscript to read the manual. Closes #35559.

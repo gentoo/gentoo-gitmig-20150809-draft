@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.2 2004/06/19 12:22:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.3 2004/06/24 22:55:21 agriffis Exp $
 
 ONIGURUMA="onigd2_2_8"
 SNAP_DATE="2004.05.02"

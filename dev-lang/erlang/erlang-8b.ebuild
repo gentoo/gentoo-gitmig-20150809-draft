@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-8b.ebuild,v 1.9 2004/03/30 20:49:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-8b.ebuild,v 1.10 2004/06/24 22:48:17 agriffis Exp $
 
 MY_P=otp_src_R8B-2
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"

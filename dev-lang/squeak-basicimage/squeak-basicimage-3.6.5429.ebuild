@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.6.5429.ebuild,v 1.2 2004/05/12 16:23:01 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.6.5429.ebuild,v 1.3 2004/06/24 22:56:58 agriffis Exp $
 
 MY_P="Squeak3.6-5429"
 DESCRIPTION="Squeak basic image file"

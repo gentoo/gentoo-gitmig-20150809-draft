@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.1-r1.ebuild,v 1.4 2004/06/03 15:43:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.1-r1.ebuild,v 1.5 2004/06/24 22:55:32 agriffis Exp $
 
 IUSE="socks5 tcltk"
 

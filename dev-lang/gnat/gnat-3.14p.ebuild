@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.14p.ebuild,v 1.2 2004/04/30 11:12:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.14p.ebuild,v 1.3 2004/06/24 22:49:34 agriffis Exp $
 #
 # Never replace this with the Ada compiler in the gcc tree. They are based
 # on the same source but this is the official validated compiler from ACT.

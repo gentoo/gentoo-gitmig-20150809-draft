@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.7 2004/06/03 15:39:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.8 2004/06/24 22:53:51 agriffis Exp $
 
 inherit eutils flag-o-matic gcc
 

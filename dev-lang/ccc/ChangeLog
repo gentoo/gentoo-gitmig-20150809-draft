@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ccc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.7 2004/02/19 15:43:34 taviso Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.8 2004/06/24 22:47:02 agriffis Exp $
 
 *ccc-6.5.9.001-r3 (19 Feb 2004)
 

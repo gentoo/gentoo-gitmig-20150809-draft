@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.13 2004/04/21 19:09:15 spyderous Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.14 2004/06/24 22:50:51 agriffis Exp $
 
   21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   Fix ChangeLog entry by root.
