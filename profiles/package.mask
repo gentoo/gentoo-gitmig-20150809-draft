@@ -702,6 +702,14 @@ gnome-base/libgnomeui
 >=gnome-base/libgtop-1.90.0
 >=gnome-base/librsvg-1.1.0
 
+>=gnome-extra/gnome-games-1.90.0
+>=gnome-extra/gnome-media-1.547.0
+gnome-extra/gnome-system-monitor
+gnome-extra/gnome-vfs-extras
+gnome-extra/libgnomeprint
+gnome-extra/libgnomeprintui
+gnome-extra/libgtkhtml
+x11-terms/gnome-terminal
 
 
 # spider@gentoo.org ; 18 Apr 2002
