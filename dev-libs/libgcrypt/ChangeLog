@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.40 2004/10/10 14:12:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.41 2004/11/26 16:35:47 weeve Exp $
+
+  26 Nov 2004; Jason Wever <weeve@gentoo.org> libgcrypt-1.2.0-r2.ebuild:
+  Stable on sparc.
 
 *libgcrypt-1.2.0-r2 (10 Oct 2004)
 
