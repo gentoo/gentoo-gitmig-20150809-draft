@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.4 2004/08/25 07:28:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.5 2004/08/25 07:35:51 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1097,6 +1097,10 @@ font_setup() {
 	# These cause ttmkfdir to segfault :/
 	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.8x.enc.gz
 	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.16.enc.gz
+	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-1.enc
+	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-2.enc
+	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-3.enc
+	rm -f ${ROOT}/usr/share/fonts/encodings/suneu-greek.enc
 
 	# ********************************************************************
 	#  A note about fonts and needed files:

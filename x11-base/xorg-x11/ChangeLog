@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.95 2004/08/25 07:28:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.96 2004/08/25 07:35:51 spyderous Exp $
+
+  25 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.99.902.ebuild:
+  Delete encodings that make ttmkfdir segfault: large/cns11643-1.enc
+  large/cns11643-2.enc large/cns11643-3.enc suneu-greek.enc (#60470).
 
   25 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.99.902.ebuild:
