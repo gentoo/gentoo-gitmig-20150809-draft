@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.40 2004/10/17 23:33:01 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.41 2004/10/18 14:59:12 gmsoft Exp $
+
+  18 Oct 2004; Guy Martin <gmsoft@gentoo.org> net-tools-1.60-r9.ebuild:
+  Stable on hppa.
 
   17 Oct 2004; Hardave Riar <hardave@gentoo.org> net-tools-1.60-r9.ebuild:
   Stable on mips, bug #58633.

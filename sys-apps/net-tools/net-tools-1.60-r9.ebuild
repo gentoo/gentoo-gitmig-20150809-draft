@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.5 2004/10/17 23:33:01 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.6 2004/10/18 14:59:12 gmsoft Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ppc sparc mips ~alpha ~arm hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls build static uclibc"
 
 DEPEND="nls? ( sys-devel/gettext )
