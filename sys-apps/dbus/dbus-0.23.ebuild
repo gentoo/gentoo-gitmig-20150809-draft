@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.ebuild,v 1.3 2005/01/13 17:37:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.ebuild,v 1.4 2005/01/13 21:05:15 foser Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python
@@ -78,7 +78,7 @@ src_compile() {
 #		`use_enable doc xml-docs` \
 
 	# do not build the mono examples, they need gtk-sharp
-	touch ${S}/mono/example/{Echo{Client,er,Server},BusListener}.exe
+	touch ${S}/mono/example/{bus-listener,echo-{server,client}}.exe
 
 	# this gets around a lib64 sandbox bug. note that this addpredict is
 	# added automatically by sandbox.c for lib.
