@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.4 2003/08/31 06:55:09 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.5 2003/09/08 05:53:42 obz Exp $
+
+  08 Sep 2003; Mike Gardiner <obz@gentoo.org> workrave-1.4.0.ebuild:
+  Added fix for gnet by disabling distribution, see bug #27646
 
 *workrave-1.4.0 (31 Aug 2003)
 
