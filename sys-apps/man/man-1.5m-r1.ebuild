@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.1 2004/05/01 21:07:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.2 2004/05/03 20:02:42 vapier Exp $
 
 inherit eutils
 
@@ -102,7 +102,7 @@ src_install() {
 	# Needed for makewhatis
 	keepdir /var/cache/man
 	exeinto /etc/cron.weekly
-	doexe ${FILESDIR}/makewhatis.cron
+	newexe ${FILESDIR}/makewhatis.cron makewhatis
 
 	fowners root:man /usr/bin/man
 	fperms 2555 /usr/bin/man
@@ -117,4 +117,13 @@ src_install() {
 	do
 		keepdir /var/cache/man/${x}
 	done
+}
+
+pkg_postinst() {
+	local files="`ls ${ROOT}/etc/cron.{daily,weekly}/makewhatis{,.cron} 2>/dev/null`"
+	if [ "${files/$'\n'}" != "${files}" ] ; then
+		ewarn "You have multiple makewhatis cron files installed."
+		ewarn "You might want to delete all but one of these:"
+		echo ${files}
+	fi
 }

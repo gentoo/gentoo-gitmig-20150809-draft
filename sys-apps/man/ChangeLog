@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.45 2004/05/01 21:07:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.46 2004/05/03 20:02:42 vapier Exp $
 
 *man-1.5m-r1 (01 May 2004)
+
+  03 May 2004; Mike Frysinger <vapier@gentoo.org> :
+  Install cronjob as makewhatis instead of makewhatis.cron #40506 by Peter Simons.
 
   01 May 2004; Bryan Østergaard <kloeri@gentoo.org> +man-1.5m-r1.ebuild:
   Add posix sections to MANSECT, bug #47806.
