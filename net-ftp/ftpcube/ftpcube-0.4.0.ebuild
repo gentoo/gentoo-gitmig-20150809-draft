@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.4.0.ebuild,v 1.7 2004/06/24 22:45:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.4.0.ebuild,v 1.8 2004/07/03 12:13:43 kloeri Exp $
 
 DESCRIPTION="Graphic ftp client written in python and gtk"
 SRC_URI="mirror://sourceforge/ftpcube/${P}.tar.gz"
 HOMEPAGE="http://ftpcube.sourceforge.net/"
-DEPEND="dev-python/wxPython"
+DEPEND="dev-python/wxpython"
 
 SLOT="0"
 LICENSE="Artistic"
