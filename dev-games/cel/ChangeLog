@@ -1,0 +1,32 @@
+# ChangeLog for dev-libs/cel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.1 2003/07/13 03:13:40 vapier Exp $
+
+*cel-20030413-r2 (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Bumped to fix all known problems with cel.  Many thanks to people on
+  #20383, especially Matze Braun <matze@braunis.de>.
+
+*cel-20030413-r1 (02 Jul 2003)
+
+  02 Jul 2003; <blauwers@gentoo.org> cel-20030413-r1.ebuild, Changelog :
+  Added a new revision of the cel ebuild to fix numerous problems, the
+  includes will now install in the proper place, sed 4 no longer required,
+  environment var CEL added, and several ebuild tooling errors corrected.
+
+*cel-20030413 (13 Apr 2003)
+
+  10 Jun 2003; <msterret@gentoo.org> cel-20030413.ebuild:
+  DEPEND on sed >= 4
+
+  13 Apr 2003; Philip Walls <malverian@gentoo.org> cel-20030413.ebuild :
+  Cel snapshot that works with Planeshift
+
+  19 May 2003; Thomas Raschbacher <lordvan@gentoo.org> cel-20030413.ebuild:
+  installing cel.cex to /opt/crystal/bin now so cs-config can find it
+
+*cel-0.96_p001 (02 Apr 2003)
+
+  02 Apr 2003; Philip Walls <malverian@gentoo.org> cel-0.96_p001.ebuild :
+  Initial import.

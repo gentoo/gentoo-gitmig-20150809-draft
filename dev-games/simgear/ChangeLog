@@ -1,0 +1,27 @@
+# ChangeLog for dev-libs/simgear
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.1 2003/07/13 03:13:41 vapier Exp $
+
+*simgear-0.3.3 (11 Jun 2003)
+
+  11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.3.ebuild:
+  version bump. flightgear-0.9.2 -- thanks to roger <rogerxxmaillist@san.rr.com>
+  for the notification in bug #22568
+
+*simgear-0.3.1 (09 Dec 2002)
+
+  19 Feb 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Note that Michael Pujos <pujos.michael@laposte.net> had submitted an
+  ebuild for this in the neglected bug #8167 :(
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.1.ebuild :
+
+  Added specifically that plib should be 1.6.0 or greater in DEPENDS.
+  Closes bug #15354 by Tyler Nielsen <tyler@mithander.com>
+
+  09 Dec 2002; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.1.ebuild
+  ChangeLog files/digest-simgear-0.3.1 :
+
+  New package -- development libraries for simulation games.  Added as a
+  dependency for app-games/flightgear

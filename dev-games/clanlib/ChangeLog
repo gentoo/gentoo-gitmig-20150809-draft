@@ -1,0 +1,70 @@
+# ChangeLog for app-games/clanlib
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.1 2003/07/13 03:13:40 vapier Exp $
+
+*clanlib-0.7.2 (27 Jun 2003)
+
+  27 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #22594.
+
+*clanlib-0.7.1 (29 Apr 2003)
+
+  05 May 2003; Paul de Vrieze <pauldv@gentoo.org> clanlib-0.7.1.ebuild:
+  Changed to make sure it runs with an uptodate version of automake which it
+  requires.
+
+  29 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*clanlib-0.6.5 (17 Apr 2003)
+
+  29 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added support for doc use flag and cleaned up a bit.
+
+  17 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> :
+  New version
+
+*clanlib-0.6.3 (02 Okt 2002)
+
+  02 Okt 2002; Bart Verwilst <verwilst@gentoo.org> :
+  New version
+
+*clanlib-0.5.4-r3 (14 Apr 2002)
+
+  29 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added support for doc use flag and cleaned up a bit.
+
+  14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> clanlib-0.5.4-r3.ebuild :
+  Updated the dependency for hermes to point to hermes' new location in
+  media-libs instead of app-games.
+
+*clanlib-0.5.4-r2 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> clanlib-0.5.4-r2.ebuild :
+  Compile against newest libpng
+
+*clanlib-0.5.4-r1 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> clanlib-0.5.4-r1.ebuild :
+  oops, I had a vorbis flag still lying around.  Many more things are now
+  optional, like jpeg support and png and mikmod support (if those flags 
+  get accepted into gentoo usage).
+
+*clanlib-0.5.4 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> clanlib-0.5.4.ebuild :
+  oggvorbis is the new USE flag instead of separate ogg and vorbis flags.
+
+*clanlib-0.5.4 (24 Feb 2002)
+
+  24 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> :
+  New version.  Thanks to Seemant Kulleen!!!
+  
+*clanlib-0.5.010512 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

@@ -1,0 +1,17 @@
+# ChangeLog for dev-libs/libggz
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.1 2003/07/13 03:13:40 vapier Exp $
+
+  11 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> libggz-0.0.7.ebuild:
+  Fixed dependency on newer libgcrypt, marked as ~arch.
+
+*libggz-0.0.7 (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #24164.
+
+*libggz-0.0.5 (13 Apr 2002)
+
+  13 Apr 2002; T.Kvernes <terjekv@math.uio.no> ChangeLog :
+  Initial ebuild.  This library is used by the GGZ Gameing Zone
+  for TCP connections and other things.
