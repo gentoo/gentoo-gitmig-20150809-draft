@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.6 2004/09/22 14:45:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.7 2004/10/05 21:26:52 mcummings Exp $
+
+  05 Oct 2004; Michael Cummings <mcummings@gentoo.org>
+  +files/sparc-DBD-SQLite-1.06.patch, DBD-SQLite-1.06.ebuild:
+  Fixes for sparc for a clean test/compile. Read notes in ebuild - better
+  solutions welcome, but these work.
 
 *DBD-SQLite-1.06 (22 Sep 2004)
 
