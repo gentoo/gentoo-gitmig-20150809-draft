@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.5 2004/12/13 18:36:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.6 2004/12/18 13:44:10 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,7 +38,6 @@ src_unpack() {
 	epatch ${FILESDIR}/tripwire-2.3.1-gcc3.patch.bz2
 	epatch ${FILESDIR}/tripwire-jbj.patch.bz2
 	epatch ${FILESDIR}/tripwire-mkstemp.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1.2-force_gcc334.patch.bz2
 
 	# pull out the interesting debian patches
 	filterdiff  -i '*/man/man8/twadmin.8' -z  --strip=1	\
@@ -65,10 +64,7 @@ src_compile() {
 }
 
 src_install() {
-	dosbin ${S}/bin/*/siggen
-	dosbin ${S}/bin/*/tripwire
-	dosbin ${S}/bin/*/twadmin
-	dosbin ${S}/bin/*/twprint
+	dosbin ${S}/bin/*/{tripwire,twadmin,twprint} || die
 
 	for i in {4,5,8}
 	do
