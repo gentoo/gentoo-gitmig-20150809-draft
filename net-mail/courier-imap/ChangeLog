@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.97 2004/11/16 09:37:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.98 2004/11/16 17:29:55 langthang Exp $
+
+  16 Nov 2004; Tuan Van <langthang@gentoo.org> courier-imap-3.0.8.ebuild:
+  Add virtual/imapd blocking. Bug #55309.
 
   16 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
   courier-imap-3.0.8.ebuild:

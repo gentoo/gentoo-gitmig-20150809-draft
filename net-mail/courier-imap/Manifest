@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 ef51bf8c56f3b35171934dc4af99452d courier-imap-3.0.7.ebuild 9236
-MD5 0d16a72db4eb5480ba4e9133458799e0 courier-imap-3.0.8.ebuild 9375
-MD5 3e6af677edd2c217ff06f5dac1872ad3 ChangeLog 16303
+MD5 d9ae9c6a982e6ac9195eb90d531b4508 courier-imap-3.0.8.ebuild 9394
+MD5 0988fd683cf3abf398cc5aa9e4a0e538 ChangeLog 16422
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 d9d0cf2a19ee5b20039583b7cb4cffcc files/courier-pop3d-ssl.rc6-3.0.5 1204
 MD5 457d7f87a25f4f8f05af321130d846bf files/courier-imap-3.0.7-db4-bdbobj_configure.in.patch 1263
@@ -27,9 +27,8 @@ MD5 9f46519bb9780f36b21727a008545b89 files/courier-pop3d.rc6 953
 MD5 7b677e761c000af45fa7a37635b0c5c8 files/mkpop3dcert 996
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBmdhfPpIsIjIzwiwRAoTaAKDiG71AXwbcU28T4441Lguzj3y7dQCfQRJJ
-q2OazSXM61KCcNWCkE9HtBk=
-=u7gH
+iD8DBQFBmjju5FrxP71izLARAnoXAJ97YTgk3Dt3A7fD+p96Tni+t0tjKgCgsOhE
+RMyXJeKO6LOm9V77DV9zDXo=
+=WXfN
 -----END PGP SIGNATURE-----
