@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.6.ebuild,v 1.1 2004/08/23 22:07:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.6.ebuild,v 1.2 2004/09/23 08:28:01 eradicator Exp $
 
 IUSE="X"
 
@@ -10,11 +10,10 @@ DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
 
 MY_P=${P/_rc/rc}
-#SRC_URI="ftp://ftp.alsa-project.org/pub/tools/${MY_P}.tar.bz2"
 SRC_URI="mirror://alsaproject/tools/${P}.tar.bz2"
 
 SLOT="0.9"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 LICENSE="GPL-2"
 S=${WORKDIR}/${MY_P}
 

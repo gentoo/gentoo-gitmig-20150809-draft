@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.68 2004/09/09 11:01:09 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.69 2004/09/23 08:28:19 eradicator Exp $
+
+  23 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-utils-1.0.6.ebuild:
+  Stable amd64, x86.
 
   09 Sep 2004; <tchiwam@gentoo.org>, alsa-utils-1.0.6.ebuild
   added ~ppc64 keyword
