@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.15 2002/09/03 02:46:41 lostlogic Exp $
-ID='$Id: qpkg,v 1.15 2002/09/03 02:46:41 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.16 2002/09/28 14:54:07 karltk Exp $
+ID='$Id: qpkg,v 1.16 2002/09/28 14:54:07 karltk Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -183,7 +183,7 @@ ${T}${T}${T}depending on selected packages
 
 ${BR}Operation Modifiers:
   ${BL}-nc, --no-color${NO}${T}don't use colors
-  ${BL}-v,  --verbose${NO}${T}Be more verbose [ can be repeated twise ]
+  ${BL}-v,  --verbose${NO}${T}Be more verbose [ can be repeated twice ]
   ${BL}-vv${NO}${T}${T}${T}Same as ${BL}-v -v${NO}
 
 ${YL}Notes${NO}: 
