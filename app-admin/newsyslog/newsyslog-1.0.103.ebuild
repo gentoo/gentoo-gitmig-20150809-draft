@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.0.103.ebuild,v 1.9 2003/11/14 21:21:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.0.103.ebuild,v 1.10 2004/02/17 08:40:43 mr_bones_ Exp $
 
 DESCRIPTION="An enhanced version of newsyslog originally written by Theodore Ts'o"
 HOMEPAGE="http://www.weird.com/~woods/projects/newsyslog.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.weird.com/pub/local/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips"
 
 DEPEND="sys-apps/groff"
 RDEPEND="virtual/cron
