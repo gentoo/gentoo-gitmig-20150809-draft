@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tamago
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.9 2004/06/24 22:25:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.10 2004/06/30 03:03:50 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> tamago-4.0.6.ebuild:
+  sync IUSE (+canna)
 
 *tamago-4.0.6-r1 (08 Aug 2003)
 
