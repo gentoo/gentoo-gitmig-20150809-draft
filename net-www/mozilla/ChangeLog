@@ -1,9 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.36 2002/09/07 21:36:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.37 2002/09/08 12:55:07 spider Exp $
 
 *mozilla-1.1-r1 (7 Sep 2002)
+  9 Sep 2002; Spider <spider@gentoo.org> mozilla-1.1-r1.ebuild :
+  added the patch to make galeon cvs head build with "use gtk2" 
 
+  
   7 Sep Martin Schlemmer <azarah@gentoo.org> mozilla-1.1-r1.ebuild :
 
   Install pkgconfig files (*.pc).  This should resolve bug #7571.

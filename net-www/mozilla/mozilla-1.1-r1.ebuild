@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.1 2002/09/07 21:36:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.2 2002/09/08 12:55:07 spider Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -88,6 +88,10 @@ src_unpack() {
 	then
 		mv ${WORKDIR}/ipc ${S}/extensions/
 		mv ${WORKDIR}/enigmail ${S}/extensions/
+	fi
+
+	if [ -n "`use gtk2`" ]; then
+		patch -p0 <${FILESDIR}/gtk2mozilla_head_patch || die "the gtk2 patch failed"
 	fi
 }
 

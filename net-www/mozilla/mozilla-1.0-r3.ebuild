@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.10 2002/08/16 03:01:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.11 2002/09/08 12:55:07 spider Exp $
 
+inherit makeedit
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 
 # handle _rc versions
@@ -218,7 +219,9 @@ src_compile() {
 		--enable-optimize="-Wno-deprecated -O3" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
-
+		
+	edit_makefiles
+		
 	make || die
 
 	# Build the NSS/SSL support
