@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.13 2002/05/25 13:37:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.14 2002/05/25 22:52:36 azarah Exp $
+
+*gcc-3.1-r4 (25 May 2002)
+
+  25 May 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1-r4.ebuild :
+
+  Fix some more files that got installed in the wrong location.  From
+  gcc-3.1, locales is installed in $datadir, so we should not set that
+  to a custom dir, and since libgcj.jar now have the version appended,
+  it should not be a problem with multiple version installs anymore.
 
 *gcc-3.1-r3 (25 May 2002)
 
