@@ -1,6 +1,10 @@
 # ChangeLog for net-www/webfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/ChangeLog,v 1.4 2003/11/04 10:53:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/ChangeLog,v 1.5 2003/12/15 23:44:10 mholzer Exp $
+
+  16 Dec 2003; Martin Holzer <mholzer@gentoo.org> webfs-1.19.ebuild,
+  webfs-1.20.ebuild:
+  Correting manpage install. Closes #35051.
 
   04 Nov 2003; Tavis Ormandy <taviso@gentoo.org> webfs-1.20.ebuild:
   looks good on alpha.
