@@ -1,0 +1,11 @@
+--- skin.orig	Mon Oct  1 22:25:44 2001
++++ skin	Mon Oct  1 22:24:25 2001
+@@ -36,7 +36,7 @@
+   hpotmeter = pos, 14, 9, NULL, 100, 50, 310, 63,  42, 9, evSetBalance
+ 
+   ; potmeter=phasebitmaps,phases,default value,x,y,sx,sy,msg
+-  potmeter =volume, 51, 0, 311, 17, 40, 40, evSetVolume
++  potmeter =volume, 50, 0, 311, 17, 40, 40, evSetVolume
+ 
+   ; font=fontname,fontid
+   font = symbols, symbols

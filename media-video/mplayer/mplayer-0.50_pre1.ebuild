@@ -55,6 +55,15 @@ RDEPEND="virtual/glibc
 	ogg? ( media-libs/libogg )"
 
 
+src_unpack() {
+
+	unpack ${A}
+
+	# Fix bug with default skin
+	cd ${WORKDIR}/default
+	patch <${FILESDIR}/default-skin.diff
+
+}
 
 src_compile() {
 
