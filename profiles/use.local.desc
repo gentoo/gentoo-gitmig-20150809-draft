@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.917 2005/01/30 07:09:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.918 2005/01/30 14:01:58 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -551,6 +551,7 @@ net-www/elinks:lua - enable lua support
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/kazehakase:thumbnail - enable thumbnail support.
+net-www/mod_log_sql:dbi - Enables support for libDBI
 net-www/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 net-www/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
