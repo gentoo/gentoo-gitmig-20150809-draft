@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.5.ebuild,v 1.11 2005/02/27 14:35:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.5.ebuild,v 1.12 2005/03/13 16:36:24 luckyduck Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://matroska.free.fr/downloads/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.matroska.org"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc amd64 alpha ~ia64 sparc ~hppa ~mips"
 
 DEPEND="virtual/libc"
