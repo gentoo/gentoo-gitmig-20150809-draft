@@ -1,9 +1,16 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.21 2004/04/26 04:24:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.22 2004/04/26 20:27:13 squinky86 Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> ettercap-0.6.10-r1.ebuild:
   Add die following econf for bug 48950
+
+  26 Apr 2004; Jon Hood <squinky86@gentoo.org> ettercap-0.7.0_pre1.ebuild,
+  files/digest-ettercap-0.7.0_pre1, metadata.xml:
+  version bump (#47963)
+  added missing metadata.xml file
+  0.6.11 stable on x86
+  debug option (#48149)
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> ettercap-0.6.11.ebuild:
   Adding amd64 keyword. Closing #42798.
