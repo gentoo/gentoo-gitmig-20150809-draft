@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.0.ebuild,v 1.2 2003/06/13 22:42:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.2.ebuild,v 1.1 2003/07/09 01:02:21 liquidx Exp $
 
 IUSE="oggvorbis hyriand"
-
 inherit eutils distutils
-
 MY_PN="${PN/soulseek/slsk}"
 MY_PV="${PV/_/}"
 
 #MY_HV=${PV#*.*.*.}
-MY_HV=2.2
+MY_HV=7
 
 MY_P=${MY_PN}-${MY_PV%.${MY_HV}}
 
@@ -25,8 +23,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=dev-lang/python-2.1
-	>=dev-python/wxPython-2.4.0.1
-	~x11-libs/wxGTK-2.4.0
+	>=dev-python/wxPython-2.4.1.2
+	>=x11-libs/wxGTK-2.4.1
 	oggvorbis? ( dev-python/pyvorbis dev-python/pyogg )"
 
 RDEPEND=${DEPEND}
@@ -36,6 +34,12 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	use hyriand && epatch ${DISTDIR}/${MY_P}-hyriand-${MY_HV}.patch
+}
+
+src_install() {
+	distutils_src_install
+	insinto /usr/share/applications
+	doins ${FILESDIR}/pysoulseek.desktop
 }
 
 pkg_postinst() {
