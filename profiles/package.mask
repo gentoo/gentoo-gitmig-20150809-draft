@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3398 2004/12/17 18:07:47 swegener Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3399 2004/12/18 21:19:05 karltk Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <karltk@gentoo.org> (18 Dec 2004)
+# Upstream does not version files and overwrites with never versions intermittently.
+# See #65572.
+dev-db/aqua-data-studio
 
 # <ribosome@gentoo.org> (14 Dec 2004)
 # Needs testing
