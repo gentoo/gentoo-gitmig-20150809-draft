@@ -245,4 +245,4 @@ app-doc/tkinfo
 =net-dialup/ppp-2.4.1-r6
 
 # not finished
->= sys-kernel/linux-sources-2.4.15
+>=sys-kernel/linux-sources-2.4.15_pre
