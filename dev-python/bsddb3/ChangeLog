@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.6 2003/06/01 01:31:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.7 2003/09/03 12:25:10 liquidx Exp $
+
+  03 Sep 2003; Alastair Tse <liquidx@gentoo.org> bsddb3-3.4.0-r1.ebuild,
+  files/bsddb3-3.4.0-db3.patch:
+  fixed db-3 patch to point to db-3.2 instead of db-3. updated deps.
 
 *bsddb3-3.4.0-r1 (01 Jun 2003)
 

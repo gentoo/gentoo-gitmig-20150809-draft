@@ -6,8 +6,8 @@
      if not libdir: libdir = os.path.join(BERKELEYDB_DIR, 'lib')
 -    if not '-ldb' in LIBS:
 -        libname = ['db']
-+    if not '-ldb-3' in LIBS:
-+        libname = ['db-3']
++    if not '-ldb-3.2' in LIBS:
++        libname = ['db-3.2']
      else:
          libname = []
      utils = []
