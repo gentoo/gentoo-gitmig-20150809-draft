@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r3.ebuild,v 1.17 2004/06/24 21:55:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r3.ebuild,v 1.18 2004/08/21 16:29:51 foser Exp $
 
 IUSE="nls"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	dev-libs/libxml
 	dev-libs/popt
 	gnome-base/oaf
-	gnome-base/ORBit"
+	=gnome-base/orbit-0*"
 
 src_compile() {
 	local myconf
