@@ -1,15 +1,22 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.17 2002/10/19 01:18:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.18 2002/11/11 15:29:24 spider Exp $
+
+*ggv-1.99.96 (11 Nov 2002) :
+
+  11 Nov 2002; Spider <spider@gentoo.org> ggv-1.99.96.ebuild 
+  files/digest-ggc-1.99.96 ChangeLog : Updated to latest version, marked as 
+  testing and fixed previous changelog entries.
+  
 
 *ggv-1.99.95 (19 Oct 2002)
 
-  19 Oct 2002; foser <foser@gentoo.org> :
+  19 Oct 2002; foser <foser@gentoo.org> ggv-1.99.95.ebuild :
   Official security update
 
 *ggv-1.99.90-r1 (17 Oct 2002)
 
-  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> ggv-1.99.90-r1.ebuild :
   Security update.
 
 *ggv-1.99.90 (06 Sep 2002)
