@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.9 2004/04/13 00:41:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.10 2004/04/13 00:43:34 mr_bones_ Exp $
+
+*tix-8.2.0-r1 (12 Apr 2004)
+
+  12 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> tix-8.2.0-r1.ebuild:
+  rev bump so the header file fix goes out.
 
   12 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> tix-8.2.0.ebuild:
   fix for bug #46561; inherit eutils for epatch; use emake -j1 for buggy
