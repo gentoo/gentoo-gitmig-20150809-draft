@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_rc3.ebuild,v 1.3 2003/04/27 20:14:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9.ebuild,v 1.1 2003/04/27 20:14:34 vapier Exp $
 
 inherit eutils
 
@@ -11,21 +11,24 @@ SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
-
-S="${WORKDIR}/${MY_P}"
+KEYWORDS="~x86"
 
 DEPEND="virtual/x11
-	>=media-sound/mad-0.14.2b-r2
-	>=media-sound/lame-3.93.1-r1
-	>=media-libs/libmpeg3-1.5-r1
-	>=media-libs/a52dec-0.7.4
-	>=media-libs/divx4linux-20020418-r1
 	>=x11-libs/gtk+-1.2.10-r9
-	>=media-video/mjpegtools-1.6.0-r5"
+	>=media-sound/mad-0.14.2b*
+	>=media-libs/a52dec-0.7.4
+	>=media-sound/lame-3.93*
+	>=media-video/mjpegtools-1.6*
+	>=media-libs/xvid-0.9*
+	>=media-libs/divx4linux-20020418-r1"
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	econf --disable-warnings
+	econf \
+		--disable-warnings \
+		`use_enable disable` \
+		|| die
 	emake || die
 }
 
