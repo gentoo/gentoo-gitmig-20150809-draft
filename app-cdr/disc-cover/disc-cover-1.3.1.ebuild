@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.3.1.ebuild,v 1.15 2004/05/07 12:43:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.3.1.ebuild,v 1.16 2004/05/17 15:17:17 usata Exp $
 
 DESCRIPTION="Creates CD-Covers via Latex by fetching cd-info from freedb.org or local file"
 HOMEPAGE="http://www.liacs.nl/~jvhemert/disc-cover/"
@@ -11,7 +11,7 @@ KEYWORDS="x86 ppc sparc"
 SLOT="0"
 IUSE=""
 DEPEND=">=dev-perl/Audio-CD-disc-cover-0.04
-	>=app-text/tetex-1.0.7-r7"
+	virtual/tetex"
 
 src_compile() {
 	pod2man disc-cover > disc-cover.1 || die
