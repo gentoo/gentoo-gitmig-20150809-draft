@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/commons-daemon
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.1 2004/02/24 22:05:51 zx Exp $
+
+*commons-daemon-1.0 (27 Feb 2004)
+
+  27 Feb 2004; Chris Aniszczyk <zx@gentoo.org> commons-daemon-1.0.ebuild:
+  Initial Import.
+  Thanks to Greg Bowyer <bg115@gre.ac.uk> for the initial ebuild. Closes #37931
+
