@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fceultra
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.6 2004/05/29 22:25:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.7 2004/06/05 07:34:28 mr_bones_ Exp $
+
+  05 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fceultra-0.98.10.ebuild:
+  address issues laid out by John Ratliff in bug #51173; tidy
 
 *fceultra-0.98.10 (30 May 2004)
 
