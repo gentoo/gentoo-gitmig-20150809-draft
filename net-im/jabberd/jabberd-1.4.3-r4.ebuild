@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.2 2004/09/20 22:32:18 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.3 2004/09/21 22:22:55 humpback Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ IUSE="ssl ldap ipv6 msn oscar yahoo icq"
 
 DEPEND="!net-im/jabber-server
 	=dev-libs/pth-1.4.0
+	dev-libs/expat
 	ssl? ( >=dev-libs/openssl-0.9.6i )
 	ldap? ( =net-nds/openldap-2* )"
 
