@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.020.ebuild,v 1.2 2003/05/13 19:04:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.020.ebuild,v 1.3 2003/06/08 05:23:53 seemant Exp $
 
 IUSE="ssl"
 
@@ -14,8 +14,9 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 
 DEPEND="dev-lang/perl
 	sys-apps/lsof
-	ssl? ( dev-perl/Net-SSLeay )
-	dev-perl/Authen-PAM"
+	>=sys-apps/sed-4
+	dev-perl/Authen-PAM
+	ssl? ( dev-perl/Net-SSLeay )"
 
 src_install() {
 	dodir /usr/libexec/usermin
