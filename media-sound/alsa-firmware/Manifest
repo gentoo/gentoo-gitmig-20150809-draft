@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 946132727854c6dd7af0921f5e7801d2 ChangeLog 1749
+MD5 af1f2fdae4f8a77ddfaab27e0d7d6a0c ChangeLog 1856
 MD5 b3bcecad721819eeb7799dc2857a14dc alsa-firmware-1.0.4.ebuild 565
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 2afe79ae58edc8e88fd69e6c77d34b05 alsa-firmware-1.0.7.ebuild 569
+MD5 617319004d04344e124a909d627c256a alsa-firmware-1.0.7.ebuild 576
 MD5 18af51292bc26e80fd4f44916a8f42fe files/digest-alsa-firmware-1.0.4 73
 MD5 b7601798d4996be9e37c08c457487fbc files/digest-alsa-firmware-1.0.7 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBndl2ArHZZzCEUG0RAvsdAJ97IaV5kGpni1rIHqSoiduE6RGk8QCeNeD4
-EXSH0ZFircDyzljBFSH649g=
-=qCKx
+iD8DBQFBomNjArHZZzCEUG0RAsOFAJ9wy2lAijwqW/8Nhl9E9s4Dmzd2rACeL5Ex
+/M8NQOUB/VZhFJDkoHQC6Jw=
+=0bLl
 -----END PGP SIGNATURE-----
