@@ -80,6 +80,16 @@ information.</p>
 # <i>./MAKEDEV audio</i></pre></body>
 	</section>
 	<section>
+		<title>How do I get a <path>/dev/mouse </path> that
+		doesn't go away when I reboot?</title>
+		<body>
+		<p>You need to edit <path>/etc/devfsd.conf</path>
+		and add the line "REGISTER psaux EXECUTE /bin/ln -sf $devpath
+		/dev/mouse".  You'll then want to <c>killall -HUP devfsd</c>
+		to get devfsd to reread <path>/etc/devfsd.conf</path>.</p>
+		</body>
+	</section>
+	<section>
 		<title>Grub can't find stage x.y?</title>
 		<body><p>
 		During installation the grub boot files are copied
