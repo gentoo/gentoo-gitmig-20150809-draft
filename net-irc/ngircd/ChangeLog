@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.5 2004/07/01 22:22:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.6 2004/07/08 22:59:53 swegener Exp $
+
+*ngircd-0.8.0 (09 Jul 2004)
+
+  09 Jul 2004; Sven Wegener <swegener@gentoo.org> +files/ngircd.init.d,
+  +ngircd-0.8.0.ebuild:
+  Version bump and added init script.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ngircd-0.7.7.ebuild:
   virtual/glibc -> virtual/libc
