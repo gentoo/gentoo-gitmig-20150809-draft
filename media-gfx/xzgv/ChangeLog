@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.9 2005/01/05 16:32:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.10 2005/01/05 16:39:12 chriswhite Exp $
+
+  06 Jan 2005; Chris White <chriswhite@gentoo.org> xzgv-0.8-r1.ebuild:
+  Marked x86 stable for bug #74069.
 
 *xzgv-0.8-r1 (06 Jan 2005)
 
