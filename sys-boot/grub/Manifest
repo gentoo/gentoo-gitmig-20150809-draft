@@ -1,4 +1,4 @@
-MD5 cd5b7425497d1049850f4688afeae2c6 ChangeLog 11633
+MD5 cc68fca6fa606a91728386e5af24ba63 ChangeLog 12031
 MD5 3b7a994ffe338fd8de16df033684e924 grub-0.92-r1.ebuild 2519
 MD5 adcde4d1dce3d1e2ef2c466f860c6875 grub-0.93.20030118.ebuild 2539
 MD5 b0eacbb6edb031d87f33ed0b08f5916d metadata.xml 226
@@ -6,6 +6,7 @@ MD5 809624c41057bbc7d8d6917d1104edf8 grub-0.94-r1.ebuild 3564
 MD5 e1561dae9a23012a8960909af3cffb29 grub-0.94-r2.ebuild 3680
 MD5 548d207b20beedd265fda7bb126c22de grub-0.95.20040823.ebuild 4155
 MD5 9cf2ac1a1d69d1a44917c87aa4dd49a3 grub-0.96.ebuild 4072
+MD5 75a4db415c1c9ac430fac645589940fa grub-0.96-r1.ebuild 4691
 MD5 16039704cf1e6b6f46b4413532af082c files/digest-grub-0.92-r1 133
 MD5 5d1c8e582496db9d7a9b77e76f09f7d8 files/digest-grub-0.93.20030118 139
 MD5 8d898cd9d1928916596cc3f9883eac67 files/grub-0.93-gcc3.3.diff 639
@@ -17,3 +18,7 @@ MD5 7357395b0d223c0bbf0675a9af31f9c3 files/grub-0.94-grub.conf.patch 7574
 MD5 3a653f86b731c2a17482d25f57b2d041 files/digest-grub-0.95.20040823 149
 MD5 9c1ec8bfdc5f20ce965c2d2167a43162 files/grub-0.95.20040823-warnings.patch 2529
 MD5 2170f54e53dea24426369c0154d46fc0 files/digest-grub-0.96 140
+MD5 904c3dec402e5c7f0e62ab970dcdf5b2 files/grub-0.96-PIC.patch 1925
+MD5 2170f54e53dea24426369c0154d46fc0 files/digest-grub-0.96-r1 140
+MD5 3f3995353a0995c56d996d2218570160 files/grub-0.96-i2o-raid.patch 1597
+MD5 8082c035a4ba98d0935b6b045827fb2c files/grub-0.96-nxstack.patch 18920
