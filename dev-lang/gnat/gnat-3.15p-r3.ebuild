@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.3 2003/09/29 22:47:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.4 2003/09/30 19:20:47 dholm Exp $
 
 DESCRIPTION="The GNU Ada Toolkit"
 DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
@@ -49,23 +49,25 @@ src_unpack() {
 	bzcat "${FILESDIR}/${P}-gentoo.patch.bz2" | patch -p1
 	touch ada/treeprs.ads ada/a-[es]info.h ada/nmake.ad[bs]
 
+	# Make $local_prefix point to $prefix
+	sed -i -e "s/@local_prefix@/@prefix@/" "${S}/Makefile.in"
+
 	#if [ "${ARCH}" != "x86" ]; then
 		cd "${S}"
 		bzcat "${FILESDIR}/${P}-noaddr2line.patch.bz2" | patch -p1
+		sed -i -e "s/-laddr2line//g" ada/Makefile.in
 	#fi
 }
 
 src_compile() {
 	local PATH="${GNATBOOT}/bin:${PATH}"
-	if [ -z ${GNATBOOTINST} ]; then
-		local LDFLAGS="-L${GNATBOOTINST}"
+	local LDFLAGS="-L${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1"
+	if [ -d ${GNATBOOTINST} ]; then
+		local LDFLAGS="-L${GNATBOOTINST} ${LDFLAGS}"
 	fi
 
-	# Make $local_prefix point to $prefix
-	sed -i -e "s/@local_prefix@/@prefix@/" "${S}/Makefile.in"
-
 	# Configure gcc
-	local CFLAGS="-O0"
+	local CFLAGS="-O2 -gnatpgn"
 	cd "${S}"
 	econf --libdir=/usr/lib/ada --program-prefix=gnat \
 		|| die "./configure failed"
@@ -76,20 +78,25 @@ src_compile() {
 
 	# Compile it by first using the bootstrap compiler and then bootstrapping
 	# our own version. Finally compile the libraries and tools.
-	make CC="gcc" CFLAGS="-O2 -gnatpgn" LANGUAGES="c ada gcov" || \
+	einfo "Building compiler"
+	make CC="gcc" CFLAGS="${CFLAGS}" LANGUAGES="c ada gcov" ||
 		die "Failed while running inital compilation!"
-	make CC="gcc" CFLAGS="-O2 -gnatpgn" LANGUAGES="c ada gcov" bootstrap || \
+	make CC="gcc" CFLAGS="${CFLAGS}" LANGUAGES="c ada gcov" bootstrap ||
 		die "Died while bootstrapping!"
-	make CC="gcc" CFLAGS="-O2 -gnatpgn" GNATLIBCFLAGS="-O2 -gnatpgn -fPIC" \
-		gnatlib-shared || die "Failed to build the shared version of gnatlib!"
-	make CC="gcc" CFLAGS="-O2 -gnatpgn" gnattools || \
+	einfo "Building shared gnatlib"
+	make CC="gcc" CFLAGS="${CFLAGS}" GNATLIBCFLAGS="${CFLAGS} -fPIC" \
+		gnatlib-shared ||
+		die "Failed to build the shared version of gnatlib!"
+	einfo "Building gnattools"
+	make CC="gcc" CFLAGS="${CFLAGS}" gnattools ||
 		die "Failed to build gnattools!"
 }
 
 src_install() {
 	local PATH="${GNATBOOT}/bin:${PATH}"
-	if [ -z ${GNATBOOTINST} ]; then
-		local LDFLAGS="-L${GNATBOOTINST}"
+	local LDFLAGS="-L${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1"
+	if [ -d ${GNATBOOTINST} ]; then
+		local LDFLAGS="${LDFLAGS} -L${GNATBOOTINST}"
 	fi
 
 	# Install gnatgcc, tools and native threads library
@@ -100,6 +107,7 @@ src_install() {
 	touch "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1/include/float.h"
 
 	# Build and install the static version of gnatlib
+	einfo "Building static gnatlib"
 	make CC="gcc" CFLAGS="-O2 -gnatpgn" GNATLIBCFLAGS="-O2 -gnatpgn" gnatlib ||
 		die "Failed while compiling static gnatlib!"
 	make prefix="${D}/usr" libdir="${D}/usr/lib/ada" \
@@ -118,6 +126,7 @@ src_install() {
 
 		# Compile and install the FSU threads library
 		rm stamp-gnatlib1
+		einfo "Building FSU-threads runtime"
 		make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0 -fPIC" \
 			THREAD_KIND="fsu" gnatlib-shared
 		make prefix="${D}/usr" libdir="${D}/usr/lib/ada" install-gnatlib
