@@ -17,7 +17,7 @@ diff -u -r -N util-linux-2.11z.orig/fdisk/llseek.c util-linux-2.11z/fdisk/llseek
  
 -#if defined(__alpha__) || defined(__ia64__) || defined(__s390x__)
 +/* do not use assembler to put together syscalls at compile time (for llseek for example) when using PIC */
-+#if defined(__PIC__) || defined(__pic__) || defined(__alpha__) || defined(__ia64__) || defined(__s390x__)
++#if defined(__PIC__) || defined(__pic__) || defined(__alpha__) || defined(__ia64__) || defined(__s390x__) || defined(__hppa__)
  
  #define my_llseek lseek
  
@@ -39,7 +39,7 @@ diff -u -r -N util-linux-2.11z.orig/fdisk/sfdisk.c util-linux-2.11z/fdisk/sfdisk
 -#if !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
 +
 +/* do not use the assembler constructed syscalls for seeking if compiled as PIC */
-+#if !defined(__PIC__) && !defined(__pic__) && !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
++#if !defined(__PIC__) && !defined(__pic__) && !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__) && !defined (__hppa__)
  static
  _syscall5(int,  _llseek,  uint,  fd, ulong, hi, ulong, lo,
         loff_t *, res, uint, wh);
@@ -48,35 +48,10 @@ diff -u -r -N util-linux-2.11z.orig/fdisk/sfdisk.c util-linux-2.11z/fdisk/sfdisk
      out = 1;
  
 -#if !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
-+#if !defined(__PIC__) && !defined(__pic__) && !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
++#if !defined(__PIC__) && !defined(__pic__) && !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__) && !defined (__hppa__)
      if (_llseek (fd, in>>32, in & 0xffffffff, &out, SEEK_SET) != 0) {
  #else
      if ((out = lseek(fd, in, SEEK_SET)) != in) {
-#
-# This seems to not be needed anymore
-#
-#diff -u -r -N util-linux-2.11z.orig/mount/pivot_root.c util-linux-2.11z/mount/pivot_root.c
-#--- util-linux-2.11z.orig/mount/pivot_root.c	2002-11-29 12:02:56.000000000 +0100
-#+++ util-linux-2.11z/mount/pivot_root.c	2003-07-12 19:07:39.000000000 +0200
-#@@ -1,12 +1,17 @@
-# /* pivot_root.c - Change the root file system */
-# 
-# /* Written 2000 by Werner Almesberger */
-#+/*
-#+ * Jul 11 2003 <solar@gentoo.org>
-#+ * avoid using assembler constructed _syscall2() when PIC is needed
-#+ */
-# 
-# #include <stdio.h>
-# #include <errno.h>	/* needed for <linux/unistd.h> below */
-# 
-#-#ifdef __ia64__
-#+#if (defined(__ia64__) || defined(__PIC__) || defined(__pic__))
-# # include <sys/syscall.h>
-#+# include <unistd.h>
-# # define pivot_root(new_root,put_old) syscall(SYS_pivot_root,new_root,put_old)
-# #else
-# # include <linux/unistd.h>
 --- util-linux-2.12b/partx/partx.c.orig	2004-09-04 15:58:23.000000000 -0400
 +++ util-linux-2.12b/partx/partx.c	2004-09-04 15:57:40.000000000 -0400
 @@ -333,7 +333,7 @@
@@ -84,7 +59,7 @@ diff -u -r -N util-linux-2.11z.orig/fdisk/sfdisk.c util-linux-2.11z/fdisk/sfdisk
   * sseek: seek to specified sector
   */
 -#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__)
-+#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__) && !defined(__PIC__)
++#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__) && !defined(__PIC__) && !defined(__hppa__)
  #define NEED__llseek
  #endif
  

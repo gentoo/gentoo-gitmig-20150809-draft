@@ -35,11 +35,11 @@ MD5 87912a793169fad4258077f2f6957616 files/digest-util-linux-2.12b 156
 MD5 e9d23ba9f2e86d57084dce2b34d76c10 files/util-linux-2.12b-fat-LABEL-support.patch 11672
 MD5 58cfa6f70a144bbe55e6aa1b85f72a96 files/util-linux-2.12b-gcloop-with-crypt.patch 3846
 MD5 a0217db1b99dfa1f137c22c36343a623 files/util-linux-2.12b-gcloop.patch 3844
-MD5 36359c4fe2698bdac5888e6daf63b67e files/util-linux-2.12b-pic.patch 3652
+MD5 07a3dfffc55bcc7ef2868e025beb853e files/util-linux-2.12b-pic.patch 2874
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBTt89HTu7gpaalycRAiK1AJ9sqQ/qqs/oXdj3jDXIJ79WhZjd2ACfdEO2
-7ZGX8AwJUvXM3uiDbff2FXQ=
-=M5Fr
+iD8DBQFBXE2KHTu7gpaalycRArRUAKCPb7jx74ebun63KXzpWLuNw5agggCgxjWZ
+EQX7fjijrdr57yQZGVw5OE4=
+=LQP7
 -----END PGP SIGNATURE-----
