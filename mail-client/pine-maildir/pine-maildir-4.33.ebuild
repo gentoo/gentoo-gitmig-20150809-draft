@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine-maildir/pine-maildir-4.33.ebuild,v 1.1 2004/05/30 02:58:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine-maildir/pine-maildir-4.33.ebuild,v 1.2 2004/06/07 04:23:04 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="imap"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.72"
-[ `use imap` ] && PROVIDE="virtual/imap"
+use imap && PROVIDE="virtual/imap"
 
 S=${WORKDIR}/pine${PV}
 
@@ -42,7 +42,7 @@ src_install() {
 	into /usr
 	dobin bin/pine bin/pico bin/pilot bin/mtest
 	dosbin bin/imapd
-	if [ "`use imap`" ] ; then
+	if use imap ; then
 		insinto /usr/include
 		doins imap/c-client/{mail,imap4r1,rfc822,linkage}.h
 		dolib.a imap/c-client/c-client.a
