@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.9.1.ebuild,v 1.1 2003/05/16 16:25:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.9.1.ebuild,v 1.2 2003/06/10 13:35:08 foser Exp $
 
 inherit eutils debug
 
@@ -21,6 +21,7 @@ DEPEND="virtual/x11
 	>=dev-libs/libunicode-0.4-r1
 	>=dev-libs/libole2-0.2.4-r1
 	>=x11-libs/gtk+-2
+	>=gnome-base/libglade-2
 	>=app-text/wv-0.7.5
 	>=dev-libs/fribidi-0.10.4
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
