@@ -1,0 +1,136 @@
+--- njam.cpp.orig	2004-08-31 23:08:03.911280616 -0400
++++ njam.cpp	2004-08-31 23:57:05.560082024 -0400
+@@ -33,6 +33,9 @@
+ // needed for chdir
+ #ifdef __linux__
+ #include <unistd.h>
++// for mkdir
++#include <sys/stat.h>
++#include <sys/types.h>
+ #endif
+ 
+ #include <stdio.h>
+@@ -215,15 +218,31 @@
+ 		SDLNet_Quit();
+ 
+ 	// write configuration options
+-	char filename[] = "njam.conf";
+-	FILE *fp = fopen(filename, "w+");
+-	if (fp)
+-	{
+-		fprintf(fp, "M=%d\n", (m_GameOptions.PlayMusic ? 1 : 0));
+-		fprintf(fp, "S=%d\n", (m_GameOptions.PlaySound ? 1 : 0));
+-		fprintf(fp, "U=%d\n", m_GameOptions.UsedSkin);
+-		fprintf(fp, "I=%s\n", m_GameOptions.ServerIP);
+-		fclose(fp);
++	FILE *fp;
++	
++	if(getenv("HOME") && (chdir(getenv("HOME")) == 0))
++	{
++		mkdir(".njam", 0774);
++		
++		if(chdir(".njam") == 0)
++		{
++			char filename[] = "njam.conf";
++			fp = fopen(filename, "w+");
++			
++			if(fp)
++			{
++				fprintf(fp,
++					"M=%d\n",
++					"S=%d\n",
++					"U=%d\n",
++					"I=%d\n",
++					(m_GameOptions.PlayMusic ? 1 : 0),
++					(m_GameOptions.PlaySound ? 1 : 0),
++					m_GameOptions.UsedSkin,
++					m_GameOptions.ServerIP);
++				fclose(fp);
++			}
++		}
+ 	}
+ 
+ 		// format: NAME#POINTS#LEVEL#
+@@ -599,37 +618,52 @@
+ 	m_FontYellow = new NjamFont("data/font-yellow.bmp", 10, 15);
+ 
+ 	// Load user settings from .conf file
+-	char filename[] = "njam.conf";
+-	FILE *fp = fopen(filename, "r");
+-	if (fp)
+-	{
+-		LogFile("Reading njam.conf file.\n");
+-		char buff[20];
+-		while (true)
++	FILE *fp;
++	
++	if(getenv("HOME") && (chdir(getenv("HOME")) == 0) &&
++		(chdir(".njam") == 0))
++	{
++		char filename[] = "njam.conf";
++		fp = fopen(filename, "r");
++		
++		if(fp)
+ 		{
+-			fgets(buff, 20, fp);
+-			if (feof(fp))
+-				break;
++			LogFile("Reading njam.conf file.\n");
++			char buff[20];
+ 
+-			if (buff[1] == '=')
++			while (true)
+ 			{
+-				int i;
+-				switch (buff[0])
++				fgets(buff, 20, fp);
++				if (feof(fp))
++					break;
++
++				if (buff[1] == '=')
+ 				{
+-					case 'M':	m_GameOptions.PlayMusic = (buff[2] == '1');		break;
+-					case 'S':	m_GameOptions.PlaySound = (buff[2] == '1');		break;
+-					case 'U':	m_GameOptions.UsedSkin = (buff[2] - '0');	break;
+-					case 'I':	// serverIP
+-						for (i=2; buff[i] != '\n' && buff[i] && i<17; i++)
+-							m_GameOptions.ServerIP[i-2] = buff[i];
+-						m_GameOptions.ServerIP[i] = '\0';
+-						break;
+-					default:
+-						printf("Unknown configuration file option: %c\n", buff[0]);
++					int i;
++					switch (buff[0])
++					{
++						case 'M':	
++							m_GameOptions.PlayMusic = (buff[2] == '1');
++							break;
++						case 'S':
++							m_GameOptions.PlaySound = (buff[2] == '1');
++							break;
++						case 'U':
++							m_GameOptions.UsedSkin = (buff[2] - '0');
++							break;
++						case 'I':	// serverIP
++							for (i=2; buff[i] != '\n' && buff[i] && i<17; i++)
++								m_GameOptions.ServerIP[i-2] = buff[i];
++							m_GameOptions.ServerIP[i] = '\0';
++							break;
++						default:
++							printf("Unknown configuration file option: %c\n", 
++								buff[0]);
++					}
+ 				}
+ 			}
++			fclose(fp);
+ 		}
+-		fclose(fp);
+ 	}
+ 
+ 	// create default hiscore
+@@ -992,4 +1026,4 @@
+ 		SDL_Flip(m_Screen);
+ 	}
+ }
+-//---------------------------------------------------------------------------
++//---------------------------------------------------------------------------
