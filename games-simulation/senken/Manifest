@@ -1,6 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f2635789b060538124e5a30f312031f6 ChangeLog 767
-MD5 5d71f897a044a4479c7a2847394bca18 senken-0.2.6.ebuild 1073
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 3b34b1351ef4123b5fec3264ce1c5d93 senken-0.3.0.ebuild 1317
-MD5 bd89d6772450df2aeb99ff1213ec5ab4 files/digest-senken-0.2.6 65
 MD5 f1875c2364dcc366833c7c888405013a files/digest-senken-0.3.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHWWHTu7gpaalycRArQhAKDuh3g8mYQvAxACOexuxWDdsgE9WgCffr/g
+Ia/fNtzmqHCzt8C0muxw89I=
+=ZdeL
+-----END PGP SIGNATURE-----
