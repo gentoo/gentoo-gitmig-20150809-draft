@@ -1,23 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.9 2004/07/08 16:34:33 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.10 2004/10/20 18:51:01 vapier Exp $
 
 MY_P=arpwatch-2.1a11
 S=${WORKDIR}/$MY_P
 DESCRIPTION="An ethernet monitor program that keeps track of ethernet/ip address pairings"
-SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz"
 HOMEPAGE="http://www-nrg.ee.lbl.gov/"
+SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 ~sparc"
+KEYWORDS="amd64 hppa ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses"
 
-
 src_unpack() {
-	unpack $A
+	unpack ${A}
 	cd ${S}
 
 	einfo "Patching arpwatch with debian and redhat patches"
