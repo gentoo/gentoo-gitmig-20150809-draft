@@ -1,4 +1,4 @@
-MD5 99eb67b28613e1694137cd8b1fb41772 zmysqlda-2.0.8.ebuild 579
-MD5 76f1b8e16fb2d1bdf588da2a75baab7c ChangeLog 713
+MD5 fd4600f5a2d996414a3f78516138584b zmysqlda-2.0.8.ebuild 581
+MD5 c96ea69a9a00f9385114d1d5ca6570a3 ChangeLog 811
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 989397e8bf1fbbb3a66170edef51e4fb files/digest-zmysqlda-2.0.8 129
+MD5 e9a7a5cd66f90aedf983fdfcef9f2c36 files/digest-zmysqlda-2.0.8 65

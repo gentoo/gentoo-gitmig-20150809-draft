@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zphotoslides
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zphotoslides/ChangeLog,v 1.4 2004/07/19 22:26:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zphotoslides/ChangeLog,v 1.5 2004/10/23 22:43:41 lanius Exp $
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> zphotoslides-1.1-r1.ebuild,
+  -zphotoslides-1.1.ebuild:
+  fix -py21 dependency
 
   19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   zphotoslides-1.1-r1.ebuild, zphotoslides-1.1.ebuild:

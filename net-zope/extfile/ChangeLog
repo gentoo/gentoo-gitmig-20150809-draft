@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/extfile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/ChangeLog,v 1.6 2004/07/19 22:24:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/ChangeLog,v 1.7 2004/10/23 22:44:34 lanius Exp $
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org>
+  -extfile-1.2.0_beta1.ebuild, extfile-1.2.0_beta2.ebuild:
+  fix -py21 dependency
 
   19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   extfile-1.2.0_beta1.ebuild, extfile-1.2.0_beta2.ebuild:
