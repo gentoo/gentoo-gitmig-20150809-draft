@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4.ebuild,v 1.2 2003/09/06 11:54:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4.ebuild,v 1.3 2003/09/29 16:55:27 vapier Exp $
 
 inherit eutils
 
@@ -26,16 +26,15 @@ RDEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	sed -i \
-		-e "s:/usr/local/share:/usr/share/${PN}:" electricsheep.c || \
-			die "sed electricsheep.c failed"
+	sed -i "s:/usr/local/share:/usr/share/${PN}:" \
+		electricsheep.c || die "sed electricsheep.c failed"
+	sed -i '/OPT_CFLAGS=/s:=".*":="$CFLAGS":' mpeg2dec/configure \
+		|| die "sed mpeg2dec failed"
 }
 
 src_install() {
 	# prevent writing for xscreensaver
-	sed -i \
-		-e "s/^install-data-local:$/install-data-local:\nmy-install-data-local:/" \
+	sed -i "s/^install-data-local:$/install-data-local:\nmy-install-data-local:/" \
 		Makefile || die "sed Makefile failed"
 
 	# install the main stuff ... flame doesn't create /usr/bin so we have to.
