@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.17 2004/07/23 13:10:02 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.18 2004/08/08 15:30:35 foser Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -17,7 +17,7 @@
 ECLASS="gst-plugins"
 INHERITED="$INHERITED $ECLASS"
 
-inherit libtool debug
+inherit libtool
 
 ###
 # variable declarations
@@ -34,7 +34,7 @@ MY_P=gst-plugins-${PV}
 # gstreamer 0.6
 my_gst_plugins="dxr3 oss qcam v4l v4l2 vcd vga cdrom xvideo a52dec aalib aalibtest alsa arts artstest artsc audiofile avifile cdparanoia dvdread dvdnav esd esdtest flac ffmpeg gnome_vfs gsm hermes http jack jpeg ladspa lame lcs libdv libfame libfametest libpng mad mikmod libmikmodtest mjpegtools mpeg2dec openquicktime raw1394 rtp sdl sdltest shout shout2 shout2test sidplay smoothwave snapshot swfdec tarkin vorbis vorbistest xmms libmmx atomic tests examples" 
 # gstreamer 0.8
-my_gst_plugins="${my_gst_plugins} divx faad gdk_pixbuf ogg sndfile x pango speex xvid mpeg2enc mplex musicbrainz nas librfb libcaca ivorbis faac theora kio"
+my_gst_plugins="${my_gst_plugins} divx faad gdk_pixbuf ogg sndfile x pango speex xvid mpeg2enc mplex musicbrainz nas librfb libcaca ivorbis faac theora kio osx_audio osx_video sunaudio artsc dts libvisual dirac"
 
 # Extract the plugin to build from the ebuild name
 # May be set by an ebuild and contain more than one indentifier, space seperated
@@ -46,7 +46,7 @@ GST_PLUGINS_BUILD_DIR=${PN/gst-plugins-/}
 
 # general common gst-plugins ebuild entries 
 DESCRIPTION="${BUILD_GST_PLUGINS} plugin for gstreamer"
-HOMEPAGE="http://www.gstreamer.net/status/"
+HOMEPAGE="http://gstreamer.freedesktop.org/modules/gst-plugins.html"
 LICENSE="GPL-2"
 
 SRC_URI="mirror://gnome/sources/gst-plugins/${PV_MAJ_MIN}/${MY_P}.tar.bz2"
@@ -85,8 +85,6 @@ gst-plugins_find_plugin_dir() {
 
 gst-plugins_src_configure() {
 	
-#	elibtoolize ${ELTCONF}
-
 	# disable any external plugin besides the plugin we want
 	local plugin gst_conf
 
