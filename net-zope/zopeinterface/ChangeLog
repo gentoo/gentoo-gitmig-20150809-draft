@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zopeinterface
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.1 2004/11/09 18:17:07 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.2 2004/11/11 11:17:45 mr_bones_ Exp $
+
+  11 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  zopeinterface-3.0.0.ebuild:
+  fix HOMEPAGE and use invocation
 
 *zopeinterface-3.0.0 (09 Nov 2004)
 
