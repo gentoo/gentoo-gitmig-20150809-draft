@@ -1,11 +1,22 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.44 2003/09/28 09:01:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.45 2003/10/06 20:59:01 johnm Exp $
+
+*development-sources-2.6.0_beta6-r8 (06 Oct 2003)
+
+  06 Oct 2003; John Mylchreest <johnm@gentoo.org>;
+  development-sources-2.6.0_beta5-r14.ebuild,
+  development-sources-2.6.0_beta6-r8.ebuild:
+  Bumping bk
 
 *development-sources-2.6.0_beta6 (28 Sep 2003)
 
   28 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> development-sources-2.6.0_beta6.ebuild:
   Version bump
+
+  28 Sep 2003; John Mylchreest <johnm@gentoo.org>;
+  development-sources-2.6.0_beta5-r14.ebuild:
+  changing ALSA provide to strict. bumping to test6
 
 *development-sources-2.6.0_beta5-r14 (27 Sep 2003)
 
