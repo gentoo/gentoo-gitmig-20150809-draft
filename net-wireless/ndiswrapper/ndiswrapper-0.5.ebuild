@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.4.ebuild,v 1.2 2004/03/25 04:47:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.5.ebuild,v 1.1 2004/03/25 04:47:06 latexer Exp $
 
 inherit kernel-mod
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${P}
 DESCRIPTION="Wrapper for using Windows drivers for some wireless cards"
 HOMEPAGE="http://ndiswrapper.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -59,9 +59,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	kernel-mod_pkg_postinst
+	einfnfo "Checking kernel module dependancies"
+	test -r "${ROOT}/${KV_OUTPUT}/System.map" && \
+		depmod -ae -F "${ROOT}/${KV_OUTPUT}/System.map" -b "${ROOT}" -r ${KV}
 
-	einfo
 	einfo "Part of the ${PN} module configuration can be done by running"
 	einfo "# ebuild /var/db/pkg/net-wiress/${P}/${P}.ebuild config"
 	einfo "Please consult /etc/modules.d/ndiswrapper to finish"
