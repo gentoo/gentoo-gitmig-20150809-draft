@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libhttpd-persistent
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.1 2004/03/31 01:57:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.2 2004/03/31 20:32:04 dholm Exp $
+
+  31 Mar 2004; David Holm <dholm@gentoo.org>
+  libhttpd-persistent-1.3p-r6.ebuild:
+  Added to ~ppc.
 
 *libhttpd-persistent-1.3p-r6 (30 Mar 2004)
 
