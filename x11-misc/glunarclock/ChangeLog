@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/glunarclock
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.1 2004/07/03 12:16:56 pyrania Exp $
+
+*glunarclock-0.32.1 (03 Jul 2004)
+
+  03 Jul 2004; <pyrania@gentoo.org> +metadata.xml, +glunarclock-0.32.1.ebuild:
+  Initial import. Closing bug #55942.
+
