@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.5 2003/03/31 02:47:50 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.6 2003/04/11 06:06:38 jhhudso Exp $
+
+*logwatch-4.3.2 (11 Apr 2003)
+	
+  11 Apr 2003; Jared Hudson <jhhudso@gentoo.org> : IMPORTANT NOTICE: I have
+  changed the location of logwatch and its configuration files and scripts.
+  logwatch.pl is now in /usr/sbin/logwatch.pl, the configuration files
+  and scripts are in /etc/log.d This will match the way the author intended
+  logwatch to be enabled while also allowing the configuration files to be
+  monitored for changed and subject to etc-update when logwatch is upgraded.
+  Credit goes to the following people: Alessandro Pisani <alextxm@tin.it>
+  and Georgi Georgiev <chutz@chubaka.net> Bugs fixed: 13303 16016 16576 17746
 
   30 Mar 2003; Jared Hudson <jhhudso@gentoo.org> : Provider archived this
   version of the tarball, so I changed our location in the ebuild.
