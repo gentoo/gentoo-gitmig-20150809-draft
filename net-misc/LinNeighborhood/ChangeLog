@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/LinNeighborhood
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/ChangeLog,v 1.8 2003/12/13 19:40:19 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/ChangeLog,v 1.9 2003/12/30 00:53:36 zul Exp $
+
+  29 Dec 2003; Chuck Short <zul@gentoo.org> LinNeighborhood-0.6.5.ebuild,
+  files/linneighborhood-0.6.5-samba301.patch:
+  Added patch so that LinNeighborhood can work with samba-3.0.1. Closes 
+  #36617.
 
   13 Dec 2003; Chuck Short <zul@gentoo.org> LinNeighborhood-0.6.5.ebuild:
   Added amd64 keyword.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.5.ebuild,v 1.10 2003/12/13 19:40:19 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.5.ebuild,v 1.11 2003/12/30 00:53:36 zul Exp $
 
 IUSE="nls"
 
@@ -18,6 +18,7 @@ DEPEND="=x11-libs/gtk+-1.2* net-fs/samba
 src_compile() {
 	local myopts
 
+	epatch ${FILESDIR}/linneighborhood-0.6.5-samba301.patch
 	use nls || myopts="--disable-nls"
 
 	./configure --prefix=/usr \
