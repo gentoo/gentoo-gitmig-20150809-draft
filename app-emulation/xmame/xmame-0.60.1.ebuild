@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jimmo Petisme <jimmobar@comp.nus.edu.sg>
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1.ebuild,v 1.1 2002/05/27 08:35:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1.ebuild,v 1.2 2002/06/03 23:49:01 blackmore Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Multiple Arcade Machine Emulator for X11"
@@ -25,7 +25,13 @@ src_unpack() {
 	# Enable joystick support
 	sed -e "s/\# JOY_I386/JOY_I386/g" makefile.unix > makefile.unix.tmp
 	mv makefile.unix.tmp makefile.unix
-	
+
+	if [ "`use dga`" ]; then
+		sed -e "s/\# X11_DGA = 1/X11_DGA = 1/g" \
+		makefile.unix > makefile.unix.tmp
+		mv makefile.unix.tmp makefile.unix
+	fi
+
 	if [ "`use sdl`" ]; then
 		sed -e "s:DISPLAY_METHOD = x11:DISPLAY_METHOD = SDL:g" \
 		makefile.unix > makefile.unix.tmp
