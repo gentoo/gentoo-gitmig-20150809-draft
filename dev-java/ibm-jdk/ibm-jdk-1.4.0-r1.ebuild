@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.7 2003/02/13 10:09:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.8 2003/05/20 03:36:53 tberman Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,7 @@ SRC_URI=""
 HOMEPAGE="https://www6.software.ibm.com/dl/lxdk/lxdk-p"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
-	doc? ( =dev-java/java-sdk-docs-1.4.0* )"
+	doc? ( =dev-java/java-sdk-docs-1.4* )"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.4.0
 	virtual/jdk-1.4.0
