@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.62 2003/04/16 15:52:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.63 2003/04/19 02:26:48 drobbins Exp $
+
+*postfix-2.0.9 (18 Apr 2003)
+
+  18 Apr 2003; Daniel Robbins <drobbins@gentoo.org>: New experimental
+  release of postfix.
 
 *postfix-2.0.7 (22 Mar 2003)
 
