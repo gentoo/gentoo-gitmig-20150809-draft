@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/gcvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/ChangeLog,v 1.6 2003/02/12 06:42:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/ChangeLog,v 1.7 2003/04/26 22:02:05 liquidx Exp $
 
 *gcvs-1.0_beta3-r1 (24 Jul 2002)
 
@@ -14,6 +14,10 @@
   Fix for gcc3.1 (patch sent upstream).
 
 *gcvs-1.0_beta3 (22 Jun 2002)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> gcvs-1.0_beta3-r1.ebuild,
+  gcvs-1.0_beta3.ebuild:
+  peg glademm version
 
   14 Jan 2003; Martin Holzer <mholzer@gentoo.org gcvs-1.0_beta3.ebuild :
   Changing back to glademm cause gcc 3.1 was buggy

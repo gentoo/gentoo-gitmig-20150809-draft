@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3-r1.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3-r1.ebuild,v 1.8 2003/04/26 22:02:05 liquidx Exp $
 
 MY_P=${P/eta/}
 MY_P=${MY_P/_/}
@@ -17,7 +17,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-lang/tcl-8.3.3 
 	dev-lang/perl 
 	sys-devel/bison
-	dev-util/glademm"
+	=dev-util/glademm-0.6*"
 
 RDEPEND="${DEPEND}
 	>=dev-util/cvs-1.11-r1"
