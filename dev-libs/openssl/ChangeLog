@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.88 2004/07/02 04:53:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.89 2004/07/13 17:52:00 aliz Exp $
+
+  13 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7d-r1.ebuild:
+  Change back to single make.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   openssl-0.9.6m.ebuild, openssl-0.9.7c-r1.ebuild, openssl-0.9.7c.ebuild,
