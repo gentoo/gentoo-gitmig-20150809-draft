@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/zapata
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/ChangeLog,v 1.1 2004/01/04 00:10:35 stkn Exp $
+
+*zapata-0.7.0 (04 Jan 2004)
+
+  04 Jan 2004; Stefan Knoblich <stkn@gentoo.org> metadata.xml,
+  zapata-0.7.0.ebuild, files/zapata-mkdir-usrlib.patch:
+  initial import. ebuild created by Ray Russell Reese III <anti@gentoo.org>
+
