@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.14 2003/07/18 21:55:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.15 2003/07/22 17:50:55 tester Exp $
+
+inherit gnuconfig
 
 IUSE="X tetex"
 
@@ -14,10 +16,11 @@ DEPEND="X? ( virtual/x11 )
 
 SLOT="0"
 LICENSE="LGPL-2 GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 src_unpack() {
 	unpack ${A}
+	use amd64 && gnuconfig_update
 
 	cd ${S}/doc
 	mv Makefile.in Makefile.in-orig
