@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.9.ebuild,v 1.13 2003/09/07 00:37:55 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.9.ebuild,v 1.14 2004/03/23 02:02:53 kumba Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="USB enumeration utilities"

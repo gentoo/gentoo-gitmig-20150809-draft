@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.22 2004/03/05 13:40:34 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.23 2004/03/23 02:02:53 kumba Exp $
+
+  22 Mar 2004; Joshua Kinard <kumba@gentoo.org> usbutils-0.11-r3.ebuild,
+  usbutils-0.11.ebuild, usbutils-0.9.ebuild:
+  Added ~mips to KEYWORDS.
 
   05 Mar 2004; Tom Gall <tgall@gentoo.org> usbutils-0.11-r3.ebuild:
   stable on ppc64 + slight fix to take into account 2.6 kernel 
