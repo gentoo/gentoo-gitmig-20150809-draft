@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.901.ebuild,v 1.5 2003/12/14 09:34:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.901.ebuild,v 1.6 2003/12/14 10:40:00 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -60,7 +60,7 @@ SRC_PATH0="ftp://ftp.xfree86.org/pub/XFree86/develsnaps"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="http://dev.gentoo.org/~spyderous/xfree/patchsets/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="http://dev.gentoo.org/~spyderous/xfree/patchsets/${PV}/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip"
@@ -81,7 +81,7 @@ MS_COREFONTS="./andale32.exe ./arial32.exe
 # Need windows license to use this one
 MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
 
-GENTOO_FILES="http://dev.gentoo.org/~spyderous/xfree/patchsets/XFree86-${PV}-files-${FILES_VER}.tar.bz2"
+GENTOO_FILES="http://dev.gentoo.org/~spyderous/xfree/patchsets/${PV}/XFree86-${PV}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="${SRC_PATH0}/${MY_SV}.tar.bz2
 	mirror://gentoo/eurofonts-X11.tar.bz2
