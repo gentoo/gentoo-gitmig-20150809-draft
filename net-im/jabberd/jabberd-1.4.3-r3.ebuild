@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r3.ebuild,v 1.4 2004/06/08 13:34:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r3.ebuild,v 1.5 2004/06/10 19:24:04 agriffis Exp $
 
 inherit eutils
 
@@ -76,7 +76,7 @@ src_install() {
 	doins pthsock/pthsock_client.so
 	doins dnsrv/dnsrv.so
 	doins dialback/dialback.so
-	if [ `use ldap` ]; then
+	if use ldap; then
 		insinto /etc/jabber
 		doins xdb_ldap/jabber.schema
 		doins xdb_ldap/slapd.conf
@@ -145,11 +145,11 @@ pkg_postinst() {
 	einfo "Change 'localhost' to your server's domainname in the"
 	einfo "/etc/jabber/*.xml configs first"
 	einfo "Server admins should be added to the "jabber" group"
-	if [ `use ssl` ]; then
+	if use ssl; then
 		einfo
 		einfo "To enable SSL connections, execute /etc/jabber/self-cert.sh"
 	fi
-	if [ `use ldap` ]; then
+	if use ldap; then
 		einfo
 		einfo "In order to use the ldap backend, you need to copy"
 		einfo "the file /etc/jabber/jabber.schema into the /etc/openldap/schemas"

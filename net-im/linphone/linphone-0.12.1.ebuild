@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.12.1.ebuild,v 1.5 2004/04/27 22:00:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.12.1.ebuild,v 1.6 2004/06/10 19:26:47 agriffis Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_compile() {
 
 	local myconf
 
-	if [ `use gnome` ]
+	if use gnome
 	then
 		einfo "Building with Gnome gui"
 		myconf="${myconf} --enable-gnome_ui=yes"

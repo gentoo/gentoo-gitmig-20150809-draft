@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gyach
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/ChangeLog,v 1.4 2004/02/03 06:29:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/ChangeLog,v 1.5 2004/06/10 19:22:32 agriffis Exp $
+
+  10 Jun 2004; Aron Griffis <agriffis@gentoo.org> gyach-0.9.6.ebuild,
+  gyach-0.9.7.ebuild:
+  Fix use invocation
 
 *gyach-0.9.7 (03 Feb 2004)
 

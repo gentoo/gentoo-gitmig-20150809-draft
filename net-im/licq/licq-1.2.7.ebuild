@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.14 2004/04/27 21:59:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.15 2004/06/10 19:27:07 agriffis Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 src_unpack() {
 	unpack ${A}
 
-	if [ "`use kde`" ]
+	if use kde
 	then
 		# fix for #12436
 		ebegin "Setting kde plugin as default..."
@@ -37,7 +37,7 @@ src_unpack() {
 			${T}/licq.conf.h > ${S}/src/licq.conf.h
 		eend $?
 	else
-		if [ -z "`use qt`" ]
+		if ! use qt
 		then
 				ebegin "Setting console plugin as default..."
 				cp ${S}/src/licq.conf.h ${T}
@@ -62,7 +62,7 @@ src_compile() {
 	# Create the various plug-ins
 
 	# First, the Qt plug-in
-	if [ "`use qt`" ]
+	if use qt
 	then
 		# A hack to build against the latest QT:
 		local v
@@ -85,7 +85,7 @@ src_compile() {
 	fi
 
 	# Now the console plug-in
-	if [ "`use ncurses `" ]
+	if use ncurses
 	then
 		cd ${S}/plugins/console
 		einfo "Compiling the Console plug-in"
@@ -112,7 +112,7 @@ src_install() {
 	dodoc ChangeLog INSTALL README* doc/*
 
 	# Install the plug-ins
-	if [ "`use qt`" ]
+	if use qt
 	then
 		cd ${S}/plugins/qt-gui
 		make DESTDIR=${D} install || die
@@ -120,14 +120,14 @@ src_install() {
 		dodoc README*
 
 		# fix bug #12436, see my comment there
-##		if [ "`use kde`" ]; then
+##		if use kde; then
 ##			cd $D/usr/lib/licq
 ##			ln -s licq_kde-gui.la licq_qt-gui.la
 ##			ln -s licq_kde-gui.so licq_qt-gui.so
 ##		fi
 	fi
 
-	if [ "`use ncurses`" ]
+	if use ncurses
 	then
 	    cd ${S}/plugins/console
 	    make DESTDIR=${D} install || die

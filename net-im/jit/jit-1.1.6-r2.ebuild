@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r2.ebuild,v 1.6 2004/06/03 16:32:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r2.ebuild,v 1.7 2004/06/10 19:24:46 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=net-im/jabberd-1.4.3"
 
 src_compile() {
 	epatch ${FILESDIR}/jit-patch-00
-	[ `use sparc` ] && epatch ${FILESDIR}/jit-sparc.patch
+	use sparc && epatch ${FILESDIR}/jit-sparc.patch
 	./configure
 	emake || die
 	cp ${S}/jabberd/jabberd ${S}/jabberd/jit-wpjabber

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.2.ebuild,v 1.2 2004/04/23 10:21:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.2.ebuild,v 1.3 2004/06/10 19:28:03 agriffis Exp $
 
 inherit gnome2
 
@@ -26,7 +26,7 @@ DOCS="AUTHORS BUGS COPYING ChangeLog INSTALL MANUAL NEWS README THANKS TODO"
 
 src_install() {
 	# Install icon and .desktop for menu entry
-	if [ `use gnome` ] ; then
+	if use gnome ; then
 		insinto /usr/share/pixmaps
 		newins ${S}/pixmaps/icon_256.xpm linpopup.xpm
 		insinto /usr/share/applications

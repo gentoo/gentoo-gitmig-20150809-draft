@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.00.ebuild,v 1.5 2004/05/26 23:52:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.00.ebuild,v 1.6 2004/06/10 19:20:40 agriffis Exp $
 
 inherit gnome2
 
@@ -48,7 +48,7 @@ src_compile() {
 	myconf="${myconf} --with-openh323-includes=/usr/include/openh323"
 	myconf="${myconf} --with-openh323-libs=/usr/lib"
 
-	if [ -n "`use ssl`" ]; then
+	if use ssl; then
 		myconf="${myconf} --with-openssl-libs=/usr/lib"
 		myconf="${myconf} --with-openssl-includes=/usr/include/openssl"
 	fi

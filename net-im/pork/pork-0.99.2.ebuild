@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.2.ebuild,v 1.4 2004/04/29 04:30:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.2.ebuild,v 1.5 2004/06/10 19:29:10 agriffis Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ DEPEND="perl? ( dev-lang/perl )
 
 src_compile() {
 	local myconf=""
-	[ `use perl` ] || myconf="${myconf} --disable-perl"
+	use perl || myconf="${myconf} --disable-perl"
 	einfo "Configure options: ${myconf}"
 	econf ${myconf} || die "econf failed"
 	emake

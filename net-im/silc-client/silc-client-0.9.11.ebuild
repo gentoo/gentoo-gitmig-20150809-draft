@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.11.ebuild,v 1.8 2004/01/03 04:11:28 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.11.ebuild,v 1.9 2004/06/10 19:31:20 agriffis Exp $
 
 inherit libtool
 
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
 	local myflags
 
-	if [ "`use perl`" ]
+	if use perl
 	then
 		R1="s/installsitearch='//"
 		R2="s/';//"

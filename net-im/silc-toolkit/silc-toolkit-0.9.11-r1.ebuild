@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11-r1.ebuild,v 1.3 2004/04/19 22:15:11 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11-r1.ebuild,v 1.4 2004/06/10 19:32:25 agriffis Exp $
 
 IUSE="client server debug ipv6 perl socks5"
 
@@ -59,9 +59,9 @@ src_compile() {
 }
 
 src_install() {
-	if [ -z "`use client`" ]
+	if ! use client
 	then
-		if [ -z "`use perl`" ]
+		if ! use perl
 		then
 			R1="s/installsitearch='//"
 			R2="s/';//"

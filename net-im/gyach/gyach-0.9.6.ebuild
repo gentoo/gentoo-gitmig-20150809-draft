@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/gyach-0.9.6.ebuild,v 1.1 2003/10/08 14:10:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/gyach-0.9.6.ebuild,v 1.2 2004/06/10 19:22:32 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based Yahoo! chat client"
@@ -25,7 +25,7 @@ src_install() {
 	dodoc sample.*
 
 	# install icon and desktop entry for gnome
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		insinto /usr/share/pixmaps
 		doins ${D}/usr/share/gyach/pixmaps/gyach-icon.xpm
 		insinto /usr/share/gnome/apps/Internet

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.4 2004/04/27 21:56:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.5 2004/06/10 19:24:04 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ DEPEND="!net-im/jabber-server
 	postgres? ( dev-db/postgresql )"
 
 pkg_setup() {
-	if [ ! `use postgres` ] && [ ! `use mysql` ] && [ ! `use berkdb` ];  then
+	if ! use postgres && ! use mysql && ! use berkdb;  then
 		eerror
 		eerror "For this version of jabberd you must have"
 		eerror "at least one of 'mysql', 'postgres' and/or 'berkdb'"
@@ -44,26 +44,26 @@ src_compile() {
 	storage="fs"
 	authreg="anon"
 
-	if [ `use db` ]; then
+	if use db; then
 		storage="${storage} db"
 		authreg="${authreg} db"
 	fi
-	if [ `use mysql` ]; then
+	if use mysql; then
 		storage="${storage} mysql"
 		authreg="${authreg} mysql"
 	fi
-	if [ `use postgres` ]; then
+	if use postgres; then
 		storage="${myconf} pgsql"
 		authreg="${authreg} pgsql"
 	fi
-	if [ `use pam` ]; then
+	if use pam; then
 		authreg="${authreg} pam"
 	fi
-	if [ `use ldap` ]; then
+	if use ldap; then
 		authreg="${authreg} ldap"
 	fi
 
-	if [ `use ipv6` ]; then
+	if use ipv6; then
 		enables="${enables} --enable-ipv6"
 	fi
 
@@ -168,7 +168,7 @@ pkg_postinst() {
 	einfo "Change 'localhost' to your server's domainname in the"
 	einfo "/etc/jabberd/*.xml configs first"
 	einfo "Server admins should be added to the "jabber" group"
-	if [ `use ssl` ]; then
+	if use ssl; then
 		einfo
 		einfo "To enable SSL connections, execute /etc/jabberd/self-cert.sh"
 		einfo
