@@ -1,5 +1,5 @@
-MD5 4cc4045f68a315ff80884a98df7f35ac ChangeLog 944
-MD5 1d72c4669e54f892b4ae4357e40491cd terminatorx-3.81.ebuild 2052
+MD5 a85b7b30ccc572b415644f764b7e28cc ChangeLog 942
+MD5 6afbd39f5b205b9e14449f32a99dbac6 terminatorx-3.81.ebuild 2159
 MD5 b9c48043c327fb9f0fcb5b04b721e337 files/terminatorx-3.80.GNOMEpresent.patch 25091
 MD5 a2074d5d27b3b2d3006703af2a500c3f files/terminatorx-3.80.fixGnomeMakefile.patch 1032
 MD5 ed6038ad12972f0534133cb65dff99a0 files/digest-terminatorx-3.81 68

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.80.ebuild,v 1.1 2003/07/08 07:26:21 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.1 2003/09/20 06:55:55 jje Exp $
+
+inherit gnome2
 
 MY_P=${P/terminatorx/terminatorX}
 S=${WORKDIR}/${MY_P}
@@ -30,8 +32,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/terminatorx-3.80.GNOMEpresent.patch
-	epatch ${FILESDIR}/terminatorx-3.80.fixGnomeMakefile.patch
+	# we need the omf fix, or else we get access violation
+	# errors related to sandbox
+	gnome2_omf_fix ${S}/doc/terminatorX-manual/C/Makefile.in
+
 }
 
 src_compile() {
@@ -56,9 +60,9 @@ src_compile() {
 	use sox \
 		&& myconf="${myconf} --enable-sox"
 
-	WANT_AUTOMAKE_1_6=1 econf ${myconf}
+	econf ${myconf}
 
-	make || die
+	emake || die
 }
 
 src_install() {
@@ -66,23 +70,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo "
-Since Version 3.73 terminatorX supports
-running suid root. If you install the terminatorX binary suid
-root with the following commands:
-
-> chown root /usr/bin/terminatorX
-> chmod u+s /usr/bin/terminatorX
-
-terminatorX will then create the engine thread with realtime
-priority.
-
-There is a small chance that a malicious attacker could
-utilize terminatorX to acquire root privileges if installed suid
-root, although it should require quite some effort to create an
-exploit for that. On the other hand realtime scheduling
-massively improves the playback performance. So depending on who
-can access your computer you will have to decide for yourself on
-performance vs security.
-"
+	einfo "Since Version 3.73 terminatorX supports running"
+	einfo "suid root. If you install the terminatorX binary"
+	einfo "suid root it will then create the engine thread"
+	einfo "with realtime priority."
+	ewarn "Please read http://www.terminatorx.cx/faq.html#11"
+	ewarn "for details and potential security risks."
 }
+
