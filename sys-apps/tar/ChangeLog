@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/tar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.17 2003/03/24 03:21:10 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.18 2003/05/20 08:35:28 kumba Exp $
+
 
 *tar-1.13.25-r3 (23 Mar 2003)
+
+  20 May 2003; Joshua Kinard <kumba@gentoo.org> tar-1.13.25-r3.ebuild:
+  Added gnuconfig eclass to support linux-mips targets
 
   23 Mar 2003; Joshua Brindle <method@gentoo.org> tar-1.13.25-r3.ebuild:
   added selinux support
