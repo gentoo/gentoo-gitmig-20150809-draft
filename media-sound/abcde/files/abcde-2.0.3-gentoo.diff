@@ -4,7 +4,7 @@
  	ALBUMFILE=$(mungefilename "$DALBUM")
  	ARTISTFILE=$(mungefilename "$TRACKARTIST")
  	TRACKFILE=$(mungefilename "$TRACKNAME")
-++	TRACKNUM=$(printf %0.${TRACKNUMPADDING}d ${UTRACKNUM})
++	TRACKNUM=$(printf %0.${TRACKNUMPADDING}d ${UTRACKNUM})
  	# Supported variables for OUTPUTFORMAT are ALBUMFILE, ARTISTFILE, TRACKFILE, and TRACKNUM.
  	if [ "$VARIOUSARTISTS" = "y" ]; then
  		OUTPUTFILE=$(eval echo $VAOUTPUTFORMAT)
