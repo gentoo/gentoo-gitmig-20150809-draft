@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.10-r1.ebuild,v 1.1 2003/08/07 10:37:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.10-r1.ebuild,v 1.2 2003/09/20 20:33:54 aliz Exp $
 
 inherit eutils
 
 DESCRIPTION="Package maintenance system for Debian"
 HOMEPAGE="http://packages.qa.debian.org/dpkg"
-SRC_URI="http://ftp.debian.org/debian/pool/main/d/dpkg/dpkg_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/cksfv-1.3.ebuild,v 1.7 2003/06/29 15:40:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/cksfv-1.3.ebuild,v 1.8 2003/09/20 20:33:54 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="cksfv: SFV checksum utility (simple file verification)"
-SRC_URI="http://www.fodder.org/${PN}/${P}.tar.gz"
+SRC_URI="http://www.fodder.org/cksfv/${P}.tar.gz"
 HOMEPAGE="http://www.fodder.org/cksfv/"
 
 SLOT="0"
