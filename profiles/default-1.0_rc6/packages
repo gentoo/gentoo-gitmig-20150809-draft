@@ -47,7 +47,7 @@
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/netkit-telnetd
-*net-misc/openssh
+*>=net-misc/openssh-2.9_p2-r2
 *net-misc/rsync
 *net-misc/wget
 *sys-apps/bash

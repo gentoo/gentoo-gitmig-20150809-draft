@@ -1,10 +1,9 @@
-#!/bin/sh
-SERVICE="OpenSSH"
+#!/sbin/runscript
+SERVICE="sshd"
 PIDFILE=/var/run/sshd.pid
 EXE=/usr/sbin/sshd
 
 gen_keys() {
-
 	if [ ! -e /etc/ssh/ssh_host_key ] ; then
 		einfo "Generating Hostkey..."
 		/usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
@@ -19,26 +18,17 @@ gen_keys() {
 		einfo "Generating RSA-Hostkey..."
 		/usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
 	fi
-
 }
 
 start() {
 	gen_keys
-
 	ebegin "Starting $SERVICE"
 	start-stop-daemon --start --quiet --exec $EXE
 	eend $? "Started $SERVICE." "Error starting $SERVICE."
 }
 
 stop() {
-
 	ebegin "Stopping $SERVICE"
 	start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
 	eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
 }
-
-restart() {
-	stop
-	start
-}
-

@@ -1,13 +1,12 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.2 2001/08/24 06:04:59 chadh Exp $
+# Team: System Team <system@gentoo.org>
+# Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.3 2001/09/03 21:47:39 drobbins Exp $
 
-P=openssh-2.9p2
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Port of OpenBSD's free SSH release"
-SRC_URI="ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/"${A}
+SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/openssh-2.9p2.tar.gz"
 HOMEPAGE="http://www.openssh.com/"
 
 DEPEND="virtual/glibc sys-devel/perl sys-apps/groff
@@ -34,18 +33,23 @@ src_compile() {
 	myconf="${myconf} --without-pam"
     fi
 
-    try ./configure --prefix=/usr --sysconfdir=/etc/ssh \
+    ./configure --prefix=/usr --sysconfdir=/etc/ssh \
 	--libexecdir=/usr/lib/misc --mandir=/usr/share/man \
-	--with-ipv4-default --disable-suid-ssh --host=${CHOST} ${myconf}                         
-    try make
+	--with-ipv4-default --disable-suid-ssh --host=${CHOST} ${myconf} || die
+    make || die
 }
 
 src_install() {                               
-
-    try make install-files DESTDIR=${D} 
+    make install-files DESTDIR=${D} || die
     dodoc ChangeLog CREDITS OVERVIEW README* TODO
     insinto /etc/pam.d
     donewins ${FILESDIR}/sshd.pam sshd
-    exeinto /etc/rc.d/init.d
-    newexe ${FILESDIR}/sshd sshd
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/openssh sshd
 }
+
+pkg_postinst() {
+	# Make ssh start at boot
+	rc-update add sshd default
+}
+
