@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.20 2003/08/16 11:26:12 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.21 2003/11/07 20:40:16 ciaranm Exp $
+
+  07 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> djbdns-1.05-r8.ebuild:
+  Moved to stable on sparc as -r3 has compile issues on sparc (thanks to
+  aCrackOtter in #gentoo-sparc)
 
   16 Aug 2003; Tavis Ormandy <taviso@gentoo.org> djbdns-1.05-r8.ebuild:
   Stable on alpha
