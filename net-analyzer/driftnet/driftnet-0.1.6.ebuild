@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.15 2005/01/29 05:12:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.16 2005/03/06 03:37:18 josejx Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ex-parrot.com/~chris/driftnet/"
 SRC_URI="http://www.ex-parrot.com/~chris/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~amd64 ~ppc"
+KEYWORDS="x86 sparc ~amd64 ppc"
 SLOT="0"
 IUSE="gtk"
 

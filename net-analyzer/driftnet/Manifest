@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b6bb1466039fe5ad1d51fe84098bb8d ChangeLog 1217
-MD5 50e478f3bfd3ef1c173aa34a98afd615 driftnet-0.1.6.ebuild 1249
+MD5 1f161b6fa915e71b8a2b9813351de2ea ChangeLog 1320
+MD5 bd41da31ff6d51b9666712471f76fe8c driftnet-0.1.6.ebuild 1243
 MD5 fe5d2611299b3a390d7681e92ff4d5c5 metadata.xml 287
 MD5 c0c08c9836402b53a0eb51c3b6c6201a files/digest-driftnet-0.1.6 65
 MD5 8768d05471c8332731ad3d51f7f18ff6 files/driftnet-0.1.6-nogtk.patch 996
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtbmdTrptrqvGERApJ0AKCWze2UXt0Aw1ksTyqZwSrKcAyQogCeMkJH
-99BBDrcYQchQfsV9l2HqzI4=
-=R6Q4
------END PGP SIGNATURE-----
