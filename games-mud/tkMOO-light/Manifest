@@ -1,4 +1,4 @@
-MD5 5cba052d0482861ad515ddbbe40a2995 ChangeLog 1392
-MD5 74ebaf104c2c32bce770b9ed16eb1716 tkMOO-light-0.3.32.ebuild 928
 MD5 2431fc3d11f33db62dc52628d9b9c8ad files/digest-tkMOO-light-0.3.32 69
 MD5 1a9eaa2f185e4ad7d0ec7228cbf13fba files/0.3.32-Makefile-noclean.patch 446
+MD5 dddcd175fdbc2534c0f2d517b9872612 tkMOO-light-0.3.32.ebuild 926
+MD5 0e64b3566049b7fa901ff8f32963262d ChangeLog 1392
