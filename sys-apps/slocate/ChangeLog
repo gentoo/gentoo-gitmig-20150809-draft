@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.24 2003/10/08 23:32:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.25 2003/10/31 21:17:53 iggy Exp $
+
+  31 Oct 2003; Brian Jackson <iggy@gentoo.org> slocate-2.7-r3.ebuild
+  files/updatedb.conf:
+  adding sysfs to PRUNEFS, closes bug 32345
 
   08 Oct 2003; <solar@gentoo.org> slocate-2.7-r2.ebuild:
   permission fix for when sfperms is found in FEATURES, added a metadata.xml
