@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020927.ebuild,v 1.17 2004/04/08 09:53:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020927.ebuild,v 1.18 2004/06/15 02:16:45 agriffis Exp $
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -33,7 +33,7 @@ src_unpack() {
 src_compile() {
 	use static && LDFLAGS="${LDFLAGS} -static"
 	make KERNEL_INCLUDE="/usr/include" || die
-#	if [ "`use doc`" ]; then
+#	if use doc; then
 #		make html || die
 #	fi
 	make man || die
@@ -53,7 +53,7 @@ src_install() {
 	dodoc INSTALL RELNOTES
 	doman doc/*.8
 
-#	if [ "`use doc`" ]; then
+#	if use doc; then
 #		dohtml doc/*.html
 #	fi
 }

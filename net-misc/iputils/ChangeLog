@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.26 2004/04/24 06:20:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.27 2004/06/15 02:16:45 agriffis Exp $
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org> iputils-020927.ebuild:
+  Fix use invocation
 
 *iputils-021109-r3 (24 Apr 2004)
 
