@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/fluxbox-syntax
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/ChangeLog,v 1.1 2004/09/09 18:03:10 ciaranm Exp $
+
+*fluxbox-syntax-1.4 (09 Sep 2004)
+
+  09 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +fluxbox-syntax-1.4.ebuild:
+  New package
+
