@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/jai-bin-1.1.2-r3.ebuild,v 1.1 2004/07/31 15:25:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/jai-bin-1.1.2-r3.ebuild,v 1.2 2004/07/31 16:27:01 axxo Exp $
 
 inherit java-pkg
 
@@ -31,3 +31,10 @@ src_install() {
 	java-pkg_dojar jre/lib/ext/*.jar
 	java-pkg_doso jre/lib/i386/*.so
 }
+
+pkg_postinst() {
+	einfo "This ebuild now installs into /opt/${PN} and /usr/share/${PN}"
+	einfo 'To use you need to pass the following to java'
+	einfo '-Djava.library.path=$(java-config -i jai-bin) -cp $(java-config -p jai-bin)'
+}
+
