@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.23 2002/06/24 23:02:32 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.24 2002/06/26 04:20:21 lostlogic Exp $
+
+*gentoolkit-0.1.13 (25 Jun 2002)
+
+  25 Jun 2002; Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.13.ebuild files/digest-gentoolkit-0.1.13:
+
+  etc-update:  Near complete rewrite of etc-update, should be a lot
+  easier to use, especially with many config files.  See etc-update
+  specific ChangeLog for more complete info
+
+  qpkg:  Fixed dumb bug wherein w/o -v qpkg -l doesn't display all
+  files due to a uniq error.
 
 *gentoolkit-0.1.12 (25 Jun 2002)
 

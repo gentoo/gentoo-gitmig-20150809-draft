@@ -1,188 +1,229 @@
 #!/bin/bash
 # Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Jochem Kossen <j.kossen@home.nl>, (c) 2002
-# Author: Leo Lipelis <aeoo@gentoo.org>, (c) 2002
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>, (c) 2002
+# Distributed under the terms of the GNU Public License, v2 or later
+# Author Brandon Low <lostlogic@gentoo.org>
+#
+# Previous version (from which I've borrowed a few bits) by:
+# Jochem Kossen <j.kossen@home.nl>
+# Leo Lipelis <aeoo@gentoo.org>
+# Karl Trygve Kalleberg <karltk@gentoo.org>
+#
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.4 2002/06/26 04:20:21 lostlogic Exp $
 
-get_config() {
-    item=$1
+function get_config() {
+	item=$1
 
-    # First strip off comment lines, then grab the configuration
-    # item. If there's more than one of the same configuration item,
-    # then allow the last setting to take precedence.
-    cut -d'#' -f1-1 /etc/etc-update.conf | \
-        sed -ne "s/^\ *$item\ *=\ *\"\(.*\)\"/\1/p" | tail -1
+	# First strip off comment lines, then grab the configuration
+	# item. If there's more than one of the same configuration item,
+	# then allow the last setting to take precedence.
+	cut -d'#' -f1-1 /etc/etc-update.conf | \
+		sed -ne "s/^\ *$item\ *=\ *\"\(.*\)\"/\1/p" | tail -1
 }
 
-#
-# Ask which one of the given two files to install
-#
-rm_extra_file() {
-	old=$1
-	new=$2
+function scan() {
+
+	echo "Scanning Configuration files..."
+	rm -rf ${TMP}/files > /dev/null 2>&1
+	mkdir ${TMP}/files || die "Failed mkdir command!" 1
+	count=0
+	input=0
 	
-	show_diff $old $new
-	menu1
+	for path in ${CONFIG_PROTECT}; do if [ -d ${path} ]; then
+		ofile=""
+		for file in `find ${path} -iname "._cfg????_*" |
+			   sed -e "s:\(^.*/\)\(._cfg*_\)\(/.*$\):\1\2\3\%\2\%\3:" |
+			   sort -t'%' -k3 -k2 | cut -f1 -d'%'`; do
+			rpath=`echo "${file}" | sed -e "s:/[^/]*$::"`
+			rfile=`echo "${file}" | sed -e "s:^.*/::"`
+			if [[ "${ofile:10}" != "${file:10}" ]]; then
+				if [[ -z `diff -Nu ${rpath}/${rfile} ${rpath}/${rfile:10}|
+						  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.4 2002/06/26 04:20:21 lostlogic Exp $'` ]]; then
+					mv ${rpath}/${rfile} ${rpath}/${rfile:10}
+					continue
+				else
+					count=${count}+1
+					echo "${rpath}/${rfile:10}" > ${TMP}/files/${count}
+					echo "${rpath}/${rfile}" >> ${TMP}/files/${count}
+			    	ofile="${rfile}"
+					continue
+				fi
+			fi
+			if [[ -z `diff -Nu ${rpath}/${rfile} ${rpath}/${ofile}|
+					  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.4 2002/06/26 04:20:21 lostlogic Exp $'` ]]; then
+				mv ${rpath}/${rfile} ${rpath}/${ofile}
+				continue
+			else
+				echo "${rpath}/${rfile}" >> ${TMP}/files/${count}
+				ofile="${rfile}"
+			fi
+		done
+	fi; done
+
+}
+
+function sel_file() {
+#	[ ! -z `ls ${TMP}/files` ] && \
+	until [ -f ${TMP}/files/${input} ] || [ ${input} == -1 ]; do
+		echo "The following is the list of files which need updating, each 
+configuration file is followed by a list of possible replacement files."
+		for file in `ls ${TMP}/files|sort -n`; do
+			    echo -n "${file}) "
+		    for word in `cat ${TMP}/files/${file}`; do
+				echo ${word}
+			done
+		done
+		echo -n "Please select a file to edit by entering the corresponding number (-1 to exit): "
+		read input
+	done
+}
+
+function do_file() {
+	echo
+	local -i my_input
+	local -i fcount
+	until (( `cat ${TMP}/files/${input}|wc -l` < 2 )); do
+		my_input=0
+		(( `cat ${TMP}/files/${input}|wc -l` == 2 )) && my_input=1 && fcount=2
+		until (( ${my_input} > 0 )) && \
+			  (( ${my_input} < `cat ${TMP}/files/${input}|wc -l` )); do
+			fcount=0
+			for line in `cat ${TMP}/files/${input}`; do
+				if (( ${fcount} > 0 )); then
+					echo -n "${fcount}) "
+					echo "${line}"
+				else
+					echo "Below are the new config files for ${line}:"
+				fi
+				fcount=${fcount}+1
+			done
+			echo -n "Please enter the number of the file to process (-1 to exit this file): "
+			read my_input
+			[ ${my_input} == -1 ] && break
+		done
+		[ ${my_input} == -1 ] && break
+
+		file=`cat ${TMP}/files/${input} | sed -e "${fcount}p;d"`
+		ofile=`head -n1 ${TMP}/files/${input}`
+
+		do_cfg "${file}" "${ofile}"
+
+		cat ${TMP}/files/${input}|sed -e "${fcount}!p;d" > ${TMP}/files/sed
+		mv ${TMP}/files/sed ${TMP}/files/${input}
+
+		[ ${my_input} == -1 ] && break
+	done
+	echo
+	rm ${TMP}/files/${input}
+	count=${count}-1
+}
+
+function do_cfg() {
 	
-	# read and echo 1 char from stdin
-	read input
-	echo
-	case $input in
-	1)
-		echo "*** upgrading to $new ..."
-		mv $mv_opts $new $old
-		;;
-	2)
-		echo "*** keeping $old ..."
-		rm $rm_opts $new
-		;;
-	3)
-		merge_files $old $new
-		install_merged_file $old $new
-		;;
-	4)
-		rm_extra_file $old $new
-		;;
-	5)
-		echo "*** skipping ..."
-		;;
-	*)
-		echo "!!! Please pick a valid choice next time !!!"
-		menu1
-		;;
-	esac
+	local file="${1}"
+	local ofile="${2}"
+	local -i my_input=0
+	
+	until (( ${my_input} == -1 )); do
+		( echo "Showing differences between ${file} and ${ofile}"
+		  `echo "${diff_command}" |
+		   sed -e "s:%file1:${ofile}:" \
+			   -e "s:%file2:${file}:"` ) | ${pager}
+		echo -n "1) Replace ${ofile} with ${file}
+2) Delete ${file}, keeping ${ofile} as is
+3) Interactively merge ${ofile} with ${file}
+4) Show differences again
+Please select from the menu above (-1 to exit, ignoring this updated file):"
+		read my_input
+		case ${my_input} in
+			1) echo "Replacing ${ofile} with ${file}"
+			   mv ${mv_opts} ${file} ${ofile}
+			   break
+			   ;;
+			2) echo "Deleting ${file}"
+			   rm ${rm_opts} ${file}
+			   break
+			   ;;
+			3) do_merge "${file}" "${ofile}"
+			   my_input=${?}
+			   [ ${my_input} == 255 ] && my_input=-1
+			   ;;
+			4) continue
+			   ;;
+			*) continue
+			   ;;
+		esac
+	done
 }
 
-#
-# Show menu1
-#
-menu1() {
-echo
-echo
-echo "1) Upgrade to new $new"
-echo "2) Keep existing $old"
-echo "3) Merge the two files"
-echo "4) Show the difference between the two files again"
-echo "  OR"
-echo "5) Skip (keep all files)"
-echo
-echo -n "Type (1, 2, 3, 4 or 5): "									
-}
+function do_merge() {
+	
+	local file="${1}"
+	local ofile="${2}"
+	local mfile="${2}.merged"
+	local -i my_input=0
+	echo "${file} ${ofile} ${mfile}"
 
-#
-# Show menu2
-#
-menu2() {
-echo
-echo
-echo "1) Upgrade to merged file"
-echo "2) Show the difference between original and merged file"
-echo "3) Redo the merge"
-echo "4) Keep original file"
-echo "5) Skip (keep all files)"
-echo "  OR"
-echo "6) Back to previous menu"
-echo
-echo -n "Type (1, 2, 3, 4, 5 or 6): "
-}
-
-#
-# Install merged file
-#
-install_merged_file() {
-	old=$1
-	merged=$1.merged
-	new=$2
-
-	menu2
-	# read and echo 1 char from stdin
-	read input
-	echo
-	case $input in
-	1)
-		echo "*** upgrading to $merged ..."
-		mv $mv_opts $merged $old
-		rm $rm_opts $new
-		;;
-	2)
-		show_diff $old $merged
-		install_merged_file $old $new
-		;;
-	3)
-		merge_files $old $new
-		install_merged_file $old $new
-		;;
-	4)
-		echo "*** keeping original file ..."
-		rm $rm_opts $merged $new
-		;;
-	5)
-		echo "*** skipping ..."
-		;;
-	6)
-		echo "*** going back to previous menu ..."
-		echo
-		if [ -e $merged ]; then
-			echo "*** an (old?) merged file exists. It will be removed ..."
-			rm $rm_opts $merged
-		fi
-		rm_extra_file $old $new
-		;;
-	*)
-		echo "!!! Please pick a valid choice next time !!!"
-		menu2
-		;;
-	esac
-}
-
-#
-# Show the difference between two files
-#
-show_diff() {
-	echo
-	if [ "`echo $pager`" ]; then
-		(echo "*** showing difference between $1 and $2" && echo && \
-		`echo $diff_command | sed \
-		-e s@%file1@$1@g \
-		-e s@%file2@$2@g` ) | $pager
-	else
-		echo "*** showing difference between $1 and $2" && echo
-		`echo $diff_command | sed \
-		-e s@%file1@$1@g \
-		-e s@%file2@$2@g`
+	if [ -e ${mfile} ] ; then
+		echo "A previous version of the merged file exists, cleaning..."
+		rm ${rm_opts} ${mfile}
 	fi
+
+	until (( ${my_input} == -1 )); do
+		echo "Merging ${file} and ${ofile}"
+		`echo "${merge_command}" |
+		 sed -e "s:%merged:${mfile}:g" \
+		 	 -e "s:%orig:${ofile}:g" \
+			 -e "s:%new:${file}:g"`
+		until (( ${my_input} == -1 )); do	
+			echo -n "1) Replace ${ofile} with merged file
+2) Show differences between merged file and ${ofile}
+3) Remerge ${ofile} with ${file}
+4) Return to the previous menu
+Please select from the menu above (-1 to exit, ignoring ${file}): "
+			read my_input
+			case ${my_input} in
+				1) echo "Replacing ${ofile} with ${mfile}"
+				   mv ${mv_opts} ${mfile} ${ofile}
+				   rm ${rm_opts} ${file}
+				   return 255
+				   ;;
+				2) ( echo "Showing differences between ${mfile} and ${ofile}"
+					 `echo "${diff_command}" | \
+					  sed -e "s:%file1:${ofile}:" \
+					  	  -e "s:%file2:${mfile}:"` ) | ${pager}
+				   continue
+				   ;;
+				3) break
+				   ;;
+				4) rm ${rm_opts} ${mfile}
+				   return 0
+				   ;;
+				*) continue
+				   ;;
+			esac
+		done
+	done
+	return 255
 }
 
-#
-# Merge two files
-#
-merge_files() {
-	old=$1
-	merged=$1.merged
-	new=$2
-
-	echo
-	echo "*** merging $old with $new ..."
-
-	if [ -e $merged ]; then
-		echo
-		echo "*** an (old?) merged file already exists. It will be removed ..."
-		echo
-		rm $rm_opts $merged
-	fi
-	
-	# execute the merge command
-	`echo $merge_command |sed \
-	-e s@%merged@$merged@g \
-	-e s@%orig@$old@g \
-	-e s@%new@$new@g`
+function die() {
+	trap "" term
+	trap "" kill
+	echo "Exiting: ${1}"
+	rm -rf ${TMP}
+	exit ${2}
 }
 
 #
 # Run the script
 #
 scriptname=`basename $0`
+
+trap die term
+
+TMP=/tmp/$$
+rm -rf ${TMP} 2> /dev/null
+mkdir ${TMP} || die "failed mkdir command!" 1
 
 # I need the CONFIG_PROTECT value
 source /etc/make.globals
@@ -194,31 +235,20 @@ cp_opts=`get_config cp_opts`
 pager=`get_config pager`
 diff_command=`get_config diff_command`
 merge_command=`get_config merge_command`
+[ -z ${pager} ] && pager="cat"
 
 #echo "rm_opts: $rm_opts, mv_opts: $mv_opts, cp_opts: $cp_opts"
-#echo "pager: $pager, diff_command: $diff_command, merge_command: $merge_command"
+#echo "pager: $pager, diff_command: $diff_command, merge_command: $merge_command" 
 
-#
-# Find all "new" configuration files, sort, so that ._cfg_0000 is presented
-# before ._cfg_0001
-#
-#set -o xtrace
-for cfg_dir in $CONFIG_PROTECT; do
-    if [ -d "$cfg_dir" ] ; then
-	cfg_files=`find $cfg_dir -iname '._cfg????_*' | sort`
+declare -i count=0
+declare -i input=0
 
-	if [ -z "$cfg_files" ] ; then
-	    echo "!!! No config files to update in $cfg_dir"
-	fi
-	for new_full_path in $cfg_files; do
-	    file=${new_full_path##*/}
-	    old_full_path=${new_full_path%/*}/${file:10}
+scan
 
-	    rm_extra_file ${old_full_path} ${new_full_path}
-	done
-    else
-	echo "!!! Skipping non-existant directory $cfg_dir"
-    fi
+until (( ${input} == -1 )); do
+	[ ${count} == 0 ] && die "No files to work on!" 0
+	sel_file
+	[ ${input} != -1 ] && do_file
 done
-echo "*** script finished ..."
 
+die "User termination!" 0

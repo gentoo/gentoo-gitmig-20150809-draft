@@ -1,3 +1,9 @@
+2002-06-25 Brandon Low <lostlogic@gentoo.org>
+	* Users get to choose from list of all files at startup
+	* Menus are easier to use
+	* Automatically merges trivial CVS header changes
+	* Handles multiple config file replacements for the same file gracefully
+	* Code is prettier (IMVHO)
 
 2002-06-03 Karl Trygve Kalleberg <karltk@gentoo.org>
 	* Added CONFIG_PROTECT patches from Avi Schwartz <avi@CFFtechnologies.com>

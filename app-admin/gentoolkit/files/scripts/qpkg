@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.10 2002/06/11 21:13:26 lostlogic Exp $
-ID='$Id: qpkg,v 1.10 2002/06/11 21:13:26 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.11 2002/06/26 04:20:21 lostlogic Exp $
+ID='$Id: qpkg,v 1.11 2002/06/26 04:20:21 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -344,9 +344,9 @@ for p in ${ipak} ${upak} -;do
 			if [ ${verb} -gt 0 ]; then
 				cat
 			else
-				sed -e "s:obj \([^ ]*\).*:${BR}\1${NO}:" \
-				    -e "s:sym \([^ ]*\) -> \([^ ]*\).*:${CY}\1 ${NO}-> \2:" \
-				    -e "s:dir \([^ ]*\).*:${YL}\1${NO}:"
+				sed -e "s:\(^obj \)\([^ ]*\)\(.*$\):\1${BR}\2${NO}:;
+				        s:\(^sym \)\([^ ]*\)\( -> \)\([^ ]*\)\(.*$\):\1${CY}\2${NO}\3\4:;
+				        s:\(^dir \)\([^ ]*\)\(.*$\):\1${YL}\2${NO}:"
 			fi
 		fi
 
@@ -447,6 +447,7 @@ done | (
 	fi | sed \
 		-e "s:^iii ${X}/${X}:${BR}\1/${CY}\2${STAR}${NO}:" \
 		-e "s:^uuu ${X}/${X}:${BR}\1/${YL}\2${NO}:" \
-		-e "s:^vvv \(.*\)$:${BL}\1${NO}:"
+		-e "s:^vvv \(.*\)$:${BL}\1${NO}:" \
+		-e "s:^obj ::;s:^sym ::;s:^dir ::"
 
 )
