@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/libredblack
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libredblack/ChangeLog,v 1.1 2003/05/16 07:30:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libredblack/ChangeLog,v 1.2 2003/12/11 20:22:28 george Exp $
 
-*libredblack-1.2.ebuild (16 May 2003)
+*libredblack-1.3 (11 Dec 2003)
+
+  11 Dec 2003; George Shapovalov <george@gentoo.org> libredblack-1.3.ebuild :
+  new version (17994)
+ 
+*libredblack-1.2 (16 May 2003)
 
   16 May 2003; George Shapovalov <george@gentoo.org> libredblack-1.2.ebuild, Manifest, files/{digest-libredblack-1.2} :
   initial release (#17994)
