@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.6 2004/03/22 14:17:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.1 2004/04/02 03:11:01 wolf31o2 Exp $
 
 inherit games
 
@@ -8,14 +8,16 @@ IUSE="dedicated"
 DESCRIPTION="Unreal Tournament 2003 - Sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2003.com/"
 SRC_URI="http://unreal.epicgames.com/linux/ut2003/${PN}lnx_2107to${PV}.sh.bin
-	ftp://david.hedbor.org/ut2k3/updates/${PN}lnx_2107to${PV}.sh.bin"
+	ftp://david.hedbor.org/ut2k3/updates/${PN}lnx_2107to${PV}.sh.bin
+	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
 
 LICENSE="ut2003"
 SLOT="0"
 KEYWORDS="x86"
 RESTRICT="nostrip"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	app-arch/unzip"
 RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )"
 
@@ -33,7 +35,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself || die "unpacking patch"
+	unpack_makeself ${DISTDIR}/${PN}lnx_2107to${PV}.sh.bin \
+		|| die "unpacking patch"
+	unzip ${DISTDIR}/UT2003CrashFix.zip \
+		|| die "unpacking crash-fix"
 }
 
 src_install() {
@@ -110,7 +115,7 @@ src_install() {
 	insinto ${dir}
 	doins ${S}/README.linux ${S}/Unreal.xpm || die "copying readme/icon"
 
-	dogamesbin ut2003
+	dogamesbin ${FILESDIR}/ut2003
 	sed -i "s:GENTOO_DIR:${dir}:" ${D}/${GAMES_BINDIR}/ut2003
 
 	rm ${Ddir}/System/{UT2003,User}.ini || die "deleting ini files"
@@ -119,6 +124,19 @@ src_install() {
 	cd ${S}
 	bin/Linux/x86/loki_patch --verify patch.dat || die "verifying patch"
 	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+
+	# Here we apply DrSiN's crash patch
+	cp ${S}/CrashFix/System/crashfix.u ${Ddir}/System
+
+	ed ${Ddir}/System/Default.ini >/dev/null 2>&1 <<EOT
+$
+?Engine.GameInfo?
+a
+AccessControlClass=crashfix.iaccesscontrolini
+.
+w
+q
+EOT
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
@@ -168,6 +186,7 @@ pkg_config() {
 			if [ "$CDKEY1" == "$CDKEY2" ] ; then
 				echo "$CDKEY1" | tr a-z A-Z > ${dir}/System/cdkey
 				einfo "Thank you!"
+				chown games:games ${dir}/System/cdkey
 				break
 			else
 				eerror "Your CD key entries do not match.  Try again."

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd GENTOO_DIR
-./ucc $@
