@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.0.ebuild,v 1.5 2004/07/02 04:26:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.0.ebuild,v 1.6 2005/02/19 18:53:42 weeve Exp $
 
 IUSE="opengl"
 
@@ -11,7 +11,7 @@ SRC_URI="x86? ( http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-lin
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="~x86 -ppc ~sparc -alpha"
+KEYWORDS="~x86 -ppc -sparc -alpha"
 SLOT="0"
 
 LOC="/opt/ghc"

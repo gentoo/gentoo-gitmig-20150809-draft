@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.ebuild,v 1.4 2004/07/02 04:26:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.ebuild,v 1.5 2005/02/19 18:53:42 weeve Exp $
 
 IUSE="" # opengl not included in binary
 

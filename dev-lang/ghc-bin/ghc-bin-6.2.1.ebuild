@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.1.ebuild,v 1.3 2004/11/03 13:57:04 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.1.ebuild,v 1.4 2005/02/19 18:53:42 weeve Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://debian-amd64.alioth.debian.org/pure64/pool/unstable/main/amd64/g
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 -sparc"
 SLOT="0"
 
 DEPEND="app-arch/dpkg"
