@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.13 2003/02/13 12:50:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.14 2003/06/11 22:11:12 mholzer Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
 
@@ -54,8 +54,8 @@ src_compile() {
 		|| myconf="${myconf} --disable-video-x11-xv"
 
 	use esd \
-		&& myconf="--enable-esd" \
-		|| myconf="--disable-esd"
+		&& myconf="${myconf} --enable-esd" \
+		|| myconf="${myconf} --disable-esd"
 
 	use ggi \
 		&& myconf="${myconf} --enable-video-ggi" \
