@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6d-r1.ebuild,v 1.2 2002/07/11 14:07:56 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6d-r1.ebuild,v 1.3 2002/07/16 01:36:00 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -25,6 +25,8 @@ src_unpack() {
 src_compile() {
 	./config --prefix=/usr --openssldir=/usr/lib/ssl shared threads || die
 	# i think parallel make has problems
+	# as of 0.9.6d-r1, emake seems to work for me (drobbins, 15 Jul 2002)
+	# people should test emake and see if we should re-enable it.
 	make all || die
 }
 
