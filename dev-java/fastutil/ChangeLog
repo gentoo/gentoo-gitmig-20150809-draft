@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.5 2004/06/24 22:25:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.6 2004/06/27 17:36:13 zx Exp $
+
+  27 Jun 2004; Chris Aniszczyk <zx@gentoo.org> fastutil-4.1.ebuild:
+  Marking stable on ppc
 
   05 May 2004; <SeJo@gentoo.org> fastutil-4.1.ebuild:
   added ~ppc keyword
