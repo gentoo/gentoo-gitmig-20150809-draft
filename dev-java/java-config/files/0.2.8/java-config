@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.8/java-config,v 1.2 2003/04/01 21:34:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.8/java-config,v 1.3 2003/08/15 05:11:23 strider Exp $
 
 version="0.2.8"
 all_params="$*"
@@ -168,12 +168,12 @@ findpluginpath() {
 }
 
 function env_update() {
-	echo -e "\033[01;37m * \033[01;32m You should login again to make your java-config changes available"
+	echo -e "\033[01;37m * \033[01;32m You should login again to make your java-config changes available\033[m"
 	if [ $UID == 0 ]; then
 		env-update
-		echo -e "\033[01;37m * \033[01;32m Or, you can type 'source /etc/profile' in your current session."
+		echo -e "\033[01;37m * \033[01;32m Or, you can type 'source /etc/profile' in your current session.\033[m"
 	else
-		echo -e "\033[01;37m * \033[01;32m Or, you can type 'source ~/.gentoo/java-env' in your current session."
+		echo -e "\033[01;37m * \033[01;32m Or, you can type 'source ~/.gentoo/java-env' in your current session.\033[m"
 	fi
 }
 
@@ -348,9 +348,9 @@ while test $# -gt 0; do
 				for i in `find /etc/env.d/java/ -name "20*-*"` ; do
 					if [ "`vm_exists $i`" == "true" ]; then
 						if [ "`vm_shortname_path_opt_only $JAVA_HOME`" == "`vm_shortname $i`" ]; then
-							echo -e "\033[01;33m [`vm_shortname $i`] `vm_version $i` (*)"
+							echo -e "\033[01;33m [`vm_shortname $i`] `vm_version $i` (*)\033[m"
 						else
-							echo -e "\033[01;37m [`vm_shortname $i`] `vm_version $i` ()"
+							echo -e "\033[01;37m [`vm_shortname $i`] `vm_version $i` ()\033[m"
 						fi	
 					fi
 				done
