@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.1 2004/11/07 13:13:25 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.2 2004/11/11 16:50:02 dholm Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="xinerama"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="virtual/x11
 		>=x11-libs/pango-1.2
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.12.0
 		>=dev-util/intltool-0.29"
 
+S=${WORKDIR}/${MY_P}
 G2CONF="${G2CONF} $(use_enable xinerama)"
 
 DOCS="AUTHORS Changelog COPYING HACKING INSTALL NEWS README*"

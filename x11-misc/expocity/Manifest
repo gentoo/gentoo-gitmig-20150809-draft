@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49686e8a470cc569c10402f18c548ba2 ChangeLog 298
+MD5 d5a35edc9c6fca57dd66c5aab8047f3c ChangeLog 417
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 ca4df6a3499b02686a22f3f953dae79b expocity-2.6.2.1.ebuild 948
+MD5 891c288770be99a679fb1aa94b487cb9 expocity-2.6.2.1.ebuild 972
 MD5 7ef544c10ead702db982d3d14d60abd6 files/digest-expocity-2.6.2.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjiAJI7fK2cqeyXkRAj7nAKDkr50ZSNhmQ2GSQAf457uvMQEDSACfQGZo
-wDlM1L74+bfHmr5bC8BjGwE=
-=gQsN
------END PGP SIGNATURE-----
