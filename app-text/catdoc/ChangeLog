@@ -1,0 +1,10 @@
+# ChangeLog for app-text/catdoc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.1 2003/12/30 14:52:01 obz Exp $
+
+*catdoc-0.93.3 (30 Dec 2003)
+
+  30 Dec 2003; Mike Gardiner <obz@gentoo.org> catdoc-0.93.3.ebuild,
+  metadata.xml:
+  First import into cvs, as requested on bug #18320
+
