@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.12 2004/06/28 16:05:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.13 2004/06/29 21:00:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc mips alpha hppa amd64 ia64 ppc64"
 IUSE=""
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -22,22 +24,16 @@ src_unpack() {
 
 	# Get this puppy working with kernel 2.5.x
 	# <azarah@gentoo.org> (06 March 2003)
-	epatch ${FILESDIR}/${P}-kernel25-support.patch || die
+	epatch "${FILESDIR}/${P}-kernel25-support.patch"
 
 	# Fix stupid includes (bug #41856)
-	sed -i -e 's|-I/usr/src/linux -I/usr/src/linux|-I/usr/include|' \
-		${S}/Makefile.in
+	sed -i \
+		-e 's|-I/usr/src/linux -I/usr/src/linux|-I/usr/include|' \
+		${S}/Makefile.in \
+		|| die "sed Makefile.in failed"
 }
 
 src_install() {
-	dodir /usr/bin /usr/share/man/man1
-
-# Full install breaks sandbox, and I'm too lazy to figure out how, so:
-
-	make DESTDIR=${D} install-binPROGRAMS || die
-	make DESTDIR=${D} install-man1 || die
-	make DESTDIR=${D} install-man || die
-
-	dodoc ChangeLog COPYING README PORTING TODO
-	dodoc AUTHORS NEWS PROBLEMS
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc ChangeLog README PORTING TODO AUTHORS NEWS PROBLEMS
 }
