@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.7 2005/04/04 19:16:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.8 2005/04/06 10:05:53 kloeri Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 
 # this ebuild contains the very untested dlz extension, hard-masking it for now
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ppc64"
 
 LICENSE="as-is"
 SLOT="0"
