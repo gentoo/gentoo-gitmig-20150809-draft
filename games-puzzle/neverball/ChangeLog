@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/neverball
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.22 2004/09/16 09:39:49 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.23 2005/01/03 22:38:47 wolf31o2 Exp $
+
+  03 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  neverball-1.4.0.ebuild:
+  Added menu entry and closing bug #76161.
 
 *neverball-1.4.0 (16 Sep 2004)
 

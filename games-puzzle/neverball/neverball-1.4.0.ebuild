@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.1 2004/09/16 09:39:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.2 2005/01/03 22:38:47 wolf31o2 Exp $
 
 inherit games
 
@@ -43,5 +43,12 @@ src_install() {
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -R data/* "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
 	dodoc CHANGES README
+
+	insinto /usr/share/pixmaps
+	doins icon/*.png
+
+	make_desktop_entry neverball Neverball neverball.png
+	make_desktop_entry neverputt Neverputt neverputt.png
+
 	prepgamesdirs
 }
