@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PlRPC
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.12 2003/04/06 16:17:22 zwelch Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.13 2004/02/04 10:36:23 kumba Exp $
+
+  04 Feb 2004; Joshua Kinard <kumba@gentoo.org> PlRPC-0.2016-r1.ebuild:
+  Added ~mips to KEYWORDS
 
 *PlRPC-0.2016-r1 (29 Oct 2002)
 

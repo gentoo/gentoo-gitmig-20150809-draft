@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.19 2003/08/26 17:28:06 mcummings Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.20 2004/02/04 10:31:57 kumba Exp $
+
+  04 Feb 2004; Joshua Kinard <kumba@gentoo.org> DBI-1.38.ebuild:
+  Added ~mips to KEYWORDS
 
 *DBI-1.38 (26 Aug 2003)
 
