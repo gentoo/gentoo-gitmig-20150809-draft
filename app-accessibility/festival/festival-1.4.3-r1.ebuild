@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.14 2005/01/01 10:47:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.15 2005/01/06 01:32:39 eradicator Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="asterisk doc"
 
-RDEPEND=">=app-accessibility/speech-tools-1.2.3"
+RDEPEND=">=app-accessibility/speech-tools-1.2.3-r1"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
@@ -66,6 +66,9 @@ src_unpack() {
 src_compile() {
 	econf || die
 	emake -j1 \
+		PROJECT_LIBDEPS="" \
+		REQUIRED_LIBDEPS="" \
+		LOCAL_LIBDEPS="" \
 		OPTIMISE_CXXFLAGS="${CXXFLAGS}" \
 		OPTIMISE_CCFLAGS="${CFLAGS}" \
 		|| die

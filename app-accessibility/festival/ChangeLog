@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.17 2005/01/01 10:47:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.18 2005/01/06 01:32:39 eradicator Exp $
+
+  05 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3-r1.ebuild, festival-1.4.3-r2.ebuild:
+  Fix compilation problems with not finding speech-tools... closes bug #76810.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   festival-1.4.3-r2.ebuild:
