@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.9 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.10 2004/12/19 06:54:10 dragonheart Exp $
+
+  19 Dec 2004; Daniel Black <dragonheart@gentoo.org> xnview-1.68.ebuild:
+  removed ppc keyword and added -* as no version exists. Bug #72950 refers
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xnview-1.50.ebuild,
   xnview-1.68.ebuild:

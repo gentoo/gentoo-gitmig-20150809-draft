@@ -1,7 +1,17 @@
-MD5 7435c20f1d1b8cc1a68bd666bb88415c ChangeLog 1796
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 faf4fdf77b8945c35bb980337a9390fb ChangeLog 1949
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 f7109a521fd89662c2fbe9f438117887 xnview-1.50.ebuild 1135
-MD5 f62ebbd801c041e57f63854c9dbc40b2 xnview-1.68.ebuild 1095
+MD5 c0822b2e1cd9fb219141ae7062a050e0 xnview-1.68.ebuild 1097
 MD5 fe2cf2952d86b4eed345d6a7e405d64b files/99XnView 44
 MD5 aace0ca3cd3cbc24d9f923948198d42f files/digest-xnview-1.50 73
 MD5 8906b1ca75ddac450c6030f18d60aefb files/digest-xnview-1.68 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFBxSWYmdTrptrqvGERAmmrAKCRarKkL/i500uc6FYdw4/n7xAsvwCgnxYW
+rzmrjxApGuI+DyMhowWTvB4=
+=3Wyc
+-----END PGP SIGNATURE-----
