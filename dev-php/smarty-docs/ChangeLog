@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty-docs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.5 2004/03/21 18:21:47 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.6 2004/03/26 22:56:33 twp Exp $
+
+  26 Mar 2004; Tom Payne <twp@gentoo.org> smarty-docs-2.6.2.ebuild :
+  Marked stable on x86. Added IUSE.
 
 *smarty-docs-2.6.2 (21 Mar 2004)
 
