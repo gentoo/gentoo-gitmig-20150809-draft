@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.379 2004/05/18 03:01:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.380 2004/05/18 20:52:02 stuart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -116,6 +116,7 @@ dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
 dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
+dev-php/mod_php:hardenedphp - Apply the hardened PHP patch
 dev-python/anygui:wxwin - enable wxwin support
 dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
