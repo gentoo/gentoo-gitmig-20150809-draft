@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.3 2002/08/19 18:07:21 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.4 2002/10/16 04:23:42 mkeadle Exp $
+
+*blender-2.23 (15 Oct 2002)
+
+  15 Oct 2002; Matt Keadle <mkeadle@gentoo.org> blender-2.23-r1.ebuild
+  files/digest-blender-2.23-r1
+
+  Added sys-libs/lib-compat to RDEPEND
 
 *blender-2.23 (19 August 2002)
 
