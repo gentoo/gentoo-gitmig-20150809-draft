@@ -5,14 +5,14 @@ MD5 a21dd9395959b188b37d278bfc0a8b18 ChangeLog 1067
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 4a4a102ed433bf954cfebb010e9e2f74 module-info-0.20.ebuild 602
 MD5 76d7a5a4253b7a699aa3b246e8fd42ac module-info-0.24.ebuild 616
-MD5 47ffff458b743e1884569cec303c7f06 module-info-0.26.ebuild 618
+MD5 ce9ce9d70bb062c96100e6e285d48511 module-info-0.26.ebuild 622
 MD5 18663cc44364f4bed4075ed501e97aeb files/digest-module-info-0.20 67
 MD5 93077da735990dd056ec357368579397 files/digest-module-info-0.24 67
 MD5 3c184afb8a1c566d42f6ae18ab3906d1 files/digest-module-info-0.26 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhKVKHTu7gpaalycRAthDAJ9CXYmIYsF5B1Ky3lEB2Q05d8nVhQCeIWNB
-3RPmQ1Ddm3A8RO7kYEJy3wM=
-=38Hw
+iD8DBQFBnse/mdTrptrqvGERAvXLAJ9h3fv1Dijc31TRJMILNMJPF/58OACcCS7U
+kJUTm+U5e4vk9RqnZzC7q8Y=
+=JyYP
 -----END PGP SIGNATURE-----
