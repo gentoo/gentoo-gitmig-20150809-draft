@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r1.ebuild,v 1.4 2004/01/06 21:45:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r1.ebuild,v 1.5 2004/03/29 02:31:11 usata Exp $
 
 IUSE=""
 
@@ -12,12 +12,11 @@ SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
 HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 ~sparc -alpha ~ppc"
+KEYWORDS="x86 ~sparc -alpha ppc"
 
 S=${WORKDIR}/${P}
 
-DEPEND="virtual/x11
-	sys-libs/ncurses
+DEPEND="${RDEPEND}
 	app-i18n/nkf"
 RDEPEND="virtual/x11
 	sys-libs/ncurses"
@@ -56,10 +55,6 @@ src_install(){
 	insinto /usr/share/man/ja/man1
 	nkf -e kterm.jman > kterm.ja.1
 	newins kterm.ja.1 kterm.1
-
-	if [ ! -e /usr/share/terminfo/k/kterm ]; then
-		tic terminfo.kt -o${D}/usr/share/terminfo || die "tic failed"
-	fi
 
 	dodoc README.kt
 }
