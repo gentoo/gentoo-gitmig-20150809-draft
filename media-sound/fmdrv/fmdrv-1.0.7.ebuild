@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/fmdrv-1.0.7.ebuild,v 1.4 2004/07/01 07:51:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/fmdrv-1.0.7.ebuild,v 1.5 2004/07/20 01:25:53 eradicator Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ DESCRIPTION="Console mode MIDI player with builtin userland OPL2 driver"
 HOMEPAGE="http://bisqwit.iki.fi/source/fmdrv.html"
 SRC_URI="http://bisqwit.iki.fi/src/arch/${P}.tar.bz2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 
 LICENSE="as-is"
@@ -33,7 +33,8 @@ src_compile() {
 
 src_install() {
 	dobin fmdrv
-	dodoc TINYFREELICENSE README README.html
+	dodoc README
+	dohtml README.html
 }
 
 pkg_postinst() {
