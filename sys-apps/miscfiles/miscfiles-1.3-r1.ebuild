@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3-r1.ebuild,v 1.8 2004/04/26 04:55:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3-r1.ebuild,v 1.9 2004/06/21 15:49:29 solar Exp $
 
 inherit eutils
 
@@ -11,7 +11,10 @@ SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE=""
+IUSE="uclibc"
+
+DEPEND="virtual/glibc
+	uclibc? ( app-arch/gzip )"
 
 src_unpack() {
 	unpack ${A}
@@ -23,4 +26,19 @@ src_unpack() {
 src_install() {
 	einstall || die
 	dodoc GNU* NEWS ORIGIN README dict-README
+
+	if use uclibc ; then
+		cd ${D}/usr/share/dict
+		# need to remove the hardlinks, else gzip won't work
+		rm -f words extra.words README
+		gzip -9 *
+		ln -s web2.gz words
+		ln -s web2a.gz extra.words
+		cd ..
+		# which app uses these?
+		rm -rf misc state rfc
+		#rm -f misc/GNU-manifesto
+		#gzip -9 misc/* state/* rfc/*
+		cd ${S}
+	fi
 }
