@@ -1,7 +1,5 @@
 MD5 807685efb22292d2801227d3c3c88666 ChangeLog 2082
 MD5 062c1427a754993f478488a575190d9b metadata.xml 164
-MD5 cb6c310aa579639c5763d9c3cac55ba4 rcs-5.7-r1.ebuild 834
 MD5 b9499a687373153e421fdd607c02f4fc rcs-5.7-r2.ebuild 867
 MD5 ce5aff3b9047dcbd676481dc5ebc6453 files/conf.sh 53669
-MD5 548c484ca9438cdadb3ca5101805f15f files/digest-rcs-5.7-r1 59
 MD5 548c484ca9438cdadb3ca5101805f15f files/digest-rcs-5.7-r2 59
