@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.8.ebuild,v 1.2 2003/08/06 08:17:16 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.8.ebuild,v 1.3 2003/09/08 07:10:41 msterret Exp $
 
 DESCRIPTION="The PowerDNS Daemon."
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"

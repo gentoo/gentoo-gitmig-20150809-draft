@@ -1,5 +1,5 @@
 MD5 659baa340837b1b1133505e5b67a9058 ChangeLog 656
-MD5 50e578f24cab1b0297c24f7b7ab9e1e3 ldapdns-2.03.ebuild 1153
-MD5 5952ca893a4c8a6e2e11b5b66dfb4ba5 ldapdns-2.04.ebuild 1153
+MD5 638eae65145846bcfb71f3c43a6a36a1 ldapdns-2.03.ebuild 1153
+MD5 0087acaf20f597e10c253e6cb3317867 ldapdns-2.04.ebuild 1153
 MD5 87c558c39b51b905f9272fd860140816 files/digest-ldapdns-2.03 63
 MD5 c6ce7d541758b912a1c8fe354c3e40be files/digest-ldapdns-2.04 64
