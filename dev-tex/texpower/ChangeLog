@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texpower
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.7 2003/11/16 05:17:37 obz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.8 2004/04/13 14:50:26 kugelfang Exp $
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> texpower-0.0.9d.ebuild:
+  marked ~amd64
 
   16 Nov 2003; Mike Gardiner <obz@gentoo.org> texpower-0.0.9d.ebuild:
   Changed USE='doc' behaviour to not rebuild the documentation we allready have
