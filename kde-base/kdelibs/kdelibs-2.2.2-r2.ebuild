@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r2.ebuild,v 1.1 2002/01/09 19:13:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r2.ebuild,v 1.2 2002/01/12 09:06:26 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org || die
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
@@ -67,10 +67,10 @@ src_install() {
 	dodoc *.html
 	
 	dodir /etc/env.d
-	echo "KDE2DIR=${KDEDIR}
-PATH=${KDEDIR}/bin
-ROOTPATH=${KDEDIR}/bin
-LDPATH=${KDEDIR}/lib" > ${D}/etc/env.d/70kdelibs-2.2.2
+	echo "KDE2DIR=${KDE2DIR}
+PATH=${KDE2DIR}/bin
+ROOTPATH=${KDE2DIR}/bin
+LDPATH=${KDE2DIR}/lib" > ${D}/etc/env.d/70kdelibs-2.2.2
 	
 }
 
