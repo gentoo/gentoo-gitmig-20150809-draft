@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03-r1.ebuild,v 1.11 2004/07/15 00:55:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03-r1.ebuild,v 1.12 2004/07/16 03:04:24 tgall Exp $
 
 IUSE=
 
@@ -14,7 +14,7 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64 ~mips ppc64"
 IUSE=""
 
 src_unpack() {
