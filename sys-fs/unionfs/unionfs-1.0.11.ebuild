@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.11.ebuild,v 1.1 2005/03/25 12:31:35 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.11.ebuild,v 1.2 2005/04/01 21:27:03 pylon Exp $
 
 inherit eutils linux-mod
 
@@ -8,7 +8,7 @@ DESCRIPTION="Stackable unification file system, which can appear to merge the co
 HOMEPAGE="http://www.fsl.cs.sunysb.edu/project-unionfs.html"
 SRC_URI="ftp://ftp.fsl.cs.sunysb.edu/pub/unionfs/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 #IUSE="acl debug" # 2005-03-20: satya: acl has issues that will be fixed upstream
 IUSE="debug"
 

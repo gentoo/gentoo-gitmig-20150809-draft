@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.8 2005/03/25 12:31:34 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.9 2005/04/01 21:27:03 pylon Exp $
+
+  01 Apr 2005; Lars Weiler <pylon@gentoo.org> unionfs-1.0.11.ebuild:
+  Added ~ppc.
 
 *unionfs-1.0.11 (25 Mar 2005)
 
