@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/vlnx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.8 2005/01/01 11:39:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.9 2005/01/30 13:13:57 ticho Exp $
+
+  30 Jan 2005; Andrej Kacian <ticho@gentoo.org> vlnx-432e-r2.ebuild:
+  Added a RDEPEND on app-arch/unzip. Closes #79362, reported by Johannes
+  Roettger <jr@0x42.com>.
 
   06 Dec 2004; Andrej Kacian <ticho@gentoo.org> vlnx-432e-r2.ebuild:
   Stable on x86.
