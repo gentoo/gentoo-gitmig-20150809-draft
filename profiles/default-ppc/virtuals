@@ -13,7 +13,7 @@ virtual/imapUW	   net-mail/uw-imap
 virtual/jdk	      dev-java/ibm-jdk-bin
 virtual/jre	      dev-java/ibm-jre-bin
 virtual/imapd	    net-mail/courier-imap
-virtual/x11-web-browser  net-www/mozilla
+virtual/x11-web-browser  www-client/mozilla
 virtual/blackbox	 x11-wm/blackbox
 virtual/emacs	    app-editors/emacs
 virtual/sylpheed	 mail-client/sylpheed

@@ -48,7 +48,7 @@ qt		x11-libs/qt
 kde		kde-base/kdebase
 motif		x11-libs/openmotif
 opengl		virtual/opengl
-mozilla		net-www/mozilla
+mozilla		www-client/mozilla
 gphoto2		media-gfx/gphoto2
 ldap		net-nds/openldap
 snmp		net-analyzer/net-snmp

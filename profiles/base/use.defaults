@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.15 2005/02/18 03:46:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.16 2005/03/23 16:33:33 seemant Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -46,7 +46,7 @@ mad					media-libs/libmad
 mcal				dev-libs/libmcal
 mikmod				media-libs/libmikmod
 motif				x11-libs/openmotif
-mozilla				net-www/mozilla
+mozilla				www-client/mozilla
 mysql				dev-db/mysql
 nas					media-libs/nas
 ncurses				sys-libs/ncurses

@@ -20,7 +20,7 @@ kde		kde-base/kdebase
 ldap		net-nds/openldap
 libwww		net-libs/libwww
 motif		x11-libs/openmotif
-mozilla		net-www/mozilla
+mozilla		www-client/mozilla
 mysql		dev-db/mysql
 nas		media-libs/nas
 oggvorbis	media-libs/libvorbis
