@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.6 2004/07/13 17:52:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.7 2004/07/13 18:47:04 aliz Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -18,6 +18,7 @@ IUSE="emacs uclibc"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
+	sys-apps/diffutils
 	>=dev-lang/perl-5
 	>=sys-apps/sed-4
 	!uclibc? ( sys-devel/bc )"
