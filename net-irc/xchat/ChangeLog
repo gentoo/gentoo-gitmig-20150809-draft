@@ -1,7 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.6 2002/05/27 15:18:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.7 2002/05/29 23:24:22 spider Exp $
 
+
+*xchat-20020527 (29 May 2002)
+  29 May 2002; Spider <spider@gentoo.org> xchat-20020527.ebuild
+  new snapshot 
 
 *xchat-20020519 (27 May 2002)
   27 May 2002; Spider <spider@gentoo.org> xchat-20020519.ebuild
