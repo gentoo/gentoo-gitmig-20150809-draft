@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/wmpower-0.3.1.ebuild,v 1.5 2004/10/19 09:00:54 absinthe Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/wmpower-0.3.1.ebuild,v 1.6 2004/11/12 23:18:40 s4t4n Exp $
 
 IUSE=""
 
