@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.17.4.ebuild,v 1.1 2003/12/06 22:17:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.17.4.ebuild,v 1.2 2004/01/08 14:28:18 lanius Exp $
 
 inherit eutils
 
@@ -11,11 +11,17 @@ HOMEPAGE="http://webglimpse.net/"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86 ~ppc ~mips ~amd64 ~sparc"
-IUSE=""
+IUSE="static"
 
 src_compile() {
 	econf || die
-	make || die
+
+	if [ -z "`use static`" ]
+	then
+	    emake || die
+	else
+	    emake LDFLAGS=-static || die
+	fi
 }
 
 src_install() {
