@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.3.ebuild,v 1.1 2004/08/07 05:22:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.3.ebuild,v 1.2 2004/08/13 22:44:02 mr_bones_ Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -57,7 +57,7 @@ src_compile() {
 		`use_enable debug debug`
 		`use_enable tcltk tkconfig=/usr/lib`
 		`use_enable tcltk tclconfig=/usr/lib`
-		`use enable ansi ansi`
+		`use_enable ansi ansi`
 		--enable-xdr=no
 		--enable-infodir=/usr/share/info
 		--enable-emacsdir=/usr/share/emacs/site-lisp/gcl"
