@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.15 2004/02/02 03:23:17 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.16 2004/02/07 03:21:24 pylon Exp $
+
+  07 Feb 2004; Lars Weiler <pylon@gentoo.org> xmlto-0.0.17.ebuild:
+  stable on ppc
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> xmlto-0.0.17.ebuild :
   AMD64 keywords.
