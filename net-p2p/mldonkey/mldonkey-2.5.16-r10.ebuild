@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r10.ebuild,v 1.1 2005/02/27 22:13:48 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r10.ebuild,v 1.2 2005/03/24 21:36:22 sekretarz Exp $
 
 inherit eutils
 
@@ -52,7 +52,11 @@ src_compile() {
 
 src_install() {
 	dobin mlnet
-	use gtk && dobin mlchat mlgui mlguistarter mlim mlnet+gui
+	if use gtk; then
+		dobin mlchat mlgui mlguistarter mlim mlnet+gui
+		doicon ${FILESDIR}/mldonkey.png
+		make_desktop_entry mlgui "MLDonkey" mldonkey.pngq "Network"
+	fi
 	dobin ${FILESDIR}/mldonkey
 
 	dodoc ChangeLog Copying.txt Developers.txt Install.txt

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.80 2005/02/27 22:13:48 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.81 2005/03/24 21:36:22 sekretarz Exp $
+
+  24 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org> +files/mldonkey.png,
+  mldonkey-2.5.16-r10.ebuild:
+  Add desktop entry when gtk use flag is enabled, bug #83300
 
 *mldonkey-2.5.16-r10 (27 Feb 2005)
 
