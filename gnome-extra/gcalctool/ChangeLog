@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.10 2003/09/17 12:41:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.11 2003/10/05 14:01:26 obz Exp $
+
+  05 Oct 2003; Mike Gardiner <obz@gentoo.org> gcalctool-4.2.99.ebuild,
+  gcalctool-4.3.3.ebuild:
+  Marked stable on x86
 
   17 Sep 2003; Aron Griffis <agriffis@gentoo.org> gcalctool-4.3.3.ebuild:
   Add ~alpha
