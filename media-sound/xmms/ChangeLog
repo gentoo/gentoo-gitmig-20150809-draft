@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.107 2004/02/27 03:08:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.108 2004/03/01 05:27:35 eradicator Exp $
+
+*xmms-1.2.10-r1 (29 Feb 2004)
+
+  29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r1.ebuild, files/xmms.desktop:
+  Fixed .desktop menu items. Updated dtd patch to support multiple file
+  selection.
 
   26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.10.ebuild:
   Fix off-by-one error re-introduced by dtd
