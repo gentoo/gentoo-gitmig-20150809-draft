@@ -1,0 +1,6 @@
+# lt_drivers: autoloading and insertion parameter usage
+alias char-major-62 ltserial
+alias /dev/tts/LT0  ltserial
+alias /dev/modem ltserial
+# options lt_modem vendor_id=0x115d device_id=0x0420 Forced=3,0x130,0x2f8
+# section for lt_drivers ends
