@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.22 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.23 2003/02/17 01:15:54 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -11,7 +11,7 @@
 ECLASS=games
 INHERITED="$INHERITED $ECLASS"
 
-EXPORT_FUNCTIONS pkg_postinst
+EXPORT_FUNCTIONS pkg_postinst pkg_setup
 
 export GAMES_PREFIX="/usr/games"
 export GAMES_PREFIX_OPT="/opt"
@@ -86,23 +86,30 @@ gamesenv() {
 	echo "PATH=\"${GAMES_BINDIR}\"" >> /etc/env.d/${GAMES_ENVD}
 }
 
+games_pkg_setup() {
+	local tmpfile="`mktemp -p ${T}`"
+	touch ${tmpfile}
+	chown ${GAMES_USER} ${tmpfile}
+	local REAL_USER="`ls -l ${tmpfile} | awk '{print $3}'`"
+	chgrp ${GAMES_GROUP} ${tmpfile}
+	local REAL_GROUP="`ls -l ${tmpfile} | awk '{print $4}'`"
+
+	if [ "${REAL_GROUP}" != "${GAMES_GROUP}" ] ; then
+		einfo "Adding the group ${GAMES_GROUP} to your system ..."
+		groupadd -g 35 ${GAMES_GROUP} \
+			|| groupadd ${GAMES_GROUP}
+	fi
+	if [ "${REAL_USER}" != "${GAMES_USER}" ] ; then
+		einfo "Adding the user ${GAMES_USER} to your system ..."
+		adduser -c "added to play games" -d /usr/games -g ${GAMES_GROUP} -u 35 -s /bin/false ${GAMES_USER} \
+			|| adduser -c "added to play games" -d /usr/games -g ${GAMES_GROUP} -s /bin/false ${GAMES_USER}
+	fi
+}
+
 games_pkg_postinst() {
 	gamesenv
-	touch ${T}/test
-	if [ ! `chown ${GAMES_USER}:${GAMES_GROUP} ${T}/test` ] ; then
-		echo
-		eerror "In order to function correctly, this package"
-		eerror "requires that you have the user '${GAMES_USER}'"
-		eerror "and the group '${GAMES_GROUP}' on your system."
-		eerror "Since you are missing at least one of the above,"
-		eerror "the package is currently only playable by root."
-		echo
-		eerror "Please add the above user/group to your system"
-		echo
-	else
-		echo
-		ewarn "Remember, in order to play games, you have to"
-		ewarn "be in the '${GAMES_GROUP}' group."
-		echo
-	fi
+	echo
+	ewarn "Remember, in order to play games, you have to"
+	ewarn "be in the '${GAMES_GROUP}' group."
+	echo
 }
