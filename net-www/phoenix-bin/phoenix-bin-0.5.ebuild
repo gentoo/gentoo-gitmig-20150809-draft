@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.5.ebuild,v 1.4 2003/03/05 13:03:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.5.ebuild,v 1.5 2003/03/23 17:50:06 phoenix Exp $
 
 IUSE=""
 
@@ -31,18 +31,15 @@ src_install() {
 	mv ${S} ${D}/usr/lib
 
 	# Plugin path setup (rescuing the existent plugins)
-	mv ${D}/usr/lib/${MY_PN}/plugins ${D}/usr/lib/${MY_PN}/plugins.temp
-	dosym ../nsbrowser/plugins /usr/lib/${MY_PN}/
-	mv ${D}/usr/lib/${MY_PN}/plugins.temp/* ${D}/usr/lib/${MY_PN}/plugins/
-	rmdir ${D}/usr/lib/${MY_PN}/plugins.temp
+	src_mv_plugins /usr/lib/${MY_PN}/plugins
 
 	# Fixing permissions
 	chown -R root.root ${D}/usr/lib/${MY_PN}
 
 	# Truetype fonts
-        cd ${D}/usr/lib/${MY_PN}/defaults/pref
-        einfo "Enabling truetype fonts"
-        patch < ${FILESDIR}/phoenix-0.4-antialiasing-patch
+	cd ${D}/usr/lib/${MY_PN}/defaults/pref
+	einfo "Enabling truetype fonts"
+	patch < ${FILESDIR}/phoenix-0.4-antialiasing-patch
 
 	# Misc stuff
 	dobin ${FILESDIR}/phoenix
@@ -51,5 +48,5 @@ src_install() {
 
 pkg_preinst() {
 	# Remove the old plugins dir
-	[ -d /usr/lib/phoenix/plugins ] && rm -r /usr/lib/phoenix/plugins
+	pkg_mv_plugins /usr/lib/${MY_PN}/plugins
 }

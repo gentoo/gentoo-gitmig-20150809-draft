@@ -1,8 +1,11 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.19 2003/03/05 13:12:05 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.20 2003/03/23 17:50:06 phoenix Exp $
 
 *phoenix-bin-0.5 (30 Dec 2002)
+
+  23 Mar 2003; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild :
+  Made the ebuild use the nsplugins functions.
 
   05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
   Modified the phoenix startup script (see bug #15202 for additional info).
@@ -10,7 +13,7 @@
   Updated the gtk dependencies. See bug #13112 for further details.
   Thanks to Max Kalika <alkern23@yahoo.com> for the contribution.
 
-  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> phoenix-bin-0.5.ebuild
+  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> phoenix-bin-0.5.ebuild :
   unmasked 0.5 for x86
 	
 *phoenix-bin-0.4-r2 (10 Dec 2002)
