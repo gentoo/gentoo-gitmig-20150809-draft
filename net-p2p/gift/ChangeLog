@@ -1,10 +1,14 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.39 2004/03/01 07:01:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.40 2004/03/22 19:54:28 eradicator Exp $
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> gift-0.11.4.ebuild,
+  gift-0.11.5.ebuild, gift-0.11.6.ebuild:
+  Fixed einfo to read 'gift-setup' for bug #45216.
 
   29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> gift-0.11.4.ebuild,
   gift-0.11.5.ebuild, gift-0.11.6.ebuild:
-  Added pkgconfig to DEPEND to fix bug #42428.
+  Added pkgconfig to DEPEND to fix bug #42428. 0.11.6 in x86 stable.
 
 *gift-0.11.6 (11 Feb 2004)
 
