@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76c1d22975ede8d2c3bb967cffcf89e6 ChangeLog 3085
 MD5 6908d59be756811ff0a5052906620f43 beecrypt-3.1.0-r1.ebuild 1403
-MD5 9bb6635031a168491dcefd504730eb04 beecrypt-3.1.0-r2.ebuild 1654
-MD5 9801ec0e3201addd45f08dea31ac5324 files/beecrypt-3.1.0-alpha.patch 321
-MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r2 66
-MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r1 66
+MD5 f65ea27a5faa38e26eb802403ca9b02f beecrypt-3.1.0-r2.ebuild 1652
+MD5 0de448b9981a04e0812b418bf0d0f64e ChangeLog 3207
 MD5 a1ec8219f4c2e7e3185f2cd869ddae33 files/beecrypt-3.1.0-python2.3.patch 769
 MD5 4662ac258eb0f491d0b32ef0ad1cfeeb files/beecrypt-3.1.0-athlon.diff 391
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBdyOrHTu7gpaalycRAgyTAKCMGiM4TI8Q3kNcsE6x0FF/7ow/MgCeLKn9
-iTUYJA406gW2JNclNpiOSvk=
-=kkK9
------END PGP SIGNATURE-----
+MD5 9801ec0e3201addd45f08dea31ac5324 files/beecrypt-3.1.0-alpha.patch 321
+MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r1 66
+MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r2 66

@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.20 2004/06/24 23:00:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.21 2004/10/24 01:27:15 cretin Exp $
 
 *beecrypt-3.1.0-r2 (13 Apr 2004)
+
+  23 Oct 2004; Stefan Jones <cretin@gentoo.org> :
+  Block <app-arch/rpm-4.2 not <app-arch/rpm-4.2.1 so I can downgrade rpm
 
   16 Apr 2004; Stefan Jones <cretin@gentoo.org> 
   beecrypt-3.1.0-r2.ebuild:
