@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.3.100.ebuild,v 1.6 2003/10/27 10:17:30 aliz Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.4.2.ebuild,v 1.1 2003/10/27 10:17:30 aliz Exp $
 
 DESCRIPTION="LDAP user management tool written in C and loosely based on FreeBSD's pw(8)"
 HOMEPAGE="http://cpu.sourceforge.net/"
@@ -10,7 +8,7 @@ SRC_URI="mirror://sourceforge/cpu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 RDEPEND="net-nds/openldap
 	sys-libs/cracklib"
@@ -19,18 +17,7 @@ DEPEND="${RDEPEND}
 
 WANT_AUTOCONF_2_5=1
 
-pkg_setup() {
-	if use static; then
-		eerror "Sorry, the package does NOT support static building."
-	fi
-	return 0
-}
-
 src_compile() {
-	# The package has a history of bad configure files...
-	epatch ${FILESDIR}/${P}-fixup.patch
-	autoconf
-
 	local myconf
 
 	# provide PASSWD support as well
@@ -38,12 +25,15 @@ src_compile() {
 	# myconf="${myconf} --with-passwd"
 
 	# Tell it where to find LDAP
-	myconf="${myconf} --with-ldap=/usr"
+	myconf="${myconf} --with-ldap"
 	# Tell it where to find CRACKLIB
-	myconf="${myconf} --with-libcrack=/usr"
+	myconf="${myconf} --with-libcrack"
 
 	# cache our config!
-	myconf="${myconf} --cache-file=${S}/config.cache"
+	#myconf="${myconf} --cache-file=${S}/config.cache"
+
+	# This app really belongs in sbin!
+	myconf="${myconf} --bindir=/usr/sbin"
 
 	econf ${myconf} || die "Configure failure"
 
@@ -51,6 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Einstall failure"
+	einstall bindir="${D}/usr/sbin" || die "Einstall failure"
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
