@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3136 2004/09/07 13:23:05 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3137 2004/09/09 01:20:04 pythonhead Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -224,9 +224,9 @@ gnome-extra/evolution-data-server
 # No worky for me.  Needs some love from Spanky.
 games-arcade/mtp-target-bin
 
-# <pythonhead@gentoo.org> (22 June 2004)
+# <pythonhead@gentoo.org> (08 Sept 2004)
 # Breaks a lot of wxGTK apps, masked until those are worked out
-=x11-libs/wxGTK-2.5.1
+=x11-libs/wxGTK-2.5*
 
 # <robbat2@gentoo.org> (20 June 2004)
 # mask waiting for sys-libs/db-4.2
