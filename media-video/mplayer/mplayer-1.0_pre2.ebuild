@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.9 2003/10/18 23:00:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.10 2003/10/26 01:04:21 lu_zero Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug"
 
 inherit eutils
 
@@ -225,7 +225,7 @@ src_compile() {
 
 	use dvb \
 		&& myconf="${myconf} --enable-dvb" \
-		|| myconf="${myconf} --disable-dvb"
+		|| myconf="${myconf} --disable-dvb --disable-dvbhead"
 
 	use nls \
 		&& myconf="${myconf} --enable-i18n" \
@@ -242,6 +242,9 @@ src_compile() {
 	use matroska \
 		&& myconf="${myconf} --enable-matroska" \
 		|| myconf="${myconf} --disable-matroska"
+
+	use debug \
+		&& myconf="${myconf} --enable-debug"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -331,11 +334,13 @@ src_install() {
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
 	chmod 0755 ${S}/DOCS -R
+	find ${S}/DOCS -type d | xargs -- chmod 0755
 	cp -r ${S}/DOCS ${D}/usr/share/doc/${PF}/ || die
 
 	# Copy misc tools to documentation path, as they're not installed
 	# directly
 	chmod 0755 ${S}/TOOLS -R
+	find ${S}/TOOLS -type d | xargs -- chmod 0755
 	cp -r ${S}/TOOLS ${D}/usr/share/doc/${PF} || die
 
 	# Install the default Skin and Gnome menu entry
