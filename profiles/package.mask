@@ -7,6 +7,17 @@
 # this ebuild had problems (drobbins, 29 Apr 2002):
 =dev-lang/python-2.2-r6
 
+# This one really mess with a lot of stuff.  We will have to wait until
+# everything is sorted, or apps have adapted to it.
+#
+# Problematic stuff:
+#     Nautils (no fonts in tabls, and view panels)
+#     Gnome2 components do not compile
+#     prob a load of others we still have to find out about.
+#
+# Azarah - 01 May 2002
+=media-libs/freetype-2.1.0*
+
 # pam-login is a new package that is based on util-linux's /bin/login,
 # but adds shadow features.
 >=sys-apps/util-linux-2.11o-r3
