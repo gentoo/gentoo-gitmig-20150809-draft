@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/javamail
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.1 2004/04/28 01:57:44 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.2 2004/05/05 07:44:32 dragonheart Exp $
+
+*gnu-javamail-20040331 (05 May 2004)
+
+  05 May 2004; Daniel Black <dragonheart@gentoo.org>
+  gnu-javamail-20040331.ebuild:
+  2 x HOMEPAGE - changed 1 to Description
 
 *gnu-javamail-20030331 (01 Apr 2004)
 
