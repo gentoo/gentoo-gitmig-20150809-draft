@@ -1,8 +1,11 @@
 # ChangeLog for media-plugins/alsa-xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.8 2003/07/11 20:38:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.9 2003/08/10 17:39:28 agenkin Exp $
 
 *alsa-xmms-0.9.12 (11 July 2003)
+
+  10 Aug 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Marking stable on x86.
 
   11 July 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
