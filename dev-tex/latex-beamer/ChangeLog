@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.5 2004/04/21 15:11:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.6 2004/04/25 14:07:42 usata Exp $
+
+*latex-beamer-2.20 (25 Apr 2004)
+
+  25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> latex-beamer-2.00.ebuild,
+  latex-beamer-2.20.ebuild:
+  Version bumped. Closing bug #48627
 
 *latex-beamer-2.10 (22 Apr 2004)
 
