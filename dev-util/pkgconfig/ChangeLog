@@ -1,8 +1,12 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.5 2002/12/09 04:21:16 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.6 2002/12/09 14:41:20 jmorgan Exp $
 
 \* Autoupdate keywords (12-6-02)
+
+  08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> pkgconfig-0.14.0.ebuild :
+  Changed ~sparc to sparc
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *pkgconfig-0.14.0 (27 Oct 2002)
