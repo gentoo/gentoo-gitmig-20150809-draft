@@ -1,6 +1,10 @@
 # ChangeLog for net-im/aim-transport
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/ChangeLog,v 1.21 2005/03/17 18:58:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/ChangeLog,v 1.22 2005/03/25 10:40:20 kloeri Exp $
+
+  25 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  aim-transport-20040131-r2.ebuild:
+  Add ~alpha keyword, bug 83819.
 
   17 Mar 2005; Olivier Crête <tester@gentoo.org>
   aim-transport-20040131-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531-r1.ebuild,v 1.2 2004/10/27 09:39:30 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531-r1.ebuild,v 1.3 2005/03/25 10:43:51 kloeri Exp $
 
 MY_PV="2004-05-31"
 #Ugly, msn-transport weired version numbers
@@ -11,7 +11,7 @@ HOMEPAGE="http://msn-transport.jabberstudio.org/"
 SRC_URI="http://msn-transport.jabberstudio.org/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc hppa ~sparc ~amd64"
+KEYWORDS="x86 ~ppc hppa ~sparc ~amd64 ~alpha"
 IUSE=""
 SLOT="0"
 
