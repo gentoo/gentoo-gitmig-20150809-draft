@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.48 2003/03/23 20:36:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.49 2003/03/28 16:51:45 joker Exp $
 
 *vim-6.1-r21 (22 Mar 2003)
+
+  28 Mar 2003; Christian Birchinger <joker@gentoo.org> vim-6.1-r21.ebuild:
+  Added sparc stable keyword
 
   22 Mar 2003; Aron Griffis <agriffis@gentoo.org> vim-6.1-r21.ebuild:
   Move vimrc to vim-core since it applies to both vim and gvim. 
