@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/pcsx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/ChangeLog,v 1.5 2002/11/18 10:36:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/ChangeLog,v 1.6 2002/12/11 23:23:24 rphillips Exp $
+
+*pcsx-1.4 (11 Dec 2002)
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> pcsx-1.4.ebuild :
+  New version
 
 *pcsx-1.2 (27 Jul 2002)
 
