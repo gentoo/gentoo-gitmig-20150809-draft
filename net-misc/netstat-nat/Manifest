@@ -1,6 +1,16 @@
-MD5 6d4d6919f3557343a89d79961b5d0bd9 ChangeLog 1604
-MD5 d7d705735af1299707ee38eb80d1b762 metadata.xml 268
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6231376dfe6ea6613a0df60fb8427fde netstat-nat-1.4.4.ebuild 524
 MD5 ea00c137cfd01f5d2e5ab4e918faa717 netstat-nat-1.4.3.ebuild 728
-MD5 d8bcf92aeab1bd5ab02e08b886573825 netstat-nat-1.4.4.ebuild 523
-MD5 d343abd418e03d7c6c8b12df8f6cdc52 files/digest-netstat-nat-1.4.4 68
+MD5 32ea6107c1162d5712bd21e994b3e722 ChangeLog 1706
+MD5 d7d705735af1299707ee38eb80d1b762 metadata.xml 268
 MD5 85638fd0d03d4e003b51af32d70eb526 files/digest-netstat-nat-1.4.3 68
+MD5 d343abd418e03d7c6c8b12df8f6cdc52 files/digest-netstat-nat-1.4.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHxWlEZCkKN40op4RAnnaAKCLSZWRInNto4XTHrUm5rQU5NPxywCbBQcB
+jzFEd/TqaNFVD5RWuXl1WZY=
+=Bc4x
+-----END PGP SIGNATURE-----
