@@ -1,5 +1,6 @@
-MD5 f1d792a0706a8c9fd6cb64d57902cf70 ChangeLog 714
 MD5 074c6a0ae1136830fc67d6db8b19d91a testdisk-5.2.ebuild 843
 MD5 2060fe905a7dfa9cae62990cf99d75dd testdisk-5.3.ebuild 847
+MD5 176bf142c4681f0cf7cd8fb5ca73b482 ChangeLog 803
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 c20ec4c0b429ad420cd79fa49b334e24 files/digest-testdisk-5.2 64
 MD5 ae3fa6940aea5b018c3377fbcdae2981 files/digest-testdisk-5.3 64
