@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.5 2003/10/11 17:58:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.6 2003/12/25 20:03:43 vapier Exp $
+
+*dropbear-0.39 (25 Dec 2003)
+
+  25 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #35951.
 
 *dropbear-0.38 (11 Oct 2003)
 
