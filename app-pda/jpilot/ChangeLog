@@ -1,7 +1,10 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.8 2003/11/24 04:08:34 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.9 2004/01/14 00:11:00 strider Exp $
 
+  13 Jan 2003; Adrian Almenar <strider@gentoo.org> jpilot-0.99.6-r1.ebuild:
+  Fixes #37633. Thanks Grant Goodyear <g2boojum@gentoo.org> for the fix. 
+  
   23 Nov 2003; Adrian Almenar <strider@gentoo.org> jpilot-0.99.6-r1.ebuild:
   Fixes bug #34130.
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.6-r1.ebuild,v 1.2 2003/11/24 04:08:34 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.6-r1.ebuild,v 1.3 2004/01/14 00:11:00 strider Exp $
 
 SYNCMAL="0.72.1"
 MALSYNC="2.2.0"
@@ -73,4 +73,7 @@ src_install() {
 	newdoc jpilot-syncmal-${SYNCMAL}/README README.jpilot-syncmal
 	dodoc jpilot-syncmal-${SYNCMAL}/malsync/Doc/README_AvantGo
 	dodoc jpilot-syncmal-${SYNCMAL}/malsync/Doc/README_malsync
+	dodir /usr/share/${PN}
+	insinto /usr/share/${PN}
+	doins ${S}/jpilotrc.*
 }
