@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/arson
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# Author: Mark Dillavou <line72@postmark.net>
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.1 2002/07/05 10:19:41 verwilst Exp $
+
+*eroaster-2.0.12 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
+
+   initial ebuild
