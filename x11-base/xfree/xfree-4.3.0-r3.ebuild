@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.56 2003/10/01 17:53:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.57 2003/10/05 23:58:32 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -10,7 +10,7 @@ IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static pam"
 
 filter-flags "-funroll-loops"
 
-ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
+ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -44,8 +44,7 @@ SISDRV_VER="100803-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
 #VIADRV_VER="0.1"
-SYNDRV_VER="0.11.3"
-SYNUPDATE_VER="p11"
+SYNDRV_VER="0.11.7"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
@@ -62,7 +61,7 @@ X_PATCHES="http://dev.gentoo.org/~spyderous/xfree/patchsets/XFree86-${PV}-patche
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
 	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz
-	http://tuxmobil.org/software/synaptics/synaptics-${SYNDRV_VER}.tar.gz"
+	http://w1.894.telia.com/~u89404340/touchpad/synaptics-${SYNDRV_VER}.tar.bz2"
 #	mirror://gentoo/XFree86-4.3.0-drivers-via-${VIADRV_VER}.tar.bz2"
 #	ftp://ftp.matrox.com/pub/mga/archive/linux/2001/beta_1_3_0/mga-${MGADRV_VER}.tgz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
@@ -108,8 +107,6 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/XFree86-locale.alias.bz2
 	mirror://gentoo/XFree86-locale.dir.bz2
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
-	mirror://gentoo/XFree86-synaptics-fixup-${SYNDRV_VER}.diff
-	mirror://gentoo/XFree86-synaptics-update-${SYNDRV_VER}${SYNUPDATE_VER}.diff
 	truetype? ( ${MS_FONT_URLS} )"
 
 LICENSE="X11 MSttfEULA"
@@ -199,9 +196,10 @@ src_unpack() {
 
 	ebegin "Adding Synaptics touchpad driver"
 	cd ${WORKDIR}
-	tar -zxf ${DISTDIR}/synaptics-${SYNDRV_VER}.tar.gz || die
-	cd ${S}
+	tar -jxf ${DISTDIR}/synaptics-${SYNDRV_VER}.tar.bz2 || die
 	eend 0
+	epatch ${FILESDIR}/XFree86-synaptics-fixup-0.11.3p11.diff
+	cd ${S}
 
 #	ebegin "Adding VIA driver"
 #	cd ${WORKDIR}
@@ -264,12 +262,6 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
 
 	unset EPATCH_EXCLUDE
-
-	# Set up Synaptics Makefile
-	cd ${WORKDIR}
-	epatch ${DISTDIR}/XFree86-synaptics-update-${SYNDRV_VER}${SYNUPDATE_VER}.diff
-	cd ${SYNDIR}
-	epatch ${DISTDIR}/XFree86-synaptics-fixup-${SYNDRV_VER}.diff
 
 	# Fix DRI related problems
 	cd ${S}/programs/Xserver/hw/xfree86/
@@ -1155,12 +1147,15 @@ pkg_postinst() {
 	einfo
 	ewarn "New in this release: if you wish to set system-wide default"
 	ewarn "cursors, please set them in /usr/local/share/cursors/xfree"
-	ewarn "so that future emerges will not overwrite those settingse"
+	ewarn "so that future emerges will not overwrite those settings"
 	einfo
 	einfo "To use the Synaptics touchpad driver, check the installed"
 	einfo "documentation in /usr/share/doc/xfree, as well as"
 	einfo "http://tuxmobil.org/touchpad_driver.html and"
 	einfo "http://w1.894.telia.com/~u89404340/touchpad/."
+	einfo
+	ewarn "Listening on tcp is disabled by default with startx."
+	ewarn "To enable it, edit /usr/X11R6/bin/startx."
 }
 
 pkg_postrm() {

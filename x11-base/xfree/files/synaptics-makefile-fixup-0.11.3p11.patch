@@ -1,0 +1,8 @@
+--- synaptics/Makefile.orig	2003-07-15 02:34:57.000000000 -0500
++++ synaptics/Makefile	2003-07-15 02:35:15.000000000 -0500
+@@ -1,4 +1,4 @@
+-TOP = /usr/src/redhat/BUILD/XFree86-4.2.0/xc
++TOP = ${S}
+ XTOP = $(TOP)
+ BUILDINCROOT = $(TOP)/exports
+ EXTINCSRC = $(XTOP)/include/extensions
