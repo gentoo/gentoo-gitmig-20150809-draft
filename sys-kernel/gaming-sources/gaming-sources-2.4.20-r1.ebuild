@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20.ebuild,v 1.1 2003/03/07 01:21:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r1.ebuild,v 1.1 2003/03/10 07:09:55 drobbins Exp $
 
 IUSE="build"
 
@@ -11,7 +11,7 @@ ETYPE="sources"
 inherit kernel || die
 
 OKV="2.4.20"
-EXTRAVERSION="-gaming"
+EXTRAVERSION="-gaming-r1"
 KV="${OKV}${EXTRAVERSION}"
 S=${WORKDIR}/linux-${KV}
 CKV=4_2.4.20
