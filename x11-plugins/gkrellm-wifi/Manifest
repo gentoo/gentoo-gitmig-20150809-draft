@@ -1,4 +1,14 @@
-MD5 e07c63221dfce181c9ed2dd79314c6f8 gkrellm-wifi-0.9.12.ebuild 755
-MD5 8c841873f9ebb3ed156c0469d4e06b87 ChangeLog 1133
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b57b7ed34f54780bdacd1217a381ec4 ChangeLog 1247
+MD5 0cc78984efcdcf1ccf12c881c9e2084d gkrellm-wifi-0.9.12.ebuild 759
 MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
 MD5 22c33f70a423179c9900167ef3354a7e files/digest-gkrellm-wifi-0.9.12 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCREMZ5mJXAu5GbtIRAoIZAJ4vw9r2UTFJFu1RvGiUmv+pfZnCGgCfZQux
+2PL0pPp9sEnJJ9KcyzkAmlY=
+=Oa9w
+-----END PGP SIGNATURE-----
