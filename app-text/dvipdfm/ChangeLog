@@ -1,8 +1,11 @@
 # ChangeLog for app-text/dvipdfm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.1 2002/04/24 06:24:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.2 2002/08/02 17:42:49 phoenix Exp $
 
 *dvipdfm-0.13.2c (24 Apr 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> dvipdfm-0.13.2c.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   24 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   dvipdfm-0.13.2c.ebuild, files/digest-dvipdfm-0.13.2c,

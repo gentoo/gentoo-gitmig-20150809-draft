@@ -8,6 +8,8 @@ S=${WORKDIR}/${P}
 DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."
 SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${P}.tar.gz"
 HOMEPAGE="http://www.latex2html.org"
+SLOT="0"
+LICENSE="as-is"
 
 DEPEND="virtual/glibc"
 KEYWORDS="x86 ppc"

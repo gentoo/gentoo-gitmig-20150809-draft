@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-1.01.ebuild,v 1.3 2002/07/16 04:12:30 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-1.01.ebuild,v 1.4 2002/08/02 17:42:50 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An X Viewer for PDF Files"
 SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${P}.tar.gz"
 HOMEPAGE="http://www.foolabs.com/xpdf/xpdf.html"
+SLOT="0"
 
-SLOT=""
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 

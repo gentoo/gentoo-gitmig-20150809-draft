@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r2.ebuild,v 1.4 2002/07/16 04:09:40 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r2.ebuild,v 1.5 2002/08/02 17:42:50 phoenix Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
 		 mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
 
 HOMEPAGE="sgmltools-lite.sourceforge.net"
-DESCRIPTION=""
+SLOT="0"
+LICENSE="GPL-2"
+DESCRIPTION="Python interface to SGML software specificially in a DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
 
 DEPEND="virtual/python
 	app-text/sgml-common

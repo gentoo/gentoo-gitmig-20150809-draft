@@ -1,8 +1,11 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.2 2002/03/16 16:23:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.3 2002/08/02 17:42:49 phoenix Exp $
 
 *html-xml-utils-2.3 (16 Mar 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> html-xml-utils-2.3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   16 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> html-xml-utils-2.3 files/digest-html-xml-utils-2.3:
 

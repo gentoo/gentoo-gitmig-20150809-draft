@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r4.ebuild,v 1.2 2002/07/16 01:21:19 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r4.ebuild,v 1.3 2002/08/02 17:42:49 phoenix Exp $
 
 inherit libtool
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Jade is an implemetation of DSSSL - an ISO standard for formatting SGML and XML documents"
 SRC_URI="http://download.sourceforge.net/openjade/${P}.tar.gz"
 HOMEPAGE="http://openjade.sourceforge.net"
-SLOT=""
+SLOT="0"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc

@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.1 2002/05/14 20:12:00 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.2 2002/08/02 17:42:50 phoenix Exp $
 
 *yudit-2.6 (14 May 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> yudit-2.6.ebuild :
+  Added KEYWORDS, SLOT.
 
   14 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
 

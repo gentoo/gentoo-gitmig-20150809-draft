@@ -8,6 +8,8 @@ DESCRIPTION="Dos2Unix text file converter"
 
 SRC_URI="http://www.megaloman.com/~hany/_data/hd2u/${P}.tgz"
 HOMEPAGE="http://www.megaloman/~hany/"
+KEYWORDS="x86"
+SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"

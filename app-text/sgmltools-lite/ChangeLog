@@ -1,22 +1,20 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.7 2002/07/16 04:09:40 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.8 2002/08/02 17:42:50 phoenix Exp $
 
 *sgmltools-lite-3.0.3-r4 (3 Apr 2002)
 
-  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3.ebuild :
+  Added LICENSE, SLOT.
 
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
   Added KEYWORDS.
 
   3 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.0.3-r4.ebuild :
-
   Some users report that the CVS directories in the source tree cause emerge
   failures, so these are being removed before make install.
 
-*sgmltools-lite-3.0.3-r4 (31 Mar 2002)
-
   31 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.0.3-r4.ebuild :
-
   This addresses bug # 1163.  However, there are no symlinks being created for
   the binary.  Instead, a mini shell script is created to call the
   sgmltools binary with the appropriate flag.  Symlinks, however, are created
@@ -24,28 +22,36 @@
 
 *sgmltools-lite-3.0.3-r3 (31 Mar 2002)
 
-  31 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.0.3-r3.ebuild :
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3-r3.ebuild :
+  Added LICENSE, SLOT.
 
+  31 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.0.3-r3.ebuild :
   Fixed bug # 1369.  Also, added sgml environment generation into the
   pkg_postinst() function, so we do not need to jump through sed hoops to
   achieve that.
 
 *sgmltools-lite-3.0.3-r2 (27 Mar 2002)
 
-  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.03-r2.ebuild :
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3-r2.ebuild :
+  Added LICENSE, SLOT, DESCRIPTION.
 
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.03-r2.ebuild :
   Man page/LFH fixes submitted by Matthew Kennedy.
 
 *sgmltools-lite-3.0.3-r1 (18 Mar 2002)
 
-  18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.03-r1.ebuild :
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3-r1.ebuild :
+  Added LICENSE, SLOT, DESCRIPTION.
 
+  18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.03-r1.ebuild :
   Fixed a sandbox violation.
 
 *sgmltools-lite-3.0.3 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3-r1.ebuild :
+  Added DESCRIPTION.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

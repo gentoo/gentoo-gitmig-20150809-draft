@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.3.ebuild,v 1.3 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.3.ebuild,v 1.4 2002/08/02 17:42:49 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A number of simple utilities for manipulating HTML and XML files."
 SRC_URI="http://www.w3.org/Tools/HTML-XML-utils/${P}.tar.gz"
 HOMEPAGE="http://www.w3.org/Tools/HTML-XML-utils/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="W3C"
 
 DEPEND="virtual/glibc"
 

@@ -1,8 +1,14 @@
 # ChangeLog for app-text/latex2html
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/ChangeLog,v 1.4 2002/07/16 03:57:21 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/ChangeLog,v 1.5 2002/08/02 17:42:49 phoenix Exp $
 
 *latex2html-2002.1 (18 Jun 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> latex2html-2002.ebuild :
+  Added LICENSE, SLOT.
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> latex2html-2002.1.ebuild :
+  Added LICENSE, SLOT.
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
@@ -21,6 +27,9 @@
   Version bump.
 
 *latex2html-2000.1b (1 Feb 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> latex2html-2000.1b.ebuild :
+  Added LICENSE, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

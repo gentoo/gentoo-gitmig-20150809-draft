@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/remem/remem-2.11.ebuild,v 1.3 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/remem/remem-2.11.ebuild,v 1.4 2002/08/02 17:42:50 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MIT's Remembrance Agent"
 SRC_URI="http://rhodes.www.media.mit.edu/people/rhodes/RA/${P}.tar.gz"
 HOMEPAGE="http://rhodes.www.media.mit.edu/people/rhodes/RA/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 DEPEND=""
 
 src_compile() {

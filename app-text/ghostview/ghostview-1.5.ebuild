@@ -6,6 +6,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A PostScript viewer for X11"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ghostview/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
         virtual/x11"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-0.7.1.ebuild,v 1.5 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-0.7.1.ebuild,v 1.6 2002/08/02 17:42:50 phoenix Exp $
 
 
 
@@ -8,6 +8,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="tool for convertion of MSWord doc and rtf files to something readable"
 SRC_URI="mirror://sourceforge/wvware/wv-0.7.1.tar.gz"
 HOMEPAGE="http://www.wvware.com"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.2

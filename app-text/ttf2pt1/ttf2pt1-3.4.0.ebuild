@@ -7,6 +7,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Converts True Type to Type 1 fonts"
 SRC_URI="http://download.sourceforge.net/ttf2pt1/${A}"
 HOMEPAGE="http://ttf2pt1.sourceforge.net"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="as-is"
 
 RDEPEND="virtual/glibc
         >=media-libs/freetype-2.0"

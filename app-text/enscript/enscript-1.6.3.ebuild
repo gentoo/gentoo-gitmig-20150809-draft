@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.3.ebuild,v 1.4 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.3.ebuild,v 1.5 2002/08/02 17:42:49 phoenix Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.iki.fi/mtr/genscript/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnu.org/software/enscript/enscript.html"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 DESCRIPTION="GNU's enscript is a powerful text-to-postsript converter"
 
 DEPEND="sys-devel/flex

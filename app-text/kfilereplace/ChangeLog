@@ -1,8 +1,11 @@
 # ChangeLog for app-text/kfilereplace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.3 2002/07/15 20:57:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.4 2002/08/02 17:42:49 phoenix Exp $
 
 *kfilereplace-0.7.0 (15 Jul 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> kfilereplace-0.7.0.ebuild :
+  Added KEYWORDS, SLOT.
 
   15 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
@@ -15,6 +18,9 @@
   Updated to newer version.
 
 *kfilereplace-0.6.1 (1 Feb 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> kfilereplace-0.6.1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

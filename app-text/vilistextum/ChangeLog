@@ -1,8 +1,16 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.1 2002/05/21 08:30:32 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.2 2002/08/02 17:42:50 phoenix Exp $
+
+*vilistextum-2.6.1.ebuild (2 August 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> vilistextum-2.6.1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
 *vilistextum-2.6.2 (21 May 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> vilistextum-2.6.2.ebuild :
+  Added KEYWORDS.
 
   21 May 2002; Bruce A. Locke <blocke@shivan.org> vilistextum-2.6.2.ebuild :
 

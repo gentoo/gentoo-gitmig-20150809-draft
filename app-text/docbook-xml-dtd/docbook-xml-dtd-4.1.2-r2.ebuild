@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r2.ebuild,v 1.4 2002/07/16 03:48:10 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r2.ebuild,v 1.5 2002/08/02 17:42:49 phoenix Exp $
 
 MY_P="docbkx412"
 S=${WORKDIR}/${P}
@@ -8,6 +8,8 @@ DESCRIPTION="Docbook DTD for XML"
 SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
 
 HOMEPAGE="http://www.oasis-open.org/docbook/"
+SLOT="0"
+LICENSE="X11"
 
 DEPEND=">=app-arch/unzip-5.41
 	>=dev-libs/libxml2-2.4

@@ -5,6 +5,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A printing tool"
 SRC_URI="http://www.mesa.nl/pub/mpage/mpage251pre.tgz"
 HOMEPAGE="http://www.mesa.nl/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="freedist"
 DEPEND="virtual/glibc"
 
 

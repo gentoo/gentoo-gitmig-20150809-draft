@@ -1,6 +1,6 @@
 # ChangeLog for app-text/chktex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/ChangeLog,v 1.4 2002/07/16 03:42:10 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/ChangeLog,v 1.5 2002/08/02 17:42:49 phoenix Exp $
 
 *cktex-1.5-r2 (28 Jun 2002)
 
@@ -9,11 +9,17 @@
   Added KEYWORDS.
 
   28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> chktex-1.5-r2.ebuild
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> chktex-1.5-r2.ebuild :
+  Added SLOT.
   files/digest-chktex-1.5-r2 :
 
   LFH/man page fixes
 
 *chktex-1.5-r1 (7 Jun 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> chktex-1.5-r1.ebuild :
+  Added LICENSE, SLOT.
 
   7 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
   

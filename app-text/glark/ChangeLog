@@ -1,8 +1,11 @@
 # ChangeLog for app-text/glark
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.1 2002/05/13 00:16:13 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.2 2002/08/02 17:42:49 phoenix Exp $
 
 *glark-1.4 (13 May 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> glark-1.4.ebuild :
+  Added KEYWORDS.
 
   13 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> glark-1.4.ebuild files/digest-glark-1.4: 
 

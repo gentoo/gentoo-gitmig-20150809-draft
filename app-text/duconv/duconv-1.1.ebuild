@@ -7,6 +7,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION=" small util that converts from dos<->unix"
 SRC_URI="http://people.freenet.de/tfaehr/${PN}.tgz"
 HOMEPAGE="http://people.freenet.de/tfaehr/linux.htm"
+LICENSE=""
+KEYWORDS="x86"
+SLOT="0"
 
 
 src_unpack() {

@@ -1,7 +1,10 @@
 # ChangeLog for app-text/rman
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.1 2002/07/18 22:57:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.2 2002/08/02 17:42:50 phoenix Exp $
 
 *rman-3.0.9 (18 Jul 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> rman-3.0.9.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   18 Jul 2002; Daniel Robbins <drobbins@gentoo.org>: Added missing ChangeLog

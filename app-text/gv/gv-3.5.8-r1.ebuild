@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r1.ebuild,v 1.7 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r1.ebuild,v 1.8 2002/08/02 17:42:49 phoenix Exp $
 
 # this r1 is a major change. it uses sed instead of patches.
 # hopefully this will enable everyone to compile gv on widely
@@ -12,6 +12,8 @@ DESCRIPTION="gv is a standard ghostscript frontend used e.g. by LyX"
 
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/${P}.tar.gz"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
+SLOT="0"
+LICENSE="GPL-2"
 
 # There's probably more, but ghostscript also depends on it,
 # so I can't identify it

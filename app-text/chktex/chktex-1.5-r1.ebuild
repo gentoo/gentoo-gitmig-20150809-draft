@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/chktex-1.5-r1.ebuild,v 1.3 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/chktex-1.5-r1.ebuild,v 1.4 2002/08/02 17:42:49 phoenix Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.ibiblio.org/pub/linux/distributions/gentoo/${P}.tar.gz"
 
 HOMEPAGE="http://www.ifi.uio.no/~jensthi/chktex/ChkTeX.html"
+SLOT="0"
+LICENSE="GPL-2"
 DESCRIPTION="Checks latex source for common mistakes"
 
 DEPEND="app-text/tetex
