@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/Safe-2.11.ebuild,v 1.3 2004/08/06 19:25:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/Safe-2.11.ebuild,v 1.4 2004/09/06 09:25:28 kloeri Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="http://www.cpan.org/modules/by-module/Safe/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~amd64 ~ppc sparc alpha ~mips ~hppa"
 IUSE=""
