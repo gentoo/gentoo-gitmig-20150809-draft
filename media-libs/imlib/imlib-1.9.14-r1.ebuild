@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.15 2003/02/18 05:18:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.16 2003/03/02 20:05:11 vapier Exp $
 
 inherit libtool
 
@@ -31,27 +31,18 @@ src_unpack() {
 
 src_compile() {
 	elibtoolize
-
-	econf \
-		--includedir="" \
-		--sysconfdir=/etc/imlib || die
-
+	econf --sysconfdir=/etc/imlib || die
 	emake || die
 }
 
 src_install() {
-	make \
-		prefix=${D}/usr \
-		datadir=${D}/usr/share \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
+	einstall \
 		includedir=${D}/usr/include \
 		sysconfdir=${D}/etc/imlib \
-		install || die
+		|| die
 
 	preplib /usr
 
-	dodoc AUTHORS COPYING* ChangeLog README
-	dodoc NEWS
+	dodoc AUTHORS COPYING* ChangeLog README NEWS
 	dohtml -r doc
 }
