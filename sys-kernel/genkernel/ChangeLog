@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.36 2004/02/28 18:51:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.37 2004/03/01 05:10:53 brad_mssw Exp $
+
+  01 Mar 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1.ebuild:
+  break digests for genkernel, bad version was uploaded
 
 *genkernel-3.0.1 (27 Feb 2004)
 
