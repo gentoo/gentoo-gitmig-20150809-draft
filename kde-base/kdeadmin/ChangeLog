@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.78 2004/05/24 17:09:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.79 2004/05/30 13:41:50 caleb Exp $
+
+*kdeadmin-3.3.0_alpha1 (26 May 2004)
+
+  26 May 2004; Caleb Tennis <caleb@gentoo.org> +kdeadmin-3.3.0_alpha1.ebuild:
+  3.3 alpha 1 - hardmasked
 
   24 May 2004; Guy Martin <gmsoft@gentoo.org> kdeadmin-3.2.2.ebuild:
   Marked stable on hppa.
