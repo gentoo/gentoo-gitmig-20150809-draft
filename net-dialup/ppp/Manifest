@@ -3,7 +3,7 @@ MD5 210b3f9616a92005171f3f25c33c1638 ppp-2.4.2-r2.ebuild 4462
 MD5 24f264eef320520caee8597fb071405b ppp-2.4.2.ebuild 3957
 MD5 20502c85d128ae0dd4545dc3ae3eec6b ppp-2.4.2-r1.ebuild 4276
 MD5 d8492eff15db4776ce07c84660763ee6 ChangeLog 12126
-MD5 fa43c8bd9087864dc765ad1a18d875d9 ppp-2.4.2-r3.ebuild 4569
+MD5 c5d0b1b4ceaa33781d7fb6ff0b70ba16 ppp-2.4.2-r3.ebuild 4524
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
 MD5 86cdaf133f7a79fb464f02d83afc7734 files/plog 146
@@ -29,7 +29,6 @@ MD5 927fc5dafad76c9c1ee7f0259e9244b7 files/2.4.2/mpls.patch.gz 3151
 MD5 2890b47660f967a07ac5b211850e46c5 files/2.4.2/options-pptp 238
 MD5 f7a8c95af55d9cca703c15cdf9386ad4 files/2.4.2/control_c.patch 402
 MD5 a2eaeceee980ff6e183abfa370fc685c files/2.4.2/chat-default 353
-MD5 d3f097b43ef7f012c672f4c8b840e4a6 files/2.4.2/endless-loop.patch 339
 MD5 d94c130910164d27e8a3b68c5d53faaf files/2.4.2/ip-up 1047
 MD5 8eaba18dd4e6f49c9fd2d35ab8572458 files/2.4.2/killaddr-smarter.patch.gz 2257
 MD5 ef28c96687409a340c6cd66e21dc58db files/2.4.2/confd.ppp0 2786
