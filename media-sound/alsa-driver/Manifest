@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 810e2fff9bf6d47eb38d9a78ceef43a8 alsa-driver-1.0.7.ebuild 3494
+MD5 0e6e75b23680f8513a2c68cd3204b3cb alsa-driver-1.0.7.ebuild 3522
 MD5 d388a1b0706024ddccccc99045b976f9 alsa-driver-0.9.8.ebuild 2341
 MD5 e5de43659b629d1e9f0ee8d3f1864840 alsa-driver-1.0.3.ebuild 3363
-MD5 c29a9f8df4cb60985d5eec08bea730af ChangeLog 17266
+MD5 34c94a17d00c55b8c61ad1b22373206f ChangeLog 17382
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 9f0283e4e9611766ad3110532d4976d7 alsa-driver-1.0.5a.ebuild 3603
 MD5 45f95cf50aad5f544f0fa05dcf94d1ad alsa-driver-1.0.6a.ebuild 3501
@@ -24,7 +24,7 @@ MD5 8bb31a005a1db2e306c51d017fd44e70 files/alsa-driver-1.0.5a-xbox-ac97.patch 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBnFFeArHZZzCEUG0RAj9PAJ4l1wSycGUCNS61ZhDxSroKHK8UGQCdHIDi
-wnYibKszvD0T6aiSadydZZA=
-=wxvv
+iD8DBQFBnPytArHZZzCEUG0RAnk2AKCIaGZvTrcdFhhen+3aeVImazgKrACfVEQv
+ExTnEonk4bjCIvOlJQlrSPI=
+=xYbu
 -----END PGP SIGNATURE-----

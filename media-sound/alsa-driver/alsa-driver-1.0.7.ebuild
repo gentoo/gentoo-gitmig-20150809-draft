@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.3 2004/11/18 07:37:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.4 2004/11/18 19:44:13 eradicator Exp $
 
 IUSE="oss"
 
@@ -86,7 +86,8 @@ src_compile() {
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
 
 	unset ARCH
-	emake || die "Parallel Make Failed"
+	# -j1 : see bug #71028
+	emake -j1 || die "Parallel Make Failed"
 }
 
 
