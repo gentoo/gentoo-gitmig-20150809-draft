@@ -2,11 +2,11 @@ MD5 c091e031a7a235c4f288bea3ffde8430 ChangeLog 1950
 MD5 bed1e494dabf3d13a57f3ea0c7241ca8 colorgcc-1.3.2-r1.ebuild 1327
 MD5 64cd3f4be5ab873dc583e67bee2b3597 colorgcc-1.3.2-r2.ebuild 1534
 MD5 e070c56c6555554c6c31fc6668a59241 colorgcc-1.3.2-r3.ebuild 1667
-MD5 2478de1ebadb667d206b6711d7139ce2 colorgcc-1.3.2-r4.ebuild 1933
+MD5 8d9cca27131cfacd7ecad6d5fd7a0b7b colorgcc-1.3.2-r4.ebuild 1942
 MD5 ea48f2072114b79e49fec71b4b2d77c3 files/colorgcc-1.3.2-gcc_config.patch 887
+MD5 a7e0ce3a863e959031d6ebc250a24cd0 files/colorgcc-1.3.2-gentoo-one.patch 6576
+MD5 a25cb38b04323bc5db5f0a442a905f4d files/colorgcc-1.3.2-gentoo-two.patch 1953
 MD5 4243dd3d29a55049f918a1ba04911958 files/digest-colorgcc-1.3.2-r1 139
 MD5 4243dd3d29a55049f918a1ba04911958 files/digest-colorgcc-1.3.2-r2 139
 MD5 698ebf14622e08a57a40c828ca435036 files/digest-colorgcc-1.3.2-r3 139
-MD5 a7e0ce3a863e959031d6ebc250a24cd0 files/colorgcc-1.3.2-gentoo-one.patch 6576
-MD5 a25cb38b04323bc5db5f0a442a905f4d files/colorgcc-1.3.2-gentoo-two.patch 1953
 MD5 592ce525361d7cb9136917c8443a7c9e files/digest-colorgcc-1.3.2-r4 65
