@@ -1,6 +1,6 @@
 # Copyright 1999 - 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.13 2002/08/16 04:05:56 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.14 2002/08/27 20:08:11 spider Exp $
 
 S=${WORKDIR}/cdrdao-1.1.5
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
@@ -31,13 +31,16 @@ src_unpack() {
 src_compile() {
 
 	local mygnome=""
-	if [ "`use gnome`" ] ; then
-		mygnome=" --with-gnome"
-	fi
+# Gtk version is broken :(
+#	if [ "`use gnome`" ] ; then
+#		mygnome=" --with-gnome"
+#		CFLAGS="${CFLAGS} `/usr/bin/gtkmm-config --cflags`"
+#		CXXFLAGS="${CXXFLAGS} `/usr/bin/gtkmm-config --cflags` -fno-exceptions"
+#		
+#	fi
 
 	# -funroll-loops do not work
 	CFLAGS="${CFLAGS/-funroll-loops}"
-
 	./configure "${mygnome}" \
 		--prefix=/usr \
 		--build="${CHOST}"\
@@ -67,32 +70,32 @@ src_install() {
 	
 	 
 	# and now the optional GNOME frontend
-	if [ "`use gnome`" ]
-	then
-
-		# binary
-		into /usr
-		dobin xdao/gcdmaster
-		
-		# pixmaps for gcdmaster in /usr/share/pixmaps/gcdmaster
-		insinto /usr/share/pixmaps/gcdmaster
-		doins xdao/pixmap_copycd.png 
-		doins xdao/pixmap_audiocd.png
-		doins xdao/pixmap_datacd.png
-		doins xdao/pixmap_open.png 
-		doins xdao/pixmap_mixedcd.png 
-		doins xdao/pixmap_cd.png
-		doins xdao/pixmap_help.png 
-		doins xdao/pixmap_dumpcd.png
-		doins xdao/gcdmaster.png
-		
-		# application links
-		# gcdmaster.desktop in /usr/share/gnome/apps/Applications
-		insinto /usr/share/gnome/apps/Applications
-		doins xdao/gcdmaster.desktop
-		
-		# xcdrdao.1 renamed to gcdmaster.1 in /usr/share/man/man1/
-		into /usr
-		newman xdao/xcdrdao.man gcdmaster.1
-	fi
+#	if [ "`use gnome`" ]
+#	then
+#
+#		# binary
+#		into /usr
+#		dobin xdao/gcdmaster
+#		
+#		# pixmaps for gcdmaster in /usr/share/pixmaps/gcdmaster
+#		insinto /usr/share/pixmaps/gcdmaster
+#		doins xdao/pixmap_copycd.png 
+#		doins xdao/pixmap_audiocd.png
+#		doins xdao/pixmap_datacd.png
+#		doins xdao/pixmap_open.png 
+#		doins xdao/pixmap_mixedcd.png 
+#		doins xdao/pixmap_cd.png
+#		doins xdao/pixmap_help.png 
+#		doins xdao/pixmap_dumpcd.png
+#		doins xdao/gcdmaster.png
+#		
+#		# application links
+#		# gcdmaster.desktop in /usr/share/gnome/apps/Applications
+#		insinto /usr/share/gnome/apps/Applications
+#		doins xdao/gcdmaster.desktop
+#		
+#		# xcdrdao.1 renamed to gcdmaster.1 in /usr/share/man/man1/
+#		into /usr
+#		newman xdao/xcdrdao.man gcdmaster.1
+#	fi
 }
