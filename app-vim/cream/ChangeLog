@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.18 2004/10/02 00:13:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.19 2004/10/13 21:18:26 ciaranm Exp $
+
+*cream-0.31 (13 Oct 2004)
+
+  13 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> +cream-0.31.ebuild:
+  Bump. Thanks to TGL <degrenier@easyconnect.fr> in bug #67348.
 
 *cream-0.30-r3 (02 Oct 2004)
 
