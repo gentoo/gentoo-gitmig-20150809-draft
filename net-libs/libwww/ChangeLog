@@ -1,11 +1,14 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.19 2003/12/12 07:01:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.20 2004/02/09 02:01:32 vapier Exp $
+
+*libwww-5.4.0-r2 (07 Oct 2003)
+
+  08 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add debian patch to update to autoconf-2.50 so new libtool works #40892.
 
   10 Dec 2003; <agriffis@gentoo.org> libwww-5.4.0-r1.ebuild:
   stable on ia64
-
-*libwww-5.4.0-r2 (07 Oct 2003)
 
   12 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> libwww-5.4.0-r2.ebuild:
   libwww-5.4.0 doesn't depend on autoconf 2.5 but 2.13. Reverted the
