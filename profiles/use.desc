@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.83 2003/03/27 08:23:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.84 2003/03/27 10:53:58 george Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -76,6 +76,7 @@ mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 motif - Adds motif support (virtual/motif)
 mozilla - Adds mozilla support
 mpeg - Adds libmpeg3 support to various packages.
+mpi - Adds MPI (Message Passing Interface) layer to the apps that support it.
 mule - Adds multi-language support to XEmacs
 mysql - Adds mySQL support
 nas - Adds support for network audio sound
