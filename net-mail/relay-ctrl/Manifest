@@ -1,9 +1,20 @@
-MD5 c20512f63ba526db2ba79cfb9bdf73c0 relay-ctrl-3.1.1-r2.ebuild 2113
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 20aa4c5d3fc3d3597f07957656df80ee relay-ctrl-3.1.1-r2.ebuild 2141
 MD5 747c058ede66ce360ffadf54d4aba627 relay-ctrl-3.1.1.ebuild 929
 MD5 998d179ae2acbe1fe7cd4cf1e77486e4 relay-ctrl-3.1.1-r1.ebuild 2038
-MD5 da9bae0183e97bef8dd14146d207e065 ChangeLog 1739
+MD5 7c38266eaee59c69cfcee8eb02f9772e ChangeLog 1838
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r1 67
 MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r2 67
 MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1 67
 MD5 8e4e552c2f7216d5303b739cc99e51e9 files/authenticated.c-relayfixup.diff 702
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBc4jQPpIsIjIzwiwRAnZqAKCzubB0VQCk6dX1y/KwFTZTwU9RWgCgw8Ta
+9LAvw/QtIr6qphAh5b8lbvU=
+=VjBJ
+-----END PGP SIGNATURE-----
