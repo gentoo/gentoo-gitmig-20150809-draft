@@ -5,3 +5,4 @@
 # additional fields are ignored.
 
 kde:Includes x11-libs/qt, kde-base/* and the kde-related eclasses.
+ruby:dev-lang/ruby* and dev-ruby/*
