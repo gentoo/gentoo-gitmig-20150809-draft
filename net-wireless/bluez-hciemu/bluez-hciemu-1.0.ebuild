@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/bluez-hciemu-1.0.ebuild,v 1.4 2003/10/13 19:24:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/bluez-hciemu-1.0.ebuild,v 1.5 2004/01/30 16:57:43 latexer Exp $
 
 DESCRIPTION="bluetooth HCI emulator"
 HOMEPAGE="http://bluez.sourceforge.net/"

@@ -1,4 +1,4 @@
-MD5 c44cc4ea8e107817bab961fc6055de0e ChangeLog 630
-MD5 2925b94386caeafc42843975b7863a29 bluez-hciemu-1.0.ebuild 674
-MD5 23d1ee94cc2fb13eb6dcae0a51b061fa metadata.xml 237
+MD5 dabb8a6d723d7e83b52a7a29b5f6ac1c ChangeLog 780
+MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+MD5 69fd874643256c9eb64a979ce3a7b22e bluez-hciemu-1.0.ebuild 672
 MD5 f5381103c4e278a6cc5b444451df12c4 files/digest-bluez-hciemu-1.0 68
