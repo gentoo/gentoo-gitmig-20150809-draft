@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fbf491ff1e0fa2bcc6b90b4806bac6bb ChangeLog 592
+MD5 042af9c2d10408e578f7f1e60b9ffd80 ChangeLog 676
 MD5 f1e5147500ed7ba549f2dd3e70bf0866 metadata.xml 598
-MD5 c83e0f685da02cb393785d2b151176d9 pipeworks-0.4.ebuild 626
+MD5 a39f7f5e07cd1ee2203ec11fc9877da3 pipeworks-0.4.ebuild 633
 MD5 d37662808abe973c8675a7d51e4d6e61 files/digest-pipeworks-0.4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35nYHTu7gpaalycRApLIAJ9AD31UmlkrWWmVoYuCP8NWCptekQCgrTQs
-31ad74DJ0mJ0hzdGtGCBMBk=
-=Pq4m
------END PGP SIGNATURE-----
