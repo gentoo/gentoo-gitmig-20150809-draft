@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.21.ebuild,v 1.3 2002/12/09 04:22:37 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.21.ebuild,v 1.4 2003/01/23 12:49:34 foser Exp $
 
 IUSE="nls"
 
@@ -16,7 +16,8 @@ LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
 	>=gnome-base/ORBit-0.5.13
-	>=gnome-base/gnome-print-0.30"
+	>=gnome-base/gnome-print-0.30
+	>=media-libs/gdk-pixbuf-0.6"
 
 DEPEND="${RDEPEND}
 	sys-devel/perl
