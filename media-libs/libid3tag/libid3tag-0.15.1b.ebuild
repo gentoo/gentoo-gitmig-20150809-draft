@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.12 2004/10/07 02:57:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.13 2004/10/14 19:06:43 mr_bones_ Exp $
 
 IUSE="debug"
 
@@ -35,7 +35,6 @@ src_install() {
 	dodoc CHANGES COPYRIGHT CREDITS README TODO VERSION
 
 	# This file must be updated with every version update
-	dodir /usr/$(get_libdir)/pkgconfig
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins ${FILESDIR}/id3tag.pc
 }
