@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/mjc-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/ChangeLog,v 1.4 2002/10/01 00:37:22 lostlogic Exp $
+
+*mjc-sources-2.4.20-r2 (30 Sep 2002)
+
+  30 Sep 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20-r1.ebuild:
+
+  Re-added mjc-sources, enjoy.
