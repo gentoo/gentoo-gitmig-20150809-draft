@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/ruby-cvs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.1 2003/04/15 09:40:19 twp Exp $
+
+*ruby-cvs-1.8.0 (15 Apr 2003)
+
+  15 Apr 2003; Tom Payne <twp@gentoo.org> ruby-cvs-1.8.0.ebuild :
+
+  Initial commit. Bug # 18757.
