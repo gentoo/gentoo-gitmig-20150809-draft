@@ -1,14 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23.ebuild,v 1.1 2003/11/22 11:27:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23.ebuild,v 1.2 2003/12/30 07:34:06 seemant Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
 
+IUSE="gnome kde"
+
+OPERAVER="7.23-20031119"
+OPERATYPE="1-static-qt"
+
+S=${WORKDIR}/${A/.tar.bz2/}
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
+SRC_URI="x86? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/i386/static/${PN}-${OPERAVER}.${OPERATYPE}.i386-en.tar.bz2 )
+	ppc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/ppc/static/${PN}-${OPERAVER}.${OPERATYPE}.ppc-en.tar.bz2 )
+	sparc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/sparc/static/${PN}-${OPERAVER}.${OPERATYPE}.sparc-en.tar.bz2 )"
+
+SLOT="0"
 LICENSE="OPERA"
-IUSE="gnome kde"
+KEYWORDS="x86 ppc sparc"
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4"
@@ -16,19 +27,7 @@ DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
-	|| ( x11-libs/lesstif x11-libs/openmotif )"
-
-KEYWORDS="x86 ppc sparc"
-SLOT="0"
-
-OPERAVER="7.23-20031119"
-OPERATYPE="1-static-qt"
-
-SRC_URI="x86? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/i386/static/${PN}-${OPERAVER}.${OPERATYPE}.i386-en.tar.bz2 )
-	ppc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/ppc/static/${PN}-${OPERAVER}.${OPERATYPE}.ppc-en.tar.bz2 )
-	sparc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/sparc/static/${PN}-${OPERAVER}.${OPERATYPE}.sparc-en.tar.bz2 )"
-
-S=${WORKDIR}/${A/.tar.bz2/}
+	virtual/motif"
 
 src_unpack() {
 	unpack ${A}
