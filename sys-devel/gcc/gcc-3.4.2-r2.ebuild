@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.2 2004/09/22 20:27:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.3 2004/09/28 22:36:16 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -10,7 +10,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa -ppc"
+KEYWORDS="-* amd64 ~mips ~ppc64 ~x86 -hppa -ppc"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # we also need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
@@ -37,6 +37,7 @@ RDEPEND="virtual/libc
 	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
 	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
 	>=sys-devel/gcc-config-1.3.1
+	amd64? ( !nomultilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -428,7 +429,8 @@ pkg_postinst() {
 	else
 		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	fi
-	if [ "${ROOT}" = "/" -a "${CHOST}" = "${CCHOST}" ]
+
+	if [ "${ROOT}" == "/" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
