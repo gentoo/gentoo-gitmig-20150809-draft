@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmxmms
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.1 2003/09/15 12:27:35 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.2 2004/04/06 02:58:08 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> wmxmms-0.1.4.ebuild:
+  Marking stable on hppa
 
 *wmxmms-0.1.4 (15 Sep 2003)
 
