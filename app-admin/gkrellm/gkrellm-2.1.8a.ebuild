@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.8a.ebuild,v 1.1 2003/03/16 03:26:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.8a.ebuild,v 1.2 2003/04/03 21:48:46 seemant Exp $
 
 IUSE="gtk gtk2 nls"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gkrellm.net/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~mips"
+KEYWORDS="x86 ppc ~alpha sparc ~hppa ~mips"
 
 DEPEND="gtk? (  >=x11-libs/gtk+-2.0.5 )
 	gtk2? ( >=x11-libs/gtk+-2.0.5 )"
