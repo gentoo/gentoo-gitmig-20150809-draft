@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.1.ebuild,v 1.3 2005/01/14 22:54:27 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.1.ebuild,v 1.4 2005/02/08 01:39:30 j4rg0n Exp $
 
 DESCRIPTION="Maximum likelihood analysis for nucleotide, amino acid, and two-state data."
 HOMEPAGE="http://www.tree-puzzle.de"
@@ -12,6 +12,7 @@ KEYWORDS="x86 ~ppc ppc-macos"
 IUSE=""
 
 src_compile() {
+	use ppc-macos && filter-flags -fast
 	econf || die "Configuration failed."
 	emake || die "Compilation failed."
 }

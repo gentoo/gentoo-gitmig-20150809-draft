@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/tree-puzzle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/ChangeLog,v 1.7 2005/02/03 23:56:45 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/ChangeLog,v 1.8 2005/02/08 01:39:30 j4rg0n Exp $
+
+  07 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> tree-puzzle-5.1.ebuild,
+  tree-puzzle-5.2.ebuild:
+  Stripped -fast from CLAGS as it causes *too* accurate floating point arithmetic
 
   03 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> tree-puzzle-5.2.ebuild:
   Unstable ppc-macos
