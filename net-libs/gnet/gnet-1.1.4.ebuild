@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.4.ebuild,v 1.3 2002/07/16 04:54:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.4.ebuild,v 1.4 2002/07/16 21:54:29 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNet network library."
@@ -26,7 +26,9 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
+	make \
+		prefix=${D}/usr \
+		datadir=${D}/usr/share \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		sysconfdir=${D}/etc \
