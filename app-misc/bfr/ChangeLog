@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/bfr
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.2 2003/10/08 03:38:45 hillster Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.3 2004/06/07 05:20:33 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  bfr-1.5.ebuild:
+  QA - IUSE fix
 
   07 Oct 2003; Joel Hill <hillster@gentoo.org> bfr-1.5.ebuild:
   cleanup, marking stable.

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/boxes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.5 2004/03/14 10:49:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.6 2004/06/07 05:21:55 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  boxes-1.0.1.ebuild:
+  QA - IUSE fix
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> boxes-1.0.1.ebuild:
   Don't assign default to S; header fix
