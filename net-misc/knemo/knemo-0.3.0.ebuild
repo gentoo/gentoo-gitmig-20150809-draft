@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.3.0.ebuild,v 1.1 2004/09/14 13:18:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.3.0.ebuild,v 1.2 2004/10/11 22:34:33 carlo Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://kde-apps.org/content/show.php?content=12956"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="wifi"
 
 RDEPEND="sys-apps/net-tools
