@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 22d5bb5b9e5100f090d8f6dda2af2872 jikes-1.21.ebuild 941
-MD5 3cf40921164487b5447172f96ea337be jikes-1.22-r1.ebuild 964
-MD5 266a2c3fcf65839b9d7d64823ab4437c ChangeLog 3730
+MD5 fb296a264c12f24e1bdf6d51578f96ba jikes-1.21.ebuild 901
+MD5 15d74d9d4fb76734907aa0f2d72d0f50 jikes-1.22-r1.ebuild 922
+MD5 01dc8f532e7065504b1a435acf09c2c3 ChangeLog 3851
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 f4b99fcf9aad09cc8ac1414bab7f40d7 files/deprecated.patch 995
 MD5 69804c19e69a70f1d6c9bf2b837fbd8d files/digest-jikes-1.22-r1 63
 MD5 bbe4f7862346b14d9cc597f108b07db6 files/digest-jikes-1.21 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBbN4C/rLF9B432nYRAuuYAKCSv/tLMYgo42HO3t+w0sfjTU/e4gCgj7tx
-y2A1SUpx9cbYbPYB1Z3Onok=
-=rNuU
+iD8DBQFCRF4E/rLF9B432nYRAtvDAJ4lm7KhDFKsozVtec2HJRqmvFyyjQCdFEet
+uHlAiVkBBT22v7rFQR10vrU=
+=azXi
 -----END PGP SIGNATURE-----
