@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.9 2003/09/21 18:15:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.10 2003/10/02 18:24:20 brad_mssw Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ LICENSE="BSD"
 
 SLOT="0"
 
-KEYWORDS="x86 alpha ia64"
+KEYWORDS="x86 alpha ia64 ~amd64"
 
 DEPEND="virtual/glibc"
 #RDEPEND=""
@@ -38,7 +38,7 @@ src_unpack() {
 	use alpha && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=alpha/g' Makefile.bootor > Makefile.boot
 	use ppc && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=ppc/g' Makefile.bootor > Makefile.boot
 	use sparc64 && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=sparc64/g' Makefile.bootor > Makefile.boot
-	use ia64 && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=ia64/g' Makefile.bootor > Makefile.boot
+	use amd64 && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=amd64/g' Makefile.bootor > Makefile.boot
 }
 
 src_compile() {
