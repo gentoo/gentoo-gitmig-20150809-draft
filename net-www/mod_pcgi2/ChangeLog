@@ -1,0 +1,10 @@
+# ChangeLog for net-www/mod_pcgi2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/ChangeLog,v 1.1 2003/08/15 04:32:05 robbat2 Exp $
+
+*mod_pcgi2-2.0.1 (14 Aug 2003)
+
+  14 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  mod_pcgi2-2.0.1.ebuild, files/20_mod_pcgi.conf:
+  initial commit
+
