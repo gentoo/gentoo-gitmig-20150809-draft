@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.6 2004/10/29 19:47:51 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.7 2004/11/28 15:32:00 eldad Exp $
 
 inherit eutils gnuconfig
 
@@ -134,7 +134,7 @@ pkg_postinst() {
 	then
 		einfo "To use a database as a backend for snort you'll have to"
 		einfo "import the correct tables to the database."
-		einfo "You'll have to setup a user called snort first."
+		einfo "You'll have to setup a database called snort first."
 		einfo ""
 		use mysql && einfo "  MySQL: zcat /usr/share/doc/${P}/contrib/create_mysql.gz | mysql -p snort"
 		use postgres && einfo "  PostgreSQL: import /usr/share/doc/${P}/contrib/create_postgresql.gz"
