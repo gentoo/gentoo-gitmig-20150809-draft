@@ -1,0 +1,10 @@
+# ChangeLog for app-text/build-docbook-catalog
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.1 2004/06/30 03:12:29 agriffis Exp $
+
+*build-docbook-catalog-1.1 (29 Jun 2004)
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +build-docbook-catalog-1.1.ebuild:
+  New package to generate docbook-xml catalogs.  Submitted by myself in bug 52725
+
