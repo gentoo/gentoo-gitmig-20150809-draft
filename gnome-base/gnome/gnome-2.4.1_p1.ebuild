@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.4 2004/01/07 18:28:12 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.5 2004/01/08 13:17:53 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -88,7 +88,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-utils-2.4.1
 	>=media-libs/gstreamer-0.6.4
 	>=media-libs/gst-plugins-0.6.4
-	>=x11-libs/gtksourceview-0.7
+	>=x11-libs/gtksourceview-0.7-r1
 	>=gnome-extra/gucharmap-1.2
 	>=gnome-base/libgnomeprint-2.4.2
 	>=gnome-base/libgnomeprintui-2.4.2
