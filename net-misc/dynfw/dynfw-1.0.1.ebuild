@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dynfw/dynfw-1.0.1.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dynfw/dynfw-1.0.1.ebuild,v 1.5 2002/08/14 12:08:07 murphy Exp $
 
 S=${WORKDIR}/${P}
 
@@ -8,7 +8,7 @@ DESCRIPTION="Dynamic Firewall Tools for netfilter-based firewalls"
 SRC_URI="http://gentoo.org/projects/${P}.tar.gz"
 HOMEPAGE="http://gentoo.org/projects/dynfw"
 DEPEND="sys-apps/bash"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 LICENSE="GPL"
 

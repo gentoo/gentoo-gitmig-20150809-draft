@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-2.02.ebuild,v 1.1 2002/07/23 18:17:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-2.02.ebuild,v 1.2 2002/08/14 12:08:08 murphy Exp $
 
 #name of tarball changed
 MY_P="${P/nt/d4x}"
@@ -8,7 +8,7 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="GTK based download manager for X."
 SRC_URI="http://www.krasu.ru/soft/chuchelo/files/${MY_P}.tar.gz"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="nt"
 
 DEPEND="=x11-libs/gtk+-1.2*

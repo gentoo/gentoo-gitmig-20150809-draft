@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.1.0.ebuild,v 1.3 2002/07/11 06:30:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.1.0.ebuild,v 1.4 2002/08/14 12:08:08 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application"
@@ -7,7 +7,7 @@ SRC_URI="http://unc.dl.sourceforge.net/sourceforge/openvpn/${P}.tar.gz"
 HOMEPAGE="http://openvpn.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=dev-libs/lzo-1.07
 		virtual/linux-sources

@@ -9,7 +9,7 @@ HOMEPAGE="http://www.inet.no/dante/"
 RDEPEND="virtual/glibc sys-libs/pam tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND} sys-devel/perl"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 src_unpack() {

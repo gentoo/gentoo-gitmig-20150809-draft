@@ -5,7 +5,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Another (RFC1413 compliant) ident daemon"
 HOMEPAGE="http://dev.ojnk.net/"
 SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
 

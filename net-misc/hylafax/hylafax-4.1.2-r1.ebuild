@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.4 2002/08/13 23:00:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.5 2002/08/14 12:08:07 murphy Exp $
 
 S=${WORKDIR}/${P}
 MYSED=sed-3.02
@@ -8,7 +8,7 @@ PATCHES=${WORKDIR}/patches
 DESCRIPTION="Fax package for class 1 and 2 fax modems."
 SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 HOMEPAGE="http://www.hylafax.org"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="hylafax"
 SLOT="0"
 

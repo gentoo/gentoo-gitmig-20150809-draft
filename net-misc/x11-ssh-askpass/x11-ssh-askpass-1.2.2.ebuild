@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2.ebuild,v 1.10 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2.ebuild,v 1.11 2002/08/14 12:08:08 murphy Exp $
 
 
 P=x11-ssh-askpass-1.2.2
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="X11-based passphrase dialog for use with OpenSSH"
 HOMEPAGE="http://www.ntrnet.net/~jmknoble/software/x11-ssh-askpass/"
 SRC_URI="http://www.ntrnet.net/~jmknoble/software/x11-ssh-askpass/${A}"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="as-is"
 SLOT="0"
 

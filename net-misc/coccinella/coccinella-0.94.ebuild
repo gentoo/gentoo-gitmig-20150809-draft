@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/coccinella-0.94.ebuild,v 1.4 2002/07/06 14:43:56 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/coccinella-0.94.ebuild,v 1.5 2002/08/14 12:08:07 murphy Exp $
 
 NAME=Whiteboard
 S="${WORKDIR}/${NAME}-${PV}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://hem.fyristorg.com/matben"
 LICENSE="GPL-2"
 DEPEND="dev-lang/tk"
 RDEPEND="${DEPEND}"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 src_compile() {

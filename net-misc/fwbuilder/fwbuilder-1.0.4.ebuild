@@ -7,7 +7,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://fwbuilder.sourceforge.net"
 S=${WORKDIR}/${P}
 
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
 

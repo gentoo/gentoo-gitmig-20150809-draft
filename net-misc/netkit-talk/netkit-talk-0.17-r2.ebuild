@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r2.ebuild,v 1.6 2002/08/14 10:52:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r2.ebuild,v 1.7 2002/08/14 12:08:08 murphy Exp $
 
 A=netkit-ntalk-${PV}.tar.gz
 S=${WORKDIR}/netkit-ntalk-${PV}
 DESCRIPTION="Netkit - talkd"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${A}"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="bsd"
 SLOT="0"
 
