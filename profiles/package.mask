@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+
+# <azarah@gentoo.org> (19 Sep 2002)
+# Missing files .. what can I say ?
+>=net-mail/postfix-1.1.11.20020822
+
 # <raker@gentoo.org> (18 Sep 2002)
 # New verison of ghostscript.
 # Please test and report on bug #7787
@@ -250,10 +255,6 @@ dev-python/pycrypto
 # <tantive@gentoo.org> (02 Sep 2002)
 # Masked for testing, fixed some compile errors with >2.99 
 =sys-kernel/openmosix-sources-2.4.19-r3
-
-# <azarah@gentoo.org> (02 Sep 2002)
-# This is just a bugfix release, but needs testing all the same.
->=sys-apps/pam-login-3.7
 
 # <phoenix@gentoo.org> (01 Sep 2002)
 # This needs a lot of testing
