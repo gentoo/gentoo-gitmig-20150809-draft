@@ -22,6 +22,10 @@
 ##
 
 # <foser@gentoo.org> (13 Oct 2002)
+# all upstream ftp sites are down
+=dev-java/japhar-0.10
+
+# <foser@gentoo.org> (13 Oct 2002)
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
 
