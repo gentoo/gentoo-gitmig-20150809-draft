@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-1.7.ebuild,v 1.5 2004/08/18 00:18:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.0.ebuild,v 1.1 2004/08/18 00:18:54 usata Exp $
 
 inherit elisp-common
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://txt2tags.sourceforge.net/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 DEPEND="virtual/python
 	tcltk? ( dev-lang/tk )
 	emacs? ( virtual/emacs )"
@@ -42,14 +42,23 @@ src_compile() {
 SITEFILE="50${PN}-gentoo.el"
 
 src_install() {
-	dobin txt2tags
-	dodoc README* RULES TODO ChangeLog*
+	dobin t2tconv txt2tags
+
+	dodoc README* doc/RULES TODO ChangeLog* doc/txt2tagsrc
+	dohtml doc/userguide/*
 	# samples go into "samples" doc directory
 	docinto samples
-	dodoc samples/*
+	dodoc samples/abuseme.* samples/sample.*
+	docinto samples/css
+	dodoc samples/css/*
+	docinto samples/img
+	dodoc samples/img/*
 	# extras go into "extras" doc directory
 	docinto extras
 	dodoc extras/*
+
+	newman doc/manpage.man txt2tags.1
+
 	# emacs support
 	if use emacs; then
 		elisp-install ${PN} extras/txt2tags-mode.el
@@ -59,6 +68,13 @@ src_install() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
+	echo
+	einfo "NOTE: the format of .t2t files has changed between versions"
+	einfo "1.7 -> 2.0.  To convert your .t2t files to the new format,"
+	einfo "use the included t2tconv script:"
+	einfo
+	einfo "    t2tconv file1.t2t file2.t2t ..."
+	echo
 }
 
 pkg_postrm() {
