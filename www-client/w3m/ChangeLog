@@ -1,6 +1,11 @@
 # ChangeLog for www-client/w3m
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.8 2005/02/12 09:26:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.9 2005/03/18 14:25:05 usata Exp $
+
+  18 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -files/w3m-libwc-gentoo.diff, -files/w3m-0.4.2-async-m17n-gentoo.diff,
+  -files/w3m-m17n-search-gentoo.diff, w3m-0.4.2.ebuild, -w3m-0.5-r2.ebuild:
+  Removed libungif dependency; bug #85720.
 
   12 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> w3m-0.5.1-r2.ebuild:
   Updated async patch; bug #67082.

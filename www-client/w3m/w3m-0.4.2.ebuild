@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.4.2.ebuild,v 1.2 2005/02/12 09:26:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.4.2.ebuild,v 1.3 2005/03/18 14:25:05 usata Exp $
 
 inherit eutils
 
@@ -19,8 +19,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=dev-libs/boehm-gc-6.2
 	gtk? ( =x11-libs/gtk+-1.2*
 		media-libs/gdk-pixbuf )
-	!gtk? ( imlib? ( >=media-libs/imlib-1.9.8
-		media-libs/libungif ) )
+	!gtk? ( imlib? ( >=media-libs/imlib-1.9.8 ) )
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
