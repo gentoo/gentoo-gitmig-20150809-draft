@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.5 2004/03/23 01:03:20 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.6 2004/05/12 11:07:44 pappy Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -83,13 +83,9 @@ src_compile() {
 
 	# disable the automatic PIC building which is considered as Prologue Junk by the Haskell Compiler
 	# thanks to Peter Simons for finding this and giving notice on bugs.gentoo.org
-	if has_version "sys-devel/hardened-gcc"
-	then
-		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
-		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
-		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
-		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
-	fi
+	# new logic for hardened gcc specs file by pappy
+	echo "SRC_CC_OPTS+=-fno-pic -fno-stack-protector" >> mk/build.mk
+	echo "SRC_HC_OPTS+=-optc-fno-pic -optc-fno-stack-protector" >> mk/build.mk
 
 	# force the config variable ArSupportsInput to be unset;
 	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified

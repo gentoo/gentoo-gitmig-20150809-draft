@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.1.ebuild,v 1.4 2003/12/17 17:58:09 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.1.ebuild,v 1.5 2004/05/12 11:07:44 pappy Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -89,13 +89,9 @@ src_compile() {
 
 	# disable the automatic PIC building which is considered as Prologue Junk by the Haskell Compiler
 	# thanks to Peter Simons for finding this and giving notice on bugs.gentoo.org
-	if has_version "sys-devel/hardened-gcc"
-	then
-		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
-		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
-		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
-		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
-	fi
+	# new logic for hardened gcc specs file by pappy
+	echo "SRC_CC_OPTS+=-fno-pic -fno-stack-protector" >> mk/build.mk
+	echo "SRC_HC_OPTS+=-optc-fno-pic -optc-fno-stack-protector" >> mk/build.mk
 
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
