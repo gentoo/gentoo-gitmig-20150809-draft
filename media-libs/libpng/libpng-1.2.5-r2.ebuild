@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r2.ebuild,v 1.2 2003/01/16 17:06:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r2.ebuild,v 1.3 2003/01/17 15:05:02 aliz Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 	sed -e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
 		-e "s:ZLIBINC=.*:ZLIBINC=/usr/include:" \
-		-e "s/-O3/${CFLAGS}/" \
+		-e "s:-O3:${CFLAGS}:" \
 		-e "s:prefix=/usr/local:prefix=/usr:" \
 		-e "s:OBJSDLL = :OBJSDLL = -lz -lm :" \
 			scripts/makefile.linux > Makefile
