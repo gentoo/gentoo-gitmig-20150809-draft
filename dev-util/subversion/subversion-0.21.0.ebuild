@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0.ebuild,v 1.1 2003/04/26 14:07:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0.ebuild,v 1.2 2003/04/26 14:56:31 pauldv Exp $
 
 
 DESCRIPTION="A compelling replacement for CVS"
@@ -108,7 +108,7 @@ EOF
 	# build subversion
 	emake || die "make of subversion failed"
 	#building fails without the apache apr-util as includes are wrong.
-	if [ use apache2 ]; then
+	if use apache2; then
 		emake swig-py || die "subversion python bindings failed"
 	else
 		emake SVN_APR_INCLUDES="-I${S}/apr/include -I${S}/apr-util/include" swig-py || die "subversion python bindings failed"
