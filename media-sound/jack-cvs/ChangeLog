@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.12 2003/05/18 12:43:48 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.13 2003/05/29 12:44:41 jje Exp $
+
+*jack-cvs-0.7-r1 (29 May 2003)
+
+  29 May 2003; jje <jje@gentoo.org> jack-cvs-0.7-r1.ebuild:
+  Added support for using tmpfs.
 
   18 May 2003; jje <jje@gentoo.org> jack-cvs-0.7.ebuild:
   Removed unused fltk exports.
