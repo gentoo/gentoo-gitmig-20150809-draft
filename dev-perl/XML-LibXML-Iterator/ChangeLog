@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-LibXML-Iterator
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Iterator/ChangeLog,v 1.1 2003/06/17 12:03:06 mcummings Exp $
+
+*XML-LibXML-Iterator-1.00 (17 Jun 2003)
+
+  17 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  XML-LibXML-Iterator-1.00.ebuild:
+  This is a missing dependancy for other perl XML modules
+
