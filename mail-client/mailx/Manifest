@@ -8,7 +8,4 @@ MD5 b55cd4835b1455405746de99343a1829 files/digest-mailx-8.1.2.20021129 67
 MD5 0fabe69aadfc340d678b9d355e0d451e files/digest-mailx-8.1.2.20021129-r1 192
 MD5 0fabe69aadfc340d678b9d355e0d451e files/digest-mailx-8.1.2.20021129-r2 192
 MD5 0fabe69aadfc340d678b9d355e0d451e files/digest-mailx-8.1.2.20021129-r3 192
-MD5 e1210a2c73f4c28a1ddfef47de783040 files/mailx-8.1.1.11.diff 59404
-MD5 03da0db1eb8ae098acadd868243269e9 files/mailx-8.1.1.11-version.diff 314
 MD5 43bee2592e0aaf68de420a44df5cf3b6 files/mailx-64bit.diff 4989
-MD5 3aa3c2c06077baa24f3a60f4f07f4e5a files/mailx-8.1.1.11-Makefile.diff 697
