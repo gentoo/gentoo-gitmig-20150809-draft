@@ -11,7 +11,7 @@
 >=x11-libs/xforms-089-r1
 
 #masked for testing (drobbins, 19 Jun 2002)
-=sys-apps/portage-2.0.2
+#=sys-apps/portage-2.0.2
 
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
@@ -228,6 +228,11 @@ net-misc/gift
 # 17 Jun 2002, Brandon Low <lostlogic@gentoo.org>
 media-video/xine-d4d
 media-video/xine-d5d
+
+# Masked pending directfb patching.
+# --lostlogic ( 20 Jun 2002 )
+=media-libs/xine-lib-0.9.11
+=media-video/xine-ui-0.9.11
 
 # New orinoco_cs 0.11a driver -- karltk (01/05/2002)
 #
