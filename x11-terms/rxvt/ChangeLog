@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/rxvt
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.23 2004/06/07 20:48:31 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.24 2004/06/24 23:22:45 agriffis Exp $
 
   07 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> rxvt-2.7.10.ebuild:
   Marked ~amd64.

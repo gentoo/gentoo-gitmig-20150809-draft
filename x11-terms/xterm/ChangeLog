@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/xterm
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.30 2004/06/20 18:49:48 port001 Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.31 2004/06/24 23:23:18 agriffis Exp $
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> xterm-179.ebuild:
   No need to set S

@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/gnome-terminal
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.62 2004/06/20 18:42:55 port001 Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.63 2004/06/24 23:21:10 agriffis Exp $
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> gnome-terminal-2.4.2.ebuild,
   gnome-terminal-2.6.0.ebuild, gnome-terminal-2.6.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/root-tail-0.0.10.ebuild,v 1.14 2004/03/28 02:19:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/root-tail-0.0.10.ebuild,v 1.15 2004/06/24 23:22:34 agriffis Exp $
 
 DESCRIPTION="Terminal to display (multiple) log files on the root window"
 SRC_URI="http://www.goof.com/pcg/marc/data/${P}.tar.gz"
