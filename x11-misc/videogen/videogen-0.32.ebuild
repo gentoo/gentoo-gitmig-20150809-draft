@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.3 2004/06/28 20:26:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.4 2004/10/28 15:21:51 spyderous Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Small utility to generate XFree86 modelines and fbset timings"
 HOMEPAGE="http://www.dynaweb.hu/opensource/videogen/"
@@ -14,7 +16,7 @@ DEPEND=">=sys-apps/sed-4"
 src_unpack() {
 	unpack ${A}
 	sed -i 's:CFLAGS = :# CFLAGS = :' ${S}/Makefile
-	sed -i "s:CC = gcc:CC = ${CC}:" ${S}/Makefile
+	sed -i "s:CC = gcc:CC = $(tc-getCC):" ${S}/Makefile
 }
 
 src_compile() {
