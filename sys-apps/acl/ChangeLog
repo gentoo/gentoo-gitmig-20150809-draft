@@ -1,19 +1,19 @@
 # ChangeLog for sys-apps/acl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.7 2002/12/09 04:37:24 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.8 2002/12/10 05:03:42 woodchip Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
- 
+*acl-2.1.1.ebuild (09 Dec 2002)
+
+  09 Dec 2002; Donny Davies <woodchip@gentoo.org> : Chase latest release.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
 *acl-2.0.18.ebuild (27 Sep 2002)
 
   27 Sep 2002; Brad Cowan <bcowan@gentoo.org> acl-2.0.18.ebuild
-  files/digest-acl-2.0.18 :
-  
-  version bump thanks to Hanno Boeck <hanno@gentoo.org>
+  files/digest-acl-2.0.18 : version bump thanks to <hanno@gentoo.org>
 
-  05 Oct 2002; Brad Cowan <bcowan@gentoo.org> acl-2.0.18.ebuild :
-  
+  05 Oct 2002; Brad Cowan <bcowan@gentoo.org> acl-2.0.18.ebuild :  
   Fixed symlinks and "modernized" ebuild.   
 
 *acl-20020330.ebuild (14 July 2002)
@@ -35,7 +35,6 @@
   Added KEYWORDS, SLOT.
 
   4 March 2002; Donny Davies <woodchip@gentoo.org> acl-20020124-r1.ebuild :
-
   Updated to perform the install-dev target by hand, so things like SAMBA
   will compile with USE acl support.
 

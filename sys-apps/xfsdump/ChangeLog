@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/xfsdump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.5 2002/10/05 08:25:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.6 2002/12/10 05:03:42 woodchip Exp $
+
+*xfsdump-2.2.4 (09 Dec 2002)
+
+  09 Dec 2002; Donny Davies <woodchip@gentoo.org> : Chase latest release.
 
 *xfsdump-2.1.5 (27 Sep 2002)
 

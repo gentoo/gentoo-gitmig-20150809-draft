@@ -1,19 +1,19 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.6 2002/12/09 04:37:24 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.7 2002/12/10 05:03:42 woodchip Exp $
 
-\* Autoupdate keywords (12-6-02)
+*attr-2.1.1 (09 Dec 2002)
+
+  09 Dec 2002; Donny Davies <woodchip@gentoo.org> : Chase latest release.
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *attr-2.0.9 (27 Sep 2002)
 
   27 Sep 2002; Brad Cowan <bcowan@gentoo.org> attr-2.0.9.ebuild
-  files/digest-attr-2.0.9 :
-  
-  version bump thanks to Hanno Boeck <hanno@gentoo.org>
+  files/digest-attr-2.0.9 : version bump thanks to <hanno@gentoo.org>
 
-  05 Oct 2002; Brad Cowan <bcowan@gentoo.org> attr-2.0.9.ebuild :
-  
+  05 Oct 2002; Brad Cowan <bcowan@gentoo.org> attr-2.0.9.ebuild :  
   Fixed symlinks and "modernized" ebuild.
 
 *attr-20020330.ebuild (14 July 2002)
