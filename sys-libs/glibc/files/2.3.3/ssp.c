@@ -1,6 +1,6 @@
 /*
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/2.3.3/ssp.c,v 1.1 2004/05/14 22:06:41 solar Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/2.3.3/ssp.c,v 1.2 2004/07/18 04:50:12 dragonheart Exp $
  *
  * This is a modified version of Hiroaki Etoh's stack smashing routines
  * implemented for glibc.
