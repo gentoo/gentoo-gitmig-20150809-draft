@@ -1,7 +1,15 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.5 2002/05/21 09:45:08 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.6 2002/05/27 15:18:02 spider Exp $
 
+
+*xchat-20020519 (27 May 2002)
+  27 May 2002; Spider <spider@gentoo.org> xchat-20020519.ebuild
+  xchat ebuild written to work with GNOME2 or just GTK+2
+  ebuild wrote by Gabriele Giorgetti <g.gabriele79@genie.it> | stroke on #gentoo
+  hacked on and verified... 
+  should be masked
+  
 *xchat-1.8.9.ebuild (21 May 2002)
 
   21 May 2002; Bruce A. Locke <blocke@shivan.org> xchat-1.8.9.ebuild :
