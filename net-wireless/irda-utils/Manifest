@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6bbef1e24126ff7c98b8c3db777b83ad ChangeLog 2596
+MD5 1f1d6e2db73c64180ae0cdf5540e73bf ChangeLog 2683
 MD5 9490402a9e36f316fa8d41b9c6aa24df irda-utils-0.9.13.ebuild 1199
 MD5 0ff30c1ba55c18f0f7d5398e7acde14c irda-utils-0.9.15.ebuild 1584
-MD5 a8bdfa61ec8a442b2e74eec01143482b irda-utils-0.9.16.ebuild 1921
+MD5 e4253675e5d766dfae34c85647f2d076 irda-utils-0.9.16.ebuild 1921
 MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
 MD5 10a500d681ec4e01d3d614987d5c9068 files/digest-irda-utils-0.9.13 69
 MD5 b853c309634581523261878b433cc4ac files/digest-irda-utils-0.9.15 69
@@ -13,10 +10,3 @@ MD5 23a2271075f62051f30dd6ed9bbd3f85 files/irda-utils-gcc3.4-fix.patch 400
 MD5 fa2075c93b60699aaa4017ace46406ef files/irda-utils-rh1.patch 444
 MD5 db4f871dba7e66e861503b792ca0a7e3 files/irda.conf 313
 MD5 b3f79d6bc205a1fde999cb893ba247b1 files/irda.rc 970
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYendI1lqEGTUzyQRApK9AKDPIpy6RmuhfL3WUdZtEtKRNSe3FACdHlVy
-ihOKIJaj+WtFcFa7aev2WQc=
-=VCIU
------END PGP SIGNATURE-----
