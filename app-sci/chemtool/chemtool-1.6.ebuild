@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.ebuild,v 1.5 2003/09/30 05:34:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.ebuild,v 1.6 2003/12/02 10:27:16 phosphan Exp $
 
 [ -n "`use kde`" ] && inherit kde-functions
 inherit eutils
@@ -15,11 +15,9 @@ KEYWORDS="x86"
 IUSE="gnome kde nls"
 
 DEPEND=">=media-gfx/transfig-3.2.3d
-	>=x11-libs/gtk+-1.2.10
+	=x11-libs/gtk+-1*
 	>=media-libs/libemf-1.0
 	sys-apps/supersed
-	gnome? ( gnome-base/gnome )
-	kde? ( kde-base/kdebase )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
