@@ -1,6 +1,6 @@
 # Copyright 2002 Niek van der Maas
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/Welcome2L/Welcome2L-3.04.ebuild,v 1.1 2002/11/07 21:03:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/Welcome2L/Welcome2L-3.04.ebuild,v 1.2 2003/03/28 12:56:05 pvdabeel Exp $
 
 
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack() { 
 	unpack ${A}
