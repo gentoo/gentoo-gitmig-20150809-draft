@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.11 2004/08/30 15:38:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.12 2004/08/30 19:32:52 chainsaw Exp $
+
+*beep-media-player-0.9.7_rc2-r1 (30 Aug 2004)
+
+  30 Aug 2004; Tony Vroon <chainsaw@gentoo.org> +files/beep-config,
+  +beep-media-player-0.9.7_rc2-r1.ebuild:
+  Add mmx and oss USE-flags. Enable more gnome functionality. Add beep-config to
+  get more plugins building. ~amd64, no longer segfaults.
 
   30 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
   beep-media-player-0.9.7_rc2.ebuild:
