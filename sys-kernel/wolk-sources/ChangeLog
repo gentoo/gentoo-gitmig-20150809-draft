@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.7 2003/02/13 17:57:08 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.8 2003/02/23 18:58:06 livewire Exp $
+
+*wolk-sources-4.0s-rc1
+  
+  23 Feb 2003; Bob Johnson <livewire@gentoo.org>:
+
+	Changelog from v4.0s-pre10 -> v4.0s-rc1
+	-   fixed:   O_DIRECT correct EOF at end of reads
+	-   fixed:   UDF discs closed as iso9660 read errors
+	-   fixed:   wrong behavior buffer>2G write(2) on 64bit platforms
+	-   update:  CPU Frequency scaling v2.4.20-8
+	-   update:  Super FreeS/WAN v1.99.5.1 Final
+	-   update:  XFS v1.2-cvs as of 2003-02-16
+	-   update:  grsecurity v1.99d-CVS as of 2003-02-23
+	-   update:  ReiserFS data-logging v36-aa
+	-   update:  PROCINFO support (fast ps) v2003-02-23
+	-   changed: enable SSE for later Athlons
+	-   removed: Scheduler Tunables: slows down a bit and we now have
+                     accurate defaults for Desktop and Server Scheduler tweaks.
+                     If you still want to play with it, change them in kernel/sched.c
 
 *wolk-sources-4.0s-pre10
 
