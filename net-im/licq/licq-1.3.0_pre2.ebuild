@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r5.ebuild,v 1.2 2004/09/24 23:49:18 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre2.ebuild,v 1.1 2004/09/28 17:40:49 voxus Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-PRE}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~amd64"
 IUSE="ssl socks5 qt kde ncurses crypt"
 
 # we can't have conditional dependencies so "use kde && inherit kde"
@@ -24,7 +24,7 @@ DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt? ( >=x11-libs/qt-3.0.0 )
 	ncurses? ( sys-libs/ncurses )
-	crypt? ( =app-crypt/gpgme-0.3.14-r1 )"
+	crypt? ( =app-crypt/gpgme-0.3.16 )"
 
 S=${WORKDIR}/${PN}-${PV/_pre/-PRE}
 
@@ -34,7 +34,8 @@ src_unpack() {
 	if use kde
 	then
 		# fix for #12436
-		ebegin "Setting kde plugin as default..."
+		inherit
+		ebegin "Setting kde plugin as default"
 		cp ${S}/src/licq.conf.h ${T}
 		sed "s:Plugin1 = qt-gui:Plugin1 = kde-gui:" \
 			${T}/licq.conf.h > ${S}/src/licq.conf.h
@@ -50,15 +51,9 @@ src_unpack() {
 		fi
 	fi
 
-	cd ${S}/src && epatch ${FILESDIR}/${PV/_pre/}-upgradepath.patch || \
-		ewarn "Fail to fix upgrade path, forget it"
-
 	cd ${S}/plugins/qt-gui && \
-		epatch ${FILESDIR}/1.3.0-no_stupid_koloboks.patch || \
+		epatch ${FILESDIR}/${PV/_pre2/}-no_stupid_koloboks.patch || \
 		ewarn "Fail to kill koloboks, forget it"
-
-	cd src && epatch ${FILESDIR}/1.3.0-gcc3.4.patch || \
-		ewarn "GCC3.4 patch failed.."
 }
 
 src_compile() {
@@ -87,7 +82,7 @@ src_compile() {
 		do
 			[ -d "${v}" ] && export QTDIR="${v}"
 		done
-		use kde && kde_src_compile myconf
+#		use kde && kde_src_compile myconf
 		use kde && myconf="${myconf} --with-kde"
 
 		# note! watch the --prefix=/usr placement;
