@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qtsharp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.4 2004/12/10 20:22:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.5 2004/12/12 19:07:01 danarmak Exp $
+
+  12 Dec 2004; Dan Armak <danarmak@gentoo.org> qtsharp-3.3.1.ebuild:
+  Corrected warning message and dep. The ebuild is still masked and
+  nonfunctional.
 
   10 Dec 2004; Dan Armak <danarmak@gentoo.org> files/no-gtk-glib-check.diff,
   qtsharp-3.3.1.ebuild:
