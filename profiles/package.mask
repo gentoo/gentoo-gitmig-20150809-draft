@@ -21,10 +21,14 @@
 ##   End example
 ##
 
+# robbat2@gentoo.org (14 Aug 2003)
+# This will be released along with scgi, mod_scgi, fastcgi, mod_fastcgi
+net-www/pcgi
+net-www/mod_pcgi
+
 # lanius@gentoo.org (15 Aug 2003)
 # needs a lot more testing
 >net-misc/ltsp-core-3.0.9-r3
-
 
 # pebenito@gentoo.org (14 Aug 2003)
 # more masking for new selinux api
