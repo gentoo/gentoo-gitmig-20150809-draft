@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-0.16.ebuild,v 1.3 2003/09/06 22:15:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-0.16.ebuild,v 1.4 2003/09/07 22:26:20 lanius Exp $
 
 DESCRIPTION="Expanded md5sum program that has recursive and comparison options"
 HOMEPAGE="http://md5deep.sourceforge.net"
@@ -13,12 +13,12 @@ DEPEND=""
 S=${WORKDIR}/${P}
 
 src_unpack () {
-    unpack ${A} ; cd ${S}
+	unpack ${A} ; cd ${S}
 	patch ${S}/md5deep.c ${FILESDIR}/md5deep-0.16-gentoo.diff
 }
 
 src_compile () {
-    make CFLAGS="${CFLAGS}" linux || die
+	make CFLAGS="${CFLAGS}" linux || die
 }
 
 src_install() {
