@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight-tr64gl/blight-tr64gl-0.7.4_pre1.ebuild,v 1.1 2003/08/09 09:05:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight-tr64gl/blight-tr64gl-0.7.4_pre1.ebuild,v 1.2 2003/08/09 09:14:17 msterret Exp $
 
 inherit games
 
@@ -24,4 +24,5 @@ src_unpack() {
 src_install () {
 	exeinto ${GAMES_LIBDIR}/mupen64/plugins
 	doexe ${MY_P}.so || die "doexe failed"
+	prepgamesdirs
 }

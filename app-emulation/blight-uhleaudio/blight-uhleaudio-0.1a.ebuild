@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight-uhleaudio/blight-uhleaudio-0.1a.ebuild,v 1.1 2003/08/09 08:53:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight-uhleaudio/blight-uhleaudio-0.1a.ebuild,v 1.2 2003/08/09 09:14:52 msterret Exp $
 
 inherit games
 
@@ -23,4 +23,5 @@ src_unpack() {
 src_install () {
 	exeinto ${GAMES_LIBDIR}/mupen64/plugins
 	doexe ${WORKDIR}/${MY_P}.so || die "doexe failed"
+	prepgamesdirs
 }
