@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.11 2003/12/08 17:39:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.12 2003/12/08 19:02:14 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -186,6 +186,10 @@ python_mod_cleanup() {
 				einfo "Purging ${src_py}[co]"
 				rm -f ${src_py}[co]
 			fi
+		done
+		# attempt to remove directories that maybe empty
+		for dir in $(find ${path} -type d | sort -r); do
+			rmdir ${dir} 2>/dev/null
 		done
 	done
 }
