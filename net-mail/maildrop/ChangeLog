@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.9 2002/10/27 08:27:29 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.10 2002/11/09 02:19:10 nitro Exp $
+
+*maildrop-1.5.0 (27 Oct 2002)
+
+  8 Nov 2002; Kyle Manna <nitro@gentoo.org> maildrop-1.5.0-r1.ebuild :
+  Added support for experimental mysql support.  Also added facilites
+  for LDAP, but haven't had a chance to test LDAP support yet.
 
 *maildrop-1.5.0 (27 Oct 2002)
 
