@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bpmdj
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.14 2004/07/21 00:14:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.15 2004/09/03 09:50:46 eradicator Exp $
+
+  03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> bpmdj-2.5.ebuild:
+  Stable x86.
 
 *bpmdj-2.5 (20 Jul 2004)
 
