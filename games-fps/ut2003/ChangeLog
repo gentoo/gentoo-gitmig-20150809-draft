@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.3 2003/09/11 19:24:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.4 2003/09/11 20:37:46 wolf31o2 Exp $
+
+  11 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
+  Being a good citizen and fixing my repoman warnings.
 
   11 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
   Updated to fix possible problem with coreutils.

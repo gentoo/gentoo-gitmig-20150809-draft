@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.3 2003/09/11 19:24:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.4 2003/09/11 20:37:46 wolf31o2 Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/glibc"
-RDEPEND="dedicated? ( app-games/ut2003-ded )
+RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )"
 
 S=${WORKDIR}
@@ -100,7 +100,7 @@ src_install() {
 
 	# copying extra/updater
 	cp -r ${S}/{extras,updater} ${Ddir} || die "copying extras/updater"
-	
+
 	# install benchmarks
 	exeinto ${dir}/Benchmark
 	doexe ${S}/Benchmark/botmatch-* ${S}/Benchmark/flyby-* || die "copying benchmark files"
