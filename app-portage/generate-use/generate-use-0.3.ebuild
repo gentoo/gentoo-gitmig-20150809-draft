@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/generate-use/generate-use-0.3.ebuild,v 1.4 2004/02/22 07:11:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/generate-use/generate-use-0.3.ebuild,v 1.5 2004/03/24 23:09:39 mholzer Exp $
 
 DESCRIPTION="A USE var generator for Gentoo Linux(gtk+2)"
 HOMEPAGE="http://www.lordvan.com/Projects/Linux/Gentoo/gentoolkit-gui/"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~hppa ~alpha"
 IUSE=""
 
-RDEPEND=">=dev-python/pygtk-1.99.13"
-DEPEND="${RDEPEND}"
+DEPEND=">=dev-python/pygtk-1.99.13"
 
 S="${WORKDIR}/${P}"
 
