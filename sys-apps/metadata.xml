@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The sys-apps category contains various core system applications, and
+		some non-core system applications which have not yet been moved out into
+		other sys- categories.
+	</longdescription>
+</catmetadata>
+
