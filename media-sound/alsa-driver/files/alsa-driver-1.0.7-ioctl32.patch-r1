@@ -52,8 +52,32 @@ RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/ioctl32.c,v
 retrieving revision 1.27
 diff -u -r1.27 ioctl32.c
 --- alsa-kernel/core/ioctl32/ioctl32.c	18 Oct 2004 14:31:33 -0000	1.27
-+++ alsa-kernel/core/ioctl32/ioctl32.c	23 Nov 2004 14:13:47 -0000
-@@ -93,43 +93,28 @@
++++ alsa-kernel/core/ioctl32/ioctl32.c	24 Nov 2004 13:48:10 -0000
+@@ -30,6 +30,23 @@
+ #include <asm/uaccess.h>
+ #include "ioctl32.h"
+ 
++
++#if defined(CONFIG_SPARC64) && LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 8)
++size_t hack_copy_in_user(void __user *to, const void __user *from, size_t size)
++{
++	char tmp[64];
++	while (size) {
++		size_t s = sizeof(tmp) < size ? sizeof(tmp) : size;
++		if (copy_from_user(tmp, from, s) || copy_to_user(to, tmp, s))
++			break;
++		size -= s;
++		from += s;
++		to += s;
++	}
++	return size;
++}
++#endif
++
+ /*
+  * register/unregister mappers
+  * exported for other modules
+@@ -93,43 +110,28 @@
  	unsigned char reserved[50];
  } /* don't set packed attribute here */;
  
@@ -111,7 +135,7 @@ diff -u -r1.27 ioctl32.c
  		return -EFAULT;
  	return 0;
  }
-@@ -170,54 +155,57 @@
+@@ -170,54 +172,57 @@
  
  static inline int _snd_ioctl32_ctl_elem_info(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
  {
@@ -140,8 +164,8 @@ diff -u -r1.27 ioctl32.c
 -	set_fs(KERNEL_DS);
 -	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
 -	set_fs(oldseg);
-+	if (__copy_in_user(&data->value.enumerated.item,
-+			   &data32->value.enumerated.item, 4))
++	if (copy_in_user(&data->value.enumerated.item,
++			 &data32->value.enumerated.item, 4))
 +		return -EFAULT;
 +	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
  	if (err < 0)
@@ -175,9 +199,9 @@ diff -u -r1.27 ioctl32.c
 -		data32.value.integer64.min = data.value.integer64.min;
 -		data32.value.integer64.max = data.value.integer64.max;
 -		data32.value.integer64.step = data.value.integer64.step;
-+		if (__copy_in_user(&data32->value.integer64,
-+				   &data->value.integer64,
-+				   sizeof(data->value.integer64)))
++		if (copy_in_user(&data32->value.integer64,
++				 &data->value.integer64,
++				 sizeof(data->value.integer64)))
 +			return -EFAULT;
  		break;
  	case SNDRV_CTL_ELEM_TYPE_ENUMERATED:
@@ -185,9 +209,9 @@ diff -u -r1.27 ioctl32.c
 -		data32.value.enumerated.item = data.value.enumerated.item;
 -		memcpy(data32.value.enumerated.name, data.value.enumerated.name,
 -		       sizeof(data.value.enumerated.name));
-+		if (__copy_in_user(&data32->value.enumerated,
-+				   &data->value.enumerated,
-+				   sizeof(data->value.enumerated)))
++		if (copy_in_user(&data32->value.enumerated,
++				 &data->value.enumerated,
++				 sizeof(data->value.enumerated)))
 +			return -EFAULT;
  		break;
  	default:
@@ -198,7 +222,7 @@ diff -u -r1.27 ioctl32.c
  	return 0;
  }
  
-@@ -277,60 +265,85 @@
+@@ -277,60 +282,85 @@
  static inline int _snd_ioctl32_ctl_elem_value(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
  {
  	struct sndrv_ctl_elem_value *data;
@@ -280,7 +304,7 @@ diff -u -r1.27 ioctl32.c
 +				goto __end;
 +			}
 +			data->value.integer.value[i] = val;
- 		}
++		}
 +		break;
 +	case SNDRV_CTL_ELEM_TYPE_INTEGER64:
 +		if (__copy_from_user(data->value.integer64.value,
@@ -296,7 +320,7 @@ diff -u -r1.27 ioctl32.c
 +				     sizeof(data32->value.enumerated.item))) {
 +			err = -EFAULT;
 +			goto __end;
-+		}
+ 		}
 +		break;
 +	case SNDRV_CTL_ELEM_TYPE_BYTES:
 +		if (__copy_from_user(data->value.bytes.data,
@@ -321,7 +345,7 @@ diff -u -r1.27 ioctl32.c
  	}
  
  	oldseg = get_fs();
-@@ -340,38 +353,53 @@
+@@ -340,38 +370,53 @@
  	if (err < 0)
  		goto __end;
  	/* restore info to 32bit */
@@ -367,7 +391,7 @@ diff -u -r1.27 ioctl32.c
 +				   sizeof(data32->value.integer64.value))) {
 +			err = -EFAULT;
 +			goto __end;
-+		}
+ 		}
 +		break;
 +	case SNDRV_CTL_ELEM_TYPE_ENUMERATED:
 +		if (__copy_to_user(data32->value.enumerated.item,
@@ -375,7 +399,7 @@ diff -u -r1.27 ioctl32.c
 +				   sizeof(data32->value.enumerated.item))) {
 +			err = -EFAULT;
 +			goto __end;
- 		}
++		}
 +		break;
 +	case SNDRV_CTL_ELEM_TYPE_BYTES:
 +		if (__copy_to_user(data32->value.bytes.data,
@@ -409,7 +433,7 @@ RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/ioctl32.h,v
 retrieving revision 1.14
 diff -u -r1.14 ioctl32.h
 --- alsa-kernel/core/ioctl32/ioctl32.h	18 Oct 2004 14:31:33 -0000	1.14
-+++ alsa-kernel/core/ioctl32/ioctl32.h	23 Nov 2004 14:12:15 -0000
++++ alsa-kernel/core/ioctl32/ioctl32.h	24 Nov 2004 13:49:00 -0000
 @@ -28,20 +28,37 @@
  
  #include <linux/compat.h>
@@ -526,6 +550,19 @@ diff -u -r1.14 ioctl32.h
  }
  
  #define DEFINE_ALSA_IOCTL_ENTRY(name,type,native_ctl) \
+@@ -128,4 +99,12 @@
+ int snd_ioctl32_register(struct ioctl32_mapper *mappers);
+ void snd_ioctl32_unregister(struct ioctl32_mapper *mappers);
+ 
++#if defined(CONFIG_SPARC64) && LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 8)
++#ifdef copy_in_user
++#undef copy_in_user
++#endif
++size_t hack_copy_in_user(void __user *to, const void __user *from, size_t size);
++#define copy_in_user hack_copy_in_user
++#endif
++
+ #endif /* __ALSA_IOCTL32_H */
 Index: alsa-kernel/core/ioctl32/pcm32.c
 ===================================================================
 RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/pcm32.c,v

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.108 2004/11/24 20:16:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.109 2004/11/26 06:53:30 eradicator Exp $
+
+  25 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/alsa-driver-1.0.7-audigy71.patch,
+  files/alsa-driver-1.0.7-ioctl32.patch-r1, alsa-driver-1.0.7-r1.ebuild:
+  Adding patch from recent alsa cvs to fix 7.1 detection on some audigy2
+  cards. Closes bug #72433. Also incorporate some kernel-mod fixes thanks to
+  johnm.
 
   24 Nov 2004; Daniel Drake <dsd@gentoo.org> alsa-driver-1.0.7-r1.ebuild,
   alsa-driver-1.0.7.ebuild:

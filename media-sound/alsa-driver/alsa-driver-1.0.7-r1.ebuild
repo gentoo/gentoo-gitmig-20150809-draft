@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.3 2004/11/24 20:16:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.4 2004/11/26 06:53:30 eradicator Exp $
 
 IUSE="oss doc"
 
-inherit kernel-mod flag-o-matic eutils
+inherit linux-mod flag-o-matic eutils
 
 MY_P=${P/_rc/rc}
 S=${WORKDIR}/${MY_P}
@@ -14,32 +14,21 @@ HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-SLOT="${KV}"
+SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
-
-#alsa-driver-1.0.7-r1 only has ioctl32 updates over 1.0.7
-#KEYWORDS="~amd64 ~mips ~sparc"
+# ioctl32 update still being worked on
 KEYWORDS="-*"
 
 RDEPEND="virtual/modutils
-	 ~media-sound/alsa-headers-${PV}"
+		~media-sound/alsa-headers-${PV}"
 
 DEPEND="${RDEPEND}
-	sys-devel/patch
-	virtual/linux-sources
-	>=sys-devel/autoconf-2.50
-	sys-apps/debianutils"
+		sys-devel/patch
+		virtual/linux-sources
+		>=sys-devel/autoconf-2.50
+		sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
-
-# By default, drivers for all supported cards will be compiled.
-# If you want to only compile for specific card(s), set ALSA_CARDS
-# environment to a space-separated list of drivers that you want to build.
-# For example:
-#
-#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
-#
-[ -z "${ALSA_CARDS}" ] && ALSA_CARDS=all
 
 src_unpack() {
 	unpack ${A}
@@ -48,31 +37,16 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
 	epatch ${FILESDIR}/${PN}-1.0.5a-cs46xx-passthrough.patch
 
-	if [ "${PROFILE_ARCH}" == "xbox" ]; then
+	[ "${PROFILE_ARCH}" == "xbox" ] && \
 		epatch ${FILESDIR}/${PN}-1.0.5a-xbox-ac97.patch
-	fi
-
-	if kernel-mod_is_2_5_kernel || (kernel-mod_is_2_6_kernel && [ ${KV_PATCH} -lt 6 ]); then
-		FULL_KERNEL_PATH="${ROOT}/usr/src/${KV_DIR}"
-
-		if ! [ -d "${FULL_KERNEL_PATH}" ]; then
-			eerror "An error seems to have occurred.  We looked in ${FULL_KERNEL_PATH} for your kernel sources, but we didn't see them."
-			die "ALSA driver configuration failure."
-		fi
-
-		einfo "A 2.5 or 2.6 kernel was detected.  We are copying the kernel source tree from"
-		einfo "${FULL_KERNEL_PATH} to ${T}/linux"
-		einfo "because the alsa-driver build process overwrites files in the 2.6.x kernel tree."
-
-		# Copy everything over to our tmp dir...
-		cp -a ${FULL_KERNEL_PATH} ${T}/linux
-	else
-		# SUBDIRS -> M
-		epatch ${FILESDIR}/${PN}-1.0.6a-kbuild.patch
-	fi
+		
+	convert_to_m ${S}/Makefile
 
 	# Fix ioctl32 support
 	epatch ${FILESDIR}/${P}-ioctl32.patch-r1
+
+	# Fix audigy 7.1 detection on some cards... bug #72433
+	epatch ${FILESDIR}/${P}-audigy71.patch
 
 	# Fix order of configure operations so the kernel compiler isn't used
 	# for tests.
@@ -82,34 +56,30 @@ src_unpack() {
 }
 
 src_compile() {
-	# Default ARCH & kernel path to set in compilation and make
-	KER_DIR=${KERNEL_DIR}
-
-	# If we're using a 2.5 or 2.6 kernel, use our copied kernel tree.
-	if [ -d "${T}/linux" ]; then
-		KER_DIR="${T}/linux"
-	fi
+	# Should fix bug #46901
+	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
 
 	econf `use_with oss` \
-		--with-kernel="${KER_DIR}" \
+		--with-kernel="${KV_DIR}" \
 		--with-build="${KER_DIR}" \
 		--with-isapnp=yes \
 		--with-sequencer=yes \
 		--with-cards="${ALSA_CARDS}" || die "econf failed"
 
-	# Should fix bug #46901
-	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
-
+	# linux-mod_src_compile doesn't work well with alsa
 	unset ARCH
 	# -j1 : see bug #71028
 	emake -j1 || die "Parallel Make Failed"
-
-	if use doc; then
+	
+	if use doc;
+	then
+		ebegin "Building Documentation"
 		cd ${S}/scripts
-		emake || die
+		emake || die Failed making docs in ${S}/scripts
 
 		cd ${S}/doc/DocBook
-		emake || die
+		emake || die Failed making docs in ${S}/doc/DocBook
+		eend $?
 	fi
 }
 
@@ -141,12 +111,26 @@ src_install() {
 	fi
 }
 
-pkg_postinst() {
-	if [ "${ROOT}" = / ]
+pkg_setup() {
+	linux-mod_pkg_setup
+	if [ ! getfilevar_isset ] ;
 	then
-		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
+		eerror "Sound support is currently built into the kernel."
+		eerror "unable to continue."
+		die Sound support built into kernel already
 	fi
+	
+	# By default, drivers for all supported cards will be compiled.
+	# If you want to only compile for specific card(s), set ALSA_CARDS
+	# environment to a space-separated list of drivers that you want to build.
+	# For example:
+	#
+	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
+	#
+	[ -z "${ALSA_CARDS}" ] && ALSA_CARDS=all
+}
 
+pkg_postinst() {
 	einfo
 	einfo "The alsasound initscript and modules.d/alsa have now moved to alsa-utils"
 	einfo
@@ -156,4 +140,6 @@ pkg_postinst() {
 	einfo "Version 1.0.3 and above should work with version 2.6 kernels."
 	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
 	einfo
+	
+	linux-mod_pkg_postinst
 }

@@ -1,0 +1,16 @@
+===================================================================
+RCS file: /cvsroot/alsa/alsa-kernel/pci/emu10k1/emu10k1_main.c,v
+retrieving revision 1.40
+retrieving revision 1.41
+diff -u -r1.40 -r1.41
+--- alsa/alsa-kernel/pci/emu10k1/emu10k1_main.c	2004/11/22 18:45:49	1.40
++++ alsa/alsa-kernel/pci/emu10k1/emu10k1_main.c	2004/11/23 16:39:46	1.41
+@@ -716,7 +716,7 @@
+ 		emu->no_ac97 = 1;	
+ 	}
+ 	
+-	if (emu->revision == 4 && emu->model == 0x2002) {
++	if (emu->revision == 4 && (emu->model == 0x2001 || emu->model == 0x2002)) {
+ 		/* Audigy 2 ZS */
+ 		snd_printdd(KERN_INFO "Audigy2 ZS is detected. setting 7.1 mode.\n");
+ 		emu->spk71 = 1;
