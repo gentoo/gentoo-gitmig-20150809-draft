@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.ebuild,v 1.1 2003/09/10 12:47:12 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.ebuild,v 1.2 2003/09/11 01:39:08 msterret Exp $
 
 inherit gnome2
 
@@ -42,7 +42,7 @@ src_install( ) {
 	# and install the display navigation desktop
 	insinto /usr/share/applications
 	doins ${FILESDIR}/gdesklets-displays.desktop
-	
+
 }
 
 pkg_postinst( ) {
