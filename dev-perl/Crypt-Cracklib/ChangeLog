@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Crypt-Cracklib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/ChangeLog,v 1.1 2003/08/19 00:24:19 robbat2 Exp $
+
+*Crypt-Cracklib-0.01 (18 Aug 2003)
+
+  18 Aug 2003; Robin H. Johnson <robbat2@gentoo.org>
+  Crypt-Cracklib-0.01.ebuild:
+  initial commit
+
