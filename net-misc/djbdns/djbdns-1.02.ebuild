@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/djbdns/djbdns-1.02.ebuild,v 1.1 2000/12/24 06:32:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/djbdns/djbdns-1.02.ebuild,v 1.2 2001/01/01 18:45:15 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ src_unpack() {
 	cd ${S}
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
-	echo "/usr" > /conf-home
+	echo "/usr" > conf-home
 }
 
 src_compile() {                           
