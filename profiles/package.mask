@@ -562,10 +562,6 @@ dev-lang/tcl-tk
 =media-video/vlc-0.3.0
 
 #seemant@gentoo.org 16 Apr 2002
-# libpng is just scary -- masked while I get the braver users to test this
-=media-libs/libpng-1.2.2
-
-#seemant@gentoo.org 16 Apr 2002
 # ispell's newer stuff is totally b0rked
 >=ispell-3.2.06.ebuild
 
