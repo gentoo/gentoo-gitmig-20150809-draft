@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.1 2003/05/09 08:39:11 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.2 2003/05/22 06:52:30 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -51,6 +51,7 @@ DEPEND="virtual/ghc
 		>=app-text/sgml-common-0.6.3
 		=app-text/docbook-sgml-dtd-3.1-r1
 		>=app-text/docbook-dsssl-stylesheets-1.64
+		>=dev-haskell/haddock-0.4
 		tetex? ( >=app-text/tetex-1.0.7
 			>=app-text/jadetex-3.12 ) )	
 	opengl? ( virtual/opengl
@@ -168,12 +169,21 @@ src_compile() {
 src_install () {
 	local mydoc
 
-	use doc && mydoc="html" || mydoc=""
-	use doc && use tetex && mydoc="${mydoc} ps"
-
 	pushd "${STAGE2_B}" || die
+		# determine what to do with documentation
+		if [ `use doc` ]; then
+			mydoc="html"
+			if [ `use tetex` ]; then
+				mydoc="${mydoc} ps"
+			fi
+		else
+			mydoc=""
+			# needed to prevent haddock from being called
+			echo NO_HADDOCK_DOCS=YES >> mk/build.mk
+		fi
+		echo SGMLDocWays="${mydoc}" >> mk/build.mk
+
 		make install install-docs \
-			SGMLDocWays="${mydoc}" \
 			prefix="${D}/usr" \
 			datadir="${D}/usr/share/doc/${PF}" \
 			infodir="${D}/usr/share/info" \
@@ -191,3 +201,7 @@ src_install () {
 	dodoc README ANNOUNCE LICENSE VERSION
 }
 
+pkg_postinst () {
+	einfo "If you have dev-lang/ghc-bin installed, you might"
+	einfo "want to unmerge it again. It is no longer needed."
+}

@@ -1,0 +1,85 @@
+diff -Naur ghc-5.04.3.old/ghc/rts/Linker.c ghc-5.04.3/ghc/rts/Linker.c
+--- ghc-5.04.3.old/ghc/rts/Linker.c	2003-05-06 02:01:16.000000000 +0200
++++ ghc-5.04.3/ghc/rts/Linker.c	2003-05-06 02:19:52.000000000 +0200
+@@ -196,11 +196,7 @@
+       SymX(uname)                               \
+       SymX(unlink)                              \
+       SymX(utime)                               \
+-      SymX(waitpid)                             \
+-      Sym(__divdi3)                             \
+-      Sym(__udivdi3)                            \
+-      Sym(__moddi3)                             \
+-      Sym(__umoddi3)
++      SymX(waitpid)
+ 
+ #elif !defined(mingw32_TARGET_OS)
+ #define RTS_MINGW_ONLY_SYMBOLS /**/
+@@ -271,11 +267,7 @@
+       Sym(opendir)                              \
+       Sym(readdir)                              \
+       Sym(rewinddir)                            \
+-      Sym(closedir)                             \
+-      Sym(__divdi3)                             \
+-      Sym(__udivdi3)                            \
+-      Sym(__moddi3)                             \
+-      Sym(__umoddi3)
++      Sym(closedir)
+ #endif
+ 
+ #ifndef SMP
+@@ -498,12 +490,9 @@
+ #define RTS_LONG_LONG_SYMS /* nothing */
+ #endif
+ 
+-#ifdef ia64_TARGET_ARCH
+-/* force these symbols to be present */
+-#define RTS_EXTRA_SYMBOLS			\
+-      Sym(__divsf3)
+-#elif defined(powerpc_TARGET_ARCH)
+-#define RTS_EXTRA_SYMBOLS                	\
++// 64-bit support functions in libgcc.a
++#if defined(__GNUC__) && SIZEOF_VOID_P <= 4
++#define RTS_LIBGCC_SYMBOLS                      \
+       Sym(__divdi3)                             \
+       Sym(__udivdi3)                            \
+       Sym(__moddi3)                             \
+@@ -511,7 +500,22 @@
+       Sym(__ashldi3)				\
+       Sym(__ashrdi3)				\
+       Sym(__lshrdi3)				\
+-      SymX(__eprintf)
++      Sym(__eprintf)
++#else
++#define RTS_LIBGCC_SYMBOLS
++#endif
++
++#ifdef ia64_TARGET_ARCH
++/* force these symbols to be present */
++#define RTS_EXTRA_SYMBOLS			\
++      Sym(__divsf3)
++#elif defined(powerpc_TARGET_ARCH)
++      // Symbols that don't have a leading underscore
++      // on Mac OS X. They have to receive special treatment,
++      // see machoInitSymbolsWithoutUnderscore()
++#define RTS_MACHO_NOUNDERLINE_SYMBOLS           \
++      Sym(saveFP)                               \
++      Sym(restFP)
+ #else
+ #define RTS_EXTRA_SYMBOLS /* nothing */
+ #endif
+@@ -525,6 +529,7 @@
+ RTS_POSIX_ONLY_SYMBOLS
+ RTS_MINGW_ONLY_SYMBOLS
+ RTS_CYGWIN_ONLY_SYMBOLS
++RTS_LIBGCC_SYMBOLS
+ #undef Sym
+ #undef SymX
+ 
+@@ -545,6 +550,7 @@
+       RTS_POSIX_ONLY_SYMBOLS
+       RTS_MINGW_ONLY_SYMBOLS
+       RTS_CYGWIN_ONLY_SYMBOLS
++      RTS_LIBGCC_SYMBOLS
+       { 0, 0 } /* sentinel */
+ };
+ 
