@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.4 2003/06/14 07:18:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.5 2003/06/16 12:37:45 seemant Exp $
 
 inherit eutils
 
@@ -12,17 +12,21 @@ HOMEPAGE="http://www.postfix.org"
 SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.13/${IPV6_P}.patch.gz )"
-LICENSE="IPL-1"
+
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+LICENSE="IPL-1"
+KEYWORDS="x86 sparc ~ppc"
+
 PROVIDE="virtual/mta
 	 virtual/mda"
+
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sasl? ( dev-libs/cyrus-sasl )"
+
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
