@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.6 2003/02/15 07:20:58 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.7 2004/02/22 20:05:56 agriffis Exp $
 
 MY_PN="rfc"
 MY_P="${MY_PN}-${PV}"
@@ -14,7 +14,7 @@ numbers."
 HOMEPAGE="http://www.dewn.com/rfc/"
 SRC_URI="http://www.dewn.com/rfc/${MY_P}.tar.gz"
 
-KEYWORDS="x86 sparc  ppc"
+KEYWORDS="x86 sparc ppc"
 SLOT="0"
 LICENSE="as-is"
 

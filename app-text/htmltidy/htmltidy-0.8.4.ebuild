@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-0.8.4.ebuild,v 1.10 2003/02/13 09:39:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-0.8.4.ebuild,v 1.11 2004/02/22 20:04:01 agriffis Exp $
 
 # convert from normalized gentoo version number to htmltidy's wacky date thing
 month=(dmy jan feb mar apr may jun jul aug sep oct nov dec)
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/tidy/${MY_P}.tgz"
 HOMEPAGE="http://tidy.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 LICENSE="GPL-2"
 
 DEPEND=""
