@@ -1,0 +1,49 @@
+--- pilot-link.0.9.0/include/pi-appinfo.hxx~	Fri May  8 02:00:59 1998
++++ pilot-link.0.9.0/include/pi-appinfo.hxx	Thu Jun  7 23:49:40 2001
+@@ -5,7 +5,7 @@
+ 
+ #include "pi-macros.h"
+ 
+-const BASE_APP_INFO_SIZE = 278;	// All apps take up 278 bytes of the same stuff
++const int BASE_APP_INFO_SIZE = 278;	// All apps take up 278 bytes of the same stuff
+ 
+ typedef char category_t[16][16];
+ typedef const char *const charConst_t;
+--- pilot-link.0.9.0/include/pi-dlp.hxx.orig	Fri Jun  8 00:11:03 2001
++++ pilot-link.0.9.0/include/pi-dlp.hxx	Fri Jun  8 00:14:24 2001
+@@ -38,7 +38,7 @@
+      int findDBInfo(const int cardno, const int start,
+ 		    strConst_t dbname, const unsigned long type,
+ 		    const unsigned long creator, struct DBInfo *info) const {
+-	  return dlp_FindDBInfo(_sd, cardno, start, dbname, type, creator,
++	  return dlp_FindDBInfo(_sd, cardno, start,(char *) dbname, type, creator,
+ 				info);
+      }
+ 
+@@ -50,7 +50,7 @@
+      int openDB(const int cardno, const int mode, strConst_t name,
+ 		int *db) const {
+ 
+-	  return dlp_OpenDB(_sd, cardno, mode, name, db);
++	  return dlp_OpenDB(_sd, cardno, mode,(char *) name, db);
+      }
+ 
+      // Close an opened database using the handle returned by openDB
+@@ -81,7 +81,7 @@
+       * calling endOfSync, but it's not required
+       */
+      int addSyncLogEntry(strConst_t entry) const {
+-	  return dlp_AddSyncLogEntry(_sd, entry);
++	  return dlp_AddSyncLogEntry(_sd,(char *) entry);
+      }
+ 
+      /*
+@@ -160,7 +160,7 @@
+      int writeRecord(const int handle, const int flags, const recordid_t recID,
+ 		     const int catID, const void *data, const int length,
+ 		     recordid_t *newID) const {
+-	  return dlp_WriteRecord(_sd, handle, flags, recID, catID, data,
++	  return dlp_WriteRecord(_sd, handle, flags, recID, catID,(void *) data,
+ 				 length, newID);
+      }
+ 
