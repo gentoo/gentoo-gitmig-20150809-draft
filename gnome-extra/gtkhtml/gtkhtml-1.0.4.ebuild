@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.2 2002/09/15 10:43:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.3 2002/09/28 07:35:48 azarah Exp $
+
+inherit libtool
 
 S=${WORKDIR}/${P}
-DESCRIPTION="gtkhtml"
+DESCRIPTION="Lightweight HTML rendering/printing/editing engine."
 SRC_URI="ftp://ftp.ximian.com/pub/source/evolution/${P}.tar.gz
 	 ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
-
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64"
-SLOT="0"
 
+LICENSE="GPL-2 LGPL-2.1"
+SLOT="0"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=gnome-extra/gal-0.19
 	<gnome-base/control-center-1.99.0
@@ -27,8 +28,9 @@ RDEPEND=">=gnome-extra/gal-0.19
 DEPEND="${RDEPEND}"
 
 src_compile() {
+	elibtoolize
 
-	local myconf
+	local myconf=""
 
 	use nls || myconf="${myconf} --disable-nls"
 
@@ -52,7 +54,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib \
@@ -64,3 +65,4 @@ src_install() {
   	dodoc AUTHORS COPYING* ChangeLog README
   	dodoc NEWS TODO
 }
+
