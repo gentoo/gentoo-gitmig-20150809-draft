@@ -1,4 +1,6 @@
 MD5 361fc89b6b744c080f70ab96064b2ae3 gst-plugins-swfdec-0.6.4.ebuild 330
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 ba02d2241e52bf88a4545a444fecb185 ChangeLog 473
+MD5 887a5a3aed5cb2f697c5fef96e270232 ChangeLog 609
+MD5 0060c19a0613d0297048f2c1e5e0c0e5 gst-plugins-swfdec-0.8.0.ebuild 330
 MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-swfdec-0.6.4 71
+MD5 fb236b39268cb180039f970fab62e27a files/digest-gst-plugins-swfdec-0.8.0 71
