@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellaclock
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.6 2004/01/15 22:39:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.7 2004/06/13 04:21:48 pyrania Exp $
+
+*gkrellaclock-0.3.2.1 (13 Jun 2004)
+
+  13 Jun 2004; <pyrania@gentoo.org> +gkrellaclock-0.3.2.1.ebuild:
+  Version bumo. Closing bug #52741.
 
   15 Jan 2004; Aron Griffis <agriffis@gentoo.org> gkrellaclock-0.3.2.ebuild:
   stable on alpha
