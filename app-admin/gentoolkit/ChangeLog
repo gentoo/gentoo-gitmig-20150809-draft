@@ -1,6 +1,28 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.17 2002/06/04 22:48:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.18 2002/06/05 01:13:35 lostlogic Exp $
+
+*gentoolkit-0.1.11 (04 Jun 2002)
+
+  04 Jun 2002: Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.11.ebuild
+						  qpkg
+
+  qpkg changes: package	names print without stupid " *" at the end if -nc
+		switch is given for easy piping to other programs (ie
+		emerge)
+
+		increased comment verbosity in preparation for more
+		changes next time...
+
+		--dups orders packages by COUNTER so that the old
+			version is always above the new version, and
+			also keeps packages of same base name together,
+			and is now colorized (disable with -nc)
+
+		-c no longer awks md5s because it takes too long (5
+			times as long as w/o awking) this will report
+			broken files on systems installed with whatever
+			it was that was touppering all all md5s.
 
 *gentoolkit-0.1.10-r1 (04 Jun 2002)
 
