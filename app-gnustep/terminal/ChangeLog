@@ -1,6 +1,9 @@
 # ChangeLog for app-gnustep/terminal
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/terminal/ChangeLog,v 1.2 2003/07/28 04:06:48 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/terminal/ChangeLog,v 1.3 2003/10/18 20:25:11 raker Exp $
+
+  18 Oct 2003; Nick Hadaway <raker@gentoo.org> terminal-0.9.4.ebuild:
+  Fixed the policy violation of setting ${A}
 
   28 Jul 2003; Nick Hadaway <raker@gentoo.org> terminal-0.9.4.ebuild:
   Changed the description as noted on bug #25402.

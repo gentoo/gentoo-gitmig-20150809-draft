@@ -1,6 +1,9 @@
 # ChangeLog for app-gnustep/imageviewer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/imageviewer/ChangeLog,v 1.1 2003/07/17 14:55:53 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/imageviewer/ChangeLog,v 1.2 2003/10/18 20:24:05 raker Exp $
+
+  18 Oct 2003; Nick Hadaway <raker@gentoo.org> imageviewer-0.6.2.ebuild:
+  Fixed the policy violation of setting ${A}
 
 *imageviewer-0.6.2 (17 Jul 2003)
 
