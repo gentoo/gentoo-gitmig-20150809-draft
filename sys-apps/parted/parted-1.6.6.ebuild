@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.20 2004/06/24 22:20:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.21 2004/07/15 02:02:41 agriffis Exp $
 
 inherit gnuconfig eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	econf \
 		`use_with readline` \

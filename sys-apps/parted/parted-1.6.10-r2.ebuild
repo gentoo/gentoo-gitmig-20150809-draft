@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.10-r2.ebuild,v 1.5 2004/06/27 03:45:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.10-r2.ebuild,v 1.6 2004/07/15 02:02:41 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
