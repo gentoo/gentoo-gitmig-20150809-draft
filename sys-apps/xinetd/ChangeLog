@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.30 2004/04/26 14:35:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.31 2004/06/11 16:47:09 kloeri Exp $
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xinetd-2.3.13.ebuild:
+  Stable on alpha.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> xinetd-2.3.11.ebuild,
   xinetd-2.3.12.ebuild, xinetd-2.3.13.ebuild:
