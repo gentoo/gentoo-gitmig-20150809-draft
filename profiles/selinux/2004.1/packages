@@ -9,5 +9,5 @@
 *>=sys-apps/checkpolicy-1.6
 *>=sys-apps/policycoreutils-1.6
 *>=sec-policy/selinux-base-policy-20040225
-*>=dev-python/python-selinux-2.11
+*>=dev-python/python-selinux-2.12
 ##############################################################################
