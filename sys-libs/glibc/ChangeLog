@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.107 2003/11/19 04:39:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.108 2003/11/20 15:55:24 agriffis Exp $
+
+  20 Nov 2003; Aron Griffis <agriffis@gentoo.org> glibc-2.3.2-r8.ebuild:
+  Mark stable on alpha
 
 *glibc-2.3.2-r9 (18 Nov 2003)
 
