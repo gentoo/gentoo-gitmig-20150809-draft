@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.2.ebuild,v 1.2 2001/10/22 10:12:02 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.2.ebuild,v 1.3 2001/10/22 19:15:04 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Developer help browser"
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install () {
-    try make DESTDIR=${D} install
+    try make DESTDIR=${D} install || die
 
     dodoc AUTHORS COPYING ChangeLog README NEWS TODO
 }
