@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.4-r1.ebuild,v 1.5 2002/08/14 11:52:27 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.4-r1.ebuild,v 1.6 2002/10/04 05:15:02 vapier Exp $
 
 inherit debug
 inherit libtool

@@ -1,6 +1,6 @@
 # Copyright 1998-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.01.ebuild,v 1.4 2002/08/14 11:52:28 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.01.ebuild,v 1.5 2002/10/04 05:17:53 vapier Exp $
 
 DESCRIPTION="UCL: The UCL Compression Library"
 SRC_URI="http://www.oberhumer.com/opensource/ucl/download/ucl-1.01.tar.gz"

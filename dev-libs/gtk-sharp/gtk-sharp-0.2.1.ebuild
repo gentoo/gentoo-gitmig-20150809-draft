@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk# is a C# language binding for the Gtk+ (AKA Gtk2) toolkit."
