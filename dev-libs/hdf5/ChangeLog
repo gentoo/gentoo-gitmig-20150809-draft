@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/hdf5
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/ChangeLog,v 1.1 2003/06/19 07:51:42 george Exp $
+
+*hdf5-1.4.5.ebuild (19 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> hdf5-1.4.5.ebuild, Manifest, files/{digest-hdf5-1.4.5} :
+  initial release (#21071)
+  HDF5 is a general purpose library and file format for storing scientific data.
+  ebuild submitted by Castel?o <castelao@oceanologia.net> and Shaun Cloherty <s.cloherty@gsbme.unsw.edu.au>
