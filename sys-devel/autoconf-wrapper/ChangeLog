@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.5 2005/01/29 21:58:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.6 2005/01/30 19:29:03 hansmi Exp $
+
+  30 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  autoconf-wrapper-2.ebuild:
+  Stable on ppc.
 
   29 Jan 2005; Markus Rothe <corsair@gentoo.org> autoconf-wrapper-2.ebuild:
   Stable on ppc64
