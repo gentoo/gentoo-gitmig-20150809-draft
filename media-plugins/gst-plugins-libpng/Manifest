@@ -1,4 +1,4 @@
-MD5 ad7d13e5c42638d153311159e0c64028 files/digest-gst-plugins-libpng-0.6.3 71
-MD5 95146f103242de9b4cc801fe686998a6 gst-plugins-libpng-0.6.3.ebuild 404
-MD5 b9012ddc6c62ff78087fff2fd3695c5e ChangeLog 854
+MD5 a163c97291e4b3de5060f0665cd33e08 ChangeLog 969
+MD5 164a54e4f02ea9587df4c9067e01b684 gst-plugins-libpng-0.6.3.ebuild 405
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 ad7d13e5c42638d153311159e0c64028 files/digest-gst-plugins-libpng-0.6.3 71
