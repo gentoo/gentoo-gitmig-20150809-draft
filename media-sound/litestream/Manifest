@@ -1,6 +1,16 @@
-MD5 bec2a34a949fc4a7cabff1c370ca4797 litestream-1.2.ebuild 993
-MD5 b8ae6207b67bc0653cc30662fa8c5ca0 ChangeLog 824
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2556863d2e031e6ef17ff5fda119b07 ChangeLog 928
+MD5 a6a9d9cc9be151d768bec247e82df116 litestream-1.2.ebuild 1002
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 7b22396a0ce85c0f2f7260047052237c files/digest-litestream-1.2 65
 MD5 75c1a84a3546138fc57472a7c9882e14 files/litestream-1.2-Makefile.patch 331
 MD5 ed48bbd28f65e23350257f8daabf6102 files/vargs.h 4939
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBotA0ArHZZzCEUG0RAmajAJ9GBwBJri+A4W2OiG3a5uIFf0D1SwCZAYDw
+ouwunZJJ0jt7uV9xdk2W46U=
+=2gDI
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 9eec7025875d50674100cd0fc546a3a2 krecord-1.14.ebuild 563
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 41ced037e2e6af622b19a5304fb5a656 ChangeLog 972
 MD5 dced786ad14944d6e060de8bdd7848ab krecord-1.11.ebuild 525
-MD5 7dc448a49925ee9ecfdee0e98891f7c2 ChangeLog 867
+MD5 6d77e29d64d1338babbde807ff396a8a krecord-1.14.ebuild 548
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 07564d4bdbf6e12686435a10cbc91d72 files/digest-krecord-1.11 64
 MD5 2fab5ef6807980c4614875cc700cac45 files/digest-krecord-1.14 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBos8cArHZZzCEUG0RAtjNAKCDo4AAzbTtaQRHhm2/V3zGddG+3ACbBRin
+amgeQXcd/GY54/g60lTq/sk=
+=MyZu
+-----END PGP SIGNATURE-----
