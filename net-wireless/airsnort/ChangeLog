@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.13 2004/06/25 00:42:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.14 2004/08/31 12:08:44 tseng Exp $
+
+*airsnort-0.2.4a (31 Aug 2004)
+
+  31 Aug 2004; Brandon Hale <tseng@gentoo.org> +airsnort-0.2.4a.ebuild:
+  Version bump. This version uses new monitor mode code available in orinico-cvs.
 
 *airsnort-0.2.3c (06 Feb 2004)
 
