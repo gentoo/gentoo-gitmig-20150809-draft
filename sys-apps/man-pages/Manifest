@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 72514af1f71e74ed368102f4d6aa74c8 ChangeLog 3956
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 74f3e3b83406afa0ffc7723591ff8ff4 man-pages-1.70.ebuild 651
+MD5 595216264b95cc8dfc83ce68f3c8ca95 man-pages-1.70.ebuild 639
 MD5 d5858c76accf94d137d68578e0412523 man-pages-1.67.ebuild 639
 MD5 75b47d1d9e1715d399d3d84605040469 files/digest-man-pages-1.70 68
 MD5 af09d031dcee66929510e078d00066f2 files/man2.tar.gz 1982
@@ -11,7 +11,7 @@ MD5 b4ee140499ba754aedc8e451d7b49b09 files/digest-man-pages-1.67 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBmPs6HTu7gpaalycRAsmyAKDyb5JIeHO3wP4QZv3rNmIgGBdJawCffy0O
-ruTLYmFnpY4hKXCFwcoXNzw=
-=hr1P
+iD8DBQFBt9zhroRuSHgZdywRAiZtAJ9ZYfYCyVKPMNgdRtJfF+6s1QEI3ACcDtLg
+ul9QbuFIV3tvFFptMY5B9sg=
+=UZve
 -----END PGP SIGNATURE-----
