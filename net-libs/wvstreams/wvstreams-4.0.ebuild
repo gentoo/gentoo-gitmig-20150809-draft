@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.ebuild,v 1.4 2004/11/22 23:38:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.ebuild,v 1.5 2004/11/30 06:27:28 mrness Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	oggvorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
-	fam? ( >=app-admin/fam-2.7.0 )
+	fam? ( virtual/fam )
 	>=sys-libs/db-3
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	pam? ( >=sys-libs/pam-0.75 )
