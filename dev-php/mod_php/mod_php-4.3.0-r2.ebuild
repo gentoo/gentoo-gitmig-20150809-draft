@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.2 2003/01/13 08:54:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.3 2003/01/13 16:49:51 rphillips Exp $
 
-IUSE="apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -25,6 +25,7 @@ DEPEND="
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	X? ( virtual/x11 )
+	png? ( >=media-libs/libpng-1.2.5 )
 	qt? ( x11-libs/qt )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
@@ -120,6 +121,16 @@ src_compile() {
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
 
+	if [ "`use png`" ] ; then
+		myconf="${myconf} --with-png-dir=/usr/lib"
+	fi
+
+	# And zlib, but we need to know if the user wants it - Quequero
+	if [ "`use zlib`" ] ; then
+	 	myconf="${myconf} --with-zlib"
+		myconf="${myconf} --with-zlib-dir=/usr/lib"
+	fi
+
 	# optional support for apache2
 	myconf="${myconf} --with-exec-dir=/usr/bin"
 	if [ "`use apache2`" ] ; then
@@ -127,6 +138,7 @@ src_compile() {
 	else
 		myconf="${myconf} --with-apxs=/usr/sbin/apxs"
 	fi
+
 
 	# optional support for oracle oci8
 	if [ "`use oci8`" ] ; then
@@ -173,13 +185,16 @@ src_compile() {
 	fi
 
 	# this needed moving to prevent b0rkage
-	# Please test your ebuilds!
 	# --with-gmp \
 
 	./configure \
 		--prefix=/usr \
 		--with-bz2 \
 		--enable-ftp \
+		--enable-force-cgi-redirect \
+		--enable-discard-path \
+		--enable-gd-native-ttf \
+		--enable-mime-magic \
 		--enable-wddx \
 		--enable-dbase \
 		--with-zlib=yes \
@@ -205,7 +220,7 @@ src_compile() {
 src_install() {
 	addwrite /usr/share/snmp/mibs/.index
 
- 	make INSTALL_ROOT=${D} install-pear || die
+ 	make INSTALL_ROOT=${D} install-pear install-headers || die
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
 	dodoc README.* TODO NEWS

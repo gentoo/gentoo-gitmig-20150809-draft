@@ -1,11 +1,14 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.43 2003/01/13 08:54:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.44 2003/01/13 16:49:51 rphillips Exp $
+
+*mod_php-4.3.0-r2 (10 Jan 2003)
+
+  13 Jan 2003; Ryan Phillips <rphillips@gentoo.org> mod_php-4.3.0-r2.ebuild :
+  Added Quequero tweaks. Fixes #13721
 
   13 Jan 2003; Daniel Ahlberg <aliz@genoto.org> mod_php-4.3.0-r2.ebuild :
   Added ppc and alpha keyword becuse this is a security update.
-
-*mod_php-4.3.0-r2 (10 Jan 2003)
 
   10 Jan 2003; Ryan Phillips <rphillips@gentoo.org> mod_php-4.3.0-r2.ebuild :
   Added third party helper scripts to the install. (phpize, php-config, and phpextdist)
