@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/gtk-engines-geramik-0.26.ebuild,v 1.6 2004/06/24 23:29:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/gtk-engines-geramik-0.26.ebuild,v 1.7 2004/06/28 22:26:55 agriffis Exp $
 
 inherit gtk-engines2 eutils
 
 MY_PN="Geramik"
 
-IUSE="gtk2"
+IUSE=""
 DESCRIPTION="GTK+1 and GTK+2 Geramik Theme Engine"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=3952"
 SRC_URI="http://www.kde-look.org/content/files/3952-${MY_PN}-${PV}.tar.gz"
