@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.1 2004/11/20 12:37:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.2 2004/11/21 21:24:47 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -17,7 +17,6 @@ IUSE=""
 
 RDEPEND=">=net-dialup/capi4k-utils-20040810"
 DEPEND="${RDEPEND}
-	app-arch/rpm2targz
 	sys-apps/gawk
 	sys-apps/sed
 	virtual/linux-sources"
@@ -88,17 +87,18 @@ src_unpack() {
 }
 
 src_compile() {
-	unset ARCH
+	set_arch_to_kernel
 	if [ "${FCDSL_MODULE}" == "" ]; then
 		for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
 			einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
 			cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
-			make || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
+			kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
 		done
 	else
 		cd ${WORKDIR}/${FCDSL_MODULE/fc/fritz.}/src || die "Could not change to driver source directory."
-		make || die "Could not compile driver."
+		kernel-mod_src_compile || die "Could not compile driver."
 	fi
+	set_arch_to_portage
 }
 
 src_install() {
@@ -139,34 +139,22 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To complete the installation you have to modify the file"
-	einfo "    /etc/modules.d/fcdsl"
-	einfo "with the options drdsl will give you."
-	echo
-	if [ "${FCDSL_MODULE}" == "" ];
-	then
-		einfo "(your modulename)\t(your firmware)\t-\t-\t-\t-\t-"
-	else
-		einfo "${FCDSL_MODULE}\t${FCDSL_FIRMWARE}\t-\t-\t-\t-\t-"
-	fi
-	echo
-	einfo "Please enter following commands:"
-	einfo "    depmod -ae"
-	einfo "    capiinit start"
-	einfo "    drdsl -n"
-	einfo "    nano /etc/modules.d/fcdsl (=> enter the values)"
-	einfo "    update-modules"
-	echo
-	einfo "If you want to create a peer file, please run:"
-	einfo "    ebuild /var/db/pkg/net-dialup/${PF}/${PF}.ebuild config"
-
 	einfo "Checking kernel module dependencies"
 	test -r "${ROOT}/usr/src/linux/System.map" && \
 		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
+
+	echo
+	einfo "If you want to setup your DSL card driver and create a peer file, please run:"
+	einfo "    etc-update"
+	einfo "    ebuild /var/db/pkg/net-dialup/${PF}/${PF}.ebuild config"
+	einfo "    capiinit start"
+	einfo "    drdsl -n"
+	einfo "    nano /etc/modules.d/fcdsl"
+	einfo "    update-modules"
+	sleep 10
 }
 
 readpassword() {
-
 	VALUE_1=""
 	VALUE_2=""
 	while true; do
@@ -194,11 +182,9 @@ readpassword() {
 	VALUE_2=""
 	unset VALUE_1
 	unset VALUE_2
-
 }
 
 readvalue() {
-
 	VALUE=""
 	while true; do
 		einfo "${2}:"
@@ -214,11 +200,9 @@ readvalue() {
 
 	VALUE=""
 	unset VALUE
-
 }
 
 pkg_config() {
-
 	detect_fcdsl_card
 
 	if [ "${FCDSL_MODULE}" != "" ]; then
@@ -268,10 +252,17 @@ EOF
 		else
 			ewarn "Peer file \"/etc/ppp/peers/${FCDSL_PROVIDER}\" always exists!"
 		fi
+
+		#Uncomment correspondent lines in /etc/capi.conf & /etc/modules.d/fcdsl
+		if [ -f /etc/capi.conf ]; then
+			sed -i -e "s:^#${FCDSL_MODULE}:${FCDSL_MODULE}" /etc/capi.conf
+		fi
+		if [ -f /etc/modules.d/fcdsl ]; then
+			sed -i -e "s:^#options +${FCDSL_MODULE}:options ${FCDSL_MODULE}" /etc/modules.d/fcdsl
+		fi
 	else
 		ewarn "No AVM FRITZ!Card DSL found!"
 	fi
 	unset FCDSL_PROVIDER
 	unset FCDSL_USER
-
 }
