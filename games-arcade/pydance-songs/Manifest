@@ -1,4 +1,6 @@
 MD5 b7309a7b5923be38ef3a7d01606ad207 files/digest-pydance-songs-20030926 447
+MD5 8b948d3ebb3b85d343213a1721f73139 files/digest-pydance-songs-20040111 622
 MD5 4d6379ab5c6bf4cb4e27b650949943de pydance-songs-20030926.ebuild 856
-MD5 03ef603cbda92d3298f916dc268286df ChangeLog 699
+MD5 23d57df0d843acbb7816cb3b7480f4e5 ChangeLog 814
 MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
+MD5 a0e2fdca196c1213ca10e8c3a32eeddf pydance-songs-20040111.ebuild 981

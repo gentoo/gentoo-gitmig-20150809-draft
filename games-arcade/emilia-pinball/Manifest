@@ -1,4 +1,6 @@
 MD5 76fdc7c8122e87e91349fcdd74d76483 files/digest-emilia-pinball-0.3.0 66
+MD5 df323f086ca583e1d38e94416c03cc34 files/digest-emilia-pinball-0.3.1 66
+MD5 756237c34f232785feb32fa2d9542694 emilia-pinball-0.3.1.ebuild 957
 MD5 4fdc69eccbb027d3f5e6a8b8f708f698 emilia-pinball-0.3.0.ebuild 981
-MD5 bec8107004afdc2e67e952dd03d21e3c ChangeLog 976
+MD5 cfc471ff1e0ea53adfaa7dcb9bb0ffcb ChangeLog 1087
 MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
