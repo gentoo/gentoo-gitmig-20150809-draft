@@ -1,7 +1,8 @@
 MD5 251e4c8aa7e0a8a19681c4d73a0b6f47 zsh-4.0.9-r3.ebuild 2669
 MD5 d6c683c148853196ec43cabba95b667f zsh-4.1.1-r5.ebuild 3374
-MD5 7a5a758ef6d0de777f5f7a3a2dba8f3b ChangeLog 7425
+MD5 644aa40e6a4b6c97dc351a3d3c16774e ChangeLog 7549
 MD5 28ed8ea6cdccb353e2e8ad783eb51f5b metadata.xml 506
+MD5 b52816ec4000cb3a01c4fb19884cb6e4 zsh-4.2.0_pre1.ebuild 3229
 MD5 0c1d77e92495ecb2290575dfa560bcd1 zsh-4.0.9-r2.ebuild 2628
 MD5 219f19ba1e213dd846d6e778dbb10238 zsh-4.1.1-r4.ebuild 3324
 MD5 2aa47fce01c92a0cc7e070f04018ac93 files/_portage 7539
@@ -12,5 +13,6 @@ MD5 f83ccd2b6f1cd3e75c910c48159892f5 files/zsh-4.1.1-gentoo.diff 488
 MD5 64023b41a9987655e0e014d32562cfad files/zprofile 404
 MD5 de0db046f0f40cb1cc3cd3f6e6b2645a files/zshenv 318
 MD5 81e325aacd554d2c5f6d14efe45d1ffd files/zsh-strncmp.diff 354
+MD5 da168d6d058cf09e9d2c27a00fa301aa files/digest-zsh-4.2.0_pre1 211
 MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r2 199
 MD5 1a527b6a4700642b4742d9cc8de90285 files/digest-zsh-4.1.1-r4 199
