@@ -1,33 +1,25 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.1 2002/10/23 14:17:03 stubear Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.2 2002/11/06 14:44:07 vapier Exp $
 
 XCIN="${P/_/.}.tar.gz"
 CHEWING="chewing-2002Jan07-snapshot.tar.gz"
 
 DESCRIPTION="Chinese X Input Method"
-
 HOMEPAGE="http://xcin.linux.org.tw/"
-
 SRC_URI="ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/${XCIN}
 	http://chewing.good-man.org/snapshot/${CHEWING}"
 
 LICENSE="XCIN"
-
 SLOT="0"
-
 KEYWORDS="~x86"
+IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext ) 
 	>=app-i18n/libtabe-0.2.5"
-
-RDEPEND="${DEPEND}"
-
 S=${WORKDIR}/${PN}
 
-src_unpack () {
+src_unpack() {
 	unpack ${XCIN}
 	# patch for chewing support
 	cd ${S}/src/Cinput
@@ -53,7 +45,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make \
 		prefix=${D}/usr \
 		xcin_rcp=${D}/etc \

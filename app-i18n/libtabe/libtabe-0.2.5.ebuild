@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.1 2002/10/23 14:19:27 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.2 2002/11/06 14:43:21 vapier Exp $
 
 DESCRIPTION="Libtabe provides bimsphone support for xcin-2.5+"
 HOMEPAGE="http://libtabe.sourceforge.net/"
 SRC_URI="ftp://xcin.linux.org.tw/pub/xcin/libtabe/devel/${P}.tar.gz"
+
 LICENSE="XCIN"
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="=sys-libs/db-3*"
-RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${PN}
+DEPEND="=sys-libs/db-3*"
+S="${WORKDIR}/${PN}"
 
 src_compile() {
 	./configure \
@@ -23,7 +23,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
