@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-3.03.04-r2.ebuild,v 1.1 2004/12/28 23:01:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-3.03.04-r2.ebuild,v 1.2 2005/01/16 02:43:45 ribosome Exp $
 
 inherit flag-o-matic eutils
 

@@ -1,18 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-3.10.02-r1.ebuild,v 1.2 2005/01/16 02:43:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-4.02.00.ebuild,v 1.1 2005/01/16 02:43:45 ribosome Exp $
 
 inherit flag-o-matic eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An Object-Oriented Data Analysis Framework"
-SRC_URI="ftp://root.cern.ch/root/root_v${PV}.source.tar.gz"
+MY_VER=${PV%[a-z]}
+MY_PATCH=${PV##"${MY_VER}"}
+SRC_URI="ftp://root.cern.ch/root/root_v${MY_VER}.source${MY_PATCH}.tar.gz"
 HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64"
-IUSE="mysql postgres opengl afs kerberos ldap qt"
+KEYWORDS="~x86"
+IUSE="afs kerberos ldap mysql opengl postgres python qt"
 
 DEPEND="virtual/x11
 	>=media-libs/freetype-2.0.9
@@ -23,7 +25,8 @@ DEPEND="virtual/x11
 	!amd64? ( afs? ( net-fs/openafs ) )
 	kerberos? ( app-crypt/mit-krb5 )
 	ldap? ( net-nds/openldap )
-	qt? ( x11-libs/qt )"
+	qt? ( x11-libs/qt )
+	python? ( dev-lang/python )"
 
 src_compile() {
 
@@ -147,11 +150,11 @@ src_compile() {
 		`use_enable ldap` \
 		`use_enable mysql` \
 		`use_enable opengl` \
-		--disable-openiv \
 		`use_enable postgres pgsql` \
 		$USEPYTHIA \
 		$USEPYTHIA6 \
 		`use_enable qt` \
+		`use_enable python` \
 		--disable-rfio \
 		--disable-rpath \
 		--disable-sapdb \
