@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.16 2003/08/06 09:24:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.17 2003/08/06 09:33:35 robbat2 Exp $
+
+  06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.2.1-r6.ebuild,
+  files/vpopmail-5.2.1-showall.patch:
+  fix bug #23876
 
   06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.2.1-r6.ebuild,
   files/99vpopmail:

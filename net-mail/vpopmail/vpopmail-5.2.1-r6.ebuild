@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.3 2003/08/06 09:24:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.4 2003/08/06 09:33:35 robbat2 Exp $
 
 IUSE="mysql ipalias"
 
@@ -56,6 +56,8 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 	cd ${S}
+
+	epatch ${FILESDIR}/vpopmail-5.2.1-showall.patch
 
 	if [ "`use mysql`" ]; then
 		einfo "Applying MySQL patch..."
