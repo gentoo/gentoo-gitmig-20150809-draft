@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/bzip2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.5 2002/07/14 19:20:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.6 2002/07/28 06:29:08 azarah Exp $
 
 *bzip2-1.0.2-r2 (29 Jun 2002)
+
+  28 Jul 2002; Martin Schlemmer <azarah@gentoo.org> bzip2-1.0.2.ebuild :
+  Also install /bin/bzcat with USE=build, as some apps need it, and it
+  gets pulled in prematurely with gcc3 profile.
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.2.ebuild :
   Added KEYWORDS, SLOT.
