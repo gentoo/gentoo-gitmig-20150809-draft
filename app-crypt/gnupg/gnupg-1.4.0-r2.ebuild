@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r2.ebuild,v 1.2 2005/01/27 19:36:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r2.ebuild,v 1.3 2005/03/15 08:36:45 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm -hppa ~ppc ~ppc-macos ~s390 -sparc ~x86 ~ia64 ~mips ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm -hppa ~ppc ~ppc-macos ~s390 ~sparc ~x86 ~ia64 ~mips ~ppc64"
 IUSE="ecc ldap nls readline caps zlib idea bzip2 selinux smartcard"
 #
 # Disabling X until media-gfx/xli has sufficient keywords
@@ -90,6 +90,9 @@ src_compile() {
 		eerror "Capabilities support is only available for Linux."
 	fi
 
+	# configure doesn't trean --disable-asm correctly
+	use x86 && myconf="${myconf} --enable-asm"
+
 	# 		`use_enable X photo-viewers` \
 	# 
 	econf \
@@ -101,7 +104,6 @@ src_compile() {
 		`use_enable bzip2` \
 		`use_enable smartcard card-support` \
 		`use_enable selinux selinux-support` \
-		`use_enable x86 asm` \
 		`use_with caps capabilities` \
 		`use_with readline` \
 		--enable-static-rnd=linux \
