@@ -1,0 +1,37 @@
+diff -x '*~' -Npaur xine-ui-0.99.3-orig/misc/desktops/Makefile.am xine-ui-0.99.3-desktop/misc/desktops/Makefile.am
+--- xine-ui-0.99.3-orig/misc/desktops/Makefile.am	2005-03-20 15:31:48.819049952 +0100
++++ xine-ui-0.99.3-desktop/misc/desktops/Makefile.am	2005-03-20 16:23:29.820626056 +0100
+@@ -1,14 +1,6 @@
+-EXTRA_DIST = $(pixmap_DATA) $(desktop_DATA) xine.wmconfig
++EXTRA_DIST = $(desktop_DATA) xine.wmconfig
+ 
+-pixmapdir = $(datadir)/pixmaps
+-
+-pixmap_DATA = xine_16x16.png \
+-	xine_22x22.png \
+-	xine_32x32.png \
+-	xine_48x48.png \
+-	xine.xpm
+-
+-desktopdir = $(datadir)/xine/desktop
++desktopdir = $(datadir)/applications
+ desktop_DATA = xine.desktop
+ 
+ debug:
+diff -x '*~' -Npaur xine-ui-0.99.3-orig/misc/desktops/xine.desktop xine-ui-0.99.3-desktop/misc/desktops/xine.desktop
+--- xine-ui-0.99.3-orig/misc/desktops/xine.desktop	2005-03-20 15:31:48.820049800 +0100
++++ xine-ui-0.99.3-desktop/misc/desktops/xine.desktop	2005-03-20 16:30:43.909634496 +0100
+@@ -1,8 +1,10 @@
+ [Desktop Entry]
++Encoding=UTF-8
+ Name=xine
+ Comment=Video Player
+ Exec=xine
+ MimeType=video/mpeg;video/quicktime;video/x-msvideo;video/x-anim;audio/x-mp3;audio/x-mp2;
+-Icon=xine.xpm
+-Terminal=0
++Icon=xine
++Terminal=false
+ Type=Application
++Categories=Application;AudioVideo;Player;
+\ No newline at end of file

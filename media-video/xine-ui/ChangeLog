@@ -1,6 +1,14 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.71 2005/03/29 05:18:32 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.72 2005/03/29 06:06:09 chriswhite Exp $
+
+*xine-ui-0.99.3_pre20041022-r1 (29 Mar 2005)
+
+  29 Mar 2005; Chris White <chriswhite@gentoo.org>
+  +files/xine-ui-configure-checks.patch, +files/xine-ui-desktop-fixes.patch,
+  +xine-ui-0.99.3_pre20041022-r1.ebuild:
+  Fixed bug #58157 (xine-ui desktop / depend fixes). Thanks to Diego for the
+  ebuild.
 
   29 Mar 2005; Chris White <chriswhite@gentoo.org> xine-ui-0.9.23-r2.ebuild,
   xine-ui-0.99.3_pre20041022.ebuild:

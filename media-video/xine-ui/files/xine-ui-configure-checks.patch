@@ -1,0 +1,92 @@
+diff -x '*~' -Npaur xine-ui-0.99.3-orig/configure.ac xine-ui-0.99.3-configure/configure.ac
+--- xine-ui-0.99.3-orig/configure.ac	2005-03-20 15:31:48.902037336 +0100
++++ xine-ui-0.99.3-configure/configure.ac	2005-03-20 17:08:21.006425264 +0100
+@@ -315,7 +315,10 @@ AM_CONDITIONAL(HAVE_XTESTEXTENSION, test
+ dnl
+ dnl readline
+ dnl
+-AC_CHECK_READLINE
++if test x"$with_readline" != xno; then
++  AC_CHECK_READLINE
++fi
++
+ AM_CONDITIONAL(HAVE_READLINE, test x"$have_readline" = "xyes")
+ if test x"$have_readline" != "xyes"; then
+   AC_MSG_RESULT([*** no readline found, xine network interface will be disabled ***])
+@@ -324,20 +327,35 @@ fi
+ dnl
+ dnl ncurses
+ dnl
+-AC_CHECK_HEADERS(curses.h)
+-AC_CHECK_LIB(ncurses, cbreak,
+-             AC_DEFINE(HAVE_NCURSES,,[Define this if you have ncurses installed])
+-             ac_have_ncurses="yes"
+-             NCURSES_LIB="-lncurses")
+-AC_SUBST(NCURSES_LIB)
++AC_ARG_WITH(ncurses,
++   [  --without-ncurses       Turn off ncurses support.],
++   [], with_ncurses=yes)
++
++if test x"$with_ncurses" = xyes; then
++  AC_CHECK_HEADERS(curses.h)
++  AC_CHECK_LIB(ncurses, cbreak,
++               AC_DEFINE(HAVE_NCURSES,,[Define this if you have ncurses installed])
++               ac_have_ncurses="yes"
++               NCURSES_LIB="-lncurses")
++  AC_SUBST(NCURSES_LIB)
++fi
++
+ AM_CONDITIONAL(HAVE_NCURSES, test x$ac_have_ncurses = "xyes")
+ 
+ dnl
+ dnl Libcurl
+ dnl
+-AM_PATH_CURL(7.10.2, [
+-   AC_DEFINE(HAVE_CURL,,[Define this if you have libcurl installed])], [
+-   AC_MSG_RESULT(*** All of curl dependent parts will be disabled ***)])
++AC_ARG_WITH(curl,
++   [  --without-curl          Turn off curl support.],
++   [], with_curl=yes)
++
++if test x"$with_curl" = xyes; then
++  AM_PATH_CURL(7.10.2, [
++     AC_DEFINE(HAVE_CURL,,[Define this if you have libcurl installed])], [
++     AC_MSG_RESULT(*** All of curl dependent parts will be disabled ***)])
++else
++  no_curl=yes
++fi
+ AM_CONDITIONAL(HAVE_CURL, test x$no_curl != "xyes")
+ 
+ 
+@@ -352,13 +370,29 @@ AC_SUBST(NET_LIBS)
+ dnl
+ dnl check for ascii-art library
+ dnl
+-AM_PATH_AALIB(1.2.0,,)
++AC_ARG_WITH(aalib,
++   [  --without-aalib         Turn off AALIB support.],
++   [], with_aalib=yes)
++
++if test x"$with_aalib" = xyes; then
++  AM_PATH_AALIB(1.2.0,,)
++else
++  no_aalib=yes
++fi
+ AM_CONDITIONAL(HAVE_AA, test x$no_aalib != "xyes")
+ 
+ dnl 
+ dnl checks for Color AsCii Art library
+ dnl 
+-AM_PATH_CACA(0.3,, AC_MSG_RESULT([*** All CACA-dependent parts will be disabled ***]))
++AC_ARG_WITH(libcaca,
++   [  --without-libcaca       Turn off CACA support.],
++   [], with_libcaca=yes)
++
++if test x"$with_libcaca" = xyes; then
++  AM_PATH_CACA(0.3,, AC_MSG_RESULT([*** All CACA-dependent parts will be disabled ***]))
++else
++  no_caca=yes
++fi
+ AM_CONDITIONAL(HAVE_CACA, test x$no_caca != "xyes")
+ 
+ dnl option for font sets and multibyte string support
