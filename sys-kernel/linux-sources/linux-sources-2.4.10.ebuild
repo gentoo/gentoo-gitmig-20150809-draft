@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10.ebuild,v 1.3 2001/09/28 00:08:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10.ebuild,v 1.4 2001/09/28 04:00:51 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -110,6 +110,7 @@ src_unpack() {
 	#get sources ready for compilation or for sitting at /usr/src/linux
 	echo "Preparing for compilation..."
 	cd ${S}
+	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
@@ -126,42 +127,37 @@ src_unpack() {
 }
 		
 src_compile() {
-	if [ "${PN}" = "linux-sources" ] || [ "${PN}" = "linux-headers" ]
+	if [ "${PN}" = "linux-headers" ]
 	then
 		cd ${KS}
 		make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep || die
+	elif [ "${PN}" = "linux-sources" ]
+	then
+		echo
 	else
 		if [ $PN = "linux" ]
 		then
 			cd ${KS}
 			make symlinks || die
-		fi
-		if [ "`use lvm`" ]
-		then
-			#LVM tools are included in the linux and linux-extras pakcages
-			cd ${KS2}/LVM/${LVMV}
-	
-			# This is needed for linux-extras
-			if [ -f "Makefile" ]
-			then
-				make clean || die
-			fi
-			# I had to hack this in so that LVM will look in the current linux
-			# source directory instead of /usr/src/linux for stuff - pete
-			CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}" || die
-			make || die
-		fi
-	
-		if [ "$PN" == "linux" ]
-		then
-			cd ${KS}
 			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep || die
 			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" bzImage || die
 			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" modules || die
 		fi
-		
-		cd ${KS2}/cloop-${CLOOPV}
-		make KERNEL_DIR=${KS}
+		#LVM tools are included in the linux and linux-extras pakcages
+		cd ${KS2}/LVM/${LVMV}
+	
+		# This is needed for linux-extras
+		if [ -f "Makefile" ]
+		then
+			make clean || die
+		fi
+		# I had to hack this in so that LVM will look in the current linux
+		# source directory instead of /usr/src/linux for stuff - pete
+		CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}" || die
+		make || die
+	
+		if [ "$PN" == "linux" ]
+		then
 	fi
 }
 
