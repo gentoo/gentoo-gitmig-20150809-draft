@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-20020527.ebuild,v 1.1 2002/05/29 23:24:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.1.ebuild,v 1.1 2002/06/11 21:43:52 stroke Exp $
 
 # Python is DISABLED 
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.xchat.org/"
 LICENSE="GPL-2"
 SLOT=0
 
-RDEPEND=">=dev-libs/glib-2.0.1
-	>=x11-libs/gtk+-2.0.1
+RDEPEND=">=dev-libs/glib-2.0.3
+	>=x11-libs/gtk+-2.0.3
 	perl?   ( >=sys-devel/perl-5.6.1 )
 	gnome? ( >=x11-libs/libzvt-1.115.2
-			>=gnome-base/libgnome-1.117.1
-			>=gnome-base/gnome-applets-1.103.0
-			>=gnome-base/gnome-panel-1.5.22 )" 
+			>=gnome-base/libgnome-2.0.1
+			>=gnome-base/gnome-applets-2.0.0
+			>=gnome-base/gnome-panel-2.0.0 )" 
                
 
 DEPEND="${RDEPEND}
