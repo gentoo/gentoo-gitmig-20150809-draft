@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.6 2004/04/17 16:36:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.7 2004/05/06 15:49:14 ciaranm Exp $
+
+  06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> detex-2.7.ebuild:
+  Added ~sparc, #50244
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> detex-2.7.ebuild:
   Removed S=.
