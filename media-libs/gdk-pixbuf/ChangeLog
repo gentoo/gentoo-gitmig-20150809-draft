@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.7 2002/04/09 15:23:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.8 2002/04/13 01:12:34 seemant Exp $
+
+*gdk-pixbuf-0.16.0-r9 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gdk-pixbuf-0.16.0-r9.ebuild:
+
+  Updated to depend on the new libpng (which requires that this be recompiled
+  against that).
 
 *gdk-pixbuf-0.16.0-r8 (8 Apr 2002)
 
