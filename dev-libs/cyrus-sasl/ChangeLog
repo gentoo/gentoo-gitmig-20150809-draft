@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.30 2002/12/27 21:50:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.31 2003/01/23 20:34:42 raker Exp $
+
+*cyrus-2.1.10-r1 (23 Jan 2003)
+
+  23 Jan 2003; Nick Hadaway <raker@gentoo.org> cyrus-sasl-2.1.10-r1.ebuild,
+  files/digest-cyrus-sasl-2.1.10-r1 :
+  http://asg.web.cmu.edu/archive/message.php?mailbox=archive-sasl&msg=3066
+  Added a patch to see if that will help with problems noted in bug
+  #13116
 
 *cyrus-sasl-2.1.10 (14 Dec 2002)
 
