@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7371fec4a2322664b6c4e11a5947d4cc ChangeLog 24770
 MD5 c9d1aed757473e87674f1c4230d06a6c gentoolkit-0.1.38.ebuild 2876
 MD5 028b91d28a816168d20447d1c607dd41 gentoolkit-0.2.0_pre3.ebuild 814
 MD5 219484cc7ef27644277a38aad165ced7 gentoolkit-0.2.0_pre4.ebuild 833
 MD5 324607982236026f08f87e6dd50398e6 gentoolkit-0.2.0_pre5.ebuild 815
-MD5 a87703ce539fbcd83da4745cc082f737 metadata.xml 611
 MD5 f164cc8356c87591596511e429da7b55 gentoolkit-0.2.0_pre6.ebuild 810
 MD5 d9f267bb9b53767a45bf475d798b273d gentoolkit-0.2.0_pre7.ebuild 1076
-MD5 e062d96391b0497199b76e4a42451f0b gentoolkit-0.2.0_pre8.ebuild 1096
+MD5 1039c6fe45d221f5d20d343daed81859 gentoolkit-0.2.0_pre8.ebuild 1106
+MD5 a87703ce539fbcd83da4745cc082f737 metadata.xml 611
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.38 0
 MD5 35eefd58066abfa1d2f6b4d721d57690 files/digest-gentoolkit-0.2.0_pre3 72
 MD5 9106b9afa932344c6a3ba1ef06d53c0d files/digest-gentoolkit-0.2.0_pre4 72
@@ -56,10 +53,3 @@ MD5 a88cf0ad323782f9ff61fe66857e508f files/scripts/revdep-rebuild 11070
 MD5 6cc30d2d28be66b9208590b4b2838f7d files/scripts/revdep-rebuild.1 350
 MD5 347e69e1c9fba8b60fa631d92ea0a8f2 files/scripts/useflag 16164
 MD5 725221ce6ed34436d3048709c5223f6f files/scripts/useflag.1 5456
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+eR3mdTrptrqvGERAp9QAKCRER/owrdO9+ruRRV8y8AKzA2BBQCgi+zl
-cRJBVPqwFbyfpideSGP67oA=
-=WblI
------END PGP SIGNATURE-----
