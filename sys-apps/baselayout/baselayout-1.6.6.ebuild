@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.5.ebuild,v 1.1 2001/10/30 05:55:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.6.ebuild,v 1.1 2001/11/15 22:45:58 drobbins Exp $
 
 SV=1.1.8
 S=${WORKDIR}/rc-scripts-${SV}
