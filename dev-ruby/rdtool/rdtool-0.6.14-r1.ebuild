@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14-r1.ebuild,v 1.2 2004/02/16 04:16:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14-r1.ebuild,v 1.3 2004/02/17 20:10:11 agriffis Exp $
 
 IUSE="emacs"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=rdtool"
 SRC_URI="http://www2.pos.to/~tosh/ruby/rdtool/archive/${P}.tar.gz"
 LICENSE="Ruby GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc alpha"
 
 USE_RUBY="any"
 

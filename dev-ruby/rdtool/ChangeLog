@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.10 2004/02/16 04:16:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.11 2004/02/17 20:10:11 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> rdtool-0.6.14-r1.ebuild:
+  stable on alpha
 
   15 Feb 2004; Jason Wever <weeve@gentoo.org> rdtool-0.6.14-r1.ebuild:
   Added ~sparc keyword to fix dev-ruby/mod-ruby's broken deps.
