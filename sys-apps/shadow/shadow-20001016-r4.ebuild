@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r4.ebuild,v 1.2 2001/08/01 19:00:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r4.ebuild,v 1.3 2001/08/04 16:53:56 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -22,7 +22,7 @@ src_unpack() {
 src_compile() {
 	try ./configure --disable-desrpc --with-libcrypt --with-libcrack --with-libpam --host=${CHOST}
 	# Parallel make fails sometimes
-	try make LDFLAGS=\"\"
+	try make LDFLAGS=""
 }
 
 src_install() {
