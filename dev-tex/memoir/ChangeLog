@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/memoir
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/ChangeLog,v 1.1 2004/11/07 08:44:14 usata Exp $
+
+*memoir-20040524 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +memoir-20040524.ebuild:
+  Initial import. Ebuild submitted by Henrik Brix Andersen <brix@gentoo.org>;
+  bug #66739.
+

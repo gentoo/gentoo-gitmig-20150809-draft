@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 818f4e0b082fcf49020ed61f8bb12951 memoir-20040524.ebuild 532
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 150d0d90d81ab94fb1ebd6584b2cfc1d ChangeLog 416
+MD5 b82d24602e978491abc0752b2cb5d00d files/digest-memoir-20040524 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjd7lVWNWqTUmv+0RAndhAKCQAiXbc62ac+5DkYK2aTq13yfa0wCcCLay
+SeiXPP/k3cAUsQ7RIXwo1rg=
+=hJ8+
+-----END PGP SIGNATURE-----
