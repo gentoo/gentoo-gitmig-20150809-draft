@@ -1,0 +1,9 @@
+# ChangeLog for media-video/vls
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/ChangeLog,v 1.1 2002/08/02 18:47:14 raker Exp $
+
+*vls-0.3.3 (02 Aug 2002) 
+
+  02 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  vls-0.3.3.ebuild, files/digest-vls-0.3.3 :
+  Initial ebuild in portage.
