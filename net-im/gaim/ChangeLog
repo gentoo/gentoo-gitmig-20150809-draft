@@ -2,6 +2,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $ Header: $
 
+
+*gaim-0.58-r2 (14 June 2002)
+
+ 14 June 2002; Jays Kwak <jayskwak@gentoo.org> gaim-0.58-r2.ebuild :
+
+ Korean encoding patch added. It should be ok with other languages.
+ If this patch has problem with other languages, you can comment it.
+
 *gaim-0.58-r1 (12 June 2002)
 
  12 June 2002; Michael J. Cohen <mjc@gentoo.org> gaim-0.58-r2.ebuild :
