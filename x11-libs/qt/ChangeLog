@@ -1,7 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.69 2003/06/01 17:34:40 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.70 2003/06/10 23:53:19 wwoods Exp $
 
+  10 Jun 2003; Will Woods <wwoods@gentoo.org> qt-2.3.2-r1.ebuild:
+  Added ~alpha to KEYWORDS
+
+  10 Jun 2003; Will Woods <wwoods@gentoo.org> qt-3.1.2-r3.ebuild:
+  removed alpha -fPIC hackery which appears to be unneeded for qt-3.1.2
+	
   01 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> qt-3.1.0-r3.ebuild:
   set ppc in keywords
 

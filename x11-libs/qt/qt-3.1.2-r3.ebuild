@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.3 2003/05/22 02:08:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.4 2003/06/10 23:53:19 wwoods Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="3"
 LICENSE="QPL-1.0"
 
 # WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="x86 ~ppc sparc" # alpha removed temporarily as I wasn't sure about the special
-			    # alpha stuff in src_unpack; alpha ppl please readd. --danarmak
+KEYWORDS="x86 ~ppc sparc ~alpha"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
@@ -75,7 +74,7 @@ src_unpack() {
 	    sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
 	
-	# hppa and alpha people, please review the following
+	# hppa people, please review the following
 	
 	# hppa need some additional flags
 	if [ "${ARCH}" = "hppa" ]; then
@@ -83,18 +82,6 @@ src_unpack() {
 		echo "QMAKE_CXXFLAGS += -fPIC -ffunction-sections" >> qmake.conf
 		echo "QMAKE_LFLAGS += -ffunction-sections -Wl,--stub-group-size=25000" >> qmake.conf
 	fi
-	
-	# on alpha we need to compile everything with -fPIC
-	if [ ${ARCH} == "alpha" ]; then
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= -O2:= -O2 -fPIC:" qmake.conf.orig > qmake.conf
-	    cat >> ${S}/tools/designer/editor/editor.pro <<_EOF_
-QMAKE_CFLAGS += -fPIC
-QMAKE_CXXFLAGS += -fPIC
-_EOF_
-	fi
-
-
 }
 
 src_compile() {
