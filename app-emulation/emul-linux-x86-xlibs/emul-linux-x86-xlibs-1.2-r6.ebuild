@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r5.ebuild,v 1.2 2005/02/07 22:55:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r6.ebuild,v 1.1 2005/02/08 03:27:36 cryos Exp $
 
 inherit multilib
 
@@ -49,9 +49,12 @@ src_install() {
 pkg_postinst() {
 	if [ -h /usr/$(get_libdir)/X11/locale/lib ]; then
 		rm -f /usr/$(get_libdir)/X11/locale/lib
-		ln -s /emul/linux/x86/usr/lib/X11/locale/lib \
-			/usr/$(get_libdir)/X11/locale/lib
 	else
 		ewarn "Error /usr/$(get_libdir)/X11/locale/lib is not a symlink."
+		ewarn "This may cause some 32 bit applications to fail."
+	fi
+	if [ ! -e /usr/$(get_libdir)/X11/locale/lib ]; then
+		ln -s /emul/linux/x86/usr/lib/X11/locale/lib \
+			/usr/$(get_libdir)/X11/locale/lib
 	fi
 }

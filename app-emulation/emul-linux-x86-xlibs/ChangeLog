@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.20 2005/02/07 22:55:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.21 2005/02/08 03:27:36 cryos Exp $
+
+*emul-linux-x86-xlibs-1.2-r6 (08 Feb 2005)
+
+  08 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  -emul-linux-x86-xlibs-1.0.ebuild, -emul-linux-x86-xlibs-1.1-r1.ebuild,
+  -emul-linux-x86-xlibs-1.1.ebuild, -emul-linux-x86-xlibs-1.2-r1.ebuild,
+  -emul-linux-x86-xlibs-1.2-r2.ebuild, -emul-linux-x86-xlibs-1.2-r4.ebuild,
+  -emul-linux-x86-xlibs-1.2-r5.ebuild, +emul-linux-x86-xlibs-1.2-r6.ebuild,
+  -emul-linux-x86-xlibs-1.2.ebuild:
+  Cleaned out old ebuilds, tidied up the symlink logic and bumped.
 
   07 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
   emul-linux-x86-xlibs-1.2-r5.ebuild:
