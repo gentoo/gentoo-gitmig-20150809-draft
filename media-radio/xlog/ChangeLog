@@ -1,6 +1,24 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.4 2004/08/04 23:18:38 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.5 2004/10/01 23:13:15 killsoft Exp $
+
+*xlog-0.9.7 (01 Oct 2004)
+
+  01 Oct 2004; Robb Romans <killsoft@gentoo.org> +xlog-0.9.7.ebuild:
+  New version, thanks to Douglas Gallup for the contribution.
+  Closes bug 64351
+  
+  Changes for xlog version 0.9.7
+    * A fix by Nigel Horne, G0LOV for a NULL pointer deref in dxcc.c, which would
+      cause crashes on some architectures. Thanks!
+    * xlog will now also build with older libgnomeprint versions.
+    * The ChangeLog is now included in the help menu and the xlog data directory.
+    * When importing from trlog, the date is converted to your current locale.
+    * If there is a comment in a trlog file (lines starting with ';'), it will
+      be imported and added to the remarks field.
+    * Another printing fix. People on redhat have been reporting overlapping
+      columns, a new way of column width calculation fixes this. Thanks to Tomi,
+      OH2BNS and Alex, OZ9AEC for testing.
 
   04 Aug 2004; Robb Romans <killsoft@gentoo.org> xlog-0.9.6.ebuild:
   Mark stable on x86.
