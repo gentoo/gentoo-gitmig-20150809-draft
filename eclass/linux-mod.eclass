@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.17 2005/01/09 19:10:55 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.18 2005/01/15 20:40:14 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -94,13 +94,14 @@ update_depmod() {
 	if [ -r ${KV_OUT_DIR}/System.map ]
 	then
 		depmod -ae -F ${KV_OUT_DIR}/System.map -b ${ROOT} -r ${KV_FULL}
+		eend $?
 	else
 		ewarn
 		ewarn "${KV_OUT_DIR}/System.map not found."
 		ewarn "You must manually update the kernel module dependencies using depmod."
+		eend 1
 		ewarn
 	fi
-	eend $?
 }
 
 update_modules() {
@@ -247,6 +248,46 @@ display_postinst() {
 	echo
 }
 
+find_module_params() {
+	local matched_offset=0 matched_opts=0 test="${@}" temp_var result
+	local i=0 y=0 z=0
+	
+	for((i=0; i<=${#test}; i++))
+	do
+		case ${test:${i}:1} in
+			\()		matched_offset[0]=${i};;
+			\:)		matched_opts=$((${matched_opts} + 1));
+					matched_offset[${matched_opts}]="${i}";;
+			\))		matched_opts=$((${matched_opts} + 1));
+					matched_offset[${matched_opts}]="${i}";;
+		esac
+	done
+	
+	for((i=0; i<=${matched_opts}; i++))
+	do
+		# i			= offset were working on
+		# y			= last offset
+		# z			= current offset - last offset
+		# temp_var	= temporary name
+		case ${i} in
+			0)	tempvar=${test:0:${matched_offset[0]}};;
+			*)	y=$((${matched_offset[$((${i} - 1))]} + 1))
+				z=$((${matched_offset[${i}]} - ${matched_offset[$((${i} - 1))]}));
+				z=$((${z} - 1))
+				tempvar=${test:${y}:${z}};;
+		esac
+		
+		case ${i} in
+			0)	result="${result} modulename:${tempvar}";;
+			1)	result="${result} libdir:${tempvar}";;
+			2)	result="${result} srcdir:${tempvar}";;
+			3)	result="${result} objdir:${tempvar}";;
+		esac
+	done
+	
+	echo ${result}
+}
+
 # default ebuild functions
 # --------------------------------
 
@@ -258,59 +299,54 @@ linux-mod_pkg_setup() {
 }
 
 linux-mod_src_compile() {
-	local modulename moduledir sourcedir moduletemp xarch i
-	xarch="${ARCH}"
-	unset ARCH
+	local modulename libdir srcdir objdir i n
 	
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
 
 	for i in ${MODULE_NAMES}
 	do
-		moduletemp="$(echo ${i} | sed -e "s:\(.*\)(\(.*\)):\1 \2:")"
-		modulename="${moduletemp/ */}"
-		moduletemp="${moduletemp/* /}"
-		# if we specify two args, then we can set moduledir
-		[ -z "${moduletemp/*:*/}" ] && moduledir="${moduletemp/:*/}"
-		# if we didnt pass the brackets, then we shouldnt accept anything
-		[ -n "${moduletemp/${modulename}/}" ] && sourcedir="${moduletemp/*:/}"
-		moduledir="${moduledir:-misc}"
-		sourcedir="${sourcedir:-${S}}"
+		for n in $(find_module_params ${i})
+		do
+			eval ${n/:*}=${n/*:/}
+		done
+		libdir=${libdir:-misc}
+		srcdir=${srcdir:-${S}}
+		objdir=${objdir:-${srcdir}}
 		
-		if [ ! -f "${sourcedir}/.built" ];
+		if [ ! -f "${srcdir}/.built" ];
 		then
-			cd ${sourcedir}
+			cd ${srcdir}
 			einfo "Preparing ${modulename} module"
-			emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} || \
-				die Unable to make ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}.
-			touch ${sourcedir}/.built
+			env -u ARCH emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} \
+				|| die "Unable to make \
+				   ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}."
+			touch ${srcdir}/.built
 			cd ${OLDPWD}
 		fi
 	done
-	ARCH="${xarch}"
 }
 
 linux-mod_src_install() {
-	local modulename moduledir sourcedir moduletemp i
+	local modulename libdir srcdir objdir i n
 
 	for i in ${MODULE_NAMES}
 	do
-		moduletemp="$(echo ${i} | sed -e "s:\(.*\)(\(.*\)):\1 \2:")"
-		modulename="${moduletemp/ */}"
-		moduletemp="${moduletemp/* /}"
-		# if we specify two args, then we can set moduledir
-		[ -z "${moduletemp/*:*/}" ] && moduledir="${moduletemp/:*/}"
-		# if we didnt pass the brackets, then we shouldnt accept anything
-		[ -n "${moduletemp/${modulename}/}" ] && sourcedir="${moduletemp/*:/}"
-		moduledir="${moduledir:-misc}"
-		sourcedir="${sourcedir:-${S}}"
+		for n in $(find_module_params ${i})
+		do
+			eval ${n/:*}=${n/*:/}
+		done
+		libdir=${libdir:-misc}
+		srcdir=${srcdir:-${S}}
+		objdir=${objdir:-${srcdir}}
 
 		einfo "Installing ${modulename} module"
-		cd ${sourcedir}
-		insinto /lib/modules/${KV_FULL}/${moduledir}
+		cd ${objdir}
+
+		insinto /lib/modules/${KV_FULL}/${libdir}
 		doins ${modulename}.${KV_OBJ}
 		cd ${OLDPWD}
 		
-		[ -z "${NO_MODULESD}" ] && generate_modulesd ${sourcedir}/${modulename}
+		[ -z "${NO_MODULESD}" ] && generate_modulesd ${objdir}/${modulename}
 	done
 }
 
