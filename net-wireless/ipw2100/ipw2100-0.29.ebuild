@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.29.ebuild,v 1.1 2004/03/10 06:18:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.29.ebuild,v 1.2 2004/03/11 22:28:36 latexer Exp $
 
 inherit kernel-mod
 
@@ -44,10 +44,10 @@ src_compile() {
 		unset ARCH
 		mkdir ${S}/tmp
 		make -C ${ROOT}/usr/src/linux SUBDIRS=${S} \
-			MODVERDIR=${S}/tmp modules
+			MODVERDIR=${S}/tmp modules || die "Module compilation failed"
 	else
 		make -C ${ROOT}/usr/src/linux SUBDIRS=${S} \
-			modules
+			modules || die "Module compilation failed"
 	fi
 }
 
