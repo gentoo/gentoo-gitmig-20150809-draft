@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.3_rc2.ebuild,v 1.6 2004/04/09 14:25:26 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.3_rc2.ebuild,v 1.7 2004/04/26 14:26:48 agriffis Exp $
 
 IUSE="gpm zlib ssl ipv6 X nls lua"
 
@@ -59,7 +59,7 @@ src_compile() {
 		`use_with ssl openssl` \
 		`use_with X x` \
 		`use_enable ipv6` \
-		`use_with lua`
+		`use_with lua` || die "econf failed"
 
 	emake || die "compile problem"
 }

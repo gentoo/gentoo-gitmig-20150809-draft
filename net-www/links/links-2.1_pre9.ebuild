@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre9.ebuild,v 1.8 2003/10/29 09:59:18 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre9.ebuild,v 1.9 2004/04/26 14:27:38 agriffis Exp $
 
 IUSE="ssl java png X gpm tiff fbcon svga jpeg"
 
@@ -86,7 +86,7 @@ src_compile (){
 	# 'sys-libs/gpm' is compiled on your system, you'll compile links
 	# with gpm support ...
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "make failed"
 }
 

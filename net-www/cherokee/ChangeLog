@@ -1,6 +1,9 @@
 # ChangeLog for net-www/cherokee
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.17 2004/04/17 22:22:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.18 2004/04/26 14:26:00 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> cherokee-0.4.0.ebuild:
+  Add die following econf for bug 48950
 
   17 Apr 2004; Jason Wever <weeve@gentoo.org> cherokee-0.4.5.ebuild:
   Added ~sparc keyword.

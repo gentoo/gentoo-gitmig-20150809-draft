@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre14.ebuild,v 1.2 2003/12/09 07:26:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre14.ebuild,v 1.3 2004/04/26 14:27:38 agriffis Exp $
 
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg"
 
