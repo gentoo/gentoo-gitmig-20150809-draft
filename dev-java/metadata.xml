@@ -6,12 +6,16 @@
 		Java programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-java enthält Bibliotheken und Werkzeuge für die 
+		Die Kategorie dev-java enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die 
 		Programmiersprache Java.
 	</longdescription>
 	<longdescription lang="fi">
-		Kategoria dev-java sisältää kirjastoja ja työkaluja 
-		Java-ohjelmointikielen hyödyntämiseen.
+		Kategoria dev-java sisÃ¤ltÃ¤Ã¤ kirjastoja ja tyÃ¶kaluja 
+		Java-ohjelmointikielen hyÃ¶dyntÃ¤miseen.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-java contiene librerias y utilidades para el lenguaje
+		de programación Java.
 	</longdescription>
 </catmetadata>
 
