@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.4 2004/03/30 02:39:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.5 2004/04/03 14:51:23 aliz Exp $
+
+  03 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> qemacs-0.3.1.ebuild:
+  Adding amd64 keyword, closing #46659.
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> qemacs-0.3.1.ebuild:
   inherit eutils for epatch; tidy; fix IUSE
