@@ -1,6 +1,6 @@
 # ChangeLog for sys-boot/quik
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.2 2003/12/09 08:55:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.3 2004/03/01 20:05:24 aliz Exp $
 
 *quik-2.0.1.0-r3 (08 Dec 2003)
 
@@ -17,7 +17,7 @@
   Added 2.0.1k, which uses completely different patches. It's currently
   package.masked, due to needing testing, but it should compile on gcc 3.x now
 
-*quik-2.0.1.0-r3  (04 Feb 2003)
+*quik-2.0.1.0-r3 (04 Feb 2003)
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> quik-2.0.1.0-r3.ebuild :
   This is definitely not for mips.
@@ -25,7 +25,7 @@
   04 Feb 2003; Jon Nall <nall@gentoo.org> files/quik-2.0.1.0-fclose-bug.patch :
   fixed patch to avoid SIGSEGV. this closes bug #14817
 
-*quik-2.0.1.0-r2  (28 Jan 2003)
+*quik-2.0.1.0-r2 (28 Jan 2003)
   
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> quik-2.0.1.0-r2.ebuild :
   This is definitely not for mips.
@@ -33,7 +33,7 @@
   28 Jan 2003; Jon Nall <nall@gentoo.org> quik-2.0.1.0-r2.ebuild :
   fixed to work with gcc-3.2.1 (fixed gentoo bug #14655)
   
-*quik-2.0.1.0-r1  (Wed Apr 24 10:34:12 2002 CEST)
+*quik-2.0.1.0-r1 (24 Apr 2002)
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> quik-2.0.1.0-r1.ebuild :
   This is definitely not for mips.
