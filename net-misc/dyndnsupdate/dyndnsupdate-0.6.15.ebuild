@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/dyndnsupdate-0.6.15.ebuild,v 1.4 2004/06/24 23:42:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/dyndnsupdate-0.6.15.ebuild,v 1.5 2004/07/03 02:26:48 seemant Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install() {
 	dobin dyndnsupdate
-	dodir /var/dyndnsupdate
+	keepdir /var/dyndnsupdate
 	doman man/dyndnsupdate.8.gz
 	dodoc ChangeLog INSTALL README
 }
