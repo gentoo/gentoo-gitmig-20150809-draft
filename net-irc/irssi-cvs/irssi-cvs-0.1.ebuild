@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.1.ebuild,v 1.4 2003/09/14 18:09:30 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.1.ebuild,v 1.5 2003/11/21 19:53:56 zul Exp $
 
 IUSE="nls ipv6 perl ssl"
 
@@ -83,7 +83,6 @@ src_install() {
 	)
 
 	make DESTDIR=${D} \
-		PREFIX=${D}/usr \
 		gnulocaledir=${D}/usr/share/locale \
 		${myflags} \
 		install || die

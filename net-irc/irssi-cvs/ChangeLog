@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.2 2003/09/14 18:09:30 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.3 2003/11/21 19:53:56 zul Exp $
+
+  21 Nov 2003; Chuck Short <zul@gentoo.org> irssi-cvs-0.1.ebuild:
+  Removed PREFIX, closes #32657.
 
 *irssi-cvs-0.1 (14 Sep 2003)
 
