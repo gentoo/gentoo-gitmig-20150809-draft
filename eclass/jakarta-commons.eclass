@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.8 2003/12/30 19:19:53 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.9 2004/01/14 03:58:20 strider Exp $
 
 inherit base java-pkg
 ECLASS=jakarta-commons
@@ -13,7 +13,7 @@ HOMEPAGE="http://jakarta.apache.org/"
 # deps on the build tools
 DEPEND="$DEPEND
         >=virtual/jdk-1.3
-        >=ant-1.4
+        >=dev-java/ant-1.4
         >=dev-java/log4j-1.2
         junit? ( >=dev-java/junit-3.7 )"
 
