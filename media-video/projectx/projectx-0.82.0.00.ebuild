@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.0.00.ebuild,v 1.3 2005/03/26 16:58:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.0.00.ebuild,v 1.4 2005/04/02 21:57:22 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -16,10 +16,11 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	jikes? ( dev-java/jikes )"
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/commons-net
-	dev-java/oro"
+	=dev-java/jakarta-oro-2.0*"
 
 IUSE="doc jikes source"
 S="${WORKDIR}/${MY_P}"
@@ -43,7 +44,7 @@ src_install() {
 
 	# generate a startup script
 	echo "#!/bin/sh" > ${PN}
-	echo "\$(java-config -J) -cp \$(java-config -p projectx,oro) net.sourceforge.dvb.projectx.common.X \"\$@\"" >> ${PN}
+	echo "\$(java-config -J) -cp \$(java-config -p projectx,jakarta-oro-2.0) net.sourceforge.dvb.projectx.common.X \"\$@\"" >> ${PN}
 
 	dobin ${PN}
 

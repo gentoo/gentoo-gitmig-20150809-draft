@@ -1,6 +1,9 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.9 2005/03/26 16:58:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.10 2005/04/02 21:57:22 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> projectx-0.82.0.00.ebuild:
+  moved from dev-java/oro to dev-java/jakarta-oro dependency.
 
   26 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> projectx-0.81.7.ebuild,
   projectx-0.82.0.00.ebuild:
