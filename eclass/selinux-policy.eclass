@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.3 2003/07/30 02:13:11 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.4 2003/08/02 03:18:53 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -17,8 +17,7 @@ S="${WORKDIR}/policy"
 
 IUSE=""
 
-newrdepend sys-apps/selinux-small
-newrdepend sec-policy/selinux-base-policy
+newrdepend "sys-apps/selinux-small >=sec-policy/selinux-base-policy-20030729"
 
 [ -z ${POLICYDIR} ] && POLICYDIR="/etc/security/selinux/src/policy"
 
