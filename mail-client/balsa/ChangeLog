@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/balsa
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.16 2004/12/12 01:09:40 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.17 2005/03/26 04:23:12 allanonjl Exp $
+
+*balsa-2.2.6 (25 Mar 2005)
+
+  25 Mar 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml,
+  +balsa-2.2.6.ebuild:
+  Updated ebuild that fix #77938 and #57200. sparc and alpha support was dropped
+  because gmime, a required dep is not supported on those archs. Bugs were filed
+  with those archs. Updated metadata that included myself as maintainer.
 
   12 Dec 2004; Daniel Black <dragonheart@gentoo.org> -balsa-2.0.15-r1.ebuild:
   remove balsa-2.0.15-r1 in order to remove old gpgme dependancies. bug #72620

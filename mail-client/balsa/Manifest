@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 caed577f4b9ed8cb3cb26031946a76e5 ChangeLog 10763
-MD5 1f669f143c970c9a96af02781e144fd1 balsa-2.0.15-r2.ebuild 1801
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 2caf7079880bdff6322ea1aae3e564bc balsa-1.4.3.ebuild 1694
-MD5 aa4090173ee51cb5766ef1b3a6d6f379 files/digest-balsa-2.0.15-r2 66
+MD5 3d8ea268bc011e284d19acc46e831802 balsa-2.0.15-r2.ebuild 1804
+MD5 bf3cdd9642e9f0df4c0e415d51b0caeb balsa-2.2.6.ebuild 1434
+MD5 d4f6dbc31e378077014bb877a6be7feb balsa-1.4.3.ebuild 1700
+MD5 d79c6f55c20933a41020ab38ce232db7 ChangeLog 11118
+MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
 MD5 6214786af3a3095a1e721302f10228f2 files/gtk+2.4-2.patch 1542
-MD5 1a6b22403c4f66fbbbd6940c7cc31dca files/balsa-gtk+-2.4-deprecation-fix.patch 2848
 MD5 7640c6a66bb87af1486164581e95296d files/balsa-1.4.0-gentoo.diff 830
+MD5 1a6b22403c4f66fbbbd6940c7cc31dca files/balsa-gtk+-2.4-deprecation-fix.patch 2848
 MD5 92455a1d3e62f5727b37d43f60acdf12 files/digest-balsa-1.4.3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBu5pcmdTrptrqvGERAoLBAJ0dOoSjZe1MxU/+NFCUuYqiBLGTNwCZAef0
-thj7TZfZtnI6rR5wtvUh9+k=
-=GB5m
------END PGP SIGNATURE-----
+MD5 6bad789bbe40ec51339b6c85735d88e5 files/digest-balsa-2.2.6 65
+MD5 aa4090173ee51cb5766ef1b3a6d6f379 files/digest-balsa-2.0.15-r2 66
