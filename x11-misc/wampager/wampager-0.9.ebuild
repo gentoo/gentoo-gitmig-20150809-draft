@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Gontran Zepeda <gontran@gontran.net>
-# Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/wampager-0.9.ebuild,v 1.2 2002/07/08 21:31:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/wampager-0.9.ebuild,v 1.3 2002/07/11 06:30:57 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Pager for Waimea."

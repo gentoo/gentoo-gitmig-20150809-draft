@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Chris Davies <c.davies@cdavies.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.5.12.ebuild,v 1.2 2002/07/08 21:31:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.5.12.ebuild,v 1.3 2002/07/11 06:30:58 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gesture/Handwriting recognition engine for X"

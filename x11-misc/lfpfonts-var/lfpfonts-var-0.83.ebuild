@@ -1,8 +1,6 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Aron Griffis <agriffis@gentoo.org>
-# Maintainer: Aron Griffis
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-var/lfpfonts-var-0.83.ebuild,v 1.2 2002/07/08 21:31:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-var/lfpfonts-var-0.83.ebuild,v 1.3 2002/07/11 06:30:57 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Linux Font Project variable-width fonts"

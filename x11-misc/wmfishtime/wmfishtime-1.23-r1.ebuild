@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmfishtime/wmfishtime-1.23-r1.ebuild,v 1.4 2002/07/08 21:31:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmfishtime/wmfishtime-1.23-r1.ebuild,v 1.5 2002/07/11 06:30:58 drobbins Exp $
 
 # to make this work in KDE, run it with the -b option :)
 DESCRIPTION="A fun clock applet for your desktop featuring swimming fish"

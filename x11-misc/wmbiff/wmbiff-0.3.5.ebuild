@@ -1,7 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# Maintainer: Vitaly Kushneriuk<vitaly@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbiff/wmbiff-0.3.5.ebuild,v 1.4 2002/07/08 21:31:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbiff/wmbiff-0.3.5.ebuild,v 1.5 2002/07/11 06:30:58 drobbins Exp $
 
 S=${WORKDIR}/${P}/wmbiff
 

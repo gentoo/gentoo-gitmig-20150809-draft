@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Michael Gayeski <gayeski@cae.wisc.edu>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbattery/wmbattery-1.2.1-r1.ebuild,v 1.3 2002/07/08 21:31:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbattery/wmbattery-1.2.1-r1.ebuild,v 1.4 2002/07/11 06:30:57 drobbins Exp $
 
 S=${WORKDIR}/wmbattery
 DESCRIPTION="A dockable app to report APM battery stats."

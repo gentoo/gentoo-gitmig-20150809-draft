@@ -1,7 +1,6 @@
 # Copyright 2002 Robin Cull
 # Distributed under the terms of the GNU General Public License v2
-# Author: Robin Cull <robin@digitalevacuation.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gklmsensors/gklmsensors-0.1.ebuild,v 1.2 2002/07/08 21:31:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gklmsensors/gklmsensors-0.1.ebuild,v 1.3 2002/07/11 06:30:57 drobbins Exp $
 
 S=${WORKDIR}/gklmsensors
 DESCRIPTION="A GKrellm plugin for monitoring lm_sensors"

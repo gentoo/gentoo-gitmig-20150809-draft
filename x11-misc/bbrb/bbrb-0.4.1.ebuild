@@ -1,7 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# Author: Stacy Keast <slik@telusplanet.net>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/bbrb-0.4.1.ebuild,v 1.5 2002/07/08 21:31:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/bbrb-0.4.1.ebuild,v 1.6 2002/07/11 06:30:57 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Background manager for blackbox/fluxbox/openbox"

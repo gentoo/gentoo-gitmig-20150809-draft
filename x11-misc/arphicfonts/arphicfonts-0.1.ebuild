@@ -1,6 +1,5 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Joshua Pollak <josh@offthehill.org>
 #/space/gentoo/cvsroot/gentoo-x86/x11-misc/arphicfonts/arphicfonts.ebuild
 
 DESCRIPTION="Arphic Fonts"
