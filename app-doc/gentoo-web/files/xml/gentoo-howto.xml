@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<!-- $Id: gentoo-howto.xml,v 1.15 2001/06/13 20:45:26 grant Exp $ -->
+<!-- $Id: gentoo-howto.xml,v 1.16 2001/08/06 04:35:39 drobbins Exp $ -->
 
 <guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
@@ -216,7 +216,7 @@ variable settings. The variables you can set are:</p>
 <p>2. ebuild Functions</p>
 <p>There are a number of different functions that you can define in ebuild files that control the building and installation process of your package.</p>
 <table>
-<tr><ti><c>src_unpack</c></ti><ti>Use this function to unpack your sources and apply patches, and run autoconf/automake/etc. if necessary. By default, unpacks the packages in <c>${A}</c> and applies <c>${PF}-gentoo.diff</c>. The default starting directory is <c>${BUILDDIR}</c>.</ti></tr>
+<tr><ti><c>src_unpack</c></ti><ti>Use this function to unpack your sources and apply patches, and run autoconf/automake/etc. if necessary. By default, unpacks the packages in <c>${A}</c> and applies <c>${PF}-gentoo.diff</c>. The default starting directory is <c>${WORKDIR}</c>.</ti></tr>
 <tr><ti><c>src_compile</c></ti><ti>Use this function to configure and build the package. Default starting directory is <c>${S}</c>.</ti></tr>
 <tr><ti><c>src_install</c></ti><ti>Use this function install the package to an image in <c>${D}</c>. If your package uses automake, you can do this simply with <c>make DESTDIR=${D} install</c>. <emph>Make sure your package installs all its files using <c>${D}</c> as the root!</emph></ti></tr>
 <tr><ti><c>pkg_preinst</c></ti><ti>The commands in this function are run just prior to merging a package image into the filesystem.</ti></tr>
