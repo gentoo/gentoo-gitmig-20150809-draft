@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.20 2005/01/02 06:21:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.21 2005/01/12 01:52:47 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -11,10 +11,10 @@ ECLASS=toolchain-binutils
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_prerm
 
-export CTARGET="${CTARGET:-${CHOST}}"
+export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} = ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET="${CATEGORY/cross-}"
+		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
 
@@ -28,7 +28,7 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	SRC_URI="${SRC_URI} mirror://gentoo/${P}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-IUSE="nls bootstrap build multitarget uclibc multislot"
+IUSE="nls multitarget uclibc multislot test"
 if use multislot ; then
 	SLOT="${CTARGET}-${PV}"
 elif [[ ${CTARGET} != ${CHOST} ]] ; then
@@ -37,16 +37,17 @@ else
 	SLOT="0"
 fi
 
-DEPEND="virtual/libc
-	nls? ( sys-devel/gettext )
-	>=sys-devel/binutils-config-1.3
-	!build? ( !bootstrap? ( dev-lang/perl ) )"
+RDEPEND="virtual/libc
+	>=sys-devel/binutils-config-1.3"
+DEPEND="${RDEPEND}
+	test? ( dev-util/dejagnu )
+	nls? ( sys-devel/gettext )"
 
-LIBPATH="/usr/$(get_libdir)/binutils/${CTARGET}/${PV}"
-INCPATH="${LIBPATH}/include"
-BINPATH="/usr/${CTARGET}/binutils-bin/${PV}"
-DATAPATH="/usr/share/binutils-data/${CTARGET}/${PV}"
-MY_BUILDDIR="${WORKDIR}/build"
+LIBPATH=/usr/"$(get_libdir)"/binutils/${CTARGET}/${PV}
+INCPATH=${LIBPATH}/include
+BINPATH=/usr/${CTARGET}/binutils-bin/${PV}
+DATAPATH=/usr/share/binutils-data/${CTARGET}/${PV}
+MY_BUILDDIR=${WORKDIR}/build
 
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 
@@ -64,7 +65,6 @@ apply_binutils_updates() {
 	elif [[ ${PORTAGE_LIBC} = "uClibc" ]] ; then
 		die "sorry, but this binutils doesn't yet support uClibc :("
 	fi
-	
 
 	# Fix po Makefile generators
 	sed -i \
@@ -109,21 +109,20 @@ toolchain-binutils_src_compile() {
 	make headers -C bfd || die "headers-bfd"
 	emake all || die "emake"
 
-	if ! use build ; then
-		if ! has noinfo ${FEATURES} ; then
-			# Make the info pages (makeinfo included with gcc is used)
+	# only build info pages if we user wants them, and if 
+	# we have makeinfo (may not exist when we bootstrap)
+	if ! has noinfo ${FEATURES} ; then
+		if type -p makeinfo ; then
 			make info || die "info"
 		fi
-		if ! use bootstrap && ! has noman ${FEATURES} ; then
-			cd "${S}"
-			# Nuke the manpages to recreate them (only use this if we have perl)
-			find . -name '*.1' -exec rm -f {} \; || :
-		fi
 	fi
+	# we nuke the manpages when we're left with junk 
+	# (like when we bootstrap, no perl -> no manpages)
+	find . -name '*.1' -a -size 0 | xargs rm -f
 }
 
 toolchain-binutils_src_test() {
-	emake check
+	make check || die "check failed :("
 }
 
 toolchain-binutils_src_install() {
@@ -183,7 +182,7 @@ EOF
 	newins env.d ${CTARGET}-${PV}
 
 	# Handle documentation
-	if ! use build && ! is_cross ; then
+	if ! is_cross ; then
 		cd "${S}"
 		dodoc README
 		docinto bfd
