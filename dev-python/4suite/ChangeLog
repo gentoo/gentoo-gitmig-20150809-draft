@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.3 2004/03/18 22:02:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.4 2004/03/23 09:51:42 liquidx Exp $
+
+  23 Mar 2004; Alastair Tse <liquidx@gentoo.org> 4suite-0.11.1.ebuild,
+  4suite-1.0_alpha3.ebuild:
+  remove RDEPEND (#45343)
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> 4suite-1.0_alpha3.ebuild:
   Stable on sparc.

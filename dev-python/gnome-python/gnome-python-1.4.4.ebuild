@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.7 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.8 2004/03/23 09:54:20 liquidx Exp $
 
 inherit gnome.org
 
@@ -21,7 +21,6 @@ DEPEND="virtual/python
 		<gnome-base/libglade-1.90.0
 		<gnome-base/control-center-1.90.0 )
 	opengl? ( <x11-libs/gtkglarea-1.99.0 )"
-RDEPEND="${RDEPEND}"
 
 src_compile() {
 	if [ -n "`use gnome`" ]

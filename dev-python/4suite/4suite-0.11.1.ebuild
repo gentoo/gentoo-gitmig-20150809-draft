@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-0.11.1.ebuild,v 1.1 2004/01/18 11:02:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-0.11.1.ebuild,v 1.2 2004/03/23 09:51:42 liquidx Exp $
 
 inherit distutils
 
@@ -12,7 +12,6 @@ HOMEPAGE="http://www.4suite.org/"
 
 DEPEND="virtual/python
 	>=dev-python/pyxml-0.6.5"
-RDEPEND="${RDEPEND}"
 
 SLOT="0"
 KEYWORDS="x86 sparc alpha ~ppc"
