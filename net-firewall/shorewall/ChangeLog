@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.27 2003/12/06 23:24:37 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.28 2004/02/11 20:23:58 mholzer Exp $
+
+*shorewall-1.4.10a (11 Feb 2004)
+
+  11 Feb 2004; Martin Holzer <mholzer@gentoo.org> shorewall-1.4.10a.ebuild:
+  Version bumped. Closes 41239.
 
   06 Dec 2003; Jason Wever <weeve@gentoo.org> shorewall-1.4.7c.ebuild:
   Marked stable on sparc.
