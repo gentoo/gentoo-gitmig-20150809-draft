@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grub
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.21 2003/04/11 18:12:13 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.22 2003/07/27 18:46:41 tester Exp $
+
+  27 Jul 2003; Olivier Crete <tester@gentoo.org> grub-0.93.20030118.ebuild:
+  Added support for static building
 
   24 Jan 2002; <woodchip@gentoo.org> *.ebuild : Reorder mount-boot.eclass
   function, clean some fluff.
