@@ -44,8 +44,7 @@ net-www/netscape-plugger
 ~sys-apps/lilo
 ~sys-apps/grub 
 
-~x11-libs/qt-3.0.4
-~x11-libs/qt-3.0.4.1
+=x11-libs/qt-3.0.3
 
 *app-arch/ncompress
 *sys-apps/baselayout
