@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/kdiff3
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.1 2003/01/30 16:02:30 danarmak Exp $
+
+*kdiff3-0.931 (30 Jan 2003)
+
+  30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  kdiff3 is a KDE-based gui frontend for diff3 from diffutils. It can compare
+  upto three files at once and generate or merge appropriate diffs. Closes
+  bug #10676. Original submission by Dylan Carlson.
