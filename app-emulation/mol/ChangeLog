@@ -1,10 +1,13 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.32 2004/03/07 14:45:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.33 2004/03/08 18:39:08 pylon Exp $
+
+  08 Mar 2004; Lars Weiler <pylon@gentoo.org> mol-0.9.70_rc2-r1.ebuild:
+  Local USE-flag for the sheep-net-driver
 
 *mol-0.9.70_rc2-r1 (07 Mar 2004)
 
-  07 Mar 2004; Lars Weiler <pylon@gentoo.org> :mol-0.9.70_rc2-r1.ebuild
+  07 Mar 2004; Lars Weiler <pylon@gentoo.org> mol-0.9.70_rc2-r1.ebuild:
   Some updates from upstream (e.g. MOL acceleration for 10.3). Furthermore fixes
   for the iBook G4.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70_rc2-r1.ebuild,v 1.1 2004/03/07 14:45:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70_rc2-r1.ebuild,v 1.2 2004/03/08 18:39:08 pylon Exp $
 
 inherit flag-o-matic
 
@@ -13,12 +13,11 @@ DEPEND=""
 RDEPEND="net-misc/dhcp
 	net-firewall/iptables
 	alsa? ( virtual/alsa )
-	esd? ( media-sound/esound )
 	X? ( virtual/x11 )"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc ~ppc64 -x86 -sparc -alpha -mips"
-IUSE="alsa oss debug fbcon X oldworld"
+IUSE="alsa oss fbcon X oldworld sheep debug"
 
 pkg_setup() {
 	echo
@@ -56,7 +55,7 @@ src_compile() {
 	use debug    && sed -i "s:# CONFIG_DEBUGGER is not set:CONFIG_DEBUGGER=y:" .config
 	use oss      || sed -i "s:CONFIG_OSS=y:# CONFIG_OSS is not set:" .config
 	use oldworld || sed -i "s:CONFIG_OLDWORLD=y:# CONFIG_OLDWORLD is not set:" .config
-	use oldworld || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config
+	use sheep    || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config
 	use X        || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config
 	use fbcon    || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config
 
