@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.7 2005/01/01 15:02:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.8 2005/02/06 02:00:33 ka0ttic Exp $
 
-inherit eutils
+inherit eutils bash-completion
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}
@@ -54,4 +54,5 @@ src_install() {
 		install || die "make install failed"
 
 	dodoc README figfont.txt || die "dodoc failed"
+	dobashcompletion ${FILESDIR}/figlet.bashcomp
 }
