@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f1ef238076dedd0e1e1597be463ddfd beep-media-player-0.9.7-r4.ebuild 2614
+MD5 086309aae9613fcd1284e571a6319a0a ChangeLog 8891
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-MD5 bbe4488137a11d91075766675d428bc4 ChangeLog 8781
+MD5 58aa08f57b9bb3239fce387c6867e6f0 beep-media-player-0.9.7-r4.ebuild 2613
 MD5 77ec9fd823a612d040e045a34367773c beep-media-player-0.9.7-r2.ebuild 2409
 MD5 40f77773f9bce4d33ac1687f5e885503 beep-media-player-0.9.7-r3.ebuild 2522
-MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
-MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r2 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r4 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r3 62
-MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
-MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
-MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
 MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r2 62
+MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r3 62
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r4 62
+MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
+MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
+MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
+MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCSvzOp5vW4rUFj5oRAl1sAJ9DiHP1XOwvmH0tkRKtL0GNxEgCFgCfWQEj
-ag5bu4XOYaa0CvXPSp409EE=
-=W49I
+iD8DBQFCS/lVKRy60XGEcJIRAtlgAKCQ0RYyIYBb1o0G21vt1cMoiqIQJQCcDCrv
+5tJxm2awl4+yofp+qdDzUyY=
+=ygPZ
 -----END PGP SIGNATURE-----
