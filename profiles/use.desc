@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.163 2004/06/07 13:54:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.164 2004/06/11 21:53:15 mr_bones_ Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -16,7 +16,7 @@ altivec - Adds support for optimizations for G4 and G5/ppc970 processors
 apache2 - Chooses Apache2 support when a package supports both Apache1 and Apache2
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon
-atlas - Adds support for atlas instead of blas in dev-lang/R 
+atlas - Adds support for atlas instead of blas in dev-lang/R
 audiofile - Adds support for libaudiofile where applicable
 avi - Adds Win32 AVI support and also adds avifile (Library for avi) support
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
@@ -56,7 +56,7 @@ fbcon - Adds framebuffer support for the console, via the kernel
 fdftk - Add supports for Adobe's FDF toolkit.
 fftw - Use FFTW library for computing Fourier transforms
 firebird - Adds support for the Firebird relational database
-flac - Adds support for the flac audio codec 
+flac - Adds support for the flac audio codec
 flash - Adds support for creating flash files using Ming
 foomaticdb - Adds support for the foomatic printing driver database
 freetds - Adds support for the TDS protocol to connect to MSSQL/Sybase databases
@@ -105,7 +105,7 @@ lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 leim - Adds input methods support to Emacs
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
-libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
+libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric
 libwww - Adds libwww support (General purpose WEB API)
 lirc - Adds support for lirc (Linux's Infra-Red Remote Control)
 livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livecd building.
