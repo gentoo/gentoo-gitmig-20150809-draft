@@ -4,6 +4,9 @@
 
 *speex-1.0_beta3 (12 Nov 2002)
 
+  15 nov 2002; Nick Hadaway <raker@gentoo.org> speex-1.0_beta3.ebuild :
+  Added ppc
+
   12 Nov 2002; Matt Keadle <mkeadle@gentoo.org> speex-1.0_beta3.ebuild
   files/digest-speex-1.0_beta3
 
