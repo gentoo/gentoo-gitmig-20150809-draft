@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hashcash
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.10 2005/02/04 23:13:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.11 2005/02/04 23:47:02 blubb Exp $
+
+  05 Feb 2005; Simon Stelling <blubb@gentoo.org> hashcash-1.16.ebuild:
+  added ~amd64
 
 *hashcash-1.16 (05 Feb 2005)
 

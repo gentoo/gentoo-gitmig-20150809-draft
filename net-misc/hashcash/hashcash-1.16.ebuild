@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/hashcash-1.16.ebuild,v 1.1 2005/02/04 23:13:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/hashcash-1.16.ebuild,v 1.2 2005/02/04 23:47:02 blubb Exp $
 
 IUSE=""
 DESCRIPTION="Utility to generate hashcash tokens"
@@ -9,7 +9,7 @@ SRC_URI="http://www.hashcash.org/source/${P}.tgz"
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="virtual/libc"
 RDEPEND=""

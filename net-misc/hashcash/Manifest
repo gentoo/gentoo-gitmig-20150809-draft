@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b3474d44d83cee94df59a936a43b4e3 ChangeLog 1243
-MD5 3d4ff62a799a78821c08196a1581cf55 hashcash-1.02.ebuild 750
-MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
 MD5 dce3c44b192e5b062dec4cedd1dbe0f5 hashcash-0.27.ebuild 772
-MD5 4df1819ff88c650697d68a702df223da hashcash-1.16.ebuild 751
+MD5 1f4d985588ca3c1af433d4c8271a52c5 ChangeLog 1329
+MD5 3d4ff62a799a78821c08196a1581cf55 hashcash-1.02.ebuild 750
 MD5 3e535ae2e91ba63f40454ea02f6458f3 hashcash-1.13.ebuild 751
-MD5 b8945440c5d5fc363304c85279d43771 files/digest-hashcash-1.13 62
-MD5 574981d65f92a3870bb9b254ebcf31d5 files/digest-hashcash-1.02 62
+MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
+MD5 d2f9388d5d5b31fd96de828a5c0a87d1 hashcash-1.16.ebuild 757
 MD5 16b3bf4afa6be029dcb2f921e988f698 files/digest-hashcash-0.27 61
+MD5 574981d65f92a3870bb9b254ebcf31d5 files/digest-hashcash-1.02 62
+MD5 b8945440c5d5fc363304c85279d43771 files/digest-hashcash-1.13 62
 MD5 7feef9e0dbfa8622b9c284116e4bbbc6 files/digest-hashcash-1.16 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCBAHMugEuf3OQ0akRAvsmAJ9TNTMWDCwfRHdYCbaevTkwzdlJhACeON7Y
-o76CkOQK6aVwEZJs+rxaxh0=
-=RQRU
------END PGP SIGNATURE-----
