@@ -1,13 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.2 2002/08/16 03:01:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.3 2002/08/29 23:28:08 seemant Exp $
+
+MY_P=${P/_beta/-beta}
+S=${WORKDIR}/${MY_P}
+HOMEPAGE="http://www.privoxy.org"
+DESCRIPTION="A web proxy with advanced filtering capabilities for protecting privacy against internet junk."
+SRC_URI="mirror://sourceforge/ijbswa/${MY_P}-src.tar.gz"
+
+DEPEND="virtual/textbrowser"
 
 SLOT="2"
 KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
-HOMEPAGE="http://www.privoxy.org"
-DESCRIPTION="A web proxy with advanced filtering capabilities for protecting privacy against internet junk."
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/ijbswa/privoxy-2.9.14-beta-src.tar.gz"
 
 pkg_setup() {
 
@@ -22,22 +27,18 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack privoxy-2.9.14-beta-src.tar.gz
+	unpack ${A}
 	patch -p0 < ${FILESDIR}/privoxy-gentoo.diff
-	cd ${WORKDIR}/privoxy-2.9.14-beta
+
+	cd ${S}
 	autoheader || die "autoheader failed"
 	autoconf || die "autoconf failed"
 }
 
 src_compile() {
-	cd ${WORKDIR}/privoxy-2.9.14-beta
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc/privoxy \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf \
+		--sysconfdir=/etc/privoxy || die "./configure failed"
 
 	emake || die "make failed."
 
