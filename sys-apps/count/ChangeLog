@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/count
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/count/ChangeLog,v 1.1 2005/01/07 23:09:57 stuart Exp $
+
+*count-1.20 (07 Jan 2005)
+
+  07 Jan 2005; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +count-1.20.ebuild:
+  Initial version; thanks to Georg Sauthoff <g_sauthoff@web.de>; see bug #76548
+
