@@ -37,7 +37,7 @@
 *~sys-devel/binutils-2.12.90.0.7
 *<sys-devel/gcc-3.2_pre
 *=sys-libs/glibc-2.2.5-r8
-=sys-kernel/linux-headers-2.4.18
+virtua/os-headers
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 

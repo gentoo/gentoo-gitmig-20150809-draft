@@ -42,7 +42,7 @@ sys-apps/ntfsprogs
 *>=sys-devel/binutils-2.13.90.0.4
 *=sys-devel/gcc-2.95.3-r8
 *=sys-libs/glibc-2.2.5-r8
-=sys-kernel/linux-headers-2.4.18
+virtual/os-headers
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 

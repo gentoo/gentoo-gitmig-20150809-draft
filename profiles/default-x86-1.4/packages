@@ -39,7 +39,7 @@
 *>=sys-libs/glibc-2.2.5
 #*>=sys-apps/module-init-utils-0.9.10-r5
 *virtual/modutils
-=sys-kernel/linux-headers-2.4.19
+virtual/os-headers
 >=app-admin/sysklogd-1.4.1
 *dev-lang/python
 
