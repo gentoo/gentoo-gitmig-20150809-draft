@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pydance-songs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/ChangeLog,v 1.8 2004/08/23 00:31:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/ChangeLog,v 1.9 2004/11/08 01:50:13 josejx Exp $
+
+  08 Nov 2004; Joseph Jezak <josejx@gentoo.org>
+  pydance-songs-20040410.ebuild:
+  Marked ppc stable.
 
   22 Aug 2004; Travis Tilley <lv@gentoo.org> pydance-songs-20040410.ebuild:
   added ~amd64 keyword
