@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.22 2004/04/27 14:00:57 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.23 2004/05/17 02:11:07 kloeri Exp $
+
+  17 May 2004; Bryan Østergaard <kloeri@gentoo.org> e2fsprogs-1.35.ebuild:
+  Add ~alpha.
 
   27 Apr 2004; Michael McCabe <randy@gentoo.org> e2fsprogs-1.35.ebuild:
   Marked stable on s390
