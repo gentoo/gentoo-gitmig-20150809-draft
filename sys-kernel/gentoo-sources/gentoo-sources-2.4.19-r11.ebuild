@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.17 2004/02/18 08:17:18 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r11.ebuild,v 1.1 2004/02/23 23:02:57 plasmaroo Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -35,7 +35,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://gentoo.lostlogicx.com/patches-${KV}.tar.bz2"
+	 http://gentoo.lostlogicx.com/patches-${KV/11/10}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc -amd64 -ia64"
 SLOT="${KV}"
 
@@ -46,7 +46,8 @@ src_unpack() {
 	cd linux-${KV}
 	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
 	patch -p1 < ${FILESDIR}/i810_drm.patch || die "i810_drm patch failed"
-	epatch ${FILESDIR}/do_brk_fix.patch
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() patch!"
+	epatch ${FILESDIR}/${PN}-2.4.20-munmap.patch || die "Failed to apply munmap patch!"
 	cd ..
 
 	cd ${KV}
