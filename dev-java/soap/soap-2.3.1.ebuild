@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1.ebuild,v 1.2 2004/10/16 17:36:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1.ebuild,v 1.3 2004/10/22 10:19:27 absinthe Exp $
 
 inherit java-pkg
 DESCRIPTION="Apache SOAP (Simple Object Access Protocol) is an implementation of the SOAP submission to W3C"
@@ -8,7 +8,7 @@ HOMEPAGE="http://ws.apache.org/soap/"
 SRC_URI="mirror://apache/ws/soap/version-${PV}/soap-src-${PV}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 DEPEND="virtual/jdk
 	dev-java/sun-javamail-bin

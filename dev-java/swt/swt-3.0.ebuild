@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.0.ebuild,v 1.2 2004/08/03 12:06:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.0.ebuild,v 1.3 2004/10/22 10:22:36 absinthe Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/downloads/drops/R-3.0-200406251208/swt-3.0-linux-gtk.zip"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=x11-libs/gtk+-2.2.4
 	mozilla? ( >=net-www/mozilla-1.5 )

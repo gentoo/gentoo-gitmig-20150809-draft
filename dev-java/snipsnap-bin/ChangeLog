@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/snipsnap-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/ChangeLog,v 1.6 2004/09/16 08:11:50 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/ChangeLog,v 1.7 2004/10/22 10:14:34 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  snipsnap-bin-1.0_beta1.ebuild:
+  Keywords ~amd64.
 
   16 Sep 2004; <SeJo@gentoo.org> snipsnap-bin-1.0_beta1.ebuild:
   stable ppc bug: 64154

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2.ebuild,v 1.3 2004/10/18 12:17:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2.ebuild,v 1.4 2004/10/22 10:24:18 absinthe Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://mercury.ccil.org/~cowan/XML/tagsoup/"
 SRC_URI="http://mercury.ccil.org/~cowan/XML/tagsoup/${P}-src.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.4
 		dev-java/ant"
