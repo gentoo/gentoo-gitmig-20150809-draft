@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.47 2004/10/13 13:31:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.48 2004/10/22 06:39:38 usata Exp $
+
+  22 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> aterm-0.4.2-r11.ebuild,
+  aterm-0.4.2-r7.ebuild, aterm-0.4.2-r9.ebuild:
+  Disabled append-flags on ppc-macos since Apple's binutils doesn't
+  understand -z flag; bug #68489.
 
   13 Oct 2004; Akinori Hattori <hattya@gentoo.org> aterm-0.4.2-r9.ebuild:
   add ~ia64, bug #66906.

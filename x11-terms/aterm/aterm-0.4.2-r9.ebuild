@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.18 2004/10/13 13:31:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.19 2004/10/22 06:39:38 usata Exp $
 
 inherit eutils
 inherit flag-o-matic
@@ -44,7 +44,10 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	append-ldflags -Wl,-z,now
+	# macos doesn't support -z flag
+	if ! ( use macos || use ppc-macos ) ; then
+		append-ldflags -Wl,-z,now
+	fi
 
 	# You can't --enable-big5 with aterm-0.4.2-ja.patch
 	# I think it's very bad thing but as nobody complains it
