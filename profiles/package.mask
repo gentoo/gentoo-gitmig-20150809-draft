@@ -31,10 +31,6 @@
 # the cvs of gift is broken
 >=net-p2p/gift-cvs-0.10.0
 
-# <rac@gentoo.org> (15 July 2003)
-# depends on vendordir perl
-=dev-perl/File-Spec-0.84-r1
-
 # <coredumb@gentoo.org> (14 July 2003)
 # Finally a php5 beta :)
 >=dev-php/php-5.0_beta1
@@ -84,15 +80,6 @@ media-plugins/xmms-aalsa
 # cjkcodecs replaces koreancodecs and possibly japanesecodecs
 dev-python/koreancodecs
 dev-python/japanesecodecs
-
-# <rac@gentoo.org> (24 Jun 2003)
-# proof of concept for the vendor directory changes made possible with
-# perl-5.8.0-r12
-=dev-perl/ExtUtils-MakeMaker-6.05-r6
-
-# <rac@gentoo.org> (24 Jun 2003)
-# very untested, changes @INC order
-=dev-lang/perl-5.8.0-r12
 
 # <rac@gentoo.org> (24 Jun 2003)
 # needs testing - fairly radical reconfiguring
