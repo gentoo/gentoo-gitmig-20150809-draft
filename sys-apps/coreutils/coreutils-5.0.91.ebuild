@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.3 2003/10/01 18:21:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.4 2003/10/06 15:23:00 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,8 +13,8 @@ SELINUX_PATCH="coreutils-5.0.91-selinux.patch.bz2"
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
-SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
-	ftp://alpha.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
+SRC_URI="mirror://gnu/coreutils/${P}.tar.bz2
+	mirror://gnu/coreutils/${P}.tar.bz2
 	mirror://coreutils/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
 	selinux? mirror://gentoo/${SELINUX_PATCH}"
