@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.3.ebuild,v 1.1 2004/04/10 12:19:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.3.ebuild,v 1.2 2004/04/10 23:30:00 dholm Exp $
 
 MY_P=mod_ruby-${PV}
 DESCRIPTION="Embeds the Ruby interpreter into Apache"
@@ -9,7 +9,7 @@ SRC_URI="http://modruby.net/archive/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 # 1.0.X -> stable branch; 1.1.Y -> development branch
-KEYWORDS="~alpha ~sparc ~x86"
+KEYWORDS="~alpha ~sparc ~x86 ~ppc"
 IUSE="apache2 doc"
 DEPEND=">=net-www/apache-1.3.3
 	virtual/ruby
