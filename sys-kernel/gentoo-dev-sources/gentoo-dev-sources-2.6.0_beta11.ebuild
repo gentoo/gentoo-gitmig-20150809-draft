@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta11.ebuild,v 1.2 2003/11/27 01:38:12 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta11.ebuild,v 1.3 2003/11/27 16:20:18 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -73,6 +73,16 @@ pkg_install() {
 
 pkg_postinst() {
 	kernel_pkg_postinst
+
+	if [ ! -h "/usr/src/linux-beta" ]
+	then
+		ln -sf /usr/src/linux-${KV} ${ROOT}/usr/src/linux-beta
+	fi
+
+	if [ ! -h "/usr/src/linux" ]
+	then
+		ln -sf /usr/src/linux-${KV} ${ROOT}/usr/src/linux
+	fi
 
 	echo
 	eerror "IMPORTANT:"
