@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.8 2004/05/12 12:52:24 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.9 2004/06/07 16:46:03 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -119,7 +119,7 @@ pkg_postinst() {
 	einfo "Now you can use /etc/init.d/ntp-client to set your time at"
 	einfo "boot while you can use /etc/init.d/ntpd to maintain your time"
 	einfo "while your machine runs"
-	if [ ! -z "$(grep notrust ${ROOT}/etc/ntp.conf)" ] ; then
+	if [ ! -z "$(egrep '^[^#].*notrust' ${ROOT}/etc/ntp.conf)" ] ; then
 		echo
 		eerror "The notrust option was found in your /etc/ntp.conf!"
 		ewarn "If your ntpd starts sending out weird responses,"

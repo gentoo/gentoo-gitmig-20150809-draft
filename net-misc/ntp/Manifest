@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 e0ae5f689fbd409af5dbe213e7add9f2 ChangeLog 6667
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
 MD5 cebf087569e05dbcd6e0b054ef1ecbfb ntp-4.1.2.ebuild 3189
-MD5 01b2c875ad1a8eae23b1ad59dbf7590c ntp-4.2.0-r2.ebuild 3627
+MD5 b0f73e0ab28667241767fa1196a04bc0 ntp-4.2.0-r2.ebuild 3638
 MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
 MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
 MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
@@ -25,7 +25,7 @@ MD5 ed4bd2ca8fb07ecb5c5e73d26fd0df0a files/digest-ntp-4.2.0-r2 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFAvTD9HTu7gpaalycRAmtdAJ9vCFwh2vPmGAhvx6xf0oZmJxIybQCfV0zL
-7MEbnMu1SEq2NYe0KXsCN18=
-=d6bn
+iD8DBQFAxJvVHTu7gpaalycRAtLeAKD7CMUiRwD3oS6FgMbzp9NIbmgbQwCgid+h
+Rk9dTldJNdB5cKRlSO5a0qU=
+=uyed
 -----END PGP SIGNATURE-----
