@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.6-r1.ebuild,v 1.10 2004/10/07 06:33:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.6-r1.ebuild,v 1.11 2004/11/08 00:57:33 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc sparc amd64 ppc64"
 IUSE=""
 
 DEPEND="media-sound/xmms
-	>=media-sound/madplay-0.14.2b-r2
+	media-libs/libmad
 	dev-util/pkgconfig"
 
 src_unpack() {
