@@ -1,4 +1,5 @@
-MD5 92a93950a79b6477632aaf8da184d0f3 mtx-1.2.17.ebuild 762
-MD5 6791e25c66f38fa8ee988a5ceef531c9 ChangeLog 954
+MD5 12896acd15ec31678be94e3c4f8d23fc ChangeLog 1052
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 024a7f08697e12b6635c3481c23e3b2b mtx-1.2.17.ebuild 784
+MD5 2f42eb93769abef92a356eaa6aad5f8e mtx-1.2.18.ebuild 778
 MD5 8832da25d461a2c902b1fc5076de53a4 files/digest-mtx-1.2.17 65
