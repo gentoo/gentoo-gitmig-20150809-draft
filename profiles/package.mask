@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3707 2005/03/10 22:41:54 leonardop Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3708 2005/03/10 23:31:36 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -943,12 +943,6 @@ sys-kernel/config-kernel
 # <axxo@gentoo.org> (07 Oct 2004)
 # work in progress
 =app-benchmarks/jmeter-2.0.1-r1
-
-# Jeremy Huddleston <eradicator@gentoo.org> (29 Sep 2004)
-# Backwards compatibility problems in the API... many libexif packages
-# result in this:
-# error: too few arguments to function `exif_entry_get_value'
-=media-libs/libexif-0.6.10
 
 # Heinrich Wendel <lanius@gentoo.org> (29 Sep 2004)
 # This Swig version breaks a lot of stuff, since it doesn't
