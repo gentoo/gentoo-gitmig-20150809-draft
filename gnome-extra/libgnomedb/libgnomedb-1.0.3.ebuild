@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.3.ebuild,v 1.2 2004/02/17 20:04:14 agriffis Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.3.ebuild,v 1.3 2004/02/21 04:03:52 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="Library for writing gnome database programs"
 HOMEPAGE="http://www.gnome-db.org/"
-SLOT="0"
+
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
+SLOT="0"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~ia64"
+IUSE="doc"
 
 RDEPEND=">=gnome-extra/libgda-1.0.0
 	>=x11-libs/gtk+-2.0
@@ -19,7 +19,6 @@ RDEPEND=">=gnome-extra/libgda-1.0.0
 	>=gnome-base/libbonoboui-2.0
 	>=gnome-base/gconf-2"
 # gtksourceview is maintained now, and configure checks it's presence
-
 DEPEND=">=dev-util/pkgconfig-0.8
 	>=dev-util/intltool-0.22
 	>=sys-devel/gettext-0.11
@@ -34,7 +33,6 @@ src_unpack() {
 }
 
 src_install() {
-
 	gnome2_src_install
 
 	# minor cosmetic fix to capplet icon
@@ -44,5 +42,4 @@ src_install() {
 		sed 's,Icon=gnome-db.png,Icon=libgnomedb/gnome-db.png,' ${capplet_link}.orig > ${capplet_link}
 		rm ${capplet_link}.orig
 	fi
-
 }
