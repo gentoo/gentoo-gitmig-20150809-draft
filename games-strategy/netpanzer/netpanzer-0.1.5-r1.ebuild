@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.5-r1.ebuild,v 1.2 2004/08/03 11:55:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.5-r1.ebuild,v 1.3 2004/08/04 00:41:57 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -29,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}/${PN}data-${DATAVERSION}/"
 	epatch "${FILESDIR}/physfs.patch"
-	./autogen.sh
+	./autogen.sh || die "autogen.sh failed"
 }
 
 src_compile() {
