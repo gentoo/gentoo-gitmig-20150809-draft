@@ -4,8 +4,10 @@ MD5 a9ce78a585e790431a7258ae1619fdc7 vcdimager-0.7.13.ebuild 1107
 MD5 32a56a17f20c0b847440e2a6858ecf03 vcdimager-0.7.14.ebuild 1107
 MD5 ee70d1f63aa6cc11899ca6c7a1932de0 vcdimager-0.7.15.ebuild 1034
 MD5 5cd83b4be4c92d7e42daf77286bce09b vcdimager-0.7.16.ebuild 1036
+MD5 78d59737eefca62e0a1c5e235c321715 vcdimager-0.7.17.ebuild 1037
 MD5 edf15bccde6065cacec70c1b6632b521 files/digest-vcdimager-0.7.12 68
 MD5 4bfefd16a0e58c3220ceb42d376faf96 files/digest-vcdimager-0.7.13 68
 MD5 05d0ac26ac23a665c4b3059f3cb3eb81 files/digest-vcdimager-0.7.14 68
 MD5 827551e61b59b4d445bcb7274c10665b files/digest-vcdimager-0.7.15 73
 MD5 51d10ff2c44237bb715680004a9d5259 files/digest-vcdimager-0.7.16 73
+MD5 04fb826d136b198afa9cb1e5b115a63b files/digest-vcdimager-0.7.17 73
