@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.6 2004/09/29 00:39:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.7 2004/09/30 18:07:22 geoman Exp $
+
+  30 Sep 2004; Stephen P. Becker <geoman@gentoo.org> vino-2.8.0.ebuild:
+  added ~mips keyword
 
   28 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> vino-2.8.0.ebuild:
   Keyworded ~sparc wrt #64135
