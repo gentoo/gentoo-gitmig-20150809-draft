@@ -1,12 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3.ebuild,v 1.5 2001/09/01 20:59:57 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3.ebuild,v 1.6 2001/09/02 02:06:24 woodchip Exp $
 
-#####################################################################################
-### NOTE: This ebuild is not compatible with rc6. It is an rc5 only ebuild        ###
-### Devs: If you bump the -rev on this, you must change profiles/default/packages ###
-#####################################################################################
+# NOTE: This ebuild is not compatible with rc6. It is an rc5 only ebuild #
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Replacement for inetd."
