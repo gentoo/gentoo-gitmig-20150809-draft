@@ -1,36 +1,30 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.1.ebuild,v 1.1 2003/12/09 08:12:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.1.ebuild,v 1.2 2003/12/14 06:10:20 seemant Exp $
 
 inherit mount-boot eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard Linux boot loader"
 SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/obsolete/${P}.tar.gz"
-#	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 
 SLOT="0"
 LICENSE="BSD GPL-2"
 KEYWORDS="-* x86"
 
-DEPEND="dev-lang/nasm
+DEPEND=">=sys-apps/sed-4
+	dev-lang/nasm
 	>=sys-devel/bin86-0.15.5"
 
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
-	unpack ${P}.tar.gz || die
+	unpack ${A}
 	cd ${S}
 
 	# Get all the loaders to install
-	cp Makefile Makefile.orig
-	sed -e 's:# $(BOOTS): $(BOOTS):' Makefile.orig > Makefile
-
-	# This bootlogo patch is borrowed from SuSE Linux.
-	# You should see Raphaël Quinet's (quinet@gamers.org) website,
-	# http://www.gamers.org/~quinet/lilo/index.html
-#	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
+	sed -i 's:# $(BOOTS): $(BOOTS):' Makefile
 }
 
 src_compile() {

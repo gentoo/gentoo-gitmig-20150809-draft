@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.6-r2.ebuild,v 1.1 2003/12/09 08:12:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.6-r2.ebuild,v 1.2 2003/12/14 06:10:20 seemant Exp $
 
 inherit mount-boot eutils
 
@@ -20,15 +20,6 @@ DEPEND="dev-lang/nasm
 
 PROVIDE="virtual/bootloader"
 
-
-src_unpack() {
-	unpack ${P}.tar.gz
-
-	# This bootlogo patch is borrowed from SuSE Linux.
-	# You should see Raphaël Quinet's (quinet@gamers.org) website,
-	# http://www.gamers.org/~quinet/lilo/index.html
-#	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
-}
 
 src_compile() {
 	emake CC="${CC:=gcc}" lilo || die

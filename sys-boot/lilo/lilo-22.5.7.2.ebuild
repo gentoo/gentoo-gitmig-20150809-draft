@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.7.2.ebuild,v 1.1 2003/12/09 08:12:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.7.2.ebuild,v 1.2 2003/12/14 06:10:20 seemant Exp $
 
 inherit mount-boot eutils
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
+HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/${P}.tar.gz
 		ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/obsolete/${P}.tar.gz"
-#	mirror://gentoo/${P}-gentoo.diff.bz2"
-HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 
 SLOT="0"
 LICENSE="BSD GPL-2"
@@ -22,7 +21,7 @@ PROVIDE="virtual/bootloader"
 
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
 
 	# This bootlogo patch is borrowed from SuSE Linux.
 	# You should see Raphaël Quinet's (quinet@gamers.org) website,
@@ -37,7 +36,7 @@ src_unpack() {
 #	cd ${S}; epatch ${FILESDIR}/${P}-animated-menu.patch
 
 	# Fixup things for glibc-2.3.3 (and later CVS versions of 2.3.2)
-	cd ${S}; epatch ${FILESDIR}/${PN}-22.5.6-glibc233.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-glibc233.patch
 }
 
 src_compile() {
