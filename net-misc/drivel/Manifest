@@ -1,4 +1,6 @@
+MD5 2af539628a24eb3724d4c0f9e5fb8981 ChangeLog 1298
 MD5 cb3bab22da9c4e1be630ac720590a449 drivel-1.0.2.ebuild 949
-MD5 7005ee6add802a8d63ed05df81e96288 ChangeLog 1169
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 0beb52fb8b6c86f18cf664087a6de844 drivel-1.2.1.ebuild 921
 MD5 9d367202ed4bbec4c030f6e8f515e375 files/digest-drivel-1.0.2 65
+MD5 57c3ea5b48e01746bae0f8954c3843bf files/digest-drivel-1.2.1 65
