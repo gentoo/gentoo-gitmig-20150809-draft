@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.13 2004/02/13 18:32:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.1 2004/02/13 18:32:11 wolf31o2 Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="http://unreal.epicgames.com/linux/ut2003/${PN}lnx_2107to${PV}.sh.bin
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/glibc"
@@ -27,6 +27,8 @@ Ddir=${D}/${dir}
 pkg_setup() {
 	check_license || die "License check failed"
 	ewarn "The installed game takes about 2.7GB of space!"
+	cdrom_get_cds System/Packages.md5 StaticMeshes/AWHardware.usx.uz2 \
+		Extras/MayaPLE/Maya4PersonalLearningEditionEpic.exe
 	games_pkg_setup
 }
 
@@ -38,39 +40,22 @@ src_install() {
 	dodir ${dir}
 	dodir ${dir}/System
 
-	games_get_cd System/Packages.md5
-	if [ -z "${GAMES_CDROM}" ]; then
-		# Disk 1
-		games_verify_cd "UT2003 Disk1"
-		einfo "Copying files from Disk 1..."
-		cp -r ${GAMES_CD}/{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Textures,Web} ${Ddir} || die "copying files"
-		cp -r ${GAMES_CD}/System/{editorres,*.{bmp,dat,det,est,frt,ini,int,itt,md5,u,upl,url}} ${Ddir}/System || die "copying files"
-		mkdir -p ${Ddir}/Benchmark/Stuff || dir "creating benchamrk folders"
-		cp -r ${GAMES_CD}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff || die "copying benchmark files"
+	# Disk 1
+	einfo "Copying files from Disk 1..."
+	cp -r ${CDROM_ROOT}/{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Textures,Web} ${Ddir} || die "copying files"
+	cp -r ${CDROM_ROOT}/System/{editorres,*.{bmp,dat,det,est,frt,ini,int,itt,md5,u,upl,url}} ${Ddir}/System || die "copying files"
+	mkdir -p ${Ddir}/Benchmark/Stuff || dir "creating benchamrk folders"
+	cp -r ${CDROM_ROOT}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff || die "copying benchmark files"
+	cdrom_load_next_cd
 
-		# Disk 2
-		einfo "Please mount UT2003 Disk 2 and press return when ready (or CTRL+C to abort)"
-		read
-		games_get_cd StaticMeshes/AWHardware.usx.uz2
-		games_verify_cd "UT2003 Disk 2"
-		einfo "Copying files from Disk 2..."
-		cp -r ${GAMES_CD}/{Music,Sounds,StaticMeshes,Textures} ${Ddir} || die "copying files"
+	# Disk 2
+	einfo "Copying files from Disk 2..."
+	cp -r ${CDROM_ROOT}/{Music,Sounds,StaticMeshes,Textures} ${Ddir} || die "copying files"
+	cdrom_load_next_cd
 
-		# Disk 3
-		einfo "Please mount UT2003 Disk 3 and press return when ready (or CTRL+C to abort)"
-		read
-		games_get_cd Extras/MayaPLE/Maya4PersonalLearningEditionEpic.exe
-		games_verify_cd "UT2003 Disk 3"
-		einfo "Copying files from Disk 3..."
-		cp -r ${GAMES_CD}/Sounds ${Ddir} || die "copying files"
-	else
-		# Copying from local disk
-		einfo "Copying files... this may take a while..."
-		cp -r ${GAMES_CD}/{Animations,ForceFeedback,Help,KarmaData,Maps,Music,Sounds,StaticMeshes,Textures,Web} ${Ddir} || die "copying files"
-		cp -r ${GAMES_CD}/System/{editorres,*.{bmp,dat,det,est,frt,ini,int,itt,md5,u,upl,url}} ${Ddir}/System || die "copying files"
-		mkdir -p ${Ddir}/Benchmark/Stuff || die "creating benchmark folders"
-		cp -r ${GAMES_CD}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff || die "copying benchmark files"
-	fi
+	# Disk 3
+	einfo "Copying files from Disk 3..."
+	cp -r ${CDROM_ROOT}/Sounds ${Ddir} || die "copying files"
 
 	# create empty files in Benchmark
 	for j in {CSVs,Logs,Results} ; do
@@ -82,7 +67,7 @@ src_install() {
 	rm ${Ddir}/System/{Def{ault,User},UT2003,User}.ini || die "deleting ini files"
 
 	# unpack_makeself won't take absolute path
-	unpack_makeself ${GAMES_CD}/linux_installer.sh || die "unpacking linux installer"
+	unpack_makeself ${CDROM_ROOT}/linux_installer.sh || die "unpacking linux installer"
 
 	# install extra help files
 	insinto ${dir}/Help

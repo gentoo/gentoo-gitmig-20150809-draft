@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.10 2004/02/05 20:23:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.11 2004/02/13 18:32:11 wolf31o2 Exp $
+
+*ut2003-2225-r1 (13 Feb 2004)
+
+  13 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r1.ebuild,
+  ut2003-2225.ebuild:
+  Fixing Benchmark problem in ut2003-2225.ebuild and closing bug #41004. Adding
+  ut2003-2225-r1.ebuild to ~x86 to test new cdrom interface and close bug #40877
+  (Thanks, dad... ;p).
 
   05 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
   Fixing benchmark/patch problems. Fix provided by Matthis Grimm. Closing bug
