@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.18 2004/10/04 11:53:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.19 2004/11/16 11:29:14 ka0ttic Exp $
+
+*abs-guide-3.1 (16 Nov 2004)
+
+  16 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> -abs-guide-2.7.ebuild,
+  -abs-guide-2.8.ebuild, +abs-guide-3.1.ebuild:
+  Version bump; tidy old ebuilds.
 
 *abs-guide-3.0 (04 Oct 2004)
 
