@@ -1,8 +1,14 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.4 2002/06/21 03:33:30 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.5 2002/06/25 03:11:07 sunflare Exp $
 
-*ettercap-0.6.6-6 (20 Jun 2002)
+*ettercap-0.6.6.6-r1 (24 Jun 2002)
+
+  24 Jun 2002; Phil Bordelon <sunflare@gentoo.org> ettercap-0.6.6.6-r1.ebuild :
+
+  Added a SLOT and the LICENSE.
+
+*ettercap-0.6.6.6 (20 Jun 2002)
 
   20 Jun 2002; Phil Bordelon <sunflare@gentoo.org> ettercap-0.6.6.6.ebuild :
 
