@@ -2,7 +2,7 @@ options {
 	directory "/var/bind";
 
 	// uncomment the following lines to turn on DNS forwarding,
-	// and change the forwarind ip address(es) :
+	// and change the forwarding ip address(es) :
 	//forward first;
 	//forwarders {
 	//	123.123.123.123;
