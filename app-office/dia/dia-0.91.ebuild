@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.91.ebuild,v 1.2 2003/03/26 11:46:37 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.91.ebuild,v 1.3 2003/03/30 17:14:35 mholzer Exp $
 
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="gnome png python"
 
 DEPEND=">=x11-libs/gtk+-2.0.0
-		>=x11-libs/pango-1.0.5
+		>=x11-libs/pango-1.1.5
 		>=dev-libs/libxml2-2.3.9
 		>=media-libs/freetype-2.0.9
 		>=dev-util/intltool-0.21
