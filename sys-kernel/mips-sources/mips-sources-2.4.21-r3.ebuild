@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21-r2.ebuild,v 1.6 2003/12/02 03:56:45 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21-r3.ebuild,v 1.1 2004/01/06 01:53:15 kumba Exp $
 
 ETYPE="sources"
 inherit kernel
@@ -31,15 +31,22 @@ src_unpack() {
 	cd ${S}
 
 	# Update the vanilla sources with linux-mips CVS changes
-	cat ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff | patch -p1
+	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
-	# Big Endian Fix
-	cat ${FILESDIR}/bigendian-byteorder-fix.patch | patch -p1
+	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
+	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
 
-	# Patch arch/mips/Makefile for gcc
-	cat ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch | patch -p0
+	# Big Endian Fix (Fix in headers for big-endian machines)
+	epatch ${FILESDIR}/bigendian-byteorder-fix.patch
 
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	# do_brk fix (Fixes exploit that hit several debian servers)
+	epatch ${FILESDIR}/do_brk_fix.patch
+
+	# mremap fix (Possibly Exploitable)
+	epatch ${FILESDIR}/mremap-fix.patch
+
+	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
+	epatch ${FILESDIR}/rtc-fixes.patch
 
 	kernel_universal_unpack
 }

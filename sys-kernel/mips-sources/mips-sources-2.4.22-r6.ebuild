@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r5.ebuild,v 1.2 2003/12/17 07:03:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r6.ebuild,v 1.1 2004/01/06 01:53:15 kumba Exp $
 
 ETYPE="sources"
 inherit kernel
@@ -17,7 +17,7 @@ inherit eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 25 Sep 2003
+# 2) linux-mips.org CVS snapshot diff from 15 Oct 2003
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
 # 4) patch to tweak arch/mips64/Makefile to pass -Wa,-mabi=o64 instead of -Wa,-32
 
@@ -38,22 +38,20 @@ src_unpack() {
 	# Update the vanilla sources with linux-mips CVS changes
 	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
-	# Patch arch/mips/Makefile for gcc
+	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
 
-	# Patch arch/mips64/Makefile to pass -Wa,mabi=o64
+	# Patch arch/mips64/Makefile to pass -Wa,mabi=o64 (Allows building of mips64 kernels)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-mips64-tweak.patch
 
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	# do_brk fix (Fixes exploit that hit several debian servers)
+	epatch ${FILESDIR}/do_brk_fix.patch
+
+	# mremap fix (Possibly Exploitable)
+	epatch ${FILESDIR}/mremap-fix.patch
+
+	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
+	epatch ${FILESDIR}/rtc-fixes.patch
 
 	kernel_universal_unpack
-}
-
-pkg_postinst() {
-
-	# Do kernel postinst stuff
-	kernel_pkg_postinst
-
-	# Create /usr/src/linux symlink
-	ln -sf linux-${OKV}-${CVSDATE} ${ROOT}/usr/src/linux
 }
