@@ -133,9 +133,7 @@ dev-perl/CDDB-File
 # masked for testing.  x3270 for version bump, and xmms for removal of avi
 # stuff, gpgme for version bump.
 =net-misc/x3270-3.2.19
-=media-sound/xmms-1.2.7-r13
 =media-video/avi4xmms-0.1-r2
-=app-crypt/gpgme-0.3.9
 
 # <blizzy@gentoo.org> (23 Aug 2002)
 # masked for testing
@@ -975,8 +973,9 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 19 Mar 2002
 # Masking avi-xmms because it will not compile against avifile-0.6, instead
 # xmms has a hacked native support in it now for avi playing against avifile-0.6
+# 30 Aug 2002; Seemant Kulleen: avi-xmms is now statically compiled against
+# avifile, so it has been restored to portage.
 <media-video/avifile-0.6
->=media-video/avi-xmms-1.2.2-r2
 
 
 #seemant@gentoo.org 20 Mar 2002

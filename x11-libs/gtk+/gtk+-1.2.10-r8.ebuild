@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.8 2002/08/14 13:05:59 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.9 2002/08/30 16:50:01 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP Toolkit"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
 	http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
 	http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gentoo.diff.bz2"
 
-DEPEND="virtual/glibc virtual/x11
+DEPEND="virtual/x11
 	=dev-libs/glib-1.2*
 	nls? ( sys-devel/gettext
 	dev-util/intltool )"
