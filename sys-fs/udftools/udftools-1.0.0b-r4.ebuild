@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/udftools-1.0.0b-r3.ebuild,v 1.1 2004/11/06 20:17:44 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/udftools-1.0.0b-r4.ebuild,v 1.1 2004/12/30 23:42:06 dsd Exp $
 
 inherit eutils
 
-MY_P="${P}${PR/r/}"
+MY_P="${P}3"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Ben Fennema's tools for packet writing and the UDF filesystem"
 SRC_URI="mirror://sourceforge/linux-udf/${MY_P}.tar.gz
@@ -26,13 +26,9 @@ src_unpack() {
 	epatch ${WORKDIR}/${MY_P}.patch
 
 	# Fix CD blanking for 2.6.8 and newer
-	epatch ${FILESDIR}/cdrwtool-linux2.6-fix.patch
+	epatch ${FILESDIR}/cdrwtool-linux2.6-fix-v2.patch
 }
 
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install () {
 	make DESTDIR=${D} install || die
