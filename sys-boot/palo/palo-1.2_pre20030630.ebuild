@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.2_pre20030630.ebuild,v 1.2 2004/03/19 21:05:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.2_pre20030630.ebuild,v 1.3 2004/04/19 21:39:53 vapier Exp $
 
 MY_V=${PV/_pre/-CVS}
 DESCRIPTION="PALO : PArisc Linux Loader"
@@ -9,7 +9,7 @@ SRC_URI="http://ftp.parisc-linux.org/cvs/palo-${MY_V}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa -*"
+KEYWORDS="-* hppa"
 IUSE=""
 
 DEPEND="virtual/glibc"
