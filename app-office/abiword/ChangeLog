@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.63 2004/02/18 15:59:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.64 2004/03/02 16:47:14 augustus Exp $
+
+  02 Mar 2004; <augustus@gentoo.org> abiword-2.0.3-r1.ebuild,
+  files/abiword-2.0.3-amd64.patch:
+  Added support for amd64 via a small patch which fixes pointer to 32-bit data
+  type conversion. Marked ~amd64 for now.
 
 *abiword-2.0.3-r1 (18 Feb 2004)
 
