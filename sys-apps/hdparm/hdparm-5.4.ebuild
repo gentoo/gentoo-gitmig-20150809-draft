@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.4.ebuild,v 1.5 2003/08/28 11:03:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.4.ebuild,v 1.6 2003/09/07 01:31:20 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to change hard drive performance parameters"
@@ -18,20 +18,20 @@ src_compile() {
 	einfo "The rc-script for hdparm has been updated, so make sure "
 	einfo "that you etc-update.  The script is much more configurable"
 	einfo "for details please see /etc/conf.d/hdparm"
-	einfo ""		
+	einfo ""
 	emake || die "compile error"
 }
 
 src_install() {
 	into /
 	dosbin hdparm contrib/idectl
-	
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/hdparm-new-init hdparm
-	
+
 	insinto /etc/conf.d
 	newins ${FILESDIR}/hdparm-conf.d hdparm
 
-   	doman hdparm.8
- 	dodoc hdparm.lsm Changelog README.acoustic hdparm-sysconfig
+	doman hdparm.8
+	dodoc hdparm.lsm Changelog README.acoustic hdparm-sysconfig
 }

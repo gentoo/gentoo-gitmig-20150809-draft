@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.1.ebuild,v 1.11 2003/09/06 22:50:41 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.1.ebuild,v 1.12 2003/09/07 01:28:12 msterret Exp $
 
 inherit mount-boot eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	# Get all the loaders to install
 	cp Makefile Makefile.orig
 	sed -e 's:# $(BOOTS): $(BOOTS):' Makefile.orig > Makefile
-	
+
 	# This bootlogo patch is borrowed from SuSE Linux.
 	# You should see Raphaël Quinet's (quinet@gamers.org) website,
 	# http://www.gamers.org/~quinet/lilo/index.html
@@ -50,14 +50,14 @@ src_install() {
 	dosbin lilo activate mkrescue
 	into /usr
 	dosbin keytab-lilo.pl
-	
+
 	dodir /boot
 	insinto /boot
 	doins boot-text.b boot-menu.b boot-bmp.b chain.b mbr.b os2_d.b
 
 	insinto /etc
 	newins ${FILESDIR}/lilo.conf lilo.conf.example
-	
+
 	doman manPages/*.[5-8]
 	dodoc CHANGES COPYING INCOMPAT README*
 	docinto samples ; dodoc sample/*
@@ -121,16 +121,16 @@ pkg_preinst() {
 lilocheck () {
 	local bootpart=
 	local rootpart="$(rdev 2> /dev/null | cut -d ' ' -f 1 2> /dev/null)"
-	
+
 	echo
-    einfon "Checking for LILO ..."
-	
-    if [ "$(whoami)" != "root" ]
+	einfon "Checking for LILO ..."
+
+	if [ "$(whoami)" != "root" ]
 	then
 		echo; echo
-        eerror "Only root can check for LILO!"
-        return 1
-    fi
+		eerror "Only root can check for LILO!"
+		return 1
+	fi
 
 	if [ -z "${rootpart}" ]
 	then
@@ -138,32 +138,32 @@ lilocheck () {
 		eerror "Could not determine root partition!"
 		return 1
 	fi
-	
-    if [ ! -f /etc/lilo.conf -o ! -x /sbin/lilo ]
+
+	if [ ! -f /etc/lilo.conf -o ! -x /sbin/lilo ]
 	then
-        echo " No"
-        return 1
-    fi
-	
-    bootpart="$(perl -ne 'print $1 if /^\s*boot\s*=\s*(\S*)/' /etc/lilo.conf)"
-	
-    if [ -z "${bootpart}" ]
+		echo " No"
+		return 1
+	fi
+
+	bootpart="$(perl -ne 'print $1 if /^\s*boot\s*=\s*(\S*)/' /etc/lilo.conf)"
+
+	if [ -z "${bootpart}" ]
 	then
-        # lilo defaults to current root when 'boot=' is not present
-        bootpart="${rootpart}"
-    fi
-	
-    if ! dd if=${bootpart} ibs=16 count=1 2>&- | grep -q 'LILO'
+		# lilo defaults to current root when 'boot=' is not present
+		bootpart="${rootpart}"
+	fi
+
+	if ! dd if=${bootpart} ibs=16 count=1 2>&- | grep -q 'LILO'
 	then
 		echo; echo
-        ewarn "Yes, but I couldn't find a LILO signature on ${bootpart}"
-        ewarn "Check your /etc/lilo.conf, or run /sbin/lilo by hand."
-        return 1
-    fi
-	
-    echo " Yes, on ${bootpart}"
-	
-    return 0
+		ewarn "Yes, but I couldn't find a LILO signature on ${bootpart}"
+		ewarn "Check your /etc/lilo.conf, or run /sbin/lilo by hand."
+		return 1
+	fi
+
+	echo " Yes, on ${bootpart}"
+
+	return 0
 }
 
 
@@ -184,7 +184,7 @@ pkg_postinst() {
 				echo
 				ewarn "Running /sbin/lilo failed!  Please check what the problem is"
 				ewarn "before your next reboot."
-				
+
 				echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
 				echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
 				sleep 5

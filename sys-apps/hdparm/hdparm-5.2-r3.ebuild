@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.2-r3.ebuild,v 1.10 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.2-r3.ebuild,v 1.11 2003/09/07 01:31:20 msterret Exp $
 
 inherit flag-o-matic
 
@@ -26,10 +26,10 @@ src_compile() {
 src_install() {
 	into /
 	dosbin hdparm contrib/idectl
-	
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/hdparm-init hdparm
-	
+
 	doman hdparm.8
 	dodoc hdparm.lsm Changelog README.acoustic hdparm-sysconfig
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.25-r4.ebuild,v 1.3 2003/09/06 22:44:02 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.25-r4.ebuild,v 1.4 2003/09/07 01:35:23 msterret Exp $
 
 IUSE=""
 
@@ -18,11 +18,11 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 
 src_unpack() {
-  	unpack ${A}
+	unpack ${A}
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
-		
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-kernel-2.5.patch.bz2
 
@@ -43,6 +43,6 @@ src_install() {
 
 	#config file is handled in baselayout
 	rm -f ${D}/etc/devfsd.conf
-		
+
 	dodoc devfsd.conf COPYING* INSTALL
 }
