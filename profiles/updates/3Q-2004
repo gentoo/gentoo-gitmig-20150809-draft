@@ -153,3 +153,4 @@ move net-www/mergelog www-misc/mergelog
 move net-www/squidalyser www-misc/squidalyser
 move net-www/visitors www-misc/visitors
 move net-www/wsmake www-misc/wsmake
+move net-www/zoneminder www-misc/zoneminder
