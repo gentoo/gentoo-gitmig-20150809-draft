@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.28 2003/07/01 15:15:47 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.29 2003/07/03 20:36:48 liquidx Exp $
+
+*python-2.2.3-r1 (03 Jul 2003)
+
+  03 Jul 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml,
+  python-2.2.3-r1.ebuild:
+  added db4 support and enabled threads (pthread) support
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> python-2.2.3.ebuild:
   set stable on sparc
