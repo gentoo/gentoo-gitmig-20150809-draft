@@ -203,6 +203,7 @@ net-www/opera-static
 =x11-base/xfree-4.3.0-r4
 x11-terms/xterm
 sys-apps/utempter
+media-fonts/chkfontpath
 
 # <lu_zero@gentoo.org> (14 May 2003)
 # Not yet ready, sadly
