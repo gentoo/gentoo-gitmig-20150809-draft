@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/songer/songer-0.1.2.ebuild,v 1.1 2004/12/09 19:15:33 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/songer/songer-0.1.2.ebuild,v 1.2 2005/03/06 00:40:41 josejx Exp $
 
 DESCRIPTION="Songer - An ID3 tag editor for the ROX Desktop"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
