@@ -1,0 +1,27 @@
+--- setup.sh.orig	2004-04-22 16:46:12.000000000 -0700
++++ setup.sh	2004-04-22 16:49:39.000000000 -0700
+@@ -194,12 +194,12 @@
+ 	fi
+ 
+ 	# Ask for log directory
+-	printf "Log file directory [/var/usermin]: "
++	printf "Log file directory [/var/log/usermin]: "
+ 	if [ "$var_dir" = "" ]; then
+ 		read var_dir
+ 	fi
+ 	if [ "$var_dir" = "" ]; then
+-		var_dir=/var/usermin
++		var_dir=/var/log/usermin
+ 	fi
+ 	abspath=`echo $var_dir | grep "^/"`
+ 	if [ "$abspath" = "" ]; then
+@@ -606,7 +606,8 @@
+ 	rm -f $config_dir/install-dir
+ fi
+ 
+-if [ "$nostart" = "" ]; then
++#if [ "$nostart" = "" ]; then
++if false; then
+ 	if [ "$inetd" != "1" ]; then
+ 		echo "Attempting to start Usermin mini web server.."
+ 		$config_dir/start

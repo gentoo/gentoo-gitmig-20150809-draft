@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.000.ebuild,v 1.6 2004/01/05 12:55:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.000.ebuild,v 1.7 2004/04/23 00:23:15 eradicator Exp $
 
 DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
@@ -24,8 +24,8 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/patch/usermin usermin
 	exeinto /usr/libexec/usermin
-	newexe ${FILESDIR}/patch/setup.sh setup.sh
-	newexe ${FILESDIR}/patch/usermin-init usermin-init
+#	newexe ${FILESDIR}/patch/setup.sh setup.sh
+#	newexe ${FILESDIR}/patch/usermin-init usermin-init
 	dosym /usr/libexec/usermin /etc/usermin
 	dosym /usr/libexec/usermin/usermin-init /usr/sbin/usermin
 

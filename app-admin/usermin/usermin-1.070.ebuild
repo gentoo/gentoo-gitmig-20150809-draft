@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.070.ebuild,v 1.1 2004/04/07 08:49:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.070.ebuild,v 1.2 2004/04/23 00:23:15 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
@@ -18,32 +20,42 @@ DEPEND="dev-lang/perl
 	dev-perl/Authen-PAM
 	ssl? ( dev-perl/Net-SSLeay )"
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+
+	# Fix setup.sh for gentoo
+	epatch ${FILESDIR}/${P}-gentoo.patch
+
+	# Point to the correct mysql location
+	sed -i "s:/usr/local/mysql:/usr:g" mysql/config
+
+	# Bug #46273... missing config for gentoo
+	cp quota/generic-linux-lib.pl quota/gentoo-linux-lib.p
+}
+
 src_install() {
 	dodir /usr/libexec/usermin
-	dodir /usr/sbin
-	sed -i "s:/usr/local/mysql:/usr:g" mysql/config
 	mv * ${D}/usr/libexec/usermin
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/patch/usermin usermin
-	exeinto /usr/libexec/usermin
-	newexe ${FILESDIR}/patch/setup.sh setup.sh
-	newexe ${FILESDIR}/patch/usermin-init usermin-init
-	dosym /usr/libexec/usermin /etc/usermin
-	dosym /usr/libexec/usermin/usermin-init /usr/sbin/usermin
 
-	# Bug #46273
-	cp ${D}/usr/libexec/usermin/quota/generic-linux-lib.pl ${D}/usr/libexec/usermin/quota/gentoo-linux-lib.pl
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/init.d.usermin usermin
 
 	insinto /etc/pam.d
 	newins ${FILESDIR}/${PN}.pam ${PN}
+
+	dosym ../usr/libexec/usermin /etc/usermin
+
+	dodir /usr/sbin
+	dosym ../libexec/usermin/usermin-init /usr/sbin/usermin
 }
 
 pkg_postinst() {
-	einfo "Configure usermin by running \"usermin setup\"."
-	echo
+	einfo "Configure usermin by running \"/usr/libexec/usermin/setup.sh\"."
 	einfo "Point your web browser to http://localhost:20000 to use usermin."
 }
 
 pkg_prerm() {
-	usermin stop
+	test -f /var/lib/init.d/started/usermin && /etc/init.d/usermin stop
 }
