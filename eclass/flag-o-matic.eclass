@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.16 2003/04/19 18:20:56 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.17 2003/04/27 20:57:46 azarah Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -34,8 +34,12 @@ INHERITED="$INHERITED $ECLASS"
 #
 
 
-ALLOWED_FLAGS="-O -mcpu -march -mtune -fstack-protector -pipe -g"
+# C[XX]FLAGS that we allow in strip-flags
+ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
 
+# C[XX]FLAGS that we are think is ok, but needs testing
+# NOTE:  currently -Os have issues with gcc3 and K6* arch's
+UNSTABLE_FLAGS="-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
 
 filter-flags () {
 
@@ -79,6 +83,18 @@ strip-flags() {
 	local NEW_CFLAGS=""
 	local NEW_CXXFLAGS=""
 
+	# Allow unstable C[XX]FLAGS if we are using unstable profile ...
+	if [ "${ACCEPT_KEYWORDS/~/}" != "${ACCEPT_KEYWORDS}" -a \
+	     "${ACCEPT_KEYWORDS/-~/}" = "${ACCEPT_KEYWORDS}" ]
+	then
+		if use debug &> /dev/null
+		then
+			einfo "Enabling the use of some unstable flags"
+		fi
+
+		ALLOWED_FLAGS="${ALLOWED_FLAGS} ${UNSTABLE_FLAGS}"
+	fi
+
 	set -f
 
 	for x in ${CFLAGS}
@@ -109,6 +125,9 @@ strip-flags() {
 
 	set +f
 
+	use debug &>/dev/null && einfo "CFLAGS=\"${NEW_CFLAGS}\""
+	use debug &>/dev/null && einfo "CXXFLAGS=\"${NEW_CXXFLAGS}\""
+	
 	export CFLAGS="${NEW_CFLAGS}"
 	export CXXFLAGS="${NEW_CXXFLAGS}"
 }
