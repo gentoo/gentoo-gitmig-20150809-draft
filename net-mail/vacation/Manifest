@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5bcd4b63b52868dce060a9318f3c51ef vacation-1.2.6.1.ebuild 849
-MD5 1140c7085413bdd7d7a678f7a961dc5b ChangeLog 738
+MD5 812af302b34eb69f114035333c7396da ChangeLog 904
+MD5 a0f9eee3797a21beb0b65f0662829a0e vacation-1.2.6.1.ebuild 868
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
 MD5 b9aac02958d54b8cbf05729da54553d2 files/digest-vacation-1.2.6.1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBH+7wCHk4+ZoBpvsRAqOEAJ4j8lg+g1JyhcNqN8TH4iW8i4OYhACgiFTf
-2CjeAxi+/BEEEZEVhg3y+j0=
-=UNPx
+iD8DBQFBpSOW10xuJSrg3/sRAghkAJ4gr2X3OddWayxlY83/9JeC9EG5JwCfRYf+
+TkJYKM7yWQ2a3Td1632mdnE=
+=LuWs
 -----END PGP SIGNATURE-----

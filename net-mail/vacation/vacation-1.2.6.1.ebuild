@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.6.1.ebuild,v 1.6 2004/08/15 23:16:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.6.1.ebuild,v 1.7 2004/11/25 00:12:09 ticho Exp $
 
 DESCRIPTION="automatic mail answering program"
 HOMEPAGE="http://vacation.sourceforge.net/"
@@ -13,7 +13,8 @@ IUSE=""
 RDEPEND="virtual/mta
 	sys-libs/gdbm"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	!mail-mta/sendmail"
 
 S="${WORKDIR}/${PN}"
 
