@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.2 2002/11/24 04:03:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.3 2002/11/25 06:45:53 azarah Exp $
 
 function einfo(string)
 {
@@ -16,6 +16,18 @@ function ewarn(string)
 function eerror(string)
 {
 	system("echo -e \" \\e[31;01m*\\e[0m " string "\"")
+}
+
+# assert --- assert that a condition is true. Otherwise exit.
+# This is from the gawk info manual.
+function assert(condition, string)
+{
+	if (! condition) {
+		printf("%s:%d: assertion failed: %s\n",
+			FILENAME, FNR, string) > "/dev/stderr"
+		_assert_exit = 1
+		exit 1
+	}
 }
 
 
@@ -43,11 +55,16 @@ BEGIN {
 			}
 		}
 	}
+	
+	if (i == 0) {
+		eerror("Could not read from /etc/ld.so.conf!")
+		exit 1
+	}
 
 	close("/etc/ld.so.conf")
 
 	pipe = "/usr/bin/python -c 'import portage; print portage.settings[\"CHOST\"];'"
-	(pipe) | getline CHOST
+	assert(((pipe) | getline CHOST), "(" pipe ") | getline CHOST")
 	close(pipe)
 
 	GCCLIB = "/usr/lib/gcc-lib/" CHOST
@@ -55,7 +72,7 @@ BEGIN {
 	sub(/\/$/, "",  GCCLIB)
 
 	pipe = "gcc -dumpversion"
-	(pipe) | getline NEWVER
+	assert(((pipe) | getline NEWVER), "(" pipe ") | getline NEWVER)")
 	close(pipe)
 	
 	for (x in DIRLIST) {
@@ -102,3 +119,5 @@ BEGIN {
 	}
 }
 
+
+# vim:ts=4
