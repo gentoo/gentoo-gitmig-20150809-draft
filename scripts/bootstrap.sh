@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.40 2003/02/26 07:57:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.41 2003/02/27 10:23:57 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script now accepts an optional argument.
@@ -67,6 +67,7 @@ cleanup() {
 
 # Trap ctrl-c and stuff.  This should fix the users make.conf
 # not being restored.
+cp -f /etc/make.conf /etc/make.conf.build
 trap "cleanup" TERM KILL INT QUIT ABRT
 #TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
 
@@ -121,7 +122,6 @@ export PORTAGE_TMPDIR="`${PYTHON} -c 'import portage; print portage.settings["PO
 
 # Get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
 # overwritten
-cp -f /etc/make.conf /etc/make.conf.build
 export CFLAGS="`${PYTHON} -c 'import portage; print portage.settings["CFLAGS"];'`"
 export CHOST="`${PYTHON} -c 'import portage; print portage.settings["CHOST"];'`"
 export CXXFLAGS="`${PYTHON} -c 'import portage; print portage.settings["CXXFLAGS"];'`"
