@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.8-r3.ebuild,v 1.3 2003/09/08 20:06:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.9.ebuild,v 1.1 2003/09/08 20:06:33 mholzer Exp $
 
 inherit eutils
 
@@ -10,17 +10,15 @@ HOMEPAGE="ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	epatch ${FILESDIR}/errno.patch
-	mv Makefile Makefile.orig
-	sed -e "s:PREFIX\ \=:PREFIX\ \=\ \/usr:" \
-		-e "s:\/usr\/man:\/share\/man:" \
-		Makefile.orig > Makefile
+	sed -i "s:PREFIX\ \=:PREFIX\ \=\ \/usr:" Makefile
+	sed	-i "s:\/usr\/man:\/share\/man:" Makefile
 }
 
 src_compile() {
