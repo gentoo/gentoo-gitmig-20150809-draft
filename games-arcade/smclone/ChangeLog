@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/smclone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.2 2005/02/08 23:18:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.3 2005/04/03 06:35:33 vapier Exp $
+
+*smclone-0.95 (03 Apr 2005)
+
+  03 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/smclone-0.95-gentoo-paths.patch,
+  +files/smclone-0.95-use-HOME.patch, +smclone-0.95.ebuild:
+  Version bump #87663 by Hans Cats.
 
   08 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org> smclone-0.94.1.ebuild:
   Adding amd64 to KEYWORDS and closing bug #79382.

@@ -1,0 +1,15 @@
+--- configure.ac
++++ configure.ac
+@@ -81,6 +81,6 @@
+-AC_DEFINE_UNQUOTED(LEVEL_DIR, "levels", [Directory for level files])
+-AC_DEFINE_UNQUOTED(OVERWORLD_DIR, "world", [Directory for word data])
+-AC_DEFINE_UNQUOTED(PIXMAPS_DIR, "data/pixmaps", [Directory for pixmap data])
+-AC_DEFINE_UNQUOTED(SOUNDS_DIR, "data/sounds", [Directory for sound data])
+-AC_DEFINE_UNQUOTED(MUSIC_DIR, "data/music", [Directory for music data])
+-AC_DEFINE_UNQUOTED(FONT_DIR, "data/font", [Directory for font data])
++AC_DEFINE_UNQUOTED(LEVEL_DIR, "@GENTOO_DATADIR@/levels", [Directory for level files])
++AC_DEFINE_UNQUOTED(OVERWORLD_DIR, "@GENTOO_DATADIR@/world", [Directory for word data])
++AC_DEFINE_UNQUOTED(PIXMAPS_DIR, "@GENTOO_DATADIR@/pixmaps", [Directory for pixmap data])
++AC_DEFINE_UNQUOTED(SOUNDS_DIR, "@GENTOO_DATADIR@/sounds", [Directory for sound data])
++AC_DEFINE_UNQUOTED(MUSIC_DIR, "@GENTOO_DATADIR@/music", [Directory for music data])
++AC_DEFINE_UNQUOTED(FONT_DIR, "@GENTOO_DATADIR@/font", [Directory for font data])
