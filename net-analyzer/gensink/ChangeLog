@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gensink
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.3 2004/06/24 22:02:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.4 2004/07/10 12:22:54 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  gensink-4.1.ebuild:
+  Tidy
 
 *gensink-4.1	(21 Feb 2003)
 
