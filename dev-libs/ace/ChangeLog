@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.9 2002/12/20 03:53:22 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.10 2003/01/11 07:45:28 prez Exp $
+
+*ace-5.2.8 (11 January 2003)
+
+  11 January 2003; Preston A. Elder <prez@gentoo.org> ace-5.2.8.ebuild :
+  
+  Added new version.
 
   19 Dec 2002; Dean Bailey <alron@gentoo.org> : removed sparc64 keyword
 
