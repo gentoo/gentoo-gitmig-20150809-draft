@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1.ebuild,v 1.1 2002/04/10 13:43:02 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1-r1.ebuild,v 1.1 2002/05/12 17:49:25 karltk Exp $
 
 At=IBMJava2-JRE-131.tgz
 S=${WORKDIR}/IBMJava2-131
@@ -33,10 +33,11 @@ src_install () {
 	dohtml -a html,htm,HTML -r docs
 	dodoc docs/COPYRIGHT
 
-	if [ "`use mozilla`" ] ; then
-		dodir /usr/lib/mozilla/plugins
-		dosym /opt/${P}/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
-	fi
+	# Plugin as been disabled as it crashes all the time
+#	if [ "`use mozilla`" ] ; then
+#		dodir /usr/lib/mozilla/plugins
+#		dosym /opt/${P}/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
+#	fi
 	
 	dodir /etc/env.d/java
 	sed \
@@ -48,16 +49,16 @@ src_install () {
 }
 
 src_postinst() {
-	if [ -e /opt/netscape/plugins ] ; then
-		ln -sf /opt/${P}/bin/javaplugin.so /opt/netscape/plugins/
-		einfo "Netscape 4.x Java plugin installed"
-	fi
+#	if [ -e /opt/netscape/plugins ] ; then
+#		ln -sf /opt/${P}/bin/javaplugin.so /opt/netscape/plugins/
+#		einfo "Netscape 4.x Java plugin installed"
+#	fi
 
-	if [ "`use mozilla`" ] ; then
-                einfo "The Mozilla browser plugin has been installed as /usr/lib/mozilla/plugins/javaplugin_oji.so"
-        else
-                einfo "To install the browser plugin manually, do:"
-		einfo "ln -sf /opt/${P}/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/"
-        fi
-
+#	if [ "`use mozilla`" ] ; then
+#                einfo "The Mozilla browser plugin has been installed as /usr/lib/mozilla/plugins/javaplugin_oji.so"
+#        else
+#                einfo "To install the browser plugin manually, do:"
+#		einfo "ln -sf /opt/${P}/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/"
+#        fi
+	true
 }
