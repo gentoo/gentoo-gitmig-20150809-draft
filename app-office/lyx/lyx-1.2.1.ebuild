@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.4 2002/09/11 17:42:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.5 2002/09/15 06:20:27 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
@@ -48,7 +48,7 @@ src_compile() {
 	
 	#./autogen.sh
 	
-	./configure --host=${CHOST} --prefix=/usr ${myconf} || die "./configure failed"
+	econf ${myconf} || die "./configure failed"
 		#--infodir='$(prefix)/share/info' \
 		#--with-extra-inc=/usr/X11R6/include \
 		#--mandir='$(prefix)/share/man' \
@@ -59,7 +59,7 @@ src_install () {
 	# The 'install-strip' target is provided by the LyX makefile
 	# for stripping installed binaries.  Use prefix= instead of
 	# DESTDIR=, otherwise it violates the sandbox in the po directory.
-	make prefix=${D}/usr install
+	einstall || die
 	dodoc README* UPGRADING INSTALL* ChangeLog NEW COPYING ANNOUNCE ABOUT-NLS
 }
 
