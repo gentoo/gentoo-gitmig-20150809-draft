@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ff466ece4876f718010a5fb9b3b47269 nfsidmap-0.7.ebuild 896
-MD5 1fe4d3040b059659b84f0f163227cbbc ChangeLog 456
+MD5 97b48ddf920ac301fb29ce7a8745713f ChangeLog 580
 MD5 a3dd8511b8874ce1b494dce2472c709c metadata.xml 159
+MD5 0f926dce057496c13fcfecace8e6de7a nfsidmap-0.9.ebuild 894
+MD5 27bfa91df9f2be4c9d5e6e2c5b1ea20e files/digest-nfsidmap-0.9 64
 MD5 0a11d058d4338b3bd649a4c402b60b21 files/digest-nfsidmap-0.7 64
 MD5 002c00b85ac1181c098ab90c84fc1dbf files/0.7-optional-ldap.patch 1078
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB39waI1lqEGTUzyQRAvEjAJ49DZ2DLAu4RZdWJdmPXFVsX58zYgCePkap
-0VUdP7KnTkLf76FHn5ffvRM=
-=b7A5
------END PGP SIGNATURE-----
