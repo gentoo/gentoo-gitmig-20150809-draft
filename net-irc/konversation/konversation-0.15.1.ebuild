@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.10.ebuild,v 1.6 2005/01/19 22:44:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.15.1.ebuild,v 1.1 2005/01/19 22:44:03 swegener Exp $
 
 inherit kde
 
 DESCRIPTION="A user friendly IRC Client for KDE3.x"
-HOMEPAGE="http://konversation.sourceforge.net"
-SRC_URI="http://konversation.sourceforge.net/downloads/${P}.tar.gz"
+HOMEPAGE="http://konversation.sourceforge.net/"
+SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="nls"
 
 need-kde 3
