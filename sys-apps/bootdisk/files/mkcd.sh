@@ -7,6 +7,9 @@ then
 fi
 
 export PORTDIR=/usr/portage
+export BOOTIMG=${ROOT}/bootcd
+export INITDISK=${ROOT}/initdisk
+
 
 if [ ! -d "${PORTDIR}/gentoo-x86/sys-apps/bootdisk" ]
 then
@@ -30,7 +33,9 @@ doexes() {
   done
 }
 
-cd ${ROOT}
+dodirs ${BOOTIMG} ${INITDISK}
+
+cd ${BOOTIMG}
 
 echo "Creating basic dirs"
 
@@ -40,7 +45,7 @@ dodirs bin dev initrd lib mnt proc sbin usr
 echo "Creating initdisk stuff in initrd first"
 
 echo "Creating /initrd dirs"
-cd ${ROOT}/initrd
+cd ${BOOTIMG}/initrd
 
 dodirs dev distcd lib etc root tmp var
 
@@ -48,7 +53,7 @@ touch distcd
 
 echo "Creating /inird devices"
 
-cd ${ROOT}/initrd/dev
+cd ${BOOTIMG}/initrd/dev
 for i in console fd0 fd0u1440 hd[abcd] initctl loop0 ram0 scd[01] tty[01]
 do
   cp -a /dev/$i .
@@ -57,15 +62,16 @@ done
 mkdir pts
 
 echo "Populating /initrd/etc"
-cd ${ROOT}/initrd/etc
+cd ${BOOTIMG}/initrd/etc
 cp -af ${PORTDIR}/gentoo-x86/sys-apps/bootdisk/files/etc/* .
 find . -type d -name "CVS" -exec rm -r {} \;
+touch ld.so.conf
 
 echo "Creating linuxrc"
-cd ${ROOT}/initrd
+cd ${BOOTIMG}/initrd
 gcc -s -o linuxrc ${PORTDIR}/gentoo-x86/sys-apps/bootdisk/files/linuxrc.c
 
-cd ${ROOT}/initrd/var
+cd ${BOOTIMG}/initrd/var
 dodirs log run
 touch log/wtmp
 touch run/utmp
@@ -73,7 +79,7 @@ touch run/utmp
 
 
 echo "Creating links to initrd"
-cd ${ROOT}
+cd ${BOOTIMG}
 
 for i in etc root tmp var
 do
@@ -81,7 +87,7 @@ do
 done
 
 echo "Creating devices"
-cd ${ROOT}/dev
+cd ${BOOTIMG}/dev
 ln -s ../initrd/pts pts
 ln -sf ../initrd/dev/initctl .
 ln -sf ../initrd/dev/tty1 .
@@ -98,13 +104,13 @@ ln -s ram0 ram
 mknod initrd b 1 250
 
 echo "Creating /mnt dirs"
-cd ${ROOT}/mnt
+cd ${BOOTIMG}/mnt
 
 dodirs floppy gentoo ram
 
 ln -s ../initrd/distcd .
 
-cd ${ROOT}/bin
+cd ${BOOTIMG}/bin
 
 echo "Populating /bin"
 doexes bash cat chgrp chmod chown cp df du hostname kill ln login \
@@ -114,13 +120,14 @@ ln -s bash sh
 
 echo "Populating /sbin"
 
-cd ${ROOT}/sbin
+cd ${BOOTIMG}/sbin
 
 doexes agetty depmod e2fsck fdisk halt ifconfig init insmod \
 	 ldconfig lilo ln lsmod mke2fs mkraid mkreiserfs mkswap \
-	 portmap raidstart reboot reiserfsck resize2fs resize_reiserfs \
+	 portmap raidstart reboot resize2fs \
 	 route sfdisk shutdown touch
 
+# reiserfsck and resize_reiserfs does not exist in 2.4
 
 ln -s insmod modprobe
 ln -s mkraid raid0run
@@ -131,22 +138,22 @@ ln -s raidstart raidstop
 cp /usr/portage/gentoo-x86/autoinstaller.sh .
 
 echo "Creating /usr dirs"
-cd ${ROOT}/usr
+cd ${BOOTIMG}/usr
 
 dodirs bin lib sbin share
 echo "Populating /usr/bin"
-cd ${ROOT}/usr/bin
+cd ${BOOTIMG}/usr/bin
 
 doexes awk bzip2 cut expr fdformat ftp grep gzip joe killall ldd \
 	loadkeys most rm rmdir scp sed ssh tar top vi 
 
 echo "Populating /usr/sbin"
-cd ${ROOT}/usr/sbin
+cd ${BOOTIMG}/usr/sbin
 
 doexes rc-update
 
 echo "Populating /usr/share"
-cd ${ROOT}/usr/share
+cd ${BOOTIMG}/usr/share
 
 echo "keymaps"
 cp -af /usr/share/keymaps .
@@ -156,9 +163,9 @@ echo "terminfo"
 cp -af /usr/share/terminfo .
 
 echo "Populating /lib/modules"
-cd ${ROOT}/lib
+cd ${BOOTIMG}/lib
 cp -af /lib/modules .
-cd ${ROOT}/lib/modules/2*
+cd ${BOOTIMG}/lib/modules/2*
 for i in modules.* 
 do
   rm $i
@@ -166,7 +173,7 @@ do
 done
 
 echo "Populating /usr/lib/security"
-cd ${ROOT}/usr/lib
+cd ${BOOTIMG}/usr/lib
 
 mkdir security
 
@@ -177,19 +184,19 @@ do
 
     echo "Finding required libs for $j"
 
-  myfiles=`find ${ROOT}$j -print | /usr/lib/portage/bin/find-requires | grep -v "/bin/bash" | grep -v "/bin/sh"`
+  myfiles=`find ${BOOTIMG}$j -print | /usr/lib/portage/bin/find-requires | grep -v "/bin/bash" | grep -v "/bin/sh"`
 
   for i in $myfiles
   do
       if [ -f /lib/$i ]
       then
-          cp /lib/$i ${ROOT}/lib/$i
-	  strip ${ROOT}/lib/$i
+          cp /lib/$i ${BOOTIMG}/lib/$i
+	  strip ${BOOTIMG}/lib/$i
       else
           if [ -f /usr/lib/$i ]
           then
-              cp /usr/lib/$i ${ROOT}/usr/lib/$i
-	      strip ${ROOT}/usr/lib/$i
+              cp /usr/lib/$i ${BOOTIMG}/usr/lib/$i
+	      strip ${BOOTIMG}/usr/lib/$i
           else
               echo "$i not found !"
           fi
@@ -197,3 +204,6 @@ do
   done
 
 done
+
+ldconfig -r ${BOOTIMG}
+mv ${BOOTIMG}/initrd/* ${INITDISK}

@@ -8,8 +8,8 @@
 #include <getopt.h>
 #include <errno.h>
 #include <sys/ioctl.h>
-#include <linux/loop.h>
 #include <linux/fs.h>
+#include "loop.h"
 
 #define NUMDRIVES (6)
 
