@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.31.ebuild,v 1.1 2002/05/08 21:59:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.31.ebuild,v 1.2 2002/05/21 18:14:08 danarmak Exp $
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit perl-module
 
 S=${WORKDIR}/${P}

@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.1 2002/05/06 23:42:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.2 2002/05/21 18:14:08 danarmak Exp $
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit perl-module
 
 S=${WORKDIR}/Gtk-Perl-${PV}

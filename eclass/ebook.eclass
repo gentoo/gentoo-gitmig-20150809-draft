@@ -4,7 +4,6 @@
 # Manteiner José Alberto Suárez López <bass@gentoo.org>
 # The ebook eclass defines some default functions and variables to 
 # install ebooks. 
-[ -n "$COMPAT" ] && inherit functions
 ECLASS=ebook
 
 HOMEPAGE="http://lidn.sourceforge.net"

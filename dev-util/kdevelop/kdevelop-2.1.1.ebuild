@@ -1,8 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.1.ebuild,v 1.1 2002/05/17 16:50:33 danarmak Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.1.ebuild,v 1.2 2002/05/21 18:14:08 danarmak Exp $
+
 inherit kde-base
 
 need-kde 3

@@ -1,9 +1,9 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # distributed under the terms of the GNU General Pulic License, v2.
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.17.ebuild,v 1.1 2002/05/21 03:32:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.17.ebuild,v 1.2 2002/05/21 18:14:08 danarmak Exp $
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit perl-module
 
 MY_P="SDL_perl"-${PV}

@@ -1,3 +1,0 @@
-- sort out docs/sgml, get link from site
-- sort debug.eclass msgs into levels, divide output
-- sort out local var declares

@@ -4,7 +4,7 @@
 # /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.5 2002/04/29 22:56:53 sandymac Exp
 
 # Inherit the perl-module.eclass functions
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit perl-module
 
 S=${WORKDIR}/${P}

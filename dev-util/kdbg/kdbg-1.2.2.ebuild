@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.2.ebuild,v 1.4 2001/12/23 21:35:15 danarmak Exp $
- . /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.2.ebuild,v 1.5 2002/05/21 18:14:08 danarmak Exp $
+ 
 inherit kde-base || die
 
 need-kde 2

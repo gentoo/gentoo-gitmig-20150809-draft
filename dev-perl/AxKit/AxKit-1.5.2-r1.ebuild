@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.5.2-r1.ebuild,v 1.1 2002/05/05 14:08:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.5.2-r1.ebuild,v 1.2 2002/05/21 18:14:07 danarmak Exp $
 
 # Inherit functions from the perl-module.eclass
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit perl-module
 
 S=${WORKDIR}/${PN}-1.52
