@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0.ebuild,v 1.3 2003/12/30 15:13:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0.ebuild,v 1.4 2004/01/02 20:28:09 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -128,7 +128,8 @@ pkg_postinst() {
 
 	ewarn "Please note that ptyfs support has been removed from devfs"
 	ewarn "and you have to compile it in now, or else you will get"
-	ewarn "errors when trying to open a pty. The option is:"
+	ewarn "errors when trying to open a pty. The options are:"
+	ewarn "Device Drivers -> Character devices -> Unix98 PTY support and"
 	ewarn "File systems -> Pseudo filesystems -> /dev/pts filesystem."
 	echo
 	ewarn "Also, note that you must compile in support for"
