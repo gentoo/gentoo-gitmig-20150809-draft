@@ -1,0 +1,22 @@
+diff -NurB sashxb-1.0.2/configure sashxb-1.0.2-new/configure
+--- sashxb-1.0.2/configure	2002-07-09 09:03:19.000000000 -0500
++++ sashxb-1.0.2-new/configure	2002-07-11 09:16:41.000000000 -0500
+@@ -1914,6 +1914,7 @@
+ else
+   
+ 	    #we're using whatever comes from the rpms
++		PATH="/usr/lib/mozilla:${PATH}"
+ 	    MOZILLA_INCLUDE_DIR="`mozilla-config --cflags | cut -d " " -f 1 | perl -ne \"s/^..//;print;\"`"
+ 	    MOZILLA_LIB_DIR="`mozilla-config --libs | perl -ne \"s/..(.*)/\1/;print;\"`"
+ 	    MOZILLA_BIN_DIR="/usr/bin"
+diff -NurB sashxb-1.0.2/sashmacros/mozilla.m4 sashxb-1.0.2-new/sashmacros/mozilla.m4
+--- sashxb-1.0.2/sashmacros/mozilla.m4	2002-06-19 12:39:34.000000000 -0500
++++ sashxb-1.0.2-new/sashmacros/mozilla.m4	2002-07-11 09:17:32.000000000 -0500
+@@ -14,6 +14,7 @@
+ 	    MOZILLA_IDL_DIR="$withval/idl"
+ 	], [
+ 	    #we're using whatever comes from the rpms
++		PATH="/usr/lib/mozilla:${PATH}"
+ 	    MOZILLA_INCLUDE_DIR="`mozilla-config --cflags | cut -d " " -f 1 | perl -ne \"s/^..//;print;\"`"
+ 	    MOZILLA_LIB_DIR="`mozilla-config --libs | perl -ne \"s/..(.*)/\1/;print;\"`"
+ 	    MOZILLA_BIN_DIR="/usr/bin"
