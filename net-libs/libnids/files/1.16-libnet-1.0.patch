@@ -1,0 +1,56 @@
+--- configure.orig	2003-08-19 13:57:32.933711496 -0400
++++ configure	2003-08-19 13:57:33.029696904 -0400
+@@ -1498 +1498 @@
+-     if test -f $withval/include/libnet.h -a -f $withval/lib/libnet.a; then
++     if test -f $withval/include/libnet-1.0.h -a -f $withval/lib/libnet-1.0.a; then
+@@ -1501 +1501 @@
+-	CFLAGS="$CFLAGS `$withval/libnet-config --defines`"
++	CFLAGS="$CFLAGS `$withval/libnet-1.0-config --defines`"
+@@ -1503 +1503 @@
+-	LNETLIB="-L$withval/lib -lnet"
++	LNETLIB="-L$withval/lib -lnet-1.0"
+@@ -1506 +1506 @@
+-        { echo "configure: error: libnet.h or libnet.a not found in $withval" 1>&2; exit 1; }
++        { echo "configure: error: libnet-1.0.h or libnet-1.0.a not found in $withval" 1>&2; exit 1; }
+@@ -1511,2 +1511,2 @@
+-   if test -f ${prefix}/include/libnet.h; then
+-     CFLAGS="$CFLAGS `${prefix}/bin/libnet-config --defines`"
++   if test -f ${prefix}/include/libnet-1.0.h; then
++     CFLAGS="$CFLAGS `${prefix}/bin/libnet-1.0-config --defines`"
+@@ -1514 +1514 @@
+-     LNETLIB="-L${prefix}/lib -lnet"
++     LNETLIB="-L${prefix}/lib -lnet-1.0"
+@@ -1516,3 +1516,3 @@
+-  elif test -f /usr/include/libnet.h; then
+-     CFLAGS="$CFLAGS `libnet-config --defines`"
+-     LNETLIB="-lnet"
++  elif test -f /usr/include/libnet-1.0.h; then
++     CFLAGS="$CFLAGS `libnet-1.0-config --defines`"
++     LNETLIB="-lnet-1.0"
+--- samples/Makefile.in.orig	2003-08-19 13:57:32.937710888 -0400
++++ samples/Makefile.in	2003-08-19 13:57:32.995702072 -0400
+@@ -20 +20 @@
+-LIBS		= -L../src -lnids -lpcap -lnet @LIBS@
++LIBS		= -L../src -lnids-1.0 -lpcap -lnet-1.0 @LIBS@
+--- src/Makefile.in.orig	2003-08-19 13:57:32.941710280 -0400
++++ src/Makefile.in	2003-08-19 13:57:33.000701312 -0400
+@@ -38 +38 @@
+-all: libnids.a
++all: libnids-1.0.a
+@@ -40 +40 @@
+-libnids.a: $(OBJS)
++libnids-1.0.a: $(OBJS)
+@@ -44 +44 @@
+-install: libnids.a
++install: libnids-1.0.a
+@@ -48 +48 @@
+-	$(INSTALL) -c -m 644 libnids.a $(install_prefix)$(libdir)
++	$(INSTALL) -c -m 644 libnids-1.0.a $(install_prefix)$(libdir)
+@@ -53 +53 @@
+-	rm -f *.o *~ libnids.a
++	rm -f *.o *~ libnids-1.0.a
+--- src/killtcp.c.orig	2003-08-19 13:57:32.945709672 -0400
++++ src/killtcp.c	2003-08-19 13:57:33.031696600 -0400
+@@ -6 +6 @@
+-#include <libnet.h>
++#include <libnet-1.0.h>
