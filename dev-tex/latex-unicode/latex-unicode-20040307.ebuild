@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20040307.ebuild,v 1.2 2004/04/14 09:13:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20040307.ebuild,v 1.3 2004/05/06 16:53:43 ciaranm Exp $
 
 inherit latex-package
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="LPPL-1.2"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="cjk"
 
 DEPEND="virtual/tetex
