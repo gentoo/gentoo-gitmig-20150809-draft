@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/akode-3.4.0_beta2.ebuild,v 1.2 2005/02/05 19:12:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/akode-3.4.0_beta2.ebuild,v 1.3 2005/02/06 11:41:28 carlo Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -19,7 +19,7 @@ DEPEND="arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )
 	mad? ( media-libs/libmad )
 	libsamplerate? ( media-libs/libsamplerate )
 	alsa? ( media-libs/alsa-lib )
-	jack? ( media-sound/jack )"
+	jack? ( media-sound/jack-audio-connection-kit )"
 
 # MISSING: polypaudio - no gentoo ebuild as yet
 # TODO: configure needs a pkg-config file for media-sound/jack to detect it
