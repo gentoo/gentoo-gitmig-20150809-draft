@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.11.1p/distcc-config,v 1.8 2004/03/06 20:59:54 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.11.1p/distcc-config,v 1.9 2004/03/06 21:04:57 pyrania Exp $
 
 import os, re, signal, sys, commands, pwd
 from string import rstrip
@@ -144,7 +144,7 @@ elif '--install' in tmpcmdline:
 
 	print 'Checking permissions...'
 	permissions('/usr/lib/distcc/bin/',user,group)
-	permissions('/var/run/distcc',user,group)
+	permissions('/var/run/distccd/',user,group)
 elif '--get-env' in tmpcmdline:
 	if len(tmpcmdline) == 1:
 		print rstrip(open(envfile, 'r').read())
