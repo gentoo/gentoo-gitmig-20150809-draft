@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.6.4.ebuild,v 1.5 2004/06/24 23:55:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.6.4.ebuild,v 1.6 2004/07/14 16:15:34 agriffis Exp $
 
 inherit common-lisp
 
@@ -12,7 +12,7 @@ SRC_URI="http://files.b9.com/clsql/clsql-${PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="postgres"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	dev-lisp/cl-uffi

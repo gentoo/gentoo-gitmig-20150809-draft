@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.8.8.ebuild,v 1.3 2004/06/24 23:55:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.8.8.ebuild,v 1.4 2004/07/14 16:15:34 agriffis Exp $
 
 inherit common-lisp eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://files.b9.com/clsql/clsql-${PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="postgres mysql"
+IUSE="mysql postgres"
 
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
@@ -26,8 +26,8 @@ S=${WORKDIR}/clsql-${PV}
 
 CLPACKAGE='clsql-base clsql clsql-postgresql-socket clsql-uffi'
 
-use postgresql && CLPACKAGE="${CLPACKAGE} clsql-postgresql"
-use msql &&	CLPACKAGE="${CLPACKAGE} clsql-mysql"
+use postgres && CLPACKAGE="${CLPACKAGE} clsql-postgresql"
+use mysql &&	CLPACKAGE="${CLPACKAGE} clsql-mysql"
 
 src_unpack() {
 	unpack ${A}
