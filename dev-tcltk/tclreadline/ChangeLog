@@ -1,8 +1,11 @@
 # ChangeLog for dev-tcltk/tclreadline
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.4 2003/03/10 22:31:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.5 2003/04/23 17:05:44 utx Exp $
 
 *tclreadline-2.1.0 (07 Nov 2002)
+
+  23 Apr 2003; Stanislav Brabec <utx@gentoo.org> tclreadline-2.1.0.ebuild:
+  Fixed DEPEND for tcl/tk 8.4 (#19554).
 
   10 Mar 2003; Aron Griffis <agriffis@gentoo.org> tclreadline-2.1.0.ebuild:
   Add ~alpha to KEYWORDS
