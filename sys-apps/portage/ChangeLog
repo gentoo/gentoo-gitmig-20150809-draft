@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.7 2002/02/06 20:29:55 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.8 2002/02/10 20:09:37 gbevin Exp $
+
+*portage-1.8.9_pre5 (6 Feb 2002) 
+
+  10 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre6.ebuild,
+  files/digest-portage-1.8.9_pre6, files/portage-1.8.9_pre6.tar.bz2 :
+  
+  - added support for 'emerge --unmerge world' which removes all old package
+    versions from the system
+  - made 'emerge --unmerge' take binary compatibility slots into account, this
+    prevents that packages with different versions but also different slots, are
+    being unmerged
+  - added support for "--verbose" in "emerge rebuild" and "emerge world" to
+    provide details about packages that aren't in the local tree anymore and to
+    notify the user about which packages don't support slots
+  - added support for the "emerge rebuild" mode which rebuilds all the packages
+    on your system for which a corresponding package could be found in to
+	portage tree
+  - bugfixes to binary package merging
+  - code cleanups and speedups
 
 *portage-1.8.9_pre5 (6 Feb 2002)
 
