@@ -1,11 +1,12 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.22 2004/11/17 18:55:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.23 2004/12/14 22:45:41 wolf31o2 Exp $
 
-  17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
-  americas-army-210.ebuild:
-  Removed calls to specific 3dgamers mirrors and changed to use
-  mirror://3dgamers instead.
+*americas-army-221 (14 Dec 2004)
+
+  14 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -americas-army-210.ebuild, +americas-army-221.ebuild:
+  Updated to latest version and closing bug #72234.
 
   14 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> -files/armyops,
   +files/armyops-ded.conf.d, +files/armyops-ded.rc,
