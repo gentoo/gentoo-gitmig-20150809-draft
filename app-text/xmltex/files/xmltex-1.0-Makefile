@@ -1,0 +1,23 @@
+default: xmltex.fmt pdfxmltex.fmt 
+
+xmltex.fmt: 
+	tex -ini "&latex" -progname=xmltex xmltex.ini
+
+pdfxmltex.fmt: 
+	pdftex -ini "&pdflatex" -progname=pdfxmltex pdfxmltex.ini
+
+install: xmltex.fmt pdfxmltex.fmt
+	(TT=$$DESTDIR/`kpsewhich -expand-var '$$TEXMFMAIN'`; \
+	mkdir -p $$TT/web2c; \
+	cp pdfxmltex.fmt $$TT/web2c; \
+	cp xmltex.fmt $$TT/web2c; \
+	mkdir -p $$TT/tex/xmltex; \
+	cp *.xmt $$TT/tex/xmltex)
+
+realclean: clean
+	-rm xmltex.fmt pdfxmltex.fmt 
+
+clean:
+	-rm  *.log *.aux *.idx *.pdf *.toc *.dvi 
+
+
