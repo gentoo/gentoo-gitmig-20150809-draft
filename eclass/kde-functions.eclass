@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.88 2005/01/18 19:13:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.89 2005/01/21 17:00:41 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -17,6 +17,8 @@ kde-base/kdeaccessibility kde-base/kbstateapplet
 kde-base/kdeaccessibility kde-base/kmag
 kde-base/kdeaccessibility kde-base/kmousetool
 kde-base/kdeaccessibility kde-base/kmouth
+kde-base/kdeaccessibility kde-base/kttsd
+kde-base/kdeaccessibility kde-base/ksayit
 kde-base/kdeaddons kde-base/atlantikdesigner
 kde-base/kdeaddons kde-base/kaddressbook-xxports-kworldclock
 kde-base/kdeaddons kde-base/kate-cppsymbolviewer
