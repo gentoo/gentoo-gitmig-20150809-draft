@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/nss-db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.3 2003/02/12 09:20:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.4 2003/06/27 10:12:45 pauldv Exp $
+
+  27 Jun 2003; Paul de Vrieze <pauldv@gentoo.org> nss-db-2.2-r1.ebuild,
+  files/db3.patch:
+  This does not work with glibc-2.3.x, so block it in the dependencies. Also
+  patch the configure script to use the db3 lib
 
 *nss-db-2.2-r1 (1 Feb 2002)
 
