@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.24 2005/02/22 22:42:10 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.25 2005/02/23 02:25:38 rocket Exp $
+
+*lvm2-2.00.33-r1 (22 Feb 2005)
+
+  22 Feb 2005; Eric Edgar <rocket@gentoo.org> +files/lvm2-start.sh,
+  +files/lvm2-stop.sh, +lvm2-2.00.33-r1.ebuild:
+  New ebuild to add baselayout files to /lib/rcscripts/addons to support
+  starting and stopping lvm2
 
 *lvm2-2.00.33 (22 Feb 2005)
 
