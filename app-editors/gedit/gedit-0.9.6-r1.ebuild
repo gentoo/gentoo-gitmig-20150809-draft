@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.13 2004/04/17 09:38:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.14 2004/05/29 03:43:38 pvdabeel Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome//sources/gedit/${PV/.6}/${P}.tar.gz"
 HOMEPAGE="http://gedit.sourceforge.net/"
 SLOT="O"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ppc"
 
 RDEPEND=" <gnome-base/libglade-2
 	 >=gnome-base/gnome-print-0.30
