@@ -61,7 +61,6 @@ lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
-mpeg - Adds libmpeg3 support to various packages.
 libwww - Adds libwww support (General purpose WEB API)
 matrox - Adds Matrox MGA support to mplayer
 mikmod - 
@@ -72,6 +71,7 @@ mozctl - Adds Pango like module to mozilla (???)
 mozilla - Adds mozilla support
 mozirc - Adds IRC (Internet Relay Chat) module to mozilla
 mozxmlterm - Adds Xterm like terminal with XML support to mozilla
+mpeg - Adds libmpeg3 support to various packages.
 mysql - Adds mySQL support
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
