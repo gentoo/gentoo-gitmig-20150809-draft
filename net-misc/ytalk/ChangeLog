@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ytalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.12 2004/12/29 20:18:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.13 2004/12/30 17:46:16 seemant Exp $
+
+*ytalk-3.1.6 (30 Dec 2004)
+
+  30 Dec 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  ytalk-3.1.1.ebuild, +ytalk-3.1.6.ebuild:
+  version bump, thanks to Andreas King <keso@impul.se> who I've listed as the
+  user-maintainer for this package
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
