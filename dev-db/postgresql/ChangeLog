@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.54 2003/03/17 03:51:55 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.55 2003/03/23 18:03:39 nakano Exp $
 
 *postgresql-7.3.2 (01 Mar 2003)
+  23 Mar 2003: Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.2.ebuild:
+  Move to stable.
+
   17 Mar 2003: Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.2.ebuild:
   Fixed bug #14953
 
