@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nsca
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.6 2003/03/01 01:21:24 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.7 2003/06/18 00:15:58 alron Exp $
+
+*nagios-nsca-2.3-r1
+  17 Jun 2003; Dean Bailey <alron@gentoo.org> nagios-nsca-2.3-r1 :
+  Bug fix for bug #22498
 
   28 Feb 2003; Dean Bailey <alron@gentoo.org> nagios-nsca-2.3 :
   Moved to x86 stable.
