@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.2.2.ebuild,v 1.1 2000/08/25 15:10:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.2.2.ebuild,v 1.2 2000/11/01 04:44:14 achim Exp $
 
 P=jdk-1.2.2
 A=j2sdk-1.2.2-FCS-linux-i386-glibc-2.1.3.tar.bz2
@@ -9,6 +9,10 @@ S=${WORKDIR}/jdk1.2.2
 DESCRIPTION="Blackdown JDK 1.2.2"
 SRC_URI="ftp://gd.tuwien.ac.at/opsys/linux/java/JDK-1.2.2/i386/FCS/${A}"
 HOMEPAGE="http://www.blackdown.org/java-linux.html"
+
+DEPEND=">=sys-apps/bash-2.04 
+	>=sys-libs/glibc-2.1.3
+	>=x11-base/xfree-4.0.1"
 
 src_compile() {                           
   cd ${S}

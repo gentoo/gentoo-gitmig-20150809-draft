@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.26.ebuild,v 1.1 2000/10/19 16:21:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.26.ebuild,v 1.2 2000/11/01 04:44:14 achim Exp $
 
 P=mysql-3.23.26-beta
 A=${P}.tar.gz
@@ -11,6 +11,11 @@ SRC_URI="ftp://mysql.valueclick.com/mysql/Downloads/MySQL-3.23/${A}
 	 http://www.mysql.com/Downloads/MySQL-3.23/${A}"
 HOMEPAGE="http://www.mysql.com/"
 
+DEPEND=">=sys-apps/bash-2.04
+	>=sys-apps/tcp-wrappers-7.6
+	>=sys-libs/glibc-2.1.3
+	>=sys-libs/gpm-1.19.3
+	>=sys-libs/ncurses-5.1"
 
 src_compile() {
         if [ "$PLATFORM" = "i686-pc-linux-gnu" ]

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.8 2000/10/19 16:14:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.9 2000/11/01 04:44:13 achim Exp $
 
 P=tetex-1.0.7
 A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz"
@@ -9,6 +9,11 @@ S=${WORKDIR}/teTeX-1.0
 DESCRIPTION="teTeX is a complete TeX distribution"
 SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-1.0.7.tar.gz
 	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmf-1.0.2.tar.gz"
+
+DEPEND=">=sys-devel/gcc-2.95.2
+	>=sys-libs/glibc-2.1.3
+	>=media-libs/libpng-1.0.7
+	>=x11-base/xfree-4.0.1"
 
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
