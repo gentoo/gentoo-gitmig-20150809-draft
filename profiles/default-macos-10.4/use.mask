@@ -3,8 +3,8 @@
 # alsa will more than likely never compile on os x
 alsa
 
-# cap is for linux kernel
-cap
+# mach does not need caps
+caps
 
 # Skipping docs for now
 doc

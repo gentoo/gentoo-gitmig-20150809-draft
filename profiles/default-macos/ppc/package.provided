@@ -153,6 +153,7 @@ sys-darwin/startup-177
 sys-darwin/system_cmds-279
 sys-darwin/system_config-48
 sys-darwin/text_cmds-30
+sys-darwin/tcp_wrappers-10
 sys-darwin/top-9
 sys-darwin/usernotification-15
 sys-darwin/usertemplate-40
@@ -160,4 +161,3 @@ sys-darwin/volfs-24
 sys-darwin/webcore-106
 sys-darwin/webdavfs-148.2
 sys-darwin/xnu-517
-

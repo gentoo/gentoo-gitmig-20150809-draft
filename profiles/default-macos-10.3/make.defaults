@@ -10,7 +10,7 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 ARCH="macos"
-ACCEPT_KEYWORDS="macos" 
+ACCEPT_KEYWORDS="~ppc-macos" 
 USE=""
 PLATFORM=$CHOST
 

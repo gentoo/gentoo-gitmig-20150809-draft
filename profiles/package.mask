@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3177 2004/09/22 14:20:07 ribosome Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3178 2004/09/22 21:07:12 kito Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -274,7 +274,6 @@ dev-lisp/cl-rsm-genetic-alg
 
 # <pylon@gentoo.org> (11 July 2004)
 # Does not compile with gcc-3.4 in the USE=gnome dependencies
->=app-cdr/cdrdao-1.1.9
 
 # <usata@gentoo.org> (2 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
