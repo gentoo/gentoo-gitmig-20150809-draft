@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r2.ebuild,v 1.5 2003/10/21 04:58:53 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r3.ebuild,v 1.1 2003/11/12 16:57:31 max Exp $
+
+inherit eutils
 
 DESCRIPTION="Software for generating and retrieving SNMP data."
 HOMEPAGE="http://net-snmp.sourceforge.net/"
@@ -25,6 +27,11 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}
 	perl? ( X? ( dev-perl/perl-tk ) )
 	!virtual/snmp"
+
+src_unpack() {
+	unpack ${A} && cd "${S}"
+	epatch "${FILESDIR}/${PN}-proc.patch"
+}
 
 src_compile() {
 	local myconf

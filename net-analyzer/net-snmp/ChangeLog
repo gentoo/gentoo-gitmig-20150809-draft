@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.32 2003/11/01 14:38:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.33 2003/11/12 16:57:31 max Exp $
+
+  12 Nov 2003; <max@gentoo.org> net-snmp-5.0.9-r3.ebuild,
+  files/net-snmp-proc.patch:
+  Add /proc patch from net-snmp CVS. Bump to version 5.0.9-r3. Fixes bug 33249.
 
   30 Oct 2003; Max Kalika <max@gentoo.org> files/snmpd.conf, files/snmpd.rc6:
   Add connection logging example and do away with config file settings -- snmpd
@@ -39,7 +43,7 @@
 
 *net-snmp-5.0.9-r1 (19 Sep 2003)
 
-  1 Nov 2003; Guy Martin <gmsoft@gentoo.org> net-snmp-5.0.9-r1.ebuild :
+  01 Nov 2003; Guy Martin <gmsoft@gentoo.org> net-snmp-5.0.9-r1.ebuild:
   Marked stable on hppa.
 
   19 Sep 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r1.ebuild,
