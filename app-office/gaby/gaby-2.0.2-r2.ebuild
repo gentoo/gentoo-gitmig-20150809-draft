@@ -1,23 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r2.ebuild,v 1.2 2003/02/13 09:15:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r2.ebuild,v 1.3 2003/03/29 04:08:24 seemant Exp $
 
 IUSE="nls esd gnome"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"
-SRC_URI="http://gaby.sourceforge.net/archives/${P}.tar.gz"
-HOMEPAGE="http://gaby.sourceforge.net"
-KEYWORDS="x86"
+HOMEPAGE="http://gaby.theridion.com/"
+SRC_URI="http://gaby.theridion.com/archives/${P}.tar.gz"
+
 SLOT="0"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
-DEPEND="=x11-libs/gtk+-1.2*
+DEPEND=">=sys-apps/portage-2.0.47-r10
 	virtual/python
-	>=media-libs/gdk-pixbuf-0.11.0-r1
 	dev-libs/libxml
 	<dev-python/gnome-python-1.99
+	=x11-libs/gtk+-1.2*
 	=gnome-base/libglade-0.17*
+	>=media-libs/gdk-pixbuf-0.11.0-r1
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	esd? ( >=media-sound/esound-0.2.8 )
 	nls? ( sys-devel/gettext )"
@@ -26,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 	#patches a few makefile bugs
 	#some necessary, others not because multimedia is disabled
-	patch -p0 < ${FILESDIR}/gaby-2.0.2-makefile.patch
+	epatch ${FILESDIR}/gaby-2.0.2-makefile.patch
 }
 
 src_compile() {

@@ -1,8 +1,12 @@
 # ChangeLog for app-office/gaby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/ChangeLog,v 1.4 2003/02/12 05:12:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/ChangeLog,v 1.5 2003/03/29 04:08:24 seemant Exp $
 
 *gaby-2.0.2-r2 (11 Oct 2002)
+
+  28 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gaby-2.0.2-r1.ebuild,
+  gaby-2.0.2-r1.ebuild, gaby-2.0.2-r2.ebuild:
+  HOMEPAGE fix thanks to: Frantz Dhin <tragedy_rm@hotmail.com> in bug #18299
 
   11 Oct 2002; foser <foser@gentoo.org> gaby-2.0.2-r1.ebuild :
   Fixed a lot of sandbox violations and added a patch to 
