@@ -1,0 +1,13 @@
+# ChangeLog for app-misc/gtodo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.1 2003/11/18 02:32:38 port001 Exp $
+
+  18 Nov 2003; Ian Leitch <port001@gentoo.org> gtodo-0.13.5.ebuild:
+  Moved from app-misc to x11-misc and added metadata.xml
+
+*gtodo-0.13.5 (16 Oct 2003)
+
+  16 Oct 2003; Markus Nigbur <pyrania@gentoo.org> gtodo-0.13.5.ebuild:
+  Initial import. Thanks to theblackdragon@linux.be for the clean ebuild (bug
+  31299).
+
