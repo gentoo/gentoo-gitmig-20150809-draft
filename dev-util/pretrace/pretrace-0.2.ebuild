@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.2.ebuild,v 1.1 2005/04/06 12:42:00 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.2.ebuild,v 1.2 2005/04/06 15:43:24 taviso Exp $
 
 inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="Start dynamically linked applications under debugging environment"
-HOMEPAGE="http://dev.gentoo.org/~taviso/files"
+HOMEPAGE="http://dev.gentoo.org/~taviso/files/README.pretrace"
 SRC_URI="http://dev.gentoo.org/~taviso/files/lib${P}.c.gz"
 LICENSE="GPL-2"
 SLOT="0"
