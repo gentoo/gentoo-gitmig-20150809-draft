@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.10-r2.ebuild,v 1.4 2005/01/06 14:41:27 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.10-r7.ebuild,v 1.1 2005/02/05 08:32:58 dsd Exp $
 
 ETYPE="sources"
+IUSE="ultra1"
 inherit kernel-2
 detect_version
 detect_arch
 
 #version of gentoo patchset
-GPV="10.02"
+GPV="10.08"
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
 
-KEYWORDS="~amd64 ~x86 ~sparc"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc64"
 
 HOMEPAGE="http://dev.gentoo.org/~dsd/gentoo-dev-sources"
 
@@ -23,25 +24,11 @@ UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/0000
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GPV_SRC} ${ARCH_URI}"
 
-IUSE="ultra1"
 
 pkg_setup() {
 	if use sparc; then
 		# hme lockup hack on ultra1
 		use ultra1 || UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1399_sparc-U1-hme-lockup.patch"
-
-		# Don't overpatch sparc (i.e. keep ciaranm happy) ;p
-		UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE}
-		                  1315_alpha-sysctl-uac.patch
-		                  2500_vesafb-tng-0.9-rc5.patch
-		                  2700_ppc-pegasos-2.6.6.patch
-		                  4300_evms-dm-bbr.patch
-		                  4305_dm-multipath.patch
-		                  4306_dm-mp-version.patch
-		                  4307_dm-mp-hw.patch
-		                  4310_ich7-support.patch
-		                  4500_fbsplash-0.9.1.patch
-		                  4905_speakup-20041020.patch"
 	fi
 }
 
