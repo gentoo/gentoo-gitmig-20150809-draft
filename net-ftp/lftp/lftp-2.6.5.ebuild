@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.5.ebuild,v 1.10 2003/12/15 19:18:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.5.ebuild,v 1.11 2003/12/15 19:44:25 spider Exp $
 
 inherit eutils
 
@@ -21,12 +21,6 @@ LICENSE="GPL-2"
 KEYWORDS="-x86 -ppc -sparc alpha hppa -amd64"
 
 
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	#epatch ${FILESDIR}/configure-lftp-2.6.2.diff
-}
 
 src_compile() {
 	local myconf
