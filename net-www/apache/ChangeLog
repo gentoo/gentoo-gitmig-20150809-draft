@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.99 2004/03/22 21:17:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.100 2004/03/23 04:32:21 weeve Exp $
+
+*apache-2.0.49 (22 Mar 2004)
+
+  22 Mar 2004; Jason Wever <weeve@gentoo.org> apache-2.0.49.ebuild:
+  Marked stable on sparc wrt bug #45206.
 
   22 Mar 2004; Stuart Herbert <stuart@gentoo.org>
   files/2.0.49/40_mod_ssl.conf, files/2.0.49/41_mod_ssl.default-vhost.conf,
