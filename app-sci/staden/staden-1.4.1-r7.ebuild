@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r6.ebuild,v 1.4 2004/09/19 00:57:09 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r7.ebuild,v 1.1 2004/09/23 02:52:32 ribosome Exp $
 
 inherit eutils
 
@@ -68,9 +68,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-tk_utils.patch
 	epatch ${FILESDIR}/${P}-tracediff.patch
 	cd ${S}/src/mk
-	sed -i -e 's/SHLIB_CFLAGS		= -fpic/SHLIB_CFLAGS		= -fPIC/' linux.mk \
+	# Remove the "-fpic" flag. This will be replaced by "-fPIC".
+	sed -i -e 's/SHLIB_CFLAGS		= -fpic/SHLIB_CFLAGS		= /' linux.mk \
 		&& einfo "Successfully applied sed script to patch linux.mk." \
 		|| eerror "Failed to apply sed script to patch linux.mk."
+	cd ${S}/src/mutlib
 	cd ${S}
 	echo
 
@@ -129,13 +131,13 @@ src_unpack() {
 	echo
 
 	# "CFLAGS" and "FFLAGS" need to be set to the user's values in the build
-	# system global Makefile.
+	# system global Makefile. We also want only "-fPIC" shared libraries.
 	einfo "Applying user-defined compilation/linking flags:"
 	cd ${S}/src/mk
-	sed -i -e "s/COPT		= -O2 -g3 -DNDEBUG/COPT = ${CFLAGS:-"-O2 -g3 -DNDEBUG"}/" global.mk \
+	sed -i -e "s/COPT		= -O2 -g3 -DNDEBUG/COPT = ${CFLAGS:-"-O2 -g3 -DNDEBUG"} -fPIC/" global.mk \
 		&& einfo "Successfully applied sed script to set CFLAGS." \
 		|| eerror "Failed to apply sed script to set CFLAGS."
-	sed -i -e "s/FOPT		= -O2 -g3 -DNDEBUG/FOPT = ${FFLAGS:-"-O2 -g3 -DNDEBUG"}/" global.mk \
+	sed -i -e "s/FOPT		= -O2 -g3 -DNDEBUG/FOPT = ${FFLAGS:-"-O2 -g3 -DNDEBUG"} -fPIC/" global.mk \
 		&& einfo "Successfully applied sed script to set FFLAGS." \
 		|| eerror "Failed to apply sed script to set FFLAGS."
 }

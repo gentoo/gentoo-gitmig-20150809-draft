@@ -1,5 +1,5 @@
-MD5 6a44eba869f59393e4252ccff6265d54 staden-1.4.1-r6.ebuild 10936
-MD5 82f571fa0ca1d2c39c82d57de930297f ChangeLog 2387
+MD5 40c1e20a7b5c67baffcaa01b7bd135a5 staden-1.4.1-r7.ebuild 11069
+MD5 0ca4009c655a7dc0988cfbf2f4ac7d9f ChangeLog 2569
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 e908bf4692dd3494ec22f07db2e7a9f5 files/staden-1.4.1-env 225
 MD5 3699a9d368068d835cbd8568d50d23e5 files/staden-1.4.1-gap4.patch 463
@@ -9,7 +9,7 @@ MD5 bd82265e893628c1b46329d77e1f11d8 files/staden-1.4.1-iwidgetsrc.new 445
 MD5 8650f58c55b83838846447c89543255d files/staden-1.4.1-getopt.patch 375
 MD5 7717f77ecd800d0b3049974db3fcd0a9 files/staden-1.4.1-prefinish.patch 362
 MD5 a8ceefd2b3b2c1c0053a504561635379 files/staden-1.4.1-mutscan.patch 328
-MD5 cd40ea0a473054769a0963e708257f98 files/digest-staden-1.4.1-r6 213
+MD5 cd40ea0a473054769a0963e708257f98 files/digest-staden-1.4.1-r7 213
 MD5 708ea4c4b4cbc7e2b6b88b5a09e1b564 files/staden-1.4.1-top.patch 230
 MD5 ea4a62a1cd5070014d2c9352eeecf06a files/staden-1.4.1-tk_utils.patch 368
 MD5 8f13c224bf3c586a6436c39906b780ec files/staden-1.4.1-emboss.patch 1312
