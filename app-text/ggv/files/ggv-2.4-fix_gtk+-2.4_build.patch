@@ -1,0 +1,24 @@
+diff -uNr ggv-2.4.1/configure ggv-2.4.1.patched/configure
+--- ggv-2.4.1/configure	2004-02-04 21:34:30.000000000 +0100
++++ ggv-2.4.1.patched/configure	2004-03-28 18:25:01.405058360 +0200
+@@ -21944,7 +21944,7 @@
+ BONOBO_ACT_IDLDIR="`$PKG_CONFIG --variable=idldir bonobo-activation-2.0`"
+ 
+ 
+-GGV_EXTRA_CFLAGS="-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED"
++GGV_EXTRA_CFLAGS=
+ 
+ 
+ 
+diff -uNr ggv-2.4.1/configure.in ggv-2.4.1.patched/configure.in
+--- ggv-2.4.1/configure.in	2004-02-04 21:33:57.000000000 +0100
++++ ggv-2.4.1.patched/configure.in	2004-03-28 18:25:18.287491840 +0200
+@@ -148,7 +148,7 @@
+ BONOBO_ACT_IDLDIR="`$PKG_CONFIG --variable=idldir bonobo-activation-2.0`"
+ AC_SUBST(BONOBO_ACT_IDLDIR)
+       
+-GGV_EXTRA_CFLAGS="-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED"
++GGV_EXTRA_CFLAGS=
+ 
+ AC_SUBST(GGV_EXTRA_CFLAGS)
+ AC_SUBST(CFLAGS)
