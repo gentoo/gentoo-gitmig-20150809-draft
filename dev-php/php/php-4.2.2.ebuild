@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2.ebuild,v 1.1 2002/07/22 15:13:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2.ebuild,v 1.2 2002/07/23 02:00:58 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="HTML embedded scripting language"
-SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
+SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SLOT="0"
