@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.2 2004/08/07 03:40:19 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.3 2004/08/16 16:42:40 pythonhead Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -42,9 +42,14 @@ set-wxconfig() {
 
 	if [ -e ${wxconfig} ] ; then
 		export WX_CONFIG=${wxconfig}
+		export WX_CONFIG_NAME="${1}-${wxgtk_ver}-config"
+		export WXBASE_CONFIG_NAME="${1}-${wxgtk_ver}-config"
+		echo ${WX_CONFIG_NAME}
 		echo " * Using ${wxconfig}"
 	elif [ -e ${wxconfig_debug} ] ; then
 		export WX_CONFIG=${wxconfig_debug}
+		export WX_CONFIG_NAME="${1}d-${wxgtk_ver}-config"
+		export WXBASE_CONFIG_NAME="${1}d-${wxgtk_ver}-config"
 		echo " * Using ${wxconfig_debug}"
 	else
 		echo "!!! $FUNCNAME: Error:  Can't find normal or debug version:"
