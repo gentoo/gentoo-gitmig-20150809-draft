@@ -10,13 +10,12 @@ if [ ! -f deps ]; then
 This program will compile all applets with the BB_FEATURE definitions you gave.
 Then, it will find the dependencies in them, and save them in the file "deps".
 Then, it will calculate the applets you can activate with the same set of
-function dependencies. It will also give the size of the .o file, which is a
-very rough estimate of what it will mean for the busybox executable.
+function dependencies. It will also give an estimate of the added code size.
 
 This can then be used to make more informed decisions about what you want in
 the busybox.
 
-If you don't like this, press ctrl-c now.
+If you don't like this, press ctrl-c now, otherwise press enter.
 EOF
 	read a
 	
@@ -27,7 +26,7 @@ EOF
 	
 	# Get dependencies and sizes
 	export CC=gcc
-	for i in `./busybox.sh Config.h|sed 's/\.c/.o/g'`; do echo -n ${i%%.o} \(`ls -l $i|awk '{print $5}'`\):\ ; nm -p $i|awk '$1=="U"{a[i++]=$2}END{n=asort(a);for(i=1;i<=n;i++){printf a[i] " "}}'; echo; done > deps
+	for i in `./busybox.sh Config.h|sed 's/\.c/.o/g'`; do echo -n ${i%%.o} \(`size $i|awk /$i'/{print $(NF-2)}'`\):\ ; nm -p $i|awk '$1=="U"{a[i++]=$2}END{n=asort(a);for(i=1;i<=n;i++){printf a[i] " "}}'; echo; done > deps
 	mv Config.h.orig Config.h
 fi
 
@@ -36,7 +35,7 @@ my_apps=`gcc -E -dM Config.h | awk '{if ($0~/^#define BB_/ && $0!~/FEATURE/){if(
 egrep "$my_apps" deps | awk '{for(i=3;i<=NF;i++){print $i}}'|sort -u > used_funcs
 egrep -v "$my_apps" deps | awk '{for(i=3;i<=NF;i++){print $i}}'|sort -u > used_funcs_other
 join -v2 used_funcs used_funcs_other > new_funcs
-#rm used_funcs used_funcs_other
+rm used_funcs used_funcs_other
 
 # Show results
 echo "These applets share the same functions (code sizes are estimates)"
