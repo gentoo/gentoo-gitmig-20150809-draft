@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.6 2004/02/14 05:20:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.7 2004/02/21 05:47:19 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
 MY_P=nc${PV}
 DESCRIPTION="A network piping program"
@@ -14,7 +14,7 @@ SRC_URI="http://www.atstake.com/research/tools/network_utilities/${MY_P}.tgz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
-IUSE="ipv6 static"
+IUSE="ipv6 static GAPING_SECURITY_HOLE"
 
 DEPEND="virtual/glibc"
 
@@ -37,9 +37,10 @@ src_unpack() {
 
 src_compile() {
 	export XFLAGS="-DLINUX"
-	[ `use ipv6` ] && XFLAGS="${XFLAGS} -DINET6"
-	[ `use static` ] && export STATIC="-static"
-	CC="gcc ${CFLAGS}" make -e nc || die
+	use ipv6 && XFLAGS="${XFLAGS} -DINET6"
+	use static && export STATIC="-static"
+	use GAPING_SECURITY_HOLE && XFLAGS="${XFLAGS} -DGAPING_SECURITY_HOLE"
+	CC="$(gcc-getCC) ${CFLAGS}" make -e nc || die
 }
 
 src_install() {
