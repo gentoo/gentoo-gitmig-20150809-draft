@@ -28,79 +28,20 @@ diff -ur avifile-0.7-0.7.38/ffmpeg/libavformat/grab.c avifile-0.7-0.7.38.plasmar
  
  typedef struct {
      int fd;
-diff -ur avifile-0.7-0.7.38/plugins/libwin32/loader/ldt_keeper.c avifile-0.7-0.7.38.plasmaroo/plugins/libwin32/loader/ldt_keeper.c
+diff -ur avifile-0.7-0.7.38/samples/qtvidcap/main.cpp avifile-0.7-0.7.38.plasmaroo/samples/qtvidcap/main.cpp
 --- avifile-0.7-0.7.38/plugins/libwin32/loader/ldt_keeper.c	2002-08-08 10:05:51.000000000 +0100
-+++ avifile-0.7-0.7.38.plasmaroo/plugins/libwin32/loader/ldt_keeper.c	2003-12-26 21:54:33.000000000 +0000
-@@ -22,6 +22,7 @@
- #include <stdio.h>
- #include <unistd.h>
++++ avifile-0.7-0.7.38.plasmaroo/plugins/libwin32/loader/ldt_keeper.c	2004-01-02 16:17:06.000000000 +0000
+@@ -24,6 +24,10 @@
  #ifdef __linux__
-+#include <linux/version.h>
  #include <asm/unistd.h>
  #include <asm/ldt.h>
++#include <linux/version.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,47)
++	#define modify_ldt_ldt_s user_desc
++#endif
  /* prototype it here, so we won't depend on kernel headers */
-@@ -109,8 +110,13 @@
- #ifdef __linux__
- /* XXX: why is this routine from libc redefined here? */
- /* NOTE: the redefined version ignores the count param, count is hardcoded as 16 */
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+static int LDT_Modify( int func, struct user_desc *ptr,
-+		       unsigned long count )
-+#else
- static int LDT_Modify( int func, struct modify_ldt_ldt_s *ptr,
- 		       unsigned long count )
-+#endif
- {
-     int res;
- #ifdef __PIC__
-@@ -141,7 +147,15 @@
- #endif
- 
- #if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
--static void LDT_EntryToBytes( unsigned long *buffer, const struct modify_ldt_ldt_s *content )
-+#if defined(__linux__) 
-+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+		static void LDT_EntryToBytes( unsigned long *buffer, const struct user_desc *content )
-+	#else
-+		static void LDT_EntryToBytes( unsigned long *buffer, const struct modify_ldt_ldt_s *content )
-+	#endif
-+#else
-+	static void LDT_EntryToBytes( unsigned long *buffer, const struct modify_ldt_ldt_s *content )
-+#endif
- {
-     *buffer++ = ((content->base_addr & 0x0000ffff) << 16) |
- 	(content->limit & 0x0ffff);
-@@ -158,7 +172,15 @@
- 
- ldt_fs_t* Setup_LDT_Keeper(void)
- {
--    struct modify_ldt_ldt_s array;
-+    #if defined(__linux__) 
-+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+ 	    struct user_desc array;
-+	#else
-+	    struct modify_ldt_ldt_s array;
-+	#endif
-+    #else
-+	    struct modify_ldt_ldt_s array;
-+    #endif
-     int ret;
-     ldt_fs_t* ldt_fs = (ldt_fs_t*) malloc(sizeof(ldt_fs_t));
- 
-@@ -190,7 +212,11 @@
-     array.limit_in_pages=0;
- #ifdef __linux__
-     //ret=LDT_Modify(0x1, &array, sizeof(struct modify_ldt_ldt_s));
--    ret=modify_ldt(0x1, &array, sizeof(struct modify_ldt_ldt_s));
-+    #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+	ret=modify_ldt(0x1, &array, sizeof(struct user_desc));
-+    #else
-+	ret=modify_ldt(0x1, &array, sizeof(struct modify_ldt_ldt_s));
-+    #endif
-     if(ret<0)
-     {
- 	perror("install_fs");
-diff -ur avifile-0.7-0.7.38/samples/qtvidcap/main.cpp avifile-0.7-0.7.38.plasmaroo/samples/qtvidcap/main.cpp
+ #ifdef  __cplusplus
+ extern "C" {
 --- avifile-0.7-0.7.38/samples/qtvidcap/main.cpp	2003-06-08 18:26:04.000000000 +0100
 +++ avifile-0.7-0.7.38.plasmaroo/samples/qtvidcap/main.cpp	2003-12-26 19:21:20.000000000 +0000
 @@ -1,9 +1,6 @@
