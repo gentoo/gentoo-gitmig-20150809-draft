@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.5,v 1.1 2002/12/23 01:49:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.9,v 1.1 2003/01/15 01:59:58 azarah Exp $
 
 
 source /etc/init.d/functions.sh || {
@@ -12,43 +12,42 @@ source /etc/init.d/functions.sh || {
 
 usage() {
 cat << "USAGE_END"
-Usage: gcc-config [Option] <CHOST>-<gcc version>
+Usage: gcc-config [Option] [CC Profile]
+Change the current cc/gcc profile, or give info about profiles.
+
 Options:
-	[--use-old]
 
-		Use the old profile if one was selected.
+  --use-old              Use the old profile if one was selected.
 	
-	[--use-portage-chost]
-
-		Only set to given profile if its CHOST is the same as that
-		set for portage in /etc/make.conf (or one of other portage
-		config files...).
+  --use-portage-chost    Only set to given profile if its CHOST is the same
+                         as that set for portage in /etc/make.conf (or one of
+                         other portage config files...).
 	
-	[--get-current-profile]
+  --get-current-profile  Print current used gcc profile.
 
-		Print current used gcc profile.
+  --list-profiles        Print a list of available profiles.
 
-	[--list-profiles]
-
-	    Print a list of available profiles.
-
-	[--print-environ]
-
-	    Print environment that can be used to setup things for current
-		gcc profile, or specified one ...
+  --print-environ        Print environment that can be used to setup things
+                         for current gcc profile, or specified one ...
 	
-	[--get-bin-path]
-
-		Print path where binaries of given/current profile are located.
+  --get-bin-path         Print path where binaries of given/current profile
+                         are located.
 	
-	[--get-lib-path]
+  --get-lib-path         Print path where libraries of given/current profile
+                         are located.
 
-		Print path where libraries of given/current profile are located.
-
-	[--get-stdcxx-incdir]
-
-		Print path to g++ include files of given/current profile.
+  --get-stdcxx-incdir    Print path to g++ include files of given/current
+                         profile.
 	
+The profile name is in the form of:
+
+  <CHOST>-<gcc version>
+
+For example:
+
+  i686-pc-linux-gnu-3.2.1
+
+
 
 USAGE_END
 
@@ -62,7 +61,7 @@ fi
 
 cmd_setup() {
 
-	# Sourcing /etc/env.d/gcc/${GCC_COMP} is going to mess up
+	# Sourcing /etc/env.d/gcc/${CC_COMP} is going to mess up
 	# PATH among things...
 	CP="$(find_path cp)"
 	RM="$(find_path rm)"
@@ -90,28 +89,7 @@ find_path() {
 	done
 }
 
-gen_wrapper() {
-	${CAT} > $1 << END
-#!/bin/sh
-
-# This is part of sys-devel/gcc-config
-
-CPP="\`which cpp 2> /dev/null\`"
-
-# Setup PATH if we cannot find the cpp binary, or if the one
-# we find is the wrapper script ...
-if [ ! -x "\${CPP}" -o "\${CPP}" == "/usr/bin/cpp" ]
-then
-	PATH="\`/usr/sbin/gcc-config --get-bin-path\`:\${PATH}"
-fi
-
-$2 "\$@"
-END
-
-	${CHMOD} 0755 $1
-}
-
-GCC_COMP=""
+CC_COMP=""
 REAL_CHOST="$(/usr/bin/python -c 'import portage; print portage.settings["CHOST"];')"
 
 switch_profile() {
@@ -124,9 +102,9 @@ switch_profile() {
 		exit 1
 	fi
 
-	ebegin "Switching to ${GCC_COMP} compiler"
+	ebegin "Switching to ${CC_COMP} compiler"
 
-	# Sourcing /etc/env.d/gcc/${GCC_COMP} is going to mess up
+	# Sourcing /etc/env.d/gcc/${CC_COMP} is going to mess up
 	# PATH among things...
 	cmd_setup
 
@@ -136,8 +114,8 @@ switch_profile() {
 	# compilers for default CHOST will be used to compile stuff,
 	# and thus we want all their lib paths in /etc/ld.so.conf ...
 	GCC_PROFILES="$(${FIND} /etc/env.d/gcc/ -name "${REAL_CHOST}-*")"
-	GCC_PROFILES="${GCC_PROFILES/\/etc\/env.d\/gcc\/${GCC_COMP}}"
-	GCC_PROFILES="/etc/env.d/gcc/${GCC_COMP} ${GCC_PROFILES}"
+	GCC_PROFILES="${GCC_PROFILES/\/etc\/env.d\/gcc\/${CC_COMP}}"
+	GCC_PROFILES="/etc/env.d/gcc/${CC_COMP} ${GCC_PROFILES}"
 
 	# Extract all LDPATH's for our CHOST
 	for x in ${GCC_PROFILES}
@@ -161,41 +139,34 @@ switch_profile() {
 		fi
 	done
 
+	# Setup things properly again for this profile
+	source /etc/env.d/gcc/${CC_COMP}
+
 	# Setup /etc/env.d/05gcc
-	${AWK} '!/STDCXX_INCDIR|LDPATH/ {print $0}' \
-		/etc/env.d/gcc/${GCC_COMP} > /etc/env.d/05gcc
+	${AWK} '!/^STDCXX_INCDIR=|^LDPATH=/ {print $0}' \
+		/etc/env.d/gcc/${CC_COMP} > /etc/env.d/05gcc
+
+	# Add our custom LDPATH
 	echo "LDPATH=\"${MY_LDPATH}\"" >> /etc/env.d/05gcc
 
-	source /etc/env.d/gcc/${GCC_COMP}
-
-	# Create /lib/cpp if missing or a symlink
-	if [ -L /lib/cpp -o ! -f /lib/cpp ]
-	then
-		${RM} -f /lib/cpp
-		gen_wrapper /lib/cpp cpp
-	fi
-	# Make sure it are not unmerged by mistake
-	${TOUCH} /lib/cpp
-	# Create /usr/bin/cc if missing or a symlink
-	if [ -L /usr/bin/cc -o ! -f /usr/bin/cc ]
-	then
-		${RM} -f /usr/bin/cc
-		gen_wrapper /usr/bin/cc gcc
-	fi
-	# Make sure it are not unmerged by mistake
-	${TOUCH} /usr/bin/cc
-	# Create /usr/bin/cpp if missing or a symlink (used by XFree86 for one)
-	if [ -L /usr/bin/cpp -o ! -f /usr/bin/cpp ]
-	then
-		${RM} -f /usr/bin/cpp
-		gen_wrapper /usr/bin/cpp cpp
-	fi
-	# Make sure it are not unmerged by mistake
-	${TOUCH} /usr/bin/cpp
-
-	echo "CURRENT=${GCC_COMP}" > /etc/env.d/gcc/config
+	# Make sure we do not recreate /lib/cpp and /usr/bin/cc ...
+#	echo "DISABLE_GEN_GCC_WRAPPERS=\"yes\"" >> /etc/env.d/05gcc
+	
+	echo "CURRENT=${CC_COMP}" > /etc/env.d/gcc/config
 
 	source /etc/profile
+
+	# These might not be installed, and we want to update the mtime
+	# for ccache and distcc anyhow ...
+	${RM} -f /lib/cpp
+	${CP} -f /usr/lib/gcc-config/wrapper /lib/cpp
+	for x in gcc cpp cc c++ g++ ${CHOST}-gcc ${CHOST}-c++ ${CHOST}-g++
+	do
+		${RM} -f /usr/bin/${x}
+		${CP} -f /usr/lib/gcc-config/wrapper /usr/bin/${x}
+		${TOUCH} -m /usr/bin/${x}
+	done
+
 
 	${ENV_UPDATE} &> /dev/null
 
@@ -243,7 +214,7 @@ list_profiles() {
 print_environ() {
 	local OLDPATH="${PATH}"
 
-	source /etc/env.d/gcc/${GCC_COMP}
+	source /etc/env.d/gcc/${CC_COMP}
 
 	echo "export PATH=\"${PATH}:${OLDPATH}\""
 
@@ -259,7 +230,7 @@ print_environ() {
 }
 
 get_bin_path() {
-	source /etc/env.d/gcc/${GCC_COMP}
+	source /etc/env.d/gcc/${CC_COMP}
 
 	echo "${PATH}"
 
@@ -267,7 +238,7 @@ get_bin_path() {
 }
 
 get_lib_path() {
-	source /etc/env.d/gcc/${GCC_COMP}
+	source /etc/env.d/gcc/${CC_COMP}
 
 	echo "${LDPATH}"
 
@@ -275,7 +246,7 @@ get_lib_path() {
 }
 
 get_stdcxx_incdir() {
-	source /etc/env.d/gcc/${GCC_COMP}
+	source /etc/env.d/gcc/${CC_COMP}
 
 	echo "${LDPATH}/include/${STDCXX_INCDIR}"
 
@@ -293,7 +264,7 @@ do
 		--use-old)
 			if get_current_profile &> /dev/null
 			then
-				GCC_COMP="$(get_current_profile)"
+				CC_COMP="$(get_current_profile)"
 			fi
 			;;
 		--use-portage-chost)
@@ -342,38 +313,40 @@ do
 			fi
 			;;
 		*)
-			if [ -z "${GCC_COMP}" ]
+			if [ -z "${CC_COMP}" ]
 			then
-				GCC_COMP="${x}"
+				CC_COMP="${x}"
 			fi
 			;;
 	esac
 done
 
-if [ "${DOIT}" = "switch_profile" -a -z "${GCC_COMP}" ]
+if [ "${DOIT}" = "switch_profile" -a -z "${CC_COMP}" ]
 then
 	usage
 fi
 
-if [ -z "${GCC_COMP}" ]
+if [ -z "${CC_COMP}" ]
 then
 	if get_current_profile &> /dev/null
 	then
-		GCC_COMP="$(get_current_profile)"
+		CC_COMP="$(get_current_profile)"
 	else
-		usage
+		eerror "$0: No default profile setup!"
+		exit 1
 	fi
 fi
 
-if [ ! -d /usr/lib/gcc-lib/${GCC_COMP%-*}/${GCC_COMP##*-} -o \
-     ! -f /etc/env.d/gcc/${GCC_COMP} ]
+if [ ! -d /usr/lib/gcc-lib/${CC_COMP%-*}/${CC_COMP##*-} -o \
+     ! -f /etc/env.d/gcc/${CC_COMP} ]
 then
-	usage
+	eerror "$0: Profile does not exist!"
+	exit 1
 fi
 
 # Chosen CHOST are not the same as the real CHOST according to make.conf,
 # and --use-portage-chost option was given, so do nothing ...
-if [ "${CHECK_CHOST}" = "yes" -a "${GCC_COMP%-*}" != "${REAL_CHOST}" ]
+if [ "${CHECK_CHOST}" = "yes" -a "${CC_COMP%-*}" != "${REAL_CHOST}" ]
 then
 	exit 0
 fi

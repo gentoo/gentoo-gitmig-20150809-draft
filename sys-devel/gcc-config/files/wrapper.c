@@ -2,7 +2,7 @@
  * Copyright 1999-2003 Gentoo Technologies, Inc.
  * Distributed under the terms of the GNU General Public License v2
  * Author: Martin Schlemmer <azarah@gentoo.org>
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.1 2003/01/15 00:25:33 azarah Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.2 2003/01/15 01:59:58 azarah Exp $
  */
 
 #define _REENTRANT
@@ -79,10 +79,10 @@ int main(int argc, char **argv) {
 
 		/* It is our wrapper, so get the CC path, and execute the real binary in
 		 * there ... */
-		inpipe = popen("/usr/bin/cc-config --get-bin-path", "r");
+		inpipe = popen("/usr/bin/gcc-config --get-bin-path", "r");
 		if (NULL == inpipe) {
 			
-			fprintf(stderr, "Could not run /usr/bin/cc-config!\n");
+			fprintf(stderr, "Could not run /usr/bin/gcc-config!\n");
 			exit(1);
 		}
 
