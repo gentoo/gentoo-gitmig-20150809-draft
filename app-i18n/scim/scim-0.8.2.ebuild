@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.8.2.ebuild,v 1.1 2003/11/09 12:40:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.8.2.ebuild,v 1.2 2004/01/16 10:43:31 liquidx Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.turbolinux.com.cn/~suzhe/scim/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="gnome"
 
 RDEPEND="virtual/x11

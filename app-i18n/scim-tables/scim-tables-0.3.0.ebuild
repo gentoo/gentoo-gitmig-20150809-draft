@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.3.0.ebuild,v 1.1 2003/11/09 12:40:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.3.0.ebuild,v 1.2 2004/01/16 10:46:54 liquidx Exp $
 
 DESCRIPTION="Smart Common Input Method (SCIM) Generic Table Input Method Server"
 HOMEPAGE="http://www.turbolinux.com.cn/~suzhe/scim/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.turbolinux.com.cn/~suzhe/scim//sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=app-i18n/scim-0.5.1"
