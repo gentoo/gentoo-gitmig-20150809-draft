@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/karamba-osxbar
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-osxbar/ChangeLog,v 1.1 2003/05/04 04:05:09 prez Exp $
+
+*karamba-osxbar-0.17g (03 May 2003)
+
+  03 May 2003; Preston A. Elder <prez@gentoo.org> karamba-osxbar-0.17g.ebuild:
+  Initial import.
+
