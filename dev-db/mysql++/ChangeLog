@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.7 2003/05/08 21:13:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.8 2003/05/11 18:14:07 robbat2 Exp $
 
 *mysql++-1.7.9-r1 (08 May 2003)
+
+  11 May 2003; Robin Johnson <robbat2@gentoo.org> mysql++-1.7.9-r1.ebuild:
+  Moved to stable on x86.
 
   08 May 2003; Robin Johnson <robbat2@gentoo.org> : mysql++-1.7.9-r1.ebuild,
   files/mysql++-1.7.9-gcc_throw.patch,
