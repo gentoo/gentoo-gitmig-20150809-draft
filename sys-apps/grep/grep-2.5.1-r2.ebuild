@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r2.ebuild,v 1.1 2004/06/11 00:08:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r2.ebuild,v 1.2 2004/06/11 23:29:41 mr_bones_ Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use static ; then
+	if use static || use perl ; then
 		append-flags -static
 		append-ldflags -static
 	fi
