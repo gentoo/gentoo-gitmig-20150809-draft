@@ -1,6 +1,9 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.22 2003/07/16 11:28:41 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.23 2003/09/18 17:51:59 avenj Exp $
+
+  18 Sep 2003; Jon Portnoy <avenj@gentoo.org> lynx-2.8.4.1d-r1.ebuild :
+  ia64 keywords.
 
 *lynx-2.8.4.1d-r1 (04 Jul 2003)
 
