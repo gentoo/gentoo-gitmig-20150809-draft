@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r4.ebuild,v 1.3 2004/05/21 12:19:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r4.ebuild,v 1.4 2004/05/23 08:09:31 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -403,7 +403,7 @@ src_unpack() {
 	fi
 
 	# corrects text relocations in libiberty.a
-	use pic && epatch ${FILESDIR}/3.4.0/gcc-3.4-libiberty-pic.patch
+	(use pic || use hardened) && epatch ${FILESDIR}/3.4.0/gcc-3.4-libiberty-pic.patch
 
 	version_patch ${FILESDIR}/3.4.0/gcc-${PV}-r3-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
