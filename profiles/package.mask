@@ -868,6 +868,7 @@ x11-base/xdirectfb
 # masked, coz there are some sgml issues with this
 sys-libs/libieee1284
 =media-gfx/sane-backends-1.0.8-r2
+=app-text/docbook-sgml-utils-0.6.11
 
 # raker@gentoo.org 05 Jul 2002
 # masking due to compile issues with gnustep-base
