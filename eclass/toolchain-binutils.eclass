@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.17 2004/12/24 07:15:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.18 2004/12/30 22:22:28 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -163,6 +163,7 @@ toolchain-binutils_src_install() {
 TARGET="${CTARGET}"
 VER="${PV}"
 LIBPATH="${LIBPATH}"
+FAKE_TARGETS="${CTARGETS_BINUTILS}"
 EOF
 	newins env.d ${CTARGET}-${PV}
 
