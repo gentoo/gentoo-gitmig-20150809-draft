@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r6.ebuild,v 1.3 2004/06/23 23:02:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r7.ebuild,v 1.1 2004/06/24 21:32:48 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -41,7 +41,7 @@ src_unpack() {
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
-	if ! use crypt; then
+	if [ -z "`use crypt`" ]; then
 		einfo "No Cryptographic support, dropping patches..."
 		for file in 8*;do
 			einfo "Dropping ${file}..."
@@ -60,5 +60,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${PN}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 }
