@@ -1,5 +1,5 @@
 MD5 8b66f3b437897b11e51eea8e98594719 rosegarden-4.0.8.5.ebuild 1188
-MD5 7bed7649f4ae27506b6b130e9f1e682c ChangeLog 738
-MD5 c9612ae1bdd25640187eacdde4a3b91a rosegarden-4.0.9.ebuild 953
+MD5 b16e34b5287e07b261def7a2f5e5d44f ChangeLog 733
+MD5 6df1e904653be672f2445a0f6c4d099a rosegarden-4.0.9.ebuild 946
 MD5 7580abfe584f7d2263b69b844af1c613 files/digest-rosegarden-4.0.8.5 71
 MD5 26a35e75e25c5a2d2e000cdf1675662c files/digest-rosegarden-4.0.9 69
