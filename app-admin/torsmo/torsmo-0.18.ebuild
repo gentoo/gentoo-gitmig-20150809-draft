@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.18.ebuild,v 1.1 2004/12/27 12:43:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.18.ebuild,v 1.2 2004/12/27 23:56:32 dragonheart Exp $
 
 DESCRIPTION="minimalist system monitor for X"
 HOMEPAGE="http://torsmo.sourceforge.net/"
@@ -19,6 +19,11 @@ DEPEND="${RDEPEND}
 	sys-apps/grep
 	sys-apps/sed
 	sys-devel/gcc"
+
+src_compile() {
+	econf --x-libraries=/usr/X11R6/lib/ || die "econf failed"
+	emake || die "compile failed"
+}
 
 src_install() {
 	emake DESTDIR=${D} install || die "make install failed"

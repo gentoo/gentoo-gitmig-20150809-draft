@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.18 2004/12/27 12:43:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.19 2004/12/27 23:56:32 dragonheart Exp $
+
+  28 Dec 2004; Daniel Black <dragonheart@gentoo.org> torsmo-0.18.ebuild:
+  X libraries fix as per bug #75828. Fix by Emil Beinroth <emilbeinroth@gmx.net>.
 
 *torsmo-0.18 (27 Dec 2004)
 
