@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.20 2003/08/28 06:55:09 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.21 2003/08/28 06:59:38 obz Exp $
+
+*pygtk-1.99.18 (28 Aug 2003)
+
+  28 Aug 2003; Mike Gardiner <obz@gentoo.org> pygtk-1.99.18.ebuild:
+  New version
 
   28 Aug 2003; Mike Gardiner <obz@gentoo.org> pygtk-1.99.16.ebuild,
   pygtk-1.99.17.ebuild:
