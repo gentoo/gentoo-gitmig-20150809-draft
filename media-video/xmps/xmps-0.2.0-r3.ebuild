@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.2 2003/04/19 16:32:37 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.3 2003/06/09 22:57:44 msterret Exp $
 
 IUSE="nls gnome"
 
@@ -10,6 +10,7 @@ SRC_URI="http://xmps.sourceforge.net/sources/${P}.tar.gz"
 HOMEPAGE="http://xmps.sourceforge.net"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	>=sys-apps/sed-4
 	x86? ( >=dev-lang/nasm-0.98 )
 	>=dev-libs/popt-1.5
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
