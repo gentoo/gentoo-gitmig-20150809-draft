@@ -1,4 +1,6 @@
-MD5 47a3bcc1f0cc081aa32984c3988f6429 ChangeLog 1395
+MD5 300b310653d61f7f3f1b22d7de7956e4 startup-notification-0.6.ebuild 787
 MD5 9dcc85ba8f1696963a785d8b17c1f164 startup-notification-0.5.ebuild 779
+MD5 bcb84affef782493ddf27fe6a4157979 ChangeLog 1524
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3b9bcf62731bd8eda8cada7164f49162 files/digest-startup-notification-0.5 76
+MD5 4f1a2fff8f80e9d7f7f20da60251f36c files/digest-startup-notification-0.6 77
