@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/freedict-fra-eng
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-fra-eng/ChangeLog,v 1.1 2003/03/18 03:54:01 seemant Exp $
+
+*freedict-fra-eng-1.0 (17 Mar 2003)
+
+  17 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  freedict-fra-eng-1.0.ebuild:
+  new dictionary for french to english translations, submitted by Alexis Muller
+  <Alexis.Muller@lifl.fr> in bug #17445
+
