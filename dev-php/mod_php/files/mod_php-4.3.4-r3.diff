@@ -1,0 +1,24 @@
+--- sapi/apache/mod_php4.c.old	2004-01-31 21:44:55.000000000 +0000
++++ sapi/apache/mod_php4.c	2004-01-31 21:49:59.000000000 +0000
+@@ -822,6 +822,9 @@
+ 
+ 	if (!(r->finfo.st_mode & S_IXUSR)) {
+ 		r->allowed |= (1 << METHODS) - 1;
++		zend_try {
++			zend_ini_deactivate(TSRMLS_C);
++		} zend_end_try();
+ 		return DECLINED;
+ 	}
+ 	per_dir_conf = (HashTable *) get_module_config(r->per_dir_config, &php4_module);
+--- sapi/apache2handler/sapi_apache2.c.old	2004-01-31 21:55:21.000000000 +0000
++++ sapi/apache2handler/sapi_apache2.c	2004-01-31 21:55:26.000000000 +0000
+@@ -465,6 +465,9 @@
+ 	if (strcmp(r->handler, PHP_MAGIC_TYPE) && strcmp(r->handler, PHP_SOURCE_MAGIC_TYPE) && strcmp(r->handler, PHP_SCRIPT)) {
+ 		/* Check for xbithack in this case. */
+ 		if (!AP2(xbithack) || strcmp(r->handler, "text/html") || !(r->finfo.protection & APR_UEXECUTE)) {
++			zend_try {
++				zend_ini_deactivate(TSRMLS_C);
++			} zend_end_try();
+ 			return DECLINED;
+ 		}
+ 	}
