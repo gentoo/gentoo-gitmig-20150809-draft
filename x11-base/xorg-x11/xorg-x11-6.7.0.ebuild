@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.21 2004/04/12 02:00:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.22 2004/04/12 04:36:34 vapier Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -185,7 +185,9 @@ pkg_setup() {
 		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
 		# -fomit-frame-pointer known to break things and is pointless
 		# according to ciaranm
-		sparc)	filter-flags "-fomit-frame-pointer"
+		sparc)	filter-flags "-fomit-frame-pointer" ;;
+		# gcc-3.3.2 causes invalid insn error
+		hppa ) replace-cpu-flags 2.0 1.0 ;;
 	esac
 
 	# Recently there has been a lot of stability problem in Gentoo-land.  Many
