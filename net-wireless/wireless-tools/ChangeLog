@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.24 2004/02/21 01:24:08 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.25 2004/03/19 03:42:49 latexer Exp $
+
+*wireless-tools-27_pre2-r1 (18 Mar 2004)
+
+  18 Mar 2004; Peter Johanson <latexer@gentoo.org> wireless-tools-24.ebuild,
+  wireless-tools-25-r1.ebuild, wireless-tools-25.ebuild,
+  wireless-tools-26_pre9.ebuild, wireless-tools-27_pre17.ebuild,
+  wireless-tools-27_pre2-r1.ebuild, wireless-tools-27_pre2.ebuild,
+  wireless-tools-27_pre3.ebuild, wireless-tools-27_pre7.ebuild:
+  Bump, now includes ifrename, and french docs behind USE='nls'. Also fixed all
+  the headers.
 
   20 Feb 2004; Peter Johanson <latexer@gentoo.org> wireless-tools-26.ebuild:
   Fix for bug #42226 to install iwlib.h

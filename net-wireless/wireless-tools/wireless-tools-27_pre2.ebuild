@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre2.ebuild,v 1.4 2003/09/15 10:59:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre2.ebuild,v 1.5 2004/03/19 03:42:49 latexer Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P/.pre2/}
