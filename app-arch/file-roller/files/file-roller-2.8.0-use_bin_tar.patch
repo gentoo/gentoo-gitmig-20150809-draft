@@ -1,0 +1,11 @@
+--- src/fr-command-tar.c	2004-09-13 19:48:16.000000000 +0200
++++ src/fr-command-tar.c.patched	2004-09-16 18:04:07.080792848 +0200
+@@ -338,7 +338,7 @@
+ 	if (path != NULL)
+ 		fr_process_begin_command (comm->process, path);
+ 	else
+-		fr_process_begin_command (comm->process, "tar");
++		fr_process_begin_command (comm->process, "/bin/tar");
+ 
+ 	temp = g_strdup_printf ("PATH=%s", prev_path);
+ 	putenv (temp);
