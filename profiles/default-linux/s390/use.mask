@@ -55,3 +55,10 @@ solid
 sybase
 sybase-ct
 fdftk
+
+
+# masked until xorg builds
+X
+xv
+gtk
+gtk2
