@@ -15,7 +15,6 @@ sys-apps/sed
 sys-apps/sh-utils
 sys-apps/tar
 sys-apps/textutils
-sys-apps/vim-nogui
 sys-devel/binutils
 sys-devel/bison
 sys-devel/flex

@@ -100,7 +100,6 @@
 #sys-apps/most
 #sys-apps/star
 #sys-apps/ucspi-tcp
-#sys-apps/vim-nogui
 #sys-devel/gdb
 #sys-kernel/linux
 #sys-libs/lib-compat
