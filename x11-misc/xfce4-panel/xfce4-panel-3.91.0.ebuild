@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-panel/xfce4-panel-3.91.0.ebuild,v 1.1 2003/06/25 06:01:08 bcowan Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-panel/xfce4-panel-3.91.0.ebuild,v 1.2 2003/06/25 07:36:18 bcowan Exp $ 
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
 DEPEND=">=x11-libs/gtk+-2.0.6
+	gnome-base/librsvg
 	dev-util/pkgconfig
 	dev-libs/libxml2
         =x11-libs/libxfce4util-3.91.0
