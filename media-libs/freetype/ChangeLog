@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.26 2003/05/20 19:51:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.27 2003/06/21 01:16:13 weeve Exp $
+
+  20 Jun 2003; Jason Wever <weeve@gentoo.org> freetype-2.1.4.ebuild:
+  Changed ~sparc keyword to sparc.
 
   20 May 2003; Tavis Ormandy <taviso@gentoo.org> freetype-2.1.3-r2.ebuild:
   bytecode check fails if you didnt build the .so (ccc on alpha)
