@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.13 2003/06/10 20:25:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.14 2003/08/04 18:34:53 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
 
@@ -78,6 +78,7 @@ src_compile() {
 	replace-flags "-march=pentium4" "-march=i686"
 	replace-flags "-march=athlon*" "-march=i686"
 	filter-flags "-fprefetch-loop-arrays"
+	filter-flags "-mfpmath=sse"
 
 	use gtk	\
 		&& myconf="${myconf} --with-gtk-prefix=/usr"
