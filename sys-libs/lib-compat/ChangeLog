@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/lib-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.9 2003/02/14 16:01:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.10 2003/06/02 09:13:12 seemant Exp $
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> lib-compat-1.2.ebuild :
+  version bump. The x86 part now contains libstdc++.so.2.9 as well, which is
+  needed for hp-web-jetadmin. Additionally, added some compatibility libs for
+  sparc, alpha and ppc
 
 *lib-compat-1.1 (18 Dec 2002)
 
