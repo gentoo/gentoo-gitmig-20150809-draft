@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.3 2003/10/26 19:07:09 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.4 2003/11/19 03:14:45 hhg Exp $
+
+*popa3d-0.6.4 (19 Nov 2003)
+
+  19 Nov 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> popa3d-0.6.4.ebuild:
+  version bump to 0.6.4
 
   26 Oct 2003; Ian Leitch <port001@gentoo.org> popa3d-0.6.3.ebuild:
   Fixed USE=-maildir -mbox bug #32042, thanks to Cameron MacFarland for
