@@ -1,0 +1,11 @@
+# ChangeLog for sys-libs/libchipcard
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*libchipcard-0.6 (7 Nov 2002)
+  
+  7 Nov 2002; Matt Keadle <mkeadle@gentoo.org> libchipcard-0.6.ebuild
+  files/digest-libchipcard-0.6:
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. Thanks to Tobias Bayer for submitting the initial ebuild.
