@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r3.ebuild,v 1.6 2004/03/12 02:38:59 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r3.ebuild,v 1.7 2004/03/18 05:51:32 zx Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,6 @@ else
 	S=${WORKDIR}/IBMJava2-131
 fi;
 DESCRIPTION="IBM JDK 1.3.1"
-SRC_UI=""
 
 if [ `use ppc` ]; then
 	SRC_JAVA="IBMJava2-SDK-131.ppc.tgz"
@@ -21,10 +20,11 @@ else
 fi;
 
 HOMEPAGE="https://www6.software.ibm.com/dl/lxdk/lxdk-p"
-
+SRC_URI="${SRC_JAVA}"
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.5
-	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
+		>=dev-java/java-config-0.2.5
+		doc? ( =dev-java/java-sdk-docs-1.3.1* )"
+RESTRICT="fetch"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1
 	virtual/jdk-1.3.1
@@ -33,17 +33,15 @@ LICENSE="IBM-ILNWP"
 SLOT="1.3"
 KEYWORDS="x86 ppc"
 
-src_unpack() {
-	if [ ! -f ${DISTDIR}/${SRC_JAVA} ] ; then
-		einfo "Download 32-bit pSeries and iSeries for PPC."
-		einfo "Download 32-bit xSeries for x86."
-		die "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
-	fi
-	unpack ${SRC_JAVA} || die
+pkg_nofetch() {
+	einfo "Download 32-bit pSeries and iSeries for PPC."
+	einfo "Download 32-bit xSeries for x86."
+	die "Please download ${SRC_URI} from ${HOMEPAGE} to ${DISTDIR}"
 }
 
+src_compile() { :; }
 
-src_install () {
+src_install() {
 
 	dodir /opt/${P}
 	for i in bin include jre lib ; do
