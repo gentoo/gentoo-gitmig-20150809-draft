@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.8 2004/05/02 17:32:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.9 2004/05/16 14:59:22 mholzer Exp $
+
+*dvdauthor-0.6.10 (16 May 2004)
+
+  16 May 2004; Martin Holzer <mholzer@gentoo.org> dvdauthor-0.6.10.ebuild:
+  Version bumped. Closes 47857
 
   02 May 2004; David Holm <dholm@gentoo.org> dvdauthor-0.6.9.ebuild:
   Added to ~ppc.
