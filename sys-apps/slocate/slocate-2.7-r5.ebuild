@@ -1,20 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.8 2004/03/15 08:44:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.9 2004/04/19 19:45:03 avenj Exp $
 
 inherit flag-o-matic
 
-DESCRIPTION="secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
+DESCRIPTION="Secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
 HOMEPAGE="http://www.geekreview.org/slocate/"
 SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc sparc alpha hppa mips ia64 ppc64 s390"
+KEYWORDS="x86 amd64 ~ppc sparc alpha hppa mips ia64 ppc64 s390"
 
 DEPEND="sys-apps/shadow
 	>=sys-apps/sed-4
-	ppc64? ( sys-devel/automake )"
+	sys-devel/automake"
+
+RDEPEND=""
 
 src_compile() {
 	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
