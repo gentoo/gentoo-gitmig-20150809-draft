@@ -1,9 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.10 2002/09/07 09:14:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.11 2002/09/17 03:41:15 seemant Exp $
 
 *openldap-2.0.25-r2 (15 Aug 2002)
-  
+ 
+  16 Sep 2002; Seemant Kulleen <seemant@gentoo.org> openldap-2.0.25-r2.ebuild	
+
+  Fixed sysconfdir to /etc so that config files go into the /etc/openldap
+  directory instead of /etc/openldap/openldap.  Thanks to:
+  gdjohn@egregious.org.uk (Gareth John) in bug #7986
+ 
   07 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
   openldap-2.0.25-r2.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r2.ebuild,v 1.3 2002/09/09 09:17:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r2.ebuild,v 1.4 2002/09/17 03:41:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -59,7 +59,6 @@ src_compile() {
 		--enable-shell \
 		--enable-shared \
 		--enable-static \
-		--sysconfdir=/etc/openldap \
 		--localstatedir=/var/state/openldap \
 		--libexecdir=/usr/lib/openldap \
 		${myconf} || die "bad configure"
