@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 bb8c62d6b89cf89ef1679df46fd18695 raggle-0.3.0.ebuild 651
-MD5 0ae0feee7d931ceac71f2b562bfdc794 raggle-0.3.1.ebuild 579
-MD5 664006418a7b5e81164201d3ba8d43cb ChangeLog 2151
+MD5 767cb32cae7d397dd3810280ec07c1fc raggle-0.3.1.ebuild 582
+MD5 55d6ebb9e65215c0b2152ace26caade8 ChangeLog 2252
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 da06143d5c9b9c41be11440425580127 files/raggle-destdir-gentoo.diff 246
 MD5 bf101b07c3527f530155d08568282a5f files/digest-raggle-0.3.0 63
@@ -11,7 +11,7 @@ MD5 6559cc34e4abdb6ed5c10d54ab7ecdd3 files/digest-raggle-0.3.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBQsiSCHk4+ZoBpvsRAmbhAJ9X3ID1MbGnlbyFz3TOlxvmyOvuwwCfcAYi
-Dr7J8af+G5Qns8l7ILCs/yk=
-=lISh
+iD8DBQFBW88D/UDVUK2NELYRAujLAKCSc7CAekrXG6SyI1fzyMgZzK5GiQCg54bc
+WXAHFwiU6UFcupzB5AD8IAU=
+=CPwR
 -----END PGP SIGNATURE-----
