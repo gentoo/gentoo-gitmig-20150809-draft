@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.110.ebuild,v 1.2 2003/09/15 17:05:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.110.ebuild,v 1.3 2003/09/15 17:11:01 mholzer Exp $
 
 IUSE="ssl"
 
@@ -69,4 +69,8 @@ pkg_postinst() {
 		# Start if it was running before
 		/etc/init.d/webmin start
 	fi
+}
+
+pkg_prerm() {
+	webmin stop
 }
