@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.47 2004/05/14 03:17:10 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.48 2004/05/24 20:48:03 gmsoft Exp $
+
+  24 May 2004; Guy Martin <gmsoft@gentoo.org> libgnomeprint-2.6.0.ebuild:
+  Marked stable on hppa.
 
   13 May 2004; Stephen P. Becker <geoman@gentoo.org>
   libgnomeprint-2.4.2.ebuild:
