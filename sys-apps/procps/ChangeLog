@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.47 2003/12/08 11:50:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.48 2003/12/20 00:54:03 joker Exp $
+
+  20 Dec 2003; Christian Birchinger <joker@gentoo.org>
+  procps-3.1.12-r1.ebuild:
+  Added sparc stable keyword
 
 *procps-3.1.14-r1 (08 Dec 2003)
 
