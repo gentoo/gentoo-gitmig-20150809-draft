@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.6 2004/05/06 22:42:23 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.7 2004/06/02 16:50:14 latexer Exp $
+
+  02 Jun 2004; Peter Johanson <latexer@gentoo.org> mono-debugger-0.6.ebuild:
+  Removing all pre-Beta1 mono stuff.
 
   06 May 2004; Peter Johanson <latexer@gentoo.org> mono-debugger-0.7.ebuild:
   Added a libtermcap-compat dependancy which solves the readline linking issue.

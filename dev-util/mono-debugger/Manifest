@@ -1,6 +1,4 @@
 MD5 29140627b176c6d06987f9fd35a21358 mono-debugger-0.7.ebuild 1017
-MD5 07ebdfad2d4330cecbb34d2c1803b62e mono-debugger-0.6.ebuild 1012
-MD5 ad51166abcdddf08c32ee0e813b1795f ChangeLog 1133
+MD5 bc2deb091d352388836f34e120e8ed17 ChangeLog 1248
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 9393b14a1e05e5dd056e17a4a16a6391 files/digest-mono-debugger-0.6 70
 MD5 eea793ef8d78bf327621d7e5bd3009b3 files/digest-mono-debugger-0.7 70
