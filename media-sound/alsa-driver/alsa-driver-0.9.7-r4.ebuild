@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.7-r4.ebuild,v 1.1 2003/10/23 14:32:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.7-r4.ebuild,v 1.2 2003/10/24 16:02:08 mholzer Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -45,6 +45,7 @@ src_unpack() {
 	# Looks like the below are not needed as of 0.9.7.
 	#epatch ${FILESDIR}/wolk.patch
 	#epatch ${FILESDIR}/alsa-compile-fix
+	autoconf
 }
 
 
