@@ -96,7 +96,7 @@ need the Gentoo Linux 1.0_rc4_pre2 CD ISO image, available at <uri>
 http://www.ibiblio.org/gentoo/gentoo-iso-images/</uri> (~550Mb download.)
 It's also possible to install Gentoo Linux from an existing Linux
 installation.  If you'd like to do this instead, you'll need to
-download the 1.0_rc4_pre2 sys.tbz2 file, available from <uri>
+download the <path>1.0_rc4_pre2 sys.tbz2</path> file, available from <uri>
 http://www.ibiblio.org/gentoo/gentoo-x86-distro/gentoo-1.0_rc4_pre2/packages/</uri> (~67Mb download.)
 If you choose to install Gentoo Linux from another Linux distribution, you'll
 need to have the tools to unpack a bzip'd tarball (nearly all distributions do.)  However,
@@ -182,7 +182,7 @@ if you're not.</note>
 <p>Notice that I had to create the <path>/mnt/gentoo/boot</path> filesystem before mounting <path>/dev/hda1</path>.  If you've created
 additional non-root filesystems (<path>/var</path>, <path>/usr</path>, <path>/home</path>, etc), you'll need to create the appropriate directories under <path>/mnt/gentoo</path>
 and then mount all your filesystems at the correct locations.  Once all your filesystems are mounted, we're ready to extract
-the sys.tbz2 tarball - the file that contains the Gentoo Linux base system.
+the <path>sys.tbz2</path> tarball - the file that contains the Gentoo Linux base system.
 </p>
 
 <note>
@@ -278,7 +278,7 @@ first three configuration lines for my example system configuration:
 <section>
 <title>/etc/localtime</title>
 <body>
-<p>Look for your timezone (or GMT if you using Greenwich Mean Time) in /usr/share/zoneinfo.  Then, make a symbolic link by typing:
+<p>Look for your timezone (or GMT if you using Greenwich Mean Time) in <path>/usr/share/zoneinfo</path>.  Then, make a symbolic link by typing:
 </p><pre>
 # <i>cd /etc; ln -sf /usr/share/zoneinfo/path/to/timezonefile localtime</i>
 </pre>
@@ -288,7 +288,7 @@ first three configuration lines for my example system configuration:
 <section>
 <title>/etc/hostname</title>
 <body>
-<p>Edit this file so that it contains your fully-qualified domain name on a single line, i.e. "mymachine.mydomain.com" (without the quotes).
+<p>Edit this file so that it contains your fully-qualified domain name on a single line, i.e. <c>mymachine.mydomain.com</c>.
 </p>
 </body>
 </section>
@@ -321,23 +321,36 @@ of any hostnames that may not be in your nameservers.  Here's a template for thi
 <section>
 <title>Configure ethernet</title>
 <body>
-<p>Look in the /etc/rc.d/config directory; you'll see a file called OFF_inet.eth0.  Copy this file to inet.eth0, and edit
-the top part of it so that it contains the IP address settings you want to use on your first ethernet card.  Look in /lib/modules for the ethernet module specific to your particular ethernet card,
-and append it to the /etc/rc.d/config/modules file (you can also add any options you need to the same line.)  Then, when Gentoo Linux boots, this module will be automatically loaded from disk.  If you have multiple network cards, 
-copy inet.eth0 to inet.eth1 and edit this file so that it configures your second interface correctly.  Repeat for eth2, etc as necessary.  If you have a static ppp link, you can copy the inet.eth0 file to inet.ppp0, and insert the appropriate commands in the
-netup() and netdown() functions.  All /etc/rc.d/config/inet.* files will be started automatically at boot time by the /etc/rc.d/init.d/inet rc script.
-</p>
+
+<p>Look in the <path>/etc/rc.d/config</path> directory; you'll see a file
+called OFF_inet.eth0.  Copy this file to inet.eth0, and edit the top part of it
+so that it contains the IP address settings you want to use on your first
+ethernet card.  Look in <path>/lib/modules</path> for the ethernet module
+specific to your particular ethernet card, and append it to the
+<path>/etc/rc.d/config/modules</path> file (you can also add any options you
+need to the same line.)  Then, when Gentoo Linux boots, this module will be
+automatically loaded from disk.  If you have multiple network cards, copy
+<path>inet.eth0</path> to <path>inet.eth1</path> and edit this file so that it
+configures your second interface correctly.  Repeat for eth2, etc as necessary.
+If you have a static ppp link, you can copy the <path>inet.eth0</path> file to
+<path>inet.ppp0</path>, and insert the appropriate commands in the
+<c>netup()</c> and <c>netdown()</c> functions.  All
+<path>/etc/rc.d/config/inet.*</path> files will be started automatically at
+boot time by the <path>/etc/rc.d/init.d/inet</path> rc script.  </p>
+
 </body>
 </section>
 
 <section>
 <title>Configure basic settings</title>
 <body>
-<p>Take a look at the /etc/rc.d/config/basic, and make sure that it's set up properly.  Important settings are GMT
-(set to "yes" if your system clock is set to GMT, otherwise "no" if it's set to your local time) and KEYMAP (look in 
-/usr/share/keymaps/i386/qwerty,dvorak,etc. for available keymaps.  To specify the keymap, set KEYMAP to the *prefix*
-of the keymap filename (i.e. drop the ".kmap.gz" extension from the end.)
+
+<p>Take a look at the <path>/etc/rc.d/config/basic</path>, and make sure that it's set up properly.  Important settings are GMT
+(set to <c>yes</c> if your system clock is set to GMT, otherwise <c>no</c> if it's set to your local time) and KEYMAP (look in 
+<path>/usr/share/keymaps/i386</path> for available keymaps.  To specify the keymap, set KEYMAP to the <e>prefix</e>
+of the keymap filename (i.e. drop the <path>.kmap.gz</path> extension from the end.)
 </p>
+
 </body>
 </section>
 
