@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4-r1.ebuild,v 1.5 2004/04/22 21:10:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4-r1.ebuild,v 1.6 2004/04/22 22:36:01 spyderous Exp $
 
 IUSE="mpi"
 
@@ -16,6 +16,7 @@ KEYWORDS="x86"
 #May become official when situation with mpich is cleared (now the only mpi implementation awailable is lam-mpi)
 DEPEND="=dev-libs/fftw-2.1*
 	mpi? ( >=sys-cluster/lam-mpi-6.5.6 )
+	app-shells/tcsh
 	>=sys-devel/binutils-2.10.91.0.2"
 
 

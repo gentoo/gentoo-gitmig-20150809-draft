@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.2.1.ebuild,v 1.2 2004/04/22 21:10:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.2.1.ebuild,v 1.3 2004/04/22 22:36:01 spyderous Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ KEYWORDS="~x86 ~amd64"
 DEPEND="=dev-libs/fftw-2.1*
 	mpi? ( >=sys-cluster/lam-mpi-6.5.6 )
 	>=sys-devel/binutils-2.10.91.0.2
+	app-shells/tcsh
 	xml2? ( dev-libs/libxml2 )"
 
 src_compile() {

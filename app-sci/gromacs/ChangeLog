@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/gromacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/ChangeLog,v 1.10 2004/04/22 21:10:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/ChangeLog,v 1.11 2004/04/22 22:36:01 spyderous Exp $
+
+  22 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  gromacs-3.1.4-r1.ebuild, gromacs-3.2.1.ebuild:
+  Add app-shells/tcsh to dependencies (#48691).
 
   22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> gromacs-3.2.1.ebuild:
   marked ~amd64
