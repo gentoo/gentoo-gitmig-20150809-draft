@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cbg-editor/eclipse-cbg-editor-0.3.7.ebuild,v 1.2 2004/06/25 02:29:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cbg-editor/eclipse-cbg-editor-0.3.7.ebuild,v 1.3 2004/07/14 23:21:43 agriffis Exp $
 
 inherit eclipse-ext
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~karltk/projects/eclipse/distfiles/cbg-editor-${P
 LICENSE="grindstaff"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="jikes"
 RDEPEND=">=dev-util/eclipse-sdk-3.0.0_rc1"
 DEPEND="${RDEPEND}
 		jikes? ( >=dev-java/jikes-1.19 )
