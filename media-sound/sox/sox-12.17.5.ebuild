@@ -8,7 +8,7 @@ DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
 SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
-IUSE="alsa oss oggvorbis mad encode"
+IUSE="oggvorbis mad encode" # alsa oss
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha"
 LICENSE="LGPL-2.1"
@@ -33,8 +33,9 @@ src_compile () {
 	myconf="${myconf} `use_enable oggvorbis ogg-vorbis`"
 	myconf="${myconf} `use_enable mad`"
 	myconf="${myconf} `use_enable encode lame`"
-	myconf="${myconf} `use_enable oss oss-dsp`"
-	myconf="${myconf} `use_enable alsa alsa-dsp`"
+	myconf="${myconf} --enable-oss-dsp"
+#	myconf="${myconf} `use_enable oss oss-dsp`"
+#	myconf="${myconf} `use_enable alsa alsa-dsp`"
 
 	econf ${myconf} \
 		--enable-fast-ulaw \
