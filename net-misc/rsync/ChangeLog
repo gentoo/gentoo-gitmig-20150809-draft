@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.23 2003/03/06 21:29:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.24 2003/05/20 02:23:07 kumba Exp $
 
   06 Mar 2003; Luca Barbato <lu_zero@gentoo.org> :
   force -lpthread link on gcc-2.95.x, solves bug #16921
@@ -9,6 +9,9 @@
   Added the popt in DEPEND
 
 *rsync-2.5.6-r1 (22 Feb 2003)
+
+  19 May 2003; Joshua Kinard <kumba@gentoo.org> rsync-2.5.6-r1.ebuild:
+  Added ~sparc and ~mips to KEYWORDS
 
   25 Feb 2003; Guy Martin <gmsoft@gentoo.org> rsync-2.5.6-r1.ebuild :
   Commited stable for hppa.
