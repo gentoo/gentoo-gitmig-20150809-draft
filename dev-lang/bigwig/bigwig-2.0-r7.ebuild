@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bigwig/bigwig-2.0-r7.ebuild,v 1.3 2003/02/13 10:24:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bigwig/bigwig-2.0-r7.ebuild,v 1.4 2003/04/16 17:54:31 cretin Exp $
 
 IUSE="odbc mysql libwww java ssl"
 
@@ -13,7 +13,6 @@ DEPEND=">=net-www/apache-1.3
 	libwww? ( net-libs/libwww )
 	java? ( virtual/jre )
 	ssl? ( dev-libs/openssl )
-	sys-devel/ld.so
 	sys-libs/zlib
 	virtual/glibc"
 
