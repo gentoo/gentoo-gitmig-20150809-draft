@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.1 2005/02/23 02:54:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.2 2005/02/26 04:19:48 mr_bones_ Exp $
 
 # 	[x] Base Install Required (+4 MB) 
 #	[x] Scenarios (+7 MB)
@@ -67,7 +67,7 @@ src_install() {
 	fi
 
 	cd ${Ddir}
-	tar xf ${CDROM_ROOT}/hiscore.tar.gz || die "unpacking hiscore"
+	tar -zxf ${CDROM_ROOT}/hiscore.tar.gz || die "unpacking hiscore"
 
 	cd ${S}
 	loki_patch --verify patch.dat
@@ -94,7 +94,7 @@ src_install() {
 	fi
 
 	einfo "Changing 'hiscore.dat' to be writeable for group 'games'."
-	fperms g+w ${Ddir}/data/hiscore.dat || die "fperms failed"
+	fperms g+w "${dir}/data/hiscore.dat" || die "fperms failed"
 }
 
 pkg_postinst() {
