@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/xft
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.17 2003/03/12 19:07:32 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.18 2003/03/15 20:13:14 gerk Exp $
 
   11 Mar 2003; Guy Martin <gmsoft@gentoo.org> xft-2.0.1-r1.ebuild :
   Added hppa to keywords.
@@ -24,6 +24,9 @@
   Add ~alpha to KEYWORDS
 
 *xft-2.0.1-r1 (23 Dec 2002)
+
+  15 Mar 2003; Mark Guertin <gerk@gentoo.org> xft-2.0.1-r1.ebuild:
+  set ppc in keywords
 
   12 Mar 2003; Zach Welch <zwelch@gentoo.org> xft-2.0.1-r1.ebuild:
   add arm keyword
