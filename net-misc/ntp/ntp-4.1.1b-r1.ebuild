@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r1.ebuild,v 1.1 2002/12/16 16:19:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r1.ebuild,v 1.2 2002/12/29 18:38:53 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Network Time Protocol suite/programs"
 SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
@@ -15,8 +17,8 @@ DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1"
 
 src_unpack() {
-	unpack ${A} && cd ${S}
-	patch -p1 < ${FILESDIR}/ntp-bk.diff
+	unpack ${A}
+	cd ${S}; epatch ${FILESDIR}/ntp-bk.diff
 	aclocal -I . || die
 	automake || die
 	autoconf || die

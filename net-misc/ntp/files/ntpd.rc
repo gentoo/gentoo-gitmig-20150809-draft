@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc,v 1.7 2002/12/27 23:47:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc,v 1.8 2002/12/29 18:38:53 vapier Exp $
 
 depend() {
 	need net
@@ -19,25 +19,19 @@ checkconfig() {
 start() {
 	checkconfig || return $?
 
-	NTPDATESERVERS="`egrep '^(server|peer)[[:space:]]+' /etc/ntp.conf`"
-	if [ -z "${NTPDATESERVERS}" ] ; then
+	NTPDATESERVERS=`egrep '^(server|peer)[[:space:]]+' /etc/ntp.conf | awk '{print $2}'`
+	if [ -n "${NTPDATESERVERS}" ] ; then
+		ebegin "Running ntpdate"
+		ntpdate -b ${NTPDATESERVERS} > /dev/null
+		eend $? "Failed to run ntpdate"
+	else
 		ewarn "Please set a valid server line in /etc/ntp.conf"
 	fi
 
-	if [ "${NTPD_OPTS/-q}" != "${NTPD_OPTS}" ] ; then
-		ebegin "Starting ntpd (ntpdate)"
-		start-stop-daemon --start --quiet --pidfile /var/run/ntpd.pid \
-			--startas /usr/bin/ntpd -- -p /var/run/ntpd.pid ${NTPD_OPTS}
-		eend $? "Failed to start ntpd (ntpdate)"
-
-		# clean stale pidfile
-		[ -f /var/run/ntpd.pid ] && rm -f /var/run/ntpd.pid
-	fi
-
-	ebegin "Starting ntpd (daemon)"
+	ebegin "Starting ntpd"
 	start-stop-daemon --start --quiet --pidfile /var/run/ntpd.pid \
-		--startas /usr/bin/ntpd -- -p /var/run/ntpd.pid ${NTPD_OPTS/-q}
-	eend $? "Failed to start ntpd (daemon)"
+		--startas /usr/bin/ntpd -- -p /var/run/ntpd.pid
+	eend $? "Failed to start ntpd"
 }
 
 stop() {
