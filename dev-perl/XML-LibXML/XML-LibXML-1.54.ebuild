@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.54.ebuild,v 1.5 2003/04/24 21:08:56 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.54.ebuild,v 1.6 2003/05/30 13:29:23 seemant Exp $
 
 
 inherit perl-module
-
 
 MY_P="${P}_0"
 
@@ -29,7 +28,7 @@ mytargets="pure_install doc_install"
 
 pkg_postinst() {
 
-	perl-post_pkg_postinst
+	perl-module_pkg_postinst
 
 	perl -MXML::SAX \
 		-e "XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers()"
