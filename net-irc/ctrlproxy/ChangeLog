@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ctrlproxy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.1 2003/03/28 00:44:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.2 2003/04/16 15:57:07 agriffis Exp $
+
+*ctrlproxy-2.2 (16 Apr 2003)
+
+  16 Apr 2003; Aron Griffis <agriffis@gentoo.org> ctrlproxy-2.2.ebuild:
+  Add ~x86 to KEYWORDS
 
 *ctrlproxy-2.0 (27 Mar 2003)
 
