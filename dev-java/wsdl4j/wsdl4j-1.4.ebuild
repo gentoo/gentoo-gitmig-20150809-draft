@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/wsdl4j-1.4.ebuild,v 1.7 2004/11/14 17:53:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/wsdl4j-1.4.ebuild,v 1.8 2005/02/03 17:32:50 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Web Services Description Language for Java Toolkit (WSDL4J)"
 SRC_URI="mirror://gentoo/${P}-gentoo.tar.gz"
 HOMEPAGE="http://www-124.ibm.com/developerworks/projects/wsdl4j"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 LICENSE="CPL-1.0"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wsdl4j
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.5 2004/11/14 17:45:13 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.6 2005/02/03 17:32:50 luckyduck Exp $
+
+  03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> wsdl4j-1.4.ebuild:
+  stable on x86 and amd64.
 
 *wsdl4j-1.4 (14 Nov 2004)
 
