@@ -1,11 +1,11 @@
 # ChangeLog for media-video/nvclock
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.10 2003/12/06 18:33:19 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.11 2004/03/19 08:48:04 aliz Exp $
 
   06 Dec 2003; <spider@gentoo.org> nvclock-0.7-r1.ebuild:
   Removed gtk2 IUSE statement
 
-*nvclock-0.7-r1
+*nvclock-0.7-r1 (05 Nov 2003)
 
   05 Nov 2003; Philip Walls <malverian@gentoo.org> nvclock-0.7-r1.ebuild
   files/configure.in.diff files/nvclock_initd files/nvclock_confd :

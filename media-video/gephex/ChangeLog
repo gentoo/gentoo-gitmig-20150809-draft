@@ -1,8 +1,8 @@
 # ChangeLog for media-video/gephex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.1 2004/03/02 15:14:06 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.2 2004/03/19 08:48:03 aliz Exp $
 
-*gephex-0.0.4 (14 Dez 2003)
+*gephex-0.0.4 (14 Dec 2003)
 
   02 Mar 2004; Marc Hildebrand <zypher@gentoo.org>; gephex-0.0.4.ebuild :
   Initial ebuild.
