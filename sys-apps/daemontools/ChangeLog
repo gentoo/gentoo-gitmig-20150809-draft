@@ -1,10 +1,17 @@
 # ChangeLog for sys-apps/daemontools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.6 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.7 2003/01/15 07:01:35 raker Exp $
+
+*daemontools-0.76-r2 (15 Jan 2003)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> daemontools-0.76-r2.ebuild,
+  files/digest-daemontools-0.76-r2, files/svscan-r2 :
+  New svscan which is a work-in-progress so it starts right after net
+  so dns-dependant services won't stall during startup.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*daemontools-0.76-r1.ebuild (14 July 2002)
+*daemontools-0.76-r1 (14 July 2002)
 
   23 Sep 2002; Nick Hadaway <raker@gentoo.org>
   daemontools-0.76-r1.ebuild :
