@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.1.ebuild,v 1.2 2003/03/29 05:11:08 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.1.ebuild,v 1.3 2003/04/06 01:49:12 avenj Exp $
 
 IUSE="nls"
 
@@ -31,6 +31,9 @@ src_compile() {
 
 src_install() {
 	einstall GNOME_DATADIR=${D}/usr/share || die
+
+	# remove duplicate README, since it gets installed in dodoc
+	rm -rf ${D}/usr/share/gqview
 	
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
 }
