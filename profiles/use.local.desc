@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.415 2004/06/04 13:08:18 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.416 2004/06/04 20:24:32 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -131,6 +131,7 @@ dev-python/anygui:wxwin - enable wxwin support
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
+dev-ruby/ruby-amazon:geoip - enable GeoIP support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-scheme/bigloo-lib:expat - enable expat support
