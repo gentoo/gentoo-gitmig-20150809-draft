@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.0-r1.ebuild,v 1.3 2004/02/28 07:04:55 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.0-r1.ebuild,v 1.4 2004/04/12 01:21:49 spyderous Exp $
 
 inherit flag-o-matic kde-functions
 
@@ -25,10 +25,15 @@ DEPEND=">=media-libs/glut-3.7-r2
 	kde? ( >=kde-base/kdelibs-3.0.5 )"
 
 pkg_setup() {
+	# Set up X11 implementation
+	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+
 	einfo	"Please note:"
 	einfo	"if you experience problems building celestia with nvidia drivers,"
 	einfo	"you can try:"
-	einfo	"opengl-update xfree"
+	einfo	"opengl-update ${X11_IMPLEM}"
 	einfo	"emerge celestia"
 	einfo	"opengl-update nvidia"
 	einfo	"------------"
