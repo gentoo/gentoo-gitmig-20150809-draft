@@ -7,6 +7,10 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
 
+LICENSE="gpl-2"
+KEYWORDS="*"
+SLOT="0"
+
 # dont merge mozilla-1.0, as it wont work with galeon, rather start
 # with mozilla-1.0-r1
 DEPEND="~net-www/mozilla-1.0

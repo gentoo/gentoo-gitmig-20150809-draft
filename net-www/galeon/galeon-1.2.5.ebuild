@@ -7,6 +7,10 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
 
+LICENSE="gpl-2"
+KEYWORDS="*"
+SLOT="0"
+
 # dont merge mozilla-1.0, as it wont work with galeon, rather start
 # with mozilla-1.0-r1
 DEPEND="~net-www/mozilla-1.0
@@ -26,6 +30,22 @@ DEPEND="~net-www/mozilla-1.0
 
 	# bonobo? ( >=gnome-base/bonobo-1.0.19-r1 )
 
+pkg_setup() {
+
+	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk.so ]
+	then
+		eerror
+		eerror "It seems that your Mozilla was not compiled against gtk+-1.2,"
+		eerror "but rather gtk+-2.0.  As Galeon do not support this setup yet,"
+		eerror "you will have to remerge Mozilla with gtk+-1.2 support.  This"
+		eerror "can be done by taking \"gtk2\" out of your USE flags:"
+		eerror
+		eerror " # USE="-gtk2" emerge mozilla "
+		eerror
+		die "Need Mozilla compiled with gtk+-1.2!!"
+	fi
+}
+
 src_unpack() {
 
 	unpack ${A}
@@ -38,7 +58,7 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf
+	local myconf=""
 
 	use nls || myconf="${myconf} --disable-nls"
 	# use bonobo && myconf="${myconf} --enable-gnome-file-selector"
