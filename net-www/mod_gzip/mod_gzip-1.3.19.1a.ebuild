@@ -1,0 +1,49 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Maintainer: Donny Davies <woodchip@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.19.1a.ebuild,v 1.1 2002/04/09 23:57:52 woodchip Exp $
+
+DESCRIPTION="Apache module which acts as an Internet Content Accelerator"
+HOMEPAGE="http://www.remotecommunications.com/apache/mod_gzip/"
+
+S=${WORKDIR}/${P}
+SRC_URI="http://www.remotecommunications.com/apache/${PN}/src/${PV}/${PN}.c.gz"
+
+DEPEND="virtual/glibc >=net-www/apache-1.3.24 >=sys-libs/zlib-1.1.4"
+
+src_unpack() {
+	mkdir ${P} ; cd ${S}
+	cp ${DISTDIR}/${A} .
+	gunzip ${A} || die
+}
+
+src_compile() {
+	/usr/sbin/apxs -I/usr/include -L/usr/lib -lz -c mod_gzip.c
+	assert "compile problem"
+}
+
+src_install() {
+	exeinto /usr/lib/apache-extramodules
+	doexe mod_gzip.so
+
+	dodoc ${FILESDIR}/{changes,commands}.txt
+
+	insinto /etc/apache/conf/addon-modules
+	doins ${FILESDIR}/mod_gzip.conf
+}
+
+pkg_postinst() {
+	einfo
+	einfo "Execute ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "to have your apache.conf auto-updated for use with this module."
+	einfo "You should then edit your /etc/conf.d/apache file to suit."
+	einfo
+}
+
+pkg_config() {
+	${ROOT}/usr/sbin/apacheaddmod \
+		${ROOT}/etc/apache/conf/apache.conf \
+		extramodules/mod_gzip.so mod_gzip.c gzip_module \
+		define=GZIP addconf=conf/addon-modules/mod_gzip.conf
+	:;
+}

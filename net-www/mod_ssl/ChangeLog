@@ -1,0 +1,9 @@
+# ChangeLog for net-www/mod_ssl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.1 2002/04/09 23:57:52 woodchip Exp $
+
+*mod_ssl-2.8.8 (9 Apr 2002)
+
+  9 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  New package to go along with the rewritten apache ebuild.
