@@ -1,0 +1,27 @@
+diff -Naur giftui-0.4.1/src/main.c giftui-0.4.1.new/src/main.c
+--- giftui-0.4.1/src/main.c	2004-05-06 01:55:02.000000000 -0500
++++ giftui-0.4.1.new/src/main.c	2004-08-18 22:30:08.600960640 -0500
+@@ -197,6 +197,12 @@
+ 	bindtextdomain (PACKAGE, LOCALEDIR);
+ 	textdomain (PACKAGE);
+ #endif	
++
++	/* init GObject system */
++	g_type_init ();
++	
++	/* GTK+ init */
++	gtk_init (&argc, &argv);
+ 	
+ 	/* configuration init & load */
+ 	giftui_config_init ();
+@@ -214,10 +220,6 @@
+ 		
+ 		return EXIT_FAILURE;
+ 	}
+-		
+-	
+-	/* GTK+ init */
+-	gtk_init (&argc, &argv);
+ 	
+ 	return EXIT_SUCCESS;
+ }
