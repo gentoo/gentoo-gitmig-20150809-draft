@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.20 2005/01/18 01:28:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.21 2005/03/21 07:26:55 eradicator Exp $
+
+*emul-linux-x86-baselibs-1.2.3 (21 Mar 2005)
+
+  21 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +emul-linux-x86-baselibs-1.2.3.ebuild:
+  Updated zlib to 1.2.2.  Updated openssl to 0.9.7e-r1.
 
   17 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   emul-linux-x86-baselibs-1.2.2-r2.ebuild:
