@@ -1,4 +1,14 @@
-MD5 4948a42b1563d389b9bbbd1941e12934 metadata.xml 215
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3c389658a1a7275dcaf7ff1bd53c1dc archway-0.1.0.ebuild 1259
-MD5 de22dec402aabef08a76fa7926f52555 ChangeLog 348
+MD5 b9c2167cf3ace47576f7eb723c966526 ChangeLog 357
+MD5 4948a42b1563d389b9bbbd1941e12934 metadata.xml 215
 MD5 8bc0e097556f413b65e65df3e000f0dd files/digest-archway-0.1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB7AVUI1lqEGTUzyQRAqUaAKC9c2+FCJrtFT4o4ww9R7Dld5uKMwCfc3r1
+ozEi8TnHIqBQr/f6x9MUEg0=
+=sxs9
+-----END PGP SIGNATURE-----
