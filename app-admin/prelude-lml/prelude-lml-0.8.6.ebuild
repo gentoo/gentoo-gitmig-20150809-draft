@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.8.6.ebuild,v 1.1 2003/11/18 14:25:01 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.8.6.ebuild,v 1.2 2003/12/20 16:55:24 mboman Exp $
 
 DESCRIPTION="Prelude-IDS Log Monitoring Lackey"
 HOMEPAGE="http://www.prelude-ids.org"
 SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc debug"
 DEPEND="virtual/glibc
 	!dev-libs/libprelude-cvs
