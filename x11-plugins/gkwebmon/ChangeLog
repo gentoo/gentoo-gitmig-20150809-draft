@@ -1,0 +1,12 @@
+# ChangeLog for x11-plugins/gkwebmon
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/ChangeLog,v 1.1 2003/02/12 11:03:19 seemant Exp $
+
+*gkwebmon-0.1b (12 Feb 2003)
+
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org> gkwebmon-0.1b.ebuild
+  ChangeLog files/digest-gkwebmon-0.1b :
+
+  New GKrellM2 plugin to monitor web pages and notifies you when they
+  change.  Ebuild submitted by: Erik Waling <ewaling@ccitt5.net> in bug
+  #13941.
