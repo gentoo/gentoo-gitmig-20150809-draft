@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: gentoo-imapd.rc,v 1.1 2002/06/13 19:01:00 nitro Exp $
+# $Id: gentoo-imapd.rc,v 1.2 2002/06/15 00:30:23 nitro Exp $
 #
 # Copyright 1998 - 2000 Double Precision, Inc.
 # See COPYING for distribution information.
@@ -32,4 +32,4 @@ eval `sed -n '/^#/d;/=/p' </etc/courier-imap/imapd-ssl | \
 	-maxprocs=$MAXDAEMONS -maxperip=$MAXPERIP \
 	-pid=$PIDFILE $TCPDOPTS \
 	$PORT ${exec_prefix}/sbin/imaplogin $LIBAUTHMODULES \
-		/usr/sbin/courier-imapd $MAILDIR
+		/usr/sbin/courier-imapd ${MAILDIR}
