@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.7 2003/02/12 07:16:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.8 2003/09/09 20:29:16 msterret Exp $
+
+*sdl-image-1.2.3 (09 Sep 2003)
+
+  09 Sep 2003; Michael Sterrett <msterret@gentoo.org> sdl-image-1.2.3.ebuild:
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
