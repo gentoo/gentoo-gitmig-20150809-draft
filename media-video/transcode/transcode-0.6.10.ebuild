@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.3 2003/10/11 11:15:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.4 2003/11/06 17:47:51 azarah Exp $
 
 inherit libtool flag-o-matic eutils
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
@@ -58,15 +58,22 @@ src_compile() {
 	local myconf=
 	myconf="--with-dvdread"
 
-	use mmx \
-		&& myconf="${myconf} --enable-mmx"
-	use mmx || ( use 3dnow || use sse ) \
-		|| myconf="${myconf} --disable-mmx"
-	# Dont disable mmx if 3dnow or sse are requested.
-
-	use sse \
-		&& myconf="${myconf} --enable-sse" \
-		|| myconf="${myconf} --disable-sse"
+# Leave these alone for now, as the upstream sources do not set/use
+# the defines (HAVE_MMX,HAVE_MMX_TRUE) correctly, bug #30877.
+#
+#	use mmx \
+#		&& myconf="${myconf} --enable-mmx"
+#	use mmx || ( use 3dnow || use sse ) \
+#		|| myconf="${myconf} --disable-mmx"
+#	# Dont disable mmx if 3dnow or sse are requested.
+#
+#	use sse \
+#		&& myconf="${myconf} --enable-sse" \
+#		|| myconf="${myconf} --disable-sse"
+#
+#	use 3dnow \
+#		&& myconf="${myconf} --enable-3dnow" \
+#		|| myconf="${myconf} --disable-3dnow"
 
 	use altivec \
 		&& myconf="${myconf} --enable-altivec" \

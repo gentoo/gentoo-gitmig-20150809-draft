@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.52 2003/10/11 18:08:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.53 2003/11/06 17:47:51 azarah Exp $
+
+  06 Nov 2003; Martin Schlemmer <azarah@gentoo.org> transcode-0.6.10.ebuild:
+  Leave setting configure options if mmx,sse and 3dnow in USE alone for now, as
+  the upstream sources do not set/use the defines (HAVE_MMX,HAVE_MMX_TRUE)
+  correctly, bug #30877.
 
   11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> transcode-0.6.9.ebuild:
   stable bump on x86, cause of avifile compile fix
