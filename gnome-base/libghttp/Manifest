@@ -2,6 +2,7 @@ MD5 3732e778935f5ed4f204681c011fea62 ChangeLog 1837
 MD5 bd74d7f852802bc523b27815271b70e7 libghttp-1.0.9-r1.ebuild 885
 MD5 6f6f63af382aeaaac8c78be8ffd69fe7 libghttp-1.0.9-r2.ebuild 901
 MD5 f34bcb08e141fe9d902fbb959f1bdd4e libghttp-1.0.9-r3.ebuild 745
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 a8c7fbe13dede783a2937bb45ed65735 files/digest-libghttp-1.0.9-r1 66
 MD5 a8c7fbe13dede783a2937bb45ed65735 files/digest-libghttp-1.0.9-r2 66
 MD5 a8c7fbe13dede783a2937bb45ed65735 files/digest-libghttp-1.0.9-r3 66

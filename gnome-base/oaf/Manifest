@@ -2,6 +2,7 @@ MD5 74261d739b85458a64c34e53f0e4c08e ChangeLog 1497
 MD5 af044404bcc5d0cbebd2aed7e640ac0c oaf-0.6.10.ebuild 1220
 MD5 c1e306a20a06ae1a5c8c8d301f202aca oaf-0.6.8-r1.ebuild 1341
 MD5 3bbcee8413f441725e60a2b7957b7224 oaf-0.6.8.ebuild 1302
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3d83936ec476ca5f5f44ef110432b55f files/digest-oaf-0.6.10 63
 MD5 9f32f907f9a5525c5e33646ae30fa781 files/digest-oaf-0.6.8 61
 MD5 9f32f907f9a5525c5e33646ae30fa781 files/digest-oaf-0.6.8-r1 61

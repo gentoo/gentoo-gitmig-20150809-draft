@@ -2,6 +2,7 @@ MD5 8b9c29bfb41123b9517c81d40c6170cf ChangeLog 1971
 MD5 c8dc0b4eee76e29e58e63f35dea54e71 gnome-libs-1.4.1.6.ebuild 1947
 MD5 b777935ad84ea2d287e43f1e4998c1a6 gnome-libs-1.4.1.7.ebuild 1593
 MD5 a9a0c21e1abdda1f3321eaabf5786234 gnome-libs-1.4.2.ebuild 1784
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3a9b07232c2e27a44a8b3b3a83a9d696 files/digest-gnome-libs-1.4.1.6 72
 MD5 f699a38c77fa9c8d30de6e1c9d4ba7c0 files/digest-gnome-libs-1.4.1.7 72
 MD5 e0991b18209dfd87a7d6f2ed771dc00b files/digest-gnome-libs-1.4.2 70

@@ -3,6 +3,7 @@ MD5 fddb17476b4d655b63b2bdd2545c2ee0 libglade-0.17-r6.ebuild 1440
 MD5 cc02f1b4e4f10fc2ae70009cc702cf4e libglade-2.0.0-r1.ebuild 1442
 MD5 7c1120f529a16f23139f855c4955aff4 libglade-2.0.0.ebuild 1995
 MD5 3eca2047f3a6d666c591f8729dbe22be libglade-2.0.1.ebuild 1458
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 27fc8beb290edf4dc9fcdc7327a2d5d5 files/Makefile.in-0.patch 446
 MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
 MD5 eedbc07c448a767187689677aa16a8c0 files/digest-libglade-2.0.0 67

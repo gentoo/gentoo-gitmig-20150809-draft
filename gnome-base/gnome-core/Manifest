@@ -3,6 +3,7 @@ MD5 6a119bc31f86e60d3d041d6b2377bf1a gnome-core-1.4.0.8.ebuild 2534
 MD5 1d5ffecb368f910582da4acaac104d2b gnome-core-1.4.1.ebuild 2447
 MD5 a984593f7ffbd0f1ee4e49349d267d88 gnome-core-1.4.2-r1.ebuild 2459
 MD5 77449a275a1c7d6ff14e48ff103e923b gnome-core-1.4.2.ebuild 2382
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ffb294abbe384b73e1038dd1d3c7a14f files/start.gnome 39
 MD5 1123b95db582c759e9690ed96a6fa5ff files/Gnome 2383
 MD5 0471910aaa15413b1324a48f181d3bb8 files/digest-gnome-core-1.4.0.8 71
