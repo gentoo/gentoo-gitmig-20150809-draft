@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.25-r1.ebuild,v 1.2 2004/04/15 07:40:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.25-r1.ebuild,v 1.3 2004/04/15 23:36:58 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://www.netraverse.com/member/downloads/files/mki-adapter.patch
 	 http://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch"
 HOMEPAGE="http://www.kernel.org/ http://www.netraverse.com/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
