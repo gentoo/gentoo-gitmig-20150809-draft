@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.22 2004/05/13 10:51:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.23 2004/05/16 08:23:54 aliz Exp $
+
+*dnetc-2.9008.490 (16 May 2004)
+
+  16 May 2004; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9008.490.ebuild:
+  Version bump.
 
 *dnetc-2.9007.489 (13 May 2004)
 
