@@ -1,31 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r7.ebuild,v 1.6 2002/10/18 13:31:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r7.ebuild,v 1.7 2002/11/30 02:29:25 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="mon is a highly configurable service monitoring daemon"
 SRC_URI="ftp://ftp.kernel.org/pub/software/admin/mon/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/software/mon/"
-IUSE=""
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
+IUSE=""
 
 DEPEND=">=dev-perl/Mon-0.9
 	>=dev-perl/Time-HiRes-01.20
 	>=dev-perl/Period-1.20-r2"
 
 src_compile() {
-
 	cd ${S}/mon.d
 	make CC="gcc $CFLAGS" || die
 }
 
-src_install () {
-
-	exeinto /usr/sbin
-	doexe mon clients/mon*
+src_install() {
+	dosbin mon clients/mon*
 
 	insinto /usr/lib/mon/utils
 	doins utils/*

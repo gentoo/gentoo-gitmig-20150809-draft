@@ -1,21 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.0_pre1.ebuild,v 1.8 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.0_pre1.ebuild,v 1.9 2002/11/30 02:35:13 vapier Exp $
 
-S=${WORKDIR}/quickwitch
+MY_PN="quickwitch"
+MY_P="${MY_PN}-${PV/_/}"
+S=${WORKDIR}/${MY_PN}
 DESCRIPTION="Utility to switch network profiles on the fly"
-SRC_URI="mirror://sourceforge/quickswitch/quickwitch-1.0pre1.tar.gz"
+SRC_URI="mirror://sourceforge/quickswitch/${MY_P}.tar.gz"
 HOMEPAGE="http://edgesolutions.ca/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
-
 DEPEND=">=sys-devel/perl-5.6.0"
 
-src_install () {
-	cd ${S}
+src_install() {
 	dobin switchto
 	dobin switcher
 	dosed "s:/etc/switchto.conf:/etc/quickswitch/switchto.conf:" /usr/bin/switchto
