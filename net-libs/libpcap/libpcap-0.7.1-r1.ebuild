@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.1-r1.ebuild,v 1.8 2003/03/30 19:15:24 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.1-r1.ebuild,v 1.9 2003/09/06 22:04:23 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="pcap-Library"
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	patch -p0 < ${DISTDIR}/libpcap-0.7.1-prism.diff || die
-	
+
 }
 
 src_compile() {

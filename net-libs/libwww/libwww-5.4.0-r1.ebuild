@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.13 2003/07/18 22:04:42 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.14 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="ssl mysql"
 
@@ -29,7 +29,7 @@ src_compile() {
 	use mysql \
 		&& myconf="--with-mysql" \
 		|| myconf="--without-mysql"
-	
+
 	use ssl \
 		&& myconf="${myconf} --with-ssl" \
 		|| myconf="${myconf} --without-ssl"
@@ -48,6 +48,6 @@ src_compile() {
 
 src_install () {
 	make prefix=${D}/usr install || die
-	dodoc COPYRIGH ChangeLog 
+	dodoc COPYRIGH ChangeLog
 	dohtml -r .
 }

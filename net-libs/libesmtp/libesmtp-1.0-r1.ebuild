@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.3 2003/08/18 14:37:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.4 2003/09/06 22:04:23 msterret Exp $
 
 
 inherit gcc eutils gnuconfig libtool
@@ -28,9 +28,9 @@ src_compile() {
 	elibtoolize
 
 	local myconf
-	
+
 	use ssl || myconf="${myconf} --without-openssl"
-	
+
 	if [ "`gcc-major-version`" -eq "2"  ]; then
 		myconf="${myconf} --disable-isoc"
 	fi

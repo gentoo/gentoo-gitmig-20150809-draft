@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.3.ebuild,v 1.8 2003/02/13 14:20:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.3.ebuild,v 1.9 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="doc"
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.0.6
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )
 	>=dev-util/pkgconfig-0.12.0"
-	  
+
 src_compile() {
 	elibtoolize
 	local myconf
@@ -30,7 +30,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-gtk-doc" \
 		|| myconf="${myconf} --disable-gtk-doc"
 
-	# if this is disabled (use) ORBit2 will fail to build. Just force it on	
+	# if this is disabled (use) ORBit2 will fail to build. Just force it on
 	myconf="${myconf} --with-openssl"
 
 	econf ${myconf} || die
@@ -39,6 +39,6 @@ src_compile() {
 
 src_install() {
 	einstall || die
-    
+
  	dodoc AUTHORS ChangeLog COPYING HACKING MAINTAINERS README* NEWS TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.4-r1.ebuild,v 1.4 2003/02/13 14:22:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.4-r1.ebuild,v 1.5 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="ssl doc"
 
@@ -46,7 +46,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-    
+
  	dodoc AUTHORS ABOUT-NLS COPYING* ChangeLog README* INSTALL NEWS TODO
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-1.0.1.ebuild,v 1.6 2003/05/30 00:55:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-1.0.1.ebuild,v 1.7 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="doc ssl"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.6 )
 	>=dev-util/pkgconfig-0.12.0"
-	  
+
 src_compile() {
 	elibtoolize
 	local myconf
@@ -38,6 +38,6 @@ src_compile() {
 
 src_install() {
 	einstall || die
-    
+
  	dodoc AUTHORS ChangeLog COPYING HACKING MAINTAINERS README* NEWS TODO
 }

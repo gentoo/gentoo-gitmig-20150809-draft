@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.5 2003/07/06 11:41:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.6 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="ssl doc"
 
@@ -41,13 +41,13 @@ src_compile() {
 		--with-libxml=1 || die
 	# Evolution 1.1 and 1.2 need it with libxml1
 	unset ac_cv_path_APXS
-	
+
 	# dont always work with -j4 -- <azarah@gentoo.org> 9 Nov 2002
 	make || die
 }
 
 src_install() {
 	einstall || die
-    
+
  	dodoc AUTHORS ABOUT-NLS COPYING* ChangeLog README* INSTALL NEWS TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.0.ebuild,v 1.3 2003/07/13 11:47:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.0.ebuild,v 1.4 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="ssl static"
 
@@ -23,7 +23,7 @@ DEPEND="sys-devel/autoconf
 
 src_compile() {
 	local myconf
-	
+
 	use static && myconf="${myconf} --disable-shared --enable-static=yes"
 	use ssl || myconf="${myconf} --without-openssl"
 

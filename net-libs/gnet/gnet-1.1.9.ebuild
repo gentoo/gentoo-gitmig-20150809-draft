@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.9.ebuild,v 1.6 2003/07/18 22:04:42 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.9.ebuild,v 1.7 2003/09/06 22:04:23 msterret Exp $
 
 DESCRIPTION="GNet network library."
 SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc hppa amd64"
 RDEPEND=">=dev-libs/glib-1.2.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
- 
+
 src_compile() {
 	econf \
 		--with-html-dir=${D}/usr/share/doc/${PF} \
@@ -34,6 +34,6 @@ src_install() {
 		sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib \
 		install || die
-	
+
 	dodoc AUTHORS BUGS ChangeLog COPYING NEWS README TODO
 }

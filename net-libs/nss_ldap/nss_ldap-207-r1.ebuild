@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-207-r1.ebuild,v 1.2 2003/06/18 02:01:14 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-207-r1.ebuild,v 1.3 2003/09/06 22:04:23 msterret Exp $
 
 DESCRIPTION="NSS LDAP Module"
 HOMEPAGE="http://www.padl.com/OSS/nss_ldap.html"
@@ -31,6 +31,6 @@ src_install() {
 
 	dodoc ldap.conf ANNOUNCE NEWS ChangeLog AUTHORS \
 		COPYING CVSVersionInfo.txt README nsswitch.ldap \
-		LICENSE* 
+		LICENSE*
 	docinto docs; dodoc doc/*
 }

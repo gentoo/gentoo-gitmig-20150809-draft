@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002d.ebuild,v 1.5 2003/08/02 18:19:46 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002d.ebuild,v 1.6 2003/09/06 22:04:23 msterret Exp $
 
 MY_PN=imap
 MY_P=${MY_PN}-${PV}
@@ -21,17 +21,17 @@ RDEPEND="ssl? ( dev-libs/openssl )
 DEPEND="${RDEPEND}
 		>=sys-libs/pam-0.72"
 
-inherit flag-o-matic 
+inherit flag-o-matic
 
 src_unpack() {
 	unpack ${A}
 
 	# Tarball packed with bad file perms
-	chmod -R ug+w ${S} 
+	chmod -R ug+w ${S}
 
 	# alpha needs -fPIC
 	use alpha && append-flags -fPIC
-	
+
 	# Modifications so we can build it optimially and correctly
 	cd ${S}/src/osdep/unix/
 	cp Makefile Makefile.orig
@@ -40,18 +40,18 @@ src_unpack() {
 		-e 's,SSLDIR=/usr/local/ssl,SSLDIR=/usr,g' \
 		-e 's,SSLCERTS=$(SSLDIR)/certs,SSLCERTS=/etc/ssl/certs,g' \
 		< Makefile.orig > Makefile
-	
+
 	# Apply a patch to only build the stuff we need for c-client
 	cd ${S}
 	patch < ${FILESDIR}/${PV}-Makefile.patch
-	
+
 	# Remove the pesky checks about SSL stuff
 	cd ${S}
 	cp Makefile Makefile.orig
 	grep -v 'read.*exit 1' <Makefile.orig >Makefile
 }
 
-src_compile() {                           
+src_compile() {
 	if use ssl; then
 		make lnp SSLTYPE=unix || die
 	else
@@ -65,7 +65,7 @@ src_install() {
 	# Library binary
 	dolib.a c-client/c-client.a
 	dosym /usr/lib/c-client.a /usr/lib/libc-client.a
-	
+
 	# Headers
 	insinto /usr/include/imap
 	doins c-client/{c-client,mail,imap4r1,rfc822,linkage,misc,smtp,nntp}.h

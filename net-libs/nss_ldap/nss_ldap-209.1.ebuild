@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-209.1.ebuild,v 1.1 2003/07/26 19:43:59 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-209.1.ebuild,v 1.2 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="berkdb debug ssl"
 
@@ -20,7 +20,7 @@ src_compile() {
 	myconf=""
 	# --enable-schema-mapping   enable attribute/objectclass mapping
 	# --enable-paged-results    enable paged results control
-  	# --enable-configurable-krb5-ccname   enable configurable 
+  	# --enable-configurable-krb5-ccname   enable configurable
 	#			Kerberos V credentials cache name
 
 	use berkdb && myconf="${myconf} --enable-rfc2307bis"
@@ -47,6 +47,6 @@ src_install() {
 
 	dodoc ldap.conf ANNOUNCE NEWS ChangeLog AUTHORS \
 		COPYING CVSVersionInfo.txt README nsswitch.ldap \
-		LICENSE* 
+		LICENSE*
 	docinto docs; dodoc doc/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.7.ebuild,v 1.6 2003/09/04 12:33:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.7.ebuild,v 1.7 2003/09/06 22:04:23 msterret Exp $
 
 IUSE="ssl"
 
@@ -20,10 +20,10 @@ DEPEND=">=sys-apps/sed-4
 pkg_setup() {
 	# to prevent merge problems with broken makefiles from old
 	# pwlib versions, we double-check here.
-	
+
 	if [ "` fgrep '\$(OPENSSLDIR)/include' /usr/share/pwlib/make/unix.mak`" ]
 	then
-		# patch unix.mak so it doesn't require annoying 
+		# patch unix.mak so it doesn't require annoying
 		# unmerge/merge cycle to upgrade
 		einfo "Fixing broken pwlib makefile."
 		cd /usr/share/pwlib/make
@@ -59,7 +59,7 @@ src_install() {
 	# mod to keep gnugk happy
 	insinto /usr/share/openh323/src
 	newins ${FILESDIR}/openh323-1.11.2-emptyMakefile Makefile
-	
+
 	rm -f ${D}/usr/lib/libopenh323.so
 	if [ ${ARCH} = "ppc" ] ; then
 		dosym /usr/lib/libh323_linux_ppc_r.so.${PV} /usr/lib/libopenh323.so

@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.10.ebuild,v 1.2 2003/09/06 11:27:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.10.ebuild,v 1.3 2003/09/06 22:04:23 msterret Exp $
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -17,7 +17,7 @@ DEPEND=">=dev-libs/libgcrypt-1.1.12
 
 # gnutls has its own version of these. so let us use those instead.
 #	>=dev-libs/libtasn1-0.1
-#   >=dev-libs/lzo-1.0	
+#   >=dev-libs/lzo-1.0
 
 src_unpack() {
 	unpack ${A}
@@ -36,7 +36,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	
+
 	dodoc AUTHORS COPYING COPYING.LIB ChangeLog NEWS \
 		README THANKS doc/TODO
 
