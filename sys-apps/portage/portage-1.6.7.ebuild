@@ -1,17 +1,23 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.6.4.ebuild,v 1.1 2001/08/31 05:32:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.6.7.ebuild,v 1.1 2001/09/05 05:43:34 drobbins Exp $
  
 S=${WORKDIR}/${P}
-DESCRIPTION="Portage autobuild system"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.bz2"
+DESCRIPTION="Portage ports system"
+SRC_URI=""
 HOMEPAGE="http://www.gentoo.org"
 #debianutils is for "readlink"
 
 if [ -z "`use build`" ] ; then
   RDEPEND="sys-devel/spython sys-apps/debianutils"
 fi
+
+src_unpack() {
+	#We are including the Portage bzipped tarball on CVS now, so that if a person's
+	#emerge gets hosed, they are not completely stuck.
+	cd ${WORKDIR}; tar xjf ${FILESDIR}/${P}.tar.bz2
+}
 
 src_compile() {                           
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
@@ -63,12 +69,13 @@ src_install() {
 	fi
 	dodir /var/tmp
 	chmod 1777 ${D}/var/tmp
-	touch ${D}/var/tmp/keep
+	touch ${D}/var/tmp/.keep
 	if [ "`use build`" ] || [ "`use bootcd`" ]
 	then
 		#convenience; overwrite existing symlink
 		ln -sf ../usr/portage/profiles/default-1.0_rc6 ${D}/etc/make.profile
 	fi
+	dodoc ${S}/ChangeLog
 }
 
 pkg_postinst() {
