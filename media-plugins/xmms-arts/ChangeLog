@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.6 2002/11/24 20:20:26 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.7 2003/01/28 12:37:25 hannes Exp $
+
+  28 Jan 2003; Hannes Mehnert <hannes@gentoo.org> xmms-arts-0.4-r6.ebuild:
+  removed gentoo-endian.patch, xmms-arts doesn't work on !x86 (according
+  to KEYWORDS), this closes bug #11604.
 
   24 Nov 2002; Mark Guertin <gerk@gentoo.org> xmms-arts-0.4-r6.ebuild:
   marked as -ppc.  Outputs nothing but static, seems like endianess

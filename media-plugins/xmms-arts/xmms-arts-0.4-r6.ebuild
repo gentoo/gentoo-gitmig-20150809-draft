@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.2 2002/11/24 20:20:26 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.3 2003/01/28 12:37:25 hannes Exp $
 inherit kde-base libtool
 
 # Note: we set many vars e.g. DEPEND insteaed of extending them because this isn't a proper KDE app,
@@ -29,7 +29,7 @@ src_unpack() {
 		Makefile.orig > Makefile.am
 	patch -p1 < ${FILESDIR}/${P}-gentoo2.patch || die "Failed patch"
 	autoconf
-	patch -p1 < ${FILESDIR}/${P}-gentoo-endian.patch || die "Failed patch"
+	#patch -p1 < ${FILESDIR}/${P}-gentoo-endian.patch || die "Failed patch"
 }
 
 src_compile() {     
