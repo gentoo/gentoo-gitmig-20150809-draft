@@ -1,0 +1,51 @@
+--- main.c-orig	2004-11-23 11:34:05.757230992 +0100
++++ main.c	2004-11-23 11:55:46.117546176 +0100
+@@ -6,6 +6,10 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ 
++#include <sys/types.h>
++#include <unistd.h>
++
++
+ #define LINE_MAX 256
+ #define SMTP_PASSWD_FILE "/etc/poppasswd"
+ char up[513];
+@@ -22,10 +26,26 @@
+    unsigned char h;
+    FILE *fp;
+    int j;
+-
++   uid_t uid;
++   gid_t gid;
+    char *linepnt;
+ 
+    if ((fp = fopen(SMTP_PASSWD_FILE, "rt")) == NULL) _exit(2);
++
++   uid = getuid();
++   gid = getgid();
++
++   if (gid != getegid()) {
++   	if (setegid(gid))
++		_exit(2);
++   }
++
++
++   if (uid && (uid != geteuid())) {
++   	if (seteuid(uid))
++		_exit(2);
++   }
++
+    while (fgets(line, LINE_MAX, fp) != NULL) {
+          if ((linepnt = strchr(line, '\n')) != NULL) {
+ 	 *linepnt = 0;
+@@ -38,7 +58,8 @@
+ 	 break;
+       }
+    }   
+-   fclose(fp);
++   
++   if (EOF == fclose(fp)) _exit(2);
+ 
+    if (!found_user) return(1);
+ 
