@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/robotfindskitten-1.4142135.349.ebuild,v 1.6 2004/09/04 23:18:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/robotfindskitten-1.4142135.349.ebuild,v 1.7 2004/10/14 21:57:53 mr_bones_ Exp $
 
 inherit games
 
@@ -19,4 +19,5 @@ src_install() {
 	dogamesbin src/robotfindskitten || die "dogamesbin failed"
 	doinfo doc/robotfindskitten.info
 	dodoc AUTHORS BUGS ChangeLog NEWS README
+	prepgamesdirs
 }
