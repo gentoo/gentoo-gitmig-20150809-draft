@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.1.2.ebuild,v 1.1 2005/02/15 21:24:33 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.1.2.ebuild,v 1.2 2005/02/17 23:12:00 eradicator Exp $
 
 IUSE="nls nothreadsafe"
 
@@ -37,6 +37,7 @@ src_compile() {
 		myconf="${myconf} --disable-threadsafe"
 	fi
 	myconf="${myconf} `use_with nls utf8`"
+	myconf="--with-tcl=/usr/$(get_libdir)/"
 	econf ${myconf} || die
 	emake all || die # doc is not working yet in 3.1.2
 }
@@ -50,10 +51,7 @@ src_compile() {
 #}
 
 src_install () {
-	addwrite "/usr/lib/tcl8.4/sqlite3"
-	dodir /usr/{bin,include,lib}
-
-	einstall || die
+	make DESTDIR="${D}" install || die
 
 	dobin lemon
 	dodoc README VERSION

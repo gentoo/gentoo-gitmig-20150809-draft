@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16.ebuild,v 1.1 2005/02/15 21:24:33 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16.ebuild,v 1.2 2005/02/17 23:12:00 eradicator Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 IUSE="nls"
 
@@ -16,11 +16,25 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~mips ~hppa ~ppc64 ~amd64 ~ppc-macos"
 
 src_unpack() {
-
 	unpack ${A}
 
-	use hppa && epatch ${FILESDIR}/${P}-alignement-fix.patch
+	use hppa && epatch ${FILESDIR}/${PN}-2.8.15-alignement-fix.patch
 
+	epatch ${FILESDIR}/${P}-multilib.patch
+
+	if use nls; then
+		ENCODING=${ENCODING-"UTF8"}
+	else
+		ENCODING="ISO8859"
+	fi
+
+	sed -i -e "s:@@S@@:${S}:g" \
+	       -e "s:@@CC@@:$(tc-getCC):g" \
+	       -e "s:@@CFLAGS@@:${CFLAGS}:g" \
+	       -e "s:@@AR@@:$(tc-getAR):g" \
+	       -e "s:@@RANLIB@@:$(tc-getRANLIB):g" \
+	       -e "s:@@ENCODING@@:${ENCODING}:g" \
+	       ${S}/Makefile.linux-gcc
 }
 
 src_compile() {
@@ -32,9 +46,9 @@ src_compile() {
 }
 
 src_install () {
-	dodir /usr/{bin,include,lib}
+	dodir /usr/{bin,include,$(get_libdir)}
 
-	einstall || die
+	make DESTDIR="${D}" install || die
 
 	dobin lemon
 	dodoc README VERSION
