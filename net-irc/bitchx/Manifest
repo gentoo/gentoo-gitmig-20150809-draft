@@ -3,7 +3,7 @@ MD5 a0d406fa01701f41b0a32496205efc66 bitchx-1.0.19-r1.ebuild 2624
 MD5 2ce821e53f9b58439514e976caf6a96c bitchx-1.0.19-r2.ebuild 2705
 MD5 37233cc348f9accf52d9b073234deb27 bitchx-1.0.19-r3.ebuild 3189
 MD5 d8d31d074b565529e2cd7d66dc0adbb2 bitchx-1.0.19-r4.ebuild 3235
-MD5 dafe37c96b2a5e090f63269f2c3601ab bitchx-1.0.19-r5.ebuild 3666
+MD5 b79b20e599eb71121df952d3eb005175 bitchx-1.0.19-r5.ebuild 3627
 MD5 2573358b54ae05f8c23a452f657493e3 files/bitchx-1.0.19-r4-gentoo.diff 332
 MD5 3b4e5923d1c18b01092e2d43b2989d5f files/digest-bitchx-1.0.19-r4 70
 MD5 10a57b14bb58910e1f373fbc1b8b2197 files/bitchx-1.0.19-cjk.patch 7050

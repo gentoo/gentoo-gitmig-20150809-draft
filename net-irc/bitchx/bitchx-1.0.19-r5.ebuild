@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.6 2003/07/16 10:12:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.7 2003/07/17 05:31:17 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -88,12 +88,11 @@ src_compile() {
 		${S}/include/config.h 
 	#ugly workaround
 	use gtk && use gnome && ( \
-		CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
-		append-flags "-I/usr/include/gnome-1.0"
 		einfo "gtkBitchX will be built, if you want BitchX please issue"
 		einfo "USE="-gtk" emerge bitchx" 
 		sleep 10
-		)
+		) && CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
+	
 	econf CFLAGS="${CFLAGS}" \
 		--enable-cdrom \
 		--with-plugins \
