@@ -1,0 +1,29 @@
+# Je vois la vie en rose :-)
+color	hdrdefault	brightcyan		blue
+color	header		brightwhite		blue "^from:"
+color   header          brightwhite    	blue   "^subject:"
+
+color   quoted          brightgreen     blue
+color   signature       brightwhite	blue
+
+color   indicator       blue	green
+
+color   error           red       black
+mono    error           bold
+color   status          black cyan
+mono	status		bold
+color   tree            brightyellow   	blue
+
+color   tilde           brightmagenta   blue
+
+color	body		brightyellow		blue	"(ftp|http|gopher|wais|file)://[^ \(\)<>,]+"
+mono    body            bold                    "(ftp|http|gopher|wais|file)://[^ \(\)<>,]+"
+color	body		brightwhite		blue	"[-a-z_0-9.]+@[-a-z_0-9.]+"
+mono    body            bold                    "[-a-z_0-9.]+@[-a-z_0-9.]+"
+color   body            brightyellow    black   "^Good signature"
+mono    body            bold                    "^Good signature"
+color   body            brightwhite     red     "^Bad signature from.*"
+mono    body            bold                    "^Bad signature from.*"
+color   normal          white		blue
+color	message		green	black
+color	attachment	brightgreen	blue

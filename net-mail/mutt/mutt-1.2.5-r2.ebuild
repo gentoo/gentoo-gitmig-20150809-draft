@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.2.5-r1.ebuild,v 1.4 2000/11/02 08:31:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.2.5-r2.ebuild,v 1.1 2000/12/20 09:45:34 drobbins Exp $
 
 P=mutt-1.2.5-1
 A=mutt-1.2.5i.tar.gz
@@ -37,6 +37,8 @@ src_install () {
     gzip ${D}/usr/doc/${P}/html/*
     gzip ${D}/usr/doc/${P}/samples/*
     gzip ${D}/usr/doc/${P}/*
+	insinto /etc/mutt
+	doins ${FILESDIR}/Muttrc*
 }
 
 

@@ -1,0 +1,26 @@
+set mbox_type = Maildir
+set use_8bitmime
+set folder=~/.maildir
+set spoolfile=~/.maildir/
+unset mbox
+source /etc/mutt/Muttrc.color
+set record=~/.maildir-sent/
+set move=no
+set sort=date-received
+unset use_domain
+set abort_nosubject=no
+set abort_unmodified=no
+ignore *
+unignore from date subject to cc lines
+unignore organization organisation
+unignore posted-to:
+hdr_order to cc organization organisation date from subject
+set index_format="%4C %Z %{%b %d} %-16.16L  %s"
+
+bind pager <home> top
+bind pager <end> bottom
+bind pager <up> previous-line
+bind pager <down> next-line
+set pager_index_lines=6
+
+my_hdr Organization: Gentoo Technologies, Inc.
