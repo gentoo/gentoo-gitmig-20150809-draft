@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.44 2004/11/03 09:37:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.45 2004/11/03 18:16:19 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1053,18 +1053,43 @@ migrate_usr_x11r6_lib() {
 	# _absolutely nothing_ in /usr/X11R6/lib so we can make such a symlink.
 	# Donnie Berkholz <spyderous@gentoo.org> 20 October 2004
 
+	einfo "Migrating from /usr/X11R6/lib to /usr/lib..."
 	# Get rid of "standard" symlink from <6.8.0-r2
 	# We can't overwrite symlink with directory w/ $(mv -f)
 	[ -L ${ROOT}usr/$(get_libdir)/X11 ] \
 		&& rm ${ROOT}usr/$(get_libdir)/X11
-	# Move everything
-	mv -f ${ROOT}usr/X11R6/$(get_libdir)/* ${ROOT}usr/$(get_libdir)
-	# Remove any floating .keep files so we can run rmdir
-	find ${ROOT}usr/X11R6/$(get_libdir) -name '\.keep' -exec rm -f {} \;
-	# Get rid of the directory
-	rmdir ${ROOT}usr/X11R6/$(get_libdir)
-	# Put a symlink in its place
-	ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
+	# Move everything if it's not a symlink
+	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
+		&& mv -f ${ROOT}usr/X11R6/$(get_libdir)/* ${ROOT}usr/$(get_libdir)
+	# Remove any floating .keep files so we can run rmdir if it's not a symlink
+	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
+		&& find ${ROOT}usr/X11R6/$(get_libdir) -name '\.keep' -exec rm -f {} \;
+	# Get rid of the directory if it's not a symlink
+	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
+		&& rmdir ${ROOT}usr/X11R6/$(get_libdir)
+	# Put a symlink in its place if there's not one there
+	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
+		&& ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
+
+	# We also need to create a symlink from /usr/X11R6/libdir/X11/xkb
+	# to /usr/lib/xkb, so libxklavier and xkb stuff is happy
+
+	einfo "Migrating from /usr/X11R6/$(get_libdir)/X11/xkb to /usr/$(get_libdir)/xkb..."
+	# Make the new dir if it doesn't already exist
+	[ ! -e ${ROOT}usr/$(get_libdir)/xkb ] \
+		&& mkdir ${ROOT}usr/$(get_libdir)/xkb
+	# Move anything in the old xkb dir if it's not a symlink
+	[ ! -L ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb ] \
+		&& mv -f ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb/* \
+		${ROOT}usr/$(get_libdir)/xkb
+	# Get rid of the directory if it's not a symlink
+	[ ! -L ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb ] \
+		&& rmdir ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb
+	# Add symlink to reflect xkb move from /usr/X11R6/libdir/X11/xkb
+	# to /usr/libdir/xkb
+	[ ! -L ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb ] \
+		&& ln -s ../../../$(get_libdir)/xkb \
+		${ROOT}usr/X11R6/$(get_libdir)/X11/xkb
 }
 
 update_config_files() {

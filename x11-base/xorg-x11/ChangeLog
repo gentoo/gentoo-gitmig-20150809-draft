@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.190 2004/11/03 17:33:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.191 2004/11/03 18:16:19 spyderous Exp $
+
+  03 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  Add some checking features to migrate_usr_x11r6_lib() so we don't redo
+  things that were already done. Also, migrate xkb stuff properly.
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.0-r1.ebuild:
   Marked ~ppc64; bug #67403
