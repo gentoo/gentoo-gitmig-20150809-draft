@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.201 2004/06/13 01:25:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.202 2004/06/14 02:28:39 zul Exp $
+
+  13 Jun 2004; Chuck Short <zul@gentoo.org> files/apachesplitlogfile,
+  files/2.0.49/apache2splitlogfile:
+  Added change from Phillip Gaschuetz <pg@corpex.de> Use strtime rather than the
+  date command. Closes #53350.
 
   12 Jun 2004; Joshua Kinard <kumba@gentoo.org> apache-1.3.31-r2.ebuild:
   Marked stable on mips.

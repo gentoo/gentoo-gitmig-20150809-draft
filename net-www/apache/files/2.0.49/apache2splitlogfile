@@ -68,6 +68,7 @@
 ## log entry. It is slower, but it permits us to check for symlinks, and
 ## flush the buffers so everything is realtime and we don't lose any entry.
 
+
 #
 # This script will take a combined Web server access
 # log file and break its contents into separate files.
@@ -79,6 +80,8 @@
 # The combined log file is read from stdin. Records read
 # will be appended to any existing log files.
 #
+
+use POSIX qw(strftime);
 
 while (<STDIN>) {
     #
@@ -99,9 +102,8 @@ while (<STDIN>) {
     s/VLOG=(.*)[\/]*$//;
     $logs=$1;
     if($logs eq "") {$logs="/var/log/apache2";}
-    $date=`date +%Y-%m`;
-    chop $date;
-    $filename="$logs/VLOG-$date-${vhost}.log";
+    $date=strftime("%Y-%m", localtime());
+    $filename="${logs}/VLOG-${date}-${vhost}.log";
     if (-l $filename) { 
 	die "File $filename is a symlink, writing too dangerous, dying!\n";
     }
