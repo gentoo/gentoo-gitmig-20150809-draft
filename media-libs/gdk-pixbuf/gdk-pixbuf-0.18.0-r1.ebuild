@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.18.0-r1.ebuild,v 1.3 2002/07/22 14:37:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.18.0-r1.ebuild,v 1.4 2002/07/23 23:39:34 seemant Exp $
 
 inherit virtualx libtool
 
@@ -45,9 +45,8 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc/X11/gdk-pixbuf \
-		install || die
+	einstall \
+		sysconfdir=${D}/etc/X11/gdk-pixbuf || die
 
 	#fix permissions on the loaders
 	chmod a+rx ${D}/usr/lib/gdk-pixbuf/loaders
