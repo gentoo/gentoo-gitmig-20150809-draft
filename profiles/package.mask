@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <vladimir@gentoo.org> 10 June 2003
+# Needs testing (Completely new patches)
+>=sys-aps/quik-2.0.1k
+
 # <twp@gentoo.org> 10 Jun 2003
 # Needs testing (I can't test it)
 =dev-ruby/optparse-0.12
