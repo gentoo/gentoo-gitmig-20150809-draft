@@ -2,4 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<longdescription>
+PyCrash is a Run-Time Exception Dumper which handles uncaught exceptions
+during the execution of Python programs and collects information about
+the program context. PyCrash can be very useful in report bug information,
+because the programmer can easily analyse the program execution context
+of the crashed application. The format of the crash dump file generated 
+by PyCrash is XML, so the programmer can easily read this file to understand
+why the program is crashed.
+</longdescription>
 </pkgmetadata>
