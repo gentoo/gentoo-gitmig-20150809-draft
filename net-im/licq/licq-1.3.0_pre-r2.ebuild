@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r1.ebuild,v 1.1 2004/08/20 15:10:33 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r2.ebuild,v 1.1 2004/08/20 19:47:10 voxus Exp $
 
 inherit eutils
 
@@ -53,13 +53,21 @@ src_unpack() {
 
 	cd ${S}/src && epatch ${FILESDIR}/${PV/_pre/}-upgradepath.patch || \
 		ewarn "Fail to fix upgrade path, forget it"
+
+	cd ${S}/plugins/qt-gui && \
+		epatch ${FILESDIR}/1.3.0-no_stupid_koloboks.patch || \
+		ewarn "Fail to kill koloboks, forget it"
 }
 
 src_compile() {
 	local first_conf
 	use ssl		|| myconf="${myconf} --disable-openssl"
 	use socks5	&& myconf="${myconf} --enable-socks5"
-	use crypt	|| myconf="${myconf} --disable-gpgme"
+	if use crypt
+	then
+		myconf="${myconf} --disable-gpgme"
+		epatch ${FILESDIR}/1.3.0-gpgme3_hack.patch
+	fi
 
 	econf ${myconf} || die
 	emake || die

@@ -1,0 +1,11 @@
+--- configure~	2004-08-20 23:11:47.676939085 +0400
++++ configure	2004-08-20 23:11:57.560881631 +0400
+@@ -6388,7 +6388,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lgpgme  $LIBS"
++LIBS="-lgpgme3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
