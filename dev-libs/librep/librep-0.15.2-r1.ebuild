@@ -1,17 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.15.2-r1.ebuild,v 1.2 2002/07/11 06:30:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.15.2-r1.ebuild,v 1.3 2002/08/01 18:02:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Shared library implementing a Lisp dialect"
 SRC_URI="http://download.sourceforge.net/librep/${P}.tar.gz"
 HOMEPAGE="http://librep.sourceforge.net/"
 
-DEPEND="virtual/glibc
-	>=sys-libs/gdbm-1.8.0
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=sys-libs/gdbm-1.8.0
 	>=dev-libs/gmp-3.1.1
 	readline? ( >=sys-libs/readline-4.1
-	            >=sys-libs/ncurses-5.2 )
+		>=sys-libs/ncurses-5.2 )
 	sys-apps/texinfo"
 
 src_unpack() {
@@ -29,18 +32,11 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ "`use readline`" ]
-	then
-		myconf="--with-readline"
-	else
-		myconf="--without-readline"
-	fi
+	use readline \
+		&& myconf="--with-readline" \
+		|| myconf="--without-readline"
 
-	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --libexecdir=/usr/lib \
-		    --infodir=/usr/share/info || die
-
+	econf --libexecdir=/usr/lib  || die
 	emake || die
 }
 
@@ -53,4 +49,3 @@ src_install() {
 	docinto doc
 	dodoc doc/*
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r4.ebuild,v 1.1 2002/07/01 18:09:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r4.ebuild,v 1.2 2002/08/01 18:02:36 seemant Exp $
 
 inherit libtool
 
@@ -9,12 +9,12 @@ DESCRIPTION="libmcrypt is a library that provides uniform interface to access se
 SRC_URI="ftp://mcrypt.hellug.gr/pub/mcrypt/libmcrypt/${P}.tar.gz"
 HOMEPAGE="http://mcrypt.hellug.gr/"
 
-DEPEND="virtual/glibc
-	>=sys-devel/automake-1.6.1
+DEPEND=">=sys-devel/automake-1.6.1
 	>=sys-devel/libtool-1.4.1-r8"
-RDEPEND="virtual/glibc"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# # $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.16.ebuild,v 1.2 2002/06/29 00:07:16 azarah Exp $
+# # $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.16.ebuild,v 1.3 2002/08/01 18:02:37 seemant Exp $
 
 inherit libtool
 
@@ -9,11 +9,14 @@ DESCRIPTION="Shared library implementing a Lisp dialect"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://librep.sourceforge.net/"
 
-DEPEND="virtual/glibc
-	>=sys-libs/gdbm-1.8.0
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=sys-libs/gdbm-1.8.0
 	>=dev-libs/gmp-3.1.1
 	readline? (	>=sys-libs/readline-4.1
-	            >=sys-libs/ncurses-5.2 )
+		>=sys-libs/ncurses-5.2 )
 	sys-apps/texinfo
 	>=sys-devel/automake-1.6.1-r5"
 
@@ -21,18 +24,17 @@ src_compile() {
 	elibtoolize
 
 	local myconf=""
-	use readline && myconf="--with-readline"
-	use readline || myconf="--without-readline"
+	use readline \
+		&& myconf="--with-readline" \
+		|| myconf="--without-readline"
 
 	LC_ALL=""
 	LINGUAS=""
 	LANG=""
 	export LC_ALL LINGUAS LANG
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
+	econf \
 		--libexecdir=/usr/lib \
-		--infodir=/usr/share/info \
 		--with-extra-cflags=-fstrength-reduce \
 		${myconf} || die "configure failure"
 
@@ -53,4 +55,3 @@ src_install() {
 	docinto doc
 	dodoc doc/*
 }
-

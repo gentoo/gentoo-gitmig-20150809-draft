@@ -6,18 +6,15 @@ S=${WORKDIR}/pcre-${PV}
 DESCRIPTION="Perl-compatible regular expression library"
 SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${PV}.tar.bz2"
 HOMEPAGE="http://www.pcre.org/"
-LICENSE="as-is"
-DEPEND="virtual/glibc"
+
 SLOT="3"
+LICENSE="as-is"
 KEYWORDS="x86 ppc"
 
-src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die
+DEPEND="virtual/glibc"
 
+src_compile() {
+	econf || die
 	emake || die
 }
 
