@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/PEAR-DB-1.3.ebuild,v 1.2 2003/05/07 18:36:31 method Exp $
 
 P=${PN/PEAR-//}-${PV}
 DESCRIPTION="Database abstraction layer for PHP"
