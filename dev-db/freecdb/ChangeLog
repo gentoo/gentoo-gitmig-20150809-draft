@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freecdb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.3 2003/09/28 15:37:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.4 2003/11/14 15:20:04 matsuu Exp $
+
+  15 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> freecdb-0.62.ebuild:
+  Add amd64 to KEYWORDS.
 
   29 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> freecdb-0.62.ebuild:
   Changed ~alpha and ~sparc keywords to stable
