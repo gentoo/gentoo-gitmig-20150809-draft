@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.7 2002/10/20 18:49:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.8 2002/12/04 22:10:57 seemant Exp $
 
 LICENSE="XAnim"
 SLOT="0"
@@ -83,22 +83,11 @@ SRC_URI="ftp://xanim.va.pubnix.com/xanim2801.tar.gz
 	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_I386}${_XA_I386_EXT}"
 HOMEPAGE="http://xanim.va.pubnix.com"
 
-case $ARCH in 
-	sparc)
-		ARCHDEPS="app-arch/ncompress"
-	;;
-	sparc64)
-		ARCHDEPS="app-arch/ncompress"
-	;;
-	ppc)
-		ARCHDEPS="app-arch/ncompress"
-	;;
-	*)
-		ARCHDEPS=""
-	;;
-esac
-
-DEPEND="virtual/glibc virtual/x11 >=sys-libs/zlib-1.1.3 ${ARCHDEPS}"
+DEPEND="virtual/x11
+	>=sys-libs/zlib-1.1.3
+	ppc? ( app-arch/ncompress )
+	sparc? ( app-arch/ncompress )
+	sparc64? ( app-arch/ncompress )"
 
   	
 src_unpack() {

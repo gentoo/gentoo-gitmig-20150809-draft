@@ -1,13 +1,14 @@
 # ChangeLog for media-video/xanim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.5 2002/12/04 22:10:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.6 2002/12/04 22:11:55 seemant Exp $
 
 *xanim-2.80.1-r4 (3 June 2002)
  
   04 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xanim-2.80.1-r4.ebuild :
 
   Fixed the DEPEND syntax.  The case $ARCH stuff for adding ncompress to the
-  DEPEND list was not working.
+  DEPEND list was not working.  Thanks to [DJ]Hack in #gentoo-sparc for
+  pointing out the failure.
  
   3 June 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   xanim-2.80.1-r4.ebuild, files/digest-xanim-2.80.1-r4 :
