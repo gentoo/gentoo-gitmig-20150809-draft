@@ -1,15 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0028f5cb692c67c719179e95c8703af0 ChangeLog 1782
 MD5 3113b98f43bda47db0f39bd6f6e3aad1 libffi-1.20.ebuild 605
-MD5 2f524e8944e8a832ec2c1b5672ad3675 libffi-3.4.1.ebuild 7100
+MD5 e21dd80ca7b21c735c8e7808a6c3c82e libffi-3.3.3.ebuild 6895
+MD5 8e8520857bfdc8f92328b44e6449db28 libffi-3.4.1.ebuild 7094
+MD5 724b963b813ffe2e6aa8ddcf102921ad ChangeLog 2163
+MD5 ef1d6e99f954cc3412a9e513a2d80c64 metadata.xml 1836
 MD5 ed8f1e978198c34ad3dc3b81c4804199 files/digest-libffi-1.20 63
+MD5 14f4d6619c938dbb907e2420c0eeefd9 files/digest-libffi-3.3.3 64
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHhTEI1lqEGTUzyQRAnBhAJ0S0k4hF1bd2X964NFekKe1mAwhegCfa2WJ
-89uHWeXAnmbbAM4TMkYox+c=
-=jVBS
------END PGP SIGNATURE-----

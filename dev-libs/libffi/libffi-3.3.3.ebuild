@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.5 2004/08/27 20:21:47 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.3.ebuild,v 1.1 2004/08/27 20:21:47 fafhrd Exp $
 
 IUSE="nls"
 SLOT="0"
@@ -40,15 +40,16 @@ do_filter_flags() {
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
 
-	# xgcc isnt patched with propolice
-	filter-flags -fstack-protector-all
-	filter-flags -fno-stack-protector-all
-	filter-flags -fstack-protector
-	filter-flags -fno-stack-protector
+#    if use amd64
+#    then
+#        # gcc 3.3 doesnt support -march=k8/etc on amd64, so xgcc will fail
+#        setting="`get-flag march`"
+#        [ ! -z "${setting}" ] && filter-flags -march="${setting}"
+#    fi
 
-	# xgcc isnt patched with the gcc symbol visibility patch
-	filter-flags -fvisibility-inlines-hidden
-	filter-flags -fvisibility=hidden
+	# gcc 3.3 doesnt support -mtune on numerous archs, so xgcc will fail
+	mtsetting="`get-flag mtune`"
+	[ ! -z "${mtsetting}" ] && filter-flags -mtune="${mtsetting}"
 
 	# ...sure, why not?
 	strip-unsupported-flags
@@ -74,10 +75,10 @@ STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 
 # This branch update includes libffi fixes, so we include it here
-#BRANCH_UPDATE="20040412"
-BRANCH_UPDATE=
+BRANCH_UPDATE="20040412"
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-${PV}.tar.bz2"
+#	mirror://gentoo/gcc-3.3.3-branch-update-${BRANCH_UPDATE}.patch.bz2"
 
 DESCRIPTION="libffi (from gcc) does not commonly build unless gcj is compiled, but is used by other projects, like GNUstep."
 HOMEPAGE="http://gcc.gnu.org/"
@@ -86,13 +87,14 @@ HOMEPAGE="http://gcc.gnu.org/"
 #  and is, different
 LICENSE="libffi"
 
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~x86"
 
 DEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	>=sys-devel/binutils-2.14.90.0.8-r1
+	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
+	=sys-devel/gcc-3.3.3*
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
@@ -113,15 +115,12 @@ src_unpack() {
 	elibtoolize --portage --shallow
 
 	#use amd64 && epatch ${FILESDIR}/libstdc++_amd64_multilib_hack.patch
-	# not quite needed since we disable multilib in this ebuild, but it cant
-	# hurt to have anyway, just in case
-	sed -i -e 's/MULTILIB_OSDIRNAMES\ =.*/MULTILIB_OSDIRNAMES\ =\ ..\/lib64\ ..\/lib32/' ${S}/gcc/config/i386/t-linux64
 
 	# Branch update ...
-	if [ -n "${BRANCH_UPDATE}" ]
-	then
-		epatch ${DISTDIR}/gcc-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
-	fi
+#	if [ -n "${BRANCH_UPDATE}" ]
+#	then
+#		epatch ${DISTDIR}/gcc-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
+#	fi
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
@@ -137,7 +136,7 @@ src_compile() {
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
 
-	use amd64 && myconf="${myconf} --disable-multilib"
+	#use amd64 && myconf="${myconf} --disable-multilib"
 
 	do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
@@ -219,20 +218,16 @@ src_install() {
 		LIBPATH="${LIBPATH}" \
 		install-target-libffi || die
 
-	# we'll move this into a directory we can put at the end of ld.so.conf
-	# other than the normal versioned directory, so that it doesnt conflict
-	# with gcc
-
 	# we want the headers...
 	mkdir -p ${D}/${LOC}/include/${PN}
 	mv ${D}/${LOC}/lib/gcc-lib/${CCHOST}/${PV}/include/* ${D}/${LOC}/include/${PN}
-	mv ${D}/${LOC}/lib/gcc/${CCHOST}/${PV}/include/libffi/* ${D}/${LOC}/include/${PN}
 	# remove now useless directory...
 	rm -Rf ${D}/${LOC}/lib/gcc-lib/
-	rm -Rf ${D}/${LOC}/lib/gcc
-
-	mkdir -p ${D}/${LOC}/lib/${PN}/
-	mv ${D}/${LOC}/{lib,lib64}/* ${D}/${LOC}/lib/${PN}/
+	# we'll move this into a directory we can put at the end of ld.so.conf
+	# other than the normal versioned directory, so that it doesnt conflict
+	# with gcc 3.3.3
+	mkdir -p ${D}/${LOC}/lib/${PN}
+	mv ${D}/${LOC}/lib/* ${D}/${LOC}/lib/${PN}
 
 	mkdir -p ${D}/etc/env.d/
 	echo "LDPATH=\"${LOC}/lib/${PN}\"" >> ${D}/etc/env.d/99libffi
