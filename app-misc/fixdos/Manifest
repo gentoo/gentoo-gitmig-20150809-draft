@@ -1,4 +1,4 @@
-MD5 55c917e512c77758c5b7a4c2dc00850d ChangeLog 853
-MD5 ad67f6bacc4106af702633209f9dc427 fixdos-1.3.1.ebuild 809
+MD5 d976dfcb44ca0596f17b0f278fe55cd3 ChangeLog 937
+MD5 3aef361b5ad6b6d4ff9c96ce43a31f45 fixdos-1.3.1.ebuild 814
 MD5 fceed13814d4e7434bc866632307d003 files/digest-fixdos-1.3.1 63
 MD5 77e54eaf61a09e56d78d2825eddf682a files/fixdos-1.3.1-gentoo-makefile.diff 328
