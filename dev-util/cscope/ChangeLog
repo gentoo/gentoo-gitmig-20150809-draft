@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.4 2003/02/08 21:17:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.5 2003/02/09 13:57:55 tuxus Exp $
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> cscope-15.3.ebuild :
   Added hppa to keywords.
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cscope-15.3 (1 Feb 2002)
+
+  09 Feb 2003; Jan Seidel <tuxus@gentoo.org>
+  Added mips to keywords :
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
