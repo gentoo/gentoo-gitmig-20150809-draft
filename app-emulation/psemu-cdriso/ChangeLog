@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/psemu-cdriso
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-cdriso/ChangeLog,v 1.4 2003/02/12 04:02:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-cdriso/ChangeLog,v 1.5 2003/08/14 06:21:58 vapier Exp $
+
+*psemu-cdriso-1.4 (14 Aug 2003)
+
+  14 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + games.eclass support.
 
 *psemu-cdriso-1.2 (27 Jul 2002)
 
@@ -8,13 +13,11 @@
   Added -ppc to keywords
 
   27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> psemu-cdriso-1.2.ebuild :
-
   Added KEYWORDS="x86", RDEPEND and SLOT for lintool and repoman happiness.
 
 *psemu-cdriso-1.2 (2 June 2002)
 
   2 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
