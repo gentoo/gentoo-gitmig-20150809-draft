@@ -1,5 +1,5 @@
-MD5 20eb48780b9a575c7f33f6f591409f32 Apache-DBI-0.89.ebuild 567
+MD5 b83321c09ab43277c5ed21e16179ef9e Apache-DBI-0.89.ebuild 575
+MD5 c4c9362455da713abf345410eeed8272 Apache-DBI-0.91.ebuild 600
 MD5 fe27a5780b42aa726c734a8b4ceea270 ChangeLog 615
-MD5 b9fcec466055274f4e6518703e9caf16 Apache-DBI-0.91.ebuild 595
 MD5 a78747efa28a0a80412ad4173bac9714 files/digest-Apache-DBI-0.89 66
 MD5 5cdc7e3ac7f4714f01782dd999b84d21 files/digest-Apache-DBI-0.91 66
