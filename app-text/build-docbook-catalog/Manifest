@@ -1,4 +1,6 @@
+MD5 e9fef85bc7e7c1ea10cd693283bb25b3 build-docbook-catalog-1.2.ebuild 511
 MD5 398a3f063f5257e49e5cbdadea6e4a7a build-docbook-catalog-1.1.ebuild 509
-MD5 51ea85c6b92c9937e0429d18c74443b6 ChangeLog 539
+MD5 51c8c996f7984bad34da0d3c7dba817f ChangeLog 747
 MD5 b25d3f11b01122c2650ec4ef03b0275b metadata.xml 264
 MD5 c52eefaffb2493cf662eacb6458a187d files/digest-build-docbook-catalog-1.1 72
+MD5 d6a3d6d7130e2a0120f42144f7d2ab38 files/digest-build-docbook-catalog-1.2 72
