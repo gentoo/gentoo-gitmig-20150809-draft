@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/vcr/vcr-1.10.ebuild,v 1.4 2003/09/22 18:50:25 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vcr/vcr-1.10.ebuild,v 1.5 2004/06/25 00:34:28 agriffis Exp $
 
 DESCRIPTION="VCR - Linux Console VCR"
 HOMEPAGE="http://www.stack.nl/~brama/vcr/"

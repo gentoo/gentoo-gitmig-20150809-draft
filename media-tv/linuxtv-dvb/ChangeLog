@@ -1,6 +1,6 @@
 # ChangeLog for media-tv/linuxtv-dvb
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.6 2004/03/26 13:45:39 dholm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.7 2004/06/25 00:32:30 agriffis Exp $
 
   26 Mar 2004; David Holm <dholm@gentoo.org> linuxtv-dvb-1.0.1.ebuild:
   Added to ~ppc.
