@@ -2,17 +2,15 @@
 Hash: SHA1
 
 MD5 acfeae28134a39edca30556d69a50970 PEAR-Cache-1.5.4.ebuild 374
-MD5 fc572c3d47ce9063a8ad9aff220f3e4d PEAR-Cache-1.5.1.ebuild 938
 MD5 077b280e38e4bf4ebdb054e685bfc162 PEAR-Cache-1.5.3.ebuild 370
-MD5 272a06cf319097b40eac85ad42911731 ChangeLog 1798
+MD5 95cba39829e9dde0263c8674f32968bf ChangeLog 1948
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 5bc8c1e7ddc45a895d35db3038f11aa8 files/digest-PEAR-Cache-1.5.1 59
 MD5 e9db02c419e10fe49ec2ce4b0964197b files/digest-PEAR-Cache-1.5.3 59
 MD5 15934848cc3337f670e2497b7af4b20e files/digest-PEAR-Cache-1.5.4 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCFuUEaGfFFLhbXWkRAnaSAJ9hI8quoaTlvMBZdFuo/p6mXGKEYQCfSofk
-OQDYX5NeA3Jdofakr/ULCm8=
-=zwi8
+iD8DBQFCLdHAaGfFFLhbXWkRAgzoAJ4v3ojaLzIYejwGUp/cdIiiCryOggCgiT3N
+4+hsGbSJcw05IJtuDtLyQzc=
+=JHik
 -----END PGP SIGNATURE-----
