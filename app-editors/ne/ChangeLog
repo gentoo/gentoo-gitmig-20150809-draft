@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/ne
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.8 2004/09/07 23:06:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.9 2004/09/24 17:53:35 swegener Exp $
+
+*ne-1.37 (24 Sep 2004)
+
+  24 Sep 2004; Sven Wegener <swegener@gentoo.org> -ne-1.35.ebuild,
+  ne-1.36.ebuild, +ne-1.37.ebuild:
+  Version bump. Marked 1.36 stable on x86. Removed old ebuild.
 
   08 Sep 2004; Sven Wegener <swegener@gentoo.org> -ne-1.19.ebuild,
   ne-1.35.ebuild:

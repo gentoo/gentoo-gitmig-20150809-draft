@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.36.ebuild,v 1.1 2004/08/22 13:37:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.36.ebuild,v 1.2 2004/09/24 17:53:35 swegener Exp $
 
 inherit eutils
 
@@ -10,10 +10,10 @@ SRC_URI="http://ne.dsi.unimi.it/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-IUSE="ncurses"
+KEYWORDS="x86 ~ppc"
+IUSE=""
 
-DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )"
+DEPEND=">=sys-libs/ncurses-5.2"
 PROVIDE="virtual/editor"
 
 src_unpack() {
@@ -24,12 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use ncurses
-	then
-		emake -j1 -C src ne CFLAGS="${CFLAGS} -DNODEBUG -D_POSIX_C_SOURCE=199506L" LIBS="-lncurses" || die "emake failed"
-	else
-		emake -j1 -C src net CFLAGS="${CFLAGS} -DNODEBUG -DTERMCAP -D_POSIX_C_SOURCE=199506L" LIBS="" || die "emake failed"
-	fi
+	emake -j1 -C src ne CFLAGS="${CFLAGS} -DNODEBUG -D_POSIX_C_SOURCE=199506L" LIBS="-lncurses" || die "emake failed"
 }
 
 src_install() {
