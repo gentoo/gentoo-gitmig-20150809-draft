@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/audiocompress
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.1 2003/06/03 10:48:39 robh Exp $
+
+*audiocompress-1.3 (03 Jun 2003)
+
+  03 Jun 2003; robh <robh@gentoo.org> audiocompress-1.3.ebuild:
+  initial version. ebuild supplied by: Theofilos Intzoglou <oscar10@yifan.net>,
+  tweaked by me
+
