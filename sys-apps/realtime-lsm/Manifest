@@ -1,5 +1,5 @@
+MD5 153ae54a315129535ee367ab5ca35282 ChangeLog 676
 MD5 2ee1e4440f908a653e66d6b9f49adb6d metadata.xml 1672
-MD5 3bc985e464aabe43756fc033207c77d5 ChangeLog 459
-MD5 80eb7d905257072d24ed8ffb952b6b3c realtime-lsm-0.8.2_pre20041022.ebuild 2304
+MD5 adab1ce0e6915f2882724823249baef4 realtime-lsm-0.8.2_pre20041022.ebuild 2313
 MD5 c2a4f8c235326082b353136c6393b4f0 files/digest-realtime-lsm-0.8.2_pre20041022 81
 MD5 bd10dcd7b669d837d013107c02b4d17d files/kmisc.patch-0.8.2_pre20041022 679

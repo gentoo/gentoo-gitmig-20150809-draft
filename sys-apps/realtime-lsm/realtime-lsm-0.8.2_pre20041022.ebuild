@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.2_pre20041022.ebuild,v 1.1 2004/10/23 05:31:00 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.2_pre20041022.ebuild,v 1.2 2004/10/23 06:19:36 chriswhite Exp $
 
 inherit kernel-mod eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 
 IUSE=""
 DEPEND="virtual/linux-sources
