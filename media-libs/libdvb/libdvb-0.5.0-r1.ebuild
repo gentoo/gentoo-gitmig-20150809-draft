@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.0-r1.ebuild,v 1.5 2004/04/27 21:54:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.0-r1.ebuild,v 1.6 2004/06/07 17:09:37 lv Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.metzlerbros.org/dvb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ia64 ~amd64 ~ppc"
+KEYWORDS="x86 ~alpha ~ia64 amd64 ~ppc"
 
 DEPEND=">=sys-apps/sed-4
 	>=media-tv/linuxtv-dvb-1.0.1"
