@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.5.ebuild,v 1.6 2004/06/25 00:51:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.5.ebuild,v 1.7 2004/07/14 22:14:24 agriffis Exp $
 
 inherit gnome2
 
-IUSE="gstreamer lirc curl"
+IUSE="curl gstreamer lirc mad"
 DESCRIPTION="Movie player for GNOME"
 HOMEPAGE="http://www.hadess.net/totem.php3"
 
@@ -42,5 +42,3 @@ use gstreamer && G2CONF="${G2CONF} --enable-gstreamer"
 use lirc \
 	&& G2CONF="${G2CONF} --enable-lirc" \
 	|| G2CONF="${G2CONF} --disable-lirc"
-
-
