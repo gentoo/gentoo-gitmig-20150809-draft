@@ -1,6 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.18 2004/02/27 04:07:29 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.19 2004/02/27 13:40:02 liquidx Exp $
+
+# NOTE about python-portage interactions :
+# - Do not add a pkg_setup() check for a certain version of portage 
+#   in dev-lang/python. It _WILL_ stop people installing from
+#   Gentoo 1.4 images.
 
 inherit flag-o-matic python
 
@@ -38,21 +43,6 @@ RDEPEND="${DEPEND} dev-python/python-fchksum"
 # the functionality expected from previous pythons.
 
 PROVIDE="virtual/python"
-
-# this is to stop people shooting themselves in the foot. we can't
-# add portage to DEPENDS otherwise it'll create a circular dependency
-# NOTE from Koeri: I'm reinstating this check as people are upgrading python
-# without upgrading portage.
-# NOTE from jstubbs: Removing this check once again as it's preventing new
-# installations. Bug #43036
-#pkg_setup() {
-#	if ! has_version ">=sys-apps/portage-2.0.49-r16"; then
-#		eerror "Dependency Failed! Requires >=sys-apps/portage-2.0.49-r16"
-#		eerror "Please run: emerge portage"
-#		eerror "before proceeding. (NOTE: do not use -u if portage wants you to upgrade python)"
-#		die "Requires >=sys-apps/portage-2.0.49-r16"
-#	fi
-#}
 
 src_unpack() {
 	unpack ${A}
