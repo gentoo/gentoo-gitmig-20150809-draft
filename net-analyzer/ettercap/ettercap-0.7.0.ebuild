@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.8 2004/10/09 00:26:33 gmsoft Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.9 2004/11/04 12:59:57 eldad Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
 # since 'ettercap NG' has to be intended as an upgrade to 0.6.x serie and not as
 # a new project or branch, this will be fine...
+
+inherit flag-o-matic
 
 MY_P=${PN}-NG-${PV}
 S=${WORKDIR}/${MY_P}
@@ -41,6 +42,8 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-flags
+
 	local myconf
 
 	if use ssl; then
