@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.2-r4.ebuild,v 1.2 2004/07/26 21:59:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.2-r4.ebuild,v 1.3 2004/10/07 08:53:06 eradicator Exp $
+
+IUSE="alsa jack"
 
 inherit eutils
 
@@ -20,16 +22,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 
-IUSE="alsa jack"
-
-
-RDEPEND="virtual/x11
-	>=media-libs/audiofile-0.2.3 \
-	alsa? ( media-libs/alsa-lib ) \
-	jack? ( media-sound/jack-audio-connection-kit ) \
+RDEPEND=">=media-libs/audiofile-0.2.3
+	alsa? ( media-libs/alsa-lib )
+	jack? ( media-sound/jack-audio-connection-kit )
 	>=x11-libs/qt-3"
 
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}
