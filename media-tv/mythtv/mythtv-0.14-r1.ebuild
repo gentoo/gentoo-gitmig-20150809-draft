@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.3 2004/02/17 09:44:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.4 2004/03/10 18:56:18 max Exp $
 
 inherit flag-o-matic
 
@@ -36,7 +36,7 @@ pkg_setup() {
 	if [ ! "`has mysql ${qt_use}`" ] ; then
 		eerror "Qt is missing MySQL support. Please add"
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
-		die "Qt needs mysql support"
+		die "Qt needs MySQL support"
 	fi
 
 	return 0
@@ -51,6 +51,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Fix bugs 40964 and 42943.
+	filter-flags -fforce-addr -fPIC
+
 	if [ "${ARCH}" == "amd64" ]; then
 		sed -e "s:-march=pentiumpro::" -e "/DEFINES += MMX/d" -i settings.pro
 	else
