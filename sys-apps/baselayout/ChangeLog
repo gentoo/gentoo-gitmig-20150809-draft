@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.168 2004/08/20 23:54:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.169 2004/08/21 00:00:21 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
@@ -8,7 +8,8 @@
   20 Aug 2004; Mike Frysinger <vapier@gentoo.org> baselayout-1.10.3.ebuild,
   baselayout-1.10.4.ebuild:
   Fix default runlevel generation. Seems the variable name was changed from foo
-  to x, but not all instances of foo were changed over.
+  to x, but not all instances of foo were changed over.  Also, the script was 
+  checking for the files in /init.d/ instead of /etc/init.d/.
 
 *baselayout-1.10.4 (18 Aug 2004)
 

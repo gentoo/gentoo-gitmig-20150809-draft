@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f7e4a4f2095ce4f3f66f35188a240a1e ChangeLog 38231
+MD5 29fc3afd879110eaf59d3b89d5a8a169 ChangeLog 38316
 MD5 d759b7747667de07ea70eb4fcb881c39 baselayout-1.9.4-r3.ebuild 17716
-MD5 0ad878135ce7ff15f188b9213c4c953c baselayout-1.10.3.ebuild 15499
-MD5 9fd1f51f9dacff35d86fcf86cdb0598a baselayout-1.10.4.ebuild 15499
+MD5 1c585962f1f569f5874459eaf37c7ffa baselayout-1.10.3.ebuild 15503
+MD5 c9ec9e536609cd23dd178c0645b6c0d7 baselayout-1.10.4.ebuild 15503
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 0e60f7030427d948f6264bfba6ce612a baselayout-1.9.4-r4.ebuild 16501
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
@@ -18,7 +18,7 @@ MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBJo9FHTu7gpaalycRAvveAKC9d2g5f5G/cMEpyC++1IQDyo836wCfWQ8k
-+fHjH3perBk6Pk8DcVpkO78=
-=nVgP
+iD8DBQFBJpCpHTu7gpaalycRAk8KAKCtGkukMV4cekn19sWB9FOWM+PP1ACbBwpS
+Ixatku5/8c6lw2tj+Td5Za4=
+=wZ67
 -----END PGP SIGNATURE-----
