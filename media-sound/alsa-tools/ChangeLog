@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.16 2003/03/12 19:25:45 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.17 2003/04/15 20:11:24 agenkin Exp $
 
 *alsa-tools-0.9.1 (12 Mar 2003)
+
+  15 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Marking stable on x86.
 
   12 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Update to version 0.9.1.
