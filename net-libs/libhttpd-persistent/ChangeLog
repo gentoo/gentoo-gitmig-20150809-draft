@@ -1,0 +1,27 @@
+# ChangeLog for net-libs/libhttpd-persistent
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.1 2004/03/31 01:57:46 eradicator Exp $
+
+*libhttpd-persistent-1.3p-r6 (30 Mar 2004)
+
+  30 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libhttpd-persistent-1.3p-r6.ebuild, metadata.xml:
+  Added to portage.
+
+  03 Dec 2003; Sandy McArthur <sandymac@gentoo.org> libhttpd-persistent-1.3p-r6.ebuild :
+  New upstream release: libhttpd-persistent (bugfix version f). Changes in this release
+  are: "Renamed libhttpd to libhttpd-persistent to allow both versions to be installed
+  at the same time. This became neccessary because libhttpd-persistent turned out to be
+  incompatible to the old version."
+
+*libhttpd-persistent-1.3p-r5 (25 Nov 2003)
+
+  25 Nov 2003; Sandy McArthur <sandymac@gentoo.org> libhttpd-persistent-1.3p-r5.ebuild :
+  Created ebuild for libhttpd-persistent-1.3p-e which patched the Site.mm file
+  to allow this verion to compile on Gentoo. Release -e is a bugfix release.
+
+*libhttpd-persistent-1.3p-r4 (24 Nov 2003)
+
+  24 Nov 2003; Sandy McArthur <sandymac@gentoo.org> :
+  Initial import.  Ebuild submitted by Sandy McArthur <sandymac@gentoo.org>.
+  There is a newer version of this package but it does not compile on Gentoo.
