@@ -1,7 +1,13 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.1 2005/01/28 01:36:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.2 2005/01/28 07:16:57 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
+app-emulation/cedaga
+app-emulation/crossover-office-bin
+app-emulation/winex-transgaming
+app-office/mozilla-sunbird-bin
+app-office/openoffice-bin
+app-office/openoffice-ximian-bin
 app-emulation/emul-linux-x86-baselibs
 app-emulation/emul-linux-x86-compat
 app-emulation/emul-linux-x86-glibc
@@ -11,8 +17,18 @@ app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
+games-fps/americas-army
+games-fps/doom3-demo
 games-fps/doom3
+games-fps/enemy-territory
+games-fps/postal2mpdemo
 games-fps/quake3
+games-fps/vendetta-online-bin
+media-sound/shoutcast-server-bin
+media-sound/shoutcast-trans-bin
+media-sound/teamspeak2-client-bin
+media-sound/teamspeak2-server-bin
+media-sound/ventrilo-server-bin
 net-www/opera
 net-www/mozilla-bin
 net-www/mozilla-firefox-bin
