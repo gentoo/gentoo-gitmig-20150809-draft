@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.91 2004/04/22 22:56:04 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.92 2004/04/26 22:28:16 geoman Exp $
+
+  26 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gtk+-2.2.4-r1.ebuild:
+  Marked stable on mips.
 
   22 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gtk+-2.4.0-r1.ebuild:
   Breaks GNOME 2.4, so returned to ~mips.

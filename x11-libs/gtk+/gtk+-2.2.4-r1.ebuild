@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4-r1.ebuild,v 1.14 2004/03/30 05:22:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4-r1.ebuild,v 1.15 2004/04/26 22:28:16 geoman Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ppc alpha sparc amd64 hppa ia64 ~mips"
+KEYWORDS="x86 ppc alpha sparc amd64 hppa ia64 mips"
 IUSE="doc tiff jpeg"
 
 RDEPEND="virtual/x11
