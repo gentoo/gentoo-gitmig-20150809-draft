@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f7e63f987e402bc0406c224e22e37859 lshw-02.03b.ebuild 1193
 MD5 77da13ea7a4884c23e600060e7a436e1 lshw-02.00b.ebuild 1195
 MD5 fd4b9f1adceb4e7e601a71c3bdd9d3e4 lshw-02.02b.ebuild 1192
-MD5 28249a60e4aaee9b5ab4b2edbf55e191 ChangeLog 2410
+MD5 a4dced70fcdc60cb9dd568067419869b ChangeLog 2528
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 555b9015ffbcc8fd484c63ab096069d7 files/02.00b-cpuid-PIC.patch 1098
 MD5 078518c848aac3fcee935427f1849647 files/digest-lshw-02.00b 64
 MD5 7842b41ab472dcf4e60cb6e43c2079f1 files/digest-lshw-02.02b 64
+MD5 82aaf8441fb4eff63a536f97a4bfd9b5 files/digest-lshw-02.03b 64
 MD5 e1b0c289650e6fc413a9001627b004a0 files/02.00b-dev.patch 966
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iQCVAwUBQgIpM54WFLgrx1GWAQKSegQAmxckMO9S36gvWxYUEi9zAdlns3DTzM98
-8CSxjFXTHgQYFxsvrCsWVodP6wX9lJjzgSlFiw5ybmvdCXOLKXl+3L5gSp6soudA
-6nnpGEybpkPax5/1iuErfS/uAw+gvRVgONHpRL4yDlwUsm0T883heo438d2mHZUc
-XXkuNgMAZKc=
-=/DAU
------END PGP SIGNATURE-----
