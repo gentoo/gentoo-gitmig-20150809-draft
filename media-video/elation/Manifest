@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1169a9b0c424b45c5f8b6ca2987d87fc ChangeLog 338
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 8468d329112e6b5d47dcf85a5bc5af55 elation-0.0.1.20040807.ebuild 456
+MD5 d75755028aaac1bccf2c638bf4365d21 elation-9999.ebuild 446
 MD5 d7459f25f10133d1eae9bfa984756594 files/digest-elation-0.0.1.20040807 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBGvgNHTu7gpaalycRAi9CAKDPb9BWjzkmf2Sayk+RWQs/CiVksQCggC+d
-Uhdnn1TcLeAKmpRZN/6lqlo=
-=/Zl3
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-elation-9999 0
