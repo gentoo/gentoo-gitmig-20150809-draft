@@ -1,5 +1,5 @@
-MD5 c40b4dbf528af94816a0d3ff98ba673b ChangeLog 498
+MD5 0bc5d282bc40e355c42ddd8a5df369e0 ChangeLog 592
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 f3aebab785809c807abd76b04abfd21d mantisbt-0.18.3.ebuild 1060
+MD5 990b95e31c4900e9493f3c8a814418fc mantisbt-0.18.3.ebuild 1032
 MD5 cc4d1c5d3bb40662950d32111d027dad files/postinstall-en.txt 537
 MD5 4553a6ae29bae20c13ffa21fdb20281b files/digest-mantisbt-0.18.3 67
