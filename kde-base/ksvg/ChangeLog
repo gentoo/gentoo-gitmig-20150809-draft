@@ -1,0 +1,12 @@
+# ChangeLog for kde-base/ksvg
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.1 2005/02/11 15:51:17 danarmak Exp $
+
+*ksvg-3.4.0_beta2-r1 (11 Feb 2005)
+
+  11 Feb 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +ksvg-3.4.0_beta2-r1.ebuild:
+  This new ebuild replaces kde-base/ksvgplugin and kde-base/libksvg. If you
+  have either of those ebuilds emerged, please unmerge it and emerge this one.
+  This closes bug 80270.
+
