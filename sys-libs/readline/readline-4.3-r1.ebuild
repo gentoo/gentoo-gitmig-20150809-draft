@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3.ebuild,v 1.2 2002/08/30 16:08:41 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r1.ebuild,v 1.1 2002/08/31 23:13:03 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Another cute console display library"
@@ -12,7 +12,10 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc sparc sparc64"
 
-DEPEND=">=sys-libs/ncurses-5.2-r2"
+# We must be sertain that we have a bash that is linked
+# to its internal readline, else we may get problems.
+DEPEND=">=sys-apps/bash-2.05b-r2
+	>=sys-libs/ncurses-5.2-r2"
 
 src_compile() {
 
@@ -48,3 +51,4 @@ src_install() {
 	dodoc doc/*.ps
 	dohtml -r doc
 }
+
