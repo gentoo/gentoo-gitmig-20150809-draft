@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.14 2004/02/20 23:41:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.15 2004/03/25 06:55:50 mr_bones_ Exp $
 
 IUSE="nls pic build nptl"
 
@@ -64,7 +64,8 @@ LICENSE="LGPL-2"
 # Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
 DEPEND=">=sys-devel/gcc-3.2
 	nptl? ( >=sys-devel/gcc-3.2.2-r1 )
-	mips? >=sys-devel/binutils-2.13.90.0.16 : >=sys-devel/binutils-2.13.90.0.18
+	mips? ( >=sys-devel/binutils-2.13.90.0.16 )
+	!mips? ( >=sys-devel/binutils-2.13.90.0.18 )
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
