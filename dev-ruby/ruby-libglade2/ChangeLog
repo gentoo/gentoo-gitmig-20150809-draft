@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-libglade2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.5 2004/03/18 23:38:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.6 2004/03/25 07:16:10 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ruby-libglade2-0.5.0.ebuild, ruby-libglade2-0.7.0.ebuild,
+  ruby-libglade2-0.8.0.ebuild, ruby-libglade2-0.8.1.ebuild,
+  ruby-libglade2-0.9.1.ebuild:
+  don't use deprecated ? : use syntax
 
 *ruby-libglade2-0.9.1 (18 Mar 2004)
 
