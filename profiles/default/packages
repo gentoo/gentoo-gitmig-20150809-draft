@@ -60,7 +60,7 @@
 *sys-apps/sh-utils
 *sys-apps/shadow
 *sys-apps/sharutils
-*sys-apps/sysklogd
+*<=sys-apps/sysklogd-1.4-r2
 *sys-apps/sysvinit
 *sys-apps/tar
 *sys-apps/tcp-wrappers
