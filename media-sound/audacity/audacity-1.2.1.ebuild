@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.1.ebuild,v 1.3 2004/06/24 23:51:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.1.ebuild,v 1.4 2004/07/01 07:25:21 eradicator Exp $
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-src-${MY_PV}"
@@ -13,6 +13,8 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 IUSE="encode flac mad oggvorbis"
 SLOT="0"
+
+# Do not unmask on amd64 without talking to eradicator
 KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=x11-libs/wxGTK-2.2.9

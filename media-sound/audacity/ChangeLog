@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.25 2004/06/24 23:51:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.26 2004/07/01 07:25:21 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  audacity-1.2.0-r1.ebuild, audacity-1.2.1.ebuild:
+  1.2.0 is -amd64, and added a note not to remove 1.2.1 from ~amd64 because of
+  xfce4 problem (bug #54331).
 
 *audacity-1.2.1 (10 May 2004)
 
