@@ -16,3 +16,4 @@ hppa	default-hppa-1.4	stable
 amd64	default-amd64-1.4	stable
 ia64	default-ia64-1.4	stable
 s390	default-s390-2004.0	dev
+x86-obsd default-x86-obsd-2004 dev
