@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.65 2004/12/23 05:19:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.66 2004/12/23 05:39:33 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -22,12 +22,10 @@ fi
 # Track progress of the bootstrap process to allow for
 # semi-transparent resuming
 progressfile=/var/run/bootstrap-progress
-[ -e ${progressfile} ] && source ${progressfile}
+[[ -e ${progressfile} ]] && source ${progressfile}
 export BOOTSTRAP_STAGE="${BOOTSTRAP_STAGE:-1}"
 set_bootstrap_stage() {
-	# -n does not work correctly with unset
-	#[ -n "${STRAP_RUN}" ] && return 0
-	[ "${STRAP_RUN}" = "" ] && return 0
+	[[ -z "${STRAP_RUN}" ]] && return 0
 	export BOOTSTRAP_STAGE=$1
 	echo "BOOTSTRAP_STAGE=$1" > ${progressfile}
 }
@@ -61,7 +59,7 @@ for opt in "$@" ; do
 	esac
 done
 
-if [ -n "${STRAP_RUN}" ]  ; then
+if [[ -n ${STRAP_RUN} ]]  ; then
 	if [ ${BOOTSTRAP_STAGE} -ge 6 ] ; then
 		echo
 		einfo "System has been bootstrapped already!"
@@ -76,21 +74,18 @@ else
 fi
 
 MYPROFILEDIR="$(readlink -f /etc/make.profile)"
-if [ ! -d "${MYPROFILEDIR}" ] ; then
+if [[ ! -d ${MYPROFILEDIR} ]] ; then
 	echo "!!! Error:  '${MYPROFILEDIR}' does not exist. Exiting."
 	exit 1
 fi
 
-# spython is 1.0_rc6 and earlier and python is 1.0 and later
-[ -e /usr/bin/spython ] && PYTHON="/usr/bin/spython" || PYTHON="/usr/bin/python"
-
-[ -e /etc/profile ] && source /etc/profile
+[[ -e /etc/profile ]] && source /etc/profile
 
 echo -e "\n${GOOD}Gentoo Linux${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
 echo -e "Copyright 1999-2004 Gentoo Foundation; Distributed under the GPLv2"
-if [ "${STRAP_EMERGE_OPTS:0:2}" = "-f" ]; then
+if [[ ${STRAP_EMERGE_OPTS:0:2} = "-f" ]] ; then
 	echo "Fetching all bootstrap-related archives ..."
-elif [ -n "${STRAP_RUN}" ] ; then
+elif [[ -n ${STRAP_RUN} ]] ; then
 	if [ ${BOOTSTRAP_STAGE} -gt 2 ] ; then
 		echo "Resuming Bootstrap of base system ..."
 	else
@@ -106,8 +101,8 @@ unset LD_LIBRARY_PATH
 unset TMP TMPDIR TEMP
 
 cleanup() {
-	if [ -n "${STRAP_RUN}" ]; then
-		if [ -f /etc/make.conf.build ]; then
+	if [[ -n ${STRAP_RUN} ]] ; then
+		if [[ -f /etc/make.conf.build ]] ; then
 			mv -f /etc/make.conf.build /etc/make.conf
 		fi
 	fi
@@ -115,19 +110,19 @@ cleanup() {
 }
 
 pycmd() {
-	[ "${DEBUG}" = 1 ] && echo ${PYTHON} -c "$@" > /dev/stderr
-	${PYTHON} -c "$@"
+	[[ ${DEBUG} = "1" ]] && echo /usr/bin/python -c "$@" > /dev/stderr
+	/usr/bin/python -c "$@"
 }
 
 # Trap ctrl-c and stuff.  This should fix the users make.conf
 # not being restored.
-[ -n "${STRAP_RUN}" ] && cp -f /etc/make.conf /etc/make.conf.build
+[[ -n ${STRAP_RUN} ]] && cp -f /etc/make.conf /etc/make.conf.build
 
 #TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
 trap "cleanup" TERM KILL INT QUIT ABRT
 
 # USE may be set from the environment so we back it up for later.
-export ORIGUSE="$(pycmd 'import portage; print portage.settings["USE"];')"
+export ORIGUSE=$(portageq envvar USE)
 
 # Check for 'build' or 'bootstrap' in USE ...
 INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
@@ -137,7 +132,7 @@ INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
 	}'`"
 
 # Do not do the check for stage build scripts ...
-if [ "${INVALID_USE}" = "yes" ]; then
+if [[ ${INVALID_USE} = "yes" ]] ; then
 	echo
 	eerror "You have 'build' or 'bootstrap' in your USE flags. Please"
 	eerror "remove it before trying to continue, since these USE flags"
@@ -148,7 +143,7 @@ if [ "${INVALID_USE}" = "yes" ]; then
 fi
 
 # bug #50158 (don't use `which` in a bootstrap).
-if ! type -path portageq &>/dev/null; then
+if ! type -path portageq &>/dev/null ; then
 	echo
 	eerror "Your portage version is too old.  Please use a newer stage1 image."
 	echo
@@ -187,29 +182,29 @@ sed 's/[][,]//g; s/ /\n/g; s/\*//g' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # this stuff should never fail but will if not enough is installed.
-#[ "${myBASELAYOUT}" = "" ] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
-[ "${myBASELAYOUT}" = "" ] && myBASELAYOUT="baselayout"
-[ "${myPORTAGE}" = "" ] && myPORTAGE="portage"
-[ "${myBINUTILS}" = "" ] && myBINUTILS="binutils"
-[ "${myGCC}" = "" ] && myGCC="gcc"
-[ "${myLIBC}" = "" ] && myLIBC="virtual/libc"
-[ "${myTEXINFO}" = "" ] && myTEXINFO="sys-apps/texinfo"
-[ "${myZLIB}" = "" ] && myZLIB="zlib"
-[ "${myNCURSES}" = "" ] && myNCURSES="ncurses"
+#[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
+[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT="baselayout"
+[[ -z ${myPORTAGE}    ]] && myPORTAGE="portage"
+[[ -z ${myBINUTILS}   ]] && myBINUTILS="binutils"
+[[ -z ${myGCC}        ]] && myGCC="gcc"
+[[ -z ${myLIBC}       ]] && myLIBC="virtual/libc"
+[[ -z ${myTEXINFO}    ]] && myTEXINFO="sys-apps/texinfo"
+[[ -z ${myZLIB}       ]] && myZLIB="zlib"
+[[ -z ${myNCURSES}    ]] && myNCURSES="ncurses"
 
 # Do we really have no 2.4.x nptl kernels in portage?
-if [ "${USE_NPTL}" = 1 ]; then
+if [[ ${USE_NPTL} = "1" ]] ; then
 	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0')"
-	[ "${myOS_HEADERS}" != "" ] && myOS_HEADERS=">=${myOS_HEADERS}"
+	[[ -n ${myOS_HEADERS} ]] && myOS_HEADERS=">=${myOS_HEADERS}"
 fi
-[ "${myOS_HEADERS}" = "" ] && myOS_HEADERS="virtual/os-headers"
+[[ -z ${myOS_HEADERS} ]] && myOS_HEADERS="virtual/os-headers"
 
 einfo "Using baselayout : ${myBASELAYOUT}"
 einfo "Using portage    : ${myPORTAGE}"
 einfo "Using os-headers : ${myOS_HEADERS}"
 einfo "Using binutils   : ${myBINUTILS}"
 einfo "Using gcc        : ${myGCC}"
-[ "${myGETTEXT}" != "" ] && einfo "Using gettext    : ${myGETTEXT}"
+[[ -n ${myGETTEXT} ]] && einfo "Using gettext    : ${myGETTEXT}"
 einfo "Using libc       : ${myLIBC}"
 einfo "Using texinfo    : ${myTEXINFO}"
 einfo "Using zlib       : ${myZLIB}"
@@ -224,17 +219,17 @@ ENV_EXPORTS="GENTOO_MIRRORS PORTDIR DISTDIR PKGDIR PORTAGE_TMPDIR
 	CFLAGS CHOST CXXFLAGS MAKEOPTS ACCEPT_KEYWORDS PROXY HTTP_PROXY
 	FTP_PROXY FEATURES STAGE1_USE"
 
-for opt in ${ENV_EXPORTS}; do
-	val=$(pycmd 'import portage; print portage.settings["'${opt}'"];' )
-	if [ "${val}" != "" ]; then
+for opt in ${ENV_EXPORTS} ; do
+	val=$(portageq envvar "${opt}")
+	if [[ -n ${val} ]] ; then
 		einfo "${opt}='${val}'"
 		export ${opt}="${val}"
 	fi
 done
 echo -------------------------------------------------------------------------------
 
-[ -x /usr/sbin/gcc-config ] && GCC_CONFIG="/usr/sbin/gcc-config"
-[ -x /usr/bin/gcc-config  ] && GCC_CONFIG="/usr/bin/gcc-config"
+[[ -x /usr/sbin/gcc-config ]] && GCC_CONFIG="/usr/sbin/gcc-config"
+[[ -x /usr/bin/gcc-config  ]] && GCC_CONFIG="/usr/bin/gcc-config"
 
 # Disable autoclean, or it b0rks
 export AUTOCLEAN="no"
@@ -287,7 +282,7 @@ fi
 #     (http://forums.gentoo.org/viewtopic.php?t=100263)
 #
 # <azarah@gentoo.org> (1 Nov 2003)
-if [ -n "${STRAP_RUN}" ]; then
+if [[ -n ${STRAP_RUN} ]] ; then
     emerge clean || cleanup 1
 fi
 
@@ -298,14 +293,13 @@ if [ ${BOOTSTRAP_STAGE} -le 3 ] ; then
 fi
 
 # Basic support for gcc multi version/arch scheme ...
-if [ -n "${STRAP_RUN}" ]; then
-	if test -x ${GCC_CONFIG} &>/dev/null && \
-	   ${GCC_CONFIG} --get-current-profile &>/dev/null
+if [[ -n ${STRAP_RUN} ]] ; then
+	if [[ -x ${GCC_CONFIG} ]] && ${GCC_CONFIG} --get-current-profile &>/dev/null
 	then
 		# Make sure we get the old gcc unmerged ...
 		emerge clean || cleanup 1
 		# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
-		${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &>/dev/null
+		${GCC_CONFIG} "$(${GCC_CONFIG} --get-current-profile)" &>/dev/null
 	fi
 fi
 
