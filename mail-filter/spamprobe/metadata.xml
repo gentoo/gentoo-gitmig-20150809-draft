@@ -4,5 +4,6 @@
 <herd>net-mail</herd>
 <maintainer>
   <email>ticho@gentoo.org</email>
+  <name>Andrej Kacian</name>
 </maintainer>
 </pkgmetadata>

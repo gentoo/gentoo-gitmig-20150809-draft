@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/spamprobe
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.3 2004/10/18 15:22:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.4 2004/10/22 23:51:40 ticho Exp $
+
+*spamprobe-1.0 (23 Oct 2004)
+
+  23 Oct 2004; Andrej Kacian <ticho@gentoo.org> metadata.xml,
+  spamprobe-0.9h.ebuild, +spamprobe-1.0.ebuild:
+  Version bump. Closes #68579, reported by Alexander Schneider
+  <A.Schneider@magicspace.de>. Tidy up the ebuild a bit. Install contrib/
+  stuff from package into /usr/share/spamprobe.
 
   18 Oct 2004; Andrej Kacian <ticho@gentoo.org> spamprobe-0.9h.ebuild:
   Changed SRC_URI of the db4 patch to mirror://gentoo/.
