@@ -1,15 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.2 2003/02/13 18:12:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.3 2003/02/28 23:07:04 vapier Exp $
 
 inherit eutils
-
-IUSE="mmx samba"
 
 MY_P=${P/theripper/}
 S=${WORKDIR}/${MY_P}
 DEBPATCH=${MY_P/-/_}-17.diff
-DESCRIPTION="John the Ripper is a fast password cracker."
+DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/${PN/theripper/}/"
 SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz
 	http://ftp.debian.org/debian/pool/main/j/${PN/theripper/}/${DEBPATCH}.gz
@@ -23,6 +21,7 @@ SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-x86 -sparc -ppc -alpha -mips -hppa"
+IUSE="mmx samba"
 
 DEPEND=">=sys-devel/binutils-2.8.1.0.15"
 
