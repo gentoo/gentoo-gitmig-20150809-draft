@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.190 2005/03/09 18:27:04 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.191 2005/03/14 03:19:36 eradicator Exp $
+
+  14 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  gentoo-dev-sources-2.6.11-r3.ebuild:
+  Keyworded ~sparc.
 
 *gentoo-dev-sources-2.6.11-r3 (09 Mar 2005)
 
