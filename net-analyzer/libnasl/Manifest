@@ -1,9 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 074c6419f628c01efdcc80d16e7c412a libnasl-2.1.0.ebuild 863
 MD5 a2e4498b07224f4fdc6e064d6c9bea43 libnasl-2.0.9.ebuild 924
 MD5 1560242d3c3b1ed9ee98fdf76d95af58 libnasl-2.0.10a.ebuild 862
+MD5 661fbb356ca166f54ca7f2e411d6f276 libnasl-2.0.12.ebuild 864
 MD5 0bc2b4ced0f08e80644f9552f633dc4b libnasl-2.0.8a.ebuild 934
 MD5 a23de27e6fe185774956181b35dad86c ChangeLog 3584
 MD5 2b49e0e28b017e3ed6989df41c1b1d74 metadata.xml 240
@@ -15,13 +13,7 @@ MD5 da45246123e6334239214c0f820f73e0 files/digest-libnasl-2.0.9 65
 MD5 2d8a0937f9876d1b9c649f7a83262ed3 files/digest-libnasl-2.1.0 65
 MD5 66f66f3e28aba3711a59ab98581aafce files/libnasl.patch 534
 MD5 aa8d0ef790e320fd75a36e13ce0a68e7 files/digest-libnasl-2.0.11 66
+MD5 02251759db9f9e0ff42e955e3ddf0120 files/digest-libnasl-2.0.12 66
 MD5 8599520c5115f9f3538972c99ce0b090 files/digest-libnasl-2.0.8a 66
 MD5 eb45974f93480339e1a71c55e38d9ee9 files/digest-libnasl-2.0.10a 67
 MD5 66f66f3e28aba3711a59ab98581aafce files/libnasl-2.0.7-gentoo.patch 534
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA/gYnT+MN7JbqCpMRAjnOAJ9eekfuqaPjBUtoGRKu4WoPAJaIVACfQ3wZ
-K1S5VmopyMgmQMkmhzpzUQU=
-=yrb0
------END PGP SIGNATURE-----

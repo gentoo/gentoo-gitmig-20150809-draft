@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 92ad8beea8299a7e145ef0cd12b70036 nessus-libraries-2.0.8a.ebuild 771
 MD5 03cdc1d136dc72ba69976a1b505826e9 nessus-libraries-2.0.11.ebuild 776
 MD5 7c0a54f8b5dbac36bc532dba3015eb59 nessus-libraries-2.0.7.ebuild 768
@@ -8,17 +5,12 @@ MD5 28ef3d13afcd011ebb83f0e561f950a2 nessus-libraries-2.1.0.ebuild 775
 MD5 c8871cfa2d4330a6137f13ff523dbe0f nessus-libraries-2.0.9.ebuild 767
 MD5 b323aa8ea0910c73702ca60e1de5cc15 ChangeLog 3715
 MD5 fda214dc78c8ac3a9e8d50f5f0cee8aa metadata.xml 249
+MD5 03cdc1d136dc72ba69976a1b505826e9 nessus-libraries-2.0.12.ebuild 776
 MD5 6034cfc7a6a0b241497c0c24821b16f9 nessus-libraries-2.0.10a.ebuild 774
 MD5 6eb46769a60e17f41b2c4884cd2ebfd1 files/digest-nessus-libraries-2.0.10a 76
 MD5 2963658005ac5caf03eb254d0483cbb6 files/digest-nessus-libraries-2.0.11 75
+MD5 e4c0d37cf6e9bbc6b03e885ece2dd51d files/digest-nessus-libraries-2.0.12 75
 MD5 02ae3177360cc47039c9c353580eadb2 files/digest-nessus-libraries-2.0.8a 75
 MD5 99cdbf6a3349f8f6f5105785df8bc77f files/digest-nessus-libraries-2.0.7 74
 MD5 c9dbeaff3b5e91b421924afbd415c58c files/digest-nessus-libraries-2.0.9 74
 MD5 c5bff3e78881ea3a57b438ca8383d818 files/digest-nessus-libraries-2.1.0 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA/gZ0T+MN7JbqCpMRAnrbAJ9GV03lyD+U1N1x4Jp4n05MtRsGvACbB6Rk
-eU/7evS8mkTvz7eM/lH9IsM=
-=qKN5
------END PGP SIGNATURE-----

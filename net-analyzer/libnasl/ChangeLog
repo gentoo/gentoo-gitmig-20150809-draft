@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.25 2004/07/21 06:01:51 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.26 2004/07/23 09:48:22 eldad Exp $
+
+*libnasl-2.0.12 (23 Jul 2004)
+
+  23 Jul 2004; Eldad Zack <eldad@gentoo.org> +libnasl-2.0.12.ebuild:
+  Version bump - Security update (x86 stable). Bug 58014.
 
 *libnasl-2.0.11 (21 Jul 2004)
 
