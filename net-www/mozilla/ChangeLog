@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.180 2004/07/04 04:53:24 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.181 2004/07/22 14:22:46 brad Exp $
+
+  22 Jul 2004; Brad Laue <brad@gentoo.org> mozilla-1.7.ebuild:
+  Stable on x86.
 
   04 Jul 2004; Brad Laue <brad@gentoo.org> mozilla-1.7.ebuild:
   Remove mozaccess, mozxmlterm USE flags, as these are a hazard. They're not for
