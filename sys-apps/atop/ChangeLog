@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/atop
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/ChangeLog,v 1.1 2003/02/18 22:13:19 latexer Exp $
+
+*atop-1.9 (18 Feb 2003)
+
+  18 Feb 2003; Peter Johanson <latexer@gentoo.org> atop-1.9.ebuild files/digest-atop-1.9 :
+  Inital import. Thanks to Thomas Preissler <tomjohn@gmx.de> for the ebuild.
