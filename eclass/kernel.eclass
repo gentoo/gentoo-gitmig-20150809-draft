@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.7 2002/10/01 00:39:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.8 2002/10/01 06:42:30 lostlogic Exp $
 ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 # This eclass contains the common functions to be used by all lostlogic
@@ -81,7 +81,10 @@ kernel_src_install() {
 	then
 		dodir /usr/src
 		echo ">>> Copying sources..."
-		cat ${WORKDIR}/${KV}/docs/* > patches.txt
+		for file in `ls -1 ${WORKDIR}/${KV}/docs/`; do
+			echo "XX_${file}*" >> patches.txt
+			cat ${WORKDIR}/${KV}/docs/${file} >> patches.txt
+		done
 		dodoc patches.txt
 		mv ${WORKDIR}/linux* ${D}/usr/src
 	else
