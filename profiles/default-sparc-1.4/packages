@@ -117,3 +117,6 @@
 *net-misc/openssh
 *sys-fs/devfsd
 
+# masked openldap-2.1 until db-4.1 is a go
+<net-nds/openldap-2.1
+
