@@ -1,5 +1,6 @@
 MD5 180a5724a39c60a76cce5d23a40b23f7 binutils-2.13.90.0.18-r1.ebuild 5367
 MD5 6d2fe81a47256f8c2cc53c0d9696ed84 binutils-2.14.90.0.2.ebuild 5330
+MD5 257d83afd2ecb89d8477071e65ed7ba3 binutils-2.14.90.0.6-r5.ebuild 6540
 MD5 3b3bb8e5916c0d12da07c5bfeb5d09cf binutils-2.14.90.0.6-r2.ebuild 5602
 MD5 e56840c0286c1b40a114e80ced64dc45 binutils-2.13.90.0.18.ebuild 4572
 MD5 bc3f212a30ea4168eaf3b97df6d552ac binutils-2.14.90.0.6-r3.ebuild 6018
@@ -26,6 +27,7 @@ MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.pa
 MD5 d435975192db69b96d36c62e2ad0876c files/digest-binutils-2.13.90.0.18-r1 160
 MD5 6c32de9a9503293bb03048f09dadc182 files/digest-binutils-2.11.92.0.7 74
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r3 75
+MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r5 75
 MD5 e6b97971464cab854a321254d84ae44f files/digest-binutils-2.12.90.0.15 75
 MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
 MD5 c16f13adaeb21909a350b0a562b8a4d5 files/2.13/binutils-2.13.90.0.16-ia64-bootstrap.patch 3535
@@ -79,6 +81,7 @@ MD5 e941bf2e41367989d389e2988672f87a files/2.14/binutils-2.14.90.0.1-sparc-nonpi
 MD5 04ed3642c4bebee3fe6de9e9e6e2f23b files/2.14/binutils-2.14.90.0.4-eh-frame-ro.patch 16503
 MD5 8b2e5222b6be2949bad3c41f65a80ec8 files/2.14/binutils-2.14.90.0.5-ppc64-mask.patch 918
 MD5 838289404188a5a7a2decc03929d3900 files/2.14/binutils-2.14.90.0.6-ia64-speedup.patch 10849
+MD5 3cfd8cc4e3ad518ecd23ac97b74b3e73 files/2.14/binutils-2.14.90.0.6-ppc-bfd.patch 30980
 MD5 4aa97425036b8c3fb98975ab06cab3ae files/2.14/binutils-2.14.90.0.4-pni.patch 16030
 MD5 03d6c934577cf40ec75b41bfc38b48a0 files/2.14/binutils-mips-openssl-got-fix.patch 540
 MD5 bd68995fbb6476d0ebaded68d3b0cd19 files/2.14/binutils-2.14.90.0.5-ppc64-power4.patch 560

@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.76 2003/10/05 02:20:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.77 2003/10/05 18:55:50 azarah Exp $
+
+*binutils-2.14.90.0.6-r5 (05 Oct 2003)
+
+  05 Oct 2003; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.14.90.0.6-r5.ebuild,
+  files/2.14/binutils-2.14.90.0.6-ppc-bfd.patch:
+  Add ppc-bfd.patch to fix ppc issues, bug #28011. Remove bfd-elf-interp.patch,
+  as it breaks section attibutes as in
+  http://gcc.gnu.org/ml/gcc/2003-10/msg00141.html.
 
 *binutils-2.14.90.0.6-r4 (05 Oct 2003)
 
