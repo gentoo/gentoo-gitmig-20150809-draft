@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r5.ebuild,v 1.3 2004/05/08 09:48:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r5.ebuild,v 1.4 2004/05/12 11:25:55 lanius Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="GNU Midnight Commander cli-based file manager"
 HOMEPAGE="http://www.ibiblio.org/mc/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
-	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib-3.0.0.patch.bz2
+	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib-3.0.0-r1.patch.bz2
 	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib.patch.bz2"
 
 LICENSE="GPL-2"
@@ -29,7 +29,7 @@ src_unpack() {
 	cd ${S}
 
 	has_version '>=net-fs/samba-3.0.0' \
-		&& epatch ${DISTDIR}/${P}-sambalib-3.0.0.patch.bz2
+		&& epatch ${DISTDIR}/${P}-sambalib-3.0.0-r1.patch.bz2
 	has_version '<net-fs/samba-3.0.0' \
 		&& epatch ${DISTDIR}/${P}-sambalib.patch.bz2
 
