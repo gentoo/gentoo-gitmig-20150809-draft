@@ -1,5 +1,5 @@
 # core
-*>=sys-apps/portage-2.0.50-r8
+*>=sys-apps/portage-2.0.51
 *>=sys-apps/baselayout-1.9.4-r2
 *sys-apps/util-linux
 
