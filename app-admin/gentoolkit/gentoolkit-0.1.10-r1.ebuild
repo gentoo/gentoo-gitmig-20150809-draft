@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.10.ebuild,v 1.1 2002/05/14 23:31:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.10-r1.ebuild,v 1.1 2002/06/03 21:59:22 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"

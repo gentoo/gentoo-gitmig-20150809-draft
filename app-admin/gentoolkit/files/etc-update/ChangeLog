@@ -1,4 +1,8 @@
 
+2002-06-03 Karl Trygve Kalleberg <karltk@gentoo.org>
+	* Added CONFIG_PROTECT patches from Avi Schwartz <avi@CFFtechnologies.com>
+	* Changed man page to reflect changes.
+
 2002-03-22 Karl Trygve Kalleberg <karltk@gentoo.org>
 	* Added /etc/etc-update.conf patches from Matthew Kennedy
 	<mbkennedy@ieee.org>

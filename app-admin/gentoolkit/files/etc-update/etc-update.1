@@ -12,15 +12,16 @@ If a new configuration file will override an old one,
 .I etc-update 
 will prompt the user for a decision.
 .PP
+.I etc-update
+will check all directories in \fI/etc/make.global\fR's \fICONFIG_PROTECT\fR variable.
 .SH OPTIONS 
 .TP
 None.
 .SH AUTHORS
 Jochem Kossen and Leo Lipelis, 2002: etc-update
 .br
-Karl Trygve Kalleberg <karltk@gentoo.org>, 2002: man page
+Karl Trygve Kalleberg <karltk@gentoo.org>, 2002: man page, fixes
 .SH "SEE ALSO"
 ebuild(5) 
 .TP
 The \fI/usr/sbin/lintool\fR script. 
-.TP

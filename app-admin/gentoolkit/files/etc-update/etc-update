@@ -5,8 +5,6 @@
 # Author: Leo Lipelis <aeoo@gentoo.org>, (c) 2002
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>, (c) 2002
 
-scriptname=`basename $0`
-
 get_config() {
     item=$1
 
@@ -14,25 +12,8 @@ get_config() {
     # item. If there's more than one of the same configuration item,
     # then allow the last setting to take precedence.
     cut -d'#' -f1-1 /etc/etc-update.conf | \
-	sed -ne "s/^\ *$item\ *=\ *\"\(.*\)\"/\1/p" | tail -1
+        sed -ne "s/^\ *$item\ *=\ *\"\(.*\)\"/\1/p" | tail -1
 }
-
-# load etc-config's configuration
-rm_opts=`get_config rm_opts`
-mv_opts=`get_config mv_opts`
-cp_opts=`get_config cp_opts`
-pager=`get_config pager`
-diff_command=`get_config diff_command`
-merge_command=`get_config merge_command`
-
-#echo "rm_opts: $rm_opts, mv_opts: $mv_opts, cp_opts: $cp_opts"
-#echo "pager: $pager, diff_command: $diff_command, merge_command: $merge_command"
-
-#
-# Find all "new" configuration files, sort, so that ._cfg_0000 is presented
-# before ._cfg_0001
-#
-cfg_files=`find /etc -iname '._cfg????_*' | sort`
 
 #
 # Ask which one of the given two files to install
@@ -202,14 +183,43 @@ merge_files() {
 #
 # Run the script
 #
-if [ -z "$cfg_files" ] ; then
-	echo "!!! No config files to update"
-fi
-for new_full_path in $cfg_files; do
-	file=${new_full_path##*/}
-	old_full_path=${new_full_path%/*}/${file:10}
+scriptname=`basename $0`
 
-	rm_extra_file ${old_full_path} ${new_full_path}
+# I need the CONFIG_PROTECT value
+source /etc/make.globals
+
+# load etc-config's configuration
+rm_opts=`get_config rm_opts`
+mv_opts=`get_config mv_opts`
+cp_opts=`get_config cp_opts`
+pager=`get_config pager`
+diff_command=`get_config diff_command`
+merge_command=`get_config merge_command`
+
+#echo "rm_opts: $rm_opts, mv_opts: $mv_opts, cp_opts: $cp_opts"
+#echo "pager: $pager, diff_command: $diff_command, merge_command: $merge_command"
+
+#
+# Find all "new" configuration files, sort, so that ._cfg_0000 is presented
+# before ._cfg_0001
+#
+#set -o xtrace
+for cfg_dir in $CONFIG_PROTECT; do
+    if [ -d "$cfg_dir" ] ; then
+	cfg_files=`find $cfg_dir -iname '._cfg????_*' | sort`
+
+	if [ -z "$cfg_files" ] ; then
+	    echo "!!! No config files to update in $cfg_dir"
+	fi
+	for new_full_path in $cfg_files; do
+	    file=${new_full_path##*/}
+	    old_full_path=${new_full_path%/*}/${file:10}
+
+	    rm_extra_file ${old_full_path} ${new_full_path}
+	done
+    else
+	echo "!!! Skipping non-existant directory $cfg_dir"
+    fi
 done
 echo "*** script finished ..."
 

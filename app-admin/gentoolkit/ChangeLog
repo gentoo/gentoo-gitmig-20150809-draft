@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.15 2002/05/14 23:31:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.16 2002/06/03 21:59:22 karltk Exp $
+
+*gentoolkit-0.1.10-r1 (04 Jun 2002)
+
+  04 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.10-r1.ebuild files/digest-gentoolkit-0.1.10-r1:
+
+  etc-update now considers all dirs listed in /etc/make.globals' CONFIG_PROTECT.
+
+  Removed gentoolkit-0.1.10.ebuild files/digest-gentoolkit-0.1.10
 
 *gentoolkit-0.1.10 (15 May 2002)
 
