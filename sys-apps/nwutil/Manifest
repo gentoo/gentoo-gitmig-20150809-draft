@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b31c16b5c7492081c949d82f1929dbac nwutil-1.4.ebuild 1029
+MD5 6dbe3484ddee2d628f167812baf15d64 ChangeLog 351
+MD5 1d309a746225866dceb538c121b2a30e files/digest-nwutil-1.4 129
+MD5 9f531354a568f2d63816ddc8ebfa9494 files/1.4-errno.patch 276
+MD5 78ccbcfded4d224832705ac6aabfe671 files/1.4-rename-debug.patch 1496
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA30ZQHTu7gpaalycRAqy+AKDrR9+ogbmSMWVuu4eaqoOrRUz+8ACeKle9
+TvgQiJKqqKHVh4cG+xY0qQU=
+=yrWz
+-----END PGP SIGNATURE-----
