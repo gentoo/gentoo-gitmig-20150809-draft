@@ -1,12 +1,15 @@
-MD5 308249d614ace0354be87fc1f2c99f54 gentoolkit-dev-0.2.0_pre2.ebuild 838
-MD5 b3ec2b9a43a59b465e7ece3558f30f48 gentoolkit-dev-0.2.3.ebuild 915
-MD5 5ad2a5e09f8be257b1c90245d58bb545 gentoolkit-dev-0.2.0_pre4.ebuild 867
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 737fa601e6f667a56c7caa3b08a7a0a8 ChangeLog 2661
 MD5 5ef2af4987624427bd76eb1a75139178 gentoolkit-dev-0.2.0_pre1.ebuild 850
-MD5 f78b0d15d763f9db419b7cb6f32fec0b gentoolkit-dev-0.2.2.ebuild 917
+MD5 308249d614ace0354be87fc1f2c99f54 gentoolkit-dev-0.2.0_pre2.ebuild 838
 MD5 0883508c4420a33ac6892164e6564252 gentoolkit-dev-0.2.0_pre3.ebuild 782
-MD5 ece78f54e3fec0278a944099234a4fe9 ChangeLog 2557
+MD5 5ad2a5e09f8be257b1c90245d58bb545 gentoolkit-dev-0.2.0_pre4.ebuild 867
 MD5 5f551d730b5b9029b8ca6caa63bcea04 metadata.xml 282
 MD5 62a68cba77434276073b28edbd9585c0 gentoolkit-dev-0.2.1.ebuild 917
+MD5 f78b0d15d763f9db419b7cb6f32fec0b gentoolkit-dev-0.2.2.ebuild 917
+MD5 43ec9023ab8b48843097dfdb18d9cc7b gentoolkit-dev-0.2.3.ebuild 914
 MD5 2149baac97fc3c0f484b3e26700ec308 files/digest-gentoolkit-dev-0.2.0_pre1 76
 MD5 47a45e7f1915dc44fa7a790762a40b00 files/digest-gentoolkit-dev-0.2.0_pre2 76
 MD5 4d29b752105bd2477bfcae7da1e0ee2d files/digest-gentoolkit-dev-0.2.0_pre3 76
@@ -14,3 +17,10 @@ MD5 5cd657348dea0e64cce7ab63cda746d0 files/digest-gentoolkit-dev-0.2.0_pre4 76
 MD5 504a32d4dcebe0441bb77d3fee535de0 files/digest-gentoolkit-dev-0.2.1 71
 MD5 db8c0c29eb005849330edd2b9d9def1b files/digest-gentoolkit-dev-0.2.2 71
 MD5 c9bf499d121b7b89095547dc8fbc5745 files/digest-gentoolkit-dev-0.2.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCTYngKRy60XGEcJIRAjCqAJoCmAVW3k7Z7uCdhUP9Z6X0Evk7qQCfconc
+bs5ERVAdWzBqdgnZRrTWWEk=
+=Vqez
+-----END PGP SIGNATURE-----
