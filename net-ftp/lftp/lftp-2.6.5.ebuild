@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.5.ebuild,v 1.1 2003/03/27 05:07:30 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.5.ebuild,v 1.2 2003/04/12 00:30:47 vladimir Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 RDEPEND="nls? ( sys-devel/gettext )"	
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc -sparc ~alpha"
+KEYWORDS="~x86 -ppc -sparc ~alpha"
 
 
 
