@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/mutella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.4 2002/07/26 05:04:29 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.5 2002/11/03 17:38:25 mkennedy Exp $
+
+*mutella-0.3.3 (03 Nov 2002)
+
+  03 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  files/mutella-gcc3-gentoo.patch, ChangeLog, mutella-0.3.3.ebuild :
+
+  Fix for gcc3.2.
 
 *mutella-0.4 (09 Jul 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.3.3.ebuild,v 1.4 2002/07/26 05:04:29 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.3.3.ebuild,v 1.5 2002/11/03 17:38:25 mkennedy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text-mode gnutella client."
@@ -12,6 +12,11 @@ KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc sys-libs/readline"
 RDEPEND=${DEPEND}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S} && patch -p1 <${FILESDIR}/mutella-gcc3-gentoo.patch || die
+}
 
 src_compile() {
 	./configure \
