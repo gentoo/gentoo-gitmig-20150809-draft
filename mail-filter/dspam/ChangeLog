@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.38 2005/01/20 00:00:40 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.39 2005/01/20 01:20:54 st_lim Exp $
+
+  20 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> :
+  Added courier as a dependency for maildrop
 
 *dspam-3.2.6 (20 Jan 2005)
 
