@@ -1,0 +1,88 @@
+diff -urN cyrus-imapd-2.1.12/configure cyrus-imapd-2.1.12-modified/configure
+--- cyrus-imapd-2.1.12/configure	2003-02-03 15:31:13.000000000 -0600
++++ cyrus-imapd-2.1.12-modified/configure	2003-02-11 04:40:39.000000000 -0600
+@@ -1499,10 +1499,10 @@
+     CFLAGS="-Wall ${CFLAGS}"
+   GCC_VERSION=`$CC -v 2>&1 | sed -n -e '/version/s/.*version \([0-9]\)\..*/\1/p'`
+   if test "$GCC_VERSION" != "3"; then
+-    CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
++    CPPFLAGS="${CPPFLAGS}"
+   fi
+ else
+-  CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
++  CPPFLAGS="${CPPFLAGS}"
+ fi 
+ 
+   # this is CMU ADD LIBPATH
+@@ -4501,7 +4501,7 @@
+ if test "${with_afs+set}" = set; then
+   withval="$with_afs"
+   with_afs="${withval}"
+-	CFLAGS="${CFLAGS} -I${withval}/include"
++	CFLAGS="${CFLAGS}"
+ else
+   with_afs="/usr/local"
+ fi
+@@ -5028,7 +5028,7 @@
+ 
+ 		
+ 		;;
+-	*)  OPENSSL_INC="-I${with_openssl}/include"
++	*)  OPENSSL_INC=""
+ 	    OPENSSL_LIBPATH="${with_openssl}/lib"
+ 	    CPPFLAGS="${CPPFLAGS} ${OPENSSL_INC}"
+ 	    
+@@ -5131,7 +5131,7 @@
+        *)  if test -d ${with_zephyr}/include/zephyr; then
+                ZEPHYR_CPPFLAGS="-I${with_zephyr}/include/zephyr"
+            else
+-               ZEPHYR_CPPFLAGS="-I${with_zephyr}/include"
++               ZEPHYR_CPPFLAGS=""
+            fi
+            ZEPHYR_LIBS="-lzephyr";;
+ esac
+@@ -5384,7 +5384,7 @@
+   *) # use whatever they told us, or whatever we found
+      COMPILE_ET="${with_com_err}/bin/compile_et"
+      COM_ERR_LIBS="${with_com_err}/lib/libcom_err.a"
+-     COM_ERR_CPPFLAGS="-I${with_com_err}/include"
++     COM_ERR_CPPFLAGS=""
+      # Ever get the feeling people hide this stuff on purpose?
+      if test -d "${with_com_err}/include/et" ; then
+        COM_ERR_CPPFLAGS="-I${with_com_err}/include"
+@@ -5796,7 +5796,7 @@
+ 
+  if test "$gssapi" != no; then
+     if test -d ${gssapi}; then
+-       CPPFLAGS="$CPPFLAGS -I$gssapi/include"
++       CPPFLAGS="$CPPFLAGS"
+        LDFLAGS="$LDFLAGS -L$gssapi/lib"
+     fi
+     ac_safe=`echo "gssapi.h" | sed 'y%./+-%__p_%'`
+@@ -5970,7 +5970,7 @@
+ fi
+ 
+   if test -d ${gssapi}; then 
+-     CPPFLAGS="$CPPFLAGS -I$gssapi/include"
++     CPPFLAGS="$CPPFLAGS"
+      LDFLAGS="$LDFLAGS -L$gssapi/lib"
+   fi
+ 
+@@ -6587,7 +6587,7 @@
+ 
+   if test "$with_libwrap" != no; then
+     if test -d "$with_libwrap"; then
+-      CPPFLAGS="$CPPFLAGS -I${with_libwrap}/include"
++      CPPFLAGS="$CPPFLAGS"
+       LDFLAGS="$LDFLAGS -L${with_libwrap}/lib"
+     fi
+     cmu_save_LIBS="$LIBS"
+@@ -6733,7 +6733,7 @@
+ 
+   if test "$with_ucdsnmp" != no; then
+     if test -d "$with_ucdsnmp"; then
+-      CPPFLAGS="$CPPFLAGS -I${with_ucdsnmp}/include"
++      CPPFLAGS="$CPPFLAGS"
+       LDFLAGS="$LDFLAGS -L${with_ucdsnmp}/lib"
+     fi
+     cmu_save_LIBS="$LIBS"

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.13 2003/06/10 08:01:24 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.14 2003/07/09 09:50:09 raker Exp $
+
+  09 Jul 2003; Nick Hadaway <raker@gentoo.org> cyrus-imap-admin-2.1.14.ebuild,
+  files/2.1.14-db4.patch, files/cyrus-imapd-2.1.12-includepath.patch:
+  Version bump in-sync with net-mail/cyrus-imapd.
 
 *cyrus-imap-admin-2.1.13 (09 Jun 2003)
 
