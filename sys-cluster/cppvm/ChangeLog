@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/cppvm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cppvm/ChangeLog,v 1.1 2003/08/01 23:16:33 tantive Exp $
+
+*cppvm-1.5.0-r1 (02 Aug 2003)
+
+  02 Aug 2003; Michael Imhof <tantive@gentoo.org> cppvm-1.5.0-r1.ebuild:
+  Initial import. Submitted by the <the@weird-birds>.
+  Should close #21828 and #24199.
+
