@@ -1,5 +1,5 @@
-MD5 1c9b50b347433d8fd6fa1fb79876f501 ChangeLog 523
-MD5 756896010f7c3933b57c3e4f3bcb12cd libtrash-2.2.ebuild 1279
+MD5 c68f455715a3d4c58b7adf569114087b ChangeLog 648
+MD5 b8e4660c0338956836ec8a3052379213 libtrash-2.2.ebuild 1276
 MD5 e10a0da4fac2882942ffa8360ccdd921 metadata.xml 201
 MD5 a165552d7dee01c2d7bbf914ae701cba files/cleanTrash.cron 200
 MD5 8600c86ec08b5db06b59aa2a2e0ec2a3 files/digest-libtrash-2.2 60
