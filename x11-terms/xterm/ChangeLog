@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.46 2004/10/13 03:32:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.47 2004/10/13 12:29:11 fmccor Exp $
+
+  13 Oct 2004; Ferris McCormick <fmccor@gentoo.org> xterm-196.ebuild:
+  Stable for sparc. (Bug 67326.)
 
   12 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-196.ebuild:
   x86.
