@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f2944a3796971d0a2f5877dcae3cd27d ChangeLog 2323
-MD5 7061ea29c5e2e9c8ac9e442de7491637 horde-kronolith-1.1.2.ebuild 445
+MD5 89bd98e16256cd24c5da7a41615f1f8d ChangeLog 2599
 MD5 852eb8fe9390c47a540b8e248d128632 metadata.xml 1230
-MD5 e3f52be68e21c2d5c979e2bb8f876c7a horde-kronolith-2.0.ebuild 461
-MD5 94d65c6caba3a424d6a58706db30f20f files/digest-horde-kronolith-1.1.2 67
-MD5 ae9dbad80f21955935338527f7b95762 files/digest-horde-kronolith-2.0 69
+MD5 e5e1cd8d5127511c3814cf759807ff1b horde-kronolith-1.1.3.ebuild 445
+MD5 858a92c42c2f25e98e90b4a993a7eabf horde-kronolith-2.0.1.ebuild 463
+MD5 7ebe80dc6ad7023f026337ce3eb6f342 files/digest-horde-kronolith-1.1.3 67
+MD5 41293bf21c7e8a9c3870c1d655046cdb files/digest-horde-kronolith-2.0.1 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFBy8w1roRuSHgZdywRAhGZAJwM/4fJS1IP5tzrJLAvWvNEiLAeDwCZAW5p
-wstLX0m2t1u5CXf7q9fWSH4=
-=VA/a
+iD8DBQFB6ksnroRuSHgZdywRAohxAKCOz9CDfJ1kFbNgtOgp32Mt2f6WHACbBxrB
+aJUXtAHA4PDZlqewYLg9cXA=
+=o++9
 -----END PGP SIGNATURE-----
