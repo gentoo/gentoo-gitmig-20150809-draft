@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.5 2004/07/15 01:49:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.6 2004/07/15 04:50:03 lv Exp $
 
 inherit games eutils flag-o-matic
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 multilib_check() {
-	if (has_m64 && has_m32) ; then
+	if has_m32 ; then
 		einfo "multilib detected, adding -m32 to CFLAGS. note that opengl"
 		einfo "support probably wont work quite right."
 		append-flags -m32
