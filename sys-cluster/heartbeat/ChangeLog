@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.8 2003/10/15 15:22:16 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.9 2003/10/16 02:14:15 iggy Exp $
+
+  15 Oct 2003; <iggy@gentoo.org> heartbeat-1.0.4.ebuild:
+  I had to fasttrack this to arch due to a known vulerability in the 1.0.3 and earlier
+  versions, this fixes a problem pointed out to me that drbd depends on hearbeat
 
 *heartbeat-1.0.4 (15 Oct 2003)
 
