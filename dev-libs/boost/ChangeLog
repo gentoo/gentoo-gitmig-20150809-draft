@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.5 2003/05/17 05:50:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.6 2003/08/25 00:58:02 george Exp $
+
+*boost-1.30.0 (24 Aug 2003)
+
+  24 Aug 2003; George Shapovalov <george@gentoo.org> boost-1.30.2.ebuild :
+  looks like I got stuck with this ebuild :),
+  anyway, new version (#27053) that contains a bug fix,
+  update submitted by B. K. Oxley (binkley) <binkley@alumni.rice.edu>
+  and cleaned-up by Chris Bainbridge chrb@dcs.ed.ac.uk
 
 *boost-1.30.0 (16 May 2003)
 
