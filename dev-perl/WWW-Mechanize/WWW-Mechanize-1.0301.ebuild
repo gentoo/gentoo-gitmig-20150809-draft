@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.0301.ebuild,v 1.4 2004/07/14 20:57:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.0301.ebuild,v 1.5 2004/07/15 14:47:24 gustavoz Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://search.cpan.org/~petdance/${MY_P}"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc amd64 ~ppc"
+KEYWORDS="x86 sparc amd64 ~ppc"
 
 DEPEND="dev-perl/IO-Socket-SSL
 	>=dev-perl/libwww-perl-5.76
