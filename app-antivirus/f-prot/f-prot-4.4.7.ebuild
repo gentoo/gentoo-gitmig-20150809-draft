@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.4.7.ebuild,v 1.1 2004/10/06 22:08:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.4.7.ebuild,v 1.2 2004/10/25 10:46:43 ticho Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ PROVIDE="virtual/antivirus"
 
 SLOT="0"
 LICENSE="F-PROT"
-KEYWORDS="~x86 -ppc -sparc ~amd64"
+KEYWORDS="x86 -ppc -sparc ~amd64"
 
 src_install ()
 {
