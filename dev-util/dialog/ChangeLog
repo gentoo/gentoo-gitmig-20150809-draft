@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dialog
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.26 2003/12/29 03:20:37 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.27 2004/01/09 16:57:49 agriffis Exp $
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org>
+  dialog-0.9_beta20031002.ebuild:
+  stable on alpha
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org>
   dialog-0.9_beta20031002.ebuild:
