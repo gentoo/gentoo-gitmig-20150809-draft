@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.16 2003/07/01 21:47:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.17 2003/09/05 01:52:49 msterret Exp $
 
 IUSE="X nls motif"
 
@@ -16,10 +16,10 @@ DEPEND=">=sys-libs/ncurses-5.2
 	sys-libs/gdbm
 	X? ( 	virtual/x11
 		>=media-libs/libungif-4.1.0
-		>=media-libs/jpeg-6b-r2 
-		>=media-libs/tiff-3.5.5-r3 
-		>=media-libs/libpng-1.2.1 ) 
-	motif? ( >=x11-libs/openmotif-2.1.30 ) 
+		>=media-libs/jpeg-6b-r2
+		>=media-libs/tiff-3.5.5-r3
+		>=media-libs/libpng-1.2.1 )
+	motif? ( >=x11-libs/openmotif-2.1.30 )
 	nls? ( >=sys-devel/gettext-0.10.35 )"
 
 PROVIDE="virtual/emacs virtual/editor"
@@ -38,12 +38,12 @@ src_unpack() {
 	then
 	 SYSTEM_ARCH=`uname -m |\
 	 sed -e s/[i]*.86/i386/ -e s/sun4u/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
-	fi 
+	fi
 
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 	cd ${S}
-	
+
 	case $SYSTEM_ARCH in
 	 ppc)
 	  cat ${FILESDIR}/emacs-21.1-gentoo.diff | patch -p1 || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10.ebuild,v 1.7 2003/07/08 19:13:27 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10.ebuild,v 1.8 2003/09/05 01:59:15 msterret Exp $
 
 IUSE="gpm esd postgres xface nas X jpeg tiff png mule motif canna"
 
@@ -43,7 +43,7 @@ RDEPEND="virtual/glibc
 	png? ( =media-libs/libpng-1.2* )
 	jpeg? ( media-libs/jpeg )
 
-        canna? ( app-i18n/canna )"
+	canna? ( app-i18n/canna )"
 
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
@@ -57,10 +57,10 @@ KEYWORDS="x86 -ppc ~sparc "
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	
+
 	cd ${S}
 	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch || die
-	
+
 	if [ ${ARCH} = "ppc" ] ; then
 		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
 	fi
@@ -73,14 +73,14 @@ src_compile() {
 	if use X;
 	then
 		myconf="${myconf}
-			--with-x 
-			--with-xpm 
-			--with-dragndrop 
+			--with-x
+			--with-xpm
+			--with-dragndrop
 			--with-gif=no"
 
-		use tiff && myconf="${myconf} --with-tiff" || 
+		use tiff && myconf="${myconf} --with-tiff" ||
 			myconf="${myconf} --without-tiff"
-		use png && myconf="${myconf} --with-png" || 
+		use png && myconf="${myconf} --with-png" ||
 			myconf="${myconf} --without-png"
 		use jpeg && myconf="${myconf} --with-jpeg" ||
 			myconf="${myconf} --without-jpeg"
@@ -92,10 +92,10 @@ src_compile() {
 		myconf="${myconf} --with-scrollbars=lucid"
 		myconf="${myconf} --with-menubars=lucid"
 	else
-		myconf="${myconf} 
-			--without-x 
-			--without-xpm 
-			--without-dragndrop 
+		myconf="${myconf}
+			--without-x
+			--without-xpm
+			--without-dragndrop
 			--with-gif=no"
 	fi
 
@@ -105,8 +105,8 @@ src_compile() {
 		myconf="${myconf} --without-postgresql"
 	use mule && myconf="${myconf} --with-mule" ||
 		myconf="${myconf} --without-mule"
-        use canna && myconf="${myconf} --with-canna" ||
-                myconf="${myconf} --without-canna"
+	use canna && myconf="${myconf} --with-canna" ||
+		myconf="${myconf} --without-canna"
 
 	local soundconf="native"
 
@@ -130,25 +130,25 @@ src_compile() {
 	make || die
 }
 
-src_install() {                               
+src_install() {
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		infodir=${D}/usr/share/info \
 		install gzip-el || die
-	
+
 	# install base packages
 	dodir /usr/lib/xemacs/xemacs-packages/
 	cd ${D}/usr/lib/xemacs/xemacs-packages/
 	unpack efs-${EFS}-pkg.tar.gz
 	unpack xemacs-base-${BASE}-pkg.tar.gz
-	# (optionally) install mule base package 
+	# (optionally) install mule base package
 	if use mule;
 	then
 		dodir /usr/lib/xemacs/mule-packages
 		cd ${D}/usr/lib/xemacs/mule-packages/
 		unpack mule-base-${MULE}-pkg.tar.gz
 	fi
-	
+
 	# remove extraneous files
 	cd ${D}/usr/share/info
 	rm -f dir info.info texinfo* termcap*

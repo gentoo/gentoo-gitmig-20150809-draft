@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.14 2003/07/24 17:39:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.15 2003/09/05 01:56:28 msterret Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 sparc "
 RDEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( >=sys-libs/gpm-1.20 )"
 
-DEPEND="app-arch/unzip 
+DEPEND="app-arch/unzip
 	slang? ( sys-libs/slang )
 	${RDEPEND}"
 
@@ -58,8 +58,8 @@ src_unpack() {
 
 src_compile() {
 	emake all || die
- 
-	cd config 
+
+	cd config
 	../src/cfte main.fte ../src/system.fterc
 }
 
@@ -73,8 +73,8 @@ src_install () {
 		dobin src/$i ;
 	done
 
-	dodoc Artistic CHANGES BUGS COPYING HISTORY README TODO 
-	
+	dodoc Artistic CHANGES BUGS COPYING HISTORY README TODO
+
 	dodir etc/fte
 	cp src/system.fterc ${D}/etc/fte/system.fterc
 
@@ -86,7 +86,7 @@ src_install () {
 #		dobin src/xfte ;
 #		rm ${D}/usr/bin/xfte ;
 #	fi
-	 
+
 	dodir usr/share/fte
 	cp -R config/* ${D}/usr/share/fte
 	rm -rf ${D}/usr/share/fte/CVS

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3.ebuild,v 1.3 2003/07/01 21:47:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3.ebuild,v 1.4 2003/09/05 01:52:49 msterret Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -17,11 +17,11 @@ DEPEND="sys-libs/ncurses
 	sys-libs/gdbm
 	X? ( virtual/x11
 		>=media-libs/libungif-4.1.0
-		>=media-libs/jpeg-6b-r2 
-		>=media-libs/tiff-3.5.5-r3 
-		>=media-libs/libpng-1.2.1 ) 
+		>=media-libs/jpeg-6b-r2
+		>=media-libs/tiff-3.5.5-r3
+		>=media-libs/libpng-1.2.1 )
 	Xaw3d? ( x11-libs/Xaw3d )
-	motif? ( >=x11-libs/openmotif-2.1.30 ) 
+	motif? ( >=x11-libs/openmotif-2.1.30 )
 	nls? ( sys-devel/gettext )
 	gnome? ( gnome-base/gnome-desktop )"
 
@@ -59,20 +59,20 @@ src_install () {
 		infodir=${D}/usr/share/info \
 		install || die
 	einfo "Fixing info documentation..."
- 	rm -f ${D}/usr/share/info/dir
- 	for i in ${D}/usr/share/info/*
- 	do
- 		mv ${i%.info} $i.info
- 	done
+	rm -f ${D}/usr/share/info/dir
+	for i in ${D}/usr/share/info/*
+	do
+		mv ${i%.info} $i.info
+	done
 
 	einfo "Fixing permissions..."
- 	find ${D} -perm 664 |xargs chmod 644
- 	find ${D} -type d |xargs chmod 755
+	find ${D} -perm 664 |xargs chmod 644
+	find ${D} -type d |xargs chmod 755
 
 	dodoc BUGS ChangeLog README
 
- 	dodir /usr/share/emacs/${PVR}/leim
- 	touch ${D}/usr/share/emacs/${PVR}/leim/.keep
+	dodir /usr/share/emacs/${PVR}/leim
+	touch ${D}/usr/share/emacs/${PVR}/leim/.keep
 
 	if use gnome
 	then

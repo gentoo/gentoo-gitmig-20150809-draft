@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.13 2003/07/24 17:39:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.14 2003/09/05 01:56:28 msterret Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 
 DEPEND="${RDEPEND}
 	slang? ( sys-libs/slang )
-	app-arch/unzip 
+	app-arch/unzip
 	X? ( virtual/x11 )"
 
 TARGETS=""
@@ -58,8 +58,8 @@ src_unpack() {
 
 src_compile() {
 	emake all || die
- 
-	cd config 
+
+	cd config
 	../src/cfte main.fte ../src/system.fterc
 }
 
@@ -73,8 +73,8 @@ src_install () {
 		dobin src/$i ;
 	done
 
-	dodoc Artistic CHANGES BUGS COPYING HISTORY README TODO 
-	
+	dodoc Artistic CHANGES BUGS COPYING HISTORY README TODO
+
 	dodir etc/fte
 	cp src/system.fterc ${D}/etc/fte/system.fterc
 

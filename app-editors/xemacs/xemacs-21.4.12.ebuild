@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.8 2003/08/05 15:09:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.9 2003/09/05 01:59:15 msterret Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ RDEPEND="virtual/glibc
 	png? ( =media-libs/libpng-1.2* )
 	jpeg? ( media-libs/jpeg )
 
-    canna? ( app-i18n/canna )
+	canna? ( app-i18n/canna )
 	freewnn? ( app-i18n/freewnn )"
 
 DEPEND="${RDEPEND}
@@ -67,7 +67,7 @@ src_unpack() {
 
 	cd ${S}
 	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch || die
-	
+
 	if [ ${ARCH} = "ppc" ] ; then
 		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
 	fi
@@ -110,9 +110,9 @@ src_compile() {
 
 		use dnd && myconf="${myconf} --with-dragndrop --with-offix"
 
-		use tiff && myconf="${myconf} --with-tiff" || 
+		use tiff && myconf="${myconf} --with-tiff" ||
 			myconf="${myconf} --without-tiff"
-		use png && myconf="${myconf} --with-png" || 
+		use png && myconf="${myconf} --with-png" ||
 			myconf="${myconf} --without-png"
 		use jpeg && myconf="${myconf} --with-jpeg" ||
 			myconf="${myconf} --without-jpeg"
@@ -120,10 +120,10 @@ src_compile() {
 			myconf="${myconf} --without-xface"
 
 	else
-		myconf="${myconf} 
-			--without-x 
-			--without-xpm 
-			--without-dragndrop 
+		myconf="${myconf}
+			--without-x
+			--without-xpm
+			--without-dragndrop
 			--with-gif=no"
 	fi
 
@@ -134,7 +134,7 @@ src_compile() {
 	use ldap && myconf="${myconf} --with-ldap" ||
 		myconf="${myconf} --without-ldap"
 
-	if [ "`use mule`" ] ; then 
+	if [ "`use mule`" ] ; then
 		myconf="${myconf} --with-mule"
 		use motif && myconf="${myconf} --with-xim=motif" ||
 			myconf="${myconf} --with-xim=xlib"
@@ -170,23 +170,23 @@ src_compile() {
 	make || die
 }
 
-src_install() {                               
+src_install() {
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		infodir=${D}/usr/share/info \
 		install gzip-el || die
-	
+
 	# install base packages directories
 	dodir /usr/lib/xemacs/xemacs-packages/
 	dodir /usr/lib/xemacs/site-packages/
 	dodir /usr/lib/xemacs/site-modules/
 	dodir /usr/lib/xemacs/site-lisp/
-	
+
 	if use mule;
 	then
 		dodir /usr/lib/xemacs/mule-packages
 	fi
-	
+
 	# remove extraneous files
 	cd ${D}/usr/share/info
 	rm -f dir info.info texinfo* termcap*

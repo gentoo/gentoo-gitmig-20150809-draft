@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r2.ebuild,v 1.11 2003/07/01 21:47:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r2.ebuild,v 1.12 2003/09/05 01:52:49 msterret Exp $
 
 IUSE="X nls motif leim"
 
@@ -17,10 +17,10 @@ DEPEND=">=sys-libs/ncurses-5.2
 	sys-libs/gdbm
 	X? ( 	virtual/x11
 		>=media-libs/libungif-4.1.0
-		>=media-libs/jpeg-6b-r2 
-		>=media-libs/tiff-3.5.5-r3 
-		>=media-libs/libpng-1.2.1 ) 
-	motif? ( >=x11-libs/openmotif-2.1.30 ) 
+		>=media-libs/jpeg-6b-r2
+		>=media-libs/tiff-3.5.5-r3
+		>=media-libs/libpng-1.2.1 )
+	motif? ( >=x11-libs/openmotif-2.1.30 )
 	nls? ( >=sys-devel/gettext-0.10.35 )"
 
 PROVIDE="virtual/emacs virtual/editor"
