@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.310 2004/04/22 14:15:10 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.311 2004/04/23 12:29:17 g2boojum Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -226,6 +226,7 @@ net-mail/pine:passfile - Adds support for caching IMAP passwords into a file bet
 net-mail/postfix:vda - Adds support for virtual delivery agent quota enforcing
 net-mail/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
 net-mail/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before offering AUTH
+net-mail/sendmail: milter - Build sendmail mail filter (milter) support
 net-mail/squirrelmail:virus-scan - Install plugin to support virus scanning of email attatchments
 net-mail/ssmtp:md5sum - Enables MD5 summing for ssmtp
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
