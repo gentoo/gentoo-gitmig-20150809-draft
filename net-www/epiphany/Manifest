@@ -1,24 +1,36 @@
-MD5 00a5c62ea0101261414124f37b289708 ChangeLog 9649
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cba7e9dabaed37d1ac4f71846f71d236 ChangeLog 9772
 MD5 8bd3dace88db637800abd5e8f1a945e6 epiphany-1.0.7.ebuild 1221
 MD5 531286c9b403250588a2b93dc3b35f5e epiphany-1.2.2.ebuild 1316
 MD5 39be10338c1b2c4a4dd37f967510a245 epiphany-1.2.7-r1.ebuild 1454
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2ff8d4998d0bc1d1d68c8d79f15e4f3f epiphany-1.2.7.ebuild 1452
 MD5 a4a8e1e7c1bb63b8f458ab86cd147017 epiphany-1.2.8.ebuild 1339
 MD5 55a7cd8ae225ae6d6a74b67ddd792ef1 epiphany-1.2.9-r1.ebuild 1460
 MD5 ef30333da59f07c3e007e69519052155 epiphany-1.2.9.ebuild 1327
 MD5 47e52c0ae9a3ac385c361aa59d8a2d1a epiphany-1.4.0.ebuild 1446
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 799e357982a4b9916fe204fee0aad2ce epiphany-1.4.4.ebuild 1372
 MD5 5edb401fcdae44c283b7d8b7fbdeba84 files/digest-epiphany-1.0.7 68
 MD5 a3d36d0b5e57c13bc93e3c3e0cedb08a files/digest-epiphany-1.2.2 68
 MD5 4bbb4c198b340ac287571eb51c02188c files/digest-epiphany-1.2.7 68
 MD5 4bbb4c198b340ac287571eb51c02188c files/digest-epiphany-1.2.7-r1 68
-MD5 771a6412c25bf38ed285c69e27f7cdcd files/epiphany-1.2.5-gcc2_fix.patch 539
 MD5 87ab7ee247b558e4b938a742a24ea8f2 files/digest-epiphany-1.2.8 68
-MD5 bae0dc5f6bfd90560eba9e9f6021e1c8 files/epiphany-1.2.6-moz-1.7.2.patch 836
-MD5 bb7ec0bea74a36ed1d7274167e580f63 files/epiphany-1.2.7-nautilus_view.patch 757
 MD5 86259cda058c165aeb287a2b885b1b7a files/digest-epiphany-1.2.9 68
 MD5 86259cda058c165aeb287a2b885b1b7a files/digest-epiphany-1.2.9-r1 68
 MD5 a96fe7c4908f8708e948b0ba459c95aa files/digest-epiphany-1.4.0 68
+MD5 771a6412c25bf38ed285c69e27f7cdcd files/epiphany-1.2.5-gcc2_fix.patch 539
+MD5 bae0dc5f6bfd90560eba9e9f6021e1c8 files/epiphany-1.2.6-moz-1.7.2.patch 836
+MD5 bb7ec0bea74a36ed1d7274167e580f63 files/epiphany-1.2.7-nautilus_view.patch 757
 MD5 687a46caa636617d50fcf56d46f4c9f2 files/epiphany-1.2.9-mozilla-1.7.3.patch 972
 MD5 f06f6e1c83f9668cfe31e9da7129ba4a files/epiphany-1.3.4-fix_includes.patch 720
 MD5 cae59ac7b2a7e92a93f6190e20caaffb files/epiphany-1.4.0-mozilla-1.7.3.patch 2581
+MD5 ebbdfe54389d750d3f1772e17d28a790 files/digest-epiphany-1.4.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBco2CRkyva5PS18kRAq5wAJ90F8pcZytPzvBc9fV6Av+lVR3yMACgqp2n
+vXJuvHB3xi9ibZU4Y8POlDI=
+=2j1M
+-----END PGP SIGNATURE-----

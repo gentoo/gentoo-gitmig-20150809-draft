@@ -1,6 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.73 2004/09/20 15:46:15 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.74 2004/10/17 15:18:49 liquidx Exp $
+
+*epiphany-1.4.4 (17 Oct 2004)
+
+  17 Oct 2004; Alastair Tse <liquidx@gentoo.org> +epiphany-1.4.4.ebuild:
+  version bump
 
   20 Sep 2004; Malcolm Lashley <malc@gentoo.org> epiphany-1.2.9-r1.ebuild:
   Stable on amd64 for security bug
