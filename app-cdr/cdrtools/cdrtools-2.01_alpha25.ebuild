@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.2 2004/01/18 08:08:12 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.3 2004/01/18 08:20:49 pylon Exp $
 
 
 inherit eutils
@@ -30,7 +30,7 @@ src_unpack() {
 	# <azarah@gentoo.org> (05 Feb 2003)
 	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
 
-	use dvdr && epatch ${FILESDIR}/${DVDR_PATCH_P}
+	use dvdr && epatch ${WORKDIR}/${DVDR_PATCH_P}
 
 	cd ${S}/DEFAULTS
 	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux
