@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/shout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.10 2004/09/05 22:35:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.11 2004/11/05 23:52:37 chriswhite Exp $
+
+  06 Nov 2004; Chris White <chriswhite@gentoo.org> shout-0.8.0-r2.ebuild:
+  Changed http://www.icecast.org to http://icecast.org for the SRC_URI per bug
+  #70069.
 
 *shout-0.8.0-r2 (05 Sep 2004)
 
