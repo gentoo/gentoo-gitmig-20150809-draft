@@ -1,5 +1,6 @@
 #!/sbin/runscript
 
+# dont write the hourly --MARK-- message
 SYSLOGD="-m 0"
 # send warnings and above to the console
 KLOGD="-c 3 -2"
