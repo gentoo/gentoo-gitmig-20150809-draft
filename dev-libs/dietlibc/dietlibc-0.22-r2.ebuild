@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r2.ebuild,v 1.6 2003/09/30 00:01:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r2.ebuild,v 1.7 2003/10/07 19:20:46 weeve Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -37,7 +37,7 @@ src_compile() {
 
 	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
 		cd ${S}
-		/bin/sparc32 make
+		/usr/bin/sparc32 make
 	else
 		emake || die
 	fi
