@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.3.2.ebuild,v 1.1 2004/07/30 05:23:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.3.2.ebuild,v 1.2 2004/07/30 17:07:40 axxo Exp $
 
 inherit java-pkg eutils
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="Gallery Remote is a client-side Java application that provides users with a rich front-end to Gallery. This application makes it easier to upload images to your Gallery."
 HOMEPAGE="http://gallery.sourceforge.net/gallery_remote.php"
 SRC_URI="mirror://gentoo/gallery-remote-${PV}-cvs-gentoo.tar.bz2"
 LICENSE="GPL-2"

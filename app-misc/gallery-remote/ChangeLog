@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gallery-remote
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/ChangeLog,v 1.1 2004/07/30 05:23:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/ChangeLog,v 1.2 2004/07/30 17:07:40 axxo Exp $
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> gallery-remote-1.3.2.ebuild:
+  fix description
 
 *gallery-remote-1.3.2 (30 Jul 2004)
 

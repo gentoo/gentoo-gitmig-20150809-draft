@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 20c6607aac0723c31fa39eca61ef6834 gallery-remote-1.3.2.ebuild 1704
-MD5 5c1397b217c75e419bbd9eccad8dde20 ChangeLog 412
+MD5 799688522e7fe428915d8786594b9a60 gallery-remote-1.3.2.ebuild 1836
+MD5 8b4a2b387ac76f92b7a2434e5d2ce3c2 ChangeLog 509
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 0683fc9111309eaa629527346f044b73 files/1.3.2.patch 858
 MD5 2b6dd7a0ea88fe68b8f27f4348fc134d files/build.xml.patch 1008
@@ -10,7 +10,7 @@ MD5 73fa77691176c50c67fd313e23d089dd files/digest-gallery-remote-1.3.2 84
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBCdvW/rLF9B432nYRAjy+AJ0cqnB9+FafAktrV33yN5usE2R2fwCfVkeL
-X3DlWxbVIL7F6c195ufXRZk=
-=SP7H
+iD8DBQFBCoDS/rLF9B432nYRAvaOAKDHHu7i4DJuHSLS2b4DN6VP+y5dtgCeNvth
+RSYSeEwhoteQdqpWQ72ErzQ=
+=c9wr
 -----END PGP SIGNATURE-----
