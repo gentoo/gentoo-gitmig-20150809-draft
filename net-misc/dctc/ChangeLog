@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dctc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dctc/ChangeLog,v 1.1 2002/04/18 16:44:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dctc/ChangeLog,v 1.2 2002/06/04 11:01:51 seemant Exp $
+
+*dctc-0.82.0 (4 Jun 2002)
+
+  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org> dctc-0.82.0.ebuild
+  files/digest-dctc-0.82.0 :
+
+  Version bump thanks to todd1@sr.sticare.com (Todd) in bug #3143
 
 *dctc-0.79.1 (18 Apr 2002)
 
