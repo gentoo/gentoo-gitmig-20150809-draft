@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.8 2003/04/16 17:31:18 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.9 2003/08/09 00:19:52 strider Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -27,7 +27,7 @@ SRC_MOZHEADERS="j2sdk-1_4_1-mozilla_headers-unix.zip"
 
 SRC_URI=""
 
-DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
+DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1 (From sources)"
 HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
 
 SLOT="0"
@@ -51,7 +51,7 @@ pkg_setup() {
 	#Check if we have enough space
 	if [ `df -P ${PORTAGE_TMPDIR}/portage/ | tail -n 1 | awk '{ print $4 }'` -le 2097152 ] ; then
 		eerror "You need about 2G of disk space to compile this at ${PORTAGE_TMPDIR}/portage,"
-		eerror "it seems you don't have that much, quiting, sorry!"
+		eerror "it seems you don't have that much, quitting, sorry!"
 		die "Not enough disk space"
 	fi
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.18 2003/05/28 13:31:44 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.19 2003/08/09 00:19:52 strider Exp $
+
+  08 Aug 2003; Adrian Almenar <strider@gentoo.org> sun-j2sdk-1.4.1-r1.ebuild,
+  sun-j2sdk-1.4.1.ebuild sun-j2sdk-1.4.0-r3.ebuild:
+  Fix typo and version description, also added to description (From sources) so
+  users will understand the difference
 
 *sun-j2sdk-1.4.1-r1 (28 May 2003)
 
