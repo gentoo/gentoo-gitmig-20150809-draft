@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.2-r1.ebuild,v 1.2 2004/07/06 02:28:54 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.2-r1.ebuild,v 1.3 2004/07/06 11:29:31 dholm Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-embedded-free-${PV}.tar.bz2"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="gif opengl mysql odbc postgres debug build doc"
 
 DEPEND="media-libs/lcms
@@ -56,7 +56,17 @@ src_compile() {
 		use postgres && myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server -I/usr/include/postgresql/pgsql -I/usr/include/postgresql/pgsql/server" || myconf="${myconf} -no-sql-psql"
 		use odbc && myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
 		use debug && myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
-		use x86 && myconf="$myconf -embedded x86" || myconf="$myconf -xplatform generic -embedded generic"
+		case ${ARCH} in
+		x86)
+			myconf="$myconf -embedded x86"
+			;;
+		ppc)
+			myconf="$myconf -embedded generic"
+			;;
+		*)
+			myconf="$myconf -xplatform generic -embedded generic"
+			;;
+		esac
 
 		./configure $myconf -shared -depths 8,16,24,32 -system-zlib -thread -stl \
 			-freetype -qvfb -plugin-imgfmt-{jpeg,mng,png} -system-lib{png,jpeg,mng} \
