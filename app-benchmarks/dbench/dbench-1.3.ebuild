@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-1.3.ebuild,v 1.5 2002/07/25 14:57:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-1.3.ebuild,v 1.6 2002/10/17 12:50:19 vapier Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Popular filesystem benchmark"
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 DEPEND="sys-apps/sed"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
