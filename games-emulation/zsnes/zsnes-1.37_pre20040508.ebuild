@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.2 2004/05/12 00:59:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.3 2004/05/27 03:05:24 mr_bones_ Exp $
 
 inherit games
 
@@ -38,7 +38,7 @@ src_compile() {
 	# Do NOT introduce custom ${CFLAGS} - Current choices are the optimal ones
 	cd src
 	egamesconf \
-		`use_with opengl` \
+		$(use_with opengl) \
 		|| die
 	emake || die "emake failed"
 }
