@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/knetload-1.94.ebuild,v 1.10 2003/02/13 14:56:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/knetload-1.94.ebuild,v 1.11 2003/07/22 20:14:10 vapier Exp $
 
-inherit kde-base || die
+inherit kde-base
 
 need-kde 3
 
