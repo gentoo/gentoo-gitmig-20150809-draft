@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.13-r1.ebuild,v 1.7 2004/09/16 15:33:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.13-r1.ebuild,v 1.8 2004/10/08 18:02:53 hansmi Exp $
 
 IUSE="slp"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~ppc64 amd64"
+KEYWORDS="x86 ppc sparc ~ppc64 amd64"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	slp? ( net-libs/openslp )"
