@@ -1,3 +1,6 @@
+# this qt hasn't been tested
+=x11-libs/qt-x11-2.3.1
+
 >=sys-apps/bash-2.05
 >=sys-apps/procps-2.0.7
 >=sys-devel/gcc-2.96
