@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/coreutils
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.64 2003/12/31 08:15:30 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.65 2004/01/09 08:24:52 seemant Exp $
+
+*coreutils-5.0.91-r4 (09 Jan 2004)
+
+  09 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
+  coreutils-5.0.91-r4.ebuild:
+  the patches link against ncurses rather than libtermcap, closing bug #37026 by
+  Martin Flugeldufel <martin_flugeldufel@yahoo.com>. Additionally, some of the
+  non-critical binaries (those not needed for bootup) have been moved to
+  /usr/bin, which partially sorts out bug #36453, also by Martin Flugedufel
 
   31 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
   coreutils-5.0.91-r3.ebuild:
