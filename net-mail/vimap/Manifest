@@ -1,11 +1,21 @@
-MD5 ead3d13cf5c642ca8b5d3962ee47ff42 vimap-2002c.ebuild 2689
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae2586d392f40b414eabc2ac8c122922 ChangeLog 1398
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 c388c39a3b588750ffa28354b34abdaf files/uw-ipop2.xinetd 558
-MD5 208569dd72925d3c3e7d61c6f2ba5d2d files/uw-ipop3s.xinetd 468
-MD5 ea8af2702044c8b0941bd1c47cafc266 files/uw-imap.xinetd 486
+MD5 ead3d13cf5c642ca8b5d3962ee47ff42 vimap-2002c.ebuild 2689
 MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c 63
-MD5 11d914802c932b60631b4f07644d89aa files/uw-imap.pam-system-auth 338
-MD5 baeec4d3bc0654d3be0f6568a4f3c8e7 files/uw-ipop3.xinetd 467
-MD5 06fd3daa17ab90c9478393b9c0fb7f03 files/uw-imaps.xinetd 481
 MD5 0ec3cd52bf3e7064a3d9e60a5ac16291 files/imap-2002c-virtual.patch.bz2 10394
+MD5 28c291d52426cc5d25be57406f14e096 files/uw-imap.pam-system-auth 344
+MD5 b9265aebc1d378faf06199471ceabc4f files/uw-imap.xinetd 492
+MD5 a801fe6d35ae75b0abeb6e410b3b6ea2 files/uw-imaps.xinetd 487
+MD5 2cc8deb01d6efd5a650d6fc5519289bd files/uw-ipop2.xinetd 564
+MD5 fbd30c975d120429f29509866d292745 files/uw-ipop3.xinetd 473
+MD5 c6e5f24322fad9b16d63b1e08ca3bee8 files/uw-ipop3s.xinetd 474
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fjFmdTrptrqvGERAl0YAJ4jwEs+hq8y5X3P3AitsBcn1rntWQCcCbPd
+mZT9C9eGAOt2HBnJytTB2XA=
+=oirU
+-----END PGP SIGNATURE-----

@@ -1,7 +1,17 @@
-MD5 2d5b43482a1700ab1c9af98184843d28 mailwrapper-0.2.ebuild 1055
-MD5 18a281368464ee932839a49a159784cc mailwrapper-0.1.ebuild 816
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 715b9a620cdfba180bfe23eed733ed6e ChangeLog 2248
+MD5 18a281368464ee932839a49a159784cc mailwrapper-0.1.ebuild 816
 MD5 400acb577753ba81c395228d89ff8d10 metadata.xml 221
+MD5 2d5b43482a1700ab1c9af98184843d28 mailwrapper-0.2.ebuild 1055
 MD5 e12f843189ba4a3b6f9a1d94877da1f3 files/digest-mailwrapper-0.1 63
 MD5 ee270a41759c71d70839204d40185997 files/digest-mailwrapper-0.2 63
-MD5 80764c07b2422b7b2c36add093baba9b files/mailer.conf 1308
+MD5 030393d80c34b2db1fd0e7340b167be0 files/mailer.conf 1311
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fhYmdTrptrqvGERAuorAJ9qcZARw7w3F4mmTx7y33viMYvIRQCglNBE
+cSLMshnSKUL39Jtv7XnS/8w=
+=g4Qi
+-----END PGP SIGNATURE-----
