@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r1.ebuild,v 1.2 2004/04/26 22:31:04 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r1.ebuild,v 1.3 2004/04/28 16:48:50 eradicator Exp $
 
-IUSE="gtk gtk2 gnome gpm nls"
+IUSE="gtk gtk2 gpm nls"
 
 DESCRIPTION="Aumix volume/mixer control program."
 SRC_URI="http://jpj.net/~trevor/aumix/${P}.tar.bz2"
