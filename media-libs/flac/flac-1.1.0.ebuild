@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.5 2003/03/03 01:33:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.6 2003/03/14 07:10:02 drobbins Exp $
 
 IUSE="sse xmms"
 
@@ -15,13 +15,8 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha"
 
-RDEPEND="virtual/glibc 
-	>=media-libs/libogg-1.0_rc2
-	xmms? ( media-sound/xmms )"
-
-DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm ) 
-	sys-apps/gawk"
+RDEPEND="virtual/glibc id3lib >=media-libs/libogg-1.0_rc2 xmms? ( media-sound/xmms )"
+DEPEND="${RDEPEND} x86? ( dev-lang/nasm ) sys-apps/gawk"
 
 src_compile() {
 
