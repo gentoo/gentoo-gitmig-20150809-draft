@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.9 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.10 2003/01/28 04:05:16 woodchip Exp $
+
+*nut-1.2.1 (27 Jan 2003)
+
+  27 Jan 2003; Donny Davies <woodchip@gentoo.org> : New testing release.
+  Fixed SRC_URI, half-of #12947, (the other half is commited to rc-scripts
+  CVS).  Fixed #10745.  Thanks btowe@gbis.com, and
+  tdickenson@geminidataloggers.com.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -10,11 +17,13 @@
   Added sparc sparc64 KEYWORDS.  Old ebuilds have busted SRC_URI's.
 
   26 Aug 2002; Donny Davies <woodchip@gentoo.org> nut-1.0.0.ebuild :
-  Glorious timing; nut went 1.0 and as of baselayout-1.8.2, halt.sh support is merged.
+  Glorious timing; nut went 1.0 and as of baselayout-1.8.2, halt.sh
+  support is merged.
 
 *nut-0.50.1 (3 Aug 2002)
 
-  3 Aug 2002; Donny Davies <woodchip@gentoo.org> nut-0.50.1.ebuild, upsd-init, upsmon-init :
+  3 Aug 2002; Donny Davies <woodchip@gentoo.org> nut-0.50.1.ebuild,
+  upsd-init, upsmon-init :
   This release adds proper initscripts, the USE cgi-bin option
   for building the web monitoring programs, and proper shutdown
   sequence merged into the baselayout halt.sh shutdown script.
@@ -30,12 +39,3 @@
 
   12 Apr 2002; Spider <spider@gentoo.org> 
   libpng update, remove RPEND tag, unnecessary. (or typo;)
-
-*nut-0.44.1 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
