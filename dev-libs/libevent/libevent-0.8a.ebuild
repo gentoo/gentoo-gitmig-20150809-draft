@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-0.8a.ebuild,v 1.2 2004/10/07 19:26:05 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-0.8a.ebuild,v 1.3 2005/01/21 23:10:26 kloeri Exp $
 
 DESCRIPTION="A library to execute a function when a specific event occurs on a file descriptor"
 HOMEPAGE="http://monkey.org/~provos/libevent/"
