@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.114 2005/02/16 02:03:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.115 2005/02/16 02:16:27 weeve Exp $
+
+  15 Feb 2005; Jason Wever <weeve@gentoo.org> kdeadmin-3.4.0_beta2.ebuild:
+  Added ~sparc keyword.
 
   15 Feb 2005; Jason Wever <weeve@gentoo.org> :
   Added ~sparc keyword.
