@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/detachtty-9.ebuild,v 1.1 2004/10/25 12:52:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/detachtty-9.ebuild,v 1.2 2004/10/26 13:44:02 ka0ttic Exp $
+
+inherit toolchain-funcs
 
 MY_P="${P/-/_}"
 
@@ -16,7 +18,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	emake CC="${CC:-gcc}" CFLAGS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/detachtty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/ChangeLog,v 1.5 2004/10/25 12:52:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/ChangeLog,v 1.6 2004/10/26 13:44:02 ka0ttic Exp $
+
+  26 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> detachtty-9.ebuild:
+  Use tc-getCC() - bug #68980
 
 *detachtty-9 (25 Oct 2004)
 
