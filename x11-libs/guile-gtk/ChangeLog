@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/guile-gtk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.12 2004/09/05 09:55:33 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.13 2005/03/20 04:15:00 kingtaco Exp $
+
+  19 Mar 2005; Mike Doty <kingtaco@gentoo.org> guile-gtk-1.2.0.31.ebuild:
+  ~amd64 added
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
