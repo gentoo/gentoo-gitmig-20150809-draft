@@ -1,6 +1,11 @@
 # ChangeLog for app-text/chasen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.10 2004/07/23 15:33:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.11 2004/08/30 10:14:36 gmsoft Exp $
+
+*chasen-2.3.3-r3 (30 Aug 2004)
+
+  30 Aug 2004; Guy Martin <gmsoft@gentoo.org> +chasen-2.3.3-r3.ebuild:
+  Unconditonal use of -fPIC (#55238).
 
 *chasen-2.3.3-r2 (24 Jul 2004)
 
