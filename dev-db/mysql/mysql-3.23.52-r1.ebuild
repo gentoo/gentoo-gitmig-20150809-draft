@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.6 2002/10/20 18:41:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.7 2002/10/20 20:11:56 seemant Exp $
 
 IUSE="static readline innodb berkdb tcpd"
 
@@ -51,11 +51,12 @@ src_compile() {
 	myconf="--with-thread-safe-client"
 # The following fix is due to a bug with bdb on sparc's. See: 
 # http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
-	if [ use sparc || use sparc64 ] ; then
-	  myconf="${myconf} --without-berkeley-db"
+	if use sparc || use sparc64
+	then
+		myconf="${myconf} --without-berkeley-db"
 	else
-	  use berkdb && myconf="${myconf} --with-berkeley-db=./bdb" \
-	   || myconf="${myconf} --without-berkeley-db"
+		use berkdb && myconf="${myconf} --with-berkeley-db=./bdb" \
+			|| myconf="${myconf} --without-berkeley-db"
 	fi
 	use readline && myconf="${myconf} --with-readline"
 	use readline || myconf="${myconf} --without-readline"

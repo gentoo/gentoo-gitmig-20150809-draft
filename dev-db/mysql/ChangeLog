@@ -1,8 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.17 2002/10/15 14:34:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.18 2002/10/20 20:11:56 seemant Exp $
 
 *mysql-3.23.52-r1 (29 Sep 2002)
+  
+  20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> mysql-3.23.52-r1.ebuild :
+
+  Changed the sparc USE check per bug #9372 by torgeir@trenger.ro (Torgeir
+  Hansen)
 
   15 Oct 2002; <mcummings@datanode.net> mysql-3.23.52-r1.ebuild :
 
