@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.9 2004/06/24 22:13:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.10 2004/09/14 00:01:09 mr_bones_ Exp $
 
 inherit games eutils gcc flag-o-matic gnuconfig
 
@@ -21,12 +21,12 @@ DEPEND="virtual/opengl
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 	unpack ${PN}-data-${PV}.tar.gz
 
 	# braindead check in configure fails - hack approach
-	epatch ${FILESDIR}/${PV}-configure.in.patch
-	epatch ${FILESDIR}/${PV}-gcc3.patch
+	epatch "${FILESDIR}/${PV}-configure.in.patch"
+	epatch "${FILESDIR}/${PV}-gcc3.patch"
 
 	gnuconfig_update
 	autoconf || die "autoconf failed"
@@ -37,22 +37,21 @@ src_compile() {
 	use alpha && append-flags -mieee
 
 	egamesconf \
-		`use_enable stencil-buffer` \
-		--with-data-dir=${GAMES_DATADIR}/${PN} \
+		$(use_enable stencil-buffer) \
+		--with-data-dir="${GAMES_DATADIR}/${PN}" \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
-	dodir ${GAMES_DATADIR}/${PN}
-	cp -r ${PN}-data-${PV}/* ${D}/${GAMES_DATADIR}/${PN}/ \
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -r ${PN}-data-${PV}/* "${D}/${GAMES_DATADIR}/${PN}/" \
 		|| die "cp failed"
 
-	dodoc AUTHORS ChangeLog README || die "dodoc failed"
-	dohtml -r html/* || die "dohtml failed"
-
+	dodoc AUTHORS ChangeLog README
+	dohtml -r html/*
 	prepgamesdirs
 }
 
