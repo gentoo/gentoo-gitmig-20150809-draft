@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distruibuted under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/xpm-3.4k-r2.ebuild,v 1.5 2003/08/07 03:57:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/xpm-3.4k-r2.ebuild,v 1.6 2003/09/08 07:14:29 msterret Exp $
 
 # Note that this is a dummy package.  It's just a placeholder.  If the
 # package which needs xpm needs xfree, it doesn't need xpm, because xfree
