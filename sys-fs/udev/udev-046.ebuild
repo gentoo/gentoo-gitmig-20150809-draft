@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-046.ebuild,v 1.1 2004/11/18 22:03:35 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-046.ebuild,v 1.2 2004/12/08 02:12:08 vapier Exp $
 
 inherit eutils
 
@@ -63,14 +63,17 @@ src_compile() {
 	local myconf=
 	local extras="extras/scsi_id extras/volume_id"
 
-	if (use selinux)
-	then
-		myconf="${myconf} USE_SELINUX=true"
-	fi
+	use selinux && myconf="${myconf} USE_SELINUX=true"
+
+	# Not everyone has full $CHOST-{ld,ar,etc...} yet
+	local mycross=""
+	type -p ${CHOST}-ar && mycross=${CHOST}-
 
 	# Do not work with emake
-	make EXTRAS="${extras}" \
+	make \
+		EXTRAS="${extras}" \
 		udevdir="/dev/" \
+		CROSS=${mycross} \
 		${myconf} || die
 }
 
