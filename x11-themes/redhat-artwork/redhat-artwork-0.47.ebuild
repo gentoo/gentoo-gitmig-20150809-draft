@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.1 2002/10/17 06:48:43 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.2 2002/10/17 08:35:06 blocke Exp $
 
 RH_EXTRAVERSION="3"
 
@@ -125,9 +125,16 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	use kde && (
-		mkdir -p ${D}/${KDEDIR}/share
-		mv ${D}/usr/share/apps ${D}/${KDEDIR}/share/apps
-		mv ${D}/usr/share/icons ${D}/${KDEDIR}/share/icons
+		dodir ${KDEDIR}/share/apps
+		mv ${D}/usr/share/apps/* ${D}/${KDEDIR}/share/apps
+		rmdir ${D}/usr/share/apps
+
+		dodir ${KDEDIR}/share/icons
+		dosym /usr/share/icons/Bluecurve ${KDEDIR}/share/icons/Bluecurve
+	)
+
+	use kde || (
+		rm -rf ${D}/usr/share/apps
 	)
 
 	# yank redhat logos (registered trademarks, etc)
