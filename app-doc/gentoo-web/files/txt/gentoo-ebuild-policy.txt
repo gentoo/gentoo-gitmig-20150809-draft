@@ -1,0 +1,30 @@
+Intro
+The gentoo-ebuild mailing list is for submissions of new ebuilds and ebuild
+updates by authors without developer accounts. It is also the place for
+'newbie' ebuild-creation related questions. Bug reports which do not suggest
+a fix and all other questions and discussions should go on the
+general-purpose gentoo-dev mailing list.
+
+Posting rules
+The submission posts should include short descriptions of the ebuild/update
+etc. and any other relevant information. The ebuilds should be attached to
+the posts; updates should be posted as unified-format diffs. Updates
+affecting multiple files can be posted in one diff to be applied in
+/usr/portage or in a category dir. If the diff becomes as large as the ebuild
+itself, you can post the new version of the ebuild instead of the diff, but
+it's still deprecated.
+
+What happens to submissions
+A developer (currently myself) routinely adds submissions posted on
+gentoo-ebuild to incoming. This is the directory /usr/portage/incoming. The
+developer also adds a public item to dev-wiki (cvs.gentoo.org/wiki) for the
+appropriate team, low priority, unstable branch for new ebuilds and all
+branches for updates. A developer from that team will eventually 'grab' the
+todo item, check the ebuild, and put it in the appropriate category.
+
+Note: The files in incoming can be accessed via cvs/rsync, but users
+shouldn't merge files from incoming, as they haven't been checked by
+developers.
+
+--
+Dan Armak
