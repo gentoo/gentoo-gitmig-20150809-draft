@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.22 2004/05/01 12:24:56 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.23 2004/06/12 23:54:09 nakano Exp $
+
+*phppgadmin-3.4 (13 Jun 2004)
+
+  13 Jun 2004; Masatomo Nakano <nakano@gentoo.org> +files/postinstall-en.txt,
+  +phppgadmin-3.3.1-r1.ebuild, +phppgadmin-3.4.ebuild:
+  Version bump and changing to use webapp eclass. (#52972, #51319)
 
   01 May 2004; Masatomo Nakano <nakano@gentoo.org> phppgadmin-3.3.1.ebuild:
   Marked as stable.

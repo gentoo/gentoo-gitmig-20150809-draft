@@ -1,0 +1,6 @@
+Make sure you edit /etc/phppgadmin/config.inc.php
+
+To use the reports-database, you have to manually
+execute
+psql -f /etc/phppgadmin/reports-pgsql.sql
+
