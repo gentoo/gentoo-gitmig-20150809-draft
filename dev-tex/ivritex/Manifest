@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17b79f9d90a04898d312cf2dec2931a ChangeLog 1159
+MD5 08b1b4d2276f636b413ede362812b6dc ChangeLog 1255
+MD5 9b965c77374d0fd6f5f7044134784ae1 ivritex-1.1.2.ebuild 551
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 01fdd642c8404939903b653193c80310 ivritex-1.1.2.ebuild 549
 MD5 356393b96e77c703ce7f9b5608f7e3ef files/digest-ivritex-1.1.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaFLjVWNWqTUmv+0RArRKAKCKYAumkZqARNYIQ8qhKUKqGpVwSwCeIYKV
-yHOS29gbw8nNVfSsswa3+mE=
-=i011
------END PGP SIGNATURE-----

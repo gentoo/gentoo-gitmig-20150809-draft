@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd92d5acaccfc6cea871d725883f2616 ChangeLog 1714
-MD5 c137bcd28e5e851a79dc6fd465dc19a5 koma-script-20040616.ebuild 921
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 3b9eb3895392f9a20acb34605841a972 ChangeLog 1819
+MD5 580ec0237f28a2d0c53ae6538ee42079 koma-script-20040616.ebuild 923
 MD5 02a84941b84fea4ffaa364785501d910 koma-script-20040824.ebuild 923
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 92abb8e8494550a5097447f7e8b80da5 files/digest-koma-script-20040616 73
 MD5 b4655f77174bce8305b02bcd5803566e files/digest-koma-script-20040824 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaFM5VWNWqTUmv+0RArepAJ9Qks6gaasqj8BW94FPdkvGg/cTlwCgqp+M
-DXoJB91mpzIIhuz6G+wzpxE=
-=7Lbt
------END PGP SIGNATURE-----
