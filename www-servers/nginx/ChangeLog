@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.5 2005/03/04 17:40:51 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.6 2005/03/10 08:57:50 voxus Exp $
+
+*nginx-0.1.24-r2 (10 Mar 2005)
+
+  10 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> -nginx-0.1.24.ebuild,
+  +nginx-0.1.24-r2.ebuild,
+  +files/nginx-0.1.24-upstream_status.patch:
+  "upstream sent too long status line" fix from author.
 
 *nginx-0.1.24-r1 (04 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.24.ebuild,v 1.1 2005/03/04 14:54:50 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.24-r2.ebuild,v 1.1 2005/03/10 08:57:50 voxus Exp $
 
 inherit eutils
 
@@ -16,6 +16,11 @@ IUSE="ssl zlib threads"
 DEPEND="dev-lang/perl
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S} && epatch ${FILESDIR}/${P}-upstream_status.patch || die
+}
 
 src_compile() {
 	local myconf
@@ -61,6 +66,8 @@ src_install() {
 	cd ${S} || die
 
 	dodir /var/log/${PN}
+	keepdir /var/log/${PN}
+
 	dodir /var/tmp/${PN}
 
 	dodir /var/tmp/${PN}/client
@@ -79,7 +86,7 @@ src_install() {
 
 	insinto /etc/${PN}
 	rm conf/nginx.conf
-	doins -r conf
+	doins -r conf/*
 	doins ${FILESDIR}/nginx.conf
 
 	dodoc CHANGES{,.ru} LICENSE README
