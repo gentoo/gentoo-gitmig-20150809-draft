@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.17 2004/10/25 21:58:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.18 2004/11/13 02:36:40 kumba Exp $
+
+  12 Nov 2004; Joshua Kinard <kumba@gentoo.org> rexml-3.0.2.ebuild:
+  Marked stable on mips.
 
   25 Oct 2004; Tom Martin <slarti@gentoo.org> rexml-3.0.4.ebuild:
   Marked ~amd64, see bug 68656.

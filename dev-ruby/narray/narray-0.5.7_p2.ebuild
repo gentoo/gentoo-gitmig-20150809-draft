@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.5.7_p2.ebuild,v 1.6 2004/06/25 01:54:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.5.7_p2.ebuild,v 1.7 2004/11/13 02:33:02 kumba Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ir.isas.ac.jp/~masa/ruby/dist/${MY_P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha hppa ~mips ~ppc sparc x86"
+KEYWORDS="alpha hppa mips ~ppc sparc x86"
 
 IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
