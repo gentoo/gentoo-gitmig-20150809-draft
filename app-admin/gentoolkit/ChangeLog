@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.82 2003/05/26 15:52:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.83 2003/06/08 13:18:47 mholzer Exp $
+
+*gentoolkit-0.1.26 (08 Jun 2003)
+
+  08 Jun 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.26.ebuild,
+  files/scripts/qpkg:
+  Added two new flags into qpkg. Patch submitted by Dave Vasilevsky
+  <vasi@users.sourceforge.net> in #22432.
 
 *gentoolkit-0.1.25 (26 May 2003)
 
