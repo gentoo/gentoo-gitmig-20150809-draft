@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8cf55a1e1378dca398e9f97373b44885 ChangeLog 462
+MD5 3d637651e9f9544db668006e63c11498 ChangeLog 550
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 c9cfabb29708a0418532e3b8dfba2907 ng-1.5_beta1.ebuild 1241
+MD5 427c0bd7e5066d41596048ef4907285a ng-1.5_beta1.ebuild 1239
 MD5 80ffe9161a8636f97e8bdc57ce15b31a files/digest-ng-1.5_beta1 63
 MD5 de7ba3b0eb90a24a2060c4357ad7ee4f files/ng-1.5beta1-ncurses.patch 553
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA30eGHTu7gpaalycRAmLNAKDMnhuWGv9WqNcabBoawcOrVld2RQCfUHJY
-qWsrhIEczANJUalE0n0GSVM=
-=GnnR
------END PGP SIGNATURE-----
