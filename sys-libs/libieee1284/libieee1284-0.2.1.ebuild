@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.1.ebuild,v 1.8 2004/06/24 23:05:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.1.ebuild,v 1.9 2005/01/16 23:23:01 robbat2 Exp $
 
 inherit libtool
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Library to query devices using IEEE1284"
 HOMEPAGE="http://cyberelk.net/tim/libieee1284/index.html"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+IUSE="doc"
 
 LICENSE="GPL-2"
 SLOT="0"

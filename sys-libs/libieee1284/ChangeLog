@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libieee1284
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.8 2004/06/24 23:05:28 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.9 2005/01/16 23:23:01 robbat2 Exp $
+
+*libieee1284-0.2.8 (16 Jan 2005)
+
+  16 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/libieee1284-0.2.8-dbjh-v4.diff, +libieee1284-0.2.8.ebuild:
+  Bug #75119, #53971, a version bump finally.
 
   18 May 2003; Seemant Kulleen <seemant@gentoo.org> libieee1284-0.2.1.ebuild:
   wrapped the DEPENDS in the doc USE flag, closing bug #12704 by Aaron Stone
