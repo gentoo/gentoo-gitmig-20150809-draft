@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.29 2002/12/30 20:12:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.30 2002/12/30 23:27:52 lostlogic Exp $
 
   TODO before gentoo-sources-2.4.20-r1:
   * Documentation
@@ -14,6 +14,8 @@
 *lolo-sources-2.4.20.1_pre9 (30 Dec 2002)
 
   30 Dec 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre9.ebuild :
+  Marking this one stable cuz I want it used and tested widely.
+
   Changes from _pre8:
   * Fix the __br_lock_usage_bug() so it doesn't still break
   * Fix compile problem with do_zap_page_range with gcc-2
