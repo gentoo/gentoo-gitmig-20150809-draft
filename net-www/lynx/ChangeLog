@@ -1,6 +1,9 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.33 2004/04/27 20:39:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.34 2004/06/05 17:08:00 tuxus Exp $
+
+  05 Jun 2004; <tuxus@gentoo.org> lynx-2.8.5.ebuild:
+  Stable on mips
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lynx-2.8.4.1d-r1.ebuild,
   lynx-2.8.5.ebuild:
