@@ -5,8 +5,8 @@ MD5 9191e75725813339b3853b445e75f974 jack-audio-connection-kit-0.74.1-r1.ebuild 
 MD5 3c1c4315e5a10ed0b13008edcc22132d jack-audio-connection-kit-0.74.1.ebuild 1178
 MD5 551de801e6ddb4cea343624f50dcb107 jack-audio-connection-kit-0.80.0.ebuild 1530
 MD5 68f8f4351febb0473ce68c1637fc1d26 jack-audio-connection-kit-0.71.1.ebuild 873
-MD5 76365525563cee715c70bcfa9bb4fbe9 jack-audio-connection-kit-0.90.1.ebuild 1528
-MD5 b29bc6d1e0ced1c3cf75134397269f6e ChangeLog 4576
+MD5 eaf3c3418a472a4b48202b8b9202031a jack-audio-connection-kit-0.90.1.ebuild 1525
+MD5 671b76fa8e4ff49979bc23b5085cb95b ChangeLog 4573
 MD5 8c02416afc54aa729665b5d5ffc2b982 metadata.xml 281
 MD5 6959b993d060eb6deeec0a51df178194 jack-audio-connection-kit-0.75.0.ebuild 1523
 MD5 36fb94d55be1d95f0b2a6b7f2b571663 files/digest-jack-audio-connection-kit-0.71.2-r1 84
