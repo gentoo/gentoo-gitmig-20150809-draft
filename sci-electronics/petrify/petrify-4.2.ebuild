@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/petrify-4.2.ebuild,v 1.1 2004/12/27 20:18:22 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/petrify-4.2.ebuild,v 1.2 2004/12/27 21:06:54 swegener Exp $
 
 DESCRIPTION="Synthesize Petri nets into asynchronous circuits"
 HOMEPAGE="http://www.lsi.upc.es/~jordic/petrify/"
@@ -10,6 +10,7 @@ KEYWORDS="~x86"
 RESTRICT="nostrip"
 RDEPEND="media-gfx/graphviz"
 SLOT="0"
+IUSE=""
 
 src_install () {
 	cd ${WORKDIR}/petrify
