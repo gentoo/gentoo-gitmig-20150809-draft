@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/mnet-0.6.2.383.ebuild,v 1.5 2004/07/03 12:14:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/mnet-0.6.2.383.ebuild,v 1.6 2004/08/02 18:45:59 squinky86 Exp $
 
 IUSE="gtk"
 S=${WORKDIR}/${PN}
@@ -14,7 +14,7 @@ RDEPEND="virtual/libc
 	dev-lang/python
 	gtk? ( dev-python/wxpython  )"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 
 src_compile() {
