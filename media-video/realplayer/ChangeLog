@@ -1,6 +1,12 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.31 2005/03/19 14:05:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.32 2005/03/29 04:41:03 luckyduck Exp $
+
+*realplayer-10.0.3-r1 (29 Mar 2005)
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +realplayer-10.0.3-r1.ebuild:
+  corrected src_uri, fixes #86564
 
   19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> realplayer-10.0.3.ebuild:
   added ~amd64 to KEYWORDS, fixes #85080
