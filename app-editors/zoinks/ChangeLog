@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/zoinks
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.2 2003/11/18 00:13:41 genone Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.3 2004/03/12 10:13:12 genone Exp $
+
+*zoinks-0.3.8 (12 Mar 2004)
+
+  12 Mar 2004; Marius Mauch <genone@gentoo.org> zoinks-0.3.8.ebuild:
+  version bump
 
   18 Nov 2003; Marius Mauch <genone@gentoo.org> zoinks-0.3.6.ebuild zoinks-0.3.7.ebuild:
   marking 0.3.6 stable on x86, adding 0.3.7
