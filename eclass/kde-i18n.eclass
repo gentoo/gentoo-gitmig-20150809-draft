@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.17 2002/07/01 19:13:32 danarmak Exp $
-inherit kde kde.org 
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.18 2002/07/05 11:36:44 danarmak Exp $
+inherit kde kde-i18n.org 
 ECLASS=kde-i18n
 
 S=${WORKDIR}/${PN}
