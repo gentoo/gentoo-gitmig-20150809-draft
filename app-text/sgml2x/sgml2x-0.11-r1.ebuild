@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.6 2000/12/08 17:21:47 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.7 2001/04/28 12:36:04 achim Exp $
 
 P=sgml2x-0.11
 A=${P}.tar.gz
@@ -27,6 +27,10 @@ src_install() {
   dodir /usr/bin
   dodir /etc
   make PREFIX=${D}/usr prefix=${D}/usr sysconfdir=${D}/etc install
+  echo <<END > ${D}/sgml2x.conf
+# Path to dsssl-stylesheets
+stylepath=/usr/share/sgml/docbook/dsssl-stylesheets-1.64
+END
   dodoc README
   docinto html
   dodoc sgml2x.html doc/*.html doc/*.gif
