@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/revdep-rebuild,v 1.1 2003/05/08 11:38:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/revdep-rebuild,v 1.2 2003/05/09 14:51:33 utx Exp $
 # Author: Stanislav Brabec <utx@gentoo.org>
 
 # requires: qpkg
@@ -13,7 +13,7 @@
 LD_LIBRARY_MASK="libodbcinst.so libodbc.so libjava.so libjvm.so"
 
 # Base of temporary files names.
-LIST=~/.reverse-dep-shlib-rebuild
+LIST=~/.revdep-rebuild
 
 shopt -s nullglob
 shopt -s expand_aliases
