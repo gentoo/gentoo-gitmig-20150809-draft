@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/newpg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/ChangeLog,v 1.2 2003/02/12 03:28:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/ChangeLog,v 1.3 2003/03/05 04:40:15 darkspecter Exp $
 
 *newpg-0.9.4 (06 Feb 2003)
+
+  05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> newpg-0.9.4.ebuild:
+  set ~ppc in keywords
 
   06 Feb 2003; J Robert Ray <jrray@gentoo.org> : Initial ebuild.  This
   package occupies the same space as the 'gpgsm' ebuild.  That ebuild

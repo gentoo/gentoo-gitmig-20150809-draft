@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.6 2003/02/12 06:09:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.7 2003/03/05 04:40:15 darkspecter Exp $
+
+  05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> pth-1.4.1.ebuild:
+  set ~ppc in keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
