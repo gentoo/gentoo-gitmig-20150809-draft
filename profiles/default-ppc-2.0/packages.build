@@ -28,3 +28,4 @@ net-misc/wget
 net-misc/rsync
 app-editors/nano
 sys-apps/net-tools
+sys-apps/less
