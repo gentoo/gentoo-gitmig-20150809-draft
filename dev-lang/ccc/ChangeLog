@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ccc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.6 2004/02/08 05:37:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.7 2004/02/19 15:43:34 taviso Exp $
+
+*ccc-6.5.9.001-r3 (19 Feb 2004)
+
+  19 Feb 2004; Tavis Ormandy <taviso@gentoo.org> ccc-6.5.9.001-r3.ebuild:
+  use rpm.eclass
 
 *ccc-6.5.9.001-r2 (08 Feb 2004)
 
