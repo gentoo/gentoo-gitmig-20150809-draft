@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.35 2004/02/06 06:46:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.36 2004/02/17 22:02:02 usata Exp $
+
+  18 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.2.5.2.ebuild,
+  uim-0.2.8.ebuild:
+  Marked stable on x86 and alpha. Removed 0.2.5.2 because of annoying
+  uim-skk bug.
 
   06 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.2.5.2.ebuild:
   Marked as stable
