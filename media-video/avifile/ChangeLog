@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.50 2003/06/12 14:17:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.51 2003/07/08 22:14:51 mholzer Exp $
+
+*avifile-0.7.37.20030522-r1 (09 Jul 2003)
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org>
+  avifile-0.7.37.20030522-r1.ebuild, files/avifile-0.7.37.20030522-divx.patch: 
+  Adding latest divx support. Closes #23795
 
   12 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
   avifile-0.7.32.20030219.ebuild, avifile-0.7.34.20030319.ebuild,
