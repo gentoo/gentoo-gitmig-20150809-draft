@@ -1,6 +1,6 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.5.ebuild,v 1.3 2002/09/08 00:22:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.6.ebuild,v 1.1 2002/09/23 00:17:43 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gentoo-specific configuration for Java"

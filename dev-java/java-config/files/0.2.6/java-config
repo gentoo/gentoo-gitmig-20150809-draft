@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.5/java-config,v 1.1 2002/09/08 00:22:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.6/java-config,v 1.1 2002/09/23 00:17:43 karltk Exp $
 
 version=0.2.5
 all_params="$*"
@@ -314,9 +314,11 @@ while test $# -gt 0; do
 			
 		;;
 		--list-available-vms)
-			for i in /etc/env.d/java/20*-* ; do
-				echo "[`vm_shortname $i`] `vm_version $i`"
-			done
+			if [ -d /etc/env.d/java ] ; then 
+				for i in `find /etc/env.d/java/ -name "20*-*"` ; do
+					echo "[`vm_shortname $i`] `vm_version $i`"
+				done
+			fi
 		;;
 		--set-system-classpath=*)
 			echo "CLASSPATH=`calc_full_classpath $optarg`" > \
