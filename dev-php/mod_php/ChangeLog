@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.92 2003/07/22 12:04:40 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.93 2003/07/30 08:50:42 coredumb Exp $
+
+*mod-php-4.3.2-r5 (30 Jul 2003)
+  30 Jul 2003; Tal Peer <coredumb@gentoo.org> mod_php-4.3.2-r5.ebuild:
+  Dropped cjk from IUSE. Now mbstring and mbregex are always enabled.
+
+mod-php-4.3.2-r4 (21 Jul 2003)
 
   22 Jul 2003; Christian Birchinger <joker@gentoo.org>
   mod_php-4.3.2-r4.ebuild:
@@ -10,10 +16,10 @@
   files/digest-mod_php-4.3.2-r4:
   Add in URL fopen security fix.
 
+*mod_php-4.3.2-r3 (30 Jun 2003)
+
   12 Jul 2003; Donny Davies <woodchip@gentoo.org> mod_php-4.3.2-r3.ebuild:
   Marked `x86' keyword.
-
-*mod_php-4.3.2-r3 (30 Jun 2003)
 
   1 July 2003; 30 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r3.ebuild:
   Fix a typo in the ebuild sed script that updates the apache[2] config file.
