@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.5 2003/11/11 23:53:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.6 2003/11/12 04:28:44 agriffis Exp $
+
+  11 Nov 2003; Aron Griffis <agriffis@gentoo.org> beecrypt-3.1.0-r1.ebuild:
+  Fix autoconf whoops which caused mpopt.s to fail to build because the
+  makefiles are too smart...
 
 *beecrypt-3.1.0-r1 (11 Nov 2003)
 
