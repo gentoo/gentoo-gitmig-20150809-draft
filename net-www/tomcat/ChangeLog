@@ -1,6 +1,11 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.6 2002/09/14 17:30:55 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.7 2002/09/25 11:36:35 aliz Exp $
+
+*tomcat-4.0.5 (25 Sep 2002)
+
+  25 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update. Ebuild provided by Adrian Almenar <aalmenar@conectium.com>.
 
 *tomcat-4.0.4 (23 Jun 2002)
 
