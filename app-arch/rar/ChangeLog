@@ -2,10 +2,15 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.5 2002/05/31 01:48:14 seemant Exp
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *rar-3.0 (29 May 2002)
 
+  23 Dec 2002; Seemant Kulleen <seemant@gentoo.org> rar-3.0.ebuild :
+
+  Added lib-compat as a dependency (especially for gcc-3 systems).  Closes
+  bug #12557 by gentoo-bugzilla@hummelink.xs4all.nl (Ronald Hummelink)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
   05 Dec 2002; Jon Nall <nall@gentoo.org> rar-3.0.ebuild :
   set -sparc -alpha based. removed sparc64 as 32-bit sparc
   userland is converting to sparc
