@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.10 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.11 2004/06/02 06:27:44 spyderous Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ RDEPEND="x11-base/xfree
 	>=media-libs/fontconfig-2.1-r1"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
-	!>=x11-base/xfree-4.3.0-r2"
+	!>=x11-base/xfree-4.3.0-r2
+	!x11-base/xorg-x11"
 PROVIDE="virtual/xft"
 
 S="${WORKDIR}/fcpackage.${PV/\.0\./_}/Xft"

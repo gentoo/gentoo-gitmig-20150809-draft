@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xft
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.22 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.23 2004/06/02 06:27:44 spyderous Exp $
+
+  02 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xft-2.0.1-r2.ebuild:
+  Add blocker on x11-base/xorg-x11. (#52409).
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xft-2.0.1-r2.ebuild:
   Added IUSE.
