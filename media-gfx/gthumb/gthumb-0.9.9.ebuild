@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author Jens Blaesche <mr.big@pc-trouble.de>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.9.9.ebuild,v 1.1 2001/12/30 14:57:48 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.9.9.ebuild,v 1.2 2002/04/11 16:00:50 tod Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gthumb is an Image Viewer and Browser for Gnome."
@@ -30,7 +30,12 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
+		sysconfdir=${D}/etc \
+		localstatedir=${D}/var/lib \
+	install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 
