@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/prelude-nids
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.4 2003/07/08 05:53:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.5 2003/07/31 18:21:17 solar Exp $
+
+  31 Jul 2003; <solar@gentoo.org> prelude-nids-0.8.1-r1.ebuild:
+  added sparc to keywords
 
   08 Jul 2003; <solar@gentoo.org> metadata.xml:
   Added metadata.xml
