@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.14 2003/02/13 16:21:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.15 2003/02/19 20:02:29 mholzer Exp $
 
 MY_P=${P/vcron/vixie-cron}
 S=${WORKDIR}/${MY_P}
@@ -36,6 +36,7 @@ src_install() {
 	#this does not work if the directory exists already
 	diropts -m0750 -o root -g cron
 	dodir /var/spool/cron/crontabs
+	keepdir /var/spool/cron/crontabs/
 
 	doman crontab.1 crontab.5 cron.8
 

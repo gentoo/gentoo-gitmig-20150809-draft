@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r10.ebuild,v 1.1 2003/02/14 18:49:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r10.ebuild,v 1.2 2003/02/19 20:01:10 mholzer Exp $
 
 # to use this, you must be part of the "cron" group
 
@@ -42,6 +42,7 @@ src_install() {
 	#this does not work if the directory already exists
 	diropts -m 0750 -o root -g cron
 	dodir /var/spool/cron/crontabs
+	keepdir /var/spool/cron/crontabs
 
 
 	dodir /usr/{sbin,bin}
