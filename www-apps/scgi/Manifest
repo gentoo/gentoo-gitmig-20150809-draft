@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 58ca92f3121021a36283441896b7665d scgi-1.2_alpha2.ebuild 676
+MD5 183dc33a6debba1e4d370770c8c47e22 scgi-1.2_alpha1.ebuild 671
+MD5 28e1cba47f912b2ee42480a0eb8c59f1 ChangeLog 1139
 MD5 0c1ffc3eff281366ee07df94a66166e6 metadata.xml 160
-MD5 1b322974fa5c1444caf5b7255331c9a3 scgi-1.2_alpha1.ebuild 646
-MD5 cb592c5932b533999ac469ac2f72b3eb scgi-1.2_alpha2.ebuild 651
-MD5 2d6cea76c126b3bfe67471aac0477ccc ChangeLog 996
 MD5 fe6e3027503038b59f1e9b4ee2cb3baa files/digest-scgi-1.2_alpha1 61
 MD5 7ec590d1ee6da7b63a722808c6758ee7 files/digest-scgi-1.2_alpha2 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBOtZAI1lqEGTUzyQRAmarAKC6SbejmmYW6fnM05Fh+2By/jC9dACgi1Tb
-oiUXK4qG44alwN6rDyvktw0=
-=c74q
+iD8DBQFBmt5BPpIsIjIzwiwRAlAWAJ9MppcWGEAeWlhsC3PrlZkUya2/rQCgzeRY
+c/nsc+TDQfXu4L89bCsxbNM=
+=2/5y
 -----END PGP SIGNATURE-----
