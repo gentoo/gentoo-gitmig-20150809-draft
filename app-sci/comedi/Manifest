@@ -1,5 +1,5 @@
-MD5 c7560d64fba42881bc5781ec9ccbb5a5 comedi-0.7.68.ebuild 1067
-MD5 c54d5ec1d3c6288c90fa93b164b804ec comedi-0.7.67.ebuild 584
+MD5 df36836579ccb62a4b3445e3ab758d41 comedi-0.7.68.ebuild 1075
+MD5 50a807df2d3d0a79d4fb9b3ad4c29c4b comedi-0.7.67.ebuild 592
 MD5 c3c0826c496bb0a6ffa46d9335de2229 ChangeLog 518
 MD5 2134be6a8452efc15d542b70b134dcc7 metadata.xml 249
 MD5 804f8a7a298030bd85bd7f91df6388ac files/digest-comedi-0.7.67 65
