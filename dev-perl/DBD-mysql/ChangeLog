@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.4 2002/07/31 12:39:58 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.5 2002/09/19 21:20:35 mcummings Exp $
+
+*DBD-mysql-2.1013.ebuild (19 Sep 2002)
+
+  19 Sep 2002; <mcummings@gentoo.org> DBD-mysql-2.1013.ebuild, 
+  files/makemaker.patch: address and correct issues with makemaker in perl.
+  Corrects bug 7960. Thanks to Tom Collins for finding the patch!
 
 *DBD-mysql-2.1004-r2 (5 May 2002)
 
