@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4ec3da30eaa4e37661dd805cf2d393a ChangeLog 4199
-MD5 17ae95847193168439f4b57369406434 swig-1.3.21.ebuild 2072
+MD5 6afa1baf90e30deddf037cfd32bdce21 swig-1.3.21.ebuild 2066
+MD5 bc938157ff5e4a54756dad6fa3bc7a30 ChangeLog 4193
 MD5 612242e40ef11cd73ec029e52f6a6e0d files/digest-swig-1.3.21 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA2jjCHTu7gpaalycRAhhkAJ4tmagJfdJ3A2XKw2HkvzA80xnABACdF5vz
-2Sh6EjKzThTR9XwzWtM4t2Q=
-=hGPo
------END PGP SIGNATURE-----
