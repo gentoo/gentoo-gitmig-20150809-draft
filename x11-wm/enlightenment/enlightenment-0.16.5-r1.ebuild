@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r1.ebuild,v 1.3 2001/05/18 17:13:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r1.ebuild,v 1.4 2001/06/05 22:15:42 blutgens Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -35,6 +35,8 @@ src_install() {
   doexe ${FILESDIR}/enlightenment
   dodoc AUTHORS ChangeLog COPYING NEWS README 
   docinto sample-scripts
+  dosym /usr/X11R6/enlightenment/bin/enlightenment /usr/X11R6/bin/
+  dosym /usr/X11R6/enlightenment/bin/enlightenment.install /usr/X11R6/bin/
   dodoc sample-scripts/*
 }
 
