@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1.2.ebuild,v 1.1 2004/07/20 19:40:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1.2.ebuild,v 1.2 2004/07/21 23:54:03 pappy Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ DEPEND=">=sys-apps/sed-4"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="pie"
+IUSE="pie hardened"
 
 src_unpack() {
 	unpack ${A}
@@ -22,7 +22,13 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	use pie && append-flags -fno-pie
+
+	if ( use hardened || use pie )
+	then
+		 append-flags "-fno-pie"
+		 append-ldflags "-fno-pie"
+	fi
+
 	econf || die "econf failed for ${P}"
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/cpufreqd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.12 2004/07/20 19:40:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.13 2004/07/21 23:54:03 pappy Exp $
+
+  22 Jul 2004; Alexander Gabert <pappy@gentoo.org> cpufreqd-1.1.1.ebuild,
+  cpufreqd-1.1.2.ebuild, cpufreqd-1.1.ebuild:
+  library load errors and segfaults when built as automatic PIE, disabling PIE
+  support for all packages
 
 *cpufreqd-1.1.2 (20 Jul 2004)
 
