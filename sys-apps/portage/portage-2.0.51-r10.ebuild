@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r10.ebuild,v 1.6 2005/01/14 15:12:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r10.ebuild,v 1.7 2005/01/14 15:51:13 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -134,20 +134,19 @@ src_install() {
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "Not installing sandbox on ${ARCH}"
 	elif [ -n "${MULTILIB_ABIS}" ]; then
+		into /
 		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
-			cp libsandbox.so.${ABI} libsandbox.so
-			touch libsandbox.so
-			make DESTDIR="${D}" install || \
-			die "Failed to install sandbox"
-			if [ "$(get_libdir)" = "lib" ]; then
-				mv ${D}/lib/libsandbox.so ${D}/lib/libsandbox.so.lib
-			else
-				dodir /$(get_libdir)
-				mv ${D}/lib/libsandbox.so ${D}/$(get_libdir)
-			fi
+			newlib.so libsandbox.so.${ABI} libsandbox.so
 		done
-		[ -f "${D}/lib/libsandbox.so.lib" ] && mv ${D}/lib/libsandbox.so.lib ${D}/lib/libsandbox.so
+		into /usr
+
+		exeinto /usr/lib/portage/bin
+		doexe sandbox
+
+		insinto /usr/lib/portage/lib
+		doins sandbox.bashrc
+
 		ABI="${OABI}"
 	elif [ "${ARCH}" == "amd64" -a -z "${MULTILIB_ABIS}" ]; then
 		check_multilib
