@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r1.ebuild,v 1.1 2003/03/02 20:22:47 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r1.ebuild,v 1.2 2003/03/15 20:12:05 gerk Exp $
 
 # PPC is using a drm only tarball here now.  The fixes we need (read hacks) don't exist
 # in xfree trees (yet), and likely may not for a while due to the hackish nature of some
@@ -20,7 +20,7 @@ DESCRIPTION="Xfree86 Kernel DRM modules"
 HOMEPAGE="http://www.xfree.org"
 LICENSE="X11"
 SLOT="${KV}"
-KEYWORDS="~ppc -x86 -sparc -alpha -mips"
+KEYWORDS="ppc -x86 -sparc -alpha -mips"
 
 DEPEND=">=x11-base/xfree-${PV}"
 

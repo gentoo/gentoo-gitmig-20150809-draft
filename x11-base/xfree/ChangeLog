@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.111 2003/03/12 19:05:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.112 2003/03/15 20:11:11 gerk Exp $
 
   10 Mar 2003; Martin Schlemmer <azarah@gentoo.org> xfree-4.3.0-r1.ebuild :
   Add back Drobbins's fix that was dropped by mistake.  Move DRI patch
@@ -33,6 +33,9 @@
   roma1390 <roma1390@uosis.mif.vu.lt>, bug #16794.
 
 *xfree-4.3.0 (27 Feb 2003)
+
+  15 Mar 2003; Mark Guertin <gerk@gentoo.org> xfree-4.3.0.ebuild:
+  set ppc in keywords
 
   09 Mar 2003; Guy Martin <gmsoft@gentoo.org> xfree-4.3.0.ebuild :
   Patched for hppa (thanks to Stephane Wirtel for his help).
