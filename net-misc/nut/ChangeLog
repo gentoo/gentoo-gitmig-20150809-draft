@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.5 2002/08/11 14:33:43 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.6 2002/08/27 02:54:09 woodchip Exp $
+
+*nut-1.0.0 (26 Aug 2002)
+
+  26 Aug 2002; Donny Davies <woodchip@gentoo.org> nut-1.0.0.ebuild :
+
+  Glorious timing; nut went 1.0 and as of baselayout-1.8.2, halt.sh
+  support is merged.
 
 *nut-0.50.1 (3 Aug 2002)
 
