@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.32 2004/04/15 07:45:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.33 2004/04/17 01:04:17 steel300 Exp $
+
+*aa-sources-2.6.5-r5 (16 Apr 2004)
+
+  16 Apr 2004; <coxj@gentoo.org> aa-sources-2.6.5-r5.ebuild:
+  Version Bump.
 
   15 Apr 2004; <plasmaroo@gentoo.org> aa-sources-2.4.23-r2.ebuild,
   files/aa-sources-2.4.23.CAN-2004-0109.patch:
