@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.2 2004/05/05 07:44:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.3 2004/05/14 03:35:14 zx Exp $
 
 inherit java-pkg
 
@@ -13,19 +13,17 @@ KEYWORDS="~x86"
 IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/gnu-activation-20040331
-	=dev-java/gnu-classpath-inetlib-20040331
-	"
+	=dev-java/gnu-classpath-inetlib-20040331"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
-	jikes? >=dev-java/jikes-1.19
-	"
+	jikes? >=dev-java/jikes-1.19"
 S=${WORKDIR}/javamail-${PV}
 
 src_compile() {
 	# TODO: Add jikes back	
 	# TODO: Useflag this
 	econf \
-		--with-activation-jar=/usr/share/activation/lib \
+		--with-activation-jar=/usr/share/gnu-activation/lib \
 		--with-inetlib-jar=/usr/share/gnu-classpath-inetlib/lib \
 		--enable-smtp \
 		--enable-imap \
