@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8.ebuild,v 1.5 2004/01/03 04:05:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8.ebuild,v 1.6 2004/04/26 04:49:36 agriffis Exp $
 
 DESCRIPTION="A ircd with ipv6 support use by the freenode network"
 HOMEPAGE="http://freenode.net/dancer_ircd.shtml"
@@ -44,7 +44,7 @@ src_unpack() {
 src_compile() {
 
 
-	old_CFLAGS="${CFLAGS}" CFLAGS="${CFLAGS}" econf --enable-optimise --disable-errors --disable-debug-syms
+	old_CFLAGS="${CFLAGS}" CFLAGS="${CFLAGS}" econf --enable-optimise --disable-errors --disable-debug-syms || die "econf failed"
 
 	emake || die
 
