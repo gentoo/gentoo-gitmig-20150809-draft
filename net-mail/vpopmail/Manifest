@@ -2,6 +2,7 @@ MD5 7d91b21c1790634cb7a0c5b420c9bbe0 vpopmail-5.2.2-r1.ebuild 7461
 MD5 5443addd95a5209dd13ee83bbf16d819 vpopmail-5.2.1-r9.ebuild 7543
 MD5 b09c41caa57b71f3ff0d5b3b72f391df vpopmail-5.2.1-r6.ebuild 6370
 MD5 85284bfbd826bf6d7a71964ebc4e7364 vpopmail-5.2.1-r8.ebuild 6700
+MD5 fe0a6cd0d308ee19b9db00e5e3c96c8a vpopmail-5.4.0_rc1.ebuild 7500
 MD5 44cf067ba08236bd4af259e3f7b10cd0 vpopmail-5.2.1-r5.ebuild 6075
 MD5 72d77df2bd42df6372f4ffd290aef8e0 vpopmail-5.2.2.ebuild 7459
 MD5 cda1a58bf38cd719ae4351168ba67bb1 ChangeLog 4520
@@ -12,6 +13,7 @@ MD5 3041a3223960dc956b67ac1230f00db7 files/99vpopmail 86
 MD5 ceafe640132b1326bbc71949e8bccd1c files/vpopmail-5.2.1-gcc33mysql.diff 554
 MD5 d0bc9f5393a1f0602c71fdee0b3d2cd8 files/digest-vpopmail-5.2.2 134
 MD5 7bdd629eebc8f1ea4ba47e8cd4f3f3eb files/vpopmail-5.2.1-showall.patch 754
+MD5 2a9fe0fff0522f424c0faf7db8f690a9 files/digest-vpopmail-5.4.0_rc1 138
 MD5 d388c60820d1ce87e90cbc46a89c6a77 files/digest-vpopmail-5.2.1-r5 327
 MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r6 134
 MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r7 134
