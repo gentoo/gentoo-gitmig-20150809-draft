@@ -15,7 +15,7 @@ MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 50816019be7cc03120fa58d075eb07f7 files/sysvinit-2.84-selinux1.patch 3612
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
 MD5 68ea8c716616fbfd5b287dadb5e9ea5c files/digest-baselayout-1.11.8-r3 69
-MD5 b9da01622f144c5b8c22fbf18b7560e0 files/baselayout-1.12.0_alpha1-fixup-depends_awk.patch 2543
+MD5 d293f00448f562c6d5b4f8bbf77a9fd1 files/baselayout-1.12.0_alpha1-fixup-depends_awk.patch 2387
 MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
 MD5 b4092f5ec486d78aa60a04777bb840a8 files/rc-scripts-1.4.16-livecd.patch 1420
@@ -28,7 +28,7 @@ MD5 8973ba1466f017b32112df32c15ee8a7 files/digest-baselayout-1.12.0_alpha1-r1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCMO3M1ZcsMnZjRyIRAjHTAKC8d7xmR/QtYwQC+oHf5DYq092xYgCgkh8Y
-9Y72bu3FetLvcnm9VpPCmnU=
-=e+Fp
+iD8DBQFCMO8L1ZcsMnZjRyIRAi+uAJwPB6cjuviqPAUDhppxHh41ZrouhwCguGko
+FVPnz+R7j1REvigaElL5T8o=
+=sQsL
 -----END PGP SIGNATURE-----
