@@ -1,4 +1,5 @@
-MD5 349fdc6e196e995db5d9dc481c0c35a4 ChangeLog 404
-MD5 fa2d2e7d3e532b803cb5fdd02711b21e transfusion-bin-1.01.ebuild 1138
+MD5 730780312fffa721796a554d89fc04aa ChangeLog 517
+MD5 ee8c25ce9a119f3969b45d087e6e14df transfusion-bin-1.01.ebuild 1162
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 bb61fedc5e54bc874cbb937a0696103e files/digest-transfusion-bin-1.01 160
 MD5 29086edf8b4ad73829f8b3c59088042b files/transfusion 65

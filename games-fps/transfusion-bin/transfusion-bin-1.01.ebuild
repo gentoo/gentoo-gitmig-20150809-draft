@@ -15,6 +15,7 @@ KEYWORDS="-* x86"
 LICENSE="GPL-2"
 SLOT="0"
 
+RDEPEND="virtual/glibc"
 DEPEND=">=sys-apps/sed-4"
 
 S="${WORKDIR}/${MY_PN}"
@@ -41,8 +42,8 @@ src_install() {
 	dogamesbin ${FILESDIR}/transfusion
 	# ...and make it cd to the right place.
 	sed -i \
-		-e "s:GENTOO_DIR:${dir}:" ${D}/${GAMES_BINDIR}/transfusion || \
-			die "sed transfusion failed"
+		-e "s:GENTOO_DIR:${dir}:" ${D}/${GAMES_BINDIR}/transfusion \
+			|| die "sed transfusion failed"
 
 	prepgamesdirs
 }
