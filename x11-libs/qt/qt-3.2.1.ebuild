@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.6 2003/09/12 08:24:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.7 2003/09/16 02:29:46 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -76,6 +76,8 @@ _EOF_
 src_compile() {
 	export QTDIR=${S}
 	export SYSCONF=${QTBASE}/etc/settings
+	LD_LIBRARY_PATH_OLD=${LD_LIBRARY_PATH}
+	export LD_LIBRARY_PATH=${WORKDIR}/lib:${LD_LIBRARY_PATH}
 
 	# fix #11144; qt wants to create lock files etc. in that directory
 	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
@@ -101,10 +103,11 @@ src_compile() {
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
-		linux-g++ -xrender -prefix ${QTBASE} -fast ${myconf} || die
+		linux-g++ -xrender -prefix ${D}${QTBASE} -fast ${myconf} || die
 
 	export QTDIR=${S}
 	emake src-qmake src-moc sub-src sub-tools || die
+	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH_OLD}
 }
 
 src_install() {
