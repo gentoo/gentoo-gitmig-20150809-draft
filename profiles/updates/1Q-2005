@@ -170,3 +170,4 @@ move sys-apps/supervise-scripts sys-process/supervise-scripts
 move sys-apps/anacron sys-process/anacron
 move sys-apps/at sys-process/at
 move sys-apps/daemontools-scripts sys-process/daemontools-scripts
+move sys-apps/daemontools sys-process/daemontools
