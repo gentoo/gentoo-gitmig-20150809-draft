@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>karltk@gentoo.org</email>
+  <name>Karl Trygve Kalleberg</name>
+  <description>Primary maintainer</description>
+</maintainer>
+<longdescription>
+SDF2 is a syntax definition formalism with the following features:
+
+* Modular syntax definition (parametrized modules, symbol renaming)
+* Integrated lexical and context-free syntax
+* Declarative disambiguation constructs (priorities, associativity, and more)
+* Regular expression shorthands
+* All non-circular context-free grammars allowed!
+
+SDF2 is implemented in two parts:
+
+* The ParsetableGenerator
+* SGLR: a scannerless generalized LR parser
+
+The above implementation accepts arbitrary context-free grammars as
+input. 
+</longdescription>
+</pkgmetadata>

@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/sdf2-bundle
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sdf2-bundle/ChangeLog,v 1.1 2004/02/17 20:23:59 karltk Exp $
+
+*sdf2-bundle-1.6 (17 Feb 2004)
+
+  17 Feb 2004; Karl Trygve Kalleberg <karltk@gentoo.org> sdf2-bundle.ebuild:
+  Initial import.  Ebuild submitted by myself.
