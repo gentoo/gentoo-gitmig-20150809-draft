@@ -1,0 +1,10 @@
+pcm.myname {
+   type hw
+   card 0
+}
+
+ctl.myname {
+   type hw
+   card 0
+}
+
