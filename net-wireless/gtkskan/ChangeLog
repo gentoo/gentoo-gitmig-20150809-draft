@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/gtkskan
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/ChangeLog,v 1.5 2003/02/12 08:45:25 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/ChangeLog,v 1.6 2004/06/25 00:44:28 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

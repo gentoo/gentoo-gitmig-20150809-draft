@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/bluez-kernel
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-kernel/ChangeLog,v 1.6 2004/04/26 14:19:28 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-kernel/ChangeLog,v 1.7 2004/06/25 00:43:26 agriffis Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> bluez-kernel-2.3.ebuild:
   Add die following econf for bug 48950

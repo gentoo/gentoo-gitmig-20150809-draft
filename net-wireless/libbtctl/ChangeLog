@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/libbtctl
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.4 2004/02/12 18:38:08 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.5 2004/06/25 00:46:12 agriffis Exp $
 
   12 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> libbtctl-0.3.ebuild:
   Adding ~sparc (works with some kernels, see bug #39710)

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-0.9.ebuild,v 1.6 2004/01/30 16:54:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-0.9.ebuild,v 1.7 2004/06/25 00:42:56 agriffis Exp $
 
 DESCRIPTION="bluetooth firmware downloader"
 HOMEPAGE="http://bluez.sourceforge.net/"

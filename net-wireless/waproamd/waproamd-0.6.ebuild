@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/waproamd/waproamd-0.6.ebuild,v 1.1 2004/03/02 03:30:23 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waproamd/waproamd-0.6.ebuild,v 1.2 2004/06/25 00:47:06 agriffis Exp $
 
 DESCRIPTION="Wireless roaming daemon for configuring wireless settings"
 

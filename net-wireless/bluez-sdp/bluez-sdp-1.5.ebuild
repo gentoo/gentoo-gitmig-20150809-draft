@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-sdp/bluez-sdp-1.5.ebuild,v 1.7 2004/05/26 15:46:10 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-sdp/bluez-sdp-1.5.ebuild,v 1.8 2004/06/25 00:43:57 agriffis Exp $
 
 DESCRIPTION="bluetooth service discovery protocol (sdp) utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
