@@ -1,6 +1,14 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.13 2004/03/27 23:48:51 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.14 2004/06/07 00:42:15 dragonheart Exp $
+
+*abs-guide-2.7 (07 Jun 2004)
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  abs-guide-2.1.ebuild, abs-guide-2.2.ebuild, abs-guide-2.3.ebuild,
+  abs-guide-2.4.ebuild, abs-guide-2.5.ebuild, abs-guide-2.6.ebuild,
+  +abs-guide-2.7.ebuild:
+  QA - IUSE fix. Version bump
 
   27 Mar 2004; Chuck Short <zul@gentoo.org> :
   Fixed bad digest, closes #45888.
