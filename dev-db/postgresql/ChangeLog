@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.96 2004/05/12 00:47:08 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.97 2004/05/14 14:56:58 gmsoft Exp $
+
+  14 May 2004; Guy Martin <gmsoft@gentoo.org> postgresql-7.4.2-r2.ebuild,
+  files/postgresql-7.4.1-hppa-testandset.patch:
+  Readded test and set support for hppa.
 
   11 May 2004; Michael McCabe <randy@gentoo.org> postgresql-7.4.2-r2.ebuild:
   Added s390 keywords
