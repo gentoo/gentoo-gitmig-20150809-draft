@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.1 2002/06/29 17:44:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.2 2002/06/29 17:51:02 azarah Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -11,6 +11,7 @@ S=${WORKDIR}/${P}
 LOC=/usr
 DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+SLOT="0"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"
@@ -183,6 +184,17 @@ pkg_preinst() {
 	if [ -L ${ROOT}/usr/bin/${CHOST}-g++ ]
 	then
 		rm -f ${ROOT}/usr/bin/${CHOST}-g++
+	fi
+}
+
+pkg_postrm() {
+	if [ ! -L ${ROOT}/lib/cpp ]
+	then
+		ln -sf /usr/bin/cpp ${ROOT}/lib/cpp
+	fi
+	if [ ! -L ${ROOT}/usr/bin/cc ]
+	then
+		ln -sf gcc ${ROOT}/usr/bin/cc
 	fi
 }
 
