@@ -1,12 +1,16 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.8 2003/02/10 04:59:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.9 2003/02/10 19:27:33 avenj Exp $
 
 *epic4-1.1.10 (09 Feb 2003)
 
   03 Dec 2002; John M. Burks <nsx@rm-f.net> epic4-1.1.10.ebuild :
   Added new version.  Also added --without-tcl, since it won't compile
   properly if you do have tcl on your system.
+
+  10 Feb 2003; Jon Portnoy <avenj@gentoo.org> epic4-1.1.10.ebuild :
+  Minor fix to the 'local' script submitted by John M. Burks
+  <nsx@rm-f.net>
 
 *epic4-1.1.7-r1 (22 Oct 2002)
 

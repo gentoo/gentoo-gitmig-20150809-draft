@@ -1,3 +1,4 @@
+if (fexist(~/.ircrc) == -1) {
 # uncomment this if you don't want time stamping
 # timestamp off
 
@@ -560,7 +561,6 @@ on ^333 "*" {
 on ^367 "*" {
 	xecho -w 1 $banner $1 $2 $3 $strftime($4 %c)
 }
-
 # tabkey.jm: a full-featured tab key module for epic
 #
 # written by nsx
@@ -607,7 +607,8 @@ on ^367 "*" {
 # If our fragment does not begin with '#' or '&', nickname completion is
 # attempted.  This matches the word fragment against all nicknames in the
 # current channel.  If no matches are found, we then match the word fragment
-# against all nicknames in all other channels we're on.
+# against all nicknames in all other channels we're on and nicknames in our
+# notify list that are presently online.
 #
 # If there was multiple matches for the word fragment, we replace the word
 # fragment with the common prefix for these matches, if any.  We also display
@@ -640,6 +641,9 @@ on ^367 "*" {
 #
 # For each DCC CHAT connection that takes place, we add the other party to
 # our nickname history.
+#
+# For each notify signon, we add the nickname that signed on to our nickname
+# history.
 #
 # Each time a nickname is added to our nickname history, we first remove any
 # prior occurrences of the nickname that may exist.  We then check to see if
@@ -817,9 +821,14 @@ alias nick_complete {
 	if (frag_matches == []) {
 		^local nick_list
 
-		fe ($remw($C $mychannels())) channel {
-			@push(nick_list $onchannel($channel))
+		fe ($remw($C $mychannels())) nick_name {
+			@push(nick_list $onchannel($nick_name))
 		}
+
+		fe ($notify(on)) nick_name {
+			@push(nick_list $nick_name)
+		}
+
 		@:nick_list = uniq($nick_list)
 		@:frag_matches = pattern($word_frag% $nick_list)
 	}
@@ -873,10 +882,15 @@ on #^msg 10 "*" {
 	@add_nickname($0)
 }
 
+on #^notify_signon 10 "*" {
+	@add_nickname($0)
+}
+
 on #^send_dcc_chat 10 "*" {
 	@add_nickname(=$0)
 }
 
 on #^send_msg 10 "*" {
 	@add_nickname($0)
+}
 }
