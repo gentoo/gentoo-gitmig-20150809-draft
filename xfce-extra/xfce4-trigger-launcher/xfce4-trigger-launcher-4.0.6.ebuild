@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-trigger-launcher/xfce4-trigger-launcher-4.0.6.ebuild,v 1.9 2004/11/09 02:56:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-trigger-launcher/xfce4-trigger-launcher-4.0.6.ebuild,v 1.10 2005/01/02 16:38:09 bcowan Exp $
 
 DESCRIPTION="Xfce trigger launcher"
 HOMEPAGE="http://www.xfce.org/"
