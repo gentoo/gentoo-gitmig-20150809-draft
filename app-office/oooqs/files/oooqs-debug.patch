@@ -1,0 +1,15 @@
+--- oooqs/oooqs.cpp.orig	2003-04-17 18:20:15.000000000 -0400
++++ oooqs/oooqs.cpp	2003-04-17 18:20:26.000000000 -0400
+@@ -484,9 +484,9 @@
+ 	}
+ 	KProcess* process = new KProcess;
+ 	*process << soffice << params;
+-	for ( QStringList::Iterator it = params.begin(); it != params.end(); ++it ) {
+-		KMessageBox::information(this, *it);
+-	}
++//	for ( QStringList::Iterator it = params.begin(); it != params.end(); ++it ) {
++//		KMessageBox::information(this, *it);
++//	}
+ 	/** the exit Handler only works, if the father ist notified */
+ 	process->start(KProcess::NotifyOnExit,KProcess::NoCommunication);
+ 	connect( process, SIGNAL (processExited(KProcess*)), SLOT (delProcess(KProcess*)));
