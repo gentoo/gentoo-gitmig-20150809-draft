@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.10.4.ebuild,v 1.5 2003/09/11 01:14:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.10.4.ebuild,v 1.6 2004/01/26 13:26:07 gustavoz Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://pycurl.sourceforge.net"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 DEPEND=">=dev-lang/python-2.1.1
 		>=net-ftp/curl-${PV}"
