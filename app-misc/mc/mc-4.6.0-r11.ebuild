@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.1 2004/09/16 13:39:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.2 2004/09/20 12:02:32 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -91,6 +91,11 @@ src_install() {
 
 	insinto /usr/share/mc
 	doins ${FILESDIR}/mc.gentoo
+
+	insinto /usr/share/mc/syntax
+	doins ${FILESDIR}/ebuild.syntax
+	cd ${D}/usr/share/mc/syntax
+	epatch ${FILESDIR}/${P}-ebuild-syntax.patch
 }
 
 pkg_postinst() {
