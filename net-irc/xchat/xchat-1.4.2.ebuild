@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.4.2.ebuild,v 1.1 2000/08/23 07:00:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.4.2.ebuild,v 1.2 2000/08/23 07:12:31 drobbins Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -11,12 +11,14 @@ HOMEPAGE="http://www.xchat.org/"
 
 src_compile() {                           
   cd ${S}
+  local myopts
   if [ -n "`use gnome`" ]
-  then
-  	./configure --host=${CHOST} --enable-gnome --disable perl --prefix=/opt/gnome --with-catgets
+  then 
+	myopts="--enable-gnome --prefix=/opt/gnome"
   else
-  	./configure --host=${CHOST} --disable-gnome --disable-perl --prefix=/usr/X11R6 --with-catgets
+	myopts="--disable-gnome --prefix=/usr/X11R6"
   fi
+  ./configure --host=${CHOST} --disable-perl --disable-python ${myopts} --with-catgets
   make
 }
 
