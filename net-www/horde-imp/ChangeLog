@@ -1,6 +1,11 @@
 # ChangeLog for net-www/horde-imp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.8 2003/02/19 00:13:27 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.9 2003/02/24 20:27:08 alron Exp $
+
+*horde-imp-3.2 (24 Feb 2003)
+  24 Feb 2003; Dean Bailey <alron@gentoo.org> horde-imp-3.2 :
+  Version bump to 3.2, also removed the RC's from cvs as they are no longer
+  needed.
 
 *horde-imp-3.2_rc3 (18 Feb 2003)
   18 Feb 2003; Dean Bailey <alron@gentoo.org> horde-imp-3.2_rc3 :

@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2_rc3.ebuild,v 1.1 2003/02/19 00:13:27 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.ebuild,v 1.1 2003/02/24 20:27:08 alron Exp $
 
 DESCRIPTION="IMP ${PV} provides webmail access"
 HOMEPAGE="http://www.horde.org"
 P=imp-3.2
-SRC_URI="ftp://ftp.horde.org/pub/imp/tarballs/imp-3.2-RC3.tar.gz"
+SRC_URI="ftp://ftp.horde.org/pub/imp/tarballs/imp-3.2.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="-x86 -ppc -sparc -alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 RDEPEND=">=net-www/horde-2.1"
 
@@ -68,11 +68,12 @@ pkg_postinst() {
 	find_http_root
 
 	# add module in horde
-	sed -e "/^\/\/.*\(\$this->applications\['imp'\].*\)/ \
-		{ : next ; N ; /\;/ { s/\/\///g ; b } ; b next }" \
-		< ${REGISTRY} > ${REGISTRY}.temp
-	cp ${REGISTRY}.temp ${REGISTRY}
-	rm ${REGISTRY}.temp
+# Commented as this is a bad idea. --Alron
+#	sed -e "/^\/\/.*\(\$this->applications\['imp'\].*\)/ \
+#		{ : next ; N ; /\;/ { s/\/\///g ; b } ; b next }" \
+#		< ${REGISTRY} > ${REGISTRY}.temp
+#	cp ${REGISTRY}.temp ${REGISTRY}
+#	rm ${REGISTRY}.temp
 
 	# end
 	einfo "Please read ${HTTPD_ROOT}/horde/imp/docs/INSTALL !"
@@ -81,11 +82,14 @@ pkg_postinst() {
 pkg_prerm() {
 	find_http_root
 
-	# rm module from horde
-	sed -e "/\(\$this->applications\['imp'\].*\)/ \
-		{ s/\(.*\)/\/\/\1/g; : suite ; N ; /\;/ { s/\n/\n\/\//g ; b } ; \
-		b suite }" \
-		< ${REGISTRY} > ${REGISTRY}.temp
-	cp ${REGISTRY}.temp ${REGISTRY}
-	rm ${REGISTRY}.temp
+
+# rm module from horde
+# Commented this out as it was a bad idea, what happens when somone
+# does an emerge -up world. --Alron
+#	sed -e "/\(\$this->applications\['imp'\].*\)/ \
+#		{ s/\(.*\)/\/\/\1/g; : suite ; N ; /\;/ { s/\n/\n\/\//g ; b } ; \
+#		b suite }" \
+#		< ${REGISTRY} > ${REGISTRY}.temp
+#	cp ${REGISTRY}.temp ${REGISTRY}
+#	rm ${REGISTRY}.temp
 }
