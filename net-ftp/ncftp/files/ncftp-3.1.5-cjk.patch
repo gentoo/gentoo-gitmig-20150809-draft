@@ -1,0 +1,12 @@
+diff -uNr ncftp-3.1.5/ncftp/getline.c ncftp-3.1.5.new/ncftp/getline.c
+--- ncftp-3.1.5/ncftp/getline.c	2002-10-13 09:33:48.000000000 +0900
++++ ncftp-3.1.5.new/ncftp/getline.c	2003-02-14 21:01:40.000000000 +0900
+@@ -367,7 +367,7 @@
+ {
+     int             c;
+ #ifdef __unix__
+-    char            ch;
++    unsigned char            ch;
+ #endif
+ 
+ #ifdef __unix__
