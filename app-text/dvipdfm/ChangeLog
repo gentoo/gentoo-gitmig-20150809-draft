@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvipdfm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.5 2003/02/12 05:23:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.6 2003/10/02 12:41:23 obz Exp $
+
+  02 Oct 2003; Mike Gardiner <obz@gentoo.org> dvipdfm-0.13.2c.ebuild,
+  metadata.xml:
+  Changed depends to tetex-1 as tetex-2 provides this package and hence
+  conflicts, see bug #29721
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.9 2003/03/01 04:14:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.10 2003/10/02 12:41:23 obz Exp $
 
 DESCRIPTION="DVI to PDF translator"
 SRC_URI="http://gaspra.kettering.edu/dvipdfm/${P}.tar.gz"
 HOMEPAGE="http://gaspra.kettering.edu/dvipdfm/"
+LICENSE="GPL-2"
 
 KEYWORDS="x86 ppc sparc"
 SLOT="0"
-LICENSE="GPL-2"
+IUSE=""
 
-DEPEND=">=app-text/tetex-1.0.7
+DEPEND="=app-text/tetex-1*
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4"
 
