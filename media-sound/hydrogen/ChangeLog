@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.27 2005/03/05 09:00:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.28 2005/03/11 20:46:19 luckyduck Exp $
+
+  11 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> hydrogen-0.9.0.ebuild:
+  added missing qt dependency, fixes #84590
 
   05 Mar 2005; Markus Rothe <corsair@gentoo.org> hydrogen-0.9.0.ebuild:
   Stable on ppc64
