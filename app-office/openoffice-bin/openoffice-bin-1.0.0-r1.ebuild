@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.0-r1.ebuild,v 1.2 2002/07/11 06:30:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.0-r1.ebuild,v 1.3 2002/08/01 10:53:17 seemant Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -21,14 +21,15 @@ SRC_URI="http://ny1.mirror.openoffice.org/${PV}/OOo_${MY_PV}_LinuxIntel_install.
 	http://www.ibiblio.org/gentoo/distfiles/openoffice-${PV}-registry.tbz2"
 HOMEPAGE="http://www.openoffice.org"
 
-DEPEND="virtual/glibc
-	>=sys-devel/perl-5.0
+DEPEND=">=sys-devel/perl-5.0
 	virtual/x11
 	app-arch/zip
 	app-arch/unzip
 	>=virtual/jdk-1.3.1"
 
 SLOT="0"
+KEYWORDS="x86 -ppc -sparc -sparc64"
+LICENSE="LGPL-2 | SISSL-1.1"
 
 src_unpack() {
 
