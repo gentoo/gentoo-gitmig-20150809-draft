@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r5.ebuild,v 1.5 2003/12/17 03:49:54 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r5.ebuild,v 1.6 2004/02/13 01:13:25 solar Exp $
 
 IUSE=""
 
@@ -20,11 +20,9 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
-	has_version "sys-devel/hardened-gcc" && append-flags "-yet_exec"
-
 	cd ${S}
 	epatch ${FILESDIR}/${P}-kernel-2.5.patch
+	epatch ${FILESDIR}/${P}-pic.patch
 
 	sed -e "s:-O2:${CFLAGS}:g" \
 		-e 's:/usr/man:/usr/share/man:' \

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.24.ebuild,v 1.1 2003/09/15 17:46:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.24.ebuild,v 1.2 2004/02/13 01:13:25 solar Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Daemon for the Linux Device Filesystem"
