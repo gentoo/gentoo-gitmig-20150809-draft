@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.6 2002/05/07 03:58:19 drobbins Exp
 
+KEYWORDS="x86"
+
 A="kinput2-v3.1-beta4.tar.gz"
 
 S="${WORKDIR}/kinput2-v3.1-beta4"
@@ -13,6 +15,7 @@ SRC_URI="ftp://ftp.sra.co.jp/pub/x11/kinput2/${A}"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc
+	>=sys-apps/portage-2.0.9
 	canna? >=app-i18n/canna-3.5_beta2-r1
 	freewnn? >=app-i18n/freewnn-1.1.1_alpha19 : >=app-i18n/canna-3.5_beta2-r1"
 

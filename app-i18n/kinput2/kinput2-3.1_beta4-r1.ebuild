@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.6 2002/05/07 03:58:19 drobbins Exp
 
+KEYWORDS="x86"
+
 A="kinput2-v3.1-beta4.tar.gz"
 
 S="${WORKDIR}/kinput2-v3.1-beta4"
