@@ -1,11 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.15.rc6,v 1.4 2004/09/07 02:00:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.15.rc6,v 1.5 2004/09/07 04:03:24 robbat2 Exp $
 
 depend() {
-	need net
-	use dns
+	use dns net
 }
 
 checkconfig() {

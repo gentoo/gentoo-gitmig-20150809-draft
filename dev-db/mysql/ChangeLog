@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.126 2004/09/07 02:00:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.127 2004/09/07 04:03:24 robbat2 Exp $
+
+  06 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> files/mysql-4.0.15.rc6:
+  Use net, not need net.
 
   06 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> files/mysql-4.0.15.rc6:
   Fix #62603, #62903.
