@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.73 2004/10/01 15:43:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.74 2004/10/01 15:55:43 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -43,7 +43,9 @@ EXPORT_FUNCTIONS src_unpack
 
 IUSE="$IUSE selinux ncurses nls acl"
 
-if [[ "${MY_PN}" != "vim-core" ]] ; then
+if [[ "${MY_PN}" == "vim-core" ]] ; then
+	IUSE="$IUSE livecd"
+else
 	IUSE="$IUSE cscope gpm perl python ruby"
 	DEPEND="$DEPEND
 		cscope?  ( dev-util/cscope )
@@ -400,6 +402,26 @@ src_install() {
 		# both vim and gvim
 		insinto /etc/vim/
 		doins ${FILESDIR}/vimrc
+
+		if use livecd ; then
+			# To save space, install only a subset of the files if we're on a
+			# livecd. bug 65144.
+			einfo "Removing some files for a smaller livecd install..."
+
+			local vimfiles=${D}/usr/share/vim/vim${VIM_VERSION/.}
+			shopt -s extglob
+			rm -fr ${vimfiles}/{compiler,doc,ftplugin,indent}
+			rm -fr ${vimfiles}/{macros,print,tools,tutor}
+			rm ${D}/usr/bin/vimtutor
+
+			local keep_colors="default"
+			rm -fr ${vimfiles}/colors/!(${keep_colors}).vim
+
+			local keep_syntax="conf|crontab|fstab|inittab|resolv|sshdconfig"
+			# tinkering with the next line might make bad things happen...
+			keep_syntax="${keep_syntax}|syntax|nosyntax|synload"
+			rm -fr ${vimfiles}/syntax/!(${keep_syntax}).vim
+		fi
 
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		dobin src/gvim
