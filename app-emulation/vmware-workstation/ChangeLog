@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.22 2003/09/06 14:34:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.23 2003/09/06 14:37:35 wolf31o2 Exp $
+
+  06 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/3.2.1.2237/90vmware, files/3.2.1.2237/VMwareWorkstation.desktop,
+  files/3.2.1.2237/vmware,
+  files/3.2.1.2237/vmware-config.pl-gcc-generalized.patch,
+  files/3.2.1.2237/vmware-glibc-2.3.2-compat.c, files/3.2.1.2237/vmware.png:
+  Completing removal of old versions.
 
   06 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
   vmware-workstation-3.2.1.2237-r1.ebuild,
