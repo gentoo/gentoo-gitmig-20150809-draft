@@ -1,0 +1,11 @@
+# ChangeLog for net-zope/generator
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/generator/ChangeLog,v 1.1 2004/10/07 21:32:59 radek Exp $
+
+*generator-1.3.0 (06 Oct 2004)
+
+  06 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +generator-1.3.0.ebuild:
+  Initial release for AT-1.3.0 dependency.
+  Please be warned that this package probably obsoletes dev-python/generator.
+
