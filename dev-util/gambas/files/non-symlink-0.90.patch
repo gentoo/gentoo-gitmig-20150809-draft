@@ -1,0 +1,64 @@
+--- src/comp/gbi.c.org	2003-10-27 21:51:41.000000000 +0100
++++ src/comp/gbi.c	2003-11-17 23:41:29.000000000 +0100
+@@ -54,6 +54,34 @@
+ #include "str.h"
+ #include "gambas.h"
+ 
++/* needed to install in a different location than /usr */
++char *which(const char *app)
++{
++	char *path = NULL;
++	char *p = NULL;
++	char *rValue = NULL;
++		
++	path = getenv("PATH");
++	if (!path) {
++		path = "/usr/bin/";
++	}
++	p = strtok(strdup(path), ":");
++	while (p) {
++		rValue = (char *)calloc(sizeof(char), strlen(p)+strlen(app)+2);
++		strcat(rValue, p);
++		rValue[strlen(p)] = '/';
++		strcat(rValue, app);
++		rValue[strlen(p)+1+strlen(app)] = '\0';
++		if (access(rValue, X_OK) == 0) {
++			return rValue;
++		}
++		p = strtok(NULL, ":");
++		free(rValue);
++		rValue = NULL;
++	}
++	return NULL;
++}
++																														
+ 
+ PRIVATE char _lib_path[MAX_PATH + 1];
+ PRIVATE FILE *out;
+@@ -102,7 +129,7 @@
+ 
+   /* chemin d'installation de Gambas */
+ 
+-  path = FILE_readlink(GAMBAS_LINK_PATH);
++  path = which("gbx");
+   if (!path)
+   {
+     path = GAMBAS_LINK_PATH;
+@@ -422,7 +450,7 @@
+   if (strcmp(name, "gb") == 0)
+   {
+     sprintf(path, LIB_PATTERN, _lib_path, name);
+-    dlib = dlopen("/usr/bin/gbx", RTLD_NOW);
++    dlib = dlopen(which("gbx"), RTLD_NOW);
+     if (!dlib)
+       error2("Cannot open component:", dlerror());
+ 
+@@ -472,7 +500,7 @@
+   sprintf(buf, "LD_PRELOAD=%s", lib);
+   putenv(buf);
+   putenv("GAMBAS_PRELOAD=1");
+-  execv("/usr/bin/gbi", argv);
++  execvp("gbi", argv);
+ #endif
+ }
+ 

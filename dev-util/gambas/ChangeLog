@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.4 2004/02/10 22:33:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.5 2004/02/26 23:29:17 genone Exp $
+
+*gambas-0.90 (27 Feb 2004)
+
+  27 Feb 2004; Marius Mauch <genone@gentoo.org> gambas-0.90.ebuild,
+  files/Makefile.am-0.90, files/non-symlink-0.90.patch:
+  version bump, adding support for more USE flags, removing -Os from default
+  CFLAGS
 
 *gambas-0.82 (05 Feb 2004)
 
