@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.27 2003/08/05 21:07:55 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.28 2003/08/21 18:17:50 johnm Exp $
+
+  21 Aug 2003; John Mylchreest <johnm@gentoo.org>; files/alsasound:
+  Updating alsasound to load sequencers properly
 
 *alsa-utils-0.9.6-r1 (05 Aug 2003)
 
