@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-          <email>jmglov@gentoo.org</email>
-          <name>Josh Glover</name>
-  </maintainer>
-  <longdescription>The BugPort system is a Web-based system to manage tasks and defects throughout the software development process.</longdescription>
+<maintainer>
+<email>pyrania@gentoo.org</email>
+<name>Markus Nigbur</name>
+</maintainer>
 </pkgmetadata>

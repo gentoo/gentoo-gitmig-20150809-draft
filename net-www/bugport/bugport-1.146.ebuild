@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugport/bugport-1.125.ebuild,v 1.3 2004/09/28 01:35:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugport/bugport-1.146.ebuild,v 1.1 2004/11/26 23:05:37 pyrania Exp $
 
 inherit webapp
 
