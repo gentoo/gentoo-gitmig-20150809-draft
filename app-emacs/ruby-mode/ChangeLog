@@ -1,0 +1,8 @@
+# ChangeLog for app-emacs/ruby-mode
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.1 2003/09/10 08:27:55 mkennedy Exp $
+
+*ruby-mode-1.8.0 (10 Sep 2003)
+
+  10 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.  Ebuild submitted by Masatomo Nakano <nakano@gentoo.org>.
