@@ -1,0 +1,7 @@
+# ChangeLog for sys-libs/gi-detect
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gi-detect/ChangeLog,v 1.1 2002/09/15 15:40:54 verwilst Exp $
+
+*gi-detect-0.1 (15 Sept 2002) Bart Verwilst <verwilst@gentoo.org>:
+  
+  Initial ebuild.
