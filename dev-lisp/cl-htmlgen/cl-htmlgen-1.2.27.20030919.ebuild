@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-htmlgen/cl-htmlgen-1.2.27.20030919.ebuild,v 1.1 2003/10/15 16:48:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-htmlgen/cl-htmlgen-1.2.27.20030919.ebuild,v 1.2 2003/10/15 17:02:16 mkennedy Exp $
 
 inherit common-lisp
 
@@ -27,9 +27,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE}
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
 
 pkg_postrm() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE}
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
