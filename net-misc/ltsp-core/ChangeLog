@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ltsp-core
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.4 2003/03/24 12:50:12 frame Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.5 2003/04/16 12:31:30 frame Exp $
+
+*ltsp-core-3.0.9-r1 (16 Apr 2003)
+
+  16 Apr 2003; Andres Toomsalu <frame@pfm.ee>:
+  ltsp-core version bump to 3.0.9 - currently masked
+  I guess there are no major changes besides some new linux distros support added to original package, so upgrading from ltsp-core 3.0.7 is probably pointless...
 
 *ltsp-core-3.0.7-r1 (24 Mar 2003)
 
