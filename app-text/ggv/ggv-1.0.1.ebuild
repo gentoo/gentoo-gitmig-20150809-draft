@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.0.1.ebuild,v 1.8 2001/10/06 23:59:41 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.0.1.ebuild,v 1.9 2001/10/12 13:02:28 hallski Exp $
 
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Ghostview"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
