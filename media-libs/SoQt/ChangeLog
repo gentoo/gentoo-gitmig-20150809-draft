@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/SoQt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.5 2003/07/20 14:57:57 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.6 2004/02/26 05:35:49 weeve Exp $
+
+  25 Feb 2004; Jason Wever <weeve@gentoo.org> SoQt-20010601-r1.ebuild:
+  Masked 20010601 on sparc since coin dependency cannot be met.
 
 *SoQt-1.0.2 (20 Jul 2003)
 
