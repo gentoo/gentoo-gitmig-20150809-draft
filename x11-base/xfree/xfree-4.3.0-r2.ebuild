@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.43 2003/09/17 08:17:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.44 2003/10/01 17:53:55 mholzer Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc bindist"
+IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc bindist pam"
 
 
 filter-flags "-funroll-loops"
