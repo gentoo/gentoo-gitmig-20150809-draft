@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.4.ebuild,v 1.1 2002/12/24 18:40:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.4.ebuild,v 1.2 2002/12/25 17:30:03 seemant Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit eutils
 S="${WORKDIR}/${P}"
 DESCRIPTION="A utility to create a fonts.scale file from a set of TrueType fonts"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://www.gentoo.org/~azarah/${P}.tar.bz2"
+	http://cvs.gentoo.org/~azarah/${P}.tar.bz2"
 HOMEPAGE="http://www.joerg-pommnitz.de/TrueType/xfsft.html"
 
 LICENSE="as-is"
