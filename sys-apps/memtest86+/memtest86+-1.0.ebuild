@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.0.ebuild,v 1.5 2004/06/24 22:15:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.0.ebuild,v 1.6 2004/06/27 17:29:48 agriffis Exp $
 
 inherit mount-boot
 
@@ -22,7 +22,7 @@ src_unpack() {
 	# a little fix to make gcc-3.3.x happy
 	sed -e '/DISCARD/d' -i memtest_shared.lds
 
-	if [ `use serial` ] ; then
+	if use serial ; then
 		sed -e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' -i config.h
 	fi
 }

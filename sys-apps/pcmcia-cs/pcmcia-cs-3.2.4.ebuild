@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.4.ebuild,v 1.8 2004/06/24 22:20:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.4.ebuild,v 1.9 2004/06/27 17:36:28 agriffis Exp $
 
 inherit eutils
 
@@ -57,25 +57,25 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	if [ -n "`use trusted`" ] ; then
+	if use trusted ; then
 		myconf="--trust"
 	else
 		myconf="--notrust"
 	fi
 
-	if [ -n "`use apm`" ] ; then
+	if use apm ; then
 		myconf="$myconf --apm"
 	else
 		myconf="$myconf --noapm"
 	fi
 
-	if [ -n "`use pnp`" ] ; then
+	if use pnp ; then
 		myconf="$myconf --pnp"
 	else
 		myconf="$myconf --nopnp"
 	fi
 
-	if [ -n "`use nocardbus`" ] ; then
+	if use nocardbus ; then
 		myconf="$myconf --nocardbus"
 	else
 		myconf="$myconf --cardbus"
@@ -128,7 +128,7 @@ src_install () {
 	# install our own init script
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pcmcia.rc pcmcia
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		# install docs

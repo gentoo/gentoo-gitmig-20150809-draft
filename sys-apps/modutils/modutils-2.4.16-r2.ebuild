@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.16-r2.ebuild,v 1.18 2004/06/24 22:17:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.16-r2.ebuild,v 1.19 2004/06/27 17:31:22 agriffis Exp $
 
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -38,7 +38,7 @@ src_install() {
 
 	# we want insmod static if using zlib, as libz is in /usr/lib/, so
 	# move all the *.static to the normal names
-#	if [ "`use zlib`" ] ; then
+#	if use zlib ; then
 #		mv ${D}/sbin/insmod.static ${D}/sbin/insmod
 		# rest are symlinks pointing to "/sbin/insmod.static", so
 		# nuke them

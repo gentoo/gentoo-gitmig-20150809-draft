@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.9 2004/06/24 22:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.10 2004/06/27 17:32:25 agriffis Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_install() {
 #	exeinto /bin
 #	doexe ping/ping
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}/etc.sample
 		sed -e 's:in\.telnetd$:in.telnetd -L /usr/sbin/telnetlogin:' \

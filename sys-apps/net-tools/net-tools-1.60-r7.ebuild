@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.14 2004/06/24 22:19:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.15 2004/06/27 17:35:47 agriffis Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="nls? ( sys-devel/gettext )
 
 src_unpack() {
 
-	if [ "`use static`" ] ; then
+	if use static ; then
 		CFLAGS="${CFLAGS} -static"
 		LDFLAGS="${LDFLAGS} -static"
 	fi
@@ -60,7 +60,7 @@ src_unpack() {
 	cp -f ${PATCHDIR}/ether-wake.c ${S}
 	cp -f ${PATCHDIR}/ether-wake.8 ${S}/man/en_US
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		sed -i -e 's:\(#define I18N\) 1:\1 0:' config.h || \
 			die "sed config.h failed"
 
@@ -77,7 +77,7 @@ src_compile() {
 	# breaking parallel makes (if ./configure doesn't finish first)
 	make || die
 
-	if [ "`use nls`" ] ; then
+	if use nls ; then
 		cd po
 		make || die
 	fi
@@ -98,7 +98,7 @@ src_install() {
 	dodir /usr/bin
 	dosym /bin/hostname /usr/bin/hostname
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		dodoc COPYING README README.ipv6 TODO
 	else
