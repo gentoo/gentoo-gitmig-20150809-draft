@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.5 2004/04/11 17:15:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.6 2004/04/13 15:33:54 lu_zero Exp $
 
 IUSE="ultra1"
 
@@ -41,10 +41,9 @@ pkg_postinst() {
 
 	if [ "${ARCH}" = "ppc" ]; then
 		ewarn "BEWARE"
-		ewarn "The pmu support is broken on devfs."
-		ewarn "You'll likely need udev in order to use it"
-		ewarn "emerge udev and follow the instruction present"
-		ewarn "here :http://www.gentoo.org/doc/en/udev-guide.xml"
+		ewarn "If you want power management make sure you have SERIAL_PMACZILOG"		ewarn "set to no."
+		ewarn "You can find the voice in Device Drivers -> Character Devices ->"
+		ewarn "Serial Drivers -> PowerMac z80c30 ESCC Support"
 		ewarn "report bugs to lu_zero@gentoo.org"
 	fi
 }

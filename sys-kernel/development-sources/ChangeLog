@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.98 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.99 2004/04/13 15:33:54 lu_zero Exp $
+
+  13 Apr 2004; Luca Barbato <lu_zero@gentoo.org>
+  development-sources-2.6.5.ebuild:
+  Found out the real problem with pmu
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild:
