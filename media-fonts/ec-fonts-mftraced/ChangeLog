@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/ec-fonts-mftraced
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ec-fonts-mftraced/ChangeLog,v 1.1 2004/11/28 18:25:50 agriffis Exp $
+
+*ec-fonts-mftraced-1.0.8 (28 Nov 2004)
+
+  28 Nov 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +ec-fonts-mftraced-1.0.8.ebuild:
+  Add fonts required for lilypond-2.4+
+
