@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e31daa7a542be854199563a7ed70f255 bsf-2.3.0-r2.ebuild 1615
+MD5 bf9daa331b11d12fbdd8ad464b33827c bsf-2.3.0-r2.ebuild 1618
 MD5 b1f89e81ba39808c243bfcebf27dd824 bsf-2.3.0-r1.ebuild 1677
-MD5 3c3c574f4e84bd97fec542d3e8696881 ChangeLog 2451
+MD5 40aa9da415eeadbf9aa2200c2e5f6e0d ChangeLog 2556
 MD5 2a5c0decd09ba5a48289b129458bf44c metadata.xml 829
 MD5 2d349b974ef57925e6b968aa654645b3 files/digest-bsf-2.3.0-r1 133
 MD5 2d349b974ef57925e6b968aa654645b3 files/digest-bsf-2.3.0-r2 133
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCQVxh/rLF9B432nYRAhkFAJ9QO14A6EFlFUJt3/OY2RL3OX5PUgCgxB34
-50uUY934gQKvwUjdleefOjI=
-=dmLe
+iD8DBQFCTvPI06ebR+OMO78RAuDuAKCI4Xk5g4roF9CV0GZaJf8Nsazi6gCffIPR
+Md2HBIsnryKCp92FrGJ4O+k=
+=sFge
 -----END PGP SIGNATURE-----
