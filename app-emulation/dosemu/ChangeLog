@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.18 2004/03/09 17:15:56 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.19 2004/03/27 08:33:00 mr_bones_ Exp $
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> dosemu-1.2.0.ebuild,
+  dosemu-1.2.1.ebuild:
+  inherit flag-o-matic; move replace-flags into src_unpack
 
 *dosemu-1.2.1 (09 Mar 2004)
 

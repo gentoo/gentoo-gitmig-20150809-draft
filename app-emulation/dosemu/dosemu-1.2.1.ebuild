@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.1.ebuild,v 1.1 2004/03/09 17:15:56 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.1.ebuild,v 1.2 2004/03/27 08:33:00 mr_bones_ Exp $
 
-inherit eutils
+inherit flag-o-matic eutils
 
 P_FD=dosemu-freedos-b9-bin
 DESCRIPTION="DOS Emulator"
@@ -19,9 +19,6 @@ DEPEND="X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )
 	sys-libs/slang"
 
-# Has problems with -O3 on some systems
-replace-flags -O[3-9] -O2
-
 src_unpack() {
 	unpack ${P}.tgz
 	cd ${S}
@@ -36,6 +33,9 @@ src_compile() {
 
 	use X || myflags="${myflags} --with-x=no"
 	use svga && myflags="${myflags} --enable-use-svgalib"
+
+	# Has problems with -O3 on some systems
+	replace-flags -O[3-9] -O2
 
 	econf ${myflags} || die "DOSemu Base Configuration Failed"
 
