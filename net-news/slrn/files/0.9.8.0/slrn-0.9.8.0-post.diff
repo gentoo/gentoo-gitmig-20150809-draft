@@ -1,0 +1,12 @@
+--- slrn-0.9.8.0/src/post.c	2003-07-31 19:21:18.000000000 +0200
++++ slrn/src/post.c	2003-09-04 23:56:33.000000000 +0200
+@@ -1233,6 +1234,9 @@
+ 
+    va_start(ap, fmt);
+    Slrn_Post_Obj->po_vprintf(fmt, ap);
++   va_end(ap);
++
++   va_start(ap, fmt);
+    vfprintf(fcc_fp, fmt, ap);
+    va_end(ap);
+ }

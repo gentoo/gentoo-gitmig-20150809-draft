@@ -1,6 +1,17 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.15 2004/02/29 00:24:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.16 2004/06/18 18:30:56 swegener Exp $
+
+*slrn-0.9.8.0-r1 (18 Jun 2004)
+
+  18 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +files/0.9.8.0/slrn-0.9.8.0-mime.diff,
+  +files/0.9.8.0/slrn-0.9.8.0-post.diff,
+  +files/0.9.8.0/slrn-0.9.8.0-ranges.diff,
+  +files/0.9.8.0/slrn-0.9.8.0-ranges2.diff, +slrn-0.9.8.0-r1.ebuild:
+  Added support for decoding yEnc encoded articles using dev-libs/uulib via the
+  local use flag uudeview. Added four patches from upstream maintainers which
+  fix minor issues. Added metadata.xml.
 
   28 Feb 2004; Jason Wever <weeve@gentoo.org> slrn-0.9.8.0.ebuild:
   Stable for sparcenstein.
