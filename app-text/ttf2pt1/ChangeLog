@@ -1,7 +1,14 @@
 # ChangeLog for app-text/ttf2pt1
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.2 2002/06/17 18:22:54 naz Exp $
 
+*ttf2pt1-3.4.0 (1 Feb 2002)
+
+  16 Jun 2002; Michael Nazaroff <naz@gentoo.org> ttf2pt1-3.4.0:
+
+  Updated to the newest version with the Makefile patch as well.
+  This was sent in by Matt Kennedy. Thankyou much :o).
+  
 *ttf2pt1-3.3.3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
