@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.8.2-r1.ebuild,v 1.1 2004/08/04 20:15:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.8.2-r1.ebuild,v 1.2 2004/08/05 07:08:02 mholzer Exp $
 
 inherit webapp
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://tikiwiki.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~ppc ~sparc"
 
