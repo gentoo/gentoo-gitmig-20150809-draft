@@ -1,18 +1,13 @@
 # Add USE flags that don't work on Mac OS X here
-# tcl ebuild overwrites system tcl
-tcltk
-# net-misc/dante doesn't compile
-socks5
 
-selinux
+# alsa will more than likely never compile on os x
+alsa
+
+# cap is for linux kernel
+cap
 
 # Skipping docs for now
-
 doc
-
-fbcon
-directfb
-svga
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
@@ -23,17 +18,21 @@ birdstep
 cpdflib
 db2
 dbmaker
+directfb
 empress
 empress-bcs
 esoob
+fbcon
 filepro
 frontbase
 hyperwave
 informix
 ingres
-oracle7
 oci8
+oracle7
 pfpro
+selinux
 solid
+svga
 sybase
 sybase-ct
