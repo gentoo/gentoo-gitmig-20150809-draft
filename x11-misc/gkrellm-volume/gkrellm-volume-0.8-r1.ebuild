@@ -9,6 +9,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A mixer control plugin for gkrellm"
 SRC_URI="http://gkrellm.luon.net/files/${MY_P}-${PV}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/volume.phtml"
+LICENSE="GPL-2"
 
 DEPEND=">=app-admin/gkrellm-1.0.6"
 

@@ -9,6 +9,7 @@ DESCRIPTION="Base files for Enlightenment epplets and some epplets"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
 HOMEPAGE="http://sourceforge.net/projects/enlightenment"
+LICENSE="GPL-2"
 
 DEPEND=">=x11-base/xfree-4.2.0
 	>=media-libs/imlib-1.9.10

@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.3-r2.ebuild,v 1.1 2002/03/15 15:19:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.3-r2.ebuild,v 1.2 2002/07/08 16:58:05 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox weather monitor"
 SRC_URI="http://www.netmeister.org/apps/${P}.tar.bz2"
 HOMEPAGE="http://www.netmeister.org/apps/bbweather/index.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/blackbox
         >=net-misc/wget-1.7

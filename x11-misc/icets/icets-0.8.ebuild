@@ -1,12 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-0.8.ebuild,v 1.1 2002/06/11 15:14:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-0.8.ebuild,v 1.2 2002/07/08 16:58:06 aliz Exp $
 
 MY_P=${P/./}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="IceWM Theme Editor."
 SRC_URI="http://www.selena.kherson.ua/xvadim/${P}.tar.bz2"
 HOMEPAGE="http://www.selena.kherson.ua/xvadim"
+LICENSE="GPL-2"
 
 DEPEND="virtual/x11
 	x11-libs/qt

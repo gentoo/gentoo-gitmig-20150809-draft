@@ -1,10 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/bubblemon-1.4-r1.ebuild,v 1.3 2002/05/23 06:50:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/bubblemon-1.4-r1.ebuild,v 1.4 2002/07/08 16:58:05 aliz Exp $
 
 DESCRIPTION="A fun monitoring applet for your desktop, complete with swimming duck"
 HOMEPAGE="http://www.ne.jp/asahi/linux/timecop"
+LICENSE="GPL-2"
 
 S=${WORKDIR}/${PN}-dockapp-${PV}
 SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${PN}-dockapp-${PV}.tar.gz"

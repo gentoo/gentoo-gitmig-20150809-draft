@@ -9,6 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="a Image-Watcher-Plugin for Gkrellm."
 SRC_URI="mirror://sourceforge/gkrellkam/${MY_P}.tar.gz"
 HOMEPAGE="http://gkrellkam.sourceforge.net"
+LICENSE="GPL-2"
 
 DEPEND=">=app-admin/gkrellm-1.2.11"
 

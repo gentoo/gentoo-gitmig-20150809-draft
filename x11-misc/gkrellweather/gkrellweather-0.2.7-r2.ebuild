@@ -11,6 +11,7 @@ info"
 SRC_URI="http://www.cse.unsw.edu.au/~flam/repository/c/gkrellm/${P}.tar.gz
 	http://ftp.debian.org/debian/pool/main/g/${PN}/${DEBPATCH}"
 HOMEPAGE="http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html"
+LICENSE="GPL-2"
 
 DEPEND=">=app-admin/gkrellm-1.2.9
 	>=net-misc/wget-1.5.3"

@@ -1,13 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/asclock/asclock-2.0.12.ebuild,v 1.1 2002/06/19 14:36:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/asclock/asclock-2.0.12.ebuild,v 1.2 2002/07/08 16:58:05 aliz Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Clock applet for AfterStep"
 SRC_URI="http://www.tigr.net/afterstep/download/asclock/${P}.tar.gz"
 HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc virtual/x11"
 

@@ -8,6 +8,7 @@ S=${WORKDIR}/${PN}
 DESCRIPTION="Gnome hints configuration plugin for gkrellm"
 SRC_URI="http://web.wt.net/~billw/gkrellm/Plugins/${P}.tar.gz"
 HOMEPAGE="http://web.wt.net/~billw/gkrellm/Plugins.html"
+LICENSE="GPL-2"
 
 DEPEND=">=app-admin/gkrellm-1.2.2-r1
 	gnome-base/gnome-libs"

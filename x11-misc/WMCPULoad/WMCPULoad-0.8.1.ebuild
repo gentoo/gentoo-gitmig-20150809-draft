@@ -1,7 +1,7 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
 # Maintainer: Vitaly Kushneriuk<vitaly@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/WMCPULoad/WMCPULoad-0.8.1.ebuild,v 1.1 2002/01/30 22:03:08 vitaly Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/WMCPULoad/WMCPULoad-0.8.1.ebuild,v 1.2 2002/07/08 16:58:05 aliz Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,6 +10,7 @@ SRC_URI="http://www.sh.rim.or.jp/~ssato/src/${P}.tar.bz2"
 HOMEPAGE="http://www.sh.rim.or.jp/~ssato/wmcpuload-e.html"
 DEPEND="x11-base/xfree"
 #RDEPEND=""
+LICENSE="GPL-2"
 
 src_compile() {
 	./configure \

@@ -8,6 +8,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="a Reminder Plugin for Gkrellm"
 SRC_URI="http://engr.oregonstate.edu/~simonsen/reminder/${MY_P}.tar.gz"
 HOMEPAGE="http://www.engr.orst.edu/~simonsen/reminder"
+LICENSE="GPL-2"
 
 DEPEND=">=app-admin/gkrellm-1.2.1"
 

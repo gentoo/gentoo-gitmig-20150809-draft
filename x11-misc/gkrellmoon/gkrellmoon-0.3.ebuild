@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Seemant Kulleen <seemant@rocketmail.com>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmoon/gkrellmoon-0.3.ebuild,v 1.4 2002/05/27 17:27:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmoon/gkrellmoon-0.3.ebuild,v 1.5 2002/07/08 16:58:06 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GKrellM plugin of the famous wmMoonClock dockapp"
 SRC_URI="mirror://sourceforge/gkrellmoon/${P}.tar.gz"
 HOMEPAGE="http://gkrellmoon.sourceforge.net/"
+LICENSE="GPL-2"
 
 DEPEND=">=app-admin/gkrellm-1.0.6
 		=x11-libs/gtk+-1.2*
