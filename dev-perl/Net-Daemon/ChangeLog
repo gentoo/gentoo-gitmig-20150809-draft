@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.10 2003/04/06 16:17:22 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.11 2003/06/16 13:57:22 mcummings Exp $
+
+*Net-Daemon-0.37 (16 Jun 2003)
+
+  16 Jun 2003; Michael Cummings <mcummings@gentoo.org> Net-Daemon-0.37.ebuild:
+  CPAN version bump; testing needed
 
 *Net-Daemon-0.36-r1 (29 Oct 2002)
 
