@@ -2,6 +2,7 @@
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+hardened
 
 # Paul de Vrieze <pauldv@gentoo.org>
 # There is no java in this profile (if there is it must be available). Without
