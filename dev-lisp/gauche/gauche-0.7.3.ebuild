@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.3.ebuild,v 1.2 2004/02/04 13:24:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.3.ebuild,v 1.3 2004/02/14 05:48:57 hattya Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gauche.sf.net"
 DESCRIPTION="A Unix system friendly Scheme Interpreter"
 SRC_URI="mirror://sourceforge/gauche/Gauche-${PV}.tgz"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 S="${WORKDIR}/Gauche-${PV}"
 
