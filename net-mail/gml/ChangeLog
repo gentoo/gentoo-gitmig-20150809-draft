@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/gml
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/ChangeLog,v 1.1 2004/10/28 19:37:27 chrb Exp $
+
+*gml-0.5 (28 Oct 2004)
+
+  28 Oct 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +gml-0.5.ebuild:
+  new package
+
