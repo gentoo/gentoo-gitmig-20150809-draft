@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.411 2004/06/04 03:29:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.412 2004/06/04 03:33:27 lv Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -391,7 +391,8 @@ sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patch (deprecated)
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount (deprecated)
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
-sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp 
+sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
+sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:freetype - Enables Freetype font support
