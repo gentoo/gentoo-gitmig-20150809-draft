@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.1 2004/03/07 17:20:58 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.2 2004/03/25 08:32:45 mr_bones_ Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -42,9 +42,9 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	( gtk2? >=x11-libs/gtk+-2.1.1 :
-		=x11-libs/gtk+-1.2* )
-		crypt? ( >=app-crypt/gnupg-1.2.1 )"
+	gtk2? ( >=x11-libs/gtk+-2.1.1 )
+	!gtk2? ( =x11-libs/gtk+-1.2* )
+	crypt? ( >=app-crypt/gnupg-1.2.1 )"
 
 DEPEND="${RDEPEND}
 	virtual/glibc
