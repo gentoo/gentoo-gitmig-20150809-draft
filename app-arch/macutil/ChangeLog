@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/macutil
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.6 2005/01/01 11:48:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.7 2005/03/20 10:20:04 mkennedy Exp $
+
+  20 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/2.0_beta3-gentoo.patch, macutil-2.0_beta3.ebuild:
+  Compilation fix for GCC 3.4.x; Resolves Bug #76435
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   macutil-2.0_beta3.ebuild:

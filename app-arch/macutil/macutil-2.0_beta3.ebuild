@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.6 2005/01/01 11:48:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.7 2005/03/20 10:20:04 mkennedy Exp $
 
 inherit eutils
 
@@ -23,6 +23,8 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	unshar ${MY_P/-/}.shar
+	epatch ${FILESDIR}/${PV}-gentoo.patch || die
+
 	cd ${PN}
 
 	sed -i.orig \
