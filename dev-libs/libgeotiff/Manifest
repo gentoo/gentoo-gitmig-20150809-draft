@@ -1,3 +1,5 @@
-MD5 2670ae007c90747a19502fa83d205a21 ChangeLog 360
-MD5 865f325657d445e5e8c4e8d9a560736c libgeotiff-1.2.0.ebuild 1284
+MD5 079072749153e8584ca1f8f5b076d641 libgeotiff-1.2.0.ebuild 1283
+MD5 865f325657d445e5e8c4e8d9a560736c libgeotiff-1.2.1.ebuild 1284
+MD5 2a0e8d7773b14a8ebad3e4c2efaf865f ChangeLog 534
 MD5 e77842442c89596a723f6ce5745cfd4d files/digest-libgeotiff-1.2.0 68
+MD5 0acd02f68bfcde1cc5f3f9db8992c99b files/digest-libgeotiff-1.2.1 68

@@ -1,8 +1,16 @@
 # ChangeLog for dev-libs/libgeotiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/ChangeLog,v 1.1 2003/06/19 18:57:09 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/ChangeLog,v 1.2 2003/10/06 01:55:49 rphillips Exp $
+
+*libgeotiff-1.2.1 (05 Oct 2003)
+
+  19 Jun 2003; Ryan Phillips <rphillips@gentoo.org> :
+  version bump
 
 *libgeotiff-1.2.0 (19 Jun 2003)
+
+  05 Oct 2003; Ryan Phillips <rphillips@gentoo.org> :
+  marked stable
 
   19 Jun 2003; Ryan Phillips <rphillips@gentoo.org> :
 
