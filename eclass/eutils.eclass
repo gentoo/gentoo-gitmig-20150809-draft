@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.109 2004/10/02 01:42:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.110 2004/10/02 17:47:48 iggy Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1437,4 +1437,27 @@ strip-linguas() {
 	else
 		export LINGUAS="${newls}"
 	fi
+}
+
+# moved from kernel.eclass since they are generally useful outside of
+# kernel.eclass -iggy (20041002)
+
+# the following functions are useful in kernel module ebuilds, etc.
+# for an example see ivtv or drbd ebuilds
+
+# set's ARCH to match what the kernel expects
+set_arch_to_kernel() {
+	export EUTILS_ECLASS_PORTAGE_ARCH="${ARCH}"
+	case ${ARCH} in
+		x86)	export ARCH="i386";;
+		amd64)	export ARCH="x86_64";;
+		hppa)	export ARCH="parisc";;
+		mips)	export ARCH="mips";;
+		*)	export ARCH="${ARCH}";;
+	esac
+}
+
+# set's ARCH back to what portage expects
+set_arch_to_portage() {
+	export ARCH="${EUTILS_ECLASS_PORTAGE_ARCH}"
 }
