@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.6.2.ebuild,v 1.1 2003/07/01 21:39:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.6.2.ebuild,v 1.2 2003/08/21 10:07:00 robbat2 Exp $
 
 IUSE="ssl pam tcpd"
 
@@ -26,7 +26,7 @@ src_compile() {
 	econf \
 		--enable-fhs \
 		--with-shadow \
-		--with-db3 \
+		--with-bdb=/usr \
 		${myconf} || die "netatalk configure failed"
 
 	emake || die "netatalk emake failed"
