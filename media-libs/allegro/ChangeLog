@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.39 2005/01/19 00:43:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.40 2005/01/29 08:20:50 mr_bones_ Exp $
+
+*allegro-4.1.18 (29 Jan 2005)
+
+  29 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> +allegro-4.1.18.ebuild:
+  version bump (bug #79920)
 
   18 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> allegro-4.0.3.ebuild,
   allegro-4.1.14.ebuild, allegro-4.1.17.ebuild:
