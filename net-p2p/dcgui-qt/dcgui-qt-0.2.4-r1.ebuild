@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2.4.ebuild,v 1.4 2003/03/20 13:29:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/dcgui-qt-0.2.4-r1.ebuild,v 1.1 2003/05/06 08:08:13 aliz Exp $
 
 inherit kde-functions
 
