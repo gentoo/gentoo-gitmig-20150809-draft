@@ -1,15 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 869061a38def437a61db9ba85c261cf0 ChangeLog 4126
 MD5 3c56dcf0da026c9a6ef0e7c204419785 cscope-15.5.ebuild 1417
+MD5 30bec4e6f63e214a702d4fe6f156c29d ChangeLog 4378
 MD5 79094d1585cb050b3855fbfe440f22b9 metadata.xml 790
+MD5 bdb27b8f93948afdfc3d67d6bf2762e0 cscope-15.5-r1.ebuild 1599
 MD5 28ddc553966bf7045758be324600f5c8 files/50xcscope-gentoo.el 95
 MD5 25ad9fe446a7cabf4c482bbe150c7eaa files/digest-cscope-15.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBapy0LLFUmVNQ7rkRAjRYAKCXBxoR8vePI5OAwr5yR2ViSUow6wCgumUa
-MnM03vayzxV/vj21ewD9+wI=
-=g7FI
------END PGP SIGNATURE-----
+MD5 25ad9fe446a7cabf4c482bbe150c7eaa files/digest-cscope-15.5-r1 63
+MD5 22e8d669b78f301c45e9075e2793dfd3 files/15.5-noclobber-tempfile-rexotec.patch 1055

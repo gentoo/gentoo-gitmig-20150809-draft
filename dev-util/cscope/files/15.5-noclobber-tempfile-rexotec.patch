@@ -1,0 +1,31 @@
+diff -Naurp src/build.c src/build.c
+--- src/build.c	2003-03-05 11:43:59.000000000 +0100
++++ src/build.c	2004-11-17 15:01:01.000000000 +0100
+@@ -333,7 +333,7 @@ build(void)
+ 		(void) fprintf(stderr, "cscope: cannot open file %s\n", reffile);
+ 		myexit(1);
+ 	}
+-	if (invertedindex == YES && (postings = myfopen(temp1, "wb")) == NULL) {
++	if (invertedindex == YES && (postings = myfopen(temp1, "w+xb")) == NULL) {
+ 		cannotwrite(temp1);
+ 		cannotindex();
+ 	}
+diff -Naurp src_old/display.c src/display.c
+--- src/display.c	2003-09-04 17:54:02.000000000 +0200
++++ src/display.c	2004-11-17 15:01:01.000000000 +0100
+@@ -754,13 +754,13 @@ BOOL
+ writerefsfound(void)
+ {
+ 	if (refsfound == NULL) {
+-		if ((refsfound = myfopen(temp1, "wb")) == NULL) {
++		if ((refsfound = myfopen(temp1, "w+xb")) == NULL) {
+ 			cannotopen(temp1);
+ 			return(NO);
+ 		}
+ 	} else {
+ 		(void) fclose(refsfound);
+-		if ( (refsfound = myfopen(temp1, "wb")) == NULL) {
++		if ( (refsfound = myfopen(temp1, "w+xb")) == NULL) {
+ 			postmsg("Cannot reopen temporary file");
+ 			return(NO);
+ 		}

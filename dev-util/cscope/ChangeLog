@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.30 2004/10/11 14:50:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.31 2004/11/18 08:57:25 mkennedy Exp $
+
+*cscope-15.5-r1 (18 Nov 2004)
+
+  18 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org>
+  +files/15.5-noclobber-tempfile-rexotec.patch, +cscope-15.5-r1.ebuild:
+  Resolves Bug #71595: race condition on temporary file; Correct webscope
+  installation path.
 
   11 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> -cscope-15.3.ebuild,
   -cscope-15.4-r1.ebuild, -cscope-15.4.ebuild:
