@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bab47c87bf71d41c98ea8f2f3e3575cb kochi-substitute-20030809-r3.ebuild 811
+MD5 f8a28289095f6b6cceb2279d651b571a kochi-substitute-20030809-r3.ebuild 810
 MD5 8af1d0afad1256bfe017f01b7ad1b980 kochi-substitute-20030809.ebuild 1889
-MD5 30e51f344c109f22f8f1ad53af3901a6 ChangeLog 3111
+MD5 ba8bcbbf7a7a8ed4ee380ae77972b947 ChangeLog 3223
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 427fb835eff1a0a3681ace193512a885 kochi-substitute-20030809-r2.ebuild 1315
 MD5 13dfd0e0ce07b13f410914df34b4b45f files/digest-kochi-substitute-20030809 79
@@ -12,7 +12,7 @@ MD5 13dfd0e0ce07b13f410914df34b4b45f files/digest-kochi-substitute-20030809-r3 7
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (Darwin)
 
-iD8DBQFBZAXEVWNWqTUmv+0RAr/WAKCeZrz3YqhY8KctZnJxPu0jQRKMLwCfVSOG
-1hbfndDdQk1ZIp1x13VN67I=
-=qSe9
+iD8DBQFBe57PVWNWqTUmv+0RAmu8AKCSXr/9rgO/00iho29ZtnUhk9eLGwCfaZN4
+/MAG6mtGVW/4seUmCCntih8=
+=HxSv
 -----END PGP SIGNATURE-----
