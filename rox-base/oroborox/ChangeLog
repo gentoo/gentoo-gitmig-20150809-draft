@@ -1,0 +1,11 @@
+# ChangeLog for rox-base/oroborox
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.1 2004/12/01 15:27:02 sergey Exp $
+
+*oroborox-0.9.5 (01 Dec 2004)
+
+  01 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +oroborox-0.9.5.ebuild:
+  First commit of OroboROX. Thanks to Alexander Simonov <devil@gentoo.org.ua>
+  (Bug #51996) for the ebuild.
+
