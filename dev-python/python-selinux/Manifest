@@ -1,4 +1,4 @@
-MD5 d74ee283a3a09409a143392e34f59676 python-selinux-2.8.ebuild 713
-MD5 8d3288743c81488bed063f68f4e24bce ChangeLog 1941
+MD5 d74ee283a3a09409a143392e34f59676 python-selinux-2.9.ebuild 713
+MD5 4abeefe2b336c73bb207fb016f254bf3 ChangeLog 2113
 MD5 c998c579cfc08c6860f78304a67cfce9 metadata.xml 525
-MD5 c0ffdb10ea7c1a7a9ea4de71b4bb0ae4 files/digest-python-selinux-2.8 69
+MD5 f3229c5f869b618fd461c9b67c91368a files/digest-python-selinux-2.9 69
