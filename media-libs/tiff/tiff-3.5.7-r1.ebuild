@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.9 2003/02/12 18:11:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.10 2003/02/13 12:56:22 vapier Exp $
 
 MY_P=${P/tiff-/tiff-v}
 S=${WORKDIR}/${MY_P}

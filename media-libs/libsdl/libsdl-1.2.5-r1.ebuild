@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.3 2003/01/21 19:13:44 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.4 2003/02/13 12:50:26 vapier Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0-r1.ebuild,v 1.2 2003/02/09 15:21:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0-r1.ebuild,v 1.3 2003/02/13 12:44:57 vapier Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 

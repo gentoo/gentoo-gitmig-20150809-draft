@@ -1,7 +1,7 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Georgi Georgiev <chutz@chubaka.net>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.0.ebuild,v 1.5 2003/02/07 22:11:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.0.ebuild,v 1.6 2003/02/13 12:57:36 vapier Exp $
 
 S="${WORKDIR}/${PN}core-${PV}"
 DESCRIPTION="XviD, a high performance/quality MPEG-4 video de-/encoding solution."

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.4.2-r1.ebuild,v 1.8 2003/01/02 05:35:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.4.2-r1.ebuild,v 1.9 2003/02/13 12:53:50 vapier Exp $
 
 SRC_URI="http://plib.sourceforge.net/dist/${P}.tar.gz"
 HOMEPAGE="http://plib.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpio/libgpio-20020507.ebuild,v 1.7 2003/01/05 19:00:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpio/libgpio-20020507.ebuild,v 1.8 2003/02/13 12:48:55 vapier Exp $
 
 DESCRIPTION="I/O library for GPhoto 2.x"
 SRC_URI="http://www.ibiblio.org/gentoo/${P}.tar.bz2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.12 2002/12/09 04:26:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.13 2003/02/13 12:53:38 vapier Exp $
 
 IUSE="python tcltk java perl"
 
