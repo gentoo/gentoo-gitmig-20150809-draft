@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.23 2004/10/17 23:02:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.24 2004/11/05 23:01:07 corsair Exp $
 
 inherit gnome.org eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
 
 RDEPEND="<gnome-base/gnome-vfs-1.9.0
 	>=media-libs/gdk-pixbuf-0.11.0-r1"

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.77 2004/10/17 23:02:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.78 2004/11/05 23:01:07 corsair Exp $
+
+  05 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  control-center-1.4.0.5-r1.ebuild:
+  Marked ~ppc64; bug #69450
 
   18 Oct 2004; Alastair Tse <liquidx@gentoo.org>
   +files/control-center-1.4.0.5-cflags.patch,
