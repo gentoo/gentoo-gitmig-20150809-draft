@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/vcp-1.7.2.ebuild,v 1.5 2004/12/05 00:58:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/vcp-2.2.ebuild,v 1.1 2004/12/05 00:58:03 ka0ttic Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -8,9 +8,9 @@ DESCRIPTION="copy files/directories in a curses interface"
 HOMEPAGE="http://members.iinet.net.au/~lynx/vcp/"
 SRC_URI="http://members.iinet.net.au/~lynx/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
@@ -25,4 +25,5 @@ src_install() {
 	doman vcp.1 || die "doman failed"
 	insinto /etc
 	newins vcp.conf.sample vcp.conf || die "newins failed"
+	dodoc Changelog README INSTALL || die "dodoc failed"
 }
