@@ -1,0 +1,32 @@
+diff -ur camel.new/providers/imap/camel-imap-store.c camel/providers/imap/camel-imap-store.c
+--- camel.new/providers/imap/camel-imap-store.c	2004-10-11 16:24:23.000000000 +0100
++++ camel/providers/imap/camel-imap-store.c	2004-10-16 19:15:55.001915080 +0100
+@@ -533,7 +533,7 @@
+ 		serv = g_alloca(16);
+ 		sprintf(serv, "%d", service->url->port);
+ 	} else
+-		serv = "imap";
++		serv = "imap2";
+ 	
+ 	if (ssl_mode != USE_SSL_NEVER) {
+ #ifdef HAVE_SSL
+Only in camel/providers/imap: camel-imap-store.c~
+diff -ur camel.new/providers/smtp/camel-smtp-transport.c camel/providers/smtp/camel-smtp-transport.c
+--- camel.new/providers/smtp/camel-smtp-transport.c	2004-10-11 16:24:25.000000000 +0100
++++ camel/providers/smtp/camel-smtp-transport.c	2004-10-16 19:17:28.491702472 +0100
+@@ -260,12 +260,12 @@
+ 			tcp_stream = camel_tcp_stream_ssl_new_raw (service->session, service->url->host, STARTTLS_FLAGS);
+ 		} else {
+ 			if (service->url->port == 0)
+-				serv = "smtps";
++				serv = "ssmtp";
+ 			tcp_stream = camel_tcp_stream_ssl_new (service->session, service->url->host, SSL_PORT_FLAGS);
+ 		}
+ #else
+ 		if (!try_starttls && service->url->port == 0)
+-			serv = "smtps";
++			serv = "ssmtp";
+ 		
+ 		camel_exception_setv (ex, CAMEL_EXCEPTION_SERVICE_UNAVAILABLE,
+ 				      _("Could not connect to %s (port %s): %s"),
+Only in camel/providers/smtp: camel-smtp-transport.c~

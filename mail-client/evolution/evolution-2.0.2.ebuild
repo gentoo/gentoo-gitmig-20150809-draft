@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.0.ebuild,v 1.6 2004/10/11 13:15:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.1 2004/10/16 19:22:16 liquidx Exp $
 
-inherit eutils virtualx gnome2 flag-o-matic
+inherit eutils virtualx gnome2 flag-o-matic alternatives
 
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 HOMEPAGE="http://ximian.com/products/evolution/"
@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips ~hppa"
 IUSE="ssl mozilla ldap doc spell ipv6 kerberos crypt nntp debug pda"
 
 # Top stanza are ximian deps
-RDEPEND=">=gnome-extra/libgtkhtml-3.2.1
-	>=gnome-extra/gal-2.2.1
-	>=gnome-extra/evolution-data-server-1
-	>=net-libs/libsoup-2.2
+RDEPEND=">=gnome-extra/libgtkhtml-3.2.3
+	>=gnome-extra/gal-2.2.3
+	>=gnome-extra/evolution-data-server-1.0.2
+	>=net-libs/libsoup-2.2.1
 	>=dev-libs/glib-2
 	>=dev-libs/libxml2-2
 	>=gnome-base/gconf-2
@@ -63,9 +63,9 @@ ELTCONF="--reverse-deps"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	epatch ${FILESDIR}/evolution-1.5.93-addressbooklibs.patch
+	# bug #66166 -- temporary workaround until new baselayout exists
+	epatch ${FILESDIR}/${P}-gentoo_etc_services.patch
 }
 
 src_compile() {
@@ -124,6 +124,7 @@ src_compile() {
 
 pkg_postinst() {
 
+	alternatives_auto_makesym "/usr/bin/evolution" "/usr/bin/evolution-[0-9].[0-9]"
 	gnome2_gconf_install ${GCONFFILEPATH}
 	einfo "To change the default browser if you are not using GNOME, do:"
 	einfo "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
