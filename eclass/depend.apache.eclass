@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.1 2004/07/16 10:48:22 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.2 2004/07/16 11:22:57 stuart Exp $
 
 ECLASS="depend.apache"
 INHERITED="$INHERITED $ECLASS"
 IUSE="apache apache2"
+
+DEPEND="$DEPEND apache? ( =net-www/apache-1* ) apache2? ( =net-www/apache-2* )"
 
 # call this function to work out which version of the apache web server
 # your ebuild should be installing itself to use
