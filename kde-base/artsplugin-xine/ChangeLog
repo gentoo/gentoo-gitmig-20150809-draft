@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/artsplugin-xine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-xine/ChangeLog,v 1.7 2005/03/21 16:38:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-xine/ChangeLog,v 1.8 2005/03/25 01:10:56 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> artsplugin-xine-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   21 Mar 2005; Carsten Lohrke <carlo@gentoo.org> artsplugin-xine-3.4.0.ebuild:
   depend on xine-lib-1.0, #86136

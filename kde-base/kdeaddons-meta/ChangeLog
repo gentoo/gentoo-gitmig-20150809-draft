@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.21 2005/03/19 17:23:01 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.22 2005/03/25 01:17:44 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> kdeaddons-meta-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   19 Mar 2005; Simone Gotti <motaboy@gentoo.org>
   kdeaddons-meta-3.4.0.ebuild:
