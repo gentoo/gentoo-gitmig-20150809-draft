@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Tom von Schwerdtner <tvon@etria.org>
 
 PARENT=id3lib-3.8.0pre2
 A=${PARENT}.tar.gz

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.4.2-r1.ebuild,v 1.1 2002/02/11 04:43:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.4.2-r1.ebuild,v 1.2 2002/07/11 06:30:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://plib.sourceforge.net/dist/${P}.tar.gz"

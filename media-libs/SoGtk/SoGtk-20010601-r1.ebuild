@@ -1,8 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gentoo.org>
-# Maintainer: Desktop Team <desktop@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.4 2002/06/20 20:41:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.5 2002/07/11 06:30:38 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A Gtk Interface for coin"

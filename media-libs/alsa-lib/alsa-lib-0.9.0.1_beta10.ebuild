@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0.1_beta10.ebuild,v 1.2 2002/02/17 07:05:21 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0.1_beta10.ebuild,v 1.3 2002/07/11 06:30:38 drobbins Exp $
 
 ######################## Begin version munge #########################
 #This alsa version appends a alphabetic character to the beta version.

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.4.2.ebuild,v 1.1 2001/10/07 19:37:54 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.4.2.ebuild,v 1.2 2002/07/11 06:30:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 

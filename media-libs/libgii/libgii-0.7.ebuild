@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.7.ebuild,v 1.2 2001/05/01 17:58:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.7.ebuild,v 1.3 2002/07/11 06:30:39 drobbins Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}

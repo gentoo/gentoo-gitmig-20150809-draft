@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.2-r1.ebuild,v 1.3 2002/04/27 11:47:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.2-r1.ebuild,v 1.4 2002/07/11 06:30:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a library for running svga graphics on the console"

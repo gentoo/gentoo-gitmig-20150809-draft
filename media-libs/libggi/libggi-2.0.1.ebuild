@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.2 2002/06/05 19:42:20 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.3 2002/07/11 06:30:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"

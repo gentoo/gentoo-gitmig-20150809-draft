@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Gabriele Giorgetti <stroke@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-sound/monkey-sound-0.4.1.ebuild,v 1.2 2002/06/01 15:45:52 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-sound/monkey-sound-0.4.1.ebuild,v 1.3 2002/07/11 06:30:39 drobbins Exp $
 
 inherit gnome2
 

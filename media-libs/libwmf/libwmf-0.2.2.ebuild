@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License
-# Maintainer: George Shapovalov <georges@cco.caltech.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.2.ebuild,v 1.4 2002/07/10 22:06:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.2.ebuild,v 1.5 2002/07/11 06:30:39 drobbins Exp $
 
 #The configure script finds the 5.50 ghostscript Fontmap file while run.
 #This will probably work, especially since the real one (6.50) in this case

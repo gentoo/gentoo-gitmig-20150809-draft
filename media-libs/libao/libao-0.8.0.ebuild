@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.0.ebuild,v 1.2 2001/09/18 22:56:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.0.ebuild,v 1.3 2002/07/11 06:30:39 drobbins Exp $
 
 A=${PN}-${PV}.tar.gz
 S=${WORKDIR}/${P}

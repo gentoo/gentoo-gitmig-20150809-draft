@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.0.1_beta10.ebuild,v 1.2 2002/02/17 18:01:58 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.0.1_beta10.ebuild,v 1.3 2002/07/11 06:30:38 drobbins Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture OSS compatibility layer"
 HOMEPAGE="http://www.alsa-project.org/"

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0_rc3.ebuild,v 1.1 2002/01/02 23:31:20 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0_rc3.ebuild,v 1.2 2002/07/11 06:30:39 drobbins Exp $
 
 
 S=${WORKDIR}/${PN}-1.0rc3

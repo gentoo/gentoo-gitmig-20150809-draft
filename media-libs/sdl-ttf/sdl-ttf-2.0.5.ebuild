@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author David Creswick <davidc@sat.net>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.5.ebuild,v 1.1 2002/04/17 17:20:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.5.ebuild,v 1.2 2002/07/11 06:30:39 drobbins Exp $
 
 MY_P="${P/sdl-/SDL_}"
 S="${WORKDIR}/${MY_P}"
