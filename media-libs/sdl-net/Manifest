@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0816a7c5f3a729b880fd6d168564da3b ChangeLog 1658
-MD5 20b49405ed1acec1dd55d522ef2722a0 sdl-net-1.2.4.ebuild 646
+MD5 b46002e2920591fb262caa7eeb7db621 ChangeLog 1765
 MD5 788788e0bea79f60eaeff2cb8c6a6223 sdl-net-1.2.5.ebuild 685
+MD5 20b49405ed1acec1dd55d522ef2722a0 sdl-net-1.2.4.ebuild 646
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 df9292fba38ccb74f6c1b3ecdc0ead40 files/digest-sdl-net-1.2.4 65
 MD5 f119d85316c2c2ebabc21b58d7194d53 files/digest-sdl-net-1.2.5 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwE4KroRuSHgZdywRArVCAJ0af30y/msP2gqXlDiZokvwgfBzPgCfRwwo
-K4bZU2fVMbnMGHUcO5zqn3w=
-=kl2R
------END PGP SIGNATURE-----

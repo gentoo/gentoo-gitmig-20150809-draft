@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52e9f0c25c5be679b651257d95a170b3 ChangeLog 2765
-MD5 583673dbf2a4a07468a6146e77f87862 metadata.xml 814
-MD5 84c4e6ae440bbfe67e4e23ea7f5e1358 sdl-gfx-2.0.10.ebuild 957
 MD5 c8cd31586eb8cc4419ebc0fede0e4bb7 sdl-gfx-2.0.3.ebuild 829
-MD5 63f6e2b59e814aba83a1a9267e0e2109 sdl-gfx-2.0.11.ebuild 1002
+MD5 4e16ea6c0a2234ec5c42cb72bd0c2d22 ChangeLog 2870
 MD5 de1e2da7580107aea70f797f3c8a8120 sdl-gfx-2.0.12.ebuild 1032
-MD5 81f3af6a2533cf89abf822f01f7a313b files/digest-sdl-gfx-2.0.10 66
-MD5 7a00e26bd01466e910de637d68c59d75 files/digest-sdl-gfx-2.0.3 65
+MD5 63f6e2b59e814aba83a1a9267e0e2109 sdl-gfx-2.0.11.ebuild 1002
+MD5 84c4e6ae440bbfe67e4e23ea7f5e1358 sdl-gfx-2.0.10.ebuild 957
+MD5 583673dbf2a4a07468a6146e77f87862 metadata.xml 814
 MD5 85eb6dadc0bb6b9c8d7b09a21f91c021 files/digest-sdl-gfx-2.0.11 66
+MD5 7a00e26bd01466e910de637d68c59d75 files/digest-sdl-gfx-2.0.3 65
 MD5 b34c36172cb6dea2efbbfa3352a6dd6f files/digest-sdl-gfx-2.0.12 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBazXcHTu7gpaalycRAl36AJ0avB2ITuTV9R4D9eFlLtdjnCN8XgCfdgCf
-gN7Hi3RW9g5X5LGN2gP0Svc=
-=UssC
------END PGP SIGNATURE-----
+MD5 81f3af6a2533cf89abf822f01f7a313b files/digest-sdl-gfx-2.0.10 66

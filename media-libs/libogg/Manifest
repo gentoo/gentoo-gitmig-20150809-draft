@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d34dd81caab4beab2d0888ab44302285 ChangeLog 3752
+MD5 991c574da5694a6ade76b763d0f6e4d3 libogg-1.1.2.ebuild 851
+MD5 adcd8f56f76efaa275fce62fdc13c5e4 ChangeLog 3859
 MD5 0cfcdb6f571e3644c81e57a116617445 libogg-1.0.ebuild 1249
 MD5 400e7834a5a855764d347b3426e58ad5 libogg-1.1.ebuild 860
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 8d64108b306ba4e0de2ea0f304cb383e libogg-1.1.1.ebuild 867
-MD5 991c574da5694a6ade76b763d0f6e4d3 libogg-1.1.2.ebuild 851
-MD5 cbb43595399aa585c5246a9fa024dfc6 files/digest-libogg-1.0 62
-MD5 12db5904065ddca9ba537a41acabe033 files/digest-libogg-1.1 62
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 4d79721bf9b4c725e460b92e51ac0db7 files/digest-libogg-1.1.1 64
+MD5 12db5904065ddca9ba537a41acabe033 files/digest-libogg-1.1 62
+MD5 cbb43595399aa585c5246a9fa024dfc6 files/digest-libogg-1.0 62
 MD5 cdafb2eb72c29878b8f8909e35641486 files/digest-libogg-1.1.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwnqbroRuSHgZdywRAgeLAJ0baiQIod2PmsHP+lUzEoLm14cOuQCcDMA/
-uTBzZcfXDANDyEzu461xLyg=
-=Wgey
------END PGP SIGNATURE-----
