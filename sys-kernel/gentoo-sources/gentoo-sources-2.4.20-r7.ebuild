@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.6 2003/10/11 20:31:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.7 2003/10/19 12:20:38 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -121,6 +121,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-sched-interrupt.patch
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-mdcount.patch
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-devfs-snd-fix.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-ipt-realm.patch
 
 }
 

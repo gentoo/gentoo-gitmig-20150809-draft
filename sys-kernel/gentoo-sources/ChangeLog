@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.35 2003/10/11 20:31:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.36 2003/10/19 12:20:38 plasmaroo Exp $
+
+  19 Oct 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r7.ebuild,
+  files/gentoo-sources-2.4.20-ipt-realm.patch:
+  Added a patch to fix the ipt_realm.c bugs we have floating around...
 
   11 Oct 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r7.ebuild,
   files/gentoo-sources-2.4.20-cs46xx-gcc33.patch:
