@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.9.1.ebuild,v 1.1 2003/11/11 09:38:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-2.0.1.ebuild,v 1.1 2004/03/30 04:13:13 solar Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="${IUSE} pam zlib"
 
-S=${WORKDIR}/${PN}
+#S=${WORKDIR}/
 
 DEPEND="virtual/glibc
 	dev-libs/libpcre
@@ -25,10 +25,10 @@ src_unpack() {
 	unpack ${A}
 	[ -f ${FILESDIR}/${P}-gentoo.diff ] && epatch ${FILESDIR}/${P}-gentoo.diff
 	cd ${S}
-	if [ "$PV" = "1.9" ]; then
-		einfo "Patching Makefile.in to avoid sandbox problems"
-		sed -e s:"INSTALL) -d /var":"INSTALL) -d \$(DESTDIR)/var":g < Makefile.in > Makefile.out && mv Makefile.{out,in}
-	fi
+	#if [ "$PV" = "1.9" ]; then
+	#	einfo "Patching Makefile.in to avoid sandbox problems"
+	#	sed -i -e s:"INSTALL) -d /var":"INSTALL) -d \$(DESTDIR)/var":g Makefile.in
+	#fi
 }
 
 src_compile() {
