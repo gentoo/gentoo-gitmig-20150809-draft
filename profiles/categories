@@ -13,6 +13,7 @@ app-emulation
 app-gnustep
 app-i18n
 app-laptop
+app-macos
 app-misc
 app-office
 app-pda
@@ -98,6 +99,7 @@ sec-policy
 sys-apps
 sys-boot
 sys-cluster
+sys-darwin
 sys-devel
 sys-fs
 sys-kernel
