@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20-r1.ebuild,v 1.1 2004/07/01 22:14:12 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20-r1.ebuild,v 1.2 2004/07/18 03:00:13 tgall Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 MY_P="FreeWnn-${PV/_alpha/-a0}"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.freewnn.org/pub/FreeWnn/alpha/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64 ppc64"
 IUSE="X ipv6"
 
 DEPEND="virtual/libc
@@ -30,6 +30,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	use ppc64 && gnuconfig_update; get_number_of_jobs
+
 	econf \
 		--disable-cWnn \
 		--disable-kWnn \
