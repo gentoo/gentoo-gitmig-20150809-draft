@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28-r4.ebuild,v 1.1 2004/08/17 11:41:42 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28-r4.ebuild,v 1.2 2004/09/12 11:59:37 dsd Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ SRC_URI="http://www.pavuk.org/sw/${PN}-0.9pl28.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
-DEPEND=">=sys-apps/sed-4.0.5
+DEPEND=">=sys-apps/sed-4
 	sys-devel/gettext
 	sys-libs/zlib
 	ssl? ( dev-libs/openssl )

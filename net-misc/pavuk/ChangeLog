@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.8 2004/08/17 11:41:42 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.9 2004/09/12 11:59:37 dsd Exp $
+
+  12 Sep 2004; Daniel Drake <dsd@gentoo.org> pavuk-0.9.28-r1.ebuild,
+  pavuk-0.9.28-r2.ebuild, pavuk-0.9.28-r3.ebuild, pavuk-0.9.28-r4.ebuild:
+  Mark 0.9.28-r4 stable x86/ppc/sparc. Remove old versions.
 
 *pavuk-0.9.28-r4 (17 Aug 2004)
 
