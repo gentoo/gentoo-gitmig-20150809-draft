@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.18 2002/12/22 18:30:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.19 2003/02/04 22:21:59 agriffis Exp $
+
+  04 Feb 2003; Aron Griffis <agriffis@gentoo.org> gdk-pixbuf-0.22.0.ebuild :
+  Mark stable on alpha
 
 *gdk-pixbuf-0.22.0 (22 Dec 2002)
 
