@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmng
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.20 2004/10/31 22:40:02 kito Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.21 2005/04/03 19:07:54 greg_g Exp $
+
+*libmng-1.0.8-r1 (03 Apr 2005)
+
+  03 Apr 2005; Gregorio Guidi <greg_g@gentoo.org> +libmng-1.0.8-r1.ebuild:
+  Fix detection of liblcms.
 
   31 Oct 2004; Kito <kito@gentoo.org> libmng-1.0.8.ebuild:
   added ~ppc-macos
