@@ -1,3 +1,3 @@
-;;; tamago site-lisp configuration
 
+;;; tamago site-lisp configuration
 
