@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.4.ebuild,v 1.3 2005/01/04 12:59:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.5.ebuild,v 1.1 2005/01/28 22:54:23 mholzer Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 IUSE=""
-KEYWORDS="~x86 ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="virtual/php
 	media-gfx/graphviz"
@@ -71,4 +71,14 @@ src_install() {
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 
 	webapp_src_install
+}
+
+pkg_config() {
+	einfo "Type in your MySQL root password to create an empty tiki database:"
+	mysqladmin -u root -p create tikiwiki
+	einfo ""
+	einfo ""
+	einfo "Now, point your browser to the location of tiki-install.php"
+	einfo "    ==> e.g. http://localhost/tikiwiki/tiki-install.php"
+	einfo ""
 }
