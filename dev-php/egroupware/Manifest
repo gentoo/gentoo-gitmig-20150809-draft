@@ -1,4 +1,6 @@
 MD5 e1a0184f1063eb3689c0ec8b4dd3b218 egroupware-0.9.99.006.ebuild 1559
+MD5 e1a0184f1063eb3689c0ec8b4dd3b218 egroupware-0.9.99.008.ebuild 1559
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 ab98f4fe7db6aeec8daca888a5f06ad2 ChangeLog 834
 MD5 587c40f1b798704605e606c2054a9dc2 files/digest-egroupware-0.9.99.006 77
+MD5 da8e1975f63b112c72f732c2d6279354 files/digest-egroupware-0.9.99.008 77
