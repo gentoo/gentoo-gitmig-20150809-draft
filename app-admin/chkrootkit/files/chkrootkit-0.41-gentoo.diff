@@ -1,6 +1,6 @@
 --- chkrootkit-0.41/chkrootkit	2003-06-21 04:09:09.000000000 +0200
-+++ chkrootkit	2003-07-11 23:33:59.763190408 +0200
-@@ -10,6 +10,15 @@
++++ chkrootkit	2003-07-16 19:00:58.466540216 +0200
+@@ -10,6 +10,14 @@
  # (C)1997-2003 Nelson Murilo, Pangeia Informatica, AMS Foundation and others.
  # All rights reserved
  
@@ -10,13 +10,12 @@
 +CHKPROC="/usr/sbin/chkproc"
 +CHKWTMP="/usr/sbin/chkwtmp"
 +CHECK_WTMPX="/usr/sbin/check_wtmpx"
-+# ebuild doesn't install chkrootkit's strings; use gnus.
-+STRINGS="/usr/bin/strings"
++STRINGS="/usr/sbin/strings-static"
 +
  ### workaround for some Bourne shell implementations
  unalias login > /dev/null 2>&1
  unalias ls > /dev/null 2>&1
-@@ -116,7 +125,7 @@
+@@ -116,7 +124,7 @@
  
      if [ "${EXPERT}" = "t" ]; then
          expertmode_output "${egrep} ^asp ${ROOTDIR}etc/inetd.conf"
@@ -25,7 +24,7 @@
          return 5
      fi
  
-@@ -132,7 +141,7 @@
+@@ -132,7 +140,7 @@
          STATUS=${INFECTED}
      fi
  
@@ -34,7 +33,7 @@
         then
            echo "INFECTED"
            STATUS=${INFECTED}
-@@ -150,22 +159,22 @@
+@@ -150,22 +158,22 @@
         return ${NOT_TESTED}
      fi
  
@@ -63,7 +62,7 @@
        return ${NOT_TESTED}
      fi
  
-@@ -173,31 +182,31 @@
+@@ -173,31 +181,31 @@
      LASTLOG=`loc lastlog lastlog "${ROOTDIR}var/log ${ROOTDIR}var/adm"`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -103,7 +102,7 @@
               then
               if [ "${QUIET}" != "t" ]; then \
                  echo "nothing deleted in /var/adm/wtmpx"; fi
-@@ -207,12 +216,12 @@
+@@ -207,12 +215,12 @@
         WTMP=`loc wtmp wtmp "${ROOTDIR}var/log ${ROOTDIR}var/adm"`
  
         if [ "${EXPERT}" = "t" ]; then
@@ -118,7 +117,7 @@
      then
        if [ "${QUIET}" != "t" ]; then echo "nothing deleted"; fi
      fi
-@@ -251,7 +260,7 @@
+@@ -251,7 +259,7 @@
      prog=""
      if [  \( "${SYSTEM}" = "Linux"  -o \( "${SYSTEM}" = "FreeBSD" -a \
         ${V} -gt 43 \) \) -a "${ROOTDIR}" = "/" ]; then
@@ -127,7 +126,7 @@
        [ ! -x ./chkdirs ] && prog="$prog ./chkdirs"
        if [ "$prog" != "" ]; then
  #        echo "not tested: can't exec $prog"
-@@ -261,7 +270,7 @@
+@@ -261,7 +269,7 @@
        if [ "${EXPERT}" = "t" ]; then
           [ -r /proc/ksyms ] &&  ${egrep} -i "adore|sebek" < /proc/ksyms 2>/dev/null
           [ -d /proc/knark ] &&  ${ls} -la /proc/knark 2> /dev/null
@@ -136,7 +135,7 @@
            return 5
        fi
  
-@@ -282,7 +291,7 @@
+@@ -282,7 +290,7 @@
           echo "Warning: Knark LKM installed"
        fi
  
@@ -145,7 +144,7 @@
        then
             if [ "${QUIET}" != "t" ]; then echo "nothing detected"; fi
        else
-@@ -454,7 +463,7 @@
+@@ -454,7 +462,7 @@
        ${egrep} "\.hk" ${ROOTDIR}etc/rc.d/init.d/network 2>/dev/null
  
        ## Suckit rootkit
@@ -154,7 +153,7 @@
  
        ## Volc  rootkit
        expertmode_output "${ls} ${ROOTDIR}usr/bin/volc"
-@@ -863,7 +872,7 @@
+@@ -863,7 +871,7 @@
     ### Suckit
     if [ -f /sbin/init ]; then
        if [ "${QUIET}" != "t" ];then printn "Searching for Suckit rootkit ... "; fi
@@ -163,7 +162,7 @@
          echo "Warning: /sbin/init INFECTED"
        else
           if [ "${QUIET}" != "t" ]; then echo "nothing found"; fi
-@@ -1008,19 +1017,19 @@
+@@ -1008,19 +1016,19 @@
      CMD=`loc chfn chfn $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -186,7 +185,7 @@
                  ${egrep} -c "${GENERIC_ROOTKIT_LABEL}"` -ne 2 ]
            then
               STATUS=${INFECTED}
-@@ -1035,16 +1044,16 @@
+@@ -1035,16 +1043,16 @@
      REDHAT_PAM_LABEL="*NOT*"
  
      if [ "${EXPERT}" = "t" ]; then
@@ -206,7 +205,7 @@
               >/dev/null 2>&1
                  then
                  :
-@@ -1053,7 +1062,7 @@
+@@ -1053,7 +1061,7 @@
               fi
            fi;;
         FreeBSD)
@@ -215,7 +214,7 @@
               then
               STATUS=${INFECTED}
            fi;;
-@@ -1066,13 +1075,13 @@
+@@ -1066,13 +1074,13 @@
      CMD=`loc login login $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -231,7 +230,7 @@
            return ${INFECTED}
         else
            return ${NOT_TESTED}
-@@ -1080,7 +1089,7 @@
+@@ -1080,7 +1088,7 @@
      fi
      GENERAL="^root$"
      TROJED_L_L="vejeta|xlogin|^@\(#\)klogin\.c|lets_log|sukasuka|/usr/lib/.ark?|SucKIT"
@@ -240,7 +239,7 @@
      if [ ${ret} -gt 0 ]; then
          case ${ret} in
          1) [ "${SYSTEM}" = "OpenBSD" -a ${V} -le 27 -o ${V} -ge 30 ] && \
-@@ -1091,7 +1100,7 @@
+@@ -1091,7 +1099,7 @@
          *) STATUS=${INFECTED};;
          esac
      fi
@@ -249,7 +248,7 @@
         then
          STATUS=${INFECTED}
      fi
-@@ -1107,14 +1116,14 @@
+@@ -1107,14 +1115,14 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -266,7 +265,7 @@
      >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1132,11 +1141,11 @@
+@@ -1132,11 +1140,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -280,7 +279,7 @@
      >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1155,11 +1164,11 @@
+@@ -1155,11 +1163,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -294,7 +293,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1176,11 +1185,11 @@
+@@ -1176,11 +1184,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -308,7 +307,7 @@
         >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1198,11 +1207,11 @@
+@@ -1198,11 +1206,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -322,7 +321,7 @@
         >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1220,11 +1229,11 @@
+@@ -1220,11 +1228,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -336,7 +335,7 @@
         >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1242,11 +1251,11 @@
+@@ -1242,11 +1250,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -350,7 +349,7 @@
         >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1260,11 +1269,11 @@
+@@ -1260,11 +1268,11 @@
      CMD=`loc ls ls $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -364,7 +363,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1277,11 +1286,11 @@
+@@ -1277,11 +1285,11 @@
      CMD=`loc du du $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -378,7 +377,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1301,11 +1310,11 @@
+@@ -1301,11 +1309,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -392,7 +391,7 @@
      >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1319,11 +1328,11 @@
+@@ -1319,11 +1327,11 @@
      CMD=`loc netstat netstat $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -406,7 +405,7 @@
      >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -1338,11 +1347,11 @@
+@@ -1338,11 +1346,11 @@
     CMD=`loc ps ps $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -420,7 +419,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1360,11 +1369,11 @@
+@@ -1360,11 +1368,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -434,7 +433,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1382,11 +1391,11 @@
+@@ -1382,11 +1390,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -448,7 +447,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1404,11 +1413,11 @@
+@@ -1404,11 +1412,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -462,7 +461,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1426,11 +1435,11 @@
+@@ -1426,11 +1434,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -476,7 +475,30 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1469,11 +1478,11 @@
+@@ -1443,18 +1451,18 @@
+ 
+    if [ "${SYSTEM}" = "Linux" ]
+    then
+-      if [ ! -x ./strings ]; then
+-        printn "can't exec ./strings-static, "
++      if [ ! -x ${STRINGS} ]; then
++        printn "can't exec ${STRINGS}, "
+         return ${NOT_TESTED}
+       fi
+ 
+       if [ "${EXPERT}" = "t" ]; then
+-          expertmode_output "./strings -a ${CMD}"
++          expertmode_output "${STRINGS} -a ${CMD}"
+           return 5
+       fi
+ 
+       ### strings must be a statically linked binary.
+-      if ./strings-static -a ${CMD} > /dev/null 2>&1
++      if ${STRINGS} -a ${CMD} > /dev/null 2>&1
+       then
+          STATUS=${INFECTED}
+       fi
+@@ -1469,11 +1477,11 @@
     CMD=`loc basename basename $pth`
  
     if [ "${EXPERT}" = "t" ]; then
@@ -490,7 +512,7 @@
     then
         STATUS=${INFECTED}
     fi
-@@ -1493,11 +1502,11 @@
+@@ -1493,11 +1501,11 @@
      CMD=`loc dirname dirname $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -504,7 +526,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1518,11 +1527,11 @@
+@@ -1518,11 +1526,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -518,7 +540,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1534,12 +1543,12 @@
+@@ -1534,12 +1542,12 @@
      CMD=`loc rpcinfo rpcinfo $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -533,7 +555,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1555,12 +1564,12 @@
+@@ -1555,12 +1563,12 @@
      CMD=`loc date date $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -548,7 +570,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1576,12 +1585,12 @@
+@@ -1576,12 +1584,12 @@
      CMD=`loc echo echo $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -563,7 +585,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1597,12 +1606,12 @@
+@@ -1597,12 +1605,12 @@
      CMD=`loc env env $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -578,7 +600,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1624,11 +1633,11 @@
+@@ -1624,11 +1632,11 @@
         fi
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -592,7 +614,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1642,11 +1651,11 @@
+@@ -1642,11 +1650,11 @@
         return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -606,7 +628,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1661,11 +1670,11 @@
+@@ -1661,11 +1669,11 @@
         return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -620,7 +642,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1679,11 +1688,11 @@
+@@ -1679,11 +1687,11 @@
         return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -634,7 +656,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1697,11 +1706,11 @@
+@@ -1697,11 +1705,11 @@
          return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -648,7 +670,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1713,12 +1722,12 @@
+@@ -1713,12 +1721,12 @@
      CMD=`loc write write $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -663,7 +685,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1735,11 +1744,11 @@
+@@ -1735,11 +1743,11 @@
      W_INFECTED_LABEL="uname -a"
  
      if [ "${EXPERT}" = "t" ]; then
@@ -677,7 +699,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1755,11 +1764,11 @@
+@@ -1755,11 +1763,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -691,7 +713,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1791,7 +1800,7 @@
+@@ -1791,7 +1799,7 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -700,7 +722,7 @@
          return 5
      fi
      STATUS=${INFECTED}
-@@ -1808,12 +1817,12 @@
+@@ -1808,12 +1816,12 @@
      MAIL_INFECTED_LABEL="sh -i"
  
      if [ "${EXPERT}" = "t" ]; then
@@ -715,7 +737,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1833,12 +1842,12 @@
+@@ -1833,12 +1841,12 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -730,7 +752,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1855,11 +1864,11 @@
+@@ -1855,11 +1863,11 @@
      CMD=`loc egrep egrep $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -744,7 +766,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1872,12 +1881,12 @@
+@@ -1872,12 +1880,12 @@
      CMD=`loc grep grep $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -759,7 +781,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -1899,11 +1908,11 @@
+@@ -1899,11 +1907,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -773,7 +795,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1921,10 +1930,10 @@
+@@ -1921,10 +1929,10 @@
         fi
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -786,7 +808,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1939,10 +1948,10 @@
+@@ -1939,10 +1947,10 @@
           return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -799,7 +821,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1957,10 +1966,10 @@
+@@ -1957,10 +1965,10 @@
           return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -812,7 +834,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1975,10 +1984,10 @@
+@@ -1975,10 +1983,10 @@
           return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -825,7 +847,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -1997,10 +2006,10 @@
+@@ -1997,10 +2005,10 @@
          return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -838,7 +860,7 @@
      then
         STATUS=${INFECTED}
      fi
-@@ -2012,18 +2021,18 @@
+@@ -2012,18 +2020,18 @@
      CMD="${ROOTDIR}sbin/ifconfig"
  
      if [ "${EXPERT}" = "t" ]; then
@@ -860,7 +882,7 @@
      >/dev/null 2>&1
      then
         STATUS=${INFECTED}
-@@ -2043,12 +2052,12 @@
+@@ -2043,12 +2051,12 @@
         return ${NOT_FOUND}
      fi
      if [ "${EXPERT}" = "t" ]; then
@@ -875,7 +897,7 @@
      then
          STATUS=${INFECTED}
          if ${egrep} "^#.*rshd" ${ROOTDIR}etc/inetd.conf >/dev/null 2>&1 -o \
-@@ -2084,11 +2093,11 @@
+@@ -2084,11 +2092,11 @@
      CMD=${ROOTDIR}${CMD}
  
      if [ "${EXPERT}" = "t" ]; then
@@ -889,7 +911,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -2105,11 +2114,11 @@
+@@ -2105,11 +2113,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -903,7 +925,7 @@
         > /dev/null 2>&1
      then
          STATUS=${INFECTED}
-@@ -2126,11 +2135,11 @@
+@@ -2126,11 +2134,11 @@
      CMD=`loc su su $pth`
  
      if [ "${EXPERT}" = "t" ]; then
@@ -917,7 +939,7 @@
      then
          STATUS=${INFECTED}
      fi
-@@ -2150,11 +2159,11 @@
+@@ -2150,11 +2158,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
@@ -931,7 +953,7 @@
  > /dev/null 2>&1
      then
          STATUS=${INFECTED}
-@@ -2202,11 +2211,11 @@
+@@ -2202,11 +2210,11 @@
      fi
  
      if [ "${EXPERT}" = "t" ]; then
