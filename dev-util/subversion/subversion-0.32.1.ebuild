@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.32.1.ebuild,v 1.5 2004/06/25 02:47:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.32.1.ebuild,v 1.6 2004/09/06 18:56:00 ciaranm Exp $
 
-inherit elisp-common libtool
+inherit elisp-common libtool eutils
 
 BACKUP_ADMIN="svnadmin-0.27"
 BACKUP_ADMIN_DIR="/usr/lib/subversion/bin"
@@ -57,7 +57,7 @@ pkg_setup() {
 		einfo ""
 		einfo "More details:"
 		einfo "http://svn.collab.net/repos/svn/trunk/notes/repos_upgrade_HOWTO"
-		sleep 5
+		epause 5
 	fi
 }
 
