@@ -1,30 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.3123-r2.ebuild,v 1.4 2003/02/13 13:32:08 vapier Exp $
-
-inherit eutils
-
-# Make sure Portage does _NOT_ strip symbols.  Need both lines for
-# Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.3123-r2.ebuild,v 1.5 2003/08/03 03:14:07 vapier Exp $
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_kernel-${NV_V}"
 S="${WORKDIR}/${NV_PACKAGE}"
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
-SRC_URI="http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
 HOMEPAGE="http://www.nvidia.com/"
+SRC_URI="http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
 
-# The slow needs to be set to $KV to prevent unmerges of
-# modules for other kernels.
+# The slow needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="-* x86"
+RESTRICT="nostrip"
 
-DEPEND="virtual/linux-sources
-	>=sys-apps/portage-1.9.10"
-
+DEPEND="virtual/linux-sources"
 
 src_unpack() {
 	unpack ${A}
@@ -107,4 +98,3 @@ pkg_postinst() {
 	einfo "boot up, you need to add \"NVdriver\" to your /etc/modules.autoload."
 	einfo
 }
-

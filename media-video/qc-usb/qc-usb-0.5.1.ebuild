@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.5.1.ebuild,v 1.1 2003/07/06 18:04:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.5.1.ebuild,v 1.2 2003/08/03 03:14:40 vapier Exp $
 
-IUSE=""
 DESCRIPTION="Logitech USB Quickcam Express Linux Driver Modules"
 HOMEPAGE="http://qce-ga.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qce-ga/${P}.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+
 DEPEND="virtual/linux-sources"
 
 pkg_setup() {
@@ -18,12 +18,10 @@ pkg_setup() {
 }
 
 src_compile() {
-	# namespace conflict in makefile
-	unset DEBUG
 	emake all || die
 }
 
-src_install () {
+src_install() {
 	# install the driver in the right palce
 	insinto "/lib/modules/${KV}/misc"
 	doins quickcam.o

@@ -1,31 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4496.ebuild,v 1.1 2003/07/28 22:48:38 azarah Exp $
-
-inherit eutils
-
-# Make sure Portage does _NOT_ strip symbols.  Need both lines for
-# Portage 1.8.9+
-DEBUGBUILD="yes"
-RESTRICT="nostrip"
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4496.ebuild,v 1.2 2003/08/03 03:09:48 vapier Exp $
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 S="${WORKDIR}/${NV_PACKAGE}-pkg0"
 DESCRIPTION="XFree86 GLX libraries for the NVIDIA's X driver"
-SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-pkg0.run"
 HOMEPAGE="http://www.nvidia.com/"
+SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-pkg0.run"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -alpha -hppa -mips -arm"
+KEYWORDS="-* ~x86"
+RESTRICT="nostrip"
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
 DEPEND="virtual/glibc
 	>=x11-base/xfree-4.2.0-r9
 	>=x11-base/opengl-update-1.3
 	~media-video/nvidia-kernel-${PV}"
-
 PROVIDE="virtual/opengl"
 
 src_unpack() {
@@ -115,4 +108,3 @@ pkg_postinst() {
 	einfo "To use the Nvidia GLX, run \"opengl-update nvidia\""
 	einfo
 }
-
