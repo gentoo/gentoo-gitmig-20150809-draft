@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.64 2004/04/20 02:15:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.65 2004/04/24 02:13:33 robbat2 Exp $
+
+*courier-imap-3.0.2-r1 (23 Apr 2004)
+
+  23 Apr 2004; Robin H. Johnson <robbat2@gentoo.org>
+  courier-imap-3.0.2-r1.ebuild, files/courier-imap-3.0.2-disable-fam.diff:
+  bug #48838, make it possible to disable fam properly, configure.in patch by
+  <robbat2@gentoo.org>
 
 *courier-imap-2.1.2-r2 (19 Apr 2004)
 
