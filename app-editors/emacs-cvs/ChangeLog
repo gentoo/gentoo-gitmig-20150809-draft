@@ -1,8 +1,13 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.7 2003/02/12 03:46:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.8 2003/03/13 16:54:35 mkennedy Exp $
 
 *emacs-cvs-21.3.50 (22 Nov 2002)
+
+  12 Mar 2003; Matthew Kennedy <mkennedy@gentoo.org>
+  emacs-cvs-21.3.50.ebuid :
+
+  Added support for GTK+ 2. Added GNOME menu support.
 
   06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> emacs-cvs-21.3.50.ebuild :
 
