@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.5.ebuild,v 1.2 2004/07/01 22:30:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.5.ebuild,v 1.3 2004/07/15 01:43:23 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ldap berkdb mysql pam nls postgres fam selinux"
+IUSE="berkdb debug fam ipv6 ldap mysql nls pam postgres selinux"
 PROVIDE="virtual/imapd"
 # not compatible with >=sys-libs/db-4
 RDEPEND="virtual/libc
