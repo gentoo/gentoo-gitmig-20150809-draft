@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.2 2003/09/07 00:53:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.3 2003/09/07 18:35:55 azarah Exp $
 
 IUSE="nls build"
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	!build? ( >=sys-libs/ncurses-5.2-r2
-		nls? ( sys-devel/gettext ) )"
+	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
