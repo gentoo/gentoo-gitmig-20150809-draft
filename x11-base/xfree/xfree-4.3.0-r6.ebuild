@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.31 2004/04/28 22:29:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.32 2004/05/05 15:57:11 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -366,10 +366,13 @@ src_unpack() {
 	echo "#define XVendorString \"Gentoo Linux (The XFree86 Project, Inc ${PV}, revision ${PR}-${PATCH_VER})\"" \
 		>> config/cf/host.def
 
+	# Pending http://bugs.gentoo.org/show_bug.cgi?id=49038 and
+	# http://freedesktop.org/cgi-bin/bugzilla/show_bug.cgi?id=600
+	#
 	# Makes ld bail at link time on undefined symbols
 	# Suggested by Mike Harris <mharris@redhat.com>
-	echo "#define SharedLibraryLoadFlags  -shared -Wl,-z,defs" \
-		>> config/cf/host.def
+	#echo "#define SharedLibraryLoadFlags  -shared -Wl,-z,defs" \
+	#	>> config/cf/host.def
 
 	# FHS/rational install locations
 	echo "#define ManDirectoryRoot /usr/share/man" >> config/cf/host.def

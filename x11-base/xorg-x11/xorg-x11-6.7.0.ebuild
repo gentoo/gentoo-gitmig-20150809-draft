@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.37 2004/04/25 22:44:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.38 2004/05/05 15:55:45 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -401,10 +401,13 @@ fi
 		echo "#define XVendorString \"Gentoo Linux (The X.Org Foundation ${PV}, revision ${PR}-${PATCH_VER})\"" \
 			>> config/cf/host.def
 
+		# Pending http://bugs.gentoo.org/show_bug.cgi?id=49038 and
+		# http://freedesktop.org/cgi-bin/bugzilla/show_bug.cgi?id=600
+		#
 		# Makes ld bail at link time on undefined symbols
 		# Suggested by Mike Harris <mharris@redhat.com>
-		echo "#define SharedLibraryLoadFlags  -shared -Wl,-z,defs" \
-			>> config/cf/host.def
+		#echo "#define SharedLibraryLoadFlags  -shared -Wl,-z,defs" \
+		#	>> config/cf/host.def
 
 		# FHS install locations for docs
 		echo "#define ManDirectoryRoot /usr/share/man" >> config/cf/host.def
