@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.7 2004/04/08 02:34:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.8 2004/04/09 19:13:12 spyderous Exp $
+
+  09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-179.ebuild:
+  Fix incorrect sparc keyword to ~sparc.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-179.ebuild,
   xterm-184.ebuild, files/xterm-184-remove-termcap-breakage.patch:
