@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.14.ebuild,v 1.1 2001/07/29 00:55:42 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.14.ebuild,v 1.2 2001/07/30 06:53:54 blocke Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Shared library implementing a Lisp dialect"
-SRC_URI="ftp://librep.sourceforge.net/pub/librep/${A}"
+SRC_URI="http://prdownloads.sourceforge.net/librep/${A}"
 HOMEPAGE="http://librep.sourceforge.net/"
 
 DEPEND="virtual/glibc
