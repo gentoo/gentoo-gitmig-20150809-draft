@@ -1,0 +1,88 @@
+Index: bfd/elf32-hppa.c
+===================================================================
+RCS file: /cvs/src/src/bfd/elf32-hppa.c,v
+retrieving revision 1.104
+diff -u -p -r1.104 elf32-hppa.c
+--- bfd/elf32-hppa.c	21 Aug 2003 14:00:05 -0000	1.104
++++ bfd/elf32-hppa.c	27 Aug 2003 06:58:29 -0000
+@@ -3126,10 +3126,12 @@ final_link_relocate (asection *input_sec
+ 		     bfd_vma value,
+ 		     struct elf32_hppa_link_hash_table *htab,
+ 		     asection *sym_sec,
+-		     struct elf32_hppa_link_hash_entry *h)
++		     struct elf32_hppa_link_hash_entry *h,
++		     struct bfd_link_info *info)
+ {
+   int insn;
+   unsigned int r_type = ELF32_R_TYPE (rel->r_info);
++  unsigned int orig_r_type = r_type;
+   reloc_howto_type *howto = elf_hppa_howto_table + r_type;
+   int r_format = howto->bitsize;
+   enum hppa_reloc_field_selector_type_alt r_field;
+@@ -3152,6 +3154,25 @@ final_link_relocate (asection *input_sec
+ 	      input_section->output_offset +
+ 	      input_section->output_section->vma);
+ 
++  /* If we are linking statically, convert DLT relocs to DPREL relocs */
++  if (info->static_link)
++    {
++      switch (r_type)
++        {
++          case R_PARISC_DLTIND21L:
++            r_type = R_PARISC_DPREL21L;
++	    break;
++
++          case R_PARISC_DLTIND14R:
++            r_type = R_PARISC_DPREL14R;
++	    break;
++
++          case R_PARISC_DLTIND14F:
++            r_type = R_PARISC_DPREL14F;
++	    break;
++	}
++    }
++
+   switch (r_type)
+     {
+     case R_PARISC_PCREL12F:
+@@ -3373,6 +3394,16 @@ final_link_relocate (asection *input_sec
+       break;
+     }
+ 
++  if (info->static_link)
++    {
++      if (orig_r_type == R_PARISC_DLTIND21L)
++	{
++            /* addil LR'0(%dp),%r1 */
++            insn = 0x2b600000;
++	}
++      /* don't have to touch the RHS */
++    }
++
+   insn = hppa_rebuild_insn (insn, val, r_format);
+ 
+   /* Update the instruction word.  */
+@@ -3806,7 +3837,7 @@ elf32_hppa_relocate_section (bfd *output
+ 	}
+ 
+       r = final_link_relocate (input_section, contents, rel, relocation,
+-			       htab, sym_sec, h);
++			       htab, sym_sec, h, info);
+ 
+       if (r == bfd_reloc_ok)
+ 	continue;
+Index: ld/lexsup.c
+===================================================================
+RCS file: /cvs/src/src/ld/lexsup.c,v
+retrieving revision 1.66
+diff -u -p -r1.66 lexsup.c
+--- ld/lexsup.c	20 Aug 2003 08:37:15 -0000	1.66
++++ ld/lexsup.c	27 Aug 2003 06:58:31 -0000
+@@ -675,6 +675,7 @@ parse_args (unsigned argc, char **argv)
+ 	    link_info.unresolved_syms_in_objects = how_to_report_unresolved_symbols;
+ 	  if (link_info.unresolved_syms_in_shared_libs == RM_NOT_YET_SET)
+ 	    link_info.unresolved_syms_in_shared_libs = how_to_report_unresolved_symbols;
++	  link_info.static_link = TRUE;
+ 	  break;
+ 	case OPTION_CREF:
+ 	  command_line.cref = TRUE;

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r3.ebuild,v 1.3 2003/09/20 18:32:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r3.ebuild,v 1.4 2003/09/20 21:50:58 pappy Exp $
 
 IUSE="nls bootstrap build"
 
@@ -69,6 +69,11 @@ src_unpack() {
 	# This increase c++ linking 2 to 3 times, bug #27540.
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.6-cxx-speedup.patch
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.6-bfd-elf-interp.patch
+
+	if [ "${ARCH}" == "hppa" ] || [ "${ARCH}" == "hppa64" ]
+	then
+		epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.6-hppa-static.diff
+	fi
 
 	use x86 &> /dev/null \
 		&& epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-array-sects-compat.patch
