@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.107 2003/07/02 12:51:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.108 2003/07/09 16:45:56 frogger Exp $
+
+  09 Jul 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.3-r1.ebuild:
+  Updated ProPolice to protector-8.  This includes minor
+  bugfixes on PPC that popped up in certain (rare) cases.
 
   02 Jul 2003; Luca Barbato <lu_zero@gentoo.org> gcc-3.2.3-r1.ebuild:
   set added the mergel workaround, G4 users should reemerge or change the
