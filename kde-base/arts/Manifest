@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8cc5d4a308421ce214841039ca5acafb ChangeLog 13832
-MD5 6d8f52083c2f7e211ceff377e2d60432 arts-1.2.2.ebuild 2822
-MD5 ef89331ed031b4b935d8439e89ff9c34 arts-1.1.5.ebuild 2755
-MD5 9c1e707e6fe4ef2698b71e3ca63b7fdc arts-1.2.0.ebuild 2577
+MD5 d351522cc7c57496387a9030a0cfad3d arts-1.3.0_rc1.ebuild 2846
 MD5 9728ed48d91357351b7d10e33d19b0b5 arts-1.2.1.ebuild 2818
-MD5 0564f0255b1bab06873a6d7dd63d0316 arts-1.3.0_beta1.ebuild 2842
-MD5 54bf631f573c7eccc78e1db4e13a9c36 arts-1.2.3.ebuild 2830
 MD5 3fe6c2c7b85d267de3c0fd1a47dc504a arts-1.3.0_beta2.ebuild 2842
+MD5 ef89331ed031b4b935d8439e89ff9c34 arts-1.1.5.ebuild 2755
+MD5 54bf631f573c7eccc78e1db4e13a9c36 arts-1.2.3.ebuild 2830
+MD5 9c1e707e6fe4ef2698b71e3ca63b7fdc arts-1.2.0.ebuild 2577
+MD5 8400901ad2691956aa5f0910b62d172b ChangeLog 13988
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 6d8f52083c2f7e211ceff377e2d60432 arts-1.2.2.ebuild 2822
+MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
+MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.2-buffer.patch 745
 MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.1-buffer.patch 745
+MD5 185a4720c0e94a1546ee383016fc3e3c files/arts-vorbis-fix.dif 1136
 MD5 2d584d662a2b0b0e7a278bde6cd42e8f files/digest-arts-1.1.5 63
-MD5 1fc0f59ed1b61c1221f4156dac3569b7 files/digest-arts-1.2.2 63
 MD5 31e77598f97a91673f69ed4c44bd1f57 files/digest-arts-1.2.0 63
 MD5 4adfa9a4a83af1e64f93a0b430bf7532 files/digest-arts-1.2.1 64
-MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.2-buffer.patch 745
-MD5 185a4720c0e94a1546ee383016fc3e3c files/arts-vorbis-fix.dif 1136
-MD5 91a10544960d61e02097b5283de6af56 files/digest-arts-1.3.0_beta1 64
-MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.3-buffer.patch 745
+MD5 1fc0f59ed1b61c1221f4156dac3569b7 files/digest-arts-1.2.2 63
 MD5 ac0526184e3193af65a2a8aa7fd5feab files/digest-arts-1.2.3 63
-MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
 MD5 38ee883582a01168452b2a230fbe5d5f files/digest-arts-1.3.0_beta2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBD44EHTu7gpaalycRAiw6AJ0coBZtWAiGclCXrqpDeq/Bb7HdrQCghTwi
-wgQ/vHDYqRDWUnjR8C8gHO8=
-=7dwJ
------END PGP SIGNATURE-----
+MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.3-buffer.patch 745
+MD5 5b843b2f2638f738ade84397bd294db7 files/digest-arts-1.3.0_rc1 67
