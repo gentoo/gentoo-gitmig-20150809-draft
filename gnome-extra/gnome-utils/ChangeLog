@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.49 2004/03/24 11:44:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.50 2004/04/17 09:40:33 lv Exp $
+
+  17 Apr 2004; Travis Tilley <lv@gentoo.org> gnome-utils-2.4.1.ebuild:
+  stable on amd64
 
 *gnome-utils-2.6.0 (24 Mar 2004)
 

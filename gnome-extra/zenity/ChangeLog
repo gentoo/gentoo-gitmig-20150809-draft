@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.19 2004/03/31 22:07:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.20 2004/04/17 09:37:03 lv Exp $
+
+  17 Apr 2004; Travis Tilley <lv@gentoo.org> zenity-1.8.ebuild:
+  stable on amd64
 
 *zenity-2.6.0 (1 Apr 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.8.ebuild,v 1.8 2004/03/23 20:44:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.8.ebuild,v 1.9 2004/04/17 09:37:03 lv Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64 ~mips"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
