@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.10.ebuild,v 1.1 2003/10/26 18:40:00 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.10.ebuild,v 1.2 2003/11/12 04:07:49 leonardop Exp $
 
 inherit gnome2 debug libtool
 
@@ -33,6 +33,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	>=sys-devel/gettext-0.11"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-${PV}-gcc2_fixes.patch
+}
 
 pkg_setup () {
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
