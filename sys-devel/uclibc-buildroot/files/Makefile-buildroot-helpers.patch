@@ -1,0 +1,29 @@
+# ADDED BY the uClibc-buildroot - ebuild.
+
+patched: $(LINUX_DIR)/.unpacked $(BUILD_DIR) \
+	 $(STAGING_DIR) $(TARGET_DIR) $(TOOL_BUILD_DIR)  \
+	$(GCC_DIR)/.patched $(BINUTILS_DIR)/.patched \
+	$(UCLIBC_DIR)/.unpacked
+
+uclibc-defconfig:
+	touch $(UCLIBC_DIR)/.configured
+
+# $(MAKE) -C $(UCLIBC_DIR) HAVE_DOT_CONFIG=y headers shared
+
+gcchacks: $(GCC_DIR)/.gcc3_3_build_hacks
+
+
+#TO FINISH
+
+all-compile: uclibc-defconfig $(BINUTILS_DIR1)/binutils/objdump \
+	$(GCC_BUILD_DIR1)/.compiled
+
+extras-compile: $(TINYLOGIN_DIR)/tinylogin
+	$(MAKE) CC=$(TARGET_CC) CROSS="$(TARGET_CROSS)" PREFIX="$(TARGET_DIR)" \
+		-C $(BUSYBOX_DIR)
+
+all-install:  $(STAGING_DIR)  $(TARGET_DIR) \
+	$(STAGING_DIR)/lib/libc.a $(STAGING_DIR)/bin/$(ARCH)-linux-gcc
+	$(MAKE) -C $(UCLIBC_DIR) PREFIX=$(STAGING_DIR) install_dev
+
+extras-install: $(TARGET_DIR)/bin/busybox $(TARGET_DIR)/bin/tinylogin

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040131.ebuild,v 1.1 2004/02/01 06:55:03 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040131.ebuild,v 1.2 2004/02/03 01:10:20 dragonheart Exp $
 
 inherit eutils crosscompile
 
@@ -13,7 +13,7 @@ TINYLOGINVER=1.4
 
 DESCRIPTION="Embedded root file system"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="mirror://gnu/gcc/releases/gcc/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
+SRC_URI="mirror://gnu/gcc/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
 	http://dev.gentoo.org/~dragonheart/buildroot-${PV}.tar.bz2
 	mirror://kernel/linux/devel/binutils/binutils-${BINUTILSVER}.tar.bz2
 	mirror://kernel/linux/libs/uclibc/toolchain/kernel-headers-2.4.21.tar.bz2
@@ -43,29 +43,33 @@ LICENSE="LGPL-2"
 # NOTE - cross-setslot is for applications not compilers
 #
 # "crosstarget" from crosscompile.eclass is equal to below
-if [ -n  "${CCHOST}" ] && [ "${CHOST}" != "${CCHOST}" ];
-then
-	if [ -n "${TARGET_ARCH}" ]
-	then
-		SLOT="${TARGET_ARCH}-${CCHOST}"
-	else
-		SLOT="${CCHOST}"
-	fi
-else
-	if [ -n "${TARGET_ARCH}" ]
-	then
-		SLOT="${TARGET_ARCH}"
-	else
+#if [ -n  "${CCHOST}" ] && [ "${CHOST}" != "${CCHOST}" ];
+#then
+#	if [ -n "${TARGET_ARCH}" ]
+#	then
+#		SLOT="${TARGET_ARCH}-${CCHOST}"
+#	else
+#		SLOT="${CCHOST}"
+#	fi
+#else
+#	if [ -n "${TARGET_ARCH}" ]
+#	then
+#		SLOT="${TARGET_ARCH}"
+#	else
 		SLOT="0"
-	fi
-fi
+#	fi
+#fi
 
-IUSE="nls ipv6 debug nommu fullrpc pie softfloat"
+# ONLY single slot support since only one version of package can exist in db.
+
+
+IUSE="nls ipv6 debug nommu fullrpc pie propolice softfloat"
 
 # Local use flags
 # nommu = No memory management unit on target architecture
 # fullrpc = defines xdr functions and some lesser used rpc stuff. Required for NFS
 # pie = enforce no text relocation support in uClibc (x86 only)
+# propolice = Stack-Smashing Protecto
 # softfloat = software floating point calculations
 
 
@@ -163,8 +167,6 @@ src_unpack() {
 
 	cd ${S}
 
-	[ `use pie` && TARGETARCH!="i386" ] && die "pie use flag can only be used on i386 architectures"
-
 	sed -i -e "s/^ARCH:=\(.*\)/#ARCH:=\1/g" Makefile
 	sed -i -e "s/^#ARCH:=\(i386\)/ARCH:=${TARGETARCH}\n#ARCH:=\1/1" Makefile
 
@@ -188,63 +190,13 @@ src_unpack() {
 		|| sed -i -e "s/^SOFT_FLOAT:=.*/SOFT_FLOAT:=false/" Makefile
 
 
-	#Version fix for busybox
-	#
-	#sed -i -e "s#^BUSYBOX_DIR:=\(.*\)/busybox.*#BUSYBOX_DIR:=\1/busybox-${BUSYBOXVER}#" \
-	#	-e "s#^BUSYBOX_SOURCE:=busybox-.*#BUSYBOX_SOURCE:=busybox-${BUSYBOXVER}.tar.gz#" \
-	#	-e "s#^BUSYBOX_UNZIP.*#BUSYBOX_UNZIP:=gzcat#" make/busybox.mk
-
-
 	# Tinylogin fix.
 	sed -i -e "s#^USE_TINYLOGIN_SNAPSHOT=.*#USE_TINYLOGIN_SNAPSHOT=false#" make/tinylogin.mk
 
 # TODO (maybe?) fix HOSTARCH:= in Makefile
 
-	cat << EOF >> Makefile
-
-# ADDED BY the uClibc-buildroot - ebuild.
-
-patched: \$(LINUX_DIR)/.unpacked \$(BUILD_DIR) \
-	 \$(STAGING_DIR) \$(TARGET_DIR) \$(TOOL_BUILD_DIR)  \
-	\$(GCC_DIR)/.patched \$(BINUTILS_DIR)/.patched \
-	\$(UCLIBC_DIR)/.unpacked
-
-#	\$(TOOL_BUILD_DIR)  \
-#
-#busybox-defconf:
-#	\$(MAKE) CC=\$(TARGET_CC) CROSS="\$(TARGET_CROSS)" -C \$(BUSYBOX_DIR) defconfig
-#	touch \$(BUSYBOX_DIR)/.configured
-
-#busybox-oldconf:
-#	cp \$(BUSYBOX_CONFIG) \$(BUSYBOX_DIR)/Config.h
-#	\$(MAKE) CC=\$(TARGET_CC) CROSS="\$(TARGET_CROSS)" -C \$(BUSYBOX_DIR) oldconfig
-#	touch \$(BUSYBOX_DIR)/.configured
-
-uclibc-defconfig:
-	touch \$(UCLIBC_DIR)/.configured
-
-# \$(MAKE) -C \$(UCLIBC_DIR) HAVE_DOT_CONFIG=y headers shared
-
-gcchacks: \$(GCC_DIR)/.gcc3_3_build_hacks
-
-
-#TO FINISH
-
-all-compile: uclibc-defconfig \$(BINUTILS_DIR1)/binutils/objdump \
-	\$(GCC_BUILD_DIR1)/.compiled
-
-extras-compile: \$(TINYLOGIN_DIR)/tinylogin
-	\$(MAKE) CC=\$(TARGET_CC) CROSS="\$(TARGET_CROSS)" PREFIX="\$(TARGET_DIR)" \
-		-C \$(BUSYBOX_DIR)
-
-all-install:  \$(STAGING_DIR)  \$(TARGET_DIR) \
-	\$(STAGING_DIR)/lib/libc.a \$(STAGING_DIR)/bin/\$(ARCH)-linux-gcc
-	\$(MAKE) -C \$(UCLIBC_DIR) PREFIX=\$(STAGING_DIR) install_dev
-
-extras-install: \$(TARGET_DIR)/bin/busybox \$(TARGET_DIR)/bin/tinylogin
-
-
-EOF
+	# Helper targets for Makefile
+	cat ${FILESDIR}/Makefile-buildroot-helpers.patch >> Makefile
 
 	# "cp -a" implies --preserve=ownership which is blocked by sandbox
 
@@ -259,19 +211,21 @@ EOF
 
 	# these hacks affect the search path of the uclibc-toolchain to prevent
 	# leakage of gcclibs into the target
+#-e "/DIR2)\/\.configured/,/DIR2)\/.configured/ s/--\(.*\)=\$(STAGING_DIR)/--\1=\/usr\/${TARGETARCH}-uclibc/g" \
 
-#	sed -i -e \
-#"/DIR2)\/\.configured/,/DIR2)\/.configured/ s/--\(.*\)=\$(STAGING_DIR)/--\1=\/usr\/${TARGETARCH}-uclibc/g" \
-#-e "/DIR2)\/\.installed:/,/\.installed/ s/\$(MAKE)/\$(MAKE) DESTDIR=\$(STAGING_DIR)/" \
-#-e 's#\$(STAGING_DIR)/lib/\(libstdc++.*\)# $(GCC_BUILD_DIR2)/$(ARCH)-linux/libstdc++-v3/src/.libs/\1#' \
-#		make/gcc-uclibc-3.3.mk
+	sed -i \
+-e "/DIR2)\/\.installed:/,/\.installed/ s/\$(MAKE)/\$(MAKE) DESTDIR=\$(STAGING_DIR)/" \
+-e 's#\$(STAGING_DIR)/lib/\(libstdc++.*\)# $(GCC_BUILD_DIR2)/$(ARCH)-linux/libstdc++-v3/src/.libs/\1#' \
+		make/gcc-uclibc-3.3.mk
 
 	#emake SED="/bin/sed -i -e" STAGING_DIR=/usr/${TARGETARCH}-uclibc-linux gcchacks
 
 	sed -i -e 's#cp -fa#cp --preserve=mode -dPRf#g' ${UCLIBCDIR}/Makefile
 
 	cd ${UCLIBCDIR}
-	local patches="uClibc-0.9.26-Makefile.patch uClibc-${PV}-pie-option.patch"
+	local patches="uClibc-0.9.26-Makefile.patch"
+
+	#[ `use pie` && ${TARGETARCH}=="i386" ] && patches="${patches} uClibc-${PV}-pie-option.patch"
 
 	for patch in ${patches} ; do
 		[ -f ${FILESDIR}/${UCLIBCVER}/${patch} ] && epatch ${FILESDIR}/${UCLIBCVER}/${patch}
@@ -325,11 +279,12 @@ src_compile() {
 		-e 's,^RUNTIME_PREFIX=.*,RUNTIME_PREFIX=\"/\",g' \
 		-e 's,^DEVEL_PREFIX=.*,DEVEL_PREFIX=\"/usr/\",g' \
 		-e 's,^SHARED_LIB_LOADER_PREFIX=.*,SHARED_LIB_LOADER_PREFIX=\"/lib\",g' \
-		-e 's,^.*UCLIBC_HAS_LFS.*,UCLIBC_HAS_LFS=y,g' .config
+		.config
 
 	if [ `use debug` ]; then
 		uclibc_config_option y DODEBUG
 		uclibc_config_option y PTHREADS_DEBUG_SUPPORT
+		uclibc_config_option y CONFIG_PROFILING
 	# Other possibe options for debug use flag
 	# DOASSERTS
 	# SUPPORT_LD_DEBUG
@@ -347,15 +302,13 @@ src_compile() {
 		uclibc_config_option n UCLIBC_HAS_FULL_RPC
 
 	[ `use nommu` ] && uclibc_config_option n UCLIBC_HAS_MMU || \
-		uclibc_config_option n UCLIBC_HAS_MMU
+		uclibc_config_option y UCLIBC_HAS_MMU
 
 
-	# Thanks peter for pointing this one out.
-	#[ `use etdyn` ] && uclibc_config_option n CONFIG_PROFILING
-
-	if [ `use pie` ]; then
+	if [ `use pie` && ${TARGETARCH}=="i386" ]; then
 		uclibc_config_option y UCLIBC_PIE_SUPPORT
 		uclibc_config_option y UCLIBC_COMPLETELY_PIC
+		uclibc_config_option n CONFIG_PROFILING
 	else
 		uclibc_config_option n UCLIBC_PIE_SUPPORT
 		uclibc_config_option n UCLIBC_COMPLETELY_PIC
@@ -382,13 +335,12 @@ src_compile() {
 		#pregen is for i386 architectures only
 		if [ ${TARGETARCH}=="i386" ]; then
 			uclibc_config_option y UCLIBC_PREGENERATED_LOCALE_DATA
-			uclibc_config_option y UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA
 			cp ${DISTDIR}/uClibc-locale-030818.tgz ${UCLIBCDIR}/extra/locale
 		else
 			uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
-			uclibc_config_option n UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA
 			pushd extra/locale
 			find charmaps -name "*.pairs" > codesets.txt
+			cp LOCALES locales.txt
 			emake clean all || die "Could not generate codepages"
 			popd
 		fi
@@ -400,13 +352,6 @@ src_compile() {
 		# lots of stuff from uclibc.spec - TODO LATER
 	else
 		uclibc_config_option n UCLIBC_HAS_LOCALE
-		uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
-		uclibc_config_option n UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA
-		uclibc_config_option n UCLIBC_HAS_XLOCALE
-		uclibc_config_option n UCLIBC_HAS_HEXADECIMAL_FLOATS
-		uclibc_config_option n UCLIBC_HAS_GLIBC_DIGIT_GROUPING
-		uclibc_config_option n UCLIBC_HAS_SCANF_LENIENT_DIGIT_GROUPING
-		uclibc_config_option n UCLIBC_HAS_GETTEXT_AWARENESS
 	fi
 
 
@@ -415,7 +360,7 @@ src_compile() {
 
 	if [ -n "`use debug`" ]; then
 		if [ -f /etc/embedded/busybox.config ]; then
-			emake BUSYBOX_CONFIG=/etc/embedded/busybox.config busybox- \
+			emake BUSYBOX_CONFIG=/etc/embedded/busybox.config busybox \
 				|| "Error making busybox old config"
 		else
 			emake  busybox || "Error making busybox default config"
@@ -426,12 +371,7 @@ src_compile() {
 
 		emake extras-compile
 	fi
-	cd ${UCLIBCDIR}
-	local patches="uClibc-${PV}-pie-option.patch"
 
-	for patch in ${patches} ; do
-		[ -f ${FILESDIR}/${UCLIBCVER}/${patch} ] && epatch ${FILESDIR}/${UCLIBCVER}/${patch}
-	done
 }
 
 src_install() {
@@ -474,7 +414,7 @@ src_install() {
 	echo 'CXX="g++"'  >> ${gccconfigfile}
 
 	# warning- consistancy with Makefile uncertian.
-	#use softfloat && ARCH="${TARGETARCH}_nofpu"
+	#use softfloat && TARGETARCH="${TARGETARCH}_nofpu"
 
 	# rootfs (tempory for testing purposes)
 	dodir /var/lib/rootfs_${TARGETARCH}
@@ -484,7 +424,7 @@ src_install() {
 	# Save uclibc/busybox/tinylogin config
 
 	dodir /etc/embedded
-	cp ${S}/.config ${D}/etc/embedded/uClibc.config
+	cp ${UCLIBCDIR}/.config ${D}/etc/embedded/uClibc.config
 
 	[ -f ${S}/build_${ARCH}/busybox-${BUSYBOXVER}/Config.h ] && \
 		cp ${S}/build_${ARCH}/busybox-${BUSYBOXVER}/Config.h ${D}/etc/embedded/busybox.config
