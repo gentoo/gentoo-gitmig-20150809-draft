@@ -3,10 +3,10 @@ Hash: SHA1
 
 MD5 5bc4b841f09feb3e97091cb1767a36b2 cream-0.30-r1.ebuild 2120
 MD5 b5480467d60a7baef45eaf6e1e89f6e2 cream-0.29-r1.ebuild 2048
-MD5 5c7f55045fcc0472b8931606ebeebbb1 ChangeLog 2719
+MD5 136e4386b2e7808c1421c67f99135359 ChangeLog 2862
 MD5 0f44d41b4361ca8e1412c3d395cc3923 metadata.xml 434
 MD5 ed33e142107e0ad62a7ee9dbb65faf99 cream-0.28.ebuild 838
-MD5 2308a9cca5cee89ec8df9a114212d1a7 cream-0.30-r2.ebuild 2211
+MD5 572d8dd576f8be48dc53efd4ec231bc2 cream-0.30-r2.ebuild 3161
 MD5 72e0247891a704fa4cbe72a221b62a56 files/cream-0.29-ctags.patch 825
 MD5 305830ed8a287efa536fb2a951a75c7f files/digest-cream-0.30-r2 347
 MD5 305830ed8a287efa536fb2a951a75c7f files/digest-cream-0.30-r1 347
@@ -19,7 +19,7 @@ MD5 130945b9ad1e1413be8ede26054e2a91 files/cream-0.29-desktop.patch 313
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBPOhcLLFUmVNQ7rkRAqfnAKCh2/fyhM67zH41Rrz/uaIWD3g7HACbBl5U
-hTA02NezjC8xWjwpH5u7ZX0=
-=4ozK
+iD8DBQFBQkQXLLFUmVNQ7rkRAjbWAJ4z04abOjBDQ+YIKMz01AMfrPfaCACfb/ZZ
+Ph3QQL8QJkd1Ow1ToG5MHY0=
+=c9wi
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.16 2004/09/06 22:47:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.17 2004/09/11 00:20:16 ciaranm Exp $
+
+  11 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> cream-0.30-r2.ebuild:
+  Added in help text and moved the einfo things around, bug #63318.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> cream-0.30-r2.ebuild:
   Stable on x86, sparc, mips
