@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.7-r10.ebuild,v 1.1 2004/12/08 19:53:28 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.7-r11.ebuild,v 1.1 2004/12/19 23:52:17 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -19,6 +19,7 @@ RGPV_SRC="http://dev.gentoo.org/~kang/rsbac/patches/1.2.3/2.6/rsbac-patches-${KV
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_LIST="${FILESDIR}/${PN}-iptables-dos.patch
 	${FILESDIR}/${PN}-${OKV}-AF_UNIX.patch
+	${FILESDIR}/${PN}-CAN-2004-1069.patch
 	${FILESDIR}/${PN}-${OKV}-CAN-2004-0883.patch
 	${FILESDIR}/${PN}-CAN-2004-0497.patch
 	${FILESDIR}/${PN}-CAN-2004-0596.patch
