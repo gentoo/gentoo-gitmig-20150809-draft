@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.10 2005/03/19 13:12:49 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.11 2005/03/24 15:05:31 kosmikus Exp $
+
+  24 Mar 2005; Andres Loeh <kosmikus@gentoo.org> happy-1.15.ebuild:
+  Use ghc-package.eclass to check for ghc-6.4.
 
   19 Mar 2005; Andres Loeh <kosmikus@gentoo.org> happy-1.14.ebuild,
   happy-1.15.ebuild:
