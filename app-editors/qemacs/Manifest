@@ -1,4 +1,4 @@
-MD5 5d8c6d098df1d6371b2c922acbd9eb79 ChangeLog 494
-MD5 41b80b78ef28df19defd686f995b13e3 qemacs-0.3.1.ebuild 1014
 MD5 1bef560680eaab10f0524f228c5dc6eb files/digest-qemacs-0.3.1 64
 MD5 a4c613ab493b62325669d8d1353c8b2e files/qemacs-Makefile-gentoo.patch 421
+MD5 5d8c6d098df1d6371b2c922acbd9eb79 ChangeLog 494
+MD5 45715fb07639eb9aa3e6f3146228e5e2 qemacs-0.3.1.ebuild 1009

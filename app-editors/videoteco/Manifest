@@ -1,4 +1,4 @@
-MD5 874d56a2742a1c262e61cbd5a73b4e79 ChangeLog 366
-MD5 a1092ba3f62860fd6d09d8c30ad9f9b2 videoteco-4.69.ebuild 888
 MD5 3c797f5ac0c377b7624fc443a9397519 files/digest-videoteco-4.69 108
 MD5 71df3dc43ecc419ea7172e29d9968b1a files/teco_linux_gcc3.patch 4118
+MD5 874d56a2742a1c262e61cbd5a73b4e79 ChangeLog 366
+MD5 e08b1ea20335f1b87f37bf3d46e48858 videoteco-4.69.ebuild 885

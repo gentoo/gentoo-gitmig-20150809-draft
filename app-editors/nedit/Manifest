@@ -4,5 +4,5 @@ MD5 f1de401822d203ac95aa0366234fb63a files/nedit-5.3-gentoo.diff 2629
 MD5 670415ebfa4cdbe202a201f5fabba73c files/digest-nedit-5.4_pre20030213 74
 MD5 33e4cb7e7dcbb2410c0f86b09b23a832 nedit-5.3-r1.ebuild 1019
 MD5 a6fbcad63663a44a5403ed97938f0e4d nedit-5.3-r2.ebuild 1111
-MD5 7e502f2a5addb280ed13513ffd6fa06e ChangeLog 2511
-MD5 f747346da23768488f36125a2d14c838 nedit-5.4_pre20030213.ebuild 1108
+MD5 0c0610a97c1304394f5155c077383bb1 ChangeLog 2631
+MD5 b7a565c11c7509daaa34d9f861f0b67d nedit-5.4_pre20030213.ebuild 1103
