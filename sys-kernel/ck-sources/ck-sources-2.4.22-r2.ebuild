@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r2.ebuild,v 1.2 2003/10/21 10:37:00 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r2.ebuild,v 1.3 2003/12/01 22:32:55 iggy Exp $
 
 IUSE="build"
 
@@ -67,6 +67,8 @@ src_unpack() {
 
 	epatch ${DISTDIR}/patch-2.4.22-ck2-fix.patch
 	epatch ${DISTDIR}/patch-2422-ck2-sm1.2.8-sm1.2.9-0309171736
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	kernel_universal_unpack
 }
