@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.21 2005/01/24 16:20:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.22 2005/03/03 15:38:40 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> basc-1.5.8.ebuild:
+  Dependency update: sys-apps/time -> sys-process/time.
 
 *basc-1.5.8 (23 Jan 2005)
   

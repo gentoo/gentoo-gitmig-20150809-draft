@@ -23,7 +23,7 @@ RDEPEND="app-portage/gentoolkit
 	sys-apps/grep
 	app-arch/gzip
 	sys-apps/diffutils
-	sys-apps/time
+	sys-process/time
 	sys-devel/bc
 	>=sys-libs/ncurses-5.2-r2
 	>=sys-apps/uhinv-0.4
