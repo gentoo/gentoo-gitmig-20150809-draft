@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.7 2003/11/17 09:49:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.8 2003/11/18 19:44:34 taviso Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -19,11 +19,10 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 	dev-lang/perl
 	virtual/mta"
 
-# libpcap earlier than 1.10-r3 did not provide
-# libcap.a, and therefore cannot be compiled
-# statically. >=sys-libs/libcap-1.10-r3 fixes.
-DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
-		!static? ( sys-libs/libcap ) )
+# XXX: libpcap earlier than 1.10-r3 did not provide libcap.a
+#	DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
+#				!static? ( sys-libs/libcap ) )
+DEPEND="caps? ( sys-libs/libcap )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	!static? ( sys-libs/zlib )
