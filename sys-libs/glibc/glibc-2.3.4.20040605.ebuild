@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.7 2004/06/09 04:09:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.8 2004/06/09 12:30:19 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -38,11 +38,12 @@ export CXXFLAGS="${CFLAGS}"
 export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
-SRC_URI="http://dev.gentoo.org/~lv/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~lv/${P}.tar.bz2
+		 http://dev.gentoo.org/~lv/glibc-infopages-2.3.4.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="-*"
+KEYWORDS="-* ~amd64"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
@@ -55,7 +56,7 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	nptl? ( >=sys-devel/gcc-3.3.1-r1 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	virtual/os-headers
-	!mips? ( nptl? ( =sys-kernel/linux-headers-2.6* ) )
+	nptl? ( =sys-kernel/linux-headers-2.6* )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
@@ -105,6 +106,9 @@ setup_flags() {
 	fi
 
 	# temporary fix for a few gcc 3.4 related problems
+	# note: the problem this fixes should no longer exist as of gcc
+	# 3.4.0-r6. i'll keep this around for a short time longer since not
+	# everyone recompiles their compiler at every upgrade...
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
 		filter-flags -funit-at-a-time
@@ -227,7 +231,8 @@ src_unpack() {
 
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
-	want_nptl || tar xjf ${FILESDIR}/glibc-manpages-2.3.2.tar.bz2
+	tar xjf ${FILESDIR}/glibc-manpages-2.3.2.tar.bz2
+	cd ${S} ; unpack glibc-infopages-2.3.4.tar.bz2
 
 	cd ${S}
 
@@ -276,6 +281,10 @@ src_unpack() {
 	#
 	# *** PaX related patches ends here ***
 	#
+
+	# Sanity check the forward and backward chunk pointers in the
+	# unlink() macro used by Doug Lea's implementation of malloc(3).
+	cd ${S}; epatch ${FILESDIR}/2.3.3/glibc-2.3.3-owl-malloc-unlink-sanity-check.diff
 
 	# We do not want name_insert() in iconvconfig.c to be defined inside
 	# write_output() as it causes issues with trampolines/PaX.
@@ -337,15 +346,8 @@ src_unpack() {
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
 
-	# disable -z relro
-	#use hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
-	# disables building nscd as pie
-	#use hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
-	# disable binutils -as-needed, useful, if glibc should not depend on libgcc_s.so
+	# disable binutils -as-needed
 	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
-	# disable execstack (the patch is used by rh for gcc < 3.3.3)
-	#use hardened || epatch ${FILESDIR}/2.3.3/glibc-execstack-disable.patch
-	#use hardened || sed -e 's/^ASFLAGS-config.*/ASFLAGS-config =/' -i ${S}/config.make.in
 	# mandatory, if binutils supports relro and the kernel is pax/grsecurity enabled
 	# solves almost all segfaults building the locale files on grsecurity enabled kernels
 	use build && sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
@@ -471,7 +473,7 @@ EOF
 			timezone/install-others -C ${WORKDIR}/build || die
 	fi
 
-	if [ "`use pic`" ]
+	if (use pic && use !amd64)
 	then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
