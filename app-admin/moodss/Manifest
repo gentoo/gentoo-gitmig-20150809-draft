@@ -1,4 +1,6 @@
+MD5 028f57b2264ad11efe31b93362822c13 moodss-19.0.ebuild 931
 MD5 d0b207afe03d78aa032dd755f011d4fe moodss-18.1.ebuild 886
-MD5 e112ff9090a4219aec6f0722a3648cef ChangeLog 309
+MD5 cca68b0d7af199a1ebb18310ae8f077a ChangeLog 424
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 635752da6123bab1f81e0439dc8c6bf6 files/digest-moodss-18.1 65
+MD5 b558ac9fbea7a0127341e2d7b08fb814 files/digest-moodss-19.0 65
