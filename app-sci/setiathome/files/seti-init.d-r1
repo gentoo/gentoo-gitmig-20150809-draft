@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-cpus=`grep -c processor /proc/cpuinfo`
+cpus=`egrep -c "^processor" /proc/cpuinfo`
 
 checkconfig() {
         if [ ! -e ${SETIATHOME_DIR} ]
