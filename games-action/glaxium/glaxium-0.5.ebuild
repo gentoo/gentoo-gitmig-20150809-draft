@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.2 2003/10/06 18:27:27 vapier Exp $
 
-inherit games flag-o-matic
+inherit games flag-o-matic gcc
 
 DESCRIPTION="OpenGL-based space-ship shoot-em-up style game"
 HOMEPAGE="http://xhosxe.free.fr/glaxium/"
@@ -12,24 +12,24 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=libsdl-1.1.5
+DEPEND=">=media-libs/libsdl-1.1.5
 	>=media-libs/sdl-mixer-1.2.4
 	virtual/x11
 	virtual/opengl
 	virtual/glu
 	virtual/glut
-	>=libpng-1.0.0"
+	>=media-libs/libpng-1.0.0"
 
 S=${WORKDIR}/${PN}_${PV}
 
-pkg_setup() {
-	ewarn "This currently only compiles with XFree OpenGL support"
-	ewarn "Use \`opengl-update xfree\` before emerging"
-}
-
 src_unpack() {
 	unpack ${A}
-	cp ${FILESDIR}/${PV}-20021024-Makefile.in ${S}/
+	cd ${S}
+	ebegin "Checking if glx patch is needed"
+	$(gcc-getCXX) ${FILESDIR}/glx-test.c
+	local ret=$?
+	[ ${ret} -eq 0 ] || epatch ${FILESDIR}/${PV}-glx.patch
+	eend ${ret}
 }
 
 src_compile() {
