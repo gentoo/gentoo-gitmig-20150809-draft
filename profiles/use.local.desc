@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.288 2004/03/27 15:57:38 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.289 2004/03/28 09:15:34 hattya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -92,6 +92,7 @@ dev-libs/uclibc:pie - adds support for Position Independent Executables
 dev-lisp/bigloo-lib:expat - enable expat support
 dev-lisp/bigloo-lib:ipcs - enable ipcs support
 dev-lisp/clisp:pcre - enable PCRE support
+dev-lisp/gauche-gtk:glgd - enable GL graph draw
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
