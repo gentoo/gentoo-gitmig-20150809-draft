@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.2.ebuild,v 1.2 2004/06/24 22:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.2.ebuild,v 1.3 2004/06/29 00:01:13 carlo Exp $
 
-inherit kde-base
-need-kde 3.1
+inherit kde
 
 DESCRIPTION="feature-rich image viewer for KDE"
 SRC_URI="http://www.jalix.org/projects/showimg/download/${PVR}/${P}.tar.bz2"
@@ -15,3 +14,4 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 SLOT="0"
 
+need-kde 3.1
