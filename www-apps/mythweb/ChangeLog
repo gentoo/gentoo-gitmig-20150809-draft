@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.6 2004/10/05 15:27:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.7 2004/10/19 23:10:26 aliz Exp $
+
+  19 Oct 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.16.ebuild:
+  Fixed some problems that would occur when re-emerging the package. Also added
+  php_sessions dir. Closing #67840.
 
   05 Oct 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.16.ebuild:
   Install .htacess file

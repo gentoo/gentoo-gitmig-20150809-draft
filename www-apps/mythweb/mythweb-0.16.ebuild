@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.16.ebuild,v 1.4 2004/10/05 15:27:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.16.ebuild,v 1.5 2004/10/19 23:10:26 aliz Exp $
 
 inherit webapp
 
@@ -14,6 +14,8 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND=">=dev-php/mod_php-4.2"
 
 pkg_setup() {
+	webapp_pkg_setup
+
 	if has_version \>=dev-php/mod_php-5 ; then
 		local modphp_use="$(</var/db/pkg/`best_version =dev-php/mod_php`/USE)"
 	        if ! has session ${modphp_use} ; then
@@ -22,8 +24,6 @@ pkg_setup() {
 	                die "mod_php needs session support"
 	        fi
 	fi
-
-	webapp_pkg_setup
 }
 
 src_install() {
@@ -31,12 +31,15 @@ src_install() {
 
 	dodoc README TODO
 
-	cp -R [[:lower:]]* .htaccess ${D}/${MY_HTDOCSDIR}
-	dodir ${MY_HTDOCSDIR}/video_dir
-	dodir ${MY_HTDOCSDIR}/image_cache
+	keepdir ${MY_HTDOCSDIR}/video_dir
+	keepdir ${MY_HTDOCSDIR}/image_cache
+	keepdir ${MY_HTDOCSDIR}/php_sessions
+
+	cp -R [[:lower:]]* .htaccess ${D}${MY_HTDOCSDIR}
 
 	webapp_serverowned ${MY_HTDOCSDIR}/video_dir
 	webapp_serverowned ${MY_HTDOCSDIR}/image_cache
+	webapp_serverowned ${MY_HTDOCSDIR}/php_sessions
 
 	webapp_configfile ${MY_HTDOCSDIR}/config/conf.php
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
