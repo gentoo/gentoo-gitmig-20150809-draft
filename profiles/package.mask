@@ -721,4 +721,6 @@ app-cdr/cddump
 # redundant) 
 app-editors/gtk-xemacs
 
-
+# g2boojum@gentoo.org 14 May 2002
+# courier needs to have .maildir stuff fixed
+net-mail/courier
