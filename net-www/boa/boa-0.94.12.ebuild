@@ -1,16 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.12.ebuild,v 1.5 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.12.ebuild,v 1.6 2002/11/15 01:20:11 vapier Exp $
 
-IUSE="tetex"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Boa - A very small and very fast http daemon."
 SRC_URI="http://www.boa.org/${P}.tar.gz"
 HOMEPAGE="http://www.boa.org/"
+
 KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="tetex"
 
 DEPEND="virtual/glibc
 	sys-devel/flex
@@ -22,18 +21,14 @@ RDEPEND="virtual/glibc"
 
 src_compile() {
 	cd src
-	./configure --infodir=/usr/share/info --mandir=/usr/share/man --prefix=/usr --host=${CHOST} || die
-	#Note the use of --infodir and --mandir, above.  This is to make
-	# this package FHS 2.2-compliant
-	#(/usr/share is used for info and man now).
-	
+	econf
 	emake || die
 	cd ../docs
 	make boa.html boa.info || die
 	use tetex && make boa.dvi
 }
 
-src_install () {
+src_install() {
 	# make prefix=${D}/usr install
 	dosbin src/boa || die
 	doman docs/boa.8 || die
@@ -43,12 +38,12 @@ src_install () {
 	if [ "`use tetex`" ]; then
 		dodoc docs/boa.dvi || die
 	fi
-	
+
 	dodir /var/log/boa || die
 	dodir /home/httpd/htdocs || die
 	dodir /home/httpd/cgi-bin || die
 	dodir /home/httpd/icons || die
-        
+
 	exeinto /usr/lib/boa
 	doexe src/boa_indexer || die
 
@@ -65,7 +60,6 @@ src_install () {
 }
 
 pkg_prerm() {
-
 	if [ "$ROOT" = "/" ] && [ -e /dev/shm/.init.d/started/boa ] ; then
 		/etc/init.d/boa stop
 	fi
@@ -73,7 +67,6 @@ pkg_prerm() {
 }
 
 pkg_preinst() {
-
 	if [ "$ROOT" = "/" ] && [ -e /dev/shm/.init.d/started/boa ] ; then
 		/etc/init.d/boa stop
 	fi
