@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imspd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.5 2004/01/20 17:39:36 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.6 2004/04/26 18:47:48 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> cyrus-imspd-1.7b.ebuild:
+  Add die following econf for bug 48950
 
 *cyrus-imspd-1.7b (20 Jan 2004)
 

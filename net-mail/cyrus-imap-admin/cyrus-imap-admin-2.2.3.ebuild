@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.3.ebuild,v 1.3 2004/03/30 13:17:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.3.ebuild,v 1.4 2004/04/26 18:45:50 agriffis Exp $
 
 inherit perl-module eutils gnuconfig
 
@@ -65,7 +65,7 @@ src_compile() {
 		--with-auth=unix  \
 		--with-perl=/usr/bin/perl \
 		--enable-cyradm \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake -C "${S}/lib" all || die "compile problem"
 	emake -C "${S}/perl" all || die "compile problem"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.1.ebuild,v 1.1 2003/11/12 19:26:53 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.1.ebuild,v 1.2 2004/04/26 18:51:44 agriffis Exp $
 
 DESCRIPTION="Proxy IMAP transactions between an IMAP client and an IMAP server."
 HOMEPAGE="http://www.imapproxy.org/"
@@ -30,7 +30,7 @@ src_compile() {
 	myconf="${myconf} `use_with ssl openssl`"
 	myconf="${myconf} `use_with tcpd libwrap`"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "compile problem"
 }
 
