@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.2.ebuild,v 1.1 2005/03/19 14:57:12 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.2.ebuild,v 1.2 2005/03/22 14:27:28 ka0ttic Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -47,7 +47,7 @@ src_unpack() {
 	gnuconfig_update
 
 	if use flexresp || use inline ; then
-		epatch ${FILESDIR}/${PV}-libnet-1.0.patch
+		epatch ${FILESDIR}/2.3.0-libnet-1.0.patch
 	fi
 
 	einfo "Patching /etc/snort.conf"
