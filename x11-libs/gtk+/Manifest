@@ -11,6 +11,6 @@ MD5 5e3ff7fa761495300d3f30c9207c13f8 files/gtk+-1.2-locale_fix.patch 419
 MD5 df6efc98861d335b1a09eab5c6011620 files/gtk+-2.4-smoothscroll.patch 29006
 MD5 69a6335566f344b004a5db02b68008ed files/gtk+-2.0.6-exportsymbols.patch 558
 MD5 28fa6c231f22418b560385c58a179543 files/digest-gtk+-2.4.9-r1 133
-MD5 4dc5979b2119001ebc8c943cc20583f1 files/digest-gtk+-2.4.13-r1 139
+MD5 96b708d4ee80d6f31674d4a83e950276 files/digest-gtk+-2.4.13-r1 208
 MD5 d94ff41d82a8f0c56dd68a2fa71ef2fc files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
 MD5 06d8be5421935ac9ed4da45830bb68bc files/gtk+-2.4.9-xpm_ico_secure.patch 3291
