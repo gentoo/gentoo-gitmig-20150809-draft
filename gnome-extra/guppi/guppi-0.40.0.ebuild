@@ -1,9 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.0.ebuild,v 1.1 2001/11/04 04:54:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.0.ebuild,v 1.2 2001/11/10 13:54:53 hallski Exp $
 
-P=Guppi-${PV}
+PN=Guppi
+P=${PN}-${PV}
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Plottin Tool"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
