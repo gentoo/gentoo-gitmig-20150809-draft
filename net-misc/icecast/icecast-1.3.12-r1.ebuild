@@ -1,34 +1,34 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-1.3.12-r1.ebuild,v 1.4 2003/01/09 21:29:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-1.3.12-r1.ebuild,v 1.5 2003/02/12 12:34:39 seemant Exp $
+
+inherit eutils
+
+IUSE="crypt"
 
 DESCRIPTION="Internet based broadcasting system based on the mpeg3 streaming technology"
-SRC_URI="http://www.icecast.org/releases/${P}.tar.gz"
 HOMEPAGE="http://www.icecast.org/"
+SRC_URI="http://www.icecast.org/releases/${P}.tar.gz"
 
-KEYWORDS="x86 -ppc sparc"
-LICENSE="GPL-2"
 SLOT="0"
-IUSE="crypt"
+LICENSE="GPL-2"
+KEYWORDS="x86 -ppc sparc"
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/variables.diff || die
+	epatch ${FILESDIR}/${P}-variables-gentoo.diff.bz2
 }
 
 src_compile() {
-	./configure \
+	econf \
 		`use_with crypt` \
 		--with-libwrap \
-		--prefix=/usr \
 		--sysconfdir=/etc/icecast \
 		--localstatedir=/var \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--host=${CHOST} || die "configure failed"
+		|| die "configure failed"
 	emake || die "emake failed"
 }
 
