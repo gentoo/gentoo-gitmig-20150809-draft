@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/speechd-up
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.4 2004/05/12 17:52:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.5 2004/06/16 22:18:15 squinky86 Exp $
+
+*speechd-up-0.0.1_pre20040616 (16 Jun 2004)
+
+  16 Jun 2004; Jon Hood <squinky86@gentoo.org>
+  -speechd-up-0.0.1_pre20040503.ebuild, +speechd-up-0.0.1_pre20040616.ebuild:
+  lots of changes were made in cvs; bumping
 
   12 May 2004; Jon Hood <squinky86@gentoo.org>
   speechd-up-0.0.1_pre20040503.ebuild:
