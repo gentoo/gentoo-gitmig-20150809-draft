@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.1 2005/02/25 15:05:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.2 2005/02/25 15:07:02 azarah Exp $
 
 inherit gnuconfig eutils
 
@@ -34,9 +34,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-3.11-gcc33.patch
 	epatch ${FILESDIR}/${PN}-3.11-lastlog-fix.patch
 
-	# enable query_user_context selinux code (only affects selinux)
-	# but we dont want it on the selinux livecd, since it can
-	# cause the login to timeout if the user isnt ready
+	# Disable query_user_context selinux code (only affects selinux)
+	# if on the selinux livecd, since it can cause the login to timeout
+	# if the user isnt ready
 	use livecd && epatch ${FILESDIR}/${PN}-3.17-query_user_context.patch
 
 	use ppc64 && epatch ${FILESDIR}/${PN/-/_}-Werror-off-ppc64.patch
