@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r2.ebuild,v 1.1 2002/05/31 04:29:42 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r2.ebuild,v 1.2 2002/05/31 04:30:27 prez Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -58,8 +58,8 @@ src_install() {
 	rm -f ${D}/usr/lib/tcl${v1}/include/generic/tclPlatDecls.h	
 
 	# install symlink for libraries
-	dosym /usr/lib/libtcl${v1}.so /usr/lib/libtcl.so
-	dosym /usr/lib/libtclstub${v1}.a /usr/lib/libtclstub.a
+	dosym ${D}/usr/lib/libtcl${v1}.so ${D}/usr/lib/libtcl.so
+	dosym ${D}/usr/lib/libtclstub${v1}.a ${D}/usr/lib/libtclstub.a
 	
 	ln -sf tclsh${v1} ${D}/usr/bin/tclsh
 	
