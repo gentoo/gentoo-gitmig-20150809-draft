@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/xpde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.8 2004/06/24 23:46:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.9 2004/08/30 16:33:48 usata Exp $
+
+*xpde-0.5.1 (31 Aug 2004)
+
+  31 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/xpde-0.5.1-gentoo.diff, +xpde-0.5.1.ebuild:
+  Version bumped. Thanks to Boris Wachtmeister <sirro@nurfuerspam.de>,
+  closing bug #45638.
 
   27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xpde-0.3.5.ebuild,
   xpde-0.4.0.ebuild:
