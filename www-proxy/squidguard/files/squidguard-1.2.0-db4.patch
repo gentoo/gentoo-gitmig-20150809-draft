@@ -1,0 +1,23 @@
+diff -urN squidGuard-1.2.0.orig/configure.in squidGuard-1.2.0/configure.in
+--- squidGuard-1.2.0.orig/configure.in	2001-12-18 11:16:36.000000000 +0100
++++ squidGuard-1.2.0/configure.in	2003-05-28 09:57:42.000000000 +0200
+@@ -71,7 +71,9 @@
+ 
+ dnl Checks for libraries.
+ 
+-AC_CHECK_LIB(db,db_version,,[
++AC_CHECK_LIB(db,db_version,,
++AC_CHECK_LIB(db,db_version_4000,,
++AC_CHECK_LIB(db,db_version_4001,,[
+ 	echo
+ 	echo "** The Berkley DB library is required for squidGuard"
+ 	echo "   to compile. Get it from http://www.sleepycat.com"
+@@ -79,7 +81,7 @@
+ 	echo "   its location. (default is $dbprefix/BerkeleyDB)"
+ 	echo
+ 	exit 1
+-	])
++	])))
+ 
+ dnl Checks for header files.
+ AC_HEADER_STDC
