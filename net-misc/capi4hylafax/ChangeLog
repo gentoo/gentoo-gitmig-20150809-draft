@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/capi4hylafax
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.1 2003/10/04 02:11:53 nerdboy Exp $
+
+*capi4hylafax-01.02.02 (02 Oct 2003)
+
+  02 Oct 2003; <nerdboy@gentoo.org> capi4hylafax-01.02.02.ebuild:
+  new capi4hylafax ebuild, user-contributed with new DEPENDS
+
