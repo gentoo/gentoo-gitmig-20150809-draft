@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyx
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.1 2003/05/10 20:31:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.2 2003/08/05 13:21:48 liquidx Exp $
+
+  05 Aug 2003; Alastair Tse <liquidx@gentoo.org> pyx-0.3.1.ebuild:
+  added tetex dep (#25512)
 
 *pyx-0.3.1 (10 May 2003)
 
