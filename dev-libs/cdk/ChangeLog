@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cdk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.18 2004/11/09 08:52:31 voxus Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.19 2005/04/01 20:19:19 hansmi Exp $
+
+  01 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  cdk-4.9.10.20020809.ebuild:
+  Stable on ppc.
 
   09 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>
   cdk-4.9.11.20031210-r1.ebuild:

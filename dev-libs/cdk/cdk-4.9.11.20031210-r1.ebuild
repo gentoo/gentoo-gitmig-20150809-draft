@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.11.20031210-r1.ebuild,v 1.2 2004/11/09 08:52:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.11.20031210-r1.ebuild,v 1.3 2005/04/01 20:19:19 hansmi Exp $
 
 MY_P=${P/.2003/-2003}
 DESCRIPTION="A library of curses widgets"
