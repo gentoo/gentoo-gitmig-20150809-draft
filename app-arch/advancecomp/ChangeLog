@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/advancecomp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.21 2005/02/06 23:41:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.22 2005/03/02 20:52:53 taviso Exp $
+
+*advancecomp-1.14 (02 Mar 2005)
+
+  02 Mar 2005; Tavis Ormandy <taviso@gentoo.org>
+  -files/advancecomp-1.11-64bit.diff,
+  -files/advancecomp-1.11-bzip2-compile-plz-k-thx.diff,
+  -advancecomp-1.11.ebuild, +advancecomp-1.14.ebuild:
+  bump, #83034.
+  remove stale ebuilds.
 
   07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   advancecomp-1.13.ebuild:
