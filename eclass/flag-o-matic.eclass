@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.24 2003/07/22 12:48:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.25 2003/08/20 04:11:27 agriffis Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -40,6 +40,7 @@ ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
 case "${ARCH}" in
 	mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
 	amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+	alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
 esac
 
 # C[XX]FLAGS that we are think is ok, but needs testing
@@ -69,14 +70,14 @@ filter-mfpmath() {
 filter-flags() {
 	# we do this fancy spacing stuff so as to not filter
 	# out part of a flag ... we want flag atoms ! :D
-	export CFLAGS=" ${CFLAGS} "
-	export CXXFLAGS=" ${CXXFLAGS} "
+	CFLAGS=" ${CFLAGS} "
+	CXXFLAGS=" ${CXXFLAGS} "
 	for x in $@ ; do
-		export CFLAGS="${CFLAGS/ ${x} / }"
-		export CXXFLAGS="${CXXFLAGS/ ${x} / }"
+		CFLAGS="${CFLAGS/ ${x} / }"
+		CXXFLAGS="${CXXFLAGS/ ${x} / }"
 	done
-	export CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
-	export CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
+	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
+	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
 }
 
 append-flags() {
