@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3ce3714a9ad7e682daab85f541f13a7 migemo-dict-200309.ebuild 551
 MD5 03d3a364b15aff2d07b6cdf48e37aeaa ChangeLog 1252
 MD5 212b6ec56b7acb3a4cc0bb8ddd2f95ef metadata.xml 247
+MD5 3a23329b3921f562d10aae0fcac7bb7b migemo-dict-200309.ebuild 563
 MD5 160f0300aeb9a4e0898b76badbe3592f files/digest-migemo-dict-200309 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQy1iCHk4+ZoBpvsRAp6yAJ9K9jenE/PmKF079PcIctsI8BS3mQCeL3j0
-kndDN1kU1/fvpNSSQRsz2Ug=
-=J5d8
------END PGP SIGNATURE-----
