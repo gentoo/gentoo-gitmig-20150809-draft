@@ -1,9 +1,13 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.21 2003/12/05 08:56:44 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.22 2003/12/09 23:24:36 plasmaroo Exp $
+
+  09 Dec 2003; <plasmaroo@gentoo.org> aa-sources-2.4.23-r1.ebuild:
+  Added a fix for the XFS support in aa-sources as a bug from upstream seems to
+  have slipped in. Thanks for filing bug #35472, which is now closed.
 
   05 Dec 2003; Andrea Luzzardi <scox@gentoo.org> aa-sources-2.4.23-r1.ebuild:
-  Bump to -aa1
+  Bump to -aa1.
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   aa-sources-2.4.23_pre6-r3.ebuild:
