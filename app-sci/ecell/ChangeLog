@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/ecell
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ecell/ChangeLog,v 1.1 2004/07/26 12:06:15 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ecell/ChangeLog,v 1.2 2004/09/23 09:38:55 chrb Exp $
+
+  23 Sep 2004; Chris Bainbridge <chrb@gentoo.org> :
+  fix digest
 
 *ecell-3.1.102 (26 Jul 2004)
 
