@@ -1,6 +1,9 @@
-# ChangeLog for sys-apps/mac-fdisk
+# ChangeLog for sys-fs/mac-fdisk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.6 2004/09/03 19:16:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.7 2004/09/05 08:25:01 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mac-fdisk-0.1-r2.ebuild:
