@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/xmms-wma
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/ChangeLog,v 1.1 2004/07/10 06:45:39 eradicator Exp $
+
+*xmms-wma-1.0.3 (09 Jul 2004)
+
+  09 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +files/xmms-wma-1.0.3-ffmpeg.patch, +xmms-wma-1.0.3.ebuild:
+  Initial ebuild submitted in bug #53035 by Makurin Roman <romka@kaluga.ru>. I
+  modified it to use the installed ffmpeg libraries rather than the ones
+  included.
+
