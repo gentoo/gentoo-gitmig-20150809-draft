@@ -1,15 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.4 2003/11/22 16:54:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.5 2004/03/02 14:03:14 lanius Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Make use of extra buttons on newer keyboards."
 SRC_URI="http://ypwong.org/hotkeys/${PV}/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://ypwong.org/hotkeys/"
 IUSE="X gtk xosd"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="X? ( virtual/x11 )
 	>=dev-libs/libxml2-2.2.8
