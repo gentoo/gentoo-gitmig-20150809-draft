@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.45 2005/01/01 10:55:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.46 2005/01/09 10:39:49 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> bacula-1.32f-r5.ebuild,
+  bacula-1.32f.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
   30 Dec 2004; Sven Wegener <swegener@gentoo.org> bacula-1.36.0.ebuild:
   Moved inherit to the top.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.10 2005/01/01 10:55:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.11 2005/01/09 10:39:49 swegener Exp $
 
 MY_P="bacula-1.32f-5"
 S="${WORKDIR}/${MY_P}"
@@ -16,13 +16,13 @@ IUSE="readline tcpd ssl gnome mysql sqlite X static"
 #theres a local sqlite use flag. use it -OR- mysql, not both.
 #mysql is the reccomended choice ...
 DEPEND=">=sys-libs/zlib-1.1.4
-	readline? >=sys-libs/readline-4.1
-	tcpd? >=sys-apps/tcp-wrappers-7.6
-	ssl? >=dev-libs/openssl-0.9.6
-	gnome? gnome-base/gnome-libs
-	sqlite? =dev-db/sqlite-2*
-	mysql? >=dev-db/mysql-3.23
-	X? virtual/x11
+	readline? ( >=sys-libs/readline-4.1 )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	gnome? ( gnome-base/gnome-libs )
+	sqlite? ( =dev-db/sqlite-2* )
+	mysql? ( >=dev-db/mysql-3.23 )
+	X? ( virtual/x11 )
 	virtual/mta
 	dev-libs/gmp"
 RDEPEND="${DEPEND}

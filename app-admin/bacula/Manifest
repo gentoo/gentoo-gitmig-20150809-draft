@@ -1,21 +1,31 @@
-MD5 3751db92986632eb625acfd448bb2117 ChangeLog 6412
-MD5 576350e212f664c3355fa66d2b342809 bacula-1.34.5.ebuild 4435
-MD5 e575ed2611a51bb5a356cd848e2fca15 bacula-1.32f-r5.ebuild 3849
-MD5 ea12d708ba8f4516bd32285335aedae8 bacula-1.32f.ebuild 3866
-MD5 fc9ab1f604062606eb9bd8d980bb72b2 bacula-1.34.1.ebuild 3607
-MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
-MD5 486c728a72db25ae5ca4fc1514165877 bacula-1.34.4.ebuild 4247
-MD5 ae821984dc735627310c5ba987116310 bacula-1.34.6.ebuild 4435
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ee3a4d5339a3c83e2771d2874e1b4ab bacula-1.36.0.ebuild 9230
-MD5 d12f73af10ee40c23d29afc62f9a02b2 files/bacula-init 1916
-MD5 8e55a5f04a3cd9e096e9a5dfb46f1de7 files/digest-bacula-1.34.5 66
-MD5 5ae33205251ec6fc552b97d578ae0aa7 files/digest-bacula-1.32f 65
+MD5 ae821984dc735627310c5ba987116310 bacula-1.34.6.ebuild 4435
+MD5 fc9ab1f604062606eb9bd8d980bb72b2 bacula-1.34.1.ebuild 3607
+MD5 576350e212f664c3355fa66d2b342809 bacula-1.34.5.ebuild 4435
+MD5 c42b375590082f6556ba739b456ab8b8 bacula-1.32f.ebuild 3892
+MD5 d0e7d84d94d4a9e7d57bb464b691c448 bacula-1.32f-r5.ebuild 3875
+MD5 04821769229c13d31d3742e9973e88ab ChangeLog 6564
+MD5 486c728a72db25ae5ca4fc1514165877 bacula-1.34.4.ebuild 4247
+MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 c453d7375a93ff187e5bc03ede9417b8 files/digest-bacula-1.32f-r5 67
-MD5 f444bcaac48e16af2fd6fb2e247bf8b6 files/digest-bacula-1.34.1 66
-MD5 9238a842a0292637c8f00243c5967527 files/bacula-init2 2574
-MD5 0b9309406bd6631e14ba47c132ef3b33 files/digest-bacula-1.34.4 66
-MD5 551003183e612a958cc974532d004224 files/digest-bacula-1.34.6 66
+MD5 5ae33205251ec6fc552b97d578ae0aa7 files/digest-bacula-1.32f 65
 MD5 2552434ccc44047b9b503045a9cff932 files/bacula-3.6.0-configure.diff 7578
+MD5 d12f73af10ee40c23d29afc62f9a02b2 files/bacula-init 1916
+MD5 9238a842a0292637c8f00243c5967527 files/bacula-init2 2574
+MD5 f444bcaac48e16af2fd6fb2e247bf8b6 files/digest-bacula-1.34.1 66
+MD5 0b9309406bd6631e14ba47c132ef3b33 files/digest-bacula-1.34.4 66
+MD5 8e55a5f04a3cd9e096e9a5dfb46f1de7 files/digest-bacula-1.34.5 66
+MD5 551003183e612a958cc974532d004224 files/digest-bacula-1.34.6 66
 MD5 aad89729d5313c52d3b3b0b9246f8f47 files/digest-bacula-1.36.0 66
-MD5 aba3c0108a7b301c99c8aa4f59a04081 files/1.32f/1.32f-1-weekofmonth.patch 1879
 MD5 13dd37747df7f32ec471e6bdf7eadec2 files/1.32f/1.32f-2-eom-nextvol.patch 9992
+MD5 aba3c0108a7b301c99c8aa4f59a04081 files/1.32f/1.32f-1-weekofmonth.patch 1879
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4Qn7I1lqEGTUzyQRAslxAKDSn2VKmpWuPNpKJH4tW4M/TOpBKgCcCgtO
+8PEwQY3cq02was7CqFIWC4Q=
+=tBXc
+-----END PGP SIGNATURE-----
