@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.1 2003/11/18 16:33:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.2 2003/11/19 20:36:42 vapier Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-IUSE=""
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
-inherit flag-o-matic
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~mips ~amd64 ~ia64"
+RESTRICT="nomirror"
 
 DEPEND="virtual/glibc
 	>=sys-devel/autoconf-2.54"
@@ -21,6 +21,8 @@ src_compile() {
 	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "" ]; then
 		replace-flags -O[3-9] -O2
 	fi
+	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+
 	# configure is broken by default for sparc and possibly others, regen
 	# from configure.in
 	autoconf
