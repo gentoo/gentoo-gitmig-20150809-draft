@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.1.ebuild,v 1.1 2004/03/15 18:18:04 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.1.ebuild,v 1.2 2004/04/26 01:44:23 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_compile() {
 	local myconf
 	myconf="${myconf} `use_with tcpd libwrap`"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "compile problem"
 }
 
