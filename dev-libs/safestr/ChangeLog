@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/safestr
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.1 2003/10/08 18:36:18 vapier Exp $
+
+*safestr-1.0.1 (08 Oct 2003)
+
+  08 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
