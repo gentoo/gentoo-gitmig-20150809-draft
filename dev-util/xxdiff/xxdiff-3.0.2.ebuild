@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.7 2004/06/05 10:58:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.8 2004/06/11 18:35:01 dholm Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ DEPEND=">=x11-libs/qt-3.0.0
 	=dev-util/tmake-1.8*
 	kde? ( >=kde-base/kdelibs-3.1.0 )"
 
-RDEPEND="${DEPEND}
-	sys-apps/diffutils"
+RDEPEND="sys-apps/diffutils"
 
 SLOT="0"
 LICENSE="GPL-2"
