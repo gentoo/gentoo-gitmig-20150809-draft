@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.5 2004/11/01 19:29:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.6 2004/11/22 22:04:03 eradicator Exp $
 
 IUSE=""
 
@@ -13,14 +13,14 @@ DESCRIPTION="AlsaMixerGui - a FLTK based amixer Frontend"
 HOMEPAGE="http://www.iua.upf.es/~mdeboer/projects/alsamixergui/"
 SRC_URI="ftp://www.iua.upf.es/pub/mdeboer/projects/alsamixergui/${PN}-${NATIVE_VER}.tar.gz"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+
 DEPEND="virtual/alsa
 	>=media-libs/alsa-lib-0.9.0_rc1
 	>=media-sound/alsa-utils-0.9.0_rc1
 	>=x11-libs/fltk-1.1.0_rc6"
-
-SLOT="0"
-KEYWORDS="x86 amd64 ~ppc ~ppc64"
-LICENSE="GPL-2"
 
 src_unpack() {
 	unpack ${A}
@@ -30,14 +30,14 @@ src_unpack() {
 }
 
 src_compile() {
-	export LDFLAGS="-L/usr/$(get_libdir)/fltk-1.1"
-	export CPPFLAGS="-I/usr/include/fltk-1.1"
+	export LDFLAGS="-L/usr/$(get_libdir)/fltk-1.1 ${LDFLAGS}"
+	export CPPFLAGS="-I/usr/include/fltk-1.1 ${CPPFLAGS}"
 
 	econf || die "configure failed"
 	emake || die "make failed"
 }
 
 src_install() {
-	einstall || die
-	dodoc COPYING README AUTHORS ChangeLog
+	make DESTDIR="${D}" install || die
+	dodoc README AUTHORS ChangeLog
 }
