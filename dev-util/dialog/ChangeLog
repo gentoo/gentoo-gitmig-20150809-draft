@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.6 2002/12/09 11:41:19 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.7 2003/01/07 22:10:53 tuxus Exp $
 
 *dialog-0.9_beta20020814 (08 Dec 2002)
                                                                                                    
@@ -13,6 +13,9 @@
   Upstream update and minor ebuild change.
 
 *dialog-0.9_beta20020519 (03 Jun 2002)
+
+  07 Jan 2003; Jan Seidel <tuxus@gentoo.org dialog-0.9_beta20020519.ebuild :
+  Added mips to keywords.
 
   23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
