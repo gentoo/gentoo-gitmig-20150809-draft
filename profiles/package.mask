@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3784 2005/04/02 07:40:02 mrness Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3785 2005/04/02 10:37:20 zaheerm Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1107,10 +1107,6 @@ dev-lisp/cl-rsm-genetic-alg
 # restrictions, I have masked these.
 =media-video/helixplayer-bin-0.3.0.71
 =media-video/helixplayer-bin-0.3.0.124
-
-# <foser@gentoo.org> (12 May 2004)
-# masking out for now, because of their unstable nature
-dev-util/gst-editor
 
 # <mr_bones_@gentoo.org> (11 May 2004)
 # masking this mis-named version "from the future"
