@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/oggtst
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/oggtst/ChangeLog,v 1.4 2003/11/29 04:37:56 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/oggtst/ChangeLog,v 1.5 2003/12/05 13:56:31 weeve Exp $
+
+  05 Dec 2003; Jason Wever <weeve@gentoo.org> oggtst-0.0.ebuild:
+  Marked stable on sparc to fix broken dependencies.
 
   28 Nov 2003; Brad House <brad_mssw@gentoo.org> oggtst-0.0.ebuild:
   mark stable on amd64
