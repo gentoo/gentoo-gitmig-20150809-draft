@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.3 2002/03/29 16:26:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.4 2002/04/13 16:19:51 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 
@@ -14,13 +14,14 @@ need-kde() {
 	debug-print-function $FUNCNAME $*
 	KDEVER="$1"
 	
-	#newdepend ">=kde-base/kdelibs-$KDEVER"
 	min-kde-ver $KDEVER
 	newdepend "=kde-base/kdelibs-${selected_version}*"
 	set-kdedir $KDEVER
 
 	qtver-from-kdever $KDEVER
 	need-qt $selected_version
+	
+	SLOT="$KDEMAJORVER"
 
 }
 
@@ -70,7 +71,6 @@ need-qt() {
 
 	debug-print-function $FUNCNAME $*
 	QTVER="$1"
-	#newdepend ">=x11-libs/qt-$QTVER"
 	min-qt-ver $QTVER
 	newdepend "=x11-libs/qt-$selected_version*"
 	set-qtdir $QTVER
