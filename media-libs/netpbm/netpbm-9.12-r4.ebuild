@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.9 2003/04/22 23:04:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.10 2003/05/13 12:52:07 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -14,6 +14,18 @@ DEPEND=">=media-libs/jpeg-6b
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
+
+# 13/May/2003: Fix for bug #14392  by Jason Wever <weeve@gentoo.org>
+# start fix
+inherit flag-o-matic
+if [ ${ARCH} = "sparc" ]
+then
+        filter-flags "-O3"
+        filter-flags "-O2"
+        filter-flags "-O"
+fi
+# end fix
+
 
 src_unpack() {
 	unpack ${A}
