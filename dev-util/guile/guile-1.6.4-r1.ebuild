@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.12 2004/04/29 00:58:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.13 2004/05/13 14:47:28 randy Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha hppa ia64 amd64 sparc mips"
+KEYWORDS="x86 ~ppc alpha hppa ia64 amd64 sparc mips s390"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
