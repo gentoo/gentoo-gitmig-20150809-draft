@@ -3,17 +3,19 @@ Hash: SHA1
 
 MD5 93dfb35d63fa946198b90458415a4fed log4cxx-0.9.7-r1.ebuild 1847
 MD5 acdf5c918d02c97d984332414891678e log4cxx-0.9.5.ebuild 881
-MD5 bc0c7bef82bbb084b36d572f57274e60 ChangeLog 1881
+MD5 7d3b6a3ca080b7f2cbee893f38112f70 ChangeLog 2099
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 58ee85872eea9711c59ddaeeb2f09568 files/log4cxx-0.9.7-gentoo.diff 1037
+MD5 c9d8af5130ddcb98bd87388e7f573a29 log4cxx-0.9.7-r2.ebuild 1848
+MD5 f1b5b29185d699bc52fd6f9d23af3588 files/log4cxx-0.9.7-gentoo.diff 1989
 MD5 b11a3e797b67c6aea1bb82f6473890df files/log4cxx-0.9.7-use-SQLWCHAR.diff 967
 MD5 a94dc071335f2e2545d523996053a685 files/digest-log4cxx-0.9.7-r1 65
+MD5 a94dc071335f2e2545d523996053a685 files/digest-log4cxx-0.9.7-r2 65
 MD5 f9e8c2a552b387262cde2f04b5dc9605 files/log4cxx-0.9.5-fix-errno.diff 683
 MD5 1135167eb4745c4a16791f44317ba88b files/digest-log4cxx-0.9.5 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB/hC/EZCkKN40op4RAnzxAJ93wvwGFg4/WCUyWl/O/d2aC6x2FgCeI31h
-OS6UlDvIJDT9GIfpXBerbe8=
-=dPds
+iD8DBQFCOBS/EZCkKN40op4RAu1pAKCBynJBUL6slY0jDhfOgGd8fsfumwCcDrY2
+B4KyuL7WIrmbwwYFy44ggDc=
+=L89u
 -----END PGP SIGNATURE-----
