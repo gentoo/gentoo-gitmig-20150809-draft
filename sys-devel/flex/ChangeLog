@@ -1,8 +1,14 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.4 2002/11/18 15:36:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.5 2002/12/01 23:01:11 seemant Exp $
 
 *flex-2.5.23 (18 Nov 2002)
+
+  01 Dec 2002; Seemant Kulleen <seemant@gentoo.org> flex-2.5.23.ebuild
+  flex-2.5.4a-r5.ebuild :
+
+  emake -> emake || make.  Closes bug #11446 by bartelt@gentoo.org (Ulf
+  Bartelt)
 
   18 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
 

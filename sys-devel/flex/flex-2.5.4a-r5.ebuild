@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.2 2002/10/16 14:38:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.3 2002/12/01 23:01:11 seemant Exp $
 
 S="${WORKDIR}/flex-2.5.4"
 DESCRIPTION="GNU lexical analyser generator"
@@ -26,28 +26,28 @@ src_unpack() {
 }
 
 src_compile() {
-    ./configure --prefix=/usr \
+	./configure --prefix=/usr \
 		--host=${CHOST} || die
 
-    if [ -z "`use static`" ]
-    then
-        emake || die
-    else
-        emake LDFLAGS=-static || die
-    fi
+	if [ -z "`use static`" ]
+	then
+		emake || make || die
+	else
+		emake LDFLAGS=-static || die
+	fi
 }
 
 src_install() {
-    make prefix=${D}/usr \
+	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		install || die
 	
-    if [ -z "`use build`" ]
-    then
-        dodoc COPYING NEWS README
-    else
-        rm -rf ${D}/usr/share ${D}/usr/include ${D}/usr/lib
-    fi
+	if [ -z "`use build`" ]
+	then
+		dodoc COPYING NEWS README
+	else
+		rm -rf ${D}/usr/share ${D}/usr/include ${D}/usr/lib
+	fi
 
 	dosym flex /usr/bin/lex
 }
