@@ -1,13 +1,17 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.5 2002/05/25 01:25:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.6 2002/05/27 10:04:31 spider Exp $
+
+*gnome-2.0.0-beta5-r4 (27 May 2002)
+  27 May 2002; Spider <spider@gentoo.org> gnome-2.0.0-beta5-r4.ebuild:
+  gnome-vfs, sawfish, rep-gtk and librep are upgraded
+  reflected the ebuild for the gnome-vfs only, since sawfish still
+  doesn't build. *sigh*
+  removing old versions
 
 *gnome-2.0.0_beta5-r3 (25 May 2002)
-
   25 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gnome-2.0.0_beta5-r3.ebuild files/digest-gnome-2.0.0_beta5-r3:
-
   The glib ebuild was fixed.
-
   Removed gnome-2.0.0_beta5-r2.ebuild files/digest-gnome-2.0.0_beta5-r2
 
 *gnome-2.0.0-beta5-r2 (23 May 2002)
