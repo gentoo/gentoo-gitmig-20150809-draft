@@ -1,6 +1,6 @@
 # Copyright 2003-2004 DataCore GmbH.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.3 2004/07/01 21:47:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.4 2004/07/15 03:21:24 agriffis Exp $
 
 inherit eutils
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://quagga.net/"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
-S="${WORKDIR}/${P}"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz"
 IUSE="ipv6 snmp pam"
 
