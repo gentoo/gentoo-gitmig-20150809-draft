@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-0.6.ebuild,v 1.4 2004/07/01 19:48:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-0.6.ebuild,v 1.5 2004/07/14 16:16:40 agriffis Exp $
 
 DESCRIPTION="Elmo: console email client"
 HOMEPAGE="http://elmo.sourceforge.net/"
@@ -8,11 +8,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 SLOT="0"
 
 DEPEND="virtual/libc"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die
