@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/aalib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.13 2004/04/15 02:35:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.14 2004/06/20 18:18:16 seemant Exp $
+
+  20 Jun 2004; Seemant Kulleen <seemant@gentoo.org> aalib-1.4_rc4-r2.ebuild:
+  ensure that automake-1.4 is used, otherwise build errors are the result.
+  Thanks to: Greg Andreou <gregorya@dai.ed.ac.uk> in bug #54450
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> aalib-1.4_rc4-r2.ebuild:
   Marked stable on mips.

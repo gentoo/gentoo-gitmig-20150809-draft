@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.20 2004/04/15 02:35:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.21 2004/06/20 18:18:16 seemant Exp $
 
 inherit eutils libtool
 
@@ -21,12 +21,9 @@ RDEPEND=">=sys-libs/ncurses-5.1
 	gpm? ( sys-libs/gpm )
 	slang? ( >=sys-libs/slang-1.4.2 )"
 
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
-
-pkg_setup() {
-	# We need autoconf-2.5
-	export WANT_AUTOCONF=2.5
-}
+DEPEND="$RDEPEND
+	>=sys-devel/autoconf-2.58
+	>=sys-devel/automake-1.4"
 
 src_unpack() {
 	unpack ${A}
@@ -35,6 +32,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# We need autoconf-2.5 and automake-1.4
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.4
+
 	local myconf=""
 	use slang \
 		&& myconf="--with-slang-driver=yes" \
