@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.21 2004/03/19 09:44:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.22 2004/03/21 12:51:38 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> nagios-core-1.1-r4.ebuild,
+  nagios-core-1.1-r5.ebuild:
+  QA: IUSE variable was incorrect, set propper USE flags tests.
 
 *nagios-core-1.2 (27 Feb 2004)
 

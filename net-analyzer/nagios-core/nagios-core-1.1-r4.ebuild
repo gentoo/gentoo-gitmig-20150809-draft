@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.9 2004/03/10 19:10:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.10 2004/03/21 12:51:38 mboman Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc ~amd64"
-IUSE="gd apache2 perl"
+IUSE="gd apache2 perl mysql postgres debug"
 
 DEPEND=">=net-mail/mailx-8.1
 	apache2? ( >=net-www/apache-2.0.43-r1 )
@@ -24,7 +24,7 @@ DEPEND=">=net-mail/mailx-8.1
 	)
 	perl? ( >=perl-5.6.1-r7 )
 	mysql? ( >=dev-db/mysql-3.23.56 )
-	pgsql? ( >=dev-db/postgresql-7.3.2 )"
+	postgres? ( >=dev-db/postgresql-7.3.2 )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -47,18 +47,20 @@ src_compile() {
 	--with-mysql-status --with-mysql-comments --with-mysql-extinfo \
 	--with-mysql-retention --with-mysql-downtime"
 
-	use pgsql && myconf="${myconf} --with-pgsql-xdata \
+	use postgres && myconf="${myconf} --with-pgsql-xdata \
 	--with-pgsql-status --with-pgsql-comments --with-pgsql-extinfo \
 	--with-pgsql-retention --with-pgsql-downtime"
 
 	use perl && myconf="${myconf} --enable-embedded-perl --with-perlcache"
 
-	use debug0 && myconf="${myconf} --enable-DEBUG0"
-	use debug1 && myconf="${myconf} --enable-DEBUG1"
-	use debug2 && myconf="${myconf} --enable-DEBUG2"
-	use debug3 && myconf="${myconf} --enable-DEBUG3"
-	use debug4 && myconf="${myconf} --enable-DEBUG4"
-	use debug5 && myconf="${myconf} --enable-DEBUG5"
+	if [ -n "`use debug`" ]; then
+		myconf="${myconf} --enable-DEBUG0"
+		myconf="${myconf} --enable-DEBUG1"
+		myconf="${myconf} --enable-DEBUG2"
+		myconf="${myconf} --enable-DEBUG3"
+		myconf="${myconf} --enable-DEBUG4"
+		myconf="${myconf} --enable-DEBUG5"
+	fi
 
 	./configure ${myconf} \
 		--host=${CHOST} \
