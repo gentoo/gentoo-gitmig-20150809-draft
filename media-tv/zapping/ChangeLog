@@ -1,14 +1,10 @@
 # ChangeLog for media-tv/zapping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/ChangeLog,v 1.6 2004/06/25 00:35:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/ChangeLog,v 1.7 2004/07/18 11:39:34 mholzer Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> zapping-0.6.6.ebuild,
   zapping-0.6.7.ebuild:
   Add die following econf for bug 48950
-
-  16 Dec 2003; Martin Holzer <mholzer@gentoo.org> zapping-0.6.4-r1.ebuild,
-  zapping-0.6.6.ebuild, zapping-0.6.7.ebuild:
-  adding RESTRICT="nomirror"
 
   16 Jul 2003; Martin Holzer <mholzer@gentoo.org> zapping-0.6.6.ebuild,
   zapping-0.6.7.ebuild:
