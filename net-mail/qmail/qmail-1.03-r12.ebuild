@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.9 2003/09/05 02:44:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.10 2003/09/12 00:55:01 robbat2 Exp $
 
 inherit eutils
 
@@ -285,29 +285,35 @@ src_install() {
 
 }
 
+rootmailfixup() {
+	# so you can check mail as root easily
+	local TMPCMD="ln -sf /var/qmail/alias/.maildir/ ${ROOT}/root/.maildir"
+	if [ -d "${ROOT}/root/.maildir" ] && [ ! -L "${ROOT}/root/.maildir" ] ; then
+		einfo "Previously the qmail ebuilds created /root/.maildir/ but not"
+		einfo "mail was every delivered there. If the directory does not"
+		einfo "contain any mail, please delete it and run:"
+		einfo "${TMPCMD}"
+	else
+		${TMPCMD}
+	fi
+	chown -R alias.qmail ${ROOT}/var/qmail/alias/.maildir 2>/dev/null
+}
+
 pkg_postinst() {
 
 	einfo "Setting up the message queue hierarchy ..."
 	# queue-fix makes life easy!
-	/var/qmail/bin/queue-fix /var/qmail/queue >/dev/null
+	/var/qmail/bin/queue-fix ${ROOT}/var/qmail/queue >/dev/null
 
-	# use the correct maildirmake
-	# the courier-imap one has some extensions that are nicer
-	[ -e /usr/bin/maildirmake ] && MAILDIRMAKE="/usr/bin/maildirmake" || MAILDIRMAKE="${D}/var/qmail/bin/maildirmake"
-
-	# make sure root can get some mail
-	[ ! -d /root/.maildir ] && ${MAILDIRMAKE} /root/.maildir
-	[ ! -e /root/.qmail ] && cp ${FILESDIR}/${PV}-${PR}/dot_qmail /root/.qmail
-	[ -e /root/.qmail ] && chmod 644 /root/.qmail
+	rootmailfixup
 
 	# for good measure
 	env-update
 
-	einfo "Please do not forget to run, the following syntax :"
+	einfo "To setup qmail to run out-of-the-box on your system, run:"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config"
-	einfo "This will setup qmail to run out-of-the-box on your system."
 	echo
-	einfo "To start qmail at boot you have to enable the /etc/init.d/svscan rc file"
+	einfo "To start qmail at boot you have to add svscan to your startup"
 	einfo "and create the following links :"
 	einfo "ln -s /var/qmail/supervise/qmail-send /service/qmail-send"
 	einfo "ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd"
@@ -319,7 +325,7 @@ pkg_postinst() {
 	einfo "ln -s /var/qmail/supervise/qmail-qmtpd /service/qmail-qmtpd"
 	einfo "ln -s /var/qmail/supervise/qmail-qmqpd /service/qmail-qmqpd"
 	echo
-	einfo "Additionally, if you wish to run qmail right now, you should run:"
+	einfo "Additionally, if you wish to run qmail right now, you should run this before anything else:"
 	einfo "source /etc/profile"
 }
 
