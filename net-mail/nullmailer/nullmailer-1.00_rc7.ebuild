@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7.ebuild,v 1.3 2003/09/05 09:13:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7.ebuild,v 1.4 2003/11/06 20:12:13 robbat2 Exp $
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
@@ -62,9 +62,9 @@ src_install () {
 	# permissions stuff
 	keepdir /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	fperms 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
-	fowners root.nullmail /usr/sbin/nullmailer-queue
+	fowners root:nullmail /usr/sbin/nullmailer-queue
 	fperms g+s /usr/sbin/nullmailer-queue
-	fowners nullmail.nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
+	fowners nullmail:nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
 	fperms 660 /var/nullmailer/trigger
 }
 
@@ -77,8 +77,8 @@ pkg_postinst() {
 	setupuser
 	# Do this again for good measure
 	[ ! -e /var/nullmailer/trigger ] && mkfifo /var/nullmailer/trigger
-	chown root.nullmail /usr/sbin/nullmailer-queue
-	chown nullmail.nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
+	chown root:nullmail /usr/sbin/nullmailer-queue
+	chown nullmail:nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
 	chmod 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	chmod g+s /usr/sbin/nullmailer-queue
 	chmod 660 /var/nullmailer/trigger
