@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Netmask
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.7 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.8 2003/11/13 14:09:53 tuxus Exp $
+
+  13 Nov 2003; <tuxus@gentoo.org> Net-Netmask-1.9004.ebuild:
+  added mips to KEYWORDS
 
 *Net-Netmask-1.9004 (21 Jun 2003)
  
