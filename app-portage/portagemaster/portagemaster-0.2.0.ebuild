@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.0.ebuild,v 1.3 2003/11/20 02:19:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.0.ebuild,v 1.4 2004/01/21 20:55:53 genone Exp $
 
 DESCRIPTION="A java portage browser and installer"
 HOMEPAGE="http://portagemaster.sourceforge.net/"
@@ -11,10 +11,10 @@ SLOT="0"
 KEYWORDS="x86 -ppc sparc"
 IUSE="jikes"
 
-DEPEND=">=dev-java/sun-jdk-1.4.1-r5
+DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.5.1-r3
 	jikes? ( >=dev-java/jikes-1.16 )"
-RDEPEND=">=dev-java/sun-jdk-1.4.1-r5"
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}
 
