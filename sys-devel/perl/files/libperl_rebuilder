@@ -121,7 +121,7 @@ fi
 cd /var/db/pkg
 LIBS_LIST=`grep -ls "usr\/lib\/perl" */*/CONTENTS | sed 's|/CONTENTS||g'  | grep -v "sys-devel/perl" | grep -v "dev-perl"`
 
-REBUILD_LIST="echo ${LIBS_LIST} ${REBUILD_PRELIST} | sort -u"
+REBUILD_LIST=`echo ${LIBS_LIST} ${REBUILD_PRELIST} | sort -u`
 
 if echo $REBUILD_LIST | egrep -q "no.*ebuilds to satisfy"; then
   echo "Packages are installed that no longer exist in Gentoo."

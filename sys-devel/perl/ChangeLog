@@ -1,10 +1,13 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.44 2003/01/12 15:33:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.45 2003/01/15 12:46:16 jrray Exp $
+
+  15 Jan 2003; J Robert Ray <jrray@gentoo.org> libperl_rebuilder : Fixed
+  unfortunate typo.
 
 * perl-5.8.0-r8 (06 Jan 2003)
 
-  12 Jan 2002; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r8,
+  12 Jan 2003; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r8,
   libperl_rebuilder:
   
   ebuild - Put a sleep where we had one in the else block so that there is a
