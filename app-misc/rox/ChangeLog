@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/rox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.8 2002/07/30 15:46:50 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.9 2002/12/08 14:26:07 bcowan Exp $
+
+*rox-1.3.5 (09 Dec 2002)
+  09 Dec 2002; Brad Cowan <bcowan@gentoo.org> rox-1.3.5.ebuild,
+  files/digest-rox-1.3.5, gentoo-rox.patch:
+  
+  Bumped version, added patch from http://www.kerofin.demon.co.uk/rox/patch,
+  closes bug #11746.
 
 *rox-1.3.2-r2 (30 Jul 2002)
   30 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> rox-1.3.2-r2.ebuild :
