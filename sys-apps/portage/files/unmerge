@@ -6,6 +6,7 @@ import os
 norm=os.path.normpath
 import string
 from commands import *
+category=os.environ["CATEGORY"]
 
 def pkgscript(x):
 	myresult=getstatusoutput("/usr/bin/ebuild "+myebuildfile+" "+x)
@@ -31,7 +32,7 @@ except KeyError:
 	myroot="/"
 
 for pkgname in sys.argv[1:]:
-	if os.path.isdir(os.path.normpath(myroot+"var/db/pkg/"+pkgname)):
+	if os.path.isdir(os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname)):
 		if myroot=="/":
 			print "Unmerging",pkgname+"..."
 		else:
@@ -40,8 +41,7 @@ for pkgname in sys.argv[1:]:
 	else:
 		print pkgname,"not installed"
 		continue
-	try:
-		contents=open(os.path.normpath(myroot+"var/db/pkg/"+pkgname+"/CONTENTS"))
+	try:	contents=open(os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname+"/CONTENTS"))
 	except:
 		print "Error -- could not open CONTENTS file for", pkgname+".  Aborting."
 		sys.exit(1)
@@ -67,7 +67,7 @@ for pkgname in sys.argv[1:]:
 	# we don't want to automatically remove the ebuild file listed
 	# in the CONTENTS file.  We'll do after everything else has 
 	# completed successfully.
-	myebuildfile=os.path.normpath(myroot+"var/db/pkg/"+pkgname+"/"+pkgname+".ebuild")
+	myebuildfile=os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname+"/"+pkgname+".ebuild")
 	if pkgfiles.has_key(myebuildfile):
 		del pkgfiles[myebuildfile]
 
@@ -118,9 +118,9 @@ for pkgname in sys.argv[1:]:
 	#postrm script
 	pkgscript("postrm")	
 	#recursive cleanup
-	for thing in os.listdir(myroot+"var/db/pkg/"+pkgname):
-		os.unlink(myroot+"var/db/pkg/"+pkgname+"/"+thing)
-	os.rmdir(myroot+"var/db/pkg/"+pkgname)
+	for thing in os.listdir(myroot+"var/db/pkg/"+category+"/"+pkgname):
+		os.unlink(myroot+"var/db/pkg/"+category+"/"+pkgname+"/"+thing)
+	os.rmdir(myroot+"var/db/pkg/"+category+"/"+pkgname)
 	print
 	if myroot=="/":
 		print pkgname,"unmerged."
