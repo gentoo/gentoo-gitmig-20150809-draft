@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdnav
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.22 2004/12/29 00:49:47 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.23 2005/01/16 22:50:34 luckyduck Exp $
+
+*libdvdnav-0.1.10 (16 Jan 2005)
+
+  16 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +libdvdnav-0.1.10.ebuild:
+  new upstream version. fixes bug #55177.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
