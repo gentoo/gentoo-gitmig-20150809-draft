@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/tf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.3 2003/09/25 06:26:04 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.4 2004/02/12 06:52:12 mr_bones_ Exp $
+
+*tf-50_beta3 (11 Feb 2004)
+
+  11 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> tf-50_beta3.ebuild:
+  version bump (bug #40973); some doc patches from Mikael Warlander.
 
 *tf-50_alpha11 (24 Sep 2003)
 
