@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.14.5.ebuild,v 1.1 2003/08/18 01:27:36 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.14.5.ebuild,v 1.2 2003/08/18 01:28:26 g2boojum Exp $
 
 IUSE=""
- DESCRIPTION="Bayesian spam filter designed with fast algorithms, and 
-tuned for speed."
+
+DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.gz"
 
