@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.6 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.7 2004/05/12 15:42:57 ciaranm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 HOMEPAGE="http://www.metrolink.com/openmotif/"
 LICENSE="MOTIF"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 IUSE=""
 DEPEND="virtual/glibc
 	virtual/x11"
