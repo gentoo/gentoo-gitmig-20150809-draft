@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/rudiments
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.1 2003/10/20 02:07:33 lisa Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.2 2004/03/14 02:22:37 mr_bones_ Exp $
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  rudiments-0.25.1.ebuild:
+  Don't assign default to S; header fix
 
 *rudiments-0.25.1 (19 Oct 2003)
 

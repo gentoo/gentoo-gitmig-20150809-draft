@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/rudiments-0.25.1.ebuild,v 1.1 2003/10/20 02:07:33 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/rudiments-0.25.1.ebuild,v 1.2 2004/03/14 02:22:37 mr_bones_ Exp $
 
 # Contributed by: Karl Haines <karl420@comcast.net>
 
@@ -14,8 +14,6 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=""
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	./configure \
