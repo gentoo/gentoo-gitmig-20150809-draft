@@ -1,9 +1,12 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.9 2002/09/27 14:51:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.10 2002/11/06 10:29:28 leonardop Exp $
 
 *gnome-spell-0.5 (27 Sep 2002)
 
+  06 Nov 2002; L. Boshell <leonardop@gentoo.org> : Added control-center-1.4
+  dependency. Thanks to <suka_at@yahoo.de> for his report on bug #10254.
+  
   27 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
   New version. Update to use gnome.org eclass.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.5.ebuild,v 1.3 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.5.ebuild,v 1.4 2002/11/06 10:29:28 leonardop Exp $
 
 IUSE="nls"
 
@@ -15,6 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.7
+	=gnome-base/control-center-1.4*
 	>=gnome-base/bonobo-1.0.19-r1
 	<gnome-base/libglade-2.0.0
 	>=gnome-extra/gal-0.19
