@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/firebird
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.17 2004/05/13 21:38:56 mksoft Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.18 2004/06/24 21:53:06 agriffis Exp $
 
   14 May 2004; <mksoft@gentoo.org> firebird-1.5.0.ebuild:
   Marked 1.5.0 as stable on x86

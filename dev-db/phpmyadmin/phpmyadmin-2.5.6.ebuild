@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.6.ebuild,v 1.10 2004/06/17 02:03:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.6.ebuild,v 1.11 2004/06/24 21:59:47 agriffis Exp $
 
 inherit eutils webapp-apache
 

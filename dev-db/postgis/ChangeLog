@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgis
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.13 2004/06/17 00:57:20 nakano Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.14 2004/06/24 22:00:14 agriffis Exp $
 
   17 Jun 2004; Masatomo Nakano <nakano@gentoo.org> postgis-0.7.5-r2.ebuild:
   Marked as stable on x86.

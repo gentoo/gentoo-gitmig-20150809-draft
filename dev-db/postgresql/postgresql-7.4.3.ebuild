@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3.ebuild,v 1.1 2004/06/16 17:11:18 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3.ebuild,v 1.2 2004/06/24 22:00:26 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/fastdb
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/fastdb/ChangeLog,v 1.4 2004/03/02 11:25:02 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/fastdb/ChangeLog,v 1.5 2004/06/24 21:52:49 agriffis Exp $
 
 *fastdb-2.92 (25 Feb 2004)
 

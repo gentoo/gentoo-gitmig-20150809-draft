@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/edb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.14 2003/11/15 23:37:32 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.15 2004/06/24 21:52:39 agriffis Exp $
 
 *edb-1.0.4.* (13 Oct 2003)
 

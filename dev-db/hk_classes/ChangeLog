@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/hk_classes
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.16 2004/06/02 20:39:53 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.17 2004/06/24 21:54:41 agriffis Exp $
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> hk_classes-0.6.2a.ebuild:
   Fix use invocation

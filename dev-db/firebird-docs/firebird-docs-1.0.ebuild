@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/firebird-docs-1.0.ebuild,v 1.9 2004/03/14 13:19:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/firebird-docs-1.0.ebuild,v 1.10 2004/06/24 21:53:16 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="A relational database offering many ANSI SQL-92 features"

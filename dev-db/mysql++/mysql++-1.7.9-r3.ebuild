@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r3.ebuild,v 1.6 2004/06/19 07:28:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r3.ebuild,v 1.7 2004/06/24 21:57:12 agriffis Exp $
 
 inherit gcc eutils gnuconfig
 

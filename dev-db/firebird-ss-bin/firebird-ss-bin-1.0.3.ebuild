@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-ss-bin/firebird-ss-bin-1.0.3.ebuild,v 1.3 2004/06/14 17:19:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-ss-bin/firebird-ss-bin-1.0.3.ebuild,v 1.4 2004/06/24 21:53:26 agriffis Exp $
 
 DEPEND="virtual/glibc"
 LICENSE="MPL-1.1"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.12 2004/03/14 13:18:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.13 2004/06/24 22:02:40 agriffis Exp $
 
 DESCRIPTION="xforms based front end to mysql"
 SRC_URI="ftp://ftp.mysql.com/Contrib/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.5.ebuild,v 1.1 2004/02/16 18:43:55 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.5.ebuild,v 1.2 2004/06/24 21:54:30 agriffis Exp $
 
 inherit java-pkg
 

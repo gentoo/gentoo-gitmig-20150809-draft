@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.8 2004/05/09 18:42:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.9 2004/06/24 21:53:52 agriffis Exp $
 
 DESCRIPTION="A fast, reliable, simple package for creating and reading constant databases"
 SRC_URI="mirror://debian/pool/main/f/freecdb//${P/-/_}.tar.gz"

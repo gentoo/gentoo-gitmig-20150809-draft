@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.5 2004/06/14 17:20:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.6 2004/06/24 22:01:36 agriffis Exp $
 
 DESCRIPTION="Replacement for the venerable 'isql' program supplied by Sybase."
 HOMEPAGE="http://www.sqsh.org/"
