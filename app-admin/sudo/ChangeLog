@@ -1,11 +1,15 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.5 2002/04/29 08:43:46 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.6 2002/07/16 02:36:17 owen Exp $
 
   26 Apr 2002; Thilo Bangert <bangert@gentoo.org> : 
   added --with-env-editor so that EDITOR is respected when using visudo
 
 *sudo-1.6.6 (26 Apr 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
 
   26 Apr 2002; Thilo Bangert <bangert@gentoo.org> : 
   new security release
