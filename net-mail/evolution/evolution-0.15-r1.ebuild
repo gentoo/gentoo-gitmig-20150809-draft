@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r1.ebuild,v 1.2 2001/10/06 15:50:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r1.ebuild,v 1.3 2001/10/06 16:10:21 azarah Exp $
 
 DB3=db-3.1.17
 A="${P}.tar.gz ${DB3}.tar.gz"
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.ximian.com"
 DEPEND=">=gnome-libs/bonobo-conf-0.11
         >=gnome-base/bonobo-1.0.9-r1
 	>=gnome-base/gal-0.13-r1
-        >=gnome-base/gconf-1.0.4-r1
+        >=gnome-extra/gconf-1.0.4-r1
 	>=gnome-base/gtkhtml-0.14-r1
 	>=gnome-base/oaf-0.6.6-r1
 	>=gnome-base/ORBit-0.5.10-r1
