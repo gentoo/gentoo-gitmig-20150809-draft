@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.8 2004/05/12 03:18:44 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.9 2004/05/20 06:22:16 robbat2 Exp $
+
+*libmcal-0.7-r2 (19 May 2004)
+
+  19 May 2004; Robin H. Johnson <robbat2@gentoo.org> libmcal-0.7-r1.ebuild,
+  libmcal-0.7-r2.ebuild:
+  r1 stable, and bug #14915 finally, providing r2 with mstore+icap.
 
   11 May 2004; Michael McCabe <randy@gentoo.org> libmcal-0.7-r1.ebuild:
   Added s390 keywords
