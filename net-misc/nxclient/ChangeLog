@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/nxclient
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.1 2003/08/27 03:12:19 stuart Exp $
+
+*nxclient-1.2.2 (27 Aug 2003)
+
+  27 Aug 2003; stuart nxclient-1.2.2.ebuild, files/1.2.2/50nxclient:
+  Initial import
+
