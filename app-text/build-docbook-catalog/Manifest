@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4dbed9ccdcaf5cc5608b787e95cb70c3 ChangeLog 1199
 MD5 398a3f063f5257e49e5cbdadea6e4a7a build-docbook-catalog-1.1.ebuild 509
-MD5 58d62e5f109deff6f12b7d40df5b1754 build-docbook-catalog-1.2.ebuild 501
 MD5 b25d3f11b01122c2650ec4ef03b0275b metadata.xml 264
+MD5 580cdd1a7b5f0df976fc0192868a57a6 build-docbook-catalog-1.2.ebuild 511
 MD5 c52eefaffb2493cf662eacb6458a187d files/digest-build-docbook-catalog-1.1 72
 MD5 d6a3d6d7130e2a0120f42144f7d2ab38 files/digest-build-docbook-catalog-1.2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBKYJjHTu7gpaalycRAqaZAKDUNGsHOSk8Exvdq807i0fBJwqk6wCeKFfN
+Qwg6n7C9qDnESdsWU2EsawA=
+=uPW4
+-----END PGP SIGNATURE-----
