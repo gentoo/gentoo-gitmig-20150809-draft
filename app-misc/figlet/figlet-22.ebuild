@@ -1,12 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22.ebuild,v 1.2 2002/04/28 02:37:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22.ebuild,v 1.3 2002/07/25 16:55:21 seemant Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="FIGlet is a program for making large letters out of ordinary text"
 SRC_URI="ftp://ftp.plig.org/pub/figlet/program/unix/${PN}${PV}.tar.gz"
 HOMEPAGE="http://st-www.cs.uiuc.edu/users/chai/figlet.html"
+
+SLOT="0"
+LICENSE="Artistic"
+KEYWORDS="x86"
+
 DEPEND="virtual/glibc"
 
 src_unpack() {

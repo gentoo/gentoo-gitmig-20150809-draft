@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.2.ebuild,v 1.2 2002/07/11 06:30:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.2.ebuild,v 1.3 2002/07/25 16:55:21 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="CD Catalog is a simple yet effective CD indexing program."
 SRC_URI="http://www.littledragon.f2s.com/unix/cdcat/cdcat-0.2.tar.gz"
 HOMEPAGE="http://www.littledragon.f2s.com/unix/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=sys-apps/sed-3.02.80
 	>=sys-apps/grep-2.4.2

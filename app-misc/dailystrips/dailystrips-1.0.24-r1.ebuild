@@ -2,15 +2,16 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # /space/gentoo/cvsroot/gentoo-x86/app-misc/dailystrips/dailystrips-1.0.24.ebuild,v 1.3 2002/05/27 17:27:35 drobbins Exp
 
+S=${WORKDIR}/${P}
 DESCRIPTION="dailystrips automatically downloads your favorite online comics from the web."
 HOMEPAGE="http://dailystrips.sourceforge.net/"
-
-DEPEND=">=dev-perl/libwww-perl-5.50"
-
-#SRC_URI="mirror://sourceforge/dailystrips/${P}.tar.gz"
 SRC_URI="http://west.dl.sourceforge.net/sourceforge/dailystrips/${P}.tar.gz"
 
-S=${WORKDIR}/${P}
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=dev-perl/libwww-perl-5.50"
 
 src_unpack() {
 	unpack ${A}

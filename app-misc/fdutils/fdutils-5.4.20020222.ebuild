@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.8 2002/05/30 01:54:49 sandymac Exp
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222.ebuild,v 1.3 2002/07/25 16:55:21 seemant Exp $
 
+S=${WORKDIR}/${PN}-5.4
 DESCRIPTION="The fdutils package contains utilities for configuring and debugging the Linux floppy driver"
 SRC_URI="http://fdutils.linux.lu/fdutils-5.4.tar.gz
 	 http://fdutils.linux.lu/fdutils-5.4-20020222.diff.gz"
 HOMEPAGE="http://fdutils.linux.lu/"
+
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-SLOT="0"
+
 DEPEND=">=mtools-3"
-#RDEPEND=""
-S=${WORKDIR}/${PN}-5.4
 
 src_unpack() {
 	unpack fdutils-5.4.tar.gz
@@ -19,25 +20,18 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
-	./configure \
-                --host=${CHOST} \
-                --prefix=/usr \
-                --infodir=/usr/share/info \
-		--enable-fdmount-floppy-only \
-                --mandir=/usr/share/man || die "./configure failed"
-
-
-
-	#emake || die
+	econf --enable-fdmount-floppy-only || die
 	make || die
 }
 
 src_install () {
-	# since the Makefiles doesnt support $DESTDIR we'll do it manually instead of patching the Makefile.in
+	# since the Makefiles doesnt support $DESTDIR we'll do it manually 
+	# instead of patching the Makefile.in
 
-	dobin src/MAKEFLOPPIES src/diskd src/floppycontrol src/floppymeter src/getfdprm src/setfdprm
-	dobin src/fdrawcmd src/fdmount
+	cd src
+	dobin MAKEFLOPPIES diskd floppycontrol floppymeter getfdprm setfdprm
+	dobin fdrawcmd fdmount
+	cd ${S}
 
 	dosym /usr/bin/binxdfcopy /usr/bin/xdfformat
 	dosym /usr/bin/fdmount /usr/bin/fdumount
@@ -45,7 +39,7 @@ src_install () {
 	dosym /usr/bin/fdmount /usr/bin/fdmountd
 	
 	insinto /etc
-        doins src/mediaprm
+	doins src/mediaprm
 
 	doinfo doc/fdutils.info*
 	
@@ -57,5 +51,4 @@ src_install () {
 	dosym /usr/share/man/man1/xdfcopy.1.gz /usr/share/man/man1/xdfformat.1.gz
 
 	dodoc Changelog
-
 }

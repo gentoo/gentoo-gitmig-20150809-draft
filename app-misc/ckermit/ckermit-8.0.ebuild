@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.1 2002/04/27 07:04:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.2 2002/07/25 16:55:21 seemant Exp $
 
 MY_P=cku201
 S=${WORKDIR}
@@ -9,8 +9,11 @@ DESCRIPTION="C-Kermit is a combined serial and network communication software pa
 SRC_URI="ftp://kermit.columbia.edu/kermit/archives/${MY_P}.tar.gz"
 HOMEPAGE="http://www.kermit-project.org/"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2"
+SLOT="0"
+LICENSE="Kermit"
+KEYWORDS="x86"
+
+DEPEND=">=sys-libs/ncurses-5.2"
 
 src_unpack () {
 
