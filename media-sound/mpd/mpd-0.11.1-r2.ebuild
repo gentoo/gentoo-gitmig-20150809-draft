@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.1-r2.ebuild,v 1.1 2004/07/23 00:13:03 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.1-r2.ebuild,v 1.2 2004/07/26 18:39:16 ferringb Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	aac? ( >=media-libs/faad2-2.0_rc2 )
 	audiofile? ( media-libs/audiofile )
 	flac? ( >=media-libs/flac-1.1.0 )
-	mikmod? ( >=media-libs/libmikmod )
+	mikmod? ( media-libs/libmikmod )
 	alsa? ( media-libs/alsa-lib )
 	>=media-libs/libao-0.8.4
 	sys-libs/zlib"
