@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.2.2-r1.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.2.2-r1.ebuild,v 1.4 2002/07/14 19:25:43 naz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
@@ -12,6 +12,10 @@ DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3-r2
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
+
+SLOT="0"
+LICENSE="w3m"
+KEYWORDS="x86"
 
 src_compile() {
 	# It seems to be hard to configure this program in any reasonable
