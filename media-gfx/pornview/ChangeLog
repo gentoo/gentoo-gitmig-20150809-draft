@@ -1,8 +1,16 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.1 2002/11/17 16:59:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.2 2002/12/06 23:35:05 mholzer Exp $
+
+*pornview-0.1.2b (06 Dec 2002)
+
+  06 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.2b.ebuild :
+  New version.
 
 *pornview-0.1.1 (17 Nov 2002)
+
+  06 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.1.ebuild :
+  Marked as stable.
 
   17 Nov 2002; Arcady Genkin <agenkin@gentoo.org> pornview-0.1.1.ebuild :
   Initial version, submitted by Leigh MacDonald <admin@tech-guys.com>.
