@@ -1,14 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 88f17719957f009d1e0d4f93e1bd01a2 development-sources-2.6.6.ebuild 997
 MD5 233ce91e4e2f68bac1e37c71e90927fa development-sources-2.6.1.ebuild 878
 MD5 dc3d49e53e9a6a8c7760923ffa4894bc development-sources-2.6.8.ebuild 529
 MD5 a834fdec25fb7843a2235104fbb4b7b9 development-sources-2.6.3.ebuild 1366
 MD5 51fca768693c1363779f49338985bdfa development-sources-2.6.8.1.ebuild 556
+MD5 470ffd0effdef65fb2c2f2caaa983b06 development-sources-2.6.9_rc2.ebuild 556
 MD5 eeceb31d16d4879c28142757eaf36379 development-sources-2.6.5.ebuild 1395
 MD5 bd78750f3868d90dde38a9657b1ef195 development-sources-2.6.7.ebuild 996
 MD5 a773ac7b340d580134af4ba7100516a9 development-sources-2.6.2.ebuild 878
 MD5 57cb70ceb0696bb5652dc4e77ccd278e development-sources-2.6.9_rc1.ebuild 556
 MD5 13aade01932652aa84942ee046e28893 development-sources-2.6.4.ebuild 993
-MD5 de97b753449e468d41f47079c5863a2b ChangeLog 24748
+MD5 8e2ba62f09d0d7b8c0b15df7b0175e91 ChangeLog 24905
 MD5 5caccd9193acfe5a3a07ea88861cb11b metadata.xml 660
 MD5 b8767c08beae47efda8f72f9d2410a7d development-sources-2.6.6_rc2.ebuild 547
 MD5 1f7aaa49614b3055b6110518b1ed23ee files/digest-development-sources-2.6.1 66
@@ -21,4 +25,12 @@ MD5 23e1b75850b5a41b95c65e7771f39c48 files/digest-development-sources-2.6.7 137
 MD5 1623b556519b6205de4d6ad67af4d842 files/digest-development-sources-2.6.8 66
 MD5 67df71a3070cd51aeacd4db0b07dce93 files/digest-development-sources-2.6.6_rc2 131
 MD5 84907af556d32b79cb76d88126e7eb95 files/digest-development-sources-2.6.9_rc1 130
+MD5 812a0a8ca399c875d6833fd177040e34 files/digest-development-sources-2.6.9_rc2 131
 MD5 18bed04a1b45de515096089cc10913ec files/digest-development-sources-2.6.8.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBRwtochej4aZK9/cRAkCfAJ9lx2BZOhmlawkHZ4vmPHjKh34fLQCfX4nq
+QXZCAtDwcDQ4SPGVxom2A1E=
+=2uB8
+-----END PGP SIGNATURE-----
