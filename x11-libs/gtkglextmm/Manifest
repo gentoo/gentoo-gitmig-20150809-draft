@@ -1,3 +1,5 @@
 MD5 9114e81c0f6f70e184f15ea917d51a47 gtkglextmm-0.7.1.ebuild 516
-MD5 c77ccef6d02a50238ed289fa753eb3c4 ChangeLog 346
+MD5 280b31a9fa7dba727eee6e40b620f4e4 ChangeLog 471
+MD5 72980b8650e9547bab5da6da6a6cd44c gtkglextmm-0.99.1.ebuild 518
 MD5 568ace87170e8103fdca32d4418df38b files/digest-gtkglextmm-0.7.1 69
+MD5 39a4de519fb3630b183786c4eb979422 files/digest-gtkglextmm-0.99.1 70
