@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.7a-r3.ebuild,v 1.5 2004/04/21 11:58:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.7a-r3.ebuild,v 1.6 2004/06/09 21:52:35 agriffis Exp $
 
 inherit eutils
 

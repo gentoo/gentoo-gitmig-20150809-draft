@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.11 2004/06/07 13:24:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.12 2004/06/09 21:52:35 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,7 +71,7 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/iptables.confd iptables
 
-	if [ `use ipv6` ]; then
+	if use ipv6; then
 		dodir /var/lib/ip6tables ; keepdir /var/lib/ip6tables
 		exeinto /etc/init.d
 		newexe ${FILESDIR}/ip6tables.init ip6tables

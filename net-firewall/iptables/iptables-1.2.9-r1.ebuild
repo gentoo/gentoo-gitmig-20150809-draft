@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r1.ebuild,v 1.4 2004/06/07 13:31:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r1.ebuild,v 1.5 2004/06/09 21:52:35 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -79,7 +79,7 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/${PF}.confd iptables
 
-	if [ `use ipv6` ]; then
+	if use ipv6; then
 		dodir /var/lib/ip6tables ; keepdir /var/lib/ip6tables
 		exeinto /etc/init.d
 		newexe ${FILESDIR}/${PF/iptables/ip6tables}.init ip6tables
@@ -104,7 +104,9 @@ pkg_postinst() {
 	einfo "Until a more permanent solution is implemented adding the following"
 	einfo "to /etc/conf.d/local.start will enable ipforwarding at bootup:"
 	einfo "  echo \"1\" > /proc/sys/net/ipv4/conf/all/forwarding"
-	use ipv6 >/dev/null && ( einfo "and/or"
+	if useq ipv6; then
+		einfo "and/or"
 		einfo "  echo \"1\" > /proc/sys/net/ipv6/conf/all/forwarding"
-		einfo "for ipv6." )
+		einfo "for ipv6."
+	fi
 }
