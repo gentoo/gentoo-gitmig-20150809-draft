@@ -1,4 +1,4 @@
-MD5 937aa09637e9b92b96f70322ae5e3c05 ChangeLog 456
-MD5 7758c5228610f5987d4ba15c53938f6c slibo-0.4.4.ebuild 493
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 edaca2f8718114ab18c48cda4794b2d1 files/digest-slibo-0.4.4 64
+MD5 937aa09637e9b92b96f70322ae5e3c05 ChangeLog 456
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 24fd90ac962c5d15b3dad1f5af8d8684 slibo-0.4.4.ebuild 479

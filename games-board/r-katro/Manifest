@@ -1,4 +1,4 @@
 MD5 8ed3c41e3e73e7f74eb9844c32883d2f files/digest-r-katro-0.7.0 66
 MD5 d04f05ceda557ef1fdfb9cb285df818f ChangeLog 391
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 0f8e53c02ab818b8a501d21bcc643bda r-katro-0.7.0.ebuild 794
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 305df4288c359f3afec1652d01034478 r-katro-0.7.0.ebuild 793

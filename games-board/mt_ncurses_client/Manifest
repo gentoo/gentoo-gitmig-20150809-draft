@@ -1,4 +1,4 @@
-MD5 b32765550df8d68e382e1f5bcd7e6780 ChangeLog 411
-MD5 31e0374d31f5c5533874954ea9f7b98b mt_ncurses_client-0.1.98.ebuild 782
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 bc5d383a9a788c9e7f5ad89f24bf278f files/digest-mt_ncurses_client-0.1.98 76
+MD5 b32765550df8d68e382e1f5bcd7e6780 ChangeLog 411
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 9ed85b7874fd78308199579c0256db64 mt_ncurses_client-0.1.98.ebuild 730

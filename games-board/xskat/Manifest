@@ -1,4 +1,4 @@
 MD5 9409fa2b5b02bf7ac5f8508292d760c3 files/digest-xskat-3.4-r1 61
 MD5 aee673778f61562f7dafad906b2fbab5 ChangeLog 534
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 96055c8793a2e098a5a44e42e096f165 xskat-3.4-r1.ebuild 654
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d6cc074d1c612e4079158b3c7885dac5 xskat-3.4-r1.ebuild 654
