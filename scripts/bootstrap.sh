@@ -36,7 +36,7 @@ export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
 cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
-emerge $myBASELAYOUT $myBINUTILS $myGCC $myGETTEXT || cleanup 1
+emerge $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #make.conf has been overwritten, so we explicitly export our original settings
 export USE="$ORIGUSE"
 emerge $myGLIBC $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
