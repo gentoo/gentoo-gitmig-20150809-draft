@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmMatrix
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/ChangeLog,v 1.6 2004/11/28 19:00:02 s4t4n Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/ChangeLog,v 1.7 2005/01/25 13:34:15 corsair Exp $
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> wmMatrix-0.2.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #79357
 
   28 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> wmMatrix-0.2.ebuild:
   Changed HOMEPAGE and SRC_URI to the www.dockapps.org ones, as the

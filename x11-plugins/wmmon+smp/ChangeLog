@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmon+smp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.5 2004/06/24 23:13:45 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.6 2005/01/25 13:32:39 corsair Exp $
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> wmmon+smp-1.0-r1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #79361
 
   06 Dec 2003; Ian Leitch <port001@gentoo.org> wmmon+smp-1.0-r1.ebuild:
   Reverted blocking of wmmon and made the binary installed 'wmmon+smp'. Please
