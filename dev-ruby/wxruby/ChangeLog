@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/wxruby
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.4 2004/05/12 08:46:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.5 2004/06/18 21:31:54 twp Exp $
+
+  18 Jun 2004; <twp@gentoo.org> :
+  Version bump.
 
 *wxruby-0.3.0 (25 Apr 2004)
 
