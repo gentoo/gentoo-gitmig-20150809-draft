@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.4.0_rc1-r1.ebuild,v 1.2 2005/03/02 01:20:43 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.4.0_rc1-r1.ebuild,v 1.3 2005/03/07 14:04:50 greg_g Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -8,8 +8,6 @@ KMEXTRACTONLY="kdm/kfrontend/sessions/kde.desktop.in startkde"
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
-
-need-kde $PV
 
 DESCRIPTION="startkde script, which starts a complete KDE session, and associated scripts"
 KEYWORDS="~x86 ~amd64"
