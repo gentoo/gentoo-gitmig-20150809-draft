@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3.ebuild,v 1.3 2003/02/13 13:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3.ebuild,v 1.4 2003/07/23 15:43:49 taviso Exp $
 
 # dsniff needs to build it's own version of sys-libs/db, since the one 
 # normally installed is for some reason unusable for dsniffs configure script.
@@ -18,7 +18,7 @@ SRC_URI="http://www.sleepycat.com/update/snapshot/db-${DB_VER}.tar.gz
 # dsniff has it's own small license which is in the docs section
 LICENSE="DSNIFF"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha"
 
 RDEPEND=">=net-libs/libpcap-0.7.1
 	>=net-libs/libnet-1.0.2
