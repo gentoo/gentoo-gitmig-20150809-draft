@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.25 2004/05/15 00:39:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.26 2004/06/06 17:19:04 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> lua-5.0.2.ebuild:
+  Marked stable on amd64.
 
   15 May 2004; Bryan Østergaard <kloeri@gentoo.org> lua-5.0.2.ebuild:
   Stable on alpha.
