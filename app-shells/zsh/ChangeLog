@@ -1,6 +1,6 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.32 2003/12/17 09:23:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.33 2003/12/21 23:42:01 gmsoft Exp $
 
   17 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1-r1.ebuild,
   zsh-4.1.1-r2.ebuild:
@@ -20,6 +20,9 @@
   Cleaned out old versions. Corrected zshall distfile path in 4.0.6-r4
 
 *zsh-4.1.1-r2 (01 Sep 2003)
+
+  22 Dec 2003; Guy Martin <gmsoft@gentoo.org> zsh-4.1.1-r2.ebuild :
+  Marked stable on hppa.
 
   01 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1-r2.ebuild:
   Statically link libpcre.  For discussion, see Bug #27392 and #27064
