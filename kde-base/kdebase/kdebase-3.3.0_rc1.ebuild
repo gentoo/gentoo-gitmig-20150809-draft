@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_rc1.ebuild,v 1.2 2004/08/06 19:59:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_rc1.ebuild,v 1.3 2004/08/07 19:22:20 caleb Exp $
 
 inherit kde-dist eutils
 
@@ -27,8 +27,7 @@ src_unpack() {
 
 src_compile() {
 	myconf="$myconf --with-dpms"
-	myconf="$myconf `use_with ldap` `use_with motif`"
-	myconf="$myconf `use_with encode lame` `use_with cups`"
+	myconf="$myconf `use_with ldap` `use_with cups`"
 	myconf="$myconf `use_with opengl gl` `use_with ssl`"
 	myconf="$myconf `use_with arts`"
 
