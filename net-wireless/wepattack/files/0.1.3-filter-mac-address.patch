@@ -1,5 +1,5 @@
 diff -U 3 -r /src/config.h src/config.h
---- /src/config.h	2002-10-24 15:16:34.000000000 +0200
+--- src/config.h	2002-10-24 15:16:34.000000000 +0200
 +++ src/config.h	2004-04-07 00:39:51.000000000 +0200
 @@ -37,7 +37,7 @@
  #define WEPKEYSTORE     	(WEPKEYSIZE * WEPKEYS)
@@ -11,7 +11,7 @@ diff -U 3 -r /src/config.h src/config.h
  
  #endif
 diff -U 3 -r /src/log.c src/log.c
---- /src/log.c	2002-10-24 15:15:55.000000000 +0200
+--- src/log.c	2002-10-24 15:15:55.000000000 +0200
 +++ src/log.c	2004-04-07 00:39:51.000000000 +0200
 @@ -73,7 +73,7 @@
  	fprintf(fp, "Cracking started: %s", ctime(&start_time));
@@ -32,7 +32,7 @@ diff -U 3 -r /src/log.c src/log.c
  		}
  		list = list->next;
 diff -U 3 -r /src/misc.c src/misc.c
---- /src/misc.c	2002-10-24 15:15:42.000000000 +0200
+--- src/misc.c	2002-10-24 15:15:42.000000000 +0200
 +++ src/misc.c	2004-04-07 00:39:51.000000000 +0200
 @@ -40,10 +40,11 @@
  	fprintf(stdout,"WEPATTACK by Dominik Blunk and Alain ");
@@ -48,7 +48,7 @@ diff -U 3 -r /src/misc.c src/misc.c
  	fprintf(stdout,"\t\tvalues: 64, 128, n64, n128\n");
  	fprintf(stdout,"-n network \tnetwork number to attack\n");
 diff -U 3 -r /src/wepattack.c src/wepattack.c
---- /src/wepattack.c	2002-10-24 15:14:29.000000000 +0200
+--- src/wepattack.c	2002-10-24 15:14:29.000000000 +0200
 +++ src/wepattack.c	2004-04-07 00:43:56.000000000 +0200
 @@ -4,6 +4,8 @@
  * Author: 		Alain Girardet/Dominik Blunk
@@ -169,7 +169,7 @@ diff -U 3 -r /src/wepattack.c src/wepattack.c
  		case 'f':
                          packet_file = optarg;
 diff -U 3 -r /src/wepattack.h src/wepattack.h
---- /src/wepattack.h	2002-10-24 15:14:22.000000000 +0200
+--- src/wepattack.h	2002-10-24 15:14:22.000000000 +0200
 +++ src/wepattack.h	2004-04-07 00:39:51.000000000 +0200
 @@ -38,6 +38,7 @@
  	unsigned char iv[3];
@@ -180,7 +180,7 @@ diff -U 3 -r /src/wepattack.h src/wepattack.h
  
  /*
 diff -U 3 -r /src/wepfilter.c src/wepfilter.c
---- /src/wepfilter.c	2002-10-24 15:14:13.000000000 +0200
+--- src/wepfilter.c	2002-10-24 15:14:13.000000000 +0200
 +++ src/wepfilter.c	2004-04-07 00:39:51.000000000 +0200
 @@ -104,6 +103,7 @@
  	memcpy(&newframe->frame.key, data+limits.key, 1);
