@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2.ebuild,v 1.1 2004/02/05 12:45:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2.ebuild,v 1.2 2004/02/07 19:25:56 vapier Exp $
 
 inherit flag-o-matic gcc
 
 DESCRIPTION="Tools for MJPEG video."
 HOMEPAGE="http://mjpeg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="~x86 -ppc ~amd64"
 IUSE="gtk avi dv quicktime sdl X 3dnow mmx sse"
 
 DEPEND="media-libs/jpeg
