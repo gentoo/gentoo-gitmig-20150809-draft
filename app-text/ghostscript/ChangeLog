@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.48 2004/04/28 10:57:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.49 2004/04/28 22:41:33 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org> ghostscript-7.07.1-r1.ebuild,
+  ghostscript-7.07.1-r2.ebuild:
+  replace -O3 with -O2 if compiling with gcc 3.4
 
   28 Apr 2004; Heinrich Wendel <lanius@gentoo.org>
   ghostscript-7.07.1-r2.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.3 2004/04/28 10:57:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.4 2004/04/28 22:41:33 lv Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 HOMEPAGE="http://www.cups.org/ghostscript.php"
@@ -72,6 +72,13 @@ src_compile() {
 
 	use cups && myconf="${myconf} --enable-cups" \
 		|| myconf="${myconf} --disable-cups"
+
+	# -O3 will make ghostscript fail when compiling with gcc 3.4
+	if [ "`gcc-major-version`" -eq "3" ] && [ "`gcc-minor-version`" -eq "4" ]
+	then
+		strip-flags
+		replace-flags -O? -O2
+	fi
 
 	econf ${myconf} || die "econf failed"
 	make || die "make failed"
