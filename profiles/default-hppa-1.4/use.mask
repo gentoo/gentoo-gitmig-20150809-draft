@@ -58,3 +58,4 @@ svga
 trusted
 wavelan
 x86
+firebird
