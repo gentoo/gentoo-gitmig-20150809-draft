@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> (29 Nov 2003)
+# Need external testing
+=net-mail/qmail-mysql-1.03-r13
+
 # <carpaski@gentoo.org> (23 Nov 2003)
 # Aggitating bug. Can't be fixed without invoking issues in systems
 # were portage is emerged well after an 'emerge sync'.
