@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.3 2002/08/05 16:51:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.4 2002/08/08 12:23:10 seemant Exp $
 
 MY_P="Sablot-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -22,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	emake || make || die
+	make || die
 }
 
 src_install () {
