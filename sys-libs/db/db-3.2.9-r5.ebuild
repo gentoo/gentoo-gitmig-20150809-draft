@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r5.ebuild,v 1.1 2003/05/24 11:48:05 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r5.ebuild,v 1.2 2003/05/24 12:18:37 pauldv Exp $
 
 IUSE=""
 
@@ -132,7 +132,7 @@ src_install () {
 	do
 		mv ${fname} ${fname//\/db_/\/db4_}
 	done
-	rm ${D}/usr/include/db.h
+	ln -sf /usr/include/db4/db.h ${D}/usr/include/db.h
 }
 
 fix_so () {
@@ -143,6 +143,10 @@ fix_so () {
 	[ ${target} ] && ln -sf ${target//.\//} libdb_cxx.so
 	target=`find -type f -maxdepth 1 -name "libdb_tcl*.so" |tail -n 1`
 	[ ${target} ] && ln -sf ${target//.\//} libdb_tcl.so
+	cd -
+	cd /usr/include
+	target=`ls db? |tail -n 1`
+	[ ${target} ] && ln -sf ${target}/db.h .
 	cd -
 }
 
