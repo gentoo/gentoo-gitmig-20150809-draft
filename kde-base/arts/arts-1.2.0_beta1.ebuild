@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta1.ebuild,v 1.1 2003/11/01 13:06:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta1.ebuild,v 1.2 2003/11/03 19:58:40 caleb Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -8,7 +8,7 @@ IUSE="alsa oggvorbis artswrappersuid mad"
 set-kdedir 3.2
 need-qt 3.2
 
-MY_PV=1.1.92
+MY_PV=1.1.93
 S=${WORKDIR}/${PN}-${MY_PV}
 
 SRC_URI="mirror://kde/unstable/3.1.93/src/${PN}-${MY_PV}.tar.bz2"
