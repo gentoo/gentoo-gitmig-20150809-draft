@@ -1,0 +1,39 @@
+diff -Naur linuxwacom-0.6.4.orig/src/Makefile.am linuxwacom-0.6.4/src/Makefile.am
+--- linuxwacom-0.6.4.orig/src/Makefile.am	2004-07-29 14:31:55.000000000 -0700
++++ linuxwacom-0.6.4/src/Makefile.am	2004-11-17 23:53:12.445268388 -0800
+@@ -76,7 +76,7 @@
+ wcmFilter-v3.o: wcmFilter.c xf86Wacom.h
+ 
+ $(XF86OBJS): xf86Wacom.c Makefile
+-	gcc -O2 $(DEPFLAGS) -march=i386 -mcpu=$(ARCHITECTURE) -pipe -ansi \
++	gcc -O2 $(DEPFLAGS) -pipe -ansi \
+ 		-pedantic -Wall -Wpointer-arith $(NO_MERGE_CONSTANTS) \
+ 		-I. -I$(XF86_DIR)/programs/Xserver/hw/xfree86/common \
+ 		-I$(XF86_DIR)/programs/Xserver/hw/xfree86/loader \
+@@ -87,7 +87,7 @@
+ 		-I$(XF86_DIR)/include/extensions \
+ 		-I$(XF86_DIR) \
+ 		-I$(XF86_DIR)/exports/include \
+-		-Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L -D_POSIX_SOURCE \
++		-Dlinux -D_POSIX_C_SOURCE=199309L -D_POSIX_SOURCE \
+ 		-D_XOPEN_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE  -D_GNU_SOURCE \
+ 		-DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP -DXCSECURITY \
+ 		-DTOGCUP -DXF86BIGFONT -DDPMSExtension -DPIXPRIV -DPANORAMIX \
+@@ -103,7 +103,7 @@
+ 	ld -r $(XF86OBJS) -o wacom_drv.o
+ 
+ $(XF86V3OBJS):
+-	gcc -O2 -march=i386 -mcpu=$(ARCHITECTURE) -fno-strength-reduce -ansi \
++	gcc -O2 -fno-strength-reduce -ansi \
+ 		-pedantic \
+ 		-I. -I$(XF86_V3_DIR)/programs/Xserver/hw/xfree86/common \
+ 		-I$(XF86_V3_DIR)/programs/Xserver/hw/xfree86/os-support \
+@@ -116,7 +116,7 @@
+ 		-I$(XF86_V3_DIR)/include/extensions \
+ 		-I \ -I$(XF86_V3_DIR) \
+ 		-I$(XF86_V3_DIR)/exports/include \
+-		-Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L \
++		-Dlinux -D_POSIX_C_SOURCE=199309L \
+ 		-D_POSIX_SOURCE -D_XOPEN_SOURCE=500L -D_BSD_SOURCE \
+ 		-D_SVID_SOURCE -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP \
+ 		-DXCSECURITY -DDPMSExtension -DPIXPRIV  -DGCCUSESGAS \

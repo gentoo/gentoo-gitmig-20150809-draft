@@ -1,14 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.4.ebuild,v 1.1 2004/10/24 05:47:24 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.4.ebuild,v 1.2 2004/11/18 08:05:26 eradicator Exp $
+
+IUSE="gtk gtk2 tcltk sdk"
+
+inherit eutils
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
-IUSE="gtk gtk2 tcltk sdk"
+KEYWORDS="~amd64 x86"
 
 RDEPEND="virtual/x11
 	gtk? (
@@ -20,6 +24,8 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool
+	!x86? ( >=sys-devel/automake-1.6 
+	        >=sys-devel/autoconf-2.53 )
 	dev-util/pkgconfig
 	>=sys-apps/sed-4"
 
@@ -53,6 +59,19 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	if ! use x86; then
+		cd ${S}
+		epatch ${FILESDIR}/${P}-nonx86.patch
+
+		export WANT_AUTOMAKE=1.6
+		export WANT_AUTOCONF=2.5
+
+		aclocal
+		autoheader
+		automake -a -c -f
+		autoconf
+	fi
 
 	if use sdk; then
 		# Simple fixes to configure to check the actual location of the XFree86 SDK
