@@ -5,7 +5,7 @@
 A=emacs-20.7.tar.gz
 S=${WORKDIR}/emacs-20.7
 DESCRIPTION="An incredibly powerful, extensible text editor (X11 version)"
-SRC_URI="ftp://ftp.freesoftware.com/pub/gnu/emacs/emacs-20.7.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/pub/gnu/emacs/emacs-20.7.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/emacs"
 RDEPEND=">=sys-libs/ncurses-4.0
          >=sys-libs/glibc-2.0
