@@ -1,3 +1,6 @@
-MD5 6e9e31c99107241b322f6f1ea5a5d137 ChangeLog 893
+MD5 300ef519fd8dc246d1a83637753143da xawdecode-1.7.5_beta.ebuild 2244
+MD5 ea4f0a6982746f20c4632528aab20824 ChangeLog 1239
 MD5 435d121aa1a724720ba3517b754429b5 xawdecode-1.6.8.ebuild 1657
+MD5 6cb9bccf70f873639a4d78ab6ebc301e files/digest-xawdecode-1.7.5_beta 72
+MD5 66af1f2572bcb65fe72df4563d6b9d10 files/xawdecode.desktop 404
 MD5 7ac89f854fed418595b44f2375de9c8f files/digest-xawdecode-1.6.8 67
