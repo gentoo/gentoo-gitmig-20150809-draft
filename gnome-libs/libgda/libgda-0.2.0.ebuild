@@ -27,7 +27,8 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  try make prefix=${D}/opt/gnome install
+  try make prefix=${D}/opt/gnome \
+	GDA_oafinfodir=${D}/opt/gnome/share/oaf install
 
   dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
 }
