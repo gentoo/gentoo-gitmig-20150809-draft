@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.104 2005/02/04 12:51:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.105 2005/02/07 15:08:00 ka0ttic Exp $
+
+*bash-completion-20050121-r2 (07 Feb 2005)
+
+  07 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +bash-completion-20050121-r2.ebuild:
+  Revision bump; new gentoo-bashcomp release including bug fixes, as well as
+  new webapp-config and portageq completion. Also emerge -C and equery now
+  support completion on package names only.
 
 *bash-completion-20050121-r1 (04 Feb 2005)
 
