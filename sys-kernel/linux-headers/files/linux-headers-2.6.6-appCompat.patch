@@ -842,3 +842,42 @@ diff -ur linux-2.6.6/include/asm-x86_64/sigcontext.h linux-2.6.6-gentoo/include/
  
  #endif
 +#endif
+diff -ur linux-2.6.6/include/linux/gfp.h linux-2.6.6-gentoo/include/linux/gfp.h
+--- linux-2.6.6/include/linux/gfp.h	2004-04-04 04:36:52.000000000 +0100
++++ linux-2.6.6-gentoo/include/linux/gfp.h	2004-05-11 19:51:06.412779200 +0100
+@@ -48,6 +48,7 @@
+ 
+ #define GFP_DMA		__GFP_DMA
+ 
++#ifdef __KERNEL__
+ 
+ /*
+  * There is only one page-allocator function, and two main namespaces to
+@@ -96,4 +97,5 @@
+ 
+ void page_alloc_init(void);
+ 
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_GFP_H */
+diff -ur linux-2.6.6/include/linux/percpu.h linux-2.6.6-gentoo/include/linux/percpu.h
+--- linux-2.6.6/include/linux/percpu.h	2004-04-04 04:38:14.000000000 +0100
++++ linux-2.6.6-gentoo/include/linux/percpu.h	2004-05-11 19:33:00.987788880 +0100
+@@ -1,5 +1,6 @@
+ #ifndef __LINUX_PERCPU_H
+ #define __LINUX_PERCPU_H
++#include <linux/gfp.h>
+ #include <linux/spinlock.h> /* For preempt_disable() */
+ #include <linux/slab.h> /* For kmalloc() */
+ #include <linux/smp.h>
+diff -ur linux-2.6.6/include/linux/percpu_counter.h linux-2.6.6-gentoo/include/linux/percpu_counter.h
+--- linux-2.6.6/include/linux/percpu_counter.h	2004-04-04 04:37:23.000000000 +0100
++++ linux-2.6.6-gentoo/include/linux/percpu_counter.h	2004-05-11 19:46:31.423583912 +0100
+@@ -4,6 +4,7 @@
+  * WARNING: these things are HUGE.  4 kbytes per counter on 32-way P4.
+  */
+ 
++#include <linux/preempt.h>
+ #include <linux/config.h>
+ #include <linux/spinlock.h>
+ #include <linux/smp.h>
+

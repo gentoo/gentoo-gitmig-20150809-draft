@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.74 2004/06/03 16:07:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.75 2004/06/04 17:47:29 plasmaroo Exp $
+
+  04 Jun 2004; <plasmaroo@gentoo.org>
+  files/linux-headers-2.6.6-appCompat.patch:
+  Added a patch to linux-headers-2.6.6 to solve sash issues on ARM and possibly
+  other architectures. Closes bug #42527.
 
   03 Jun 2004; Travis Tilley <lv@gentoo.org> linux-headers-2.6.6.ebuild:
   added ~amd64 to keywords
