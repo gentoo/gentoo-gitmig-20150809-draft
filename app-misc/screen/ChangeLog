@@ -1,13 +1,18 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.17 2002/12/16 19:36:07 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.18 2002/12/18 23:19:31 blizzy Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*screen-3.9.13-r2 (19 Dec 2002)
+
+  19 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : Changed permissions of
+  /var/run/screen to 0755 to satisfy screen when running in multi-user mode.
 
 *screen-3.9.13-r1 (16 Dec 2002)
 
-  16 Dec 2002; Stefan Jones <cretin@gentoo.org> : screen-3.9.13-r1.ebuild screenrc screen.pam
-  A new improved ebuild. Does everything! Many thanks to j2 on IRC for the ebuild.
+  16 Dec 2002; Stefan Jones <cretin@gentoo.org> : A new improved ebuild. Does
+  everything! Many thanks to j2 on IRC for the ebuild.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *screen-3.9.13 (18 Nov 2002)
 
