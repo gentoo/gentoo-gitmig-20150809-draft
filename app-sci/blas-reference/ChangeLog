@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/blas
+# ChangeLog for app-sci/blas-reference
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.1 2004/02/02 03:13:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.2 2004/02/10 22:34:24 vapier Exp $
 
   01 Feb 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild, files/* :
   as per discussion in #30453 renaming (plain) blas to blas-reference.
