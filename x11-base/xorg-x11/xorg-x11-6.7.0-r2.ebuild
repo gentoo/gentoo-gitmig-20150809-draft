@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.10 2004/07/28 08:50:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.11 2004/08/02 09:02:52 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -22,7 +22,7 @@ RESTRICT="nostrip"
 IUSE="3dfx 3dnow cjk debug dlloader doc ipv6 mmx nls pam sdk sse static"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
-FILES_VER="0.2"
+FILES_VER="0.3"
 PATCH_VER="1.2"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
@@ -599,7 +599,7 @@ pkgconfig_install() {
 
 backward_compat_setup() {
 	# Backwards compatibility for /usr/share move
-	G_FONTDIRS="100dpi 75dpi Speedo TTF Type1 encodings local misc util"
+	G_FONTDIRS="100dpi 75dpi CID Speedo TTF Type1 encodings local misc util"
 
 	dodir /usr/X11R6/lib/X11/fonts/
 	for G_FONTDIR in ${G_FONTDIRS}
@@ -974,11 +974,21 @@ pkg_preinst() {
 
 		# clean out old fonts.* and encodings.dir files, as we
 		# will regenerate them
-		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
-			-exec rm -f {} \;
-		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
-			-exec rm -f {} \;
+		# Not Speedo or CID, as their fonts.scale files are "real"
+		if [ "${G_FONTDIR}" != "CID" -a "${G_FONTDIR}" != "Speedo" ]
+		then
+			find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
+				-exec rm -f {} \;
+			find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
+				-exec rm -f {} \;
+		fi
 	done
+
+	# No longer used by xorg-x11
+	if [ -d ${ROOT}/usr/X11R6/lib/X11/fonts/truetype ]
+	then
+		rm -rf ${ROOT}/usr/X11R6/lib/X11/fonts/truetype
+	fi
 
 	if [ -L ${ROOT}/etc/X11/app-defaults ]
 	then
@@ -1065,15 +1075,28 @@ font_setup() {
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
-				# Only generate .scale files if there are truetype
-				# fonts present ...
+				# Only generate .scale files if truetype, opentype or type1
+				# fonts are present ...
+
+				# First truetype (ttf,ttc)
+				# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
+				# Also, there is no way to regenerate Speedo/CID fonts.scale
+				# <spyderous@gentoo.org> 2 August 2004
 				if [ "${x/encodings}" = "${x}" -a \
-				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
+				     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
 				then
 					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
+				# Next type1 and opentype (pfa,pfb,otf,otc)
+				elif [ "${x/encodings}" = "${x}" -a \
+					-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]
+				then
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+					${ROOT}/usr/X11R6/bin/mkfontscale \
+						-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+						-- ${x}
 				fi
 			done
 		eend 0

@@ -1,6 +1,18 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.84 2004/07/28 08:50:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.85 2004/08/02 09:02:52 spyderous Exp $
+
+  02 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild, xorg-x11-6.7.0-r2.ebuild:
+  Fix font setup (#53753). Previously we trashed fonts.scale for all scalable
+  fonts, even though we only regenerated it for TrueType fonts. ttmkfdir can't
+  regenerate fonts.scale for Type1 or OpenType fonts, so we start using
+  mkfontscale for that. We trashed any other fonts.scale files that happened to
+  be around, such as Speedo/CID. We stop doing that. Also fixed the regexps in
+  the ebuild and the xfs init script to use ttmkfdir for TrueType only and
+  mkfontscale for Type1 and OpenType. Change INFODIR to INFOPATH also (#54275).
+  Also update Gentoo copyright and licensing info in files tarball to be
+  consistent with everything else.
 
   28 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r1.ebuild, xorg-x11-6.7.0-r2.ebuild:
