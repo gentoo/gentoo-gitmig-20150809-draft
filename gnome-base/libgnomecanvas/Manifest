@@ -2,19 +2,19 @@
 Hash: SHA1
 
 MD5 d2278f9852b7a7412017c0fb80bba5a7 ChangeLog 6043
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 349638d6425f45cd2af5383888d472a5 libgnomecanvas-2.8.0.ebuild 708
 MD5 26783e9777f67549085c65065a86fb65 libgnomecanvas-2.6.0.ebuild 700
-MD5 23b3b4fef515ce69adb04b30201b1475 libgnomecanvas-2.4.0.ebuild 682
 MD5 9fb3607be5e851ddfb91ea1fefb88e07 libgnomecanvas-2.6.1.1.ebuild 708
-MD5 e823d514303495a7ff61883f5258d181 files/digest-libgnomecanvas-2.8.0 73
+MD5 23b3b4fef515ce69adb04b30201b1475 libgnomecanvas-2.4.0.ebuild 682
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 a191f1f5a664cc553e1064bde826c896 libgnomecanvas-2.8.0.ebuild 697
+MD5 5ab2a0d66885d07f1425402db7986225 files/digest-libgnomecanvas-2.6.0 73
 MD5 2b4a5d74860dcdb2e85a73785b5b26ce files/digest-libgnomecanvas-2.6.1.1 75
 MD5 f880aa672265631ff7c926daf1921ed0 files/digest-libgnomecanvas-2.4.0 73
-MD5 5ab2a0d66885d07f1425402db7986225 files/digest-libgnomecanvas-2.6.0 73
+MD5 e823d514303495a7ff61883f5258d181 files/digest-libgnomecanvas-2.8.0 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4G3gCHk4+ZoBpvsRAkAvAJ0akvzPcx994WvViGTI2zAXctdZ8ACdFNOl
-nlAT5qhRTSjMNJe9takE8Ig=
-=fx88
+iD8DBQFB8fzDroRuSHgZdywRAjAMAJ4uHfMKH9jY6ooFDALWZy4z2soG9ACfZ6hv
+u0XWfXxnPKBXXkXjA18uq74=
+=V5aC
 -----END PGP SIGNATURE-----
