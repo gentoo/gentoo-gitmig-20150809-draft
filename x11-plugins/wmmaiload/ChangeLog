@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmmaiload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.9 2004/06/24 23:12:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.10 2004/07/03 22:14:31 s4t4n Exp $
+
+
+*wmmaiload-1.0.1 (04 Jul 2004)
+
+  04 Jul 2004; Michele Noberasco <s4t4n@gentoo.org>; wmmaiload-1.0.1.ebuild:
+  Version bump.
+  wmmaiload-0.10.0.ebuild:
+  Clean up old masked versions...
 
   12 May 2004; Daniel Ahlberg <aliz@gentoo.org> wmmaiload-0.10.0.ebuild:
   Removed S=.
