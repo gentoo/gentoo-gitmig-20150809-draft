@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.16 2003/12/20 11:23:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.17 2004/01/25 22:24:29 pyrania Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,8 @@ DESCRIPTION="A GTK/X11 application launcher with nice features such as a history
 # renamed to grun-0.9.2-gentoo.diff) have been taken from
 # http://packages.debian.org/unstable/x11/grun.html.
 
-SRC_URI="http://ftp.us.debian.org/debian/pool/main/g/grun/grun_0.9.2.orig.tar.gz"
+RESTRICT="nomirror"
+SRC_URI="mirror://debian/pool/main/g/grun/grun_0.9.2.orig.tar.gz"
 # Not valid anymore, see
 # http://packages.debian.org/unstable/x11/grun.html instead
 HOMEPAGE="http://www.geocities.com/ResearchTriangle/Facility/1468/sg/grun.html"
@@ -29,7 +30,7 @@ DEPEND="=dev-libs/glib-1.2*
 
 src_unpack() {
 	unpack ${A}
-	patch -p0 <${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
