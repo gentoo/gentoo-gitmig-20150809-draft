@@ -1,8 +1,14 @@
 # ChangeLog for dev-util/shc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.3 2003/02/12 06:46:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.4 2003/05/17 05:59:31 george Exp $
 
-*shc-3.4.ebuild (05 Jan 2003)
+*shc-3.6 (16 May 2003)
+
+  16 May 2003;George Shapovalov <george@gentoo.org> shc-3.6.ebuild :
+  new version (#19969)
+  Thanks to Thomas Eckert <eckert.thomas@gmx.net> for notification
+
+*shc-3.4 (05 Jan 2003)
 
   08 Jan 2003; Jack Morgan <jmorgan@gentoo.org> shc-3.4.ebuild :
   Removed sparc64 keyword
