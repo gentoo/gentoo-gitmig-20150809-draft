@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/mpd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.1 2003/07/17 10:10:51 raker Exp $
+
+*mpd-0.8.1 (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> mpd-0.8.1.ebuild:
+  New ebuild.  Depends on the newer media-libs/{libmad,libid3tag}
+  rather than media-sound/mad
