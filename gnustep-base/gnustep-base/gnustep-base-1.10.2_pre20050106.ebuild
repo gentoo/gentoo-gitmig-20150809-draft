@@ -1,24 +1,33 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.1-r1.ebuild,v 1.4 2005/01/10 16:22:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.2_pre20050106.ebuild,v 1.1 2005/01/10 16:22:16 fafhrd Exp $
 
-inherit gnustep
+ECVS_CVS_COMMAND="cvs -q"
+ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
+ECVS_USER="anoncvs"
+ECVS_AUTH="ext"
+ECVS_MODULE="gnustep/core/base"
+ECVS_CO_OPTS="-P -D ${PV/*_pre}"
+ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
+inherit gnustep toolchain-funcs cvs
+
+S=${WORKDIR}/${ECVS_MODULE}
 
 DESCRIPTION="The GNUstep Base Library is a library of general-purpose, non-graphical Objective C objects."
 
 HOMEPAGE="http://www.gnustep.org"
-SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
-KEYWORDS="ppc ~x86 amd64 ~sparc ~alpha"
+#SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
+KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="${IUSE} doc gcc-libffi"
 DEPEND="${GNUSTEP_CORE_DEPEND}
-	~gnustep-base/gnustep-make-1.10.0
+	>=gnustep-base/gnustep-make-1.10.1_pre20050106
 	|| (
 		gcc-libffi? ( >=sys-devel/gcc-3.3.2 )
-		>=dev-libs/libffi-3*
-	)
+		>=dev-libs/libffi-3* )
 	>=dev-libs/libxml2-2.6*
 	>=dev-libs/libxslt-1.1*
 	>=dev-libs/gmp-4.1*
@@ -32,6 +41,8 @@ RDEPEND="${DEPEND}
 egnustep_install_domain "System"
 
 pkg_setup() {
+	gnustep_pkg_setup
+
 	if use gcc-libffi; then
 		if [ "$(ffi_available)" == "no" ]; then
 			ffi_not_available_info
@@ -41,8 +52,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	cvs_src_unpack ${A}
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/base-user-defaults.patch-1.10.0
+	cd ${S}/Source
 }
 
 src_compile() {
@@ -51,13 +63,12 @@ src_compile() {
 	# - libffi is known to work with 32 and 64 bit platforms
 	# - libffi does not use trampolines
 	local myconf
-	myconf="--enable-libffi --disable-ffcall"
+	myconf="--disable-ffcall --enable-libffi"
 	if use gcc-libffi; then
 		myconf="${myconf} --with-ffi-library=$(gcc-config -L) --with-ffi-include=$(gcc-config -L | sed 's/:.*//')/include"
 	else
 		myconf="${myconf} --with-ffi-library=/usr/lib/libffi --with-ffi-include=/usr/include/libffi"
 	fi
-
 	myconf="$myconf --with-xml-prefix=/usr"
 	myconf="$myconf --with-gmp-include=/usr/include --with-gmp-library=/usr/lib"
 	econf $myconf || die "configure failed"
