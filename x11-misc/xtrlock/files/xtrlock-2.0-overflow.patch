@@ -1,0 +1,25 @@
+--- xtrlock.c       1997-10-22 12:32:28.000000000 +0200
++++ xtrlock.c   2003-04-08 19:41:12.000000000 +0200
+@@ -14,6 +14,9 @@
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  * GNU General Public License for more details.
++ *
++ * .. overflow bug patched by srakyi (http://srakyi.modry.cz) - no warranty
++ *
+  */
+
+ #include <X11/X.h>
+@@ -191,8 +194,10 @@
+         break;
+       default:
+         if (clen != 1) break;
+-        if (rlen < sizeof(rbuf)) rbuf[rlen]= cbuf[0];
+-        rlen++;
++        if (rlen < sizeof(rbuf)) {
++         rbuf[rlen]= cbuf[0];
++          rlen++;
++         }
+         break;
+       }
+       break;
