@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3031 2004/07/30 23:10:45 solar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3032 2004/07/31 12:31:30 kugelfang Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <kugelfang@gentoo.org> (Jul 31 2004)
+# Not to be unmasked before all packages of this brand ship out.
+=app-emulation/emul-linux-x86-glibc-1.0
 
 # <mr_bones_@gentoo.org> (Jul 29 2004)
 # Mask until 0.6.1b can replace it.  Upstream noticed a bug right after release.
