@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/files/kigb,v 1.3 2004/07/14 22:14:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/files/kigb,v 1.4 2004/08/31 11:15:11 mr_bones_ Exp $
 
 kigb_dir="${HOME}/.kigb"
 
@@ -9,7 +9,7 @@ if [ ! -d "${kigb_dir}" ] ; then
 	mkdir -p "${kigb_dir}"
 	cd "${kigb_dir}"
 	mkdir cfg inp rom save snap state
-	ln -s /opt/kigb/kigb kigb
+	ln -s GENTOODIR/kigb/kigb kigb
 fi
 
 cd "${kigb_dir}"
