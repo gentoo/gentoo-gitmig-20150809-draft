@@ -1,21 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de14c7f2e7133dfc2a99d9a7528aec64 ChangeLog 1557
-MD5 d4447443b8a9095a14ff708f8bdd3839 erc-5.0.2.ebuild 685
-MD5 7f1b183e349bce458d123d9e09cca2de erc-5.0.1.ebuild 678
+MD5 566dee62434aa0f6e475baac2e00777a ChangeLog 1711
 MD5 4dcadea38f7f31f401df467cc54e2077 erc-4.0_rc2-r1.ebuild 642
+MD5 7f1b183e349bce458d123d9e09cca2de erc-5.0.1.ebuild 678
 MD5 412b2136b80db7ac2a1fc58fccb01f63 metadata.xml 239
+MD5 d4447443b8a9095a14ff708f8bdd3839 erc-5.0.2.ebuild 685
 MD5 525caef1ddd566109a224e44097d6e73 files/50erc-gentoo.el 101
-MD5 df9e151384beeba8c8149bbe6353dfa4 files/digest-erc-5.0.1 61
 MD5 396af8c7375f4a6e6d6410158f7aa824 files/digest-erc-4.0_rc2-r1 63
+MD5 df9e151384beeba8c8149bbe6353dfa4 files/digest-erc-5.0.1 61
 MD5 bbf2a316136100c46b67f11dd4c04629 files/digest-erc-5.0.2 61
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0/50erc-gentoo.el 87
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.1/50erc-gentoo.el 87
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD4DBQFCOc7CKRy60XGEcJIRAucmAJjB4lJMhJuyDnTIXtEcu/FDi+nDAKCZzzJB
-KpaSgHAdvLyH5AR0qC/fRQ==
-=kYm5
------END PGP SIGNATURE-----
+MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.2/50erc-gentoo.el 87
