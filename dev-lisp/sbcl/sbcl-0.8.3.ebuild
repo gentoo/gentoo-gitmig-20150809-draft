@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.3.ebuild,v 1.1 2003/09/21 02:25:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.3.ebuild,v 1.2 2003/11/14 11:41:53 seemant Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"

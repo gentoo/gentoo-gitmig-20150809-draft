@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.2.ebuild,v 1.2 2003/10/15 17:11:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.2.ebuild,v 1.3 2003/11/14 11:41:53 seemant Exp $
 
 inherit common-lisp
 
