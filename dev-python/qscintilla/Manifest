@@ -1,11 +1,21 @@
-MD5 89f41296144ff2ee3456b76448e2f5ed qscintilla-1.61.ebuild 1318
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7670e3904533767363eef8244f953b48 ChangeLog 3844
+MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
 MD5 e5f604948ad4b76dc10734fdfd4ee3f6 qscintilla-1.54.ebuild 1050
 MD5 3e180831f480d43868975437cd53808b qscintilla-1.60.ebuild 1245
-MD5 60c51125eaf51553912a1f6caa18e32c ChangeLog 3744
-MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
-MD5 680820a26d1487ebc8330eaa923f3599 files/qscintilla-1.54-sandbox.patch 783
-MD5 dc22cd37e5a193d127ad169db2cf6753 files/qscintilla-1.60-sandbox.patch 710
+MD5 73868fb1ffcf586506487b806163a948 qscintilla-1.61.ebuild 1320
 MD5 367f1bef2c17aa8fbc890fa134776db0 files/digest-qscintilla-1.54 79
 MD5 a9d71d6103367fa01a62735815dbe6ca files/digest-qscintilla-1.60 75
 MD5 3e38fc9aaa4fc7b9ab49400211086e08 files/digest-qscintilla-1.61 75
+MD5 680820a26d1487ebc8330eaa923f3599 files/qscintilla-1.54-sandbox.patch 783
+MD5 dc22cd37e5a193d127ad169db2cf6753 files/qscintilla-1.60-sandbox.patch 710
 MD5 e2ef183d503f0d553f92c182d655be67 files/qscintilla-1.61-sandbox.patch 710
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuJMWKRy60XGEcJIRAj92AJ9foRFIAl1//kFvy0ExcLpf9qL2twCeJmKa
+o7w51/i8RHlVyFSOw517lz8=
+=Syj8
+-----END PGP SIGNATURE-----
