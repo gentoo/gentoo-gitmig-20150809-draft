@@ -1,13 +1,23 @@
-MD5 d4e211954babfeb40462b9c949020e9b cairo-0.1.18-r1.ebuild 749
-MD5 689228be985cf5f9f1dc7143fefcea0b cairo-0.1.23.ebuild 823
-MD5 bf5ccca0b4268b6a83936b2cb47e26bd cairo-0.1.23-r1.ebuild 802
-MD5 91b41b996daa4abb26ae5f8a6727d0e3 cairo-0.1.18.ebuild 780
-MD5 2d3e5d34f8ba0a00572d24bec6b72c6c cairo-0.2.0.ebuild 902
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b1fb8c2f36ddd39a87546a2bcb28ae3d ChangeLog 2447
+MD5 91b41b996daa4abb26ae5f8a6727d0e3 cairo-0.1.18.ebuild 780
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 cd449933066600e3ac62fa22651a8120 files/xrender.pc 151
-MD5 ee0e0ddbf61c280106ae3683503054a8 files/digest-cairo-0.2.0 63
+MD5 689228be985cf5f9f1dc7143fefcea0b cairo-0.1.23.ebuild 823
+MD5 d4e211954babfeb40462b9c949020e9b cairo-0.1.18-r1.ebuild 749
+MD5 05118a6d077350feaa2d9cef35bce151 cairo-0.1.23-r1.ebuild 802
+MD5 2d3e5d34f8ba0a00572d24bec6b72c6c cairo-0.2.0.ebuild 902
 MD5 ce64bb341c4f80c6670a57f62c3fd7af files/digest-cairo-0.1.18 64
+MD5 cd449933066600e3ac62fa22651a8120 files/xrender.pc 151
 MD5 8045b9ac7481eb952f3c2fdfda944c65 files/digest-cairo-0.1.23 64
 MD5 ce64bb341c4f80c6670a57f62c3fd7af files/digest-cairo-0.1.18-r1 64
 MD5 8045b9ac7481eb952f3c2fdfda944c65 files/digest-cairo-0.1.23-r1 64
+MD5 ee0e0ddbf61c280106ae3683503054a8 files/digest-cairo-0.2.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtGSlroRuSHgZdywRAjzwAJ9f8PqoOgXl9Mjh51hgkD4zFfipEgCfaASZ
+Hvegz67XJ633HRFywB1JqzA=
+=M06K
+-----END PGP SIGNATURE-----
