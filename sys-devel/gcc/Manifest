@@ -14,9 +14,9 @@ MD5 3acd503347422782700e912a8188aaf1 gcc-3.3.1-r2.ebuild 16418
 MD5 079abbc45c914fdad6c90540fe82302c gcc-2.95.3-r8.ebuild 9213
 MD5 89c5294c24b323cf6c28e507fef6d59d gcc-3.2-r5.ebuild 12876
 MD5 c44c493b629be3a1abbc1eb4d3cb00d1 gcc-3.1-r8.ebuild 9776
-MD5 612f007f5b70efedef205ee8bb6e033b ChangeLog 29472
+MD5 b4f94866a9af7e04e00ca4f986dac4f7 ChangeLog 29470
 MD5 cba8efcea6af8416c0b92cf89eb4cf63 gcc-3.3.1-r4.ebuild 16096
-MD5 89ee4dbea7bd98b1bf6591e0eed3081c gcc-3.2.3-r2.ebuild 17301
+MD5 f3954ff28c23b90e76a17920c79534f2 gcc-3.2.3-r2.ebuild 17300
 MD5 d70bcc196f1d68275346f067efcb9373 files/cc 20
 MD5 dcf3646d19d351cc4d95a8096c6eaf58 files/cpp 20
 MD5 4a4be6eb294e00da7fef14ec597dcf13 files/digest-gcc-3.0.4-r6 128
