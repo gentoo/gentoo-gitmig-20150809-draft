@@ -1,13 +1,13 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.57 2005/02/12 17:11:28 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.58 2005/02/12 17:16:23 langthang Exp $
 
 *mailman-2.1.6_beta1 (12 Feb 2005)
 
   12 Feb 2005; Tuấn Văn <langthang@gentoo.org>
   +files/mailman-2.1.6_beta1-directory-check.patch,
   +mailman-2.1.6_beta1.ebuild:
-  New version.
+  New version. New directory-check.patch, thanks to Brian Harring <ferringb@gentoo.org>
 
   10 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> mailman-2.1.5-r4.ebuild:
   stable on amd64. see #81109
