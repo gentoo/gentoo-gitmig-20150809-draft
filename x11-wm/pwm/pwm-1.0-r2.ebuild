@@ -7,7 +7,7 @@ DESCRIPTION="A lightweight window manager"
 SRC_URI="http://www.students.tut.fi/~tuomov/dl/${P}.tar.gz"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/pwm"
 
-DEPEND=">=x11-base/xfree-4.0.1"
+DEPEND="virtual/x11"
 
 
 src_unpack() {
