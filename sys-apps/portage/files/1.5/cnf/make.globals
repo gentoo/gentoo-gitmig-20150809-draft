@@ -24,7 +24,6 @@ SYSPROFILE=default
 SYSPROFILEDIR=${PORTDIR}/profiles
 PLATFORM=$CHOST
 CONFIG_PROTECT="/etc /var/qmail/control"
-CONFIG_PROTECT_EXCLUDE="/etc/env.d"
 
 
 # Options passed to make during the build process
