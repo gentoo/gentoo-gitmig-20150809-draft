@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 67026ed61a334fbe1fa8c0d663822bfe kcdlabel-2.12.ebuild 574
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 77ce13d97f4c39dffc311281bd76c205 ChangeLog 1462
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 67026ed61a334fbe1fa8c0d663822bfe kcdlabel-2.12.ebuild 574
 MD5 c235b43131df0245020f8a24928925e8 files/digest-kcdlabel-2.12 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB5UwMZ/iYVBmujdURApGeAJ0VfhwMvZOpt+8eO7JyRtEuPMcL7gCfRI1k
-ZzYMWNtvJu5C+ztm+UVhSrg=
-=5JdA
------END PGP SIGNATURE-----
