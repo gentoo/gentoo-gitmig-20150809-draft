@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc1.ebuild,v 1.2 2003/06/16 22:33:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc1.ebuild,v 1.3 2003/06/17 17:10:22 raker Exp $
 
 IUSE="ldap pam postgres mysql ssl tcpd"
 
@@ -50,6 +50,7 @@ src_compile() {
 
 	if use mysql; then
 		modules="${modules}:mod_sql:mod_sql_mysql"
+		myconf="--with-includes=/usr/include/mysql"
 	elif use postgres; then
 		modules="${modules}:mod_sql:mod_sql_postgres"
 		myconf="--with-includes=/usr/include/postgresql"
