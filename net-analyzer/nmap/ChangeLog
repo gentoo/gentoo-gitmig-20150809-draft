@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.12 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.13 2003/02/08 01:22:07 raker Exp $
+
+*nmap-3.10_alpha9 (07 Feb 2003)
+
+  07 Feb 2003; Nick Hadaway <raker@gentoo.org> nmap-3.10_alpha9.ebuild,
+  files/digest-nmap-3.10_alpha9 :
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
