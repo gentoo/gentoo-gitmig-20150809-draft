@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0.ebuild,v 1.2 2004/03/16 04:27:30 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0.ebuild,v 1.3 2004/03/25 04:07:36 eradicator Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -34,6 +34,10 @@ src_unpack() {
 
 	cd ${S}/common/mp4v2
 	epatch ${FILESDIR}/mp4atom-sliver.patch
+
+	# Get the xmms plugin to behave
+	cd ${S}
+	elibtoolize
 }
 
 src_compile() {
@@ -52,17 +56,10 @@ src_compile() {
 		|| die
 
 	# emake causes xmms plugin building to fail
-	make || die
+	emake || die
 }
 
 src_install() {
-	# Copy over the xmms plugins first.  make install will not install these unless this is an upgrade.  See bug #38001
-	if use xmms; then
-		exeinto `xmms-config --input-plugin-dir`
-		doexe ${S}/plugins/xmmsmp4/src/.libs/libmp4.so
-		doexe ${S}/plugins/xmms/src/.libs/libaac.so
-	fi
-
 	make DESTDIR=${D} install || die
 
 	dodoc ${DOCS}
