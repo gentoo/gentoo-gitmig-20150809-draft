@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 14e92bfd64bcdc6704d67c60641a9896 grsec-sources-2.4.28.2.0.2-r1.ebuild 1253
 MD5 24764b94c52b15c33321df855d74ef1a grsec-sources-2.4.28.2.0.2-r3.ebuild 1353
 MD5 28f7057c915a09df4936882fd7088f05 grsec-sources-2.4.28.2.0.2-r2.ebuild 1281
-MD5 fbf20496b263c92ceee28c877a9b1c03 grsec-sources-2.4.28.2.1.0.ebuild 1742
-MD5 6e5919a4c0ad533aca157d68881806e5 ChangeLog 9774
+MD5 de2ab50796577ef947a9cbe845a22dae grsec-sources-2.4.28.2.1.0.ebuild 1737
+MD5 6f7a32898265e1949ad24dbbc77134f5 ChangeLog 9877
 MD5 0b2ea9b53b5d526e39afbdc5040ff07a metadata.xml 487
 MD5 0adbefda5e0d752b23dd2f930e6f6bbf files/linux-2.4.28-random-poolsize.patch 452
 MD5 8c35751caf824a9dacb02e80d6189b2e files/gentoo-sources-2.4.CAN-2004-1137.patch 1764
@@ -24,9 +24,9 @@ MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iQCVAwUBQeEvYp4WFLgrx1GWAQL60gP8DW+Dq70AbEqdsyZyR3/GCZWrzSlgCkX7
-Ui6mIqO5uDIXuPueyLa4yI8fExTw8y68/wKy7F3mo5Iku6DueIvt+xN8HYSBMSv8
-GFHQMDLANAJ3hu6yKdOZAXCYvtxAgYvEXb5szYFWoAcahyU8SWaHoTjljpLjqFs7
-8B0lfedcCKU=
-=wa0t
+iQCVAwUBQeRW0J4WFLgrx1GWAQIw1gQAy5+CyVhfS9sRfoNUSdDgsAO7y7Khi77/
+AGWlmYmy5ZaKwkLKfGE9BWVqzUSNXozZ7bkk4qaaFnmPLkqrJ50U4Mv40w44+IlG
+n/G0pAuT1N96twoz9llhwEMg9hbvhRiVAS0qhtuT8AuVsqx46WPiGsh1WvS9Zq5K
+d4fwJY6Mbew=
+=Qu/f
 -----END PGP SIGNATURE-----

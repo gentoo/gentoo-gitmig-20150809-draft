@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>ppc</herd>
-	<longdescription>
-		Vanilla 2.4 + benh 2.4 + pegasos
-	</longdescription>
-</pkgmetadata>

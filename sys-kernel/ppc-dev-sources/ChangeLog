@@ -1,9 +1,0 @@
-# ChangeLog for sys-kernel/ppc-dev-sources
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-dev-sources/ChangeLog,v 1.2 2004/06/24 23:00:47 agriffis Exp $
-
-*ppc-dev-sources-2.6 (31 May 2004)
-
-  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ppc-dev-sources-2.6.ebuild:
-  Pointing the user to gentoo-dev-sources
-
