@@ -29,3 +29,7 @@ selinux
 
 # No apm support on alpha
 apm
+
+# alpha doesn't have java support other than compaq-j*, which isn't a
+# current version.  must mask this to keep things sane
+java
