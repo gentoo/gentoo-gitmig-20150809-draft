@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/smarteiffel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.6 2003/10/17 03:18:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.7 2004/03/02 09:25:00 aliz Exp $
 
 *smarteiffel-1.1 (16 Oct 2003)
 
@@ -13,6 +13,7 @@
   Took tcc out of IUSE since it was commented out in the ebuild.
 
 *smarteiffel-1.0_beta5 (16 Nov 2002)
+*smarteiffel-1.0 (09 Dec 2002)
 
   09 Dec 2002; George Shapovalov <george@gentoo.org> smarteiffel-1.0.ebuild, files/digest-smarteiffel-1.0 :
 

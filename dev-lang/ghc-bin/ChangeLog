@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.10 2003/12/17 18:05:15 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.11 2004/03/02 09:25:00 aliz Exp $
 
 *ghc-bin-6.2 (17 Dec 2003)
 
@@ -34,7 +34,7 @@
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
 
-*ghc-bin-5.04.2.ebuild (21 Mar 2003)
+*ghc-bin-5.04.2 (21 Mar 2003)
 
   21 Mar 2003; George Shapovalov <george@gentoo.org> ghc-bin-5.04.2.ebuild :
   created virtual/ghc, added PROVIDE=virtual/ghc to the ebuild to make dev-lang/ghc bootstrap correctly

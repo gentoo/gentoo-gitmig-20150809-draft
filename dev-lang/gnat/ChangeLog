@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.19 2003/12/29 21:49:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.20 2004/03/02 09:25:00 aliz Exp $
 
   29 Dec 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r3.ebuild:
   Fixed bug #34021 (some symlinks were pointing to /var/tmp).
@@ -80,7 +80,7 @@
   new revision (by David Holm <dholm@delia.com>) - installs docs + few minor cleanups
   also static libraries are now installed as well.
 
-*gnat-3.14p
+*gnat-3.14p (17 Jun 2003)
 *gnat-3.15p (17 Jun 2003)
 
   17 Jun 2003; George Shapovalov <george@gentoo.org> gnat-3.14p.ebuild, gnat-3.14p.ebuild, Manifest, files/digest-gnat-3.1{4,5}p :

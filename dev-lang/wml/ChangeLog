@@ -1,8 +1,8 @@
 # ChangeLog for dev-lang/wml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.8 2003/11/13 21:48:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.9 2004/03/02 09:25:00 aliz Exp $
 
-*wml-2.0.9.ebuild  (11 Nov 2002)
+*wml-2.0.9 (11 Nov 2002)
 
   13 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
   Fix the subscripts properly (patch and run autotools).
