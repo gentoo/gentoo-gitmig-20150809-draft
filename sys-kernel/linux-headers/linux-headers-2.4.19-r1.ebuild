@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19-r1.ebuild,v 1.3 2002/12/18 12:42:10 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19-r1.ebuild,v 1.4 2002/12/20 16:55:00 alron Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -88,7 +88,7 @@ src_install() {
 		if [ `expr $KERNEL_ARCH ":" "sparc"` -eq 5 ]
 		then
 			dodir /usr/include/asm-{sparc,sparc64}
-			if [ "$KERNEL_ARCH" = "" ]
+			if [ "$KERNEL_ARCH" = "sparc64" ]
 			then
 				cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
 				if [ ! -r ${D}/usr/include/asm-sparc64/asm_offsets.h ]

@@ -1,10 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.7 2002/12/18 12:42:10 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.8 2002/12/20 16:55:00 alron Exp $
+
+  20 Dec 2002; Dean Bailey <alron@gentoo.org> : added missing sparc64 to ebuild.
 
 *linux-headers-2.4.19-r1 (18 Dec 2002)
 
-  18 Dec 2002; Dean Bailey <alron@gentoo.org>
+  18 Dec 2002; Dean Bailey <alron@gentoo.org> : 
   Fixed the lack of sparc64 instances in the file which were accidently wiped during an earlier fix.
   Set to r1 as this was a large enough change
 
@@ -17,7 +19,7 @@ See the sys-kernel/linux-sources ChangeLog for general changes.
 
 *linux-headers-2.4.19 (02 Sept 2002)
 
-  02 Sept 2002; Nicholas Jones <carpaski@gentoo.org :
+  02 Sept 2002; Nicholas Jones <carpaski@gentoo.org> :
 
   Fixed the
 	  mv: cannot move `linux-2.4.19' to a subdirectory of itself
