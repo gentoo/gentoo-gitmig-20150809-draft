@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.8.ebuild,v 1.2 2003/02/13 14:17:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.1.ebuild,v 1.1 2003/03/03 15:34:08 lostlogic Exp $
 
-inherit eutils
+IUSE="perl tcltk python ssl gtk mmx ipv6" 
 
-IUSE="perl gnome ssl gtk python mmx ipv6 nls kde" 
 S=${WORKDIR}/${P}
+
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
-SRC_URI="http://www.xchat.org/files/source/1.9/${P}.tar.bz2"
+SRC_URI="http://www.xchat.org/files/source/2.0/${P}.tar.bz2"
 HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
@@ -17,25 +17,15 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 RDEPEND=">=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.3
 	perl?   ( >=sys-devel/perl-5.6.1 )
-	gnome? ( >=gnome-base/libgnome-2.0 )
 	ssl?	( >=dev-libs/openssl-0.9.6d ) 
-	python? ( dev-lang/python )"               
+	python? ( dev-lang/python )
+	tcltk? ( dev-lang/tcl )"               
 
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.10.38 )"
 
 src_compile() {
-	local myopts myflags
-
-	if [ ! `use perl` ] ; then
-		use gnome \
-			&& myopts="${myopts} --enable-gnome --enable-panel" \
-			|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt"
-		
-	#	use gnome \
-	#		&& CFLAGS="${CFLAGS} -I/usr/include/orbit-2.0" \
-	#		|| myopts="${myopts} --disable-gnome"
-	fi
+	local myopts
 
 	use gtk \
 		&& myopts="${myopts} --enable-gtkfe" \
@@ -49,19 +39,16 @@ src_compile() {
 	use python \
 		&& myopts="${myopts} --enable-python" \
                 || myopts="${myopts} --disable-python"
-	use nls \
-		&& myopts="${myopts} --enable-nls" \
-		|| myopts="${myopts} --disable-nls"
+	use tcltk \
+		&& myopts="${myopts} --enable-tcl" \
+                || myopts="${myopts} --disable-tcl"
 	use mmx	\
-		&& myopts="${myopts} --enable-mmx"	\
+		&& myopts="${myopts} --enable-mmx" \
 		|| myopts="${myopts} --disable-mmx"
 	use ipv6 \
 		&& myopts="${myopts} --enable-ipv6" \
 		|| myopts="${myopts} --disable-ipv6"
 
-# pango renderer standard now
-#	[ -n "${DISABLE_XFT}" ] && myopts="${myopts} --disable-xft"
-	
 	econf \
 		--program-suffix=-2 \
 		${myopts} || die "Configure failed"
@@ -76,10 +63,5 @@ src_install() {
 
 	einstall install || die "Install failed"
 
-	dodoc AUTHORS COPYING ChangeLog README
+	dodoc AUTHORS COPYING ChangeLog README*
 }
-
-#pkg_postinst() {
-#	einfo "If you want X-Chat to correctly display Hebrew (bidi) do "
-#	einfo "'export DISABLE_XFT=1' and re-emerge xchat"
-#}
