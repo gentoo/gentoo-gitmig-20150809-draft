@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.4.1.ebuild,v 1.2 2004/02/21 14:46:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.4.1.ebuild,v 1.3 2004/04/01 13:45:27 hattya Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 IUSE="ipv6 nls"
 
