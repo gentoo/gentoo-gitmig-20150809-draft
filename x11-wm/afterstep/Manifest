@@ -1,4 +1,4 @@
-MD5 d3b74ba3519df241e44855324609de33 afterstep-2.0_beta2.ebuild 3341
+MD5 6a10ba98d276d4ac297ae57c12e40ae0 afterstep-2.0_beta2.ebuild 3455
 MD5 a32908f7e2101611a17ddb1aad85cf11 afterstep-1.8.11-r2.ebuild 1569
 MD5 98d3f2ff8a9e176c8a6e12867bd25e36 afterstep-1.8.11-r1.ebuild 1437
 MD5 e730e2803018d02fe83adf1a3862e0cb ChangeLog 2371
@@ -8,3 +8,4 @@ MD5 f91d4b766b1c70d8c899ab9ffa55f7c2 files/digest-afterstep-2.0_beta2 74
 MD5 7d3868b85f7325c35e5165a8c10ce77d files/afterstep-1.8.10-gentoo.diff 1321
 MD5 720723e9a9846b9d6a7e64a25b1adbbc files/afterstep 29
 MD5 7d3868b85f7325c35e5165a8c10ce77d files/afterstep-1.8.11-gentoo.diff 1321
+MD5 9dfd9962d8a60e264920c6d4e742d74c files/as2-gnome.diff 1524
