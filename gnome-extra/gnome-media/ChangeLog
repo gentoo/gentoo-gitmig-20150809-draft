@@ -1,7 +1,13 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.10 2002/10/27 15:05:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.11 2002/11/12 22:37:21 foser Exp $
 
+*gnome-media-2.1.1 (12 Nov 2002)
+
+  12 Nov 2002; foser <foser@gentoo.org> gnome-media-2.1.1.ebuild :
+  GNOME 2.1.2 release
+  Now depends on gstreamer instead of sox
+ 
 *gnome-media-2.1.0 (27 Oct 2002)
 
   27 Oct 2002; foser <foser@gentoo.org> gnome-media-2.1.0.ebuild :
