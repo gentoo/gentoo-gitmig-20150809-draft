@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_beta2.ebuild,v 1.2 2005/02/06 19:14:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_beta2.ebuild,v 1.3 2005/02/09 20:21:52 danarmak Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.4
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	!kde-misc/kgamma"
 
-PATCHES="$FILESDIR/$P-export-symbols-for-bindings.diff" # bugs.kde.org 98711
+PATCHES="$FILESDIR/$P-export-symbols-for-bindings.diff" # in upstream cvs, remove after beta2
 
 src_compile() {
 	kde_src_compile myconf
