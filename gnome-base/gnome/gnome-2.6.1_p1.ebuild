@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_p1.ebuild,v 1.9 2004/06/24 21:55:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_p1.ebuild,v 1.10 2004/06/30 19:40:58 leonardop Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -113,7 +113,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.0.4
-		>=gnome-base/gail-1.6.5
+		>=gnome-base/gail-1.6.6
 		>=gnome-extra/at-spi-1.4.2
 		>=app-accessibility/dasher-3.2.10-r1
 		>=app-accessibility/gnome-speech-0.3.2-r1
