@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r8.ebuild,v 1.2 2002/07/21 20:36:33 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r8.ebuild,v 1.3 2002/07/22 18:42:44 cardoe Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	patch -p0 < ${FILESDIR}/gentoo-${P}.patch
 
-	if [ "`use wavelan`" ] ; then
+	if [ -z "`use wavelan`" ] ; then
 
 	unpack orinoco-0.12b.tar.gz
 	cd ${S}
