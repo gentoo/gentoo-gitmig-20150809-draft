@@ -1,0 +1,18 @@
+diff -ru slurm-0.2.2/slurm.c slurm-0.2.2-hack/slurm.c
+--- slurm-0.2.2/slurm.c	2003-04-02 00:46:36.000000000 +0300
++++ slurm-0.2.2-hack/slurm.c	2003-04-26 11:18:23.000000000 +0300
+@@ -1410,11 +1410,11 @@
+     ifdata.if_amount = 0;
+ 
+     sprintf(data_type, "mbytes");
+-    colors.ingoing[0] = 2; colors.ingoing[1] = 1;
+-    colors.outgoing[0] = 3; colors.outgoing[1] = 1;
++    colors.ingoing[0] = 7; colors.ingoing[1] = 1;
++    colors.outgoing[0] = -1; colors.outgoing[1] = 0;
+     colors.intersection[0] = 2; colors.intersection[1] = 1;
+     colors.background = 0;
+-    colors.data[0] = 6; colors.data[1] = 1;
++    colors.data[0] = 1; colors.data[1] = 1;
+     colors.border[0] = 7; colors.border[1] = 1;
+     colors.labels[0] = 7; colors.labels[1] = 1;
+     colors.power_led[0] = 2; colors.power_led[1] = 1;

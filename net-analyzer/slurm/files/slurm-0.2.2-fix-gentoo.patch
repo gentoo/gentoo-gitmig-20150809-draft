@@ -1,0 +1,59 @@
+diff -ru slurm-0.2.2/slurm.c slurm-0.2.2-hack/slurm.c
+--- slurm-0.2.2/slurm.c	2003-04-02 00:46:36.000000000 +0300
++++ slurm-0.2.2-hack/slurm.c	2003-04-26 11:18:23.000000000 +0300
+@@ -682,7 +682,7 @@
+             /* TX graph */
+             if (tx_graph[x][y] == 1)
+             {
+-                chcolor(COLOR_YELLOW, colors.ingoing[1]);
++                chcolor(colors.outgoing[0], colors.outgoing[1]);
+                 mvprintw(10+y, x+1, "x");
+             }
+             else
+@@ -988,7 +988,7 @@
+             /* TX graph */
+             if (tx_graph[x][y] == 1)
+             {
+-                chcolor(COLOR_YELLOW, colors.ingoing[1]);
++                chcolor(colors.outgoing[0], colors.outgoing[1]);
+                 mvprintw(6+y, x+1, "x");
+             }
+             else
+@@ -1303,28 +1303,28 @@
+     if (displaymode != MODE_LARGE)
+     {
+         mvprintw(20, 9, "Received Packets:");
+-        mvprintw(22, 6, "Errors on Receiving:");
+-        mvprintw(20, 45,"Transmited Packets:");
++        mvprintw(22, 16, "RX Errors:");
++        mvprintw(20, 44, "Transmitted Packets:");
+         switch(data_type[0])
+         {
+             case 'b' :
+-                mvprintw(21,11, "Bytes Received:");
+-                mvprintw(21,47, "Bytes Transmited:");
++                mvprintw(21, 11, "Bytes Received:");
++                mvprintw(21, 46, "Bytes Transmitted:");
+                 break;
+             case 'k' :
+-                mvprintw(21,10, "KBytes Received:");
+-                mvprintw(21,46, "KBytes Transmited:");
++                mvprintw(21, 10, "KBytes Received:");
++                mvprintw(21, 45, "KBytes Transmitted:");
+                 break;
+             case 'm' :
+-                mvprintw(21,10, "MBytes Received:");
+-                mvprintw(21,46, "MBytes Transmited:");
++                mvprintw(21, 10, "MBytes Received:");
++                mvprintw(21, 45, "MBytes Transmitted:");
+                 break;
+         }
+     }
+ 
+     if (displaymode == MODE_SPLIT)
+     {
+-        mvprintw(22, 41, "Errors on Transmission:");
++        mvprintw(22, 54, "TX Errors:");
+         mvprintw(14, 37, "RX");
+         mvprintw(14, 41, "TX");
+         mvprintw(17,  9, "Current RX Speed:");
