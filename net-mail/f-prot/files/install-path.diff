@@ -1,0 +1,15 @@
+diff -urN f-prot_3.12a/check-updates.sh f-prot_3.12a-modified/check-updates.sh
+--- f-prot_3.12a/check-updates.sh	Wed Jun  5 11:19:46 2002
++++ f-prot_3.12a-modified/check-updates.sh	Wed Jul 17 23:33:44 2002
+@@ -25,9 +25,9 @@
+ PARAMETERS=$@
+ CRON=0
+ QUIET=0
+-TEMPDIR="/usr/local/f-prot/tmp/"
++TEMPDIR="/opt/f-prot/tmp/"
+ DOWNLOADSIGN=0
+-DEFDIR="/usr/local/f-prot/"
++DEFDIR="/opt/f-prot/"
+ SERVER=""
+ FALLBACKSERVER="http://updates.f-prot.com/files/"
+ FPROTDIR=$DEFDIR

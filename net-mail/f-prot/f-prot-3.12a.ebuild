@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12a.ebuild,v 1.2 2002/07/17 04:20:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12a.ebuild,v 1.3 2002/07/18 04:41:32 raker Exp $
 
 MY_P=${PN}_${PV}
 S=${WORKDIR}/${MY_P}
@@ -16,6 +16,14 @@ SLOT="0"
 LICENSE="F-PROT"
 KEYWORDS="x86"
 
+src_unpack () {
+
+	unpack ${A}
+	cd ${WORKDIR}
+	patch -p0 < ${FILESDIR}/install-path.diff
+
+}
+
 src_compile () {
     echo "Nothing to compile."
 }
@@ -24,7 +32,7 @@ src_install () {
     doman f-prot.8
     dodoc LICENSE CHANGES INSTALL README
 
-    dodir /opt/f-prot
+    dodir /opt/f-prot /opt/f-prot/tmp
     insinto /opt/f-prot
     insopts -m 755
     doins f-prot f-prot.sh check-updates.sh checksum
