@@ -1,27 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.0.ebuild,v 1.2 2003/07/23 16:10:17 mholzer Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.0.ebuild,v 1.3 2003/08/06 06:43:11 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Flexible backup script using perl"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://flexbackup.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+
 DEPEND="virtual/glibc"
 RDEPEND="app-arch/afio
 	app-arch/mt-st
 	app-arch/dump
 	sys-apps/findutils
 	dev-lang/perl"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_compile() {
 	epatch ${FILESDIR}/Makefile-gentoo.diff
