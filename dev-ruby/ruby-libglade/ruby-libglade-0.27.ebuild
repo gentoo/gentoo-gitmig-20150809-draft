@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.27.ebuild,v 1.9 2003/08/07 03:17:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.27.ebuild,v 1.10 2004/04/11 15:52:48 usata Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/libglade
 DESCRIPTION="Ruby libglade bindings"
@@ -11,7 +11,7 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=dev-lang/ruby-1.6.4-r1
+DEPEND="virtual/ruby
 	=x11-libs/gtk+-1.2*
 	>=dev-libs/libxml-1.8.17-r2
 	>=sys-libs/zlib-1.1.4"
