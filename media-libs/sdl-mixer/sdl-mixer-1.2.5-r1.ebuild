@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.8 2004/03/14 16:55:59 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.9 2004/03/17 04:55:25 mr_bones_ Exp $
+
+inherit eutils
 
 MY_P="${P/sdl-/SDL_}"
 S=${WORKDIR}/${MY_P}
@@ -18,6 +20,7 @@ DEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/smpeg-0.4.4-r1
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -26,7 +29,8 @@ src_unpack() {
 	autoreconf
 	sed -i \
 		-e 's:/usr/local/lib/timidity:/usr/share/timidity:' \
-			timidity/config.h || die "sed timidity/config.h failed"
+			timidity/config.h \
+				|| die "sed timidity/config.h failed"
 }
 
 src_compile() {
@@ -39,6 +43,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc CHANGES README
 }

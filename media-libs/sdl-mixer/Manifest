@@ -1,4 +1,5 @@
-MD5 09e021c9ce73aab4737e28e4575483c8 sdl-mixer-1.2.5-r1.ebuild 1224
-MD5 43defd4a99f09b4efb87e5252c208e79 ChangeLog 2404
+MD5 de37447baab544a374f2d61728c56b37 ChangeLog 2619
+MD5 c9448bd6bc07152bd531e7eefc650130 sdl-mixer-1.2.5-r1.ebuild 1262
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 f026901e029ec31037b0bca6dc7f07d8 files/1.2.5-gcc3.patch 1235
 MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.15 2004/03/14 16:55:59 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.16 2004/03/17 04:55:25 mr_bones_ Exp $
+
+  16 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-mixer-1.2.5-r1.ebuild:
+  tighten DEPEND (bug #44817); add metadata file (games since we seem to be the
+  biggest customer); inherit eutils for epatch
 
   14 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   sdl-mixer-1.2.5-r1.ebuild:
