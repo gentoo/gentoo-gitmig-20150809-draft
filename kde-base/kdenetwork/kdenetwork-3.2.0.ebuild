@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0.ebuild,v 1.7 2004/02/15 17:08:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0.ebuild,v 1.8 2004/02/19 14:46:32 vapier Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE network apps: kopete, kppp, kget. kmail and knode are now in kdepim."
 
-KEYWORDS="x86 ppc sparc ~hppa ~amd64"
+KEYWORDS="x86 ppc sparc hppa ~amd64"
 IUSE="slp samba"
 
 DEPEND="~kde-base/kdebase-${PV}
