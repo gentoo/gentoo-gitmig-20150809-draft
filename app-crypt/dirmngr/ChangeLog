@@ -1,0 +1,8 @@
+# ChangeLog for app-crypt/dirmngr
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.1 2004/08/15 03:24:01 vapier Exp $
+
+*dirmngr-0.5.5 (14 Aug 2004)
+
+  14 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> : dirmngr-0.5.5.ebuild
+  Initial import #49611 for Daniel Webert/Tobias Sager.
