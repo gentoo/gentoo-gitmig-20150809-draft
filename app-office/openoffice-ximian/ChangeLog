@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.18 2004/01/25 17:33:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.19 2004/01/28 13:56:56 suka Exp $
+
+  28 Jan 2004; suka <suka@gentoo.org> openoffice-ximian-1.1.46.ebuild,
+  openoffice-ximian-1.1.47.3.ebuild, openoffice-ximian-1.1.49.2-r1.ebuild,
+  openoffice-ximian-1.1.49.2.ebuild, openoffice-ximian-1.1.50.ebuild:
+  Install Ximians OpenSymbol-Font to resolve bullets (and other) problems,
+  closes bug #39637
 
 *openoffice-ximian-1.1.50 (25 Jan 2004)
 

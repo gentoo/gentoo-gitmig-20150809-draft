@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.47.3.ebuild,v 1.4 2004/01/17 16:52:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.47.3.ebuild,v 1.5 2004/01/28 13:56:56 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -580,6 +580,10 @@ src_install() {
 		insinto /usr/share/applnk/Office
 		doins ${FILESDIR}/*.desktop
 	fi
+
+	# Install corrected Symbol Font
+	insinto /usr/X11R6/lib/X11/fonts/truetype/
+	doins ${PATCHDIR}/fonts/*.ttf
 
 	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
