@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.1.ebuild,v 1.3 2005/01/01 15:33:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.1.ebuild,v 1.4 2005/01/06 12:15:30 foser Exp $
 
 inherit virtualx gnome2 eutils flag-o-matic
 
@@ -40,7 +40,8 @@ RDEPEND=">=dev-libs/glib-2.4
 		dev-util/pkgconfig )
 	python? ( >=dev-lang/python-2
 		>=dev-python/pygtk-2 )
-	libgda? ( >=gnome-extra/libgda-1.0.1 )"
+	libgda? ( >=gnome-extra/libgda-1.0.1 )
+	dev-util/pkgconfig" # see #67107
 #	gnomedb? ( >=gnome-extra/libgnomedb-0.90.2 )
 
 DEPEND="${RDEPEND}

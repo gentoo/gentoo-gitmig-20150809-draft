@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.75 2005/01/01 15:33:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.76 2005/01/06 12:15:30 foser Exp $
+
+  06 Jan 2005; foser <foser@gentoo.org> gnumeric-1.4.1.ebuild :
+  Add pkgconfig as a buildtime dep (#67107)
 
   29 Dec 2004; Joseph Jezak <josejx@gentoo.org> gnumeric-1.2.13.ebuild:
   Marked ppc stable.
