@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.15 2002/08/25 09:18:09 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.16 2002/09/29 22:34:20 rphillips Exp $
+
+*mysql-3.23.52-r1 (29 Sep 2002)
+
+  29 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mysql-3.23.52-r1.ebuild :
+
+  Added thread-safe client support... MyODBC package needs this flag compiled
+  into mysql to work correctly.  Fixes #8411. Submitted by Peter Ruskin
 
 *mysql-3.23.52 (25 Aug 2002)
 
