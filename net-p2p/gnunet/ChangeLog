@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.28 2005/04/01 16:10:24 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.29 2005/04/02 16:35:37 swegener Exp $
+
+  02 Apr 2005; Sven Wegener <swegener@gentoo.org> gnunet-0.6.6b.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *gnunet-0.6.6b (01 Apr 2005)
 

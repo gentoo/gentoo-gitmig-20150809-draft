@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.6b.ebuild,v 1.1 2005/04/01 16:10:24 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.6b.ebuild,v 1.2 2005/04/02 16:35:37 swegener Exp $
 
 inherit eutils libtool
 
@@ -18,7 +18,7 @@ SLOT="0"
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=dev-libs/libgcrypt-1.2.0
 	gtk? ( >=x11-libs/gtk+-2.4.0 )
-	mysql? ( >=dev-db/mysql-3.23-56 )
+	mysql? ( >=dev-db/mysql-3.23.56 )
 	sqlite? ( >=dev-db/sqlite-3.0.8 )
 	sys-devel/gettext
 	>=media-libs/libextractor-0.3.1
