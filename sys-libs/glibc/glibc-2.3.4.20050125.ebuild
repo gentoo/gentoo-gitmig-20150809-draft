@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.29 2005/02/16 04:02:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.30 2005/02/19 20:14:44 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -420,7 +420,7 @@ toolchain-glibc_src_install() {
 
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
-	fperms 4711 $(alt_prefix)/libexec/glibc/pt_chown
+	fperms 4711 $(alt_prefix)/lib/misc/glibc/pt_chown
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().
@@ -772,7 +772,8 @@ glibc_do_configure() {
 			--prefix=$(alt_prefix)
 			--mandir=$(alt_prefix)/share/man
 			--infodir=$(alt_prefix)/share/info
-			--libexecdir=$(alt_prefix)/libexec/glibc"
+			--libexecdir=$(alt_prefix)/lib/misc/glibc
+			${EXTRA_ECONF}"
 
 	GBUILDDIR="${WORKDIR}/build-${ABI}-${CHOST}-$1"
 	mkdir -p ${GBUILDDIR}
