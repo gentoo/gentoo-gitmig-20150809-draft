@@ -1,3 +1,5 @@
+# -*- shell-script -*-
+
 # We need to have JBOSS_HOME and JAVA_HOME set in order to start jboss.
 
 if [ -z "$JBOSS_HOME" ]; then
@@ -36,3 +38,4 @@ CMD_START="$JBOSS_HOME/bin/run.sh -c $JBOSS_CONF"
 CMD_STOP="$JAVA_HOME/bin/java -classpath $JBOSS_HOME/bin/shutdown.jar:$JBOSS_HOME/lib/jboss-system.jar:`java-config --classpath=jboss` org.jboss.Shutdown -S"
 
 SUBIT="su $JBOSS_USER -c "
+
