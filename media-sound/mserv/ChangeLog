@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mserv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.2 2004/03/12 03:53:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.3 2004/03/23 06:41:39 eradicator Exp $
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> mserv-0.35.ebuild:
+  Using keepdir to fix bug #45361.
 
   11 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> mserv-0.35.ebuild:
   ebuild cleanup.
