@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.8.ebuild,v 1.3 2004/01/20 05:28:43 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.8.ebuild,v 1.4 2004/06/02 22:06:24 agriffis Exp $
 
 DESCRIPTION="A set of text-processing Java classes that provide Perl5 compatible regular expressions, AWK-like regular expressions, glob expressions, and utility classes for performing substitutions, splits, filtering filenames, etc."
 HOMEPAGE="http://jakarta.apache.org/oro/index.html"
@@ -21,13 +21,13 @@ S=${WORKDIR}/jakarta-oro-${PV}
 src_compile() {
 	local myc
 
-	if [ -n "`use jikes`" ] ; then
+	if use jikes ; then
 		myc="${myc} -Dbuild.compiler=jikes"
 	fi
 
 	ANT_OPTS=${myc} ant jar || die "Failed Compiling"
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		ant javadocs || die "Failed Creating Docs"
 	fi
 }
@@ -38,5 +38,5 @@ src_install() {
 	dodoc CHANGES COMPILE CONTRIBUTORS ISSUES LICENSE README STYLE TODO
 	dohtml *.html
 
-	[ -n "`use doc`" ] && dohtml -r docs/
+	use doc && dohtml -r docs/
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.5.ebuild,v 1.4 2004/05/05 16:43:38 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.5.ebuild,v 1.5 2004/06/02 22:16:17 agriffis Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,7 @@ src_compile() { :; }
 src_install() {
 	java-pkg_dojar fesi.jar
 	dodoc Readme.txt
-	if [ `use doc` ] ; then
+	if use doc ; then
 		dohtml -r doc/html/*
 		cp -r examples ${D}/usr/share/${PN}
 		cp -r tests ${D}/usr/share/${PN}

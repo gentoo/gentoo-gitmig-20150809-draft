@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.8 2004/02/23 21:58:07 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.9 2004/06/02 22:14:22 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> bcel-5.1.ebuild:
+  Fix use invocation
 
   26 Feb 2004; Chris Aniszczyk <zx@gentoo.org> :
   Updated to fix issues with Bug #42457

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.11 2004/03/16 02:21:16 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.12 2004/06/02 22:14:22 agriffis Exp $
 
 inherit java-pkg eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 
 	use jikes && export ANT_OPTS="${ANT_OPTS} -Dbuild.compiler=jikes"
 	ant jar || die "Compile failed during jar target."
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		echo "Building Javadocs"
 		ant apidocs > /dev/null
 	fi

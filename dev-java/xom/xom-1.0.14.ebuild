@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0.14.ebuild,v 1.4 2004/02/10 07:09:11 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0.14.ebuild,v 1.5 2004/06/02 22:10:28 agriffis Exp $
 
 inherit java-pkg
 
@@ -31,7 +31,7 @@ src_install() {
 	java-pkg_dojar xom.jar || die "Failed Installing"
 	dodoc Todo.txt
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dodir /usr/share/doc/${P}
 		cd ${WORKDIR}/XOM/
 		dohtml -r apidocs/
