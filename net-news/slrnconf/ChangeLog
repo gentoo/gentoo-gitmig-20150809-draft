@@ -1,6 +1,9 @@
 # ChangeLog for net-news/slrnconf
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/ChangeLog,v 1.1 2004/07/04 22:01:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/ChangeLog,v 1.2 2004/07/05 16:42:10 dholm Exp $
+
+  05 Jul 2004; David Holm <dholm@gentoo.org> slrnconf-0.8.4.ebuild:
+  Added to ~ppc.
 
 *slrnconf-0.8.4 (05 Jul 2004)
 

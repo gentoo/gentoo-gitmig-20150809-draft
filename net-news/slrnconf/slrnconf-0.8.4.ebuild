@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/slrnconf-0.8.4.ebuild,v 1.1 2004/07/04 22:01:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/slrnconf-0.8.4.ebuild,v 1.2 2004/07/05 16:42:10 dholm Exp $
 
 DESCRIPTION="slrnconf is a graphical configuation utility for the newsreader slrn"
 HOMEPAGE="http://home.arcor.de/kaffeetisch/slrnconf.html"
@@ -8,7 +8,7 @@ SRC_URI="http://home.arcor.de/kaffeetisch/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="net-news/slrn
