@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3591 2005/02/11 07:25:24 cardoe Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3592 2005/02/11 07:34:07 obz Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1107,8 +1107,9 @@ media-video/gst-player
 app-accessibility/speechd-up
 
 # <obz@gentoo.org> (11 Dec 2004)
-# gnome meta update tracker for 2.8.2
+# gnome meta update tracker for 2.8.2 and 2.8.3
 =gnome-base/gnome-2.8.2_pre*
+=gnome-base/gnome-2.8.3_pre*
 
 # libglade-2.4.1 is buggy/incompatible, see bug #73868
 # Applications will need to be adjusted to work with the
