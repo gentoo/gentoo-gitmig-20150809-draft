@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.1 2002/09/05 08:06:13 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.2 2002/09/05 08:11:08 satai Exp $
 
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"
 TEXMF="teTeX-texmf-beta-20020901.tar.gz"
 S=${WORKDIR}/teTeX-src-beta-${PV}
 DESCRIPTION="teTeX is a complete TeX distribution"
-SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-beta-20020901.tar.gz
-	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
-	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMF}
+SRC_URI=" ftp://ftp.dante.de/tex-archive/systems/unix/teTeX-beta/teTeX-src-beta-20020901.tar.gz
+	 ftp://ftp.dante.de/tex-archive/systems/unix/teTeX-beta/${TEXMFSRC}
+	 ftp://ftp.dante.de/tex-archive/systems/unix/teTeX-beta/${TEXMF}
      http://www.ibiblio.org/gentoo/distfiles/ec-ready-mf-tfm.tar.gz
      http://www.ibiblio.org/gentoo/distfiles/teTeX-french.tar.gz"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
