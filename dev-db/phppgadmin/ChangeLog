@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.26 2004/07/03 22:18:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.27 2004/07/11 23:48:22 weeve Exp $
+
+  11 Jul 2004; Jason Wever <weeve@gentoo.org> phppgadmin-3.4.ebuild:
+  Stable on sparc.
 
   03 Jul 2004; Guy Martin <gmsoft@gentoo.org> phppgadmin-3.4.ebuild:
   Marked stable on hppa.
