@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.0.ebuild,v 1.1 2003/10/25 05:06:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.0.ebuild,v 1.2 2003/10/25 05:32:49 vapier Exp $
 
 inherit eutils
 
@@ -20,6 +20,12 @@ DEPEND=">=sys-libs/ncurses-5.2
 PROVIDE="virtual/editor"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-wsconvert.patch
+}
 
 src_compile() {
 	local myconf=""
