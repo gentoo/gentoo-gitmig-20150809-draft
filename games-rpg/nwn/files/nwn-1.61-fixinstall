@@ -1,0 +1,93 @@
+#!/bin/bash
+# Initial version by Bioware
+# Modified to match the gentoo setup
+# 03/27/2003 phoen][x <phoenix@gentoo.org>
+
+cd GAMES_PREFIX_OPT/nwn
+
+FaRequiredDirs=(ambient data music override miles nwm)
+aRequiredFiles=(chitin.key dialog.tlk nwmain patch.key)
+aLCDirs=(ambient data dmvault hak localvault music override portraits)
+aProblemFiles=()
+
+printf "\nFixing case\n\n"
+
+if [ -f dialog.TLK ]
+then
+    mv dialog.TLK dialog.tlk
+fi
+
+if [ -f dialogF.TLK ]
+then
+    mv dialogF.TLK dialogf.tlk
+fi
+
+printf "Checking for required files\n\n"
+
+for d in ${aRequiredDirs[@]}
+do
+    if [ -d $d ]
+    then
+        printf "PASSED: $d directory exists\n"
+    else
+        printf "FAILED: $d directory missing\n"
+        exit
+    fi
+done
+
+for f in ${aRequiredFiles[@]}
+do
+    if [ -f $f ]
+    then
+        printf "PASSED: $f exists\n"
+    else
+        printf "FAILED: $f missing\n"
+        exit
+    fi
+done
+
+printf "\nFixing case\n\n"
+
+for d in ${aLCDirs[@]}
+do
+    if [ -d $d ]
+    then
+        printf "$d\n"
+  
+        cd $d
+
+        for f in $(find *.*)
+        do
+            lcf=$(echo $f | tr [:upper:] [:lower:])
+            if [ $f != $lcf ]
+            then
+	        if [ -f $f ]
+	        then
+	            mv $f $(echo $f | tr [:upper:] [:lower:]) 
+	        fi
+            fi
+            printf .
+        done
+
+        cd ..
+
+	printf "\n"
+    fi
+done
+
+printf "\nChecking for problem files\n\n"
+
+for f in ${aProblemFiles[@]}
+do
+    if [ -f $f ]
+    then
+        printf "WARNING: $f exists, deleting this file is recommended\n"
+    fi
+done
+
+printf "\nFixing permissions\n\n"
+
+chown GENTOO_USER:GENTOO_GROUP GENTOO_DIR/nwn/ -R
+chmod g+rwX GENTOO_DIR/nwn/ -R
+
+printf "\nYou are ready to run Neverwinter Nights.\n\n"
