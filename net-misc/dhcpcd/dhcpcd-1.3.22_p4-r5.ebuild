@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.1 2004/03/08 23:49:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.2 2004/04/16 18:24:15 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -17,7 +17,6 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ppc64 s390"
 IUSE="build static"
 
 DEPEND="virtual/glibc"
-
 PROVIDE="virtual/dhcpc"
 
 src_unpack() {
@@ -60,9 +59,9 @@ src_compile() {
 src_install() {
 	einstall sbindir=${D}/sbin || die "Install failed"
 	rmdir ${D}/etc/dhcpc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
-		dodoc AUTHORS COPYING ChangeLog NEWS README
+		dodoc AUTHORS ChangeLog NEWS README
 	else
 		rm -rf ${D}/usr/share
 	fi
