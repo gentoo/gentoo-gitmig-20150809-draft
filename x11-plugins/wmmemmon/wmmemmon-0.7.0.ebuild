@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.2 2002/10/17 15:47:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.3 2002/10/20 18:55:34 vapier Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,6 @@ KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 DEPEND="virtual/glibc x11-base/xfree"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2.ebuild,v 1.1 2002/10/08 14:43:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2.ebuild,v 1.2 2002/10/20 18:55:34 vapier Exp $
 
 IUSE=""
 
@@ -18,7 +18,6 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc
 	virtual/x11
 	x11-wm/WindowMaker"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 

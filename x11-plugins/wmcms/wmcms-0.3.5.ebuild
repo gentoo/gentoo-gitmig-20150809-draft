@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5.ebuild,v 1.2 2002/10/18 05:20:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5.ebuild,v 1.3 2002/10/20 18:55:34 vapier Exp $
 
 IUSE=""
 
@@ -11,7 +11,6 @@ SRC_URI="http://orbita.starmedia.com/~neofpo/files/${P}.tar.bz2"
 HOMEPAGE="http://orbita.starmedia.com/~neofpo/wmcms.html"
 
 DEPEND="x11-libs/libdockapp"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
