@@ -1,0 +1,51 @@
+#put your firewall/security settings here.  This file will run before all non-local
+#interfaces are brought up.
+
+netup() {
+
+# Uncomment this line if you're a router
+#	echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# Turn OFF explicit congestion notification (Don't remove these lines unless
+# you know *exactly* what you are doing!)
+	if [ -e /proc/sys/net/ipv4/tcp_ecn ]
+	then
+		echo 0 > /proc/sys/net/ipv4/tcp_ecn
+	fi
+
+# example iptables stateful firewall
+# eth0 is connected to the LAN, eth1 is connected to the router
+# accepts inbound connections for http (web), smtp (mail), ssh, rsync (eth0 and eth1)
+# accepts inbound connections for squid (proxy) and imap (mail) (eth0 only)
+
+	#accept any local/LAN packets
+#	iptables -A INPUT -i eth0 -j ACCEPT
+#	iptables -A INPUT -i lo -j ACCEPT
+	
+	#accept established and related connections
+#	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+	
+	#accept new  http, smtp, ssh, rsync and squid/imap (not from outside) connections
+#	iptables -A INPUT -p tcp --dport http -m state --state NEW -j ACCEPT
+#	iptables -A INPUT -p tcp --dport smtp -m state --state NEW -j ACCEPT
+#	iptables -A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+#	iptables -A INPUT -p tcp --dport rsync -m state --state NEW -j ACCEPT
+#	iptables -A INPUT -p tcp --dport 3128 -i ! eth1 -m state --state NEW -j ACCEPT
+#	iptables -A INPUT -p tcp --dport 143 -i ! eth1 -m state --state NEW -j ACCEPT
+	
+	#if we got to these rules, then it's time to perform some TCP/UDP-foo
+	#these are some fairly intense log settings
+#	iptables -A INPUT -j LOG --log-prefix "bad input:"
+	
+	#this line returns an ICMP-port-unreachable for unwanted TCP connections
+#	iptables -A INPUT -p tcp -j REJECT
+
+	#drop everything else on the floor
+#	iptables -P INPUT DROP
+}
+
+netdown() {
+#	iptables -P INPUT ACCEPT
+#	iptables -F INPUT
+}
+
