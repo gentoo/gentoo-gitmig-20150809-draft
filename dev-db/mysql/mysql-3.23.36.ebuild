@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.36.ebuild,v 1.4 2001/04/13 15:53:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.36.ebuild,v 1.5 2001/04/13 16:08:34 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,6 +18,11 @@ DEPEND="virtual/glibc
     >=sys-libs/ncurses-5.1
     >=sys-libs/zlib-1.1.3"
 
+RDEPEND="virtual/glibc
+	berkdb? ( >=sys-libs/db-3.2.3h )
+    readline? ( >=sys-libs/readline-4.2 )
+    >=sys-libs/ncurses-5.1
+    >=sys-libs/zlib-1.1.3"
 
 src_unpack() {
 	unpack ${A}
