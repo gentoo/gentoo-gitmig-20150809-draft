@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/hashalot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.14 2004/06/13 00:10:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.15 2004/06/13 00:24:25 dragonheart Exp $
+
+  13 Jun 2004; Daniel Black <dragonheart@gentoo.org> hashalot-0.3.ebuild:
+  fix on install
 
 *hashalot-0.3 (13 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/hashalot-0.3.ebuild,v 1.1 2004/06/13 00:10:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/hashalot-0.3.ebuild,v 1.2 2004/06/13 00:24:25 dragonheart Exp $
 
 DESCRIPTION="CryptoAPI utils"
 HOMEPAGE="http://www.kerneli.org/"
@@ -24,6 +24,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR=${D} || die "install error"
+	emake DESTDIR=${D} install || die "install error"
 }
 
