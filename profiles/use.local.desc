@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.580 2004/08/25 21:00:10 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.581 2004/08/26 15:55:10 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -363,6 +363,7 @@ net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
 net-analyzer/nagios-plugins:nagios-ping - installs deps for fancy ping monitoring
 net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
 net-analyzer/net-snmp:lm_sensors - Adds linux lm_sensors mib support
+net-analyzer/net-snmp:minimal - Installs only the libs/daemons needed to be snmp monitored
 net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
 net-analyzer/nstats:pcap - enable pcap support
 net-analyzer/pmacct:mmap - Enable memory-mapped I/O
