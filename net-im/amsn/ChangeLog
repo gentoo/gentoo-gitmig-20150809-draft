@@ -1,8 +1,11 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.6 2002/12/07 18:37:05 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.7 2003/02/03 20:59:22 nall Exp $
 
 * amsn-0.71 (7 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  03 Feb 2003; Jon Nall <nall@gentoo.org> amsn-0.71.ebuild :
+  added ~ppc
 
   New version
 
