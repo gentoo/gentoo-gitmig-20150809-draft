@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.2.3.ebuild,v 1.4 2004/06/24 22:07:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.2.3.ebuild,v 1.5 2004/07/03 22:10:59 carlo Exp $
 
 inherit eutils kde
-need-kde 3.1
 
 MY_P=${PN/labp/LabP}-${PVR/_/.}
 S="${WORKDIR}/${MY_P}"
@@ -27,6 +26,7 @@ DEPEND=">=dev-libs/gsl-1.3
 	>=media-gfx/pstoedit-3.33
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	>=media-libs/jasper-1.700.5-r1"
+need-kde 3.1
 
 src_install() {
 	dodir /usr/share/doc/HTML/en/LabPlot/

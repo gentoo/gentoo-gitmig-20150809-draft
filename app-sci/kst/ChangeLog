@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/kst
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kst/ChangeLog,v 1.7 2004/06/24 22:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kst/ChangeLog,v 1.8 2004/07/03 22:09:06 carlo Exp $
+
+  04 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kst-0.94.ebuild,
+  kst-0.97.ebuild:
+  QA: need-kde after R/DEPEND
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> kst-0.97.ebuild:
   Marked stable on amd64.
