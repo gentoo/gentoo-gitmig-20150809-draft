@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-common-bin/systemimager-common-bin-3.0.1.ebuild,v 1.4 2004/02/27 18:50:17 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-common-bin/systemimager-common-bin-3.0.1.ebuild,v 1.5 2004/02/29 15:27:12 aliz Exp $
 
 MY_P="systemimager-common-3.0.1-4.noarch"
 
@@ -16,8 +16,8 @@ KEYWORDS="x86"
 DEPEND="app-arch/rpm2targz"
 
 
- RDEPEND="${DEPEND}
- 		app-admin/systemconfigurator"
+RDEPEND="${DEPEND}
+	app-admin/systemconfigurator"
 
 src_unpack() {
 	rpm2targz ${DISTDIR}/${MY_P}.rpm

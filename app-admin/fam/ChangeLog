@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.7 2004/02/15 20:51:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.8 2004/02/29 15:27:12 aliz Exp $
 
   15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> fam-2.7.0.ebuild:
   Add elibtoolize back.
@@ -39,7 +39,7 @@
   16 Oct 2003; Aron Griffis <agriffis@gentoo.org> fam-oss-2.6.10-r1.ebuild:
   Stable on alpha
 
-*fam-oss-2.6.10-r1 (30 Jul 2003)
+*fam-2.6.10-r1 (30 Jul 2003)
 
   15 Nov 2003; Guy Martin <gmsoft@gentoo.org> fam-oss-2.6.10-r1.ebuild :
   Added hppa to KEYWORDS.

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/superadduser
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.18 2004/01/20 01:10:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.19 2004/02/29 15:27:12 aliz Exp $
 
   19 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
   files/1.0.7/superadduser.8 :
@@ -8,7 +8,7 @@
   Removed last line to not have troff message during `man superadduser`.
   Thanks to: CBke <cb@linux.be> in bug #38764
 
-superadduser-1.0.7 (16 Jan 2004)
+*superadduser-1.0.7 (16 Jan 2004)
 
   16 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
   superadduser-1.0.7.ebuild :

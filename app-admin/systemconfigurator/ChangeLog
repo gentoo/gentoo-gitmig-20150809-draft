@@ -1,8 +1,8 @@
-# ChangeLog for app-admin/systeconfigurator
+# ChangeLog for app-admin/systemconfigurator
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.1 2004/02/27 18:18:45 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.2 2004/02/29 15:27:12 aliz Exp $
 
-*app-admin/systemconfiurator-2.0.9 (27 Feb 2004)
+*systemconfigurator-2.0.9 (27 Feb 2004)
   
   27 Feb 2004; José Alberto Suárez López systemconfigurator-2.0.9:
     First release

@@ -1,8 +1,8 @@
 # ChangeLog for app-admin/systemimager-common-bin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-common-bin/ChangeLog,v 1.3 2004/02/27 18:50:17 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-common-bin/ChangeLog,v 1.4 2004/02/29 15:27:12 aliz Exp $
 
-*app-admin/systemimager-common-bin-3.0.1 (17 Oct 2003)
+*systemimager-common-bin-3.0.1 (17 Oct 2003)
 
   17 Oct 2003; José Alberto Suárez López systemimager-common-bin-3.0.1.ebuild:
   First release
