@@ -2,6 +2,7 @@
 #this file.  See /usr/portage/profiles/default-1.0_rc6/packages for
 #more info about this new format and what the "*" means.
 
+<=x11-base/xfree-4.1.0-r1
 *app-editors/nano
 *dev-libs/glib
 #the above is needed for our new env-update

@@ -14,31 +14,36 @@ echo "Using GCC $myGCC"
 echo "Using GETTEXT $myGETTEXT"
 echo "Using GLIBC $myGLIBC"
 
-#USE may be set from the environment (recommended) so we back it up for later.
+#USE may be set from the environment so we back it up for later.
 if [ "${USE-UNSET}" = "UNSET" ]
 then
-	unset=yes
+	use_unset=yes
 else
-	olduse="$USE"
-	unset=no
+	use_old="$USE"
+	use_unset=no
 fi
 export USE="build"
+
+#get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
+#overwritten
+cp /etc/make.conf /etc/make.conf.build
+export CFLAGS="`spython -c 'import portage; print portage.settings["CFLAGS"];'`"
+export CHOST="`spython -c 'import portage; print portage.settings["CHOST"];'`"
+export CXXFLAGS="`spython -c 'import portage; print portage.settings["CXXFLAGS"];'`"
+export MAKEOPTS="`spython -c 'import portage; print portage.settings["MAKEOPTS"];'`"
+
 export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
 cd /usr/portage
-emerge $myPORTAGE || exit
-emerge $myBINUTILS || exit
-emerge $myGCC || exit
-emerge $myGETTEXT || exit
-if [ "$unset" = "yes" ]
+emerge --pretend $myPORTAGE $myBINUTILS $myGCC $myGETTEXT || exit
+if [ "$use_unset" = "yes" ]
 then
 	unset USE
 else
-	export USE="$olduse"
+	export USE="$use_old"
 fi
 # This line should no longer be required
 #export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
-emerge $myGLIBC || exit
-emerge $myGETTEXT || exit
-emerge $myBINUTILS || exit
-emerge $myGCC || exit
+emerge --pretend $myGLIBC $myGETTEXT $myBINUTILS $myGCC || exit
+#restore settings
+cp /etc/make.conf.build /etc/make.conf

@@ -37,6 +37,7 @@
 *=sys-libs/glibc-2.2.4-r1 
 >=sys-apps/sysklogd-1.4-r3
 
+>=x11-base/xfree-4.1.0-r2
 *app-editors/e3
 *app-editors/nano
 #no real cost for nano, since we already have ncurses
