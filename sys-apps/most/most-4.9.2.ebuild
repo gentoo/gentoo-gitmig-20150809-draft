@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.9.2.ebuild,v 1.12 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.9.2.ebuild,v 1.13 2003/09/07 02:58:23 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely excellent text file reader"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SRC_URI="ftp://space.mit.edu/pub/davis/most/${P}.tar.gz"
 
 DEPEND=">=sys-libs/slang-1.4.2
-        >=sys-libs/ncurses-5.2-r2"
+	>=sys-libs/ncurses-5.2-r2"
 
 src_compile() {
 	./configure \
@@ -28,6 +28,6 @@ src_install() {
 	doman most.1
 
 	dodoc COPYING COPYRIGHT README changes.txt
-	docinto txt 
+	docinto txt
 	dodoc default.rc lesskeys.rc most-fun.txt
 }
