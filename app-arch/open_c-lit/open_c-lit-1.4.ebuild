@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/open_c-lit/open_c-lit-1.4.ebuild,v 1.3 2004/09/07 17:24:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/open_c-lit/open_c-lit-1.4.ebuild,v 1.4 2004/10/15 16:16:32 dholm Exp $
 
 MY_PV=${PV//.}
 DESCRIPTION="Open Convert .LIT tool"
@@ -9,7 +9,7 @@ SRC_URI="http://www.kyz.uklinux.net/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 RESTRICT="fetch"
 
