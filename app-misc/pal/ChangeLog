@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pal
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.2 2003/10/03 16:34:18 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.3 2003/11/12 18:40:52 port001 Exp $
+
+  12 Nov 2003; Ian Leitch <port001@gentoo.org> pal-0.2.5.ebuild:
+  Version bump. 0.2.5 marked stable on x86
 
   03 Oct 2003; Ian Leitch <port001@gentoo.org> pal-0.2.5.ebuild:
   Fixed Makefile errors about .d files
