@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/jumpnbump
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.7 2004/09/22 07:04:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.8 2004/10/01 21:55:04 mr_bones_ Exp $
+
+  01 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  jumpnbump-1.50-r1.ebuild:
+  Missed a hardcoded datapath (bug #66010)
 
 *jumpnbump-1.50-r1 (22 Sep 2004)
 
