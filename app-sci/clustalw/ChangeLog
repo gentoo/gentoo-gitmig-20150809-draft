@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/clustalw
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/ChangeLog,v 1.7 2004/09/30 01:46:40 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/ChangeLog,v 1.8 2004/10/06 02:03:14 ribosome Exp $
+
+  05 Oct 2004; Olivier Fisette <ribosome@gentoo.org> clustalw-1.83-r1.ebuild:
+  Fixed overly verbose description.
 
 *clustalw-1.83-r1 (29 Sep 2004)
 

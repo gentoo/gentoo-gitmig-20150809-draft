@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.2 2004/09/30 01:48:22 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.3 2004/10/06 02:03:14 ribosome Exp $
 
-DESCRIPTION="Improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position specific gap penalties and weight matrix choice."
+DESCRIPTION="General purpose multiple alignment program for DNA and proteins"
 HOMEPAGE="http://www.embl-heidelberg.de/~seqanal/"
 SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/clustalw/${PN}${PV}.UNIX.tar.gz"
 
