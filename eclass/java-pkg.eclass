@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.11 2004/09/09 12:30:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.12 2004/09/09 12:38:25 axxo Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -47,10 +47,10 @@ java-pkg_do_init_() {
 java-pkg_do_write_() {
 	# Create package.env
 	echo "DESCRIPTION=${DESCRIPTION}" > "${package_env}"
-	if [ -n ${cp_pkg} ]; then
+	if [ -n "${cp_pkg}" ]; then
 		echo "CLASSPATH=${cp_prepend}:${cp_pkg}:${cp_append}" >> "${package_env}"
 	fi
-	if [ -n ${lp_pkg} ]; then
+	if [ -n "${lp_pkg}" ]; then
 		echo "LIBRARY_PATH=${lp_prepend}:${lp_pkg}:${lp_append}" >> "${package_env}"
 	fi
 }
