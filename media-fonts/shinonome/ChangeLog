@@ -1,0 +1,17 @@
+# ChangeLog for x11-misc/shinonome
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/ChangeLog,v 1.1 2003/06/23 07:14:55 phosphan Exp $
+
+  23 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> :
+  moving from x11-misc to media-fonts
+
+*shinonome-0.9.8 (22 Aug 2002)
+
+  03 Mar 2003; Graham Forest <vladimir@gentoo.org> shinonome-0.9.8.ebuild:
+  Fixed small LICENSE problem
+
+  22 Aug 2002; Stuart Bouyer <stubear@gentoo.org> shinonome-0.9.8.ebuild,
+  ChangeLog:
+
+  First ebuild added, thanks to Atzm Watanabe <sitosito@p.chan.ne.jp> for
+  submitting the ebuild.
