@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.7 2002/08/16 22:20:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.8 2002/08/18 06:27:37 seemant Exp $
 
 MY_PN=${PN/netkit/bsd}
 MY_PN=${MY_PN/rd/r}
@@ -30,6 +30,6 @@ src_install() {
 	dosym  fingerd /usr/sbin/in.fingerd
 	doman  finger/finger.1
 	doman  fingerd/fingerd.8
-	dosym  fingerd.8.gz /usr/man/man8/in.fingerd.8.gz
+	dosym  fingerd.8.gz /usr/share/man/man8/in.fingerd.8.gz
 	dodoc  README ChangeLog BUGS
 }
