@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/irssi-charconv-1.13.ebuild,v 1.8 2004/09/02 20:09:04 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/irssi-charconv-1.13.ebuild,v 1.9 2004/09/12 02:54:22 swegener Exp $
 
 inherit gcc flag-o-matic
 
@@ -18,7 +18,8 @@ IUSE=""
 
 DEPEND=">=dev-libs/glib-1.2
 	sys-libs/ncurses
-	>=net-irc/irssi-${IRSSI_VERSION}"
+	>=net-irc/irssi-${IRSSI_VERSION}
+	!>=net-irc/irssi-0.8.10_rc5"
 
 S=${WORKDIR}
 

@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c476758227bc7aa825e4cc7cf2dca6e9 irssi-charconv-1.13.ebuild 1010
-MD5 58502b95c7c7bb9acdfe076782ef5201 ChangeLog 1263
+MD5 5a6e7a6caed033b957a5a899901e445e ChangeLog 1459
+MD5 33ad21214c6c9fe588eb0a94d9248f38 irssi-charconv-1.13.ebuild 1041
 MD5 c607f2baec831bf307bd62344223e997 metadata.xml 258
 MD5 b1029104ebad65c86c76d6dcbf3e8a48 files/README 673
 MD5 6ddb673924bcb0b20696388c0cbfa77e files/digest-irssi-charconv-1.13 134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBN34VCHk4+ZoBpvsRAvTiAKCHSIi7wQKuOQNL2LZ+S7sjWJUA9ACfWeKy
-h2FW+jJ9sA6iNqJLtL2/EdA=
-=7v3D
+iD8DBQFBQ7ppI1lqEGTUzyQRAlWxAKCCrigCZTPeJdDC6ev6vgw/kKs1egCgpV8z
+XbzmVRLHKD4twyiz0WsSDts=
+=j+XT
 -----END PGP SIGNATURE-----

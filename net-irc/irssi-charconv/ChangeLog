@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi-charconv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/ChangeLog,v 1.8 2004/09/02 20:09:04 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/ChangeLog,v 1.9 2004/09/12 02:54:22 swegener Exp $
+
+  12 Sep 2004; Sven Wegener <swegener@gentoo.org> irssi-charconv-1.13.ebuild:
+  Block >=net-irc/irssi-0.8.10_rc5 since the features of net-irc/irssi-charconv
+  have been integrated into Irssi.
 
   02 Sep 2004; Tom Martin <slarti@gentoo.org> irssi-charconv-1.13.ebuild:
   insinto -> exeinto. Thanks for pointing out my stupidity Sven
