@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.4 2003/11/11 21:56:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.5 2003/11/12 21:10:39 mr_bones_ Exp $
+
+  12 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-mud-0.10.3.ebuild:
+  update HOMEPAGE and SRC_URI since gnome-mud has moved. (bug 33314)
 
 *gnome-mud-0.10.3 (11 Nov 2003)
 
