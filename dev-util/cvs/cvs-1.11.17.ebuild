@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.12 2004/07/02 05:05:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.13 2004/09/20 00:51:19 kloeri Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,8 +27,6 @@ DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4"
 
 src_compile() {
-	use alpha && append-flags -fPIC
-
 	econf --with-tmpdir=/tmp || die
 	emake || die "emake failed"
 }

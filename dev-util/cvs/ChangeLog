@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.60 2004/07/02 05:05:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.61 2004/09/20 00:51:19 kloeri Exp $
+
+  20 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> cvs-1.11.17.ebuild:
+  Remove -fPIC, bug 55238.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cvs-1.11.17.ebuild:
   virtual/glibc -> virtual/libc
