@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.3 2004/08/20 22:09:23 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.4 2004/08/21 14:04:10 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -33,8 +33,8 @@ IUSE="gnome kde ooo-kde"
 OO_VER=1.1.2
 PATCHLEVEL=OOO_1_1_2
 ICON_VER=OOO_1_1-10
-KDE_ICON_VER=OOO_1_1-0.2
-KDE_ICON_PATH=documents/159/1929
+KDE_ICON_VER=OOO_1_1-0.3
+KDE_ICON_PATH=documents/159/1975
 INSTDIR="/opt/Ximian-OpenOffice"
 PATCHDIR=${WORKDIR}/ooo-build-${PV}
 S="${WORKDIR}/oo_${OO_VER}_src"
@@ -225,8 +225,11 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A}
 
-	#Beginnings of our own patchset
+	#Fix build issues
 	cd ${PATCHDIR}
+	epatch ${FILESDIR}/${OO_VER}/fpickerkdefix.diff
+
+	#Beginnings of our own patchset
 	epatch ${FILESDIR}/${OO_VER}/gentoo-${PV}.patch
 
 	#Still needed: The STLport patch

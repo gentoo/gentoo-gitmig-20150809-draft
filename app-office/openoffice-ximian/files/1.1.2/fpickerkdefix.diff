@@ -1,0 +1,138 @@
+--- patches/OOO_1_1/fpicker-common.diff
++++ patches/OOO_1_1/fpicker-common.diff
+@@ -5,9 +5,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $
+++ *  $Revision: 1.3 $
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -177,9 +177,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $
+++ *  $Revision: 1.3 $
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -311,9 +311,9 @@
+ +#
+ +#   $RCSfile: fpicker-common.diff,v $
+ +#
+-+#   $Revision: 1.2 $
+++#   $Revision: 1.3 $
+ +#
+-+#   last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++#   last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ +#
+ +#   The Contents of this file are made available subject to the terms of
+ +#   either of the following licenses
+@@ -414,9 +414,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $ 
+++ *  $Revision: 1.3 $ 
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -768,9 +768,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $
+++ *  $Revision: 1.3 $
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -828,12 +828,12 @@
+ +#ifndef _UNXCOMMANDTHREAD_HXX_
+ +#define _UNXCOMMANDTHREAD_HXX_
+ +
+-+#ifndef _COM_SUN_STAR_UNO_ANY_H_
+-+#include <com/sun/star/uno/Any.h>
+++#ifndef _COM_SUN_STAR_UNO_ANY_HXX_
+++#include <com/sun/star/uno/Any.hxx>
+ +#endif
+ +
+-+#ifndef _COM_SUN_STAR_UNO_SEQUENCE_H_
+-+#include <com/sun/star/uno/Sequence.h>
+++#ifndef _COM_SUN_STAR_UNO_SEQUENCE_HXX_
+++#include <com/sun/star/uno/Sequence.hxx>
+ +#endif
+ +
+ +#ifndef _OSL_CONDITN_HXX_
+@@ -913,9 +913,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $ 
+++ *  $Revision: 1.3 $ 
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -1894,9 +1894,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $
+++ *  $Revision: 1.3 $
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -2135,9 +2135,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $ 
+++ *  $Revision: 1.3 $ 
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -2288,9 +2288,9 @@
+ + *
+ + *  $RCSfile: fpicker-common.diff,v $
+ + *
+-+ *  $Revision: 1.2 $
+++ *  $Revision: 1.3 $
+ + *
+-+ *  last change: $Author: jholesovsky $ $Date: 2004/08/12 15:04:14 $
+++ *  last change: $Author: jholesovsky $ $Date: 2004/08/20 15:01:43 $
+ + *
+ + *  The Contents of this file are made available subject to the terms of
+ + *  either of the following licenses
+@@ -2352,8 +2352,8 @@
+ +#include <com/sun/star/ui/dialogs/XFilePickerListener.hpp>
+ +#endif
+ +
+-+#ifndef _COM_SUN_STAR_UNO_REFERENCE_H_
+-+#include <com/sun/star/uno/Reference.h>
+++#ifndef _COM_SUN_STAR_UNO_REFERENCE_HXX_
+++#include <com/sun/star/uno/Reference.hxx>
+ +#endif
+ +
+ +#ifndef _OSL_CONDITN_HXX_
