@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.22-r1.ebuild,v 1.6 2004/01/05 22:22:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.22-r1.ebuild,v 1.7 2004/01/06 17:06:28 plasmaroo Exp $
 
 IUSE="build"
 
@@ -63,7 +63,9 @@ src_unpack() {
 	# http://lkml.org/lkml/2003/9/2/194 [plasmaroo//bug 28452]
 	epatch ${FILESDIR}/aa-sources-2.4.22-ide-scsi-missing-sym-fix.patch
 
-	epatch ${FILESDIR}/do_brk_fix.patch
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() patch!"
+	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to apply mremap() patch!"
+	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to apply RTC patch!"
 
 	kernel_universal_unpack
 }

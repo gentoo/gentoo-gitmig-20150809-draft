@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.3 2004/01/05 22:22:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.4 2004/01/06 17:06:28 plasmaroo Exp $
 
 IUSE="build"
 
@@ -14,8 +14,7 @@ inherit kernel
 AAV=aa${PR/r/}
 # KV=patched kernel version
 KV="${PV/_/-}-${AAV}"
-# OKV=original kernel version as provided by ebuild
-OKV="`echo ${KV} | cut -d- -f1`"
+# OKV=original kernel version as provided by ebuildOKV="`echo ${KV} | cut -d- -f1`"
 # OKVLAST=(working) last digit of OKV
 OKVLAST="`echo ${OKV} | cut -d. -f3`"
 # OKVLASTPR=the previous kernel version (for a marcelo pre/rc release)
@@ -61,8 +60,8 @@ src_unpack() {
 	bzcat ${DISTDIR}/${KV/-}.bz2|patch -p1 || die "-aa patch failed"
 	sed -e '51i \				   qsort.o \\' -i fs/xfs/support/Makefile
 
-	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch
-	epatch ${FILESDIR}/${P}.rtc_fix.patch
+	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to apply mremap() patch!"
+	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to apply RTC patch!"
 
 	kernel_universal_unpack
 }
