@@ -150,3 +150,4 @@ move net-www/gurlchecker www-misc/gurlchecker
 move net-www/htdig www-misc/htdig
 move net-www/log-toolkit www-misc/log-toolkit
 move net-www/mergelog www-misc/mergelog
+move net-www/squidalyser www-misc/squidalyser
