@@ -1,6 +1,9 @@
 # ChangeLog for net-print/mtink
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.9 2004/06/25 00:40:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.10 2004/07/07 21:51:04 kugelfang Exp $
+
+  07 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> mtink-1.0.1.ebuild:
+  Marked ~amd64.
 
   12 Apr 2004; Heinrich Wendel <lanius@gentoo.org> mtink-1.0.0.ebuild,
   mtink-1.0.1.ebuild:
