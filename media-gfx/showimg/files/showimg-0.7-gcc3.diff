@@ -1,0 +1,55 @@
+diff -ur showimg/batchrenamer.cpp showimg/batchrenamer.cpp
+--- showimg/batchrenamer.cpp	Mon Dec 24 12:28:31 2001
++++ showimg/batchrenamer.cpp	Sun Jul 28 11:08:55 2002
+@@ -29,7 +29,7 @@
+ {
+ }
+ 
+-void BatchRenamer::processFiles( struct data* files, enum mode m, struct values* val, bool preview = false )
++void BatchRenamer::processFiles( struct data* files, enum mode m, struct values* val, bool preview )
+ {
+ 	QString tmp;
+ 	int i;
+diff -ur showimg/history_action.cpp showimg/history_action.cpp
+--- showimg/history_action.cpp	Mon Dec 24 12:28:31 2001
++++ showimg/history_action.cpp	Sun Jul 28 11:06:47 2002
+@@ -7,7 +7,7 @@
+ #include <kiconloader.h>
+ 
+ HistoryAction::HistoryAction( const QString& text, const QString& icon, int accel, 
+-				const QObject* receiver, const char* slot, QObject* parent, const char* name = 0 )
++				const QObject* receiver, const char* slot, QObject* parent, const char* name  )
+ : KAction( text, icon, accel, receiver, slot, parent, name )
+ {
+ 	m_popup = 0;
+diff -ur showimg/numSlider.cpp showimg/numSlider.cpp
+--- showimg/numSlider.cpp	Mon Dec 24 12:28:31 2001
++++ showimg/numSlider.cpp	Sun Jul 28 11:04:17 2002
+@@ -13,15 +13,15 @@
+ 
+ extern int max(int a, int b);
+ 
+-numSlider::numSlider( QWidget *parent=0, const char *name=0 )
++numSlider::numSlider( QWidget *parent, const char *name )
+ 	: QWidget(parent, name)
+ {
+ 	init(0, 10, 0, 0, QBoxLayout::LeftToRight);
+ }
+ 
+ 
+-numSlider::numSlider( QBoxLayout::Direction aDir, QWidget *parent=0,
+-											const char *name=0 )
++numSlider::numSlider( QBoxLayout::Direction aDir, QWidget *parent,
++											const char *name )
+ 	: QWidget(parent, name)
+ {
+ 	init(0, 10, 0, 0, aDir);
+@@ -30,7 +30,7 @@
+ 
+ numSlider::numSlider(double minValue, double maxValue, int decimals,
+ 										 double value, QBoxLayout::Direction aDir,
+-										 QWidget *parent=0, const char *name=0 )
++										 QWidget *parent, const char *name )
+ 	: QWidget(parent, name)
+ {
+ 	init(minValue, maxValue, decimals, value, aDir);
