@@ -1,6 +1,29 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.13 2003/03/17 02:56:46 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.14 2003/03/22 10:42:02 absinthe Exp $
+
+*tomcat-4.1.18-r1 (22 Mar 2003)
+
+  22 Mar 2003; Dylan Carlson <absinthe@gentoo.org> tomcat-4.1.18-r1.ebuild,
+  files/4.1.18/gentoo.diff, files/4.1.18/tomcat.conf,
+  files/4.1.18/tomcat.init:
+  Significant changes.  This ebuild now bears close resemblance to 
+  net-www/orion.
+  
+  1. Tomcat now runs as user 'tomcat' by default. 
+  2. All classes and JARs get installed into /usr/share/tomcat. 
+  3. All logs go to /var/log/tomcat. 
+  4. Init script was modified to use JAVA_HOME as set in /etc/conf.d/tomcat. 
+     This is because we don't want the init script making any assumptions as 
+     to what JVM the user wants to run for Tomcat. 
+  5. JSSE and JPDA are supported as startup modes in /etc/conf.d/tomcat. 
+     ( If you have a Sun Java 1.4 SDK or later, you have JSSE and JPDA 
+     included. )
+  
+  Feedback on these changes would be appreciated, so we can get this
+  ebuild moved to stable.
+  	http://bugs.gentoo.org/
+  	http://stable.gentoo.org/
 
 *tomcat-4.1.18 (16 Mar 2003)
 

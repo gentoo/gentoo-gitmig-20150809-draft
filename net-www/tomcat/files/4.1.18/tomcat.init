@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/files/4.1.18/tomcat.init,v 1.1 2003/03/22 10:42:02 absinthe Exp $
+
+depend() {
+	need net
+	use dns logger
+}
+
+start()	{
+	ebegin "Starting Tomcat"
+	cd ${CATALINA_HOME}
+	su - tomcat -c "/opt/tomcat/bin/catalina.sh ${TOMCAT_START}" 
+	eend $?
+}
+
+stop ()	{
+	ebegin "Stopping Tomcat"
+	su - tomcat -c "/opt/tomcat/bin/catalina.sh ${TOMCAT_STOP}"
+	sleep 2
+	eend $?
+}
+
+svc_restart () {
+	ebegin "Restarting Tomcat"
+	su - tomcat -c "/opt/tomcat/bin/catalina.sh ${TOMCAT_STOP}"
+	sleep 5
+	cd ${CATALINA_HOME}
+	su - tomcat -c "/opt/tomcat/bin/catalina.sh ${TOMCAT_START}"
+	eend $?
+}
