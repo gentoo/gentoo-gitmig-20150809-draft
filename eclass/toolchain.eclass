@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.67 2004/12/08 01:28:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.68 2004/12/13 19:58:17 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -1178,7 +1178,7 @@ gcc_do_configure() {
 		--disable-checking \
 		--disable-werror \
 		--disable-libunwind-exceptions"
-	if [ "${CHOST}" != "${CTARGET}" ] ; then
+	if use nocxx && [[ ${CHOST} != ${CTARGET} ]] ; then
 		confgcc="${confgcc} --disable-shared --disable-threads"
 	else
 		confgcc="${confgcc} --enable-shared --enable-threads=posix"
