@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.41 2004/10/27 11:18:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.42 2004/11/05 13:58:37 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -21,8 +21,9 @@ virtual/dev-manager			sys-fs/devfsd
 virtual/dhcpc				net-misc/dhcpcd
 virtual/editor				app-editors/nano
 virtual/emacs				app-editors/emacs
-virtual/fam				app-admin/fam
+virtual/fam					app-admin/fam
 virtual/flim				app-emacs/flim
+virtual/gsasl				net-libs/libgsasl
 virtual/ghc					dev-lang/ghc-bin
 virtual/ghostscript			app-text/ghostscript
 virtual/glu					x11-base/xorg-x11
