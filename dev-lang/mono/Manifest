@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ef3345dfabb90f78763594b10f2d06bc mono-1.0.2.ebuild 1721
 MD5 d6411c3b9a123f987bc53ee5300baece mono-1.0.5-r3.ebuild 4198
 MD5 1b35cc04ca6300fcc4480331b343fcb5 mono-1.0.4.ebuild 1508
@@ -9,7 +12,7 @@ MD5 fc071f649fb4cf6711c8ca4ec3466219 mono-1.1.4.ebuild 1844
 MD5 26029212e087f8696ab10a8a661b2c6c mono-1.0.5-r2.ebuild 3599
 MD5 ad64f2a362fd13bb60ab7459b8e4b666 mono-1.0.2-r1.ebuild 2111
 MD5 f8b3dfdc4942c939ec794a0d608e0143 mono-1.0.5-r4.ebuild 3825
-MD5 9862912e76bda760760b20daaf80771d ChangeLog 13683
+MD5 12ec823e09548d21a921380574f3c6ab ChangeLog 13682
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 e8acd8bc997d82f676be5cf2057d3d25 files/dotnet.conf 570
 MD5 6e11372f48bd32e76012be8aae54e594 files/dotnet.init 1031
@@ -26,3 +29,10 @@ MD5 9e2e1b58a310e4236f757e683b71c879 files/digest-mono-1.0.5-r5 127
 MD5 48284ee0228c56980a839fb245258db7 files/mcs-1.0.5-pathfix.diff 628
 MD5 43da8709d0752a2ef9f9dfb050a05d9f files/digest-mono-0.28 123
 MD5 3c800bd50d6527c12be393369c234f0e files/mono-1.0-segv.diff 378
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMTP5I1lqEGTUzyQRApvMAJ0VVTvaDuWmOhsuyMEOp1pCLSv/6wCfQOs1
+6T8UE+E9+pcMNqCarmlPgq0=
+=QE4n
+-----END PGP SIGNATURE-----
