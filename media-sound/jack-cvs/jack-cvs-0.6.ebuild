@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.6.ebuild,v 1.1 2003/03/09 02:48:03 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.6.ebuild,v 1.2 2003/04/03 22:20:41 vladimir Exp $
 
 IUSE="doc"
 
@@ -18,7 +18,7 @@ SRC_URI=""
 # libjack is LGPL, the rest is GPL
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="$DEPEND 
         dev-libs/glib
