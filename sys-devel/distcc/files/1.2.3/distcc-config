@@ -8,7 +8,7 @@
 # This script developed by Zachary T Welch at Superlucidity Services, LLC
 #  based on ideas from irc discussion and the clear need for this support
 # 
-# Additional features to come; this provides a starting point
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/1.2.3/distcc-config,v 1.7 2003/04/28 20:27:33 zwelch Exp $
 
 
 [ -z "${ROOT}" ] && ROOT=/
@@ -195,6 +195,17 @@ dccc_get_log() {
 	dccc_get_env DISTCC_LOG
 }
 
+dccc_set_j() {
+	local j="$(echo ${1} | sed -e 's,[^0-9],,g')"
+	[ -z "${j}" ] && \
+		dccc_exit "$0: invalid -j option (must be a number)"
+	dccc_set_env MAKEOPTS "-j${j}"
+	dccc_regen_env
+}
+dccc_get_j() {
+	dccc_get_env MAKEOPTS
+}
+
 ####
 # main install routine
 
@@ -247,6 +258,9 @@ case "${1}" in
 	--add-path )
 		dccc_set_env DCCC_PATH "/usr/lib/distcc/bin"
 		dccc_regen_env
+		if [ -z "${DCCC_NO_WARN}" ]; then
+			einfo "You must then set PATH=\"${DCCC_PATH}/\${PATH}\""
+		fi
 		;;
 	--no-path )
 		dccc_set_env DCCC_PATH ""
