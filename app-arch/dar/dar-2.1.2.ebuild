@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.2.ebuild,v 1.1 2004/04/01 23:54:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.2.ebuild,v 1.2 2004/04/06 02:57:33 vapier Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="A full featured backup tool, aimed for disks (floppy,CDR(W),DVDR(W),zip,jazz etc.)"
 HOMEPAGE="http://dar.linux.free.fr/"
