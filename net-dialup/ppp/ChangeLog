@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.34 2003/12/05 20:23:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.35 2003/12/08 14:14:33 lanius Exp $
+
+  08 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.1-r14.ebuild:
+  added alpha to keywords, stable on sparc
 
   05 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.1-r13.ebuild:
   fixed chown syntax
