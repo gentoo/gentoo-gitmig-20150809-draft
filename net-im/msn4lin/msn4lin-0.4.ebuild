@@ -1,16 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Mantainer: Pau Oliva <pau@eSlack.org>
-# /space/gentoo/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.2e.ebuild,v 1.1 2002/04/24 20:52:37 verwilst Exp
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.4.ebuild,v 1.2 2002/07/17 09:08:09 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tcl/tk MSN Messenger client for linux"
 
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.borsanza.com/"
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3"
+	
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
     unpack ${P}.tar.gz

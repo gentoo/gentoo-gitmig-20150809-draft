@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r1.ebuild,v 1.2 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r1.ebuild,v 1.3 2002/07/17 09:08:08 seemant Exp $
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,AIM,MSN,ICQ,Yahoo and Conference transports"
@@ -13,9 +13,12 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
          http://www.ibiblio.org/gentoo/distfiles/yahoo-transport-0.8.4.6.tar.gz
 	 http://www.ibiblio.org/gentoo/distfiles/Install_AIM_3.5.1670.exe"
 
-DEPEND="virtual/glibc
-	>=dev-libs/pth-1.4.0
+DEPEND=">=dev-libs/pth-1.4.0
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 

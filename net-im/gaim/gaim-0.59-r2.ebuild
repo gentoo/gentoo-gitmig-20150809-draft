@@ -1,18 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59-r2.ebuild,v 1.1 2002/06/28 02:30:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59-r2.ebuild,v 1.2 2002/07/17 09:08:07 seemant Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Gtk Instant Messenger client"
-
-SRC_URI1="http://unc.dl.sourceforge.net/sourceforge/gaim/${P}.tar.bz2"
-SRC_URI2="http://telia.dl.sourceforge.net/sourceforge/gaim/${P}.tar.bz2"
-SRC_URI3="http://belnet.dl.sourceforge.net/sourceforge/gaim/${P}.tar.bz2"
-SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
-
+DESCRIPTION="GTK Instant Messenger client"
+SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 HOMEPAGE="http://gaim.sourceforge.net"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 DEPEND="=x11-libs/gtk+-1.2*
 	=sys-libs/db-1*
 	esd? ( >=media-sound/esound-0.2.22-r2 )

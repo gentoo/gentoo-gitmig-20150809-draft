@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/net-im/psi/psi-0.8.5.ebuild,v 1.2 2002/06/08 16:41:48 verwilst Exp
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.6.ebuild,v 1.3 2002/07/17 09:08:09 seemant Exp $
 
 S=${WORKDIR}/${P}
 QV="1.0"
@@ -8,10 +8,12 @@ SRC_URI="http://psi.affinix.com/files/${PV}/${P}.tar.bz2
 	http://psi.affinix.com/files/common/qssl-${QV}.tar.bz2"
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http://www.affinix.com/~justin/programs/psi/"
+
 SLOT="0"
 LICENSE="GPL-2"
-DEPEND="virtual/glibc
-	=x11-libs/qt-3*
+KEYWORDS="x86"
+
+DEPEND="=x11-libs/qt-3*
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_compile() {

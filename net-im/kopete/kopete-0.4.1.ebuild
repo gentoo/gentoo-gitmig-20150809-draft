@@ -4,7 +4,9 @@
 inherit kde-base || die
 
 need-kde 3
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 DESCRIPTION="The KDE Instant Messenger"
 SRC_URI="http://www.cron.cl/kopete/${P}.tar.gz"
 HOMEPAGE="http://kopete.kde.org/"

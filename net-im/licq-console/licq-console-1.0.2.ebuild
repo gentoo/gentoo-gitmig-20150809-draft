@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.9 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.10 2002/07/17 09:08:09 seemant Exp $
 
 
 LICQV=licq-1.0.4
@@ -11,6 +11,8 @@ SRC_URI="http://download.sourceforge.net/licq/${LICQV}.tar.gz
          ftp://licq.darkorb.net/${LICQV}.tar.gz"
 HOMEPAGE="http://www.licq.org"
 SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86"
 DEPEND="virtual/glibc sys-devel/gcc
         >=sys-libs/ncurses-5.2
         >=net-im/licq-1.0.3"

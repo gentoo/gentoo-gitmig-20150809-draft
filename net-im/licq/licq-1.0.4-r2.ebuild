@@ -1,17 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r2.ebuild,v 1.5 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r2.ebuild,v 1.6 2002/07/17 09:08:09 seemant Exp $
 
 use kde && inherit kde-base
 
 S=${WORKDIR}/${P}
-
-LICENSE="GPL-2"
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 DESCRIPTION="KDE/QT ICQ Client with v6 support only (UDP)" 
-DEPEND="$DEPEND
+DEPEND="${DEPEND}
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-        qt?  ( >=x11-libs/qt-2.2.0 )"
+	qt?  ( >=x11-libs/qt-2.2.0 )"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 use kde && need-kde 2.1
 

@@ -1,15 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.4.ebuild,v 1.2 2002/07/17 09:08:10 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An IRSSI-based text client for Secure Internet Live Conferencing."
 SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.bz2"
 HOMEPAGE="http://silcnet.org"
-LICENSE="GPL-2"
-SLOT="0"
 
-DEPEND="virtual/glibc
-	=dev-libs/glib-1.2*
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="=dev-libs/glib-1.2*
 	perl? ( sys-devel/perl )
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}"
@@ -18,13 +20,9 @@ src_compile() {
 
 	myconf="--with-ncurses"
 
-	if [ "`use ipv6`" ]; then
-		myconf="${myconf} --enable-ipv6"
-	fi
+	use ipv6 && myconf="${myconf} --enable-ipv6"
 
-	if [ "`use socks5`" ]; then
-		myconf="${myconf} --with-socks5"
-	fi
+	use socks5 && myconf="${myconf} --with-socks5"
 
 	./configure \
 		--host=${CHOST} \

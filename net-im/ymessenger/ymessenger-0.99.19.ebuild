@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.3 2002/07/04 16:23:41 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.4 2002/07/17 09:08:10 seemant Exp $
 
 # If you are looking in here, it is because emerge has instructed you to do
 # so.  Please go to http://messenger.yahoo.com/download/unix.html and scroll
@@ -20,6 +20,7 @@ RESTRICT="fetch"
 
 SLOT="0"
 LICENSE="yahoo"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 pkg_setup() {
 	if [ ${ARCH} != "x86" ] ; then

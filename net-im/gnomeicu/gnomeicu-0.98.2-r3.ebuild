@@ -1,50 +1,46 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r3.ebuild,v 1.2 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r3.ebuild,v 1.3 2002/07/17 09:08:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
-SRC_URI="http://download.sourceforge.net/gnomeicu/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gnomeicu/${P}.tar.gz"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
-SLOT="0"
-RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
-	 >=sys-libs/gdbm-1.8.0
-	 (	>=gnome-base/libglade-0.16
-	 	<gnome-base/libglade-1.99.0 )
-	 >=media-libs/gdk-pixbuf-0.9.0	
-	 >=net-libs/gnet-1.1.0
-	 gnome? ( >=gnome-base/gnome-panel-1.4.1 
-	 		<gnome-base/gnome-panel-1.5.0 )
-	 esd? ( >=media-sound/esound-0.2.23 )"
 
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext ) "
+DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
+	>=sys-libs/gdbm-1.8.0
+	>=gnome-base/libglade-0.17*
+	>=media-libs/gdk-pixbuf-0.9.0	
+	>=net-libs/gnet-1.1.0
+	gnome? ( =gnome-base/gnome-panel-1.4* )
+	esd? ( >=media-sound/esound-0.2.23 )"
+
+RDEPEND="nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 src_compile() {                           
 	local myconf
 
-	if [ -z "`use esd`" ]
-	then
-		myconf="--disable-esd-test"
-	fi
-	if [ "`use socks5`" ];
-	then
-		myconf="${myconf} --enable-socks5"
-	fi
+	use esd || myconf="--disable-esd-test"
 	
-	if [ -z "`use nls`" ]
-	then
+	use socks5 || myconf="${myconf} --enable-socks5"
+	
+	use nls || ( \
 		myconf="${myconf} --disable-nls"
 		mkdir ./intl
 		touch ./intl/libgettext.h
-	fi
-	# remove the panel applet if you dont use gnome, nice hack for gnome2 compability
+	)
+
+	# remove the panel applet if you dont use gnome,
+	# nice hack for gnome2 compability
+
 	use gnome || myconf="${myconf} --disable-applet" 	
-	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --sysconfdir=/etc \
-		    --localstatedir=/var/lib \
-		    ${myconf} || die
+
+	econf \
+		${myconf} || die
 
 	emake || die
 }

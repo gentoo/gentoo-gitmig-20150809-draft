@@ -1,22 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r2.ebuild,v 1.3 2002/07/16 04:54:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r2.ebuild,v 1.4 2002/07/17 09:08:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
 SRC_URI="http://download.sourceforge.net/gnomeicu/${P}.tar.gz"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
-RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
-	 >=sys-libs/gdbm-1.8.0
-	 (	>=gnome-base/libglade-0.16
-	 	<gnome-base/libglade-1.99.0 )
-	 >=media-libs/gdk-pixbuf-0.9.0	
-	 >=net-libs/gnet-1.1.0
-	 gnome? ( gnome-base/gnome-core )
-	 esd? ( >=media-sound/esound-0.2.23 )"
+DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
+	>=sys-libs/gdbm-1.8.0
+	=gnome-base/libglade-0.17*
+	>=media-libs/gdk-pixbuf-0.9.0	
+	>=net-libs/gnet-1.1.0
+	gnome? ( gnome-base/gnome-core )
+	esd? ( >=media-sound/esound-0.2.23 )"
 
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext ) "
+RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
