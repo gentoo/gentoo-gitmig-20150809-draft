@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040829.ebuild,v 1.1 2004/08/29 20:54:04 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040902.ebuild,v 1.1 2004/09/02 11:53:10 twp Exp $
 
 inherit eutils subversion
 
@@ -14,7 +14,7 @@ DEPEND="virtual/x11
 	app-misc/run-mailcap
 	>=dev-lang/lua-5.0.2
 	>=sys-devel/libtool-1.4.3
-	dev-libs/libtu-svn
+	>=dev-libs/libtu-svn-20040902
 	!x11-wm/ion3"
 
 ESVN_REPO_URI="http://tao.uab.es/ion/svn/ion/trunk"

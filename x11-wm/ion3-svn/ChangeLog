@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ion3-svn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ChangeLog,v 1.6 2004/08/29 20:54:04 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ChangeLog,v 1.7 2004/09/02 11:53:10 twp Exp $
+
+*ion3-svn-20040902 (02 Sep 2004)
+
+  02 Sep 2004; twp -ion3-svn-20040829.ebuild, +ion3-svn-20040902.ebuild:
+  Fix for latest snapshot.
 
 *ion3-svn-20040829 (29 Aug 2004)
 
