@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.14 2002/10/19 23:19:19 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.15 2002/11/17 11:50:53 phoenix Exp $
+
+*sawfish-1.2 (17 Nov 2002)
+  
+  17 Nov 2002; phoen][x <phoenix@gentoo.org> sawfish-1.2.ebuild, 
+  files/digest-sawfish-1.2.ebuild :
+  Version bump. Forcing the ebuild to use the gtk2 version of sawfish-1.2.
+  Maybe i'll add some optional USEflag SRC_URI later.
 
 *sawfish-1.0.1-r6 (15 Oct 2002)
   
