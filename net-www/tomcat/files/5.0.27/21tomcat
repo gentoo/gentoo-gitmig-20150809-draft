@@ -1,4 +1,4 @@
-CATALINA_HOME=/opt/tomcat5
+#CATALINA_HOME=/opt/tomcat5
 CONFIG_PROTECT=/etc/tomcat5
 #CATALINA_LIBDIR=/usr/share/tomcat5/lib 
 #CLASSPATH=${CATALINA_LIBDIR} 

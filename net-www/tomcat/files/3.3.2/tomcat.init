@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/files/3.3.2/tomcat.init,v 1.1 2004/07/27 13:05:00 axxo Exp $
+
+depend() {
+	need net
+	use dns
+}
+
+start_it() {
+	su - ${TOMCAT_USER} -c "${TOMCAT_HOME}/bin/startup >${CONSOLE_LOG} 2>&1 &"
+}
+
+start()	{
+	ebegin "Starting Tomcat"
+	cd ${TOMCAT_HOME}
+	start_it
+	eend $?
+}
+
+stop_it() {
+	su - ${TOMCAT_USER} -c "${TOMCAT_HOME}/bin/shutdown >${CONSOLE_LOG} 2>&1 &"
+}
+
+stop() {
+	ebegin "Stopping Tomcat"
+	stop_it
+	sleep 2
+	eend $?
+}
+
+svc_restart() {
+	ebegin "Restarting Tomcat"
+	stop_it	
+	sleep 5
+	cd ${TOMCAT_HOME}
+	start_it
+	eend $?
+}
