@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.1.2.ebuild,v 1.4 2001/06/09 14:11:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.1.2.ebuild,v 1.5 2001/08/11 04:53:17 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -30,7 +30,7 @@ src_compile() {
     fi
     try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
         $myconf --with-zlib --enable-shared --enable-ipv6 \
-        --with-sys-contact=\"root\@Unknown\" \
+        --with-sys-contact="root@Unknown" \
         --with-sys-location="Unknown" \
         --with-logfile=/var/log/snmpd.log \
         --with-persistent-directory=/var/lib/ucd-snmp

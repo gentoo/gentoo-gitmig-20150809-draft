@@ -37,8 +37,8 @@ src_compile() {
     try make links
     try make SYS_NAME="${SYSARCH}_${SYSTEM}${KERNELSHORT}" \
 	LINUX_VERS="${KERNELVERSION}" TXLIBS=/lib/libncurses.so \
-	OPTMZ=\"$CFLAGS\" XCFLAGS=\"$CFLAGS\" \
-	PAM_CFLAGS=\"$CFLAGS -Dlinux -DLINUX_PAM -fPIC\"
+	OPTMZ="$CFLAGS" XCFLAGS="$CFLAGS" \
+	PAM_CFLAGS="$CFLAGS -Dlinux -DLINUX_PAM -fPIC"
 }
 
 src_install () {

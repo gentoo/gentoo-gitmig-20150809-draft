@@ -13,7 +13,7 @@ DEPEND="virtual/glibc net-libs/libpcap"
 src_compile() {
 
   try ./configure --prefix=/usr
-  try make CFLAGS=\"${CFLAGS} -D_REENTRANT\" all
+  try make CFLAGS="${CFLAGS} -D_REENTRANT" all
 
 }
 
