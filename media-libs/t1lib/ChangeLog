@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/t1lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.31 2004/10/16 06:22:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.32 2004/10/17 02:02:41 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> t1lib-5.0.2.ebuild:
+  Added to ppc-macos.
 
   16 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/t1lib-5.0.2-gentoo.diff, t1lib-5.0.0-r2.ebuild, t1lib-5.0.1.ebuild,
