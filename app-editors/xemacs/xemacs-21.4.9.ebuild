@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.11 2003/10/24 12:55:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.12 2004/01/05 23:35:09 robbat2 Exp $
 
 IUSE="gpm esd postgres xface nas X jpeg tiff png mule"
 
@@ -65,7 +65,7 @@ src_unpack() {
 		# xemacs broke with glibc-2.3.x. this code checks that condition
 		# and patches xemacs appropriately.
 		# http://sources.redhat.com/ml/bug-glibc/2002-11/msg00066.html
-		glibc_version=`/sbin/ldconfig -V | head -1 | sed -e "s/[^0-9]*[0-9]\.//" | sed -e "s/\.//"`
+		glibc_version=`/sbin/ldconfig -V | head -n1 | sed -e "s/[^0-9]*[0-9]\.//" | sed -e "s/\.//"`
 		if (( $glibc_version >= "31" ))
 		then
 			einfo "PPC runtime fix for glibc >= 2.3.1 (Gentoo bug #14458)"

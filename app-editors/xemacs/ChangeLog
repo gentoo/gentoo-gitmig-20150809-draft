@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.37 2003/07/08 19:13:27 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.38 2004/01/05 23:35:09 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> xemacs-21.4.10-r1.ebuild,
+  xemacs-21.4.10-r2.ebuild, xemacs-21.4.10.ebuild, xemacs-21.4.11.ebuild,
+  xemacs-21.4.12.ebuild, xemacs-21.4.9.ebuild:
+  fix tail -1 issue and copyright headers
 
   08 Jul 2003; <rac@gentoo.org> xemacs-21.4.10-r1.ebuild,
   xemacs-21.4.10-r2.ebuild, xemacs-21.4.10.ebuild, xemacs-21.4.11.ebuild,
