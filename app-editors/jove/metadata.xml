@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
+		<email>seemant@gentoo.org</email>
+		<name>Seemant Kulleen</name>
+		<description>Primary maintainer until somebody else wants this.</description>
 	</maintainer>
 </pkgmetadata>
