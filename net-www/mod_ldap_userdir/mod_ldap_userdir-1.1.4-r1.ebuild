@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.4-r1.ebuild,v 1.2 2005/01/13 04:53:25 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.4-r1.ebuild,v 1.3 2005/01/13 23:38:50 vericgar Exp $
 
 inherit apache-module
 
@@ -15,12 +15,6 @@ DEPEND="ssl? (dev-libs/openssl)
 		net-nds/openldap"
 LICENSE="GPL-1"
 SLOT="0"
-
-APXS1_S="${S}"
-APXS2_S="${S}"
-
-APACHE1_MOD_FILE="${S}/mod_ldap_userdir.so"
-APACHE2_MOD_FILE="${S}/mod_ldap_userdir.so"
 
 DOCFILES="DIRECTIVES README user-ldif posixAccount-objectclass"
 APACHE1_MOD_CONF="${PVR}/47_mod_ldap_userdir"
