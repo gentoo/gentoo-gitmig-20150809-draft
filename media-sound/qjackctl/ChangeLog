@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.25 2005/01/30 02:01:55 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.26 2005/02/07 01:24:36 jnc Exp $
+
+*qjackctl-0.2.15 (06 Feb 2005)
+
+  06 Feb 2005; Eric Shattow <jnc@gentoo.org> +qjackctl-0.2.15.ebuild:
+  Version bump, simpler workaround for build system.
 
 *qjackctl-0.2.14 (29 Jan 2005)
 
