@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.8 2004/01/04 18:54:49 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.9 2004/01/14 02:44:14 augustus Exp $
+
+  13 Jan 2004; Kris Kersey <augustus@gentoo.org> gtkmm-2.2.8.ebuild:
+  Added ~amd64 keyword and necessary libtoolize. Bug 34357. Needs testing with
+  some gtkmm apps.
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> gtkmm-1.2.9-r2.ebuild:
   add amd64 flag

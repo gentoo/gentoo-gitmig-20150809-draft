@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.8.ebuild,v 1.2 2004/01/13 16:37:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.8.ebuild,v 1.3 2004/01/14 02:44:14 augustus Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~amd64"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.2
@@ -21,3 +21,9 @@ DEPEND="${RDEPEND}
 	!=sys-devel/gcc-3.3.0*"
 
 DOCS="AUTHORS CHANGES ChangeLog HACKING PORTING NEWS README TODO"
+
+src_compile() {
+	[ "${ARCH}" = "amd64" ] && libtoolize -c -f
+	econf || die
+	emake || die
+}
