@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-lighthouseblue
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-lighthouseblue/ChangeLog,v 1.3 2003/02/12 09:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-lighthouseblue/ChangeLog,v 1.4 2003/03/22 11:39:11 vladimir Exp $
+
+  22 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  gtk-engines-lighthouseblue-0.6.2-r1,
+  gtk-engines-lighthouseblue-0.6.2-r2 : Added ppc to keywords
 
 *gtk-engines-lighthouseblue-0.6.2 (14 Jan 2003)
 
