@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpgroupware
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.23 2004/04/17 15:02:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.24 2004/05/26 21:24:48 mholzer Exp $
+
+  26 May 2004; Martin Holzer <mholzer@gentoo.org>
+  phpgroupware-0.9.16.000.ebuild:
+  removing mysql from depend. closes 52104
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   phpgroupware-0.9.14.007.ebuild, phpgroupware-0.9.16.000.ebuild:
