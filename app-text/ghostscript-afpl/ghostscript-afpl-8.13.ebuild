@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.12.ebuild,v 1.3 2004/01/08 15:00:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.13.ebuild,v 1.1 2004/01/08 15:00:53 lanius Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ PROVIDE="virtual/ghostscript"
 
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
-	>=media-libs/libpng-1.2.1
+	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 )
 	cjk? ( media-fonts/arphicfonts
