@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.4 2003/09/16 05:56:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.5 2003/09/16 09:25:28 spyderous Exp $
+
+*kdrive-4.3.0-r1 (16 Sep 2003)
+
+  16 Sep 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r1.ebuild:
+  Added an update from Keith Packard's CVS as well as a startxkd script that
+  works decently. KDrive is under heavy work so look forward to some new stuff
+  in the not-too-distant future.
 
   16 Sep 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0.ebuild:
   Ebuild cleanup, disable type1 and truetype for now because they're useless in
