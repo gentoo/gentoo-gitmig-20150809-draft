@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.2 2002/03/03 20:16:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.3 2002/05/30 02:59:14 spider Exp $
+
+
+popt-1.6.3 (29 May 2002)
+  29 May 2002; Spider <spider@gentoo.org> popt-1.6.3.ebuild popt-1.5.ebuild :
+  fix bogus DESCRIPTION
 
 *popt-1.6.3 (3 March 2002)
 

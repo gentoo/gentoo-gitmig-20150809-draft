@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.5.ebuild,v 1.4 2001/11/10 12:05:20 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.5.ebuild,v 1.5 2002/05/30 02:59:14 spider Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="libpopt needed for lots of gnome stuff"
+DESCRIPTION="Parse Options: command line parser"
 SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-3.0.x/${P}.tar.gz"
 HOMEPAGE="http://www.rpm.org"
 
