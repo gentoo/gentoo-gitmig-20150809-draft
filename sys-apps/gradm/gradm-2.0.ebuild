@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0.ebuild,v 1.3 2004/05/08 13:18:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0.ebuild,v 1.4 2004/06/19 06:33:07 vapier Exp $
 
 inherit flag-o-matic gcc
 
@@ -8,13 +8,14 @@ inherit flag-o-matic gcc
 
 MAINTAINER="solar@gentoo.org"
 DESCRIPTION="Administrative interface for grsecuritys2 access control lists"
-SRC_URI="http://www.grsecurity.net/gradm-${PV}.tar.gz"
 HOMEPAGE="http://www.grsecurity.net/"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~sparc ~ppc" ; # ~alpha"
-SLOT="0"
+SRC_URI="http://www.grsecurity.net/gradm-${PV}.tar.gz"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~arm ~amd64" ; # ~alpha"
 IUSE=""
+
 DEPEND="virtual/glibc
 	sys-devel/bison
 	sys-devel/flex
@@ -23,7 +24,7 @@ DEPEND="virtual/glibc
 S="${WORKDIR}/${PN}2"
 
 src_unpack() {
-	unpack ${A} || die "Cant unpack ${A}"
+	unpack ${A}
 	cd ${S}
 
 	# (Jan 03 2004) - <solar@gentoo>
@@ -65,8 +66,7 @@ src_install() {
 	dodoc acl
 
 	into /
-	dosbin grlearn
-	dosbin gradm
+	dosbin grlearn gradm || die
 
 	# Normal users can authenticate to special roles now and thus 
 	# need execution permission on gradm2. We remove group,other readable bits 
