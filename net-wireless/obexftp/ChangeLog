@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/obexftp
+# ChangeLog for net-wireless/obexftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/ChangeLog,v 1.1 2004/11/12 20:35:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/ChangeLog,v 1.2 2004/11/12 23:15:58 swegener Exp $
 
 *obexftp-0.10.4 (12 Nov 2004)
 
