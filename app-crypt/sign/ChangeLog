@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/sign
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.4 2004/08/08 11:43:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.5 2004/08/13 13:03:33 swegener Exp $
+
+  13 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
+  sign-1.0.5.ebuild:
+  Added longdescription to metadata.xml and marked 1.0.5 stable on x86.
 
 *sign-1.0.7 (08 Aug 2004)
 

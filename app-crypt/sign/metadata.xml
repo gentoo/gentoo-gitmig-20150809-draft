@@ -5,7 +5,12 @@
 <maintainer>
   <email>swegener@gentoo.org</email>
     <name>Sven Wegener</name>
-    <description>An ebuild I had in my overlay. Please take over if you want it.</description>
+    <description>primary maintainer</description>
 </maintainer>
-<longdescription></longdescription>
+<longdescription>
+sign is a file signing and signature verification utility. It's main purpose is
+to be a simple and convenient extension to a tar/gz/bzip2 line of tools to check
+file integrity and authenticity. It's small and simple, it does just one thing
+and hopefully does it well.
+</longdescription>
 </pkgmetadata>
