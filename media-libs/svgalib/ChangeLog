@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.17 2003/08/06 20:22:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.18 2003/09/06 17:06:33 pappy Exp $
+
+  06 Sep 2003; Alexander Gabert <pappy@gentoo.org> svgalib-1.4.3-r4.ebuild,
+  svgalib-1.9.17-r3.ebuild:
+  added hardened-gcc exclude CC flag for proper compilation
 
 *svgalib-1.9.17-r3 (06 Aug 2003)
 
