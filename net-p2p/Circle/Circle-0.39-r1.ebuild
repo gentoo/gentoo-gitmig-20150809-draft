@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.39-r1.ebuild,v 1.2 2004/06/02 13:44:34 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.39-r1.ebuild,v 1.3 2004/06/10 01:00:36 agriffis Exp $
 
 inherit python
 
@@ -37,7 +37,7 @@ src_install() {
 	doins circlelib/crypto/*
 	insinto /usr/share/pixmaps/
 	doins circle-icon.png
-	if [ `use gnome` ] ; then
+	if use gnome ; then
 		insinto /usr/share/gnome/apps/Internet/
 		doins circle.desktop
 	fi

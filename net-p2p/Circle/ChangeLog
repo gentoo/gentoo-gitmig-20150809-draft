@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/Circle
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.5 2004/06/02 13:44:34 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.6 2004/06/10 01:00:36 agriffis Exp $
+
+  09 Jun 2004; Aron Griffis <agriffis@gentoo.org> Circle-0.39-r1.ebuild:
+  Fix use invocation
 
   02 Jun 2004; Jon Hood <squinky86@gentoo.org> Circle-0.39-r1.ebuild,
   -Circle-0.39.ebuild:
