@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.3 2003/09/21 23:46:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.4 2003/09/25 14:42:17 caleb Exp $
 
 inherit kde
 need-kde ${PV}
@@ -21,6 +21,13 @@ BASEDIR="mirror://kde/stable/${PV}/src/"
 #Maybe this isn't the smartest way of doing things, but it works
 #for the purposes of this ebuild.
 USE="${USE} ${LINGUAS}"
+
+# Important:
+#
+# If you start the emerge without setting the LINGUAS variable, then try to
+# reemerge, portage will NOT scan your changes, because the ebuild itself
+# hasn't changed.  You need to "touch" this ebuild file to make portage re-evaluate
+# this ebuild after your LINGUAS changes.
 
 if [ -z "${LINGUAS}" ]; then
 	ewarn "Using the LINGUAS environment variable, you can download only"
