@@ -1,5 +1,5 @@
-MD5 4b224c40cfd6286827b9e92199d0da8c ChangeLog 315
+MD5 b46db21fbe83cdf53e0bc3560f4f4e60 ChangeLog 462
 MD5 4efc54044d3c0b58216c199b9a302154 cl-sql-1.6.4.ebuild 2382
-MD5 dc820834dcfc03a4516969befd55bfa4 cl-sql-1.7.6.ebuild 2410
+MD5 63517efc3cf4da7152dc0a6a1a3285d7 cl-sql-1.7.6.ebuild 2871
 MD5 a6466e9446f1925d56f3da03cde724ac files/digest-cl-sql-1.6.4 63
 MD5 e16daf2320852b92ecdb24eab4ac953f files/digest-cl-sql-1.7.6 69
