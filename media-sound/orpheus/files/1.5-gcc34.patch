@@ -11,14 +11,15 @@ diff -Naur old/src/mixerctl.cc new/src/mixerctl.cc
  		    channels.insert(ct);
  		}
 diff -Naur old/src/uitext.cc new/src/uitext.cc
---- old/src/uitext.cc	2004-09-04 01:48:30.955457434 +0200
-+++ new/src/uitext.cc	2004-09-04 02:42:30.689719181 +0200
-@@ -577,14 +577,14 @@
+--- old/src/uitext.cc	2004-09-04 03:36:50.928930920 +0200
++++ new/src/uitext.cc	2004-09-04 03:45:23.183056456 +0200
+@@ -577,14 +577,16 @@
  			autosavepl = !autosavepl;
  			break;
  		    case 41:
 -			if(++((int) playmode) == PlayMode_size)
-+			if(((int) playmode + 1) == PlayMode_size)
++			playmode = (PlayMode) (playmode + 1);
++			if(playmode == PlayMode_size)
  			    playmode = Normal;
  			break;
  		    case 42:
@@ -26,11 +27,12 @@ diff -Naur old/src/uitext.cc new/src/uitext.cc
  			break;
  		    case 43:
 -			if(++((int) sortorder) == SortOrder_size)
-+			if(((int) sortorder + 1) == SortOrder_size)
++			sortorder = (SortOrder) (sortorder + 1);
++			if(sortorder == SortOrder_size)
  			    sortorder = byFileName;
  			break;
  		    case 44:
-@@ -719,7 +719,7 @@
+@@ -719,7 +721,7 @@
      while(!finished) {
  	m.clear();
  
