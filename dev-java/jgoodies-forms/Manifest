@@ -1,6 +1,15 @@
-MD5 93595c9c3006767a0d42a39e7af681d0 jgoodies-forms-1.0.5-r1.ebuild 1373
-MD5 f9862cc751b78ac75b97bd95b7cfc04e ChangeLog 839
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e69ee2ce810c34cde0bb517c78e7a56 jgoodies-forms-1.0.5-r1.ebuild 1376
+MD5 a99f95af10684ed09a4852c39545a6a8 ChangeLog 1029
 MD5 0a7e021f886fb1b2e57c3ceb9eb8f9e7 metadata.xml 308
 MD5 70ea49a2adf28cc8e1f6bcab10f3ec6a files/build.xml 2228
 MD5 c16aedc8761321cd512f9d3b7497195a files/digest-jgoodies-forms-1.0.5-r1 61
-MD5 c16aedc8761321cd512f9d3b7497195a files/digest-jgoodies-forms-1.0.5 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCT8Z1/rLF9B432nYRAmUyAKDEP+6DyROkAN3SF17QTWhiTnloPACgg2tz
+ApXoW2RG3WPKKMDydXEK+HE=
+=EKae
+-----END PGP SIGNATURE-----
