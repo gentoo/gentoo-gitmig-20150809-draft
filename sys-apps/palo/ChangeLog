@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/palo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/ChangeLog,v 1.6 2003/02/27 16:41:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/ChangeLog,v 1.7 2003/03/01 00:15:54 gmsoft Exp $
 
 *palo-1.2_pre20030115 (05 Feb 2003)
+
+  29 Feb 2003; Guy Martin <gmsoft@gentoo.org> palo-1.2_pre20030115.ebuild :
+  scr_install() rewritted and added support for $CFLAGS in scr_compile().
+  Config file was updated.
 
   27 Feb 2003; Guy Martin <gmsoft@gentoo.org> palo-1.2_pre20030115.ebuild :
   Replaced einstall by make install since it was not working.
