@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-bool-comp/cl-rsm-bool-comp-1.0.ebuild,v 1.1 2003/10/18 10:13:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-bool-comp/cl-rsm-bool-comp-1.0.ebuild,v 1.2 2003/10/27 00:12:53 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,8 @@ HOMEPAGE="http://packages.debian.org/unstable/devel/cl-rsm-bool-comp.html"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-rsm-bool-comp/cl-rsm-bool-comp_1.0.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+# Compilation problems on SBCL and runtime SEGV on CMUCL
+KEYWORDS="-x86"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp "
@@ -17,6 +18,11 @@ DEPEND="dev-lisp/common-lisp-controller
 CLPACKAGE=rsm-bool-comp
 
 S=${WORKDIR}/${P}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gentoo.patch.gz
+}
 
 src_install() {
 	common-lisp-install *.lisp *.asd
