@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f5ef200edff94e685e7389eeb62d85e ChangeLog 621
-MD5 e56879bd1aec79b8b69f020b95b96c08 mercury-bin-1708.ebuild 1306
-MD5 b1d93e354ef2b51ca58111729ad89500 mercury-bin-1709_beta7.ebuild 1387
+MD5 865228b8786c63e690c41bb051c897b6 ChangeLog 791
+MD5 23096ccaaad2d583e754f36135e64f5a mercury-bin-1709_beta7-r1.ebuild 1602
 MD5 16021df92c2051cb101ec0833e9cc116 metadata.xml 634
-MD5 7a12a89ab59240f3ac8944ae258eca10 files/digest-mercury-bin-1708 67
-MD5 a93a266db20ac2760e83dd97fd95cd05 files/digest-mercury-bin-1709_beta7 57
+MD5 a93a266db20ac2760e83dd97fd95cd05 files/digest-mercury-bin-1709_beta7-r1 57
 MD5 037a6938a09ec22db8941a747726772d files/icon32.gif 1262
-MD5 6b68b0266d5cffafbd1ac77e0d9f7132 files/mercury.sh 265
+MD5 1a1dc3b4ca206f11495a42d757e2e016 files/mercury.sh 248
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCI8J58zY1VwezZiERArqaAJ4pAz/g6QmLmwkr/DG/EQOa7/OeHwCgpIvP
-7Tb+3qO6Ng6xkXqYBBcp1Mg=
-=GlRR
+iD8DBQFCLiXc8zY1VwezZiERAqlLAJsEEgJi4z8YxdpDTeBJ0Hs/jfevhgCfdbwC
+SiYQcp+75KVkMTE+qCg1rt8=
+=7Yo+
 -----END PGP SIGNATURE-----
