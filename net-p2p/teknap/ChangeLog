@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/teknap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.5 2004/03/13 08:42:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.6 2004/03/13 09:13:03 eradicator Exp $
+
+*teknap-1.4.1 (13 Mar 2004)
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> teknap-1.3g.ebuild,
+  teknap-1.4.1.ebuild:
+  Changed homepage... added updated ebuild, but bug #38456 still exists in the
+  newer version (which is still quite old.)
 
   13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> teknap-1.3g.ebuild:
   Moved to ~arch as it borks with newer gccs. Also, upstream development is dead

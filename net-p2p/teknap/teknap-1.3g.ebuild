@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.11 2004/03/13 08:42:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.12 2004/03/13 09:13:03 eradicator Exp $
 
 IUSE="xmms gtk ipv6 tcpd"
 
 MY_P=TekNap-${PV}
 S=${WORKDIR}/TekNap
 DESCRIPTION="TekNap is a console Napster/OpenNap client"
-SRC_URI="ftp://ftp.teknap.com/pub/TekNap/${MY_P}.tar.gz"
-HOMEPAGE="http://www.TekNap.com/"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+HOMEPAGE="http://www.TekNap.com/ http://www.cactuz.org/jnbek/teknap"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2
