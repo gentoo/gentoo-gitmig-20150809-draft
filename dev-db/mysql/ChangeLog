@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.118 2004/08/23 20:31:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.119 2004/08/24 21:41:35 gustavoz Exp $
+
+  24 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-3.23.58-r1.ebuild,
+  mysql-4.0.20-r1.ebuild:
+  Stable on sparc wrt #60744
 
 *mysql-4.0.20-r1 (23 Aug 2004)
 *mysql-3.23.58-r1 (23 Aug 2004)
