@@ -1,4 +1,4 @@
-MD5 0cbdb062f0f3ea56665dc543eb3d1c1a ChangeLog 418
+MD5 4ecc2d00a636a6237b80a33d79da6bea ChangeLog 540
+MD5 88d4c27ef0daae120a6eb994371f3062 galculator-1.2.1.ebuild 691
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 a9e71731c88f0bf1e5b3fde4d594a48d galculator-1.1.3.ebuild 691
-MD5 09a00b36369b5bb4151471a2752c5ccd files/digest-galculator-1.1.3 69
+MD5 05438f75d9295d7fb30a0b0993cf12c1 files/digest-galculator-1.2.1 69

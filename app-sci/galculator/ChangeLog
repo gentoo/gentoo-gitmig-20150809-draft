@@ -1,9 +1,14 @@
 # ChangeLog for app-sci/galculator
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/galculator/ChangeLog,v 1.1 2003/11/07 01:04:19 leonardop Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/galculator/ChangeLog,v 1.2 2004/03/24 15:18:02 plasmaroo Exp $
+
+*galculator-1.2.1 (24 Mar 2004)
+
+  24 Mar 2004; Tim Yamin <plasmaroo@gentoo.org> galculator-1.2.1.ebuild:
+  Version bump.
 
 *galculator-1.1.3 (06 Nov 2003)
 
-  06 Nov 2003; L. Boshell <leonardop@gentoo.org> galculator-1.1.3.ebuild :
+  06 Nov 2003; L. Boshell <leonardop@gentoo.org> galculator-1.1.3.ebuild:
   Initial import. Thanks to Dev and Eric Harney for their contributions on
   bug #25956.
