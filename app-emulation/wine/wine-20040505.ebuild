@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040408-r1.ebuild,v 1.2 2004/06/29 16:19:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040505.ebuild,v 1.1 2004/06/29 16:19:43 mholzer Exp $
 
 inherit eutils base
 
@@ -8,7 +8,7 @@ DESCRIPTION="free implementation of Windows(tm) on Unix - CVS snapshot"
 HOMEPAGE="http://www.winehq.com/"
 SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz
 	 mirror://gentoo/${P}-fake_windows.tar.bz2
-	 mirror://gentoo/${PF}-misc.tar.bz2"
+	 mirror://gentoo/${P}-misc.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack Wine-${PV}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/winearts-kdecvs-fix.patch
+	epatch ${FILESDIR}/QueryActCtxw_Photoshop7.0.diff
 }
 
 src_compile() {
