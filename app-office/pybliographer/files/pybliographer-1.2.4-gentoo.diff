@@ -1,0 +1,44 @@
+--- configure.orig	2004-07-08 05:11:54.000000000 +0900
++++ configure	2004-10-21 14:02:52.000000000 +0900
+@@ -1697,23 +1697,24 @@
+ 
+ MINIMUM_VERSION="2.2"
+ 
+-echo "$as_me:$LINENO: checking python requirements" >&5
+-echo $ECHO_N "checking python requirements... $ECHO_C" >&6
+-
+-${Python} ${srcdir}/setup-check.py ${MINIMUM_VERSION} 2>&5 1>&2
+-
+-result=$?
+-
+-if test -f conftest.out ; then
+-	. ./conftest.out
+-	rm -f conftest.out
+-else
+-	echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6
+-	{ { echo "$as_me:$LINENO: error: unable to run the test program" >&5
+-echo "$as_me: error: unable to run the test program" >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
++#echo "$as_me:$LINENO: checking python requirements" >&5
++#echo $ECHO_N "checking python requirements... $ECHO_C" >&6
++#
++#${Python} ${srcdir}/setup-check.py ${MINIMUM_VERSION} 2>&5 1>&2
++#
++#result=$?
++#
++#if test -f conftest.out ; then
++#	. ./conftest.out
++#	rm -f conftest.out
++#else
++#	echo "$as_me:$LINENO: result: no" >&5
++#echo "${ECHO_T}no" >&6
++#	{ { echo "$as_me:$LINENO: error: unable to run the test program" >&5
++#echo "$as_me: error: unable to run the test program" >&2;}
++#   { (exit 1); exit 1; }; }
++#fi
++result=0
+ 
+ if test $result = 0 ; then
+ 	if test -z "${Status}" ; then
