@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22-r1.ebuild,v 1.3 2003/11/06 20:23:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22-r1.ebuild,v 1.4 2003/12/23 02:56:02 robbat2 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
 LICENSE="OPENLDAP"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
-IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp berkdb debug samba"
+IUSE="berkdb crypt debug gdbm ipv6 kerberos odbc perl readline sasl slp ssl tcpd"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-apps/sed-4

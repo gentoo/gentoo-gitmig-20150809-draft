@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.54 2003/12/13 20:54:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.55 2003/12/23 02:56:02 robbat2 Exp $
+
+  22 Dec 2003; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.1.22-r1.ebuild, openldap-2.1.22.ebuild, openldap-2.1.23.ebuild:
+  Fix IUSE in 2.1.2[23] as per bug #34769.
 
   13 Dec 2003; Jason Wever <weeve@gentoo.org> openldap-2.0.27-r4.ebuild:
   Marked stable on sparc.
