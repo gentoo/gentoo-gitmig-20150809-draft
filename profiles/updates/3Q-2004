@@ -141,3 +141,4 @@ move net-www/mod_lisp www-apache/mod_lisp
 move net-www/mod_tcl www-apache/mod_tcl
 move net-www/cvsweb dev-util/cvsweb
 move net-www/linklint dev-util/linklint
+move net-www/screem dev-util/screem
