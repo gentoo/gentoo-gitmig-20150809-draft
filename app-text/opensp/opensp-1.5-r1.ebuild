@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.23 2004/07/13 21:07:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.24 2004/07/14 14:02:28 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -35,7 +35,7 @@ src_compile() {
 	local myconf
 
 	# Detect mips systems properly
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"
