@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.32.ebuild,v 1.1 2002/11/06 06:19:39 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.32.ebuild,v 1.2 2003/01/07 05:35:07 bcowan Exp $
 
 DESCRIPTION="Gtk2 frontend for rdesktop"
 HOMEPAGE="http://www.gnomepro.com/tsclient"
@@ -8,7 +8,7 @@ SRC_URI="http://www.gnomepro.com/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
