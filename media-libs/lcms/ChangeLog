@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.32 2004/12/29 21:02:57 morfic Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.33 2005/01/03 16:40:14 lanius Exp $
+
+  03 Jan 2005; Heinrich Wendel <lanius@gentoo.org> lcms-1.13.ebuild:
+  stable on x86
 
   29 Dec 2004; Daniel Goller <morfic@gentoo.org> lcms-1.13.ebuild:
   Adding elibtoolize
