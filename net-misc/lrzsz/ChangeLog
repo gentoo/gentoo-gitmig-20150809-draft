@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/lrzsz
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.2 2002/04/05 21:23:27 seemant Exp $
+
+*lrzsz-0.12.20-r1 (5 Apr 2002)
+
+  5 Apr 2002; Seemant Kulleen <seemant@gentoo.org> lrzsz-0.12.20-r1.ebuild
+  files/digest-lrzsz-0.12.20-r1 :
+
+  Man pages were violating sandbox.  Resoved bug #1525 reported by
+  lemonboy@nownuri.net (Lee Won-Goo)
 
 *lrzsz-0.12.20 (1 Feb 2002)
 
