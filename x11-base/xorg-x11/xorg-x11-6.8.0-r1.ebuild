@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.25 2004/10/14 00:44:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.26 2004/10/14 14:48:46 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -167,9 +167,6 @@ pkg_setup() {
 	# Set up CFLAG-related things
 	cflag_setup
 
-	# Set up CC variable, we use it later
-	gcc-getCC
-
 	# See bug #35468, circular pam-X11 dep
 	if use pam && best_version x11-base/${PN}
 	then
@@ -314,7 +311,7 @@ host_def_setup() {
 			echo "#define HasLinuxInput YES" >> ${HOSTCONF}
 		fi
 
-		echo "#define CcCmd ${CC}" >> ${HOSTCONF}
+		echo "#define CcCmd $(gcc-getCC)" >> ${HOSTCONF}
 		echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 

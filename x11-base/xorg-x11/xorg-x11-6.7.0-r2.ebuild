@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.28 2004/10/11 13:38:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.29 2004/10/14 14:48:46 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -150,9 +150,6 @@ pkg_setup() {
 	# Set up CFLAG-related things
 	cflag_setup
 
-	# Set up CC variable, we use it later
-	gcc-getCC
-
 	# See bug #35468, circular pam-X11 dep
 	if use pam && [ "`best_version x11-base/${PN}`" ]
 	then
@@ -260,7 +257,7 @@ host_def_setup() {
 			echo "#define HasLinuxInput YES" >> config/cf/host.def
 		fi
 
-		echo "#define CcCmd ${CC}" >> config/cf/host.def
+		echo "#define CcCmd $(gcc-getCC)" >> config/cf/host.def
 		echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> config/cf/host.def
 		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> config/cf/host.def
 
