@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/twiki
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.7 2004/11/24 08:20:30 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.8 2005/03/01 15:14:41 beu Exp $
+
+*twiki-20040902-r1 (01 Mar 2005)
+
+  01 Mar 2005; Elfyn McBratney <beu@gentoo.org> +twiki-20040902-r1.ebuild:
+  Rev bump.  Update to use the new apache paths.
 
   06 Nov 2004; Joseph Jezak <josejx@gentoo.org> twiki-20040902.ebuild:
   Marked stable on ppc for bug #71305

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20030201.ebuild,v 1.3 2005/03/01 15:14:41 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20040902-r1.ebuild,v 1.1 2005/03/01 15:14:41 beu Exp $
 
-inherit webapp-apache
+inherit depend.apache webapp-apache
 
 DESCRIPTION="A Web Based Collaboration Platform"
 HOMEPAGE="http://twiki.org/"
@@ -10,9 +10,9 @@ SRC_URI="http://twiki.org/swd/TWiki${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
-S=${WORKDIR}
+S=${WORKDIR}/${PN}
 
 RDEPEND="virtual/php
 	media-gfx/graphviz
@@ -29,6 +29,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
+	cd ${S}
+
 	sed -i -e 's:\/home\/httpd:\/var\/www:g' lib/TWiki.cfg
 #	sed -i -e 's:urlpath\/to:var\/www\/localhost\/htdocs:g' \
 #		bin/.htaccess.txt
@@ -43,14 +45,11 @@ src_install() {
 	cp -r . ${D}${destdir}
 
 	if use apache2; then
-		dodir /etc/apache2/conf/modules.d
-		insinto /etc/apache2/conf/modules.d
-		newins ${FILESDIR}/twiki.conf 97_twiki.conf
+		insinto ${APACHE2_MODULES_CONFDIR}
 	else
-		dodir /etc/apache/conf/addon-modules
-		insinto /etc/apache/conf/addon-modules
-		doins ${FILESDIR}/twiki.conf
+		insinto ${APACHE1_MODULES_CONFDIR}
 	fi
+	doins ${FILESDIR}/twiki.conf 97_twiki.conf
 
 	dodoc readme.txt license.txt
 	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${D}${destdir}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20040902.ebuild,v 1.2 2004/11/24 08:20:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20040902.ebuild,v 1.3 2005/03/01 15:14:41 beu Exp $
 
 inherit webapp-apache
 
