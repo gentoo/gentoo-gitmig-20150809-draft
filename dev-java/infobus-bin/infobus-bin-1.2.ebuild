@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.9 2004/06/24 22:28:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/infobus-bin-1.2.ebuild,v 1.1 2004/07/30 19:52:13 axxo Exp $
 
 inherit java-pkg
 
