@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.14 2004/08/31 19:07:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.15 2004/09/19 20:09:05 g2boojum Exp $
+
+*dovecot-0.99.11 (19 Sep 2004)
+
+  19 Sep 2004; Grant Goodyear <g2boojum@gentoo.org>
+  dovecot-0.99.10.9-r1.ebuild, +dovecot-0.99.11.ebuild:
+  Version bump.  Thanks to Daniel Webert (bug #63849).
+  Also set static uid/gid.  (Thanks to Nils Marving, bug #58772)
 
 *dovecot-0.99.10.9-r1 (31 Aug 2004)
 

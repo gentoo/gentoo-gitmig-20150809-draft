@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.6.ebuild,v 1.3 2004/08/16 23:50:08 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.11.ebuild,v 1.1 2004/09/19 20:09:05 g2boojum Exp $
 
-IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d"
+IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
+inherit eutils
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
-HOMEPAGE="http://dovecot.procontrol.fi/"
-SRC_URI="${HOMEPAGE}/${P}.tar.gz"
+HOMEPAGE="http://dovecot.org/"
+SRC_URI="${HOMEPAGE}/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 
 #PROVIDE="virtual/imapd"
 
@@ -23,6 +24,7 @@ DEPEND=">=sys-libs/db-3.2
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	gnutls? ( <=net-libs/gnutls-1.0.4 )
 	postgres? ( dev-db/postgresql )
+	mysql? ( dev-db/mysql )
 	vpopmail? ( net-mail/vpopmail )"
 
 RDEPEND="${DEPEND}
@@ -30,16 +32,9 @@ RDEPEND="${DEPEND}
 
 
 pkg_preinst() {
-	# Add user and group for login process
-	if ! getent group | grep -q ^dovecot
-	then
-		groupadd dovecot || die "problem adding group dovecot"
-	fi
-	if ! getent passwd | grep -q ^dovecot
-	then
-		useradd -c dovecot -d /usr/libexec/dovecot -g dovecot \
-		-s /bin/false dovecot  || die "problem adding user dovecot"
-	fi
+	# Add user and group for login process (same as for fedora/redhat)
+	enewgroup dovecot 97
+	enewuser dovecot 97 /bin/false /dev/null dovecot
 }
 
 src_compile() {
@@ -50,6 +45,7 @@ src_compile() {
 	use nopop3d && myconf="${myconf} --without-pop3d"
 	use pam || myconf="${myconf} --without-pam"
 	use postgres && myconf="${myconf} --with-pgsql"
+	use mysql && myconf="${myconf} --with-mysql"
 	use sasl && myconf="${myconf} --with-cyrus-sasl2"
 	# prefer gnutls to ssl if both gnutls and ssl are defined
 	use gnutls && myconf="${myconf} --with-ssl=gnutls"
