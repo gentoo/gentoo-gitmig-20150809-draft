@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.11 2004/07/12 12:05:08 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.12 2004/07/12 12:31:36 eldad Exp $
 
 inherit flag-o-matic eutils
 
@@ -40,14 +40,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="${myconf} `use_with ssl openssl`"
-	myconf="${myconf} `use_with tcpd libwrap`"
+	myconf="${myconf} `use_with tcpd libwrap` `use_enable !ssl internal-md5`"
 	myconf="${myconf} `use_enable ipv6`"
-
-	if ! use ssl; then
-		myconf="${myconf} --enable-internal-md5"
-	else
-		myconf="${myconf} --disable-internal-md5"
-	fi
 
 	if use ssl && has_version '=dev-libs/openssl-0.9.6*' ; then
 		einfo "Found openssl version 0.9.6: adding extra flags."
