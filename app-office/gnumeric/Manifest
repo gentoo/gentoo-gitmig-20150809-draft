@@ -10,7 +10,6 @@ MD5 7843727e1fcde50a4a2283ba34da3c1d files/digest-gnumeric-1.0.13 69
 MD5 abc0fd9b785966aa41a2aff5a41f6c8a files/digest-gnumeric-1.1.17 70
 MD5 629a3f22adb6cf4415d44093d3653e8f files/digest-gnumeric-1.1.19 70
 MD5 8a88ece514714721699de5346a0f4e1e files/gnumeric-1.0.8-docbuild.patch 728
-MD5 8a88ece514714721699de5346a0f4e1e files/gnumeric-1.0.7-docbuild.patch 728
 MD5 a88fe4d27bf9a2579f4f3db0ca6f355f files/digest-gnumeric-1.0.8 69
 MD5 7843727e1fcde50a4a2283ba34da3c1d files/digest-gnumeric-1.0.13-r1 69
 MD5 b4f77780f0a0a1a29df8c8b184b2c110 files/gnumeric-1.1.16-scrollkeeper.patch 493
