@@ -1,7 +1,11 @@
 # ChangeLog for media-video/linuxtv-dvb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/ChangeLog,v 1.4 2003/03/22 18:25:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/ChangeLog,v 1.5 2003/03/25 14:29:45 lordvan Exp $
 
+*linuxtv-dvb-1.0.0_pre2-r1 (25 Mar 2003)
+  25 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org>
+  new release to fix bug #18100 (dvbnet installed in /dvbnet)
+	
 *linuxtv-dvb-1.0.0_pre2 (19 Mar 2003)
 
   22 Mar 2003; Martin Holzer <mholzer@gentoo.org>
