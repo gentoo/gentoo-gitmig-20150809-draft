@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.91.ebuild,v 1.2 2002/03/28 22:23:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.91.ebuild,v 1.3 2002/04/06 13:44:35 gbevin Exp $
 
 S=${WORKDIR}/lame-${PV}
 DESCRIPTION="LAME Ain't an Mp3 Encoder"
@@ -19,6 +19,14 @@ RDEPEND="virtual/glibc
 	gtk?    ( >=x11-libs/gtk+-1.2.10-r4 )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
+src_unpack() {
+
+	unpack ${A}
+	
+	cd ${S}
+	patch -p1 < ${FILESDIR}/lame-3.91-gcc3.diff || die
+
+}
 
 src_compile() {
 
