@@ -1,0 +1,45 @@
+--- industrial_style.c.orig	2003-12-07 22:13:42.000000000 +0100
++++ industrial_style.c	2003-12-07 22:14:13.000000000 +0100
+@@ -1283,9 +1283,6 @@
+ 	       gint           height,
+ 	       gboolean       fill)
+ {
+-  if (shadow_type == GTK_SHADOW_NONE)
+-    return;
+-  
+   g_return_if_fail (style != NULL);
+   g_return_if_fail (window != NULL);
+ 
+@@ -1430,7 +1427,7 @@
+     }
+ 
+     /* Only draw shadow if button is large enough to fit it. */
+-    if (width > 18 && height > 18) {
++    if (width > 18 && height > 18 && shadow_type != GTK_SHADOW_NONE) {
+ 
+       /* Offset shadow if depressed. */
+       if (state_type == GTK_STATE_ACTIVE) {
+@@ -1589,7 +1586,7 @@
+ 
+ #if 1
+     /* Remove this to add the shadow back for depressed buttons. */
+-    if (GTK_WIDGET_STATE (widget) == GTK_STATE_ACTIVE)
++    if (GTK_WIDGET_STATE (widget) == GTK_STATE_ACTIVE || shadow_type == GTK_SHADOW_NONE)
+       return;
+ #endif
+ 
+@@ -1793,8 +1790,12 @@
+     GdkColor *fg_color = get_color (style, &style->bg[state_type], &style->fg[state_type], STANDARD_BORDER_SHADE);
+     GdkGC *corner_gc = get_gc (style, &style->bg[state_type], fg_color, SHADE_HALF);
+ 
+-    draw_rounded_rect_one_pixel (window, bg_gc, fg_gc, corner_gc,
+-				 area, x, y, width, height);
++    if(shadow_type == GTK_SHADOW_NONE) {
++      if(bg_gc)
++	gdk_draw_rectangle (window, bg_gc, TRUE, x, y, width, height);
++    } else {
++      draw_rounded_rect_one_pixel (window, bg_gc, fg_gc, corner_gc, area, x, y, width, height);
++    }
+   }
+ }
+ 
