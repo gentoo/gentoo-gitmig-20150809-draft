@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors: Preston A. Elder <prez@goth.net>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d.ebuild,v 1.3 2002/04/24 21:57:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d.ebuild,v 1.4 2002/04/24 22:41:35 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -78,12 +78,6 @@ src_unpack() {
 
 	# This allows JDK 1.4.0 to be used
 	patch -p1 <${FILESDIR}/${PV}/${P}-configure.patch || die
-
-	# Fixes code errors that stop compile
-#	patch -p1 <${FILESDIR}/${PV}/${P}-code_err.patch || die
-
-	# This forces exceptions to always be enabled for gcc 3.0.x
-#	patch -p1 <${FILESDIR}/${PV}/${P}-gcc3.patch || die
 
 	# Debian patches to fix build problems with gcc-3.0.4
 	#
