@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <naz@gentoo.org> (16 July 2003)
+# the cvs of gift is broken
+>=net-p2p/gift-cvs-0.10.0
+
 # <rac@gentoo.org> (15 July 2003)
 # emergency mask because of confirmed reports of compilation failure
 # see bug 24570
