@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.21 2005/01/08 19:09:19 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.22 2005/01/10 17:14:49 gmsoft Exp $
+
+*exim-4.43-r2 (10 Jan 2005)
+
+  10 Jan 2005; Guy Martin <gmsoft@gentoo.org> exim-4.43-r2.ebuild:
+  Stable on hppa (#76893).
 
   08 Jan 2005; Colin Morey <peitolm@gentoo.org> files/exim.rc6,
   exim-4.43.ebuild:
