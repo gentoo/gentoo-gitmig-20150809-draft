@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.7 2004/10/28 15:30:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.8 2004/10/29 04:13:10 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -56,6 +56,8 @@ tc-getNM() { tc-getPROG NM nm; }
 tc-getRANLIB() { tc-getPROG RANLIB ranlib; }
 # Returns the name of the fortran compiler
 tc-getF77() { tc-getPROG F77 f77; }
+# Returns the name of the java compiler
+tc-getGCJ() { tc-getPROG GCJ gcj; }
 
 # Returns the name of the C compiler for build
 tc-getBUILD_CC() {
