@@ -1,0 +1,8 @@
+# ChangeLog for net-p2p/lmule
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lmule/ChangeLog,v 1.1 2003/04/18 17:55:26 malverian Exp $
+
+*lmule-1.1.13c (18 Apr 2003)
+
+  18 Apr 2003; Philip Walls <malverian@gentoo.org> lmule-1.1.13c.ebuild :
+  Initial import.
