@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.189 2004/10/19 23:03:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.190 2004/10/20 19:48:13 eradicator Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -29,7 +29,7 @@ berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bidi - Enables bidirectional language support
 bindist - Flag to enable or disable options for prebuilt (GRP)  packages (eg. due to licensing issues)
 birdstep - Adds support for the Birdstep Database Server
-bmp - Adds support for beep-media-player
+bmp - (EXPERIMENTAL) Adds support to build bmp plugins when emerging media-plugins/xmms-*
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootstrap - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during original system bootstrapping
 boundschecking - add bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
