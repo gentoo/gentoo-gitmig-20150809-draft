@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/festival-freebsoft-utils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.1 2004/04/04 23:57:58 dmwaters Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.2 2004/04/05 00:00:52 dmwaters Exp $
+
+  04 Apr 2004; Deedra Waters,,, <dmwaters@gentoo.org> :
+  forgot to add the bug number. This ebuild closes bug #44992
 
   04 Apr 2004; Deedra Waters,,, <dmwaters@gentoo.org> :
   Initial ebuild
