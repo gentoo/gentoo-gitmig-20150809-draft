@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.1 2003/10/08 15:06:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.2 2003/10/08 15:49:37 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -105,13 +105,13 @@ src_install() {
 
 pkg_postrm() {
 	python_makesym
-	python_mod_cleanup	
+	python_mod_cleanup
 }
 
 pkg_postinst() {
 	python_makesym
 	python_mod_optimize
-	
+
 	echo
 	ewarn
 	ewarn "If you have just upgraded from python-2.2.x you will need to run:"
