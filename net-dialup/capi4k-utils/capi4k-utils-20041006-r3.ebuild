@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.8 2004/11/27 13:25:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r3.ebuild,v 1.1 2004/11/27 13:25:29 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DAY_PV=${PV:6:2}
 
 MY_FILES=${FILESDIR}/${PV}
 MY_P=${PN}-${YEAR_PV}-${MON_PV}-${DAY_PV}
-PPPVERSIONS="2.4.2"  # versions in portage
+PPPVERSIONS="2.4.2 2.4.3"  # versions in portage
 
 DESCRIPTION="CAPI4Linux Utils"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
@@ -38,7 +38,8 @@ src_unpack() {
 	# set our config
 	cp -f ${MY_FILES}/config .config
 	# fix the little odd bugs
-	epatch ${WORKDIR}/${PN}.diff || die "patch failed"
+	EPATCH_OPTS="-p1"
+	epatch ${WORKDIR}/${PN}.diff ${WORKDIR}/ppp-2.4.3.diff || die "${PN} patch failed"
 	# patch includes of all *.c files
 	sed -i -e "s:linux/capi.h>$:linux/compiler.h>\n#include <linux/capi.h>:g" */*.c || die "sed failed"
 	# patch all Makefile.am and Rules.make to use our CFLAGS
