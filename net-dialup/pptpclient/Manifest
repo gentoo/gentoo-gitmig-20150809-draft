@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2872e057fe9b8fbc4d53ccdd417f8656 ChangeLog 2052
+MD5 bf0d4fa9f50b31aa19a7ffd2306d84de ChangeLog 2166
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 120944098c821fb2bd8ff9ce03aac05d pptpclient-1.1.0-r1.ebuild 1051
 MD5 99e94b1bf84efbe31d54aa82a262b093 pptpclient-1.1.0.ebuild 868
@@ -9,21 +9,21 @@ MD5 39aa14ec8d4d42225f52e09c9fda7c59 pptpclient-1.2.0.ebuild 989
 MD5 ebd4b3cd779e546df87977887634dacd pptpclient-1.3.1.ebuild 1009
 MD5 8d3524be379e32d8e127c40362ebefb3 pptpclient-1.4.0.ebuild 1010
 MD5 d7543e179eb2bd83273b1edd30b8376a pptpclient-1.5.0.ebuild 1082
-MD5 6f09c6cb3d44f706c524cdca8021fc93 files/pptp-init 544
 MD5 ddba6ac5fde52ccc46d17bc1f5822a39 files/digest-pptpclient-1.1.0 70
 MD5 ddba6ac5fde52ccc46d17bc1f5822a39 files/digest-pptpclient-1.1.0-r1 70
 MD5 87d3d997b8edfa7e7590b71edc635168 files/digest-pptpclient-1.2.0 68
 MD5 f94e15d8f5d315c95f576882fd1f1b3e files/digest-pptpclient-1.3.1 68
+MD5 2150240306c9a7345566f1c5944eca57 files/digest-pptpclient-1.4.0 68
 MD5 dad6352a156cbe6ce71b057f50af2eec files/options.pptp 359
 MD5 4c90a2d879d5fca198c93931003f7d77 files/pptp-command 23014
 MD5 34862b5af00d851d068eb3e384093c3b files/pptp_fe.pl 8100
 MD5 bd60480b6ba90362342540fb9cbe7ebe files/xpptp_fe.pl 5620
-MD5 2150240306c9a7345566f1c5944eca57 files/digest-pptpclient-1.4.0 68
 MD5 9c2fa1fb3465e3b8ec3c0449aaf3ffea files/digest-pptpclient-1.5.0 68
+MD5 819b439568ae8af12a87bf90a1ae3206 files/pptp-init 651
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWBK3mdTrptrqvGERAigFAJ9u//lmABBBYPQmYX5cJl/h7okEQwCffasU
-R2TD/kggHSC0w7ghHhOPlkI=
-=rhzV
+iD8DBQFBWLzVI1lqEGTUzyQRAmPVAJ92jH/LFdeEboD5HqKHcoz2OgOA1ACdHpme
+W0Uj6mHciAqrQtxK37DeNCE=
+=OjT5
 -----END PGP SIGNATURE-----
