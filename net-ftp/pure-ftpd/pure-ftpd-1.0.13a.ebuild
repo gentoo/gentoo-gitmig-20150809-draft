@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.13a.ebuild,v 1.1 2003/01/29 00:39:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.13a.ebuild,v 1.2 2003/01/29 21:54:28 raker Exp $
 
 DESCRIPTION="Pure-FTPd is a fast, production-quality, standard-conformant FTP server"
 SRC_URI="ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/${P}.tar.bz2"
@@ -27,7 +27,6 @@ src_compile() {
 		--with-quotas --with-ftpwho \
 		--with-uploadscript --with-virtualhosts \
 		--with-virtualchroot --with-diraliases \
-		--with-largefile \
 		--with-peruserlimits ${myconf}
 	emake || die "compile problem"
 }

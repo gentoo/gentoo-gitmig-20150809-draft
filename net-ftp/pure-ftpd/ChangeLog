@@ -1,8 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.8 2003/01/29 00:39:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.9 2003/01/29 21:54:28 raker Exp $
 
 *pure-ftpd-1.0.13a (28 Jan 2003)
+
+  29 Jan 2003; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.13a.ebuild :
+  Removed the --with-largefile option per bug #11215
 
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.13a.ebuld,
   files/digest-pure-ftpd-1.0.13a, files/pureftpd.rc6-r1 :
