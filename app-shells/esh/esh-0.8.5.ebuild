@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5.ebuild,v 1.8 2003/02/13 09:29:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5.ebuild,v 1.9 2004/01/11 03:47:09 weeve Exp $
 
 S=${WORKDIR}/esh
 DESCRIPTION="A UNIX Shell with a simplified Scheme syntax"
 SRC_URI="http://slon.ttk.ru/esh/${P}.tar.gz"
 HOMEPAGE="http://slon.ttk.ru/esh/"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 -ppc ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -22,6 +22,9 @@ src_compile() {
 		-e "s:^LIB=:LIB=-lncurses :" \
 		-e "s:-ltermcap::" \
 		Makefile.orig > Makefile
+	# For some reason, this tarball has binary files in it for x86.
+	# So, if we're not x86, make clean first.
+	[ ! `use x86` ] && make clean
 	make || die
 }
 
