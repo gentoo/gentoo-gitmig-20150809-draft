@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61.ebuild,v 1.2 2005/02/09 15:48:40 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61.ebuild,v 1.3 2005/02/10 17:21:53 ferdy Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_compile() {
 		--sysconfdir=/etc/ssmtp \
 		$(use_enable ssl) \
 		$(use_enable ipv6 inet6) \
-		$(use_enable md5sum md5suth) \
+		$(use_enable md5sum md5auth) \
 		|| die
 	make clean || die
 	make etcdir=/etc || die
