@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.12 2005/03/14 23:45:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.13 2005/04/02 00:57:02 vapier Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="berkdb"
 
-DEPEND="berkdb? ( =sys-libs/db-1* )"
+DEPEND="berkdb? ( sys-libs/db )"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +33,7 @@ src_install() {
 
 	make \
 		includedir=/usr/include/gdbm \
-		INSTALL_ROOT=${D} \
+		INSTALL_ROOT="${D}" \
 		install-compat || die
 
 	dodoc ChangeLog NEWS README
