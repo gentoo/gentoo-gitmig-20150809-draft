@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.102 2005/02/03 05:31:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.103 2005/02/07 01:00:27 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -644,7 +644,14 @@ create_gcc_env_entry() {
 
 #---->> pkg_* <<----
 gcc_pkg_setup() {
-	if [ "${ETYPE}" == "gcc-compiler" ] ; then
+	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && use_multilib ; then
+		eerror "Sandbox in your installed portage does not support compilation."
+		eerror "of a multilib gcc.  Please set FEATURES=-sandbox and try again."
+		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
+		die "No 32bit sandbox.  Retry with FEATURES=-sandbox."
+	fi
+
+	if [[ ${ETYPE} == "gcc-compiler" ]] ; then
 		# Must compile for mips64-linux target if we want n32/n64 support
 		case "${CTARGET}" in
 			mips64-*) ;;
@@ -1136,13 +1143,6 @@ gcc_do_filter_flags() {
 }
 
 gcc_src_compile() {
-	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && use_multilib; then
-		eerror "Sandbox in your installed portage does not support compilation."
-		eerror "of a multilib gcc.  Please set FEATURES=-sandbox and try again."
-		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
-		die "No 32bit sandbox.  Retry with FEATURES=-sandbox."
-	fi
-
 	gcc_do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
@@ -1179,6 +1179,9 @@ gcc_src_compile() {
 }
 
 gcc_src_test() {
+	# This is wrong, but gcc's tests don't report properly w/sandbox
+	unset LD_PRELOAD
+
 	cd ${WORKDIR}/build
 	make check || die "check failed :("
 }
