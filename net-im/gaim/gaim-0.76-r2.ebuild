@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76-r2.ebuild,v 1.1 2004/04/10 20:28:02 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76-r2.ebuild,v 1.2 2004/04/14 13:47:45 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -28,13 +28,19 @@ PDEPEND="crypt? ( net-im/gaim-encryption )"
 
 pkg_setup() {
 	ewarn
+	ewarn "If you are merging ${P} from an earlier version, you will need"
+	ewarn "to re-merge any plugins like gaim-encryption or gaim-snpp."
+	ewarn
 	ewarn "If you experience problems with gaim, file them as bugs with"
 	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
 	ewarn "as bugs with gaim's sourceforge tracker, and by all means DO NOT"
 	ewarn "seek help in #gaim."
 	ewarn
-	ewarn "Be sure to include a backtrace for any seg faults, see"
-	ewarn "http://gaim.sourceforge.net/gdb.php for details on backtraces."
+	ewarn "Be sure to USE=\"debug\" and include a backtrace for any seg"
+	ewarn "faults, see http://gaim.sourceforge.net/gdb.php for details on"
+	ewarn "backtraces."
+	ewarn
+	ewarn "Please read the gaim FAQ at http://gaim.sourceforge.net/faq.php"
 	ewarn
 	for TICKER in 1 2 3 4 5; do
 		# Double beep here.
@@ -98,15 +104,16 @@ pkg_postinst() {
 	ewarn "If you are merging ${P} from an earlier version, you will need"
 	ewarn "to re-merge any plugins like gaim-encryption or gaim-snpp."
 	ewarn
-
-	ewarn
 	ewarn "If you experience problems with gaim, file them as bugs with"
 	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
 	ewarn "as bugs with gaim's sourceforge tracker, and by all means DO NOT"
 	ewarn "seek help in #gaim."
 	ewarn
-	ewarn "Be sure to include a backtrace for any seg faults, see"
-	ewarn "http://gaim.sourceforge.net/gdb.php for details on backtraces."
+	ewarn "Be sure to USE=\"debug\" and include a backtrace for any seg"
+	ewarn "faults, see http://gaim.sourceforge.net/gdb.php for details on"
+	ewarn "backtraces."
+	ewarn
+	ewarn "Please read the gaim FAQ at http://gaim.sourceforge.net/faq.php"
 	ewarn
 	for TICKER in 1 2 3 4 5; do
 		# Double beep here.
