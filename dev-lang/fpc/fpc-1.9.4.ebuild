@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.9.4.ebuild,v 1.1 2004/09/08 04:26:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.9.4.ebuild,v 1.2 2005/01/19 02:41:13 chriswhite Exp $
 
 inherit rpm
 
