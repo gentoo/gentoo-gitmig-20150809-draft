@@ -117,34 +117,42 @@ if (%versions) {
     $version = (sort { $versions{$a} <=> $versions{$b} } keys %versions)[0];
 }
 
-# Each one of these regular expressions will eat the whitespace 
-# leading up to the next entry (excepting the two-space leader on the
-# front of a dated entry), so it needs to be replaced with a double
-# carriage-return.  This helps to normalize the spacing in the
-# ChangeLogs.
-if (!defined $version) {
-    # Changing a patch or something, not an ebuild, so put the entry
-    # after the first *version line (really guessing)
-    $text =~ s/^( \*.*? )             # find the *version line
-                \s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
-              /$1\n\n$entry\n\n/mx
-        or die "Failed to insert new entry (1)\n";
-    #$text =~ s/^(\*.*?)\s*\n(?=  \d|\*|\z)/$1\n\n$entry\n\n/m
-} elsif ($versions{$version} > -1) {
-    # Insert after the *version line
-    $text =~ s/^( \*\Q$version\E )    # find the *version line = $1
-                (?:\.|\.ebuild)?      # some poorly formed entries
-                \s+ ( \(.*\) )        # (date) = $2
-                \s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
-              /$1 $2\n\n$entry\n\n/mx
-        or die "Failed to insert new entry (2)\n";
-    #$text =~ s/^\*\Q$version\E\.?(?:ebuild)?\s.*\n/$&\n$entry\n/m 
-} else {
-    # Insert at the top with a new version marker
+# Each one of these regular expressions will eat the whitespace
+# leading up to the next entry (except the two-space leader on the
+# front of a dated entry), so it needs to be replaced with a
+# double carriage-return.  This helps to normalize the spacing in
+# the ChangeLogs.
+#
+# NOTE: The first two branches here are disabled via '&& 0'
+# because they use the new but unsanctioned ChangeLog format.
+if (0 && !defined $version) { # <--- NOTE disabled via '0'
+	# Changing a patch or something, not an ebuild, so put the entry
+	# after the first *version line (really guessing)
+	$text =~ s/^( \*.*? )             # find the *version line
+				\s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
+				/$1\n\n$entry\n\n/mx
+		or die "Failed to insert new entry (1)\n";
+} elsif (0 && $versions{$version} > -1) { # <--- NOTE disabled via '0'
+	# Insert after the *version line
+	$text =~ s/^( \*\Q$version\E )    # find the *version line = $1
+				(?:\.|\.ebuild)?      # some poorly formed entries
+				\s+ ( \(.*\) )        # (date) = $2
+				\s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
+				/$1 $2\n\n$entry\n\n/mx
+		or die "Failed to insert new entry (2)\n";
+} elsif (!defined $version || $versions{$version} > -1) {
+	# Changing an existing patch or ebuild, no new version marker
+	# required
 	$text =~ s/^( .*? )				  # grab header
-	            \s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
-			  /$1\n\n*$version ($date)\n\n$entry\n\n/sx
-        or die "Failed to insert new entry (3)\n";
+				\s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
+				/$1\n\n$entry\n\n/sx
+		or die "Failed to insert new entry (3)\n";
+} else {
+	# Insert at the top with a new version marker
+	$text =~ s/^( .*? )				  # grab header
+				\s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
+				/$1\n\n*$version ($date)\n\n$entry\n\n/sx
+		or die "Failed to insert new entry (4)\n";
 }
 
 # Write the new ChangeLog

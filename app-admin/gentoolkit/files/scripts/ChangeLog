@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoolkit/lintool/scripts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.12 2003/04/22 20:04:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.13 2003/04/27 19:39:39 agriffis Exp $
+
+27 Apr 2003 Aron Griffis <agriffis@gentoo.org>
+	* use older but sanctioned ChangeLog format
+	* add man-page for echangelog
 
 22 Apr 2003 Aron Griffis <agriffis@gentoo.org>
 	* ignore Manifests in file listing
@@ -35,14 +39,14 @@
 		- inspect ARGV[0] to see if it looks like a keyword
 
 13 Feb 2003 Aron Griffis <agriffis@gentoo.org>
-    * update ekeyword to fix strange spacing from other keyword tools
+	* update ekeyword to fix strange spacing from other keyword tools
 
 12 Feb 2003 Aron Griffis <agriffis@gentoo.org>
-    * update echangelog to insert entry at the correct location in the
-      ChangeLog
+	* update echangelog to insert entry at the correct location in the
+	  ChangeLog
 
 10 Feb 2003 Aron Griffis <agriffis@gentoo.org>
-    * add echangelog and ekeyword
+	* add echangelog and ekeyword
 
 11 Nov 2002 Martin Holzer <mholzer@gentoo.org>
-    * fix emerge-webrsync 0 byte bug  
+	* fix emerge-webrsync 0 byte bug  
