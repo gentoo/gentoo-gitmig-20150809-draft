@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.31.0.ebuild,v 1.3 2003/10/12 14:45:39 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.31.0.ebuild,v 1.4 2003/10/22 19:55:29 pauldv Exp $
 
 inherit elisp-common libtool
 
@@ -100,6 +100,7 @@ src_compile() {
 
 	econf ${myconf} \
 		--with-neon=/usr \
+		--disable-experimental-libtool \
 		--disable-mod-activation ||die "configuration failed"
 
 
@@ -107,13 +108,21 @@ src_compile() {
 	# Also apparently the included apr does have a libtool that doesn't like
 	# -L flags. So not specifying it at all when not building apache modules
 	# and only specify it for internal parts otherwise
-	( emake external-all && emake local-all ) || die "make of subversion failed"
+	if use apache2; then
+		( emake external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
+	else
+		( emake external-all && emake local-all ) || die "make of subversion failed"
+	fi
 
 	#building fails without the apache apr-util as includes are wrong.
 	#Also the python bindings do not work without db installed
 	if use python; then
 		if use berkdb; then
-			emake swig-py || die "subversion python bindings failed"
+			if use apache2; then
+				emake swig-py || die "subversion python bindings failed"
+			else
+				emake SVN_APR_INCLUDES="-I${S}/apr/include -I${S}/apr-util/include" swig-py || die "subversion python bindings failed"
+			fi
 		fi
 	fi
 	if use emacs; then
