@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.5-r1.ebuild,v 1.8 2004/07/01 22:33:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.5-r1.ebuild,v 1.9 2004/07/15 01:51:52 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Command-line MIME encoding and decoding utilities"
@@ -10,6 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/mpack/${P}-src.tar.Z"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="virtual/libc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.4 2004/06/24 23:22:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.5 2004/07/15 01:46:57 agriffis Exp $
 
 inherit eutils fixheadtails
 
@@ -11,6 +11,7 @@ SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="sys-apps/groff"
 

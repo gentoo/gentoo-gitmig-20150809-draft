@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.5 2004/07/01 22:33:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.6 2004/07/15 01:51:32 agriffis Exp $
 
 DESCRIPTION="Collection of utilities for parsing Internet mail messages."
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
@@ -8,6 +8,7 @@ HOMEPAGE="http://cr.yp.to/mess822.html"
 
 SLOT="0"
 KEYWORDS="x86 ~amd64"
+IUSE=""
 LICENSE="as-is"
 
 DEPEND="virtual/libc
