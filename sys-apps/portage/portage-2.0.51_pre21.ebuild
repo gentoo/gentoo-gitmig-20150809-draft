@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre20.ebuild,v 1.2 2004/09/10 19:39:51 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre21.ebuild,v 1.1 2004/09/10 19:39:51 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -79,39 +79,18 @@ src_install() {
 	#config files
 	cd ${S}/cnf
 	insinto /etc
-	case "$ARCH" in
-		alpha )
-		newins make.globals.alpha make.globals
-		newins make.conf.alpha make.conf
-		;;
-		arm )
-		newins make.globals.arm make.globals
-		newins make.conf.arm make.conf
-		;;
-		hppa )
-		newins make.globals.hppa make.globals
-		newins make.conf.hppa make.conf
-		;;
-		mips )
-		newins make.globals.mips make.globals
-		newins make.conf.mips make.conf
-		;;
-		ppc )
-		newins make.globals.ppc make.globals
-		newins make.conf.ppc make.conf
-		;;
-		sparc )
-		newins make.globals.sparc make.globals
-		newins make.conf.sparc make.conf
-		;;
-		* )
-		doins make.globals make.conf
-		;;
-	esac
-
-	#This special handling of make.conf is required for catalyst
-	#to function properly.
-	mv ${D}/etc/make.conf ${D}/etc/make.conf.example
+	if [ -f "make.globals.${ARCH}" ]; then
+		newins make.globals.${ARCH} make.globals
+		newins make.conf.${ARCH} make.conf.example
+	else
+		eerror ""
+		eerror "Portage does not have an arch-specific configuration for this arch."
+		eerror "Please notify the arch maintainer about this issue. Using generic."
+		eerror ""
+		sleep 3
+		doins  make.globals
+		newins make.conf make.conf.example
+	fi
 
 	doins etc-update.conf dispatch-conf.conf
 
@@ -180,7 +159,7 @@ src_install() {
 	dosym newins /usr/lib/portage/bin/donewins
 
 	# man pages
-	doman ${S}/man/*.[15]
+	doman ${S}/man/*.[0-9]
 
 	# temp dir creation
 	dodir /var/tmp
@@ -338,26 +317,36 @@ pkg_postinst() {
 	# New old place of install
 	rm -f ${ROOT}usr/lib/portage/pym/*.py[co]
 
-	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
-	chown -R root:portage ${ROOT}var/cache/edb/dep
-
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
-	for X in "${ROOT}"usr/lib/portage/pym/*.py; do
-		python -c "import py_compile; py_compile.compile('${X}')"
-		python -O -c "import py_compile; py_compile.compile('${X}')"
-	done
+	einfo "Compiling python modules..."
+	python -c 'import compileall; compile_path()' &> /dev/null
+	python -c "import compileall; compile_dir('${ROOT}usr/lib/portage/pym')" &> /dev/null
 
 	if has ccache $FEATURES && has userpriv $FEATURES; then
 		chown -R portage:portage /var/tmp/ccache &> /dev/null
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
 
+	if [ -d "${ROOT}usr/portage/distfiles" ]; then
+		chown -R root:portage "${ROOT}usr/portage/distfiles"
+		chmod 0664 "${ROOT}usr/portage/distfiles"/*
+		chmod 2775 "${ROOT}usr/portage/distfiles"
+		chmod 2775 "${ROOT}usr/portage/cvs-src"
+	fi
+	if [ -d "${ROOT}/${PORTDIR}/distfiles" ]; then
+		chown -R root:portage "${ROOT}/${PORTDIR}/distfiles"
+		chmod 0664 "${ROOT}/${PORTDIR}/distfiles"/*
+		chmod 2775 "${ROOT}/${PORTDIR}/distfiles"
+		chmod 2775 "${ROOT}/${PORTDIR}/cvs-src"
+	fi
+
+	chown -R root:portage ${ROOT}var/cache/edb
+	find ${ROOT}var/cache/edb -type f -print0 | xargs -0 -n 500 chmod 664
 
 #
 # Take a shot at fixing the world file...
 # This finds all specific-version ebuilds without modifiers.
 #
-	addwrite ${ROOT}var/cache/edb/
 	python -c "
 import portage
 world = portage.grabfile('${ROOT}var/cache/edb/world')
