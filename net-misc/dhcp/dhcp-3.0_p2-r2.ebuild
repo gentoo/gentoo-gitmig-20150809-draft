@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.5 2003/11/05 22:52:39 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.6 2003/11/18 18:23:41 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -108,15 +108,18 @@ pkg_config() {
 
 	if [ ! -d "${CHROOT:=/chroot/dhcp}" ] ; then
 		ebegin "Setting up the chroot directory"
-		mkdir -m 0755 -p "${CHROOT}/etc" "${CHROOT}/var/lib" "${CHROOT}/var/run"
+		mkdir -m 0755 -p "${CHROOT}/"{dev,etc,var/lib,var/run}
 		cp -R /etc/dhcp "${CHROOT}/etc/"
 		cp -R /var/lib/dhcp "${CHROOT}/var/lib"
-		chown -R dhcp:dhcp "${CHROOT}/var/lib" "${CHROOT}/var/lib"
+		chown -R dhcp:dhcp "${CHROOT}/var/lib" "${CHROOT}/var/run"
 		eend
 
 		if [ "`grep '^#[[:blank:]]\?CHROOT' /etc/conf.d/dhcp`" ] ; then
 			sed -e '/^#[[:blank:]]\?CHROOT/s/^#[[:blank:]]\?//' -i /etc/conf.d/dhcp
 		fi
+
+		einfo "To enable logging from the DHCP server, configure your"
+		einfo "logger (`best_version virtual/logger`) to listen on ${CHROOT}/dev/log"
 	else
 		eerror
 		eerror "${CHROOT} already exists. Quitting."
