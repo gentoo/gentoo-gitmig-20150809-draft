@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.5 2004/03/07 01:08:59 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.6 2004/03/07 18:45:46 tgall Exp $
 
-inherit libtool
+inherit libtool gnuconfig
 
 DESCRIPTION="library for accessing and manipulating reiserfs partitions"
 HOMEPAGE="http://reiserfs.linux.kiev.ua/"
@@ -10,7 +10,7 @@ SRC_URI="http://reiserfs.linux.kiev.ua/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64 ~mips"
+KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64 ~mips ppc64"
 IUSE="nls debug"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -19,6 +19,8 @@ src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 	use debug && myconf="${myconf} --disable-debug"
+
+	use ppc64 && gnuconfig_update
 
 	elibtoolize
 	econf ${myconf} || die "Configure failed"
