@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/kdelibs-apidocs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.10 2003/04/06 20:50:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.11 2003/04/10 15:29:11 hannes Exp $
+
+  10 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-apidocs-3.1.1a.ebuild:
+  fixed PATCHES1 var to fix bug #19079, thanks to Peter Ruskin
+  <aoyu93@dsl.pipex.com>
 
 *kdelibs-apidocs-3.1.1 (14 Mar 2003)
 
