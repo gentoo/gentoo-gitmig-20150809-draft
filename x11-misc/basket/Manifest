@@ -1,4 +1,14 @@
-MD5 cb719bb639fe60d586286f2afcbc92a1 ChangeLog 581
-MD5 9bd73ba5ec0b008e7a7cde7018606bdd basket-0.4.0d.ebuild 529
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 365627792f680a905e119f9f8c70f4b1 ChangeLog 656
+MD5 1e74a47e72f27b8ea28725f3884b172c basket-0.4.0d.ebuild 527
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 8433b9ef958f62f31c4a2b5c3c45b520 files/digest-basket-0.4.0d 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBWkaTI7fK2cqeyXkRAm6jAKCA9nWLXs6RIrP4AYBKkHxg/eRpWgCfaR3w
+gx1mkRtmn7auIRQxe4VSgu0=
+=25nq
+-----END PGP SIGNATURE-----
