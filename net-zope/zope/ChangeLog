@@ -1,8 +1,12 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.5 2003/06/09 22:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.6 2003/10/10 21:02:39 robbat2 Exp $
 
 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+  10 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> zope-2.4.0-r6.ebuild,
+  zope-2.5.1.ebuild:
+  fix bug #28165 - $A setting in ebuilds
 
   09 Jun 2003; <msterret@gentoo.org> zope-2.6.0-r1.ebuild:
   DEPEND on sed >= 4 in zope-2.6.0-r1.ebuild
