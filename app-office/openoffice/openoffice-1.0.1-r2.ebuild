@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.6 2002/12/05 20:30:51 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.7 2002/12/07 08:56:38 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -161,7 +161,7 @@ src_unpack() {
 	if [ "$(gcc-version)" = "3.2" ]
 	then
 		epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.1.patch
-		cd ${S}/solver/641/unxlngi4.pro
+		cd ${S}/solver/641/unxlngi4.pro/lib
 		if [ -f libstdc++.so.5.0.0 ] 
 		then
 			ln -s libstdc++.so.5.0.0 libstdc++.so.5.0.1
