@@ -1,0 +1,7 @@
+MD5 c708377897cdaf408f2705d2bbd11fe6 ChangeLog 1784
+MD5 f07ddc87345da27685f28c49741de46f libwww-perl-5.64-r1.ebuild 856
+MD5 9fc2f32128b677e4697c81ecff0fb81b libwww-perl-5.64.ebuild 854
+MD5 fab6bad1ccc685fa19add470b26837e8 libwww-perl-5.68.ebuild 862
+MD5 a672dd749bc524ce5d83135e3a3bc987 files/digest-libwww-perl-5.64 68
+MD5 a672dd749bc524ce5d83135e3a3bc987 files/digest-libwww-perl-5.64-r1 68
+MD5 f462924c8fa6dc5e8b140245bf1a8d5e files/digest-libwww-perl-5.68 134
