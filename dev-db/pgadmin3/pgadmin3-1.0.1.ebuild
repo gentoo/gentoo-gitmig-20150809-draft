@@ -1,22 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.0.1.ebuild,v 1.1 2003/11/06 16:42:25 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.0.1.ebuild,v 1.2 2003/12/10 07:23:46 seemant Exp $
 
-DESCRIPTION="wxWindows GUI for PostgreSQL"
-
-HOMEPAGE="http://www.pgadmin.org/"
-SRC_URI="mirror://postgresql/pgadmin3/release/src/${P}.tar.gz"
-LICENSE="Artistic"
-
-SLOT="0"
-KEYWORDS="~x86"
 IUSE=""
 
-# Need 2.4.1-r1 for the extras in contrib
-DEPEND=">=wxGTK-2.4.1-r1
-	>=dev-db/postgresql-7.3"
-
 S=${WORKDIR}/${P}
+DESCRIPTION="wxWindows GUI for PostgreSQL"
+HOMEPAGE="http://www.pgadmin.org/"
+SRC_URI="mirror://postgresql/pgadmin3/release/src/${P}.tar.gz"
+
+SLOT="0"
+LICENSE="Artistic"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
+
+# Need 2.4.1-r1 for the extras in contrib
+DEPEND=">=wxGTK-2.4.1-r1"
+
 
 src_compile() {
 	econf || die
