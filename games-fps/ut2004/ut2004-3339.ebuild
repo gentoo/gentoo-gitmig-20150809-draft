@@ -1,21 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3323.ebuild,v 1.3 2004/11/17 18:59:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3339.ebuild,v 1.1 2004/11/24 13:21:35 wolf31o2 Exp $
 
 inherit games
 
 MY_P="${PN}-lnxpatch${PV}.tar.bz2"
-DESCRIPTION="Unreal Tournament 2004 - follow-up to the 2003  multi-player first-person shooter"
+MY_BP="${PN}-ecebonuspack.tar.bz2"
+DESCRIPTION="Unreal Tournament 2004 - Editor's Choice Edition"
 HOMEPAGE="http://www.unrealtournament2004.com/"
-SRC_URI="mirror://3dgamers/pub/3dgamers5/games/unrealtourn2k4/${MY_P}
+SRC_URI="mirror://3dgamers/pub/3dgamers7/games/unrealtourn2k4/${MY_P}
+	mirror://3dgamers/pub/3dgamers7/games/unrealtourn2k4/Missions/${MY_BP}
 	mirror://3dgamers/pub/3dgamers/games/unrealtourn2k4/${MY_P}
-	http://iadfillvip.xlontech.net/100083/games/unrealtourn2k4/${MY_P}
-	http://mirror1.icculus.org/${PN}/${MY_P}"
+	mirror://3dgamers/pub/3dgamers/games/unrealtourn2k4/Missions/${MY_BP}
+	http://mirror1.icculus.org/${PN}/${MY_P}
+	http://0day.icculus.org/${PN}/${MY_P}
+	http://speculum.twistedgamer.com/pub/0day.icculus.org/${PN}/${MY_P}"
 
 LICENSE="ut2003"
 SLOT="0"
 KEYWORDS="x86 amd64"
-RESTRICT="nostrip"
+RESTRICT="nostrip nomirror"
 IUSE="opengl dedicated"
 
 DEPEND="virtual/libc
@@ -36,15 +40,18 @@ pkg_setup() {
 	# a DVD or from multiple CDs.  Anyone feel free to submit patches to this
 	# to bugs.gentoo.org as I know it is a very ugly hack.
 	USE_DVD=
-	if [ -n "${CD_ROOT}" ]; then
+	if [ -n "${CD_ROOT}" ]
+	then
 		[ -d "${CD_ROOT}/CD1" ] && USE_DVD=1
 	else
 		local mline=""
-		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
+		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'`
+		do
 			[ -d "${mline}/CD1" ] && USE_DVD=1
 		done
 	fi
-	if [ ${USE_DVD} ]; then
+	if [ ${USE_DVD} ]
+	then
 		DISK1="CD1"
 		DISK2="CD2"
 		DISK3="CD3"
@@ -67,6 +74,7 @@ src_unpack() {
 	use x86 && tar -xf ${S}/linux-x86.tar
 	use amd64 && tar -xf ${S}/linux-amd64.tar
 	unpack ${MY_P}
+	unpack ${MY_BP}
 }
 
 src_install() {
@@ -102,7 +110,7 @@ src_install() {
 
 	#Disk 5
 	einfo "Copying files from Disk 5..."
-	cp -r ${CDROM_ROOT}/${DISK5}/{Music,Sounds} ${Ddir} \
+	cp -r ${CDROM_ROOT}/${DISK5}/{Music,Speech,Sounds} ${Ddir} \
 		|| die "copying files"
 	cdrom_load_next_cd
 
@@ -112,7 +120,8 @@ src_install() {
 		|| die "copying files"
 
 	# create empty files in Benchmark
-	for j in {CSVs,Logs,Results} ; do
+	for j in {CSVs,Logs,Results}
+	do
 		mkdir -p ${Ddir}/Benchmark/${j} || die "creating folders"
 		touch ${Ddir}/Benchmark/${j}/DO_NOT_DELETE.ME || die "creating files"
 	done
@@ -147,15 +156,24 @@ src_install() {
 
 	# uncompressing files
 	einfo "Uncompressing files... this *will* take a while..."
-	for j in {Animations,Maps,Sounds,StaticMeshes,Textures} ; do
+	for j in {Animations,Maps,Sounds,StaticMeshes,Textures}
+	do
 		chmod -R u+w ${Ddir}/${j} || die "chmod in uncompress"
 		games_ut_unpack ${Ddir}/${j} || die "uncompressing files"
 	done
 
+	# Installing Editor's Choice Edition
+	for n in {Animations,Help,Manual,Maps,Sounds,StaticMeshes,System,Textures}
+	do
+		cp -r ${S}/${PN}-ECEBonusPack/${n}/* ${Ddir}/${n} \
+			|| die "copying ${n} from Editor's Choice Edition"
+	done
+
 	# Installing patch files
-	for p in {Animations,Help,System,Textures,Web}; do
+	for p in {Animations,Help,Speech,System,Textures,Web}
+	do
 		cp -r ${S}/UT2004-Patch/${p}/* ${Ddir}/${p} \
-			|| die "copying ${p} from patch."
+			|| die "copying ${p} from patch"
 	done
 
 	use amd64 && rm ${Ddir}/System/u{cc,t2004}-bin \

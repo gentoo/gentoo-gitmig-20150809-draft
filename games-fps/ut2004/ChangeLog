@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.19 2004/11/17 18:59:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.20 2004/11/24 13:21:35 wolf31o2 Exp $
+
+*ut2004-3339 (24 Nov 2004)
+
+  24 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> -ut2004-3323.ebuild,
+  +ut2004-3339.ebuild:
+  Version bumped and added Editor's Choice Edition Bonus Pack.
 
   17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3323.ebuild:
   Removed calls to specific 3dgamers mirrors and changed to use
