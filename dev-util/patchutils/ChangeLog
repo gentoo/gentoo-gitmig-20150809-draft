@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.12 2003/12/29 03:22:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.13 2003/12/29 21:14:19 seemant Exp $
+
+*patchutils-0.2.25 (29 Dec 2003)
+
+  29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> patchutils-0.2.22.ebuild,
+  patchutils-0.2.23.ebuild, patchutils-0.2.25.ebuild:
+  version bump
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> patchutils-0.2.23.ebuild:
   Move to mips stable (~mips -> mips)
