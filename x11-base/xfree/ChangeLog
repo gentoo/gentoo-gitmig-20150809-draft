@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.44 2002/09/30 19:47:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.45 2002/10/11 18:53:34 azarah Exp $
+
+  11 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
+
+  Update Xrender and Xft (to 1.1).  Also now uses fontconfig.
 
   30 Sep 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
 

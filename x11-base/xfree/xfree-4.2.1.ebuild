@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.10 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.11 2002/10/11 18:53:34 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -10,11 +10,13 @@ filter-flags "-funroll-loops"
 
 PATCH_VER="1.0"
 FT2_VER="2.1.2"
+FC2_VER="2.0"
 SISDRV_VER="050902-2"
 
 BASE_PV="4.2.0"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
+S_XFT2="${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xft"
 DESCRIPTION="Xfree86: famous and free X server"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
@@ -48,13 +50,14 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	 ${SRC_PATH1}/X${MY_SV}src-2.tgz
 	 ${SRC_PATH1}/X${MY_SV}src-3.tgz
 	 mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
+	 http://fontconfig.org/release/fcpackage.${FC2_VER/\./_}.tar.gz
 	 ${X_PATCHES}
 	 ${X_DRIVERS}
 	 truetype? ( ${MS_FONT_URLS} )"
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -62,11 +65,18 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/zlib-1.1.3-r2
 	sys-devel/flex
 	sys-devel/perl
+	>=media-libs/fontconfig-2.0
+	>=media-libs/freetype-${FT2_VER}
+	>=x11-base/opengl-update-1.4
 	truetype? ( app-arch/cabextract )"
 #	3dfx? ( >=media-libs/glide-v3-3.10 )"
 	
 RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
+	>=sys-libs/pam-0.75
+	>=sys-libs/zlib-1.1.3-r2
+	>=media-libs/fontconfig-2.0
+	>=media-libs/freetype-${FT2_VER}
 	>=x11-base/opengl-update-1.4"
 
 PROVIDE="virtual/x11
@@ -77,13 +87,15 @@ src_unpack() {
 
 	unpack X${MY_SV}src-{1,2,3}.tgz \
 		freetype-${FT2_VER}.tar.bz2 \
-		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2 \
+		fcpackage.${FC2_VER/\./_}.tar.gz
 
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
 	# is distributed with XFree86.
+	einfo "Updating Freetype2..."
 	rm -rf ${S}/extras/freetype2
-	mv ${WORKDIR}/freetype-${FT2_VER} ${S}/extras/freetype2
+	mv ${WORKDIR}/freetype-${FT2_VER} ${S}/extras/freetype2 || die
 
 	# Install the glide3 headers for compiling the tdfx driver
 	if [ -n "`use 3dfx`" ]
@@ -154,6 +166,7 @@ src_unpack() {
 		#   50-59 - sparc stuff
 		#   60-69 - sparc64 stuff
 		#   70-79 - alpha stuff
+		#   80-89 - security stuff
 		#   90-?? - own stuff
 		#
 		# NOTE: can maybe thing about merging sparc and sparc64
@@ -215,6 +228,27 @@ src_unpack() {
 		echo "#define HasGlide3 YES" >> config/cf/host.def
 	fi
 
+	# Update Xft, thanks to the guys from Redhat for the initial
+	# idea and X11.tmpl patch...
+	cd ${S}
+	einfo "Updating Xft1..."
+	rm -rf ${S}/lib/Xft
+	mv ${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xft1 ${S}/lib/Xft || die
+	patch -p1 < ${FILESDIR}/XFree86-${PV}-Xft11-Imakefile.patch > /dev/null || die
+
+	einfo "Updating Xrender..."
+	cd ${S}; rm -rf ${S}/lib/Xrender
+	mv ${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xrender ${S}/lib/Xrender || die
+	# Get Xrender to also install its extension headers, as they need to
+	# be updated.
+	cp ${S}/lib/Xrender/Imakefile ${S}/lib/Xrender/Imakefile.orig
+	sed -e '2i NONSTANDARD_HEADERS = extutil.h region.h render.h renderproto.h' \
+		${S}/lib/Xrender/Imakefile.orig > ${S}/lib/Xrender/Imakefile
+
+	# Get Xft-1.1 to use Fontconfig
+	echo "#define UseFontconfig YES" >> config/cf/host.def
+	echo "#define HasFontconfig YES" >> config/cf/host.def
+
 	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
 #	cd ${S}/lib/Xft
 #	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
@@ -222,6 +256,7 @@ src_unpack() {
 
 src_compile() {
 
+	einfo "Building XFree86..."
 	emake World || die
 
 	if [ -n "`use nls`" ]
@@ -234,6 +269,7 @@ src_compile() {
 
 src_install() {
 
+	einfo "Installing XFree86..."
 	# gcc3 related fix.  Do this during install, so that our
 	# whole build will not be compiled without mmx instructions.
 	if [ "`gcc-version`" != "2.95" ] && [ "${ARCH}" = "x86" ]
@@ -255,20 +291,27 @@ src_install() {
 	fi
 
 	# Make sure user running xterm can only write to utmp.
-	chown root.utmp ${D}/usr/X11R6/bin/xterm
-	chmod 2755 ${D}/usr/X11R6/bin/xterm
+	fowners root.utmp /usr/X11R6/bin/xterm
+	fperms 2755 /usr/X11R6/bin/xterm
+
+	cd ${D}/usr/X11R6/include/X11/Xft
+	# Patch the Xft-1.1 headers to be more compadible with 1.0...
+	einfo "Fixing include/X11/Xft/Xft.h..."
+	patch -p3 < ${FILESDIR}/XFree86-${PV}-Xft11-hack.patch > /dev/null || die
 
 	# we zap the our CFLAGS in the host.def file, as hardcoded CFLAGS can
 	# mess up other things that use xmkmf
+	einfo "Fixing lib/X11/config/host.def..."
 	cp ${D}/usr/X11R6/lib/X11/config/host.def ${T}
-	awk '!/OptimizedCDebugFlags|GccWarningOptions/ {print $0}' \
+	awk '!/OptimizedCDebugFlags|OptimizedCplusplusDebugFlags|GccWarningOptions/ {print $0}' \
 		${T}/host.def > ${D}/usr/X11R6/lib/X11/config/host.def
 	# theoretically, /usr/X11R6/lib/X11/config is a possible candidate for
 	# config file management. If we find that people really worry about imake
 	# stuff, we may add it.  But for now, we leave the dir unprotected.
 
 	insinto /etc/X11
-	doins ${FILESDIR}/${PVR}/XftConfig
+	# We use fontconfig now ...
+	#doins ${FILESDIR}/${PVR}/XftConfig
 	dosym ../../../../etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
 	
 	# Install MS fonts.
@@ -405,6 +448,9 @@ pkg_postinst() {
 	# switch to the xfree implementation
 	if [ "${ROOT}" = "/" ]
 	then
+		einfo "Creating font cache..."
+		/usr/bin/fc-cache
+
 		# use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		/usr/sbin/opengl-update --use-old xfree
