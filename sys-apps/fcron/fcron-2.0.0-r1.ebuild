@@ -1,13 +1,14 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.2 2002/04/21 12:40:51 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.3 2002/05/04 17:28:32 bangert Exp $
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
 
 S=${WORKDIR}/${P}
 SRC_URI="http://fcron.free.fr/${P}.src.tar.gz"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
@@ -65,7 +66,7 @@ src_install() {
 	doins ${FILESDIR}/{fcron.allow,fcron.deny,fcron.conf}
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/fcron.rc6 fcron
-	
+
 	insinto /etc
 	doins ${FILESDIR}/crontab
 
@@ -74,11 +75,11 @@ src_install() {
 
 pkg_postinst() {
 
-    echo
-    einfo "To activate /etc/cron.{hourly|daily|weekly|montly} please run: "
-    einfo "crontab /etc/crontab"
-    echo
-    einfo "!!! That will replace root's current crontab !!!"
-    echo
-			
+	echo
+	einfo "To activate /etc/cron.{hourly|daily|weekly|montly} please run: "
+	einfo "crontab /etc/crontab"
+	echo
+	einfo "!!! That will replace root's current crontab !!!"
+	echo
+
 }
