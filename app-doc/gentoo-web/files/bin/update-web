@@ -1,5 +1,7 @@
 #!/bin/bash
 cd /usr/portage
+#allow group write and execute perms
+umask 022
 cvs update -dP
 cd /usr/local/httpd/htdocs
 /usr/sbin/pytext index.pyhtml > index.html
