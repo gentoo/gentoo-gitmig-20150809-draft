@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.48 2003/12/21 06:42:32 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.49 2003/12/21 06:45:59 iggy Exp $
+
+  21 Dec 2003; Brian Jackson <iggy@gentoo.org>
+  gentoo-sources-2.4.22-r2.ebuild:
+  oh yeah, also bumped to stable
 
 *gentoo-sources-2.4.22-r2 (21 Dec 2003)
 
