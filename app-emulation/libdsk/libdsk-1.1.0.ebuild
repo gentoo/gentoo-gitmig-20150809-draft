@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.1.0.ebuild,v 1.3 2003/12/24 17:59:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.1.0.ebuild,v 1.4 2004/02/20 06:08:34 mr_bones_ Exp $
 
 DESCRIPTION="Disk emulation library"
 HOMEPAGE="http://www.seasip.demon.co.uk/Unix/LibDsk/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mono-wine/mono-wine-20030318.ebuild,v 1.1 2003/12/06 08:30:55 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mono-wine/mono-wine-20030318.ebuild,v 1.2 2004/02/20 06:08:34 mr_bones_ Exp $
 
 DESCRIPTION="Wine for mono's System.Windows.Forms"
 HOMEPAGE="http://www.go-mono.com/winforms.html/"

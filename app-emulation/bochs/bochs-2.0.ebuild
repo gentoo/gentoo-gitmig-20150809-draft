@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.ebuild,v 1.3 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.ebuild,v 1.4 2004/02/20 06:01:34 mr_bones_ Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Bochs is a pc emulator.

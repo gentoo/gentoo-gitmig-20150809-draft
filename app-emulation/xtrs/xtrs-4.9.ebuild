@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.9 2003/09/04 00:59:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.10 2004/02/20 06:02:56 mr_bones_ Exp $
 
 DESCRIPTION="XTRS 4.9.0 - RadioShack TRS80 Emulator, inc. FreeWare ROM & LDOS Image"
 HOMEPAGE="http://www.tim-mann.org/trs80.html"
