@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.6 2005/03/15 22:14:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.7 2005/03/18 20:09:08 seemant Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -31,7 +31,7 @@ media-sound/teamspeak2-client-bin
 media-sound/teamspeak2-server-bin
 media-sound/ventrilo-server-bin
 net-im/skype
-www-client/opera
-net-www/mozilla-bin
-net-www/mozilla-firefox-bin
 sys-boot/grub
+www-client/opera
+www-client/mozilla-bin
+www-client/mozilla-firefox-bin

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.14 2005/03/08 23:58:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.15 2005/03/18 20:09:08 seemant Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -27,11 +27,10 @@
 <net-libs/courier-authlib-0.52
 <net-libs/liblockfile-1.03-r2
 <net-www/mozilla-1.7.5-r1
-<net-www/mozilla-firefox-1.0.1
 <sys-apps/dbus-0.23-r2
 <sys-apps/iproute2-2.6.10.20050112
 <sys-devel/flex-2.5.4a-r6
 <sys-devel/libperl-5.8.6
 <sys-libs/pam-0.77-r7
 <sys-libs/pwdb-0.62-r1
-
+<www-client/mozilla-firefox-1.0.1
