@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.36 2004/03/18 23:40:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.37 2004/03/20 17:22:30 wolf31o2 Exp $
+
+  20 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.0.5.6030-r1.ebuild,
+  vmware-workstation-4.5.1.7568.ebuild:
+  Bumping 4.5.1 to stable on x86 as it fixes several issues with gentoo-sources
+  and also with 2.6 kernels. Closing bug #37774.
 
 *vmware-workstation-4.5.1.7568 (18 Mar 2004)
 
