@@ -1,10 +1,42 @@
 # ChangeLog for dev-libs/openobex
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.13 2004/07/03 16:51:11 kugelfang Exp $
-
-*openobex-1.0.1 (03 Jul 2004)
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.14 2004/07/05 18:15:31 kugelfang Exp $
 
   03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/openobex-1.0.1-shared-object.patch, openobex-1.0.1.ebuild:
   Added a patch to produce a shared object as well.
 
+  18 Apr 2004; Jason Wever <weeve@gentoo.org> openobex-1.0.0.ebuild:
+  Stable on sparc.
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> openobex-0.9.8.ebuild,
+  openobex-1.0.0.ebuild, openobex-1.0.1.ebuild:
+  Don't assign default to S; header fix
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> openobex-1.0.1.ebuild:
+  Added to ~ppc.
+
+  12 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Adding ~sparc (works with some kernels, see bug #39710)
+
+  04 Nov 2003; Brandy Westcott brandy@gentoo.org openobex-1.0.1.ebuild:
+  Tidy up the ebuild: add LGPL-2.1 to LICENSE; install ChangeLog in docs;
+  compile using CFLAGS.
+
+*openobex-1.0.1 (01 Oct 2003)
+
+  01 Oct 2003; Markus Nigbur <pyrania@gentoo.org> openobex-1.0.1.ebuild:
+  Bumped, thanks to w.haas@xover.htu.tuwien.ac.at (bug #30081)
+
+*openobex-1.0.0 (12 Mar 2003)
+
+  12 Mar 2003; George Shapovalov <george@gentoo.org> openobex-1.0.0.ebuild :
+  new version (#16059), thanks to Patrik Kullman <patrik.kullman@netsafe.se> for submission
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*openobex-0.9.8 (14 may 2002)
+
+  14 May 2002; G.Shapovalov <george@gentoo.org> openobex-0.9.8.ebuild,files/digest-openobex-0.9.8 :
+  
+  initial release
