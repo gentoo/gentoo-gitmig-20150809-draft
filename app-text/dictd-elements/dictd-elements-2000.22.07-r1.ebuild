@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-elements/dictd-elements-2000.22.07-r1.ebuild,v 1.6 2002/08/16 02:42:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-elements/dictd-elements-2000.22.07-r1.ebuild,v 1.7 2002/10/04 05:03:48 vapier Exp $
 
 MY_P=elements-20001107-pre
 S=${WORKDIR}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901-r1.ebuild,v 1.5 2002/09/19 17:34:51 azarah Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901-r1.ebuild,v 1.6 2002/10/04 05:08:12 vapier Exp $
 
 TETEXSRC="teTeX-src-beta-${PV}.tar.gz"
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"

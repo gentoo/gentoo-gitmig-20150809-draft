@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
 # /space/gentoo/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.ebuild,v 1.1 2002/04/27 09:22:19 seemant Exp
 

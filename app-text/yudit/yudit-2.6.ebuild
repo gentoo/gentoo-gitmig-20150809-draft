@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.6.ebuild,v 1.5 2002/09/14 21:04:55 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.6.ebuild,v 1.6 2002/10/04 05:08:49 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yudit is a free (Y)unicode text editor for all unices"

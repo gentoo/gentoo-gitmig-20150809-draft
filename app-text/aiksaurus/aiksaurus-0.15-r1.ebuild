@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-0.15.ebuild,v 1.1 2002/05/31 17:54:03 danarmak Exp
 
 inherit flag-o-matic
