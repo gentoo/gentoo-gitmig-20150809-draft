@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.27 2004/09/02 20:17:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.28 2004/11/16 11:47:16 mr_bones_ Exp $
+
+*xmame-0.88 (16 Nov 2004)
+
+  16 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +xmame-0.88.ebuild:
+  version bump
 
   02 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.86.ebuild:
   Install chdman and xml2info in GAMES_LIBDIR

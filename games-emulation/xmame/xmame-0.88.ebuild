@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.86.ebuild,v 1.5 2004/11/16 11:47:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.88.ebuild,v 1.1 2004/11/16 11:47:16 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -21,6 +21,11 @@ RDEPEND="sys-libs/zlib
 	xv? ( virtual/x11 )
 	dga? ( virtual/x11 )
 	X? ( virtual/x11 )
+	opengl (
+		virtual/x11
+		virtual/opengl
+		virtual/glu )
+	expat? ( dev-libs/expat )
 	esd? ( >=media-sound/esound-0.2.29 )
 	svga? ( media-libs/svgalib )
 	ggi? ( media-libs/libggi )
@@ -45,19 +50,12 @@ toggle_feature2() {
 }
 
 src_unpack() {
+	local mycpu=
+
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PV}-glx-fix.patch"
 
-	#toggle_feature x86 X86_ASM_68020
-	toggle_feature x86 X86_ASM_68000
-	toggle_feature x86 X86_MIPS3_DRC
-	toggle_feature2 x86 mmx EFFECT_MMX_ASM
-	toggle_feature2 x86 joystick JOY_I386
-	toggle_feature2 ia64 joystick JOY_I386
-	toggle_feature2 amd64 joystick JOY_I386
-
-	local mycpu=""
 	case ${ARCH} in
 		x86)	mycpu="i386";;
 		ia64)	mycpu="ia64";;
@@ -68,9 +66,18 @@ src_unpack() {
 		alpha)	mycpu="alpha";;
 		mips)	mycpu="mips";;
 	esac
+
 	sed -i \
-		-e "/^MY_CPU/s:i386:${mycpu}:" Makefile \
-		|| die "sed Makefile (mycpu) failed"
+		-e '/^BUILD_EXPAT/s/^/#/' \
+		-e "/^PREFIX/s:=.*:=/usr:" \
+		-e "/^MY_CPU/s:i386:${mycpu}:" \
+		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
+		-e "/^MANDIR/s:=.*:=/usr/share/man/man6:" \
+		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
+		-e "/^TARGET/s:mame:${TARGET:1}:" \
+		-e "s:^CFLAGS =:CFLAGS=${CFLAGS}:" \
+		Makefile \
+		|| die "sed Makefile failed"
 
 	if use ppc ; then
 		sed -i \
@@ -78,17 +85,21 @@ src_unpack() {
 			|| die "sed Makefile (ppc/LD) failed"
 	fi
 
-	toggle_feature sdl JOY_SDL
-	#toggle_feature net XMAME_NET
-	use net && ewarn "Network support is currently (0.86) broken :("
+
+	#toggle_feature x86 X86_ASM_68020 # Broken
+	toggle_feature x86 X86_ASM_68000
+	toggle_feature x86 X86_MIPS3_DRC
+	toggle_feature2 x86 mmx EFFECT_MMX_ASM
+	toggle_feature joystick JOY_STANDARD
+	use net && ewarn "Network support is currently (${PV}) broken :("
+	#toggle_feature net XMAME_NET # Broken
 	toggle_feature esd SOUND_ESOUND
 	toggle_feature alsa SOUND_ALSA
-	#toggle_feature arts SOUND_ARTS
-	use arts && ewarn "ARTS support is currently (0.86) broken :("
-	toggle_feature sdl SOUND_SDL
+	toggle_feature arts SOUND_ARTS
 	toggle_feature dga X11_DGA
-	toggle_feature2 dga 3dfx TDFX_DGA_WORKAROUND
 	toggle_feature xv X11_XV
+	toggle_feature expat BUILD_EXPAT
+	toggle_feature opengl X11_OPENGL
 
 	case ${ARCH} in
 		x86|ia64|amd64)
@@ -106,15 +117,6 @@ src_unpack() {
 			;;
 	esac
 
-	sed -i \
-		-e "/^PREFIX/s:=.*:=/usr:" \
-		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
-		-e "/^MANDIR/s:=.*:=/usr/share/man/man6:" \
-		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
-		-e "/^TARGET/s:mame:${TARGET:1}:" \
-		-e "s:^CFLAGS =:CFLAGS=${CFLAGS}:" \
-		Makefile \
-		|| die "sed Makefile failed"
 	sed -i \
 		-e "s:[Xx]mame:${TARGET}:g" \
 		doc/*.6 \
@@ -135,15 +137,10 @@ src_compile() {
 		disp=1
 	fi
 	if use ggi ; then
-		#emake DISPLAY_METHOD=ggi || die "emake failed (ggi)"
-		#disp=1
-		ewarn "GGI support is currently (0.86) broken :("
-	fi
-	if use opengl ; then
-		emake DISPLAY_METHOD=xgl || die "emake failed (xgl)"
+		emake DISPLAY_METHOD=ggi || die "emake failed (ggi)"
 		disp=1
 	fi
-	if  [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
+	if  [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
 		emake DISPLAY_METHOD=x11 || die "emake failed (x11)"
 	fi
 }
@@ -168,15 +165,10 @@ src_install() {
 		disp=1
 	fi
 	if use ggi ; then
-		#make DISPLAY_METHOD=ggi install || die "install failed (ggi)"
-		#disp=1
-		ewarn "GGI support is currently (0.86) broken :("
-	fi
-	if use opengl ; then
-		make DISPLAY_METHOD=xgl install || die "install failed (xgl)"
+		make DISPLAY_METHOD=ggi install || die "install failed (ggi)"
 		disp=1
 	fi
-	if [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
+	if [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
 	exeinto "${GAMES_LIBDIR}/${PN}"
@@ -188,16 +180,14 @@ src_install() {
 		|| die "dodoc failed"
 	dohtml -r doc/* || die "dohtml failed"
 
-	if use opengl ; then
-		dosym "${TARGET}.xgl" "${GAMES_BINDIR}/${TARGET}"
-	elif [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
+	if [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
 		dosym "${TARGET}.x11" "${GAMES_BINDIR}/${TARGET}"
 	elif use sdl ; then
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"
 	elif use svga ; then
-		dosym ${TARGET}.svgalib ${GAMES_BINDIR}/${TARGET}
-	#elif use ggi ; then
-	#	dosym ${TARGET}.ggi ${GAMES_BINDIR}/${TARGET}
+		dosym ${TARGET}.svgalib "${GAMES_BINDIR}/${TARGET}"
+	elif use ggi ; then
+		dosym ${TARGET}.ggi "${GAMES_BINDIR}/${TARGET}"
 	fi
 	prepgamesdirs
 }
@@ -205,11 +195,10 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	einfo "Your available MAME binaries are: ${TARGET}"
-	if useq X || useq dga || useq xv ; then
+	if useq opengl || useq X || useq dga || useq xv ; then
 		einfo " ${TARGET}.x11"
 	fi
 	useq sdl    && einfo " ${TARGET}.SDL"
-	#useq ggi    && einfo " ${TARGET}.ggi"
+	useq ggi    && einfo " ${TARGET}.ggi"
 	useq svga   && einfo " ${TARGET}.svgalib"
-	useq opengl && einfo " ${TARGET}.xgl"
 }
