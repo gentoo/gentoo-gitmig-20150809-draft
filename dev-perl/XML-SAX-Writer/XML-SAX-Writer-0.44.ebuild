@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/XML-SAX-Writer-0.44.ebuild,v 1.3 2004/07/08 23:40:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/XML-SAX-Writer-0.44.ebuild,v 1.4 2004/07/13 23:38:08 aliz Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://search.cpan.org/~rberjon/${P}"
 SRC_TEST="do"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
 
 DEPEND="${DEPEND}
 	dev-perl/Text-Iconv
