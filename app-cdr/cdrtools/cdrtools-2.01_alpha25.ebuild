@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.9 2004/02/23 02:22:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.10 2004/03/11 01:08:10 pylon Exp $
 
 
 inherit eutils
@@ -34,6 +34,7 @@ src_unpack() {
 
 	cd ${S}/DEFAULTS
 	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux
+	sed -i -e "s:/usr/src/linux/include::g" Defaults.linux
 
 	cd ${S}/librscg
 	sed -i -e "s:/opt/schily:/usr:g" scsi-remote.c

@@ -1,20 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha20.ebuild,v 1.3 2004/01/07 03:25:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha26.ebuild,v 1.1 2004/03/11 01:08:11 pylon Exp $
+
 
 inherit eutils
 
-DOWNLOADFILENAME="cdrtools-2.01a20pre4"
-
-DVDR_PATCH_P="cdrtools-2.01a16-dvd.patch"
+DVDR_PATCH_P="cdrtools-2.01a26-dvd.patch"
 DESCRIPTION="A set of tools for CDR drives, including cdrecord."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${DOWNLOADFILENAME}.tar.gz
+SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
 	dvdr? ( http://people.mandrakesoft.com/~warly/files/cdrtools/archives/${DVDR_PATCH_P}.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~alpha ~amd64 ia64"
+KEYWORDS="~x86 ~ppc ~hppa ~sparc ~alpha ~amd64 ~ia64"
 IUSE="dvdr"
 
 DEPEND="virtual/glibc"
@@ -31,10 +30,11 @@ src_unpack() {
 	# <azarah@gentoo.org> (05 Feb 2003)
 	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
 
-	use dvdr && epatch ../${DVDR_PATCH_P}
+	use dvdr && epatch ${WORKDIR}/${DVDR_PATCH_P}
 
 	cd ${S}/DEFAULTS
 	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux
+	sed -i -e "s:/usr/src/linux/include::g" Defaults.linux
 
 	cd ${S}/librscg
 	sed -i -e "s:/opt/schily:/usr:g" scsi-remote.c
@@ -45,7 +45,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake CC="${CC} -D__attribute_const__=const" || die
 }
 
 src_install() {
