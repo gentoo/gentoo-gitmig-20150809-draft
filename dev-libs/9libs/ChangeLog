@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/9libs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.1 2003/03/11 08:30:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.2 2003/04/03 22:11:57 absinthe Exp $
+
+*9libs-1.0 (03 Apr 2003)
+
+  03 Apr 2003; Dylan Carlson <absinthe@gentoo.org> 9libs-1.0.ebuild:
+  x86 moved to stable.  added ~sparc ~ppc.
 
   10 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
 
