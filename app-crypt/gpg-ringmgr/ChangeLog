@@ -1,0 +1,8 @@
+# ChangeLog for app-crypt/gpg-ringmgr
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/ChangeLog,v 1.1 2003/05/06 06:51:56 robbat2 Exp $
+
+*gpg-ringmgr-1.12 (05 May 2003)
+
+  05 May 2003; Robin Johnson <robbat2@gentoo.org> gpg-ringmgr-1.12.ebuild:
+  Initial import. Ebuild submitted by Robin Johnson <robbat2@gentoo.org>.
