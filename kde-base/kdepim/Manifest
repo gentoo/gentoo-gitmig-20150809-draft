@@ -2,10 +2,10 @@ MD5 4751745a8b86f71da96e2a6c3e2b9c2e kdepim-3.1.2.ebuild 750
 MD5 692b11ee455064b79eea0cd9049a7f18 kdepim-3.0.4.ebuild 570
 MD5 0ccc813c4ce7f64382df7934588aac20 kdepim-2.2.2-r1.ebuild 702
 MD5 2c9781679b00dcced358a4830c9a2a83 kdepim-3.1.1.ebuild 749
-MD5 5b91b927fb47dd750a542d3c1bc27a1d kdepim-3.1.3.ebuild 1027
+MD5 3a3dbe5db6a73ace8bc7fcd60146c051 kdepim-3.1.3.ebuild 951
 MD5 5b91b927fb47dd750a542d3c1bc27a1d kdepim-3.1.2-r1.ebuild 1027
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 4aa5addfc79addd6fcb2184bc3c37f0d ChangeLog 5342
+MD5 d4d90c0ee067f806a4b97b8f5a16d834 ChangeLog 5460
 MD5 f2337fbab2837895bceddb367beb9a85 kdepim-3.0.5b.ebuild 579
 MD5 d833726815dce86df6d79630ceeecfdc files/digest-kdepim-3.0.5b 67
 MD5 25b7171189f4ffbf21eb256a43758295 files/digest-kdepim-2.2.2-r1 66
