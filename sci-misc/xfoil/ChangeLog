@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/xfoil
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/ChangeLog,v 1.2 2004/12/28 03:45:54 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/ChangeLog,v 1.3 2005/02/02 17:47:40 kugelfang Exp $
+
+  02 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> xfoil-6.94-r1.ebuild,
+  xfoil-6.94.ebuild:
+  Changed to use eclasses "toolchain-funcs" and "fortran" instead of "gcc".
 
 *xfoil-6.94-r1 (27 Dec 2004)
 
