@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/linkchecker
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.8 2004/11/24 05:21:49 kingtaco Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.9 2005/02/09 15:28:54 ka0ttic Exp $
+
+*linkchecker-2.4 (09 Feb 2005)
+
+  09 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  -linkchecker-1.12.0.ebuild, linkchecker-1.12.1.ebuild,
+  +linkchecker-2.4.ebuild:
+  Version bump; also fixed man page perms for bug 62647.
 
   23 Nov 2004; Mike Doty <kingtaco@gentoo.org> linkchecker-1.12.1.ebuild:
   ~amd64 keyword added
