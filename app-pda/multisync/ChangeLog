@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.14 2004/08/17 13:35:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.15 2004/10/01 23:39:32 humpback Exp $
+
+  02 Oct 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/multisync-0.82-bluetooth-sdp-2.patch, multisync-0.82.ebuild:
+  Adding missing patch for -lsdp bug #63743
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org> multisync-0.81.ebuild:
   Fix USE test in DEPEND.  Should be !gtk2? instead of plain !gtk2

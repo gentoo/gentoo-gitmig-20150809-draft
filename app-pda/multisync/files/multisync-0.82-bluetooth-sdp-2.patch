@@ -1,0 +1,11 @@
+--- plugins/irmc_sync/src/Makefile.in.org       2004-08-21 23:57:13.647919824 +0200
++++ plugins/irmc_sync/src/Makefile.in   2004-08-21 23:57:31.073270768 +0200
+@@ -109,7 +109,7 @@
+        irmc_bluetooth.c irmc_bluetooth.h
+
+
+-libirmc_bluetooth_la_LIBADD = -lbluetooth -lsdp -lpthread
++libirmc_bluetooth_la_LIBADD = -lbluetooth -lpthread
+
+ libirmc_sync_la_SOURCES = \
+        interface.c interface.h \

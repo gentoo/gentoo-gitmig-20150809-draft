@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.82.ebuild,v 1.6 2004/09/21 23:35:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.82.ebuild,v 1.7 2004/10/01 23:39:32 humpback Exp $
 
 inherit eutils
 
@@ -49,7 +49,9 @@ src_unpack() {
 	# Fix the opie Makefile
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.81-gentoo.patch
+	# Fix for sdp lib bug #63743
 	epatch ${FILESDIR}/${PN}-0.82-bluetooth-sdp.patch
+	epatch ${FILESDIR}/${PN}-0.82-bluetooth-sdp-2.patch
 }
 
 src_compile() {
