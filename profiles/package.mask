@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3772 2005/03/29 11:55:09 mrness Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3773 2005/03/29 23:45:12 avenj Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
+# 2.21 introduces more severe bugs than it fixes. See bug 87091.
+=net-dns/dnsmasq-2.21
 
 # John N. Laliberte <allanonjl@gentoo.org (26 Mar 2005)
 # masked in anticipation of tree removal
