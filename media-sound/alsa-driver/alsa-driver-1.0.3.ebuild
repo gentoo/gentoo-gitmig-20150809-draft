@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.3.ebuild,v 1.1 2004/03/01 08:53:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.3.ebuild,v 1.2 2004/03/24 03:42:56 eradicator Exp $
+
+inherit eutils kernel-mod
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -13,25 +15,25 @@ LICENSE="GPL-2 LGPL-2.1"
 #
 #   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
 #
-[ x"${ALSA_CARDS}" = x ] && ALSA_CARDS=all
+[ -z "${ALSA_CARDS}" ] && ALSA_CARDS=all
 
 IUSE="oss"
 
-# Need the baselayout 1.7.9 or newer for the init script to work correctly.
-DEPEND="sys-devel/autoconf
-	virtual/glibc
+RDEPEND="virtual/modutils"
+
+DEPEND="${RDEPEND}
 	virtual/linux-sources
-	>=sys-apps/portage-1.9.10
-	>=sys-apps/baselayout-1.7.9"
+	sys-devel/autoconf
+	sys-apps/debianutils"
+
 PROVIDE="virtual/alsa"
 
 SLOT="${KV}"
 KEYWORDS="~x86 ~ppc -sparc ~amd64 ~alpha ~ia64"
 
 MY_P=${P/_rc/rc}
-#SRC_URI="ftp://ftp.alsa-project.org/pub/driver/${MY_P}.tar.bz2"
 SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="nomirror" # nouserpriv is neccessary for 2.6.x kernels... Hopefully the ALSA guys will figure out another way to do this...
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
@@ -42,28 +44,45 @@ src_unpack() {
 	# This patch stops that
 	epatch ${FILESDIR}/makefile.patch || die "Makefile patch failed"
 	epatch ${FILESDIR}/${PN}-0.9.8-au-fix.patch
+
+	if kernel-mod_is_2_6_kernel || kernel-mod_is_2_5_kernel; then
+		FULL_KERNEL_PATH="${ROOT}/usr/src/${KV_DIR}"
+
+		if ! [ -d "${FULL_KERNEL_PATH}" ]; then
+			eerror "An error seems to have occurred.  We looked in ${FULL_KERNEL_PATH} for your kernel sources, but we didn't see them."
+			die "ALSA driver configuration failure."
+		fi
+
+		einfo "A 2.5 or 2.6 kernel was detected.  We are copying the kernel source tree from"
+		einfo "${FULL_KERNEL_PATH} to ${T}/linux"
+		einfo "because the alsa-driver build process overwrites files in the 2.6.x kernel tree."
+
+		# Copy everything over to our tmp dir...
+		cp -a ${FULL_KERNEL_PATH} ${T}/linux
+	fi
 }
 
-
 src_compile() {
-	# Portage should determine the version of the kernel sources
-	check_KV
+	# Default ARCH & kernel path to set in compilation and make
+	KER_ARCH=${ARCH}
+	KER_DIR=${KERNEL_DIR}
 
-	myconf=""
-	use oss && myconf="$myconf --with-oss=yes" || \
-		myconf="$myconf --with-oss=no"
+	# If we're using a 2.5 or 2.6 kernel, use our copied kernel tree.
+	if [ -d "${T}/linux" ]; then
+		KER_DIR="${T}/linux"
 
-	./configure \
-		$myconf \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--with-kernel="${ROOT}usr/src/linux" \
+		# Set the kernel ARCH
+		use x86 && KER_ARCH="i386"
+		use amd64 && KER_ARCH="x86_64"
+	fi
+
+	econf `use_with oss` \
+		--with-kernel="${KER_DIR}" \
 		--with-isapnp=yes \
 		--with-sequencer=yes \
-		--with-cards="${ALSA_CARDS}" \
-		|| die "./configure failed"
+		--with-cards="${ALSA_CARDS}"
 
-	emake || die "Parallel Make Failed"
+	emake ARCH="${KER_ARCH}" || die "Parallel Make Failed"
 }
 
 
@@ -87,7 +106,7 @@ pkg_postinst() {
 	einfo "Also, remember that all mixer channels will be MUTED by default."
 	einfo "Use the 'alsamixer' program to unmute them."
 	einfo
-	einfo "Version 1.0.2c and above should work with version 2.6 kernels."
+	einfo "Version 1.0.3 and above should work with version 2.6 kernels."
 	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
 	einfo
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.0_rc2.ebuild,v 1.5 2004/02/15 08:22:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.0_rc2.ebuild,v 1.6 2004/03/24 03:42:56 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -38,7 +38,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	ewarn "This does not work with kernel 2.6 !!!"
-	ewarn "Please use the kernel modules or alsa-driver-1.0.2c or greater"
+	ewarn "Please use the kernel modules or alsa-driver-1.0.3 or greater"
 	# The makefile still installs an alsasound initscript,
 	# which we REALLY dont want.
 	# This patch stops that
