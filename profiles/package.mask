@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2683 2004/02/07 05:02:44 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2684 2004/02/07 21:13:52 iggy Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <iggy@gentoo.org> (07 Feb 2004
+# testing stuff, don't use unless I told you to
+sys-kernel/gentoo-test-sources
 
 # <solar@gentoo.org> (06 Feb 2004)
 # RealOne/RealPlayer 8 vulnerabilities bug #40469
@@ -210,14 +214,6 @@ app-portage/kportage
 <=net-www/jboss-3.2.1-r1
 # bug #34599
 <app-misc/screen-4.0.1-r1
-
-# <iggy@gentoo.org> (02 Dec 2003)
-# preparing to drop
-sys-kernel/rsbac-sources
-
-# <iggy@gentoo.org> (02 Dec 2003)
-# unmaintained upstream, I'll add pac instead
-sys-kernel/ac-sources
 
 # <genone@gentoo.org> (30 Nov 2003)
 # Service is down, current versions won't work with the new service
