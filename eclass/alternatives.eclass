@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.4 2003/11/01 17:35:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.5 2003/11/01 17:39:11 liquidx Exp $
 
 # Author :     Alastair Tse <liquidx@gentoo.org> (03 Oct 2003)
 # Short Desc:  Creates symlink to the latest version of multiple slotted
@@ -47,28 +47,25 @@ INHERITED="$INHERITED $ECLASS"
 
 # automatic deduction based on a symlink and a regex mask
 alternatives_auto_makesym() {
-	local SYMLINK REGEX ALT myregex
-	SYMLINK=$1
+	local SOURCE REGEX ALT
+	local unsorted
+	SOURCE=$1
 	REGEX=$2
-	if [ "${REGEX:0:1}" != "/" ] 
-	then
-		#not an absolute path:
-		#inherit the root directory of our main link path for our regex search
-		myregex="${SYMLINK%/*}/${REGEX}"
+
+	ALT="`ls -1 --color=never ${ROOT}${REGEX} | sed -e "s:^${ROOT}::" | sort -r | xargs`"
+	if [ -n "${ALT}" ]; then
+		alternatives_makesym ${SOURCE} ${ALT}
 	else
-		myregex=${REGEX}
-	fi
-	ALT="`echo ${myregex} | sort -r`"
-	alternatives_makesym ${SYMLINK} ${ALT}
+		eerror "regex ${REGEX} doesn't match any files."
+	fi		
 }
 
 alternatives_makesym() {
 	local ALTERNATIVES=""
-	local SYMLINK=""
-	local alt pref
+	local SOURCE=""
+	
 	# usage: alternatives_makesym <resulting symlink> [alternative targets..]
-	SYMLINK=$1
-	pref=${ROOT:0:${#ROOT}-1}
+	SOURCE=$1
 	shift
 	ALTERNATIVES=$@
 
@@ -76,32 +73,23 @@ alternatives_makesym() {
 	# and if one exists, link it and finish.
 	
 	for alt in ${ALTERNATIVES}; do
-		if [ -f "${pref}${alt}" ]; then
-			einfo "Linking ${alt} to ${pref}${SYMLINK}"
-			[ -L "${pref}${SYMLINK}" ] && rm -f ${pref}${SYMLINK}
-			#are files in same directory?
-			if [ "${alt%/*}" = "${SYMLINK%/*}" ]
-			then
-				#yes; strip leading dirname from alt to create relative symlink
-				ln -s ${alt##*/} ${pref}${SYMLINK}
-			else
-				#no; keep absolute path
-				ln -s ${pref}${alt} ${pref}${SYMLINK}
+		if [ -f "${ROOT}${alt}" ]; then
+			if [ -L "${ROOT}${SOURCE}" ]; then
+				rm -f ${ROOT}${SOURCE}
 			fi
+			einfo "Linking ${alt} to ${SOURCE}"
+			# we do this instead of ${ROOT}${SOURCE} because if
+			# ROOT=/, then a symlink to //usr/bin/python confuses distutils
+			cd ${ROOT}; ln -s ${alt} ${SOURCE}
 			break
 		fi
 	done
 	
 	# report any errors
-	if [ ! -L ${pref}${SYMLINK} ]; then
-		ewarn "Unable to establish ${pref}${SYMLINK} symlink"
-	else
-		# we need to check for either the target being in relative path form
-		# or absolute path form
-		if [ ! -f "`dirname ${pref}${SYMLINK}`/`readlink ${pref}${SYMLINK}`" -a \
-			 ! -f "`readlink ${pref}${SYMLINK}`" ]; then
-			ewarn "${pref}${SYMLINK} is a dead symlink."
-		fi
+	if [ ! -L ${ROOT}${SOURCE} ]; then
+		ewarn "Unable to establish ${SOURCE} symlink"
+	elif [ ! -f "`readlink ${ROOT}${SOURCE}`" -a ! -f "${ROOT}`readlink ${ROOT}${SOURE}`" ]; then
+		ewarn "${SOURCE} is a dead symlink."
 	fi		
 }		
 
