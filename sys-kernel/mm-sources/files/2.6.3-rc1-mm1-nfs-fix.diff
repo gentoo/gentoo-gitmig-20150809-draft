@@ -1,0 +1,17 @@
+--- 25/net/sunrpc/svcauth.c~nfsd-02-sunrpc-cache-init-fixes	Mon Feb  9 14:04:03 2004
++++ 25-akpm/net/sunrpc/svcauth.c	Mon Feb  9 14:06:26 2004
+@@ -150,7 +150,13 @@ DefineCacheLookup(struct auth_domain,
+ 		  &auth_domain_cache,
+ 		  auth_domain_hash(item),
+ 		  auth_domain_match(tmp, item),
+-		  kfree(new); if(!set) return NULL;
++		  kfree(new); if(!set) {
++			if (new)
++				write_unlock(&auth_domain_cache.hash_lock);
++			else
++				read_unlock(&auth_domain_cache.hash_lock);
++			return NULL;
++		  }
+ 		  new=item; atomic_inc(&new->h.refcnt),
+ 		  /* no update */,
+ 		  0 /* no inplace updates */

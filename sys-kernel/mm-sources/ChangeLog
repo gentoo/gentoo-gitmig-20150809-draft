@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.120 2004/02/06 18:02:11 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.121 2004/02/10 01:54:31 latexer Exp $
+
+*mm-sources-2.6.3_rc1-r1 (09 Feb 2004)
+
+  09 Feb 2004; Peter Johanson <latexer@gentoo.org>
+  mm-sources-2.6.3_rc1-r1.ebuild, files/2.6.3-rc1-mm1-nfs-fix.diff:
+  Bump. Added a late patch from Andrew Morton to fix NFS stuff
+  (http://lkml.org/lkml/2004/2/9/209).
 
 *mm-sources-2.6.2-r1 (06 Feb 2004)
 
