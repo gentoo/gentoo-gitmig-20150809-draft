@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.7 2004/04/27 21:54:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.8 2004/06/15 06:55:23 solar Exp $
 
 inherit gnuconfig eutils
 
-IUSE="ssl nls static ipv6 debug socks5"
+IUSE="ssl nls static ipv6 debug socks5 uclibc"
 
 PATCHVER=0.1
 DESCRIPTION="Network utility to retrieve files from the WWW"
@@ -24,6 +24,7 @@ DEPEND="nls? ( sys-devel/gettext )
 src_unpack() {
 	unpack ${P}.tar.gz
 	epatch ${DISTDIR}/${P}+ipvmisc-${PATCHVER}.patch
+	epatch ${FILESDIR}/${P}-uclibc.patch
 }
 
 src_compile() {
