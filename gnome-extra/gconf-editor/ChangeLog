@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.13 2003/08/04 18:25:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.14 2003/08/12 22:25:41 weeve Exp $
+
+  12 Aug 2003; Jason Wever <weeve@gentoo.org> gconf-editor-0.4.1.ebuild:
+  Changed ~sparc keyword to sparc.
 
 *gconf-editor-0.4.1 (09 Jun 2003)
 
