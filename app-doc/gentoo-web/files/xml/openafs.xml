@@ -25,10 +25,13 @@ This guide shows you how to install a openafs server and client on gentoo linux
   <section>
     <title>What is AFS ?</title>
     <body>
+    
     <p>
     AFS is a distributed filesystem that enables co-operating hosts
    (clients and servers) to efficiently share filesystem resources
-   across both local area and wide area networks.
+   across both local area and wide area networks. Clients hold a 
+   cache for often used objects (files), to get quicker
+   access to them.
    </p>
    <p>
    AFS is based on a distributed file system originally developed
@@ -48,12 +51,14 @@ This guide shows you how to install a openafs server and client on gentoo linux
     <title>What is an AFS cell ?</title>
     <body>
     <p>An AFS cell is a collection of servers grouped together administratively
-    and presenting a single, cohesive filesystem.  Typically, an AFS cell is a set of hosts that use the same Internet domain name. 
-
-   Normally, a variation of the domain name is used as the AFS cell name.
-
-   Users log into AFS client workstations which request information and files
-   from the cell's servers on behalf of the users.
+    and presenting a single, cohesive filesystem.  Typically, an AFS cell is a set of 
+    hosts that use the same Internet domain name (like for example gentoo.org)
+    Users log into AFS client workstations which request information and files
+    from the cell's servers on behalf of the users. Users won't know on which server
+    a file which they are accessing, is located. They even won't notice if a server
+    will be located to another room, since every volume can be replicated and moved
+    to another server without user an user noticing. The files are always accessable.
+    Well it's like NFS on steroids :) 
    </p>
     </body>
   </section>  
@@ -62,10 +67,10 @@ This guide shows you how to install a openafs server and client on gentoo linux
     <body>
     <p>The main strengths of AFS are its:
  
-       caching facility,
-       security features,
-       simplicity of addressing,
-       scalability,
+       caching facility (on client side, typically 100M to 1GB),
+       security features (Kerberos 4 based, access control lists),
+       simplicity of addressing (you just have one filesystem),
+       scalability (add further servers to your cell as needed),
        communications protocol. 
     </p>
     </body>
@@ -95,12 +100,13 @@ This guide shows you how to install a openafs server and client on gentoo linux
     <title>Getting AFS Documentation</title>
     <body>
     <p>
-    You can get the original IBM AFS Documentation. It is very well written and you really should 
-    read it if you want to administer a AFS Server.
+    You can get the original IBM AFS Documentation. It is very well written and you 
+    really want 
+    read it if it is up to you to administer a AFS Server.
     </p>
     <pre>
-    # <c>cd /usr/portage/app-doc/afsdoc/afsdoc-3.6-r1.ebuild</c>
-    # <c>emerge afsdoc-3.6-r1.ebuild</c>
+    # <i>cd /usr/portage/app-doc/afsdoc/afsdoc-3.6-r1.ebuild</i>
+    # <i>emerge afsdoc-3.6-r1.ebuild</i>
     </pre>
     </body>   
   </section>
@@ -112,11 +118,18 @@ This guide shows you how to install a openafs server and client on gentoo linux
      <title>Preliminary Work</title>
      <body>
        <note>
-         Unfortunately the AFS Client needs a ext2 partiton for it's cache to run correctly. You need to create a ext2
-	 partition of approx. 200MB and mount it to <path>/usr/vice/cache</path>
+         All commands should be written in on line !! In this document they are
+	 sometimes wrapped to two lines to make them easier to read.
+       </note>
+       <note>
+         Unfortunately the AFS Client needs a ext2 partiton for it's cache to run 
+	 correctly, because there are some locking issues with reiserfs. You need to 
+	 create a ext2 partition of approx. 200MB (more won't hurt) and mount it to 
+	 <path>/usr/vice/cache</path>
        </note>
        <p>
-       You should adjust the two files CellServDB ans ThisCell before you build the afs client.
+       You should adjust the two files CellServDB ans ThisCell before you build the 
+       afs client. (These files are in <path>/usr/portage/net-fs/openafs/files</path>)
        </p>
        <pre>
        CellServDB:
@@ -127,8 +140,10 @@ This guide shows you how to install a openafs server and client on gentoo linux
        netlabs       
        </pre>
        <p>
-       CellServDB tells your client which servers he needs to contact for a specific cell. 
-       ThisCell should be quite obvious.
+       CellServDB tells your client which server(s) he needs to contact for a 
+       specific cell. ThisCell should be quite obvious. Normally you use a name
+       which is unique for your organisation. Your (official) domain might be a
+       good choice. 
        </p>
      </body>
    </section>
@@ -136,8 +151,8 @@ This guide shows you how to install a openafs server and client on gentoo linux
      <title>Building the Client</title>
      <body>
        <pre>
-       # <c>cd /usr/portage/net-fs/openafs</c>
-       # <c>emerge openafs-xxx.ebuild</c>
+       # <i>cd /usr/portage/net-fs/openafs</i>
+       # <i>emerge openafs-xxx.ebuild</i>
        </pre>
        <p>
        After successfull compilation you're ready to go.
@@ -147,8 +162,16 @@ This guide shows you how to install a openafs server and client on gentoo linux
    <section>
      <title>Starting afs on startup</title>
      <body>
+       <p>
+       The following command will create the appropriate links to start your afs client
+       on system startup.
+       </p>
+       <warn>
+       You should always have a running afs server in your domain when trying to start the afs client. You're system won't boot
+       until it gets some timeout if your afs server is down. (and this is quite a long long time)
+       </warn>
        <pre>
-       # <c>rc-update add afs</c>
+       # <i>rc-update add afs</i>
        Adding afs to runlevel 3 4
        </pre>
      </body>
@@ -161,11 +184,12 @@ This guide shows you how to install a openafs server and client on gentoo linux
      <title>Building the Server</title>
      <body>
        <p>
-       The follwing command will install all necessary binaries for settung up a AFS Server and Client
+       The follwing command will install all necessary binaries for setting up a AFS Server 
+       <i>and</i> Client
        </p>
        <pre>
-       # <c>cd /usr/portage/net-fs/openafs</c>
-       # <c>emerge openafs-xxx.ebuild</c>
+       # <i>cd /usr/portage/net-fs/openafs</i>
+       # <i>emerge openafs-xxx.ebuild</i>
        </pre>
      </body>
    </section>
@@ -176,29 +200,32 @@ This guide shows you how to install a openafs server and client on gentoo linux
       You need to remove the sample CellServDB and ThisCell file first.
       </p>
       <pre>
-      # <c>rm /usr/vice/etc/ThisCell</c>
-      # <c>rm /usr/vice/etc/CellServDB</c>
+      # <i>rm /usr/vice/etc/ThisCell</i>
+      # <i>rm /usr/vice/etc/CellServDB</i>
       </pre>
       <p>
-      Next you will issue the <b>bosserver</b> command to initialize the Basic OverSeer (BOS) Server,
-      which monitors and controls other AFS server processe on its server machine. Include the <b>-noauth</b>
-      flag to disable authorization checking.
+      Next you will run the <b>bosserver</b> command to initialize the Basic OverSeer (BOS) 
+      Server, which monitors and controls other AFS server processes on its server 
+      machine. Think of it as init for the system. Include the <b>-noauth</b>
+      flag to disable authorization checking, since you haven't added the admin user yet.
       </p>
       <p>
       <warn>
-      Disabling authorization checking gravely compromises cell security. You must complete all subsequent steps
-      in one uninterrupted pass and must not leave the machine unattended until you restart the BOS Server with
-      authorization checking enabled.
+      Disabling authorization checking gravely compromises cell security. 
+      You must complete all subsequent steps in one uninterrupted pass 
+      and must not leave the machine unattended until you restart the BOS Server with
+      authorization checking enabled. Well this is what the AFS documentation says :)
       </warn>
       </p>
       <pre>
-      # <c>/usr/afs/bin/bosserver -noauth &amp;</c>
+      # <i>/usr/afs/bin/bosserver -noauth &amp;</i>
       </pre>
       <p>
-      Verify that the BOS Server created <path>/usr/vice/etc/CellServDB</path> and <path>/usr/vice/etc/ThisCell</path>
+      Verify that the BOS Server created <path>/usr/vice/etc/CellServDB</path> 
+      and <path>/usr/vice/etc/ThisCell</path>
       </p>
       <pre>
-      # <c>ls -al /usr/vice/etc/</c>
+      # <i>ls -al /usr/vice/etc/</i>
       -rw-r--r--    1 root     root           41 Jun  4 22:21 CellServDB
       -rw-r--r--    1 root     root            7 Jun  4 22:21 ThisCell
       </pre>
@@ -212,34 +239,42 @@ This guide shows you how to install a openafs server and client on gentoo linux
       Now assign your cells name. 
       </p>
       <p>      
-      <impo>There are some restrictions on the name format. Two of the most important restrictions are that the name
-      cannot include uppercase letters or more than 64 characters</impo>
+      <impo>There are some restrictions on the name format. 
+      Two of the most important restrictions are that the name
+      cannot include uppercase letters or more than 64 characters. Remember that
+      your cell name will show up under <path>/afs</path>, so you might want to choose
+      a short one.</impo>
       </p>
       <p>
-      <note>In the following and every instruction in this guide, for the <i>server name</i> argument substitute the
-      full-qualified hostname (such as <b>afs.gentoo.org</b>) of the machine you are installing. For the <i>cell name</i>
+      <note>In the following and every instruction in this guide, for the <i>&lt;server name&gt;</i> 
+      argument substitute the full-qualified hostname 
+      (such as <b>afs.gentoo.org</b>) of the machine you are installing. 
+      For the <i>&lt;cell name&gt;</i>
       argument substitute your cell's complete name (such as <b>gentoo</b>)</note>
       </p>
       <p>
-      Issue the <b>bos setcellname</b> command to set the cell name:
+      Run the <b>bos setcellname</b> command to set the cell name:
       </p>
       <pre>
-        # <c>/usr/afs/bin/bos setcellname server name cell name -noauth</c>
+        # <i>/usr/afs/bin/bos setcellname &lt;server name&gt; &lt;cell name&gt; -noauth</i>
       </pre>      
     </body>
   </section>
   <section>
     <title>Starting the Database Server Process</title>
     <body><p>
-       Next use the <b>bos create</b> command to create entries for the four database server processes in the
-       <path>/usr/afs/local/BosConfig</path> file an start them running. The four processes run on database server
-       machines only.
+       Next use the <b>bos create</b> command to create entries for the four database 
+       server processes in the
+       <path>/usr/afs/local/BosConfig</path> file. The four processes run on database 
+       server machines only.
        </p>
        <p>
        <table>
        <tr>
          <ti>kaserver</ti>
-	 <ti>The Authentification Server maintains the Authentification Database</ti>
+	 <ti>The Authentification Server maintains the Authentification Database.
+	     This can be replaced by a Kerberos 5 daemon. If anybody want's to try that
+	     feel free to update this document :)</ti>
        </tr>
        <tr>
          <ti>buserver</ti>
@@ -251,21 +286,26 @@ This guide shows you how to install a openafs server and client on gentoo linux
        </tr>
        <tr>
          <ti>vlserver</ti>
-	 <ti>The Volume Location Server maintains the Volume Location Databse (VLDB)</ti>
+	 <ti>The Volume Location Server maintains the Volume Location Database (VLDB).
+	     Very important :)</ti>
        </tr>
        </table>    
        </p>
        <pre>
-        # <c>/usr/afs/bin/bos create &lt;server name&gt; kaserver simple /usr/afs/bin/kaserver -cell &lt;cell name&gt; -noauth</c>
-	 # <c>/usr/afs/bin/bos create &lt;server name&gt; buserver simple /usr/afs/bin/buserver -cell &lt;cell name&gt; -noauth</c>
-	 # <c>/usr/afs/bin/bos create &lt;server name&gt; ptserver simple /usr/afs/bin/ptserver -cell &lt;cell name&gt; -noauth</c>
-	 # <c>/usr/afs/bin/bos create &lt;server name&gt; vlserver simple /usr/afs/bin/vlserver -cell &lt;cell name&gt; -noauth</c>
+        # <i>/usr/afs/bin/bos create &lt;server name&gt; kaserver simple 
+	                   /usr/afs/bin/kaserver -cell &lt;cell name&gt; -noauth</i>
+	# <i>/usr/afs/bin/bos create &lt;server name&gt; buserver simple 
+	                   /usr/afs/bin/buserver -cell &lt;cell name&gt; -noauth</i>
+	# <i>/usr/afs/bin/bos create &lt;server name&gt; ptserver simple 
+	                   /usr/afs/bin/ptserver -cell &lt;cell name&gt; -noauth</i>
+	# <i>/usr/afs/bin/bos create &lt;server name&gt; vlserver simple 
+	                   /usr/afs/bin/vlserver -cell &lt;cell name&gt; -noauth</i>
        </pre>
        <p>
-       You can verify that all servers are running with the <b>bos staus</b> command:
+       You can verify that all servers are running with the <b>bos status</b> command:
        </p>
        <pre>
-        # <c>/usr/afs/bin/bos status storage -noauth</c>
+        # <i>/usr/afs/bin/bos status &lt;server name&gt; -noauth</i>
         Instance kaserver, currently running normally.
         Instance buserver, currently running normally.
         Instance ptserver, currently running normally.
@@ -278,24 +318,28 @@ This guide shows you how to install a openafs server and client on gentoo linux
     <title>Initializing Cell Security</title>
     <body>
       <p>
-      Now initialize the cell's security mechanisms. Begin by creating the following two initial entries in the
-      Authentification Database: A generic administrative account, called <b>admin</b> by convention and an entry for
-      the AFS server processes, called <b>afs</b>. No user logs in unde the identity <b>afs</b>, but the Authentication
-      Server's Ticket Granting Service (TGS) module uses the associated key to encrypt the server tickets that it
-      grants to AFS clients.
+      Now we'll initialize the cell's security mechanisms. We'll begin by creating the 
+      following two initial entries in the
+      Authentification Database: The main administrative account, called <b>admin</b> by 
+      convention and an entry for
+      the AFS server processes, called <b>afs</b>. No user logs in under the 
+      identity <b>afs</b>, but the Authentication
+      Server's Ticket Granting Service (TGS) module uses the account
+      to encrypt the server tickets that it grants to AFS clients. This sounds 
+      pretty much like Kerberos :)
       </p>
       <p>
       Enter <b>kas</b> interactive mode
       </p>
       <pre>
-       # <c>/usr/afs/bin/kas -cell &lt;cell name&gt; -noauth</c>
-       ka&gt; <c>create afs</c>
+       # <i>/usr/afs/bin/kas -cell &lt;cell name&gt; -noauth</i>
+       ka&gt; <i>create afs</i>
        initial_password:
        Verifying, please re-enter initial_password:
-       ka&gt; <c>create admin</c>
+       ka&gt; <i>create admin</i>
        initial_password:
        Verifying, please re-enter initial_password:
-       ka&gt; <c>examine afs</c>
+       ka&gt; <i>examine afs</i>
  
        User data for afs
          key (0) cksum is 2651715259, last cpw: Mon Jun  4 20:49:30 2001
@@ -304,8 +348,8 @@ This guide shows you how to install a openafs server and client on gentoo linux
          entry never expires.  Max ticket lifetime 100.00 hours.
          last mod on Mon Jun  4 20:49:30 2001 by $lt;none&gt;
          permit password reuse
-       ka&gt; <c>setfields admin -flags admin</c>
-       ka&gt; <c>examine admin</c>
+       ka&gt; <i>setfields admin -flags admin</i>
+       ka&gt; <i>examine admin</i>
  
        User data for admin (ADMIN)
          key (0) cksum is 2651715259, last cpw: Mon Jun  4 20:49:59 2001
@@ -317,40 +361,48 @@ This guide shows you how to install a openafs server and client on gentoo linux
        ka&gt;
       </pre>
       <p>
-        Issue the <b>bos adduser</b> command, to add the <b>admin</b> user to the <path>/usr/afs/etc/UserList</path>.
+        Run the <b>bos adduser</b> command, to add the <b>admin</b> user to 
+	the <path>/usr/afs/etc/UserList</path>.
       </p>
       <pre>
-        # <c>/usr/afs/bin/bos adduser &lt;server name&gt; admin -cell &lt;cell name&gt; -noauth</c>
+        # <i>/usr/afs/bin/bos adduser &lt;server name&gt; admin -cell &lt;cell name&gt; -noauth</i>
       </pre>
       <p>
-        Issue the <b>bos addkey</b> command to define the AFS Server encryption key in <path>/usr/afs/etc/KeyFile</path>
+        Issue the <b>bos addkey</b> command to define the AFS Server 
+	encryption key in <path>/usr/afs/etc/KeyFile</path>
       </p>
       <note>
-        If asked for the input key, provide the password you entered when creating the afs entry with <b>kas</b>
+        If asked for the input key, give the password you entered when creating 
+	the afs entry with <b>kas</b>
       </note>
       <pre>
-        # <c>/usr/afs/bin/bos addkey  &lt;server name&gt; -kvno 0 -cell &lt;cell name&gt; -noauth</c>
+        # <i>/usr/afs/bin/bos addkey  &lt;server name&gt; -kvno 0 -cell &lt;cell name&gt; -noauth</i>
             input key:
             Retype input key:
       </pre>
       <p>
-        Issue the <b>pts createuser</b> command to create a Protection Databse entry for the admin user
+        Issue the <b>pts createuser</b> command to create a Protection Database 
+	entry for the admin user
       </p>
       <note>
-        By default, the Protection Server assigns AFS UID 1 to the <b>admin</b> user, because it is the first user
-	entry you are creating. If the local password file (/etc/passwd or equivalent) already has an entry for
-	<b>admin</b> that assigns a different UID use the <b>-id</b> argument to create matching UID's
+        By default, the Protection Server assigns AFS UID 1 to the <b>admin</b> user, because 
+	it is the first user
+	entry you are creating. If the local password file (/etc/passwd or equivalent) 
+	already has an entry for
+	<b>admin</b> that assigns a different UID use the <b>-id</b> argument 
+	to create matching UID's
        </note>
       <pre>
-        # <c>/usr/afs/bin/pts createuser -name admin -cell &lt;cell name&gt; [-id &lt;AFS UID&gt;] -noauth</c>
+        # <i>/usr/afs/bin/pts createuser -name admin -cell &lt;cell name&gt; [-id &lt;AFS UID&gt;] -noauth</i>
       </pre>
       <p>
-        Issue the <b>pts adduser</b> command to make the <b>admin</b> user a member of the system:administrators group,
+        Issue the <b>pts adduser</b> command to make the <b>admin</b> user a member 
+	of the system:administrators group,
 	and the <b>pts membership</b> command to verify the new membership>
       </p>
       <pre>
-       # <c>/usr/afs/bin/pts adduser admin system:administrators -cell &lt;cell name&gt; -noauth</c>
-	# <c>/usr/afs/bin/pts membership admin -cell &lt;cell name&gt; -noauth</c>
+       # <i>/usr/afs/bin/pts adduser admin system:administrators -cell &lt;cell name&gt; -noauth</i>
+       # <i>/usr/afs/bin/pts membership admin -cell &lt;cell name&gt; -noauth</i>
              Groups admin (id: 1) is a member of:
                system:administrators
       </pre>
@@ -358,7 +410,7 @@ This guide shows you how to install a openafs server and client on gentoo linux
         Restart all AFS Server processes
       </p>
       <pre>
-         # <c>/usr/afs/bin/bos restart &lt;server name&gt; -all -cell &lt;cell name&gt; -noauth</c>
+         # <i>/usr/afs/bin/bos restart &lt;server name&gt; -all -cell &lt;cell name&gt; -noauth</i>
       </pre>
     </body>
   </section>
@@ -370,13 +422,16 @@ This guide shows you how to install a openafs server and client on gentoo linux
       volserver and salvager processes).
     </p>
     <pre>
-      # <c>/usr/afs/bin/bos create &lt;server name&gt; fs fs /usr/afs/bin/fileserver /usr/afs/bin/volserver /usr/afs/bin/salvager -cell &lt;cell name&gt; -noauth</c>
+      # <i>/usr/afs/bin/bos create &lt;server name&gt; fs fs /usr/afs/bin/fileserver 
+			                            /usr/afs/bin/volserver 
+			                            /usr/afs/bin/salvager 
+			                            -cell &lt;cell name&gt; -noauth</i>
     </pre>
     <p>
     Verify that all processes are running
     </p>
     <pre>
-     # <c>/usr/afs/bin/bos status &lt;server name&gt; -long -noauth</c>
+     # <i>/usr/afs/bin/bos status &lt;server name&gt; -long -noauth</i>
      Instance kaserver, (type is simple) currently running normally.
          Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
          Last exit at Mon Jun  4 21:07:17 2001
@@ -405,25 +460,33 @@ This guide shows you how to install a openafs server and client on gentoo linux
          Command 3 is '/usr/afs/bin/salvager'
     </pre>
     <p>
-      Your next action depends on whether you have ever run AFS file server machines in the cell:
+      Your next action depends on whether you have ever run AFS file server machines 
+      in the cell:
     </p>
     <p>
-      If you are installing the first AFS Server ever in the cell create the first AFS volumen, <b>root.afs</b>
+      If you are installing the first AFS Server ever in the cell create the 
+      first AFS volume, <b>root.afs</b>
     </p>
     <note>
-    For the partition name argument, substitute the name of one of the machine's AFS Server partitions. By convention
+    For the partition name argument, substitute the name of one of the machine's 
+    AFS Server partitions. By convention
     these partitions are named <path>/vicex</path>, where x is in the range of a-z.
     </note>
     <pre>
-      # <c>/usr/afs/bin/vos create &lt;server name&gt; &lt;partition name&gt; root.afs -cell &lt;cell name&gt; -noauth</c>
+      # <i>/usr/afs/bin/vos create &lt;server name&gt; 
+                                &lt;partition name&gt; root.afs 
+				-cell &lt;cell name&gt; -noauth</i>
     </pre>
     <p>
-      If ther are existing AFS file server machines and volumes in the cell issue the <b>vos sncvldb</b> and <b>vos
-      syncserv</b> commands to synchronize the VLDB with the actual state of volumes on the local machine.
+      If there are existing AFS file server machines and volumes in the cell 
+      issue the <b>vos sncvldb</b> and <b>vos
+      syncserv</b> commands to synchronize the VLDB (Volume Location Database) with 
+      the actual state of volumes on the local machine. This will copy all necessary data to your
+      new server.
     </p>
     <pre>
-      # <c>/usr/afs/bin/vos syncvldb &lt;server name&gt; -cell &lt;cell name&gt; -verbose -noauth</c>
-      # <c>/usr/afs/bin/vos syncserv &lt;server name&gt; -cell &lt;cell name&gt; -verbose -noauth</c> 
+      # <i>/usr/afs/bin/vos syncvldb &lt;server name&gt; -cell &lt;cell name&gt; -verbose -noauth</i>
+      # <i>/usr/afs/bin/vos syncserv &lt;server name&gt; -cell &lt;cell name&gt; -verbose -noauth</i> 
     </pre>
     </body>
   </section>
@@ -431,7 +494,10 @@ This guide shows you how to install a openafs server and client on gentoo linux
     <title>Starting the Server Portion of the Update Server</title>
     <body>
       <pre>
-         # <c>/usr/afs/bin/bos create &lt;server name&gt; upserver simple "/usr/afs/bin/upserver -crypt /usr/afs/etc -clear /usr/afs/bin" -cell &lt;cell name&gt; -noauth</c>
+         # <i>/usr/afs/bin/bos create &lt;server name&gt; 
+	                    upserver simple "/usr/afs/bin/upserver 
+			    -crypt /usr/afs/etc -clear /usr/afs/bin" 
+			    -cell &lt;cell name&gt; -noauth</i>
       </pre>
     </body>
   </section>
@@ -442,26 +508,30 @@ This guide shows you how to install a openafs server and client on gentoo linux
         First you need to set some acl's, so that any user can lookup <path>/afs</path>.	
       </p>
       <pre>
-        # <c>/usr/afs/bin/fs setacl /afs system:anyuser rl</c>
+        # <i>/usr/afs/bin/fs setacl /afs system:anyuser rl</i>
       </pre>
       <p>
        The you need to create the root volume, mount it readonly on <path>/afs/&lt;cell name&gt;</path> and read/write
        on <path>/afs/.&lt;cell name&gt;</path>
        <pre>
-         # <c>/usr/afs/bin/vos create &lt;server name&gt; &lt;partition name&gt; root.cell</c>
-         # <c>/usr/afs/bin/fs mkmount /afs/&lt;cell name&gt; root.cell </c>
-         # <c>/usr/afs/bin/fs setacl /afs/&lt;cell name&gt; system:anyuser rl</c>
-         # <c>/usr/afs/bin/fs mkmount /afs/.&lt;cell name&gt; root.cell -rw</c>     
+         # <i>/usr/afs/bin/vos create &lt;server name&gt;&lt;partition name&gt; root.cell</i>
+         # <i>/usr/afs/bin/fs mkmount /afs/&lt;cell name&gt; root.cell </i>
+         # <i>/usr/afs/bin/fs setacl /afs/&lt;cell name&gt; system:anyuser rl</i>
+         # <i>/usr/afs/bin/fs mkmount /afs/.&lt;cell name&gt; root.cell -rw</i>     
        </pre>
       </p>
       <p>
-        Finally you're done !!! You should now have a working AFS file server on your local network. Time to get a big
+        Finally you're done !!! You should now have a working AFS file server 
+	on your local network. Time to get a big
 	cup of coffee and print out the AFS documentation !!!
       </p>
       <note>
-        It is crucial for the AFS server to function properly, that all system clock's are synchronized. This is best
-	accomplished by installing a ntp server on one machine (e.g. the AFS server) and synchronize all client clock's
-	with the ntp client.
+        It is very important for the AFS server to function properly, that all system 
+	clock's are synchronized. 
+	This is best
+	accomplished by installing a ntp server on one machine (e.g. the AFS server) 
+	and synchronize all client clock's
+	with the ntp client. This can also be done by the afs client. 
       </note>
     </body>
   </section>
