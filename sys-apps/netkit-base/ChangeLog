@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.13 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.14 2003/03/11 06:08:13 seemant Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
@@ -27,6 +27,10 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *netkit-base-0.17-r6 (1 May 2002)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  netkit-base-0.17-r6.ebuild:
+  use epatch instead
 
   19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
