@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.1.8.ebuild,v 1.10 2004/06/25 02:44:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.1.8.ebuild,v 1.11 2004/07/15 00:01:20 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://poedit.sourceforge.net/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 DEPEND=">=x11-libs/wxGTK-2.3.2
 	>=sys-libs/db-3"
