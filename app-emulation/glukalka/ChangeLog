@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/glukalka
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/ChangeLog,v 1.1 2003/09/02 07:42:36 msterret Exp $
+
+*glukalka-0.67 (02 Sep 2003)
+
+  02 Sep 2003; Michael Sterrett <msterret@gentoo.org> glukalka-0.67.ebuild:
+  initial commit (bug 27754)
+
