@@ -1,6 +1,16 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.8 2004/06/24 23:13:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.9 2004/07/10 09:39:36 mr_bones_ Exp $
+
+*nethack-3.4.3-r1 (10 Jul 2004)
+
+  10 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +nethack-3.4.3-r1.ebuild:
+  Work around buggy makefiles so we get to use emake
+  Set DEF_PAGER from $PAGER (bug #52122)
+  Use ${GAMES_STATEDIR} saving code in games.eclass instead of hacking it
+  in the ebuild.
+  Error check ; tidy
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> nethack-3.4.2.ebuild,
   nethack-3.4.3.ebuild:
