@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.52 2004/09/28 06:18:06 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.53 2004/10/19 19:51:12 vapier Exp $
 
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -293,12 +293,12 @@ cvs_fetch() {
 			einfo "Changing the CVS server from $oldserver to $server:"
 			debug-print "$FUNCNAME: Changing the CVS server from $oldserver to $server:"
 
-			einfo "Searching for CVS directories..."
+			einfo "Searching for CVS directories ..."
 			local cvsdirs="`$run find . -iname CVS -print`"
 			debug-print "$FUNCNAME: CVS directories found:"
 			debug-print "$cvsdirs"
 
-			einfo "Modifying CVS directories..."
+			einfo "Modifying CVS directories ..."
 			for x in $cvsdirs; do
 				debug-print "In $x"
 				$run echo "$server" > "$x/Root"
@@ -505,14 +505,14 @@ cvs_src_unpack() {
 			die "ERROR: Offline mode specified, but directory ${ECVS_TOP_DIR}/${ECVS_LOCALNAME} not found. Aborting."
 		fi
 	elif [ -n "$ECVS_SERVER" ]; then # ECVS_SERVER!=offline --> real fetching mode
-		einfo "Fetching CVS module $ECVS_MODULE into $ECVS_TOP_DIR..."
+		einfo "Fetching CVS module $ECVS_MODULE into $ECVS_TOP_DIR ..."
 		cvs_fetch
 	else # ECVS_SERVER not set
 		die "ERROR: CVS server not specified, cannot continue."
 	fi
 
-	einfo "Copying $ECVS_MODULE from $ECVS_TOP_DIR..."
-	debug-print "Copying module $ECVS_MODULE local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR..."
+	einfo "Copying $ECVS_MODULE from $ECVS_TOP_DIR ..."
+	debug-print "Copying module $ECVS_MODULE local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR ..."
 
 	# This is probably redundant, but best to make sure.
 	mkdir -p "$WORKDIR/$ECVS_LOCALNAME"

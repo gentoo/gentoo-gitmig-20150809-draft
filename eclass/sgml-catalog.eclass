@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.8 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.9 2004/10/19 19:51:12 vapier Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 
@@ -63,7 +63,7 @@ sgml-catalog_pkg_postrm() {
         if [ -e $arg2 ] 
         then
             ewarn "${arg2} still exists!  Not removing from ${arg1}" 
-            ewarn "This is normal behavior for an upgrade..."
+            ewarn "This is normal behavior for an upgrade ..."
             continue
         fi
         einfo "Now removing $arg1 from $arg2 and /etc/sgml/catalog"
@@ -74,7 +74,7 @@ sgml-catalog_pkg_postrm() {
 sgml-catalog_cleanup() {
     if [ -e /usr/bin/gensgmlenv ]
     then
-        einfo Regenerating SGML environment variables...
+        einfo Regenerating SGML environment variables ...
         gensgmlenv
         grep -v export /etc/sgml/sgml.env > /etc/env.d/93sgmltools-lite
     fi

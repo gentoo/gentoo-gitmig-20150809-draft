@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.14 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.15 2004/10/19 19:51:12 vapier Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -116,7 +116,7 @@ ccc-fixup()
 	# if theres a backup, diff it.
 	for i in ${list}
 	do
-		einfo "Checking for changes to `basename ${i}`..."
+		einfo "Checking for changes to `basename ${i}` ..."
 		if [ -e "${i}.${suffix}" ]; then
 			diff -u ${i}.${suffix} ${i}
 #			sleep 1
@@ -270,30 +270,30 @@ otsify()
 	# append them to argument, regenerate index and then return.
 	
 	if [ "${1##*.}" == "a" ] && [ -f "${1}" ]; then
-		einfo "otsifying `basename ${1}`..."
+		einfo "otsifying `basename ${1}` ..."
 		
 		mkdir ${T}/ccc-otsify-${$}
 		cd ${T}/ccc-otsify-${$}
 		
-		einfo "	extracting archive members from libots..."
+		einfo "	extracting archive members from libots ..."
 		ar ${ar_args}x /usr/lib/libots.a || {
 			eerror "	unable to extract libots members."
 			return 1
 		}
 		
-		einfo "	appending libots members to `basename ${1}`..."
+		einfo "	appending libots members to `basename ${1}` ..."
 		ar ${ar_args}q ${1} ${T}/ccc-otsify-${$}/*.o || {
 			eerror "	failed to append libots members to ${1}."
 			return 1
 		}
 		
-		einfo  "	regenerating `basename ${1}` archive index..."
+		einfo  "	regenerating `basename ${1}` archive index ..."
 		ranlib ${1} || ewarn "	ranlib returned an error, probably not important."
 		einfo "otsification completed succesfully."
 		cd ${OLDPWD:-.}
 		return 0
 	else
-		ewarn "called otsify() with bad argument..."
+		ewarn "called otsify() with bad argument ..."
 		cd ${OLDPWD:-.}
 		return 1
 	fi

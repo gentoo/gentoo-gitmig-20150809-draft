@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.120 2004/10/15 19:48:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.121 2004/10/19 19:51:12 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -223,7 +223,7 @@ epatch() {
 	if [ "$#" -gt 1 ]
 	then
 		local m=""
-		einfo "${#} patches to apply..."
+		einfo "${#} patches to apply ..."
 		for m in "$@" ; do
 			epatch "${m}"
 		done
@@ -286,11 +286,11 @@ epatch() {
 
 	if [ "${SINGLE_PATCH}" = "no" ]
 	then
-		einfo "Applying various patches (bugfixes/updates)..."
+		einfo "Applying various patches (bugfixes/updates) ..."
 	fi
 	for x in ${EPATCH_SOURCE}
 	do
-		# New ARCH dependant patch naming scheme...
+		# New ARCH dependant patch naming scheme ...
 		#
 		#   ???_arch_foo.patch
 		#
@@ -315,10 +315,10 @@ epatch() {
 				then
 					einfo "${EPATCH_SINGLE_MSG}"
 				else
-					einfo "Applying ${x##*/}..."
+					einfo "Applying ${x##*/} ..."
 				fi
 			else
-				einfo "  ${x##*/}..."
+				einfo "  ${x##*/} ..."
 			fi
 
 			echo "***** ${x##*/} *****" > ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
@@ -361,7 +361,7 @@ epatch() {
 				then
 					draw_line "***** ${x##*/} *****" >	${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
 					echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
-					echo "ACTUALLY APPLYING ${x##*/}..." >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
+					echo "ACTUALLY APPLYING ${x##*/} ..." >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
 					echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
 					draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
 
@@ -440,11 +440,11 @@ have_NPTL() {
 		}
 	END
 
-	einfon "Checking for _CS_GNU_LIBPTHREAD_VERSION support in glibc ... "
+	einfon "Checking for _CS_GNU_LIBPTHREAD_VERSION support in glibc ..."
 	if gcc -o ${T}/nptl ${T}/test-nptl.c &> /dev/null
 	then
 		echo "yes"
-		einfon "Checking what PTHREADS implementation we have ... "
+		einfon "Checking what PTHREADS implementation we have ..."
 		if ${T}/nptl
 		then
 			return 0
@@ -530,10 +530,10 @@ get_number_of_jobs() {
 	then
 		if [ "${jobs}" -gt "${ADMINPARAM}" ]
 		then
-			einfo "Setting make jobs to \"-j${ADMINPARAM}\" to ensure successful merge..."
+			einfo "Setting make jobs to \"-j${ADMINPARAM}\" to ensure successful merge ..."
 			export MAKEOPTS="${MAKEOPTS} -j${ADMINPARAM}"
 		else
-			einfo "Setting make jobs to \"-j${jobs}\" to ensure successful merge..."
+			einfo "Setting make jobs to \"-j${jobs}\" to ensure successful merge ..."
 			export MAKEOPTS="${MAKEOPTS} -j${jobs}"
 		fi
 	fi
@@ -889,7 +889,7 @@ enewgroup() {
 # Simple script to replace 'dos2unix' binaries
 # vapier@gentoo.org
 #
-# edos2unix(file, <more files>...)
+# edos2unix(file, <more files> ...)
 edos2unix() {
 	for f in "$@"
 	do

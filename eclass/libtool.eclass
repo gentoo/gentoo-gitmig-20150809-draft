@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.36 2004/10/10 17:11:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.37 2004/10/19 19:51:12 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -53,7 +53,7 @@ ELT_try_and_apply_patch() {
 	# We only support patchlevel of 0 - why worry if its static patches?
 	if patch -p0 --dry-run $1 < ${patch} &>${T}/elibtool.log
 	then
-		einfo "  Applying $(basename "$(dirname "${patch}")")-${patch##*/}.patch..."
+		einfo "  Applying $(basename "$(dirname "${patch}")")-${patch##*/}.patch ..."
 		patch -p0 $1 < ${patch} &>${T}/elibtool.log
 		ret=$?
 		export ELT_APPLIED_PATCHES="${ELT_APPLIED_PATCHES} ${patch##*/}"
@@ -172,7 +172,7 @@ elibtoolize() {
 		export ELT_APPLIED_PATCHES=
 
 		cd ${x}
-		einfo "Patching \${S}$(echo "/${tmp}/ltmain.sh" | sed -e 's|//|/|g')..."
+		einfo "Patching \${S}$(echo "/${tmp}/ltmain.sh" | sed -e 's|//|/|g') ..."
 
 		for y in ${elt_patches}
 		do

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/makeedit.eclass,v 1.6 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/makeedit.eclass,v 1.7 2004/10/19 19:51:12 vapier Exp $
 #
 # Author: Spider
 #
@@ -15,7 +15,7 @@ export CFLAGS="${CFLAGS} -Wno-return-type -w"
 export CXXFLAGS="${CXXFLAGS} -Wno-return-type -w"
 
 edit_makefiles () {
-	einfo "Parsing Makefiles..."
+	einfo "Parsing Makefiles ..."
 	find . -iname makefile | while read MAKEFILE
 	do
 		cp ${MAKEFILE} ${MAKEFILE}.old

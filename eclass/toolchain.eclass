@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.30 2004/10/11 05:16:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.31 2004/10/19 19:51:12 vapier Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -429,7 +429,7 @@ do_gcc_SSP_patches() {
 # then lets use those for SSP instead of libgcc.
 update_gcc_for_libc_ssp() {
 	if libc_has_ssp ; then
-		einfo "Updating gcc to use SSP from libc..."
+		einfo "Updating gcc to use SSP from libc ..."
 		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	fi
@@ -576,7 +576,7 @@ do_gcc_config() {
 				epause
 			else
 				einfo "The current gcc config appears to be valid, not running"
-				einfo "gcc-config..."
+				einfo "gcc-config ..."
 			fi
 			return 0
 		fi
@@ -1129,7 +1129,7 @@ gcc_src_compile() {
 			die "Failed to unpack man pages"
 	fi
 
-	einfo "Configuring ${PN}..."
+	einfo "Configuring ${PN} ..."
 	gcc_do_configure
 
 	touch ${S}/gcc/c-gperf.h
@@ -1139,7 +1139,7 @@ gcc_src_compile() {
 		find ${WORKDIR}/build -name '*.[17]' -exec touch {} \; || :
 	fi
 
-	einfo "Compiling ${PN}..."
+	einfo "Compiling ${PN} ..."
 	gcc_do_make ${GCC_MAKE_TARGET}
 
 	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ] ; then
@@ -1151,7 +1151,7 @@ gcc_src_compile() {
 
 
 gcc-library-src_install() {
-	einfo "Installing ${PN}..."
+	einfo "Installing ${PN} ..."
 	# Do the 'make install' from the build directory
 	cd ${WORKDIR}/build
 	S="${WORKDIR}/build" \

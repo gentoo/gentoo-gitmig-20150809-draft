@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.45 2004/10/02 20:01:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.46 2004/10/19 19:51:12 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -52,7 +52,7 @@ KV_PATCH=${KV_PATCH/[-_]*/}
 # set LINUX_HOSTCFLAGS if not already set
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
-#Eclass functions only from here onwards...
+#Eclass functions only from here onwards ...
 #==============================================================
 kernel_is() {
 	local RESULT
@@ -173,7 +173,7 @@ compile_headers() {
 compile_manpages() {
 	local MY_ARCH
 
-	einfo "Making manpages..."
+	einfo "Making manpages ..."
 	MY_ARCH=${ARCH}
 	unset ARCH
 	make mandocs
@@ -215,7 +215,7 @@ install_sources() {
 
 	cd ${S}
 	dodir /usr/src
-	echo ">>> Copying sources..."
+	echo ">>> Copying sources ..."
 	file="$(find ${WORKDIR} -iname "docs" -type d)"
 	if [ -n "${file}" ]
 	then
@@ -304,7 +304,7 @@ postinst_sources() {
 		echo
 	fi
 
-	# Show policy version, if this kernel has SELinux...
+	# Show policy version, if this kernel has SELinux ...
 	local secfile="${ROOT}usr/src/linux-${KV}/security/selinux/include/security.h"
 	if use selinux && [ -f "$secfile" ]
 	then
@@ -690,5 +690,5 @@ kernel-2_pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
 	# This is to fix some weird portage bug? in stable versions of portage.
-	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack..."
+	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack ..."
 }

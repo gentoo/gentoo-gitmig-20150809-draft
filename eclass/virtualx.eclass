@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.17 2004/08/22 17:48:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.18 2004/10/19 19:51:12 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -26,7 +26,7 @@ virtualmake() {
 		# The following is derived from Mandrake's hack to allow
 		# compiling without the X display
 
-		einfo "Scanning for a open DISPLAY to start Xvfb..."
+		einfo "Scanning for a open DISPLAY to start Xvfb ..."
 
 		# We really do not want SANDBOX enabled here
 		export SANDBOX_DISABLED="1"

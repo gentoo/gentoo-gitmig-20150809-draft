@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.18 2004/10/19 14:24:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.19 2004/10/19 19:51:12 vapier Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -139,7 +139,7 @@ tetex_src_install() {
 		base)
 			dodir /usr/share/
 			# Install texmf files
-			einfo "Installing texmf..."
+			einfo "Installing texmf ..."
 			cp -Rv texmf ${D}/usr/share
 
 			if [ "${TETEX_PV}" == "2.0.2" ] ; then
@@ -150,7 +150,7 @@ tetex_src_install() {
 			fi
 
 			# Install teTeX files
-			einfo "Installing teTeX..."
+			einfo "Installing teTeX ..."
 			einstall bindir=${D}/usr/bin texmf=${D}/usr/share/texmf || die
 			;;
 		doc)
@@ -209,7 +209,7 @@ tetex_src_install() {
 
 			#fix for lousy upstream permisssions on /usr/share/texmf files
 			#NOTE: do not use fowners, as its not recursive ...
-			einfo "Fixing permissions..."
+			einfo "Fixing permissions ..."
 			chown -R root:root ${D}/usr/share/texmf
 			;;
 		link)	# link is for tetex-beta
@@ -225,7 +225,7 @@ tetex_src_install() {
 				cd -
 			done
 			for cfg in context dvipdfm metafont metapost ; do
-				einfo "Symlinking from /etc/texmf/${cfg}..."
+				einfo "Symlinking from /etc/texmf/${cfg} ..."
 				mv ${D}/usr/share/texmf/${cfg}/config \
 					${D}/etc/texmf/${cfg} \
 					|| die "mv ${cfg} failed."
@@ -235,7 +235,7 @@ tetex_src_install() {
 				cd -
 			done
 			for cfg in tex/{amstex,context,cyrplain,generic,lambda,latex,mex,plain,platex} ; do
-				einfo "Symlinking from /etc/texmf/${cfg}..."
+				einfo "Symlinking from /etc/texmf/${cfg} ..."
 				mv ${D}/usr/share/texmf/${cfg}/config \
 					${D}/etc/texmf/${cfg} \
 					|| die "mv ${cfg} failed."
@@ -304,7 +304,7 @@ tetex_pkg_postinst() {
 		configure)
 			if [ $ROOT = "/" ]
 			then
-				einfo "Configuring teTeX..."
+				einfo "Configuring teTeX ..."
 				mktexlsr &>/dev/null
 				texconfig init &>/dev/null
 				texconfig confall &>/dev/null
@@ -317,7 +317,7 @@ tetex_pkg_postinst() {
 		generate)
 			if [ $ROOT = "/" ]
 			then
-				einfo "Generating format files..."
+				einfo "Generating format files ..."
 				fmtutil --missing &>/dev/null
 				einfo
 				einfo "Use 'texconfig font ro' to disable font generation for users"

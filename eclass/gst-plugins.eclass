@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.19 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.20 2004/10/19 19:51:12 vapier Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -72,10 +72,10 @@ gst-plugins_find_plugin_dir() {
 			ewarn "No such plugin directory"
 			die
 		fi
-		einfo "Building system plugin..."
+		einfo "Building system plugin ..."
 		cd ${S}/sys/${GST_PLUGINS_BUILD_DIR}
 	else
-		einfo "Building external plugin..."
+		einfo "Building external plugin ..."
 		cd ${S}/ext/${GST_PLUGINS_BUILD_DIR}
 	fi
 
@@ -90,7 +90,7 @@ gst-plugins_src_configure() {
 	# disable any external plugin besides the plugin we want
 	local plugin gst_conf
 
-	einfo "Configuring to build ${GST_PLUGINS_BUILD} plugin(s)..."
+	einfo "Configuring to build ${GST_PLUGINS_BUILD} plugin(s) ..."
 
 	for plugin in ${GST_PLUGINS_BUILD}; do
 		my_gst_plugins=${my_gst_plugins/${plugin}/}
@@ -109,7 +109,7 @@ gst-plugins_src_configure() {
 
 gst-plugins_update_registry() {
 
-	einfo "Updating gstreamer plugins registry for gstreamer ${SLOT}..."
+	einfo "Updating gstreamer plugins registry for gstreamer ${SLOT} ..."
 	gst-register-${SLOT}
 
 }

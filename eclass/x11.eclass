@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.1 2004/10/04 06:23:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.2 2004/10/19 19:51:12 vapier Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -86,7 +86,7 @@ is_kernel() {
 # /usr/X11R6/lib/modules for xfree modules:
 # $1=\/usr\/X11R6\/lib\/modules
 strip_bins() {
-	einfo "Stripping binaries..."
+	einfo "Stripping binaries ..."
 	# This bit I got from Redhat ... strip binaries and drivers ..
 	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
 	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \

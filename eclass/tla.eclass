@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.4 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.5 2004/10/19 19:51:12 vapier Exp $
 #
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #
@@ -165,17 +165,17 @@ tla_src_unpack() {
 	ETLA_CACHE_DIR=$ETLA_CACHE_DIR
 	ETLA_CLEAN=$ETLA_CLEAN"
 
-	einfo "Registering Archives..."
+	einfo "Registering Archives ..."
 	tla_register_archives
 
-	einfo "Checking that passed-in variables are rational..."
+	einfo "Checking that passed-in variables are rational ..."
 	tla_check_vars
 
-	einfo "Fetching tla version $ETLA_VERSION into $ETLA_TOP_DIR..."
+	einfo "Fetching tla version $ETLA_VERSION into $ETLA_TOP_DIR ..."
 	tla_fetch
 	
-	einfo "Copying $ETLA_CACHE_DIR from $ETLA_TOP_DIR..."
-	debug-print "Copying $ETLA_CACHE_DIR from $ETLA_TOP_DIR..."
+	einfo "Copying $ETLA_CACHE_DIR from $ETLA_TOP_DIR ..."
+	debug-print "Copying $ETLA_CACHE_DIR from $ETLA_TOP_DIR ..."
 
 	# probably redundant, but best to make sure
 	# Use ${WORKDIR}/${P} rather than ${S} so user can point ${S} to something inside.

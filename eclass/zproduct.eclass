@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.16 2004/10/07 21:13:14 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.17 2004/10/19 19:51:12 vapier Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -101,7 +101,7 @@ zproduct_pkg_postinst()
 	chown -R root:root ${ZP_DIR}/${PF}
 	# make shure there is nothing writable in the new dir, and all is readable
 	chmod -R go-w,a+rX ${ZP_DIR}/${PF}
-	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance..."
+	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance ..."
 	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF} 
 }
 
@@ -121,10 +121,10 @@ zproduct_pkg_prerm()
 			then
 				# check only if installed product has non empty folder lists
 				#
-				# for every fodler inside product...
+				# for every fodler inside product ...
 				for PFOLD in `cat $DOT_ZFOLDER_FPATH`
 				do
-					#... check if its in instance.
+					# ... check if its in instance.
 					if [ -d "${ZI_DIR}${N}/Products/${PFOLD}" ]
 					then
 						ARE_INSTALLED=$[ARE_INSTALLED + 1]
@@ -143,7 +143,7 @@ zproduct_pkg_prerm()
 			sleep 10
 		fi
 
-		ewarn "Uninstalling from all zinstances..."
+		ewarn "Uninstalling from all zinstances ..."
 		for N in ${ZINST_LST} ; do
 			${ROOT}/usr/sbin/zprod-manager del ${ZP_DIR}/${PF} ${ZI_DIR}${N}
 		done

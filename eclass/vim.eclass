@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.76 2004/10/17 17:02:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.77 2004/10/19 19:51:12 vapier Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -120,7 +120,7 @@ apply_vim_patches() {
 
 	# Scan the patches, applying them only to files that either
 	# already exist or that will be created by the patch
-	einfo "Filtering vim patches..."
+	einfo "Filtering vim patches ..."
 	p=${WORKDIR}/${VIM_ORG_PATCHES%.tar*}.patch
 	ls ${WORKDIR}/vimpatches | sort | \
 	while read f; do gzip -dc ${WORKDIR}/vimpatches/${f}; done | awk '
@@ -163,7 +163,7 @@ apply_vim_patches() {
 		' > ${p} || die
 
 	# For reasons yet unknown, epatch fails to apply this cleanly
-	ebegin "Applying filtered vim patches..."
+	ebegin "Applying filtered vim patches ..."
 	TMPDIR=${T} patch -f -s -p0 < ${p}
 	eend 0
 }
@@ -302,8 +302,8 @@ src_compile() {
 		fi
 
 		if [[ "${MY_PN}" == "vim" ]] ; then
-			# don't test USE=X here... see bug #19115
-			# but need to provide a way to link against X... see bug #20093
+			# don't test USE=X here ... see bug #19115
+			# but need to provide a way to link against X ... see bug #20093
 			myconf="${myconf} --enable-gui=no `use_with vim-with-x x`"
 
 		elif [[ "${MY_PN}" == "gvim" ]] ; then
@@ -421,7 +421,7 @@ src_install() {
 		if use livecd ; then
 			# To save space, install only a subset of the files if we're on a
 			# livecd. bug 65144.
-			einfo "Removing some files for a smaller livecd install..."
+			einfo "Removing some files for a smaller livecd install ..."
 
 			local vimfiles=${D}/usr/share/vim/vim${VIM_VERSION/.}
 			shopt -s extglob
@@ -433,7 +433,7 @@ src_install() {
 			rm -fr ${vimfiles}/colors/!(${keep_colors}).vim
 
 			local keep_syntax="conf|crontab|fstab|inittab|resolv|sshdconfig"
-			# tinkering with the next line might make bad things happen...
+			# tinkering with the next line might make bad things happen ...
 			keep_syntax="${keep_syntax}|syntax|nosyntax|synload"
 			rm -fr ${vimfiles}/syntax/!(${keep_syntax}).vim
 		fi
