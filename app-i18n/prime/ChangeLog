@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.19 2004/03/07 18:06:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.20 2004/03/21 21:38:15 usata Exp $
+
+  22 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> prime-0.7.8.ebuild:
+  Though 0.7.x was intended to be development branch, it seems stable
+  enough and worth to unmask (contains a lot of new features).
 
 *prime-0.7a-r1 (08 Mar 2004)
 
