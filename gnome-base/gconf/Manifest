@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aa1275a839bf10794cae897c3e78a934 ChangeLog 13513
+MD5 8ea4e1bb7b3a6378bb9b06fdc5f9523a ChangeLog 13628
 MD5 ac7cff50ecafeb03d9e4f489cbbf037f gconf-1.0.8-r3.ebuild 1707
 MD5 7998f0e3fab48622265a6b5277bf28ed gconf-1.0.8-r5.ebuild 1872
 MD5 2ebbe63ee3d6d2fe128d2cb325f75bff gconf-1.0.9.ebuild 1866
@@ -13,6 +13,7 @@ MD5 dec660df21be20d7f05aa2e2d3874248 gconf-2.8.0.1.ebuild 1980
 MD5 b185417d0af3ea06f0be9d2e1aeeed16 gconf-2.8.1-r1.ebuild 2102
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 1eece64fd6a9e9879809e8c95c81cbc9 gconf-2.9.91.ebuild 1950
+MD5 14a8191f20eb8da578e2d762dcda633e gconf-2.10.0.ebuild 1950
 MD5 4452461d5fcfd96e2d95e62712554c71 files/GConf-2.6.1-gcc2_fix.patch 420
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r3 64
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r5 64
@@ -27,10 +28,11 @@ MD5 aaa79f3ad5c910cfa6f813112e66f79e files/gconf-1.0.9-locallock_mdk.patch 1202
 MD5 75ba48464f725fab9e0546f4dc39c2a4 files/gconf-2-locale-c.patch 501
 MD5 8485bd44122f283d1549e1f1cdddd03f files/gconfd-2-fix.patch 1820
 MD5 8b7fe13c7bce05cb4221bfd7ca7eb42d files/digest-gconf-2.9.91 66
+MD5 8cfc79bc2dbac8f93a77df81c0a90bca files/digest-gconf-2.10.0 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLombXjcVihsel0ERAoavAJ99Av2p5keoXWGrfdKXn5GjGNmEYQCfQlik
-n8uV3z/lvKfgovFiToqEoIQ=
-=BSY8
+iD8DBQFCMWy4XjcVihsel0ERAsagAKDZ9l3Yov0sgOi3vB9m2ahhO+q5ogCgkqoy
+4PrlvWMVJKkZsQol7LsTa8c=
+=Qht0
 -----END PGP SIGNATURE-----
