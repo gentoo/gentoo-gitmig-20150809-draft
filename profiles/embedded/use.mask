@@ -1,3 +1,5 @@
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+# aqua USE flag is only valid on Mac OS X
+aqua

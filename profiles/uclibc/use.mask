@@ -3,3 +3,5 @@ pam
 nls
 nptl
 nis
+# aqua USE flag is only valid on Mac OS X
+aqua

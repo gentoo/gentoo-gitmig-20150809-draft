@@ -7,3 +7,5 @@ selinux
 # PPC-specific.
 altivec
 uclibc
+# aqua USE flag is only valid on Mac OS X
+aqua

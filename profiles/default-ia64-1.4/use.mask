@@ -71,3 +71,5 @@ diet
 # media-sound/beep-media-player and remove if
 bmp
 
+# aqua USE flag is only valid on Mac OS X
+aqua

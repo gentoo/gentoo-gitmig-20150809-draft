@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-1.4/use.mask,v 1.9 2004/10/23 14:56:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-1.4/use.mask,v 1.10 2004/11/25 03:12:54 usata Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -85,3 +85,5 @@ pfpro
 solid
 sybase
 sybase-ct
+# aqua USE flag is only valid on Mac OS X
+aqua

@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/use.mask,v 1.1 2004/11/12 00:37:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/use.mask,v 1.2 2004/11/25 03:12:55 usata Exp $
 
 # <solar.at.gentoo.org>
 # must use a uclibc profile to enable native uClibc support.
 uclibc
+# aqua USE flag is only valid on Mac OS X
+aqua

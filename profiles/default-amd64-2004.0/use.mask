@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.14 2004/11/13 19:50:58 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.15 2004/11/25 03:12:54 usata Exp $
 
 #unknowns
 afs
@@ -86,3 +86,5 @@ pfpro
 solid
 sybase
 sybase-ct
+# aqua USE flag is only valid on Mac OS X
+aqua

@@ -34,3 +34,5 @@ tcc
 uclibc
 uml
 djbfft
+# aqua USE flag is only valid on Mac OS X
+aqua

@@ -10,3 +10,5 @@ uclibc
 # PPC-specific.
 altivec
 
+# aqua USE flag is only valid on Mac OS X
+aqua

@@ -64,3 +64,5 @@ sybase
 sybase-ct
 
 hardened
+# aqua USE flag is only valid on Mac OS X
+aqua

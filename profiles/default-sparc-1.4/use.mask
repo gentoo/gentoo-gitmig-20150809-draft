@@ -74,3 +74,5 @@ djbfft
 # Mono doesn't work on sparc
 # eradicator@gentoo.org
 mono
+# aqua USE flag is only valid on Mac OS X
+aqua

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/n32-mips-2004.1/use.mask,v 1.7 2004/10/23 14:56:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/n32-mips-2004.1/use.mask,v 1.8 2004/11/25 03:12:55 usata Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # hal needs linux26-headers
@@ -90,3 +90,5 @@ pfpro
 solid
 sybase
 sybase-ct
+# aqua USE flag is only valid on Mac OS X
+aqua

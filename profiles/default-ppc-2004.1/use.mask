@@ -33,3 +33,5 @@ sybase-ct
 tcc
 uclibc
 uml
+# aqua USE flag is only valid on Mac OS X
+aqua

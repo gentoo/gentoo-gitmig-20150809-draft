@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.22 2004/10/23 14:56:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.23 2004/11/25 03:12:54 usata Exp $
 
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # not even slightly reliable, bug #65216
@@ -105,3 +105,5 @@ diet
 # media-sound/beep-media-player and remove if
 bmp
 
+# aqua USE flag is only valid on Mac OS X
+aqua

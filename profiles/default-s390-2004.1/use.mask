@@ -70,3 +70,5 @@ gtk2
 
 # dietlibc
 diet
+# aqua USE flag is only valid on Mac OS X
+aqua

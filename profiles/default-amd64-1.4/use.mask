@@ -75,3 +75,5 @@ sybase-ct
 # sys-cluster/pvm won't build
 pvm
 
+# aqua USE flag is only valid on Mac OS X
+aqua
