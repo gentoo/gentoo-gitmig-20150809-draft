@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.4 2003/03/12 19:27:00 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.5 2003/03/26 09:56:41 lordvan Exp $
 
 IUSE="ipv6 pam"
 
-mod_ssl_ver=2.8.11-${PV}
+mod_ssl_ver=2.8.14
 
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
@@ -12,8 +12,8 @@ HOMEPAGE="http://www.apache.org http://www.modssl.org"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
-	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz
-	ipv6? http://motoyuki.bsdclub.org/data/IPv6/apache-1.3.27-mod_ssl-2.8.11-v6-20021004.diff.gz"
+	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-${PV}.tar.gz
+	ipv6? http://motoyuki.bsdclub.org/data/IPv6/apache-${PV}-mod_ssl-${mod_ssl_ver}-v6-20021004.diff.gz"
 # The mod_ssl archive is only for providing the EAPI patch in here.
 # You should install the net-www/mod_ssl package for the actual DSO.
 
@@ -39,7 +39,7 @@ src_unpack() {
 	rm -f htdocs/manual/search/manual-index.cgi.orig
 
 	# setup eapi...
-	myssl=${WORKDIR}/mod_ssl-${mod_ssl_ver}
+	myssl=${WORKDIR}/mod_ssl-${mod_ssl_ver}-${PV}
 	cp ${myssl}/pkg.eapi/*.h src/include
 	cp ${myssl}/pkg.eapi/*.c src/ap
 	patch -p0 < ${myssl}/pkg.eapi/eapi.patch || die eapi
@@ -51,7 +51,7 @@ src_unpack() {
 
 	# thanks drey@rt.mipt.ru for these two ...
 	if use ipv6; then
-		zcat ${DISTDIR}/apache-1.3.27-mod_ssl-2.8.11-v6-20021004.diff.gz | patch -p0 || die
+		zcat ${DISTDIR}/apache-${PV}-mod_ssl-${mod_ssl_ver}-v6-20021004.diff.gz | patch -p0 || die
 	fi
 
 	if use pam; then

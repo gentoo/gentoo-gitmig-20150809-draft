@@ -1,11 +1,15 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.47 2003/03/15 21:36:52 tuxus Exp $
-
-  25 Feb 2003; Donny Davies <woodchip@gentoo.org> apache.rc6, apache2.initd :
-  Send USR1 signal only to parent in reload(); #16326.
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.48 2003/03/26 09:56:41 lordvan Exp $
 
 *apache-1.3.27-r4 (23 Feb 2003)
+
+  26 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> apache-1.3.27-r[34].ebuild:
+  changed mod_ssl_ver to 2.8.14 fixing bug #18172
+  changed mod_ssl_ver in -r4 so that it doesn't contain apache version for ipv6 patch use
+	
+  25 Feb 2003; Donny Davies <woodchip@gentoo.org> apache.rc6, apache2.initd :
+  Send USR1 signal only to parent in reload(); #16326.
 
   12 Mar 2003; Zach Welch <zwelch@gentoo.org> apache-1.3.27-r4.ebuild:
   add arm keyword

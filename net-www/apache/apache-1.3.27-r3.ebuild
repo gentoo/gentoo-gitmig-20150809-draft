@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.4 2003/03/26 09:56:41 lordvan Exp $
 
-mod_ssl_ver=2.8.11-${PV}
+mod_ssl_ver=2.8.14-${PV}
 
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
