@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r2.ebuild,v 1.1 2005/01/08 10:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r2.ebuild,v 1.2 2005/01/12 23:52:15 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,9 +17,9 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="3"
-#KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~sparc ~hppa ~mips ~ppc64 ~ia64 ~ppc-macos"
+#KEYWORDS="~x86 ~alpha ~ppc amd64 ~sparc ~hppa ~mips ~ppc64 ~ia64 ~ppc-macos"
 #-r2 is the same as -r1 but with multilib fixes
-KEYWORDS="~amd64 ~hppa ~mips ~ppc64 ~sparc"
+KEYWORDS="amd64 ~hppa ~mips ~ppc64 ~sparc"
 IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
