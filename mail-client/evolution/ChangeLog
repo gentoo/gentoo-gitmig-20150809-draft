@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.52 2005/03/11 03:31:27 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.53 2005/03/11 10:08:11 joem Exp $
+
+  11 Mar 2005; Joe McCann <joem@gentoo.org> evolution-2.2.0.ebuild:
+  add hard dep on >=pango-1.8.1 to get around font rendering problems
 
   10 Mar 2005; Peter Johanson <latexer@gentoo.org> evolution-2.2.0.ebuild:
   mono moved from dev-dotnet -> dev-lang

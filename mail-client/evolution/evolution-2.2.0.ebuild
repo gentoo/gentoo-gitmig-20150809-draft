@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.0.ebuild,v 1.3 2005/03/11 03:31:27 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.0.ebuild,v 1.4 2005/03/11 10:08:11 joem Exp $
 
 inherit eutils gnome2 flag-o-matic alternatives
 
@@ -19,6 +19,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.6.0
 	>=net-libs/libsoup-2.2.1
 	>=dev-libs/glib-2
 	>=dev-libs/libxml2-2
+	>=x11-libs/pango-1.8.1
 	>=gnome-base/gconf-2
 	>=gnome-extra/yelp-2.5.1
 	>=gnome-base/libglade-2
