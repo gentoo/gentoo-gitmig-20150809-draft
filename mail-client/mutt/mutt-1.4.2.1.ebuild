@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.1 2004/05/30 02:51:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.2 2004/06/05 14:31:50 agriffis Exp $
 
 IUSE="ssl nls slang mbox cjk vanilla"
 
@@ -104,7 +104,7 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 	find ${D}/usr/share/doc -type f | grep -v html | xargs gzip
-	if [ "`use mbox`" ]; then
+	if use mbox; then
 		echo "Not installing an /etc/Muttrc as mbox is default configuration"
 		echo "with mutt"
 	else
