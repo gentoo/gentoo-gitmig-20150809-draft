@@ -1,0 +1,15 @@
+--- build.xml.orig	2004-09-19 19:36:46.126956664 +0200
++++ build.xml	2004-09-19 19:49:15.190081760 +0200
+@@ -58,10 +58,10 @@
+     <pathelement location="${lib-compile.dir}/java.jar"/>
+   </path>
+ 
+-  <taskdef name="makenbm" classname="org.netbeans.nbbuild.MakeNBM" classpath="${lib-compile.dir}/antnbm.jar"/>
++  <!--taskdef name="makenbm" classname="org.netbeans.nbbuild.MakeNBM" classpath="${lib-compile.dir}/antnbm.jar"/>
+   <taskdef name="install4j"
+            classname="com.install4j.Install4JTask"
+-           classpath="/opt/install4j/bin/install4j.jar:/Program Files/install4j/bin/install4j.jar:/Programme/install4j/bin/install4j.jar"/>
++           classpath="/opt/install4j/bin/install4j.jar:/Program Files/install4j/bin/install4j.jar:/Programme/install4j/bin/install4j.jar"/-->
+ 
+   <!-- Make all standard directories -->
+   <target name="init">
