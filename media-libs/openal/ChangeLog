@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.36 2005/01/11 13:39:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.37 2005/03/29 16:58:09 wolf31o2 Exp $
+
+  29 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/openal-20040303-alsa_capture.diff, -openal-20020127.ebuild,
+  -openal-20040303.ebuild:
+  Pruning old ebuilds.
 
   11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   openal-20040817.ebuild:
