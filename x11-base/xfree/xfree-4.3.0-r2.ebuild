@@ -1,17 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.52 2004/01/27 11:53:57 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.53 2004/02/06 12:54:20 vapier Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
 IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc bindist pam"
-
-
-filter-flags "-funroll-loops"
-
-ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -33,13 +28,6 @@ ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
-
-# Needed by kdebase on hppa
-[ "${ARCH}" = "hppa" ] && append-flags -fPIC
-
-# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-has_version "sys-devel/hardened-gcc" && export CC="${CC} -yet_exec"
 
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
@@ -271,6 +259,16 @@ src_unpack() {
 	# set uid any more.
 	echo "#define InstallXserverSetUID NO" >> config/cf/host.def
 	echo "#define BuildServersOnly NO" >> config/cf/host.def
+
+	filter-flags -funroll-loops
+	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
+	strip-flags
+
+	# Needed by kdebase on hppa
+	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	has_version "sys-devel/hardened-gcc" && export CC="${CC} -yet_exec"
 
 	# Bug #12775 .. fails with -Os.
 	replace-flags "-Os" "-O2"
