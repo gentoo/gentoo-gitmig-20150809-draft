@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (02 Oct 2003)
+# deprecated.  now comes as part of app-cdf/cdrtools
+# bug #18539
+sys-fs/mkisofs
+
 # <mkennedy@gentoo.org> (01 Oct 2003)
 # deprecated in favour of dev-lisp/cmucl (source package)
 dev-lisp/cmucl-bin
