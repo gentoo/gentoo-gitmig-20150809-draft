@@ -58,3 +58,4 @@ move sys-libs/chipcard-client sys-libs/libchipcard
 move sys-libs/chipcard-server sys-libs/libchipcard
 move app-misc/tinyca app-crypt/tinyca
 move sci-biology/MrBayes sci-biology/mrbayes
+slotmove =kde-base/kdebase-pam-3.4.0_beta1 3.4 0
