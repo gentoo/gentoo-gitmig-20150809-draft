@@ -178,7 +178,7 @@ KDE ebuild configures KDE quite well all by itself.  The KDM display
 manager should work just by starting it.</p>
 <pre># <i>kdm</i></pre>
 <p>You should be able to log in and see KDE in full working order.
-Of course sound shouldn't be working yet, so you miss the annoying
+Of course sound shouldn't be working yet, so you'll miss the annoying
 KDE start-up sound, but we'll fix that in a moment.  Open a 
 konsole, type <c>ls /usr/bin</c> (or anything else that more than fills 
 the konsole window), and see if the mouse wheel lets
@@ -187,7 +187,18 @@ work!</p>
 
 <p>All that's left is to make sure that X comes up when Gentoo boots.
 Edit <path>/etc/rc.d/config/basic</path> so that 
-<e>DISPLAYMANAGER="kdm"</e>.  Now we just need to make sure that the
+<e>DISPLAYMANAGER="kdm"</e>.  
+</p>
+<pre>
+# <i>vim /etc/rc.d/config/basic</i>
+</pre>
+<pre caption="/etc/rc.d/config/basic -- setting DISPLAYMANAGER">
+MOUSE="ms"				# Set to the mouse type as used by gpm (auto, ps2, ms, etc.)
+
+DISPLAYMANAGER="<comment>kdm</comment>"			# Enter your display manager here (xdm,kdm,gdm)
+</pre>
+<p>
+Now we just need to make sure that the
 <e>xdm</e> start-up script is read when booting runlevel 4 (Gentoo's
 default runlevel for X) and change <path>/etc/inittab</path> so that
 runlevel 4 is the default runlevel.</p>
@@ -196,9 +207,15 @@ runlevel 4 is the default runlevel.</p>
 # <i>vim /etc/inittab</i>
 </pre>
 <pre caption="the initdefault line, configured to start kdm (runlevel 4)">
-id:4:initdefault:
+# Default runlevel.
+
+id:<comment>4</comment>:initdefault:
 </pre>
 <p>Reboot, and see if X comes up!</p>
+<impo>The <c>rc-update</c> command is Gentoo Linux's improved version of
+the venerable <c>chkconfig</c> command for managing init scripts.  Type
+<c>rc-update</c> by itself for a list of options.
+</impo>
 
 </body>
 </section>
@@ -210,7 +227,7 @@ id:4:initdefault:
 <title>Alsa</title>
 <body>
 
-<p>Gentoo Linux does support Alsa for sound using the default kernel.  Alsa can
+<p>Gentoo Linux supports Alsa for sound using the default kernel.  Alsa can
 be run with or without <e>devfs</e>.  One note; if you've installed a new
 <path>sys-kernel/linux-sources</path> package, make sure that your Linux kernel
 has sound support enabled, and that <c>alsa</c> is defined in
@@ -542,11 +559,11 @@ sending and delivery is working.  I then sent mail to one of my
 non-local email addresses (not shown) and verified that the mail
 did, indeed, get there.
 </p>
-<note>If you send mail to an account using the default 
+<warn>If you send mail to an account using the default 
 <path>main.cf</path> from a machine on a private network, then
 it is possible you will never see it.  Many mail servers automatically
 reject mail coming from a source that can't be reached by reverse-DNS.
-</note>
+</warn>
 <p>
 Assuming everything is working, then it's time to set up postfix
 so that it starts at boot time.
@@ -587,7 +604,7 @@ with <i>set spoolfile=/var/spool/mail</i>.
 <body>
 <p>
 For simple systems where you don't need <c>samba</c>
-samba support the PDQ printing system is nice and simple.
+support the PDQ printing system is nice and simple.
 </p>
 <pre>
 # <i>cd /usr/portage/net-print/pdq</i>
@@ -610,7 +627,58 @@ it takes!
 <title>Full-fledged printing -- CUPS</title>
 <body>
 <p>
-Coming soon!
+CUPS is a much larger print spooler that is fully suitable for
+use as a large-scale print server.  Fortunately it is pretty easy
+to set up, since most of the configuration can be done using CUPS'
+built-in web server.  Although CUPS is nominally a System V
+print spooler (meaning that it uses the <c>lp</c> series of
+commands) it emulates all of the <c>lpr</c> commands as
+well.
+</p>
+<pre>
+# cd /usr/portage/net-print/gimp-print-cups
+# emerge --pretend gimp-print-cups-4.1.1.ebuild
+These are the packages that I would merge, in order.
+ 
+Calculating dependencies.. done!
+[ebuild N  ] net-print/cups-1.1.8 to /
+[binary N  ] net-print/gimp-print-cups-4.1.1 to /
+# emerge gimp-print-cups-4.1.1.ebuild
+# rc-update add cupsd
+Adding cupsd to runlevel 2 3 4
+# /etc/rc.d/init.d/cupsd start
+Starting Common Unix Printing System...... [  ok  ]
+# konqueror localhost:631
+</pre>
+<p>
+The <c>gimp-print-cups</c> package is a set of printer drivers for cups,
+which is useful because the cups package itself includes drivers only
+for HP and Epson printers.
+Building <c>gimp-print-cups</c>
+builds cups as a dependency.  Once cups is built
+we add its init scripts to the appropriate run levels using 
+<c>rc-update add cupsd</c>, and then we turn on the cups daemon by starting
+the init script.
+</p>
+<p>
+Configuring cups simply requires using a web browser to connect to the
+web server that cups runs on the localhost network on port 631.
+[Note that because the cups web server runs on localhost and <e>not</e>
+on any of the ethx interfaces, it is reasonably secure.  Of course, that
+also means that it is difficult to administer cups remotely in any
+sort of nice fashion (the command-line <c>lpadmin</c> command
+would be an option, but it is also a considerable nightmare).  Fortunately,
+the cups web server renders quite well in <c>lynx</c>, so it can be 
+administered from a terminal window.]  Once you connect to the web
+interface, click (or its equivalent if using <c>lynx</c>) on "Do
+Administrative Tasks".  You will be asked for the cups account name
+(use "root") as well as for the root password.  Again, since the web server
+exists only on localhost, you don't have to worry about that information 
+being transmitted on the internet.  To add a printer click on "Add Printer",
+and follow the directions.  Help may be obtained by clicking on "Help", and
+then reading the Software Administrator's Manual.  If you find that you
+lack the appropriate printer driver then you can create one by heading
+to the rather impressive <uri>http://www.linuxprinting.org</uri> site.
 </p>
 </body>
 </section>
@@ -621,7 +689,95 @@ Coming soon!
 <section>
 <body>
 <p>
-Coming soon!
+Samba is a remarkable package that lets your linux box share files
+and printers with MS Windows machines.  For more detailed information read
+the Samba articles by Daniel Robbins at 
+<uri>http://www.ibm.com/developerworks</uri>.
+</p>
+<pre>
+# <i>cd /usr/portage/net-fs/samba</i>
+# <i>emerge samba-2.2.0a.ebuild</i>
+# <i>rc-update add samba</i>
+# <i>cd /etc/smb</i>
+# <i>cp /etc/smb/smb.conf.eg /etc/smb/smb.conf</i>
+# <i>vim /etc/smb/smb.conf</i>
+</pre>
+<pre caption="smb.conf -- workgroup">
+# workgroup = NT-Domain-Name or Workgroup-Name, eg: REDHAT4
+   workgroup = MYGROUP <comment>[change to match your workgroup]</comment>
+</pre>
+<pre caption="smb.conf -- printing with cups">
+# It should not be necessary to specify the print system type unless
+# it is non-standard. Currently supported print systems include:
+# bsd, sysv, plp, lprng, aix, hpux, qnx
+;   printing = bsd
+    printing = cups
+</pre>
+<pre caption="smb.conf -- encryption">
+# You may wish to use password encryption. Please read
+# ENCRYPTION.txt, Win95.txt and WinNT.txt in the Samba documentation.
+# Do not enable this option unless you have read those documents
+  encrypt passwords = yes
+</pre>
+<p>
+I have fairly minimal Samba needs.  I just want to be able to share
+files between my linux and windows machines, and I want to use my
+linux box as a print server (using <c>cups</c>).  After installing,
+it suffices to make a few minor edits to the <path>/etc/smb/smb.conf</path>
+file.  Specifically, the <e>workgroup</e> variable needs to match the
+workgroup for the windows network (I usually use "OLYMPUS", but "WORKGROUP"
+is the default on windows if I
+remember correctly), <e>printing</e> needs to be <e>cups</e>
+instead of <e>bsd</e>, and the <e>encrypt passwords = yes</e> line needs
+to be uncommented.  Windows machines use encrypted passwords by default,
+so that last change is essential unless you want to hack the Windows 
+registry on all of your windows machines <comment>[not recommended]</comment>.
+Unfortunately, Windows uses a different encryption method for passwords than
+does Linux, so you have to maintain a separate password file for samba.
+</p>
+<pre>
+# <i>smbpasswd -a grant</i> <comment>[Replace "grant" with your user name]</comment>
+New SMB password:
+Retype new SMB password:
+startsmbfilepwent_internal: unable to open file /etc/smb/private/smbpasswd. Error was No such file or directory
+Added user grant.
+</pre>
+<note>
+Before adding a user to samba's password list that user must first be
+listed in <path>/etc/passwd</path>.
+</note>
+<p>
+For each user that you want to be able to use samba from a windows machine
+you need to run the <c>smbpasswd</c> command.  Samba stores passwords in
+<path>/etc/smb/private/smbpasswd</path>, which will be created for you 
+the first time you run the <c>smbpasswd</c> command, albeit with the 
+cosmetic "error" seen above.
+</p>
+<pre>
+# <i>/etc/rc.d/init.d/samba start</i>
+Starting samba...        [  ok  ]
+</pre>
+<p>
+Start samba, and you should be able to connect to your Gentoo Linux
+box from any of your windows machines and see the home directory for
+whatever user you connect as and also whatever printers you have set up.
+If you can't connect, take a look at 
+<path>/usr/share/doc/samba-2.2.0a/textdocs/DIAGNOSIS.txt.gz</path>
+for additional help.
+</p>
+<pre caption="Optional high-availability samba">
+# <i>/etc/rc.d/init.d/samba stop</i>
+Stopping samba...            [  ok  ]
+# <i>rc-update add svc-samba</i>
+Adding svc-samba to runlevel 3 4
+# <i>/etc/rc.d/init.d/svc-samba start</i>
+Starting svc-samba...        [  ok  ]
+</pre>
+<p>
+The above steps, which are recommended but optional
+run samba under <c>supervise</c>, which is
+part of <c>daemontools</c>, ensuring that if the <c>smbd</c>
+or <c>nmbd</c> daemons die they get restarted.  
 </p>
 </body>
 </section>
