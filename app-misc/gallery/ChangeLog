@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gallery
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.8 2003/08/11 19:16:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.9 2003/09/02 10:55:22 aliz Exp $
+
+*gallery-1.3.4_p1 (02 Sep 2003)
+
+  02 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> gallery-1.3.4_p1.ebuild :
+  Security update.
 
   12 Aug 2003; Martin Holzer <mholzer@gentoo.org> gallery-1.3.4.ebuild:
   Added remote class and marked x86 stable
