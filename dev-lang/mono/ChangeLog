@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.3 2002/07/24 23:38:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.4 2002/07/27 22:04:58 trance Exp $
+
+*mono-0.13 (27 Jul 2002)
+  27 Jul 2002: Kevyn Shortell <trance@gentoo.org> mono-0.13.ebuild, ChangLog:
+  updated to mono-0.13.ebuild. The ebuild was submitted by Luis Mayoral <satriani@okulto.net>.
+  Tested on PPC and X86, failed PPC. repo'd and submitted.
 
 *mono-0.12 (24 Jul 2002)
 
