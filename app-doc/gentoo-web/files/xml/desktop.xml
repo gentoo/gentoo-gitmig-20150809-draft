@@ -1,0 +1,387 @@
+<?xml version='1.0'?>
+<guide link="/doc/desktop.html">
+<title>Gentoo Linux Desktop Configuration Guide</title>
+<author title="Editor"><mail link="g2boojum@gentoo.org">Grant Goodyear</mail></author>
+
+<abstract>
+   This guide shows you configure Gentoo Linux to be a full-purpose
+   desktop system.  Specifically, we walk through installing and 
+   configuring X, KDE, OSS and alsa (sound), postfix (electronic mail), 
+   cups (printing),
+   and samba (unix/windows interoperability).
+</abstract>
+
+<version>0.1</version>
+<date>22 June 2001</date>
+
+<chapter>
+<title>Preliminaries</title>
+<section>
+<body>
+<p>Needless to say, you first need to have Gentoo Linux installed
+(<uri>http://www.gentoo.org/doc/install.html</uri>).  Having finished
+that rather enjoyable process, you also need to download the <e>Portage</e>
+tree.  You really should read the Portage User Guide 
+(<uri>http://www.gentoo.org/doc/portage-user.html</uri>), but if you're
+in a hurry you just need to type:
+</p>
+<pre># <c>emerge rsync</c></pre>
+<p>A quick note is in order about the packages that I have chosen to 
+discuss here.  Gentoo Linux has a considerable wealth of window managers,
+mail transport agents, etcetera that can easily be installed.  The specific
+packages that I have chosen to cover are not preferred by Gentoo Linux, they
+are simply packages that the author likes and/or knows how to configure.
+In other words, they're the packages on the author's own desktop.</p>
+</body>
+</section>
+</chapter>
+
+<chapter>
+<title>X and KDE</title>
+
+<section>
+<title>Installation</title>
+<body>
+<p>
+Having installed Gentoo Linux and updated Portage, 
+my first task is generally to install X
+and KDE.  X takes forever to compile, and KDE takes even longer,
+so I highly recommend doing this right before going to bed.
+</p>
+<p>
+It's always useful to use the <c>--pretend</c> flag before doing
+an <c>emerge</c> to see what dependencies are going to be installed, and in our
+case it's quite a lot.
+</p>
+<pre>
+# <c>cd /usr/portage/kde-base/kdebase</c>
+# <c>emerge --pretend kdebase-2.1.1-r1.ebuild</c>
+
+These are the packages that I would merge, in order.
+
+Calculating dependencies............... done!
+[ebuild N  ] media-sound/cdparanoia-3.9.8 to /
+[ebuild N  ] media-libs/jpeg-6b-r2 to /
+[ebuild N  ] media-libs/tiff-3.5.6_beta to /
+[ebuild N  ] x11-base/xfree-4.1.0 to /
+[ebuild N  ] x11-libs/openmotif-2.1.30-r1 to /
+[ebuild N  ] media-libs/alsa-lib-0.5.10-r1 to /
+[ebuild N  ] media-libs/mesa-glu-3.4.2 to /
+[ebuild N  ] kde-base/kde-env-2.1 to /
+[ebuild N  ] media-libs/lcms-1.06 to /
+[ebuild N  ] media-libs/libmng-1.0.1 to /
+[ebuild N  ] media-libs/audiofile-0.2.1 to /
+[ebuild N  ] media-libs/libpng-1.0.11 to /
+[ebuild N  ] x11-libs/qt-x11-2.3.0 to /
+[ebuild N  ] app-text/sgml-common-0.6.1 to /
+[ebuild N  ] kde-base/kdelibs-2.1.2 to /
+[ebuild N  ] kde-base/kdebase-2.1.1-r1 to /
+
+# <c>emerge kdebase-2.1.1-r1.ebuild</c>
+</pre>
+<p>Have a nice nap!</p>
+</body>
+</section>
+
+<section>
+<title>Configuring</title>
+<body>
+<p>
+I like using the console-based <c>xf86config</c> program to configure X.
+Before you start, you'll need to know the horizontal and vertical refresh
+rates of your monitor (my viewsonic G773 has Horizontal: 30-69 KHz, 
+Vertical: 55-90 KHz), the type and amount of ram (in KB) of your video card
+(a 32768 KB GeForce card, in my case), and the type and device of your
+mouse (an intellimouse plugged into the ps/2 port <path>/dev/psaux</path>).
+</p>
+<pre># <c>xf86config</c></pre>
+<figure link="../images/xf86config.png" short="xf86config image"/>
+<p>Because I have a three-button mouse I choose not to enable 
+3-button emulation.  I don't add any additional XKB keyboard options
+because I don't know what any of them do.  You'll have to guess at
+a screen resolution and pixel depth that you'll like.  I happen
+to like 1280x1024 at 24bpp on my viewsonic, but that's only because it
+doesn't work at a higher resolution.  If you've never done this before,
+don't be surprised if you end up running <c>xf86config</c> multiple
+times.</p>
+
+<note>If you don't know the refresh rates of your monitor, try doing a 
+google search, <uri>http://www.google.com</uri>, on the model number and
+manufacturer of your monitor.  The refresh rates are generally given as
+part of the monitor specs.</note>
+
+<warn>If you're an X-configuring veteran, you may be used to making
+a symbolic link from your mouse device to <path>/dev/mouse</path>.  If
+you are using <c>devfs</c> you may be unpleasantly surprised to discover
+that your link is not preserved upon rebooting.</warn>
+
+<pre># <c>startx</c></pre>
+<p>If you configured X properly, running <c>startx</c> should start an
+amazingly ugly X window manager (twm, to be specific).  If X comes up,
+you're good to go.  Hit <c>&lt;ctrl&gt;&lt;alt&gt;&lt;backspace&gt;</c>
+to kill the X server.</p>
+
+<p>If you have a wheel mouse you'll want to edit the XF86Config file
+by hand:</p>
+<pre>
+# <c>cp /etc/X11/XF86Config /etc/X11/XF86Config.working</c>
+# <c>vim /etc/X11/XF86Config</c></pre>
+<figure link="../images/XF86Configalt.png" short="XF86Config file"/>
+<p>Because I have an intellimouse I changed the "Protocol" from 
+"PS/2" to "IMPS/2".  Getting the wheel to scroll just requires
+adding the 'Option "ZAxisMapping" "4 5"' line, where '4' and '5'
+correspond to mouse wheel up and mouse wheel down.
+</p>
+<note>Netscape 4.x won't scroll with the wheel by default; you'll need
+to create an .Xdefaults file first.  See 
+<uri>http://www-sop.inria.fr/koala/colas/mouse-wheel-scroll/</uri>
+for instructions.  Better yet, use <c>konqueror</c>, <c>opera</c>,
+<c>mozilla</c>, <c>galeon</c>, or some other real browser.</note>
+
+<p>Run <c>startx</c> again just to make sure that X still comes up.
+Assuming that it does, kill X and we'll start a real window manager
+instead.  First, though, we need to fix a minor KDE bug.
+</p>
+<pre># <c>vim /opt/kde2.1/bin/startkde</c></pre>
+<figure link="../images/startkde.png" short="startkde image"/>
+<p>By adding <e>--login</e> to the end of the <e>#! /bin/sh</e> line
+we ensure that KDE will read <path>/etc/profile</path> when starting
+up a terminal.</p>
+
+<p>Because Achim, Gentoo Linux's lead package guru, is a genius, the
+KDE ebuild configures KDE quite well all by itself.  The KDM display
+manager should work just by starting it.</p>
+<pre># <c>kdm</c></pre>
+<p>You should be able to log in and see KDE in full working order.
+Of course sound shouldn't be working yet, so you miss the annoying
+KDE start-up sound, but we'll fix that in a moment.  Open a 
+konsole, type <c>ls /usr/bin</c> (or anything else that more than fills 
+the konsole window), and see if the mouse wheel lets
+you scroll up and down in the konsole window.  It really should
+work!</p>
+
+<p>All that's left is to make sure that X comes up when Gentoo boots.
+Edit <path>/etc/rc.d/config/basic</path> so that 
+<e>DISPLAYMANAGER="kdm"</e>.  Now we just need to make sure that the
+<e>xdm</e> start-up script is read when booting runlevel 4 (Gentoo's
+default runlevel for X) and change <path>/etc/inittab</path> so that
+runlevel 4 is the default runlevel.</p>
+<pre>
+# <c>rc-update add xdm</c>
+# <c>vim /etc/inittab</c>
+</pre>
+<figure link="../images/inittab.png" short="inittab image"/>
+<p>Reboot, and see if X comes up!</p>
+
+</body>
+</section>
+</chapter>
+
+<chapter>
+<title>Sound</title>
+<section>
+<title>Standard Kernel Sound Modules</title>
+<body>
+<p>Out of the box, Gentoo Linux doesn't support the standard
+kernel modules.  You'll have to recompile the kernel.</p>
+<pre>
+# <c>cd /usr/portage/sys-kernel/linux-sources</c>
+# <c>emerge linux-sources-x.y.z.ebuild</c>
+</pre>
+<p>The linux-sources ebuild installs the sources into /usr/src,
+and you can then compile the kernel (and your sound module)
+in the usual manner 
+(<uri>http://www.linuxdoc.org/HOWTO/Kernel-HOWTO.html</uri>).
+If you choose to compile the sound driver as a module (not
+compile it directly into the kernel), they you need to add
+the module name (without the .o extension) to 
+<path>/etc/rc.d/config/modules</path>.</p>
+<p>
+Reboot the machine.  With any luck the appropriate sound driver 
+should now be loaded.  To actually produce sound, a few more steps
+are required.
+</p>
+<pre>
+# <c>cd /dev</c>
+# <c>./MAKEDEV audio</c>
+#
+# <c>cat /opt/kde2.1/share/sounds/pop.wav &gt; /dev/dsp</c>
+# <c>cd /usr/portage/media-sound/sox</c>
+# <c>emerge sox-x.y.z.ebuild</c>
+# <c>play /opt/kde2.1/share/sounds/pop.wav</c>
+</pre>
+<p>
+If any sound at all results from cat'ing the .wav file to 
+<path>/dev/dsp</path>, then sound is probably working.
+By emerge'ing sox one can use the <c>play</c> command to 
+play .wav files (and, unlike using <c>cat</c>, the .wav file
+should sound good when using <c>play</c>).
+</p>
+<warn>I found that when running <e>devfs</e> the /dev/MAKEDEV script
+would be missing.  Help?</warn>
+</body>
+</section>
+<section>
+<title>Alsa</title>
+<body>
+<p>Gentoo Linux does support Alsa for sound using the default kernel.
+Alsa can be run with or without <e>devfs</e>.  I am going to assume
+here that you have <e>devfs</e> enabled; if you don't then please
+see the Gentoo FAQ:
+<uri>http://www.gentoo.org/doc/faq.html</uri>.
+</p>
+<pre>
+# <c>vim /etc/rc.d/config/modules</c>
+</pre>
+<figure link="../images/modules.png" short="modules fig"/>
+<p>
+You'll want to replace <e>snd-card-ens1371</e> with the
+appropriate sound card for your system.  Look in
+<path>/lib/modules/[kernel version]/misc/</path>
+for a list of modules.
+</p>
+<warn>
+Whatever you do, don't add kernel modules to 
+<path>/etc/modules.conf</path>.  The <path>/etc/modules.conf</path>
+file is autogenerated at boot time, so any changes made there will 
+be lost.
+</warn>
+<p>Now we set up the <e>kerneld</e> aliases.</p>
+<pre>
+# <c>vim /etc/modules/2.4.4-ac5</c>
+</pre>
+<figure link="../images/kmod.png" short="kmod fig"/>
+<p>
+Again, you'll want to replace <e>snd-card-ens1371</e> with
+your sound card.  
+</p>
+<p>We still have to help out <e>devfs</e>, however.
+Add the following to <path>/etc/devfsd.conf</path>.</p>
+<pre>
+# <c>vim /etc/devfsd.conf</c>
+</pre>
+<figure link="../images/devfsd.png" short="devfsd image"/>
+<p>
+Reboot, and all of the sound stuff should be loaded.  You won't
+hear any sound yet, though, because alsa keeps all sound channels
+muted by default.
+</p>
+<pre>
+# <c>cd /usr/portage/media-sound/alsa-utils</c>
+# <c>emerge alsa-utils-x.y.z.ebuild</c>
+# <c>amixer</c>
+
+Group 'Input Gain',0
+  Capabilities: volume mute jointly-mute
+  Channels: Front-Left Front-Right
+  Limits: min = 0, max = 15
+  Front-Left: 11 [73%] [mute] [---]
+  Front-Right: 11 [73%] [mute] [---]
+Group 'Master Mono',0
+  Capabilities: volume mute capture exclusive-capture
+  Capture exclusive group: 1
+  Channels: Front-Left Front-Right
+  Limits: min = 0, max = 31
+  Front-Left: 23 [74%] [mute] [---]
+  Front-Right: 23 [74%] [mute] [---]
+Group 'Headphone',0
+  Capabilities: volume mute jointly-mute
+  Channels: Front-Left Front-Right
+  Limits: min = 0, max = 31
+  Front-Left: 0 [0%] [mute] [---]
+  Front-Right: 0 [0%] [mute] [---]
+Group 'Master',0
+  Capabilities: volume mute jointly-mute capture exclusive-capture
+  Capture exclusive group: 1
+  Channels: Front-Left Front-Right
+  Limits: min = 0, max = 63
+  Front-Left: 50 [79%] [mute] [---]
+  Front-Right: 50 [79%] [mute] [---]
+<e>[chopped for brevity]</e>
+
+# <c>amixer set Master 100 unmute</c>
+# <c>amixer set PCM 100 unmute</c>
+# <c>aplay /opt/kde2.1/share/sounds/pop.wav</c>
+</pre>
+<p>
+After installing the alsa utilities we used <c>amixer</c> to 
+unmute the Master and PCM sound channels and to set their volume
+to 100%.  We check to see if sound is working by using the 
+<c>aplay</c> (alsa play) command.  If you hear a pop, then sound
+is indeed working.
+</p>
+</body>
+</section>
+<section>
+<title>Sound and KDE</title>
+<body>
+<p>
+KDE has some nice sound utilities, including the KDE sound mixer 
+<c>kmix</c>.  
+</p>
+<pre>
+# <c>cd /usr/portage/kde-apps/kdemultimedia</c>
+# <c>emerge kdemultimedia-x.y.z.ebuild</c>
+# <c>kmix</c>
+</pre>
+<note>If kmix cannot find a mixer, then it probably thinks you don't
+have sound support.  Log out and remove ~/.kde and ~/Desktop (the latter
+may not be necessary), then log in again.  This time it should find 
+the sound mixer properly.
+</note>
+</body>
+</section>
+</chapter>
+
+<chapter>
+<title>Mail</title>
+<section>
+<title>Postfix -- Install and Configure</title>
+<body>
+<p>
+Coming soon!
+</p>
+</body>
+</section>
+<section>
+<title>Postfix Testing (with Mutt)</title>
+<body>
+<p>
+Coming soon!
+</p>
+</body>
+</section>
+</chapter>
+
+<chapter>
+<title>Printing</title>
+<section>
+<title>Simple printing -- PDQ</title>
+<body>
+<p>
+Coming soon!
+</p>
+</body>
+</section>
+<section>
+<title>Full-fledged printing -- CUPS</title>
+<body>
+<p>
+Coming soon!
+</p>
+</body>
+</section>
+</chapter>
+
+<chapter>
+<title>Samba</title>
+<section>
+<body>
+<p>
+Coming soon!
+</p>
+</body>
+</section>
+</chapter>
+
+</guide>
