@@ -24,6 +24,10 @@
 # <mcummings@gentoo.org> (18 Aug 2002)
 # The following are masked for testing
 =dev-perl/AxKit-1.6
+=dev-perl/XML-LibXML-1.52
+=dev-perl/XML-NamespaceSupport-1.07
+=dev-perl/XML-LibXSLT-1.50
+
 * <seemant@gentoo.org> (17 Aug 2002)
 # Masked for testing and until new aspell is released
 =app-text-gnome-spell-0.4.1-r3
