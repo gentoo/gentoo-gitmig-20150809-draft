@@ -1,0 +1,15 @@
+--- clanbomber/Config.cpp	2004-11-21 10:19:16.303654776 +0100
++++ clanbomber/Config.cpp.new	2004-11-21 10:20:33.042988624 +0100
+@@ -23,6 +23,12 @@
+ 
+ #include "Controller.h"
+ 
++#ifdef min
++#undef min
++#endif
++#ifdef max
++#undef max
++#endif
+ #include <fstream>
+ #include <cstdio>
+ 
