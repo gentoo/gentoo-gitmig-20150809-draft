@@ -13,12 +13,14 @@ DEPEND=">=gnome-base/gal-0.6
         >=gnome-base/libghttp-1.0.9
         >=gnome-base/libunicode-0.4
         >=dev-util/xml-i18n-tools-0.8.4
+	>=gnome-base/gconf-1.0.1
         bonobo? ( >=gnome-base/bonobo-1.0.4 )"
 
 RDEPEND=">=gnome-base/gal-0.5
 	 >=gnome-base/control-center-1.2.4
          >=gnome-base/libghttp-1.0.9
          >=gnome-base/libunicode-0.4
+	 >=gnome-base/gconf-1.0.1
          bonobo? ( >=gnome-base/bonobo-1.0.4 )"
 
 

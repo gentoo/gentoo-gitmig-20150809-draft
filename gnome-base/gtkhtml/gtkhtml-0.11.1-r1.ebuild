@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.11.1-r1.ebuild,v 1.3 2001/08/23 10:12:08 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.11.1-r1.ebuild,v 1.4 2001/08/23 11:09:00 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,12 +15,14 @@ DEPEND="sys-devel/gettext
         >=gnome-base/libghttp-1.0.9
         >=gnome-base/libunicode-0.4
 	>=gnome-base/bonobo-1.0.4
+	>=gnome-base/gconf-1.0.1
         >=dev-util/xml-i18n-tools-0.8.4"
 
 RDEPEND=">=gnome-base/gal-0.5
 	 >=gnome-base/control-center-1.2.4
          >=gnome-base/libghttp-1.0.9
          >=gnome-base/libunicode-0.4
+	 >=gnome-base/gconf-1.0.1
          >=gnome-base/bonobo-1.0.4"
 
 
