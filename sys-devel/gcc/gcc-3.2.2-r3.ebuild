@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.5 2003/03/24 02:59:25 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.6 2003/03/24 19:49:06 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -192,12 +192,12 @@ src_unpack() {
 	cp ${FILESDIR}/3.2/protector.h ${WORKDIR}/${P}/gcc/
 
 
-       # GCC bugfixes ...
-        epatch ${FILESDIR}/3.2.2/gcc32-pr7768.patch
-        epatch ${FILESDIR}/3.2.2/gcc32-pr8213.patch
-#       epatch ${FILESDIR}/3.2.2/gcc32-pr9732.patch
-#       epatch ${FILESDIR}/3.2.2/gcc322-pr9888.patch
-        epatch ${FILESDIR}/3.2.2/gcc322-pr8746.patch
+	# GCC bugfixes ...
+	epatch ${FILESDIR}/3.2.2/gcc32-pr7768.patch
+	epatch ${FILESDIR}/3.2.2/gcc32-pr8213.patch
+#	epatch ${FILESDIR}/3.2.2/gcc32-pr9732.patch
+#	epatch ${FILESDIR}/3.2.2/gcc322-pr9888.patch
+	epatch ${FILESDIR}/3.2.2/gcc322-pr8746.patch
 
 	# Patches from debian-arm
 	if [ "${ARCH}" = "arm" ]
@@ -322,24 +322,24 @@ src_compile() {
 	get_number_of_jobs
 
 	einfo "Building GCC..."
-	if [ -z "`use static`" ]
+	# Only build it static if we are just building the C frontend, else
+	# a lot of things break because there are not libstdc++.so ....
+	if [ -n "`use static`" -a "${gcc_lang}" = "c" ]
 	then
 		# Fix for our libtool-portage.patch
-eerror "${CFLAGS}"
 		S="${WORKDIR}/build" \
-		emake bootstrap-lean \
+		emake LDFLAGS="-static" bootstrap \
 			LIBPATH="${LIBPATH}" \
-			BOOT_CFLAGS="${CFLAGS}" \
-			STAGE1_CFLAGS="-O" || die 
-
+			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
 		# Above FLAGS optimize and speedup build, thanks
 		# to Jeff Garzik <jgarzik@mandrakesoft.com>
 	else
+		eerror "CFLAGS = ${CFLAGS}"
+		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
-		emake LDFLAGS=-static bootstrap \
+		emake bootstrap-lean \
 			LIBPATH="${LIBPATH}" \
-			BOOT_CFLAGS="${CFLAGS}" \
-			STAGE1_CFLAGS="-O" || die
+			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
 	fi
 }
 
