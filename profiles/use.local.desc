@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.630 2004/09/19 07:10:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.631 2004/09/19 12:38:04 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -249,6 +249,7 @@ games-util/aabrowse:geoip - lookup countries by IP addresses via the GeoIP libra
 games-util/xqf:geoip - Add geoip support
 gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-base/gnome-vfs:hal - Enable Hardware Abstraction Layer (HAL) support
+gnome-extra/nautilus-cd-burner:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-apps/gworkspace:imagekits - Enable support for ImageKits Bundle (mainly for PDF previewing)
