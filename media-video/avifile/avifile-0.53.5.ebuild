@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.53.5.ebuild,v 1.1 2001/02/10 11:17:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.53.5.ebuild,v 1.2 2001/02/13 04:58:15 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for AVI-Files"
@@ -17,17 +17,11 @@ RDEPEND=">=x11-libs/qt-x11-2.2.2
 	 >=media-sound/esound-0.2.19"
 	
 src_unpack () {
-
-
     unpack ${P}.tar.gz
-
     cd ${S}
-
-
 }
 
 src_compile() {
-
     cd ${S}
     try ./configure --prefix=/usr/X11R6 --host=${CHOST} --disable-tsc
     cp Makefile Makefile.orig
