@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.38 2003/10/18 19:35:48 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.39 2003/11/18 19:39:07 azarah Exp $
+
+*gcc-config-1.3.4 (18 Nov 2003)
+
+  18 Nov 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.4.ebuild,
+  files/gcc-config-1.3.4, files/gcc-config-1.3.4-multi-ldpath:
+  I did not use REAL_CHOST in all cases, ending up with /usr/bin/-gcc, etc
+  files, as CHOST was not set.
 
 *gcc-config-1.3.3-r2 (18 Oct 2003)
 
