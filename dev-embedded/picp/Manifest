@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb9c751e03190b0360b9068837bf4f7e picp-0.6.4.ebuild 713
+MD5 03d7ba2a50909ebf12df34033d99f95f metadata.xml 236
+MD5 6913c80215383bca58a47d087936d22b ChangeLog 423
+MD5 0b99b678f38d332f932913971e20bff4 files/digest-picp-0.6.4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsN9CmdTrptrqvGERAjcDAKCLusbk90G92ThzK9in5ZS+VI6fMwCgmRav
+dh7rFaE3fLY9aNgiOqpRl7Y=
+=sAz4
+-----END PGP SIGNATURE-----
