@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 1169a9b0c424b45c5f8b6ca2987d87fc ChangeLog 338
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 ed2ba9b0bc92a9485109fd45758c5220 elation-0.0.1.20040807.ebuild 428
+MD5 8468d329112e6b5d47dcf85a5bc5af55 elation-0.0.1.20040807.ebuild 456
 MD5 d7459f25f10133d1eae9bfa984756594 files/digest-elation-0.0.1.20040807 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBGbEaHTu7gpaalycRAo4NAKCZBn2yznJqh6IiZlqSvajHS9Qb1QCfc/gB
-t2ekA+6czShappkIr/2oRPM=
-=yu9o
+iD8DBQFBGvgNHTu7gpaalycRAi9CAKDPb9BWjzkmf2Sayk+RWQs/CiVksQCggC+d
+Uhdnn1TcLeAKmpRZN/6lqlo=
+=/Zl3
 -----END PGP SIGNATURE-----
