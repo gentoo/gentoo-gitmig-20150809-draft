@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.6 2004/03/27 04:16:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.7 2004/03/29 22:36:41 avenj Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -12,9 +12,10 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="x86 ~ppc sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
-IUSE="debug"
+IUSE="debug gpm"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	gpm? ( sys-libs/gpm )"
 
 src_unpack() {
 	unpack ${A}
@@ -45,6 +46,8 @@ src_compile() {
 	# <azarah@gentoo.org> (23 Oct 2002)
 	( use build || use bootstrap ) \
 		&& myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
+
+	use gpm && myconf="${myconf} --with-gpm"
 
 	# We need the basic terminfo files in /etc, bug #37026.  We will
 	# add '--with-terminfo-dirs' and then populate /etc/terminfo in
