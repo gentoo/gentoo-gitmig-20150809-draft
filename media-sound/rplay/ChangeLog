@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rplay
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/ChangeLog,v 1.3 2003/12/26 16:38:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/ChangeLog,v 1.4 2003/12/26 23:44:36 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> rplay-3.3.2.ebuild:
+  Marked stable on sparc to fix broken x11-wm/fvwm dependencies.
 
   26 Dec 2003; Tavis Ormandy <taviso@gentoo.org> rplay-3.3.2.ebuild:
   fixing #36527

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.5 2003/12/26 16:38:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.6 2003/12/26 23:44:36 weeve Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://rplay.doit.org/dist/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~sparc ~ppc"
+KEYWORDS="x86 alpha sparc ~ppc"
 IUSE=""
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
