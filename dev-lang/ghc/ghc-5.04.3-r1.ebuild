@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.7 2003/10/22 12:34:49 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.8 2003/11/11 19:42:36 pappy Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -126,6 +126,16 @@ src_compile() {
 	echo '>>> Creating stage 2 build dir'
 	mkdir ${STAGE2_B} || die
 	${LNDIR} ${S} ${STAGE2_B} || die
+
+# disable the automatic PIC building which is considered as Prologue Junk by the Haskell Compiler
+	if has_version "sys-devel/hardened-gcc"
+	then
+		# fix proposed by Peter simons according to bug #30789
+		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> ${STAGE1_B}/mk/build.mk
+		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> ${STAGE1_B}/mk/build.mk
+		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> ${STAGE2_B}/mk/build.mk
+		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> ${STAGE2_B}/mk/build.mk
+	fi
 
 	use opengl && myconf="--enable-hopengl" || myconf="--disable-hopengl"
 

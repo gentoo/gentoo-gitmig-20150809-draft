@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.1.ebuild,v 1.2 2003/10/22 12:34:49 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.1.ebuild,v 1.3 2003/11/11 19:42:36 pappy Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -82,6 +82,16 @@ src_compile() {
 	local myconf
 	if [ `use opengl` ]; then
 		myconf="--enable-hopengl"
+	fi
+
+	# disable the automatic PIC building which is considered as Prologue Junk by the Haskell Compiler
+	# thanks to Peter Simons for finding this and giving notice on bugs.gentoo.org
+	if has_version "sys-devel/hardened-gcc"
+	then
+		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
+		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
+		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
+		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
 	fi
 
 	# unset SGML_CATALOG_FILES because documentation installation
