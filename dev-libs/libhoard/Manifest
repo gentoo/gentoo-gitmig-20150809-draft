@@ -1,3 +1,5 @@
-MD5 39ebc9566879cff670bf159315c6db39 ChangeLog 772
-MD5 ce2e345eda79b452ef8012a20893c655 libhoard-2.1.0.ebuild 734
 MD5 84f94622fc0252ed80f59da459d4e467 files/digest-libhoard-2.1.0 66
+MD5 abfcdad5381c1db2703c0460cc584655 files/digest-libhoard-2.1.2d 67
+MD5 ce2e345eda79b452ef8012a20893c655 libhoard-2.1.0.ebuild 734
+MD5 97dbd1627cf46d66888e97ab5e3a6104 ChangeLog 899
+MD5 aa71c619dc773b6c3865a47d4ff05bff libhoard-2.1.2d.ebuild 781
