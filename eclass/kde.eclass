@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.48 2002/04/02 23:23:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.49 2002/05/07 19:26:22 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -36,7 +36,7 @@ kde_src_compile() {
 		configure)
 			debug-print-section configure
 			debug-print "$FUNCNAME::configure: myconf=$myconf"
-			
+
 			# This can happen with e.g. a cvs snapshot			
 			if [ ! -f "./configure" ]; then
 			    for x in Makefile.cvs admin/Makefile.common; do
@@ -68,42 +68,31 @@ kde_src_compile() {
 
 kde_src_install() {
 
-    debug-print-function $FUNCNAME $*
-    [ -z "$1" ] && kde_src_install all
+	debug-print-function $FUNCNAME $*
+	[ -z "$1" ] && kde_src_install all
 
-    cd ${S}
+	cd ${S}
 
-    while [ "$1" ]; do
+	while [ "$1" ]; do
 
-	case $1 in
-	    make)
-			debug-print-section make
-			make install DESTDIR=${D} destdir=${D} || die "died running make install, $FUNCNAME:make"
-			;;
-	    dodoc)
-			debug-print-section dodoc
-			dodoc AUTHORS ChangeLog README* COPYING NEWS TODO
-			;;
-	    all)
-			debug-print-section all
-			kde_src_install make dodoc
-			;;
-	esac
+		case $1 in
+			make)
+				debug-print-section make
+				make install DESTDIR=${D} destdir=${D} || die "died running make install, $FUNCNAME:make"
+				;;
+	    	dodoc)
+				debug-print-section dodoc
+				dodoc AUTHORS ChangeLog README* COPYING NEWS TODO
+				;;
+	    	all)
+				debug-print-section all
+				kde_src_install make dodoc
+				;;
+		esac
 
-    shift
-    done
+	shift
+	done
 
 }
 
 EXPORT_FUNCTIONS src_compile src_install
-
-
-
-
-
-
-
-
-
-
-
