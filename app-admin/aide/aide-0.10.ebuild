@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.10.ebuild,v 1.4 2004/06/24 21:22:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.10.ebuild,v 1.5 2004/07/03 14:45:56 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/aide/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~amd64"
 IUSE="nls postgres zlib crypt"
 
 DEPEND="app-arch/gzip
