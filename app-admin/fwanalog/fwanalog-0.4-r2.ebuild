@@ -1,17 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.4-r2.ebuild,v 1.14 2004/01/04 16:14:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.4-r2.ebuild,v 1.15 2004/03/29 23:09:37 mr_bones_ Exp $
 
-IUSE=""
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Script to parse firewall logs and analyze them with Analog"
-SRC_URI="http://tud.at/programm/fwanalog/${P}.tar.gz"
 HOMEPAGE="http://tud.at/programm/fwanalog/"
+SRC_URI="http://tud.at/programm/fwanalog/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND="" # this is just a bash script
 RDEPEND="app-shells/bash
