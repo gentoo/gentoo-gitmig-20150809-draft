@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.28.0.ebuild,v 1.12 2004/02/23 17:08:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.28.0.ebuild,v 1.13 2004/03/17 08:57:13 seemant Exp $
 
 inherit libtool
 
 # the tarball is oddly named for the release version
-PV="${PV/28.0/28}"
-
+MY_P=${P%.*}
 DB_VERSION="4.0.14"
 DESCRIPTION="A compelling replacement for CVS"
 SRC_URI="berkdb? ( http://www.sleepycat.com/update/snapshot/db-${DB_VERSION}.tar.gz )
-	http://subversion.tigris.org/files/documents/15/5870/${PN}-${PV}.tar.gz"
+	http://subversion.tigris.org/files/documents/15/5870/${MY_P}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
@@ -18,7 +17,7 @@ LICENSE="Apache-1.1"
 KEYWORDS="~x86"
 IUSE="ssl apache2 berkdb python"
 
-S=${WORKDIR}/${PN}-${PV}
+S=${WORKDIR}/${MY_P}
 
 if [ "${SVN_REPOS_LOC}x" = "x" ]; then
 	SVN_REPOS_LOC="/home/svn"
@@ -62,7 +61,7 @@ pkg_setup() {
 
 src_unpack() {
 	cd ${WORKDIR}
-	unpack ${PN}-${PV}.tar.gz
+	unpack ${MY_P}.tar.gz
 	use berkdb && ( has_version =db-4* || (
 		unpack db-${DB_VERSION}.tar.gz
 	) )
@@ -81,7 +80,7 @@ src_compile() {
 		cd ${S_DB}
 		../dist/configure \
 			--prefix=/usr \
-	                --mandir=/usr/share/man \
+			--mandir=/usr/share/man \
 			--infodir=/usr/share/info \
 			--datadir=/usr/share \
 			--sysconfdir=/etc \
