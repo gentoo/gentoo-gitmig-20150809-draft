@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquapfont
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.15 2004/10/06 14:02:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.16 2004/11/01 09:58:41 usata Exp $
+
+  01 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5-r1.ebuild:
+  Stable on ppc-macos.
 
   06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5-r1.ebuild,
   -aquapfont-2.5.ebuild:
