@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.19 2004/07/06 12:39:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.20 2004/08/14 11:10:18 kloeri Exp $
+
+  14 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> wv2-0.2.ebuild:
+  Stable on alpha.
 
 *wv2-0.2.2 (06 Jul 2004)
 
