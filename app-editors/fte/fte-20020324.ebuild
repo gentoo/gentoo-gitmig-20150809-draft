@@ -1,16 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.11 2002/10/05 05:39:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.12 2002/10/18 21:15:09 aliz Exp $
 
 IUSE="gpm slang X"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/fte/${P}-src.zip
-	http://telia.dl.sourceforge.net/sourceforge/fte/${P}-src.zip
-
-		http://unc.dl.sourceforge.net/sourceforge/fte/${P}-common.zip
-	http://telia.dl.sourceforge.net/sourceforge/fte/${P}-common.zip"
+SRC_URI="mirror://sourceforge/fte/${P}-src.zip
+	mirror://sourceforge/fte/${P}-common.zip"
 HOMEPAGE="http://fte.sourceforge.net"
 
 RDEPEND=">=sys-libs/ncurses-5.2

@@ -1,11 +1,12 @@
 # Copyright 2002 Maik Schreiber
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.3 2002/08/06 17:34:16 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.4 2002/10/18 21:15:09 aliz Exp $
 
+MY_PV=${PV//.}
 S="${WORKDIR}/jEdit"
 DESCRIPTION="A programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/jedit/jedit40source.tar.gz"
+SRC_URI="mirror://sourceforge/jedit/${PN}${MY_PV}source.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="*"
