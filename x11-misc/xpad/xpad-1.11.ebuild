@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-1.11.ebuild,v 1.5 2004/01/25 14:29:23 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-1.11.ebuild,v 1.6 2004/01/25 17:06:36 tseng Exp $
 
-IUSE="nls"
+IUSE=""
 
 DESCRIPTION="A GTK+ 2.0 based 'post-it' note system."
 HOMEPAGE="http://xpad.sourceforge.net/"
@@ -12,11 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 
-DEPEND=">=x11-libs/gtk+-2.0.0
-		nls? ( sys-devel/gettext )"
+DEPEND=">=x11-libs/gtk+-2.0.0"
 
 src_compile () {
-	econf `use_enable nls` || die
 	emake || die
 }
 
