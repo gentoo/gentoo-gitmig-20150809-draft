@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.0.0.ebuild,v 1.1 2004/09/22 00:45:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.0.0.ebuild,v 1.2 2004/09/22 23:08:19 liquidx Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="2.0"
 KEYWORDS="~x86"
-IUSE="debug doc kerberos"
+IUSE="debug doc"
 
 RDEPEND=">=mail-client/evolution-2
 		>=dev-libs/glib-2.0
@@ -21,7 +21,7 @@ RDEPEND=">=mail-client/evolution-2
 		>=gnome-base/libgnomeui-2.0
 		>=gnome-base/libbonobo-2.0
 		>=net-nds/openldap-2.1.30-r2
-		kerberos? ( >=app-crypt/mit-krb5-1.3.0 )"
+		>=app-crypt/mit-krb5-1.3.0"
 
 DEPEND="${RDEPEND}
 		dev-util/intltool
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 		doc? ( dev-util/gtk-doc )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-G2CONF="${G2CONF} `use_with debug e2k-debug` `use_enable kerberos`"
+G2CONF="${G2CONF} `use_with debug e2k-debug`"
 USE_DESTDIR="1"
 
 
