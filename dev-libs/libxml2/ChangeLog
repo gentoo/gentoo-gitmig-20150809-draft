@@ -1,32 +1,36 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.12 2002/09/06 03:10:41 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.13 2002/09/16 00:44:56 murphy Exp $
 
 
 *libxml2-2.4.24 (06 Sep 2002)
+
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> libxml2-2.4.24.ebuild ChangeLog :
+  Adding sparc/sparc64 keywords. Revamping ChangeLog layout.
+
   06 Sep 2002; Spider <spider@gentoo.org> libxml2-2.4.24.ebuild :
   new verison, patched up python/Makefile to make it adhere to DESTDIR
   
 *libxml2-2.4.23 (07 Jul 2002)
+
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
   Added ppc to keywords
 
   07 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> libxml2-2.4.23.ebuild :
   new version
 
-
 *libxml2-2.4.22 (27 May 2002)
+
   27 May 2002; Spider <spider@gentoo.org> libxml2-2.4.22.ebuild :
   version bump
-
 
 *libxml2-2.4.21-r1 (9 MAy 2002)
 
   26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Libtoolize to fix .la files from python site packages.
 
 *libxml2-2.4.21 (9 MAy 2002)
+
   9 May 2002; Spider <spider@gentoo.org> :
   bump version, change from .tar.gz to .tar.bz2
 
@@ -34,13 +38,11 @@
 
   16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> libxml2-2.4.20.ebuild,
   files/digest-libxml2-2.4.20 :
-
   Quick version update.
 
 *libxml2-2.4.19 (27 Mar 2002)
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> libxml2-2.4.19.ebuild :
-
   Copied 2.4.18's ebuild over.
 
 *libxml2-2.4.18 (21 March 2002)
@@ -52,7 +54,6 @@
 *libxml2-2.4.13 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
