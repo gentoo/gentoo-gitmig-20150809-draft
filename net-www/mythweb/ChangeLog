@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mythweb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.2 2003/09/19 22:05:20 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.3 2003/10/20 03:44:17 max Exp $
+
+*mythweb-0.12 (19 Oct 2003)
+
+  19 Oct 2003; Max Kalika <max@gentoo.org> mythweb-0.12.ebuild:
+  Bump to version 0.12.
 
 *mythweb-0.11 (19 Sep 2003)
 
