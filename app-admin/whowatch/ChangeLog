@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.8 2004/03/31 20:15:35 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.9 2004/04/26 15:23:42 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> whowatch-1.5.2.ebuild:
+  Add die following econf for bug 48950
 
   31 Mar 2004; Travis Tilley <lv@gentoo.org> whowatch-1.5.2.ebuild:
   marking stable on amd64

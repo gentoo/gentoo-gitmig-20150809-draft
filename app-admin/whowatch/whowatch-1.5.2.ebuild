@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.18 2004/03/31 20:15:35 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.19 2004/04/26 15:23:42 agriffis Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	make || die
 }
 

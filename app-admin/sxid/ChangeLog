@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sxid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.6 2004/04/22 01:34:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.7 2004/04/26 15:22:18 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> sxid-4.0.2.ebuild,
+  sxid-4.0.4.ebuild:
+  Add die following econf for bug 48950
 
 *sxid-4.0.4 (22 Apr 2004)
 

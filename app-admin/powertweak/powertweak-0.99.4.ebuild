@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.10 2004/04/16 09:02:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.11 2004/04/26 15:21:23 agriffis Exp $
 
 inherit libtool
 
@@ -43,7 +43,7 @@ src_compile() {
 	CFLAGS="${CPPFLAGS} -Wno-error"
 	CPPFLAGS="${CPPFLAGS} -Wno-deprecated"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 

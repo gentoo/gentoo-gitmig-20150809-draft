@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.13 2004/02/22 17:40:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.14 2004/04/26 15:20:33 agriffis Exp $
 
 IUSE="nls mysql"
 
@@ -49,7 +49,7 @@ src_compile() {
 		--libdir=/usr/lib/modlogan \
 		--with-gd=${WORKDIR}/gd-1.8.1/ \
 		--disable-check-dynamic \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	make || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4.ebuild,v 1.1 2004/04/22 01:34:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4.ebuild,v 1.2 2004/04/26 15:22:18 agriffis Exp $
 
 DESCRIPTION="suid, sgid file and directory checking"
 SRC_URI="http://www.phunnypharm.org/pub/sxid/${P/-/_}.tar.gz"
@@ -25,7 +25,7 @@ src_compile() {
 	sed -i s/bindir/sbindir/g Makefile.in
 	cd ..
 
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

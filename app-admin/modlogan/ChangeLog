@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.13 2004/04/12 16:04:42 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.14 2004/04/26 15:20:33 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> modlogan-0.7.18.ebuild:
+  Add die following econf for bug 48950
 
   12 Apr 2004; Chris Aniszczyk <zx@gentoo.org> modlogan-0.8.10-r1.ebuild,
   modlogan-0.8.10.ebuild:
