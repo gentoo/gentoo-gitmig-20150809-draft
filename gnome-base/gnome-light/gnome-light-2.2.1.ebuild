@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.2.1.ebuild,v 1.1 2003/03/16 18:18:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.2.1.ebuild,v 1.2 2003/08/13 03:20:00 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -31,6 +31,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-terms/gnome-terminal-2.2.1
 	>=gnome-base/control-center-2.2.1
 	>=gnome-base/gnome-mime-data-2.2.0
+	>=gnome-extra/yelp-2.2.2
 	
 	>=x11-libs/gtk+-2.2.1
 	>=x11-libs/pango-1.2.1
