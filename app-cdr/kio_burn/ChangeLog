@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kio_burn
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/ChangeLog,v 1.3 2004/11/23 19:31:38 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/ChangeLog,v 1.4 2004/11/29 09:48:36 motaboy Exp $
+
+  29 Nov 2004; Simone Gotti <motaboy@gentoo.org> kio_burn-0.4.ebuild:
+  QA: added missing IUSE.
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kio_burn-0.4.ebuild:
   QA: missing "inherit eutils"
