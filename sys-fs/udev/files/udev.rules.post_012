@@ -1,5 +1,5 @@
 # /etc/udev/udev.rules:  device naming rules for udev
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/udev.rules.post_012,v 1.1 2004/01/16 16:30:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/udev.rules.post_012,v 1.2 2004/01/16 17:43:00 azarah Exp $
 #
 # There are a number of modifiers that are allowed to be used in the NAME or PROGRAM fields.
 # They provide the following subsitutions:
@@ -60,7 +60,7 @@ KERNEL="ttyUSB0", NAME="pl2303"
 
 # devfs-names for ide-devices (uncomment only one)
 #  /dev/ide/.../{disc,cd} and /dev/{cdroms,discs}/* type names
-BUS="ide", PROGRAM="/etc/udev/scripts/ide-devfs.sh %k %b %n", RESULT="hd*", NAME="%1c", SYMLINK="%2c %3c"
+BUS="ide", KERNEL="hd*", PROGRAM="/etc/udev/scripts/ide-devfs.sh %k %b %n", NAME="%k", SYMLINK="%1c %2c"
 
 # alsa devices
 KERNEL="controlC[0-9]*", NAME="snd/%k"
