@@ -1,0 +1,41 @@
+diff -Naur old/src/mixerctl.cc new/src/mixerctl.cc
+--- old/src/mixerctl.cc	2004-09-04 02:44:12.797543753 +0200
++++ new/src/mixerctl.cc	2004-09-04 02:44:47.889365170 +0200
+@@ -50,7 +50,7 @@
+ 
+     if((fd = ::open(devname.c_str(), O_RDWR)) != -1) {
+ 	if(ioctl(fd, SOUND_MIXER_READ_DEVMASK, &devmask) != -1) {
+-	    for(ct = ctVolume; ct != channeltype_end; (int) ct += 1) {
++	    for(ct = ctVolume; ct != channeltype_end; ct = (mixerctl::channeltype) (ct + 1)) {
+ 		if((1 << (int) ct) & devmask) {
+ 		    channels.insert(ct);
+ 		}
+diff -Naur old/src/uitext.cc new/src/uitext.cc
+--- old/src/uitext.cc	2004-09-04 01:48:30.955457434 +0200
++++ new/src/uitext.cc	2004-09-04 02:42:30.689719181 +0200
+@@ -577,14 +577,14 @@
+ 			autosavepl = !autosavepl;
+ 			break;
+ 		    case 41:
+-			if(++((int) playmode) == PlayMode_size)
++			if(((int) playmode + 1) == PlayMode_size)
+ 			    playmode = Normal;
+ 			break;
+ 		    case 42:
+ 			autoplay = !autoplay;
+ 			break;
+ 		    case 43:
+-			if(++((int) sortorder) == SortOrder_size)
++			if(((int) sortorder + 1) == SortOrder_size)
+ 			    sortorder = byFileName;
+ 			break;
+ 		    case 44:
+@@ -719,7 +719,7 @@
+     while(!finished) {
+ 	m.clear();
+ 
+-	for(ct = mixerctl::ctVolume; ct != mixerctl::channeltype_end; (int) ct += 1) {
++	for(ct = mixerctl::ctVolume; ct != mixerctl::channeltype_end; ct = (mixerctl::channeltype) (ct + 1)) {
+ 	    if(chavail.count(ct)) {
+ 		val = mix.readlevel(ct);
+ 		if(val >= 0) {

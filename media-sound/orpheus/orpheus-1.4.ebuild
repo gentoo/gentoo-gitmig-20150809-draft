@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.4.ebuild,v 1.5 2004/06/25 00:16:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.4.ebuild,v 1.6 2004/09/04 01:10:35 swegener Exp $
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://konst.org.ua/en/orpheus"
@@ -43,5 +43,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
