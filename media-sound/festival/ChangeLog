@@ -3,6 +3,16 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+*festival-1.4.2-r1 (23 Oct 2002)
+
+  23 Oct 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r1.ebuild
+  files/digest-festival-1.4.2-r1 files/festival-1.4.2.patch
+
+  This should take care of issues with gcc3.2, killing bug #8280. Thanks to
+  Paul Thompson, Rigo Ketelings, Tom Ribbens, Julian J., Chris Bruner,
+  Paul Oswald and Michal Maruska for all the comments made and support and
+  testing provided.
+
 *festival-1.4.2 (24 Aug 2002)
 
   24 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> festival-1.4.2.ebuild :
