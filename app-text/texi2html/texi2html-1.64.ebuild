@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64.ebuild,v 1.8 2003/02/13 09:46:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64.ebuild,v 1.9 2003/03/10 22:35:57 wwoods Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ DESCRIPTION="Perl script that converts Texinfo to HTML"
 SRC_URI="http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/${P}.tar.gz"
 
 HOMEPAGE="http://www.mathematik.uni-kl.de/~obachman/Texi2html/"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -1,10 +1,13 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.5 2003/02/12 05:35:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.6 2003/03/10 22:35:57 wwoods Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *texi2html-1.64 (1 Feb 2002)
+
+  10 Mar 2003; Will Woods <wwoods@gentoo.org> texi2html-1.64.ebuild:
+  Added alpha to KEYWORDS
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> texi2html-1.64.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
