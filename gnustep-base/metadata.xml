@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The gnustep-base category contains GNUstep base packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie gnustep-base enthält die Basispakete der
+		GNUstep-Umgebung.
+	</longdescription>
 </catmetadata>
 
