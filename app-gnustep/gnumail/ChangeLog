@@ -1,6 +1,13 @@
 # ChangeLog for app-gnustep/gnumail
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gnumail/ChangeLog,v 1.1 2003/07/15 08:09:24 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gnumail/ChangeLog,v 1.2 2003/08/16 22:43:42 g2boojum Exp $
+
+*gnumail-1.1.0_pre2 (16 Aug 2003)
+
+  16 Aug 2003; Nick Hadaway <raker@gentoo.org> gnumail-1.1.0_pre2-r1.ebuild;
+  Added xface and crypt to IUSE for installing the Face.bundle and 
+  PGP.bundle.  Thanks to Caleb Shay on bug #26724 for noticing these
+  missing features.
 
 *gnumail-1.1.0_pre2 (15 Jul 2003)
 
