@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.18 2004/10/09 18:02:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.19 2004/10/11 22:51:39 carlo Exp $
+
+  12 Oct 2004; Carsten Lohrke <carlo@gentoo.org> kaffeine-0.4.3b.ebuild:
+  stable on x86
 
   09 Oct 2004; Jason Wever <weeve@gentoo.org> kaffeine-0.5_rc1.ebuild:
   Added ~sparc keyword wrt bug #66207.
