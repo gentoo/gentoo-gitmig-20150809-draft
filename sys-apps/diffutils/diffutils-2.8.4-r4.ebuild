@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.20 2004/12/08 01:07:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.21 2004/12/09 05:07:21 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic
 
 DESCRIPTION="Tools to make diffs and compare files"
 HOMEPAGE="http://www.gnu.org/software/diffutils/diffutils.html"
@@ -11,26 +11,15 @@ SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="nls build static"
+IUSE="nls static"
 
-DEPEND="virtual/libc
-	>=sys-apps/portage-2.0.47-r10
-	>=sys-apps/sed-4
-	nls? ( sys-devel/gettext )
-	!build? ( sys-apps/texinfo sys-apps/help2man )"
 RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	gnuconfig_update
-
-	if use build ; then
-		#disable texinfo building so we can remove the dep
-		sed -i -e 's:SUBDIRS = doc:SUBDIRS =:' \
-			Makefile.in || die "Makefile.in sed"
-	fi
 
 	# Build fails with make -j5 or greater on pentium4.  This is because
 	# the jobs creating the opjects, which depend on paths.h is sheduled
@@ -48,24 +37,23 @@ src_unpack() {
 	# <taviso@gentoo.org> (1 Aug 2003)
 	epatch ${FILESDIR}/${P}-tabsize-dumps-core.diff
 
-	# the manpage for diff is better provided by the man-pagees package, so
-	# we disable it here
-	epatch ${FILESDIR}/${P}-no-manpage.patch
+	# Make sure we don't try generating the manpages ... this requires 
+	# 'help2man' which is a perl app which is not available in a 
+	# stage2 / stage3 ... don't DEPEND on it or we get a DEPEND loop :(
+	# for more info, see #55479
+	touch man/*.1
 }
 
 src_compile() {
 	econf $(use_enable nls) || die "econf"
-
 	use static && append-ldflags -static
-	emake LDFLAGS="${LDFLAGS}" || die
+	emake LDFLAGS="${LDFLAGS}" || die "make"
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR="${D}" || die
+	dodoc ChangeLog NEWS README
 
-	if ! use build ; then
-		dodoc ChangeLog NEWS README
-	else
-		rm -r ${D}/usr/share/info
-	fi
+	# use the manpage from 'sys-apps/man-pages'
+	rm -f "${D}"/usr/share/man/man1/diff.1*
 }
