@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-acl-compat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/ChangeLog,v 1.13 2004/06/24 23:39:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/ChangeLog,v 1.14 2004/08/07 05:22:07 mkennedy Exp $
+
+*cl-acl-compat-1.2.35.20040804 (06 Aug 2004)
+
+  06 Aug 2004; <mkennedy@gentoo.org> +cl-acl-compat-1.2.35.20040804.ebuild:
+  New upstream version required for package locking support in
+  dev-lisp/cmucl-19a and dev-lisp/sbcl-0.8.13
 
 *cl-acl-compat-1.2.35.20040609 (22 Jun 2004)
 

@@ -1,0 +1,13 @@
+diff -ur cl-portable-aserve-1.2.35+cvs.2004.08.04.orig/acl-compat/sbcl/acl-excl.lisp cl-portable-aserve-1.2.35+cvs.2004.08.04/acl-compat/sbcl/acl-excl.lisp
+--- cl-portable-aserve-1.2.35+cvs.2004.08.04.orig/acl-compat/sbcl/acl-excl.lisp	2004-04-26 13:18:37.000000000 -0500
++++ cl-portable-aserve-1.2.35+cvs.2004.08.04/acl-compat/sbcl/acl-excl.lisp	2004-08-06 02:03:38.274313776 -0500
+@@ -25,9 +25,6 @@
+   (declare (ignore signal pid))
+   (error "unix-signal not implemented in acl-excl-sbcl.lisp"))
+ 
+-(defmacro without-package-locks (&body forms)
+-  `(progn ,@forms))
+-
+ (defun filesys-inode (path)
+   (multiple-value-bind (found ign inode)
+       (sb-unix::unix-lstat path)

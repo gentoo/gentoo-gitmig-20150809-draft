@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.2.ebuild,v 1.3 2004/08/07 05:22:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.3.ebuild,v 1.1 2004/08/07 05:22:07 mkennedy Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -10,8 +10,8 @@ SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
-IUSE="emacs readline debug X tcltk"
+KEYWORDS="x86"
+IUSE="emacs readline debug X tcltk ansi"
 
 DEPEND=">=app-text/texi2html-1.64
 	emacs? ( virtual/emacs )
@@ -27,23 +27,41 @@ src_unpack() {
 }
 
 src_compile() {
-	# hardened gcc may automatically use PIE building,
-	# which does not work for this package so far
+	local myconfig=""
+
+	# hardened gcc may automatically use PIE building, which does not
+	# work for this package so far
 	filter-flags "-fPIC"
-	configuration="
+
+	# See http://www.gnu.org/software/gcl/RELEASE-2.6.2.html
+
+	case ${ARCH} in
+		x86 | sparc)
+			myconfig="${myconfig}
+				--enable-custreloc
+				--disable-dlopen
+				--disable-dynsysbfd
+				--disable-statsysbfd";;
+		*)
+			myconfig="${myconfig}
+				--disable-custreloc
+				--disable-dlopen
+				--enable-dynsysbfd
+				--disable-statsysbfd";;
+	esac
+
+	myconfig="${myconfig}
 		--enable-dynsysgmp
-		--enable-dynsysbfd
-		--disable-statsysbfd
 		`use_enable readline readline`
 		`use_with X x`
 		`use_enable debug debug`
 		`use_enable tcltk tkconfig=/usr/lib`
 		`use_enable tcltk tclconfig=/usr/lib`
-		--enable-xdr=yes
-		--enable-ansi
+		`use enable ansi ansi`
+		--enable-xdr=no
 		--enable-infodir=/usr/share/info
 		--enable-emacsdir=/usr/share/emacs/site-lisp/gcl"
-	einfo "Configuring with ${configuration}"
+	einfo "Configuring with ${myconfig}"
 	econf ${configuration} || die
 	make || die
 }

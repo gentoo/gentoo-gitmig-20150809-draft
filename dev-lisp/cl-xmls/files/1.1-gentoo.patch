@@ -1,0 +1,17 @@
+diff -u xmls-1.1.orig/xmls.lisp xmls-1.1/xmls.lisp
+--- xmls-1.1.orig/xmls.lisp	2004-07-16 11:32:10.000000000 -0500
++++ xmls-1.1/xmls.lisp	2004-08-06 23:45:36.448546176 -0500
+@@ -12,7 +12,10 @@
+ (defvar *strip-comments* t)
+ (defvar *compress-whitespace* t)
+ (defvar *test-verbose* nil)
+-(defvar *whitespace* (remove-duplicates '(#\Newline #\Space #\Tab #\Return #\Linefeed)))
++
++(eval-when (:execute :load-toplevel :compile-toplevel)
++  (defvar *whitespace* (remove-duplicates '(#\Newline #\Space #\Tab #\Return #\Linefeed))))
++
+ (defvar *entities*
+   #(("lt;" #\<)
+
+     ("gt;" #\>)
+

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-rsm-fuzzy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-fuzzy/ChangeLog,v 1.3 2004/06/24 23:52:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-fuzzy/ChangeLog,v 1.4 2004/08/07 05:22:07 mkennedy Exp $
+
+*cl-rsm-fuzzy-1.2-r2 (06 Aug 2004)
+
+  06 Aug 2004; <mkennedy@gentoo.org> +files/1.2-format-args-gentoo.patch,
+  +cl-rsm-fuzzy-1.2-r2.ebuild:
+  Add format argument count fix
 
 *cl-rsm-fuzzy-1.2-r1 (12 Feb 2004)
 
