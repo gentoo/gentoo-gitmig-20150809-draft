@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/ksplash-ml
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.4 2002/08/13 20:16:03 gerk Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.5 2002/10/01 14:19:36 danarmak Exp $
+
+*ksplash-ml-0.95.2-r1 (01 Oct 2002)
+
+  01 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #6519 (ksplash-ml now being actually used as the kde
+  splashscreen). See the bugzilla page for full info. Briefly, you can set
+  $KSPLASH in your profile to the full path of a ksplash-replacement binary
+  of your choice. By default, ksplash-ml is used if installed (actually it
+  sets $KSPLASH in env.d), otherwise the default kde ksplash. You will need
+  the latest revision of ksplash-ml and ksplash-ml-themes as well. All this
+  is masked for now.
 
 *ksplash-ml-0.95.2 (24 Jun 2002)
 
