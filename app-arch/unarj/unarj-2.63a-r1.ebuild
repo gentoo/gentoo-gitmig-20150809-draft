@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/unarj-2.63a-r1.ebuild,v 1.7 2003/12/05 19:21:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/unarj-2.63a-r1.ebuild,v 1.8 2004/03/12 11:11:07 mr_bones_ Exp $
 
 DESCRIPTION="Utility for opening arj archives"
 HOMEPAGE="http://ibiblio.org/pub/Linux/utils/compress/"
