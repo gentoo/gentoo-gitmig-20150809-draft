@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.9 2004/03/16 16:59:35 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.10 2004/04/28 21:48:24 avenj Exp $
 
 inherit kde eutils
 need-kde 3
@@ -20,7 +20,7 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=app-cdr/cdrdao-1.1.5
 	>=media-libs/flac-1.1.0"
 
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="x86 sparc amd64"
 S=${WORKDIR}/${P}-kde3
 
 use oggvorbis && myconf="$myconf --with-vorbis" || myconf="$myconf --without-vorbis"
