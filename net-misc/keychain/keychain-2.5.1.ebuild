@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.5.1.ebuild,v 1.1 2005/01/12 23:36:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.5.1.ebuild,v 1.2 2005/01/13 00:14:15 agriffis Exp $
 
 DESCRIPTION="ssh-agent manager"
 HOMEPAGE="http://www.gentoo.org/proj/en/keychain/"
@@ -22,4 +22,12 @@ src_install() {
 	dobin keychain || die "dobin failed"
 	dodoc ChangeLog keychain.pod README
 	doman keychain.1 || die "doman failed"
+}
+
+pkg_postinst() {
+	echo
+	einfo "Please see the Keychain Guide at"
+	einfo "http://www.gentoo.org/doc/en/keychain-guide.xml"
+	einfo "for help getting keychain running"
+	echo
 }
