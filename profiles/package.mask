@@ -496,14 +496,6 @@ x11-libs/gtkmm-addons
 # new ipv6 patch.  squashes ssl patch though.
 =sys-apps/ucspi-tcp-0.88-r4
 
-# <raker@gentoo.org> (23 Sep 2002)
-# masking libsndfile-1.0.0 due to API changes
->=media-libs/libsndfile-1.0.0
-# adding libsndfile-1 compatible jack-audio-connection-kit
->=media-sound/jack-audio-connection-kit-0.34.0-r2
-# adding libsndfile-1 compatible faac
->=media-libs/faac-26102001-r1
-
 # <lostlogic@gentoo.org> (21 Sep 2002)
 # Needed for lolo-sources-2.4.19.10_pre[1-5]
 =sys-apps/jfsutils-1.0.22
