@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1-r3.ebuild,v 1.1 2000/12/23 00:28:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1-r3.ebuild,v 1.2 2000/12/23 00:32:10 drobbins Exp $
 
 P=openssh-2.3.0p1
 A=${P}.tar.gz
@@ -19,7 +19,7 @@ DEPEND=">=sys-apps/bash-2.04
 src_compile() {
     try ./configure --prefix=/usr --sysconfdir=/etc/ssh \
 	--libexecdir=/usr/libexec --mandir=/usr/man \
-	--enable-gnome-askpass --disable-lastlog \
+	--enable-gnome-askpass \
 	--with-tcp-wrappers --with-ipv4-default --host=${CHOST}                          
     try make
 }
