@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r1.ebuild,v 1.10 2003/09/10 04:51:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r1.ebuild,v 1.11 2004/02/28 01:12:37 kumba Exp $
 
 ### WARNING !! Do not remove openldap 2.0.25 or else it will break for 
 ####           default-1.0 profile!
