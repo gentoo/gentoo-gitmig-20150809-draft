@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.15 2004/06/14 19:53:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.16 2004/06/24 16:45:01 battousai Exp $
+
+  24 Jun 2004; Bryan Stine <battousai@gentoo.org>;
+  +files/glide-v3-3.10-2.6-headers-fix.patch, glide-v3-3.10-r4.ebuild:
+  New patch to fix building against 2.6 kernel headers. Thanks to Jan
+  Drugowitsch <jdrugo@gmx.at> for reporting and providing the patch. This closes
+  bug 54999.
 
   14 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
