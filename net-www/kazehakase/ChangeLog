@@ -1,6 +1,12 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.18 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.19 2004/09/13 17:38:31 nakano Exp $
+
+*kazehakase-0.1.9-r1 (13 Sep 2004)
+
+  13 Sep 2004; Masatomo Nakano <nakano@gentoo.org>
+  +files/kazehakase-0.1.9_fix.patch, +kazehakase-0.1.9-r1.ebuild:
+  Fixed bug that history search feature doesn't work with thumbnail.
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kazehakase-0.1.6.ebuild:
