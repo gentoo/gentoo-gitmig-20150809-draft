@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kportage/kportage-0.6.1.ebuild,v 1.4 2003/03/23 16:39:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kportage/kportage-0.6.1.ebuild,v 1.5 2003/04/05 03:23:04 weeve Exp $
 
 inherit kde-base
 
@@ -12,7 +12,7 @@ SRC_URI="http://freesoftware.fsf.org/download/${PN}/${PN}.pkg/${PV/.1//}/${P}.ta
 HOMEPAGE="http://www.freesoftware.fsf.org/kportage/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 newdepend ">=sys-apps/portage-2.0.46-r12
 	~dev-lang/python-2.2.2"
