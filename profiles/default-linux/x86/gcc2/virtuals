@@ -1,7 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/virtuals,v 1.5 2004/08/17 13:39:29 usata Exp $
-
-
-# Use this virtuals file to override or add virtuals that are specific ONLY
-# TO THIS PROFILE!

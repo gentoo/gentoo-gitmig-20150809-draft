@@ -1,12 +1,12 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/virtuals,v 1.9 2004/09/22 04:18:54 vapier Exp $
+
 virtual/bootloader		sys-boot/yaboot
 virtual/cron			sys-apps/vixie-cron
 virtual/dev-manager		sys-fs/devfsd
-virtual/glu			x11-base/xorg-x11
 virtual/jdk			dev-java/ibm-jdk-bin
 virtual/jre			dev-java/ibm-jre-bin
 virtual/linux-sources		sys-kernel/gentoo-dev-sources
 virtual/modutils		sys-apps/modutils
-virtual/opengl			x11-base/xorg-x11
 virtual/os-headers		sys-kernel/linux-headers
-virtual/x11			x11-base/xorg-x11
-virtual/xft			x11-base/xorg-x11
