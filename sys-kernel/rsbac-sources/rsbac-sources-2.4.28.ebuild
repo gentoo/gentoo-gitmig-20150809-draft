@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.28.ebuild,v 1.1 2004/11/28 23:49:38 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.28.ebuild,v 1.2 2004/12/02 18:43:52 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -24,7 +24,7 @@ HOMEPAGE="http://hardened.gentoo.org/rsbac"
 DESCRIPTION="RSBAC hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 SRC_URI="${KERNEL_URI} ${RSBAC_SRC} ${RGPV_SRC} ${CAN_SRC}"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 
 src_unpack() {
