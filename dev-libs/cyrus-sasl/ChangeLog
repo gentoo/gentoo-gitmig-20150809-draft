@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.42 2003/07/12 09:22:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.43 2003/07/13 15:35:08 joker Exp $
+
+  13 Jul 2003; Christian Birchinger <joker@gentoo.org>
+  cyrus-sasl-2.1.14.ebuild:
+  Added sparc stable keyword
 
 *cyrus-sasl-2.1.14 (09 Jul 2003)
 
