@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (25 Sep 2002)
+# version bump.  ssl and other fixes
+=net-mail/courier-imap-1.5.3
+
 # <mjc@gentoo.org> (25 Sep 2002)
 # new upstream, fixes gxx_personality_v0
 # bug (distcc incorrectly used gcc instead
