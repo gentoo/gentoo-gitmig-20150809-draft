@@ -1,8 +1,21 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.20 2003/06/29 22:12:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.21 2003/09/22 19:26:03 usata Exp $
+
+*canna-3.6_p4 (23 Sep 2003)
+
+  23 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> canna-3.6_p4.ebuild,
+  files/canna-3.6_p4-gentoo.diff, files/canna.initd.new:
+  Version bumped. Updated /etc/init.d/canna and fixed permission of
+  /var/lib/canna/dic/{user,group} to support syslog and different
+  user privilege for cannaserver. Fixed Japanese manpages section for
+  cannaserver and cannakill. Added prerm to stop canna before unmerge.
+  (once you uninstall canna you can't stop cannaserver by /etc/init.d
+  since it depends on cannakill) Changed SRC_URI to use
+  mirror://sourceforge.jp/
 
 *canna-3.6_p3-r2 (04 Jun 2003)
+
   10 Jun 2003; Masatomo Nakano <nakano@gentoo.org> canna-3.6_p3-r2.ebuild:
   Marked as stable
 
@@ -25,6 +38,7 @@
 	Thanks to Sadayuki Kobayashi <desperado@s17.xrea.com> #21060
 
 *canna-3.6_p3 (11 May 2003)
+
   11 May 2003; Masatomo Nakano <nakano@gentoo.org> files/canna-3.6_p3-gentoo.diff:
   Fixed bug.
 
