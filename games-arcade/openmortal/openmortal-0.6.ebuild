@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2004 Freyr Gunnar Ólafsson <gnarlin@utopia.is>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.6.ebuild,v 1.3 2004/03/16 16:16:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.6.ebuild,v 1.4 2004/04/07 22:26:56 lv Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/openmortal/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/x11
