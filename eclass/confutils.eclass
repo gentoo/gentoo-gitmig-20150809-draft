@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.4 2004/07/14 23:19:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.5 2004/07/21 16:25:34 stuart Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -19,7 +19,7 @@ IUSE="$IUSE shared"
 # list of USE flags that need deps that aren't yet in Portage
 # this list was originally added for PHP
 
-CONFUTILS_MISSING_DEPS="adabas birdstep qdbm empress empress-bcs frontbase hyperwave-api informix ingres interbase mcve mnogosearch msession msql oci8 oracle7 ovirmos pfpro sapdb"
+CONFUTILS_MISSING_DEPS="adabas birdstep cpdflib qdbm db2 dbmaker empress empress-bcs esoob filepro frontbase hyperwave-api informix ingres interbase mcve mnogosearch msession msql oci8 oracle7 ovirmos pfpro sapdb solid sybase sybase-ct"
 
 # ========================================================================
 # confutils_init ()
