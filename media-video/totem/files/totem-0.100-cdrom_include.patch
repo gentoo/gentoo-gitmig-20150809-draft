@@ -1,0 +1,17 @@
+--- totem-0.100/src/totem-disc.c	2005-01-10 12:41:50.247009280 +0100
++++ totem-0.100-cdrom_include/src/totem-disc.c	2005-01-10 12:42:39.911459136 +0100
+@@ -30,12 +30,13 @@
+ 
+ #include <sys/ioctl.h>
+ #include <sys/stat.h>
+-#include <linux/cdrom.h>
+ 
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <libgnomevfs/gnome-vfs.h>
+ 
++#include <linux/cdrom.h>
++
+ #include "totem-disc.h"
+ 
+ typedef struct _CdCache {
