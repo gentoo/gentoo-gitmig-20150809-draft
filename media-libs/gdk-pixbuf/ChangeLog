@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.9 2002/04/21 00:39:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.10 2002/06/05 14:07:30 doctomoe Exp $
+
+*gdk-pixbuf-0.17.0 (05 Jun 2002)
+
+  05 Jun 2002; Olivier R. <doctomoe@gentoo.org> gdk-pixbuf-0.17.0.ebuild:
+
+  Added media-libs/imlib as dependency, as it is needed to compile properly.
 
 *gdk-pixbuf-0.17.0 (20 Apr 2002)
 
