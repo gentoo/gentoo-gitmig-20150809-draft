@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-089-r1.ebuild,v 1.2 2002/06/08 06:13:39 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-089-r1.ebuild,v 1.3 2002/06/08 06:50:18 gerk Exp $
 
-if [ ${ARCH} = "x86" ] ; then
-	MY_P="bxform-${PV}-glibc2.1"
-	MY_D="linux-i386/elf"
-else
-	MY_P="bxform-${PV}-glibc2.1-ppc"
-	MY_D="linuxppc"
+MY_P="bxform-${PV}-glibc2.1"
+MY_D="linux-i386/elf"
+
+# for unkown reasons ${ARCH} will just _not_ work here
+# even though it returns "ppc" (as does `arch`)
+if [ `arch` = "ppc" ] ; then
+        MY_D="linuxppc"
+	MY_P=${MY_P}"-ppc"
 fi
 
 S=${WORKDIR}/${PN}
