@@ -138,7 +138,9 @@ global $uid, $dbusername, $show_privates, $list, $teams; ?>
 
 			<p style="font-size:x-small;font-weight:bold;">Teams</p>
 			<ul>
-				<?php while ( $each = each($teams) ) { ?>
+				<?php
+				reset( $teams );
+				while ( $each = each($teams) ) { ?>
 				<li><a href="teams.php?team=<?=$each['key'];?>"><?=$each['value'];?></a>
 				<?php } ?>
 			</ul>
