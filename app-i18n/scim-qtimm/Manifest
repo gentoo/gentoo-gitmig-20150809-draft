@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd4135727bec1724f5e54287214fccc6 ChangeLog 1758
+MD5 e671b1b2f4ff207ab423f45963e630ae ChangeLog 1764
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 192053370aa892665e1e75a588d63f49 scim-qtimm-0.7.ebuild 1276
-MD5 cc6f78a8e59ecd0eb1b73dcabd3f6190 scim-qtimm-0.7.5.ebuild 1297
+MD5 e4215fb59eed607e3999cefd4156e032 scim-qtimm-0.7.ebuild 1281
+MD5 0cd187afa5402ca8d8463404757d6176 scim-qtimm-0.7.5.ebuild 1302
 MD5 a6dc4a6c7fbfdc9004372662fe9cd37e files/digest-scim-qtimm-0.7 67
 MD5 0c45b47a16e7addab7c3281aef50c4a3 files/digest-scim-qtimm-0.7.5 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBY58tVWNWqTUmv+0RAh2yAKCDcVEJOBYY1mBlH4n0VkdgEfF/egCfenPR
-89DXD+VXTmc1z0Rq6oK671U=
-=eEE2
------END PGP SIGNATURE-----

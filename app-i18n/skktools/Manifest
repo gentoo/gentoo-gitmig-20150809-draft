@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6979cee8819cf838613a2f413a21906c ChangeLog 502
+MD5 c12a18b68eaa52b8e9d2813ed922e9ea ChangeLog 504
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 b090802947fd415f613146a815763ac2 skktools-1.1.ebuild 692
+MD5 19f47632ce3c06dec48371878a8c26f6 skktools-1.1.ebuild 696
 MD5 41b8a86b8e6866cccf2361aa68e5b86b files/digest-skktools-1.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33z7HTu7gpaalycRAoUHAKCQKkMNNYryyYcNstrvSkl8vLWZNwCfTgrD
-G2x7gXAk1qwr6FnmjrwmKV8=
-=oAsQ
------END PGP SIGNATURE-----

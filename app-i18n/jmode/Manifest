@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 612ad2292c0eacd98e04c66373bbf870 jmode-0.6.7.ebuild 963
-MD5 16bc122ac37afa502c0d7536ba520998 ChangeLog 508
+MD5 7e9173fe13b8d9fb473937c7c6b0c5a0 ChangeLog 510
+MD5 ec784e0c422cef28dfa368370c3b08fc jmode-0.6.7.ebuild 968
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 f2c82ad662cc4bae3bacaeab79ab95cd files/digest-jmode-0.6.7 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBov3mVWNWqTUmv+0RAgUaAJ0T1xSLWao3pR3Au0Sb+2+5bOwhLwCggwxw
-SoGen97/LMfC+Es+kLEkN0s=
-=R6o8
------END PGP SIGNATURE-----

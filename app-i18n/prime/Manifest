@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34c5ebf20899e98c579762d26a887d33 ChangeLog 6931
+MD5 488ba2e50a76e0901262c9034fe1d58f ChangeLog 6936
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 835a1cb1d76350c53a1c8038de211ed6 prime-0.9.2-r1.ebuild 1017
-MD5 5ff5ce3594446e39b25555366f53e1b2 prime-0.8.5.2.ebuild 858
-MD5 d3a62b1992fa230fb2c03ef7c6ba39c7 prime-0.8.4.ebuild 867
-MD5 6d71c080eb1ed0a93f1e83febf56979f prime-0.8.5.1.ebuild 858
-MD5 c3c6f13c7cfc84b7f7a9df509761f074 prime-0.9.3.ebuild 949
-MD5 fa8b84fb74eed84b22a330c735ed9ee6 files/prime-0.9.2-pkgconfig.patch 1282
-MD5 73f354d381264ffd6d42ac053aa4b647 files/digest-prime-0.9.2-r1 63
-MD5 ac80275dbd0e773a385b19fd0b9ff707 files/digest-prime-0.8.4 63
+MD5 468ad5e86399e3db7c49bbd4ddafeef4 prime-0.8.4.ebuild 872
+MD5 fa056cc00ee735cdf8ed5f16c33b0b86 prime-0.9.2-r1.ebuild 1022
+MD5 1d9b0735cc45d34b8646e9b8f15414ac prime-0.9.3.ebuild 954
+MD5 9634a5996605fe3766dc3d006eae2382 prime-0.8.5.1.ebuild 863
+MD5 2a9ebadd8815bc5780598eb5fcd4185d prime-0.8.5.2.ebuild 863
 MD5 c904aa422dd68cc817ba46e43ee9294b files/digest-prime-0.8.5.1 65
-MD5 945df004dab45b6ca0604c5d27b6bfc8 files/digest-prime-0.8.5.2 65
+MD5 ac80275dbd0e773a385b19fd0b9ff707 files/digest-prime-0.8.4 63
+MD5 73f354d381264ffd6d42ac053aa4b647 files/digest-prime-0.9.2-r1 63
 MD5 b666ac70e9df3c596f0be06e36912b76 files/digest-prime-0.9.3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxq+IVWNWqTUmv+0RAkVXAJ4huqAb2NG19GfzfJwLBXEeg0H5bwCgjwjE
-71bmZGAHuGzjBn/ASktK0os=
-=9VhQ
------END PGP SIGNATURE-----
+MD5 fa8b84fb74eed84b22a330c735ed9ee6 files/prime-0.9.2-pkgconfig.patch 1282
+MD5 945df004dab45b6ca0604c5d27b6bfc8 files/digest-prime-0.8.5.2 65

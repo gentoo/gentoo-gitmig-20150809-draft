@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a224f1c763b8a89f939bf84dcb6eca3 ChangeLog 2679
+MD5 ef65c6220df31e7aaa0d85c10d61745d ChangeLog 2681
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 a02e0a4b226d4fc738b72263b8b80207 skkinput-2.05.ebuild 876
-MD5 77dfcae217e7e48cbae4d29a608588f9 skkinput-2.06.4.ebuild 748
-MD5 ded840310e2925d79365dd7c4bb1b1f0 skkinput-3.0.6.20031012b.ebuild 898
+MD5 98d74dd5f6d88e5ea14bb4a3b00d9eef skkinput-2.05.ebuild 880
+MD5 820b0810855c487216e17af7257f798d skkinput-2.06.4.ebuild 752
+MD5 0dc2220593c72aeba1cb75d43d7c2d9e skkinput-3.0.6.20031012b.ebuild 902
 MD5 eb27246eb7a54d4960ad56cd1348a7dd files/digest-skkinput-2.05 65
 MD5 debfc242c8a7c577d6861ba9aa9bc40b files/digest-skkinput-2.06.4 67
 MD5 d13a9fe6e433f8db79cabef2808dadb6 files/digest-skkinput-3.0.6.20031012b 76
 MD5 ed34dd9815e04babe3888b6bb879e801 files/skkinput-3.0.6-gentoo.diff 1961
 MD5 801123e23f3fbfbb292b802bafea7ae7 files/skkinput-ignore-numlock.patch 453
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33zJHTu7gpaalycRAjGxAKDt7by6U2Ao4mjH4fWxDua/aQvizQCg2tBT
-TzKfbcQo4TeHDiwdnGbkBVE=
-=qx75
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 382d595fda652b0ad5fd0de24b2de8bf ChangeLog 393
-MD5 e21794d97988463b161af4e365a1e785 libjconv-2.9.ebuild 803
+MD5 16f54bdcb9d034664c139a74b93d6c2b ChangeLog 395
+MD5 219260d9bf056e693fbb6c43d0752173 libjconv-2.9.ebuild 807
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 8458a684afb1437f32fd2d51277bcc58 files/digest-libjconv-2.9 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33nHHTu7gpaalycRAqvKAJ9JbeIegVzbiCjY7blJIca8Agq3LACg2cVP
-jJUqhfMI3aWgc9SLVLhIuuw=
-=y07p
------END PGP SIGNATURE-----

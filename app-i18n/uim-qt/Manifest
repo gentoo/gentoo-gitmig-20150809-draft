@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8a37f644a47d5adcad24c61ff5c41de ChangeLog 1346
+MD5 c33b82452d6678923c75a0f9153bd7a0 ChangeLog 1351
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 97da9183bd7f33bd4161b2ec054ff78b uim-qt-0.1.9.ebuild 1645
-MD5 f69538c1898cba97198c0a733258b293 uim-qt-0.2.0.ebuild 1480
-MD5 aaa965bae4ba067e9922caa2bc25ab43 uim-qt-0.1.7.ebuild 1741
-MD5 c422e240d4481961bb6e1165a071dbd1 files/digest-uim-qt-0.1.9 63
-MD5 d4775a2045a127b335be4f1b8778ec05 files/digest-uim-qt-0.2.0 64
+MD5 eaf0e87587b61152ed3ac75423b4a638 uim-qt-0.1.7.ebuild 1746
+MD5 16cc9030483ad6035b5d2de5e0b1bfe5 uim-qt-0.1.9.ebuild 1650
+MD5 3f903d5b51304a189756372cff36e012 uim-qt-0.2.0.ebuild 1485
 MD5 f25e7d996a501e01443a0f31caf33284 files/digest-uim-qt-0.1.7 63
+MD5 c422e240d4481961bb6e1165a071dbd1 files/digest-uim-qt-0.1.9 63
 MD5 fc9f430e80b37971d16d0aecf15d8957 files/uim-qt-0.1.7-thread.diff 293
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdSdSVWNWqTUmv+0RAiuCAJ0aOu3oszhflNYbJpacZj6tipKWvgCdHCz1
-FNzcuDOXsqMQ9ab9v5JvD7Y=
-=Cz7M
------END PGP SIGNATURE-----
+MD5 d4775a2045a127b335be4f1b8778ec05 files/digest-uim-qt-0.2.0 64

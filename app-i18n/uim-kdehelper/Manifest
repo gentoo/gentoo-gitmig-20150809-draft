@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ce0aaee72dc04ff62b58aad7d16da4d ChangeLog 780
+MD5 c6eebb778b4dd12db128b71572d9bb29 ChangeLog 785
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 9701dbb5f98014027cd11a14b2f8eeb1 uim-kdehelper-0.1.0.ebuild 1017
-MD5 40828240fafdb47629be54da5e52cf9a uim-kdehelper-0.1.0-r1.ebuild 857
+MD5 9dafa6e42971aa1f8d4d820c2cc49e97 uim-kdehelper-0.1.0-r1.ebuild 862
+MD5 3caafa40fdf02792967893eee03a2b55 uim-kdehelper-0.1.0.ebuild 1022
 MD5 9106a050cc408f186d8c9654ebba45a2 files/digest-uim-kdehelper-0.1.0 71
 MD5 9106a050cc408f186d8c9654ebba45a2 files/digest-uim-kdehelper-0.1.0-r1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkQV2VWNWqTUmv+0RAvZeAKCBqKfhjUkVgf75JLEcFDJv57szUgCcDJ7o
-QKEjH7DFgmj1zUGl/R94MZA=
-=+7Az
------END PGP SIGNATURE-----

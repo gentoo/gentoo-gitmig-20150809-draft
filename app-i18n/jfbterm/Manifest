@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9dc8401bb5eb3f12599f55a15c6af828 jfbterm-0.4.6.ebuild 1216
-MD5 838f2b9d24f9eba3f8126aeb6b75c671 ChangeLog 3456
+MD5 997c06d94ca1d42f1f2aa7c9cc6b9eef ChangeLog 3458
+MD5 6769d8bf2f7bebdb4bc9667a6c293c6d jfbterm-0.4.6.ebuild 1221
 MD5 86a8d60602760b24311a0309d18d677c metadata.xml 567
 MD5 bb97d8c90fa4d0cf64e59f738e1c502c files/digest-jfbterm-0.4.6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBovvuVWNWqTUmv+0RAiJXAKCDEfP3ze6UOxQV+vRDIHEhdwGlkgCfSYwN
-tAgMYEPqIDnSxczgz4u5srA=
-=oGqL
------END PGP SIGNATURE-----
