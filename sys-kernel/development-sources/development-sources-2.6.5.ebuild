@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.4 2004/04/06 17:51:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.5 2004/04/11 17:15:50 lu_zero Exp $
 
 IUSE="ultra1"
 
@@ -18,7 +18,7 @@ UNIPATCH_LIST="${ARCH_PATCH}"
 
 use ultra1 || UNIPATCH_EXCLUDE="99_U1-hme-lockup"
 
-KEYWORDS="~x86 ~sparc ~alpha ~ia64"
+KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~ppc"
 
 pkg_postinst() {
 	postinst_sources
@@ -37,5 +37,14 @@ pkg_postinst() {
 			einfo "network interface, please emerge the kernel using the"
 			einfo "following command: USE=ultra1 emerge ${PN}"
 		fi
+	fi
+
+	if [ "${ARCH}" = "ppc" ]; then
+		ewarn "BEWARE"
+		ewarn "The pmu support is broken on devfs."
+		ewarn "You'll likely need udev in order to use it"
+		ewarn "emerge udev and follow the instruction present"
+		ewarn "here :http://www.gentoo.org/doc/en/udev-guide.xml"
+		ewarn "report bugs to lu_zero@gentoo.org"
 	fi
 }
