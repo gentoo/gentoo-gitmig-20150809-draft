@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/axion
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.12 2005/03/27 18:20:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.13 2005/04/02 19:19:28 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> axion-1.0_rc2-r1.ebuild,
+  -axion-1.0_rc2.ebuild:
+  cleanup, removed old revision with a dependency to regexp.
 
 *axion-1.0_rc2-r1 (27 Mar 2005)
 
