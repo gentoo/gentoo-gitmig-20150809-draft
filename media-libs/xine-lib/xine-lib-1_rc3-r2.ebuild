@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r2.ebuild,v 1.4 2004/03/21 21:20:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r2.ebuild,v 1.5 2004/03/21 21:28:16 mholzer Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -97,11 +97,8 @@ src_compile() {
 		`use_enable arts` \
 		`use_enable aalib` \
 		`use_enable oggvorbis ogg` `use_enable oggvorbis vorbis` \
-		`use_enable theora theoratest` \
-		`use_enable speex speextest` \
 		`use_enable sdl sdltest` \
 		`use_enable ipv6` \
-		`use_enable aalib aalibtest` \
 		`use_enable directfb` \
 		${myconf} || die "Configure failed"
 
