@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.41 2004/11/22 14:55:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.42 2005/01/31 03:02:13 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -18,12 +18,9 @@ INHERITED="${INHERITED} ${ECLASS}"
 # stageballs <3.  if anybody decides to revert this, please attempt
 # to find an alternate way of resolving that bug at the same time.
 
-#DEPEND="!bootstrap? ( sys-devel/libtool )"
-
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 ELIBTOOL_VERSION="2.0.1"
-
 
 ELT_PATCH_DIR="${PORTDIR}/eclass/ELT-patches"
 ELT_APPLIED_PATCHES=
@@ -35,8 +32,7 @@ ELT_find_ltmain_sh() {
 	local x=
 	local dirlist=
 
-	for x in $(find "${S}" -name 'ltmain.sh')
-	do
+	for x in $(find "${S}" -name 'ltmain.sh') ; do
 		dirlist="${dirlist} ${x%/*}"
 	done
 
@@ -51,8 +47,7 @@ ELT_try_and_apply_patch() {
 	local patch="$2"
 
 	# We only support patchlevel of 0 - why worry if its static patches?
-	if patch -p0 --dry-run $1 < ${patch} &>${T}/elibtool.log
-	then
+	if patch -p0 --dry-run $1 < ${patch} &> ${T}/elibtool.log ; then
 		einfo "  Applying $(basename "$(dirname "${patch}")")-${patch##*/}.patch ..."
 		patch -p0 $1 < ${patch} &>${T}/elibtool.log
 		ret=$?
@@ -74,22 +69,17 @@ ELT_walk_patches() {
 	local ret=1
 	local patch_dir=
 
-	if [ -n "$2" ]
-	then
-		if [ -d "${ELT_PATCH_DIR}/$2" ]
-		then
+	if [[ -n $2 ]] ; then
+		if [[ -d ${ELT_PATCH_DIR}/$2 ]] ; then
 			patch_dir="${ELT_PATCH_DIR}/$2"
 		else
 			return ${ret}
 		fi
 
-		for x in $(ls -d "${patch_dir}"/* 2>/dev/null)
-		do
-			if [ -n "${x}" -a -f "${x}" ]
-			then
+		for x in $(ls -d "${patch_dir}"/* 2> /dev/null) ; do
+			if [[ -n ${x} && -f ${x} ]] ; then
 				# For --remove-internal-dep ...
-				if [ -n "$3" ]
-				then
+				if [[ -n $3 ]] ; then
 					# For replace @REM_INT_DEP@ with what was passed
 					# to --remove-internal-dep
 					sed -e "s|@REM_INT_DEP@|$3|g" ${x} > \
@@ -98,8 +88,7 @@ ELT_walk_patches() {
 					x="${T}/$$.rem_int_deps.patch"
 				fi
 
-				if ELT_try_and_apply_patch "$1" "${x}"
-				then
+				if ELT_try_and_apply_patch "$1" "${x}" ; then
 					ret=0
 					break
 				fi
@@ -123,8 +112,7 @@ elibtoolize() {
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
 
-	for x in "$@"
-	do
+	for x in "$@" ; do
 		case "${x}" in
 			"--portage")
 				# Only apply portage patch, and don't
@@ -161,6 +149,9 @@ elibtoolize() {
 			"--no-uclibc")
 				NO_UCLIBCTOOLIZE=1
 				;;
+			*)
+				eerror "Invalid elibtoolize option: $x"
+				die "elibtoolize called with $x ??"
 		esac
 	done
 
@@ -169,16 +160,14 @@ elibtoolize() {
 		darwintoolize
 	fi
 
-	for x in ${my_dirlist}
-	do
-		local tmp="$(echo "${x}" | sed -e "s|${S}||")"
+	for x in ${my_dirlist} ; do
+		local tmp=$(echo "${x}" | sed -e "s|${S}||")
 		export ELT_APPLIED_PATCHES=
 
 		cd ${x}
 		einfo "Patching \${S}$(echo "/${tmp}/ltmain.sh" | sed -e 's|//|/|g') ..."
 
-		for y in ${elt_patches}
-		do
+		for y in ${elt_patches} ; do
 			local ret=0
 
 			case "${y}" in
@@ -188,16 +177,14 @@ elibtoolize() {
 					;;
 				"fix-relink")
 					# Do not apply if we do not have the relink patch applied ...
-					if [ -n "$(grep 'inst_prefix_dir' "${x}/ltmain.sh")" ]
-					then
+					if [[ -n $(grep 'inst_prefix_dir' "${x}/ltmain.sh") ]] ; then
 						ELT_walk_patches "${x}/ltmain.sh" "${y}"
 						ret=$?
 					fi
 					;;
 				"max_cmd_len")
 					# Do not apply if $max_cmd_len is not used ...
-					if [ -n "$(grep 'max_cmd_len' "${x}/ltmain.sh")" ]
-					then
+					if [[ -n $(grep 'max_cmd_len' "${x}/ltmain.sh") ]] ; then
 						ELT_walk_patches "${x}/ltmain.sh" "${y}"
 						ret=$?
 					fi
@@ -208,24 +195,20 @@ elibtoolize() {
 					;;
 			esac
 
-			if [ "${ret}" -ne 0 ]
-			then
+			if [[ ${ret} -ne 0 ]] ; then
 				case ${y} in
 					"relink")
 						# Critical patch, but could be applied ...
-						if [ -z "$(grep 'inst_prefix_dir' "${x}/ltmain.sh")" ]
-						then
+						if [[ -z $(grep 'inst_prefix_dir' "${x}/ltmain.sh") ]] ; then
 							ewarn "  Could not apply relink.patch!"
 						fi
 						;;
 					"portage")
 						# Critical patch - for this one we abort, as it can really
 						# cause breakage without it applied!
-						if [ "${do_portage}" = "yes" ]
-						then
+						if [[ ${do_portage} == "yes" ]] ; then
 							# Stupid test to see if its already applied ...
-							if [ -z "$(grep 'We do not want portage' "${x}/ltmain.sh")" ]
-							then
+							if [[ -z $(grep 'We do not want portage' "${x}/ltmain.sh") ]] ; then
 								echo
 								eerror "Portage patch requested, but failed to apply!"
 								die "Portage patch requested, but failed to apply!"
@@ -238,36 +221,31 @@ elibtoolize() {
 				esac
 			fi
 
-			if [ -z "${ELT_APPLIED_PATCHES}" ]
-			then
-				if [ "${do_portage}" = "no" -a \
-				     "${do_reversedeps}" = "no" -a \
-					 "${do_only_patches}" = "no" -a \
-				     "${deptoremove}" = "" ]
+			if [[ -z ${ELT_APPLIED_PATCHES} ]] ; then
+				if [[ ${do_portage} == "no" && \
+				      ${do_reversedeps} == "no" && \
+					  ${do_only_patches} == "no" && \
+				      ${deptoremove} == "" ]]
 				then
 					# Sometimes ltmain.sh is in a subdirectory ...
-					if [ ! -f ${x}/configure.in -a ! -f ${x}/configure.ac ]
-					then
-						if [ -f ${x}/../configure.in -o -f ${x}/../configure.ac ]
-						then
-							cd ${x}/../
+					if [[ ! -f ${x}/configure.in && ! -f ${x}/configure.ac ]] ; then
+						if [[ -f ${x}/../configure.in || -f ${x}/../configure.ac ]] ; then
+							cd "${x}"/../
 						fi
 					fi
 
-					if which libtoolize &>/dev/null
-					then
+					if type -p libtoolize &> /dev/null ; then
 						ewarn "Cannot apply any patch, running libtoolize..."
 						libtoolize --copy --force
 					fi
-					cd ${x}
+					cd "${x}"
 					break
 				fi
 			fi
 		done
 	done
 
-	if [ -f libtool ]
-	then
+	if [[ -f libtool ]] ; then
 		rm -f libtool
 	fi
 
@@ -277,25 +255,25 @@ elibtoolize() {
 }
 
 uclibctoolize() {
-	[ -n "${NO_UCLIBCTOOLIZE}" ] && return 0
+	[[ -n ${NO_UCLIBCTOOLIZE} ]] && return 0
 
 	local errmsg=""
-	[ "${PORTAGE_LIBC}" = "uClibc" ] \
+	[[ ${CTARGET:-${CHOST}} == *-uclibc ]] \
 		&& errmsg="PLEASE CHECK" \
 		|| errmsg="Already patched"
 	local targets=""
 	local x
 
-	if [ -z "$@" ] ; then
-		targets="$(find ${S} -name configure -o -name ltconfig)"
+	if [[ -z $* ]] ; then
+		targets=$(find ${S} -name configure -o -name ltconfig)
 	fi
 
 	einfo "Applying uClibc/libtool patches ..."
 	for x in ${targets} ; do
-		[ ! -s "${x}" ] && continue
-		case $(basename "${x}") in
+		[[ ! -s ${x} ]] && continue
+		case ${x##*/} in
 		configure)
-			if grep 'Transform linux' "${x}" >/dev/null ; then
+			if grep 'Transform linux' "${x}" > /dev/null ; then
 				ebegin " Fixing \${S}${x/${S}}"
 				patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/configure.patch" > /dev/null
 				eend $? "${errmsg} ${x}"
@@ -303,9 +281,9 @@ uclibctoolize() {
 			;;
 
 		ltconfig)
-			local ver="$(grep '^VERSION=' ${x})"
-			ver="${ver/VERSION=}"
-			[ "${ver:0:3}" == "1.4" ] && ver="1.3"   # 1.4 and 1.3 are compat
+			local ver=$(grep '^VERSION=' ${x})
+			ver=${ver/VERSION=}
+			[[ ${ver:0:3} == "1.4" ]] && ver="1.3"   # 1.4 and 1.3 are compat
 			ebegin " Fixing \${S}${x/${S}}"
 			patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/ltconfig-${ver:0:3}.patch" > /dev/null
 			eend $? "${errmsg} ${x}"
@@ -318,24 +296,23 @@ darwintoolize() {
 	local targets=""
 	local x
 
-	if [ -z "$@" ] ; then
-		targets="$(find ${S} -name ltmain.sh -o -name ltconfig)"
+	if [[ -z $* ]] ; then
+		targets=$(find ${S} -name ltmain.sh -o -name ltconfig)
 	fi
 
 	einfo "Applying Darwin/libtool patches ..."
 	for x in ${targets} ; do
-		[ ! -s "${x}" ] && continue
-		case $(basename "${x}") in
+		[[ ! -s ${x} ]] && continue
+		case ${x##*/} in
 		ltmain.sh|ltconfig)
-			local ver="$(grep '^VERSION=' ${x})"
-			ver="${ver/VERSION=}"
-			if [ "${ver:0:3}" == "1.4" -o "${ver:0:3}" == "1.5" ];
-			then
+			local ver=$(grep '^VERSION=' ${x})
+			ver=${ver/VERSION=}
+			if [[ ${ver:0:3} == "1.4" || ${ver:0:3} == "1.5" ]] ; then
 				ver="1.3"   # 1.4, 1.5 and 1.3 are compat
 			fi
 
 			ebegin " Fixing \${S}${x/${S}}"
-			patch -p0 "${x}" "${ELT_PATCH_DIR}/darwin/$(basename "${x}")-${ver:0:3}.patch" > /dev/null
+			patch -p0 "${x}" "${ELT_PATCH_DIR}/darwin/${x##*/}-${ver:0:3}.patch" > /dev/null
 			eend $? "PLEASE CHECK ${x}"
 			;;
 		esac
