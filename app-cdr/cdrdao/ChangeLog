@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.51 2004/10/05 11:22:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.52 2004/10/31 01:18:43 pylon Exp $
+
+  31 Oct 2004; Lars Weiler <pylon@gentoo.org> -cdrdao-1.1.5-r1.ebuild,
+  -cdrdao-1.1.7-r2.ebuild, -cdrdao-1.1.7.ebuild, cdrdao-1.1.8-r1.ebuild,
+  cdrdao-1.1.9.ebuild:
+  Dependency changed from app-cdr/cdrtools to virtual/cdrtools, as suggested
+  in Bug #66519. cdrdao-1.1.8-r1 (tested) stable on x86, ppc and sparc.
+  Furthermore some cleanup.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   cdrdao-1.1.7.ebuild:

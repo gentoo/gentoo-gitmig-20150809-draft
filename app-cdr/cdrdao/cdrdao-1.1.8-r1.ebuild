@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.10 2004/07/14 14:01:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.11 2004/10/31 01:18:43 pylon Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE="gnome debug"
 RESTRICT="nostrip"
 
@@ -21,7 +21,7 @@ RDEPEND=">=media-sound/lame-3.90
 	=dev-cpp/libgnomecanvasmm-2.0*
 	=dev-cpp/libgnomeuimm-2.0.0 )"
 DEPEND=">=dev-util/pccts-1.33.24-r1
-	>=app-cdr/cdrtools-2.01_alpha20
+	virtual/cdrtools
 	${RDEPEND}
 	>=sys-apps/sed-4"
 
