@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.1 2003/05/29 16:37:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.2 2003/06/27 16:35:09 lu_zero Exp $
 
 IUSE="nls static readline"
 
@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/parted-1.6.5-hfs-8.patch
+	epatch ${FILESDIR}/parted-1.6.5-gcc-3.3.patch
 }
 
 src_compile() {
