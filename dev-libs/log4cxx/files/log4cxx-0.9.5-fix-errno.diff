@@ -1,0 +1,24 @@
+--- src/filewatchdog.cpp.orig	2004-08-07 21:36:34.987676584 -0500
++++ src/filewatchdog.cpp	2004-08-07 21:36:41.562677032 -0500
+@@ -17,10 +17,7 @@
+ #include <log4cxx/helpers/filewatchdog.h>
+ #include <log4cxx/helpers/loglog.h>
+ #include <sys/stat.h>
+-
+-#ifdef WIN32
+-#include <errno.h>
++#include <cerrno>
+-#endif
+ 
+ using namespace log4cxx;
+ using namespace log4cxx::helpers;
+--- src/socketimpl.cpp.orig	2004-08-07 22:01:02.577569008 -0500
++++ src/socketimpl.cpp	2004-08-07 22:01:23.868332320 -0500
+@@ -15,6 +15,7 @@
+  ***************************************************************************/
+ 
+ #include <log4cxx/config.h>
++#include <cerrno>
+ 
+ #ifdef WIN32
+ #include <windows.h>

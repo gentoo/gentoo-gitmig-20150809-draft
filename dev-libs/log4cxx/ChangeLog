@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/log4cxx
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.7 2004/12/28 10:42:23 ka0ttic Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.8 2005/01/06 13:49:00 ka0ttic Exp $
+
+  06 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/log4cxx-0.9.5-fix-errno.diff, log4cxx-0.9.5.ebuild:
+  Fix compilation failure - bug 59743.
 
 *log4cxx-0.9.7-r1 (28 Dec 2004)
 
