@@ -679,7 +679,8 @@ dev-lang/tcl-tk
 >=gnome-base/nautilus-1.1.0
 >=gnome-extra/bug-buddy-2.1.0
 dev-libs/libIDL
-
+x11-libs/libzvt
+x11-libs/libwnck
 
 
 # spider@gentoo.org ; 18 Apr 2002
