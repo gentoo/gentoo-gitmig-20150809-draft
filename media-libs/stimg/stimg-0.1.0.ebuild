@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.1 2003/06/16 14:53:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.2 2003/08/13 17:09:13 usata Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ LICENSE="as-is LGPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 DEPEND=">=media-libs/libpng-1.0.12-r2
 	>=media-libs/jpeg-6b-r2
