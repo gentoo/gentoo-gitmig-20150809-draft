@@ -1,9 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.9 2004/11/21 07:43:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.10 2004/11/21 22:42:56 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
+
+# Removing any unnecessary fonts: find /usr/share/fonts/misc/ -name '*.pcf.gz' \
+# -not -name '*6x13*' -not -name 'cursor.pcf.gz' -exec rm {} \;
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -357,6 +360,12 @@ src_install() {
 
 	if ! use minimal; then
 		install_extra_cursors
+	fi
+
+	# Get rid of all unnecessary fonts (saves ~5.5 MB)
+	if use minimal; then
+		find ${D}/usr/share/fonts/misc/ -name '*.pcf.gz' \
+			-not -name '*6x13*' -not -name 'cursor.pcf.gz' -exec rm {} \;
 	fi
 
 	# Remove xterm app-defaults, since we don't install xterm
@@ -997,7 +1006,10 @@ install_everything() {
 
 backward_compat_setup() {
 	# Backwards compatibility for /usr/share move
-	G_FONTDIRS="CID Speedo TTF Type1 encodings local misc util"
+	G_FONTDIRS="Speedo TTF Type1 encodings local misc util"
+	if use cjk; then
+		G_FONTDIRS="${G_FONTDIRS} CID"
+	fi
 	if use bitmap-fonts; then
 		G_FONTDIRS="${G_FONTDIRS} 75dpi 100dpi"
 	fi

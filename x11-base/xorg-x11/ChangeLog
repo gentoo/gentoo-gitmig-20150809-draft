@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.218 2004/11/21 07:43:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.219 2004/11/21 22:42:56 spyderous Exp $
+
+  21 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  For USE=minimal, remove all unnecessary fonts. This saves ~5.5MB.
+  Unfortunately, this is a temporary hack -- we should really patch
+  xc/fonts/bdf/misc/Imakefile to never build them in the first place. Also
+  only add CID to G_FONTDIRS for USE=cjk, so other people don't have a symlink
+  pointing to nothing.
 
   20 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
