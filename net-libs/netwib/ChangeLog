@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.8 2004/06/24 23:16:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.9 2004/07/12 11:19:36 eldad Exp $
+
+  12 Jul 2004; Eldad Zack <eldad@gentoo.org> netwib-5.9.0.ebuild:
+  marked x86 stable
 
   21 May 2004; Jason Wever <weeve@gentoo.org> netwib-5.9.0.ebuild:
   Added ~sparc keyword.
