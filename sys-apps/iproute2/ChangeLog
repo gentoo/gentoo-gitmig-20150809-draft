@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.29 2005/02/12 03:42:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.30 2005/02/14 06:30:35 robbat2 Exp $
+
+  13 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  iproute2-2.6.10.20050124.ebuild:
+  Bug #47482, arpd doesn't need to be in /sbin.
 
   11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
   iproute2-2.6.10.20050112-r1.ebuild, iproute2-2.6.10.20050124.ebuild:

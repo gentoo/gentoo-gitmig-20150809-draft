@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.10.20050124.ebuild,v 1.2 2005/02/12 03:42:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.10.20050124.ebuild,v 1.3 2005/02/14 06:30:35 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -69,4 +69,7 @@ src_install() {
 		DOCDIR=/usr/share/doc/${PF} \
 		install \
 		|| die "make install failed"
+	# bug 47482, arpd doesn't need to be in /sbin
+	dodir /usr/sbin
+	mv ${D}/sbin/arpd ${D}/usr/sbin/
 }
