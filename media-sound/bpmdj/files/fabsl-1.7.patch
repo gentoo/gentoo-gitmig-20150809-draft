@@ -1,0 +1,22 @@
+--- kbpm-counter.cpp	2003-04-26 19:31:56.000000000 +0200
++++ /root/kbpm-counter.cpp	2003-07-14 19:55:32.000000000 +0200
+@@ -617,8 +617,8 @@
+   // normalize the result
+   double max = 0;
+   for(pos=0;pos<blocksize/2;pos++)
+-    // fftfreq[pos]=fabsl(fftfreq[pos]*(double)pos/((double)blocksize*10.0));
+-    fftfreq[pos]=fabsl(fftfreq[pos]);
++    // fftfreq[pos]=fabs(fftfreq[pos]*(double)pos/((double)blocksize*10.0));
++    fftfreq[pos]=fabs(fftfreq[pos]);
+   for(pos=0;pos<blocksize/2;pos++)
+     if (fftfreq[pos]>max) 
+       max=fftfreq[pos];
+@@ -637,7 +637,7 @@
+ 	  {
+ 	    double length = barkbounds[bark+1]-barkbounds[bark];
+ 	    double barkcentre = barkbounds[bark]+length/2.0;
+-	    double dist = fabsl(freq-barkcentre)*2.0/length;
++	    double dist = fabs(freq-barkcentre)*2.0/length;
+ 	    double scale = 1.0 - dist;
+ 	    assert(scale>=0.0);
+ 	    barkscale[bark]+=fftfreq[pos]*scale;
