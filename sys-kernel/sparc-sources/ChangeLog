@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.8 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.9 2003/01/07 14:02:11 joker Exp $
+
+*sparc-sources-2.4.20-r1 (07 Jan 2003)
+
+  07 Jan 2003; Christian Birchinger <joker@gentoo.org>:
+  sparc-sources-2.4.20-r1.ebuild files/digest-sparc-sources-2.4.20-r1 :  
+
+  Added grsecurity 1.9.8 to patches-2.4.20-r1-sparc.tar.bz2
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
