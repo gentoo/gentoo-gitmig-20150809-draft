@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.2 2003/04/22 10:23:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.3 2003/10/20 02:41:51 max Exp $
+
+*libdvb-0.5.0-r1 (19 Oct 2003)
+
+  19 Oct 2003; Max Kalika <max@gentoo.org> libdvb-0.5.0-r1.ebuild,
+  metadata.xml, files/libdvb-0.5.0-gentoo.patch:
+  Bring the 0.5.0 version to media-libs. Ditch DVB.cc patch as it has been fixed
+  upstream. Consolidate the other two patches into one and use epatch. Properly
+  install sample_progs and samplerc items.
+
+*libdvb-0.5.0 ( 04 Oct 2003)
+  04 Oct 2003; Thomas Raschbacher <lordvan@gentoo.org>: libdvb-0.5.0.ebuild,
+  metadata.xml:
+  This includes dvb-mpegtools (see description) initial ebuild
 
 *libdvb-0.2.3 (21 Mar 2003)
 
