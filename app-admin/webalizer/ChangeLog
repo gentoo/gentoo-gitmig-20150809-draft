@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.19 2004/01/11 10:59:19 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.20 2004/02/02 03:39:51 avenj Exp $
+
+  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> webalizer-2.01.10-r4.ebuild :
+  AMD64 keywords.
 
   11 Jan 2004; Martin Holzer <mholzer@gentoo.org> webalizer-2.01.10-r4.ebuild:
   Displays info about apache1 only if IUSE is not set

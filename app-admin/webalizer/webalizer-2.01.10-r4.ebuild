@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.7 2004/01/11 10:59:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.8 2004/02/02 03:39:51 avenj Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.mrunix.net/webalizer/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc hppa"
+KEYWORDS="x86 ppc sparc hppa ~amd64"
 
 DEPEND="=sys-libs/db-1*
 	>=sys-libs/zlib-1.1.4
