@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.4_beta2-r1.ebuild,v 1.1 2000/08/16 16:45:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.4_beta2-r1.ebuild,v 1.2 2000/09/15 20:09:08 drobbins Exp $
 
 P=netatalk-1.4b2
 A=${P}.tar.gz
@@ -15,7 +15,7 @@ src_compile() {
   cp endian.h endian.h.orig
   sed -e "s/<bytesex\.h>/<asm\/ioctls\.h>/" endian.h.orig > endian.h
   cd ${S}
-  make LDFLAGS="-lcrypt" OPTOPTS="${CFLAGS} -fsigned-char" DESTDIR=/usr 
+  try make LDFLAGS="-lcrypt" OPTOPTS="${CFLAGS} -fsigned-char" DESTDIR=/usr 
 ETCDIR=/etc/atalk \
 	RESDIR=/usr/libexec/atalk SBINDIR=/usr/sbin
 }

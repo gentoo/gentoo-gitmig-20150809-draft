@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.1.9.1-r1.ebuild,v 1.4 2000/08/28 03:01:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.1.9.1-r1.ebuild,v 1.5 2000/09/15 20:09:08 drobbins Exp $
 
 P=nfs-utils-0.1.9.1
 A=${P}.tar.gz
@@ -11,14 +11,14 @@ SRC_URI="ftp://ftp.linuxnfs.sourceforge.org/pub/nfs/"${A}
 HOMEPAGE="http://nfs.sourceforge.net"
 
 src_compile() {
-    ./configure --mandir=${D}/usr/man --with-statedir=/var/state/nfs \
+    try ./configure --mandir=${D}/usr/man --with-statedir=/var/state/nfs \
 	--prefix=${D} --exec-prefix=${D}
-    make
+    try make
 }
 
 src_install() {                 
 	cd ${S}
-	make install STATEDIR=${D}/var/state/nfs
+	try make install STATEDIR=${D}/var/state/nfs
 	prepman
 	dodir /etc/rc.d/init.d
 	cp ${O}/files/nfsserver ${D}/etc/rc.d/init.d

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r1.ebuild,v 1.3 2000/08/17 15:37:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r1.ebuild,v 1.4 2000/09/15 20:09:09 drobbins Exp $
 
 P=samba-2.0.7
 A=${P}.tar.gz
@@ -12,13 +12,13 @@ HOMEPAGE="http://www.samba.org"
 
 src_compile() { 
   cd ${S}/source
-  CFLAGS="$CFLAGS -I/usr/include/openssl" ./configure --prefix=/usr \
+  CFLAGS="$CFLAGS -I/usr/include/openssl" try ./configure --prefix=/usr \
 	--sysconfdir=/etc/smb --localstatedir=/var/log --libdir=/etc/smb --sbindir=/usr/sbin \
 	--with-ssl --with-sslinc=/usr/include/openssl --with-automount \
 	--with-utmp --without-sambabook --with-netatalk \
 	--with-smbmount --with-pam --with-syslog \
 	--with-privatedir=/etc/smb --with-lockdir=/var/lock --with-swatdir=/usr/share/swat
-  make
+  try make
 }
 
 src_install() { 
@@ -29,7 +29,7 @@ src_install() {
   dodir /usr/doc/${P}/html/book
   dodir /var/log
   dodir /var/lock
-  make install prefix=${D}/usr BASEDIR=${D}/usr LIBDIR=${D}/etc/smb VARDIR=${D}/var/log \
+  try make install prefix=${D}/usr BASEDIR=${D}/usr LIBDIR=${D}/etc/smb VARDIR=${D}/var/log \
 		PRIVATEDIR=${D}/etc/smb SWATDIR=${D}/usr/share/swat \
 		LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin
   prepman
