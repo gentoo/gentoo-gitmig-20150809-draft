@@ -1,6 +1,19 @@
-MD5 33b13d15da41e8af1c6505c95452b670 bookview-3.2.ebuild 846
-MD5 24d9cdcd56075e9e6131313e15974781 ChangeLog 547
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8a232f1fcfbf143b6fe64d4b6875cd58 ChangeLog 786
+MD5 d6581e06ab476c5ed24a1d33e416088c bookview-3.2.ebuild 860
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 70c112add7a4efea8ea0fe25c362a707 bookview-3.2.1.ebuild 768
 MD5 763df96bd7061235ae5c8677c974528c files/Bookview.ad 20
-MD5 e158f04b11ac0ae80e209226da3ba6d8 files/digest-bookview-3.2 64
 MD5 ea5ee913eea081c97bb2097424c70646 files/bookview-3.2-gentoo.diff 466
+MD5 e158f04b11ac0ae80e209226da3ba6d8 files/digest-bookview-3.2 64
+MD5 698ff4ed514274f6888d55e9a1f1b4b6 files/digest-bookview-3.2.1 66
+MD5 17ed6dd8f989be356abdd22d906eaea9 files/bookview-3.2.1-gentoo.diff 339
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBodtjVWNWqTUmv+0RAlCVAJsFIGAtXxJfmVHnNuKsjw0arAI79ACffjsE
+4MiOG2HgWz2dmQbxlvFplh0=
+=0PLq
+-----END PGP SIGNATURE-----
