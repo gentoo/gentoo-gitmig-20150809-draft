@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031210.ebuild,v 1.1 2004/02/09 16:20:35 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031210.ebuild,v 1.2 2004/02/09 19:27:57 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -356,7 +356,7 @@ src_unpack() {
 			# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
 			epatch ${FILESDIR}/2.3.2/${P}-alpha-pwrite.patch
 		fi
-		
+
 		if [ "${ARCH}" = "amd64" ]
 		then
 			cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-amd64-nomultilib.patch
