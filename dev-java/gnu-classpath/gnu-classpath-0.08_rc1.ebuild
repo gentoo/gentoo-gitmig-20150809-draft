@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.08_rc1.ebuild,v 1.1 2004/04/01 15:20:31 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.08_rc1.ebuild,v 1.2 2004/05/05 16:50:49 sejo Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the java programming language"
 SRC_URI="ftp://alpha.gnu.org/gnu/classpath/classpath-0.08-test1.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="${DEPEND}
 	jikes? ( dev-java/jikes )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 S=${WORKDIR}/classpath-0.08-test1
 
