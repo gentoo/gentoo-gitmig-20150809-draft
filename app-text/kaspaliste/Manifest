@@ -1,4 +1,6 @@
 MD5 87dfb578b5183e2bd43b4d572b5cfcc2 kaspaliste-0.94.ebuild 707
-MD5 ec5d26708ed9047de0fbfb10444a491a ChangeLog 740
+MD5 6c104291dd64582ab0033a4d895627f8 kaspaliste-0.96.ebuild 713
+MD5 73abf9cb94712dd585aa884bc3ccc446 ChangeLog 859
 MD5 098d19dbe8e42546a60680b56cced5d4 metadata.xml 184
 MD5 ab3ab65e04a481c7fb64d64c7c733d94 files/digest-kaspaliste-0.94 69
+MD5 3f0461a89ce9b6c776da694a8c844a4a files/digest-kaspaliste-0.96 68
