@@ -5,6 +5,7 @@
 afs
 alsa
 apm
+acpi
 directfb
 firebird
 lirc
