@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.37 2004/07/05 00:00:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.38 2004/07/08 02:03:41 mr_bones_ Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -302,7 +302,7 @@ postinst_sources() {
 
 	# Show policy version, if this kernel has SELinux...
 	local secfile="${ROOT}usr/src/linux-${KV}/security/selinux/include/security.h"
-	if [ -n "`use selinux`" -a -f "$secfile" ]
+	if use selinux && [ -f "$secfile" ]
 	then
 		local polver=$(awk '/POLICYDB_VERSION /{print $3}' $secfile)
 		einfo "The SELinux policy version of this kernel is $polver."
