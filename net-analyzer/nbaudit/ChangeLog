@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nbaudit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.2 2002/02/14 05:09:36 blocke Exp $
+
+*nbaudit-1.0 (14 Feb 2002)
+
+  14 Feb 2002; Bruce A. Locke <blocke@shivan.org> ChangeLog:
+
+  Now does something besides segfaulting...
+
+  NOTE: I left out CFLAGS for a reason... ;)
 
 *nbaudit-1.0 (1 Feb 2002)
 

@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.4 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.5 2002/02/14 05:09:36 blocke Exp $
 
 
 # Its officially called nat10 but the name conflicts with other projects
@@ -21,10 +21,7 @@ src_compile() {
    mv Makefile Makefile.old
    sed -e "s/# FLAGSM = -DLINUX -DSHADOW_PWD/FLAGSM = -DLINUX -DSHADOW_PWD -DNO_ASMSIGNALH/" -e "s/# LIBSM = -lshadow/LIBSM = -lshadow/" Makefile.old > Makefile
 
-   # sed seems to hang if I do all three at once... oh well
-   mv Makefile Makefile.old
-   sed -e "s/CFLAGS = /CFLAGS = ${CFLAGS} /" Makefile.old > Makefile
-
+   # NOTE: DO NOT SET CFLAGS OR THE PROGRAM WILL SEGFAULT
    try make all
 
 }
