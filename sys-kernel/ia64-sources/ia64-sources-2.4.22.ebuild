@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.4 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.5 2003/12/02 03:48:50 iggy Exp $
 
 IUSE=""
 
@@ -48,6 +48,7 @@ src_unpack() {
 #	cat ${DISTDIR}/cset-${MYCSET}.txt.gz | gzip -d | patch -f -p1
 	[ ! -e ${DISTDIR}/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2 ] && die "patch not found"
 	cat ${DISTDIR}/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2 | bzip2 -d | patch -f -p1
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 	kernel_universal_unpack
 }
 
