@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.9 2004/07/29 17:32:18 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.10 2004/07/31 18:56:13 merlin Exp $
+
+  31 Jul 2004; Cory Visi <merlin@gentoo.org> amavisd-new-20040701.ebuild:
+  sparc and amd64 keywords were removed last commit; add back amd64 keyword as
+  the dependency on freeze is fixed, opened bug for sparc keyword; added
+  SpamAssassin detection logic to address Bug 58728
 
   29 Jul 2004; Cory Visi <merlin@gentoo.org> files/amavisd.conf:
   Removed stray character from amavisd.conf, closing Bug 58697

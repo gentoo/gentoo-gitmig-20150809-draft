@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.2 2004/07/29 11:51:01 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.3 2004/07/31 18:56:13 merlin Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${PV/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="ldap mysql postgres milter"
 
 DEPEND=">=sys-apps/sed-4
@@ -83,6 +83,12 @@ src_install() {
 		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(domainname)';:" \
 			/etc/amavisd.conf
 	fi
+	if ! `has_version mail-filter/spamassassin` ; then
+		einfo "Disabling anti-spam code in amavisd.conf..."
+
+		dosed "s:^#[\t ]*@bypass_spam_checks_maps[\t ]*=[\t ]*(1);:\@bypass_spam_checks_maps = (1);:" \
+			/etc/amavisd.conf
+	fi
 
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/amavisd.rc6" amavisd
@@ -123,6 +129,14 @@ pkg_postinst() {
 		sed -i -e "s:debuglevel\([ ]*\)= .:debuglevel\1= 0:g" \
 			${ROOT}${AMAVIS_ROOT}/.razor/razor-agent.conf
 		chown -R amavis:amavis ${ROOT}${AMAVIS_ROOT}/.razor
+	fi
+
+	if ! `has_version mail-filter/spamassassin` ; then
+		echo
+		einfo "Amavisd-new no longer requires SpamAssassin, but no anti-spam checking"
+		einfo "will be performed without it. Since you do not have SpamAssassin installed,"
+		einfo "all spam checks have been disabled. To enable them, install SpamAssassin"
+		einfo "and comment out line 170 of /etc/amavisd.conf."
 	fi
 
 	echo
