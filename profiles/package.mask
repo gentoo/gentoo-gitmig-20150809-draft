@@ -495,7 +495,7 @@ app-misc/ldapbrowser
 # <cardoe@genoo.org> (25 Jul 2002)
 # Moz 1.1beta (don't kill me Azarah for putting this here!)
 =net-www/mozilla-1.1_beta
-=net-www/mozilla-1.1
+>=net-www/mozilla-1.1
 
 # <azarah@gentoo.org> (25 Jul 2002)
 # gawk is very flexible and can be used instead
