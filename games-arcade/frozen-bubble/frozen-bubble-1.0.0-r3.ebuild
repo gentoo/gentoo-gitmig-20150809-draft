@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.2 2004/01/10 06:17:31 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.3 2004/01/29 09:40:14 vapier Exp $
 
 inherit games perl-module
 
@@ -12,10 +12,9 @@ SRC_URI="http://guillaume.cottenceau.free.fr/fb/${P}.tar.bz2
 	http://chl.tuxfamily.org/frozen-bubble/${NET_CLIENT_P}.tar.bz2
 	http://chl.tuxfamily.org/frozen-bubble/${NET_SERVER_P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
-IUSE=""
+SLOT="0"
+KEYWORDS="x86 ppc hppa amd64"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4
@@ -71,8 +70,4 @@ src_install() {
 	newdoc README README.server
 
 	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
 }
