@@ -4,15 +4,17 @@ http://bugs.gentoo.org/show_bug.cgi?id=77079
 
 --- ode-0.5/ode/src/timer.cpp.orig	2005-01-08 00:42:12.799324632 -0500
 +++ ode-0.5/ode/src/timer.cpp	2005-01-08 00:42:38.347440728 -0500
-@@ -118,8 +118,10 @@
+@@ -118,6 +118,13 @@
  {
    asm volatile (
- 	"mov $0,%%eax\n"
++#if defined(__i386__) && defined(__PIC__)
 +	"pushl %%ebx\n"
- 	"cpuid\n"
--	: : : "%eax","%ebx","%ecx","%edx","cc","memory");
++	"cpuid\n"
 +	"popl %%ebx\n"
 +	: : : "%eax","%ecx","%edx","cc","memory");
++#else
+ 	"mov $0,%%eax\n"
+ 	"cpuid\n"
+ 	: : : "%eax","%ebx","%ecx","%edx","cc","memory");
++#endif
  }
- 
- 
