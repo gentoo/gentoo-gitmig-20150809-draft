@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/cpl-stratego
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cpl-stratego/ChangeLog,v 1.1 2002/04/12 13:51:53 karltk Exp $
+
+*cpl-stratego-0.4 (11 Apr 2002)
+
+  11 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> cpl-stratego-0.4.ebuild files/digest-cpl-stratego-0.4:
+
+  Initial import.
