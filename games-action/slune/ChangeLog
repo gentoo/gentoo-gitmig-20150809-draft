@@ -1,6 +1,11 @@
 # ChangeLog for games-action/slune
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.2 2003/09/10 20:28:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.3 2003/12/05 07:10:37 kloeri Exp $
+
+*slune-0.5 (05 Dec 2003)
+
+  05 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> slune-0.5.ebuild:
+  Version bump. Also closes bug #34625.
 
 *slune-0.3.1 (10 May 2003)
 
