@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.61.1-r5.ebuild,v 1.1 2002/10/31 21:23:44 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.61.1_pre1.ebuild,v 1.1 2002/10/31 21:44:22 rphillips Exp $
 
 IUSE="sdl dga xv alsa esd opengl X 3dfx"
 
