@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/epm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.7 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.8 2002/12/15 01:44:15 agriffis Exp $
+
+*epm-1.7 (22 Oct 2002)
+
+  15 Dec 2002; Aron Griffis <agriffis@gentoo.org> epm-0.8.ebuild :
+  Added alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*epm-1.7 (22 Oct 2002)
 
   22 Oct 2002; Aron Griffis <agriffis@gentoo.org>:
   Updated to recent version
