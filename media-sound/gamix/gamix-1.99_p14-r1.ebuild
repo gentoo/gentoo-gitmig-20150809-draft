@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.1 2003/12/04 17:33:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.2 2003/12/04 18:33:39 seemant Exp $
 
 IUSE="nls gtk2"
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
 
-DEPEND="virtual/alsa \
+DEPEND="virtual/alsa
 	gtk2? ( >=x11-libs/gtk+-2.2.1 ) : ( =x11-libs/gtk+-1.2* )"
 
 src_compile() {
