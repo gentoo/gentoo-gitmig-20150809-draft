@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.6 2004/12/07 05:12:12 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.7 2004/12/16 07:27:45 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -12,7 +12,7 @@ IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage si
 RESTRICT="nostrip"
 
 GATOSSNAP="20031202"
-PATCHVER="0.1"
+PATCHVER="0.2"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
 S="${WORKDIR}/drm"

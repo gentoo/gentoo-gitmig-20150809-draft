@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.9 2004/12/07 05:12:12 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.10 2004/12/16 07:27:45 battousai Exp $
+
+  15 Dec 2004; Bryan Stine <battousai@gentoo.org>; x11-drm-20040827.ebuild:
+  Add a patch to fix lockfile vulnerability (CAN-2004-1056: Insufficient
+  locking checks in DRM code). This bumps the patchball up to 0.2. Closes bug
+  #74464.
 
   07 Dec 2004; Bryan Stine <battousai@gentoo.org>; x11-drm-20040827.ebuild:
   Now with linux-mod eclass goodness, no more kernel-mod.
