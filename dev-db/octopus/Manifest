@@ -1,5 +1,5 @@
-MD5 711ed904d91215617358223fa3174868 octopus-3.0.1.ebuild 1669
-MD5 c8b880410b9fa2c6be8351ec84ecebda ChangeLog 402
+MD5 fc5b84f65716094740269771b3b10316 octopus-3.0.1.ebuild 1667
+MD5 bf1ac18409b43ef6567046c0f89bc353 ChangeLog 528
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 24925210eca628235c1f8a498f261dc2 files/octopus-3.0.1-gentoo-build.xml 15173
 MD5 a634674c47f2213dc1b3903c4f9a1264 files/digest-octopus-3.0.1 141

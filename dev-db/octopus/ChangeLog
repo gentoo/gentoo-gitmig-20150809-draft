@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/octopus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.1 2005/01/22 17:28:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.2 2005/01/29 21:17:48 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> octopus-3.0.1.ebuild:
+  updated (R)DEPEND to reflect rhino SLOT changes.
 
 *octopus-3.0.1 (22 Jan 2005)
 
