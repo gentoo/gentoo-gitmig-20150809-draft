@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/peacock
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/ChangeLog,v 1.1 2004/06/05 20:49:00 usata Exp $
+
+*peacock-1.9.1 (06 Jun 2004)
+
+  06 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +peacock-1.9.1.ebuild:
+  Initial import. Thanks to Edon Kelmendi <edon@albalinux.org> and
+  Dominique Comte <bearingspacer@free.fr>, closing bug #34324
+
