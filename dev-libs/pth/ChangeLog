@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.2 2002/10/01 20:11:30 verwilst Exp $
+
+*pth-1.4.1 (1 Okt 2002); Bart Verwilst <verwilst@gentoo.org>:
+
+  New version, bugfix release
 
 *pth-1.4.0 (1 Feb 2002)
 
