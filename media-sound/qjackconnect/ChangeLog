@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackconnect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.12 2004/08/03 11:57:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.13 2004/09/15 17:19:43 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  qjackconnect-0.0.3b-r1.ebuild:
+  Stable amd64.
 
   03 Aug 2004; David Holm <dholm@gentoo.org> qjackconnect-0.0.3b-r1.ebuild:
   Added to ~ppc.
