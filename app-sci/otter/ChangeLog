@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/otter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/otter/ChangeLog,v 1.1 2003/05/16 09:54:21 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/otter/ChangeLog,v 1.2 2004/01/01 04:04:22 george Exp $
+
+*otter-3.3.ebuild (31 Dec 2003)
+
+  31 Dec 2003; George Shapovalov <george@gentoo.org> otter-3.2.ebuild :
+  new version. Build procedure has slightly changed, adjusted ebuild to follow
 
 *otter-3.2.ebuild (16 May 2003)
 
