@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 949102109bbeb7dc0c4a0375a6883a67 mod_macro-1.1.6.ebuild 615
+MD5 83d703c0f0ac4ba8988db868d8e8b80a ChangeLog 392
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 2f84dbcf829d251a0310bfd8b3b8f0ec ChangeLog 390
 MD5 b98f8dbe67f524a29478021b269f831a files/27_mod_macro.conf 210
 MD5 4521ab073b529e9671ba2c848b039fd0 files/digest-mod_macro-1.1.6 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB4nn6mPFBzbX68WERAutNAJ0U2CCzqTaZ41krpHktUFGWglSqdQCdEW+U
-Xw/chWCr/Od2DaVoUc8s4FU=
-=9DSr
+iD8DBQFB4rNaI1lqEGTUzyQRAkM2AJ44Ahp+a2ErWzra6Csi2sG2fTgsJgCgjIjH
+o/kQA37FaaRiHVjrDP+C/CY=
+=lKkj
 -----END PGP SIGNATURE-----
