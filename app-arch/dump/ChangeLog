@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.23 2004/04/28 16:37:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.24 2004/05/04 13:53:38 kloeri Exp $
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> dump-0.4.34.ebuild:
+  Stable on alpha.
 
 *dump-0.4.36 (28 Apr 2004)
 
