@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.1 2004/09/21 23:14:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.2 2004/09/22 20:27:17 kumba Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -139,9 +139,18 @@ src_unpack() {
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
 	epatch ${FILESDIR}/gcc-spec-env.patch
 
+	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
 	if use mips && use nomultilib; then
 		use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
 		use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
+	fi
+
+	# Patch forward-ported from a gcc-3.0.x patch that adds -march=r10000 and
+	# -mtune=r10000 support to gcc (Allows the compiler to generate code to
+	# take advantage of R10k's second ALU, perform shifts, etc..
+	# Needs re-porting for DFA in gcc-4.0
+	if use mips; then
+		epatch ${FILESDIR}/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch
 	fi
 
 	# hack around some ugly 32bit sse2 wrong-code bugs

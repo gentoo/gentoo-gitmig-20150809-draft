@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.330 2004/09/21 23:14:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.331 2004/09/22 20:27:17 kumba Exp $
+
+  22 Sep 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch, gcc-3.4.2-r2.ebuild:
+  Added a patch for mips that adds -march=r10000 and -mtune=r10000 support to
+  gcc.
 
 *gcc-3.4.2-r2 (21 Sep 2004)
 
