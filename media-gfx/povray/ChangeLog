@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.38 2004/12/12 06:27:23 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.39 2004/12/16 10:23:18 corsair Exp $
+
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> povray-3.6.1-r1.ebuild:
+  Stable on ppc64
 
   12 Dec 2004; Daniel Goller <morfic@gentoo.org> povray-3.6.1-r1.ebuild:
   Removing -fomit-frame-pointer if k6-2 march is used, closing bug 71255
@@ -8,9 +11,7 @@
   07 Dec 2004; Daniel Goller <morfic@gentoo.org> povray-3.6.1-r1.ebuild:
   Stable on ppc and x86
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
-
-  povray-3.6.1-r1.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> povray-3.6.1-r1.ebuild:
   Marked ~ppc64; bug #68711
 
 *povray-3.6.1-r1 (27 Oct 2004)
