@@ -1,6 +1,8 @@
 # ChangeLog for net-mail/qmail-notify
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.7 2003/08/12 02:29:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.8 2004/03/01 21:09:28 aliz Exp $
+
+*qmail-notify-0.93-r1 (11 Aug 2003)
 
   11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> files/qmail-notify.cron:
   fix bug #26430, cleanup ebuild a bit

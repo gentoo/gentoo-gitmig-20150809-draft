@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/razor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.14 2004/01/25 21:30:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.15 2004/03/01 21:09:46 aliz Exp $
 
   25 Jan 2004; <gustavoz@gentoo.org> razor-2.36-r1.ebuild:
   stable on sparc
@@ -28,7 +28,7 @@
   11 Aug 2003; Michael Cummings <mcummings@gentoo.org> razor-2.36.ebuild:
   Serious version bump - bug 18858
 
-*razor-2.20
+*razor-2.20 (05 Jan 2003)
 
   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> razor-2.20.ebuild :
 
@@ -40,7 +40,7 @@
   This includes a patch for the razor ebuild (razor wants to clean up old 
   copies of itself during installation)
   
-*razor-2.14
+*razor-2.14 (05 Jan 2003)
 
   05 Jan 2003; Michael Cummings <mcummings@gentoo.org>: version bump
 
