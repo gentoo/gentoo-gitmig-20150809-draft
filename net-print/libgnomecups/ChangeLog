@@ -1,6 +1,10 @@
 # ChangeLog for net-print/libgnomecups
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.12 2003/11/29 22:02:14 brad_mssw Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.13 2004/03/16 02:24:40 geoman Exp $
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  libgnomecups-0.1.6.ebuild:
+  Added ~mips keyword.
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> libgnomecups-0.1.6.ebuild:
   mark stable on amd64
