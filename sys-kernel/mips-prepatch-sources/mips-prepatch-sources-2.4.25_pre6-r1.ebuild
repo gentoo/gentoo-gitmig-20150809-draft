@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.25_pre6.ebuild,v 1.1 2004/02/10 06:57:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.25_pre6-r1.ebuild,v 1.1 2004/02/18 21:56:26 kumba Exp $
 
 
 # Version Data
@@ -58,14 +58,17 @@ src_unpack() {
 	epatch ${FILESDIR}/mipscvs-${OKV}-${CVSDATE}-makefile.patch
 	echo -e ""
 
+	# do_munmap fix (Possibly Exploitable)
+	epatch ${FILESDIR}/do_munmap-fix.patch
+
 	# Cobalt stuff
-#	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
+	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
 		einfo ">>> Patching kernel for Cobalt support ..."
 		for x in ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/*.patch; do
 			epatch ${x}
 		done
 		cp ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/cobalt-patches.txt ${S}
-#	fi
+	fi
 
 	kernel_universal_unpack
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mips-prepatch-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/ChangeLog,v 1.8 2004/02/10 06:57:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/ChangeLog,v 1.9 2004/02/18 21:56:26 kumba Exp $
+
+*mips-prepatch-sources-2.4.25_pre6-r1 (18 Feb 2004)
+
+  18 Feb 2004; Joshua Kinard <kumba@gentoo.org>
+  mips-prepatch-sources-2.4.25_pre6-r1.ebuild,
+  mips-prepatch-sources-2.4.25_pre6.ebuild, files/do_munmap-fix.patch:
+  Added a patch to fix the recent do_munmap kernel vuln.
 
 *mips-prepatch-sources-2.4.25_pre6 (10 Feb 2004)
 
