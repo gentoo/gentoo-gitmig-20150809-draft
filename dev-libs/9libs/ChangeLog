@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/9libs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.1 2003/03/11 08:30:30 absinthe Exp $
+
+  10 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
+
+  Initial import.  Ebuild submitted by Burton Samograd
+  <kruhft@kruhft.dyndns.org>.   9libs is a package of Plan 9 compatibility
+  libraries used by acme and sam.
