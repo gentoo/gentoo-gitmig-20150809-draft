@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-1.00.ebuild,v 1.10 2004/06/24 22:06:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-1.04.ebuild,v 1.1 2004/10/27 15:23:44 foser Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gswitchit/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc amd64 ~hppa ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~hppa ~alpha ~ia64 ~mips ~ppc64"
 IUSE="doc"
 
 RDEPEND="virtual/x11
@@ -21,26 +21,26 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
+
 	unpack ${A}
 
 	cd ${S}
-	use sparc && epatch ${FILESDIR}/sun-keymaps.patch
+	use sparc && epatch "${FILESDIR}/sun-keymaps-102.patch"
+
 }
 
 src_compile() {
 
-	econf `use_enable doc doxygen` || die
-	emake || die
+	econf $(use_enable doc doxygen) || die
+	emake || die "emake failed"
 
 }
 
 src_install() {
 
 	einstall || die
-
 	insinto /usr/share/libxklavier
-	use sparc && doins ${FILESDIR}/sun.xml
-
-	dodoc "AUTHORS COPYING* CREDITS ChangeLog INSTALL NEWS README"
+	use sparc && doins "${FILESDIR}/sun.xml"
+	dodoc AUTHORS CREDITS ChangeLog NEWS README
 
 }
