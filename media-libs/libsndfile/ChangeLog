@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.37 2005/03/19 19:43:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.38 2005/03/21 05:44:06 j4rg0n Exp $
+
+  21 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> libsndfile-1.0.11.ebuild:
+  Stable ppc-macos
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   libsndfile-1.0.11.ebuild:
