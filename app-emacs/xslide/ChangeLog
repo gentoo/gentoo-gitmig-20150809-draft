@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/xslide
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.5 2004/06/24 22:28:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.6 2004/11/03 04:49:01 usata Exp $
+
+  03 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> xslide-0.2.2.ebuild,
+  xslide-0.2.ebuild:
+  Added app-arch/unzip to DEPEND; bug #69831.
 
   14 Mar 2004; David Holm <dholm@gentoo.org> xslide-0.2.2.ebuild:
   Added to ~ppc.
