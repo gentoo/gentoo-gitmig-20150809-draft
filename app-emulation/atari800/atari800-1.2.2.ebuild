@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.2.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.2.ebuild,v 1.3 2002/07/21 14:21:31 stubear Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Atari 800 emulator"
@@ -11,6 +11,8 @@ SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
 HOMEPAGE="http://atari800.sourceforge.net"
 SLOT="0"
 LICENSE="GPL"
+
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	app-arch/unzip
@@ -33,18 +35,18 @@ src_unpack() {
 src_compile() {
 	local target
 	target="x11"
-        use sdl && target="sdl"
+	use sdl && target="sdl"
 	cd src
 	./configure --prefix=/usr --target=$target --disable-VERY_SLOW \
-        --disable-NO_CYCLE_EXACT \
-        --enable-CRASH_MENU --enable-MONITOR_BREAK \
-        --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER \
-        --enable-COMPILED_PALETTE --enable-SNAILMETER \
-        --enable-USE_CURSORBLOCK --enable-LINUX_JOYSTICK \
-        --enable-SOUND  --disable-NO_VOL_ONLY --disable-NO_CONSOL_SOUND \
-        --disable-SERIO_SOUND --disable-NOSNDINTER --enable-CLIP \
-        --disable-STEREO --enable-BUFFERED_LOG --enable-SET_LED \
-        --disable-NO_LED_ON_SCREEN --disable-SVGA_SPEEDUP --disable-JOYMOUSE
+	--disable-NO_CYCLE_EXACT \
+	--enable-CRASH_MENU --enable-MONITOR_BREAK \
+	--enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER \
+	--enable-COMPILED_PALETTE --enable-SNAILMETER \
+	--enable-USE_CURSORBLOCK --enable-LINUX_JOYSTICK \
+	--enable-SOUND  --disable-NO_VOL_ONLY --disable-NO_CONSOL_SOUND \
+	--disable-SERIO_SOUND --disable-NOSNDINTER --enable-CLIP \
+	--disable-STEREO --enable-BUFFERED_LOG --enable-SET_LED \
+	--disable-NO_LED_ON_SCREEN --disable-SVGA_SPEEDUP --disable-JOYMOUSE
 	emake
 }
 
@@ -52,7 +54,7 @@ src_compile() {
 # ourselves.
 src_install () {
 	into /usr
-        dodir /usr/bin /usr/share/man/man1 /usr/share/atari800
+	dodir /usr/bin /usr/share/man/man1 /usr/share/atari800
 	dobin src/atari800
 	doman ${FILESDIR}/${PVR}/atari800.1
 	dodoc COPYING README.1ST DOC/USAGE DOC/README DOC/NEWS DOC/FAQ DOC/CREDITS DOC/BUGS DOC/LPTjoy.txt DOC/cart.txt DOC/pokeysnd.txt
