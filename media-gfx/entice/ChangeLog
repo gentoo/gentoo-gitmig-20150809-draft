@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/entice
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/ChangeLog,v 1.4 2003/06/29 19:52:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/ChangeLog,v 1.5 2003/10/18 08:14:04 vapier Exp $
+
+*entice-0.9.0.20031018 (18 Oct 2003)
+
+  18 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *entice-0.7.0.20030629 (29 Jun 2003)
 
