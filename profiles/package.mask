@@ -143,7 +143,6 @@ net-mail/sendmail
 >=sys-libs/readline-4.2
 >=sys-devel/automake-1.5
 >=media-libs/mesa-glu-3.5
->=net-nds/openldap-2.0
 >=app-text/ghostscript-7
 >=sys-devel/autoconf-2.50
 
