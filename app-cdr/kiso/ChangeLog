@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kiso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.4 2004/06/24 21:34:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.5 2004/09/02 12:17:20 lv Exp $
+
+  02 Sep 2004; Travis Tilley <lv@gentoo.org> kiso-0.4.2.ebuild:
+  stable on amd64
 
   18 May 2004; Caleb Tennis <caleb@gentoo.org> kiso-0.4.2.ebuild:
   Move DEPEND so that kdelibs gets picked up - x86 stable

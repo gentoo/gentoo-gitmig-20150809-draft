@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.4.2.ebuild,v 1.4 2004/06/24 21:34:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.4.2.ebuild,v 1.5 2004/09/02 12:17:20 lv Exp $
 
 inherit kde
 DEPEND="app-cdr/cdrtools
@@ -14,7 +14,7 @@ HOMEPAGE="http://kiso.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kiso/KIso-${PV}b.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 SLOT="0"
 IUSE=""
