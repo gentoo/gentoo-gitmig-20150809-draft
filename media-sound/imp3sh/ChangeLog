@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/imp3sh
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.1 2003/03/27 10:13:31 mkeadle Exp $
+
+*imp3sh-0.2.3 (16 Mar 2003)
+  
+  16 Mar 2003; Matt Keadle <mkeadle@gentoo.org> imp3sh-0.2.3.ebuild :
+
+  There are currently issues with gcc 3.x. Author contacted.
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way.
