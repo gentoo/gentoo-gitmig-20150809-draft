@@ -1,3 +1,6 @@
-MD5 72dbb993dbdafe3a664cde10cc5a4fa6 ChangeLog 1005
+MD5 e7204aa70321e809006c0f0a1fd9979a ChangeLog 1181
 MD5 96c7b1c68639a6a95ce8a7b769a6a0c8 cscope-15.3.ebuild 755
+MD5 2d24dee883808e6739f3293d8756c29e cscope-15.4.ebuild 1139
 MD5 326b4f2785a741e10f370a6accfd1c28 files/digest-cscope-15.3 63
+MD5 ae33cee910261c162094e95a82523f6c files/digest-cscope-15.4 63
+MD5 28ddc553966bf7045758be324600f5c8 files/50xcscope-gentoo.el 95

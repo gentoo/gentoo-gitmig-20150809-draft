@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.7 2003/02/24 20:49:50 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.8 2003/06/04 18:52:46 mkennedy Exp $
+
+*cscope-15.4 (04 Jun 2003)
+
+  04 Jun 2003; Matthew Kennedy <mkennedy@gentoo.org> cscope-15.4.ebuild,
+  files/50xcscope-gentoo.el:
+  minor version bump and support for emacs
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> cscope-15.3.ebuild :
   Added hppa to keywords.
