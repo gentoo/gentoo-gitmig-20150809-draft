@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.10 2004/04/09 19:54:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.11 2004/04/09 21:59:23 spyderous Exp $
 
 inherit eutils
 
-IUSE="truetype"
+IUSE="truetype Xaw3d"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Terminal Emulator for X Windows"
@@ -16,7 +16,8 @@ LICENSE="X11"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="x11-base/xorg-x11
-	sys-apps/utempter"
+	sys-apps/utempter
+	Xaw3d? ( x11-libs/Xaw3d )"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
@@ -36,6 +37,7 @@ src_compile() {
 
 	econf \
 		`use_enable truetype freetype` \
+		`use_with Xaw3d` \
 		--libdir=/etc \
 		--with-utempter \
 		--enable-88-color \

@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.10 2004/04/09 19:54:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.11 2004/04/09 21:59:23 spyderous Exp $
+
+  09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-184.ebuild:
+  Add Xaw3d option, thanks to Ronald Hummelink <ronald@hummelink.xs4all.nl>.
 
   09 Apr 2004; Luca Barbato <lu_zero@gentoo.org> xterm-184.ebuild:
   Marked ~ppc
