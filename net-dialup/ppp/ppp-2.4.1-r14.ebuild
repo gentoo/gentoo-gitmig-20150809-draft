@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.22 2004/09/25 07:02:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.23 2004/09/27 10:45:07 lanius Exp $
 
 inherit eutils
 
@@ -39,6 +39,8 @@ src_unpack() {
 	epatch ${FILESDIR}/gcc3.3-multiline.patch
 
 	epatch ${FILESDIR}/gcc33-amd64.patch
+
+	epatch ${FILESDIR}/2.4.2/pcap.patch
 
 }
 

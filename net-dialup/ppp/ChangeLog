@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.71 2004/09/27 10:39:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.72 2004/09/27 10:45:07 lanius Exp $
+
+  27 Sep 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.1-r14.ebuild:
+  apply pcap patch to 2.4.1-r14, bug #51059
 
   27 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
   +files/2.4.2/endless-loop.patch, ppp-2.4.2.ebuild:
