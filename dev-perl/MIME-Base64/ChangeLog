@@ -1,11 +1,17 @@
 # ChangeLog for dev-perl/MIME-Base64
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.10 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.11 2003/04/05 03:05:32 zwelch Exp $
+
+*MIME-Base64-2.12-r2 (29 Oct 2002)
+
+  04 Apr 2003; Zach Welch <zwelch@gentoo.org> MIME-Base64-2.12-r2.ebuild:
+  add arm keyword
 
   27 Feb 2003: Guy Martin <gmsoft@gentoo.org> MIME-Base64-2.12-r2.ebuild :
   Added hppa to keywords.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
@@ -13,12 +19,10 @@
 *MIME-Base64-2.12-r1 (5 May 2002)
 
   31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> MIME-Base64-2.12-r1.ebuild :
-
   Added ppc to KEYWORDS.
 
   5 May 2002; Seemant Kulleen <seemant@gentoo.org>
   MIME-Base64-2.12-r1.ebuild files/digest-MIME-Base64-2.12-r1 :
-
   Conversion to eclasses.
 
 *MIME-Base64-2.12 (1 Feb 2002)
@@ -30,3 +34,4 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+

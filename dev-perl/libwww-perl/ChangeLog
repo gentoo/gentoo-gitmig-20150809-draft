@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.13 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.14 2003/04/05 03:07:55 zwelch Exp $
 
 *libwww-perl-5.68 (15 Jan 2003)
+
+  04 Apr 2003; Zach Welch <zwelch@gentoo.org> libwww-perl-5.68.ebuild:
+  add arm keyword
 
   28 Feb 2003; Guy Martin <gmsoft@gentoo.org> libwww-perl-5.68.ebuild :
   Added hppa to keywords.

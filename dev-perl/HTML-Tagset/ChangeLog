@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-Tagset
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.10 2003/04/03 23:15:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.11 2003/04/05 03:02:36 zwelch Exp $
+
+*HTML-Tagset-3.03-r2 (03 Apr 2003)
+
+  03 Apr 2003; Zach Welch <zwelch@gentoo.org> HTML-Tagset-3.03-r2.ebuild:
+  add arm keyword
 
   28 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
