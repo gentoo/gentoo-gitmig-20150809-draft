@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.779 2004/12/06 18:53:11 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.780 2004/12/07 17:32:42 slarti Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -732,6 +732,7 @@ x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small versio
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:bigger-fonts - Force the supplied themes to use at least 10pt fonts
+x11-wm/fluxbox:disablexmb - Disable XMB. Works around bug 65186.
 x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
