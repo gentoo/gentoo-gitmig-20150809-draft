@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.18 2003/12/12 20:38:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.19 2003/12/13 07:10:18 mr_bones_ Exp $
+
+  12 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  alsaplayer-0.99.76.ebuild:
+  media-libs/libjackasync -> media-libs/libjackasyn
 
 *alsaplayer-0.99.76 (12 Dec 2003)
 

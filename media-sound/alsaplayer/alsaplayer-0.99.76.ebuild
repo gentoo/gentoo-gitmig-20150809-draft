@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76.ebuild,v 1.1 2003/12/12 20:38:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76.ebuild,v 1.2 2003/12/13 07:10:18 mr_bones_ Exp $
 
 IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa jack mikmod flac"
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-libs/glib-1.2.10
 	nas? ( media-libs/nas )
 	alsa? ( media-libs/alsa-lib )
 	flac? ( media-libs/flac )
-	jack? ( media-libs/libjackasync )
+	jack? ( media-libs/libjackasyn )
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( media-libs/libvorbis )"
