@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4.ebuild,v 1.2 2005/01/14 13:25:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r1.ebuild,v 1.1 2005/01/29 07:00:17 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,6 +24,7 @@ src_unpack() {
 	cp -PR "${FILESDIR}"/filefuncs "${WORKDIR}"/ || die "cp failed"
 
 	cd ${S}
+	epatch ${FILESDIR}/${P}-disable-DFA.patch #78227
 	# support for dec compiler.
 	[[ $(tc-getCC) == "ccc" ]] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
 }
