@@ -1,0 +1,13 @@
+# ChangeLog for x11-themes/mplayer-skins
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.1 2002/12/17 07:36:44 seemant Exp $
+
+*mplayer-skins-0.1 (16 Dec 2002)
+
+  16 Dec 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog
+  mplayer-skins-0.1.ebuild files/digest-mplayer-skins-0.1 :
+
+  Installs all the skins for mplayer that are available from their site.
+  The only skin not installed is the default skin, because the mplayer
+  ebuild itself installs that one.  Thanks to: terjekv@math.uio.no (Terje
+  Kvernes) in bug #12277 for the ebuild.
