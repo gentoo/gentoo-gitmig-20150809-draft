@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.28 2003/09/09 02:00:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.29 2003/09/17 07:58:53 vapier Exp $
+
+*libsdl-1.2.6-r1 (17 Sep 2003)
+
+  17 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add back in joystick flag since many packages (although they claim they can),
+  can't compile without joystick support.
 
 *libsdl-1.2.6 (08 Sep 2003)
 

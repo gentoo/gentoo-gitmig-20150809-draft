@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.8 2003/09/10 04:19:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.9 2003/09/17 07:58:53 vapier Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -40,7 +40,7 @@ src_unpack() {
 	# Patch to allow SDL apps to choose the BEST refresh rates for a given
 	# resolution in XFree86-4.3 instead of the worst one.
 	cd ${S}
-	use X && epatch ${FILESDIR}/${P}-xfree-4.3.patch.bz2
+	use X && epatch ${FILESDIR}/${P}-xfree-4.3.patch
 	sed -i 's:head -1:head -n 1:' configure
 }
 
