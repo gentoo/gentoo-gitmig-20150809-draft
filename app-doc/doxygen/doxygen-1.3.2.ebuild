@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.2.ebuild,v 1.2 2003/07/16 15:52:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.2.ebuild,v 1.3 2003/07/17 20:02:15 gmsoft Exp $
 
 IUSE="doc qt"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~sparc ~alpha"
+KEYWORDS="~x86 ppc ~sparc ~alpha hppa"
 
 RDEPEND="media-gfx/graphviz
 	doc? ( app-text/tetex )
