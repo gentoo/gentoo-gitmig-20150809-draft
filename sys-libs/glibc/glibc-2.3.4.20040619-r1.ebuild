@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.2 2004/08/05 23:59:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.3 2004/08/06 03:17:37 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -630,8 +630,10 @@ src_install() {
 		install_root=${D} \
 		install || die
 	# now, strip everything but the thread libs #46186
+	mkdir ${T}/thread-backup
+	mv ${D}/lib/lib{pthread,thread_db}* ${T}/thread-backup/
 	RESTRICT="" prepallstrip
-	cp `find -maxdepth 2 -name 'libpthread.so' -o -name 'libthread_db.so'` ${D}/lib/
+	mv ${T}/thread-backup/* ${D}/lib/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
@@ -686,7 +688,7 @@ EOF
 			timezone/install-others -C ${WORKDIR}/build || die
 	fi
 
-	if use pic && use !amd64; then
+	if use pic && ! use amd64 ; then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
 		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/lib \;
