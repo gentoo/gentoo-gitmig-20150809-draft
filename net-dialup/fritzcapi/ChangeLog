@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/fritzcapi
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.1 2004/11/20 13:31:41 mrness Exp $
+
+*fritzcapi-2.6.26.7 (20 Nov 2004)
+
+  20 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +fritzcapi-2.6.26.7.ebuild:
+  Initial import, thanks to Stefan Schweizer <genstef@gentoo.org>. Closing #71821
+
