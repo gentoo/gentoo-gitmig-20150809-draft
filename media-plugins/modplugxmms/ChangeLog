@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/modplugxmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.4 2003/02/12 07:19:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.5 2003/06/03 12:50:17 robh Exp $
+
+*modplugxmms-2.04 (03 Jun 2003)
+
+  03 Jun 2003; robh <robh@gentoo.org> modplugxmms-2.04.ebuild,
+  files/modplugxmms-2.04.patch:
+  version bump and fix for defunct process bug. closes #22076.
+  submitted by: Theofilos Intzoglou <oscar10@yifan.net>
 
 *modplugxmms-2.03 (15 Dec 2002)
 
