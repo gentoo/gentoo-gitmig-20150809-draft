@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0-r1.ebuild,v 1.3 2003/02/06 16:10:30 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0-r1.ebuild,v 1.4 2003/02/07 08:45:13 satai Exp $
 
 inherit eutils flag-o-matic
 
@@ -148,6 +148,8 @@ src_install() {
 	#NOTE: do not use fowners, as its not recursive ...
 	einfo "Fixing permissions..."
 	chown -R root.root ${D}/usr/share/texmf
+	dodir /etc/env.d/
+	echo 'CONFIG_PROTECT="/usr/share/texmf/tex/generic/config/ /usr/share/texmf/tex/platex/config/"' > ${D}/etc/env.d/98tetex
 }
 
 pkg_preinst() {
@@ -156,6 +158,9 @@ pkg_preinst() {
 		ewarn "Removing /usr/share/texmf/dvipdfm/config/"
 		rm -rf /usr/share/texmf/dvipdfm/config
 	fi
+
+	# Let's take care of config protecting.
+	einfo "Here I am!"
 }
 
 pkg_postinst() {

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.31 2003/02/06 10:32:18 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.32 2003/02/07 08:45:13 satai Exp $
+
+  07 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  Config protect /usr/share/texmf/tex/generic/config/
+  /usr/share/texmf/tex/platex/config/ in order to keep hyphenation patterns
+  between updates.
 
   06 Feb 2003; Matthew Turk <satai@gentoo.org> :
   Re-enable vardir font creation.  This fixes letting ordinary users generate

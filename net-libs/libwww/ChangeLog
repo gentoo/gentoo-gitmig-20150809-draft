@@ -1,8 +1,8 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.7 2003/02/07 07:37:30 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.8 2003/02/07 08:45:13 satai Exp $
 
-  05 Sep 2002; Matthew Turk <satai@gentoo.org> libwww-5.4.0-r1.ebuild
+  07 Feb 2002; Matthew Turk <satai@gentoo.org> libwww-5.4.0-r1.ebuild
   Block >=mysql-4 conditionally on USE=mysql.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
