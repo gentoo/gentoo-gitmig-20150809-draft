@@ -2,5 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-tools</herd>
+<maintainer>
+    <email>nerdboy@gentoo.org</email>
+    <name>Steve Arnold</name>
+</maintainer>
 <longdescription>Doxygen is a tool for analyzing, documenting, and reverse-engineering source code.</longdescription>
 </pkgmetadata>

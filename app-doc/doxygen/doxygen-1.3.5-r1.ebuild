@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.5.ebuild,v 1.8 2004/03/01 05:54:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.5-r1.ebuild,v 1.1 2004/03/01 05:54:39 nerdboy Exp $
 
 IUSE="doc qt tetex"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 RDEPEND="media-gfx/graphviz
 	qt? ( x11-libs/qt )
@@ -35,10 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# set ./configure options (prefix, Qt based wizard, static)
+	# set ./configure options (prefix, Qt based wizard, docdir)
 	local confopts="--prefix ${D}/usr"
 	use qt && confopts="${confopts} --with-doxywizard"
-	#use static && confopts="${confopts} --static"
 
 	# ./configure and compile
 	./configure ${confopts} || die '"./configure" failed.'
@@ -73,10 +72,21 @@ src_install() {
 
 	# pdf and html manuals
 	if use doc; then
-		insinto /usr/share/doc/${P}
+		insinto /usr/share/doc/${PF}
 		if use tetex; then
 			doins latex/doxygen_manual.pdf
 		fi
 		dohtml -r html/*
 	fi
+}
+
+pkg_postinst() {
+
+	ewarn ""
+	einfo "The USE flags qt, doc, and tetex will enable doxywizard, or"
+	einfo "the html and pdf documentation, respectively.  For examples"
+	einfo "and other goodies, see the source tarball.  For some example"
+	einfo "output, run doxygen on the doxygen source using the Doxyfile"
+	einfo "provided in the top-level source dir."
+	ewarn ""
 }
