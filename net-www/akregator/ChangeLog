@@ -1,6 +1,12 @@
 # ChangeLog for net-www/akregator
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/ChangeLog,v 1.8 2004/10/16 05:44:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/ChangeLog,v 1.9 2004/11/29 00:25:27 motaboy Exp $
+
+*akregator-1.0_beta8 (29 Nov 2004)
+
+  29 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +akregator-1.0_beta8.ebuild:
+  Version bump. Closes bug #72563.
 
 *akregator-1.0_beta7 (16 Oct 2004)
 
