@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.8.1.ebuild,v 1.2 2004/02/24 06:04:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.8.1.ebuild,v 1.3 2004/03/21 20:39:30 dholm Exp $
 
 DESCRIPTION="a jack audio output plugin for XMMS"
 HOMEPAGE="http://xmms-jack.sourceforge.net/"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="media-sound/xmms
 	>=media-sound/jack-audio-connection-kit-0.94"
