@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.22.ebuild,v 1.6 2002/10/04 20:58:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.22.ebuild,v 1.7 2002/10/23 15:02:41 spider Exp $
+
+inherit gnome.org
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scripts for extracting translatable strings from various sourcefiles"
 HOMEPAGE="http://www.gnome.org/"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
+
 
 SLOT="0"
 LICENSE="GPL-2"
