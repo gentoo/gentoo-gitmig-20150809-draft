@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.7 2003/02/09 23:26:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.8 2003/02/10 23:10:15 raker Exp $
 
 IUSE="static freetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
@@ -85,7 +85,7 @@ src_compile() {
 	fi
 
 	if [ ! -z $DEBUGBUILD ]; then
-		myconf="${myconf} --enable-loader-out --enable-timing"
+		myconf="${myconf} --enable-loader-out"
 	else
 		myconf="${myconf} --enable-quiet"
 	fi

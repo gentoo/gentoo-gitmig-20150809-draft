@@ -1,8 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.40 2003/02/09 23:26:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.41 2003/02/10 23:10:15 raker Exp $
 
 *avifile-0.7.29.20030204 (04 Feb 2003)
+
+  10 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  avifile-0.7.29.20030204.ebuild :
+  Removed --enable-timing from DEBUGBUILD as it causes compile
+  failures.
 
   09 Feb 2003; Nick Hadaway <raker@gentoo.org>
   avifile-0.7.29.20030204.ebuild :
