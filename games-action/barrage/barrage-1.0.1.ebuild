@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.1.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.1.ebuild,v 1.2 2003/09/25 22:34:45 zul Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lgames.sourceforge.net"
 SRC_URI="mirror://sourceforge/lgames/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 SLOT="0"
 IUSE=""
 
