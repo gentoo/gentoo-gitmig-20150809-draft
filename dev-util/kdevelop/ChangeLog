@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.4 2002/04/17 19:41:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.5 2002/04/23 16:30:21 danarmak Exp $
+
+*kdevelop-2.1-r2 (23 Apr 2002)
+
+  23 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  Changed K-menu item for kdevelop to include the WANT_AUTOMAKE_1_4=1
+  and WANT_AUTOCONF_2_5=1 exports needed for kde3 Makefile.dist autoconf stage
 
 *kdevelop-2.1-r1 (17 Apr 2002)
 
