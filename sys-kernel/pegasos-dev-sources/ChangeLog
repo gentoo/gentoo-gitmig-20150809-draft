@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/pegasos-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/ChangeLog,v 1.5 2004/07/02 20:46:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/ChangeLog,v 1.6 2004/07/04 22:23:49 dholm Exp $
+
+  05 Jul 2004; David Holm <dholm@gentoo.org>
+  pegasos-dev-sources-2.6.7-r1.ebuild:
+  Added a minor fix before going on vacation (nothing serious). I also added a
+  kernel config for the pegasos for inexperienced users.
 
 *pegasos-dev-sources-2.6.7-r1 (02 Jul 2004)
 
