@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5p.ebuild,v 1.3 2005/03/04 23:31:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5p.ebuild,v 1.4 2005/03/14 23:46:26 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,11 +11,10 @@ SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+DEPEND=""
 RDEPEND="sys-process/cronbase
 	>=sys-apps/groff-1.18
 	nls? ( sys-devel/gettext )"
@@ -24,7 +23,7 @@ S="${WORKDIR}/${PN}-${NV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Make sure we can build with -j :)
 	epatch ${FILESDIR}/man-1.5p-parallel-make.patch
