@@ -37,6 +37,7 @@ dev-util/diffstat-1.26
 dev-util/gperf-2.7.2
 dev-util/headerdoc-7.4.8
 dev-util/jam-2.2
+dev-util/yacc-1.9
 mail-client/squirrelmail-1.4.1
 mail-filter/procmail-3.21
 mail-mta/postfix-2.0.8
