@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/linksys-tftp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linksys-tftp/ChangeLog,v 1.1 2004/03/18 07:30:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linksys-tftp/ChangeLog,v 1.2 2004/03/20 11:30:31 dragonheart Exp $
+
+  20 Mar 2004; Daniel Black <dragonheart@gentoo.org>
+  linksys-tftp-1.2.1.ebuild:
+  SRC_URI and small source change
 
 *linksys-tftp-1.2.1 (18 Mar 2004)
 

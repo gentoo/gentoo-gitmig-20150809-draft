@@ -1,4 +1,4 @@
-MD5 96102e32a1b03ee7c1f81753fff8edb0 linksys-tftp-1.2.1.ebuild 657
+MD5 3ec5a5aea888e50fee8239dcbcc6ea6d linksys-tftp-1.2.1.ebuild 636
 MD5 875b4dd2e90e3ff68dd540ef7bf05eca metadata.xml 307
-MD5 f2764abfec56858d91bb11d27fe484ba ChangeLog 414
-MD5 4b9457b11b99faeb33847b2783d50c90 files/digest-linksys-tftp-1.2.1 64
+MD5 a923a569954fbd62c0a92f647e1c70df ChangeLog 531
+MD5 2490b93e9a9ee969dff7103ffb8960bf files/digest-linksys-tftp-1.2.1 70
