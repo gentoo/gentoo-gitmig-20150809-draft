@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libbonobouimm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbonobouimm/ChangeLog,v 1.2 2003/08/31 06:18:56 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbonobouimm/ChangeLog,v 1.3 2003/09/12 19:40:00 liquidx Exp $
+
+  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> libbonobouimm-1.3.5.ebuild,
+  libbonobouimm-1.3.6.ebuild:
+  removing bonobo-activation dep
 
 *libbonobouimm-1.3.6 (31 Aug 2003)
 
