@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9370a6425b5a5049754c88006270cc4e biopython-1.23.ebuild 799
-MD5 aa60ffb1ce8a3be3a98239e5cc554987 biopython-1.24.ebuild 797
-MD5 9b9a536d060b8bfb306b175026ffe3e2 biopython-1.10.ebuild 812
-MD5 1b4dfb3214b5c8a1b8f76c685b12a736 ChangeLog 2193
 MD5 e48d0c85ce95d1b3f1574318f834657c biopython-1.30.ebuild 800
-MD5 e52ec7d225835cda2c95c5317cdccfb4 metadata.xml 217
+MD5 97deb60cae538706ec54a999b0c8ffa6 ChangeLog 2298
+MD5 9b9a536d060b8bfb306b175026ffe3e2 biopython-1.10.ebuild 812
+MD5 aa60ffb1ce8a3be3a98239e5cc554987 biopython-1.24.ebuild 797
 MD5 1d664ed4303ac3f2a4acd561ad066ae3 biopython-1.21.ebuild 904
-MD5 8e719491da5d9664fddedbffc6af8f06 files/digest-biopython-1.10 67
-MD5 c54d7ea5347210ae92b5e01a346e2a21 files/digest-biopython-1.21 67
-MD5 3a482a8872b4342414ac1d59b7fee4ed files/digest-biopython-1.23 67
+MD5 e52ec7d225835cda2c95c5317cdccfb4 metadata.xml 217
 MD5 aab085d47ad39d35d85a70db1e1aa89b files/digest-biopython-1.24 67
 MD5 a8b300aed93e9dbec0b14e657121d00e files/digest-biopython-1.30 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy31xI1lqEGTUzyQRAvb2AKC4hPBIufO9FqEqCzjh2rz8gw1HMwCglLJh
-JKXoOV6CMeK2l0EGtFnO5ao=
-=uwfq
------END PGP SIGNATURE-----
+MD5 3a482a8872b4342414ac1d59b7fee4ed files/digest-biopython-1.23 67
+MD5 8e719491da5d9664fddedbffc6af8f06 files/digest-biopython-1.10 67
+MD5 c54d7ea5347210ae92b5e01a346e2a21 files/digest-biopython-1.21 67

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a5ecd969c953c87a28427e413271a328 ncbi-tools-20040616.ebuild 5777
-MD5 0ce77dbe8e0f8349a10d8e0705964b00 ChangeLog 4139
+MD5 aff9707b911d771ff3e7e854c9b84c45 ChangeLog 4244
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
-MD5 23986a001c85eb8c2c319aacfa9cb40c files/ncbirc 33
 MD5 6e3486cc782a091aa528a3e3f01192fc files/digest-ncbi-tools-20040616 144
 MD5 756db6700c84d3b303bfc3d0a28871de files/21ncbi 166
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFByyhAI1lqEGTUzyQRAmk8AKCnY69svuEW4Ct5c8uxuzNVXikTsACeKImZ
-YorWtbMZuutGTIwtrOwfaG0=
-=UYId
------END PGP SIGNATURE-----
+MD5 23986a001c85eb8c2c319aacfa9cb40c files/ncbirc 33
