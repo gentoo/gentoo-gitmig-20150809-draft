@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-070.ebuild,v 1.1 2002/03/11 05:30:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-070.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
 
 MY_P=fceu
 S=${WORKDIR}/${MY_P}

@@ -1,7 +1,5 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Chris Arndt <arndtc@mailandnews.com>
-# Maintainer: Dan Armak <danarmak@gentoo.org>
 
 PN=${P/_/.}
 S=${WORKDIR}/${PN}

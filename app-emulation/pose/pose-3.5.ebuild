@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: George Shapovalov <georges@its.caltech.edu>
 # /space/gentoo/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20020410.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp
 
 S=${WORKDIR}/${P}

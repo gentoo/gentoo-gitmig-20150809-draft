@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Phillip Lemon (AITD) <plemon@gwi.net>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.1 2002/05/27 22:42:44 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
 
 DESCRIPTION="48k ZX Spectrum Emulator"
 HOMEPAGE="http://kempelen.iit.bme.hu/~mszeredi/spectemu/spectemu.html"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Ryan Phillips <rphillips@gentoo.org>, Per Wigren <wigren@home.se>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.1 2002/06/24 05:24:04 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"

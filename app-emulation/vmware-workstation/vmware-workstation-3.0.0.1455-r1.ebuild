@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.0.0.1455-r1.ebuild,v 1.2 2002/04/19 05:43:52 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.0.0.1455-r1.ebuild,v 1.3 2002/07/11 06:30:12 drobbins Exp $
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
 S=${WORKDIR}/vmware-distrib
