@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/rivatv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.11 2005/01/10 00:54:38 blauwers Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.12 2005/01/25 16:09:24 cardoe Exp $
+
+*rivatv-0.8.5-r3 (25 Jan 2005)
+
+  25 Jan 2005; Doug Goldstein <cardoe@gentoo.org> -rivatv-0.8.1.ebuild,
+  -rivatv-0.8.3.ebuild, -rivatv-0.8.4.ebuild, -rivatv-0.8.5-r1.ebuild,
+  +rivatv-0.8.5-r3.ebuild, -rivatv-0.8.5.ebuild:
+  switch to linux-mod (yay!)
+  remove all the BADDDDDDNESS of this ebuild, muy bad!
+  make the ebuild nice a pretty. (Mr_Bones_ would even like it!)
 
 * rivatv-0.8.5-r2 (10 Jan 2005)
 

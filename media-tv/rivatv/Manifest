@@ -1,20 +1,20 @@
-MD5 9bfb98be6c22d962f5309102223f3624 ChangeLog 2995
-MD5 0be39e6eace0493c9141af3c18e13f5e metadata.xml 253
-MD5 539050139ad47088e22b820c45b8929e rivatv-0.8.0-r1.ebuild 1190
-MD5 60321656d95456d87911c3aba0e70420 rivatv-0.8.1.ebuild 1187
-MD5 5131b86f70269727631f034136b8f1fb rivatv-0.8.2.ebuild 970
-MD5 89e07f3d4e95f231597e44102c3b766f rivatv-0.8.3.ebuild 1130
-MD5 ca7ce7d2ad86ccf15c8a4b3526e51715 rivatv-0.8.4.ebuild 1028
-MD5 8c97da3801ed7e16195ef11d41c737ce rivatv-0.8.5-r1.ebuild 2462
-MD5 375c91a64859a202ccbf714deffb09d2 rivatv-0.8.5.ebuild 1027
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 718bd9b01897d40d98b4074e95c0ad6f rivatv-0.8.5-r2.ebuild 2536
-MD5 94dc3c0091e479d11d285de52267521d files/digest-rivatv-0.8.0-r1 63
-MD5 c70f4f5b9e57a7ab53345aa005ac3733 files/digest-rivatv-0.8.1 64
+MD5 ce15cc766c820b7c09fc326bb5b76517 rivatv-0.8.5-r3.ebuild 1546
+MD5 0be39e6eace0493c9141af3c18e13f5e metadata.xml 253
+MD5 e79f70ce7570f8d0b329ba5945b027c1 ChangeLog 3367
+MD5 5131b86f70269727631f034136b8f1fb rivatv-0.8.2.ebuild 970
+MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r3 64
 MD5 675738a65f00503869783cd7f88ce0b1 files/digest-rivatv-0.8.2 64
-MD5 b8ad0ea54d8eaf1691d5e98e1bf8a15b files/digest-rivatv-0.8.3 64
-MD5 acf3e72cc79919b0614cf5b2970274a5 files/digest-rivatv-0.8.4 64
-MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5 64
-MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r1 64
-MD5 f6b7a21ad2968b561a94db1b084fad7d files/rivatv-0.8.3-configure.patch 429
-MD5 22e60b9c10aa69eaef9978e7998fccb9 files/rivatv-0.8.5-configure.patch 662
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r2 64
+MD5 22e60b9c10aa69eaef9978e7998fccb9 files/rivatv-0.8.5-configure.patch 662
+MD5 f6b7a21ad2968b561a94db1b084fad7d files/rivatv-0.8.3-configure.patch 429
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9m9c5+pdB4IBr0URAkTSAKCwF1l3znnQHbJDkv1I63OPNqAcSACgq0Vd
+0Ah3hfzOZEh76dZD7euYci4=
+=pn6b
+-----END PGP SIGNATURE-----
