@@ -1,5 +1,5 @@
 MD5 ea0a1d63074a10726d6fa4a179b9b63a metadata.xml 377
-MD5 a01cd1347a3219b0e71390a0242d5557 ChangeLog 466
-MD5 3a7b2a1663d4cb420198854b41c2e3b2 openmosix-3dmon-stats-0.2.1.ebuild 1389
+MD5 c1dc58793186782585ef31023e67b304 openmosix-3dmon-stats-0.2.1.ebuild 1406
+MD5 64601ba900f04a858f2a024ab4777ef5 ChangeLog 577
 MD5 06b0ebf9ade54beb837ed9bad0595a32 files/digest-openmosix-3dmon-stats-0.2.1 64
 MD5 7b1cd03ebcccecbea9ca432e8f2d72f0 files/openmosix-3dmon-stats-0.2.1-makefile+init-script.patch.bz2 760
