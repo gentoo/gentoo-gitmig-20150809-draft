@@ -1,1 +1,11 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/parent,v 1.2 2004/07/06 20:33:32 solar Exp $
+
+# hi pebenito.. something appears to wrong with the embedded profile.
+# It's enabled static by default for all packages..
+
+#../embedded
+
 ../base
+

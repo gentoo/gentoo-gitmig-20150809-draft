@@ -19,7 +19,7 @@ sys-devel/flex
 sys-devel/gcc
 sys-devel/make
 sys-devel/patch
-# this should be added by nls
+# this should be added by nls only
 #sys-devel/gettext
 dev-lang/python
 net-misc/wget
