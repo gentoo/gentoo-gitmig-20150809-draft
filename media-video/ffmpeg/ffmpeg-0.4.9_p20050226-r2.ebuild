@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r2.ebuild,v 1.2 2005/03/20 03:42:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r2.ebuild,v 1.3 2005/03/21 03:35:48 eradicator Exp $
 
-inherit eutils flag-o-matic gcc multilib
+inherit eutils flag-o-matic gcc multilib toolchain-funcs
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
 HOMEPAGE="http://ffmpeg.sourceforge.net/"
@@ -104,11 +104,11 @@ src_compile() {
 
 	cd ${S_STATIC}
 	econf --disable-shared-pp --disable-shared --enable-static ${myconf} || die "Configure failed"
-	emake || die
+	emake CC="$(tc-getCC)" || die
 
 	cd ${S_SHARED}
 	econf --enable-shared-pp --enable-shared --disable-static ${myconf} || die "Configure failed"
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
