@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.7 2002/04/03 09:46:40 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r5.ebuild,v 1.1 2002/04/03 09:46:40 gbevin Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam

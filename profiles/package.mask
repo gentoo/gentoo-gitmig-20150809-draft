@@ -442,6 +442,9 @@ dev-lang/tcl-tk
 # We are masking out the older pams now, in order to get the
 # new one propogated into everybodys systems. ( Woodchip - Mar 20 2002)
 <sys-libs/pam-0.75-r4
+# test version for gcc3
+=sys-libs/pam-0.75-r5
+
 
 =dev-ruby/mod-ruby-0.9.7
 
