@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/acml
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/acml/ChangeLog,v 1.1 2004/09/22 11:55:27 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/acml/ChangeLog,v 1.2 2004/12/15 22:41:08 kugelfang Exp $
+
+  15 Dec 2004; Danny van Dyk <kugelfang@gentoo.org> :
+  Fixed missing digest entry for acml-32bit-2-1-0.tgz. (BUG #72945)
 
 *acml-2.1.0 (22 Sep 2004)
 
