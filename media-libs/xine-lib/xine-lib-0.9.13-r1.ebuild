@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.7 2002/10/17 13:16:13 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.8 2002/11/02 05:23:52 agenkin Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
 inherit libtool || die "I lost my inheritance"
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-inherit flag-o-matic  || die "I lost my inheritance"                                                                                       
+inherit flag-o-matic  || die "I lost my inheritance"											   
 filter-flags "-maltivec -mabi=altivec" 
 
 S=${WORKDIR}/${P}
@@ -40,16 +40,21 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	patch -p1 < ${FILESDIR}/xine-lib-configure.patch || die "configure patch failed"
+	patch -p1 < ${FILESDIR}/xine-lib-configure.patch || \
+	    die "configure patch failed"
 	
 	# allows kxine to work; see bug #5412
-	patch -p1 < ${FILESDIR}/${P}-kxine.patch || die "patching for kxine support failed"
+	patch -p1 < ${FILESDIR}/${P}-kxine.patch || \
+	    die "patching for kxine support failed"
 
 	if [ `use directfb` ]; then
-		patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || die "dfb patch 1 failed"
-#		patch -p2 < ${FILESDIR}/${PF}-directfb.patch || die "dfb patch 2 failed"
+		patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || \
+		    die "dfb patch 1 failed"
+#		patch -p2 < ${FILESDIR}/${PF}-directfb.patch || \
+#		    die "dfb patch 2 failed"
 	else
-		patch -p1 < ${FILESDIR}/${PN}-disable-directfb.patch || die "no dfb patch failed"
+		patch -p1 < ${FILESDIR}/${PN}-disable-directfb.patch || \
+		    die "no dfb patch failed"
 	fi
 }
 
@@ -74,14 +79,15 @@ src_compile() {
 		|| myconf="${myconf} --disable-arts"
 	# --disable-artstest"
 
-	# This breaks because with the test disabled, it defaults to "found" check with
-	# the next release until then let it autodetect.  See bug #2377.
+	# This breaks because with the test disabled, it defaults to
+	# "found" check with the next release until then let it autodetect.
+	# See bug #2377.
 	use aalib  || myconf="${myconf} --disable-aalib"
 		# --disable-aalibtest"
 
-	# Configure script is broken, even if you pass the flags below it still assumes
-	# ogg is installed and tries to compile it, giving you bug #5244. But leaving
-	# ogg for autodetection works.
+	# Configure script is broken, even if you pass the flags below it
+	# still assumes ogg is installed and tries to compile it, giving you
+	# bug #5244. But leaving ogg for autodetection works.
 	use oggvorbis \
 		|| myconf="${myconf} --disable-ogg --disable-vorbis"
 #			 --disable-oggtest \
