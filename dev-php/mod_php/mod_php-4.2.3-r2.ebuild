@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3-r2.ebuild,v 1.9 2003/03/09 02:33:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3-r2.ebuild,v 1.10 2003/03/25 22:11:52 seemant Exp $
 
-IUSE="java apache2 freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="java apache2 truetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -22,7 +22,7 @@ DEPEND="|| (
 		apache2? ( >=net-www/apache-2.0.43-r1 )
 		>=net-www/apache-1.3.26-r2
 	)
-	freetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
+	truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.1 )
@@ -114,7 +114,7 @@ src_compile() {
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use ldap &&  myconf="${myconf} --with-ldap"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
-	use freetype && myconf="${myconf} --with-ttf --with-t1lib"
+	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	use gd && myconf="${myconf} --with-gd"
 	use png && myconf="${myconf} --with-png-dir=/usr"	
