@@ -20,7 +20,6 @@ PROVIDE="virtual/mta
 	 virtual/imapd"
 
 RDEPEND="virtual/glibc
-	>=dev-tcltk/expect-5.33.0
 	>=dev-libs/openssl-0.9.6
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
@@ -32,9 +31,16 @@ RDEPEND="virtual/glibc
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
-	tcltk? ( >=dev-tcltk/expect-5.33.0 )
 	spell? ( virtual/aspell-dict )
 	!virtual/imapd"
+
+	# Removed these from RDEP until the tcltk situation is clarified.
+	# They are only necessary for non-virtual users to be able to change 
+	# passwords via webmail. Hopefully not a highly used feature.
+	#>=dev-tcltk/expect-5.33.0
+	#tcltk? ( >=dev-tcltk/expect-5.33.0 )
+
+
 DEPEND="${RDEPEND}
 	app-admin/fam-oss
 	dev-lang/perl

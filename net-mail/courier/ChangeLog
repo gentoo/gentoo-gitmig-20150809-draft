@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.28 2003/07/25 03:24:22 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.29 2003/07/28 22:09:15 iggy Exp $
+
+  28 Jul 2003; <iggy@gentoo.org> courier-0.42.2-r2.ebuild:
+  temporarily removed expect dep pending clarification of tcltk situation
 
   24 Jul 2003; <iggy@gentoo.org> files/courier-init:
   fixed courier init script
