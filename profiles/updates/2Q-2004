@@ -96,3 +96,4 @@ move app-admin/fwanalog net-firewall/fwanalog
 move app-misc/lphdisk app-laptop/lphdisk
 move app-misc/proxyper net-misc/proxyper
 
+move app-misc/mutt-vc-query mail-client/mutt-vc-query
