@@ -31,6 +31,7 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
+!dev-lang/gpc
 *>=sys-apps/baselayout-1.7.9
 *>=sys-apps/portage-2.0.4
 *~sys-devel/binutils-2.12.90.0.7
