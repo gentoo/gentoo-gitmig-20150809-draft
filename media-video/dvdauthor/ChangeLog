@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.14 2004/07/13 08:46:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.15 2004/08/30 02:28:01 tgall Exp $
+
+  29 Aug 2004; Tom Gall <tgall@gentoo.org> dvdauthor-0.6.10.ebuild:
+  added ~ppc64, bug #60786
 
   13 Jul 2004; Tom Martin <slarti@gentoo.org> dvdauthor-0.6.10.ebuild,
   files/0.6.10-gcc34.patch:
