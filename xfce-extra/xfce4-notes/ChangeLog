@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-notes
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.2 2003/10/26 23:21:16 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.3 2004/06/19 18:11:39 weeve Exp $
+
+  19 Jun 2004; Jason Wever <weeve@gentoo.org> xfce4-notes-0.9.7.ebuild:
+  Stable on sparc.
 
 *xfce4-notes-0.9.7 (26 Oct 2003)
 
