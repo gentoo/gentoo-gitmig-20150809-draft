@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.4 2002/11/22 19:03:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.5 2002/11/23 02:12:49 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -20,6 +20,7 @@ DEPEND="sys-apps/groff
 	${RDEPEND}"
 
 src_compile() {
+	use gdbm || use berkdb || die "You must have either gdbm or berkdb installed and in your use flags."
 
     #The following is to handle international users. Perl does nls post-install
     export LC_ALL=C
@@ -40,6 +41,7 @@ src_compile() {
     else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
     fi
+	
 
 	# configure for libperl.so
     sh Configure -des \
@@ -192,5 +194,18 @@ src_install() {
     
 	dodir /usr/share/doc/${PF}/html
     ./perl installhtml --recurse --htmldir=${D}/usr/share/doc/${PF}/html
+
+}
+
+
+pkg_postinst() {
+
+	einfo
+	einfo "Now that Perl is installed, you *must* install "
+	einfo "dev-perl/ExtUtils-MakeMaker. This is an update to "
+	einfo "the MakeMaker that comes bundled with Perl and includes "
+	einfo "fixes applicable to the Gentoo sandbox. You must do this"
+	einfo "even if you are re-installing Perl."
+	einfo
 
 }

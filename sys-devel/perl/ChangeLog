@@ -1,10 +1,14 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.15 2002/11/22 19:03:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.16 2002/11/23 02:12:49 mcummings Exp $
 
 *perl-5.6.1-r8 (13 Oct 2002)
 
   22 Nov 2002; <mcummings@gentoo.org>
+
+  Added einfo note (finally) to instruct users to install MakeMaker
+  patch. Also added catch for cases where -gdbm and -berkdb are in 
+  the use flags - perl requires at least one of them to be available
 
   Second incantation of -r8. This time, it is for LC_ALL=C being added to 
   the ebuild itself. Perl won't compile correctly otherwise and handles
