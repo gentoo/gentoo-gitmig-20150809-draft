@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r8.ebuild,v 1.1 2003/10/26 15:46:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r8.ebuild,v 1.2 2003/10/26 15:54:37 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -146,7 +146,7 @@ use_nptl() {
 					return 0
 				fi
 				;;
-			"alpha"|"amd64"|"mips"|"ppc")
+			"alpha"|"amd64"|"mips"|"ppc"|"sparc")
 				return 0
 				;;
 			*)

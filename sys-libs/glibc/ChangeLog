@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.95 2003/10/26 15:46:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.96 2003/10/26 15:54:37 azarah Exp $
+
+  26 Oct 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r3.ebuild,
+  glibc-2.3.2-r4.ebuild, glibc-2.3.2-r5.ebuild, glibc-2.3.2-r8.ebuild:
+  Add sparch to NPTL archs; Cleanup.
 
 *glibc-2.3.2-r8 (26 Oct 2003)
 
