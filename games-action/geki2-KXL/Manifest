@@ -1,3 +1,4 @@
-MD5 f9c355b2c89e7cfd1fbe0003a537dc2c files/digest-geki2-KXL-2.0.3 67
-MD5 e5f72c62426322ad4df8337e5b393c4f geki2-KXL-2.0.3.ebuild 566
 MD5 8c1f80cb56c92b6ac992835300267323 ChangeLog 496
+MD5 e5f72c62426322ad4df8337e5b393c4f geki2-KXL-2.0.3.ebuild 566
+MD5 a0a5ed491334cb818741878e41fd3da1 metadata.xml 454
+MD5 f9c355b2c89e7cfd1fbe0003a537dc2c files/digest-geki2-KXL-2.0.3 67

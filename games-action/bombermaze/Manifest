@@ -1,3 +1,4 @@
-MD5 dc0ab4d1a401a11e130c325d259c45e1 files/digest-bombermaze-0.6.6 68
-MD5 76c74a6c1f062f5a8deabcb2fff2ba2f bombermaze-0.6.6.ebuild 1002
 MD5 ebbbf59738ce73b581399a2245fb0ff8 ChangeLog 1122
+MD5 76c74a6c1f062f5a8deabcb2fff2ba2f bombermaze-0.6.6.ebuild 1002
+MD5 a0a5ed491334cb818741878e41fd3da1 metadata.xml 454
+MD5 dc0ab4d1a401a11e130c325d259c45e1 files/digest-bombermaze-0.6.6 68

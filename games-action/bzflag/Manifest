@@ -1,3 +1,4 @@
-MD5 cf10d4c3763257d658661b492f15e9f8 files/digest-bzflag-1.7.7.1 62
 MD5 1967e1e4ac18214eca263f6e59b29c58 ChangeLog 1984
 MD5 39a41fc158f35b594e68ae4e7c444604 bzflag-1.7.7.1.ebuild 706
+MD5 a0a5ed491334cb818741878e41fd3da1 metadata.xml 454
+MD5 cf10d4c3763257d658661b492f15e9f8 files/digest-bzflag-1.7.7.1 62

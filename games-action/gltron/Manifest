@@ -1,3 +1,4 @@
-MD5 3c3a2ca79ec73b429fa5f12310fccdbd files/digest-gltron-0.62 71
-MD5 d208fe75aa19371deac4af058bd0fb89 gltron-0.62.ebuild 764
 MD5 2330c51526b07e18e933fbfb36d794b2 ChangeLog 1574
+MD5 d208fe75aa19371deac4af058bd0fb89 gltron-0.62.ebuild 764
+MD5 a0a5ed491334cb818741878e41fd3da1 metadata.xml 454
+MD5 3c3a2ca79ec73b429fa5f12310fccdbd files/digest-gltron-0.62 71
