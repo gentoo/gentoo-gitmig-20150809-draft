@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>pylon@gentoo.org</email>
+  <name>Lars Weiler</name>
+  <description>Commited ebuild, but no testing possible.</description>
+</maintainer>
+<longdescription>Fork of cdrtools with DVD-writing capabilities.  Needs
+scsi-emu, so ATAPI won't work.</longdescription>
+</pkgmetadata>
