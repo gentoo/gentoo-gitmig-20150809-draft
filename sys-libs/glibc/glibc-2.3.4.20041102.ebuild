@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.36 2005/01/18 09:04:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.37 2005/01/19 03:06:51 mr_bones_ Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -1035,7 +1035,7 @@ pkg_preinst() {
 	# 2005.0 is setup properly, and this is executed as part of the
 	# 2004.3 -> 2005.0 upgrade script.
 	# It can be removed after 2004.3 has been purged from portage.
- 	use amd64 && [ "$(get_libdir)" == "lib64" ] && ! has_multilib_profile && fix_lib64_symlinks
+	use amd64 && [ "$(get_libdir)" == "lib64" ] && ! has_multilib_profile && fix_lib64_symlinks
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
