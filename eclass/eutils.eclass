@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.45 2003/07/18 20:43:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.46 2003/07/22 18:42:59 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -873,6 +873,10 @@ unpack_makeself() {
 
 	# we do this because otherwise a failure in gzip will cause 0 bytes to be sent
 	# to tar which will make tar not extract anything and exit with 0
-	local out="`tail +${skip} ${src} | gzip -cd | tar -x --no-same-owner -v -f -`"
-	[ -z "${out}" ] && die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
+	local out="`(tail +${skip} ${src} | gzip -cd | tar -x --no-same-owner -f -) 2>&1`"
+	if [ ! -z "${out}" ] ; then
+		# maybe it isnt gzipped ... they usually are, but not always ...
+		tail +${skip} ${src} | tar -x --no-same-owner -f - \
+			|| die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
+	fi
 }
