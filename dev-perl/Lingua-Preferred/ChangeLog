@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Lingua-Preferred
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.1 2003/02/12 03:03:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.2 2003/06/16 13:27:49 mcummings Exp $
+
+*Lingua-Preferred-0.2.2 (16 Jun 2003)
+
+  16 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Lingua-Preferred-0.2.2.ebuild:
+  CPAN version bump
 
 *Lingua-Preferred-0.2.1 (11 Feb 2003)
 
