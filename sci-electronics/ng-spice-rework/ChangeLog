@@ -1,0 +1,30 @@
+# ChangeLog for app-sci/ng-spice-rework
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.1 2004/12/27 20:05:13 ribosome Exp $
+
+*ng-spice-rework-15 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +ng-spice-rework-14.ebuild, +ng-spice-rework-15.ebuild:
+  Moved from app-sci/ng-spice-rework to sci-electronics/ng-spice-rework.
+
+  13 Sep 2004; <plasmaroo@gentoo.org> ng-spice-rework-15.ebuild:
+  Added GNU info INFO-DIR index information; bug #63391.
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> ng-spice-rework-15.ebuild:
+  Added to ~ppc.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
+  ng-spice-rework-14.ebuild, ng-spice-rework-15.ebuild:
+  Removing S=... with no effect, adding IUSE.
+
+*ng-spice-rework-15 (01 Feb 2004)
+
+  01 Feb 2004; <plasmaroo@gentoo.org> ng-spice-rework-15.ebuild:
+  Version bump.
+
+*ng-spice-rework-14 (28 Nov 2003)
+
+  28 Nov 2003; <plasmaroo@gentoo.org> ng-spice-rework-14.ebuild:
+  Initial commit.
+
