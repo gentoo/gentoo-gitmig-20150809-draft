@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.29 2004/03/31 15:44:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.30 2004/04/20 09:05:12 port001 Exp $
+
+  20 Apr 2004; Ian Leitch <port001@gentoo.org> -tk-8.3.3-r2.ebuild,
+  -tk-8.3.3-r3.ebuild, -tk-8.3.3.ebuild, -tk-8.3.4.ebuild, -tk-8.4.3.ebuild,
+  -tk-8.4.4.ebuild, -tk-8.4.5.ebuild:
+  Removed stale ebuilds
 
   31 Mar 2004; Tom Gall <tgall@gentoo.org> tk-8.4.5.ebuild,  tk-8.4.6.ebuild:
   remove ppc64 for now, we're not ready
