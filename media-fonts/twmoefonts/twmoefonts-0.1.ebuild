@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1.ebuild,v 1.6 2004/06/24 22:31:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1.ebuild,v 1.7 2004/07/01 10:49:27 eradicator Exp $
 
 IUSE=""
 DESCRIPTION="Standard tranditional Chinese fonts made by Minister of Education (MOE), Republic of China."
@@ -11,7 +11,7 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc"
 DEPEND="x11-misc/ttmkfdir"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	mkdir ${WORKDIR}/${P}
