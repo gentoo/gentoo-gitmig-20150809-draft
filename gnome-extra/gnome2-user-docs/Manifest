@@ -1,10 +1,20 @@
-MD5 31ab36c35863997809c07f3d324e67af gnome2-user-docs-2.8.1.ebuild 498
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c933632a2a51fdf7fb9e79e2091e6703 ChangeLog 5342
 MD5 bcf138c0ce8efadd2c0df2bad9f54849 gnome2-user-docs-2.4.1.ebuild 483
-MD5 7e57e577d21c8ee409ee901c2e6a72c6 gnome2-user-docs-2.8.0.1.ebuild 724
-MD5 5b124affcf54959db1c93df02b49311c ChangeLog 5231
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 31ab36c35863997809c07f3d324e67af gnome2-user-docs-2.8.1.ebuild 498
+MD5 2a1110ce216f12d93aec504e3eb8dd3b gnome2-user-docs-2.8.0.1.ebuild 726
 MD5 c370004f9629d330a305b9fc95967d52 gnome2-user-docs-2.6.0.1.ebuild 516
-MD5 bbb6f2d9c77041e117b3ab031277d998 files/digest-gnome2-user-docs-2.4.1 76
 MD5 1fd3efa898ea2ac26c840908706e7d8f files/digest-gnome2-user-docs-2.8.1 76
 MD5 d36b59384710506b4d6e6afc11676826 files/digest-gnome2-user-docs-2.6.0.1 78
 MD5 5e3047db0283d370ab7a277400a54f9c files/digest-gnome2-user-docs-2.8.0.1 78
+MD5 bbb6f2d9c77041e117b3ab031277d998 files/digest-gnome2-user-docs-2.4.1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFButEMugEuf3OQ0akRAg4oAJ96JHBNkvo+0rLNzqp8AbDlmt++jwCdGDb4
+KiLLCZKz4xU47zYuSiHq2Zk=
+=w4NE
+-----END PGP SIGNATURE-----
