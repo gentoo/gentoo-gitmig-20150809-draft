@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 432b42d9172ed503ed5aa4ef7fe56b30 multipath-tools-0.4.2.ebuild 1151
-MD5 ba9127a508af91ab69d1ec8e23783b41 ChangeLog 642
+MD5 f003c99d3ee95406fdfdb743826792a1 ChangeLog 641
 MD5 cf274d10abad475cbb2a5ac340dda64c metadata.xml 231
 MD5 7cd2431a33f3bd590b824e48243b53dc files/rc-multipathd 503
 MD5 68c0760f1e402683c1b76f5cb2ceca9c files/digest-multipath-tools-0.4.2 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCGkSAI1lqEGTUzyQRAgclAJ93n09ehcrrLgBvCvzNIUyPPAWHvwCgvjew
+ai60d3lnAHmfJJQd9uBrCtI=
+=mSd9
+-----END PGP SIGNATURE-----
