@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/synce-serial
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.5 2003/09/12 16:23:33 tad Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.6 2004/02/29 00:07:14 liquidx Exp $
+
+  29 Feb 2004; Alastair Tse <liquidx@gentoo.org> synce-serial-0.8-r1.ebuild:
+  remove synce circular dep (#43215)
 
 *synce-serial-0.8-r1 (13 Sep 2003)
 
