@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.35 2005/03/08 02:27:36 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.36 2005/03/22 17:19:30 j4rg0n Exp $
+
+  22 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> lua-5.0.2.ebuild:
+  Fix to use more of the options used on x86
 
   07 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> lua-5.0.2.ebuild:
   Stable ppc-macos.

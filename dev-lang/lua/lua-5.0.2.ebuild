@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.13 2005/03/08 02:27:36 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.14 2005/03/22 17:19:30 j4rg0n Exp $
 
 inherit eutils
 
@@ -32,6 +32,14 @@ src_unpack() {
 			-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
 			-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
 			-e 's:^\(INSTALL_ROOT= \)/usr/local:\1$(DESTDIR)/usr:' \
+			-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
+	else
+		sed -i config \
+			-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
+			-e 's:^#\(DLLIB= -ldl\):\1:' \
+			-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
+			-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
+			-e 's:^\(INSTALL_ROOT= \)/usr/local:\1/usr:' \
 			-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
 	fi
 
