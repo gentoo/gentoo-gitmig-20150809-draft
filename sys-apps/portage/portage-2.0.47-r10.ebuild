@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r10.ebuild,v 1.5 2003/03/27 07:14:18 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r10.ebuild,v 1.6 2003/03/29 18:01:27 carpaski Exp $
 
 IUSE="build"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.gentoo.org"
 KEYWORDS="alpha arm hppa mips ppc sparc x86"
 #KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
-RDEPEND="!build? ( >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
+RDEPEND="!build? ( >=sys-apps/sed-4.0.5 >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
 
 get_portver() {
 	python -c "import portage,string; print string.join(portage.pkgsplit(portage.best(portage.db[\"${ROOT}\"][\"vartree\"].dbapi.match(\"sys-apps/portage\"))))"
