@@ -43,3 +43,4 @@ move net-mail/elmo mail-client/elmo
 move net-mail/exmh mail-client/exmh
 move net-mail/evolution mail-client/evolution
 move net-mail/kbiff mail-client/kbiff
+move net-mail/mailx mail-client/mailx
