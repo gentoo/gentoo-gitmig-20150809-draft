@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.3.ebuild,v 1.1 2003/10/27 05:05:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.4.ebuild,v 1.1 2003/10/27 05:44:40 solar Exp $
 
 S=${WORKDIR}/${P}
 
