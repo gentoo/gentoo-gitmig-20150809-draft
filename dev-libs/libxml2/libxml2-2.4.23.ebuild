@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.23.ebuild,v 1.5 2002/08/11 22:54:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.23.ebuild,v 1.6 2002/08/11 22:55:16 seemant Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/zlib-1.1.4" 
 
 SLOT="2"
-LICENSE="GPL-2 LGPL-2"
+LICENSE="MIT"
 KEYWORDS="x86 ppc"
 
 src_compile() {
