@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-relnev/quake2-relnev-0.15.ebuild,v 1.3 2003/10/12 01:21:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-relnev/quake2-relnev-0.15.ebuild,v 1.4 2003/11/12 22:41:59 vapier Exp $
 
 inherit games eutils gcc
 
 MY_P=quake2-r${PV}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="The Icculus linux port of ID's quake2 engine"
+DESCRIPTION="The icculus.org linux port of iD's quake2 engine"
 SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 	!noqmax? ( http://icculus.org/quake2/files/maxpak.pak )"
 HOMEPAGE="http://icculus.org/quake2/"
