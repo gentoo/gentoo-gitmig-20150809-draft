@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/gtkdiff-1.8.0-r2.ebuild,v 1.3 2004/03/23 13:04:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/gtkdiff-1.8.0-r2.ebuild,v 1.4 2004/04/26 14:49:13 agriffis Exp $
 
 DESCRIPTION="GNOME Frontend for diff"
 SRC_URI="http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/${P}.tar.gz"
@@ -17,7 +17,7 @@ RDEPEND="nls? ( sys-devel/gettext
 	dev-util/intltool )"
 
 src_compile() {
-	econf `use_enable nls`
+	econf `use_enable nls` || die "econf failed"
 	emake || die
 }
 

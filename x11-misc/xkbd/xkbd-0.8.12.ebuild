@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/xkbd-0.8.12.ebuild,v 1.3 2004/04/11 17:36:57 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/xkbd-0.8.12.ebuild,v 1.4 2004/04/26 14:53:44 agriffis Exp $
 
 DESCRIPTION="Xkbd - onscreen soft keyboard for X11"
 HOMEPAGE="http://handhelds.org/~mallum/xkbd/"
@@ -23,7 +23,7 @@ DEPEND="sys-devel/libtool
 
 src_compile() {
 	econf\
-	`use_enable debug`
+	`use_enable debug` || die "econf failed"
 
 	emake || die
 

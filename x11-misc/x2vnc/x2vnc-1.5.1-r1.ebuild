@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.5.1-r1.ebuild,v 1.5 2004/04/11 17:28:38 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.5.1-r1.ebuild,v 1.6 2004/04/26 14:52:39 agriffis Exp $
 
 DESCRIPTION="Control a remote computer running VNC from X"
 SRC_URI="http://www.hubbe.net/~hubbe/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="virtual/x11
 IUSE="tcltk"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die "make failed"
 }
 
