@@ -1,5 +1,15 @@
-MD5 626f258274e526a714953e96449c7d7e e16keyedit-0.2.ebuild 818
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a1c205fc1146129e8e39a0448f9bd44 ChangeLog 1121
+MD5 7d9c0c1ef427af51607b9b35c637a1ca e16keyedit-0.2.ebuild 816
 MD5 175916d9e9e852e45c2f8ec582271334 metadata.xml 361
 MD5 d10f74af2710f0521ee3a7517c12846e files/0.2-fullscreen.patch 299
 MD5 e4fb0f5f2674af735726419c98e7b590 files/digest-e16keyedit-0.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8wwNHTu7gpaalycRAoY6AJ9xkiIwXHQ7z1X9fQIJ2lJdxT3jMwCeNgid
+dsZbnxnyHpl6GvRIfnIobUs=
+=7fd0
+-----END PGP SIGNATURE-----
