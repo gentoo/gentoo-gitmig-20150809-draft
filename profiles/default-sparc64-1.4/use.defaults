@@ -1,9 +1,7 @@
-# Not recommended: mmx, 3dnow, sse, svga
+# Not recommended: mmx, 3dnow, sse, svga, directfb, alsa
 xinerama
-directfb	dev-libs/DirectFB
 ungif		media-libs/ungif
 gtkhtml		gnome-extra/gtkhtml
-alsa		media-libs/alsa-lib
 gdbm		sys-libs/gdbm
 berkdb		sys-libs/db
 slang		sys-libs/slang
