@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.7 2002/07/24 06:47:45 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.8 2002/07/30 12:25:25 danarmak Exp $
+
+  30 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Change dep on pilot-link to >=0.11.1-r1 to take advantage of a recent
+  bugfix in that new revision (#5615).
 
 *kdepim-3.0.2 (03 Jul 2002)
 
