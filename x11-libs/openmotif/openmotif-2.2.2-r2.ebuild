@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.3 2003/06/14 10:17:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.4 2003/07/17 16:53:28 gmsoft Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.sgi.com/other/motifzone/2.2/src/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="MOTIF"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc hppa"
 
 PROVIDE="virtual/motif"
 
