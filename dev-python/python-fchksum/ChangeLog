@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/python-fchksum
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.10 2003/04/04 02:41:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.11 2003/04/04 12:13:29 liquidx Exp $
 
   07 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
@@ -8,6 +8,10 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *python-fchksum-1.6.1-r1 (1 Aug 2002)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org>
+  python-fchksum-1.6.1-r1.ebuild:
+  remove use of distutils
 
   26 Feb 2003; Zach Welch <zwelch@gentoo.org> python-fchksum-1.6.1-r1.ebuild:
   Add arm keyword
