@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.4 2002/07/17 20:43:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.5 2002/07/19 20:28:00 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
 SRC_URI="http://www.kneschke.de/projekte/modlogan/download/${P}.tar.gz
-SLOT="0"
 	 http://www.kneschke.de/projekte/modlogan/download/gd-1.8.1.tar.gz"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	=media-libs/freetype-1.3*
@@ -14,11 +17,10 @@ DEPEND="virtual/x11
 	media-libs/libpng
 	>=dev-libs/libpcre-3.2
 	>=net-libs/adns-1.0
-	mysql? ( >=dev-db/mysql-3.23.26 )
-	"
-RDEPEND="${DEPEND}
-    nls? ( sys-devel/gettext )
-	"
+	mysql? ( >=dev-db/mysql-3.23.26 )"
+
+RDEPEND="nls? ( sys-devel/gettext )"
+	
 
 src_compile() {
 	cd ${S}/../gd-1.8.1
@@ -36,7 +38,7 @@ src_compile() {
 		 || myconf="--without-mysql"
 	
 	use nls	\
-		|| myconf="$myconf --disable-nls"
+		|| myconf="${myconf} --disable-nls"
 
 cd ${S}
 	./configure 	\
