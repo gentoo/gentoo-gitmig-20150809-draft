@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0.ebuild,v 1.2 2002/02/08 17:10:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0-r1.ebuild,v 1.1 2002/03/18 21:45:38 karltk Exp $
 
 At=IBMJava2-JRE-13.tgz
 S=${WORKDIR}/IBMJava2-13
@@ -37,13 +37,13 @@ src_install () {
 		dosym /opt/${P}/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
 	fi
 	
-	dodir /etc/env.d
-	echo "PATH=/opt/${P}/bin" > /etc/env.d/20jre
-	echo "JRE_HOME=/opt/${P}" >> /etc/env.d/20jre
-	echo "JAVA_HOME=/opt/${P}" >> /etc/env.d/20jre
-	echo "ROOTPATH=/opt/${P}/bin" >> /etc/env.d/20jre
-	echo "CLASSPATH=/opt/${P}/lib/rt.jar" >> /etc/env.d/20jre
-	echo "LDPATH=/opt/${P}/bin" >> /etc/env.d/20jre
+	dodir /etc/env.d/java
+	sed \
+		-e "s/@P@/${P}/g" \
+		-e "s/@PV@/${PV}/g" \
+		-e "s/@PF@/${PF}/g" \
+		< ${FILESDIR}/ibm-jre-${PV} \
+		> ${D}/etc/env.d/java/20ibm-jre-${PV}
 }
 
 src_postinst() {

@@ -49,12 +49,13 @@ src_install () {
 		dosym /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji140.so /usr/lib/mozilla/plugins/
 	fi
 	
-	dodir /etc/env.d
-	echo "PATH=/opt/${P}/bin" > ${D}/etc/env.d/21jdk
-	echo "ROOTPATH=/opt/${P}/bin" >> ${D}/etc/env.d/21jdk
-        echo "JDK_HOME=/opt/${P}" >> ${D}/etc/env.d/21jdk
-        echo "JAVA_HOME=/opt/${P}" >> ${D}/etc/env.d/21jdk
-	echo "CLASSPATH=/opt/${P}/jre/lib/rt.jar" >> ${D}/etc/env.d/21jdk
+        dodir /etc/env.d/java 
+	sed \
+		-e "s/@P@/${P}/g" \
+		-e "s/@PV@/${PV}/g" \
+		-e "s/@PF@/${PF}/g" \
+		< ${FILESDIR}/sun-jdk-${PV} \
+                > ${D}/etc/env.d/java/20sun-jdk-${PV} 
 }
 
 pkg_postinst () {                                                               

@@ -2,19 +2,19 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.0-r1.ebuild,v 1.2 2002/02/25 18:42:09 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.0-r2.ebuild,v 1.1 2002/03/18 21:45:38 karltk Exp $
 
 At=IBMJava2-SDK-13.tgz
 S=${WORKDIR}/IBMJava2-13
-DESCRIPTION="IBM JDK 1.3.1"
+DESCRIPTION="IBM JDK 1.3.0"
 SRC_URI=""
 HOMEPAGE="http://www6.software.ibm.com/dl/dklx130/dklx130-p"
 
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.1.3"
+	>=dev-java/java-config-0.2.0"
 RDEPEND="$DEPEND"
-PROVIDE="virtual/jre-1.3
-	virtual/jdk-1.3"
+PROVIDE="virtual/jre-1.3-r1
+	virtual/jdk-1.3-r1"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
@@ -44,13 +44,13 @@ src_install () {
 		dosym /opt/${P}/jre/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
 	fi
 
-	dodir /etc/env.d
-        echo "PATH=/opt/${P}/bin" > ${D}/etc/env.d/21jdk
-        echo "JDK_HOME=/opt/${P}" >> ${D}/etc/env.d/21jdk
-        echo "JAVA_HOME=/opt/${P}" >> ${D}/etc/env.d/21jdk
-        echo "ROOTPATH=/opt/${P}/bin" >> ${D}/etc/env.d/21jdk
-        echo "CLASSPATH=/opt/${P}/jre/lib/rt.jar" >> ${D}/etc/env.d/21jdk
-        echo "LDPATH=/opt/${P}/jre/bin" >> ${D}/etc/env.d/21jdk
+	dodir /etc/env.d/java
+	sed \
+		-e "s/@P@/${P}/g" \
+		-e "s/@PV@/${PV}/g" \
+		-e "s/@PF@/${PF}/g" \
+		< ${FILESDIR}/ibm-jdk-${PV} \
+		> ${D}/etc/env.d/java/20ibm-jdk-${PV}
 }
 
 src_postinst() {
