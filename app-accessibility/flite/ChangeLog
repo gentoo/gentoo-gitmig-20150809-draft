@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.9 2004/04/22 17:54:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.10 2004/05/31 16:44:48 squinky86 Exp $
+
+*flite-1.2-r1 (30 May 2004)
+
+  30 May 2004; Jon Hood <squinky86@gentoo.org> -flite-1.0.ebuild,
+  +flite-1.2-r1.ebuild, files/const.patch:
+  remove old versions, use a higher quality voice thanks to Ingo Bormuth
+  <ingo@bormuth.org> (#47635); added patch from Michael Gorse
+  <mgorse@alum.wpi.edu> (#52466)
 
   22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> flite-1.2.ebuild:
   Stable x86.
