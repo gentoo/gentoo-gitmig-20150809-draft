@@ -2,11 +2,14 @@ MD5 499b1ebc0e0822737c1452e3b4adc193 bittornado-0.3.4.ebuild 1860
 MD5 4e6e37147ac4bcd80d62815c6487c563 bittornado-0.3.6.ebuild 1861
 MD5 fdd69111616413ea9558f277901ef1fa bittornado-0.3.1.ebuild 1730
 MD5 d17973e04ef37bc8809e94f36694bd33 bittornado-0.3.3.ebuild 1734
-MD5 91a97606ddba79f18ef3b88d40246d05 ChangeLog 3209
+MD5 50596c7d98d2909100ce0c0e34fa1356 ChangeLog 3381
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 8e1395ef874ab00953f42216709e7ed1 bittornado-0.3.7.ebuild 1863
+MD5 9389754e30cca3cdf53ebb2d222841f2 bittornado-0.3.7.ebuild 2049
 MD5 6f2fb3d4b4ad50d756847aa1eb886518 bittornado-0.3.2.ebuild 1734
+MD5 7779a7eaf51eb9f84da8a588050f53fa files/favicon.ico 1406
 MD5 c7977a11c1bf8a5d7afb8772202af87d files/bittornado-wxpython-pre2.5-fix.patch 297
+MD5 a706406b4513eb97a4715be7a4b3cfd7 files/bttrack.rc 631
+MD5 5e0dbf4ae726b145dcec6fb57526e4c5 files/bttrack.conf 728
 MD5 1254611280cd18cac6f13a32910f6223 files/digest-bittornado-0.3.1 68
 MD5 42424b1ceb30e798c909cd377fbe78f8 files/digest-bittornado-0.3.2 68
 MD5 29cd3bfcbae60e683be63fcf925d1aad files/digest-bittornado-0.3.3 68
