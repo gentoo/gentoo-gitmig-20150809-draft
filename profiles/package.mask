@@ -511,6 +511,10 @@ sys-apps/mkisofs
 # Needs socks testing
 =net-irc/irssi-0.8.5-r1
 
+# Remote DoS
+# http://online.securityfocus.com/bid/5055
+=net-irc/irssi-0.8.4
+
 # lamer@gentoo.org (15 Jul 2002)
 # Needs more testing, removed patch application in src_unpack
 =net-misc/dante-1.1.13
