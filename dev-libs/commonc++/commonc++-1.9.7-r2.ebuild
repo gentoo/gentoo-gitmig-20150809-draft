@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.7 2003/10/23 14:42:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.8 2003/10/28 13:07:48 mholzer Exp $
 
 S=${WORKDIR}/CommonC++-1.9.7
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
@@ -20,7 +20,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/commmonc++-0.1.patch || die
+	epatch ${FILESDIR}/${PN}-0.1.patch || die
 
 }
 src_compile() {
