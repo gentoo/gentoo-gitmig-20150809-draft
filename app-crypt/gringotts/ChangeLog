@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.18 2004/11/12 06:09:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.19 2004/11/22 18:00:25 leonardop Exp $
+
+  22 Nov 2004; Leonardo Boshell <leonardop@gentoo.org> gringotts-1.2.8.ebuild,
+  gringotts-1.2.8-r1.ebuild:
+  Don't use einstall. See bug #72009.
 
 *gringotts-1.2.8-r1 (12 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8.ebuild,v 1.6 2004/10/05 11:46:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8.ebuild,v 1.7 2004/11/22 18:00:25 leonardop Exp $
 
 DESCRIPTION="Utility that allows you to jot down sensitive data"
 HOMEPAGE="http://devel.pluto.linux.it/projects/Gringotts/"
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	# The FAQ and README documents shouldn't be gzip'd, as they need to be
 	# available in plain format when they are called from the `Help' menu.
