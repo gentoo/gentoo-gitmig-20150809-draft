@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-4.26.3.ebuild,v 1.7 2004/06/25 00:03:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-4.26.3.ebuild,v 1.8 2004/07/14 16:29:55 agriffis Exp $
 
 DESCRIPTION="Perl Compatibility Regular Expressions for OCaml"
 HOMEPAGE="http://www.ai.univie.ac.at/~markus/home/ocaml_sources.html"
@@ -13,6 +13,7 @@ SRC_URI="http://www.ai.univie.ac.at/~markus/ocaml_sources/pcre-ocaml-4.26.3.tar.
 
 SLOT="3"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile() {
 	make all opt || die
