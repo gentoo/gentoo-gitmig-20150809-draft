@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.16 2005/02/17 18:00:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.17 2005/04/06 18:52:38 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> hwsetup-1.0-r2.ebuild:
+  Stable on ppc64
 
   17 Feb 2005; Markus Rothe <corsair@gentoo.org> hwsetup-1.0-r2.ebuild:
   Added ~ppc64 to KEYWORDS
