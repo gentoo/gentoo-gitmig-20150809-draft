@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.62.ebuild,v 1.3 2004/10/15 07:00:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.62.ebuild,v 1.4 2004/11/11 00:57:12 josejx Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ DESCRIPTION="DOS emulator"
 HOMEPAGE="http://dosbox.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dosbox/${P}.tar.gz"
 
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="alsa hardened opengl"

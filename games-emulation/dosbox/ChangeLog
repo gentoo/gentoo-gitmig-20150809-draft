@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.14 2004/10/15 07:00:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.15 2004/11/11 00:57:12 josejx Exp $
+
+  11 Nov 2004; Joseph Jezak <josejx@gentoo.org> dosbox-0.62.ebuild:
+  Marked ppc stable.
 
   14 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.62.ebuild:
   hardened doesn't seem to like the dynamic core (bug #66038)
