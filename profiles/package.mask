@@ -251,10 +251,10 @@ net-mail/sendmail
 #
 # Azarah (26/03/2002)
 #
-#>=sys-devel/automake-1.5
-#>=sys-devel/autoconf-2.50
-<sys-devel/automake-1.6-r1
-<sys-devel/autoconf-2.53
+<sys-devel/automake-1.5d-r1
+>=sys-devel/automake-1.6
+<sys-devel/autoconf-2.5d
+>=sys-devel/autoconf-2.52i
 
 # broken
 app-admin/powertweak
