@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vlnx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.11 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.12 2004/02/27 12:47:05 bazik Exp $
+
+  27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> vlnx-414e-r2.ebuild,
+  vlnx-416e.ebuild:
+  Changed KEYWORDS to -* x86 as its a x86 binary.
 
 *vlnx-416e (13 Oct 2002)
 
