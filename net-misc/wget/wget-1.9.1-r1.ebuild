@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r1.ebuild,v 1.7 2003/11/19 09:38:09 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r1.ebuild,v 1.8 2003/11/19 09:40:02 carpaski Exp $
 
 inherit gnuconfig
 
