@@ -227,7 +227,7 @@ class TestEnvVarPresence(Test):
                       ]
     self.desired = [ "# Author:",
                      "# Maintainer:",
-                     "SLOT="
+                     "SLOT=",
                      "S="]
 
     for i in self.required:
