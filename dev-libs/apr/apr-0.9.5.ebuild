@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.5.ebuild,v 1.8 2005/02/21 15:17:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.5.ebuild,v 1.9 2005/02/28 21:54:57 eradicator Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -43,29 +43,20 @@ src_compile() {
 	# Detect mips and uclibc systems properly
 	gnuconfig_update
 
-	myconf=""
+	myconf="--datadir=/usr/share/apr-0"
 
 	myconf="${myconf} $(use_enable ipv6 ipv6)"
 	myconf="${myconf} --enable-threads"
 	myconf="${myconf} --enable-nonportable-atomics"
 
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--datadir=/usr/share/apr-0 \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib \
-		$myconf || die
-
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
 	set_filter_flags
 
-	einstall installbuilddir=${D}/usr/share/apr-0/build
+	make DESTDIR="${D}" installbuilddir=/usr/share/apr-0/build install || die
 
 	# bogus values pointing at /var/tmp/portage
 	sed -i -e 's:APR_SOURCE_DIR=.*:APR_SOURCE_DIR=/usr/share/apr-0:g' ${D}/usr/bin/apr-config
