@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.99 2004/11/04 16:25:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.100 2004/11/08 04:31:16 agriffis Exp $
+
+*ruby-1.8.2_pre3 (09 Nov 2004)
+
+  09 Nov 2004; Aron Griffis <agriffis@gentoo.org> +ruby-1.8.2_pre3.ebuild:
+  Version bumped.
 
 *ruby-1.6.8-r12 (05 Nov 2004)
 
