@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.81.ebuild,v 1.4 2004/01/29 10:11:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.81.ebuild,v 1.5 2004/02/10 06:11:51 mr_bones_ Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/enigma/${P}.tar.gz"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 RDEPEND="virtual/glibc
 	sys-libs/zlib
