@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.35 2004/07/21 13:13:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.36 2004/07/26 17:53:26 solar Exp $
+
+*busybox-1.0.0_pre20040726 (26 Jul 2004)
+
+  26 Jul 2004; <solar@gentoo.org> busybox-1.0.0_pre20040726.ebuild:
+  updated snapshot and forceable enable ash = sh. This fixes a problem in native
+  uclibc environments with busybox and system(), popen() etc not working. (posix
+  demands that a /bin/sh exist)
 
 *busybox-1.0.0_pre20040721 (21 Jul 2004)
 
