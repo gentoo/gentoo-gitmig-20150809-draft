@@ -10,3 +10,5 @@ virtual/glibc 			sys-libs/glibc
 virtual/x11			x11-base/xfree
 virtual/opengl			x11-base/xfree
 media-libs/freetype-2.0.6	x11-base/xfree
+virtual/glu			media-libs/mesa-glu
+virtual/glut			media-libs/mesa-glu
