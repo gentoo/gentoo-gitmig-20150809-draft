@@ -55,7 +55,7 @@ virtual/gzip		app-arch/gzip
 virtual/ghostscript		app-text/ghostscript
 virtual/w3m			net-www/w3m
 virtual/imap-c-client	net-libs/c-client
-virtual/mpg123		media-sound/mpg123
+virtual/mpg123		media-sound/mpg321
 virtual/cdrtools        app-cdr/cdrtools
 virtual/dhcpc			net-misc/dhcpcd
 virtual/ssh		net-misc/openssh
