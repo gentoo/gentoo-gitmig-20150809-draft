@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.21.ebuild,v 1.1 2003/10/17 10:16:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.21.ebuild,v 1.2 2003/10/17 19:20:13 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -95,7 +95,7 @@ src_install() {
 	dosym /opt/opera/bin/opera /usr/bin/opera
 
 	# install correct motifwrapper
-	if [ "`has_version 'x11-libs/openmotif-2.2*'`" ]; then
+	if has_version '=x11-libs/openmotif-2.2*'; then
 		rm ${D}/opt/opera/lib/opera/plugins/operamotifwrapper
 		cp ${S}/plugins/operamotifwrapper-3 ${D}/opt/opera/lib/opera/plugins
 	fi
