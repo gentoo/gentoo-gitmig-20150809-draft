@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.39 2003/06/10 16:29:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.40 2003/06/10 19:30:57 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -33,7 +33,7 @@ if [ -z "$SRC_URI" ]; then
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
 
-IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
+IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype"
 
 # Berkdb is disabled due to DB4 and changes in PHP4.3.2
 #RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
@@ -67,12 +67,12 @@ RDEPEND="
     ssl? ( >=dev-libs/openssl-0.9.5 )
     tiff? ( >=media-libs/tiff-3.5.5 )
     truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
-	zlib? ( sys-libs/zlib )
+	sys-libs/zlib 
 	virtual/mta"
 # These will become explicit soon, and not optional
 RDEPEND="${RDEPEND}
-	xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
-    xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat )"
+	dev-libs/libxml2 >=dev-libs/libxslt-1.0.30
+    >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat"
 # These are extra bits we need only at compile time
 DEPEND="${RDEPEND} ${DEPEND}
     imap? ( >=net-mail/uw-imap-2001a-r1 )
@@ -134,9 +134,13 @@ php_check_java_config() {
 }
 
 php_src_unpack() {
-	ewarn "This ebuild should be very stable at this point."
+	einfo "This ebuild should be very stable at this point."
+	use xml || use xml2 || \
+	( ewarn "You have one of the xml/xml2 USE flags turned off."
+	  ewarn "Previously this disabled XML support in PHP. However"
+	  ewarn "PEAR has a hard dependancy on them, so they are now enabled." )
+
 	use java && ewarn "Java support may be somewhat flakey, but it shouldn't break anything."
-	( use xml && use xml2 ) || ewarn "You must have BOTH xml and xml2 in your USE flags for PEAR"
 	
     unpack ${MY_P}.tar.bz2
     cd ${S}
@@ -252,9 +256,7 @@ php_src_compile() {
 	use tiff && LDFLAGS="${LDFLAGS} -ltiff"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr" || myconf="${myconf} --without-tiff"
 	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
-	use xml2 && myconf="${myconf} --with-dom --with-dom-xslt"
-	use zlib && myconf="${myconf} --with-zlib --with-zlib-dir=/usr/lib"
-
+	
 	#use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
 	if [ -n "`use mysql`" ] ; then
 		if [ -n "`mysql_config | grep '4.1'`" ] ; then
@@ -300,17 +302,17 @@ php_src_compile() {
 		LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib"
 	fi
 	
-	if [ -n "`use xml`" ] ; then
-		LIBS="${LIBS} -lxmlparse -lxmltok"
-		myconf="${myconf} --with-sablot=/usr"
-		myconf="${myconf} --enable-xslt" 
-		myconf="${myconf} --with-xslt-sablot" 
-		myconf="${myconf} --with-xmlrpc"
-		myconf="${myconf} --enable-wddx"
-		myconf="${myconf} --with-xml"
-	else
-		myconf="${myconf} --disable-xml"
-	fi
+	# These were previously optional, but are now included directly as PEAR needs them.
+	# Zlib is needed for XML+XML2
+	myconf="${myconf} --with-zlib --with-zlib-dir=/usr/lib"
+	myconf="${myconf} --with-dom --with-dom-xslt"
+	LIBS="${LIBS} -lxmlparse -lxmltok"
+	myconf="${myconf} --with-sablot=/usr"
+	myconf="${myconf} --enable-xslt" 
+	myconf="${myconf} --with-xslt-sablot" 
+	myconf="${myconf} --with-xmlrpc"
+	myconf="${myconf} --enable-wddx"
+	myconf="${myconf} --with-xml"
 
 	# Somebody might want safe mode, but it causes some problems, so I disable it by default
 	#myconf="${myconf} --enable-safe-mode"
