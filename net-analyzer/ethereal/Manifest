@@ -1,5 +1,5 @@
-MD5 d8bc6ed1ed809a9a44fa191d252e2fee ethereal-0.10.5.ebuild 2538
-MD5 7fdcaadc4a7bef8a96d927f39171930b ChangeLog 10708
+MD5 76e820db2186c87fd037ba6f8b0ecd02 ethereal-0.10.5.ebuild 2538
+MD5 718037731f91cad947a1d0a59dc99634 ChangeLog 10816
 MD5 dd02f80a7ca30f388cbe3225fc7a440f ethereal-0.10.5-r1.ebuild 2650
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
 MD5 5a73274ec255373b4e618388cd057275 files/0.10.3-gcc34.patch 458
