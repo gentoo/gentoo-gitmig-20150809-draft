@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/wastesedge
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/ChangeLog,v 1.5 2004/06/24 23:17:22 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/ChangeLog,v 1.6 2005/03/14 05:17:05 mr_bones_ Exp $
+
+  14 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  wastesedge-0.3.3.ebuild:
+  add desktop entry for bug #85021; tidy
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   wastesedge-0.3.3.ebuild:
