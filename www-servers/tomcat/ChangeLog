@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.20 2005/03/19 22:56:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.21 2005/03/20 16:33:17 luckyduck Exp $
+
+  20 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> -files/3.3.2/gentoo.diff,
+  -files/3.3.2/tomcat.conf, -files/3.3.2/tomcat.init,
+  -files/4.1.30/gentoo.diff, -files/4.1.30/jikes.diff,
+  -files/4.1.30/tomcat.conf, -files/4.1.30/tomcat.init,
+  -tomcat-3.3.2-r2.ebuild, -tomcat-4.1.30-r5.ebuild:
+  cleanup, removed old vulnerable versions. see #85383
 
 *tomcat-5.0.28-r2 (19 Mar 2005)
 
