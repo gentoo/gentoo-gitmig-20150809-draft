@@ -1,20 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 40316a05dd7ca1b86cda1ef8e8b3e831 ChangeLog 1180
-MD5 96a2ca5620ead45623902ebe63140500 hcfusbmodem-0.98.02090200.ebuild 803
-MD5 e4f26cf32a3f4ed857e045ac9e65aed6 hcfusbmodem-0.99.03042703.ebuild 806
+MD5 a370e0959858b3ecb634f1e8a9e7ab0d hcfusbmodem-1.04.ebuild 763
+MD5 8b735c1ecef9868a8641adbaf2c0350b ChangeLog 1472
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 b0d6040043e2a4a5c6c1820b8980c1c7 hcfusbmodem-1.01.04082400.ebuild 787
-MD5 e79ca620dd4d34a8c895ba5c2b15308b hcfusbmodem-1.01.04111200.ebuild 789
-MD5 77cc2bfea101516354247ee4aa3e6e0a files/digest-hcfusbmodem-0.98.02090200 87
-MD5 441c4d42407067886ac8cd1306a5e28a files/digest-hcfusbmodem-0.99.03042703 87
-MD5 21c0b07fbf159a301ec1743a314f47f8 files/digest-hcfusbmodem-1.01.04082400 91
-MD5 1f399dcfddaabae983e18b2cde29e285 files/digest-hcfusbmodem-1.01.04111200 91
+MD5 8e3664ee922cc740522591e41d4cf3c5 files/digest-hcfusbmodem-1.04 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBmaeajtv59x0+BrURAhc0AKDQggsl7doLJoANY3lVhmRt65MjywCcDvnN
-d0eDWZUBo1m1QPbSEcT5qJY=
-=WjeL
+iD8DBQFB2vxEjiC39V7gKu0RApWNAJ9ps8uGV0bQ7lw8rMOHD50qtDgvxgCeOEs6
+hxHky+R9XsmnC9YlCT4bZEE=
+=7HPg
 -----END PGP SIGNATURE-----
