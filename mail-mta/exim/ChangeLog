@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.2 2004/05/31 02:43:38 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.3 2004/06/12 01:16:44 g2boojum Exp $
+
+  11 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> exim-4.34-r1.ebuild:
+  Marking stable on all arch's to fix the raft of 
+  inconsistent-mailwrapper bugs.
 
 *exim-4.34-r1 (30 May 2004)
 
