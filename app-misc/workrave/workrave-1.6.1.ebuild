@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.0.ebuild,v 1.2 2004/05/12 17:38:52 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.1.ebuild,v 1.1 2004/05/26 06:49:24 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -48,4 +48,3 @@ if [ ! `use gnome` ] && [ ! `use xml2` ]
 then
 	G2CONF="${G2CONF} --enable-gconf"
 fi
-
