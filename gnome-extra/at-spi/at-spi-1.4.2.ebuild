@@ -1,31 +1,29 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.3.8.ebuild,v 1.6 2004/02/03 10:32:27 ferringb Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.4.2.ebuild,v 1.1 2004/04/22 05:35:18 leonardop Exp $
 
 inherit gnome2
 
 DESCRIPTION="The Gnome Accessibility Toolkit"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
-SLOT="0"
-LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc ~alpha ~amd64 sparc hppa"
+SLOT="1"
+LICENSE="LGPL-2"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa ~ia64"
+IUSE="${IUSE}"
 
 RDEPEND=">=gnome-base/gail-1.3
 	>=gnome-base/libbonobo-1.107
 	>=dev-libs/atk-1.3.4
 	>=x11-libs/gtk+-2
-	>=dev-libs/popt-1.6.3
+	dev-libs/popt
 	gnome-base/ORBit2
 	virtual/x11"
-# virtual/x11 for libXtst libXi libXkb
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
-	doc? ( dev-util/gtk-doc )
-	dev-perl/XML-Parser"
+	>=dev-util/pkgconfig
+	dev-util/intltool"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
 DOCS="AUTHORS ChangeLog COPYING NEWS README TODO"
