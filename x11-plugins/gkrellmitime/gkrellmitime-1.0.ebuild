@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.ebuild,v 1.9 2004/03/27 15:41:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.ebuild,v 1.10 2004/04/30 21:21:18 pvdabeel Exp $
 
 IUSE=""
 DESCRIPTION="Internet Time plugin for Gkrellm2"
@@ -11,7 +11,7 @@ DEPEND=">=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc alpha"
+KEYWORDS="x86 ~sparc ppc alpha"
 
 src_compile() {
 	make || die

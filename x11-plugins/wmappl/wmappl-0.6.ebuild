@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/wmappl-0.6.ebuild,v 1.6 2004/03/26 23:10:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/wmappl-0.6.ebuild,v 1.7 2004/04/30 22:12:45 pvdabeel Exp $
 
 IUSE=""
 DESCRIPTION="Simple application launcher for the Window Maker dock."
@@ -11,7 +11,7 @@ DEPEND="virtual/x11"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="x86 sparc amd64 ppc"
 
 src_compile() {
 	emake || die

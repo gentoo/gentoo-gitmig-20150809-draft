@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-smbwho/karamba-smbwho-0.1.ebuild,v 1.7 2004/03/26 23:10:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-smbwho/karamba-smbwho-0.1.ebuild,v 1.8 2004/04/30 21:48:10 pvdabeel Exp $
 
 IUSE=""
 DESCRIPTION="Samba status plugin for Karamba"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.kdelook.org/content/show.php?content=5698"
 SRC_URI="http://www.kdelook.org/content/files/5698-smbwho-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 RDEPEND="|| ( >=x11-misc/karamba-0.17 >=x11-misc/superkaramba-0.21 )"
 

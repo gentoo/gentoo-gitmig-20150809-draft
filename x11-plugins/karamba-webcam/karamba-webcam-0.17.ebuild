@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-webcam/karamba-webcam-0.17.ebuild,v 1.4 2004/03/26 23:10:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-webcam/karamba-webcam-0.17.ebuild,v 1.5 2004/04/30 21:52:17 pvdabeel Exp $
 
 IUSE=""
 DESCRIPTION="Webcam plugin for Karamba"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.efd.lth.se/~d98hk/karamba/"
 SRC_URI="http://www.efd.lth.se/~d98hk/karamba/karcam.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 RDEPEND="|| ( >=x11-misc/karamba-0.17 >=x11-misc/superkaramba-0.21 )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a.ebuild,v 1.9 2004/04/13 18:34:33 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a.ebuild,v 1.10 2004/04/30 22:00:30 pvdabeel Exp $
 
 S=${WORKDIR}/wmDownload
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://wmdownload.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ppc"
 
 DEPEND="virtual/glibc virtual/x11 x11-libs/docklib"
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/gkrellflynn-0.6.ebuild,v 1.10 2004/04/19 14:54:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/gkrellflynn-0.6.ebuild,v 1.11 2004/04/30 21:02:10 pvdabeel Exp $
 
 IUSE=""
 HOMEPAGE="http://horus.comlab.uni-rostock.de/flynn/"
 SRC_URI="http://horus.comlab.uni-rostock.de/flynn/${P}.tar.gz"
 DESCRIPTION="A funny GKrellM (1 or 2) load monitor (for Doom(tm) fans)"
-KEYWORDS="x86 ~sparc alpha ~amd64"
+KEYWORDS="x86 ~sparc alpha ~amd64 ppc"
 DEPEND="app-admin/gkrellm"
 SLOT="0"
 LICENSE="GPL-2"

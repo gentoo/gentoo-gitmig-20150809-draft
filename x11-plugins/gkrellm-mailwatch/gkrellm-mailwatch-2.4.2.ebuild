@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/gkrellm-mailwatch-2.4.2.ebuild,v 1.7 2004/03/26 23:10:05 aliz Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/gkrellm-mailwatch-2.4.2.ebuild,v 1.8 2004/04/30 21:13:49 pvdabeel Exp $ 
 
 IUSE=""
 S=${WORKDIR}/${PN}
@@ -12,7 +12,7 @@ DEPEND="=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
 	emake || die
