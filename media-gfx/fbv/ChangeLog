@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/ChangeLog,v 1.7 2005/01/30 08:31:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/ChangeLog,v 1.8 2005/03/28 21:22:32 spock Exp $
+
+  28 Mar 2005; Michał Januszewski <spock@gentoo.org> fbv-1.0b.ebuild:
+  Removed dependency on libungif and changed the makefiles so that everything
+  could work properly with giflib.
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   +files/oob-segfault-fbv-1.0b.diff, fbv-1.0b.ebuild, +metadata.xml:
