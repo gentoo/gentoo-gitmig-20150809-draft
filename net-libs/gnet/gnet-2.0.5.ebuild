@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.5.ebuild,v 1.9 2004/07/07 19:28:51 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.5.ebuild,v 1.10 2004/07/07 20:15:12 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -12,10 +12,12 @@ LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="x86 ppc sparc ~alpha hppa ~ia64 amd64"
 
-IUSE=""
+IUSE="doc"
+
 RDEPEND=">=dev-libs/glib-1.2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	doc? ( dev-util/gtk-doc )"
 
 G2CONF=" --with-html-dir=${D}/usr/share/gtk-doc/html"
 
