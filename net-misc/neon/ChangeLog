@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.8 2002/10/26 13:03:00 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.9 2002/10/29 21:03:34 karltk Exp $
 
 *neon-0.23.3 (26 Oct 2002)
 
@@ -26,7 +26,10 @@
   06 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> neon-0.21.1.ebuild :
   Bumped to new version
 
-*neon-0.19.2-r1 (?? ???? ????)
+*neon-0.19.2-r1 (29 Oct 2002)
+
+  29 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> neon-0.19.2-r1.ebuild files/digest-neon-0.19.2-r1 :
+  Resurrected, so that subversion may work.
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> neon-0.19.2.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
