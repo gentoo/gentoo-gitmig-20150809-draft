@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.6 2002/07/06 15:30:02 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.7 2002/07/10 13:35:24 aliz Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
@@ -11,7 +11,7 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 KEYWORDS="*"
-LICENSE="GPL-2"
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="2.2"
 
 #portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
