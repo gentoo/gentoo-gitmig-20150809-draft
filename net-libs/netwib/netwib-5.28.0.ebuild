@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.28.0.ebuild,v 1.2 2005/01/22 05:14:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.28.0.ebuild,v 1.3 2005/01/29 21:20:36 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc"
 IUSE=""
 
-DEPEND="net-libs/libpcap
+DEPEND="virtual/libpcap
 	>=net-libs/libnet-1.1.1"
 
 S=${WORKDIR}/${P}-src

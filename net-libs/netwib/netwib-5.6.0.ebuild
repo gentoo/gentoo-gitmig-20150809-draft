@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.6.0.ebuild,v 1.8 2005/01/13 05:19:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.6.0.ebuild,v 1.9 2005/01/29 21:20:36 dragonheart Exp $
 
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
 HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwib/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="net-libs/libpcap
+DEPEND="virtual/libpcap
 	>=net-libs/libnet-1.1.1"
 
 S=${WORKDIR}/${P}-src
