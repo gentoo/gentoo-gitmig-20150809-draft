@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.7 2004/07/01 11:18:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.1 2004/07/08 13:51:49 wolf31o2 Exp $
 
 inherit games
 
@@ -136,6 +136,10 @@ AccessControlClass=crashfix.iaccesscontrolini
 w
 q
 EOT
+
+	# Here we apply fix for bug #54726
+	dosed "s:UplinkToGamespy=True:UplinkToGamespy=False:" \
+		${dir}/System/Default.ini
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
