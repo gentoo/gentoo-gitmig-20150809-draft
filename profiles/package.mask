@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3687 2005/03/07 13:00:27 hattya Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3688 2005/03/07 16:22:41 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -106,12 +106,6 @@ app-portage/kuroo
 # moving to bese-2004@common-lisp.net/arnesi--dev--1.2 patch scheme
 =dev-lisp/cl-arnesi-1.2.0
 =dev-lisp/cl-arnesi-1.2.3*
-
-# Christian Parpart <trapni@gentoo.org> (16 Feb 2005)
-# masked for testing and is *still!* waiting for unmasking the other 
-# apache herd refresh packages - see Meta-bug #76457
-=www-apache/mod_mono-1.0.6-r1
-=www-apache/mod_mono-1.0.5-r1
 
 # Jeremy Huddleston <eradicator@gentoo.org> (15 Feb 2005)
 # Masked for development while fixing bugs that cropped up with the
