@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ecletex
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.3 2004/08/06 08:13:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.4 2004/08/22 13:03:57 karltk Exp $
+
+*ecletex-0.0.3 (22 Aug 2004)
+
+  22 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org> ecletex-0.0.3.ebuild:
+  New upstream version. Fixes #60200.  
 
   06 Aug 2004; David Holm <dholm@gentoo.org> ecletex-0.0.2.ebuild:
   Added to ~ppc.
