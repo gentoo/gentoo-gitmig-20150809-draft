@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.3 2004/05/12 21:58:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.4 2004/05/14 00:50:24 pylon Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ RDEPEND="net-misc/dhcp
 	X? ( virtual/x11 )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc -x86 -sparc -alpha -mips"
+KEYWORDS="ppc -x86 -sparc -alpha -mips"
 IUSE="alsa oss fbcon X oldworld sheep debug"
 
 pkg_setup() {
