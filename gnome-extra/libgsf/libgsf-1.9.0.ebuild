@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.9.0.ebuild,v 1.10 2004/08/22 17:26:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.9.0.ebuild,v 1.11 2004/10/05 13:59:23 pvdabeel Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE="gnome doc"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 sparc ~ppc hppa amd64 alpha ~ia64 ~mips ppc64"
+KEYWORDS="x86 sparc ppc hppa amd64 alpha ~ia64 ~mips ppc64"
 
 # FIXME : should add optional bz2 support
 RDEPEND=">=dev-libs/libxml2-2.4.16
