@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.5 2004/02/21 16:42:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.6 2004/03/01 11:29:40 dholm Exp $
+
+  01 Mar 2004; David Holm <dholm@gentoo.org> sary-ruby-0.5_pre20031227.ebuild:
+  Added to ~ppc.
 
 *sary-ruby-0.5_pre20031227 (12 Jan 2004)
 
