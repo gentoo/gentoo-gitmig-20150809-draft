@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4.ebuild,v 1.5 2004/07/01 22:12:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4.ebuild,v 1.6 2004/07/14 23:33:08 agriffis Exp $
 
 DESCRIPTION="DNS serial number incrementer and reverse zone builder"
 URI_BASE="http://uranus.it.swin.edu.au/~jn/linux/"
@@ -12,7 +12,6 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="sys-apps/sed virtual/libc"
 RDEPEND="net-dns/bind virtual/libc"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	cd ${S}/src
