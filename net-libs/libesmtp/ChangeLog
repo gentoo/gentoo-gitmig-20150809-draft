@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.15 2004/02/07 00:26:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.16 2004/04/13 12:06:05 kugelfang Exp $
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> libesmtp-1.0.1.ebuild:
+  marked ~amd64
 
   06 Feb 2004; Aron Griffis <agriffis@gentoo.org> libesmtp-1.0-r1.ebuild:
   stable on alpha
