@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.1 2001/08/04 18:22:45 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.2 2001/08/09 18:05:42 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console and font utilities"
@@ -40,7 +40,7 @@ src_compile() {
       myconf="${myconf} --disable-nls"
     fi
 
-	try ./configure --prefix=/usr --mandir=/usr/share/man --target=${CHOST} ${myconf}
+	try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf}
 	try make $MAKEOPTS all
 }
 
