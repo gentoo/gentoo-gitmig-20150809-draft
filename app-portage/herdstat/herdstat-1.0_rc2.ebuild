@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.0_rc1.ebuild,v 1.2 2005/03/22 15:59:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.0_rc2.ebuild,v 1.1 2005/03/24 15:53:34 ka0ttic Exp $
 
 inherit bash-completion
 
@@ -35,7 +35,6 @@ pkg_postinst() {
 	chmod 0775 /var/lib/herdstat
 
 	echo
-	einfo "Unless you plan on using your own local copy of herds.xml, you"
-	einfo "must be in the portage group in order to automatically fetch it."
+	einfo "You must be in the portage group to use herdstat."
 	bash-completion_pkg_postinst
 }
