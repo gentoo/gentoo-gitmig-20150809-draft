@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.ebuild,v 1.4 2004/11/21 16:32:47 lv Exp $
-
-inherit eutils flag-o-matic libtool gnuconfig toolchain
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.ebuild,v 1.5 2004/11/21 23:03:06 lv Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -47,14 +45,13 @@ PP_VER="3_3_2"
 PP_FVER="${PP_VER//_/.}-3"
 HTB_VER="1.00"
 
-SRC_URI="$(get_gcc_src_uri)"
-
 ETYPE="gcc-compiler"
 
 #PIEPATCH_EXCLUDE="upstream/02_all_gcc-3.3.3-v8.7.1-pie-rs6000.patch.bz2"
 HARDENED_GCC_WORKS="x86 sparc amd64 hppa"
 SPLIT_SPECS="${SPLIT_SPECS:="true"}"
 
+inherit eutils flag-o-matic libtool gnuconfig toolchain
 
 gcc_do_filter_flags() {
 	strip-flags
@@ -159,13 +156,17 @@ src_install() {
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
-	if [ "${SPLIT_SPECS}" == "true" ] && [ -n "${PIE_CORE}" ] && use !boundschecking && hardened_gcc_works; then
+	if want_split_specs ; then
 		if use hardened ; then
 			create_gcc_env_entry vanilla
-		else
-			create_gcc_env_entry hardened
 		fi
-		create_gcc_env_entry hardenednossp
+		use !hardened && hardened_gcc_works && create_gcc_env_entry hardened
+		if hardened_gcc_works || hardened_gcc_works pie ; then
+			create_gcc_env_entry hardenednossp
+		fi
+		if hardened_gcc_works || hardened_gcc_works ssp ; then
+			create_gcc_env_entry hardenednopie
+		fi
 
 		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
 	fi
@@ -368,7 +369,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	gcc_setup_static_vars
 
 	if use multilib && [ "${ARCH}" = "amd64" ]
 	then

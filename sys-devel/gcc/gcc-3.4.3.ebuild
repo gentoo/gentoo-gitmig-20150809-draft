@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.11 2004/11/21 00:56:06 lv Exp $
-
-inherit eutils flag-o-matic libtool gnuconfig toolchain
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.12 2004/11/21 23:03:06 lv Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -42,25 +40,27 @@ DEPEND="${RDEPEND}
 PDEPEND="sys-devel/gcc-config
 	!nocxx? ( !mips? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) )"
 
+
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
+#GCC_MANPAGE_VERSION="none"
 #BRANCH_UPDATE="20041025"
 PATCH_VER="1.0"
 PIE_VER="8.7.6.6"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_4_3"
 PP_FVER="${PP_VER//_/.}-0"
-
 HTB_VER="1.00"
 HTB_GCC_VER="3.4.2"
-
-SRC_URI="$(get_gcc_src_uri)"
 
 ETYPE="gcc-compiler"
 
 #PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
 HARDENED_GCC_WORKS="x86 sparc amd64"
+#HARDENED_PIE_WORKS="mips ppc"
+#HARDENED_SSP_WORKS=""
 SPLIT_SPECS="${SPLIT_SPECS:="true"}"
 
+inherit eutils flag-o-matic libtool gnuconfig toolchain
 
 gcc_do_filter_flags() {
 	strip-flags
@@ -196,25 +196,21 @@ src_install() {
 		[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 	fi
 
-	# Because GCC 3.4 installs into the gcc directory and not the gcc-lib
-	# directory, we will have to rename it in order to keep compatibility
-	# with our current libtool check and gcc-config (which would be a pain
-	# to fix compared to this simple mv and symlink).
-	mv ${D}/${PREFIX}/lib/gcc ${D}/${PREFIX}/lib/gcc-lib
-	ln -s gcc-lib ${D}/${PREFIX}/lib/gcc
-	#LIBPATH=${LIBPATH/lib\/gcc/lib\/gcc-lib}
-
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
-	if [ "${SPLIT_SPECS}" == "true" ] && [ -n "${PIE_CORE}" ] && use !boundschecking && hardened_gcc_works; then
+	if want_split_specs ; then
 		if use hardened ; then
 			create_gcc_env_entry vanilla
-		else
-			create_gcc_env_entry hardened
 		fi
-		create_gcc_env_entry hardenednossp
+		use !hardened && hardened_gcc_works && create_gcc_env_entry hardened
+		if hardened_gcc_works || hardened_gcc_works pie ; then
+			create_gcc_env_entry hardenednossp
+		fi
+		if hardened_gcc_works || hardened_gcc_works ssp ; then
+			create_gcc_env_entry hardenednopie
+		fi
 
 		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
 	fi
@@ -421,7 +417,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	gcc_setup_static_vars
 
 	if use multilib && [ "${ARCH}" = "amd64" ]
 	then

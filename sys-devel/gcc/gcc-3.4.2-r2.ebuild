@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.20 2004/11/18 12:19:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.21 2004/11/21 23:03:06 lv Exp $
 
-inherit eutils flag-o-matic libtool gnuconfig toolchain
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -49,8 +48,6 @@ PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_4_1"
 PP_FVER="${PP_VER//_/.}-1"
 HTB_VER="1.00"
-SRC_URI="$(get_gcc_src_uri)"
-S="$(gcc_get_s_dir)"
 
 ETYPE="gcc-compiler"
 
@@ -58,6 +55,7 @@ ETYPE="gcc-compiler"
 HARDENED_GCC_WORKS="x86 sparc amd64"
 SPLIT_SPECS="${SPLIT_SPECS:="true"}"
 
+inherit eutils flag-o-matic libtool gnuconfig toolchain
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -418,7 +416,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	gcc_setup_static_vars
 
 	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
@@ -428,7 +425,7 @@ pkg_postinst() {
 		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	fi
 
-	do_gcc_config
+	should_we_gcc_config && do_gcc_config
 
 	# Update libtool linker scripts to reference new gcc version ...
 	if [ "${ROOT}" = "/" ] && \
