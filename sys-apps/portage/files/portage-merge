@@ -30,7 +30,7 @@ def isfifo(x):
 
 def movefile(src,dest):
     if os.path.exists(dest):
-	unlink(dest)
+	os.unlink(dest)
     mystat=os.stat(src)
     mymode=mystat[ST_MODE]
     myperms=S_IMODE(mymode)
