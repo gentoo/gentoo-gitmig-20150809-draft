@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.14.ebuild,v 1.4 2003/03/09 19:48:28 agriffis Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.14.ebuild,v 1.5 2003/09/04 07:00:26 msterret Exp $
 
 MY_P="${PN}_${PV}.orig"
 S=${WORKDIR}/${MY_P/_/-}
