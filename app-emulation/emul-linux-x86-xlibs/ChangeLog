@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.21 2005/02/08 03:27:36 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.22 2005/02/08 10:31:40 cryos Exp $
+
+  08 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  emul-linux-x86-xlibs-1.2-r6.ebuild:
+  Added pkg_postrm() to remove symlink, corrected false warning message.
 
 *emul-linux-x86-xlibs-1.2-r6 (08 Feb 2005)
 
