@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r21.ebuild,v 1.1 2003/05/17 03:18:06 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r21.ebuild,v 1.2 2003/05/17 08:23:59 jje Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -75,6 +75,10 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-mpg123j.patch
 	fi
 
+	# Patch for improved xmms-sid - xmms-sid plugin must be rebuilt
+	# after this is applied
+	epatch ${FILESDIR}/${P}-songpos.patch
+	
 	[ ! -f ${S}/config.rpath ] && ( \
 		touch ${S}/config.rpath
 		chmod +x ${S}/config.rpath

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.46 2003/05/17 03:18:06 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.47 2003/05/17 08:23:59 jje Exp $
+
+  17 May 2003; jje <jje@gentoo.org> xmms-1.2.7-r21.ebuild,
+  files/xmms-1.2.7-songpos.patch:
+  Added song position patch for sid files.
+  
+  Submitted by: Christoph Richter <toph@abi2ooo.org>
 
 *xmms-1.2.7-r21 (17 May 2003)
 

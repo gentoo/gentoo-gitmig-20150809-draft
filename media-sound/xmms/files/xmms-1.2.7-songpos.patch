@@ -1,0 +1,409 @@
+diff -r -u xmms-1.2.7/General/ir/ir.c xmms-1.2.7-patched/General/ir/ir.c
+--- xmms-1.2.7/General/ir/ir.c	Mon Mar  5 15:15:13 2001
++++ xmms-1.2.7-patched/General/ir/ir.c	Sat Jun  1 17:27:31 2002
+@@ -292,12 +292,7 @@
+ 				}
+ 				else if (!strcmp(text, ircfg.button_seekf) && g_timer_elapsed(timer1, NULL) > S_PAUSE / 2)
+ 				{
+-					output_time = xmms_remote_get_output_time(ir_gp.xmms_session);
+-					playlist_pos = xmms_remote_get_playlist_pos(ir_gp.xmms_session);
+-					playlist_time = xmms_remote_get_playlist_time(ir_gp.xmms_session, playlist_pos);
+-					if (playlist_time - output_time < 5000)
+-						output_time = playlist_time - 5000;
+-					xmms_remote_jump_to_time(ir_gp.xmms_session, output_time + 5000);
++					xmms_remote_seek(ir_gp.xmms_session, + 5000);
+ 					g_timer_reset(timer1);
+ 					g_timer_reset(timer2);
+ 					g_timer_stop(timer2);
+@@ -305,10 +300,7 @@
+ 				}
+ 				else if (!strcmp(text, ircfg.button_seekb) && g_timer_elapsed(timer1, NULL) > S_PAUSE / 2)
+ 				{
+-					output_time = xmms_remote_get_output_time(ir_gp.xmms_session);
+-					if (output_time < 5000)
+-						output_time = 5000;
+-					xmms_remote_jump_to_time(ir_gp.xmms_session, output_time - 5000);
++					xmms_remote_seek(ir_gp.xmms_session, - 5000);
+ 					g_timer_reset(timer1);
+ 					g_timer_reset(timer2);
+ 					g_timer_stop(timer2);
+diff -r -u xmms-1.2.7/General/joystick/joy.c xmms-1.2.7-patched/General/joystick/joy.c
+--- xmms-1.2.7/General/joystick/joy.c	Mon Feb  5 15:27:10 2001
++++ xmms-1.2.7-patched/General/joystick/joy.c	Sat Jun  1 17:27:31 2002
+@@ -343,18 +343,10 @@
+ 					xmms_remote_set_volume(joy_gp.xmms_session, vl - 5, vr - 5);
+ 					break;
+ 				case JC_FWD:
+-					output_time = xmms_remote_get_output_time(joy_gp.xmms_session);
+-					playlist_pos = xmms_remote_get_playlist_pos(joy_gp.xmms_session);
+-					playlist_time = xmms_remote_get_playlist_time(joy_gp.xmms_session, playlist_pos);
+-					if (playlist_time - output_time < 5000)
+-						output_time = playlist_time - 5000;
+-					xmms_remote_jump_to_time(joy_gp.xmms_session, output_time + 5000);
++					xmms_remote_seek(joy_gp.xmms_session, + 5000);
+ 					break;
+ 				case JC_RWD:
+-					output_time = xmms_remote_get_output_time(joy_gp.xmms_session);
+-					if (output_time < 5000)
+-						output_time = 5000;
+-					xmms_remote_jump_to_time(joy_gp.xmms_session, output_time - 5000);
++					xmms_remote_seek(joy_gp.xmms_session, - 5000);
+ 					break;
+ 				case JC_SHUFFLE:
+ 					xmms_remote_toggle_shuffle(joy_gp.xmms_session);
+diff -r -u xmms-1.2.7/Input/mikmod/plugin.c xmms-1.2.7-patched/Input/mikmod/plugin.c
+--- xmms-1.2.7/Input/mikmod/plugin.c	Mon Jul 23 14:26:27 2001
++++ xmms-1.2.7-patched/Input/mikmod/plugin.c	Sat Jun  1 17:27:31 2002
+@@ -150,15 +150,8 @@
+ 
+ static void seek(int time)
+ {
+-	/*
+-	   We need to seek in pattrens somehow
+-	   can't seek by time only by X pattrens on way or the other
+-
+-	   Player_NextPosition ();
+-	   Player_PrevPosition ();
+-
+-	 */
+-	return;
++	Player_SetPosition(time);
++	mikmod_ip.output->flush(get_time());
+ }
+ 
+ static void mod_pause(short p)
+@@ -174,6 +167,7 @@
+ 		return -1;
+ 	if(!Player_Active() && !mikmod_ip.output->buffer_playing())
+ 		return -1;
++	set_song_position(mf->sngpos, 0, (mf->numpos - 1));
+ 	return mikmod_ip.output->output_time();
+ }
+ 
+Only in xmms-1.2.7-patched/Input/mikmod: plugin.c~
+diff -r -u xmms-1.2.7/Input/mpg123/common.c xmms-1.2.7-patched/Input/mpg123/common.c
+--- xmms-1.2.7/Input/mpg123/common.c	Wed Feb 20 15:17:30 2002
++++ xmms-1.2.7-patched/Input/mpg123/common.c	Sat Jun  1 17:27:31 2002
+@@ -56,6 +56,13 @@
+ static FILE *filept;
+ static int filept_opened;
+ 
++int streaming_http(void)
++{
++	if (!filept_opened) return FALSE;
++	if (filept) return FALSE;
++	return TRUE;
++}
++
+ static int get_fileinfo(void);
+ 
+ static int fullread(FILE * fd, unsigned char *buf, int count)
+diff -r -u xmms-1.2.7/Input/mpg123/http.c xmms-1.2.7-patched/Input/mpg123/http.c
+--- xmms-1.2.7/Input/mpg123/http.c	Mon Jan  7 15:08:04 2002
++++ xmms-1.2.7-patched/Input/mpg123/http.c	Sat Jun  1 17:27:31 2002
+@@ -194,6 +194,11 @@
+ 	return (buffer_length - (wr_index - rd_index)) - 1;
+ }
+ 
++void show_http_buffer_fullness(void)
++{
++	set_song_position(http_used(), 0, buffer_length);
++}
++
+ static void http_wait_for_data(gint bytes)
+ {
+ 	while ((prebuffering || http_used() < bytes) && !eof && going && mpg123_info->going)
+Only in xmms-1.2.7-patched/Input/mpg123: http.c~
+diff -r -u xmms-1.2.7/Input/mpg123/mpg123.c xmms-1.2.7-patched/Input/mpg123/mpg123.c
+--- xmms-1.2.7/Input/mpg123/mpg123.c	Wed Feb 20 15:17:31 2002
++++ xmms-1.2.7-patched/Input/mpg123/mpg123.c	Sat Jun  1 17:27:31 2002
+@@ -1059,8 +1059,13 @@
+ 	}
+ }
+ 
++int streaming_http(void);
++void show_http_buffer_fullness(void);
++
+ static void seek(int time)
+ {
++	if (streaming_http())
++			return;
+ 	mpg123_info->jump_to_time = time;
+ 
+ 	while (mpg123_info->jump_to_time != -1)
+@@ -1083,6 +1088,8 @@
+ 		return -1;
+ 	if (!mpg123_info->going || (mpg123_info->eof && !mpg123_ip.output->buffer_playing()))
+ 		return -1;
++	if (streaming_http())
++		show_http_buffer_fullness();
+ 	return mpg123_ip.output->output_time();
+ }
+ 
+Only in xmms-1.2.7-patched/Input/mpg123: mpg123.c~
+diff -r -u xmms-1.2.7/libxmms/xmmsctrl.c xmms-1.2.7-patched/libxmms/xmmsctrl.c
+--- xmms-1.2.7/libxmms/xmmsctrl.c	Sun Mar  3 21:24:27 2002
++++ xmms-1.2.7-patched/libxmms/xmmsctrl.c	Sat Jun  1 17:27:31 2002
+@@ -377,6 +377,11 @@
+ 	remote_send_guint32(session, CMD_JUMP_TO_TIME, pos);
+ }
+ 
++void xmms_remote_seek(gint session, gint off)
++{
++	remote_send_guint32(session, CMD_SEEK, off);
++}
++
+ void xmms_remote_get_volume(gint session, gint * vl, gint * vr)
+ {
+ 	ServerPktHeader pkt_hdr;
+Only in xmms-1.2.7-patched/libxmms: xmmsctrl.c~
+diff -r -u xmms-1.2.7/libxmms/xmmsctrl.h xmms-1.2.7-patched/libxmms/xmmsctrl.h
+--- xmms-1.2.7/libxmms/xmmsctrl.h	Sun Mar  3 21:24:27 2002
++++ xmms-1.2.7-patched/libxmms/xmmsctrl.h	Sat Jun  1 17:27:31 2002
+@@ -42,6 +42,7 @@
+ void xmms_remote_playlist_clear(gint session);
+ gint xmms_remote_get_output_time(gint session);
+ void xmms_remote_jump_to_time(gint session, gint pos);
++void xmms_remote_seek(gint session, gint off);
+ void xmms_remote_get_volume(gint session, gint * vl, gint * vr);
+ gint xmms_remote_get_main_volume(gint session);
+ gint xmms_remote_get_balance(gint session);
+Only in xmms-1.2.7-patched/libxmms: xmmsctrl.h~
+diff -r -u xmms-1.2.7/xmms/controlsocket.c xmms-1.2.7-patched/xmms/controlsocket.c
+--- xmms-1.2.7/xmms/controlsocket.c	Sun Mar  3 21:24:33 2002
++++ xmms-1.2.7-patched/xmms/controlsocket.c	Sat Jun  1 17:28:51 2002
+@@ -451,6 +451,10 @@
+ 				    num < playlist_get_current_length())
+ 					input_seek(num / 1000);
+ 				break;
++			case CMD_SEEK:
++				num = *((guint32 *) data);
++				song_seek(num);
++				break;
+ 			case CMD_SET_VOLUME:
+ 				v[0] = ((guint32 *) data)[0];
+ 				v[1] = ((guint32 *) data)[1];
+diff -r -u xmms-1.2.7/xmms/controlsocket.h xmms-1.2.7-patched/xmms/controlsocket.h
+--- xmms-1.2.7/xmms/controlsocket.h	Sun Mar  3 21:24:33 2002
++++ xmms-1.2.7-patched/xmms/controlsocket.h	Sat Jun  1 17:27:31 2002
+@@ -33,7 +33,7 @@
+ 	CMD_GET_VERSION, CMD_PLAYLIST_ADD, CMD_PLAY, CMD_PAUSE, CMD_STOP,
+ 	CMD_IS_PLAYING, CMD_IS_PAUSED, CMD_GET_PLAYLIST_POS,
+ 	CMD_SET_PLAYLIST_POS, CMD_GET_PLAYLIST_LENGTH, CMD_PLAYLIST_CLEAR,
+-	CMD_GET_OUTPUT_TIME, CMD_JUMP_TO_TIME, CMD_GET_VOLUME,
++	CMD_GET_OUTPUT_TIME, CMD_JUMP_TO_TIME, CMD_SEEK, CMD_GET_VOLUME,
+ 	CMD_SET_VOLUME, CMD_GET_SKIN, CMD_SET_SKIN, CMD_GET_PLAYLIST_FILE,
+ 	CMD_GET_PLAYLIST_TITLE, CMD_GET_PLAYLIST_TIME, CMD_GET_INFO,
+ 	CMD_GET_EQ_DATA, CMD_SET_EQ_DATA, CMD_PL_WIN_TOGGLE,
+diff -r -u xmms-1.2.7/xmms/input.c xmms-1.2.7-patched/xmms/input.c
+--- xmms-1.2.7/xmms/input.c	Wed Jul 11 14:19:23 2001
++++ xmms-1.2.7-patched/xmms/input.c	Sat Jun  1 17:27:31 2002
+@@ -295,6 +295,7 @@
+ 		}
+ 	}
+ 	ip_data->playing = FALSE;
++	set_song_position(0, 0, 0);
+ }
+ 
+ void input_pause(void)
+diff -r -u xmms-1.2.7/xmms/main.c xmms-1.2.7-patched/xmms/main.c
+--- xmms-1.2.7/xmms/main.c	Wed Feb 27 15:30:28 2002
++++ xmms-1.2.7-patched/xmms/main.c	Sat Jun  1 17:28:05 2002
+@@ -681,6 +681,55 @@
+ 	g_free(filename);
+ }
+ 
++/*\
++|*| Separate song position stuff, for songs without a time length,
++|*|  but that want to be able to seek anyway.
++|*|      
++|*|      Have the input plugin's get_time() function call
++|*|      set_song_position(int pos, int first, int last)
++|*|      to set the slider.  If the slider is dragged,
++|*|      the plugin's seek() is called with the position.
++|*|      (If last <= first the feature is turned off)
++\*/
++
++static int song_pos_cur, song_pos_first, song_pos_num = 0;
++
++void set_song_position(int pos, int first, int last)
++{
++	last -= first;
++	song_pos_cur = pos;
++	song_pos_first = first;
++	song_pos_num = last;
++	if (last <= 0) return;
++	pos -= first;
++	if (pos > last) pos = last;
++	if (cfg.player_shaded)
++		show_widget(mainwin_sposition);
++	show_widget(mainwin_position);
++	hslider_set_position(mainwin_position, (pos * 219) / last);
++	hslider_set_position(mainwin_sposition, ((pos * 12) / last) + 1);
++}
++
++void song_seek(gint off)
++{
++	if (!get_input_playing()) return;
++	if (song_pos_num > 0) {
++		gint newpos = 0;
++		if (off < 0) newpos = song_pos_cur - 1;
++		else if (off > 0) newpos = song_pos_cur + 1;
++		if (newpos < song_pos_first) newpos = song_pos_first;
++		if (newpos > song_pos_first + song_pos_num)
++			newpos = song_pos_first + song_pos_num;
++		input_seek(newpos);
++	} else {
++		gint newpos = (input_get_time() / 1000) + (off / 1000);
++		gint pcl = playlist_get_current_length() / 1000;
++		if (newpos >= pcl) newpos = pcl - 1;
++		if (newpos < 0) newpos = 0;
++		input_seek(newpos);
++	}
++}
++
+ gchar *xmms_get_gentitle_format(void)
+ {
+ 	return cfg.gentitle_format;
+@@ -760,7 +809,9 @@
+ 		show_widget(mainwin_stime_min);
+ 		show_widget(mainwin_stime_sec);
+ 
+-		if (get_input_playing() && playlist_get_current_length() != -1)
++		if (get_input_playing() &&
++			((playlist_get_current_length() != -1) ||
++				 (song_pos_num > 0)))
+ 			show_widget(mainwin_sposition);
+ 
+ 		mainwin_shade->pb_ny = mainwin_shade->pb_py = 27;
+@@ -1056,7 +1107,7 @@
+ 	show_widget(mainwin_sec_num);
+ 	if (!get_input_paused())
+ 		playstatus_set_status(mainwin_playstatus, STATUS_PLAY);
+-	if (playlist_get_current_length() != -1)
++	if ((playlist_get_current_length() != -1) || (song_pos_num > 0))
+ 	{
+ 		if (cfg.player_shaded)
+ 			show_widget(mainwin_sposition);
+@@ -1352,13 +1403,19 @@
+ 		break;
+ 	case GDK_Left:
+ 	case GDK_KP_Left:
++/*
+ 		if(playlist_get_current_length() != -1)
+ 			input_seek(CLAMP(input_get_time() - 5000, 0, playlist_get_current_length()) / 1000);
++*/
++		song_seek(-5000);
+ 		break;
+ 	case GDK_Right:
+ 	case GDK_KP_Right:
++/*
+ 		if(playlist_get_current_length() != -1)
+ 			input_seek(CLAMP(input_get_time() + 5000, 0, playlist_get_current_length()) / 1000);
++*/
++		song_seek(+5000);
+ 		break;
+ 	default:
+ 	     break;
+@@ -1988,6 +2045,16 @@
+ 
+ 	pos--;
+ 
++	if (song_pos_num > 0) {
++		time = ((song_pos_num * pos + 6) / 12) + song_pos_first;
++		tmp = g_strdup_printf("%d", time);
++		textbox_set_text(mainwin_stime_min, tmp);
++		g_free(tmp);
++		tmp = g_strdup_printf("%d", song_pos_first + song_pos_num);
++		textbox_set_text(mainwin_stime_sec, tmp);
++		g_free(tmp);
++		return;
++	}
+ 	time = ((playlist_get_current_length() / 1000) * pos) / 12;
+ 	if (cfg.timer_mode == TIMER_REMAINING)
+ 	{
+@@ -2009,6 +2076,10 @@
+ 
+ void mainwin_spos_release_cb(gint pos)
+ {
++	if (song_pos_num > 0) {
++		input_seek(((song_pos_num * (pos - 1) + 6) / 12) + song_pos_first);
++		return;
++	}
+ 	input_seek(((playlist_get_current_length() / 1000) * (pos - 1)) / 12);
+ }
+ 
+@@ -2017,6 +2088,14 @@
+ 	gint length, time;
+ 	gchar *buf;
+ 
++	if (song_pos_num > 0) {
++		time = ((song_pos_num * pos + 110) / 219) + song_pos_first;
++		buf = g_strdup_printf("JUMP TO: %d/%d", time,
++				song_pos_num + song_pos_first);
++		mainwin_lock_info_text(buf);
++		g_free(buf);
++		return;
++	}
+ 	length = playlist_get_current_length() / 1000;
+ 	time = (length * pos) / 219;
+ 	buf = g_strdup_printf(_("SEEK TO: %d:%-2.2d/%d:%-2.2d (%d%%)"), time / 60, time % 60, length / 60, length % 60, (length != 0) ? (time * 100) / length : 0);
+@@ -2028,6 +2107,12 @@
+ {
+ 	int length, time;
+ 
++	if (song_pos_num > 0) {
++		time = ((song_pos_num * pos + 110) / 219) + song_pos_first;
++		input_seek(time);
++		mainwin_release_info_text();
++		return;
++	}
+ 	length = playlist_get_current_length() / 1000;
+ 	time = (length * pos) / 219;
+ 	input_seek(time);
+@@ -2423,12 +2508,10 @@
+ 	case MAINWIN_GENERAL_STOPFADE:
+ 		break;
+ 	case MAINWIN_GENERAL_BACK5SEC:
+-		if (get_input_playing() && playlist_get_current_length() != -1)
+-			input_seek((((input_get_time() / 1000) - 5 >= 0) ? (input_get_time() / 1000) - 5 : 0));
++		song_seek(-5000);
+ 		break;
+ 	case MAINWIN_GENERAL_FWD5SEC:
+-		if (get_input_playing() && playlist_get_current_length() != -1)
+-			input_seek(((((input_get_time() / 1000) + 5) < (playlist_get_current_length() / 1000)) ? ((input_get_time() / 1000) + 5) : ((playlist_get_current_length() / 1000) - 1)));
++		song_seek(+5000);
+ 		break;
+ 	case MAINWIN_GENERAL_START:
+ 		playlist_set_position(0);
+@@ -3032,7 +3115,7 @@
+ 					hslider_set_position(mainwin_sposition, ((time * 12) / length) + 1);
+ 				}
+ 			}
+-			else
++			else if (song_pos_num <= 0)
+ 			{
+ 				hslider_set_position(mainwin_position, 0);
+ 				hslider_set_position(mainwin_sposition, 1);
+diff -r -u xmms-1.2.7/xmms/main.h xmms-1.2.7-patched/xmms/main.h
+--- xmms-1.2.7/xmms/main.h	Mon Jan 21 15:22:38 2002
++++ xmms-1.2.7-patched/xmms/main.h	Sat Jun  1 17:27:31 2002
+@@ -87,6 +87,7 @@
+ void mainwin_play_pushed(void);
+ void mainwin_stop_pushed(void);
+ void mainwin_eject_pushed(void);
++void song_seek(gint off);
+ 
+ void mainwin_set_back_pixmap(void);
+ 
+diff -r -u xmms-1.2.7/xmms/plugin.h xmms-1.2.7-patched/xmms/plugin.h
+--- xmms-1.2.7/xmms/plugin.h	Fri Jul  6 21:15:34 2001
++++ xmms-1.2.7-patched/xmms/plugin.h	Sat Jun  1 17:27:31 2002
+@@ -154,4 +154,6 @@
+ 	void (*render_freq)(gint16 freq_data[2][256]); /* Render the freq data, don't do anything time consuming in here */
+ } VisPlugin;
+ 
++void set_song_position(int pos, int first, int last);
++
+ #endif
+
