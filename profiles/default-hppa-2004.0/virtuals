@@ -1,7 +1,7 @@
 virtual/lpr             net-print/cups
 virtual/python          dev-lang/python
 virtual/mta             mail-mta/ssmtp
-virtual/alsa            sys-kernel/hppa-dev-sources
+virtual/alsa            sys-kernel/hppa-sources
 virtual/kernel          sys-kernel/hppa-headers
 virtual/linux-sources   sys-kernel/hppa-sources
 virtual/glibc           sys-libs/glibc
