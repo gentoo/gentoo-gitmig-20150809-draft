@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/cel-20030413.ebuild,v 1.2 2003/05/19 10:58:46 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/cel-20030413.ebuild,v 1.3 2003/06/10 20:48:27 msterret Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="dev-libs/crystalspace
+	>=sys-apps/sed-4
 	dev-util/jam
 	!dev-libs/cel-cvs"
 
