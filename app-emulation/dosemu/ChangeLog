@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.20 2004/06/24 22:30:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.21 2004/07/31 18:29:44 voxus Exp $
+
+*dosemu-1.2.2 (31 Jul 2004)
+
+  31 Jul 2004; Konstantin Arkhipov <voxus@gentoo.org> dosemu-1.2.2.ebuild:
+  Version bump, added gpm use flag.
 
   27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> dosemu-1.2.0.ebuild,
   dosemu-1.2.1.ebuild:
