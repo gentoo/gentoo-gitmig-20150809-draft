@@ -1,7 +1,7 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2
 # Author Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1.ebuild,v 1.1 2002/04/27 08:04:55 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1.ebuild,v 1.2 2002/04/27 08:21:54 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.alsa-project.org/pub/tools/${P/_rc/rc}.tar.bz2"
 S="${WORKDIR}/${P/_rc/rc}"
 
 DEPEND="virtual/glibc 
-        ~media-libs/alsa-lib-0.9.0.1_beta10
+        ~media-libs/alsa-lib-0.9.0_rc1
         >=x11-libs/gtk+-1.0.1"
 
 # This is a list of the tools in the package.
