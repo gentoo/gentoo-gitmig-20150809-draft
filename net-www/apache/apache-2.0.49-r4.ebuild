@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r4.ebuild,v 1.13 2004/07/25 21:10:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r4.ebuild,v 1.14 2004/08/12 01:11:31 mr_bones_ Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -110,14 +110,12 @@ src_unpack() {
 	sed -i -e "s:/var/www/localhost:${DATADIR}:g" srclib/apr-util/config.layout
 
 	WANT_AUTOCONF_2_5=1 WANT_AUTOCONF=2.5 ./buildconf || die "buildconf failed"
+	gnuconfig_update
 }
 
 src_compile() {
 	set_filter_flags
 	apache_setup_vars
-
-	# Detect mips systems properly
-	use mips && gnuconfig_update
 
 	local myconf
 	if use ldap; then
