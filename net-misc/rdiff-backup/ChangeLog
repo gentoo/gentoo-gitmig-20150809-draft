@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdiff-backup
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.27 2004/08/12 22:48:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.28 2004/09/18 16:23:56 weeve Exp $
+
+  18 Sep 2004; Jason Wever <weeve@gentoo.org> rdiff-backup-0.12.7.ebuild:
+  Stable on sparc.
 
   12 Aug 2004; Tom Martin <slarti@gentoo.org> rdiff-backup-0.13.4.ebuild:
   Marked ~amd64, resolving bug 59226. Thanks to Ryan Stinnett
