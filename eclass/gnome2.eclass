@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.36 2003/10/26 10:22:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.37 2003/11/30 22:47:20 plasmaroo Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -81,11 +81,12 @@ gnome2_gconf_install() {
 	then
 		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 		export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
-		einfo "installing gnome2 gconf schemas"	
+		einfo "Installing GNOME 2 GConf Schemas"	
 		cat ${ROOT}/var/db/pkg/*/${PN}-${PVR}/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
 			echo "DEBUG::gconf install  ${F}"
 			${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F}
 		done
+		echo
 	fi
 }
 
