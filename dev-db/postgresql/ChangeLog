@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.120 2004/08/22 08:56:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.121 2004/08/22 17:00:57 weeve Exp $
+
+  22 Aug 2004; Jason Wever <weeve@gentoo.org> postgresql-7.4.5.ebuild:
+  Marking ~sparc since it was insta-stablized.
 
   22 Aug 2004; Joshua Kinard <kumba@gentoo.org> postgresql-7.4.3-r1.ebuild:
   Marked stable on mips.
