@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.38 2002/11/11 21:13:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.39 2002/11/24 19:49:13 azarah Exp $
+
+  24 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre10.ebuild :
+
+  Add arts support, closing bug #11122.
 
 *mplayer-0.90_pre10 (11 Nov 2002)
 

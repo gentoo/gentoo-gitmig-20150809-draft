@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre10.ebuild,v 1.1 2002/11/11 21:13:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre10.ebuild,v 1.2 2002/11/24 19:49:13 azarah Exp $
 
-IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb"
+IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -37,6 +37,7 @@ RDEPEND="x86? ( >=media-libs/divx4linux-20020418 )
 	ggi? ( media-libs/libggi )
 	sdl? ( media-libs/libsdl )
 	alsa? ( media-libs/alsa-lib )
+	arts? ( kde-base/arts )
 	nas? ( media-libs/nas )
 	svga? ( media-libs/svgalib )
 	encode? ( media-sound/lame 
@@ -136,6 +137,9 @@ src_compile() {
 
 	use alsa \
 		|| myconf="${myconf} --disable-alsa"
+
+	use arts \
+		|| myconf="${myconf} --disable-arts"
 
 	use nas \
 		|| myconf="${myconf} --disable-nas"
