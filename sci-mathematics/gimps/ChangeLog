@@ -1,0 +1,44 @@
+# ChangeLog for app-sci/gimps
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.1 2004/12/28 05:30:36 ribosome Exp $
+
+*gimps-23.5 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/gimps-conf.d, +files/gimps-init.d, +gimps-23.5.ebuild,
+  +gimps-23.9-r1.ebuild:
+  Moved from app-sci/gimps to sci-mathematics/gimps.
+
+  18 Nov 2004; Olivier Fisette <ribosome@gentoo.org> -gimps-23.9.ebuild:
+  Removed insecure version. (See GLSA 200411-26.)
+
+*gimps-23.9-r1 (04 Nov 2004)
+
+  04 Nov 2004; Michal Januszewski <spock@gentoo.org> gimps-23.5.ebuild,
+  +gimps-23.9-r1.ebuild:
+  Changed ownership of mprime to root:root. Marked 23.9-r1 stable.
+
+  04 Nov 2004; Michal Januszewski <spock@gentoo.org> gimps-23.5.ebuild,
+  gimps-23.9.ebuild:
+  Changed default permissions to fix bug #69868.
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> gimps-23.9.ebuild:
+  Added binary-only keyword
+
+*gimps-23.9 (23 Sep 2004)
+
+  23 Sep 2004; Michal Januszewski <spock@gentoo.org> +gimps-23.9.ebuild:
+  Version bump.
+
+  29 Feb 2004; Michal Januszewski <spock@gentoo.org> files/gimps-init.d:
+  Init script clean-up, closes #43044.
+
+  18 Feb 2004; Michal Januszewski <spock@gentoo.org> gimps-23.5.ebuild:
+  Marked stable on x86.
+
+*gimps-23.5 (23 Jan 2004)
+
+  23 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org>
+  gimps-23.5.ebuild, metadata.xml:
+  Initial commit, closes bug #38010.
+
