@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.8 2003/03/16 23:59:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.9 2003/03/18 01:51:25 absinthe Exp $
+
+*commons-collections-2.1-r3 (17 Mar 2003)
+
+  17 Mar 2003; Dylan Carlson <absinthe@gentoo.org>
+  commons-collections-2.1-r3.ebuild:
+  Changed to use java-commons eclass.  Masked for testing.
 
 *commons-collections-2.1-r2 (16 Mar 2003)
 
