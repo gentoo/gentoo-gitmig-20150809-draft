@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.24 2004/07/12 22:19:44 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.25 2004/08/03 20:45:43 mr_bones_ Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -567,7 +567,7 @@ pkg_postinst() {
 		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
 	fi
 
-	if [ ! -e "${ROOT}/ld.so.1" -a "`use ppc64`" ]
+	if [ ! -e "${ROOT}/ld.so.1" ] && use ppc64
 	then
 		pushd ${ROOT}
 		cd ${ROOT}/lib
