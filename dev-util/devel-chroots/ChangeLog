@@ -1,9 +1,9 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.5 2004/08/14 23:46:03 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.6 2004/08/15 00:06:09 pappy Exp $
 
-  15 Aug 2004; Alexander Gabert <pappy@gentoo.org> devel-chroots-0.0.1.ebuild:
-  added new tar.gz with hopefully all errors fixed
+  15 Aug 2004; Alexander Gabert <pappy@gentoo.org> :
+  changes to control logic, fixed tar.gz, renamed script
 
   14 Aug 2004; Alexander Gabert <pappy@gentoo.org> devel-chroots-0.0.1.ebuild:
   initial import by the author
