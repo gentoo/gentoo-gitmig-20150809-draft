@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.35.0-r1.ebuild,v 1.5 2003/08/03 02:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.35.0-r2.ebuild,v 1.1 2003/08/16 08:53:07 jje Exp $
 
 # Miller Puckette uses nonstandard versioning scheme that we have to crunch
 MY_P=`echo ${P} | sed 's/\.\([0-9]\+\)$/-\1/'`
@@ -12,11 +12,11 @@ SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.linux.tar.gz"
 
 LICENSE="BSD | as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="X alsa"
 
-DEPEND=">=dev-lang/tcl-8.3.3
-	>=dev-lang/tk-8.3.3
+DEPEND="=dev-lang/tcl-8.3*
+	=dev-lang/tk-8.3*
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	X? ( x11-base/xfree )"
 
