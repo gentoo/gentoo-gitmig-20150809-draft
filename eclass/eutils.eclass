@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.5 2002/11/11 22:36:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.6 2002/11/12 18:25:37 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselfs.
 #
@@ -89,6 +89,9 @@ EPATCH_SOURCE="${WORKDIR}/patch"
 EPATCH_SUFFIX="patch.bz2"
 # Default options for patch
 EPATCH_OPTS=""
+# List of patches not to apply.  Not this is only file names,
+# and not the full path ..
+EPATCH_EXCLUDE=""
 
 # This function is for bulk patching, or in theory for just one
 # or two patches.
@@ -153,10 +156,10 @@ epatch() {
 		bz2)
 			PIPE_CMD="bzip2 -dc"
 			;;
-		gz)
+		gz|Z|z)
 			PIPE_CMD="gzip -dc"
 			;;
-		zip)
+		ZIP|zip)
 			PIPE_CMD="unzip -p"
 			;;
 		*)
@@ -179,6 +182,14 @@ epatch() {
 		then
 			local count=0
 			local popts="${EPATCH_OPTS}"
+
+			if [ -n "${EPATCH_EXCLUDE}" ]
+			then
+				if [ "${EPATCH_EXCLUDE/${x##*/}}" != "${EPATCH_EXCLUDE}" ]
+				then
+					continue
+				fi
+			fi
 			
 			if [ "${SINGLE_PATCH}" = "yes" ]
 			then
