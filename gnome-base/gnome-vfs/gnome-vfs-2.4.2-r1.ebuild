@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.2.ebuild,v 1.1 2004/02/05 18:16:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.2-r1.ebuild,v 1.1 2004/02/07 11:29:50 foser Exp $
 
 inherit gnome2
 
@@ -37,6 +37,6 @@ src_install() {
 	gnome2_src_install
 
 	# FIXME: there are cleaner ways to do this
-	echo "trash:	folder-desktop" >> ${D}/etc/gnome-vfs-2.0/modules/default-modules.conf
+	echo "trash:	vfolder-desktop" >> ${D}/etc/gnome-vfs-2.0/modules/default-modules.conf
 
 }
