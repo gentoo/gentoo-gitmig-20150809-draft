@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0d7c267c0c504f5e5a322ae34f402552 ChangeLog 1943
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 552d4816eef9bc465ba9f8a918f80f26 sysvinit-2.83-r1.ebuild 1074
 MD5 424f29ad5a264970cd802f9ec91bad20 sysvinit-2.83.ebuild 1037
 MD5 3003e070f46d5a0c9a2a4d8753c67801 sysvinit-2.84.ebuild 2003
-MD5 2a2361267cccc255f61a8dd090319a21 sysvinit-2.85-r1.ebuild 2541
+MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
 MD5 06f8b8527ed3a08f86f531232d6ea9ba sysvinit-2.85.ebuild 1887
 MD5 f3cc010ab25be0d757030537126157a8 files/digest-sysvinit-2.83 64
 MD5 f3cc010ab25be0d757030537126157a8 files/digest-sysvinit-2.83-r1 64
@@ -17,10 +14,3 @@ MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
 MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85 64
 MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85-r1 64
 MD5 3c171d9c843284ce606663e4e6da26e9 files/sysvinit-2.85-selinux.patch 6448
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBitf2HTu7gpaalycRAn62AJ9KQ2rtAGs8/maqSPEhgW018q35YgCfQNBO
-aVSDNOp9HePlF28k/TPZgYU=
-=2Kpp
------END PGP SIGNATURE-----
