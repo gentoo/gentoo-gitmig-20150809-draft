@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tftp-hpa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.4 2004/03/22 04:33:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.5 2004/04/15 18:07:36 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> tftp-hpa-0.34-r1.ebuild:
+  adding s390 keywords
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> tftp-hpa-0.34-r1.ebuild:
   Marked stable on sparc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/tftp-hpa-0.33.ebuild,v 1.1 2003/08/28 22:41:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/tftp-hpa-0.33.ebuild,v 1.2 2004/04/15 18:07:36 randy Exp $
 
 DESCRIPTION="port of the OpenBSD TFTP server"
 SRC_URI="mirror://kernel/software/network/tftp/${P}.tar.bz2"
