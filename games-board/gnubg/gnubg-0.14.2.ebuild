@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.5 2004/09/16 00:52:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.6 2004/12/10 03:21:25 mr_bones_ Exp $
 
-inherit gnuconfig games
+inherit gnuconfig flag-o-matic games
 
 WPV="0.14"
 DESCRIPTION="GNU BackGammon"
@@ -80,6 +80,8 @@ src_compile() {
 	else
 		myconf="${myconf} --without-sound --disable-esdtest --disable-artsc-test"
 	fi
+
+	filter-flags -ffast-math #bug #67929
 
 	# configure script doesn't handle this option correctly.
 	#       `use_with guile` \
