@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.23 2003/12/14 04:11:32 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.24 2003/12/20 01:14:28 gmsoft Exp $
 
   14 Dec 2003; Alexander Gabert <pappy@gentoo.org> dietlibc-0.24.ebuild:
   added filter-flags logic for propolice
@@ -30,6 +30,10 @@
   Added sparc64 fix for bug #27171.
 
 *dietlibc-0.23 (12 Sep 2003)
+
+  20 Dec 2003; Guy Martin <gmsoft@gentoo.org> dietlibc-0.23.ebuild,
+  files/dietlibc-0.23-hppa.patch:
+  Added hppa patch. Fix #32701.
 
   12 Sep 2003; <solar@gentoo.org> dietlibc-0.23.ebuild,
   files/0.23-dirent-prototype.patch:
