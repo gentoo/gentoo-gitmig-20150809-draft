@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0.ebuild,v 1.5 2004/08/30 15:45:00 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0.ebuild,v 1.6 2004/08/31 12:48:55 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -17,7 +17,7 @@ IUSE="alsa oggvorbis esd artswrappersuid jack mad"
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	esd? ( media-sound/esound )
-	jack? ( media-sound/jack )
+	jack? ( media-sound/jack-audio-connection-kit )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
 	>=dev-libs/glib-2
