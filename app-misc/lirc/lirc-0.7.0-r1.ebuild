@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.1 2004/12/03 15:32:47 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.2 2004/12/09 13:03:47 lanius Exp $
 
 inherit eutils linux-mod
 
@@ -44,7 +44,12 @@ LICENSE="GPL-2"
 IUSE="debug doc streamzap"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
 
-DEPEND="virtual/linux-sources"
+RDEPEND="virtual/libc
+	X11? ( virtual/x11 )"
+	
+DEPEND="virtual/linux-sources
+	sys-devel/autoconf
+	${RDEPEND}"
 
 SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
 
@@ -66,8 +71,7 @@ src_compile() {
 		--with-port=0x3f8 --with-irq=4"
 
 	# remove parallel driver on SMP systems
-	if [ ! -z "`uname -v | grep SMP`" ]
-	then
+	if [ ! -z "`uname -v | grep SMP`" ]; then
 		sed -i -e "s:lirc_parallel::" drivers/Makefile
 	fi
 
@@ -80,6 +84,8 @@ src_compile() {
 		die "/lib/modules sed failed"
 
 	unset ARCH
+	export WANT_AUTOCONF=2.5
+
 	econf \
 		--disable-manage-devices \
 		--localstatedir=/var \
