@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/packit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.8 2004/07/11 10:34:11 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.9 2004/07/12 09:01:30 eldad Exp $
+
+  12 Jul 2004; Eldad Zack <eldad@gentoo.org> packit-0.7.ebuild:
+  Fixed deps - can only compile with libnet-1.1.1. Closes #56694.
 
   11 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   packit-0.6.0c-r1.ebuild, packit-0.7.ebuild:

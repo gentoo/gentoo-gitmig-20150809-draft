@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-0.7.ebuild,v 1.5 2004/07/11 10:34:11 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-0.7.ebuild,v 1.6 2004/07/12 09:01:30 eldad Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=net-libs/libnet-1.1.0-r3"
+DEPEND="=net-libs/libnet-1.1.1*"
 
 src_unpack() {
 	unpack ${A}
