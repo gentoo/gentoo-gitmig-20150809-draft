@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r5.ebuild,v 1.3 2002/03/12 22:19:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r5.ebuild,v 1.4 2002/03/20 23:12:12 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -74,17 +74,25 @@ src_unpack() {
 	rm Makefile.orig
 }
 
+src_compile() {
+	if [ "$PN" = "linux-headers" ]
+	then
+		yes "" | make oldconfig		
+		echo "Ignore any errors from the yes command above."
+	fi
+}
+
 src_install() {
 	if [ "$PN" = "linux-sources" ]
 	then
 		dodir /usr/src
-		cd ${S}
 		echo ">>> Copying sources..."
 		mv ${WORKDIR}/* ${D}/usr/src
 	else
 		#linux-headers
 		dodir /usr/include/linux
 		cp -ax ${S}/include/linux/* ${D}/usr/include/linux
+		rm -rf ${D}/usr/include/linux/modules
 		dodir /usr/include/asm
 		cp -ax ${S}/include/asm-i386/* ${D}/usr/include/asm
 	fi

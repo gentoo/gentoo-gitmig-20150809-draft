@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/linux-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/ChangeLog,v 1.6 2002/03/12 18:22:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/ChangeLog,v 1.7 2002/03/20 23:12:12 drobbins Exp $
+
+*linux-sources-2.4.17-r5 (20 Mar 2002)
+*linux-sources-2.4.18 (20 Mar 2002)
+
+  20 Mar 2002; Daniel Robbins <drobbins@gentoo.org>: We now do a "yes "" | make
+  oldconfig" for linux-headers (in src_compile()) in order to ensure that
+  /usr/include/linux/autoconf.h gets merged, which is required for things such
+  as iptables and likely many other packages.  No rev bump.
 
 *linux-sources-2.4.17-r5 (12 Mar 2002)
 *linux-sources-2.4.18 (12 Mar 2002)
