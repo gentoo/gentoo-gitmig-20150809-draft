@@ -7,6 +7,6 @@ MD5 35519288ced0c9c3a2893d16e666a5cf files/portage-rescue-2.0.49-r3-alpha.tbz2 2
 MD5 078bf046d839129b0efe44362beeeda3 files/digest-portage-2.0.49-r21 71
 MD5 1385fe23e0fd1fe4d30ba915df2af4b6 files/digest-portage-2.0.50-r1 70
 MD5 73094a2d75dca36817b40611589ea226 files/portage-rescue-2.0.44-ppc.tbz2 168027
-MD5 33918db1e602f2c76d38ed85f002ed3b files/README.RESCUE 1436
+MD5 74e6d2c3002dd2370ab9bd9f4fcb7dc6 files/README.RESCUE 1689
 MD5 e2f7d2797f76d586452705abed1e515e files/portage-rescue-2.0.48-r1-sparc64.tbz2 227569
 MD5 fa4bfa4ee3ec778658dadf6a63864877 files/portage-rescue-2.0.49-r15-amd64.tbz2 289608

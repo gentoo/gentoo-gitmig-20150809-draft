@@ -24,17 +24,24 @@ Run the following to extract the tarball (substitute your arch for 'x86')
 You'll see a warning about garbage at the end of the tarball/bzip2.  That's
 normal and not a problem.  That should get Portage up and running again.
 
-Immediately after that finishes do the following:
+It may be necessary to disable sandbox temporarily while you work out
+the issues on your system. To do this just run:
+# export FEATURES="-sandbox"
+and when you finish getting everything fixed either close the shell or type:
+# unset FEATURES
+
+After the rescue portage is extracted do the following:
 # emerge sync
 # emerge portage
 
-And for >=portage-2.0.50, this is optional, but will speed up
-interactions with portage from that point on.
+Everything should be fine from this point on.
+
+For >=portage-2.0.50, this is optional, but will speed up
+interactions with portage from this point on.
 # emerge metadata
 
-Everything should be fine from then on.
+
 
 Best Regards,
-
-Gentoo Linux
+  Gentoo Linux
 
