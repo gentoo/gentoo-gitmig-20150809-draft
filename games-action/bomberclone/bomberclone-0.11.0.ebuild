@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.10.1.ebuild,v 1.2 2004/01/07 06:22:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.0.ebuild,v 1.1 2004/01/07 06:22:58 mr_bones_ Exp $
 
 inherit games
 
@@ -19,19 +19,20 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_compile() {
-	egamesconf --datadir=${GAMES_DATADIR_BASE} || die
+	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
 	sed -i \
 		-e "/PACKAGE_DATA_DIR/ s:/usr/games/share/games/:${GAMES_DATADIR}/:" \
-			config.h || die "sed config.h"
+			config.h || die "sed config.h failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	dogamesbin src/${PN}
+	dogamesbin "src/${PN}" || die "dogamesbin failed"
 
-	dodir ${GAMES_DATADIR}/${PN}
-	cp -R data/{gfx,maps,player,tileset}/ ${D}/${GAMES_DATADIR}/${PN}
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -R data/{gfx,maps,player,tileset}/ ${D}/${GAMES_DATADIR}/${PN} \
+		|| die "cp failed"
 
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
 	prepgamesdirs
 }
