@@ -1,28 +1,33 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r2.ebuild,v 1.3 2003/09/06 22:23:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r4.ebuild,v 1.1 2004/03/17 16:33:59 phosphan Exp $
+
+inherit eutils
 
 MY_P="SNNSv${PV}"
+MYPATCH="${P}-20040227"
 DESCRIPTION="Stuttgart Neural Network Simulator"
 HOMEPAGE="http://www-ra.informatik.uni-tuebingen.de/SNNS/"
 SRC_URI="http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/${MY_P}.tar.gz
+	http://download.berlios.de/snns-dev/${MYPATCH}.patch.gz
 	doc? ( http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/${MY_P}.Manual.pdf )"
 
 LICENSE="SNNS-${PV}"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 IUSE="X doc"
 
-DEPEND="X? ( virtual/x11 )
+DEPEND="X? ( virtual/x11
+	x11-libs/Xaw3d )
+	>=sys-apps/sed-4
 	virtual/glibc"
 
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-
-	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-gentoo.patch || die "patch failed"
+	unpack ${MYPATCH}.patch.gz
+	epatch ${MYPATCH}.patch
 }
 
 src_compile() {
