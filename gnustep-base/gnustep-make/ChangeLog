@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.23 2005/03/17 20:51:22 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.24 2005/03/22 22:53:11 fafhrd Exp $
+
+*gnustep-make-1.10.1_pre20050312-r1 (22 Mar 2005)
+
+  22 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +gnustep-make-1.10.0-r2.ebuild,
+  +gnustep-make-1.10.1_pre20050312-r1.ebuild:
+  needed to bump for gnustep.eclass changes per bug 86089
 
 *gnustep-make-1.10.1_pre20050312 (17 Mar 2005)
 
