@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.19 2004/10/02 21:24:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.20 2004/11/20 08:31:58 mrness Exp $
+
+*mingetty-1.07.3 (20 Nov 2004)
+
+  20 Nov 2004; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  +mingetty-1.07.3.ebuild:
+  Version bump.
 
   02 Oct 2004; <solar@gentoo.org> +files/mingetty-1.00-strerror.patch,
   mingetty-1.00.3.ebuild:
