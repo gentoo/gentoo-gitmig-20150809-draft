@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.9 2004/01/13 11:03:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.10 2004/02/22 12:22:57 plasmaroo Exp $
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -48,7 +48,7 @@ src_compile() {
 		cd ${S}/setkey && emake || die
 
 		cd ${S}/racoon
-		autoconf || die; econf || die; emake || die
+		autoconf; econf || die; emake || die
 	fi
 
 	cd ${S}
