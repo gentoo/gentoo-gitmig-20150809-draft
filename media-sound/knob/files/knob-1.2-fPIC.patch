@@ -1,0 +1,11 @@
+--- knob-1.2-orig/knob/Makefile.in	2004-07-05 01:17:10.692395704 +0200
++++ knob-1.2/knob/Makefile.in	2004-07-05 01:21:41.027298552 +0200
+@@ -310,7 +310,7 @@
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+-CPPFLAGS = @CPPFLAGS@
++CPPFLAGS = -fPIC @CPPFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ am__depfiles_maybe = depfiles
