@@ -3,11 +3,6 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-  <description>Maintaining until net-fs gets off its feet</description>
-</maintainer>
-<maintainer>
-  <email>net-fs@gentoo.org</email>
-  <description>Coda is the only package that requires rpc2 as a dependancy</description>
+  <email>griffon26@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
