@@ -1,16 +1,15 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.2 2002/08/14 07:44:06 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.3 2002/08/18 03:35:41 blocke Exp $
+
+*bsdsfv-1.0.13 (17 Aug 2002)
+
+  17 Aug 2002; Bruce A. Locke <blocke@shivan.org> bsdsfv-1.0.13.ebuild:
+
+  Version Bump (reminded by cr0t.daywalker@gmx.net (Cr0t))
 
 *bsdsfv-1.0.12 (1 Feb 2002)
 
   13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ppc keyword
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
