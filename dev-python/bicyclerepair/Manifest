@@ -1,6 +1,18 @@
-MD5 b759fbc3de86ce5abcf9034f57a34a71 bicyclerepair-0.7.1-r1.ebuild 1371
-MD5 564bbd63738edf66d7a7e17ba6e5df62 ChangeLog 1038
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 f8c053aa6adfd74dbf301e4a4f845778 bicyclerepair-0.7.1.ebuild 1025
-MD5 1929efd859e004d9dfe70dde4e1c8940 files/digest-bicyclerepair-0.7.1-r1 70
+MD5 eaafc19eef14024c9218dc9a91c5a8af bicyclerepair-0.7.1.ebuild 1023
+MD5 429591a119651e7291f67831e322996c ChangeLog 1170
+MD5 a92dd7c2f4a7798a07968997e3c35923 bicyclerepair-0.7.1-r1.ebuild 1369
+MD5 366a432c1c616ff0e0c920a29497c23a bicyclerepair-0.9.ebuild 1365
+MD5 a95d1f58d5a668d967f22340edd1686d files/digest-bicyclerepair-0.9 69
 MD5 1929efd859e004d9dfe70dde4e1c8940 files/digest-bicyclerepair-0.7.1 70
+MD5 1929efd859e004d9dfe70dde4e1c8940 files/digest-bicyclerepair-0.7.1-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDd+rugEuf3OQ0akRAv2MAKCeLglfwd7vCDJhh5rRtJglJdg82ACfQ56L
+/rhKtY1VGUT8iARYbo22v6M=
+=/3fc
+-----END PGP SIGNATURE-----

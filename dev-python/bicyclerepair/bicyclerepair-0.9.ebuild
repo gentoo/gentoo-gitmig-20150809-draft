@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.7.1-r1.ebuild,v 1.4 2005/02/12 10:50:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9.ebuild,v 1.1 2005/02/12 10:50:48 kloeri Exp $
 
 inherit distutils
 mydoc="NEWS DESIGN"
@@ -11,7 +11,7 @@ HOMEPAGE="http://bicyclerepair.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bicyclerepair/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/python"
 
