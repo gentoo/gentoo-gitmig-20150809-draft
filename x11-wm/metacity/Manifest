@@ -4,8 +4,6 @@ MD5 6898fda4b2e1680cfb1a17658b4e7abd metacity-2.6.1.ebuild 1084
 MD5 cd46733c2e23bc5503cc5fec312b27c7 ChangeLog 4562
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 888edb091b2a7f1feebf5ad86907048f files/metacity-2.4.3-ppc-gcc3.2.diff 1062
-MD5 be03404ddfeb13e12276ec1037a5ea42 files/metacity-2.4.0-ppc-gcc3.2.diff 1211
-MD5 a72a1bec809aa05fb1b9002b934f7bca files/metacity-2.4.1-ppc-gcc3.2.diff 1211
 MD5 4b8d31e149958238c018a4464a5f354f files/digest-metacity-2.4.34 69
 MD5 e5a49c7190b101c113e02491301f77fe files/digest-metacity-2.4.55 69
 MD5 bcb681865ef146908184b8ef4c70b274 files/digest-metacity-2.6.1 68
