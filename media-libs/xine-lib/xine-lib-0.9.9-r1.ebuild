@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.9-r1.ebuild,v 1.1 2002/04/30 02:08:57 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.9-r1.ebuild,v 1.2 2002/05/11 19:01:25 agenkin Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -35,7 +35,9 @@ src_compile() {
 	use nls    || myconf="${myconf} --disable-nls"
 	use alsa   || myconf="${myconf} --disable-alsa --disable-alsatest"
 	use arts   || myconf="${myconf} --disable-arts --disable-artstest"
-	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest" 
+	# This breaks because with the test disabled, it defaults to "found" check with
+	# the next release until then let it autodetect.  See bug #2377.
+	# use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
 
 	use oggvorbis	\
 		|| myconf="${myconf} --disable-ogg --disable-oggtest --disable-vorbis --disable-vorbistest"
