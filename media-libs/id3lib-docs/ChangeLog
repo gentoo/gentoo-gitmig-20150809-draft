@@ -1,0 +1,7 @@
+# ChangeLog for media-libs/id3lib-docs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib-docs/ChangeLog,v 1.1 2002/07/18 22:57:53 drobbins Exp $
+
+*id3lib-docs-3.8.0_pre2 (18 Jul 2002)
+
+  18 Jul 2002; Daniel Robbins <drobbins@gentoo.org>: Added missing ChangeLog

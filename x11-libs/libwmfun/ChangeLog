@@ -1,0 +1,7 @@
+# ChangeLog for x11-libs/libwmfun
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwmfun/ChangeLog,v 1.1 2002/07/18 22:57:53 drobbins Exp $
+
+*libwmfun-0.0.4 (18 Jul 2002)
+
+  18 Jul 2002; Daniel Robbins <drobbins@gentoo.org>: Added missing ChangeLog
