@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.0-r1.ebuild,v 1.1 2002/08/15 21:50:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.0-r1.ebuild,v 1.2 2002/08/25 10:25:29 spider Exp $
 
 inherit libtool
 inherit gnome2
@@ -26,7 +26,6 @@ DEPEND=">=media-libs/gstreamer-0.4.0
 					media-libs/libogg )
 	media-sound/lame
 	media-sound/cdparanoia
-	media-libs/flac
 	media-sound/jack-audio-connection-kit
 	media-libs/hermes
 	media-libs/openquicktime
@@ -55,7 +54,7 @@ src_compile() {
 	local myconf
 	# aalib broken, dv on to test
 	# dvdnav is broken
-	myconf="--enable-dv"
+	myconf="--enable-dv --disable-flac"
 	use avi \
 		&& myconf="${myconf} --enable-avifile" \
 		|| myconf="${myconf} --disable-avifile"

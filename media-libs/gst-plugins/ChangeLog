@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
 *gst-plugins-0.4.0-r1 (15 Aug 2002)
+  25 Aug 2002; Spider <spider@gentoo.org> gst-plugins-0.4.0-r1.ebuild :
+  Modified it to remove flac dependency since that didn't work
+  
   15 Aug 2002 ;Spider <spider@gentoo.org> gst-plugins-0.4.0-r1.ebuild :
   now changed to use gnome2.eclass for schema installs
   
