@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.12 2004/10/31 05:23:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.13 2004/11/15 18:54:27 vapier Exp $
 
-inherit flag-o-matic gcc eutils
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="Standard Linux networking tools"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
@@ -11,7 +11,7 @@ SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls build static uclibc"
 
 RDEPEND=""
@@ -89,7 +89,7 @@ src_compile() {
 	fi
 
 	if ! use uclibc ; then
-		$(gcc-getCC) ${CFLAGS} -o ether-wake ether-wake.c || die "ether-wake failed to build"
+		$(tc-getCC) ${CFLAGS} -o ether-wake ether-wake.c || die "ether-wake failed to build"
 	fi
 }
 

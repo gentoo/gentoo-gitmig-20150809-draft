@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.16 2004/10/23 02:26:30 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.17 2004/11/15 18:58:15 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -12,13 +12,13 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls selinux"
 
-DEPEND=">=sys-libs/ncurses-5.2-r2
-	selinux? ( sys-libs/libselinux
-		sys-devel/libtool
-		)
+RDEPEND=">=sys-libs/ncurses-5.2-r2
+	selinux? ( sys-libs/libselinux )"
+DEPEND="${RDEPEND}
+	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -35,9 +35,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# Detect mips systems properly
-	gnuconfig_update
-
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
 	use selinux && myconf="${myconf} --enable-flask"
