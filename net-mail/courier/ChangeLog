@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.32 2003/08/20 04:47:53 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.33 2003/09/29 02:18:48 iggy Exp $
+
+*courier-0.43.2 (28 Sep 2003)
+
+  28 Sep 2003; <iggy@gentoo.org> courier-0.43.1.ebuild, courier-0.43.2.ebuild:
+  version bump
 
 *courier-0.43.1 (19 Aug 2003)
 
