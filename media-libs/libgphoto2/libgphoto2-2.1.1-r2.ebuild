@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.5 2003/07/02 14:02:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.6 2003/07/09 17:02:22 liquidx Exp $
 
 inherit libtool
 inherit flag-o-matic
@@ -19,6 +19,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc"
 
 DEPEND=">=dev-libs/libusb-0.1.6
+	dev-util/pkgconfig
 	jpeg? ( >=media-libs/libexif-0.5.9 )
  	doc? ( dev-util/gtk-doc )"
 
