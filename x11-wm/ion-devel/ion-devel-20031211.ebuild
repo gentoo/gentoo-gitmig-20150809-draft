@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20031211.ebuild,v 1.3 2004/01/07 20:21:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20031211.ebuild,v 1.4 2004/02/22 22:40:01 agriffis Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.iki.fi/tuomov/ion/"
 SRC_URI="http://modeemi.fi/~tuomov/dl/${P}.tar.gz"
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~alpha ~hppa ~mips ~ppc ~sparc ~x86 ~amd64"
 IUSE="xinerama"
 DEPEND="virtual/x11
 	app-misc/run-mailcap

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20040121_rc.ebuild,v 1.1 2004/01/21 15:36:37 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20040121_rc.ebuild,v 1.2 2004/02/22 22:40:01 agriffis Exp $
 
 MY_P=ion-2rc-20040121
 DESCRIPTION="A tiling tabbed window manager designed with keyboard users in mind"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.iki.fi/tuomov/ion/"
 SRC_URI="http://modeemi.fi/~tuomov/dl/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="truetype xinerama"
 DEPEND="virtual/x11
 	app-misc/run-mailcap
