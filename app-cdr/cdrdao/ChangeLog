@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.54 2004/12/03 04:56:07 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.55 2004/12/03 14:18:27 pylon Exp $
+
+  03 Dec 2004; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.9.ebuild:
+  Removed the QA-install call from Bug #71560 and changed back to einstall.
+  See Bug #73193.
 
   03 Dec 2004; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.8-r1.ebuild,
   cdrdao-1.1.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9.ebuild,v 1.8 2004/12/03 04:56:07 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9.ebuild,v 1.9 2004/12/03 14:18:27 pylon Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -63,7 +63,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "could not install"
+	einstall || die "could not install"
 
 	cd ${S}
 
