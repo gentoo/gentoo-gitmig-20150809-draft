@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.21 2004/07/27 14:10:45 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.22 2004/09/06 20:42:44 alexander Exp $
 
+   06 Sep 2004; Alexander Plank <alexander@gentoo.org> flex-2.5.4a-r5.ebuild:
+   add ~macos -- it overwrites apple's flex
+  
   27 Jul 2004; Alexander Gabert <pappy@gentoo.org> flex-2.5.4a-r5.ebuild:
   flex breaks when MAKEOPTS is set aggressively
 
