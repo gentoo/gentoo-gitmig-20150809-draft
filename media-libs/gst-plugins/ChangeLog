@@ -1,9 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.25 2003/02/18 20:17:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.26 2003/02/19 20:16:46 foser Exp $
 
 *gst-plugins-0.6.0-r2 (18 Feb 2003)
+
+  19 Feb 2003; foser <foser@gentoo.org> gst-plugins-0.6.0-r[1,2].ebuild :
+  Disable v4l for now (#15989)
 
   18 Feb 2003; foser <foser@gentoo.org> gst-plugins-0.6.0-r2.ebuild :
   Added ogg detection fixing patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0-r1.ebuild,v 1.4 2003/02/18 12:37:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0-r1.ebuild,v 1.5 2003/02/19 20:16:46 foser Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -78,6 +78,9 @@ src_compile() {
 	replace-flags "-O3" "-O2"
 
 	local myconf=""
+
+	# temp disable v4l (#15989)
+	myconf="--disable-v4l --disable-v4l2"
 
 	# FIXME : do this for _all_ IUSE flags
 #	use avi \
