@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/junitperf
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.1 2004/11/14 14:05:51 axxo Exp $
+
+*junitperf-1.9.1 (14 Nov 2004)
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +junitperf-1.9.1.ebuild:
+  initial import, ebuild submitted by Jan Brinkmann <lucky@the-luckyduck.de>
+
