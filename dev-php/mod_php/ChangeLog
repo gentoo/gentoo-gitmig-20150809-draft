@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.208 2005/03/06 19:12:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.209 2005/03/13 22:19:13 stuart Exp $
+
+*mod_php-5.0.3-r2 (13 Mar 2005)
+
+  13 Mar 2005; Stuart Herbert <stuart@gentoo.org> +files/php5-prefork.patch,
+  +mod_php-5.0.3-r2.ebuild:
+  Updated to work w/ the unstable apache, & to allow mixed php4/php5
+  installations
 
   06 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   mod_php-5.0.3-r1.ebuild:

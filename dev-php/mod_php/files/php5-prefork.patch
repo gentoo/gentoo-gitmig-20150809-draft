@@ -1,0 +1,26 @@
+diff -u --recursive php-5.0.3-orig/sapi/apache2filter/config.m4 php-5.0.3/sapi/apache2filter/config.m4
+--- php-5.0.3-orig/sapi/apache2filter/config.m4	2005-03-13 20:30:44.767051120 +0000
++++ php-5.0.3/sapi/apache2filter/config.m4	2005-03-13 20:32:01.999310032 +0000
+@@ -115,9 +115,6 @@
+     ;;
+   esac
+ 
+-  if test "$APXS_MPM" != "prefork"; then
+-    PHP_BUILD_THREAD_SAFE
+-  fi
+   AC_MSG_RESULT(yes)
+   
+   PHP_SUBST(APXS)
+diff -u --recursive php-5.0.3-orig/sapi/apache2handler/config.m4 php-5.0.3/sapi/apache2handler/config.m4
+--- php-5.0.3-orig/sapi/apache2handler/config.m4	2005-03-13 20:30:44.771050512 +0000
++++ php-5.0.3/sapi/apache2handler/config.m4	2005-03-13 20:31:50.106118072 +0000
+@@ -114,9 +114,6 @@
+     ;;
+   esac
+ 
+-  if test "$APXS_MPM" != "prefork"; then
+-    PHP_BUILD_THREAD_SAFE
+-  fi
+   AC_MSG_RESULT(yes)
+ 
+   PHP_SUBST(APXS)
