@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.8 2004/06/24 21:28:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.9 2004/06/27 20:53:32 vapier Exp $
 
 inherit gcc
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64 ~sparc"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 

@@ -1,16 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.218.ebuild,v 1.3 2004/06/24 21:28:04 agriffis Exp $
-
-IUSE=""
-
-inherit eutils
-
-DESCRIPTION="Filesystem benchmarking program."
-HOMEPAGE="http://www.iozone.org/"
-SRC_URI="http://www.iozone.org/src/current/${PN}${PV/./_}.tar"
-LICENSE="freedist"
-SLOT="0"
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.218.ebuild,v 1.4 2004/06/27 20:53:00 vapier Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
@@ -25,22 +15,27 @@ SLOT="0"
 #        ->   openbsd              (32bit)   <-
 #        ->   openbsd-threads      (32bit)   <-
 #
-#
 # ~arm ~amd64 ~ia64 ~s390 alpha(?)
 
-KEYWORDS="~x86 ~ppc ~sparc"
+inherit eutils
 
+DESCRIPTION="Filesystem benchmarking program"
+HOMEPAGE="http://www.iozone.org/"
+SRC_URI="http://www.iozone.org/src/current/${PN}${PV/./_}.tar"
+
+LICENSE="freedist"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc"
+IUSE=""
 
 DEPEND="sys-devel/gcc
 	>=sys-apps/sed-4
-	virtual/glibc"
-
-RDEPEND="virtual/glibc"
+	virtual/libc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}
 
 src_compile() {
-
 	cd src/current
 
 	# Options FIX
@@ -84,8 +79,6 @@ src_install() {
 }
 
 src_test() {
-
 	cd ${T}
 	${S}/src/current/iozone testfile || die "self test failed"
-
 }
