@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.10-r1.ebuild,v 1.3 2004/05/29 20:47:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.10-r1.ebuild,v 1.4 2004/06/01 18:14:15 lu_zero Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -* ~amd64"
+KEYWORDS="~x86 -* ~amd64 ~ppc"
 IUSE="nls static readline debug noreiserfs"
 
 DEPEND=">=sys-fs/e2fsprogs-1.27
@@ -48,5 +48,5 @@ src_install() {
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog \
 		INSTALL NEWS README THANKS TODO
 	docinto doc; cd doc
-	dodoc API COPYING.DOC FAQ FAT USER USER.jp
+	dodoc API FAQ FAT USER.jp
 }
