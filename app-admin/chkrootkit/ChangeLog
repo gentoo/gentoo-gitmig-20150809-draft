@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.39 2004/08/22 09:00:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.40 2004/08/22 09:33:42 kloeri Exp $
+
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  Fix digest again..
 
   22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> :
   Fix broken digest.
