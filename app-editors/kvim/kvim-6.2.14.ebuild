@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.10 2004/05/03 20:32:56 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.11 2004/06/04 15:31:40 carlo Exp $
 
-inherit kde-base eutils
+inherit kde eutils
 need-kde 3
 
 DESCRIPTION="KDE editor based on vim"
