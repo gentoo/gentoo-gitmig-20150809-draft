@@ -1,9 +1,12 @@
 # ChangeLog for x11-wm/ion-devel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.15 2003/08/20 17:28:00 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.16 2003/09/09 20:55:56 twp Exp $
+
+  9 Sep 2003; Tom Payne <twp@gentoo.org> ion-devel-20030814-r2.ebuild :
+  Added tabdrag patch.
 
   20 Aug 2003; Tom Payne <twp@gentoo.org> ion-devel-20030814-r1.ebuild :
-  Removed needless truetype support. Appled stripws patch.
+  Removed needless truetype support. Applied stripws patch.
 
   20 Aug 2003; Tom Payne <twp@gentoo.org> ion-devel-20020605.ebuild, ion-devel-20021104.ebuild, ion-devel-20030416.ebuild, ion-devel-20030416-r1.ebuild :
   Removed old versions.
