@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.9 2005/01/18 15:54:08 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-0.20040701.ebuild,v 1.1 2005/01/19 19:10:46 langthang Exp $
 
 inherit eutils
 
+MY_PV=${PV/0./}
 DESCRIPTION="High-performance interface between the MTA and content checkers."
 HOMEPAGE="http://www.ijs.si/software/amavisd/"
-SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${PV/_/-}.tar.gz"
+SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -50,7 +51,7 @@ RDEPEND="${DEPEND}
 	postgres? ( dev-perl/DBD-Pg )
 	milter? ( >=mail-mta/sendmail-8.12 )"
 
-S="${WORKDIR}/${PN}-${PV/_*/}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 AMAVIS_ROOT=/var/amavis
 
