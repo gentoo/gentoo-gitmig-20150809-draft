@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.22 2004/11/20 11:18:38 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.23 2004/12/11 09:48:57 sejo Exp $
+
+  11 Dec 2004; <SeJo@gentoo.org> ibm-jdk-bin-1.4.2.ebuild:
+  stable on ppc
 
   20 Nov 2004; <SeJo@gentoo.org> ibm-jdk-bin-1.4.2.ebuild:
   mozilla plugin doesn't work with amd64, removing it
