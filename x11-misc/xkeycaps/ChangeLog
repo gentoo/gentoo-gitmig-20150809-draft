@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeycaps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.7 2003/11/04 03:40:44 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.8 2003/12/06 17:23:53 pyrania Exp $
+
+  06 Dec 2003; Markus Nigbur <pyrania@gentoo.org> xkeycaps-2.46.ebuild,
+  files/Imakefile.patch:
+  Created patch for Imakefile. Thanks to Florian Loitsch for finding the bogus.
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
