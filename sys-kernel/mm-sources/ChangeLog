@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.102 2003/12/30 01:15:00 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.103 2004/01/02 23:34:06 plasmaroo Exp $
+
+*mm-sources-2.6.1_rc1-r1 (02 Jan 2004)
+
+  02 Jan 2004; <plasmaroo@gentoo.org> mm-sources-2.6.1_rc1-r1.ebuild:
+  Version bump, closes bug #37050.
 
 *mm-sources-2.6.0-r2 (29 Dec 2003)
 
