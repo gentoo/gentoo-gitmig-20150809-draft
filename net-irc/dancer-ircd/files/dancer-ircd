@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/files/dancer-ircd,v 1.1 2003/03/06 16:26:23 gmsoft Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting dancer-ircd"
+	start-stop-daemon --start --quiet --exec /usr/bin/dancer-ircd
+	result=$?
+	eend $result
+}
+
+stop() {
+	ebegin "Stopping dancer-ircd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/dancer-ircd.pid
+	result=$?
+	eend $result
+}
