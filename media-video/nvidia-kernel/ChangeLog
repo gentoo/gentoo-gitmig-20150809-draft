@@ -1,6 +1,6 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.46 2003/09/07 14:33:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.47 2003/09/07 14:52:46 azarah Exp $
 
 *nvidia-kernel-1.0.4496-r3 (07 Sep 2003)
 
@@ -8,7 +8,7 @@
   nvidia-kernel-1.0.4496-r3.ebuild,
   files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-20030905.diff,
   files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-pci_name-20030905.diff:
-  Update patches to 20030905.
+  Update patches to 20030905 (bug #28061).
 
 *nvidia-kernel-1.0.4496-r2 (07 Sep 2003)
 
