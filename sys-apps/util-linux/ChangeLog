@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.57 2003/09/20 19:10:30 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.58 2003/10/03 17:44:03 pappy Exp $
+
+  03 Oct 2003; Alexander Gabert <pappy@gentoo.org> util-linux-2.11z-r6.ebuild:
+  added libgcc.a problem evasion and removed overwriting of LDFLAGS in ebuild
 
   20 Sep 2003; Alexander Gabert <pappy@gentoo.org> util-linux-2.11z-r6.ebuild:
   removed check again, only caused by problems with __libc_csu in hardened-gcc
