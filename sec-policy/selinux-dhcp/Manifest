@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1dfa025c72a516e87a65316d6e42da83 ChangeLog 950
-MD5 fd126c06ce449f23bab4a3a3570576bb metadata.xml 411
+MD5 30408c1d604aa79a5d18881b61cb68c7 metadata.xml 548
 MD5 23649454a66e4e8f9301b7fa1d7d2ae2 selinux-dhcp-20040617.ebuild 386
+MD5 5c0bb8927394897d9a9975d80389ec0c selinux-dhcp-20040925.ebuild 331
 MD5 391c9ac380b883ba15903b477326de3c files/digest-selinux-dhcp-20040617 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBTjj6GFJQsIJWJy4RAibDAJ9QVgjeUPCT2wx3/XFpfXoLfVBySACfQBVX
-aHfTsTtjzVwkewSsW9ue9ps=
-=0XYA
------END PGP SIGNATURE-----
+MD5 1f7a2671f10e92806dbea99f6abf2322 files/digest-selinux-dhcp-20040925 72

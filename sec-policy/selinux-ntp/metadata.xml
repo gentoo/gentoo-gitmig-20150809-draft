@@ -3,9 +3,14 @@
 <pkgmetadata>
 <herd>hardened</herd>
 <maintainer>
-  <email>pebenito@gentoo.org</email>
-  <name>Chris PeBenito</name>
+  <email>kaiowas@gentoo.org</email>
+  <name>Petre Rodan</name>
   <description>Primary Maintainer</description>
 </maintainer>
-<longdescription>Gentoo SELinux policy for the network time protocol daemon.</longdescription>
+<maintainer>
+  <email>pebenito@gentoo.org</email>
+  <name>Chris PeBenito</name>
+  <description>Backup Maintainer</description>
+</maintainer>
+<longdescription>Gentoo SELinux policy for network time protocol daemons.</longdescription>
 </pkgmetadata>
