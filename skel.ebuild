@@ -8,7 +8,7 @@
 # doesn't mean you can't add your own comments though.
 
 # The 'Header' on the third line should just be left alone.  When your ebuild
-# will be commited to cvs, the details on that line will be automatically
+# will be committed to cvs, the details on that line will be automatically
 # generated to contain the correct data.
 
 # Short one-line description of this package.
@@ -49,7 +49,7 @@ SLOT="0"
 # stability.  Once packages go stable the ~ prefix is removed.
 # So, if you've confirmed that your ebuild works on x86 and ppc,
 # you'd specify: KEYWORDS="~x86 ~ppc"
-# For packages that are platform-independant (like Java, PHP or Perl
+# For packages that are platform-independent (like Java, PHP or Perl
 # applications) specify all keywords.
 # DO NOT USE KEYWORDS="*". This is deprecated and only for backward
 # compatibility reasons.
@@ -99,6 +99,8 @@ src_compile() {
 	# portage shortcut to the above ./configure statement:
 	#
 	# econf || die
+	# Note that econf will die on failure, but plase use econf || die
+	# for consistency.
 
 	# emake (previously known as pmake) is a script that calls the
 	# standard GNU make with parallel building options for speedier
@@ -130,4 +132,6 @@ src_install() {
 	# The portage shortcut to the above command is simply:
 	#
 	#einstall || die
+	# Note that einstall will die on failure, but please use einstall || die
+	# for consistency.
 }
