@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/blight-tr64gl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight-tr64gl/ChangeLog,v 1.1 2003/08/09 09:05:12 msterret Exp $
+
+*blight-tr64gl-0.7.4_pre1 (09 Aug 2003)
+
+  09 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  blight-tr64gl-0.7.4_pre1.ebuild:
+  initial commit (bug 24890)
+
