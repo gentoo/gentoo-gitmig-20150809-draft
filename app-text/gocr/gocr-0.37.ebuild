@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.37.ebuild,v 1.5 2004/04/26 11:38:08 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.37.ebuild,v 1.6 2004/06/02 15:11:47 agriffis Exp $
 
 DESCRIPTION="An OCR (Optical Character Recognition) reader"
 HOMEPAGE="http://jocr.sourceforge.net"
@@ -44,7 +44,7 @@ src_install() {
 	# install the gtk frontend
 	use gtk && dobin ${S}/frontend/gnome/src/gtk-ocr
 	# and install the documentation and examples
-	if [ `use doc` ] ; then
+	if use doc ; then
 		DOCS="${DOCS} doc/gocr.html doc/examples.txt doc/unicode.txt"
 		insinto /usr/share/doc/${P}/examples
 		doins ${S}/examples/*.{fig,tex,pcx}

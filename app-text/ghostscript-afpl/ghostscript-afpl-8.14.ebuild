@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.14.ebuild,v 1.5 2004/05/07 10:29:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.14.ebuild,v 1.6 2004/06/02 15:13:45 agriffis Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 	unpack ghostscript-fonts-std-${FONTS_PV}.tar.gz
 
 	# cups support
-	if [ `use cups` ]; then
+	if use cups; then
 		unpack cups-${CUPS_PV}-source.tar.bz2
 		cp -r cups-${CUPS_PV}/pstoraster ${S}
 		cd ${S}/pstoraster
@@ -69,7 +69,7 @@ src_compile() {
 	econf ${myconf} || die "econf failed"
 
 	# build cups driver with cups
-	if [ `use cups` ]; then
+	if use cups; then
 		echo 'include pstoraster/cups.mak' >> Makefile
 		sed -i -e 's:DEVICE_DEVS17=:DEVICE_DEVS17=$(DD)cups.dev:' Makefile
 		sed -i -e 's:LDFLAGS= $(XLDFLAGS):LDFLAGS=-L/usr/include -lcups -lcupsimage $(XLDFLAGS):' Makefile
@@ -103,7 +103,7 @@ src_install() {
 	insinto /usr/share/emacs/site-lisp
 	doins doc/gsdoc.el || die
 
-	if [ `use cjk` ] ; then
+	if use cjk ; then
 		dodir /usr/share/ghostscript/Resource
 		dodir /usr/share/ghostscript/Resource/Font
 		dodir /usr/share/ghostscript/Resource/CIDFont
