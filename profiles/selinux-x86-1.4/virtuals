@@ -32,3 +32,4 @@ virtual/bootloader		sys-apps/grub
 virtual/editor			app-editors/nano
 virtual/jack			media-sound/jack-audio-connection-kit
 virtual/quicktime		media-libs/libquicktime
+virtual/os-headers	sys-kernel/linux-headers
