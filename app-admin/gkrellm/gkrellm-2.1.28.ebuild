@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.28.ebuild,v 1.3 2004/04/11 06:04:07 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.28.ebuild,v 1.4 2004/06/02 02:26:23 agriffis Exp $
 
 S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	local myconf
-	if [ ! "`use nls`" ]; then
+	if ! use nls; then
 		sed -i "s:enable_nls=1:enable_nls=0:" Makefile
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.28-r1.ebuild,v 1.6 2004/05/14 01:04:48 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.28-r1.ebuild,v 1.7 2004/06/02 02:26:23 agriffis Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	local myconf
-	if [ ! "`use nls`" ]; then
+	if ! use nls; then
 		sed -i "s:enable_nls=1:enable_nls=0:" Makefile
 	fi
 

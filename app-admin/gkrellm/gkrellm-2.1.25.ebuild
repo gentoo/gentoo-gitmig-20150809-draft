@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.25.ebuild,v 1.8 2004/04/06 03:25:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.25.ebuild,v 1.9 2004/06/02 02:26:23 agriffis Exp $
 
 inherit eutils
 
