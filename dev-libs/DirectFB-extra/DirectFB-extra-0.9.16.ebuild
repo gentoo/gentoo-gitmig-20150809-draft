@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.5 2003/12/08 18:15:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.6 2004/01/02 17:32:02 bazik Exp $
 
 
 DESCRIPTION="Extra image/video/font providers and graphics/input drivers for DirectFB"
@@ -9,7 +9,7 @@ SRC_URI="http://directfb.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc -sparc"
 IUSE="quicktime flash imlib avi"
 
 DEPEND=">=dev-libs/DirectFB-${PV}*

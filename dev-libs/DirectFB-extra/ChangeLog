@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB-extra
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.3 2003/12/08 18:15:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.4 2004/01/02 17:32:02 bazik Exp $
+
+  02 Jan 2004; Sven Blumenstein <bazik@gentoo.org>
+  DirectFB-extra-0.9.16.ebuild:
+  Masking because sparc hardware is not supported by DirectFB.
 
 *DirectFB-extra-0.9.16 (02 Feb 2003)
 

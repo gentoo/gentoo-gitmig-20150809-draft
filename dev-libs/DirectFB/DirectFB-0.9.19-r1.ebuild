@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.19-r1.ebuild,v 1.7 2003/11/04 01:04:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.19-r1.ebuild,v 1.8 2004/01/02 17:30:40 bazik Exp $
 
 IUSE_VIDEO_CARDS="ati128 cyber5k i810 matrox neomagic nsc nvidia radeon savage tdfx"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa"
+KEYWORDS="x86 ~ppc -sparc ~alpha hppa"
 IUSE="jpeg gif png truetype mpeg mmx sse fusion"
 
 DEPEND="dev-lang/perl
