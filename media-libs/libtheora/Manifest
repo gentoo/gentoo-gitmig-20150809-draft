@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cf9d1075c90e69843f64b119cf251bed libtheora-1.0_alpha4.ebuild 860
-MD5 eeada0a668f294293134f3555dd1aecb libtheora-1.0_alpha3.ebuild 844
+MD5 64158d08dc1d210d4a1ad8787499611d libtheora-1.0_alpha3.ebuild 840
 MD5 c0f2735e4500394caa3395eadb9e77cd libtheora-1.0_alpha2-r1.ebuild 835
 MD5 1bda603a66c9a018d9c926099761b3c5 libtheora-1.0_alpha2.ebuild 744
-MD5 60a721a6650854cb54d09db011da187c ChangeLog 2612
+MD5 7c82550c1531b4053a219fcf374c04b5 ChangeLog 2730
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 43363432588af784deac91552ac3a636 files/digest-libtheora-1.0_alpha2-r1 71
 MD5 43363432588af784deac91552ac3a636 files/digest-libtheora-1.0_alpha2 71
 MD5 a9f9ea68a0659a1bd63f423e5028d5bf files/digest-libtheora-1.0_alpha3 72
 MD5 f828864823910f80ec4368be981c0a61 files/digest-libtheora-1.0_alpha4 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB1vMyKiUX0BdHiZkRAryXAJ9XAjNtkHWVVIkH88YItRbCGAH9bQCg2rI/
-/SloAkI2JH2kZPr9SgyPVHY=
-=HULw
------END PGP SIGNATURE-----
