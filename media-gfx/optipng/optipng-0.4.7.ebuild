@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.7.ebuild,v 1.1 2005/01/13 23:49:08 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.7.ebuild,v 1.2 2005/03/02 21:04:18 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cs.toronto.edu/~cosmin/pngtech/optipng/"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 IUSE=""
 
 DEPEND="virtual/libc"
