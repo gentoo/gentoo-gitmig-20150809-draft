@@ -8,4 +8,5 @@ virtual/x11			x11-base/xfree
 virtual/opengl			x11-base/xfree
 virtual/glu			media-libs/mesa-glu
 virtual/glut			media-libs/mesa-glu
+virtual/imap			net-mail/courier-imap
 x11-libs/xaw			x11-libs/Xaw3d
