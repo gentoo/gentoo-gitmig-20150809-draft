@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <woodchip@gentoo.org> (02 Oct 2002)
+# chase latest release; update/report please.
+=sys-apps/evms-1.2.0
+
 # masking for confirmation
 =x11-themes/conectiva-crystal-092502
 
