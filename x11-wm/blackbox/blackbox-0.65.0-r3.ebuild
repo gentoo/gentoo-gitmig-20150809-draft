@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r2.ebuild,v 1.3 2003/11/11 23:47:27 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r3.ebuild,v 1.1 2003/12/08 01:22:39 tseng Exp $
 
 IUSE="nls"
 
@@ -22,14 +22,17 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	epatch ${FILESDIR}/blackbox-0.65.0-mousewheel_focus-workspace.patch
 	epatch ${FILESDIR}/blackbox-gcc.patch
+	cd ${S}
+	epatch ${FILESDIR}/disable_rootcommand.patch
 	cd ${S}/data
 	mv README README.data
 }
 
 pkg_postinst() {
 	ewarn
-	ewarn "This build of Blackbox makes use of the mousewheel patch, allowing you"
-	ewarn "to use the mousewheel change workspace or application focus."
-	ewarn "Please note that NLS support is now *disabled*, as it is horribly broken."
+	ewarn "Please note that NLS support is now *disabled*, as it is"
+	ewarn "horribly broken."
+	ewarn "RootCommand is now DISABLED to close a large"
+	ewarn "security hole."
 	ewarn
 }
