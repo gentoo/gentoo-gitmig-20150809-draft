@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.8 2002/09/05 10:25:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.9 2002/09/08 07:44:26 cardoe Exp $
+
+*nasm-0.98.34 (08 Sep 2002)
+  
+  08 Sep 2002; Doug Goldstein <cardoe@gentoo.org> nasm-0.98.34.ebuild, nasm-0.98.34-remove-doc-target.diff :
+  Updated to new version and creates new patches
 
 *nasm-0.98.31-r1 (18 May 2002)
 
