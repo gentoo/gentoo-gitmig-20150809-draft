@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlIO-Socket-SSLChangeLog/dev-perlIO-StringChangeLog
+# ChangeLog for dev-perl/IO-String
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/ChangeLog,v 1.6 2002/12/13 10:56:38 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/ChangeLog,v 1.7 2002/12/17 19:25:04 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
