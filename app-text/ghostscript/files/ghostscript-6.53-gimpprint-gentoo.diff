@@ -5,7 +5,7 @@
  	$(ECHOGS_XE) -a $(ldt_tr) -n -s $(PSOBJ)gs.$(OBJ) -s
  	cat $(ld_tr) >>$(ldt_tr)
 +	cp $(ldt_tr) $(ldt_tr)_orig
-+	sed -e "s#-lXt#-L/var/tmp/portage/ghostscript-6.53-r1/work/gimp-print-4.2.0/src/main/.libs/ -lgimpprint -lXt#g" \
++	sed -e "s#-lXt#-L${BUILD_PREFIX}/ghostscript-6.53-r1/work/gimp-print-4.2.0/src/main/.libs/ -lgimpprint -lXt#g" \
 +		$(ldt_tr)_orig > $(ldt_tr)
  	$(ECHOGS_XE) -a $(ldt_tr) -s - $(EXTRALIBS) $(STDLIBS)
  	if [ x$(XLIBDIR) != x ]; then LD_RUN_PATH=$(XLIBDIR); export LD_RUN_PATH; fi; \
