@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.4 2003/03/22 08:33:57 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.5 2003/05/09 09:41:39 kosmikus Exp $
+
+*ghc-bin-5.04.3 (09 May 2003)
+
+  09 May 2003; Andres Loeh <kosmikus@gentoo.org> ghc-bin-5.04.2-r1.ebuild,
+  ghc-bin-5.04.3.ebuild:
+  Installs to /opt/ghc/bin now (bug #20185). Updated to version 5.04.3.
+  Both updates are marked unstable for now.
+
+*ghc-bin-5.04.2.ebuild (21 Mar 2003)
 
   21 Mar 2003; George Shapovalov <george@gentoo.org> ghc-bin-5.04.2.ebuild :
   created virtual/ghc, added PROVIDE=virtual/ghc to the ebuild to make dev-lang/ghc bootstrap correctly
@@ -9,8 +18,6 @@
   11 Feb 2003; George Shapovalov <george@gentoo.org> ChangeLog, ghc-bin-5.04.2.ebuild :
   modified ebuild to add sparc support (sparc people, please test!)
   fixups to wrapper scripts
-
-*ghc-bin-5.04.2.ebuild (14 ‰≈À 2002)
 
   14 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, ghc-bin-5.04.2.ebuild, files/digest-ghc-bin-5.04.2 :
   initial release
