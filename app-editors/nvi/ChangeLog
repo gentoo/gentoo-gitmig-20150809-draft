@@ -1,8 +1,12 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.2 2002/08/06 15:48:33 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.3 2002/09/07 14:31:53 seemant Exp $
 
 *nvi-1.81.4 (1 Feb 2002)
+
+  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> nvi-1.81.4.ebuild :
+
+  HOMEPAGE update by: ajs@pigpond.com (Andrew Snare) in bug #7501
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
