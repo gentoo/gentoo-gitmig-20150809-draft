@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.11 2003/02/12 06:07:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.12 2003/06/19 17:37:59 wwoods Exp $
+
+  19 Jun 2003; Will Woods <wwoods@gentoo.org> libusb-0.1.7.ebuild:
+  Added alpha to KEYWORDS
 
   17 Jan 2003; Matthew Turk <satai@gentoo.org> libusb-0.1.7.ebuild :
   Specified docbook-sgml-dtd-r1.
