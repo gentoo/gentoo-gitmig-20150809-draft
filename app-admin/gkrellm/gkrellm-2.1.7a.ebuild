@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.7a.ebuild,v 1.1 2003/02/17 20:48:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.7a.ebuild,v 1.2 2003/02/18 08:06:04 seemant Exp $
 
 DESCRIPTION="Single process stack of various system monitors"
 SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.bz2"
@@ -53,7 +53,7 @@ src_install() {
 		
 		rm -f ${D}/usr/bin/gkrellm
 		exeinto /usr/bin
-		newexe src/gkrellm2 gkrellm2
+		newexe src/gkrellm gkrellm2
 	else
 		cd ${S}
 		rm gkrellm.1
