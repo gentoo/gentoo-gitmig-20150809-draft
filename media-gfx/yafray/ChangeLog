@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.6 2004/05/03 14:37:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.7 2004/06/01 22:00:56 lv Exp $
+
+  01 Jun 2004; Travis Tilley <lv@gentoo.org> yafray-0.0.6.ebuild:
+  stable on amd64
 
   03 May 2004; Hanno Boeck <hanno@gentoo.org> +files/yafray-gcc34-fix.gz,
   yafray-0.0.6.ebuild:
