@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r1.ebuild,v 1.6 2004/08/27 02:17:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r1.ebuild,v 1.7 2004/09/01 19:58:53 lu_zero Exp $
 
 inherit eutils
 
@@ -19,9 +19,13 @@ DEPEND="motif? ( virtual/x11
 	>=media-libs/t1lib-1.3
 	virtual/ghostscript"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	use cjk && epatch ${FILESDIR}/xpdf-3.00-truetype.diff.gz
+}
 
+src_compile() {
 	econf \
 		--enable-freetype2 \
 		--with-freetype2-includes=/usr/include/freetype2 || die
