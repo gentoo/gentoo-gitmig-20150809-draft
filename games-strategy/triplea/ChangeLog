@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/triplea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.11 2004/07/01 05:27:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.12 2004/07/24 10:34:08 mr_bones_ Exp $
+
+  24 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> triplea-0.4.8.ebuild:
+  save games in HomeDir patch from Will McQueen via bug #57062
 
 *triplea-0.4.8 (30 Jun 2004)
 

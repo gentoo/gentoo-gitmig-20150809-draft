@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.4.8.ebuild,v 1.1 2004/07/01 05:27:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.4.8.ebuild,v 1.2 2004/07/24 10:34:08 mr_bones_ Exp $
 
 inherit games
 
@@ -38,8 +38,8 @@ src_unpack() {
 
 		cd "${GAMES_DATADIR}/${PN}/lib"
 		java -mx96M -cp \\
-		    ../data:../lib/plastic-1.2.0.jar:../lib/${P}.jar \\
-		    games.strategy.engine.framework.GameRunner
+			../data:../lib/plastic-1.2.0.jar:../lib/${P}.jar \\
+			games.strategy.engine.framework.GameRunner
 	EOF
 
 	# Repair bad path in .ant.properties (bug #47437)
@@ -47,7 +47,9 @@ src_unpack() {
 		-e "/^junit.jar/s:=.*:=/usr/share/junit/lib/junit.jar:" \
 			.ant.properties \
 			|| die "sed .ant.properties failed"
-
+	# The default savedGames directory is in the install root.  This
+	# sets it to use the users home directory.
+	echo "triplea.saveGamesInHomeDir=true" > data/triplea.properties
 }
 
 src_compile() {
