@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.101 2004/04/29 16:38:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.102 2004/05/18 03:57:35 robbat2 Exp $
+
+*mysql-4.0.18-r2 (17 May 2004)
+
+  17 May 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.18-r2.ebuild,
+  mysql-4.0.19.ebuild, files/mysql-4.0.18-mysqldmultisecurity.diff:
+  bug #46242, fix a security hole in mysqld_multi. ansl new 4.0.19.
 
   29 Apr 2004; Guy Martin <gmsoft@gentoo.org> mysql-4.0.18-r1.ebuild:
   Marked stable on hppa.
