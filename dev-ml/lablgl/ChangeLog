@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.21 2004/06/25 00:01:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.22 2004/06/29 21:53:28 mattam Exp $
+
+  29 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> lablgl-1.00.ebuild:
+  Fix makefile, when glut flag is not set, there's no need to link with glut.
 
   08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> lablgl-1.00.ebuild:
   Stable on alpha.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.8 2004/06/25 00:01:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.9 2004/06/29 21:53:28 mattam Exp $
 
 IUSE="tcltk glut doc"
 
@@ -38,6 +38,10 @@ pkg_setup()
 src_compile() {
 	# make configuration file
 	cp ${FILESDIR}/${P}-Makefile.config ${S}/Makefile.config || die
+
+	if ! (use glut); then
+		sed -i "s/-lglut//" Makefile.config
+	fi
 
 	use tcltk && make && make opt
 
