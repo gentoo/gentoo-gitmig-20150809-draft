@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.8.ebuild,v 1.10 2004/11/27 12:02:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.8.ebuild,v 1.11 2005/03/14 19:32:21 gustavoz Exp $
 
 inherit eutils
 
