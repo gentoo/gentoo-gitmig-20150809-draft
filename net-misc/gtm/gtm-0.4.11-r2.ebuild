@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.12 2004/07/15 02:51:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.13 2004/08/22 04:42:19 obz Exp $
 
 IUSE="ssl nls gnome"
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/libc
 	virtual/x11
 	net-misc/wget
 	>=gnome-base/gnome-libs-1.4.0.2
-	>=gnome-base/ORBit-0.5.11"
+	=gnome-base/orbit-0*"
 
 
 src_unpack() {

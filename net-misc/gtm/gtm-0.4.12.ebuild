@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.12.ebuild,v 1.7 2004/07/15 02:51:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.12.ebuild,v 1.8 2004/08/22 04:42:19 obz Exp $
 
 IUSE="ssl nls gnome"
 
@@ -16,7 +16,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/gnome-panel-1.4*
 	>=gnome-base/gnome-libs-1.4.1.7
 	>=gnome-base/oaf-0.6.8
-	>=gnome-base/ORBit-0.5.11
+	=gnome-base/orbit-0*
 	gnome? ( =gnome-base/gnome-applets-1.4* )
 	ssl?   ( dev-libs/openssl )"
 
