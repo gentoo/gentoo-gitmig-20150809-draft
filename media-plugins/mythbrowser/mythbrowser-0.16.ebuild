@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.16.ebuild,v 1.2 2004/09/10 18:04:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.16.ebuild,v 1.3 2004/09/10 18:09:20 aliz Exp $
 
 inherit myth
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=sys-apps/sed-4
 	>=kde-base/kdelibs-3.1
-	|| ( =media-tv/mythtv-${PV}* =media-tv/mythfrontend-${PV}* )"
+	|| ( ~media-tv/mythtv-${PV} ~media-tv/mythfrontend-${PV} )"
 
 setup_pro() {
 	echo "INCLUDEPATH += ${KDEDIR}/include" >> settings.pro
