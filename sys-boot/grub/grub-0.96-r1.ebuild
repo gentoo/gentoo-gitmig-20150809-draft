@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.1 2005/03/11 05:14:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.2 2005/03/11 14:04:32 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -77,7 +77,7 @@ src_compile() {
 	# -fno-stack-protector detected by configure, removed from netboot's emake.
 
 	append-flags -DNDEBUG
-	echo "grub_cv_prog_objcopy_absolute=yes" > config.cache #79734
+	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static
 
 	# build the net-bootable grub first, but only if "netboot" is set
@@ -96,7 +96,7 @@ src_compile() {
 
 		emake w89c840_o_CFLAGS="-O" || die "making netboot stuff"
 
-		mv -f stage2/{nbgrub,pxegrub} ${S}
+		mv -f stage2/{nbgrub,pxegrub} "${S}"/
 		mv -f stage2/stage2 stage2/stage2.netboot
 
 		make clean || die "make clean failed"
@@ -111,6 +111,12 @@ src_compile() {
 		--exec-prefix=/ \
 		--disable-auto-linux-mem-opt || die "econf failed"
 	emake || die "making regular stuff"
+}
+
+src_test() {
+	# non-default block size also give false pass/fails.
+	unset BLOCK_SIZE
+	make check || die "make check failed"
 }
 
 src_install() {
