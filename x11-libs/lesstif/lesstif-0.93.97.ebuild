@@ -1,21 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.97.ebuild,v 1.7 2004/10/14 00:30:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.97.ebuild,v 1.8 2004/10/24 12:07:19 usata Exp $
 
-inherit libtool
+inherit libtool flag-o-matic
 
 DESCRIPTION="An OSF/Motif(R) clone"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.lesstif.org/"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc amd64 ppc64 hppa ~alpha"
+KEYWORDS="x86 ppc sparc amd64 ppc64 hppa ~alpha ppc-macos"
 SLOT="0"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/x11"
 
 src_compile() {
-	elibtoolize
+	use ppc-macos || elibtoolize
+
+	if use ppc-macos || macos ; then
+		append-ldflags -L/usr/X11R6/lib -lX11 -lXt
+	fi
 
 	econf \
 	  --enable-production \

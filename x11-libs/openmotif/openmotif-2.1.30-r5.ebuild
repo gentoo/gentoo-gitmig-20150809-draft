@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.15 2004/10/05 11:47:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.16 2004/10/24 12:05:34 usata Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
@@ -10,21 +10,13 @@ DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 HOMEPAGE="http://www.metrolink.com/openmotif/"
 LICENSE="MOTIF"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64 ~mips ppc-macos"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4"
 
 SLOT="0"
-
-# glibc-2.3.2-r1/gcc-3.2.3 /w `-mcpu=athlon-xp -O2', right-clicking
-# in nedit triggers DPMS monitor standby instead of popping up the 
-# context menu.  this doesn't happen on my `stable' test partition 
-# where everything is compiled i686, nor with most non-essential 
-# packages athlon-xp and only motif i686.  needs investigation.
-inherit flag-o-matic
-replace-flags "-mcpu=athlon-xp" "-mcpu=i686"
 
 # parallel compile sometimes failes
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -47,7 +39,6 @@ src_unpack() {
 	echo >>$cfg "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" &&\
 	echo >>$cfg "#undef  LinuxCLibMajorVersion" && \
 	echo >>$cfg "#define  LinuxCLibMajorVersion 6"
-
 	eend $? || die
 
 	sed -i -e "s:#define USE_BYACC               YES:#undef USE_BYACC:" config/cf/host.def
@@ -66,16 +57,24 @@ src_unpack() {
 	# compile on gcc 2.9x
 	epatch ${FILESDIR}/${P}-imake-ansi.patch
 	epatch ${FILESDIR}/${P}-uil-bad_grammar_fix.diff
+	use ppc-macos && epatch ${FILESDIR}/${P}-darwin-netbsd.diff
 }
 
 src_compile() {
+	# glibc-2.3.2-r1/gcc-3.2.3 /w `-mcpu=athlon-xp -O2', right-clicking
+	# in nedit triggers DPMS monitor standby instead of popping up the 
+	# context menu.  this doesn't happen on my `stable' test partition 
+	# where everything is compiled i686, nor with most non-essential 
+	# packages athlon-xp and only motif i686.  needs investigation.
+	replace-flags "-mcpu=athlon-xp" "-mcpu=i686"
+
 	mkdir -p imports/x11
 	cd imports/x11
 	ln -s /usr/X11R6/bin bin
 	ln -s /usr/X11R6/include include
 	ln -s /usr/X11R6/lib lib
 	cd ${S}
-	make World || die
+	make World || make World || die
 }
 
 src_install() {
@@ -92,7 +91,12 @@ src_install() {
 		f="${D}usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
 	done
 	for nim in ${NOINSTMAN1}; do
-		f="${D}usr/X11R6/man/man1/${nim}.1x"; rm "$f" || die "rm $f"
+		if useq ppc-macos || useq macos ; then
+			f="${D}usr/X11R6/man/man1/${nim}.1"
+		else
+			f="${D}usr/X11R6/man/man1/${nim}.1x"
+		fi
+		 rm "$f" || die "rm $f"
 	done
 	rm -rf "${D}usr/X11R6/lib/X11" || die "rm config"
 	rm -rf "${D}usr/X11R6/lib/bindings" || die "rm bindings"

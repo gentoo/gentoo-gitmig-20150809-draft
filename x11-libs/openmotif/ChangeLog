@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.54 2004/10/05 11:47:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.55 2004/10/24 12:05:34 usata Exp $
+
+  24 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/openmotif-2.1.30-darwin-netbsd.diff, openmotif-2.1.30-r5.ebuild:
+  Added to ppc-macos.
 
   05 Oct 2004; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r5.ebuild:
   parallel compile sometimes fails, bug #51682

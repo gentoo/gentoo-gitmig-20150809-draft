@@ -1,0 +1,505 @@
+$NetBSD: patch-ar,v 1.2 2004/03/16 23:59:42 danw Exp $
+
+--- config/imake/imakemdep.h.orig	Sat Mar 13 22:27:36 2004
++++ config/imake/imakemdep.h
+@@ -265,10 +265,10 @@ in this Software without prior written a
+ #ifdef _CRAY
+ #define DEFAULT_CPP "/lib/pcpp"
+ #endif
+-#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__386BSD__) || defined(__OpenBSD__)
+ #define DEFAULT_CPP "/usr/libexec/cpp"
+ #endif
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__)
+ #define USE_CC_E
+ #endif
+ #if defined(__sgi) && defined(__ANSI_CPP__)
+@@ -326,7 +326,7 @@ char *cpp_argv[ARGUMENTS] = {
+ 	"-Uunix",	/* remove unix symbol so that filename unix.c okay */
+ #endif
+ #endif
+-#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(MACH) || defined(linux) || defined(__GNU__)
++#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(MACH) || defined(linux) || defined(__GNU__) || defined(__APPLE__)
+ # ifdef __i386__
+ 	"-D__i386__",
+ # endif
+@@ -336,6 +336,9 @@ char *cpp_argv[ARGUMENTS] = {
+ # ifdef __m68k__
+ 	"-D__m68k__",
+ # endif
++# ifdef __ppc__
++	"-D__ppc__",
++# endif
+ # ifdef __GNUC__
+ 	"-traditional",
+ # endif
+@@ -988,6 +991,12 @@ struct symtab	predefs[] = {
+ #endif
+ #ifdef __QNXNTO__
+ 	{"__QNXNTO__", "1"},
++#endif
++#ifdef __ppc__
++	{"__ppc__", "1"},
++#endif
++#ifdef __BIG_ENDIAN__
++	{"__BIG_ENDIAN__", "1"},
+ #endif
+ 	/* add any additional symbols before this line */
+ 	{NULL, NULL}
+$NetBSD: patch-as,v 1.3 2004/03/16 23:59:42 danw Exp $
+
+--- config/cf/Imake.cf.orig	Sat Mar 13 21:19:59 2004
++++ config/cf/Imake.cf
+@@ -73,6 +73,9 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+ # if defined(__sparc__) || defined(sparc)
+ #  define SparcArchitecture
+ #  undef sparc
++#  if defined(__sparc64__)
++#   define Sparc64Architecture
++#  endif
+ # endif
+ # ifdef mips
+ #   define MipsArchitecture
+@@ -129,6 +132,9 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+ # if defined(__sparc__) || defined(sparc)
+ #  define SparcArchitecture
+ #  undef sparc
++#  if defined(__sparc64__)
++#   define Sparc64Architecture
++#  endif
+ # endif
+ # ifdef mips
+ #   define MipsArchitecture
+@@ -720,6 +726,21 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+ #endif
+ #endif
+ #endif /* QNX/Neutrino */
++
++#if defined(__APPLE__)
++# undef __APPLE__
++# define MacroIncludeFile <darwin.cf>
++# define MacroFile darwin.cf
++# define DarwinArchitecture
++# ifdef __ppc__
++#  define PpcDarwinArchitecture
++#  undef __ppc__
++# endif
++# ifdef __i386__
++#  define i386DarwinArchitecture
++#  undef __i386__
++# endif
++#endif
+ 
+ #ifndef MacroIncludeFile
+ XCOMM WARNING:  Imake.cf not configured; guessing at definitions!!!
+$NetBSD: patch-aw,v 1.2 2004/08/31 03:10:16 danw Exp $
+
+--- config/cf/darwin.cf.orig	Sun Mar 14 11:07:29 2004
++++ config/cf/darwin.cf
+@@ -0,0 +1,129 @@
++XCOMM platform:  $XFree86: xc/config/cf/darwin.cf,v 1.34 2002/12/04 04:40:15 torrey Exp $
++
++/* Darwin / Mac OS X configuration by John Carmack <johnc@idsoftware.com> */
++
++/* imake determines the default values by parsing uname */
++#ifndef OSName
++#define OSName                  DefaultOSName
++#endif
++#ifndef OSVendor
++#define OSVendor                Apple Computer, Inc.
++#endif
++#ifndef OSMajorVersion
++#define OSMajorVersion          DefaultOSMajorVersion
++#endif
++#ifndef OSMinorVersion
++#define OSMinorVersion          DefaultOSMinorVersion
++#endif
++#ifndef OSTeenyVersion
++#define OSTeenyVersion          DefaultOSTeenyVersion
++#endif
++
++XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVersion)
++
++/*
++ * Define the operating system's capabilities
++ */
++#define HasSnprintf             YES
++#define HasPutenv               YES
++#define HasBSD44Sockets         YES
++#define Malloc0ReturnsNull      NO
++#define HasShadowPasswd         NO
++#define HasUsableFileMmap       YES
++#define HasZlib                 YES
++#ifndef HasShm
++# define HasShm                 YES
++#endif
++#define HasNdbm                 YES
++#if OSMajorVersion >= 6
++# define HasNCurses             YES
++#else
++# define HasNCurses             NO
++#endif
++#ifndef HasGroff
++# define HasGroff               YES
++#endif
++#ifndef HasGcc3
++# define HasGcc3                NO
++#endif
++
++/* Thread support */
++#define HasPosixThreads         YES
++#define SystemMTDefines         -D_REENTRANT
++#if OSMajorVersion >= 6
++# define HasThreadSafeAPI       YES
++# define MTSafeAPIDefines       -DXUSE_MTSAFE_API -DXNO_MTSAFE_UNISTDAPI
++#else
++# define HasThreadSafeAPI       NO
++# define MTSafeAPIDefines       -DXOS_USE_MTSAFE_NETDBAPI
++#endif
++
++/* Libtool on Darwin always uses minor numbers */
++#define LibtoolMinorVersions	YES
++
++/* we don't need -lm */
++#define MathLibrary             /**/
++
++#define TermcapLibrary          -lcurses
++#define SetTtyGroup             YES             /* for xterm */
++
++/* we don't have a dbm library */
++#define DBMLibrary              /**/
++
++#define MkdirHierCmd            mkdir -p
++
++/* our cpp isn't in /lib/cpp and early versions don't like -undef */
++#define CppCmd                  cpp
++#if HasGcc3
++# define RawCppCmd              CppCmd -undef
++#else
++# define RawCppCmd              CppCmd
++#endif
++
++/* we have a gcc compatible compiler, but its not called gcc */
++#ifndef CcCmd
++#define CcCmd                   cc
++#endif
++#ifndef CplusplusCmd
++#define CplusplusCmd            c++
++#endif
++
++/* default flags to pass to cc */
++#ifndef DefaultCCOptions
++# define DefaultCCOptions       -no-cpp-precomp
++#endif
++
++/* flags to pass to cc when building libraries */
++#ifndef LibraryCCOptions
++# define LibraryCCOptions       DefaultCCOptions -fno-common
++#endif
++
++#define OptimizedCDebugFlags	-g -Os
++
++/*
++ * __DARWIN__ will be used for platform specific #ifdefs that can't
++ * be handled by existing X defines.
++ *
++ * Darwin's alloca() seg faults (rather than returning NULL) on failed
++ * allocations, so we can't use it.
++ *
++ * Darwin's setlocale() doesn't work properly, so use X11's instead.
++ */
++#define StandardDefines         -D__DARWIN__ -DNO_ALLOCA -DX_LOCALE -DCSRG_BASED
++
++#define BuildLibPathVar         DYLD_LIBRARY_PATH
++
++/* include rules to build shared libraries */
++#include <darwinLib.rules>
++
++/*
++ * Darwin specific Imake Config files
++ */
++#ifndef LocalConfigFiles
++#define LocalConfigFiles \
++	darwinLib.rules \
++	darwinLib.tmpl
++#endif
++
++/* include all the XFree86 rules */
++#include <xfree86.cf>
+$NetBSD: patch-ax,v 1.1 2004/03/16 23:59:42 danw Exp $
+
+--- config/cf/darwinLib.rules.orig	Sun Mar 14 11:07:29 2004
++++ config/cf/darwinLib.rules
+@@ -0,0 +1,196 @@
++XCOMM $XFree86: xc/config/cf/darwinLib.rules,v 1.4.2.1 2002/07/16 22:03:05 torrey Exp $
++/*
++ * Darwin/Mac OS X shared library rules
++ */
++
++#ifndef UseElfFormat
++#define UseElfFormat NO
++#endif
++#ifndef HasSharedLibraries
++#define HasSharedLibraries YES
++#endif
++#ifndef ForceNormalLib
++#define ForceNormalLib YES
++#endif
++
++#ifndef SharedDataSeparation
++#define SharedDataSeparation NO
++#endif
++#ifndef SharedCodeDef
++#define SharedCodeDef /**/
++#endif
++#ifndef SharedLibraryDef
++#define SharedLibraryDef /**/
++#endif
++#ifndef ShLibIncludeFile
++#define ShLibIncludeFile <darwinLib.tmpl>
++#endif
++#ifndef SharedLibraryLoadFlags
++#define SharedLibraryLoadFlags -dynamiclib
++#endif
++#ifndef PositionIndependentCFlags
++#define PositionIndependentCFlags -dynamic
++#endif
++#ifndef ExtraLoadFlags
++#define ExtraLoadFlags /**/
++#endif
++
++/*
++ * InstallSharedLibrary - generate rules to install the shared library.
++ */
++#ifndef InstallSharedLibrary
++#define InstallSharedLibrary(libname,rev,dest)				@@\
++install:: Concat(lib,libname.rev.dylib)					@@\
++	MakeDir($(DESTDIR)dest)						@@\
++	$(INSTALL) $(INSTALLFLAGS) $(INSTLIBFLAGS) Concat(lib,libname.rev.dylib) $(DESTDIR)dest @@\
++	@MAJREV=`expr rev : '\([^.]*\)'`; \				@@\
++	  set -x; $(RM) Concat($(DESTDIR)dest/lib,libname.$$MAJREV.dylib) && \ @@\
++	  $(LN) Concat(lib,libname.rev.dylib) Concat($(DESTDIR)dest/lib,libname.$$MAJREV.dylib) @@\
++	@(set -x; \							@@\
++	  $(RM) Concat($(DESTDIR)dest/lib,libname.dylib); \		@@\
++	  $(LN) Concat(lib,libname.rev.dylib) Concat($(DESTDIR)dest/lib,libname.dylib))
++#endif /* InstallSharedLibrary */
++
++/*
++ * SharedLibraryTarget - generate rules to create a shared library;
++ * build it into a different name so that we do not hose people by having
++ * the library gone for long periods.
++ */
++#ifndef SharedLibraryTarget
++# ifdef UseInstalled
++#  define LinkBuildSonameLibrary(lib) true
++# else
++#  define LinkBuildSonameLibrary(lib) (RemoveFile($(BUILDLIBDIR)/lib); \
++	cd $(BUILDLIBDIR); $(LN) $(BUILDINCTOP)/$(CURRENT_DIR)/lib .)
++# endif
++
++# define SharedLibraryTarget(libname,rev,solist,down,up)		@@\
++AllTarget(Concat(lib,libname.rev.dylib))				@@\
++									@@\
++Concat(lib,libname.rev.dylib):  solist $(EXTRALIBRARYDEPS)		@@\
++	$(RM) $@~							@@\
++	@MAJREV=`expr rev : '\([^.]*\)'`; \				@@\
++	  INSTALLNAME=Concat(lib,libname.$$MAJREV.dylib); \		@@\
++	  set -x; (cd down; $(CC) -o up/$@~ $(SHLIBLDFLAGS) -install_name $(USRLIBDIR)/$$INSTALLNAME -current_version rev -compatibility_version rev -seg_addr_table_filename $(USRLIBDIR)/$@ solist $(REQUIREDLIBS)); \ @@\
++	  $(RM) $$INSTALLNAME; $(LN) $@ $$INSTALLNAME; \		@@\
++	  LinkBuildSonameLibrary($$INSTALLNAME)				@@\
++	$(RM) $@							@@\
++	$(MV) $@~ $@							@@\
++	@(set -x;			 \				@@\
++	  $(RM) Concat(lib,libname.dylib); \				@@\
++	  $(LN) $@ Concat(lib,libname.dylib))				@@\
++	LinkBuildLibrary($@)						@@\
++	LinkBuildLibrary(Concat(lib,libname.dylib))			@@\
++									@@\
++clean::									@@\
++	@MAJREV=`expr rev : '\([^.]*\)'`; \				@@\
++	set -x; $(RM) Concat(lib,libname.$$MAJREV.dylib)		@@\
++	$(RM) Concat(lib,libname.rev.dylib) Concat(lib,libname.dylib)
++
++#endif /* SharedLibraryTarget */
++
++/*
++ * SharedDepLibraryTarget - generate rules to create a shared library.
++ */
++#ifndef SharedDepLibraryTarget
++# ifdef UseInstalled
++#  ifndef LinkBuildSonameLibrary
++#   define LinkBuildSonameLibrary(lib) true
++#  endif
++# else
++#  ifndef LinkBuildSonameLibrary
++#   define LinkBuildSonameLibrary(lib) (RemoveFile($(BUILDLIBDIR)/lib); \
++	cd $(BUILDLIBDIR); $(LN) $(BUILDINCTOP)/$(CURRENT_DIR)/lib .)
++#  endif
++# endif
++
++# define SharedDepLibraryTarget(libname,rev,deplist,solist,down,up)	@@\
++AllTarget(Concat(lib,libname.rev.dylib))				@@\
++									@@\
++Concat(lib,libname.rev.dylib):  deplist $(EXTRALIBRARYDEPS)		@@\
++	$(RM) $@~							@@\
++	@MAJREV=`expr rev : '\([^.]*\)'`; \				@@\
++	  INSTALLNAME=Concat(lib,libname.$$MAJREV.dylib); \		@@\
++	  set -x; (cd down; $(CC) -o up/$@~ $(SHLIBLDFLAGS) -install_name $(USRLIBDIR)/$$INSTALLNAME -current_version rev -compatibility_version rev -seg_addr_table_filename $(USRLIBDIR)/$@ solist $(REQUIREDLIBS)); \ @@\
++	  $(RM) $$INSTALLNAME; $(LN) $@ $$INSTALLNAME; \		@@\
++	  LinkBuildSonameLibrary($$INSTALLNAME)				@@\
++	$(RM) $@							@@\
++	$(MV) $@~ $@							@@\
++	@(set -x; \							@@\
++	  $(RM) Concat(lib,libname.dylib); \				@@\
++	  $(LN) $@ Concat(lib,libname.dylib))				@@\
++	LinkBuildLibrary($@)						@@\
++	LinkBuildLibrary(Concat(lib,libname.dylib))			@@\
++									@@\
++clean::									@@\
++	@MAJREV=`expr rev : '\([^.]*\)'`; \				@@\
++	set -x; $(RM) Concat(lib,libname.$$MAJREV.dylib)		@@\
++	$(RM) Concat(lib,libname.rev.dylib) Concat(lib,libname.dylib)
++
++#endif /* SharedDepLibraryTarget */
++
++/*
++ * SharedDepCplusplusLibraryTarget - generate rules to create a shared library.
++ */
++#ifndef SharedDepCplusplusLibraryTarget
++# ifdef UseInstalled
++#  ifndef LinkBuildSonameLibrary
++#   define LinkBuildSonameLibrary(lib) true
++#  endif
++# else
++#  ifndef LinkBuildSonameLibrary
++#   define LinkBuildSonameLibrary(lib) (RemoveFile($(BUILDLIBDIR)/lib); \
++	cd $(BUILDLIBDIR); $(LN) $(BUILDINCTOP)/$(CURRENT_DIR)/lib .)
++#  endif
++# endif
++
++# define SharedDepCplusplusLibraryTarget(libname,rev,deplist,solist,down,up)	@@\
++AllTarget(Concat(lib,libname.rev.dylib))				@@\
++									@@\
++Concat(lib,libname.rev.dylib):  deplist $(EXTRALIBRARYDEPS)		@@\
++	$(RM) $@~							@@\
++	@MAJREV=`expr rev : '\([^.]*\)'`; \				@@\
++	  INSTALLNAME=Concat(lib,libname.$$MAJREV.dylib); \		@@\
++	  set -x; (cd down; $(CXX) -o up/$@~ $(SHLIBLDFLAGS) -install_name $(USRLIBDIR)/$$INSTALLNAME -current_version rev -compatibility_version rev -seg_addr_table_filename $(USRLIBDIR)/$@ solist $(REQUIREDLIBS)); \ @@\
++	  $(RM) $$INSTALLNAME; $(LN) $@ $$INSTALLNAME; \		@@\
++	  LinkBuildSonameLibrary($$INSTALLNAME)				@@\
++	$(RM) $@							@@\
++	$(MV) $@~ $@							@@\
++	@(set -x; \							@@\
++	  $(RM) Concat(lib,libname.dylib); \				@@\
++	  $(LN) $@ Concat(lib,libname.dylib))				@@\
++	LinkBuildLibrary($@)						@@\
++	LinkBuildLibrary(Concat(lib,libname.dylib))			@@\
++									@@\
++clean::									@@\
++	@MAJREV=`expr rev : '\([^.]*\)'`; \				@@\
++	set -x; $(RM) Concat(lib,libname.$$MAJREV.dylib)		@@\
++	$(RM) Concat(lib,libname.rev.dylib) Concat(lib,libname.dylib)
++
++#endif /* SharedDepCplusplusLibraryTarget */
++
++#ifndef SharedDepModuleTarget
++#define SharedDepModuleTarget(name,deps,solist)				@@\
++AllTarget(name)								@@\
++									@@\
++name: deps								@@\
++	$(RM) $@~							@@\
++	$(CC) -o $@~ $(SHLIBLDFLAGS) solist $(REQUIREDLIBS)		@@\
++	$(RM) $@							@@\
++	$(MV) $@~ $@							@@\
++									@@\
++clean::									@@\
++	$(RM) name
++
++#endif /* SharedDepModuleTarget */
++
++/*
++ * SharedLibraryDataTarget - generate rules to create shlib data file;
++ */
++#ifndef SharedLibraryDataTarget
++#define SharedLibraryDataTarget(libname,rev,salist)
++#endif /* SharedLibraryDataTarget */
++
++#ifndef InstallSharedLibraryData
++#define InstallSharedLibraryData(libname,rev,dest)
++#endif /* InstallSharedLibraryData */
+$NetBSD: patch-ay,v 1.1 2004/03/16 23:59:42 danw Exp $
+
+--- config/cf/darwinLib.tmpl.orig	Sun Mar 14 11:07:29 2004
++++ config/cf/darwinLib.tmpl
+@@ -0,0 +1,56 @@
++XCOMM $XFree86: xc/config/cf/darwinLib.tmpl,v 1.10 2003/02/04 23:04:59 torrey Exp $
++/*
++ * Darwin/Mac OS X shared library template
++ */
++
++#ifndef FixupLibReferences
++#define FixupLibReferences()						@@\
++XMULIBONLY = -lXmu							@@\
++XMULIB = $(XMULIBONLY) $(XTOOLLIB) $(XLIB)				@@\
++GLXLIB := $(GLXLIB) $(XPLUGIN_LIB)
++#endif
++
++#ifndef XawClientLibs
++#define XawClientLibs $(XAWLIB) $(XMULIBONLY) $(XTOOLLIB) $(XPMLIB) $(XLIB)
++#endif
++
++/* Allow for libpthread, as overridden by OS definitions */
++#if !defined(SharedX11Reqs)
++#define SharedX11Reqs
++#endif
++
++#ifndef FontLibSharedFreeType
++#define FontLibSharedFreeType YES
++#endif
++#if FontLibSharedFreeType
++#define SharedXfontReqs     $(LDPRELIB) $(FONTSTUBLIB) GzipLibrary $(FREETYPE2LIB) -flat_namespace
++#else
++#define SharedXfontReqs     $(LDPRELIB) $(FONTSTUBLIB) GzipLibrary -flat_namespace
++#endif
++
++#define SharedGLReqs        $(LDPRELIB) $(XLIB)
++#define SharedGLUReqs       $(LDPRELIB) $(XLIB) $(GLXLIB)
++#define SharedSMReqs        $(LDPRELIB) $(ICELIB)
++#define SharedXawReqs       $(LDPRELIB) $(XMULIB) $(XTOOLLIB) $(XPMLIB) $(XLIB)
++#define SharedXaw6Reqs      $(LDPRELIB) $(XMULIB) $(XTOOLLIB) $(XLIB)
++#define SharedXcursorReqs   $(LDPRELIB) $(XRENDERLIB) $(XLIB)
++#define SharedXextReqs      $(LDPRELIB) $(XLIBONLY)
++#define SharedXiReqs        $(LDPRELIB) $(XLIB)
++#define SharedXmuReqs       $(LDPRELIB) $(XTOOLLIB) $(XLIB)
++#define SharedXmuuReqs      $(LDPRELIB) $(XTOOLLIB) $(XLIB)
++#define SharedXpReqs        $(LDPRELIB) $(XAUTHLIB) $(EXTENSIONLIB) $(XLIBONLY)
++#define SharedXpmReqs       $(LDPRELIB) $(XLIB)
++#define SharedXrandrReqs    $(LDPRELIB) $(XRENDERLIB) $(XLIB)
++#define SharedXrenderReqs   $(LDPRELIB) $(EXTENSIONLIB) $(XLIB)
++#define SharedXssReqs       $(LDPRELIB) $(XLIB) $(EXTENSIONLIB) $(XTOOLLIB)
++#define SharedXtReqs        $(LDPRELIB) $(XLIBONLY) $(SMLIB) $(ICELIB) -flat_namespace
++#define SharedXtstReqs      $(LDPRELIB) $(XLIB)
++#define SharedXvReqs        $(LDPRELIB) $(XLIB)
++#define SharedDPSReqs       $(LDPRELIB) $(SMLIB) $(ICELIB) $(XTOOLLIB) $(XLIB)
++#define SharedDPSTKReqs     $(LDPRELIB) $(SMLIB) $(ICELIB) $(XTOOLLIB) $(DPSLIB) $(XLIB)
++#define SharedOldXReqs      $(LDPRELIB) $(XLIBONLY)
++#define SharedpsresReqs     $(LDPRELIB) $(SMLIB) $(ICELIB) $(XTOOLLIB) $(XLIB)
++
++#define SharedXmReqs        $(LDPRELIBS) $(XTOOLONLYLIB) $(EXTENSIONLIB) $(XPLIB) $(XLIB)
++#define SharedMrmReqs       $(LDPRELIB) $(XMLIB) SharedXmReqs
++#define SharedUilReqs       $(LDPRELIB) $(MRESOURCELIB) $(XMLIB) SharedXmReqs
+$NetBSD: patch-az,v 1.1 2004/03/16 23:59:42 danw Exp $
+
+--- lib/Xm/Scale.c.orig	Sat Mar 13 22:17:01 2004
++++ lib/Xm/Scale.c
+@@ -82,6 +82,9 @@ static char rcsid[] = "$TOG: Scale.c /ma
+ extern "C" { /* some 'locale.h' do not have prototypes (sun) */
+ #endif
+ #include <X11/Xlocale.h>
++#ifdef __DARWIN__
++#include <locale.h> /* Xlocale.h doesn't define struct lconv */
++#endif
+ #ifdef __cplusplus
+ } /* Close scope of 'extern "C"' declaration */
+ #endif /* __cplusplus */
