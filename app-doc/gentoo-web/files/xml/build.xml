@@ -47,7 +47,7 @@ your own CD-ROM using this image and your preferred CD burning software.
 prompt at the bottom of the screen.  At this prompt, hit enter, and Linux will begin to load
 from the CD.</p>
 <p>Next, you'll be greeted with a small list of commands available on the boot CD, including
-<c>e3pi</c> (a pico editor clone) and the <c>help</c> command.  At this point, you are now in
+<c>nano</c> (a pico editor clone) and the <c>help</c> command.  At this point, you are now in
 the minimal boot CD Linux environment.  You should have a root ("<c>#</c>") prompt on the current
 console, and can also open new consoles by typing alt-f2, alt-f3, 
 etc and then hitting enter.</p>
@@ -294,13 +294,9 @@ $GTWAY with your default gateway.
 <p>Now, it's time to create the <path>/etc/resolv.conf</path>
 file so that name resolution (finding Web/FTP sites by name, rather than just by IP address) will work.</p>
 
-<note>At the moment the only editor installed by default is <c>e3</c>, a
-small, basic editor, written in Nasm asm.  It has keybindings for vi,
-emacs, pico, nedit, and wordstar.  If you aren't familiar with any
-of those editors, just type <c>e3</c>, and you will get the default
-pico keybindings which are pretty easy to work with.  To get the other
-keybindings, try <c>e3vi</c>, <c>e3em</c>, <c>e3pi</c>, <c>e3ne</c>,
-<c>e3ws</c>, respectively.</note>
+<note>At the moment the only editor installed by default is <c>nano</c>, a
+small and very easy-to-use visual editor. 
+</note>
 
 <p>Here's a template to follow for creating your /etc/resolv.conf file:
 </p>
@@ -359,7 +355,7 @@ would like built into packages; the commented-out defaults are recommended.  You
 CFLAGS</c> and <c>CXXFLAGS</c> settings for the kind of system that you are creating:
 </p>
 <pre>
-# <i>e3 /etc/make.conf</i> <comment>(Adjust these settings)</comment>
+# <i>nano /etc/make.conf</i> <comment>(Adjust these settings)</comment>
 </pre>
 <p>Now, it's time to start the "bootstrap" process.  This process will last 1-2 hours depending on 
 how zippy your machine is; it takes about 45 minutes on my 900Mhz AMD Athlon system.  During this
@@ -577,17 +573,17 @@ insmod earlier.  When Gentoo Linux boots, this module will be automatically
 loaded:
 </p>
 <pre caption="network config">
-# <i>e3 /etc/modules.autoload</i>
+# <i>nano /etc/modules.autoload</i>
 </pre>
 <p>If you have a static IP, use the <c>net.eth0</c> script to get your network
 configured for your first boot:</p>
 <pre>
-# <i>e3 /etc/init.d/net.eth0</i>
+# <i>nano /etc/init.d/net.eth0</i>
 # <i>rc-update add net.eth0 default</i>
 </pre>
 <p>However, if you have a dynamic IP, do the same thing with <c>net.eth0-dhcp</c>:</p>
 <pre>
-# <i>e3 /etc/init.d/net.eth0-dhcp</i>
+# <i>nano /etc/init.d/net.eth0-dhcp</i>
 # <i>rc-update add net.eth0-dhcp default</i>
 </pre>
 <p>If you need to set up any additional network interfaces, copy <c>net.eth0</c>
@@ -603,7 +599,7 @@ time.</impo>
 <title>Configure basic settings</title>
 <body>
 <pre caption="basic configuration">
-# <i>e3 /etc/rc.conf</i>
+# <i>nano /etc/rc.conf</i>
 </pre>
 <p>
 Follow the directions in the file to configure the basic settings.
@@ -646,7 +642,7 @@ successfully installed, you can type <c>quit</c> to quit GRUB.  Gentoo Linux is
 installed, but we need to create the <path>/boot/grub/menu.lst</path> file so that
 we get a nice GRUB boot menu when the system reboots.  Here's how to do it.</p>
 
-<p>Now, create the menu.lst file (<c>e3 /boot/grub/menu.lst</c>), and add the following to it:</p>
+<p>Now, create the menu.lst file (<c>nano /boot/grub/menu.lst</c>), and add the following to it:</p>
 <pre>
 default 0
 timeout 30
