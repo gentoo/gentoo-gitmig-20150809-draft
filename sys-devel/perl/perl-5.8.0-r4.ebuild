@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r4.ebuild,v 1.1 2002/12/15 18:30:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r4.ebuild,v 1.2 2002/12/15 18:31:50 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -10,6 +10,8 @@ SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz"
 HOMEPAGE="http://www.perl.org" 
 LICENSE="Artistic GPL-2"
 SLOT="0"
+# devs, please email if this tests ok on your platform rather than
+# unmasking it - mcummings@gentoo.org
 KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 DEPEND="sys-apps/groff 
