@@ -1,11 +1,17 @@
-MD5 50380d1e1f89d88559dd14ab090c41e9 ChangeLog 1884
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 cd2b7a6c4767a5bf35f681b3986cb1e6 xpvm-1.2.5-r1.ebuild 1503
-MD5 8a378ff84cd6e0cfd86f7c01ebf0fade xpvm-1.2.5-r2.ebuild 1502
 MD5 3c55a9b59e0402fd04bef10354fb978d xpvm-1.2.5-r3.ebuild 1634
-MD5 1b13f34348a8e50a20f45e5db0692677 xpvm-1.2.5.ebuild 1479
-MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5 63
-MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r1 63
+MD5 06885f8cbfd4fdc9638f7b6a88998f04 ChangeLog 2005
+MD5 8a378ff84cd6e0cfd86f7c01ebf0fade xpvm-1.2.5-r2.ebuild 1502
 MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r2 63
 MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r3 63
 MD5 d35a792494704198c2d97ff3e4b9e033 files/xpvm-1.2.5-gentoo.diff 2904
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBTeKXKtJO8LeSoosRAnIfAJ9VcmqoUgH+rO68AX3DeFf7bJl+RQCfWQLi
+mv8G8YucjA8kKaOQ6czoSz8=
+=020l
+-----END PGP SIGNATURE-----
