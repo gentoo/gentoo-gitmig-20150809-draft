@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/gcc34-2004.2/use.mask,v 1.1 2004/08/13 17:55:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/gcc34-2004.2/use.mask,v 1.2 2004/08/25 21:08:24 lv Exp $
 
 # WON'T BUILD - SECTION
 
@@ -42,6 +42,7 @@ libcaca
 # make them useful on amd64. Anyway, all amd64 cpus have them, so they should
 # not be many flag dependant in this case
 mmx
+mmx2
 sse
 sse2
 3dnow
