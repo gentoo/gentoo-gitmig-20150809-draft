@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.51 2003/12/09 00:21:12 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.52 2003/12/17 21:27:14 pylon Exp $
+
+  17 Dec 2003; Lars Weiler <pylon@gentoo.org> samba-3.0.0-r1.ebuild:
+  Stable on PPC
 
   09 Dec 2003; <spider@gentoo.org> samba-3.0.0-r1.ebuild, samba-3.0.0.ebuild,
   files/smb.conf.example-samba3:
