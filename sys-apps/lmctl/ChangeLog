@@ -1,13 +1,18 @@
 # ChangeLog for sys-apps/lmctl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctl/ChangeLog,v 1.2 2005/01/08 11:59:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctl/ChangeLog,v 1.3 2005/01/23 08:33:10 hollow Exp $
+
+*lmctl-0.3.2-r2 (23 Jan 2005)
+
+  23 Jan 2005; Benedikt Boehm <hollow@gentoo.org> +files/0.3.2-beautyfix.diff,
+  files/C-BK16A-DUAL.patch, +lmctl-0.3.2-r2.ebuild:
+  Fixed C-BK16A-DUAL.patch. Fixed #79163
 
 *lmctl-0.3.2-r1 (08 Jan 2005)
 
   08 Jan 2005; Benedikt Boehm <hollow@gentoo.org> lmctl-0.3.2-r1.ebuild:
   Added fixheadtails
   Added C-BK16A-DUAL.patch
-  
 
 *lmctl-0.3.2 (08 Jan 2005)
 

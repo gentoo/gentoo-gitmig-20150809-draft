@@ -1,0 +1,11 @@
+--- src/lmctl.c.orig	2004-08-07 23:27:12.869178345 +0200
++++ src/lmctl.c	2004-08-07 23:27:41.065145392 +0200
+@@ -235,7 +235,7 @@
+ 			printf ("\tDevice has vertical roller: %s\n",
+ 				PB1 & 0x08? "yes": "no");
+ 			if ((PB1 & 7) < 7) {
+-				printf ("\tNumber of buttons on device: %d",
++				printf ("\tNumber of buttons on device: %d\n",
+ 					(PB1 & 7) + 2);
+ 			} else {
+ 				printf ("\tNumber of buttons on device: 9 or more\n");
