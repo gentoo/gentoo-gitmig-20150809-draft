@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.16 2004/02/09 07:42:48 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.17 2004/04/06 17:55:06 agriffis Exp $
+
+  06 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnuplot-3.8j.ebuild:
+  Stable on ia64
 
   09 Feb 2004; <augustus@gentoo.org> gnuplot-3.8j.ebuild:
   Added ~amd64 to keywords.
