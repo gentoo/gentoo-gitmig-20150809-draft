@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/hotwayd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.8 2004/08/08 00:13:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.9 2004/10/04 12:22:53 ticho Exp $
+
+*hotwayd-0.8-r1 (04 Oct 2004)
+
+  04 Oct 2004; Andrej Kacian <ticho@gentoo.org>
+  +files/hotwayd-0.8-headerfix.patch, +hotwayd-0.8-r1.ebuild:
+  Revision bump. Apply patch to fix unwanted header mangling (see bug #66256).
+  Patch submitted by Keith Landry <wirwzd@wirewizards.com>.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> hotwayd-0.7.4.ebuild,
   hotwayd-0.8.ebuild:
