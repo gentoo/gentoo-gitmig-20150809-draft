@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.26 2004/12/19 07:31:24 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.27 2004/12/19 13:19:26 kloeri Exp $
+
+  19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> gok-0.11.16.ebuild:
+  Stable on alpha.
 
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> gok-0.11.16.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
