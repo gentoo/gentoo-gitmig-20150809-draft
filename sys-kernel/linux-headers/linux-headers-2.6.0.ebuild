@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0.ebuild,v 1.4 2004/01/08 07:04:10 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0.ebuild,v 1.5 2004/01/22 18:35:44 spock Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -47,6 +47,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-appCompat.patch
 	epatch ${FILESDIR}/${P}-strict-ansi-fix.patch
 	epatch ${FILESDIR}/${P}-sysctl_h-compat.patch
+	epatch ${FILESDIR}/${P}-fb.patch
 
 }
 
