@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.0_beta1.ebuild,v 1.3 2004/04/16 01:17:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.0_beta1.ebuild,v 1.4 2004/04/24 15:04:19 lanius Exp $
 
 inherit kde
-need-kde 3.2
 
 MY_P="${P/_beta/-beta}"
 S="${WORKDIR}/${MY_P}"
@@ -24,6 +23,8 @@ DEPEND=">=kde-base/kdemultimedia-3.2
 	xmms? ( >=media-sound/xmms-1.2 )
 	>=dev-util/pkgconfig-0.9.0
 	>=media-libs/taglib-0.95"
+
+need-kde 3.2
 
 src_unpack() {
 	if  ! use arts && ! use gstreamer

@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-0.9.ebuild,v 1.4 2004/04/16 01:17:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-0.9.ebuild,v 1.5 2004/04/24 15:04:19 lanius Exp $
 
 inherit kde
-need-kde 3
 
 DESCRIPTION="amaroK is a media player for KDE"
 HOMEPAGE="http://amarok.sourceforge.net/"
@@ -18,6 +17,8 @@ DEPEND=">=kde-base/kdemultimedia-3.2
 		media-libs/gstreamer
 		media-libs/gst-plugins
 	)"
+
+need-kde 3
 
 src_compile() {
 	PREFIX=`kde-config --prefix`
