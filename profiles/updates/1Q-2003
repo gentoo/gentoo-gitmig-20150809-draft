@@ -23,3 +23,4 @@ move media-video/kino-0.60 media-video/kino-0.6
 move sys-kernel/lolo-sources sys-kernel/pfeifer-sources
 move net-p2p/dc-gui2 net-p2p/dc-gui
 move gnome-extra/gtkhtml-3.0.1 gnome-extra/libgtkhtml-3.0.1
+move media-video/libdvb media-libs/libdvb
