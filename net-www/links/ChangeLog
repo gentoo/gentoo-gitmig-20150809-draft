@@ -1,6 +1,10 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.31 2003/09/09 09:39:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.32 2003/09/20 10:32:54 seemant Exp $
+
+  20 Sep 2003; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre11.ebuild:
+  graphics not needed for ssl -- sheesh at me. Thanks spanky <vapier@gentoo.org>
+  in bug #29086
 
   09 Sep 2003; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre11.ebuild,
   links-2.1_pre9.ebuild:
