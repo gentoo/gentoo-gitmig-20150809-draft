@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.6.ebuild,v 1.1 2004/08/23 22:01:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.6.ebuild,v 1.2 2004/08/29 17:08:53 eradicator Exp $
 
 MY_P=${P/_rc/rc}
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
@@ -9,7 +9,7 @@ SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="x86 ppc amd64 ~alpha hppa"
+KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~hppa"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
@@ -28,7 +28,8 @@ src_install() {
 	dodoc ${ALSA_UTILS_DOCS}
 	newdoc alsamixer/README README.alsamixer
 
-	dodir /etc/init.d
+	insinto /etc/conf.d
+	newins ${FILESDIR}/alsasound.confd alsasound
 	insinto /etc/modules.d
 	newins ${FILESDIR}/alsa-modules.conf-rc alsa
 	exeinto /etc/init.d

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.64 2004/08/23 22:01:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.65 2004/08/29 17:08:53 eradicator Exp $
+
+  29 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound,
+  +files/alsasound.confd:
+  Added SAVE_ON_STOP option to init script thanks to Kalin KOZHUHAROV
+  <kalin@ThinRope.net> in bug #61130.
 
 *alsa-utils-1.0.6 (23 Aug 2004)
 

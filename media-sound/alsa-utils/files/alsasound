@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.14 2004/06/18 08:07:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.15 2004/08/29 17:08:53 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -191,9 +191,11 @@ stop() {
 	ebegin "Unloading ALSA"
 	terminate
 
-	einfo "Storing ALSA Mixer Levels"
-	if ! save_mixer; then
-		eend 1
+	if [ "${SAVE_ON_STOP}" = "yes" ]; the
+		einfo "Storing ALSA Mixer Levels"
+		if ! save_mixer; then
+			eend 1
+		fi
 	fi
 
 	einfo "Unloading modules"
