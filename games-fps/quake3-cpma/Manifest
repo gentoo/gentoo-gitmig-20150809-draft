@@ -1,4 +1,4 @@
-MD5 7cbe6e9c20551b1f07c8b6de5b102200 files/server.cfg 2977
 MD5 b998fca9e20a6ad1d8fe576fdd787e5b files/digest-quake3-cpma-1.1 62
-MD5 5cc47631f4c57f18237c2afc50b5ba99 ChangeLog 1527
-MD5 ee5ca6b953423d4efe17f2347017378a quake3-cpma-1.1.ebuild 421
+MD5 7cbe6e9c20551b1f07c8b6de5b102200 files/server.cfg 2977
+MD5 adff6f078ef039adfcad7a66dc1614dd ChangeLog 1527
+MD5 ca74dba02d2305cfdec0d976ea021b77 quake3-cpma-1.1.ebuild 421

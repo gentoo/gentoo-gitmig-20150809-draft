@@ -1,4 +1,4 @@
-MD5 8538d9d2ab3b59f118391612b747fc4f files/digest-quake3-osp-1.03a 139
+MD5 e7aca543ee063a95ce7ffb1b8a8421ac quake3-osp-1.03a.ebuild 563
 MD5 c859159694234f112333bba4680a7e6b files/server.cfg 5532
-MD5 99945aa54b25a1f0538e999f55834895 quake3-osp-1.03a.ebuild 563
-MD5 514d1d636391bc0a6c74d8f18115bbf4 ChangeLog 792
+MD5 8538d9d2ab3b59f118391612b747fc4f files/digest-quake3-osp-1.03a 139
+MD5 3b16aea6c16649ed68f64de84f80217b ChangeLog 792

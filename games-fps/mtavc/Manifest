@@ -1,4 +1,4 @@
-MD5 a24f49750bcfa61a291eaa15d25b43ae mtavc-0.1.0.ebuild 845
-MD5 ca8d7b694442aabf7ffc623fca1840c1 ChangeLog 633
-MD5 33d624d0f55b53758710d4be7501ded7 files/digest-mtavc-0.1.0 66
 MD5 5ca2d00ab437a86bbc53b829fccd760f files/mtavc 46
+MD5 33d624d0f55b53758710d4be7501ded7 files/digest-mtavc-0.1.0 66
+MD5 fb42a6d9eb87f21495de52d554bc3077 mtavc-0.1.0.ebuild 843
+MD5 da20cd187edbb97067dd6da435e231fd ChangeLog 631

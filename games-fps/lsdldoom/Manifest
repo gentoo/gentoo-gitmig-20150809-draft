@@ -1,4 +1,4 @@
-MD5 9773b312625264308d33b986bdcb587d ChangeLog 795
-MD5 757256240b3e45ad26fa6ecf48a97a6f lsdldoom-1.4.4.4.ebuild 1065
-MD5 3606ef13ad3d476834157da0331179ed files/digest-lsdldoom-1.4.4.4 126
 MD5 fb08ae3fadc9c3e448e37db45ab3125c files/lsdldoom 79
+MD5 3606ef13ad3d476834157da0331179ed files/digest-lsdldoom-1.4.4.4 126
+MD5 f83b28c89a495dc072ed3f1475ed5e6b lsdldoom-1.4.4.4.ebuild 1062
+MD5 46610f3d597c2775acc81f4705ada495 ChangeLog 795

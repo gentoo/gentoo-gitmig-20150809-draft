@@ -1,4 +1,4 @@
-MD5 2425d4475c7622cccf1be1576e8e43a7 files/1-gentoo.patch 1847
 MD5 5288c4fce9f6009f1859550578c8728d files/digest-nprquake-sdl-1 65
-MD5 2f7ef2b33f579d4c858417fb45ac69cb ChangeLog 352
-MD5 f0bf8d46681126da7b1a0439edda7214 nprquake-sdl-1.ebuild 1110
+MD5 2425d4475c7622cccf1be1576e8e43a7 files/1-gentoo.patch 1847
+MD5 3493b4d4c6e0e5fe755ca3befd1a38ed nprquake-sdl-1.ebuild 1110
+MD5 e152b6911ac3d4358b247c7da8845b1a ChangeLog 352
