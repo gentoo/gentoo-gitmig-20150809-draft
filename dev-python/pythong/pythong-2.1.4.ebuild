@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.4.ebuild,v 1.6 2004/10/03 21:24:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.4.ebuild,v 1.7 2005/03/23 14:34:58 blubb Exp $
 
 inherit python distutils
 
