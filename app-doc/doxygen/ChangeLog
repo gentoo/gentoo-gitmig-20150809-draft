@@ -1,8 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.6 2002/07/08 15:08:29 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.7 2002/10/13 16:58:55 sunflare Exp $
 
-#doxygen-1.2.16 (08 Jul 2002)
+*doxyten-1.2.18 (13 Oct 2002)
+  13 Oct 2002; Phil Bordelon <sunflare@gentoo.org> doxygen-1.2.18.ebuild :
+  Version bump, along with some added fixes provided by CJ Kucera
+  <pez@apocalyptech.com> in Bug 7353.
+
+*doxygen-1.2.16 (08 Jul 2002)
 
   08 Jul 2002; Phil Bordelon <sunflare@gentoo.org> doxygen-1.2.15.ebuild doxygen-1.2.15-r1.ebuild doxygen-1.2.16.ebuild :
   Did a version bump.  Also lintool'd and repoman'd the ebuild so that
