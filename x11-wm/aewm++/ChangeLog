@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/aewm++
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.6 2004/06/24 23:39:23 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.7 2005/01/07 04:56:40 josejx Exp $
+
+  07 Jan 2005; Joseph Jezak <josejx@gentoo.org> +files/gcc-3.4.patch,
+  aewm++-1.0.24.ebuild:
+  Marked ~ppc for bug #76860 and added patch to fix compilation on gcc 3.4.
 
   07 May 2004; Brandon Hale <tseng@gentoo.org> aewm++-1.0.24.ebuild:
   Add IUSE=
