@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/giflib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.8 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.9 2003/05/18 21:56:28 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *giflib-4.1.0-r3 (14 Apr 2002)
+
+  18 May 2003; Guy Martin <gmsoft@gentoo.org> giflib-4.1.0-r3.ebuild :
+  Added gnuconfig_update in src_unpack for hppa2.0-unknown-linux-gnu.
 
   26 Mar 2003; Graham Forest <vladimir@gentoo.org> giflib-4.1.0-r3.ebuild:
   Automated cleanup of LICENSE

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.17 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.18 2003/05/18 21:56:28 gmsoft Exp $
 
 inherit gnuconfig
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S}
 	use alpha && gnuconfig_update
+	use hppa && gnuconfig_update
 }
 
 src_compile() {
