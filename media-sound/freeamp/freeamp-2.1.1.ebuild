@@ -1,8 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.2 2002/02/12 18:55:38 danarmak Exp $
-use arts && . /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.3 2002/02/19 10:39:36 danarmak Exp $
+use arts && . /usr/portage/eclass/inherit.eclass
+use arts && inherit functions && set-kdedir
 
 # I highly suggest you read the features section of the freeamp website to
 # see all the neat stuff this program can do. Pretty spiffy :)
@@ -21,8 +22,6 @@ RDEPEND="virtual/glibc
 	X? ( virtual/x11 ) arts? ( kde-base/kdelibs )
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND} dev-lang/nasm sys-devel/perl"
-
-use arts && inherit functions && set-kdedir
 
 # Unfortunately you can't selectively build a lot of the features. Therefore
 # this whole package is essentially a judgement call. However, I've made the
