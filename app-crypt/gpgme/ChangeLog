@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.2 2002/05/20 10:35:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.3 2002/07/16 22:37:49 seemant Exp $
+
+*gpgme-0.3.6-r1 (16 Jul 2002)
+
+  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gpgme-0.3.6-r1.ebuild
+  files/digest-gpgme-0.3.6-r1 :
+
+  Plugin is now available, so that Kmail etc can use gpgme.  Fix submitted
+  by: gentoo-bugs@devrieze.net (Paul de Vrieze) in bug #5086.
 
 *gpgme-0.3.6 (20 May 2002)
 
