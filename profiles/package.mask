@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3639 2005/02/18 19:11:51 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3640 2005/02/19 02:58:12 vericgar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+
+# Michael Stewart <vericgar@gentoo.org) (18 Feb 2005)
+# Apache herd package refresh, not sure why hollow didn't mask this when 
+# he added it. See meta bug 76457 for unmask status.
+=net-www/mod_auth_ldap-3.3
 
 # Peter Johanson <latexer@gentoo.org> (18 Feb 2005)
 # Masked awaiting confirmation of NPTL fix (see bug #63734)
