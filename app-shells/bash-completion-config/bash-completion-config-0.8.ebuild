@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8.ebuild,v 1.3 2005/02/06 00:53:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8.ebuild,v 1.4 2005/02/06 20:13:49 kumba Exp $
 
 MY_PN="bashcomp-config"
 MY_P="${MY_PN}-${PV}"
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc x86"
 IUSE=""
 
 DEPEND=">=app-shells/bash-2.05"
