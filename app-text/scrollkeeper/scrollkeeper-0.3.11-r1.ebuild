@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11-r1.ebuild,v 1.8 2003/02/10 14:14:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11-r1.ebuild,v 1.9 2003/02/10 17:51:34 foser Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ KEYWORDS="x86 ppc sparc alpha"
 RDEPEND=">=dev-libs/libxml2-2.4.19
 	>=dev-libs/libxslt-1.0.14
 	>=sys-libs/zlib-1.1.3
-	=app-text/docbook-xml-dtd-4.1.2-r2
+	=app-text/docbook-xml-dtd-4.1.2*
 	>=app-text/docbook-sgml-utils-0.6.6"
 
 DEPEND="${RDEPEND}
