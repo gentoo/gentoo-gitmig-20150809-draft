@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/alien
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.5 2003/06/29 15:40:50 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.6 2004/01/27 20:14:53 mholzer Exp $
+
+  27 Jan 2004; Martin Holzer <mholzer@gentoo.org> alien-8.21-r1.ebuild,
+  alien-8.21.ebuild:
+  fixing SRC_URI. closes 39313
 
 *alien-8.21-r1 (30 Mar 2003)
 
