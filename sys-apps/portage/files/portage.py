@@ -238,7 +238,7 @@ def unmerge(category,pkgname):
 				if mydat[x]=="->":
 					splitter=x
 					break
-				x=x+1
+				x=x-1
 			if splitter==-1:
 				#invalid symlink format
 				print "CONTENTS symlink error!"

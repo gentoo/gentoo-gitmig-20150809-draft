@@ -1,9 +1,12 @@
-#!/bin/bash
-for x in "$USE"
-do
-	if [ "${1}" = "${x}" ]
-	then
-		echo "${x}"
-		exit
-	fi
-done
+#!/usr/lib/portage/bin/python
+import string
+import portage
+import sys
+
+myuse=portage.getsetting("USE")
+myuse=string.split(myuse)
+for x in myuse:
+	if x==sys.argv[1]:
+		print x
+		sys.exit(0)
+sys.exit(1)
