@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.9.ebuild,v 1.3 2004/12/03 16:39:54 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.9.ebuild,v 1.4 2005/01/02 02:01:12 hardave Exp $
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.cvshome.org/"
