@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.2.ebuild,v 1.3 2004/06/28 01:51:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.2.ebuild,v 1.4 2004/08/25 15:11:21 tantive Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -29,7 +29,7 @@ src_compile() {
 		--with-group-id=65 \
 		--with-ccmuser-name=cluster \
 		--with-ccmuser-id=65 || die
-	emake || die
+	emake -j 1 || die "compile problem"
 }
 
 pkg_preinst() {
