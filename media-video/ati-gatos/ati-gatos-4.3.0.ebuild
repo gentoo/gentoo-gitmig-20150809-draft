@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.5 2004/02/05 21:35:07 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.6 2004/02/08 04:59:47 battousai Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND="${DEPEND}
-	x11-base/xfree"
+	>=x11-base/xfree-4.3.0-r4"
 
 pkg_setup() {
 	if [ ! "`grep gatos /var/db/pkg/x11-base/xfree-[0-9]*/USE`" ]
