@@ -4,13 +4,14 @@ Hash: SHA1
 MD5 e640b94d35c2228661c6efd1e11da45c mythgallery-0.16.ebuild 686
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 49bfb34ad13888a45db6cfeb7da76514 mythgallery-0.17.ebuild 726
-MD5 9fac0e2f9311aa8943942a14c89faf36 ChangeLog 3875
+MD5 1c703a038ed7fd789b72ad4fe110b955 ChangeLog 4012
+MD5 281d726968403103e83db3b722610071 mythgallery-0.17-r1.ebuild 780
+MD5 95241fda0f7454c8bd6d0f664471ec6b files/digest-mythgallery-0.17-r1 68
 MD5 0ca4e7d13c8988f8e2c456d1b4e9c414 files/digest-mythgallery-0.16 68
-MD5 95241fda0f7454c8bd6d0f664471ec6b files/digest-mythgallery-0.17 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCDNZd5+pdB4IBr0URArGSAJ956gYc5duora+ZL28ZXLeoaWE7SACeNjjP
-4GV3NawZNczPzy1Yyfgry3M=
-=uSdc
+iD8DBQFCRR6j5+pdB4IBr0URArZLAJ9sOtjf0WEepSeZhbYTh2wOjDonrwCgm3Uf
+MSsbFB+JGGDUEjHZ/xBPUvY=
+=N6Wg
 -----END PGP SIGNATURE-----
