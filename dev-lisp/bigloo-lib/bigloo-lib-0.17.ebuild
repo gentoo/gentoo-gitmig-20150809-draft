@@ -1,17 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.7 2002/10/05 05:39:11 drobbins Exp $
-
-IUSE="nls gtk postgres mysql gtk2 ipcs gd ldap X gdbm expat"
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.8 2002/11/02 12:18:35 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Bigloo support libraries"
 SRC_URI="mirror://sourceforge/bigloo-lib/${P}.tar.gz"
 HOMEPAGE="http://bigloo-lib.sf.net"
-
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~sparc64"
+IUSE="nls gtk postgres mysql gtk2 ipcs gd ldap X gdbm expat"
 
 DEPEND=">=dev-lisp/bigloo-2.4
 	X? ( virtual/x11 )
@@ -21,6 +19,7 @@ DEPEND=">=dev-lisp/bigloo-2.4
 	gtk2? ( =x11-libs/gtk+-2* )
 	ldap? ( >=net-nds/openldap-2.0.18 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	>=dev-libs/expat-1.95.4
 	"
 src_compile() {
 	local myconf
@@ -50,10 +49,6 @@ src_compile() {
 		&& myconf="${myconf} --with-iconv --with-gettext" \
 		|| myconf="${myconf} --without-nls --without-gettext"
 
-	use ipcs \
-		&& myconf="${myconf} --with-ipcs" \
-		|| myconf="${myconf} --without-ipcs"
-
 	# gdbm support doesn't work
 #	use gdbm \
 #		&& myconf="${myconf} --with-gdbm" \
@@ -68,13 +63,20 @@ src_compile() {
 		&& myconf="${myconf} --with-postgres" \
 		|| myconf="${myconf} --without-postgres"
 
-	use expat \
-		&& myconf="${myconf} --with-expat" \
-		|| myconf="${myconf} --without-expat"
+#	We just force these, as we don't have useflags for them.
+#	use expat \
+#		&& myconf="${myconf} --with-expat" \
+#		|| myconf="${myconf} --without-expat"
+#	use ipcs \
+#		&& myconf="${myconf} --with-ipcs" \
+#		|| myconf="${myconf} --without-ipcs"
+
+
+	myconf="${myconf} --with-expat --with-ipcs"
 
 
 	econf ${myconf} || die "./configure failed"
-	emake || die
+	make || die
 }
 
 src_install () {
