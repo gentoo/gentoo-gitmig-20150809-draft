@@ -1,6 +1,14 @@
 # ChangeLog for www-proxy/privoxy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.5 2004/12/29 01:53:50 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.6 2005/02/24 15:43:54 mrness Exp $
+
+*privoxy-3.0.3-r1 (24 Feb 2005)
+
+  24 Feb 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  -files/privoxy-gentoo.diff, +files/privoxy.logrotate, +files/privoxy.rc7,
+  -privoxy-2.9.14_beta.ebuild, +privoxy-3.0.3-r1.ebuild:
+  Changed herd from web-apps to www-proxy. Added pcre and logrotate support,
+  thanks to Torsten Veller <tove@gentoo.org> (#71557). Removed old version.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

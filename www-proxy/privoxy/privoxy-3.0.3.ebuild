@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-3.0.3.ebuild,v 1.2 2004/08/15 18:35:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-3.0.3.ebuild,v 1.3 2005/02/24 15:43:54 mrness Exp $
 
 inherit eutils
 

@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/files/privoxy.rc7,v 1.1 2005/02/24 15:43:54 mrness Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting privoxy"
+	start-stop-daemon --start --quiet --exec /usr/sbin/privoxy -- \
+		--pidfile /var/run/privoxy.pid \
+		--user privoxy.privoxy  /etc/privoxy/config 2>/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping privoxy"
+	start-stop-daemon --stop --quiet --pidfile /var/run/privoxy.pid
+	eend $?
+}
