@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.50 2004/07/17 21:48:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.51 2004/07/21 19:57:45 mholzer Exp $
+
+*shorewall-2.0.6 (21 Jul 2004)
+
+  21 Jul 2004; Martin Holzer <mholzer@gentoo.org> shorewall-2.0.6.ebuild:
+  Version bumped.
 
   09 Jul 2004; Aron Griffis <agriffis@gentoo.org> files/shorewall:
   Fix bug 55576: Mention svc_stop/svc_start in the init-script so that
