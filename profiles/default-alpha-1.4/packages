@@ -45,7 +45,6 @@
 >=x11-base/xfree-4.2.1
 # sash - static shell for system recovery
 *app-shells/sash
-*dev-libs/libelf
 *dev-lang/perl
 *dev-perl/ExtUtils-MakeMaker
 *virtual/editor
