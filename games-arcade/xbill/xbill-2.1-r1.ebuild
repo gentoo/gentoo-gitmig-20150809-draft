@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r1.ebuild,v 1.2 2004/02/29 10:10:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r1.ebuild,v 1.3 2004/03/19 21:01:14 vapier Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
 
-DEPEND=">=x11-libs/gtk+-1.0"
+DEPEND="=x11-libs/gtk+-1*"
 
 src_compile() {
 	egamesconf --enable-gtk || die
