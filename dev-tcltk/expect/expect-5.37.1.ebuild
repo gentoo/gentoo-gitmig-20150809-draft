@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1.ebuild,v 1.2 2002/08/16 02:50:47 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1.ebuild,v 1.3 2002/10/04 05:30:30 vapier Exp $
 
 #remove the trailing ".0" from the tarball version
 S=${WORKDIR}/${P%.1}
