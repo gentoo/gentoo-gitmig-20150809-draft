@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-1.0.0_pre5-r1.ebuild,v 1.2 2004/02/06 15:59:08 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.6.1.ebuild,v 1.1 2004/02/06 15:59:08 lordvan Exp $
 
-IUSE="nls esd gnome opengl oggvorbis mikmod"
+IUSE="nls esd gnome opengl oggvorbis mikmod alsa"
 
 inherit eutils
 
-S=${WORKDIR}/${P/_/-}
+MY_PN="bmp"
+MY_P=bmp-${PV}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Beep Media Player"
 HOMEPAGE="http://beepmp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/beepmp/${P/_/-}.tar.gz"
+SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86 -sparc"
+KEYWORDS="~x86 ~sparc"
 
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.2
@@ -23,7 +25,8 @@ RDEPEND="app-arch/unzip
 	esd? ( >=media-sound/esound-0.2.29 )
 	gnome? ( >=gnome-base/gnome-2.2 )
 	opengl? ( virtual/opengl )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
+	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	alsa? ( >=media-libs/alsa-lib-0.9.0 )"
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
@@ -44,6 +47,7 @@ src_compile() {
 		`use_with mikmod libmikmod` \
 		`use_enable opengl` \
 		`use_enable nls` \
+		`use_enable alsa` \
 		${myconf} \
 		|| die
 
