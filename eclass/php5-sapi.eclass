@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.7 2004/07/21 10:59:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.8 2004/07/21 16:15:23 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,33 +23,37 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc jpeg libedit mcve memlimit mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ovrimos pcre pfpro png postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ldap sasl pcntl sqlite"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbmaker dbx dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc zlib"
 
 # these USE flags should have the correct dependencies
 
 DEPEND="$DEPEND
 	!<=dev-php/php-4.99.99
+	berkdb? ( =sys-libs/db-4* )
 	bzlib? ( app-arch/bzip2 )
-	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
+	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.2 )
 	fam? ( app-admin/fam )
 	fdftk? ( app-text/fdftk )
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
-	imap? ( virtual/imapd )
+	imap? ( net-libs/c-client )
 	jpeg? ( >=media-libs/jpeg-6b )
 	ldap? ( >=net-nds/openldap-1.2.11 )
+	libedit? ( dev-libs/libedit )
 	mhash? ( app-crypt/mhash )
 	ming? ( media-libs/ming )
+	mssql? ( dev-db/freetds )
 	mysql? ( >=dev-db/mysql-3.23.26 )
-	mysqli? ( >=dev-db/mysql-4.0.18 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	postgres? ( >=dev-db/postgresql-7.1 )
+	png? ( media-libs/libpng )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
+	sharedmem? ( dev-libs/mm )
 	simplexml? ( dev-libs/libxml2 )
 	snmp? ( virtual/snmp )
 	soap? ( dev-libs/libxml2 )
@@ -58,21 +62,13 @@ DEPEND="$DEPEND
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
+	tiff? ( media-libs/tiff )
+	truetype? ( media-libs/freetype )
 	wddx? ( dev-libs/expat )
 	xml2? ( dev-libs/libxml2 )
+	xpm? ( virtual/x11 )
 	xsl? ( dev-libs/libxslt )
 	zlib? ( sys-libs/zlib )"
-
-# these USE flags have not yet been sorted out
-
-	#berkdb?
-	#cpdflib?
-	#dbmaker?
-	#esoodb?
-	#iodbc?
-	#kerberos?
-	#solid?
-	#xmlrpc?
 
 # ========================================================================
 
@@ -102,6 +98,38 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack
 
 php5-sapi_check_awkward_uses () {
 
+	# mysqli support isn't possible yet
+
+	if useq mysqli ; then
+		eerror
+		eerror "We currently do not support the mysqli extension"
+		eerror "Support will be added once MySQL 4.1 has been added to Portage"
+		eerror
+		die "mysqli not supported yet"
+	fi
+
+	# recode not available; upstream bug
+
+	if useq recode ; then
+		eerror
+		eerror "Support for the 'recode' extension is currently broken UPSTREAM"
+		eerror "See http://bugs.php.net/bug.php?id=28700 for details"
+		eerror
+		die "recode broken, upstream bug"
+	fi
+
+	# iodbc not available; upstream web site down
+
+	if useq iodbc ; then
+		eerror
+		eerror "We have not been able to add iodbc support to Gentoo yet, as we"
+		eerror "have experienced difficulties in reaching www.iodbc.org."
+		eerror 
+		eerror "For now, please use the 'odbc' USE flag instead."
+		eerror
+		die "iodbc support incomplete; gentoo bug"
+	fi
+
 	if useq dba ; then
 		#                     extension     USE flag    shared support?
 		enable_extension_with "cdb"			"cdb"		1
@@ -111,6 +139,11 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with "gdbm"		"gdbm"		1
 		enable_extension_with "inifile"		"inifile"	1
 		enable_extension_with "qdbm"		"qdbm"		1
+	fi
+
+	if useq dbx ; then
+		confutils_use_depend_any "dbx" "frontbase" "mssql" "odbc" "postgresql" "sybase-ct" "oci8" "sqlite"
+		enable_extension_enable		"dbx"			"dbx"			1
 	fi
 
 	if useq gd-external ; then
@@ -125,14 +158,13 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with 	"jpeg-dir" 		"jpeg" 		0 "/usr"
 		enable_extension_with 	"png-dir" 		"png" 		0 "/usr"
 		enable_extension_with 	"tiff-dir" 		"tiff" 		0 "/usr"
-		enable_extension_with 	"xpm-dir" 		"xpm" 		0 "/usr"
+		enable_extension_with 	"xpm-dir" 		"x11" 		0 "/usr/X11R6/lib"
 		# enable gd last, so configure can pick up the previous settings
 		enable_extension_with "gd" "gd" 0
 	fi
 
 	if useq imap ; then
 		enable_extension_with "imap" "imap" 1
-		enable_extension_with "kerberos" "kerberos" 1
 		enable_extension_with "imap-ssl" "ssl" 1
 	fi
 
@@ -161,7 +193,7 @@ php5-sapi_check_awkward_uses () {
 	if useq mysql ; then
 		enable_extension_with		"mysql"			"mysql"			1
 	else
-		enable_extension_with		"mysqli"		"mysql"			1
+		enable_extension_with		"mysqli"		"mysqli"			1
 	fi
 
 	confutils_use_conflict "readline" "libedit"
@@ -171,6 +203,7 @@ php5-sapi_check_awkward_uses () {
 	if ! useq session ; then
 		enable_extension_disable	"session"		"session"		1
 	else
+		enable_extension_with		"mm"			"sharedmem"		0
 		enable_extension_with		"msession"		"msession"		1
 	fi
 
@@ -192,9 +225,6 @@ php5-sapi_check_awkward_uses () {
 	# GD library support
 	confutils_use_depend_any "truetype" "gd" "gd-external"
 	
-	# imap support
-	confutils_use_depend_all "kerberos" "imap"
-
 	# ldap support
 	confutils_use_depend_all "sasl" "ldap"
 
@@ -213,7 +243,6 @@ php5-sapi_check_awkward_uses () {
 	confutils_use_depend_all "solid"		"odbc"
 
 	# session support
-	confutils_use_depend_all "mm"		"session"
 	confutils_use_depend_all "msession"	"session"
 
 	confutils_warn_about_missing_deps
@@ -278,7 +307,6 @@ php5-sapi_src_compile () {
 	enable_extension_with		"curl"			"curl"			1
 	enable_extension_with		"curlwrappers"	"curlwrappers"	1
 	enable_extension_enable		"dbase"			"dbase"			1
-	enable_extension_enable		"dbx"			"dbx"			1
 	enable_extension_enable		"dio"			"dio"			1
 	enable_extension_disable	"dom"			"xml2"			0
 	enable_extension_enable		"exif"			"exif"			1
@@ -318,6 +346,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"pspell"		"spell"			1
 	enable_extension_with		"recode"		"recode"		1
 	enable_extension_disable	"simplexml"		"simplexml"		1
+	enable_extension_enable		"shmop"			"sharedmem"		0
 	enable_extension_with		"snmp"			"snmp"			1
 	enable_extension_enable		"soap"			"soap"			1
 	enable_extension_enable		"sockets"		"sockets"		1
@@ -350,7 +379,6 @@ php5-sapi_src_compile () {
 
 
 	echo "${my_conf}"
-	// die "debugging output"
 
 	econf ${my_conf} || die "configure failed"
 	emake || die "make failed"
