@@ -232,7 +232,6 @@ gnome-apps/battstat
 gnome-apps/ggv
 gnome-libs/bonobo-conf
 gnome-apps/evolution
-app-admin/procman
 gnome-apps/glade
 gnome-apps/glademm
 gnome-apps/anjuta
