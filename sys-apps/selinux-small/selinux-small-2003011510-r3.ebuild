@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r3.ebuild,v 1.2 2003/04/12 05:04:44 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r3.ebuild,v 1.3 2003/04/20 02:36:05 pebenito Exp $
 
 DESCRIPTION="SELinux policy compiler and example policies"
 HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
-	 http://www.coker.com.au/selinux/selinux-small/selinux-small_2003011510-7.diff.gz
-	 http://www.coker.com.au/selinux/policy.tgz"
+	 http://www.coker.com.au/selinux/selinux-small/selinux-small_2003011510-7.diff.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
@@ -20,11 +19,18 @@ IUSE="selinux"
 DEPEND="<sys-libs/glibc-2.3.2
 	sys-devel/flex
 	sys-libs/pam
-	>=sys-kernel/selinux-sources-2.4.20-r1"
+        || (
+                >=sys-kernel/selinux-sources-2.4.20-r1
+                >=sys-kernel/hardened-sources-2.4.20-r1
+           )"
 
 RDEPEND="<sys-libs/glibc-2.3.2
-	 >=sys-kernel/selinux-sources-2.4.20-r1
-	 dev-tcltk/expect"
+	|| (
+                >=sys-kernel/selinux-sources-2.4.20-r1
+                >=sys-kernel/hardened-sources-2.4.20-r1
+           )
+	 dev-tcltk/expect
+	 sys-apps/selinux-base-policy"
 
 pkg_setup() {
 	use selinux || eend 1 "You must have selinux USE var"
@@ -77,11 +83,9 @@ src_compile() {
 }
 
 src_install() {
-	# install policies
+	# install policy stuff
 	dosbin ${S}/module/checkpolicy/checkpolicy
 	dosbin ${S}/setfiles/setfiles
-	mkdir -p ${D}/etc/security/selinux/src
-	mv ${WORKDIR}/policy ${D}/etc/security/selinux/src
 
 	insinto /etc/security
 	doins ${S}/utils/appconfig/*
