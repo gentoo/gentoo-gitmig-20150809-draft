@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040408-r1.ebuild,v 1.5 2004/07/18 20:16:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040408-r1.ebuild,v 1.6 2004/08/03 15:44:30 mholzer Exp $
 
 inherit eutils base
 
@@ -37,7 +37,7 @@ src_unpack() {
 src_compile() {
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
 
-	unset CFLAGS CXXFLAGS
+	unset CFLAGS CXXFLAGS LDFLAGS
 
 	ac_cv_header_jack_jack_h=no \
 	ac_cv_lib_soname_jack= \
