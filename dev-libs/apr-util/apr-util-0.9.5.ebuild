@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.5 2005/01/11 23:16:38 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.6 2005/01/28 22:03:57 pauldv Exp $
 
 inherit gnuconfig
 
@@ -65,4 +65,7 @@ src_install() {
 	sed -i -e 's:APU_BUILD_DIR=.*:APU_BUILD_DIR=/usr/share/apr-util-0/build:g' ${D}/usr/bin/apu-config
 
 	dodoc CHANGES LICENSE NOTICE
+
+	# Will install as portage user when using userpriv. Fixing
+	chown -R root:root ${D}/usr/include/apr-0/
 }
