@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12-r4.ebuild,v 1.2 2004/08/28 07:36:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12-r4.ebuild,v 1.3 2004/10/11 11:38:46 hattya Exp $
 
 inherit eutils
 
@@ -14,7 +14,6 @@ HOMEPAGE="http://sylpheed.good-day.net/
 SRC_URI="http://sylpheed.good-day.net/${PN}/${P}.tar.bz2
 	gtk2? ( mirror://sourceforge/${PN}-gtk2/${P}-gtk2-${GTK2_PV}.diff.gz )"
 
-RESTRICT="nomirror"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
 SLOT="0"
