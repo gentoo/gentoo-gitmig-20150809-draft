@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a797209a9ce67500d627c9e32f78bc9a ChangeLog 686
+MD5 989c9f94378c18bf8facbcc5d21ce723 ChangeLog 789
 MD5 6393324a57c02485595681c2575d4b6f metadata.xml 245
-MD5 3544cdcabcfceff9f06ad89be6c89d5a tunesbrowser-0.1.6.ebuild 922
+MD5 5eef58b3c1c9dd5c523ea49ce5b52b17 tunesbrowser-0.1.6.ebuild 921
 MD5 40961a85818c93baa73f232b7a30d15c files/digest-tunesbrowser-0.1.6 139
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYv5WArHZZzCEUG0RAg+pAJ0W9O/XLyEc2S41QgL4OFlKLf55FgCfShmb
-IsqQ4cQhukXbMl7FPPQUHOE=
-=StnF
+iD8DBQFBxSZPArHZZzCEUG0RAmgpAJ9BE/a+6LNJuy3nWo4GfRKesDi4cQCdHAB5
+bf4TU9r/gUUg/hR31MxHsaw=
+=YbRA
 -----END PGP SIGNATURE-----

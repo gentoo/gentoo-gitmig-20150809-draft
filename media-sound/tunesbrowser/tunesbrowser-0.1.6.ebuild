@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tunesbrowser/tunesbrowser-0.1.6.ebuild,v 1.4 2004/10/05 20:04:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tunesbrowser/tunesbrowser-0.1.6.ebuild,v 1.5 2004/12/19 06:57:08 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="http://crazney.net/programs/itunes/files/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="crazney"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 
 DEPEND=">=media-libs/gstreamer-0.8
 	>=media-plugins/gst-plugins-mad-0.8
