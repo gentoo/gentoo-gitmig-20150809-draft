@@ -1,28 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.9 2004/01/29 04:19:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.10 2004/02/02 00:22:33 vapier Exp $
 
-inherit eutils flag-o-matic
-
-# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-# Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
-# at make time any way.
-# Brandon Low (29 Apr 2003)
-# inherit flag-o-matic
-filter-flags "-maltivec -mabi=altivec -fstack-protector"
-# replace-flags k6-3 i686
-# replace-flags k6-2 i686
-# replace-flags k6   i686
-
-#fix build errors with -march/mcpu=pentium4
-if [ "$COMPILER" == "gcc3" ]; then
-	if [ -n "`is-flag -march=pentium4`" -o -n "`is-flag -mcpu=pentium4`" ]; then
-		append-flags -mno-sse2
-	fi
-fi
-
-#13 Jul 2003: drobbins: build failure using -j5 on a dual Xeon in 1_beta12
-MAKEOPTS="$MAKEOPTS -j1"
+inherit eutils flag-o-matic gcc
 
 # This should normally be empty string, unless a release has a suffix.
 MY_PKG_SUFFIX=""
@@ -30,12 +10,12 @@ MY_PKG_SUFFIX=""
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 ~ppc hppa ~sparc amd64 alpha ia64"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex"
+RESTRICT="nomirror"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -55,25 +35,28 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/libfame-0.9.0
 	>=media-libs/xvid-0.9.0
 	speex? ( media-libs/speex )"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-
-#sys-devel/gcc-3.2 fixes -march=pentium4 compile issue
 
 S=${WORKDIR}/${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
 src_unpack() {
-
 	unpack ${A}
 
 	# gcc2 fixes provided by <T.Henderson@cs.ucl.ac.uk> in #26534
 	#epatch ${FILESDIR}/${P}-gcc2_fix.patch
 	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time
-	patch -p0 < ${FILESDIR}/protect-CFLAGS.patch-${PV} || die
+	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV}
 }
 
 src_compile() {
+	filter-flags -maltivec -mabi=altivec -fstack-protector
+
+	# fix build errors with sse2
+	if [ "`gcc-version`" == "3.2" ]; then
+		use x86 && append-flags -mno-sse2
+	fi
+
 	# Make sure that the older libraries are not installed (bug #15081).
 	if [ -f /usr/lib/libxine.so.0 ]
 	then
@@ -110,7 +93,7 @@ src_compile() {
 
 	econf ${myconf} || die "Configure failed"
 
-	emake || die "Parallel make failed"
+	emake -j1 || die "Parallel make failed"
 }
 
 src_install() {

@@ -1,29 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12-r1.ebuild,v 1.10 2003/10/21 15:07:29 mholzer Exp $
-
-# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-# Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
-# at make time any way.
-# Brandon Low (29 Apr 2003)
-# inherit flag-o-matic
-# filter-flags "-maltivec -mabi=altivec"
-# replace-flags k6-3 i686
-# replace-flags k6-2 i686
-# replace-flags k6   i686
-
-#13 Jul 2003: drobbins: build failure using -j5 on a dual Xeon in 1_beta12
-MAKEOPTS="$MAKEOPTS -j1"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12-r1.ebuild,v 1.11 2004/02/02 00:22:33 vapier Exp $
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ppc hppa sparc"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome"
+RESTRICT="nomirror"
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -102,7 +89,7 @@ src_compile() {
 		cat config.h.sed |sed -e s/\#define\ HAVE_GNOME_VFS\ 1/\#undef\ HAVE_GNOME_VFS/g >config.h
 		rm config.h.sed
 	fi
-	emake || die "Parallel make failed"
+	emake -j1 || die "Parallel make failed"
 }
 
 src_install() {

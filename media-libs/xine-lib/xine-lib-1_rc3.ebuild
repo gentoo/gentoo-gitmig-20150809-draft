@@ -1,28 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3.ebuild,v 1.6 2004/01/09 22:44:25 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3.ebuild,v 1.7 2004/02/02 00:22:33 vapier Exp $
 
-inherit eutils flag-o-matic
-
-# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-# Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
-# at make time any way.
-# Brandon Low (29 Apr 2003)
-# inherit flag-o-matic
-filter-flags "-maltivec -mabi=altivec -fstack-protector -fPIC"
-# replace-flags k6-3 i686
-# replace-flags k6-2 i686
-# replace-flags k6   i686
-
-#fix build errors with -march/mcpu=pentium4
-if [ "$COMPILER" == "gcc3" ]; then
-	if [ -n "`is-flag -march=pentium4`" -o -n "`is-flag -mcpu=pentium4`" ]; then
-		append-flags -mno-sse2
-	fi
-fi
-
-#13 Jul 2003: drobbins: build failure using -j5 on a dual Xeon in 1_beta12
-MAKEOPTS="$MAKEOPTS -j1"
+inherit eutils flag-o-matic gcc
 
 # This should normally be empty string, unless a release has a suffix.
 MY_PKG_SUFFIX=""
@@ -30,12 +10,12 @@ MY_PKG_SUFFIX=""
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex"
+RESTRICT="nomirror"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -76,6 +56,13 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -maltivec -mabi=altivec -fstack-protector
+
+	# fix build errors with sse2
+	if [ "`gcc-version`" == "3.2" ]; then
+		use x86 && append-flags -mno-sse2
+	fi
+
 	# Make sure that the older libraries are not installed (bug #15081).
 	if [ -f /usr/lib/libxine.so.0 ]
 	then
