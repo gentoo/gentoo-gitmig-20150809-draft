@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.57 2004/11/09 19:23:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.58 2004/12/29 03:04:58 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   09 Nov 2004; Aron Griffis <agriffis@gentoo.org> iptables-1.2.11-r3.ebuild:
   stable on ia64
@@ -52,7 +55,7 @@
   fix spelling error. Thanks to: Kurt McKee <kurtmckee@northwestern.edu> in bug
   #61325
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> iptables-1.2.11-r2.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> iptables-1.2.11-r2.ebuild:
   Stable on alpha.
 
   20 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>

@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.60 2004/12/17 11:44:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.61 2004/12/29 03:06:14 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *shorewall-2.0.13 (17 Dec 2004)
 
@@ -24,7 +27,7 @@
   initscript: added clear function to remove firewall rules, /dev/null'd restart
   output. Closes #24882.
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> shorewall-2.0.4.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> shorewall-2.0.4.ebuild:
   Stable on alpha.
 
   20 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> shorewall-2.0.4.ebuild:
@@ -66,7 +69,7 @@
   03 Jul 2004; Jason Wever <weeve@gentoo.org> shorewall-1.4.10f.ebuild:
   Stable on sparc.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> shorewall-1.4.10f.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> shorewall-1.4.10f.ebuild:
   Stable on alpha, bug #55675.
 
   02 Jul 2004; Martin Holzer <mholzer@gentoo.org> shorewall-2.0.3a.ebuild:
@@ -89,7 +92,7 @@
   shorewall-2.0.1.ebuild:
   Fix use invocation
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> shorewall-1.4.10c.ebuild:
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> shorewall-1.4.10c.ebuild:
   Keyworded alpha, requested in bug #51550.
 
   21 Apr 2004; rob holland <tigger@gentoo.org> shorewall-1.4.10b.ebuild,
