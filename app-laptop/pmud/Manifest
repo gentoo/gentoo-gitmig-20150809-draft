@@ -1,6 +1,6 @@
-MD5 116513651e80025a535867d6613f2e27 pmud-0.10.1-r2.ebuild 1165
-MD5 c05a976d7b32d0925090ff01fc394ee8 pmud-0.10.1-r3.ebuild 1212
-MD5 cfa2ab92b6254ca77c7f8c8a47a0e1a8 ChangeLog 2029
+MD5 3602a845c2a67ed0143ab7b5f9faaf1b pmud-0.10.1-r2.ebuild 1156
+MD5 09c19bdfffb844bd0462ee3b106cd52b pmud-0.10.1-r3.ebuild 1203
+MD5 034d79cee1b1b1c07879fc11c1688498 ChangeLog 2025
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f056db07040f37f07402f93828875cf8 files/pmud-makefile-x-gentoo.diff 699
 MD5 0b3d50c84748990675bd8da75fefa048 files/power.conf 1611
@@ -10,4 +10,4 @@ MD5 1ab85cee19ba581fa19d0f5129c9f3f6 files/pmud-file-locations.patch 373
 MD5 e0fbd0593a8efc1b7ac0c9f542528a09 files/pwrctl 8421
 MD5 48fb4abe41c2ce763a6de3b0f51621bc files/0.10.1-deb-fcntl.patch 855
 MD5 24099ac729124ead2fc05c6f280299d0 files/pwrctl-local 2733
-MD5 433918cc84092e7ebe39cb2e6b892f94 files/pmud.start 576
+MD5 d95610dbf71957a4c6b00c5f4ff91fb0 files/pmud.start 575
