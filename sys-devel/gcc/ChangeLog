@@ -1,8 +1,20 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.26 2002/07/28 03:36:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.27 2002/07/30 17:51:20 azarah Exp $
+
+*gcc-3.1.1-r1 (30 Jul 2002)
+
+  30 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1.1-r1 :
+
+  Gcc-3.1.1 final.  Also fixed it to be able to disable java.
+  Major cleanups from 3.1.1.
 
 *gcc-3.2_pre (28 Jul 2002)
+
+  30 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2_pre :
+
+  Some cleanups.  Use the "java" USE flag to enable/disable java
+  as it add a bit to compile time.
 
   28 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2_pre :
 

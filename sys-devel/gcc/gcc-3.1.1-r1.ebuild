@@ -14,20 +14,17 @@ inherit flag-o-matic libtool
 # Compile problems with these ...
 filter-flags "-fno-exceptions"
 
-MY_PV="`echo ${PV/_pre} | cut -d. -f1,2`"
+MY_PV="`echo ${PV} | cut -d. -f1,2`"
 GCC_SUFFIX=-${MY_PV}
 LOC="/usr"
 # dont install in /usr/include/g++-v3/, as it will nuke gcc-3.0.x installs
 STDCXX_INCDIR="${LOC}/include/g++-v${MY_PV/\./}"
 PATCHES="${WORKDIR}/patches"
-SNAPSHOT="-20020728"
-S=${WORKDIR}/${P/_pre}
-#SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
-#	ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P/_pre}${SNAPSHOT}.tar.bz2"
+S=${WORKDIR}/${P}
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
+	http://www.ibiblio.org/gentoo/distfiles/${P}_final-patches-1.0.tbz2"
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="${MY_PV}"
@@ -36,7 +33,7 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-			  
+
 RDEPEND="virtual/glibc 
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -66,11 +63,26 @@ build_multiple() {
 FAKE_ROOT=""
 
 src_unpack() {
-	unpack ${P/_pre}${SNAPSHOT}.tar.bz2
+	unpack ${P}.tar.bz2
 
+	mkdir -p ${WORKDIR}/patches
+	tar -jxf ${DISTDIR}/${P}_final-patches-1.0.tbz2 -C ${WORKDIR}/patches || \
+		die "Could not unpack patches"
+	
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
+
+	for x in ${PATCHES}/*.patch
+	do
+		# sad to say booboo I relised *after* uploading the patch to ibiblio :(
+		if [ "${x##*/}" = "28_gcc31-c++-diagnostic-no-line-wrapping.patch" ]
+		then
+			patch -p1 < ${x} || die "Failed with patch ${x##*/}"
+		else
+			patch -p0 < ${x} || die "Failed with patch ${x##*/}"
+		fi
+	done
 
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
@@ -183,8 +195,8 @@ src_install() {
 
 	[ -e ${D}${LOC}/bin/gcc${GCC_SUFFIX} ] || die "gcc not found in ${D}"
 	
-	FULLPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV/_pre}
-	FULLPATH_D=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV/_pre}
+	FULLPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV}
+	FULLPATH_D=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH_D}
 	dodir /lib
 	dodir /etc/env.d
