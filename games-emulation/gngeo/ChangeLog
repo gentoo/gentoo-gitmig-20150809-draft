@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gngeo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.6 2004/07/01 11:14:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.7 2004/07/31 08:00:45 mr_bones_ Exp $
+
+*gngeo-0.6.3 (31 Jul 2004)
+
+  31 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +gngeo-0.6.3.ebuild:
+  version bump (bug #58782)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gngeo-0.6.1.ebuild:
   virtual/glibc -> virtual/libc
