@@ -1,9 +1,14 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.15 2004/07/07 20:31:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.16 2004/07/10 15:45:12 plasmaroo Exp $
+
+*jfsutils-1.1.6 (10 Jul 2004)
+
+  10 Jul 2004; <plasmaroo@gentoo.org> +jfsutils-1.1.6.ebuild:
+  Version bump. Closes bug #50658.
 
   07 Jul 2004; Travis Tilley <lv@gentoo.org> jfsutils-1.1.4.ebuild:
-  stable on amd64
+  Stable on amd64.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> jfsutils-1.1.3.ebuild,
   jfsutils-1.1.4.ebuild:
