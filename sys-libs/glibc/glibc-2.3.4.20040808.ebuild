@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.23 2004/10/01 10:24:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.24 2004/10/01 22:35:25 kumba Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -356,6 +356,11 @@ do_arch_mips_patches() {
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.
 	use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
+
+	# Found this on Google (yay google!) and it fixes glibc not building
+	# a correct bits/syscall.h from 2.6.x headers.  It possibly breaks older
+	# headers (2.4.x?), so for now, only use it on n32.
+	use n32 && epatch ${FILESDIR}/2.3.4/glibc-2.3.4-mips-generate-syscall_h.patch
 }
 
 
