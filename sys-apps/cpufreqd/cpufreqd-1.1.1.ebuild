@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1.1.ebuild,v 1.4 2004/07/21 23:54:03 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1.1.ebuild,v 1.5 2004/07/23 12:51:27 pappy Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,18 +12,15 @@ DEPEND=">=sys-apps/sed-4"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="pie hardened"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i '/^DAEMON=/s:/sbin/:/usr/sbin/:' scripts/gentoo/cpufreqd
 
-	if ( use hardened || use pie )
-	then
-		append-flags "-fno-pie"
-		append-ldflags "-fno-pie"
-	fi
+	# cpufreqd segfaults when built as PIE
+	filter-flags "-fpie" "-fPIE" "-Wl,-pie"
 }
 
 src_install() {

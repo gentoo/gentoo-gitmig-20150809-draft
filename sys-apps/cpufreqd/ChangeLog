@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cpufreqd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.13 2004/07/21 23:54:03 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.14 2004/07/23 12:51:27 pappy Exp $
+
+  23 Jul 2004; Alexander Gabert <pappy@gentoo.org> cpufreqd-1.1.1.ebuild,
+  cpufreqd-1.1.2.ebuild, cpufreqd-1.1.ebuild:
+  changed logic for filtering/suppressing PIE building, thanks to solar
 
   22 Jul 2004; Alexander Gabert <pappy@gentoo.org> cpufreqd-1.1.1.ebuild,
   cpufreqd-1.1.2.ebuild, cpufreqd-1.1.ebuild:
