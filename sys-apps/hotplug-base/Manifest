@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3d9766a7936b7ef25ec1035f150a233a hotplug-base-20040401.ebuild 725
+MD5 551bd9d76101625babd166af998a02b0 hotplug-base-20040401.ebuild 728
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
 MD5 b2649f33f54ea7870f98e4d7cf86f67e ChangeLog 1350
 MD5 5be3a96d844a1f0db96e2268b94f6094 files/digest-hotplug-base-20040401 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBULjDHTu7gpaalycRAmO5AJ4iFlSwimPdl+Th8+RAX6/0dPfQigCfTG7p
-a47GLTCsT+peu64tOYN/y/Q=
-=dGNl
+iD8DBQFBmP8cHTu7gpaalycRAguSAJ9OSI3MWE/LVshMUesjlzIRi1ACbwCdHITZ
+zsOrqlhFRcfzqD5jP4itsXQ=
+=oLmU
 -----END PGP SIGNATURE-----
