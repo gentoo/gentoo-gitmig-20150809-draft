@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.7.ebuild,v 1.3 2002/08/16 02:31:56 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.7.ebuild,v 1.4 2002/09/19 09:21:03 aliz Exp $
 
 # NB: This ebuild introduces the /etc/xinetd.d includedir with a default
 #     /etc/xinetd.conf file.  Check your config files if you're upgrading
@@ -16,8 +16,8 @@ SLOT="0"
 LICENSE="BSD"
 SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 
-DEPEND="virtual/glibc tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
-RDEPEND="virtual/glibc sys-devel/perl"
+DEPEND="virtual/glibc tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )"
+RDEPEND="${DEPEND} sys-devel/perl"
 
 src_compile() {
 	local myconf
