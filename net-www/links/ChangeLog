@@ -1,6 +1,9 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.38 2003/12/09 07:26:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.39 2003/12/21 00:34:18 gmsoft Exp $
+
+  21 Dec 2003; Guy Martin <gmsoft@gentoo.org> links-2.1_pre13.ebuild:
+  Marked stable on hppa.
 
   08 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> links-2.1_pre11.ebuild,
   links-2.1_pre13.ebuild, links-2.1_pre14.ebuild:
