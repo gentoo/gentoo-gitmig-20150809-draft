@@ -539,3 +539,8 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 16 Apr 2002
 # ispell's newer stuff is totally b0rked
 >=ispell-3.2.06.ebuild
+
+#seemant@gentoo.org 16 Apr 2002
+# real.com is not offering this any more.  hopefully they will
+# release a community supported realone player soon.
+>=media-video/realplayer-8
