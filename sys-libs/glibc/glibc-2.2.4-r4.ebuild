@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.4 2001/12/08 18:19:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.5 2001/12/08 18:20:12 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -117,6 +117,7 @@ src_install() {
 
 	#prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	#creation of the "factory" symlink in pkg_postinst().
+	rm -f ${D}/etc/localtime
 }
 
 pkg_preinst()
