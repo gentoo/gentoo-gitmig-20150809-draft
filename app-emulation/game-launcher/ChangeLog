@@ -1,0 +1,5 @@
+# ChangeLog for game-launcher
+
+* game-launcher-0.9.8 (27 Oct 2002)
+  Thomas Raschbacher <lordvan@lordvan.com>: added ebuild
+  WARNING: is a security-hole cuz parts of it are(and have to be) world-writeable!!!!
