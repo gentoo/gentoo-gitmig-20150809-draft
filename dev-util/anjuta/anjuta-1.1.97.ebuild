@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.1.97.ebuild,v 1.1 2003/07/17 00:09:52 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.1.97.ebuild,v 1.2 2003/07/17 00:12:39 lisa Exp $
 
 # development version
 inherit gnome2 debug
@@ -12,7 +12,7 @@ HOMEPAGE="http://anjuta.sourceforge.net/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/gtk+-2.0.8

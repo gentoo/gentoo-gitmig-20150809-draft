@@ -1,13 +1,12 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.19 2003/07/17 00:09:52 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.20 2003/07/17 00:12:39 lisa Exp $
 
 
 *anjuta-1.1.97 (16 Jul 2003)
   16 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> anjuta-1.1.97.ebuild,
   Inital commit of this version.  Basically a s/1.1.1/1.1.97/.
-  (This changelog is funky)
-
+  Update- Forgot to mark as ~x86!!
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> anjuta-1.0.2.ebuild,
   anjuta-1.1.1.ebuild:
