@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/cmfphotoalbum
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/ChangeLog,v 1.4 2003/04/06 09:46:27 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/ChangeLog,v 1.5 2003/04/17 19:23:23 kutsuya Exp $
+
+*cmfphotoalbum-0.2 (17 Apr 2003)
+
+  17 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> cmfphotoalbum-0.2.ebuild:
+  Version bumped. Added ${PV} in SRC_URI and to cmfphoto in RDEPEND.
 
 *cmfphotoalbum-0.1 (08 Mar 2003)
 
