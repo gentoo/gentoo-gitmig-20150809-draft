@@ -2,6 +2,7 @@ MD5 c83fa942cbed61b8b1b911b55a259518 amarok-0.7.0.ebuild 578
 MD5 a6fb6d7c26248c6d7e1131df25f102b5 amarok-0.9_beta2.ebuild 711
 MD5 e294b51567560788cfd03b80682b67c0 amarok-0.8.3.ebuild 578
 MD5 74358889ce48e8778b4ce329d2c01e29 ChangeLog 1039
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 4996cdba52ed929402c1f4912d210255 files/digest-amarok-0.9_beta2 69
 MD5 c1fe49bbe2ebf5e710a1254d2ec8203d files/digest-amarok-0.7.0 65
 MD5 97680c579752ec85ee3e383443436edf files/digest-amarok-0.8.3 65
