@@ -2,6 +2,6 @@ MD5 970b16b9cda8a0e7321cca6f173ae464 ChangeLog 2677
 MD5 835ac029b05061adecaac54e2efeae44 metadata.xml 524
 MD5 6d0769b4958bc3213e85126561bc9515 rcs-5.7-r2.ebuild 914
 MD5 3233c2932e07c16e9e6cb6093ca7ad00 rcs-5.7-r3.ebuild 1027
-MD5 548d6a2f055057461fffccbcb0a87037 files/conf.diff 912
 MD5 548c484ca9438cdadb3ca5101805f15f files/digest-rcs-5.7-r2 59
 MD5 15742538c19961dd6cec0d5441715fd3 files/digest-rcs-5.7-r3 126
+MD5 aed02535acf1922a9fac6a225508e47c files/conf.diff 591

@@ -1,13 +1,5 @@
 --- src/conf.sh	1995-06-16 02:19:24.000000000 -0400
 +++ src.new/conf.sh	2002-06-17 12:49:10.000000000 -0400
-@@ -1,6 +1,6 @@
- #! /bin/sh
- # Output RCS compile-time configuration.
--Id='$Id: conf.diff,v 1.1 2005/03/30 14:55:56 seemant Exp $'
-+Id='$Id: conf.diff,v 1.1 2005/03/30 14:55:56 seemant Exp $'
- #	Copyright 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert
- #	Distributed under license by the Free Software Foundation, Inc.
- 
 @@ -79,7 +79,7 @@
  chmod 0 a.d &&
  { test -w a.d || cp /dev/null a.d 2>/dev/null; } && {
