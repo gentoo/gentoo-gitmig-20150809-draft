@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.75 2005/01/03 00:05:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.76 2005/02/07 01:25:38 vapier Exp $
+
+  06 Feb 2005; Mike Frysinger <vapier@gentoo.org> gettext-0.14.1.ebuild:
+  Disable sandbox when running tests #70358.
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
