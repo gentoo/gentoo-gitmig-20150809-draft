@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.140 2004/11/01 01:55:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.141 2004/11/01 16:01:19 gustavoz Exp $
+
+  01 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.22.ebuild:
+  Stable on sparc
 
   31 Oct 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.22.ebuild:
   push 4.0.22 to x86, see bug #69668.
