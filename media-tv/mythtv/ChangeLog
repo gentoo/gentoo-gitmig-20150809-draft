@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.33 2004/09/10 16:54:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.34 2004/09/11 12:06:33 aliz Exp $
+
+  10 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> files/mythbackend.conf,
+  files/mythbackend.rc6:
+  Added option to specify verbose level for mythbackend. Closing #56114.
 
 *mythtv-0.16 (10 Sep 2004)
 
