@@ -38,6 +38,8 @@ dev-ruby
 dev-tcltk
 dev-tex
 dev-util
+games-action
+games-arcade
 games-emulation
 games-engines
 games-fps
