@@ -3,6 +3,12 @@
 # /home/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.46 2004/03/27 16:18:17
 # lanius Exp $
 
+*k3b-0.11.13 (05 Aug 2004)
+
+  05 Aug 2004; Carsten Lohrke <carlo@gentoo.org> +k3b-0.11.13.ebuild:
+  version bump, replaced a few for loops,
+  removed monkeyaudio plugin until license issues are sorted out
+
   22 Jul 2004; Travis Tilley <lv@gentoo.org> k3b-0.11.12-r1.ebuild:
   stable on amd64
 
