@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.209.ebuild,v 1.1 2003/08/22 16:01:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.209.ebuild,v 1.2 2003/09/12 09:05:09 phosphan Exp $
 
 MY_P=cku209
 S=${WORKDIR}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kermit-project.org/"
 
 SLOT="0"
 LICENSE="Kermit"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	net-dialup/xc"
