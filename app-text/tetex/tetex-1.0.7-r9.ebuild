@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.10 2002/12/09 04:17:45 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.11 2003/01/18 17:06:09 agriffis Exp $
 
 IUSE="X ncurse libwww png"
 
@@ -20,7 +20,6 @@ DEPEND="sys-apps/ed
 	sys-libs/zlib 
 	X? ( virtual/x11 )
 	png? ( >=media-libs/libpng-1.2.1 )
-	ncurses ( sys-libs/ncurses )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )"
 
 RDEPEND=">=sys-devel/perl-5.2
@@ -73,8 +72,7 @@ src_compile() {
 		&& myconf="${myconf} --with-system-pnglib"
 
 	
-	use ncurse \
-		&& myconf="${myconf} --with-system-ncurses"
+	myconf="${myconf} --with-system-ncurses"
 
 	
 	# Does it make sense to compile the included libwww with mysql ?

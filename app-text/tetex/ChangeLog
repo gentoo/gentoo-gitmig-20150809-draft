@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.23 2003/01/13 17:55:25 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.24 2003/01/18 17:06:09 agriffis Exp $
+
+  18 Jan 2003; Aron Griffis <agriffis@gentoo.org> tetex-1.0.7-r12.ebuild :
+  Fix bug 13789 by pulling in a couple hints from the RH rpm, specifically the
+  texmfmain=... part.  Fixed a typo in the specification of datadir and use
+  econf/emake/einstall.  Also check for USE=zlib.
 
 *tetex-20030112 (13 Jan 2003)
 
