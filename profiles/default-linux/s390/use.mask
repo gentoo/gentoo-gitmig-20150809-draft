@@ -60,3 +60,4 @@ vim-with-x
 tcltk
 
 diet
+xemacs
