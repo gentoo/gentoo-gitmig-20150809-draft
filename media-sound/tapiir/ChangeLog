@@ -1,38 +1,8 @@
 # ChangeLog for media-sound/tapiir
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.12 2004/10/07 03:30:37 eradicator Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.13 2004/12/19 07:42:49 eradicator Exp $
 
-  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tapiir-0.7.1.ebuild:
-  get_libdir fixes.
-
-  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> tapiir-0.7.1.ebuild:
-  Stable amd64.
-
-  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> tapiir-0.7.1.ebuild:
-  Added ~amd64
-
-  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> tapiir-0.7.1.ebuild:
-  Getting rid of virtual/jack.
-
-  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> tapiir-0.7.1.ebuild:
-  QA fix.
-
-  22 Jan 2004; <torbenh@gentoo.org> metadata.xml, tapiir-0.7.1.ebuild:
-  Fixed alsa-1.0 compile breakage
-
-  07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> tapiir-0.7.1.ebuild:
-  fixed alsa dep
-
-  14 Oct 2003; Martin Holzer <mholzer@gentoo.org> tapiir-0.7.1.ebuild,
-  files/tapiir-0.7.1-gcc3.patch:
-  adding gcc3 patch. Closes #30889.
-
-  29 May 2003; jje <jje@gentoo.org> tapiir-0.7.1.ebuild:
-  Fix install dir.
-
-*tapiir-0.7.1 (09 May 2003)
-
-  09 May 2003; jje <jje@gentoo.org> tapiir-0.7.1.ebuild:
-  Initial revision.
+  Added to ~sparc.
 
