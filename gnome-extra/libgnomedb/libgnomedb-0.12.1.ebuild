@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.12.1.ebuild,v 1.9 2004/06/24 22:08:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.12.1.ebuild,v 1.10 2004/07/14 15:56:53 agriffis Exp $
 
 IUSE=""
 
 inherit gnome2 gnome.org
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Library for writing gnome database programs"
 HOMEPAGE="http://www.gnome-db.org/"
 SLOT="0"

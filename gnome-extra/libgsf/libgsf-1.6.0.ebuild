@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.6.0.ebuild,v 1.12 2004/06/24 22:08:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.6.0.ebuild,v 1.13 2004/07/14 15:57:25 agriffis Exp $
 
 inherit gnome2
 
 IUSE="gnome doc"
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME Structured File Library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"

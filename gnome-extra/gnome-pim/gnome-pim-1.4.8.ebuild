@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.13 2004/06/24 22:05:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.14 2004/07/14 15:52:06 agriffis Exp $
 
 IUSE="pda"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="gnome-pim"
 #this version is not available from official gnome repos
 SRC_URI="http://me.in-berlin.de/~jroger/gnome-pim/${P}.tar.gz"
