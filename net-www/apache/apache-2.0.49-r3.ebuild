@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.13 2004/06/10 22:56:54 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.14 2004/06/19 14:57:59 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
-PATCHDIR=${FILESDIR}/patches/${PV}-r3
+PATCH_LEVEL="${PV}-r3"
 S="${WORKDIR}/httpd-${PV}"
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
-SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz"
+SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz
+	mirror://gentoo/apache-patches-${PATCH_LEVEL}.tar.bz2
+	http://dev.gentoo.org/~zul/apache/apache-patches-${PATCH_LEVEL}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="2"
@@ -58,23 +60,23 @@ src_unpack() {
 
 	unpack ${A} || die
 	cd ${S} || die
-	epatch ${PATCHDIR}/00_gentoo_base.patch || die
-	epatch ${PATCHDIR}/01_gentoo_cvs_sync.patch || die
-	epatch ${PATCHDIR}/03_redhat_xfsz.patch || die
-	epatch ${PATCHDIR}/01_gentoo_cgi.patch || die
-	epatch ${PATCHDIR}/04_ssl_makefile.patch || die
-	epatch ${PATCHDIR}/01_ssl_engine_kernel.patch || die
+	epatch ${WORKDIR}/00_gentoo_base.patch || die
+	epatch ${WORKDIR}/01_gentoo_cvs_sync.patch || die
+	epatch ${WORKDIR}/03_redhat_xfsz.patch || die
+	epatch ${WORKDIR}/01_gentoo_cgi.patch || die
+	epatch ${WORKDIR}/04_ssl_makefile.patch || die
+	epatch ${WORKDIR}/01_ssl_engine_kernel.patch || die
 
 	if use ipv6; then
-		epatch ${PATCHDIR}/01_gentoo_ipv6.patch || die
+		epatch ${WORKDIR}/01_gentoo_ipv6.patch || die
 	fi
 
 	if use ldap; then
-		epatch ${PATCHDIR}/01_apache_ldap_fixes.patch || die
+		epatch ${WORKDIR}/01_apache_ldap_fixes.patch || die
 	fi
 
 	if use ssl; then
-		epatch ${PATCHDIR}/01_ssl_verify_client.patch || die
+		epatch ${WORKDIR}/01_ssl_verify_client.patch || die
 	fi
 
 	#avoid utf-8 charset problems
