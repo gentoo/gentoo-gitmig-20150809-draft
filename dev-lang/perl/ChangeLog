@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.5 2003/03/27 23:31:48 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.6 2003/03/31 00:49:16 manson Exp $
+
+*perl-5.8.0-r10 (30 Mar 2003)
+
+  30 Mar 2003; Rodney Rees <manson@gentoo.org> perl-5.8.0-r10.ebuild,
+  marked stable for sparc
 
 *perl-5.8.0-r10 (11 Mar 2003)
 
