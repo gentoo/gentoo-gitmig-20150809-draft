@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.19 2002/12/16 18:03:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.20 2003/01/11 23:45:47 seemant Exp $
+
+*util-linux-2.11y (27 Oct 2002)
+
+  11 Jan 2003; Seemant Kulleen <seemant@gentoo.org> util-linux-2.11y.ebuild :
+
+  filtered out -fPIC from user's CFLAGS
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> util-linux-2.11y.ebuild :
   Fix rare failures with parallel makes.  Update to use epatch.
@@ -11,8 +17,6 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> :
   Changed sparc ~sparc keywords
  
-*util-linux-2.11y (27 Oct 2002)
-
   13 Dec 2002; Martin Holzer <mholzer@gentoo.org> util-linux-2.11y.ebuild files/digest-util-linux-2.11y Changelog :
 	Changed from tar.gz to tar.bz2
 

@@ -1,10 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.5 2002/12/16 18:03:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.6 2003/01/11 23:45:47 seemant Exp $
 
 IUSE="crypt nls"
 
-inherit eutils
+inherit eutils flag-o-matic
+
+filter-flags -fPIC
 
 CRYPT_PATCH_P="${P}-crypt-gentoo"
 S="${WORKDIR}/${P}"
