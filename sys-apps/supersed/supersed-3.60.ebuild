@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.8 2004/07/07 23:45:42 kloeri Exp $
-
-IUSE="nls static"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.9 2004/07/22 04:33:53 vapier Exp $
 
 MY_P=sed-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="An enhanced version of sed which sports greater speed and the use of perl regular expressions than GNU sed."
+HOMEPAGE="http://sed.sourceforge.net/grabbag/ssed/"
 SRC_URI="http://sed.sourceforge.net/grabbag/ssed/${MY_P}.tar.gz"
-HOMEPAGE="http://queen.rett.polimi.it/~paolob/seders/ssed/"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 mips sparc ~alpha"
+SLOT="0"
+KEYWORDS="x86 sparc mips ~alpha amd64"
+IUSE="nls static"
 
 DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.45-r3
 	nls? ( sys-devel/gettext )"
-
 RDEPEND="virtual/libc"
 
 src_unpack() {
