@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre4-r1.ebuild,v 1.2 2002/04/27 12:39:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre4-r1.ebuild,v 1.3 2002/04/30 12:21:45 seemant Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -35,17 +35,15 @@ src_compile() {
 		&& myconf="${myconf} --with-libmpeg3" \
 		|| myconf="${myconf} --without-libmpeg3"
 	
-    ./configure \
-		--prefix=/usr \
-		${myconf} || die
+	econf ${myconf} || die
 
-    emake all || die
+	emake all || die
 
 }
 
 src_install () {
 
-    make \
+	make \
 		DESTDIR=${D} \
 		install || die
 }
