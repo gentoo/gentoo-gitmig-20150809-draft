@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-turba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.3 2004/09/05 08:44:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.4 2004/12/24 07:56:39 vapier Exp $
+
+*horde-turba-2.0 (24 Dec 2004)
+
+  24 Dec 2004; Mike Frysinger <vapier@gentoo.org> +horde-turba-2.0.ebuild:
+  Version bump.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
