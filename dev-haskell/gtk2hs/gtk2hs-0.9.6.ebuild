@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6.ebuild,v 1.1 2004/10/26 14:36:42 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6.ebuild,v 1.2 2004/11/11 11:22:58 mr_bones_ Exp $
 
 DESCRIPTION="GTK+-2.x bindings for Haskell"
 HOMEPAGE="http://gtk2hs.sourceforge.net/"
@@ -12,13 +12,11 @@ KEYWORDS="~x86"
 
 IUSE="gnome"
 
-RDEPEND=">=virtual/ghc-5.04
+DEPEND=">=virtual/ghc-5.04
 		>=x11-libs/gtk+-2
 		gnome? ( >=gnome-base/libglade-2
 		         >=x11-libs/gtksourceview-0.6
-				 >=gnome-base/gconf-2)"
-
-DEPEND="${RDEPEND}"
+				 >=gnome-base/gconf-2 )"
 
 # the variable ghc_version is used to store the ghc version
 # we are building against
@@ -62,12 +60,14 @@ src_install() {
 		--whole-archive ${D}/${ghclibdir}/gtk2hs/gtk2/libgtk2hs.a
 	ld -r -x -o  ${D}/${ghclibdir}/gtk2hs/mogul/mogul.o \
 		--whole-archive ${D}/${ghclibdir}/gtk2hs/mogul/libmogul.a
-	[ `use gnome` ] && ld -r -x -o ${D}/${ghclibdir}/gtk2hs/sourceview/sourceview.o \
-		--whole-archive ${D}/${ghclibdir}/gtk2hs/sourceview/libsourceview.a
-	[ `use gnome` ] && ld -r -x -o ${D}/${ghclibdir}/gtk2hs/glade/glade2hs.o \
-		--whole-archive ${D}/${ghclibdir}/gtk2hs/glade/libglade2hs.a
-	[ `use gnome` ] && ld -r -x -o ${D}/${ghclibdir}/gtk2hs/gconf/gconf.o \
-		--whole-archive ${D}/${ghclibdir}/gtk2hs/gconf/libgconf.a
+	if use gnome ; then
+		ld -r -x -o ${D}/${ghclibdir}/gtk2hs/sourceview/sourceview.o \
+			--whole-archive ${D}/${ghclibdir}/gtk2hs/sourceview/libsourceview.a
+		ld -r -x -o ${D}/${ghclibdir}/gtk2hs/glade/glade2hs.o \
+			--whole-archive ${D}/${ghclibdir}/gtk2hs/glade/libglade2hs.a
+		ld -r -x -o ${D}/${ghclibdir}/gtk2hs/gconf/gconf.o \
+			--whole-archive ${D}/${ghclibdir}/gtk2hs/gconf/libgconf.a
+	fi
 
 	# fix dynamic linking with pthread bug for glade & sourview
 	sed -i 's:"pthread",::' ${D}/${ghclibdir}/gtk2hs/sourceview/sourceview.conf
@@ -93,9 +93,11 @@ register_ghc_packages() {
 	einfo "Registering gtk2hs packages"
 	ghc-pkg -u -i ${ghclibdir}/gtk2hs/gtk2/gtk2.conf
 	ghc-pkg -u -i ${ghclibdir}/gtk2hs/mogul/mogul.conf
-	[ `use gnome` ] && ghc-pkg -u -i ${ghclibdir}/gtk2hs/sourceview/sourceview.conf
-	[ `use gnome` ] && ghc-pkg -u -i ${ghclibdir}/gtk2hs/glade/glade.conf
-	[ `use gnome` ] && ghc-pkg -u -i ${ghclibdir}/gtk2hs/gconf/gconf.conf
+	if use gnome ; then
+		ghc-pkg -u -i ${ghclibdir}/gtk2hs/sourceview/sourceview.conf
+		ghc-pkg -u -i ${ghclibdir}/gtk2hs/glade/glade.conf
+		ghc-pkg -u -i ${ghclibdir}/gtk2hs/gconf/gconf.conf
+	fi
 }
 
 pkg_prerm() {
@@ -113,4 +115,3 @@ unregister_ghc_packages() {
 	ghc-pkg -r sourceview
 	ghc-pkg -r gconf
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6-r1.ebuild,v 1.2 2004/11/06 11:41:16 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6-r1.ebuild,v 1.3 2004/11/11 11:22:58 mr_bones_ Exp $
 
 inherit base ghc-package
 
@@ -14,13 +14,11 @@ KEYWORDS="~x86"
 
 IUSE="doc gnome"
 
-RDEPEND=">=virtual/ghc-5.04
+DEPEND=">=virtual/ghc-5.04
 		>=x11-libs/gtk+-2
 		gnome? ( >=gnome-base/libglade-2
 				 >=x11-libs/gtksourceview-0.6
-				 >=gnome-base/gconf-2)"
-
-DEPEND="${RDEPEND}"
+				 >=gnome-base/gconf-2 )"
 
 src_compile() {
 	econf \
