@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.51 2003/07/24 06:19:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.52 2003/07/28 18:28:17 solar Exp $
+
+  28 Jul 2003; <solar@gentoo.org> util-linux-2.12.ebuild:
+  util-linux was overriding all LDFLAGS for when use static was enabled, please
+  dont export LDFLAGS=-static alone in this or any other packages
 
 *util-linux-2.12 (24 Jul 2003)
 
