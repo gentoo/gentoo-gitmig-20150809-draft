@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.13 2004/10/04 01:03:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.14 2004/10/15 07:00:06 mr_bones_ Exp $
+
+  14 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.62.ebuild:
+  hardened doesn't seem to like the dynamic core (bug #66038)
 
   03 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.62.ebuild:
   make the sdl-sound dep explicit (bug #66179)
