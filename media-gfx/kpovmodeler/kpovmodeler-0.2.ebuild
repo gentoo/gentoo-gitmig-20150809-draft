@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-0.2.ebuild,v 1.2 2002/10/05 19:22:30 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-0.2.ebuild,v 1.3 2003/01/31 16:47:57 danarmak Exp $
 inherit kde-base
 
 need-kde 3
@@ -12,3 +12,22 @@ KEYWORDS="x86 ppc"
 
 newdepend "virtual/opengl virtual/glu virtual/glut >=media-libs/freetype-2.0.9"
 RDEPEND="$RDEPEND media-gfx/povray"
+
+warning_msg() {
+
+ewarn "WARNING: this app is now part of kdegraphics-3.1. It is very much recommended that you"
+ewarn "upgrade to kde 3.1 instead of using this standalone app, because it is no longer being"
+ewarn "updated or fixed. In addition, it won't even compile on a kde 3.1 system."
+
+}
+
+src_unpack() {
+
+    warning_msg
+    kde_src_unpack
+
+}
+
+src_postinst() {
+    warning_msg
+}
