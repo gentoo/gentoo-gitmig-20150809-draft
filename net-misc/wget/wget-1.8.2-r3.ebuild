@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.15 2005/01/04 06:06:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.16 2005/01/09 11:31:48 swegener Exp $
 
 inherit gnuconfig eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Network utility to retrieve files from the WWW"
 HOMEPAGE="http://wget.sunsite.dk/"
 SRC_URI="mirror://gnu/wget/${P}.tar.gz
 	mirror://gentoo/wget-new-percentage-cvs-${NPVER}.tar.gz
-	ipv6? mirror://gentoo/${P}-ipv6-debian.patch.bz2"
+	ipv6? ( mirror://gentoo/${P}-ipv6-debian.patch.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,9 @@ KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64"
 IUSE="build debug ipv6 nls ssl static"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
-DEPEND="sys-devel/autoconf nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}

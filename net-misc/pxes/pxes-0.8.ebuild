@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.8.ebuild,v 1.7 2004/08/16 17:39:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.8.ebuild,v 1.8 2005/01/09 11:30:07 swegener Exp $
 
 IUSE="cdr"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 	dev-perl/gtk-perl
 	>=dev-perl/glade-perl-0.61
 	sys-fs/squashfs-tools
-	cdr? app-cdr/cdrtools"
+	cdr? ( app-cdr/cdrtools )"
 
 inherit perl-module
 

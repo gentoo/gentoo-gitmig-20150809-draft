@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.11 2005/01/04 06:06:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.12 2005/01/09 11:31:48 swegener Exp $
 
 inherit gnuconfig eutils
 
@@ -17,7 +17,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
-DEPEND="nls? ( sys-devel/gettext )
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	sys-devel/autoconf"
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.21 2005/01/04 06:06:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.22 2005/01/09 11:31:48 swegener Exp $
 
 inherit gnuconfig eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 ppc-macos s390 sh ~sparc ~x
 IUSE="build debug ipv6 nls socks5 ssl static"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
-DEPEND="nls? ( sys-devel/gettext )
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	sys-devel/autoconf"
 
 src_unpack() {

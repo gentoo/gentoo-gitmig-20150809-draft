@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pxes
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.18 2004/08/24 19:08:43 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.19 2005/01/09 11:30:07 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> pxes-0.6-r4.ebuild,
+  pxes-0.7.ebuild, pxes-0.8.ebuild, pxes-0.9.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
   24 Aug 2004; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.9.ebuild:
   QA Cleanup and closing bug #56480.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.7.ebuild,v 1.8 2004/09/25 20:46:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.7.ebuild,v 1.9 2005/01/09 11:30:07 swegener Exp $
 
 IUSE="cdr ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
@@ -14,12 +14,12 @@ KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND=">=dev-lang/perl-5.8.0-r12
-	ltsp? >=net-misc/ltsp-3.0.9-r1"
+	ltsp? ( >=net-misc/ltsp-3.0.9-r1 )"
 
 RDEPEND="${DEPEND}
 	dev-perl/gtk-perl
 	>=dev-perl/glade-perl-0.61
-	cdr? app-cdr/cdrtools"
+	cdr? ( app-cdr/cdrtools )"
 
 RESTRICT="nouserpriv"
 
