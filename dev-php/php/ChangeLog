@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.12 2002/09/03 20:36:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.13 2002/09/11 05:04:02 rphillips Exp $
+
+*php-4.2.3 (10 Sep 2002)
+
+  10 Sep 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.3-r1.ebuild :
+
+  New version...
 
 *php-4.2.2-r1 (18 Aug 2002)
 
