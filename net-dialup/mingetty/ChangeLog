@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.3 2002/12/31 23:53:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.4 2003/01/01 00:21:07 drobbins Exp $
+
+  31 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: Added autologin patch to
+  mingetty-1.00.3. Not bumping rev as I did this about 20 mins after unmasking
+  this for x86. This patch includes the Red Hat "opt" patch.
 
 *mingetty-1.00.3 (31 Dec 2002)
 

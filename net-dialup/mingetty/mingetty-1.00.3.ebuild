@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.1 2002/12/31 23:53:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.2 2003/01/01 00:21:07 drobbins Exp $
 
 RHP=${PN}-1.00
 S=${WORKDIR}/${RHP}
@@ -21,7 +21,7 @@ src_unpack() {
 	rpm2targz ${DISTDIR}/${MYP}.src.rpm || die
 	tar zxf ${WORKDIR}/${MYP}.src.tar.gz || die
 	tar zxf ${WORKDIR}/${RHP}.tar.gz || die
-	patch -p0 < ${RHP}-opt.patch || die
+	patch -p0 < ${FILESDIR}/mingetty-1.00-autologin.patch || die
 }
 
 src_compile() {
