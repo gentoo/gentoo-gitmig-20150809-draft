@@ -1,0 +1,72 @@
+--- ufed.pl.org	2004-09-21 09:26:50.000000000 +0200
++++ ufed.pl		2004-06-03 06:58:49.000000000 +0200
+@@ -510,25 +510,57 @@
+    # the associated flag is emabled
+    my ($flag, $package);
+    my @flags;
++   my $tmppath;
++   my @tmpitem;
++   my @items;
++   my $path;
++   #open(FILE, '/etc/make.profile/use.defaults') or die ('couldn\'t open ' . "use.defaults");
++   $path = readlink '/etc/make.profile';
++   $path =~ s!\.\.!!;
++   @items = split /\//, $path ;
++   while(@items) 
++   { 
++      $tmppath = join '/', @items ; 
++      if (open(FILE1,$tmppath . "/use.defaults")) 
++      {
++         while (<FILE1>)
++         {
++            s!#.*!!;
++            ($flag, $package) = split (m![\t ]+!);
++            $flag    =~ s![ \t]!!g;
++            $package =~ s![ \t]!!g;
++            chomp($package);
+-   open(FILE, '/etc/make.profile/use.defaults') or die ('couldn\'t open ' . "use.defaults");
+ 
++            if ((defined($package)) and my_glob("/var/db/pkg/$package"))
++            {
++	       #the package exists, therefore we add the use flag
++               push (@flags, $flag);
++            }
++         }
++         close(FILE1);
++      }
+-   while (<FILE>)
+-   {
+-      s!#.*!!;
+-      ($flag, $package) = split (m![\t ]+!);
+-      $flag    =~ s![ \t]!!g;
+-      $package =~ s![ \t]!!g;
+-      chomp($package);
+ 
++      open (FILE,$tmppath . '/parent') or last;
++      while (<FILE>)
+-      if ((defined($package)) and my_glob("/var/db/pkg/$package"))
+       {
++         s!#.*!!;
++         s!\n!!g;
++         @tmpitem = split /\//, $_;
++         for my $buf (@tmpitem)
++         {
++	    if ($buf =~ /\.\./) 
++	    {
++	       pop @items;
++	    }
++            else
++	    {
++	       push @items, $buf;
++	    }
++         }
+-
+-         #the package exists, therefore we add the use flag
+-         push (@flags, $flag);
+       }
++      close(FILE);
+    }
+-   close(FILE);
+    return (@flags);
+ }
+ 
