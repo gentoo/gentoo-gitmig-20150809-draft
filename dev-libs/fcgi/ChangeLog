@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.1 2003/09/04 21:07:42 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.2 2003/11/26 21:05:51 mkennedy Exp $
+
+  26 Nov 2003; <mkennedy@gentoo.org> fcgi-2.4.0.ebuild:
+  marking x86 stable
 
 *fcgi-2.4.0 (04 Sep 2003)
 
