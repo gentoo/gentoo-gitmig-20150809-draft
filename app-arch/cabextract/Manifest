@@ -1,10 +1,20 @@
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 f79b62b2d9e1b9e289760a17e63f9f6d cabextract-0.5.ebuild 578
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e90af6a35ee6ac44b01f042b9b8ef9ec ChangeLog 3192
+MD5 f79b62b2d9e1b9e289760a17e63f9f6d cabextract-0.5.ebuild 578
 MD5 48089dda48654ecbe26fe9fe7f047312 cabextract-0.6.ebuild 609
 MD5 30647d08d4dff9b7b868739fb5ab4c95 cabextract-1.0.ebuild 628
-MD5 844f84d8d911709ebf564a6a4626bb87 cabextract-1.1.ebuild 630
-MD5 431bb1a17fb1d3e563e496974053738e files/digest-cabextract-0.6 65
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 e30d51ec44956c45fc8581cacf144781 cabextract-1.1.ebuild 632
 MD5 020a5204ebe2ce972472096f8f40748e files/digest-cabextract-0.5 65
-MD5 a71d568bc3da500b98a9996bed7d216a files/digest-cabextract-1.1 66
+MD5 431bb1a17fb1d3e563e496974053738e files/digest-cabextract-0.6 65
 MD5 e946dad6f9bd58cc6df05b8c58d279bb files/digest-cabextract-1.0 66
+MD5 a71d568bc3da500b98a9996bed7d216a files/digest-cabextract-1.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhH0kHTu7gpaalycRAvGSAKCYq0Pg4W/OUB3Ikyn0oz4x+1uuOwCgjoOL
+t8ZHuo3V2EihKtNe4xyR2kg=
+=q1+N
+-----END PGP SIGNATURE-----
