@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nettop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.6 2004/11/20 03:04:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.7 2004/11/22 17:09:31 eldad Exp $
+
+  22 Nov 2004; Eldad Zack <eldad@gentoo.org> nettop-0.2.3.ebuild:
+  die if emake fails.
 
   19 Nov 2004; Jason Wever <weeve@gentoo.org> nettop-0.2.3.ebuild:
   Stable on sparc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3.ebuild,v 1.6 2004/11/20 03:04:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3.ebuild,v 1.7 2004/11/22 17:09:31 eldad Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ src_compile() {
 	local myconf
 	myconf="--prefix=/usr"
 	./configure ${myconf} || die
-	emake
+	emake || die
 }
 
 src_install() {

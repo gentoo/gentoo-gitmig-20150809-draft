@@ -1,4 +1,14 @@
-MD5 b2fa1b00c570c446806a794a037c6d87 ChangeLog 736
-MD5 87271f8a5003e85499212ce7cdf5e5dc nettop-0.2.3.ebuild 630
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f7d0b0befc66e01c7fbf47502ceaa26c nettop-0.2.3.ebuild 637
+MD5 2c0099a665fdb9d02f60b5d7cb0320e4 ChangeLog 825
 MD5 59fafa99faf187e744c602a625052f65 metadata.xml 232
 MD5 d1dfb4623376711f1542dc52dcb85a7c files/digest-nettop-0.2.3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBohv/T+MN7JbqCpMRAm2qAKCIiZP64NLtgzP8q0dXV9DltLsusQCdEn15
+fjnx2fFxaNYGWycGI39ZC+M=
+=f2Ca
+-----END PGP SIGNATURE-----
