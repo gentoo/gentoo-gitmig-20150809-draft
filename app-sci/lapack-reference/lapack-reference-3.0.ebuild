@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/lapack-reference-3.0.ebuild,v 1.3 2004/06/24 22:07:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/lapack-reference-3.0.ebuild,v 1.4 2004/07/13 20:39:28 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.netlib.org/lapack/${MyPN}.tgz
 LICENSE="lapack"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="ifc"
 
 DEPEND="sys-devel/libtool
 	app-sci/lapack-config
