@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.30 2004/11/30 20:54:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.31 2004/12/06 23:56:36 mr_bones_ Exp $
+
+*xmame-0.89 (06 Dec 2004)
+
+  06 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +xmame-0.89.ebuild:
+  version bump
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> xmame-0.88.ebuild:
   Added missing ? after USE flag in dependency.

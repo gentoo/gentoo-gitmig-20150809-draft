@@ -1,7 +1,8 @@
-MD5 1bfbc5236e4fbf2e323be0a45cd8652e ChangeLog 7382
+MD5 f5895fd458e84d1ef2872b8fa985fb39 ChangeLog 7501
 MD5 e44da7fe9271f2f2e299cc34df120830 metadata.xml 1537
 MD5 30e8d4b0106df48fc70f99beb5608280 xmame-0.82.1.ebuild 6437
 MD5 3bfc553fbd6d37187aba00e77fb80875 xmame-0.83.1.ebuild 6774
+MD5 c7703d68a208bf45a31de12ddbab8147 xmame-0.89.ebuild 5535
 MD5 f23f07aad63a835cbf245a45a5abbc3f xmame-0.88.ebuild 5595
 MD5 8678f14a1893c1e9c8fa453ebd051382 xmame-0.86.ebuild 5877
 MD5 9bbbd2de60f0c41f643674a694cd2c90 files/0.77.1-alsa-1.0.0.patch 438
@@ -22,4 +23,5 @@ MD5 d60ae5dd2d8a993999a9a252d20507cf files/digest-xmame-0.82.1 67
 MD5 bd94e56aecab93b1d9e02b6fb3d8a0e9 files/digest-xmame-0.83.1 67
 MD5 1c5281cca09cd38869fa3715b3839b1b files/digest-xmame-0.86 65
 MD5 60b1266244271466b84fb43fc9483ff2 files/digest-xmame-0.88 65
+MD5 61102d8121de66b952f348dd992ab7e9 files/digest-xmame-0.89 65
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.88-glx-fix.patch 386
