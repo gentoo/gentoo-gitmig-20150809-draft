@@ -1,0 +1,205 @@
+diff -urNp -X /usr/src/dontdiff linux-2.6.8-gentoo-r11/arch/ia64/ia32/binfmt_elf32.c linux-dsd/arch/ia64/ia32/binfmt_elf32.c
+--- linux-2.6.8-gentoo-r11/arch/ia64/ia32/binfmt_elf32.c	2004-08-14 06:37:42.000000000 +0100
++++ linux-dsd/arch/ia64/ia32/binfmt_elf32.c	2004-12-03 01:22:18.416099008 +0000
+@@ -84,7 +84,11 @@ ia64_elf32_init (struct pt_regs *regs)
+ 		vma->vm_ops = &ia32_shared_page_vm_ops;
+ 		down_write(&current->mm->mmap_sem);
+ 		{
+-			insert_vm_struct(current->mm, vma);
++			if (insert_vm_struct(current->mm, vma)) {
++				kmem_cache_free(vm_area_cachep, vma);
++				up_write(&current->mm->mmap_sem);
++				return;
++			}
+ 		}
+ 		up_write(&current->mm->mmap_sem);
+ 	}
+@@ -103,7 +107,11 @@ ia64_elf32_init (struct pt_regs *regs)
+ 		vma->vm_flags = VM_READ|VM_WRITE|VM_MAYREAD|VM_MAYWRITE;
+ 		down_write(&current->mm->mmap_sem);
+ 		{
+-			insert_vm_struct(current->mm, vma);
++			if (insert_vm_struct(current->mm, vma)) {
++				kmem_cache_free(vm_area_cachep, vma);
++				up_write(&current->mm->mmap_sem);
++				return;
++			}
+ 		}
+ 		up_write(&current->mm->mmap_sem);
+ 	}
+@@ -151,7 +159,7 @@ ia32_setup_arg_pages (struct linux_binpr
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+ 	struct mm_struct *mm = current->mm;
+-	int i;
++	int i, ret;
+ 
+ 	stack_base = IA32_STACK_TOP - MAX_ARG_PAGES*PAGE_SIZE;
+ 	mm->arg_start = bprm->p + stack_base;
+@@ -186,7 +194,11 @@ ia32_setup_arg_pages (struct linux_binpr
+ 			mpnt->vm_flags = VM_STACK_FLAGS;
+ 		mpnt->vm_page_prot = (mpnt->vm_flags & VM_EXEC)?
+ 					PAGE_COPY_EXEC: PAGE_COPY;
+-		insert_vm_struct(current->mm, mpnt);
++		if ((ret = insert_vm_struct(current->mm, mpnt))) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return ret;
++		}
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	}
+ 
+diff -urNp -X /usr/src/dontdiff linux-2.6.8-gentoo-r11/arch/ia64/mm/init.c linux-dsd/arch/ia64/mm/init.c
+--- linux-2.6.8-gentoo-r11/arch/ia64/mm/init.c	2004-08-14 06:36:56.000000000 +0100
++++ linux-dsd/arch/ia64/mm/init.c	2004-12-03 01:20:32.714168144 +0000
+@@ -131,7 +131,13 @@ ia64_init_addr_space (void)
+ 		vma->vm_end = vma->vm_start + PAGE_SIZE;
+ 		vma->vm_page_prot = protection_map[VM_DATA_DEFAULT_FLAGS & 0x7];
+ 		vma->vm_flags = VM_DATA_DEFAULT_FLAGS | VM_GROWSUP;
+-		insert_vm_struct(current->mm, vma);
++		down_write(&current->mm->mmap_sem);
++		if (insert_vm_struct(current->mm, vma)) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, vma);
++			return;
++		}
++		up_write(&current->mm->mmap_sem);
+ 	}
+ 
+ 	/* map NaT-page at address zero to speed up speculative dereferencing of NULL: */
+@@ -143,7 +149,13 @@ ia64_init_addr_space (void)
+ 			vma->vm_end = PAGE_SIZE;
+ 			vma->vm_page_prot = __pgprot(pgprot_val(PAGE_READONLY) | _PAGE_MA_NAT);
+ 			vma->vm_flags = VM_READ | VM_MAYREAD | VM_IO | VM_RESERVED;
+-			insert_vm_struct(current->mm, vma);
++			down_write(&current->mm->mmap_sem);
++			if (insert_vm_struct(current->mm, vma)) {
++				up_write(&current->mm->mmap_sem);
++				kmem_cache_free(vm_area_cachep, vma);
++				return;
++			}
++			up_write(&current->mm->mmap_sem);
+ 		}
+ 	}
+ }
+diff -urNp -X /usr/src/dontdiff linux-2.6.8-gentoo-r11/arch/s390/kernel/compat_exec.c linux-dsd/arch/s390/kernel/compat_exec.c
+--- linux-2.6.8-gentoo-r11/arch/s390/kernel/compat_exec.c	2004-08-14 06:37:40.000000000 +0100
++++ linux-dsd/arch/s390/kernel/compat_exec.c	2004-12-03 01:23:39.196818472 +0000
+@@ -39,7 +39,7 @@ int setup_arg_pages32(struct linux_binpr
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+ 	struct mm_struct *mm = current->mm;
+-	int i;
++	int i, ret;
+ 
+ 	stack_base = STACK_TOP - MAX_ARG_PAGES*PAGE_SIZE;
+ 	mm->arg_start = bprm->p + stack_base;
+@@ -68,7 +68,11 @@ int setup_arg_pages32(struct linux_binpr
+ 		/* executable stack setting would be applied here */
+ 		mpnt->vm_page_prot = PAGE_COPY;
+ 		mpnt->vm_flags = VM_STACK_FLAGS;
+-		insert_vm_struct(mm, mpnt);
++		if ((ret = insert_vm_struct(mm, mpnt))) {
++			up_write(&mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return ret;
++		}
+ 		mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	} 
+ 
+diff -urNp -X /usr/src/dontdiff linux-2.6.8-gentoo-r11/arch/x86_64/ia32/ia32_binfmt.c linux-dsd/arch/x86_64/ia32/ia32_binfmt.c
+--- linux-2.6.8-gentoo-r11/arch/x86_64/ia32/ia32_binfmt.c	2004-08-14 06:36:12.000000000 +0100
++++ linux-dsd/arch/x86_64/ia32/ia32_binfmt.c	2004-12-03 01:25:24.771768640 +0000
+@@ -330,7 +330,7 @@ int setup_arg_pages(struct linux_binprm 
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+ 	struct mm_struct *mm = current->mm;
+-	int i;
++	int i, ret;
+ 
+ 	stack_base = IA32_STACK_TOP - MAX_ARG_PAGES * PAGE_SIZE;
+ 	mm->arg_start = bprm->p + stack_base;
+@@ -364,7 +364,11 @@ int setup_arg_pages(struct linux_binprm 
+ 			mpnt->vm_flags = vm_stack_flags32;
+  		mpnt->vm_page_prot = (mpnt->vm_flags & VM_EXEC) ? 
+  			PAGE_COPY_EXEC : PAGE_COPY;
+-		insert_vm_struct(mm, mpnt);
++		if ((ret = insert_vm_struct(mm, mpnt))) {
++			up_write(&mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return ret;
++		}
+ 		mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	} 
+ 
+diff -urNp -X /usr/src/dontdiff linux-2.6.8-gentoo-r11/fs/exec.c linux-dsd/fs/exec.c
+--- linux-2.6.8-gentoo-r11/fs/exec.c	2004-12-03 01:13:58.502097488 +0000
++++ linux-dsd/fs/exec.c	2004-12-03 01:26:47.749154160 +0000
+@@ -341,7 +341,7 @@ int setup_arg_pages(struct linux_binprm 
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+ 	struct mm_struct *mm = current->mm;
+-	int i;
++	int i, ret;
+ 	long arg_size;
+ 
+ #ifdef CONFIG_STACK_GROWSUP
+@@ -412,7 +412,6 @@ int setup_arg_pages(struct linux_binprm 
+ 
+ 	down_write(&mm->mmap_sem);
+ 	{
+-		struct vm_area_struct *vma;
+ 		mpnt->vm_mm = mm;
+ #ifdef CONFIG_STACK_GROWSUP
+ 		mpnt->vm_start = stack_base;
+@@ -433,13 +432,11 @@ int setup_arg_pages(struct linux_binprm 
+ 			mpnt->vm_flags = VM_STACK_FLAGS;
+ 		mpnt->vm_flags |= mm->def_flags;
+ 		mpnt->vm_page_prot = protection_map[mpnt->vm_flags & 0x7];
+-		vma = find_vma(mm, mpnt->vm_start);
+-		if (vma) {
++		if ((ret = insert_vm_struct(mm, mpnt))) {
+ 			up_write(&mm->mmap_sem);
+ 			kmem_cache_free(vm_area_cachep, mpnt);
+-			return -ENOMEM;
++			return ret;
+ 		}
+-		insert_vm_struct(mm, mpnt);
+ 		mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	}
+ 
+diff -urNp -X /usr/src/dontdiff linux-2.6.8-gentoo-r11/include/linux/mm.h linux-dsd/include/linux/mm.h
+--- linux-2.6.8-gentoo-r11/include/linux/mm.h	2004-08-14 06:36:13.000000000 +0100
++++ linux-dsd/include/linux/mm.h	2004-12-03 01:20:32.718167536 +0000
+@@ -624,7 +624,7 @@ extern struct vm_area_struct *vma_merge(
+ extern struct anon_vma *find_mergeable_anon_vma(struct vm_area_struct *);
+ extern int split_vma(struct mm_struct *,
+ 	struct vm_area_struct *, unsigned long addr, int new_below);
+-extern void insert_vm_struct(struct mm_struct *, struct vm_area_struct *);
++extern int insert_vm_struct(struct mm_struct *, struct vm_area_struct *);
+ extern void __vma_link_rb(struct mm_struct *, struct vm_area_struct *,
+ 	struct rb_node **, struct rb_node *);
+ extern struct vm_area_struct *copy_vma(struct vm_area_struct **,
+diff -urNp -X /usr/src/dontdiff linux-2.6.8-gentoo-r11/mm/mmap.c linux-dsd/mm/mmap.c
+--- linux-2.6.8-gentoo-r11/mm/mmap.c	2004-08-14 06:37:15.000000000 +0100
++++ linux-dsd/mm/mmap.c	2004-12-03 01:20:32.720167232 +0000
+@@ -1740,7 +1740,7 @@ void exit_mmap(struct mm_struct *mm)
+  * and into the inode's i_mmap tree.  If vm_file is non-NULL
+  * then i_mmap_lock is taken here.
+  */
+-void insert_vm_struct(struct mm_struct * mm, struct vm_area_struct * vma)
++int insert_vm_struct(struct mm_struct * mm, struct vm_area_struct * vma)
+ {
+ 	struct vm_area_struct * __vma, * prev;
+ 	struct rb_node ** rb_link, * rb_parent;
+@@ -1763,8 +1763,9 @@ void insert_vm_struct(struct mm_struct *
+ 	}
+ 	__vma = find_vma_prepare(mm,vma->vm_start,&prev,&rb_link,&rb_parent);
+ 	if (__vma && __vma->vm_start < vma->vm_end)
+-		BUG();
++		return -ENOMEM;
+ 	vma_link(mm, vma, prev, rb_link, rb_parent);
++	return 0;
+ }
+ 
+ /*
