@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/scite
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.15 2004/01/09 01:41:11 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.16 2004/02/11 10:39:14 liquidx Exp $
+
+*scite-1.5.8 (11 Feb 2004)
+
+  11 Feb 2004; Alastair Tse <liquidx@gentoo.org> scite-1.5.1.ebuild,
+  scite-1.5.4.ebuild, scite-1.5.8.ebuild:
+  version bump. fixes GTK1 default thanks to Piotr Piasny <p1t3r05 os.pl> and
+  khai <khai turbonet.com> (#40866) (#40668)
 
 *scite-1.5.7 (09 Jan 2004)
 
