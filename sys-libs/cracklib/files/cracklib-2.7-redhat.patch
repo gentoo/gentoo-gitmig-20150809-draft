@@ -1,0 +1,173 @@
+--- cracklib,2.7/cracklib/fascist.c.rh	Wed Dec 31 05:26:46 1997
++++ cracklib,2.7/cracklib/fascist.c	Tue Mar 10 18:17:43 1998
+@@ -11,6 +11,7 @@
+ #include "packer.h"
+ #include <sys/types.h>
+ #include <pwd.h>
++#include <string.h>
+ 
+ #define ISSKIP(x) (isspace(x) || ispunct(x))
+ 
+@@ -659,7 +660,7 @@
+ 	return ("it does not contain enough DIFFERENT characters");
+     }
+ 
+-    strcpy(password, Lowercase(password));
++    strcpy(password, (char *)Lowercase(password));
+ 
+     Trim(password);
+ 
+@@ -722,7 +723,7 @@
+ 	}
+     }
+ 
+-    strcpy(password, Reverse(password));
++    strcpy(password, (char *)Reverse(password));
+ 
+     for (i = 0; r_destructors[i]; i++)
+     {
+--- cracklib,2.7/cracklib/Makefile.rh	Sun Dec 14 17:49:21 1997
++++ cracklib,2.7/cracklib/Makefile	Tue Mar 10 18:54:11 1998
+@@ -6,13 +6,21 @@
+ # and upwards.
+ ###
+ 
+-LIB=	libcrack.a
+-OBJ=	fascist.o packlib.o rules.o stringlib.o
+-CFLAGS= -O -I../cracklib -DIN_CRACKLIB
++LIB	= libcrack.so
++OBJ	= fascist.o packlib.o rules.o stringlib.o
++CFLAGS	= $(RPM_OPT_FLAGS) -g -I../cracklib -DIN_CRACKLIB -fPIC
++LD	= ld
+ 
+-$(LIB):	$(OBJ)
+-	ar rv $(LIB) $?
+-	-ranlib $(LIB)
++$(LIB):	$(OBJ) Makefile
++	$(LD) -shared -soname $(LIB).$(MAJOR) -o $(LIB).$(VERSION) $(OBJ) -lc
++	rm -f $(LIB).$(MAJOR) $(LIB)
++	ln -s $(LIB).$(VERSION) $(LIB).$(MAJOR)
++	ln -s $(LIB).$(MAJOR) $(LIB)
+ 
+ clean:
+-	-rm -f $(OBJ) $(LIB) *~
++	-rm -f $(OBJ) $(LIB) $(LIB).$(VERSION) *~
++
++install: $(LIB) crack.h
++	install -m 755 $(LIB).$(VERSION) $(ROOT)/usr/lib
++	ln -sf $(LIB).$(VERSION) $(ROOT)/usr/lib/$(LIB)
++	install -m 644 crack.h $(ROOT)/usr/include
+--- cracklib,2.7/cracklib/crack.h.rh	Tue Mar 10 18:17:43 1998
++++ cracklib,2.7/cracklib/crack.h	Tue Mar 10 18:17:43 1998
+@@ -0,0 +1,15 @@
++
++#ifndef CRACKLIB_H
++#define CRACKLIB_H
++
++/* Pass this function a password (pw) and a path to the
++ * dictionaries (/usr/lib/cracklib_dict should be specified)
++ * and it will either return a NULL string, meaning that the
++ * password is good, or a pointer to a string that explains the
++ * problem with the password.
++ * You must link with -lcrack
++ */
++
++extern char *FascistCheck(char *pw, char *dictpath);
++
++#endif
+--- cracklib,2.7/util/Makefile.rh	Sun Dec 14 17:49:34 1997
++++ cracklib,2.7/util/Makefile	Tue Mar 10 18:17:43 1998
+@@ -14,27 +14,31 @@
+ #SunOS users (and others?) should consider static linking of their passwd binary
+ #CFLAGS= -O -I../cracklib '-DCRACKLIB_DICTPATH="$(DICTPATH)"' -Bstatic
+ 
+-CFLAGS= -O -I../cracklib '-DCRACKLIB_DICTPATH="$(DICTPATH)"'
+-LIBS=	../cracklib/libcrack.a
++CFLAGS	= $(RPM_OPT_FLAGS) -I../cracklib '-DCRACKLIB_DICTPATH="$(DICTPATH)"'
++LDFLAGS	= -L../cracklib -lcrack
++LIBS	= ../cracklib/libcrack.so
+ 
+ all:	packer unpacker testnum teststr testlib
+ 	touch all
+ 
+ packer: packer.o $(LIBS)
+-	cc $(CFLAGS) -o $@ $@.o $(LIBS)
++	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
+ 
+ unpacker: unpacker.o $(LIBS)
+-	cc $(CFLAGS) -o $@ $@.o $(LIBS)
++	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
+ 
+ testnum: testnum.o $(LIBS)
+-	cc $(CFLAGS) -o $@ $@.o $(LIBS)
++	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
+ 
+ teststr: teststr.o $(LIBS)
+-	cc $(CFLAGS) -o $@ $@.o $(LIBS)
++	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
+ 
+ testlib: testlib.o $(LIBS)
+-	cc $(CFLAGS) -o $@ $@.o $(LIBS)
++	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
+ 
+ clean:
+ 	-rm *.o *~ all
+ 	-rm teststr testnum testlib packer unpacker
++
++install: all create-cracklib-dict
++	install -m 755 mkdict packer create-cracklib-dict $(ROOT)/usr/sbin
+--- cracklib,2.7/util/create-cracklib-dict.rh	Tue Mar 10 18:17:43 1998
++++ cracklib,2.7/util/create-cracklib-dict	Tue Mar 10 18:17:43 1998
+@@ -0,0 +1,15 @@
++#!/bin/sh
++if [ -z "$*" ]; then
++    echo "Usage:"
++    echo "  /usr/sbin/create-cracklib-dict wordlist ..."
++    echo
++    echo "This script takes one or more word list files as arguments"
++    echo "and converts them into cracklib dictionaries for use"
++    echo "by password checking programs. The results are placed in"
++    echo "/usr/lib/cracklib_dict.*"
++    echo
++    echo "Example:"
++    echo "/usr/sbin/create-cracklib-dict /usr/dict/words"
++else
++    /usr/sbin/mkdict $* | /usr/sbin/packer /usr/lib/cracklib_dict
++fi
+--- cracklib,2.7/Makefile.rh	Wed Dec 31 05:33:53 1997
++++ cracklib,2.7/Makefile	Tue Mar 10 18:52:47 1998
+@@ -7,14 +7,21 @@
+ ###
+ 
+ ###
++# cracklib version
++MAJOR=2
++MINOR=7
++VERSION=$(MAJOR).$(MINOR)
++export MAJOR MINOR VERSION
++
++###
+ # set this to the absolute path (less extn) of compressed dict.
+ 
+-DICTPATH="/usr/local/lib/pw_dict"
++DICTPATH="/usr/lib/cracklib_dict"
+ 
+ ###
+ # Set this to the path of one or more files continaing wordlists.
+ 
+-SRCDICTS=/usr/dict/words
++SRCDICTS=/usr/dict/words /usr/dict/extra.words
+ 
+ ###
+ # If you have installed the cracklib-dicts directory, use this
+@@ -36,7 +43,9 @@
+ 	-rm -f all installed Part* *.BAK *.bak *~
+ 
+ install: all
++	( cd cracklib && make install && exit $$? )
++	( cd util && make install && exit $$? )
+ 	@echo 'if "sort" dies from lack of space, see "util/mkdict"'
+-	util/mkdict $(SRCDICTS) | util/packer $(DICTPATH)
++	util/mkdict $(SRCDICTS) | LD_LIBRARY_PATH=cracklib util/packer $(ROOT)$(DICTPATH)
+ 	touch installed
+ ###	@echo 'now go install passwd/passwd where you want it'

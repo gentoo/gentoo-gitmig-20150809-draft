@@ -1,0 +1,43 @@
+#! /bin/sh
+#RCUPDATE:3 4:72
+
+.  /etc/rc.d/config/functions
+
+SERVICE=nscd
+EXE=/usr/sbin/nscd
+opts="start stop restart"
+
+start() {
+	ebegin "Starting Name Service Cache Daemon"
+	secure=` cat /etc/nsswitch.conf | while read curline ; do
+	  table=${curline%:*}
+	  entries=${curline##$table:}
+	  table=${table%%[^a-z]*}
+	  case $table in
+	    passwd*|group*|hosts)
+	      for entry in $entries ; do
+		case $entry in
+		  nisplus*)
+		    /usr/sbin/nscd_nischeck $table || echo "-S $table,yes"
+		  ;;
+		esac
+	      done
+	    ;;
+	  esac
+	done`
+	start-stop-daemon --start --quiet --exec $EXE -- $secure 1>&2
+	eend $? "Error starting $SERVICE"
+}
+stop () {
+	ebegin "Shutting down Name Service Cache Daemon"
+	start-stop-daemon --stop --quiet --pid /var/run/nscd.pid 1>&2
+	eend $? "Error stopping $SERVICE"
+}
+
+restart () {
+	stop
+	start
+}
+
+doservice ${@}
+
