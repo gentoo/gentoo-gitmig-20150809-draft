@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metisse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/ChangeLog,v 1.7 2005/02/20 10:55:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/ChangeLog,v 1.8 2005/03/05 19:04:50 blubb Exp $
+
+  05 Mar 2005; Simon Stelling <blubb@gentoo.org> metisse-0.3.5.ebuild:
+  won't work until somebody provides a patch for the assembler-parts, see bug
+  #83473
 
 *metisse-0.3.5 (20 Feb 2005)
 
