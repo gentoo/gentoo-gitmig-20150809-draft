@@ -1,6 +1,6 @@
 #!/bin/bash
 # Gentoo Startup script for qmail's QMQP daemon (logging)
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/run-qmailqmqpdlog,v 1.3 2005/01/03 20:55:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/run-qmailqmqpdlog,v 1.4 2005/01/04 21:35:13 hansmi Exp $
 SERVICE=qmqp
 source /var/qmail/bin/qmail-config-system && \
-exec /usr/bin/setuidgid qmaill /usr/bin/multilog ${LOG_OPTS} ${LOG_DEST}
+eval exec /usr/bin/setuidgid qmaill /usr/bin/multilog ${LOG_OPTS} ${LOG_DEST}
