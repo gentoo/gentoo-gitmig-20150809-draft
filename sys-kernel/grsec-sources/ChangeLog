@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.7 2003/12/02 07:04:05 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.8 2003/12/02 20:22:22 pappy Exp $
+
+  02 Dec 2003; Alexander Gabert <pappy@gentoo.org>
+  grsec-sources-2.4.23.1.9.13.ebuild:
+  created linux2423grsec1913 patch and added ~hppa keywords
 
 *grsec-sources-2.4.22.1.9.12-r1 (02 Dec 2003)
 
