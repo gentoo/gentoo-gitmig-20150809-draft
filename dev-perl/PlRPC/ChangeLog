@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.15 2004/04/02 15:26:37 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.16 2004/06/01 23:05:28 tgall Exp $
+
+  01 Jun 2004; Tom Gall <tgall@gentoo.org> PlRPC-0.2016-r1.ebuild:
+  stable on ppc64, bug #52701
 
   02 Apr 2004; <randy@gentoo.org> PlRPC-0.2016-r1.ebuild:
   adding s390 keywords
