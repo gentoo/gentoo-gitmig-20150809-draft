@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libart_lgpl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.22 2003/12/28 12:41:54 spider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.23 2004/03/07 05:09:58 geoman Exp $
+
+  07 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  libart_lgpl-2.3.16.ebuild:
+  Added ~mips keyword.
 
   28 Dec 2003; <spider@gentoo.org> libart_lgpl-2.3.10.ebuild,
   libart_lgpl-2.3.12.ebuild, libart_lgpl-2.3.14.ebuild,
