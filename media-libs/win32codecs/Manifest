@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c768dd99b57ecf31f2a1635785016b46 ChangeLog 3266
+MD5 c45c8270988871429efa40decfdea13d win32codecs-20031001.ebuild 773
+MD5 2b6fbcf8566812048a6e40e865196219 win32codecs-0.90.1-r2.ebuild 979
+MD5 2938a8fcc4ffda8bc9bd28175a2b2d9b win32codecs-20040427.ebuild 773
+MD5 a92bba5ff5b550d63ae330ed36465235 win32codecs-20040916.ebuild 809
+MD5 5fff8eea2665a0ae64834f593b5a7972 win32codecs-20040703.ebuild 905
+MD5 b9d3639083561b59aba857ea3bb1f3e5 win32codecs-20040916-r1.ebuild 847
+MD5 8962fc3064c1e21fa28426ddaf789786 ChangeLog 3397
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 13989eb3f90b8d218484383afb488e32 win32codecs-0.90.1-r1.ebuild 731
-MD5 abc4603048e796bee72a21b38b167758 win32codecs-0.90.1-r2.ebuild 978
-MD5 997e6066dcd0c6e71570887f5e05e9b2 win32codecs-20031001.ebuild 772
-MD5 7b9f9cadd429b777c70c29ca226714bc win32codecs-20040427.ebuild 772
-MD5 a2510c34d332e34d0c81b54d19e9edc4 win32codecs-20040703.ebuild 906
-MD5 c279b9bac9e2897c1774097d40aa9a57 win32codecs-20040916-r1.ebuild 841
-MD5 5941783a12204e522d8c183f53e3a605 win32codecs-20040916.ebuild 810
-MD5 76732e9260e5e2a7926ee46be894aa79 files/digest-win32codecs-0.90.1-r1 140
-MD5 a0766a5ca0b5ed037030e556bb0d6ff8 files/digest-win32codecs-0.90.1-r2 317
+MD5 d4ffe596b3c450cc74ca5790d6834030 win32codecs-0.90.1-r1.ebuild 732
+MD5 03a0d60b85a63f2d544706e5e008cb05 files/digest-win32codecs-20040916-r1 67
 MD5 43e971c7fc7e042e7d63ee36e2cd9f95 files/digest-win32codecs-20031001 290
 MD5 b8565217a038af6767ddb9112d59ab82 files/digest-win32codecs-20040427 290
 MD5 e8eb2fc9b4fc39755fe39f1f8e8771d9 files/digest-win32codecs-20040703 291
 MD5 03a0d60b85a63f2d544706e5e008cb05 files/digest-win32codecs-20040916 67
-MD5 03a0d60b85a63f2d544706e5e008cb05 files/digest-win32codecs-20040916-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxG2kFdQwWVoAgN4RAnRvAJ9g8Nuo/S2emxNnw26k0V/kRpusPQCfe3+F
-4ju4ndVLgDjMW3PAEh0VH/I=
-=Qst6
------END PGP SIGNATURE-----
+MD5 76732e9260e5e2a7926ee46be894aa79 files/digest-win32codecs-0.90.1-r1 140
+MD5 a0766a5ca0b5ed037030e556bb0d6ff8 files/digest-win32codecs-0.90.1-r2 317
