@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.5 2001/05/29 17:28:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.6 2001/06/24 20:13:37 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -27,7 +27,7 @@ src_compile() {
     myconf="--enable-nls"
   fi
   try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/lprng \
-	$myconf
+	--mandir=/usr/share/man --libexecdir=/usr/lib $myconf
 
   try make
 }

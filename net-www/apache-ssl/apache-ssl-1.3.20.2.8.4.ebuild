@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.20.2.8.4.ebuild,v 1.4 2001/06/17 12:51:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.20.2.8.4.ebuild,v 1.5 2001/06/24 20:13:37 achim Exp $
 
 AV="1.3.20"
 MSV="2.8.4"
@@ -51,6 +51,7 @@ src_install() {
     sed -e "s:^PIDFILE.*:PIDFILE=/var/run/httpd.pid:" \
 	apachectl.orig > apachectl
     rm apachectl.orig
+    cd ${S}
     dodoc ABOUT_APACHE Announcement INSTALL* KEYS LICENSE* README* WARNING*
     docinto mod_ssl
     cd ../mod_ssl-${MSV}-${AV}

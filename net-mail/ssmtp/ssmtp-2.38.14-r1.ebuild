@@ -7,10 +7,10 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/system/mail/mta/${A}"
 
-DEPEND="virtual/glibc
-        >=net-mail/mailbase-0.00"
+DEPEND="virtual/glibc"
 
-RDEPEND="!virtual/mta"
+
+RDEPEND="!virtual/mtai net-mail/mailbase"
 
 PROVIDE="virtual/mta"
 

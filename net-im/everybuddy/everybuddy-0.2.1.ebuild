@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens  <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.2.1.ebuild,v 1.2 2001/05/25 15:42:29 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.2.1.ebuild,v 1.3 2001/06/24 20:13:37 achim Exp $
 
 A=everybuddy-0.2.1beta3.tar.gz
 S=${WORKDIR}/everybuddy-0.2.1beta3
@@ -19,7 +19,7 @@ src_compile() {
         myconf="--disable-arts"
     fi
 
-    try ./configure --prefix=/usr --host=${CHOST} ${myconf}
+    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf}
     try make
 
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-winbind/samba-winbind-20010329.ebuild,v 1.3 2001/05/28 14:32:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-winbind/samba-winbind-20010329.ebuild,v 1.4 2001/06/24 20:13:37 achim Exp $
 
 A=samba-tng-cvs-${PV}.tbz2
 S=${WORKDIR}/tng
@@ -23,7 +23,9 @@ src_compile() {
   local myconf
   if [ "`use pam`" ]
   then
-    myconf="--with-pam"
+    myconf="--without-pam"
+    echo "disabled cuz broken"
+#    myconf="--with-pam"
   else
     myconf="--without-pam"
   fi

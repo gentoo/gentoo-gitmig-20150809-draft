@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.8.18.ebuild,v 1.3 2001/06/17 17:55:26 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.8.18.ebuild,v 1.4 2001/06/24 20:13:37 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -33,14 +33,14 @@ src_compile() {
   fi
 
   LDFLAGS="-L/usr/lib -lz" try ./configure --host=${CHOST} --prefix=/usr --with-plugindir=/usr/lib/ethereal/plugins/${PV} \
-	--sysconfdir=/etc/ethereal --enable-pcap --enable-zlib --enable-ipv6 $myconf
+	--mandir=/usr/share/man --sysconfdir=/etc/ethereal --enable-pcap --enable-zlib --enable-ipv6 $myconf
   try make
 }
 
 src_install() {
 
   dodir /usr/lib/ethereal/plugins/${PV}
-  try make prefix=${D}/usr sysconfdir=${D}/etc/ethereal \
+  try make prefix=${D}/usr sysconfdir=${D}/etc/ethereal mandir=${D}/usr/share/man \
 	plugindir=${D}/usr/lib/ethereal/plugins/${PV} install
   dodoc AUTHORS COPYING ChangeLog INSTALL.* NEWS README* TODO
 
