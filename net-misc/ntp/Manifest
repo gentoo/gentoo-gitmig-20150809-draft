@@ -17,5 +17,5 @@ MD5 bd0986fe3cdb7fcec6553ba8c6e4c8d1 files/ntp-client-4.1.2.rc 847
 MD5 ed4bd2ca8fb07ecb5c5e73d26fd0df0a files/digest-ntp-4.2.0-r2 62
 MD5 577a317e53c03f0ad5b445f2be6e063d ChangeLog 6364
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
-MD5 d419048e8e65cd8cbefd1d85f8e97e9a ntp-4.1.2.ebuild 3347
-MD5 03e32c59cfef042f16d42c829b3ad80c ntp-4.2.0-r2.ebuild 3785
+MD5 530c13dcc779751c55c4dc70e5338e66 ntp-4.1.2.ebuild 3360
+MD5 e3e9e1009d93a031ccf8f9cacf99659f ntp-4.2.0-r2.ebuild 3798

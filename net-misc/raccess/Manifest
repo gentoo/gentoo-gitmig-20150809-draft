@@ -1,3 +1,5 @@
-MD5 bcee36e00f0612ab68c6588d0e70bf64 ChangeLog 853
-MD5 4ee6149e5e747dad3cd922bfe1e14053 raccess-0.6.ebuild 1186
 MD5 6f29cd79f699f5fe7678b0f86f20124d files/digest-raccess-0.6 63
+MD5 a18e5873428ae9421937358592a66ad9 files/digest-raccess-0.7 63
+MD5 cce1d32531a1c03d945d483e895a3578 ChangeLog 914
+MD5 4ee6149e5e747dad3cd922bfe1e14053 raccess-0.6.ebuild 1186
+MD5 004fea110a5c01fa5d37bbdaf149305e raccess-0.7.ebuild 817
