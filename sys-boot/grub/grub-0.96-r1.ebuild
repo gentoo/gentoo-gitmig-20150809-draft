@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.5 2005/03/15 23:39:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.6 2005/04/05 23:50:45 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~x86"
 IUSE="static netboot"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5"
@@ -49,7 +49,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-bounced-checks.patch
 
 	# i2o RAID support #76143
-	epatch "${FILESDIR}"/${P}-i2o-raid.patch
+	# seems to break booting with dm root though ...
+#	epatch "${FILESDIR}"/${P}-i2o-raid.patch
 
 	# -fwritable-strings is deprecated; testing to see if we need it any more
 	epatch "${FILESDIR}"/${PN}-0.95.20040823-warnings.patch
