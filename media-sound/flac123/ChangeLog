@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flac123
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.1 2004/10/15 09:59:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.2 2004/11/03 16:48:07 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> flac123-0.0.7.ebuild:
+  Added ~ppc64 keyword, bug #69716
 
 *flac123-0.0.7 (15 Oct 2004)
 

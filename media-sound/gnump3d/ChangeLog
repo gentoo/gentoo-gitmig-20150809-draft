@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.24 2004/10/07 03:27:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.25 2004/11/03 16:50:06 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> gnump3d-2.8.ebuild:
+  Marked ~ppc64, bug #69716
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> gnump3d-2.8.ebuild:
   get_libdir fixes.
