@@ -1,15 +1,18 @@
---- acroread.old	2003-02-16 04:12:58.000000000 -0800
-+++ acroread	2003-02-16 04:13:53.000000000 -0800
-@@ -289,6 +289,12 @@
-     ;;
- esac
- 
-+# Set the locale to something generic because it won't 
-+# run under a UTF-8 locale and doesn't support localization
-+# anyway.
-+
-+export LANG=POSIX
-+
- #
- # Set the command.  Process any debug flags and exec.
- #
+*** acroread.org	2003-10-28 08:37:42.000000000 +0100
+--- acroread		2003-10-28 08:59:30.000000000 +0100
+***************
+*** 259,264 ****
+--- 259,271 ----
+    intellinux)
+      LD_LIBRARY_PATH="`prepend "$ACRO_INSTALL_DIR/$ACRO_CONFIG/lib:$ACRO_INSTALL_DIR/$ACRO_CONFIG/lib" "$LD_LIBRARY_PATH"`"
+      export LD_LIBRARY_PATH
++     unset LC_ALL
++     LANG="en_US"
++     export LANG
++     LC_CTYPE=POSIX
++     export LC_CTYPE
++     LC_NUMERIC=POSIX
++     export LC_NUMERIC
+      ;;
+  esac
+  
