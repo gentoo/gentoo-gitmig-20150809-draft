@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.9 2004/06/24 22:41:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.10 2004/06/29 11:31:16 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kmymoney2-0.5.1.ebuild,
+  kmymoney2-0.6.ebuild, kmymoney2-0.6_rc3.ebuild, kmymoney2-0.6_rc4.ebuild:
+  QA: kde-base -> kde, need-kde
 
 *kmymoney2-0.6 (18 Jun 2004)
 
