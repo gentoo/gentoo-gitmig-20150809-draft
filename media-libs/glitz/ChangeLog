@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/glitz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.7 2005/02/06 17:48:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.8 2005/02/23 18:32:01 latexer Exp $
+
+*glitz-0.3.0.20050115 (23 Feb 2005)
+
+  23 Feb 2005; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  +glitz-0.3.0.20050115.ebuild:
+  Add a version of 0.3.0 taken from a CVS snapshot. Works with the latest
+  cairo-0.3.0 release (unlike glitz-0.4.0). See bug #79640. Add myself as a
+  maintainer.
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> glitz-0.2.3.ebuild:
   Added ~ppc64 to KEYWORDS
