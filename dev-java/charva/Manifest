@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db9558bb8518f8a3f592e3cbb2d7362e charva-1.0.1.ebuild 837
-MD5 17c888d0b3fdb1865d1abf0e8ee968a2 ChangeLog 815
+MD5 860ad144aabf87e215ed3351adf5c73f ChangeLog 911
+MD5 9e42f8f7829f5bb3f393b9b436cb57fa charva-1.0.1.ebuild 848
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 f988e67d5658c83030cd5d7ed836b805 files/digest-charva-1.0.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVQw/rLF9B432nYRAlyKAJ48heyjvS3Aeq50K8drzJ1dA+i3fwCgt4RG
-cKu3TbgtoLsAVJzGYw59Qa0=
-=LrIp
------END PGP SIGNATURE-----
