@@ -1,18 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.0.1.ebuild,v 1.1 2005/01/09 06:41:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.0.1.ebuild,v 1.2 2005/01/10 00:00:08 vapier Exp $
 
 inherit toolchain-funcs
 
 NLVER=0.4.3
-DESCRIPTION="bmon is an interface bandwidth monitor."
+DESCRIPTION="interface bandwidth monitor"
 HOMEPAGE="http://people.suug.ch/~tgr/bmon/"
 SRC_URI="http://people.suug.ch/~tgr/bmon/files/${P}.tar.gz
 	http://people.suug.ch/~tgr/libnl/files/libnl-${NLVER}.tar.gz"
+
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
+
 DEPEND=">=sys-libs/ncurses-5.3-r2"
 
 src_unpack() {
@@ -34,9 +36,9 @@ src_compile() {
 
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc ChangeLog
 
 	cd ${WORKDIR}/libnl-${NLVER}
-	emake DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 }
