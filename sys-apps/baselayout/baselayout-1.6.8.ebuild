@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.8.ebuild,v 1.4 2001/12/23 15:33:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.8.ebuild,v 1.5 2001/12/23 22:56:08 azarah Exp $
 
 SV=1.2.3
 #sysvinit version
@@ -23,6 +23,15 @@ src_unpack() {
 	cd ${S2}
 	cp Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS}:" Makefile.orig >Makefile || die
+	if [ -n "`use build`" ]
+	then
+		#do not build sulogin, as it needs libcrypt which is not in the
+		#build image.
+		cp Makefile Makefile.orig
+		sed -e 's:PROGS\t= init halt shutdown killall5 runlevel sulogin:PROGS\t= init halt shutdown killall5 runlevel:g' \
+			Makefile.orig >Makefile || die
+	fi
+	
 }
 
 src_compile() {
@@ -122,12 +131,6 @@ src_install()
 	keepdir /usr/X11R6/lib /usr/X11R6/man
 	keepdir /var/log/news
 
-	#sysvinit docs
-	cd ${S2}/../
-	doman man/*.[1-9]
-	docinto sysvinit-${SVIV}
-	dodoc COPYRIGHT README doc/*
-		
 	#supervise stuff depreciated
 	#dodir /var/lib/supervise
 	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
@@ -222,6 +225,12 @@ src_install()
 		dobin last mesg utmpdump wall
 		dosym killall5 /sbin/pidof
 		dosym halt /sbin/reboot
+
+		#sysvinit docs
+		cd ${S2}/../
+		doman man/*.[1-9]
+		docinto sysvinit-${SVIV}
+		dodoc COPYRIGHT README doc/*
 	fi
 
 	#env-update stuff
