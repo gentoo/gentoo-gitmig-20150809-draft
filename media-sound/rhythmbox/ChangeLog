@@ -1,8 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.17 2003/09/21 16:53:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.18 2003/10/13 16:32:58 foser Exp $
 
 *rhythmbox-0.5.3 (09 Sep 2003)
+
+  13 Oct 2003; foser <foser@gentoo.org> rhythmbox-0.5.3.ebuild :
+  add scrollkeeper dep (#30911)
+
+  06 Oct 2003; foser <foser@gentoo.org> rhythmbox-0.5.3.ebuild :
+  Added local USE flag for flac support
 
   21 Sep 2003; foser <foser@gentoo.org> rhythmbox-0.5.3.ebuild :
   Added ORBit2 fix as suggested by TGL <degrenier@easyconnect.fr> in (#28739)
