@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.8-r1.ebuild,v 1.1 2004/08/05 20:04:53 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.8-r1.ebuild,v 1.2 2005/01/14 08:35:32 dragonheart Exp $
 
 inherit eutils
 
@@ -18,7 +18,11 @@ src_compile () {
 	emake
 }
 
+src_test() {
+	einfo "self test failes with permission problems"
+}
+
 src_install () {
-	einstall || die
-	dodoc ChangeLog VERSION README
+	emake DESTDIR=${D} install || die
+	dodoc README
 }
