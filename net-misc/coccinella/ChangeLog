@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/coccinella
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/ChangeLog,v 1.8 2003/02/12 08:20:40 vapier Exp $
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/ChangeLog,v 1.9 2003/03/03 21:06:27 bass Exp $
+
+*coccinella-0.94.3 (03 Mar 2003)
+ 03 Mar 2003; J. Alberto Suarez L. <bass@gentoo.org> coccinella-0.94.3.ebuild:
+ New dev version.
+
+ 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *coccinella-0.94.2 (11 Dec 2002)
 
