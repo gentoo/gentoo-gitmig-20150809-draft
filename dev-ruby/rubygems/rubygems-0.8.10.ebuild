@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.4.ebuild,v 1.1 2005/01/27 19:23:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.10.ebuild,v 1.1 2005/03/28 13:37:17 caleb Exp $
 
 inherit ruby
 
@@ -10,9 +10,9 @@ LICENSE="Ruby"
 
 # The URL depends implicitly on the version, unfortunately. Even if you
 # change the filename on the end, it still downloads the same file.
-SRC_URI="http://rubyforge.org/frs/download.php/2412/${P}.tgz"
+SRC_URI="http://rubyforge.org/frs/download.php/3700/${P}.tgz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64 ~ppc"
 SLOT="0"
 IUSE=""
 
@@ -26,4 +26,5 @@ src_compile() {
 src_install() {
 	ver=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["MAJOR"] + "." + Config::CONFIG["MINOR"]')
 	GEM_HOME=${D}/usr/lib/ruby/gems/$ver ruby_src_install
+	keepdir /usr/lib/ruby/gems/$ver/doc
 }
