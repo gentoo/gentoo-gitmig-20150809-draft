@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/kwebget
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.1 2004/10/18 21:28:37 motaboy Exp $
+
+*kwebget-0.8.1 (18 Oct 2004)
+
+  18 Oct 2004; <motaboy@gentoo.org> +files/kwebget-0.8.1-configure.patch,
+  +kwebget-0.8.1.ebuild:
+  New ebuild. Thanks to Cyrille Berger, see bug #67750
+
