@@ -1,0 +1,4 @@
+#!/bin/sh
+# 7z wrapper
+
+/usr/lib/7z/7z $@
