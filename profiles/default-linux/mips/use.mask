@@ -1,4 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.25 2005/03/15 00:57:56 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.26 2005/03/18 01:40:48 fafhrd Exp $
+
+# Armando Di Cianno <fafhrd@gentoo.org>
+# gnustep is currently unbuildable on mips - masking this to repair windowmaker
+#   broken mips keywording becuase of 'gnustep' USE flag
+gnustep
 
 # Hardave Riar <hardave@gentoo.org>
 # This should work, someone with a usb card and digital camera should test it
