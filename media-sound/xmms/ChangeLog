@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.95 2004/02/03 09:48:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.96 2004/02/04 05:11:41 eradicator Exp $
+
+  03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.7-r23.ebuild, xmms-1.2.7-r25.ebuild, xmms-1.2.8-r3.ebuild,
+  xmms-1.2.8-r4.ebuild, xmms-1.2.9-r1.ebuild:
+  Moved intltool out of RDEPEND (into DEPEND). Updated 1.2.9-r1 to run aclocal
+  before automake to close bug #40341.
 
   03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.7-r23.ebuild, xmms-1.2.7-r25.ebuild, xmms-1.2.8-r3.ebuild,
