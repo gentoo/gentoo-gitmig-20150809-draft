@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/pgpdump-0.19.ebuild,v 1.2 2003/08/05 18:10:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/pgpdump-0.19.ebuild,v 1.3 2003/10/27 11:05:36 aliz Exp $
 
 DESCRIPTION="A PGP packet visualizer"
 HOMEPAGE="http://pgp.iijlab.net/pgpdump.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://pgp.iijlab.net/pub/pgp/tools/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 

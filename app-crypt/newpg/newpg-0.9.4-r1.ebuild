@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/newpg-0.9.4-r1.ebuild,v 1.2 2003/07/22 14:32:19 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/newpg-0.9.4-r1.ebuild,v 1.3 2003/10/27 11:05:36 aliz Exp $
 
 DESCRIPTION="NewPG is the S/MIME variant of GnuPG which does also include the gpg-agent, useful even for GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/aegypten/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 DEPEND="dev-lang/perl
