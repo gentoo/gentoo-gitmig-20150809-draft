@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  18 Dec 2003; Guy Martin <gmsoft@gentoo.org> mc-4.6.0-r3.ebuild:
+  Marked stable on hppa.
+
   07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r3.ebuild,
   mc-4.6.0-r4.ebuild:
   added ~amd64
