@@ -40,6 +40,7 @@ app-editors/gtk-xemacs
 >=media-gfx/autotrace-0.26
 # Added by PM
 =net-ftp/pure-ftpd-0.98.7-r1
+=app-shells/zsh-4.0.2
 
 # untested
 >=x11-base/xfree-4.1.0-r1
