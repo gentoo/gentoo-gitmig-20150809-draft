@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/gdal
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.1 2005/02/21 00:09:45 nerdboy Exp $
+
+*gdal-1.2.5 (20 Feb 2005)
+
+  20 Feb 2005; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
+  +gdal-1.2.5.ebuild:
+  Adding new ebuild for geographic apps (still working on grass support).
+  Tested heavily on x86 only so far...
+
