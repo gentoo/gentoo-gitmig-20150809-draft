@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.46 2003/01/03 20:51:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.47 2003/01/05 10:38:24 mholzer Exp $
+
+*gentoolkit-0.1.17-r7 (04 Jan 2002)
+
+  04 Jan 2002; Martin Holzer <mholzer@gentoo.org gentoolkit-0.1.17-r7.ebuild files/digest-gentoolkit-0.1.17-r7 ChangeLog :
+  since epm is now it's own package i removed it. Closes #13220. 
 
 *gentoolkit-0.1.17-r6 (03 Jan 2002)
 
