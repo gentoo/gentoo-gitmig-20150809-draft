@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.3 2004/06/25 00:06:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.4 2004/07/09 09:49:11 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,8 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 ~alpha ~ia64"
+#-sparc: 0.98.1-r1: config/sysdeps/cycles.h:27:2: warning: #warning You are compiling JACK on a platform for which jack/cycles.h needs work
+KEYWORDS="x86 ~ppc amd64 ~alpha ~ia64 -sparc"
 IUSE="doc debug jack-tmpfs caps"
 
 DEPEND=">=media-libs/alsa-lib-0.9.1
