@@ -1,10 +1,6 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
-# This release should make it build on all arches. Masked for testing.
-# Olivier Reisch <doctomoe@gentoo.org> (2 June 2002)
-=sys-devel/gdb-5.1.1-r2
-
 # unreproducable weird problems that seem fixed with new ximian and
 # redhat patches -- blocke, 6/1/02
 <=x11-libs/gtk+-1.2.10-r7
