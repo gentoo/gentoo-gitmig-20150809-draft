@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8.1-r1.ebuild,v 1.3 2004/11/07 01:48:26 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8.1-r1.ebuild,v 1.4 2004/11/07 06:58:40 cyfred Exp $
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -29,7 +29,7 @@ pkg_setup() {
 
 		echo
 		ewarn "Due to inconsistencies in xorg-x11 vs xfree handling of glext.h a userspace"
-		ewarn "is necessary for you to use opengl-update-1.8; Please do the following"
+		ewarn "fix is necessary for you to use opengl-update-1.8.1; Please do the following"
 		echo
 		ewarn "mv /usr/X11R6/include/GL/glext.h /usr/lib/opengl/${GL_IM}/include"
 		echo
