@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.4 2002/04/13 10:53:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.5 2002/04/24 08:04:24 seemant Exp $
+
+*gconf-1.0.8-r3 (24 Apr 2002)
+
+  24 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gconf-1.0.8-r3.ebuild :
+
+  Updated DEPEND and RDEPEND info to be more accurate.
+  
 
   13 Apr 2002; M.Schlemmer <azarah@gentoo.org> : gconf-1.0.8-r2.ebuild
 
