@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.9 2004/08/25 21:38:46 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.10 2004/08/26 04:38:50 weeve Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
-KEYWORDS="~x86 ppc ~sparc ~mips ~alpha ~hppa amd64"
+KEYWORDS="~x86 ppc sparc ~mips ~alpha ~hppa amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="fam berkdb gdbm debug ipv6 ldap mysql nls pam postgres selinux"
