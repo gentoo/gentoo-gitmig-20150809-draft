@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r1.ebuild,v 1.8 2004/03/23 19:01:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r1.ebuild,v 1.9 2004/04/13 16:01:48 mholzer Exp $
 
 inherit webapp-apache
 
@@ -16,9 +16,9 @@ KEYWORDS="x86 ppc sparc alpha ~amd64"
 DEPEND="virtual/php
 	dev-perl/DB_File"
 
-webapp-detect || NO_WEBSERVER=1
 
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	if [ -L ${HTTPD_ROOT}/${PN} ] ; then
 		ewarn "You need to unmerge your old SquirrelMail version first."
