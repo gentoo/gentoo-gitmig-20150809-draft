@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.2 2004/07/06 12:55:58 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.3 2004/08/05 23:33:43 squinky86 Exp $
 
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ssl ncurses gtk debug"
 
 # libtool is needed because it provides libltdl (needed for plugins)
@@ -44,7 +44,7 @@ src_compile() {
 	econf \
 		`use_enable gtk gtk` \
 		`use_enable debug debug` \
-		`use_with ssl openssl` \
+		`use_with ssl openssl=/usr` \
 		`use_with ncurses ncurses` \
 		|| die "econf failed"
 
