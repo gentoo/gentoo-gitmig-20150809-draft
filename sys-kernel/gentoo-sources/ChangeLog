@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.95 2004/11/20 16:45:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.96 2004/11/27 20:57:39 plasmaroo Exp $
+
+*gentoo-sources-2.4.20-r29 (27 Nov 2004)
+
+  27 Nov 2004; <plasmaroo@gentoo.org> -gentoo-sources-2.4.20-r28.ebuild,
+  +gentoo-sources-2.4.20-r29.ebuild, -gentoo-sources-2.4.22-r19.ebuild,
+  +gentoo-sources-2.4.22-r20.ebuild, -gentoo-sources-2.4.25-r12.ebuild,
+  +gentoo-sources-2.4.25-r13.ebuild, -gentoo-sources-2.4.26-r12.ebuild,
+  +gentoo-sources-2.4.26-r13.ebuild, -gentoo-sources-2.4.27-r4.ebuild,
+  +gentoo-sources-2.4.27-r5.ebuild, -gentoo-sources-2.4.28-r1.ebuild,
+  +gentoo-sources-2.4.28-r2.ebuild, +files/gentoo-sources-2.4.AF_UNIX.patch,
+  +files/gentoo-sources-2.4.binfmt_a.out.patch:
+  Version bump for the AF_UNIX and a.out security vulnerabilities; bugs #72452
+  and #72317.
 
 *gentoo-sources-2.4.26-r12 (20 Nov 2004)
 
