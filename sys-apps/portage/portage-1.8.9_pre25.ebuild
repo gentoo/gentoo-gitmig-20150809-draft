@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre25.ebuild,v 1.2 2002/03/18 06:04:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre25.ebuild,v 1.3 2002/03/18 18:17:35 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -101,7 +101,7 @@ pkg_postinst() {
 	if [ ! -e ${ROOT}/etc/make.profile ]
 	then
 		cd ${ROOT}/etc
-		ln -s ../usr/portage/profiles/default-1.0 make.profile
+		ln -sf ../usr/portage/profiles/default-1.0 make.profile
 	fi
 	local x
 	#remove possible previous sandbox files that could cause conflicts
