@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.9 2004/07/15 02:39:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.10 2004/08/24 03:40:57 swegener Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ IPROUTE_SRCFILE="iproute2-2.4.7-now-ss${IPROUTE_PV/20}.tar.gz"
 # note this project does NOT use the SF mirroring system
 SRC_URI="http://tcng.sourceforge.net/dist/${P}.tar.gz
 	tcsim? ( ftp://ftp.inr.ac.ru/ip-routing/${IPROUTE_SRCFILE}
-	http://ftp.debian.org/debian/pool/main/i/iproute/${IPROUTE_DEBIAN_PATCH} )"
+	mirror://debian/pool/main/i/iproute/${IPROUTE_DEBIAN_PATCH} )"
 
 S=${WORKDIR}/tcng
 IPROUTE_S=${WORKDIR}/${IPROUTE_P}

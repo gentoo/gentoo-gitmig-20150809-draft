@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tcng
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.8 2004/06/24 22:29:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.9 2004/08/24 03:40:57 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> tcng-9h.ebuild,
+  tcng-9i.ebuild, tcng-9l.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   18 May 2004; Mamoru KOMACHI <usata@gentoo.org> tcng-9h.ebuild,
   tcng-9i.ebuild, tcng-9l.ebuild:

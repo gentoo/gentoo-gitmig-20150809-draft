@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.7 2004/07/15 02:39:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.8 2004/08/24 03:40:57 swegener Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ KERNEL_P=${KERNEL_PN}-${KERNEL_PV}
 # note this project does NOT use the SF mirroring system
 SRC_URI="http://tcng.sourceforge.net/dist/${P}.tar.gz
 	tcsim? ( ftp://ftp.inr.ac.ru/ip-routing/${IPROUTE_SRCFILE}
-	http://ftp.debian.org/debian/pool/main/i/iproute/${IPROUTE_DEBIAN_PATCH}
+	mirror://debian/pool/main/i/iproute/${IPROUTE_DEBIAN_PATCH}
 	mirror://kernel/linux/kernel/v2.4/${KERNEL_P}.tar.bz2 )"
 
 S=${WORKDIR}/tcng
