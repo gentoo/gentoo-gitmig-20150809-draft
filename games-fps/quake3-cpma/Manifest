@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f25ae754a8e7747d37312be9b1e02248 ChangeLog 1708
-MD5 9dde48cf5890450eee85578f25741f9e metadata.xml 2049
+MD5 d17cc93db6ad59ec9bfadf7777369eb2 ChangeLog 1854
 MD5 7e873acdf18764e5e4d07c0a80a6a5ef quake3-cpma-1.1.ebuild 414
+MD5 9dde48cf5890450eee85578f25741f9e metadata.xml 2049
+MD5 ac69f572005af1c13811dfb62c88e2f9 quake3-cpma-1.31.ebuild 419
 MD5 4b239c47858286677bce151797d55c07 quake3-cpma-1.2.ebuild 415
 MD5 b998fca9e20a6ad1d8fe576fdd787e5b files/digest-quake3-cpma-1.1 62
-MD5 4fc7549df88302e7c7914ef2346f7f7f files/digest-quake3-cpma-1.2 63
 MD5 7cbe6e9c20551b1f07c8b6de5b102200 files/server.cfg 2977
+MD5 4fc7549df88302e7c7914ef2346f7f7f files/digest-quake3-cpma-1.2 63
+MD5 ab43a23f5f0f1ee7eefad18467c2b2ab files/digest-quake3-cpma-1.31 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBW1XOI1lqEGTUzyQRAi01AKC57jM3A8Qt1sK/O1uDrnHB//SbvwCcCpVk
-arS6iDKC2f52iOJiT+/KZAk=
-=qmes
+iD8DBQFB0MqProRuSHgZdywRAobNAJ9d4hihl7BGN/kMVNxFWEsoAyLfaACeIR0y
+wAfGCciOEh9voOI0HQSl9FQ=
+=u0K6
 -----END PGP SIGNATURE-----
