@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.2.0.ebuild,v 1.3 2004/12/31 00:45:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.2.0.ebuild,v 1.4 2005/03/03 16:52:31 corsair Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linux-diag/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm ~hppa ~amd64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm ~hppa ~amd64 ~alpha ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-0.3.0.ebuild,v 1.5 2004/07/15 03:42:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-0.3.0.ebuild,v 1.6 2005/03/03 16:52:31 corsair Exp $
 
 inherit libtool
 
