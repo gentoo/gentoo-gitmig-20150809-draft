@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/musepack-tools
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.14 2004/12/23 00:49:19 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.15 2005/01/17 20:52:11 chainsaw Exp $
+
+*musepack-tools-1.15s-r2 (17 Jan 2005)
+
+  17 Jan 2005; Tony Vroon <chainsaw@gentoo.org>
+  -musepack-tools-1.15s-r1.ebuild, +musepack-tools-1.15s-r2.ebuild:
+  Portability fix, do not try to use x86 asm on amd64. Closes bug #78336,
+  patch by Tom Martin <slarti@gentoo.org>.
 
   22 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -musepack-tools-1.15r-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r1.ebuild,v 1.3 2004/12/19 06:11:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r2.ebuild,v 1.1 2005/01/17 20:52:11 chainsaw Exp $
 
 IUSE="static esd 16bit"
 
@@ -40,7 +40,7 @@ src_unpack() {
 		sed -i 's/LDADD   += -lesd/#LDADD   += -lesd/' Makefile
 	fi
 
-	if ! ( use x86 || use amd64 ); then
+	if ! use x86 ; then
 		sed -i 's/#define USE_ASM/#undef USE_ASM/' mpp.h
 	fi
 
