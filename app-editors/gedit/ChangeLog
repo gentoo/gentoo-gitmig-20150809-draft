@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.12 2002/07/25 12:17:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.13 2002/09/06 05:01:04 spider Exp $
+
+*gedit-2.0.5 (06 Sep 2002)
+  06 Sep 2002; Spider <spider@gentoo.org> gedit-2.0.5.ebuild :
+  new version added
+
 
 *gedit-2.0.2 (25 Jul 2002)
  25 Jul 2002; Spider <spider@gentoo.org> gedit-2.0.2.ebuild :
