@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.7.ebuild,v 1.1 2001/10/30 22:06:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.7.ebuild,v 1.2 2001/11/07 10:59:21 achim Exp $
 
 P=GConf-${PV}
 S=${WORKDIR}/${P}
@@ -17,6 +17,12 @@ RDEPEND=">=sys-libs/db-3.2.3h
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
         >=dev-util/guile-1.4"
+
+
+src_unpack() {
+	unpack ${A}
+	patch -p0 < ${FILESDIR}/gconf-${PV}-gentoo.diff
+}
 
 src_compile() {
 	local myconf
