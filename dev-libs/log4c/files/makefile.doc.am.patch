@@ -1,6 +1,6 @@
---- doc/Makefile.in.orig	2003-09-13 06:31:33.000000000 +0930
-+++ doc/Makefile.in	2004-08-12 16:53:59.487768752 +0930
-@@ -254,7 +254,7 @@
+--- doc/Makefile.am.orig	2004-08-12 17:37:15.800069288 +0930
++++ doc/Makefile.am	2004-08-12 17:37:33.802332528 +0930
+@@ -30,7 +30,7 @@
  		echo "$(INSTALL_DATA) $$i $(DESTDIR)$(docdir)"; \
  		$(INSTALL_DATA) $$i $(DESTDIR)$(docdir); \
  	done

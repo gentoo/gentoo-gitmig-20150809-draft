@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/log4c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.13 2004/08/11 13:50:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.14 2004/08/12 08:37:33 dragonheart Exp $
+
+  12 Aug 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/log4c_1.0.11_test.patch, +files/makefile.doc.am.patch,
+  files/makefile.doc.in.patch, log4c-1.0.11.ebuild:
+  fixed access violation. Fixed to compile with gcc 3.4 thanks to patch by Olaf
+  Freyer <aaron@cs.tu-berlin.de> in bug #60061
 
   11 Aug 2004; Daniel Black <dragonheart@gentoo.org>
   +files/makefile.doc.in.patch, log4c-1.0.11.ebuild:
