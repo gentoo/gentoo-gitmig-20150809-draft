@@ -1,7 +1,15 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.2 2003/09/28 16:26:59 wmertens Exp $
 
+*lufs-0.9.6 (28 Sep 2003)
+
+  28 Sep 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.6.ebuild :
+  Version bump. Also added the local USE flag lufsusermount to allow
+  users to mount. Flagged ~x86 for now, please test.
+  DEPEND isn't going to get better, since it's hard to get the
+  standard configure to not use gnome, for instance.
+  
 *lufs-0.8.0 (15 Sep 2003)
 
   15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> lufs-0.7.0.ebuild,
@@ -15,6 +23,7 @@
   build for 2.5. Fixes #18740, thanks to Jedi/Sector One.
 
 *lufs-0.9.5 (05 Apr 2003)
+
   05 Apr 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.5.ebuild :
   New upstream version, and it builds and works fine on all my test systems,
   and nothing depends on it. Only, if you do ldd /usr/bin/lufsd, you
