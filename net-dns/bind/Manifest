@@ -2,10 +2,10 @@ MD5 09267d9ec2ceb30651b04fcfc7c3376e ChangeLog 6576
 MD5 7c5d3f4bad0445e7676b3a204b8deed2 bind-9.2.2-r1.ebuild 4809
 MD5 5f05a1d8b40dbeeac1408f95bc9994d7 bind-9.2.2-r2.ebuild 4821
 MD5 dd6e3cefff04ee6141a57ec7b0ec04af bind-9.2.2_rc1-r2.ebuild 4485
-MD5 451001436c55689a8423ed11d222e1b4 bind-9.2.2-r3.ebuild 5582
 MD5 63bd6e87942a25d48bd5365edd8246c0 metadata.xml 268
 MD5 ad56cafeaee718f6521d925234bd2b90 bind-9.2.2.ebuild 4605
 MD5 ddb1aedf965feab182e0cd23a7a4058a bind-9.2.3.ebuild 5762
+MD5 033be8f0ed5c6e57d1611bee25cfd2e6 bind-9.2.2-r3.ebuild 5584
 MD5 42b5ed5adcee33cf40531d7955412b21 files/10bind.env 27
 MD5 51197afe8da37b1b453456de90ca4f25 files/127 227
 MD5 51197afe8da37b1b453456de90ca4f25 files/127.zone 227
