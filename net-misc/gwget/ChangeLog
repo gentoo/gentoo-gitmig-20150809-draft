@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwget
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.2 2004/09/05 08:12:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.3 2004/10/22 13:21:54 slarti Exp $
+
+  22 Oct 2004; Tom Martin <slarti@gentoo.org> gwget-0.14.ebuild:
+  Marked ~amd64.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
