@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2837 2004/05/01 05:46:09 solar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2838 2004/05/01 13:38:38 port001 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -294,10 +294,6 @@ media-libs/libgpio
 # sinchronously)
 app-sci/blas-reference
 app-sci/blas-atlas
-
-# <karltk@gentoo.org> (01 Feb 2004)
-# does not work, will not maintain atm.
-app-portage/porthole
 
 # <dragonheart@gentoo.org> (01 Feb 2004)
 # work in progress
