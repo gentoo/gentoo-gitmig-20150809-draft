@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.6.ebuild,v 1.4 2004/04/26 15:03:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.6.ebuild,v 1.5 2004/04/26 19:57:43 agriffis Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 		mv thememdk/mandrake_client/Makefile.in thememdk/mandrake_client/Makefile.in.orig
 		cat thememdk/mandrake_client/Makefile.in.orig | sed s:\$\{libdir\}\/kwin.la:/usr/kde/$KDE_PLACE_TO_INSTALL/lib/kwin.la:g > thememdk/mandrake_client/Makefile.in
 		rm thememdk/mandrake_client/Makefile.in.orig
-		econf --with-qt-dir=/usr/qt/3
+		econf --with-qt-dir=/usr/qt/3 || die "econf failed"
 	else
 		sed -si s/KDE_CHECK_FINAL// configure.in
 		sed -si s/AC_PATH_KDE// configure.in

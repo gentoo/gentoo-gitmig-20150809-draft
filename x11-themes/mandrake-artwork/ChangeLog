@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/mandrake-artwork
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.13 2004/04/26 15:03:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.14 2004/04/26 19:57:43 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  mandrake-artwork-0.9.3.ebuild, mandrake-artwork-0.9.6.ebuild,
+  mandrake-artwork-1.0.0.ebuild:
+  Add die following econf for bug 48950
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   mandrake-artwork-0.9.1-r1.ebuild, mandrake-artwork-0.9.1.ebuild,
