@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/files/usbd,v 1.4 2004/08/14 13:44:18 swegener Exp $
 
 depend() {
 	need localmount
