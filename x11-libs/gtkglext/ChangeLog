@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.13 2003/05/05 09:48:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.14 2003/05/15 18:10:10 liquidx Exp $
+
+*gtkglext-1.0.0 (15 May 2003)
+
+  15 May 2003; Alastair Tse <liquidx@gentoo.org> gtkglext-1.0.0.ebuild:
+  version bump
 
 *gtkglext-0.99.1 (05 May 2003)
 

@@ -1,5 +1,7 @@
 MD5 ebabea2760a2abfdf62faac8963e9ffe ChangeLog 1764
 MD5 989bf8fa8a4950601ca50f64a3457788 gtkglext-0.99.1.ebuild 1058
+MD5 989bf8fa8a4950601ca50f64a3457788 gtkglext-1.0.0.ebuild 1058
 MD5 b9e6e7ec073415a8298f17afdc6357c6 gtkglext-0.7.1.ebuild 1056
 MD5 580781bcd3524a86820dab8f44d0ca92 files/digest-gtkglext-0.7.1 67
+MD5 870512ee927600b7df3d49f91da4ac5b files/digest-gtkglext-1.0.0 67
 MD5 6904d5fb2d41526ce3fa7fd3b345fe3f files/digest-gtkglext-0.99.1 68
