@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.35 2004/07/30 12:49:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.36 2004/09/06 18:53:08 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  libwww-perl-5.69-r2.ebuild, libwww-perl-5.76.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *libwww-perl-5.800 (30 Jul 2004)
 

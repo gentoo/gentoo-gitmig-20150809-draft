@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.7 2004/06/25 00:42:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.8 2004/09/06 18:53:08 ciaranm Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="A collection of Perl Modules for the WWW"
 SRC_URI="http://cpan.org/modules/by-module/WWW/${P}.tar.gz"
@@ -38,7 +38,7 @@ pkg_postinst() {
 		eerror "have trouble using libwww-perl, please contact us at"
 		eerror "http://bugs.gentoo.org/"
 		echo ""
-		sleep 5
+		epause 5
 	fi
 	perl-module_pkg_postinst
 }
