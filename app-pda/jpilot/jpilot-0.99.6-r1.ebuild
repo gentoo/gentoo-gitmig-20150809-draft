@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.6-r1.ebuild,v 1.1 2003/11/22 16:38:45 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.6-r1.ebuild,v 1.2 2003/11/24 04:08:34 strider Exp $
 
 SYNCMAL="0.72.1"
 MALSYNC="2.2.0"
@@ -48,7 +48,7 @@ src_compile() {
 	emake || die "make failed"
 
 	# build malsync plugin
-	cd ${S}/jpilot-syncmal_${SYNCMAL}
+	cd ${S}/jpilot-syncmal-${SYNCMAL}
 	econf $(use_enable gtk2) \
 		${myconf} || die "configure failed"
 	emake || die "make failed"
@@ -64,13 +64,13 @@ src_install() {
 		desktopdir=${D}/usr/share/applications || die "install failed"
 
 	insinto /usr/lib/jpilot/plugins
-	doins jpilot-syncmal_${SYNCMAL}/.libs/libsyncmal.so
+	doins jpilot-syncmal-${SYNCMAL}/.libs/libsyncmal.so
 
 	dodoc README TODO UPGRADING ABOUT-NLS BUGS ChangeLog COPYING INSTALL
 	doman docs/*.1
 
-	newdoc jpilot-syncmal_${SYNCMAL}/ChangeLog ChangeLog.jpilot-syncmal
-	newdoc jpilot-syncmal_${SYNCMAL}/README README.jpilot-syncmal
-	dodoc jpilot-syncmal_${SYNCMAL}/malsync/Doc/README_AvantGo
-	dodoc jpilot-syncmal_${SYNCMAL}/malsync/Doc/README_malsync
+	newdoc jpilot-syncmal-${SYNCMAL}/ChangeLog ChangeLog.jpilot-syncmal
+	newdoc jpilot-syncmal-${SYNCMAL}/README README.jpilot-syncmal
+	dodoc jpilot-syncmal-${SYNCMAL}/malsync/Doc/README_AvantGo
+	dodoc jpilot-syncmal-${SYNCMAL}/malsync/Doc/README_malsync
 }
