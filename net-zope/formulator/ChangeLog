@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/formulator
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/formulator/ChangeLog,v 1.4 2003/06/21 04:06:31 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/formulator/ChangeLog,v 1.5 2003/06/26 15:47:06 kutsuya Exp $
+
+*formulator-1.4.2 (26 Jun 2003)
+
+  26 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> formulator-1.4.2.ebuild:
+  Version bump.
 
 *formulator-1.4.1 (20 Jun 2003)
 
