@@ -28,4 +28,5 @@ move app-i18n/uim-qtkde-helper app-i18n/uim-kdehelper
 move dev-python/skunkweb www-servers/skunkweb
 move sys-apps/nbench app-benchmarks/nbench
 move app-misc/obexftp net-wireless/obexftp
+move dev-util/jcvs-bin dev-util/jcvs
 move dev-php/groupoffice www-apps/groupoffice
