@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.9 2004/06/14 17:44:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.10 2004/06/17 11:47:32 fmccor Exp $
+
+  17 Jun 2004; Ferris McCormick <fmccor@gentoo.org> eurosym-1.2.ebuild:
+  Marked stable for sparc. It gives you the European currency symbol, as
+  advertised.
 
   14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> eurosym-1.2.ebuild:
   Unmasked on amd64.
