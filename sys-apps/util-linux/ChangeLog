@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.17 2002/12/09 23:00:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.18 2002/12/13 17:24:58 mholzer Exp $
 
   10 Dec 2002; Martin Schlemmer <azarah@gentoo.org> util-linux-2.11y.ebuild :
   Mark stable.
@@ -9,6 +9,9 @@
   Changed sparc ~sparc keywords
  
 *util-linux-2.11y (27 Oct 2002)
+
+  13 Dec 2002; Martin Holzer <mholzer@gentoo.org> util-linux-2.11y.ebuild files/digest-util-linux-2.11y Changelog :
+	Changed from tar.gz to tar.bz2
 
   29 Nov 2002; Nicholas Jones <carpaski@gentoo.org> :
 	Latest release. Patched 2.11r crypto patch for this version.
