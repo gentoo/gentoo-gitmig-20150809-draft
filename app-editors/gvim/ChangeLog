@@ -1,11 +1,14 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.9 2002/12/09 04:17:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.10 2002/12/12 00:41:08 rphillips Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *gvim-6.1-r4.ebuild (06 Dec 2002)
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r17.ebuild :
+  Moved gvimrc file to /etc/vim/vimrc
 
   06 Dec 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r4.ebuild :
   Added new patch set (1-263)

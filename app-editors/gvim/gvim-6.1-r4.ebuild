@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r4.ebuild,v 1.4 2002/12/09 22:03:36 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r4.ebuild,v 1.5 2002/12/12 00:41:08 rphillips Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
@@ -59,6 +59,13 @@ src_compile() {
 			--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
 			--with-features=huge --enable-cscope $myconf $guiconf \
 			--with-vim-name=gvim || die "gvim configure failed"
+
+		# move config files to /etc/vim/
+		echo "#define SYS_VIMRC_FILE \"/etc/vim/vimrc\"" \
+			>>${WORKDIR}/vim61/src/feature.h
+		echo "#define SYS_GVIMRC_FILE \"/etc/vim/gvimrc\"" \
+			>>${WORKDIR}/vim61/src/feature.h
+
 		# Parallel make does not work
 		make || die "gvim make failed"
 	fi
@@ -68,7 +75,7 @@ src_install() {
 	dobin src/gvim
 	ln -s gvim ${D}/usr/bin/gvimdiff
 	# Default gvimrc
-	insinto /usr/share/vim
+	insinto /etc/vim/
 	doins ${FILESDIR}/gvimrc
 }
 
