@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1.ebuild,v 1.3 2001/10/05 11:46:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1.ebuild,v 1.4 2002/02/03 21:46:26 danarmak Exp $
 
 S=${WORKDIR}/${P}-1
 
@@ -11,7 +11,7 @@ SRC_URI="http://prdownloads.sourceforge.net/apolloplayer/apollo-src-1.1.1-1.tar.
 
 HOMEPAGE="http://www.apolloplayer.org"
 
-DEPEND=">=x11-libs/qt-x11-2.3.0"
+DEPEND="=x11-libs/qt-x11-2.3*"
 
 RDEPEND=">=media-sound/mpg123-0.59r"
 
