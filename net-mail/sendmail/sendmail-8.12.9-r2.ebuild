@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r2.ebuild,v 1.4 2003/05/23 04:42:26 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r2.ebuild,v 1.5 2003/05/24 05:48:11 tberman Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
 
@@ -166,6 +166,8 @@ KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
 EOF
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/sendmail
+	mkdir -p ${D}/usr/adm/sm.bin/
+	touch ${D}/usr/adm/sm.bin/.keep
 }
 
 pkg_postinst() {
