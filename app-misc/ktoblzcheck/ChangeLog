@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.5 2004/06/07 23:40:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.6 2004/06/08 01:19:54 dragonheart Exp $
+
+  08 Jun 2004; Daniel Black <dragonheart@gentoo.org> ktoblzcheck-0.7.ebuild:
+  removed default src_compile. awaiting bug reports on parallel install
 
   08 Jun 2004; Daniel Black <dragonheart@gentoo.org> ktoblzcheck-0.7.ebuild:
   Fixed install to solve bug #53211. Added test routine too. Thanks carlo@g.o
