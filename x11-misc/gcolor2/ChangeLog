@@ -1,10 +1,11 @@
 # ChangeLog for x11-misc/gcolor2
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.5 2004/11/01 20:58:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.6 2004/12/16 10:08:05 corsair Exp $
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> gcolor2-0.3.ebuild:
+  Stable on ppc64
 
-  gcolor2-0.3.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>  gcolor2-0.3.ebuild:
   Marked ~ppc64; bug #67102
 
 *gcolor2-0.3 (28 Oct 2004)
