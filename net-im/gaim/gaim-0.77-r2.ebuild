@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77-r2.ebuild,v 1.1 2004/05/06 17:52:39 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77-r2.ebuild,v 1.2 2004/05/09 01:55:04 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -60,7 +60,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gaim-0.77-irc-reconnect.patch
 	epatch ${FILESDIR}/gaim-0.77-plugin-prefs.patch
 	epatch ${FILESDIR}/gaim-0.77-smileys_dialogs.patch
-	epatch ${FILESDIR}/gaim-0.77-ucs2-copypaste.patch
+	#epatch ${FILESDIR}/gaim-0.77-ucs2-copypaste.patch
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
 	cd ${S}/src/protocols/novell
 	epatch ${FILESDIR}/gaim-0.78cvs-novelltweaks5.patch
