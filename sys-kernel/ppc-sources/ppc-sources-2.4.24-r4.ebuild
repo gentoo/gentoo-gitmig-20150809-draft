@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24-r4.ebuild,v 1.1 2004/04/17 12:28:53 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24-r4.ebuild,v 1.2 2004/05/30 22:57:34 pvdabeel Exp $
 
 # Included patches:
 #  benh 2.4.24-0
@@ -35,7 +35,7 @@ DESCRIPTION="Full sources for the linux kernel 2.4.24 with benh's patchset"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/patch-${KV/r4/r2}.bz2"
 
-KEYWORDS="ppc -ppc64"
+KEYWORDS="-* ppc"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
 

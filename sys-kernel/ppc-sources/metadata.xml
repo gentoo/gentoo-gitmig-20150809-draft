@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>ppc</herd>
 	<longdescription>
-		The Gentoo-optimized kernel-sources for machines with a PowerPC CPU.
+		Vanilla 2.4 + benh 2.4 + pegasos
 	</longdescription>
 </pkgmetadata>
