@@ -1,0 +1,451 @@
+diff -ur pnm2ppa.orig/Makefile pnm2ppa/Makefile
+--- pnm2ppa.orig/Makefile	Thu Nov  2 20:33:08 2000
++++ pnm2ppa/Makefile	Mon Jul 23 20:16:02 2001
+@@ -2,15 +2,15 @@
+ # Makefile for pnm2ppa
+ #
+ 
+-INSTALLDIR=/usr/local/bin
+-CONFDIR=/etc
+-MANDIR=/usr/local/man/man1
++INSTALLDIR=${DESTDIR}/usr/bin
++CONFDIR=${DESTDIR}/etc
++MANDIR=${DESTDIR}/usr/man/man1
+ 
+ CC=gcc
+ INSTALL=install
+ 
+ # production build
+-CFLAGS=-Wall -pedantic -O2 -g -DNDEBUG 
++NEWCFLAGS=-Wall -pedantic -O2 -g -DNDEBUG ${CFLAGS}
+ LDFLAGS=-lm
+ OBJS = pnm2ppa.o syslog.o ppa.o image.o dither.o cutswath.o hash_ink.o gamma.o
+ SRC =  pnm2ppa.c syslog.c ppa.c image.c dither.c cutswath.c hash_ink.c gamma.c
+@@ -61,7 +61,7 @@
+ #
+ # Do not edit below this line! No user servicable parts below!
+ 
+-CFLAGS+=-DLANG_$(LANG)
++NEWCFLAGS+=-DLANG_$(LANG)
+ 
+ default: all
+ 
+@@ -108,55 +108,55 @@
+ 	rm -f $(CONFDIR)/pnm2ppa.conf
+ 
+ pnm2ppa: $(OBJS) 
+-	$(CC) $(LDFLAGS) $(CFLAGS) -o pnm2ppa $(OBJS)
++	$(CC) $(LDFLAGS) $(NEWCFLAGS) -o pnm2ppa $(OBJS)
+ 
+ calibrate_ppa: calibrate_ppa.o pnmtools.o gamma.o
+-	$(CC) $(LDFLAGS) $(CFLAGS) -o calibrate_ppa calibrate_ppa.o pnmtools.o gamma.o 
++	$(CC) $(LDFLAGS) $(NEWCFLAGS) -o calibrate_ppa calibrate_ppa.o pnmtools.o gamma.o 
+ 
+ calibrate_ppa.o: calibrate_ppa.c global.h image.h defaults.h pnmtools.h
+-	$(CC) $(CFLAGS) -c calibrate_ppa.c
++	$(CC) $(NEWCFLAGS) -c calibrate_ppa.c
+ 
+ pnmtools.o: pnmtools.c pnmtools.h
+-	$(CC) $(CFLAGS) -c pnmtools.c 
++	$(CC) $(NEWCFLAGS) -c pnmtools.c 
+ 
+ cutswath.o: cutswath.c debug.h ppa.h image.h global.h syslog.h
+-	$(CC) $(CFLAGS) -c cutswath.c
++	$(CC) $(NEWCFLAGS) -c cutswath.c
+ 
+ image.o: image.c image.h palette.h debug.h fscoeff.h global.h gamma.h syslog.h
+-	$(CC) $(CFLAGS) -c image.c
++	$(CC) $(NEWCFLAGS) -c image.c
+ 
+ gamma.o: gamma.c image.h global.h gamma.h
+-	$(CC) $(CFLAGS) -c gamma.c
++	$(CC) $(NEWCFLAGS) -c gamma.c
+ 
+ dither.o: dither.c dither.h image.h palette.h debug.h fscoeff.h global.h hash_ink.h
+-	$(CC) $(CFLAGS) -c dither.c
++	$(CC) $(NEWCFLAGS) -c dither.c
+ 
+ pnm2ppa.o: pnm2ppa.c pnm2ppa.h image.h ppa.h debug.h global.h gamma.h syslog.h
+-	$(CC) $(CFLAGS) -c pnm2ppa.c
++	$(CC) $(NEWCFLAGS) -c pnm2ppa.c
+ 
+ ppa.o: ppa.c ppa.h debug.h global.h syslog.h
+-	$(CC) $(CFLAGS) -c ppa.c
++	$(CC) $(NEWCFLAGS) -c ppa.c
+ 
+ debug.o: debug.c debug.h global.h
+-	$(CC) $(CFLAGS) -c debug.c
++	$(CC) $(NEWCFLAGS) -c debug.c
+ 
+ syslog.o: syslog.c syslog.h global.h
+-	$(CC) $(CFLAGS) -c syslog.c
++	$(CC) $(NEWCFLAGS) -c syslog.c
+ 
+ make_hash_ink: 	make_hash_ink.c palette.h hash_ink.h
+-	$(CC) $(CFLAGS) -o make_hash_ink make_hash_ink.c
++	$(CC) $(NEWCFLAGS) -o make_hash_ink make_hash_ink.c
+ 
+ hash_ink.c: make_hash_ink
+ 	./make_hash_ink 4 3 > hash_ink.c
+ 	./make_hash_ink 1 5 >> hash_ink.c
+ 
+ hash_ink.o: hash_ink.c hash_ink.c
+-	$(CC) $(CFLAGS) -c hash_ink.c
++	$(CC) $(NEWCFLAGS) -c hash_ink.c
+ 
+ # a default rule, in case new .c files pop in
+ 
+ .c.o: $*.c ppa.h image.h enh-curve.h palette.h debug.h global.h
+-	$(CC) $(CFLAGS) -c $*.c
++	$(CC) $(NEWCFLAGS) -c $*.c
+ 
+ distrib: clean
+ 	cd .. && tar cf - pnm2ppa/ | gzip -9 > pnm2ppa.tar.gz
+diff -ur pnm2ppa.orig/docs/en/INSTALL pnm2ppa/docs/en/INSTALL
+--- pnm2ppa.orig/docs/en/INSTALL	Wed Jul  4 20:13:12 2001
++++ pnm2ppa/docs/en/INSTALL	Mon Jul 23 20:33:21 2001
+@@ -39,8 +39,8 @@
+ 
+ make install
+ 
+-to install the binaries (by default, in /usr/local/bin/) , 
+-the manpage (in /usr/local/man/man1), and the sample
++to install the binaries (by default, in /usr/bin/) , 
++the manpage (in /usr/man/man1), and the sample
+ configuration file (/etc/pnm2ppa.conf).  You may change these locations
+ by editing the Makefile.
+ 
+@@ -70,7 +70,7 @@
+ not really needed.)
+ 
+ 
+-If this script is placed in /usr/local/bin/ppaprint ,
++If this script is placed in /usr/bin/ppaprint ,
+ 
+ ppaprint file.ps
+ 
+diff -ur pnm2ppa.orig/docs/en/INSTALL.SUSE pnm2ppa/docs/en/INSTALL.SUSE
+--- pnm2ppa.orig/docs/en/INSTALL.SUSE	Fri Oct 27 21:29:12 2000
++++ pnm2ppa/docs/en/INSTALL.SUSE	Mon Jul 23 20:33:10 2001
+@@ -5,8 +5,8 @@
+ 
+ 
+ Follow the standard installation instructions in INSTALL and CALIBRATION.  
+-The driver pnm2ppa is installed to /usr/local/bin. The manual page
+-pnm2ppa.1 is installed in /usr/local/man/man1. 
++The driver pnm2ppa is installed to /usr/bin. The manual page
++pnm2ppa.1 is installed in /usr/man/man1. 
+ 
+ 2. To integrate pnm2ppa into the BSD print spooler of the Linux system we 
+ create   printer spoolers in /etc/printcap, to print 
+diff -ur pnm2ppa.orig/lpd/README.lpd pnm2ppa/lpd/README.lpd
+--- pnm2ppa.orig/lpd/README.lpd	Sat Oct 28 16:58:07 2000
++++ pnm2ppa/lpd/README.lpd	Mon Jul 23 20:33:28 2001
+@@ -22,7 +22,7 @@
+ ./lpdsetup  a4
+ ./lpdsetup  a3
+ 
+-This installs the filters in /usr/local/bin and creates the corresponding 
++This installs the filters in /usr/bin and creates the corresponding 
+ spool directories /var/spool/lpd/color, etc, You must be root to do this.
+ 
+ You may wish to edit the options specified in the filter files 
+diff -ur pnm2ppa.orig/lpd/ascii.if pnm2ppa/lpd/ascii.if
+--- pnm2ppa.orig/lpd/ascii.if	Sat Oct 28 16:58:07 2000
++++ pnm2ppa/lpd/ascii.if	Mon Jul 23 20:33:35 2001
+@@ -1,7 +1,7 @@
+ #! /bin/sh
+ # for printing black and white text (ascii) files.
+-FILTER="/usr/local/bin/bw.if"
+-#FILTER="/usr/local/bin/bweco.if"
++FILTER="/usr/bin/bw.if"
++#FILTER="/usr/bin/bweco.if"
+ #------enscript command line--------------------------
+ enscript -2rj -p- | $FILTER
+ 
+diff -ur pnm2ppa.orig/lpd/bw.if pnm2ppa/lpd/bw.if
+--- pnm2ppa.orig/lpd/bw.if	Sat Oct 28 16:58:07 2000
++++ pnm2ppa/lpd/bw.if	Mon Jul 23 20:16:02 2001
+@@ -6,7 +6,7 @@
+ #PAPER=a4
+ #PAPER=a3
+ #PPAOPTS="-B 2"
+-PNM2PPA="/usr/local/bin/pnm2ppa"
++PNM2PPA="/usr/bin/pnm2ppa"
+ #------------------dont change below this line----------------------
+ gs -sDEVICE=pbmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
+ $PNM2PPA --bw $PPAOPTS -i - -o -
+diff -ur pnm2ppa.orig/lpd/bweco.if pnm2ppa/lpd/bweco.if
+--- pnm2ppa.orig/lpd/bweco.if	Sat Oct 28 16:58:07 2000
++++ pnm2ppa/lpd/bweco.if	Mon Jul 23 20:16:02 2001
+@@ -6,7 +6,7 @@
+ #PAPER=a4
+ #PAPER=a3
+ #PPAOPTS="-B 2"
+-PNM2PPA="/usr/local/bin/pnm2ppa"
++PNM2PPA="/usr/bin/pnm2ppa"
+ #------------------dont change below this line----------------------
+ gs -sDEVICE=pbmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
+ $PNM2PPA --bw --eco $PPAOPTS -i - -o -
+diff -ur pnm2ppa.orig/lpd/color.if pnm2ppa/lpd/color.if
+--- pnm2ppa.orig/lpd/color.if	Sat Oct 28 16:58:07 2000
++++ pnm2ppa/lpd/color.if	Mon Jul 23 20:16:02 2001
+@@ -6,7 +6,7 @@
+ #PAPER=a4
+ #PAPER=a3
+ #PPAOPTS="-p"
+-PNM2PPA="/usr/local/bin/pnm2ppa"
++PNM2PPA="/usr/bin/pnm2ppa"
+ #------------------dont change below this line----------------------
+ gs -sDEVICE=ppmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
+ $PNM2PPA $PPAOPTS -i - -o -
+diff -ur pnm2ppa.orig/lpd/coloreco.if pnm2ppa/lpd/coloreco.if
+--- pnm2ppa.orig/lpd/coloreco.if	Sat Oct 28 16:58:07 2000
++++ pnm2ppa/lpd/coloreco.if	Mon Jul 23 20:16:02 2001
+@@ -6,7 +6,7 @@
+ #PAPER=a4
+ #PAPER=a3
+ #PPAOPTS="--fd"
+-PNM2PPA="/usr/local/bin/pnm2ppa"
++PNM2PPA="/usr/bin/pnm2ppa"
+ #------------------dont change below this line----------------------
+ gs -sDEVICE=ppmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
+ $PNM2PPA --eco $PPAOPTS -i - -o -
+diff -ur pnm2ppa.orig/lpd/lpdsetup pnm2ppa/lpd/lpdsetup
+--- pnm2ppa.orig/lpd/lpdsetup	Fri Oct 27 21:29:12 2000
++++ pnm2ppa/lpd/lpdsetup	Mon Jul 23 20:16:02 2001
+@@ -1,5 +1,5 @@
+ #!/bin/sh 
+-INSTALLDIR="/usr/local/bin"
++INSTALLDIR="${DESTDIR}/usr/bin"
+ SPOOLDIR="/var/spool/lpd"
+ PAPER=letter
+ for paper in letter legal a3 a4 ; do
+diff -ur pnm2ppa.orig/lpd/printcap pnm2ppa/lpd/printcap
+--- pnm2ppa.orig/lpd/printcap	Fri Oct 27 20:12:23 2000
++++ pnm2ppa/lpd/printcap	Mon Jul 23 20:16:02 2001
+@@ -6,7 +6,7 @@
+         :sd=/var/spool/lpd/coloreco:\
+         :lf=/var/spool/lpd/coloreco/log:\
+         :af=/var/spool/lpd/coloreco/acct:\
+-        :if=/usr/local/bin/coloreco.if:\
++        :if=/usr/bin/coloreco.if:\
+         :la:mx#0:\
+         :sh:sf:
+ 
+@@ -16,7 +16,7 @@
+         :sd=/var/spool/lpd/color:\
+         :lf=/var/spool/lpd/color/log:\
+         :af=/var/spool/lpd/color/acct:\
+-        :if=/usr/local/bin/color.if:\
++        :if=/usr/bin/color.if:\
+         :la:mx#0:\
+         :sh:sf:
+ 
+@@ -26,7 +26,7 @@
+         :sd=/var/spool/lpd/bw:\
+         :lf=/var/spool/lpd/bw/log:\
+         :af=/var/spool/lpd/bw/acct:\
+-        :if=/usr/local/bin/bw.if:\
++        :if=/usr/bin/bw.if:\
+         :la:mx#0:\
+         :sh:sf:
+ 
+@@ -36,7 +36,7 @@
+         :sd=/var/spool/lpd/bweco:\
+         :lf=/var/spool/lpd/bweco/log:\
+         :af=/var/spool/lpd/bweco/acct:\
+-        :if=/usr/local/bin/bweco.if:\
++        :if=/usr/bin/bweco.if:\
+         :la:mx#0:\
+         :sh:sf:
+ 
+@@ -46,7 +46,7 @@
+         :sd=/var/spool/lpd/ascii:\
+         :lf=/var/spool/lpd/ascii/log:\
+         :af=/var/spool/lpd/ascii/acct:\
+-        :if=/usr/local/bin/ascii.if:\
++        :if=/usr/bin/ascii.if:\
+         :la:mx#0:\
+         :sh:sf:
+ 
+diff -ur pnm2ppa.orig/ppaSet-beta1/Makefile pnm2ppa/ppaSet-beta1/Makefile
+--- pnm2ppa.orig/ppaSet-beta1/Makefile	Wed Jul  4 20:13:12 2001
++++ pnm2ppa/ppaSet-beta1/Makefile	Mon Jul 23 20:16:02 2001
+@@ -3,16 +3,16 @@
+ ##################
+ 
+ # All files will be copied here
+-BASEDIR=/usr/local/ppaSet
++BASEDIR=/usr/share/pnm2ppa/ppaSet
+ # Simlink will be made here, so binaries are in the default PATH
+-BINDIR=/usr/local/bin
++BINDIR=/usr/bin
+ # Used in the code
+ LPR=/usr/bin/lpr
+ # Can be any other that acepts -e option
+ XTERM=/usr/bin/X11/xterm
+ # We need to know where pnm2ppa and calibrate_ppa are installed
+-PNM2PPA=/usr/local/bin/pnm2ppa
+-CALIBRATE_PPA=/usr/local/bin/calibrate_ppa
++PNM2PPA=/usr/bin/pnm2ppa
++CALIBRATE_PPA=/usr/bin/calibrate_ppa
+ 
+ ######### gPpaSet only ########
+ # A pager: more, less,... even lynx
+@@ -36,7 +36,7 @@
+ 
+ all: gPpaSet nPpaSet getHome
+ 
+-CC=gcc -g
++CC=gcc -g ${CFLAGS}
+ LD=gcc
+ #TEST=$(BASEDIR)/t.ps
+ TEST=$(BASEDIR)/test
+@@ -45,38 +45,38 @@
+ CLEAN=$(BASEDIR)/cleanHeads
+ 
+ LDFLAGS=
+-CFLAGS=-DBASEDIR=\"$(BASEDIR)\" -DLPR=\"$(LPR)\" -DTEST=\"$(TEST)\" -DCALIBRATION=\"$(CALIBRATION)\" -DGAMMAREF=\"$(GAMMAREF)\" -DCLEAN=\"$(CLEAN)\" -DXTERM=\"$(XTERM)\" -DPAGER=\"$(PAGER)\" -DDIALOGPROGRAM=\"$(DIALOGPROGRAM)\"
++NEWCFLAGS=-DBASEDIR=\"$(BASEDIR)\" -DLPR=\"$(LPR)\" -DTEST=\"$(TEST)\" -DCALIBRATION=\"$(CALIBRATION)\" -DGAMMAREF=\"$(GAMMAREF)\" -DCLEAN=\"$(CLEAN)\" -DXTERM=\"$(XTERM)\" -DPAGER=\"$(PAGER)\" -DDIALOGPROGRAM=\"$(DIALOGPROGRAM)\"
+ 
+ gPpaSet: gPpaSet.o getHome.o ppaSetBase.o
+ 	$(LD) $(LDFLAGS) -o gPpaSet gPpaSet.o ppaSetBase.o getHome.o `gtk-config --libs`
+ 
+ gPpaSet.o: gPpaSet.c getHome.h ppaSetBase.h
+-	$(CC) $(CFLAGS) -c -o gPpaSet.o gPpaSet.c `gtk-config --cflags`
++	$(CC) $(NEWCFLAGS) -c -o gPpaSet.o gPpaSet.c `gtk-config --cflags`
+ 
+ nPpaSet: nPpaSet.o getHome.o ppaSetBase.o
+-	CC="$(CC)" CFLAGS="$(CFLAGS) -DNPPASET" make -C dialog all
++	CC="$(CC)" CFLAGS="$(NEWCFLAGS) -DNPPASET" make -C dialog all
+ 	$(LD) -o nPpaSet nPpaSet.o ppaSetBase.o getHome.o $(DIALOG)/*.o $(LDFLAGS) -lpanel -lcurses -lm
+ 
+ nPpaSet.o: nPpaSet.c getHome.h ppaSetBase.h
+-	$(CC) $(CFLAGS) -c -o nPpaSet.o nPpaSet.c -DNPPASET
++	$(CC) $(NEWCFLAGS) -c -o nPpaSet.o nPpaSet.c -DNPPASET
+ 
+ ppaSetBase.o: ppaSetBase.c ppaSetBase.h getHome.h defaults.h
+-	$(CC) $(CFLAGS) -c -o ppaSetBase.o ppaSetBase.c
++	$(CC) $(NEWCFLAGS) -c -o ppaSetBase.o ppaSetBase.c
+ 
+ getHome: getHomeMain.c getHome.o
+ 	$(LD) $(LDFLAGS) -o getHome getHomeMain.c getHome.o
+ 
+ getHome.o: getHome.c
+-	$(CC) $(CFLAGS) -c -o getHome.o getHome.c
++	$(CC) $(NEWCFLAGS) -c -o getHome.o getHome.c
+ 
+ install: getHome gPpaSet nPpaSet ppa.if 
+-	./install $(BASEDIR) $(BINDIR) $(CALIBRATE_PPA) $(PNM2PPA)
++	./install ${DESTDIR}/$(BASEDIR) ${DESTDIR}/$(BINDIR) ${DESTDIR}/$(CALIBRATE_PPA) ${DESTDIR}/$(PNM2PPA)
+ 
+ install-g: getHome gPpaSet ppa.if 
+-	./install $(BASEDIR) $(BINDIR) $(CALIBRATE_PPA) $(PNM2PPA)
++	./install ${DESTDIR}/$(BASEDIR) ${DESTDIR}/$(BINDIR) ${DESTDIR}/$(CALIBRATE_PPA) ${DESTDIR}/$(PNM2PPA)
+ 
+ install-n: getHome nPpaSet ppa.if 
+-	./install $(BASEDIR) $(BINDIR) $(CALIBRATE_PPA) $(PNM2PPA)
++	./install ${DESTDIR}/$(BASEDIR) ${DESTDIR}/$(BINDIR) ${DESTDIR}/$(CALIBRATE_PPA) ${DESTDIR}/$(PNM2PPA)
+ 
+ clean:
+ 	rm -f *.o
+diff -ur pnm2ppa.orig/ppaSet-beta1/install pnm2ppa/ppaSet-beta1/install
+--- pnm2ppa.orig/ppaSet-beta1/install	Wed Jul  4 20:13:12 2001
++++ pnm2ppa/ppaSet-beta1/install	Mon Jul 23 20:32:57 2001
+@@ -3,7 +3,7 @@
+ if [ "$4" = "" ]
+ then
+ 	echo "usage: install <basedir> <bindir> <calibrate_ppa> <pnm2ppa>"
+-	echo "example: install /usr/local/ppaSet/ /usr/local/bin /usr/local/bin/calibrate_ppa /usr/local/bin/pnm2ppa"
++	echo "example: install /usr/ppaSet/ /usr/bin /usr/bin/calibrate_ppa /usr/bin/pnm2ppa"
+ 	exit 1
+ fi
+ 
+diff -ur pnm2ppa.orig/ppaSet-beta1/ppa.if pnm2ppa/ppaSet-beta1/ppa.if
+--- pnm2ppa.orig/ppaSet-beta1/ppa.if	Wed Jul  4 20:13:12 2001
++++ pnm2ppa/ppaSet-beta1/ppa.if	Mon Jul 23 20:32:29 2001
+@@ -1,5 +1,5 @@
+ #!/bin/sh
+-PATH=/usr/local/bin:/usr/local/sbin/:/usr/bin/:/usr/sbin:/bin:/sbin
++PATH=/usr/bin/:/usr/sbin:/bin:/sbin
+ 
+ # Is the next lines are not variable asignements, you haven't used the
+ # usual method for installing, as you must have done
+diff -ur pnm2ppa.orig/ppaSet-beta1/ppaSetBase.h pnm2ppa/ppaSet-beta1/ppaSetBase.h
+--- pnm2ppa.orig/ppaSet-beta1/ppaSetBase.h	Wed Jul  4 20:13:12 2001
++++ pnm2ppa/ppaSet-beta1/ppaSetBase.h	Mon Jul 23 20:32:08 2001
+@@ -3,22 +3,22 @@
+ 
+ // The default paths, if not given
+ #ifndef BASEDIR
+-#define BASEDIR "/usr/local/ppaSet"
++#define BASEDIR "/usr/ppaSet"
+ #endif
+ #ifndef TEST
+-#define TEST "/usr/local/ppaSet/test"
++#define TEST "/usr/ppaSet/test"
+ #endif
+ #ifndef CALIBRATION
+-#define CALIBRATION "/usr/local/ppaSet/calibration"
++#define CALIBRATION "/usr/ppaSet/calibration"
+ #endif
+ #ifndef GAMMAREF
+-#define GAMMAREF "/usr/local/ppaSet/gammaRef"
++#define GAMMAREF "/usr/ppaSet/gammaRef"
+ #endif
+ #ifndef NOGAMMA
+-#define NOGAMMA "/usr/local/ppaSet/noGamma"
++#define NOGAMMA "/usr/ppaSet/noGamma"
+ #endif
+ #ifndef CLEAN
+-#define CLEAN "/usr/local/ppaSet/cleanHeads"
++#define CLEAN "/usr/ppaSet/cleanHeads"
+ #endif
+ #ifndef LPR
+ #define LPR "/usr/bin/lpr"
+diff -ur pnm2ppa.orig/ppaSet-beta1/printcap.add pnm2ppa/ppaSet-beta1/printcap.add
+--- pnm2ppa.orig/ppaSet-beta1/printcap.add	Wed Jul  4 20:13:12 2001
++++ pnm2ppa/ppaSet-beta1/printcap.add	Mon Jul 23 20:31:38 2001
+@@ -5,5 +5,5 @@
+         :sd=/var/spool/lpd/ppa:\
+         :lf=/var/spool/lpd/ppa/log:\
+         :af=/var/spool/lpd/ppa/acct:\
+-        :if=/usr/local/bin/ppa.if:\
++        :if=/usr/bin/ppa.if:\
+         :la:mx#0:
+diff -ur pnm2ppa.orig/ppaSet-beta1/printcap.only pnm2ppa/ppaSet-beta1/printcap.only
+--- pnm2ppa.orig/ppaSet-beta1/printcap.only	Wed Jul  4 20:13:12 2001
++++ pnm2ppa/ppaSet-beta1/printcap.only	Mon Jul 23 20:32:37 2001
+@@ -5,5 +5,5 @@
+         :sd=/var/spool/lpd/ppa:\
+         :lf=/var/spool/lpd/ppa/log:\
+         :af=/var/spool/lpd/ppa/acct:\
+-        :if=/usr/local/bin/ppa.if:\
++        :if=/usr/bin/ppa.if:\
+         :la:mx#0:
+diff -ur pnm2ppa.orig/ppa_protocol/Makefile pnm2ppa/ppa_protocol/Makefile
+--- pnm2ppa.orig/ppa_protocol/Makefile	Sat Oct 21 04:17:46 2000
++++ pnm2ppa/ppa_protocol/Makefile	Mon Jul 23 20:16:02 2001
+@@ -4,7 +4,7 @@
+ 
+ CC=gcc
+ 
+-CFLAGS=-Wall -pedantic -O2 -g 
++NEWCFLAGS=-Wall -pedantic -O2 -g ${CFLAGS}
+ 
+ default: all
+ 
+@@ -14,10 +14,10 @@
+ 	rm -f *.o *~ parse_vlink 
+ 
+ parse_vlink: parse_vlink.o 
+-	$(CC) $(LDFLAGS) $(CFLAGS) -o parse_vlink parse_vlink.o
++	$(CC) $(LDFLAGS) $(NEWCFLAGS) -o parse_vlink parse_vlink.o
+ 
+ parse_vlink.o: parse_vlink.c 
+-	$(CC) $(CFLAGS) -c parse_vlink.c
++	$(CC) $(NEWCFLAGS) -c parse_vlink.c
+ 
+ 
+ 
