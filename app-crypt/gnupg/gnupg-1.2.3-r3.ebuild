@@ -1,30 +1,41 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.2 2003/10/31 22:03:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.3 2003/10/31 23:51:40 taviso Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~sparc ~hppa"
 IUSE="X ldap nls static caps"
 
+# gpgkeys_mailto requires perl and sendmail,
+# depend on virtual/mta (ssmtp does just fine).
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
 		caps? ( sys-libs/libcap )
 		sys-libs/zlib )
 	X? ( x11-misc/xloadimage )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	virtual/glibc
+	dev-lang/perl
+	virtual/mta"
 
+# libpcap earlier than 1.10-r3 did not provide
+# libcap.a, and therefore cannot be compiled
+# statically. >=sys-libs/libcap-1.10-r3 fixes.
 DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
 		!static? ( sys-libs/libcap ) )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	!static? ( sys-libs/zlib )
+	virtual/glibc
 	dev-lang/perl"
 
 src_compile() {
+	# support for external HKP keyservers requested in #16457.
+	# gpg faq entry 3.3 reccommends using --enable-static-rnd=linux 
+	# whenever possible.
 	local myconf="--enable-external-hkp --enable-static-rnd=linux --libexecdir=/usr/lib"
 
 	# disable native language support
@@ -48,7 +59,8 @@ src_compile() {
 	fi
 
 	# if we are compiling statically, we might as well use
-	# the included zlib library and remove a dep.
+	# the included zlib library and remove an rdep/dep.
+
 	# `USE=static` support was requested in #29299
 	if use static; then
 		myconf="${myconf} --with-included-zlib"
@@ -59,6 +71,7 @@ src_compile() {
 
 	# use the linux capability library to minimise security
 	# risks of running setuid root.
+	# see the capabilities(7) manpage.
 	if use caps; then
 		myconf="${myconf} --with-capabilities"
 	fi
@@ -69,13 +82,14 @@ src_compile() {
 		myconf="${myconf} --enable-m-guard"
 	fi
 
-	econf ${myconf}
-	emake
+	econf ${myconf} || die
+	emake || die
 }
 
 src_install() {
 	einstall libexecdir="${D}/usr/lib/gnupg"
 
+	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS \
@@ -86,23 +100,29 @@ src_install() {
 
 	dohtml doc/faq.html
 
+	# please see glsa 200307-06
 	chmod u+s "${D}/usr/bin/gpg"
 }
 
 pkg_postinst() {
 	einfo "gpg is installed suid root to make use of protected memory space"
 	einfo "This is needed in order to have a secure place to store your"
-	einfo "passphrases, etc. This may make some sysadmins nervous."
+	einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
 
 	if use caps; then
 		echo
-		einfo "gpg will use Linux capabilities to set the permitted"
-		einfo "operations, this will minimise the security risks"
-		einfo "associated with running setuid root."
-		echo
-		einfo "You can confirm the capabilities are being set correctly"
-		einfo "with the following command while gpg is running"
-		echo
+
+		# a quick blurb to explain the linux capabilities.
+		# $ /sbin/getpcaps `pidof gpg`
+		# Capabilities for `31677': = cap_ipc_lock+p
+		#
+		# useful reference in the comments from 
+		# /usr/include/linux/capability.h
+
+		einfo "gpg will use the linux capabilities system to minimise the"
+		einfo "security risks associated with running setuid root."
+		einfo "you can confirm the capabilities have been set with the"
+		einfo "getpcaps application."
 		einfo "	# getpcaps \`pidof gpg\`"
 	fi
 }
