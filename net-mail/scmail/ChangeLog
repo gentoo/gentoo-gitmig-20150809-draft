@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/scmail
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/scmail/ChangeLog,v 1.1 2004/02/02 11:43:30 hattya Exp $
+
+*scmail-0.2 (02 Feb 2004)
+
+  02 Feb 2004; Akinori Hattori <hattya@gentoo.org> scmail-0.2.ebuild,
+  files/scmail-0.2-gentoo.diff:
+  Initial import.
+
