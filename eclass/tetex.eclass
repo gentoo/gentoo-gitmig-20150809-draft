@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.26 2004/10/30 06:58:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.27 2004/11/03 05:29:44 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -29,7 +29,9 @@ HOMEPAGE="http://tug.org/teTeX/"
 SRC_PATH_TETEX=ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib
 SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF}
-	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}"
+	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}
+	mirror://gentoo/tetex-${TETEX_PV}-gentoo.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/tetex-${TETEX_PV}-gentoo.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -73,6 +75,7 @@ tetex_src_unpack() {
 	case $1 in
 		unpack)
 			unpack ${TETEX_SRC}
+			unpack tetex-${TETEX_PV}-gentoo.tar.gz
 
 			mkdir ${S}/texmf; cd ${S}/texmf
 			umask 022
@@ -82,9 +85,9 @@ tetex_src_unpack() {
 		patch)
 			# Do not run config. Also fix local texmf tree.
 			cd ${S}
-			epatch ${FILESDIR}/../../tetex/files/tetex-${TETEX_PV}-dont-run-config.diff
-			epatch ${FILESDIR}/../../tetex/files/tetex-${TETEX_PV}.diff
-			epatch ${FILESDIR}/../../tetex/files/tetex-texdoctk-gentoo.patch
+			for p in ${WORKDIR}/patches/* ; do
+				epatch $p
+			done
 
 			if useq ppc-macos ; then
 				sed -i -e "/^HOMETEXMF/s:\$HOME/texmf:\$HOME/Library/texmf:" ${S}/texk/kpathsea/texmf.in || die "sed texmf.in failed."
