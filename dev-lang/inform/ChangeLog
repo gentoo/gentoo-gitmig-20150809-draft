@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/inform
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.1 2003/03/02 06:43:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.2 2003/08/17 19:35:07 vapier Exp $
+
+*inform-6.21.4 (17 Aug 2003)
+
+  17 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + touch up symlinks for header files #26646.
 
 *inform-6.21.3 (02 Mar 2003)
 
