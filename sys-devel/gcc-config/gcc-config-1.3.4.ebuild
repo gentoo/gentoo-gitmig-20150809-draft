@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.4.ebuild,v 1.1 2003/11/18 19:39:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.4.ebuild,v 1.2 2003/12/17 05:04:23 brad_mssw Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ DESCRIPTION="Utility to change the gcc compiler being used."
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
 
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm ia64"
+KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm ia64 ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 
