@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.172 2004/07/23 15:56:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.173 2004/07/23 18:18:41 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mplayer-1.0_pre5-r1.ebuild:
+  Added kernel-2.6 fix on sparc (removes old workaround).
 
   23 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r6.ebuild,
   mplayer-1.0_pre5-r1.ebuild:

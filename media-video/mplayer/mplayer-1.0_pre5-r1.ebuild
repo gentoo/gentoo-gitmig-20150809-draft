@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.6 2004/07/23 15:56:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.7 2004/07/23 18:18:41 eradicator Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -140,6 +140,10 @@ src_unpack() {
 
 		mv ${WORKDIR}/svgalib_helper ${S}/libdha
 	fi
+
+	# Remove kernel-2.6 workaround as the problem it works around is
+	# fixed, and the workaround breaks sparc
+	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
 }
 
 src_compile() {
