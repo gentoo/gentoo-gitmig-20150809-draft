@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.3.ebuild,v 1.1 2003/07/20 21:00:58 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.3.ebuild,v 1.2 2003/07/31 02:11:12 caleb Exp $
 inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -30,6 +30,7 @@ newdepend "dev-lang/perl
 	app-text/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
+	!=x11-libs/qt-3.2.0
 	~kde-base/arts-1.1.3"
 
 newdepend "/autotools"
@@ -37,8 +38,7 @@ newdepend "/autotools"
 RDEPEND="$RDEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
-	dev-lang/python
-	>=sys-apps/portage-2.0.36" # for #7359
+	dev-lang/python"
 
 myconf="$myconf --with-distribution=Gentoo --enable-libfam --enable-dnotify"
 use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
