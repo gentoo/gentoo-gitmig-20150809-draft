@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.3.0.ebuild,v 1.2 2005/01/03 11:09:01 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.3.3.ebuild,v 1.1 2005/01/03 11:09:01 brix Exp $
 
 inherit toolchain-funcs
 
@@ -14,11 +14,12 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-#IUSE="gsm ssl"
-IUSE="ssl"
+IUSE="gsm readline ssl"
 
-RDEPEND="ssl? ( dev-libs/openssl )"
-#		gsm? ( sys-apps/pcsc-lite )
+DEPEND="gsm? ( sys-apps/pcsc-lite )
+		readline? ( sys-libs/ncurses
+					sys-libs/readline )
+		ssl? ( dev-libs/openssl )"
 
 src_unpack() {
 	local CONFIG=${S}/.config
@@ -28,12 +29,29 @@ src_unpack() {
 	# toolchain setup
 	echo "CC = $(tc-getCC)" > ${CONFIG}
 
+	# basic setup
+	echo "CONFIG_CTRL_IFACE=y"        >> ${CONFIG}
+	echo "CONFIG_XSUPPLICANT_IFACE=y" >> ${CONFIG}
+
 	# basic authentication methods
 	echo "CONFIG_EAP_GTC=y"         >> ${CONFIG}
 	echo "CONFIG_EAP_MD5=y"         >> ${CONFIG}
 	echo "CONFIG_EAP_OTP=y"         >> ${CONFIG}
 	echo "CONFIG_EAP_PSK=y"         >> ${CONFIG}
 	echo "CONFIG_IEEE8021X_EAPOL=y" >> ${CONFIG}
+	echo "CONFIG_PKCS12=y"          >> ${CONFIG}
+
+	if use gsm; then
+		# smart card authentication
+		echo "CONFIG_EAP_SIM=y" >> ${CONFIG}
+		echo "CONFIG_EAP_AKA=y" >> ${CONFIG}
+		echo "CONFIG_PCSC=y"    >> ${CONFIG}
+	fi
+
+	if use readline; then
+		# readline/history support for wpa_cli
+		echo "CONFIG_READLINE=y" >> ${CONFIG}
+	fi
 
 	if use ssl; then
 		# SSL authentication methods
@@ -43,17 +61,6 @@ src_unpack() {
 		echo "CONFIG_EAP_TLS=y"      >> ${CONFIG}
 		echo "CONFIG_EAP_TTLS=y"     >> ${CONFIG}
 	fi
-
-#	Note: PCSC support is disabled in 0.3.0 due to a bug in the code.
-#	This has been fixed in upstream CVS (brix)
-#
-#	if use gsm; then
-#		# Smart card authentication
-#		echo "CONFIG_EAP_SIM=y" >> ${CONFIG}
-#		echo "CONFIG_EAP_AKA=y" >> ${CONFIG}
-#		echo "CONFIG_PCSC=y"    >> ${CONFIG}
-#		echo "CFLAGS += -I/usr/include/PCSC" >> ${CONFIG}
-#	fi
 
 	# Linux specific drivers
 	echo "CONFIG_WIRELESS_EXTENSION=y" >> ${CONFIG}
