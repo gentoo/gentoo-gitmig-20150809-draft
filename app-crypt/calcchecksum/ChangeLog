@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/calcchecksum
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.4 2004/06/28 23:40:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.5 2004/09/11 15:41:19 aliz Exp $
+
+  11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> calcchecksum-1.6_pre1.ebuild:
+  Added amd64 keyword, closing #63001.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> calcchecksum-1.6_pre1.ebuild:
   QA: inherit kde-base -> inherit kde
