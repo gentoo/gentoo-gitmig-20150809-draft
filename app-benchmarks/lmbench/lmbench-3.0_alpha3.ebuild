@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.1 2004/02/08 01:34:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.2 2004/02/08 03:26:47 dragonheart Exp $
 
 MY_P=${P/_alpha/-a}
 
@@ -49,6 +49,12 @@ src_install() {
 
 	dodir /usr/share/lmbench
 	dodir /usr/share/lmbench/src
+	cp src/webpage-lm.tar ${D}/usr/share/lmbench/src
 	cp -R scripts ${D}/usr/share/lmbench
+
+	dodir /usr/share/lmbench/results
+	chmod 777 ${D}/usr/share/lmbench/results
+	dodir /usr/share/lmbench/bin
+	chmod 777 ${D}/usr/share/lmbench/bin
 
 }

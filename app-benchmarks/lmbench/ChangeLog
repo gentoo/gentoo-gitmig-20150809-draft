@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/lmbench
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.1 2004/02/08 01:34:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.2 2004/02/08 03:26:47 dragonheart Exp $
+
+  08 Feb 2004; Daniel Black <dragonheart@gentoo.org> lmbench-3.0_alpha3.ebuild:
+  Fixed for non-root users hopefully.
 
 *lmbench-3.0_alpha3 (08 Feb 2004)
 
