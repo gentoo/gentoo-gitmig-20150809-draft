@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.45.ebuild,v 1.1 2001/12/10 02:43:31 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.45-r1.ebuild,v 1.1 2001/12/10 02:57:23 hallski Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -49,12 +49,12 @@ pkg_postinst() {
         	"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
         	"http://docbook.sourceforge.net/release/xsl/1.45" \
-	        "/usr/share/xml/docbook/xsl-stylesheets-${PV}" $CATALOG
+	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteSystem" \
         	"http://docbook.sourceforge.net/release/xsl/current" \
-	        "/usr/share/xml/docbook/xsl-stylesheets-${PV}" $CATALOG
+	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
         	"http://docbook.sourceforge.net/release/xsl/current" \
-	        "/usr/share/xml/docbook/xsl-stylesheets-${PV}" $CATALOG
+	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 
 }
