@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.18 2005/02/14 17:17:39 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.19 2005/02/14 18:19:54 kugelfang Exp $
+
+  14 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> gecko-sharp-0.6.ebuild:
+  Reporter is wrong! Keyworded -amd64.
 
   14 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> gecko-sharp-0.6.ebuild:
   Marked ~amd64.
