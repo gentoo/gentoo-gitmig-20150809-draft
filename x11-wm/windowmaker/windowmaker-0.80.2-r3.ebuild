@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r3.ebuild,v 1.1 2003/07/11 02:37:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r3.ebuild,v 1.2 2003/07/20 00:10:22 raker Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-mfpmath=sse,387 -mfpmath=sse -mfpmath=387"
 
-IUSE="gif nls png kde oss jpeg gnome"
+IUSE="gif nls png kde oss jpeg gnome xinerama"
 
 MY_P=${P/windowm/WindowM}
 S=${WORKDIR}/${MY_P}
@@ -41,6 +41,9 @@ src_unpack() {
 	# transparency/translucency
 	cd ${S}
 	epatch ${FILESDIR}/trance.patch.WM-0.80.2.diff
+
+	# Add some BETTER xinerama support
+	use xinerama && epatch ${FILESDIR}/xinerama.patch
 }
 
 src_compile() {

@@ -1,0 +1,941 @@
+Only in .: Makefile
+Only in ./WINGs/Documentation: Makefile
+Only in ./WINGs/Examples: Makefile
+Only in ./WINGs/Extras: Makefile
+Only in ./WINGs: Makefile
+Only in ./WINGs/Resources: Makefile
+Only in ./WINGs/Tests: Makefile
+Only in ./WINGs/WINGs: Makefile
+Only in ./WINGs: get-wings-flags
+Only in ./WINGs: get-wutil-flags
+Only in ./WINGs/po: Makefile
+Only in ./WPrefs.app: Makefile
+Only in ./WPrefs.app/po: Makefile
+Only in ./WPrefs.app/po: Makefile.orig
+Only in ./WPrefs.app/tiff: Makefile
+Only in ./WPrefs.app/xpm: Makefile
+Only in ./WindowMaker/Backgrounds: Makefile
+Only in ./WindowMaker/Defaults: Makefile
+Only in ./WindowMaker/Defaults: WMRootMenu
+Only in ./WindowMaker/IconSets: Makefile
+Only in ./WindowMaker/Icons: Makefile
+Only in ./WindowMaker: Makefile
+Only in ./WindowMaker/Pixmaps: Makefile
+Only in ./WindowMaker/Styles: Makefile
+Only in ./WindowMaker/Themes: Makefile
+Only in .: config.log
+Only in .: config.status
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/configure ./configure
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/configure	Tue Jul  2 02:37:46 2002
++++ ./configure	Thu Oct 17 16:36:12 2002
+@@ -11747,7 +11747,7 @@
+ fi
+ 
+ 
+-xinerama=no
++xinerama=yes
+ #AC_ARG_ENABLE(xinerama,
+ #[  --disable-xinerama	  disable XInerama extension support],
+ #		xinerama=$enableval, xinerama=yes)
+Only in ./contrib: Makefile
+Only in ./contrib: WindowMaker.spec
+Only in ./doc: Makefile
+Only in ./doc/sk: Makefile
+Only in .: libtool
+Only in ./po: Makefile
+Only in ./po: Makefile.orig
+Only in ./src: .GNUstep.h.swp
+Only in ./src: .actions.c.swo
+Only in ./src: .actions.c.swp
+Only in ./src: .xinerama.c.swp
+Only in ./src: Makefile
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/actions.c ./src/actions.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/actions.c	Tue Jul  2 02:30:25 2002
++++ ./src/actions.c	Sun Oct 20 15:57:17 2002
+@@ -412,10 +412,9 @@
+     WArea usableArea = wwin->screen_ptr->totalUsableArea;
+     WArea totalArea;
+ 
+-
+     if (WFLAGP(wwin, no_resizable))
+ 	return;
+-    
++
+     totalArea.x1 = 0;
+     totalArea.y1 = 0;
+     totalArea.x2 = wwin->screen_ptr->scr_width;
+@@ -1502,10 +1501,22 @@
+     /*
+      * Find out screen boundaries.
+      */
++#ifdef XINERAMA
++    WMRect rect = wGetRectForHead(scr, wGetHeadForPointerLocation(scr));
++
++    sx1 = rect.pos.x;
++    sy1 = rect.pos.y;
++    sw = rect.size.width;
++    sh = rect.size.height;
++    sx2 = sx1 + sw;
++    sy2 = sy1 + sh;
++#else
+     sx1 = 0;
+     sy1 = 0;
+-    sx2 = scr->scr_width;
+-    sy2 = scr->scr_height;
++    sw = sx2 = scr->scr_width;
++    sh = sy2 = scr->scr_height;
++#endif
++
+     if (scr->dock) {
+ 	if (scr->dock->on_right_side)
+             sx2 -= isize + DOCK_EXTRA_SPACE;
+@@ -1513,8 +1524,8 @@
+ 	    sx1 += isize + DOCK_EXTRA_SPACE;
+     }
+ 
+-    sw = isize * (scr->scr_width/isize);
+-    sh = isize * (scr->scr_height/isize);
++    sw = isize * (sw/isize);
++    sh = isize * (sh/isize);
+     fullW = (sx2-sx1)/isize;
+     fullH = (sy2-sy1)/isize;
+ 
+Only in ./src: actions.c~
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/client.c ./src/client.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/client.c	Tue Jan  8 14:45:07 2002
++++ ./src/client.c	Sun Oct 20 15:31:54 2002
+@@ -46,6 +46,7 @@
+ #ifdef KWM_HINTS
+ #include "kwm.h"
+ #endif
++#include "xinerama.h"
+ 
+ /****** Global Variables ******/
+ 
+@@ -770,6 +771,18 @@
+ 	if (wwin->normal_hints->flags & (USPosition|PPosition)) {
+ 	    *x = wwin->normal_hints->x;
+ 	    *y = wwin->normal_hints->y;
++#ifdef XINERAMA
++	    {
++		WScreen *scr = wwin->screen_ptr;
++		if ( (unsigned)(*x - scr->scr_width/2 + 10) < 20 &&
++		     (unsigned)(*y - scr->scr_height/2 + 10) < 20) {
++		    int head = wGetHeadForPointerLocation(scr);
++		    WMRect rect = wGetRectForHead(scr, head);
++		    *x = rect.pos.x + (*x * rect.size.width)/scr->scr_width;
++		    *y = rect.pos.y + (*y * rect.size.height)/scr->scr_height;
++		}
++	    }
++#endif
+ 	}
+ 	if (wwin->normal_hints->flags & (USSize|PSize)) {
+ 	    *width = wwin->normal_hints->width;
+Only in ./src: client.c~
+Only in ./src: config.h
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/cycling.c ./src/cycling.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/cycling.c	Tue Jan  8 14:45:07 2002
++++ ./src/cycling.c	Sun Oct 20 15:17:56 2002
+@@ -37,6 +37,9 @@
+ #include "stacking.h"
+ #include "funcs.h"
+ 
++#include "xinerama.h"
++
++
+ /* Globals */
+ extern WPreferences wPreferences;
+ 
+@@ -303,8 +306,18 @@
+     }
+ 
+     scr->flags.doing_alt_tab = 0;
+-    if (openedSwitchMenu) 
+-	OpenSwitchMenu(scr, scr->scr_width/2, scr->scr_height/2, False);
++    if (openedSwitchMenu) {
++	int x, y;
++#ifdef XINERAMA
++	WMRect rect = wGetRectForHead(scr, wGetHeadForPointerLocation(scr));
++	x = rect.pos.x + rect.size.width/2;
++	y = rect.pos.y + rect.size.height/2;
++#else
++	x = scr->scr_width/2;
++	y = scr->scr_height/2;
++#endif
++	OpenSwitchMenu(scr, x, y, False);
++    }
+     
+     if (somethingElse) {
+ 	WMHandleEvent(&ev);
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/dialog.c ./src/dialog.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/dialog.c	Thu Feb 21 12:28:48 2002
++++ ./src/dialog.c	Sun Oct 20 15:40:00 2002
+@@ -70,12 +70,7 @@
+     WMPoint pt;
+     
+ #ifdef XINERAMA
+-    WMRect rect;
+-    
+-    rect = wGetRectForHead(scr, wGetHeadForPointerLocation(scr));
+-
+-    pt.x = rect.pos.x + (rect.size.width - width)/2;
+-    pt.y = rect.pos.y + (rect.size.height - height)/2;
++    return wGetCenterForHead(scr, wGetHeadForPointerLocation(scr), width, height);
+ #else
+     pt.x = (scr->scr_width - width) / 2;
+     pt.y = (scr->scr_height - height) / 2;	
+@@ -144,6 +139,7 @@
+     WMButton *saveSessionBtn;
+     Window parent;
+     WWindow *wwin;
++    WMPoint center;
+     int result;
+ 
+     panel = WMCreateAlertPanel(scr->wmscreen, NULL, title, message,
+@@ -163,9 +159,9 @@
+ 
+     XReparentWindow(dpy, WMWidgetXID(panel->win), parent, 0, 0);
+ 
++    center = getCenter( scr, 400, 180);
+     wwin = wManageInternalWindow(scr, parent, None, NULL,
+-                                (scr->scr_width - 400)/2,
+-                                (scr->scr_height - 180)/2, 400, 180);
++                                center.x, center.y, 400, 180);
+     wwin->client_leader = WMWidgetXID(panel->win);
+ 
+     WMMapWidget(panel->win);
+Only in ./src: dialog.c~
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/dockedapp.c ./src/dockedapp.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/dockedapp.c	Tue Jan  8 14:45:13 2002
++++ ./src/dockedapp.c	Sun Oct 20 15:17:57 2002
+@@ -39,12 +39,12 @@
+ #include "defaults.h"
+ #include "framewin.h"
+ 
++#include "xinerama.h"
+ 
+ /**** Global variables ****/
+ extern WPreferences wPreferences;
+ 
+ 
+-
+ typedef struct _AppSettingsPanel {
+     WMWindow *win;
+     WAppIcon *editedIcon;
+@@ -448,6 +448,26 @@
+ 
+     XReparentWindow(dpy, WMWidgetXID(panel->win), parent, 0, 0);
+ 
++#ifdef XINERAMA
++    {
++	WMRect rect = wGetRectForHead( scr, wGetHeadForPointerLocation( scr));
++
++	y = aicon->y_pos;
++	if ( y < rect.pos.y)
++	    y = rect.pos.y;
++	else if ( y + PHEIGHT > rect.pos.y + rect.size.height)
++	    y = rect.pos.y + rect.size.height - PHEIGHT - 30;
++
++	if (aicon->dock && aicon->dock->type == WM_DOCK) {
++	    if (aicon->dock->on_right_side)
++		x = rect.pos.x + rect.size.width/2;
++	    else
++		x = rect.pos.x + rect.size.width/2 - PWIDTH - 2;
++	} else {
++	    x = rect.pos.x + (rect.size.width - PWIDTH)/2;
++	}
++    }
++#else
+     y = aicon->y_pos;
+     if (y < 0)
+ 	y = 0;
+@@ -462,6 +482,7 @@
+     } else {
+ 	x = (scr->scr_width - PWIDTH)/2;
+     }
++#endif
+     panel->wwin = wManageInternalWindow(scr, parent, None,
+ 					_("Docked Application Settings"),
+ 					x, y, PWIDTH, PHEIGHT);
+Only in ./src: dockedapp.c~
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/moveres.c ./src/moveres.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/moveres.c	Tue Jan  8 14:45:13 2002
++++ ./src/moveres.c	Sun Oct 20 15:17:58 2002
+@@ -41,6 +41,8 @@
+ #include "workspace.h"
+ 
+ #include "geomview.h"
++#include "screen.h"
++#include "xinerama.h"
+ 
+ 
+ #ifdef KWM_HINTS
+@@ -172,8 +174,16 @@
+ 	WMUnmapWidget(scr->gview);
+     } else {
+ 	if (wPreferences.move_display == WDIS_CENTER) {
+-	    moveGeometryDisplayCentered(scr,
+-					scr->scr_width/2, scr->scr_height/2);
++	    WMPoint p;
++#ifdef XINERAMA
++	    p = wGetCenterForHead(scr, 
++				  wGetHeadForPointerLocation(scr), 
++				  0, 0);
++#else
++	    p.x = scr->scr_width/2;
++	    p.y = scr->scr_height/2;
++#endif
++	    moveGeometryDisplayCentered(scr, p.x, p.y);
+ 	} else if (wPreferences.move_display == WDIS_TOPLEFT) {
+ 	    moveGeometryDisplayCentered(scr, 1, 1);
+ 	} else if (wPreferences.move_display == WDIS_FRAME_CENTER) {
+@@ -193,8 +203,16 @@
+ 	|| wPreferences.move_display == WDIS_NONE) {
+ 	return;
+     } else if (wPreferences.move_display == WDIS_CENTER) {
+-	moveGeometryDisplayCentered(scr, scr->scr_width / 2,
+-				    scr->scr_height / 2);
++	WMPoint p;
++#ifdef XINERAMA
++	p = wGetCenterForHead(scr, 
++			      wGetHeadForPointerLocation(scr), 
++			      0, 0);
++#else
++	p.x = scr->scr_width/2;
++	p.y = scr->scr_height/2;
++#endif
++	moveGeometryDisplayCentered(scr, p.x, p.y);
+     } else if (wPreferences.move_display == WDIS_TOPLEFT) {
+ 	moveGeometryDisplayCentered(scr, 1, 1);
+     } else if (wPreferences.move_display == WDIS_FRAME_CENTER) {
+@@ -357,8 +375,16 @@
+ 	WMUnmapWidget(scr->gview);
+     } else {
+ 	if (wPreferences.size_display == WDIS_CENTER) {
+-	    moveGeometryDisplayCentered(scr,
+-					scr->scr_width / 2, scr->scr_height / 2);
++	    WMPoint p;
++#ifdef XINERAMA
++	    p = wGetCenterForHead(scr, 
++				  wGetHeadForPointerLocation(scr), 
++				  0, 0);
++#else
++	    p.x = scr->scr_width/2;
++	    p.y = scr->scr_height/2;
++#endif
++	    moveGeometryDisplayCentered(scr, p.x, p.y);
+ 	} else if (wPreferences.size_display == WDIS_TOPLEFT) {
+ 	    moveGeometryDisplayCentered(scr, 1, 1);
+ 	} else if (wPreferences.size_display == WDIS_FRAME_CENTER) {
+@@ -380,8 +406,16 @@
+ 	return;
+     
+     if (wPreferences.size_display == WDIS_CENTER) {
+-	moveGeometryDisplayCentered(scr, scr->scr_width / 2,
+-				    scr->scr_height / 2);
++	WMPoint p;
++#ifdef XINERAMA
++	p = wGetCenterForHead(scr, 
++			      wGetHeadForPointerLocation(scr), 
++			      0, 0);
++#else
++	p.x = scr->scr_width/2;
++	p.y = scr->scr_height/2;
++#endif
++	moveGeometryDisplayCentered(scr, p.x, p.y);
+     } else if (wPreferences.size_display == WDIS_TOPLEFT) {
+ 	moveGeometryDisplayCentered(scr, 1, 1);
+     } else if (wPreferences.size_display == WDIS_FRAME_CENTER) {
+@@ -398,8 +432,10 @@
+ {
+     WWindow *tmpw;
+     int x, y;
++#if 0
+     int scr_width = wwin->screen_ptr->scr_width;
+     int scr_height = wwin->screen_ptr->scr_height;
++#endif
+ 
+     if (!array || !WMGetArrayItemCount(array)) {
+         wWindowMove(wwin, wwin->frame_x + dx, wwin->frame_y + dy);
+@@ -412,6 +448,7 @@
+ 	    
+ 	    /* don't let windows become unreachable */
+ 	    
++#if 0
+ 	    if (x + (int)tmpw->frame->core->width < 20)
+ 		x = 20 - (int)tmpw->frame->core->width;
+ 	    else if (x + 20 > scr_width)
+@@ -421,6 +458,11 @@
+ 		y = 20 - (int)tmpw->frame->core->height;
+ 	    else if (y + 20 > scr_height)
+ 		y = scr_height - 20;
++#else
++	    wScreenBringInside(wwin->screen_ptr, &x, &y, 
++			       (int)tmpw->frame->core->width,
++			       (int)tmpw->frame->core->height);
++#endif
+ 	    
+  	    wWindowMove(tmpw, x, y);
+ 	}
+@@ -462,9 +504,11 @@
+ drawFrames(WWindow *wwin, WMArray *array, int dx, int dy)
+ {
+     WWindow *tmpw;
++    int x, y;
++#if 0
+     int scr_width = wwin->screen_ptr->scr_width;
+     int scr_height = wwin->screen_ptr->scr_height;
+-    int x, y;
++#endif
+     
+     if (!array) {
+ 
+@@ -483,7 +527,7 @@
+ 	    y = tmpw->frame_y + dy;
+ 	    
+ 	    /* don't let windows become unreachable */
+-	    
++#if 0	    
+ 	    if (x + (int)tmpw->frame->core->width < 20)
+ 		x = 20 - (int)tmpw->frame->core->width;
+ 	    else if (x + 20 > scr_width)
+@@ -493,7 +537,11 @@
+ 		y = 20 - (int)tmpw->frame->core->height;
+ 	    else if (y + 20 > scr_height)
+ 		y = scr_height - 20;
+-	    
++#else	    
++	    wScreenBringInside(wwin->screen_ptr, &x, &y, 
++			       (int)tmpw->frame->core->width,
++			       (int)tmpw->frame->core->height);
++#endif
+ 	    drawTransparentFrame(tmpw, x, y, tmpw->frame->core->width,
+ 				 tmpw->frame->core->height);
+ 	}
+@@ -955,10 +1003,19 @@
+ 	if (dx || dy) {
+ 	    int i;
+ 	    /* window is the leftmost window: check against screen edge */
++#ifdef XINERAMA
++	    WMRect rect = wGetRectForHead( scr, wGetHeadForPointerLocation( scr));
++
++	    l_edge = WMAX( scr->totalUsableArea.x1, rect.pos.x);
++	    edge_l = l_edge - resist;
++	    edge_r = WMIN( scr->totalUsableArea.x2, rect.pos.x + rect.size.width);
++	    r_edge = edge_r + resist;
++#else
+ 	    l_edge = scr->totalUsableArea.x1;
+ 	    r_edge = scr->totalUsableArea.x2 + resist;
+ 	    edge_l = scr->totalUsableArea.x1 - resist;
+ 	    edge_r = scr->totalUsableArea.x2;
++#endif
+ 
+         /* 1 */
+ 	    if ((data->rightIndex >= 0) && (data->rightIndex <= data->count)) {
+@@ -1054,10 +1111,17 @@
+ 	    }
+ 
+ 	    /* VeRT */
++#ifdef XINERAMA
++	    t_edge = WMAX( scr->totalUsableArea.y1, rect.pos.y);
++	    edge_t = t_edge - resist;
++	    edge_b = WMIN( scr->totalUsableArea.y2, rect.pos.y + rect.size.height);
++	    b_edge = edge_b + resist;
++#else
+ 	    t_edge = scr->totalUsableArea.y1;
+ 	    b_edge = scr->totalUsableArea.y2 + resist;
+ 	    edge_t = scr->totalUsableArea.y1 - resist;
+ 	    edge_b = scr->totalUsableArea.y2;
++#endif
+ 
+ 	    if ((data->bottomIndex >= 0) && (data->bottomIndex <= data->count)) {
+ 		WWindow *looprw;
+Only in ./src: moveres.c~
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/placement.c ./src/placement.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/placement.c	Tue Jan  8 14:45:13 2002
++++ ./src/placement.c	Sun Oct 20 15:37:11 2002
+@@ -40,6 +40,7 @@
+ #include "appicon.h"
+ #include "dock.h"
+ 
++#include "xinerama.h"
+ 
+ extern WPreferences wPreferences;
+ 
+@@ -144,10 +145,22 @@
+     /*
+      * Find out screen boundaries.
+      */
++#ifdef XINERAMA
++    WMRect rect = wGetRectForHead( scr, wGetHeadForPointerLocation( scr));
++
++    sx1 = rect.pos.x;
++    sy1 = rect.pos.y;
++    sw = rect.size.width;
++    sh = rect.size.height;
++    sx2 = sx1 + sw;
++    sy2 = sy1 + sh;
++#else
+     sx1 = 0;
+     sy1 = 0;
+-    sx2 = scr->scr_width;
+-    sy2 = scr->scr_height;
++    sw = sx2 = scr->scr_width;
++    sh = sy2 = scr->scr_height;
++#endif
++    
+     if (scr->dock) {
+ 	if (scr->dock->on_right_side)
+             sx2 -= isize + DOCK_EXTRA_SPACE;
+@@ -155,8 +168,8 @@
+ 	    sx1 += isize + DOCK_EXTRA_SPACE;
+     }
+ 
+-    sw = isize * (scr->scr_width/isize);
+-    sh = isize * (scr->scr_height/isize);
++    sw = isize * (sw/isize);
++    sh = isize * (sh/isize);
+     fullW = (sx2-sx1)/isize;
+     fullH = (sy2-sy1)/isize;
+ 
+@@ -337,7 +350,8 @@
+ 
+ static void
+ smartPlaceWindow(WWindow *wwin, int *x_ret, int *y_ret,
+-                 unsigned int width, unsigned int height)
++                 unsigned int width, unsigned int height,
++		 WArea usableArea)
+ {
+     WScreen *scr = wwin->screen_ptr;
+     int test_x = 0, test_y = Y_ORIGIN(scr);
+@@ -346,7 +360,6 @@
+     int min_isect, min_isect_x, min_isect_y;
+     int sum_isect;
+     int extra_height;
+-    WArea usableArea = scr->totalUsableArea;
+ 
+     if (wwin->frame)
+ 	extra_height = wwin->frame->top_width + wwin->frame->bottom_width;
+@@ -413,7 +426,8 @@
+ 
+ static Bool
+ autoPlaceWindow(WWindow *wwin, int *x_ret, int *y_ret,
+-                unsigned int width, unsigned int height, int tryCount)
++                unsigned int width, unsigned int height, int tryCount,
++		WArea usableArea)
+ {
+     WScreen *scr = wwin->screen_ptr;
+     int test_x = 0, test_y = Y_ORIGIN(scr);
+@@ -421,7 +435,6 @@
+     int swidth, sx;
+     WWindow *test_window;
+     int extra_height;
+-    WArea usableArea = scr->totalUsableArea;
+     
+     if (wwin->frame)
+ 	extra_height = wwin->frame->top_width + wwin->frame->bottom_width + 2;
+@@ -527,10 +540,10 @@
+ 
+ static void 
+ cascadeWindow(WScreen *scr, WWindow *wwin, int *x_ret, int *y_ret,
+-              unsigned int width, unsigned int height, int h)
++              unsigned int width, unsigned int height, int h,
++	      WArea usableArea)
+ {
+     unsigned int extra_height;
+-    WArea usableArea = scr->totalUsableArea;
+ 
+     if (wwin->frame)
+ 	extra_height = wwin->frame->top_width + wwin->frame->bottom_width;
+@@ -555,6 +568,14 @@
+ {
+     WScreen *scr = wwin->screen_ptr;
+     int h = WMFontHeight(scr->title_font) + (wPreferences.window_title_clearance + TITLEBAR_EXTEND_SPACE) * 2;
++    WArea usableArea;
++
++#ifdef XINERAMA
++    int head = wGetHeadForPointerLocation(scr);
++    usableArea = wGetUsableAreaForHead(scr, head);
++#else
++    usableArea = wwin->screen_ptr->totalUsableArea;
++#endif /* XINERAMA */
+ 
+     switch (wPreferences.window_placement) {
+      case WPM_MANUAL:
+@@ -562,13 +583,13 @@
+ 	break;
+ 
+      case WPM_SMART:
+-	smartPlaceWindow(wwin, x_ret, y_ret, width, height);
++	smartPlaceWindow(wwin, x_ret, y_ret, width, height, usableArea);
+ 	break;
+ 
+      case WPM_AUTO:
+-	if (autoPlaceWindow(wwin, x_ret, y_ret, width, height, 0)) {
++	if (autoPlaceWindow(wwin, x_ret, y_ret, width, height, 0, usableArea)) {
+ 	    break;
+-	} else if (autoPlaceWindow(wwin, x_ret, y_ret, width, height, 1)) {
++	} else if (autoPlaceWindow(wwin, x_ret, y_ret, width, height, 1, usableArea)) {
+ 	    break;
+ 	}
+ 	/* there isn't a break here, because if we fail, it should fall
+@@ -579,7 +600,7 @@
+         if (wPreferences.window_placement == WPM_AUTO)
+             scr->cascade_index++;
+ 
+-	cascadeWindow(scr, wwin, x_ret, y_ret, width, height, h);
++	cascadeWindow(scr, wwin, x_ret, y_ret, width, height, h, usableArea);
+ 
+         if (wPreferences.window_placement == WPM_CASCADE)
+             scr->cascade_index++;
+@@ -588,7 +609,6 @@
+      case WPM_RANDOM:
+ 	{
+ 	    int w, h, extra_height;
+-	    WArea usableArea = scr->totalUsableArea;
+ 
+             if (wwin->frame)
+                 extra_height = wwin->frame->top_width + wwin->frame->bottom_width + 2;
+@@ -611,16 +631,16 @@
+ 	*y_ret = 0;
+ #endif
+     }
+-    
+-    if (*x_ret + width > scr->scr_width)
+-	*x_ret = scr->scr_width - width;
+-    if (*x_ret < 0)
+-        *x_ret = 0;
+-
+-    if (*y_ret + height > scr->scr_height)
+-	*y_ret = scr->scr_height - height;
+-    if (*y_ret < 0)
+-        *y_ret = 0;
++
++    if (*x_ret + width > usableArea.x2)
++	*x_ret = usableArea.x2 - width;
++    if (*x_ret < usableArea.x1)
++        *x_ret = usableArea.x1;
++
++    if (*y_ret + height > usableArea.y2)
++	*y_ret = usableArea.y2 - height;
++    if (*y_ret < usableArea.y1)
++        *y_ret = usableArea.y1;
+ }
+ 
+ 
+Only in ./src: placement.c~
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/screen.c ./src/screen.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/screen.c	Thu Feb 21 12:28:48 2002
++++ ./src/screen.c	Sun Oct 20 15:38:08 2002
+@@ -1155,6 +1155,30 @@
+     int moved = 0;
+     int tol_w, tol_h;
+ 
++    int sx1, sy1, sx2, sy2;
++
++#ifdef XINERAMA
++    WMRect rect;
++    int head;
++
++    rect.pos.x = *x;
++    rect.pos.y = *y;
++    rect.size.width = width;
++    rect.size.height = height;
++
++    head = wGetHeadForRect(scr, rect);
++    rect = wGetRectForHead(scr, head);
++
++    sx1 = rect.pos.x;
++    sy1 = rect.pos.y;
++    sx2 = sx1 + rect.size.width;
++    sy2 = sy1 + rect.size.height;
++#else
++    sx1 = sy1 = 0;
++    sx2 = scr->scr_width;
++    sy2 = scr->scr_height;
++#endif
++
+     if (width > 20)
+ 	tol_w = width/2;
+     else
+@@ -1165,15 +1189,15 @@
+     else
+ 	tol_h = 20;
+ 
+-    if (*x+width < 10)
+-	*x = -tol_w, moved = 1;
+-    else if (*x >= scr->scr_width - 10)
+-	*x = scr->scr_width - tol_w - 1, moved = 1;
+-
+-    if (*y < -height + 10)
+-	*y = -tol_h, moved = 1;
+-    else if (*y >= scr->scr_height - 10)
+-	*y = scr->scr_height - tol_h - 1, moved = 1;
++    if (*x + width < sx1 + 10)
++	*x = sx1 - tol_w, moved = 1;
++    else if (*x >= sx2 - 10)
++	*x = sx2 - tol_w - 1, moved = 1;
++
++    if (*y < sy1 - height + 10)
++	*y = sy1 - tol_h, moved = 1;
++    else if (*y >= sy2 - 10)
++	*y = sy2 - tol_h - 1, moved = 1;
+ 
+     return moved;
+ }
+Only in ./src: screen.c~
+Only in ./src: stamp-h
+Only in ./src: tags
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/window.c ./src/window.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/window.c	Tue Jul  2 02:30:25 2002
++++ ./src/window.c	Sun Oct 20 15:38:56 2002
+@@ -54,6 +54,7 @@
+ #include "defaults.h"
+ #include "workspace.h"
+ 
++#include "xinerama.h"
+ 
+ #ifdef MWM_HINTS
+ # include "motif.h"
+@@ -1109,6 +1110,30 @@
+ 		y = transientOwner->frame_y +
+ 		    abs((transientOwner->frame->core->height - height)/3) + offs;
+ 
++#ifdef XINERAMA
++		{
++		    WMRect rect;
++		    int head;
++
++		    rect.pos.x = transientOwner->frame_x;
++		    rect.pos.y = transientOwner->frame_y;
++		    rect.size.width = transientOwner->frame->core->width;
++		    rect.size.height = transientOwner->frame->core->height;
++
++		    head = wGetHeadForRect(scr, rect);
++		    rect = wGetRectForHead(scr, head);
++
++		    if ( x < rect.pos.x)
++			x = rect.pos.x;
++		    else if ( x + width > rect.pos.x + rect.size.width)
++			x = rect.pos.x + rect.size.width - width;
++
++		    if ( y < rect.pos.y)
++			y = rect.pos.y;
++		    else if ( y + height > rect.pos.y + rect.size.height)
++			y = rect.pos.y + rect.size.height - height;
++		}
++#else
+ 		if (x < 0)
+ 		    x = 0;
+ 		else if (x + width > scr->scr_width)
+@@ -1118,6 +1143,7 @@
+ 		    y = 0;
+ 		else if (y + height > scr->scr_height)
+ 		    y = scr->scr_height - height;
++#endif
+ 	    } else {
+ 		PlaceWindow(wwin, &x, &y, width, height);
+ 	    }
+Only in ./src: window.c~
+Only in ./src: windowmaker.patch
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/xinerama.c ./src/xinerama.c
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/xinerama.c	Sat Feb 16 05:53:33 2002
++++ ./src/xinerama.c	Sun Oct 20 15:40:27 2002
+@@ -53,6 +53,7 @@
+  *     0 if the rectangles do not intersect, 1 otherwise.
+  */
+ 
++#if 0
+ typedef struct {
+     int x1, y1, x2, y2;
+ } _Rectangle;
+@@ -97,18 +98,60 @@
+     rect1.x1 = x1;
+     rect1.y1 = y1;
+     rect1.x2 = x1+w1;
+-    rect1.x2 = y1+w1;
++    rect1.y2 = y1+h1;
+     
+     rect2.x1 = x2;
+     rect2.y1 = y2;
+     rect2.x2 = x2+w2;
+-    rect2.x2 = y2+w2;
++    rect2.y2 = y2+h2;
+     
+     if (intersect_rectangles(&rect1, &rect2, &result))
+ 	return (result.x2-result.x1)*(result.y2-result.y1);
+     else
+ 	return 0;
+ }
++#else
++/*
++ * This function calculates the length of the intersection of two
++ * line sections. (Hey, is that english?)
++ */
++static int
++calcIntersectionLength(int p1, int l1, int p2, int l2)
++{
++    int isect;
++    int tmp;
++    
++    if (p1 > p2) {
++        tmp = p1;
++        p1 = p2;
++        p2 = tmp;
++        tmp = l1;
++        l1 = l2;
++        l2 = tmp;
++    }
++
++    if (p1 + l1 < p2)
++        isect = 0;
++    else if (p2 + l2 < p1 + l1)
++        isect = l2;
++    else
++        isect = p1 + l1 - p2;
++        
++    return isect;
++}
++
++
++/*
++ * This function calculates the area of the intersection of two rectangles.
++ */
++static int
++intersectArea(int x1, int y1, int w1, int h1, 
++              int x2, int y2, int w2, int h2)
++{
++    return calcIntersectionLength(x1, w1, x2, w2)
++           * calcIntersectionLength(y1, h1, y2, h2);
++}
++#endif
+ 
+ 
+ /* get the head that covers most of the rectangle */
+@@ -140,6 +183,9 @@
+ 	}
+     }
+ 
++    if ( best == -1)
++	best = wGetHeadForPointerLocation(scr);
++
+     return best;
+ }
+ 
+@@ -162,6 +208,7 @@
+     int i;	
+ 
+     for (i = 0; i < scr->xine_count; i++) {
++#if 0
+ 	int yy, xx;
+ 	
+ 	xx = scr->xine_screens[i].x_org + scr->xine_screens[i].width;
+@@ -171,6 +218,13 @@
+ 	    point.x < xx && point.y < yy) {
+ 	    return i;
+ 	}
++#else
++	XineramaScreenInfo *xsi = &scr->xine_screens[i];
++
++	if ((unsigned)(point.x - xsi->x_org) < xsi->width &&
++	    (unsigned)(point.y - xsi->y_org) < xsi->height)
++	    return i;
++#endif
+     }
+     
+     return scr->xine_primary_head;
+@@ -184,7 +238,6 @@
+     int ble;
+     unsigned int blo;
+ 
+-    
+     if (!XQueryPointer(dpy, scr->root_win, &bla, &bla,
+ 		       &point.x, &point.y,
+ 		       &ble, &ble,
+@@ -199,7 +252,14 @@
+ {
+     WMRect rect;
+ 
+-    if (head < scr->xine_count) {
++    if (scr->xine_count) {
++#if 0
++	if ( head < 0) 
++	    head = 0;
++	else if ( head >= scr->xine_count)
++	    head %= scr->xine_count;
++#endif
++
+ 	rect.pos.x = scr->xine_screens[head].x_org;
+ 	rect.pos.y = scr->xine_screens[head].y_org;
+ 	rect.size.width = scr->xine_screens[head].width;
+@@ -217,9 +277,11 @@
+     }
+ }
+ 
+-
++#if 0
+ WMRect wGetUsableRectForHead(WScreen *scr, int head)
+ {
++    WMRect rect;
++
+     if (head < scr->xine_count) {
+ 	rect.pos.x = scr->xine_screens[head].x_org;
+ 	rect.pos.y = scr->xine_screens[head].y_org;
+@@ -237,5 +299,35 @@
+ 	return rect;
+     }
+ }
++#endif
++
++WArea wGetUsableAreaForHead(WScreen *scr, int head)
++{
++    WArea totalArea, usableArea = scr->totalUsableArea;
++    WMRect rect = wGetRectForHead(scr, head);
++
++    totalArea.x1 = rect.pos.x;
++    totalArea.y1 = rect.pos.y;
++    totalArea.x2 = totalArea.x1 + rect.size.width;
++    totalArea.y2 = totalArea.y1 + rect.size.height;
++
++    usableArea.x1 = WMAX(totalArea.x1, usableArea.x1);
++    usableArea.y1 = WMAX(totalArea.y1, usableArea.y1);
++    usableArea.x2 = WMIN(totalArea.x2, usableArea.x2);
++    usableArea.y2 = WMIN(totalArea.y2, usableArea.y2);
++
++    return usableArea;
++}
++
++WMPoint wGetCenterForHead(WScreen *scr, int head, int width, int height)
++{
++    WMPoint p;
++    WMRect rect = wGetRectForHead(scr, head);
++
++    p.x = rect.pos.x + (rect.size.width - width)/2;
++    p.y = rect.pos.y + (rect.size.height - height)/2;
++
++    return p;
++}
+ 
+ #endif 
+Only in ./src: xinerama.c~
+diff -ru /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/xinerama.h ./src/xinerama.h
+--- /var/tmp/portage/WindowMaker-0.80.1-r2/work/WindowMaker-0.80.1/src/xinerama.h	Sat Feb 16 05:53:33 2002
++++ ./src/xinerama.h	Sun Oct 20 15:18:00 2002
+@@ -41,6 +41,10 @@
+ 
+ WMRect wGetUsableRectForHead(WScreen *scr, int head);
+ 
++WArea wGetUsableAreaForHead(WScreen *scr, int head);
++
++WMPoint wGetCenterForHead(WScreen *scr, int head, int width, int height);
++
+ #endif
+ 
+ 
+Only in ./test: Makefile
+Only in ./util: Makefile
+Only in .: windowmaker-xinerama.patch
+Only in .: windowmaker.patch
+Only in ./wmlib: Makefile
+Only in ./wrlib: Makefile
+Only in ./wrlib: get-wraster-flags

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.6 2003/07/11 02:37:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.7 2003/07/20 00:10:21 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> windowmaker-0.80.2-r3.ebuild:
+  Added a xinerama patch.
 
 *windowmaker-0.80.2-r3 (10 Jul 2003)
 
