@@ -6,6 +6,10 @@
 # (I'm adding this here because I lose or forget about all my other Portage
 # TO-DO files... 
 #
+# rewrite download system
+# -----------------------
+# support partials, look into GENTOO_MIRRORS issue
+#
 # subpackages
 # ===========
 #src_install will work as normal, and will create the master image that includes
@@ -47,6 +51,8 @@
 #
 #Important new dep functionality:
 #
+# ~ IS NOW ADDED
+#
 #~sys-apps/foo-1.0 will match the latest rev of foo-1.0.  Useful because the latest rev
 #should be the most stable and reliable version.
 #
@@ -83,7 +89,7 @@ categories=("app-admin", "app-arch", "app-cdr", "app-crypt", "app-doc",
 "net-dialup", "net-fs", "net-ftp", "net-im", "net-irc", "net-libs", "net-mail",
 "net-misc", "net-news", "net-nds", "net-print", "net-www", "packages",
 "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs",
-"x11-terms", "x11-wm","virtual")
+"x11-terms", "x11-wm","virtual","dev-tcltk")
 
 #beautiful directed graph object
 
@@ -465,12 +471,12 @@ def doebuild(myebuild,mydo,checkdeps=1):
 		if mydo=="depend":
 			return mydeps
 		elif mydo=="check":
-			return dep_frontend("build",mydeps[0])
+			return dep_frontend("build",myebuild,mydeps[0])
 		elif mydo=="rcheck":
-			return dep_frontend("runtime",mydeps[1])
+			return dep_frontend("runtime",myebuild,mydeps[1])
 		if mydo in ["merge","qmerge","unpack", "compile", "rpm", "package"]:
 			#optional dependency check -- if emerge is merging, this is skipped 
-			retval=dep_frontend("build",mydeps[0])
+			retval=dep_frontend("build",myebuild,mydeps[0])
 			if (retval): return retval
 	else:
 		if mydo in ["depend","check","rcheck"]:
@@ -494,7 +500,7 @@ def doebuild(myebuild,mydo,checkdeps=1):
 		retval=spawn("/usr/sbin/ebuild.sh fetch unpack compile install")
 		if retval: return retval
 		if checkdeps:
-			retval=dep_frontend("runtime",mydeps[1])
+			retval=dep_frontend("runtime",myebuild,mydeps[1])
 			if (retval): return retval
 		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
 	elif mydo=="unmerge": 
@@ -539,7 +545,7 @@ def isfifo(x):
 	mymode=os.stat(x)[ST_MODE]
 	return S_ISFIFO(mymode)
 
-def movefile(src,dest):
+def movefile(src,dest,unlink=1):
 	"""moves a file from src to dest, preserving all permissions and attributes."""
 	if dest=="/bin/cp":
 		getstatusoutput("/bin/mv /bin/cp /bin/cp.old")
@@ -552,7 +558,8 @@ def movefile(src,dest):
 #	cp -a takes care of this
 #	mymode=os.lstat(src)[ST_MODE]
 #	os.chmod(dest,mymode)
-	os.unlink(src)
+	if unlink:
+		os.unlink(src)
 	if a[0]==0:
 		return 1
 	else:
@@ -912,74 +919,6 @@ def dep_eval(deplist):
 				return 0
 		return 1
 
-def dep_catpkgstring(mypkgdep):
-	if mypkgdep[0]=="!":
-		if not pkgsplit(mypkgdep[1:]):
-			return "(invalid dependency)"
-		else:
-			return "unmerge "+mypkgdep[1:]
-	elif mypkgdep[0]=="=":
-		if not pkgsplit(mypkgdep[1:]):
-			return "(invalid dependency)"
-		else:
-			return "merge "+mypkgdep[1:]
-	elif mypkgdep[0:2]==">=":
-		if not pkgsplit(mypkgdep[2:]):
-			return "(invalid dependency)"
-		else:
-			return "merge "+mypkgdep[2:]+" or newer"
-	elif mypkgdep[0:2]=="<=":
-		if not pkgsplit(mypkgdep[2:]):
-			return "(invalid dependency)"
-		else:
-			return "merge "+mypkgdep[2:]+" or older"
-	elif mypkgdep[0]=="<":
-		mysplit=catpkgsplit(mypkgdep[1:])
-		if mysplit==None:
-			return "(invalid dependency)"
-		else:
-			myret="merge "+string.join([mysplit[0],mysplit[1]],"/")+" older than version"
-			if mysplit[3]=="r0":
-				return myret+" "+mysplit[2]
-			else:
-				return myret+" "+mysplit[2]+"-"+mysplit[3]
-	elif mypkgdep[0]==">":
-		mysplit=catpkgsplit(mypkgdep[1:])
-		if mysplit==None:
-			return "(invalid dependency)"
-		else:
-			myret="merge "+string.join([mysplit[0],mysplit[1]],"/")+" newer than version"
-			if mysplit[3]=="r0":
-				return myret+" "+mysplit[2]
-			else:
-				return myret+" "+mysplit[2]+"-"+mysplit[3]
-	elif not isspecific(mypkgdep):
-		mysplit=string.split(mypkgdep,"/")
-		if len(mysplit)!=2:
-			return "(invalid dependency)"
-		else:
-			return "merge any version of "+mypkgdep
-	else:
-		return "(invalid dependency)"
-
-def dep_print(deplist,mylevel=0):
-	"Prints out a deplist in a human-understandable format"
-	if (deplist==None) or (len(deplist)==0):
-		return
-	if deplist[0]=="||":
-		for x in deplist[1:]:
-			if type(x)==types.ListType:
-				dep_print(x,mylevel+1)
-			else:
-				print "  "*(mylevel)+"|| "+dep_catpkgstring(x)
-	else:
-		for x in deplist:
-			if type(x)==types.ListType:
-				dep_print(x,mylevel+1)
-			else:
-				print "  "*(mylevel)+"&& "+dep_catpkgstring(x)
-
-
 def dep_zapdeps(unreduced,reduced):
 	"""Takes an unreduced and reduced deplist and removes satisfied dependencies.
 	Returned deplist contains steps that must be taken to satisfy dependencies."""
@@ -1033,7 +972,7 @@ def dep_listcleanup(deplist):
 				newlist.append(x)
 	return newlist
 	
-def dep_frontend(mytype,depstring):
+def dep_frontend(mytype,myebuild,depstring):
 	"""ebuild frontend for dependency system"""
 	if ebuild_initialized==0:
 		ebuild_init()
@@ -1055,13 +994,8 @@ def dep_frontend(mytype,depstring):
 		print '>>> '+mytype+' dependencies OK ;)'
 		return 0
 	else:
-		print '!!! Some '+mytype+' dependencies must be satisfied:'
-		print
-		print myparse[1]
-		dep_print(myparse[1])
-		print
-#		This is the semi-working auto-ebuild stuff, disabled for now
-#		dep_print_resolve(myparse[1])		
+		print '!!! Some '+mytype+' dependencies must be satisfied first.'
+		print '!!! To view the dependency list, type "emerge --pretend',myebuild+'".'
 	return 1
 
 # gets virtual package settings
@@ -1239,6 +1173,7 @@ class packagetree:
 						return None
 			mypos=mypos+1
 		return deplist
+	
 	def dep_depreduce(self,mypkgdep):
 		if mypkgdep[0]=="!":
 			# !cat/pkg-v
@@ -1260,15 +1195,25 @@ class packagetree:
 			if not isspecific(cpv):
 				return None
 			mycatpkg=catpkgsplit(cpv,0)
+			if not mycatpkg:
+				#parse error
+				return 0
 			mykey=mycatpkg[0]+"/"+mycatpkg[1]
 			if self.hasnode(mykey):
-				if mycatpkg==None:
-					#parse error
-					return 0
-				if not self.hasnode(mykey):
-					return 0
 				for x in self.getnode(mykey):
 					if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
+						return 1
+			return 0
+		elif mypkgdep[0]=="~":
+			if not isspecific(mypkgdep[1:]):
+				return None
+			cp=catpkgsplit(mypkgdep[1:])
+			if not cp:
+				return 0
+			mykey=cp[0]+"/"+cp[1]
+			if self.hasnode(mykey):
+				for x in self.getnode(mykey):
+					if pkgcmp(x[1][1:],mycatpkg[1:])>=0:
 						return 1
 			return 0
 		if not isspecific(mypkgdep):
@@ -1303,7 +1248,9 @@ class packagetree:
 				cpv=mypkgdep[1:]
 			if not isspecific(cpv):
 				return ""
-			mycatpkg=catpkgsplit(cpv,0)
+			mycatpkg=catpkgsplit(cpv)
+			if not mycatpkg:
+				return ""
 			mykey=mycatpkg[0]+"/"+mycatpkg[1]
 			if not self.hasnode(mykey):
 				return ""
@@ -1319,6 +1266,27 @@ class packagetree:
 				if pkgcmp(x[1][1:],bestmatch[1][1:])>0:
 					bestmatch=x
 			return bestmatch[0]		
+		elif (mypkgdep[0]=="~"):
+			mypkg=mypkgdep[1:]
+			if not isspecific(mypkg):
+				return ""
+			mycp=catpkgsplit(mypkg)
+			if not mycp:
+				return ""
+			mykey=mycp[0]+"/"+mycp[1]
+			if not self.hasnode(mykey):
+				return ""
+			myrev=-1
+			for x in self.getnode(mykey):
+				if mycp[2]!=x[1][2]:
+					continue
+				if x[1][3][1:]>myrev:
+					myrev=x[1][3][1:]
+					mymatch=x[0]
+			if myrev==-1:
+				return ""
+			else:
+				return mymatch
 		elif not isspecific(mypkgdep):
 			if not self.hasnode(mypkgdep):
 				return ""
@@ -1368,6 +1336,9 @@ class packagetree:
 			#now we have a list of all nodes that qualify
 			#since we want all nodes that match, return this list
 			return mynodes
+		elif mypkgdep[0]=="~":
+			#"~" implies a "bestmatch"
+			return self.dep_bestmatch(mypkgdep)
 		elif not isspecific(mypkgdep):
 			if not self.hasnode(mypkgdep):
 				return [] 
@@ -1784,6 +1755,16 @@ class dblink:
 		
 				print zing+" "+rootfile
 				print "md5",mymd5
+				rootetcprefix=os.path.normpath(root+"/etc/")+"/"
+				if rootfile[0:len(rootetcprefix)]==rootetcprefix:
+					#config file management
+					if os.path.basename(rootfile)[0:6]=="._cfg_":
+						newcfgfile=os.path.dirname(rootfile)+"/"+os.path.basename(rootfile)[6:]
+						if movefile(rootfile,newcfgfile,0):
+							#0=don't unlink original
+							print "cfg",newcfgfile
+						else:
+							print "!!! cfg",newcfgfile
 				outfile.write("obj "+relfile+" "+mymd5+" "+getmtime(rootfile)+"\n")
 			elif isfifo(x):
 				zing="!!!"
