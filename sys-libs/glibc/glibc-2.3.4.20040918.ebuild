@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040918.ebuild,v 1.2 2004/09/20 00:21:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040918.ebuild,v 1.3 2004/09/21 19:19:11 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -503,6 +503,8 @@ src_unpack() {
 	cd ${S}
 	# fix for http://sources.redhat.com/bugzilla/show_bug.cgi?id=227
 	#epatch ${FILESDIR}/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch
+
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-fix-broken-ldd.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
