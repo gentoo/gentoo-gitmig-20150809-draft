@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.5 2004/07/05 06:21:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.6 2004/07/05 07:04:05 eradicator Exp $
 
 inherit gnuconfig
 
@@ -116,4 +116,9 @@ pkg_postinst() {
 	einfo "An init script for the alsa timidity sequencer has been installed."
 	einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
 	einfo "and run 'rc-update add timidity <runlevel> && /etc/init.d/timidity start'"
+
+	if use sparc; then
+		ewarn "sparc support is expirimental. oss, alsa, esd, and portaudio do not work."
+		ewarn "-Ow (save to wave file) does..."
+	fi
 }
