@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sourcenav
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.8 2003/09/14 22:40:17 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.9 2003/09/22 11:41:32 pauldv Exp $
+
+  22 Sep 2003; <paul@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
   14 Sep 2003; <nerdboy@gentoo.org> sourcenav-5.1.4.ebuild,
   files/sourcenav-5.1.4-gentoo.diff:
