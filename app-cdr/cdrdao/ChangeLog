@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.25 2003/12/16 22:03:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.26 2003/12/31 15:18:07 weeve Exp $
+
+  31 Dec 2003; Jason Wever <weeve@gentoo.org> cdrdao-1.1.7-r3.ebuild:
+  Added fix for bug #36420 so that the gentoo patch will succeed in all cases.
 
 *cdrdao-1.1.7-r3 (16 Dec 2003)
 
