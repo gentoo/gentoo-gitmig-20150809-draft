@@ -12,9 +12,12 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.10 2002/05/11 01:43:34 murphy Exp $
+# $Id: make.defaults,v 1.11 2002/06/22 16:39:42 drobbins Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.10  2002/05/11 01:43:34  murphy
+# Removing X fixes.
+#
 # Revision 1.3  2002/05/08 22:12:56  murphy
 # Adding misc flags for make.defaults in make.defaults.sparc.
 #
@@ -39,3 +42,5 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 # End of lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
+
+ACCEPT_KEYWORDS="sparc64"

@@ -7,3 +7,4 @@ oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl
 slang spell ssl svga tcpd truetype X xml2 xmms xv" 
 
 ARCH="x86"
+ACCEPT_KEYWORDS="x86"

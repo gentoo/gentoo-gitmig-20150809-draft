@@ -12,9 +12,14 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 # These lines added by scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.10 2002/05/11 01:40:21 murphy Exp $
+# $Id: make.defaults,v 1.11 2002/06/22 16:39:42 drobbins Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.10  2002/05/11 01:40:21  murphy
+# Removing X mask stuff.
+#
+# More fixes to CD.
+#
 # Revision 1.3  2002/05/08 22:08:22  murphy
 # More fixes to CD stuff.
 #
@@ -42,3 +47,5 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 # End of lines added by scripts/generate-packages.sh
+
+ACCEPT_KEYWORDS="sparc"
