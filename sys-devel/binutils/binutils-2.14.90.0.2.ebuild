@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.2.ebuild,v 1.6 2003/06/22 05:50:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.2.ebuild,v 1.7 2003/06/25 22:35:44 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -14,8 +14,8 @@ filter-flags "-fomit-frame-pointer -fssa"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools necessary to build programs"
-SRC_URI="mirror://kernel/devel/binutils/${P}.tar.bz2
-	mirror://kernel/devel/binutils/test/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
+	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
