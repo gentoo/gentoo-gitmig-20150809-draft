@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.0.ebuild,v 1.1 2004/12/09 02:05:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.0-r1.ebuild,v 1.1 2005/02/20 22:47:11 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://monkeyd.sourceforge.net/versions/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="php"
 
 DEPEND="virtual/libc
@@ -26,11 +26,12 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e '/strip /s:.*::' src/Makefile
+	sed -i -e '/install -m 755 bin\/banana/d' configure || die "sed banana"
 }
 
 src_compile() {
 	# monkey has it's own funky script ... cant use econf
+	env STRIP=true \
 	./configure \
 		--prefix=/usr \
 		--bindir=/usr/bin \
@@ -40,6 +41,9 @@ src_compile() {
 		--logdir=/var/log/${PN} \
 		--lang=en \
 		|| die
+	# Don't install the banana script, it is broken as is anyway and the 
+	# functionality is provided by the ${FILESDIR}/monkeyd.init.d script.
+	sed -i '/install -m 755 bin\/banana/d' Makefile
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
