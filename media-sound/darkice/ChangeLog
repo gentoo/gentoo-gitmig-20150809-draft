@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.3 2003/02/12 07:26:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.4 2003/03/14 10:10:29 seemant Exp $
+
+*darkice-0.13 (14 Mar 2003)
+
+  14 Mar 2003; Seemant Kulleen <seemant@gentoo.org> darkice-0.13.ebuild:
+  version bump, thanks to: Otavio R. Piske <angusy@brturbo.com> in bug #15670
 
 *darkice-0.12 (14 Jan 2003)
 
