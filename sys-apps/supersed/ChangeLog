@@ -1,0 +1,13 @@
+# ChangeLog for sys-apps/supersed
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/ChangeLog,v 1.1 2002/07/25 03:06:50 seemant Exp $
+
+*supersed-3.58 (24 Jul 2002)
+
+
+  24 Jul 2002; Seemant Kulleen <seemant@gentoo.org> supersed-3.58.ebuild
+  ChangeLog files/digest-supersed-3.58 :
+
+  A highly enhanced version of GNU sed-3.02.80 which performs much faster
+  and allows perl regular expressions among other things.  Installs as a
+  replacement for GNU sed.
