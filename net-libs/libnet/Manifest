@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a2ed3e86b9708d48e1fa8d7c284fe69b ChangeLog 4906
 MD5 5c590469bd3d44a28a8b6398e04978f5 libnet-1.0.2a-r3.ebuild 1643
-MD5 77697a1030a97807a274548f08f58079 libnet-1.1.1.ebuild 755
-MD5 cd29ba7b7d1d108332a6b28e101ec2d6 metadata.xml 1084
-MD5 df84810970e192e4dbc4d648db26e76d libnet-1.1.2.1.ebuild 959
+MD5 e44a844390f3e185ec4508e0cce5c5f0 metadata.xml 1083
+MD5 cffe5434888089aea21fa92e3d423c69 libnet-1.1.2.1.ebuild 811
 MD5 2c90cae2a7fff0c8bf6fbee5977bfda0 files/1.0.2a-slot.patch 7696
 MD5 69c5edaa98f4890a0b542a8fe9937383 files/digest-libnet-1.0.2a-r3 65
-MD5 356ec47bcb6b32a9ff6e74daf17980f9 files/digest-libnet-1.1.1 64
 MD5 503929f0e619836305f1e58a151baee4 files/libnet-gcc33-fix 563
 MD5 2618eca70575dcefd452e252db8fe704 files/digest-libnet-1.1.2.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB495UmdTrptrqvGERAldAAJ9loIsadfBVoSruBk+JgqM0jMipYgCdGEt8
-FI+Tgs/WxWoCN09fzf9UHBM=
-=fK0+
------END PGP SIGNATURE-----

@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1.ebuild,v 1.11 2005/01/11 14:10:22 dragonheart Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1.ebuild,v 1.12 2005/03/08 23:56:21 vapier Exp $
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://www.packetfactory.net/libnet/"
@@ -10,27 +8,20 @@ SRC_URI="http://www.packetfactory.net/libnet/dist/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.1"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc-macos sparc x86"
-IUSE=""
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos sparc x86"
+IUSE="doc"
 
 S=${WORKDIR}/libnet
 
-src_compile() {
-	cd ${S}
-
-	# Detect mips systems properly
-	gnuconfig_update
-
-	econf || die "Failed to run econf!"
-	emake || die "Failed to run emake!"
-}
-
 src_install(){
-	make DESTDIR=${D} install || die "Failed to install"
+	make DESTDIR="${D}" install || die "Failed to install"
 	dobin libnet-config || die
 
 	doman doc/man/man3/*.3
 	dodoc VERSION README doc/*
-	dohtml -r doc/html/*
-	docinto sample ; dodoc sample/*.[ch]
+	if use doc ; then
+		dohtml -r doc/html/*
+		docinto sample
+		dodoc sample/*.[ch]
+	fi
 }
