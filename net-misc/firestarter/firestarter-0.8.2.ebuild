@@ -21,7 +21,7 @@ src_compile() {
 
 	local myconf
 	use nls \
-           && myconf="${myconf} --enable-nls"
+           && myconf="${myconf} --enable-nls" \
 		   || myconf="${myconf} --disable-nls"
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
