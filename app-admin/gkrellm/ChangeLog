@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.13 2002/09/23 17:03:49 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.14 2002/10/15 12:29:28 seemant Exp $
+
+*gkrellm-2.0.4 (15 Oct 2002)
+
+  15 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.0.4.ebuid
+  files/digest-gkrellm-2.0.4 files/gkrellmd :
+
+  Updated version, thanks to: dnellans@cs.utah.edu (Dave Nellans) in bug
+  #9002.  Also added an initscript for gkrellmd in case users wish to
+  automatically start the daemon.  The last pleasant surprise (since the
+  gkrellmd can be run on some server), with "-gtk" the emerge process only
+  requires glib1.2 to be installed, and it will ONLY build and install the
+  daemon -- no GTK+-2* required :)
 
 *gkrellm-2.0.2 (20 Sep 2002)
 

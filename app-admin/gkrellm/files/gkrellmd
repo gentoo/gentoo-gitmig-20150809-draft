@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/files/gkrellmd,v 1.1 2002/10/15 12:29:28 seemant Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting GNU Krell Monitor daemon"
+	start-stop-daemon --start --quiet --background --pidfile /var/run/gkrellmd.pid --make-pidfile --exec /usr/bin/gkrellmd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping GNU Krell Monitor daemon"
+	start-stop-daemon --stop --quiet --pidfile /var/run/gkrellmd.pid --name gkrellmd
+	eend $?
+}
