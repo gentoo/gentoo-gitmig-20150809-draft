@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.146 2005/02/03 22:40:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.147 2005/02/03 23:46:40 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -36,6 +36,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 ecpu_check() {
 	if [ $CROSSCOMPILE -eq 1 ] || [ ! -e /proc/cpuinfo ]
 	then
+		:
 	else
 		CPU_FLAGS=$1
 		USER_CPU=`grep "flags" /proc/cpuinfo`
