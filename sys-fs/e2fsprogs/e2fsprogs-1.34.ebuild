@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.16 2004/01/15 14:05:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.17 2004/01/29 04:42:50 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 hppa ppc ia64 sparc mips ppc64"
+KEYWORDS="x86 ~amd64 hppa ppc ia64 sparc mips ppc64 alpha"
 
 #debianutils is for 'readlink'
 DEPEND="${DEPEND}
