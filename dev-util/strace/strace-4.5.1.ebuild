@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.12 2004/06/02 20:23:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.13 2004/06/04 08:08:24 kloeri Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips ~alpha arm hppa amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ~ia64 ppc64"
 IUSE=""
 
 DEPEND="virtual/glibc

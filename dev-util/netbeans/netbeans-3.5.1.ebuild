@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.5.1.ebuild,v 1.5 2004/04/15 16:29:17 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.5.1.ebuild,v 1.6 2004/06/04 07:58:18 kloeri Exp $
 
 IUSE="kde gnome"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.netbeans.org"
 
 SLOT="0"
 LICENSE="GPL-2 Apache-1.1 sun-bcla-j2ee JPython SPL"
-KEYWORDS="x86 sparc ~alpha ~ppc ~amd64"
+KEYWORDS="x86 sparc alpha ~ppc ~amd64"
 #still need to add JPython, Sun Public and DynamicJava licenses
 #sun-j2ee actually contains Sun Binary Code license
 #will have to be renamed and containing it ebuilds updated at spome point..
