@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.12 2003/04/15 10:45:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.13 2003/04/18 12:09:16 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -308,6 +308,8 @@ src_unpack() {
 	fi
 
 	[ "${ARCH}" = "hppa" ] && echo "#define DoLoadableServer NO" >> config/cf/host.def
+	
+	echo "#define SharedLibXft NO" >> config/cf/host.def
 	
 	eend 0
 

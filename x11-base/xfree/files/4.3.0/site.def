@@ -33,7 +33,7 @@
 /* We PDEPEND on Xft2, and link XFree86 only to the static lib,
    so that we will not have conflicting files for Xft2 from 
    x11-base/xfree and x11-libs/xft ... */
-#define SharedLibXft           NO
+/* #define SharedLibXft           NO */
 #define SharedLibXft1          YES
 
 #define BuildFonts             YES

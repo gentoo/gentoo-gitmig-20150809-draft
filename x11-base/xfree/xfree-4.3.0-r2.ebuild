@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.14 2003/04/15 11:47:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.15 2003/04/18 12:09:16 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -40,9 +40,9 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.0.8"
+PATCH_VER="1.1.0"
 FT2_VER="2.1.3"
-SISDRV_VER="060403-1"
+SISDRV_VER="130403-1"
 SAVDRV_VER="1.1.27t"
 
 BASE_PV="${PV}"
@@ -125,14 +125,14 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	!media-libs/xft" 
 
 # unzip - needed for savage driver (version 1.1.27t)
-# media-libs/xft - blocked because of possible interferance with xfree
+# x11-libs/xft -- blocked because of interference with xfree's
  	
 PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
 	virtual/glu
-	virtual/xft"	
+	virtual/xft"
 
 src_unpack() {
 
@@ -249,8 +249,8 @@ src_unpack() {
 		# Without this, modules breaks with gcc3
 		if [ "`gcc-version`" = "3.1" ]
 		then
-			export CFLAGS="${CFLAGS} -fno-merge-constants"
-			export CXXFLAGS="${CXXFLAGS} -fno-merge-constants"
+			append-flags "-fno-merge-constants"
+			append-flags "-fno-merge-constants"
 		fi
 	fi
 
