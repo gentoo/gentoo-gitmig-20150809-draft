@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.7 2003/10/11 11:21:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.8 2003/11/16 18:36:33 brad_mssw Exp $
+
+  16 Nov 2003; Brad House <brad_mssw@gentoo.org> fribidi-0.10.4.ebuild:
+  mark stable on amd64
 
   11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> fribidi-0.10.4.ebuild:
   bug #30272
