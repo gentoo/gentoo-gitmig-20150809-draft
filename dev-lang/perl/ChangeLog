@@ -1,8 +1,12 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.6 2003/03/31 00:49:16 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.7 2003/03/31 02:12:07 rac Exp $
 
 *perl-5.8.0-r10 (30 Mar 2003)
+
+  30 Mar 2003; <rac@gentoo.org> perl-5.8.0-r10.ebuild:
+  marking stable again on x86 and ppc - previous sparc keyword commit undid this
+  and broke things
 
   30 Mar 2003; Rodney Rees <manson@gentoo.org> perl-5.8.0-r10.ebuild,
   marked stable for sparc
