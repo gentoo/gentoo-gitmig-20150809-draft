@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 8bc35b054bc721ce72f562ff051f2388 ChangeLog 348
 MD5 949a587648411208d7765009735ecb18 quake1-killer-2.2z.ebuild 849
-MD5 6870084561da749232269136e14a277c files/digest-quake1-killer-2.2z 112
+MD5 8bc35b054bc721ce72f562ff051f2388 ChangeLog 348
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 c1faddd0d6cf22c117d5294b9ef8659e files/digest-quake1-killer-2.2z 57
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB6vJrroRuSHgZdywRAnXhAJ99cZAkG237wnon7+b9A89DQkOCRgCeL4EY
-/zTw8GEZeWo8tThLZLPpgoo=
-=L4cg
+iD8DBQFB7vd1I1lqEGTUzyQRAj8PAJ4quxG9zOFWcVRHeXq4CEPinJQomQCgirhA
+cVCNPQw/UeAIF9jVbd0tkx0=
+=X7vc
 -----END PGP SIGNATURE-----
