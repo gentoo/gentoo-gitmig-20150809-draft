@@ -2,13 +2,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3-r1/startDM.sh,v 1.1 2002/12/23 04:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3-r1/startDM.sh,v 1.2 2002/12/25 18:51:06 azarah Exp $
 
 source /etc/init.d/functions.sh
 
 # We need to source /etc/profile for stuff like $LANG to work
 # bug #10190.
 source /etc/profile
+
+# Great new Gnome2 feature, AA
+# We enable this by default
+export GDK_USE_XFT=1
 
 if [ -e ${svcdir}/options/xdm/service ]
 then

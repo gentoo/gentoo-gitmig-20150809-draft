@@ -1,6 +1,23 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.77 2002/12/24 18:44:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.78 2002/12/25 18:51:05 azarah Exp $
+
+  25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfs.start, xfs.config,
+                                                    Xsession :
+
+  Changes to xfs.start of xfree-4.2.1-r2:
+  - Update to that of xfree-4.2.99.3-r1 where we only run fc-cache if
+    something changed.
+  Changes to xfs.start of xfree-4.2.1-r2 and xfree-4.2.99.3-r1:
+  - Replace some code for xfs.start with awk versions to increase speed.
+  - Fix a bug where it did not drop duplicate font directories.
+  - Also consider changes to fonts.scale and encodings.dir as reason to
+    re-index that font directory.
+  Changes to xfs.config of xfree-4.2.1-r2 and xfree-4.2.99.3-r1:
+  - Remove a duplicate font directory entry.
+  Changes to Xsession of xfree-4.2.1-r2 and xfree-4.2.99.3-r1:
+  - Change the shell to '/bin/bash --login' to at least for xdm fix
+    the environment problem.
 
   24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
                                                     xfree-4.2.99.3-r1.ebuild :
