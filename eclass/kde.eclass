@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.74 2003/02/28 09:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.75 2003/03/11 21:26:14 seemant Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -20,7 +20,7 @@ if [ -n "$KDEBASE" -a -n "`use ppc`" -a "${PV//3.1}" != "$PV" ]; then
 else
 	DEPEND="$DEPEND sys-devel/automake"
 fi
-DEPEND="$DEPEND sys-devel/autoconf sys-devel/make sys-devel/perl" # perl is used for makefile generation
+DEPEND="$DEPEND sys-devel/autoconf sys-devel/make dev-lang/perl" # perl is used for makefile generation
 
 # all kde apps need this one
 newdepend "~kde-base/kde-env-3"

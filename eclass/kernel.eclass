@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.20 2003/03/11 11:35:34 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.21 2003/03/11 21:26:32 seemant Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -27,7 +27,7 @@ then
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
 			   tcltk? dev-lang/tk
-			   sys-devel/perl
+			   dev-lang/perl
 			   >=sys-apps/modutils-2.4.2
 			   sys-devel/make )"
 	PROVIDE="virtual/linux-sources"
