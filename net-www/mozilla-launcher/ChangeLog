@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.41 2005/03/23 13:19:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.42 2005/03/23 18:43:04 agriffis Exp $
+
+  23 Mar 2005; <agriffis@gentoo.org> mozilla-launcher-1.22.ebuild,
+  mozilla-launcher-1.23.ebuild, mozilla-launcher-1.26.ebuild,
+  mozilla-launcher-1.28.ebuild:
+  Re-order find options #82653
 
 *mozilla-launcher-1.28 (23 Mar 2005)
 
