@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.1.90.ebuild,v 1.2 2002/11/10 13:10:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.1.90.ebuild,v 1.3 2002/11/10 21:06:20 azarah Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -62,6 +62,7 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/${P}-kde.patch || die
 	patch -p1 < ${FILESDIR}/${P}-scrollkeeper.patch || die
 	patch -p1 < ${FILESDIR}/${P}-subversion.patch || die
+	patch -p1 < ${FILESDIR}/${P}-utf8.patch || die
 	
 	# libtoolize to fix not all libs installing, and buggy .la files.
 	# also add the gnome-pilot.m4 to the macros directory to fix
@@ -122,7 +123,7 @@ src_compile() {
 
 	# Use Mozilla NSS libs if 'mozilla' *and* 'ssl' in USE
 	if [ -n "`use ssl`" -a -n "`use mozilla`" ] ; then
-		myconf="${myconf} --enable-nss=static \
+		myconf="${myconf} --enable-nss=yes \
 			--with-nspr-includes=${MOZILLA}/include/nspr \
 			--with-nspr-libs=${MOZILLA} \
 			--with-nss-includes=${MOZILLA}/include/nss \
