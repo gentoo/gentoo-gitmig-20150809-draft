@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.14 2002/11/28 07:54:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.15 2003/01/08 07:33:12 spider Exp $
 
 # The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
 
@@ -118,7 +118,8 @@ then
 	
 elif [ "X${ENGINE}" = "Xcrux" ]
 then
-	SRC_URI="mirror://gnome/2.0.1/sources/${MY_PN}/${MY_P}.tar.bz2"
+ 	PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+	SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 	
 elif [ "X${MY_PN}" = "Xgtk-engines" ] && [ "$SLOT" -eq "2" ]
 then
