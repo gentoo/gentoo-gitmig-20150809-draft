@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-1.10.ebuild,v 1.1 2004/08/12 21:30:21 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-1.10.ebuild,v 1.2 2004/08/13 12:20:12 pfeifer Exp $
 
-RESTRICT="nouserpriv"
 DESCRIPTION="A program that creates emergency boot disks/CDs using your kernel, tools and modules."
 HOMEPAGE="http://www.mondorescue.org/"
 SRC_URI="http://www.microwerks.net/~hugo/download/MondoCD/TGZS/${P}.tgz"
@@ -12,27 +11,13 @@ SLOT="0"
 KEYWORDS="~x86 -*"
 IUSE=""
 
-DEPEND=""
+DEPEND="virtual/libc"
 RDEPEND=">=app-arch/bzip2-0.9
 		>=sys-apps/mindi-kernel-1.0-r1
 		app-cdr/cdrtools
 		sys-libs/ncurses
 		sys-devel/binutils
 		sys-apps/gawk"
-
-pkg_setup () {
-	for i in ${FEATURES} ; do
-		if [ "${i}" = "userpriv" ] ; then
-			echo
-			ewarn "mindi cannot be installed if userpriv"
-			ewarn "is set within FEATURES."
-			ewarn "Please emerge mindi as follows:"
-			echo
-			ewarn "# FEATURES=\"-userpriv\" emerge mindi"
-			die "userpriv failure"
-		fi
-	done
-}
 
 src_unpack() {
 	unpack ${A} || die "Failed to unpack ${A}"
@@ -52,9 +37,11 @@ src_install() {
 	doexe analyze-my-lvm mindi parted2fdisk.pl
 
 	dosym /usr/share/mindi/mindi /usr/sbin/
+	dosym /usr/share/mindi/analyze-my-lvm /usr/sbin/
+	dosym /usr/share/mindi/parted2fdisk.pl /usr/sbin/
 
 	insinto /usr/share/mindi
-	doins deplist.txt isolinux-H.cfg isolinux.cfg \
+	doins deplist.txt dev.tgz isolinux-H.cfg isolinux.cfg \
 	msg-txt sys-disk.raw.gz syslinux-H.cfg syslinux.cfg
 
 	cp -a Mindi/ aux-tools/ rootfs/ ${D}/usr/share/mindi/
