@@ -2,11 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.64-r1.ebuild,v 1.1 2001/05/17 13:29:30 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.3 2001/10/19 22:11:59 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.4 2001/10/21 06:35:16 hallski Exp $
 
+P=Guppi-${PV}
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Plottin Tool"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/Guppi/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/guppi/"
 
 RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
