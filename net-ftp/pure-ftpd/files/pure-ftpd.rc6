@@ -17,7 +17,7 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting Pure-FTPd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/pure-ftpd
+	start-stop-daemon --start --quiet --exec /usr/sbin/pure-ftpd $SERVER $MAX_CONN $MAX_CONN_IP $DAEMON $DISK_FULL $USE_NAT $AUTH $MISC_OTHER
 	eend $?
 }
 
