@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.8.ebuild,v 1.4 2004/09/09 06:08:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.8.ebuild,v 1.5 2004/09/19 15:54:23 tgall Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc ~amd64"
+KEYWORDS="x86 alpha ppc ~amd64 ppc64"
 IUSE="gnome"
 
 RDEPEND="virtual/x11
