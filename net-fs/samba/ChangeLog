@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.138 2004/12/21 14:59:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.139 2004/12/29 03:07:24 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Guy Martin <gmsoft@gentoo.org> samba-3.0.9-r1.ebuild:
   Stable on hppa (#73943).
@@ -138,7 +141,7 @@
   09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> samba-3.0.6-r4.ebuild:
   Stable on sparc
 
-  09 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.6-r4.ebuild:
+  09 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> samba-3.0.6-r4.ebuild:
   Stable on alpha, bug 62476.
 
   08 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> samba-3.0.6-r4.ebuild:
@@ -207,7 +210,7 @@
   22 Jul 2004; Michael Glauche <mglauche@gentoo.org> samba-3.0.5.ebuild:
   Version bump, fixes 2 buffer overruns.
 
-  14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.4-r1.ebuild:
+  14 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> samba-3.0.4-r1.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Tom Gall <tgall@gentoo.org> samba-3.0.4-r1.ebuild:
@@ -277,7 +280,7 @@
   27 Apr 2004; Jason Wever <weeve@gentoo.org> samba-3.0.2a-r2.ebuild:
   Stable on sparc wrt bug #41800.
 
-  27 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.2a-r2.ebuild:
+  27 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> samba-3.0.2a-r2.ebuild:
   Keyworded alpha, see bug #41800.
 
 *samba-3.0.2a-r2 (26 Apr 2004)
