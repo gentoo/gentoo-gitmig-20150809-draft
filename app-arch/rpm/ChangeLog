@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.36 2004/04/07 22:51:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.37 2004/04/11 11:12:37 cretin Exp $
+
+  11 Apr 2004; Stefan Jones <cretin@gentoo.org> rpm-4.2.1.ebuild:
+  Mark as stable for all archs
 
   07 Apr 2004; Aron Griffis <agriffis@gentoo.org> rpm-4.0.4-r5.ebuild,
   rpm-4.2_pre069.ebuild:
