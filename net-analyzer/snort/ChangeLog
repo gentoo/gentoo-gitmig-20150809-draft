@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.20 2003/10/06 12:19:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.21 2003/10/08 22:04:41 weeve Exp $
+
+  08 Oct 2003; Jason Wever <weeve@gentoo.org> snort-2.0.2.ebuild:
+  masked on sparc until bug #30540 is fixed.
 
 *snort-2.0.2 (06 Oct 2003)
 
