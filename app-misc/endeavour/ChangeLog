@@ -1,8 +1,12 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.4 2002/11/07 20:02:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.5 2002/11/08 19:17:00 george Exp $
 
 *endeavour-2.1.20 (07 Nov 2002)
+
+  06 Nov 2002; George Shapovalov <george@gentoo.org> endeavour-2.1.20.ebuild :
+
+  incorporated fx from 2.1.14.
 
   07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> endeavour-2.1.20.ebuild
   files/digest-endeavour-2.1.20 :
@@ -11,7 +15,7 @@
 
 *endeavour-2.1.14.ebuild (16 May 2002)
 
-  06 Nov 2002l George Shapovalov <george@gentoo.org> endeavour-2.1.14.ebuild :
+  06 Nov 2002; George Shapovalov <george@gentoo.org> endeavour-2.1.14.ebuild :
   
   fixed glibc-2.3.1 (or possibly gcc-3.x) problem, see #9999 for details
 

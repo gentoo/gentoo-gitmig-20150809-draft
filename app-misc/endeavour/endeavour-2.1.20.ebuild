@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20.ebuild,v 1.1 2002/11/07 20:02:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20.ebuild,v 1.2 2002/11/08 19:17:00 george Exp $
+
+IUSE=""
 
 M=endeavour2-mimetypes
 S=${WORKDIR}/${P}
@@ -16,6 +18,16 @@ KEYWORDS="~x86"
 DEPEND="sys-apps/bzip2
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.14"
+
+src_unpack() {
+	unpack ${P}.tar.bz2
+	unpack ${M}.tgz
+
+	#need to remove reference to ctypes.h from fio.cpp to make gcc-3.x compile the package
+	cd ${S}/endeavour2
+	mv fio.cpp fio.cpp-orig
+	sed -e "s:#include <ctype.h>://#include <ctype.h>:" fio.cpp-orig >fio.cpp
+}
 
 src_compile() {
 	cd ${P}
@@ -42,7 +54,7 @@ src_install() {
 	insinto /usr/share/icons
 	doins endeavour_48x48.xpm image_browser_48x48.xpm icon_trash_48x48.xpm \
 		icon_trash_empty_48x48.xpm
-	
+
 	# install mimetypes
 	cd ${WORKDIR}/${M}
 	mv README README.mimetypes
