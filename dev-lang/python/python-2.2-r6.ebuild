@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r6.ebuild,v 1.2 2002/04/25 02:26:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r6.ebuild,v 1.3 2002/04/25 06:11:00 drobbins Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -15,8 +15,11 @@ DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
 	tcltk? ( >=dev-lang/tk-8.0 )"
+RDEPEND="$DEPEND dev-python/python-fchksum"
 
-RDEPEND="$DEPEND"
+# The dev-python/python-fchksum RDEPEND is needed to that this python provides
+# the functionality expected from previous pythons.
+
 PROVIDE="virtual/python"
 
 SLOT="2.2"
