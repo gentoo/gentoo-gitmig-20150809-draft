@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.15 2004/07/01 21:42:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.16 2004/07/15 02:46:14 agriffis Exp $
 
 inherit gnuconfig eutils
 
@@ -22,9 +22,7 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	use amd64 && gnuconfig_update
-	use alpha && gnuconfig_update
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	# replace usb.ids with an updated version
 	mv ${WORKDIR}/usb.ids-${USB_IDS_VER} ${S}/usb.ids || die "unable to replace usb.ids"

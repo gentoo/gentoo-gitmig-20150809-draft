@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.11 2004/07/01 21:42:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.12 2004/07/15 02:46:14 agriffis Exp $
 
 inherit gnuconfig
 
 inherit gnuconfig
 
-S=${WORKDIR}/${P}
 DESCRIPTION="USB enumeration utilities"
 SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz"
 HOMEPAGE="http://usb.cs.tum.edu/"
@@ -24,8 +23,7 @@ src_unpack() {
 	wget http://www.linux-usb.org/usb.ids
 	if [ ! -f usb.ids ] ; then mv usb.ids.orig usb.ids ; fi
 
-	use amd64 && gnuconfig_update
-	use alpha && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
