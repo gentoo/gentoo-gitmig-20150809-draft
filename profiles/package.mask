@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <eradicator@gentoo.org> (01 Feb 2004)
+# Issue when emergeing faad2 clean causes xmms plugins not to build, but upgrading
+# works.  Bug #38001
+#
+=media-libs/faad2-2.0_rc3-r1
+
 # <george@gentoo.org> (original mask 27 Oct 2003; renamed 01 Feb 2004)
 # masking work in progress (multiple blas related packages will have to be unmasked
 # sinchronously)
