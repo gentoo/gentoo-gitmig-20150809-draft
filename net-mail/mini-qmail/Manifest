@@ -1,0 +1,7 @@
+MD5 2f9b8daa579f961ba79125c099a267a5 files/digest-mini-qmail-1.04 134
+MD5 38ce537c00a3ca069dbeaee4adb6b990 files/99qmail 84
+MD5 0d6c1596674bf81103e39f12accab64e files/digest-mini-qmail-1.05 134
+MD5 3efe1b9d62baff86810f5bf529073e5a ChangeLog 459
+MD5 80a732387d50882d770108e590a91b2f mini-qmail-1.04.ebuild 2309
+MD5 f122df2231e2b47b96dba6895be1e7e8 metadata.xml 223
+MD5 de2a0477783bf2d476e8a0b5b98b0a32 mini-qmail-1.05.ebuild 2309
