@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-44-r1.ebuild,v 1.8 2004/06/25 00:23:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-44-r1.ebuild,v 1.9 2004/07/15 03:46:29 agriffis Exp $
 
 PN0=MigrationTools
 S=${WORKDIR}/${PN0}-${PV}
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.padl.com/OSS/MigrationTools.html"
 
 SLOT="0"
 KEYWORDS="x86 sparc ~amd64"
+IUSE=""
 LICENSE="as-is"
 
 DEPEND=""
