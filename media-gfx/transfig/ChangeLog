@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.5 2003/02/12 07:04:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.6 2003/04/18 14:22:13 malverian Exp $
+
+*transfig-3.2.4-r1 (18 Apr 2003)
+
+  18 Apr 2003; Philip Walls <malverian@gentoo.org> transfig-3.2.4.ebuild
+  files/transfig-3.2.4.patch :
+  Stopped from installing into /usr/local
+  Fixes bug #18983
 
 *transfig-3.2.4 (08 Jan 2003)
 
