@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.15 2004/11/08 20:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.16 2004/11/17 16:03:01 vapier Exp $
 
 inherit eutils
 
@@ -16,9 +16,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	local myconf
-
-	myconf="--with-gnu-ld --enable-accuracy"
+	local myconf="--enable-accuracy"
 	# --enable-speed         optimize for speed over accuracy
 	# --enable-accuracy      optimize for accuracy over speed
 	# --enable-experimental  enable code using the EXPERIMENTAL
@@ -28,17 +26,16 @@ src_compile() {
 	# default/approx is also possible, uses less cpu but sounds worse
 	[ "$PROFILE_ARCH" = "sparc64" ] && myconf="${myconf} --enable-fpm=64bit"
 
-	use debug && myconf="${myconf} --enable-debugging" \
-		|| myconf="${myconf} --disable-debugging"
-
-	econf ${myconf} || die "configure failed"
+	econf \
+		$(use_enable debug debugging) \
+		${myconf} || die "configure failed"
 	emake || die "make failed"
 }
 
 src_install() {
 	einstall || die "make install failed"
 
-	dodoc CHANGES COPYRIGHT CREDITS README TODO VERSION
+	dodoc CHANGES CREDITS README TODO VERSION
 
 	# This file must be updated with each version update
 	dodir /usr/$(get_libdir)/pkgconfig
