@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r3.ebuild,v 1.1 2004/07/28 18:47:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r3.ebuild,v 1.2 2004/07/30 04:37:30 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -133,7 +133,7 @@ src_install() {
 		cd ${D}/usr/lib; rm -f lib{form,menu,panel}*
 		cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h
 	else
-		if ( use bootstrap || use uclibc ) ; then
+		if use bootstrap ; then
 			cd ${D}/usr/lib; rm -f lib{form,menu,panel,ncurses++}*
 			cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h cursesapp.h curses?.h cursslk.h etip.h
 		fi

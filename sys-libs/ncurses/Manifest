@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a433b0a9b3bb67549453e57cb1b26ae ChangeLog 11502
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 ebcb4d035e3e96c283f8ee1083e0d2f6 ncurses-5.4-r2.ebuild 5155
 MD5 ea52ebcfb59abec2eb3b5825715c2fb6 ncurses-8.1.ebuild 879
-MD5 67813fcd10d0d0f3c3c7d3fcd0fd05c2 ncurses-5.4-r3.ebuild 5155
+MD5 14c8e34a87335151e42d095c3af7f6e2 ncurses-5.4-r3.ebuild 5138
 MD5 9e10302eed56e25bbf34d4f4fed15a1e ncurses-5.3-r5.ebuild 3824
 MD5 a6313d762f8b09a2a672ffa07c25dd8a ncurses-5.4-r1.ebuild 4507
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r2 64
@@ -16,3 +19,10 @@ MD5 c5b265c81eb2dea26b66cd656c61e99c files/ncurses-5.3-share-sed.patch 686
 MD5 1ecbf68a55269d2cebeb997f6973fc1d files/ncurses-5.4-share-sed.patch 686
 MD5 61ecd5aac5ddbd35cc4d4a00282eed01 files/ncurses-5.4-xterm.patch 495
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCdCZHTu7gpaalycRAotuAJ9T+oPJa+UOSf0VeKaJN+vAjyXXjACbBh+K
+EWJVcLU/iBZjdMJyw0QjKIA=
+=D5wD
+-----END PGP SIGNATURE-----
