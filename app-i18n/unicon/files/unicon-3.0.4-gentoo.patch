@@ -1,0 +1,11 @@
+--- unicon-3.0.4/sfonts/tools/main.cpp	2001-08-08 15:32:33.000000000 +0100
++++ unicon-3.0.4/sfonts/tools/main.cpp	2003-05-25 03:10:59.000000000 +0100
+@@ -29,7 +29,7 @@
+ #include <mytype.h>
+ #include <filter.hpp>
+ #include <sfont.hpp>
+-
++#include <string.h>
+ 
+ /* font_type */
+ #define XL_DB_GB       0

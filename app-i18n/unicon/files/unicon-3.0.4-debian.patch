@@ -1,0 +1,2087 @@
+--- unicon-3.0.4.orig/fonts/gb/Makefile.in
++++ unicon-3.0.4/fonts/gb/Makefile.in
+@@ -2,6 +2,7 @@
+ CFLAGS = @CFLAGS@
+ CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
+ PROG = encode-gb.o
++DESTDIR =
+ 
+ CC=gcc $(CFLAGS)
+ MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
+--- unicon-3.0.4.orig/fonts/gb/Makefile
++++ unicon-3.0.4/fonts/gb/Makefile
+@@ -0,0 +1,25 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
++PROG = encode-gb.o
++DESTDIR =
++
++CC=gcc $(CFLAGS)
++MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
++
++all: $(PROG)
++
++$(PROG): encode-gb.mo 
++	ld -m elf_i386 -r encode-gb.mo -o $(PROG)
++encode-gb.mo: font_gb16.h encode-gb.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c encode-gb.c -o encode-gb.mo
++
++clean:
++	rm -f a.out *.bak *.o *~ core encode-gb.mo $(PROG)
++
++distclean: clean
++	rm -f Makefile tags TAGS
++
++install: all
++	sh install_module.sh $(PROG)
+--- unicon-3.0.4.orig/fonts/gbk/Makefile.in
++++ unicon-3.0.4/fonts/gbk/Makefile.in
+@@ -2,6 +2,7 @@
+ CFLAGS = @CFLAGS@
+ CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
+ PROG = encode-gbk.o
++DESTDIR =
+ 
+ CC=gcc $(CFLAGS)
+ MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
+--- unicon-3.0.4.orig/fonts/gbk/Makefile
++++ unicon-3.0.4/fonts/gbk/Makefile
+@@ -0,0 +1,25 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
++PROG = encode-gbk.o
++DESTDIR =
++
++CC=gcc $(CFLAGS)
++MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
++
++all: $(PROG) 
++
++$(PROG): encode-gbk.mo
++	ld -m elf_i386 -r encode-gbk.mo -o $(PROG)
++encode-gbk.mo: font_gbk16.h encode-gbk.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c encode-gbk.c -o encode-gbk.mo
++
++clean:
++	rm -f a.out *.bak *.o *.mo *~ core encode-gb.mo $(PROG)
++
++distclean: clean
++	rm -f Makefile tags TAGS
++
++install: all
++	sh install_module.sh $(PROG)
+--- unicon-3.0.4.orig/fonts/jis/Makefile.in
++++ unicon-3.0.4/fonts/jis/Makefile.in
+@@ -2,6 +2,7 @@
+ CFLAGS = @CFLAGS@
+ CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
+ PROG = encode-jis.o
++DESTDIR =
+ 
+ CC=gcc $(CFLAGS)
+ MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
+--- unicon-3.0.4.orig/fonts/jis/Makefile
++++ unicon-3.0.4/fonts/jis/Makefile
+@@ -0,0 +1,25 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
++PROG = encode-jis.o
++DESTDIR =
++
++CC=gcc $(CFLAGS)
++MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
++
++all: $(PROG) 
++
++$(PROG): encode-jis.mo
++	ld -m elf_i386 -r encode-jis.mo -o $(PROG)
++encode-jis.mo: font_jis16.h encode-jis.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c encode-jis.c -o encode-jis.mo
++
++clean:
++	rm -f a.out core *.bak *.o *~ *.mo $(PROG)
++
++distclean: clean
++	rm -f Makefile tags TAGS
++
++install: all
++	sh install_module.sh $(PROG)
+--- unicon-3.0.4.orig/fonts/big5/Makefile.in
++++ unicon-3.0.4/fonts/big5/Makefile.in
+@@ -2,6 +2,7 @@
+ CFLAGS = @CFLAGS@
+ CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
+ PROG = encode-big5.o
++DESTDIR=
+ 
+ KERNELRELEASE=$(VERSION).$(PATCHLEVEL).$(SUBLEVEL)$(EXTRAVERSION)
+  
+--- unicon-3.0.4.orig/fonts/big5/Makefile
++++ unicon-3.0.4/fonts/big5/Makefile
+@@ -0,0 +1,27 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
++PROG = encode-big5.o
++DESTDIR=
++
++KERNELRELEASE=$(VERSION).$(PATCHLEVEL).$(SUBLEVEL)$(EXTRAVERSION)
++ 
++CC=gcc $(CFLAGS)
++MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
++
++all: $(PROG) 
++
++$(PROG): encode-big5.mo
++	ld -m elf_i386 -r encode-big5.mo -o $(PROG)
++encode-big5.mo: font_big5_16.h encode-big5.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c encode-big5.c -o encode-big5.mo
++
++clean:
++	rm -f a.out *.bak *.o *.mo core *~ $(PROG)
++
++distclean: clean
++	rm -f Makefile tags TAGS
++
++install: all
++	sh install_module.sh $(PROG)
+--- unicon-3.0.4.orig/fonts/kscm/Makefile.in
++++ unicon-3.0.4/fonts/kscm/Makefile.in
+@@ -2,6 +2,7 @@
+ CFLAGS = @CFLAGS@
+ CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
+ PROG = encode-kscm.o
++DESTDIR =
+ 
+ CC=gcc $(CFLAGS)
+ MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
+--- unicon-3.0.4.orig/fonts/kscm/Makefile
++++ unicon-3.0.4/fonts/kscm/Makefile
+@@ -0,0 +1,26 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++CFLAGS += -I/usr/src/linux/include -I. -include /usr/src/linux/include/linux/modversions.h
++PROG = encode-kscm.o
++DESTDIR =
++
++CC=gcc $(CFLAGS)
++MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
++
++all: $(PROG) 
++
++$(PROG): encode-kscm.mo
++	ld -m elf_i386 -r encode-kscm.mo -o $(PROG)
++encode-kscm.mo: font_kscm16.h encode-kscm.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c encode-kscm.c -o encode-kscm.mo
++
++clean:
++	rm -f a.out *.bak *.o core *~ *.mo $(PROG)
++
++distclean: clean
++	rm -f Makefile tags TAGS
++
++install: all
++	sh install_module.sh $(PROG)
++
+--- unicon-3.0.4.orig/fonts/Makefile
++++ unicon-3.0.4/fonts/Makefile
+@@ -0,0 +1,33 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++all:
++	cd big5; make
++	cd gb; make
++	cd gbk; make
++	cd kscm; make
++	cd jis; make
++
++install: all
++	cd big5; make install
++	cd gb; make install
++	cd gbk; make install
++	cd kscm; make install
++	cd jis; make install
++
++clean:
++	cd big5; make clean
++	cd gb; make clean
++	cd gbk; make clean
++	cd jis; make clean
++	cd kscm; make clean
++	rm -f *.bak core *~
++
++distclean: clean
++	rm -f config.status config.log config.cache Makefile
++	cd big5;  make distclean
++	cd gb; make distclean
++	cd gbk; make distclean
++	cd jis; make distclean
++	cd kscm; make distclean
++	rm -f *.bak core tags TAGS
++
+--- unicon-3.0.4.orig/tools/Makefile
++++ unicon-3.0.4/tools/Makefile
+@@ -0,0 +1,26 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++LIBDIR=$(prefix)/lib/unicon
++CFLAGS = -g -O2
++CFLAGS += -I. -I../include
++PROG = uniconcfg uniconctrl
++
++CC=gcc $(CFLAGS)
++
++all: $(PROG)
++uniconcfg: 
++	$(CC) -lnewt uniconcfg.c -o uniconcfg
++uniconctrl:
++	$(CC) uniconctrl.c -o uniconctrl
++clean:
++	rm -f a.out *.bak *.o core *~ $(PROG)
++
++install: all
++	mkdir -p $(prefix)/bin $(LIBDIR)/bin
++	install -o root -g root -m755 uniconcfg $(LIBDIR)/bin/uniconcfg
++	install -o root -g root -m755 uniconctrl $(LIBDIR)/bin/uniconctrl
++	ln -sf $(prefix)/lib/unicon/bin/uniconctrl /usr/bin/uniconctrl
++	ln -sf $(prefix)/lib/unicon/bin/uniconcfg /usr/bin/uniconcfg
++
++distclean: clean
++	rm -f Makefile tags TAGS
+--- unicon-3.0.4.orig/Makefile.in
++++ unicon-3.0.4/Makefile.in
+@@ -1,10 +1,10 @@
+ prefix=@prefix@
+ all:
+-	cd unikey; make
+-	cd fonts; make
++#	cd unikey; make
++#	cd fonts; make
+ 	cd unicon; make
+-	cd tools; make
+-	cd unimap; make
++#	cd tools; make
++#	cd unimap; make
+ 
+ data: 
+ 	cd unicon; make data
+@@ -17,26 +17,26 @@
+ 	if [ ! -d $(prefix)/lib/unicon ] ; then mkdir -p $(prefix)/lib/unicon; fi
+ 	if [ ! -d $(prefix)/bin ] ; then mkdir -p $(prefix)/bin; fi
+ 	cd unicon; make install
+-	cd unikey; make install
+-	cd fonts; make install
+-	cd tools; make install
+-	cd unimap; make install
++#	cd unikey; make install
++#	cd fonts; make install
++#	cd tools; make install
++#	cd unimap; make install
+ 
+ clean:
+ 	cd unicon; make clean
+-	cd unikey; make clean
+-	cd fonts; make clean
+-	cd tools; make clean
+-	cd unimap; make clean
++#	cd unikey; make clean
++#	cd fonts; make clean
++#	cd tools; make clean
++#	cd unimap; make clean
+ 	rm -f core *.bak *~
+ 
+ distclean: clean
+ 	rm -f config.status config.log config.cache Makefile
+ 	cd unicon; make distclean
+-	cd unikey; make distclean
+-	cd fonts; make distclean
+-	cd tools; make distclean
+-	cd sfonts; make distclean
+-	cd unimap; make distclean
++#	cd unikey; make distclean
++#	cd fonts; make distclean
++#	cd tools; make distclean
++#	cd sfonts; make distclean
++#	cd unimap; make distclean
+ 	rm -f *.bak
+ 
+--- unicon-3.0.4.orig/sfonts/tools/Makefile
++++ unicon-3.0.4/sfonts/tools/Makefile
+@@ -0,0 +1,36 @@
++# Generated automatically from Makefile.in by configure.
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++PROG = sfont
++OBJS = main.o sfont.o filter.o encode-gb.o encode-gbk.o \
++       encode-big5.o encode-jis.o encode-kscm.o
++FONT_PATH=../../fonts
++CC=gcc -g $(CFLAGS) -I. -I../../include 
++
++all: $(PROG)
++
++$(PROG): $(OBJS)
++	$(CC) $(OBJS) -o $(PROG)
++main.o: main.cpp
++	$(CC) -c main.cpp -o main.o
++filter.o: filter.cpp filter.hpp
++	$(CC) -c filter.cpp -o filter.o
++sfont.o: sfont.cpp sfont.hpp
++	$(CC) -c sfont.cpp -o sfont.o
++encode-gb.o : $(FONT_PATH)/gb/encode-gb.c $(FONT_PATH)/gb/font_gb16.h
++	$(CC) -c -I$(FONT_PATH)/gb $(FONT_PATH)/gb/encode-gb.c -o encode-gb.o
++encode-gbk.o : $(FONT_PATH)/gbk/encode-gbk.c $(FONT_PATH)/gbk/font_gbk16.h
++	$(CC) -c -I$(FONT_PATH)/gbk $(FONT_PATH)/gbk/encode-gbk.c -o encode-gbk.o
++encode-big5.o : $(FONT_PATH)/big5/encode-big5.c $(FONT_PATH)/big5/font_big5_16.h
++	$(CC) -c -I$(FONT_PATH)/big5 $(FONT_PATH)/big5/encode-big5.c -o encode-big5.o
++encode-jis.o : $(FONT_PATH)/jis/encode-jis.c $(FONT_PATH)/jis/font_jis16.h
++	$(CC) -c -I$(FONT_PATH)/jis $(FONT_PATH)/jis/encode-jis.c -o encode-jis.o
++encode-kscm.o : $(FONT_PATH)/kscm/encode-kscm.c $(FONT_PATH)/kscm/font_kscm16.h
++	$(CC) -c -I$(FONT_PATH)/kscm $(FONT_PATH)/kscm/encode-kscm.c -o encode-kscm.o
++
++clean:
++	rm -f a.out *.bak *.o core *~ $(PROG)
++
++distclean: clean
++	rm -f Makefile
+--- unicon-3.0.4.orig/sfonts/genfont/Makefile
++++ unicon-3.0.4/sfonts/genfont/Makefile
+@@ -0,0 +1,52 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++CFLAGS += -I.
++
++CC=gcc $(CFLAGS)
++MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
++PROG = gb gbk big5 jis kscm
++
++all: $(PROG)
++
++# GB
++gb: sencode-gb.mo 
++	ld -m elf_i386 -r sencode-gb.mo -o sencode-gb.o
++sencode-gb.mo: sencode-gb.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c sencode-gb.c -o sencode-gb.mo
++
++# GBK
++gbk: sencode-gbk.mo
++	ld -m elf_i386 -r sencode-gbk.mo -o sencode-gbk.o
++sencode-gbk.mo: sencode-gbk.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c sencode-gbk.c -o sencode-gbk.mo
++
++# Big5 
++big5: sencode-big5.mo 
++	ld -m elf_i386 -r sencode-big5.mo -o sencode-big5.o
++sencode-big5.mo: sencode-big5.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c sencode-big5.c -o sencode-big5.mo
++
++# JIS
++jis: sencode-jis.mo
++	ld -m elf_i386 -r sencode-jis.mo -o sencode-jis.o
++sencode-jis.mo: sencode-jis.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c sencode-jis.c -o sencode-jis.mo
++
++# JIS
++kscm: sencode-kscm.mo
++	ld -m elf_i386 -r sencode-kscm.mo -o sencode-kscm.o
++sencode-kscm.mo: sencode-jis.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c sencode-kscm.c -o sencode-kscm.mo
++
++clean:
++	rm -f a.out *.bak *.o core *~ sencode-gb.mo $(PROG)
++
++distclean: clean
++	rm -f Makefile
++	rm -f *.h
++
++install: all
++	mkdir -p /lib/modules/`uname -a|awk '{print $$3}'`/misc
++	cp -f $(PROG) /lib/modules/`uname -a|awk '{print $$3}'`/misc
++
+--- unicon-3.0.4.orig/sfonts/Makefile
++++ unicon-3.0.4/sfonts/Makefile
+@@ -0,0 +1,29 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CC=gcc $(CFLAGS)
++PROG = tools 
++
++all: $(PROG)
++
++tools:
++	cd tools; make 
++
++# run genfont manual
++genfont:
++	cd genfont; make
++
++clean:
++	rm -f *.bak *.o *~ core
++	cd tools; make  clean
++	cd genfont; make clean
++
++
++distclean: clean
++	rm -f Makefile tags TAGS
++	cd tools; make  distclean
++	cd genfont; make distclean
++
++install: all
++	cd tools; make  install
++	cd genfont; make install
++
+--- unicon-3.0.4.orig/unicon/client/Makefile.in
++++ unicon-3.0.4/unicon/client/Makefile.in
+@@ -34,8 +34,8 @@
+ 	g++ $(CFLAGS) -D__DLL_SUPPORT__ -ldl -lpth test.cpp $(PROG_LIB) $(SERVER_LIB) -o test
+ 
+ install: all
+-	mkdir -p $(prefix)/lib/unicon
+-	cp -f $(PROG_LIB) $(prefix)/lib/unicon
++#	mkdir -p $(prefix)/lib
++	cp -f $(PROG_LIB) $(prefix)/lib
+ clean:
+ 	rm -f *.o a.out core *~ *.bak $(PROG_LIB) $(PROG)
+ 
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/Makefile.in
++++ unicon-3.0.4/unicon/ImmModules/cce/Makefile.in
+@@ -6,7 +6,7 @@
+ CCE_OBJS = xl_hzinput.o CCE_hzinput.o intcode.o \
+            xl_pinyin.o CCE_pinyin.o 
+ 
+-CFLAGS = -g -O2 -fomit-frame-pointer -W -Wall -I. -I../../include
++CFLAGS = -fPIC -g -O2 -fomit-frame-pointer -W -Wall -I. -I../../include
+ 
+ all: cce_hzinput.so cce_pinyin.so gb18030_intcode.so 
+ 
+@@ -15,14 +15,14 @@
+ xl_hzinput.o : xl_hzinput.c
+ 	gcc $(CFLAGS) -c xl_hzinput.c -o xl_hzinput.o
+ cce_hzinput.so: CCE_hzinput.o xl_hzinput.o
+-	gcc CCE_hzinput.o xl_hzinput.o -shared -o cce_hzinput.so
++	gcc CCE_hzinput.o xl_hzinput.o -fPIC -shared -o cce_hzinput.so
+ 
+ xl_pinyin.o : xl_pinyin.c xl_pinyin.h
+ 	gcc $(CFLAGS) -c xl_pinyin.c -o xl_pinyin.o
+ CCE_pinyin.o : CCE_pinyin.c
+ 	gcc $(CFLAGS) -c CCE_pinyin.c -o CCE_pinyin.o
+ cce_pinyin.so : xl_pinyin.o CCE_pinyin.o
+-	gcc CCE_pinyin.o xl_pinyin.o -shared -o cce_pinyin.so
++	gcc CCE_pinyin.o xl_pinyin.o -fPIC -shared -o cce_pinyin.so
+ 
+ intcode.o : xl_intcode.c
+ 	gcc $(CFLAGS) -c xl_intcode.c -o intcode.o
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/inputs/Makefile.in
++++ unicon-3.0.4/unicon/ImmModules/cce/inputs/Makefile.in
+@@ -2,7 +2,7 @@
+ prefix=@prefix@
+ CFLAGS = @CFLAGS@
+ 
+-CFLAGS += -I. -I..
++CFLAGS += -O2 -I. -I..
+ 
+ LIBDIR  = $(prefix)/lib/unicon
+ LD      = gcc $(CFLAGS)
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/inputs/cin2dat.c
++++ unicon-3.0.4/unicon/ImmModules/cce/inputs/cin2dat.c
+@@ -114,7 +114,7 @@
+ 
+ /* qcmp2 compare two ITEM2 structure, according to its key1/key2/ch */
+ int
+-qcmp2 (ITEM2 * a, ITEM2 * b)
++qcmp2 (const ITEM2 * a, const ITEM2 * b)
+ {
+   if (a->key1 > b->key1)
+     return 1;
+@@ -134,7 +134,7 @@
+ 
+ /* qcmp compare two ITEM2 structure, according to its key1/key2/occur_seq */
+ int
+-qcmp (ITEM2 * a, ITEM2 * b)
++qcmp (const ITEM2 * a, const ITEM2 * b)
+ {
+   if (a->key1 > b->key1)
+     return 1;
+@@ -148,7 +148,7 @@
+ }
+ 
+ int
+-qcmp_ser (ITEM * a, ITEM * b)
++qcmp_ser (const ITEM * a, const ITEM * b)
+ {
+   if (a->ch > b->ch)
+     return 1;
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/inputs/cin2tab.c
++++ unicon-3.0.4/unicon/ImmModules/cce/inputs/cin2tab.c
+@@ -3,6 +3,7 @@
+ #include <stdarg.h>
+ #include <sys/types.h>
+ #include <string.h>
++#include <stdlib.h>
+ #include "xl_hzinput.h"
+ 
+ FILE *fr, *fw;
+@@ -114,7 +115,7 @@
+ 
+ /* qcmp2 compare two ITEM2 structure, according to its key1/key2/ch */
+ int
+-qcmp2 (ITEM2 * a, ITEM2 * b)
++qcmp2 (const ITEM2 * a, const ITEM2 * b)
+ {
+   if (a->key1 > b->key1)
+     return 1;
+@@ -152,7 +153,7 @@
+ }
+ 
+ int
+-qcmp_ser (ITEM * a, ITEM * b)
++qcmp_ser (const ITEM * a, const ITEM * b)
+ {
+   if (a->ch > b->ch)
+     return 1;
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/inputs/tab2txt.c
++++ unicon-3.0.4/unicon/ImmModules/cce/inputs/tab2txt.c
+@@ -71,7 +71,7 @@
+       exit (1);
+     }
+ 
+-  if (fseek (in, -4, SEEK_END) == -1 ||
++  if (fseek (in, -sizeof(int), SEEK_END) == -1 ||
+       fread (&fsize, sizeof (int), 1, in) != 1 || fsize != ftell (in) - sizeof (int))	// error!!
+     {
+       fprintf (stderr, "%s is not a valid pinyin phrase file.\n", infile);
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/CCE_pinyin.c
++++ unicon-3.0.4/unicon/ImmModules/cce/CCE_pinyin.c
+@@ -44,6 +44,8 @@
+ extern void CCE_ClosePinyin (InputModule * p);
+ extern InputModule *pCCE_OpenPinyin (char *szPath);
+ extern void Pinyin_SaveAllPyUsrPhrase ();
++extern int SaveUsrPhrase(char *pathname);
++extern int SavePhraseFrequencyi(char *pathname);
+ 
+ static void
+ SetPhraseBuffer (PhraseItem * p, char *buf, int buflen)
+@@ -156,6 +158,12 @@
+ static int
+ IMM_Flush ()
+ {
++  char name[256];
++  sprintf(name,"%s/.pyinput/usrphrase.tab",getenv("HOME"));
++  SaveUsrPhrase(name);
++  sprintf(name,"%s/.pyinput/sysfrequency.tab",getenv("HOME"));
++  SavePhraseFrequency(name);
++
+   return 1;
+ }
+ 
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/xl_pinyin.c
++++ unicon-3.0.4/unicon/ImmModules/cce/xl_pinyin.c
+@@ -43,7 +43,8 @@
+ 
+ static int LoadPinyinTable (char *pathname);
+ static int SaveSysPhrase (char *pathname, int remove);
+-static int SaveUsrPhrase (char *pathname);
++//static int SaveUsrPhrase (char *pathname);
++int SaveUsrPhrase (char *pathname);
+ static int LoadUsrPhrase (char *pathname);
+ static int LoadSysPhrase (char *pathname);
+ static void FindMatchPhrase (InputModule * inmd, PYString pinyin[],
+@@ -59,11 +60,13 @@
+       // MAX_EACH_PY = 38    a[], b[], c[] ....
+       // map the pinyin to keys
+ static SysPhrase *sysph[MAX_PY_NUM];	// system phrases
+-static int sys_size;
++static int sys_size,sys_num;
+ 
+-static int FuzzyPinyin;		// zh-ch-sh z-c-s
++static int FuzzyPinyin =0 ;		// zh-ch-sh z-c-s
+ static UsrPhrase *usrph[MAX_PY_NUM];	//user defined phrase
+ 
++static int LoadPhraseFrequency(char *pathname);
++
+ /**************************************************************************
+  *                   Structure of the Char/Phrases                        *
+  *     u_char len;     // char/phrase len                                 * 
+@@ -134,7 +137,7 @@
+ 
+   //Rat: modified for processing user-defined dictionaries
+   if ((usrhome = getenv ("HOME")) != NULL)
+-    {
++	{
+       sprintf (buf, "%s/%s", usrhome, ".pyinput");
+       retval = stat (buf, &statbuf);
+ 
+@@ -148,24 +151,24 @@
+ 		{
+ 		  if ( statbuf.st_size < MIN_USRPHR_SIZE || LoadUsrPhrase (buf) == -1)
+ 		    {
+-		      printf ("Couldn't load %s. Please fix it.\n", buf);
+-		      sprintf (buf, "%s/%s", szPath, "usrphrase.tab");
+-		      if ((retval = access (buf, R_OK)) == 0)
+-			{
+-			  if (LoadUsrPhrase (buf) == -1)
+-			    printf ("Couldn't load %s. Please fix it.\n",
+-				    buf);
++		      printf ("Couldn't load %s. Please fix it. size or load error\n", buf);
++				  sprintf (buf, "%s/%s", szPath, "usrphrase.tab");
++				  if ((retval = access (buf, R_OK)) == 0)
++				{
++				  if (LoadUsrPhrase (buf) == -1)
++					printf ("Couldn't load %s. Please fix it. sysfile\n",
++						buf);
++				}
++				}
+ 			}
+-		    }
+-		}
+-	      else
+-		{
+-		  creat (buf, 0600);
+-		  sprintf (buf, "%s/%s", szPath, "usrphrase.tab");
++			  else
++			{
++			  creat (buf, 0600);
++			  sprintf (buf, "%s/%s", szPath, "usrphrase.tab");
+ 		  if ((retval = access (buf, R_OK)) == 0)
+ 		    {
+ 		      if (LoadUsrPhrase (buf) == -1)
+-			printf ("Couldn't load %s. Please fix it.\n", buf);
++			printf ("Couldn't load %s. Please fix it. couldn't access\n", buf);
+ 		    }
+ 		}
+ 	    }
+@@ -186,7 +189,7 @@
+ 	    {
+ 	      if (LoadUsrPhrase (buf) == -1)
+ 		{
+-		  printf ("Couldn't load %s. Please fix it.\n", buf);
++		  printf ("Couldn't load %s. Please fix it. create\n", buf);
+ 		}
+ 	    }
+ 	}
+@@ -207,6 +210,13 @@
+ 
+     }
+ 
++  sprintf(buf,"%s/%s/%s",usrhome,".pyinput","sysfrequency.tab");
++  if(LoadPhraseFrequency(buf) == -1)
++  {
++	  creat(buf,0700);
++	  SavePhraseFrequency(buf);
++  }
++
+   return 1;
+ }
+ 
+@@ -265,7 +275,8 @@
+ }
+ 
+  /* need to combine the same pinyin/phrases */
+-static int
++//static int
++int
+ SaveUsrPhrase (char *pathname)
+ {
+   int i, tmpcount;
+@@ -340,6 +351,53 @@
+   return 0;
+ }
+ 
++int SavePhraseFrequency(char *pathname)
++{
++  FILE *stream;
++  Phrase *sph;
++  SysPhrase *sysph_tmp;
++  char *f;
++  char *p;
++  int i,j,k,index,pcount;
++
++  if ( (stream = fopen(pathname , "wb" )) == NULL )
++  {
++        fatal("%s file can't open\n",pathname);
++        return -1;
++  }
++
++  f = (char *) malloc (sys_num);
++  memset (f, 0, sys_num);
++  pcount=0;
++
++  for(i = 1; i < MAX_PY_NUM; i++)
++  {
++     sysph_tmp = sysph[i];
++     assert (sysph_tmp != NULL);
++     p = (char*)sysph_tmp->phrase;   // count = total pinyin number
++     for(j = 0; j < sysph_tmp->count; j++)
++     {
++        sph = (Phrase *)p;
++        assert (sph != NULL);
++        for(k = 0; k < sph->count; k++)
++        {
++            index = sph->len+1 + (2*sph->len+1)*k + 2*sph->len;
++            f[pcount]=sph->key[index];
++            pcount++;
++        }   
++        p += SizeOfPhrase(sph->len,sph->count);
++     }
++  }
++  assert (pcount==sys_num);
++  fseek(stream,0,SEEK_SET);
++  fwrite(f, sys_num, 1, stream); 
++  fwrite(&(sys_size),sizeof(int),1,stream);
++  fwrite(&(sys_num),sizeof(int),1,stream);
++  free(f);
++  fclose(stream);
++  return 0;
++}
++
+ // don't save the frequency information, all lost?
+ static int
+ SaveSysPhrase (char *pathname, int remove)
+@@ -483,6 +541,7 @@
+   fseek (stream, 0, SEEK_SET);
+   p = (char *) malloc (sys_size);
+   memset (p, 0, sys_size);
++  sys_num = 0;
+   /* Attach the shared segment to local address space */
+   if (fread (p, sys_size, 1, stream) != 1)
+     {
+@@ -494,15 +553,74 @@
+       sysph[i] = sysph_tmp = (SysPhrase *) p;
+       p = (char *) sysph_tmp->phrase;
+       for (j = 0; j < sysph_tmp->count; j++)
+-	{
++	  {
+ 	  kph = (Phrase *) p;
+ 	  p += SizeOfPhrase (kph->len, kph->count);	// skip the string 
+-	}
++	  sys_num += kph->count;
++	  }
+     }
+   fclose (stream);
+   return 0;
+ }
+ 
++static int LoadPhraseFrequency(char *pathname)
++{
++   FILE *stream;
++   Phrase *sph;
++   SysPhrase *sysph_tmp;
++   char *f;
++   char *p;
++   int i,j,k,index,sys_size_tmp,sys_num_tmp,pcount;
++ 
++   if ( (stream = fopen(pathname , "rb" )) == NULL )
++   {
++         fatal("%s file can't open\n",pathname);
++         return -1;
++   }
++ 
++   if (fseek(stream,-sizeof(int)*2,SEEK_END) == -1 || 
++       fread(&(sys_size_tmp),sizeof(int),1,stream) != 1 ||
++       fread(&(sys_num_tmp),sizeof(int),1,stream) != 1 ||
++       sys_size != sys_size_tmp||   
++       sys_num_tmp != ftell(stream)-sizeof(int)*2 ||
++       sys_num != sys_num_tmp)   // error!!
++   {
++       fatal("%s is not a valid pinyin phrase freqency file.\n",pathname);
++       return -1;
++   }
++   fseek(stream,0,SEEK_SET);
++   f = (char *) malloc (sys_num);
++   memset (f, 0, sys_num);
++   if (fread(f, sys_num, 1, stream) != 1)
++   {
++       fatal("Load File %s Error.\n", pathname);
++       return -1;
++   }
++   //
++   pcount=0;
++   for(i = 1; i < MAX_PY_NUM; i++)
++   {
++      sysph_tmp = sysph[i];
++      assert (sysph_tmp != NULL);
++      p = (char*)sysph_tmp->phrase;   // count = total pinyin number
++      for(j = 0; j < sysph_tmp->count; j++)
++      {
++         sph = (Phrase *)p;
++         assert (sph != NULL);
++         for(k = 0; k < sph->count; k++)
++         {
++             index = sph->len+1 + (2*sph->len+1)*k + 2*sph->len;
++             sph->key[index] = f[pcount];
++             pcount++;
++         }   
++         p += SizeOfPhrase(sph->len,sph->count);
++	 }
++  }
++   free(f);
++  fclose(stream);
++  return 0;
++}
++
+ // When loading the phrase library, save it in memory
+ // structure, dynamic linklist
+ /* str, hanzi codes, key: pinyin codes, len: length, pass: system/user */
+@@ -676,6 +794,7 @@
+   inmd->lenkey = 0;
+   inmd->key[0] = '\0';
+   inmd->nTotalCurSel = 0;
++  inmd->flg_english = 0;
+ }
+ 
+ // pinyin[0]-pinyin[len-1], parsed pinyin chars
+@@ -710,6 +829,7 @@
+ 
+   if (!inmd->len)
+     return NULL;
++  printf("szGetSelectPhrase called\n");
+ 
+   idx = inmd->startpos + n;
+ 
+@@ -735,6 +855,15 @@
+   char strhz[MAX_PHRASE_LEN * 2 + 1];
+   int pos, idx;
+ 
++  
++  if (ch == '\n')
++  {
++	  strcpy(strbuf,inmd->inbuf);
++	  ResetPinyinInput(inmd);
++	  return 2;
++  }
++  
++
+   if (!inmd->len)
+     return 1;
+ 
+@@ -782,12 +911,16 @@
+     }
+   else				// not yet, some unselected pinyin exist
+     {
++	  inmd->flg_english = 0;
+       // forward the pinyinpos pointer
+       for (pos = strlen (strhz) / 2; pos > 0; inmd->pinyinpos++)
+ 	{
+ 	  ch = inmd->pinyin[inmd->pinyinpos][0];
+ 	  if (ch == 'i' || ch == 'u' || ch == 'v' || ch < 'a' || ch > 'z')
++	  {
++		inmd->flg_english = 1;
+ 	    continue;
++	  }
+ 	  pos--;
+ 	}
+ 
+@@ -820,21 +953,26 @@
+ 
+   char chtmp;
+   int count;
++  int i;
++  char tmpbuf[128];
+ 
+   /* \010 = Ctrl+H, \177 = BackSpace */
+   if (ch == '\010' || ch == '\177')	// BackSpace
+     {
+       if (!strlen (inbuf))
+-	return 0;
++		return 0;
+       else if (!strlen (inbuftmp))
+ 	{
+ 	  strcpy (inbuftmp, inbuf);
++	  inbuf[strlen(inbuf)-1] = '\0';
+ 	  *pybuftmp = '\0';	// clear all the selected chars, reparse
+ 	}
+       else
+ 	{
+ 	  inbuf[strlen (inbuf) - 1] = '\0';
+-	  inbuftmp[strlen (inbuftmp) - 1] = '\0';	// cut one pinyin-char off
++	  if(inmd->flg_english) strcpy(inbuftmp,inbuf);
++	  else inbuftmp[strlen (inbuftmp) - 1] = '\0';	// cut one pinyin-char off
++
+ 	  if (!strlen (inbuf))
+ 	    {
+ 	      ResetPinyinInput (inmd);
+@@ -862,7 +1000,8 @@
+       chtmp = inmd->pinyin[inmd->lenpy - 1][0];
+       if (chtmp == 'i' || chtmp == 'u' || chtmp == 'v')
+ 	{
+-	  inbuf[strlen (inbuf) - 1] = '\0';
++//	  inbuf[strlen (inbuf) - 1] = '\0';
++	  inmd->flg_english = 1;
+ 	  inbuftmp[strlen (inbuftmp) - 1] = '\0';
+ 	  inmd->lenpy--;
+ 	  return 1;
+@@ -871,7 +1010,7 @@
+   /* Too many chars now */
+   if (EffectPyNum (inmd->pinyin, inmd->lenpy) > MAX_PHRASE_LEN)
+     {
+-      inbuf[strlen (inbuf) - 1] = '\0';
++//      inbuf[strlen (inbuf) - 1] = '\0';
+       inbuftmp[strlen (inbuftmp) - 1] = '\0';
+       inmd->lenpy--;
+       return 1;
+@@ -881,6 +1020,14 @@
+   FillForwardSelection (inmd, 0);
+   CreatePyMsg (inmd);
+ 
++  tmpbuf[0] = '\0';
++  for(i = 0;i < inmd->lenpy; i++)
++  {
++	  strcat(tmpbuf,inmd->pinyin[i]);
++  }
++  if(strcmp(inmd->inbuf,tmpbuf)) inmd->flg_english = 1;
++  else inmd->flg_english = 0;
++
+   return 1;
+ }
+ 
+@@ -921,8 +1068,8 @@
+       break;
+ 
+     default:			// select some keys
+-      if ((ch >= '1' && ch <= '9') || ch == '0' || ch == ' ')
+-	return SelectKeyPressed (inmd, ch, strbuf);
++      if ((ch >= '1' && ch <= '9') || ch == '0' || ch == ' ' || ch == '\n')
++		return SelectKeyPressed (inmd, ch, strbuf);
+       break;
+     }
+   return 0;
+@@ -952,6 +1099,12 @@
+ 	  continue;
+ 	}
+ 
++      if (pybuf[offset] == 'v' || pybuf[offset] == 'i' || pybuf[offset] == 'u')
++      {
++          offset++; count = 2;
++          continue;
++      }
++
+       ahead = pybuf[offset] - 'a';
+       if (ahead < 0 || ahead > 25)
+ 	return 0;
+@@ -1004,13 +1157,13 @@
+   // temporary array, 500 items
+ 
+   int lenarr[MAX_PHRASE_LEN], result;
+-  char ch;
++  char ch, ch2='\0';
+ 
+   if (!lenpy)
+-    {
++  {
+       inmd->len = 0;
+       return;
+-    }
++  }
+ 
+   /* first of all, fill the pykey array */
+   for (i = 0; i < lenpy; i++)
+@@ -1022,9 +1175,14 @@
+       ahead = pinyin[i][0] - 'a';
+       lenkey = 0;
+       tmplen = strlen (pinyin[i]);
++	  if(tmplen > 1)
++		  ch2 = pinyin[i][1];
+       for (j = 0; (keytmp = pytab[ahead][j].key); j++)
+ 	{
+-	  if (tmplen == 1 || !strncmp (pinyin[i], pytab[ahead][j].py, tmplen))
++//	  if (tmplen == 1 || !strncmp (pinyin[i], pytab[ahead][j].py, tmplen))
++	  if (tmplen == 1 || !strcmp (pinyin[i], pytab[ahead][j].py)
++	  || ((tmplen == 2) && (!FuzzyPinyin)&&(ch=='z'||ch=='c'||ch=='s')
++		  &&(ch2=='h')))
+ 	    // prefix match
+ 	    {
+ 	      pykey[count][lenkey++] = keytmp;
+@@ -1048,7 +1206,7 @@
+ 	    }
+ 	}
+       pykey[count++][lenkey] = 0;
+-    }				// for i = 1 to lenpy, pykey array filled
++  }				// for i = 1 to lenpy, pykey array filled
+ 
+   for (i = 0; i < MAX_PHRASE_LEN; i++)
+     lenarr[i] = 0;
+@@ -1334,13 +1492,17 @@
+ int
+ CCE_GetInputDisplay (InputModule * p, char *buf)
+ {
+-  strcpy (buf, p->iapybuf);
++//  strcpy (buf, p->iapybuf);
++  if(p->flg_english) strcpy(buf, p->inbuf);
++  else strcpy(buf, p->iapybuf);
+   return 1;
+ }
+ 
+ int
+ CCE_GetSelectDisplay (InputModule * p, char *buf)
+ {
+-  strcpy (buf, p->iahzbuf);
++//  strcpy (buf, p->iahzbuf);
++  if(p->flg_english) strcpy(buf, p->inbuf);
++  else strcpy(buf, p->iahzbuf);
+   return p->nTotalCurSel;
+ }
+--- unicon-3.0.4.orig/unicon/ImmModules/cce/xl_pinyin.h
++++ unicon-3.0.4/unicon/ImmModules/cce/xl_pinyin.h
+@@ -137,6 +137,7 @@
+   // MAX_HZ_BUF = 250
+   int nTotalCurSel;		/* Total Selection */
+   int SelectionLen;
++  int flg_english;
+ }
+ InputModule;			// about 30KB
+ 
+@@ -149,6 +150,8 @@
+ int Pinyin_KeyFilter (InputModule * inmd, u_char key, char *buf, int *len);
+ int Pinyin_KeyPressed (InputModule * inmd, u_char key);
+ void RefreshPYInputArea (InputModule * inmd);
++int SaveUsrPhrase(char *pathname);
++int SavePhraseFrequency(char *pathname);
+ int UnloadSysPhrase ();
+ int UnloadUserPhrase ();
+ 
+--- unicon-3.0.4.orig/unicon/ImmModules/turbo/Makefile.in
++++ unicon-3.0.4/unicon/ImmModules/turbo/Makefile.in
+@@ -1,11 +1,11 @@
+ prefix=@prefix@
+ CFLAGS=@CFLAGS@
+ # CFLAGS += -V2.7.2.3 -I.
+-CFLAGS += -I.
++CFLAGS += -I. -O2
+ PROG = TL_hzinput.so
+ TL_OBJS = xl_hzinput.o TL_hzinput.o  xl_phrase.o xl_sysphrase.o xl_mfile.o
+ 
+-CFLAGS = -g -Wall -I../../include -I.
++CFLAGS = -fPIC -g -Wall -I../../include -I.
+ 
+ all:dlib
+ dlib: $(PROG)
+@@ -21,7 +21,7 @@
+ xl_sysphrase.o : xl_sysphrase.c
+ 	gcc $(CFLAGS) -c xl_sysphrase.c -o xl_sysphrase.o
+ $(PROG): $(TL_OBJS)
+-	gcc $(TL_OBJS) -shared -o $(PROG)
++	gcc $(TL_OBJS) -fPIC -shared -o $(PROG)
+ 
+ # GB Support
+ gbdata: cin2tab addphrase levelphrase
+@@ -62,7 +62,8 @@
+ install: all
+ 	mkdir -p $(prefix)/lib/unicon/modules/turbo
+ 	cp -f *.so $(prefix)/lib/unicon/modules/turbo
+-data-install: big5data gbdata
++#data-install: big5data gbdata
++data-install: 
+ 	mkdir -p $(prefix)/lib/unicon/modules/turbo/dict/{gb,gbk,big5}
+ 	cp -f tl_sysphrase.*.bin $(prefix)/lib/unicon/modules/turbo
+ 	cp -f gb/*.tab $(prefix)/lib/unicon/modules/turbo/dict/gb
+--- unicon-3.0.4.orig/unicon/ImmModules/turbo/xl_phrase.c
++++ unicon-3.0.4/unicon/ImmModules/turbo/xl_phrase.c
+@@ -413,11 +413,11 @@
+ }
+ 
+ static TL_SysPhrase_T *pDefaultSysPhrase = NULL;
+-static int qcmp (void *t1, void *t2)
++static int qcmp (const void *t1, const void *t2)
+ {
+     u_long c1, c2;
+-    ITEM *a = (ITEM *) t1, 
+-         *b = (ITEM*) t2;
++    const ITEM *a = (ITEM *) t1, 
++               *b = (ITEM*) t2;
+ 
+     if (a->key1 > b->key1) 
+         return 1;
+--- unicon-3.0.4.orig/unicon/ImmModules/turbo/xl_hzinput.c
++++ unicon-3.0.4/unicon/ImmModules/turbo/xl_hzinput.c
+@@ -239,11 +239,11 @@
+ }
+ 
+ static HzInputTable_T *pDefaultClient = NULL;
+-static int qcmp (void *t1, void *t2)
++static int qcmp (const void *t1, const void *t2)
+ {
+     long c1, c2, k1, k2;
+-    long *a = (long *) t1,
+-         *b = (long *) t2;
++    const long *a = (long *) t1,
++               *b = (long *) t2;
+     int n1, n2, m1, m2;
+     static char p1[256], p2[256];
+     n1 = pDefaultClient->cur_table->item[*a].nPhrase;
+--- unicon-3.0.4.orig/unicon/ImmModules/turbo/xl_mfile.c
++++ unicon-3.0.4/unicon/ImmModules/turbo/xl_mfile.c
+@@ -26,6 +26,7 @@
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ 
+ typedef struct MemFile_handle
+ {
+--- unicon-3.0.4.orig/unicon/ImmModules/cxterm/dict/Makefile
++++ unicon-3.0.4/unicon/ImmModules/cxterm/dict/Makefile
+@@ -0,0 +1,34 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++dictdir=$(prefix)/lib/unicon/modules/cxterm/dict
++
++SUBDIRS = gb big5 jis ks
++all::
++	for i in $(SUBDIRS) ;\
++	do \
++	echo "making" all "in $(CURRENT_DIR)/$$i..."; \
++	$(MAKE) -C $$i all; \
++	done
++
++clean:
++	$(RM) *.CKP *.ln *.BAK *.bak *.o core errs ,* *~ *.a .emacs_* make.log MakeOut core "#"*
++	@for flag in ${MAKEFLAGS} ''; do \
++	case "$$flag" in *=*) ;; *[ik]*) set +e;; esac; done; \
++	for i in $(SUBDIRS) ;\
++	do \
++	echo "cleaning" "in $(CURRENT_DIR)/$$i..."; \
++	$(MAKE) -C $$i $(MFLAGS) $(PARALLELMFLAGS)  clean; \
++	done
++distclean:
++	$(RM) Makefile tags TAGS
++
++install: all
++	for i in $(SUBDIRS) ;\
++	do \
++		echo "installing" "in $$i..."; \
++		mkdir -p $(dictdir)/$$i; \
++	 	install -o root -g root -m644 $$i/*.cit $(dictdir)/$$i/; \
++	done
++
++
++
+--- unicon-3.0.4.orig/unicon/ImmModules/cxterm/utils/Makefile
++++ unicon-3.0.4/unicon/ImmModules/cxterm/utils/Makefile
+@@ -0,0 +1,37 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++
++CFLAGS += -I. -I..
++
++LIBDIR  = $(prefix)/lib/unicon
++LD      = gcc $(CFLAGS)
++INSTALL = install -c
++
++GROUP = root
++
++PROGS = cit2tit tit2cit
++
++all: $(PROGS)
++
++cit2tit: 
++	$(LD) -o cit2tit cit2tit.c HZutil.c 
++
++tit2cit: 
++	$(LD) -o tit2cit tit2cit.c HZutil.c 
++
++clean:
++	rm -f $(PROGS)
++	rm -f *.o core *~ *.bak
++
++distclean:clean
++	rm -f Makefile tags TAGS
++
++install: all
++	mkdir -p $(LIBDIR)/bin
++	$(INSTALL) -o root -g $(GROUP) -m 755 -d $(LIBDIR)/bin
++	$(INSTALL) -s -o root -g $(GROUP) -m 755 tit2cit $(LIBDIR)/bin
++	$(INSTALL) -s -o root -g $(GROUP) -m 755 cit2tit $(LIBDIR)/bin
++
++
++
+--- unicon-3.0.4.orig/unicon/ImmModules/cxterm/Makefile.in
++++ unicon-3.0.4/unicon/ImmModules/cxterm/Makefile.in
+@@ -5,13 +5,13 @@
+ PROG = cxterm_hzinput.so
+ OBJS = hzinput.o Cxterm_hzinput.o
+ 
+-CFLAGS = -g -Wall -I../../include -I.
++CFLAGS = -fPIC -g -Wall -I../../include -I.
+ 
+ all: $(PROG) 
+ 	cd utils && make
+ 	cd dict  && make 
+ $(PROG) : $(OBJS)
+-	gcc $(OBJS) -shared -o $(PROG)
++	gcc $(OBJS) -fPIC -shared -o $(PROG)
+ Cxterm_hzinput.o : Cxterm_hzinput.c
+ 	gcc $(CFLAGS) -c Cxterm_hzinput.c -o Cxterm_hzinput.o
+ hzinput.o : hzinput.c
+--- unicon-3.0.4.orig/unicon/ImmModules/cxterm/Makefile
++++ unicon-3.0.4/unicon/ImmModules/cxterm/Makefile
+@@ -0,0 +1,34 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++# CFLAGS += -V2.7.2.3 -I.
++CFLAGS += -I.
++PROG = cxterm_hzinput.so
++OBJS = hzinput.o Cxterm_hzinput.o
++
++CFLAGS = -fPIC -g -Wall -I../../include -I.
++
++all: $(PROG) 
++	cd utils && make
++	cd dict  && make 
++$(PROG) : $(OBJS)
++	gcc $(OBJS) -fPIC -shared -o $(PROG)
++Cxterm_hzinput.o : Cxterm_hzinput.c
++	gcc $(CFLAGS) -c Cxterm_hzinput.c -o Cxterm_hzinput.o
++hzinput.o : hzinput.c
++	gcc $(CFLAGS) -c hzinput.c -o hzinput.o
++install: all
++	mkdir -p $(prefix)/lib/unicon/modules/cxterm
++	cp *.so $(prefix)/lib/unicon/modules/cxterm
++	cd utils && make install
++	cd dict  && make install
++clean:
++	rm -f *.o core a.out *.bak test *.so *~
++	cd utils && make clean
++	cd dict  && make clean
++
++distclean: clean
++	rm -f Makefile tags TAGS
++	cd utils && make distclean
++	cd dict  && make distclean
++
+--- unicon-3.0.4.orig/unicon/Makefile.in
++++ unicon-3.0.4/unicon/Makefile.in
+@@ -2,9 +2,9 @@
+ all:
+ 	cd server; make
+ 	cd client; make
+-	cd unicon; make
++#	cd unicon; make
+ 	cd ImmModules/cce && make
+-	cd ImmModules/cxterm && make
++#	cd ImmModules/cxterm && make
+ 	cd ImmModules/turbo && make
+ ccedata:
+ 	cd ImmModules/cce/inputs && make
+@@ -19,23 +19,25 @@
+ 	if [ ! -d $(prefix) ] ; then mkdir -p $(prefix); fi
+ 	if [ ! -d $(prefix)/lib/unicon ] ; then mkdir -p $(prefix)/lib/unicon; fi
+ 	if [ ! -d $(prefix)/bin ] ; then mkdir -p $(prefix)/bin; fi
+-	cd ImmModules/cce/inputs; make install
+-	cd ImmModules/turbo; make data-install
++	cd ImmModules/cce/inputs; make install prefix=$(prefix)
++	cd ImmModules/turbo; make data-install prefix=$(prefix)
+ install: all
+ 	if [ ! -d $(prefix) ] ; then mkdir -p $(prefix); fi
+ 	if [ ! -d $(prefix)/lib/unicon ] ; then mkdir -p $(prefix)/lib/unicon; fi
+ 	if [ ! -d $(prefix)/bin ] ; then mkdir -p $(prefix)/bin; fi
+ 	cd server; make install
+ 	cd client; make install
+-	cd unicon; make install
++#	cd unicon; make install
+ 	cd ImmModules/cce; make install
+-	cd ImmModules/cxterm; make install
++#	cd ImmModules/cxterm; make install
+ 	cd ImmModules/turbo; make install
++	cp -f unicon/sys-gb.tab $(prefix)/lib/unicon
++	cp -f unicon/sys-big5.tab $(prefix)/lib/unicon
+ 
+ clean:
+ 	cd server; make clean
+ 	cd client; make clean
+-	cd unicon; make clean
++#	cd unicon; make clean
+ 	cd ImmModules/cce; make clean
+ 	cd ImmModules/cce/inputs; make clean
+ 	cd ImmModules/cxterm; make clean
+@@ -47,10 +49,10 @@
+ distclean: clean
+ 	rm -f config.status config.log config.cache Makefile tags TAGS
+ 	cd server; make distclean
+-	cd unicon; make distclean
++#	cd unicon; make distclean
+ 	cd client; make distclean
+ 	cd ImmModules/cce; make distclean
+ 	cd ImmModules/cce/inputs; make distclean
+-	cd ImmModules/cxterm; make distclean
++#	cd ImmModules/cxterm; make distclean
+ 	cd ImmModules/turbo; make distclean
+ 
+--- unicon-3.0.4.orig/unicon/server/TLS_Debug.cpp
++++ unicon-3.0.4/unicon/server/TLS_Debug.cpp
+@@ -32,8 +32,10 @@
+ #include <stdlib.h>
+ #include <assert.h>
+ #include <string.h>
++#include <stdarg.h>
+ #include <TLS_Debug.hpp>
+-TLS_CDebug::TLS_CDebug (char *szFileName, int mode = 0)
++
++TLS_CDebug::TLS_CDebug (char *szFileName, int mode)
+ {
+     if (szFileName == NULL)
+     {
+--- unicon-3.0.4.orig/unicon/server/Makefile.in
++++ unicon-3.0.4/unicon/server/Makefile.in
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+ CFLAGS = @CFLAGS@
+ APP_PROG = imm_server
+-DLIB_PROG = libimm_server.so
++DLIB_PROG = libimm_server.so.0.0
+ 
+ APP_OBJS = TLS_HzInput.o TLS_ImmOp.o TLS_TcpipMain.o  TLS_MemFile.o \
+        TLS_PthSocket.o TLS_Debug.o \
+@@ -14,13 +14,13 @@
+ LIBS = /usr/lib/libpth.so -ldl
+ 
+ # CFLAGS = -g -D__IMM_DEBUG__ -Wall -I. -I/usr/include -I../include 
+-CFLAGS = -g -Wall -I. -I/usr/include -I../include
++CFLAGS = -fPIC -g -Wall -I. -I../include
+ CC=g++
+ 
+ all: $(DLIB_PROG)
+ 
+-libimm_server.so: $(DLIB_OBJS)
+-	$(CC) $(DLIB_OBJS) -shared -o $(DLIB_PROG)
++libimm_server.so.0.0: $(DLIB_OBJS)
++	$(CC) $(DLIB_OBJS) -fPIC -Wl,-soname,libimm_server.so.0 -shared -o $(DLIB_PROG) -ldl
+ 
+ TLS_LibMain.o : TLS_LibMain.cpp
+ 	$(CC) $(CFLAGS) -DUNICON_LIB=\"$(prefix)/lib/unicon\" -c TLS_LibMain.cpp -o TLS_LibMain.o
+@@ -46,9 +46,10 @@
+ 
+ install: all
+ 	mkdir -p $(prefix)/bin
+-	mkdir -p $(prefix)/lib/unicon
++	mkdir -p $(prefix)/lib
+ 	if [ -f $(APP_PROG) ]; then  cp -f $(APP_PROG) $(prefix)/bin; fi
+-	if [ -f $(DLIB_PROG) ]; then  cp -f $(DLIB_PROG) $(prefix)/lib/unicon; fi
++	if [ -f $(DLIB_PROG) ]; then  cp -f $(DLIB_PROG) $(prefix)/lib; fi
++	cd $(prefix)/lib;ln -s libimm_server.so.0.0 libimm_server.so.0;ln -s libimm_server.so.0 libimm_server.so
+ 
+ clean:
+ 	if test -e $(PROG); then rm -f $(PROG); fi
+--- unicon-3.0.4.orig/unicon/unicon/unicon.ini.in
++++ unicon-3.0.4/unicon/unicon/unicon.ini.in
+@@ -49,8 +49,8 @@
+ MethodModule7=@PREFIX@/lib/unicon/modules/turbo/TL_hzinput.so
+ MethodTable7=@PREFIX@/lib/unicon/modules/turbo/dict/gb/CangJie.tab
+ MethodName7=²Ôò¡ÊäÈë
+-MethodModule8=@PREFIX@/lib/unicon/modules/turbo/TL_hzinput.so
+-MethodTable8=@PREFIX@/lib/unicon/modules/turbo/dict/gb/WuBi.tab
++MethodModule8=@PREFIX@/lib/unicon/modules/cce/cce_hzinput.so
++MethodTable8=@PREFIX@/lib/unicon/modules/cce/dict/wubi.tab
+ MethodName8=Îå±Ê×ÖÐÍ
+ MethodModule9=@PREFIX@/lib/unicon/modules/turbo/TL_hzinput.so
+ MethodTable9=@PREFIX@/lib/unicon/modules/turbo/dict/gb/QianMa.tab
+@@ -110,8 +110,8 @@
+ MethodModule7=@PREFIX@/lib/unicon/modules/turbo/TL_hzinput.so
+ MethodTable7=@PREFIX@/lib/unicon/modules/turbo/dict/gb/CangJie.tab
+ MethodName7=²Ôò¡ÊäÈë
+-MethodModule8=@PREFIX@/lib/unicon/modules/turbo/TL_hzinput.so
+-MethodTable8=@PREFIX@/lib/unicon/modules/turbo/dict/gb/WuBi.tab
++MethodModule8=@PREFIX@/lib/unicon/modules/cce/cce_hzinput.so
++MethodTable8=@PREFIX@/lib/unicon/modules/cce/dict/wubi.tab
+ MethodName8=Îå±Ê×ÖÐÍ
+ MethodModule9=@PREFIX@/lib/unicon/modules/turbo/TL_hzinput.so
+ MethodTable9=@PREFIX@/lib/unicon/modules/turbo/dict/gb/QianMa.tab
+--- unicon-3.0.4.orig/unicon/unicon/Makefile
++++ unicon-3.0.4/unicon/unicon/Makefile
+@@ -0,0 +1,52 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++PROG = unicon
++OBJS = ImmHzInput.o AImmHzInput.o Main.o UniKey.o \
++        MyInputArea.o SysConfig.o MyConfig.o ConfigManager.o
++S_IMM_LIB = ../client/libimmclient.a
++D_IMM_LIB = ../client/libimmclient.a -lpth -ldl -L../server -Wl,-rpath=$(prefix)/lib/unicon -limm_server
++
++#  CFLAGS = -g -Wall -I. -DSIMULATE_OS_KEY -DSIMULATE_OS_VIDEO
++# __CLIB24_SUPPORT__
++CFLAGS = -g -Wall -I. -I../include -I../../include -I../unikey
++CC = g++ -g 
++all: $(PROG) unicon.ini
++
++unicon: $(OBJS) $(S_IMM_LIB) 
++	$(CC) -ldl $(OBJS) $(D_IMM_LIB) -o $(PROG)
++
++slib: $(OBJS) $(S_IMM_LIB)
++	$(CC) $(OBJS) $(S_IMM_LIB) -o $(PROG)
++ImmHzInput.o: ImmHzInput.cpp ImmHzInput.hpp
++	$(CC) $(CFLAGS) -c ImmHzInput.cpp -o ImmHzInput.o
++AImmHzInput.o: AImmHzInput.cpp AImmHzInput.hpp
++	$(CC) $(CFLAGS) -c AImmHzInput.cpp -o AImmHzInput.o
++MyInputArea.o: MyInputArea.cpp MyInputArea.hpp
++	$(CC) $(CFLAGS) -c MyInputArea.cpp -o MyInputArea.o
++SysConfig.o : SysConfig.cpp SysConfig.hpp
++	$(CC) $(CFLAGS) -c SysConfig.cpp -o SysConfig.o
++MyConfig.o : MyConfig.cpp MyConfig.hpp SysConfig.hpp
++	$(CC) $(CFLAGS) -DUNICON_LIB=\"$(prefix)/lib/unicon\" -c MyConfig.cpp -o MyConfig.o
++UniKey.o : UniKey.hpp UniKey.cpp
++	$(CC) $(CFLAGS) -c UniKey.cpp -o UniKey.o
++Main.o: Main.cpp
++	$(CC) $(CFLAGS) -D__DLL_SUPPORT__ -DUNICON_LIB=\"$(prefix)/lib/unicon\" -c Main.cpp -o Main.o
++ConfigManager.o: ConfigManager.cpp
++	$(CC) $(CFLAGS) -DUNICON_LIB=\"$(prefix)/lib/unicon\" -c ConfigManager.cpp -o ConfigManager.o
++
++unicon.ini: unicon.ini.in
++	sed -e "s.@PREFIX@.$(prefix).g" unicon.ini.in > unicon.ini
++
++install: all
++	mkdir -p $(prefix)/bin $(prefix)/lib/unicon
++	install -o root -g root -m755 unicon $(prefix)/bin
++	install -o root -g root -m644 unicon.ini $(prefix)/lib/unicon
++	install -o root -g root -m644 sys-gb.tab $(prefix)/lib/unicon
++	install -o root -g root -m644 sys-big5.tab $(prefix)/lib/unicon
++
++clean:
++	rm -f *.o core *.bak a.out unicon.ini *~ $(PROG) 
++
++distclean: clean
++	rm -f Makefile tags TAGS
+--- unicon-3.0.4.orig/unikey/Makefile.in
++++ unicon-3.0.4/unikey/Makefile.in
+@@ -3,6 +3,7 @@
+ CFLAGS += -I. -I./include -I../include -I/usr/src/linux/include -include /usr/src/linux/include/linux/modversions.h
+ PROG = unikey.o
+ CC=gcc $(CFLAGS)
++DESTDIR =
+ 
+ MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
+ 
+--- unicon-3.0.4.orig/unikey/Makefile
++++ unicon-3.0.4/unikey/Makefile
+@@ -0,0 +1,40 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++CFLAGS = -g -O2
++CFLAGS += -I. -I./include -I../include -I/usr/src/linux/include -include /usr/src/linux/include/linux/modversions.h
++PROG = unikey.o
++CC=gcc $(CFLAGS)
++DESTDIR =
++
++MODCFLAGS = -Wall -O2 -DMODULE -D__KERNEL__ -DLINUX
++
++all: $(PROG)
++
++unikey.o: xl_keyhooks.o xl_unikey.o xl_keymasks.o xl_hzfb.o xl_fontmgr.o
++	ld -m elf_i386 -r xl_keyhooks.o xl_unikey.o xl_keymasks.o xl_hzfb.o \
++           xl_fontmgr.o -o unikey.o
++
++xl_unikey.o: xl_unikey.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c xl_unikey.c -o xl_unikey.o
++
++xl_keyhooks.o: xl_keyhooks.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c xl_keyhooks.c -o xl_keyhooks.o
++
++xl_keymasks.o: xl_keymasks.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c xl_keymasks.c -o xl_keymasks.o
++
++xl_hzfb.o: xl_hzfb.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c xl_hzfb.c -o xl_hzfb.o
++xl_fontmgr.o: xl_fontmgr.c /usr/include/linux/version.h
++	$(CC) $(MODCFLAGS) -c xl_fontmgr.c -o xl_fontmgr.o
++
++clean:
++	rm -f *.bak *.o xl_unikey.o *~ core $(PROG) 
++
++install: all
++	rm -f /dev/unikey ; \
++	mknod /dev/unikey c 10 202 ; \
++	sh install_module.sh $(PROG)
++
++distclean: clean
++	rm -f Makefile tags TAGS
+--- unicon-3.0.4.orig/unimap/Makefile
++++ unicon-3.0.4/unimap/Makefile
+@@ -0,0 +1,14 @@
++# Generated automatically from Makefile.in by configure.
++prefix=/usr
++all: unimapsh
++unimapsh:
++	echo "#!/bin/bash" > load-unimap.sh
++	echo "loadunimap $(prefix)/lib/unicon/direct.uni" >> load-unimap.sh
++install: all
++	install -m 644 direct.uni $(prefix)/lib/unicon 
++	install -m 644 load-unimap.sh $(prefix)/lib/unicon 
++clean:
++	rm -f *.bak core *~ load-unimap.sh
++
++distclean: clean
++	rm -f Makefile
+--- unicon-3.0.4.orig/debian/README.Debian
++++ unicon-3.0.4/debian/README.Debian
+@@ -0,0 +1,5 @@
++unicon for Debian
++----------------------
++
++
++ -- Yu Guanghui <ygh@debian.org>, Thu, 16 Nov 2000 08:48:37 +0800
+--- unicon-3.0.4.orig/debian/changelog
++++ unicon-3.0.4/debian/changelog
+@@ -0,0 +1,183 @@
++unicon (3.0.4-9) unstable; urgency=low
++
++  * Fix gcc-3.2 compile errors. (closes:Bug#188909) 
++
++ -- Yu Guanghui <ygh@debian.org>  Thu,  8 May 2003 13:17:08 +0800
++
++unicon (3.0.4-8) unstable; urgency=low
++
++  * minor fixes. 
++
++ -- Yu Guanghui <ygh@debian.org>  Mon, 19 Aug 2002 18:31:39 +0800
++
++unicon (3.0.4-7) unstable; urgency=low
++
++  * Changed  WuBi input method from turbo to cce. 
++
++ -- Yu Guanghui <ygh@debian.org>  Sat, 11 May 2002 21:33:28 +0800
++
++unicon (3.0.4-6) unstable; urgency=low
++
++  * This patch is from John R. Daily [jdaily@progeny.com].
++    Thank you very much. (closes:Bug#119877)
++  * Added ia64 to the "Architecture" line in debian/control
++    (change arch to any)
++  * Critical: Added stdlib.h include to cin2tab.c so that
++    realloc(3) returns a valid pointer. Without the function
++    prototype, the 64-bit pointer was being truncated to a
++    32-bit int, and unlike on alpha, ia64 uses the entire
++    64-bit space for pointer values.
++  * Added string.h to xl_mfile.c to provide a prototype for
++    memcpy(3).
++  * Minor: Changed functions passed to qsort to declare const
++    arguments, to better comply with qsort's prototype. There 
++    are still warnings because the parameters are not void * 
++    in two files.
++
++ -- Yu Guanghui <ygh@debian.org>  Sat, 17 Nov 2001 08:32:49 +0800
++
++unicon (3.0.4-5) unstable; urgency=low
++
++  * Removed IA64 from the support listing. It will be added
++    in future if the new versoin supports IA64.
++
++ -- Yu Guanghui <ygh@debian.org>  Wed, 24 Oct 2001 15:33:08 +0800
++
++unicon (3.0.4-4) unstable; urgency=low
++
++  * Fixed a memory leak. Got the patch from www.linuxforum.com.
++
++ -- Yu Guanghui <ygh@debian.org>  Sun, 21 Oct 2001 17:41:11 +0800
++
++unicon (3.0.4-3) unstable; urgency=low
++
++  * Compiled cce module with -fPIC. (closes:Bug#114784) 
++
++ -- Yu Guanghui <ygh@debian.org>  Mon,  8 Oct 2001 22:03:54 +0800
++
++unicon (3.0.4-2) unstable; urgency=low
++
++  * Fixed exact match. 
++
++ -- Yu Guanghui <ygh@debian.org>  Sun,  7 Oct 2001 21:57:49 +0800
++
++unicon (3.0.4-1) unstable; urgency=low
++
++  * New upstream release
++  * Merged with old patches.
++
++ -- Yu Guanghui <ygh@debian.org>  Mon, 17 Sep 2001 20:08:09 +0800
++
++unicon (3.0.3-7) unstable; urgency=low
++
++  * Fixed tab2txt bug. Get from miniChinput-0.0.2-alpha2. 
++
++ -- Yu Guanghui <ygh@debian.org>  Wed, 18 Jul 2001 00:12:56 +0800
++
++unicon (3.0.3-6) unstable; urgency=low
++
++  * Fixed the include path, in order to let gcc 3.0 work. 
++   (closes: Bug#104618, Bug#104759) 
++  * Need more than 150 mins build time under m68k. (closes: Bug#103802)
++
++ -- Yu Guanghui <ygh@debian.org>  Sat, 14 Jul 2001 10:27:19 +0800
++
++unicon (3.0.3-5) unstable; urgency=low
++
++  * New excat match patch, get from miniChinput. 
++
++ -- Yu Guanghui <ygh@debian.org>  Sun,  8 Jul 2001 18:55:02 +0800
++
++unicon (3.0.3-4) unstable; urgency=low
++
++  * Megred with minichinput. 
++
++ -- Yu Guanghui <ygh@debian.org>  Fri,  6 Jul 2001 15:44:40 +0800
++
++unicon (3.0.3-3) unstable; urgency=low
++
++  * Merged patch from huyou (www.linuxforum.net). The ZNPY input method
++    supports user phrase.
++
++ -- Yu Guanghui <ygh@debian.org>  Thu,  5 Jul 2001 22:54:00 +0800
++
++unicon (3.0.3-2) unstable; urgency=low
++
++  * Apply patch for ZNPY input. If it's an exact match, break out now. 
++    Thank althea.bbs@bbs.smth.org.
++
++ -- Yu Guanghui <ygh@debian.org>  Fri, 29 Jun 2001 18:19:56 +0800
++
++unicon (3.0.3-1) unstable; urgency=low
++
++  * New upstream release
++
++ -- Yu Guanghui <ygh@debian.org>  Sun, 17 Jun 2001 11:35:33 +0800
++
++unicon (3.0.2-3) unstable; urgency=low
++
++  * Marked conflics with chinput <= 3.0.1-3.
++  * Close again.(closes: Bug#99670) 
++
++ -- Yu Guanghui <ygh@debian.org>  Thu, 10 May 2001 00:59:30 +0800
++
++unicon (3.0.2-2) unstable; urgency=low
++
++  * Removed cxterm dict build, we don't need it. (closes: #Bug96670) 
++
++ -- Yu Guanghui <ygh@debian.org>  Tue,  8 May 2001 00:21:51 +0800
++
++unicon (3.0.2-1) unstable; urgency=low
++
++  * New upstream release
++
++ -- Yu Guanghui <ygh@debian.org>  Wed,  2 May 2001 00:07:39 +0800
++
++unicon (3.0-7) unstable; urgency=low
++
++  * Added Build-Depends: xlibs-dev 
++
++ -- Yu Guanghui <ygh@debian.org>  Tue, 13 Mar 2001 21:02:59 +0800
++
++unicon (3.0-6) unstable; urgency=low
++
++  * Fixed alpha build fails. (closes:Bug#87981)
++    I Have sended the patch to the upstream author.
++
++ -- Yu Guanghui <ygh@debian.org>  Wed, 28 Feb 2001 23:11:55 +0800
++
++unicon (3.0-5) unstable; urgency=low
++
++  * Added Build-Depends: debhelper,libpth-dev (closes:Bug#87268)
++
++ -- Yu Guanghui <ygh@debian.org>  Sat, 24 Feb 2001 09:13:44 +0800
++
++unicon (3.0-4) unstable; urgency=low
++
++  *Add lintian override file for unicon-im, make lintian happy.
++
++ -- Yu Guanghui <ygh@debian.org>  Tue, 20 Feb 2001 23:04:43 +0800
++
++unicon (3.0-3) unstable; urgency=low
++
++  *Fixed the shared library install: libimm_server.so.0.0 is installed correctly now. 
++  *Add lost file sys-gb.tab, sys-big5.tab to /usr/lib/unicon
++  *Applyed pinyin input method patch from Liang Changtai<linuxrat@gnuchina.org>.
++
++ -- Yu Guanghui <ygh@debian.org>  Mon, 19 Feb 2001 22:25:46 +0800
++
++unicon (3.0-2) unstable; urgency=low
++
++  * add gcc compile flag -fPIC for the shared libraries. 
++
++ -- Yu Guanghui <ygh@debian.org>  Sun, 18 Feb 2001 21:21:08 +0800
++
++unicon (3.0-1) unstable; urgency=low
++
++  * Initial Release.
++
++ -- Yu Guanghui <ygh@debian.org>  Thu, 16 Nov 2000 08:48:37 +0800
++
++Local variables:
++mode: debian-changelog
++End:
+--- unicon-3.0.4.orig/debian/copyright
++++ unicon-3.0.4/debian/copyright
+@@ -0,0 +1,19 @@
++This package was debianized by Yu Guanghui <ygh@debian.org> on
++Thu, 16 Nov 2000 08:48:37 +0800.
++
++It was downloaded from ftp.turbolinux.com.cn
++
++Upstream Author(s): Arthur Ma <arthur.ma@turbolinux.com.cn>
++
++Copyright:
++
++This is UNICON
++
++The programs in this package may be copied under the terms of the GNU Lesser 
++General Public Licence, version 2.1 (see below).
++
++They were written by several people, and integrate work from many many
++others.  See the CREDITS file for details.
++
++On Debian systems, you can find the complete GNU GPL v2 at
++/usr/share/common-licenses/GPL.
+--- unicon-3.0.4.orig/debian/unicon-im.files
++++ unicon-3.0.4/debian/unicon-im.files
+@@ -0,0 +1 @@
++usr
+--- unicon-3.0.4.orig/debian/postinst
++++ unicon-3.0.4/debian/postinst
+@@ -0,0 +1,45 @@
++#! /bin/sh
++# postinst script for unicon
++#
++# see: dh_installdeb(1)
++
++set -e
++
++# summary of how this script can be called:
++#        * <postinst> `configure' <most-recently-configured-version>
++#        * <old-postinst> `abort-upgrade' <new version>
++#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
++#          <new-version>
++#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
++#          <failed-install-package> <version> `removing'
++#          <conflicting-package> <version>
++# for details, see /usr/doc/packaging-manual/
++#
++# quoting from the policy:
++#     Any necessary prompting should almost always be confined to the
++#     post-installation script, and should be protected with a conditional
++#     so that unnecessary prompting doesn't happen if a package's
++#     installation fails and the `postinst' is called with `abort-upgrade',
++#     `abort-remove' or `abort-deconfigure'.
++
++case "$1" in
++    configure)
++    ;;
++
++    abort-upgrade|abort-remove|abort-deconfigure)
++    ;;
++
++    *)
++        echo "postinst called with unknown argument \`$1'" >&2
++        exit 0
++    ;;
++esac
++
++# dh_installdeb will replace this with shell code automatically
++# generated by other debhelper scripts.
++
++#DEBHELPER#
++
++exit 0
++
++
+--- unicon-3.0.4.orig/debian/postrm
++++ unicon-3.0.4/debian/postrm
+@@ -0,0 +1,37 @@
++#! /bin/sh
++# postrm script for unicon
++#
++# see: dh_installdeb(1)
++
++set -e
++
++# summary of how this script can be called:
++#        * <postrm> `remove'
++#        * <postrm> `purge'
++#        * <old-postrm> `upgrade' <new-version>
++#        * <new-postrm> `failed-upgrade' <old-version>
++#        * <new-postrm> `abort-install'
++#        * <new-postrm> `abort-install' <old-version>
++#        * <new-postrm> `abort-upgrade' <old-version>
++#        * <disappearer's-postrm> `disappear' <r>overwrit>r> <new-version>
++# for details, see /usr/doc/packaging-manual/
++
++case "$1" in
++       purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
++
++                                # update the menu system
++#        if [ -x /usr/bin/update-menus ]; then update-menus; fi
++        ;;
++
++    *)
++        echo "postrm called with unknown argument \`$1'" >&2
++        exit 0
++
++esac
++
++# dh_installdeb will replace this with shell code automatically
++# generated by other debhelper scripts.
++
++#DEBHELPER#
++
++
+--- unicon-3.0.4.orig/debian/TODO.Debian
++++ unicon-3.0.4/debian/TODO.Debian
+@@ -0,0 +1,4 @@
++Only the input method library has been packged now. The unicon package will finish
++soon.
++						Yu Guanghui<ygh@debian.org>
++						2001.2.18
+--- unicon-3.0.4.orig/debian/control
++++ unicon-3.0.4/debian/control
+@@ -0,0 +1,14 @@
++Source: unicon
++Section: utils
++Build-Depends: debhelper (>= 2.0.72), libpth-dev, xlibs-dev
++Priority: optional
++Maintainer: Yu Guanghui <ygh@debian.org>
++Standards-Version: 3.5.0
++
++Package: unicon-im
++Architecture: any
++Depends: ${shlibs:Depends}
++Conflicts: chinput (<= 3.0.1-3)
++Description: Chinese Input Method Libaray
++ General Chinese Input method interface and API. It is using by chinput and
++ unicon now.
+--- unicon-3.0.4.orig/debian/unicon-im.override
++++ unicon-3.0.4/debian/unicon-im.override
+@@ -0,0 +1,3 @@
++unicon-im: shlib-with-non-pic-code usr/lib/unicon/modules/turbo/TL_hzinput.so
++unicon-im: non-dev-pkg-with-shlib-symlink usr/lib/libimm_server.so.0.0 usr/lib/libimm_server.so
++unicon-im: postinst-must-call-ldconfig usr/lib/libimm_server.so.0.0
+--- unicon-3.0.4.orig/debian/rules
++++ unicon-3.0.4/debian/rules
+@@ -0,0 +1,93 @@
++#!/usr/bin/make -f
++# Sample debian/rules that uses debhelper. 
++# GNU copyright 1997 by Joey Hess.
++#
++# This version is for a hypothetical package that builds an
++# architecture-dependant package, as well as an architecture-independent
++# package.
++
++# Uncomment this to turn on verbose mode. 
++#export DH_VERBOSE=1
++
++# This is the debhelper compatability version to use.
++export DH_COMPAT=3
++
++# This has to be exported to make some magic below work.
++
++# shared library versions, option 1
++version=0.0
++major=0
++
++
++build: build-stamp
++build-stamp:
++	dh_testdir
++
++	./configure --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info
++	# Add here commands to compile the package.
++	$(MAKE)
++	$(MAKE) data
++
++	touch build-stamp
++
++clean:
++	dh_testdir
++	dh_testroot
++	rm -f build-stamp 
++
++	# Add here commands to clean up after the build process.
++	-$(MAKE) distclean
++
++	dh_clean
++
++install: build
++	dh_testdir
++	dh_testroot
++	dh_clean -k
++	dh_installdirs
++
++	$(MAKE) install prefix=`pwd`/debian/unicon-im/usr DESTDIR=`pwd`/debian/unicon-im/usr
++	$(MAKE) data-install prefix=`pwd`/debian/unicon-im/usr 
++	cp -f debian/unicon-im.override `pwd`/debian/unicon-im/usr/share/lintian/overrides/unicon-im
++
++#	dh_movefiles 
++
++# Build architecture-independent files here.
++# Pass -i to all debhelper commands in this target to reduce clutter.
++binary-indep: build install
++
++# Build architecture-dependent files here.
++# Pass -a to all debhelper commands in this target to reduce clutter.
++binary-arch: build install
++#	Need this version of debhelper for DH_OPTIONS to work.
++#	dh_testversion 1.1.17
++	dh_testdir
++	dh_testroot
++#	dh_installdebconf
++	dh_installdocs
++	dh_installexamples
++	dh_installmenu
++#	dh_installemacsen
++#	dh_installpam
++#	dh_installinit
++	dh_installcron
++#	dh_installmanpages
++	dh_installinfo
++#	dh_undocumented
++	dh_installchangelogs ChangeLog
++	dh_strip
++	dh_link
++	dh_compress
++	dh_fixperms
++	# You may want to make some executables suid here.
++#	dh_suidregister
++	dh_installdeb
++	dh_makeshlibs
++#	dh_perl
++	dh_shlibdeps
++	dh_gencontrol
++	dh_md5sums
++	dh_builddeb
++
++binary: binary-indep binary-arch
++.PHONY: build clean binary-indep binary-arch binary install
+--- unicon-3.0.4.orig/debian/unicon-im.docs
++++ unicon-3.0.4/debian/unicon-im.docs
+@@ -0,0 +1,13 @@
++BUGS
++README
++README_cn
++THANKS
++RELEASE
++RELEASE_cn
++CREDITS
++debian/TODO.Debian
++doc/faq_en.txt
++doc/smallfont.txt
++doc/tech_unicon.txt
++doc/unicon_font_header.txt
++doc/whitepaper_unicon.txt
+--- unicon-3.0.4.orig/debian/patches/ia64.patch
++++ unicon-3.0.4/debian/patches/ia64.patch
+@@ -0,0 +1,106 @@
++diff -Naur unicon.orig/unicon/ImmModules/cce/inputs/cin2dat.c unicon-3.0.4/unicon/ImmModules/cce/inputs/cin2dat.c
++--- unicon.orig/unicon/ImmModules/cce/inputs/cin2dat.c	Tue Sep 11 02:12:10 2001
+++++ unicon-3.0.4/unicon/ImmModules/cce/inputs/cin2dat.c	Fri Nov 16 14:41:36 2001
++@@ -114,7 +114,7 @@
++ 
++ /* qcmp2 compare two ITEM2 structure, according to its key1/key2/ch */
++ int
++-qcmp2 (ITEM2 * a, ITEM2 * b)
+++qcmp2 (const ITEM2 * a, const ITEM2 * b)
++ {
++   if (a->key1 > b->key1)
++     return 1;
++@@ -134,7 +134,7 @@
++ 
++ /* qcmp compare two ITEM2 structure, according to its key1/key2/occur_seq */
++ int
++-qcmp (ITEM2 * a, ITEM2 * b)
+++qcmp (const ITEM2 * a, const ITEM2 * b)
++ {
++   if (a->key1 > b->key1)
++     return 1;
++@@ -148,7 +148,7 @@
++ }
++ 
++ int
++-qcmp_ser (ITEM * a, ITEM * b)
+++qcmp_ser (const ITEM * a, const ITEM * b)
++ {
++   if (a->ch > b->ch)
++     return 1;
++diff -Naur unicon.orig/unicon/ImmModules/cce/inputs/cin2tab.c unicon-3.0.4/unicon/ImmModules/cce/inputs/cin2tab.c
++--- unicon.orig/unicon/ImmModules/cce/inputs/cin2tab.c	Tue Sep 11 02:12:10 2001
+++++ unicon-3.0.4/unicon/ImmModules/cce/inputs/cin2tab.c	Fri Nov 16 14:41:16 2001
++@@ -3,6 +3,7 @@
++ #include <stdarg.h>
++ #include <sys/types.h>
++ #include <string.h>
+++#include <stdlib.h>
++ #include "xl_hzinput.h"
++ 
++ FILE *fr, *fw;
++@@ -114,7 +115,7 @@
++ 
++ /* qcmp2 compare two ITEM2 structure, according to its key1/key2/ch */
++ int
++-qcmp2 (ITEM2 * a, ITEM2 * b)
+++qcmp2 (const ITEM2 * a, const ITEM2 * b)
++ {
++   if (a->key1 > b->key1)
++     return 1;
++@@ -152,7 +153,7 @@
++ }
++ 
++ int
++-qcmp_ser (ITEM * a, ITEM * b)
+++qcmp_ser (const ITEM * a, const ITEM * b)
++ {
++   if (a->ch > b->ch)
++     return 1;
++diff -Naur unicon.orig/unicon/ImmModules/turbo/xl_hzinput.c unicon-3.0.4/unicon/ImmModules/turbo/xl_hzinput.c
++--- unicon.orig/unicon/ImmModules/turbo/xl_hzinput.c	Wed Aug  8 09:32:38 2001
+++++ unicon-3.0.4/unicon/ImmModules/turbo/xl_hzinput.c	Fri Nov 16 14:35:47 2001
++@@ -239,11 +239,11 @@
++ }
++ 
++ static HzInputTable_T *pDefaultClient = NULL;
++-static int qcmp (void *t1, void *t2)
+++static int qcmp (const void *t1, const void *t2)
++ {
++     long c1, c2, k1, k2;
++-    long *a = (long *) t1,
++-         *b = (long *) t2;
+++    const long *a = (long *) t1,
+++               *b = (long *) t2;
++     int n1, n2, m1, m2;
++     static char p1[256], p2[256];
++     n1 = pDefaultClient->cur_table->item[*a].nPhrase;
++diff -Naur unicon.orig/unicon/ImmModules/turbo/xl_mfile.c unicon-3.0.4/unicon/ImmModules/turbo/xl_mfile.c
++--- unicon.orig/unicon/ImmModules/turbo/xl_mfile.c	Wed Aug  8 09:32:38 2001
+++++ unicon-3.0.4/unicon/ImmModules/turbo/xl_mfile.c	Fri Nov 16 14:36:15 2001
++@@ -26,6 +26,7 @@
++ 
++ #include <stdlib.h>
++ #include <stdio.h>
+++#include <string.h>
++ 
++ typedef struct MemFile_handle
++ {
++diff -Naur unicon.orig/unicon/ImmModules/turbo/xl_phrase.c unicon-3.0.4/unicon/ImmModules/turbo/xl_phrase.c
++--- unicon.orig/unicon/ImmModules/turbo/xl_phrase.c	Wed Aug  8 09:32:38 2001
+++++ unicon-3.0.4/unicon/ImmModules/turbo/xl_phrase.c	Fri Nov 16 14:38:43 2001
++@@ -413,11 +413,11 @@
++ }
++ 
++ static TL_SysPhrase_T *pDefaultSysPhrase = NULL;
++-static int qcmp (void *t1, void *t2)
+++static int qcmp (const void *t1, const void *t2)
++ {
++     u_long c1, c2;
++-    ITEM *a = (ITEM *) t1, 
++-         *b = (ITEM*) t2;
+++    const ITEM *a = (ITEM *) t1, 
+++               *b = (ITEM*) t2;
++ 
++     if (a->key1 > b->key1) 
++         return 1;
+--- unicon-3.0.4.orig/debian/unicon-im.dirs
++++ unicon-3.0.4/debian/unicon-im.dirs
+@@ -0,0 +1,2 @@
++usr/share/lintian/overrides
++usr/lib/unicon

@@ -1,4 +1,5 @@
-MD5 c6b9dd17b881f54c2c8934c87273a9dd chinput-3.0.2.ebuild 904
+MD5 b9536805959a4156d6fcb8bb175f9a5f chinput-3.0.2.ebuild 1005
+MD5 4e66b2def8f29400b876f40422cfe470 ChangeLog 436
 MD5 9239c39d87007f8cb4a73d77ac7a9ce1 files/chinput-3.0.2-debian.patch 64253
 MD5 b35379e04831139b1dbd5e52205d376e files/chinput-3.0.2-config.patch 6521
 MD5 815b166e6003978bbc45c37273612c21 files/digest-chinput-3.0.2 65
