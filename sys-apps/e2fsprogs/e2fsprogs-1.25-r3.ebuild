@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r3.ebuild,v 1.1 2001/12/19 02:23:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r3.ebuild,v 1.2 2001/12/19 02:58:34 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 and ext3 filesystem utilities"
@@ -59,6 +59,12 @@ src_install() {
 	mv lsattr chattr uuidgen ../usr/bin
 	cd ${D}/sbin
 	mv mklost+found ../usr/sbin
-	
+	#time to convert hard links/duplicates to symbolic links
+	cd ${D}/sbin
+	rm fsck.*
+	ln -sf e2fsck fsck.ext2
+	ln -sf e2fsck fsck.ext3
+	rm mkfs.*
+	ln -sf mke2fs mkfs.ext2
 	rm -rf ${D}/usr/share/et ${D}/usr/share/ss
 }
