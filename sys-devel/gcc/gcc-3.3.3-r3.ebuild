@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.4 2004/04/28 16:36:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.5 2004/04/30 00:31:55 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -109,7 +109,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~sparc ~mips ~alpha arm -hppa ~amd64 ~ia64 ~ppc64 s390"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -323,6 +323,12 @@ src_unpack() {
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
 	then
 		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
+	fi
+
+	if [ "${ARCH}" = "arm" ]
+	then
+		epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-getoff.patch
+		epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-ldm.patch
 	fi
 
 	# non-default SSP and PIE support.
