@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r3.ebuild,v 1.1 2003/09/21 15:50:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r3.ebuild,v 1.2 2003/09/27 15:14:10 lanius Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -8,7 +8,8 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GNU Midnight Commander cli-based file manager"
 HOMEPAGE="http://www.ibiblio.org/mc/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
-	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib.patch.bz2"
+	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib.patch.bz2
+	http://www.spock.mga.com.pl/public/gentoo/${P}-samba.patch.bz2"
 
 DEPEND=">=sys-fs/e2fsprogs-1.19
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
@@ -25,7 +26,10 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${DISTDIR}/mc-4.6.0-sambalib.patch.bz2
+	has_version '>=net-fs/samba-3.0.0' &&
+		epatch ${DISTDIR}/mc-4.6.0-samba.patch.bz2
+	has_version '>=net-fs/samba-2.0.0' &&
+		epatch ${DISTDIR}/mc-4.6.0-sambalib.patch.bz2
 	epatch ${FILESDIR}/mc-4.6.0-find.patch
 }
 
