@@ -1,7 +1,8 @@
 MD5 dd83471bf71a573d86fe48fef6ff5118 anjuta-1.2.1.ebuild 1386
 MD5 fb4a138b3d0b72a6e485c4cd60124a79 anjuta-1.2.0.ebuild 1364
 MD5 d15fb5815497bed48e1b2479573388a7 metadata.xml 214
-MD5 11a301b6834fd41d3cb61ec7bf51224a ChangeLog 4261
+MD5 d39f02061d377b1de8aba18bf2afc50e ChangeLog 4465
+MD5 89cd91d21c1069302c6437223f26439f anjuta-1.2.0-r1.ebuild 1441
 MD5 199c821c326a39c6ebe99618443156f0 anjuta-1.0.2.ebuild 1237
 MD5 32d17693e8cd1de7a7020d09f38cf5b3 anjuta-1.2.1-r1.ebuild 1502
 MD5 14e73ac6e0c7c2dd18f51c92bbea0f0d files/anjuta-1.2.0_xim.patch 5241
@@ -11,3 +12,5 @@ MD5 96da963356329dc0b96562dbf30ba0cd files/digest-anjuta-1.2.1-r1 65
 MD5 e85b6f172c9060236ecad97dd8d434e8 files/digest-anjuta-1.0.2 65
 MD5 9e4dc19186e833fd1022c8ebd3932920 files/anjuta-1.2.1.pass.proper.aclocal.args.diff.gz 292
 MD5 96da963356329dc0b96562dbf30ba0cd files/digest-anjuta-1.2.1 65
+MD5 b0a44b11bc057a2ca046442055e5bd76 files/digest-anjuta-1.2.0-r1 65
+MD5 2be0d20dddfe8337dd643fd7d45d61c3 files/anjuta-1.2.0.globaltagfix.diff.gz 217
