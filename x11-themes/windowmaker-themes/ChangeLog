@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/windowmaker-themes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.5 2004/06/11 20:26:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.6 2004/06/19 13:26:31 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> windowmaker-themes-0.1.ebuild:
+  Added IUSE.
 
   11 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   windowmaker-themes-0.1.ebuild:

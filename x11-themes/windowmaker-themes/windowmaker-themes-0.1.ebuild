@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.6 2004/06/11 20:26:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.7 2004/06/19 13:26:31 pyrania Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
@@ -95,6 +95,7 @@ KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 DEPEND=""
 RDEPEND="x11-wm/windowmaker"
+IUSE=""
 
 src_unpack() {
 	mkdir ${S}

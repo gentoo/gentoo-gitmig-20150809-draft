@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qinx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.10 2004/03/14 17:33:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.11 2004/06/19 13:28:40 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> qinx-0.3.ebuild, qinx-0.5.ebuild,
+  qinx-0.6.ebuild:
+  Added IUSE.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> qinx-0.2.ebuild,
   qinx-0.3.ebuild, qinx-0.5.ebuild, qinx-0.6.ebuild:

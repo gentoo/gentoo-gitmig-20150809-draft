@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.5 2004/03/14 17:33:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.6 2004/06/19 13:30:08 pyrania Exp $
 
 inherit kde
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://www.carlitus.net"
 KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="as-is"
+IUSE=""
 
 # stripping hangs and we've no binaries
 RESTRICT="$RESTRICT nostrip"
