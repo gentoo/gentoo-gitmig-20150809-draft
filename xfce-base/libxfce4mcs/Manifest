@@ -1,3 +1,5 @@
 MD5 dbd81fb3a40e6bc295ca1f9037832aca libxfce4mcs-3.99.1.ebuild 981
+MD5 693d5af0ca9376ff0c9622ac3638bac8 libxfce4mcs-3.99.2.ebuild 981
 MD5 03a76fb78b4700d74952be719c4092be ChangeLog 506
 MD5 777956524e9391155f2335ddd2cc000b files/digest-libxfce4mcs-3.99.1 70
+MD5 62be8322642756853d4ec9c6e2aaded7 files/digest-libxfce4mcs-3.99.2 70
