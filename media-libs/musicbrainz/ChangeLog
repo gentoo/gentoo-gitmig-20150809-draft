@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.26 2004/05/26 11:51:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.27 2004/05/31 08:10:00 eradicator Exp $
+
+*musicbrainz-2.1.1 (31 May 2004)
+
+  31 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  musicbrainz-2.0.2-r1.ebuild, musicbrainz-2.1.1.ebuild:
+  Version bump.  Removed old version.
 
   26 May 2004; Guy Martin <gmsoft@gentoo.org> musicbrainz-2.0.2-r2.ebuild:
   Marked stable on hppa.
