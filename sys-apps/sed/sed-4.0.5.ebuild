@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5.ebuild,v 1.14 2004/06/24 22:25:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5.ebuild,v 1.15 2004/06/27 19:32:37 agriffis Exp $
 
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="mirror://gnu/sed/${P}.tar.gz"
@@ -17,7 +17,7 @@ RDEPEND="virtual/glibc"
 
 src_compile() {
 	econf `use_enable nls` || die
-	if [ `use static` ] ; then
+	if use static ; then
 		emake || die
 	else
 		emake LDFLAGS=-static || die
@@ -29,7 +29,7 @@ src_install() {
 	dobin sed/sed
 	dodir /usr/bin
 	dosym ../../bin/sed /usr/bin/sed
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		into /usr
 		doinfo doc/sed.info*

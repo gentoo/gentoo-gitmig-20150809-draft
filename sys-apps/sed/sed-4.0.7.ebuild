@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.15 2004/06/24 22:25:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.16 2004/06/27 19:32:37 agriffis Exp $
 
 inherit gnuconfig
 
@@ -19,15 +19,15 @@ DEPEND="virtual/glibc
 src_compile() {
 	local myconf
 
-	# Allow sed to detect mips systems properly
-	use mips && gnuconfig_update
+	# Needed for mips and probably others
+	gnuconfig_update
 
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
 
 	econf ${myconf} || die "Configure failed"
-	if [ -z `use static` ] ; then
+	if ! use static ; then
 		emake || die "Shared build failed"
 	else
 		emake LDFLAGS=-static || die "Static build failed"
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	into /
 	dobin sed/sed
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		einstall || die "Install failed"
 		dodoc COPYING NEWS README* THANKS TODO AUTHORS BUGS ANNOUNCE ChangeLog
