@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.16 2004/01/04 17:47:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.17 2004/01/14 03:23:05 avenj Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.cs.mun.ca/pub/pdksh/${P}.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha ~hppa ~mips ~arm ~amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc alpha ~hppa ~mips ~arm amd64 ia64 ~ppc64"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	sys-apps/coreutils"
