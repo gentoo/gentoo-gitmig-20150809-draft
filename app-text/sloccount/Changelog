@@ -1,0 +1,8 @@
+# ChangeLog for app-text/sloccount
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/Changelog,v 1.1 2003/06/04 13:59:17 lu_zero Exp $
+
+*sloccount-2.22 (04 Jun 2003)
+
+  04 Jun 2003 Luca Barbato <lu_zero@gentoo.org> :
+  Initial import.  Ebuild submitted by Zach Bagnall <yem@y3m.net>.
