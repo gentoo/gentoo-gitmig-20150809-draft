@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Cache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.17 2005/03/12 12:12:05 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.18 2005/03/27 14:39:46 kloeri Exp $
+
+  27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  PEAR-Cache-1.5.4.ebuild:
+  Stable on alpha.
 
   12 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Cache-1.5.4.ebuild:
