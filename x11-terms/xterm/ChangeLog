@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.12 2004/04/10 16:29:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.13 2004/04/11 03:38:04 weeve Exp $
+
+  10 Apr 2004; Jason Wever <weeve@gentoo.org> xterm-184.ebuild:
+  Added ~sparc keyword.
 
   10 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-184.ebuild:
   use_with to use_enable for Xaw3d. Thanks to Giacomo Perale
