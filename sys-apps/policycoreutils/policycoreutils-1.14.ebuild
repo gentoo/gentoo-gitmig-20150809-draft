@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.12.ebuild,v 1.3 2004/06/25 03:09:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.14.ebuild,v 1.1 2004/07/02 16:42:25 pebenito Exp $
 
 IUSE="build"
 
 inherit eutils
 
-EXTRAS_VER="1.4"
+EXTRAS_VER="1.5"
 
 DESCRIPTION="SELinux core utilites"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -14,7 +14,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=sys-libs/libselinux-${PV}
 	sys-devel/gettext
@@ -26,10 +26,11 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/policycoreutils-1.10-genhomedircon-reverse.diff
+	# fix genhomedircon starting uid
+	sed -i -e '/^STARTING_UID/s/100/1000/' ${S}/scripts/genhomedircon
 
-	# Change script paths POLICYDIR
-	sed -i -e "s:/etc/security/selinux/src/policy/:${POLICYDIR}:g" ${S}/scripts/genhomedircon
+	# add compatibility for number of genhomedircon command line args
+	epatch ${FILESDIR}/policycoreutils-1.14-genhomedircon-compat.diff
 
 	# fix up to accept Gentoo CFLAGS
 	local SUBDIRS="`cd ${S} && find -type d | cut -d/ -f2`"
@@ -60,11 +61,4 @@ src_install() {
 		einfo "Installing policycoreutils-extra"
 		make DESTDIR="${D}" -C ${S2} install || die
 	fi
-}
-
-pkg_postinst() {
-	ewarn "WARNING: seinit is deprecated, and is no"
-	ewarn "longer installed.  Please remove seinit from"
-	ewarn "your bootloader.  The policy is now loaded"
-	ewarn "by init itself."
 }
