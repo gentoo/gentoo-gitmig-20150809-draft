@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-forums
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.8 2004/12/28 23:03:37 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.9 2005/01/09 10:51:34 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org>
+  fortune-mod-gentoo-forums-20040922.ebuild,
+  fortune-mod-gentoo-forums-20041207.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
