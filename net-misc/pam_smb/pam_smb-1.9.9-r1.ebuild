@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pam_smb/pam_smb-1.9.9-r1.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pam_smb/pam_smb-1.9.9-r1.ebuild,v 1.4 2003/10/27 10:29:35 aliz Exp $
 
 DESCRIPTION="The PAM SMB module, which allows authentication against an NT server."
 HOMEPAGE="http://www.csn.ul.ie/~airlied/pam_smb/"
 
 S=${WORKDIR}/${PN}
-SRC_URI="http://us2.samba.org/samba/ftp/pam_smb/devel/${P}.tar.gz"
+SRC_URI="mirror://samba/pam_smb/devel/${P}.tar.gz"
 
 DEPEND=">=sys-libs/pam-0.75"
 LICENSE="GPL-2"
