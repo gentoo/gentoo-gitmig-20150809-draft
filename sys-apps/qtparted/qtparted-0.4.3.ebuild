@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.3.ebuild,v 1.1 2004/03/18 20:59:45 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.3.ebuild,v 1.2 2004/04/25 16:13:34 dholm Exp $
 
 inherit kde
 need-qt 3.1
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qtparted/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-3.1.0
