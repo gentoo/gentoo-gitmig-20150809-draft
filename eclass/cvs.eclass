@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.39 2003/04/23 20:09:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.40 2003/04/27 19:35:00 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -232,8 +232,7 @@ ECVS_RUNAS=$ECVS_RUNAS"
 	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
 	 	if [ -d "${ECVS_TOP_DIR}/${ECVS_MODULE}" ]; then
-			debug-print "$FUNCNAME: offline mode, exiting"
-			return 0
+			debug-print "$FUNCNAME: offline mode"
 		else
 			debug-print "$FUNCNAME: offline mode specified but directory ${ECVS_TOP_DIR}/${ECVS_MODULE} not found, exiting with error"
 			die "ERROR: Offline mode specified, but dir ${ECVS_TOP_DIR}/${ECVS_MODULE} not found. Aborting."
