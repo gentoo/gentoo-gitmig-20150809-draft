@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.8.ebuild,v 1.3 2004/01/08 09:15:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.8.ebuild,v 1.4 2004/01/10 18:05:37 agriffis Exp $
 
 DESCRIPTION="YAZ is a C/C++ programmer's toolkit supporting the development of Z39.50v3 clients and servers"
 HOMEPAGE="http://www.indexdata.dk/${PN}"
 SRC_URI="http://ftp.indexdata.dk/pub/${PN}/${P}.tar.gz"
 LICENSE="YAZ"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ~ppc amd64 alpha ia64"
 IUSE="tcpd"
 RDEPEND="dev-libs/libxml2
 		dev-libs/openssl
