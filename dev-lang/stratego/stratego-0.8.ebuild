@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.8.ebuild,v 1.8 2003/08/05 18:57:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.8.ebuild,v 1.9 2004/03/14 02:40:38 mr_bones_ Exp $
 
 DESCRIPTION="Stratego term-rewriting language"
 HOMEPAGE="http://www.stratego-language.org/"

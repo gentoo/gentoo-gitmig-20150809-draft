@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/f2c-20030320.ebuild,v 1.3 2003/07/09 03:02:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/f2c-20030320.ebuild,v 1.4 2004/03/14 02:40:38 mr_bones_ Exp $
 
 DESCRIPTION="Fortran to C converter"
 HOMEPAGE="http://www.netlib.org/f2c"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.13 2004/02/22 19:54:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.14 2004/03/14 02:40:38 mr_bones_ Exp $
 
 DESCRIPTION="Gnu Pascal Compiler"
 SRC_URI="http://gnu-pascal.de/current/${P}.tar.gz
