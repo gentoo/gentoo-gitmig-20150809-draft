@@ -1,26 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.10 2003/03/10 22:28:57 agriffis Exp $
-
-IUSE="X doc"
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.11 2003/04/23 16:01:36 vapier Exp $
 
 #remove the trailing ".0" from the tarball version
 S=${WORKDIR}/${P%.1}
 
-DESCRIPTION="Expect is a tool for automating interactive applications"
+DESCRIPTION="tool for automating interactive applications"
 SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 HOMEPAGE="http://expect.nist.gov/"
 
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 LICENSE="BSD"
+IUSE="X doc"
 
 DEPEND=">=dev-lang/tcl-8.2
-		X? ( >=dev-lang/tk-8.2 )"
-
+	X? ( >=dev-lang/tk-8.2 )"
 
 src_compile() {
-    
 	local myconf
 	local tclv
 	local tkv
