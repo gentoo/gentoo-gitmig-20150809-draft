@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.1 2002/10/18 05:40:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.2 2003/02/13 12:33:22 vapier Exp $
 
 DESCRIPTION="Giram (Giram is really a modeller). A 3d modeller for POV-ray"
 HOMEPAGE="http://www.giram.org"
