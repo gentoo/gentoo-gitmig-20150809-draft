@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.9.6-r3.ebuild,v 1.1 2001/12/07 12:34:51 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.9.6-r3.ebuild,v 1.2 2002/04/06 16:23:27 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A suite of tools contains a series of conduits for moving
@@ -12,6 +12,14 @@ SRC_URI="http://www.gnu-designs.com/pilot-link/source/${P}.tar.gz
 	 http://www.eskil.org/gnome-pilot/download/tarballs/${P}.tar.gz"
 HOMEPAGE="http://www.gnu-designs.com/pilot-link/"
 DEPEND="virtual/glibc"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	patch -p1 ${FILESDIR}/pilot-link-0.9.6-gcc3.diff || die
+
+}
 
 src_compile() {
 	./configure --host=${CHOST}					\

@@ -1,0 +1,55 @@
+--- pilot-link-0.9.6/include/pi-datebook.hxx_orig	Sat Apr  6 18:15:44 2002
++++ pilot-link-0.9.6/include/pi-datebook.hxx	Sat Apr  6 18:16:01 2002
+@@ -34,7 +34,7 @@
+      };
+ 
+    private:
+-     friend appointmentList_t;
++     friend class appointmentList_t;
+      
+      tm _begin;			// When the appointment begins
+      tm _end;			// When the appointment ends
+--- pilot-link-0.9.6/include/pi-address.hxx_orig	Sat Apr  6 18:16:52 2002
++++ pilot-link-0.9.6/include/pi-address.hxx	Sat Apr  6 18:17:03 2002
+@@ -33,7 +33,7 @@
+ 
+      char *_entry[19];
+      
+-     friend addressList_t;
++     friend class addressList_t;
+      
+      address_t *_next;
+ 
+--- pilot-link-0.9.6/include/pi-todo.hxx_orig	Sat Apr  6 18:17:13 2002
++++ pilot-link-0.9.6/include/pi-todo.hxx	Sat Apr  6 18:17:30 2002
+@@ -23,7 +23,7 @@
+ 
+ class todo_t : public baseApp_t
+ {
+-     friend todoList_t;
++     friend class todoList_t;
+      
+      struct tm *_due;		// Non-NULL if there is a due date
+      int _priority;		// A priority in the range 1-5
+--- pilot-link-0.9.6/include/pi-memo.hxx_orig	Sat Apr  6 18:17:39 2002
++++ pilot-link-0.9.6/include/pi-memo.hxx	Sat Apr  6 18:17:48 2002
+@@ -19,7 +19,7 @@
+ 
+ class memo_t : public baseApp_t
+ {
+-     friend memoList_t;
++     friend class memoList_t;
+      
+      char *_text;
+      int _size;
+--- pilot-link-0.9.6/include/pi-iambicExpense.hxx_orig	Sat Apr  6 18:17:56 2002
++++ pilot-link-0.9.6/include/pi-iambicExpense.hxx	Sat Apr  6 18:18:07 2002
+@@ -27,7 +27,7 @@
+ 
+ class iambicExpense_t : public baseApp_t
+ {
+-     friend iambicExpenseList_t;
++     friend class iambicExpenseList_t;
+      
+      short _flags;
+      char *_type;
