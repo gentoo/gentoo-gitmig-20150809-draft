@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnview
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.10 2004/12/19 06:54:10 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.11 2005/01/04 13:10:42 swegener Exp $
+
+  04 Jan 2005; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
   19 Dec 2004; Daniel Black <dragonheart@gentoo.org> xnview-1.68.ebuild:
   removed ppc keyword and added -* as no version exists. Bug #72950 refers
