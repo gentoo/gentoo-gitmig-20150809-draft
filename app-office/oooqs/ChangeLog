@@ -1,6 +1,11 @@
 # ChangeLog for app-office/oooqs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.3 2003/10/31 18:00:35 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.4 2004/03/13 14:09:17 pyrania Exp $
+
+*oooqs-2.0.3 (13 Mar 2004)
+
+  13 Mar 2004; Markus Nigbur <pyrania@gentoo.org> oooqs-2.0.3.ebuild:
+  Version bump.
 
 *oooqs-2.0.2 (31 Oct 2003)
 
