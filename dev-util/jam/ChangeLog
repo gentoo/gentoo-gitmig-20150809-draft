@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/jam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.5 2003/04/27 21:38:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.6 2003/06/16 15:43:36 vapier Exp $
+
+*jam-2.5 (16 Jun 2003)
+
+  16 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #22770 and changed src to grab tar instead of zip.
 
 *jam-2.4 (03 Nov 2002)
 
