@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 059ad704a7923ad4ce4d56901a6e8b58 ChangeLog 2199
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 88c98f6c04b97094fb8c63f9f61f17a1 ChangeLog 2287
 MD5 00ab0a5302a42bfdda149073ccdd2750 SOAP-Lite-0.55.ebuild 815
-MD5 68a9e1ed525d49b811d520195e0654f2 SOAP-Lite-0.60a.ebuild 1078
 MD5 ddb19cb1057e8b96601f0a73b8cb601d SOAP-Lite-0.60a-r1.ebuild 1545
-MD5 6d49bd1e5b967a5a203500df88e8c738 files/digest-SOAP-Lite-0.60a-r1 67
+MD5 d5861055c49e1b0f6301f960a122cc71 SOAP-Lite-0.60a.ebuild 1073
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0c6fe7b828190ad115d346daf86d4c67 files/SOAP-Lite-0.60.a.patch 652
 MD5 a28ac4a4bb16719e4bd3ce3c6ab5e08b files/digest-SOAP-Lite-0.55 66
 MD5 6d49bd1e5b967a5a203500df88e8c738 files/digest-SOAP-Lite-0.60a 67
-MD5 0c6fe7b828190ad115d346daf86d4c67 files/SOAP-Lite-0.60.a.patch 652
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2pqStG5z4I8BtQoRAgpfAJ9V8cNqZJOdc+k/L3FpefGSw3vjfwCeJr3Q
-0RtSNyZJuvhuaM0a3y3cooQ=
-=Ygti
------END PGP SIGNATURE-----
+MD5 6d49bd1e5b967a5a203500df88e8c738 files/digest-SOAP-Lite-0.60a-r1 67

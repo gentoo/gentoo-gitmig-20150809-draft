@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/Net-Jabber-1.30.ebuild,v 1.7 2005/03/07 15:43:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/Net-Jabber-1.30.ebuild,v 1.8 2005/03/25 16:06:10 blubb Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~reatmon/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
 IUSE=""
 
 SRC_TEST="do"

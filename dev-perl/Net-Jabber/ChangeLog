@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Jabber
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/ChangeLog,v 1.6 2005/03/07 15:43:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/ChangeLog,v 1.7 2005/03/25 16:06:10 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> Net-Jabber-1.30.ebuild:
+  stable on amd64
 
 *Net-Jabber-2.0 (07 Mar 2005)
 
