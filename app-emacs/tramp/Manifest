@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bc7f3b4f9d0cffcc449d687fd56067cc ChangeLog 2381
 MD5 b5ca1ca9f08348eddfce1f41e7ed1be8 metadata.xml 453
-MD5 bc69cf3477617e40d405fc48e3c43895 tramp-2.1.1.ebuild 1108
-MD5 555f90bd0261b9b8e512ede75170d59d tramp-2.1.2.ebuild 1108
+MD5 d33a61d30810a93c1cb3b63c654199ff tramp-2.1.2.ebuild 965
 MD5 5e4db3181117ec9cf98a182d14aef78a tramp-2.0.44.ebuild 1077
+MD5 bc69cf3477617e40d405fc48e3c43895 tramp-2.1.1.ebuild 1108
 MD5 186cf5a8bff478f78845953a8f128c3a files/50tramp-gentoo.el 224
-MD5 5b03368617b2914e709cc4b350169469 files/digest-tramp-2.1.1 63
 MD5 ce0b5f6ca3ad615ebff25bb366b60fe3 files/digest-tramp-2.1.2 63
 MD5 401f23befcd8c2c9a8c83cb9368c5651 files/digest-tramp-2.0.44 64
+MD5 5b03368617b2914e709cc4b350169469 files/digest-tramp-2.1.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBYETNHTu7gpaalycRAnumAKDaPXHrR0+aBJwEReV5oMIc7v5TVgCfWF+C
+ZAsey2WWQjD3qyfb5QKWl+Q=
+=Zu8o
+-----END PGP SIGNATURE-----
