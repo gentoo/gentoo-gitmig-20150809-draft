@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/files/maradns.rc6,v 1.1 2004/06/23 03:44:01 matsuu Exp $
+
+depend() {
+	need net
+	provide dns
+}
+
+start() {
+	ebegin "Starting maradns"
+	start-stop-daemon --start --quiet -b -m --pidfile /var/run/maradns.pid \
+		--exec /usr/sbin/maradns
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping maradns"
+	start-stop-daemon --stop --quiet --pidfile /var/run/maradns.pid
+	eend $?
+}
