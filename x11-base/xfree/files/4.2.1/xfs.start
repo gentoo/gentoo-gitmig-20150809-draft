@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1/xfs.start,v 1.4 2002/10/21 00:09:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1/xfs.start,v 1.5 2002/10/28 07:46:49 azarah Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
@@ -21,7 +21,7 @@ check_config() {
 }
 
 # Return 0 on change, or 1 on no change, or if dir do not exist
-check_md5sum() {
+check_changed() {
 	local x=""
 	local fontlist=""
 	
@@ -32,16 +32,17 @@ check_md5sum() {
 	fi
 
 	# Create a list of all non known config files in the font dir
-	fontlist="$(find $1/ -type f -maxdepth 1 | egrep -v 'fonts\..*' | egrep -v '*.\.dir')"
+	fontlist="$(find $1/ -type f -maxdepth 1)"
+	fontlist="$(echo "${fontlist}" | egrep -v 'fonts\..*')"
+	fontlist="$(echo "${fontlist}" | egrep -v '*.\.dir')"
 	
-	if [ ! -f $1/fonts.md5 ]
+	if [ ! -f $1/fonts.list ]
 	then
 		if [ -n "${fontlist}" ]
 		then
-			# No md5 file exist, so create it and return 0 to add this font
-			# dir as a candidate for updating...
-			> $1/fonts.md5
-			echo "${fontlist}" | xargs -i md5sum {} >> $1/fonts.md5
+			# No list file exist, so create it and return 0 to add
+			# this font dir as a candidate for updating...
+			echo "${fontlist}" > $1/fonts.list
 
 			return 0
 		fi
@@ -62,28 +63,32 @@ check_md5sum() {
 			return 1
 		fi
 		
-		# If any md5 checksum fails, this dir should be updated.
-		if [ -n "$(md5sum -c $1/fonts.md5 2> /dev/null | egrep "FAILED")" ]
+		# Check that no files was added or removed....
+		if [ "$(cat $1/fonts.list | md5sum)" != "$(echo "${fontlist}" | md5sum)" ]
 		then
 			retval=0
 		fi
 
-		# Check that no files was added or removed....
-		if [ "${retval}" -ne 0 ] && \
-		   [ -n "${fontlist}" -o -n "$(cat $1/fonts.md5)" ]
+		# Check that no files was updated....
+		if [ "${retval}" -ne 0 ]
 		then
-			if [ "$(awk '{print $2}' $1/fonts.md5 | md5sum)" != "$(echo "${fontlist}" | md5sum)" ]
+			local changed_list=""
+			
+			changed_list="$(find $1 -type f -cnewer $1/fonts.dir)"
+			changed_list="$(echo "${changed_list}" | egrep -v 'fonts\..*')"
+			changed_list="$(echo "${changed_list}" | egrep -v '*.\.dir')"
+
+			if [ -n "${changed_list}" ]
 			then
 				retval=0
 			fi
 		fi
 
-		# OK, something changed, so recreate fonts.md5 and add as candidate
+		# OK, something changed, so recreate fonts.list and add as candidate
 		# for updating...
 		if [ "${retval}" -eq 0 ]
 		then
-			> $1/fonts.md5
-			echo "${fontlist}" | xargs -i md5sum {} >> $1/fonts.md5
+			echo "${fontlist}" > $1/fonts.list
 
 			return 0
 		fi
@@ -126,6 +131,8 @@ setup_font_dirs() {
 	local x=""
 	local pending_fontdirs=""
 
+	umask 022
+
 	# While we at it, update fontconfig's cache as well
 	if [ -x /usr/bin/fc-cache ]
 	then
@@ -134,9 +141,9 @@ setup_font_dirs() {
 		eend 0
 	fi
 
-	if [ ! -x /usr/X11R6/bin/mkfontdir -o ! -x /usr/X11R6/bin/ttmkfdir2 ]
+	if [ ! -x /usr/X11R6/bin/mkfontdir -o ! -x /usr/X11R6/bin/ttmkfdir ]
 	then
-		ewarn "Could not find mkfontdir or ttmkfdir2 binary!"
+		ewarn "Could not find mkfontdir or ttmkfdir binary!"
 		return 0
 	fi
 	
@@ -148,7 +155,7 @@ setup_font_dirs() {
 	ebegin "Scanning font dirs"
 	for x in $(get_fontdir_list)
 	do
-		if check_md5sum ${x}
+		if check_changed ${x}
 		then
 			if [ -z "${pending_fontdirs}" ]
 			then
@@ -166,9 +173,12 @@ setup_font_dirs() {
 		for x in ${pending_fontdirs}
 		do
 			einfo "  ${x}..."
-			if [ "${x/encodings}" = "${x}" ]
+			# Only generate .scale files if there are
+			# truetype fonts present ...
+			if [ "${x/encodings}" = "${x}" -a \
+			     -n "$(find ${x} -name '*.tt[cf]' -print)" ]
 			then
-				/usr/X11R6/bin/ttmkfdir2 \
+				/usr/X11R6/bin/ttmkfdir \
 					-e /usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 					-o ${x}/fonts.scale -d ${x} &> /dev/null
 			fi
@@ -212,3 +222,6 @@ stop() {
 	rm -rf /tmp/.font-unix
 	eend $?
 }
+
+
+# vim:ts=4

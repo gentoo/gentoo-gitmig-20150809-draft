@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.51 2002/10/26 14:30:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.52 2002/10/28 07:46:43 azarah Exp $
+
+  28 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild,
+                                                    xfs.start :
+  
+  Fix ebuild and xfs.start to only generate fonts.scale files if
+  truetype fonts are present.  Optimize xfs.start a bit for speed.
+  Make xfree depend on ttmkfdir-2.0 rather.  Remove Tahoma font,
+  as a Windows license is needed.
 
   26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
 

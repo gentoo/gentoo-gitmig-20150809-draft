@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.22 2002/10/26 14:30:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.23 2002/10/28 07:46:43 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -63,7 +63,9 @@ MS_COREFONTS="./andale32.exe ./arial32.exe
 	./courie32.exe ./georgi32.exe
 	./impact32.exe ./times32.exe
 	./trebuc32.exe ./verdan32.exe
-	./webdin32.exe ./IELPKTH.CAB"
+	./webdin32.exe"
+#	./IELPKTH.CAB"
+# Need windows license to use this one
 MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
 
 SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
@@ -74,7 +76,6 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	 ${SRC_PATH1}/X${MY_SV}src-3.tgz
 	 mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
 	 http://fontconfig.org/release/fcpackage.${FC2_VER/\./_}.tar.gz
-	 mirror://gentoo/ttmkfdir2-1.0.tar.bz2
 	 ${X_PATCHES}
 	 ${X_DRIVERS}
 	 truetype? ( ${MS_FONT_URLS} )"
@@ -93,6 +94,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=media-libs/fontconfig-2.0
 	>=media-libs/freetype-${FT2_VER}
 	>=x11-base/opengl-update-1.4
+	>=x11-misc/ttmkfdir-2.0
 	truetype? ( app-arch/cabextract )"
 #	3dfx? ( >=media-libs/glide-v3-3.10 )"
 	
@@ -102,7 +104,8 @@ RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/zlib-1.1.3-r2
 	>=media-libs/fontconfig-2.0
 	>=media-libs/freetype-${FT2_VER}
-	>=x11-base/opengl-update-1.4"
+	>=x11-base/opengl-update-1.4
+	>=x11-misc/ttmkfdir-2.0"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -114,8 +117,6 @@ src_unpack() {
 		freetype-${FT2_VER}.tar.bz2 \
 		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2 \
 		fcpackage.${FC2_VER/\./_}.tar.gz
-
-	cd ${S}; unpack ttmkfdir2-1.0.tar.bz2
 
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
@@ -204,6 +205,9 @@ src_unpack() {
 			# bug #8144
 			[ "${x##*/}" = "018_all_4.2.0-ati-radeon-misc-bugfixes.patch.bz2" ] && continue
 			[ "${x##*/}" = "019_all_4.2.0-ati-radeon-pci-drm-enable.patch.bz2" ] && continue
+
+			# Make sure users wo do not emerge --clean rsync do not run into problems.
+			[ "${x##*/}" = "095_all_4.2.1-ttmkfdir2-gentoo.patch.bz2" ] && continue
 			
 			einfo "  ${x##*/}..."
 			bzip2 -dc ${x} | patch -p2 > /dev/null || die "Failed Patch: ${x##*/}!"
@@ -296,10 +300,6 @@ src_compile() {
 		cd ${S}/nls
 		make || die
 	fi
-
-	einfo "Building ttmkfdir2..."
-	cd ${S}/ttmkfdir2
-	emake || die
 }
 
 src_install() {
@@ -323,10 +323,6 @@ src_install() {
 		cd ${S}/nls
 		make DESTDIR=${D} install || die
 	fi
-
-	einfo "Installing ttmkfdir2..."
-	exeinto /usr/X11R6/bin
-	newexe ${S}/ttmkfdir2/ttmkfdir ttmkfdir2
 
 	# Make sure user running xterm can only write to utmp.
 	fowners root.utmp /usr/X11R6/bin/xterm
@@ -474,6 +470,8 @@ pkg_postinst() {
 
 	if [ "${ROOT}" = "/" ]
 	then
+		umask 022
+	
 		einfo "Creating FC font cache..."
 		${ROOT}/usr/bin/fc-cache
 
@@ -513,9 +511,12 @@ pkg_postinst() {
 		einfo "Creating fonts.scale files..."
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
-			if [ "${x/encodings}" = "${x}" ]
+			# Only generate .scale files if there are truetype
+			# fonts present ...
+			if [ "${x/encodings}" = "${x}" -a \
+			     -n "$(find ${x} -name '*.tt[cf]' -print)"]
 			then
-				${ROOT}/usr/X11R6/bin/ttmkfdir2 \
+				${ROOT}/usr/X11R6/bin/ttmkfdir \
 					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 					-o ${x}/fonts.scale -d ${x}
 			fi
