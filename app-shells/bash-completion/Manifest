@@ -2,9 +2,7 @@ MD5 f51f35fbdcac13bdae5de65020978e2d ChangeLog 9538
 MD5 cc5ea05a3deb5a269cb42964b943b230 bash-completion-20040704.ebuild 2091
 MD5 115faf601395c07a603403509d2e6e25 bash-completion-20040526.ebuild 1918
 MD5 1dc8e7503e7e350f3382d37b612178cc metadata.xml 1023
-MD5 3f20a2ff544f7661a9ec37dc8dcd5b61 bash-completion-20040526-r2.ebuild 2094
 MD5 a49b867e065849fd3f6ad2c9073d5d8f files/bash-completion 622
 MD5 49e9f0b0674471ff56169ce7d9265fb2 files/digest-bash-completion-20040704 151
 MD5 1c828ed53387932b8ed971aafa179875 files/digest-bash-completion-20040526 76
 MD5 cf2b91fb90ddc3966177f3c31ff9fe16 files/gentoo.completion-20040526 16031
-MD5 d6ebad6cea105425801011b9c5f522a6 files/digest-bash-completion-20040526-r2 151
