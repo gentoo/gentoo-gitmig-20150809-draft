@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre2.ebuild,v 1.1 2002/02/05 06:35:21 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre2.ebuild,v 1.2 2002/02/05 09:39:00 gbevin Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
@@ -44,8 +44,9 @@ src_install() {
 	#python modules
 	cd ${S}/pym
 	insinto /usr/lib/portage/pym
-	doins xpak.py portage.py
+	doins output.py xpak.py portage.py
 	dodir /usr/lib/python2.0/site-packages
+	dosym ../../portage/pym/output.py /usr/lib/python2.0/site-packages/output.py
 	dosym ../../portage/pym/xpak.py /usr/lib/python2.0/site-packages/xpak.py
 	dosym ../../portage/pym/portage.py /usr/lib/python2.0/site-packages/portage.py
 
