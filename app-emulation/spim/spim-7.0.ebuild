@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.3 2004/09/07 09:07:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.4 2004/12/19 21:30:12 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cs.wisc.edu/~larus/spim.html"
 #SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/spim.tar.gz"
 SRC_URI="mirror://gentoo//${P}.tar.gz"
 
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 LICENSE="as-is"
 SLOT="0"
 IUSE="X"
