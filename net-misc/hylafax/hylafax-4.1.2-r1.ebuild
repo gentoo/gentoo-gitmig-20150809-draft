@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.3 2002/07/11 06:30:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.4 2002/08/13 23:00:53 raker Exp $
 
 S=${WORKDIR}/${P}
 MYSED=sed-3.02
@@ -74,6 +74,7 @@ src_install() {
 		install || die
 	
 	insinto /etc/init.d
+	insopts -m 755
 	doins etc/hylafax
 
 	dodoc COPYRIGHT README TODO VERSION
