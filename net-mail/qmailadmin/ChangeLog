@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmailadmin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.1 2004/01/05 08:23:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.2 2004/01/05 08:49:44 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  qmailadmin-1.2.0_rc1.ebuild, qmailadmin-1.2.0_rc2.ebuild:
+  cleanup a bit more
 
 *qmailadmin-1.2.0_rc2 (05 Jan 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.0_rc2.ebuild,v 1.1 2004/01/05 08:23:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.0_rc2.ebuild,v 1.2 2004/01/05 08:49:44 robbat2 Exp $
 
 inherit gnuconfig
 
@@ -36,7 +36,7 @@ src_compile() {
 	local dir_htdocs_images="${dir_htdocs}/images"
 	local url_htdocs_images="/${PN}/images"
 	local dir_cgibin="${dir_vhost}/cgi-bin"
-	local url_cgibin="/cgi-bin/qmailadmin"
+	local url_cgibin="/cgi-bin/${PN}"
 	local dir_htdocs_htmlib="/usr/share/${PN}/htmllib"
 	local dir_qmail="/var/qmail"
 	local bin_true="/bin/true"
