@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/multi-aterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.12 2004/09/04 03:32:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.13 2004/11/06 16:28:15 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> multi-aterm-0.2.1.ebuild:
+  Marked stable on x86.
 
 *multi-aterm-0.2.1 (04 Sep 2004)
 
