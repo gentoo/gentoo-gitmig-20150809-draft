@@ -1,8 +1,22 @@
-MD5 eb5e51a06b1a3996551058f19f84d35b ChangeLog 3070
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a27695d76c5e800f9c45a2c730788e13 commons-net-1.2.2-r1.ebuild 1367
 MD5 b7966d1c603722c6bcae07a757d251e9 commons-net-1.2.2.ebuild 1297
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 1f7cd2fd408977b9907da7e112ddd74b commons-net-1.3.0.ebuild 1586
-MD5 fb9978c1444923f864212fcb8914da67 files/digest-commons-net-1.2.2 73
-MD5 cd5dd0f16006dfa0491e9fb71981d402 files/gentoo-1.2.diff 3152
+MD5 8c8895e645d4191e3b4304eafcf3fb1c ChangeLog 3360
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 7c235b66f05f5cc48d4436b5a953c347 commons-net-1.3.0-r1.ebuild 1816
 MD5 e2628a3419f04cdb65cb4a3caad1c9df files/gentoo.diff 4678
+MD5 cd5dd0f16006dfa0491e9fb71981d402 files/gentoo-1.2.diff 3152
+MD5 fb9978c1444923f864212fcb8914da67 files/digest-commons-net-1.2.2-r1 73
+MD5 36815c4f205c7a6b95614626967da49b files/digest-commons-net-1.3.0-r1 73
+MD5 fb9978c1444923f864212fcb8914da67 files/digest-commons-net-1.2.2 73
 MD5 36815c4f205c7a6b95614626967da49b files/digest-commons-net-1.3.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSXXk06ebR+OMO78RAgmJAJ0fUeVUMVg53VEmWpezOhYEj5Cv8ACfcR59
+x/suIqib8C3+xg0Aibkn7lA=
+=O8+J
+-----END PGP SIGNATURE-----
