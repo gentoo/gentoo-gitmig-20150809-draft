@@ -1,35 +1,34 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r3.ebuild,v 1.7 2004/04/27 22:17:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r6.ebuild,v 1.1 2004/05/08 08:52:54 usata Exp $
 
 inherit flag-o-matic eutils
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch3
-I18N_P=${P}-i18n-misc-20031105-2
+DILLO_I18N_MISC=${P}-i18n-misc-20040507
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
 SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 	mirror://gentoo/dillo-gentoo-extras-patch3.tar.bz2
-	cjk? ( http://teki.jpn.ph/pc/software/${I18N_P}.diff.bz2 )"
+	http://teki.jpn.ph/pc/software/${DILLO_I18N_MISC}.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64"
-# Note that truetype, ssl and nls IUSE flags will take effect
-# only if you enable cjk IUSE flag.
-IUSE="ipv6 kde gnome mozilla truetype ssl cjk nls"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+IUSE="ipv6 kde gnome mozilla truetype ssl nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2.1
-	ssl? ( dev-libs/openssl )"
+	ssl? ( dev-libs/openssl )
+	truetype? ( virtual/xft )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use cjk && epatch ../${I18N_P}.diff
+	epatch ../${DILLO_I18N_MISC}.diff
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
@@ -59,24 +58,20 @@ src_unpack() {
 src_compile() {
 	replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
 
-	local myconf
-
-	if [ -n "`use cjk`" ] ; then
-		if [ -n "`use truetype`" ] ; then
-			CPPFLAGS="${CPPFLAGS} -I/usr/include/freetype2"
-			LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib -lXft"
-			export CPPFLAGS LDFLAGS
-		fi
-		myconf="`use_enable nls`
-			`use_enable ssl`
-			`use_enable truetype anti-alias`
-			--enable-meta-refresh
-			--enable-web-search"
+	if [ -n "`use truetype`" ] ; then
+		CPPFLAGS="${CPPFLAGS} -I/usr/include/freetype2"
+		append-ldflags -L/usr/X11R6/lib -lXft
+		export CPPFLAGS
 	fi
 
 	econf `use_enable ipv6` \
-		${myconf} || die
-	emake || make || die
+		`use_enable nls` \
+		`use_enable ssl` \
+		`use_enable truetype anti-alias` \
+		--enable-meta-refresh \
+		--enable-web-search \
+		|| die
+	emake -j1 || emake -j1 || die
 }
 
 src_install() {
