@@ -1,0 +1,12 @@
+# ChangeLog for net-wireless/ndiswrapper
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.1 2004/02/29 04:21:59 latexer Exp $
+
+*ndiswrapper-0.4 (28 Feb 2004)
+
+  28 Feb 2004; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  ndiswrapper-0.4.ebuild, files/ndiswrapper.modules.d:
+  Initial commit. Roughly based on ebuild from #38017, with large cleanups by
+  me. Includes pkg_config() function for helping generate the needed
+  /etc/modules.d/ndiswrapper file.
+
