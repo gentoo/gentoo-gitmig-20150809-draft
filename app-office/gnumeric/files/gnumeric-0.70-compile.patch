@@ -1,0 +1,255 @@
+diff -u -r gnumeric-0.70.orig/plugins/applix/Makefile.am gnumeric-0.70/plugins/applix/Makefile.am
+--- gnumeric-0.70.orig/plugins/applix/Makefile.am	Sun Feb 25 22:13:06 2001
++++ gnumeric-0.70/plugins/applix/Makefile.am	Sat Oct  6 15:04:31 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_applixdir = $(gnumeric_plugindir)/applix
+ gnumeric_plugin_applix_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/derivatives/Makefile.am gnumeric-0.70/plugins/derivatives/Makefile.am
+--- gnumeric-0.70.orig/plugins/derivatives/Makefile.am	Tue Jun 19 16:41:57 2001
++++ gnumeric-0.70/plugins/derivatives/Makefile.am	Sat Oct  6 15:04:16 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_derivativesdir = $(gnumeric_plugindir)/derivatives
+ gnumeric_plugin_derivatives_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/dif/Makefile.am gnumeric-0.70/plugins/dif/Makefile.am
+--- gnumeric-0.70.orig/plugins/dif/Makefile.am	Sun Jun  3 22:05:16 2001
++++ gnumeric-0.70/plugins/dif/Makefile.am	Sat Oct  6 15:04:04 2001
+@@ -2,7 +2,8 @@
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
+     -I$(includedir)	-I$(top_srcdir)/src	\
+     -I$(top_builddir)/src			\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)				\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_difdir = $(gnumeric_plugindir)/dif
+ gnumeric_plugin_dif_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/excel/Makefile.am gnumeric-0.70/plugins/excel/Makefile.am
+--- gnumeric-0.70.orig/plugins/excel/Makefile.am	Mon Aug 20 23:53:01 2001
++++ gnumeric-0.70/plugins/excel/Makefile.am	Sat Oct  6 13:56:39 2001
+@@ -1,4 +1,4 @@
+-INCLUDES = -I$(includedir) -I$(top_srcdir)/src $(GNOME_INCLUDEDIR)
++INCLUDES = -I$(includedir) -I$(top_srcdir)/src $(GNOME_INCLUDEDIR) $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_exceldir = $(gnumeric_plugindir)/excel
+ gnumeric_plugin_excel_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/gb/Makefile.am gnumeric-0.70/plugins/gb/Makefile.am
+--- gnumeric-0.70.orig/plugins/gb/Makefile.am	Wed Feb 21 22:40:35 2001
++++ gnumeric-0.70/plugins/gb/Makefile.am	Sat Oct  6 15:04:45 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
+     -I$(includedir)	-I$(top_srcdir)/src	\
+-    $(GNOME_INCLUDEDIR) $(GB_CFLAGS)
++    $(GNOME_INCLUDEDIR) $(GB_CFLAGS)		\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnum_gbdir = $(gnumeric_plugindir)/gb
+ gnum_gb_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/gda/Makefile.am gnumeric-0.70/plugins/gda/Makefile.am
+--- gnumeric-0.70.orig/plugins/gda/Makefile.am	Mon Feb 12 23:32:51 2001
++++ gnumeric-0.70/plugins/gda/Makefile.am	Sat Oct  6 15:05:45 2001
+@@ -2,7 +2,8 @@
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+     $(GNOME_INCLUDEDIR)					\
+-    $(GDA_CFLAGS)
++    $(GDA_CFLAGS)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_gdaifdir = $(gnumeric_plugindir)/gdaif
+ gnumeric_plugin_gdaif_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/guile/Makefile.am gnumeric-0.70/plugins/guile/Makefile.am
+--- gnumeric-0.70.orig/plugins/guile/Makefile.am	Mon Feb 12 23:32:51 2001
++++ gnumeric-0.70/plugins/guile/Makefile.am	Sat Oct  6 15:06:10 2001
+@@ -3,7 +3,8 @@
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
+     -I$(includedir)	-I$(top_srcdir)/src	\
+     $(GUILE_INCS)				\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)				\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_guiledir = $(gnumeric_plugindir)/guile
+ gnumeric_plugin_guile_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/html/Makefile.am gnumeric-0.70/plugins/html/Makefile.am
+--- gnumeric-0.70.orig/plugins/html/Makefile.am	Mon Feb 12 23:32:52 2001
++++ gnumeric-0.70/plugins/html/Makefile.am	Sat Oct  6 14:54:08 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_htmldir = $(gnumeric_plugindir)/html
+ gnumeric_plugin_html_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/lotus-123/Makefile.am gnumeric-0.70/plugins/lotus-123/Makefile.am
+--- gnumeric-0.70.orig/plugins/lotus-123/Makefile.am	Mon Feb 12 23:32:52 2001
++++ gnumeric-0.70/plugins/lotus-123/Makefile.am	Sat Oct  6 14:24:04 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_lotusdir = $(gnumeric_plugindir)/lotus
+ gnumeric_plugin_lotus_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/numtheory/Makefile.am gnumeric-0.70/plugins/numtheory/Makefile.am
+--- gnumeric-0.70.orig/plugins/numtheory/Makefile.am	Mon Feb 12 23:32:53 2001
++++ gnumeric-0.70/plugins/numtheory/Makefile.am	Sat Oct  6 15:05:59 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_numtheorydir = $(gnumeric_plugindir)/numtheory
+ gnumeric_plugin_numtheory_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/oleo/Makefile.am gnumeric-0.70/plugins/oleo/Makefile.am
+--- gnumeric-0.70.orig/plugins/oleo/Makefile.am	Mon Feb 12 23:32:54 2001
++++ gnumeric-0.70/plugins/oleo/Makefile.am	Sat Oct  6 14:40:21 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_oleodir = $(gnumeric_plugindir)/oleo
+ gnumeric_plugin_oleo_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/perl/Makefile.am gnumeric-0.70/plugins/perl/Makefile.am
+--- gnumeric-0.70.orig/plugins/perl/Makefile.am	Mon Feb 12 23:32:55 2001
++++ gnumeric-0.70/plugins/perl/Makefile.am	Sat Oct  6 14:41:43 2001
+@@ -12,7 +12,8 @@
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
+     -I$(top_srcdir)	-I$(top_srcdir)/src	\
+     $(PERL_CCOPTS)				\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)				\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ #
+ # Do not build the plugin until there is a maintainer
+diff -u -r gnumeric-0.70.orig/plugins/plan-perfect/Makefile.am gnumeric-0.70/plugins/plan-perfect/Makefile.am
+--- gnumeric-0.70.orig/plugins/plan-perfect/Makefile.am	Mon Feb 12 23:32:56 2001
++++ gnumeric-0.70/plugins/plan-perfect/Makefile.am	Sat Oct  6 14:40:36 2001
+@@ -10,7 +10,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_plan_perfectdir = $(gnumeric_plugindir)/plan_perfect
+ gnumeric_plugin_plan_perfect_DATA = $(PP_DATA_TARGET)
+diff -u -r gnumeric-0.70.orig/plugins/psiconv/Makefile.am gnumeric-0.70/plugins/psiconv/Makefile.am
+--- gnumeric-0.70.orig/plugins/psiconv/Makefile.am	Wed Jul 25 02:40:21 2001
++++ gnumeric-0.70/plugins/psiconv/Makefile.am	Sat Oct  6 14:41:58 2001
+@@ -3,7 +3,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR) $(PSICONV_CFLAGS)
++    $(GNOME_INCLUDEDIR) $(PSICONV_CFLAGS)		\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_psiconvdir = $(gnumeric_plugindir)/psiconv
+ gnumeric_plugin_psiconv_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/python/Makefile.am gnumeric-0.70/plugins/python/Makefile.am
+--- gnumeric-0.70.orig/plugins/python/Makefile.am	Tue Feb 13 19:20:09 2001
++++ gnumeric-0.70/plugins/python/Makefile.am	Sat Oct  6 14:40:58 2001
+@@ -3,7 +3,8 @@
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+     $(PY_CFLAGS)					\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_pythondir = $(gnumeric_plugindir)/python
+ gnumeric_plugin_python_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/python-loader/Makefile.am gnumeric-0.70/plugins/python-loader/Makefile.am
+--- gnumeric-0.70.orig/plugins/python-loader/Makefile.am	Sat Mar 17 14:12:40 2001
++++ gnumeric-0.70/plugins/python-loader/Makefile.am	Sat Oct  6 14:42:13 2001
+@@ -2,7 +2,8 @@
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+     $(PY_CFLAGS)					\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_python_loaderdir = $(gnumeric_plugindir)/python-loader
+ gnumeric_plugin_python_loader_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/sc/Makefile.am gnumeric-0.70/plugins/sc/Makefile.am
+--- gnumeric-0.70.orig/plugins/sc/Makefile.am	Mon Feb 12 23:32:58 2001
++++ gnumeric-0.70/plugins/sc/Makefile.am	Sat Oct  6 14:42:24 2001
+@@ -1,7 +1,7 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)	$(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_scdir = $(gnumeric_plugindir)/sc
+ gnumeric_plugin_sc_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/sylk/Makefile.am gnumeric-0.70/plugins/sylk/Makefile.am
+--- gnumeric-0.70.orig/plugins/sylk/Makefile.am	Mon Feb 12 23:32:58 2001
++++ gnumeric-0.70/plugins/sylk/Makefile.am	Sat Oct  6 14:41:11 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_sylkdir = $(gnumeric_plugindir)/sylk
+ gnumeric_plugin_sylk_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/xbase/Makefile.am gnumeric-0.70/plugins/xbase/Makefile.am
+--- gnumeric-0.70.orig/plugins/xbase/Makefile.am	Mon Feb 12 23:33:03 2001
++++ gnumeric-0.70/plugins/xbase/Makefile.am	Sat Oct  6 14:42:37 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_xbasedir = $(gnumeric_plugindir)/xbase
+ gnumeric_plugin_xbase_DATA = plugin.xml
+diff -u -r gnumeric-0.70.orig/plugins/xml_sax/Makefile.am gnumeric-0.70/plugins/xml_sax/Makefile.am
+--- gnumeric-0.70.orig/plugins/xml_sax/Makefile.am	Fri Apr 13 05:08:38 2001
++++ gnumeric-0.70/plugins/xml_sax/Makefile.am	Sat Oct  6 14:41:24 2001
+@@ -1,7 +1,8 @@
+ INCLUDES = \
+     -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+     -I$(includedir)	-I$(top_srcdir)/src		\
+-    $(GNOME_INCLUDEDIR)
++    $(GNOME_INCLUDEDIR)					\
++    $(EXTRA_GNOME_CFLAGS)
+ 
+ gnumeric_plugin_xml_saxdir = $(gnumeric_plugindir)/xml_sax
+ gnumeric_plugin_xml_sax_DATA = plugin.xml

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.9-r1.ebuild,v 1.1 2001/10/06 10:06:50 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.9-r2.ebuild,v 1.1 2001/10/06 20:15:36 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -20,14 +20,14 @@ DEPEND="${RDEPEND}
         >=dev-util/xml-i18n-tools-0.8.4"
 
 
-src_unpack() {
-	unpack ${A}
-	
-	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}.patch
-	autoconf
-	automake
-}
+#src_unpack() {
+#	unpack ${A}
+#	
+#	cd ${S}
+#	patch -p1 < ${FILESDIR}/${P}.patch
+#	autoconf
+#	automake
+#}
 
 src_compile() {
 	local myconf
@@ -40,8 +40,10 @@ src_compile() {
 	# on of the samples in the package need to be regenerated from 
 	# the idl files
 
-	rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo.h
-	rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo-*.c
+#	rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo.h
+#	rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo-*.c
+
+	CFLAGS="${CFLAGS} `gnome-config --cflags print`"
 
 	./configure --host=${CHOST} 					\
 		    --prefix=/use					\

@@ -127,6 +127,14 @@ app-admin/va-systemimager-client
 =x11-wm/asclock-2.0.12
 
 # Moved in the big GNOME move
+gnome-office/abiword
+gnome-office/gnumeric
+gnome-office/mrproject
+gnome-office/eog
+gnome-office/sodipodi
+gnome-office/gnome-pim
+gnome-office/gnome-db
+gnome-office/dia
 gnome-libs/libxml2
 gnome-libs/libxslt
 gnome-base/libxml
@@ -143,17 +151,16 @@ gnome-base/libunicode
 gnome-libs/medusa
 gnome-apps/nautilus
 gnome-base/scrollkeeper
+gnome-office/guppi
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
 # /Hallski
 
-app-office/abiword
 dev-util/anjuta
 gnome-extra/battstat
 gnome-extra/bonobo-conf
 gnome-extra/bug-buddy
-app-office/dia
 media-gfx/ee
 app-office/evolution
 net-im/gabber
@@ -165,34 +172,28 @@ dev-util/glademm
 dev-util/glimmer
 app-office/gnofin
 gnome-extra/gnome-audio
-gnome-extra/gnome-db
 gnome-extra/gnome-games
 media-gfx/gnome-iconedit
 gnome-extra/gnome-media
-gnome-extra/gnome-pilot
 gnome-extra/gnome-pilot-conduits
-gnome-extra/gnome-pim
 gnome-extra/gnome-utils
+gnome-extra/gnome-pilot
 app-arch/gnorpm
 app-office/gnucash
-app-office/gnumeric
 media-gfx/gthumb
 app-misc/gtkdiff
 app-misc/gtktalog
 gnome-extra/gtop
-gnome-extra/guppi
 net-misc/gupsc
 app-admin/gwcc
 gnome-extra/mc
 dev-util/memprof
-app-office/mrproject
 net-analyzer/netleds_applet
 net-news/pan
 x11-terms/powershell
 gnome-extra/procman
 net-www/screem
 app-crypt/seahorse
-media-gfx/sodipodi
 gnome-extra/users-guide
 media-video/zapping
 
