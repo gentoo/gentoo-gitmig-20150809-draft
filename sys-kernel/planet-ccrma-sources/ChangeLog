@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/planet-ccrma-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.18 2004/06/25 19:34:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.19 2004/07/02 08:43:44 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  planet-ccrma-sources-2.4.21-r10.ebuild:
+  virtual/glibc -> virtual/libc
 
 *planet-ccrma-sources-2.4.21-r10 (25 Jun 2004)
 
