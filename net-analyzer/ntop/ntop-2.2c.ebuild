@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2c.ebuild,v 1.2 2003/09/25 18:35:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2c.ebuild,v 1.3 2004/01/08 23:41:21 gmsoft Exp $
 
 IUSE="ssl readline tcpd ncurses"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ntop.org/ntop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc hppa"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=net-libs/libpcap-0.5.2
@@ -22,6 +22,7 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 
 src_compile() {
 	cd ${S}
+
 	local myconf
 
 	use readline	|| myconf="${myconf} --without-readline"
@@ -39,11 +40,13 @@ src_compile() {
 
 	# subtree #1
 	cd gd-1.8.3/libpng-1.2.4
+	[ "${ARCH}" = "hppa" ] && sed -i scripts/makefile.linux -e "/^CFLAGS/s/-O3/-O3 -fPIC/"
 	make -f scripts/makefile.linux || die "libpng compile problem"
 
 	# subtree #2
 	cd ../../zlib-1.1.4/
 	./configure || die "zlib configure problem"
+	[ "${ARCH}" = "hppa" ] && sed -i Makefile -e "/^CFLAGS/s/$/ -fPIC/"
 	make || die "zlib compile problem"
 
 	# gdchart make
