@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.16 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.17 2003/09/17 21:15:27 avenj Exp $
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> cronbase-0.2.1-r2.ebuild :
+  ia64 keywords.
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> cronbase-0.2.1-r2.ebuild :
   Added arm to keywords.
