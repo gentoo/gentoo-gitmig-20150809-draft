@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.7 2005/02/02 13:13:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.8 2005/02/08 15:04:11 greg_g Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -22,8 +22,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	gstreamer? ( >=media-libs/gstreamer-0.8
 		     >=media-libs/gst-plugins-0.8 )
 	>=media-libs/taglib-1.2
-	media-libs/tunepimp
-	!media-sound/juk"
+	media-libs/tunepimp"
 
 src_unpack() {
 	kde_src_unpack

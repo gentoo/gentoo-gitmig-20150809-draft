@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0.ebuild,v 1.13 2005/01/23 19:58:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0.ebuild,v 1.14 2005/02/08 15:00:21 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -11,9 +11,7 @@ IUSE="slp samba"
 
 DEPEND="~kde-base/kdebase-${PV}
 	slp? ( net-libs/openslp )
-	samba? ( net-fs/samba )
-	!net-im/kopete
-	!net-wireless/kwifimanager"
+	samba? ( net-fs/samba )"
 
 src_unpack() {
 	kde_src_unpack

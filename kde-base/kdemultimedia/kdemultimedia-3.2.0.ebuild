@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0.ebuild,v 1.18 2005/01/23 20:01:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0.ebuild,v 1.19 2005/02/08 15:04:11 greg_g Exp $
 
 inherit kde-dist flag-o-matic eutils
 
@@ -25,8 +25,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	gtk? ( =x11-libs/gtk+-1.2* )
 	alsa? ( media-libs/alsa-lib )
 	gstreamer? ( media-libs/gstreamer )
-	media-libs/id3lib media-libs/musicbrainz media-libs/taglib
-	!media-sound/juk"
+	media-libs/id3lib media-libs/musicbrainz media-libs/taglib"
 
 src_unpack() {
 	kde_src_unpack

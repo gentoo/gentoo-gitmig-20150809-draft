@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.4.0_beta1.ebuild,v 1.2 2005/01/18 18:26:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.4.0_beta1.ebuild,v 1.3 2005/02/08 15:20:12 greg_g Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -14,8 +14,6 @@ OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkcal-$PV"
 DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange-dual $PV $MAXKDEVER kde-base/libkcal)"
-RDEPEND="$DEPEND
-	!app-pda/kitchensync"
 
 KMCOPYLIB="
 	libkcal libkcal

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.4.0_beta1.ebuild,v 1.3 2005/01/25 17:07:46 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.4.0_beta1.ebuild,v 1.4 2005/02/08 15:13:20 greg_g Exp $
 KMNAME=kdewebdev
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -17,8 +17,7 @@ $(deprange-dual $PV $MAXKDEVER kde-base/kimagemapeditor)
 $(deprange-dual $PV $MAXKDEVER kde-base/klinkstatus)
 $(deprange-dual $PV $MAXKDEVER kde-base/kommander)
 $(deprange-dual $PV $MAXKDEVER kde-base/kxsldbg)
-tidy? ( app-text/htmltidy )
-!app-editors/quanta"
+tidy? ( app-text/htmltidy )"
 
 KMCOMPILEONLY=lib
 
