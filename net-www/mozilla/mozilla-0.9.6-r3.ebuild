@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r3.ebuild,v 1.1 2001/12/09 12:53:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r3.ebuild,v 1.2 2001/12/09 20:54:17 azarah Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -208,16 +208,6 @@ src_install() {
 		doins ${S}/build/package/rpm/SOURCES/mozilla.desktop
         fi
 
-	# Make symlink for Java plugin
-	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/javaplugin_oji.so ]
-	then
-		if [ -e /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so ]
-		then
-			dosym /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so \
-				/usr/lib/mozilla/plugins/javaplugin_oji.so
-		fi
-	fi
-
 	# Take care of non root execution
 	# (seems the problem is that not all files are readible by the user)
 	chmod -R g+r,o+r ${D}/usr/lib/mozilla
@@ -227,6 +217,17 @@ src_install() {
 }
 
 pkg_postinst() {
+
+        # Make symlink for Java plugin (do not do in src_install(), else it only
+	# gets installed every second time)
+	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/javaplugin_oji.so ]
+	then
+		if [ -e /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so ]
+		then
+			ln -sf /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so \
+				/usr/lib/mozilla/plugins/javaplugin_oji.so
+		fi
+	fi
 
 	# Take care of component registration
 	export MOZILLA_FIVE_HOME="/usr/lib/mozilla"
@@ -251,4 +252,3 @@ pkg_postinst() {
 	echo "*****************************************************************"
 	echo
 }
-
