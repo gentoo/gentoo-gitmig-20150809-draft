@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ppc-sources-benh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.13 2003/12/05 17:22:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.14 2004/01/08 19:19:20 plasmaroo Exp $
+
+*ppc-sources-benh-2.4.22-r4 (08 Jan 2004)
+
+  08 Jan 2004; <plasmaroo@gentoo.org> ppc-sources-benh-2.4.22-r4.ebuild,
+  files/ppc-sources-benh-2.4.22.CAN-2003-0985.patch,
+  files/ppc-sources-benh-2.4.22.rtc_fix.patch:
+  Added patches to address the security vulnerabilities in bugs #37292 and
+  #37317.
 
 *ppc-sources-benh-2.4.22-r3 (02 Dec 2003)
 
