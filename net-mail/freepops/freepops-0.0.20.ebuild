@@ -1,25 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.17.ebuild,v 1.3 2004/10/12 18:12:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.20.ebuild,v 1.1 2004/11/14 06:30:27 vapier Exp $
 
 DESCRIPTION="WebMail->POP3 converter and more"
 HOMEPAGE="http://freepops.sourceforge.net/"
-SRC_URI="mirror://sourceforge/freepops/${P}.tar.gz
-	http://dev.gentoo.org/~squinky86/files/${PV}-yahoo.lua"
+SRC_URI="mirror://sourceforge/freepops/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
-DEPEND=" doc? ( >=app-doc/doxygen-1.3* )
-	>=net-misc/curl-7.10.8 "
-
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd ${S}
-	cp ${DISTDIR}/${PV}-yahoo.lua ${S}/src/lua/yahoo.lua || die
-}
+RDEPEND=">=net-misc/curl-7.10.8"
+DEPEND="${RDEPEND}
+	>=sys-apps/portage-2.0.51
+	doc? (
+		>=app-doc/doxygen-1.3*
+		app-text/tetex
+		app-text/ghostscript
+	)"
 
 src_compile() {
 	./configure.sh linux || die "configure failed"
@@ -35,6 +34,6 @@ src_install() {
 		${D}/usr/share/doc/${PN}/MANUAL.txt
 	rm -rf ${D}/usr/share/doc/${PN}
 
-	exeinto /etc/init.d ; newexe buildfactory/freePOPsd.initd freepopsd
-	insinto /etc/conf.d ; newins buildfactory/freePOPsd.confd freepopsd
+	newinitd buildfactory/freePOPsd.initd freepopsd
+	newconfd buildfactory/freePOPsd.confd freepopsd
 }
