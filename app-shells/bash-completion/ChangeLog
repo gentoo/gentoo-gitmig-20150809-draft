@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.114 2005/04/06 11:43:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.115 2005/04/06 11:46:23 ciaranm Exp $
+
+  06 Apr 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  bash-completion-20050121-r1.ebuild:
+  mips stable
 
 *bash-completion-20050121-r6 (06 Apr 2005)
 
