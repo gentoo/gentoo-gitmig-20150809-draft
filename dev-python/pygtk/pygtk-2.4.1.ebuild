@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.4 2004/12/22 17:10:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.5 2004/12/23 02:42:18 absinthe Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/pygtk/2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~arm"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~arm"
 IUSE="gnome opengl"
 
 RDEPEND=">=dev-lang/python-2.3
