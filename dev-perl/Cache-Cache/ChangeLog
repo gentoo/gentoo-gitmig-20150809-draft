@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Cache-Cache
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.1 2002/11/17 03:32:45 mkennedy Exp $
+
+*Cache-Cache-1.01 (13 Nov 2002)
+
+  13 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  Cache-Cache-1.01.ebuild, ChangeLog,
+  files/digest-Cache-Cache-1.01 :
+
+  Initial import. Required dep by updated version of HTML::Mason.
