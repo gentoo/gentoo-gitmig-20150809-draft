@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.7.ebuild,v 1.6 2004/10/24 11:41:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.8.ebuild,v 1.1 2004/10/24 11:41:46 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,12 +14,12 @@ HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="${KV}"
 
-KEYWORDS="-ppc -sparc x86 amd64"
+KEYWORDS="~x86"
 IUSE="rrdtool"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-apps/i2c-${PV}
-	rrdtool? ( x86? ( net-analyzer/rrdtool ) )"
+	rrdtool? ( net-analyzer/rrdtool )"
 
 src_unpack() {
 	unpack ${A} || die
@@ -39,7 +39,7 @@ src_compile()  {
 	einfo "*****************************************************************"
 	einfo
 	einfo "This ebuild assumes your /usr/src/linux kernel is the one you"
-	einfo "used to build i2c-2.8.7."
+	einfo "used to build i2c-2.8.8."
 	einfo
 	einfo "For 2.5+ series kernels, use the support already in the kernel"
 	einfo "under 'Character devices' -> 'I2C support' and then merge this"
