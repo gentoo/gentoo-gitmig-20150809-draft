@@ -1,45 +1,40 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.3-r2.ebuild,v 1.5 2004/03/02 16:55:29 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.3-r2.ebuild,v 1.6 2004/03/28 08:17:57 vapier Exp $
 
-IUSE="nls build"
-
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Standard GNU compressor"
 HOMEPAGE="http://www.gnu.org/software/gzip/gzip.html"
 SRC_URI="http://www.gzip.org/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa mips ia64 ppc64 s390 amd64"
+IUSE="nls build static"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-
 PROVIDE="virtual/gzip"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
 	epatch ${FILESDIR}/${P}-security.patch
 }
 
 src_compile() {
-	[ -z "`use nls`" ] && myconf="--disable-nls"
-
 	# Compiling with gcc3 and higher level of optimization seems to
 	# cause a segmentation fault in some very rare cases on alpha.
 	[ ${ARCH} = "alpha" ] && CFLAGS="-O -pipe"
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
+	use static && append-flags -static
+
+	econf \
 		--exec-prefix=/ \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		${myconf} || die
+		`use_enable nls` \
+		|| die
 	emake || die
 }
 
@@ -69,7 +64,7 @@ src_install() {
 	dosym zgrep /bin/zegrep
 	dosym zgrep /bin/zfgrep
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}/usr/share/man/man1
 		rm -f gunzip.* zcmp.* zcat.*
@@ -86,4 +81,3 @@ src_install() {
 		rm -rf ${D}/usr
 	fi
 }
-
