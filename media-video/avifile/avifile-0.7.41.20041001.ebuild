@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.6 2004/10/07 02:54:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.7 2004/10/07 08:50:57 phosphan Exp $
 
 inherit eutils flag-o-matic
 
@@ -136,8 +136,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "In order to use certain video modes, you must be root"
-	einfo "chmod +s /usr/bin/aviplay to suid root"
-	einfo "As this is considered a security risk on multiuser"
-	einfo "systems, this is not done by default"
+	if use qt; then # else no aviplay built
+		einfo "In order to use certain video modes, you must be root"
+		einfo "chmod +s /usr/bin/aviplay to suid root"
+		einfo "As this is considered a security risk on multiuser"
+		einfo "systems, this is not done by default"
+	fi
 }

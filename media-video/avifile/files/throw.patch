@@ -6,7 +6,7 @@ diff -ru avifile-0.7-0.7.41/include/avm_cpuinfo.h avifile-0.7-0.7.41.new/include
  #endif /* __cplusplus */
  
 -static inline int avm_is_mmx_state() __THROW
-+ static inline int avm_is_mmx_state()
++ __NTH(static inline int avm_is_mmx_state())
  {
  #ifdef ARCH_X86
      if (freq.HaveMMX())
@@ -15,7 +15,7 @@ diff -ru avifile-0.7-0.7.41/include/avm_cpuinfo.h avifile-0.7-0.7.41.new/include
   *  with longcount().
   */
 -static inline float to_float(int64_t tend, int64_t tbegin) __THROW
-+ static inline float to_float(int64_t tend, int64_t tbegin)
++ __NTH(static inline float to_float(int64_t tend, int64_t tbegin))
  {
      return float((tend - tbegin) / (double)freq / 1000.);
  }
@@ -27,7 +27,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
   * - right now dump implementation - as we could check functionality
   */
 -static inline uint16_t avm_get_le16(const void* p) __THROW {
-+ static inline uint16_t avm_get_le16(const void* p) {
++ __NTH(static inline uint16_t avm_get_le16(const void* p) ) {
  #ifdef WORDS_BIGENDIAN 
      const uint8_t* c = (const uint8_t*) p;
      return c[0] | c[1] << 8;
@@ -36,7 +36,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint8_t* avm_set_le16(void* p, uint16_t v) __THROW {
-+ static inline uint8_t* avm_set_le16(void* p, uint16_t v) {
++ __NTH(static inline uint8_t* avm_set_le16(void* p, uint16_t v) ) {
      uint8_t* b = (uint8_t*) p;
  #ifdef WORDS_BIGENDIAN 
      b[0] = v & 0xff;
@@ -45,7 +45,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint32_t avm_get_le32(const void* p) __THROW {
-+ static inline uint32_t avm_get_le32(const void* p) {
++ __NTH(static inline uint32_t avm_get_le32(const void* p) ) {
  #ifdef WORDS_BIGENDIAN 
      const uint8_t* c = (const uint8_t*) p;
      return c[0] | c[1] << 8 | c[2] << 16 | c[3] << 24;
@@ -54,7 +54,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint8_t* avm_set_le32(void* p, uint32_t v) __THROW {
-+ static inline uint8_t* avm_set_le32(void* p, uint32_t v) {
++ __NTH(static inline uint8_t* avm_set_le32(void* p, uint32_t v) ) {
      uint8_t* b = (uint8_t*) p;
  #ifdef WORDS_BIGENDIAN 
      b[0] = v & 0xff;
@@ -63,7 +63,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint64_t avm_get_le64(const void* p) __THROW {
-+ static inline uint64_t avm_get_le64(const void* p) {
++ __NTH(static inline uint64_t avm_get_le64(const void* p) ) {
  #ifdef WORDS_BIGENDIAN 
      const uint8_t* c = (const uint8_t*) p;
      return avm_get_le32(c) | (((uint64_t)avm_get_le32(c + 4)) << 32);
@@ -72,7 +72,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint16_t avm_get_be16(const void* p) __THROW {
-+ static inline uint16_t avm_get_be16(const void* p) {
++ __NTH(static inline uint16_t avm_get_be16(const void* p) ) {
  #ifdef WORDS_BIGENDIAN
      return *(const uint16_t*)p;
  #else
@@ -81,7 +81,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint8_t* avm_set_be16(void* p, uint16_t v) __THROW {
-+ static inline uint8_t* avm_set_be16(void* p, uint16_t v) {
++ __NTH(static inline uint8_t* avm_set_be16(void* p, uint16_t v) ) {
      uint8_t* b = (uint8_t*) p;
      b[0] = (v >> 8) & 0xff;
      b[1] = v & 0xff;
@@ -89,7 +89,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint32_t avm_get_be32(const void* p) __THROW  {
-+ static inline uint32_t avm_get_be32(const void* p) {
++ __NTH(static inline uint32_t avm_get_be32(const void* p) ) {
  #ifdef WORDS_BIGENDIAN
      return *(const uint32_t*)p;
  #else
@@ -98,7 +98,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint8_t* avm_set_be32(void* p, uint32_t v) __THROW {
-+ static inline uint8_t* avm_set_be32(void* p, uint32_t v) {
++ __NTH(static inline uint8_t* avm_set_be32(void* p, uint32_t v) ) {
      uint8_t* b = (uint8_t*) p;
      b[0] = (v >> 24) & 0xff;
      b[1] = (v >> 16) & 0xff;
@@ -107,7 +107,7 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline uint64_t avm_get_be64(const void* p) __THROW  {
-+ static inline uint64_t avm_get_be64(const void* p)  {
++ __NTH(static inline uint64_t avm_get_be64(const void* p) ) {
  #ifdef WORDS_BIGENDIAN
      return *(const uint64_t*)p;
  #else
@@ -116,17 +116,17 @@ diff -ru avifile-0.7-0.7.41/include/utils.h avifile-0.7-0.7.41.new/include/utils
  }
  
 -static inline int avm_img_is_rgb(fourcc_t fmt) __THROW
-+ static inline int avm_img_is_rgb(fourcc_t fmt)
++ __NTH(static inline int avm_img_is_rgb(fourcc_t fmt))
  {
      return ((fmt & 0xffffff00) == IMG_FMT_RGB);
  }
 -static inline int avm_img_is_bgr(fourcc_t fmt) __THROW
-+ static inline int avm_img_is_bgr(fourcc_t fmt)
++ __NTH(static inline int avm_img_is_bgr(fourcc_t fmt))
  {
      return ((fmt & 0xffffff00) == IMG_FMT_BGR);
  }
 -static inline int avm_img_get_depth(fourcc_t fmt) __THROW
-+ static inline int avm_img_get_depth(fourcc_t fmt)
++ __NTH(static inline int avm_img_get_depth(fourcc_t fmt))
  {
      return fmt & 0xff;
  }
@@ -138,7 +138,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/fcc_type.c avifile-0.7-0.7.41.new/lib/com
  //#include <stdio.h>
  
 -const char* avm_fcc_name(fourcc_t fcc) __THROW
-+ const char* avm_fcc_name(fourcc_t fcc)
++ __NTH(const char* avm_fcc_name(fourcc_t fcc))
  {
      switch (fcc)
      {
@@ -147,7 +147,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/fcc_type.c avifile-0.7-0.7.41.new/lib/com
  };
  
 -const char *avm_img_format_name(fourcc_t fmt) __THROW
-+ const char *avm_img_format_name(fourcc_t fmt)
++ __NTH(const char *avm_img_format_name(fourcc_t fmt))
  {
      const struct dts* t = data;
  
@@ -159,7 +159,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/utils.c avifile-0.7-0.7.41.new/lib/common
  int64_t (*longcount)(void);
  
 -WAVEFORMATEX* avm_get_leWAVEFORMATEX(WAVEFORMATEX* wf) __THROW
-+ WAVEFORMATEX* avm_get_leWAVEFORMATEX(WAVEFORMATEX* wf)
++ __NTH(WAVEFORMATEX* avm_get_leWAVEFORMATEX(WAVEFORMATEX* wf))
  {
      wf->wFormatTag	= avm_get_le16(&wf->wFormatTag);
      wf->nChannels	= avm_get_le16(&wf->nChannels);
@@ -168,7 +168,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/utils.c avifile-0.7-0.7.41.new/lib/common
  }
  
 -BITMAPINFOHEADER* avm_get_leBITMAPINFOHEADER(BITMAPINFOHEADER* bi) __THROW
-+ BITMAPINFOHEADER* avm_get_leBITMAPINFOHEADER(BITMAPINFOHEADER* bi)
++ __NTH(BITMAPINFOHEADER* avm_get_leBITMAPINFOHEADER(BITMAPINFOHEADER* bi))
  {
      bi->biSize		= avm_get_le32(&bi->biSize);
      bi->biWidth		= avm_get_le32(&bi->biWidth);
@@ -177,7 +177,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/utils.c avifile-0.7-0.7.41.new/lib/common
   */
  #ifndef WIN32
 -int avm_usleep(unsigned long delay) __THROW
-+ int avm_usleep(unsigned long delay)
++ __NTH(int avm_usleep(unsigned long delay))
  {
  #if   HAVE_NANOSLEEP
      struct timespec tsp;
@@ -186,7 +186,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/utils.c avifile-0.7-0.7.41.new/lib/common
   * and avm_unsetenv() in libc, provide our own implementation.
   */
 -int avm_setenv(const char *name, const char *value, int overwrite) __THROW
-+ int avm_setenv(const char *name, const char *value, int overwrite)
++ __NTH(int avm_setenv(const char *name, const char *value, int overwrite))
  {
  #if HAVE_SETENV
      return setenv(name, value, overwrite);
@@ -195,7 +195,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/utils.c avifile-0.7-0.7.41.new/lib/common
  }
  
 -void avm_unsetenv(const char *name) __THROW
-+ void avm_unsetenv(const char *name) 
++ __NTH(void avm_unsetenv(const char *name) )
  {
  #if HAVE_UNSETENV
      unsetenv(name);
@@ -207,7 +207,7 @@ diff -ru avifile-0.7-0.7.41/lib/common/wave_type.c avifile-0.7-0.7.41.new/lib/co
  #include <stdio.h>
  
 -const char* avm_wave_format_name(short fmt) __THROW
-+ const char* avm_wave_format_name(short fmt) 
++ __NTH(const char* avm_wave_format_name(short fmt) )
  {
      switch ((unsigned short)fmt)
      {
@@ -216,7 +216,18 @@ diff -ru avifile-0.7-0.7.41/lib/common/wave_type.c avifile-0.7-0.7.41.new/lib/co
  }
  
 -char* avm_wave_format(char* buf, uint_t s, const WAVEFORMATEX* wf) __THROW
-+ char* avm_wave_format(char* buf, uint_t s, const WAVEFORMATEX* wf)
++ __NTH(char* avm_wave_format(char* buf, uint_t s, const WAVEFORMATEX* wf))
  {
      if (buf)
      {
+--- avifile-0.7-0.7.41/include/avm_default.h	2004-03-10 10:58:24.000000000 +0100
++++ avifile-0.7-0.7.41/include/avm_default.h.new	2004-10-07 09:26:27.571849713 +0200
+@@ -76,4 +76,8 @@
+ #define __THROW
+ #endif
+ 
++#ifndef __NTH
++#define __NTH(func) func
++#endif
++
+ #endif /* AVIFILE_DEFAULT_H */
