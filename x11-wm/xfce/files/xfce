@@ -1,5 +1,0 @@
-#!/bin/sh
-if [ ! -d ~/.xfce ] ; then
-    mkdir ~/.xfce
-fi
-/usr/X11R6/bin/xfwm
