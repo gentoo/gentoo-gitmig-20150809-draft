@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/paramiko
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.1 2004/08/15 19:18:52 lucass Exp $
+
+*paramiko-0.9h (15 Aug 2004)
+
+  15 Aug 2004; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
+  +paramiko-0.9h.ebuild:
+  Initial commit. Thanks for submittion to Sourav Mandal in #57324.
+
