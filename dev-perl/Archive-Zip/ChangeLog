@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Zip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.23 2004/10/25 22:22:05 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.24 2004/12/23 12:03:29 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Archive-Zip-1.14.ebuild:
+  added ~ppc64
 
   26 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   Archive-Zip-1.14.ebuild:
