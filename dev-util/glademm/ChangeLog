@@ -1,7 +1,10 @@
 # ChangeLog for dev-util/glademm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.4 2002/10/04 11:21:28 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.5 2002/10/09 19:12:18 foser Exp $
 
+*glademm-1.1.1c (9 Oct 2002)
+  09 Oct 2002; foser <foser@gentoo.org> glademm-1.1.1c.ebuild :
+  updated version, fixes gcc3 compile (bug #6595)
 
 *glademm-0.6.4 (4 Oct 2002)
   04 Oct 2002; Spider <spider@gentoo.org> glademm-0.6.4.ebuild :
