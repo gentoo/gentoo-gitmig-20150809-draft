@@ -13,8 +13,7 @@
 *>=sys-devel/gcc-3.2.3-r2
 *<sys-devel/gcc-3.3.0
 
-*>=sys-devel/hardened-gcc-2.4.2
-*>=sys-libs/glibc-2.3.2-r1
+*>=sys-libs/uclibc
 #*>=sys-apps/module-init-utils-0.9.10-r5
 *virtual/modutils
 virtual/os-headers
