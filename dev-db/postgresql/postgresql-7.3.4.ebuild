@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4.ebuild,v 1.7 2003/10/07 20:54:00 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4.ebuild,v 1.8 2003/11/20 02:23:21 vapier Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
+HOMEPAGE="http://www.postgresql.org/"
 SRC_URI="ftp://ftp.postgresql.org/pub/source/v${PV}/${P}.tar.gz
 	ftp://ftp8.us.postgresql.org/pub/pgsql/v${PV}/${P}.tar.gz"
-HOMEPAGE="http://www.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib"
-
-filter-flags -ffast-math
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
@@ -48,7 +48,7 @@ pkg_setup() {
 			eerror "pg_restore to import them when you have upgraded completely."
 			eerror "You must remove your entire database directory to continue."
 			eerror "(database directory = ${PG_DIR})."
-			exit 1
+			die
 		fi
 	fi
 }
@@ -63,6 +63,8 @@ check_java_config() {
 }
 
 src_compile() {
+	filter-flags -ffast-math
+
 	use java && check_java_config
 
 	local myconf
@@ -166,7 +168,7 @@ pkg_config() {
 			eerror "Postgres ${PV} cannot upgrade your existing databases."
 			eerror "You must remove your entire database directory to continue."
 			eerror "(database directory = ${PG_DIR})."
-			exit 1
+			die
 		else
 			einfon "A postgres data directory already exists from version "; cat ${PG_DIR}/data/PG_VERSION
 			einfo "Read the documentation to check how to upgrade to version ${PV}."

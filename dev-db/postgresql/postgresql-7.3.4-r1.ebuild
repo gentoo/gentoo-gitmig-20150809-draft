@@ -1,20 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.2 2003/11/17 19:19:16 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.3 2003/11/20 02:23:21 vapier Exp $
 
-DESCRIPTION="sophisticated Object-Relational DBMS."
+inherit flag-o-matic
 
+DESCRIPTION="sophisticated Object-Relational DBMS"
+HOMEPAGE="http://www.postgresql.org/ http://gppl.terminal.ru/index.eng.html"
 SRC_URI="mirror://postgresql/v${PV}/${P}.tar.gz
 	pg-hier? ( http://gppl.terminal.ru/hier-Pg7.3-0.3.tar.gz )"
-HOMEPAGE="http://www.postgresql.org/
-http://gppl.terminal.ru/index.eng.html"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib pg-hier"
-
-filter-flags -ffast-math
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
@@ -50,7 +48,7 @@ pkg_setup() {
 			eerror "pg_restore to import them when you have upgraded completely."
 			eerror "You must remove your entire database directory to continue."
 			eerror "(database directory = ${PG_DIR})."
-			exit 1
+			die
 		fi
 	fi
 }
@@ -76,6 +74,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -ffast-math
+
 	use java && check_java_config
 
 	local myconf
@@ -182,7 +182,7 @@ pkg_config() {
 			eerror "Postgres ${PV} cannot upgrade your existing databases."
 			eerror "You must remove your entire database directory to continue."
 			eerror "(database directory = ${PG_DIR})."
-			exit 1
+			die
 		else
 			einfon "A postgres data directory already exists from version "; cat ${PG_DIR}/data/PG_VERSION
 			einfo "Read the documentation to check how to upgrade to version ${PV}."
