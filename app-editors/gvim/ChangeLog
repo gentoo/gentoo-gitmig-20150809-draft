@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.92 2004/10/20 14:20:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.93 2004/11/09 01:53:21 dostrow Exp $
+
+  08 Nov 2004; Daniel Ostrow <dostrow@gentoo.org> gvim-6.3-r1.ebuild:
+  Marked ~ppc64
 
   20 Oct 2004; Akinori Hattori <hattya@gentoo.org> gvim-6.3-r1.ebuild:
   stable on ia64, bug #66772
