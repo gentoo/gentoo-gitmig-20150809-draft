@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2950 2004/06/20 02:34:51 agriffis Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2951 2004/06/21 03:12:33 robbat2 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <robbat2@gentoo.org> (20 June 2004)
+# mask waiting for sys-libs/db-4.2
+>=net-nds/openldap-2.2*
 
 # <swegener@gentoo.org> (20 June 2004)
 # alpha software, which is very buggy
