@@ -1,6 +1,13 @@
 # ChangeLog for net-www/links
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.3 2002/05/27 22:24:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.4 2002/05/28 01:02:05 ashmodai Exp $
+
+*links-2.0_pre4-r1 (27 May 2002)
+
+  27 May 2002; Mike Jones <ashmodai@gentoo.org> links-2.0_pre4-r1.ebuild :
+
+  Changed the dependency to gpm-1.19.6 as gpm-1.20.0 was masked and was
+  breaking.
 
 *links-2.0_pre4 (27 May 2002)
 
