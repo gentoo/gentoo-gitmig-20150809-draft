@@ -1,0 +1,9 @@
+# ChangeLog for net-print/hpijs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.1 2002/04/10 19:37:53 woodchip Exp $
+
+*hpijs-1.0.4 (10 Apr 2002)
+
+  10 Apr 2002; Donny Davies <woodchip@gentoo.org> hpijs-1.0.4.ebuild :
+
+  New package contributed by Steve Flack <steve_flack@ntlworld.com>.
