@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.15-r1.ebuild,v 1.1 2003/11/25 15:33:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.15-r1.ebuild,v 1.2 2004/04/11 04:02:39 khai Exp $
 
 inherit gnome2 eutils
 
@@ -33,6 +33,12 @@ DEPEND="dev-util/pkgconfig
 	>=app-text/scrollkeeper-0.1.4
 	${RDEPEND}"
 
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/balsa-gtk+-2.4-deprecation-fix.patch
+}
 src_compile() {
 	local myconf
 
