@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e53e938c447881ef8fb37c5555a4022 ChangeLog 5400
 MD5 0908d1ade8b50eb6da05dff71482b7ca gdk-pixbuf-0.22.0-r2.ebuild 1502
 MD5 18aa044e5155ebc7a6cd0e32c86c5de1 gdk-pixbuf-0.22.0.ebuild 1306
+MD5 82ab457534aa4bc4dfef8e33cb6c6e22 gdk-pixbuf-0.22.0-r3.ebuild 1656
+MD5 c6d7fc84cff447ce1553991c8b8950e0 ChangeLog 5515
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 915776c641639c60035cd4ad85a4faa0 gdk-pixbuf-0.22.0-r3.ebuild 1657
-MD5 7cb705de10c34e6b633af2ff2912e908 files/digest-gdk-pixbuf-0.22.0 70
+MD5 5f59d5772b1482d885a180dbc581cf84 files/gdk-pixbuf-0.22.0-bmp_secure.patch 557
 MD5 7cb705de10c34e6b633af2ff2912e908 files/digest-gdk-pixbuf-0.22.0-r2 70
 MD5 7cb705de10c34e6b633af2ff2912e908 files/digest-gdk-pixbuf-0.22.0-r3 70
-MD5 5f59d5772b1482d885a180dbc581cf84 files/gdk-pixbuf-0.22.0-bmp_secure.patch 557
 MD5 6311cee2e3fa5106adf17758b5dab6c6 files/gdk-pixbuf-0.22.0-loaders.patch 2307
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBTwNaHTu7gpaalycRAn+eAJ4gGtBXXfU68u+qXM88z3B/723S/QCg9SsY
-pcTybJMOpz69uRuM2NaJJyw=
-=XLa5
------END PGP SIGNATURE-----
+MD5 7cb705de10c34e6b633af2ff2912e908 files/digest-gdk-pixbuf-0.22.0 70
