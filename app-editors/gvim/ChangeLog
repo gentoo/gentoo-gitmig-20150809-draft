@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.105 2005/01/10 15:05:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.106 2005/01/13 22:22:52 ciaranm Exp $
+
+*gvim-7.0_alpha20050113 (13 Jan 2005)
+
+  13 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> files/gvim.desktop,
+  -gvim-7.0_alpha20041211.ebuild, +gvim-7.0_alpha20050113.ebuild:
+  Update vim7 snapshot. Included an improved .desktop file, thanks to Joe
+  McCann and Sebastian Dröge in bug #68622
 
   10 Jan 2005; Aron Griffis <agriffis@gentoo.org>
   gvim-7.0_alpha20041211.ebuild:
