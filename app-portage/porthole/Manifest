@@ -1,2 +1,4 @@
-MD5 ead003bacf53919ab9674c375512c2f8 porthole-0.2.ebuild 689
+MD5 9dd81938a3118c147f5bfaaf2bad578a porthole-0.2.ebuild 625
 MD5 010edc9851cc2659d942181089fd2487 ChangeLog 328
+MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
+MD5 acf7fdd77fc2868f678379aba8004565 files/digest-porthole-0.2 64
