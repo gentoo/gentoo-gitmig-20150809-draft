@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.7.ebuild,v 1.5 2004/06/25 00:18:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.7.ebuild,v 1.6 2004/07/13 03:06:04 solar Exp $
 
 MY_PN="vlan"
 DESCRIPTION="802.1Q vlan control utility"
@@ -10,8 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc "
 IUSE="static"
-DEPEND=">=sys-kernel/linux-headers-2.4.14"
-RDEPEND=">=virtual/kernel-2.4.14"
+DEPEND="virtual/os-headers"
 S=${WORKDIR}/${MY_PN}
 
 src_compile() {

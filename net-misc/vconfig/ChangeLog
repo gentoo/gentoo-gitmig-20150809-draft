@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vconfig
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.10 2004/06/25 00:18:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.11 2004/07/13 03:06:04 solar Exp $
+
+  12 Jul 2004; <solar@gentoo.org> vconfig-1.7-r1.ebuild,
+  vconfig-1.7-r2.ebuild, vconfig-1.7.ebuild, vconfig-1.8.ebuild:
+  updated ebuilds to use virtual/os-headers s versioned >=2.4.14 headers
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> vconfig-1.7-r2.ebuild,
   vconfig-1.8.ebuild:
