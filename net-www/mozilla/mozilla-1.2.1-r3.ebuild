@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.1 2002/12/16 02:30:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.2 2002/12/16 04:02:30 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -232,8 +232,14 @@ src_compile() {
 						  --disable-dtd-debug \
 						  --enable-reorder \
 						  --enable-strip \
-						  --enable-elf-dynstr-gc \
 						  --enable-cpp-rtti"
+
+		# Currently --enable-elf-dynstr-gc only works for x86 and ppc,
+		# thanks to Jason Wever <weeve@gentoo.org> for the fix.
+		if [ -n "`use x86`" -o -n "`use ppc`" ]
+		then
+			myconf="${myconf} --enable-elf-dynstr-gc"
+		fi
 
 		if [ -z "`use gtk2`" ]
 		then

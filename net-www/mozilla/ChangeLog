@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.71 2002/12/16 02:30:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.72 2002/12/16 04:02:30 azarah Exp $
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
+
+  Currently --enable-elf-dynstr-gc only works for x86 and ppc, thanks
+  to Jason Wever <weeve@gentoo.org> for the fix.
 
 *mozilla-1.2.1-r3 (16 Dec 2002)
 
