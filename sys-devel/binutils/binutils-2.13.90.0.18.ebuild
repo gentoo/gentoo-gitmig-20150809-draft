@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.9 2003/02/24 02:10:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.10 2003/02/26 17:48:58 zwelch Exp $
 
 IUSE="nls bootstrap build"
 
@@ -31,6 +31,12 @@ DEPEND="virtual/glibc
 	    )"
 # This is a hairy one.  Basically depend on sys-devel/perl
 # if "build" or "bootstrap" not in USE.
+
+
+# filter CFLAGS=".. -O2 .." on arm
+if [ "${ARCH}" = "arm" ]; then
+	CFLAGS="$(echo "${CFLAGS}" | sed -e 's,-O[2-9] ,-O1 ,')"
+fi
 
 src_unpack() {
 	
