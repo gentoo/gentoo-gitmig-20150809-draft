@@ -1,0 +1,36 @@
+diff -urN wxPythonSrc-2.4.1.2/wxPython/src/gtk/controls2.py wxPythonSrc-2.4.1.2-modified/wxPython/src/gtk/controls2.py
+--- wxPythonSrc-2.4.1.2/wxPython/src/gtk/controls2.py	2003-06-12 18:25:30.000000000 -0500
++++ wxPythonSrc-2.4.1.2-modified/wxPython/src/gtk/controls2.py	2003-07-10 18:19:51.000000000 -0500
+@@ -642,7 +642,7 @@
+         return "<%s.%s instance; proxy of C++ wxListCtrl instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this)
+     
+     def GetColumn(self, *_args, **_kwargs):
+-        val = ontrols2c.wxListCtrl_GetColumn(self, *_args, **_kwargs)
++        val = controls2c.wxListCtrl_GetColumn(self, *_args, **_kwargs)
+         if val is not None: val.thisown = 1
+         return val
+     
+diff -urN wxPythonSrc-2.4.1.2/wxPython/src/mac/controls2.py wxPythonSrc-2.4.1.2-modified/wxPython/src/mac/controls2.py
+--- wxPythonSrc-2.4.1.2/wxPython/src/mac/controls2.py	2003-05-16 13:36:52.000000000 -0500
++++ wxPythonSrc-2.4.1.2-modified/wxPython/src/mac/controls2.py	2003-07-10 18:20:41.000000000 -0500
+@@ -642,7 +642,7 @@
+         return "<%s.%s instance; proxy of C++ wxListCtrl instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this)
+     
+     def GetColumn(self, *_args, **_kwargs):
+-        val = ontrols2c.wxListCtrl_GetColumn(self, *_args, **_kwargs)
++        val = controls2c.wxListCtrl_GetColumn(self, *_args, **_kwargs)
+         if val is not None: val.thisown = 1
+         return val
+     
+diff -urN wxPythonSrc-2.4.1.2/wxPython/src/msw/controls2.py wxPythonSrc-2.4.1.2-modified/wxPython/src/msw/controls2.py
+--- wxPythonSrc-2.4.1.2/wxPython/src/msw/controls2.py	2003-05-07 14:29:04.000000000 -0500
++++ wxPythonSrc-2.4.1.2-modified/wxPython/src/msw/controls2.py	2003-07-10 18:20:11.000000000 -0500
+@@ -645,7 +645,7 @@
+         return "<%s.%s instance; proxy of C++ wxListCtrl instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this)
+     
+     def GetColumn(self, *_args, **_kwargs):
+-        val = ontrols2c.wxListCtrl_GetColumn(self, *_args, **_kwargs)
++        val = controls2c.wxListCtrl_GetColumn(self, *_args, **_kwargs)
+         if val is not None: val.thisown = 1
+         return val
+     
