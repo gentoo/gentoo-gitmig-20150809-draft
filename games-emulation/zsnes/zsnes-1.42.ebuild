@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.2 2005/01/24 22:07:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.3 2005/03/21 07:53:05 eradicator Exp $
 
 inherit eutils flag-o-matic games
 
@@ -29,12 +29,20 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}_${PV//./_}"
 
 multilib_check() {
-	if has_m32 ; then
-		einfo "multilib detected, adding -m32 to CFLAGS. note that opengl"
-		einfo "support probably wont work quite right."
-		append-flags -m32
-	else
-		die "zsnes requires multilib support in gcc. please re-emerge gcc with multilib in USE and try again"
+	if use amd64; then
+		if has_multilib_profile; then
+			ewarn "Testing default."
+			ABI_ALLOW="x86"
+
+			# And until we get a real multilib portage...
+			append-ldflags "-L/emul/linux/x86/usr/lib -L/emul/linux/x86/lib -L/usr/lib32 -L/lib32"
+			ABI="x86"
+		elif has_m32 ; then
+			einfo "multilib detected, adding -m32 to CFLAGS."
+			append-flags -m32
+		else
+			die "zsnes requires multilib support in gcc. please re-emerge gcc with multilib in USE and try again"
+		fi
 	fi
 }
 
