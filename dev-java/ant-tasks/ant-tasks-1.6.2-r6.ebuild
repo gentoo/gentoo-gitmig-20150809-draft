@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r6.ebuild,v 1.2 2005/04/02 23:41:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r6.ebuild,v 1.3 2005/04/04 13:40:43 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -26,11 +26,11 @@ DEPEND="=dev-java/ant-core-${PV}*
 	!nocommonslogging? ( >=dev-java/commons-logging-1.0.3 )
 	!nocommonsnet? ( >=dev-java/commons-net-1.1.0 )
 	!nobcel? ( >=dev-java/bcel-5.1 )
-	!nooro? ( >=dev-java/jakarta-oro-2.0* )
+	!nooro? ( >=dev-java/jakarta-oro-2.0.8-r1 )
 	!norhino? ( =dev-java/rhino-1.5* )
 	!nojdepend? ( >=dev-java/jdepend-2.6 )
 	!nojsch? ( >=dev-java/jsch-0.1.12 )
-	!noregexp? ( =dev-java/jakarta-regexp-1.3* )
+	!noregexp? ( =dev-java/jakarta-regexp-1.3-r1 )
 	!nojython? ( >=dev-java/jython-2.1-r5 )
 	javamail? ( >=dev-java/sun-javamail-bin-1.3 )"
 RDEPEND="${DEPEND}"
