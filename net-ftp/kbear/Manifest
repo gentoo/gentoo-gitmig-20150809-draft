@@ -1,3 +1,5 @@
-MD5 03d5cb8883e23afe6a668b60d922ad05 ChangeLog 1930
 MD5 cec7f89aae44fe12c8a33ef88c9b54cf kbear-2.1.ebuild 430
+MD5 cec7f89aae44fe12c8a33ef88c9b54cf kbear-2.1.1.ebuild 430
+MD5 03d5cb8883e23afe6a668b60d922ad05 ChangeLog 1930
+MD5 443afedd3087f5872adc90384c861095 files/digest-kbear-2.1.1 71
 MD5 6fe61e051af03f1c709e33c882a9c65a files/digest-kbear-2.1 69
