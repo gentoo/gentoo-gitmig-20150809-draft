@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/wasabi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/ChangeLog,v 1.7 2004/06/20 23:47:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/ChangeLog,v 1.8 2004/06/23 14:49:58 klieber Exp $
+
+*wasabi-0.2.1 (23 Jun 2004)
+
+  23 Jun 2004; Kurt Lieber <klieber@gentoo.org> wasabi-0.2.1.ebuild:
+  version bump to 0.2.1
 
 *wasabi-0.2 (21 Jun 2004)
 
