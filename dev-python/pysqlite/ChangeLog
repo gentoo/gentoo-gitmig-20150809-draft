@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.24 2004/10/17 11:39:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.25 2004/10/23 15:10:19 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> pysqlite-1.0.ebuild:
+  Added ~sparc keyword.
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> pysqlite-0.5.1.ebuild:
   stable on amd64.
