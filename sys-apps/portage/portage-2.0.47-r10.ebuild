@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r10.ebuild,v 1.4 2003/03/14 21:15:57 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r10.ebuild,v 1.5 2003/03/27 07:14:18 carpaski Exp $
 
 IUSE="build"
 
@@ -78,6 +78,8 @@ src_install() {
 		doins make.globals make.conf
 		;;
 	esac
+	use build && rm -f ${D}/etc/make.conf
+	
 	doins etc-update.conf dispatch-conf.conf
 	#python modules
 	cd ${S}/src/python-missingos
