@@ -1,8 +1,10 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r4.ebuild,v 1.1 2002/11/21 01:34:34 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r4.ebuild,v 1.2 2002/12/06 23:58:06 rphillips Exp $
 
+VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
+
 DESCRIPTION="graphical vim"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 DEPEND="dev-util/cscope
