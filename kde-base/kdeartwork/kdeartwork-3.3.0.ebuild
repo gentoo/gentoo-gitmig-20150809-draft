@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.3.0.ebuild,v 1.1 2004/08/19 19:26:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.3.0.ebuild,v 1.2 2004/08/26 15:29:39 caleb Exp $
 
-inherit kde-dist
+inherit kde-dist eutils
 
 DESCRIPTION="KDE artwork package"
 
@@ -15,6 +15,12 @@ DEPEND="opengl? ( virtual/opengl )
 src_unpack() {
 	kde_src_unpack
 	sed -ie "s:X11R6/lib\(/X11\)\?:lib:g" kscreensaver/kxsconfig/Makefile.in
+	if ! use arts; then
+		epatch ${FILESDIR}/3.3.0-kfiresaver-configure.in.in.patch
+		epatch ${FILESDIR}/3.3.0-kfiresaver-Makefile.am.patch 
+		cd ${S} 
+		make -f admin/Makefile.common
+	fi
 }
 
 src_compile() {

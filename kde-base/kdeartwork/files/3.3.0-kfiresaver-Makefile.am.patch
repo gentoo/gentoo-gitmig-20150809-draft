@@ -1,0 +1,19 @@
+--- kscreensaver/kdesavers/Makefile.am	2004-06-22 12:13:59.000000000 -0500
++++ kscreensaver/kdesavers/Makefile.am	2004-08-12 15:53:33.366143312 -0500
+@@ -21,9 +21,14 @@
+ endif
+ LIBART_KSAVERS_LDADD = $(AM_LDADD) $(LIBART_LIBS)
+ 
++if COMPILE_ARTS_KSAVERS
++ARTS_KSAVERS = kfiresaver.kss
++ARTS_DESKTOP_FILES = KFiresaver.desktop
++endif
++
+ if COMPILE_GL_KSAVERS
+-GL_KSAVERS=kfountain.kss kwave.kss kgravity.kss kflux.kss keuphoria.kss ksolarwinds.kss krotation.kss kpendulum.kss kfiresaver.kss
+-GL_DESKTOP_FILES=KGravity.desktop KWave.desktop KFountain.desktop KFlux.desktop KEuphoria.desktop KSolarWinds.desktop KRotation.desktop KPendulum.desktop KFiresaver.desktop
++GL_KSAVERS=kfountain.kss kwave.kss kgravity.kss kflux.kss keuphoria.kss ksolarwinds.kss krotation.kss kpendulum.kss $(ARTS_KSAVERS)
++GL_DESKTOP_FILES=KGravity.desktop KWave.desktop KFountain.desktop KFlux.desktop KEuphoria.desktop KSolarWinds.desktop KRotation.desktop KPendulum.desktop $(ARTS_DESKTOP_FILES)
+ endif
+ GL_KSAVERS_LDADD = $(AM_LDADD) $(GLLIB)
+ 

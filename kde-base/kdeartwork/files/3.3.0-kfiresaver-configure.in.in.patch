@@ -1,0 +1,10 @@
+--- kscreensaver/configure.in.in.orig	2004-08-12 16:08:58.452508808 -0500
++++ kscreensaver/configure.in.in	2004-08-12 16:10:38.628279776 -0500
+@@ -32,6 +32,7 @@
+ AC_HAVE_GL( have_gl=yes, have_gl=no )
+ 
+ AM_CONDITIONAL(COMPILE_GL_XSAVERS, test x$have_gl = xyes)
++AM_CONDITIONAL(COMPILE_ARTS_KSAVERS, test x$have_arts = xyes)
+ AM_CONDITIONAL(COMPILE_GL_KSAVERS, test x$ac_cv_kde_qt_has_opengl = xyes)
+ AM_CONDITIONAL(COMPILE_X11_KSAVERS, test "x$ac_x_includes" != x && test "x$ac_x_libraries" != x)
+ 
