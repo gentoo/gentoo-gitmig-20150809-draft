@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.1 2002/09/01 08:42:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.2 2002/09/01 19:50:12 lostlogic Exp $
+
+*lolo-sources-2.4.19.9_pre2 (01 Sep 2002)
+
+  01 Sep 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.19.9_pre2.ebuild:
+
+  Added default config patch, fixed alsa-driver compilation against this kernel, 
+  fixed version setting issues with the ebuild (with any luck).
 
 *lolo-sources-2.4.19.9_pre1 (01 Sep 2002)
 
