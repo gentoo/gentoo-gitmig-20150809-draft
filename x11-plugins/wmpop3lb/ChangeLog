@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmpop3lb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/ChangeLog,v 1.1 2002/10/08 14:43:18 raker Exp $
+
+wmpop3lb-2.4.2 (08 Oct 2002)
+
+  08 Oct 2002; Nick Hadaway <raker@gentoo.org> wmpop3lb-2.4.2.ebuild,
+  files/digest-wmpop3lbp-2.4.2 :
+  New ebuild.  See bug #5044
