@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ebindings/ebindings-0.2.20030220.ebuild,v 1.2 2003/03/03 14:47:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ebindings/ebindings-0.2.20030220.ebuild,v 1.3 2003/03/11 22:56:23 agriffis Exp $
 
 DESCRIPTION="e17 keybinding and menu editor"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 DEPEND="virtual/x11
 	virtual/glibc
