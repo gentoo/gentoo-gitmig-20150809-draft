@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/usermode-utilities
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.14 2004/01/28 08:56:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.15 2004/03/07 13:04:02 gustavoz Exp $
+
+  07 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  usermode-utilities-20020906.ebuild, usermode-utilities-20030118.ebuild,
+  usermode-utilities-20030120.ebuild, usermode-utilities-20030122.ebuild,
+  usermode-utilities-20030202.ebuild, usermode-utilities-20030205-r1.ebuild,
+  usermode-utilities-20030205.ebuild, usermode-utilities-20030903.ebuild,
+  usermode-utilities-20040114.ebuild:
+  -sparc all, um linux doesn't work on sparc yet
 
 *usermode-utilities-20040114 (28 Jan 2004)
 
