@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/efxmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/ChangeLog,v 1.3 2004/04/20 17:42:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/ChangeLog,v 1.4 2004/06/18 05:51:14 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> efxmms-0.0.3.ebuild:
+  gnuconfig update for ~amd64 addition.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> efxmms-0.0.3.ebuild:
   Added IUSE.
