@@ -1,6 +1,30 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.142 2003/06/02 23:14:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.143 2003/06/05 01:30:57 seemant Exp $
+
+  04 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r3.ebuild:
+  Ready for release into ~arch testing. This revision bump adds the radeon
+  ap10 fix from daenzer, as well as a number of r128 fixes from redhat's
+  srpm, which includes the chip names touchupk, the ecp divisor and an
+  updated unresolved symbols patch.  The mga unresolved symbols patch was
+  updated as well.  New patches for the nv driver include: new chip ids,
+  filter-imagerect-pixel-range, dpms for broken monitors, a dualhead patch
+  for riva cards, and unresolved symbols patch.  Additionally, the acecad
+  debug patch was added back in.  Added a patch for the non-exec stack in 
+  linux's elfloader.  Also, a null pointer dereference fix in libXfont is
+  patched, as well as a patch to allow xscreensaver to work in xinerama.
+  New drivers patched are siliconmotion and rendition and trident.
+  Additionally a patch for the i8x0 440EX-LX video.  New drivers patched are
+  siliconmotion and rendition and trident.  Additionally a patch for the
+  i8x0 440EX-LX video.  Finally, the coup de grace is the ipv6 patches that
+  latexer managed to pin down.  
+  The patch structure is changed -- now patches not to
+  be appled are no longer deleted, they are moved into an excluded
+  subdirectory.  The last update is TaD's gentoo cursors with a thinner I
+  bar.  Speaking of cursors -- For system wide defaults, put the
+  default/index.theme file into /usr/local/share/cursors/xfree to avoid
+  getting it overwritten at every new emerge.  Also, ~/.cursors is added to
+  the search path for private cursor settings.
 
   02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
   did similar things for mmx and sse use flag disables, at Tom's suggestion in
