@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.1.0.ebuild,v 1.2 2003/03/16 17:18:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.1.3.ebuild,v 1.1 2003/07/31 15:20:43 foser Exp $
 
 inherit gnome2
 
-S=${WORKDIR}/${P}
+IUSE="jpeg"
 DESCRIPTION="Image viewer and browser for Gnome"
 HOMEPAGE="http://gthumb.sourceforge.net/"
 
-SLOT="1"
+SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
@@ -24,7 +24,9 @@ RDEPEND=">=dev-libs/glib-2.2
 	>=gnome-base/libgnomeprintui-2.1
 	>=gnome-base/bonobo-activation-1
 	>=gnome-base/libbonobo-2
-	>=gnome-base/libbonoboui-2"
+	>=gnome-base/libbonoboui-2
+	jpeg ( media-libs/jpeg 
+		>=media-libs/libexif-0.5.8 )"
 
 DEPEND=">=dev-util/pkgconfig-0.9.0
 	app-text/scrollkeeper
@@ -32,7 +34,7 @@ DEPEND=">=dev-util/pkgconfig-0.9.0
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README TODO"
 
-pkg_postinst() {
-	ewarn "If you have been using 1.0.8 you might have to remove your thumbnails to correct problems."
-	ewarn "'rm -fr ~/.nautilus/thumbnails/*' as your gthumb user should do the trick."
+src_unpack() {
+	unpack ${A}
+	gnome2_omf_fix
 }
