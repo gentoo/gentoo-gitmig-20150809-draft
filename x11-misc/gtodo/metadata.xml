@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>desktop-misc</herd>
-<maintainer>
-    <email>port001@gentoo.org</email>
-    <name>Ian Leitch</name>
-</maintainer>
-<longdescription>
-    Gtodo is a Gtk+-2.0 Todo list manager written for use with gnome 2.
-</longdescription>
+        <herd>desktop-misc</herd>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtodo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.10 2005/01/01 15:54:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.11 2005/01/06 03:21:13 port001 Exp $
+
+  06 Jan 2005; Ian Leitch <port001@gentoo.org> metadata.xml:
+  Removed myself from metadata, reassigned back to desktop-misc
 
   02 Jan 2005; Joseph Jezak <josejx@gentoo.org> gtodo-0.14.ebuild:
   Marked ~ppc.

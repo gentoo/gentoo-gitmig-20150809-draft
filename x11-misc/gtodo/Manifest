@@ -1,6 +1,16 @@
-MD5 1a2ef5767c44d77bd7a0450cca72f65b ChangeLog 1200
-MD5 ef85990d770dc440f9acd8617e8b9178 gtodo-0.13.5.ebuild 691
-MD5 09ccef8f0c71ece39e0fd0f5c8265ea6 metadata.xml 367
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6fcc252da3a5ed80247e1c81c9507983 gtodo-0.14.ebuild 1257
+MD5 ef85990d770dc440f9acd8617e8b9178 gtodo-0.13.5.ebuild 691
+MD5 5505d2599365b993f7832c8c6af78f84 ChangeLog 1327
+MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
 MD5 bed7bdda997259ea2a0f92edbd892056 files/digest-gtodo-0.13.5 64
 MD5 636f22b2a6529fa06fadbd19c34c8250 files/digest-gtodo-0.14 130
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3K66UxGWrFYv8KQRAh24AKDCCtVnmlbY1MHqQBaAHZcl/+DcTwCeNAJ6
+r8NMaE/U2brSNas4JH0OYiQ=
+=DWd5
+-----END PGP SIGNATURE-----
