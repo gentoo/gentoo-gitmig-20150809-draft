@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.33 2004/04/06 03:13:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.34 2004/04/28 22:32:00 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,11 +27,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.7.7
 	>=sys-apps/sed-4.0.5"
-
-pkg_setup() {
-	enewgroup ntp 123
-	enewuser ntp 123 /bin/false /dev/null ntp
-}
 
 hax_bitkeeper() {
 	# the makefiles have support for bk ...
@@ -80,8 +75,14 @@ src_compile() {
 	emake || die
 }
 
+pkg_preinst() {
+	enewgroup ntp 123
+	enewuser ntp 123 /bin/false /dev/null ntp
+}
+
 src_install() {
 	hax_bitkeeper
+	pkg_preinst
 
 	make install DESTDIR=${D} || die
 
