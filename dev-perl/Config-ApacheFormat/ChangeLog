@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Config-ApacheFormat
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-ApacheFormat/ChangeLog,v 1.1 2005/03/19 12:49:07 mcummings Exp $
+
+*Config-ApacheFormat-1.2 (19 Mar 2005)
+
+  19 Mar 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Config-ApacheFormat-1.2.ebuild:
+  Bug 79477, support for bug 79476, ebuild provided by Kevin
+  <gentoo@thebarters.com>
+
