@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.24 2004/01/29 18:34:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.25 2004/02/08 14:23:47 azarah Exp $
+
+*kbd-1.12-r1 (08 Feb 2004)
+
+  08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> kbd-1.12-r1.ebuild,
+  files/kbd-1.12-kbd_repeat.patch:
+  Sparc have not yet fixed struct kbd_rate to use 'period' and not 'rate'. Patch
+  by Andries Brouwer <Andries.Brouwer@cwi.nl>.
 
 *kbd-1.12 (29 Jan 2004)
 
