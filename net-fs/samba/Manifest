@@ -3,8 +3,9 @@ MD5 9b192ecc1db0a52318a676e8c03d4ac2 samba-3.0.7-r1.ebuild 15395
 MD5 cd9f3589a14d50054a0b1e4e129602af samba-3.0.6-r4.ebuild 14203
 MD5 7ad9048a4062a3c8ce96af16abb18e4c samba-3.0.9.ebuild 16191
 MD5 fc36819e4e02fa146e936aa31947ad27 samba-3.0.6-r3.ebuild 14226
+MD5 1c93ffe2bc210fbeee7fa52a1fb5cb5c samba-3.0.9-r1.ebuild 16373
 MD5 826ef7c1a083b2b7f564dc5198072698 samba-3.0.8.ebuild 16812
-MD5 c5c42e503b7d1f48801b9bc1ebf3832f ChangeLog 24705
+MD5 d43fe1fd8a7597e75981dd1bc08abc8d ChangeLog 24937
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 7c1f458c46d453971ac7ca85c290f7a3 samba-3.0.8-r1.ebuild 17126
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086
@@ -37,6 +38,7 @@ MD5 8c114eb3ebe56e7adb7db9381bea62db files/digest-samba-3.0.6-r3 203
 MD5 8c114eb3ebe56e7adb7db9381bea62db files/digest-samba-3.0.6-r4 203
 MD5 a6cb7ea67d2a4fa00cb2d5dba0710cc3 files/digest-samba-3.0.7-r1 203
 MD5 94d8eb813ea041a79ee00914c5052b3f files/digest-samba-3.0.8-r1 205
+MD5 5933e87f1c72bc7a29a1ea4073b49441 files/digest-samba-3.0.9-r1 284
 MD5 9560b7e29d3a65db029fc1800e84abcc files/samba-pdb_ldap-exop.patch 3921
 MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
 MD5 09195dd8ab25ce77ac51c0c05b4ab93c files/system-auth-winbind 869
@@ -46,6 +48,7 @@ MD5 990fe15ff8a0e79f39069fff6475536d files/samba-3.0.2a-smbprint.patch 1224
 MD5 b836e258befae9d6c66cb3f158769b25 files/samba-3.0.6-libdirsymlink.patch 592
 MD5 6acf6a5e92ff2cfc5f09b88f5d01b63e files/samba-svc 975
 MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
+MD5 48bea6e2bb73a2b7ce286bedefae3011 files/samba-3.0.9-util.c-bitpmap.c-4120.patch 1872
 MD5 de43ff30dd5f1431590fd62a997e71b4 files/samba-3.0.4-python-setup.patch 833
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.x.patch 8086
 MD5 8289eda694b35875eec6df5cc3f50c86 files/samba-2.2.6-libresolv.patch 540
