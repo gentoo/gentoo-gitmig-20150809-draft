@@ -1,6 +1,4 @@
-MD5 5579c3c8e9772a39d0b23a58bbd1c337 ChangeLog 1004
+MD5 060b9cc70c3834aea81dc69955af6d97 ChangeLog 1106
 MD5 dbafe0153b3ee5f599d5dbeac4aa3210 metadata.xml 224
 MD5 a65b1d3b5ada9286cf7d4a2b6e028b21 tagtool-0.10.ebuild 1316
-MD5 99e601e275856508d76b2347fd736540 tagtool-0.9.ebuild 1422
-MD5 35a84c84089c22bafe01a69838d49679 files/digest-tagtool-0.9 141
 MD5 71c19fcd691c9f910ac6cf0259cb834b files/digest-tagtool-0.10 142

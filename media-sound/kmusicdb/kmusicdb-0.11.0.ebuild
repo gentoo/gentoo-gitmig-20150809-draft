@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/kmusicdb-0.11.0.ebuild,v 1.7 2004/09/14 16:37:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/kmusicdb-0.11.0.ebuild,v 1.8 2004/09/15 20:02:26 eradicator Exp $
 
 inherit kde
 
@@ -15,4 +15,4 @@ IUSE=""
 DEPEND=">=media-libs/libdbmusic-0.7.0"
 need-kde 3
 
-myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-pqdir=/usr/include/ --with-qtdir=/usr/qt/3/ --with-kdedir=/usr/kde/3/"
+myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-pqdir=/usr/include/ --with-qtdir=${QTDIR} --with-kdedir=${KDEDIR}"

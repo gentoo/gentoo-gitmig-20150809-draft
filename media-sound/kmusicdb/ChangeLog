@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kmusicdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/ChangeLog,v 1.8 2004/09/14 16:37:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/ChangeLog,v 1.9 2004/09/15 20:02:26 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  Removed old version.  Fixed bug #63980.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   kmusicdb-0.11.0.ebuild:
