@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.12 2003/01/24 15:04:07 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.13 2003/02/11 12:00:40 gmsoft Exp $
+
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 *ccache-2.1.1 (24 Jan 2002)
 
