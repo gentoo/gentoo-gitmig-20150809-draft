@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/bmp-scrobbler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-scrobbler/ChangeLog,v 1.2 2005/04/01 21:38:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-scrobbler/ChangeLog,v 1.3 2005/04/01 22:01:04 luckyduck Exp $
+
+  01 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  bmp-scrobbler-0.3.6-r1.ebuild:
+  added ~amd64 to KEYWORDS. fixes #86394
 
 *bmp-scrobbler-0.3.6-r1 (01 Apr 2005)
 
