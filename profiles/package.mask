@@ -55,11 +55,6 @@ media-libs/libfame
 >=x11-libs/qt-3.0.5
 
 # raker@gentoo.org (17 Jul 2002)
-# lateset stable version of OpenLDAP w/SASL support - pleast test and
-# report back your experience on bug #5104
-=net-nds/openldap-2.0.25
-
-# raker@gentoo.org (17 Jul 2002)
 # added support in autofs for OpenLDAP 2.x - Please test and report back
 # your success or failure on bug #2285
 =net-fs/autofs-3.1.7-r4
