@@ -1,0 +1,7 @@
+MD5 5544ada33f0716354c2cb2b73c1a0b2d ChangeLog 1505
+MD5 516c818338b2df427096ae352327931e acme-2.0.2.ebuild 752
+MD5 acfa6b9863f30326016252f9d693fc7b acme-2.0.3.ebuild 735
+MD5 8cc94dafb050060bd8ab2bb869872f0f acme-2.0.4.ebuild 712
+MD5 9a494de1e1d3973f868fce5ad5344943 files/digest-acme-2.0.2 63
+MD5 ef38d7b0d901edd5cf55601ff5a1c84d files/digest-acme-2.0.3 63
+MD5 7d7597590651059000402867d55b073a files/digest-acme-2.0.4 63
