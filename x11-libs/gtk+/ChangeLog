@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.47 2003/01/16 15:26:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.48 2003/02/04 06:01:48 spider Exp $
+
+
+
+*gtk+-2.2.1 (04 Feb 2003)
+
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+-2.2.1.ebuild :
+  bumped version
+
 
   16 Jan 2003; foser <foser@gentoo.org> gtk+-2.2.0.ebuild :
   Added some info about rebuilding gtk theme engines after an emerge
@@ -21,6 +29,10 @@
 
 *gtk+-2.2.0 (22 Dec 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
+
   22 Dec 2002; foser <foser@gentoo.org> gtk+-2.2.0.ebuild :
   New version
 
@@ -34,10 +46,16 @@
 
 *gtk+-2.0.9 (20 Nov 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
   20 Nov 2002; foser <foser@gentoo.org> gtk+-2.0.9.ebuild :
   New version, mainly fixes a bug which made metacity crash
 
 *gtk-2.0.8-r1 (15 Nov 2002)
+
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
 
   15 Nov 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.8-r1.ebuild
   files/digest-gtk+-2.0.8-r1 :
@@ -46,6 +64,9 @@
 
 *gtk+-2.1.2 (12 Nov 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
   29 Nov 2002; Jon Nall <nall@gentoo.org> gtk+-2.1.2.ebuild :
   added ~ppc to KEYWORDS
 
@@ -53,6 +74,9 @@
   GNOME 2.1.2 release
 
 *gtk+-2.0.8 (09 Nov 2002)
+
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
 
   12 Nov 2002; L. Boshell <leonardop@gentoo.org> : Removed directfb dep
   since it wasn't being used.
@@ -66,6 +90,9 @@
   
 *gtk+-2.0.7-r1 (05 Nov 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
   09 Nov 2002; foser <foser@gentoo.org> gtk+-2.0.7-r1 :
   Added sgmltools-lite dep, to fix documentation problems
 
@@ -74,6 +101,9 @@
 
 *gtk+-2.0.7 (04 Nov 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
   04  Nov 2002; Spider <spider@gentoo.org> gtk+-2.0.4.ebuild 
   files/digest-gtk+-2.0.4: added the latest stable release, bugfixes and nothing
   more. Ripped out the directfb (wow, it survived more than 10 days! )
@@ -81,10 +111,16 @@
   
 *gtk+-2.1.1 (27 Oct 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
   27 Oct 2002; foser <foser@gentoo.org> gtk+-2.1.1.ebuild :
   gnome 2.1
 
 *gtk+-2.0.6-r3 (21 Oct 2002)
+
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
 
   21 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.6-r3.ebuild
   files/digest-gtk+-2.0.6-r3 :
@@ -93,14 +129,24 @@
 
 *gtk+-2.0.6-r2 (10 Oct 2002)
   
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
   10 Oct 2002; foser <foser@gentoo.org> gtk+-2.0.6-r2.ebuild :
   Bumped revision to get the safety replacement added in r1 spread  
 
 *gtk+-1.2.10-r9 (26 Sep 2002)
+  
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
+
   26 Sep 2002; Spider <spider@gentoo.org> gtk+-1.2.10-r9.ebuild :
   This build enables minimal debugging for all users, this will fix some unexpected crashes in amongst other things xchat.
 
 *gtk+-2.0.6-r1 (04 Jul 2002)
+
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
 
   08 Oct 2002; foser <foser@gentoo.org> gtk+-2.0.6-r1.ebuild :
   Replace -O3 with -O2 to be on the safe side (bug 8762)
@@ -111,6 +157,9 @@
   changed configure some
 
 *gtk+-2.0.6 (04 Jul 2002)
+
+  04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
+  changed all DEBUG to DEBUGBUILD
 
   04 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gtk+-2.0.6.ebuild:
 
