@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.38 2004/01/11 03:33:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.39 2004/01/26 21:27:05 augustus Exp $
+
+  26 Jan 2004; <augustus@gentoo.org> libsdl-1.2.5-r2.ebuild,
+  libsdl-1.2.6-r3.ebuild:
+  Removed stable amd64 keyword from 1.2.5 and made 1.2.6 stable. This is per the
+  request of Mr. Gordon in Bug 37143. Pretty important fix.
 
   10 Jan 2004; Aron Griffis <agriffis@gentoo.org> libsdl-1.2.6-r3.ebuild:
   stable on alpha and ia64
