@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.86-r1.ebuild,v 1.1 2003/04/06 09:51:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.86-r1.ebuild,v 1.2 2003/04/07 19:49:51 seemant Exp $
+
+inherit virtualx
 
 IUSE="aalib motif alsa opengl nls quicktime"
 
@@ -61,12 +63,12 @@ src_compile() {
 		--enable-xfree-ext \
 		--enable-xvideo \
 		--enable-zvbi \
-		${myconf} || die
+		${myconf} || die "xawtv failed"
 
 	make || die
 
 	cd ${WORKDIR}/${MY_FONT}
-	make || die
+	Xmake || die "tvfonts failed"
 }
 
 src_install() {
