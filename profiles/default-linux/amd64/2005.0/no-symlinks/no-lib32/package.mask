@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.4 2005/02/07 05:12:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.5 2005/02/07 05:29:21 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -9,6 +9,7 @@
 <dev-db/postgresql-7.4.6
 <dev-lang/tcl-8.4.6-r1
 <dev-lang/tk-8.4.6-r1
+<dev-libs/libmcal-0.7-r4
 <dev-tcltk/expect-5.42.1
 <media-video/transcode-0.6.14
 <net-fs/samba-3.0.11
