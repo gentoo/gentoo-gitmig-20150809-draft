@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.4.ebuild,v 1.2 2005/01/01 17:38:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.4.ebuild,v 1.3 2005/01/12 19:43:05 swegener Exp $
 
 inherit gnome2
 
 DESCRIPTION="MySQL Query Browser"
-HOMEPAGE="http://www.mysql.com/"
+HOMEPAGE="http://www.mysql.com/products/query-browser/"
 SRC_URI="mirror://mysql/Downloads/MySQLAdministrationSuite/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
