@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r4.ebuild,v 1.4 2004/04/25 22:54:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r4.ebuild,v 1.5 2004/06/02 13:09:37 agriffis Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 	local myconf="--enable-global"
 	local compileopts="compile-kernel compile-tools"
 
-	if [ `use X` ] ; then
+	if use X ; then
 		myconf="${myconf} --with-x"
 		compileopts="${compileopts} compile-xgui"
 	else
@@ -50,7 +50,7 @@ src_install() {
 		dobin $file
 	done
 
-	if [ `use X` ] ; then
+	if use X ; then
 		newbin xgui/sources/xgui snns
 
 		dodir /etc/env.d

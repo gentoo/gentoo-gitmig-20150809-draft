@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.3.ebuild,v 1.4 2004/03/26 12:15:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.3.ebuild,v 1.5 2004/06/02 13:06:35 agriffis Exp $
 
 DESCRIPTION="Powerfull map generator"
 HOMEPAGE="http://gmt.soest.hawaii.edu/"
@@ -36,7 +36,7 @@ src_unpack() {
 	unpack ${A} || die
 
 	mv -f ${WORKDIR}/share/*  ${S}/share/ || die
-	if [ `use gmttria` ] ; then
+	if use gmttria ; then
 		mv -f ${WORKDIR}/src/*  ${S}/src/ || die
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.4-r1.ebuild,v 1.2 2004/05/17 11:28:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.4-r1.ebuild,v 1.3 2004/06/02 13:06:35 agriffis Exp $
 
 MAINV="${PV:0:1}"
 
@@ -34,7 +34,7 @@ src_unpack() {
 	unpack ${A} || die
 
 	mv -f ${WORKDIR}/share/*  ${S}/share/ || die
-	if [ `use gmttria` ] ; then
+	if use gmttria ; then
 		mv -f ${WORKDIR}/src/*  ${S}/src/ || die
 	fi
 }

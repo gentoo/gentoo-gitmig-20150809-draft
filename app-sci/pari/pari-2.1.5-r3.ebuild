@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r3.ebuild,v 1.1 2004/05/11 12:39:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r3.ebuild,v 1.2 2004/06/02 13:08:22 agriffis Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 	addwrite "/var/lib/texmf"
 	addwrite "/usr/share/texmf"
 	addwrite "/var/cache/fonts"
-	if [ `use amd64` ]; then
+	if use amd64; then
 		# Fixes BUG #49583
 		einfo "Building shared library..."
 		cd Olinux-x86_64

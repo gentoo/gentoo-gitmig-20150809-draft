@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r2.ebuild,v 1.3 2004/05/08 10:30:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r2.ebuild,v 1.4 2004/06/02 13:08:22 agriffis Exp $
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://www.parigp-home.de/"
@@ -24,7 +24,7 @@ src_compile() {
 	addwrite "/var/lib/texmf"
 	addwrite "/usr/share/texmf"
 	addwrite "/var/cache/fonts"
-	if [ `use amd64` ]; then
+	if use amd64; then
 		# Fixes BUG #49583
 		einfo "Building shared library..."
 		cd Olinux-x86_64
