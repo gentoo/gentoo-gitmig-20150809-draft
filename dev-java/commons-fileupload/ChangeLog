@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/commons-fileupload
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.1 2003/03/22 11:55:07 absinthe Exp $
+
+*commons-fileupload-1.0_beta (22 Mar 2003)
+
+  22 Mar 2003; Dylan Carlson <absinthe@gentoo.org>
+  commons-fileupload-1.0_beta.ebuild:
+  Initial import.
+
