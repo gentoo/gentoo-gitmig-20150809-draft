@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.1.ebuild,v 1.3 2004/04/26 08:32:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.1.ebuild,v 1.4 2004/04/27 20:55:05 agriffis Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="PyDS-${PV}"
 
