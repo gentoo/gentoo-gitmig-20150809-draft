@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.57 2005/03/26 21:24:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.58 2005/03/28 15:56:12 gmsoft Exp $
+
+  28 Mar 2005; Guy Martin <gmsoft@gentoo.org> gtkmm-2.4.8.ebuild:
+  Stable on hppa.
 
   26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> gtkmm-2.4.8.ebuild:
   Add ~alpha keyword.
