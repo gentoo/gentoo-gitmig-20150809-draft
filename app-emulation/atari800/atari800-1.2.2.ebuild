@@ -1,16 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.2.ebuild,v 1.3 2002/07/21 14:21:31 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.2.ebuild,v 1.4 2002/09/23 07:11:03 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Atari 800 emulator"
-SRC_URI1="http://unc.dl.sourceforge.net/sourceforge/atari800/${P}.tar.gz http://unc.dl.sourceforge.net/sourceforge/atari800/xf25.zip"
-SRC_URI2="http://telia.dl.sourceforge.net/sourceforge/atari800/${P}.tar.gz http://telia.dl.sourceforge.net/sourceforge/xf25.zip"
-SRC_URI3="http://belnet.dl.sourceforge.net/sourceforge/atari800/${P}.tar.gz http://belnet.dl.sourceforge.net/sourceforge/xf25.zip"
-SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
+SRC_URI="mirror://sourceforge/atari800/${P}.tar.gz
+	mirror://sourceforge/atari800/xf25.zip"
 HOMEPAGE="http://atari800.sourceforge.net"
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 KEYWORDS="x86"
 
