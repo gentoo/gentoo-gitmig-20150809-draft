@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <vapier@gentoo.org> (11 Mar 2003)
+# Beta version
+=app-emulation/vmware-workstation-4.0.4121
+
 # <carpaski@gentoo.org> (10 Mar 2003)
 # Testing portage-2.0.47-r9
 =sys-apps/portage-2.0.47-r9
