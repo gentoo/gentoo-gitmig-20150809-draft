@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.72 2005/02/04 20:27:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.73 2005/02/27 01:57:52 eradicator Exp $
+
+  26 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> pygtk-2.4.1.ebuild:
+  Multilib fixes.
 
   04 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> pygtk-2.4.1.ebuild:
   Stable on alpha.
