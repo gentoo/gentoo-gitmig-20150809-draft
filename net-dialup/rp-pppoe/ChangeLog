@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.50 2005/03/02 08:41:52 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.51 2005/03/04 06:38:11 mrness Exp $
+
+  04 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  -files/rp-pppoe-3.5-pidfile.patch, -rp-pppoe-3.5-r2.ebuild,
+  -rp-pppoe-3.5-r6.ebuild:
+  Remove obsolete versions.
 
   02 Mar 2005; Hardave Riar <hardave@gentoo.org> rp-pppoe-3.5-r7.ebuild:
   Stable on mips, bug #81702
