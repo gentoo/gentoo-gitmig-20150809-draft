@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/thinkeramik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.19 2004/06/24 23:38:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.20 2004/08/03 19:45:44 centic Exp $
+
+  03 Aug 2004; Dominik Stadler <centic@gentoo.org> metadata.xml:
+  Mark stable on x86, change herd to kde-themes.
 
   05 Jun 2004; Carsten Lohrke <carlo@gentoo.org> thinkeramik-3.1.2.ebuild,
   thinkeramik-3.2.1.ebuild:
