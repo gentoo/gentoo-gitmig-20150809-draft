@@ -1,7 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.13 2002/04/12 15:51:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.14 2002/04/12 21:20:16 spider Exp $
 
+*php-4.1.2-r6 (12 Apr 2002) 
+  12 Apr 2002; Spider <spider@gentoo.org>
+  update -r to force rebuild with updated libpng
+  
 *php-4.1.2-r5 php-4.1.1-r5 (12 Apr 2002)
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> php-4.1.2-r5.ebuild,
