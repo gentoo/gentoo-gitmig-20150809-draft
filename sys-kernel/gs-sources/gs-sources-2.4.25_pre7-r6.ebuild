@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r5.ebuild,v 1.1 2004/05/31 17:22:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r6.ebuild,v 1.1 2004/06/14 19:51:46 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -20,8 +20,8 @@ ETYPE="sources"
 inherit kernel eutils
 PROVIDE="virtual/linux-sources virtual/winkernel"
 OKV=2.4.24
-EXTRAVERSION=_pre7-gss-r5
-KV=2.4.25_pre7-gss-r5
+EXTRAVERSION=_pre7-gss-r6
+KV=2.4.25_pre7-gss-r6
 S=${WORKDIR}/linux-${KV}
 
 # Documentation on the patches contained in this kernel will be installed
@@ -31,14 +31,14 @@ DESCRIPTION="This kernel stays up to date with current kernel -pres,
 	with recent acpi,evms,win4lin,futexes,aic79xx,
 	superfreeswan,preempt, and various hw fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 mirror://gentoo/patches-${KV/r5/r1}.tar.bz2"
+	 mirror://gentoo/patches-${KV/r6/r1}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc"
 SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-	cd ${KV/r5/r1} || die
+	cd ${KV/r6/r1} || die
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
@@ -61,4 +61,5 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
+	epatch ${FILESDIR}/${PN}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.39 2004/05/31 17:22:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.40 2004/06/14 19:51:46 plasmaroo Exp $
+
+*gs-sources-2.4.25_pre7-r6 (14 Jun 2004)
+
+  14 Jun 2004; <plasmaroo@gentoo.org> -gs-sources-2.4.25_pre7-r5.ebuild,
+  +gs-sources-2.4.25_pre7-r6.ebuild, +files/gs-sources.FPULockup-53804.patch:
+  Added a patch for the FPU-lockup issue; please see bug #58304 for details.
+  Old sources removed.
 
 *gs-sources-2.4.25_pre7-r5 (31 May 2004)
 
