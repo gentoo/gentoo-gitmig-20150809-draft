@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.7 2004/02/27 16:20:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.8 2004/03/16 04:42:20 geoman Exp $
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libebml-0.6.4.ebuild:
+  Added ~mips keyword.
 
   27 Feb 2004; Jason Wever <weeve@gentoo.org> libebml-0.6.3.ebuild:
   Added ~sparc keyword.
