@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/trafshow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.14 2005/02/25 12:21:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.15 2005/02/25 15:15:53 ka0ttic Exp $
+
+  25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> trafshow-4.0.ebuild:
+  Remove unnecessary chown on ${S} that causes problems for users with
+  userpriv/usersandbox.
 
   25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> trafshow-4.0.ebuild:
   Marked stable on x86.
