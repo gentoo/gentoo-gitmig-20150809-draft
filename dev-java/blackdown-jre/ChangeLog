@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.54 2005/01/01 18:11:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.55 2005/01/12 22:15:27 luckyduck Exp $
+
+  12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  blackdown-jre-1.4.1-r1.ebuild:
+  migrated from amd64? to emul-linux-x86? dependency.
 
   31 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   blackdown-jre-1.4.1-r1.ebuild, blackdown-jre-1.4.2.01.ebuild:

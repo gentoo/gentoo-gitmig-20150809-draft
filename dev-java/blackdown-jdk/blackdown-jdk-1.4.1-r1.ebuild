@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.3 2005/01/01 18:11:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.4 2005/01/12 22:13:11 luckyduck Exp $
 
 
 inherit java
@@ -21,12 +21,12 @@ CHPAX_CONSERVATIVE_FLAGS="pemsv"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.4.1"
 KEYWORDS="-* x86 sparc amd64"
-IUSE="doc mozilla"
+IUSE="doc emul-linux-x86 mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.6
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )
-	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
+	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
 PROVIDE="virtual/jdk-1.4.1
 	virtual/jre-1.4.1
 	virtual/java-scheme-2"

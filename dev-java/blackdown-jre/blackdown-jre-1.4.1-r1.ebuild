@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.3 2005/01/01 18:11:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.4 2005/01/12 22:15:27 luckyduck Exp $
 
 inherit java gcc
 
@@ -21,7 +21,7 @@ SRC_URI="
 
 HOMEPAGE="http://www.blackdown.org"
 DEPEND="virtual/libc
-	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1 )
+	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1 )
 	>=dev-java/java-config-0.2.5
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}
@@ -32,7 +32,7 @@ PROVIDE="virtual/jre-1.4.1
 SLOT="0"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 sparc amd64"
-IUSE="mozilla"
+IUSE="emul-linux-x86 mozilla"
 
 src_unpack () {
 	typeset a want_gcc_ver

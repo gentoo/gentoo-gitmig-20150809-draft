@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.69 2005/01/01 18:11:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.70 2005/01/12 22:13:11 luckyduck Exp $
+
+  12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  blackdown-jdk-1.4.1-r1.ebuild:
+  migrated from amd64? to emul-linux-x86? dependency.
 
   31 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   blackdown-jdk-1.4.1-r1.ebuild, blackdown-jdk-1.4.2.01-r1.ebuild,
