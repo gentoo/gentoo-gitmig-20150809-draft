@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.8 2004/09/10 13:17:36 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.9 2004/10/26 09:54:51 liquidx Exp $
+
+*supybot-0.80.0_pre2 (26 Oct 2004)
+
+  26 Oct 2004; Alastair Tse <liquidx@gentoo.org> supybot-0.77.0.ebuild,
+  supybot-0.77.2.ebuild, +supybot-0.80.0_pre2.ebuild:
+  made sqlite optional (#62236), version bump (#62101)
 
   10 Sep 2004; Hasan Khalil <gongloo@gentoo.org> supybot-0.77.2.ebuild:
   Stable macos.
