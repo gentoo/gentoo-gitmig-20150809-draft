@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/hardened-dev-sources
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.1 2004/03/15 04:34:26 solar Exp $
+
+*hardened-dev-sources-2.6.4 (14 Mar 2004)
+
+  14 Mar 2004; <solar@gentoo.org> hardened-dev-sources-2.6.4.ebuild,
+  metadata.xml:
+  initial hardened base. all masked for now
+
