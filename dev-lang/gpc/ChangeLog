@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gpc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.7 2003/02/15 04:37:05 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.8 2004/06/07 20:41:50 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> gpc-20030209.ebuild:
+  Fix use invocation
 
 *gpc-20030209 (14 Feb 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.6 2004/04/19 19:11:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.7 2004/06/07 20:41:50 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -58,7 +58,7 @@ src_compile() {
 	#lets reduce optimisation somewhat
 	replace-flags -O? -O2
 
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myconf="${myconf} --disable-nls"
 	else
