@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.6 2002/10/20 16:41:02 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.7 2002/11/17 05:37:50 vapier Exp $
 
 # ${A}        - the tarball itself             eg:  ${PORTDIR}/distfiles/t.tgz
 # ${P}        - program name-program version   eg:  foo-1.0
@@ -19,23 +19,8 @@ DESCRIPTION="CTCS (Cerberus Test Control System) used to make sure that new syst
 # Developer reference
 HOMEPAGE="http://sourceforge.net/projects/va-ctcs"
 
-# ftp:// and http ://are known to work
-# file:// is known to not work
-#
-# If the file is local on the HD, just leave it blank
-SRC_URI="mirror://sourceforge/va-ctcs/${MY_P}.tar.gz"
-
-# See ${PORTDIR}/licenses ... pick one of the file names
 LICENSE="GPL-2"
-
-# Multiple versions use version number
-# SLOT='2.4.19'
-#
-# Default
-# SLOT='0'
 SLOT="0"
-
-# KEYWORDS='x86 ppc sparc sparc64'
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
@@ -60,18 +45,15 @@ RDEPEND="virtual/glibc
 # Optional: app-admin/smartsuite  (depricated?)
 # Optional: sys-apps/lm_sensors
 
-# Needed for compiling
-DEPEND="${RDEPEND}"
-
 src_compile() {
 #	econf || die
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dodoc CHANGELOG FAQ README.FIRST COPYING README README.TCF runin/README.runtest runin/README.tests
 
-	mkdir -p ${D}/usr/ctcs/runin/bin/
+	dodir /usr/ctcs/runin/bin/
 
 #	cp -R ${S}/runin ${D}/usr/ctcs/runin
 	cp -Rap ${S}/lib ${D}/usr/ctcs/lib
