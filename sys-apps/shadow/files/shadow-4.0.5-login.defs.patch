@@ -16,7 +16,7 @@ diff -u -B -U0 -r1.14 login.defs.linux
 +SU_WHEEL_ONLY	yes
 @@ -228 +228 @@
 -CRACKLIB_DICTPATH	/var/cache/cracklib/cracklib_dict
-+CRACKLIB_DICTPATH	/usr/lib
++CRACKLIB_DICTPATH	/usr/lib/cracklib_dict
 @@ -245 +245 @@
 -LOGIN_RETRIES		5
 +LOGIN_RETRIES		3
