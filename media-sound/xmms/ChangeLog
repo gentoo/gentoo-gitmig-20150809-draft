@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.117 2004/04/06 22:41:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.118 2004/04/07 02:01:20 eradicator Exp $
+
+  06 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r2.ebuild:
+  oss USE flag for making the oss output plugin.
 
   06 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> xmms-1.2.10-r1.ebuild:
   Stable on sparc
