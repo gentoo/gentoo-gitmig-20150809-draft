@@ -1,6 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.3 2002/06/05 17:52:35 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.4 2002/06/08 15:50:25 verwilst Exp $
+inherit flag-o-matic
+
+filter-flags "-fomit-frame-pointer"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
