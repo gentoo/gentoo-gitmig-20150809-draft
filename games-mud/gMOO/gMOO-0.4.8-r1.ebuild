@@ -1,16 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.1 2003/09/10 19:03:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.2 2004/01/24 13:51:27 mr_bones_ Exp $
 
-IUSE="nls tcltk"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ Based MOO client"
-SRC_URI="http://www.nowmoo.demon.nl/packages/${P}.tar.gz"
 HOMEPAGE="http://www.nowmoo.demon.nl/"
+SRC_URI="http://www.nowmoo.demon.nl/packages/${P}.tar.gz"
+
 KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="nls tcltk"
 
 DEPEND="virtual/glibc
 	>=x11-base/xfree-4.1.0
@@ -30,12 +30,15 @@ src_compile() {
 
 	use nls	|| myconf="${myconf} --disable-nls"
 
-	./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf} || die
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--host=${CHOST} ${myconf} || die "configure failed"
 
 	make || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc README INSTALL COPYING VERSION NEWS TODO ChangeLog ABOUT-NLS
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc README INSTALL VERSION NEWS TODO ChangeLog || die "dodoc failed"
 }
