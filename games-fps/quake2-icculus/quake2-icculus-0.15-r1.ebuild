@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.2 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.3 2004/03/27 10:04:35 mr_bones_ Exp $
 
-inherit games eutils gcc
+inherit eutils gcc games
 
-MY_P=quake2-r${PV}
-S=${WORKDIR}/${MY_P}
+MY_P="quake2-r${PV}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="The icculus.org linux port of iD's quake2 engine"
 HOMEPAGE="http://icculus.org/quake2/"
@@ -20,14 +20,17 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE="svga X sdl aalib opengl noqmax rogue xatrix"
 
 # default to X11 if svga/X/sdl/aalib are not in USE
-RDEPEND="svga? ( media-libs/svgalib )
-	arts? ( kde-base/arts )
-	X? ( virtual/x11 )
-	sdl? ( media-libs/libsdl )
-	aalib? ( media-libs/aalib )
+RDEPEND="virtual/glibc
 	opengl? ( virtual/opengl )
-	|| ( svga? ( "" ) X? ( "" ) sdl? ( "" ) aalib? ( "" ) virtual/x11 )"
+	|| (
+		svga? ( media-libs/svgalib )
+		X? ( virtual/x11 )
+		sdl? ( media-libs/libsdl )
+		aalib? ( media-libs/aalib )
+		virtual/x11 )
+	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	app-arch/sharutils"
 
 src_unpack() {
@@ -36,18 +39,27 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-Makefile-noopts.patch
 	epatch ${FILESDIR}/${PV}-Makefile-optflags.patch
 	epatch ${FILESDIR}/${PV}-gentoo-path.patch
-	sed -i "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake2-data:" src/qcommon/files.c
+	sed -i \
+		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake2-data:" \
+			src/qcommon/files.c \
+				|| die "sed src/qcommon/files.c failed"
 
 	ln -s `which echo` ${T}/more
 	for g in `use rogue` `use xatrix` ; do
 		mkdir -p ${S}/src/${g}
 		cd ${S}/src/${g}
 		unpack ${g}src320.shar.Z
-		sed -i 's:^read ans:ans=yes :' ${g}src320.shar
+		sed -i \
+			-e 's:^read ans:ans=yes :' ${g}src320.shar \
+				|| die "sed ${g}src320.shar failed"
 		env PATH="${T}:${PATH}" unshar ${g}src320.shar
 		rm ${g}src320.shar
 	done
-	use rogue && sed -i 's:<nan\.h>:<bits/nan.h>:' ${S}/src/rogue/g_local.h
+	if use rogue ; then
+		sed -i \
+			-e 's:<nan\.h>:<bits/nan.h>:' ${S}/src/rogue/g_local.h \
+				|| die "sed g_local.h failed"
+	fi
 }
 
 yesno() {
@@ -127,7 +139,6 @@ src_install() {
 		insinto ${q2maxdir}/baseq2
 		doins ${DISTDIR}/maxpak.pak
 	fi
-
 	prepgamesdirs
 }
 
