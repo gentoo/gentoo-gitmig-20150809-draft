@@ -1,15 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author: Maik Schreiber <bZ@iq-computing.de>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/nap-1.5.0.ebuild,v 1.2 2002/06/25 11:12:27 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/nap-1.5.0.ebuild,v 1.3 2002/07/08 20:43:04 blizzy Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Console Napster/OpenNap client"
 HOMEPAGE="http://quasar.mathstat.uottawa.ca/~selinger/nap/"
+SRC_URI="http://quasar.mathstat.uottawa.ca/~selinger/nap/${P}.tar.gz"
+LICENSE="as-is"
+
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}"
-SRC_URI="http://quasar.mathstat.uottawa.ca/~selinger/nap/${P}.tar.gz"
 SLOT="0"
+KEYWORDS="x86"
 
 src_compile() {
 	./configure --prefix=${D}/usr || die "configure problem"
