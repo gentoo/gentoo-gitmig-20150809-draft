@@ -2,6 +2,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp
 
+*libpng-1.0.12-r1 and libpng-1.2.1-r1 (13 April 2002)
+
+  13 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  In order to prevent users from having to almost completely rebuild their 
+  system after they upgraded to 1.2.1, i'm adding SLOT's to 1.0.x and 
+  1.2.x, so they can happily live together :o)
+
 *libpng-1.0.12 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
