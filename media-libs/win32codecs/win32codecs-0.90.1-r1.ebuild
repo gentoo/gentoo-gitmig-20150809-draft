@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-0.90.1-r1.ebuild,v 1.4 2003/07/08 23:40:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-0.90.1-r1.ebuild,v 1.5 2004/02/20 15:30:12 darkspecter Exp $
 
 # Update codec pack from:
 #
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc -sparc"
+KEYWORDS="x86 -ppc -sparc"
 IUSE="quicktime"
 
 src_install() {
