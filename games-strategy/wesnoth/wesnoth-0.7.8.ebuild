@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.7.8.ebuild,v 1.1 2004/05/28 06:24:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.7.8.ebuild,v 1.2 2004/05/29 20:46:56 vapier Exp $
 
-inherit flag-o-matic games
+inherit flag-o-matic games gcc
 
 DESCRIPTION="A fantasy turn-based strategy game"
 HOMEPAGE="http://www.wesnoth.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.wesnoth.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ~sparc"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE="server editor tools gnome kde"
 
 DEPEND=">=media-libs/libsdl-1.2
@@ -21,6 +21,7 @@ DEPEND=">=media-libs/libsdl-1.2
 	virtual/x11"
 
 src_compile() {
+	[ "`gcc-fullversion`" == "3.4.0" ] && filter-flags -ftracer
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable server) \
@@ -28,7 +29,7 @@ src_compile() {
 		$(use_enable tools) \
 		$(use_enable gnome) \
 		$(use_enable kde) \
-			|| die
+		|| die
 	emake || die "emake failed"
 }
 
