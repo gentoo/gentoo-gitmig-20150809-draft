@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.10 2004/07/02 21:17:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.11 2004/07/03 02:20:03 seemant Exp $
+
+  02 Jul 2004; Seemant Kulleen <seemant@gentoo.org> global-4.7.2.ebuild:
+  added ~amd64 KEYWORD since michael (see below) tested it on that architecture
 
 *global-4.7.2 (02 Jul 2004)
 
