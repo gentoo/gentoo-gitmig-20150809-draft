@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfwm4-themes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.17 2004/04/17 19:22:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.18 2004/04/18 05:41:08 bcowan Exp $
+
+*xfwm4-themes-4.0.5 (18 Apr 2004)
+
+  18 Apr 2004; Brad Cowan <bcowan@gentoo.org> xfwm4-themes-4.0.5.ebuild:
+  Bugfix release of xfce4.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xfwm4-themes-4.0.0.ebuild,
   xfwm4-themes-4.0.3.ebuild, xfwm4-themes-4.0.4.ebuild:
