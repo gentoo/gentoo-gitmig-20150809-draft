@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3624 2005/02/14 19:03:26 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3625 2005/02/14 20:13:59 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -101,10 +101,6 @@ dev-lisp/cl-albert
 # Nicholas Jones <carpaski@gentoo.org> (06 Feb 2005)
 # Making for a brief testing and normalizing period.
 >=sys-apps/portage-2.0.51.16
-
-# Jeremy Huddleston <eradicator@gentoo.org> (4 Feb 2005)
-# New glibc still in testing.  Patchset subject to change until removed from p.m
-=sys-libs/glibc-2.3.4.20050125
 
 # <trapni@gentoo.org> (4 Feb 2005)
 # Apache herd package refresh
