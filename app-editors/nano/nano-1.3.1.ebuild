@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.1.ebuild,v 1.3 2004/01/26 08:54:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.1.ebuild,v 1.4 2004/01/29 11:19:58 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.nano-editor.org/dist/v1.3/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ppc64"
-IUSE="nls build spell justify debug slang icc nomac wsconvert"
+IUSE="nls build spell justify debug slang nomac wsconvert"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	nls? ( sys-devel/gettext )
@@ -29,8 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-	use icc && export CC=icc
-
 	local myconf=""
 	use build && myconf="${myconf} --disable-wrapping-as-root"
 	[ `use ncurses` ] || myconf="${myconf} `use_with slang`"
