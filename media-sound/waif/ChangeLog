@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/waif
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.19 2004/10/07 03:31:20 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.20 2005/01/09 11:12:41 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> waif-0.59.6.ebuild,
+  waif-0.59.7.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> waif-0.59.7.ebuild:
   get_libdir fixes.
