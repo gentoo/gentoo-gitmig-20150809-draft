@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (8 Oct 2003)
+# these need some more testing outside of just me
+>=x11-libs/wxGTK-2.4.2
+>=dev-python/wxPython-2.4.2.4
+
 # <hanno@gentoo.org> (7 Oct 2003)
 # Old and broken cvs-releases of sidplay, to be removed soon.
 # sidplay-libs-2.1.0 and sidplay-2.0.8 should replace everything
