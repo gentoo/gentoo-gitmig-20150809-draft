@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.1-r1.ebuild,v 1.2 2004/03/17 04:07:43 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.1-r1.ebuild,v 1.3 2004/03/17 04:12:30 zx Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="virtual/glibc
 	>=virtual/jdk-1.4
 	>=dev-java/java-config-1.2
-	!<dev-java/ant-optional-${PV}"
+	!<dev-java/ant-optional-${PV}-r1"
 RDEPEND=">=virtual/jdk-1.4
 	app-shells/bash
 	>=dev-java/java-config-1.2"
