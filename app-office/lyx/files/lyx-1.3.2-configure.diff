@@ -1,0 +1,11 @@
+--- lib/configure	2003-05-12 20:59:38.000000000 +0000
++++ lib/configure	2003-05-12 20:59:57.000000000 +0000
+@@ -1134,7 +1134,7 @@
+   echo "$ac_t""default values"
+ else
+   echo "$ac_t""auto"
+-  rm -f wrap_chkconfig.ltx chkconfig.vars chkconfig.classes chklayouts.tex
++  rm -f wrap_chkconfig.ltx -no-mktex=tfm chkconfig.vars chkconfig.classes chklayouts.tex
+   cat >wrap_chkconfig.ltx <<EOF
+ \\newcommand\\srcdir{${srcdir}}
+ ${linuxdoc_cmd}
