@@ -91,7 +91,7 @@ x11-libs/qt-embedded
 
 # <bass@gentoo.org> (18 Aug 2002)
 # for testing
-=net-misc/guidedog-0.9.0
+#=net-misc/guidedog-0.9.0
 
 # <bass@gentoo.org> (16 Aug 2002)
 # test it please
