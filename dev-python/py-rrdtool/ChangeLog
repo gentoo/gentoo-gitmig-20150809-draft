@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/py-rrdtool
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/ChangeLog,v 1.1 2004/09/04 18:45:00 squinky86 Exp $
+
+*py-rrdtool-0.2.1 (04 Sep 2004)
+
+  04 Sep 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +py-rrdtool-0.2.1.ebuild:
+  Initial import, closes #59582. Thanks to Fernando A. Serboncini
+  <fserb@terra.com.br> for the ebuild.
+
