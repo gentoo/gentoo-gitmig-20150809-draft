@@ -20,4 +20,3 @@ FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${x} -P \${DISTDIR}"
 CFLAGS="-m486 -march=i486 -O2"
 # C++ Compiler flags
 CXXFLAGS="-m486 -march=i486 -O2"
-#DEBUG=true

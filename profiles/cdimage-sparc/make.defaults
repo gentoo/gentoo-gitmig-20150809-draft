@@ -6,4 +6,3 @@ PLATFORM=$CHOST
 USE="berkdb gdbm readline slang pam nls"
 CFLAGS="-O2"
 CXXFLAGS=$CFLAGS
-#DEBUG=true

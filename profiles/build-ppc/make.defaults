@@ -11,4 +11,3 @@ USE="build"
 CFLAGS="-mstring -mmultiple -O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS="-mstring -mmultiple -O2 -pipe"
-#DEBUG=true

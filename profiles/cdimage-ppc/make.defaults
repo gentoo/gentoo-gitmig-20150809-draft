@@ -14,4 +14,3 @@ USE="berkdb gdbm readline slang pam nls"
 CXXFLAGS="-mstring -mmultiple -O2 -pipe"
 CFLAGS="-m486 -march=i486 -O2"
 CXXFLAGS=$CFLAGS
-#DEBUG=true
