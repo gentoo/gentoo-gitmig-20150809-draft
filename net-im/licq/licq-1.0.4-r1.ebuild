@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r1.ebuild,v 1.1 2002/01/09 19:13:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r1.ebuild,v 1.2 2002/01/09 21:02:03 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 use kde && inherit kde-base
 
@@ -44,7 +44,7 @@ src_compile() {
 	    # note! watch the --prefix=/usr placement; licq itself installs into /usr, but the
 	    # optional kde/qt interface (to which second_conf belogns) installs its files in 
 	    # $KDE2DIR/{lib,share}/licq
-	    ./configure --host=${CHOST} --prefix=/usr ${second_conf} || die
+	    ./configure --host=${CHOST} ${second_conf} --prefix=/usr || die
 	    emake || die
 
 	fi
