@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libgcrypt
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.8 2003/02/04 16:21:36 ykoehler Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.9 2003/02/08 16:27:11 jrray Exp $
+
+*libgcrypt-1.1.12 (08 Feb 2003)
+
+  08 Feb 2003; J Robert Ray <jrray@gentoo.org> libgcrypt-1.1.12 : Version bump,
+  all the docbook-sgml-utils issues should be sorted out.  The configure script
+  needs a working docbook environment or else it prints out a warning, then
+  goes on to never actually use it.  Since it is conceivable that it may be
+  used or needed in the future, I'm leaving the dependencies in place for now.
 
 *libgcrypt-1.1.10 (4 Feb 2003)
 
