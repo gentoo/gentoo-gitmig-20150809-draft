@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/tree-puzzle
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/ChangeLog,v 1.1 2004/05/17 11:54:19 phosphan Exp $
+
+  17 May 2004; Patrick Kursawe <phosphan@gentoo.org> :
+  Initial import, ebuild by Olivier Fisette <olivier.fisette@sympatico.ca> in
+  bug #45938
+
