@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/xmms-shell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.4 2003/02/12 07:22:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.5 2003/06/21 01:39:08 jje Exp $
+
+*xmms-shell-0.99.3 (21 Jun 2003)
+
+  21 Jun 2003; jje <jje@gentoo.org> xmms-shell-0.99.3.ebuild:
+  Version bump.
+  
+  Submitted by: tocharian@barrysworld.com
 
 *xmms-shell-0.99.0-r1 (9 May 2002)
 
