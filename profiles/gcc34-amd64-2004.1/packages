@@ -1,10 +1,10 @@
 >dev-lang/gpc-2.1
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-apps/portage-2.0.25
-*>=sys-devel/binutils-2.13.90.0.4
+*>=sys-devel/binutils-2.15.90.0.1.1-r1
 *>=sys-devel/gcc-3.4.0-r4
 *sys-libs/libstdc++-v3
-*>=sys-libs/glibc-2.2.5
+*>=sys-libs/glibc-2.3.3_pre20031210
 *virtual/modutils
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
