@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.114 2004/12/22 10:36:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.115 2004/12/29 22:05:39 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *ruby-1.8.2_pre4 (22 Dec 2004)
 
@@ -121,7 +124,7 @@
   ruby-1.8.2_pre2.ebuild:
   Stable on sparc wrt security bug #60525.
 
-  20 Aug 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> ruby-1.6.8-r11.ebuild,
+  20 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ruby-1.6.8-r11.ebuild,
   ruby-1.8.2_pre2.ebuild:
   Stable on alpha, bug 60525.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.49 2004/12/21 11:07:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.50 2004/12/29 22:09:50 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> tk-8.4.6-r1.ebuild:
   Multilib fixes.
@@ -8,7 +11,7 @@
   10 Nov 2004; Joseph Jezak <josejx@gentoo.org> tk-8.4.6-r1.ebuild:
   Marked ppc stable.
 
-  06 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> tk-8.4.6-r1.ebuild:
+  06 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tk-8.4.6-r1.ebuild:
   Stable on alpha.
 
   21 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> tk-8.4.6-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.45 2004/12/21 10:22:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.46 2004/12/29 22:09:15 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/tcl-8.4.6-multilib.patch, tcl-8.4.6-r1.ebuild:
@@ -9,7 +12,7 @@
   01 Nov 2004; Lars Weiler <pylon@gentoo.org> tcl-8.4.6-r1.ebuild:
   Stable on ppc for PHP5, Bug #60442.
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> :
   Stable on alpha.
 
   21 Sep 2004; Doug Goldstein <cardoe@gentoo.org> tcl-8.4.6-r1.ebuild:

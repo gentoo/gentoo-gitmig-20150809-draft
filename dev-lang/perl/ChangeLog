@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.100 2004/12/07 20:42:51 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.101 2004/12/29 22:03:25 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   07 Dec 2004; Hardave Riar <hardave@gentoo.org> perl-5.8.5-r2.ebuild:
   Stable on mips, bug #66360
@@ -103,7 +106,7 @@
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org> perl-5.8.4-r1.ebuild:
   stable on alpha
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.4.ebuild:
+  13 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> perl-5.8.4.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Robert Coie <rac@gentoo.org> perl-5.8.2-r1.ebuild,
