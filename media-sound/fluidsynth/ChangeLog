@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.9 2004/04/16 06:30:16 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.10 2004/04/17 18:18:29 eradicator Exp $
+
+  17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  fluidsynth-1.0.3.ebuild:
+  IUSE=ladcca
 
   16 Apr 2004; Travis Tilley <lv@gentoo.org> fluidsynth-1.0.3.ebuild:
   adding ~amd64 keyword and versioned ladcca dependency - see bug #46916 for
