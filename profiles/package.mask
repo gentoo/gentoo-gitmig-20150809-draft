@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3402 2004/12/19 02:35:24 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3403 2004/12/19 17:11:04 iggy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -66,10 +66,6 @@ x11-plugins/wmfrog
 kde-base/qtsharp
 kde-base/xparts
 kde-base/dcopjava
-
-# <iggy@gentoo.org> (08 Dec 2004)
-# ivtv is broken, maybe in a few months it will be ready
-media-tv/ivtv
 
 # <genone@gentoo.org> (08 Dec 2004)
 # app-portage pre-christmas cleaning, these packages are unmaintained upstream
