@@ -1,6 +1,6 @@
-# ChangeLog for app-games/xpenguins
+# ChangeLog for games-misc/xpenguins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/ChangeLog,v 1.2 2003/09/10 20:26:28 vapier Exp $
 
   12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xpenguins-2.2.ebuild:
   xfree provides xpm
