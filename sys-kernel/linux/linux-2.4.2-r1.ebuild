@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.2-r1.ebuild,v 1.2 2001/03/02 18:27:52 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.2-r1.ebuild,v 1.3 2001/03/02 18:31:19 pete Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -111,6 +111,8 @@ src_compile() {
     
     try make symlinks
     
+    yes "" | make oldconfig
+    
     #LVM tools are included even in the linux-sources package
     cd ${S}/extras/LVM/${LVMV}
     
@@ -132,7 +134,6 @@ src_compile() {
     try make
 
     cd ${S}
-    yes "" | make oldconfig
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
