@@ -20,7 +20,7 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome 
+  try ./configure --host=${CHOST} --prefix=/opt/gnome --disable-rpmfind
   try make
 }
 
