@@ -4,17 +4,14 @@
 # $Header: /home/cvsroot/gentoo-x86/app-misc/screen.ebuild,v 1.2 2001/04/21
 # 19:25 CST blutgens Exp $
 
-#P=
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION=" Screen is a full-screen window manager that multiplexes a
 physical terminal between several processes"
-SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${A}"
+SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/screen/"
 
 DEPEND="virtual/glibc
-        >=sys-libs/ncurses-5.2
-	>=sys-apps/portage-1.8.18"
+	>=sys-libs/ncurses-5.2"
 
 src_unpack() {
 	unpack ${A}
@@ -22,24 +19,26 @@ src_unpack() {
 }
 src_compile() {
 
-    try ./configure --prefix=/usr --host=${CHOST} \
-	--with-sys-screenrc=/etc/screen/screenrc \
-	--mandir=/usr/share --libexecdir=/usr/lib/misc
-    try emake
+	./configure \
+		--prefix=/usr \
+		--host=${CHOST} \
+		--with-sys-screenrc=/etc/screen/screenrc \
+		--mandir=/usr/share \
+		--libexecdir=/usr/lib/misc || die
+	emake || die
 
 }
 
 src_install () {
 
-    dobin screen
-    insinto /usr/share/terminfo
-    doins terminfo/screencap
-    insinto /etc/screen
-    doins etc/screenrc
-    dodoc README ChangeLog INSTALL COPYING TODO NEWS* \
-	 doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps}
-    doman doc/screen.1
-	 doinfo doc/screen.info*
+	dobin screen
+	insinto /usr/share/terminfo
+	doins terminfo/screencap
+	insinto /etc/screen
+	doins etc/screenrc
+	dodoc README ChangeLog INSTALL COPYING TODO NEWS* \
+	doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps}
+	doman doc/screen.1
+	doinfo doc/screen.info*
 
 }
-
