@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.4 2004/07/11 00:33:35 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.5 2004/07/13 16:14:46 aliz Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -148,6 +148,7 @@ src_compile() {
 
 	sed -i -e "s:-O3::g" -e "s:-fomit-frame-pointer::g" settings.pro
 
+	export QMAKESPEC="linux-g++"
 	qmake -o "Makefile" "${PN}.pro"
 
 	econf || die "econf failed"

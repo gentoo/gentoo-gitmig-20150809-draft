@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.29 2004/07/11 00:33:35 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.30 2004/07/13 16:14:46 aliz Exp $
+
+  13 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.15.1-r1.ebuild:
+  Added QMAKESPEC, closing #56426.
 
   11 Jul 2004; Chris Bainbridge <chrb@gentoo.org> mythtv-0.15.1-r1.ebuild:
   add inherit gcc
