@@ -174,8 +174,8 @@ x11-themes/gtk-xfce-engine
 >=gnome-base/gdm-2.4.0.5
 >=gnome-base/eel-2.0.3
 >=gnome-base/nautilus-2.0.3
-=x11-wm/metacity-2.4.0
-
+>=x11-wm/metacity-2.4.0
+>=gnome-extra/gconf-editor-0.3
 
 # Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
 # Needs to wait for the next baselayout release.
