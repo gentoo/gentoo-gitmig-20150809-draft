@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.83 2005/01/14 11:19:05 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.84 2005/01/14 12:15:15 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -163,7 +163,7 @@ then
 		
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the Linux kernel"
-	IUSE="${IUSE} build doc"
+	IUSE="${IUSE} symlink build doc"
 elif [ "${ETYPE}" == "headers" ]
 then
 	DESCRIPTION="Linux system headers"
@@ -387,6 +387,9 @@ preinst_headers() {
 postinst_sources() {
 	local MAKELINK=0
 	
+	# if we have USE=symlink, then force K_SYMLINK=1
+	use symlink && K_SYMLINK=1
+
 	# if we are to forcably symlink, delete it if it already exists first.
 	if [[ -n ${K_SYMLINK} ]] ; then
 		[[ -h ${ROOT}usr/src/linux ]] && rm ${ROOT}usr/src/linux
