@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/fftw
+# ChangeLog for sci-libs/fftw
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.1 2004/12/29 01:12:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.2 2004/12/29 10:09:26 swegener Exp $
 
 *fftw-3.0.1 (28 Dec 2004)
 
