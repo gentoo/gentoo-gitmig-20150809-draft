@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.105 2004/07/14 22:45:22 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.106 2004/07/14 23:18:51 stuart Exp $
+
+*php-5.0.0 (15 Jul 2004)
+
+  15 Jul 2004; Stuart Herbert <stuart@gentoo.org> php-5.0.0.ebuild:
+  Now package-masked; reversed the IUSE= change introduced by agriffis
 
   15 Jul 2004; Christian Birchinger <joker@gentoo.org> php-4.3.8.ebuild:
   Added sparc stable keyword
