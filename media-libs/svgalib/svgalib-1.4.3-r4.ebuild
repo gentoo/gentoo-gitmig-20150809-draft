@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.10 2003/10/10 18:33:04 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.11 2004/01/09 23:39:50 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.svgalib.org/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -alpha"
+KEYWORDS="-* x86"
 
 DEPEND="virtual/glibc"
 
@@ -21,6 +21,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-userpriv.patch
+	epatch ${FILESDIR}/${P}-linux2.6.patch
+	epatch ${FILESDIR}/${P}-gcc3.patch #23515
 
 	# Update r128 driver, bug #10987.
 	cp -f ${DISTDIR}/r128.c ${S}/src

@@ -1,0 +1,6 @@
+--- src/et6000.c.orig	2004-01-09 18:24:37.640905848 -0500
++++ src/et6000.c	2004-01-09 18:25:33.637393088 -0500
+@@ -12,3 +12,2 @@
+ #include "driver.h"
+-#include <linux/pci.h>
+ #include "timing.h"

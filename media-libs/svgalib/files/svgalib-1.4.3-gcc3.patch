@@ -1,0 +1,11 @@
+--- ./src/vga.c.old	2003-06-26 18:01:47.778102000 -0400
++++ ./src/vga.c	2003-06-26 17:57:40.108102000 -0400
+@@ -3914,7 +3914,7 @@
+ 
+ #define ML_GETINT(x) \
+ 	ptr = strtok(NULL, " "); if(!ptr) break; \
+-	mmt.##x = atoi(ptr);
++	mmt.x = atoi(ptr);
+ 
+ 	    ML_GETINT(HDisplay);
+ 	    ML_GETINT(HSyncStart);
