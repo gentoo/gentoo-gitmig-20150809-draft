@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.1 2005/03/19 22:56:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.2 2005/03/22 20:30:33 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -174,6 +174,12 @@ src_install() {
 
 		cd ${base}
 	done
+
+	# replace a packed struts.jar
+	cd server/webapps/admin/WEB-INF/lib
+	rm -f struts.jar
+	java-pkg_jar-from struts struts.jar
+	cd ${base}
 
 	# copy over the directories 
 	cp -ra conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
