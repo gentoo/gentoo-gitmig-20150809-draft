@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r2.ebuild,v 1.5 2004/02/18 00:08:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r2.ebuild,v 1.6 2004/02/18 11:40:44 mholzer Exp $
 
 inherit eutils
+
+IUSE="mmx"
 
 DESCRIPTION="Real Time mp3 player"
 HOMEPAGE="http://www.mpg123.de/"
