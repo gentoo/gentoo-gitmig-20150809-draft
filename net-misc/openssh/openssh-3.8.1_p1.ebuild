@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.1 2004/04/21 11:46:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.2 2004/04/26 01:40:20 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://openssh/${PARCH}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
-IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509"
+IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
@@ -44,7 +44,7 @@ PROVIDE="virtual/ssh"
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
-	epatch ${FILESDIR}/${P}-kerberos.patch
+#	epatch ${FILESDIR}/${P}-kerberos.patch
 	epatch ${FILESDIR}/${P}-resolv_functions.patch
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
@@ -68,11 +68,14 @@ src_compile() {
 
 	local myconf="\
 		$( use_with tcpd tcp-wrappers ) \
-		$( use_with kerberos kerberos5 ) \
 		$( use_with pam ) \
 		$( use_with skey )"
 
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
+	use kerberos && myconf="${myconf} --with-kerberos5=/usr" || \
+		myconf="${myconf} --without-kerberos5"
+
+	echo ${myconf}
 
 	./configure \
 		--prefix=/usr \
