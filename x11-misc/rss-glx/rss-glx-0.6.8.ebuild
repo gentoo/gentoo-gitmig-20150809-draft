@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss_glx/rss_glx-0.6.8.ebuild,v 1.3 2003/02/13 17:17:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.6.8.ebuild,v 1.1 2003/05/29 09:06:40 seemant Exp $
+
+MY_P=${PN/-/_}-${PV}
 
 DESCRIPTION="OpenGL screensavers, ported to GLX.  Suitable for use with xscreensaver"
 HOMEPAGE="http://rss-glx.sourceforge.net/"
-SRC_URI="mirror://sourceforge/rss-glx/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
-LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+LICENSE="GPL-2"
 
 DEPEND="x11-base/xfree"
 
