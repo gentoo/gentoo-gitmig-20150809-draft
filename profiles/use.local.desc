@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.114 2003/09/11 12:34:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.115 2003/09/11 12:35:28 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -149,6 +149,7 @@ x11-base/xfree-drm:i8x0 - If you have an ibm i810 or i830 video card
 x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
 x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
+x11-terms/eterm:etwin - enable twin support
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
 x11-wm/fvwm:bidi - Enable bidirectional language support
