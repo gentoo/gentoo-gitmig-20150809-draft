@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.15 2004/08/21 16:48:52 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.16 2004/08/26 10:38:22 robbat2 Exp $
+
+  26 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> libmcal-0.7-r2.ebuild:
+  stable on x86.
 
   21 Aug 2004; <rmoss@gentoo.org> libmcal-0.7-r2.ebuild:
   Fixing the stupid mess I managed to make by forgetting to commit the new
