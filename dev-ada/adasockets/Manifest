@@ -1,4 +1,6 @@
-MD5 7f37c5703ad973559d5d91448fccc2fe ChangeLog 1352
+MD5 c91a13e32d31cb34e9e1d09baa47df43 ChangeLog 1563
 MD5 7fbf01a68e8d81db063194cc634cf6b4 metadata.xml 646
 MD5 c542d7ffdfa54f24bfa93c039751cbfb adasockets-1.7-r1.ebuild 2118
+MD5 16f53054237e3e14905ebd3ab4f0b42e adasockets-1.8.4.4.ebuild 2231
 MD5 42f83eb514ebd3dea38e2b72889414b4 files/digest-adasockets-1.7-r1 66
+MD5 84135103aa73e4e7becf89a0b0a3138b files/digest-adasockets-1.8.4.4 70
