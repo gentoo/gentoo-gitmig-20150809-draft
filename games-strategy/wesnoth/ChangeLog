@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.36 2004/08/16 23:59:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.37 2004/09/12 01:53:56 mr_bones_ Exp $
+
+*wesnoth-0.8.4 (11 Sep 2004)
+
+  11 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.8.4-conf.patch, +wesnoth-0.8.4.ebuild:
+  version bump; patched source to fix autotool mess from upstream
 
   16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-0.8.2.ebuild:
   enable lite install knob (bug #60570)

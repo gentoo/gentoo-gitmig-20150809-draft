@@ -1,0 +1,38 @@
+--- configure.ac.orig	2004-09-11 16:40:17.000000000 -0700
++++ configure.ac	2004-09-11 16:41:54.000000000 -0700
+@@ -97,13 +97,13 @@
+ AC_ARG_ENABLE([kde],,[AC_MSG_ERROR([Please use --with-kde instead of obsolete --enable-kde])])
+ AC_ARG_WITH([kde],
+ 	      [  --with-kde              enable installation of icon and KDE menu entry],
+-	      [kde=$enableval],
++	      [kde=$withval],
+ 	      [kde=no])
+ 
+ AC_ARG_ENABLE([gnome],,[AC_MSG_ERROR([Please use --with-gnome instead of obsolete --enable-gnome])])
+ AC_ARG_WITH([gnome],
+ 	      [  --with-gnome            enable installation of icon and GNOME menu entry],
+-	      [gnome=$enableval],
++	      [gnome=$withval],
+ 	      [gnome=no])
+ 
+ AC_ARG_ENABLE([wzip],
+@@ -115,9 +115,6 @@
+ AM_CONDITIONAL([SERVER], [test x$server = xyes])
+ AM_CONDITIONAL([EDITOR], [test x$editor = xyes])
+ AM_CONDITIONAL([TOOLS], [test x$tools = xyes])
+-AM_CONDITIONAL([KDE], [test x$kde = xyes && test x$kdefound = xyes])
+-AM_CONDITIONAL([GNOME1], [test x$gnome = xyes && test x$gnome1found = xyes])
+-AM_CONDITIONAL([GNOME2], [test x$gnome = xyes && test x$gnome1found = xno])
+ AM_CONDITIONAL([GCC], [test x$GXX = xyes])
+ AM_CONDITIONAL([WZIP], [test x$wzip = xyes])
+ AM_CONDITIONAL([INCLUDEDINTL], [test x$nls_cv_use_gnu_gettext = xyes])
+@@ -303,6 +300,9 @@
+ AC_SUBST([KDE_DESKTOP])
+ AC_SUBST([KDE_ICON])
+ 
++AM_CONDITIONAL([KDE], [test x$kde = xyes && test x$kdefound = xyes])
++AM_CONDITIONAL([GNOME1], [test x$gnome = xyes && test x$gnome1found = xyes])
++AM_CONDITIONAL([GNOME2], [test x$gnome = xyes && test x$gnome1found = xno])
+ 
+ #######################################################################
+ # Checks for types.                                                   #
