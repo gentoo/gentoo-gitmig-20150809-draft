@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.27 2004/07/09 21:57:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.28 2004/10/01 22:25:10 kito Exp $
+
+  01 Oct 2004; kito@gentoo.org +files/fftw-ppc-macos.patch,
+  fftw-3.0.1-r1.ebuild:
+  added ~ppc-macos keyword and patch
 
   09 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> fftw-3.0.1-r1.ebuild:
   Fixed a compilation-error with Altivec and gcc 3.4.1
