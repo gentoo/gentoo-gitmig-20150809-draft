@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2.ebuild,v 1.5 2003/04/06 09:59:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.1 2003/04/06 09:59:53 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -276,6 +276,14 @@ src_unpack() {
 	#
 	# <azarah@gentoo.org> (7 Nov 2002).
 	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-stack_end-compat.patch
+
+	# Fix calculation problems in allocate_static_tls that caused a TLS
+	# enabled app that loads libGL.so to segfault.  Thanks to Gareth Hughes
+	# from NVidia for pointing me in the right direction.  This patch is
+	# from glibc CVS.
+	#
+	# <azarah@gentoo.org> (6 Apr 2003).
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-dl-reloc-calc-fix.patch
 }
 
 setup_flags() {

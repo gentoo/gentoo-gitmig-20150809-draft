@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.4 2003/04/06 02:58:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.5 2003/04/06 09:59:53 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -251,6 +251,11 @@ src_install() {
 			NEWS NOTES PROJECTS README*
 	else
 		rm -rf ${D}/usr/share ${D}/usr/lib/gconv
+
+		einfo "Installing Timezone data..."
+		make PARALLELMFLAGS="${MAKEOPTS}" \
+			install_root=${D} \
+			timezone/install-others -C buildhere || die
 	fi
 	
 	if [ "`use pic`" ] 
