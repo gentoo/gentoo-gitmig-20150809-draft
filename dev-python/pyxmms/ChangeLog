@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxmms
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.10 2004/04/12 16:42:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.11 2004/04/28 16:38:39 eradicator Exp $
+
+  28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> pyxmms-2.02.ebuild:
+  Stable x86.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> pyxmms-2.02.ebuild:
   Stable on amd64.
