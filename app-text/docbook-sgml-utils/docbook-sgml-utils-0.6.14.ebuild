@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.5 2004/11/15 06:59:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.6 2004/12/03 04:14:06 usata Exp $
 
 inherit eutils
 
@@ -37,11 +37,12 @@ DEPEND=">=dev-lang/perl-5
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die
-	epatch ${FILESDIR}/${P}-backend.patch
+	sed -i -e "s:links:elinks:g" backends/txt || die
 }
 
 src_install() {
-	einstall htmldir=${D}/usr/share/doc/${PF}/html || die
+	#einstall htmldir=${D}/usr/share/doc/${PF}/html || die
+	make DESTDIR=${D} htmldir=/usr/share/doc/${PF}/html install || die
 	if ! use tetex ; then
 		for i in dvi pdf ps ; do
 			rm ${D}/usr/bin/docbook2$i
