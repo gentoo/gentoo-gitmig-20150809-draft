@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2910725981ea171cb4c6aa2d173f318b ChangeLog 961
+MD5 8fcebf0c6f01870eb9c24762f1c33f10 rsbac-admin-1.2.3_pre5.ebuild 2175
+MD5 c108ca5a688e8c9b12941bcc9574154e rsbac-admin-1.2.1.ebuild 1119
+MD5 0fc4752f2d52f08675298ee084399de2 ChangeLog 957
 MD5 035ff78da2388cc0585f93ef2247332d metadata.xml 161
-MD5 de9540b9351091399f98cc605d6b5f0e rsbac-admin-1.2.1.ebuild 1123
-MD5 eec13f10592886c48bc1df4cc82e080c rsbac-admin-1.2.3_pre5.ebuild 2179
-MD5 1ef42cb872e4d23179e0a27d6dbb8d02 files/digest-rsbac-admin-1.2.1 71
-MD5 39e9a96b67ef8a159eb266fa66065c76 files/rsbac.conf 165
 MD5 87fe9bca51ee364e89aec4f47fb5a974 files/rklogd.init 1018
+MD5 39e9a96b67ef8a159eb266fa66065c76 files/rsbac.conf 165
+MD5 1ef42cb872e4d23179e0a27d6dbb8d02 files/digest-rsbac-admin-1.2.1 71
 MD5 bfb2ca643b1171d7eb526396d5b3401a files/digest-rsbac-admin-1.2.3_pre5 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFAz1jjJUNS2Y9cV5ERAoePAKCPyOdUcfqGWUumhlVd0adupvfmuACeJ2Vp
-97EkK7fZB9qCcBaygCCFwSQ=
-=NMA3
------END PGP SIGNATURE-----

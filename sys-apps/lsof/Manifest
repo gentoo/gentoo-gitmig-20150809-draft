@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89d4d60bc034b192a09748578a907e2a ChangeLog 2766
-MD5 81cfa79720f1d3e34eb484b90d2f5493 lsof-4.64.ebuild 1540
-MD5 6f5fecf35ffc2fb2960d482f01eb268b lsof-4.67.ebuild 1546
-MD5 e03c16b29152c798c204dbbe78958ae9 lsof-4.68.ebuild 1806
-MD5 543769841373637e21c6d3867e444352 lsof-4.69.ebuild 1813
+MD5 d4f08ff3302b7c95b2731095f0868be0 lsof-4.71.ebuild 1828
+MD5 f2decb54f4e2774fb60c6e440b4ecfb3 lsof-4.67.ebuild 1540
+MD5 d110fd60da4a8d6a9930d85e4ebd0555 lsof-4.69.ebuild 1807
+MD5 79c5092ae2d7b67fc65a1ca76fed8da6 lsof-4.64.ebuild 1534
+MD5 f50be8fe9d03afaaf0f2cb450687ef93 lsof-4.68.ebuild 1800
+MD5 5c8bb82020acf6992a1b643253d9f061 ChangeLog 2760
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1c8ef00bb666ad2fac90488921611c01 lsof-4.71.ebuild 1834
 MD5 8d9d90e05e24a5ffaf927bb83670715a files/digest-lsof-4.64 61
 MD5 4da5c4c30e43d53ea46517baa6125d1a files/digest-lsof-4.67 61
 MD5 ce8b6000c8273dd5481bc4f4fcdd9ec2 files/digest-lsof-4.68 61
 MD5 b04c75690e9bb81c851f72da3c116180 files/digest-lsof-4.69 61
 MD5 17950eec4cb0ad6f3a3b6a521239dcbe files/digest-lsof-4.71 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA055rHTu7gpaalycRAvvxAJwIY4NnLPt5r3Wh7q69JPmGaylJZwCfdXng
-wmFqBT+WWLDFuN515JomfMI=
-=wh8f
------END PGP SIGNATURE-----
