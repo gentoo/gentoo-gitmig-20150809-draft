@@ -35,7 +35,7 @@ cd ${ROOT}/initrd
 
 dodirs dev etc root tmp var
 
-touch portage
+touch distcd
 
 mkdir pts
 mknod dev/tty1 c 4 1 
@@ -72,7 +72,7 @@ cd ${ROOT}/mnt
 
 dodirs floppy gentoo ram
 
-ln -s ../initrd/portage .
+ln -s ../initrd/distcd .
 
 cd ${ROOT}/bin
 
