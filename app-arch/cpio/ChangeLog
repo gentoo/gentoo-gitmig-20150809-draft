@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cpio
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.1 2003/11/15 01:34:06 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.2 2004/02/22 06:03:21 mr_bones_ Exp $
+
+  21 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> cpio-2.4.2-r4.ebuild,
+  cpio-2.5.ebuild:
+  header fix; tidy; arm needs deps first
 
 *cpio-2.5 (14 Nov 2003)
 
