@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/dotconf
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.1 2004/03/18 20:16:50 dmwaters Exp $
+
+*dotconf-1.0.13 (18 Mar 2004)
+
+  18 Mar 2004; <dmwaters@gentoo.org> dotconf-1.0.13.ebuild, metadata.xml:
+  Thanks goes out to  Jon Hood for this ebuild.
+  initial package, closes #45028
+
