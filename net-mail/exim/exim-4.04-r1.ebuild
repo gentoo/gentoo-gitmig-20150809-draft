@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r1.ebuild,v 1.6 2002/08/15 20:04:41 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r1.ebuild,v 1.7 2002/08/15 22:24:50 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
@@ -93,9 +93,11 @@ src_unpack() {
 
 	cat Makefile | sed -e 's/^buildname=.*/buildname=exim-gentoo/g' > Makefile.gentoo && mv -f Makefile.gentoo Makefile
 
-	# uncomment LOOKUP_DSEARCH
 	cp Local/Makefile Local/Makefile.tmp
 	sed -e "s:# LOOKUP_DSEARCH=yes:LOOKUP_DSEARCH=yes:" Local/Makefile.tmp >| Local/Makefile
+
+	cp Local/Makefile Local/Makefile.tmp
+	sed -e "s:# LOOKUP_CDB=yes:LOOKUP_CDB=yes:" Local/Makefile.tmp >| Local/Makefile
 }
 
 src_compile() {
