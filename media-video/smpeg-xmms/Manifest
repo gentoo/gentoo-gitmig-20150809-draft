@@ -1,5 +1,5 @@
-MD5 a9fc1396a096e453484acd571337b3c0 smpeg-xmms-0.3.5-r1.ebuild 885
-MD5 a95d96e5e348f1ad5baa1e0f0aefa4c4 ChangeLog 1660
+MD5 79eaa6a199105970cdc8e8b1e72fb999 smpeg-xmms-0.3.5-r1.ebuild 886
+MD5 c6b8d4fb831ffc9afaf3046acb1a2de9 ChangeLog 1782
 MD5 223dfdc3e10800dbb22bad28c928b52a metadata.xml 177
 MD5 5f6cfd9cd6f65d5b008e052ac9064362 files/smpeg-xmms-0.3.5-gcc.patch 1402
 MD5 6677495257ebc5b3458ad247d518127f files/digest-smpeg-xmms-0.3.5-r1 68
