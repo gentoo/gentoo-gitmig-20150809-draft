@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.51 2004/02/07 02:10:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.52 2004/02/08 04:05:54 spider Exp $
+
+*nmap-3.50-r1 (08 Feb 2004)
+
+  08 Feb 2004; <spider@gentoo.org> nmap-3.50-r1.ebuild:
+  Add the missing dependency :  libpcre
 
   07 Feb 2004; Lars Weiler <pylon@gentoo.org> nmap-3.48.ebuild:
   stable on ppc
