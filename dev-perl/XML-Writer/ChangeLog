@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.13 2004/03/07 15:50:24 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.14 2004/03/09 18:24:18 mcummings Exp $
+
+*XML-Writer-0.500 (09 Mar 2004)
+
+  09 Mar 2004; Michael Cummings <mcummings@gentoo.org>
+  XML-Writer-0.500.ebuild:
+  Current version with new authorspace, fills req for xmltv for max@g.o
 
   07 Mar 2004; Stephen P. Becker <geoman@gentoo.org> XML-Writer-0.4.1.ebuild:
   Added ~mips keyword.
