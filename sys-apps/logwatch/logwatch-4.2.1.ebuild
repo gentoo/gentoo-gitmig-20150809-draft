@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-4.2.1.ebuild,v 1.3 2003/02/13 16:03:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-4.2.1.ebuild,v 1.4 2003/02/19 21:33:23 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LogWatch, a customizable log analysis system"
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 		net-mail/mailx"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="as-is"
 
 src_install() {
