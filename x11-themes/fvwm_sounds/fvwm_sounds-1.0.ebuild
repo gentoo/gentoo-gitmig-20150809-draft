@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_sounds/fvwm_sounds-1.0.ebuild,v 1.3 2003/02/13 17:37:28 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_sounds/fvwm_sounds-1.0.ebuild,v 1.4 2003/09/04 07:04:06 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Sounds for use with FVWM"
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2 FVWM"
 
 src_install () {
-    dodir /usr/share/sounds/fvwm
-    insinto /usr/share/sounds/fvwm
-    doins ${S}/*
+	dodir /usr/share/sounds/fvwm
+	insinto /usr/share/sounds/fvwm
+	doins ${S}/*
 }
