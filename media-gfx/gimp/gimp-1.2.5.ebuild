@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.1 2003/06/17 22:57:21 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.2 2003/06/19 22:19:53 liquidx Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,6 +41,8 @@ src_compile() {
 
 	# fix problem with k6's (#22115)
 	replace-flags "-march=k6*" "-march=i586"
+	# gimp has inline functions (plug-ins/common/grid.c) (#23078)
+	filter-flags "-fno-inline"
 
 	local mymake=""
 	local AA
