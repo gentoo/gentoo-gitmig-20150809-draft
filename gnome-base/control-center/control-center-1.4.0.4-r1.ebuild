@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.1-r4.ebuild,v 1.1 2002/01/24 21:11:48 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.4-r1.ebuild,v 1.1 2002/03/27 13:42:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME control-center"
@@ -14,13 +14,6 @@ RDEPEND=">=gnome-base/gnome-vfs-1.0.2-r1
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext ) 
         >=dev-util/intltool-0.11"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	patch -p0 < ${FILESDIR}/crash-on-exit-fix.patch
-}
 
 src_compile() {
 	local myconf
@@ -35,6 +28,7 @@ src_compile() {
 		
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
 		    --sysconfdir=/etc					\
 		    --localstatedir=/var/lib				\
 		    ${myconf} || die
@@ -44,6 +38,7 @@ src_compile() {
 
 src_install() {                               
 	make prefix=${D}/usr						\
+	     mandir=${D}/usr/share/man					\
 	     sysconfdir=${D}/etc					\
 	     localstatedir=${D}/var/lib					\
 	     install || die
