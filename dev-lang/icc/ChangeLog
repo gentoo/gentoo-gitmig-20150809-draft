@@ -1,6 +1,26 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.3 2002/05/14 03:46:13 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.4 2002/12/08 21:47:50 avenj Exp $
+
+*icc-7.0 (8 Dec 2002)
+
+  8 Dec 20002 Jon Portnoy <avenj@gentoo.org> icc-7.0.ebuild :
+
+  Added a warning about the behavior of the main executable.
+  'icc' will return errors; 'iccbin' works fine.
+ 
+  Fixed the warning messages to fit a standard terminal.
+
+  Fixed the old version checking statement to avoid matching
+  the current version.
+
+  5 Dec 2002  William McArthur <sandymac@gentoo.org> icc-7.0.ebuild :
+
+  Included some improvments from Jon Portnoy from http://bugs.gentoo.org/show_bug.cgi?id=11211
+
+  25 Nov 2002  William McArthur <sandymac@gentoo.org> icc-7.0.ebuild :
+
+  Basicly just updated the icc-6.0-r1 with new urls and changed the message at the end.
 
 *icc-6.0-r1 (13 May 2002)
 
