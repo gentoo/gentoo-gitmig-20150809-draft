@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r3.ebuild,v 1.2 2003/08/03 04:41:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r3.ebuild,v 1.3 2003/08/05 03:11:19 vapier Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 filter-flags -fno-exceptions
 
 DESCRIPTION="Linux console display library"
