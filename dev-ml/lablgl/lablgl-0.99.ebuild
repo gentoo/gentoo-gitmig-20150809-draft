@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-0.99.ebuild,v 1.1 2003/07/08 21:36:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-0.99.ebuild,v 1.2 2003/09/08 02:59:25 msterret Exp $
 
 IUSE="opengl"
 
@@ -34,16 +34,16 @@ pkg_setup() {
 		eerror "lablgl requires ocaml be built with tk support."
 		eerror ""
 		eerror "Please make sure that ocaml is installed with tk support."
-		
+
 		false;
-	else 
+	else
 		echo "found tcltk USE flag, proceeding normally!"
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
-	
+
 	# patch the makefile to include DESTDIR support
 	cd ${S} || die
 	patch -p0 < ${DISTDIR}/${Name}-${PV}-Makefile-destdir.patch || die
@@ -52,7 +52,7 @@ src_unpack() {
 src_compile() {
 	# make configuration file
 	cp ${DISTDIR}/${Name}-${PV}-Makefile.config ${S}/Makefile.config || die
-	
+
 	# build
 	make all opt || die
 }
