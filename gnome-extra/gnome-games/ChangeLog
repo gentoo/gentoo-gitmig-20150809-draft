@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.69 2004/06/24 22:04:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.70 2004/07/04 19:25:33 kloeri Exp $
+
+  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-games-2.6.0.1.ebuild:
+  Stable on alpha.
 
   04 Jun 2004; Stephen P. Becker <geoman@gentoo.org>
   gnome-games-2.6.0.1.ebuild:

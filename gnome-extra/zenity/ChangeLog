@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.26 2004/06/24 22:11:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.27 2004/07/04 19:33:11 kloeri Exp $
+
+  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> zenity-2.6.0.ebuild:
+  Stable on alpha.
 
   04 Jun 2004; Stephen P. Becker <geoman@gentoo.org> zenity-2.6.0.ebuild:
   Stable on mips.

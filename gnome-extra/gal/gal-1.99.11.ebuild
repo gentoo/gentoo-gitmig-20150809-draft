@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.11.ebuild,v 1.9 2004/06/24 22:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.11.ebuild,v 1.10 2004/07/04 19:19:16 kloeri Exp $
 
 inherit gnome2 gnome.org libtool eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ppc sparc hppa ~alpha ~ia64 amd64 mips"
+KEYWORDS="x86 ppc sparc hppa alpha ~ia64 amd64 mips"
 IUSE="doc"
 
 RDEPEND=">=gnome-base/libgnomeprint-2.2.0

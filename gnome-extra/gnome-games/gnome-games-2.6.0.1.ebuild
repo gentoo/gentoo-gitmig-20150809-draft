@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.0.1.ebuild,v 1.10 2004/06/24 22:04:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.0.1.ebuild,v 1.11 2004/07/04 19:25:33 kloeri Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc mips ~alpha hppa amd64"
+KEYWORDS="x86 ppc ~sparc mips alpha hppa amd64"
 IUSE="guile"
 
 RDEPEND=">=x11-libs/gtk+-2.3
