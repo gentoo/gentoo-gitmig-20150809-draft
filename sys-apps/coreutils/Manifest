@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 77ea618811a65d09cd77249ab929eb88 coreutils-5.2.1-r2.ebuild 4005
 MD5 2d8726d5ad64a2df7e1df2bc2d0215cf ChangeLog 21394
-MD5 992f0ec91891e7ddbcf466dfce3dd857 coreutils-5.2.0-r2.ebuild 4172
-MD5 a8e396d61dd3eeea13e98e0354e1ea8f coreutils-5.2.1-r1.ebuild 4146
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1ce51fdb0c8a9ce07b454d66413e6d09 coreutils-5.0-r6.ebuild 2656
 MD5 25ddb313a565a2368291e330eb6a9442 coreutils-5.2.1.ebuild 4158
-MD5 316d769e60be0f94af3e3c957a664aec files/digest-coreutils-5.2.1-r1 225
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 a8e396d61dd3eeea13e98e0354e1ea8f coreutils-5.2.1-r1.ebuild 4146
+MD5 77ea618811a65d09cd77249ab929eb88 coreutils-5.2.1-r2.ebuild 4005
+MD5 992f0ec91891e7ddbcf466dfce3dd857 coreutils-5.2.0-r2.ebuild 4172
+MD5 63daf9801c2578cd23ba184b2a0b9ce6 files/DIR_COLORS 3870
 MD5 e80d3d87cfbe40bc56636167ae5b4768 files/digest-coreutils-5.0-r6 141
-MD5 ad6c1b6661e030a48a57172f88d2960a files/coreutils-5.0.91-ppc64-1.patch 280
-MD5 af26ab8cc1d96f8779a01d3406a35fc9 files/DIR_COLORS 3853
-MD5 5a7d722a7600e8834bf39c24790caaa2 files/003_all_coreutils-gentoo-uname-s390.patch 3120
-MD5 dfc60c0aadb6d857701fb3fa137a12b5 files/003_all_coreutils-gentoo-uname.patch 3261
 MD5 36e1cce43ca15be334d54801e1dbb286 files/digest-coreutils-5.2.1 224
+MD5 316d769e60be0f94af3e3c957a664aec files/digest-coreutils-5.2.1-r1 225
 MD5 77947b96aaadc6a33d53156b5b5e4630 files/digest-coreutils-5.2.1-r2 225
-MD5 569870ec2f958c2a2a716a7f695deb42 files/coreutils-5.2.1-unamefix.patch 485
+MD5 5a7d722a7600e8834bf39c24790caaa2 files/003_all_coreutils-gentoo-uname-s390.patch 3120
 MD5 6a9f5a2ffa31d94987039066c5072982 files/digest-coreutils-5.2.0-r2 224
+MD5 ad6c1b6661e030a48a57172f88d2960a files/coreutils-5.0.91-ppc64-1.patch 280
+MD5 dfc60c0aadb6d857701fb3fa137a12b5 files/003_all_coreutils-gentoo-uname.patch 3261
+MD5 569870ec2f958c2a2a716a7f695deb42 files/coreutils-5.2.1-unamefix.patch 485
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBLgsuLLFUmVNQ7rkRAklUAKC2dQ66jEupsC3TKPSWMRBWMkdk6QCgyO8G
-QbxVKy3dGIRk21sJ37d5iHU=
-=nqre
+iD8DBQFBMBL7HTu7gpaalycRAobXAJwJP1dL4eRw5EW9jdUGQ4G3pQUxygCfRPnv
+YsZuKmrQzuNibpgHN7T4oRs=
+=Du/1
 -----END PGP SIGNATURE-----
