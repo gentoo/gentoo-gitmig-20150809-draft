@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.9 2003/06/10 22:38:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.10 2003/08/31 02:01:06 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtkam-0.1.10.ebuild,
+  gtkam-0.1.4.ebuild, gtkam-0.1.9.ebuild:
+  added pkgconfig deps and cleanup
 
   10 Jun 2003; Alastair Tse <liquidx@gentoo.org> gtkam-0.1.10.ebuild:
   bump to stable x86
