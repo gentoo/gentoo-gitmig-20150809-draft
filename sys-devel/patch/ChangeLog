@@ -1,10 +1,13 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.4 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.5 2003/01/18 14:31:33 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *patch-2.5.4-r4 (15 Feb 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   15 Feb 2002; M.Thibaut <murphy@gentoo.org> ChangeLog :
 
