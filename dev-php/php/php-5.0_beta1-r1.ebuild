@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0_beta1-r1.ebuild,v 1.5 2004/01/08 06:25:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0_beta1-r1.ebuild,v 1.6 2004/06/14 21:17:36 kumba Exp $
 
 PHPSAPI="cli"
 MY_P="php-5.0.0b1"
@@ -13,7 +13,7 @@ IUSE="${IUSE} readline"
 
 DESCRIPTION="PHP Shell Interpreter"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa mips"
 
 DEPEND="${DEPEND}
 	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
