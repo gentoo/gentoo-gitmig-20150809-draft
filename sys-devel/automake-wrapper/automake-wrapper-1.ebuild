@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/automake-wrapper-1.ebuild,v 1.4 2004/12/01 13:44:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/automake-wrapper-1.ebuild,v 1.5 2004/12/05 21:26:44 vapier Exp $
 
 DESCRIPTION="wrapper for automake to manage multiple automake versions"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,7 +16,7 @@ PDEPEND="=sys-devel/automake-1.4*
 	=sys-devel/automake-1.5*
 	=sys-devel/automake-1.6*
 	=sys-devel/automake-1.7*
-	=sys-devel/automake-1.8*
+	=sys-devel/automake-1.8.5-r2
 	=sys-devel/automake-1.9*"
 
 S=${WORKDIR}
