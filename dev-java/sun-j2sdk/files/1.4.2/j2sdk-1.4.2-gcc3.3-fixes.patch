@@ -1,0 +1,68 @@
+--- j2sdk/hotspot/src/cpu/i486/vm/i486.ad.jj	2003-12-19 11:22:00.071710616 +0000
++++ j2sdk/hotspot/src/cpu/i486/vm/i486.ad	2003-12-19 11:22:30.697054856 +0000
+@@ -230,18 +230,18 @@
+ // These masks are used to provide 128-bit aligned bitmasks to the XMM
+ // instructions, to allow sign-masking or sign-bit flipping.  They allow
+ // fast versions of NegF/NegD and AbsF/AbsD.
+-static jlong float_signmask_pool[3] =  {0x7FFFFFFF7FFFFFFF,
+-                                        0x7FFFFFFF7FFFFFFF,
+-                                        0x7FFFFFFF7FFFFFFF};
+-static jlong double_signmask_pool[3] = {0x7FFFFFFFFFFFFFFF,
+-                                        0x7FFFFFFFFFFFFFFF,
+-                                        0x7FFFFFFFFFFFFFFF};
+-static jlong float_signflip_pool[3] =  {0x8000000080000000,
+-                                        0x8000000080000000,
+-                                        0x8000000080000000};
+-static jlong double_signflip_pool[3] = {0x8000000000000000,
+-                                        0x8000000000000000,
+-                                        0x8000000000000000};
++static jlong float_signmask_pool[3] =  {0x7FFFFFFF7FFFFFFFULL,
++                                        0x7FFFFFFF7FFFFFFFULL,
++                                        0x7FFFFFFF7FFFFFFFULL};
++static jlong double_signmask_pool[3] = {0x7FFFFFFFFFFFFFFFULL,
++                                        0x7FFFFFFFFFFFFFFFULL,
++                                        0x7FFFFFFFFFFFFFFFULL};
++static jlong float_signflip_pool[3] =  {0x8000000080000000ULL,
++                                        0x8000000080000000ULL,
++                                        0x8000000080000000ULL};
++static jlong double_signflip_pool[3] = {0x8000000000000000ULL,
++                                        0x8000000000000000ULL,
++                                        0x8000000000000000ULL};
+ 
+ // !!!!! Special hack to get all type of calls to specify the byte offset
+ //       from the start of the call to the point where the return address
+diff -ur /runtime/jvmdiInterfaceSupport.hpp j2sdk/hotspot/src/share/vm/runtime/jvmdiInterfaceSupport.hpp
+--- /runtime/jvmdiInterfaceSupport.hpp	2003-05-21 12:46:32.000000000 +0200
++++ j2sdk/hotspot/src/share/vm/runtime/jvmdiInterfaceSupport.hpp	2003-05-21 12:48:18.000000000 +0200
+@@ -24,7 +24,7 @@
+   result_type JNICALL methodName signature {                                         \
+     JavaThread* thread = (JavaThread*) ThreadLocalStorage::thread();                 \
+     TransitionClass __tiv(thread);                                                   \
+-    __ENTRY(result_type, methodName##signature, thread)                              \
++    __ENTRY(result_type, methodName#signature, thread)                              \
+     debug_only(VMNativeEntryWrapper __vew;)                                          \
+     debug_only(const char* const _jvmdi_methodName_ = #methodName;)                  \
+     debug_only(bool  _trace_ = trace; );                                             \
+diff -ur /runtime/mutexLocker.cpp j2sdk/hotspot/src/share/vm/runtime/mutexLocker.cpp
+--- /runtime/mutexLocker.cpp	2003-05-21 12:46:32.000000000 +0200
++++ j2sdk/hotspot/src/share/vm/runtime/mutexLocker.cpp	2003-05-21 12:54:18.000000000 +0200
+@@ -95,7 +95,7 @@
+ #endif
+ 
+ #define def(var, type, pri, vm_block) \
+-  var = new type(Mutex::##pri, #var, vm_block)
++  var = new type(Mutex::pri, #var, vm_block)
+ 
+ void mutex_init() {  
+   def(Event_lock                   , Mutex  , event,       true ); // allow to lock in VM
+--- j2sdk/hotspot/src/os_cpu/linux_i486/vm/atomic_linux_i486.inline.hpp.jj	2003-12-19 12:45:16.646115848 +0000
++++ j2sdk/hotspot/src/os_cpu/linux_i486/vm/atomic_linux_i486.inline.hpp	2003-12-19 12:45:20.005605128 +0000
+@@ -49,7 +49,7 @@
+   jlong old_value;
+   __asm__ volatile (  "pushl %%ebx;mov 4+%1,%%ecx;mov %1,%%ebx;lock;cmpxchg8b (%3);popl %%ebx"
+                     : "=A" (old_value)
+-                    : "o" (exchange_value), "A" (compare_value), "r" (dest)
++                    : "m" (exchange_value), "A" (compare_value), "r" (dest)
+                     : "%ebx", "%ecx", "memory");
+   return old_value;
+ }

@@ -1,0 +1,141 @@
+--- j2sdk/control/make/common/Defs-linux.gmk.jj	2003-12-20 11:46:03.840900800 +0000
++++ j2sdk/control/make/common/Defs-linux.gmk	2003-12-20 12:10:24.915783656 +0000
+@@ -50,51 +50,51 @@
+ # non-standard locations
+ #
+ 
+-AR             = $(USRBIN_PATH)ar
+-BASENAME       = $(UNIXCOMMAND_PATH)basename
+-CAT            = $(UNIXCOMMAND_PATH)cat
++AR             = ar
++BASENAME       = basename
++CAT            = cat
+ CD             = cd # intrinsic unix command
+-CHMOD          = $(UNIXCOMMAND_PATH)chmod
+-CMP            = $(USRBIN_PATH)cmp
+-COMM           = $(USRBIN_PATH)comm
+-COMPRESS       = $(USRBIN_PATH)compress
+-CP             = $(UNIXCOMMAND_PATH)cp
+-CPIO           = $(UNIXCOMMAND_PATH)cpio
+-CUT            = $(USRBIN_PATH)cut
+-DATE           = $(UNIXCOMMAND_PATH)date
+-DF             = $(UNIXCOMMAND_PATH)df
+-DIFF           = $(USRBIN_PATH)diff
+-DIRNAME        = $(USRBIN_PATH)dirname
++CHMOD          = chmod
++CMP            = cmp
++COMM           = comm
++COMPRESS       = compress
++CP             = cp
++CPIO           = cpio
++CUT            = cut
++DATE           = date
++DF             = df
++DIFF           = diff
++DIRNAME        = dirname
+ ECHO           = echo -e # intrinsic unix command, with backslash-escaped character interpretation 
+-EGREP          = $(UNIXCOMMAND_PATH)egrep
+-EXPR           = $(USRBIN_PATH)expr
+-FIND           = $(USRBIN_PATH)find
+-GREP           = $(UNIXCOMMAND_PATH)grep
+-LEX            = $(USRBIN_PATH)lex
+-LN             = $(UNIXCOMMAND_PATH)ln
+-LS             = $(UNIXCOMMAND_PATH)ls
+-M4             = $(USRBIN_PATH)m4
+-MKDIR          = $(UNIXCOMMAND_PATH)mkdir
+-MV             = $(UNIXCOMMAND_PATH)mv
+-NAWK           = $(USRBIN_PATH)gawk
+-PWD            = $(UNIXCOMMAND_PATH)pwd
++EGREP          = egrep
++EXPR           = expr
++FIND           = find
++GREP           = grep
++LEX            = lex
++LN             = ln
++LS             = ls
++M4             = m4
++MKDIR          = mkdir
++MV             = mv
++NAWK           = gawk
++PWD            = pwd
+ #RM   is defined by GNU Make as 'rm -f'
+-RMDIR          = $(UNIXCOMMAND_PATH)rmdir
+-RPM            = $(UNIXCOMMAND_PATH)rpm
+-SED            = $(UNIXCOMMAND_PATH)sed
+-SH             = $(UNIXCOMMAND_PATH)sh
+-SORT           = $(UNIXCOMMAND_PATH)sort
+-STRIP          = $(USRBIN_PATH)strip
+-TAR            = $(UNIXCOMMAND_PATH)tar
+-TOUCH          = $(UNIXCOMMAND_PATH)touch
+-TR             = $(USRBIN_PATH)tr
+-TRUE           = $(UNIXCOMMAND_PATH)true
+-UNAME          = $(UNIXCOMMAND_PATH)uname
+-UNIQ           = $(USRBIN_PATH)uniq
+-UNZIPSFX       = $(USRBIN_PATH)unzipsfx
+-WC             = $(USRBIN_PATH)wc
+-YACC           = $(USRBIN_PATH)yacc
+-ZIPEXE         = $(USRBIN_PATH)zip
++RMDIR          = rmdir
++RPM            = rpm
++SED            = sed
++SH             = sh
++SORT           = sort
++STRIP          = strip
++TAR            = tar
++TOUCH          = touch
++TR             = tr
++TRUE           = true
++UNAME          = uname
++UNIQ           = uniq
++UNZIPSFX       = unzipsfx
++WC             = wc
++YACC           = yacc
++ZIPEXE         = zip
+ 
+ 
+ archExpr = case "`$(UNAME) -m`" in  \
+--- j2sdk/j2se/make/common/Defs-linux.gmk.jj	2003-12-20 11:45:57.788820856 +0000
++++ j2sdk/j2se/make/common/Defs-linux.gmk	2003-12-20 11:46:11.051804576 +0000
+@@ -131,30 +131,30 @@
+ 
+ # UNIXCOMMAND_PATH is the path to where the most common Unix
+ # commands are installed.
+-UNIXCOMMAND_PATH = /bin/
++UNIXCOMMAND_PATH = 
+ # Allow the user to override the default value...
+-ifdef ALT_UNIXCOMMAND_PATH
++#ifdef ALT_UNIXCOMMAND_PATH
+ # make sure that there is a "/" on the end...
+-UNIXCOMMAND_PATH = $(subst //,/,$(ALT_UNIXCOMMAND_PATH)/)
+-endif
++#UNIXCOMMAND_PATH = $(subst //,/,$(ALT_UNIXCOMMAND_PATH)/)
++#endif
+ 
+ # USRBIN_PATH is the path to where the most common Unix
+ # commands are installed.
+-USRBIN_PATH = /usr/bin/
++USRBIN_PATH = 
+ # Allow the user to override the default value...
+-ifdef ALT_USRBIN_PATH
++#ifdef ALT_USRBIN_PATH
+ # make sure that there is a "/" on the end...
+-USRBIN_PATH = $(subst //,/,$(ALT_USRBIN_PATH)/)
+-endif
++#USRBIN_PATH = $(subst //,/,$(ALT_USRBIN_PATH)/)
++#endif
+ 
+ # COMPILER_PATH is the path to where the compiler and tools 
+ # are installed.
+-COMPILER_PATH = /usr/bin/
++COMPILER_PATH = 
+ #
+ # Allow the user to override the default value...
+-ifdef ALT_COMPILER_PATH
+-COMPILER_PATH = $(subst //,/,$(subst \,/,$(ALT_COMPILER_PATH))/)
+-endif
++#ifdef ALT_COMPILER_PATH
++#COMPILER_PATH = $(subst //,/,$(subst \,/,$(ALT_COMPILER_PATH))/)
++#endif
+ 
+ # DEVTOOLS_PATH is for other tools required for building (such as
+ # zip, etc.)
