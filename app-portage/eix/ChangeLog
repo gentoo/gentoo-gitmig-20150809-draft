@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.25 2005/04/05 05:48:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.26 2005/04/05 20:51:05 gustavoz Exp $
+
+  05 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> eix-0.2.2.ebuild:
+  Stable on sparc
 
   05 Apr 2005; Benedikt Boehm <hollow@gentoo.org>
   -files/0.2.0-bugfixes.patch, -eix-0.2.0-r1.ebuild, eix-0.2.2.ebuild:
