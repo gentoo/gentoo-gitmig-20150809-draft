@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.6.ebuild,v 1.2 2005/01/01 16:22:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.6.ebuild,v 1.3 2005/01/28 14:52:38 luckyduck Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/antlr-2.7.3
-	>=dev-java/jgoodies-looks-bin-1.2.2
+	=dev-java/jgoodies-looks-1.2*
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/commons-httpclient-2"
 
@@ -27,7 +27,7 @@ src_unpack() {
 	rm -f *.jar
 
 	java-pkg_jar-from antlr
-	java-pkg_jar-from jgoodies-looks-bin jgoodies-looks-bin.jar looks-1.2.2.jar
+	java-pkg_jar-from jgoodies-looks-1.2 looks.jar looks-1.2.2.jar
 	java-pkg_jar-from commons-logging commons-logging.jar
 	java-pkg_jar-from commons-httpclient commons-httpclient.jar commons-httpclient-2.0.jar
 }
