@@ -52,7 +52,7 @@ int set_loop(const char *device, const char *file, int offset, int loopro)
 
 int main(void) {
 	char *drives[]={ "/dev/hdc","/dev/hdd","/dev/hdb","/dev/hda","/dev/scd0","/dev/scd1"};
-/*	char *mymtab="/dev/loop0 / ext2 ro 0 0\n"; */
+	char *mymtab="/dev/loop0 / ext2 ro 0 0\n"; 
 	int i,mresult;
 	FILE *distfile,*mycdfile;
 	char mychar;
@@ -118,9 +118,9 @@ int main(void) {
 		exit(1);
 	}
 	printf("Success!\n");		
-/*	mount("/dev/loop0","/","ext2",MS_MGC_VAL|MS_RDONLY,0);
+	mount("/dev/loop0","/","ext2",MS_MGC_VAL|MS_RDONLY,0);
 	mycdfile=fopen("/etc/mtab","a");
 	fwrite(mymtab,1,strlen(mymtab),mycdfile);
-	fclose(mycdfile); */
+	fclose(mycdfile);
 }
 

@@ -1,17 +1,19 @@
 #!/bin/sh
 
+export PATH=/usr/lib/portage/bin:${PATH}
+
 if [ -z "$ROOT" ]
 then
    echo "ROOT not set !"
    exit 1
 fi
 
-export PORTDIR=/usr/portage
+eval `import-settings PORTDIR`
 export BOOTIMG=${ROOT}/bootcd
 export INITDISK=${ROOT}/initdisk
 
 
-if [ ! -d "${PORTDIR}/gentoo-x86/sys-apps/bootdisk" ]
+if [ ! -d "${PORTDIR}/sys-apps/bootdisk" ]
 then
   echo "Sorry no bootdisk in the cvs tree !"
   exit 1
@@ -39,7 +41,7 @@ cd ${BOOTIMG}
 
 echo "Creating basic dirs"
 
-dodirs bin dev initrd lib mnt proc sbin usr 
+dodirs bin dev initrd lib proc sbin usr 
 
 
 echo "Creating initdisk stuff in initrd first"
@@ -47,11 +49,15 @@ echo "Creating initdisk stuff in initrd first"
 echo "Creating /initrd dirs"
 cd ${BOOTIMG}/initrd
 
-dodirs dev distcd lib etc root tmp var
-
+dodirs dev proc distcd lib etc root tmp var mnt
+cd mnt
+dodirs floppy gentoo ram
+ln -s ../initrd/distcd .
+cd ..
+#why touch distcd?
 touch distcd
 
-echo "Creating /inird devices"
+echo "Creating /initrd devices"
 
 cd ${BOOTIMG}/initrd/dev
 for i in console fd0 fd0u1440 hd[abcd] initctl loop0 ram0 scd[01] tty[01]
@@ -63,14 +69,14 @@ mkdir pts
 
 echo "Populating /initrd/etc"
 cd ${BOOTIMG}/initrd/etc
-cp -af ${PORTDIR}/gentoo-x86/sys-apps/bootdisk/files/etc/* .
+cp -af ${PORTDIR}/sys-apps/bootdisk/files/etc/* .
 find . -type d -name "CVS" -exec rm -r {} \;
 touch ld.so.conf
 
 echo "Creating linuxrc"
 cd ${BOOTIMG}/initrd
-gcc -s -o linuxrc ${PORTDIR}/gentoo-x86/sys-apps/bootdisk/files/linuxrc.c
-
+gcc -Os -static -o linuxrc ${PORTDIR}/sys-apps/bootdisk/files/linuxrc.c
+strip linuxrc
 echo "Creating other dirs for initrd"
 cd ${BOOTIMG}/initrd/var
 dodirs log run
@@ -85,7 +91,7 @@ mkdir modules/current
 echo "Creating links to initrd"
 cd ${BOOTIMG}
 
-for i in etc root tmp var
+for i in etc root tmp var mnt proc
 do
   ln -s initrd/$i $i
 done
@@ -97,22 +103,20 @@ ln -sf ../initrd/dev/initctl .
 ln -sf ../initrd/dev/tty1 .
 ln -sf ../initrd/dev/tty2 .
 
+#add more scsi disks!! :)
+
 for i in console fd0 fd0u1440 hd[abcd]* kmem loop[012] \
          mem null ptmx ram[01234] scd* sd[abcd]* ttyp[01] ttys[01] \
 	 urandom zero
 do
     cp -af /dev/$i .
 done
-
+/dev/MAKEDEV hde
+/dev/MAKEDEV hdf
+/dev/MAKEDEV hdg
+/dev/MAKEDEV hdh
 ln -s ram0 ram
 mknod initrd b 1 250
-
-echo "Creating /mnt dirs"
-cd ${BOOTIMG}/mnt
-
-dodirs floppy gentoo ram
-
-ln -s ../initrd/distcd .
 
 cd ${BOOTIMG}/bin
 
@@ -126,11 +130,11 @@ echo "Populating /sbin"
 
 cd ${BOOTIMG}/sbin
 
-doexes agetty depmod e2fsck fdisk halt ifconfig init insmod \
+doexes agetty cfdisk depmod e2fsck fdisk grub halt ifconfig init insmod \
 	 ldconfig lilo ln lsmod mke2fs mkraid mkreiserfs mkswap \
-	 portmap raidstart reboot resize2fs \
+	 raidstart reboot resize2fs \
 	 route sfdisk shutdown touch
-
+# portmap? removed; 
 # reiserfsck and resize_reiserfs does not exist in 2.4
 
 ln -s insmod modprobe
@@ -139,7 +143,7 @@ ln -s raidstart raidhotadd
 ln -s raidstart raidhotremove
 ln -s raidstart raidstop
 
-cp /usr/portage/gentoo-x86/autoinstaller.sh .
+cp ${PORTDIR}/autoinstaller.sh .
 
 echo "Creating /usr dirs"
 cd ${BOOTIMG}/usr
@@ -169,14 +173,14 @@ cp -af /usr/share/terminfo .
 echo "Populating /lib/modules"
 cd ${BOOTIMG}/lib
 mkdir modules
-cd modules
-cp -af /lib/modules/`uname -r` .
-cd ${BOOTIMG}/lib/modules/`uname -r`
-for i in modules.* 
-do
-  mv $i ../../../initrd/lib/modules/current/$i
-  ln -sf ../../../initrd/lib/modules/current/$i .
-done
+#cd modules
+#cp -af /lib/modules/`uname -r` .
+#cd ${BOOTIMG}/lib/modules/`uname -r`
+#for i in modules.* 
+#do
+#  mv $i ../../../initrd/lib/modules/current/$i
+#  ln -sf ../../../initrd/lib/modules/current/$i .
+#done
 
 echo "Populating /usr/lib/security"
 cd ${BOOTIMG}/usr/lib
@@ -213,3 +217,4 @@ done
 
 ldconfig -r ${BOOTIMG}
 mv ${BOOTIMG}/initrd/* ${INITDISK}
+

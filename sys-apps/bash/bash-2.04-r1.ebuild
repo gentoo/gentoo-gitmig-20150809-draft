@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.04.ebuild,v 1.6 2000/11/30 23:14:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.04-r1.ebuild,v 1.1 2000/12/05 23:27:56 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -35,7 +35,6 @@ src_compile() {
 
 
 src_install() {    
-                           
 	cd ${S}
 	if [ "`use tex`" ]
         then
@@ -44,13 +43,12 @@ src_install() {
 	  docinto ps
 	  dodoc doc/*.ps
 	fi
-	into /
-	dobin bash bashbug
+	make prefix=${D}/usr install
+	dodir /bin
+	mv ${D}/usr/bin/bash /bin
 	dosym bash /bin/sh
-	docinto /
+	doman doc/builtins.1 bash_builtins.1
 	dodoc README NEWS AUTHORS CHANGES COMPAT COPYING Y2K 
-	docinto txt
 	dodoc doc/FAQ doc/INTRO
-
 }
 
