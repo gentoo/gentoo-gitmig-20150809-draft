@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r3.ebuild,v 1.6 2004/04/13 16:01:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r3.ebuild,v 1.7 2004/04/13 16:07:14 mholzer Exp $
 
 inherit webapp-apache
 
@@ -99,6 +99,10 @@ src_install() {
 	# Fix permissions
 	find ${D}${destdir} -type d | xargs chmod 755
 	find ${D}${destdir} -type f | xargs chmod 644
+
+	# Make SquirrelMail configure scripts executable
+	chmod 755 ${D}${destdir}/configure
+	chmod 755 ${D}${destdir}/config/conf.pl
 
 	use virus-scan && chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${PN}/plugins/virus_scan/includes/virussignatures.php ${PN}/plugins/virus_scan/config_default.php
 }
