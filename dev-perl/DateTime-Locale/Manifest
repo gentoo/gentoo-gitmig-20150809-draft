@@ -1,6 +1,16 @@
-MD5 4db1b80966993bfbdd513607c2cfbd4d ChangeLog 1363
-MD5 e20bcb70124ca038520bc508ed2d3a2f DateTime-Locale-0.08.ebuild 560
-MD5 ac9256347e01e915130933154ed44f3b DateTime-Locale-0.09.ebuild 599
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dda300bbd00886c7deaf873a3bd769e7 ChangeLog 1497
+MD5 cf0c8e85098beb609a7e349e2ceceb45 DateTime-Locale-0.08.ebuild 530
+MD5 9807aaa277e9d545b0fe5f0fee2867f1 DateTime-Locale-0.09.ebuild 571
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 8381b7214100d2eb894342d5a517124d files/digest-DateTime-Locale-0.08 71
 MD5 90c67f27a4e7f02692b7a35fa4083d1d files/digest-DateTime-Locale-0.09 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOFPAtG5z4I8BtQoRAmj8AJ9DcuT/nsG6JjWPcMiUJsj7Lw8hGACfQVlJ
+YVbvM+Sb3iPGvRGgX8IzSPU=
+=bTCm
+-----END PGP SIGNATURE-----
