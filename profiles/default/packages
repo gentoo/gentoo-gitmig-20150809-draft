@@ -10,7 +10,7 @@
 *<sys-apps/sysklogd-1.4-r6
 
 *app-editors/nano
-*dev-libs/glib
+
 #the above is needed for our new env-update
 *net-ftp/ftp
 *net-misc/dhcpcd

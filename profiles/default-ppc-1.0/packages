@@ -64,7 +64,7 @@ sys-apps/sysklogd
 *sys-apps/hfsutils
 *sys-apps/yaboot
 *sys-apps/mac-fdisk
-*dev-libs/glib
+
 
 # sash - static shell for system recovery
 *app-shells/sash

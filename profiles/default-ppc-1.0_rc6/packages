@@ -46,7 +46,7 @@
 *sys-devel/perl
 *app-editors/nano
 #no real cost for nano, since we already have ncurses
-*dev-libs/glib
+
 #the above is needed for our new env-update
 *net-ftp/ftp
 *net-misc/dhcpcd
