@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.44 2003/07/28 17:57:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.45 2003/08/15 18:25:25 spider Exp $
+
+*abiword-1.99.4 (15 Aug 2003)
+
+  15 Aug 2003; <spider@gentoo.org> abiword-1.99.4.ebuild:
+  Version bump
 
 *abiword-1.99.3 (28 Jul 2003)
 
