@@ -1,0 +1,41 @@
+# ChangeLog for media-tv/vcr
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vcr/ChangeLog,v 1.1 2003/06/18 12:09:42 seemant Exp $
+
+*vcr-1.09-r2 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org> vcr-1.09-r1.ebuild,
+  vcr-1.09-r2.ebuild, files/1.09-r2-gentoo.diff:
+  moved to media-tv
+
+*vcr-1.09-r2 (21 Oct 2002)
+
+  21 Feb 2003; Martin Holzer <mholzer@gentoo.org> vcr-1.09-r2.ebuild :
+  Compiles only with avifile-0.7.15. Closes #15886.
+
+  22 Oct 2002; Nick Hadaway <raker@gentoo.org> vcr-1.09-r2.ebuild :
+  Marked as stable now as patch has been tested on gcc3 and gcc2 systems
+  and compiles without errors.
+
+  21 Oct 2002; Nick Hadaway <raker@gentoo.org> vcr-1.09-r2.ebuild,
+  digest-vcr-1.09-r2, 1.09-r2-gentoo.diff :
+  Patched the c++ code so it compiled without any errors.  Currently
+  marked unstable until I get some test reports back.  See bug #9265
+
+*vcr-1.09-r1 (14 Sep 2002)
+
+  21 Feb 2003; Martin Holzer <mholzer@gentoo.org> vcr-1.09-r1.ebuild :
+  Compiles only with avifile-0.7.15. Closes #15886.
+
+  14 Sep 2002; Seemant Kulleen <seemant@gentoo.org> vcr-1.09-r1.ebuild
+  files/digest-vcr-1.09-r1 :
+  Fix for flipped vcr output submitted by gentoo@liquidx.net (Alastair Tse)
+  in bug #7919.  Moved patches to one patchfile and it now resides on
+  ibiblio instead.
+
+*vcr-1.09 (13 July 2002)
+
+  13 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, vcr-1.09.ebuild,
+  files/digest-vcr-1.09, files/vcr-1.09-avifile-0.7x.patch :
+  Initial cvs commit. Ebuild contributed by Alastair Tse <gentoo@liquidx.net>.
+  Thanks for the contribution.
