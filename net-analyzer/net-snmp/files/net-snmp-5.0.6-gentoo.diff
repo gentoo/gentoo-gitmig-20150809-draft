@@ -1,0 +1,27 @@
+diff -Naur net-snmp-5.0.5.orig/agent/snmp_agent.c net-snmp-5.0.5/agent/snmp_agent.c
+--- net-snmp-5.0.5.orig/agent/snmp_agent.c	Tue Oct  1 04:18:12 2002
++++ net-snmp-5.0.5/agent/snmp_agent.c	Wed Oct  2 20:10:14 2002
+@@ -71,6 +71,9 @@
+ 
+ #ifdef USE_LIBWRAP
+ #include <tcpd.h>
++#ifdef HAVE_SYSLOG_H
++#include <syslog.h>
++#endif
+ int             allow_severity = LOG_INFO;
+ int             deny_severity = LOG_WARNING;
+ #endif
+diff -Naur net-snmp-5.0.5.orig/apps/snmptrapd.c net-snmp-5.0.5/apps/snmptrapd.c
+--- net-snmp-5.0.5.orig/apps/snmptrapd.c	Thu Sep 12 08:24:50 2002
++++ net-snmp-5.0.5/apps/snmptrapd.c	Wed Oct  2 20:10:05 2002
+@@ -99,8 +99,10 @@
+ #if USE_LIBWRAP
+ #include <tcpd.h>
+ 
++/*
+ int             allow_severity = LOG_INFO;
+ int             deny_severity = LOG_WARNING;
++*/
+ #endif
+ 
+ #define NETSNMP_DS_APP_NUMERIC_IP  8    /* must not conflict with agent's DS booleans */
