@@ -61,6 +61,7 @@ ipv6 - Adds support for IP version 6
 java - Adds support for Java
 jpeg - Adds JPEG image support
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
+kerberos - Adds kerberos support
 lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
