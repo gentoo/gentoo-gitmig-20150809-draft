@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/utempter
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.1 2002/12/03 13:30:54 danarmak Exp $
+
+*utempter-0.5.2 (03 Dec 2002)
+
+  03 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Utempter is a utility which allows some non-privileged programs to have
+  required root access without compromising system security. Utempter
+  accomplishes this feat by acting as a buffer between root and the programs.
