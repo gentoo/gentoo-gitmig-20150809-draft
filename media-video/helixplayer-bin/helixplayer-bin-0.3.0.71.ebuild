@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.71.ebuild,v 1.1 2004/04/26 19:23:05 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.71.ebuild,v 1.2 2004/04/26 19:28:40 kanaka Exp $
 
 inherit nsplugins
 
-#A="hxplay-linux-2.2-libc6-gcc32-i586.tar.gz"
 A="hxplay-0.3.0.71-linux-2.2-libc6-gcc32-i586.tar.bz2"
+S=${WORKDIR}/hxplay-linux-2.2-libc6-gcc32-i586
 DESCRIPTION="Helix Player"
 
-DOWNLOAD_URI="http://forms.helixcommunity.org/helixdnaclient/index.html?filename=20040423/player_all-helix-player-20040423-linux-2.2-libc6-gcc32-i586/hxplay-0.3.0.71-linux-2.2-libc6-gcc32-i586.tar.bz2"
+DOWNLOAD_URI="http://forms.helixcommunity.org/helixdnaclient/"
 HOMEPAGE="https://player.helixcommunity.org"
 
 LICENSE="realsdk"
@@ -19,7 +19,6 @@ DEPEND="virtual/x11
 		media-libs/libvorbis
 		media-libs/libogg
 		media-libs/faad2"
-S=${WORKDIR}/hxplay-linux-2.2-libc6-gcc32-i586
 
 RESTRICT="nostrip fetch"
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/helixplayer-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/ChangeLog,v 1.1 2004/04/26 19:23:05 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/ChangeLog,v 1.2 2004/04/26 19:28:40 kanaka Exp $
+
+  26 Apr 2004; Joel Martin <kanaka@gentoo.org>
+  helixplayer-bin-0.3.0.71.ebuild:
+  Make download URI more generic and general cleanup
 
 *helixplayer-bin-0.3.0.71 (26 Apr 2004)
 
