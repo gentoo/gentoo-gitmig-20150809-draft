@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e2d55c3a6913b8c1f697da3a49a06566 ChangeLog 1219
 MD5 17cf7848c5252c7e34fc9c2b7375f296 libcddb-0.9.4.ebuild 829
+MD5 4035ce800dcfd59ee1eccfbd4cab7661 ChangeLog 1310
+MD5 4ea0e3428e43213ecac9b24a75e8475e libcddb-0.9.5.ebuild 837
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 4c7ca8c89aa595e36a144bedb6482e4f libcddb-0.9.5.ebuild 842
 MD5 cab0f0fadd86233687c8c4478184593f files/digest-libcddb-0.9.4 65
 MD5 633393e067b0d79d4d065e7b469f994a files/digest-libcddb-0.9.5 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBkuAhArHZZzCEUG0RAptPAKCBh6nDNVfOtTPcRfT1f8DS/73puwCeIZXh
-6QSyhXVdh+J9M1dQn4OaMfk=
-=+A93
+iD8DBQFBuwcgugEuf3OQ0akRAnt1AKCGI6iKy6M0e4QYUGBgFMfL0aLaqwCfTSz4
+2AVdOYs4bnZ2hbTwsqd7sh8=
+=AaF3
 -----END PGP SIGNATURE-----
