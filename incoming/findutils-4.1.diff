@@ -1,0 +1,243 @@
+diff -r -u findutils-4.1.orig/find/defs.h findutils-4.1/find/defs.h
+--- findutils-4.1.orig/find/defs.h	Wed Nov  2 14:59:15 1994
++++ findutils-4.1/find/defs.h	Fri Jul 30 21:07:29 1999
+@@ -301,7 +301,7 @@
+ boolean mark_stat P_((struct predicate *tree));
+ 
+ /* util.c */
+-char *basename P_((char *fname));
++char *basename P_((const char *fname));
+ struct predicate *get_new_pred P_((void));
+ struct predicate *get_new_pred_chk_op P_((void));
+ struct predicate *insert_primary P_((boolean (*pred_func )()));
+diff -r -u findutils-4.1.orig/find/fstype.c findutils-4.1/find/fstype.c
+--- findutils-4.1.orig/find/fstype.c	Thu Nov  3 10:33:48 1994
++++ findutils-4.1/find/fstype.c	Fri Jul 30 21:08:54 1999
+@@ -21,6 +21,7 @@
+ #include <stdio.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <string.h>
+ #include "defs.h"
+ #include "modetype.h"
+ #include <errno.h>
+@@ -29,9 +30,6 @@
+ #else
+ extern int errno;
+ #endif
+-
+-char *strdup ();
+-char *strstr ();
+ 
+ static char *filesystem_type_uncached P_((char *path, char *relpath, struct stat *statp));
+ static int xatoi P_((char *cp));
+diff -r -u findutils-4.1.orig/find/parser.c findutils-4.1/find/parser.c
+--- findutils-4.1.orig/find/parser.c	Wed Nov  2 14:59:19 1994
++++ findutils-4.1/find/parser.c	Fri Jul 30 21:08:54 1999
+@@ -18,6 +18,7 @@
+ #include <config.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <string.h>
+ #include <ctype.h>
+ #include <stdio.h>
+ #include <pwd.h>
+@@ -52,7 +53,6 @@
+ #define lstat stat
+ #endif
+ 
+-char *strstr ();
+ int lstat ();
+ int stat ();
+ #ifndef atol /* for Linux */
+diff -r -u findutils-4.1.orig/find/pred.c findutils-4.1/find/pred.c
+--- findutils-4.1.orig/find/pred.c	Wed Nov  2 14:59:23 1994
++++ findutils-4.1/find/pred.c	Fri Jul 30 21:08:54 1999
+@@ -15,6 +15,8 @@
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  */
+ 
++#define _GNU_SOURCE
++
+ #include <config.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff -r -u findutils-4.1.orig/find/util.c findutils-4.1/find/util.c
+--- findutils-4.1.orig/find/util.c	Wed Oct 19 23:49:47 1994
++++ findutils-4.1/find/util.c	Fri Jul 30 21:07:29 1999
+@@ -26,7 +26,7 @@
+ 
+ char *
+ basename (fname)
+-     char *fname;
++     const char *fname;
+ {
+   char *p;
+ 
+diff -r -u findutils-4.1.orig/lib/getline.c findutils-4.1/lib/getline.c
+--- findutils-4.1.orig/lib/getline.c	Fri Nov  4 09:16:50 1994
++++ findutils-4.1/lib/getline.c	Fri Jul 30 21:08:54 1999
+@@ -116,7 +116,7 @@
+   return ret;
+ }
+ 
+-int
++ssize_t
+ getline (lineptr, n, stream)
+      char **lineptr;
+      size_t *n;
+diff -r -u findutils-4.1.orig/lib/nextelem.c findutils-4.1/lib/nextelem.c
+--- findutils-4.1.orig/lib/nextelem.c	Tue Sep 27 08:02:45 1994
++++ findutils-4.1/lib/nextelem.c	Fri Jul 30 21:09:06 1999
+@@ -32,9 +32,6 @@
+ #endif
+ #endif
+ 
+-char *strdup ();
+-void free ();
+-
+ /* Return the next element of a colon-separated path.
+    A null entry in the path is equivalent to "." (the current directory).
+ 
+diff -r -u findutils-4.1.orig/lib/savedir.c findutils-4.1/lib/savedir.c
+--- findutils-4.1.orig/lib/savedir.c	Fri Oct  7 12:21:34 1994
++++ findutils-4.1/lib/savedir.c	Fri Jul 30 21:09:06 1999
+@@ -57,12 +57,11 @@
+ #else
+ char *malloc ();
+ char *realloc ();
++char *stpcpy ();
+ #endif
+ #ifndef NULL
+ #define NULL 0
+ #endif
+-
+-char *stpcpy ();
+ 
+ /* Return a freshly allocated string containing the filenames
+    in directory DIR, separated by '\0' characters;
+diff -r -u findutils-4.1.orig/locate/Makefile.in findutils-4.1/locate/Makefile.in
+--- findutils-4.1.orig/locate/Makefile.in	Sat Nov  5 08:44:08 1994
++++ findutils-4.1/locate/Makefile.in	Fri Jul 30 21:08:15 1999
+@@ -29,7 +29,7 @@
+ datadir = $(prefix)/share
+ sysconfdir = $(prefix)/etc
+ sharedstatedir = $(prefix)/com
+-localstatedir = $(prefix)/var
++localstatedir = /var/spool/locate
+ libdir = $(exec_prefix)/lib
+ infodir = $(prefix)/info
+ mandir = $(prefix)/man
+diff -r -u findutils-4.1.orig/locate/locate.c findutils-4.1/locate/locate.c
+--- findutils-4.1.orig/locate/locate.c	Mon Sep 26 17:06:14 1994
++++ findutils-4.1/locate/locate.c	Fri Jul 30 21:08:44 1999
+@@ -96,7 +96,7 @@
+ 
+ /* Read in a 16-bit int, high byte first (network byte order).  */
+ 
+-static int
++static short
+ get_short (fp)
+      FILE *fp;
+ {
+diff -r -u findutils-4.1.orig/locate/updatedb.sh findutils-4.1/locate/updatedb.sh
+--- findutils-4.1.orig/locate/updatedb.sh	Tue Oct  4 21:24:18 1994
++++ findutils-4.1/locate/updatedb.sh	Fri Jul 30 21:10:56 1999
+@@ -53,7 +53,7 @@
+ : ${NETPATHS=}
+ 
+ # Directories to not put in the database, which would otherwise be.
+-: ${PRUNEPATHS="/tmp /usr/tmp /var/tmp /afs"}
++: ${PRUNEPATHS="/tmp /usr/tmp /var/tmp /proc /afs"}
+ 
+ # The same, in the form of a regex that find can use.
+ test -z "$PRUNEREGEX" &&
+@@ -69,6 +69,12 @@
+   : ${TMPDIR=/usr/tmp}
+ fi
+ 
++if test -x /bin/mktemp; then
++  : ${MKTEMP=/bin/mktemp}
++else
++  : ${MKTEMP=/bin/touch}
++fi
++
+ # The user to search network directories as.
+ : ${NETUSER=daemon}
+ 
+@@ -91,6 +97,11 @@
+ 
+ if test $old = no; then
+ 
++NEW_LOCATE_DB=`$MKTEMP $LOCATE_DB.n.XXXXXX` || {
++  echo "could not create temporary locate db" >&2
++  exit 1
++}
++
+ # FIXME figure out how to sort null-terminated strings, and use -print0.
+ {
+ if test -n "$SEARCHPATHS"; then
+@@ -102,23 +113,27 @@
+   su $NETUSER -c \
+   "$find $NETPATHS \\( -type d -regex \"$PRUNEREGEX\" -prune \\) -o -print"
+ fi
+-} | sort -f | $frcode > $LOCATE_DB.n
++} | sort -f | $frcode > $NEW_LOCATE_DB
+ 
+ # To avoid breaking locate while this script is running, put the
+ # results in a temp file, then rename it atomically.
+-if test -s $LOCATE_DB.n; then
+-  rm -f $LOCATE_DB
+-  mv $LOCATE_DB.n $LOCATE_DB
++if test -s $NEW_LOCATE_DB; then
++  # try atomic move first; mv may not have -f flag on some systems
++  mv -f $NEW_LOCATE_DB $LOCATE_DB >/dev/null 2>&1 || {
++    # for systems whose mv does not grok -f
++    rm -f $LOCATE_DB
++    mv $NEW_LOCATE_DB $LOCATE_DB
++  }
+   chmod 644 $LOCATE_DB
+ else
+   echo "updatedb: new database would be empty" >&2
+-  rm -f $LOCATE_DB.n
++  rm -f $NEW_LOCATE_DB
+ fi
+ 
+ else # old
+ 
+-bigrams=$TMPDIR/f.bigrams$$
+-filelist=$TMPDIR/f.list$$
++bigrams=`$MKTEMP $TMPDIR/f.bigrams$$XXXXXX`
++filelist=`$MKTEMP $TMPDIR/f.list$$XXXXXX`
+ trap 'rm -f $bigrams $filelist; exit' 1 15
+ 
+ # Alphabetize subdirectories before file entries using tr.  James says:
+diff -r -u findutils-4.1.orig/xargs/xargs.c findutils-4.1/xargs/xargs.c
+--- findutils-4.1.orig/xargs/xargs.c	Fri Oct  7 12:21:39 1994
++++ findutils-4.1/xargs/xargs.c	Fri Jul 30 21:09:46 1999
+@@ -60,9 +60,6 @@
+ #define memcpy(dest, source, count) (bcopy((source), (dest), (count)))
+ #endif
+ 
+-char *strstr ();
+-char *strdup ();
+-
+ #ifndef _POSIX_SOURCE
+ #include <sys/param.h>
+ #endif
+@@ -627,6 +624,7 @@
+       strncpy (p, arg, len);
+       p += len;
+       arg += len;
++      arglen -= len;
+ 
+       if (s)
+ 	{
+@@ -635,6 +633,7 @@
+ 	    break;
+ 	  strcpy (p, linebuf);
+ 	  arg += rplen;
++          arglen -= rplen;
+ 	  p += lblen;
+ 	}
+     }
