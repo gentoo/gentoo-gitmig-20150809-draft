@@ -1,0 +1,208 @@
+#!/bin/bash -e
+#
+#     audigy-script  --  A setup script
+#
+#     Author:        Jonathan Boler (tenpin22@blueyonder.co.uk)  Originally: Daniel Bertrand
+#     Last Updates:  
+#                    Daniel Robbins, 07th March 2003 (drobbins@gentoo.org)
+#                      Set tone control defaults to 50/100 (neutral)
+#					 Jonathan Boler, 11th October 2002
+#     Version:       0.31
+#
+# Optional argument processing:
+# This script takes arguments which can override the settings in the
+# config file. The following flags are supported:
+#
+# -d [yes|no]	use the digital output
+# -t [yes|no]	enable the tone controls
+# -3 [yes|no]	enable ac3 passthrough
+# -i [yes|no]	enable livedrive ir
+
+# Default location of programs:
+BASE_PATH=/usr
+DSPPATH=$BASE_PATH/share/emu10k1
+AUMIX=`which aumix`
+
+# To use something other than /dev/dsp
+# example "-D /dev/dsp1"
+DSPDEV=""
+
+# To use something other than /dev/dsp
+# example "-M /dev/mixer1"
+MIXERDEV=""
+
+DSPMGR=$BASE_PATH/bin/emu-dspmgr $DSPDEV $MIXERDEV
+
+CONFIG=$BASE_PATH/bin/emu-config $DSPDEV $MIXERDEV
+
+SAVEARGS="$@"
+
+load(){
+
+# Source configurations
+  . /etc/emu10k1.conf
+
+# Pick up any command line overrides
+while getopts d:t:3:i: OPT $SAVEARGS; do
+	case "$OPT" in
+	d)
+		USE_DIGITAL_OUTPUT=$OPTARG
+		;;
+	t)
+		ENABLE_TONE_CONTROL=$OPTARG
+		;;
+	3)
+		AC3PASSTHROUGH=$OPTARG
+		;;
+	i)
+		ENABLE_LIVEDRIVE_IR=$OPTARG
+		;;
+	*)
+		exit 1
+		;;
+	esac
+	shift 2
+done
+
+# Set some variables
+if [ "$USE_DIGITAL_OUTPUT" = yes ]; then
+    FRONT="Dig Front"
+    CENTER="Dig Center"
+    SUB="Dig LFE"
+    REAR="Dig rear"
+    CTR_SUB="Dig ctr/sub"
+else
+    FRONT="Front"
+    CENTER="Center"
+    SUB="Sub"
+    REAR="Rear"
+    CTR_SUB="Ctr/sub"
+fi
+
+# Functions to enable inputs and volume controls
+
+enable_volume(){
+    INPUT=$1
+    VOLUME=$2
+
+    $DSPMGR -p"$VOLUME Vol" -l"$INPUT" -f$DSPPATH/vol_2.bin -c"Vol_L" -m"${VOLUME}_l" -c"Vol_R" -m"${VOLUME}_r"
+}
+
+enable_with_vol(){
+    INPUT=$1
+    VOLUME=$2
+
+    $DSPMGR  -a"$INPUT:$FRONT" -a"$INPUT:$REAR" -a"$INPUT:Headphones"
+    $DSPMGR -p"$VOLUME Vol" -l"$INPUT" -f$DSPPATH/vol_2.bin -c"Vol_L" -m"${VOLUME}_l" -c"Vol_R" -m"${VOLUME}_r"
+}
+
+
+# Start by clearing everything and stopping the FX8010
+$DSPMGR -x -z
+
+
+# Enable inputs (route them to the outputs) and volume controls
+
+# Pcm can be up to 6 channels
+
+$DSPMGR -a"Pcm:$FRONT" -a"Pcm Rear:$REAR" -a"Pcm ctr/sub:$CTR_SUB" -a"Pcm:Headphones"
+$DSPMGR -l"pcm" -l"Pcm Rear" -l"Pcm Ctr/sub" -f$DSPPATH/vol_pcm.bin -c"Vol_L" -m"pcm_l" -c"Vol_R" -m"pcm_r"
+
+# Other inputs are only stereo
+
+if [ "$ENABLE_CD_Spdif" = yes ]; then
+     enable_with_vol "CD-Spdif" "dig1"
+fi
+
+if [ "$ENABLE_OPTICAL_SPDIF" = yes ]; then
+    enable_with_vol "Opt. Spdif" "dig2"
+fi
+
+if [ "$ENABLE_LINE2_MIC2" = yes ]; then
+    enable_with_vol "Line2/Mic2" "line2"
+fi
+
+if [ "$ENABLE_RCA_SPDIF" = yes ]; then
+    enable_with_vol "RCA Spdif" "dig3"
+fi
+
+if [ "$ENABLE_RCA_AUX" = yes ]; then
+    enable_with_vol  "RCA Aux2" "line3"
+fi
+
+
+# Analog-in is already routed to the analog front output
+# So we route it only to the remaining outputs
+
+$DSPMGR  -a"Analog:Recording" -a"Analog:Headphones"
+
+if [ "$USE_DIGITAL_OUTPUT" = yes ]; then
+    $DSPMGR -a"Analog:Dig Front"
+fi
+
+# Output volume controls:
+enable_volume "$FRONT" "vol"
+enable_volume "$REAR" "ogain"
+enable_volume "$CTR_SUB" "igain"
+
+
+if [ "$ENABLE_TONE_CONTROL" = yes ] ; then
+
+    TONE=tone.bin
+
+    $DSPMGR -l"$FRONT L" -f$DSPPATH/$TONE -cbass -mbass -ctreble -mtreble
+    # The next 3 'inherit' the oss control of the above line:
+    $DSPMGR -l"$FRONT R" -f$DSPPATH/$TONE
+    $DSPMGR -l"$REAR R" -f$DSPPATH/$TONE
+    $DSPMGR -l"$REAR L" -f$DSPPATH/$TONE
+
+	if [ -x $AUMIX ] ; then
+		# drobbins is an audiophile and has a problem with auto-bass and
+		# auto-treble. So these have been changed from 68 to 50.
+    	$AUMIX -t 50 
+    	$AUMIX -b 50
+	fi
+fi
+
+
+# Need to toggle third output into digital mode
+
+if [ "$USE_DIGITAL_OUTPUT" = yes ] ; then
+	$CONFIG -d
+fi
+
+# See if we should enable IR
+
+if [ "$ENABLE_LIVEDRIVE_IR" = yes ] ; then
+     $CONFIG -i
+fi
+
+# for digital output we can do ac3passthrough
+# this patch must be last in the signal chain
+if [ "$USE_DIGITAL_OUTPUT" = yes ]; then
+    if [ "$AC3PASSTHROUGH" = yes ] ; then
+	$DSPMGR -l"dig front" -F"$DSPPATH/ac3pass-audigy.bin"
+    fi
+fi
+
+
+# Restart the FX8010
+$DSPMGR -y
+
+}
+
+case "$1" in
+
+	restore | restart)
+        load
+		# Load mixer settings
+		$AUMIX -f /etc/aumixrc -L  >/dev/null 2>&1 || :
+        ;;
+    save | stop)
+		# Save mixer settings
+		$AUMIX -f /etc/aumixrc -S   >/dev/null 2>&1 || :
+		;;
+    *)
+		load
+esac
+

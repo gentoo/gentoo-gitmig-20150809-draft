@@ -1,0 +1,2 @@
+post-install emu10k1 /usr/bin/emu10k1-script restore
+pre-remove emu10k1 /usr/bin/emu10k1-script save

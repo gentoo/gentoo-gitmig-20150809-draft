@@ -1,0 +1,55 @@
+#!/bin/bash
+
+source /sbin/functions.sh
+source /etc/emu10k1.conf
+
+# setup regex strings to match
+AUDIGY_PCI_TAG="multimedia audio controller: creative labs.*audigy"
+EMU10K1_PCI_TAG="multimedia audio controller: creative labs.*emu10k1"
+
+# first, lets try to read the driver information in /proc/driver/
+proc="`ls /proc/driver/emu10k1/*/info 2> /dev/null | awk '{print $1}'`"
+if [ -z "${CARD_TYPE}" ] && [ ! -z "${proc}" ] && [ -e ${proc} ] ; then
+	if [ -n "$(egrep -i '^card type.*audigy.*' ${proc})" ] ; then
+		CARD_TYPE="audigy"
+	elif [ -n "$(egrep -i '^card type.*emu10k1.*' ${proc})" ] ; then
+		CARD_TYPE="emu"
+	fi
+fi
+
+# if that didnt work, try to detect via lspci (sys-apps/pciutils)
+if [ -z "${CARD_TYPE}" ] && [ -x /sbin/lspci ] ; then
+echo 1
+	if [ -n "$(lspci | egrep -i "${AUDIGY_PCI_TAG}")" ] ; then
+		CARD_TYPE="audigy"
+	elif [ -n "$(lspci | egrep -i "${EMU10K1_PCI_TAG}")" ] ; then
+		CARD_TYPE="emu"
+	fi
+fi
+
+# if that didnt work, lets try via the kernel's /proc/pci interface
+if [ -z "${CARD_TYPE}" ] && [ -e /proc/pci ] ; then
+	if [ -n "$(egrep -i "${AUDIGY_PCI_TAG}" /proc/pci)" ] ; then
+		CARD_TYPE="audigy"
+	elif [ -n "$(egrep -i "${EMU10K1_PCI_TAG}" /proc/pci)" ] ; then
+		CARD_TYPE="emu"
+	fi
+fi
+
+# if that failed, make the user tell us what it is
+case "`echo ${CARD_TYPE} | awk '{print toupper($1)}'`" in
+	AUDIGY)
+		/usr/bin/audigy-script $@
+		;;
+	EMU)
+		/usr/bin/emu-script $@
+		;;
+	*)
+		eerror "I was unable to figure out whether you have an Audigy"
+		eerror "or an Emu10k1 sound card.  Further more, you have not"
+		eerror "told me what kind of sound card you have."
+		eerror "Please edit /etc/emu10k1.conf and set the CARD_TYPE"
+		eerror "variable.  You will find it at the top of the file."
+		exit 1
+		;;
+esac

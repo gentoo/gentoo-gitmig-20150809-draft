@@ -1,0 +1,15 @@
+# Set your card type on the next line so that loading the
+# kernel module works correctly.
+#
+# Accepted values are 'emu' and 'audigy'
+#  use 'audigy' if you have an audigy based sound card,
+#  otherwise use 'emu'
+#
+# Note: you should only have to set this if:
+#    (1) the auto-detect script fails
+#        - no lspci support
+#        - no /proc/pci support
+#        - the kernel just plain doesn't like you
+#    (2) you like to set everything
+#CARD_TYPE="set_me"
+
