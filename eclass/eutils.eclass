@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.90 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.91 2004/07/23 11:11:57 usata Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -480,6 +480,26 @@ mymktemp() {
 	fi
 }
 
+# Small wrapper for getent (Linux) and nidump (Mac OS X)
+# used in enewuser()/enewgroup()
+# Joe Jezak <josejx@gmail.com> and usata@gentoo.org
+#
+# egetent(database, key)
+egetent() {
+	if [ "${ARCH}" == "macos" ] ; then	
+		case "$2" in
+		  *[!0-9]*) # Non numeric
+			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2$/) {print \$0;exit;} }"
+			;;
+		  *)	# Numeric
+			nidump $1 . | awk -F":" "{ if (\$3 == $2) {print \$0;exit;} }"
+			;;
+		esac
+	else
+		getent $1 $2
+	fi
+}
+
 # Simplify/standardize adding users to the system
 # vapier@gentoo.org
 #
@@ -503,7 +523,7 @@ enewuser() {
 	fi
 
 	# lets see if the username already exists
-	if [ "${euser}" == "`getent passwd \"${euser}\" | cut -d: -f1`" ]
+	if [ "${euser}" == "`egetent passwd \"${euser}\" | cut -d: -f1`" ]
 	then
 		return 0
 	fi
@@ -518,7 +538,7 @@ enewuser() {
 	then
 		if [ "${euid}" -gt 0 ]
 		then
-			if [ ! -z "`getent passwd ${euid}`" ]
+			if [ ! -z "`egetent passwd ${euid}`" ]
 			then
 				euid="next"
 			fi
@@ -531,8 +551,14 @@ enewuser() {
 	fi
 	if [ "${euid}" == "next" ]
 	then
-		for euid in `seq 101 999` ; do
-			[ -z "`getent passwd ${euid}`" ] && break
+		local pwrange
+		if [ "${ARCH}" == "macos" ] ; then
+			pwrange="`jot 898 101`"
+		else
+			pwrange="`seq 101 999`"
+		fi
+		for euid in ${pwrange} ; do
+			[ -z "`egetent passwd ${euid}`" ] && break
 		done
 	fi
 	opts="${opts} -u ${euid}"
@@ -570,7 +596,7 @@ enewuser() {
 		export IFS=","
 		for g in ${egroups}
 		do
-			if [ -z "`getent group \"${g}\"`" ]
+			if [ -z "`egetent group \"${g}\"`" ]
 			then
 				eerror "You must add group ${g} to the system first"
 				die "${g} is not a valid GID"
@@ -587,15 +613,37 @@ enewuser() {
 	local eextra="$@"
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if [ -z "${eextra}" ]
+	if [ "${ARCH}" == "macos" ];	
 	then
-		useradd ${opts} ${euser} \
-			-c "added by portage for ${PN}" \
-			|| die "enewuser failed"
+		### Make the user
+		if [ -z "${eextra}" ]
+		then
+			dscl . create /users/${euser} uid ${euid}
+			dscl . create /users/${euser} shell ${eshell}
+			dscl . create /users/${euser} home ${ehome}
+			dscl . create /users/${euser} realname "added by portage for ${PN}"
+			### Add the user to the groups specified
+			for g in ${egroups}
+			do
+				dscl . merge /groups/${g} users ${euser}
+			done
+		else
+			einfo "Extra options are not supported on macos yet"
+			einfo "Please report the ebuild along with the info below"
+			einfo "eextra: ${eextra}"
+			die "Required function missing"
+		fi
 	else
-		einfo " - Extra: ${eextra}"
-		useradd ${opts} ${euser} ${eextra} \
-			|| die "enewuser failed"
+		if [ -z "${eextra}" ]
+		then
+			useradd ${opts} ${euser} \
+				-c "added by portage for ${PN}" \
+				|| die "enewuser failed"
+		else
+			einfo " - Extra: ${eextra}"
+			useradd ${opts} ${euser} ${eextra} \
+				|| die "enewuser failed"
+		fi
 	fi
 	export SANDBOX_ON="${oldsandbox}"
 
@@ -627,7 +675,7 @@ enewgroup() {
 	fi
 
 	# see if group already exists
-	if [ "${egroup}" == "`getent group \"${egroup}\" | cut -d: -f1`" ]
+	if [ "${egroup}" == "`egetent group \"${egroup}\" | cut -d: -f1`" ]
 	then
 		return 0
 	fi
@@ -642,9 +690,13 @@ enewgroup() {
 	then
 		if [ "${egid}" -gt 0 ]
 		then
-			if [ -z "`getent group ${egid}`" ]
+			if [ -z "`egetent group ${egid}`" ]
 			then
-				opts="${opts} -g ${egid}"
+				if [ "${ARCH}" == "macos" ] ; then
+					opts="${opts} ${egid}"
+				else
+					opts="${opts} -g ${egid}"
+				fi
 			else
 				egid="next available; requested gid taken"
 			fi
@@ -664,7 +716,28 @@ enewgroup() {
 	# add the group
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	groupadd ${opts} ${egroup} || die "enewgroup failed"
+	if [ "${ARCH}" == "macos" ];	
+	then
+		if [ ! -z "${eextra}" ];
+		then
+			einfo "Extra options are not supported on macos yet"
+			einfo "Please report the ebuild along with the info below"
+			einfo "eextra: ${eextra}"
+			die "Required function missing"
+		fi
+		
+		# If we need the next available
+		case ${egid} in
+		  *[!0-9]*) # Non numeric
+			for egid in `jot 898 101`; do
+				[ -z "`egetent group ${egid}`" ] && break
+			done
+		esac
+		dscl . create /groups/${egroup} gid ${egid}
+		dscl . create /groups/${egroup} passwd '*'	
+	else
+		groupadd ${opts} ${egroup} || die "enewgroup failed"
+	fi
 	export SANDBOX_ON="${oldsandbox}"
 }
 
