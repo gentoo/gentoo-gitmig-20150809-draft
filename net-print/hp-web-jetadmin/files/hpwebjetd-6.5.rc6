@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting HP Web JetAdmin"
+    start-stop-daemon --start --quiet --exec /opt/hp-web-jetadmin-6.5/hpwebjetd -- -start
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping HP Web JetAdmin"
+    start-stop-daemon --stop --quiet --exec /opt/hp-web-jetadmin-6.5/hpwebjetd -- -stop
+    eend $?
+}
