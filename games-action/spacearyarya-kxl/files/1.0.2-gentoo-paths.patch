@@ -1,0 +1,45 @@
+diff -ur SpaceAryarya-KXL-1.0.2.orig/bmp/Makefile.am SpaceAryarya-KXL-1.0.2/bmp/Makefile.am
+--- SpaceAryarya-KXL-1.0.2.orig/bmp/Makefile.am	2003-12-31 11:56:07.715433088 -0500
++++ SpaceAryarya-KXL-1.0.2/bmp/Makefile.am	2003-12-31 11:54:45.667906000 -0500
+@@ -1,4 +1,4 @@
+-bmpdir = $(prefix)/share/SpaceAryarya/bmp
++bmpdir = $(BMP_PATH)
+ bmp_DATA =   my.bmp enemy1.bmp shot.bmp bomb.bmp\
+ 	     enemy2.bmp kage.bmp wall.bmp wall2.bmp eshot.bmp\
+ 	     boss1_b.bmp  boss1_do.bmp  boss1_f.bmp\
+diff -ur SpaceAryarya-KXL-1.0.2.orig/configure.in SpaceAryarya-KXL-1.0.2/configure.in
+--- SpaceAryarya-KXL-1.0.2.orig/configure.in	2003-12-31 11:56:07.687437344 -0500
++++ SpaceAryarya-KXL-1.0.2/configure.in	2003-12-31 11:55:19.708731000 -0500
+@@ -25,9 +25,9 @@
+         BMP_PATH=/usr/local/share/SpaceAryarya/bmp
+         WAV_PATH=/usr/local/share/SpaceAryarya/wav
+ else
+-        DATA_PATH=$prefix/share/SpaceAryarya/data
+-        BMP_PATH=$prefix/share/SpaceAryarya/bmp
+-        WAV_PATH=$prefix/share/SpaceAryarya/wav
++        DATA_PATH=$datadir/SpaceAryarya/data
++        BMP_PATH=$datadir/SpaceAryarya/bmp
++        WAV_PATH=$datadir/SpaceAryarya/wav
+ fi
+ AC_DEFINE_UNQUOTED(DATA_PATH,"$DATA_PATH")
+ AC_DEFINE_UNQUOTED(BMP_PATH,"$BMP_PATH")
+diff -ur SpaceAryarya-KXL-1.0.2.orig/data/Makefile.am SpaceAryarya-KXL-1.0.2/data/Makefile.am
+--- SpaceAryarya-KXL-1.0.2.orig/data/Makefile.am	2003-12-31 11:56:07.691436736 -0500
++++ SpaceAryarya-KXL-1.0.2/data/Makefile.am	2003-12-31 11:54:55.989337000 -0500
+@@ -1,6 +1,6 @@
+-datadir = $(prefix)/share/SpaceAryarya/data
++datadir = $(DATA_PATH)
+ data_DATA  = stage1.dat stage2.dat
+ EXTRA_DIST = stage1.dat stage2.dat .score
+ 
+ install:
+-	$(INSTALL) -c -m 666 ./.score $(DESTDIR)$(DATA_PATH)
++	$(INSTALL) -c -m 660 ./.score $(DESTDIR)$(DATA_PATH)
+diff -ur SpaceAryarya-KXL-1.0.2.orig/wav/Makefile.am SpaceAryarya-KXL-1.0.2/wav/Makefile.am
+--- SpaceAryarya-KXL-1.0.2.orig/wav/Makefile.am	2003-12-31 11:56:07.709434000 -0500
++++ SpaceAryarya-KXL-1.0.2/wav/Makefile.am	2003-12-31 11:55:04.719010000 -0500
+@@ -1,3 +1,3 @@
+-wavdir = $(prefix)/share/SpaceAryarya/wav
++wavdir = $(WAV_PATH)
+ wav_DATA =   bgm1.wav bomb.wav hit.wav fire.wav die.wav boss.wav
+ EXTRA_DIST = bgm1.wav bomb.wav hit.wav fire.wav die.wav boss.wav
