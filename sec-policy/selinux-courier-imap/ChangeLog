@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-courier-imap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-courier-imap/ChangeLog,v 1.8 2005/01/20 09:08:41 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-courier-imap/ChangeLog,v 1.9 2005/02/25 07:33:19 kaiowas Exp $
+
+*selinux-courier-imap-20050219 (25 Feb 2005)
+
+  25 Feb 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-courier-imap-20040928.ebuild,
+  +selinux-courier-imap-20050219.ebuild:
+  removed 3 port defs not present upstream
 
   20 Jan 2005; petre rodan <kaiowas@gentoo.org>
   selinux-courier-imap-20050105.ebuild:
