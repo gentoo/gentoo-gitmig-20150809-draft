@@ -15,4 +15,5 @@ FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at star
 
 ARCH=`uname -m`				# Architecture
 NFSSERVER=no				# Set to yes if you want to run an nfsserver
+YPDOMAIN=""				# Enter your NIS domainname here
 
