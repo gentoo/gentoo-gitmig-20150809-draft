@@ -1,0 +1,27 @@
+--- acerhk-0.5.22/acerhk.c	2005-02-23 22:20:10.000000000 +0100
++++ acerhk-0.5.22/acerhk.c	2005-02-25 21:21:02.957482584 +0100
+@@ -1722,7 +1722,7 @@
+   set_keymap_name(k_p3, KEY_PROG3);
+   set_keymap_name(k_www, KEY_WWW);
+   set_keymap_name(k_mail, KEY_MAIL);
+-  set_keymap_name(k_wireless, KEY_XFER);
++  set_keymap_name(k_wireless, KEY_KPLEFTPAREN);
+   set_keymap_name(k_power, KEY_POWER);
+   set_keymap_name(k_mute, KEY_MUTE);
+   set_keymap_name(k_volup, KEY_VOLUMEUP);
+@@ -1730,13 +1730,12 @@
+   set_keymap_name(k_res, KEY_CONFIG);
+   set_keymap_name(k_close, KEY_CLOSE);
+   set_keymap_name(k_open, KEY_OPEN);
+-  /* I am not really happy with the selections for wireless and wireless2 */
+-  set_keymap_name(k_wireless2, KEY_XFER);
++  set_keymap_name(k_wireless2, KEY_KPRIGHTPAREN);
+   set_keymap_name(k_play, KEY_PLAYPAUSE);
+   set_keymap_name(k_stop, KEY_STOPCD);
+   set_keymap_name(k_prev, KEY_PREVIOUSSONG);
+   set_keymap_name(k_next, KEY_NEXTSONG);
+-  set_keymap_name(k_display, KEY_MEDIA); /* also not happy with this */
++  set_keymap_name(k_display, KEY_MEDIA);
+   if (verbose > 1)
+     print_mapping();
+ }
