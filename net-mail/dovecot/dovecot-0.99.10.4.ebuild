@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4.ebuild,v 1.1 2004/04/10 14:21:11 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4.ebuild,v 1.2 2004/05/07 16:24:51 kugelfang Exp $
 
 IUSE="debug ipv6 ldap maildir pam postgres sasl ssl vpopmail nopop3d"
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 #PROVIDE="virtual/imapd"
 
