@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/bsfilter-1.0.4.ebuild,v 1.1 2004/08/27 13:45:05 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/bsfilter-1.0.4.ebuild,v 1.2 2004/09/27 11:38:28 ticho Exp $
 
 DESCRIPTION="bayesian spam filter which distinguishes spam and non-spam mail"
 HOMEPAGE="http://bsfilter.org/index-e.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge.jp/bsfilter/10876/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="mecab chasen"
 
 DEPEND="virtual/ruby"
