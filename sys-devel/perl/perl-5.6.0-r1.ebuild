@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.5 2000/10/03 16:02:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.6 2000/10/04 22:53:19 achim Exp $
 
 P=perl-5.6.0
 A=${P}.tar.gz
@@ -45,7 +45,6 @@ EOF
 }
 
 src_install() {                               
-    dodir /usr/bin
     try make install
     install -m 755 utils/pl2pm $D/usr/bin/pl2pm
 export D
@@ -53,26 +52,26 @@ export D
 # Yes it is, and thank you Christian for getting sick just so we can
 # run perl :)
 
-try make all -f - <<EOF
+make all -f - <<EOF
 STDH    =\$(wildcard /usr/include/linux/*.h) \$(wildcard /usr/include/asm/*.h) \
-	\$(wildcard /usr/include/scsi/*.h)
+          \$(wildcard /usr/include/scsi/*.h)
 GCCDIR  = \$(shell gcc --print-file-name include)
 
-PERLLIB = \$(D)/usr/lib/perl5/5.6.0
+PERLLIB = \$(D)/usr/lib/perl5/%{perlver}%{perlrel}
 PERL    = PERL5LIB=\$(PERLLIB) \$(D)/usr/bin/perl
-PHDIR   = \$(PERLLIB)/i686-linux
+PHDIR   = \$(PERLLIB)/\${PARCH}-linux
 H2PH    = \$(PERL) \$(D)/usr/bin/h2ph -d \$(PHDIR)/
 
 all: std-headers gcc-headers fix-config
 
 std-headers: \$(STDH)
-	cd /usr/include && \$(H2PH) \$(STDH:/usr/include/%%=%%)
+        cd /usr/include && \$(H2PH) \$(STDH:/usr/include/%%=%%)
 
 gcc-headers: \$(GCCH)
-	cd \$(GCCDIR) && \$(H2PH) \$(GCCH:\$(GCCDIR)/%%=%%)
+        cd \$(GCCDIR) && \$(H2PH) \$(GCCH:\$(GCCDIR)/%%=%%)
 
 fix-config: \$(PHDIR)/Config.pm
-	\$(PERL) -i -p -e "s|\$(D)||g;" \$<
+        \$(PERL) -i -p -e "s|\$(D)||g;" \$<
 
 EOF
 
