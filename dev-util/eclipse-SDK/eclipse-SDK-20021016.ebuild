@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-20021016.ebuild,v 1.1 2002/10/23 10:55:23 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-20021016.ebuild,v 1.2 2002/11/06 15:09:20 vapier Exp $
 
-S=${WORKDIR}/eclipse
 DESCRIPTION="Eclipse Tools Platform"
-HOMEPAGE="http://www.eclipse.org"
+HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/downloads/drops/M-M20021016-200210161432/eclipse-SDK-M20021016-linux-gtk.zip"
 
 SLOT="0"
@@ -13,9 +12,9 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=virtual/jdk-1.2
 	>=x11-libs/gtk+-2.0*"
-RDEPEND="${DEPEND}"
+S=${WORKDIR}/eclipse
 
-src_install () {
+src_install() {
 	dodir /opt/eclipse
 
 	cp -dpR features install.ini libXm.so.2 eclipse \
@@ -27,4 +26,3 @@ src_install () {
 	dodir /etc/env.d
 	echo -e "LDPATH=/opt/eclipse\nPATH=/opt/eclipse\nROOTPATH=/opt/eclipse" > ${D}/etc/env.d/20eclipse
 }
-
