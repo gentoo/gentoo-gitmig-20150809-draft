@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.48 2003/11/03 20:57:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.49 2003/11/12 15:37:56 aliz Exp $
+
+  12 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> python-2.2.3-r5.ebuild :
+  Add a patch that adds CFLAGSFORSHARED variable to some extra modules defined in the Makefile.
+  This variable could hold -fPIC so that the compiled libraries will work on amd64 (and maybe others)
+  without using append-flags -fPIC.
 
   03 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.2.3-r5.ebuild,
   python-2.3.2-r1.ebuild:
