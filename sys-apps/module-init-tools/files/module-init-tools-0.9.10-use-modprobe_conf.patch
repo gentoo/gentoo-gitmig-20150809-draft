@@ -1,0 +1,12 @@
+--- generate-modprobe.conf.orig	2003-03-10 19:59:48.000000000 +0200
++++ generate-modprobe.conf	2003-03-10 20:00:38.000000000 +0200
+@@ -18,6 +18,9 @@
+ 
+ if [ x"$TESTING_MODPROBE_CONF" != x ]; then
+     cp $TESTING_MODPROBE_CONF $MODPROBECONF
++elif [ -x /sbin/modprobe.conf ]; then
++	# In sbin.
++	/sbin/modprobe.conf -c > $MODPROBECONF
+ elif [ -x /sbin/modprobe.old ]; then
+     # In sbin.
+     /sbin/modprobe.old -c > $MODPROBECONF

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.15 2003/03/09 11:30:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.16 2003/03/10 20:34:06 azarah Exp $
+
+*module-init-tools-0.9.10-r3 (10 March 2003)
+
+  10 March 2003; Martin Schlemmer <azarah@gentoo.org> module-init-tools-0.9.10-r3 :
+  Fix recursive calls to modprobe not honoring -s, -q, -v and -C.  Use older
+  modprobe that we install as modprobe.conf when calling generate-modprobe.conf,
+  as the newer modprobe (2.4.22 and later) generate /etc/modprobe.conf with
+  invalid modules ...  Fix modprobe to _only_ log to syslog if -s was given.
 
 *module-init-tools-0.9.10-r2 (09 March 2003)
 

@@ -1,0 +1,24 @@
+--- module-init-tools-0.9.10/modprobe.c.orig	2003-03-10 20:19:33.000000000 +0200
++++ module-init-tools-0.9.10/modprobe.c	2003-03-10 21:39:57.000000000 +0200
+@@ -1175,11 +1175,18 @@
+ 		if (0 == strcmp(getenv("MODPROBE_LOG"), "1"))
+ 			log = 1;
+ 
+-	/* If stderr not open, go to syslog */
+-	if (log || fstat(STDERR_FILENO, &statbuf) != 0) {
+-		openlog("modprobe", LOG_CONS, LOG_DAEMON);
++	/* If logging was requested, do not output to stdout */
++	if (log) {
++		openlog("modprobe", 0, LOG_DAEMON);
+ 		log = 1;
+ 	}
++	
++	/* If stderr not open and logging was not requested, go to syslog */
++	if (!log)
++		if (fstat(STDERR_FILENO, &statbuf) != 0) {
++			openlog("modprobe", LOG_CONS, LOG_DAEMON);
++			log = 1;
++		}
+ 
+ 	if (argc < optind + 1 && !dump_only && !list_only)
+ 		print_usage(argv[0]);

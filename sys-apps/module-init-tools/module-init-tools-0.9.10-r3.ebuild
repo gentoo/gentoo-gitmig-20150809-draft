@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r2.ebuild,v 1.2 2003/03/09 19:17:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r3.ebuild,v 1.1 2003/03/10 20:34:06 azarah Exp $
 
 # This includes backwards compatability for stable kernels
 IUSE=""
@@ -9,12 +9,33 @@ inherit flag-o-matic
 
 inherit eutils
 
+# Ok, theory of what we are doing is this:  modprobe from modutils
+# later than 2.4.21 have hardcoded 'above' and 'below' stuff that
+# cause generate-modprobe.conf to generate a /etc/modprobe.conf with
+# invalid (linux-2.4) modules in it.
+#
+# Now, one solution is to only use modutils-2.4.21, but then we might
+# cause issues for users that still use 2.4 kernels, as later modutils
+# might fix things ...
+#
+# Solution:  build modutils 2 times, once 2.4.21, and install insmod
+#            as /sbin/modprobe.conf, and second time build current
+#            modutils as we would.  Then we tweak generate-modprobe.conf
+#            to rather use /sbin/modprobe.conf to generate
+#            /etc/modprobe.conf ...
+#
+# <azarah@gentoo.org> (10 March 2003)
+
 MYP="${P/_pre1/-pre}"
 S="${WORKDIR}/${MYP}"
+# Do not use modutils-2.4.22 or later, as it borks modprobe.conf generation
+# with reference to invalid (linux-2.4) modules.
+OMODPROBE_PV="2.4.21"
 MODUTILS_PV="2.4.22"
 DESCRIPTION="Kernel module tools for the development kernel >=2.5.48"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
-		http://www.kernel.org/pub/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
+	http://www.kernel.org/pub/linux/utils/kernel/modutils/v2.4/modutils-${OMODPROBE_PV}.tar.bz2
+	http://www.kernel.org/pub/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
@@ -39,17 +60,31 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	# Get modprobe to really shutup if we give it -q
-	epatch ${FILESDIR}/${P}-shutup-modprobe.patch
-	# Fix recursive calls to modprobe not honoring -s
-	epatch ${FILESDIR}/${P}-fix-recursive-logging.patch
-	# Fix recursive calls to modprobe not honoring -v and -C.
-	# Also do not check env variables if we have commandline args
-	epatch ${FILESDIR}/${P}-fix-more-recursive-bugs.patch
+	# Fix recursive calls to modprobe not honoring -s, -q, -v and -C
+	epatch ${FILESDIR}/${P}-fix-recursion.patch
+	# Never output to stdout if logging was requested
+	epatch ${FILESDIR}/${P}-no-stdout-on-log.patch
+	# Use older modprobe that we install as modprobe.conf when calling
+	# generate-modprobe.conf, as the newer modprobe (2.4.22 and later)
+	# generate /etc/modprobe.conf with invalid modules ...
+	epatch ${FILESDIR}/${P}-use-modprobe_conf.patch
 }
 
 src_compile() {
+	local myconf=
+	
 	filter-flags -fPIC
+
+	einfo "Building modprobe_conf..."
+	cd ${WORKDIR}/modutils-${OMODPROBE_PV}
+
+	econf \
+		--disable-strip \
+		--prefix=/ \
+		--disable-insmod-static \
+		--disable-zlib \
+		${myconf}
+	emake  || die "emake modprobe.conf failed"
 
 	einfo "Building modutils..."
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
@@ -73,6 +108,10 @@ src_compile() {
 }
 
 src_install () {
+
+	cd ${WORKDIR}/modutils-${OMODPROBE_PV}
+	exeinto /sbin
+	newexe insmod/insmod modprobe.conf
 
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
 	einstall prefix="${D}"

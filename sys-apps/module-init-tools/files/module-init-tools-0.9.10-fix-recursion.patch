@@ -1,6 +1,6 @@
---- module-init-tools-0.9.10/modprobe.c.orig	2003-03-09 13:47:46.000000000 +0200
-+++ module-init-tools-0.9.10/modprobe.c	2003-03-09 13:49:09.000000000 +0200
-@@ -1096,12 +1096,14 @@
+--- module-init-tools-0.9.10/modprobe.c.orig	2003-03-10 19:34:08.000000000 +0200
++++ module-init-tools-0.9.10/modprobe.c	2003-03-10 19:33:29.000000000 +0200
+@@ -1095,12 +1095,14 @@
  	while ((opt = getopt_long(argc, argv, "vVC:o:rknqsclt:aif", options, NULL)) != -1){
  		switch (opt) {
  		case 'v':
@@ -15,7 +15,19 @@
  			config = optarg;
  			break;
  		case 'o':
-@@ -1156,15 +1158,25 @@
+@@ -1129,9 +1131,11 @@
+ 			break;
+ 		case 'q':
+ 			/* FIXME: should do more than this. */
++			setenv("MODPROBE_QUIET", "1", 1);
+ 			fail_if_already = 0;
+ 			break;
+ 		case 's':
++			setenv("MODPROBE_LOG", "1", 1);
+ 			log = 1;
+ 			break;
+ 		case 'i':
+@@ -1152,6 +1156,25 @@
  		}
  	}
  
@@ -28,22 +40,20 @@
 +	if ((getenv("MODPROBE_CONFIG")) && (NULL == config))
 +		config = NOFAIL(strdup(getenv("MODPROBE_CONFIG")));
 +
- 	/* Check MODPROBE_QUIET */
--	if (getenv("MODPROBE_QUIET"))
-+	if ((getenv("MODPROBE_QUIET")) && 
-+		(0 != fail_if_already) && (0 != fail_if_missing))
- 		if (0 == strcmp(getenv("MODPROBE_QUIET"), "1")) {
- 			fail_if_already = 0;
- 			fail_if_missing = 0;
- 		}
- 
- 	/* Check MODPROBE_LOG */
--	if (getenv("MODPROBE_LOG"))
++	/* Check MODPROBE_QUIET */
++	if ((getenv("MODPROBE_QUIET")) && (0 != fail_if_already))
++		if (0 == strcmp(getenv("MODPROBE_QUIET"), "1"))
++			fail_if_already = 0;
++
++	/* Check MODPROBE_LOG */
 +	if ((getenv("MODPROBE_LOG")) && (1 != log))
- 		if (0 == strcmp(getenv("MODPROBE_LOG"), "1"))
- 			log = 1;
- 
-@@ -1206,8 +1218,10 @@
++		if (0 == strcmp(getenv("MODPROBE_LOG"), "1"))
++			log = 1;
++
+ 	/* If stderr not open, go to syslog */
+ 	if (log || fstat(STDERR_FILENO, &statbuf) != 0) {
+ 		openlog("modprobe", LOG_CONS, LOG_DAEMON);
+@@ -1190,8 +1213,10 @@
  	if (config && !dump_only && strncmp(argv[optind], "/dev/", 5) == 0) {
  		if (strcmp("/etc/modules.conf", config) == 0)
  			config = NULL;
