@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r21.ebuild,v 1.1 2004/01/06 15:27:28 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r21.ebuild,v 1.2 2004/01/10 02:00:49 carpaski Exp $
 
 IUSE="build"
 
@@ -34,7 +34,6 @@ python_version() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:^VERSION=.*:VERSION="2.0.49-r20":' pym/portage.py
 }
 
 src_compile() {
