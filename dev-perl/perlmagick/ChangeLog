@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.22 2004/10/19 22:13:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.23 2004/10/20 01:59:18 weeve Exp $
+
+  19 Oct 2004; Jason Wever <weeve@gentoo.org> perlmagick-6.1.0.1.ebuild:
+  Stable on sparc wrt bug #67553.
 
   20 Oct 2004; Michael Hanselmann <hansmi@gentoo.org>
   perlmagick-6.1.0.1.ebuild:
