@@ -1,0 +1,17 @@
+--- hal-0.4.0/fdi/90defaultpolicy/storage-policy.fdi	2004-10-14 23:59:29.000000000 +0200
++++ hal-0.4.0/fdi/90defaultpolicy/storage-policy.fdi.patched	2004-10-21 12:48:16.223876512 +0200
+@@ -6,11 +6,12 @@
+   <device>
+     <match key="info.udi" string="/org/freedesktop/Hal/devices/computer">
+       <merge key="storage.policy.default.mount_root" type="string">/media</merge>
+-      <merge key="storage.policy.default.use_managed_keyword" type="bool">true</merge>
++      <merge key="storage.policy.default.use_managed_keyword" type="bool">true</merge>
+       <merge key="storage.policy.default.managed_keyword.primary" type="string">managed</merge>
+       <merge key="storage.policy.default.managed_keyword.secondary" type="string">kudzu</merge>
+       <merge key="storage.policy.default.mount_option.noauto" type="bool">true</merge>
+-      <merge key="storage.policy.default.mount_option.pamconsole" type="bool">true</merge>
++      <merge key="storage.policy.default.mount_option.pamconsole" type="bool">false</merge>
++      <merge key="storage.policy.default.mount_option.user" type="bool">true</merge>
+       <merge key="storage.policy.default.mount_option.exec" type="bool">true</merge>
+     </match>
+   </device>

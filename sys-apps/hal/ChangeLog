@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.11 2004/11/11 11:59:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.12 2004/11/30 00:22:35 foser Exp $
+
+*hal-0.4.1-r1 (30 Nov 2004)
+
+  30 Nov 2004; foser <foser@gentoo.org> hal-0.4.1-r1.ebuild :
+  Make use of managed keyword, with updated util-linux dep
 
   11 Nov 2004; Mike Gardiner <obz@gentoo.org> hal-0.2.98-r1.ebuild:
   Keyworded ppc for GNOME 2.8

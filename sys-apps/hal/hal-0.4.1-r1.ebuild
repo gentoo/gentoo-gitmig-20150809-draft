@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.0.ebuild,v 1.2 2004/11/08 21:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.1-r1.ebuild,v 1.1 2004/11/30 00:22:35 foser Exp $
 
 inherit eutils debug python
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.2.2
@@ -19,24 +19,27 @@ RDEPEND=">=dev-libs/glib-2.2.2
 	sys-fs/udev
 	sys-apps/hotplug
 	sys-libs/libcap
+	>=sys-apps/util-linux-2.12i
 	sys-kernel/linux26-headers"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+# dep on a specific util-linux version for 
+# managed mount patches #70873
 
 src_unpack() {
 
 	unpack ${A}
 
 	cd ${S}
-	# remove RH only stuff
-	epatch ${FILESDIR}/${P}-old_storage_policy.patch
+	# remove pamconsole option
+	epatch ${FILESDIR}/${PN}-0.4.1-old_storage_policy.patch
 	# fix floppy drives be shown
-	epatch ${FILESDIR}/${P}-allow-floppy-drives.patch
-	# fix default drivenames fallback & other RH goodies
-	epatch ${FILESDIR}/${P}-storage-policy-never-use-uuid.patch
-	epatch ${FILESDIR}/${P}-clean-on-startup.patch
-	epatch ${FILESDIR}/${P}-fix-fstab-sync-crasher.patch
+	epatch ${FILESDIR}/${PN}-0.4.0-allow-floppy-drives.patch
+	# smallish device manaager fix
+	cd ${S}/tools/device-manager
+	epatch ${FILESDIR}/${P}-dm_devices_tab.patch
 
 }
 
