@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23-r3.ebuild,v 1.6 2005/02/27 19:22:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23-r3.ebuild,v 1.7 2005/03/11 03:22:27 latexer Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python multilib
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2
 		>=dev-python/pyrex-0.9 )
 	qt? ( >=x11-libs/qt-3 )"
 #	!ppc64? (
-#		mono? ( >=dev-dotnet/mono-0.95 )
+#		mono? ( >=dev-lang/mono-0.95 )
 #	)
 
 
