@@ -1,13 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-theme/sylpheed-theme-3.ebuild,v 1.1 2002/08/17 04:56:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-theme/sylpheed-theme-3.ebuild,v 1.2 2002/10/03 21:49:35 owen Exp $
 
 DESCRIPTION="Theme packs for sylpheed and sylpheed-claws and sylpheed-claws-nc"
 
 HOMEPAGE="http://sylpheed-claws.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 RDEPEND="virtual/sylpheed"
 
