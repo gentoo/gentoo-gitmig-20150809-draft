@@ -1,8 +1,0 @@
-# ChangeLog for app-admin/systemimager-boot-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-boot-bin/ChangeLog,v 1.3 2004/06/24 21:39:49 agriffis Exp $
-
-*systemimager-boot-bin-3.0.1 (17 Oct 2003)
-  
-  17 Oct 2003; José Alberto Suárez López systemimager-boot-bin-3.0.1.ebuild:
-    First release
