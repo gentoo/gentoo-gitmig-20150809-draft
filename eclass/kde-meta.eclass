@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.1 2004/11/06 16:34:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.2 2004/11/12 12:28:55 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -10,7 +10,7 @@
 inherit kde
 ECLASS=kde-meta
 INHERITED="$INHERITED $ECLASS"
-IUSE="$IUSE usepackagedmakefiles"
+IUSE="$IUSE usepackagedmakefiles kdexdeltas"
 
 # only broken-up ebuilds can use this eclass
 if [ -z "$KMNAME" ]; then
@@ -28,16 +28,36 @@ esac
 
 # BEGIN adapted from kde-dist.eclass, code for older versions removed for cleanness
 if [ "$KDEBASE" = "true" ]; then
-	# kde 3.1 prereleases have tarball versions of 3.0.6 ff
 	unset SRC_URI
+	
+	# Main tarball for normal downloading style
 	case "$PV" in
 		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
 		3*)			SRC_PATH="stable/${myPV}/src/${myP}.tar.bz2" ;;
 		5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
 					debug-print "$ECLASS: cvs detected, SRC_URI left empty" ;;
-		*)			debug-print "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI" ;;
+		*)			die "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI" ;;
 	esac
-	[ -n "$SRC_PATH" ] && SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
+	
+	# Base tarball and xdeltas for patch downloading style
+	# Note that we use XDELTA_BASE, XDELTA_DELTA again in src_unpack()
+	# For future versions, add all applicable xdeltas (from x.y.0) in correct order to XDELTA_DELTA
+	case "$PV" in
+		3.3.0)		XDELTA_BASE="stable/3.3/src/${myP}.tar.bz2"
+					XDELTA_DELTA=""
+					;;
+		3.3.1)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
+					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta"
+					;;
+		*)			die "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI"
+					;;
+	esac	
+	
+	SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
+	for x in $XDELTA_DELTA; do
+		SRC_URI="$SRC_URI mirror://kde/$x"
+	done
+	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
 	debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
 	
 	need-kde $PV
@@ -54,13 +74,19 @@ fi
 MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
 SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
 
+# Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
+# through the sneaky eclass dep mangling portage does.
+DEPEND="kdexdeltas? ( dev-util/xdelta )"
+RDEPEND=""
+
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
 
 # kdebase: all configure.in's talk about java. Need to investigate which ones 
 # actually need it.
 if [ "$KMNAME" == "kdebase" ]; then
 	IUSE="$IUSE java"
-	DEPEND="java? ( || ( virtual/jdk virtual/jre ) )"
+	DEPEND="$DEPEND java? ( || ( virtual/jdk virtual/jre ) )"
+	RDEPEND="$RDEPEND java? ( || ( virtual/jdk virtual/jre ) )"
 fi
 
 # TODO FIX ends
@@ -206,9 +232,7 @@ function kde-meta_src_unpack() {
 			DOCS="doc/$KMMODULE"
 		fi
 		
-		# Extract everything necessary
-		# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
-		cd $WORKDIR
+		# Create final list of stuff to extract
 		extractlist=""
 		for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot acinclude.m4 aclocal.m4 \
 					AUTHORS COPYING INSTALL README NEWS ChangeLog \
@@ -216,7 +240,32 @@ function kde-meta_src_unpack() {
 		do
 			extractlist="$extractlist $myP/$item"
 		done
-		tar -xjpf $DISTDIR/${myP}.tar.bz2 $KMTARPARAMS $extractlist 
+
+		# xdeltas require us to uncompress to a tar file first.
+		# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
+		if useq kdexdeltas; then
+			echo ">>> Base archive + xdelta patch mode enabled."
+			echo ">>> Uncompressing base archive..."
+			cd $T
+			bunzip2 -dkc ${DISTDIR}/${XDELTA_BASE/*\//} > ${myP}.tar
+			for x in $XDELTA_DELTA; do
+				echo ">>> Applying xdelta: $x"
+				xdelta patch ${DISTDIR}/${x/*\//} ${myP}.tar ${myP}.tar.1
+				mv ${myP}.tar.1 ${myP}.tar
+			done
+			TARFILE=$T/$myP.tar
+		else
+			TARFILE=$DISTDIR/${myP}.tar.bz2
+			KMTARPARAMS="$KMTARPARAMS -j"
+		fi
+		cd $WORKDIR
+		echo ">>> Extracting from tarball..."
+		# Note that KMTARPARAMS is also used by an ebuild
+		tar -xpf $TARFILE $KMTARPARAMS $extractlist	
+		
+		# Avoid syncing if possible
+		rm -f $T/$myP.tar
+		
 		# Default $S is based on $P not $myP; rename the extracted dir to fit $S
 		mv $myP $P
 		
