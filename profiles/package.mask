@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2874 2004/05/27 00:38:20 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2875 2004/05/27 02:21:52 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <games@gentoo.org> (26 May 2004)
+# Using system libmikmod breaks mod music #52064
+=media-libs/sdl-mixer-1.2.5-r2
 
 # <caleb@gentoo.org> (24 May 2004)
 # 3.3 alpha1 versions for testing purposes, probably very unstable
