@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-config
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.9 2004/04/10 06:44:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.10 2004/04/11 18:07:27 usata Exp $
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-config-0.2.ebuild:
+  Marked stable on all arches to satisfy dev-lang/ruby dep
 
   10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-config-0.2.ebuild:
   Changed DEPEND to virtual/ruby
