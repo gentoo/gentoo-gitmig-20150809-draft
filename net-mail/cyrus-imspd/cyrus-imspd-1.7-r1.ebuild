@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7.ebuild,v 1.1 2003/09/18 18:23:29 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7-r1.ebuild,v 1.1 2003/10/10 17:37:08 max Exp $
 
 DESCRIPTION="Internet Message Support Protocol (IMSP) server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${PN}-v${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="kerberos ldap ssl"
 
 DEPEND="virtual/glibc
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	>=sys-apps/sed-4
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-2.0 )
-	ssl? ( >=dev-libs/openssl-0.9.6 >=net-misc/stunnel-4.04 )"
+	ssl? ( >=net-misc/stunnel-4 )"
 
 S="${WORKDIR}/${PN}-v${PV}"
 
@@ -28,8 +28,8 @@ src_unpack() {
 	epatch "${FILESDIR}/cyrus-imspd-gentoo.patch"
 	epatch "${FILESDIR}/cyrus-imspd-db4.patch"
 
-	# cyrus 2.2.x has an extra library which things must link against
-	if [ -n "`best_version '=dev-libs/cyrus-imap-dev-2.2*'`" ] ; then
+	# cyrus 2.2.x has an extra library.
+	if [ "`best_version '=dev-libs/cyrus-imap-dev-2.2*'`" ] ; then
 		sed -e "s:-lcyrus:-lcyrus -lcyrus_min:" \
 			-i "${S}/imsp/Makefile.in" \
 			-i "${S}/cmulocal/libcyrus.m4" || die "sed failed"
@@ -43,16 +43,15 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="`use_with ldap ldap=ldap`"
+	local myconf
+	myconf="${myconf} `use_with ldap ldap ldap`"
+	myconf="${myconf} `use_enable kerberos gssapi`"
 
-	if [ "`use kerberos`" ] ; then
-		myconf="${myconf} --with-auth=krb --enable-gssapi"
-	else
-		myconf="${myconf} --with-auth=unix --without-krb --disable-gssapi"
-	fi
-
-	econf ${myconf}
-	make || die "compile problem"
+	econf \
+		--without-krb \
+		--with-auth=unix \
+		${myconf}
+	emake || die "compile problem"
 }
 
 src_install() {
@@ -71,9 +70,13 @@ src_install() {
 
 		dosed "s:#IMSPD_USE_SSL:IMSPD_USE_SSL:" /etc/conf.d/imspd
 
-		einfo "Generating self-signed test certificate."
+		ebegin "Generating self-signed test certificate"
 		(yes "" | "${FILESDIR}/gentestcrt.sh") &>/dev/null
+		eend $?
+		ebegin "Generating PEM file"
 		(cat server.key && echo && cat server.crt) > server.pem
+		eend $?
+
 		insinto /etc/ssl/imspd
 		doins server.{key,crt,pem}
 		fowners mail:root /etc/ssl/imspd/server.{key,crt,pem}

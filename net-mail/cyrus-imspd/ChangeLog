@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imspd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.1 2003/09/18 18:23:29 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.2 2003/10/10 17:37:08 max Exp $
+
+*cyrus-imspd-1.7-r1 (10 Oct 2003)
+
+  10 Oct 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.7-r1.ebuild:
+  Fix USE=-ldap. Bump to stable on x86.
 
 *cyrus-imspd-1.7 (10 Sep 2003)
 
