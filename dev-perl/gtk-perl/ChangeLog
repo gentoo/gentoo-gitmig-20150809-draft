@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.29 2004/10/15 09:21:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.30 2004/10/19 08:18:27 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  gtk-perl-0.7008-r11.ebuild:
+  KEYWORDS ~amd64.
 
   15 Oct 2004; Michael Cummings <mcummings@gentoo.org>
   gtk-perl-0.7008-r11.ebuild, gtk-perl-0.7009.ebuild:

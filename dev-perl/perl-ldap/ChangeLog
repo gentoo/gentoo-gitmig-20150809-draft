@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.23 2004/08/06 18:08:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.24 2004/10/19 08:20:34 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> perl-ldap-0.31.ebuild,
+  perl-ldap-0.3202.ebuild:
+  KEYWORDS ~amd64.
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> perl-ldap-0.31.ebuild:
   Keyworded ppc64 to fix samba depends
