@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.57 2004/10/02 17:43:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.58 2004/10/13 21:12:28 dsd Exp $
+
+*ck-sources-2.4.27 (13 Oct 2004)
+
+  13 Oct 2004; Daniel Drake <dsd@gentoo.org>
+  -files/ck-sources-2.4.26.CAN-2004-0394.patch,
+  -files/ck-sources-2.4.26.CAN-2004-0495.patch,
+  -files/ck-sources-2.4.26.CAN-2004-0497.patch,
+  -files/ck-sources-2.4.26.CAN-2004-0535.patch,
+  -files/ck-sources-2.4.26.CAN-2004-0685.patch,
+  -files/ck-sources-2.4.26.FPULockup-53804.patch,
+  -files/ck-sources-2.4.26.cmdlineLeak.patch,
+  +files/ck-sources-2.4.27.CAN-2004-0394.patch,
+  +files/ck-sources-2.4.27.cmdlineLeak.patch,
+  -files/ck-sources-2.6.7.CAN-2004-0596.patch,
+  -files/ck-sources-2.6.IPTables-RDoS.patch, -ck-sources-2.4.26-r1.ebuild,
+  +ck-sources-2.4.27.ebuild, -ck-sources-2.6.8.1-r8.ebuild:
+  Version bump to 2.4.27-lck1, switchover to kernel-2, remove old versions
 
 *ck-sources-2.6.8.1-r9 (02 Oct 2004)
 
