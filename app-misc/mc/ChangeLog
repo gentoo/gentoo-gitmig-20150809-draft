@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.62 2004/10/21 11:43:52 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.63 2004/10/26 10:26:39 slarti Exp $
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> mc-4.6.0-r11.ebuild:
+  Stable on amd64.
 
   21 Oct 2004; Sven Blumenstein <bazik@gentoo.org> mc-4.6.0-r11.ebuild:
   Stable on sparc.
