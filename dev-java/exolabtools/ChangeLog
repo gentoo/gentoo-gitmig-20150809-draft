@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/exolabtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/ChangeLog,v 1.1 2005/02/05 21:56:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/ChangeLog,v 1.2 2005/03/23 17:54:53 gustavoz Exp $
+
+  23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  exolabtools-1.0_p20050205.ebuild:
+  Keyworded ~sparc wrt #84992
 
 *exolabtools-1.0_p20050205 (05 Feb 2005)
 
