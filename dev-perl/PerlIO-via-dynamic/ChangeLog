@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/PerlIO-via-dynamic
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.1 2004/03/14 12:44:22 mcummings Exp $
+
+*PerlIO-via-dynamic-0.02 (14 Mar 2004)
+
+  14 Mar 2004; Michael Cummings <mcummings@gentoo.org>
+  PerlIO-via-dynamic-0.02.ebuild, metadata.xml:
+  bug 44615
+
