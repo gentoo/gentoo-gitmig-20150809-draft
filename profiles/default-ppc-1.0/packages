@@ -33,6 +33,13 @@
 
 # PPC PROFILE
 
+# ebuilds installing precompiled stuff:
+
+net-www/netscape-communicator
+net-www/netscape-flash
+net-www/netscape-navigator
+net-www/netscape-plugger
+
 # makes no sense on ppc
 sys-apps/lilo
 sys-apps/grub 
