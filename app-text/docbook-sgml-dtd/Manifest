@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 2bcf0a6270909ba430733a89ebf2d446 ChangeLog 4405
-MD5 19e898870c084200fa33881ff6609bb4 docbook-sgml-dtd-3.0-r1.ebuild 1066
+MD5 56e4c836ac850a04bc9b982439dec486 docbook-sgml-dtd-3.0-r1.ebuild 1071
 MD5 33e9a7490ce3fa1cba764354d8eb78fe docbook-sgml-dtd-3.1-r1.ebuild 1068
 MD5 b99235f0e79fab9b8405144a50eb11b9 docbook-sgml-dtd-4.0-r1.ebuild 1066
 MD5 c501dff46c2cc7a0c7901ff4db81e6e1 docbook-sgml-dtd-4.1-r1.ebuild 1066
@@ -26,7 +26,7 @@ MD5 d2905ae27d3fc354753cbed922d372b1 files/docbook-sgml-dtd-4.2.Makefile 210
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBUMZfHTu7gpaalycRAqBWAJ9e3+PoFc71islgH9YqRTZCT7cvXwCgjmGk
-TCIl1GtjkyhRVC1GjvMl5Qg=
-=Y7uw
+iD8DBQFBVBweHTu7gpaalycRAhA/AKCR2yrY/UmVTvjXNCGODfUtExH+BgCcDmOw
+q6Yzd2MON9pBaNbUtPhynWY=
+=cTB0
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.0-r1.ebuild,v 1.12 2004/09/22 00:24:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.0-r1.ebuild,v 1.13 2004/09/24 13:07:28 vapier Exp $
 
 inherit sgml-catalog
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.oasis-open.org/docbook/sgml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
 SLOT="3.0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=">=app-arch/unzip-5.41"
