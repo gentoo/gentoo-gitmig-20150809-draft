@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r6.ebuild,v 1.3 2002/08/14 02:44:23 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r6.ebuild,v 1.4 2002/08/27 17:59:25 mcummings Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
@@ -51,6 +51,7 @@ src_compile() {
 	    -e 's#^all: $(FIRSTMAKEFILE) #all: README #' \
 		Makefile_orig > Makefile
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
+	# fixes a bug in the make/testing on new systems
 	make -f Makefile depend || die
 	mv makefile makefile_orig
 	mv x2p/makefile x2p/makefile_orig
@@ -121,6 +122,7 @@ EOF
     egrep -v "(<built-in>|<command line>)" makefile_orig >makefile
     egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
     make -f Makefile || die
+	cp ${O}/files/stat.t ./t/op/
     # Parallel make fails
 	# dont use the || die since some tests fail on bootstrap
 	if [ `expr "$PARCH" ":" "sparc"` -gt 4 ]; then
@@ -139,31 +141,10 @@ src_install() {
 	dosym /usr/lib/perl5/${PV}/${PARCH}/CORE/libperl.so /usr/lib/libperl.so
 	
 
-    make -f Makefile INSTALLMAN1DIR=${D}/usr/share/man/man1 INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
+#    make -f Makefile INSTALLMAN1DIR=${D}/usr/share/man/man1 INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
+	make DESTDIR=${D} INSTALLMAN1DIR=${D}/usr/share/man/man1 INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die "Unable to make install"
     install -m 755 utils/pl2pm ${D}/usr/bin/pl2pm
 
-make all -f - <<EOF
-STDH    =\$(wildcard /usr/include/linux/*.h) \$(wildcard /usr/include/asm/*.h) \
-          \$(wildcard /usr/include/scsi/*.h)
-GCCDIR  = \$(shell gcc --print-file-name include)
-
-PERLLIB = \$(D)/usr/lib/perl5/%{perlver}%{perlrel}
-PERL    = PERL5LIB=\$(PERLLIB) \$(D)/usr/bin/perl
-PHDIR   = \$(PERLLIB)/\${PARCH}-linux
-H2PH    = \$(PERL) \$(D)/usr/bin/h2ph -d \$(PHDIR)/
-
-all: std-headers gcc-headers fix-config
-
-std-headers: \$(STDH)
-        cd /usr/include && \$(H2PH) \$(STDH:/usr/include/%%=%%)
-
-gcc-headers: \$(GCCH)
-        cd \$(GCCDIR) && \$(H2PH) \$(GCCH:\$(GCCDIR)/%%=%%)
-
-fix-config: \$(PHDIR)/Config.pm
-        \$(PERL) -i -p -e "s|\$(D)||g;" \$<
-
-EOF
 
 #man pages
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r2.ebuild,v 1.2 2002/08/16 02:13:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r2.ebuild,v 1.3 2002/08/27 17:59:25 mcummings Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
@@ -110,8 +110,6 @@ src_install () {
 	dosym /usr/lib/perl5/${PV}/${PARCH}-thread-multi/CORE/libperl.so /usr/lib/libperl.so
 	#Fix for "stupid" modules and programs
 	dosym /usr/lib/perl5/${PV}/${PARCH}-thread-multi /usr/lib/perl5/${PV}/${PARCH}	
-	dodir /usr/lib/perl5/site_perl/${PV}/${PARCH}-thread-multi
-	dosym /usr/lib/perl5/site_perl/${PV}/${PARCH}-thread-multi /usr/lib/perl5/site_perl/${PV}/${PARCH}	
 
 	#This is to fix a missing c flag for backwards compat
 	make DESTDIR=${D} INSTALLMAN1DIR=${D}/usr/share/man/man1 INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die "Unable to make install"
@@ -120,7 +118,6 @@ src_install () {
 	sed -e "s:ccflags=':ccflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm
 	cp ${D}/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm ${D}/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm.bak
 	sed -e "s:cppflags=':cppflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm
-	rm -f ${D}/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm.bak
 
 	 ./perl installman --man1dir=${D}/usr/share/man/man1 --man1ext=1 --man3dir=${D}/usr/share/man/man3 --man3ext=3
 
@@ -147,3 +144,10 @@ src_install () {
 
 }
 
+pkg_postinst {
+	ln -s  /usr/lib/perl5/site_perl/${PV}/${PARCH}-thread-multi
+/usr/lib/perl5/site_perl/${PV}/${PARCH}	
+	rm -f $/usr/lib/perl5/${PV}/${PARCH}-thread-multi/Config.pm.bak
+
+
+}
