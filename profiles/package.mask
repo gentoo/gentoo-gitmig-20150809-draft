@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <lostlogic@gentoo.org> (06 Oct 2002)
+# Masked new kernels
+=sys-kernel/xfs-sources-2.4.19-r2
+=sys-kernel/gentoo-sources-2.4.19-r10
+
 # <carpaski@gentoo.org> (06 Oct 2002)
 # Masked for a quick test period. GLSA on local DoS. Version bump.
 =net-www/apache-1.3.27
@@ -147,7 +152,6 @@ media-video/SDLcam
 # Another new procps from Rik Van Riel
 =sys-apps/procps-2.0.9
 
-
 # <agenkin@gentoo.org> (30 Sep 2002)
 # Masking pending unfreeze.
 >=app-cdr/cdrtools-1.11.35
@@ -219,12 +223,11 @@ app-admin/logsentry
 dev-perl/perl-ldap
 
 # <lostlogic@gentoo.org> (21 Sep 2002)
-# Mask pending release of gentoo-sources-2.4.19-r10
-# Needed for lolo-sources-2.4.19.10*
+# Needed for lolo-sources-2.4.19.10_pre[1-5]
 =sys-apps/jfsutils-1.0.22
 
 # <bcowan@gentoo.org> (27 Sep 2002)
-# new version of jfsutils not linked to any gentoo sources
+# new version of jfsutils for gentoo-sources-2.4.19-r10
 =sys-apps/jfsutils-1.0.23
 
 # <agenkin@gentoo.org> (21 Sep 2002)
