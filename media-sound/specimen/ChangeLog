@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/specimen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.4 2004/09/03 20:19:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.5 2004/10/16 02:12:52 chriswhite Exp $
+
+*specimen-0.4.5 (16 Oct 2004)
+
+  16 Oct 2004; Chris White <chriswhite@gentoo.org> +specimen-0.4.5.ebuild:
+  Bump to 4.5.0 to close bug #66883. ppc keyword removed as per bug #67738.
+  Thanks to mikael soderholm <gnarlie@ihku.org> for the initial submission.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   specimen-0.4.1.ebuild:
