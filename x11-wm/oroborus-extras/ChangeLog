@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/oroborus-extras
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.7 2003/07/09 18:24:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.8 2003/12/08 14:47:09 obz Exp $
+
+  08 Dec 2003; Mike Gardiner <obz@gentoo.org> oroborus-extras-2.0.13.ebuild,
+  files/deskmenu-1.4.0-string.patch:
+  Patched for multi-line string (help function), see bug #35030. Reported
+  upstream via email
 
 *oroborus-extras-2.0.13 (09 Jul 2003)
 

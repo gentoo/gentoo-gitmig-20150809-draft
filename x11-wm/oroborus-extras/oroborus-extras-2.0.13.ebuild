@@ -1,14 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.13.ebuild,v 1.2 2003/09/06 04:16:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.13.ebuild,v 1.3 2003/12/08 14:47:09 obz Exp $
 
 S=${WORKDIR}
+
 DESCRIPTION="Other stuff for oroborus"
 SRC_URI="http://www.oroborus.org/debian/dists/sid/main/source/x11/keylaunch_1.3.0-6.tar.gz
 	http://www.oroborus.org/debian/dists/sid/main/source/x11/deskmenu_1.4.0-2.tar.gz
 	http://www.oroborus.org/debian/dists/sid/main/source/x11/desklaunch_1.1.3-1.tar.gz"
 HOMEPAGE="http://www.oroborus.org/"
 LICENSE="GPL-2"
+
+IUSE=""
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
 
@@ -18,6 +21,8 @@ DEPEND="x11-wm/oroborus
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}/deskmenu-1.4.0
+	epatch ${FILESDIR}/deskmenu-1.4.0-string.patch
 	cd ${S}/keylaunch-1.3.0
 }
 
