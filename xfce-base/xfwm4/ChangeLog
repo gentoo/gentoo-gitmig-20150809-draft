@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.46 2005/01/29 19:57:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.47 2005/01/31 15:33:48 lanius Exp $
+
+  31 Jan 2005; lanius@gentoo.org xfwm4-4.2.0.ebuild:
+  stable on amd64
 
   29 Jan 2005; Lars Weiler <pylon@gentoo.org> xfwm4-4.2.0.ebuild:
   Stable on ppc.
