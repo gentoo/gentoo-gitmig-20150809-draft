@@ -1,9 +1,17 @@
 # ChangeLog for dev-util/glimmer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.4 2002/08/11 19:27:35 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.5 2002/08/13 14:59:43 styx Exp $
+
+*glimmer-1.2.1-r3 (13 Aug 2002)
+
+  13 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> glimmer-1.2.1-r3.ebuild :
+
+  Fixed this ebuild once and for all. It actuallty installs the binary now :P
 
 *glimmer-1.2.1-r2 (11 Aug 2002)
+
   11 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> glimmer-1.2.1-r2.ebuild :
+
   Fixed a few compilation/installation errors, as well as a sandbox violation.
 
 *glimmer-1.2.1-r1 (04 Jul 2002)
