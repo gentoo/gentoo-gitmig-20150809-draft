@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.11 2005/01/01 11:27:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.12 2005/02/11 23:01:44 vapier Exp $
 
 inherit gnuconfig eutils
 
@@ -43,8 +43,7 @@ src_install() {
 	einstall || die
 	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
 		TROUBLESHOOTING UPGRADE sample.*
-	insinto /etc/pam.d
-	doins ${FILESDIR}/sudo
+	dopamd ${FILESDIR}/sudo
 
 	insinto /etc
 	doins ${FILESDIR}/sudoers
