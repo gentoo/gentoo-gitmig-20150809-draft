@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.5.2.ebuild,v 1.8 2002/11/18 10:36:42 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.5.2.ebuild,v 1.9 2003/02/07 21:02:29 rphillips Exp $
 
 S=${WORKDIR}
 DESCRIPTION="ePSXe Playstation Emulator"
@@ -42,4 +42,7 @@ src_install () {
 	doins cheats/*
 
 	dodoc docs/*
+
+	insinto /etc/epsxe
+	doins keycodes.lst
 }

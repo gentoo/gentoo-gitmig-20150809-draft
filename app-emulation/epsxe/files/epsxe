@@ -7,6 +7,7 @@ if [ ! -d ~/.epsxe ]; then
 	mkdir -p $HOME/.epsxe
 	cd $HOME/.epsxe
 	mkdir memcards bios cfg cheats snap sstates patches plugins
+	cp /etc/epsxe/keycodes.lst keycodes.lst
 
 	ln -s /usr/lib/psemu/plugins/* plugins/
 	ln -s /opt/epsxe/epsxe epsxe
