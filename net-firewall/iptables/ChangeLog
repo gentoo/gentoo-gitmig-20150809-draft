@@ -1,6 +1,17 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.23 2004/04/21 11:58:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.24 2004/04/25 16:30:35 aliz Exp $
+
+*iptables-1.2.9-r1 (25 Apr 2004)
+
+  25 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9-r1.ebuild:
+  + Depend on virtual/linux-sources.
+  + Add static build support.
+  + Install all headers, patch contributed by Thomas Jacob <jacob@internet24.de>.
+  + l7-filter support, closing #39761.
+  + Made initscript run before net, closing #27087.
+  + Removed ipforwarding from initscripts as it doesn't belong here and added einfo about it.
+  + Removed some old ebuilds.
 
   21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a-r3.ebuild,
   iptables-1.2.7a-r4.ebuild, iptables-1.2.8.ebuild:

@@ -1,0 +1,6 @@
+# Location in which iptables initscript will save set rules on 
+# service shutdown
+IP6TABLES_SAVE="/var/lib/ip6tables/rules-save"
+
+#Options to pass to iptables-save and iptables-restore 
+SAVE_RESTORE_OPTIONS="-c"
