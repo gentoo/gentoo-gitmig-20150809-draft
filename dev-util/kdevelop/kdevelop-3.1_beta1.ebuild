@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1_beta1.ebuild,v 1.1 2004/07/11 00:00:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1_beta1.ebuild,v 1.2 2004/07/19 10:25:05 aliz Exp $
 
-inherit python kde
+inherit python kde eutils
 
 MY_P=${PN}-3.0.91
 S=${WORKDIR}/${MY_P}
@@ -25,6 +25,15 @@ RDEPEND="$DEPEND"
 need-kde 3.2
 
 myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
+
+src_unpack() {
+	kde_src_unpack
+
+	use amd64 && ( 
+		epatch ${FILESDIR}/${P}-amd64.patch
+		epatch ${FILESDIR}/${P}-bdb-fPIC.patch
+	)
+}
 
 src_compile() {
 	python_version

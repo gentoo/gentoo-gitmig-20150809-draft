@@ -1,0 +1,11 @@
+--- bdb/dist/Makefile.in	2004-07-19 00:45:10.373028787 +0000
++++ bdb/dist/Makefile.in	2004-07-19 00:45:19.130886556 +0000
+@@ -7,7 +7,7 @@
+ # C, C++
+ ##################################################
+ CPPFLAGS=	-I$(builddir) -I$(srcdir)/include @CPPFLAGS@
+-CFLAGS=	 	-c $(CPPFLAGS) @CFLAGS@
++CFLAGS=	 	-c $(CPPFLAGS) @CFLAGS@ -fPIC
+ CXXFLAGS=	-c $(CPPFLAGS) @CXXFLAGS@
+ 
+ CC=		@MAKEFILE_CC@

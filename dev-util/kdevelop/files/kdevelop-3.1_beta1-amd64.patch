@@ -1,0 +1,11 @@
+--- languages/cpp/cppsupportpart.cpp.old	2004-07-17 12:21:02.527612328 +1000
++++ languages/cpp/cppsupportpart.cpp	2004-07-17 12:21:48.989549040 +1000
+@@ -512,7 +512,7 @@
+            else
+                candidate = m_activeFileName;
+ 	       
+-		size_t curLine = 0, curCol = 0;
++		unsigned int curLine = 0, curCol = 0;
+ 		if (m_activeViewCursor != 0)
+ 			m_activeViewCursor->cursorPosition(&curLine, &curCol);
+ 		
