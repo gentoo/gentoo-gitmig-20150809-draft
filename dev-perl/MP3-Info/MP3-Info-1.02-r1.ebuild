@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/MP3-Info-1.02-r1.ebuild,v 1.3 2004/01/29 13:35:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/MP3-Info-1.02-r1.ebuild,v 1.4 2004/03/21 14:45:55 mholzer Exp $
 
 inherit perl-module
 
@@ -13,5 +13,5 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 ~ppc sparc alpha hppa ia64"
 
-DEPEND="|| ( dev-perl/Test-Simple >=perl-5.8.0-r12 )"
+DEPEND="|| ( dev-perl/Test-Simple >=dev-lang/perl-5.8.0-r12 )"
 
