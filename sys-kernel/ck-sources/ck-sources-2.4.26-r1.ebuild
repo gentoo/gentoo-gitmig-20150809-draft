@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.26-r1.ebuild,v 1.1 2004/05/28 22:20:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.26-r1.ebuild,v 1.2 2004/06/13 20:22:57 plasmaroo Exp $
 
 IUSE=""
 
@@ -59,5 +59,6 @@ src_unpack() {
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-lck patch failed!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	kernel_universal_unpack
 }

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.35 2004/05/30 23:53:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.36 2004/06/13 20:22:57 plasmaroo Exp $
+
+  13 Jun 2004; <plasmaroo@gentoo.org> ck-sources-2.4.26-r1.ebuild,
+  ck-sources-2.6.4-r2.ebuild, +files/ck-sources-2.4.26.FPULockup-53804.patch,
+  +files/ck-sources-2.6.5.FPULockup-53804.patch:
+  Added patches for the FPU-lockup issues; please see bug #58304 for details.
 
   31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   ck-sources-2.6.4-r2.ebuild:
