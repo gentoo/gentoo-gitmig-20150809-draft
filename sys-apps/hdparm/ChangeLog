@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.56 2004/11/01 10:45:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.57 2004/11/23 16:20:39 chainsaw Exp $
+
+*hdparm-5.8 (23 Nov 2004)
+
+  23 Nov 2004; Tony Vroon <chainsaw@gentoo.org> +hdparm-5.8.ebuild:
+  Version bump, closes bug #72155. Dropped inherit on eutils eclass, not
+  required.
 
   01 Nov 2004; Joshua Kinard <kumba@gentoo.org> hdparm-5.7-r1.ebuild:
   Marked stable on mips.
