@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/PyXML-py21
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML-py21/ChangeLog,v 1.1 2003/03/25 11:25:29 kutsuya Exp $
+
+*PyXML-py21-0.8.1 (25 Mar 2003)
+
+  25 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> PyXML-py21-0.8.1.ebuild:
+  Initial import.  Basically a fork of PyXML-0.8.1 to be used with python2.1.
+
