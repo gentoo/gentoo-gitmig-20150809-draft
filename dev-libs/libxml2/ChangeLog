@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.25 2003/02/05 17:28:21 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.26 2003/02/07 13:45:11 weeve Exp $
 
 *libxml2-2.5.2 (05 Feb 2003)
+
+  07 Jan 2003; Jason Wever <weeve@gentoo.org> libxml2-2.5.2.ebuild :
+  Added ~sparc to keywords
 
   05 Feb 2003; foser <foser@gentoo.org> libxml2-2.5.1.ebuild :
   New version
