@@ -21,11 +21,6 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (18 Dec 2002)
-# Stable Prelink Testing of 2.0.46.
-# Should be good and clean.
->=sys-apps/portage-2.0.45-r6
-
 # <aliz@gentoo.org> (16 Dec 2002)
 # Becuse .so doesnt function correctly
 =sys-apps/tcp-wrappers-7.6-r5
