@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.23 2003/09/17 19:11:17 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.24 2003/09/24 18:13:53 azarah Exp $
+
+*libtool-1.4.3-r2 (24 Sep 2003)
+
+  24 Sep 2003; Martin Schlemmer <azarah@gentoo.org> libtool-1.4.3-r2.ebuild,
+  files/1.4.3/libtool-1.4.2-archive-shared.patch,
+  files/1.4.3/libtool-1.4.2-fix-linkage-of-cxx-code-with-gcc.patch,
+  files/1.4.3/libtool-1.4.2-portage.patch,
+  files/1.4.3/libtool-1.4.3-ltmain-SED.patch:
+  With 1.4.3, we have ltmain.in and ltmain.sh which both got patched, but not
+  with all the patches :/ Fix all the patches to only apply to ltmain.in, and
+  then fix the breakage that follows due to us having to remove ltmain.sh.
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> libtool-1.4.3-r1.ebuild :
   ia64 keywords.
