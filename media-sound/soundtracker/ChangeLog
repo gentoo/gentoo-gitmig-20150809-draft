@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/soundtracker
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.5 2003/07/23 04:36:40 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.6 2004/02/21 01:02:40 eradicator Exp $
+
+*soundtracker-0.6.7 (20 Feb 2004)
+
+  20 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  soundtracker-0.6.6.ebuild, soundtracker-0.6.7.ebuild,
+  soundtracker-0.6.7_pre5.ebuild:
+  Version bump closes bug #42251.  Header fix.  metadata.xml added.
 
 *soundtracker-0.6.7_pre5 (23 Jul 2003)
 
