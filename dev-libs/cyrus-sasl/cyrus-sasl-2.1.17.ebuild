@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.10 2004/02/27 17:53:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.11 2004/02/28 00:51:17 kumba Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
@@ -88,6 +88,9 @@ src_compile() {
 	# Compaq-sdk checks for -D_REENTRANT and -pthread takes care the cpp stuff.
 	# taviso #24998 (17 Aug 03)
 	use alpha && append-flags -D_REENTRANT -pthread
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
 
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \
