@@ -1,4 +1,4 @@
-MD5 ff5bb9524dfc9aad14a2833d76b9a3f9 ChangeLog 327
-MD5 e4d5f6c7b840b552d2fe750287affc46 tclspice-0.2.13.ebuild 788
+MD5 02368a31880ae79d77a3405eb2a92496 tclspice-0.2.14.ebuild 788
+MD5 b9a6ef2330e819f08951fc674b137045 ChangeLog 431
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 88ea7287a24a641e17d35620c8c4e442 files/digest-tclspice-0.2.13 68
+MD5 d62f61b6201e2be65948c87c0aaa98fa files/digest-tclspice-0.2.14 68
