@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.23 2004/04/27 09:07:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.24 2004/06/06 19:58:02 hansmi Exp $
+
+  06 Jun 2004; Michael Hanselmann <hansmi@gentoo.org>
+  +files/altivec-fix-0.4.0b.diff, libmpeg2-0.4.0b.ebuild:
+  Added a patch to fix compilation-errors on PowerPC with Altivec disabled. This
+  may happen if the code is being compiled for a G3-processor (-mcpu=G3 or
+  -mcpu=750).
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> libmpeg2-0.4.0b.ebuild:
   Added ~sparc keyword.
