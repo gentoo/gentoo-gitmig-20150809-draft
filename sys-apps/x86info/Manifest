@@ -3,16 +3,14 @@ Hash: SHA1
 
 MD5 14d63612d0c27a7582a6c9481ddd587b ChangeLog 1047
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2c462a1603125ac086c0a062452b8498 x86info-1.11.ebuild 1798
 MD5 d5090cdf4c4046b43fc19a32fe832d16 x86info-1.12b.ebuild 1220
-MD5 14514d85680a44ebe1a0625f76262b3a files/digest-x86info-1.11 60
 MD5 1759a81bcf65ea2266520c18b934df09 files/digest-x86info-1.12b 61
 MD5 e622e47087f8556df73aae8e3c4dd896 files/x86info-modules.conf-rc 330
 MD5 8a96e3de09ecff97079a248d217c407f files/1.12b-pic.patch 594
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBbbxPHTu7gpaalycRAqIyAKCoJNuuT7nV4mlRYrViLOfmlwcT8gCgjzi/
-SdkfGYxLSuTxwzpMlD96YkQ=
-=pbvb
+iD8DBQFBbbx6HTu7gpaalycRAtVAAJ9oUmGpx++nVyAvta2LVXHEEMrmTwCfaDo4
+vlZ2L6BB9NI+207zmrdACVk=
+=/Bsp
 -----END PGP SIGNATURE-----
