@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917.ebuild,v 1.2 2002/09/20 14:14:21 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917.ebuild,v 1.3 2002/09/23 13:15:00 raker Exp $
 
 PF_PV=1.1.11-20020917
 PF_P=postfix-${PF_PV}
@@ -112,7 +112,8 @@ src_compile() {
 
 src_install () {
 
-	dodir /usr/bin /usr/sbin /usr/lib/postfix /etc/postfix/sample
+	dodir /usr/bin /usr/sbin /usr/lib/postfix /etc/postfix/sample \
+		/var/spool/postfix/hold
 
 	cd ${S}/bin
 	dosbin post* sendmail
