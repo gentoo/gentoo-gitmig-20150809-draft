@@ -1,7 +1,13 @@
 # ChangeLog for net-www/boa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.4 2002/04/14 18:06:43 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.5 2002/05/15 02:43:52 jnelson Exp $
 
+*boa-0.94.12 (14 May 2002)
+
+  14 May 2002; Jon Nelson <jnelson@gentoo.org> boa-0.94.12.ebuild :
+  
+  Update to latest release of 0.94.12
+  
 *boa-0.94.11-r2 (14 Apr 2002)
 
   12 Apr 2002; Jon Nelson <jnelson@gentoo.org> boa-0.94.11-r1.ebuild :
