@@ -1,5 +1,5 @@
-MD5 358f670ad9f0e8b64bb59383e92ec754 traffic-vis-0.35.ebuild 1354
-MD5 c9d9fcf323ad701cfd0ae1e19bc4b7de ChangeLog 1000
+MD5 65b4e9fb184e234675d960efd62a29a1 traffic-vis-0.35.ebuild 1342
+MD5 2ac789fb5d1b184066ca4d28f60cdf7d ChangeLog 1097
 MD5 8d9d8f0ea07c61e6e39221fd8a5715bb files/digest-traffic-vis-0.35 67
 MD5 f3f89a74aafd87072c83981d568ad1d2 files/traffic-vis-0.35-libpcap-header-fix.patch 280
 MD5 d4e6c075fe0d3f852986b45a339c6e2d files/traffic-vis.conf.d 369

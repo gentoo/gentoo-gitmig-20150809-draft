@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.6 2004/06/24 22:22:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.7 2004/06/28 22:12:08 agriffis Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_install() {
 	dosbin collector/traffic-collector
 	doman collector/traffic-collector.8
 
-	for mybin in 	`use gif >/dev/null && echo "frontends/traffic-togif"` \
+	for mybin in $(useq gif && echo frontends/traffic-togif) \
 			frontends/traffic-tohtml \
 			frontends/traffic-tops \
 			frontends/traffic-totext \
