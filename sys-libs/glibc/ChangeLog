@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.326 2005/03/15 21:50:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.327 2005/03/16 06:12:26 eradicator Exp $
+
+  15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild:
+  Fix assert in _dl_next_tls_modid-assert (sysdeps/generic/dl-tls.c), bug
+  #52374. Fix building a crosscompiled glibc with nptl when no libc is
+  present. Use --no-archive when creating locales as some apps don't like
+  locale-archive, bug #82106.
 
   15 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/2.3.4/glibc-2.3.4-fix-_dl_next_tls_modid-assert.patch,
