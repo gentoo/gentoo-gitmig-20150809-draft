@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.47 2003/08/08 22:38:24 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.48 2003/08/09 00:03:59 strider Exp $
 
   08 Aug 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.1.04.ebuild:
   Update package to stable
@@ -13,7 +13,7 @@
 *sun-jdk-1.4.2 (29 Jul 2003)
 
   29 Jul 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.2.ebuild files/digest-sun-jdk-1.4.2 files/sun-jdk-1.4.2:
-  Version Bump.
+  Version Bump. Thanks to Carsten Frewert <gentoo@frewert.de>. Fixes bug #23701.
 
 *sun-jdk-1.4.1.03 (16 Jun 2003)
  
