@@ -1,0 +1,9 @@
+--- psi.pro.ori	2005-01-28 12:48:28.657105112 +0000
++++ psi.pro	2005-01-28 12:49:35.801897552 +0000
+@@ -1,5 +1,5 @@
+ TEMPLATE = subdirs
+-
++CONFIG += no_fixpath
+ LIBPSI_CPP = ../libpsi
+ exists(libpsi) {
+ 	LIBPSI_CPP = libpsi

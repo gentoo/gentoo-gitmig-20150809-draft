@@ -1,0 +1,34 @@
+--- qcextra.orig	2005-02-02 13:47:03.881141824 +0000
++++ qcextra	2005-02-02 13:50:24.941771472 +0000
+@@ -16,21 +16,17 @@
+ 
+ INSTALL_ROOT = $PREFIX
+ 
+-!isEmpty(KDE) {
+-	# desktop icon
+-	KDESHARE = \$\$KDE/share
+-	dt.path=\$\$KDE/share/applnk/Internet/
+-	dt.extra = cp -f -p ../psi.desktop \$(INSTALL_ROOT)\$\$dt.path
++# icons and desktop files
++dt.path=/usr/share/applications/
++dt.extra = cp -f -p ../psi.desktop \$(INSTALL_ROOT)\$\$dt.path
+ 
+-	# icon files
+-	icon1.path=\$\$KDE/share/icons/hicolor/16x16/apps
+-	icon1.extra = cp -f -p ../iconsets/system/default/icon_16.png \$(INSTALL_ROOT)\$\$icon1.path/psi.png
+-	icon2.path=\$\$KDE/share/icons/hicolor/32x32/apps
+-	icon2.extra = cp -f -p ../iconsets/system/default/icon_32.png \$(INSTALL_ROOT)\$\$icon2.path/psi.png
+-	icon3.path=\$\$KDE/share/icons/hicolor/48x48/apps
+-	icon3.extra = cp -f -p ../iconsets/system/default/icon_48.png \$(INSTALL_ROOT)\$\$icon3.path/psi.png
+-	INSTALLS += dt icon1 icon2 icon3
+-}
++icon1.path=/usr/share/icons/hicolor/16x16/apps
++icon1.extra = cp -f -p ../iconsets/system/default/icon_16.png \$(INSTALL_ROOT)\$\$icon1.path/psi.png
++icon2.path=/usr/share/icons/hicolor/32x32/apps
++icon2.extra = cp -f -p ../iconsets/system/default/icon_32.png \$(INSTALL_ROOT)\$\$icon2.path/psi.png
++icon3.path=/usr/share/icons/hicolor/48x48/apps
++icon3.extra = cp -f -p ../iconsets/system/default/icon_48.png \$(INSTALL_ROOT)\$\$icon3.path/psi.png
++INSTALLS += dt icon1 icon2 icon3
+ 
+ EOT
+ 

@@ -1,6 +1,15 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.53 2005/02/03 21:47:04 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.54 2005/02/27 16:23:35 humpback Exp $
+
+*psi-0.9.3-r2 (27 Feb 2005)
+
+  27 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/psi-desktop.patch,
+  +files/psi-desktop_file_and_icons_directories.patch,
+  +files/psi-pathfix.patch, +psi-0.9.3-r2.ebuild:
+  More fixes than can be named. Most of the patching credits must go to
+  Prezemek. This release helps close bugs #66380 and #80119.
 
   03 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>; -psi-0.9.1.ebuild,
   psi-0.9.3-r1.ebuild:
