@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.6 2002/12/09 04:22:40 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.7 2003/01/13 01:42:42 foser Exp $
 
 IUSE="odbc postgres mysql"
 
@@ -60,7 +60,6 @@ src_compile() {
 #  	fi
 #
 # LDAP support is currently broken
-	myconf="$myconf --without-ldap"
 
   	if [ "`use odbc`" ]
 	then
