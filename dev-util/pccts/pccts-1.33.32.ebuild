@@ -1,11 +1,11 @@
-# Copyright 2001 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Peter Kadau <peter.kadau@web.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.31.ebuild,v 1.1 2002/02/12 18:09:42 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.32.ebuild,v 1.1 2002/03/15 20:30:34 gbevin Exp $
 
 S=${WORKDIR}/pccts
 DESCRIPTION="An embedded C/C++ parser generator"
-SRC_URI="http://www.polhode.com/pccts133mr31.zip"
+SRC_URI="http://www.polhode.com/pccts133mr32.zip"
 HOMEPAGE="http://www.polhode.com/"
 
 DEPEND="app-arch/unzip"
