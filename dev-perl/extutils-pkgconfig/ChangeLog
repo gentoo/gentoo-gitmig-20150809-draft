@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-pkgconfig
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.8 2004/12/30 18:55:07 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.9 2005/01/15 14:04:50 corsair Exp $
+
+  15 Jan 2005; Markus Rothe <corsair@gentoo.org>
+  extutils-pkgconfig-1.05.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.05.ebuild,v 1.1 2005/01/09 22:54:47 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.05.ebuild,v 1.2 2005/01/15 14:10:21 corsair Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://libconf.net/gtk2-fu/download/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
 
 DEPEND="dev-perl/gtk2-perl"
 
