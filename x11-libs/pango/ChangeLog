@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.8 2002/07/16 00:00:40 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.9 2002/07/16 21:18:18 stroke Exp $
+
+
+*pango-1.0.3-r1 (16 Jul 2002)
+  
+  16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> pango-1.0.3-r1:
+
+  Add --without-qt to configure. (Should fix bug #5074)
+  QT2 is only needed to build an example program 
+  (examples/qt-viewer.cc).
+
 
 *pango-1.0.3 (15 Jun 2002)
 
