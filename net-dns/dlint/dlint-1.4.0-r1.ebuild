@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0-r1.ebuild,v 1.2 2005/01/14 14:29:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0-r1.ebuild,v 1.3 2005/01/17 04:01:24 ticho Exp $
 
 inherit eutils fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.domtools.com/pub/${P/-/}.tar.gz"
 HOMEPAGE="http://www.domtools.com/dns/dlint.shtml"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 LICENSE="GPL-2"
 

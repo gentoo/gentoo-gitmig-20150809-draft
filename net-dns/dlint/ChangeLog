@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dlint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.7 2005/01/14 14:29:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.8 2005/01/17 04:01:24 ticho Exp $
+
+  17 Jan 2005; Andrej Kacian <ticho@gentoo.org> dlint-1.4.0-r1.ebuild:
+  Stable on x86.
 
   14 Jan 2005; Andrej Kacian <ticho@gentoo.org> dlint-1.4.0-r1.ebuild:
   Use fixheadtails.eclass instead of arbitrary sed calls. Fix changelog.

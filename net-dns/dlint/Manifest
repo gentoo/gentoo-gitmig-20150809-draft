@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 40e417e6c92f9055820bf722a4000279 ChangeLog 1254
+MD5 b99b1d1cfc38ead076ef72568b8bba66 ChangeLog 1343
 MD5 a46c2f3ad1214afdc1408ef77177a3b9 dlint-1.4.0.ebuild 865
-MD5 bdeea5a11307d8ebc9854ea5493b309d dlint-1.4.0-r1.ebuild 898
+MD5 94d4c021dfe509843f32ce893c7ea7cd dlint-1.4.0-r1.ebuild 897
 MD5 0f516c20d49629e662ef970814e48522 metadata.xml 253
 MD5 4885c47ebf525bab4ff5af0f22fc14c7 files/digest-dlint-1.4.0 61
 MD5 4885c47ebf525bab4ff5af0f22fc14c7 files/digest-dlint-1.4.0-r1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB59c9QlM6RnzZP+IRAjBKAJ4j8+QtJjZtUmfPPApVj6u6ZtxCXQCeLIDQ
-4PBmk4/k+QNudubHlbaMWQU=
-=f0b1
+iD8DBQFB6zidQlM6RnzZP+IRArzsAJ0ZMNmF6s798rm60IN3d/eeJC0+zwCgtZtk
+oWjD7nxs5GtN6ahH5dd7Y+w=
+=Nhtd
 -----END PGP SIGNATURE-----
