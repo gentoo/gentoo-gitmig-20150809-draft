@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r3.ebuild,v 1.3 2001/12/07 16:08:57 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.1 2001/12/07 19:14:32 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -76,7 +76,7 @@ src_compile() {
 src_install() {
 	export LC_ALL=C
 	make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} install -C buildhere || die
-	if [ -z "`use build`" ] && [ -z "`use bootcd`" ]
+	if [ -z "`use build`" ]
 	then
 		dodir /etc/rc.d/init.d
 		make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} info -C buildhere || die
@@ -110,7 +110,9 @@ src_install() {
 	rm ${D}/lib/ld-linux.so.2
 	rm ${D}/lib/libc.so.6
 	rm ${D}/lib/libpthread.so.0
-	chmod 755 ${D}/usr/lib/misc/pt_chown
+	#is this next line actually needed or does the makefile get it right.  It previously has 0755 perms which was
+	#killing things.
+	chmod 4755 ${D}/usr/lib/misc/pt_chown
 	rm -f ${D}/etc/ld.so.cache
 }
 
@@ -133,7 +135,7 @@ pkg_preinst()
 		fi
 	done
     
-   [ ! -e ${ROOT}etc/localtime ] && echo "Please remember to set your timezone using the zic command."
+   [ ! -e ${ROOT}etc/localtime ] && "Please remember to set your timezone using the zic command."
 }
 
 pkg_postinst()
