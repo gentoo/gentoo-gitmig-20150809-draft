@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.14.1.ebuild,v 1.1 2004/10/02 16:26:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.14.1.ebuild,v 1.2 2004/10/02 20:39:44 lu_zero Exp $
 
 IUSE=""
 
@@ -27,24 +27,6 @@ pkg_setup(){
 	check_KV || \
 		die "Please ensure /usr/src/linux points to your kernel symlink!"
 
-	if has_version "x11-base/xfree"
-	then
-		if ! has_version ">=x11-base/xfree-4.3.0"
-		then
-			die "You must upgrade to xfree-4.3.0 or greater to use this."
-		fi
-	fi
-	if has_version "x11-base/xorg-x11"
-	then
-		if has_version ">=x11-base/xorg-x11-6.7.99"
-		then
-			eerror "you are using a xorg-x11 version too new !!!"
-			eerror "You must downgrade to xorg-x11-6.7.0 otherwise"
-			eerror "trying to use opengl will crash X"
-			die "Better safe than sorry."
-		fi
-	fi
-
 	# Set up X11 implementation
 	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
@@ -62,11 +44,10 @@ src_unpack() {
 
 	#epatch ${FILESDIR}/fglrx-3.9.0-allocation.patch
 
-	if [ "`echo ${KV}|grep 2.6`" ]
-	then
-		epatch ${FILESDIR}/fglrx-2.6-vmalloc-vmaddr.patch
+#	if [ "`echo ${KV}|grep 2.6`" ]
+#	then
 #		epatch ${FILESDIR}/fglrx-3.9.0-regparm.patch
-	fi
+#	fi
 }
 
 src_compile() {

@@ -1,7 +1,7 @@
 MD5 55084b4637f59dbc056f3c3ea6ac9ef7 ati-drivers-3.2.0.ebuild 4494
 MD5 c097444035f82c48673393e171163f90 ati-drivers-3.7.0.ebuild 5424
 MD5 3a4aabaec1f8705a6e83b19b88ae8e60 ati-drivers-3.12.0.ebuild 4860
-MD5 f207e762fe9f08542ae5572ed3485813 ChangeLog 9102
+MD5 6ee7cbc3838b919a510169a15ef77f96 ChangeLog 9212
 MD5 616152ceacf4338e4dfc14b378413e47 ati-drivers-3.2.5.ebuild 4555
 MD5 a2a9c4ddd4562efd9ca3b290459e7196 metadata.xml 219
 MD5 d404832f9f2ff434a19c278fdec0bb2e ati-drivers-3.2.8-r2.ebuild 4134
@@ -14,7 +14,7 @@ MD5 a2e898dd45c93552faf9522eb9ee6f85 ati-drivers-3.2.8.ebuild 4561
 MD5 003cc1469c56626052124a10a92b55ea ati-drivers-3.11.1.ebuild 4772
 MD5 9d6164f9cb443fb2fceadee69ec62d0e ati-drivers-3.2.5-r1.ebuild 4580
 MD5 6b5ab1abb7122e2335aeef6de0db7aca ati-drivers-3.2.4.ebuild 4685
-MD5 cd442be56a1037b7c93d542642a886e5 ati-drivers-3.14.1.ebuild 4860
+MD5 bebf0adff260a6c9e81f9930f1c72d7a ati-drivers-3.14.1.ebuild 4347
 MD5 22470cac4821c26539336042f88281f3 ati-drivers-3.9.0-r1.ebuild 4513
 MD5 8eb6d0fd20fa26cd240efd44a74d7e41 ati-drivers-2.9.13.ebuild 3602
 MD5 7427ff67a7d53009779660017e6a35b6 ati-drivers-2.9.13-r1.ebuild 4246
