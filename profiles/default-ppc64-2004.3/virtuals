@@ -17,6 +17,7 @@ virtual/jre            dev-java/ibm-jre-bin
 virtual/imapd          net-mail/courier-imap
 virtual/blackbox       x11-wm/blackbox
 virtual/emacs          app-editors/emacs
+virtual/cdrtools       app-cdr/cdrtools
 virtual/cron           sys-apps/dcron
 sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/sylpheed       mail-client/sylpheed
