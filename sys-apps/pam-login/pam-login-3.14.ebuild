@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.18 2004/10/02 02:24:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.19 2004/11/12 21:00:10 vapier Exp $
 
 inherit gnuconfig eutils
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ppc64 s390 ia64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="livecd nls selinux"
 
 DEPEND="virtual/libc
