@@ -23,6 +23,10 @@ media-gfx/k3studio
 # Dont work's yet BaSS 05 Jun 2002
 =app-misc/gtk-theme-switch-2.0.0-r2
 
+# This looks like it's going final soon, but it's still in their
+# -Pre directory.  Might as well mask briefly.  // woodchip - 8 Jun 2002
+=dev-db/mysql-3.23.50
+
 #the XMMS crash when activate the osd plugin, but osd_cat work's well
 #x11-libs/xosd
 
