@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.321 2005/02/05 07:36:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.322 2005/02/05 07:39:50 spyderous Exp $
+
+  04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  PATCH_VER 0.2.11.3. (#79497, #80736) Add
+  9380_all_6.8.1.904-fix-duplicate-cfb-symbols-v2.patch. xorgcfg / X
+  -configure produce a bunch of unresolved cfb symbols. This can also break
+  the build in some cases. (#78147, #80736) Add
+  9385_all_6.8.1.904-fix-duplicate-mfb-symbols.patch. Build can break because
+  of duplicate mfb symbols.
 
   04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.904.ebuild:
