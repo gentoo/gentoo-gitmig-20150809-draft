@@ -1,7 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/files/source-highlight.bash-completion,v 1.1 2004/11/07 11:35:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/files/source-highlight.bash-completion,v 1.2 2004/11/29 10:41:23 ka0ttic Exp $
 # completion for source-highlight
 
-_source-highlight()
+_source_highlight()
 {
     local cur prev opts 
     COMPREPLY=()
@@ -40,6 +40,6 @@ _source-highlight()
 	    ;;
     esac
 }
-complete -F _source-highlight source-highlight
+complete -F _source_highlight source-highlight
 
 # vim: set ft=sh tw=80 sw=4 et :
