@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.9 2003/02/12 06:25:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.10 2003/02/27 23:02:28 gmsoft Exp $
+
+  28 Feb 2003; Guy Martin <gmsoft@gentoo.org> URI-1.18-1.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
