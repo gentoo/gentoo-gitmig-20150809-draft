@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bbc9f77a9e1bb8997a9c1ec51ecdf533 gemhun-20031016.ebuild 1240
 MD5 786b2fa358fde54e0a6de87145e72509 ChangeLog 535
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 393571e3c21b30fd4e04becaeefb7abb files/20031016-gentoo-paths.patch 456
-MD5 bd32986ba9e4072a508ed3ffb4ddc7db files/digest-gemhun-20031016 153
+MD5 d9b9075f724cf1ab7eaad477421cd853 files/digest-gemhun-20031016 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpP5+I1lqEGTUzyQRAmE7AKCRnvb9gx/0bH5Iby+9KITQrG76ywCgyjco
+VmYM0Ui2HCBwdcM0qWHHgco=
+=9DkH
+-----END PGP SIGNATURE-----
