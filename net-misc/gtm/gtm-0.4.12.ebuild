@@ -1,29 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r1.ebuild,v 1.4 2002/08/14 12:08:07 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.12.ebuild,v 1.1 2002/08/19 16:49:11 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTM - a transfer manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gtm.sourceforge.net/"
+
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86"
 
-DEPEND="virtual/glibc
-	virtual/x11
-	x11-libs/gtk+
-	gnome-base/oaf
-	gnome-base/gnome-core
-	gnome-base/gnome-libs
-	gnome? ( gnome-base/gnome-applets )
+DEPEND="=x11-libs/gtk+-1.2*
+	=gnome-base/gnome-panel-1.4*
+	>=gnome-base/gnome-libs-1.4.1.7
+	>=gnome-base/oaf-0.6.8
+	>=gnome-base/ORBit-0.5.11
+	gnome? ( =gnome-base/gnome-applets-1.4* )
 	ssl?   ( dev-libs/openssl )"
 
-RDEPEND="virtual/glibc
-	virtual/x11
-	net-misc/wget
-	>=gnome-base/gnome-libs-1.4.0.2
-	>=gnome-base/ORBit-0.5.11"
+RDEPEND="${DEPEND}
+	net-misc/wget"
 
 
 src_unpack() {
@@ -36,9 +33,7 @@ src_unpack() {
 		sed -e 's: \$(gtm_helpdir): \$(DESTDIR)$(gtm_helpdir):g' \
 			${S}/doc/${lang}/Makefile.in.orig \
 			>${S}/doc/${lang}/Makefile.in
-	done
-
-	patch -p0 < ${FILESDIR}/wget-log.c.patch						
+	done			
 }
 
 src_compile() {
@@ -66,4 +61,3 @@ src_install() {
 	
 	make DESTDIR=${D} install || die
 }
-
