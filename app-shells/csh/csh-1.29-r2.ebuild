@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.10 2004/06/24 22:23:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.11 2004/06/28 22:03:55 agriffis Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="x86 alpha ia64"
 IUSE="static doc"
 
-DEPEND="sys-devel/pmake !app-shells/tcsh"
-RDEPEND="virtual/glibc"
+DEPEND="sys-devel/pmake !app-shells/tcsh
+	>=sys-apps/sed-4"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/src/bin/csh
 
@@ -126,16 +127,16 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	use doc && {
+	if use doc; then
 		einfo "An Introduction to the C shell by Bill Joy, a "
 		einfo "postscript document included with this shell has"
 		einfo "been installed in /usr/share/doc/${PF}, if you are new"
 		einfo "to the C shell, you may find it interesting."
-	} || {
-		einfo "You didnt have the \`doc\` use flag set, the"
+	else
+		einfo "You don't have USE=doc, so the"
 		einfo "postscript document \"An Introduction to the C"
 		einfo "shell by Bill Joy\" was not installed."
-	}
+	fi
 	echo
 	einfo "Example login scripts have been installed in /usr/share/doc/${PF}."
 	einfo "You can install a simple dot.cshrc like this:"
