@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.16 2004/10/07 02:52:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.17 2004/10/29 00:39:27 kito Exp $
+
+  28 Oct 2004; Kito <kito@gentoo.org> +files/ladspa-cmt-darwin.patch,
+  -files/ladspa-cmt-ppc-macos.patch, ladspa-cmt-1.15.ebuild:
+  updated macos/darwin patch
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ladspa-cmt-1.15.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.15 2004/10/07 02:52:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.16 2004/10/29 00:39:27 kito Exp $
 
 inherit eutils
 
@@ -30,7 +30,8 @@ src_unpack() {
 		-e 's|/usr/local/lib||g' makefile \
 			|| die "sed makefile failed"
 
-	use ppc-macos && epatch ${FILESDIR}/${PN}-ppc-macos.patch
+	cd "${S}"
+	use ppc-macos && epatch ${FILESDIR}/${PN}-darwin.patch
 }
 
 src_compile() {
