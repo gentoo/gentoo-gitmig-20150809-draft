@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.2.1a.ebuild,v 1.3 2004/04/30 11:36:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.2.1a.ebuild,v 1.4 2004/06/24 23:29:18 agriffis Exp $
 
 inherit games
 

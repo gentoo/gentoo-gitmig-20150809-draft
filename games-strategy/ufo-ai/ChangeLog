@@ -1,6 +1,6 @@
 # ChangeLog for games-strategy/ufo-ai
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.7 2004/05/16 06:08:12 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.8 2004/06/24 23:29:50 agriffis Exp $
 
   16 May 2004; Mike Frysinger <vapier@gentoo.org> ufo-ai-0.10.040218.ebuild:
   Make sure to filter-flags -fstack-protector #51116 by Alexander Kahl/Peter

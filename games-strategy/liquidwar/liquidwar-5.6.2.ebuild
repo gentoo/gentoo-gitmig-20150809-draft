@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.2 2004/04/09 14:28:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.3 2004/06/24 23:28:25 agriffis Exp $
 
 inherit flag-o-matic games
 

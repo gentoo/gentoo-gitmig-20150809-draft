@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc. and Thomas Capricelli <orzel@kde.org>
+# Copyright 1999-2004 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.10.ebuild,v 1.1 2004/05/10 21:00:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.10.ebuild,v 1.2 2004/06/24 23:26:27 agriffis Exp $
 
 inherit kde
 need-kde 3
