@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.10 2004/09/25 03:10:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.11 2004/09/27 00:04:08 blauwers Exp $
 
 DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.greenwoodsoftware.com/"
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 
 src_install() {
 	dobin less lessecho lesskey || die
-	newbin ${FILESDIR}/lesspipe.sh-r2 lesspipe.sh
+	newbin ${FILESDIR}/lesspipe.sh lesspipe.sh
 
 	# Needed for groff-1.18 and later ...
 	dodir /etc/env.d
