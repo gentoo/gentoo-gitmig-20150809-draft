@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0-r1.ebuild,v 1.9 2003/05/10 22:51:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0-r1.ebuild,v 1.10 2003/11/15 03:22:26 seemant Exp $
 
 S=${WORKDIR}
 
@@ -19,7 +19,7 @@ LICENSE="icc-6.0"
 
 DEPEND="virtual/linux-sources
 		>=sys-libs/glibc-2.2.2
-		sys-apps/cpio
+		app-arch/cpio
 		app-arch/rpm"
 
 RDEPEND="virtual/linux-sources

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.10 2003/03/29 04:47:44 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.11 2003/11/15 03:22:26 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel Fortran Compiler - The Pentium optimized compiler for Linux"
@@ -20,7 +20,7 @@ KEYWORDS="-* x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	>=sys-libs/glibc-2.2.2
-	sys-apps/cpio
+	app-arch/cpio
 	app-arch/rpm"
 
 RDEPEND=">=virtual/linux-sources-2.4
