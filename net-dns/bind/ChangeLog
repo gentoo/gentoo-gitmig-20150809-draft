@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.53 2005/01/01 16:19:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.54 2005/01/28 19:29:15 robbat2 Exp $
+
+*bind-9.3.1_beta2 (28 Jan 2005)
+
+  28 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +bind-9.3.1_beta2.ebuild:
+  Bug #77989, new version of bind-9.3, masked.
 
   01 Jan 2005; Jason Wever <weeve@gentoo.org> bind-9.2.2-r4.ebuild:
   Changed -sparc keyword to ~sparc.
