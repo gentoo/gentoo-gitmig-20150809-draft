@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.5.1.ebuild,v 1.1 2004/12/31 00:31:04 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.5.1.ebuild,v 1.2 2004/12/31 00:48:16 dsd Exp $
 
 inherit eutils toolchain-funcs
 
@@ -53,6 +53,7 @@ pkg_postinst() {
 	ewarn "WARNING: If you upgraded from an earlier version, you must"
 	ewarn "perform a forced upgrade from a console now. Please follow"
 	ewarn "the instructions below to do this."
+	ewarn "You must also update your crontab to use -y or -n."
 	einfo
 	einfo "The Gentoo Buildtime and Statistics client can be started by"
 	einfo "typing:"
@@ -67,8 +68,10 @@ pkg_postinst() {
 	einfo ""
 	einfo "For example:"
 	einfo ""
-	einfo "   \"0 0 * * * /usr/bin/basc -q >/dev/null 2>&1\""
+	einfo "   \"0 0 * * * /usr/bin/basc -q -n >/dev/null 2>&1\""
 	einfo ""
 	einfo "will start the client every day at 00:00am"
+	einfo "Use -y instead of -n if you want X/kernel/USE info sent"
+	einfo "to the server."
 	einfo
 }
