@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.4 2004/12/13 23:51:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.5 2004/12/22 23:13:06 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -67,6 +67,14 @@ src_compile() {
 			check_multilib
 			make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
 			;;
+		"sparc")
+			if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
+				check_multilib
+				make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
+			else
+				make CFLAGS="-O1 -pipe" || die
+			fi
+			;;
 		*)
 			if useq ppc-macos || useq x86-fbsd; then
 				ewarn "NOT BUILDING SANDBOX ON $ARCH"
@@ -126,7 +134,7 @@ src_install() {
 	else
 		#install sandbox
 		cd ${S}/src/sandbox-1.1
-		if [ "$ARCH" == "amd64" ]; then
+		if [ "$ARCH" == "amd64" -o "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
 			check_multilib
 			make DESTDIR="${D}" HAVE_64BIT_ARCH="${MULTILIB}" install || \
 			die "Failed to compile sandbox"
@@ -173,6 +181,13 @@ src_install() {
 
 	#documentation
 	dodoc ${S}/ChangeLog
+
+	# Fix dumb placement of libsandbox
+	if [ "${PROFILE_ARCH}" = "sparc64-multilib" -a "${MULTILIB}" = "1" ]; then
+		dodir /lib64
+		mv ${D}/lib/lib* ${D}/lib64
+		mv ${D}/lib32/lib* ${D}/lib
+	fi
 }
 
 
