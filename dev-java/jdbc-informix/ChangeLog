@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-informix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.5 2004/10/20 09:24:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.6 2004/10/22 18:58:30 axxo Exp $
+
+  22 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  jdbc-informix-221-r4.ebuild, jdbc-informix-221-r5.ebuild:
+  global addpredit == evil
 
 *jdbc-informix-221-r5 (20 Oct 2004)
 
