@@ -1,15 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/files/squid.rc6,v 1.6 2002/09/15 01:26:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/files/squid.rc6,v 1.7 2002/11/19 07:11:02 woodchip Exp $
 
 depend() {
 	need net
 }
 
-#
 # Try to increase the # of filedescriptors we can open.
-#
 maxfds() {
 	[ -n "$SQUID_MAXFD" ] || return
 	[ -f /proc/sys/fs/file-max ] || return 0
@@ -56,9 +54,7 @@ stop() {
 	PID=`cat /var/run/squid.pid 2>/dev/null`
 	start-stop-daemon --stop --quiet --exec /usr/sbin/squid \
 		--pidfile /var/run/squid.pid
-	#
 	# Now we have to wait until squid has _really_ stopped.
-	#
 	sleep 2
 	if test -n "$PID" && kill -0 $PID 2>/dev/null
 	then
@@ -69,9 +65,7 @@ stop() {
 			cnt=`expr $cnt + 1`
 			if [ $cnt -gt 60 ]
 			then
-				#
 				# Waited 120 seconds now. Fail.
-				#
 				eend 1 "Failed."
 				break
 			fi
