@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.2 2003/11/01 20:15:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.3 2003/11/03 20:21:47 liquidx Exp $
 
 inherit flag-o-matic eutils python
 
@@ -46,6 +46,26 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.2.3-gentoo_py_dontcompile.patch
 }
 
+src_configure() {
+	# disable extraneous modules with extra dependencies
+	if [ -n "`use build`" ]; then
+		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _socket _curses _curses_panel _tkinter"
+		export PYTHON_DISABLE_SSL=1
+	else
+		use berkdb \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
+		use readline \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
+		use tcltk \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
+		use ncurses \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
+		use ssl \
+			|| export PYTHON_DISABLE_SSL=1
+		export PYTHON_DISABLE_MODULES
+	fi
+}
+
 src_compile() {
 	filter-flags -malign-double
 
@@ -65,24 +85,8 @@ src_compile() {
 		myopts="--with-cxx=no"
 	fi
 
-	# disable extraneous modules with extra dependencies
-	if [ -n "`use build`" ]; then
-		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _socket _curses _curses_panel _tkinter"
-		export PYTHON_DISABLE_SSL=1
-	else
-		use berkdb \
-			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
-		use readline \
-			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
-		use tcltk \
-			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
-		use ncurses \
-			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
-		use ssl \
-			|| export PYTHON_DISABLE_SSL=1
-		export PYTHON_DISABLE_MODULES
-	fi
-
+	src_configure
+	
 	# build python with threads support
 	myopts="${myopts} --with-threads"
 
@@ -95,6 +99,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr
+	src_configure
 	make install prefix=${D}/usr || die
 
 	rm -f ${D}/usr/bin/python

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.46 2003/11/01 20:15:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.47 2003/11/03 20:21:47 liquidx Exp $
+
+  03 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.2.3-r5.ebuild:
+  export environment in src_install()
 
   01 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.2.3-r5.ebuild,
   python-2.3.2-r1.ebuild, files/python-2.2.3-disable_modules_and_ssl.patch,
