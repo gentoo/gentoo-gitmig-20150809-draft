@@ -1,4 +1,4 @@
-MD5 ba0b11dd0f0c3bf4d059e9342cfa0b29 netkit-fingerd-0.17-r2.ebuild 959
-MD5 40cb7e656fa8b6e6ab68137471c3f798 ChangeLog 1418
-MD5 73bad964b46bf7b78d714568121d0ea6 files/netkit-fingerd-0.17-r2-gentoo.diff 603
+MD5 398843a74a8c95100a9f69b7e934fc63 ChangeLog 1520
+MD5 bb73741c137a1d391e28242dbddf7b59 netkit-fingerd-0.17-r2.ebuild 962
 MD5 6072e5427208b1c8bcc8638ad35ed79e files/digest-netkit-fingerd-0.17-r2 71
+MD5 73bad964b46bf7b78d714568121d0ea6 files/netkit-fingerd-0.17-r2-gentoo.diff 603
