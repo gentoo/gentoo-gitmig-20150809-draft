@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.71 2003/09/26 03:15:27 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.72 2003/09/28 17:25:51 pyrania Exp $
+
+  28 Sep 2003; Markus Nigbur <pyrania@gentoo.org> fluxbox-0.1.14-r2.ebuild:
+  Added ~amd64 keyword. request by brad@mainstreetsoftworks.com in bug #29806.
 
 *fluxbox-0.9.6_pre9 (25 Sep 2003)
 
