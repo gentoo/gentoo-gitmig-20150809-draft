@@ -45,3 +45,7 @@ done
 
 #
 
+touch /var/cron/lastrun
+find /var/cron/lastrun -newer /var/cron/lastrun | \
+    xargs --no-run-if-empty rm
+

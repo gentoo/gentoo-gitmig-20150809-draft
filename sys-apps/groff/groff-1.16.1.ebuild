@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1.ebuild,v 1.1 2000/08/25 15:10:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1.ebuild,v 1.2 2000/08/28 06:05:03 achim Exp $
 
 P=groff-1.16.1
 A=${P}.tar.gz
@@ -24,6 +24,8 @@ src_install() {
 	into /usr
 	dodoc NEWS PROBLEMS PROJECTS README TODO VERSION BUG-REPORT COPYING ChangeLog
         make prefix=${D}/usr install
+
+	prepman
 }
 
 
