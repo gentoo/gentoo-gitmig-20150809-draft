@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.10 2002/12/16 21:13:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.11 2002/12/16 21:15:48 rphillips Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
@@ -41,8 +41,11 @@ src_compile() {
 	use X      && myconf="$myconf --without-x"
 
 	# This should fix a sandbox violation. 
-	addwrite "${SSH_TTY}"
-	
+ 	for file in /dev/pty/s*
+ 	do
+ 		addwrite $file
+ 	done
+
 	#
 	# Build a nogui version, this will install as /usr/bin/vim
 	#
