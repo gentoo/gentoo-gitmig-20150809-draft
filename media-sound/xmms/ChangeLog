@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.133 2004/07/08 07:50:59 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.134 2004/07/29 03:50:10 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> xmms-1.2.10-r5.ebuild:
+  stable on ppc64, bug #55076
 
   08 Jul 2004; Hardave Riar <hardave@gentoo.org> xmms-1.2.10-r5.ebuild:
   Added ~mips KEYWORD
