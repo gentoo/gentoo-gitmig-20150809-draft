@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9.ebuild,v 1.4 2004/06/24 22:53:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9.ebuild,v 1.5 2004/07/15 03:42:36 agriffis Exp $
 
 inherit kmod
 
@@ -26,7 +26,6 @@ else
 fi
 
 KMOD_SOURCES="${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 
 SRC_URI="mirror://sourceforge/${PN}/${KMOD_SOURCES}"
