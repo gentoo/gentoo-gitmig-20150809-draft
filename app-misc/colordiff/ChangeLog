@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/colordiff
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.15 2004/01/04 16:22:23 spyderous Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.16 2004/04/19 21:21:31 kloeri Exp $
+
+  19 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> colordiff-1.0.4.ebuild:
+  Added ~alpha to keywords.
 
 *colordiff-1.0.4 (04 Jan 2004)
 
