@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnofin/gnofin-0.8.0.ebuild,v 1.1 2000/08/15 15:27:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnofin/gnofin-0.8.0.ebuild,v 1.2 2000/08/16 04:38:00 drobbins Exp $
 
 P=gnofin-0.8.0
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-CATEGORY="gnome-apps"
 DESCRIPTION="a personal finance application for GNOME"
 SRC_URI="ftp://ftp.gnofin.sourceforge.net/pub/gnofin/stable/source/${A}
 	 http://download.sourceforge.net/gnofin/${A}

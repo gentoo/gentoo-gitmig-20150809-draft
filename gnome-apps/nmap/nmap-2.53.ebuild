@@ -6,7 +6,6 @@
 P=nmap-2.53
 A=${P}.tgz
 S=${WORKDIR}/${P}
-CATEGORY="gnome-apps"
 DESCRIPTION="Portscanner"
 SRC_URI="http://www.insecure.org/nmap/dist/"${A}
 HOMEPAGE="http://www.insecure.org/nmap/"

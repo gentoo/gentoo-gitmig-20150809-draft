@@ -6,7 +6,6 @@
 P=powershell-0.80
 A=powershell-0.8.tar.gz
 S=${WORKDIR}/powershell-0.8
-CATEGORY="gnome-apps"
 DESCRIPTION="Terminal emulator, supports multiple terminals in a single window"
 SRC_URI="http://powershell.pdq.net/download/"${A}
 HOMEPAGE="http://powershell.pdq.net"
