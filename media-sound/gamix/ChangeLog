@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gamix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.7 2004/02/17 19:06:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.8 2004/03/01 04:54:53 eradicator Exp $
+
+  29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gamix-1.99_p13-r1.ebuild, gamix-1.99_p14-r1.ebuild, metadata.xml:
+  Removing ~mips because it can't satisfy DEPEND.
 
   17 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> gamix-1.99_p13-r1.ebuild,
   gamix-1.99_p14-r1.ebuild:
