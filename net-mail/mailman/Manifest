@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e8c05ddab3770c5a54e854c2e17d354e mailman-2.1.5-r3.ebuild 4457
-MD5 b2c3a05d43800f1c6d274d5b4de17fed mailman-2.1.5-r2.ebuild 4047
-MD5 f38bd9f926c428f12d3fe22eac744eba mailman-2.1.5-r4.ebuild 4524
-MD5 3400595ffceba6fdffe149a7b960d886 ChangeLog 7198
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 ea0c850a55a563d90a520ab52809112f files/README.gentoo 4963
-MD5 740c1eb479ebc2df0109668027f60762 files/mailman-2.1.5-driver.cvs.patch 2539
-MD5 1c839f4abbbe57c6ffc915fc8dc3018c files/mailman-2.1.5-directory-check.patch 641
-MD5 ede21221890a680ccadd3a6f142f3802 files/mailman-2.1.5-true_path.patch 447
+MD5 e8c05ddab3770c5a54e854c2e17d354e mailman-2.1.5-r3.ebuild 4457
+MD5 72d7de81d1a9a40784586645bbb45e3d ChangeLog 7299
+MD5 5ca77622c886e77e726e38c4b6374a40 mailman-2.1.5-r4.ebuild 4520
+MD5 b2c3a05d43800f1c6d274d5b4de17fed mailman-2.1.5-r2.ebuild 4047
 MD5 3089c1f0f8d91abdd612997b085959eb files/mailman.conf 385
-MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r2 63
-MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r3 63
-MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r4 63
+MD5 ea0c850a55a563d90a520ab52809112f files/README.gentoo 4963
 MD5 ce6d06f51e3da34e92048369e9fe14d2 files/mailman.rc 597
+MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r2 63
+MD5 ede21221890a680ccadd3a6f142f3802 files/mailman-2.1.5-true_path.patch 447
+MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r3 63
+MD5 1c839f4abbbe57c6ffc915fc8dc3018c files/mailman-2.1.5-directory-check.patch 641
+MD5 740c1eb479ebc2df0109668027f60762 files/mailman-2.1.5-driver.cvs.patch 2539
+MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r4 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCClDN5FrxP71izLARAvNVAJ0fc79cVpxY/Ts2voeGi+bVSpsoowCfTAVi
-VLhjDF2J5S0GMQot/r9j9Fg=
-=WIhI
+iD8DBQFCCmxPmOfEJZHYOKcRApaLAJ9YYq4XV9F3hkYC3bsRZSXEIzSZ0QCcCeDB
+MLJv2rtEUlaeWlnkO4U9tMk=
+=/Ii+
 -----END PGP SIGNATURE-----
