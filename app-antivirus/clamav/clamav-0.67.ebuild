@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.67.ebuild,v 1.4 2004/06/24 21:26:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.67.ebuild,v 1.5 2004/06/25 23:24:29 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 IUSE="milter"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 PROVIDE="virtual/antivirus"
 
 pkg_setup() {
@@ -23,7 +23,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+	has_version =sys-libs/glibc-2.2* && filter-lfs-flags
 
 	local myconf
 	use milter && myconf="--enable-milter"
