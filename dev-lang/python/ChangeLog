@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.38 2003/10/08 15:06:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.39 2003/10/09 12:11:47 tuxus Exp $
+
+  09 Oct 2003; <tuxus@gentoo.org> python-2.2.3-r1.ebuild:
+  stable on mips 
 
 *python-2.3.2-r1 (08 Oct 2003)
 
