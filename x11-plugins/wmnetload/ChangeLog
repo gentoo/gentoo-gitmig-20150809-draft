@@ -1,9 +1,18 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.1 2002/10/07 17:58:21 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.2 2002/10/27 09:07:54 bcowan Exp $
+
+*wmnetload-1.1 (27 Oct 2002)
+
+  27 Oct 2002; Brad Cowan <bcowan@gentoo.org> wmnetload-1.1.ebuild,
+  files/digest-wmnetload-1.1 :
+  
+  Version bump.
+
 
 *wmnetload-1.0 (07 Oct 2002)
 
   07 Oct 2002; Nick Hadaway <raker@gentoo.org> wmnetload-1.0.ebuild,
-  files/digest-wmnetload-1.0 :
+  ChangeLog, files/digest-wmnetload-1.0 :
+  
   New ebuild.  See bug #4892
