@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.2 2004/06/07 04:15:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.3 2004/06/09 18:35:51 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/thunderbird-${PV}-source.tar.bz2
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="gtk2 ipv6 crypt xinerama"
+IUSE="gnome gtk2 ipv6 crypt xinerama"
 
 RDEPEND="virtual/x11
 	>=dev-libs/libIDL-0.8.0
