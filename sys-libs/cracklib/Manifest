@@ -1,7 +1,7 @@
-MD5 da6b9ef3398742c636b4f522326cb1cd ChangeLog 8581
+MD5 953f6d91c50c48f32444d6d62b9d54b6 ChangeLog 8771
+MD5 e5edb82395ae5a7a4eb57126f17997ea cracklib-2.8_pre1-r2.ebuild 1495
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 28dc9c2142fe4603637b522f91a83588 cracklib-2.7-r10.ebuild 2824
-MD5 44c7ff00729da45e4351d552909f70cc cracklib-2.8_pre1-r1.ebuild 1428
 MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
 MD5 57ed4f94412bd475a0774c8e0db99712 files/cracklib-2.7-gentoo-new.diff 4235
 MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
@@ -12,4 +12,4 @@ MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
 MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r10 63
 MD5 ee8b4f377188b6bb5001fc6e8b81e614 files/cracklib-2.7-libdir.patch 1211
 MD5 e9edfa4c3852810514a42e43e4f66b4e files/cracklib-2.7-parallel-make.patch 1066
-MD5 41a9f927353926e62b60ac78e917f83c files/digest-cracklib-2.8_pre1-r1 68
+MD5 41a9f927353926e62b60ac78e917f83c files/digest-cracklib-2.8_pre1-r2 68

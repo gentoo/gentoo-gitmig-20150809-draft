@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8_pre1-r1.ebuild,v 1.2 2005/03/01 23:00:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8_pre1-r2.ebuild,v 1.1 2005/03/15 23:52:17 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,6 +35,9 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	rm -r "${D}"/usr/share/cracklib
+
+	insinto /usr/include
+	doins lib/packer.h || die "doins packer.h"
 
 	# move shared libs to /
 	dodir /$(get_libdir)
