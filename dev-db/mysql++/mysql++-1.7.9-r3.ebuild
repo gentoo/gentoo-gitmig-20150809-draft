@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r3.ebuild,v 1.3 2004/03/14 13:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r3.ebuild,v 1.4 2004/04/11 23:04:49 kugelfang Exp $
 
-inherit gcc eutils
+inherit gcc eutils gnuconfig
 
 DESCRIPTION="C++ API interface to the MySQL database"
 # This is the download page but includes links to other places
@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~hppa ~mips ~sparc ~ppc"
+KEYWORDS="x86 ~alpha ~hppa ~mips ~sparc ~ppc ~amd64"
 
 DEPEND=">=dev-db/mysql-3.23.49"
 
@@ -66,6 +66,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use amd64 && gnuconfig_update
 	local myconf
 	# we want C++ exceptions turned on
 	myconf="--enable-exceptions"

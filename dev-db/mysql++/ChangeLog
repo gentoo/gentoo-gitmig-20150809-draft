@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.13 2003/10/26 23:57:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.14 2004/04/11 23:04:49 kugelfang Exp $
+
+  12 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> mysql++-1.7.9-r3.ebuild:
+  added gnuconfig_update for amd64 only; marked ~amd64 (fixes bug #47296)
 
 *mysql++-1.7.9-r3 (26 Oct 2003)
 
