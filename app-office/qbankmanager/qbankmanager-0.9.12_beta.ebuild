@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.12_beta.ebuild,v 1.3 2005/01/01 15:41:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.12_beta.ebuild,v 1.4 2005/01/10 09:13:51 hanno Exp $
 
 inherit eutils kde-functions
 need-qt 3
@@ -15,7 +15,8 @@ KEYWORDS="~x86"
 IUSE="debug"
 
 DEPEND=">=net-libs/aqbanking-0.9.6
-	>=x11-libs/qt-3"
+	>=x11-libs/qt-3
+	net-libs/aqhbci-wizard-kde"
 
 S=${WORKDIR}/${P/_/}
 
