@@ -1,15 +1,14 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.2-r4.ebuild,v 1.1 2002/01/15 12:30:22 hallski Exp $
+# Maintainer: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.1 2002/03/17 21:18:00 azarah Exp $
 
-PN=Guppi
-P=${PN}-${PV}
-S=${WORKDIR}/${P}
+MY_P=${P/guppi/Guppi}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="GNOME Plottin Tool"
 # ftp.gnome.org is slooow in updating ;/
-SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2
-	ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sources/Guppi/${MY_P}.tar.bz2
+	ftp://ftp.gnome.org/pub/GNOME/stable/sources/Guppi/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/guppi/"
 
 RDEPEND=">=sys-apps/portage-1.8.4
@@ -19,7 +18,7 @@ RDEPEND=">=sys-apps/portage-1.8.4
 	 >=gnome-base/libglade-0.17
 	 >=gnome-base/gnome-print-0.31
 	 >=media-libs/gdk-pixbuf-0.13
-	 >=dev-util/guile-1.5
+	 >=dev-util/guile-1.4
 	 >=gnome-base/bonobo-1.0.17"
 
 DEPEND="${RDEPEND}
@@ -46,7 +45,8 @@ src_compile() {
 		myconf="${myconf} --disable-guile-readline"
 	fi
 
-	CFLAGS="${CFLAGS} -DGUPPI_USING_NEWER_GUILE `gnome-config --cflags libglade`"
+# to compile with guile-1.5
+#	CFLAGS="${CFLAGS} -DGUPPI_USING_NEWER_GUILE `gnome-config --cflags libglade`"
 
 	./configure	--host=${CHOST} \
 			--prefix=/usr \
@@ -59,6 +59,7 @@ src_compile() {
 
 	# The python 'generate' module opens some files in rw mode for some
 	# unknown reason.
+	addwrite "/usr/lib/python2.0/"
 	addwrite "/usr/lib/python2.1/"
 	addwrite "/usr/lib/python2.2/"
 
