@@ -1,6 +1,9 @@
 # ChangeLog for app-text/migemo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.2 2003/10/13 15:03:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.3 2003/12/31 19:51:26 usata Exp $
+
+  01 Jan 2004; <usata@gentoo.org> migemo-0.40-r1.ebuild, migemo-0.40.ebuild:
+  Changed emake to make since emake hangs ;(
 
 *migemo-0.40-r1 (01 Oct 2003)
 
