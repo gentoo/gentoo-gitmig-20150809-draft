@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.6 2004/05/12 13:56:31 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.7 2004/06/10 02:33:48 lv Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 IUSE="static"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
@@ -19,6 +19,8 @@ DEPEND=">=sys-libs/ncurses-5.2-r5
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
+	use amd64 && ( has_m64 && has_m32) || \
+		die "please re-emerge gcc with USE=multilib FEATURES=-sandbox"
 	unpack ${A}
 	cd ${S}
 
