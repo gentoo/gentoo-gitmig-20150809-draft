@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ssh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.8 2004/08/10 12:23:13 humpback Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.9 2005/01/04 16:17:49 humpback Exp $
+
+  04 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>; ssh-3.2.5.ebuild,
+  ssh-3.2.9.1.ebuild:
+  There is no need for nomirror as Tectia allows for the source for this version
+  to be distributed.
 
   10 Aug 2004; Gustavo Felisberto <humpback@gentoo.org>; ssh-3.2.9.1.ebuild:
   Small bug on fresh installs corrected
