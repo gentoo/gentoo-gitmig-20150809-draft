@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.50 2004/12/19 02:16:30 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.51 2004/12/23 16:07:05 spock Exp $
+
+  23 Dec 2004; Michal Januszewski <spock@gentoo.org> aterm-0.4.2-r11.ebuild,
+  aterm-0.4.2-r7.ebuild, aterm-0.4.2-r9.ebuild:
+  Added a fix for the -lXmu bug with the latest versions of x.org, bug
+  #74049.
 
   19 Dec 2004; Yuta SATOH <nigoro@gentoo.org> aterm-0.4.2-r11.ebuild:
   added ~ppc64

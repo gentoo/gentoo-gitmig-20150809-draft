@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.22 2004/12/18 17:06:38 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.23 2004/12/23 16:07:05 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -69,6 +69,7 @@ src_compile() {
 		--with-x \
 		${myconf} || die
 
+	sed -i -re 's#^XLIB = (.*)#XLIB = \1 -lXmu#' src/Makefile
 	emake || die
 }
 
