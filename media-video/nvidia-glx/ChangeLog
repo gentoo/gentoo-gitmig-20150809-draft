@@ -1,6 +1,9 @@
-# ChangeLog for media-video/nvidia-glx 
+# ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.60 2004/08/30 23:05:41 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.61 2004/09/05 08:03:01 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   30 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
   files/1.0.6111/NVIDIA_glx-1.0.6111-glheader.patch:
