@@ -1,13 +1,18 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.18 2003/05/25 15:13:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.19 2003/10/13 07:57:11 vapier Exp $
+
+*man-pages-1.60 (13 Oct 2003)
+
+  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
+
+*man-pages-1.56 (25 Mar 2003)
 
   25 May 2003; Martin Holzer <mholzer@gentoo.org> man-pages-1.54.ebuild,
   man-pages-1.55.ebuild, man-pages-1.56.ebuild:
   SRC_URI="mirror://kernel/linux/docs/${MY_PN}/${P}.tar.bz2"now uses
   mirror://kernel
-
-*man-pages-1.56 (25 Mar 2003)
 
   25 Mar 2003; Daniel Robbins <drobbins@gentoo.org> man-pages-1.56.ebuild:
   new upstream release; unmasked on all arches.
