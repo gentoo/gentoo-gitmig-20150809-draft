@@ -1,21 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.4.ebuild,v 1.8 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.1 2003/11/09 03:13:45 seemant Exp $
 
 inherit libtool
 
-DESCRIPTION="full featured DVD player that supports DVD menus"
-SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
+DESCRIPTION="Full featured DVD player that supports DVD menus."
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
+SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
 
 SLOT="0"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
-KEYWORDS="x86"
-IUSE="oss mmx alsa"
+IUSE="oss mmx alsa xv"
 
-DEPEND="media-libs/libdvdcss
+DEPEND=">=media-libs/libdvdcss-1.2.2
 	media-libs/jpeg
-	media-libs/libdvdread
+	>=media-libs/libdvdread-0.9.4
+	media-sound/mad
 	x11-base/xfree
 	>=dev-libs/libxml2-2.4.19
 	>=media-libs/a52dec-0.7.3
@@ -28,6 +29,21 @@ src_compile() {
 	# very very easily -- blocke
 
 	local myconf="`use_enable mmx` `use_enable oss` `use_enable alsa`"
+
+	use xv && myconf="${myconf} --enable-xv" || myconf="${myconf} --disable-xv"
+
+	if [ "${ARCH}" = "ppc" ] ; then
+		# if this user doesn't want altivec, don't compile it in
+		# fixes #14939
+		if [ `echo ${CFLAGS} | grep -e "-maltivec" | wc -l` = "0" ]
+		then
+			einfo "Disabling alitvec support"
+			myconf="${myconf} --disable-altivec"
+		else
+			einfo "Enabling altivec support"
+			myconf="${myconf} --enable-altivec"
+		fi
+	fi
 
 	elibtoolize
 
