@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.24 2004/10/27 12:23:38 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.25 2004/12/07 19:32:04 mholzer Exp $
+
+*mkvtoolnix-0.9.7-r1 (07 Dec 2004)
+
+  07 Dec 2004; Martin Holzer <mholzer@gentoo.org>
+  +mkvtoolnix-0.9.4-r1.ebuild, +mkvtoolnix-0.9.5-r1.ebuild,
+  +mkvtoolnix-0.9.7-r1.ebuild:
+  Fixing gtk detect. closes 62543
 
   27 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> mkvtoolnix-0.9.7.ebuild:
   Fixing bug #69115 (libmatroska-0.7.4 needed).
