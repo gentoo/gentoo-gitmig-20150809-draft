@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.2 2002/03/21 11:54:23 seemant Exp $
+
+*tiff-3.5.7-r1 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> tiff-3.5.7-r1.ebuild :
+
+  HTML documentation was getting gzipped.  This is no longer the case, thanks
+  to stefan@mdy.univie.ac.at who pointed it out.
 
 *tiff-3.5.7 (1 Feb 2002)
 
