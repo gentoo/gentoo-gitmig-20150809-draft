@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# Seemant Kulleen <seemant@gentoo.org> (04 Aug 2002)
+# Maksed for testing
+=sys-libs/libieee1284-0.2.0
+
 # Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
 # These packages have been replaced with the new gtk-engines-* form
 x11-themes/crux
