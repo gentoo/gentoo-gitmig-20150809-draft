@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.13 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.14 2004/04/26 03:20:21 dragonheart Exp $
 
 inherit eutils
 
 MY_P="Sather-${PV}"
 DESCRIPTION="object oriented language designed to be simple, efficient, safe, flexible and non-proprietary"
-HOMEPAGE="http://www.cs.waikato.ac.nz/sather/ http://www.icsi.berkeley.edu/~sather/"
-SRC_URI="http://www.cs.waikato.ac.nz/${PN}/release/downloads/${MY_P}.tar.gz
+HOMEPAGE="http://www.icsi.berkeley.edu/~sather/"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/Doc/${PN}-tutorial-000328.ps.gz
 	ftp://ftp.gnu.org/gnu/${PN}/Doc/${PN}-tutorial-000328.html.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/Doc/${PN}-specification-000328.html.tar.gz
@@ -17,7 +17,7 @@ SRC_URI="http://www.cs.waikato.ac.nz/${PN}/release/downloads/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="~x86 sparc"
 
 DEPEND=">=sys-devel/gcc-2.95.3-r5
 	>=dev-libs/boehm-gc-6.0"
