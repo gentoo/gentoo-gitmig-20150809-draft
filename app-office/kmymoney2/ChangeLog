@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.20 2005/01/23 19:15:42 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.21 2005/02/05 15:19:03 motaboy Exp $
+
+  05 Feb 2005; Simone Gotti <motaboy@gentoo.org>
+  +files/kmymoney2-0.6.2-configure-arts.patch,
+  +files/kmymoney2-0.6.4-configure-arts.patch, kmymoney2-0.6.2.ebuild,
+  kmymoney2-0.6.4.ebuild:
+  Add a configure script patch to honor the arts USE flag. Fixes bug #80461.
 
 *kmymoney2-0.6.4 (23 Jan 2005)
 
