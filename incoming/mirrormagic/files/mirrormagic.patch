@@ -1,0 +1,11 @@
+--- ./Makefile	Mon Jan  1 20:40:10 2001
++++ ./Makefile.test	Tue Sep 25 23:42:25 2001
+@@ -16,7 +16,7 @@
+
+ # specify directory for read-only game data (like graphics, sounds, levels)
+ # default is '.', so you can play without installing game data somewhere
+-# RO_GAME_DIR = /usr/games
++RO_GAME_DIR = /usr/games/mirrormagic-2.0.0
+
+ # specify directory for writable game data (like highscore files)
+ # default is '.', so you can play without installing game data somewhere
