@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kvim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.24 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.25 2004/10/16 19:27:44 vapier Exp $
+
+  16 Oct 2004; Mike Frysinger <vapier@gentoo.org> kvim-6.2.14.ebuild:
+  Fix stupid dependency on sys-libs/libtermcap-compat (i.e. remove it) #64212.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kvim-6.2.14.ebuild:
   Masked kvim-6.2.14.ebuild stable for ppc

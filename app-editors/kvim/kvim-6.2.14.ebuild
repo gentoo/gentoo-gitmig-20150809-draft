@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.14 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.15 2004/10/16 19:27:44 vapier Exp $
 
 inherit kde eutils
 
@@ -13,8 +13,7 @@ KEYWORDS="alpha x86 sparc ppc ~amd64"
 IUSE="python gpm nls ruby perl cscope ncurses"
 
 DEPEND=">=app-editors/vim-core-6.2
-	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
-	!ncurses? ( sys-libs/libtermcap-compat )
+	>=sys-libs/ncurses-5.2-r2
 	cscope? ( dev-util/cscope )
 	gpm?    ( >=sys-libs/gpm-1.19.3 )
 	perl?   ( dev-lang/perl )
@@ -37,18 +36,14 @@ src_compile() {
 		--enable-multibyte \
 		--enable-gui=kde \
 		--with-vim-name=kvim \
-		--enable-kde-toolbar"
+		--enable-kde-toolbar \
+		--with-tlib=ncurses"
 	myconf="${myconf} `use_enable cscope`"
 	myconf="${myconf} `use_enable gpm`"
 	myconf="${myconf} `use_enable perl perlinterp`"
 	myconf="${myconf} `use_enable python pythoninterp`"
 	myconf="${myconf} `use_enable ruby rubyinterp`"
 	myconf="${myconf} `use_enable nls`"
-
-	# Note: If USE=gpm, then ncurses will still be required
-	use ncurses \
-		&& myconf="${myconf} --with-tlib=ncurses" \
-		|| myconf="${myconf} --with-tlib=termcap"
 
 	# Let kde.eclass handle the configuration
 	kde_src_compile myconf configure
