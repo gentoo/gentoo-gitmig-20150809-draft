@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.2 2004/02/16 16:16:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.3 2004/03/06 13:56:55 mcummings Exp $
+
+  06 Mar 2004; Michael Cummings <mcummings@gentoo.org> Test-Pod-1.08.ebuild:
+  Added missing dependancy on Test::Builder::Tester; closes 43617
 
   16 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
   Test-Pod-1.08.ebuild:
