@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.4 2004/11/28 23:09:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.5 2004/12/14 15:45:56 genstef Exp $
+
+*ivman-0.3-r1 (14 Dec 2004)
+
+  14 Dec 2004; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  +ivman-0.3-r1.ebuild:
+  Update maintainer to me, add a -r1 with usb automount support based on
+  useflag, closes bug 74341, thanks to Rohan <rohan@mizzenblog.com>.
 
   28 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> ivman-0.3.ebuild:
   Versioning the glib dep.
