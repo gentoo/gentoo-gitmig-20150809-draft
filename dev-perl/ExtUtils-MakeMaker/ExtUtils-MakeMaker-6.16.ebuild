@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.13.ebuild,v 1.4 2003/09/25 00:38:34 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.16.ebuild,v 1.1 2003/09/25 00:38:34 rac Exp $
 
 DESCRIPTION="MakeMaker Perl Module"
 SRC_URI="http://cpan.valueclick.com/modules/by-module/ExtUtils/${P}.tar.gz"
@@ -23,8 +23,8 @@ src_install () {
 	test -z ${mytargets} && mytargets="install"
 	make \
 		PREFIX=${D}/usr \
-		VENDORPREFIX=${D}/usr \
 		PERLPREFIX=${D}/usr \
+		VENDORPREFIX=${D}/usr \
 		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
 		INSTALLMAN2DIR=${D}/usr/share/man/man2 \
 		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
