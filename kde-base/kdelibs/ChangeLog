@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.48 2003/02/01 20:30:58 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.49 2003/02/04 19:26:01 hannes Exp $
+
+*kdelibs-3.1-r2 (04 Feb 2003)
+
+  04 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1-r2.ebuild:
+  should fix bug #14759 and bug #14780.
 
   01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdelibs-3.1.ebuild:
   added ~sparc to keywords
