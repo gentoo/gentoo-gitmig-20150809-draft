@@ -1,0 +1,21 @@
+# ChangeLog for media-tv/xawdecode
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/ChangeLog,v 1.1 2003/06/18 12:02:19 seemant Exp $
+
+*xawdecode-1.6.7 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xawdecode-1.6.7.ebuild,
+  xawdecode-1.6.8.ebuild:
+  moved to media-tv
+
+*xawdecode-1.6.8 (18 May 2003)
+
+  18 May 2003; Seemant Kulleen <seemant@gentoo.org> xawdecode-1.6.8.ebuild:
+  version bump, thanks to: Theofilos Intzoglou <oscar10@yifan.net>  in bug #20751
+
+*xawdecode-1.6.7 (16 Mar 2003)
+
+  16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xawdecode-1.6.7.ebuild:
+  new package for TV viewing, thanks to: Christian Loitsch
+  <gentoo-bug@loitsch.org> in bug #9674
+

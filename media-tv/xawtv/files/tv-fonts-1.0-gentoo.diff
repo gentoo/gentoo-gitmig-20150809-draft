@@ -1,0 +1,16 @@
+--- Makefile.orig	2002-11-04 15:51:42.000000000 -0800
++++ Makefile	2002-11-04 15:51:56.000000000 -0800
+@@ -23,12 +23,7 @@
+ ##################################################################
+ 
+ all: $(LED_PCF) $(TT_PCF) $(LED_BDF) $(TT_BDF)
+-	mkfontdir
+-ifneq ($(DISPLAY),)
+-	-xset fp- "`pwd`:unscaled"
+-	xset fp+ "`pwd`:unscaled"
+-	xset fp rehash
+-endif
++	echo "fonts created"
+ 
+ clean distclean:
+ 	rm -f $(LED_PCF) $(TT_PCF)
