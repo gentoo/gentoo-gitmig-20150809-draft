@@ -3,7 +3,7 @@
 # Maintainer: Arcady Genkin <agenkin@thpoon.com>
 # /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.14 2002/02/01 19:50:13 gbevin Exp
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 
 DESCRIPTION="Python-based SPAM reduction system"
 SRC_URI="http://software.libertine.org/tmda/releases/${P}.tgz"
@@ -17,46 +17,31 @@ src_compile() {
 
 src_install () {
         # Figure out python version
-		# below hack should be replaced w/ pkg-config, when we get it working
+        # below hack should be replaced w/ pkg-config, when we get it working
         local pv=`python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:'`
 
+        # Executables
+        dobin bin/tmda-*
+
         # The Python TMDA module
-        insinto /usr/lib/python${pv}/site-packages/TMDA
+        insinto "/usr/lib/python${pv}/site-packages/TMDA"
         doins TMDA/*
-
-        # The binaries
-        local tmda_binaries
-        tmda_binaries="tmda-address tmda-check-address tmda-clean tmda-filter
-                       tmda-inject tmda-keygen tmda-rfilter tmda-sendmail"
-        exeinto /usr/bin
-        local f
-        for f in ${tmda_binaries}; do
-                doexe "bin/${f}"
-        done
-
-        # Contributed binaries
-        local tmda_contrib_exe
-        tmda_contrib_exe="list2cdb list2dbm printcdb printdbm"
-        exeinto /usr/lib/tmda/bin
-        for f in ${tmda_contrib_exe}; do
-                doexe "contrib/${f}"
-        done
-        insinto /usr/lib/tmda
-        doins contrib/setup.pyc
-        exeinto /usr/lib/tmda
-        doexe contrib/setup.py
 
         # The templates
         insinto /etc/tmda
         doins templates/*
         
-        # HTML and other documents
-        dohtml -r htdocs/*
-        local tmda_contrib_doc
-        tmda_contrib_doc="README.RELAY qmail-smtpd_auth.patch tmda.spec 
-                          sample.tmdarc"
-        for f in ${tmda_contrib_doc}; do
-                dodoc "contrib/${f}"
-        done
+        # Documentation
         dodoc COPYRIGHT ChangeLog README THANKS UPGRADE CRYPTO
+        dohtml -r htdocs/*.html
+
+        # Contributed binaries and stuff
+        cd contrib
+        dodoc README.RELAY qmail-smtpd_auth.patch tmda.spec sample.tmdarc
+        exeinto /usr/lib/tmda/bin
+        doexe list2cdb list2dbm printcdb printdbm
+        insinto /usr/lib/tmda
+        doins setup.pyc
+        exeinto /usr/lib/tmda
+        doexe setup.py
 }

@@ -1,8 +1,16 @@
 # ChangeLog for net-mail/tmda
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.2 2002/02/08 19:34:02 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.3 2002/02/15 05:17:32 agenkin Exp $
 
 *tmda-0.46 ( 8 Feb 2002 )
+
+  14 Feb 2002; Arcady Genkin <agenkin@thpoon.com> tmda-0.46.ebuild :
+
+  Updated the .ebuild file to reflect suggestions from TMDA's author,
+  Jason R. Mastaler.  Also, shuffled the things around to make the ebuild's
+  organization clearer, and make use of things like 'dobin'.
+  There are no user-visible changes to the package, that's why it is not
+  bumped up to -r1.
 
   8 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> :
 
