@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camsource
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.8 2004/06/25 00:37:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.9 2004/08/25 02:47:33 swegener Exp $
+
+  25 Aug 2004; Sven Wegener <swegener@gentoo.org> camsource-0.5.1.ebuild,
+  camsource-0.7.0-r1.ebuild, camsource-0.7.0.ebuild:
+  Changed SRC_URI to use mirror:// syntax. Removed RDEPEND="".
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> camsource-0.7.0-r1.ebuild:
   Stable on sparc.
