@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1.ebuild,v 1.7 2004/04/27 02:27:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1.ebuild,v 1.8 2004/04/28 04:34:03 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -67,7 +67,7 @@ src_compile() {
 	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative. See
 	# bug #47581 for more information.
 	# Travis Tilley <lv@gentoo.org>
-	has_version "=sys-devel/gcc-3.4*" && CFLAGS="-O2"
+	has_version "=sys-devel/gcc-3.4*" && strip-flags && replace-flags -O3 -O2
 
 
 	# Fix /usr/lib/libbfd.la
