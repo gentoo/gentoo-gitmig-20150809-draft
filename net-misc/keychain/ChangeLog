@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.8 2002/12/16 21:58:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.9 2002/12/19 23:13:06 mholzer Exp $
+
+  19 Dec 2002; Martin Holzer <mholzer@gentoo.org> keychain-2.0.2.ebuild Changelog :
+  Fixed Homepage url (#12455).
 
   16 Dec 2002; Daniel Robbins <drobbins@gentoo.org> added sh-utils runtime dep
   to the 2.0.2 ebuild; this closes bug #10376. No rev bump.
