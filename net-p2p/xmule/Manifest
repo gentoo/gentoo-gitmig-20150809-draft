@@ -4,15 +4,17 @@ Hash: SHA1
 MD5 0d8a39bcff32bccb63a37704a7f079bd xmule-1.8.4-r1.ebuild 1030
 MD5 ac772dd3ddd27d3637f09b1c23673eac xmule-1.9.0.ebuild 1040
 MD5 633fe0e2cf43f3d343c4ddd1f762c7ba xmule-1.9.1b.ebuild 1041
-MD5 806b1fd9be021e81e53592f40308a065 ChangeLog 6933
+MD5 ec3aa138a23058ac8742de3136a46deb ChangeLog 7071
+MD5 fc178c02be80f691b52248e5b5304573 xmule-1.9.2.ebuild 1040
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 83413c32a94e2597771601d45b4ac116 files/digest-xmule-1.9.0 65
+MD5 0d71e38e3e11f5e73c79b3699065a4b9 files/digest-xmule-1.9.2 65
 MD5 61e084b494702755988fa609d01c11d1 files/digest-xmule-1.9.1b 66
 MD5 7af93e9c27cecc95812aaf13b2579dc9 files/digest-xmule-1.8.4-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBQx4BcAgAdbxYsnERAtmBAKCaYiAIgBL4ibF658t3DqEcd/MR8wCglM+m
-9vqzwCsQND3JC/ybrpGJtx8=
-=L2HR
+iD8DBQFBfbfxcAgAdbxYsnERAr9VAKCPv7PlqW3pnnzZ34tNVkc6WuV31QCfRAKq
+gekeKUv8d5YJ7NNCEuBzVx0=
+=WDyv
 -----END PGP SIGNATURE-----
