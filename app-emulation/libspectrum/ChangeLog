@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/libspectrum
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.1 2003/07/16 00:24:17 vapier Exp $
+
+*libspectrum-0.1.1 (15 Jul 2003)
+
+  15 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Adam Short <ajs@orinoco.homelinux.org> #18526.
