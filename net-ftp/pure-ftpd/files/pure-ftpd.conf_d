@@ -6,7 +6,7 @@
 
 ## FTP Server,Port (separated by comma) ##
 ## If you prefer host names over IP addresses, it's your choice :
-## SERVER=" S ftp.rtchat.com,21"
+## SERVER="-S ftp.rtchat.com,21"
 ## IPv6 addresses are supported.
 SERVER="-S 192.168.0.1,21"
 
