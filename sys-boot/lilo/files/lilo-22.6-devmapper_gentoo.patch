@@ -1,40 +1,7 @@
-diff -uNr lilo-22.5.9.orig/Makefile lilo-22.5.9/Makefile
---- lilo-22.5.9.orig/Makefile	2004-06-09 22:41:24.519057048 +0100
-+++ lilo-22.5.9/Makefile	2004-06-09 22:42:25.269821528 +0100
-@@ -53,7 +53,8 @@
- #   XL_SECS=n	  Support for extra large (non-standard) floppies.
- 
- CONFIG=-DBDATA -DDSECS=3 -DEVMS -DIGNORECASE -DLVM -DONE_SHOT -DPASS160 \
--   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL
-+   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL -DDEVMAPPER
- 
- # set the compiler optimization level
- 
-@@ -88,6 +89,8 @@
- LDFLAGS=#-Xlinker -qmagic
- LIBS=
- 
-+DEVMAPPER=-ldevmapper
-+
- OBJS=lilo.o raid.o map.o geometry.o boot.o device.o common.o bsect.o cfg.o \
-   temp.o partition.o identify.o probe.o shs2.o loader.o edit.o
- 
-@@ -255,7 +258,11 @@
- 		cp -p dparam.S dparam.s
- 
- lilo:		$(OBJS)
-+ifneq (,$(findstring DEVMAPPER,$(CONFIG)))
-+		$(CC) -o lilo -L/lib $(LDFLAGS) $(DEVMAPPER) $(OBJS) $(LIBS)
-+else
- 		$(CC) -o lilo $(LDFLAGS) $(OBJS) $(LIBS)
-+endif
- 
- lilo-static:	$(OBJS)
- 		$(CC) -o lilo-static -static $(LDFLAGS) $(OBJS) $(LIBS)
-diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
---- lilo-22.5.9.orig/geometry.c	2004-06-09 22:41:24.526055984 +0100
-+++ lilo-22.5.9/geometry.c	2004-06-09 22:41:42.016397048 +0100
-@@ -14,6 +14,9 @@
+diff -Nur lilo-22.6.orig/geometry.c lilo-22.6/geometry.c
+--- lilo-22.6.orig/geometry.c	2004-08-25 20:21:08.000000000 +0200
++++ lilo-22.6/geometry.c	2004-09-21 22:42:05.023500680 +0200
+@@ -15,6 +15,9 @@
  #include <stdio.h>
  #include <fcntl.h>
  #include <errno.h>
@@ -44,7 +11,7 @@ diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
  #include <sys/types.h>
  
  #ifdef LCF_REISERFS
-@@ -26,6 +29,10 @@
+@@ -27,6 +30,10 @@
  
  #include <string.h>
  
@@ -55,7 +22,7 @@ diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
  #include "config.h"
  #include "lilo.h"
  #include "common.h"
-@@ -60,6 +67,25 @@
+@@ -61,6 +68,25 @@
  #endif
  #endif
  
@@ -81,7 +48,7 @@ diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
  #ifdef LCF_LVM
  struct lv_bmap {
      __u32 lv_block;
-@@ -121,6 +147,12 @@
+@@ -115,6 +141,12 @@
  {
      FILE *file;
      char line[MAX_LINE+1];
@@ -94,7 +61,7 @@ diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
      char *here;
      DT_ENTRY *entry;
      int disk_section,items;
-@@ -129,29 +161,69 @@
+@@ -123,29 +155,69 @@
  	if ((file = fopen(name,"r")) == NULL)
  	    die("open %s: %s",name,strerror(errno));
      }
@@ -184,7 +151,7 @@ diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
  }
  
  
-@@ -775,6 +847,161 @@
+@@ -776,6 +848,161 @@
  {
      DT_ENTRY *walk;
      int inherited,keep_cyls,is_raid=0;
@@ -346,7 +313,7 @@ diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
  
      if (verbose>=5) printf("geo_get: device %04X, all=%d\n", device, all);
  #ifdef LCF_LVM
-@@ -1146,14 +1373,50 @@
+@@ -1147,14 +1374,50 @@
              die("EVMS boot volume cannot be on multiple disks.\n");
          sector = ebm.rsector + ((offset/SECTOR_SIZE) % geo->spb) + geo->start;
      }
@@ -404,3 +371,36 @@ diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
   /*   DON'T always use CHS addressing on floppies:     JRC   */
  /*    if ((geo->device & 0x80) && (linear || lba32)) {	*/
      if ((linear || lba32)) {
+diff -Nur lilo-22.6.orig/Makefile lilo-22.6/Makefile
+--- lilo-22.6.orig/Makefile	2004-09-02 20:06:27.000000000 +0200
++++ lilo-22.6/Makefile	2004-09-21 22:42:05.018501440 +0200
+@@ -53,7 +53,7 @@
+ #   XL_SECS=n	  Support for extra large (non-standard) floppies.
+ 
+ CONFIG=-DBDATA -DDSECS=3 -DEVMS -DIGNORECASE -DLVM -DONE_SHOT -DPASS160 \
+-   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL
++   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL -DDEVMAPPER
+ 
+ # set the compiler optimization level
+ 
+@@ -95,6 +95,8 @@
+ LDFLAGS=#-Xlinker -qmagic
+ LIBS=
+ 
++DEVMAPPER=-ldevmapper
++
+ OBJS=lilo.o raid.o map.o geometry.o boot.o device.o common.o bsect.o cfg.o \
+   partition.o identify.o probe.o shs2.o edit.o temp.o
+ 
+@@ -270,7 +272,11 @@
+ 		cp -p dparam.S dparam.s
+ 
+ lilo:		$(OBJS)
++ifneq (,$(findstring DEVMAPPER,$(CONFIG)))
++		$(CC) -o lilo $(LDFLAGS) $(OBJS) $(LIBS) $(DEVMAPPER)
++else
+ 		$(CC) -o lilo $(LDFLAGS) $(OBJS) $(LIBS)
++endif
+ 
+ lilo-static:	$(OBJS)
+ 		$(CC) -o lilo-static -static $(LDFLAGS) $(OBJS) $(LIBS)

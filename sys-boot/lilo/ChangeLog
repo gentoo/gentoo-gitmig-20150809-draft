@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.23 2004/10/02 12:04:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.24 2004/10/06 19:38:07 chainsaw Exp $
+
+  06 Oct 2004; Tony Vroon <chainsaw@gentoo.org>
+  files/lilo-22.6-devmapper_gentoo.patch:
+  Use new devmapper patch by Christophe Saout, rediffed 22.5.9 one had issues.
+  Closes bug #66188
 
 *lilo-22.6 (02 Oct 2004)
 
