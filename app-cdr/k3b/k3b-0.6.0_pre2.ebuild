@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.6.0_pre2.ebuild,v 1.2 2002/04/02 23:09:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.6.0_pre2.ebuild,v 1.3 2002/04/03 09:03:54 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -20,3 +20,25 @@ newdepend ">=media-sound/mpg123-0.59
 	>=media-sound/mad-0.14.2b-r1
 	media-video/transcode
 	media-libs/libvorbis"
+
+src_compile() {
+
+    kde_src_compile myconf configure
+    
+    cd ${S}
+    for x in Makefile src/Makefile; do
+	mv $x $x.orig
+	sed -e 's:CDPARANOIA_LIBS = =:CDPARANOIA_LIBS = -lcdda_interface -lcdda_paranoia:' $x.orig > $x
+    done
+    
+    kde_src_compile make
+
+}
+
+src_install() {
+
+    dodir ${KDEDIR}/share/apps/k3b/pics
+    
+    kde_src_install
+
+}
