@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.2 2005/02/27 19:00:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.3 2005/03/23 16:18:40 seemant Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -45,25 +45,25 @@ src_unpack() {
 	if [[ $(gcc-major-version) -eq 3 ]]; then
 		# ABI Patch for alpha/xpcom for gcc-3.x
 		if [[ ${ARCH} == alpha ]]; then
-			epatch ${PORTDIR}/net-www/mozilla/files/mozilla-alpha-xpcom-subs-fix.patch
+			epatch ${PORTDIR}/www-client/mozilla/files/mozilla-alpha-xpcom-subs-fix.patch
 		fi
 	fi
 
 	# Fix stack growth logic
-	epatch ${PORTDIR}/net-www/mozilla/files/mozilla-${PV}-stackgrowth.patch
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${PV}-stackgrowth.patch
 
 	# Fix logic error when using RAW target
 	# <azarah@gentoo.org> (23 Feb 2003)
-	epatch ${PORTDIR}/net-www/mozilla/files/1.3/mozilla-1.3-fix-RAW-target.patch
+	epatch ${PORTDIR}/www-client/mozilla/files/1.3/mozilla-1.3-fix-RAW-target.patch
 
 	# HPPA patches from Ivar <orskaug@stud.ntnu.no>
 	# <gmsoft@gentoo.org> (22 Dec 2004)
-	epatch ${PORTDIR}/net-www/mozilla/files/mozilla-hppa.patch
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-hppa.patch
 
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
-	epatch ${PORTDIR}/net-www/mozilla/files/mozilla-1.7.3-4ft2.patch
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-1.7.3-4ft2.patch
 
 	# Patch for newer versions of cairo ( bug #80301) 
 	if has_version '>=x11-libs/cairo-0.3.0'; then
