@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.8 2004/04/27 21:50:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.9 2004/06/24 16:05:36 agriffis Exp $
 
 IUSE="nls objc"
 
@@ -64,7 +64,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${PN}-5.3-sparc-nat-asm.patch
 	fi
 
-	if [ -n "`use objc`" -a -z "${SNAPSHOT}" ]
+	if use objc && [ -z "${SNAPSHOT}" ]
 	then
 		cd ${WORKDIR}
 		unpack gdb-5_3-objc-patch.tgz
