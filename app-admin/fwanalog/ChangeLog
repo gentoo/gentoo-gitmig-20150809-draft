@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/fwanalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/ChangeLog,v 1.6 2003/01/04 01:50:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/ChangeLog,v 1.7 2003/01/30 00:15:58 woodchip Exp $
+
+*fwanalog-0.6.2 (29 Jan 2003)
+
+  29 Jan 2003; Donny Davies <woodchip@gentoo.org> : New testing release.
 
 *fwanalog-0.6.1 (04 Jan 2003)
 
@@ -11,20 +15,13 @@
  
 *fwanalog-0.4-r2 (3 May 2002)
 
-  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> fwanalog-0.4-r2.ebuild :
-
+  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> :
   Added ppc to KEYWORDS.
 
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Add LICENSE, SLOT.
 
 *fwanalog-0.4-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.

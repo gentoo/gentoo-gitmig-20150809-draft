@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.11 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.12 2003/01/30 00:13:03 woodchip Exp $
+
+*analog-5.31 (29 Jan 2003)
+
+  29 Jan 2003; Donny Davies <woodchip@gentoo.org> : New testing release.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -10,34 +14,28 @@
   Added media-libs/jpeg to dependencies as its required to build analog.
 
   29 Jul 2002; Calum Selkrik <cselkirk@gentoo.org> analog-5.24.ebuild :
-  
   Added ppc to KEYWORDS. Added RDEPEND.
 
-  27 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
-  
+  27 Jun 2002; Thilo Bangert <bangert@gentoo.org> :  
   version bump - this release fixes a security bug in anlgform.pl (not enabled
   by default).
 
 *analog-5.22-r1 (3 May 2002)
 
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Added LICENSE, SLOT.
 
 *analog-5.22 (2 Apr 2002)
 
   2 Apr 2002; Ferry Meyndert <m0rpheus@gentoo.org> analog-5.21.ebuild :
-
   Removed 5.21. All versions too prior 5.22 have a css bug.
 
 *analog-5.21 (24 Feb 2002)
 
   24 Feb 2002; Donny Davies <woodchip@gentoo.org> analog-5.21.ebuild :
-
   Update to latest release.
 
 *analog-5.1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-
   Added initial ChangeLog.
