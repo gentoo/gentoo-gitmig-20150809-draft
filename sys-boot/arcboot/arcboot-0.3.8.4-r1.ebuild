@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4.ebuild,v 1.2 2004/10/19 05:52:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4-r1.ebuild,v 1.1 2004/10/27 06:30:48 kumba Exp $
 
 inherit eutils
 
@@ -77,20 +77,20 @@ src_install() {
 	# Technically, we don't need tip22 (attaches initrd to kernel), as 
 	# MIPS kernels support embedding initrd's into kernels at build time,
 	# But maybe this will be useful one day.  Until then, we leave it out.
-##	dodir /usr/lib/tip22
-##	cp tip22/tip22 ${D}/usr/lib/tip22
-##	cp tip22/tftpload.o ${D}/usr/lib/tip22
-##	cp tip22/ld.kernel.script ${D}/usr/lib/tip22
-##	cp tip22/ld.ramdisk.script ${D}/usr/lib/tip22
-##	cp tip22/ld.script ${D}/usr/lib/tip22
-##	cp arclib/libarc.a ${D}/usr/lib/tip22
+	dodir /usr/lib/tip22
+	cp tip22/tip22 ${D}/usr/lib/tip22
+	cp tip22/tftpload.o ${D}/usr/lib/tip22
+	cp tip22/ld.kernel.script ${D}/usr/lib/tip22
+	cp tip22/ld.ramdisk.script ${D}/usr/lib/tip22
+	cp tip22/ld.script ${D}/usr/lib/tip22
+	cp arclib/libarc.a ${D}/usr/lib/tip22
 
 	# Calling scripts for arcboot/tip22
 	# We also exclude these, since the logic in the debian script may not
 	# work correctly with a gentoo installation.  All the information a 
 	# user needs is provided in the example arcboot.conf, and in pkg_postinst().
 ##	dosbin scripts/arcboot
-##	dosbin tip22/tip22
+	dosbin tip22/tip22
 
 	# Conf file
 	dodir /etc
@@ -101,7 +101,7 @@ src_install() {
 	# also has info on setting the PROM option properly as well as arcboot.conf
 	# examples.
 	doman debian/arcboot.8
-##	doman debian/tip22.8
+	doman debian/tip22.8
 }
 
 pkg_postinst() {
