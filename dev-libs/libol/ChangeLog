@@ -1,8 +1,12 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.17 2003/04/14 14:20:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.18 2003/05/24 05:04:35 kumba Exp $
+
 
 *libol-0.3.9 (09 Feb 2003)
+
+  24 May 2003; Joshua Kinard <kumba@gentoo.org> libol-0.3.9.ebuild:
+  Added ~mips to KEYWORDS
 
   14 Apr 2003; Guy Martin <gmsoft@gentoo.org> libol-0.3.9.ebuild :
   Added hppa to KEYWORDS.
