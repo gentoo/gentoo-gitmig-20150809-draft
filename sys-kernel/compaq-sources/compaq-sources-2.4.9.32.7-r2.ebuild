@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r1.ebuild,v 1.1 2004/01/06 18:27:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r2.ebuild,v 1.1 2004/02/18 18:40:42 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel
 OKV=2.4.9
 KV=${OKV}-32.7
-EXTRAVERSION="-compaq"
+EXTRAVERSION="-compaq-r2"
 S=${WORKDIR}/linux-${KV}
 
 # This ebuild installs the sources for the Linux kernel shipped with the
@@ -54,6 +54,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.do_brk.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
 	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
 
 	# hand it over to the eclass...
 	kernel_universal_unpack
