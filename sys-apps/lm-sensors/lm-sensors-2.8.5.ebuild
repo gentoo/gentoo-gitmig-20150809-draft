@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.5.ebuild,v 1.9 2004/10/25 18:52:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.5.ebuild,v 1.10 2004/11/11 21:29:16 plasmaroo Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -32,8 +32,6 @@ src_unpack() {
 
 src_compile()  {
 	echo
-	einfo "*****************************************************************"
-	einfo
 	einfo "This ebuild assumes your /usr/src/linux kernel is the one you"
 	einfo "used to build i2c-2.8.2."
 	einfo
@@ -43,8 +41,6 @@ src_compile()  {
 	einfo
 	einfo "To cross-compile, 'export LINUX=\"/lib/modules/<version>/build\"'"
 	einfo "or symlink /usr/src/linux to another kernel."
-	einfo
-	einfo "*****************************************************************"
 	echo
 
 	UserModeOnly=false
