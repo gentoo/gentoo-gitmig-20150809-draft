@@ -1,4 +1,6 @@
 MD5 66b5009e94a901142fda2200e6a628c4 ppracer-0.2.1.ebuild 1389
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 80bb070c2c9b188412687cb71dd16ebd ChangeLog 385
+MD5 78e4c849d6f1328ad0fecb4b654fd40e ChangeLog 509
+MD5 451eb7002833045ca98af8ef542f8dbc ppracer-0.2.2.ebuild 1385
 MD5 10265ea392a7269a93d6ae30e0e7237c files/digest-ppracer-0.2.1 141
+MD5 979a1d066bd053d37a7d723fc6bc01d4 files/digest-ppracer-0.2.2 138

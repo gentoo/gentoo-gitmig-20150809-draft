@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/ppracer
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ChangeLog,v 1.1 2004/12/15 09:48:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ChangeLog,v 1.2 2004/12/28 22:57:59 mr_bones_ Exp $
+
+*ppracer-0.2.2 (28 Dec 2004)
+
+  28 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +ppracer-0.2.2.ebuild:
+  version bump
 
 *ppracer-0.2.1 (15 Dec 2004)
 
