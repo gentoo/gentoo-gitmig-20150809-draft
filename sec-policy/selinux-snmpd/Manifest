@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c8e4c8f8ece11f5d3d18d66df756b8c8 ChangeLog 516
+MD5 0cc3f3dc7cf1a6cd62ccef690be4f97b ChangeLog 733
 MD5 b99cfd64dc18e0af6e9328ece6d0f38b metadata.xml 515
-MD5 bb684ca59207ad6400ab2cb142d584bb selinux-snmpd-20041014.ebuild 392
-MD5 43e6adf086e5bce736f2cb2737c363e3 selinux-snmpd-20041120.ebuild 392
-MD5 b425fa6ee8832231c3d51f141b006f21 files/digest-selinux-snmpd-20041014 73
-MD5 57d0ae872ec48dfffd9bd12ef0358d05 files/digest-selinux-snmpd-20041120 73
+MD5 b12054c24480dd944e35e036ff149970 selinux-snmpd-20041128.ebuild 392
+MD5 89762f06cdb38fb95039b679b7085f73 files/digest-selinux-snmpd-20041128 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBokBNGSBEIeh4AEYRAlWRAKCQqlCzMnlEhPJ+UQWtPAiYBo2p4QCfep6t
-SWNZxVRN75yN4K8JchdRvTM=
-=7SMj
+iD8DBQFBvH+EGSBEIeh4AEYRAsD2AJ4gA/U6lP1XnZAqTKsvSV4qVt+J4ACfZMcQ
+MB8o1YfxlurSMIhjUE9493g=
+=rQMl
 -----END PGP SIGNATURE-----
