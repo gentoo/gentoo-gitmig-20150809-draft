@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd-tls/glftpd-tls-1.30.ebuild,v 1.3 2003/07/25 03:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd-tls/glftpd-tls-1.30.ebuild,v 1.4 2003/09/08 07:13:11 msterret Exp $
 
 DESCRIPTION="allows you to use SSLv3 encryption with glftpd connections"
 HOMEPAGE="http://pftp.suxx.sk/glftpd-TLS/"
