@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.6 2004/06/11 12:58:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.7 2004/06/19 16:45:41 foser Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ DEPEND=">=sys-apps/sed-4
 	>=dev-libs/expat-1.95.3"
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
 
@@ -35,15 +36,17 @@ src_unpack() {
 
 	# The date can be troublesome
 	sed -i "s:\`date\`::" configure
+
 }
 
 src_compile() {
+
 	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
 
 	# disable docs only disables docs generation (!)
 	econf --disable-docs \
-		--with-docdir=${D}/usr/share/doc/${PF} \
+		--with-docdir=/usr/share/doc/${PF} \
 		--x-includes=/usr/X11R6/include \
 		--x-libraries=/usr/X11R6/lib \
 		--with-default-fonts=/usr/X11R6/lib/X11/fonts/Type1 || die
@@ -55,12 +58,12 @@ src_compile() {
 
 	# remove Luxi TTF fonts from the list, the Type1 are much better
 	sed -i "s:<dir>/usr/X11R6/lib/X11/fonts/TTF</dir>::" fonts.conf
+
 }
 
 src_install() {
-	einstall confdir=${D}/etc/fonts \
-		datadir=${D}/usr/share \
-		docdir=${D}/usr/share/doc/${P} || die
+
+	make DESTDIR=${D} install || die
 
 	insinto /etc/fonts
 	doins ${S}/fonts.conf
