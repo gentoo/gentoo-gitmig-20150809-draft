@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.69 2004/06/01 21:33:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.70 2004/06/17 05:37:46 weeve Exp $
+
+*kde-3.2.3 (16 Jun 2004)
+
+  16 Jun 2004; Jason Wever <weeve@gentoo.org> kde-3.2.3.ebuild:
+  Re-added ~sparc keyword in relation to bug #54092.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> kde-3.2.2.ebuild:
   stable on amd64
