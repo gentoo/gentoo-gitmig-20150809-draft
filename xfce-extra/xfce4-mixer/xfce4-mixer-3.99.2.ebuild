@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-3.99.2.ebuild,v 1.1 2003/07/22 07:50:09 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-3.99.2.ebuild,v 1.2 2003/08/15 17:59:49 bcowan Exp $
 
 IUSE="alsa"
 S=${WORKDIR}/${P}
@@ -22,8 +22,10 @@ src_compile() {
 	local myconf
 	myconf=""
 	
-	use alsa && myconf="${myconf} --with-sound=alsa"
-	
+	use alsa \
+		&& myconf="${myconf} --with-sound=alsa" \
+		|| myconf="${myconf} --with-sound=oss"
+		
 	econf ${myconf} || die
 	emake || die
 }
