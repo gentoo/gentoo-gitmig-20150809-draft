@@ -1,35 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.10 2004/11/22 23:37:32 gmsoft Exp $
-
-IUSE="3dnow altivec mpi sse"
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.11 2004/12/20 16:25:26 vapier Exp $
 
 inherit flag-o-matic eutils gcc
 
 DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
+HOMEPAGE="http://www.fftw.org/"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
-HOMEPAGE="http://www.fftw.org"
 
-SLOT="3.0"
 LICENSE="GPL-2"
+SLOT="3.0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 amd64 ~ppc-macos hppa"
+IUSE="3dnow altivec mpi sse"
+
 DEPEND="virtual/libc"
-
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 amd64 ~ppc-macos ~hppa"
-
-#-fpmath=xx is reported to cause trouble on pentium4 m series
-#(for 3.0.x: this sort of thing should be handled by the --enable-sse
-#style configure flags. these are set below using the use variables,
-#but under gcc-3.2.x, sse2 seems to cause trouble.)
-filter-mfpmath
-
-# in gcc 3.2.3 at least, using sse or sse2 causes trouble with -O3
-# according to the docs, -O0 can cause trouble too! So pending further
-# testing, ...
-
-if use sse; then
-	filter-flags -O3 -O1 -O -Os
-	append-flags -O2
-fi
 
 src_unpack() {
 	unpack "${P}.tar.gz"
@@ -43,8 +27,21 @@ src_unpack() {
 	mv ${P} ${P}-double
 }
 
-
 src_compile() {
+	#-fpmath=xx is reported to cause trouble on pentium4 m series
+	#(for 3.0.x: this sort of thing should be handled by the --enable-sse
+	#style configure flags. these are set below using the use variables,
+	#but under gcc-3.2.x, sse2 seems to cause trouble.)
+	filter-mfpmath
+
+	# in gcc 3.2.3 at least, using sse or sse2 causes trouble with -O3
+	# according to the docs, -O0 can cause trouble too! So pending further
+	# testing, ...
+	if use sse; then
+		filter-flags -O3 -O1 -O -Os
+		append-flags -O2
+	fi
+
 	local myconf=""
 	local myconfsingle=""
 	local myconfdouble=""
