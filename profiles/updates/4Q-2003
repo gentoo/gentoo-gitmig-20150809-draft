@@ -59,3 +59,4 @@ move sys-apps/vcron sys-apps/vixie-cron
 move dev-lisp/mule-ucs app-emacs/mule-ucs
 move app-office/mrproject app-office/planner
 move app-misc/magicpoint app-office/magicpoint
+move app-misc/glpk app-sci/glpk
