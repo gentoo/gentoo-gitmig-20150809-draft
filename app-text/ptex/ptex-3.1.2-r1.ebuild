@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2-r1.ebuild,v 1.1 2003/09/08 22:22:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2-r1.ebuild,v 1.2 2003/09/08 22:35:56 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -40,8 +40,8 @@ DEPEND="!virtual/tetex
 	>=net-libs/libwww-5.3.2-r1"
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.2
-	dev-util/dialog
-	app-text/xdvik
+	dev-util/dialog"
+PDEPEND="app-text/xdvik
 	app-text/dvipdfmx"
 PROVIDE="virtual/tetex"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.3 2003/08/13 13:14:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.4 2003/09/08 22:35:56 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -44,7 +44,7 @@ RDEPEND="!virtual/tetex
 	>=dev-lang/perl-5.2
 	dev-util/dialog
 	cjk? ( =media-libs/vflib-2* )"
-PROVIDE="virtual/tetex-2.0.2"
+PROVIDE="virtual/tetex"
 
 src_unpack() {
 
