@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.9 2002/10/07 13:41:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.10 2002/10/31 20:04:27 jrray Exp $
 
 IUSE="mysql"
 
@@ -84,8 +84,8 @@ src_compile() {
 			--enable-valias=y \
 			--enable-mysql-replication=n"
 	
-	# the configure script tries to make directories not using ${D}
-	sed -e '1560,1567d' -e '2349d' -e '2107d' -e '2342d' configure > configure.new
+	# the configure script tries to force root and make directories not using ${D}
+	sed -e '1282,1289d' -e '1560,1567d' -e '2349d' -e '2107d' -e '2342d' configure > configure.new
 	mv --force configure.new configure
 	chmod u+x configure
 

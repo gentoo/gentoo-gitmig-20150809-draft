@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.5 2002/10/07 13:41:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.6 2002/10/31 20:04:27 jrray Exp $
+
+  31 Oct 2002; J Robert Ray <jrray@gentoo.org> vpopmail-5.2.1-r2.ebuild :
+  Remove portion of configure that forces itself to be run as root, so
+  it can still be merged with portage fakeroot patches.
 
 *vpopmail-5.2.1 (24 Jul 2002)
 
