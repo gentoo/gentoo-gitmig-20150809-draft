@@ -1,7 +1,12 @@
 # ChangeLog for net-mail/ripmime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.5 2003/06/29 00:29:10 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.6 2003/07/20 06:35:33 gregf Exp $
+
+*ripmime-1.3.0.4 (20 Jul 2003)
+
+  20 Jul 2003; Greg Fitzgerald <gregf@gentoo.org> ripmime-1.3.0.4.ebuild:
+  Version Bump
 
 *ripmime-1.3.0.3 (29 Jun 2003)
   
