@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.688 2004/10/19 19:40:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.689 2004/10/20 05:29:36 rizzo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -458,6 +458,7 @@ net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-im/bitlbee:flood - Enable flood protection support
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
+net-im/gaim:eds - Enable Evolution Data Server (EDS) support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
