@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r3.ebuild,v 1.2 2003/07/15 21:15:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r3.ebuild,v 1.3 2003/07/16 17:00:43 mholzer Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb"
 
@@ -71,10 +71,27 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
+pkg_setup() {
+	if [ "`use svga`" ]
+	then
+		einfo "Modprobing svgalib_helper"
+		modprobe svgalib_helper
+	fi
+}
 
 src_unpack() {
 
 	unpack MPlayer-${MY_PV}.tar.bz2
+
+	if [ "`use svga`" ]
+	then
+		unpack svgalib_helper-1.9.17-mplayer.tar.bz2
+		mv ${WORKDIR}/svgalib_helper ${S}/libdha
+		cd ${S}/libdha
+		mv Makefile Makefile.orig
+		sed -e "s/^#CFLAGS/CFLAGS/" Makefile.orig > Makefile
+		cd ${WORKDIR}
+	fi
 
 	use truetype || \
 		unpack font-arial-iso-8859-1.tar.bz2 font-arial-iso-8859-1.tar.bz2
