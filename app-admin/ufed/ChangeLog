@@ -1,10 +1,16 @@
 # ChangeLog for app-admin/ufed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.18 2003/08/01 22:47:16 fava Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.19 2003/08/13 05:00:04 fava Exp $
+
+
+*ufed-0.34 (12 Aug 2003)
+
+  12 Aug 2003; Fred Van Andel <fava@gentoo.org> ufed-0.34.ebuild,
+  New version committed in stable, fixed bug 26360   
 
 *ufed-0.33 (01 Aug 2003)
 
-  04 May 2003; Fred Van Andel <fava@gentoo.org> ufed-0.33.ebuild,
+  01 Aug 2003; Fred Van Andel <fava@gentoo.org> ufed-0.33.ebuild,
   Fixed bug 25707. No version bump, ebuild change only.
   
 *ufed-0.33 (22 July 2003)
