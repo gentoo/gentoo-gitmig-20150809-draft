@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.15 2005/01/04 04:02:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.16 2005/01/04 04:28:15 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils toolchain-funcs
 
@@ -51,12 +51,13 @@ src_unpack() {
 		Makefile \
 		|| die "sed Makefile opts failed"
 	sed -i \
-		-e "s:/usr/src/linux/include:${ROOT}/usr/include:" \
+		-e 's:-I$(KERNEL_INCLUDE)::' \
+		-e 's:-I/usr/src/linux/include::' \
 		Makefile libipsec/Makefile setkey/Makefile \
 		|| die "sed /usr/include failed"
 	use ipv6 || sed -i -e 's:IPV6_TARGETS=:#IPV6_TARGETS=:' Makefile
 
-	sed -i "s:-ll:-lfl -L${ROOT}/usr/lib ${LDFLAGS}:" setkey/Makefile || die "sed setkey failed"
+	sed -i "s:-ll:-lfl ${LDFLAGS}:" setkey/Makefile || die "sed setkey failed"
 
 	sed -i 's:yacc:bison -y:' libipsec/Makefile #59191
 }
@@ -64,7 +65,9 @@ src_unpack() {
 src_compile() {
 	tc-export CC AR
 
-	if [ -e ${ROOT}/usr/include/linux/pfkeyv2.h ] ; then
+	# We have to make sure ipsec.h is usuable #67569
+	echo '#include <linux/ipsec.h>' > "${T}"/test.c
+	if ${CC} -c "${T}"/test.c >&/dev/null ; then
 		cd ${S}/libipsec
 		emake || die "libipsec failed"
 
@@ -82,17 +85,12 @@ src_compile() {
 }
 
 src_install() {
-	if [ -e ${ROOT}/usr/include/linux/pfkeyv2.h ] ; then
-		into /usr
-		dobin ${S}/setkey/setkey
-	fi
-
-	cd ${S}
 	into /
 	dobin ping
 	use ipv6 && dobin ping6
 	dosbin arping
 	into /usr
+	[[ -x setkey/setkey ]] && dobin setkey/setkey
 	dosbin tracepath
 	use ipv6 && dosbin trace{path,route}6
 	dosbin clockdiff rarpd rdisc ipg tftpd
