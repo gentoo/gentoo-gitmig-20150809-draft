@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.8.ebuild,v 1.9 2004/06/25 00:33:47 agriffis Exp $ 
-
-IUSE=""
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.8.ebuild,v 1.10 2004/06/29 00:10:00 carlo Exp $ 
 
 inherit kde
 
-need-kde 3
+DESCRIPTION="Provides integration for the MLDonkey P2P software and KDE 3"
+HOMEPAGE="http://www.gibreel.net/projects/kmldonkey"
+SRC_URI="http://savannah.nongnu.org/download/kmldonkey/unstable.pkg/${PV}/${P}.tar.gz"
 
+
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-SLOT="0"
+IUSE=""
 
-DESCRIPTION="Provides integration for the MLDonkey P2P software and KDE 3"
-SRC_URI="http://savannah.nongnu.org/download/kmldonkey/unstable.pkg/${PV}/${P}.tar.gz"
-HOMEPAGE="http://www.gibreel.net/projects/kmldonkey"
+need-kde 3
 
 pkg_postinst() {
 	echo
