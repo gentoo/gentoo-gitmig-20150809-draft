@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6.ebuild,v 1.2 2004/06/28 19:10:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6.ebuild,v 1.3 2004/06/29 16:52:55 dholm Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 
 RDEPEND="media-sound/xmms"
 DEPEND="${RDEPEND}
