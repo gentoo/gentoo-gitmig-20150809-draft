@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.10 2002/08/29 21:10:01 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.11 2002/09/07 13:20:01 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -13,7 +13,7 @@ SRC_URI="x86? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-
         sparc64? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/sparc/FCS-02b/j2re-1.3.1-02b-FCS-linux-sparc.bin"
 HOMEPAGE="http://www.blackdown.org"
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.0"
+	>=dev-java/java-config-0.2.5"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"

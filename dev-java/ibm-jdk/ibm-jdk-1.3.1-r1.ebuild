@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.8 2002/09/01 13:45:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.9 2002/09/07 13:16:09 karltk Exp $
 
 . /usr/portage/eclass/java.eclass
 inherit java
@@ -12,7 +12,7 @@ SRC_URI=""
 HOMEPAGE="http://www6.software.ibm.com/dl/dklx130/dklx130-p"
 
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.1
+	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.9 2002/08/29 21:03:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.10 2002/09/07 13:19:18 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -14,7 +14,7 @@ SRC_URI="x86? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-
 
 HOMEPAGE="http://www.blackdown.org"
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.0
+	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jdk-1.3.1
