@@ -2,7 +2,7 @@ MD5 5df0258c789a4066c4f2b3bc4a86622b ChangeLog 709
 MD5 997ddc2652e6cae5855d072a50433223 crossover-office-bin-3.0.1.ebuild 891
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
 MD5 7e7b0a67dc41fbabc83be8032856bb42 crossover-office-bin-4.0.ebuild 889
-MD5 1aa66fdb29ae845e381caec3c6a1af2e crossover-office-bin-4.1.ebuild 889
-MD5 cd3ffa8407ac094aa56c0d80edb96e61 files/digest-crossover-office-bin-3.0.1 82
+MD5 b01a1f1d8f038587881e7babc90d697a crossover-office-bin-4.1.ebuild 1002
 MD5 7ecc5ba7b6c1138905b6f352ec7e6e9d files/digest-crossover-office-bin-4.0 80
+MD5 cd3ffa8407ac094aa56c0d80edb96e61 files/digest-crossover-office-bin-3.0.1 82
 MD5 f381c74d9cb69f7e54447e0ebe1680b9 files/digest-crossover-office-bin-4.1 80
