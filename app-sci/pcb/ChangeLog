@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/pcb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/ChangeLog,v 1.6 2004/04/19 12:10:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/ChangeLog,v 1.7 2004/05/20 12:31:34 vapier Exp $
+
+*pcb-20040215 (20 May 2004)
+
+  20 May 2004; Mike Frysinger <vapier@gentoo.org> +pcb-20040215.ebuild:
+  Version bump #48334 by David Pufer
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pcb-20030815.ebuild,
   pcb-20031113-r1.ebuild, pcb-20031113.ebuild:
