@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.5 2002/10/04 05:32:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.6 2002/10/29 21:02:55 karltk Exp $
 
 S=${WORKDIR}/svn
 S_APACHE=${WORKDIR}/httpd-2.0
@@ -31,11 +31,11 @@ DEPEND=">=dev-lang/python-2.0
 	>=sys-devel/libtool-1.4.1-r1
 	>=sys-devel/bison-1.28-r3
 	>=sys-devel/m4-1.4o-r2
-	>=net-misc/neon-0.19.2"
+	=net-misc/neon-0.19.2*"
 RDEPEND=">=dev-lang/python-2.0
 	>=sys-apps/diffutils-2.7.7
 	>=sys-devel/m4-1.4o-r2
-	>=net-misc/neon-0.19.2"
+	=net-misc/neon-0.19.2*"
 	
 src_bootstrap() {
 	cd ${WORKDIR}
