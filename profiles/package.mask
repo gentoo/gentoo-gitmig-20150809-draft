@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkeadle@gentoo.org> (30 Sep 2002)
+# Masking pending BRRRR disfreeze
+media-video/SDLcam
+
 # <lostlogic@gentoo.org> (30 Sep 2002)
 # Another new procps from Rik Van Riel
 =sys-apps/procps-2.0.9
