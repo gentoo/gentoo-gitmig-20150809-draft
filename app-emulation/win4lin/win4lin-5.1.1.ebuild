@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.1 2004/08/26 20:00:09 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.2 2004/09/05 23:54:49 ciaranm Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ pkg_setup() {
 		ewarn "Is a good idea to backup your license code too."
 		echo
 		die "blocked by older version"
-	sleep 5
+		epause
 	fi
 }
 

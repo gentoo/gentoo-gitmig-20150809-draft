@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/win4lin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.18 2004/08/26 20:00:09 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.19 2004/09/05 23:54:49 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> win4lin-5.1.1.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *win4lin-5.1.1 (18 Mar 2004)
 
