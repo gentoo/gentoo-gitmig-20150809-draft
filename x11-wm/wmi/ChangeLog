@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/wmi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.4 2004/06/24 23:46:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.5 2004/06/30 18:56:06 usata Exp $
+
+*wmi-8 (01 Jul 2004)
+
+  01 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +files/wmi.desktop,
+  +wmi-8.ebuild:
+  Version bumped. xsession file is added. Thanks to John Nilsson
+  <john@milsson.nu>, closing bug #55640
 
   22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> wmi-7.ebuild:
   Add IUSE
