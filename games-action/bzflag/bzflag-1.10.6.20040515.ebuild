@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.6.20040515.ebuild,v 1.1 2004/05/17 04:59:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.6.20040515.ebuild,v 1.2 2004/05/27 22:39:31 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE=""
 
-DEPEND="virtual/opengl"
+RDEPEND="virtual/glibc
+	virtual/opengl"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -22,11 +25,12 @@ src_unpack() {
 		-e 's:^CFLAGS=.*::' \
 		-e 's:^CXXFLAGS=.*::' \
 		-e 's:-mcpu=$host_cpu::' \
-		configure
+		configure \
+		|| die "sed failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README.UNIX TODO README ChangeLog BUGS PORTING
 	prepgamesdirs
 }
