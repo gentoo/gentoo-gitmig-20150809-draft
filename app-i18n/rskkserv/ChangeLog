@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/rskkserv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.11 2004/11/13 12:02:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.12 2004/11/17 04:08:30 usata Exp $
+
+*rskkserv-2.95.3-r1 (17 Nov 2004)
+
+  17 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +files/rskkserv-2.95.initd,
+  +rskkserv-2.95.3-r1.ebuild:
+  Added conf-o2n.rb and modified init.d script.
 
 *rskkserv-2.95.3 (13 Nov 2004)
 

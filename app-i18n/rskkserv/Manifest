@@ -1,19 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1180d98a8326a79f089dbda5140344af ChangeLog 1927
+MD5 0fc0dd2353d2a4c935b033d39eb03661 rskkserv-2.94.13-r2.ebuild 1846
+MD5 a21be9cd8449c4e049cc6167eff0513d ChangeLog 2118
 MD5 c90dd470dc467aece7b8ac23c8771009 metadata.xml 174
 MD5 1e9db11f66ee236f07693f00b3e14548 rskkserv-2.95.3.ebuild 1743
-MD5 0fc0dd2353d2a4c935b033d39eb03661 rskkserv-2.94.13-r2.ebuild 1846
-MD5 e6d30875bbd368e05ebb14e228bd9aac files/digest-rskkserv-2.95.3 66
-MD5 2c629d87dc7e3062a71fc992d0a6591b files/rskkserv.initd 715
-MD5 db345ea9205680884d04619ab10d3792 files/rskkserv-2.94.13-conf-gentoo.diff 1595
+MD5 a33e30467fae58696edb1a03cacfc1e3 rskkserv-2.95.3-r1.ebuild 1883
 MD5 cbef41424aca56798bb75696718641b6 files/rskkserv-2.94.13-gentoo.diff 295
+MD5 db345ea9205680884d04619ab10d3792 files/rskkserv-2.94.13-conf-gentoo.diff 1595
+MD5 5b2e771eebc8e3662c9a657cbd446116 files/rskkserv-2.95.initd 753
 MD5 66e1b2204668b263930a40639c60dac7 files/digest-rskkserv-2.94.13-r2 68
+MD5 2c629d87dc7e3062a71fc992d0a6591b files/rskkserv.initd 715
+MD5 e6d30875bbd368e05ebb14e228bd9aac files/digest-rskkserv-2.95.3-r1 66
+MD5 e6d30875bbd368e05ebb14e228bd9aac files/digest-rskkserv-2.95.3 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBlfZIVWNWqTUmv+0RAr9KAJ4lO33t17qlBCngF4L1VvO2WE68PACgkkjb
-+1SobTuTu2cO3dAIK2OLa4o=
-=Ww9S
+iD8DBQFBms7HVWNWqTUmv+0RAt3FAKCp9CmEoKYcXcnwrN7HmjdO5YchvQCfW18W
+7nUpIQRAkCDMCYm21yyul+0=
+=3VXg
 -----END PGP SIGNATURE-----
