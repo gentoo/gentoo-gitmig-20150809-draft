@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.7 2003/06/08 04:32:05 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.8 2003/07/28 09:59:22 mcummings Exp $
+
+*Finance-Quote-1.08 (28 Jul 2003)
+
+  28 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  Finance-Quote-1.08.ebuild:
+  Version bump from CPAN, bug 25361
 
   07 Jun 2003; <rac@gentoo.org> Finance-Quote-1.07.ebuild:
   Add IUSE
