@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1.ebuild,v 1.19 2004/07/21 03:02:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1.ebuild,v 1.20 2005/02/16 07:24:58 pclouds Exp $
 
 inherit eutils
 
@@ -28,5 +28,5 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr install || die
+	make DESTDIR=${D} prefix=${D}/usr install || die
 }
