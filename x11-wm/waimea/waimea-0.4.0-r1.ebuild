@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0-r1.ebuild,v 1.14 2004/06/24 23:45:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0-r1.ebuild,v 1.15 2005/04/06 13:50:41 usata Exp $
 
 inherit eutils
 
@@ -20,6 +20,14 @@ DEPEND="virtual/x11
 
 PROVIDE="virtual/blackbox"
 
+pkg_setup() {
+	if ! built_with_use 'media-libs/imlib2' X ; then
+		# bug #86496
+		eerror "imlib2 must be compiled with X USE flag enabled."
+		die "Please remerge imlib2 with X USE flag and try again."
+	fi
+}
+
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
@@ -28,8 +36,8 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		`use_enable xinerama` \
-		`use_enable truetype xft` \
+		$(use_enable xinerama) \
+		$(use_enable truetype xft) \
 		--enable-shape \
 		--enable-render \
 		--enable-randr \
