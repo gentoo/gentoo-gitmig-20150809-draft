@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.330 2004/05/02 15:10:40 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.331 2004/05/02 15:41:50 jhhudso Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -200,6 +200,7 @@ net-dialup/ppp:atm - enable support for pppoatm
 net-dns/djbdns:fwdzone - enables forward zone patch
 net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
+net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/pdnsd:isdn - enable isdn features
 net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
