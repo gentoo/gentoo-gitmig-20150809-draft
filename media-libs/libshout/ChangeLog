@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libshout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.13 2004/07/01 08:00:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.14 2004/08/27 02:57:43 tgall Exp $
+
+  26 Aug 2004; Tom Gall <tgall@gentoo.org> libshout-2.0.ebuild:
+  stable on ppc64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libshout-1.0.9.ebuild, libshout-2.0.ebuild:

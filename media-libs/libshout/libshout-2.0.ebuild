@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.0.ebuild,v 1.9 2004/07/01 08:00:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.0.ebuild,v 1.10 2004/08/27 02:57:43 tgall Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.icecast.org/files/libshout/${P}.tar.gz"
 HOMEPAGE="http://www.icecast.org"
 
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ~ppc"
+KEYWORDS="x86 sparc amd64 ~ppc ppc64"
 LICENSE="GPL-2"
 
 RDEPEND="virtual/libc
