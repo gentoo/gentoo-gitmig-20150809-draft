@@ -1,0 +1,265 @@
+diff -ur otcl-1.8/otcl.c otcl-1.8.new/otcl.c
+--- otcl-1.8/otcl.c	2004-01-05 16:56:07.000000000 -0800
++++ otcl-1.8.new/otcl.c	2004-01-13 04:12:10.000000000 -0800
+@@ -290,7 +290,7 @@
+   if (!l) return 0;
+   if (l->cl == s) {
+     *sl = l->next;
+-    ckfree((char*)l);
++    ckfree((char*)l); l = NULL;
+     return 1;
+   }
+   while (l->next && l->next->cl != s) l = l->next;
+@@ -417,18 +417,18 @@
+     args[2] = cl ? Tcl_GetCommandName(in, cl->object.id) : "";
+     for (i = 1; i < argc; i++) args[i+2] = argv[i];
+ 	
+-    /*
++   /* 
+     printf("%d ", argc);
+     for (i = 0; i < argc; i++)
+       printf("%s ", argv[i]);
+     printf("\n");
+-    */
+-    /*
++    
++    
+     for (i = 0; i < argc + 2; i++)
+       printf("%s ", args[i]);
+     printf("\n");
+-    */
+-
++   */
++    
+     result = (*proc)(cp, in, argc+2, args);
+     /* this adds to the stack trace */
+     if (result == TCL_ERROR) {
+@@ -442,7 +442,7 @@
+ 		    old_args2, argv[1], in->errorLine);
+ 	    compat_Tcl_AddObjErrorInfo(in, msg, -1);
+     }
+-    if (argc+2 > OTCLSMALLARGS) { ckfree((char*)args); args = 0; }
++    if (argc+2 > OTCLSMALLARGS) { ckfree((char*)args); args = NULL; }
+     return result;
+   }
+ 
+@@ -479,7 +479,7 @@
+ 		    cl ? args[2] : argv[0], in->errorLine);
+ 	    compat_Tcl_AddObjErrorInfo(in, msg, -1);
+     }
+-    if (argc+3 > OTCLSMALLARGS) { ckfree((char*)args); args = 0; }
++    if (argc+3 > OTCLSMALLARGS) { ckfree((char*)args); args = NULL; }
+     return result;
+   }  
+ 
+@@ -500,7 +500,7 @@
+ 
+ static void
+ AutoLoaderDP(ClientData cd) {
+-  ckfree((char*)cd);
++  ckfree((char*)cd); cd = NULL;
+ }
+ 
+ static int
+@@ -579,8 +579,8 @@
+   Tcl_HashEntry *hPtr = Tcl_FindHashEntry(methods, nm);
+   if (hPtr != 0) {
+     Tcl_CmdInfo* co = (Tcl_CmdInfo*)Tcl_GetHashValue(hPtr);
+-    if (co->deleteProc != 0) (*co->deleteProc)(co->deleteData);
+-    ckfree((char*)co);
++    if (co->deleteProc != 0) { (*co->deleteProc)(co->deleteData); } co->deleteProc = NULL;
++    ckfree((char*)co); co = NULL;
+     Tcl_DeleteHashEntry(hPtr);
+     return 1;
+   }
+@@ -614,7 +614,7 @@
+ 			(Tcl_Namespace*)NULL, 0);
+   if (cmd) 
+ 	  Tcl_DeleteCommandFromToken(pdpd->interp, cmd);
+-  ckfree((char*)pdpd);
++  ckfree((char*)pdpd); pdpd = NULL;
+ }
+ #endif  
+ 
+@@ -674,7 +674,7 @@
+ 
+   for (i = 0; i < argc; i++)
+     Tcl_DecrRefCount(objv[i]);
+-  ckfree((char *)objv);
++  ckfree((char *)objv); objv = NULL;
+   
+ #else /* TCL_MAJOR_VERSION < 8 */
+   
+@@ -691,7 +691,7 @@
+ 
+ #endif /* TCL_MAJOR_VERSION < 8 */
+ 
+-  ckfree((char*)nargs);
++  ckfree((char*)nargs); nargs = NULL;
+   argv[1] = name;
+   argv[2] = oargs;
+   
+@@ -926,7 +926,7 @@
+ static void 
+ PrimitiveODestroy(ClientData cd) {
+   PrimitiveODestroyNoFree(cd);   
+-  ckfree((char*)cd);
++  ckfree((char*)cd); cd = NULL;
+ }
+ 
+ static void
+@@ -1002,18 +1002,18 @@
+     Tcl_CmdInfo* co = (Tcl_CmdInfo*)Tcl_GetHashValue(hp2);
+     ClientData cdest = cd;
+     if (co->clientData != 0) cdest = co->clientData;
+-    if (co->deleteProc != 0) (*co->deleteProc)(co->deleteData);
+-    ckfree((char*)co);
++    if (co->deleteProc != 0) { (*co->deleteProc)(co->deleteData); } co->deleteProc = NULL;
++    ckfree((char*)co); co = NULL;
+   }
+   if (obj->procs) {
+-    Tcl_DeleteHashTable(obj->procs); ckfree((char*)(obj->procs));
++    Tcl_DeleteHashTable(obj->procs); ckfree((char*)(obj->procs)); obj->procs = NULL;
+   }
+ 
+   (void)RemoveInstance(obj, obj->cl);
+ 
+ #if TCL_MAJOR_VERSION >= 8
+-  ckfree((char*)(obj->variables.procPtr));
+-  ckfree((char*)(obj->variables.varTablePtr));
++  ckfree((char*)(obj->variables.procPtr)); obj->variables.procPtr = NULL;
++  ckfree((char*)(obj->variables.varTablePtr)); obj->variables.varTablePtr = NULL;
+ #endif
+ }
+ 
+@@ -1035,8 +1035,7 @@
+       obj->id = Tcl_CreateCommand(in, name, OTclDispatch, (ClientData)obj,
+ 				PrimitiveODestroy);
+     } else {
+-      ckfree((char *)obj);
+-      obj = NULL;
++      ckfree((char *)obj); obj = NULL;
+     }
+ #endif
+   return obj;
+@@ -1123,14 +1122,14 @@
+     Tcl_CmdInfo* co = (Tcl_CmdInfo*)Tcl_GetHashValue(hPtr);
+     ClientData cdest = cd;
+     if (co->clientData != 0) cdest = co->clientData;
+-    if (co->deleteProc != 0) (*co->deleteProc)(co->deleteData);
+-    ckfree((char*)co);
++    if (co->deleteProc != 0) { (*co->deleteProc)(co->deleteData); } co->deleteProc = NULL;
++    ckfree((char*)co); co = NULL;
+   }
+   Tcl_DeleteHashTable(&cl->instprocs);
+ 
+   if (cl->objectdata) {
+     Tcl_DeleteHashTable(cl->objectdata);
+-    ckfree((char*)(cl->objectdata)); cl->objectdata = 0;
++    ckfree((char*)(cl->objectdata)); cl->objectdata = NULL;
+   }
+ 
+   /*
+@@ -1151,7 +1150,7 @@
+    * PrimitiveODestory to destory the hash entries first */
+   PrimitiveODestroyNoFree(cd);
+   Tcl_DeleteHashTable(&cl->instances);
+-  ckfree((char*)cd);
++  ckfree((char*)cd); cd = NULL;
+ }
+ 
+ 
+@@ -1176,8 +1175,7 @@
+       obj->id = Tcl_CreateCommand(in, name, OTclDispatch, (ClientData)cl,
+ 				PrimitiveCDestroy);
+     } else {
+-      ckfree((char *)cl);
+-      cl = NULL;
++      ckfree((char *)cl); cl = NULL;
+     }
+ #endif
+   return cl;
+@@ -1359,6 +1357,9 @@
+   OTclObject* obj = OTclAsObject(in, cd);
+   Tcl_CmdInfo proc;
+   int op;
++  // NULL out the deleteProc value
++  // as it may be filled with random data on variable creation
++  proc.deleteProc = NULL; proc.deleteData = NULL;
+ 
+   if (!obj) return OTclErrType(in, argv[0], "Object");
+   if (argc != 7) return OTclErrArgCnt(in,argv[0],"proc name args body");
+@@ -1488,7 +1489,7 @@
+       Tcl_AppendResult(in, "expected ?inst/local? or ?inst? ?local? but got ",
+ 		       argv[i]);
+     }
+-    ckfree((char*)av);
++    ckfree((char*)av); av = NULL;
+     if (result != TCL_OK) break;
+   }
+   return result;
+@@ -1594,10 +1595,10 @@
+ 	scl[i] = OTclGetClass(in, av[i]);
+ 	loaded = (scl[i] != 0);
+       }
+-      ckfree(args);
++      ckfree(args); args = NULL;
+       if (!loaded) {
+-	ckfree((char*)av);
+-	ckfree((char*)scl);
++	ckfree((char*)av); av = NULL;
++	ckfree((char*)scl); scl = NULL;
+ 	return OTclErrBadVal(in, "a list of classes", argv[4]);
+       }
+     }
+@@ -1621,8 +1622,8 @@
+   }
+   
+   if (reversed != 0) {
+-    ckfree((char*)av);
+-    ckfree((char*)scl);
++    ckfree((char*)av); av = NULL;
++    ckfree((char*)scl); scl = NULL;
+     return OTclErrBadVal(in, "classes in dependence order", argv[4]);
+   }
+   
+@@ -1641,8 +1642,8 @@
+   }
+   for (i = 0; i < ac; i++)
+     AddSuper(cl, scl[i]);
+-  ckfree((char*)av);
+-  ckfree((char*)scl);
++  ckfree((char*)av); av = NULL;
++  ckfree((char*)scl); scl = NULL;
+   FlushPrecedences(cl);
+   
+   if (!ComputePrecedence(cl)) {
+@@ -1784,17 +1785,25 @@
+   OTclClass* cl = OTclAsClass(in, cd);
+   Tcl_CmdInfo proc;
+   int op;
++  // NULL out the deleteProc value
++  // as it may be filled with random data on variable creation
++  proc.deleteProc = NULL; proc.deleteData = NULL;
+ 
+   if (!cl) return OTclErrType(in, argv[0], "Class");
+   if (argc != 7) return OTclErrArgCnt(in,argv[0],"instproc name args body");
+   
++  
+   /*
+    * if the args list is "auto", the body is a script to load the proc
+    */
+ 
+-  if (!strcmp("auto", argv[5])) op = MakeAuto(&proc, argv[6]);
+-  else if (argv[5][0]==0 && argv[6][0]==0) op = -1;
+-  else op = MakeProc(&proc,in, argc-3, argv+3);
++  if (!strcmp("auto", argv[5])) { 
++      op = MakeAuto(&proc, argv[6]); 
++  } else if (argv[5][0]==0 && argv[6][0]==0) { 
++      op = -1; 
++  } else {
++      op = MakeProc(&proc,in, argc-3, argv+3);
++  }
+ 
+   (void)RemoveMethod(&cl->instprocs, argv[4], (ClientData)cl);
+   if (op == 1) AddMethod(&cl->instprocs, argv[4], proc.proc,
