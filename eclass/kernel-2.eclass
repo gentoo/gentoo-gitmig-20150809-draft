@@ -15,6 +15,9 @@
 #
 # K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be automatically set within the kernel Makefile
 # K_NOUSENAME		- if this is set then EXTRAVERSION will not include the first part of ${PN} in EXTRAVERSION
+# K_PREPATCHED		- if the patchset is prepatched (ie: mm-sources, ck-sources, ac-sources) it will use PR (ie: -r5) as the patchset version for EXTRAVERSION
+#			- and not use it as a true package revision
+#
 # K_EXTRAEINFO		- this is a new-line seperated list of einfo displays in postinst and can be used to carry additional postinst messages
 # K_EXTRAEWARN		- same as K_EXTRAEINFO except ewarn's instead of einfo's
 # UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
@@ -377,10 +380,16 @@ detect_version() {
 	RELEASETYPE=${RELEASE//[0-9]/}
 	
 	EXTRAVERSION="${RELEASE}"
-	[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
-	[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	
-	KV=${OKV}${EXTRAVERSION}
+	if [ -n "${K_PREPATCHED}" ]
+	then
+		KV="${OKV}-${PN/-*/}${PR/r/}"
+	else
+		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
+		[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+		
+		KV=${OKV}${EXTRAVERSION}
+	fi
 	
 	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the portage naming convention
 	# these cannot be supported, but the code here can handle it up until this point
