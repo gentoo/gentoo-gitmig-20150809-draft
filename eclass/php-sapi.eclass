@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.49 2004/09/15 07:45:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.50 2004/10/12 18:16:50 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -115,7 +115,9 @@ RDEPEND="${RDEPEND}
    yaz? ( dev-libs/yaz )
    doc? ( app-doc/php-docs )
    gmp? ( dev-libs/gmp )
-   mssql? ( dev-db/freetds )"
+   mssql? ( dev-db/freetds )
+   kerberos? ( virtual/krb5 )
+   "
 
 
 # USE structure doesn't support ~x86
