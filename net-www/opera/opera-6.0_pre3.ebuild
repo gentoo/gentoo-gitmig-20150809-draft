@@ -1,3 +1,8 @@
+# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Karl Trygve Kalleberg <karltk@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre3.ebuild,v 1.2 2002/01/29 16:57:22 gbevin Exp $
+
 NV=6.0-20020110.2-shared_qt.i386
 S=${WORKDIR}/opera-${NV}
 DESCRIPTION="Opera webbrowser, version 6.0 TP"
@@ -10,6 +15,7 @@ src_install() {
 
 	mv install.sh install.sh_orig
 	sed -e "s:/usr/share/pixmaps:${D}/usr/share/pixmaps:g" \
+		 -e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
 		-e "s:/usr/share/icons:${D}/usr/share/icons:g" \
 		-e "s:/etc/X11/wmconfig:${D}/etc/X11/wmconfig:g" \
 		-e "s:/usr/share/gnome:${D}/usr/share/gnome:g" \
