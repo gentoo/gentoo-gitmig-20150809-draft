@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-btexmms/xmms-btexmms-0.5.ebuild,v 1.1 2004/06/17 01:00:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-btexmms/xmms-btexmms-0.5.ebuild,v 1.2 2004/06/18 20:20:23 dholm Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SLOT="0"
 
 LICENSE="GPL-2"
 
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 DEPEND="media-sound/xmms
 	>=net-wireless/bluez-utils-2.3"
 
