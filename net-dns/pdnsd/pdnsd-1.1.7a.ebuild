@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.7a.ebuild,v 1.1 2002/08/05 15:43:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.7a.ebuild,v 1.2 2002/08/14 12:10:49 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Proxy DNS server with permanent caching"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD | GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/dns2go-1.1-r2.ebuild,v 1.3 2002/07/17 10:05:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/dns2go-1.1-r2.ebuild,v 1.4 2002/08/14 12:10:49 murphy Exp $
 
 S=${WORKDIR}/dns2go-1.1-1
 DESCRIPTION="Dns2Go Linux Client v1.1"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.dns2go.com"
 
 SLOT="0"
 LICENSE="DNS2GO"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPENDS="virtual/glibc"
 

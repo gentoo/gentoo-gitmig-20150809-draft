@@ -8,7 +8,7 @@ DESCRIPTION="bind tools: dig, nslookup, and host"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.isc.org/BIND/bind9.html"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="as-is"
 SLOT="0"
 

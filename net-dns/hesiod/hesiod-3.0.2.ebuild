@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2.ebuild,v 1.2 2002/07/17 10:05:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2.ebuild,v 1.3 2002/08/14 12:10:49 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hesiod is a system which uses existing DNS functionality to provide access to databases of information that changes infrequently."
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://athena-dist.mit.edu/pub/ATHENA/hesiod"
 
 SLOT="0"
 LICENSE="ISC"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc"
 
