@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.14 2003/03/16 03:16:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.15 2003/03/16 04:21:05 seemant Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 # Modified by: Seemant Kulleen <seemant@gentoo.org>
@@ -55,7 +55,7 @@ fi
 		mirror://gentoo/vim-${PV}-patches-001-${VIMPATCH}.tar.bz2"
 
 SRC_URI="${SRC_URI}
-	mirror://vim-${PV}-gentoo-patches.tar.bz2
+	mirror://vim-${PV}-gentoo-patches.tar.bz2"
 
 LANG="vim-${vim_version}-lang.tar.gz"
 if [ ! -z "${LANG}" ]; then
