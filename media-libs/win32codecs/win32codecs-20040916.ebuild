@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20040916.ebuild,v 1.1 2004/10/23 15:20:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20040916.ebuild,v 1.2 2004/10/23 23:36:18 chriswhite Exp $
 
 
 DESCRIPTION="Win32 binary codecs for video and audio playback support"
@@ -9,18 +9,25 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 -ppc -sparc -alpha"
-IUSE="quicktime real xanim"
+IUSE="quicktime real"
 
 S=${WORKDIR}/all-${PV}
 
 src_install() {
 	cd ${S}
 
-	insinto /usr/lib/win32
+	if use real
+	then
+		mkdir -p ${D}/usr/lib/real
+		mv *so.6.0 ${D}/usr/lib/real
+	fi
 
-	doins *.dll
+	if use quicktime
+	then
+		mkdir -p ${D}/usr/lib/quicktime
+		mv *.qtx *.qts qtmlClient.dll  ${D}/usr/lib/quicktime
+	fi
 
-	use real && doins *so.6.0
-	use quicktime && doins *.qtx *.qts
-	use xanim && doins *.xa
+	mkdir -p ${D}/usr/lib/win32
+	mv *.dll ${D}/usr/lib/win32
 }
