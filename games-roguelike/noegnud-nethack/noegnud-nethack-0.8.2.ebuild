@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.2.ebuild,v 1.1 2003/09/19 02:42:35 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.2.ebuild,v 1.2 2003/09/19 23:31:09 vapier Exp $ 
 
 inherit games
 
@@ -22,6 +22,7 @@ DEPEND="media-libs/libsdl
 	dev-util/yacc"
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-image
+	media-libs/sdl-mixer
 	virtual/opengl
 	games-roguelike/noegnud-data"
 
