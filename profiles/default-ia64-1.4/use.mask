@@ -75,3 +75,6 @@ bmp
 aqua
 
 emul-linux-x86
+
+# mono compiler doesn't build on ia64 (20 Jan 2005 agriffis)
+mono
