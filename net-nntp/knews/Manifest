@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 dcec3ca82dc08adeff0c8eb8e3dac814 knews-1.0.1b-r2.ebuild 1854
-MD5 1308f10b9341dadbcdb7094ec980a9b5 ChangeLog 1479
+MD5 0205ea8aa3d0e95be3acff6698087275 ChangeLog 1479
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 a134c01ff5938de372b1a0a6096115b6 files/digest-knews-1.0.1b-r2 135
 MD5 d86069c6b8c7c978700693cc8b427273 files/knews-1.0.1b-r1.patch 638
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB7BgbI1lqEGTUzyQRAqKDAKDXJD/OV/GoMg6jb+rL6afh4Zo54QCfZXNj
-S3CNEMszS4V7rrNKZzG2z+w=
-=4xdG
+iD8DBQFB7DDZI1lqEGTUzyQRAuAwAJ94KHsZa51nIrLV3hzEfqn3zXPAHACgoZw8
+6BykPLWHnrLYFzCfgxUFdD4=
+=8Ssz
 -----END PGP SIGNATURE-----
