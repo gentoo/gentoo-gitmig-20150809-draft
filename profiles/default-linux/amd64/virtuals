@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/virtuals,v 1.9 2004/09/22 04:18:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/virtuals,v 1.10 2004/09/23 03:24:18 vapier Exp $
 
 virtual/mailx				mail-client/mailx
 virtual/os-headers			sys-kernel/linux26-headers
@@ -9,5 +9,4 @@ virtual/kernel				sys-kernel/linux26-headers
 virtual/linux-sources		sys-kernel/gentoo-dev-sources
 virtual/bootloader			sys-boot/grub-static
 virtual/os-headers			sys-kernel/linux26-headers
-virtual/modutils			sys-apps/module-init-tools
 virtual/dev-manager			sys-fs/devfsd
