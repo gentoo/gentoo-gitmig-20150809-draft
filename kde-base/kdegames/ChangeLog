@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.93 2004/11/03 19:14:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.94 2004/11/04 13:45:22 weeve Exp $
+
+  04 Nov 2004; Jason Wever <weeve@gentoo.org> kdegames-3.3.1.ebuild:
+  Stable on sparc wrt security bug #69936.
 
   03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdegames-3.3.1.ebuild:
   ~alpha keyword.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.122 2004/11/03 19:00:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.123 2004/11/04 13:45:21 weeve Exp $
+
+  04 Nov 2004; Jason Wever <weeve@gentoo.org> arts-1.3.1.ebuild:
+  Stable on sparc wrt security bug #69936.
 
   03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> arts-1.3.1.ebuild:
   ~alpha keyword.
