@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0-r1.ebuild,v 1.4 2004/04/01 19:55:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0-r1.ebuild,v 1.5 2004/04/09 23:21:59 liquidx Exp $
 
 inherit gnome2 python
 
@@ -45,7 +45,7 @@ src_unpack() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize /usr/lib/python${PYVER}/gtk-2.0
+	python_mod_optimize /usr/lib/python${PYVER}/site-packages/gtk-2.0
 }
 
 pkg_postrm() {
