@@ -1,0 +1,11 @@
+--- server/mp4live/gui/gui_utils.cpp.orig	2004-11-05 14:08:09.002486512 -0500
++++ server/mp4live/gui/gui_utils.cpp	2004-11-05 14:08:10.505258056 -0500
+@@ -352,7 +352,7 @@
+ {
+   char buffer[80];
+   
+-  sprintf(buffer, "%u", value);
++  sprintf(buffer, "%lu",(unsigned long int)value);
+   gtk_entry_set_text(GTK_ENTRY(entry), buffer);
+ }
+ 

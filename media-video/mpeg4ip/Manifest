@@ -1,8 +1,21 @@
-MD5 81fbcb36197f7afdc2f80f39f22da525 ChangeLog 2741
-MD5 1b1b7046bccf0f835f8e3c5b68063d8e metadata.xml 255
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d3901fe672ba3d47273a123d16228c72 mpeg4ip-1.0.ebuild 2205
+MD5 6da10e4017c8bb23f44b335566a1a34d ChangeLog 2954
+MD5 1b1b7046bccf0f835f8e3c5b68063d8e metadata.xml 255
+MD5 b8295107fa73d32d4506936ef3dacd01 mpeg4ip-1.2.ebuild 1666
 MD5 65f6ffc28c1d4afc6c2494d7289570d6 mpeg4ip-1.1.ebuild 1638
-MD5 a00452dc115e6e8ddb761e17ccfb0a5a files/digest-mpeg4ip-1.0 64
 MD5 bf208b3fef7857814d19fd17e38cbd66 files/digest-mpeg4ip-1.1 64
-MD5 e4ff7ab91be9fcfe456f8c9d9d5050ce files/mpeg4ip-1.1-gcc3.4.patch 8110
+MD5 e1adf5b673be8f3eede637fc5ea66aa3 files/digest-mpeg4ip-1.2 64
 MD5 47b75e71dec24165d7bcf3a5b55d785d files/mpeg4ip-1.1-gentoo-fixes.patch 844
+MD5 a00452dc115e6e8ddb761e17ccfb0a5a files/digest-mpeg4ip-1.0 64
+MD5 e4ff7ab91be9fcfe456f8c9d9d5050ce files/mpeg4ip-1.1-gcc3.4.patch 8110
+MD5 9e47aed0879b65f65414ed33fafa743c files/mpeg4ip-1.2-gentoo-fixes.patch 337
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsVQIwDHaUUJ0mYMRAusJAJ9kdkRkXqWsWsi8VuOuOIvExHvHvwCgm3xv
+K1EQbILrgNS3yaq8FOJklLI=
+=tRcu
+-----END PGP SIGNATURE-----
