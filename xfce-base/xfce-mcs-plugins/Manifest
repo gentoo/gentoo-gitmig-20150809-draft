@@ -1,5 +1,2 @@
-MD5 ca3f3678e805a0fbfe72890ac15d6c26 xfce-mcs-plugins-3.99.2.ebuild 1097
-MD5 6073d46f177dd0c1632617ae03a2aa0f xfce-mcs-plugins-3.99.1.ebuild 1097
-MD5 2018b71cb655b948375d5a596b7d9646 ChangeLog 672
-MD5 549b665e48b81cd61b1e62eeeca1c4d2 files/digest-xfce-mcs-plugins-3.99.1 75
-MD5 a9801d8d601addde24b7712b927a33ca files/digest-xfce-mcs-plugins-3.99.2 75
+MD5 a8c0d602354ace629293b91210bc4e69 xfce-mcs-plugins-3.99.3.ebuild 1097
+MD5 8f827c942e84970fb9e3614535ed1ff3 files/digest-xfce-mcs-plugins-3.99.3 75
