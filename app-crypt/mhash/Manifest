@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 dfa3d5e943c262e4440eac827a89cc9e ChangeLog 2765
-MD5 bf4a80913a697f3e501daec128d86941 mhash-0.9.1.ebuild 891
+MD5 7d366b14db9696dfc29c471969db3e85 mhash-0.9.1.ebuild 956
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 b82524ff78b486ef79cccd400ad79348 files/digest-mhash-0.9.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBUc9KHTu7gpaalycRAruAAJ45hnI2DIYhHmlBw+VQauZhBKYG1wCg+jwo
-SGoJw/mUuduJcRUmnRRHDas=
-=YuW0
+iD8DBQFBUdAnHTu7gpaalycRAoQlAKCY4MLuhnhMh/NHAJZKRSdPpPylnACgqBAX
+XbJmCgD4c9SBgI7p5EWzi3I=
+=41Qq
 -----END PGP SIGNATURE-----
