@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fwipsec-0.4.2.ebuild,v 1.2 2004/06/24 22:39:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/fwipsec-0.4.2.ebuild,v 1.3 2004/10/03 21:39:13 swegener Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Firewall scripts that control iptables, FreeS/WAN, and squid."
