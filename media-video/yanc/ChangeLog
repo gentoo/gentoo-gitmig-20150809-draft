@@ -1,19 +1,10 @@
 # ChangeLog for media-video/yanc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/ChangeLog,v 1.3 2004/04/21 15:46:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/ChangeLog,v 1.4 2004/06/14 00:37:35 spyderous Exp $
 
-  21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; yanc-0.2.0.ebuild,
-  yanc-0.2.1.ebuild:
-  Change x11-base/xfree dependency to virtual/x11.
+*yanc-0.2.1-r1 (13 Jun 2004)
 
-*yanc-0.2.1 (12 Oct 2003)
-
-  12 Oct 2003; Bart Lauwers <blauwers@gentoo.org> :
-  Version bump.
-
-*yanc-0.2.0 (14 Jun 2003)
-
-  14 Jun 2003; Seemant Kulleen <seemant@gentoo.org> yanc-0.2.0.ebuild:
-  Yet Another Nv Configurator. Ebuild submission by: Baptiste SIMON
-  <beta@e-glop.net> in bug #14226
+  13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/yanc-0.2.1-xorg-x11-compat.patch, +yanc-0.2.1-r1.ebuild:
+  Look for /etc/X11/xorg.conf (#47632).
 
