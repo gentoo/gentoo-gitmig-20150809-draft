@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e30ce1a00d08db08b68cb86754c67e7 ChangeLog 2506
-MD5 10c7eea9662293d8f3f2d80b8b929505 libxklavier-1.03.ebuild 950
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 e937e34ad2a9955d57901eeb79c21fed ChangeLog 2606
 MD5 52d54179cb42e2d69921b205e833c83b libxklavier-1.02.ebuild 941
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 26b50c6bfa1062b35fdac1339cdb0f2b libxklavier-1.03.ebuild 951
 MD5 5b5c52a7db67de7b54a0b360ade44536 libxklavier-1.04.ebuild 951
 MD5 2ee4cc635af9abc1de963e4d38525430 files/digest-libxklavier-1.02 68
+MD5 554177dc558823391aea91515efb3902 files/sun-keymaps-102.patch 687
 MD5 95f50dc00a9778b6f862c56e0c990b3f files/sun-keymaps.patch 940
 MD5 10d8c674e282f71c1dd0e11903e86e7d files/sun.xml 4572
 MD5 e25e334ceafe0426056d920a3ead52c3 files/digest-libxklavier-1.03 68
-MD5 554177dc558823391aea91515efb3902 files/sun-keymaps-102.patch 687
 MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhR+vugEuf3OQ0akRAn5qAJ4pSH5Szn9xONaDbLTK0DVlrSxu+gCfchgv
-iCOVilf6D2J3RnPrpBH15p4=
-=N1oy
------END PGP SIGNATURE-----
