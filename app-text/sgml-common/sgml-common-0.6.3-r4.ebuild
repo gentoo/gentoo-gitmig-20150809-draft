@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.19 2004/05/12 23:03:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.20 2004/06/02 01:07:02 vapier Exp $
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
-SRC_URI="mirror://kde/devel/docbook/SOURCES/${P}.tgz"
 HOMEPAGE="http://www.iso.ch/cate/3524030.html"
-LICENSE="GPL-2"
+SRC_URI="mirror://kde/devel/docbook/SOURCES/${P}.tgz"
 
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
-KEYWORDS="x86 ia64 ppc sparc alpha hppa amd64 mips s390"
 
 DEPEND=">=sys-devel/automake-1.6"
 RDEPEND=""
@@ -21,12 +21,7 @@ src_unpack() {
 	cp ${FILESDIR}/${PF}-install-catalog.in ${S}/bin/install-catalog.in
 }
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
-src_install () {
+src_install() {
 	emake \
 		prefix=${D}/usr \
 		sysconfdir=${D}/etc \
@@ -36,7 +31,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
+	if [ -x "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
 	then
 		einfo "Installing Catalogs..."
 		install-catalog --add \
@@ -57,7 +52,6 @@ pkg_postinst() {
 			! /"$/ { print $1 " \"" $2 "\"" }' ${file} > ${file}.new
 		mv ${file}.new ${file}
 	done
-
 }
 
 pkg_prerm() {
@@ -83,4 +77,3 @@ pkg_postrm() {
 		fi
 	fi
 }
-
