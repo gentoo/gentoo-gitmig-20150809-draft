@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.6 2002/12/29 04:43:01 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.7 2003/01/08 15:42:02 agriffis Exp $
 
 IUSE="python nls gnome aalib perl"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
 
 SLOT="1.2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 
 RDEPEND="=x11-libs/gtk+-1.2*
