@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladspa-cmt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.6 2004/01/14 21:31:16 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.7 2004/01/17 10:57:30 mr_bones_ Exp $
+
+  17 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> ladspa-cmt-1.15.ebuild:
+  more Gentoo-like doc install (bug 38486); more error checking/messages; use
+  sed -i; leave $P alone; use $A in unpack
 
   14 Jan 2004; <rphillips@gentoo.org> ladspa-cmt-1.14.ebuild,
   ladspa-cmt-1.15.ebuild:
