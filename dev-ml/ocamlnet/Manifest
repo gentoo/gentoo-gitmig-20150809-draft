@@ -1,3 +1,4 @@
-MD5 dfb6aaf00a842e309867264f9f980e68 ChangeLog 506
-MD5 7bfd7a3d01221b31c090aa7538e04a14 ocamlnet-0.95.ebuild 838
+MD5 845dbbef4eb685e1bfd5f9e13a03f2b8 metadata.xml 225
+MD5 8633e21a075b63c53a21b66ca54f002c ocamlnet-0.95.ebuild 840
+MD5 bbb177c8636de08130c1d68ae0411a69 ChangeLog 609
 MD5 b3137a19a01b130d78ec709fd500acfc files/digest-ocamlnet-0.95 65
