@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.4 2004/06/08 07:10:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.5 2004/06/17 11:28:08 kloeri Exp $
+
+inherit eutils
 
 MY_PV=irc${PV:0:6}${PV:7:2}
 
