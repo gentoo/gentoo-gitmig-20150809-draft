@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r3.ebuild,v 1.5 2003/07/12 15:14:41 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r3.ebuild,v 1.6 2003/08/29 16:39:58 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -65,7 +65,7 @@ src_compile() {
 
 	# Every Apache2 MPM EXCEPT prefork needs Zend Thread Safety
 	if [ -n "${USE_APACHE2}" ]; then
-		APACHE2_MPM="`apache2 -l |egrep 'worker|prechild|leader|threadpool|prefork'|xargs|cut -d. -f1`"
+		APACHE2_MPM="`apache2 -l |egrep 'worker|perchild|leader|threadpool|prefork'|xargs|cut -d. -f1`"
 		case "${APACHE2_MPM}" in
 			prefork) ;;
 			*) myconf="${myconf} --enable-experimental-zts" ;;
