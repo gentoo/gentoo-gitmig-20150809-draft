@@ -2,7 +2,7 @@ MD5 587dab8a73f68d269f07a907bb3892fa ChangeLog 1178
 MD5 80f3b98dd55b2c8488c43a2c5cd90293 nullmailer-1.00_rc7-r1.ebuild 3162
 MD5 6d4a9f2b8f7a36e9cc9285312938a426 nullmailer-1.00_rc7.ebuild 3211
 MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
-MD5 b205d1363bdbb39aebfd33f53639b6cd nullmailer-1.00_rc7-r2.ebuild 3515
+MD5 b354771fcc301e6c728cec9859d7cf69 nullmailer-1.00_rc7-r2.ebuild 3517
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r1 70
 MD5 ccc26a349646e55860dc06066004ce63 files/remotes.sample 301

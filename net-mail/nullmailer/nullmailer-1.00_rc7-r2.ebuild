@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7-r2.ebuild,v 1.2 2004/04/20 00:56:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7-r2.ebuild,v 1.3 2004/04/20 06:48:00 mr_bones_ Exp $
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
@@ -46,8 +46,8 @@ src_compile() {
 
 src_install () {
 	einstall localstatedir=${D}/var/nullmailer || die "einstall failed"
-	mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.nullmailer 
-	mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.nullmailer 
+	mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.nullmailer
+	mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.nullmailer
 	dodoc AUTHORS BUGS COPYING HOWTO INSTALL NEWS README YEAR2000 TODO ChangeLog
 	# A small bit of sample config
 	dodir /etc/nullmailer
