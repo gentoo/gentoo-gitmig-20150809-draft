@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/gtk2-perl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.1 2003/07/06 01:07:38 mcummings Exp $
+
+*gtk2-perl-0.12 (05 Jul 2003)
+
+  05 Jul 2003; Michael Cummings <mcummings@gentoo.org> gtk2-perl-0.12.ebuild:
+  Fills bug 17222; original version of ebuild submitted by Kfir Ozer
+  <ufk2k@yahoo.com>
+
