@@ -1,0 +1,7 @@
+# ChangeLog for sec-policy/selinux-daemontools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.1 2003/12/21 06:50:01 pebenito Exp $
+
+  21 Dec 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml:
+  Initial commit.  Policy submitted by Petre Rodan.
+
