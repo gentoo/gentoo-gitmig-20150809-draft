@@ -1,8 +1,11 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.13 2003/03/08 23:01:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.14 2003/03/20 02:16:06 gmsoft Exp $
 
 *sablotron-0.97 (09 Mar 2003)
+
+  20 Mar 2003; Guy Martin <gmsoft@gentoo.org> sablotron-0.97.ebuild :
+  Added ~hppa to KEYWORDS.
 
   09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
@@ -12,6 +15,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *sablotron-0.96 (26 Nov 2002)
+
+  20 Mar 2003; Guy Martin <gmsoft@gentoo.org> sablotron-0.96.ebuild :
+  Added hppa to KEYWORDS.
 
   26 Nov 2002; Michael Cummings <mcummings@gentoo.org> sablotron-0.96.ebuild:
 
