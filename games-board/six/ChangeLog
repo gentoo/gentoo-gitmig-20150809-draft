@@ -1,6 +1,9 @@
 # ChangeLog for games-board/six
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.8 2004/11/11 00:55:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.9 2004/12/31 16:47:36 weeve Exp $
+
+  31 Dec 2004; Jason Wever <weeve@gentoo.org> six-0.5.2.ebuild:
+  Added ~sparc keyword.
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org> six-0.5.2.ebuild:
   Marked ppc stable.
