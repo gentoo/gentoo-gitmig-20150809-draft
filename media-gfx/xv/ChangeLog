@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.31 2004/07/20 20:22:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.32 2004/07/30 19:25:06 usata Exp $
+
+  31 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/xv-3.10a-enhanced-Nu.patch, -files/xv-3.10a-gentoo-Nu.patch,
+  xv-3.10a-r5.ebuild, xv-3.10a-r6.ebuild:
+  Stable on x86 and ppc. Compressed large patches in files directory
+  and put them on Gentoo mirrors.
 
   20 Jul 2004; Tom Gall <tgall@gentoo.org> xv-3.10a-r6.ebuild:
   stable on ppc64, bug #57151

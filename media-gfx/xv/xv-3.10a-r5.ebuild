@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r5.ebuild,v 1.10 2004/06/24 22:53:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r5.ebuild,v 1.11 2004/07/30 19:25:06 usata Exp $
 
 inherit ccc flag-o-matic eutils
 
 DESCRIPTION="An interactive image manipulation program for X which can deal with a wide variety of image formats"
 HOMEPAGE="http://www.trilon.com/xv/index.html"
-SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz"
+SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo.tar.gz"
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="~x86 ~ppc sparc ~alpha ~amd64"
+KEYWORDS="x86 ppc sparc ~alpha ~amd64"
 IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11
@@ -23,8 +24,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-enhanced-Nu.patch || die
-	epatch ${FILESDIR}/${P}-gentoo-Nu.patch || die
+	epatch ../${P}-enhanced-Nu.patch || die
+	epatch ../${P}-gentoo-Nu.patch || die
 	use ppc && epatch ${FILESDIR}/${P}-ppc.patch
 }
 
