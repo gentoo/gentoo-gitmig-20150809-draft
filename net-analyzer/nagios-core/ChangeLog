@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.39 2004/08/20 13:38:13 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.40 2004/10/20 16:37:55 eldad Exp $
+
+  20 Oct 2004; Eldad Zack <eldad@gentoo.org> files/nagios:
+  Added reload function to init.d script, based on a suggestion by Jason Frank
+  <jfrank@kc.rr.com>. Fixed init.d script to check the configuration before
+  start/restart/reload. Closes bug #67955.
 
 *nagios-core-1.2-r3 (20 Aug 2004)
 
