@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.9 2004/07/29 05:12:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.10 2004/08/04 17:37:26 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc alpha ~arm ~hppa amd64 ~ia64 s390"
+KEYWORDS="x86 ~ppc alpha ~arm ~hppa amd64 ~ia64 s390"
 IUSE="nls"
 
 DEPEND="virtual/libc
@@ -20,12 +20,12 @@ RDEPEND="sys-apps/cronbase
 	>=sys-apps/groff-1.18
 	nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/${PN}-${NV}
+S="${WORKDIR}/${PN}-${NV}"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S} && \
+	cd "${S}" && \
 	sed -i \
 		-e 's:/usr/lib/locale:$(prefix)/usr/lib/locale:g' \
 		-e 's!/usr/bin:/usr/ucb:!/usr/bin:!' \
@@ -87,23 +87,22 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,sbin}
-	cd ${S}
-	make PREFIX=${D} install || die "make install failed"
+	make PREFIX="${D}" install || die "make install failed"
 
 	insinto /etc
 	doins src/man.conf
 
-	dodoc COPYING LSM README* TODO
+	dodoc LSM README* TODO
 
 	if use nls ; then
-		cd ${S}/msgs
-		./inst.sh ?? ${D}/usr/share/locale/%L/%N
+		cd "${S}/msgs"
+		./inst.sh ?? "${D}"/usr/share/locale/%L/%N
 	fi
 
 	# Needed for makewhatis
 	keepdir /var/cache/man
 	exeinto /etc/cron.weekly
-	newexe ${FILESDIR}/makewhatis.cron makewhatis
+	newexe "${FILESDIR}/makewhatis.cron" makewhatis
 
 	fowners root:man /usr/bin/man
 	fperms 2555 /usr/bin/man
@@ -122,9 +121,10 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Forcing sane permissions onto ${ROOT}/var/cache/man (Bug #40322)"
-	chown -R root:man ${ROOT}/var/cache/man
-	chmod -R g+w ${ROOT}/var/cache/man
-	[ -e ${ROOT}/var/cache/man/whatis ] && chown root:root ${ROOT}/var/cache/man/whatis
+	chown -R root:man "${ROOT}/var/cache/man"
+	chmod -R g+w "${ROOT}/var/cache/man"
+	[ -e "${ROOT}/var/cache/man/whatis" ] \
+		&& chown root:root "${ROOT}/var/cache/man/whatis"
 
 	echo
 
