@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kradio
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.4 2004/06/25 00:08:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.5 2004/06/29 12:12:50 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kradio-0.3.0_alpha2.ebuild:
+  QA: inherit kde-base -> inherit kde, need-kde after R/DEPEND
 
   07 Mar 2004; root <root@gentoo.org> kradio-0.3.0_alpha2.ebuild:
   Added a dependency on libsndfile, see Bug #36595. Also make use of the
