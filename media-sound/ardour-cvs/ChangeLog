@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.15 2003/05/31 10:48:53 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.16 2003/06/13 13:06:33 robh Exp $
+
+*ardour-cvs-0.6.7 (13 Jun 2003)
+
+  13 Jun 2003; robh <robh@gentoo.org> ardour-cvs-0.6.7.ebuild:
+  Clean-ups due to changes in the build system for ardour
 
   31 May 2003; robh <robh@gentoo.org> ardour-cvs-0.6.4.ebuild:
   added new dep for libart_lgpl as pdb removed it from the ardour tree
