@@ -1,0 +1,10 @@
+# ChangeLog for app-text/bogosort
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/ChangeLog,v 1.1 2004/12/14 22:58:49 ciaranm Exp $
+
+*bogosort-0.4.2 (14 Dec 2004)
+
+  14 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +bogosort-0.4.2.ebuild:
+  New package
+

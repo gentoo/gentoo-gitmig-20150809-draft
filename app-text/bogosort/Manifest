@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7b5df6d2428a49dc602dfa85ee9ac79b bogosort-0.4.2.ebuild 578
+MD5 1bc8a0513d1ec69f2e9b8b2f72a5f451 ChangeLog 347
+MD5 4c1040b15c428fc436d1f5b746abfa8a metadata.xml 496
+MD5 375c74fb876d97ee1d8b1acb3e55ada5 files/digest-bogosort-0.4.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBv3BILLFUmVNQ7rkRAnbcAJ9xEcwkh9QfBCZanYgh3FBkbjhSUQCeP/M0
+76GGKKnr/ua37tdNz26UVWw=
+=DJQI
+-----END PGP SIGNATURE-----
