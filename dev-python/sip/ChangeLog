@@ -1,25 +1,35 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.10 2003/02/12 06:34:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.11 2003/04/04 01:13:02 liquidx Exp $
 
-*sip-3.5 (14 December 2002) Bart Verwilst <verwilst@gentoo.org>
+*sip-3.5 (14 Dec 2002) 
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> sip-3.5.ebuild :
+  changelog cleanup, ebuild cleanup.
+
+  14 Dec 2002; Bart Verwilst <verwilst@gentoo.org> :
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
  
-*sip-3.4 (18 Sept 2002) Sascha Schwabbauer <cybersystem@gentoo.org>
+*sip-3.4 (18 Sep 2002) 
 
+  18 Sep 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
   Added ppc to keywords.
 
-*sip-3.4 (15 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
+  25 Jul 2003; Bart Verwilst <verwilst@gentoo.org> :
 
-*sip-3.3.2 (25 July 2002) Bart Verwilst <verwilst@gentoo.org>
+*sip-3.3.2 (25 Jul 2002) 
 
-*sip-3.2.4 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
+  25 Jul 2002; Bart Verwilst <verwilst@gentoo.org> :
+
+*sip-3.2.4 (5 July 2002)
+
+  5 Jul 2002; Bart Verwilst <verwilst@gentoo.org> :
 
 *sip-3.2.1 (5 May 2002)
 
   5 May 2002; B.Verwilst <verwilst@gentoo.org> ChangeLog :
-
   New version, needed by PyQt 3.2
 
 *sip-3.0 (1 Feb 2002)

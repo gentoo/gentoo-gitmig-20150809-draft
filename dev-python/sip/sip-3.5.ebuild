@@ -1,6 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.5.ebuild,v 1.5 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.5.ebuild,v 1.6 2003/04/04 01:13:02 liquidx Exp $
+
+IUSE=""
+
+inherit eutils distutils
 
 MY_P="${PN}-x11-gpl-${PV}"
 DESCRIPTION="SIP is a tool for generating bindings for C++ classes so that they can be used by Python."
@@ -18,24 +22,24 @@ DEPEND="virtual/glibc
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-
-	unpack ${MY_P}.tar.gz
-	cd ${S}
-	patch -p0 < ${FILESDIR}/license-3.5.diff
-
+	unpack ${A}
+	epatch ${FILESDIR}/license-3.5.diff
 }
 
 src_compile(){
 	chmod +x build.py
 	dodir /usr/bin
-	dodir /usr/lib/python2.2/site-packages
-	python build.py -l qt-mt -b ${D}/usr/bin -d ${D}/usr/lib/python2.2/site-packages \
-			-e ${D}/usr/include/python2.2
+	dodir /usr/lib/python${PY_VER}/site-packages
+	python build.py -l qt-mt \
+		-b ${D}/usr/bin \
+		-d ${D}/usr/lib/python${PY_VER}/site-packages \
+		-e ${D}/usr/include/python${PY_VER}
+		
 	make || die
 }
 
 src_install() {
-	dodir /usr/include/python2.2
+	dodir /usr/include/python${PY_VER}
 	make DESTDIR=${D} install || die
 	dodoc NEWS README THANKS
 }
