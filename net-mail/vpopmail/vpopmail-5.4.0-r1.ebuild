@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0-r1.ebuild,v 1.1 2004/06/21 01:02:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0-r1.ebuild,v 1.2 2004/06/21 18:09:37 mr_bones_ Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -88,7 +88,7 @@ src_compile() {
 			--enable-auth-logging=y \
 			--enable-valias=y \
 			--enable-mysql-replication=n \
-			--enable-mysql-limits" 
+			--enable-mysql-limits"
 
 	# Bug 20127
 	use clearpasswd \
