@@ -1,0 +1,1426 @@
+Index: gfx/src/gtk/Makefile.in
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/Makefile.in,v
+retrieving revision 1.75.8.1
+diff -u -r1.75.8.1 Makefile.in
+--- gfx/src/gtk/Makefile.in	10 Apr 2002 02:46:14 -0000	1.75.8.1
++++ gfx/src/gtk/Makefile.in	20 Apr 2002 17:38:25 -0000
+@@ -97,6 +97,10 @@
+ 
+ endif
+ 
++DEFINES += -DMOZ_ENABLE_XFT
++INCLUDES += 
++EXTRA_DSO_LDOPTS += -lXft -lfontconfig
++
+ ifdef MOZ_ENABLE_GTK2
+ CPPSRCS		+= \
+ 		nsRegionGTK2.cpp \
+Index: gfx/src/gtk/nsDeviceContextGTK.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/nsDeviceContextGTK.cpp,v
+retrieving revision 1.99.8.1
+diff -u -r1.99.8.1 nsDeviceContextGTK.cpp
+--- gfx/src/gtk/nsDeviceContextGTK.cpp	10 Apr 2002 02:46:14 -0000	1.99.8.1
++++ gfx/src/gtk/nsDeviceContextGTK.cpp	20 Apr 2002 17:38:26 -0000
+@@ -809,11 +809,11 @@
+ GetFontSize(XFontStruct *aFontStruct, float aPixelsToTwips)
+ {
+   unsigned long pr = 0;
+-  Atom pixelSizeAtom = ::XInternAtom(GDK_DISPLAY(), "PIXEL_SIZE", 0);
+-  ::XGetFontProperty(aFontStruct, pixelSizeAtom, &pr);
++  Atom pointSizeAtom = ::XInternAtom(GDK_DISPLAY(), "POINT_SIZE", 0);
++  ::XGetFontProperty(aFontStruct, pointSizeAtom, &pr);
+   if (!pr)
+     return DEFAULT_TWIP_FONT_SIZE;
+-  return NSIntPixelsToTwips(pr, aPixelsToTwips);
++  return NSIntPointsToTwips(pr/10);
+ }
+ 
+ nsresult
+Index: gfx/src/gtk/nsDrawingSurfaceGTK.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/nsDrawingSurfaceGTK.cpp,v
+retrieving revision 1.35.10.1
+diff -u -r1.35.10.1 nsDrawingSurfaceGTK.cpp
+--- gfx/src/gtk/nsDrawingSurfaceGTK.cpp	10 Apr 2002 02:46:15 -0000	1.35.10.1
++++ gfx/src/gtk/nsDrawingSurfaceGTK.cpp	20 Apr 2002 17:38:26 -0000
+@@ -89,6 +89,9 @@
+   mPixFormat.mAlphaShift = 0;
+ 
+   mDepth = v->depth;
++#ifdef MOZ_ENABLE_XFT
++  mXftDraw = nsnull;
++#endif /* MOZ_ENABLE_XFT */
+ }
+ 
+ nsDrawingSurfaceGTK :: ~nsDrawingSurfaceGTK()
+@@ -101,6 +104,11 @@
+ 
+   if (mGC)
+     gdk_gc_unref(mGC);
++
++#ifdef MOZ_ENABLE_XFT
++  if (mXftDraw)
++    XftDrawDestroy(mXftDraw);
++#endif /* MOZ_ENABLE_XFT */
+ }
+ 
+ /**
+@@ -249,6 +257,29 @@
+ 
+   return NS_OK;
+ }
++
++#ifdef MOZ_ENABLE_XFT
++XftDraw * nsDrawingSurfaceGTK :: GetXftDraw(void)
++{
++  if (!mXftDraw)
++    mXftDraw = XftDrawCreate(GDK_DISPLAY(), GDK_WINDOW_XWINDOW(mPixmap),
++                             GDK_VISUAL_XVISUAL(::gdk_rgb_get_visual()),
++                             GDK_COLORMAP_XCOLORMAP(::gdk_rgb_get_cmap()));
++  return mXftDraw;
++}
++
++void nsDrawingSurfaceGTK :: GetLastXftClip(nsIRegion **aLastRegion)
++{
++  *aLastRegion = mLastXftClip.get();
++  NS_IF_ADDREF(*aLastRegion);
++}
++
++void nsDrawingSurfaceGTK :: SetLastXftClip(nsIRegion  *aLastRegion)
++{
++  mLastXftClip = aLastRegion;
++}
++
++#endif /* MOZ_ENABLE_XFT */
+ 
+ nsresult nsDrawingSurfaceGTK :: Init(GdkDrawable *aDrawable, GdkGC *aGC)
+ {
+Index: gfx/src/gtk/nsDrawingSurfaceGTK.h
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/nsDrawingSurfaceGTK.h,v
+retrieving revision 1.17.34.1
+diff -u -r1.17.34.1 nsDrawingSurfaceGTK.h
+--- gfx/src/gtk/nsDrawingSurfaceGTK.h	10 Apr 2002 02:46:15 -0000	1.17.34.1
++++ gfx/src/gtk/nsDrawingSurfaceGTK.h	20 Apr 2002 17:38:27 -0000
+@@ -45,6 +45,20 @@
+ 
+ #include <gtk/gtk.h>
+ 
++#ifdef MOZ_ENABLE_XFT
++#include "nsIRegion.h"
++#include "nsCOMPtr.h"
++#ifndef Bool
++#include <X11/Xlib.h>
++#define MOZ_DEFINED_BOOL
++#endif
++#include <X11/Xdefs.h>
++#include <X11/Xft/Xft.h>
++#ifdef MOZ_DEFINED_BOOL
++#undef Bool
++#endif
++#endif /* MOZ_ENABLE_XFT */
++
+ class nsDrawingSurfaceGTK : public nsIDrawingSurface
+ {
+ public:
+@@ -102,6 +116,12 @@
+ 
+   PRInt32 GetDepth() { return mDepth; }
+ 
++#ifdef MOZ_ENABLE_XFT
++  XftDraw *GetXftDraw     (void);
++  void     GetLastXftClip (nsIRegion **aLastRegion);
++  void     SetLastXftClip (nsIRegion  *aLastRegion);
++#endif
++
+ protected:
+   inline PRUint8 ConvertMaskToCount(unsigned long val);
+ 
+@@ -115,6 +135,11 @@
+   PRUint32      mHeight;
+   PRUint32	mFlags;
+   PRBool	mIsOffscreen;
++
++#ifdef MOZ_ENABLE_XFT
++  XftDraw              *mXftDraw;
++  nsCOMPtr<nsIRegion>   mLastXftClip;
++#endif
+ 
+   /* for locks */
+   GdkImage	*mImage;
+Index: gfx/src/gtk/nsFontMetricsGTK.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/nsFontMetricsGTK.cpp,v
+retrieving revision 1.204.2.2
+diff -u -r1.204.2.2 nsFontMetricsGTK.cpp
+--- gfx/src/gtk/nsFontMetricsGTK.cpp	14 Apr 2002 00:40:24 -0000	1.204.2.2
++++ gfx/src/gtk/nsFontMetricsGTK.cpp	20 Apr 2002 17:38:32 -0000
+@@ -68,6 +68,12 @@
+ #include <regex.h>
+ #endif /* ENABLE_X_FONT_BANNING */
+ 
++#ifdef MOZ_ENABLE_XFT
++#include <fontconfig/fontconfig.h>
++#include <freetype/freetype.h>
++#include <freetype/tttables.h>
++#endif
++
+ #include <X11/Xatom.h>
+ #include <gdk/gdk.h>
+ 
+@@ -1450,11 +1456,20 @@
+     return;
+ #endif /* (defined(MOZ_ENABLE_FREETYPE2)) */
+   }
+-  nsXFont *xFont = mWesternFont->GetXFont();
+-  XFontStruct *fontInfo = xFont->GetXFontStruct();
+-  mDeviceContext->GetDevUnitsToAppUnits(f);
+ 
+-  nscoord lineSpacing = nscoord((fontInfo->ascent + fontInfo->descent) * f);
++  float space_width, x_height, underline_position;
++    
++  nscoord ascent, descent, line_spacing, width_max_bounds;
++  nscoord underline_thickness, superscript_offset, subscript_offset;
++  mWesternFont->GetFontProperties(f, ascent, descent,
++                                  line_spacing, width_max_bounds,
++                                  space_width, x_height,
++                                  underline_position,
++                                  underline_thickness,
++                                  superscript_offset,
++                                  subscript_offset);
++
++  nscoord lineSpacing = nscoord(line_spacing * f);
+   mEmHeight = PR_MAX(1, nscoord(mWesternFont->mSize * f));
+   if (lineSpacing > mEmHeight) {
+     mLeading = lineSpacing - mEmHeight;
+@@ -1462,97 +1477,32 @@
+   else {
+     mLeading = 0;
+   }
+-  mMaxHeight = nscoord((fontInfo->ascent + fontInfo->descent) * f);
+-  mMaxAscent = nscoord(fontInfo->ascent * f);
+-  mMaxDescent = nscoord(fontInfo->descent * f);
++  mMaxHeight = nscoord(line_spacing * f);
++  mMaxAscent = nscoord(ascent * f);
++  mMaxDescent = nscoord(descent * f);
+ 
+   mEmAscent = nscoord(mMaxAscent * mEmHeight / lineSpacing);
+   mEmDescent = mEmHeight - mEmAscent;
+ 
+-  mMaxAdvance = nscoord(fontInfo->max_bounds.width * f);
++  mMaxAdvance = nscoord(width_max_bounds * f);
+ 
+-  gint rawWidth;
+-  if ((fontInfo->min_byte1 == 0) && (fontInfo->max_byte1 == 0)) {
+-    rawWidth = xFont->TextWidth8(" ", 1);
+-  }
+-  else {
+-    XChar2b _16bit_space;
+-    _16bit_space.byte1 = 0;
+-    _16bit_space.byte2 = ' ';
+-    rawWidth = xFont->TextWidth16(&_16bit_space, sizeof(_16bit_space)/2);
+-  }
+-  mSpaceWidth = NSToCoordRound(rawWidth * f);
++  mSpaceWidth = NSToCoordRound(space_width * f);
+ 
+-  unsigned long pr = 0;
+-  if (xFont->GetXFontProperty(XA_X_HEIGHT, &pr) &&
+-      pr < 0x00ffffff)  // Bug 43214: arbitrary to exclude garbage values
+-  {
+-    mXHeight = nscoord(pr * f);
+-#ifdef REALLY_NOISY_FONTS
+-    printf("xHeight=%d\n", mXHeight);
+-#endif
+-  }
+-  else 
+-  {
+-    // 56% of ascent, best guess for non-true type
+-    mXHeight = NSToCoordRound((float) fontInfo->ascent* f * 0.56f);
+-  }
++  mXHeight = NSToCoordRound(x_height * f);
++  mUnderlineOffset = -NSToIntRound(underline_position * f);
+ 
+-  if (xFont->GetXFontProperty(XA_UNDERLINE_POSITION, &pr))
+-  {
+-    /* this will only be provided from adobe .afm fonts and TrueType
+-     * fonts served by xfsft (not xfstt!) */
+-    mUnderlineOffset = -NSToIntRound(pr * f);
+-#ifdef REALLY_NOISY_FONTS
+-    printf("underlineOffset=%d\n", mUnderlineOffset);
+-#endif
+-  }
+-  else
+-  {
+-    /* this may need to be different than one for those weird asian fonts */
+-    float height;
+-    height = fontInfo->ascent + fontInfo->descent;
+-    mUnderlineOffset = -NSToIntRound(MAX (1, floor (0.1 * height + 0.5)) * f);
+-  }
+-
+-  if (xFont->GetXFontProperty(XA_UNDERLINE_THICKNESS, &pr))
+-  {
+-    /* this will only be provided from adobe .afm fonts */
+-    mUnderlineSize = nscoord(MAX(f, NSToIntRound(pr * f)));
+-#ifdef REALLY_NOISY_FONTS
+-    printf("underlineSize=%d\n", mUnderlineSize);
+-#endif
+-  }
+-  else
+-  {
+-    float height;
+-    height = fontInfo->ascent + fontInfo->descent;
+-    mUnderlineSize = NSToIntRound(MAX(1, floor (0.05 * height + 0.5)) * f);
+-  }
+-
+-  if (xFont->GetXFontProperty(XA_SUPERSCRIPT_Y, &pr))
+-  {
+-    mSuperscriptOffset = nscoord(MAX(f, NSToIntRound(pr * f)));
+-#ifdef REALLY_NOISY_FONTS
+-    printf("superscriptOffset=%d\n", mSuperscriptOffset);
+-#endif
+-  }
+-  else
+-  {
+-    mSuperscriptOffset = mXHeight;
+-  }
++  // these are pre-calculated with the scale in GetFontProperties
++  mUnderlineSize = underline_thickness;
++  mSuperscriptOffset = superscript_offset;
++  mSubscriptOffset = subscript_offset;
+ 
+-  if (xFont->GetXFontProperty(XA_SUBSCRIPT_Y, &pr))
+-  {
+-    mSubscriptOffset = nscoord(MAX(f, NSToIntRound(pr * f)));
+ #ifdef REALLY_NOISY_FONTS
+-    printf("subscriptOffset=%d\n", mSubscriptOffset);
++  printf("RealizeFont [%p]: underline size: %d underline offset %d "
++         "superscript offset %d subscript offset %d\n",
++         (void *)this,
++         mUnderlineSize, mUnderlineOffset,
++         mSuperscriptOffset, mSubscriptOffset);
+ #endif
+-  }
+-  else
+-  {
+-    mSubscriptOffset = mXHeight;
+-  }
+ 
+   /* need better way to calculate this */
+   mStrikeoutOffset = NSToCoordRound(mXHeight / 2.0);
+@@ -2193,6 +2143,12 @@
+   return PR_TRUE;
+ }
+ 
++int
++nsFontGTK::SupportsChar(PRUnichar aChar)
++{
++  return mFont && CCMAP_HAS_CHAR(mCCMap, aChar);
++}
++
+ void
+ nsFontGTK::LoadFont(void)
+ {
+@@ -2318,6 +2274,143 @@
+   return ((PRBool) (mCharSetInfo == &ISO106461));
+ }
+ 
++void
++nsFontGTK::GetFontProperties(float &aScale,
++                             nscoord &aAscent,
++                             nscoord &aDescent,
++                             nscoord &aLineSpacing,
++                             nscoord &aWidthMaxBounds,
++                             float &aSpaceWidth,
++                             float &aXHeight,
++                             float &aUnderlinePosition,
++                             nscoord &aUnderlineThickness,
++                             nscoord &aSuperscriptOffset,
++                             nscoord &aSubscriptOffset)
++{
++  XFontStruct *fontInfo = mXFont->GetXFontStruct();
++
++  aAscent = fontInfo->ascent;
++  aDescent = fontInfo->descent;
++  aLineSpacing = aAscent + aDescent;
++  aWidthMaxBounds = fontInfo->max_bounds.width;
++
++  // aSpaceWidth
++  gint rawWidth;
++  if ((fontInfo->min_byte1 == 0) && (fontInfo->max_byte1 == 0)) {
++    rawWidth = mXFont->TextWidth8(" ", 1);
++  }
++  else {
++    XChar2b _16bit_space;
++    _16bit_space.byte1 = 0;
++    _16bit_space.byte2 = ' ';
++    rawWidth = mXFont->TextWidth16(&_16bit_space, sizeof(_16bit_space)/2);
++  }
++
++  aSpaceWidth = rawWidth;
++
++  unsigned long pr = 0;
++  
++  // aXHeight
++  if (mXFont->GetXFontProperty(XA_X_HEIGHT, &pr) &&
++      pr < 0x00ffffff)  // Bug 43214: arbitrary to exclude garbage values
++  {
++    aXHeight = pr;
++#ifdef REALLY_NOISY_FONTS
++    printf("aXHeight=%f\n", aXHeight);
++#endif
++  }
++  else 
++  {
++    // 56% of ascent, best guess for non-true type
++    aXHeight = ((float)fontInfo->ascent) * 0.56f;
++  }
++
++  // aUnderlinePosition
++  if (mXFont->GetXFontProperty(XA_UNDERLINE_POSITION, &pr))
++  {
++    /* this will only be provided from adobe .afm fonts and TrueType
++     * fonts served by xfsft (not xfstt!) */
++    aUnderlinePosition = pr;
++#ifdef REALLY_NOISY_FONTS
++    printf("aUnderlinePosition=%f\n", aUnderlinePosition);
++#endif
++  }
++  else
++  {
++    /* this may need to be different than one for those weird asian fonts */
++    float height;
++    height = fontInfo->ascent + fontInfo->descent;
++    aUnderlinePosition = MAX(1, floor(0.1 * height + 0.5));
++  }
++
++  // aUnderlineThickness
++  if (mXFont->GetXFontProperty(XA_UNDERLINE_THICKNESS, &pr))
++  {
++    /* this will only be provided from adobe .afm fonts */
++    aUnderlineThickness = nscoord(MAX(aScale, NSToIntRound(pr * aScale)));
++#ifdef REALLY_NOISY_FONTS
++    printf("aUnderlineThickness=%d\n", aUnderlineThickness);
++#endif
++  }
++  else
++  {
++    float height;
++    height = fontInfo->ascent + fontInfo->descent;
++    aUnderlineThickness = NSToIntRound(MAX(1, floor(0.05 * height + 0.5))
++                                       * aScale);
++  }
++
++  // aSuperscriptOffset
++  if (mXFont->GetXFontProperty(XA_SUPERSCRIPT_Y, &pr))
++  {
++    aSuperscriptOffset = nscoord(MAX(aScale, NSToIntRound(pr * aScale)));
++#ifdef REALLY_NOISY_FONTS
++    printf("superscriptOffset=%d\n", aSuperscriptOffset);
++#endif
++  }
++  else
++  {
++    aSuperscriptOffset = NSToIntRound(aXHeight * aScale);
++  }
++
++  // aSubscriptOffset
++  if (mXFont->GetXFontProperty(XA_SUBSCRIPT_Y, &pr))
++  {
++    aSubscriptOffset = nscoord(MAX(aScale, NSToIntRound(pr * aScale)));
++#ifdef REALLY_NOISY_FONTS
++    printf("aSubscriptOffset=%d\n", aSubscriptOffset);
++#endif
++  }
++  else
++  {
++    aSubscriptOffset = NSToIntRound(aXHeight * aScale);
++  }
++}
++
++PRBool
++nsFontGTK::IsXftFont(void)
++{
++  return PR_FALSE;
++}
++
++gint
++nsFontGTK::GetWidth8(const char *aString, PRUint32 aLength)
++{
++  NS_NOTREACHED("nsFontGTK::GetWidth8\n");
++  return 0;
++}
++
++gint
++nsFontGTK::DrawString8(nsRenderingContextGTK *aContext,
++                       nsDrawingSurfaceGTK* aSurface,
++                       nscoord aX, nscoord aY,
++                       const char* aString,
++                       PRUint32 aLength)
++{
++  NS_NOTREACHED("nsFontGTK::DrawString8\n");
++  return 0;
++}
++
+ PRBool
+ nsFontGTK::IsFreeTypeFont(void)
+ {
+@@ -2830,6 +2923,778 @@
+ }
+ #endif
+ 
++#ifdef MOZ_ENABLE_XFT
++
++struct xftLangGroup {
++  char	    *aMozLangGroup;
++  FcChar32  aChar;
++  char	    *aXftLangGroup[4];
++};
++
++static const struct xftLangGroup xftLangGroups[] = {
++  { "x-western",      0x0041,	{ FC_LANG_LATIN_1, 
++				  FC_LANG_WE_LATIN_1, 
++				  FC_LANG_US, 0 } },
++  { "x-central-euro", 0x0100,	{ FC_LANG_LATIN_2_EASTERN_EUROPE, 0 } },
++  { "x-cyrillic",     0x0411,   { FC_LANG_CYRILLIC, 
++			          FC_LANG_IBM_CYRILLIC,
++			          FC_LANG_MSDOS_RUSSIAN, 0 } },
++  { "el",	      0x03b1,   { FC_LANG_GREEK,
++			          FC_LANG_IBM_GREEK,
++			          FC_LANG_GREEK_437_G, 0 } },
++  { "tr",	      0x0130,   { FC_LANG_TURKISH,
++			          FC_LANG_IBM_TURKISH, 0 } },
++  { "he",	      0x05d0,   { FC_LANG_HEBREW,
++			          FC_LANG_HEBREW_862, 0 } },
++  { "ar",	      0x0630,   { FC_LANG_ARABIC,
++			          FC_LANG_ARABIC_864,
++			          FC_LANG_ARABIC_ASMO_708, 0 } },
++  { "x-baltic",	      0x0104,   { FC_LANG_WINDOWS_BALTIC,
++			          FC_LANG_MSDOS_BALTIC, 0 } },
++  { "th",	      0x0e01,   { FC_LANG_THAI, 0 } },
++  { "ja",	      0x65e5,   { FC_LANG_JAPANESE, 0 } },
++  { "zh-CN",	      0x4e00,   { FC_LANG_SIMPLIFIED_CHINESE, 0 } },
++  { "ko",	      0x4e00,   { FC_LANG_KOREAN_WANSUNG,
++			          FC_LANG_KOREAN_JOHAB, 0 } },
++  { "zh-TW",	      0x4e00,   { FC_LANG_TRADITIONAL_CHINESE, 0 } },
++  { "x-unicode",      0x0000,   { 0 } },
++  { "x-user-def",     0x0000,	{ 0 } },
++};
++
++#define NUM_XFT_LANG_GROUPS (sizeof (xftLangGroups) / \
++			     sizeof (xftLangGroups[0]))
++
++static const struct xftLangGroup *
++xftFindMozLangGroup (nsACString &mozLangGroup)
++{
++  for (unsigned int i = 0; i < NUM_XFT_LANG_GROUPS; i++)
++  {
++    if (mozLangGroup.Equals (xftLangGroups[i].aMozLangGroup,
++			     nsCaseInsensitiveCStringComparator()))
++    {
++      return &xftLangGroups[i];
++    }
++  }
++  return 0;
++}
++
++static const struct xftLangGroup *
++xftFindMozLangAtom (nsIAtom *aLangGroup)
++{
++  nsAutoString	      aName;
++  nsCAutoString	      aCName;
++
++  aLangGroup->ToString (aName);
++  aCName.AppendWithConversion (aName);
++  return xftFindMozLangGroup (aCName);
++}
++  
++class nsFontGTKXft : public nsFontGTK
++{
++public:
++  nsFontGTKXft();
++  nsFontGTKXft(nsFontGTKXft *aFont);
++  nsFontGTKXft(XftFont *aFont);
++  virtual ~nsFontGTKXft();
++
++  virtual PRBool IsXftFont(void);
++  virtual PRBool SupportsChar(PRUnichar aChar);
++  virtual gint   GetWidth8(const char *aString, PRUint32 aLength);
++  virtual gint   GetWidth(const PRUnichar* aString, PRUint32 aLength);
++  virtual gint   DrawString8(nsRenderingContextGTK *aContext,
++                             nsDrawingSurfaceGTK* aSurface,
++                             nscoord aX, nscoord aY,
++                             const char* aString,
++                             PRUint32 aLength);
++  virtual gint   DrawString(nsRenderingContextGTK* aContext,
++                            nsDrawingSurfaceGTK* aSurface, nscoord aX,
++                            nscoord aY, const PRUnichar* aString,
++                            PRUint32 aLength);
++  virtual void   GetFontProperties(float &aScale,
++                                   nscoord &aAscent,
++                                   nscoord &aDescent,
++                                   nscoord &aLineSpacing,
++                                   nscoord &aWidthMaxBounds,
++                                   float &aSpaceWidth,
++                                   float &aXHeight,
++                                   float &aUnderlinePosition,
++                                   nscoord &aUnderlineThickness,
++                                   nscoord &aSuperscriptOffset,
++                                   nscoord &aSubscriptOffset);
++#ifdef MOZ_MATHML
++  virtual nsresult GetBoundingMetrics(const PRUnichar*   aString,
++                                      PRUint32           aLength,
++                                      nsBoundingMetrics& aBoundingMetrics);
++#endif
++  FcCharSet *mSubstituteChars;
++private:
++  XftFont *mXftFont;
++};
++
++nsFontGTKXft::nsFontGTKXft()
++{
++  mXftFont = nsnull;
++  mSize = 0;
++}
++
++nsFontGTKXft::nsFontGTKXft(nsFontGTKXft *aFont)
++{
++  mXftFont = XftFontCopy(GDK_DISPLAY(), aFont->mXftFont);
++  mSize = aFont->mSize;
++}
++
++nsFontGTKXft::nsFontGTKXft(XftFont *aFont)
++{
++  mXftFont = aFont;
++  mSize = aFont->ascent + aFont->descent;
++}
++
++nsFontGTKXft::~nsFontGTKXft()
++{
++  if (mXftFont)
++    XftFontClose(GDK_DISPLAY(), mXftFont);
++  if (mSubstituteChars)
++    FcCharSetDestroy (mSubstituteChars);
++}
++
++PRBool
++nsFontGTKXft::IsXftFont(void)
++{
++  return PR_TRUE;
++}
++
++PRBool
++nsFontGTKXft::SupportsChar(PRUnichar aChar)
++{
++  if (mSubstituteChars)
++    return FcCharSetHasChar (mSubstituteChars, aChar);
++  if (mXftFont)
++    return XftCharExists(GDK_DISPLAY(), mXftFont, aChar);
++  
++  return FALSE;
++}
++
++gint
++nsFontGTKXft::GetWidth8(const char *aString, PRUint32 aLength)
++{
++  XGlyphInfo glyphinfo;
++  XftTextExtents8(GDK_DISPLAY(), mXftFont, (FcChar8 *)aString,
++                  aLength, &glyphinfo);
++  return glyphinfo.xOff;
++}
++
++gint
++nsFontGTKXft::GetWidth(const PRUnichar* aString, PRUint32 aLength)
++{
++  XGlyphInfo glyphinfo;
++  XftTextExtents16(GDK_DISPLAY(), mXftFont, (FcChar16 *)aString,
++                   aLength, &glyphinfo);
++  return glyphinfo.xOff;
++}
++
++#define NS_TO_GDK_RGB(ns) (ns & 0xff) << 16 | \
++  (ns & 0xff00) | ((ns >> 16) & 0xff)
++
++gint
++nsFontGTKXft::DrawString(nsRenderingContextGTK* aContext,
++                         nsDrawingSurfaceGTK* aSurface, nscoord aX,
++                         nscoord aY, const PRUnichar* aString,
++                         PRUint32 aLength)
++{
++  XftColor color;
++  nscolor rccolor;
++
++  aContext->GetColor(rccolor);
++
++  color.pixel = gdk_rgb_xpixel_from_rgb(NS_TO_GDK_RGB(rccolor));
++  color.color.red = (NS_GET_R(rccolor) << 8) | NS_GET_R(rccolor);
++  color.color.green = (NS_GET_G(rccolor) << 8) | NS_GET_G(rccolor);
++  color.color.blue = (NS_GET_B(rccolor) << 8) | NS_GET_B(rccolor);
++  color.color.alpha = 0xffff;
++
++  XftDraw *draw = aSurface->GetXftDraw();
++
++  nsCOMPtr<nsIRegion> lastRegion;
++  nsCOMPtr<nsIRegion> clipRegion;
++
++  aSurface->GetLastXftClip(getter_AddRefs(lastRegion));
++  aContext->GetClipRegion(getter_AddRefs(clipRegion));
++
++  // avoid setting the clip, if possible
++   if (!lastRegion || !clipRegion || !lastRegion->IsEqual(*clipRegion)) {
++    aSurface->SetLastXftClip(clipRegion);
++
++    GdkRegion *rgn = nsnull;
++    clipRegion->GetNativeRegion((void *&)rgn);
++    GdkRegionPrivate  *priv = (GdkRegionPrivate *)rgn;
++
++    XftDrawSetClip(draw, priv->xregion);
++  }
++
++  XftDrawString16(draw, &color, mXftFont, aX, aY + mBaselineAdjust, 
++                  (FcChar16 *)aString, aLength);
++
++  return GetWidth(aString, aLength);
++}
++
++gint
++nsFontGTKXft::DrawString8(nsRenderingContextGTK *aContext,
++                          nsDrawingSurfaceGTK* aSurface,
++                          nscoord aX, nscoord aY,
++                          const char* aString,
++                          PRUint32 aLength)
++{
++  XftColor color;
++  nscolor rccolor;
++
++  aContext->GetColor(rccolor);
++
++  color.pixel = gdk_rgb_xpixel_from_rgb(NS_TO_GDK_RGB(rccolor));
++  color.color.red = (NS_GET_R(rccolor) << 8) | NS_GET_R(rccolor);
++  color.color.green = (NS_GET_G(rccolor) << 8) | NS_GET_G(rccolor);
++  color.color.blue = (NS_GET_B(rccolor) << 8) | NS_GET_B(rccolor);
++  color.color.alpha = 0xffff;
++
++  XftDraw *draw = aSurface->GetXftDraw();
++
++  nsCOMPtr<nsIRegion> lastRegion;
++  nsCOMPtr<nsIRegion> clipRegion;
++
++  aSurface->GetLastXftClip(getter_AddRefs(lastRegion));
++  aContext->GetClipRegion(getter_AddRefs(clipRegion));
++
++  // avoid setting the clip, if possible
++  if (!lastRegion || !clipRegion || !lastRegion->IsEqual(*clipRegion)) {
++    aSurface->SetLastXftClip(clipRegion);
++
++    GdkRegion *rgn = nsnull;
++    clipRegion->GetNativeRegion((void *&)rgn);
++    GdkRegionPrivate  *priv = (GdkRegionPrivate *)rgn;
++
++    XftDrawSetClip(draw, priv->xregion);
++  }
++
++  XftDrawString8(draw, &color, mXftFont, aX, aY + mBaselineAdjust, 
++                  (FcChar8 *)aString, aLength);
++
++  return aLength;
++}
++
++void
++nsFontGTKXft::GetFontProperties(float &aScale,
++                                nscoord &aAscent,
++                                nscoord &aDescent,
++                                nscoord &aLineSpacing,
++                                nscoord &aWidthMaxBounds,
++                                float &aSpaceWidth,
++                                float &aXHeight,
++                                float &aUnderlinePosition,
++                                nscoord &aUnderlineThickness,
++                                nscoord &aSuperscriptOffset,
++                                nscoord &aSubscriptOffset)
++{
++  FT_Face face;
++  TT_OS2 *os2;
++  
++  face = XftLockFace(mXftFont);
++  os2 = (TT_OS2 *) FT_Get_Sfnt_Table(face, ft_sfnt_os2);
++
++  // aAscent
++  aAscent = mXftFont->ascent;
++  // aDescent
++  aDescent = mXftFont->descent;
++  // aLineSpacing
++  aLineSpacing = mXftFont->height;
++  // aWidthMaxBounds
++  aWidthMaxBounds = mXftFont->max_advance_width;
++
++  // aSpaceWidth
++  PRUnichar unispace(' ');
++  aSpaceWidth = GetWidth(&unispace, 1);
++
++  // aXHeight
++  PRUnichar xUnichar('x');
++  if (SupportsChar(xUnichar)) {
++    XGlyphInfo extents;
++    XftTextExtents16(GDK_DISPLAY(), mXftFont, &xUnichar, 1, &extents);
++    aXHeight = extents.height;
++  }
++  else {
++    // 56% of ascent, best guess for non-true type or asian fonts
++    aXHeight = ((float)aAscent) * 0.56;
++  }
++
++  float val;
++
++  // aUnderlinePosition
++  val = face->underline_position >> 16;
++  //  val = FT_MulFix(face->underline_position, face->size->metrics.x_scale);
++  if (val)
++    aUnderlinePosition = -val;
++  else
++    aUnderlinePosition = -MAX(1, floor(0.1 * mXftFont->height + 0.5));
++
++  // aUnderlineThickness
++  val = face->underline_thickness >> 16;
++  //  val = FT_MulFix(face->underline_thickness, face->size->metrics.x_scale);
++  if (val) {
++    aUnderlineThickness = nscoord(MAX(aScale, NSToIntRound(val * aScale)));
++  }
++  else {
++    aUnderlineThickness =
++      NSToIntRound(MAX(1, floor(0.05 * mXftFont->height + 0.5)) * aScale);
++  }
++
++  // aSuperscriptOffset
++  if (os2 && os2->ySuperscriptYOffset) {
++    //val = FT_MulFix(os2->ySuperscriptYOffset, face->size->metrics.x_scale);
++    val = os2->ySuperscriptYOffset >> 16;
++    aSuperscriptOffset = nscoord(MAX(aScale, NSToIntRound(val * aScale)));
++  }
++  else {
++    aSuperscriptOffset = NSToIntRound(aXHeight * aScale);
++  }
++    
++  // aSubscriptOffset
++  if (os2 && os2->ySubscriptYOffset) {
++    // val = FT_MulFix(os2->ySubscriptYOffset, face->size->metrics.x_scale);
++    val = os2->ySubscriptYOffset >> 16;
++    aSubscriptOffset = nscoord(MAX(aScale, NSToIntRound(val * aScale)));
++  }
++  else {
++    aSubscriptOffset = NSToIntRound(aXHeight * aScale);
++  }
++
++  XftUnlockFace(mXftFont);
++}
++
++#ifdef MOZ_MATHML
++nsresult
++nsFontGTKXft::GetBoundingMetrics(const PRUnichar*   aString,
++                                 PRUint32           aLength,
++                                 nsBoundingMetrics& aBoundingMetrics)
++{
++  aBoundingMetrics.Clear ();
++
++  if (aString && aLength) {
++    XGlyphInfo info;
++    XftTextExtents16 (GDK_DISPLAY (), mXftFont, (FcChar16 *) aString, 
++		      aLength, &info);
++    aBoundingMetrics.leftBearing = info.x;
++    aBoundingMetrics.rightBearing = info.width - info.x;
++    aBoundingMetrics.ascent = -info.y;
++    aBoundingMetrics.descent = info.height + info.y;
++    aBoundingMetrics.width = info.xOff;
++  }
++  return NS_OK;
++}
++#endif /* MOZ_MATHML */
++
++PRBool
++UseXft (void)
++{
++  static PRBool	  been_here_done_that = PR_FALSE;
++  static PRBool	  use_xft;
++  if (!been_here_done_that)
++  {
++    char *e = getenv ("MOZILLA_XFT");
++    been_here_done_that = PR_TRUE;
++    use_xft = !e || atoi(e) == 1;
++  }
++  return use_xft;
++}
++
++static FcPattern *
++ListLangGroup (nsIAtom *aLangGroup, const char *aGeneric)
++{
++  const struct xftLangGroup *langGroup = xftFindMozLangAtom (aLangGroup);
++  if (langGroup && langGroup->aXftLangGroup[0])
++  {
++    const char *const *langGroups = langGroup->aXftLangGroup;
++    FcPattern	      *pat = FcPatternCreate ();
++    if (!pat)
++      return 0;
++    while (*langGroups)
++      FcPatternAddString (pat, FC_LANG, (const FcChar8 *) *langGroups++);
++    return pat;
++  }
++  return 0;
++}
++
++static FcPattern *
++ListLangChar (nsIAtom *aLangGroup, const char *aGeneric)
++{
++  const struct xftLangGroup *langGroup = xftFindMozLangAtom (aLangGroup);
++  if (langGroup && langGroup->aChar)
++  {
++    FcPattern	    *pat = FcPatternCreate ();
++    if (!pat)
++      return 0;
++
++    FcCharSet	    *cs = FcCharSetCreate ();
++    if (!cs) {
++      FcPatternDestroy (pat);
++      return 0;
++    }
++    FcCharSetAddChar (cs, langGroup->aChar);
++    FcPatternAddCharSet (pat, FC_CHARSET, cs);
++    FcCharSetDestroy (cs);
++    return pat;
++  }
++  return 0;
++}
++
++
++static int
++FFRECountHyphens (nsACString &aFFREName)
++{
++  int h = 0;
++  PRInt32 hyphen = 0;
++  while ((hyphen = aFFREName.FindChar('-', hyphen)) >= 0) {
++    h++;
++    hyphen++;
++  }
++  return h;
++}
++
++static void
++FFREToFamily(nsACString &aFFREName, nsACString &oFamily)
++{
++  if (FFRECountHyphens(aFFREName) == 3)
++  {
++    PRInt32 familyHyphen = aFFREName.FindChar('-') + 1;
++    PRInt32 registryHyphen = aFFREName.FindChar('-',familyHyphen);
++    oFamily.Append(PromiseFlatCString(aFFREName).get() + familyHyphen,
++		   registryHyphen - familyHyphen);
++  }
++  else
++    oFamily.Append(aFFREName);
++}
++
++struct nsXftFontSearch
++{
++  FcPattern *fcPat;
++  nsIAtom   *langGroup;
++};
++
++static void
++nsXftAddFFRE (FcPattern *fcPat, nsCString *familyName)
++{
++    nsCAutoString	family;
++    FFREToFamily (*familyName, family);
++    FcPatternAddString (fcPat, FC_FAMILY, (const FcChar8 *) family.get());
++}
++
++static PRBool
++PrefXftMatchLang (const char *pref, nsIAtom *aLangGroup)
++{
++  if (aLangGroup) {
++    const char  *lang = atomToName (aLangGroup);
++    int	  nlen = strlen (pref);
++    int	  alen = strlen (lang);
++
++    if (alen > nlen || strcmp (pref + (nlen - alen), lang) != 0)
++      return PR_FALSE;
++  }
++  return PR_TRUE;
++}
++
++static void
++PrefXftEnumCallback(const char* aName, void* aClosure)
++{
++  nsXftFontSearch *s = (nsXftFontSearch *) aClosure;
++
++  if (!PrefXftMatchLang (aName, s->langGroup))
++    return;
++  nsXPIDLCString value;
++  gPref->CopyCharPref(aName, getter_Copies(value));
++  nsCAutoString name;
++  if (value) {
++    name = value;
++    nsXftAddFFRE (s->fcPat, &name);
++  }
++  gPref->CopyDefaultCharPref(aName, getter_Copies(value));
++  if (value) {
++    name = value;
++    nsXftAddFFRE (s->fcPat, &name);
++  }
++}
++    
++nsFontGTK *
++nsFontMetricsGTK::FindXftFont(PRUnichar aChar)
++{
++  FcPattern *fcPat;
++
++  fcPat = FcPatternCreate ();
++
++  /* Add user-defined family */
++  if (mIsUserDefined && !mUserDefined.Equals(*mGeneric))
++    FcPatternAddString (fcPat, FC_FAMILY, (const FcChar8 *) mUserDefined.get());
++  
++  /* Add CSS names */
++  for (int i = 0; i < mFonts.Count (); i++)
++  {
++    nsCString *familyName = mFonts.CStringAt(i);
++    if (!familyName->Equals(*mGeneric))
++      nsXftAddFFRE (fcPat, familyName);
++  }
++    
++  /* Add user preference names */
++  //
++  // Search all font prefs for generic
++  //
++  nsCAutoString prefix("font.name.");
++  prefix.Append(*mGeneric);
++  prefix.Append(".");
++  prefix.Append(atomToName(mLangGroup));
++  nsXftFontSearch search = { fcPat, mLangGroup };
++  FIND_FONT_PRINTF(("      Search all font prefs for generic"));
++  gPref->EnumerateChildren(prefix.get(), PrefXftEnumCallback, &search);
++
++  //
++  // Add the generic name to use the Fontconfig mappings
++  //
++  FcPatternAddString (fcPat, FC_FAMILY, (const FcChar8 *) mGeneric->get());
++
++  //
++  // Search all font prefs
++  //
++  // find based on all prefs (no generic part (eg: sans-serif))
++  nsCAutoString allPrefs("font.name.");
++  FIND_FONT_PRINTF(("      Search all font prefs"));
++  gPref->EnumerateChildren(allPrefs.get(), PrefXftEnumCallback, &search);
++  
++  const struct xftLangGroup *langGroup = xftFindMozLangAtom (mLangGroup);
++  if (langGroup)
++    for (const char *const*g = langGroup->aXftLangGroup; *g; g++)
++      FcPatternAddString (fcPat, FC_LANG, (const FcChar8 *) *g);
++  
++  /* Add character */
++  FcCharSet *cs = FcCharSetCreate ();
++  if (cs) {
++    FcCharSetAddChar (cs, aChar);
++    FcPatternAddCharSet (fcPat, FC_CHARSET, cs);
++    FcCharSetDestroy (cs);/* we're done with it, the pattern holds a copy */
++  }
++
++  /* Add the style bits */
++  FcPatternAddInteger (fcPat, FC_PIXEL_SIZE, mPixelSize);
++    
++  int fcSlant = FC_SLANT_ROMAN;
++  
++  switch(mFont->style) {
++  case NS_FONT_STYLE_ITALIC:
++    fcSlant = FC_SLANT_ITALIC;
++    break;
++  case NS_FONT_STYLE_OBLIQUE:
++    fcSlant = FC_SLANT_OBLIQUE;
++    break;
++  }
++
++  FcPatternAddInteger(fcPat, FC_SLANT, fcSlant);
++
++  /*
++   * weights come in two parts crammed into one
++   * integer -- the "base" weight is weight / 100,
++   * the rest of the value is the "offset" from that
++   * weight -- the number of steps to move to adjust
++   * the weight in the list of supported font weights,
++   * this value can be negative or positive.
++   */
++  PRInt32 baseWeight = (mFont->weight + 50) / 100;
++  PRInt32 offset = mFont->weight - baseWeight * 100;
++  
++  /* clip weights to range 0 to 9 */
++  if (baseWeight < 0) baseWeight = 0;
++  if (baseWeight > 9) baseWeight = 9;
++  
++  /* Map to final FC_WEIGHT value */
++  static int fcWeights[5] = {
++    FC_WEIGHT_LIGHT,	  /* 0 */
++    FC_WEIGHT_MEDIUM,	  /* 1 */
++    FC_WEIGHT_DEMIBOLD,	  /* 2 */
++    FC_WEIGHT_BOLD,	  /* 3 */
++    FC_WEIGHT_BLACK,	  /* 4 */
++  };
++  
++  /* Map from weight value to fcWeights index */
++  static int fcWeightLookup[10] = {
++    0, 0, 0, 0, 1, 1, 2, 3, 3, 4,
++  };
++
++  PRInt32 fcWeight = fcWeightLookup[baseWeight];
++
++  /*
++   * adjust by the offset value, make sure we stay inside the 
++   * fcWeights table
++   */
++  fcWeight += offset;
++  if (fcWeight < 0) fcWeight = 0;
++  if (fcWeight > 4) fcWeight = 4;
++  
++  FcPatternAddInteger(fcPat, FC_WEIGHT, fcWeights[fcWeight]);
++  
++#if 0
++  FcChar8 *name = FcNameUnparse (fcPat);
++  if (name) {
++    printf ("font %s\n", name);
++    free (name);
++  }
++#endif
++    
++  /* Go forth and match */
++  FcResult  result;
++  FcPattern *fcFont = XftFontMatch (GDK_DISPLAY(),
++				    DefaultScreen (GDK_DISPLAY()),
++				    fcPat, &result);
++  FcPatternDestroy (fcPat);
++  
++  XftFont *xftFont = 0;
++  
++  if (fcFont) {
++    
++    FcCharSet *cs;
++    PRBool is_substitute = PR_FALSE;
++    if (FcPatternGetCharSet (fcFont, FC_CHARSET, 0, &cs) != FcResultMatch ||
++	!FcCharSetHasChar (cs, aChar)) 
++    {
++      if (mSubstituteFont)
++      {
++	nsFontGTKXft  *font = (nsFontGTKXft *) mSubstituteFont;
++	FcPatternDestroy (fcFont);
++	FcCharSetAddChar (font->mSubstituteChars, aChar);
++	return mSubstituteFont;
++      }
++      is_substitute = PR_TRUE;
++    }
++    
++    xftFont = XftFontOpenPattern(GDK_DISPLAY(), fcFont);
++    
++    if (xftFont) {
++      nsFontGTKXft *retval;
++      
++      retval = new nsFontGTKXft(xftFont);
++      if (retval) {
++	if (is_substitute) {
++	  retval->mSubstituteChars = FcCharSetCreate ();
++	  FcCharSetAddChar (retval->mSubstituteChars, aChar);
++	  if (!retval->mSubstituteChars) {
++	    delete retval;
++	    retval = 0;
++	  }
++	  mSubstituteFont = retval;
++	}
++	AddToLoadedFontsList(retval);
++        return retval;
++      }
++      XftFontClose(GDK_DISPLAY(), xftFont);
++    }
++    else {
++      FcPatternDestroy(fcFont);
++    }
++  }
++  return nsnull;
++  
++}
++
++static int
++CompareXftFontNames(const void* aArg1, const void* aArg2, void* aClosure)
++{
++  const PRUnichar* str1 = *((const PRUnichar**) aArg1);
++  const PRUnichar* str2 = *((const PRUnichar**) aArg2);
++
++  // XXX add nsICollation stuff
++
++  return nsCRT::strcmp(str1, str2);
++}
++
++static nsresult
++EnumXftFonts(nsIAtom* aLangGroup, const char* aGeneric, PRUint32* aCount,
++	     PRUnichar*** aResult)
++{
++  PRUnichar   **array;
++  PRUint32    narray;
++  FcPattern   *pat;
++  FcObjectSet *os = FcObjectSetBuild (FC_FAMILY, FC_FOUNDRY, 0);
++  FcFontSet   *fs;
++
++  fs = 0;
++  if ((pat = ListLangGroup (aLangGroup, aGeneric))) {
++    fs = FcFontList (0, pat, os);
++    if (fs && !fs->nfont) {
++      FcFontSetDestroy (fs);
++      fs = 0;
++    }
++    FcPatternDestroy (pat);
++  }
++
++  if (!fs && (pat = ListLangChar (aLangGroup, aGeneric))) {
++    fs = FcFontList (0, pat, os);
++    if (fs && !fs->nfont) {
++      FcFontSetDestroy (fs);
++      fs = 0;
++    }
++    FcPatternDestroy (pat);
++  }
++
++  if (!fs && (pat = FcPatternCreate ())) {
++    fs = FcFontList (0, pat, os);
++    FcPatternDestroy (pat);
++  }
++  FcObjectSetDestroy (os);
++
++  if (!fs)
++    return NS_ERROR_OUT_OF_MEMORY;
++
++  array = (PRUnichar**) nsMemory::Alloc(fs->nfont * sizeof(PRUnichar*));
++  narray = 0;
++  for (int i = 0; i < fs->nfont; i++) {
++    char	*family, *foundry;
++    PRUnichar	*name;
++
++    if (FcPatternGetString (fs->fonts[i], FC_FOUNDRY, 0, (FcChar8 **) &foundry) !=
++	FcResultMatch)
++      foundry = "*";
++
++    if (FcPatternGetString (fs->fonts[i], FC_FAMILY, 0, (FcChar8 **) &family) !=
++	FcResultMatch)
++      family = "*";
++
++    name = (PRUnichar *) nsMemory::Alloc ((strlen (foundry) + 
++					   1 + 
++					   strlen (family) +
++					   strlen ("-iso10646-1") +
++					   1) * sizeof (PRUnichar));
++    if (!name) {
++      for (PRUint32 j = 0; j < narray; j++)
++	nsMemory::Free (array[j]);
++      nsMemory::Free (array);
++      return NS_ERROR_OUT_OF_MEMORY;
++    }
++
++    PRUnichar *r = name;
++    for (char *f = foundry; *f; f++)
++      *r++ = *f;
++    *r++ = '-';
++    for (char *f = family; *f; f++)
++      *r++ = *f;
++    for (char *f = "-iso10646-1"; *f; f++)
++      *r++ = *f;
++    *r++ = '\0';
++
++    array[narray++] = name;
++  }
++  FcFontSetDestroy (fs);
++  NS_QuickSort(array, narray, sizeof (PRUnichar*), CompareXftFontNames, nsnull);
++  *aCount = narray;
++  if (narray)
++    *aResult = array;
++  else
++    nsMemory::Free(array);
++  return NS_OK;
++}
++#endif /* MOZ_ENABLE_XFT */
++
+ nsFontGTK*
+ nsFontMetricsGTK::AddToLoadedFontsList(nsFontGTK* aFont)
+ {
+@@ -4765,6 +5630,11 @@
+ {
+   FIND_FONT_PRINTF(("\nFindFont(%c/0x%04x)", aChar, aChar));
+ 
++#ifdef MOZ_ENABLE_XFT
++  if (UseXft ()) {
++    return FindXftFont(aChar);
++  }
++#endif /* MOZ_ENABLE_XFT */
+   nsFontGTK* font = FindUserDefinedFont(aChar);
+   if (!font) {
+     font = FindStyleSheetSpecificFont(aChar);
+@@ -4876,6 +5746,11 @@
+ EnumFonts(nsIAtom* aLangGroup, const char* aGeneric, PRUint32* aCount,
+   PRUnichar*** aResult)
+ {
++#ifdef MOZ_ENABLE_XFT
++  if (UseXft ()) {
++    return EnumXftFonts (aLangGroup, aGeneric, aCount, aResult);
++  }
++#endif /* MOZ_ENABLE_XFT */
+   nsresult res = GetAllFontNames();
+   if (NS_FAILED(res)) {
+     return res;
+Index: gfx/src/gtk/nsFontMetricsGTK.h
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/nsFontMetricsGTK.h,v
+retrieving revision 1.48.2.1
+diff -u -r1.48.2.1 nsFontMetricsGTK.h
+--- gfx/src/gtk/nsFontMetricsGTK.h	10 Apr 2002 02:46:16 -0000	1.48.2.1
++++ gfx/src/gtk/nsFontMetricsGTK.h	20 Apr 2002 17:38:33 -0000
+@@ -222,18 +222,36 @@
+   void LoadFont(void);
+   PRBool IsEmptyFont(XFontStruct*);
+ 
+-  inline int SupportsChar(PRUnichar aChar)
+-    { return mCCMap && CCMAP_HAS_CHAR(mCCMap, aChar); };
++  virtual int SupportsChar(PRUnichar aChar);
+ 
+   virtual GdkFont* GetGDKFont(void);
+   virtual nsXFont* GetXFont(void);
+   virtual PRBool   GetXFontIs10646(void);
++  virtual PRBool   IsXftFont(void);
+   virtual PRBool   IsFreeTypeFont(void);
++  virtual gint GetWidth8(const char *aString, PRUint32 aLength);
+   virtual gint GetWidth(const PRUnichar* aString, PRUint32 aLength) = 0;
++  virtual gint DrawString8(nsRenderingContextGTK *aContext,
++                           nsDrawingSurfaceGTK* aSurface,
++                           nscoord aX, nscoord aY,
++                           const char* aString,
++                           PRUint32 aLength);
+   virtual gint DrawString(nsRenderingContextGTK* aContext,
+                           nsDrawingSurfaceGTK* aSurface, nscoord aX,
+                           nscoord aY, const PRUnichar* aString,
+                           PRUint32 aLength) = 0;
++  virtual void GetFontProperties(float &aScale,
++                                 nscoord &aAscent,
++                                 nscoord &aDescent,
++                                 nscoord &aLineSpacing,
++                                 nscoord &aWidthMaxBounds,
++                                 float &aSpaceWidth,
++                                 float &aXHeight,
++                                 float &aUnderlinePosition,
++                                 nscoord &aUnderlineThickness,
++                                 nscoord &aSuperscriptOffset,
++                                 nscoord &aSubscriptOffset);
++
+ #ifdef MOZ_MATHML
+   // bounding metrics for a string 
+   // remember returned values are not in app units 
+@@ -301,6 +319,9 @@
+   NS_IMETHOD  GetSpaceWidth(nscoord &aSpaceWidth);
+ 
+   nsFontGTK*  FindFont(PRUnichar aChar);
++#ifdef MOZ_ENABLE_XFT
++  nsFontGTK*  FindXftFont(PRUnichar aChar);
++#endif
+   nsFontGTK*  FindUserDefinedFont(PRUnichar aChar);
+   nsFontGTK*  FindStyleSheetSpecificFont(PRUnichar aChar);
+   nsFontGTK*  FindStyleSheetGenericFont(PRUnichar aChar);
+Index: gfx/src/gtk/nsRenderingContextGTK.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/nsRenderingContextGTK.cpp,v
+retrieving revision 1.156.8.1
+diff -u -r1.156.8.1 nsRenderingContextGTK.cpp
+--- gfx/src/gtk/nsRenderingContextGTK.cpp	10 Apr 2002 02:46:18 -0000	1.156.8.1
++++ gfx/src/gtk/nsRenderingContextGTK.cpp	20 Apr 2002 17:38:35 -0000
+@@ -1304,6 +1304,12 @@
+     g_return_val_if_fail(mCurrentFont != NULL, NS_ERROR_FAILURE);
+     gint rawWidth;
+     nsXFont *xFont = mCurrentFont->GetXFont();
++#ifdef MOZ_ENABLE_XFT
++    if (mCurrentFont->IsXftFont()) {
++      rawWidth = mCurrentFont->GetWidth8(aString, aLength);
++    }
++    else
++#endif
+     if (mCurrentFont->IsFreeTypeFont()) {
+       PRUnichar unichars[WIDEN_8_TO_16_BUF_SIZE];
+       // need to fix this for long strings
+@@ -1354,7 +1360,7 @@
+       nsFontGTK** font = metrics->mLoadedFonts;
+       nsFontGTK** end = &metrics->mLoadedFonts[metrics->mLoadedFontsCount];
+       while (font < end) {
+-        if (CCMAP_HAS_CHAR((*font)->mCCMap, c)) {
++        if ((*font)->SupportsChar(c)) {
+           currFont = *font;
+           goto FoundFont; // for speed -- avoid "if" statement
+         }
+@@ -1419,7 +1425,7 @@
+       nsFontGTK** font = metrics->mLoadedFonts;
+       nsFontGTK** end = &metrics->mLoadedFonts[metrics->mLoadedFontsCount];
+       while (font < end) {
+-        if (CCMAP_HAS_CHAR((*font)->mCCMap, c)) {
++        if ((*font)->SupportsChar(c)) {
+           currFont = *font;
+           goto FoundFont; // for speed -- avoid "if" statement
+         }
+@@ -1490,6 +1496,12 @@
+         nscoord xx = x;
+         nscoord yy = y;
+         mTranMatrix->TransformCoord(&xx, &yy);
++#ifdef MOZ_ENABLE_XFT
++        if (mCurrentFont->IsXftFont()) {
++          mCurrentFont->DrawString8(this, mSurface, xx, yy, &ch, 1);
++        }
++        else
++#endif
+         if (mCurrentFont->IsFreeTypeFont()) {
+           PRUnichar unichars[WIDEN_8_TO_16_BUF_SIZE];
+           // need to fix this for long strings
+@@ -1518,6 +1530,12 @@
+     }
+     else {
+       mTranMatrix->TransformCoord(&x, &y);
++#ifdef MOZ_ENABLE_XFT
++        if (mCurrentFont->IsXftFont()) {
++        mCurrentFont->DrawString8(this, mSurface, x, y, aString, aLength);
++      }
++      else
++#endif
+       if (mCurrentFont->IsFreeTypeFont()) {
+         PRUnichar unichars[WIDEN_8_TO_16_BUF_SIZE];
+         // need to fix this for long strings
+@@ -1607,7 +1625,7 @@
+       nsFontGTK** font = metrics->mLoadedFonts;
+       nsFontGTK** lastFont = &metrics->mLoadedFonts[metrics->mLoadedFontsCount];
+       while (font < lastFont) {
+-        if (CCMAP_HAS_CHAR((*font)->mCCMap, c)) {
++        if ((*font)->SupportsChar(c)) {
+           currFont = *font;
+           goto FoundFont; // for speed -- avoid "if" statement
+         }
+@@ -1989,7 +2007,7 @@
+       nsFontGTK** font = metrics->mLoadedFonts;
+       nsFontGTK** end = &metrics->mLoadedFonts[metrics->mLoadedFontsCount];
+       while (font < end) {
+-        if (CCMAP_HAS_CHAR((*font)->mCCMap, c)) {
++        if ((*font)->SupportsChar(c)) {
+           currFont = *font;
+           goto FoundFont; // for speed -- avoid "if" statement
+         }
+Index: gfx/src/x11shared/nsFT2FontCatalog.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/x11shared/nsFT2FontCatalog.cpp,v
+retrieving revision 1.8.2.1
+diff -u -r1.8.2.1 nsFT2FontCatalog.cpp
+--- gfx/src/x11shared/nsFT2FontCatalog.cpp	10 Apr 2002 02:46:51 -0000	1.8.2.1
++++ gfx/src/x11shared/nsFT2FontCatalog.cpp	20 Apr 2002 17:38:39 -0000
+@@ -100,7 +100,9 @@
+ //
+ 
+ // Solaris is missing a prototype for ctime
++extern "C" {
+ extern char *ctime(const time_t *timep);
++}
+ 
+ #include <ft2build.h>
+ #include FT_GLYPH_H

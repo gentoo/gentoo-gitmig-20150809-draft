@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.11 2002/04/27 12:02:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.12 2002/05/01 19:52:58 azarah Exp $
+
+*mozilla-1.0_rc1-r1 (1 May 2002)
+
+  1 Apr 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.0_rc1-r1.ebuild :
+
+  Added XFT support.
 
   27 Apr 2002; pvdabeel <pvdabeel@gentoo.org> :
 
