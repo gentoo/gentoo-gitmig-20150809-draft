@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.3 2003/04/24 13:35:10 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.4 2003/04/24 17:54:46 robbat2 Exp $
 
 inherit php eutils
 
@@ -35,8 +35,10 @@ src_compile() {
 		myconf="${myconf} --with-apxs=/usr/sbin/apxs"
 	fi
 
+	#turned off as of bug #17462 
 	#this is an extra item required with mcrypt (which is include in the eclass) when used with apache
-	use crypt && myconf="${myconf} --disable-posix-threads"
+	#use crypt && myconf="${myconf} --disable-posix-threads"
+	
 
 	#php CGI stuff
 	#--enable-discard-path --enable-force-cgi-redirect
