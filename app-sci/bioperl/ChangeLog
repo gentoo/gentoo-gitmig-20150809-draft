@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/bioperl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/ChangeLog,v 1.7 2003/11/24 20:48:06 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/ChangeLog,v 1.8 2004/01/09 02:53:08 sediener Exp $
+
+*bioperl-1.4 (08 Jan 2004)
+
+  08 Jan 2004; Stephen Diener <sediener@gentoo.org> bioperl-1.4.ebuild:
+  version bump
 
   24 Nov 2003; Stephen Diener <sediener@gentoo.org> bioperl-1.2.3.ebuild:
   bump to stable.

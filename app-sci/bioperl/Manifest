@@ -2,12 +2,14 @@ MD5 20616984167d7ac1a9db33713d70e93f bioperl-1.0.2.ebuild 1496
 MD5 64c8b83ffe189aa1d5300210ee41f999 bioperl-1.2.3.ebuild 2082
 MD5 ce01843f37edf576d07e2423ee6d486e bioperl-1.2.ebuild 1524
 MD5 683bbc29b2f9f4f309efbecfea7184a1 bioperl-1.2.2.ebuild 2198
+MD5 91f77d74fd5f87b99f31b0733b9c9c3c bioperl-1.4.ebuild 1237
 MD5 61a74e4b80a1ab784b31f2d1e80079ff ChangeLog 1202
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.2.patch 3355
 MD5 1828ff2ba6225e17a98d27bfbad5c7c9 files/bioperl-1.2-manpage.diff 712
 MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.3.patch 3355
 MD5 14b9e16331895fe40e231065f7dda942 files/digest-bioperl-1.2 64
+MD5 d5d0bc711fb345c9b91086c5d47e1442 files/digest-bioperl-1.4 65
 MD5 08539f1d1fed6d673140cdc221ae13e6 files/domanpages-1.2.2.patch 412
 MD5 dfdb9921cbef92f60e9746a9531d8de7 files/digest-bioperl-1.0.2 66
 MD5 d8df3477f72bba80de83cfdb5416ecbf files/digest-bioperl-1.2.2 66
