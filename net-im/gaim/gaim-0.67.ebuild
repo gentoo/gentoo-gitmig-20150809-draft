@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.67.ebuild,v 1.2 2003/09/05 23:58:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.67.ebuild,v 1.3 2003/10/28 13:19:21 mholzer Exp $
 
 IUSE="nls perl spell nas ssl"
 
@@ -9,6 +9,7 @@ HOMEPAGE="http://gaim.sourceforge.net/"
 EV=2.06
 SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2
 	ssl? ( mirror://sourceforge/gaim-encryption/gaim-encryption-${EV}.tar.gz )"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
