@@ -1,9 +1,14 @@
 # ChangeLog for net-p2p/dctc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.15 2003/05/06 21:53:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.16 2003/05/29 13:33:49 mholzer Exp $
+
+*dctc-0.85.2 (29 May 2003)
+
+  29 May 2003; Martin Holzer <mholzer@gentoo.org> dctc-0.85.2.ebuild:
+  Version bumped. Ebuild submitted by Mats Huttunen <sumc@bredband.net> in
+  #21895
 
 *dctc-0.85.1 (24 Apr 2003)
-
 
   06 May 2003; Martin Holzer <mholzer@gentoo.org> :
   Digest update. Closes #20553.
