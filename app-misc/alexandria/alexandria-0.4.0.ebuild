@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.4.0.ebuild,v 1.3 2005/01/01 14:50:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.4.0.ebuild,v 1.4 2005/01/04 15:45:06 citizen428 Exp $
 
 inherit ruby gnome2
 
@@ -12,7 +12,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/1834/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 USE_RUBY="ruby18"
 
