@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.5 2004/04/28 08:33:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.6 2004/04/28 09:24:58 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -8,14 +8,14 @@ inherit eutils flag-o-matic ccc gnuconfig
 # and _p? releases.
 PARCH=${P/_/}
 
-X509_PATCH="${PARCH}+x509g4.diff.gz"
+X509_PATCH="${PARCH}+x509h.diff.gz"
 SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff"
 
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
-SRC_URI="mirror://openssh/${PARCH}.tar.gz"
-#	X509? ( http://roumenpetrov.info/openssh/x509g4/${X509_PATCH} )"
+SRC_URI="mirror://openssh/${PARCH}.tar.gz
+	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -44,14 +44,13 @@ PROVIDE="virtual/ssh"
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
-#	epatch ${FILESDIR}/${P}-kerberos.patch
 	epatch ${FILESDIR}/${P}-resolv_functions.patch
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
 	use skey && epatch ${FILESDIR}/${P}-skey.patch
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch
-#	use X509 && epatch ${DISTDIR}/${X509_PATCH}
+	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 }
 
 src_compile() {
