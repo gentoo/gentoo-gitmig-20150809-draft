@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20040522.ebuild,v 1.3 2004/06/28 03:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20040522.ebuild,v 1.4 2004/06/30 12:07:49 agriffis Exp $
 
 inherit enlightenment eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
 
 LICENSE="GPL-2"
-IUSE="${IUSE} perl X mad oggvorbis truetype gnome kde"
+IUSE="perl X mad oggvorbis truetype gnome kde"
 
 DEPEND=">=dev-util/pkgconfig-0.5
 	=x11-libs/gtk+-2*
@@ -46,7 +46,7 @@ src_compile() {
 		--enable-extra-themes
 		--enable-extra-iconsets
 		`use_enable perl pcre`
-		`use_enable x X`
+		`use_enable X x`
 		`use_enable mad libmad`
 		`use_enable oggvorbis plugin-vorbis`
 		`use_enable truetype plugin-ttf`
