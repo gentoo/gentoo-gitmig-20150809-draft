@@ -1,4 +1,4 @@
-MD5 1d4fafb357d3738fc17b22e54157bff6 files/digest-picprog-1.3 62
-MD5 091e0bb1db7f55bea326d6a18cf87b4e picprog-1.3.ebuild 673
-MD5 10def1d80ab36800a222bad9775a6567 ChangeLog 402
+MD5 d59ea6bf23652bcf41ffa8c499fc851e ChangeLog 503
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 fcfcf829012e77e8a975610746243da0 picprog-1.3.ebuild 676
+MD5 1d4fafb357d3738fc17b22e54157bff6 files/digest-picprog-1.3 62

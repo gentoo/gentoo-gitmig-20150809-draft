@@ -1,4 +1,4 @@
-MD5 bd464a395ef450ffa7f38667b4759d62 files/digest-picasm-1.12b 61
-MD5 1e8514963ba31d924b0753e99da33b4d picasm-1.12b.ebuild 735
-MD5 2d36a819b01e41c530eef6c384b71bf2 ChangeLog 420
+MD5 01b809b397b8aeabf857bec00dc046a9 ChangeLog 522
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 622a7e91038151f4dad1bc971293020f picasm-1.12b.ebuild 738
+MD5 bd464a395ef450ffa7f38667b4759d62 files/digest-picasm-1.12b 61
