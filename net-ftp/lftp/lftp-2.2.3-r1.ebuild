@@ -1,13 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.2.3-r1.ebuild,v 1.2 2000/08/16 04:38:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.2.3-r1.ebuild,v 1.3 2000/08/25 15:10:24 achim Exp $
 
 P=lftp-2.2.3
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="Groovy little ftp client"
-SRC_URI="ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/lftp-2.2.3.tar.bz2"
+SRC_URI="ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${A}
+	"ftp.netsw.org/netsw/Network/IP/FileTrans/FTP/lftp/${A}"
+
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
 
 src_unpack () {
