@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.12 2003/03/14 01:28:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.13 2003/06/22 03:34:42 g2boojum Exp $
+
+*gotmail-0.7.10 (21 Jun 2003)
+
+  21 Jun 2003; Grant Goodyear <g2boojum@gentoo.org> gotmail-0.7.10.ebuild,
+  gotmail-0.7.9.ebuild:
+  New version that fixes the funky "inboxloc" error 
+  (because MS changed Hotmail's structure yet again).
+  Marking stable and removing the old version, since MS broke it.
 
 *gotmail-0.7.9 (13 Mar 2003)
 
