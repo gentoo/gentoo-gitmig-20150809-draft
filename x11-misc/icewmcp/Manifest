@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a560f82ee280f9cc50a06ab4cf3a814c icewmcp-3.2.ebuild 2406
-MD5 b4e66893be21a7b996ebab16acf25318 ChangeLog 1009
-MD5 d11c79a2364caa9a5ec3fb5b779adc13 icewmcp-3.1.ebuild 2407
+MD5 c6f0bc0ccbde1c6d84293354a37aea47 icewmcp-3.1.ebuild 2408
+MD5 428eedfd56a1c5c296a5be49eb02bc24 ChangeLog 1125
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 c7292bd9381f8b320cefa8dcf243278b files/digest-icewmcp-3.2 74
+MD5 628618d07e77827f2e47ca15c7c24904 icewmcp-3.2.ebuild 2415
 MD5 2180d0e3edcb1dd9b00cb79e2f1d951d files/digest-icewmcp-3.1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWnMdI7fK2cqeyXkRAn9JAKC0wtca8s7Is3y/goxhywQseuB+owCfQFRg
-grJn4ZCrR7LbjdTaqEhSvl0=
-=emQr
------END PGP SIGNATURE-----
+MD5 c7292bd9381f8b320cefa8dcf243278b files/digest-icewmcp-3.2 74

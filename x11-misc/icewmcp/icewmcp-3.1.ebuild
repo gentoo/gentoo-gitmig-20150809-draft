@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/icewmcp-3.1.ebuild,v 1.5 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/icewmcp-3.1.ebuild,v 1.6 2005/02/03 20:08:25 luckyduck Exp $
 
 S=${WORKDIR}/INSTALL-IceWMCP
 MY_PN=IceWMControlPanel
