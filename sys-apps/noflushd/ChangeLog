@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/noflushd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.6 2003/02/12 09:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.7 2003/04/16 17:51:07 cretin Exp $
 
 *noflushd-2.6.3 (15 Jul 2002)
 
@@ -15,10 +15,16 @@
 
 *noflushd-2.4-r3.ebuild (14 July 2002)
 
+  16 Apr 2003; Stefan Jones <cretin@gentoo.org> :
+  remove sys-devel/ld.so dep.
+
   14 Jul 2002; phoen][x <phoenix@gentoo.org> noflushd-2.4-r3.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
 *noflushd-2.4-r6 (1 Feb 2002)
+
+  16 Apr 2003; Stefan Jones <cretin@gentoo.org> :
+  remove sys-devel/ld.so dep.
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> noflushd-2.4-r6.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
