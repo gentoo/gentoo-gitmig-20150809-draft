@@ -1,6 +1,6 @@
 MD5 b26cfc0d23804607543a038bfa2a3e45 ChangeLog 1486
 MD5 a351b211fb7f90103af631357ae7da54 dictd-wn-1.5-r1.ebuild 554
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 92a3502246abab02375144cb1d5559d7 dictd-wn-2.0.ebuild 776
+MD5 3ba87142308c9b0084617f3f07c9464a dictd-wn-2.0.ebuild 768
 MD5 21660b33b58fd699adfef2ea39bde92e files/digest-dictd-wn-1.5-r1 68
 MD5 7d53471837d26c8c65851e84ba6346e7 files/digest-dictd-wn-2.0 64
