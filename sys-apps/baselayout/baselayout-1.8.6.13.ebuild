@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.2 2004/02/08 23:44:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.3 2004/02/09 04:12:24 brad_mssw Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -173,6 +173,10 @@ create_dev_nodes() {
 			einfo "Using generic-powerpc to make device nodes..."
 			${D}/sbin/MAKEDEV generic-powerpc
 			;;
+		ppc64)
+			einfo "Using generic-powerpc to make device nodes..."
+			${D}/sbin/MAKEDEV generic-powerpc
+			;;
 		sparc)
 			einfo "Using generic-sparc to make device nodes..."
 			${D}/sbin/MAKEDEV generic-sparc
@@ -216,7 +220,7 @@ src_install() {
 
 	# Symlinks so that LSB compliant apps work
 	# /lib64 is especially required since its the default place for ld.so
-	if [ "${ARCH}" = "amd64" ]
+	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "ppc64" ]
 	then
 		dosym lib /lib64
 		dosym lib /usr/lib64
