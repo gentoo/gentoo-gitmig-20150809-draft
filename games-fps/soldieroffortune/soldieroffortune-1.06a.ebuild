@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.3 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.4 2004/02/27 17:01:44 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -63,7 +63,7 @@ src_install() {
 	doins ${CDROM_ROOT}/sof.xpm
 
 	prepgamesdirs
-	make_desktop_entry sof "Soldier of Fortune" "sof.xpm"
+	make_desktop_entry sof "Soldier of Fortune" sof.xpm
 }
 
 pkg_postinst() {
