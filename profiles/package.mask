@@ -77,9 +77,6 @@ media-sound/mp3blaster
 =net-mail/sylpheed-0.9.5-r1
 =net-mail/sylpheed-0.9.8-r1
 
-# <caleb@gentoo.org> (Dec 10 2004)
-=x11-libs/qt-3.3.0_beta1
-
 # <solar@gentoo.org> (Dec 10 2004) 
 # masked for security reasons, see bug #30554 
 <=net-www/jboss-3.2.1-r1
