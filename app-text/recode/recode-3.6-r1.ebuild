@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.6 2004/05/13 07:48:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.7 2004/05/24 20:12:24 fmccor Exp $
 
 inherit flag-o-matic base eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc amd64 alpha ia64 ~mips"
+KEYWORDS="x86 sparc ppc amd64 alpha ia64 ~mips"
 IUSE="nls"
 
 DEPEND="virtual/glibc
