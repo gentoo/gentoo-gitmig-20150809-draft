@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.1-r1.ebuild,v 1.1 2001/06/12 15:02:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.1-r2.ebuild,v 1.1 2001/06/16 07:38:01 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -46,7 +46,7 @@ src_install() {
 	dosym /usr/lib/portage/bin/emerge /usr/sbin/emerge
 	dosym /usr/lib/portage/bin/pkgmerge /usr/sbin/pkgmerge
 	dosym /usr/lib/portage/bin/ebuild /usr/sbin/ebuild
-	dosym /usr/lib/portage/bin/ebuild.sh /usr/sbin/ebuild.sh-${PV}
+	dosym /usr/lib/portage/bin/ebuild.sh-${PV} /usr/sbin/ebuild.sh
 	#dosym /usr/lib/portage/bin/portage-maintain /usr/sbin/portage-maintain
 	dosym /usr/lib/portage/bin/env-update /usr/sbin/env-update
 	dosym /usr/lib/portage/bin/xpak	/usr/bin/xpak
