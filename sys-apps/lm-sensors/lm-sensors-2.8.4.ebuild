@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.3.20040202.ebuild,v 1.1 2004/02/03 23:34:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.4.ebuild,v 1.1 2004/02/10 07:54:39 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ S="${WORKDIR}/${MY_P}"
 MYI2C="${WORKDIR}/i2c-headers"
 
 DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"
-SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/${PN}/${MY_P}.tar.bz2"
+SRC_URI="http://www.lm-sensors.nu/archive/${MY_P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="${KV}"
