@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.24 2003/10/05 03:41:21 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.25 2003/10/15 17:50:05 brad_mssw Exp $
+
+  15 Oct 2003; Brad House <brad_mssw@gentoo.org> blackdown-jre-1.4.1.ebuild:
+  stable on amd64
 
   04 Oct 2003; Brad House <brad_mssw@gentoo.org> blackdown-jre-1.4.1.ebuild:
   Allow amd64 to use java with dependancy on emul-linux-x86-baselibs

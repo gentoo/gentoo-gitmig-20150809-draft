@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.8-r2.ebuild,v 1.3 2003/10/07 17:40:26 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.8-r2.ebuild,v 1.4 2003/10/15 17:45:37 brad_mssw Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha amd64"
 
 DEPEND="virtual/glibc"
 
