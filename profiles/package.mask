@@ -646,8 +646,6 @@ dev-lang/tcl-tk
 # spider@gentoo.org ; 21 May 2002; 
 # =x11-libs/gtk+-1.2* doesn't work
 # this is now the gnome2 big bloated mask!
-<<<<<<< package.mask
-=======
 # (gnome-2 that is ;)
 >=x11-libs/gtk-engines-1.9.0
 >=gnome-base/libglade-1.99.10-r1
@@ -733,12 +731,7 @@ gnome-extra/libglademm
 gnome-extra/libgnomecanvasmm
 gnome-extra/libgnomemm
 gnome-extra/libgnomeuimm
-<<<<<<< package.mask
->>>>>>> 1.738
 
-=======
-#
->>>>>>> 1.770
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
 =app-arch/rar-3.0_beta5
