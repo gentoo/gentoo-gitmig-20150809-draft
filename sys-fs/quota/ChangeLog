@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/quota
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.6 2005/01/03 00:11:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.7 2005/01/07 13:04:51 robbat2 Exp $
+
+*quota-3.12-r1 (07 Jan 2005)
+
+  07 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> files/quota.rc6,
+  +quota-3.12-r1.ebuild:
+  Add RPC support. Bug #59536: add ldap support.
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
