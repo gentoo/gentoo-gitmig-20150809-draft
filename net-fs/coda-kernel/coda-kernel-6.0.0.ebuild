@@ -13,7 +13,7 @@ RESTRICT="nostrip"
 
 SLOT="${KV}"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 
 DEPEND=">=virtual/linux-sources-2.4"
 
