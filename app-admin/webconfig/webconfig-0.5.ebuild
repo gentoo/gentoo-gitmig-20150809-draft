@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webconfig/webconfig-0.5.ebuild,v 1.1 2001/08/04 16:48:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webconfig/webconfig-0.5.ebuild,v 1.2 2001/08/04 17:48:23 danarmak Exp $
 
 # Note: this supports several programs e.g. cups, wwwoffle... but if some
 # aren't installed than the interface for that program simply doesn't work.
@@ -37,9 +37,7 @@ DEPEND="kde-base/kdebase"
 
 src_compile() {
     
-    confopts="--infodir=/usr/share/info --mandir=/usr/share/man --prefix=/usr --host=${CHOST}"
-    
-    try ./configure ${confopts}
+    try ./configure 
     
     try emake
 
