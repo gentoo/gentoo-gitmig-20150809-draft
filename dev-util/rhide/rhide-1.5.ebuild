@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.ebuild,v 1.5 2003/09/06 08:39:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.ebuild,v 1.6 2003/11/14 20:06:13 seemant Exp $
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -33,7 +33,7 @@ IUSE="X"
 DEPEND="virtual/glibc
 	>=app-text/recode-3.6
 	>=dev-libs/libpcre-2.0.6
-	>=sys-apps/bzip2-1.0.1
+	>=app-arch/bzip2-1.0.1
 	>=sys-apps/texinfo-4.1
 	>=sys-devel/gettext-0.11.0
 	>=dev-lang/perl-5.6
