@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.5.3.ebuild,v 1.4 2004/08/21 21:59:45 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.5.3.ebuild,v 1.5 2004/08/25 02:17:41 swegener Exp $
 
 DESCRIPTION="Camomile is a comprehensive Unicode library for ocaml."
 HOMEPAGE="http://camomile.sourceforge.net/"
-SRC_URI="http://heanet.dl.sourceforge.net/sourceforge/camomile/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/camomile/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"

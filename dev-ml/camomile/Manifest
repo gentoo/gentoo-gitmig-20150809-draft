@@ -1,4 +1,14 @@
-MD5 ee0bb658e96003dae03f4070f476ee5e camomile-0.5.3.ebuild 642
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 73eff8769001653f19c7a6b12e36c9e4 ChangeLog 718
+MD5 d67e45513a0ac290260972bae5409b46 camomile-0.5.3.ebuild 620
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 a23a87345adebd0c0965288422cc2a8d ChangeLog 599
 MD5 f5acf743fc3456d4b1d4840defd8baa8 files/digest-camomile-0.5.3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBK/bNI1lqEGTUzyQRAkTKAKC3/M+Ff1NNRYU990SkaIwLAkzDgwCfVUHP
+Zx77EuPkCe0ABRpvQiFdqyg=
+=5ewB
+-----END PGP SIGNATURE-----
