@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 dd9909c8d431d328b7f97b210f957592 metadata.xml 620
 MD5 92891a4d13e3da426324d13f77fbca78 ChangeLog 359
-MD5 a16056b86d0ca171f1a21085042ecd9e libedit-20040907.ebuild 818
+MD5 dccda4967f7bcfe248c82b80496a6dcb libedit-20040907.ebuild 823
 MD5 199385b4798d47bf1bc38042281105df files/20031222-debian-to-gentoo.patch 3892
 MD5 4c5c25a215f4345fe57b1f4158c806d2 files/digest-libedit-20040907 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBVR20HTu7gpaalycRAo/pAJsGH2tIIlQEM8qTtiFu0tpBqMnvnQCgw+oJ
-KMwAyrgDeJJzU3GMvALzZYc=
-=NNvD
+iD8DBQFBVTJBHTu7gpaalycRAt7eAKCJm7uDHS+AZCsdlRxnDhjMmc6zWQCgv9q+
+YBTOB++fs54TDTWtXtHpvss=
+=u/rV
 -----END PGP SIGNATURE-----
