@@ -7,7 +7,7 @@
 <!--                                                                       -->
 <!-- ===================================================================== -->
 
-<!-- $Id: log4j.xml,v 1.1 2004/08/08 17:14:25 stuart Exp $ -->
+<!-- $Id: log4j.xml,v 1.2 2004/09/12 13:44:52 axxo Exp $ -->
 
 <!--
    | For more configuration infromation and examples see the Jakarta Log4j
@@ -24,6 +24,7 @@
   <appender name="FILE" class="org.jboss.logging.appender.DailyRollingFileAppender">
     <param name="File" value="/var/log/jboss/server.log"/>
     <param name="Append" value="false"/>
+    <param name="Threshold" value="INFO"/>
 
     <!-- Rollover at midnight each day -->
 <!--    <param name="DatePattern" value="'.'yyyy-MM-dd"/> -->

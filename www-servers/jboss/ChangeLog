@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/jboss
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/ChangeLog,v 1.4 2004/09/05 09:37:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/ChangeLog,v 1.5 2004/09/12 13:44:52 axxo Exp $
+
+  12 Sep 2004; Thomas Matthijs <axxo@gentoo.org> -files/log4j.xml,
+  files/3.2.3/log4j.xml, files/3.2.5/log4j.xml:
+  reduce logging to INFO level, bug 63770
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
