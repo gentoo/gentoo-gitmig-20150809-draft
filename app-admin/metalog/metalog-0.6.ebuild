@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6.ebuild,v 1.1 2001/07/11 06:45:34 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6.ebuild,v 1.2 2001/07/11 07:54:18 jerry Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
@@ -40,6 +40,8 @@ src_install () {
     insinto /etc/rc.d/init.d
     insopts -m 0755
     doins ${FILESDIR}/metalog
+
+    dodoc AUTHORS COPYING ChangeLog README
 }
 
 # metalog should be manually configured before it's enbled.
