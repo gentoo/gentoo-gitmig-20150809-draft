@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythbrowser
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.2 2004/04/20 17:44:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.3 2004/06/01 17:10:05 aliz Exp $
+
+*mythbrowser-0.15 (01 Jun 2004)
+
+  01 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> mythbrowser-0.15.ebuild:
+  Version bump.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mythbrowser-0.14.ebuild:
