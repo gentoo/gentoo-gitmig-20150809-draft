@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3483 2005/01/12 07:09:18 spyderous Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3484 2005/01/13 05:39:21 mkennedy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <mkennedy@gentoo.org> (Jan 12 2005)
+# no longer needed for the time being; use app-emacs/slime instead
+app-emacs/slime-cvs
 
 # <latexer@gentoo.org> (Jan 11 2005)
 # New, seemingly broken version. See bug #77369
