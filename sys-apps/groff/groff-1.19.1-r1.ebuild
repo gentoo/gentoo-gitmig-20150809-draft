@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r1.ebuild,v 1.1 2004/09/19 21:19:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r1.ebuild,v 1.2 2004/09/30 13:00:27 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/groff/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 ~sparc ~x86"
 IUSE="X" # cjk"
 
 DEPEND="virtual/libc
