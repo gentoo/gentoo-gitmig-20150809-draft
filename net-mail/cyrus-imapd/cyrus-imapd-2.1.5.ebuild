@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.2 2002/07/17 04:20:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.3 2002/07/22 23:29:28 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Cyrus IMAP Server"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 
 PROVIDE="virtual/imapd"
 RDEPEND="virtual/glibc
-	afs? ( >=net-fs/open-afs-1.2.2 )
+	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	>=sys-libs/db-3.2
@@ -21,7 +21,7 @@ RDEPEND="virtual/glibc
 	>=dev-libs/cyrus-sasl-2.1.2
 	>=sys-apps/tcp-wrappers-7.6"
 DEPEND="virtual/glibc
-	afs? ( >=net-fs/open-afs-1.2.2 )
+	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	>=sys-libs/db-3.2
