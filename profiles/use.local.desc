@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.214 2004/01/21 02:54:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.215 2004/01/21 13:44:06 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -107,6 +107,7 @@ gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
+media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/grace:fftw - Enables FFTW support for grace
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
