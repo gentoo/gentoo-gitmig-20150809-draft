@@ -1,6 +1,27 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.97 2003/05/16 06:01:38 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.98 2003/05/18 07:41:28 azarah Exp $
+
+*gcc-3.3 (17 May 2003)
+
+  17 May 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.ebuild,
+  gcc33-gentoo-branding.patch, gcc33-propolice-version.patch :
+  New version:
+  - Merge cleanups from Spider <spider@gentoo.org>.
+  - Add the manpages (required during bootstrap, as we do not have perl),
+    with some more cleanups.
+  - Add a nice collection of patches from Suse/Debian, thanks to
+    Nicholas Wourms <dragon@gentoo.org> for filtering these.
+  - Add an branch update from the Hammer 3.3 branch with lots of Athlon
+    and Hammer fixes/optimizations.  This also includes the DFA scheduler
+    and profiler updates that should improve things accross the board.
+    Once again, many thanks to Nicholas Wourms <dragon@gentoo.org>.
+  - Add gcj AWT/Swing for people with X and java in USE (thanks again
+    Nicholas =).
+	
+  NOTE:  I urge the faint of heart to leave this for now, as it have
+         deprecated many features, and a lot of packages will have to
+		 be fixed first.
 
   16 May 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.2-r3.ebuild:
   - Updated ProPolice to Protector-3.2.2-7, fixing the PPC bug and
