@@ -1,11 +1,16 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.9 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.10 2003/01/13 07:30:26 seemant Exp $
+
+*flac-1.0.4 (31 Oct 2002)
+
+  12 Jan 2003; Seemant Kulleen <seemant@gentoo.org> flac-1.0.4.ebuild :
+
+  Added a fix if -xmms is in USE.  The clever sed'ing thanks to:
+  thompson@pobox.com (Paul Thompson) in bug #12355.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*flac-1.0.4 (31 Oct 2002)
-
   06 Dec 2002; Phil Bordelon <sunflare@gentoo.org> flac-1.0.4.ebuild :
   Marking stable for x86.
 

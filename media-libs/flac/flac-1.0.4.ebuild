@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.4.ebuild,v 1.4 2002/12/09 04:26:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.4.ebuild,v 1.5 2003/01/13 07:30:26 seemant Exp $
 
 IUSE="sse xmms"
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${P}
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc"
 
 RDEPEND="virtual/glibc 
 	>=media-libs/libogg-1.0_rc2
@@ -24,6 +24,13 @@ DEPEND="${RDEPEND}
 	sys-apps/gawk"
 
 src_compile() {
+
+	use xmms || {
+		cp src/Makefile.in src/Makefile.in.orig
+		sed -e '/^@FLaC__HAS_XMMS_TRUE/d' \
+			src/Makefile.in.orig > src/Makefile.in
+	}
+
 	elibtoolize --reverse-deps
 
 	local myconf
