@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.72.ebuild,v 1.3 2004/02/27 13:47:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.72.ebuild,v 1.4 2004/03/04 13:24:15 tester Exp $
 
 DESCRIPTION="GUI for iPod using GTK2"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="mpeg4"
 
