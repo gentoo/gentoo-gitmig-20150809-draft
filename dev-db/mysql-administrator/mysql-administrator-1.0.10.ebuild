@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.0.9.ebuild,v 1.1 2004/08/25 05:57:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.0.10.ebuild,v 1.1 2004/08/26 02:17:01 swegener Exp $
 
 inherit gnome2
 
@@ -44,4 +44,6 @@ src_install() {
 
 	rm ${D}/usr/bin/mysql-administrator
 	dobin ${FILESDIR}/mysql-administrator || die "dobin failed"
+
+	dohtml -r ${S}/mysql-administrator/doc/{resources,mysqladministrator.html,html.css}
 }
