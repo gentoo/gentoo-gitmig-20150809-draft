@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6.ebuild,v 1.4 2004/07/12 23:53:13 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6.ebuild,v 1.5 2004/07/13 00:29:51 langthang Exp $
 
+inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp vanilla"
-
-inherit eutils
 
 edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo.bz2"
 compressed_patch="patch-${PV}.rr.compressed.gz"
@@ -34,7 +33,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64 mips ppc64"
 
-inherit flag-o-matic
 
 pkg_setup() {
 	if ! use imap; then
