@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2812 2004/04/08 06:58:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2813 2004/04/09 22:22:17 klasikahl Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <klasikahl@gentoo.org> (09 Apr 2004)
+# Still in the testing phase.
+=app-admin/virt-mail-admin
 
 # <battousai@gentoo.org> (08 Apr 2004)
 # Needs more development and testing. Don't use it yet.
