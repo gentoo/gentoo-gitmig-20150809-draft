@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.83 2003/11/04 03:31:22 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.84 2003/11/21 17:52:44 lisa Exp $
+
+*distcc-2.11.2-r1 (21 Nov 2003)
+
+  21 Nov 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.11.2-r1.ebuild,
+  files/2.11.1p/distcc-config:
+  New distcc-config from bug 27432; fixes comment 18
 
   03 Nov 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.11.1.ebuild:
   Bump to arch on mips for 2.11.1
