@@ -3,7 +3,7 @@ MD5 4b38c6481b61d0926f7532a256837d06 kdeartwork-2.2.2.ebuild 401
 MD5 d6687083e11588e24d45481465d6569b kdeartwork-3.0.4.ebuild 775
 MD5 46806c626c23901a223b2706956ccc46 kdeartwork-3.0.5b.ebuild 785
 MD5 5f2f763a20f984e53ea1cb67e956d474 kdeartwork-3.1.1.ebuild 555
-MD5 f14065a64f2d39497f884e74ec584fbf kdeartwork-3.1.2.ebuild 557
+MD5 169e4bfb30564fc610b50a65ef5d638f kdeartwork-3.1.2.ebuild 560
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 e09643b7d8304e13d5a69d62946ec733 files/digest-kdeartwork-2.2.2 70
 MD5 f6e92fde8ace49b0d447aaf6ddf8f978 files/digest-kdeartwork-3.0.4 71
