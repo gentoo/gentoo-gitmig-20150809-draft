@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc2.ebuild,v 1.1 2004/04/22 21:41:50 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc2.ebuild,v 1.2 2004/04/23 10:33:08 dholm Exp $
 
 MY_P=Unreal3.2-RC2
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
@@ -10,7 +10,7 @@ SRC_URI="http://www.gower.net/unrealircd/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )
