@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/tora
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.4 2003/02/12 05:50:07 vapier Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.5 2003/04/22 07:57:26 phosphan Exp $
+
+*tora-1.3.9.2 (22 Apr 2003)
+
+  22 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> :
+  Version bump, cleaned up dependencies
+  Closing bug #15398
 
 *tora-1.3.8 (31 Oct 2002)
 
