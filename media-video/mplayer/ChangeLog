@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.262 2005/01/30 07:10:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.263 2005/01/30 07:33:51 chriswhite Exp $
+
+  30 Jan 2005; Chris White <chriswhite@gentoo.org>
+  mplayer-1.0_pre5-r5.ebuild, mplayer-1.0_pre6.ebuild:
+  altivec fix for #76559.
 
   30 Jan 2005; Chris White <chriswhite@gentoo.org>
   mplayer-1.0_pre5-r5.ebuild, mplayer-1.0_pre6.ebuild:

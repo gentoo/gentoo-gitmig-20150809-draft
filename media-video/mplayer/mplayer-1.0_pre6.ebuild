@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.19 2005/01/30 07:10:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.20 2005/01/30 07:33:51 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -379,6 +379,7 @@ src_compile() {
 		myconf="${myconf} --disable-altivec"
 	else
 		myconf="${myconf} $(use_enable altivec)"
+		use altivec && append-flags -maltivec -mabi=altivec
 	fi
 
 	if use real
