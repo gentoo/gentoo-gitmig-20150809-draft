@@ -1,6 +1,16 @@
-MD5 e2db06c9f12ae9cd4cde69bf58c9f91e ChangeLog 798
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4d6b6df150149c590db0973032590e0 ChangeLog 917
 MD5 c9e6d382651f8158c3bb907c042ca2f7 Term-ANSIScreen-1.40.ebuild 520
-MD5 5d4e5d1ede99717343d6d6def451d0e4 Term-ANSIScreen-1.42.ebuild 542
+MD5 bf1a09eab34361f45aafc0437b615021 Term-ANSIScreen-1.42.ebuild 556
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ef04bfd463bd68c90e7df7a9efb0c212 files/digest-Term-ANSIScreen-1.40 70
 MD5 93c8610c89c766b8f6c22afd3e3f7df4 files/digest-Term-ANSIScreen-1.42 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxRr4ArHZZzCEUG0RAmWdAJ9pYo24dH1IXUQuLcC1lX/1RTFgBACfczY8
+NzzqqueKVy1A2iYuk8mFa8Q=
+=FG48
+-----END PGP SIGNATURE-----
