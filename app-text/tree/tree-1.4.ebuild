@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.6 2004/01/07 22:26:41 ciaranm Exp $
-
-DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.7 2004/03/12 08:30:02 mr_bones_ Exp $
 
 NV="${PV}b3"
-SRC_URI="ftp://mama.indstate.edu/linux/tree/${PN}-${NV}.tgz"
+DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
 HOMEPAGE="http://mama.indstate.edu/users/ice/tree/"
+SRC_URI="ftp://mama.indstate.edu/linux/tree/${PN}-${NV}.tgz"
+
 LICENSE="Artistic"
-KEYWORDS="x86 ~ppc sparc alpha amd64"
-DEPEND="virtual/glibc"
 SLOT="0"
+KEYWORDS="x86 ~ppc sparc alpha amd64"
+IUSE=""
+
+DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${PN}-${NV}.tgz
