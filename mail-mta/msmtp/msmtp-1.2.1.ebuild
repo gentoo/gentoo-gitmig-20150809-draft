@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.1.ebuild,v 1.3 2004/08/08 19:00:27 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.1.ebuild,v 1.4 2004/08/10 15:33:24 slarti Exp $
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -26,9 +26,7 @@ src_compile () {
 		myconf="${myconf} --enable-ssl --with-ssl=gnutls"
 	elif use ssl && ! use gnutls ; then
 		myconf="${myconf} --enable-ssl --with-ssl=openssl"
-	elif ! use ssl && use gnutls ; then
-		myconf="${myconf} --enable-ssl --with-ssl=gnutls"
-	elif ! use ssl && ! use gnutls ; then
+	else
 		myconf="${myconf} --disable-ssl"
 	fi
 
