@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.9 2002/10/04 05:47:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.10 2002/11/17 17:04:18 mholzer Exp $
 
 inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Imlib is a general Image loading and rendering library."
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
-	 http://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
-	 ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.9/${P}.tar.gz
+	 http://ftp.gnome.org/pub/GNOME/sources/${PN}/1.9/${P}.tar.gz
+	 http://ftp.rpmfind.net/linux/gnome.org/sources/{PN}/1.9/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="=x11-libs/gtk+-1.2*

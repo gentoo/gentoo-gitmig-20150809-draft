@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.7 2002/05/29 04:26:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.8 2002/11/17 17:04:18 mholzer Exp $
+
+*imlib-1.9.14-r1 (17 Nov 2002)
+
+  17 Nov 2002; Martin Holzer <mholzer@gentoo.org> imlib-1.9.14-r1.ebuild
+  ChangeLog :
+
+  Fixed download URL.
 
 *imlib-1.9.14-r1 (28 May 2002)
 
