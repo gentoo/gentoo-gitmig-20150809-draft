@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.6 2004/02/06 22:31:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.7 2004/02/13 03:50:56 mr_bones_ Exp $
 
-inherit libtool
+inherit eutils libtool
 
 REAL_P=${P/.1b/b1}
 DESCRIPTION="A library for reading and writing gif images without LZW compression"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${REAL_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="X gif"
 
 RDEPEND="X? ( virtual/x11 )"
@@ -43,10 +43,9 @@ src_install() {
 
 	use gif && rm -rf ${D}/usr/bin
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS ONEWS
-	dodoc UNCOMPRESSED_GIF README TODO
-	dodoc doc/*.txt
-	dohtml -r doc
+	dodoc AUTHORS BUGS COPYING ChangeLog NEWS ONEWS UNCOMPRESSED_GIF \
+		README TODO doc/*.txt || die "dodoc failed"
+	dohtml -r doc || die "dohtml failed"
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libungif
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.9 2003/07/12 18:05:59 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.10 2004/02/13 03:50:56 mr_bones_ Exp $
+
+  12 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  libungif-4.1.0.1b.ebuild:
+  inherit eutils for epatch; check doc install; ppc64 needs deps first
 
 *libungif-4.1.0.1b (01 Apr 2003)
 
