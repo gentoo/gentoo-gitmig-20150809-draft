@@ -1,0 +1,9 @@
+# ChangeLog for dev-php/groupoffice
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.1 2003/10/12 22:03:25 mholzer Exp $
+
+*groupoffice-1.91 (14 Oct 2003)
+
+  14 Oct 2003; Martin Holzer <mholzer@gentoo.org> groupoffice-1.91.ebuild:
+  Initial verison.
+
