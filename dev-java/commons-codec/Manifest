@@ -1,6 +1,4 @@
 MD5 cfc2bc215170c4e68ea34e78b78fa056 ChangeLog 736
-MD5 2b9a81db5526c0c111802e2b4f21cae9 commons-codec-1.1.ebuild 1683
 MD5 bf36cce4627423672699b3c6ba8b7304 commons-codec-1.2.ebuild 1680
 MD5 f2dad337cc9e728840751448669405c9 metadata.xml 1288
-MD5 5862bf862e0c6a790f63d891c2eb8fbe files/digest-commons-codec-1.1 72
 MD5 d1f11eab4f180d78ef009ffeb34f1eea files/digest-commons-codec-1.2 72
