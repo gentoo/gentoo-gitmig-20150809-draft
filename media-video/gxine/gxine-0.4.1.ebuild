@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1.ebuild,v 1.1 2005/01/23 10:40:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1.ebuild,v 1.2 2005/01/23 10:45:18 corsair Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -16,7 +16,7 @@ DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-IUSE="X nls lirc"
+IUSE="X nls lirc mozilla"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc sparc ~amd64 ~ppc64"
@@ -51,7 +51,7 @@ src_install() {
 	insinto /usr/share/pixmaps
 	doins pixmaps/gxine-logo.png
 
-	inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
+	use mozilla && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }
 
 pkg_postinst() {

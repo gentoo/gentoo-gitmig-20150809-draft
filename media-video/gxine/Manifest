@@ -1,5 +1,5 @@
-MD5 d528e019f08d2f621c831d6ec0fd60f0 ChangeLog 3354
-MD5 4bd564a15b211fcf8be562924f318b61 gxine-0.4.1.ebuild 1350
+MD5 ccea1694d0ee9daa21110a21de7f3082 ChangeLog 3466
+MD5 feb2fd6577151e760b943fb50a12c061 gxine-0.4.1.ebuild 1373
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 c30eeaab4f2b0af32ab3fbf53b7b275e gxine-0.3.3-r1.ebuild 1323
 MD5 0b50a3889d71fe54fb9249c53257d9d6 files/gxine-0.4.1-menu-fix.patch 873
