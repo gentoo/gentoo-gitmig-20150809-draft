@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r1.ebuild,v 1.3 2003/10/02 06:08:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r1.ebuild,v 1.4 2003/10/30 05:04:06 vapier Exp $
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -9,8 +9,8 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ~alpha ~ppc ~sparc ~hppa ~amd64"
-IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl"
-# joystick ... disable this at your own risk ... and dont file bugs with games if you do :)
+IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl noaudio novideo nojoystick"
+# if you disable audio/video/joystick and something breaks, you pick up the pieces
 
 RDEPEND=">=media-libs/audiofile-0.1.9
 	alsa? ( media-libs/alsa-lib )
@@ -32,18 +32,13 @@ S=${WORKDIR}/SDL-${PV}
 src_compile() {
 	sed -i 's:head -1:head -n 1:' configure
 
-	local myconf
-	if use oss || use alsa || use esd || use arts || use nas ; then
-		myconf="${myconf} --enable-audio"
-	else
-		myconf="${myconf} --disable-audio"
-	fi
-	if use X || use dga || use xv || use fbcon || use directfb || use ggi || use svga || use aalib || use opengl ; then
-		myconf="${myconf} --enable-video-dummy"
-	else
-		myconf="${myconf} --disable-video"
-	fi
-#		`use_enable joystick` \
+	local myconf=""
+	[ `use noaudio` ] && myconf="${myconf} --disable-audio"
+	[ `use novideo` ] \
+		&& myconf="${myconf} --disable-video" \
+		|| myconf="${myconf} --enable-video-dummy"
+	[ `use nojoystick` ] && myconf="${myconf} --disable-joystick"
+
 	econf \
 		--enable-events \
 		--enable-cdrom \
@@ -69,7 +64,6 @@ src_compile() {
 		`use_enable aalib video-aalib` \
 		`use_enable opengl video-opengl` \
 		${myconf} || die
-
 	emake || die
 }
 
