@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.465 2004/07/04 23:06:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.466 2004/07/05 01:38:55 avenj Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -419,10 +419,6 @@ sys-devel/gcc:n64 - Enable n64 support on mips
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
-sys-devel/oskit:oskit-noassert - Disable assertions in debugging
-sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
-sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
-sys-devel/oskit:oskit-profiling - enable profiling support
 sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-kernel/alpha-sources:usagi - adds USAGI (Linux IPv6 Development Project) support
