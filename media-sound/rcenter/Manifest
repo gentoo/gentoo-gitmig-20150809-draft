@@ -1,6 +1,16 @@
-MD5 63ac38f9c9abf5386df9ad929121c7be ChangeLog 1216
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d3e1ce28df92f4512f409b634fcaa56b ChangeLog 1308
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 bcdc58df3fc588300bd3b3c33604d243 rcenter-0.6.1.ebuild 976
-MD5 006899ad00c51eefc42c493c9faaff8a rcenter-0.6.2.ebuild 1044
+MD5 41561ec298399f44e220b79968497e85 rcenter-0.6.2.ebuild 1112
 MD5 d91fc2f2a5b4f78918df0177073b3a67 files/digest-rcenter-0.6.1 61
 MD5 6790502f59c4408e720ca91ed8b44353 files/digest-rcenter-0.6.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBotGYArHZZzCEUG0RAn3FAJ9iplTZ0DjDG6gL1fRqes3oTtjaSACfWH8p
+Qc4WF6GIBw40UeB7Dj/kAsQ=
+=fwT6
+-----END PGP SIGNATURE-----

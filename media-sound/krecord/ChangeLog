@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/krecord
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/ChangeLog,v 1.7 2004/06/29 11:13:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/ChangeLog,v 1.8 2004/11/23 05:48:15 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  krecord-1.14.ebuild:
+  Added to ~sparc.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> krecord-1.11.ebuild,
   krecord-1.14.ebuild:

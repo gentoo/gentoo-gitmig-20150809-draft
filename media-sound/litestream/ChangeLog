@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/litestream
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/ChangeLog,v 1.5 2004/06/25 00:09:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/ChangeLog,v 1.6 2004/11/23 05:52:54 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  litestream-1.2.ebuild:
+  Added to ~sparc.
 
   23 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   litestream-1.2.ebuild:
