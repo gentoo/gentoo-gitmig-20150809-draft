@@ -1,0 +1,50 @@
+Sat Jul 29 03:59:49 CEST 2000  Jan Hubicka  <jh@suse.cz>
+
+	* recog.c (validate_replace_rtx_1): Simplify subregs of constants.
+
+*** gcc/recog.c	Sat Jul 29 01:04:17 2000
+--- gcc/recog.c	Sat Jul 29 12:42:23 2000
+*************** validate_replace_rtx_1 (loc, from, to, o
+*** 495,500 ****
+--- 495,534 ----
+        break;
+  	
+      case SUBREG:
++       /* In case we are replacing by constant, attempt to simplify it to non-SUBREG
++          expression.  We can't do this later, since the information about inner mode
++          may be lost.  */
++       if (SUBREG_REG (x) == from
++ 	  && CONSTANT_P (to))
++         {
++ 	  if (GET_MODE_SIZE (GET_MODE (x)) == UNITS_PER_WORD
++ 	      && GET_MODE_SIZE (GET_MODE (from)) > UNITS_PER_WORD
++ 	      && GET_MODE_CLASS (GET_MODE (x)) == MODE_INT)
++ 	    {
++ 	      rtx temp = operand_subword (to, SUBREG_WORD (x),
++ 					  0, GET_MODE (x));
++ 	      if (temp)
++ 		{
++ 		  validate_change (object, loc, temp, 1);
++ 		  return;
++ 		}
++ 	    }
++ 	  if (subreg_lowpart_p (x))
++ 	    {
++ 	      validate_change (object, loc, gen_lowpart (GET_MODE (x), to), 1);
++ 	      return;
++ 	    }
++ 
++ 	  /* A paradoxical SUBREG of a VOIDmode constant is the same constant,
++ 	     since we are saying that the high bits don't matter.  */
++ 	  if (GET_MODE (to) == VOIDmode
++ 	      && GET_MODE_SIZE (GET_MODE (x)) > GET_MODE_SIZE (GET_MODE (from)))
++ 	    {
++ 	      validate_change (object, loc, to, 1);
++ 	      return;
++ 	    }
++         }
++ 
+        /* If we have a SUBREG of a register that we are replacing and we are
+  	 replacing it with a MEM, make a new MEM and try replacing the
+  	 SUBREG with it.  Don't do this if the MEM has a mode-dependent address
+

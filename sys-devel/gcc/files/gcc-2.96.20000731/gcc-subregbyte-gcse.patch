@@ -1,0 +1,79 @@
+2000-09-13  Jakub Jelinek  <jakub@redhat.com>
+
+	* recog.c (validate_replace_rtx_1): Update code for replacement
+	of SUBREG_REG with a constant for SUBREG_BYTE.
+
+--- gcc/recog.c.jj	Mon Jul 31 23:27:14 2000
++++ gcc/recog.c	Tue Aug  1 15:15:10 2000
+@@ -504,29 +504,53 @@ validate_replace_rtx_1 (loc, from, to, o
+       if (SUBREG_REG (x) == from
+ 	  && CONSTANT_P (to))
+         {
+-	  if (GET_MODE_SIZE (GET_MODE (x)) == UNITS_PER_WORD
+-	      && GET_MODE_SIZE (GET_MODE (from)) > UNITS_PER_WORD
+-	      && GET_MODE_CLASS (GET_MODE (x)) == MODE_INT)
+-	    {
+-	      rtx temp = operand_subword (to, SUBREG_WORD (x),
+-					  0, GET_MODE (x));
+-	      if (temp)
+-		{
+-		  validate_change (object, loc, temp, 1);
+-		  return;
+-		}
+-	    }
+-	  if (subreg_lowpart_p (x))
++	  /* A paradoxical SUBREG of a VOIDmode constant is the same constant,
++	     since we are saying that the high bits don't matter.  */
++	  if (GET_MODE (to) == VOIDmode
++	      && GET_MODE_SIZE (GET_MODE (x)) >= GET_MODE_SIZE (GET_MODE (from)))
+ 	    {
+-	      validate_change (object, loc, gen_lowpart (GET_MODE (x), to), 1);
++	      validate_change (object, loc, to, 1);
+ 	      return;
+ 	    }
+ 
+-	  /* A paradoxical SUBREG of a VOIDmode constant is the same constant,
+-	     since we are saying that the high bits don't matter.  */
+-	  if (GET_MODE (to) == VOIDmode
+-	      && GET_MODE_SIZE (GET_MODE (x)) > GET_MODE_SIZE (GET_MODE (from)))
++	  if (GET_CODE (to) == CONST_INT)
+ 	    {
++	      /* Avoid creating bogus SUBREGs */
++	      enum machine_mode mode = GET_MODE (x);
++	      enum machine_mode inner_mode = GET_MODE (from);
++	      int offset;
++	      unsigned HOST_WIDE_INT i;
++
++	      if (GET_MODE_CLASS (mode) != MODE_INT)
++		abort ();
++
++	      offset = SUBREG_BYTE (x);
++	      if (BYTES_BIG_ENDIAN || WORDS_BIG_ENDIAN)
++		{
++		  if (WORDS_BIG_ENDIAN)
++		    offset = GET_MODE_SIZE (inner_mode)
++			     - GET_MODE_SIZE (mode) - offset;
++		  if (BYTES_BIG_ENDIAN != WORDS_BIG_ENDIAN
++		      && GET_MODE_SIZE (mode) < UNITS_PER_WORD)
++		    offset = offset + UNITS_PER_WORD - GET_MODE_SIZE (mode)
++		      - 2 * (offset % UNITS_PER_WORD);
++		}
++
++	      offset *= BITS_PER_UNIT;
++
++	      i = INTVAL (to);
++
++	      if (offset >= HOST_BITS_PER_WIDE_INT)
++		to = ((HOST_WIDE_INT) i < 0) ? constm1_rtx : const0_rtx;
++	      else
++		{
++		  i >>= offset;
++		  if (GET_MODE_BITSIZE (mode) < HOST_BITS_PER_WIDE_INT)
++		  i &= (((unsigned HOST_WIDE_INT) 1)
++		    << GET_MODE_BITSIZE (mode)) - 1;
++		  to = GEN_INT (i);
++		}
++
+ 	      validate_change (object, loc, to, 1);
+ 	      return;
+ 	    }

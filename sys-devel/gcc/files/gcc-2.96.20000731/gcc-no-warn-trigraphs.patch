@@ -1,0 +1,16 @@
+Don't warn about trigraphs unless trigraphs are actually converted.
+This hack should be removed as soon as cpp does not put this warning if
+inside comments.
+
+--- gcc/cpplex.c.jj	Thu Jun 22 23:09:25 2000
++++ gcc/cpplex.c	Thu Jun 22 23:10:13 2000
+@@ -734,9 +734,6 @@ trigraph_ok (pfile, end)
+ 	cpp_warning_with_line (pfile, pfile->buffer->lineno, col, 
+ 			       "trigraph ??%c converted to %c",
+ 			       (int) *end, (int) trigraph_map[*end]);
+-      else
+-	cpp_warning_with_line (pfile, pfile->buffer->lineno, col,
+-			       "trigraph ??%c ignored", (int) *end);
+     }
+   return accept;
+ }

@@ -1,0 +1,53 @@
+Wed Aug 23 04:55:48 2000  Alexandre Oliva  <aoliva@redhat.com>
+
+	* simplify-rtx.c (simplify_rtx): Don't pass VOIDmode to
+	simplify_relational_operation() unless both operands are of
+	VOIDmode.
+	* cse.c (fold_rtx): Likewise.
+
+--- gcc/simplify-rtx.c.jj	Mon Jul 31 20:02:12 2000
++++ gcc/simplify-rtx.c	Wed Aug 23 14:10:27 2000
+@@ -1694,7 +1694,7 @@ simplify_relational_operation (code, mod
+   if (mode == VOIDmode
+       && (GET_MODE (op0) != VOIDmode
+ 	  || GET_MODE (op1) != VOIDmode))
+-    abort();
++    abort ();
+ 
+   /* If op0 is a compare, extract the comparison arguments from it.  */
+   if (GET_CODE (op0) == COMPARE && op1 == const0_rtx)
+@@ -2091,7 +2091,10 @@ simplify_rtx (x)
+ 					 XEXP (x, 0), XEXP (x, 1), XEXP (x, 2));
+ 
+     case '<':
+-      return simplify_relational_operation (code, GET_MODE (XEXP (x, 0)),
++      return simplify_relational_operation (code,
++					    (GET_MODE (XEXP (x, 0)) != VOIDmode
++					     ? GET_MODE (XEXP (x, 0))
++					     : GET_MODE (XEXP (x, 1))),
+ 					    XEXP (x, 0), XEXP (x, 1));
+     default:
+       return NULL;
+--- gcc/cse.c.jj	Mon Aug 21 18:27:32 2000
++++ gcc/cse.c	Wed Aug 23 14:10:27 2000
+@@ -3857,7 +3857,19 @@ fold_rtx (x, insn)
+ 	    }
+ 	}
+ 
+-      new = simplify_relational_operation (code, mode_arg0,
++      new = simplify_relational_operation (code,
++					   (mode_arg0 != VOIDmode
++					    ? mode_arg0
++					    : (GET_MODE (const_arg0
++							 ? const_arg0
++							 : folded_arg0)
++					       != VOIDmode)
++					    ? GET_MODE (const_arg0
++							? const_arg0
++							: folded_arg0)
++					    : GET_MODE (const_arg1
++							? const_arg1
++							: folded_arg1)),
+ 					   const_arg0 ? const_arg0 : folded_arg0,
+ 					   const_arg1 ? const_arg1 : folded_arg1);
+ #ifdef FLOAT_STORE_FLAG_VALUE

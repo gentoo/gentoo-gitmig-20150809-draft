@@ -1,0 +1,24 @@
+2000-10-13  Jakub Jelinek  <jakub@redhat.com>
+
+	* gcc.c-torture/execute/20001013-1.c: New test.
+
+--- gcc/testsuite/gcc.c-torture/execute/20001013-1.c.jj	Thu Aug 24 11:00:32 2000
++++ gcc/testsuite/gcc.c-torture/execute/20001013-1.c	Fri Oct 13 11:52:20 2000
+@@ -0,0 +1,17 @@
++struct x {
++	int a, b;
++} z = { -4028, 4096 };
++
++int foo(struct x *p, int y)
++{
++  if ((y & 0xff) != y || -p->b >= p->a)
++    return 1;
++  return 0;
++}
++
++main()
++{
++  if (foo (&z, 10))
++    abort ();
++  exit (0);
++}

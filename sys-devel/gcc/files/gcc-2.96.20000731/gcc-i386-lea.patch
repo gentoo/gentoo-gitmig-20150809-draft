@@ -1,0 +1,35 @@
+2000-08-02  Jakub Jelinek  <jakub@redhat.com>
+
+	* config/i386/i386.md (lea_general_1): Only split
+	if not already SImode.
+	(lea_general_2, lea_general_3): Likewise.
+
+--- gcc/config/i386/i386.md.jj	Mon Jul 31 20:02:15 2000
++++ gcc/config/i386/i386.md	Wed Aug  2 13:48:02 2000
+@@ -3755,7 +3755,7 @@
+    && (GET_MODE (operands[0]) == GET_MODE (operands[3])
+        || GET_MODE (operands[3]) == VOIDmode)"
+   "#"
+-  "reload_completed"
++  "reload_completed && GET_MODE (operands[0]) != SImode"
+   [(const_int 0)]
+   "
+ {
+@@ -3785,7 +3785,7 @@
+    && (GET_MODE (operands[0]) == GET_MODE (operands[3])
+        || GET_MODE (operands[3]) == VOIDmode)"
+   "#"
+-  "reload_completed"
++  "reload_completed && GET_MODE (operands[0]) != SImode"
+   [(const_int 0)]
+   "
+ {
+@@ -3814,7 +3814,7 @@
+    && GET_MODE (operands[0]) == GET_MODE (operands[1])
+    && GET_MODE (operands[0]) == GET_MODE (operands[3])"
+   "#"
+-  "reload_completed"
++  "reload_completed && GET_MODE (operands[0]) != SImode"
+   [(const_int 0)]
+   "
+ {

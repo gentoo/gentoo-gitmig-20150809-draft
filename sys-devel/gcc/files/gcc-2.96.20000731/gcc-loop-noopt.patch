@@ -1,0 +1,40 @@
+2000-08-01  Bernd Schmidt  <bernds@cygnus.co.uk>
+
+	* loop.c: Temporarily disable some optimizations.
+
+--- gcc/loop.c.baseline	Sat Jul 29 14:38:22 2000
++++ gcc/loop.c	Tue Aug  1 16:17:52 2000
+@@ -2547,6 +2547,10 @@
+ {
+   rtx insn;
+ 
++  /* Temporarily disable this optimization.  */
++  loop->cont_dominator = 0;
++  return;
++
+   if (! loop->cont_dominator)
+     /* This can happen for an empty loop, e.g. in
+        gcc.c-torture/compile/920410-2.c  */
+@@ -4159,7 +4163,8 @@
+   /* If the loop contains volatile memory references do not allow any
+      replacements to take place, since this could loose the volatile
+      markers.  */
+-  if (n_extra_increment  && ! loop_info->has_volatile)
++  /* Temporarily disabled.  */
++  if (0 && n_extra_increment  && ! loop_info->has_volatile)
+     {
+       unsigned int nregs = first_increment_giv + n_extra_increment;
+ 
+@@ -4626,8 +4636,10 @@
+ 	  VARRAY_GROW (reg_iv_type, nregs);
+ 	  VARRAY_GROW (reg_iv_info, nregs);
+ 	}
++      /* Temporarily disabled.  */
++#if 0
+       recombine_givs (loop, bl, flags & LOOP_UNROLL);
+-
++#endif
+       /* Reduce each giv that we decided to reduce.  */
+ 
+       for (v = bl->giv; v; v = v->next_iv)
+

@@ -1,0 +1,25 @@
+--- gcc/reload.c.jj	Tue Oct 31 18:00:45 2000
++++ gcc/reload.c	Thu Nov  2 13:51:26 2000
+@@ -979,12 +979,17 @@ push_reload (in, out, inloc, outloc, cla
+ 		 is handled differently in the following statement.  */
+ 	      && (out == 0 || SUBREG_BYTE (in) == 0)
+ 	      && ((GET_MODE_SIZE (inmode) <= UNITS_PER_WORD
+-		   && (GET_MODE_SIZE (GET_MODE (SUBREG_REG (in)))
+-		       > UNITS_PER_WORD)
+ 		   && ((GET_MODE_SIZE (GET_MODE (SUBREG_REG (in)))
+-			/ UNITS_PER_WORD)
+-		       != HARD_REGNO_NREGS (REGNO (SUBREG_REG (in)),
+-					    GET_MODE (SUBREG_REG (in)))))
++		        > UNITS_PER_WORD)
++		       && ((GET_MODE_SIZE (GET_MODE (SUBREG_REG (in)))
++			    / UNITS_PER_WORD)
++			   != HARD_REGNO_NREGS (REGNO (SUBREG_REG (in)),
++						GET_MODE (SUBREG_REG (in)))))
++		       || ((GET_MODE_SIZE (GET_MODE (SUBREG_REG (in)))
++			    < GET_MODE_SIZE (inmode))
++			   && (CLASS_MAX_NREGS (class, inmode)
++			       != HARD_REGNO_NREGS (REGNO (SUBREG_REG (in)),
++						    inmode))))
+ 		  || ! HARD_REGNO_MODE_OK (SUBREG_REGNO (in), inmode)))
+ #ifdef SECONDARY_INPUT_RELOAD_CLASS
+ 	  || (SECONDARY_INPUT_RELOAD_CLASS (class, inmode, in) != NO_REGS

@@ -1,0 +1,22 @@
+2000-08-02  Jakub Jelinek  <jakub@redhat.com>
+
+	* gcc.c-torture/compile/20000802-1.c: New test.
+
+--- gcc/testsuite/gcc.c-torture/compile/20000802-1.c.jj	Wed Aug  2 20:20:24 2000
++++ gcc/testsuite/gcc.c-torture/compile/20000802-1.c	Wed Aug  2 20:20:43 2000
+@@ -0,0 +1,15 @@
++struct foo {
++  char a[3];
++  char b;
++  char c;
++};
++
++struct foo bs;
++int x;
++char y[3];
++
++void bar(void)
++{
++    memcpy(bs.a, y, 3);
++    bs.a[1] = ((x ? &bs.b : &bs.c) - (char *)&bs) - 2;
++}

@@ -1,0 +1,33 @@
+--- libstdc++-v3/acinclude.m4.jj	Mon Jul 10 02:08:44 2000
++++ libstdc++-v3/acinclude.m4	Tue Jul 11 15:18:48 2000
+@@ -191,7 +191,7 @@ AC_DEFUN(GLIBCPP_CHECK_COMPILER_FEATURES
+   AC_LANG_CPLUSPLUS
+   ac_test_CXXFLAGS="${CXXFLAGS+set}"
+   ac_save_CXXFLAGS="$CXXFLAGS"
+-  WERROR='-Werror'
++  WERROR=''
+ 
+   # Check for pragma system_header.
+   AC_MSG_CHECKING([for g++ that supports pragma system_header])
+--- libstdc++-v3/aclocal.m4.jj	Mon Jul 10 02:08:44 2000
++++ libstdc++-v3/aclocal.m4	Tue Jul 11 15:19:05 2000
+@@ -203,7 +203,7 @@ AC_DEFUN(GLIBCPP_CHECK_COMPILER_FEATURES
+   AC_LANG_CPLUSPLUS
+   ac_test_CXXFLAGS="${CXXFLAGS+set}"
+   ac_save_CXXFLAGS="$CXXFLAGS"
+-  WERROR='-Werror'
++  WERROR=''
+ 
+   # Check for pragma system_header.
+   AC_MSG_CHECKING([for g++ that supports pragma system_header])
+--- libstdc++-v3/configure.jj	Mon Jul 10 02:08:45 2000
++++ libstdc++-v3/configure	Tue Jul 11 15:22:19 2000
+@@ -2804,7 +2804,7 @@ cross_compiling=$ac_cv_prog_cxx_cross
+ 
+   ac_test_CXXFLAGS="${CXXFLAGS+set}"
+   ac_save_CXXFLAGS="$CXXFLAGS"
+-  WERROR='-Werror'
++  WERROR=''
+ 
+   # Check for pragma system_header.
+   echo $ac_n "checking for g++ that supports pragma system_header""... $ac_c" 1>&6

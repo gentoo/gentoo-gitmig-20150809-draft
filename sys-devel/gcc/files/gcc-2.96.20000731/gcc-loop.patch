@@ -1,0 +1,36 @@
+2000-06-29  Jakub Jelinek  <jakub@redhat.com>
+
+	* loop.c (strength_reduce): Allow line NOTEs in the chain.
+
+	* gcc.dg/20000629-1.c: New test.
+
+--- gcc/testsuite/gcc.dg/20000629-1.c.jj	Thu Jun 29 11:45:49 2000
++++ gcc/testsuite/gcc.dg/20000629-1.c	Thu Jun 29 11:46:07 2000
+@@ -0,0 +1,13 @@
++/* { dg-do compile } */
++/* { dg-options "-O2 -g" } */
++
++void foo(register char *p)
++{
++  char c, *q, *sp;
++  while (1) {
++    *p++=0;
++    sp=p+1;
++    c=*sp;
++    *p++=0;
++  }
++}
+--- gcc/loop.c.jj	Fri Jun 16 13:10:29 2000
++++ gcc/loop.c	Thu Jun 29 11:44:33 2000
+@@ -4249,8 +4249,9 @@ strength_reduce (loop, insn_count, flags
+ 	      /* Some bivs are incremented with a multi-insn sequence.
+ 		 The first insn contains the add.  */
+ 	      next_loc_insn = next->insn;
+-	      while (! loc_mentioned_in_p (next->location,
+-					   PATTERN (next_loc_insn)))
++	      while (! INSN_P (next_loc_insn)
++		     || ! loc_mentioned_in_p (next->location,
++					      PATTERN (next_loc_insn)))
+ 		next_loc_insn = PREV_INSN (next_loc_insn);
+ 
+ 	      if (next_loc_insn == v->insn)

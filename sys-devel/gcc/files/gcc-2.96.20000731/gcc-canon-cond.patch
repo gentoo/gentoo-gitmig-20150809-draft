@@ -1,0 +1,25 @@
+Mon Jul 31 11:46:59 CEST 2000  Jan Hubicka  <jh@suse.cz>
+
+	* loop.c (canonicalize_condition):  Use destination, not source to
+	determine SET's mode.
+
+*** gcc/loop.c.bug	Mon Jul 31 11:45:37 2000
+--- gcc/loop.c	Mon Jul 31 11:45:39 2000
+*************** canonicalize_condition (insn, cond, reve
+*** 9024,9030 ****
+  	 relevant.  */
+        if (rtx_equal_p (SET_DEST (set), op0))
+  	{
+! 	  enum machine_mode inner_mode = GET_MODE (SET_SRC (set));
+  
+  	  /* ??? We may not combine comparisons done in a CCmode with
+  	     comparisons not done in a CCmode.  This is to aid targets
+--- 9024,9030 ----
+  	 relevant.  */
+        if (rtx_equal_p (SET_DEST (set), op0))
+  	{
+! 	  enum machine_mode inner_mode = GET_MODE (SET_DEST (set));
+  
+  	  /* ??? We may not combine comparisons done in a CCmode with
+  	     comparisons not done in a CCmode.  This is to aid targets
+

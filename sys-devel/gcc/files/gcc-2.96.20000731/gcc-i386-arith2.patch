@@ -1,0 +1,1663 @@
+--- gcc/config/i386/i386.c	Mon Oct 23 22:51:33 2000
++++ gcc/config/i386/i386.c	Fri Oct 27 17:41:12 2000
+@@ -1272,47 +1272,58 @@ no_comparison_operator (op, mode)
+       return 0;
+     }
+ }
+-
+-/* Return 1 if OP is a comparison operator that can be issued by fcmov.  */
+-
++/* Return 1 if OP is a valid comparison operator in valid mode.  */
+ int
+-fcmov_comparison_operator (op, mode)
+-    register rtx op;
+-    enum machine_mode mode;
++ix86_comparison_operator (op, mode)
++     register rtx op;
++     enum machine_mode mode;
+ {
++  enum machine_mode inmode;
+   if (mode != VOIDmode && GET_MODE (op) != mode)
+     return 0;
+-
+   switch (GET_CODE (op))
+     {
+     case EQ: case NE:
+-    case LEU: case LTU: case GEU: case GTU:
+-    case UNORDERED: case ORDERED:
+       return 1;
+-
++    case LT: case GE:
++      inmode = GET_MODE (XEXP (op, 0));
++      if (inmode == CCmode || inmode == CCGCmode
++	  || inmode == CCGOCmode || inmode == CCNOmode)
++	return 1;
++      return 0;
++    case LTU: case GTU: case LEU: case ORDERED: case UNORDERED: case GEU:
++      inmode = GET_MODE (XEXP (op, 0));
++      if (inmode == CCmode)
++	return 1;
++      return 0;
++    case GT: case LE:
++      inmode = GET_MODE (XEXP (op, 0));
++      if (inmode == CCmode || inmode == CCGCmode || inmode == CCNOmode)
++	return 1;
++      return 0;
+     default:
+       return 0;
+     }
+ }
+ 
+-/* Return 1 if OP is any normal comparison operator plus {UN}ORDERED.  */
++/* Return 1 if OP is a comparison operator that can be issued by fcmov.  */
+ 
+-int 
+-uno_comparison_operator (op, mode)
++int
++fcmov_comparison_operator (op, mode)
+     register rtx op;
+     enum machine_mode mode;
+ {
++  enum machine_mode inmode = GET_MODE (XEXP (op, 0));
+   if (mode != VOIDmode && GET_MODE (op) != mode)
+     return 0;
+-
+   switch (GET_CODE (op))
+     {
+     case EQ: case NE:
+-    case LE: case LT: case GE: case GT:
+-    case LEU: case LTU: case GEU: case GTU:
+-    case UNORDERED: case ORDERED:
+       return 1;
+-
++    case LTU: case GTU: case LEU: case ORDERED: case UNORDERED: case GEU:
++      if (inmode == CCmode)
++	return 1;
++      return 0;
+     default:
+       return 0;
+     }
+@@ -3035,40 +3046,52 @@ put_condition_code (code, mode, reverse,
+       suffix = "ne";
+       break;
+     case GT:
+-      if (mode == CCNOmode)
++      if (mode != CCmode && mode != CCNOmode && mode != CCGCmode)
+ 	abort ();
+       suffix = "g";
+       break;
+     case GTU:
+       /* ??? Use "nbe" instead of "a" for fcmov losage on some assemblers.
+ 	 Those same assemblers have the same but opposite losage on cmov.  */
++      if (mode != CCmode)
++	abort();
+       suffix = fp ? "nbe" : "a";
+       break;
+     case LT:
+-      if (mode == CCNOmode)
++      if (mode == CCNOmode || mode == CCGOCmode)
+ 	suffix = "s";
+-      else
++      else if (mode == CCmode || mode == CCGCmode)
+ 	suffix = "l";
++      else
++	abort();
+       break;
+     case LTU:
++      if (mode != CCmode)
++	abort();
+       suffix = "b";
+       break;
+     case GE:
+-      if (mode == CCNOmode)
++      if (mode == CCNOmode || mode == CCGOCmode)
+ 	suffix = "ns";
+-      else
++      else if (mode == CCmode || mode == CCGCmode)
+ 	suffix = "ge";
++      else
++	abort();
+       break;
+     case GEU:
+       /* ??? As above.  */
++      if (mode != CCmode)
++	abort();
+       suffix = fp ? "nb" : "ae";
+       break;
+     case LE:
+-      if (mode == CCNOmode)
++      if (mode != CCmode && mode != CCGCmode && mode != CCNOmode)
+ 	abort ();
+       suffix = "le";
+       break;
+     case LEU:
++      if (mode != CCmode)
++	abort ();
+       suffix = "be";
+       break;
+     case UNORDERED:
+@@ -4454,15 +4477,27 @@ ix86_match_ccmode (insn, req_mode)
+     set = XVECEXP (set, 0, 0);
+   if (GET_CODE (set) != SET)
+     abort ();
++  if (GET_CODE (SET_SRC (set)) != COMPARE)
++    abort ();
+ 
+   set_mode = GET_MODE (SET_DEST (set));
+   switch (set_mode)
+     {
++    case CCNOmode:
++      if (req_mode != CCNOmode
++	  && (req_mode != CCmode
++	      || XEXP (SET_SRC (set), 1) != const0_rtx))
++	return 0;
++      break;
+     case CCmode:
+-      if (req_mode == CCNOmode)
++      if (req_mode == CCGCmode)
+ 	return 0;
+       /* FALLTHRU */
+-    case CCNOmode:
++    case CCGCmode:
++      if (req_mode == CCGOCmode || req_mode == CCNOmode)
++	return 0;
++      /* FALLTHRU */
++    case CCGOCmode:
+       if (req_mode == CCZmode)
+ 	return 0;
+       /* FALLTHRU */
+@@ -4572,6 +4607,49 @@ ix86_fp_compare_mode (code)
+   return unordered ? CCFPUmode : CCFPmode;
+ }
+ 
++enum machine_mode
++ix86_cc_mode (code, op0, op1)
++     enum rtx_code code;
++     rtx op0, op1;
++{
++  if (GET_MODE_CLASS (GET_MODE (op0)) == MODE_FLOAT)
++    return ix86_fp_compare_mode (code);
++  switch (code)
++    {
++      /* Only zero flag is needed.  */
++    case EQ:			/* ZF=0 */
++    case NE:			/* ZF!=0 */
++      return CCZmode;
++      /* Codes needing carry flag.  */
++    case GEU:			/* CF=0 */
++    case GTU:			/* CF=0 & ZF=0 */
++    case LTU:			/* CF=1 */
++    case LEU:			/* CF=1 | ZF=1 */
++      return CCmode;
++      /* Codes possibly doable only with sign flag when
++         comparing against zero.  */
++    case GE:			/* SF=OF   or   SF=0 */
++    case LT:			/* SF<>OF  or   SF=0 */
++      if (op1 == const0_rtx)
++	return CCGOCmode;
++      else
++	/* For other cases Carry flag is not required.  */
++	return CCGCmode;
++      /* Codes doable only with sign flag when comparing
++         against zero, but we miss jump instruction for it
++         so we need to use relational tests agains overflow
++         that thus needs to be zero.  */
++    case GT:			/* ZF=0 & SF=OF */
++    case LE:			/* ZF=1 | SF<>OF */
++      if (op1 == const0_rtx)
++	return CCNOmode;
++      else
++	return CCGCmode;
++    default:
++      abort();
++    }
++}
++
+ /* Return true if we should use an FCOMI instruction for this fp comparison.  */
+ 
+ int
+@@ -4816,6 +4894,7 @@ ix86_expand_fp_compare (code, op0, op1, 
+ 	      emit_insn (gen_andqi_ext_0 (scratch, scratch, GEN_INT (0x45)));
+ 	      emit_insn (gen_addqi_ext_1 (scratch, scratch, constm1_rtx));
+ 	      emit_insn (gen_cmpqi_ext_3 (scratch, GEN_INT (0x44)));
++	      intcmp_mode = CCmode;
+ 	      code = GEU;
+ 	      break;
+ 	    case UNLE:
+@@ -5865,8 +5944,6 @@ ix86_expand_strlensi_unroll_1 (out, alig
+   rtx align_4_label = gen_label_rtx ();
+   rtx end_0_label = gen_label_rtx ();
+   rtx mem;
+-  rtx no_flags = gen_rtx_REG (CCNOmode, FLAGS_REG);
+-  rtx z_flags = gen_rtx_REG (CCNOmode, FLAGS_REG);
+   rtx tmpreg = gen_reg_rtx (SImode);
+ 
+   align = 0;
+@@ -5888,30 +5965,12 @@ ix86_expand_strlensi_unroll_1 (out, alig
+ 	  align_rtx = expand_binop (SImode, and_optab, scratch, GEN_INT (3),
+ 				    NULL_RTX, 0, OPTAB_WIDEN);
+ 
+-	  emit_insn (gen_cmpsi_ccz_1 (align_rtx, const0_rtx));
+-
+-	  tmp = gen_rtx_EQ (VOIDmode, z_flags, const0_rtx);
+-	  tmp = gen_rtx_IF_THEN_ELSE (VOIDmode, tmp, 
+-				      gen_rtx_LABEL_REF (VOIDmode,
+-							 align_4_label),
+-				      pc_rtx);
+-	  emit_jump_insn (gen_rtx_SET (VOIDmode, pc_rtx, tmp));
+-
+-	  emit_insn (gen_cmpsi_ccno_1 (align_rtx, GEN_INT (2)));
+-
+-	  tmp = gen_rtx_EQ (VOIDmode, no_flags, const0_rtx);
+-	  tmp = gen_rtx_IF_THEN_ELSE (VOIDmode, tmp, 
+-				      gen_rtx_LABEL_REF (VOIDmode,
+-							 align_2_label),
+-				      pc_rtx);
+-	  emit_jump_insn (gen_rtx_SET (VOIDmode, pc_rtx, tmp));
+-
+-	  tmp = gen_rtx_GTU (VOIDmode, no_flags, const0_rtx);
+-	  tmp = gen_rtx_IF_THEN_ELSE (VOIDmode, tmp, 
+-				      gen_rtx_LABEL_REF (VOIDmode,
+-							 align_3_label),
+-				      pc_rtx);
+-	  emit_jump_insn (gen_rtx_SET (VOIDmode, pc_rtx, tmp));
++	  emit_cmp_and_jump_insns (align_rtx, const0_rtx, EQ, NULL,
++			  	   SImode, 1, 0, align_4_label);
++	  emit_cmp_and_jump_insns (align_rtx, GEN_INT (2), EQ, NULL,
++				   SImode, 1, 0, align_2_label);
++	  emit_cmp_and_jump_insns (align_rtx, GEN_INT (2), GTU, NULL,
++				   SImode, 1, 0, align_3_label);
+ 	}
+       else
+         {
+@@ -5921,14 +5980,8 @@ ix86_expand_strlensi_unroll_1 (out, alig
+ 	  align_rtx = expand_binop (SImode, and_optab, scratch, GEN_INT (2),
+ 				    NULL_RTX, 0, OPTAB_WIDEN);
+ 
+-	  emit_insn (gen_cmpsi_ccz_1 (align_rtx, const0_rtx));
+-
+-	  tmp = gen_rtx_EQ (VOIDmode, z_flags, const0_rtx);
+-	  tmp = gen_rtx_IF_THEN_ELSE (VOIDmode, tmp, 
+-				      gen_rtx_LABEL_REF (VOIDmode,
+-							 align_4_label),
+-				      pc_rtx);
+-	  emit_jump_insn (gen_rtx_SET (VOIDmode, pc_rtx, tmp));
++	  emit_cmp_and_jump_insns (align_rtx, const0_rtx, EQ, NULL,
++				   SImode, 1, 0, align_4_label);
+         }
+ 
+       mem = gen_rtx_MEM (QImode, out);
+@@ -5936,13 +5989,8 @@ ix86_expand_strlensi_unroll_1 (out, alig
+       /* Now compare the bytes.  */
+ 
+       /* Compare the first n unaligned byte on a byte per byte basis. */
+-      emit_insn (gen_cmpqi_ccz_1 (mem, const0_rtx));
+-
+-      tmp = gen_rtx_EQ (VOIDmode, z_flags, const0_rtx);
+-      tmp = gen_rtx_IF_THEN_ELSE (VOIDmode, tmp, 
+-				  gen_rtx_LABEL_REF (VOIDmode, end_0_label),
+-				  pc_rtx);
+-      emit_jump_insn (gen_rtx_SET (VOIDmode, pc_rtx, tmp));
++      emit_cmp_and_jump_insns (mem, const0_rtx, EQ, NULL,
++			       QImode, 1, 0, end_0_label);
+ 
+       /* Increment the address. */
+       emit_insn (gen_addsi3 (out, out, const1_rtx));
+@@ -5952,27 +6000,16 @@ ix86_expand_strlensi_unroll_1 (out, alig
+ 	{
+ 	  emit_label (align_2_label);
+ 
+-	  emit_insn (gen_cmpqi_ccz_1 (mem, const0_rtx));
+-
+-	  tmp = gen_rtx_EQ (VOIDmode, z_flags, const0_rtx);
+-	  tmp = gen_rtx_IF_THEN_ELSE (VOIDmode, tmp, 
+-				      gen_rtx_LABEL_REF (VOIDmode,
+-							 end_0_label),
+-				      pc_rtx);
+-	  emit_jump_insn (gen_rtx_SET (VOIDmode, pc_rtx, tmp));
++	  emit_cmp_and_jump_insns (mem, const0_rtx, EQ, NULL,
++				   QImode, 1, 0, end_0_label);
+ 
+ 	  emit_insn (gen_addsi3 (out, out, const1_rtx));
+ 
+ 	  emit_label (align_3_label);
+ 	}
+ 
+-      emit_insn (gen_cmpqi_ccz_1 (mem, const0_rtx));
+-
+-      tmp = gen_rtx_EQ (VOIDmode, z_flags, const0_rtx);
+-      tmp = gen_rtx_IF_THEN_ELSE (VOIDmode, tmp, 
+-				  gen_rtx_LABEL_REF (VOIDmode, end_0_label),
+-				  pc_rtx);
+-      emit_jump_insn (gen_rtx_SET (VOIDmode, pc_rtx, tmp));
++      emit_cmp_and_jump_insns (mem, const0_rtx, EQ, NULL,
++			       QImode, 1, 0, end_0_label);
+ 
+       emit_insn (gen_addsi3 (out, out, const1_rtx));
+     }
+@@ -5993,7 +6030,8 @@ ix86_expand_strlensi_unroll_1 (out, alig
+   emit_insn (gen_one_cmplsi2 (scratch, scratch));
+   emit_insn (gen_andsi3 (tmpreg, tmpreg, scratch));
+   emit_insn (gen_andsi3 (tmpreg, tmpreg, GEN_INT (0x80808080)));
+-  emit_cmp_and_jump_insns (tmpreg, const0_rtx, EQ, 0, SImode, 1, 0, align_4_label);
++  emit_cmp_and_jump_insns (tmpreg, const0_rtx, EQ, 0,
++			   SImode, 1, 0, align_4_label);
+ 
+   if (TARGET_CMOVE)
+     {
+--- gcc/config/i386/i386.h	Mon Oct 30 15:33:07 2000
++++ gcc/config/i386/i386.h	Mon Oct 30 16:28:01 2000
+@@ -2253,14 +2254,25 @@ while (0)
+ 
+    For the i386, we need separate modes when floating-point
+    equality comparisons are being done. 
+-
+-   Add CCNO to indicate No Overflow, which is often also includes
+-   No Carry.  This is typically used on the output of logicals,
+-   and is only valid in comparisons against zero.
++   
++   Add CCNO to indicate comparisons against zero that requires
++   No Overflow.  Sign bit test is used instead and thus
++   can be used to form "a&b>0" type of tests.
++
++   Add CCGC to indicate comparisons agains zero that allows
++   unspecified garbage in the Carry flag.  This mode is used
++   by inc/dec instructions.
++
++   Add CCGCO to indicate comparisons agains zero that allows
++   unspecified garbage in the Carry and Overflow flag. This
++   mode is used to simulate comparisons of (a-b) and (a+b)
++   against zero using sub/cmp/add operations.
+ 
+    Add CCZ to indicate that only the Zero flag is valid.  */
+ 
+ #define EXTRA_CC_MODES \
++	CC(CCGCmode, "CCGC") \
++	CC(CCGOCmode, "CCGOC") \
+ 	CC(CCNOmode, "CCNO") \
+ 	CC(CCZmode, "CCZ") \
+ 	CC(CCFPmode, "CCFP") \
+@@ -2275,12 +2287,7 @@ while (0)
+    For integer comparisons against zero, reduce to CCNOmode or CCZmode if
+    possible, to allow for more combinations.  */
+ 
+-#define SELECT_CC_MODE(OP,X,Y)				\
+-  (GET_MODE_CLASS (GET_MODE (X)) == MODE_FLOAT		\
+-   ? (OP) == EQ || (OP) == NE ? CCFPUmode : CCFPmode	\
+-   : (OP) == LE || (OP) == GT ? CCmode			\
+-   : (Y) != const0_rtx ? CCmode				\
+-   : (OP) == EQ || (OP) == NE ? CCZmode : CCNOmode)
++#define SELECT_CC_MODE(OP,X,Y) ix86_cc_mode (OP, X, Y)
+ 
+ /* Control the assembler format that we output, to the extent
+    this does not vary between assemblers.  */
+@@ -2588,8 +2595,8 @@ do { long l;						\
+   {"non_q_regs_operand", {SUBREG, REG}},				\
+   {"no_comparison_operator", {EQ, NE, LT, GE, LTU, GTU, LEU, GEU}},	\
+   {"fcmov_comparison_operator", {EQ, NE, LTU, GTU, LEU, GEU}},		\
+-  {"uno_comparison_operator", {EQ, NE, LE, LT, GE, GT, LEU, LTU, GEU,	\
+-			       GTU, UNORDERED, ORDERED}},		\
++  {"ix86_comparison_operator", {EQ, NE, LE, LT, GE, GT, LEU, LTU, GEU,	\
++				GTU, UNORDERED, ORDERED}},		\
+   {"cmp_fp_expander_operand", {CONST_DOUBLE, SUBREG, REG, MEM}},	\
+   {"ext_register_operand", {SUBREG, REG}},				\
+   {"binary_fp_operator", {PLUS, MINUS, MULT, DIV}},			\
+--- gcc/config/i386/i386.md	Mon Oct 30 15:33:04 2000
++++ gcc/config/i386/i386.md	Mon Oct 30 16:23:52 2000
+@@ -71,6 +71,7 @@
+ ;; 9  This is an `fnstsw' operation.
+ ;; 10 This is a `sahf' operation.
+ ;; 11 This is a `fstcw' operation
++;; 12 This is behaviour of add when setting carry flag.
+ ;;
+ ;; Insns whose names begin with "x86_" are emitted by gen_FOO calls
+ ;; from i386.c.
+@@ -1043,11 +1044,11 @@
+   DONE;
+ }")
+ 
+-(define_insn "cmpsi_ccz_1"
+-  [(set (reg:CCZ 17)
+-	(compare:CCZ (match_operand:SI 0 "nonimmediate_operand" "r,?mr")
+-		     (match_operand:SI 1 "const0_operand" "n,n")))]
+-  ""
++(define_insn "*cmpsi_ccno_1"
++  [(set (reg 17)
++	(compare (match_operand:SI 0 "nonimmediate_operand" "r,?mr")
++		 (match_operand:SI 1 "const0_operand" "n,n")))]
++  "ix86_match_ccmode (insn, CCNOmode)"
+   "@
+    test{l}\\t{%0, %0|%0, %0}
+    cmp{l}\\t{%1, %0|%0, %1}"
+@@ -1055,28 +1056,34 @@
+    (set_attr "length_immediate" "0,1")
+    (set_attr "mode" "SI")])
+ 
+-(define_insn "cmpsi_ccno_1"
+-  [(set (reg:CCNO 17)
+-	(compare:CCNO (match_operand:SI 0 "nonimmediate_operand" "r,?mr")
+-		      (match_operand:SI 1 "const0_operand" "n,n")))]
+-  ""
+-  "@
+-   test{l}\\t{%0, %0|%0, %0}
+-   cmp{l}\\t{%1, %0|%0, %1}"
+-  [(set_attr "type" "test,icmp")
+-   (set_attr "length_immediate" "0,1")
++(define_insn "*cmpsi_minus_1"
++  [(set (reg 17)
++	(compare (minus:SI (match_operand:SI 0 "nonimmediate_operand" "rm,r")
++			   (match_operand:SI 1 "general_operand" "ri,mr"))
++		 (const_int 0)))]
++  "ix86_match_ccmode (insn, CCGOCmode)"
++  "cmp{l}\\t{%1, %0|%0, %1}"
++  [(set_attr "type" "icmp")
+    (set_attr "mode" "SI")])
+ 
+-(define_insn "cmpsi_1"
++(define_expand "cmpsi_1"
+   [(set (reg:CC 17)
+ 	(compare:CC (match_operand:SI 0 "nonimmediate_operand" "rm,r")
+ 		    (match_operand:SI 1 "general_operand" "ri,mr")))]
+-  "GET_CODE (operands[0]) != MEM || GET_CODE (operands[1]) != MEM"
++  ""
++  "")
++
++(define_insn "*cmpsi_1_insn"
++  [(set (reg 17)
++	(compare (match_operand:SI 0 "nonimmediate_operand" "rm,r")
++		 (match_operand:SI 1 "general_operand" "ri,mr")))]
++  "(GET_CODE (operands[0]) != MEM || GET_CODE (operands[1]) != MEM)
++    && ix86_match_ccmode (insn, CCmode)"
+   "cmp{l}\\t{%1, %0|%0, %1}"
+   [(set_attr "type" "icmp")
+    (set_attr "mode" "SI")])
+ 
+-(define_insn "*cmphi_0"
++(define_insn "*cmphi_ccno_1"
+   [(set (reg 17)
+ 	(compare (match_operand:HI 0 "nonimmediate_operand" "r,?mr")
+ 		 (match_operand:HI 1 "const0_operand" "n,n")))]
+@@ -1088,32 +1095,31 @@
+    (set_attr "length_immediate" "0,1")
+    (set_attr "mode" "HI")])
+ 
+-(define_insn "*cmphi_1"
+-  [(set (reg:CC 17)
+-	(compare:CC (match_operand:HI 0 "nonimmediate_operand" "rm,r")
+-		    (match_operand:HI 1 "general_operand" "ri,mr")))]
+-  "GET_CODE (operands[0]) != MEM || GET_CODE (operands[1]) != MEM"
++(define_insn "*cmphi_minus_1"
++  [(set (reg 17)
++	(compare (minus:HI (match_operand:HI 0 "nonimmediate_operand" "rm,r")
++			   (match_operand:HI 1 "general_operand" "ri,mr"))
++		 (const_int 0)))]
++  "ix86_match_ccmode (insn, CCGOCmode)"
+   "cmp{w}\\t{%1, %0|%0, %1}"
+   [(set_attr "type" "icmp")
+    (set_attr "mode" "HI")])
+ 
+-(define_insn "cmpqi_ccz_1"
+-  [(set (reg:CCZ 17)
+-	(compare:CCZ (match_operand:QI 0 "nonimmediate_operand" "q,?mq")
+-		     (match_operand:QI 1 "const0_operand" "n,n")))]
+-  ""
+-  "@
+-   test{b}\\t{%0, %0|%0, %0}
+-   cmp{b}\\t{$0, %0|%0, 0}"
+-  [(set_attr "type" "test,icmp")
+-   (set_attr "length_immediate" "0,1")
+-   (set_attr "mode" "QI")])
++(define_insn "*cmphi_1"
++  [(set (reg 17)
++	(compare (match_operand:HI 0 "nonimmediate_operand" "rm,r")
++		 (match_operand:HI 1 "general_operand" "ri,mr")))]
++  "(GET_CODE (operands[0]) != MEM || GET_CODE (operands[1]) != MEM)
++   && ix86_match_ccmode (insn, CCmode)"
++  "cmp{w}\\t{%1, %0|%0, %1}"
++  [(set_attr "type" "icmp")
++   (set_attr "mode" "HI")])
+ 
+ (define_insn "*cmpqi_ccno_1"
+-  [(set (reg:CCNO 17)
+-	(compare:CCNO (match_operand:QI 0 "nonimmediate_operand" "q,?mq")
+-		      (match_operand:QI 1 "const0_operand" "n,n")))]
+-  ""
++  [(set (reg 17)
++	(compare (match_operand:QI 0 "nonimmediate_operand" "q,?mq")
++		 (match_operand:QI 1 "const0_operand" "n,n")))]
++  "ix86_match_ccmode (insn, CCNOmode)"
+   "@
+    test{b}\\t{%0, %0|%0, %0}
+    cmp{b}\\t{$0, %0|%0, 0}"
+@@ -1122,24 +1128,35 @@
+    (set_attr "mode" "QI")])
+ 
+ (define_insn "*cmpqi_1"
+-  [(set (reg:CC 17)
+-	(compare:CC (match_operand:QI 0 "nonimmediate_operand" "qm,q")
+-		    (match_operand:QI 1 "general_operand" "qi,mq")))]
+-  "GET_CODE (operands[0]) != MEM || GET_CODE (operands[1]) != MEM"
++  [(set (reg 17)
++	(compare (match_operand:QI 0 "nonimmediate_operand" "qm,q")
++		 (match_operand:QI 1 "general_operand" "qi,mq")))]
++  "(GET_CODE (operands[0]) != MEM || GET_CODE (operands[1]) != MEM)
++    && ix86_match_ccmode (insn, CCmode)"
+   "cmp{b}\\t{%1, %0|%0, %1}"
+   [(set_attr "type" "icmp")
+    (set_attr "mode" "QI")])
+ 
++(define_insn "*cmpqi_minus_1"
++  [(set (reg 17)
++	(compare (minus:QI (match_operand:QI 0 "nonimmediate_operand" "rm,r")
++			   (match_operand:QI 1 "general_operand" "ri,mr"))
++		 (const_int 0)))]
++  "ix86_match_ccmode (insn, CCGOCmode)"
++  "cmp{w}\\t{%1, %0|%0, %1}"
++  [(set_attr "type" "icmp")
++   (set_attr "mode" "QI")])
++
+ (define_insn "*cmpqi_ext_1"
+-  [(set (reg:CC 17)
+-	(compare:CC
++  [(set (reg 17)
++	(compare
+ 	  (match_operand:QI 0 "general_operand" "qm")
+ 	  (subreg:QI
+ 	    (zero_extract:SI
+ 	      (match_operand 1 "ext_register_operand" "q")
+ 	      (const_int 8)
+ 	      (const_int 8)) 0)))]
+-  ""
++  "ix86_match_ccmode (insn, CCmode)"
+   "cmp{b}\\t{%h1, %0|%0, %h1}"
+   [(set_attr "type" "icmp")
+    (set_attr "mode" "QI")])
+@@ -1159,7 +1176,7 @@
+    (set_attr "length_immediate" "0")
+    (set_attr "mode" "QI")])
+ 
+-(define_insn "cmpqi_ext_3"
++(define_expand "cmpqi_ext_3"
+   [(set (reg:CC 17)
+ 	(compare:CC
+ 	  (subreg:QI
+@@ -1169,13 +1186,25 @@
+ 	      (const_int 8)) 0)
+ 	  (match_operand:QI 1 "general_operand" "qmn")))]
+   ""
++  "")
++
++(define_insn "cmpqi_ext_3_insn"
++  [(set (reg 17)
++	(compare
++	  (subreg:QI
++	    (zero_extract:SI
++	      (match_operand 0 "ext_register_operand" "q")
++	      (const_int 8)
++	      (const_int 8)) 0)
++	  (match_operand:QI 1 "general_operand" "qmn")))]
++  "ix86_match_ccmode (insn, CCmode)"
+   "cmp{b}\\t{%1, %h0|%h0, %1}"
+   [(set_attr "type" "icmp")
+    (set_attr "mode" "QI")])
+ 
+ (define_insn "*cmpqi_ext_4"
+-  [(set (reg:CC 17)
+-	(compare:CC
++  [(set (reg 17)
++	(compare
+ 	  (subreg:QI
+ 	    (zero_extract:SI
+ 	      (match_operand 0 "ext_register_operand" "q")
+@@ -1186,7 +1215,7 @@
+ 	      (match_operand 1 "ext_register_operand" "q")
+ 	      (const_int 8)
+ 	      (const_int 8)) 0)))]
+-  ""
++  "ix86_match_ccmode (insn, CCmode)"
+   "cmp{b}\\t{%h1, %h0|%h0, %h1}"
+   [(set_attr "type" "icmp")
+    (set_attr "mode" "QI")])
+@@ -3680,20 +3709,33 @@
+ 		 (match_operand:DI 2 "general_operand" "")))
+    (clobber (reg:CC 17))]
+   "reload_completed"
+-  [(parallel [(set (reg:CC 17) (plus:CC (match_dup 1) (match_dup 2)))
++  [(parallel [(set (reg:CC 17) (unspec:CC [(match_dup 1) (match_dup 2)] 12))
+ 	      (set (match_dup 0) (plus:SI (match_dup 1) (match_dup 2)))])
+    (parallel [(set (match_dup 3)
+-		   (plus:SI (match_dup 4)
+-		   (plus:SI (match_dup 5)
+-			    (ltu:SI (reg:CC 17) (const_int 0)))))
++		   (plus:SI (plus:SI (ltu:SI (reg:CC 17) (const_int 0))
++				     (match_dup 4))
++			    (match_dup 5)))
+ 	      (clobber (reg:CC 17))])]
+   "split_di (operands+0, 1, operands+0, operands+3);
+    split_di (operands+1, 1, operands+1, operands+4);
+    split_di (operands+2, 1, operands+2, operands+5);")
+ 
++(define_insn "*addsi3_carry"
++  [(set (match_operand:SI 0 "nonimmediate_operand" "=rm,r")
++	(plus:SI (plus:SI (ltu:SI (reg:CC 17) (const_int 0))
++			  (match_operand:SI 1 "nonimmediate_operand" "%0,0"))
++		 (match_operand:SI 2 "general_operand" "ri,rm")))
++   (clobber (reg:CC 17))]
++  "ix86_binary_operator_ok (PLUS, SImode, operands)"
++  "adc{l}\\t{%2, %0|%0, %2}"
++  [(set_attr "type" "alu")
++   (set_attr "pent_pair" "pu")
++   (set_attr "mode" "SI")
++   (set_attr "ppro_uops" "few")])
++
+ (define_insn "*addsi3_cc"
+-  [(set (reg:CC 17) (plus:CC (match_operand:SI 1 "nonimmediate_operand" "%0,0")
+-		    (match_operand:SI 2 "general_operand" "ri,rm")))
++  [(set (reg:CC 17) (unspec:CC [(match_operand:SI 1 "nonimmediate_operand" "%0,0")
++			        (match_operand:SI 2 "general_operand" "ri,rm")] 12))
+    (set (match_operand:SI 0 "nonimmediate_operand" "=rm,r")
+ 	(plus:SI (match_dup 1) (match_dup 2)))]
+   "ix86_binary_operator_ok (PLUS, SImode, operands)"
+@@ -3702,8 +3744,8 @@
+    (set_attr "mode" "SI")])
+ 
+ (define_insn "addqi3_cc"
+-  [(set (reg:CC 17) (plus:CC (match_operand:QI 1 "nonimmediate_operand" "%0,0")
+-		    (match_operand:QI 2 "general_operand" "qi,qm")))
++  [(set (reg:CC 17) (unspec:CC [(match_operand:QI 1 "nonimmediate_operand" "%0,0")
++			        (match_operand:QI 2 "general_operand" "qi,qm")] 12))
+    (set (match_operand:QI 0 "nonimmediate_operand" "=qm,q")
+ 	(plus:QI (match_dup 1) (match_dup 2)))]
+   "ix86_binary_operator_ok (PLUS, QImode, operands)"
+@@ -3711,19 +3753,6 @@
+   [(set_attr "type" "alu")
+    (set_attr "mode" "QI")])
+ 
+-(define_insn "*addsi3_carry"
+-  [(set (match_operand:SI 0 "nonimmediate_operand" "=rm,r")
+-	  (plus:SI (match_operand:SI 1 "nonimmediate_operand" "%0,0")
+-	    (plus:SI (match_operand:SI 2 "general_operand" "ri,rm")
+-	      (ltu:SI (reg:CC 17) (const_int 0)))))
+-   (clobber (reg:CC 17))]
+-  "ix86_binary_operator_ok (PLUS, SImode, operands)"
+-  "adc{l}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
+-   (set_attr "pent_pair" "pu")
+-   (set_attr "mode" "SI")
+-   (set_attr "ppro_uops" "few")])
+-
+ (define_expand "addsi3"
+   [(parallel [(set (match_operand:SI 0 "nonimmediate_operand" "")
+ 		   (plus:SI (match_operand:SI 1 "nonimmediate_operand" "")
+@@ -3925,7 +3954,7 @@
+ 	  (const_int 0)))			
+    (set (match_operand:SI 0 "nonimmediate_operand" "=r,rm")
+ 	(plus:SI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (PLUS, SImode, operands)
+    /* Current assemblers are broken and do not allow @GOTOFF in
+       ought but a memory context. */
+@@ -3971,7 +4000,7 @@
+ 	(compare (neg:SI (match_operand:SI 2 "general_operand" "rmni"))
+ 		 (match_operand:SI 1 "nonimmediate_operand" "%0")))
+    (clobber (match_scratch:SI 0 "=r"))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCZmode)
+    && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)
+    /* Current assemblers are broken and do not allow @GOTOFF in
+       ought but a memory context. */
+@@ -4012,31 +4041,98 @@
+ 	(const_string "alu")))
+    (set_attr "mode" "SI")])
+ 
++; For comparisons agains 1, -1 and 128, we may generate better code
++; by converting cmp to add, inc or dec as done by peephole2.  This pattern
++; is matched then.  We can't accept general immediate, because for
++; case of overflows,  the result is messed up.
++; This pattern also don't hold of 0x80000000, since the value overflows
++; when negated.
++; Also carry flag is reversed compared to cmp, so this converison is valid
++; only for comparisons not depending on it.
+ (define_insn "*addsi_4"
+-  [(set (reg:CC 17)
+-	(compare:CC (neg:SI (match_operand:SI 2 "general_operand" "rmni,rni"))
+-		    (match_operand:SI 1 "nonimmediate_operand" "%0,0")))
+-   (set (match_operand:SI 0 "nonimmediate_operand" "=r,rm")
+-	(plus:SI (match_dup 1) (match_dup 2)))]
+-  "ix86_binary_operator_ok (PLUS, SImode, operands)
+-   /* Current assemblers are broken and do not allow @GOTOFF in
+-      ought but a memory context. */
+-   && ! pic_symbolic_operand (operands[2], VOIDmode)"
+-  "add{l}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
++  [(set (reg 17)
++	(compare (match_operand:SI 1 "nonimmediate_operand" "0")
++		 (match_operand:SI 2 "const_int_operand" "n")))
++   (clobber (match_scratch:SI 0 "=rm"))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && (INTVAL (operands[2]) & 0xffffffff) != 0x80000000"
++  "*
++{
++  switch (get_attr_type (insn))
++    {
++    case TYPE_INCDEC:
++      if (operands[2] == constm1_rtx)
++        return \"inc{l}\\t%0\";
++      else if (operands[2] == const1_rtx)
++        return \"dec{l}\\t%0\";
++      else
++	abort();
++
++    default:
++      if (! rtx_equal_p (operands[0], operands[1]))
++	abort ();
++      /* Make things pretty and `subl $4,%eax' rather than `addl $-4, %eax'.
++	 Exceptions: -128 encodes smaller than 128, so swap sign and op.  */
++      if ((INTVAL (operands[2]) == -128
++	   || (INTVAL (operands[2]) > 0
++	       && INTVAL (operands[2]) != 128)))
++	return \"sub{l}\\t{%2, %0|%0, %2}\";
++      operands[2] = GEN_INT (-INTVAL (operands[2]));
++      return \"add{l}\\t{%2, %0|%0, %2}\";
++    }
++}"
++  [(set (attr "type")
++     (if_then_else (match_operand:SI 2 "incdec_operand" "")
++	(const_string "incdec")
++	(const_string "alu")))
+    (set_attr "mode" "SI")])
+ 
+ (define_insn "*addsi_5"
+-  [(set (reg:CC 17)
+-	(compare:CC (neg:SI (match_operand:SI 2 "general_operand" "rmni"))
+-		    (match_operand:SI 1 "nonimmediate_operand" "%0")))
++  [(set (reg 17)
++	(compare
++	  (plus:SI (match_operand:SI 1 "nonimmediate_operand" "%0")
++		   (match_operand:SI 2 "general_operand" "rmni"))
++	  (const_int 0)))			
+    (clobber (match_scratch:SI 0 "=r"))]
+-  "(GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)
++  "ix86_match_ccmode (insn, CCGOCmode)
++   && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)
+    /* Current assemblers are broken and do not allow @GOTOFF in
+       ought but a memory context. */
+    && ! pic_symbolic_operand (operands[2], VOIDmode)"
+-  "add{l}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
++  "*
++{
++  switch (get_attr_type (insn))
++    {
++    case TYPE_INCDEC:
++      if (! rtx_equal_p (operands[0], operands[1]))
++	abort ();
++      if (operands[2] == const1_rtx)
++        return \"inc{l}\\t%0\";
++      else if (operands[2] == constm1_rtx)
++        return \"dec{l}\\t%0\";
++      else
++	abort();
++
++    default:
++      if (! rtx_equal_p (operands[0], operands[1]))
++	abort ();
++      /* Make things pretty and `subl $4,%eax' rather than `addl $-4, %eax'.
++	 Exceptions: -128 encodes smaller than 128, so swap sign and op.  */
++      if (GET_CODE (operands[2]) == CONST_INT
++          && (INTVAL (operands[2]) == 128
++	      || (INTVAL (operands[2]) < 0
++		  && INTVAL (operands[2]) != -128)))
++        {
++          operands[2] = GEN_INT (-INTVAL (operands[2]));
++          return \"sub{l}\\t{%2, %0|%0, %2}\";
++        }
++      return \"add{l}\\t{%2, %0|%0, %2}\";
++    }
++}"
++  [(set (attr "type")
++     (if_then_else (match_operand:SI 2 "incdec_operand" "")
++	(const_string "incdec")
++	(const_string "alu")))
+    (set_attr "mode" "SI")])
+ 
+ (define_expand "addhi3"
+@@ -4143,7 +4239,7 @@
+ 	  (const_int 0)))			
+    (set (match_operand:HI 0 "nonimmediate_operand" "=r,rm")
+ 	(plus:HI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (PLUS, HImode, operands)"
+   "*
+ {
+@@ -4183,7 +4279,7 @@
+ 	(compare (neg:HI (match_operand:HI 2 "general_operand" "rmni"))
+ 		 (match_operand:HI 1 "nonimmediate_operand" "%0")))
+    (clobber (match_scratch:HI 0 "=r"))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCZmode)
+    && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
+   "*
+ {
+@@ -4218,25 +4314,88 @@
+ 	(const_string "alu")))
+    (set_attr "mode" "HI")])
+ 
++; See comments above addsi_3_imm for details.
+ (define_insn "*addhi_4"
+-  [(set (reg:CC 17)
+-	(compare:CC (neg:HI (match_operand:HI 2 "general_operand" "rmni,rni"))
+-		    (match_operand:HI 1 "nonimmediate_operand" "%0,0")))
+-   (set (match_operand:HI 0 "nonimmediate_operand" "=r,rm")
+-	(plus:HI (match_dup 1) (match_dup 2)))]
+-  "ix86_binary_operator_ok (PLUS, HImode, operands)"
+-  "add{w}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
+-   (set_attr "mode" "HI")])
++  [(set (reg 17)
++	(compare (match_operand:HI 1 "nonimmediate_operand" "0")
++		 (match_operand:HI 2 "const_int_operand" "n")))
++   (clobber (match_scratch:HI 0 "=rm"))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && (INTVAL (operands[2]) & 0xffff) != 0x8000"
++  "*
++{
++  switch (get_attr_type (insn))
++    {
++    case TYPE_INCDEC:
++      if (operands[2] == constm1_rtx
++	  || (GET_CODE (operands[2]) == CONST_INT
++	      && INTVAL (operands[2]) == 65535))
++        return \"inc{w}\\t%0\";
++      else if (operands[2] == const1_rtx)
++        return \"dec{w}\\t%0\";
++      else
++	abort();
++
++    default:
++      if (! rtx_equal_p (operands[0], operands[1]))
++	abort ();
++      /* Make things pretty and `subl $4,%eax' rather than `addl $-4, %eax'.
++	 Exceptions: -128 encodes smaller than 128, so swap sign and op.  */
++      if ((INTVAL (operands[2]) == -128
++	   || (INTVAL (operands[2]) > 0
++	       && INTVAL (operands[2]) != 128)))
++	return \"sub{w}\\t{%2, %0|%0, %2}\";
++      operands[2] = GEN_INT (-INTVAL (operands[2]));
++      return \"add{w}\\t{%2, %0|%0, %2}\";
++    }
++}"
++  [(set (attr "type")
++     (if_then_else (match_operand:HI 2 "incdec_operand" "")
++	(const_string "incdec")
++	(const_string "alu")))
++   (set_attr "mode" "SI")])
++
+ 
+ (define_insn "*addhi_5"
+-  [(set (reg:CC 17)
+-	(compare:CC (neg:HI (match_operand:HI 2 "general_operand" "rmni"))
+-		    (match_operand:HI 1 "nonimmediate_operand" "%0")))
++  [(set (reg 17)
++	(compare
++	  (plus:HI (match_operand:HI 1 "nonimmediate_operand" "%0")
++		   (match_operand:HI 2 "general_operand" "rmni"))
++	  (const_int 0)))			
+    (clobber (match_scratch:HI 0 "=r"))]
+-  "(GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
+-  "add{w}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
++  "ix86_match_ccmode (insn, CCGOCmode)
++   && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
++  "*
++{
++  switch (get_attr_type (insn))
++    {
++    case TYPE_INCDEC:
++      if (operands[2] == const1_rtx)
++	return \"inc{w}\\t%0\";
++      else if (operands[2] == constm1_rtx
++	       || (GET_CODE (operands[2]) == CONST_INT
++		   && INTVAL (operands[2]) == 65535))
++	return \"dec{w}\\t%0\";
++      abort();
++
++    default:
++      /* Make things pretty and `subl $4,%eax' rather than `addl $-4, %eax'.
++	 Exceptions: -128 encodes smaller than 128, so swap sign and op.  */
++      if (GET_CODE (operands[2]) == CONST_INT
++          && (INTVAL (operands[2]) == 128
++	      || (INTVAL (operands[2]) < 0
++		  && INTVAL (operands[2]) != -128)))
++	{
++	  operands[2] = GEN_INT (-INTVAL (operands[2]));
++	  return \"sub{w}\\t{%2, %0|%0, %2}\";
++	}
++      return \"add{w}\\t{%2, %0|%0, %2}\";
++    }
++}"
++  [(set (attr "type")
++     (if_then_else (match_operand:HI 2 "incdec_operand" "")
++	(const_string "incdec")
++	(const_string "alu")))
+    (set_attr "mode" "HI")])
+ 
+ (define_expand "addqi3"
+@@ -4354,7 +4513,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:QI 0 "nonimmediate_operand" "=q,qm")
+ 	(plus:QI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (PLUS, QImode, operands)"
+   "*
+ {
+@@ -4390,8 +4549,8 @@
+   [(set (reg 17)
+ 	(compare (neg:QI (match_operand:QI 2 "general_operand" "qmni"))
+ 		 (match_operand:QI 1 "nonimmediate_operand" "%0")))
+-   (clobber (match_scratch:QI 0 "=r"))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++   (clobber (match_scratch:QI 0 "=q"))]
++  "ix86_match_ccmode (insn, CCZmode)
+    && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
+   "*
+ {
+@@ -4423,25 +4582,82 @@
+ 	(const_string "alu")))
+    (set_attr "mode" "QI")])
+ 
++; See comments above addsi_3_imm for details.
+ (define_insn "*addqi_4"
+-  [(set (reg:CC 17)
+-	(compare:CC (neg:QI (match_operand:QI 2 "general_operand" "qmni,qni"))
+-		    (match_operand:QI 1 "nonimmediate_operand" "%0,0")))
+-   (set (match_operand:QI 0 "nonimmediate_operand" "=q,qm")
+-	(plus:QI (match_dup 1) (match_dup 2)))]
+-  "ix86_binary_operator_ok (PLUS, QImode, operands)"
+-  "add{b}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
++  [(set (reg 17)
++        (compare (match_operand:QI 1 "nonimmediate_operand" "0")
++		 (match_operand:QI 2 "const_int_operand" "n")))
++   (clobber (match_scratch:QI 0 "=qm"))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && (INTVAL (operands[2]) & 0xff) != 0x80"
++  "*
++{
++  switch (get_attr_type (insn))
++    {
++    case TYPE_INCDEC:
++      if (operands[2] == constm1_rtx
++	  || (GET_CODE (operands[2]) == CONST_INT
++	      && INTVAL (operands[2]) == 255))
++	return \"inc{b}\\t%0\";
++      else if (operands[2] == const1_rtx)
++	return \"dec{b}\\t%0\";
++      else
++	abort();
++
++    default:
++      if (! rtx_equal_p (operands[0], operands[1]))
++	abort ();
++      if (INTVAL (operands[2]) < 0)
++	{
++	  operands[2] = GEN_INT (-INTVAL (operands[2]));
++	  return \"add{b}\\t{%2, %0|%0, %2}\";
++	}
++      return \"sub{b}\\t{%2, %0|%0, %2}\";
++    }
++}"
++  [(set (attr "type")
++     (if_then_else (match_operand:HI 2 "incdec_operand" "")
++       (const_string "incdec")
++       (const_string "alu")))
+    (set_attr "mode" "QI")])
+ 
+ (define_insn "*addqi_5"
+-  [(set (reg:CC 17)
+-	(compare:CC (neg:QI (match_operand:QI 2 "general_operand" "qmni"))
+-		    (match_operand:QI 1 "nonimmediate_operand" "%0")))
+-   (clobber (match_scratch:QI 0 "=r"))]
+-  "(GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
+-  "add{b}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
++  [(set (reg 17)
++	(compare
++	  (plus:QI (match_operand:QI 1 "nonimmediate_operand" "%0")
++		   (match_operand:QI 2 "general_operand" "qmni"))
++	  (const_int 0)))
++   (clobber (match_scratch:QI 0 "=q"))]
++  "ix86_match_ccmode (insn, CCGOCmode)
++   && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
++  "*
++{
++  switch (get_attr_type (insn))
++    {
++    case TYPE_INCDEC:
++      if (operands[2] == const1_rtx)
++	return \"inc{b}\\t%0\";
++      else if (operands[2] == constm1_rtx
++	       || (GET_CODE (operands[2]) == CONST_INT
++		   && INTVAL (operands[2]) == 255))
++	return \"dec{b}\\t%0\";
++      abort();
++
++    default:
++      /* Make things pretty and `subb $4,%al' rather than `addb $-4, %al'.  */
++      if (GET_CODE (operands[2]) == CONST_INT
++          && INTVAL (operands[2]) < 0)
++	{
++	  operands[2] = GEN_INT (-INTVAL (operands[2]));
++	  return \"sub{b}\\t{%2, %0|%0, %2}\";
++	}
++      return \"add{b}\\t{%2, %0|%0, %2}\";
++    }
++}"
++  [(set (attr "type")
++     (if_then_else (match_operand:QI 2 "incdec_operand" "")
++	(const_string "incdec")
++	(const_string "alu")))
+    (set_attr "mode" "QI")])
+ 
+ 
+@@ -4541,32 +4757,22 @@
+ 		  (match_operand:DI 2 "general_operand" "")))
+    (clobber (reg:CC 17))]
+   "reload_completed"
+-  [(parallel [(set (reg:CC 17) (minus:CC (match_dup 1) (match_dup 2)))
++  [(parallel [(set (reg:CC 17) (compare:CC (match_dup 1) (match_dup 2)))
+ 	      (set (match_dup 0) (minus:SI (match_dup 1) (match_dup 2)))])
+    (parallel [(set (match_dup 3)
+ 		   (minus:SI (match_dup 4)
+-			     (plus:SI (match_dup 5)
+-			     (ltu:SI (reg:CC 17) (const_int 0)))))
++			     (plus:SI (ltu:SI (reg:CC 17) (const_int 0))
++				      (match_dup 5))))
+ 	      (clobber (reg:CC 17))])]
+   "split_di (operands+0, 1, operands+0, operands+3);
+    split_di (operands+1, 1, operands+1, operands+4);
+    split_di (operands+2, 1, operands+2, operands+5);")
+ 
+-(define_insn "*subsi3_cc"
+-  [(set (reg:CC 17) (minus:CC (match_operand:SI 1 "nonimmediate_operand" "0,0")
+-			      (match_operand:SI 2 "general_operand" "ri,rm")))
+-   (set (match_operand:SI 0 "nonimmediate_operand" "=rm,r")
+-	(minus:SI (match_dup 1) (match_dup 2)))]
+-  "ix86_binary_operator_ok (MINUS, SImode, operands)"
+-  "sub{l}\\t{%2, %0|%0, %2}"
+-  [(set_attr "type" "alu")
+-   (set_attr "mode" "SI")])
+-
+ (define_insn "subsi3_carry"
+   [(set (match_operand:SI 0 "nonimmediate_operand" "=rm,r")
+ 	  (minus:SI (match_operand:SI 1 "nonimmediate_operand" "0,0")
+-	    (plus:SI (match_operand:SI 2 "general_operand" "ri,rm")
+-	      (ltu:SI (reg:CC 17) (const_int 0)))))
++		    (plus:SI (ltu:SI (reg:CC 17) (const_int 0))
++			     (match_operand:SI 2 "general_operand" "ri,rm"))))
+    (clobber (reg:CC 17))]
+   "ix86_binary_operator_ok (MINUS, SImode, operands)"
+   "sbb{l}\\t{%2, %0|%0, %2}"
+@@ -4601,7 +4807,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:SI 0 "nonimmediate_operand" "=rm,r")
+ 	(minus:SI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (MINUS, SImode, operands)"
+   "sub{l}\\t{%2, %0|%0, %2}"
+   [(set_attr "type" "alu")
+@@ -4645,7 +4851,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:HI 0 "nonimmediate_operand" "=rm,r")
+ 	(minus:HI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (MINUS, HImode, operands)"
+   "sub{w}\\t{%2, %0|%0, %2}"
+   [(set_attr "type" "alu")
+@@ -4689,7 +4895,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:HI 0 "nonimmediate_operand" "=qm,q")
+ 	(minus:HI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (MINUS, QImode, operands)"
+   "sub{b}\\t{%2, %0|%0, %2}"
+   [(set_attr "type" "alu")
+@@ -5145,31 +5351,28 @@
+ ;; On Pentium, "test imm, reg" is pairable only with eax, ax, and al.
+ ;; Note that this excludes ah.
+ 
+-(define_insn "*testsi_ccz_1"
+-  [(set (reg:CCZ 17)
+-	(compare:CCZ
++
++(define_insn "testsi_1"
++  [(set (reg 17)
++	(compare
+ 	  (and:SI (match_operand:SI 0 "nonimmediate_operand" "%*a,r,rm")
+ 		  (match_operand:SI 1 "nonmemory_operand" "in,in,rin"))
+ 	  (const_int 0)))]
+-  ""
++  "ix86_match_ccmode (insn, CCNOmode)"
+   "test{l}\\t{%1, %0|%0, %1}"
+   [(set_attr "type" "test")
+    (set_attr "modrm" "0,1,1")
+    (set_attr "mode" "SI")
+    (set_attr "pent_pair" "uv,np,uv")])
+ 
+-(define_insn "testsi_ccno_1"
++(define_expand "testsi_ccno_1"
+   [(set (reg:CCNO 17)
+ 	(compare:CCNO
+-	  (and:SI (match_operand:SI 0 "nonimmediate_operand" "%*a,r,rm")
+-		  (match_operand:SI 1 "nonmemory_operand" "in,in,rin"))
++	  (and:SI (match_operand:SI 0 "nonimmediate_operand" "")
++		  (match_operand:SI 1 "nonmemory_operand" ""))
+ 	  (const_int 0)))]
+   ""
+-  "test{l}\\t{%1, %0|%0, %1}"
+-  [(set_attr "type" "test")
+-   (set_attr "modrm" "0,1,1")
+-   (set_attr "mode" "SI")
+-   (set_attr "pent_pair" "uv,np,uv")])
++  "")
+ 
+ (define_insn "*testhi_1"
+   [(set (reg 17)
+@@ -5183,55 +5386,46 @@
+    (set_attr "mode" "HI")
+    (set_attr "pent_pair" "uv,np,uv")])
+ 
+-(define_insn "testqi_ccz_1"
++(define_expand "testqi_ccz_1"
+   [(set (reg:CCZ 17)
+-        (compare:CCZ
+-	  (and:QI (match_operand:QI 0 "nonimmediate_operand" "%*a,q,qm")
+-		  (match_operand:QI 1 "nonmemory_operand" "n,n,qn"))
+-	  (const_int 0)))]
++        (compare:CCZ (and:QI (match_operand:QI 0 "nonimmediate_operand" "")
++			     (match_operand:QI 1 "nonmemory_operand" ""))
++		     (const_int 0)))]
+   ""
+-  "test{b}\\t{%1, %0|%0, %1}"
+-  [(set_attr "type" "test")
+-   (set_attr "modrm" "0,1,1")
+-   (set_attr "mode" "QI")
+-   (set_attr "pent_pair" "uv,np,uv")])
++  "")
+ 
+-(define_insn "testqi_ccno_1"
+-  [(set (reg:CCNO 17)
+-        (compare:CCNO (and:QI (match_operand:QI 0 "nonimmediate_operand" "%*a,q,qm,r")
+-			      (match_operand:QI 1 "nonmemory_operand" "n,n,qn,n"))
+-		      (const_int 0)))]
+-  ""
++(define_insn "*testqi_1"
++  [(set (reg 17)
++	(compare (and:QI (match_operand:QI 0 "nonimmediate_operand" "%*a,q,qm,r")
++			 (match_operand:QI 1 "nonmemory_operand" "n,n,qn,n"))
++		 (const_int 0)))]
++  "ix86_match_ccmode (insn, CCNOmode)"
+   "@
+    test{b}\\t{%1, %0|%0, %1} 
+    test{b}\\t{%1, %0|%0, %1} 
+    test{b}\\t{%1, %0|%0, %1} 
+-   test{l}\\t{%1, %0|%0, %1}"
++   test{l}\\t{%1, %k0|%k0, %1}"
+   [(set_attr "type" "test")
+    (set_attr "modrm" "0,1,1,1")
+    (set_attr "mode" "QI,QI,QI,SI")
+    (set_attr "pent_pair" "uv,np,uv,np")])
+ 
+-(define_insn "*testqi_ext_ccz_0"
+-  [(set (reg:CCZ 17)
+-	(compare:CCZ
++(define_expand "testqi_ext_ccno_0"
++  [(set (reg:CCNO 17)
++	(compare:CCNO
+ 	  (and:SI
+ 	    (zero_extract:SI
+-	      (match_operand 0 "ext_register_operand" "q")
++	      (match_operand 0 "ext_register_operand" "")
+ 	      (const_int 8)
+ 	      (const_int 8))
+-	    (match_operand 1 "const_int_operand" "n"))
++	    (match_operand 1 "const_int_operand" ""))
+ 	  (const_int 0)))]
+-  "(unsigned HOST_WIDE_INT) INTVAL (operands[1]) <= 0xff"
+-  "test{b}\\t{%1, %h0|%h0, %1}"
+-  [(set_attr "type" "test")
+-   (set_attr "mode" "QI")
+-   (set_attr "length_immediate" "1")
+-   (set_attr "pent_pair" "np")])
++  ""
++  "")
+ 
+-(define_insn "testqi_ext_ccno_0"
+-  [(set (reg:CCNO 17)
+-	(compare:CCNO
++(define_insn "*testqi_ext_0"
++  [(set (reg 17)
++	(compare
+ 	  (and:SI
+ 	    (zero_extract:SI
+ 	      (match_operand 0 "ext_register_operand" "q")
+@@ -5239,7 +5433,8 @@
+ 	      (const_int 8))
+ 	    (match_operand 1 "const_int_operand" "n"))
+ 	  (const_int 0)))]
+-  "(unsigned HOST_WIDE_INT) INTVAL (operands[1]) <= 0xff"
++  "(unsigned HOST_WIDE_INT) INTVAL (operands[1]) <= 0xff
++   && ix86_match_ccmode (insn, CCNOmode)"
+   "test{b}\\t{%1, %h0|%h0, %1}"
+   [(set_attr "type" "test")
+    (set_attr "mode" "QI")
+@@ -5745,7 +5940,7 @@
+ 	(compare (ior:QI (match_operand:QI 1 "nonimmediate_operand" "%0")
+ 			 (match_operand:QI 2 "general_operand" "qim"))
+ 		 (const_int 0)))
+-   (clobber (match_scratch:QI 0 "=r"))]
++   (clobber (match_scratch:QI 0 "=q"))]
+   "ix86_match_ccmode (insn, CCNOmode)
+    && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
+   "or{b}\\t{%2, %0|%0, %2}"
+@@ -5904,16 +6099,16 @@
+ 	  (xor:QI (match_operand:QI 1 "nonimmediate_operand" "%0")
+ 		  (match_operand:QI 2 "general_operand" "qim"))
+ 	  (const_int 0)))
+-   (clobber (match_scratch:QI 0 "=r"))]
++   (clobber (match_scratch:QI 0 "=q"))]
+   "ix86_match_ccmode (insn, CCNOmode)
+    && (GET_CODE (operands[1]) != MEM || GET_CODE (operands[2]) != MEM)"
+   "xor{b}\\t{%2, %0|%0, %2}"
+   [(set_attr "type" "alu")
+    (set_attr "mode" "QI")])
+ 
+-(define_insn "xorqi_cc_ext_1"
+-  [(set (reg:CCNO 17)
+-	(compare:CCNO
++(define_insn "*xorqi_cc_ext_1"
++  [(set (reg 17)
++	(compare
+ 	  (xor:SI
+ 	    (zero_extract:SI
+ 	      (match_operand 1 "ext_register_operand" "0")
+@@ -5927,10 +6122,30 @@
+ 	(xor:SI 
+ 	  (zero_extract:SI (match_dup 1) (const_int 8) (const_int 8))
+ 	  (match_dup 2)))]
+-  ""
++  "ix86_match_ccmode (insn, CCNOmode)"
+   "xor{b}\\t{%2, %h0|%h0, %2}"
+   [(set_attr "type" "alu")
+    (set_attr "mode" "QI")])
++
++(define_expand "xorqi_cc_ext_1"
++  [(parallel [
++     (set (reg:CCNO 17)
++	  (compare:CCNO
++	    (xor:SI
++	      (zero_extract:SI
++		(match_operand 1 "ext_register_operand" "")
++		(const_int 8)
++		(const_int 8))
++	      (match_operand:QI 2 "general_operand" ""))
++	    (const_int 0)))
++     (set (zero_extract:SI (match_operand 0 "ext_register_operand" "")
++			   (const_int 8)
++			   (const_int 8))
++	  (xor:SI 
++	    (zero_extract:SI (match_dup 1) (const_int 8) (const_int 8))
++	    (match_dup 2)))])]
++  ""
++  "")
+ 
+ ;; Negation instructions
+ 
+@@ -5961,9 +6176,9 @@
+      (set (match_dup 0) (neg:SI (match_dup 2)))])
+    (parallel
+     [(set (match_dup 1)
+-	  (plus:SI (match_dup 3)
+-	    (plus:SI (const_int 0)
+-	      (ltu:SI (reg:CC 17) (const_int 0)))))
++	  (plus:SI (plus:SI (ltu:SI (reg:CC 17) (const_int 0))
++			    (match_dup 3))
++		   (const_int 0)))
+      (clobber (reg:CC 17))])
+    (parallel
+     [(set (match_dup 1)
+@@ -6780,7 +6995,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:SI 0 "nonimmediate_operand" "=rm")
+ 	(ashift:SI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (ASHIFT, SImode, operands)"
+   "*
+ {
+@@ -6909,7 +7124,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:HI 0 "nonimmediate_operand" "=rm")
+ 	(ashift:HI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (ASHIFT, HImode, operands)"
+   "*
+ {
+@@ -7076,7 +7291,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:QI 0 "nonimmediate_operand" "=qm")
+ 	(ashift:QI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (ASHIFT, QImode, operands)"
+   "*
+ {
+@@ -7546,7 +7761,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:SI 0 "nonimmediate_operand" "=rm")
+ 	(lshiftrt:SI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && (TARGET_PENTIUM || TARGET_PENTIUMPRO)
+    && ix86_binary_operator_ok (LSHIFTRT, HImode, operands)"
+   "shr{l}\\t%0"
+@@ -7567,7 +7782,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:SI 0 "nonimmediate_operand" "=rm")
+ 	(lshiftrt:SI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (LSHIFTRT, HImode, operands)"
+   "@
+    shr{l}\\t{%2, %0|%0, %2}"
+@@ -7619,7 +7834,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:HI 0 "nonimmediate_operand" "=rm")
+ 	(lshiftrt:HI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && (TARGET_PENTIUM || TARGET_PENTIUMPRO)
+    && ix86_binary_operator_ok (LSHIFTRT, HImode, operands)"
+   "shr{w}\\t%0"
+@@ -7640,7 +7855,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:HI 0 "nonimmediate_operand" "=rm")
+ 	(lshiftrt:HI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (LSHIFTRT, HImode, operands)"
+   "@
+    shr{w}\\t{%2, %0|%0, %2}"
+@@ -7692,7 +7907,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:QI 0 "nonimmediate_operand" "=qm")
+ 	(lshiftrt:QI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && (TARGET_PENTIUM || TARGET_PENTIUMPRO)
+    && ix86_binary_operator_ok (LSHIFTRT, QImode, operands)"
+   "shr{b}\\t%0"
+@@ -7713,7 +7928,7 @@
+ 	  (const_int 0)))
+    (set (match_operand:QI 0 "nonimmediate_operand" "=qm")
+ 	(lshiftrt:QI (match_dup 1) (match_dup 2)))]
+-  "ix86_match_ccmode (insn, CCNOmode)
++  "ix86_match_ccmode (insn, CCGOCmode)
+    && ix86_binary_operator_ok (LSHIFTRT, QImode, operands)"
+   "shr{b}\\t{%2, %0|%0, %2}"
+   [(set_attr "type" "ishift")
+@@ -8102,7 +8317,7 @@
+ 
+ (define_insn "*setcc_1"
+   [(set (match_operand:QI 0 "nonimmediate_operand" "=qm")
+-	(match_operator:QI 1 "no_comparison_operator"
++	(match_operator:QI 1 "ix86_comparison_operator"
+ 	  [(reg 17) (const_int 0)]))]
+   ""
+   "set%C1\\t%0"
+@@ -8111,30 +8326,12 @@
+ 
+ (define_insn "*setcc_2"
+   [(set (strict_low_part (match_operand:QI 0 "nonimmediate_operand" "+qm"))
+-	(match_operator:QI 1 "no_comparison_operator"
++	(match_operator:QI 1 "ix86_comparison_operator"
+ 	  [(reg 17) (const_int 0)]))]
+   ""
+   "set%C1\\t%0"
+   [(set_attr "type" "setcc")
+    (set_attr "mode" "QI")])
+-
+-(define_insn "*setcc_3"
+-  [(set (match_operand:QI 0 "nonimmediate_operand" "=qm")
+-	(match_operator:QI 1 "uno_comparison_operator"
+-	  [(reg:CC 17) (const_int 0)]))]
+-  ""
+-  "set%C1\\t%0"
+-  [(set_attr "type" "setcc")
+-   (set_attr "mode" "QI")])
+-
+-(define_insn "*setcc_4"
+-  [(set (strict_low_part (match_operand:QI 0 "nonimmediate_operand" "+qm"))
+-	(match_operator:QI 1 "uno_comparison_operator"
+-	  [(reg:CC 17) (const_int 0)]))]
+-  ""
+-  "set%C1\\t%0"
+-  [(set_attr "type" "setcc")
+-   (set_attr "mode" "QI")])
+ 
+ ;; Basic conditional jump instructions.
+ ;; We ignore the overflow flag for signed branch instructions.
+@@ -8288,7 +8485,7 @@
+ 
+ (define_insn "*jcc_1"
+   [(set (pc)
+-	(if_then_else (match_operator 1 "no_comparison_operator"
++	(if_then_else (match_operator 1 "ix86_comparison_operator"
+ 				      [(reg 17) (const_int 0)])
+ 		      (label_ref (match_operand 0 "" ""))
+ 		      (pc)))]
+@@ -8305,7 +8502,7 @@
+ 
+ (define_insn "*jcc_2"
+   [(set (pc)
+-	(if_then_else (match_operator 1 "no_comparison_operator"
++	(if_then_else (match_operator 1 "ix86_comparison_operator"
+ 				      [(reg 17) (const_int 0)])
+ 		      (pc)
+ 		      (label_ref (match_operand 0 "" ""))))]
+@@ -8320,40 +8517,6 @@
+ 	     (const_int 0)
+ 	     (const_int 1)))])
+ 
+-(define_insn "*jcc_3"
+-  [(set (pc)
+-	(if_then_else (match_operator 1 "uno_comparison_operator"
+-				      [(reg:CC 17) (const_int 0)])
+-		      (label_ref (match_operand 0 "" ""))
+-		      (pc)))]
+-  ""
+-  "j%C1\\t%l0"
+-  [(set_attr "type" "ibr")
+-   (set (attr "prefix_0f")
+-	   (if_then_else (and (ge (minus (match_dup 0) (pc))
+-				  (const_int -128))
+-			      (lt (minus (match_dup 0) (pc))
+-				  (const_int 124)))
+-	     (const_int 0)
+-	     (const_int 1)))])
+-
+-(define_insn "*jcc_4"
+-  [(set (pc)
+-	(if_then_else (match_operator 1 "uno_comparison_operator"
+-				      [(reg:CC 17) (const_int 0)])
+-		      (pc)
+-		      (label_ref (match_operand 0 "" ""))))]
+-  ""
+-  "j%c1\\t%l0"
+-  [(set_attr "type" "ibr")
+-   (set (attr "prefix_0f")
+-	   (if_then_else (and (ge (minus (match_dup 0) (pc))
+-				  (const_int -128))
+-			      (lt (minus (match_dup 0) (pc))
+-				  (const_int 124)))
+-	     (const_int 0)
+-	     (const_int 1)))])
+-
+ ;; Define combination compare-and-branch fp compare instructions to use
+ ;; during early optimization.  Splitting the operation apart early makes
+ ;; for bad code when we want to reverse the operation.
+@@ -10436,7 +10599,7 @@
+ 
+ (define_insn "*movsicc_noc"
+   [(set (match_operand:SI 0 "register_operand" "=r,r")
+-	(if_then_else:SI (match_operator 1 "no_comparison_operator" 
++	(if_then_else:SI (match_operator 1 "ix86_comparison_operator" 
+ 				[(reg 17) (const_int 0)])
+ 		      (match_operand:SI 2 "nonimmediate_operand" "rm,0")
+ 		      (match_operand:SI 3 "nonimmediate_operand" "0,rm")))]
+@@ -10448,20 +10611,6 @@
+   [(set_attr "type" "icmov")
+    (set_attr "mode" "SI")])
+ 
+-(define_insn "*movsicc_c"
+-  [(set (match_operand:SI 0 "register_operand" "=r,r")
+-	(if_then_else:SI (match_operator 1 "uno_comparison_operator" 
+-				[(reg:CC 17) (const_int 0)])
+-		      (match_operand:SI 2 "nonimmediate_operand" "rm,0")
+-		      (match_operand:SI 3 "nonimmediate_operand" "0,rm")))]
+-  "TARGET_CMOVE
+-   && (GET_CODE (operands[2]) != MEM || GET_CODE (operands[3]) != MEM)"
+-  "@
+-   cmov%C1\\t{%2, %0|%0, %2}
+-   cmov%c1\\t{%3, %0|%0, %3}"
+-  [(set_attr "type" "icmov")
+-   (set_attr "mode" "SI")])
+-
+ (define_expand "movhicc"
+   [(set (match_operand:HI 0 "register_operand" "")
+ 	(if_then_else:HI (match_operand 1 "comparison_operator" "")
+@@ -10472,7 +10621,7 @@
+ 
+ (define_insn "*movhicc_noc"
+   [(set (match_operand:HI 0 "register_operand" "=r,r")
+-	(if_then_else:HI (match_operator 1 "no_comparison_operator" 
++	(if_then_else:HI (match_operator 1 "ix86_comparison_operator" 
+ 				[(reg 17) (const_int 0)])
+ 		      (match_operand:HI 2 "nonimmediate_operand" "rm,0")
+ 		      (match_operand:HI 3 "nonimmediate_operand" "0,rm")))]
+@@ -10484,20 +10633,6 @@
+   [(set_attr "type" "icmov")
+    (set_attr "mode" "HI")])
+ 
+-(define_insn "*movhicc_c"
+-  [(set (match_operand:HI 0 "register_operand" "=r,r")
+-	(if_then_else:HI (match_operator 1 "uno_comparison_operator" 
+-				[(reg:CC 17) (const_int 0)])
+-		      (match_operand:HI 2 "nonimmediate_operand" "rm,0")
+-		      (match_operand:HI 3 "nonimmediate_operand" "0,rm")))]
+-  "TARGET_CMOVE
+-   && (GET_CODE (operands[2]) != MEM || GET_CODE (operands[3]) != MEM)"
+-  "@
+-   cmov%C1\\t{%2, %0|%0, %2}
+-   cmov%c1\\t{%3, %0|%0, %3}"
+-  [(set_attr "type" "icmov")
+-   (set_attr "mode" "HI")])
+-
+ (define_expand "movsfcc"
+   [(set (match_operand:SF 0 "register_operand" "")
+ 	(if_then_else:SF (match_operand 1 "comparison_operator" "")
+@@ -11290,6 +11425,68 @@
+ 	      (set (reg:SI 7) (plus:SI (reg:SI 7) (const_int 4)))])]
+   "")
+ 
++;; Convert compares with 1 to shorter inc/dec operations when CF is not
++;; required and register dies.
++(define_peephole2
++  [(set (reg 17)
++	(compare (match_operand:SI 0 "register_operand" "")
++		 (match_operand:SI 1 "incdec_operand" "")))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && find_regno_note (insn, REG_DEAD, true_regnum (operands[0]))"
++  [(parallel [(set (reg:CCGC 17)
++		   (compare:CCGC (match_dup 0)
++				 (match_dup 1)))
++	      (clobber (match_dup 0))])]
++  "")
++
++(define_peephole2
++  [(set (reg 17)
++	(compare (match_operand:HI 0 "register_operand" "")
++		 (match_operand:HI 1 "incdec_operand" "")))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && find_regno_note (insn, REG_DEAD, true_regnum (operands[0]))"
++  [(parallel [(set (reg:CCGC 17)
++		   (compare:CCGC (match_dup 0)
++				 (match_dup 1)))
++	      (clobber (match_dup 0))])]
++  "")
++
++(define_peephole2
++  [(set (reg 17)
++	(compare (match_operand:QI 0 "register_operand" "")
++		 (match_operand:QI 1 "incdec_operand" "")))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && find_regno_note (insn, REG_DEAD, true_regnum (operands[0]))"
++  [(parallel [(set (reg:CCGC 17)
++		   (compare:CCGC (match_dup 0)
++				 (match_dup 1)))
++	      (clobber (match_dup 0))])]
++  "")
++
++;; Convert compares with 128 to shorter add -128
++(define_peephole2
++  [(set (reg 17)
++	(compare (match_operand:SI 0 "register_operand" "")
++		 (const_int 128)))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && find_regno_note (insn, REG_DEAD, true_regnum (operands[0]))"
++  [(parallel [(set (reg:CCGC 17)
++		   (compare:CCGC (match_dup 0)
++			         (const_int 128)))
++	      (clobber (match_dup 0))])]
++  "")
++
++(define_peephole2
++  [(set (reg 17)
++	(compare (match_operand:HI 0 "register_operand" "")
++		 (const_int 128)))]
++  "ix86_match_ccmode (insn, CCGCmode)
++   && find_regno_note (insn, REG_DEAD, true_regnum (operands[0]))"
++  [(parallel [(set (reg:CCGC 17)
++		   (compare:CCGC (match_dup 0)
++			         (const_int 128)))
++	      (clobber (match_dup 0))])]
++  "")
+ ;; Call-value patterns last so that the wildcard operand does not
+ ;; disrupt insn-recog's switch tables.
+ 
+--- gcc/config/i386/i386-protos.h	Sun Jul  2 10:37:12 2000
++++ gcc/config/i386/i386-protos.h	Wed Oct 18 13:27:27 2000
+@@ -57,7 +57,7 @@ extern int q_regs_operand PARAMS ((rtx, 
+ extern int non_q_regs_operand PARAMS ((rtx, enum machine_mode));
+ extern int no_comparison_operator PARAMS ((rtx, enum machine_mode));
+ extern int fcmov_comparison_operator PARAMS ((rtx, enum machine_mode));
+-extern int uno_comparison_operator PARAMS ((rtx, enum machine_mode));
++extern int ix86_comparison_operator PARAMS ((rtx, enum machine_mode));
+ extern int cmp_fp_expander_operand PARAMS ((rtx, enum machine_mode));
+ extern int ext_register_operand PARAMS ((rtx, enum machine_mode));
+ extern int binary_fp_operator PARAMS ((rtx, enum machine_mode));
+@@ -121,6 +121,7 @@ extern int ix86_adjust_cost PARAMS ((rtx
+ extern void ix86_sched_init PARAMS ((FILE *, int));
+ extern int ix86_sched_reorder PARAMS ((FILE *, int, rtx *, int, int));
+ extern int ix86_variable_issue PARAMS ((FILE *, int, rtx, int));
++extern enum machine_mode ix86_cc_mode PARAMS ((enum rtx_code, rtx, rtx));
+ 
+ #ifdef TREE_CODE
+ extern void init_cumulative_args PARAMS ((CUMULATIVE_ARGS *, tree, rtx));

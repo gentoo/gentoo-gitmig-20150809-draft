@@ -1,0 +1,89 @@
+2000-09-06  Richard Henderson  <rth@cygnus.com>
+
+        * config/i386/i386.md (call_pop): Fix test for setting
+        current_function_uses_pic_offset_table.
+        (call, call_value_pop, call_value): Likewise.
+
+*** gcc/config/i386/i386.md	2000/09/04 10:13:02	1.175
+--- gcc/config/i386/i386.md	2000/09/06 08:30:50
+***************
+*** 8453,8461 ****
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && constant_call_address_operand (operands[0], SImode)
+!       && (GET_CODE (XEXP (operands[0], 0)) != SYMBOL_REF
+! 	  || !SYMBOL_REF_FLAG (XEXP (operands[0], 0))))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[0], 0), Pmode))
+      XEXP (operands[0], 0) = copy_to_mode_reg (Pmode, XEXP (operands[0], 0));
+--- 8453,8460 ----
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && GET_CODE (XEXP (operands[0], 0)) == SYMBOL_REF
+!       && ! SYMBOL_REF_FLAG (XEXP (operands[0], 0)))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[0], 0), Pmode))
+      XEXP (operands[0], 0) = copy_to_mode_reg (Pmode, XEXP (operands[0], 0));
+***************
+*** 8508,8516 ****
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && constant_call_address_operand (operands[0], SImode)
+!       && (GET_CODE (XEXP (operands[0], 0)) != SYMBOL_REF
+! 	  || !SYMBOL_REF_FLAG (XEXP (operands[0], 0))))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[0], 0), Pmode))
+      XEXP (operands[0], 0) = copy_to_mode_reg (Pmode, XEXP (operands[0], 0));
+--- 8507,8514 ----
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && GET_CODE (XEXP (operands[0], 0)) == SYMBOL_REF
+!       && ! SYMBOL_REF_FLAG (XEXP (operands[0], 0)))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[0], 0), Pmode))
+      XEXP (operands[0], 0) = copy_to_mode_reg (Pmode, XEXP (operands[0], 0));
+***************
+*** 8570,8578 ****
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && constant_call_address_operand (operands[1], SImode)
+!       && (GET_CODE (XEXP (operands[1], 0)) != SYMBOL_REF
+! 	  || !SYMBOL_REF_FLAG (XEXP (operands[1], 0))))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[1], 0), Pmode))
+      XEXP (operands[1], 0) = copy_to_mode_reg (Pmode, XEXP (operands[1], 0));
+--- 8568,8575 ----
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && GET_CODE (XEXP (operands[1], 0)) == SYMBOL_REF
+!       && ! SYMBOL_REF_FLAG (XEXP (operands[1], 0)))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[1], 0), Pmode))
+      XEXP (operands[1], 0) = copy_to_mode_reg (Pmode, XEXP (operands[1], 0));
+***************
+*** 8589,8597 ****
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && constant_call_address_operand (operands[1], SImode)
+!       && (GET_CODE (XEXP (operands[1], 0)) != SYMBOL_REF
+! 	  || !SYMBOL_REF_FLAG (XEXP (operands[1], 0))))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[1], 0), Pmode))
+      XEXP (operands[1], 0) = copy_to_mode_reg (Pmode, XEXP (operands[1], 0));
+--- 8586,8593 ----
+    /* Static functions and indirect calls don't need
+       current_function_uses_pic_offset_table.  */
+    if (flag_pic
+!       && GET_CODE (XEXP (operands[1], 0)) == SYMBOL_REF
+!       && ! SYMBOL_REF_FLAG (XEXP (operands[1], 0)))
+      current_function_uses_pic_offset_table = 1;
+    if (! call_insn_operand (XEXP (operands[1], 0), Pmode))
+      XEXP (operands[1], 0) = copy_to_mode_reg (Pmode, XEXP (operands[1], 0));
+

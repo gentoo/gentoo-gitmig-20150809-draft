@@ -1,0 +1,48 @@
+2000-09-12  Jakub Jelinek  <jakub@redhat.com>
+
+	* expr.c (expand_expr): Don't optimize constant array references
+	initialized with wide string constants.
+
+--- gcc/expr.c.jj	Mon Sep 11 21:59:35 2000
++++ gcc/expr.c	Tue Sep 12 12:48:20 2000
+@@ -6619,9 +6619,16 @@ expand_expr (exp, target, tmode, modifie
+ 		else if (TREE_CODE (init) == STRING_CST
+ 			 && 0 > compare_tree_int (index,
+ 						  TREE_STRING_LENGTH (init)))
+-		  return (GEN_INT
+-			  (TREE_STRING_POINTER
+-			   (init)[TREE_INT_CST_LOW (index)]));
++		  {
++		    tree type = TREE_TYPE (TREE_TYPE (init));
++		    enum machine_mode mode = TYPE_MODE (type);
++
++		    if (GET_MODE_CLASS (mode) == MODE_INT
++			&& GET_MODE_SIZE (mode) == 1)
++		      return (GEN_INT
++			      (TREE_STRING_POINTER
++			       (init)[TREE_INT_CST_LOW (index)]));
++		  }
+ 	      }
+ 	  }
+       }
+
+2000-09-12  Andreas Jaeger  <aj@suse.de>
+
+	* gcc.c-torture/execute/widechar-2.c: Test for wchar_t constant by
+	Ulrich Drepper <drepper@redhat.com>.
+
+--- gcc/testsuite/gcc.c-torture/execute/widechar-2.c	Fri Jul 21 16:29:28 2000
++++ gcc/testsuite/gcc.c-torture/execute/widechar-2.c	Wed Sep 13 14:44:35 2000
+@@ -0,0 +1,12 @@
++#include <stddef.h>
++
++const wchar_t ws[] = L"foo";
++
++int
++main (void)
++{
++  if (ws[0] != L'f' || ws[1] != L'o' || ws[2] != L'o' || ws[3] != L'\0')
++    abort();
++  exit(0);
++}
++        

@@ -1,0 +1,78 @@
+Not accepted, need to write something else...
+
+2000-09-23  Jakub Jelinek  <jakub@redhat.com>
+
+	* config/sparc/sparc.md (movsf, movdf, movtf): Look up constant pool
+	for SYMBOL_REFs to check for fp_zero_operand.
+
+--- gcc/config/sparc/sparc.md.jj	Tue Aug 15 12:02:19 2000
++++ gcc/config/sparc/sparc.md	Fri Sep 22 23:04:37 2000
+@@ -3185,6 +3185,21 @@
+                                                    operands[1]));
+     }
+ 
++    if (((TARGET_VIS && GET_CODE (operands[0]) == REG)
++	 || GET_CODE (operands[0]) == MEM)
++	&& GET_CODE (operands[1]) == MEM
++	&& GET_CODE (XEXP (operands[1], 0)) == SYMBOL_REF
++	&& CONSTANT_POOL_ADDRESS_P (XEXP (operands[1], 0)))
++      {
++	rtx operand = get_pool_constant (XEXP (operands[1], 0));
++
++	if (fp_zero_operand (operand, SFmode))
++	  {
++	    operands[1] = operand;
++	    goto movsf_is_ok;
++	  }
++      }
++
+   /* Handle sets of MEM first.  */
+   if (GET_CODE (operands[0]) == MEM)
+     {
+@@ -3244,6 +3259,21 @@
+                                                    operands[1]));
+     }
+ 
++    if (((TARGET_VIS && GET_CODE (operands[0]) == REG)
++	 || GET_CODE (operands[0]) == MEM)
++	&& GET_CODE (operands[1]) == MEM
++	&& GET_CODE (XEXP (operands[1], 0)) == SYMBOL_REF
++	&& CONSTANT_POOL_ADDRESS_P (XEXP (operands[1], 0)))
++      {
++	rtx operand = get_pool_constant (XEXP (operands[1], 0));
++
++	if (fp_zero_operand (operand, DFmode))
++	  {
++	    operands[1] = operand;
++	    goto movdf_is_ok;
++	  }
++      }
++
+   /* Handle MEM cases first.  */
+   if (GET_CODE (operands[0]) == MEM)
+     {
+@@ -3681,6 +3711,21 @@
+       operands[1] = validize_mem (force_const_mem (GET_MODE (operands[0]),
+                                                    operands[1]));
+     }
++
++    if (((TARGET_VIS && GET_CODE (operands[0]) == REG)
++	 || GET_CODE (operands[0]) == MEM)
++	&& GET_CODE (operands[1]) == MEM
++	&& GET_CODE (XEXP (operands[1], 0)) == SYMBOL_REF
++	&& CONSTANT_POOL_ADDRESS_P (XEXP (operands[1], 0)))
++      {
++	rtx operand = get_pool_constant (XEXP (operands[1], 0));
++
++	if (fp_zero_operand (operand, TFmode))
++	  {
++	    operands[1] = operand;
++	    goto movtf_is_ok;
++	  }
++      }
+ 
+   /* Handle MEM cases first, note that only v9 guarentees
+      full 16-byte alignment for quads. */
+
+	Jakub
+

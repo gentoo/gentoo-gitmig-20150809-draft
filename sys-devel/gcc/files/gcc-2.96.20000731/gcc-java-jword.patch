@@ -1,0 +1,26 @@
+2000-04-29  Jakub Jelinek  <jakub@redhat.com>
+
+	* javaop.h (jword): Define to uint64 on 64bit architectures.
+
+--- gcc/java/javaop.h.jj	Thu Feb 17 16:31:18 2000
++++ gcc/java/javaop.h	Sat Apr 29 22:50:12 2000
+@@ -1,6 +1,6 @@
+ /* Utility macros to handle Java(TM) byte codes.
+ 
+-   Copyright (C) 1996, 1998, 1999  Free Software Foundation, Inc.
++   Copyright (C) 1996, 1998, 1999, 2000  Free Software Foundation, Inc.
+ 
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+@@ -79,7 +79,11 @@ union Word {
+ 
+ 
+ #ifndef jword
++#if !defined(__alpha__) && (!defined (_ARCH_PPC) || !defined (__64BIT__)) && (!defined(__sparc__) || (!defined(__sparcv9) && !defined(__arch64__))) && (!defined(__ia64__) || !defined(__LP64__))
+ #define jword uint32
++#else
++#define jword uint64
++#endif
+ #endif
+ 
+ #ifndef IMMEDIATE_u1

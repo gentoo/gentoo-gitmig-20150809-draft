@@ -1,0 +1,20 @@
+2000-06-19  Jakub Jelinek  <jakub@redhat.com>
+
+	* config/sparc/xm-sp64.h (HOST_WIDE_INT): Define if compiling
+	with 32bit compiler for 64bit target.
+	(HOST_BITS_PER_WIDE_INT): Likewise.
+
+--- gcc/config/sparc/xm-sp64.h.jj	Tue Dec 14 13:17:56 1999
++++ gcc/config/sparc/xm-sp64.h	Mon Jun 19 10:02:42 2000
+@@ -18,6 +18,11 @@ along with GNU CC; see the file COPYING.
+ the Free Software Foundation, 59 Temple Place - Suite 330,
+ Boston, MA 02111-1307, USA.  */
+ 
++#if !defined(__arch64__) && !defined(__sparcv9)
++#define HOST_BITS_PER_WIDE_INT 64
++#define HOST_WIDE_INT long long
++#endif
++
+ #include <sparc/xm-sparc.h>
+ 
+ /* This describes the machine the compiler is hosted on.  */

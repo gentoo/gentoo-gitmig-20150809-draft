@@ -1,0 +1,80 @@
+2000-08-06  Joseph S. Myers  <jsm28@cam.ac.uk>
+
+	* gcc.dg/c90-printf-2.c, gcc.dg/c99-printf-2.c: New tests.
+
+--- gcc/testsuite/gcc.dg/c90-printf-2.c	Thu Jan  1 00:00:00 1970
++++ gcc/testsuite/gcc.dg/c90-printf-2.c	Sun Aug  6 20:17:45 2000
+@@ -0,0 +1,36 @@
++/* Test for printf formats.  Formats using C99 features should be rejected
++   outside of C99 mode.
++*/
++/* Origin: Joseph Myers <jsm28@cam.ac.uk> */
++/* { dg-do compile } */
++/* { dg-options "-std=iso9899:1990 -pedantic -Wformat" } */
++
++typedef __SIZE_TYPE__ size_t;
++typedef __PTRDIFF_TYPE__ ptrdiff_t;
++
++__extension__ typedef long long int llong;
++
++/* This next definition is broken.  When GCC has a <stdint.h> and
++   an internal understanding of intmax_t, it should be
++   replaced by an include of <stdint.h> or by a definition for internal
++   macros or typedefs.
++*/
++__extension__ typedef long long int intmax_t;
++
++extern int printf (const char *, ...);
++
++void
++foo (int i, double d, llong ll, intmax_t j, size_t z, ptrdiff_t t)
++{
++  /* Some tests already in c90-printf-1.c, e.g. %lf.  */
++  /* The widths hh, ll, j, z, t are new.  */
++  printf ("%hhd", i); /* { dg-warning "length character|C" "%hh in C90" } */
++  printf ("%lld", ll); /* { dg-warning "length character|C" "%ll in C90" } */
++  printf ("%jd", j); /* { dg-warning "length character|C" "%j in C90" } */
++  printf ("%zu", z); /* { dg-warning "length character|C" "%z in C90" } */
++  printf ("%td", t); /* { dg-warning "length character|C" "%t in C90" } */
++  /* The formats F, a, A are new.  */
++  printf ("%F", d); /* { dg-warning "C" "%F in C90" } */
++  printf ("%a", d); /* { dg-warning "C" "%a in C90" } */
++  printf ("%A", d); /* { dg-warning "C" "%A in C90" } */
++}
+--- gcc/testsuite/gcc.dg/c99-printf-2.c	Thu Jan  1 00:00:00 1970
++++ gcc/testsuite/gcc.dg/c99-printf-2.c	Sun Aug  6 20:17:45 2000
+@@ -0,0 +1,34 @@
++/* Test for printf formats.  Formats using extensions to the standard
++   should be rejected in strict pedantic mode.
++*/
++/* Origin: Joseph Myers <jsm28@cam.ac.uk> */
++/* { dg-do compile } */
++/* { dg-options "-std=iso9899:1999 -pedantic -Wformat" } */
++
++typedef __SIZE_TYPE__ size_t;
++typedef __WCHAR_TYPE__ wchar_t;
++typedef __WINT_TYPE__ wint_t;
++
++extern int printf (const char *, ...);
++
++void
++foo (int i, long long ll, size_t z, wint_t lc, wchar_t *ls)
++{
++  /* The length modifiers q, Z and L as applied to integer formats are
++     extensions.
++  */
++  printf ("%qd", ll); /* { dg-warning "C" "%q length" } */
++  printf ("%Ld", ll); /* { dg-warning "C" "%L length" } */
++  printf ("%Zd", z); /* { dg-warning "C" "%Z length" } */
++  /* The conversion specifiers C and S are X/Open extensions; the
++     conversion specifier m is a GNU extension.
++  */
++  printf ("%m"); /* { dg-warning "C" "printf %m" } */
++  printf ("%C", lc); /* { dg-warning "C" "printf %C" } */
++  printf ("%S", ls); /* { dg-warning "C" "printf %S" } */
++  /* The flag character ', and the use of operand number $ formats, are
++     X/Open extensions.
++  */
++  printf ("%'d", i); /* { dg-warning "C" "printf ' flag" } */
++  printf ("%1$d", i); /* { dg-warning "C" "printf $ format" } */
++}

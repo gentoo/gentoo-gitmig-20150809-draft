@@ -1,0 +1,1213 @@
+2000-08-02  Zack Weinberg  <zack@wolery.cumb.org>
+
+	* cppexp.c, cppinit.c, cpplex.c, cpplib.c, cppmacro.c,
+	cppspec.c: Do not use 'legal' or 'illegal' in error messages
+	and comments.
+
+	* cpplex.c (maybe_paste_with_next): When the token after a ## 
+	is an omitted rest argument, only delete the token before it
+	if that token is a comma.  Do not warn about bogus token
+	pastes for , ## rest_arg.
+
+	* cpp.texi: Update.
+	* cpp.1: Regenerate.
+
+	* gcc.dg/cpp/macsyntx.c: Fix error regexp.
+
+--- gcc/cppexp.c	2000/07/24 21:49:34	1.71
++++ gcc/cppexp.c	2000/08/02 06:56:27
+@@ -193,7 +193,7 @@ parse_number (pfile, tok)
+     {
+       /* Check for a floating point constant.  Note that float constants
+ 	 with an exponent or suffix but no decimal point are technically
+-	 illegal (C99 6.4.4.2) but accepted elsewhere.  */
++	 invalid (C99 6.4.4.2) but accepted elsewhere.  */
+       if ((c == '.' || c == 'F' || c == 'f')
+ 	  || (base == 10 && (c == 'E' || c == 'e')
+ 	      && p+1 < end && (p[1] == '+' || p[1] == '-'))
+--- gcc/cppinit.c	2000/08/02 01:13:43	1.98
++++ gcc/cppinit.c	2000/08/02 06:56:27
+@@ -785,7 +785,7 @@ cpp_start_read (pfile, print, fname)
+   if (CPP_OPTION (pfile, cplusplus))
+     CPP_OPTION (pfile, warn_traditional) = 0;
+ 
+-  /* Do not warn about illegal token pasting if -lang-asm.  */
++  /* Do not warn about invalid token pasting if -lang-asm.  */
+   if (CPP_OPTION (pfile, lang_asm))
+     CPP_OPTION (pfile, warn_paste) = 0;
+ 
+--- gcc/cpplex.c	2000/08/02 01:13:43	1.84
++++ gcc/cpplex.c	2000/08/02 06:56:28
+@@ -201,6 +201,10 @@ TOKEN_LEN (token)
+ 
+ #define IS_ARG_CONTEXT(c) ((c)->flags & CONTEXT_ARG)
+ #define CURRENT_CONTEXT(pfile) ((pfile)->contexts + (pfile)->cur_context)
++#define ON_REST_ARG(c) \
++ (((c)->flags & VAR_ARGS) \
++  && (c)->u.list->tokens[(c)->posn].val.aux \
++      == (unsigned int) ((c)->u.list->paramc - 1))
+ 
+ #define ASSIGN_FLAGS_AND_POS(d, s) \
+   do {(d)->flags = (s)->flags & (PREV_WHITE | BOL | PASTE_LEFT); \
+@@ -990,7 +994,7 @@ parse_name (pfile, tok, cur, rlimit)
+     {
+       if (! is_idchar (*cur))
+ 	break;
+-      /* $ is not a legal identifier character in the standard, but is
++      /* $ is not a identifier character in the standard, but is
+ 	 commonly accepted as an extension.  Don't warn about it in
+ 	 skipped conditional blocks. */
+       if (*cur == '$' && CPP_PEDANTIC (pfile) && ! pfile->skipping)
+@@ -2732,10 +2736,11 @@ maybe_paste_with_next (pfile, token)
+ 	pasted = duplicate_token (pfile, second);
+       else if (second->type == CPP_PLACEMARKER)
+ 	{
+-	  /* GCC has special extended semantics for a ## b where b is
+-	     a varargs parameter: a disappears if b was given no actual
+-	     arguments (not merely if b is an empty argument).  */
+-	  if (second->flags & VOID_REST)
++	  /* GCC has special extended semantics for , ## b where b is
++	     a varargs parameter: the comma disappears if b was given
++	     no actual arguments (not merely if b is an empty
++	     argument).  */
++	  if (token->type == CPP_COMMA && second->flags & VOID_REST)
+ 	    pasted = duplicate_token (pfile, second);
+ 	  else
+ 	    pasted = duplicate_token (pfile, token);
+@@ -2748,8 +2753,19 @@ maybe_paste_with_next (pfile, token)
+ 	  if (type == CPP_EOF)
+ 	    {
+ 	      if (CPP_OPTION (pfile, warn_paste))
+-		cpp_warning (pfile,
++		{
++		  /* Do not complain about , ## <whatever> if
++		     <whatever> came from a variable argument, because
++		     the author probably intended the ## to trigger
++		     the special extended semantics (see above).  */
++		  if (token->type == CPP_COMMA
++		      && IS_ARG_CONTEXT (CURRENT_CONTEXT (pfile))
++		      && ON_REST_ARG (CURRENT_CONTEXT (pfile) - 1))
++		    /* no warning */;
++		  else
++		    cpp_warning (pfile,
+ 			"pasting would not give a valid preprocessing token");
++		}
+ 	      _cpp_push_token (pfile, second);
+ 	      return token;
+ 	    }
+@@ -3287,7 +3303,7 @@ lex_next (pfile, clear)
+ 
+ /* Pops a context off the context stack.  If we're at the bottom, lexes
+    the next logical line.  Returns EOF if we're at the end of the
+-   argument list to the # operator, or if it is illegal to "overflow"
++   argument list to the # operator, or we should not "overflow"
+    into the rest of the file (e.g. 6.10.3.1.1).  */
+ static int
+ pop_context (pfile)
+--- gcc/cpplib.c	2000/08/02 01:13:44	1.194
++++ gcc/cpplib.c	2000/08/02 06:56:28
+@@ -433,7 +433,7 @@ read_line_number (pfile, num)
+ 
+ /* Another subroutine of do_line.  Convert a number in STR, of length
+    LEN, to binary; store it in NUMP, and return 0 if the number was
+-   legal, 1 if not.  Temporary, hopefully.  */
++   well-formed, 1 if not.  Temporary, hopefully.  */
+ static int
+ strtoul_for_line (str, len, nump)
+      const U_CHAR *str;
+--- gcc/cppmacro.c	2000/08/02 01:13:44	1.5
++++ gcc/cppmacro.c	2000/08/02 06:56:29
+@@ -127,7 +127,7 @@ count_params (pfile, info)
+ 	{
+ 	default:
+ 	  cpp_error_with_line (pfile, token->line, token->col,
+-			       "illegal token in macro parameter list");
++			       "token may not appear in macro parameter list");
+ 	  return;
+ 
+ 	case CPP_EOF:
+@@ -462,7 +462,7 @@ save_expansion (pfile, info)
+ 	  else
+ 	    dest->flags = token->flags;  /* Particularly PREV_WHITE.  */
+ 	  /* Turn off PREV_WHITE if we immediately follow a paste.
+-	     That way, even if the paste turns out to be illegal, there
++	     That way, even if the paste turns out to be invalid, there
+ 	     will be no space between the two tokens in the output.  */
+ 	  if (token[-1].type == CPP_PASTE)
+ 	    dest->flags &= ~PREV_WHITE;
+--- gcc/cppspec.c	2000/07/04 00:01:11	1.9
++++ gcc/cppspec.c	2000/08/02 06:56:29
+@@ -125,7 +125,7 @@ lang_specific_driver (in_argc, in_argv, 
+ 		need_E = 0;
+ 	      else if (argv[i][1] == 'S' || argv[i][1] == 'c')
+ 		{
+-		  fatal ("\"%s\" is not a legal option to the preprocessor",
++		  fatal ("\"%s\" is not a valid option to the preprocessor",
+ 			 argv[i]);
+ 		  return;
+ 		}
+--- gcc/testsuite/gcc.dg/cpp/macsyntx.c	2000/07/20 17:57:38	1.4
++++ gcc/testsuite/gcc.dg/cpp/macsyntx.c	2000/08/02 06:56:30
+@@ -28,7 +28,7 @@
+ #define foo(, X)		/* { dg-error "parameter name" } */
+ #define foo(X, X)		/* { dg-error "duplicate" } */
+ #define foo(X Y)		/* { dg-error "comma" } */
+-#define foo(()			/* { dg-error "illegal token" } */
++#define foo(()			/* { dg-error "token may not appear" } */
+ #define foo(..., X)		/* { dg-error "missing" } */
+ #define foo \
+ __VA_ARGS__			/* { dg-warning "__VA_ARGS__" } */
+--- gcc/cpp.texi	2000/07/27 02:19:28	1.29
++++ gcc/cpp.texi	2000/08/02 06:56:27
+@@ -116,13 +116,13 @@ C preprocessors vary in some details.  T
+ preprocessor, which provides a small superset of the features of ISO
+ Standard C@.
+ 
+-ISO Standard C requires the rejection of many harmless constructs
+-commonly used by today's C programs.  Such incompatibility would be
+-inconvenient for users, so the GNU C preprocessor is configured to
+-accept these constructs by default.  Strictly speaking, to get ISO
+-Standard C, you must use the options @samp{-trigraphs}, @samp{-undef}
+-and @samp{-pedantic}, but in practice the consequences of having strict
+-ISO Standard C make it undesirable to do this.  @xref{Invocation}.
++In its default mode, the GNU C preprocessor does not do a few things
++required by the standard.  These are features which are rarely, if ever,
++used, and may cause surprising changes to the meaning of a program which
++does not expect them.  To get strict ISO Standard C, you should use the
++@samp{-std=c89} or @samp{-std=c99} options, depending on which version
++of the standard you want.  To get all the mandatory diagnostics, you
++must also use @samp{-pedantic}.  @xref{Invocation}.
+ 
+ @c man end
+ 
+@@ -172,11 +172,10 @@ Predefined macro names are replaced with
+ (@pxref{Predefined}).
+ @end itemize
+ 
+-The first three transformations are done @emph{before} nearly all other
+-parsing and before preprocessing directives are recognized.  Thus, for
+-example, you can split a line cosmetically with backslash-newline
+-anywhere (except within trigraphs since they are replaced first; see
+-below).
++The first three transformations are done @emph{before} all other parsing
++and before preprocessing directives are recognized.  Thus, for example,
++you can split a line mechanically with backslash-newline anywhere
++(except within trigraphs since they are replaced first; see below).
+ 
+ @example
+ /*
+@@ -188,39 +187,44 @@ O 10\
+ @end example
+ 
+ @noindent
+-is equivalent into @samp{#define FOO 1020}.  You can split even an
+-escape sequence with backslash-newline.  For example, you can split
+-@code{"foo\bar"} between the @samp{\} and the @samp{b} to get
++is equivalent into @samp{#define FOO 1020}.
+ 
++There is no way to prevent a backslash at the end of a line from being
++interpreted as a backslash-newline.  For example,
++
+ @example
+ "foo\\
+ bar"
+ @end example
+ 
+-@noindent
+-This behavior can be confusing: in all other contexts, a backslash can
+-be inserted in a string constant as an ordinary character by writing a
+-double backslash.  This is an exception, but the ISO C standard requires
+-it.  (Strict ISO C does not allow string constants to extend to more
+-than one logical line, so they do not consider this a problem.)
++is equivalent to @code{"foo\bar"}, not to @code{"foo\\bar"}.  To avoid
++having to worry about this, do not use the GNU extension which permits
++multiline strings.  Instead, use string constant concatenation:
+ 
++@example
++   "foo\\"
++   "bar"
++@end example
++
++Your program will be more portable this way, too.
++
+ There are a few exceptions to all three transformations.
+ 
+ @itemize @bullet
+ @item
+-C comments and predefined macro names are not recognized inside a
+-@samp{#include} directive in which the file name is delimited with
+-@samp{<} and @samp{>}.  What lies in-between is read literally.
++Comments and predefined macro names (or any macro names, for that
++matter) are not recognized inside the argument of an @samp{#include}
++directive, whether it is delimited with quotes or with @samp{<} and
++@samp{>}.
+ 
+ @item
+-C comments and predefined macro names are never recognized within a
++Comments and predefined macro names are never recognized within a
+ character or string constant.  (Strictly speaking, this is the rule,
+ not an exception, but it is worth noting here anyway.)
+ 
+ @item
+-Backslash-newline may not safely be used within an ISO ``trigraph'',
+-since trigraphs are converted before backslash-newlines are deleted.  If
+-you write what looks like a trigraph with a backslash-newline inside,
++ISO ``trigraphs'' are converted before backslash-newlines are deleted.
++If you write what looks like a trigraph with a backslash-newline inside,
+ the backslash-newline is deleted as usual, but it is then too late to
+ recognize the trigraph.
+ 
+@@ -234,7 +238,7 @@ are referring not to the two-character e
+ single character ASCII NUL.
+ 
+ There are three different contexts in which a null character may
+-appear:-
++appear:
+ 
+ @itemize @bullet
+ @item
+@@ -367,13 +371,6 @@ for header files with the command option
+ The option @samp{-nostdinc} inhibits searching the standard system
+ directories; in this case only the directories you specify are searched.
+ 
+-The parsing of this form of @samp{#include} is slightly special because
+-comments are not recognized within the @samp{<@dots{}>}.  Thus, in
+-@samp{#include <x/*y>} the @samp{/*} does not start a comment and the
+-directive specifies inclusion of a system header file named @file{x/*y}.
+-Of course, a header file with such a name is unlikely to exist on Unix,
+-where shell wildcard features would make it hard to manipulate.@refill
+-
+ The first @samp{>} character terminates the file name.  The file name
+ may contain a @samp{<} character.
+ 
+@@ -384,15 +381,22 @@ same directories used for system header 
+ the directory of the current input file.  It is tried first because it
+ is presumed to be the location of the files that the current input file
+ refers to.  (If the @samp{-I-} option is used, the special treatment of
+-the current directory is inhibited.)
++the current directory is inhibited. @xref{Invocation}.)
+ 
+-The first @samp{"} character terminates the file name.  If backslashes
+-occur within @var{file}, they are considered ordinary text characters,
+-not escape characters.  None of the character escape sequences
+-appropriate to string constants in C are processed.  Thus,
+-@samp{#include "x\n\\y"} specifies a filename containing three
+-backslashes.
++The first @samp{"} character terminates the file name.
+ 
++In both these variants, the argument behaves like a string constant in
++that comments are not recognized, and macro names are not expanded.
++Thus, in @samp{#include <x/*y>} the @samp{/*} does not start a comment
++and the directive specifies inclusion of a system header file named
++@file{x/*y}.
++
++However, in either variant, if backslashes occur within @var{file}, they
++are considered ordinary text characters, not escape characters.  None of
++the character escape sequences appropriate to string constants in C are
++processed.  Thus, @samp{#include "x\n\\y"} specifies a filename
++containing three backslashes.
++
+ @item #include @var{anything else}
+ @cindex computed @samp{#include}
+ This variant is called a @dfn{computed #include}.  Any @samp{#include}
+@@ -914,23 +918,45 @@ eprintf ("%s:%d: ", input_file_name, lin
+ @expansion{}
+ fprintf (stderr, "%s:%d: " , input_file_name, line_number)
+ @end example
++
++Within a @samp{#define} directive, ISO C mandates that the only place
++the identifier @code{__VA_ARGS__} can appear is in the replacement list
++of a variable-argument macro.  It may not be used as a macro name, macro
++argument name, or within a different type of macro.  It may also be
++forbidden in open text; the standard is ambiguous.  We recommend you
++avoid using it except for its defined purpose.
++
++If your macro is complicated, you may want a more descriptive name for
++the variable argument than @code{__VA_ARGS__}.  GNU CPP permits this, as
++an extension.  You may write an argument name immediately before the
++@samp{@dots{}}; that name is used for the variable argument.  The
++@code{eprintf} macro above could be written
++
++@example
++#define eprintf(args...) fprintf (stderr, args)
++@end example
++
++@noindent
++using this extension.  You cannot use @code{__VA_ARGS__} and this
++extension in the same macro.
+ 
+-We might instead have defined eprintf as follows:-
++We might instead have defined eprintf as follows:
+ 
+ @example
+ #define eprintf(format, ...) fprintf (stderr, format, __VA_ARGS__)
+ @end example
+ 
+-This formulation looks more descriptive, but unfortunately causes
+-problems if fprintf wants no arguments the format.  There is no way to
+-produce expanded output of
++This formulation looks more descriptive, but cannot be used as flexibly.
++There is no way to produce expanded output of
+ 
+ @example
+ fprintf (stderr, "success!\n")
+ @end example
+ 
+ @noindent
+-since passing an empty argument for the variable arguments part like this
++because, in standard C, you are not allowed to leave the variable
++argument out entirely, and passing an empty argument for the variable
++arguments will not do what you want.  Writing
+ 
+ @example
+ eprintf ("success!\n", )
+@@ -947,29 +973,30 @@ fprintf (stderr, "success!\n",)
+ where the extra comma originates from the replacement list and not from
+ the arguments to eprintf.
+ 
+-Within a @samp{#define} directive, ISO C mandates that the only place
+-the identifier @code{__VA_ARGS__} can appear is in the replacement list
+-of a variable-argument macro.  Using it as a macro name, macro argument
+-or within a different type of macro is illegal.
++There is another extension in the GNU C preprocessor which deals with
++this difficulty.  First, you are allowed to leave the variable argument
++out entirely:
++
++@example
++eprintf ("success!\n")
++@end example
++
++Second, the @samp{##} token paste operator has a special meaning when
++placed between a comma and a variable argument.  If you write
+ 
+-Before standardization, previous GNU preprocessors implemented a
+-slightly different syntax for defining variable-argument macros.  The
+-macros were called ``rest args macros''.  You could assign a name to the
+-variable arguments, by contrast the standardized method leaves them
+-anonymous.  For example, the eprintf macro could have been defined like
+-this
+-
+-@example
+-#define eprintf(format...) fprintf (stderr, format)
+-@end example
+-
+-Now that there is a standardized construct, you are encouraged to use
+-that instead.  It is unlikely that support for named variable arguments
+-will be removed in future revisions of CPP, since being able to assign a
+-name is descriptive, and there is a wide base of legacy code.  However,
+-two obscure features of the GNU style are deprecated and likely to be
+-dropped in future.  @xref{Unreliable Features}.
++@example
++#define eprintf(format, ...) fprintf (stderr, format, ##__VA_ARGS__)
++@end example
+ 
++and the variable argument is left out when the @samp{eprintf} macro is
++used, then the comma before the @samp{##} will be deleted.  This does
++@emph{not} happen if you pass an empty argument, nor does it happen if
++the token preceding @samp{##} is anything other than a comma.
++
++Previous versions of the preprocessor implemented this extension much
++more generally.  We have restricted it in order to minimize the
++difference from the C standard.  @xref{Unreliable Features}.
++
+ @node Predefined, Stringification, Macro Varargs, Macros
+ @subsection Predefined Macros
+ 
+@@ -2790,42 +2817,52 @@ It is undefined which of these two opera
+ 
+ @end itemize
+ 
+-The following features are deprecated and will likely be removed at some
+-point in the future:-
++The following features are in flux and should not be used in portable
++code:
+ 
+ @itemize @bullet
+ 
+-@item ## swallowing the previous token in GNU rest argument macros
++@item Optional argument when invoking rest argument macros
+ 
+-In a macro expansion, if ## appeared before a GNU named variable arguments
+-parameter, and the set of tokens specified for that argument in the
+-macro invocation was empty, previous versions of the GNU C preprocessor
+-would back up and remove the token appearing before the ##.  This
+-behavior was not well-defined, and alternative ways of achieving its
+-intended use are available.  Since the ISO C standard now provides for
+-variable-argument macros, and since this old behavior potentially
+-conflicts with behavior mandated by the standard, this feature is now
+-deprecated and will be removed in future.
+-
+-The current preprocessor still supports it for reasons of code
+-migration, and warns at each use of the feature.
+-
+-@item Optional argument when invoking GNU rest argument macros
+-
+-In the invocation of a GNU named variable arguments macro, the variable
+-arguments were optional.  For example, the following two invocations are
+-both legal for GNU rest args.  The first is illegal in the equivalent
+-formulation using ISO C anonymous variable arguments and
+-@code{__VA_ARGS__}:-
++As an extension, GCC permits you to omit the variable arguments entirely
++when you use a variable argument macro.  This works whether or not you
++give the variable argument a name.  For example, the two macro
++invocations in the example below expand to the same thing:
+ 
+ @smallexample
+-#define debug(format, args...) printf (format, args)
+-debug("string");       /* Illegal in ISO C equivalent.  */
+-debug("string",);      /* OK for both.  */
++#define debug(format, ...) printf (format, __VA_ARGS__)
++debug("string");       /* Not permitted by C standard.  */
++debug("string",);      /* OK.  */
+ @end smallexample
++
++This extension will be preserved, but the special behavior of @samp{##}
++in this context has changed in the past and may change again in the
++future.
++
++@item ## swallowing preceding text in rest argument macros
++
++Formerly, in a macro expansion, if @samp{##} appeared before a variable
++arguments parameter, and the set of tokens specified for that argument in
++the macro invocation was empty, previous versions of the GNU C
++preprocessor would back up and remove the preceding sequence of
++nonwhitespace characters (@strong{not} the preceding token).  This
++extension is in direct conflict with the 1999 C standard and has been
++drastically pared back.
++
++In the current version of the preprocessor, if @samp{##} appears between
++a comma and a variable arguments parameter, and the variable argument is
++omitted entirely, the comma will be removed from the expansion.  If the
++variable argument is empty, or the token before @samp{##} is not a
++comma, then @samp{##} behaves as a normal token paste.  
++
++Portable code should avoid this extension at all costs.
++
++@end itemize
++
++The following features are deprecated and will likely be removed at some
++point in the future:-
+ 
+-The current preprocessor still supports it for reasons of code
+-migration, and warns at each use of the feature.
++@itemize @bullet
+ 
+ @item Attempting to paste two tokens which together do not form a valid
+ preprocessing token
+@@ -2834,6 +2871,10 @@ The preprocessor currently warns about t
+ adjacently, which is probably the behavior the programmer intends.  It
+ may not work in future, though.
+ 
++Most of the time, when you get this warning, you will find that @samp{##}
++is being used superstitiously, to guard against whitespace appearing
++between two tokens.  It is almost always safe to delete the @samp{##}.
++
+ @findex #pragma once
+ @item #pragma once
+ 
+@@ -2849,7 +2890,33 @@ This pragma has been superceded by @samp
+ @item Multi-line string literals in directives
+ 
+ The GNU C preprocessor currently allows newlines in string literals
+-within a directive.
++within a directive.  This is forbidden by the C standard and will
++eventually be removed.  (Multi-line string literals in open text are
++still supported.)
++
++@item Preprocessing things which are not C
++
++The C preprocessor is intended to be used only with C, C++, and
++Objective C source code.  In the past, it has been abused as a general
++text processor.  It will choke on input which is not lexically valid C;
++for example, apostrophes will be interpreted as the beginning of
++character constants, and cause errors.  Also, you cannot rely on it
++preserving characteristics of the input which are not significant to
++C-family languages.  For instance, if a Makefile is preprocessed, all
++the hard tabs will be lost, and the Makefile will not work.
++
++Having said that, you can often get away with using cpp on things which
++are not C.  Other Algol-ish programming languages are often safe
++(Pascal, Ada, ...)  and so is assembly, with caution. @samp{-traditional}
++mode is much more permissive, and can safely be used with e.g. Fortran.
++Many of the problems go away if you write C or C++ style comments
++instead of native language comments, and if you avoid elaborate macros.
++
++Wherever possible, you should use a preprocessor geared to the language
++you are writing in.  Modern versions of the GNU assembler have macro
++facilities.  Most high level programming languages have their own
++conditional compilation and inclusion mechanism.  If all else fails,
++try a true general text processor, such as @xref{Top, M4, , m4, GNU `m4'}.
+ 
+ @end itemize
+ 
+@@ -2900,11 +2967,10 @@ compiler.
+ @table @samp
+ @item -P
+ @findex -P
+-Inhibit generation of @samp{#}-lines with line-number information in
+-the output from the preprocessor (@pxref{Output}).  This might be
+-useful when running the preprocessor on something that is not C code
+-and will be sent to a program which might be confused by the
+-@samp{#}-lines.
++Inhibit generation of @samp{#}-lines with line-number information in the
++output from the preprocessor.  This might be useful when running the
++preprocessor on something that is not C code and will be sent to a
++program which might be confused by the @samp{#}-lines.  @xref{Output}.
+ 
+ @item -C
+ @findex -C
+@@ -2914,8 +2980,8 @@ along with the directive.  Comments appe
+ macro will be preserved, and appear in place wherever the macro is
+ invoked.
+ 
+-You should be prepared for side effects when using -C; it causes the
+-preprocessor to treat comments as tokens in their own right.  For
++You should be prepared for side effects when using @samp{-C}; it causes
++the preprocessor to treat comments as tokens in their own right.  For
+ example, macro redefinitions that were trivial when comments were
+ replaced by a single space might become significant when comments are
+ retained.  Also, comments appearing at the start of what would be a
+@@ -2925,7 +2991,6 @@ source line, since the first token on th
+ @item -traditional
+ @findex -traditional
+ Try to imitate the behavior of old-fashioned C, as opposed to ISO C@.
+-Note: support for this option is currently fairly broken.
+ 
+ @itemize @bullet
+ @item
+@@ -2966,8 +3031,9 @@ together with the text after the macro c
+ (This is impossible in ISO C@.)
+ 
+ @item
+-Traditionally, @samp{\} inside a macro argument suppresses the syntactic
+-significance of the following character.
++None of the GNU extensions to the preprocessor are available in
++@samp{-traditional} mode.
++
+ @end itemize
+ 
+ @cindex Fortran
+@@ -3010,22 +3076,45 @@ place of @code{cpp}.
+ Process ISO standard trigraph sequences.  These are three-character
+ sequences, all starting with @samp{??}, that are defined by ISO C to
+ stand for single characters.  For example, @samp{??/} stands for
+-@samp{\}, so @samp{'??/n'} is a character constant for a newline.
+-Strictly speaking, the GNU C preprocessor does not conform to ISO
+-Standard C unless @samp{-trigraphs} is used, but if you ever notice the
+-difference it will be with relief.
++@samp{\}, so @samp{'??/n'} is a character constant for a newline.  By
++default, GCC ignores trigraphs, but in standard-conforming modes it
++converts them.  See the @samp{-std} option.
+ 
+ The nine trigraph sequences are
+-@samp{??(} -> @samp{[},
+-@samp{??)} -> @samp{]},
+-@samp{??<} -> @samp{@{},
+-@samp{??>} -> @samp{@}},
+-@samp{??=} -> @samp{#},
+-@samp{??/} -> @samp{\},
+-@samp{??'} -> @samp{^},
+-@samp{??!} -> @samp{|},
+-@samp{??-} -> @samp{~}
++@table @samp
++@item ??(
++-> @samp{[}
++
++@item ??)
++-> @samp{]}
++
++@item ??<
++-> @samp{@{}
+ 
++@item ??>
++-> @samp{@}}
++
++@item ??=
++-> @samp{#}
++
++@item ??/
++-> @samp{\}
++
++@item ??'
++-> @samp{^}
++
++@item ??!
++-> @samp{|}
++
++@item ??-
++-> @samp{~}
++
++@end table
++
++Trigraph support is not popular, so many compilers do not implement it
++properly.  Portable code should not rely on trigraphs being either
++converted or ignored.
++
+ @item -pedantic
+ @findex -pedantic
+ Issue warnings required by the ISO C standard in certain cases such
+@@ -3038,19 +3127,15 @@ warnings.
+ 
+ @item -Wcomment
+ @findex -Wcomment
+-@ignore
+-@c "Not worth documenting" both singular and plural forms of this
+-@c option, per RMS.  Also unclear which is better; hence may need to
+-@c switch this at some future date.  pesch@cygnus.com, 2jan92.
+ @itemx -Wcomments
+ (Both forms have the same effect).
+-@end ignore
+ Warn whenever a comment-start sequence @samp{/*} appears in a @samp{/*}
+ comment, or whenever a backslash-newline appears in a @samp{//} comment.
+ 
+ @item -Wtrigraphs
+ @findex -Wtrigraphs
+-Warn if any trigraphs are encountered.
++Warn if any trigraphs are encountered.  This option used to take effect
++only if @samp{-trigraphs} was also specified, but now works independently.
+ 
+ @item -Wwhite-space
+ @findex -Wwhite-space
+@@ -3181,6 +3266,10 @@ predefined macros, and it outputs @emph{
+ directives and the result of preprocessing.  Both kinds of output go to
+ the standard output file.
+ 
++@item -dN
++@findex -dN
++Like @samp{-dD}, but emit only the macro names, not their expansions.
++
+ @item -dI
+ @findex -dI
+ Output @samp{#include} directives in addition to the result of
+@@ -3327,20 +3416,9 @@ The 1990 C standard plus GNU extensions.
+ The 1999 C standard plus GNU extensions.
+ @end table
+ 
+-@item -Wp,-lint
+-@findex -lint
+-Look for commands to the program checker @code{lint} embedded in
+-comments, and emit them preceded by @samp{#pragma lint}.  For example,
+-the comment @samp{/* NOTREACHED */} becomes @samp{#pragma lint
+-NOTREACHED}.
+-
+-Because of the clash with @samp{-l}, you must use the awkward syntax
+-above.  In a future release, this option will be replaced by
+-@samp{-flint} or @samp{-Wlint}; we are not sure which yet.
+-
+ @item -ftabstop=NUMBER
+ @findex -ftabstop
+-Indicates the distance between tabstops.  This helps the preprocessor
++Set the distance between tabstops.  This helps the preprocessor
+ report correct column numbers in warnings or errors, even if tabs appear
+ on the line.  Values less than 1 or greater than 100 are ignored.  The
+ default is 8.
+--- gcc/cpp.1	2000/02/26 05:59:30	1.6
++++ gcc/cpp.1	2000/08/02 06:56:26
+@@ -73,7 +73,7 @@
+ .ds T' '
+ .ds PI \(*p
+ 'br\}
+-.TH CPP 1 "gcc-2.95" "14/Jun/99" "GNU"
++.TH CPP 1 "gcc-3.0" "1/Aug/2000" "GNU"
+ .UC
+ .if n .hy 0
+ .if n .na
+@@ -181,13 +181,20 @@ cpp [\fB\-P\fR] [\fB\-C\fR] [\fB\-gcc\fR
+ .PP
+ Only the most useful options are listed here; see below for the remainder.
+ .SH "DESCRIPTION"
+-The C preprocessor is a \fImacro processor\fR that is used automatically by
+-the C compiler to transform your program before actual compilation.  It is
+-called a macro processor because it allows you to define \fImacros\fR,
+-which are brief abbreviations for longer constructs.
++The C preprocessor is a \fImacro processor\fR that is used automatically
++by the C compiler to transform your program before actual compilation.
++It is called a macro processor because it allows you to define
++\fImacros\fR, which are brief abbreviations for longer constructs.
+ .PP
+-The C preprocessor provides four separate facilities that you can use as
+-you see fit:
++The C preprocessor is intended only for macro processing of C, \*(C+ and
++Objective C source files.  For macro processing of other files, you are
++strongly encouraged to use alternatives like M4, which will likely give
++you better results and avoid many problems.  For example, normally the C
++preprocessor does not preserve arbitrary whitespace verbatim, but
++instead replaces each sequence with a single space.
++.PP
++For use on C\-like source files, the C preprocessor provides four
++separate facilities that you can use as you see fit:
+ .Ip "\(bu" 4
+ Inclusion of header files.  These are files of declarations that can be
+ substituted into your program.
+@@ -200,32 +207,27 @@ Conditional compilation.  Using special 
+ can include or exclude parts of the program according to various
+ conditions.
+ .Ip "\(bu" 4
+-Line control.  If you use a program to combine or rearrange source files into
+-an intermediate file which is then compiled, you can use line control
+-to inform the compiler of where each source line originally came from.
++Line control.  If you use a program to combine or rearrange source files
++into an intermediate file which is then compiled, you can use line
++control to inform the compiler of where each source line originally came
++from.
+ .PP
+ C preprocessors vary in some details.  This manual discusses the \s-1GNU\s0 C
+-preprocessor, the C Compatible Compiler Preprocessor.  The \s-1GNU\s0 C
+-preprocessor provides a superset of the features of \s-1ANSI\s0 Standard C.
+-.PP
+-\s-1ANSI\s0 Standard C requires the rejection of many harmless constructs commonly
+-used by today's C programs.  Such incompatibility would be inconvenient for
+-users, so the \s-1GNU\s0 C preprocessor is configured to accept these constructs
+-by default.  Strictly speaking, to get \s-1ANSI\s0 Standard C, you must use the
+-options \fB\-trigraphs\fR, \fB\-undef\fR and \fB\-pedantic\fR, but in
+-practice the consequences of having strict \s-1ANSI\s0 Standard C make it
+-undesirable to do this.  
++preprocessor, which provides a small superset of the features of \s-1ISO\s0
++Standard C.
+ .PP
+-The C preprocessor is designed for C\-like languages; you may run into
+-problems if you apply it to other kinds of languages, because it assumes
+-that it is dealing with C.  For example, the C preprocessor sometimes
+-outputs extra white space to avoid inadvertent C token concatenation,
+-and this may cause problems with other languages.
++In its default mode, the \s-1GNU\s0 C preprocessor does not do a few things
++required by the standard.  These are features which are rarely, if ever,
++used, and may cause surprising changes to the meaning of a program which
++does not expect them.  To get strict \s-1ISO\s0 Standard C, you should use the
++\fB\-std=c89\fR or \fB\-std=c99\fR options, depending on which version
++of the standard you want.  To get all the mandatory diagnostics, you
++must also use \fB\-pedantic\fR.  
+ .SH "OPTIONS"
+ The C preprocessor expects two file names as arguments, \fIinfile\fR and
+-\fIoutfile\fR.  The preprocessor reads \fIinfile\fR together with any other
+-files it specifies with \fB#include\fR.  All the output generated by the
+-combined input files is written in \fIoutfile\fR.
++\fIoutfile\fR.  The preprocessor reads \fIinfile\fR together with any
++other files it specifies with \fB#include\fR.  All the output generated
++by the combined input files is written in \fIoutfile\fR.
+ .PP
+ Either \fIinfile\fR or \fIoutfile\fR may be \fB\-\fR, which as
+ \fIinfile\fR means to read from standard input and as \fIoutfile\fR
+@@ -237,61 +239,69 @@ These options can also be given when com
+ passed along automatically to the preprocessor when it is invoked by the
+ compiler.
+ .Ip "\fB\-P\fR" 4
+-Inhibit generation of \fB#\fR\-lines with line-number information in
+-the output from the preprocessor   This might be
+-useful when running the preprocessor on something that is not C code
+-and will be sent to a program which might be confused by the
+-\fB#\fR\-lines.
++Inhibit generation of \fB#\fR\-lines with line-number information in the
++output from the preprocessor.  This might be useful when running the
++preprocessor on something that is not C code and will be sent to a
++program which might be confused by the \fB#\fR\-lines.  
+ .Ip "\fB\-C\fR" 4
+-Do not discard comments: pass them through to the output file.
+-Comments appearing in arguments of a macro call will be copied to the
+-output before the expansion of the macro call.
++Do not discard comments.  All comments are passed through to the output
++file, except for comments in processed directives, which are deleted
++along with the directive.  Comments appearing in the expansion list of a
++macro will be preserved, and appear in place wherever the macro is
++invoked.
++.Sp
++You should be prepared for side effects when using \fB\-C\fR; it causes
++the preprocessor to treat comments as tokens in their own right.  For
++example, macro redefinitions that were trivial when comments were
++replaced by a single space might become significant when comments are
++retained.  Also, comments appearing at the start of what would be a
++directive line have the effect of turning that line into an ordinary
++source line, since the first token on the line is no longer a \fB#\fR.
+ .Ip "\fB\-traditional\fR" 4
+-Try to imitate the behavior of old-fashioned C, as opposed to \s-1ANSI\s0 C.
+-.Ip "\(bu" 8
+-Traditional macro expansion pays no attention to singlequote or
+-doublequote characters; macro argument symbols are replaced by the
++Try to imitate the behavior of old-fashioned C, as opposed to \s-1ISO\s0 C.
++.RS 4
++.Ip "\(bu" 4
++Traditional macro expansion pays no attention to single-quote or
++double-quote characters; macro argument symbols are replaced by the
+ argument values even when they appear within apparent string or
+ character constants.
+-.Ip "\(bu" 8
++.Ip "\(bu" 4
+ Traditionally, it is permissible for a macro expansion to end in the
+ middle of a string or character constant.  The constant continues into
+ the text surrounding the macro call.
+-.Ip "\(bu" 8
++.Ip "\(bu" 4
+ However, traditionally the end of the line terminates a string or
+ character constant, with no error.
+-.Ip "\(bu" 8
+-In traditional C, a comment is equivalent to no text at all.  (In \s-1ANSI\s0
++.Ip "\(bu" 4
++In traditional C, a comment is equivalent to no text at all.  (In \s-1ISO\s0
+ C, a comment counts as whitespace.)
+-.Ip "\(bu" 8
++.Ip "\(bu" 4
+ Traditional C does not have the concept of a ``preprocessing number'\*(R'.
+ It considers \fB1.0e+4\fR to be three tokens: \fB1.0e\fR, \fB+\fR,
+ and \fB4\fR.
+-.Ip "\(bu" 8
++.Ip "\(bu" 4
+ A macro is not suppressed within its own definition, in traditional C.
+ Thus, any macro that is used recursively inevitably causes an error.
+-.Ip "\(bu" 8
++.Ip "\(bu" 4
+ The character \fB#\fR has no special meaning within a macro definition
+ in traditional C.
+-.Ip "\(bu" 8
++.Ip "\(bu" 4
+ In traditional C, the text at the end of a macro expansion can run
+ together with the text after the macro call, to produce a single token.
+-(This is impossible in \s-1ANSI\s0 C.)
+-.Ip "\(bu" 8
+-Traditionally, \fB\e\fR inside a macro argument suppresses the syntactic
+-significance of the following character.
+-.Sp
+-Use the \fB\-traditional\fR option when preprocessing Fortran code,
+-so that singlequotes and doublequotes
+-within Fortran comment lines
+-(which are generally not recognized as such by the preprocessor)
+-do not cause diagnostics
+-about unterminated character or string constants.
+-.Sp
+-However, this option does not prevent diagnostics
+-about unterminated comments
+-when a C\-style comment appears to start, but not end,
+-within Fortran-style commentary.
++(This is impossible in \s-1ISO\s0 C.)
++.Ip "\(bu" 4
++None of the \s-1GNU\s0 extensions to the preprocessor are available in
++\fB\-traditional\fR mode.
++.RE
++.Ip "" 4
++Use the \fB\-traditional\fR option when preprocessing Fortran code, so
++that single-quotes and double-quotes within Fortran comment lines (which
++are generally not recognized as such by the preprocessor) do not cause
++diagnostics about unterminated character or string constants.
++.Sp
++However, this option does not prevent diagnostics about unterminated
++comments when a C\-style comment appears to start, but not end, within
++Fortran-style commentary.
+ .Sp
+ So, the following Fortran comment lines are accepted with
+ \fB\-traditional\fR:
+@@ -301,49 +311,77 @@ So, the following Fortran comment lines 
+ \&        C Neither is "20000000000, an octal constant
+ \&        C in some dialects of Fortran
+ .Ve
+-However, this type of comment line will likely produce a diagnostic,
+-or at least unexpected output from the preprocessor,
+-due to the unterminated comment:
++However, this type of comment line will likely produce a diagnostic, or
++at least unexpected output from the preprocessor, due to the
++unterminated comment:
+ .Sp
+ .Vb 2
+ \&        C Some Fortran compilers accept /* as starting
+ \&        C an inline comment.
+ .Ve
+-Note that \f(CWg77\fR automatically supplies
+-the \fB\-traditional\fR option
+-when it invokes the preprocessor.
+-However, a future version of \f(CWg77\fR
+-might use a different, more-Fortran-aware preprocessor
+-in place of \f(CWcpp\fR.
++Note that \f(CWg77\fR automatically supplies the \fB\-traditional\fR
++option when it invokes the preprocessor.  However, a future version of
++\f(CWg77\fR might use a different, more-Fortran-aware preprocessor in
++place of \f(CWcpp\fR.
+ .Ip "\fB\-trigraphs\fR" 4
+-Process \s-1ANSI\s0 standard trigraph sequences.  These are three-character
+-sequences, all starting with \fB??\fR, that are defined by \s-1ANSI\s0 C to
++Process \s-1ISO\s0 standard trigraph sequences.  These are three-character
++sequences, all starting with \fB??\fR, that are defined by \s-1ISO\s0 C to
+ stand for single characters.  For example, \fB??/\fR stands for
+-\fB\e\fR, so \fB\*(R'??/n\*(R'\fR is a character constant for a newline.
+-Strictly speaking, the \s-1GNU\s0 C preprocessor does not support all
+-programs in \s-1ANSI\s0 Standard C unless \fB\-trigraphs\fR is used, but if
+-you ever notice the difference it will be with relief.
+-.Sp
+-You don't want to know any more about trigraphs.
++\fB\e\fR, so \fB\*(R'??/n\*(R'\fR is a character constant for a newline.  By
++default, \s-1GCC\s0 ignores trigraphs, but in standard-conforming modes it
++converts them.  See the \fB\-std\fR option.
++.Sp
++The nine trigraph sequences are
++.RS 4
++.PD 0
++.SP
++.Ip "\fB??(\fR" 6
++->	\fB[\fR
++.Ip "\fB??)\fR" 6
++->	\fB]\fR
++.Ip "\fB??<\fR" 6
++->	\fB@{\fR
++.Ip "\fB??>\fR" 6
++->	\fB@\fR}
++.Ip "\fB??=\fR" 6
++->	\fB#\fR
++.Ip "\fB??/\fR" 6
++->	\fB\e\fR
++.Ip "\fB??\*(T'\fR" 6
++->	\fB^\fR
++.Ip "\fB??!\fR" 6
++->	\fB|\fR
++.Ip "\fB??\-\fR" 6
++->	\fB~\fR
++.RE
++.PD
++.Ip "" 4
++Trigraph support is not popular, so many compilers do not implement it
++properly.  Portable code should not rely on trigraphs being either
++converted or ignored.
+ .Ip "\fB\-pedantic\fR" 4
+-Issue warnings required by the \s-1ANSI\s0 C standard in certain cases such
++Issue warnings required by the \s-1ISO\s0 C standard in certain cases such
+ as when text other than a comment follows \fB#else\fR or \fB#endif\fR.
+ .Ip "\fB\-pedantic-errors\fR" 4
+ Like \fB\-pedantic\fR, except that errors are produced rather than
+ warnings.
+-.Ip "\fB\-Wtrigraphs\fR" 4
+-Warn if any trigraphs are encountered.  Currently this only works if you
+-have turned trigraphs on with \fB\-trigraphs\fR or \fB\-ansi\fR; in the
+-future this restriction will be removed.
+ .Ip "\fB\-Wcomment\fR" 4
++.Ip "\fB\-Wcomments\fR" 4
++(Both forms have the same effect).
+ Warn whenever a comment-start sequence \fB/*\fR appears in a \fB/*\fR
+-comment, or whenever a Backslash-Newline appears in a \fB//\fR comment.
++comment, or whenever a backslash-newline appears in a \fB//\fR comment.
++.Ip "\fB\-Wtrigraphs\fR" 4
++Warn if any trigraphs are encountered.  This option used to take effect
++only if \fB\-trigraphs\fR was also specified, but now works independently.
++.Ip "\fB\-Wwhite-space\fR" 4
++Warn about possible white space confusion, e.g. white space between a
++backslash and a newline.
+ .Ip "\fB\-Wall\fR" 4
+-Requests both \fB\-Wtrigraphs\fR and \fB\-Wcomment\fR (but not
+-\fB\-Wtraditional\fR or \fB\-Wundef\fR). 
++Requests \fB\-Wcomment\fR, \fB\-Wtrigraphs\fR, and \fB\-Wwhite-space\fR
++(but not \fB\-Wtraditional\fR or \fB\-Wundef\fR).
+ .Ip "\fB\-Wtraditional\fR" 4
+ Warn about certain constructs that behave differently in traditional and
+-\s-1ANSI\s0 C.
++\s-1ISO\s0 C.
+ .Ip "\fB\-Wundef\fR" 4
+ Warn if an undefined identifier is evaluated in an \fB#if\fR directive.
+ .Ip "\fB\-I \fIdirectory\fR\fR" 4
+@@ -356,15 +394,15 @@ the directories are scanned in left-to-r
+ system directories come after.
+ .Ip "\fB\-I-\fR" 4
+ Any directories specified with \fB\-I\fR options before the \fB\-I-\fR
+-option are searched only for the case of \fB#include \*(L"\fIfile\fB\*(R"\fR;
+-they are not searched for \fB#include <\fIfile\fB>\fR.
++option are searched only for the case of \fB#include \*(L"\fIfile\fR\*(R"\fR;
++they are not searched for \fB#include <\fIfile\fR>\fR.
+ .Sp
+ If additional directories are specified with \fB\-I\fR options after
+ the \fB\-I-\fR, these directories are searched for all \fB#include\fR
+ directives.
+ .Sp
+ In addition, the \fB\-I-\fR option inhibits the use of the current
+-directory as the first search directory for \fB#include \*(L"\fIfile\fB\*(R"\fR.
++directory as the first search directory for \fB#include \*(L"\fIfile\fR\*(R"\fR.
+ Therefore, the current directory is searched only if it is requested
+ explicitly with \fB\-I.\fR.  Specifying both \fB\-I-\fR and \fB\-I.\fR
+ allows you to control precisely which directories are searched before
+@@ -375,8 +413,8 @@ Only the directories you have specified 
+ (and the current directory, if appropriate) are searched.
+ .Ip "\fB\-nostdinc++\fR" 4
+ Do not search for header files in the \*(C+\-specific standard directories,
+-but do still search the other standard directories.
+-(This option is used when building the \*(C+ library.)
++but do still search the other standard directories.  (This option is
++used when building the \*(C+ library.)
+ .Ip "\fB\-remap\fR" 4
+ When searching for a header file in a directory, remap file names if a
+ file named \fIheader.gcc\fR exists in that directory.  This can be used
+@@ -402,15 +440,17 @@ wins.
+ Do not predefine any nonstandard macros.
+ .Ip "\fB\-gcc\fR" 4
+ Define the macros \fI_\|_GNUC_\|_\fR, \fI_\|_GNUC_MINOR_\|_\fR and
+-\fI_\|_GNUC_PATCHLEVEL_\|_\fR.  These are defined automatically when you
+-use \fBgcc \-E\fR; you can turn them off in that case with \fB\-no-gcc\fR.
++\fI_\|_GNUC_PATCHLEVEL_\|_\fR. These are defined automatically when you use
++\fBgcc \-E\fR; you can turn them off in that case with \fB\-no-gcc\fR.
+ .Ip "\fB\-A \fIpredicate\fR(\fIanswer\fR)\fR" 4
+ Make an assertion with the predicate \fIpredicate\fR and answer
+ \fIanswer\fR.  
+-.Sp
+-You can use \fB\-A-\fR to disable all predefined assertions; it also
+-undefines all predefined macros and all macros that preceded it on the
+-command line.
++.Ip "\fB\-A \-\fIpredicate\fR(\fIanswer\fR)\fR" 4
++Disable an assertion with the predicate \fIpredicate\fR and answer
++\fIanswer\fR.  Specifying no predicate, by \fB\-A-\fR or \fB\-A \-\fR,
++disables all predefined assertions and all assertions preceding it on
++the command line; and also undefines all predefined macros and all
++macros preceding it on the command line.
+ .Ip "\fB\-dM\fR" 4
+ Instead of outputting the result of preprocessing, output a list of
+ \fB#define\fR directives for all the macros defined during the
+@@ -427,19 +467,22 @@ Like \fB\-dM\fR except in two respects: 
+ predefined macros, and it outputs \fIboth\fR the \fB#define\fR
+ directives and the result of preprocessing.  Both kinds of output go to
+ the standard output file.
++.Ip "\fB\-dN\fR" 4
++Like \fB\-dD\fR, but emit only the macro names, not their expansions.
+ .Ip "\fB\-dI\fR" 4
+-Output \fB#include\fR directives in addition to the result of preprocessing.
++Output \fB#include\fR directives in addition to the result of
++preprocessing.
+ .Ip "\fB\-M [\-\s-1MG\s0]\fR" 4
+ Instead of outputting the result of preprocessing, output a rule
+-suitable for \f(CWmake\fR describing the dependencies of the main
+-source file.  The preprocessor outputs one \f(CWmake\fR rule containing
+-the object file name for that source file, a colon, and the names of
+-all the included files.  If there are many included files then the
+-rule is split into several lines using \fB\e\fR\-newline.
+-.Sp
+-\fB\-\s-1MG\s0\fR says to treat missing header files as generated files and assume
+-they live in the same directory as the source file.  It must be specified
+-in addition to \fB\-M\fR.
++suitable for \f(CWmake\fR describing the dependencies of the main source
++file.  The preprocessor outputs one \f(CWmake\fR rule containing the
++object file name for that source file, a colon, and the names of all the
++included files.  If there are many included files then the rule is split
++into several lines using \fB\e\fR\-newline.
++.Sp
++\fB\-\s-1MG\s0\fR says to treat missing header files as generated files and
++assume they live in the same directory as the source file.  It must be
++specified in addition to \fB\-M\fR.
+ .Sp
+ This feature is used in automatic updating of makefiles.
+ .Ip "\fB\-\s-1MM\s0 [\-\s-1MG\s0]\fR" 4
+@@ -448,16 +491,16 @@ Like \fB\-M\fR but mention only the file
+ <\fIfile\fR>\fR are omitted.
+ .Ip "\fB\-\s-1MD\s0 \fIfile\fR\fR" 4
+ Like \fB\-M\fR but the dependency information is written to \fIfile\fR.
+-This is in addition to compiling the file as specified---\fB\-\s-1MD\s0\fR does
+-not inhibit ordinary compilation the way \fB\-M\fR does.
++This is in addition to compiling the file as specified --- \fB\-\s-1MD\s0\fR
++does not inhibit ordinary compilation the way \fB\-M\fR does.
+ .Sp
+ When invoking \f(CWgcc\fR, do not specify the \fIfile\fR argument.
+ \f(CWgcc\fR will create file names made by replacing \*(L".c\*(R" with \*(L".d\*(R" at
+ the end of the input file names.
+ .Sp
+ In Mach, you can use the utility \f(CWmd\fR to merge multiple dependency
+-files into a single dependency file suitable for using with the \fBmake\fR
+-command.
++files into a single dependency file suitable for using with the
++\fBmake\fR command.
+ .Ip "\fB\-\s-1MMD\s0 \fIfile\fR\fR" 4
+ Like \fB\-\s-1MD\s0\fR except mention only user header files, not system
+ header files.
+@@ -480,15 +523,16 @@ in any of the directories in the main in
+ \fB\-I\fR adds to).
+ .Ip "\fB\-iprefix \fIprefix\fR\fR" 4
+ Specify \fIprefix\fR as the prefix for subsequent \fB\-iwithprefix\fR
+-options.
++options.  If the prefix represents a directory, you should include the
++final \fB/\fR.
+ .Ip "\fB\-iwithprefix \fIdir\fR\fR" 4
+ Add a directory to the second include path.  The directory's name is
+-made by concatenating \fIprefix\fR and \fIdir\fR, where \fIprefix\fR
+-was specified previously with \fB\-iprefix\fR.
++made by concatenating \fIprefix\fR and \fIdir\fR, where \fIprefix\fR was
++specified previously with \fB\-iprefix\fR.
+ .Ip "\fB\-isystem \fIdir\fR\fR" 4
+ Add a directory to the beginning of the second include path, marking it
+ as a system directory, so that it gets the same special treatment as
+-is applied to the standard system directories.
++is applied to the standard system directories.  
+ .Ip "\fB\-x c\fR" 4
+ .Ip "\fB\-x c++\fR" 4
+ .Ip "\fB\-x objective-c\fR" 4
+@@ -514,39 +558,52 @@ added in the future.
+ .Sp
+ \fIstandard\fR
+ may be one of:
+-.Ip "\f(CWiso9899:1990\fR" 8
+-The \s-1ISO\s0 C standard from 1990.
+-.Ip "\f(CWiso9899:199409\fR" 8
+-.Ip "\f(CWc89\fR" 8
+-The 1990 C standard, as amended in 1994.  \fBc89\fR is the customary
+-shorthand for this version of the standard.
++.RS 4
++.PD 0
+ .Sp
++.Ip "\f(CWiso9899:1990\fR" 4
++.Ip "\f(CWc89\fR" 4
++.Ip
++The \s-1ISO\s0 C standard from 1990.  \fBc89\fR is the customary shorthand for
++this version of the standard.
++.Sp
+ The \fB\-ansi\fR option is equivalent to \fB\-std=c89\fR.
+-.Ip "\f(CWiso9899:199x\fR" 8
+-.Ip "\f(CWc9x\fR" 8
+-The revised \s-1ISO\s0 C standard, which is expected to be promulgated some
+-time in 1999.  It has not been approved yet, hence the \fBx\fR.
+-.Ip "\f(CWgnu89\fR" 8
++.Sp
++.Ip "\f(CWiso9899:199409\fR" 4
++The 1990 C standard, as amended in 1994.
++.Sp
++.Ip "\f(CWiso9899:1999\fR" 4
++.Ip "\f(CWc99\fR" 4
++.Ip "\f(CWiso9899:199x\fR" 4
++.Ip "\f(CWc9x\fR" 4
++.Ip
++The revised \s-1ISO\s0 C standard, published in December 1999.  Before
++publication, this was known as C9X.
++.Sp
++.Ip "\f(CWgnu89\fR" 4
+ The 1990 C standard plus \s-1GNU\s0 extensions.  This is the default.
+-.Ip "\f(CWgnu9x\fR" 8
+-The 199x C standard plus \s-1GNU\s0 extensions.
+-.Ip "\fB\-Wp,\-lint\fR" 4
+-Look for commands to the program checker \f(CWlint\fR embedded in
+-comments, and emit them preceded by \fB#pragma lint\fR.  For example,
+-the comment \fB/* \s-1NOTREACHED\s0 */\fR becomes \fB#pragma lint
+-\s-1NOTREACHED\s0\fR.
+-.Sp
+-Because of the clash with \fB\-l\fR, you must use the awkward syntax
+-above.  In a future release, this option will be replaced by
+-\fB\-flint\fR or \fB\-Wlint\fR; we are not sure which yet.
++.Sp
++.Ip "\f(CWgnu99\fR" 4
++.Ip "\f(CWgnu9x\fR" 4
++The 1999 C standard plus \s-1GNU\s0 extensions.
++.PD
++.RE
++.Ip "\fB\-ftabstop=\s-1NUMBER\s0\fR" 4
++Set the distance between tabstops.  This helps the preprocessor
++report correct column numbers in warnings or errors, even if tabs appear
++on the line.  Values less than 1 or greater than 100 are ignored.  The
++default is 8.
+ .Ip "\fB\-$\fR" 4
+-Forbid the use of \fB$\fR in identifiers.  The C standard does not
+-permit this, but it is a common extension.
++Forbid the use of \fB$\fR in identifiers.  The C standard allows
++implementations to define extra characters that can appear in
++identifiers.  By default the \s-1GNU\s0 C preprocessor permits \fB$\fR, a
++common extension.
+ .SH "SEE ALSO"
+ \fIgcc\fR\|(1), \fIas\fR\|(1), \fIld\fR\|(1), and the Info entries for \fIcpp\fR, \fIgcc\fR, and
+ \fIbinutils\fR.
+ .SH "COPYRIGHT"
+-Copyright  1987, 1989, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999
++Copyright  1987, 1989, 1991, 1992, 1993, 1994, 1995, 1996,
++1997, 1998, 1999, 2000
+ Free Software Foundation, Inc.
+ .PP
+ Permission is granted to make and distribute verbatim copies of
+@@ -560,4 +617,3 @@ permission notice identical to this one.
+ .PP
+ Permission is granted to copy and distribute translations of this manual
+ into another language, under the above conditions for modified versions.
+-.rn }` ''
+

@@ -1,0 +1,24 @@
+Wed Aug  2 13:05:55 MET DST 2000  Jan Hubicka  <jh@suse.cz>
+
+	* i386.md (shift to lea splitter): Use const_int_operand.
+
+*** gcc/config/i386/i386.md	2000/07/31 10:30:44	1.169
+--- gcc/config/i386/i386.md	2000/08/02 11:04:27
+***************
+*** 6488,6494 ****
+  (define_split
+    [(set (match_operand 0 "register_operand" "")
+  	(ashift (match_operand 1 "register_operand" "")
+!                 (match_operand:QI 2 "const248_operand" "")))
+     (clobber (reg:CC 17))]
+    "reload_completed
+     && true_regnum (operands[0]) != true_regnum (operands[1])"
+--- 6488,6494 ----
+  (define_split
+    [(set (match_operand 0 "register_operand" "")
+  	(ashift (match_operand 1 "register_operand" "")
+!                 (match_operand:QI 2 "const_int_operand" "")))
+     (clobber (reg:CC 17))]
+    "reload_completed
+     && true_regnum (operands[0]) != true_regnum (operands[1])"
+

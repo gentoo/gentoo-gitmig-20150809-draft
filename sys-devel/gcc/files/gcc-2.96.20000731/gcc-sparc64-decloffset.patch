@@ -1,0 +1,26 @@
+2000-03-31  Jakub Jelinek  <jakub@redhat.com>
+
+	* stor-layout.c (place_field): Set DECL_OFFSET_ALIGN to at most
+	BIGGEST_ALIGNMENT to allow overflowing. Use the original
+	offset_align to compute actual_align.
+
+--- gcc/stor-layout.c.jj	Thu Mar 30 17:22:29 2000
++++ gcc/stor-layout.c	Fri Mar 31 12:51:03 2000
+@@ -828,7 +828,7 @@ place_field (rli, field)
+   normalize_rli (rli);
+   DECL_FIELD_OFFSET (field) = rli->offset;
+   DECL_FIELD_BIT_OFFSET (field) = rli->bitpos;
+-  DECL_OFFSET_ALIGN (field) = rli->offset_align;
++  DECL_OFFSET_ALIGN (field) = MIN (rli->offset_align, BIGGEST_ALIGNMENT);
+ 
+   /* If this field ended up more aligned than we thought it would be (we
+      approximate this by seeing if its position changed), lay out the field
+@@ -842,7 +842,7 @@ place_field (rli, field)
+ 		   * (tree_low_cst (DECL_FIELD_OFFSET (field), 1)
+ 		      & - tree_low_cst (DECL_FIELD_OFFSET (field), 1)));
+   else
+-    actual_align = DECL_OFFSET_ALIGN (field);
++    actual_align = rli->offset_align;
+ 
+   if (known_align != actual_align)
+     layout_decl (field, actual_align);

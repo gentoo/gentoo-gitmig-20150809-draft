@@ -1,0 +1,42 @@
+2000-08-14  Alexandre Petit-Bianco  <apbianco@cygnus.com>
+
+	* jcf-write.c (generate_bytecode_conditional): Re-installed lost
+	Jan 6 2000 patch.
+	(generate_bytecode_insns): Check `nargs' before emitting it.
+	* verify.c (merge_type_state): Fixed typo.
+	* ChangeLog: Fixed typo in some jcf-write.c entries mentioning
+	generate_bytecode_{conditional,insns}.
+
+--- gcc/java/jcf-write.c	2000/08/11 22:01:37	1.66
++++ gcc/java/jcf-write.c	2000/08/15 21:59:53
+@@ -1254,7 +1254,7 @@ generate_bytecode_conditional (exp, true
+ 	    }
+ 	  if (integer_zerop (exp1) || integer_zerop (exp0))
+ 	    {
+-	      generate_bytecode_insns (integer_zerop (exp1) ? exp0 : exp0,
++	      generate_bytecode_insns (integer_zerop (exp0) ? exp1 : exp0,
+ 				       STACK_TARGET, state);
+ 	      op = op + (OPCODE_ifnull - OPCODE_if_acmpeq);
+ 	      negop = (op & 1) ? op - 1 : op + 1;
+@@ -2565,6 +2565,9 @@ generate_bytecode_insns (exp, target, st
+ 	    if (interface)
+ 	      {
+ 		DECL_CONTEXT (f) = saved_context;
++		if (nargs <= 0)
++		  fatal ("Illegal number of arguments to invokeinterface, nargs=%d",
++			 nargs);
+ 		OP1 (nargs);
+ 		OP1 (0);
+ 	      }
+--- gcc/java/verify.c	2000/03/14 05:01:05	1.30
++++ gcc/java/verify.c	2000/08/15 21:59:57
+@@ -212,7 +212,7 @@ int
+ merge_type_state (label)
+      tree label;
+ {
+-  int nlocals = DECL_MAX_LOCALS(current_function_decl);
++  int nlocals = DECL_MAX_LOCALS (current_function_decl);
+   int cur_length = stack_pointer + nlocals;
+   tree vec = LABEL_TYPE_STATE (label);
+   tree return_map;
+

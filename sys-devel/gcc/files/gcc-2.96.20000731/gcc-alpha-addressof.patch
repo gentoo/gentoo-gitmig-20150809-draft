@@ -1,0 +1,25 @@
+2000-07-05  Richard Henderson  <rth@cygnus.com>
+
+	* function.c (purge_addressof_1): Restart after calling
+	put_addressof_into_stack.
+
+*** gcc/function.c	Wed Jul  5 15:23:01 2000
+--- gcc/function.c	Wed Jul  5 15:21:58 2000
+*************** purge_addressof_1 (loc, insn, force, sto
+*** 3113,3119 ****
+    else if (code == ADDRESSOF)
+      {
+        put_addressof_into_stack (x, ht);
+!       return true;
+      }
+    else if (code == SET)
+      {
+--- 3113,3119 ----
+    else if (code == ADDRESSOF)
+      {
+        put_addressof_into_stack (x, ht);
+!       goto restart;
+      }
+    else if (code == SET)
+      {
+

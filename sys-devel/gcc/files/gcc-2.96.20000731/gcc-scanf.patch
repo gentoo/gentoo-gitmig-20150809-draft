@@ -1,0 +1,291 @@
+gcc/ChangeLog:
+2000-08-18  Joseph S. Myers  <jsm28@cam.ac.uk>
+
+	* c-common.c (scan_char_table): Add 'w' to flags for all formats
+	except 'n'.
+	(check_format_info): Set 'wide' for scanf format widths.  Warn for
+	a zero scanf width.  Make the check for writing into a constant
+	object at the first level of indirection; at later levels, warn if
+	any type qualifiers are encountered.
+
+gcc/testsuite/ChangeLog:
+2000-08-18  Joseph S. Myers  <jsm28@cam.ac.uk>
+
+	* gcc.dg/c90-scanf-1.c, gcc.dg/c94-scanf-1.c: New tests.
+
+--- gcc/c-common.c	Tue Aug  8 23:16:59 2000
++++ gcc/c-common.c	Fri Aug 18 01:08:24 2000
+@@ -1253,15 +1253,15 @@ static format_char_info print_char_table
+ };
+ 
+ static format_char_info scan_char_table[] = {
+-  { "di",	1,	T_I,	T_SC,	T_S,	T_L,	T_LL,	T_LL,	T_SST,	T_PD,	T_IM,	"*"	},
+-  { "ouxX",	1,	T_UI,	T_UC,	T_US,	T_UL,	T_ULL,	T_ULL,	T_ST,	T_UPD,	T_UIM,	"*"	},
+-  { "efFgEGaA",	1,	T_F,	NULL,	NULL,	T_D,	NULL,	T_LD,	NULL,	NULL,	NULL,	"*"	},
+-  { "c",	1,	T_C,	NULL,	NULL,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	"*c"	},
+-  { "s",	1,	T_C,	NULL,	NULL,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	"*ac"	},
+-  { "[",	1,	T_C,	NULL,	NULL,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	"*ac"	},
+-  { "C",	1,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	"*"	},
+-  { "S",	1,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	"*a"	},
+-  { "p",	2,	T_V,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	"*"	},
++  { "di",	1,	T_I,	T_SC,	T_S,	T_L,	T_LL,	T_LL,	T_SST,	T_PD,	T_IM,	"*w"	},
++  { "ouxX",	1,	T_UI,	T_UC,	T_US,	T_UL,	T_ULL,	T_ULL,	T_ST,	T_UPD,	T_UIM,	"*w"	},
++  { "efFgEGaA",	1,	T_F,	NULL,	NULL,	T_D,	NULL,	T_LD,	NULL,	NULL,	NULL,	"*w"	},
++  { "c",	1,	T_C,	NULL,	NULL,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	"*cw"	},
++  { "s",	1,	T_C,	NULL,	NULL,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	"*acw"	},
++  { "[",	1,	T_C,	NULL,	NULL,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	"*acw"	},
++  { "C",	1,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	"*w"	},
++  { "S",	1,	T_W,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	"*aw"	},
++  { "p",	2,	T_V,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	"*w"	},
+   { "n",	1,	T_I,	T_SC,	T_S,	T_L,	T_LL,	NULL,	T_SST,	T_PD,	T_IM,	""	},
+   { NULL,	0,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL	}
+ };
+@@ -1618,6 +1618,7 @@ check_format_info (info, params)
+     {
+       int aflag;
+       int char_type_flag = 0;
++      int writing_in_flag = 0;
+       if (*format_chars == 0)
+ 	{
+ 	  if (format_chars - TREE_STRING_POINTER (format_tree) != format_length)
+@@ -1642,11 +1643,19 @@ check_format_info (info, params)
+       suppressed = wide = precise = FALSE;
+       if (info->format_type == scanf_format_type)
+ 	{
++	  int non_zero_width_char = FALSE;
+ 	  suppressed = *format_chars == '*';
+ 	  if (suppressed)
+ 	    ++format_chars;
+ 	  while (ISDIGIT (*format_chars))
+-	    ++format_chars;
++	    {
++	      wide = TRUE;
++	      if (*format_chars != '0')
++		non_zero_width_char = TRUE;
++	      ++format_chars;
++	    }
++	  if (wide && !non_zero_width_char)
++	    warning ("zero width in scanf format");
+ 	}
+       else if (info->format_type == strftime_format_type)
+         {
+@@ -2047,6 +2056,12 @@ check_format_info (info, params)
+ 
+       STRIP_NOPS (cur_param);
+ 
++      if ((info->format_type == scanf_format_type
++	   || (info->format_type == printf_format_type
++	       && format_char == 'n'))
++	  && wanted_type != 0)
++	writing_in_flag = 1;
++
+       /* Check the types of any additional pointer arguments
+ 	 that precede the "real" argument.  */
+       for (i = 0; i < fci->pointer_count + aflag; ++i)
+@@ -2060,6 +2075,35 @@ check_format_info (info, params)
+ 	      else
+ 		cur_param = 0;
+ 
++	      /* See if this is an attempt to write into a const type with
++		 scanf or with printf "%n".  Note: the writing in happens
++		 at the first indirection only, if for example
++		 void * const * is passed to scanf %p; passing
++		 const void ** is simply passing an incompatible type.
++	      */
++	      if (writing_in_flag
++		  && i == 0
++		  && TREE_CODE (cur_type) != ERROR_MARK
++		  && (TYPE_READONLY (cur_type)
++		      || (cur_param != 0
++			  && (TREE_CODE_CLASS (TREE_CODE (cur_param)) == 'c'
++			      || (DECL_P (cur_param)
++				  && TREE_READONLY (cur_param))))))
++		warning ("writing into constant object (arg %d)", arg_num);
++
++	      /* If there are extra type qualifiers beyond the first
++		 indirection, then this makes the types technically
++		 incompatible.
++	      */
++	      if (i > 0
++		  && pedantic
++		  && TREE_CODE (cur_type) != ERROR_MARK
++		  && (TYPE_READONLY (cur_type)
++		      || TYPE_VOLATILE (cur_type)
++		      || TYPE_RESTRICT (cur_type)))
++		warning ("extra type qualifiers in format argument (arg %d)",
++			 arg_num);
++
+ 	      continue;
+ 	    }
+ 	  if (TREE_CODE (cur_type) != ERROR_MARK)
+@@ -2071,20 +2115,6 @@ check_format_info (info, params)
+ 	    }
+ 	  break;
+ 	}
+-
+-      /* See if this is an attempt to write into a const type with
+-	 scanf or with printf "%n".  */
+-      if ((info->format_type == scanf_format_type
+-	   || (info->format_type == printf_format_type
+-	       && format_char == 'n'))
+-	  && i == fci->pointer_count + aflag
+-	  && wanted_type != 0
+-	  && TREE_CODE (cur_type) != ERROR_MARK
+-	  && (TYPE_READONLY (cur_type)
+-	      || (cur_param != 0
+-		  && (TREE_CODE_CLASS (TREE_CODE (cur_param)) == 'c'
+-		      || (DECL_P (cur_param) && TREE_READONLY (cur_param))))))
+-	warning ("writing into constant object (arg %d)", arg_num);
+ 
+       /* Check whether the argument type is a character type.  This leniency
+ 	 only applies to certain formats, flagged with 'c'.
+--- gcc/testsuite/gcc.dg/c90-scanf-1.c	Fri Sep 11 11:31:59 1998
++++ gcc/testsuite/gcc.dg/c90-scanf-1.c	Fri Aug 18 16:18:38 2000
+@@ -0,0 +1,125 @@
++/* Test for scanf formats.  Formats using C90 features, including cases
++   where C90 specifies some aspect of the format to be ignored or where
++   the behaviour is undefined.
++*/
++/* Origin: Joseph Myers <jsm28@cam.ac.uk> */
++/* { dg-do compile } */
++/* { dg-options "-std=iso9899:1990 -pedantic -Wformat" } */
++
++typedef __WCHAR_TYPE__ wchar_t;
++
++__extension__ typedef long long int llong;
++__extension__ typedef unsigned long long int ullong;
++
++extern int scanf (const char *, ...);
++
++#define NULL ((void *)0)
++
++void
++foo (int *ip, unsigned int *uip, short int *hp, unsigned short int *uhp,
++     long int *lp, unsigned long int *ulp, float *fp, double *dp,
++     long double *ldp, char *s, signed char *ss, unsigned char *us,
++     void **pp, int *n, llong *llp, ullong *ullp, wchar_t *ls,
++     const int *cip, const int *cn, const char *cs, const void **ppc,
++     void *const *pcp, short int *hn, long int *ln, void *p, char **sp,
++     volatile void *ppv)
++{
++  /* See ISO/IEC 9899:1990 (E) subclause 7.9.6.2 (pages 134-138).  */
++  /* Basic sanity checks for the different components of a format.  */
++  scanf ("%d", ip);
++  scanf ("%*d");
++  scanf ("%3d", ip);
++  scanf ("%hd", hp);
++  scanf ("%3ld", lp);
++  scanf ("%*3d");
++  scanf ("%d %ld", ip, lp);
++  /* Valid and invalid %% constructions.  */
++  scanf ("%%");
++  scanf ("%*%"); /* { dg-warning "format" "bogus %%" } */
++  scanf ("%*%\n"); /* { dg-warning "format" "bogus %%" } */
++  scanf ("%4%"); /* { dg-warning "format" "bogus %%" } */
++  scanf ("%4%\n"); /* { dg-warning "format" "bogus %%" } */
++  scanf ("%h%"); /* { dg-warning "format" "bogus %%" } */
++  scanf ("%h%\n"); /* { dg-warning "format" "bogus %%" } */
++  /* Valid, invalid and silly assignment-suppression constructions.  */
++  scanf ("%*d%*i%*o%*u%*x%*X%*e%*E%*f%*g%*G%*s%*[abc]%*c%*p");
++  scanf ("%*2d%*8s%*3c");
++  scanf ("%*n"); /* { dg-warning "suppress" "suppression of %n" } */
++  scanf ("%*hd"); /* { dg-warning "together" "suppression with length" } */
++  /* Valid, invalid and silly width constructions.  */
++  scanf ("%2d%3i%4o%5u%6x%7X%8e%9E%10f%11g%12G%13s%14[abc]%15c%16p",
++	 ip, ip, uip, uip, uip, uip, fp, fp, fp, fp, fp, s, s, s, pp);
++  scanf ("%0d", ip); /* { dg-warning "width" "warning for zero width" } */
++  scanf ("%3n", n); /* { dg-warning "width" "width with %n" } */
++  /* Valid and invalid %h, %l, %L constructions.  */
++  scanf ("%hd%hi%ho%hu%hx%hX%hn", hp, hp, uhp, uhp, uhp, uhp, hn);
++  scanf ("%he", fp); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%hE", fp); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%hf", fp); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%hg", fp); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%hG", fp); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%hs", s); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%h[ac]", s); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%hc", s); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%hp", pp); /* { dg-warning "length character" "bad use of %h" } */
++  scanf ("%h"); /* { dg-warning "conversion lacks type" "bare %h" } */
++  scanf ("%h."); /* { dg-warning "conversion" "bogus %h" } */
++  scanf ("%ld%li%lo%lu%lx%lX%ln", lp, lp, ulp, ulp, ulp, ulp, ln);
++  scanf ("%le%lE%lf%lg%lG", dp, dp, dp, dp, dp);
++  scanf ("%lp", pp); /* { dg-warning "length character" "bad use of %l" } */
++  /* These next three formats were added in C94.  */
++  scanf ("%ls", ls); /* { dg-warning "length character|C" "bad use of %l" } */
++  scanf ("%l[ac]", ls); /* { dg-warning "length character|C" "bad use of %l" } */
++  scanf ("%lc", ls); /* { dg-warning "length character|C" "bad use of %l" } */
++  scanf ("%Le%LE%Lf%Lg%LG", ldp, ldp, ldp, ldp, ldp);
++  scanf ("%Ld", llp); /* { dg-warning "does not support" "bad use of %L" } */
++  scanf ("%Li", llp); /* { dg-warning "does not support" "bad use of %L" } */
++  scanf ("%Lo", ullp); /* { dg-warning "does not support" "bad use of %L" } */
++  scanf ("%Lu", ullp); /* { dg-warning "does not support" "bad use of %L" } */
++  scanf ("%Lx", ullp); /* { dg-warning "does not support" "bad use of %L" } */
++  scanf ("%LX", ullp); /* { dg-warning "does not support" "bad use of %L" } */
++  scanf ("%Ls", s); /* { dg-warning "length character" "bad use of %L" } */
++  scanf ("%L[ac]", s); /* { dg-warning "length character" "bad use of %L" } */
++  scanf ("%Lc", s); /* { dg-warning "length character" "bad use of %L" } */
++  scanf ("%Lp", pp); /* { dg-warning "length character" "bad use of %L" } */
++  scanf ("%Ln", n); /* { dg-warning "length character" "bad use of %L" } */
++  /* Valid uses of each bare conversion.  */
++  scanf ("%d%i%o%u%x%X%e%E%f%g%G%s%[abc]%c%p%n%%", ip, ip, uip, uip, uip,
++	 uip, fp, fp, fp, fp, fp, s, s, s, pp, n);
++  /* Allow other character pointers with %s, %c, %[].  */
++  scanf ("%2s%3s%4c%5c%6[abc]%7[abc]", ss, us, ss, us, ss, us);
++  /* Further tests for %[].  */
++  scanf ("%[%d]%d", s, ip);
++  scanf ("%[^%d]%d", s, ip);
++  scanf ("%[]%d]%d", s, ip);
++  scanf ("%[^]%d]%d", s, ip);
++  scanf ("%[%d]%d", s, ip);
++  scanf ("%[]abcd", s); /* { dg-warning "no closing" "incomplete scanset" } */
++  /* Various tests of bad argument types.  Some of these are only pedantic
++     warnings.
++  */
++  scanf ("%d", lp); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%d", uip); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%d", pp); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%p", ppc); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%p", ppv); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%s", n); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%s", p); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%p", p); /* { dg-warning "format" "bad argument types" } */
++  scanf ("%p", sp); /* { dg-warning "format" "bad argument types" } */
++  /* Tests for writing into constant values.  */
++  scanf ("%d", cip); /* { dg-warning "constant" "%d writing into const" } */
++  scanf ("%n", cn); /* { dg-warning "constant" "%n writing into const" } */
++  scanf ("%s", cs); /* { dg-warning "constant" "%s writing into const" } */
++  scanf ("%p", pcp); /* { dg-warning "constant" "%p writing into const" } */
++  /* Wrong number of arguments.  */
++  scanf ("%d%d", ip); /* { dg-warning "arguments" "wrong number of args" } */
++  scanf ("%d", ip, ip); /* { dg-warning "arguments" "wrong number of args" } */
++  /* Miscellaneous bogus constructions.  */
++  scanf (""); /* { dg-warning "zero-length" "warning for empty format" } */
++  scanf ("\0"); /* { dg-warning "embedded" "warning for embedded NUL" } */
++  scanf ("%d\0", ip); /* { dg-warning "embedded" "warning for embedded NUL" } */
++  scanf ("%d\0%d", ip, ip); /* { dg-warning "embedded|too many" "warning for embedded NUL" } */
++  scanf (NULL); /* { dg-warning "null" "null format string warning" } */
++  scanf ("%"); /* { dg-warning "trailing" "trailing % warning" } */
++}
+--- gcc/testsuite/gcc.dg/c94-scanf-1.c	Fri Sep 11 11:31:59 1998
++++ gcc/testsuite/gcc.dg/c94-scanf-1.c	Fri Aug 18 00:48:22 2000
+@@ -0,0 +1,19 @@
++/* Test for scanf formats.  Changes in C94 to C90.  */
++/* Origin: Joseph Myers <jsm28@cam.ac.uk> */
++/* { dg-do compile } */
++/* { dg-options "-std=iso9899:199409 -pedantic -Wformat" } */
++
++typedef __WCHAR_TYPE__ wchar_t;
++
++extern int scanf (const char *, ...);
++
++void
++foo (wchar_t *ls)
++{
++  /* See ISO/IEC 9899:1990 (E) subclause 7.9.6.2 (pages 134-138),
++     as amended by ISO/IEC 9899:1990/Amd.1:1995 (E) (pages 5-6).
++     We do not repeat here all the C90 format checks, but just verify
++     that %ls, %lc, %l[] are accepted without warning.
++  */
++  scanf ("%lc%ls%l[abc]", ls, ls, ls);
++}

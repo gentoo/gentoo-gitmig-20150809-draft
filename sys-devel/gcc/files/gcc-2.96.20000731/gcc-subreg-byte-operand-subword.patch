@@ -1,0 +1,26 @@
+2000-10-31  Jakub Jelinek  <jakub@redhat.com>
+
+	* emit-rtl.c (operand_subword): Return const0_rtx if looking for a
+	word outside of OP.
+
+--- gcc/emit-rtl.c.jj	Mon Oct 30 23:54:06 2000
++++ gcc/emit-rtl.c	Tue Oct 31 22:03:34 2000
+@@ -1573,11 +1573,15 @@ operand_subword (op, offset, validate_ad
+   if (mode == VOIDmode)
+     abort ();
+ 
+-  /* If OP is narrower than a word or if we want a word outside OP, fail.  */
++  /* If OP is narrower than a word, fail. */
+   if (mode != BLKmode
+-      && (GET_MODE_SIZE (mode) < UNITS_PER_WORD
+-	  || (offset + 1) * UNITS_PER_WORD > GET_MODE_SIZE (mode)))
++      && (GET_MODE_SIZE (mode) < UNITS_PER_WORD))
+     return 0;
++
++  /* If we want a word outside OP, return zero. */
++  if (mode != BLKmode
++      && (offset + 1) * UNITS_PER_WORD > GET_MODE_SIZE (mode))
++    return const0_rtx;
+ 
+   switch (GET_CODE (op))
+     {

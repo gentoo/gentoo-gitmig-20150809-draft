@@ -1,0 +1,24 @@
+2000-11-03  Jakub Jelinek  <jakub@redhat.com>
+
+	* stor-layout.c (layout_decl): If setting previously VOIDmode
+	DECL_MODE for decl which has DECL_RTL already set, call
+	make_decl_rtl.
+
+--- gcc/stor-layout.c.jj	Wed Oct 25 17:25:45 2000
++++ gcc/stor-layout.c	Fri Nov  3 17:51:29 2000
+@@ -311,7 +311,14 @@ layout_decl (decl, known_align)
+ 
+   TREE_UNSIGNED (decl) = TREE_UNSIGNED (type);
+   if (DECL_MODE (decl) == VOIDmode)
+-    DECL_MODE (decl) = TYPE_MODE (type);
++    {
++      DECL_MODE (decl) = TYPE_MODE (type);
++
++      /* If this DECL has already RTL assigned, make sure its mode is updated
++	 as well.  */
++      if (DECL_RTL (decl))
++	make_decl_rtl (decl, NULL, 0);
++    }
+ 
+   if (DECL_SIZE (decl) == 0)
+     {

@@ -1,0 +1,182 @@
+2000-09-10  Alexandre Oliva  <aoliva@redhat.com>
+
+	* gcc.c-torture/execute/20000910-1.c: New test.
+	* gcc.c-torture/execute/20000910-2.c: Likewise.
+
+--- gcc/testsuite/gcc.c-torture/execute/20000910-1.c	Tue May  5 13:32:27 1998
++++ gcc/testsuite/gcc.c-torture/execute/20000910-1.c	Sun Sep 10 07:31:53 2000
+@@ -0,0 +1,27 @@
++/* Copyright (C) 2000  Free Software Foundation  */
++/* by Alexandre Oliva <aoliva@redhat.com> */
++
++#include <stdlib.h>
++
++void bar (int);
++void foo (int *);
++
++int main () {
++  static int a[] = { 0, 1, 2 };
++  int *i = &a[sizeof(a)/sizeof(*a)];
++  
++  while (i-- > a)
++    foo (i);
++
++  exit (0);
++}
++
++void baz (int, int);
++
++void bar (int i) { baz (i, i); }
++void foo (int *i) { bar (*i); }
++
++void baz (int i, int j) {
++  if (i != j)
++    abort ();
++}
+--- gcc/testsuite/gcc.c-torture/execute/20000910-2.c	Tue May  5 13:32:27 1998
++++ gcc/testsuite/gcc.c-torture/execute/20000910-2.c	Sun Sep 10 07:31:53 2000
+@@ -0,0 +1,28 @@
++/* Copyright (C) 2000  Free Software Foundation  */
++/* by Alexandre Oliva <aoliva@redhat.com> */
++
++#include <stdlib.h>
++#include <string.h>
++
++char *list[] = { "*", "e" };
++
++static int bar (const char *fmt) {
++  return (strchr (fmt, '*') != 0);
++}
++
++static void foo () {
++  int i;
++  for (i = 0; i < sizeof (list) / sizeof (*list); i++) {
++    const char *fmt = list[i];
++    if (bar (fmt))
++      continue;
++    if (i == 0)
++      abort ();
++    else
++      exit (0);
++  }
++}
++
++int main () {
++  foo ();
++}
+
+2000-09-10  Alexandre Oliva  <aoliva@redhat.com>
+
+	* print-rtl.c (debug_call_placeholder_verbose): New variable.
+	(print_rtx) [CALL_PLACEHOLDER]: Dump all call sequences if it is
+	set.
+	* integrate.c (copy_rtx_and_substitute): Don't share
+	LEAF_REG_REMAPpable registers with the inlined function.  Don't
+	share the function value with calling sequences.
+
+--- gcc/print-rtl.c	2000/08/04 20:28:05	1.58
++++ gcc/print-rtl.c	2000/09/10 14:31:54
+@@ -63,6 +63,9 @@ int flag_dump_unnumbered = 0;
+ /* Nonzero if we are dumping graphical description.  */
+ int dump_for_graph;
+ 
++/* Nonzero to dump all call_placeholder alternatives.  */
++static int debug_call_placeholder_verbose;
++
+ /* Print IN_RTX onto OUTFILE.  This is the recursive part of printing.  */
+ 
+ static void
+@@ -421,6 +424,37 @@ print_rtx (in_rtx)
+       break;
+ 
+     case CALL_PLACEHOLDER:
++      if (debug_call_placeholder_verbose)
++	{
++	  fputs (" (cond [\n  (const_string \"normal\") (sequence [", outfile);
++	  for (tem = XEXP (in_rtx, 0); tem != 0; tem = NEXT_INSN (tem))
++	    {
++	      fputs ("\n    ", outfile);
++	      print_inline_rtx (outfile, tem, 4);
++	    }
++
++	  tem = XEXP (in_rtx, 1);
++	  if (tem)
++	    fputs ("\n    ])\n  (const_string \"tail_call\") (sequence [", outfile);
++	  for (; tem != 0; tem = NEXT_INSN (tem))
++	    {
++	      fputs ("\n    ", outfile);
++	      print_inline_rtx (outfile, tem, 4);
++	    }
++
++	  tem = XEXP (in_rtx, 2);
++	  if (tem)
++	    fputs ("\n    ])\n  (const_string \"tail_recursion\") (sequence [", outfile);
++	  for (; tem != 0; tem = NEXT_INSN (tem))
++	    {
++	      fputs ("\n    ", outfile);
++	      print_inline_rtx (outfile, tem, 4);
++	    }
++
++	  fputs ("\n    ])\n  ])", outfile);
++	  break;
++	}
++
+       for (tem = XEXP (in_rtx, 0); tem != 0; tem = NEXT_INSN (tem))
+ 	if (GET_CODE (tem) == CALL_INSN)
+ 	  {
+--- gcc/integrate.c	2000/09/02 02:54:55	1.113
++++ gcc/integrate.c	2000/09/10 14:31:55
+@@ -1747,7 +1747,15 @@ copy_rtx_and_substitute (orig, map, for_
+ 	{
+ 	  /* Some hard registers are also mapped,
+ 	     but others are not translated.  */
+-	  if (map->reg_map[regno] != 0)
++	  if (map->reg_map[regno] != 0
++	      /* We shouldn't usually have reg_map set for return
++		 register, but it may happen if we have leaf-register
++		 remapping and the return register is used in one of
++		 the calling sequences of a call_placeholer.  In this
++		 case, we'll end up with a reg_map set for this
++		 register, but we don't want to use for registers
++		 marked as return values.  */
++	      && ! REG_FUNCTION_VALUE_P (orig))
+ 	    return map->reg_map[regno];
+ 
+ 	  /* If this is the virtual frame pointer, make space in current
+@@ -1758,7 +1766,7 @@ copy_rtx_and_substitute (orig, map, for_
+ 	     equivalence for it to be the address.  This will substitute the
+ 	     address into insns where it can be substituted and use the new
+ 	     pseudo where it can't.  */
+-	  if (regno == VIRTUAL_STACK_VARS_REGNUM)
++	  else if (regno == VIRTUAL_STACK_VARS_REGNUM)
+ 	    {
+ 	      rtx loc, seq;
+ 	      int size = get_func_frame_size (DECL_SAVED_INSNS (map->fndecl));
+@@ -1845,7 +1853,26 @@ copy_rtx_and_substitute (orig, map, for_
+ 	      else
+ 		return map->inline_target;
+ 	    }
+-	  return orig;
++#if defined (LEAF_REGISTERS) && defined (LEAF_REG_REMAP)
++	  /* If leaf_renumber_regs_insn() might remap this register to
++	     some other number, make sure we don't share it with the
++	     inlined function, otherwise delayed optimization of the
++	     inlined function may change it in place, breaking our
++	     reference to it.  We may still shared it within the
++	     function, so create an entry for this register in the
++	     reg_map.  */
++	  if (map->integrating && regno < FIRST_PSEUDO_REGISTER
++	      && LEAF_REGISTERS[regno] && LEAF_REG_REMAP (regno) != regno)
++	    {
++	      temp = gen_rtx_REG (mode, regno);
++	      map->reg_map[regno] = temp;
++	      return temp;
++	    }
++#endif
++	  else
++	    return orig;
++
++	  abort ();
+ 	}
+       if (map->reg_map[regno] == NULL)
+ 	{

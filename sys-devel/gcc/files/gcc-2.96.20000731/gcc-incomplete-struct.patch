@@ -1,0 +1,33 @@
+2000-06-06  Jakub Jelinek  <jakub@redhat.com>
+
+	* expr.c (get_inner_reference): If decl was done with incomplete
+	type which was later defined, try to use its type alignment.
+
+	* gcc.c-torture/compile/20000606-1.c: New test.
+
+--- gcc/testsuite/gcc.c-torture/compile/20000606-1.c.jj	Tue Jun  6 19:09:18 2000
++++ gcc/testsuite/gcc.c-torture/compile/20000606-1.c	Tue Jun  6 18:13:45 2000
+@@ -0,0 +1,10 @@
++typedef struct _foo foo;
++extern foo bar;
++struct _foo {
++  int a;
++};
++
++void baz(void)
++{
++  bar.a = 0;
++}
+--- gcc/expr.c.jj	Fri Jun  2 16:00:46 2000
++++ gcc/expr.c	Tue Jun  6 19:07:44 2000
+@@ -5142,7 +5142,9 @@ get_inner_reference (exp, pbitsize, pbit
+       exp = TREE_OPERAND (exp, 0);
+     }
+ 
+-  if (DECL_P (exp))
++  if (DECL_P (exp)
++      && (DECL_ALIGN (exp) != 1
++	  || ! TREE_TYPE (exp)))
+     alignment = MIN (alignment, DECL_ALIGN (exp));
+   else if (TREE_TYPE (exp) != 0)
+     alignment = MIN (alignment, TYPE_ALIGN (TREE_TYPE (exp)));

@@ -1,0 +1,47 @@
+2000-08-01  Jakub Jelinek  <jakub@redhat.com>
+
+	* gcc.c-torture/execute/20000801-2.c: New test.
+
+--- gcc/testsuite/gcc.c-torture/execute/20000801-2.c.jj	Tue Aug  1 15:30:24 2000
++++ gcc/testsuite/gcc.c-torture/execute/20000801-2.c	Tue Aug  1 15:30:14 2000
+@@ -0,0 +1,40 @@
++extern void abort(void);
++extern void exit(int);
++int bar(void);
++int baz(void);
++
++struct foo {
++  struct foo *next;
++};
++
++struct foo *test(struct foo *node)
++{
++  while (node) {
++    if (bar() && !baz())
++      break;
++    node = node->next;
++  }
++  return node;
++}
++
++int bar (void)
++{
++  return 0;
++}
++
++int baz (void)
++{
++  return 0;
++}
++
++int main(void)
++{
++  struct foo a, b, *c;
++
++  a.next = &b;
++  b.next = (struct foo *)0;
++  c = test(&a);
++  if (c)
++    abort();
++  exit (0);
++}
