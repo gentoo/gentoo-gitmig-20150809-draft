@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r1.ebuild,v 1.1 2002/10/26 05:19:06 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r1.ebuild,v 1.2 2002/11/05 22:50:02 mkeadle Exp $
 
 IUSE="nls"
 
 inherit commonbox
 
 S=${WORKDIR}/${P}
-DESCRIPTION="A small, fast, full-featured window manager for X"
+DESCRIPTION="A small, fast, full-featured window manager for X - with mousewheel patch"
 SRC_URI="mirror://sourceforge/blackboxwm/${P}.tar.gz"
 HOMEPAGE="http://blackboxwm.sf.net/"
 
@@ -20,4 +20,13 @@ mydoc="AUTHORS LICENSE README ChangeLog* TODO*"
 src_unpack() {
 	unpack ${P}.tar.gz
 	patch -p0 < ${FILESDIR}/blackbox-0.65.0-mousewheel_focus-workspace.patch
+}
+
+pkg_postinst() {
+	ewarn
+	ewarn "This build of Blackbox makes use of the mousewheel patch, allowing you"
+	ewarn "to use the mousewheel chage workspace or application focus."
+	ewarn "It is known to have a few issues. For a default install of Blackbox"
+	ewarn "you may emerge ${PN}-${PV}."
+	ewarn
 }
