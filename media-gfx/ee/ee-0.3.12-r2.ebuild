@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r2.ebuild,v 1.10 2003/09/06 23:56:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r2.ebuild,v 1.11 2003/12/16 00:46:53 avenj Exp $
+
+inherit gnuconfig
 
 IUSE="nls"
 
@@ -11,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc amd64"
 
 DEPEND="=sys-libs/db-1*
 	>=gnome-base/gnome-libs-1.4.1.2-r1"
@@ -24,6 +26,8 @@ src_unpack() {
 }
 
 src_compile() {
+	gnuconfig_update
+
 	local myconf
 	use nls && myconf="--enable-nls" || myconf="--disable-nls"
 

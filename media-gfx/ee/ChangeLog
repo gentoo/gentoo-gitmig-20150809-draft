@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ee
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ChangeLog,v 1.5 2003/02/12 06:59:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ChangeLog,v 1.6 2003/12/16 00:46:53 avenj Exp $
+
+  15 Dec 2003; Jon Portnoy <avenj@gentoo.org> ee-0.3.12-r2.ebuild :
+  AMD64 keywords. Also added gnuconfig_update.
 
 *ee-0.3.12-r2 (9 May 2002)
  
