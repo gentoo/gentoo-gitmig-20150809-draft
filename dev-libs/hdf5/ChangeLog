@@ -1,8 +1,15 @@
 # ChangeLog for dev-libs/hdf5
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/ChangeLog,v 1.1 2003/06/19 07:51:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/ChangeLog,v 1.2 2003/08/24 21:39:21 george Exp $
 
-*hdf5-1.4.5.ebuild (19 Jun 2003)
+*hdf5-1.6.0 (24 Aug 2003)
+
+  24 Aug 2003; George Shapovalov <george@gentoo.org> hdf5-1.6.0.ebuild :
+  new version (#25365),
+  this one installs examples, and of course in a wrong place :), had to fix location.
+  thanks to James Cloos <cloos@jhcloos.com> for notification
+
+*hdf5-1.4.5 (19 Jun 2003)
 
   19 Jun 2003; George Shapovalov <george@gentoo.org> hdf5-1.4.5.ebuild, Manifest, files/{digest-hdf5-1.4.5} :
   initial release (#21071)

@@ -1,21 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/hdf5-1.4.5.ebuild,v 1.2 2003/08/24 21:39:21 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/hdf5-1.6.0.ebuild,v 1.1 2003/08/24 21:39:21 george Exp $
 
 DESCRIPTION="HDF5 is a general purpose library and file format for storing scientific data."
-SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/${P}-post2.tar.gz"
+SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/${P}.tar.gz"
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/HDF5/"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 IUSE="static zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )"
 PROVIDE="dev-libs/hdf5"
-
-# set the source directory
-S=${WORKDIR}/${P}-post2
 
 src_compile() {
 	local myconf
@@ -46,6 +43,7 @@ src_install() {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
+		docdir=${D}/usr/share/doc/${PF} \
 		infodir=${D}/usr/share/info \
 		install || die "make install failed"
 
