@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.22 2005/02/07 17:07:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.23 2005/02/07 19:00:15 chriswhite Exp $
+
+  08 Feb 2005; Chris White <chriswhite@gentoo.org>
+  -win32codecs-0.90.1-r1.ebuild, -win32codecs-0.90.1-r2.ebuild,
+  -win32codecs-20031001.ebuild, -win32codecs-20040427.ebuild,
+  -win32codecs-20040703.ebuild, -win32codecs-20040916-r1.ebuild,
+  -win32codecs-20040916.ebuild, win32codecs-20050115.ebuild:
+  get rid of some old ebuilds to make my life my sane and fix bug #80321 while
+  I'm at it.
 
   08 Feb 2005; Chris White <chriswhite@gentoo.org>
   win32codecs-20040916-r1.ebuild:
