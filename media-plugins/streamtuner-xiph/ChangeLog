@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/streamtuner-xiph
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-xiph/ChangeLog,v 1.1 2004/04/09 04:59:58 eradicator Exp $
+
+*streamtuner-xiph-0.1.0 (08 Apr 2004)
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  streamtuner-xiph-0.1.0.ebuild:
+  Ebuild submitted in bug #40009 by ronmon@bellsouth.net
+
