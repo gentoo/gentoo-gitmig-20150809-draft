@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4.ebuild,v 1.7 2001/08/31 21:57:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4.ebuild,v 1.8 2001/08/31 22:54:33 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -45,8 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome 	\
-	     mandir=${D}/opt/gnome/man install || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS
 }

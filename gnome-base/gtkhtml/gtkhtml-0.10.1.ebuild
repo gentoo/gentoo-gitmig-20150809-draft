@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.10.1.ebuild,v 1.7 2001/08/31 22:38:18 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.10.1.ebuild,v 1.8 2001/08/31 22:54:33 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -43,18 +43,18 @@ src_compile() {
             myconf="${myconf} --without-bonobo"
         fi
 
-  	try  ./configure --host=${CHOST} --prefix=/opt/gnome \
-		 --sysconfdir=/etc/opt/gnome ${myconf} --with-gconf
+  	try  ./configure --host=${CHOST} --prefix=/opt/gnome 	\
+		         --sysconfdir=/etc/opt/gnome ${myconf} 	\
+		         --with-gconf --mandir=/opt/gnome/man
 
   	try pmake
 }
 
 src_install() {
-
 	try make DESTDIR=${D} install
+
   	dodoc AUTHORS COPYING* ChangeLog README
   	dodoc NEWS TODO
-
 }
 
 

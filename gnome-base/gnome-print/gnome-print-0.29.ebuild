@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.28.ebuild,v 1.2 2001/04/19 16:37:12 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.29.ebuild,v 1.6 2001/08/31 22:02:41 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.29.ebuild,v 1.7 2001/08/31 22:54:33 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -37,8 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome 	\
-	     mandir=${D}/opt/gnome/man install || die
+	make DESTDIR=${D} install || die
 
 	dosed /opt/gnome/share/fonts/fontmap
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.11.1.ebuild,v 1.4 2001/08/23 11:09:00 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.11.1.ebuild,v 1.5 2001/08/31 22:54:33 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -48,11 +48,10 @@ src_compile() {
 }
 
 src_install() {
-
 	try make DESTDIR=${D} install
+
   	dodoc AUTHORS COPYING* ChangeLog README
   	dodoc NEWS TODO
-
 }
 
 

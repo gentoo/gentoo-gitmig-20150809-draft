@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libxml/libxml-1.8.14.ebuild,v 1.3 2001/08/31 22:31:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libxml/libxml-1.8.14.ebuild,v 1.4 2001/08/31 22:54:33 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,6 +21,7 @@ src_compile() {
 	                                --prefix=/opt/gnome		\
 	                                --sysconfdir=/etc/opt/gnome	\
 					--mandir=/opt/gnome/man
+	assert
 
 	make || die # Doesn't work with -j 4 (hallski)
 }

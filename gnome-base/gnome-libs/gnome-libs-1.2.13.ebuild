@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.12 2001/08/31 22:00:07 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.13 2001/08/31 22:54:33 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -28,9 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome 	\
-		mandir=${D}/opt/gnome/man 				\
-		localstatedir=${D}/var install || die
+	make DESTDIR=${D} install || die
 
 	into /opt/gnome
 	dodir /usr/share/doc/${P}
