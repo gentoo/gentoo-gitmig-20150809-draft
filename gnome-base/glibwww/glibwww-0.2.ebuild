@@ -9,9 +9,9 @@ DESCRIPTION="The Gnome Application Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-libs-1.2.8
-	>=net-libs/libwww-1.5.3-r1"
-RDEPEND=">=net-libs/libwww-1.5.3-r1
+DEPEND=">=net-libs/libwww-1.5.3-r1"
+
+
 
 src_unpack() {
   unpack ${A}
