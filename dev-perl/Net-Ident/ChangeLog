@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Net-Ident
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.1 2004/09/22 23:06:23 mcummings Exp $
+
+*Net-Ident-1.20 (22 Sep 2004)
+
+  22 Sep 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Net-Ident-1.20.ebuild:
+  Optional dependancy for spamassassin 3
+
