@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/poseidonCE
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.10 2004/08/30 18:38:34 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.11 2004/09/01 08:01:49 axxo Exp $
+
+*poseidonCE-2.5.1 (01 Sep 2004)
+
+  01 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +poseidonCE-2.5.1.ebuild:
+  version bump, closes 62453
 
   30 Aug 2004; Chris Aniszczyk <zx@gentoo.org> poseidonCE-2.4.1.ebuild:
   Marking x86
