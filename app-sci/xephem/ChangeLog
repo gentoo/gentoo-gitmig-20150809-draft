@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/xephem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.13 2004/09/19 06:02:13 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.14 2004/12/15 16:13:01 phosphan Exp $
+
+*xephem-3.6.2 (15 Dec 2004)
+
+  15 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> +xephem-3.6.2.ebuild:
+  Version bump
 
 *xephem-3.6.1 (19 Sep 2004)
 
