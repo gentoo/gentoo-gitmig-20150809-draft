@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9f2d5e0bee3e3e671dde3b1e5430e717 ChangeLog 538
 MD5 210325c158742d11f8c57ffb6c44d16d quake3-defrag-1.9.ebuild 1340
-MD5 a6e571105cf6f44b1e8a2e92450f1ac4 ChangeLog 384
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f6659c1502cd0ae747daa70e4a64160f quake3-defrag-1.91.ebuild 1448
 MD5 a682597ecfc99acc95f74bdb37a42c49 files/digest-quake3-defrag-1.9 727
+MD5 3dda6c7ec071da730dcb54f955c229e6 files/digest-quake3-defrag-1.91 790
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0M9croRuSHgZdywRAvU1AJkBC5d3j2uAtfcqE6NOYNbc3BhBvwCbBgrf
+Edmw3yWi2pjyH8JjrgUgurs=
+=DMbo
+-----END PGP SIGNATURE-----
