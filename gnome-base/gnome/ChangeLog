@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.114 2004/07/04 19:35:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.115 2004/07/11 19:45:08 spider Exp $
+
+*gnome-2.6.2 (11 Jul 2004)
+
+  11 Jul 2004; <spider@gentoo.org> gnome-1.4-r3.ebuild, +gnome-2.6.2.ebuild:
+  Gnome 2.6.2 release, a lot of dependency changes and hacking. this will need
+  cleanup once a few other arches are sorted out. see comments inside build
+
+  11 Jul 2004; <spider@gentoo.org> gnome-1.4-r3.ebuild:
+  added IUSE flag to shut repoman up
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-2.6.ebuild:
   Stable on alpha.
