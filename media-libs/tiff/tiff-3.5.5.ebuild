@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5.ebuild,v 1.1 2004/04/25 08:23:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5.ebuild,v 1.2 2004/04/26 00:20:53 nerdboy Exp $
 
 MY_P=${P/tiff-/tiff-v}
 S=${WORKDIR}/${MY_P}
@@ -29,8 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{bin,lib,share/man,share/doc/${PF}/html}
-	dodir /usr/share/doc/${PF}/html
+	dodir /usr/{bin,lib,share/man,share/doc/${PF}}
 	make ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die "install failed"
 	preplib /usr
 	dodoc COPYRIGHT README TODO VERSION
@@ -39,4 +38,11 @@ src_install() {
 pkg_postinst() {
 	einfo "This version was resurrected to work around a bug in fax2tiff"
 	einfo "for use with Hylafax.  See bug #48077 for more info."
+	einfo "It also doesn't appear to provide libtiff.so (only libtiff.a),"
+	einfo "so it looks like you'll need the current stable tiff, then"
+	einfo "this one with AUTOCLEAN=no.  To get back to a proper tiff,"
+	einfo "unmerge both and then emerge the current stable tiff again."
+	ewarn "I repeat: do not try to build hylafax or anything else against"
+	ewarn "tiff-3.5.5 because it won't work.  You've been warned."
+	einfo "What can I say; it's a sucky work-around..."
 }
