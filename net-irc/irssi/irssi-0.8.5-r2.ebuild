@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r2.ebuild,v 1.5 2002/10/05 05:39:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r2.ebuild,v 1.6 2002/10/20 19:29:54 vapier Exp $
 
 IUSE="nls ipv6 perl"
 
@@ -9,23 +9,19 @@ inherit perl-module
 S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
 SRC_URI="http://irssi.org/files/${P}.tar.bz2"
-HOMEPAGE="http://irssi.org"
+HOMEPAGE="http://irssi.org/"
 
-DEPEND="
-	=dev-libs/glib-1.2*
+DEPEND="=dev-libs/glib-1.2*
 	sys-libs/ncurses
 	perl? ( sys-devel/perl )" 
 	#socks? ( >=net-misc/dante-1.1.13 )
-
 RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
-
 src_compile() {
-
 	# Note: there is an option to build a GUI for irssi, but according
 	# to the website the GUI is no longer developed, so that option is
 	# not used here.
@@ -55,7 +51,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	myflags=""
 
 	use perl && ( \
@@ -77,5 +73,6 @@ src_install () {
 		${myflags} \
 		install || die
 
+	prepalldocs
 	dodoc AUTHORS ChangeLog README TODO NEWS
 }
