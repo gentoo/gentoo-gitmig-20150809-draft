@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbz-demo/orbz-demo-2.00.ebuild,v 1.2 2004/02/20 06:13:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbz-demo/orbz-demo-2.00.ebuild,v 1.3 2004/04/19 20:45:37 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp5.homelan.com/public/21-6/orbz_demo_${PV/./_}.sh.bin"
 LICENSE="ORBZ"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 DEPEND=""
 

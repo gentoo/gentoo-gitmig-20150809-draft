@@ -1,6 +1,10 @@
 # ChangeLog for games-action/slune
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.4 2003/12/21 16:38:27 kloeri Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.5 2004/04/19 20:50:18 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> slune-0.3.1.ebuild,
+  slune-0.5.ebuild, slune-0.6.1.ebuild:
+  Added IUSE.
 
 *slune-0.6.1 (21 Dec 2003)
 

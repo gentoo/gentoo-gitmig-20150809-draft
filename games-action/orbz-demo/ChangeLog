@@ -1,6 +1,10 @@
 # ChangeLog for games-action/orbz-demo
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbz-demo/ChangeLog,v 1.3 2003/10/07 15:07:37 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbz-demo/ChangeLog,v 1.4 2004/04/19 20:45:37 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> orbz-demo-2.00.ebuild,
+  orbz-demo-2.10.ebuild:
+  Added IUSE.
 
 *orbz-demo-2.10 (07 Oct 2003)
 

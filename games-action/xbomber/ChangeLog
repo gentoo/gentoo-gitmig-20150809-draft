@@ -1,6 +1,9 @@
 # ChangeLog for games-action/xbomber
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/ChangeLog,v 1.2 2003/09/10 20:32:00 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/ChangeLog,v 1.3 2004/04/19 20:56:54 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> xbomber-101.ebuild:
+  Added IUSE.
 
 *xbomber-101 (07 Jul 2003)
 

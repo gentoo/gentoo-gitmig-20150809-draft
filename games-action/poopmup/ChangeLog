@@ -1,6 +1,9 @@
 # ChangeLog for games-action/poopmup
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.2 2003/09/10 20:32:05 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.3 2004/04/19 20:47:46 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> poopmup-1.2.ebuild:
+  Added IUSE.
 
 *poopmup-1.2 (23 Jun 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-action/parsec
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.3 2003/12/08 00:24:28 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.4 2004/04/19 20:46:15 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> parsec-0197.ebuild:
+  Added IUSE.
 
   08 Dec 2003; Martin Holzer <mholzer@gentoo.org> parsec-0197.ebuild:
   adding RESTRICT="nomirror"

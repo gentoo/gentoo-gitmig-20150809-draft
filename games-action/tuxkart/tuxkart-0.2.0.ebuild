@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.6 2004/02/20 06:13:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.7 2004/04/19 20:55:44 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://tuxkart.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 alpha amd64"
+IUSE=""
 
 DEPEND=">=media-libs/plib-1.6.0
 	>=sys-apps/sed-4
