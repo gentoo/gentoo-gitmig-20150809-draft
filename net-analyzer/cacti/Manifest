@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 3c5429026810fd126265aac06c4cdd93 cacti-0.8.5a-r1.ebuild 4654
 MD5 759fc5dc4f65edbc8034298a120d1305 cacti-0.8.6b.ebuild 1571
-MD5 12ee53e1577c53542a20d942b4f47452 ChangeLog 4324
+MD5 129caac4100019ecef30e673c0dbeafe ChangeLog 4414
 MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
-MD5 7cc300afca6489e25dbf3da4fc8f63c5 cacti-0.8.5a-r2.ebuild 4218
+MD5 2ff8877cbad4e09304b87421c78c12f5 cacti-0.8.5a-r2.ebuild 4217
 MD5 c6ef454f0968bc6e3bdc6819ac9bc5f8 files/postinstall-en.txt 2305
 MD5 5415dc0df13fd1528eb90acce7f44989 files/digest-cacti-0.8.6b 65
 MD5 9921205d0e13d5948104d5de2e58d3ee files/cacti-0.8.5a-sql-injection.patch 625
@@ -14,7 +14,7 @@ MD5 44637d48edf68b76a472c70817449cd6 files/digest-cacti-0.8.5a-r2 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbmH7T+MN7JbqCpMRAiVPAJ9XkihgXI0conzxVgMLPIrTttnmnwCdF8AY
-+YhQHPRxNSuWpUt4MWzEmgI=
-=shoq
+iD8DBQFBe9udT+MN7JbqCpMRAst1AJ4glqPi2YRV665jlkqLFCWJcm6XVACdEzz9
+4pk91Ld5g47JabA41c3xqEI=
+=SR6z
 -----END PGP SIGNATURE-----
