@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.1 2003/10/24 08:08:05 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.2 2003/11/11 15:21:42 aliz Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64"
 
 DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
@@ -85,10 +85,14 @@ src_compile() {
 	# Allow configure to detect mipslinux systems
 	use mips && gnuconfig_update
 
-	if [ `use 3dnow` ] || [ `use mmx` ] ; then
-		myconf="${myconf} --enable-simd"
-	else
+	if [ `use amd64` ]; then
 		myconf="${myconf} --disable-simd"
+	else
+	  	if [ `use 3dnow` ] || [ `use mmx` ] ; then
+			myconf="${myconf} --enable-simd"
+		else
+			myconf="${myconf} --disable-simd"
+		fi
 	fi
 
 	use xml || myconf="${myconf} --disable-cdindex"
