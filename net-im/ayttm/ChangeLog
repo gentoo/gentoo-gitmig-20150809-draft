@@ -1,6 +1,13 @@
 # ChangeLog for net-im/ayttm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ChangeLog,v 1.5 2003/10/28 11:37:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ChangeLog,v 1.6 2003/12/05 08:59:48 usata Exp $
+
+*ayttm-0.4.5 (05 Dec 2003)
+
+  05 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ayttm-0.4.1.ebuild,
+  ayttm-0.4.2.ebuild, ayttm-0.4.3.ebuild, ayttm-0.4.4.ebuild,
+  ayttm-0.4.5.ebuild:
+  Version bumped. Marked 0.4.4 as stable for x86. Cleaned old ebuilds.
 
 *ayttm-0.4.4 (28 Oct 2003)
 
