@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.17 2002/06/09 13:27:02 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.18 2002/06/09 19:34:56 azarah Exp $
+
+*evolution-1.0.5-r2 (09 Jun 2002)
+
+  09 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Use the new "elibtoolize" function from libtool.eclass.  Hopefully this
+  will fix the pda and libtoolize problems.
 
 *evolution-1.0.5-r1 (09 Jun 2002)
   
