@@ -1,6 +1,6 @@
-# ChangeLog for media-libs/gst-plugins-a52dec
+# ChangeLog for media-plugins/gst-plugins-a52dec
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.1 2003/09/14 16:31:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.2 2003/09/15 14:44:25 vapier Exp $
 
 *gst-plugins-a52dec-0.6.3 (07 Sept 2003)
 
