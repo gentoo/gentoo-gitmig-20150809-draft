@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.16 2003/07/13 11:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.17 2003/08/09 20:15:16 solar Exp $
+
+*snort-2.0.1 (09 Aug 2003)
+
+  09 Aug 2003; <mboman@gentoo.org> snort-2.0.1.ebuild,
+  files/snort-2.0.1+prelude.patch:
+  Added libprelude support to snort. Closes bug 19672.
+  Upgraded to new upstream version (2.0.1)
 
 *snort-1.9.1-r2 (22 Apr 2003)
 
