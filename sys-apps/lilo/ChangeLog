@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.9 2002/07/20 19:01:50 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.10 2002/09/03 00:08:10 azarah Exp $
+
+*lilo-22.3.3 (3 Sep 2002)
+
+  3 Sep 2002; Martin Schlemmer <azarah@gentoo.org> lilo-22.3.3.ebuild :
+  Updated version.
 
 *lilo-21.7.5-r2 (8 Apr 2002)
 
