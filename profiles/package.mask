@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3723 2005/03/13 18:45:01 danarmak Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3724 2005/03/13 19:03:02 kloeri Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -174,12 +174,6 @@ www-apache/mod_dav_svn
 # Masatomo Nakano <nakano@gentoo.org> (27 Feb 2005)
 # Tihs package is conflict with postgresql at the moment.
 dev-db/pgcluster
-
-# Bryan Østergaard <kloeri@gentoo.org> (26 Feb 2005)
-# Apache herd package refresh
-# Masked for user testing. Meta-bug #76457
-=dev-python/mod_python-2.7.11
-=dev-python/mod_python-3.1.4
 
 # Elfyn McBratney <beu@gentoo.org> (25 Feb 2005)
 # Masked as it's broken with Apache 2.x and upstream appears to be
