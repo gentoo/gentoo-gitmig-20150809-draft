@@ -1,0 +1,23 @@
+Con says this is broken
+
+--- linux-2.6.10-ck2/drivers/block/Kconfig.iosched.orig	2005-01-07 13:18:43.557859120 +0000
++++ linux-2.6.10-ck2/drivers/block/Kconfig.iosched	2005-01-07 13:19:11.989536848 +0000
+@@ -39,16 +39,8 @@ config IOSCHED_CFQ
+ 	  working environment, suitable for desktop systems.
+ 
+ config IOPRIO_WRITE
+-	bool "Support for full write io fairness"
++	bool
+ 	depends on IOSCHED_CFQ
+-	---help---
+-	  Most data writeout that isn't direct or raw happen asyncronously
+-	  and thus not in the context of the process that originally dirtied
+-	  the data. This type of writeback is typically handled by the pdflush
+-	  kernel threads. The result is that a process dirtying a lot of pages
+-	  gets proportionally more bandwidth than it should.
+-
+-	  Say Y here it you want to apply full fairness for file system
+-	  asyncronous writes at the expense of using 4 bytes in struct page.
++	default n
+ 
+ endmenu

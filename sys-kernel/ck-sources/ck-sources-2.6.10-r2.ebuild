@@ -1,9 +1,9 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.10-r1.ebuild,v 1.2 2004/12/29 02:45:11 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.10-r2.ebuild,v 1.1 2005/01/07 15:23:58 dsd Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2
-	${FILESDIR}/${P}.CAN-2004-1056.patch"
+	${FILESDIR}/ck-sources-2.6.10-disable-iopriowr.patch"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 

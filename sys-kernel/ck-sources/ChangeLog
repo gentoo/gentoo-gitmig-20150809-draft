@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.78 2004/12/29 02:45:11 kingtaco Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.79 2005/01/07 15:23:58 dsd Exp $
+
+*ck-sources-2.6.10-r2 (07 Jan 2005)
+
+  07 Jan 2005; Daniel Drake <dsd@gentoo.org>
+  +files/ck-sources-2.6.10-disable-iopriowr.patch,
+  -files/ck-sources-2.6.10.CAN-2004-1056.patch, -ck-sources-2.6.10-r1.ebuild,
+  +ck-sources-2.6.10-r2.ebuild:
+  Version bump to -r2 thanks to everyone in bug 76837
 
   28 Dec 2004; Mike Doty <kingtaco@gentoo.org> ck-sources-2.6.10-r1.ebuild:
   ~amd64 keyword added
