@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.9 2002/10/05 05:39:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.10 2002/11/28 18:21:08 gerk Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
 DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 -ppc"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc >=sys-libs/zlib-1.1.4"

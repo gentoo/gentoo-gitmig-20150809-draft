@@ -24,7 +24,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 -ppc"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc 
