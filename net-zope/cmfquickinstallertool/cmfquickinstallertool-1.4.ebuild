@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/cmfquickinstallertool-1.4.ebuild,v 1.1 2004/01/19 13:43:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/cmfquickinstallertool-1.4.ebuild,v 1.2 2004/03/26 22:46:28 batlogg Exp $
 
 inherit zproduct
 
@@ -13,10 +13,3 @@ RDEPEND=">=net-zope/cmf-1.3
 	${RDEPEND}"
 
 ZPROD_LIST="CMFQuickInstallerTool"
-
-pkg_postinst()
-{
-	zproduct_pkg_postinst
-	ewarn "Please read README.txt.gz for this product. This product needs to"
-	ewarn "be manually added to a CMF/Plone site."
-}

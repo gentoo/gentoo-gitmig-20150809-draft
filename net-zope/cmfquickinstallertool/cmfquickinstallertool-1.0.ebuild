@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/cmfquickinstallertool-1.0.ebuild,v 1.5 2003/09/10 04:46:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/cmfquickinstallertool-1.0.ebuild,v 1.6 2004/03/26 22:46:28 batlogg Exp $
 
 inherit zproduct
 
@@ -8,7 +8,7 @@ DESCRIPTION="Makes it easy to install cmf/plone products."
 HOMEPAGE="http://www.sf.net/projects/collective/"
 SRC_URI="mirror://sourceforge/collective/CMFQuickInstallerTool_${PV}.tgz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ~ppc"
 RDEPEND=">=net-zope/cmf-1.3
 	${RDEPEND}"
 
