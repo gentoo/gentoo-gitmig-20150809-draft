@@ -1,6 +1,11 @@
 # ChangeLog for games-server/monopd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.9 2004/06/24 23:20:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.10 2004/08/31 08:43:04 mr_bones_ Exp $
+
+*monopd-0.9.3 (31 Aug 2004)
+
+  31 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> +monopd-0.9.3.ebuild:
+  version bump
 
   14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> monopd-0.8.2-r1.ebuild,
   monopd-0.8.3.ebuild:
