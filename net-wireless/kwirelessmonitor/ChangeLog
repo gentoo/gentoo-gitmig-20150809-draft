@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kwirelessmonitor
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwirelessmonitor/ChangeLog,v 1.1 2004/11/10 10:49:19 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwirelessmonitor/ChangeLog,v 1.2 2004/12/09 15:23:45 motaboy Exp $
+
+  09 Dec 2004; Simone Gotti <motaboy@gentoo.org>
+  kwirelessmonitor-0.5.4.ebuild:
+  Stable on x86.
 
 *kwirelessmonitor-0.5.4 (10 Nov 2004)
 
