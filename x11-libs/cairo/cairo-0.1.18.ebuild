@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.1.18.ebuild,v 1.3 2004/05/09 13:18:51 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.1.18.ebuild,v 1.4 2004/06/20 08:13:46 twp Exp $
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -22,6 +22,4 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D}
-	insinto /usr/lib/pkgconfig
-	doins ${FILESDIR}/xrender.pc
 }
