@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.4 2003/04/12 10:30:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.5 2003/06/12 00:03:46 msterret Exp $
+
+  11 Jun 2003; <msterret@gentoo.org> mpeg-tools-1.5b.ebuild:
+  Fix url (Bug#: 22544)
 
 *mpeg-tools-1.5b (1 Feb 2002)
 
