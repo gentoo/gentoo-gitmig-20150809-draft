@@ -1,6 +1,16 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.5 2002/06/18 03:46:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.6 2002/07/10 00:14:23 raker Exp $
+
+*vlc-0.4.1 (09 Jul 2002)
+
+  09 Jul 2002; Nick Hadaway <raker@gentoo.org> vlc-0.4.1.ebuild
+  files/digest-vlc-0.4.1
+
+  Version bump.  Added required dependancy for mad (MPEG audio library)
+  which allows vlc to read divx files.  Updated configure options.
+  Special thanks to to the vlc support team for the quick response
+  to my inquiry.
 
 *vlc-0.4.0 (17 Jun 2002)
 
