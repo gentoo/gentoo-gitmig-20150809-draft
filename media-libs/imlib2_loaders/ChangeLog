@@ -1,28 +1,8 @@
 # ChangeLog for media-libs/imlib2_loaders
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/ChangeLog,v 1.6 2004/06/24 23:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/ChangeLog,v 1.7 2004/08/10 03:44:37 vapier Exp $
 
-*imlib2_loaders-1.0.4.20031013 (13 Oct 2003)
+*imlib2_loaders-1.1.1 (09 Aug 2004)
 
-  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bump.
-
-*imlib2_loaders-1.0.4.20030629 (29 Jun 2003)
-
-  29 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bump.
-
-*imlib2_loaders-1.0.4.20030220-r1 (20 Mar 2003)
-
-  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
-  imlib2_loaders-1.0.4.20030220-r1.ebuild:
-  Removed usage of pic USE flag
-
-*imlib2_loaders-1.0.4.20030220 (20 Feb 2003)
-
-  13 Mar 2003; Aron Griffis <agriffis@gentoo.org>
-  imlib2_loaders-1.0.4.20030220.ebuild:
-  Add ~alpha to KEYWORDS and use -fPIC on alpha
-
-  20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  09 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
