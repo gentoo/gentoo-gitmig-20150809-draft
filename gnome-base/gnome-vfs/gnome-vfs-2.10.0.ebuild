@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.10.0.ebuild,v 1.1 2005/03/09 03:10:54 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.10.0.ebuild,v 1.2 2005/03/21 23:16:31 foser Exp $
 
 inherit gnome2 eutils
 
@@ -59,7 +59,7 @@ G2CONF="${G2CONF} \
 use gnutls && use ssl && G2CONF="${G2CONF} --disable-gnutls"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
-# Fix bonobo 
+
 USE_DESTDIR="1"
 
 src_unpack() {
@@ -70,8 +70,6 @@ src_unpack() {
 	# reiser4 patch, c'mon (#57756)
 	epatch ${FILESDIR}/${PN}-2.8.3-reiser4_support.patch
 
-	autoconf
-
 }
 
 src_install() {
@@ -80,8 +78,5 @@ src_install() {
 
 	# remove unused dir (#46567)
 	rmdir ${D}/usr/doc
-
-	# FIXME: there are cleaner ways to do this
-	echo "trash:    libvfolder-desktop" >> ${D}/etc/gnome-vfs-2.0/modules/default-modules.conf
 
 }
