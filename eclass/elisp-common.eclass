@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.7 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.8 2004/07/04 14:00:50 usata Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -55,8 +55,8 @@ EOF
 
 All site initialization for Gentoo-installed packages is now added to
 /usr/share/emacs/site-lisp/site-gentoo.el; site-start.el is no longer
-managed by Gentoo.	You may want to remove the generated
-site-start.el.
+managed by Gentoo. You are responsible for all maintenance of
+site-start.el if there is such a file.
 
 In order for this site initialization to be loaded for all users
 automatically, as was done previously, you can add a line like this:
