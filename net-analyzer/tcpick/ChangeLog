@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/tcpick
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.1 2004/01/27 20:24:23 mholzer Exp $
+
+*tcpick-0.1.19 (27 Jan 2004)
+
+  27 Jan 2004; Martin Holzer <mholzer@gentoo.org> tcpick-0.1.19.ebuild:
+  Initial ebuild. submitted by Sven Wegener <sven.wegener@stealer.net> 
+  in #39394.
+
