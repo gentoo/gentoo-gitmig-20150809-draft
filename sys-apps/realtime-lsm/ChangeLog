@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/realtime-lsm
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.1 2004/10/23 05:31:00 fafhrd Exp $
+
+*realtime-lsm-0.8.2_pre20041022 (23 Oct 2004)
+
+  23 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +files/kmisc.patch-0.8.2_pre20041022,
+  +realtime-lsm-0.8.2_pre20041022.ebuild:
+  Original package import; keyworded for ~ppc
+

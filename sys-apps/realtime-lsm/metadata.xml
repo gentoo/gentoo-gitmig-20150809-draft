@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>fafhrd@gentoo.org</email>
+  <description>My main herd is gnustep, and I'm developing audio backends for that; I use jack-audio-connection-kit heavily, and this module makes its realtime capability use quite straight-forward w/o kernel hackery.</description>
+</maintainer>
+<longdescription>
+Realtime Linux Security Module
+
+This Linux Security Module (LSM) enables realtime capabilities.
+
+Options:
+
+# modprobe realtime any=1
+
+Any program can request realtime privileges.  This allows any local
+user to crash the system by hogging the CPU in a tight loop or
+locking down too much memory.  But, it is simple to administer.  :-)
+
+# modprobe realtime gid=29
+
+All users belonging to group 29 and programs that are setgid to that
+group have realtime privileges.  Use any group number you like.
+
+# modprobe realtime mlock=0
+
+Grants realtime scheduling privileges without the ability to lock
+memory using mlock() or mlockall() system calls.  This option can be
+used in conjunction with any of the other options.
+
+# modprobe realtime allcaps=1
+
+Enables all capabilities, including CAP_SETPCAP.  This is equivalent
+to the 2.4 kernel capabilities patch.  It is needed for root
+programs to assign realtime capabilities to other processes.  This
+option can be used in conjunction with any of the other options.
+
+The JACK Audio Connection Kit (jackit.sourceforge.net) includes a
+jackstart program which uses CAP_SETPCAP to run the JACK daemon
+and its clients with realtime capabilities.
+</longdescription>
+</pkgmetadata>
