@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.5 2002/07/25 16:55:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.6 2002/08/07 21:22:43 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="boxes draws any kind of boxes around your text!"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}
