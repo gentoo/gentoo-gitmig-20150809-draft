@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.5 2002/11/17 08:39:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.6 2002/11/17 08:43:48 vapier Exp $
 
 *vanilla-sources-2.4.18 (12 Aug 2002)
 
@@ -22,6 +22,11 @@
   Added ChangeLog.
 
 *vanilla-sources-2.2.22 (17 Nov 2002)
+
+  17 Nov 2002; Mike Frysinger <vapier@gentoo.org>
+  Some people like old school kernels
+
+*vanilla-sources-2.0.39 (17 Nov 2002)
 
   17 Nov 2002; Mike Frysinger <vapier@gentoo.org>
   Some people like old school kernels
