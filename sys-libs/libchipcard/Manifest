@@ -1,0 +1,7 @@
+MD5 0a38873d4cf849109a21864a3be2e44c ChangeLog 955
+MD5 4a81511b7cb4bccfece0f91b3d1e5fde libchipcard-0.6.ebuild 911
+MD5 92c15b63e0dcd0f784a255cd9e8ac5d5 libchipcard-0.8.ebuild 977
+MD5 3955d09b187ba119da550acbbf4f8a3c libchipcard-0.8.5.ebuild 831
+MD5 1c38820f0f82edc810497665e67c9784 files/digest-libchipcard-0.6 67
+MD5 153bb0640ed90550a33c0c842bfda300 files/digest-libchipcard-0.8 67
+MD5 2cea935f1f1af7a0b7feac476ee0816c files/digest-libchipcard-0.8.5 69
