@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/ccze
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.1 2003/06/26 11:29:55 joker Exp $
+
+*ccze-0.2.1 (26 June 2003)
+
+  26 June 2003; Christian Birchinger <joker@gentoo.org>
+  ccze-0.2.1.ebuild:
+  Initial release
