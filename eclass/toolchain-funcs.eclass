@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.15 2004/12/14 14:28:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.16 2004/12/16 01:03:42 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -89,19 +89,10 @@ tc-export() {
 
 # A simple way to see if we're using a cross-compiler ...
 tc-is-cross-compiler() {
-	# Simple case ... the user tells us what's going on
 	if [[ -n ${CBUILD} ]] ; then
 		return $([[ ${CBUILD} != ${CHOST} ]])
 	fi
-
-	# Hard case ... compile a simple prog and run it ...
-	local ret tmpfile=$(emktemp).c
-	echo 'int main(){return 0;}' > "${tmpfile}"
-	$(tc-getCC) "${tmpfile}" -o "${tmpfile}".bin
-	! "${tmpfile}".bin &>/dev/null
-	ret=$?
-	rm -f "${tmpfile}" "${tmpfile}".bin
-	return ${ret}
+	return 1
 }
 
 
