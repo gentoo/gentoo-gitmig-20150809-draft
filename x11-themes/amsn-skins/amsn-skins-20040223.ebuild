@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20040223.ebuild,v 1.6 2004/08/28 13:15:22 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20040223.ebuild,v 1.7 2004/11/02 16:34:05 pyrania Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of AMSN themes"
@@ -18,7 +18,7 @@ LICENSE="freedist"
 KEYWORDS="~x86 ~alpha ppc ~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND="net-im/amsn"
 
 src_install () {

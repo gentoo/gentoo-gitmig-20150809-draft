@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/amsn-skins
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.6 2004/08/28 13:15:22 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.7 2004/11/02 16:34:05 pyrania Exp $
+
+  02 Nov 2004; <pyrania@gentoo.org> amsn-skins-20040223.ebuild:
+  Added unzip dependency.
 
   28 Aug 2004; Tom Martin <slarti@gentoo.org> amsn-skins-20040223.ebuild:
   Marked ~amd64.
