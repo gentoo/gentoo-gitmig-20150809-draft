@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.8.ebuild,v 1.4 2002/02/03 21:54:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.8.ebuild,v 1.5 2002/07/08 08:03:56 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ODBC Interface for Linux"
 SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 HOMEPAGE="http://www.unixodbc.org"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
         >=sys-libs/readline-4.1

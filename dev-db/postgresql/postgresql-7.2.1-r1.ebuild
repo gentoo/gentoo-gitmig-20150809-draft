@@ -7,6 +7,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.postgresql.org"
+LICENSE="POSTGRESQL"
 
 DEPEND="virtual/glibc
 		sys-devel/autoconf

@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.3 2002/07/02 17:03:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.4 2002/07/08 08:03:56 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.postgresql.org"
+LICENSE="POSTGRESQL"
 
 DEPEND="virtual/glibc
 		sys-devel/autoconf

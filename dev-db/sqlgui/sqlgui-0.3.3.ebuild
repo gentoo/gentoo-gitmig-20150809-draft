@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Christophe Vanfleteren <c.vanfleteren@pandora.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.3.3.ebuild,v 1.2 2002/05/21 18:14:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.3.3.ebuild,v 1.3 2002/07/08 08:03:56 aliz Exp $
 
 inherit kde-base || die
 
@@ -12,6 +12,7 @@ newdepend ">=dev-db/mysql-3.23.38 >=kde-base/kdebase-3"
 DESCRIPTION="This KDE 3 program lets you administer a mysql db"
 SRC_URI="http://www.sqlgui.de/download/${P}.tar.gz"
 HOMEPAGE="http://www.sqlgui.de/"
+LICENSE="GPL-2"
 
 myconf="$myconf --with-extra-includes=/usr/include/mysql"
 
