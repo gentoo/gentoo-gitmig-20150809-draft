@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21.ebuild,v 1.5 2004/03/14 18:26:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21.ebuild,v 1.6 2004/06/03 06:17:35 mr_bones_ Exp $
 
 inherit games
 
@@ -29,18 +29,19 @@ DEPEND="virtual/x11
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer )
 	ggi? ( media-libs/libggi media-libs/libgii media-libs/libmikmod )"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 pkg_setup() {
-	[ -z "`use sdl``use ggi`" ] \
-		&& die "You must have sdl or ggi in your USE variable" \
-		|| return 0
+	if use !sdl && use !ggi ; then
+		die "You must have sdl or ggi in your USE variable"
+	fi
+	return 0
 }
 
 src_compile() {
-	local myconf="--disable-heroes-debug `use_enable nls`"
+	local myconf="--disable-heroes-debug $(use_enable nls)"
 
-	if [ `use sdl` ] ; then
+	if use sdl ; then
 		myconf="${myconf} --with-sdl --with-sdl-mixer"
 	else
 		myconf="${myconf} --with-ggi --with-mikmod"
