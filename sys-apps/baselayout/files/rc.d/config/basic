@@ -25,4 +25,6 @@ MOUSE="ms"				# Set to the mouse type as used by gpm (auto, ps2, ms, etc.)
 
 DISPLAYMANAGER=""			# Enter your display manager here (xdm,kdm,gdm)
 FTPUSER="ftp"				# User to run oftpd as
-FTPROOT="/home/ftp"		# Set this to your ftproot for oftpd
+FTPROOT="/home/ftp"			# Set this to your ftproot for oftpd
+HTTPD_OPTS="-DSSL"			# turnon support for apache modules (PHP4,PERL,COCOON,TOMCAT)
+
