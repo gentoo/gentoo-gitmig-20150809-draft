@@ -4,10 +4,10 @@ MD5 05ea2cfbc96c5b4ecc398ad829c45bba files/digest-point2play-1.1.1-r1 71
 MD5 8f95e756e8e01ff5a51b2f52b32b2cbc files/1.2-python2.2.patch 1280
 MD5 82ee0eecdabe531c9b1aabcd4c912548 files/digest-point2play-1.2 69
 MD5 ebd7763c0f49a9cedfc2cd931c328117 files/digest-point2play-1.2.1 71
-MD5 ea2e65abe17a6dd0a9b7a36742acbdbf files/digest-point2play-1.2.2b-r1 68
-MD5 171c361fd0b0c7a57f1cdffd71826c29 ChangeLog 1276
+MD5 ea2e65abe17a6dd0a9b7a36742acbdbf files/digest-point2play-1.2.2b-r2 68
+MD5 2d22d5969ea6b00737a0dd32e3f4d074 ChangeLog 1469
 MD5 086d7322b591c18822e6a6ef25213c3b metadata.xml 465
 MD5 143cfadd9829cadcc55b2a302fa75182 point2play-1.1.1-r1.ebuild 899
 MD5 1095d9b2272facd0dfac00b13a5edcc9 point2play-1.2.ebuild 894
 MD5 e404af3d8beeabec506eabb49a55ed24 point2play-1.2.1.ebuild 810
-MD5 dc96a5e4fceddb59cfd4af32b2a8a40d point2play-1.2.2b-r1.ebuild 996
+MD5 7d243e640984795605b7c4d91200ad47 point2play-1.2.2b-r2.ebuild 1026
