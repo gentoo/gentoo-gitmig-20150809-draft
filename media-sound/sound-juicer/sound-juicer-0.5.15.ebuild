@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-0.5.14.ebuild,v 1.2 2004/12/13 14:29:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-0.5.15.ebuild,v 1.1 2004/12/13 14:29:10 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="CD ripper for GNOME 2"
 HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.burtonini.com/computing/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="oggvorbis flac encode hal"
 
 RDEPEND=">=dev-libs/glib-2
@@ -33,6 +33,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 G2CONF="${G2CONF} `use_enable hal`"
+
+src_unpack() {
+
+	unpack ${A}
+
+	# fix build error with hal 0.4.2
+	epatch ${FILESDIR}/${P}-fix_hal_build.patch
+
+}
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
 
