@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.10.0.ebuild,v 1.2 2005/03/10 00:16:59 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.10.0.ebuild,v 1.3 2005/03/11 12:57:33 joem Exp $
 
 inherit gnome2
 
@@ -24,7 +24,8 @@ RDEPEND=">=media-libs/libart_lgpl-2.3.8
 	>=gnome-base/gail-1
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-desktop-2.1.4
-	>=gnome-base/gnome-menus-2.9.1"
+	>=gnome-base/gnome-menus-2.9.1
+	>=dev-util/desktop-file-utils-0.9"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
