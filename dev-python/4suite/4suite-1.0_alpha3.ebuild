@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_alpha3.ebuild,v 1.7 2004/06/25 01:25:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_alpha3.ebuild,v 1.8 2004/07/04 09:55:02 kloeri Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ DEPEND=">=dev-python/pyxml-0.6.5"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 sparc ~alpha ~ppc"
+KEYWORDS="x86 sparc alpha ~ppc"
 LICENSE="Apache-1.1"
 
 PYTHON_MODNAME="Ft"
