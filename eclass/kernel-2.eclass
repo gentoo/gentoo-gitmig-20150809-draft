@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.17 2004/01/23 21:41:23 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.18 2004/01/23 21:43:47 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -38,29 +38,6 @@ LICENSE="GPL-2"
 IUSE="${IUSE} build"
 SLOT="${KV}"
 
-# capture the sources type and set depends
-if [ "${ETYPE}" == "sources" ]
-then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND="!build? ( sys-apps/sed
-		>=sys-devel/binutils-2.11.90.0.31 )"
-
-	RDEPEND="${DEPEND}
-		 !build? ( >=sys-libs/ncurses-5.2
-		dev-lang/perl
-		sys-apps/module-init-tools
-		sys-devel/make )"
-
-	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" || PROVIDE="virtual/linux-sources virtual/alsa"
-
-elif [ "${ETYPE}" == "headers" ]
-then
-	PROVIDE="virtual/kernel virtual/os-headers"
-else
-	eerror "Unknown ETYPE=\"${ETYPE}\", must be either \"sources\" or \"headers\""
-	die
-fi
-
 # Grab kernel version from KV
 KV_MAJOR=$(echo ${KV} | cut -d. -f1)
 KV_MINOR=$(echo ${KV} | cut -d. -f2)
@@ -81,6 +58,28 @@ kernel_is_2_6() {
 	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && return 0 || return 1
 }
 
+# capture the sources type and set depends
+if [ "${ETYPE}" == "sources" ]
+then
+	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	DEPEND="!build? ( sys-apps/sed
+		>=sys-devel/binutils-2.11.90.0.31 )"
+
+	RDEPEND="${DEPEND}
+		 !build? ( >=sys-libs/ncurses-5.2
+		dev-lang/perl
+		sys-apps/module-init-tools
+		sys-devel/make )"
+		
+	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" || PROVIDE="virtual/linux-sources virtual/alsa"
+
+elif [ "${ETYPE}" == "headers" ]
+then
+	PROVIDE="virtual/kernel virtual/os-headers"
+else
+	eerror "Unknown ETYPE=\"${ETYPE}\", must be either \"sources\" or \"headers\""
+	die
+fi
 
 # Unpack functions
 #==============================================================
