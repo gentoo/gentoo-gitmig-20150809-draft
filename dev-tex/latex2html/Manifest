@@ -1,8 +1,18 @@
-MD5 85a3649ef7fe0d8af80efbac2f1178e1 ChangeLog 3649
-MD5 9246437b09693f7df999471547d2bc33 latex2html-2002.1.ebuild 2098
-MD5 11d854e3da199c2384d36d53a957afa3 latex2html-2002.2.1_pre20040108.ebuild 2082
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 78e8ba1e4288cab1710aa056aabdd6da ChangeLog 3839
 MD5 83562207cb510cd1656c788d7dc3f949 latex2html-2002.2.ebuild 2134
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 a89847621e215147adc4b263ceb9b00c files/digest-latex2html-2002.1 70
+MD5 11d854e3da199c2384d36d53a957afa3 latex2html-2002.2.1_pre20040108.ebuild 2082
+MD5 fb00a79242ddb4cd7a24b07fa1dbea22 latex2html-2002.2.1_pre20041025.ebuild 2710
 MD5 b4c0404c2535e091016053386676d0bc files/digest-latex2html-2002.2 70
 MD5 5884aaf42430ad7b5ee481505061f272 files/digest-latex2html-2002.2.1_pre20040108 84
+MD5 9e9ad35271aff1f1790d54fd8f3e086f files/digest-latex2html-2002.2.1_pre20041025 152
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBncQiVWNWqTUmv+0RArcjAJ9Bg9Uv3C2lnzoy7/2XjQupNgcSmACfXG5P
+K/BK4y1JT4tRVH3QVxXg91s=
+=/kRe
+-----END PGP SIGNATURE-----
