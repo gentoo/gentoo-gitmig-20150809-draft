@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54a.ebuild,v 1.1 2002/12/16 19:17:19 woodchip Exp $
-
-IUSE="static readline innodb berkdb tcpd ssl"
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54a.ebuild,v 1.2 2003/01/20 15:21:47 vapier Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic
@@ -20,9 +18,10 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR}/${P}.tar.gz
 	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${P}.tar.gz"
-S=${WORKDIR}/${P}
+
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="static readline innodb berkdb tcpd ssl"
 KEYWORDS="x86 ~sparc alpha"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
@@ -127,9 +126,9 @@ src_install() {
 
 	dodoc README COPYING COPYING.LIB MIRRORS \
 		Docs/{manual.ps,manual.txt}
+	dohtml -r Docs/*
 	docinto conf-samples
 	dodoc support-files/my-*.cnf
-	dohtml -r Docs/*
 
 	insinto /etc/mysql
 	doins ${FILESDIR}/my.cnf scripts/mysqlaccess.conf

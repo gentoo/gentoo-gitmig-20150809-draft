@@ -1,16 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.5_beta.ebuild,v 1.2 2002/12/07 05:54:03 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.5_beta.ebuild,v 1.3 2003/01/20 15:21:47 vapier Exp $
 
 #mysql-4.0.5a_beta.ebuild:
 # -->!!! Name error in 4.0.5a_beta: characters before _ must be numeric
 #this is cuckoo; fixme next release...
 NEWP=mysql-4.0.5a-beta
-
-IUSE="static readline innodb berkdb tcpd ssl"
-
-DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
-HOMEPAGE="http://www.mysql.com/"
 
 SVER=${PV%.*}
 #normal releases:
@@ -19,8 +14,16 @@ SDIR=MySQL-${SVER}
 #SDIR=MySQL-${SVER}-Pre
 
 S=${WORKDIR}/${NEWP}
+
+DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
+HOMEPAGE="http://www.mysql.com/"
 SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR}/${NEWP}.tar.gz
 	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
+
+KEYWORDS="~x86 ~sparc ~ppc"
+LICENSE="GPL-2"
+SLOT="0"
+IUSE="static readline innodb berkdb tcpd ssl"
 
 #HEY!
 #the benchmark stuff in /usr/share/mysql/sql-bench and the
@@ -34,9 +37,6 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	>=sys-libs/zlib-1.1.3
 	sys-devel/perl
 	sys-apps/procps"
-KEYWORDS="~x86 ~sparc ~ppc"
-LICENSE="GPL-2"
-SLOT="0"
 
 src_unpack() {
 	unpack ${A} || die

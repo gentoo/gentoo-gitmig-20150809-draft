@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.53.ebuild,v 1.3 2002/12/09 19:30:36 wwoods Exp $
-
-IUSE="static readline innodb berkdb tcpd ssl"
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.53.ebuild,v 1.4 2003/01/20 15:21:47 vapier Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -14,9 +12,11 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR}/${P}.tar.gz
 	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${P}.tar.gz"
-S=${WORKDIR}/${P}
+
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="static readline innodb berkdb tcpd ssl"
+KEYWORDS="~x86 ~sparc ~alpha"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -24,8 +24,6 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	>=sys-libs/zlib-1.1.3
 	sys-devel/perl
 	sys-apps/procps"
-
-KEYWORDS="~x86 ~sparc ~alpha"
 
 # HEY!
 # the benchmark stuff in /usr/share/mysql/sql-bench and
@@ -122,9 +120,9 @@ src_install() {
 
 	dodoc README COPYING COPYING.LIB MIRRORS \
 		Docs/{manual.ps,manual.txt}
+	dohtml -r Docs/*
 	docinto conf-samples
 	dodoc support-files/my-*.cnf
-	dohtml -r Docs/*
 
 	insinto /etc/mysql
 	doins ${FILESDIR}/my.cnf scripts/mysqlaccess.conf
