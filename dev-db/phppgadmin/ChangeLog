@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.7 2003/03/29 16:07:07 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.8 2003/04/10 08:17:55 leonardop Exp $
+
+*phppgadmin-3.0.0-r1 (10 Apr 2003)
+
+  10 Apr 2003; L. Boshell <leonardop@gentoo.org> : Fix the destination of
+  some files which were being incorrectly dodoc'ed.
 
 *phppgadmin-3.0.0 (29 Mar 2003)
 
