@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.27 2005/01/18 20:00:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.28 2005/01/18 20:03:54 cardoe Exp $
+
+  18 Jan 2005; Doug Goldstein <cardoe@gentoo.org> -files/gcc-3.4-fix.patch,
+  -files/mythtv-0.15-directfb.patch, -mythfrontend-0.13.ebuild,
+  -mythfrontend-0.14-r1.ebuild, -mythfrontend-0.15.1.ebuild:
+  forgot to get rid of old ebuilds at the sametime
 
 *mythfrontend-0.16.20050115 (18 Jan 2005)
 
