@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta19-r1.ebuild,v 1.1 2004/08/14 22:50:51 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta19-r1.ebuild,v 1.2 2004/12/03 01:20:52 eldad Exp $
 
 inherit eutils
 
@@ -51,5 +51,9 @@ src_compile() {
 
 src_install() {
 	einstall || die "make install failed"
+
+	# Workaround for xorg bug concerning lucida fonts. bug 73056. (2004 Dec 3 eldad)
+	sed -e 's/lucida[^-]*-/helvetica-/' -i ${D}/etc/ardour/ardour_ui.rc
+
 	dodoc DOCUMENTATION/*
 }

@@ -1,6 +1,16 @@
-MD5 c2d4b97ccb9b1527de3f21789c96bbff ChangeLog 5550
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 494adc2ab2cd6ae12b577839df83f525 ardour-0.9_beta19-r1.ebuild 1570
+MD5 861de7c44f5103369159bab271082bb1 ChangeLog 5690
 MD5 28188f1657f0547a15f682ed3626a397 metadata.xml 330
-MD5 6573108a4ba49cd0c28e579ac37c3416 ardour-0.9_beta19-r1.ebuild 1418
-MD5 e016dfbfc8e85547954395c455b04e61 files/ardour-gcc34.patch 9562
 MD5 11e862600d9c027d453d23dc2bf8763d files/ardour.aclocal.patch 8594
+MD5 e016dfbfc8e85547954395c455b04e61 files/ardour-gcc34.patch 9562
 MD5 ffa2506694b66035a6e2fc40f66298c4 files/digest-ardour-0.9_beta19-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBr73FT+MN7JbqCpMRAuOgAJ4q0l8/LDYFOHldW7ndojoyCkeqVwCgikbe
+1dx+MvYWDWjFs2Zi1HCCaGQ=
+=W/J+
+-----END PGP SIGNATURE-----
