@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25.ebuild,v 1.2 2002/07/26 12:22:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25.ebuild,v 1.3 2002/07/26 15:29:27 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -43,7 +43,7 @@ src_compile() {
 		--enable-static \
 		--prefix=/usr \
 		--sysconfdir=/etc \
-		--localstatedir=/var \
+		--localstatedir=/var/state/openldap \
 		--mandir=/usr/share/man \
 		--libexecdir=/usr/lib/openldap \
 		${myconf} || die "bad configure"
@@ -56,7 +56,7 @@ src_compile() {
 src_install() {
 	make prefix=${D}/usr \
 		sysconfdir=${D}/etc/openldap \
-		localstatedir=${D}/var \
+		localstatedir=${D}/var/state/openldap \
 		mandir=${D}/usr/share/man \
 		libexecdir=${D}/usr/lib/openldap \
 		install || die "install problem"
@@ -79,7 +79,4 @@ src_install() {
 	do
 		dosed $i
 	done
-
-	dodir /var/state/openldap
-	mv ${D}/var/state/openldap-* ${D}/var/state/openldap
 }

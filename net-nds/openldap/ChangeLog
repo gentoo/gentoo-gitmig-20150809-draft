@@ -1,8 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.4 2002/07/26 12:22:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.5 2002/07/26 15:29:27 raker Exp $
 
 *openldap-2.0.25 (17 Jul 2002)
+
+  26 Jul 2002; Nick Hadaway <raker@gentoo.org>
+
+  re-modified ebuild so localstatedir=/var/state/openldap to match with the
+  default slapd config file.  /var/state/openldap/openldap-ldbm and
+  /var/state/openldap/openldap-slurp are also created correctly.
+  Bug #5557 re-visited.
 
   26 Jul 2002; Nick Hadaway <raker@gentoo.org>
   
