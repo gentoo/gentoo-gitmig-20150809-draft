@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.3 2002/07/21 14:22:13 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.4 2002/08/19 17:57:04 cybersystem Exp $
 
 ### This package requires a Mac II/Classic ROM, A Mac OS Image
 ### Mac OS 7.5.3r2 is available freely from the Apple Homepage
@@ -9,7 +9,7 @@
 DESCRIPTION="BasiliskII-0.9.0 Macintosh Emulator (Stable Release)"
 HOMEPAGE="http://phcip1.phyzik.uni-mainz.de/~bauec002/B2Main.html"
 LICENSE="GPL | LGPL"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 
 ### We'll set $S Manually, it's version dependant, and nested strangely.
