@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.18 2005/01/09 10:44:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.19 2005/02/01 03:22:05 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -33,6 +33,8 @@ src_unpack() {
 		-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in || \
 			die "sed Makefile.in failed"
 #	epatch ${FILESDIR}/${P}-gcc3.patch || die
+	#Quick fix for a typo
+	epatch ${FILESDIR}/${P}-regparm-typo.patch ||die
 }
 
 src_compile() {
