@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.12 2004/06/24 21:55:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.13 2004/08/18 16:09:55 foser Exp $
 
 inherit eutils gnome2
 
@@ -139,6 +139,8 @@ src_install() {
 
 	rm gdm.conf.orig
 
+	keepdir /var/lib/gdm/
+
 	cd ${S}
 
 	# Support for new session stuff
@@ -199,7 +201,6 @@ pkg_postinst() {
 		chown gdm:gdm ${ROOT}/var/lib/gdm
 		chmod 0750 ${ROOT}/var/lib/gdm
 	fi
-	touch ${ROOT}/var/lib/gdm/.keep
 
 	echo ""
 	einfo "To make GDM start at boot, edit /etc/rc.conf (or /etc/conf.d/basic)"
