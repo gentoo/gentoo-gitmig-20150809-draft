@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/pydf 
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.1 2003/05/04 01:32:19 avenj Exp $
+
+*pydf-0.9.6 (03 May 2003)
+
+  03 May 2003; Jon Portnoy <avenj@gentoo.org> pydf-0.9.6.ebuild :
+  Initial import. Ebuild submitted by Mark Hurley 
+  <markph@speakeasy.net>.
