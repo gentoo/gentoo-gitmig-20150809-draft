@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.6 2004/01/16 08:08:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.7 2004/01/16 21:32:53 mr_bones_ Exp $
+
+  16 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> scorched3d-36.2.ebuild:
+  Add new mysql support to ebuild
 
 *scorched3d-36.2 (16 Jan 2004)
 
