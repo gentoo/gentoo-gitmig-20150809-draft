@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r4.ebuild,v 1.2 2002/03/14 06:56:51 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r4.ebuild,v 1.3 2002/03/15 01:41:34 chadh Exp $
 
 # This ebuild installs ${FILESDIR}/hermes.conf, which you can get from
 # http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/hermes.conf
 
-#S=${WORKDIR}/${P}
+S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="http://prdownloads.sourceforge.net/pcmcia-cs/${P}.tar.gz"
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
