@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.33 2005/01/04 01:32:07 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.34 2005/01/05 01:17:46 st_lim Exp $
+
+*dspam-3.2.3 (05 Jan 2005)
+
+  05 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> -dspam-3.0.0.ebuild,
+  -dspam-3.1.2.ebuild, -dspam-3.2.0.ebuild, -dspam-3.2.1.ebuild,
+  -dspam-3.2.2.ebuild, -dspam-3.2.3.ebuild:
+  Version bump URL Fixed Removed older versions of dspam because the latest
+  version 3.2.4 is finally stable.
 
   04 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> :
   There was a bug fix in dspam for 3.2.4.  Upgrade!! Upgrade!!

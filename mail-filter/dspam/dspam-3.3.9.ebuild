@@ -1,27 +1,27 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.0.ebuild,v 1.9 2005/01/04 01:32:07 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.9.ebuild,v 1.1 2005/01/05 01:17:46 st_lim Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${PN}-${PV}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
-SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${PN}-${PV}.tar.gz"
-HOMEPAGE="http://www.nuclearelephant.com/projects/dspam/index.html"
+SRC_URI="http://dspam.nuclearelephant.com/sources/${PN}-${PV}.tar.gz"
+HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite"
+IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite large-domain"
 DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
-		sqlite? ( >=dev-db/sqlite-3.0.6 )
+		sqlite? ( >=dev-db/sqlite-2.7.7 )
 		maildrop? ( >=mail-filter/maildrop-1.5.3 )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		procmail? ( >=mail-filter/procmail-3.22 )
 		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ) )
 		"
-RDEPEND="virtual/cron
+RDEPEND="sys-apps/cronbase
 		app-admin/logrotate"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha ~ia64"
 SLOT="0"
 
 # some FHS-like structure
@@ -69,13 +69,12 @@ src_compile() {
 	#myconf="${myconf} --enable-chi-square"
 	myconf="${myconf} --enable-robinson-pvalues"
 	#myconf="${myconf} --enable-broken-mta"
-	myconf="${myconf} --enable-large-scale"
-	#myconf="${myconf} --enable-domain-scale"
+	use large-domain && myconf="${myconf} --enable-large-scale" || myconf="${myconf} --enable-domain-scale"
 
 	myconf="${myconf} --with-dspam-mode=4755"
 	myconf="${myconf} --with-dspam-owner=dspam"
 	myconf="${myconf} --with-dspam-group=dspam"
-	myconf="${myconf} --enable-homedir --with-dspam-home=${HOMEDIR} --sysconfdir=${HOMEDIR}"
+	myconf="${myconf} --with-dspam-home=${HOMEDIR} --sysconfdir=${HOMEDIR}"
 	myconf="${myconf} --with-logdir=${LOGDIR}"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
@@ -142,66 +141,64 @@ src_install () {
 	diropts -m0775 -o dspam -g dspam
 	dodir ${DATADIR}
 	keepdir ${DATADIR}
-	# ${HOMEDIR}/data is a symlink to ${DATADIR}
-	dosym ${DATADIR} ${HOMEDIR}/data
 
 	# keeps dspam log in /var/log
 	diropts -m0775 -o dspam -g dspam
 	dodir ${LOGDIR}
 	keepdir ${LOGDIR}
+	# ${HOMEDIR}/data is a symlink to ${DATADIR}
+	dosym ${DATADIR} ${HOMEDIR}/data
 
 	# make install
 	sed -e 's/rm -f ..mandir.\(.*\)/rm -f ${D}${mandir}\1/g' \
 		-e 's/ln -s ..mandir.\(.*\) ..mandir.\(.*3\)/ln -s ${mandir}\1.gz ${D}${mandir}\2.gz/g' \
 		-i Makefile
-	make DESTDIR=${D} etcdest=${D}${HOMEDIR} sysconfdir=${D}${HOMEDIR} install || die
+	make DESTDIR=${D} install || die
 	chmod 4755 ${D}/usr/bin/dspam
 
 	# documentation
-	dodoc CHANGELOG LICENSE README RELEASE.NOTES
+	dodoc CHANGELOG LICENSE README* RELEASE.NOTES
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
 	if use mysql; then
-		newdoc tools.mysql_drv/README
+		dodoc src/tools.mysql_drv/README
 	elif use postgres ; then
-		newdoc tools.pgsql_drv/README
+		dodoc src/tools.pgsql_drv/README
 	elif use oci8 ; then
-		newdoc tools.ora_drv/README
+		dodoc src/tools.ora_drv/README
 	elif use sqlite ; then
-		newdoc tools.sqlite_drv/README
+		dodoc src/tools.sqlite_drv/README
 	fi
+	doman man/dspam*
 
 	# build some initial configuration data
-	[ -f ${HOMEDIR}/dspam.conf ] && cp ${HOMEDIR}/dspam.conf ${D}${HOMEDIR}/dspam.conf
+	# Copy existing dspam.conf
+	[ -f ${HOMEDIR}/dspam.conf ] && cp ${HOMEDIR}/dspam.conf ${T}/dspam.conf
+	# If no existing dspam.conf
 	if [ ! -f ${HOMEDIR}/dspam.conf ]; then
+		cp ${D}${HOMEDIR}/dspam.conf ${T}/dspam.conf
 		if use cyrus; then
-			echo "UntrustedDeliveryAgent /usr/lib/cyrus/deliver %u" >> ${D}${HOMEDIR}/dspam.conf
-			sed -e 's:/usr/bin/procmail:/usr/lib/cyrus/deliver %u:g' \
-				-i ${D}${HOMEDIR}/dspam.conf
+			echo "UntrustedDeliveryAgent /usr/lib/cyrus/deliver %u" >> ${T}/dspam.conf
+			dosed 's:/usr/bin/procmail:/usr/lib/cyrus/deliver %u:g' ${T}/dspam.conf
 		elif use exim; then
-			echo "UntrustedDeliveryAgent /usr/sbin/exim -oMr spam-scanned %u" >> ${D}${HOMEDIR}/dspam.conf
-			sed -e 's:/usr/bin/procmail:/usr/sbin/exim -oMr spam-scanned %u:g' \
-				-i ${D}${HOMEDIR}/dspam.conf
+			echo "UntrustedDeliveryAgent /usr/sbin/exim -oMr spam-scanned %u" >> ${T}/dspam.conf
+			dosed 's:/usr/bin/procmail:/usr/sbin/exim -oMr spam-scanned %u:g' ${T}/dspam.conf
 		elif use maildrop; then
-			echo "UntrustedDeliveryAgent /usr/bin/maildrop -d %u" >> ${D}${HOMEDIR}/dspam.conf
-			sed -e 's:/usr/bin/procmail:/usr/bin/maildrop -d %u:g' \
-				-i ${D}${HOMEDIR}/dspam.conf
+			echo "UntrustedDeliveryAgent /usr/bin/maildrop -d %u" >> ${T}/dspam.conf
+			dosed 's:/usr/bin/procmail:/usr/bin/maildrop -d %u:g' ${T}/dspam.conf
 		elif use procmail; then
-			echo "UntrustedDeliveryAgent /usr/bin/procmail" >> ${D}${HOMEDIR}/dspam.conf
+			echo "UntrustedDeliveryAgent /usr/bin/procmail" >> ${T}/dspam.conf
 		else
-			echo "UntrustedDeliveryAgent /usr/sbin/sendmail" >> ${D}${HOMEDIR}/dspam.conf
-			sed -e 's:/usr/bin/procmail:/usr/sbin/sendmail:g' \
-				-i ${D}${HOMEDIR}/dspam.conf
+			echo "UntrustedDeliveryAgent /usr/sbin/sendmail" >> ${T}/dspam.conf
+			sed 's:/usr/bin/procmail:/usr/sbin/sendmail:g' ${T}/dspam.conf
 		fi
 	fi
-	chown dspam.dspam ${D}${HOMEDIR}/dspam.conf
-	chmod 644 ${D}${HOMEDIR}/dspam.conf
 
 	local PASSWORD="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
 
 	# database related configuration and scripts
+	insinto ${HOMEDIR}
+	insopts -m644 -o dspam -g dspam
 	if use mysql; then
-		insinto ${HOMEDIR}
-		insopts -m644 -o dspam -g dspam
 
 		if [ -f ${HOMEDIR}/mysql.data ]; then
 			# Use an existing password
@@ -214,24 +211,21 @@ src_install () {
 			echo "MySQLPass      ${PASSWORD}"                 >> ${T}/mysql.data
 			echo "MySQLDb        dspam"                       >> ${T}/mysql.data
 			echo "MySQLCompress  true"                        >> ${T}/mysql.data
-			[ -z "`grep '^MySQL' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/mysql.data >> ${D}/${HOMEDIR}/dspam.conf
+			[ -z "`grep '^MySQL' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/mysql.data >> ${T}/dspam.conf
 			sed -e 's/^MySQL[A-Za-z]* *//g' -i ${T}/mysql.data
 			doins ${T}/mysql.data
 		fi
 
-		newins tools.mysql_drv/mysql_objects-space.sql mysql_objects-space.sql
-		newins tools.mysql_drv/mysql_objects-speed.sql mysql_objects-speed.sql
-		newins tools.mysql_drv/mysql_objects-4.1.sql mysql_objects-4.1.sql
-		newins tools.mysql_drv/virtual_users.sql mysql_virtual_users.sql
-		newins tools.mysql_drv/neural.sql mysql_neural.sql
-		newins tools.mysql_drv/purge.sql mysql_purge.sql
-		newins tools.mysql_drv/purge-4.1.sql mysql_purge-4.1.sql
+		newins src/tools.mysql_drv/mysql_objects-space.sql mysql_objects-space.sql
+		newins src/tools.mysql_drv/mysql_objects-speed.sql mysql_objects-speed.sql
+		newins src/tools.mysql_drv/mysql_objects-4.1.sql mysql_objects-4.1.sql
+		newins src/tools.mysql_drv/virtual_users.sql mysql_virtual_users.sql
+		newins src/tools.mysql_drv/neural.sql mysql_neural.sql
+		newins src/tools.mysql_drv/purge.sql mysql_purge.sql
+		newins src/tools.mysql_drv/purge-4.1.sql mysql_purge-4.1.sql
 		newins ${FILESDIR}/upgrade.sql mysql_upgrade.sql
 	elif use postgres ; then
-		insinto ${HOMEDIR}
-		insopts -m644 -o dspam -g dspam
-
-		if [ -f ${HOMEDIR}/mysql.data ]; then
+		if [ -f ${HOMEDIR}/pgsql.data ]; then
 			# Use an existing password
 			PASSWORD="$(tail -n 2 ${HOMEDIR}/pgsql.data | head -n 1 )"
 		else
@@ -241,39 +235,39 @@ src_install () {
 			echo "PgSQLUser      dspam"        >> ${T}/pgsql.data
 			echo "PgSQLPass      ${PASSWORD}"  >> ${T}/pgsql.data
 			echo "PgSQLDb        dspam"        >> ${T}/pgsql.data
-			[ -z "`grep '^PgSQL' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/pgsql.data >> ${D}/${HOMEDIR}/dspam.conf
+			[ -z "`grep '^PgSQL' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/pgsql.data >> ${T}/dspam.conf
 			sed -e 's/^PgSQL[A-Za-z]* *//g' -i ${T}/pgsql.data
 			doins ${T}/pgsql.data
 		fi
 
-		newins tools.pgsql_drv/pgsql_objects.sql pgsql_objects.sql
-		newins tools.pgsql_drv/virtual_users.sql pgsql_virtual_users.sql
-		newins tools.pgsql_drv/purge.sql pgsql_purge.sql
+		newins src/tools.pgsql_drv/pgsql_objects.sql pgsql_objects.sql
+		newins src/tools.pgsql_drv/virtual_users.sql pgsql_virtual_users.sql
+		newins src/tools.pgsql_drv/purge.sql pgsql_purge.sql
 
 	elif use oci8 ; then
-		insinto ${HOMEDIR}
-		insopts -m644 -o dspam -g dspam
-
 		if [ -f ${HOMEDIR}/oracle.data ]; then
 			# Use an existing password
 			PASSWORD="$(tail -n 2 ${HOMEDIR}/oracle.data | head -n 1 )"
 		else
-			# Create the oracle.data file
+			# Create the pgsql.data file
 			echo "OraServer      (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=PROD)))" >>${T}/oracle.data
 			echo "OraUser        dspam" >>${T}/oracle.data
 			echo "OraPass        ${PASSWORD}" >>${T}/oracle.data
 			echo "OraSchema      dspam" >>${T}/oracle.data
-			[ -z "`grep '^Ora' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/oracle.data >> ${D}/${HOMEDIR}/dspam.conf
+			[ -z "`grep '^Ora' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/oracle.data >> ${T}/dspam.conf
 			sed -e 's/^Ora[A-Za-z]* *//g' -i ${T}/oracle.data
 			doins ${T}/oracle.data
 		fi
 
-		newins tools.ora_drv/oral_objects.sql ora_objects.sql
-		newins tools.ora_drv/virtual_users.sql ora_virtual_users.sql
-		newins tools.ora_drv/purge.sql ora_purge.sql
+		newins src/tools.ora_drv/oral_objects.sql ora_objects.sql
+		newins src/tools.ora_drv/virtual_users.sql ora_virtual_users.sql
+		newins src/tools.ora_drv/purge.sql ora_purge.sql
 	elif use sqlite ; then
-		newins tools.sqlite_drv/purge.sql sqlite_purge.sql
+		newins src/tools.sqlite_drv/purge.sql sqlite_purge.sql
 	fi
+	insinto ${HOMEDIR}
+	insopts -m644 -o dspam -g dspam
+	doins ${T}/dspam.conf
 
 	# installs the cron job to the cron directory
 	diropts -m0755 -o dspam -g dspam
