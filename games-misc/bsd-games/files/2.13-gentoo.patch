@@ -5,7 +5,7 @@
  Eric Allman
  .Sh SEE ALSO
 -.Pa /usr/share/doc/bsdgames/trek.me.gz
-+.Pa /usr/share/doc/${P}/trek.me.gz
++.Pa /usr/share/doc/${PF}/trek.me.gz
  .Sh COMMAND SUMMARY
  .Bl -item -compact
  .It

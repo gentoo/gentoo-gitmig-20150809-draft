@@ -1,7 +1,18 @@
-MD5 683d130edf9891df6b6fbf1fbde25a9d ChangeLog 1160
-MD5 7cc9e95233f12afc1b1e8be0de9890dd bsd-games-2.13.ebuild 3920
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c90c6eaeac51e6ab3a2cb88bcc31402a ChangeLog 1481
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 49c481f8746cf44f3fe40302e6ffd77e files/bsdgames-2.13-gentoo.diff 253
-MD5 1eb5517d165adf9425cb382abc6c6528 files/digest-bsd-games-2.13 67
+MD5 2c6287326d0025f0e9a8986b8a06677b bsd-games-2.13-r1.ebuild 3790
+MD5 7b405328dec7855e30134bf6164ce565 files/2.13-gentoo.patch 254
 MD5 cd4e0a199968b029d1d043c45b36b0c8 files/config.params-gentoo 1244
-MD5 81250dd8b2e30e4076c1e3de43f669ad files/bsdgames_2.13-11.diff 40228
+MD5 fa8fffba1c31764862eacba7536a0bbf files/2.13-debian-11.patch 9384
+MD5 1eb5517d165adf9425cb382abc6c6528 files/digest-bsd-games-2.13-r1 67
+MD5 d7db0213c9e81e091c2c9ec0b4d0c763 files/2.13-64bit.patch 701
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB4hBfroRuSHgZdywRAuGrAJ9R+6fFwaauthGlRMNVQz3cAX+34QCeKqAC
+M/4R1aObhtM5N+vUr8yAn+o=
+=5AAe
+-----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for games-misc/bsd-games
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.9 2004/12/29 00:07:52 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.10 2005/01/10 05:19:06 vapier Exp $
+
+*bsd-games-2.13-r1 (10 Jan 2005)
+
+  10 Jan 2005; Mike Frysinger <vapier@gentoo.org> +files/2.13-64bit.patch,
+  +files/2.13-debian-11.patch, +files/2.13-gentoo.patch,
+  -files/bsdgames-2.13-gentoo.diff, -files/bsdgames_2.13-11.diff,
+  +bsd-games-2.13-r1.ebuild:
+  Add patch by David Leverton to fix 64bit support #77032.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

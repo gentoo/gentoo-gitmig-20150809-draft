@@ -1,0 +1,21 @@
+David Leverton writes:
+
+The 'adventure' game from the games-misc/bsd-games-2.13 package crashes 
+when saving the game on AMD64 (and probably other 64-bit systems, but I 
+haven't checked).  Find attached to fix this.
+
+http://bugs.gentoo.org/show_bug.cgi?id=77032
+
+--- bsd-games-2.13/adventure/crc.c~	1999-04-04 12:49:03.000000000 +0100
++++ bsd-games-2.13/adventure/crc.c	2005-01-07 02:42:07.027698064 +0000
+@@ -134,7 +134,8 @@
+ 				if (step >= sizeof(crctab) / sizeof(crctab[0]))
+ 					step = 0;
+ 			}
+-			crcval = (crcval << 8) ^ crctab[i];
++			/* Mask to 32 bits. */
++			crcval = ((crcval << 8) ^ crctab[i]) & 0xffffffff;
+ 		}
+-	return crcval & 0xffffffff;	/* Mask to 32 bits. */
++	return crcval;
+ }
