@@ -1,20 +1,21 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.5 2002/08/13 19:21:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.6 2002/08/24 13:21:28 karltk Exp $
 
 *ant-1.4.1-r3 (03 May 2002)
 
-  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> ant-1.4.1-r3.ebuild :
+  24 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild :
+  Added extra install-time test to verify that all files install properly. 
+  Some users manage to install a faulty ant, for some reason.
 
+  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> ant-1.4.1-r3.ebuild :
   added ppc keyword
 
   01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild :
-
   Added SLOT, KEYWORDS and LICENSE. Ebuild originally submitted by
   Achim Gottinger <achim@gentoo.org>.
 
   03 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild files/digest-ant-1.4.1-r3:
-
   Now handles the case of multiple occurrences of JAVA_HOME in the Java
   environment setting, thanks to Florian L. Klein <kleinf@gmx.de>.
 
@@ -23,7 +24,6 @@
 *ant-1.4.1-r2 (10 Apr 2002)
 
   10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r2.ebuild files/digest-ant-1.4.1-r2:
-
   The JAVA_HOME env var is now picked from $HOME/.gentoo/java-env if it exists,
   /etc/env.d/20java if not. An error is emitted if both files are missing.
 
@@ -32,9 +32,4 @@
 *ant-1.4.1-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
