@@ -2,6 +2,10 @@
 klog="/usr/sbin/klogd"
 slog="/usr/sbin/syslogd"
 
+depend() {
+	need hostname
+}
+
 start() {
     ebegin "Starting syslogd, klogd"
     start-stop-daemon --start --exec $slog -- $SYSLOGD 1>&2
