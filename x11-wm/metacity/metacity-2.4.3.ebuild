@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.3.ebuild,v 1.1 2002/11/03 14:51:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.3.ebuild,v 1.2 2002/11/03 15:00:29 foser Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="Small gtk2 WindowManager"
 HOMEPAGE="http://people.redhat.com/~hp/metacity/"
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2
