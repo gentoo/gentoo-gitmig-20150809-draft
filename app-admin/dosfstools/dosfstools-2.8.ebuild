@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.8.ebuild,v 1.2 2001/08/28 02:56:49 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="dos filesystem tools"
