@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tob/tob-0.26.ebuild,v 1.2 2004/04/06 03:29:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tob/tob-0.26.ebuild,v 1.3 2004/06/13 12:33:14 kloeri Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://tinyplanet.ca/projects/tob/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 RDEPEND="app-arch/afio"
 
