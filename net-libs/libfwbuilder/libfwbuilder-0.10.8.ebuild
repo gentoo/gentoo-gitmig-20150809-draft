@@ -2,23 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-0.10.8.ebuild,v 1.0
 
-IUSE="ssl static"
-
 MY_PN=${PN/lib/}
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/${MY_PN}/${P}.tar.gz"
 HOMEPAGE="http://fwbuilder.sourceforge.net"
-S=${WORKDIR}/${P}
 
 KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="ssl static"
 
 DEPEND=">=dev-libs/libsigc++-1.0
 	>=dev-libs/libxslt-1.0.7
 	>=net-analyzer/ucd-snmp-4.2.3
 	ssl? ( dev-libs/openssl )"
-RDEPEND=${DEPEND}
 
 src_compile() {
 	local myconf
