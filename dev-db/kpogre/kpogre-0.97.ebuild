@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-0.97.ebuild,v 1.2 2004/04/27 20:45:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-0.97.ebuild,v 1.3 2004/04/28 16:34:20 dholm Exp $
 
 inherit kde-base eutils
 need-kde 3
@@ -14,7 +14,7 @@ DEPEND="dev-db/postgresql
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
 	unpack ${A}
