@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.3.ebuild,v 1.1 2002/01/18 17:50:08 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.3.ebuild,v 1.2 2002/02/03 21:48:56 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="QtUnit is a unit testing framework for c++"
 SRC_URI="http://prdownloads.sourceforge.net/qtunit/${PN}-${PV}.tar.bz2"
 HOMEPAGE="http://www.theleaf.be/projects/qtunit"
 
-DEPEND=">=x11-libs/qt-3.0.1"
+DEPEND="=x11-libs/qt-3*"
 	
 export QTDIR="/usr/qt/3"
 export PATH="$QTDIR/bin:$PATH"
