@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <bcowan@gentoo.org> (09 Nov 2002)
+# masking mc due to filling entire var/tmp
+# partition during compile
+>=gnome-extra/mc-4.6.0_pre1-r1
+
 # <azarah@gentoo.org> (09 Nov 2002)
 # new evo and gtkhtml.  gtkhtml breaks compat a bit with
 # 1.0
