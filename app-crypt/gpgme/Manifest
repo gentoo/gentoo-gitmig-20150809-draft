@@ -5,8 +5,8 @@ MD5 c60aa07c58226f4a164ab89cff2616a1 gpgme-0.4.0.ebuild 1564
 MD5 078cdd0af281263b34748a7df7dc51a9 gpgme-0.4.7.ebuild 1553
 MD5 ce0db60fd655ade98789a1643d4fdd9d metadata.xml 314
 MD5 ecfec85b02f3527ff9405ad4643c2e4e gpgme-0.9.0-r20.ebuild 1238
-MD5 a4d506c26a5d0e9883803652a8d575af gpgme-0.9.0-r1.ebuild 1342
-MD5 9c02722b34ad221a7a8cbfb495dc2f16 ChangeLog 7755
+MD5 f8c8d3086229a05429ad4e6cdc4ab50a gpgme-0.9.0-r1.ebuild 1339
+MD5 bcba45e47b3aefa761bfcb4c14a56132 ChangeLog 7874
 MD5 f61d73bc505b5a542662b75aa0fa219f files/digest-gpgme-0.4.7 63
 MD5 1e195068762b5aafd2f260d76b108a70 files/digest-gpgme-0.4.0 63
 MD5 260bf91983886d989efa3e54792c921d files/digest-gpgme-0.9.0-r1 63
