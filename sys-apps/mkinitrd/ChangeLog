@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/mkinitrd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.7 2003/10/27 19:01:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.8 2003/11/01 04:46:06 pebenito Exp $
+
+*mkinitrd-3.5.7-r2 (31 Oct 2003)
+
+  31 Oct 2003; Chris PeBenito <pebenito@gentoo.org> mkinitrd-3.5.7-r2.ebuild,
+  files/mkinitrd-lvm_statics.diff:
+  Change vgwrapper to static vgscan and vgchange to fix #29694. Using modified
+  patch from Sascha Silbe.
 
   27 Oct 2003; Chris PeBenito <pebenito@gentoo.org> mkinitrd-3.5.7-r1.ebuild,
   mkinitrd-3.5.7.ebuild:
