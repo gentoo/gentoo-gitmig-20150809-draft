@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/root-tail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.4 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.5 2003/08/23 01:44:36 zul Exp $
+
+*root-tail-0.2 (22 Aug 2003)
+
+  22 Aug 2003; Chuck Short <zul@gentoo.org> root-tail-0.2.ebuild:
+  Version bump, closes bug #23234. Ebuild submitted Sadayuki Kobayashi
+  <desperado@s17.xrea.com>.
 
 *root-tail-0.0.10 (1 Feb 2002)
 
