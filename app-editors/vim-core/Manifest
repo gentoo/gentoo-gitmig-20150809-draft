@@ -6,7 +6,7 @@ MD5 ed1da123e24bfc937cfdc8d1111bf25f vim-core-6.2-r5.ebuild 799
 MD5 af9a024c24fa3d45a280428d49213d80 vim-core-6.2-r2.ebuild 796
 MD5 dd447381ccd30abe60b50dff86e2339a vim-core-6.1-r5.ebuild 773
 MD5 f6f5abdcd3ae258ccfd5483c0df45448 vim-core-6.2-r4.ebuild 790
-MD5 aa3b7ebbeff0e4a7fd475df006382ded ChangeLog 6405
+MD5 945b83b488a6a87bad27295f39068cfe ChangeLog 6404
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 cc4d15465625e4d581e621d3d457d682 files/vimrc 2857
 MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722

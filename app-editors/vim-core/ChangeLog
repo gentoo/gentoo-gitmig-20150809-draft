@@ -1,15 +1,15 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.46 2003/11/02 21:04:05 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.47 2003/11/06 00:07:20 agriffis Exp $
+
+  01 Nov 2003; Aron Griffis <agriffis@gentoo.org> :
+  Fix digest for bug 32474
 
 *vim-core-6.2-r5 (31 Oct 2003)
 
   31 Oct 2003; Ryan Phillips <rphillips@gentoo.org> vim-core-6.2-r5.ebuild:
   added patches up to 140.  Skipped to -r5 to sync vim-core with vim/ 
   and gvim/.
-
-  01 Nov 2003; Aron Griffis <agriffis@gentoo.org> :
-  Fix digest for bug 32474
 
   07 Oct 2003; Aron Griffis <agriffis@gentoo.org> files/vimrc:
   Use nomodeline instead of modelines=0
