@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.221-r1.ebuild,v 1.2 2004/09/23 12:21:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.221-r1.ebuild,v 1.3 2004/10/28 10:14:02 dragonheart Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
@@ -18,7 +18,7 @@
 #
 # ~arm ~amd64 ~ia64 ~s390 alpha(?)
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Filesystem benchmarking program"
 HOMEPAGE="http://www.iozone.org/"
@@ -26,7 +26,7 @@ SRC_URI="http://www.iozone.org/src/current/${PN}${PV/./_}.tar"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc
@@ -45,8 +45,8 @@ src_compile() {
 	cd src/current
 
 	# Options FIX
-	sed -i -e "s:[/a-z]*cc.*-c.*-Dunix:${CC} ${CFLAGS} -Dunix -c:g" \
-		-e "s:[/a-z]*cc.*-Dunix:${CC} ${CFLAGS} -Dunix:g" makefile
+	sed -i -e "s:[/a-z]*cc.*-c.*-Dunix:$(tc-getCC) ${CFLAGS} -Dunix -c:g" \
+		-e "s:[/a-z]*cc.*-Dunix:$(tc-getCC) ${CFLAGS} -Dunix:g" makefile
 
 	case ${ARCH} in
 		x86|alpha)	PLATFORM="linux";;
