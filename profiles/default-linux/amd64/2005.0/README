@@ -3,17 +3,20 @@ HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
  1) emerge -v '>=sys-apps/portage-2.0.51-r9'
  2) emerge unmerge app-emulation/emul-linux-x86-glibc
  3) rm /lib32 /usr/lib32 /usr/X11R6/lib32
- 4) emerge -v '>=sys-apps/baselayout-1.11.8-r1'
- 5) rm /etc/make.profile
- 6) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
- 7) cd /usr/tmp
- 8) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
- 9) cp /emul/linux/x86/lib32/libsandbox.so /lib32
-10) emerge -v glibc-2.3.4.20040808-r1.tbz2
-11) lynx -source http://dev.gentoo.org/~eradicator/fix_lib_symlinks.sh | sh
-12) emerge -upv system
-13) emerge -uv system
+ 4) mkdir /lib32
+ 5) cp /emul/linux/x86/lib32/libsandbox.so /lib32
+ 6) emerge -v '>=sys-apps/baselayout-1.11.8-r1'
+ 7) rm /etc/make.profile
+ 8) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
+ 9) cd /usr/tmp
+10) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
+11) emerge -v glibc-2.3.4.20040808-r1.tbz2
+12) lynx -source http://dev.gentoo.org/~eradicator/fix_lib_symlinks.sh | sh
+13) (OPTIONAL) emerge -uv glibc
+14) emerge -upv system
+15) emerge -uv system
 
 Note, The order is VERY important.
-You MUST do every step even if you already have that version installed.  If
-you don't, it might be bad for you!
+You MUST do every step even if you already have that version installed.
+emerging glibc the second time is optional if you don't want to use my
+options.
