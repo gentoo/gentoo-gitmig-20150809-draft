@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0.0.ebuild,v 1.10 2004/12/19 05:31:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0.0.ebuild,v 1.11 2005/04/03 04:38:00 luckyduck Exp $
 
 IUSE="oss alsa jack"
 
