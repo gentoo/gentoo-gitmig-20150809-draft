@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/eps-1.5.ebuild,v 1.1 2005/01/05 19:15:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/eps-1.5.ebuild,v 1.2 2005/03/03 14:11:44 ferdy Exp $
 
 DESCRIPTION="Inter7 Email Processing and mht System library"
 HOMEPAGE="http://www.inter7.com/eps"
 SRC_URI="http://www.inter7.com/eps/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="virtual/libc
 	sys-apps/sed"
