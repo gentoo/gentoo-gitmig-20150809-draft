@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91-r1.ebuild,v 1.1 2004/11/24 02:30:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91-r1.ebuild,v 1.2 2004/11/24 15:20:40 weeve Exp $
 
 inherit eutils gcc
 
@@ -54,9 +54,9 @@ src_compile() {
 	use flood && myconf="${myconf} --flood=1"
 
 	if ( ( use jabber && use ssl ) || use msn ); then
-		myconf="--ssl=gnutls"
+		myconf="${myconf} --ssl=gnutls"
 	else
-		myconf="--ssl=bogus"
+		myconf="${myconf} --ssl=bogus"
 	fi
 
 	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} \

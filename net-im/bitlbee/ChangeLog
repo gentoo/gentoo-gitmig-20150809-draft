@@ -1,6 +1,10 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.47 2004/11/24 02:30:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.48 2004/11/24 15:20:40 weeve Exp $
+
+  24 Nov 2004; Jason Wever <weeve@gentoo.org> bitlbee-0.91-r1.ebuild:
+  Really add the fix in 0.91-r1 :) Thanks to Enrique D. Bosch
+  <presidev@presi.org> for pointing this out.
 
 *bitlbee-0.91-r1 (23 Nov 2004)
 
