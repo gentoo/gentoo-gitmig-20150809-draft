@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.2 2002/03/27 12:14:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.3 2002/04/03 22:20:46 blocke Exp $
+
+
+*libgd-1.8.3-r4 (3 Apr 2002)
+
+  3 Apr 2002; Bruce A. Locke <blocke@shivan.org> libgd-1.8.3-r4.ebuild :
+
+  Quick fix for glibc circular dependencies.
 
 *libgd-1.8.3-r3 (27 Mar 2002)
 
