@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.17 2003/05/16 15:07:06 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.18 2003/05/20 08:01:15 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -119,9 +119,8 @@ replace-flags "-march=k6*" "-march=i586"
 
 
 php_src_unpack() {
-	ewarn "This EBUILD is totally masked presently. Use it at your own risk.  I know it"
-	ewarn "is severely broken, but I needed to get a copy into CVS to pass around and"
-	ewarn "repoman was complaining at me too much"
+	ewarn "This ebuild is intended for ~x86 testing presently. Heavy testing welcome."
+	ewarn "It should be stable for nearly systems."
 	
     unpack ${MY_P}.tar.bz2
     cd ${S}
