@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.5 2004/07/31 12:37:21 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.6 2004/08/16 00:10:32 slarti Exp $
 # Contributions by Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 
 inherit fixheadtails
@@ -14,7 +14,7 @@ SRC_URI="ftp://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="zlib?	( sys-libs/zlib )
 	pdflib? ( media-libs/pdflib )
