@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p4.ebuild,v 1.8 2004/01/14 19:53:04 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p7.ebuild,v 1.1 2004/01/14 19:53:04 max Exp $
 
 inherit eutils
 
@@ -39,16 +39,22 @@ RDEPEND="${DEPEND}
 	dev-perl/Time-HiRes
 	dev-perl/Unix-Syslog
 	dev-perl/Mail-SpamAssassin
+	virtual/mta
+	virtual/antivirus
 	ldap? ( dev-perl/perl-ldap )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	virtual/antivirus
-	virtual/mta"
+	milter? ( >=net-mail/sendmail-8.12 )"
 
 S="${WORKDIR}/${PN}-${PV/_*/}"
 
+src_unpack() {
+	unpack ${A} && cd "${S}"
+	epatch "${FILESDIR}/uid-as-string.patch"
+}
+
 src_compile() {
-	if [ -n "`use milter`" ] ; then
+	if [ "`use milter`" ] ; then
 		cd "${S}/helper-progs"
 
 		econf --with-runtime-dir=/var/run/amavis \
@@ -89,11 +95,11 @@ src_install() {
 	fowners amavis:amavis /var/spool/amavis /var/run/amavis
 	fperms 0750 /var/spool/amavis /var/run/amavis
 
-	dodoc AAAREADME.first INSTALL LICENSE MANIFEST RELEASE_NOTES README_FILES/*
-	docinto samples
-	dodoc test-messages/*
+	newdoc test-messages/README README.samples
+	dodoc AAAREADME.first INSTALL LDAP.schema LICENSE MANIFEST RELEASE_NOTES \
+		README_FILES/* test-messages/sample-*
 
-	if [ -n "`use milter`" ] ; then
+	if [ "`use milter`" ] ; then
 		cd "${S}/helper-progs"
 		einstall
 	fi

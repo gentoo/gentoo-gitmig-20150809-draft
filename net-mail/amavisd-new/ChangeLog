@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.6 2003/11/12 21:48:39 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.7 2004/01/14 19:53:04 max Exp $
+
+*amavisd-new-20030616_p7 (14 Jan 2004)
+
+  14 Jan 2004; Max Kalika <max@gentoo.org> amavisd-new-20030616_p4.ebuild,
+  amavisd-new-20030616_p5.ebuild, amavisd-new-20030616_p6.ebuild,
+  amavisd-new-20030616_p7.ebuild, files/uid-as-string.patch:
+  Bump to version 20030616_p7. Add patch to treat the sql user id as string.
 
   12 Nov 2003; <max@gentoo.org> amavisd-new-20030616_p4.ebuild,
   amavisd-new-20030616_p5.ebuild, amavisd-new-20030616_p6.ebuild:

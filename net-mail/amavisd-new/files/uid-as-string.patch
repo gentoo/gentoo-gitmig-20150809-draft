@@ -1,0 +1,11 @@
+--- amavisd.orig	2004-01-13 08:20:59.000000000 -0800
++++ amavisd	2004-01-13 08:21:16.000000000 -0800
+@@ -4968,7 +4968,7 @@
+ 		#            B0: boolean, nonexistent field treated as false,
+ 		#            B1: boolean, nonexistent field treated as true
+ 		my $nf = sub {Amavis::Lookup::SQLfield->new($sql_policy,@_)}; #shorthand
+-		$user_id_sql		= $nf->('id',                  'N');
++		$user_id_sql		= $nf->('id',                  'S');
+ 		$virus_lovers_sql       = $nf->('virus_lover',         'B0');
+ 		$spam_lovers_sql        = $nf->('spam_lover',          'B-');
+ 		$banned_files_lovers_sql= $nf->('banned_files_lover',  'B-');
