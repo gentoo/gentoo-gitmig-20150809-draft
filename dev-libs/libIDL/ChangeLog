@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libIDL
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.30 2004/12/16 10:21:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.31 2004/12/23 20:03:43 gmsoft Exp $
+
+  23 Dec 2004; Guy Martin <gmsoft@gentoo.org> libIDL-0.8.4.ebuild:
+  Stable on hppa.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> libIDL-0.8.4.ebuild:
   Stable on amd64.
