@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kooldock
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.5 2004/12/08 10:02:26 zypher Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.6 2005/01/13 03:07:32 weeve Exp $
+
+  12 Jan 2005; Jason Wever <weeve@gentoo.org> kooldock-0.3.ebuild:
+  Stable on sparc.
 
   08 Dec 2004; Marc Hildebrand <zypher@gentoo.org> kooldock-0.3.ebuild:
   Added ~ppc keyword.
