@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 97c82a17da9f8033de96e75011380e1c nntpswitch-0.11.ebuild 2070
+MD5 48b1336cd730a53b886cb09231412687 ChangeLog 404
+MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
+MD5 43a13b7a5681200f7038c535e4f18243 files/digest-nntpswitch-0.11 66
+MD5 712cf4e650fe165063e51192847bc374 files/nntpswitch.init.d 519
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrjb9I1lqEGTUzyQRAopCAKC6CezK+Q/5JdvBT52+YuCdn2QVlQCfUPHo
+UfOr7Q3na58jHFkHBfx96Cc=
+=cpJa
+-----END PGP SIGNATURE-----
