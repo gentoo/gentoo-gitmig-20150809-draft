@@ -1,9 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.15 2004/10/01 21:39:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4-r1.ebuild,v 1.1 2004/10/01 21:39:34 ticho Exp $
+
+inherit eutils
 
 DESCRIPTION="A transparent POP3-Proxy with virus-scanning capabilities."
-SRC_URI="mirror://sourceforge/pop3vscan/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pop3vscan/${P}.tar.gz
+	http://dev.gentoo.org/~ticho/portage/${P}-astaro.patch.gz"
 HOMEPAGE="http://pop3vscan.sf.net/"
 
 DEPEND="net-mail/ripmime
@@ -17,6 +20,10 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
+
+	# Some improvements, see bug #28504 for details (ticho 2004-10-01)
+	epatch ${WORKDIR}/${P}-astaro.patch
+
 	rm -f ${S}/ripmime/ripmime.a
 }
 
