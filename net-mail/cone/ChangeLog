@@ -1,0 +1,12 @@
+# ChangeLog for net-mail/cone
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cone/ChangeLog,v 1.1 2003/12/15 05:16:03 iggy Exp $
+
+*cone-0.56 (14 Dec 2003)
+
+  14 Dec 2003; Brian Jackson <iggy@gentoo.org> cone-0.56.ebuild:
+  new package, cone is a console based news/mail reader written by the author of
+  courier. This has been living in my overlay for awhile, and I've had a few
+  other people test it. Let me know if you give this a try and it works or
+  doesn't.
+
