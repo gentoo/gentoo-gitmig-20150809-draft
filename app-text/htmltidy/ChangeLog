@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.7 2003/02/01 18:26:10 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.8 2003/05/29 14:46:27 agriffis Exp $
+
+  29 May 2003; Aron Griffis <agriffis@gentoo.org> htmltidy-2.7.18-r1.ebuild:
+  Mark stable on alpha.  Remove deprecated sgml USE flag.
 
 *htmltidy-2.7.18-r1 (03 Jan 2003)
 

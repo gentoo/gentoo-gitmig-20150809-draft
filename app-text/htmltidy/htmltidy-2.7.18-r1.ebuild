@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18-r1.ebuild,v 1.3 2003/02/13 09:39:17 vapier Exp $ /home/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild, v 1.5 2002/07/25 11:07:00 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18-r1.ebuild,v 1.4 2003/05/29 14:46:27 agriffis Exp $ /home/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild, v 1.5 2002/07/25 11:07:00 cybersystem Exp $
 
-# convert from normalized gentoo version number to htmltidy's wacky date thing
+inherit eutils
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc alpha"
 
+# convert from normalized gentoo version number to htmltidy's wacky date thing
 parts=(${PV//./ })
 vers=$(printf "%02d%02d%02d" ${parts[0]} ${parts[1]} ${parts[2]})
 MY_P=tidy_src_${vers}
@@ -17,13 +18,12 @@ DESCRIPTION="fix mistakes and tidy up sloppy editing in HTML and XML"
 SRC_URI="http://tidy.sourceforge.net/src/old/${MY_P}.tgz"
 HOMEPAGE="http://tidy.sourceforge.net/"
 DEPEND=""
-IUSE="sgml xml"
+IUSE="xml"
 
 src_unpack() {
 	unpack ${MY_P}.tgz
 	cd ${S}
-	( use xml || use sgml ) &&
-		patch -p0 < ${FILESDIR}/htmltidy-dbpatch.diff
+	use xml && epatch ${FILESDIR}/htmltidy-dbpatch.diff
 
 	# skip "chown"
 	t=Makefile
