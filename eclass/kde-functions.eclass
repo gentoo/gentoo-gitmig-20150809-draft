@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.76 2004/12/13 00:43:01 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.77 2004/12/25 14:47:44 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -45,6 +45,173 @@ need-autoconf() {
 
 }
 
+# Usage: deprange minver maxver package [...]
+# For minver, a -rN part is supported. For both minver and maxver, _alpha/beta/pre/rc suffixes
+# are supported, but not _p suffixes or teminating letters (eg 3.3.1a).
+# This function echoes a string of the form (for package="kde-base/kdelibs")
+# || ( =kde-base/kdelibs-3.3.1-r1 ~kde-base/kdelibs-3.3.2 ~kde-base/kdelibs-3.3.3 )
+# This dep means versions of package from maxver through minver will be acceptable.
+# Note that only the kde versioning scheme is supported - ie x.y, and we only iterate through y
+# (i.e. x can contain more . separators).
+deprange() {
+	
+	# Assign, parse params
+	local MINVER=$1
+	local MAXVER=$2
+	shift; shift
+	
+	local BASEVER=${MINVER%.*}
+	local MINMINOR=${MINVER##*.}
+	local MAXMINOR=${MAXVER##*.}
+
+	while [ -n "$1" ]; do
+		local PACKAGE=$1
+		shift
+	
+		# If min version has -rN component, separate it 
+		if [ "$MINMINOR" != "${MINMINOR/-r}" ]; then
+			local MINREV=${MINMINOR##*-r}
+			MINMINOR=${MINMINOR%-r*}
+		fi
+		
+		# If min or max version has a _alpha/beta/pre/rc suffix, separate it.
+		# To understand why we initialize MINALPHA etc the way we do, see the loops
+		# that use them as bounds.
+		local MINALPHA=11
+		local MINBETA=11
+		local MINPRE=11
+		local MINRC=11
+		if [ "$MINMINOR" != "${MINMINOR/_}" ]; then
+			local MINSUFFIX="${MINMINOR##*_}"
+			MINMINOR="${MINMINOR%_*}"
+			if [ "$MINSUFFIX" != "${MINSUFFIX/alpha}" ]; then
+				MINALPHA="${MINSUFFIX##alpha}"
+				MINBETA=1
+				MINPRE=1
+				MINRC=1
+			elif [ "$MINSUFFIX" != "${MINSUFFIX/beta}" ]; then
+				MINBETA="${MINSUFFIX##beta}"
+				MINPRE=1
+				MINRC=1
+			elif [ "$MINSUFFIX" != "${MINSUFFIX/pre}" ]; then
+				MINPRE="${MINSUFFIX##pre}"
+				MINRC=1
+			elif [ "$MINSUFFIX" != "${MINSUFFIX/rc}" ]; then
+				MINRC="${MINSUFFIX##rc}"
+			else
+				eerror "deprange(): version suffix $MINSUFFIX (probably _pN) not supported"
+				return
+			fi
+		fi
+		
+		local MAXALPHA=0
+		local MAXBETA=0
+		local MAXPRE=0
+		local MAXRC=0
+		if [ "$MAXMINOR" != "${MAXMINOR/_}" ]; then
+			local MAXSUFFIX="${MAXMINOR##*_}"
+			MAXMINOR="${MAXMINOR%_*}"
+			if [ "$MAXSUFFIX" != "${MAXSUFFIX/alpha}" ]; then
+				MAXALPHA="${MAXSUFFIX##alpha}"
+			elif [ "$MAXSUFFIX" != "${MAXSUFFIX/beta}" ]; then
+				MAXBETA="${MAXSUFFIX##beta}"
+				MAXALPHA=10
+			elif [ "$MAXSUFFIX" != "${MAXSUFFIX/pre}" ]; then
+				MAXPRE="${MAXSUFFIX##pre}"
+				MAXALPHA=10
+				MAXBETA=10
+			elif [ "$MAXSUFFIX" != "${MAXSUFFIX/rc}" ]; then
+				MAXRC="${MAXSUFFIX##rc}"
+				MAXALPHA=10
+				MAXBETA=10
+				MAXPRE=10
+			else
+				eerror "deprange(): version suffix $MAXSUFFIX (probably _pN) not supported"
+				return
+			fi
+		fi
+		
+		# If we stripped a revision number from MINMINOR earlier, increase the main loop's lower bound,
+		# as we don't want to include a ~$PACKAGE-$BASEVER.$MINMINOR option.
+		# If the lower bound has a suffix, we want to increase the suffix and not MINMINOR itself.
+		if [ -n "$MINREV" ]; then
+			if [ -z "$MINSUFFIX" ]; then
+				let MINMINOR++
+			elif [ -n "$MINRC" ]; then
+				let MINRC++
+			elif [ -n "$MINPRE" ]; then
+				let MINPRE++
+			elif [ -n "$MINBETA" ]; then
+				let MINBETA++
+			elif [ -n "$MINALPHA" ]; then
+				let MINALPHA++
+			fi
+		fi
+		
+		# If we stripped a suffix from MAXMINOR, decrease it, since MAXMINOR without a suffix
+		# is outside the requested range
+		if [ -n "$MAXSUFFIX" ]; then
+			let MAXMINOR--
+		fi
+		
+		# Build list of versions in descending order:
+		# from upper suffix to highest normal (suffixless) version, then just normal versions, 
+		# then from lowest normal version to lowest suffix.
+		# Cf. the blocks that initialize MAXALPHA, MINBETA etc above to understand why
+		# the loops below work. 
+		local NEWDEP="|| ( "
+		local i
+		
+		# max version's allowed suffixes
+		for (( i=$MAXRC ; $i > 0 ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_rc$i"
+		done
+		for (( i=$MAXPRE ; $i > 0 ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_pre$i"
+		done
+		for (( i=$MAXBETA ; $i > 0 ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_beta$i"
+		done
+		for (( i=$MAXALPHA ; $i > 0 ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_alpha$i"
+		done
+		
+		# allowed normal versions
+		for (( i=$MAXMINOR ; $i >= $MINMINOR ; i-- )) ; do
+			NEWDEP="$NEWDEP ~$PACKAGE-$BASEVER.$i"
+		done
+		
+		# min version's allowed suffixes
+		for (( i=10 ; $i >= $MINRC ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_rc$i"
+		done
+		for (( i=10 ; $i >= $MINPRE ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_pre$i"
+		done
+		for (( i=10 ; $i >= $MINBETA ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_beta$i"
+		done
+		for (( i=10 ; $i >= $MINALPHA ; i-- )) ; do
+			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_alpha$i"
+		done
+		
+		# If min verson had -rN component, add all revisions from r99 to it in descending order
+		if [ -n "$MINREV" ]; then
+			let MINMINOR--
+			if [ -n "$MINSUFFIX" ]; then
+				BASEMINVER="$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX"
+			else
+				BASEMINVER="$PACKAGE-$BASEVER.${MINMINOR}"
+			fi
+			for (( i=99 ; $i >= $MINREV ; i-- )) ; do
+				NEWDEP="$NEWDEP =$BASEMINVER-r$i"
+			done
+		fi
+		
+		NEWDEP="$NEWDEP ) "
+		echo -n $NEWDEP
+	done
+}
 
 # ---------------------------------------------------------------
 # kde/qt directory management etc. functions, was kde-dirs.ebuild
@@ -87,18 +254,21 @@ need-kde() {
 	if [ -n "$NEED_KDE_DONT_ADD_KDELIBS_DEP" ]; then
 		# do nothing
 		debug-print "$FUNCNAME: NEED_KDE_DONT_ADD_KDELIBS_DEP set, complying with request"
-	elif [ "${INHERITED//kde-dist}" != "$INHERITED" ]; then
-		# if we're a kde-base package, we need an exact version of kdelibs
-		# to compile correctly.
-		# all kinds of special cases live here.
-		# goes to show this code is awfully inflexible, i guess.
-		# maybe i should look at relocating it...
-
-		RDEPEND="${RDEPEND} ~kde-base/kdelibs-${KDEVER}"
-		DEPEND="${DEPEND} ~kde-base/kdelibs-${KDEVER}"
-
+	elif [ -n "$KDEBASE" ]; then
+		# If we're a kde-base package, we need at least our own version of kdelibs.
+		# Also, split kde-base ebuilds are not updated with every KDE release, and so
+		# can require support of different versions of kdelibs.
+		# KM_DEPRANGE should contain 2nd and 3rd parameter to deprange:
+		# max and min KDE versions. E.g. KM_DEPRANGE="3.3.4 $PV".
+		if [ -n "$KM_DEPRANGE" ]; then
+			DEPEND="$DEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
+			RDEPEND="$RDEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
+		else
+			DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
+			RDEPEND="${RDEPEND} ~kde-base/kdelibs-$PV"
+		fi
 	else
-		# everything else only needs a minimum version
+		# Things outside kde-base only need a minimum version
 		min-kde-ver $KDEVER
 		RDEPEND="${RDEPEND} >=kde-base/kdelibs-${selected_version}"
 		DEPEND="${DEPEND} >=kde-base/kdelibs-${selected_version}"
