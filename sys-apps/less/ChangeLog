@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.9 2003/01/18 18:17:54 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.10 2003/02/08 21:17:30 azarah Exp $
+
+*less-378-r2 (08 Feb 2003)
+
+  08 Feb 2003; Martin Schlemmer <azarah@gentoo.org> less-378-r2.ebuild :
+
+  Change the LESS="-r" env variable to "-R".  This should close bug #13882.
 
 *less-378-r1 (26 Dec 2002)
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.13 2003/02/07 20:40:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.14 2003/02/08 21:18:38 azarah Exp $
+
+*groff-1.18.1-r1 (08 Feb 2003)
+
+  08 Feb 2003; Martin Schlemmer <azarah@gentoo.org> groff-1.18.1-r1.ebuild :
+  Do not segfault if no color is defined in input, bug #14329.
 
   07 Feb 2003; Guy Martin <gmsoft@gentoo.org> groff-1.18.1.ebuild :
   Added hppa to keywords.
