@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/gnome-ppp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.7 2004/10/07 12:46:51 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.8 2004/11/19 21:48:03 mrness Exp $
+
+*gnome-ppp-0.3.17 (19 Nov 2004)
+
+  19 Nov 2004; Alin Nastac <mrness@gentoo.org> gnome-ppp-0.3.16.ebuild,
+  +gnome-ppp-0.3.17.ebuild:
+  Added 0.3.17. Marked 0.3.16 stable on x86.
 
 *gnome-ppp-0.3.16 (07 Oct 2004)
 
