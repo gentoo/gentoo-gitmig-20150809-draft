@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.71.ebuild,v 1.3 2004/04/23 00:38:24 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.71.ebuild,v 1.4 2004/06/19 01:59:44 vapier Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha hppa ~mips ~ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 s390"
 IUSE="static"
 
 DEPEND="virtual/glibc"
@@ -27,7 +27,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# #26576 lsof 4.68 compile with -fstack-protector fails on Alpha
 	# -taviso (15 Aug 03)
 	use alpha && filter-flags -fstack-protector
