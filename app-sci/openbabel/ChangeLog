@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/openbabel
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/ChangeLog,v 1.8 2004/06/06 17:00:46 kugelfang Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/ChangeLog,v 1.9 2004/06/24 22:13:23 agriffis Exp $
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> openbabel-1.100.2.ebuild:
   Marked stable on amd64.

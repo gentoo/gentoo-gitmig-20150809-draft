@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.4 2004/05/11 06:55:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.5 2004/06/24 21:59:03 agriffis Exp $
 
 IUSE="opengl"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/lapack-config-1.0.0.ebuild,v 1.3 2004/06/05 23:02:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/lapack-config-1.0.0.ebuild,v 1.4 2004/06/24 22:07:40 agriffis Exp $
 
 DESCRIPTION="Utility to change the default LAPACK library"
 HOMEPAGE="http://www.gentoo.org/"

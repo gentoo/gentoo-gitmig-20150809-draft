@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.4 2004/06/06 16:57:31 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.5 2004/06/24 22:13:13 agriffis Exp $
 
 inherit eutils
 

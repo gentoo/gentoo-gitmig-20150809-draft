@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ng-spice-rework/ng-spice-rework-14.ebuild,v 1.3 2004/04/19 11:51:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ng-spice-rework/ng-spice-rework-14.ebuild,v 1.4 2004/06/24 22:12:22 agriffis Exp $
 
 DESCRIPTION="NGSpice - The Next Generation Spice (Circuit Emulator)"
 SRC_URI="http://www.geda.seul.org/dist/${P}.tar.gz"

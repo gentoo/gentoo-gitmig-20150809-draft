@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.1.2.ebuild,v 1.8 2004/03/30 05:14:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.1.2.ebuild,v 1.9 2004/06/24 22:10:56 agriffis Exp $
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://aros.ca.sandia.gov/~cljanss/mpqc/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.2.4.ebuild,v 1.1 2004/02/25 07:59:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.2.4.ebuild,v 1.2 2004/06/24 21:54:51 agriffis Exp $
 
 inherit flag-o-matic
 

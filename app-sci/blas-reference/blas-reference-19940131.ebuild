@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.6 2004/06/10 01:50:00 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.7 2004/06/24 21:53:57 agriffis Exp $
 
 Name="blas"
 DESCRIPTION="FORTRAN reference implementation of the BLAS (linear algebra lib)"

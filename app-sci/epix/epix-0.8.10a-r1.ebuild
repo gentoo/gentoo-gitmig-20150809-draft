@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.10a-r1.ebuild,v 1.4 2004/06/06 16:21:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.10a-r1.ebuild,v 1.5 2004/06/24 21:57:51 agriffis Exp $
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"

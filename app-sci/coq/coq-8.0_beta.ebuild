@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-8.0_beta.ebuild,v 1.1 2004/04/02 21:02:45 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-8.0_beta.ebuild,v 1.2 2004/06/24 21:56:14 agriffis Exp $
 
 IUSE="norealanalysis debug"
 

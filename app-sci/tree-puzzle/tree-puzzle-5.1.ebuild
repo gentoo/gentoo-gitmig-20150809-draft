@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/tree-puzzle-5.1.ebuild,v 1.2 2004/06/08 14:23:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/tree-puzzle-5.1.ebuild,v 1.3 2004/06/24 22:19:48 agriffis Exp $
 
 DESCRIPTION="Maximum likelihood analysis for nucleotide, amino acid, and two-state data."
 HOMEPAGE="http://www.tree-puzzle.de"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r1.ebuild,v 1.2 2004/06/02 14:12:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r1.ebuild,v 1.3 2004/06/24 21:57:40 agriffis Exp $
 
 
 S=${WORKDIR}/EMBOSS-${PV}

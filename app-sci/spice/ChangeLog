@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/spice
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.7 2004/03/30 19:53:56 spyderous Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.8 2004/06/24 22:18:33 agriffis Exp $
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; spice-3.5.5.ebuild:
   Change x11-base/xfree dependency to virtual/x11.

@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/scilab
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.16 2004/06/14 18:02:07 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.17 2004/06/24 22:16:56 agriffis Exp $
 
   14 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> scilab-2.7-r1.ebuild,
   scilab-2.7-r3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20020122.ebuild,v 1.5 2004/04/25 22:49:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20020122.ebuild,v 1.6 2004/06/24 22:02:53 agriffis Exp $
 
 DESCRIPTION="A waveform viewer analog data, such as spice simulations"
 HOMEPAGE="http://www.geda.seul.org/tools/gwave/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/ncbi-tools
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.13 2004/06/02 14:20:20 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.14 2004/06/24 22:11:23 agriffis Exp $
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> ncbi-tools-20031103.ebuild,
   ncbi-tools-20040202-r1.ebuild:

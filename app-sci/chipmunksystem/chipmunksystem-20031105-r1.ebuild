@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/chipmunksystem-20031105-r1.ebuild,v 1.2 2004/05/25 17:30:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/chipmunksystem-20031105-r1.ebuild,v 1.3 2004/06/24 21:55:28 agriffis Exp $
 
 DESCRIPTION="Chipmunk System - circuit schematic and simulation environment"
 

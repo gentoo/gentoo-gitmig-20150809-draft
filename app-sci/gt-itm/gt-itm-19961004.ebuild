@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gt-itm/gt-itm-19961004.ebuild,v 1.2 2004/05/25 05:10:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gt-itm/gt-itm-19961004.ebuild,v 1.3 2004/06/24 22:02:22 agriffis Exp $
 
 DESCRIPTION="A collection of routines to generate and analyze graphs using a wide variety of models for internetwork topology"
 HOMEPAGE="http://www.cc.gatech.edu/fac/Ellen.Zegura/graphs.html

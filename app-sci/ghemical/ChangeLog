@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/ghemical
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ChangeLog,v 1.11 2004/04/19 10:19:45 phosphan Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ChangeLog,v 1.12 2004/06/24 22:00:31 agriffis Exp $
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> ghemical-0.90.ebuild,
   ghemical-1.00.ebuild, files/ghemical-0.90-gentoo.patch:

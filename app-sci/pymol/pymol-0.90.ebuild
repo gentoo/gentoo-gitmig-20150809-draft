@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.90.ebuild,v 1.5 2004/04/19 12:16:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.90.ebuild,v 1.6 2004/06/24 22:15:39 agriffis Exp $
 
 inherit distutils eutils
 

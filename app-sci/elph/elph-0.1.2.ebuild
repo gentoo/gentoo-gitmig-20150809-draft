@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/elph/elph-0.1.2.ebuild,v 1.4 2003/09/11 01:02:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/elph/elph-0.1.2.ebuild,v 1.5 2004/06/24 21:57:24 agriffis Exp $
 
 DESCRIPTION="ELPH -- general-purpose Gibbs sampler for finding motifs in a set of DNA or protein sequences"
 HOMEPAGE="http://www.tigr.org/software/ELPH/index.shtml"

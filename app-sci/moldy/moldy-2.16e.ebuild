@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/moldy-2.16e.ebuild,v 1.12 2004/05/17 15:26:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/moldy-2.16e.ebuild,v 1.13 2004/06/24 22:10:45 agriffis Exp $
 
 IUSE="X"
 

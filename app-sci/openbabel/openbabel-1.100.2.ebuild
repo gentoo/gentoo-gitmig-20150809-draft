@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/openbabel-1.100.2.ebuild,v 1.6 2004/06/06 17:00:46 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/openbabel-1.100.2.ebuild,v 1.7 2004/06/24 22:13:23 agriffis Exp $
 
 DESCRIPTION="Open Babel interconverts file formats used in molecular modeling."
 

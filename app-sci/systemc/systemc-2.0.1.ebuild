@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.6 2004/06/08 01:50:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.7 2004/06/24 22:18:53 agriffis Exp $
 
 IUSE=""
 

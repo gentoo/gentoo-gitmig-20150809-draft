@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.14 2004/06/16 04:52:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.15 2004/06/24 22:01:48 agriffis Exp $
 
 inherit eutils
 

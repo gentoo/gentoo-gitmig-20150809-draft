@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/galculator/galculator-1.2.1.ebuild,v 1.2 2004/03/24 20:43:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/galculator/galculator-1.2.1.ebuild,v 1.3 2004/06/24 21:59:13 agriffis Exp $
 
 DESCRIPTION="A GTK2 based algebraic and RPN calculator"
 HOMEPAGE="http://galculator.sourceforge.net/"

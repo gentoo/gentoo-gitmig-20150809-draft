@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6-r1.ebuild,v 1.5 2004/06/06 16:23:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6-r1.ebuild,v 1.6 2004/06/24 21:58:28 agriffis Exp $
 
 inherit eutils
 IUSE=""

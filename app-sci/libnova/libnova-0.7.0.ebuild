@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/libnova/libnova-0.7.0.ebuild,v 1.3 2004/04/19 11:27:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/libnova/libnova-0.7.0.ebuild,v 1.4 2004/06/24 22:08:31 agriffis Exp $
 
 DESCRIPTION="Celestial Mechanics and Astronomical Calculation Library"
 HOMEPAGE="http://libnova.sourceforge.net/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/pymol
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.10 2004/04/20 14:23:36 phosphan Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.11 2004/06/24 22:15:39 agriffis Exp $
 
 *pymol-0.95 (20 Apr 2004)
 

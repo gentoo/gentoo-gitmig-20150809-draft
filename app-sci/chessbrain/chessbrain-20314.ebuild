@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/chessbrain-20314.ebuild,v 1.4 2004/04/19 09:36:22 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/chessbrain-20314.ebuild,v 1.5 2004/06/24 21:55:17 agriffis Exp $
 
 MY_PV=${PV}-03
 DESCRIPTION="distibuted computing project client"

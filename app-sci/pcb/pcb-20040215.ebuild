@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/pcb-20040215.ebuild,v 1.2 2004/05/25 17:29:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/pcb-20040215.ebuild,v 1.3 2004/06/24 22:14:35 agriffis Exp $
 
 DESCRIPTION="tool for the layout of printed circuit boards"
 HOMEPAGE="http://pcb.sourceforge.net/"

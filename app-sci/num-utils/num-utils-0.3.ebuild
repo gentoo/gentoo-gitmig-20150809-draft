@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/num-utils/num-utils-0.3.ebuild,v 1.2 2003/09/08 07:26:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/num-utils/num-utils-0.3.ebuild,v 1.3 2004/06/24 22:12:38 agriffis Exp $
 
 IUSE=""
 

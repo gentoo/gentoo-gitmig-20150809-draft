@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.6.ebuild,v 1.2 2004/06/15 17:01:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.6.ebuild,v 1.3 2004/06/24 22:21:58 agriffis Exp $
 
 DESCRIPTION="XEphem is the X Windows Ephemeris, and provides a scientific-grade solar system model, star charts, sky views, plus a whole lot more."
 SRC_URI="${PN}-${PV}.tar.gz"

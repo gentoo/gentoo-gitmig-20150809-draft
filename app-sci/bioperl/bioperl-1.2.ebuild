@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.6 2004/05/04 23:14:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.7 2004/06/24 21:52:29 agriffis Exp $
 
 inherit perl-module debug
 

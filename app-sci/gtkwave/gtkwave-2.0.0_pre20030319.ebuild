@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gtkwave/gtkwave-2.0.0_pre20030319.ebuild,v 1.6 2004/06/04 23:28:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gtkwave/gtkwave-2.0.0_pre20030319.ebuild,v 1.7 2004/06/24 22:02:31 agriffis Exp $
 
 MY_P=${P/_pre/pre3-}
 DESCRIPTION="A wave viewer for LXT and Verilog VCD/EVCD files"

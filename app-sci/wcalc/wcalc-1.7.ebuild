@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/wcalc/wcalc-1.7.ebuild,v 1.1 2004/05/17 12:01:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/wcalc/wcalc-1.7.ebuild,v 1.2 2004/06/24 22:21:14 agriffis Exp $
 
 DESCRIPTION="A flexible command-line scientific calculator"
 HOMEPAGE="http://w-calc.sourceforge.net"

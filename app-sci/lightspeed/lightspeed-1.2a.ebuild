@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lightspeed/lightspeed-1.2a.ebuild,v 1.6 2004/04/25 22:51:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lightspeed/lightspeed-1.2a.ebuild,v 1.7 2004/06/24 22:08:41 agriffis Exp $
 
 DESCRIPTION="Light Speed! is an OpenGL-based program developed to illustrate the effects of special relativity on the appearance of moving objects."
 HOMEPAGE="http://lightspeed.sourceforge.net/"

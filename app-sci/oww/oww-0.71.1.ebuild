@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/oww/oww-0.71.1.ebuild,v 1.2 2004/04/19 12:03:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oww/oww-0.71.1.ebuild,v 1.3 2004/06/24 22:14:04 agriffis Exp $
 
 DESCRIPTION="A one-wire weather station for Dallas Semiconductor"
 HOMEPAGE="http://oww.sourceforge.net/"

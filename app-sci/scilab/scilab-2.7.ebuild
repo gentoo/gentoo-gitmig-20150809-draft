@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7.ebuild,v 1.4 2004/04/21 18:07:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7.ebuild,v 1.5 2004/06/24 22:16:56 agriffis Exp $
 
 DESCRIPTION="scientific software package for numerical computations"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz"

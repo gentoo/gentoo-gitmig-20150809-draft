@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/gri
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/ChangeLog,v 1.10 2004/06/06 16:24:59 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/ChangeLog,v 1.11 2004/06/24 22:02:00 agriffis Exp $
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> gri-2.12.7.ebuild:
   Marked stable on amd64.

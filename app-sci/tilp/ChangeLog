@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/tilp
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.8 2004/05/10 06:54:08 phosphan Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.9 2004/06/24 22:19:26 agriffis Exp $
 
   10 May 2004; Patrick Kursawe <phosphan@gentoo.org> tilp-6.68-r2.ebuild:
   Adding missing libglade dependency (see bug #50451)

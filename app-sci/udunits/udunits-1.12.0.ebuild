@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.7 2004/05/12 19:10:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.8 2004/06/24 22:19:59 agriffis Exp $
 
 inherit eutils
 

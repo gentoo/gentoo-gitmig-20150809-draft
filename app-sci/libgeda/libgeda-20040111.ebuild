@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/libgeda/libgeda-20040111.ebuild,v 1.3 2004/06/04 23:17:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/libgeda/libgeda-20040111.ebuild,v 1.4 2004/06/24 22:08:21 agriffis Exp $
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgeda - this library provides functions needed for a working gEDA/gaf system"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/hmmer/hmmer-2.3.1.ebuild,v 1.3 2003/11/19 04:29:39 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/hmmer/hmmer-2.3.1.ebuild,v 1.4 2004/06/24 22:03:42 agriffis Exp $
 
 DESCRIPTION="HMMER - Biological sequence analysis with profile HMMs"
 HOMEPAGE="http://hmmer.wustl.edu/"

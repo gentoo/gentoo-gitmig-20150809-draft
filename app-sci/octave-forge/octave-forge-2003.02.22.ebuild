@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.02.22.ebuild,v 1.4 2004/03/09 06:44:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.02.22.ebuild,v 1.5 2004/06/24 22:13:13 agriffis Exp $
 
 DESCRIPTION="A collection of custom scripts, functions and extensions for GNU Octave"
 HOMEPAGE="http://octave.sourceforge.net/"

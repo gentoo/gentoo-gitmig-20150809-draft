@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gibbs/gibbs-1995.9.ebuild,v 1.1 2004/05/27 12:25:58 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gibbs/gibbs-1995.9.ebuild,v 1.2 2004/06/24 22:00:41 agriffis Exp $
 
 DESCRIPTION="A Gibbs sampling algorithm for local alignment of subtle sequence signals in multiple protein sequences."
 

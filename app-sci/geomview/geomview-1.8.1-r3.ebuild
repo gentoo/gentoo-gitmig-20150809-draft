@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/geomview-1.8.1-r3.ebuild,v 1.4 2004/04/20 12:27:15 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/geomview-1.8.1-r3.ebuild,v 1.5 2004/06/24 22:00:10 agriffis Exp $
 
 inherit eutils flag-o-matic
 

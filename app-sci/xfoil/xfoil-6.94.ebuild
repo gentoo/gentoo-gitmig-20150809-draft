@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/xfoil-6.94.ebuild,v 1.3 2004/04/27 08:29:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/xfoil-6.94.ebuild,v 1.4 2004/06/24 22:22:09 agriffis Exp $
 
 inherit gcc
 
