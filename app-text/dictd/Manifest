@@ -1,7 +1,3 @@
-MD5 db195f59a1dc64027c0539ded6010128 ChangeLog 3058
-MD5 06b747d59e096e96ff0fbc8a2c51d18a dictd-1.8.0.ebuild 1539
-MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
-MD5 088978c6b77f0d5fec15cba114a0374c dictd-1.9.11-r1.ebuild 1259
 MD5 a97d38377255fef9ec22c3bf4c23fd6b files/dictd-1.8.0-gcc33-multiline-string-fix.patch 542
 MD5 7182349beb0e6f90f1d2c46cc8c5a3bc files/digest-dictd-1.8.0 63
 MD5 acfe9cbde6329db158f6a1b458be342c files/digest-dictd-1.9.11-r1 64
@@ -20,3 +16,7 @@ MD5 3335ad76da5e24bb00866d09755b0105 files/1.9.11-r1/dictd 1770
 MD5 33b467f10a606af7fa36782d67b67616 files/1.9.11-r1/dictd.conf 569
 MD5 2063896920a5b204d6d5f7090786db73 files/1.9.11-r1/dictd.confd 135
 MD5 b8cabf913876e544d919c7f20ff8db9e files/1.9.11-r1/site.info 235
+MD5 db195f59a1dc64027c0539ded6010128 ChangeLog 3058
+MD5 a084d41ed8118c8f8f2cdfba98a93df4 dictd-1.8.0.ebuild 1536
+MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+MD5 088978c6b77f0d5fec15cba114a0374c dictd-1.9.11-r1.ebuild 1259

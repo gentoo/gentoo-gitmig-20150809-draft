@@ -1,4 +1,4 @@
-MD5 a625ce3a4d01ebae9c0a7fa4d4e9ae05 ChangeLog 503
-MD5 56c21979a77ec2c42d411a33782ad7b5 barcode-0.98.ebuild 710
-MD5 127c361eefd0c5e27ce6ac6a650714ac files/digest-barcode-0.98 64
 MD5 b7499c2cc29b3b9a43afb0cbe82f59c0 files/0.98-info.patch 441
+MD5 127c361eefd0c5e27ce6ac6a650714ac files/digest-barcode-0.98 64
+MD5 a625ce3a4d01ebae9c0a7fa4d4e9ae05 ChangeLog 503
+MD5 6762f3f2a28e1266eabb97c3d37c0030 barcode-0.98.ebuild 676

@@ -1,4 +1,4 @@
-MD5 c875bd5e0d427cf4192a7801e6cc1c46 ChangeLog 421
-MD5 a6b7da5f834b0ec69288886696550d72 expander-2.0.5.ebuild 1211
 MD5 e1b1684ae191201bc6a5f971c6152ad6 files/digest-expander-2.0.5 74
 MD5 70dbffef31eddd8694e602fd01a68822 files/expander-2.0.5-gentoo.patch 2067
+MD5 c875bd5e0d427cf4192a7801e6cc1c46 ChangeLog 421
+MD5 176aa4f4fe1e29759ae40116d0aa8fd8 expander-2.0.5.ebuild 1206
