@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0.ebuild,v 1.4 2003/03/21 14:29:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0.ebuild,v 1.5 2003/03/23 21:26:26 sethbc Exp $
  
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.waimea.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 DEPEND="virtual/x11 
 	media-libs/imlib2
