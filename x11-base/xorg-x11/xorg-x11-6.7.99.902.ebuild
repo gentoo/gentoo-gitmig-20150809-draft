@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.3 2004/08/23 03:46:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.4 2004/08/25 07:28:52 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -115,7 +115,7 @@ cflag_setup() {
 	# Set up CFLAGS
 	filter-flags "-funroll-loops"
 
-	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe -fomit-frame-pointer -g"
+	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe -fomit-frame-pointer -g -gstabs+ -gstabs -ggdb"
 	# arch-specific section added by popular demand
 	case "${ARCH}" in
 		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
@@ -747,33 +747,39 @@ setup_dynamic_libgl() {
 }
 
 strip_execs() {
-	einfo "Stripping binaries and libraries..."
-	# This bit I got from Redhat ... strip binaries and drivers ..
-	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
-	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
-	           grep -v ' shared object,' | \
-	           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
-	do
-	if [ -f ${x} ]
-		then
-			# Dont do the modules ...
-			if [ "${x/\/usr\/X11R6\/lib\/modules}" = "${x}" ]
+	if use debug
+	then
+		ewarn "Debug build turned on by USE=debug"
+		ewarn "NOT stripping binaries and libraries"
+	else
+		einfo "Stripping binaries and libraries..."
+		# This bit I got from Redhat ... strip binaries and drivers ..
+		# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+		for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+		           grep -v ' shared object,' | \
+		           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+		do
+		if [ -f ${x} ]
+			then
+				# Dont do the modules ...
+				if [ "${x/\/usr\/X11R6\/lib\/modules}" = "${x}" ]
+				then
+					echo "`echo ${x} | sed -e "s|${D}||"`"
+					strip ${x} || :
+				fi
+			fi
+		done
+		# Now do the libraries ...
+		for x in ${D}/usr/{lib,lib/opengl/${PN}/lib}/*.so.* \
+			${D}/usr/X11R6/{lib,lib/X11/locale/lib/common}/*.so.*
+		do
+			if [ -f ${x} ]
 			then
 				echo "`echo ${x} | sed -e "s|${D}||"`"
-				strip ${x} || :
+				strip --strip-debug ${x} || :
 			fi
-		fi
-	done
-	# Now do the libraries ...
-	for x in ${D}/usr/{lib,lib/opengl/${PN}/lib}/*.so.* \
-		${D}/usr/X11R6/{lib,lib/X11/locale/lib/common}/*.so.*
-	do
-		if [ -f ${x} ]
-		then
-			echo "`echo ${x} | sed -e "s|${D}||"`"
-			strip --strip-debug ${x} || :
-		fi
-	done
+		done
+	fi
 }
 
 setup_config_files() {
