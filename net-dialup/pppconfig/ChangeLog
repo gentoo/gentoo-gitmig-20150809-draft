@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/pppconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.8 2004/06/24 22:31:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.9 2004/11/20 09:31:03 mrness Exp $
+
+*pppconfig-2.3.9 (20 Nov 2004)
+
+  20 Nov 2004; Alin Nastac <mrness@gentoo.org> -pppconfig-2.0.8.ebuild,
+  +pppconfig-2.3.9.ebuild:
+  Version bump. Remove obsolete version.
 
   29 Nov 2003; Heinrich Wendel <lanius@gentoo.org> pppconfig-2.2.0.ebuild:
   fixed bug #34707, wrong sourcedir was set
