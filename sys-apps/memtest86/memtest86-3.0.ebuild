@@ -33,6 +33,8 @@ pkg_setup() {
 
 
 src_compile() {
+	cd ${S}
+	patch -p1<${FILESDIR}/memtest86-3.0-gcc3-gentoo.patch
 	emake || die
 }
 
