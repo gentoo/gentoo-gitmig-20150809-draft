@@ -1,0 +1,43 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/files/ivam2.init,v 1.1 2004/11/24 06:31:03 mrness Exp $
+
+opts="start stop reload info"
+
+depend() {
+	need isdn
+}
+
+start() {
+	local CONFIG="/etc/ivam2/ivam2.conf"
+ 
+	if [ ! -e "$CONFIG" ] ; then
+		eerror "You're missing ${CONFIG}"
+		return 1
+	fi
+
+	source "$CONFIG"
+
+	ebegin "Starting ISDN Voice Box Answering Machine"
+	start-stop-daemon --start --quiet --pidfile /var/run/ivamd.pid \
+		--exec /usr/sbin/ivamd -- ${ARGS} 2>/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ISDN Voice Box Answering Machine"
+	start-stop-daemon --stop --quiet --retry 5 --pidfile /var/run/ivamd.pid >/dev/null && \
+	/usr/bin/find /var/lock -user ivam -prune | /usr/bin/xargs /bin/rm -f /var/run/ivamd.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading ISDN Voice Box Answering Machine"
+	/usr/sbin/ivamd --reload 2>/dev/null
+	eend $?
+}
+
+info() {
+	/usr/sbin/ivamd --info 
+}
