@@ -1,0 +1,32 @@
+diff -urN mailman-2.1.5-orig/bin/check_perms mailman-2.1.5/bin/check_perms
+--- mailman-2.1.5-orig/bin/check_perms	2003-03-31 14:07:55.000000000 -0600
++++ mailman-2.1.5/bin/check_perms	2004-07-21 17:24:34.810274976 -0500
+@@ -313,6 +313,8 @@
+         print _('checking permissions on list data')
+     # BAW: This needs to be converted to the Site module abstraction
+     for dir in os.listdir(mm_cfg.LIST_DATA_DIR):
++        if not S_ISDIR(statmode(os.path.join(mm_cfg.LIST_DATA_DIR,dir))):
++            continue
+         for file in checkfiles:
+             path = os.path.join(mm_cfg.LIST_DATA_DIR, dir, file)
+             if STATE.VERBOSE:
+diff -urN mailman-2.1.5-orig/bin/update mailman-2.1.5/bin/update
+--- mailman-2.1.5-orig/bin/update-old	2005-02-11 22:48:41.000000000 -0800
++++ mailman-2.1.5-orig/bin/update	2005-02-11 23:17:41.219729400 -0800
+@@ -34,6 +34,7 @@
+ """
+ 
+ import os
++import stat
+ import md5
+ import sys
+ import time
+@@ -425,7 +426,7 @@
+     # Now update for the Mailman 2.1.5 qfile format.  For every filebase in
+     # the qfiles/* directories that has both a .pck and a .db file, pull the
+     # data out and re-queue them.
+-    for dirname in os.listdir(mm_cfg.QUEUE_DIR):
++    for dirname in [x for x in os.listdir(mm_cfg.QUEUE_DIR) if stat.S_ISDIR(os.stat(os.path.join(mm_cfg.QUEUE_DIR,x)).st_mode)]:
+         dirpath = os.path.join(mm_cfg.QUEUE_DIR, dirname)
+         if dirpath == mm_cfg.BADQUEUE_DIR:
+             # The files in qfiles/bad can't possibly be pickles
