@@ -1,6 +1,6 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-1.9_alpha6.ebuild,v 1.6 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-1.9_alpha6.ebuild,v 1.7 2003/09/29 21:14:33 mholzer Exp $
 
 inherit distutils
 IUSE=""
