@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.20 2004/04/21 00:37:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.21 2004/05/04 16:48:54 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -94,7 +94,7 @@ RDEPEND="${RDEPEND}
    dev-libs/expat
    sys-libs/zlib 
    virtual/mta
-   sys-apps/file
+   >=sys-apps/file-4.02
    yaz? ( dev-libs/yaz )
    doc? ( app-doc/php-docs )
    gmp? ( dev-libs/gmp )"
