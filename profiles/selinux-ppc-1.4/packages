@@ -23,7 +23,8 @@
 *>=net-misc/openssh-3.0.1_p1
 *>=sys-apps/coreutils-5.0
 *sys-apps/findutils
-*sys-apps/procps
+# locking procps, selinux code is gone in newer versions
+*=sys-apps/procps-3.1.12
 *sys-apps/psmisc
 *sys-apps/util-linux
 *sys-apps/pam-login
