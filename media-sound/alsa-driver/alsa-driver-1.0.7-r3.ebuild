@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r3.ebuild,v 1.3 2004/12/03 23:49:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r3.ebuild,v 1.4 2004/12/05 12:44:55 johnm Exp $
 
 IUSE="oss doc"
-
 inherit linux-mod flag-o-matic eutils
 
 MY_P=${P/_rc/rc}
@@ -18,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/modutils
-	 ~media-sound/alsa-headers-${PV}"
+		~media-sound/alsa-headers-${PV}"
 
 DEPEND="${RDEPEND}
 		sys-devel/patch
@@ -109,7 +108,9 @@ src_install() {
 }
 
 pkg_setup() {
-	CONFIG_CHECK="CONFIG_SOUND !CONFIG_SND"
+	CONFIG_CHECK="SOUND !SND"
+	SND_ERROR="ALSA is already compiled into the kernel."
+	SOUND_ERROR="Your kernel doesn't have sound support enabled."
 
 	linux-mod_pkg_setup
 
