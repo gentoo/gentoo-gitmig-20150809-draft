@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.7 2002/05/22 16:54:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.8 2002/06/14 01:26:12 spider Exp $
+
+gtkmm-1.2.9 (13 Jun 2002)
+  13 Jun 2002; Spider <spider@gentoo.org> gtkmm-1.2.9-r2.ebuild :
+  fixing up some dependencies before gnome2 release. I'm not maintaining this, just fixing bugs I've helped introduce :)
+  
 
 *gtkmm-1.2.9 (22 May 2002)
 
