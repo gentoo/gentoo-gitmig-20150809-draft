@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.1 2002/10/30 02:22:38 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.2 2002/11/21 00:31:50 nall Exp $
 
 MY_P="stuffit520.611linux-i386"
 DESCRIPTION="Aladdin Software's StuffIt and StuffIt Expander"
@@ -16,7 +16,7 @@ RDEPEND=""
 
 S=${WORKDIR}
 INSTALLDIR="/opt/stuffit"
-#RESTRICT="fetch nostrip"
+RESTRICT="fetch nostrip"
 
 pkg_setup() {
 	if [ ${ARCH} != "x86" ] ; then
