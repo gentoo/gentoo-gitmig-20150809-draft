@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/gnus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.4 2003/10/03 02:26:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.5 2003/10/27 18:38:10 rac Exp $
+
+*gnus-1.71 (27 Oct 2003)
+
+  27 Oct 2003; <rac@gentoo.org> gnus-1.71.ebuild:
+  Oort Gnus
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> gnus-1.65.ebuild:
   Stable on alpha
