@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/dox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.2 2003/02/12 03:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.3 2003/05/15 13:05:32 phosphan Exp $
+
+  15 May 2003; Patrick Kursawe <phosphan@gentoo.org> dox-1.1.ebuild:
+  Corrected homepage (bug 21055)
 
 *dox-1.1 (21 Jun 2002)
 
