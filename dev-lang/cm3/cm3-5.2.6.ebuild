@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.6.ebuild,v 1.4 2003/07/18 18:59:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.6.ebuild,v 1.5 2003/11/12 22:37:26 vapier Exp $
+
+inherit fixheadtails
 
 DESCRIPTION="Critical Mass Modula-3 compiler"
 HOMEPAGE="http://www.elegosoft.com/cm3/"
@@ -11,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="tcltk"
 
-DEPEND="tcltk? ( dev-lang/tcl )
+RDEPEND="tcltk? ( dev-lang/tcl )"
+DEPEND="${RDEPEND}
 	sys-devel/gcc
 	dev-lang/cm3-bin"
 
@@ -24,6 +27,26 @@ unset M3GC_SIMPLE
 [ `use tcltk` ] \
 	&& HAVE_TCL="yes" \
 	|| HAVE_TCL="no"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	ht_fix_file \
+		m3-comm/rdwr/test/john/src/Main.m3 \
+		m3-demo/mentor/src/unionfind/junoLogs/reorder \
+		m3-sys/m3cc/gcc/config.guess--cfl \
+		m3-sys/m3cc/gcc/configure \
+		m3-sys/m3cc/gcc/configure--cfl \
+		m3-sys/m3cc/gcc/contrib/test_summary \
+		m3-sys/m3cc/gcc/gcc/configure \
+		m3-sys/m3cc/gcc/gcc/configure--cfl \
+		m3-sys/m3cc/gcc/gcc/configure.in \
+		m3-sys/m3cc/gcc/ltcf-c.sh \
+		m3-sys/m3cc/gcc/ltcf-gcj.sh \
+		m3-sys/m3gdb/gdb/configure \
+		m3-sys/m3tests/src/m3makefile \
+		scripts/pkginfo.sh
+}
 
 src_compile() {
 	cd scripts
