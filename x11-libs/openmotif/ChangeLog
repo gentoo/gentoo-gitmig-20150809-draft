@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.39 2004/02/25 11:00:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.40 2004/03/07 04:35:59 geoman Exp $
+
+  06 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  openmotif-2.1.30-r4.ebuild:
+  Added ~mips keyword.
 
 *openmotif-2.1.30-r5 (25 Feb 2004)
 
