@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.4 2004/06/05 22:30:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.5 2004/06/24 22:53:55 agriffis Exp $
 
 DESCRIPTION="Meta package for all fortune-mod packages"
 

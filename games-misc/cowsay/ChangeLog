@@ -1,6 +1,6 @@
 # ChangeLog for games-misc/cowsay
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.6 2004/04/15 18:06:50 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.7 2004/06/24 22:53:34 agriffis Exp $
 
   15 Apr 2004; Guy Martin <gmsoft@gentoo.org> cowsay-3.03.ebuild:
   Marked stable on hppa.

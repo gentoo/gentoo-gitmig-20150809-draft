@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/fortune-mod-smac-0.1.ebuild,v 1.7 2004/05/04 00:21:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/fortune-mod-smac-0.1.ebuild,v 1.8 2004/06/24 22:56:11 agriffis Exp $
 
 DESCRIPTION="Quotes from the Alpha Centauri: Alien Crossfire tech tree"
 HOMEPAGE="http://homepages.ihug.com.au/~alana/"

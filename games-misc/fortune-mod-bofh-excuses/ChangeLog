@@ -1,6 +1,6 @@
 # ChangeLog for games-misc/fortune-mod-bofh-excuses
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-bofh-excuses/ChangeLog,v 1.3 2004/03/19 09:20:18 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-bofh-excuses/ChangeLog,v 1.4 2004/06/24 22:54:05 agriffis Exp $
 # AUTHOR: Lim Swee Tat <st_lim@stlim.net>
 
 *fortune-mod-bofh-excuses-1.2 (16 Aug 2002)
