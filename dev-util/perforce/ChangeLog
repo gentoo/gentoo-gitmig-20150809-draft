@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/perforce
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.4 2003/12/14 09:39:28 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.5 2004/01/14 00:27:07 stuart Exp $
+
+  14 Jan 2004; Stuart Herbert <stuart@gentoo.org> perforce-2002.2-r1.ebuild,
+  perforce-2002.2.ebuild:
+  Fix for coreutils no longer supporting user.group syntax; fixes bug #38032
 
 *perforce-2003.1 (14 Dec 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/perforce-2002.2-r1.ebuild,v 1.1 2003/10/02 08:54:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/perforce-2002.2-r1.ebuild,v 1.2 2004/01/14 00:27:07 stuart Exp $
 
 DESCRIPTION="Commercial version control system"
 HOMEPAGE="http://www.perforce.com/"
@@ -39,18 +39,18 @@ src_install()
 	dosbin p4p
 	dosbin p4ftpd
 
-	fowners perforce.perforce /usr/sbin/p4d
-	fowners perforce.perforce /usr/sbin/p4p
-	fowners perforce.perforce /usr/sbin/p4ftpd
-	fowners perforce.perforce /usr/sbin/p4web
+	fowners perforce:perforce /usr/sbin/p4d
+	fowners perforce:perforce /usr/sbin/p4p
+	fowners perforce:perforce /usr/sbin/p4ftpd
+	fowners perforce:perforce /usr/sbin/p4web
 
 	touch ${D}/var/log/perforce
-	fowners perforce.perforce /var/log/perforce
+	fowners perforce:perforce /var/log/perforce
 
 	doman p4.1 p4d.1
 
 	keepdir /var/lib/perforce
-	fowners perforce.perforce /var/lib/perforce
+	fowners perforce:perforce /var/lib/perforce
 
 	exeinto /etc/init.d
 	doexe ${MY_FILES}/init.d/perforce
