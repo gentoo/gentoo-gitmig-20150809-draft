@@ -1,4 +1,14 @@
-MD5 b5ff571ba07c0de9483f33e5ab8bf6f3 nzbget-0.1.1.ebuild 812
-MD5 42efa83e0ef3ed9ca3c291fe70279c20 ChangeLog 554
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5cbb383de5de1250b376ad901eca31d5 nzbget-0.1.1.ebuild 811
 MD5 14594f19e320cd8f1735a5e2e9a00f88 metadata.xml 357
+MD5 7d4fc2556e93dc56340b868bbe39843f ChangeLog 650
 MD5 e8f8555aeb850fa1657b4ae1e04edd77 files/digest-nzbget-0.1.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+RDAAXomK8S72HoRAuwXAJ4/YLphjWMXBqoRgab6rdTfBHi5YACbB+v7
+Q0wSqsdOk4TZ+g3yzO962nI=
+=w4YX
+-----END PGP SIGNATURE-----

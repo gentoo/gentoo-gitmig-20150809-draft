@@ -1,6 +1,9 @@
 # ChangeLog for net-news/nzbget
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nzbget/ChangeLog,v 1.4 2004/06/25 00:26:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nzbget/ChangeLog,v 1.5 2004/07/17 11:41:43 swegener Exp $
+
+  17 Jul 2004; Sven Wegener <swegener@gentoo.org> nzbget-0.1.1.ebuild:
+  Marked stable on x86.
 
   19 Jun 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Assigned package to the net-news herd.
