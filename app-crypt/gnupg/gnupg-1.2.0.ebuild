@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.0.ebuild,v 1.1 2002/10/18 10:38:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.0.ebuild,v 1.2 2002/10/21 06:34:54 aliz Exp $
 
-IUSE="nls"
+IUSE="zlib ldap nls"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
@@ -13,32 +13,33 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
-DEPEND=">=sys-libs/zlib-1.1.3"
+DEPEND="sys-devel/perl
+	zlib? ( sys-libs/zlib )
+	ldap? ( net-nds/openldap )"
 RDEPEND="nls? ( sys-devel/gettext )"
-	
+
 src_compile() {
 	local myconf
-	use nls || myconf="--disable-nls"
+	use nls || myconf="${myconf} --disable-nls"
+	use ldap || myconf="${myconf} --disable-ldap"
+	use zlib || myconf="${myconf} --with-included-zlib"
 
+	#Still needed?
 	# Bug #6387, --enable-m-guard causes bus error on sparcs
 	if [ "${ARCH}" != "sparc" -a "${ARCH}" != "sparc64" ]; then
 		myconf="${myconf} --enable-m-guard"
 	fi
-	econf \
-		--enable-static-rnd=linux \
-		--host="${CHOST}" \
-		${myconf} || die
 
+	econf ${myconf} || die
 	emake || make || die
 }
 
 src_install () {
 	make DESTDIR="${D}" install || die
-	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS
-	dodoc README TODO VERSION
+	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS README THANKS TODO VERSION
 	docinto doc
 	cd doc
-	dodoc  FAQ HACKING DETAILS ChangeLog
+	dodoc FAQ HACKING DETAILS ChangeLog OpenPGP
 	docinto sgml
 	dodoc gpg.sgml gpgv.sgml
 	dohtml faq.html
@@ -51,9 +52,4 @@ pkg_postinst() {
 	einfo "gpg is installed SUID root to make use of protected memory space"
 	einfo "This is needed in order to have a secure place to store your passphrases,"
 	einfo "etc. at runtime but may make some sysadmins nervous"
-	echo  " "
-	einfo "Note: this version is not backwards compatible with gnupg-1.0.6."
-	einfo "	  To update your keyrings run: gpg --rebuild-keydb-caches"
-	einfo "	  To backup your keyrings run: gpg --export-ownertrust"
-	einfo "	  and copy the keyrings out of your ~/.gnupg directory."
 }

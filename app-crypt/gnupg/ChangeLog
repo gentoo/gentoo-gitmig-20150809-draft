@@ -1,8 +1,12 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.7 2002/10/18 10:38:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.8 2002/10/21 06:34:54 aliz Exp $
 
 *gnupg-1.2.0 (18 Oct 2002)
+
+  21 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gnupg-1.2.0.ebuild :
+  Updated ebuild, contributed by Jacob Perkins <jap1@ionet.net> in #8216. 
+  Adds ldap support. 
 
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gnupg-1.2.0.ebuild :
   Version bump, found by Daniel Seyffer <gentoo-bugs@seyffer.de> in #8778.
