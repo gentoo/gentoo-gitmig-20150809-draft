@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2-r1.ebuild,v 1.6 2003/07/25 11:19:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2-r1.ebuild,v 1.7 2003/08/03 04:49:21 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
-IUSE="tiff doc jpeg debug"
+DESCRIPTION="Gimp ToolKit +"
+HOMEPAGE="http://www.gtk.org/"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
+
+LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
-
-DESCRIPTION="Gimp ToolKit + "
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
-HOMEPAGE="http://www.gtk.org/"
-LICENSE="LGPL-2.1"
+IUSE="tiff doc jpeg debug"
 
 # virtual/x11
 # Need this specific xfree version to get bugfree xinput support (#20407)
@@ -23,7 +23,6 @@ RDEPEND=">=x11-base/xfree-4.3.0-r3
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9 )"
@@ -51,26 +50,17 @@ src_compile() {
 	replace-flags "-O3" "-O2"
 
 	elibtoolize
-	
-	local myconf=""
 
-	use doc \
-		&& myconf="${myconf} --enable-gtk-doc" \
-		|| myconf="${myconf} --disable-gtk-doc"
-	use png \
-		&& myconf="${myconf} --with-libpng" \
-		||  myconf="${myconf} --without-libpng"
-	use jpeg \
-		&& myconf="${myconf} --with-libjpeg" \
-		||  myconf="${myconf} --without-libjpeg"
-	use tiff \
-		&& myconf="${myconf} --with-libtiff" \
-		||  myconf="${myconf} --without-libtiff"
-	use debug \
-		&& myconf="${myconf}  --enable-debug" \
-		|| myconf="${myconf}  --disable-debug"
-		
-	econf --with-gdktarget=x11 --with-xinput=xfree ${myconf} || die
+	econf \
+		`use_enable doc gtk-doc` \
+		`use_with png libpng` \
+		`use_with jpeg libjpeg` \
+		`use_with tiff libtiff` \
+		`use_enable debug` \
+		--with-gdktarget=x11 \
+		--with-xinput=xfree \
+		${myconf} \
+		|| die
 
 	# gtk+ isn't multithread friendly due to some obscure code generation bug
 	make || die

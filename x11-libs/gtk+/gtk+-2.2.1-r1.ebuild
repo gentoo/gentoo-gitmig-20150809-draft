@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1-r1.ebuild,v 1.3 2003/07/19 23:36:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1-r1.ebuild,v 1.4 2003/08/03 04:49:21 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
-IUSE="tiff doc jpeg"
+DESCRIPTION="Gimp ToolKit +"
+HOMEPAGE="http://www.gtk.org/"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
+
+LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
-
-S="${WORKDIR}/${P}"
-DESCRIPTION="Gimp ToolKit + "
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
-HOMEPAGE="http://www.gtk.org/"
-LICENSE="LGPL-2.1"
+IUSE="tiff doc jpeg debug"
 
 RDEPEND="virtual/x11
 	>=dev-libs/glib-2.2.0
@@ -21,7 +20,6 @@ RDEPEND="virtual/x11
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9 )"
@@ -58,9 +56,7 @@ src_compile() {
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
 	use jpeg ||  myconf="${myconf} --without-libjpeg"
 	use tiff ||  myconf="${myconf} --without-libtiff"
-	if [ -n "$DEBUGBUILD" ]; then
-		myconf="${myconf}  --enable-debug"
-	fi
+	use debug && myconf="${myconf}  --enable-debug"
 		
 	econf --with-gdktarget=x11 ${myconf} || die
 

@@ -1,10 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r9.ebuild,v 1.9 2003/03/16 13:14:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r9.ebuild,v 1.10 2003/08/03 04:49:21 vapier Exp $
 
-IUSE="nls"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP Toolkit"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
@@ -12,32 +9,29 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
 	http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
 	http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gentoo.diff.bz2"
 
+LICENSE="LGPL-2.1"
+SLOT="1"
+KEYWORDS="x86 ppc sparc alpha hppa"
+IUSE="nls debug"
+
 DEPEND="virtual/x11
 	=dev-libs/glib-1.2*
 	nls? ( sys-devel/gettext
 	dev-util/intltool )"
 
-SLOT="1"
-LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha hppa"
-
 src_unpack() {
-
 	unpack ${P}.tar.gz
-	
 	cd ${S}/..
-	bzcat ${DISTDIR}/gtk+-1.2.10-r8-gentoo.diff.bz2 | patch -p0
-	
+	epatch ${DISTDIR}/gtk+-1.2.10-r8-gentoo.diff.bz2
 }
 
 src_compile() {
-
 	libtoolize --copy --force
 
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 
-	if [ "${DEBUGBUILD}" ]
+	if [ `use debug` ]
 	then
 		myconf="${myconf} --enable-debug=yes"
 	else
