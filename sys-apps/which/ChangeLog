@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/which
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.19 2004/03/05 18:16:20 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.20 2004/03/23 18:51:48 mholzer Exp $
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> which-2.14.ebuild:
+  fixing depend qa issue. see 45343.
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> which-2.16.ebuild:
   adding initial s390 support

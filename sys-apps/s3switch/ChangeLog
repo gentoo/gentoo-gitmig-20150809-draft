@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/s3switch
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/ChangeLog,v 1.5 2003/02/12 09:07:00 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/ChangeLog,v 1.6 2004/03/23 18:53:23 mholzer Exp $
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> s3switch-19990826.ebuild:
+  fixing depend qa issue. see 45343.
 
 *s3switch-19990826 (28 May 2002)
 
