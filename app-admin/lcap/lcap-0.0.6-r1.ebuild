@@ -1,35 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.6 2004/06/24 21:30:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.7 2004/06/25 17:54:02 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="kernel capability remover"
-
-# The normal homepage of the program was not reachable by the time
-# this ebuild was written
-HOMEPAGE="http://packages.debian.org/unstable/admin/lcap.html"
-
-# same for the sources
+# Real homepage seems to be dead http://pweb.netcom.com/~spoon/lcap/
+HOMEPAGE="http://packages.debian.org/stable/admin/lcap.html"
 SRC_URI="mirror://debian/pool/main/l/lcap/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="x86"
-
 IUSE="lids"
 
-DEPEND="virtual/os-headers
-		virtual/glibc"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PF}.patch
-	use lids || (sed -i -e "s:LIDS =:#\0:" Makefile)
+	use lids || sed -i -e "s:LIDS =:#\0:" Makefile
 }
 
 src_compile() {
@@ -37,9 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/sbin
-	doexe lcap
+	dosbin lcap || die
 	doman lcap.8
-	dodoc README
-	dodoc ${FILESDIR}/README.gentoo
+	dodoc README ${FILESDIR}/README.gentoo
 }
