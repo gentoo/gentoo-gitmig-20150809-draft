@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.41 2003/03/08 20:35:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.42 2003/04/14 19:39:20 latexer Exp $
+
+*pcmcia-cs-3.2.4 (15 Apr 2003)
+
+  15 Apr 2003; Peter Johanson <latexer@gentoo.org> pcmcia-cs-3.2.4.ebuild:
+  Marked stable for x86
 
   8 Mar 2003; Peter Johanson <latexer@gentoo.org> files/pcmcia.conf :
   Added two socket drivers to PCIC by default.
