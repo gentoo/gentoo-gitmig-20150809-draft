@@ -1,23 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.15 2004/06/25 20:53:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.16 2004/06/28 15:54:13 vapier Exp $
 
+DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls, etc)"
+HOMEPAGE="http://www.gnu.org/software/fileutils/fileutils.html"
+SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa mips"
 IUSE="nls build"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls, etc)"
-SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/fileutils/fileutils.html"
-
-KEYWORDS="x86 ppc sparc alpha hppa mips"
-SLOT="0"
-LICENSE="GPL-2"
-
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
-
-RDEPEND="virtual/glibc"
-
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
