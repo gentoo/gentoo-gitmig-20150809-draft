@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.1-r1.ebuild,v 1.8 2004/05/16 18:49:02 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.1-r1.ebuild,v 1.9 2004/06/12 17:55:23 karltk Exp $
 
 inherit java-pkg eutils
 
@@ -64,10 +64,14 @@ src_compile() {
 
 src_install() {
 	cp ${FILESDIR}/${PV}/ant ${S}/src/ant
+
 	exeinto /usr/bin
 	doexe src/ant
+
+	dodir /usr/share/ant/bin
 	for each in antRun runant.pl runant.py complete-ant-cmd.pl ; do
 		dobin ${S}/src/script/${each}
+		dosym /usr/bin/${each} /usr/share/ant/bin/${each}
 	done
 
 	insinto /etc/env.d
