@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.166 2005/01/04 15:45:36 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.167 2005/01/07 06:38:35 nakano Exp $
+
+  07 Jan 2005; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4.6.ebuild,
+  postgresql-8.0.0_rc3.ebuild:
+  Added pkgconfig DEPEND. (#76784)
 
   04 Jan 2005; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4.6.ebuild:
   Added xml support. (#75701)

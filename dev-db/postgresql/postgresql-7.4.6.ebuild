@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.6.ebuild,v 1.9 2005/01/04 15:45:36 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.6.ebuild,v 1.10 2005/01/07 06:38:35 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -30,7 +30,7 @@ DEPEND="virtual/libc
 		dev-java/java-config )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt )"
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )"
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/libc
@@ -39,7 +39,8 @@ RDEPEND="virtual/libc
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
 	java? ( >=virtual/jdk-1.3* )
-	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
+	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt )"
 
 PG_DIR="/var/lib/postgresql"
 MAX_CONNECTIONS=1024

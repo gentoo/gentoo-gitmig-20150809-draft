@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_rc3.ebuild,v 1.1 2005/01/04 13:22:07 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_rc3.ebuild,v 1.2 2005/01/07 06:38:35 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -30,7 +30,7 @@ DEPEND="virtual/libc
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt )
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/libc
 	app-admin/sudo
@@ -38,7 +38,8 @@ RDEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
-	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
+	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt )"
 
 PG_DIR="/var/lib/postgresql"
 MAX_CONNECTIONS=1024
