@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r11.ebuild,v 1.3 2003/02/04 23:06:12 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r11.ebuild,v 1.4 2003/02/06 03:21:48 carpaski Exp $
 
 IUSE="build"
 
@@ -242,8 +242,15 @@ pkg_postinst() {
 	einfo "and other system packages is fairly important for the continued health"
 	einfo "of your system."
 	echo
+	einfo "A worldfile rebuilding script is available to regenerate entries that"
+	einfo "should be in your worldfile but were removed by a recently discovered"
+	einfo "'-e bug' or if you deleted it: http://gentoo.twobit.net/scripts/makeworld/"
+	echo
 
-	sleep 5
+	echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1
+	echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1
+	echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1
+	sleep 6
 
 	#OLDPV=$(< ${WORKDIR}/previous-version)
 	#if compare_pver "$OLDPV" "$(get_portver)"; then
