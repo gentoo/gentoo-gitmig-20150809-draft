@@ -1,6 +1,15 @@
 # ChangeLog for net-print/pnm2ppa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.2 2002/04/11 13:04:43 seemant Exp $
+
+*pnm2ppa-1.0.91-r1 (11 Apr 2002)
+
+  11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> pnm2ppa-1.0.91-r1.ebuild
+  files/digest-pnm2ppa-1.0.91-r1 files/pnm2ppa-1.0.91.-r1-gentoo.diff
+
+  Updated ebuild to make it compile a little more cleanly with optional
+  dependencies.   Additionally, got rid of sandbox violation errors.
+  
 
 *pnm2ppa-1.0.91 (1 Feb 2002)
 

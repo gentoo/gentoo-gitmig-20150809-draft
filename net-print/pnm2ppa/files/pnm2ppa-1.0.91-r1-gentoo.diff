@@ -1,6 +1,6 @@
-diff -ur pnm2ppa.orig/docs/en/INSTALL pnm2ppa/docs/en/INSTALL
---- pnm2ppa.orig/docs/en/INSTALL	Wed Jul  4 20:13:12 2001
-+++ pnm2ppa/docs/en/INSTALL	Mon Jul 23 20:33:21 2001
+diff -urN pnm2ppa.orig/docs/en/INSTALL pnm2ppa/docs/en/INSTALL
+--- pnm2ppa.orig/docs/en/INSTALL	Wed Jul  4 10:13:12 2001
++++ pnm2ppa/docs/en/INSTALL	Thu Apr 11 06:19:13 2002
 @@ -39,8 +39,8 @@
  
  make install
@@ -8,7 +8,7 @@ diff -ur pnm2ppa.orig/docs/en/INSTALL pnm2ppa/docs/en/INSTALL
 -to install the binaries (by default, in /usr/local/bin/) , 
 -the manpage (in /usr/local/man/man1), and the sample
 +to install the binaries (by default, in /usr/bin/) , 
-+the manpage (in /usr/man/man1), and the sample
++the manpage (in /usr/share/man/man1), and the sample
  configuration file (/etc/pnm2ppa.conf).  You may change these locations
  by editing the Makefile.
  
@@ -21,9 +21,9 @@ diff -ur pnm2ppa.orig/docs/en/INSTALL pnm2ppa/docs/en/INSTALL
  
  ppaprint file.ps
  
-diff -ur pnm2ppa.orig/docs/en/INSTALL.SUSE pnm2ppa/docs/en/INSTALL.SUSE
---- pnm2ppa.orig/docs/en/INSTALL.SUSE	Fri Oct 27 21:29:12 2000
-+++ pnm2ppa/docs/en/INSTALL.SUSE	Mon Jul 23 20:33:10 2001
+diff -urN pnm2ppa.orig/docs/en/INSTALL.SUSE pnm2ppa/docs/en/INSTALL.SUSE
+--- pnm2ppa.orig/docs/en/INSTALL.SUSE	Fri Oct 27 12:29:12 2000
++++ pnm2ppa/docs/en/INSTALL.SUSE	Thu Apr 11 06:19:13 2002
 @@ -5,8 +5,8 @@
  
  
@@ -31,13 +31,13 @@ diff -ur pnm2ppa.orig/docs/en/INSTALL.SUSE pnm2ppa/docs/en/INSTALL.SUSE
 -The driver pnm2ppa is installed to /usr/local/bin. The manual page
 -pnm2ppa.1 is installed in /usr/local/man/man1. 
 +The driver pnm2ppa is installed to /usr/bin. The manual page
-+pnm2ppa.1 is installed in /usr/man/man1. 
++pnm2ppa.1 is installed in /usr/share/man/man1. 
  
  2. To integrate pnm2ppa into the BSD print spooler of the Linux system we 
  create   printer spoolers in /etc/printcap, to print 
-diff -ur pnm2ppa.orig/lpd/README.lpd pnm2ppa/lpd/README.lpd
---- pnm2ppa.orig/lpd/README.lpd	Sat Oct 28 16:58:07 2000
-+++ pnm2ppa/lpd/README.lpd	Mon Jul 23 20:33:28 2001
+diff -urN pnm2ppa.orig/lpd/README.lpd pnm2ppa/lpd/README.lpd
+--- pnm2ppa.orig/lpd/README.lpd	Sat Oct 28 07:58:07 2000
++++ pnm2ppa/lpd/README.lpd	Thu Apr 11 06:19:13 2002
 @@ -22,7 +22,7 @@
  ./lpdsetup  a4
  ./lpdsetup  a3
@@ -47,9 +47,9 @@ diff -ur pnm2ppa.orig/lpd/README.lpd pnm2ppa/lpd/README.lpd
  spool directories /var/spool/lpd/color, etc, You must be root to do this.
  
  You may wish to edit the options specified in the filter files 
-diff -ur pnm2ppa.orig/lpd/ascii.if pnm2ppa/lpd/ascii.if
---- pnm2ppa.orig/lpd/ascii.if	Sat Oct 28 16:58:07 2000
-+++ pnm2ppa/lpd/ascii.if	Mon Jul 23 20:33:35 2001
+diff -urN pnm2ppa.orig/lpd/ascii.if pnm2ppa/lpd/ascii.if
+--- pnm2ppa.orig/lpd/ascii.if	Sat Oct 28 07:58:07 2000
++++ pnm2ppa/lpd/ascii.if	Thu Apr 11 06:19:13 2002
 @@ -1,7 +1,7 @@
  #! /bin/sh
  # for printing black and white text (ascii) files.
@@ -60,9 +60,9 @@ diff -ur pnm2ppa.orig/lpd/ascii.if pnm2ppa/lpd/ascii.if
  #------enscript command line--------------------------
  enscript -2rj -p- | $FILTER
  
-diff -ur pnm2ppa.orig/lpd/bw.if pnm2ppa/lpd/bw.if
---- pnm2ppa.orig/lpd/bw.if	Sat Oct 28 16:58:07 2000
-+++ pnm2ppa/lpd/bw.if	Mon Jul 23 20:16:02 2001
+diff -urN pnm2ppa.orig/lpd/bw.if pnm2ppa/lpd/bw.if
+--- pnm2ppa.orig/lpd/bw.if	Sat Oct 28 07:58:07 2000
++++ pnm2ppa/lpd/bw.if	Thu Apr 11 06:19:13 2002
 @@ -6,7 +6,7 @@
  #PAPER=a4
  #PAPER=a3
@@ -72,9 +72,9 @@ diff -ur pnm2ppa.orig/lpd/bw.if pnm2ppa/lpd/bw.if
  #------------------dont change below this line----------------------
  gs -sDEVICE=pbmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
  $PNM2PPA --bw $PPAOPTS -i - -o -
-diff -ur pnm2ppa.orig/lpd/bweco.if pnm2ppa/lpd/bweco.if
---- pnm2ppa.orig/lpd/bweco.if	Sat Oct 28 16:58:07 2000
-+++ pnm2ppa/lpd/bweco.if	Mon Jul 23 20:16:02 2001
+diff -urN pnm2ppa.orig/lpd/bweco.if pnm2ppa/lpd/bweco.if
+--- pnm2ppa.orig/lpd/bweco.if	Sat Oct 28 07:58:07 2000
++++ pnm2ppa/lpd/bweco.if	Thu Apr 11 06:19:13 2002
 @@ -6,7 +6,7 @@
  #PAPER=a4
  #PAPER=a3
@@ -84,9 +84,9 @@ diff -ur pnm2ppa.orig/lpd/bweco.if pnm2ppa/lpd/bweco.if
  #------------------dont change below this line----------------------
  gs -sDEVICE=pbmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
  $PNM2PPA --bw --eco $PPAOPTS -i - -o -
-diff -ur pnm2ppa.orig/lpd/color.if pnm2ppa/lpd/color.if
---- pnm2ppa.orig/lpd/color.if	Sat Oct 28 16:58:07 2000
-+++ pnm2ppa/lpd/color.if	Mon Jul 23 20:16:02 2001
+diff -urN pnm2ppa.orig/lpd/color.if pnm2ppa/lpd/color.if
+--- pnm2ppa.orig/lpd/color.if	Sat Oct 28 07:58:07 2000
++++ pnm2ppa/lpd/color.if	Thu Apr 11 06:19:13 2002
 @@ -6,7 +6,7 @@
  #PAPER=a4
  #PAPER=a3
@@ -96,9 +96,9 @@ diff -ur pnm2ppa.orig/lpd/color.if pnm2ppa/lpd/color.if
  #------------------dont change below this line----------------------
  gs -sDEVICE=ppmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
  $PNM2PPA $PPAOPTS -i - -o -
-diff -ur pnm2ppa.orig/lpd/coloreco.if pnm2ppa/lpd/coloreco.if
---- pnm2ppa.orig/lpd/coloreco.if	Sat Oct 28 16:58:07 2000
-+++ pnm2ppa/lpd/coloreco.if	Mon Jul 23 20:16:02 2001
+diff -urN pnm2ppa.orig/lpd/coloreco.if pnm2ppa/lpd/coloreco.if
+--- pnm2ppa.orig/lpd/coloreco.if	Sat Oct 28 07:58:07 2000
++++ pnm2ppa/lpd/coloreco.if	Thu Apr 11 06:19:13 2002
 @@ -6,7 +6,7 @@
  #PAPER=a4
  #PAPER=a3
@@ -108,9 +108,9 @@ diff -ur pnm2ppa.orig/lpd/coloreco.if pnm2ppa/lpd/coloreco.if
  #------------------dont change below this line----------------------
  gs -sDEVICE=ppmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
  $PNM2PPA --eco $PPAOPTS -i - -o -
-diff -ur pnm2ppa.orig/lpd/lpdsetup pnm2ppa/lpd/lpdsetup
---- pnm2ppa.orig/lpd/lpdsetup	Fri Oct 27 21:29:12 2000
-+++ pnm2ppa/lpd/lpdsetup	Mon Jul 23 20:16:02 2001
+diff -urN pnm2ppa.orig/lpd/lpdsetup pnm2ppa/lpd/lpdsetup
+--- pnm2ppa.orig/lpd/lpdsetup	Fri Oct 27 12:29:12 2000
++++ pnm2ppa/lpd/lpdsetup	Thu Apr 11 06:19:13 2002
 @@ -1,5 +1,5 @@
  #!/bin/sh 
 -INSTALLDIR="/usr/local/bin"
@@ -118,9 +118,9 @@ diff -ur pnm2ppa.orig/lpd/lpdsetup pnm2ppa/lpd/lpdsetup
  SPOOLDIR="/var/spool/lpd"
  PAPER=letter
  for paper in letter legal a3 a4 ; do
-diff -ur pnm2ppa.orig/lpd/printcap pnm2ppa/lpd/printcap
---- pnm2ppa.orig/lpd/printcap	Fri Oct 27 20:12:23 2000
-+++ pnm2ppa/lpd/printcap	Mon Jul 23 20:16:02 2001
+diff -urN pnm2ppa.orig/lpd/printcap pnm2ppa/lpd/printcap
+--- pnm2ppa.orig/lpd/printcap	Fri Oct 27 11:12:23 2000
++++ pnm2ppa/lpd/printcap	Thu Apr 11 06:19:13 2002
 @@ -6,7 +6,7 @@
          :sd=/var/spool/lpd/coloreco:\
          :lf=/var/spool/lpd/coloreco/log:\
@@ -166,9 +166,20 @@ diff -ur pnm2ppa.orig/lpd/printcap pnm2ppa/lpd/printcap
          :la:mx#0:\
          :sh:sf:
  
-diff -ur pnm2ppa.orig/ppaSet-beta1/install pnm2ppa/ppaSet-beta1/install
---- pnm2ppa.orig/ppaSet-beta1/install	Wed Jul  4 20:13:12 2001
-+++ pnm2ppa/ppaSet-beta1/install	Mon Jul 23 20:32:57 2001
+diff -urN pnm2ppa.orig/pnm2ppa.conf pnm2ppa/pnm2ppa.conf
+--- pnm2ppa.orig/pnm2ppa.conf	Sat Oct 28 08:02:57 2000
++++ pnm2ppa/pnm2ppa.conf	Thu Apr 11 06:19:13 2002
+@@ -12,7 +12,6 @@
+ # will be used.   The printer version can also be set with the command line
+ # option e.g., "-v 720".
+ 
+-version   ERROR    # PNM2PPA WIIL *NOT* WORK UNTIUL THIS ENTRY IS REMOVED!!!!
+ #version  720	# 710, 712, 722 also acceptable
+ #version  820
+ #version 1000
+diff -urN pnm2ppa.orig/ppaSet-beta1/install pnm2ppa/ppaSet-beta1/install
+--- pnm2ppa.orig/ppaSet-beta1/install	Wed Jul  4 10:13:12 2001
++++ pnm2ppa/ppaSet-beta1/install	Thu Apr 11 06:20:08 2002
 @@ -3,7 +3,7 @@
  if [ "$4" = "" ]
  then
@@ -178,19 +189,32 @@ diff -ur pnm2ppa.orig/ppaSet-beta1/install pnm2ppa/ppaSet-beta1/install
  	exit 1
  fi
  
-diff -ur pnm2ppa.orig/ppaSet-beta1/ppa.if pnm2ppa/ppaSet-beta1/ppa.if
---- pnm2ppa.orig/ppaSet-beta1/ppa.if	Wed Jul  4 20:13:12 2001
-+++ pnm2ppa/ppaSet-beta1/ppa.if	Mon Jul 23 20:32:29 2001
-@@ -1,5 +1,5 @@
- #!/bin/sh
--PATH=/usr/local/bin:/usr/local/sbin/:/usr/bin/:/usr/sbin:/bin:/sbin
-+PATH=/usr/bin/:/usr/sbin:/bin:/sbin
+@@ -92,15 +92,15 @@
+ then
+ 	if [ "$WHAT" = "2" ]
+ 	then
+-		cp -v /etc/printcap /etc/printcap.old
+-		cat $BASEDIR/printcap.add >> /etc/printcap
++		cp -v ${D}/etc/printcap ${D}/etc/printcap.old
++		cat $BASEDIR/printcap.add >> ${D}/etc/printcap
+ 	else
+-		cp -v /etc/printcap /etc/printcap.old
+-		cp -v $BASEDIR/printcap.only /etc/printcap
++		cp -v ${D}/etc/printcap ${D}/etc/printcap.old
++		cp -v $BASEDIR/printcap.only ${D}/etc/printcap
+ 	fi
+-	install --verbose -d /var/spool/lpd/ppa
+-	touch /var/spool/lpd/ppa/log
+-	touch /var/spool/lpd/ppa/acct
++	install --verbose -d ${D}/var/spool/lpd/ppa
++	touch ${D}/var/spool/lpd/ppa/log
++	touch ${D}/var/spool/lpd/ppa/acct
+ fi
  
- # Is the next lines are not variable asignements, you haven't used the
- # usual method for installing, as you must have done
-diff -ur pnm2ppa.orig/ppaSet-beta1/ppaSetBase.h pnm2ppa/ppaSet-beta1/ppaSetBase.h
---- pnm2ppa.orig/ppaSet-beta1/ppaSetBase.h	Wed Jul  4 20:13:12 2001
-+++ pnm2ppa/ppaSet-beta1/ppaSetBase.h	Mon Jul 23 20:32:08 2001
+ #echo " "
+diff -urN pnm2ppa.orig/ppaSet-beta1/ppaSetBase.h pnm2ppa/ppaSet-beta1/ppaSetBase.h
+--- pnm2ppa.orig/ppaSet-beta1/ppaSetBase.h	Wed Jul  4 10:13:12 2001
++++ pnm2ppa/ppaSet-beta1/ppaSetBase.h	Thu Apr 11 06:19:13 2002
 @@ -3,22 +3,22 @@
  
  // The default paths, if not given
@@ -220,9 +244,9 @@ diff -ur pnm2ppa.orig/ppaSet-beta1/ppaSetBase.h pnm2ppa/ppaSet-beta1/ppaSetBase.
  #endif
  #ifndef LPR
  #define LPR "/usr/bin/lpr"
-diff -ur pnm2ppa.orig/ppaSet-beta1/printcap.add pnm2ppa/ppaSet-beta1/printcap.add
---- pnm2ppa.orig/ppaSet-beta1/printcap.add	Wed Jul  4 20:13:12 2001
-+++ pnm2ppa/ppaSet-beta1/printcap.add	Mon Jul 23 20:31:38 2001
+diff -urN pnm2ppa.orig/ppaSet-beta1/printcap.add pnm2ppa/ppaSet-beta1/printcap.add
+--- pnm2ppa.orig/ppaSet-beta1/printcap.add	Wed Jul  4 10:13:12 2001
++++ pnm2ppa/ppaSet-beta1/printcap.add	Thu Apr 11 06:19:13 2002
 @@ -5,5 +5,5 @@
          :sd=/var/spool/lpd/ppa:\
          :lf=/var/spool/lpd/ppa/log:\
@@ -230,9 +254,9 @@ diff -ur pnm2ppa.orig/ppaSet-beta1/printcap.add pnm2ppa/ppaSet-beta1/printcap.ad
 -        :if=/usr/local/bin/ppa.if:\
 +        :if=/usr/bin/ppa.if:\
          :la:mx#0:
-diff -ur pnm2ppa.orig/ppaSet-beta1/printcap.only pnm2ppa/ppaSet-beta1/printcap.only
---- pnm2ppa.orig/ppaSet-beta1/printcap.only	Wed Jul  4 20:13:12 2001
-+++ pnm2ppa/ppaSet-beta1/printcap.only	Mon Jul 23 20:32:37 2001
+diff -urN pnm2ppa.orig/ppaSet-beta1/printcap.only pnm2ppa/ppaSet-beta1/printcap.only
+--- pnm2ppa.orig/ppaSet-beta1/printcap.only	Wed Jul  4 10:13:12 2001
++++ pnm2ppa/ppaSet-beta1/printcap.only	Thu Apr 11 06:19:13 2002
 @@ -5,5 +5,5 @@
          :sd=/var/spool/lpd/ppa:\
          :lf=/var/spool/lpd/ppa/log:\
