@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.8 2004/03/30 05:24:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.9 2004/06/09 15:37:54 agriffis Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_unpack() {
 	sed -i \
 		-e 's:head -1:head -n 1:' configure \
 		|| die "sed configure failed"
-	if [ `use nas` ] && [ ! `use X` ] ; then #32447
+	if use nas && ! use X ; then #32447
 		sed -i \
 			-e 's:-DNAS_SUPPORT:-DNAS_SUPPORT -I/usr/X11R6/include:' \
 			-e 's:-laudio:-laudio -L/usr/X11R6/lib:' \
@@ -52,11 +52,11 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	[ `use noaudio` ] && myconf="${myconf} --disable-audio"
-	[ `use novideo` ] \
+	use noaudio && myconf="${myconf} --disable-audio"
+	use novideo \
 		&& myconf="${myconf} --disable-video" \
 		|| myconf="${myconf} --enable-video-dummy"
-	[ `use nojoystick` ] && myconf="${myconf} --disable-joystick"
+	use nojoystick && myconf="${myconf} --disable-joystick"
 
 	# asm is b0rken in 1.2.6
 	# http://www.libsdl.org/pipermail/sdl/2003-October/057304.html
