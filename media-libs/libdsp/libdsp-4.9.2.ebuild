@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/libdsp-4.9.2.ebuild,v 1.1 2004/08/19 22:46:18 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/libdsp-4.9.2.ebuild,v 1.2 2005/01/09 11:11:15 swegener Exp $
 
 IUSE="doc"
 
@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="C++ class library of common digital signal processing functions."
 HOMEPAGE="http://libdsp.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.tar.gz
-		doc? mirror://sourceforge/${PN}/${PN}-doc-html.tar.gz"
+		doc? ( mirror://sourceforge/${PN}/${PN}-doc-html.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
