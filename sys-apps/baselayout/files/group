@@ -26,7 +26,7 @@ tape::26:root
 video::27:root
 squid::31:squid
 gdm::32:gdm
-postgress::70:postgress
+postgres::70:postgres
 named::40:named
 users::100:games
 nogroup::-2:
