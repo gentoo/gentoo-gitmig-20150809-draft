@@ -1,19 +1,18 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.12 2002/11/17 02:54:49 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.13 2002/11/28 05:21:23 leonardop Exp $
 
 # The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
-
-inherit base
 
 ECLASS=gtk-engines
 INHERITED="$INHERITED $ECLASS"
 
 [ -n "$DEBUG" ] && einfo "Entering gtk-engines.eclass"
 
-DESCRIPTION="Based on the ${ECLASS} eclass"
-HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2"
+[ -z "$DESCRIPTION" ] && DESCRIPTION="Based on the gtk-engines eclass"
+[ -z "$HOMEPAGE" ]    && HOMEPAGE="http://www.gnome.org/"
+[ -z "$LICENSE" ]     && LICENSE="GPL-2"
+
 KEYWORDS="x86 ppc alpha"
 
 newdepend /c virtual/x11
@@ -40,33 +39,16 @@ case "${ENGINE}" in
 		[ "$SLOT" -eq "2" ] && MY_PN="gtk-engines-cleanice2" ;;
 		
 	"crux" )
-		MY_PN="crux"
-		newdepend '>=gnome-base/libgnomeui-2.0.1' \
-			'>=gnome-base/libglade-2.0.0'
-		DEPEND="${DEPEND} sys-devel/libtool"
-		;;
+		MY_PN="crux" ;;
 		
 	"eazel" )
-		MY_PN="eazel-engine"
-		newdepend media-libs/gdk-pixbuf
-		# This one needs the capplet stuff from gnomecc-1.4.  Some
-		# tests also need libglade, but it is a heavy dep, so dont
-		# know if we should rather disabled the tests...
-		[ "${SLOT}" -eq 1 ] && newdepend "=gnome-base/control-center-1.4*"
-		;;
+		MY_PN="eazel-engine" ;;
 
 	"flat" )
-		if [ "$SLOT" -eq "2" ]
-		then
-			MY_PN="gtk-flat-theme-2.0"
-		fi
-		;;
+		[ "$SLOT" -eq "2" ] && MY_PN="gtk-flat-theme-2.0" ;;
 	
 	"geramik" )
 		MY_PN="3952-Geramik" ;;
-		
-	"gtkstep" )
-		LICENSE="LGPL-2" ;;
 		
 	"lighthouseblue" )
 		MY_PN="lighthouseblue" ;;
@@ -100,7 +82,6 @@ case "${ENGINE}" in
 	"xenophilia" )
 		MY_PN="xenophilia"
 		INSTALL_FONTS=1
-		LICENSE="LGPL-2"
 		;;
 		
 	"xfce" )
@@ -160,21 +141,15 @@ gtk-engines_src_unpack() {
 }
 
 gtk-engines_src_compile() {
-	econf || die "Configuration failed"
+	econf || die "./configure failed"
 	
-	if [ "X${MY_PN}" = "Xgtk-engines" ]
-	then
-		cd ${ENGINE}
-	fi
+	[ "X${MY_PN}" = "Xgtk-engines" ] && cd ${ENGINE}
 	
 	emake || die "Compilation failed"
 }
 
 gtk-engines_src_install() {
-	if [ "X${MY_PN}" = "Xgtk-engines" ]
-	then
-		cd ${ENGINE}
-	fi
+	[ "X${MY_PN}" = "Xgtk-engines" ] && cd ${ENGINE}
 
 	if [ "X${MY_PN}" = "Xxenophilia" ]
 	then
@@ -190,8 +165,8 @@ gtk-engines_src_install() {
 
 	einstall \
 		THEME_DIR=${D}/usr/share/themes \
-		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines || \
-		die "Installation failed"
+		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines \
+		|| die "Installation failed"
 
 	if [ "X${MY_PN}" = "XGTK-mist-engine" ]
 	then
@@ -231,16 +206,10 @@ gtk-engines_pkg_postrm() {
 }
 
 fonts_notice() {
-	einfo ""
-	einfo "*************************************************************"
-	einfo ""
 	einfo "We can't reset the font path at the moment. You might want"
 	einfo "to run the following command manually:"
 	einfo ""
 	einfo "  xset fp rehash"
-	einfo ""
-	einfo "*************************************************************"
-	einfo ""
 }
 										
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_postrm
