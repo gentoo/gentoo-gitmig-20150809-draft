@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.4.ebuild,v 1.1 2003/08/28 16:25:18 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.4.ebuild,v 1.2 2003/10/16 07:49:58 mkennedy Exp $
 
 inherit common-lisp
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${P}
 src_unpack() {
 	unpack ${A}
 	# some tests die on clisp
-	cd ${S} && patch -p0 <${FILESDIR}/clisp-tests-gentoo.patch || die
+	cd ${S} && epatch ${FILESDIR}/clisp-tests-gentoo.patch || die
 }
 
 src_install() {
@@ -35,4 +35,12 @@ src_install() {
 	insinto /usr/share/common-lisp/source/odcl/tests
 	doins tests/*.lisp
 	dodoc COPYING ChangeLog NEWS README VERSION
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
