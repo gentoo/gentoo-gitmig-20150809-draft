@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.21 2004/09/25 21:48:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.22 2004/10/13 20:29:19 slarti Exp $
+
+  13 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
+  Added to the shell-tools herd.
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> patchutils-0.2.29.ebuild:
   Stable on sparc.
