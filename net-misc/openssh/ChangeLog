@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.41 2003/08/06 20:52:50 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.42 2003/09/05 13:20:31 taviso Exp $
+
+*openssh-3.6.1_p2-r3 (05 Sep 2003)
+
+  05 Sep 2003; Tavis Ormandy <taviso@gentoo.org> openssh-3.6.1_p2-r3.ebuild:
+  adding s/key authentication support, ~arch only. #11478
 
 *openssh-3.6.1_p2-r1 (06 Aug 2003)
 
