@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.14 2004/01/08 06:33:31 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.15 2004/01/21 15:53:00 plasmaroo Exp $
+
+  21 Jan 2004; <plasmaroo@gentoo.org> gaming-sources-2.4.20-r7.ebuild:
+  Changed the CK patch to -ck7; this should solve any problems for those
+  getting packet writing problems. Closes bug #22796.
 
 *gaming-sources-2.4.20-r7 (06 Jan 2004)
 
