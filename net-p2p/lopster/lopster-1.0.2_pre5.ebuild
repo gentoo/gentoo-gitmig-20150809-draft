@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.0.2_pre5.ebuild,v 1.6 2004/02/23 10:06:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.0.2_pre5.ebuild,v 1.7 2004/04/26 12:48:22 agriffis Exp $
 
 IUSE="nls"
 
@@ -39,7 +39,7 @@ src_compile() {
 	econf \
 		--with-pthread \
 		--with-zlib \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die
 }

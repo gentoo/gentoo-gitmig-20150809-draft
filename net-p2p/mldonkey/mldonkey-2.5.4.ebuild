@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.4.ebuild,v 1.7 2004/01/22 21:18:25 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.4.ebuild,v 1.8 2004/04/26 12:50:23 agriffis Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 		--sharedstatedir=/var/mldonkey \
 		--localstatedir=/var/mldonkey \
 		--enable-ocamlver=3 \
-		--enable-batch
+		--enable-batch || die "econf failed"
 
 	# ocalm 3.07 fix
 	sed -i -e"s:format:format4:g" src/utils/lib/autoconf.ml

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/giftoxic-0.0.9.ebuild,v 1.4 2004/04/20 18:03:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/giftoxic-0.0.9.ebuild,v 1.5 2004/04/26 12:46:31 agriffis Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ DEPEND=">=x11-libs/gtk+-2.0.3
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf --prefix=/usr
+	econf --prefix=/usr || die "econf failed"
 	make CXXFLAGS="${CXXFLAGS}" || die
 }
 

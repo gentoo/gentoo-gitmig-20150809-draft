@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftoxic
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.5 2004/04/20 18:03:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.6 2004/04/26 12:46:31 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> giftoxic-0.0.9.ebuild:
+  Add die following econf for bug 48950
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   giftoxic-0.0.9.ebuild:

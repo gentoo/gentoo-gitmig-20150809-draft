@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.12.ebuild,v 1.4 2004/03/12 12:18:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.12.ebuild,v 1.5 2004/04/26 12:50:23 agriffis Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 		--sysconfdir=/etc/mldonkey \
 		--sharedstatedir=/var/mldonkey \
 		--localstatedir=/var/mldonkey \
-		--enable-batch
+		--enable-batch || die "econf failed"
 
 	emake || die
 }
