@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.57 2003/03/09 18:56:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.58 2003/03/16 13:14:27 gmsoft Exp $
 
 *gtk+-1.2.10-r10 (08 Mar 2003)
+
+  16 Mar 2003; Guy Martin <gmsoft@gentoo.org> gtk+-1.2.10-r10.ebuild :
+  Added ~hppa to keywords.
 
   09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gtk+-1.2.10-r10.ebuild :
   Change to fully use epatch, and also make use of libtool eclass.
@@ -162,7 +165,10 @@
   Bumped revision to get the safety replacement added in r1 spread  
 
 *gtk+-1.2.10-r9 (26 Sep 2002)
-  
+ 
+  16 Mar 2003; Guy Martin <gmsoft@gentoo.org> gtk+-1.2.10-r9.ebuild :
+  Added hppa to keywords.
+ 
   04 Feb 2003; Spider <spider@gentoo.org> gtk+*.ebuild:
   changed all DEBUG to DEBUGBUILD
 
