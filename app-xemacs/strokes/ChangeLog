@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/strokes
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/strokes/ChangeLog,v 1.5 2004/06/24 23:22:24 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/strokes/ChangeLog,v 1.6 2005/01/01 17:16:44 eradicator Exp $
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> strokes-1.08.ebuild:
   Stable on alpha

@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/mmm-mode
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mmm-mode/ChangeLog,v 1.6 2004/06/24 23:16:49 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mmm-mode/ChangeLog,v 1.7 2005/01/01 17:09:55 eradicator Exp $
 
   16 Mar 2004; <rac@gentoo.org> metadata.xml, mmm-mode-1.00.ebuild:
   keyword amd64

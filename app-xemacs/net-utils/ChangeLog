@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/net-utils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.8 2004/10/03 06:06:12 rac Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.9 2005/01/01 17:10:36 eradicator Exp $
 
   02 Oct 2004; Robert Coie <rac@gentoo.org> +metadata.xml,
   net-utils-1.28.ebuild, net-utils-1.31.ebuild, net-utils-1.32.ebuild:

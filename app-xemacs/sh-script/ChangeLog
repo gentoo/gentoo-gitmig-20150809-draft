@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/sh-script
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sh-script/ChangeLog,v 1.6 2004/08/10 01:56:49 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sh-script/ChangeLog,v 1.7 2005/01/01 17:14:59 eradicator Exp $
 
   09 Aug 2004; Tom Gall <tgall@gentoo.org> sh-script-1.17.ebuild:
   stable on ppc64, bug #57174

@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/dictionary
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/dictionary/ChangeLog,v 1.5 2004/06/24 23:08:34 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/dictionary/ChangeLog,v 1.6 2005/01/01 17:00:02 eradicator Exp $
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> dictionary-1.11.ebuild:
   Stable on alpha

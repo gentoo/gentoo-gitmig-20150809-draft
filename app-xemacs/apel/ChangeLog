@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/apel
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.7 2004/08/10 01:47:38 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.8 2005/01/01 16:57:18 eradicator Exp $
 
   09 Aug 2004; Tom Gall <tgall@gentoo.org> apel-1.26.ebuild:
   stable on ppc64, bug #57174

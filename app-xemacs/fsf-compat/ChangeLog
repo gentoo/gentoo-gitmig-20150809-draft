@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/fsf-compat
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.7 2004/08/10 01:45:21 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.8 2005/01/01 17:05:01 eradicator Exp $
 
   09 Aug 2004; Tom Gall <tgall@gentoo.org> fsf-compat-1.12.ebuild:
   stable on ppc64, bug #57174

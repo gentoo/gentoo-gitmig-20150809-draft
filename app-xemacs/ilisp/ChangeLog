@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/ilisp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ilisp/ChangeLog,v 1.7 2004/10/03 05:58:05 rac Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ilisp/ChangeLog,v 1.8 2005/01/01 17:07:04 eradicator Exp $
 
   02 Oct 2004; Robert Coie <rac@gentoo.org> +metadata.xml, ilisp-1.28.ebuild,
   ilisp-1.29.ebuild:

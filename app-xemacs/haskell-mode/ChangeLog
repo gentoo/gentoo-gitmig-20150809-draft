@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/haskell-mode
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.5 2004/06/24 23:13:43 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.6 2005/01/01 17:05:59 eradicator Exp $
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> haskell-mode-1.05.ebuild:
   Stable on alpha

@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/mule-ucs
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.6 2004/06/24 23:17:09 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.7 2005/01/01 17:10:21 eradicator Exp $
 
   16 Mar 2004; <rac@gentoo.org> metadata.xml, mule-ucs-1.04.ebuild:
   keyword amd64

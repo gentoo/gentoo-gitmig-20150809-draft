@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/psgml
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.7 2004/10/03 06:07:16 rac Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.8 2005/01/01 17:12:35 eradicator Exp $
 
   02 Oct 2004; Robert Coie <rac@gentoo.org> psgml-1.35.ebuild,
   psgml-1.38.ebuild:
