@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-1.11.ebuild,v 1.8 2004/06/25 00:59:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-1.11.ebuild,v 1.9 2005/01/22 04:19:38 trapni Exp $
 
 DESCRIPTION="Basic authentication for Apache2 using a MySQL database"
 HOMEPAGE="ftp://ftp.kciLink.com/pub/"

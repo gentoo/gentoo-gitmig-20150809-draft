@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_mysql
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.11 2004/06/25 15:55:47 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.12 2005/01/22 04:19:38 trapni Exp $
+
+  22 Jan 2005; Christian Parpart <trapni@gentoo.org> 
+  mod_auth_mysql-2.8.1.ebuild:
+  apache herd package refresh - version bump to 2.8.1
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   mod_auth_mysql-20030510.ebuild:
