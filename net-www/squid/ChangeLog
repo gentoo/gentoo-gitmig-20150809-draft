@@ -1,6 +1,11 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.42 2004/05/01 01:57:05 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.43 2004/05/01 02:24:02 cyfred Exp $
+
+  01 May 2004; Andrew Bevitt <cyfred@gentoo.org>; squid-2.5.5-r1.ebuild:
+  Adding support for underscores in the domain name; local use flag underscores.
+  Ebuild provides warning that bind (or equivelent) must support this or you
+  will get dns failures.
 
   01 May 2004; Andrew Bevitt <cyfred@gentoo.org>; metadata.xml:
   Taking over squid maintainers role

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r1.ebuild,v 1.1 2004/05/01 00:26:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r1.ebuild,v 1.2 2004/05/01 02:24:02 cyfred Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -78,6 +78,12 @@ src_compile() {
 	local myconf=""
 	use snmp && myconf="${myconf} --enable-snmp" || myconf="${myconf} --disable-snmp"
 	use ssl && myconf="${myconf} --enable-ssl" || myconf="${myconf} --disable-ssl"
+
+	if [ `use underscores` ]; then
+		ewarn "Enabling underscores in domain names will result in dns resolution"
+		ewarn "failure if your local DNS client (probably bind) is not compatible."
+		myconf="${myconf} --enable-underscores"
+	fi
 
 	./configure \
 		--prefix=/usr \
