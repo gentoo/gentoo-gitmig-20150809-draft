@@ -1,18 +1,20 @@
 # ChangeLog for net-mail/qmailanalog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/ChangeLog,v 1.5 2003/02/12 08:15:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/ChangeLog,v 1.6 2003/03/07 16:55:04 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-  17 Jun 2002; Thilo Bangert <bangert@gentoo.org> qmailanalog-0.70.ebuild
-  
-  fixed conf-home, conf-cc & conf-ld. closes bug #2727
-  added LICENSE
+*qmailanalog-0.70-r1 (07 Mar 2003)
+
+  07 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added patch for glibc errno issue (#16267) #17013.
+  matrixise <stephane.wirtel@belgacom.net> submitted the patch #17013.
 
 *qmailanalog-0.70 (1 Feb 2002)
 
+  17 Jun 2002; Thilo Bangert <bangert@gentoo.org> qmailanalog-0.70.ebuild
+  fixed conf-home, conf-cc & conf-ld. closes bug #2727
+  added LICENSE
+
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
