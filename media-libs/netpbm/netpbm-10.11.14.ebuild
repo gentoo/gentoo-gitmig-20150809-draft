@@ -1,12 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.14.ebuild,v 1.4 2004/01/14 04:24:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.14.ebuild,v 1.5 2004/01/14 17:45:29 mholzer Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
