@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f02badc426c3a2728834bae1ff9bdcc9 ladspa-sdk-1.0.ebuild 878
-MD5 6f3698019f689cd56a64c9602dbd4892 ladspa-sdk-1.12.ebuild 1096
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 fbd496f1788856d40c686e50a6d3ebc2 ChangeLog 3060
 MD5 1a15f5c0197e4c0887a6dcd237212627 ladspa-sdk-1.12-r1.ebuild 1211
-MD5 a22d6e99b92d03cba8f8b0b771a69784 ladspa-sdk-1.12-r2.ebuild 1465
-MD5 66e1bf2c3d8f56ee85430ef5b52bb5ee files/digest-ladspa-sdk-1.0 58
-MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12 63
-MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12-r1 63
+MD5 6f3698019f689cd56a64c9602dbd4892 ladspa-sdk-1.12.ebuild 1096
+MD5 e47c45c78855a3ef4cf859c4dfc29ce1 ChangeLog 3158
+MD5 f02badc426c3a2728834bae1ff9bdcc9 ladspa-sdk-1.0.ebuild 878
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 95206f4088ff1ed1986b4aabb32f44f8 ladspa-sdk-1.12-r2.ebuild 1460
 MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12-r2 63
-MD5 5e4df3cc34668d1ae00d1b0df109481c files/ladspa-sdk-1.12-test.patch 1024
+MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12 63
 MD5 abe8c6de8caf5688d31b1f3cfced0596 files/ladspa-sdk-1.12-ppc-macos.patch 1784
+MD5 5e4df3cc34668d1ae00d1b0df109481c files/ladspa-sdk-1.12-test.patch 1024
+MD5 66e1bf2c3d8f56ee85430ef5b52bb5ee files/digest-ladspa-sdk-1.0 58
+MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12-r1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoQi+ArHZZzCEUG0RAssKAJ9H1Sr8h691kVP6N28gdpnX4u4z1wCdFCik
-zneOsXPQQ6npFWyCDX/f/R0=
-=aoOw
+iD8DBQFBon52ugEuf3OQ0akRAouFAJ91TCs3ZM8vt9ZIVoa3++W+ztQHJACgiylU
+b2x83n9o0Y1a04MFb06Cx/U=
+=68sv
 -----END PGP SIGNATURE-----
