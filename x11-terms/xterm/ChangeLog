@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.56 2004/12/28 22:21:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.57 2004/12/29 20:33:33 seemant Exp $
+
+  29 Dec 2004; Seemant Kulleen <seemant@gentoo.org> xterm-196-r1.ebuild,
+  xterm-196.ebuild, xterm-197.ebuild:
+  bug #8810 is fixed, so adding virtual/x11 back as a DEP. Closes bug #76062
+  by Tony Murray <tonymurray@fastmail.fm>
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
