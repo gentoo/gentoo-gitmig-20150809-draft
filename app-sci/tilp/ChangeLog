@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/tilp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.11 2004/09/03 15:28:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.12 2004/12/02 08:47:19 phosphan Exp $
+
+*tilp-6.76 (02 Dec 2004)
+
+  02 Dec 2004; Patrick Kursawe <phosphan@gentoo.org>
+  +files/6.76-makefile-desktop.patch, +files/6.76-makefile.patch,
+  +tilp-6.76.ebuild:
+  Version bump. Fixes a security problem of older versions (temporary file with
+  fixed name in /tmp)
 
   03 Sep 2004; David Holm <dholm@gentoo.org> tilp-6.74.ebuild:
   Added to ~ppc.
