@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.5.ebuild,v 1.1 2001/06/20 03:58:12 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.5.ebuild,v 1.2 2001/07/03 18:51:15 lamer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
@@ -41,19 +41,19 @@ src_compile() {
 	myopts="--prefix=/usr/X11R6 --without-gnome"
   fi
   if [ "`use 3dnow`" ] ; then
-    myopts=$myopts --enable-3dnow"
+    myopts="$myopts --enable-3dnow"
   else
-    myopts=$myopts --disable-3dnow"
+    myopts="$myopts --disable-3dnow"
   fi
   if [ "`use ogg`" ] ; then
-    myopts=$myopts --with-ogg"
+    myopts="$myopts --with-ogg"
   else
-    myopts=$myopts --disable-ogg-test"
+    myopts="$myopts --disable-ogg-test"
   fi
 if [ "`use vorbis`" ] ; then
-    myopts=$myopts --with-vorbis"
+    myopts="$myopts --with-vorbis"
   else
-    myopts=$myopts --disable-vorbis-test"
+    myopts="$myopts --disable-vorbis-test"
   fi
 
 
@@ -77,8 +77,3 @@ src_install() {
   insinto /usr/X11R6/include/X11/pixmaps/
   donewins gnomexmms/gnomexmms.xpm xmms.xpm
 }
-
-
-
-
-
