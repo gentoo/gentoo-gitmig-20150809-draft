@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.1 2004/03/17 22:15:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.2 2004/03/18 00:21:05 gustavoz Exp $
+
+  17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-speech-0.3.1.ebuild:
+  sparc keyword again
 
   16 Mar 2004; L. Boshell <leonardop@gentoo.org> gnome-speech-0.3.1.ebuild:
   Marking stable on x86.
