@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.12 2004/08/02 19:45:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.13 2004/08/23 03:46:33 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -236,7 +236,7 @@ host_def_setup() {
 
 			if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "2" ]
 			then
-				replace-cpu-flags "pentium4" "pentium3"
+				replace-cpu-flags "pentium3" "pentium4"
 				replace-cpu-flags "athlon-tbird" "athlon"
 			fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.6 2004/08/20 23:27:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.7 2004/08/23 03:46:33 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -240,7 +240,7 @@ host_def_setup() {
 
 			if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "2" ]
 			then
-				replace-cpu-flags "pentium4" "pentium3"
+				replace-cpu-flags "pentium3" "pentium4"
 				replace-cpu-flags "athlon-tbird" "athlon"
 			fi
 
