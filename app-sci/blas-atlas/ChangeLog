@@ -1,13 +1,13 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.8 2004/06/24 21:53:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.9 2004/06/25 01:32:07 george Exp $
+
+  24 Jun 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.6.0.ebuild :
+  ifc useflag got retained even though this ebuild does not support ifc (yet), cleaned up
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   blas-atlas-3.6.0.ebuild:
   fix typo in error message (bug #54290)
-
-  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
-  Marked stable on amd64.
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
   Marked stable on amd64.
