@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gplflash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.11 2003/10/03 22:58:04 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.12 2003/10/03 23:30:51 hillster Exp $
+
+*gplflash-0.4.10-r3 (03 Oct 2003)
+
+  03 Oct 2003; Joel Hill <hillster@gentoo.org> gplflash-0.4.10-r3.ebuild:
+  added nsplugins support bug #23632
 
   03 Oct 2003; Joel Hill <hillster@gentoo.org> gplflash-0.4.10-r1.ebuild,
   gplflash-0.4.10-r2.ebuild, gplflash-0.4.10.ebuild:
