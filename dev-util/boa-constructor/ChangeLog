@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/boa-constructor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.13 2004/08/19 04:14:12 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.14 2004/11/04 22:15:12 pythonhead Exp $
+
+*boa-constructor-0.3.1_alpha (04 Nov 2004)
+
+  04 Nov 2004; Rob Cakebread <pythonhead@gentoo.org>
+  boa-constructor-0.3.0_alpha.ebuild, +boa-constructor-0.3.1_alpha.ebuild:
+  Version bump bug# 69921 thanks David Grant <david.grant@telus.net>, marked
+  x86 stable
 
 *boa-constructor-0.3.0_alpha (18 Aug 2004)
 
