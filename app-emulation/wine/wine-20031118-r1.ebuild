@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20031118-r1.ebuild,v 1.1 2003/12/01 11:58:19 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20031118-r1.ebuild,v 1.2 2003/12/10 20:06:32 mholzer Exp $
 
 inherit eutils base
 
@@ -34,6 +34,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${DISTDIR}/${P}-xopenfont.patch
 	epatch ${FILESDIR}/winearts-kdecvs-fix.patch
+	epatch ${FILESDIR}/${PN}-alsa.patch
 }
 
 src_compile() {
