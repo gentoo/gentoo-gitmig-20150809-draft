@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.91.1.ebuild,v 1.8 2004/05/04 05:06:31 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.91.1.ebuild,v 1.9 2004/06/15 02:37:59 agriffis Exp $
 
 IUSE=""
 
@@ -28,12 +26,11 @@ src_compile() {
 }
 
 src_install () {
-
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README TODO || die
 
-	use gnome && ( \
+	if use gnome; then
 		insinto /usr/share/gnome/apps/Internet
-		doins ${FILESDIR}/gtk-gnutella.desktop
-	)
+		doins ${FILESDIR}/gtk-gnutella.desktop || die
+	fi
 }
