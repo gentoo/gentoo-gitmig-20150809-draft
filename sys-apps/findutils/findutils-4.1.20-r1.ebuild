@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.23 2004/06/29 15:58:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.24 2004/07/01 08:11:51 solar Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa alpha amd64 ia64 ppc64 s390"
-IUSE="nls build afs selinux"
+IUSE="nls build afs selinux static"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4
@@ -50,6 +50,7 @@ src_compile() {
 		export LIBS="/usr/afsws/lib/pam_afs.so.1 -lpam"
 	fi
 	export CPPFLAGS="${CXXFLAGS}"
+	use static && append-ldflags -static
 
 	econf `use_enable nls` || die
 	emake libexecdir=/usr/lib/find || die
