@@ -22,10 +22,14 @@
 ##   End example
 ##
 
+# Karl Trygve Kalleberg <karltk@gentool.org> (01 Aug 2002)
+# Has non-ratified use flags.
+=dev-lisp/bigloo-lib-0.17
+
 # Seemant Kulleen <seemant@gentool.org> (01 Aug 2002)
 # the dependency is on an old, now removed version of PyQt
 dev-python/anygui
-
+	
 # Kevyn Shortell <trance@gentoo.org> (01 Aug 2002)
 # both .92 and 93 do not compile on x86 or ppc, masking.
 net-im/gnomemeeting
@@ -48,7 +52,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1147 2002/08/01 14:08:32 agenkin Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1148 2002/08/01 19:47:42 karltk Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -395,14 +399,10 @@ net-mail/exmh
 # Has not received any testing.
 =net-www/cocoon-2.0.2
 
-# <karltk@gentoo.org> (04 Jul 2002)
-# We're removing JAXP from our tree. It is just a repack of
-# the Apache project's Xalan and Xerces, with a nastier license
-# and a more erratic release schedule; only tomcat 3.2.2
-# depends on it, and 3.2.2 is old.
-dev-java/jaxp
+# <karltk@gentoo.org> (01 Aug 2002)
+# JAXP is dead, but some packages don't know
+# that.
 =dev-db/postgresql-7.1-r1
-=net-www/tomcat-3.2.2
 
 #azarah@gentoo.org (03 Jul 2002)
 #this one moves a lot of stuff around, and have a search dir
