@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.55 2002/08/26 10:07:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.56 2002/08/26 10:57:21 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -39,6 +39,7 @@ kde_src_compile() {
     [ -z "$1" ] && kde_src_compile all
     
     cd ${S}
+    export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
 
     while [ "$1" ]; do
 
@@ -55,21 +56,6 @@ kde_src_compile() {
 		configure)
 			debug-print-section configure
 			debug-print "$FUNCNAME::configure: myconf=$myconf"
-
-			# fix the infamous kde-widget problem group and other stuff
-			# by getting a new admin/ dir
-			if [ -d "$WORKDIR/admin-new" ]; then
-			
-			    cd $S/admin
-			    patch -p0 < $WORKDIR/admin-new/*
-			    # stop make from regenerating stuff
-			    touch -t 199001010000 acinclude.m4.in
-			    cd $S
-			    
-			    # regenerate configure
-			    rm -f configure configure.in config.h.in *.m4
-			    
-			fi
 
 			# This can happen with e.g. a cvs snapshot			
 			if [ ! -f "./configure" ]; then

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.26 2002/08/26 09:49:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.27 2002/08/26 10:57:21 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -329,13 +329,5 @@ kde_remove_flag() {
 /CXXFLAGS/ s/${2}//g" Makefile.orig > Makefile
 
     cd $OLDPWD
-    
-}
-
-
-# get new admin/ files
-kde-new-admin() {
-
-    SRC_URI="$SRC_URI mirror://gentoo/admin-new-20020826.tar.gz"
     
 }
