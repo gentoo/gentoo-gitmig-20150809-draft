@@ -1,5 +1,15 @@
+# ChangeLog for sys-apps/discover-data
+# Copyright 2002 TelemetryBox Corporation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/ChangeLog,v 1.2 2002/07/31 16:49:01 christoph Exp $
 
-discover-data-1.2002.05.23-r1.ebuild July 30, 2002 christoph@gentoo.org
+*discover-data--1.2002.05.23 (30 July 2002)
 
-  First release into gentoo cvs tree
+  30 July 2002; Christoph Lameter <christoph@gentoo.org> discover-data--1.2002.05.23-r1.ebuild
+
+  Initial submission.
+ 
+  31 July 2002; Christoph Lameter <christoph@gentoo.org> discover-data--1.2002.05.23-r1.ebuild
+
+  Make files conform to gentoo standards.
+
  
