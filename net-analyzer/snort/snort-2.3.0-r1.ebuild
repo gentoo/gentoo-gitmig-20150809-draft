@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0.ebuild,v 1.3 2005/02/06 13:21:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0-r1.ebuild,v 1.1 2005/02/06 13:21:24 ka0ttic Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -8,15 +8,16 @@ DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/dl/${P}.tar.gz
 	snortsam? ( mirror://gentoo/snortsam-20050110.tar.gz )
-	prelude? ( http://www.prelude-ids.org/download/releases/snort-prelude-reporting-patch-0.3.6.tar.gz )"
+	prelude? ( http://www.prelude-ids.org/download/releases/snort-prelude-reporting-patch-0.3.6.tar.gz )
+	sguil? ( mirror://sourceforge/sguil/sguil-sensor-0.5.3.tar.gz )"
 
 #	snortsam? ( http://www.snortsam.net/files/snort-plugin/snortsam-patch.tar.gz )
 # Gentoo mirrored because of naming conflict with previous version
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -sparc -alpha ~amd64 ~ppc"
-IUSE="ssl postgres mysql flexresp selinux snortsam odbc prelude inline"
+KEYWORDS="~x86 -sparc -alpha ~amd64 ~ppc"
+IUSE="ssl postgres mysql flexresp selinux snortsam odbc prelude inline sguil"
 
 # Local useflag snortsam: patch snort for use with snortsam package.
 
@@ -45,20 +46,25 @@ src_unpack() {
 	cd ${S}
 	gnuconfig_update
 
-	if use flexresp || use inline
-	then
-		epatch ${FILESDIR}/${PV}-libnet-1.0.patch || die "libnet patch failed"
+	if use flexresp || use inline ; then
+		epatch ${FILESDIR}/${PV}-libnet-1.0.patch
 	fi
 
 	einfo "Patching /etc/snort.conf"
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" \
 		etc/snort.conf || die "sed snort.conf failed"
 
-	if use prelude
-	then
-		epatch ../snort-2.2.0-prelude-0.3.6.diff || die "prelude patch failed"
+	if use prelude ; then
+		epatch ../snort-2.2.0-prelude-0.3.6.diff
 		sed -i -e "s:AC_PROG_RANLIB:AC_PROG_LIBTOOL:" configure.in \
 			|| die "sed configure.in failed"
+	fi
+
+	if use sguil ; then
+		cd ${S}/src/preprocessors
+		epatch ${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_portscan_sguil.patch || die
+		epatch ${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_stream4_sguil.patch || die
+		cd ${S}
 	fi
 
 	# need to pick up prelude and or flexresp patches
@@ -83,13 +89,14 @@ src_compile() {
 	use inline && append-flags -I/usr/include/libipq
 
 	econf \
-		`use_with postgres postgresql` \
-		`use_with mysql` \
-		`use_with ssl openssl` \
-		`use_with odbc` \
+		$(use_with postgres postgresql) \
+		$(use_with mysql) \
+		$(use_with ssl openssl) \
+		$(use_with odbc) \
 		--without-oracle \
-		`use_with prelude` \
-		`use_enable inline` \
+		$(use_with prelude) \
+		$(use_with sguil) \
+		$(use_enable inline) \
 		${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"

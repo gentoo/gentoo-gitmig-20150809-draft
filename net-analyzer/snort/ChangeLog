@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.59 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.60 2005/02/06 13:21:24 ka0ttic Exp $
+
+*snort-2.3.0-r1 (06 Feb 2005)
+
+  06 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +snort-2.3.0-r1.ebuild,
+  snort-2.3.0.ebuild:
+  Revision bump for bug 80831; added sguil support. Marked 2.3.0 stable on x86.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> snort-2.0.6.ebuild,
   snort-2.1.3.ebuild, snort-2.2.0.ebuild, snort-2.3.0.ebuild,
