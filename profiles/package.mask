@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3162 2004/09/18 16:56:12 leonardop Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3163 2004/09/18 18:00:55 leonardop Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -302,10 +302,6 @@ net-irc/epic5
 # <rizzo@gentoo.org> (11 Jun 2004)
 # I think this is only for php 5 anyway
 >=dev-php/PEAR-PhpDocumentor-1.3.0_rc3
-
-# <mr_bones_@gentoo.org> (11 May 2004)
-# masking this until the freetts use flag is addressed for all the archs
-=app-accessibility/gnome-speech-0.3.3
 
 # <vapier@gentoo.org> (05 June 2004)
 # Horribly broken ... it just eat's filesystems #51773
