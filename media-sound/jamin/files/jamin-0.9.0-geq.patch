@@ -1,15 +1,6 @@
-diff -u -r1.31 -r1.32
---- jamin-0.9.0/src/geq.c	2004/05/08 21:29:39	1.31
-+++ jamin-0.9.0/src/geq.c	2004/08/20 22:56:08	1.32
-@@ -11,7 +11,7 @@
-  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  *  GNU General Public License for more details.
-  *
-- *  $Id: jamin-0.9.0-geq.patch,v 1.1 2004/08/22 21:24:09 fvdpol Exp $
-+ *  $Id: jamin-0.9.0-geq.patch,v 1.1 2004/08/22 21:24:09 fvdpol Exp $
-  */
- 
- /* code to control the graphic eq's, swh */
+diff -ur jamin-0.9.0-orig/src/geq.c jamin-0.9.0/src/geq.c
+--- jamin-0.9.0-orig/src/geq.c	2004-08-05 21:29:29.576383960 +0200
++++ jamin-0.9.0/src/geq.c	2004-08-20 22:56:08.970301536 +0200
 @@ -122,7 +122,7 @@
      int i, bin;
  
