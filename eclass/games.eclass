@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.15 2002/11/29 22:28:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.16 2002/11/30 00:44:35 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -87,8 +87,10 @@ gamesenv() {
 
 games_pkg_postinst() {
 	gamesenv
+	echo
 	ewarn "Remember, in order to play games, you have to"
 	ewarn "be in the 'games' group."
 	ewarn "To add yourself to the 'games' group, simply do:"
 	ewarn '`usermod -G games mike` to add mike to the games group'
+	echo
 }
