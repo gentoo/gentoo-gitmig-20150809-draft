@@ -1,5 +1,6 @@
 # Copyright 2002 Dwight Schauer
 # Distributed under the terms of the GNU General Public License, v2.
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ascpu/ascpu-1.9.ebuild,v 1.2 2002/10/04 21:30:20 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="CPU statistics monitor utility for X Windows"
