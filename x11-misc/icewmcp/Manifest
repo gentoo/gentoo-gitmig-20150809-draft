@@ -1,4 +1,6 @@
 MD5 b2efc43bd9822bae37440bca38688b35 icewmcp-3.1.ebuild 2408
-MD5 0118297272b3e7e6d92dfe3f72292d52 ChangeLog 527
+MD5 b8447c43a802744ef61b85b57ea75438 ChangeLog 659
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 0117269895e742f28982ce51acd133e7 icewmcp-3.2.ebuild 2407
 MD5 2180d0e3edcb1dd9b00cb79e2f1d951d files/digest-icewmcp-3.1 74
+MD5 c7292bd9381f8b320cefa8dcf243278b files/digest-icewmcp-3.2 74

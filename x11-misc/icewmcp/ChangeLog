@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icewmcp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.4 2004/06/24 22:24:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.5 2004/08/20 15:53:01 morfic Exp $
+
+*icewmcp-3.2 (20 Aug 2004)
+
+  20 Aug 2004; Daniel Goller <morfic@gentoo.org> +icewmcp-3.2.ebuild:
+  Bumped to 3.2 closing bug #60496
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> icewmcp-3.1.ebuild:
   Stable on x86
