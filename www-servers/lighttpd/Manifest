@@ -1,11 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 4d6b3a498dfc3fd781ad937ace09ebe8 ChangeLog 2844
 MD5 3e1d889652f2bbbe1a7213102f9e27ac lighttpd-1.1.8-r1.ebuild 1924
 MD5 5667b4c4ad06685e3896ed5938557680 lighttpd-1.1.8.ebuild 1921
 MD5 fae1d9e209a9d8a9179bcc689184910f lighttpd-1.2.2.ebuild 2046
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
-MD5 71c7511a014e534c5e5d66e6c37bcf47 ChangeLog 2710
+MD5 5a0f22442b0f8a6d1cf333d662209293 lighttpd-1.3.5.ebuild 2502
 MD5 eb94c0fc2149e2543beb50e93058de99 files/digest-lighttpd-1.1.8 66
 MD5 eb94c0fc2149e2543beb50e93058de99 files/digest-lighttpd-1.1.8-r1 66
 MD5 0d9277bbfb98755640329afa81c8bee2 files/digest-lighttpd-1.2.2 66
@@ -13,10 +11,4 @@ MD5 352e2fac9cb73bdae7672f977b044894 files/lighttpd-1.1.8-gentoo.diff 1301
 MD5 32569e20d3ecdd51ac0534cc85d52354 files/lighttpd-1.2.2-php.diff 1184
 MD5 dcfa5883c3433b49204b6b4de25a9a3c files/lighttpd-1.2.2.initd 800
 MD5 0b20460d5762811ccb8312c2666107e6 files/lighttpd.initd 635
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWMXvI1lqEGTUzyQRAuZEAJ4sVeI65Xi9dkN10oQGhamzSSDfqQCfcVIV
-jYNG4OytU56He7vvu/RaC18=
-=oV27
------END PGP SIGNATURE-----
+MD5 0cf0d92da4da90a9fc4f1b9a58b4eb1e files/digest-lighttpd-1.3.5 66

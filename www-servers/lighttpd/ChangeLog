@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.5 2004/09/28 02:01:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.6 2004/11/02 20:22:44 stuart Exp $
+
+*lighttpd-1.3.5 (02 Nov 2004)
+
+  02 Nov 2004; Stuart Herbert <stuart@gentoo.org> +lighttpd-1.3.5.ebuild:
+  Version bump; stable on x86
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org>
   files/lighttpd-1.2.2.initd, files/lighttpd.initd:
