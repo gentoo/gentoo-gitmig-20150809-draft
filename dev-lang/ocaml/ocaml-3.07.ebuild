@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07.ebuild,v 1.1 2003/10/06 21:26:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07.ebuild,v 1.2 2003/10/06 23:51:34 weeve Exp $
 
 inherit flag-o-matic eutils
 filter-flags "-fstack-protector"
@@ -22,20 +22,16 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	grep -rle "head -1" . | xargs sed -i "s:head -1:head -n 1:g"
-
-	# Fix for bug #23767
-	if [ "${ARCH}" = "sparc" ]
-	then
-		# We need a patch and to make sure it builds
-		# for the right host type
-		epatch ${FILESDIR}/ocaml-3.06-sparc-configure.patch
-		myconf="${myconfg} -host sparc-unknown-linux-gnu"
-	fi
 }
 
 src_compile() {
 	local myconf
 	use tcltk || myconf="-no-tk"
+
+	# Fix for bug #23767.
+	if [ "${ARCH}" = "sparc" ]; then
+		myconf="${myconf} -host sparc-unknown-linux-gnu"
+	fi
 
 	./configure -prefix /usr \
 		-bindir /usr/bin \
