@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b28aa723bec021e558538f409a9cb4f ChangeLog 5296
+MD5 1ecc35aaa1b8040dbbf7104b2931aed8 ChangeLog 5400
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 52d687145b5a86b4c2b9627ea4378fd0 mplus-fonts-2.1.3.ebuild 721
 MD5 b484d4de9ddf3cbab03d073c1e9588a9 mplus-fonts-2.2.1.ebuild 722
-MD5 32687f373f42e099e92c929038f9b34f mplus-fonts-2.2.2.ebuild 724
-MD5 62d4a09d7000471d4cf54cf2dbfce868 files/digest-mplus-fonts-2.1.3 76
+MD5 52d687145b5a86b4c2b9627ea4378fd0 mplus-fonts-2.1.3.ebuild 721
+MD5 5a2479e8aff378b4392a9ce63f87f7b1 mplus-fonts-2.2.2.ebuild 726
 MD5 60c1e9b7bf6f67c9c5534744ad72e50e files/digest-mplus-fonts-2.2.1 76
+MD5 62d4a09d7000471d4cf54cf2dbfce868 files/digest-mplus-fonts-2.1.3 76
 MD5 243e34fc978fab7156feb2953a14392b files/digest-mplus-fonts-2.2.2 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBWlVYVWNWqTUmv+0RAoQ3AJ4nP9VQyZDLeCUtix5XJXal2IhteQCeKNTn
-0CTyTgin+Qvpx6ZOzqsSHFc=
-=BQsu
------END PGP SIGNATURE-----

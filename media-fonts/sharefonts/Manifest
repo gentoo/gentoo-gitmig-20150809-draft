@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 386f1b3e30c40eb88516e60a93b0c7da ChangeLog 2307
+MD5 01af624991217554aadbf63a9fadb20c ChangeLog 2412
 MD5 f975ed3aaa0dc4ae36de1fad71a89e8e metadata.xml 177
 MD5 099bc13b9f9fca7f53255d7e805dc2e7 sharefonts-0.10-r1.ebuild 637
-MD5 7fc30a5dcce0395b845fe72374bdf901 sharefonts-0.10-r3.ebuild 525
+MD5 6c5aba3230b1c44fa63f44385eb70636 sharefonts-0.10-r3.ebuild 527
 MD5 844974be1ef6607c9a78acf3ca0b0593 files/digest-sharefonts-0.10-r1 67
 MD5 844974be1ef6607c9a78acf3ca0b0593 files/digest-sharefonts-0.10-r3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBWlljVWNWqTUmv+0RAkNsAJ9SOMONKtvJgqQ1D5dlNXUlNgjK0QCeKjLT
-GJ1JhG6QMrUdmWvLXvsQ+wg=
-=ZC/Q
------END PGP SIGNATURE-----
