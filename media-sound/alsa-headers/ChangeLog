@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.7 2004/08/25 18:14:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.8 2004/09/22 09:28:57 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-headers-1.0.6a.ebuild:
+  Stable amd64, x86.
 
   25 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/alsa-headers-1.0.6a-user.patch:
