@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.2.4.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.2.4.ebuild,v 1.3 2001/08/07 18:47:13 drobbins Exp $
 
 A="zope_${PV}.orig.tar.gz zope_${PV}-3.diff.gz"
 S=${WORKDIR}/Zope-${PV}-src
@@ -49,7 +49,7 @@ src_install () {
     find ${D}${ZDIR}/lib/python/Shared/DC/xml/pyexpat \
 	-regex ".+\.h" -exec rm {} \;
 
-    try cd ${D}${ZDIR}/lib/python/Shared/DC/xml/pyexpat
+    cd ${D}${ZDIR}/lib/python/Shared/DC/xml/pyexpat
     rm -rf pyexpat.prj* expat
 
     cd ${S}/lib
