@@ -1,11 +1,11 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.32 2005/04/05 01:48:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.33 2005/04/05 02:53:32 eradicator Exp $
 
-*libexif-0.6.12-r1 (05 Apr 2005)
+*libexif-0.6.12-r2 (05 Apr 2005)
 
   05 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
-  -libexif-0.6.12.ebuild, +libexif-0.6.12-r1.ebuild:
+  -libexif-0.6.12.ebuild, +libexif-0.6.12-r2.ebuild:
   Fix soname.
 
 *libexif-0.6.12 (22 Mar 2005)

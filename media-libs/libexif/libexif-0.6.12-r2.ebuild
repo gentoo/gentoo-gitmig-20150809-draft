@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.12-r1.ebuild,v 1.1 2005/04/05 01:48:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.12-r2.ebuild,v 1.1 2005/04/05 02:53:32 eradicator Exp $
 
 inherit eutils
 
@@ -22,6 +22,8 @@ src_unpack() {
 	# The libexif hackers made a goof on the soname versioning.  It will
 	# be fixed in 0.6.13 at which point LIBEXIF_AGE should be removed here.
 	sed -i 's/^LIBEXIF_AGE=0$/LIBEXIF_AGE=2/' ${S}/configure
+	sed -i 's/^LIBEXIF_REVISION=0$/LIBEXIF_REVISION=2/' ${S}/configure
+	sed -i 's/^LIBEXIF_VERSION_INFO=.*$/LIBEXIF_VERSION_INFO=$LIBEXIF_CURRENT:$LIBEXIF_AGE:$LIBEXIF_REVISION/' ${S}/configure
 }
 
 src_compile() {
