@@ -1,4 +1,4 @@
-MD5 c37c3055e2a381ae657b299b15f9a487 ChangeLog 407
-MD5 dab2109e4e556af0d188081dc2db4524 jaf-1.0.2.ebuild 1238
+MD5 7e7051f9bedc06a4d393764d171fd0ad jaf-1.0.2.ebuild 1493
+MD5 20617f553bd3026ff858e3d27dfab73f ChangeLog 570
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-jaf-1.0.2 0
+MD5 581e31a5c47351d756b4a7e8c5a58751 files/digest-jaf-1.0.2 58
