@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-1.91.ebuild,v 1.2 2003/10/26 21:28:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-1.93.ebuild,v 1.1 2003/10/26 21:28:43 mholzer Exp $
 
 S=${WORKDIR}/${PN}
 HTTPD_ROOT="/home/httpd/htdocs"
@@ -41,7 +41,7 @@ src_install() {
 	mv ${WORKDIR}/crystal ${S}/themes
 	cd ${S}
 	dodoc CHANGELOG DEVELOPERS FAQ INSTALL RELEASE README.ldap TODO TRANSLATORS
-	rm -rf CHANGELOG DEVELOPERS FAQ INSTALL RELEASE README.ldap TODO TRANSLATORS
+	rm -rf CHANGELOG FAQ INSTALL RELEASE README.ldap TODO TRANSLATORS
 	cd ${WORKDIR}
 
 	cp -r . ${D}/${HTTPD_ROOT}
