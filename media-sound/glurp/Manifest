@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 2e032f483edcff25135e1ee5065e32e4 glurp-0.11.3.ebuild 679
-MD5 3ef0e0806d1016c4d3fea703966e97de glurp-0.11.2.ebuild 680
-MD5 99a2e2a216523a3595330bb965483efb ChangeLog 800
+MD5 d0d26dba1436d4efdd2479c7a3bb2205 glurp-0.11.2.ebuild 678
+MD5 eb3bfb61590cc7bb356e6289106228ff ChangeLog 887
 MD5 39ca3cc9726f35001924ecf3baea20d1 metadata.xml 219
 MD5 ac9e071393589dec888716d4cdb12d81 files/digest-glurp-0.11.2 63
 MD5 e89720d903388dd91903baea27dd2aa3 files/digest-glurp-0.11.3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBPM3q10xuJSrg3/sRAmIYAJ0cZBd0b70+NcKsw6ihDvOfVw8OlQCeJkd3
-+p5bFZ9+Y+sG13stiTlxAJA=
-=oOVK
+iD8DBQFBPO0Z10xuJSrg3/sRAuAfAJ4/bX5Upd5sgatG9k7i5XIo5fZNbQCeLTgg
++Wxi97vvzpkC6zEvZTvZ4Ow=
+=P7Ne
 -----END PGP SIGNATURE-----
