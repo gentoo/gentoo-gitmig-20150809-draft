@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.80 2005/01/15 09:07:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.81 2005/01/16 09:00:42 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1089,6 +1089,13 @@ gcc_do_filter_flags() {
 }
 
 gcc_src_compile() {
+	if [[ "${ARCH}" == "amd64" -a "${LD_PRELOAD}" == "/lib/libsandbox.so" ]] && use multilib; then
+		eerror "Sandbox in your installed portage does not support compilation."
+		eerror "of a multilib gcc.  Please set FEATURE=-sandbox and try again."
+		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
+		die "No 32bit sandbox.  Retry with FEATURES=-sandbox."
+	fi
+
 	gcc_do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
@@ -1209,7 +1216,7 @@ gcc-compiler_src_install() {
 	fi
 
 	# Move the libraries to the proper location
-	gcc_movelibs
+	gcc_movelibs &> /dev/null
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
@@ -1324,20 +1331,20 @@ gcc_movelibs() {
 
 			FROMDIR=${D}/${LIBPATH}/${OS_MULTIDIR}
 			if [ "${FROMDIR}" != "${TODIR}" -a -d "${FROMDIR}" ]; then
-				mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
-				rmdir ${FROMDIR} &> /dev/null
+				mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+				rmdir ${FROMDIR}
 			fi
 
 			FROMDIR=${D}/${LIBPATH}/../${MULTIDIR}
 			if [ -d "${FROMDIR}" ]; then
-				mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
-				rmdir ${FROMDIR} &> /dev/null
+				mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+				rmdir ${FROMDIR}
 			fi
 
 			FROMDIR=${D}/${PREFIX}/lib/${OS_MULTIDIR}
 			if [ -d "${FROMDIR}" ]; then
-				mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
-				rmdir ${FROMDIR} &> /dev/null
+				mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+				rmdir ${FROMDIR}
 			fi
 
 			FROMDIR=${D}/${PREFIX}/lib/${MULTIDIR}
@@ -1347,8 +1354,8 @@ gcc_movelibs() {
 				# otherwise we'd have a potential conflict when OS_MULTIDIR=../lib and
 				# MULTIDIR=. for different ABI.  If this happens, the fix is to patch
 				# the gcc Makefiles to behave with LIBDIR properly.
-				#mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
-				rmdir ${FROMDIR} &> /dev/null
+				#mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+				rmdir ${FROMDIR}
 			fi
 		done
 	else
@@ -1378,8 +1385,8 @@ gcc_movelibs() {
 		fi
 
 		# and sometimes crap ends up here too :|
-		mv ${D}/${PREFIX}/lib/{*.a,*.so*,*.la} ${D}/${LIBPATH}/ &>/dev/null
-		mv ${D}/${LIBPATH}/../{*.a,*.so*,*.la} ${D}/${LIBPATH}/ &>/dev/null
+		mv ${D}/${PREFIX}/lib/{*.a,*.so*,*.la} ${D}/${LIBPATH}/
+		mv ${D}/${LIBPATH}/../{*.a,*.so*,*.la} ${D}/${LIBPATH}/
 
 		rm -rf ${D}/${PREFIX}/lib64
 		rm -rf ${D}/${PREFIX}/lib32
