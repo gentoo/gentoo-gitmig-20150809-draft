@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.53 2005/02/14 02:05:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.54 2005/04/04 23:40:55 axxo Exp $
+
+  04 Apr 2005; Thomas Matthijs <axxo@gentoo.org> files/mpd.rc6:
+  add use alsasound to init script
 
   14 Feb 2005; Andrej Kacian <ticho@gentoo.org> mpd-0.11.4-r1.ebuild,
   mpd-0.11.4-r2.ebuild, mpd-0.11.4.ebuild, mpd-0.11.5.ebuild:
