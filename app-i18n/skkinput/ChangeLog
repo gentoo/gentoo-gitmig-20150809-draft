@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/skkinput
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.16 2003/10/07 17:38:44 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.17 2003/10/21 16:08:09 matsuu Exp $
+
+*skkinput-3.0.6.20031012b (22 Oct 2003)
+
+  22 Oct 2003; MATSUU Takuto <matsuu@gentoo.org>
+  skkinput-3.0.6.20031012b.ebuild:
+  version bump
+  fixed S=
 
 *skkinput-2.06.4 (07 Oct 2003)
 
