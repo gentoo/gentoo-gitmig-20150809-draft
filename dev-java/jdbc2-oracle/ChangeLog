@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jdbc2-oracle
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/ChangeLog,v 1.1 2003/05/14 23:25:05 absinthe Exp $
+
+*jdbc2-oracle-9.0.1.4 (14 May 2003)
+
+  14 May 2003; Dylan Carlson <absinthe@gentoo.org> jdbc2-oracle-8.1.7.ebuild,
+  jdbc2-oracle-9.0.1.4.ebuild, jdbc2-oracle-9.0.1.ebuild,
+  jdbc2-oracle-9.2.0.1.ebuild, jdbc2-oracle-9.2.0.3.ebuild:
+  Initial import.
+
