@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.7.ebuild,v 1.2 2004/02/06 16:06:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.7.ebuild,v 1.3 2004/02/07 00:54:39 spider Exp $
 
 inherit gnome2
 
@@ -26,8 +26,7 @@ RDEPEND=">=gnome-base/gconf-1.2
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig
-	dev-util/intltool
-	dev-perl/XML-Parser"
+	>=dev-util/intltool-0.29"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
 

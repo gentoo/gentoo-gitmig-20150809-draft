@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.40 2004/02/06 16:06:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.41 2004/02/07 00:54:39 spider Exp $
+
+  07 Feb 2004; <spider@gentoo.org> epiphany-1.0.7.ebuild:
+  remove dep on XML::Parser, and add a hard dep on intltool >= 0.29. This build
+  has an RDEPEND on XML::Parser instead.
 
   06 Feb 2004; <spider@gentoo.org> epiphany-1.0.7.ebuild:
   Stable x86 to match mozilla.
