@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.19 2003/07/21 18:53:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.20 2003/07/24 17:48:00 mholzer Exp $
+
+*shorewall-1.4.6-r1 (25 Jul 2003)
+
+  25 Jul 2003; Martin Holzer <mholzer@gentoo.org> shorewall-1.4.6-r1.ebuild:
+  Subrelease of 1.4.6
 
 *shorewall-1.4.6 (22 Jul 2003)
 
