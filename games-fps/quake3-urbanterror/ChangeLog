@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/quake3-urbanterror
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.10 2004/04/13 21:58:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.11 2004/06/05 21:30:27 wolf31o2 Exp $
+
+*quake3-urbanterror-3.6 (05 Jun 2004)
+
+  05 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +quake3-urbanterror-3.6.ebuild:
+  Updating to version 3.6 and closing bug #51251. This version also actually has
+  working (at this time) mirrors in the ebuild, so manual fetching is no longer
+  requried to emerge this game.
 
   13 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-urbanterror-2.6_beta1.ebuild, quake3-urbanterror-3.1-r1.ebuild,
