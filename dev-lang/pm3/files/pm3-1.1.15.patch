@@ -101,40 +101,6 @@
  
  if defined(UseOblets)
    include_dir("oblet")
---- pm3-1.1.15.orig/src/PACKAGES
-+++ pm3-1.1.15/src/PACKAGES
-@@ -147,8 +147,8 @@
- PkgInfo("coverage","language/modula3/m3tools","","coverage",tProg,"T",3,[],
-     ["ALL"],["POSIX"],"A line-based coverage analyzer/profiler")
- 
--PkgInfo("m3gdb","language/modula3/m3tools","","m3gdb",tProg,"T",3,[],["ALL"],
--    ["M3GDB"],"Modula-3 aware debugger based on gdb")
-+%PkgInfo("m3gdb","language/modula3/m3tools","","m3gdb",tProg,"T",3,[],["ALL"],
-+%    ["M3GDB"],"Modula-3 aware debugger based on gdb")
- 
- PkgInfo("pp","language/modula3/m3tools","","pp",tProg,"T",3,[],["ALL"],
-     ["POSIX"],"Modula-3 pretty-printer")
-@@ -460,14 +460,14 @@
- PkgInfo("webvbt","network/www","","webvbt",tLib,"T",3,[],["ALL"],[],
-     "A library for displaying HTML pages inside a VBT")
- 
--PkgInfo("webscape","network/www","","webscape",tProg,"T",3,[],["ALL"],[],
--    "A web browser with support for interactive content")
-+%PkgInfo("webscape","network/www","","webscape",tProg,"T",3,[],["ALL"],[],
-+%    "A web browser with support for interactive content")
- 
--PkgInfo("deckscape","network/www","","deckscape",tProg,"T",3,[],["ALL"],[],
--    "A web browser that uses a new metaphor: decks of web pages")
-+%PkgInfo("deckscape","network/www","","deckscape",tProg,"T",3,[],["ALL"],[],
-+%    "A web browser that uses a new metaphor: decks of web pages")
- 
--PkgInfo("webcard","network/www","","webcard",tProg,"T",3,[],["ALL"],
--    ["POSIX","ST_SPARE"],"An integrated mail/news/web client")
-+%PkgInfo("webcard","network/www","","webcard",tProg,"T",3,[],["ALL"],
-+%    ["POSIX","ST_SPARE"],"An integrated mail/news/web client")
- 
- PkgInfo("ocr","graphics/lecternpkg","","ocr",tLib,"T",3,[],["ALL"],[],
-     "Interface to optical character recognition library (DECstation only)")
 --- pm3-1.1.15.orig/debian/libpm3-static.dirs
 +++ pm3-1.1.15/debian/libpm3-static.dirs
 @@ -0,0 +1 @@
