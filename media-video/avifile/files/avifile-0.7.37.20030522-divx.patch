@@ -1,0 +1,391 @@
+===================================================================
+RCS file: /cvsroot/avifile/avifile-0.6/plugins/libdivx4/divx4.cpp,v
+retrieving revision 1.86
+retrieving revision 1.87
+diff -u -r1.86 -r1.87
+--- avifile/avifile-0.6/plugins/libdivx4/divx4.cpp	2003/05/20 14:41:44	1.86
++++ avifile/avifile-0.6/plugins/libdivx4/divx4.cpp	2003/05/23 23:21:52	1.87
+@@ -32,7 +32,11 @@
+ class DIVX_VideoDecoder: public IVideoDecoder, public IRtConfig
+ {
+     void* m_pDll;
++#if DECORE_VERSION >= 20021112    
++    void* m_pHandle;
++#else
+     unsigned long m_ulHandle;
++#endif
+     int m_iLastPPMode;
+     int m_iMaxAuto;
+     int m_iLastBrightness;
+@@ -44,15 +48,28 @@
+     bool m_bFlip;
+     char m_cFormatBuf[128];
+     avm::vector<AttributeInfo> m_YvAttrs;
+-    int STDCALL (*m_pDecore)(unsigned long handle,  // handle  - the handle of the calling entity, must be unique
+-			     unsigned long dec_opt, // dec_opt - the option for docoding, see below
++#if DECORE_VERSION >= 20021112    
++    typedef int STDCALL (*pDecoreFun)(void *handle,  // handle  - the handle of the calling entity, must be unique
++			     int dec_opt, // dec_opt - the option for docoding, see below
+ 			     void *param1,	    // param1  - the parameter 1 (it's actually meaning depends on dec_opt
+ 			     void *param2);	    // param2  - the parameter 2 (it's actually meaning depends on dec_opt
+-
++#else			     
++    typedef int STDCALL (*pDecoreFun)(unsigned long handle,  // handle  - the handle of the calling entity, must be unique
++			     unsigned long dec_opt, // dec_opt - the option for docoding, see below
++			     void *param1,	    // param1  - the parameter 1 (it's actually meaning depends on dec_opt
++			     void *param2);	    // param2  - the parameter 2 (it's actually meaning depends on dec_opt			    
++#endif
++    pDecoreFun m_pDecore;
+ public:
+     DIVX_VideoDecoder(const CodecInfo& info, const BITMAPINFOHEADER& bh,
+ 		      int flip) :
+-    IVideoDecoder(info, bh), m_pDll(0), m_ulHandle(0), m_iLastPPMode(0),
++    IVideoDecoder(info, bh), m_pDll(0),
++#if DECORE_VERSION < 20021112    
++     m_ulHandle(0),
++#else
++     m_pHandle(0),
++#endif     
++     m_iLastPPMode(0),
+ 	m_iLastBrightness(0), m_iLastContrast(0), m_iLastSaturation(0),
+ 	m_bSetFlg(true), m_bFlip(flip)
+     {
+@@ -74,9 +91,7 @@
+ 	    divx4_error_set("can't open %s", divxdecore);
+             return -1;
+ 	}
+-	m_pDecore = (int STDCALL (*)(unsigned long, unsigned long,
+-				     void *, void *))
+-	    dlsym(m_pDll, "decore");
++	m_pDecore = (pDecoreFun) dlsym(m_pDll, "decore");
+ 	if (!m_pDecore)
+ 	{
+ 	    divx4_error_set("can't resolve %s:decore", divxdecore);
+@@ -142,6 +157,31 @@
+     }
+     virtual int Start()
+     {
++#if DECORE_VERSION >= 20021112
++	DEC_INIT init;
++	memset(&init, 0, sizeof(init));
++	switch(m_Info.fourcc)
++	{
++	case fccDIV3: init.codec_version = 311; break;
++	case fccDIVX: init.codec_version = 412; break;
++	default:
++	case fccDX50: init.codec_version = 500; break;
++	}
++	
++	int result=m_pDecore((void*) &m_pHandle, DEC_OPT_INIT, &init, 0);
++	if(result)
++	{
++    	    divx4_error_set("Error %d creating decoder instance", result);
++	    return -1;
++	}
++	assert(m_pHandle);
++	result=m_pDecore(m_pHandle, DEC_OPT_SETOUT, &m_Dest, 0);
++	if(result) // unacceptable color space
++	{
++	    divx4_error_set("Error %d setting output", 	result);
++	    return -1;
++	}
++#else /* version < 20021112 */
+ 	DEC_PARAM param;
+ 
+         memset(&param, 0, sizeof(param));
+@@ -211,13 +251,19 @@
+ 	case fccDX50: param.codec_version = 500; break;
+ 	}
+ 	param.build_number = 0;
+-#endif
++#endif /* 20020303 */
+ 	m_ulHandle = (unsigned long) this;
+ 	m_pDecore(m_ulHandle, DEC_OPT_INIT, &param, m_cFormatBuf);
++#endif /* 20021112 */
+ 	return 0;
+     }
+     virtual int Stop()
+-    {
++    {    
++#if DECORE_VERSION >= 20021112    
++	if (!m_pHandle)
++	    return -1;
++	m_pDecore(m_pHandle, DEC_OPT_RELEASE, 0, 0);
++#else /* 20021112 */
+ 	if (!m_ulHandle)
+ 	    return -1;
+ #if DECORE_VERSION > 20011009
+@@ -225,17 +271,22 @@
+ 	// so release memory only with newer versions
+         // and leave the memory leak with the older version
+ 	m_pDecore(m_ulHandle, DEC_OPT_RELEASE, 0, 0);
+-#else
++#else /* 20011009 */
+ #warning !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ #warning !USING OLD DIVX4 library - memory will be unreleased!
+ #warning !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-#endif
++#endif /* 20011009 */
++#endif /* 20021112 */
+ 	PluginSetAttrInt(m_Info, divx4str_saturation, m_iLastSaturation);
+ 	PluginSetAttrInt(m_Info, divx4str_contrast, m_iLastContrast);
+ 	PluginSetAttrInt(m_Info, divx4str_brightness, m_iLastBrightness);
+ 	PluginSetAttrInt(m_Info, divx4str_maxauto, m_iMaxAuto);
+ 	PluginSetAttrInt(m_Info, divx4str_postprocessing, m_iLastPPMode);
++#if DECORE_VERSION >= 20021112
++	m_pHandle = 0;
++#else	
+         m_ulHandle = 0;
++#endif	
+         return 0;
+     }
+     virtual int DecodeFrame(CImage* pImage, const void* src, uint_t size,
+@@ -243,14 +294,21 @@
+ 			    CImage** pOut = 0)
+     {
+ 	DEC_FRAME param;
+-
+-	if (!size || !m_ulHandle)
++	
++	if (!size || 
++#if DECORE_VERSION >= 20021112
++	!m_pHandle
++#else
++	!m_ulHandle
++#endif	
++	)
+ 	    return 0;
+ 	if (m_Dest.biHeight != pImage->GetFmt()->biHeight)
+ 	{
+             m_Dest = pImage->GetFmt();
+ 	    Restart();
+ 	}
++	memset(&param, 0, sizeof(param));
+ 
+ 	// leave here for some time - until all users will use new headers
+ 	param.bitstream = (void*) src;
+@@ -268,10 +326,20 @@
+             param.stride = 0;
+ 	    param.render_flag = 0;
+ 	}
+-
+ 	if (m_bSetFlg)
+ 	{
+             m_bSetFlg = false;
++#if DECORE_VERSION >= 20021112
++	    int iSetOperation = DEC_ADJ_SET | DEC_ADJ_POSTPROCESSING;
++	    int iPP=m_iLastPPMode * 10;
++	    m_pDecore(m_pHandle, DEC_OPT_ADJUST, &iSetOperation, &iPP);
++	    iSetOperation = DEC_ADJ_SET | DEC_ADJ_BRIGHTNESS;
++	    m_pDecore(m_pHandle, DEC_OPT_ADJUST, &iSetOperation, &m_iLastBrightness);
++	    iSetOperation = DEC_ADJ_SET | DEC_ADJ_CONTRAST;
++	    m_pDecore(m_pHandle, DEC_OPT_ADJUST, &iSetOperation, &m_iLastContrast);
++	    iSetOperation = DEC_ADJ_SET | DEC_ADJ_SATURATION;
++	    m_pDecore(m_pHandle, DEC_OPT_ADJUST, &iSetOperation, &m_iLastSaturation);
++#else /* version < 20021112 */
+ 	    DEC_SET set;
+ 	    set.postproc_level = m_iLastPPMode * 10;
+ 	    m_pDecore(m_ulHandle, DEC_OPT_SETPP, &set, 0);
+@@ -279,9 +347,13 @@
+ 	    m_pDecore(m_ulHandle, DEC_OPT_GAMMA, (void*)DEC_GAMMA_BRIGHTNESS, (void*)m_iLastBrightness);
+ 	    m_pDecore(m_ulHandle, DEC_OPT_GAMMA, (void*)DEC_GAMMA_CONTRAST, (void*)m_iLastContrast);
+ 	    m_pDecore(m_ulHandle, DEC_OPT_GAMMA, (void*)DEC_GAMMA_SATURATION, (void*)m_iLastSaturation);
+-#endif
++#endif /* DEC_OPT_GAMMA */
++#endif /* 20021112 */
+ 	}
+ 
++#if DECORE_VERSION >= 20021112
++	m_pDecore(m_pHandle, DEC_OPT_FRAME, &param, 0);
++#else /* version < 20021112 */
+ #ifdef USE_311_DECODER
+ #if DECORE_VERSION < 20020303
+ 	if(m_bCompat311)
+@@ -292,11 +364,12 @@
+ 	    m_pDecore(m_ulHandle, DEC_OPT_FRAME_311, &param, 0);
+ 	}
+ 	else
+-#endif
+-#endif
++#endif /* 20020303 */
++#endif /* USE_311_DECODER */
+ 	{
+ 	    m_pDecore(m_ulHandle, DEC_OPT_FRAME, &param, 0);
+ 	}
++#endif	
+ 	pImage->SetQuality((float) m_iLastPPMode / DIVX4_MAX_QUALITY);
+ 
+ 	return size;
+@@ -324,9 +397,13 @@
+ 	default:
+             return -1;
+ 	}
++#if DECORE_VERSION >= 20021112
++	if(m_pHandle)
++	    m_pDecore(m_pHandle, DEC_OPT_SETOUT, &m_Dest, 0);
++#else	
+ 	if (m_ulHandle)
+ 	    Restart();
+-
++#endif
+ 	return 0;
+     }
+     virtual const avm::vector<AttributeInfo>& GetAttrs() const
+@@ -444,6 +521,7 @@
+ 		  (m_Info.fourcc == fccDIVX) ? "DivX4" : "DivX5" );
+ 	m_obh.biCompression = m_Info.fourcc;
+ 	m_obh.biHeight = labs(m_obh.biHeight);
++#if ENCORE_VERSION < 5200	
+ 	switch (m_bh.biCompression)
+ 	{
+         // supports only bottom-up RGB for encoding
+@@ -460,29 +538,60 @@
+ 	    divx4_error_set("Unsupported input format");
+             return -1;
+ 	}
++#else
++	switch (m_bh.biCompression)
++	{
++        // supports only bottom-up RGB for encoding
++	case 0:
++	    if (m_bh.biBitCount != 24) {
++		divx4_error_set("Unsupported input bit depth");
++		return -1;
++	    }
++	    break;
++	case fccYUY2:
++	case fccYV12:
++	case fccI420:
++	    break;
++	default:
++	    divx4_error_set("Unsupported input format");
++            return -1;
++	}
++#endif
+         return 0;
+     }
+     virtual int Start()
+     {
++#if ENCORE_MAJOR_VERSION < 5200    
+ 	ENC_PARAM param;
++#else
++	SETTINGS param;
++#endif
+ 	memset(&param, 0, sizeof(param));
++#if ENCORE_MAJOR_VERSION < 5200    
+ 	param.x_dim=m_bh.biWidth;
+ 	//param.y_dim=m_bh.biHeight;// labs(m_bh.biHeight);
+ 	param.y_dim=labs(m_bh.biHeight);
+ 	param.framerate=30;//frames/sec
+-
++#else
++	param.input_clock = 1000000;
++	param.input_frame_period = 33333;
++#endif
+ 	PluginGetAttrInt(m_Info, divx4str_bitrate, &param.bitrate);//bits/sec
++#if ENCORE_MAJOR_VERSION < 5200
+ 	PluginGetAttrInt(m_Info, divx4str_rc_period, &param.rc_period);
+ 	PluginGetAttrInt(m_Info, divx4str_rc_reaction_period, &param.rc_reaction_period);
+ 	PluginGetAttrInt(m_Info, divx4str_rc_reaction_ratio, &param.rc_reaction_ratio);
+ 	PluginGetAttrInt(m_Info, divx4str_max_quantizer, &param.max_quantizer);//just guess
+ 	PluginGetAttrInt(m_Info, divx4str_min_quantizer, &param.min_quantizer);
++#endif	
+ 	PluginGetAttrInt(m_Info, divx4str_max_key_interval, &param.max_key_interval);
+ 	PluginGetAttrInt(m_Info, divx4str_quality, &param.quality);
+ 
+         int deinterlace = 0;
+ 	int bidirect = 0;
+ 	int obmc = 0;
++#if ENCORE_MAJOR_VERSION < 5200	
++// to be done: all extended parameters of new encore
+ #ifdef IF_SUPPORT_PRO
+ 	// fast deinterlace
+ 	PluginGetAttrInt(m_Info, divx4str_deinterlace, &deinterlace);
+@@ -490,16 +599,13 @@
+ 	PluginGetAttrInt(m_Info, divx4str_bidirect, &bidirect);
+         // flag to enable overlapped block motion compensation mode
+ 	PluginGetAttrInt(m_Info, divx4str_obmc, &obmc);
+-#endif
++#endif /* IF_SUPPORT_PRO */
+         param.deinterlace = deinterlace;
+ #ifndef ENCORE_MAJOR_VERSION
+ 	param.use_bidirect = bidirect;
+-#if DECORE_VERSION > 2001009
+ 	param.obmc = obmc;
+-#endif
+-#else
++#else /* ENCORE_MAJOR_VERSION */
+ 	memset(&param.extensions, 0, sizeof(param.extensions));
+-
+ #ifdef IF_SUPPORT_PRO
+ 	param.extensions.use_bidirect = bidirect;
+ 	param.extensions.obmc = obmc;
+@@ -532,11 +638,13 @@
+ 	PluginGetAttrInt(m_Info, divx4str_spatial_level, &tmp);
+         param.extensions.spatial_level = tmp / (double) 1000.0;
+ 
+-#endif // ENCORE_MAJOR_VERSION >= 5010
++#endif /* ENCORE_MAJOR_VERSION >= 5010 */
++
++#endif /* IF_SUPPORT_PRO */
+ 
+-#endif // IF_SUPPORT_PRO
++#endif /* ENCORE_MAJOR_VERSION */
+ 
+-#endif // ENCORE_MAJOR_VERSION
++#endif /* 5200 */
+ 	if (param.quality == 1)
+ 	{
+ 	    m_bRtMode=true;
+@@ -551,8 +659,17 @@
+ 	else
+ 	    m_bRtMode=false;
+ 	//	param.flip=1;
++#if ENCORE_MAJOR_VERSION < 5200		
+ 	m_pEncore(0, ENC_OPT_INIT, &param, 0);
+ 	m_pHandle=param.handle;
++#else	
++	int result=m_pEncore((void*)&m_pHandle, ENC_OPT_INIT, &param, &m_bh);
++	if(result!=ENC_OK)
++	{
++	    divx4_error_set("Error %d creating encoder", result);
++	    return -1;
++	}
++#endif
+         return 0;
+     }
+     virtual int Stop()
+@@ -584,12 +701,16 @@
+ 	    //return -1;
+ 	}
+ 	ENC_FRAME param;
++	memset(&param, 0, sizeof(param));
+ 	ENC_RESULT result;
+ 	param.bitstream = dest;
++#if ENCORE_MAJOR_VERSION < 5200	
+ 	param.colorspace = m_iCSP;
+-	param.image = (ci) ? ci->Data() : (void*) src->Data();
+ 	param.mvs = 0;
++#endif	
++	param.image = (ci) ? ci->Data() : (void*) src->Data();
+ 	param.length = GetOutputSize();
++#if ENCORE_MAJOR_VERSION < 5200
+ 	if (m_bRtMode)
+ 	{
+ 	    param.quant=m_iQuant;
+@@ -598,9 +719,15 @@
+ 	    m_pEncore(m_pHandle, ENC_OPT_ENCODE_VBR, &param, &result);
+ 	}
+ 	else
++#endif	
+ 	    m_pEncore(m_pHandle, ENC_OPT_ENCODE, &param, &result);
++#if ENCORE_MAJOR_VERSION < 5200	    
+ 	if (is_keyframe)
+ 	    *is_keyframe = result.is_key_frame ? 16 : 0;
++#else	    
++	if (is_keyframe)
++	    *is_keyframe = (result.cType == 'I') ? 16 : 0;
++#endif	    
+ 	if (size)
+ 	    *size = param.length;
+ 	if (ci)
