@@ -1,14 +1,19 @@
 # ChangeLog for net-ircbitchxChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.7 2002/07/17 03:11:56 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.8 2002/08/23 03:18:35 seemant Exp $
+
+
+*bitchx-1.0.19-r2 (26 Jun 2002)
+
+  22 Aug 2002; Seemant Kulleen <seemant@gentoo.org> bitchx-1.0.19-r2.ebuild :
+
+  Man page now installs properly (ie, it's readable).  Thanks to:
+  stocke2@cox.net (Eric Stockbridge) in bug #6720.
 
   16 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
 
   Commented out the "use socks5" stuff because bitchx is being lame and
   doesn't work with any packaged socks implementations in the tree :-(
-# ChangeLog for net-irc/bitchx
-
-*bitchx-1.0.19-r2 (26 Jun 2002)
 
   26 Jun 2002; Seemant Kulleen <seemant@gentoo.org> bitchx-1.0.19-r1.ebuild
   files/digest-bitchx-1.0.19-r2 :
