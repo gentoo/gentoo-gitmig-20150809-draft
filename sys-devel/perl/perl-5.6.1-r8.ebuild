@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.8 2002/12/10 21:33:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.9 2002/12/11 13:02:15 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -217,12 +217,12 @@ pkg_postinst() {
 	echo "n" | perl -MCPAN -e 'CPAN::Shell->install(ExtUtils::MakeMaker)'
 
 #########################################
-#	einfo
-#	einfo "Now that Perl is installed, you *must* install "
-#	einfo "dev-perl/ExtUtils-MakeMaker. This is an update to "
-#	einfo "the MakeMaker that comes bundled with Perl and includes "
-#	einfo "fixes applicable to the Gentoo sandbox. You must do this"
-#	einfo "even if you are re-installing Perl."
-#	einfo
+	einfo
+	einfo "Now that Perl is installed, you *must* install "
+	einfo "dev-perl/ExtUtils-MakeMaker. This is an update to "
+	einfo "the MakeMaker that comes bundled with Perl and includes "
+	einfo "fixes applicable to the Gentoo sandbox. You must do this"
+	einfo "even if you are re-installing Perl."
+	einfo
 
 }

@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.19 2002/12/10 21:33:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.20 2002/12/11 13:02:15 mcummings Exp $
+
+  11 Dec 2002; Michael Cummings <mcummings@gentoo.org> 
+  perl-5.6.1-r9.ebuild:
+
+  Pulled until PDEPEND is in. This worked only for those not behind
+  firewalls, and unfortunately perl needs to work across the board.
 
 *perl-5.6.1-r9 (10 Dec 2002)
 
