@@ -39,4 +39,3 @@ ACCEPT_KEYWORDS="arm"
 
 FEATURES="sandbox sfperms strict nodoc noinfo noman autoconfig"
 #FEATURES="${FEATURES} userpriv usersandbox"
-PKGDIR=${PORTDIR}/packages/${CHOST}/
