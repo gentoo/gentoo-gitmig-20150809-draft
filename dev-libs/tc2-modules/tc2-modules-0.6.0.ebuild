@@ -4,7 +4,6 @@
 
 IUSE="static"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Modules for dev-libs/tc2."
 HOMEPAGE="http://tc2.sourceforge.net"
 SRC_URI="mirror://sourceforge/tc2/${P}.tar.gz"

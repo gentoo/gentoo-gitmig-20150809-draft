@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2/tc2-0.5.6.ebuild,v 1.3 2004/06/24 23:35:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2/tc2-0.5.6.ebuild,v 1.4 2004/07/14 15:09:39 agriffis Exp $
 
 IUSE="static debug"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="TC2 is a library to simplify writing of modular programs."
 HOMEPAGE="http://tc2.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
