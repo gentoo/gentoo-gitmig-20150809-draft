@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.2 2004/01/03 03:38:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.3 2004/01/03 20:41:38 vapier Exp $
 
 inherit eutils games
 
@@ -12,9 +12,9 @@ SRC_URI="mirror://sourceforge/eboard/${P}.tar.gz
 	mirror://sourceforge/eboard/${EXTRAS1}.tar.gz
 	mirror://sourceforge/eboard/${EXTRAS2}.tar.gz"
 
-KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc"
 IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1*
