@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.12.ebuild,v 1.1 2005/03/09 06:45:01 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.12.ebuild,v 1.2 2005/03/12 20:31:55 joem Exp $
 
 inherit gnome2 eutils
 
@@ -15,7 +15,7 @@ IUSE="doc python"
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
 	>=x11-libs/pango-1.2
-	python? ( >=dev-python/pygtk-2
+	python? ( >=dev-python/pygtk-2.4
 		>=dev-lang/python-2.2 )"
 
 DEPEND="${RDEPEND}
