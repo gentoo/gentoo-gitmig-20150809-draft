@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4.ebuild,v 1.8 2004/03/26 16:30:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4.ebuild,v 1.9 2004/03/31 17:29:49 eradicator Exp $
 
 inherit eutils
 
 IUSE="esd"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="the audio output library"
 SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"

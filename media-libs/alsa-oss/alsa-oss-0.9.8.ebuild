@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.8.ebuild,v 1.5 2004/01/17 03:22:12 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.8.ebuild,v 1.6 2004/03/31 17:28:09 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture OSS compatibility layer."
 HOMEPAGE="http://www.alsa-project.org/"
@@ -14,7 +14,6 @@ KEYWORDS="x86 -sparc ppc amd64"
 
 SRC_URI="mirror://alsaproject/oss-lib/${P}.tar.bz2"
 RESTRICT="nomirror"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die "./configure failed"

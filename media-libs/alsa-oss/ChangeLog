@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.27 2004/03/27 07:54:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.28 2004/03/31 17:28:09 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-oss-0.9.8.ebuild:
+  Removing explicit S=
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-oss-0.9.0_rc8.ebuild, alsa-oss-0.9.1.ebuild, alsa-oss-0.9.4.ebuild,
