@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.5.0.ebuild,v 1.7 2004/02/15 11:46:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.5.0.ebuild,v 1.8 2004/03/16 01:55:44 mboman Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="console application which monitors network traffic and bandwidth usage in real time"
@@ -16,7 +16,7 @@ DEPEND=">=sys-libs/ncurses-5.2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 <${FILESDIR}/nload-0.5.0-gcc3-gentoo.patch
+	epatch ${FILESDIR}/nload-0.5.0-gcc3-gentoo.patch
 }
 
 src_compile() {
