@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.4.5.ebuild,v 1.2 2004/12/06 06:27:01 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.4.6.ebuild,v 1.1 2004/12/06 06:27:01 obz Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.4.1
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
+DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -50,8 +50,7 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}
 	# Fix include paths for our mozilla
-	epatch ${FILESDIR}/${PN}-1.3.4-fix_includes.patch
+	epatch ${FILESDIR}/${P}-fix_includes.patch
 
 }
