@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 293c0829c4237bbc9bb2174b9eafaf5a ChangeLog 739
+MD5 31f0c5fd20f090bad5ecfa5d18883e7b oer-1.0.64.ebuild 1094
+MD5 19ed33e25e27ccef19437f261b0c17be oer-1.0.66.ebuild 1104
+MD5 6912822eb694b0d9b9c49be9b0c665eb oer-1.0.65.ebuild 1096
+MD5 56f3b38cf8e457e3cec5315836a55d53 ChangeLog 929
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 235c744e39cb37d705d9d9d49acd92cc oer-1.0.64.ebuild 1056
-MD5 bed507d603eac2a3fe9d3cce36d524e5 oer-1.0.65.ebuild 1058
-MD5 734b0897c2e042b8c0d75bb79c00f733 files/1.0.64-basename.patch 240
 MD5 8d109710bda2d73afccad03fc696cd33 files/digest-oer-1.0.64 62
 MD5 1960f058e88c3a3db3ff4a533bc4ee59 files/digest-oer-1.0.65 62
+MD5 f68b3896a4f6a0d925f39fadbc6663e1 files/digest-oer-1.0.66 62
+MD5 734b0897c2e042b8c0d75bb79c00f733 files/1.0.64-basename.patch 240
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBlU/OI1lqEGTUzyQRAty/AJ4ytR93m0FrcmnSZ2i+/hzBLhvRWgCeJ+Rm
-0YAmQ7f8a4muvvzV01+JXZA=
-=oKUg
+iD8DBQFBwPkxI1lqEGTUzyQRAlx1AJ0c9NKb4pqoQ+zZVKtnkTkuWs6QpACeNIlp
+ipECmmloCLTn4i32fGqmEp4=
+=kqtR
 -----END PGP SIGNATURE-----
