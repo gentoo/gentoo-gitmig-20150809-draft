@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.10.ebuild,v 1.2 2005/01/26 02:06:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.10.ebuild,v 1.3 2005/03/11 03:20:47 latexer Exp $
 
 inherit gnome2 mono
 
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~x86 -sparc"
 
-RDEPEND=">=dev-dotnet/mono-1.0
+RDEPEND=">=dev-lang/mono-1.0
 	>=dev-dotnet/gtk-sharp-1.0
 	>=dev-dotnet/glade-sharp-1.0
 	>=dev-dotnet/gnome-sharp-1.0"
