@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta1.ebuild,v 1.1 2004/08/10 16:01:30 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta1.ebuild,v 1.2 2004/08/22 01:12:43 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://postgresql/source/v8.0.0beta/${PN}-base-${MY_PV}.tar.bz2
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc"
+IUSE="ssl nls python tcltk perl libg++ pam readline zlib doc"
 
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
@@ -29,19 +29,14 @@ DEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
-	java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3
-		dev-java/java-config )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )"
-# java dep workaround for portage bug
-# x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/libc
 	app-admin/sudo
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
-	java? ( >=virtual/jdk-1.3* )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 PG_DIR="/var/lib/postgresql"
@@ -62,15 +57,6 @@ pkg_setup() {
 	fi
 }
 
-check_java_config() {
-	JDKHOME="`java-config --jdk-home`"
-	if [[ -z ${JDKHOME} && ! -d ${JDKHOME} ]]; then
-		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
-		eerror "${NOJDKERROR}"
-		die "${NOJDKERROR}"
-	fi
-}
-
 src_unpack() {
 	unpack ${A} || die
 	epatch ${FILESDIR}/${P}-gentoo.patch
@@ -80,15 +66,10 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	if use java; then
-		check_java_config
-	fi
-
 	local myconf
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	use java && myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
@@ -142,15 +123,6 @@ src_install() {
 	dodoc contrib/adddepend/*
 
 	exeinto /usr/bin
-
-	if use java; then
-		# we need to remove jar file after dojar; otherwise two same jar
-		# file are installed.
-		dojar ${D}/usr/share/postgresql/java/postgresql.jar || die
-		rm ${D}/usr/share/postgresql/java/postgresql.jar
-		dojar ${D}/usr/share/postgresql/java/postgresql-examples.jar || die
-		rm ${D}/usr/share/postgresql/java/postgresql-examples.jar
-	fi
 
 	dodir /usr/include/postgresql/pgsql
 	cp ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql

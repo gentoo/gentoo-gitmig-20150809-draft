@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.118 2004/08/21 16:12:27 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.119 2004/08/22 01:12:43 nakano Exp $
+
+  22 Aug 2004; Masatomo Nakano <nakano@gentoo.org> :
+  Fixed merging bug which happens with USE="java" because jdbc driver
+  has been removed from PostgreSQL core distribution since version 8.0.0.
+  This closes bug #61178.
 
 *postgresql-7.4.5 (21 Aug 2004)
 
