@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/cnet
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.1 2003/08/01 19:48:23 rizzo Exp $
+
+*cnet-2.0.5 (01 Aug 2003)
+
+  01 Aug 2003; Don Seiler <rizzo@gentoo.org>; cnet-2.0.5.ebuild,
+  files/cnet-2.0.5-gentoo.patch:
+  Initial import. Thanks to Mike Gardiner <driver(at)iinet.net.au> for the
+  original ebuild.
+
