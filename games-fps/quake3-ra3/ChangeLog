@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-ra3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ra3/ChangeLog,v 1.5 2004/06/24 22:45:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ra3/ChangeLog,v 1.6 2004/08/18 22:27:48 wolf31o2 Exp $
+
+*quake3-ra3-1.76 (18 Aug 2004)
+
+  18 Aug 2004; Chris Gianelloni <wolf31o2@gentoo.org> +quake3-ra3-1.76.ebuild:
+  Added ebuild for version 1.76 and closing bug #54855.
 
 *quake3-ra3-1.7 (02 Sep 2003)
 
