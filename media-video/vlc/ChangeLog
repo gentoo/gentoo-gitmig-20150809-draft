@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.42 2004/03/11 22:10:26 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.43 2004/03/15 02:45:50 lu_zero Exp $
+
+  15 Mar 2004; Luca Barbato <lu_zero@gentoo.org> vlc-0.7.1.ebuild:
+  Marked -ppc the ffmpeg req has issues
 
 *vlc-0.7.1 (11 Mar 2004)
 
