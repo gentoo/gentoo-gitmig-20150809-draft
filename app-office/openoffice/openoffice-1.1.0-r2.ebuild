@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.9 2004/03/28 02:24:26 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.10 2004/04/24 10:48:06 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -282,6 +282,9 @@ src_unpack() {
 	if [ ${ARCH} = "sparc" ]; then
 		epatch ${FILESDIR}/${PV}/openoffice-1.1.0-sparc64-fix.patch
 	fi
+
+	#Security fix
+	epatch ${FILESDIR}/${PV}/neon.patch
 
 	#The gcc-3.2.3 version in gentoo is fixed for the internal error that
 	#blocks compilation with it, so remove the check from the configure script

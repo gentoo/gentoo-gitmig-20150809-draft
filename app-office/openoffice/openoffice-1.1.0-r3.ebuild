@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.7 2004/02/10 10:20:03 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.8 2004/04/24 10:48:06 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -270,6 +270,9 @@ src_unpack() {
 	if [ ${ARCH} = "sparc" ]; then
 		epatch ${FILESDIR}/${PV}/openoffice-1.1.0-sparc64-fix.patch
 	fi
+
+	#Security fix
+	epatch ${FILESDIR}/${PV}/neon.patch
 
 	if [ "$(gcc-version)" == "3.2" ]; then
 		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
