@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.4 2003/04/16 06:47:14 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.5 2003/04/16 13:03:17 gmsoft Exp $
 
 S=${WORKDIR}/Sablot-${PV}
 DESCRIPTION="An XSLT Parser in C++"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha"
+KEYWORDS="x86 ~sparc ~ppc hppa ~alpha"
 
 DEPEND=">=dev-libs/expat-1.95.1
 	dev-perl/XML-Parser"
