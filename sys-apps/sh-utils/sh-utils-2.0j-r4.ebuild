@@ -2,7 +2,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r4.ebuild,v 1.4 2001/09/15 16:31:40 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r4.ebuild,v 1.5 2001/09/16 05:03:15 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -60,7 +60,7 @@ src_install() {
 	fi
 	#we use the /bin/su from the sys-apps/shadow package
 	rm ${D}/bin/su
-	rm ${D}/usr/share/man/su.1.gz
+	rm ${D}/usr/share/man/man1/su.1.gz
 }
 
 
