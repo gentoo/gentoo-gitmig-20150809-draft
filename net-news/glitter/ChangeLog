@@ -1,6 +1,9 @@
 # ChangeLog for net-news/glitter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/glitter/ChangeLog,v 1.8 2004/07/04 22:29:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/glitter/ChangeLog,v 1.9 2004/07/14 20:57:35 swegener Exp $
+
+  14 Jul 2004; Sven Wegener <swegener@gentoo.org> glitter-1.0-r1.ebuild:
+  Added alternative SRC_URI as the official one seems to be dead.
 
   05 Jul 2004; Sven Wegener <swegener@gentoo.org> glitter-1.0-r1.ebuild,
   -glitter-1.0.ebuild:

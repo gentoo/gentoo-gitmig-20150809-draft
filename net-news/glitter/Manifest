@@ -1,5 +1,15 @@
-MD5 5da9225422e840526c4e310cf48c7e21 ChangeLog 1076
-MD5 b60e0259ead41408b2d7f606112b6bd6 glitter-1.0-r1.ebuild 653
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2c50802b8d3704cffcee764798de002d ChangeLog 1216
+MD5 1d5208f4f7e4abcbc31cc4415e8b938f glitter-1.0-r1.ebuild 708
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 df42e7744e7bac21b3d085918a16bf1b files/digest-glitter-1.0-r1 63
 MD5 bdf86bd5578ca993d698f20928da3222 files/glitter-1.0-gary-perl58.patch 567
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA9Z6I04iMKjbTpdgRAl1PAJ4heczXCCzEhNZpLjpZ+xCQaLIgbACfYo30
+zzLtf0USZ+XQI/7b2vaGeow=
+=pneC
+-----END PGP SIGNATURE-----
