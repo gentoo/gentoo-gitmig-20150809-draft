@@ -100,9 +100,10 @@ for pkgname in sys.argv[1:]:
 				print "--- !sym  ","sym", obj
 				continue
 			mydest=os.readlink(obj)
-			if mydest != pkgfiles[obj][2]:
-				print "--- !destn","sym", obj
-				continue
+			if os.path.exists(os.path.normpath(myroot+mydest)):
+				if mydest != pkgfiles[obj][2]:
+					print "--- !destn","sym", obj
+					continue
 			os.unlink(obj)
 			print "<<<       ","sym",obj
 		elif pkgfiles[obj][0]=="obj":
