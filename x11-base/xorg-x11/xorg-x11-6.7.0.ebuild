@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.33 2004/04/19 19:34:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.34 2004/04/19 21:01:58 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -65,7 +65,7 @@ IUSE="3dfx 3dnow cjk debug doc hardened ipv6 mmx nls pam pie sdk sse static"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
-PATCH_VER="0.5"
+PATCH_VER="0.6"
 #RENDER_VER="0.8"
 # Needed for xrender.pc in addition to external libs
 XRENDER_VER="0.8.4"
