@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r2.ebuild,v 1.2 2001/01/26 08:30:40 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r2.ebuild,v 1.3 2001/01/26 12:52:36 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -55,8 +55,18 @@ src_unpack() {
     unpack lm_sensors-2.5.5.tar.gz
     cd lm_sensors-2.5.5
     mkpatch/mkpatch.pl . ${S} > ${S}/lm_sensors-patch
+    rmdir src
+    ln -s ../.. src
+    cp Makefile Makefile.orig
+    sed -e "s:^LINUX=.*:LINUX=src:" \
+        -e "s/^COMPILE_KERNEL.*/COMPILE_CERNEL := 0/" \
+        -e "s:^I2C_HEADERS.*:I2C_HEADERS=src/include:" \
+        -e "s#^DESTDIR.*#DESTDIR := ${D}#" \
+        -e "s#^PREFIX.*#PREFIX := /usr#" \
+        -e "s#^MANDIR.*#MANDIR := /usr/share/man#" \
+        Makefile.orig > Makefile
     cd ${S}
-    patch -p1 < lm_sensors-patch   
+    patch -p1 < lm_sensors-patch
 
     echo "Preparing for compilation..."
     cd ${S}
@@ -76,7 +86,7 @@ src_compile() {
 
     #LVM tools are included even in the linux-sources package
     cd ${S}/extras/LVM/0.9.1_beta2
-    try ./configure --prefix=/ --mandir=/usr/man
+    try ./configure --prefix=/ --mandir=/usr/share/man
     try make
 
     cd ${S}
@@ -88,7 +98,7 @@ src_compile() {
 	return
     fi
 
-    cd ${S}/lm_sensors-2.5.5
+    cd ${S}/extras/lm_sensors-2.5.5
     try make
 
     cd ${S}
@@ -104,10 +114,10 @@ src_install() {
 
 
 	#clean up object files and original executables to reduce size of linux-sources
-	try make clean
+
 	dodir /usr/lib
 	cd ${S}/extras/LVM/0.9.1_beta2
-	make install prefix=${D} MAN8DIR=${D}/usr/man/man8 LIBDIR=${D}/lib
+	make install prefix=${D} MAN8DIR=${D}/usr/share/man/man8 LIBDIR=${D}/lib
 	#no need for a static library in /lib
 	mv ${D}/lib/liblvm*.a ${D}/usr/lib
 
@@ -155,13 +165,18 @@ src_install() {
 		cd include
 		doins asound.h asoundid.h asequencer.h ainstr_*.h
 
+                #install sensors tools
+                cd ${S}/extras/lm_sensors-2.5.5
+                make install
+
 		#fix symlink
 		cd ${D}/lib/modules/${KV}
 		rm build
 		ln -sf /usr/src/linux-${KV} build
 
 	else
-
+                cd ${S}
+                try make clean
 		#grab all the sources
 		cd ${WORKDIR}
 		mv linux ${D}/usr/src/linux-${KV}
