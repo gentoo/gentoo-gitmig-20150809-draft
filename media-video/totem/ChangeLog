@@ -1,6 +1,13 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.32 2004/07/14 19:58:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.33 2004/08/19 19:18:37 foser Exp $
+
+*totem-0.99.15.1 (19 Aug 2004)
+
+  19 Aug 2004; foser <foser@gentoo.org> totem-0.99.{5,8-r2,15.1}.ebuild :
+  New release, update deps (#48800)
+  Remove curl, add gnome USE flags
+  .5 & .8* : Fix compilation issues (#51864)
 
   14 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   totem-0.99.8-r2.ebuild:
