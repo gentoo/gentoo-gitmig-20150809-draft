@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.47 2003/12/13 18:20:40 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.48 2003/12/17 19:26:15 gmsoft Exp $
+
+  17 Dec 2003; Guy Martin <gmsoft@gentoo.org> gnumeric-1.2.1.ebuild:
+  Marked stable on hppa.
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> gnumeric-1.2.2.ebuild:
   mark stable on amd64
