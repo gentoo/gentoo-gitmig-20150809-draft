@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0.ebuild,v 1.8 2003/02/13 10:26:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0.ebuild,v 1.9 2003/03/29 04:37:29 avenj Exp $
 
 S=${WORKDIR}
 
@@ -13,7 +13,7 @@ SRC_URI2="ftp://download.intel.com/software/products/compilers/downloads/l_cc_p_
 SRC_URI3="ftp://download.intel.co.jp/software/products/compilers/downloads/l_cc_p_6.0.139.tar"
 SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
 
-HOMEPAGE="http://www.intel.com/software/products/compilers/c60l/"
+HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 
 LICENSE="icc-6.0"
 

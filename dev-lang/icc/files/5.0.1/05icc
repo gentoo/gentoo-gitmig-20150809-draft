@@ -1,5 +1,0 @@
-IA32ROOT=/opt/intel/compiler50/ia32
-INTEL_FLEXLM_LICENSE=/opt/intel/licenses
-LDPATH=/opt/intel/compiler50/ia32/lib
-PATH=/opt/intel/compiler50/ia32/bin
-ROOTPATH=/opt/intel/compiler50/ia32/bin
