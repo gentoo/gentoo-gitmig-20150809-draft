@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.18 2004/09/16 01:34:06 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.19 2004/10/23 06:01:40 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www2.tripleg.net.au/dos2unix.builder/${P}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ppc64 macos ppc-macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ppc64 ppc-macos"
 IUSE=""
 
 DEPEND=""

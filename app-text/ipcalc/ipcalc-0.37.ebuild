@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ipcalc-0.37.ebuild,v 1.3 2004/09/22 19:55:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ipcalc-0.37.ebuild,v 1.4 2004/10/23 06:01:40 mr_bones_ Exp $
 
 MY_PN="ipcalc"
 MY_P="${MY_PN}-${PV}"
@@ -11,7 +11,7 @@ HOMEPAGE="http://jodies.de/ipcalc"
 SRC_URI="http://jodies.de/ipcalc-archive/${MY_P}.tar.gz"
 
 DEPEND=">=dev-lang/perl-5.6.0"
-KEYWORDS="~x86 ~hppa ~amd64 ~sparc ~mips ~macos ~ppc64 ~alpha ~ppc-macos ~ppc"
+KEYWORDS="~x86 ~hppa ~amd64 ~sparc ~mips ~ppc64 ~alpha ~ppc-macos ~ppc"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
