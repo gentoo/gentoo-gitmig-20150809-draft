@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-25b-r1.ebuild,v 1.3 2004/06/24 23:31:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-25b-r1.ebuild,v 1.4 2004/07/01 11:24:46 eradicator Exp $
 
 S="${WORKDIR}/${PN}${PV}"
 DESCRIPTION="Server statics collector supporting many FPS games"
@@ -12,7 +12,7 @@ LICENSE="Artistic"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${PN}${PV}.tar.gz

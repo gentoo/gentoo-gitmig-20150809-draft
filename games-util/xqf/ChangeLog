@@ -1,6 +1,9 @@
 # ChangeLog for games-util/xqf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.9 2004/06/24 23:33:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.10 2004/07/01 11:25:16 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> xqf-0.9.14.ebuild:
+  virtual/glibc -> virtual/libc
 
   11 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> xqf-0.9.14.ebuild:
   too painful to use games eclass (bug #46740); depend tidy
@@ -68,7 +71,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.9 2004/06/24 23:33:19 agriffis Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.10 2004/07/01 11:25:16 eradicator Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-1.9.8.3.ebuild,v 1.2 2004/06/24 23:32:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-1.9.8.3.ebuild,v 1.3 2004/07/01 11:25:00 eradicator Exp $
 
 MAJ_PV=${PV:0:5}
 MIN_PV=${PV:6:7}
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/zlib"
 
 S="${WORKDIR}/${MY_P}/src"

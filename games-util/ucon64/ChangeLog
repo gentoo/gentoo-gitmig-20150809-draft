@@ -1,6 +1,10 @@
 # ChangeLog for games-util/ucon64
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.4 2004/06/24 23:32:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.5 2004/07/01 11:25:00 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ucon64-1.9.8.3.ebuild, ucon64-1.9.8.4.ebuild:
+  virtual/glibc -> virtual/libc
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> ucon64-1.9.8.4.ebuild:
   mark stable (no bugs for 78 days)

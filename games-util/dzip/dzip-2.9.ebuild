@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/dzip-2.9.ebuild,v 1.2 2004/06/24 23:31:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/dzip-2.9.ebuild,v 1.3 2004/07/01 11:24:33 eradicator Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" -f Makefile.linux || die "emake failed"
