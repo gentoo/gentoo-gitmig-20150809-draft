@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.3.ebuild,v 1.4 2005/01/28 13:53:38 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.3-r1.ebuild,v 1.1 2005/01/28 13:53:38 chrb Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc resperl"
 
@@ -22,6 +22,7 @@ KEYWORDS="~x86"
 
 DEPEND="dev-libs/newt
 	media-sound/mpg123
+	media-sound/sox
 	doc? ( app-doc/doxygen )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	pri? ( >=net-libs/libpri-1.0.3 )
