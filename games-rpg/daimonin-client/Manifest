@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6855ea6f8378d9cfc98aa0aa50c357b1 ChangeLog 1406
+MD5 dc9040ecd4ed9db3c929bbee2d864b56 ChangeLog 1574
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 11d73c484c3404644c5e4a3769d5f99e daimonin-client-0.95b-r2.ebuild 1169
-MD5 d7763f4b3e679200238510aa9846133c daimonin-client-0.96_beta2.ebuild 1548
 MD5 f2a10eea3dd01f88c2cf06645d7ed19b daimonin-client-0.96.5_beta3.ebuild 1505
+MD5 d7763f4b3e679200238510aa9846133c daimonin-client-0.96_beta2.ebuild 1548
+MD5 ecdaf8b4006075f17763a8610445424b daimonin-client-0.96.5_beta3-r1.ebuild 1510
 MD5 f0fea0494c9b50a88620443df60a150e files/0.95b-gcc3.patch 1664
 MD5 49fc669e5a92e2d43091dbcb3f5afec2 files/0.95b-gentoo-paths.patch 2948
 MD5 b7f58f6b5220a09dedb532eb977bd227 files/digest-daimonin-client-0.95b-r2 69
-MD5 8a41290909b2aa9cf1835f6aac36c738 files/0.96a_beta2-gentoo-paths.patch 3172
 MD5 fff92cef909650f347db6cebfd2973dd files/digest-daimonin-client-0.96_beta2 81
-MD5 8a41290909b2aa9cf1835f6aac36c738 files/0.96.5_beta3-gentoo-paths.patch 3172
+MD5 8a41290909b2aa9cf1835f6aac36c738 files/0.96a_beta2-gentoo-paths.patch 3172
 MD5 1c6ea71495b869335ba165cc4600e07c files/digest-daimonin-client-0.96.5_beta3 82
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiOHKHTu7gpaalycRAj65AJ9XwouMHKhCUFSlEsbD3jD2VpknyACeK44U
-AkTM6jOccTya5rgBtexCGJQ=
-=U6Yg
------END PGP SIGNATURE-----
+MD5 8a41290909b2aa9cf1835f6aac36c738 files/0.96.5_beta3-gentoo-paths.patch 3172
+MD5 d9b88e940df3215b2383727214344b04 files/digest-daimonin-client-0.96.5_beta3-r1 82
