@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.2.1-r3.ebuild,v 1.1 2001/04/23 17:28:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.2.1-r3.ebuild,v 1.2 2001/04/23 17:29:38 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,7 +18,7 @@ src_unpack() {
 }
 
 src_compile() {
-    try ./configure --mandir=${D}/usr/man --with-statedir=/var/lib/nfs \
+    try ./configure --mandir=${D}/usr/share/man --with-statedir=/var/lib/nfs \
 	--prefix=${D} --exec-prefix=${D}
     try make
 }
