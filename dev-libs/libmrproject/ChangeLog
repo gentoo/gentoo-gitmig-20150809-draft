@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmrproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.14 2003/02/12 06:06:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.15 2003/02/20 21:26:33 spider Exp $
+
+*libmrproject-0.9 (20 Feb 2003)
+  
+  20 Feb 2003; Spider <spider@gentoo.org> libmrproject-0.9.ebuild :
+  updated to latest version, fixed glib dependency according to configure.in
 
 
 *libmrproject-0.8 (02 Feb 2003)
