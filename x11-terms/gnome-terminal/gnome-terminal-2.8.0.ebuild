@@ -1,24 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.6.0.ebuild,v 1.10 2004/07/04 19:00:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.8.0.ebuild,v 1.1 2004/11/25 05:59:12 obz Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="The Gnome Terminal"
 IUSE=""
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
+
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
 SLOT="0"
 LICENSE="GPL-2"
 
 RDEPEND="virtual/xft
-	>=x11-libs/gtk+-2.2
+	>=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-1.2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-vfs-2.4
 	>=x11-libs/startup-notification-0.4
-	>=x11-libs/vte-0.11"
+	>=x11-libs/vte-0.11.10"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -39,9 +40,6 @@ src_unpack() {
 	# patch by Zach Bagnall <yem@y3m.net> in #13801
 	epatch ${FILESDIR}/${PN}-2-dnd_url_add_space.patch
 
-	# gcc 3.4 fix
-	epatch ${FILESDIR}/${PN}-2.6.1-gcc34_eggcell.patch
-
 }
 
-DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
+DOCS="AUTHORS ChangeLog README NEWS TODO"
