@@ -1,0 +1,12 @@
+# ChangeLog for net-firewall/fwipsec
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/ChangeLog,v 1.1 2004/06/04 19:51:08 seemant Exp $
+
+*fwipsec-0.4.2 (04 Jun 2004)
+
+  04 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +fwipsec-0.4.2.ebuild:
+  New firewall easy configuration script. It also gives you the bonus of turning
+  on squid and IP/SEC for VPN's. This package was created by Jay Pfeifer and his
+  associates.
+
