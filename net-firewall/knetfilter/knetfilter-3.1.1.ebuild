@@ -1,7 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/knetfilter-3.1.1.ebuild,v 1.5 2004/01/07 01:46:30 weeve Exp $
-inherit kde-base
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/knetfilter-3.1.1.ebuild,v 1.6 2004/03/14 17:25:26 mr_bones_ Exp $
+
+inherit kde
 
 need-kde 3.1
 

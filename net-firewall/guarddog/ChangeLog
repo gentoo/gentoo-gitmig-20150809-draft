@@ -1,7 +1,11 @@
 # ChangeLog for net-firewall/guarddog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.8 2004/03/08 22:20:03 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.9 2004/03/14 17:24:52 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> guarddog-1.9.16.ebuild,
+  guarddog-2.0.0.ebuild, guarddog-2.1.5.ebuild, guarddog-2.1.7.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *guarddog-2.3.1 (08 Mar 2004)
 
