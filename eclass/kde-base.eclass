@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-base.eclass,v 1.4 2001/09/29 12:35:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-base.eclass,v 1.5 2001/09/29 13:12:52 danarmak Exp $
 # This is the kde ebuild for >=2.2.1 kde base packages. Don't use for kdelibs though :-)
 . /usr/portage/eclass/inherit.eclass || die
 inherit c autoconf base || die
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 
 DEPEND="${DEPEND}
 	( kde-base/kdelibs-${PV} )
-	dev-util/objprelink
+	objprelink? ( dev-util/objprelink )
 	>=x11-libs/qt-x11-2.3.0"
 
 RDEPEND="${RDEPEND}
