@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.9 2002/08/16 03:01:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.10 2002/08/27 08:11:28 wmertens Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -97,9 +97,9 @@ src_unpack() {
 	# Use gtk+-2.0 as widget toolkit
 	if [ "`use gtk2`" ] ; then
 		cd ${S}/embedding/browser/gtk/src
-		bzip2 -dc ${FILESDIR}/gtk2_embed.patch.bz2 | patch -p0 || die
+		#bzip2 -dc ${FILESDIR}/gtk2_embed.patch.bz2 | patch -p0 || die
 		cd ${S}/widget/src/gtk2
-		bzip2 -dc ${FILESDIR}/gtk2_widget.patch.bz2 | patch -p0 || die
+		#bzip2 -dc ${FILESDIR}/gtk2_widget.patch.bz2 | patch -p0 || die
 	fi
 }
 
@@ -239,38 +239,18 @@ src_compile() {
 
 src_install() {
 
+	# Install, don't create tarball
+	dodir /usr/lib
+	cd ${S}/xpinstall/packager
+	make MOZ_PKG_FORMAT=raw TAR_CREATE_FLAGS=-chf> /dev/null || die
+    mv ${S}/dist/mozilla ${D}/usr/lib/mozilla
+
 	# Copy the include and idl files
 	dodir /usr/lib/mozilla/include/idl /usr/include
 	cd ${S}/dist
 	cp -LfR include/* ${D}/usr/lib/mozilla/include
 	cp -LfR idl/* ${D}/usr/lib/mozilla/include/idl
 	dosym /usr/lib/mozilla/include /usr/include/mozilla
-
-	# Build the Release Tarball
-	cd ${S}/xpinstall/packager
-	make || die
-	dodir /usr/lib
-
-    TODO=""
-	case ${ARCH} in 
-		ppc) 
-			TODO="${S}/dist/mozilla-powerpc-unknown-linux-gnu.tar.gz"
-			;;
-		x86)
-			TODO="${S}/dist/mozilla-`uname -m`-pc-linux-gnu.tar.gz"
-			;;
-		sparc)
-			;;
-		sparc64)
-			;;
-		arm)
-			;;
-		*)
-			TODO="${S}/dist/mozilla-`uname -m`-pc-linux-gnu.tar.gz"
-			;;
-	esac
-
-	tar xzf ${TODO} -C ${D}/usr/lib
 
 	# Install the development tools in /usr
 	dodir /usr/bin

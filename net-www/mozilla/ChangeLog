@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.33 2002/08/11 20:10:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.34 2002/08/27 08:11:28 wmertens Exp $
+
+  27 Aug 2002; Wout Mertens <wmertens@gentoo.org> mozilla-1.1_beta :
+
+  Changed install so that the emerge process needs rougly 80MB harddisk space
+  less. (Which brings it down to a mere 550MB :) ) Only applied to the beta
+  because I don't want to break stuff unintentionally, but it should work for
+  the 1.0 ebuilds as well. Feel free to add it to them.
 
   11 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-{1.0-r3,1.1_beta} :
 
