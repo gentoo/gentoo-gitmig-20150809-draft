@@ -22,3 +22,4 @@ move net-im/meanwhile-gaim net-im/gaim-meanwhile
 move dev-python/Imaging dev-python/imaging
 move dev-python/Imaging-py21 dev-python/imaging-py21
 move dev-python/PyXML-py21 dev-python/pyxml-py21
+move dev-python/ScientificPython dev-python/scientificpython
