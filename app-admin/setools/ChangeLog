@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/setools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.5 2003/11/20 21:31:03 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.6 2003/12/22 20:15:02 pebenito Exp $
+
+*setools-1.1 (22 Dec 2003)
+
+  22 Dec 2003; Chris PeBenito <pebenito@gentoo.org> setools-1.1.ebuild:
+  New upstream version. Now X is optional, as there are command line tools. Also
+  has a new optional gtk log analyzer for audit messages.
 
   20 Nov 2003; Chris PeBenito <pebenito@gentoo.org> setools-1.0.1.ebuild:
   Mark stable
