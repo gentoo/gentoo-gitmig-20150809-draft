@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.7 2001/09/14 00:40:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.8 2001/10/06 17:22:52 azarah Exp $
 
 SV=1.1.5
 S=${WORKDIR}/rc-scripts-${SV}
@@ -105,11 +105,12 @@ src_install()
 		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
 		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
 		#end supervise stuff
-		
+	
+# Drobbins or Hallski please check this!
 		keepdir /opt
-		keepdir /opt/gnome/man
-		keepdir /opt/gnome/share
-		dosym ../man /opt/gnome/share/man
+#		keepdir /opt/gnome/man
+#		keepdir /opt/gnome/share
+#		dosym ../man /opt/gnome/share/man
 	fi
 
 #the .keep file messes up Portage when looking in /var/db/pkg

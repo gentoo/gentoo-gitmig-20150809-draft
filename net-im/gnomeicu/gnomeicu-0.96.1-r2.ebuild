@@ -1,7 +1,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # A Gnome ICQ Clone
 # Author Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.96.1-r1.ebuild,v 1.5 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.96.1-r2.ebuild,v 1.1 2001/10/06 17:22:52 azarah Exp $
 
 
 A=${P}.tar.bz2
@@ -11,9 +11,9 @@ SRC_URI="http://download.sourceforge.net/gnomeicu/${A}"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
 
 DEPEND="virtual/glibc sys-devel/gettext
-	>=gnome-base/gnome-core-1.2.4
+	>=gnome-base/gnome-core-1.4.0.4-r1
         >=sys-libs/gdbm-1.8.0"
-RDEPEND=">=gnome-base/gnome-core-1.2.4
+RDEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
         >=sys-libs/gdbm-1.8.0"
 
 src_unpack() {
@@ -28,7 +28,7 @@ src_compile() {
 
   local myconf
   local myprefix
-  myprefix="/opt/gnome"
+  myprefix="/usr"
   if [ -z "`use esd`" ]
   then
   	myconf="--disable-esd-test"

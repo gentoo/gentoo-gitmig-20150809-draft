@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.1.ebuild,v 1.2 2001/08/31 03:55:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.1.ebuild,v 1.3 2001/10/06 17:22:52 azarah Exp $
 
 SV=1.1.4
 S=${WORKDIR}/rc-scripts-${SV}
@@ -95,11 +95,12 @@ src_install()
 		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
 		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
 		#end supervise stuff
-		
+	
+# Drobbins or Hallski please check this!	
 		keepdir /opt
-		keepdir /opt/gnome/man
-		keepdir /opt/gnome/share
-		dosym ../man /opt/gnome/share/man
+#		keepdir /opt/gnome/man
+#		keepdir /opt/gnome/share
+#		dosym ../man /opt/gnome/share/man
 #		It makes sense to move these to the PAM package.
 #		dodir /etc/pam.d
 #		cd ${FILESDIR}/pam.d

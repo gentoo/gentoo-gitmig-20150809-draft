@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.4.ebuild,v 1.1 2001/09/11 19:33:31 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.4-r1.ebuild,v 1.1 2001/10/06 17:22:52 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,23 +10,18 @@ SRC_URI="ftp://ftp.xmms.org/xmms/plugins/smpeg-xmms/${A}"
 HOMEPAGE="http://www.xmms.org/plugins_input.html"
 
 DEPEND=">=media-sound/xmms-1.2.3
-	>=media-libs/smpeg-0.4.2
+	>=media-libs/smpeg-0.4.4-r1
 	sdl? ( >=media-libs/libsdl-1.2.2 )"
 
 src_compile() {
 
     cd ${S}
     local myopts
-    if [ -n "`use gnome`" ]
-    then
-	myopts="--prefix=/opt/gnome"
-    else
-	myopts="--prefix=/usr/X11R6"
-    fi
-	if [ -z "`use sdl`" ];then
+    if [ -z "`use sdl`" ];then
 	myopts="${myopts} --disable-sdltest"
-	fi
-    try ./configure ${myopts} --host=${CHOST}
+    fi
+	
+    try ./configure ${myopts} --prefix=/usr --host=${CHOST}
     try make
 
 }
