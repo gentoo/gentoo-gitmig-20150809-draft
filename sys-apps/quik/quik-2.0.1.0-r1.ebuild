@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.14 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.15 2003/06/23 00:12:16 pylon Exp $
 
 inherit mount-boot
 
@@ -14,7 +14,7 @@ SRC_URI="${DEB_URI}/${MY_P} ${DEB_URI}/${DEB_P}.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 -alpha -sparc -mips"
+KEYWORDS="ppc -x86 -amd64 -alpha -arm -hppa -mips -sparc"
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1k.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1k.ebuild,v 1.3 2003/06/23 00:12:16 pylon Exp $
 
 inherit mount-boot
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.xs4all.nl/~eddieb/linuxppc/YDL3/quik-${MY_PV}.src.rpm"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 -alpha -sparc -mips"
+KEYWORDS="~ppc -x86 -amd64 -alpha -arm -hppa -mips -sparc"
 
 DEPEND="virtual/glibc
         app-arch/rpm2targz"
