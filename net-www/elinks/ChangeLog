@@ -1,6 +1,13 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.5 2003/02/12 08:47:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.6 2003/03/16 20:33:37 seemant Exp $
+
+*elinks-0.4.2 (16 Mar 2003)
+
+  16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> elinks-0.4.1.ebuild,
+  elinks-0.4.2.ebuild, files/elinks.conf.bz2:
+  moved the conf bz2's to mirrors, and version bump thanks to j2 in #gentoo-dev
+  in bug #15126
 
   25 Jan 2002; Olivier Reisch <doctomoe@gentoo.org> : elinks-0.4.1.ebuild:
   Added ~ppc keyword.
