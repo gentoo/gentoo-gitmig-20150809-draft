@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Damon Conway <damon@3jane.net> 
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.2-r1.ebuild,v 1.1 2002/05/21 14:00:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.2-r1.ebuild,v 1.2 2002/05/21 18:19:43 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ based web browser based on the Mozilla engine"
@@ -16,15 +16,15 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 
-    unpack ${A}
-    use nls && ( \
-        cd ${S}/src
-        xgettext -k_ -kN_  ../src/*.[ch]  -o ../locale/skipstone.pot
+	unpack ${A}
+	use nls && ( \
+		cd ${S}/src
+		xgettext -k_ -kN_  ../src/*.[ch]  -o ../locale/skipstone.pot
 
-        # Now we apply a patch to rid the files of duplicate translations
-        cd ${WORKDIR}
-        patch -p0 < ${FILESDIR}/patch
-    )
+		# Now we apply a patch to rid the files of duplicate translations
+		cd ${WORKDIR}
+		patch -p0 < ${FILESDIR}/${PN}-gentoo.patch
+	)
 }
 
 src_compile() {
@@ -35,15 +35,15 @@ src_compile() {
 
 	econf ${myconf} || die
 	
-    emake \
+	emake \
 		PREFIX="/usr/lib/mozilla" || die
 }
 
 src_install () {
 
-    einstall \
+	einstall \
 		PREFIX=${D}/usr \
 		LOCALEDIR=${D}/usr/share/locale \
 	|| die
-    dodoc AUTHORS COPYING README README.copying 
+	dodoc AUTHORS COPYING README README.copying 
 }
