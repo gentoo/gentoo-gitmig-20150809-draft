@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.8.ebuild,v 1.1 2003/03/23 07:07:50 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.8.ebuild,v 1.2 2003/03/30 10:06:01 lordvan Exp $
 
 inherit perl-module
 
@@ -14,6 +14,7 @@ IUSE="encode"
 
 DEPEND="dev-lang/perl
 		dev-perl/gtk-perl
+		dev-perl/gtk-perl-glade
 		media-video/lsdvd
 		media-video/mplayer
 		encode? ( >=media-sound/lame-3.92 )"
