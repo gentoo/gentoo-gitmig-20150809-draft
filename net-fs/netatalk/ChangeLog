@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.11 2003/12/09 20:42:59 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.12 2003/12/18 03:17:55 zhen Exp $
+
+*netatalk-1.6.4 (17 Dec 2003)
+
+  17 Dec 2003; zhen <zhen@gentoo.org> netatalk-1.6.4.ebuild:
+  bumped to stable - no new bugs after a week
 
   09 Dec 2003; zhen <zhen@gentoo.org> metadata.xml:
   version bump, added metadata
