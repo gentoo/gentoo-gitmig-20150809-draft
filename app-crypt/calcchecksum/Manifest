@@ -1,4 +1,4 @@
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 abdaf20f025ad7fdbcfe86e1bf72a204 calcchecksum-1.6_pre1.ebuild 708
-MD5 5203f95c66ba7d8816748c678e53bbcf ChangeLog 554
 MD5 bb7a45f4bcae0cf3ac83a31ba11a4b07 files/digest-calcchecksum-1.6_pre1 74
+MD5 5203f95c66ba7d8816748c678e53bbcf ChangeLog 554
+MD5 fb8c2dd672b4c63088b8c79b2e1eb10d calcchecksum-1.6_pre1.ebuild 685
+MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162

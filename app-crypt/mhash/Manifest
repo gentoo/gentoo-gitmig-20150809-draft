@@ -1,5 +1,5 @@
 MD5 b82524ff78b486ef79cccd400ad79348 files/digest-mhash-0.9.1 63
 MD5 fac70fae5aaa15dc6a3be6f427f28ecb files/digest-mhash-0.8.18-r1 64
 MD5 014a8f1c23197f9daf8546d86e407313 ChangeLog 2498
-MD5 cee06095b9374bfddacc80b7d51e133d mhash-0.8.18-r1.ebuild 903
-MD5 0e2befcfc70dee4f5caddca661ca84a3 mhash-0.9.1.ebuild 901
+MD5 170b5bf74ce1d5e7eb88c67a98c9e255 mhash-0.8.18-r1.ebuild 892
+MD5 396a79363bc9b78077e21f6162ba35ad mhash-0.9.1.ebuild 888
