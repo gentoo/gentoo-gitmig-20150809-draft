@@ -2,6 +2,12 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header: /home/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog
 
+*openpbs-2.3.16-r1 (03 Jun 2003)
+
+  03 Jun 2003; Michael Imhof <tantive@gentoo.org>
+  Olivier Crete <tester@tester.ca> added support for crypt flag
+  (to use rcp and not scp)and doc flag.
+  Ebuild was submitted by Marc St-Pierre <marc@cyberlogic.ca>.  
 
 *openpbs-2.3.16 (04 Nov 2002)
 
