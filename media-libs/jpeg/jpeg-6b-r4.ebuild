@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.2 2004/11/18 21:27:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.3 2004/12/17 06:27:01 vapier Exp $
 
-inherit gnuconfig flag-o-matic libtool eutils
+inherit flag-o-matic libtool eutils toolchain-funcs
 
 MY_P=${PN}src.v${PV}
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 ppc-macos s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -24,7 +24,6 @@ src_unpack() {
 	# allow /etc/make.conf's HOST setting to apply
 	cd ${S}
 	sed -i 's/ltconfig.*/& $CHOST/' configure
-	gnuconfig_update
 	uclibctoolize
 	use ppc-macos && darwintoolize
 	epatch ${FILESDIR}/${P}-pic.patch
@@ -33,7 +32,11 @@ src_unpack() {
 src_compile() {
 	replace-cpu-flags k6 k6-2 k6-3 i586
 	econf --enable-shared --enable-static || die "econf failed"
-	emake || die
+	emake \
+		CC="$(tc-getCC)" \
+		AR="$(tc-getAR) rc" \
+		AR2="$(tc-getRANLIB)" \
+		|| die "make failed"
 }
 
 src_install() {
