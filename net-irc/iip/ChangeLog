@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/iip
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/ChangeLog,v 1.1 2003/09/27 22:51:07 zul Exp $
+
+*iip-1.1.0 (27 Sep 2003)
+
+  27 Sep 2003; Chuck Short <zul@gentoo.org> iip-1.1.0.ebuild:
+  Initial version, originally contributed by Andrew Bevitt <andrew@volutin.net>,
+  modified by me because RDEPEND and DEPEND were missing from the initial ebuild.
+
