@@ -1,8 +1,11 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.12 2003/07/03 17:48:30 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.13 2003/07/05 16:36:52 nakano Exp $
 
 *mlterm-2.7.0-r1 (03 Jul 2003)
+
+  05 Jul 2003; Masatomo Nakano <nakano@gentoo.org> mlterm-2.7.0-r1.ebuild:
+  Marked as stable(x86 ppc)
 
   03 Jul 2003; Masatomo Nakano <nakano@gentoo.org> mlterm-2.7.0-r1.ebuild:
   Added fribidi support.
