@@ -4,7 +4,7 @@
 # You can copy this file to .dir_colors in your $HOME directory to override
 # the system defaults.
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.5 2004/08/26 16:11:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.6 2004/08/28 04:58:30 vapier Exp $
 
 # COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
 # pipes. 'all' adds color characters to all output. 'none' shuts colorization
@@ -41,6 +41,7 @@ TERM color_xterm
 TERM rxvt
 TERM rxvt-unicode
 TERM screen
+TERM screen.linux
 TERM screen-w
 TERM vt100
 TERM dtterm
