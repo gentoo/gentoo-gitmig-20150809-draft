@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.4 2002/07/30 00:50:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.5 2002/09/24 20:42:42 jnelson Exp $
+
+*pychecker-0.8.11 (24 Sep 2002)
+  24 Sep 2002; Jon Nelson <jnelson@gentoo.org> pychecker-0.8.11.ebuild:
+
+  Update to 0.8.11 to resolve 4114
+  Use distutils eclass
 
 *pychecker-0.8.10-r1 (28 Apr 2002)
 
