@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.4.2.ebuild,v 1.2 2004/01/04 04:34:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.4.2-r1.ebuild,v 1.1 2004/01/04 04:34:05 robbat2 Exp $
 
 DESCRIPTION="LDAP user management tool written in C and loosely based on FreeBSD's pw(8)"
 HOMEPAGE="http://cpu.sourceforge.net/"
