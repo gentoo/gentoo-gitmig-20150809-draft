@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.4.2.ebuild,v 1.1 2004/05/24 17:56:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.4.2.ebuild,v 1.2 2004/06/06 10:14:04 usata Exp $
 
 IUSE="nls ssl"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/9615/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
