@@ -1,12 +1,18 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.4 2002/07/22 20:11:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.5 2002/08/10 15:38:44 raker Exp $
+
+*gnomemeeting-0.93.1 (10 Aug 2002)
+
+  10 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  gnomemeeting-0.93.1.ebuild, files/digest-gnomemeeting-0.93.1 :
+  Version bump.  This time the arts code is fixed. :)
+  
 
 *gnomemeeting-0.93.0 (20 Jul 2002)
 
   22 Jul 2002; Nick Hadaway <raker@gentoo.org>
   ChangeLog :
-
   I just got an email back from the head developer of GnomeMeeting.
   He says it is a consequence of building SDL with arts support.
   He says in the next release it will be fixed by using a wrapper call
@@ -15,14 +21,10 @@
   20 Jul 2002; Nick Hadaway <raker@gentoo.org>
   gnomemeeting-0.93.0.ebuild, files/digest-gnomemeeting-0.93.0,
   files/ifarts.diff :
-
   *NOTE* - arts suspend support (disabling arts during gnomemeeting call)
   isn't compilling correctly.  I have a patch for the mean time which
   checks if you have the kde use variable set, and if you do, disables
-  arts support.
-
-  Version bump.  Removed old versions from cvs.
-
+  arts support.  Version bump.  Removed old versions from cvs.
   - SDL support (video in popup window + fullscreen video) (Damien)
   - Improved Quicknet Support (Damien)
   - Improved Video Snapshots saving in png's (Damien)
@@ -45,13 +47,11 @@
 *gnomemeeting-0.92.1-r1 (07 Jul 2002)
 
   07 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnomemeeting-0.92.1-r1.ebuild
-  
-  gnome2 eclassed. Updated dependencies. SLOT and LICENSE added.
+    gnome2 eclassed. Updated dependencies. SLOT and LICENSE added.
 
 
 *gnomemeeting-0.92.1 (03 Jul 2002)
 
   03 Jul 2002; Nick Hadaway <raker@gentoo.org> gnomemeeting-0.92.1.ebuild
-  
-  Updated to Gnome2 dependancies.  GnomeMeeting does NOT require the
+    Updated to Gnome2 dependancies.  GnomeMeeting does NOT require the
   whole gnome2 desktop to be installed, just some of the libraries.
