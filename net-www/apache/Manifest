@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 85c356965e12f6c785c887ddf6844714 apache-1.3.31-r3.ebuild 6872
 MD5 90cc07a86abe58c1b0f4b6bfa7439706 apache-2.0.52.ebuild 12830
 MD5 784b3e3150529826ac47e99ec3514f90 apache-1.3.29-r2.ebuild 7178
-MD5 7bcfd6f1012b23498080e2a7744b948f apache-1.3.33-r1.ebuild 8264
+MD5 4fbcdf60705c8a78a43cbb1727271388 apache-1.3.33-r1.ebuild 8268
 MD5 4cd8e7608218df213a3e4eb7bee15bfe apache-2.0.52-r1.ebuild 12889
 MD5 d039a8316ffde50c2331f0d446623147 apache-1.3.31.ebuild 6693
 MD5 9a5242011f95057c3afabf1cc3973f11 apache-1.3.31-r2.ebuild 6864
@@ -98,7 +98,7 @@ MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31-r2/00_gentoo_apachectl
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB4RbzI1lqEGTUzyQRAkSXAJ9JmUz5ifxnQGQwlp43FzxfjMft2ACg0F/W
-Z97YH/SqWQb4MGWHtBveFbk=
-=uHSM
+iD8DBQFB4UCEI1lqEGTUzyQRAvYiAKC+avTfxRphr7LLnO2t1Oha8clPTQCgpnDm
+mKTpBn8qP0g6Z2HRvcVYBFY=
+=S9Nc
 -----END PGP SIGNATURE-----
