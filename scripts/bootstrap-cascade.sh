@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.6 2004/07/18 15:55:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.7 2004/07/19 05:02:32 solar Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -161,7 +161,7 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 [ "${myNCURSES}" = "" ] && myNCURSES="ncurses"
 
 # Do we really have no 2.4.x nptl kernels in portage?
-[ "${USE_NPTL}" = 1 ] && myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0')" \
+[ "${USE_NPTL}" = 1 ] && myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0')"
 [ "${myOS_HEADERS}" = "" ] && myOS_HEADERS="virtual/os-headers"
 
 einfo "Using baselayout : ${myBASELAYOUT}"
@@ -208,6 +208,7 @@ export FEATURES="${FEATURES} -collision-protect"
 USE="-* build bootstrap" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 echo -------------------------------------------------------------------------------
 export USE="${ORIGUSE} bootstrap"
+#emerge ${STRAP_EMERGE_OPTS} -C virtual/os-headers || cleanup 1
 emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 echo -------------------------------------------------------------------------------
 
