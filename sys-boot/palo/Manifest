@@ -3,5 +3,5 @@ MD5 7ee737710bef1fd5dd94d975eaf30721 files/digest-palo-1.2_pre20030630 71
 MD5 ad8b81577ffd8be90930cf8e02211313 files/palo.conf 214
 MD5 eea605c64e6d9f10c11cf86eb1ea0a5f ChangeLog 1736
 MD5 9eb3e7bb4ebac420842bd3e90dbf8726 metadata.xml 218
-MD5 9b6cb9e22cdb8977f14cb3e6b3451e5f palo-1.2_pre20030630.ebuild 939
-MD5 48b14974345db0ea10006d4371a0c033 palo-1.3_pre20040303.ebuild 972
+MD5 a185017d3062d0b67cc8e14bf03a4539 palo-1.2_pre20030630.ebuild 939
+MD5 97b2c344a0aa5c0aaa3a10fa4412ff11 palo-1.3_pre20040303.ebuild 940
