@@ -1,0 +1,7 @@
+MD5 b7a825645664cf057152ee7587123878 ChangeLog 687
+MD5 13a48faad89971522fa4b5c96f826920 syslinux-1.75.ebuild 608
+MD5 356df0cda9a8c108eee709b430226052 syslinux-2.01.ebuild 590
+MD5 f219bec0450a40fbd67d6898ce9060e3 syslinux-2.02.ebuild 605
+MD5 f1655e42e2fb00292a8887d6d3369ad5 files/digest-syslinux-1.75 65
+MD5 9f35a1ed8132764114d2841be3d4c4e1 files/digest-syslinux-2.01 66
+MD5 ba6a09b035ceaac59c2d4da9eae04441 files/digest-syslinux-2.02 66
