@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20031022.ebuild,v 1.3 2003/11/14 11:41:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20031022.ebuild,v 1.4 2003/11/14 20:05:24 seemant Exp $
 
 S=${WORKDIR}/${PN/-/_}
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)."
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64"
 
 DEPEND="app-arch/tar
-	sys-apps/bzip2"
+	app-arch/bzip2"
 
 RDEPEND=">=app-shells/bash-2.05a"
 
