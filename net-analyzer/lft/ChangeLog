@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.4 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.5 2005/01/30 14:24:51 luckyduck Exp $
+
+  30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> lft-2.2.ebuild:
+  added ~amd64 to KEYWORDS. fixes #79783
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> lft-2.2.ebuild:
   changed net-libs/libpcap depend to virtual/libcap
