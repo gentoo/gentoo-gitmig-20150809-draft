@@ -1,0 +1,5 @@
+With at least some kernel versions (tried only 2.4.20),
+removing the CAP_SYS_MODULE capability will make you unable to
+alter capabilities at all.
+
+Patrick Kursawe <phosphan@gentoo.org>

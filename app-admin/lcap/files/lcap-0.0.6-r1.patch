@@ -1,0 +1,14 @@
+--- lcap.c	2003-06-11 14:29:13.000000000 +0200
++++ lcap-new.c	2003-06-11 15:01:56.000000000 +0200
+@@ -190,7 +190,10 @@
+     exit(errno);
+     };
+   /* snag the current setting */
+-  fscanf(fptr, "%d", &caps);
++  if(fscanf(fptr, "%d", &caps) != 1) {
++	perror("Can't read caps from "PROC_CAP);
++	exit(errno);
++  }	
+   fclose(fptr);
+ 
+   while ((option=getopt(argc, argv, "chvz")) != -1)
