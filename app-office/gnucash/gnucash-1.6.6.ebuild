@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.9 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.10 2003/03/16 22:35:48 mholzer Exp $
 
 IUSE="nls cups"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
-SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gnucash.sourceforge.net"
 KEYWORDS="x86"
 SLOT="0"
