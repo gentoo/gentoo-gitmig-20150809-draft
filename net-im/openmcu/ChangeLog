@@ -1,6 +1,11 @@
 # ChangeLog for net-im/openmcu
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openmcu/ChangeLog,v 1.3 2003/10/18 05:45:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openmcu/ChangeLog,v 1.4 2003/10/24 19:30:17 stkn Exp $
+
+  24 Oct 2003; <stkn@gentoo.org> metadata.xml, openmcu-1.1.7.ebuild,
+  files/openmcu-1.1.7-include.diff, files/openmcu-1.1.7-log-config.diff,
+  files/openmcu.confd, files/openmcu.rc6:
+  ebuild completely rewritten (fixes bug #31384), new maintainer
 
   17 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> openmcu-1.1.7.ebuild:
   tidy

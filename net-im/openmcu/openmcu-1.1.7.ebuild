@@ -1,19 +1,64 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openmcu/openmcu-1.1.7.ebuild,v 1.3 2003/10/18 05:45:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openmcu/openmcu-1.1.7.ebuild,v 1.4 2003/10/24 19:30:17 stkn Exp $
 
-SRC_URI="http://www.openh323.org/bin/openmcu_${PV}.tar.gz"
-HOMEPAGE="http://www.openh323.org"
+inherit eutils
+
+IUSE=""
+
 DESCRIPTION="H.323 conferencing server"
+HOMEPAGE="http://www.openh323.org/"
+SRC_URI="http://www.openh323.org/bin/openmcu_${PV}.tar.gz"
+
+S=${WORKDIR}/openmcu
 
 SLOT="0"
-LICENSE="GPL-2"
 KEYWORDS="~x86"
+LICENSE="MPL-1.0"
 
-DEPEND=">=dev-libs/pwlib-1.5.0
-	>=net-libs/openh323-1.12.0"
+# get the name of the os
+MY_OS="`uname -s | tr [:upper:] [:lower:]`"
+
+DEPEND=">=net-libs/openh323-1.12.2-r1"
+
+src_unpack() {
+	unpack ${A}
+
+	# do some include fixing (again...)
+	cd ${S}
+	epatch ${FILESDIR}/${P}-include.diff
+	epatch ${FILESDIR}/${P}-log-config.diff
+}
 
 src_compile() {
-	cd work/openmcu
-	OPENH323DIR="/usr/share/openh323" make all || die "make failed"
+
+	CFLAGS="${CFLAGS} -DLOGGING=1" \
+	PWLIBDIR=/usr/share/pwlib \
+	OPENH323DIR=/usr/share/openh323 \
+	emake opt || die
+}
+
+src_install() {
+	dodir /usr/sbin /var/log/openmcu
+	dosbin obj_${MY_OS}_${ARCH}_r/openmcu
+	keepdir /var/log/openmcu
+
+	doman openmcu.1
+	dodoc ReadMe.txt mpl-1.0.htm
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/openmcu.rc6 openmcu
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/openmcu.confd openmcu
+}
+
+pkg_postinst() {
+	einfo "this patched version of openmcu stores it's configuration"
+	einfo "in \"/etc/openmcu.ini\" you can generate this file by doing:"
+	einfo "    openmcu <options_you_want> --save"
+	einfo "or you can add your options to /etc/conf.d/openmcu"
+	ewarn "but be careful with removing --disable-menu (this will break"
+	ewarn "the openmcu init script)"
+	sleep 10
 }
