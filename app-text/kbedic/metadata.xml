@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kde-base</herd>
+<herd>kde</herd>
 <maintainer>
   <email>mario@wisdomking.com</email>
   <name>Mario Tanev</name>
