@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.6.5.ebuild,v 1.1 2001/12/15 02:20:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.7.4.ebuild,v 1.1 2002/03/10 11:42:54 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A lightweight email client and newsreader"
-SRC_URI="http://sylpheed.good-day.net/sylpheed/sylpheed-0.6.5.tar.bz2"
+SRC_URI="http://sylpheed.good-day.net/sylpheed/sylpheed-${PV}.tar.bz2"
 HOMEPAGE="http://sylpheed.good-day.net"
 
 DEPEND=">=x11-libs/gtk+-1.2.10-r4
@@ -24,28 +24,21 @@ RDEPEND=">=x11-libs/gtk+-1.2.10-r4
 src_compile() {
 
 	local myconf
-	if [ -z "`use gnome`" ] ; then
-		myconf="--disable-gdk-pixbuf --disable-imlib"
-	fi
-	if [ -z "`use nls`" ] ; then
-		myconf="$myconf --disable-nls"
-	fi
-	if [ "`use ssl`" ] ; then
-		myconf="$myconf --enable-ssl"
-	fi
-	if [ "`use gpg`" ] ; then
-		myconf="$myconf --enable-gpgme"
-	fi
+
+	use gnome || myconf="--disable-gdk-pixbuf --disable-imlib"
+	use nls || myconf="$myconf --disable-nls"
+	use ssl && myconf="$myconf --enable-ssl"
+	use gpg && myconf="$myconf --enable-gpgme"
 
 	./configure --prefix=/usr \
 		 --host=${CHOST}  \
 		 --enable-ipv6 $myconf || die
-	make || die
+	emake || die
 }
 
 src_install () {
 
-	make	prefix=${D}/usr \
+	make prefix=${D}/usr \
 		manualdir=${D}/usr/share/doc/${PF}/html \
 		install || die
 	dodoc AUTHORS COPYING ChangeLog* NEWS README* TODO*
