@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.1 2005/03/22 18:52:40 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.2 2005/03/25 19:05:33 brix Exp $
+
+*laptop-mode-tools-1.04-r1 (25 Mar 2005)
+
+  25 Mar 2005; <brix@gentoo.org> files/laptop-mode-tools-1.04.init,
+  +laptop-mode-tools-1.04-r1.ebuild:
+  Run 'laptop_mode auto' on initscript start-up, not 'laptop_mode start'. Fixes
+  bug #86357 as spotted by Ben Ford.
 
 *laptop-mode-tools-1.04 (22 Mar 2005)
 
