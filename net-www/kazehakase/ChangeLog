@@ -1,6 +1,11 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.34 2005/03/01 20:52:32 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.35 2005/03/18 16:32:35 seemant Exp $
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org> kazehakase-0.2.1.ebuild,
+  kazehakase-0.2.2.ebuild, kazehakase-0.2.3.ebuild, kazehakase-0.2.4.ebuild,
+  kazehakase-0.2.5.ebuild:
+  Dependency update: net-www/kazehakase-cvs -> www-client/kazehakase-cvs.
 
   01 Mar 2005; Masatomo Nakano <nakano@gentoo.org> kazehakase-0.2.1.ebuild,
   kazehakase-0.2.2.ebuild, kazehakase-0.2.3.ebuild, kazehakase-0.2.4.ebuild,
