@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ef00b2a5001249586f2c594bd00c0d8 ChangeLog 1466
-MD5 6fdf61834f1c88773a2f16bb48c15d32 dictd-gazetteer-1.2-r1.ebuild 642
+MD5 a52c063f32f02aafa467370240c2ef4c ChangeLog 1562
+MD5 619a6c8721179bbef6ca8911a9c8236f dictd-gazetteer-1.2-r1.ebuild 641
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 49cc568c74c85eb4e17586749e24af60 files/digest-dictd-gazetteer-1.2-r1 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCIaz760LfUIagIAkRAoFyAKDVuAS1pA7GiWl7GL+yskz521WTvQCg+j1h
-LIk6vHIydGZ2JNK4hEQiIso=
-=2Caa
+iD8DBQFCTWox60LfUIagIAkRAhCKAJ9Ep8FAZHWGWPiYDg8ecORQtfBXcwCePXa7
+jQ4r84GkHkJT55p1ahx3n+c=
+=in/B
 -----END PGP SIGNATURE-----
