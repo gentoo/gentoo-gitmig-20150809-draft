@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8.ebuild,v 1.3 2004/12/16 11:08:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8.ebuild,v 1.4 2004/12/24 10:31:03 vapier Exp $
 
 inherit toolchain-funcs eutils gnuconfig
 
@@ -46,8 +46,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PV}-nobuggy-X.patch" #30089
-	epatch "${FILESDIR}/${PV}-libcaca.patch" #40224
+	epatch "${FILESDIR}"/${PV}-nobuggy-X.patch #30089
+	epatch "${FILESDIR}"/${PV}-libcaca.patch #40224
+	epatch "${FILESDIR}"/${PV}-gcc2.patch #75392
+	[[ $(gcc-major-version) -eq 2 ]] && \
+		epatch "${FILESDIR}"/${PV}-gcc2-asm.patch #75392
 
 	if use nas && ! use X ; then #32447
 		sed -i \

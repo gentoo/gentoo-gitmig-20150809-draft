@@ -1,0 +1,21 @@
+--- SDL-1.2.8/src/video/directfb/SDL_DirectFB_video.c~	2004-12-13 02:54:35 -0500
++++ SDL-1.2.8/src/video/directfb/SDL_DirectFB_video.c	2004-12-22 22:00:44 -0500
+@@ -468,6 +468,9 @@
+   
+   if (HIDDEN->enable_mga_crtc2)
+     {
++      DFBDisplayLayerConfig      dlc;
++      DFBDisplayLayerConfigFlags failed;
++
+       ret = dfb->GetDisplayLayer (dfb, 2, &HIDDEN->c2layer);
+       if (ret)
+         {
+@@ -492,8 +495,6 @@
+       HIDDEN->c2layer->SetOpacity(HIDDEN->c2layer, 0x0);
+ 
+       /* Init the surface here as it got a fixed size */
+-      DFBDisplayLayerConfig      dlc;
+-      DFBDisplayLayerConfigFlags failed;
+     
+       dlc.flags      = DLCONF_PIXELFORMAT | DLCONF_BUFFERMODE | DLCONF_OPTIONS;
+       dlc.buffermode = DLBM_BACKVIDEO;
