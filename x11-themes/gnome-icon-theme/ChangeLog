@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.34 2003/12/12 23:49:06 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.35 2004/03/14 17:53:30 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-icon-theme-1.0.9.ebuild:
+  Added ~mips keyword.
 
 *gnome-icon-theme-1.1.2 (29 Nov 2003)
 

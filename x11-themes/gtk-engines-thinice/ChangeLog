@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-thinice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.13 2004/02/25 18:03:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.14 2004/03/14 17:57:53 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gtk-engines-thinice-2.0.2-r1.ebuild:
+  Added ~mips keyword.
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org>
   gtk-engines-thinice-2.0.2-r1.ebuild:
