@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.31 2003/09/03 12:50:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.32 2003/10/24 16:36:22 stkn Exp $
+
+*pwlib-1.5.2-r1 (24 Oct 2003)
+
+  24 Oct 2003; <stkn@gentoo.org> pwlib-1.5.2-r1.ebuild:
+  install version.h, required fix for asterisk h.323 plugin
 
   03 Sep 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.5.0.ebuild:
   marking 1.5.0 as stable x86
