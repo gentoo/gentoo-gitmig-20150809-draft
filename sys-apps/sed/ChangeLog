@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.32 2003/04/26 16:29:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.33 2003/05/05 19:39:33 tuxus Exp $
 
 *sed-4.0.7 (11 Apr 2003)
 
@@ -39,6 +39,9 @@
   Bump to latest GNU stable
 
 *sed-4.0.5-r1 (04 Mar 2003)
+
+  05 May 2003; Jan Seidel <tuxus@gentoo.org> sed-4.0.5-r1.ebuild :
+  Marked stable on mips.
 
   02 Apr 2003; Guy Martin <gmsoft@gentoo.org> sed-4.0.5-r1.ebuild :
   Marked stable on hppa.
