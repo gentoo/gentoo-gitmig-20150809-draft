@@ -1,0 +1,336 @@
+diff -urN cyrus-imapd-2.1.5/imap/acapmbox.c cyrus-imapd-2.1.5-modified/imap/acapmbox.c
+--- cyrus-imapd-2.1.5/imap/acapmbox.c	Sat May 25 14:57:43 2002
++++ cyrus-imapd-2.1.5-modified/imap/acapmbox.c	Sat Jul 13 16:00:50 2002
+@@ -46,7 +46,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ 
+ #ifdef HAVE_UNISTD_H
+ #include <unistd.h>
+diff -urN cyrus-imapd-2.1.5/imap/append.c cyrus-imapd-2.1.5-modified/imap/append.c
+--- cyrus-imapd-2.1.5/imap/append.c	Fri Jun 14 13:20:25 2002
++++ cyrus-imapd-2.1.5-modified/imap/append.c	Sat Jul 13 15:53:31 2002
+@@ -48,7 +48,7 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <sys/types.h>
+ #include <syslog.h>
+ #include <sys/stat.h>
+diff -urN cyrus-imapd-2.1.5/imap/backend.c cyrus-imapd-2.1.5-modified/imap/backend.c
+--- cyrus-imapd-2.1.5/imap/backend.c	Mon May  6 12:18:49 2002
++++ cyrus-imapd-2.1.5-modified/imap/backend.c	Sat Jul 13 15:47:20 2002
+@@ -57,7 +57,7 @@
+ #include <sys/stat.h>
+ #include <sys/un.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <netdb.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+diff -urN cyrus-imapd-2.1.5/imap/chk_cyrus.c cyrus-imapd-2.1.5-modified/imap/chk_cyrus.c
+--- cyrus-imapd-2.1.5/imap/chk_cyrus.c	Sat May 25 20:00:39 2002
++++ cyrus-imapd-2.1.5-modified/imap/chk_cyrus.c	Sat Jul 13 16:23:00 2002
+@@ -55,7 +55,7 @@
+ #include <fcntl.h>
+ #include <netinet/in.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <ctype.h>
+ #include <time.h>
+diff -urN cyrus-imapd-2.1.5/imap/config.c cyrus-imapd-2.1.5-modified/imap/config.c
+--- cyrus-imapd-2.1.5/imap/config.c	Tue Jun 18 11:40:19 2002
++++ cyrus-imapd-2.1.5-modified/imap/config.c	Sat Jul 13 15:59:21 2002
+@@ -48,7 +48,7 @@
+ #include <string.h>
+ #include <ctype.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ 
+diff -urN cyrus-imapd-2.1.5/imap/ctl_cyrusdb.c cyrus-imapd-2.1.5-modified/imap/ctl_cyrusdb.c
+--- cyrus-imapd-2.1.5/imap/ctl_cyrusdb.c	Wed May 29 11:49:14 2002
++++ cyrus-imapd-2.1.5-modified/imap/ctl_cyrusdb.c	Sat Jul 13 16:40:21 2002
+@@ -53,7 +53,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <time.h>
+ 
+diff -urN cyrus-imapd-2.1.5/imap/ctl_deliver.c cyrus-imapd-2.1.5-modified/imap/ctl_deliver.c
+--- cyrus-imapd-2.1.5/imap/ctl_deliver.c	Tue Jan 15 12:44:09 2002
++++ cyrus-imapd-2.1.5-modified/imap/ctl_deliver.c	Sat Jul 13 16:38:12 2002
+@@ -52,7 +52,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <time.h>
+ #include <signal.h>
+diff -urN cyrus-imapd-2.1.5/imap/ctl_mboxlist.c cyrus-imapd-2.1.5-modified/imap/ctl_mboxlist.c
+--- cyrus-imapd-2.1.5/imap/ctl_mboxlist.c	Mon Jun 24 11:29:04 2002
++++ cyrus-imapd-2.1.5-modified/imap/ctl_mboxlist.c	Sat Jul 13 16:35:33 2002
+@@ -50,7 +50,7 @@
+ #include <unistd.h>
+ #endif
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sasl/sasl.h>
+diff -urN cyrus-imapd-2.1.5/imap/cvt_cyrusdb.c cyrus-imapd-2.1.5-modified/imap/cvt_cyrusdb.c
+--- cyrus-imapd-2.1.5/imap/cvt_cyrusdb.c	Fri May 10 19:46:22 2002
++++ cyrus-imapd-2.1.5-modified/imap/cvt_cyrusdb.c	Sat Jul 13 16:24:22 2002
+@@ -59,7 +59,7 @@
+ #include <ctype.h>
+ #include <time.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ 
+ #include <sys/ipc.h>
+ #include <sys/msg.h>
+diff -urN cyrus-imapd-2.1.5/imap/cyrdump.c cyrus-imapd-2.1.5-modified/imap/cyrdump.c
+--- cyrus-imapd-2.1.5/imap/cyrdump.c	Fri Feb  1 13:43:37 2002
++++ cyrus-imapd-2.1.5-modified/imap/cyrdump.c	Sat Jul 13 16:20:54 2002
+@@ -48,7 +48,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <string.h>
+ #include <time.h>
+ 
+diff -urN cyrus-imapd-2.1.5/imap/deliver.c cyrus-imapd-2.1.5-modified/imap/deliver.c
+--- cyrus-imapd-2.1.5/imap/deliver.c	Sat May 25 14:57:44 2002
++++ cyrus-imapd-2.1.5-modified/imap/deliver.c	Sat Jul 13 16:25:44 2002
+@@ -56,7 +56,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <pwd.h>
+ #include <sys/types.h>
+diff -urN cyrus-imapd-2.1.5/imap/fud.c cyrus-imapd-2.1.5-modified/imap/fud.c
+--- cyrus-imapd-2.1.5/imap/fud.c	Mon Jun  3 13:22:24 2002
++++ cyrus-imapd-2.1.5-modified/imap/fud.c	Sat Jul 13 16:14:12 2002
+@@ -59,7 +59,7 @@
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
+ #include <netdb.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <pwd.h>
+ 
+ #include "assert.h"
+diff -urN cyrus-imapd-2.1.5/imap/imapd.c cyrus-imapd-2.1.5-modified/imap/imapd.c
+--- cyrus-imapd-2.1.5/imap/imapd.c	Thu Jun  6 21:05:32 2002
++++ cyrus-imapd-2.1.5-modified/imap/imapd.c	Sat Jul 13 15:47:35 2002
+@@ -55,7 +55,7 @@
+ #include <sys/param.h>
+ #include <sys/stat.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <netdb.h>
+ #include <sys/socket.h>
+ #include <sys/wait.h>
+diff -urN cyrus-imapd-2.1.5/imap/index.c cyrus-imapd-2.1.5-modified/imap/index.c
+--- cyrus-imapd-2.1.5/imap/index.c	Tue Jun 18 11:40:19 2002
++++ cyrus-imapd-2.1.5-modified/imap/index.c	Sat Jul 13 15:51:32 2002
+@@ -53,7 +53,7 @@
+ #include <fcntl.h>
+ #include <netinet/in.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <ctype.h>
+ #include <time.h>
+diff -urN cyrus-imapd-2.1.5/imap/index.h cyrus-imapd-2.1.5-modified/imap/index.h
+--- cyrus-imapd-2.1.5/imap/index.h	Tue May 21 10:10:13 2002
++++ cyrus-imapd-2.1.5-modified/imap/index.h	Sat Jul 13 15:51:45 2002
+@@ -60,7 +60,7 @@
+ #include <fcntl.h>
+ #include <netinet/in.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <ctype.h>
+ #include <time.h>
+diff -urN cyrus-imapd-2.1.5/imap/ipurge.c cyrus-imapd-2.1.5-modified/imap/ipurge.c
+--- cyrus-imapd-2.1.5/imap/ipurge.c	Tue Nov 13 13:59:04 2001
++++ cyrus-imapd-2.1.5-modified/imap/ipurge.c	Sat Jul 13 16:18:33 2002
+@@ -56,7 +56,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <string.h>
+ #include <time.h>
+ #include <netinet/in.h>
+diff -urN cyrus-imapd-2.1.5/imap/lmtpd.c cyrus-imapd-2.1.5-modified/imap/lmtpd.c
+--- cyrus-imapd-2.1.5/imap/lmtpd.c	Mon Jun  3 13:22:26 2002
++++ cyrus-imapd-2.1.5-modified/imap/lmtpd.c	Sat Jul 13 16:09:13 2002
+@@ -55,7 +55,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
+diff -urN cyrus-imapd-2.1.5/imap/lmtpengine.c cyrus-imapd-2.1.5-modified/imap/lmtpengine.c
+--- cyrus-imapd-2.1.5/imap/lmtpengine.c	Wed Jun  5 19:12:34 2002
++++ cyrus-imapd-2.1.5-modified/imap/lmtpengine.c	Sat Jul 13 16:10:45 2002
+@@ -53,7 +53,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <errno.h>
+ #include <sys/types.h>
+ #include <limits.h>
+diff -urN cyrus-imapd-2.1.5/imap/mailbox.c cyrus-imapd-2.1.5-modified/imap/mailbox.c
+--- cyrus-imapd-2.1.5/imap/mailbox.c	Thu Jun 20 11:35:52 2002
++++ cyrus-imapd-2.1.5-modified/imap/mailbox.c	Sat Jul 13 15:54:54 2002
+@@ -62,7 +62,7 @@
+ #include <sys/stat.h>
+ #include <ctype.h>
+ #include <time.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ 
+ #ifdef HAVE_DIRENT_H
+ # include <dirent.h>
+diff -urN cyrus-imapd-2.1.5/imap/mbdump.c cyrus-imapd-2.1.5-modified/imap/mbdump.c
+--- cyrus-imapd-2.1.5/imap/mbdump.c	Fri May 24 13:05:15 2002
++++ cyrus-imapd-2.1.5-modified/imap/mbdump.c	Sat Jul 13 16:07:28 2002
+@@ -60,7 +60,7 @@
+ #include <dirent.h>
+ #include <time.h>
+ #include <assert.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ 
+ #include "exitcodes.h"
+ #include "imap_err.h"
+diff -urN cyrus-imapd-2.1.5/imap/mboxlist.c cyrus-imapd-2.1.5-modified/imap/mboxlist.c
+--- cyrus-imapd-2.1.5/imap/mboxlist.c	Thu Jun 20 11:36:13 2002
++++ cyrus-imapd-2.1.5-modified/imap/mboxlist.c	Sat Jul 13 15:56:29 2002
+@@ -59,7 +59,7 @@
+ #include <ctype.h>
+ #include <time.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ 
+ #include <sys/ipc.h>
+ #include <sys/msg.h>
+diff -urN cyrus-imapd-2.1.5/imap/mboxname.c cyrus-imapd-2.1.5-modified/imap/mboxname.c
+--- cyrus-imapd-2.1.5/imap/mboxname.c	Thu Jan 24 10:39:28 2002
++++ cyrus-imapd-2.1.5-modified/imap/mboxname.c	Sat Jul 13 15:57:54 2002
+@@ -46,7 +46,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ 
+ #include "assert.h"
+ #include "glob.h"
+diff -urN cyrus-imapd-2.1.5/imap/pop3d.c cyrus-imapd-2.1.5-modified/imap/pop3d.c
+--- cyrus-imapd-2.1.5/imap/pop3d.c	Mon Jun  3 13:22:27 2002
++++ cyrus-imapd-2.1.5-modified/imap/pop3d.c	Sat Jul 13 16:12:43 2002
+@@ -57,7 +57,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <netdb.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+diff -urN cyrus-imapd-2.1.5/imap/quota.c cyrus-imapd-2.1.5-modified/imap/quota.c
+--- cyrus-imapd-2.1.5/imap/quota.c	Wed May 22 14:55:24 2002
++++ cyrus-imapd-2.1.5-modified/imap/quota.c	Sat Jul 13 16:17:06 2002
+@@ -55,7 +55,7 @@
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #include <sys/stat.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ 
+ #if HAVE_DIRENT_H
+ # include <dirent.h>
+diff -urN cyrus-imapd-2.1.5/imap/reconstruct.c cyrus-imapd-2.1.5-modified/imap/reconstruct.c
+--- cyrus-imapd-2.1.5/imap/reconstruct.c	Sat Mar 30 13:46:57 2002
++++ cyrus-imapd-2.1.5-modified/imap/reconstruct.c	Sat Jul 13 16:15:41 2002
+@@ -55,7 +55,7 @@
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #include <sys/stat.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <stdlib.h>
+ 
+ #if HAVE_DIRENT_H
+diff -urN cyrus-imapd-2.1.5/imap/squatter.c cyrus-imapd-2.1.5-modified/imap/squatter.c
+--- cyrus-imapd-2.1.5/imap/squatter.c	Fri Jan 18 16:58:48 2002
++++ cyrus-imapd-2.1.5-modified/imap/squatter.c	Sat Jul 13 16:44:03 2002
+@@ -78,7 +78,7 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include <fcntl.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <syslog.h>
+ #include <string.h>
+ 
+diff -urN cyrus-imapd-2.1.5/notifyd/notifyd.c cyrus-imapd-2.1.5-modified/notifyd/notifyd.c
+--- cyrus-imapd-2.1.5/notifyd/notifyd.c	Wed Jun 19 09:45:35 2002
++++ cyrus-imapd-2.1.5-modified/notifyd/notifyd.c	Sat Jul 13 16:47:38 2002
+@@ -51,7 +51,7 @@
+ #include <stdio.h>
+ #include <errno.h>
+ #include <syslog.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+diff -urN cyrus-imapd-2.1.5/timsieved/timsieved.c cyrus-imapd-2.1.5-modified/timsieved/timsieved.c
+--- cyrus-imapd-2.1.5/timsieved/timsieved.c	Sat May 25 14:57:53 2002
++++ cyrus-imapd-2.1.5-modified/timsieved/timsieved.c	Sat Jul 13 16:45:55 2002
+@@ -60,7 +60,7 @@
+ #include <syslog.h>
+ #include <dirent.h>
+ #include <ctype.h>
+-#include <com_err.h>
++#include <et/com_err.h>
+ #include <netdb.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>

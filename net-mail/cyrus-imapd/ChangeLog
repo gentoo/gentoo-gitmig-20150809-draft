@@ -1,0 +1,13 @@
+# ChangeLog for net-mail/cyrus-imapd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.1 2002/07/13 21:56:00 raker Exp $
+
+*cyrus-imapd-2.1.5 (13 Jul 2002)
+
+  13 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-imapd-2.1.5.ebuild and friends:
+
+  Ebuild and friends created by Alexander Holler.  Thank you!
+  Created diff so program will compile with current version of
+  e2fsprogs.
+
