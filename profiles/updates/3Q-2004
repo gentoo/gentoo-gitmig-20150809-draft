@@ -1,2 +1,4 @@
 slotmove <=app-editors/emacs-cvs-21.3.50 0 21.3.50
 move media-libs/sidplay-libs media-libs/libsidplay
+slotmove >=media-libs/libsidplay-2.0 0 2
+
