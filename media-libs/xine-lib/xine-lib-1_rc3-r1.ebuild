@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.13 2004/02/16 15:32:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.14 2004/02/18 08:52:54 mholzer Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -71,6 +71,10 @@ src_compile() {
 
 	# fix build errors with sse2
 	if [ "`gcc-version`" == "3.2" ]; then
+		use x86 && append-flags -mno-sse2
+	fi
+
+	if [ "`gcc-version`" == "3.3" ]; then
 		use x86 && append-flags -mno-sse2
 	fi
 
