@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.1.ebuild,v 1.1 2002/07/09 22:12:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.1.ebuild,v 1.2 2002/07/15 01:39:06 blizzy Exp $
 
 S="${WORKDIR}/SashXB-${PV}"
 
@@ -25,9 +25,6 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	cd ${WORKDIR}
-
-	einfo `pwd`
-	einfo "S=${S}"
 
 	patch -p0 -i ${FILESDIR}/${P}-mozilla.patch
 
