@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.8 2004/06/30 02:09:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.9 2004/09/27 09:09:53 liquidx Exp $
 
 inherit eutils
 
@@ -74,7 +74,7 @@ src_install() {
 
 	cd ${S}/info
 	rm info.info
-	patch < ${FILESDIR}/jed.info.diff || die
+	epatch ${FILESDIR}/jed.info.diff
 	cd ${S}
 
 	insinto /usr/share/info
