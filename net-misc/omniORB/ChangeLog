@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.27 2004/09/03 19:37:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.28 2004/09/29 23:01:35 liquidx Exp $
+
+*omniORB-4.0.4 (30 Sep 2004)
+
+  30 Sep 2004; Alastair Tse <liquidx@gentoo.org> +omniORB-4.0.4.ebuild:
+  version bump. add support for CFLAGS/CXXFLAGS and remove extraneous dodoc.
 
   03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -files/omniORB.305,
   -files/omniORB.rc6, -omniORB-304-r7.ebuild, -omniORB-305.ebuild:
