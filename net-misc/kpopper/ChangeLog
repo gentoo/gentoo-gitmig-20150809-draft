@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/kpopper
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kpopper/ChangeLog,v 1.1 2002/07/17 10:08:15 seemant Exp $
+
+*kpopper-1.0 (10 Apr 2002)
+
+  10 Apr 2002; Bart Verwilst <verwilst@gentoo.org> kpopper-1.0.ebuild
+  files/digest-kpopper-1.0 :
+
+  New Package.
