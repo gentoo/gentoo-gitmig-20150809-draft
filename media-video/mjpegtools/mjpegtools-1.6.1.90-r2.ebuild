@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r2.ebuild,v 1.1 2004/03/15 12:18:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r2.ebuild,v 1.2 2004/03/17 13:55:50 phosphan Exp $
 
 inherit flag-o-matic gcc
 
@@ -29,7 +29,7 @@ DEPEND="media-libs/jpeg
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-	epatch "${FILESDIR}/no-x11-lib.patch"
+	use X || epatch "${FILESDIR}/no-x11-lib.patch"
 }
 
 src_compile() {
