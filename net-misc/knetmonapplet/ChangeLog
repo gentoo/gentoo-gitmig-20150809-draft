@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/knetmonapplet
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/ChangeLog,v 1.9 2004/08/29 18:05:23 kugelfang Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/ChangeLog,v 1.10 2005/04/05 17:15:25 greg_g Exp $
+
+  05 Apr 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/knetmonapplet-0.9-noarts.patch, knetmonapplet-0.9.ebuild:
+  Add patch to compile without arts (#87925). Thanks to prymitive
+  <prymitive@o2.pl>.
 
   29 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> knetmonapplet-0.9.ebuild:
   Marked ~amd64.

@@ -1,15 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc7d5a84917550a48f51c31e4a6747ff ChangeLog 1311
+MD5 9d50ef8b089ca884d499f0c786c0c00a ChangeLog 1514
 MD5 6037b951324be8d75e66c59d2f044774 knetmonapplet-0.6.6.ebuild 592
-MD5 71d2bbf483ac36a8b16be57bbaf716ce knetmonapplet-0.9.ebuild 591
+MD5 477d5eb3ee74eca41f01688ce34c0367 knetmonapplet-0.9.ebuild 659
 MD5 ce6272804a46fc47fbda45f19d153a9c files/digest-knetmonapplet-0.6.6 71
+MD5 8798ce976a6ab0a43270915a13ed53bc files/knetmonapplet-0.9-noarts.patch 3828
 MD5 f6e8238f1cafc06e30b26f90dedfca95 files/digest-knetmonapplet-0.9 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHNEI1lqEGTUzyQRAnbzAJ90XgnA6Wx8moCq2u+eDQhA+34GggCgo1wx
-iHdWhnSvxOC05lHoHsLlgis=
-=1UVI
------END PGP SIGNATURE-----
