@@ -1,0 +1,100 @@
+--- libdv-0.99/Makefile.in	2003-05-13 10:47:47.000000000 +0200
++++ libdv-0.99/Makefile.in	2003-05-13 10:47:54.000000000 +0200
+@@ -101,7 +101,7 @@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-SUBDIRS = libdv playdv encodedv
++SUBDIRS = @subdirs@
+ 
+ AUX_DIST = $(ac_aux_dir)/config.guess \
+                                    $(ac_aux_dir)/config.sub \
+--- libdv-0.99/configure	2003-05-20 11:01:08.000000000 +0200
++++ libdv-0.99/configure	2003-05-20 11:03:23.000000000 +0200
+@@ -7651,6 +7651,7 @@
+ 
+ 
+ 
++if $use_gtk; then
+ REQUIRES='glib >= 1.2.4 gtk+ >= 1.2.4'
+ 
+   succeeded=no
+@@ -7749,9 +7750,13 @@
+ echo "$as_me: error: Library requirements ($REQUIRES) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
+-
++fi
+ REQUIRES=''
+-
++if $use_gtk; then
++   subdirs="libdv playdv encodedv"
++else
++   subdirs="libdv"
++fi
+ 
+ 
+ 
+@@ -9978,8 +9983,11 @@
+ 
+ 
+ 
+-
++if $use_gtk; then
+ ac_config_files="$ac_config_files Makefile libdv.spec libdv.pc libdv/Makefile playdv/Makefile encodedv/Makefile"
++else
++ac_config_files="$ac_config_files Makefile libdv.spec libdv.pc libdv/Makefile"
++fi
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -10480,6 +10488,7 @@
+ cat >>$CONFIG_STATUS <<\_ACEOF
+ for ac_config_target in $ac_config_targets
+ do
++if test "x$enable_gtktest" = "xyes" ; then
+   case "$ac_config_target" in
+   # Handling of arguments.
+   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+@@ -10494,6 +10503,20 @@
+ echo "$as_me: error: invalid argument: $ac_config_target" >&2;}
+    { (exit 1); exit 1; }; };;
+   esac
++else
++  case "$ac_config_target" in
++  # Handling of arguments.
++  "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
++  "libdv.spec" ) CONFIG_FILES="$CONFIG_FILES libdv.spec" ;;
++  "libdv.pc" ) CONFIG_FILES="$CONFIG_FILES libdv.pc" ;;
++  "libdv/Makefile" ) CONFIG_FILES="$CONFIG_FILES libdv/Makefile" ;;
++  "default-1" ) CONFIG_COMMANDS="$CONFIG_COMMANDS default-1" ;;
++  "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
++  *) { { echo "$as_me:9830: error: invalid argument: $ac_config_target" >&5
++echo "$as_me: error: invalid argument: $ac_config_target" >&2;}
++   { (exit 1); exit 1; }; };;
++  esac
++fi
+ done
+ 
+ # If the user did not use the arguments to specify the items to instantiate,
+@@ -10513,6 +10536,12 @@
+   trap '{ (exit 1); exit 1; }' 1 2 13 15
+ }
+ 
++if test "x$enable_gtktest" = "xyes" ; then
++   subdirs="libdv playdv encodedv"
++else
++   subdirs="libdv"
++fi
++
+ # Create a (secure) tmp directory for tmp files.
+ : ${TMPDIR=/tmp}
+ {
+@@ -10642,6 +10671,7 @@
+ s,@REQUIRES_NOPKGCONFIG@,$REQUIRES_NOPKGCONFIG,;t t
+ s,@ac_aux_dir@,$ac_aux_dir,;t t
+ s,@RPM_RELEASE@,$RPM_RELEASE,;t t
++s,@subdirs@,$subdirs,;t t
+ CEOF
+ 
+ _ACEOF
