@@ -1,9 +1,12 @@
 # ChangeLog for media-video/lxdvdrip
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.4 2004/09/04 23:04:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.5 2004/09/05 16:37:47 malc Exp $
 
   05 Sep 2004; David Holm <dholm@gentoo.org> lxdvdrip-1.20_pre1.ebuild:
   Added to ~ppc.
+
+  05 Sep 2004; Malcolm Lashley <malc@gentoo.org> lxdvdrip-1.20_pre1.ebuild:
+  Add ~amd64 - closes bug #59090
 
 *lxdvdrip-1.20_pre1 (31 Aug 2004)
 
