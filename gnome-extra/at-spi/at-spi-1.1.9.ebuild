@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.9.ebuild,v 1.1 2003/07/05 10:51:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.9.ebuild,v 1.2 2003/07/08 09:59:43 liquidx Exp $
 
 IUSE="doc"
 
@@ -30,3 +30,7 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-lspi.patch
+}

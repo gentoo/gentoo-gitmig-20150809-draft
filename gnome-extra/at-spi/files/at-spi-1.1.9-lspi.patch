@@ -1,0 +1,11 @@
+--- at-spi-1.1.9/configure	2003-03-27 13:52:12.000000000 +0000
++++ at-spi-1.1.9/configure.new	2003-07-08 10:38:19.000000000 +0100
+@@ -10000,7 +10000,7 @@
+    { (exit 1); exit 1; }; }
+   fi
+ 
+-ATK_BRIDGE_LIBS="$ATK_BRIDGE_LIBS -lspi"
++#ATK_BRIDGE_LIBS="$ATK_BRIDGE_LIBS -lspi"
+ 
+ 
+ 
