@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.15 2004/02/20 12:44:05 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.16 2004/04/02 10:34:24 eradicator Exp $
+
+  02 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ardour-0.9_beta10.ebuild, ardour-0.9_beta11.ebuild,
+  ardour-0.9_beta2-r1.ebuild, ardour-0.9_beta3.ebuild,
+  ardour-0.9_beta5.ebuild, ardour-0.9_beta7.ebuild, ardour-0.9_beta8.ebuild,
+  ardour-0.9_beta9.ebuild:
+  jack dep is now virtual.  Depend on liblrdf.  See bug #45980.  Removing
+  pre beta10 ebuilds.
 
 *ardour-0.9_beta11 (20 Feb 2004)
 
