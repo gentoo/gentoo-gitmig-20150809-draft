@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.1 2004/02/10 04:34:42 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.2 2004/02/11 19:22:09 absinthe Exp $
 
 DESCRIPTION="Java server benchmark utility"
 HOMEPAGE="http://www.volano.com/benchmarks.html"
@@ -31,9 +31,17 @@ src_install() {
 	sed -i -e "s#^host=.*#cd /opt/${PN}\nhost=`hostname`#" \
 		-e 's:"$java":java:g' \
 		-e 's:! -f: -z :' \
+		-e 's:-Sn:-n:' \
 		${D}/opt/${PN}/startup.sh
 
 	sed -i -e "s#^./startup.sh#/opt/${PN}/startup.sh#g" ${D}/opt/${PN}/*.sh
+
+	# Set stack-size correctly for different arches
+	if [ "${ARCH}" == "amd64" ] ; then
+		sed -i -e 's:Xss96:Xss512:' ${D}/opt/${PN}/startup.sh
+	else
+		sed -i -e 's:Xss96:Xss128:' ${D}/opt/${PN}/startup.sh
+	fi
 
 	keepdir /opt/${PN}/logs
 }
