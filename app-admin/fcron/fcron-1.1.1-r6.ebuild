@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/fcron-1.1.1-r6.ebuild,v 1.1 2001/09/03 21:22:27 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/fcron-1.1.1-r6.ebuild,v 1.2 2001/09/04 01:20:30 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A replacement for vcron"
@@ -33,18 +33,14 @@ src_install() {
     dodir /usr/bin
     dodir /usr/sbin
     dodir /usr/share/man{1,8}
+    diropts -m 0770 -o root -g cron
     dodir /var/spool/fcron
 
-    fperms 0770 /var/spool/fcron
-    fowners root.cron /var/spool/fcron
-    
     insinto /usr/bin
     insopts -o cron -g cron -m 6111
     doins fcrontab
-
     insopts -o root -g root -m 6111
     doins fcronsighup
-
     insinto /usr/sbin
     insopts -o root -g root -m 0110
     doins fcron
@@ -56,12 +52,12 @@ src_install() {
 
     cd ${S}/doc
     dodoc CHANGES README LICENSE MANIFEST VERSION
+    dodoc ../files/fcron.conf
     docinto html
     dodoc *.html
 
     doman *.{1,8}
 
-    insinto /etc/init.d
-    insopts -m 0755
-    newins ${FILESDIR}/fcron.rc6 fcron
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/fcron.rc6 fcron
 }
