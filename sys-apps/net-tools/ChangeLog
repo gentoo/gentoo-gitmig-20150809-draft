@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.18 2003/03/18 21:36:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.19 2003/05/18 21:36:52 dragon Exp $
+
+*net-tools-1.60-r7 (18 May 2003)
+
+  18 May 2003; Nicholas Wourms <dragon@gentoo.org> net-tools-1.60-r7.ebuild:
+  Version bump. Add Manifest. Update ether-wake to Donald Becker's latest
+  version (1.08). Add an english manpage for ether-wake. Add newline characters
+  to various multi-line string literals in order to fix gcc-3.3 compile errors.
+  Update lib/masq_info.c to support ipvs configurations. Update netstat to fix
+  interface name output and to support modifying the statistics refresh delay as
+  a command-line argument.
 
 *net-tools-1.60-r6 (18 Mar 2003)
 
