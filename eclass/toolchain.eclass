@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.134 2005/03/22 10:30:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.135 2005/03/23 18:59:15 azarah Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -740,41 +740,12 @@ gcc_pkg_setup() {
 }
 
 gcc-compiler_pkg_preinst() {
-	# Now we have to figure out if all the little libtool linker scripts
-	# need updating to our new gcc version.  Basically we only want to 
-	# do this if the old gcc version is being cleaned out due to this 
-	# new version.
-	# We check to see if we need to run fix_libtool_files in pkg_preinst()
-	# and then we run the script in pkg_postinst().  The reason being 
-	# that portage updates the package database between these functions, 
-	# so we have to gather information on the state of the system before 
-	# the new gcc is emerged into ${ROOT}, but we want to fix the .la 
-	# files after the new gcc is emerged.  Whoo !
-
-	# USE=multislot ... no compilers get cleaned out during an upgrade
-	use multislot && return 0
-
-	# libtool files aren't affected by cross compilers
-	is_crosscompile && return 0
-
-	# Now check to see if we already have a version installed in this 
-	# SLOT ... if we do, then bail if it's a minor upgrade (like we 
-	# go from 3.3.4 to 3.3.4-r1 vs 3.3.4 to 3.3.5)
-	local old_gcc_release=$(portageq match ${ROOT} =sys-devel/gcc-${GCC_RELEASE_VER}*)
-	[[ -n ${old_gcc_release} ]] && return 0
-	local old_gcc_branch=$(portageq match ${ROOT} =sys-devel/gcc-${GCC_BRANCH_VER}*)
-	[[ -z ${old_gcc_branch} ]] && return 0
-	local old_gcc_ver=${old_gcc_branch/*gcc-}
-	echo ${old_gcc_ver%%-*} > "${T}"/libtool-old-gcc-ver
+	:
 }
 
 gcc-compiler_pkg_postinst() {
 	export LD_LIBRARY_PATH=${LIBPATH}:${LD_LIBRARY_PATH}
 	do_gcc_config
-
-	if [[ -e ${T}/libtool-old-gcc-ver ]] ; then
-		/sbin/fix_libtool_files.sh $(<"${T}"/libtool-old-gcc-ver)
-	fi
 
 	echo
 	einfo "If you have issues with packages unable to locate libstdc++.la,"
@@ -793,25 +764,26 @@ gcc-compiler_pkg_postinst() {
 gcc-compiler_pkg_prerm() {
 	# TODO: flesh this out when I care
 	return 0
-
-	# When unmerging a compiler, we need to make sure that 
-	# we don't leave any of configuration stuff stranded.  
-	# After all, we can't assume the user won't shoot themselves 
-	# in the foot.
-
-	# First handle gcc-config matters
-	#if [[ $(gcc-config -c 2>&1) == "${CTARGET}-${PV}" ]] ; then
-	#	gcc-config 
-	#fi
-
-	# libtool files aren't affected by cross compilers
-	#is_crosscompile || return 0
-
-	#/sbin/fix_libtool_files.sh ${PV}
 }
 
 gcc-compiler_pkg_postrm() {
-	:
+	# to make our lives easier (and saner), we do the fix_libtool stuff here.   
+	# rather than checking SLOT's and trying in upgrade paths, we just see if 
+	# the common libstdc++.la exists in the ${LIBPATH} of the gcc that we are 
+	# unmerging.  if it does, that means this was a simple re-emerge.
+
+	# don't worry about cross-compile toolchains
+	is_crosscompile && return 0
+
+	# ROOT isnt handled by the script
+	[[ ${ROOT} != "/" ]] && return 0
+
+	if [[ ! -e ${LIBPATH}/libstdc++.la ]] ; then
+		/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}
+		[[ -z ${BRANCH_UPDATE} ]] || /sbin/fix_libtool_files.sh ${BRANCH_UPDATE}
+	fi
+
+	return 0
 }
 
 #---->> pkg_* <<----
