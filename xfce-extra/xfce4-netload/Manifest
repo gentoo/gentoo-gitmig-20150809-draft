@@ -1,3 +1,5 @@
+MD5 f5104bf1cc9ed17134ccf42b9d13b178 xfce4-netload-0.2.1.ebuild 700
 MD5 882aee242935e7c4d95ce0eff3cdd253 xfce4-netload-0.2.0.ebuild 701
-MD5 f9e2243bbb47e215389e7c7aa7f8a3a1 ChangeLog 760
+MD5 bc36b18fc2a652b0ca8694a62019ded3 ChangeLog 887
 MD5 2ed7c9669ba17f256455ec3d030f42c5 files/digest-xfce4-netload-0.2.0 78
+MD5 215d277c86df84fceb9e44a373e2e1f5 files/digest-xfce4-netload-0.2.1 78
