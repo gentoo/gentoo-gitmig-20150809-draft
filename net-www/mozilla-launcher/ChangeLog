@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.22 2004/08/14 15:18:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.23 2004/08/18 20:11:20 agriffis Exp $
+
+  18 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-launcher-1.12.ebuild, -mozilla-launcher-1.15.ebuild,
+  mozilla-launcher-1.16.ebuild, -mozilla-launcher-1.7-r1.ebuild:
+  Mark stable on all arches, trim old versions
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.
