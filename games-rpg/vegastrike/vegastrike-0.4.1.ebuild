@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.1 2003/11/21 02:44:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.2 2003/11/21 21:24:37 vapier Exp $
 
 inherit games eutils flag-o-matic
 
@@ -73,6 +73,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -DGLX_GLXEXT_LEGACY
+
 	cd ${S}/vegastrike
 	egamesconf || die "econf failed"
 	emake || die "emake failed"
