@@ -1,3 +1,13 @@
-MD5 0346e0902100f614e2209f9dbc71cf55 ChangeLog 409
-MD5 468a9f9844af1e907e6c587883627133 bottlerocket-0.04c.ebuild 807
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f9ab688b5de9b2604c7c2bc2cfa4654 bottlerocket-0.04c.ebuild 813
+MD5 e96a9683879932d200296f0bd52d55a4 ChangeLog 522
 MD5 3a4382ebb78434d410178a8d440d4b1a files/digest-bottlerocket-0.04c 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3cBsZ/iYVBmujdURAklIAKDiVTUIpw33S1bb/OS7GpZrpEcy+gCeKWmC
+QgEpU1f7FOH1bUoJlf87dhM=
+=sd8t
+-----END PGP SIGNATURE-----
