@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.29.ebuild,v 1.17 2004/02/23 00:44:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.29.ebuild,v 1.18 2004/06/11 13:35:10 kloeri Exp $
 
 DESCRIPTION="GNU utility to convert program --help output to a man page"
 HOMEPAGE="http://www.gnu.org/software/help2man"

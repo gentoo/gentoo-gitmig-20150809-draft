@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.12 2004/02/08 13:39:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.13 2004/06/11 13:35:10 kloeri Exp $
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> help2man-1.33.1.ebuild:
+  Stable on alpha.
 
 *help2man-1.33.1 (08 Feb 2004)
 
