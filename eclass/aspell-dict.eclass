@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.1 2002/08/15 08:23:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.2 2002/08/16 01:34:43 seemant Exp $
 
 # The aspell-dict eclass is designed to streamline the construction of
 # ebuilds for the new aspell dictionaries (from gnu.org) which support
@@ -12,7 +12,10 @@ INHERITED="${INHERITED} ${ECLASS}"
 
 EXPORT_FUNCTIONS src_compile src_install
 
-MY_P=${PN}-${PV%.*.*}-${PV#*.*.}
+if [ -z ${MY_P} ]
+then
+	MY_P=${PN}-${PV%.*.*}-${PV#*.*.}
+fi
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="${ASPELL_LANG} dictionary for aspell"
 HOMEPAGE="http://www.gnu.org/projects/aspell/index.html"
