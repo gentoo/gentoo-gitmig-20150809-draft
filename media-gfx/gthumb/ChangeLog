@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.35 2004/07/31 04:37:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.36 2004/09/02 23:52:11 spider Exp $
+
+*gthumb-2.4.2 (03 Sep 2004)
+
+  03 Sep 2004; <spider@gentoo.org> +gthumb-2.4.2.ebuild:
+  versionbump. upstream fixes only
 
   31 Jul 2004; <spider@gentoo.org> :
   Versionbump.
