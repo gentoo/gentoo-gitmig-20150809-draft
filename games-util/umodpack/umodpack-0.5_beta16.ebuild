@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16.ebuild,v 1.2 2004/02/29 10:54:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16.ebuild,v 1.3 2004/04/12 21:25:35 wolf31o2 Exp $
 
 inherit perl-module
 
@@ -8,6 +8,7 @@ MY_P="${P/_beta/b}"
 DESCRIPTION="portable and useful [un]packer for Unreal Tournament's Umod files"
 HOMEPAGE="http://umodpack.sourceforge.net/"
 SRC_URI="mirror://sourceforge/umodpack/${MY_P}-nogui.tar.gz"
+IUSE=""
 
 LICENSE="Artistic"
 SLOT="0"
