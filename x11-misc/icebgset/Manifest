@@ -1,5 +1,7 @@
 MD5 f5184955f867c7145f05c5f5985e0d9f icebgset-0.8.ebuild 618
 MD5 cc8dd7481406c82bd6eec323c828518a icebgset-0.5.ebuild 744
+MD5 3598fcd05eba2d3731a560c7d8d73dbf icebgset-0.9.ebuild 597
 MD5 c6e39223d21948269da9a6c3d656f520 ChangeLog 734
 MD5 95fd6d680a48ada79c23e5fed3a67b43 files/digest-icebgset-0.5 65
 MD5 9e564c4b425b2c6cd4fa17723ea312ea files/digest-icebgset-0.8 65
+MD5 8924750839c656a09b42667d3b239153 files/digest-icebgset-0.9 65
