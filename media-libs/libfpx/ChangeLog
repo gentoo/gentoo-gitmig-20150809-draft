@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libfpx
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.1 2004/10/17 22:05:46 sekretarz Exp $
+
+*libfpx-1.2.0.9 (18 Oct 2004)
+
+  18 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org> +metadata.xml,
+  +libfpx-1.2.0.9.ebuild:
+  Initial add
+
