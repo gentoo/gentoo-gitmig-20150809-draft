@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.1-r1.ebuild,v 1.2 2002/11/01 23:21:14 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.1-r1.ebuild,v 1.3 2002/11/01 23:22:05 karltk Exp $
 
 S=${WORKDIR}/jakarta-ant-${PV}
 DESCRIPTION="Build system for Java"
@@ -14,7 +14,10 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	export JAVA_HOME=${JDK_HOME}
-	export THREADS_FLAG="green"
+	if [ `arch` == "ppc" ] ; then 
+		# We're compiling _ON_ PPC
+		export THREADS_FLAG="green"
+	fi
 	./build.sh -Ddist.dir=${D}/usr/share/ant || die
 }
 
