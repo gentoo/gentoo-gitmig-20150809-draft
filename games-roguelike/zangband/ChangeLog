@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/zangband
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.3 2003/11/25 10:57:52 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.4 2004/02/01 10:27:13 mr_bones_ Exp $
+
+*zangband-2.7.4b (01 Feb 2004)
+
+  01 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> zangband-2.7.4b.ebuild:
+  bug-fix version bump (bug 39941)
 
 *zangband-2.7.4 (25 Nov 2003)
 
