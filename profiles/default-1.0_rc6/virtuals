@@ -16,3 +16,4 @@ virtual/jdk		dev-java/blackdown-jdk
 virtual/jre		dev-java/blackdown-jre
 virtual/imapd		net-mail/courier-imap
 virtual/x11-web-browser	net-www/mozilla
+sys-apps/console-tools	sys-apps/kbd

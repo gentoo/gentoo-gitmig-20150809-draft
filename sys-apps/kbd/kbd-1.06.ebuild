@@ -7,7 +7,7 @@ DESCRIPTION="Keyboard and console utilities"
 SRC_URI="ftp://ftp.win.tue.nl/pub/home/aeb/linux-local/utils/kbd/${P}.tar.gz"
 HOMEPAGE=""
 DEPEND="virtual/glibc"
-
+PROVIDE="sys-apps/console-tools"
 src_compile() {
 	./configure --mandir=/usr/share/man --datadir=/usr/share
 	make
