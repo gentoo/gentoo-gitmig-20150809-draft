@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.3 2004/08/15 23:57:36 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.4 2004/08/16 00:16:58 langthang Exp $
 
 inherit eutils ssl-cert
 
@@ -206,6 +206,7 @@ src_install () {
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/postfix.rc6" postfix
 
+	mv "${S}/examples" "${D}/usr/share/doc/${PF}/"
 	dodoc *README COMPATIBILITY HISTORY INSTALL LICENSE PORTING RELEASE_NOTES*
 	dohtml html/*
 

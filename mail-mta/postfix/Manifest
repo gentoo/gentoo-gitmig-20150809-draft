@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ad3f3c6e10f0f36e16896c17d145a34c postfix-2.1.3.ebuild 7297
+MD5 b3ad9d822583a312f2fff96c7e7d7716 postfix-2.1.3.ebuild 7345
 MD5 7eeba195836ed8cf5ba8496b7efb1355 postfix-2.0.18.ebuild 6664
 MD5 77eb50bf3e6553a05a20d268f18b3647 postfix-2.0.19-r2.ebuild 6183
 MD5 027297ac3ac33bb8d1264de5a8d63b18 postfix-1.1.11.20020917-r1.ebuild 4559
@@ -42,7 +42,7 @@ MD5 803eb5ffc166aaaf2f3b78ddf71fe73d files/postfix-2.0.0/main.cf.diff 2382
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBH/uz5FrxP71izLARAkQ7AJ0djMmeGe3n7aA+Repk0iweY2WlEACglaF/
-NTG9X++8KtujIwyCvpS7mrI=
-=E2S/
+iD8DBQFBIAAk5FrxP71izLARAkTTAJ4qt1bSGnRxM3PFQgYYAeefN75RjQCffpAR
+xjRImQePk39BBcHy/5P0BNE=
+=pQD6
 -----END PGP SIGNATURE-----
