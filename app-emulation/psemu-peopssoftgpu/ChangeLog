@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/psemu-peopssoftgpu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/ChangeLog,v 1.6 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/ChangeLog,v 1.7 2003/07/13 07:09:51 vapier Exp $
+
+*psemu-peopssoftgpu-1.14 (13 Jul 2003)
+
+  13 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + cleanups #24076.
 
 *psemu-peopssoftgpu-1.6 (27 Jul 2002)
 
