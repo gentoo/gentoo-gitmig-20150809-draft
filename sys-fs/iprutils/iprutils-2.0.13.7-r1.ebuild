@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.0.13.7-r1.ebuild,v 1.1 2005/03/09 05:38:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.0.13.7-r1.ebuild,v 1.2 2005/03/09 15:13:35 swegener Exp $
 
 inherit eutils
 
@@ -15,15 +15,9 @@ KEYWORDS="ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
-		>=ncurses-5.4-r5
+		>=sys-libs/ncurses-5.4-r5
 		>=sys-apps/pciutils-2.1.11-r1
 		>=sys-fs/sysfsutils-1.2.0"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
 
 src_install () {
 	make INSTALL_MOD_PATH=${D} install || die

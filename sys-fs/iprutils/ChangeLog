@@ -1,6 +1,10 @@
-# ChangeLog for sys-fs/udftools
+# ChangeLog for sys-fs/iprutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.1 2005/03/09 05:38:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.2 2005/03/09 15:13:35 swegener Exp $
+
+  09 Mar 2005; Sven Wegener <swegener@gentoo.org>
+  iprutils-2.0.13.7-r1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   06 Mar 2005; Tom Gall <tgall@gentoo.org> +iprutils-2.0.13.7-r1,
   +ChangeLog, +metadata.xml:
