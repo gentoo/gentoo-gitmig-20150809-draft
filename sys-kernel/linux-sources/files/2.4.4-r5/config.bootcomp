@@ -81,7 +81,10 @@ CONFIG_HOTPLUG=y
 #
 # PCMCIA/CardBus support
 #
-# CONFIG_PCMCIA is not set
+CONFIG_PCMCIA=m
+CONFIG_CARDBUS=y
+CONFIG_I82365=y
+# CONFIG_TCIC is not set
 CONFIG_SYSVIPC=y
 CONFIG_BSD_PROCESS_ACCT=y
 CONFIG_SYSCTL=y
@@ -434,6 +437,11 @@ CONFIG_SCSI_ULTRASTOR=m
 # CONFIG_SCSI_DEBUG is not set
 
 #
+# PCMCIA SCSI adapter support
+#
+# CONFIG_SCSI_PCMCIA is not set
+
+#
 # IEEE 1394 (FireWire) support
 #
 # CONFIG_IEEE1394 is not set
@@ -574,6 +582,27 @@ CONFIG_SLIP_MODE_SLIP6=y
 # Wan interfaces
 #
 # CONFIG_WAN is not set
+
+#
+# PCMCIA network device support
+#
+CONFIG_NET_PCMCIA=y
+# CONFIG_PCMCIA_3C589 is not set
+# CONFIG_PCMCIA_3C574 is not set
+# CONFIG_PCMCIA_FMVJ18X is not set
+CONFIG_PCMCIA_PCNET=m
+# CONFIG_PCMCIA_NMCLAN is not set
+# CONFIG_PCMCIA_SMC91C92 is not set
+# CONFIG_PCMCIA_XIRC2PS is not set
+# CONFIG_ARCNET_COM20020_CS is not set
+# CONFIG_PCMCIA_IBMTR is not set
+# CONFIG_PCMCIA_XIRTULIP is not set
+CONFIG_NET_PCMCIA_RADIO=y
+CONFIG_PCMCIA_RAYCS=m
+# CONFIG_PCMCIA_HERMES is not set
+# CONFIG_PCMCIA_NETWAVE is not set
+# CONFIG_PCMCIA_WAVELAN is not set
+# CONFIG_AIRONET4500_CS is not set
 
 #
 # Amateur Radio support
@@ -822,6 +851,11 @@ CONFIG_DRM_R128=m
 CONFIG_DRM_RADEON=m
 CONFIG_DRM_I810=m
 CONFIG_DRM_MGA=m
+
+#
+# PCMCIA character devices
+#
+# CONFIG_PCMCIA_SERIAL_CS is not set
 
 #
 # Multimedia devices
