@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-es/aspell-es-0.0.3.ebuild,v 1.1 2002/06/16 15:05:21 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-es/aspell-es-0.0.3.ebuild,v 1.2 2002/07/13 16:30:25 stubear Exp $
 
 MY_P="aspell-es-0.0-3"
 
 DESCRIPTION="The Spanish aspell dict"
 
 HOMEPAGE="http://aspell.sourceforge.net"
+
+KEYWORDS="x86"
 
 LICENSE="GPL"
 
