@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
 
+  07 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> xmbdfed-4.7_p1.ebuild:
+  fix use invocation
+
   06 Jul 2004; David Holm <dholm@gentoo.org> xmbdfed-4.7_p1.ebuild:
   Added to ~ppc.
 
