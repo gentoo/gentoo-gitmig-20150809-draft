@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.4 2002/08/12 20:22:13 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.5 2002/09/21 18:39:04 vapier Exp $
+
+*gradm-1.5 (21 Sep 2002)
+
+  21 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added CFLAG replacement and the example acl file as a doc
 
 *gradm-1.4 (12 Aug 2002)
 
