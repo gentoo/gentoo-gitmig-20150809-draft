@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.13 2004/04/06 04:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.14 2004/05/28 04:39:41 weeve Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://emelfm.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*"
