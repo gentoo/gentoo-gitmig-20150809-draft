@@ -1,22 +1,25 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.3-r1.ebuild,v 1.1 2002/02/16 16:05:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.1 2002/07/04 14:45:29 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Developer help browser"
 SRC_URI="http://devhelp.codefactory.se/download/${P}.tar.gz"
 HOMEPAGE="http://devhelp.codefactory.se/"
+LICENSE="GPL-2"
+SLOT="0"
 
-RDEPEND=">=gnome-base/gnome-libs-1.2.8
+RDEPEND=">=gnome-base/gnome-libs-1.4.1.7 
 	 >=gnome-base/ORBit-0.5.10-r1
-	 >=gnome-base/bonobo-1.0.9-r1
-	 >=gnome-base/libglade-0.17-r1
-	 >=dev-libs/libxml-1.8.15
-	 >=gnome-extra/gtkhtml-0.10.0
-	 >=gnome-base/gconf-1.0.4-r2
-	 >=gnome-base/gnome-vfs-1.0.2-r1
-	 >=gnome-base/oaf-0.6.6-r1
+	 >=gnome-base/bonobo-1.0.19
+	 ( >=gnome-base/libglade-0.17-r1
+	 <gnome-base/libglade-2.0.0 )
+	 >=dev-libs/libxml-1.8.17
+	 >=gnome-extra/gtkhtml-1.0.2
+	 =gnome-base/gconf-1.0*
+	 ( >=gnome-base/gnome-vfs-1.0.2-r1
+	 <gnome-base/gnome-vfs-2.0.0 )
+	 >=gnome-base/oaf-0.6.8-r1
 	 >=gnome-base/gnome-print-0.30"
 
 DEPEND="${RDEPEND}
