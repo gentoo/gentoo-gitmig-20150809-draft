@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.5 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.6 2003/07/22 22:16:58 gmsoft Exp $
 
 *Crypt-SSLeay-0.49 (08 Jun 2003)
+
+  22 Jul 2003; Guy Martin <gmsoft@gentoo.org> Crypt-SSLeay-0.49.ebuild :
+  Added hppa to KEYWORDS.
 
   08 Jun 2003; <rac@gentoo.org> Crypt-SSLeay-0.45-r1.ebuild,
   Crypt-SSLeay-0.45.ebuild, Crypt-SSLeay-0.49.ebuild:
