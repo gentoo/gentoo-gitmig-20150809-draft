@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-sha1
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sha1/ChangeLog,v 1.1 2003/09/28 23:31:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sha1/ChangeLog,v 1.2 2003/10/17 16:33:03 mkennedy Exp $
+
+  17 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-sha1-1.0.ebuild,
+  metadata.xml, files/cl-sha1-gentoo.patch:
+  make portable for non-sbcl CL impl, add postrm, preinst
 
 *cl-sha1-1.0 (27 Sep 2003)
 
