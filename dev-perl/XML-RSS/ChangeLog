@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.8 2005/02/18 17:28:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.9 2005/03/09 18:40:18 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> XML-RSS-1.04.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   18 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> XML-RSS-1.04.ebuild:
   added ~amd64 to KEYWORDS. fixes #82458

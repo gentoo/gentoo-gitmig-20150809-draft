@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RegExp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.10 2004/06/25 01:12:59 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.11 2005/03/09 18:43:34 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> XML-RegExp-0.03-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *XML-RegExp-0.03-r1 (21 Jun 2003)
  
