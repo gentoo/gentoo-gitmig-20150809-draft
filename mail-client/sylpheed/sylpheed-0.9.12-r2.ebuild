@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12-r2.ebuild,v 1.4 2004/08/27 13:22:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12-r2.ebuild,v 1.5 2004/09/11 10:39:51 hattya Exp $
 
 inherit eutils
 
@@ -29,8 +29,7 @@ DEPEND="gtk2? ( >=x11-libs/gtk+-2.2 )
 	ssl? ( dev-libs/openssl )
 	pda? ( app-pda/jpilot )
 	ldap? ( >=net-nds/openldap-2.0.11 )
-	crypt? ( <app-crypt/gpgme-0.4
-		 !=app-crypt/gpgme-0.3.14-r1 )
+	crypt? ( <app-crypt/gpgme-0.4 !=app-crypt/gpgme-0.3.14-r1 )
 	xface? ( >=media-libs/compface-1.4 )"
 RDEPEND="${DEPEND}
 	app-misc/mime-types

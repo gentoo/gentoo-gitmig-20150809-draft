@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.29 2004/08/28 09:04:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.30 2004/09/11 10:39:51 hattya Exp $
+
+  11 Sep 2004; Akinori Hattori <hattya@gentoo.org> sylpheed-0.9.10-r1.ebuild,
+  sylpheed-0.9.11.ebuild, sylpheed-0.9.12-r2.ebuild, sylpheed-0.9.12.ebuild,
+  sylpheed-0.9.4.ebuild, sylpheed-0.9.7.ebuild, sylpheed-0.9.8.ebuild:
+  fixes bug #63501.
 
   28 Aug 2004; Akinori Hattori <hattya@gentoo.org> -sylpheed-0.9.12-r1.ebuild:
   cleaned out old ebuild.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.8.ebuild,v 1.3 2004/07/14 16:33:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.8.ebuild,v 1.4 2004/09/11 10:39:51 hattya Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda"
 
@@ -22,7 +22,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	ssl? ( dev-libs/openssl )
 	pda? ( app-pda/jpilot )
 	ldap? ( >=net-nds/openldap-2.0.11 )
-	crypt? ( >=app-crypt/gnupg-1.0.6 =app-crypt/gpgme-0.3.14 )
+	crypt? ( =app-crypt/gpgme-0.3.14 )
 	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
 	xface? ( >=media-libs/compface-1.4 )"
 
