@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/libnss-pgsql
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-pgsql/ChangeLog,v 1.1 2005/01/12 10:26:13 nakano Exp $
+
+*libnss-pgsql-1.0.0 (12 Jan 2005)
+
+  12 Jan 2005; Masatomo Nakano <nakano@gentoo.org> +metadata.xml,
+  +files/postgres-and-glibc.patch, +libnss-pgsql-1.0.0.ebuild:
+  Initil import. (#34627)
+

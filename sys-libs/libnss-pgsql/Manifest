@@ -1,0 +1,5 @@
+MD5 42f23c2adc59ef134212a10979e7e96f libnss-pgsql-1.0.0.ebuild 1380
+MD5 1d98858649f4f617a8989fd2c5dd8726 ChangeLog 406
+MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+MD5 f4cf9036a52e45d2a0aa66c50a691d9f files/postgres-and-glibc.patch 1289
+MD5 9d469fca29b34e6f7bcf3b41674f3c42 files/digest-libnss-pgsql-1.0.0 70

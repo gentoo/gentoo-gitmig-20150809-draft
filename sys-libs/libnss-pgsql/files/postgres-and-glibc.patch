@@ -1,0 +1,35 @@
+diff -Nur libnss-pgsql-1.0.0.orig/conf/dbschema.sql libnss-pgsql-1.0.0/conf/dbschema.sql
+--- libnss-pgsql-1.0.0.orig/conf/dbschema.sql	2001-10-22 18:06:32.000000000 +0200
++++ libnss-pgsql-1.0.0/conf/dbschema.sql	2003-11-27 17:20:34.000000000 +0100
+@@ -7,7 +7,7 @@
+ );
+ 
+ CREATE TABLE "accounts" (
+-	"uid" serial NOT NULL,
++	"uid" serial UNIQUE NOT NULL,
+ 	"login" character varying(8) NOT NULL,
+ 	"passwd" character varying(30) NOT NULL,
+ 	"shell" character varying DEFAULT '/bin/bash' NOT NULL,
+diff -Nur libnss-pgsql-1.0.0.orig/src/backend.c libnss-pgsql-1.0.0/src/backend.c
+--- libnss-pgsql-1.0.0.orig/src/backend.c	2001-10-18 13:32:52.000000000 +0200
++++ libnss-pgsql-1.0.0/src/backend.c	2003-11-28 16:14:38.000000000 +0100
+@@ -9,7 +9,7 @@
+  */
+ 
+ #include "nss-pgsql.h"
+-#include <postgresql/libpq-fe.h>
++#include <libpq-fe.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <stdio.h>
+diff -Nur libnss-pgsql-1.0.0.orig/src/interface.c libnss-pgsql-1.0.0/src/interface.c
+--- libnss-pgsql-1.0.0.orig/src/interface.c	2001-10-18 13:32:53.000000000 +0200
++++ libnss-pgsql-1.0.0/src/interface.c	2003-11-27 15:47:52.000000000 +0100
+@@ -12,6 +12,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #define _LIBC
++#define NOT_IN_libc
+ #include <bits/libc-lock.h>
+ 
+ static __libc_lock_t  lock;
