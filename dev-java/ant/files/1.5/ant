@@ -10,6 +10,7 @@ else
   JAVA_HOME=`java-config --jdk-home`
   if [ -z $JAVA_HOME ] ; then
     JAVA_HOME=`java-config --jre-home`
+  fi
   CLASSPATH=`java-config --classpath`
 fi
 
@@ -37,7 +38,7 @@ ANT_HOME=/usr/share/ant
 # set ANT_LIB location
 ANT_LIB=${ANT_HOME}/lib
 
-JAVACMD="${JAVA_HOME}/java"
+JAVACMD="${JAVA_HOME}/bin/java"
  
 if [ ! -x "$JAVACMD" ] ; then
   echo "Error: We cannot execute $JAVACMD "
@@ -50,7 +51,7 @@ if [ -n "$CLASSPATH" ] ; then
 fi
 
 # add in the dependency .jar files
-LOCALCLASSPATH=`${LOCALCLASSPATH}:java-config --classpath=ant`
+LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant`"
 
 if [ -n "$JAVA_HOME" ] ; then
   if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
