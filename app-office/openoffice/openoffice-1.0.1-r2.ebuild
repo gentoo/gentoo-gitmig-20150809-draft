@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.3 2002/12/02 14:43:59 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.4 2002/12/03 10:26:00 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,7 +26,7 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
@@ -72,7 +72,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	>=virtual/jdk-1.4.0
+	>=virtual/jdk-1.3.1
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
 
@@ -240,8 +240,11 @@ src_unpack() {
 	done
 
 	# Seth -- Dec 1 2002
-        einfo "Patching for jdk >= 1.4.0..."
-        epatch ${FILESDIR}/${PV}/${P}-fix-jdk-1.4.0.patch
+	if [ "$(echo ${JDK_HOME} | grep "jdk-1.4")" ]
+	then 
+	        epatch ${FILESDIR}/${PV}/${P}-fix-jdk-1.4.0.patch
+	fi
+
 }
 
 get_EnvSet() {
