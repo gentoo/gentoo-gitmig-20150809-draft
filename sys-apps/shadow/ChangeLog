@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.35 2003/06/30 02:26:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.36 2003/08/04 19:44:48 azarah Exp $
+
+*shadow-4.0.3-r7 (04 Aug 2003)
+
+  04 Aug 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r7.ebuild,
+  files/pam.d/system-auth-1.1:
+  Remove the 'nodelay' option from authentication (/etc/pam.d/system-auth), bug
+  #24081.
 
   29 Jun 2003; Chris PeBenito <pebenito@gentoo.org> shadow-4.0.3-r6.ebuild:
   Remove selinux stuff, as its no longer needed.  Using pam-login again.
