@@ -18,6 +18,9 @@
 # Incompatible with gdm
 >=media-libs/imlib-1.9.11
 
+# Causes slow DVD auth, and do not work with MPlayer
+>=media-libs/libdvdcss-1.0.0
+
 #we no longer use sysvinit (rolled into baselayout)
 sys-apps/sysvinit
 
