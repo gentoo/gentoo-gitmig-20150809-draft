@@ -10,7 +10,8 @@ HOMEPAGE="http://www.gnu.org/software/emacs"
 RDEPEND=">=sys-libs/ncurses-4.0
          >=sys-libs/glibc-2.0
          >=x11-base/xfree-4.0
-         !app-editors/emacs-nogui"
+         !app-editors/emacs-nogui
+         !app-editors/emacs-motif"
 
 DEPEND=">=sys-libs/ncurses-4.0
         >=sys-libs/glibc-2.0
