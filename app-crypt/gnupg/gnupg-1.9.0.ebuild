@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.0.ebuild,v 1.8 2004/06/29 20:04:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.0.ebuild,v 1.9 2004/10/05 11:46:56 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.gz"
 
 LICENSE="GPL-2 | GPL-2 IDEA"
 SLOT="0"
-KEYWORDS="~x86 ~mips ~alpha"
+KEYWORDS="~x86 ~mips ~alpha ~ppc"
 IUSE="X caps ldap nls static"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )

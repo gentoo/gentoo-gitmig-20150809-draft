@@ -1,9 +1,12 @@
 # ChangeLog for app-crypt/rotix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.5 2004/06/24 21:37:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.6 2004/10/05 11:46:56 pvdabeel Exp $
 
    10 Dec 2003; Jon Portnoy <avenj@gentoo.org> rotix-0.83.ebuild :
    AMD64 keyword.
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> rotix-0.83.ebuild:
+  Masked rotix-0.83.ebuild stable for ppc
 
 *rotix-0.83 (20 Dec 2002)
 

@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.15 2004/08/25 18:46:16 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.16 2004/10/05 11:46:56 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pinentry-0.7.0.ebuild, pinentry-0.7.1-r1.ebuild:
+  Masked pinentry-0.7.1-r1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pinentry-0.7.0.ebuild:
+  Masked pinentry-0.7.0.ebuild stable for ppc
 
   25 Aug 2004; Travis Tilley <lv@gentoo.org> pinentry-0.7.1-r1.ebuild:
   stable on amd64

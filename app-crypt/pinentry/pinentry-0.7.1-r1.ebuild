@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.1-r1.ebuild,v 1.4 2004/08/25 18:46:16 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.1-r1.ebuild,v 1.5 2004/10/05 11:46:56 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/pinentry/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="qt gtk ncurses"
 
 DEPEND="gtk? ( x11-libs/gtk+ )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-0.16.ebuild,v 1.6 2004/06/24 21:34:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-0.16.ebuild,v 1.7 2004/10/05 11:46:56 pvdabeel Exp $
 
 DESCRIPTION="Expanded md5sum program that has recursive and comparison options"
 HOMEPAGE="http://md5deep.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="http://md5deep.sourceforge.net/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE=""
 
 DEPEND=""

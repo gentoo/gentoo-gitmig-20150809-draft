@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/quintuple-agent
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/ChangeLog,v 1.4 2004/09/17 07:42:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/ChangeLog,v 1.5 2004/10/05 11:46:56 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  quintuple-agent-1.0.3.ebuild:
+  Masked quintuple-agent-1.0.3.ebuild stable for ppc
 
   17 Sep 2004; Daniel Black <dragonheart@gentoo.org>
   quintuple-agent-1.0.3.ebuild, +metadata.xml:

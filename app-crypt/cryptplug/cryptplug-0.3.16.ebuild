@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16.ebuild,v 1.7 2004/08/08 12:58:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16.ebuild,v 1.8 2004/10/05 11:46:56 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/cryptplug/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64"
 IUSE=""
 
 DEPEND="=app-crypt/gpgme-0.3.14"

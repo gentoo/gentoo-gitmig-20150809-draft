@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/sign
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.6 2004/09/07 22:51:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.7 2004/10/05 11:46:56 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> sign-1.0.7.ebuild:
+  Masked sign-1.0.7.ebuild stable for ppc
 
   08 Sep 2004; Sven Wegener <swegener@gentoo.org> -sign-1.0.5.ebuild,
   -sign-1.0.6.ebuild, sign-1.0.7.ebuild:
