@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.977 2005/03/01 20:54:33 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.978 2005/03/01 21:22:01 ferdy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -532,6 +532,7 @@ net-libs/openh323:noaudio - Disable audio codecs
 net-libs/openh323:novideo - Disable video codecs
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
 net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
+net-mail/cyrus-imapd:unsupported_8bit - Enable 8bit not supported patch
 net-mail/dovecot:nopop3d - Do not build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/hotwayd:smtp - Build SMTP proxy (hotsmtpd)
