@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.1.ebuild,v 1.1 2002/12/18 16:01:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.1.ebuild,v 1.2 2002/12/18 16:03:27 foser Exp $
 
+IUSE=""
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -34,7 +35,6 @@ RDEPEND="=gnome-base/libglade-0*
 	x11-libs/libzvt
 	 >=sys-libs/db-3.2.3
 	 dev-util/indent"
-
 
 src_compile() {
         
