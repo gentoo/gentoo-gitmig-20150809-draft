@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/cddb-py
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cddb-py/ChangeLog,v 1.1 2003/04/19 01:07:15 blauwers Exp $
+
+*cddb-py-1.3 (19 APR 2003)
+
+  19 APR 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Initial import per Bug #12949
