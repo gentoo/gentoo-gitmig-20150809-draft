@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.312 2005/02/03 00:51:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.313 2005/02/03 08:58:30 spyderous Exp $
+
+*xorg-x11-6.8.1.904 (03 Feb 2005)
+
+  03 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.1.904.ebuild:
+  6.8.2 RC4. Hopefully the last one. (#79497) Fixes duplicate cfb* symbols on
+  `X -configure` and xorgcfg. (#79033, fd.o #2000) Add BIOSHotkeys option to
+  radeon driver, which allows people to enable hotkeys that the driver
+  disables by default -- from CVS HEAD.
 
   02 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.903.ebuild:
