@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.25 2004/10/18 16:22:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.26 2004/10/22 23:33:52 liquidx Exp $
+
+  23 Oct 2004; Alastair Tse <liquidx@gentoo.org> evolution-2.0.2.ebuild:
+  bumped nss/nspr deps so that people get the version that puts library files
+  in /usr/lib/{nss,nspr}. (#68267)
 
   18 Oct 2004; Alastair Tse <liquidx@gentoo.org> evolution-2.0.1.ebuild,
   evolution-2.0.2.ebuild:

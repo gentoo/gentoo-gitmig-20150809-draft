@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.3 2004/10/18 16:22:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.4 2004/10/22 23:33:52 liquidx Exp $
 
 inherit eutils virtualx gnome2 flag-o-matic alternatives
 
@@ -35,8 +35,8 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.2.3
 	spell? ( >=app-text/gnome-spell-1.0.5 )
 	crypt? ( >=app-crypt/gnupg-1.2.2 )
 	ssl? ( mozilla? ( net-www/mozilla )
-		!mozilla? ( >=dev-libs/nspr-4.3
-			>=dev-libs/nss-3.8 ) )
+		!mozilla? ( >=dev-libs/nspr-4.4.1
+			>=dev-libs/nss-3.9.2 ) )
 	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( virtual/krb5 )"
 
@@ -99,16 +99,20 @@ src_compile() {
 	if use ssl ; then
 		if  use mozilla ; then
 			NSS_LIB=/usr/lib/mozilla
-			NSS_INC=/usr/lib/mozilla/include
+			NSPR_LIB=/usr/lib/mozilla
+			NSS_INC=/usr/lib/mozilla/include/nss
+			NSPR_INC=/usr/lib/mozilla/include/nspr
 		else
-			NSS_LIB=/usr/lib
-			NSS_INC=/usr/include
+			NSS_LIB=/usr/lib/nss
+			NSPR_LIB=/usr/lib/nspr
+			NSS_INC=/usr/include/nss
+			NSPR_INC=/usr/include/nspr
 		fi
 
 		myconf="${myconf} --enable-nss=yes \
-			--with-nspr-includes=${NSS_INC}/nspr \
-			--with-nspr-libs=${NSS_LIB} \
-			--with-nss-includes=${NSS_INC}/nss \
+			--with-nspr-includes=${NSPR_INC} \
+			--with-nspr-libs=${NSPR_LIB} \
+			--with-nss-includes=${NSS_INC} \
 			--with-nss-libs=${NSS_LIB}"
 	else
 		myconf="${myconf} --without-nspr-libs --without-nspr-includes \
