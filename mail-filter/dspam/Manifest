@@ -7,6 +7,7 @@ MD5 131ec22d19be622c4c86cc770e92064d dspam-3.3.8.ebuild 15592
 MD5 20edea3ad0550b84c620b0f70ea32411 dspam-3.4_beta1.ebuild 15468
 MD5 8be11ce1e8a5c7ea096a504c1079ccad dspam-3.4_beta2.ebuild 15468
 MD5 b3cdda2355a6fdf587d875cdd8428004 dspam-3.4_beta3.ebuild 15463
+MD5 4e8da712aa0aca42646722f085478d3a dspam-3.4_rc1.ebuild 15456
 MD5 dbfbe5a3bbe3347938107f5f5bd2197e metadata.xml 308
 MD5 c12a54112c6fec3530a7b1a368d04ac8 files/README.postfix 309
 MD5 e0469b961385fda4305602dc2519d319 files/README.qmail 2317
@@ -16,6 +17,7 @@ MD5 bb0ac428fee5f2182499acc9752d71c4 files/digest-dspam-3.3.11 130
 MD5 99c7c9bf108d74d87d9d582417f14d49 files/digest-dspam-3.4_beta1 134
 MD5 000f6b9bd7ca6e8e38c789d920efaeb0 files/digest-dspam-3.4_beta2 134
 MD5 f757c7d778e98f9d2e2e4ed3bd116bdd files/digest-dspam-3.4_beta3 134
+MD5 34831f8f3f1c5f62047f924bb0e1ad73 files/digest-dspam-3.4_rc1 131
 MD5 9a2fda6789f0db17b6a32ca84e9e3884 files/dspam.cron 2501
 MD5 2163ca41de383f09f4d754e2d35cb158 files/logrotate.dspam 156
 MD5 ea56d34fd80be48f9b308655b5620c2f files/digest-dspam-3.2.4 63
