@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.3 2004/04/27 14:30:46 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.4 2004/04/28 16:36:07 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -308,6 +308,8 @@ src_unpack() {
 #		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
 		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
 
+		#use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
+
 		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 		then
 			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
@@ -352,10 +354,10 @@ src_unpack() {
 
 	release_version="${release_version}, pie-${PIE_VER}"
 
-	if [ -n "`use hardened`" ]
+	if [ -n "`use hardened`" -a "${ARCH}" != "sparc" ]
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP -fPIC|' \
+		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP|' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
 		# rebrand to make bug reports easier
@@ -430,11 +432,25 @@ src_compile() {
 		myconf="${myconf} --disable-multilib"
 	fi
 
-	# Fix linking problem with c++ apps which where linkedi
+	# Fix linking problem with c++ apps which where linked
 	# agains a 3.2.2 libgcc
 	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
 
 	use hardened && append-flags -fPIC
+
+	# --with-gnu-ld needed for cross-compiling
+	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
+	# for statically linked apps but not dynamic
+	# so use setjmp/longjmp exceptions by default
+	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
+
+	if ! use uclibc
+	then
+		# it's getting close to a time where we are going to need USE=glibc, uclibc, bsdlibc -solar
+		myconf="${myconf} --disable-libunwind-exceptions --enable-__cxa_atexit --enable-clocale=generic"
+	else
+		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions"
+	fi
 
 	# In general gcc does not like optimization, and add -O2 where
 	export CFLAGS="$(echo "${CFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"
@@ -465,8 +481,6 @@ src_compile() {
 		--enable-long-long \
 		--disable-checking \
 		--enable-cstdio=stdio \
-		--enable-clocale=generic \
-		--enable-__cxa_atexit \
 		--enable-version-specific-runtime-libs \
 		--with-gxx-include-dir=${STDCXX_INCDIR} \
 		--with-local-prefix=${LOC}/local \

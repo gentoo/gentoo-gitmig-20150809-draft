@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.225 2004/04/27 18:24:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.226 2004/04/28 16:36:06 solar Exp $
+
+  28 Apr 2004; <solar@gentoo.org> gcc-3.3.3-r3.ebuild:
+  More updates for uClibc, cross compiling fixes and addition of
+  --disable-libunwind-exceptions for use with glibc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gcc-3.0.4-r6.ebuild:
   Add flag-o-matic for bug 49179
