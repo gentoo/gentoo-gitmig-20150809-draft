@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.11 2003/04/26 15:11:57 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.12 2003/05/19 20:30:07 g2boojum Exp $
+
+  19 May 2003; Grant Goodyear <g2boojum@gentoo.org> doxygen-1.3.ebuild:
+  Sed-fu to make configure work w/ install from either coreutils or fileutils
 
 *doxygen-1.3 (15 Apr 2003)
 
