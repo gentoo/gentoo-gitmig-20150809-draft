@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.19 2004/02/26 18:56:23 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.20 2004/03/02 18:07:37 iggy Exp $
 
 IUSE="nls pic build nptl"
 
@@ -55,7 +55,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	hppa? ( mirror://gentoo/${P}-hppa-patches-p1.tar.bz2 )"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 sparc amd64 hppa alpha ppc"
+KEYWORDS="x86 sparc amd64 hppa alpha ppc s390"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
