@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.643 2004/09/26 18:30:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.644 2004/09/27 00:11:40 fafhrd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -262,6 +262,7 @@ gnustep-apps/gworkspace:imagekits - Enable support for ImageKits Bundle (mainly 
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
 gnustep-base/gnustep-gui:gsnd - Enable GNUstep sound server
+gnustep-base/gnustep-gui:camaelon - Enable GNUstep Camaelon theme engine support
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
