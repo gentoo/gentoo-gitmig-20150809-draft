@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.1.ebuild,v 1.1 2004/08/02 22:07:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.1.ebuild,v 1.2 2004/08/04 03:31:24 dholm Exp $
 
 IUSE="xmms"
 
@@ -15,7 +15,7 @@ SRC_URI="http://trikuare.cx/code/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #-amd64: 1.5.1 - Floating point exception when using xmms plugin
-KEYWORDS="~x86 -amd64"
+KEYWORDS="~x86 -amd64 ~ppc"
 
 DEPEND="xmms? ( media-sound/xmms )"
 
