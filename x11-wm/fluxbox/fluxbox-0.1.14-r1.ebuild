@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.2 2003/02/13 17:48:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.3 2003/03/06 13:54:47 weeve Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://fluxbox.sf.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc sparc "
 
 mydoc="ChangeLog COPYING NEWS"
 myconf="--enable-xinerama"
