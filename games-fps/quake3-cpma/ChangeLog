@@ -1,4 +1,4 @@
-# ChangeLog for app-games/quake3-cpma
+# ChangeLog for games-fps/quake3-cpma
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author:  Alexander Gretencord <arutha@gmx.de>
 
@@ -30,7 +30,7 @@
   17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> quake3-cpma-0.99x-r2.ebuild :
   Added KEYWORDS.
 # Maintaniner: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.2 2003/09/10 16:07:03 vapier Exp $
 
 *quake3-cpma (25 Jun 2002)
 
