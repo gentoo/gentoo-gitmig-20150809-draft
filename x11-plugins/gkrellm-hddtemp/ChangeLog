@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-hddtemp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.8 2004/01/04 18:36:47 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.9 2004/01/31 22:56:41 mholzer Exp $
+
+  31 Jan 2004; Martin Holzer <mholzer@gentoo.org>
+  gkrellm-hddtemp-0.2_beta.ebuild:
+  correcting einfo. closes 37234
 
   10 Nov 2003; Martin Holzer <mholzer@gentoo.org>
   gkrellm-hddtemp-0.2_beta.ebuild:

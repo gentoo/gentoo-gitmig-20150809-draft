@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.5 2003/11/10 19:27:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.6 2004/01/31 22:56:41 mholzer Exp $
 
 MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${MY_P}
@@ -54,5 +54,5 @@ pkg_postinst() {
 	einfo "hddtemp has to be suid root to allow regular users to run this plugin."
 	einfo "To make it suid root, run"
 	einfo ""
-	einfo "\tchmod u+s /usr/bin/hddtemp"
+	einfo "\tchmod u+s /usr/sbin/hddtemp"
 }
