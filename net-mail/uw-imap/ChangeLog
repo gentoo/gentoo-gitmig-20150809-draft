@@ -1,6 +1,16 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.1 2002/02/23 18:06:44 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.2 2002/04/15 20:13:40 jhhudso Exp $
+
+*uw-imap-2001a-r1 (15 Apr 2002)
+
+  15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> :
+  
+  Made uw-imap install more headers, so that php with imap
+  support will properly compile. Bug #1759
+  Removed virtual/imapUW PROVIDE because php will only DEPEND on
+  uw-imap specifically. pine will also no longer PROVIDE virtual/imapUW
+  now.
 
 *uw-imap-2001a (23 Feb. 2002)
 
