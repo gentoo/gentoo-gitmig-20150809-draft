@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.15 2003/11/16 17:02:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.11 2003/11/16 17:02:51 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -34,9 +34,7 @@ strip-flags
 export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
 
-NPTL_VER="0.39"
-
-BRANCH_UPDATE="20030517-1"
+NPTL_VER="0.28"
 
 # Minimum kernel version for --enable-kernel
 export MIN_KV="2.4.1"
@@ -52,19 +50,19 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-${MY_PV}.tar.bz2
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-linuxthreads-${MY_PV}.tar.bz2
-	nptl? ( http://people.redhat.com/drepper/nptl/nptl-${NPTL_VER}.tar.bz2 )
-	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+	nptl? ( http://people.redhat.com/drepper/nptl/nptl-${NPTL_VER}.tar.bz2 )"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
-#amd64-only for now (intentional)
-KEYWORDS="amd64"
-# Is 99% compadible, just some .a's bork
+
+# failing hppa: ../linuxthreads/sysdeps/pthread/errno-loc.c:39:
+# `pthread_descr' undeclared (first use in this function)
+KEYWORDS="x86 ppc sparc alpha -hppa ~arm mips ia64"
 SLOT="2.2"
 LICENSE="LGPL-2"
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
-DEPEND=">=sys-devel/gcc-3.3
-	nptl? ( >=sys-devel/gcc-3.3 )
+DEPEND=">=sys-devel/gcc-3.2
+	nptl? ( >=sys-devel/gcc-3.2.2-r1 )
 	mips? >=sys-devel/binutils-2.13.90.0.16 : >=sys-devel/binutils-2.13.90.0.18
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
@@ -113,7 +111,7 @@ get_KV() {
 # than $1.  We basically just try a few default locations.  The
 # version need to be that which KV_to_int() returns ...
 get_KHV() {
-	local headers=
+	local headers=""
 
 	[ -z "$1" ] && return 1
 
@@ -162,32 +160,16 @@ get_KHV() {
 use_nptl() {
 	# Enable NPTL support if:
 	# - We have 'nptl' in USE
-	# - We have linux-2.5 or later kernel (should prob check for 2.4.20 ...)
-	if [ -n "`use nptl`" -a "`get_KV`" -ge "`KV_to_int ${MIN_NPTL_KV}`"  ]
+	# - We have 'x86' in USE
+	# - We have linux-2.4 or later kernel (should prob check for 2.4.20 ...)
+	# - We have a CHOST of "i686-pc-linux-gnu"
+	if [ -n "`use nptl`" -a "`use x86`" -a \
+	     "`get_KV`" -ge "`KV_to_int ${MIN_NPTL_KV}`" -a "${CHOST/-*}" = "i686" ]
 	then
-		# Enable NPTL support if:
-		# - We have 'x86' in USE and:
-		#   - a CHOST of "i486-pc-linux-gnu"
-		#   - a CHOST of "i586-pc-linux-gnu"
-		#   - a CHOST of "i686-pc-linux-gnu"
-		# - Or we have 'ppc' in USE
-		# - Or we have 'mips' in USE
-		if [ "`use x86`" ]
-		then
-			if [ "${CHOST/-*}" = "i486" -o \
-			     "${CHOST/-*}" = "i586" -o \
-				 "${CHOST/-*}" = "i686" ]
-			then
-				return 0
-			fi
-		fi
-		if [ "`use ppc`" -o "`use mips`" ]
-		then
-			return 0
-		fi
+		return 0
+	else
+		return 1
 	fi
-
-	return 1
 }
 
 pkg_setup() {
@@ -200,10 +182,10 @@ pkg_setup() {
 		die "GCC too old"
 	fi
 
-	echo
-
 	if use_nptl
 	then
+		echo
+
 		# The use_nptl should have already taken care of kernel version,
 		# arch and CHOST, so now just check if we can find suitable kernel
 		# source tree or headers ....
@@ -219,38 +201,9 @@ pkg_setup() {
 		else
 			echo "yes"
 		fi
-	fi
 
-	if [ "$(KV_to_int $(uname -r))" -gt "`KV_to_int '2.5.68'`" ]
-	then
-		local KERNEL_HEADERS="$(get_KHV "`KV_to_int ${MIN_NPTL_KV}`")"
-
-		einfon "Checking kernel headers for broken sysctl.h ... "
-		if ! gcc -I"${KERNEL_HEADERS}" \
-		         -c ${FILESDIR}/test-sysctl_h.c -o ${T}/test1.o &> /dev/null
-		then
-			echo "yes"
-			echo
-			eerror "Your version of:"
-			echo
-			eerror "  ${KERNEL_HEADERS}/linux/sysctl.h"
-			echo
-			eerror "is broken (from a user space perspective).  Please apply"
-			eerror "the following patch:"
-			echo
-			eerror "*******************************************************"
-			cat ${FILESDIR}/fix-sysctl_h.patch
-			eerror "*******************************************************"
-			die "Broken linux/sysctl.h header included in kernel sources!"
-		else
-			echo "no"
-		fi
-	fi
-
-	if use_nptl
-	then
 		einfon "Checking gcc for __thread support ... "
-		if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null
+		if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test.o &> /dev/null
 		then
 			echo "no"
 			echo
@@ -267,6 +220,7 @@ pkg_setup() {
 		ewarn "and could break your system!  Press ^C now if you do not know"
 		ewarn "what you are doing, and remove \"nptl\" from your USE ..."
 		echo
+		ewarn "As a final note ... it does NOT work with NVidia GLX!!"
 		sleep 5
 
 	elif use nptl &> /dev/null
@@ -290,23 +244,8 @@ src_unpack() {
 	if use_nptl
 	then
 		unpack nptl-${NPTL_VER}.tar.bz2
-
-	elif [ -z "${BRANCH_UPDATE}" ]
-	then
-		# The branch update have this already included ...
-		unpack glibc-linuxthreads-${MY_PV}.tar.bz2
-	fi
-
-	if [ -n "${BRANCH_UPDATE}" ]
-	then
-		epatch ${DISTDIR}/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2
-	fi
-
-	if use_nptl
-	then
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-nptl-fixes.patch
 	else
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-linuxthreads-fixes.patch
+		unpack glibc-linuxthreads-${MY_PV}.tar.bz2
 	fi
 
 	# To circumvent problems with propolice __guard and
@@ -315,7 +254,7 @@ src_unpack() {
 	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" ]
 	then
-		cd ${S}; epatch ${FILESDIR}/${PV}/${P}-propolice-guard-functions-v2.patch
+		cd ${S}; epatch ${FILESDIR}/${PV}/${P}-propolice-guard-functions.patch
 	fi
 
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
@@ -350,13 +289,41 @@ src_unpack() {
 	# <azarah@gentoo.org> (7 Nov 2002).
 	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-stack_end-compat.patch
 
+	# Fix calculation problems in allocate_static_tls that caused a TLS
+	# enabled app that loads libGL.so to segfault.  Thanks to Gareth Hughes
+	# from NVidia for pointing me in the right direction.  This patch is
+	# from glibc CVS.
+	#
+	# <azarah@gentoo.org> (6 Apr 2003).
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-dl-reloc-calc-fix.patch
+
+	# Fix compilation with gcc-3.3
+	#
+	#   http://sources.redhat.com/ml/libc-alpha/2003-03/msg00052.html
+	#
+	# <azarah@gentoo.org> (18 May 2003).
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-gcc33-sscanf.patch
+
 	# The mathinline.h header omits the middle term of a ?: expression.  This
 	# is a gcc extension, but since the ISO standard forbids it, it's a
 	# GLIBC bug (bug #27142).  See also:
 	#
 	#   http://bugs.gentoo.org/show_bug.cgi?id=27142
 	#
-#	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-fix-omitted-operand-in-mathinline_h.patch
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-fix-omitted-operand-in-mathinline_h.patch
+
+	# A bug in the getgrouplist function can cause a buffer overflow if
+	# the size of the group list is too small to hold all the user's groups.
+	#
+	#  https://rhn.redhat.com/errata/RHSA-2003-325.html
+	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-getgrouplist.patch
+
+	# Fix a memory leak in ftw_dir
+	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-ftw.patch
+
+	# We do not want name_insert() in iconvconfig.c to be defined inside
+	# write_output() as it causes issues with PaX.
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-iconvconfig-name_insert.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.
@@ -373,25 +340,11 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
 	fi
 
-	# Fix missing include of unistd.h in nptl/unwind.c
-	# <azarah@gentoo.org> (17 May 2003)
-	if use_nptl
-	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-nptl-fix-include.patch
-	fi
+	# Fix compatability with compaq compilers by ifdef'ing out some
+	# 2.3.2 additions.
+	# <taviso@gentoo.org> (14 Jun 2003).
+	use alpha && epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
 
-	if [ "${ARCH}" = "alpha" ]
-	then
-		# Fix compatability with compaq compilers by ifdef'ing out some
-		# 2.3.2 additions.
-		# <taviso@gentoo.org> (14 Jun 2003).
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
-	fi
-
-	if [ "${ARCH}" = "amd64" ]
-	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-amd64-nomultilib.patch
-	fi
 }
 
 setup_flags() {
@@ -399,16 +352,14 @@ setup_flags() {
 	use ppc || append-flags "-freorder-blocks"
 
 	# Sparc/Sparc64 support
-	if [ -n "`use sparc`" ]
-	then
+	if [ `use sparc` ]; then
 
 		# Both sparc and sparc64 can use -fcall-used-g6.  -g7 is bad, though.
 		replace-flags "-fcall-used-g7" ""
 		append-flags "-fcall-used-g6"
 
 		# Sparc64 Only support...
-		if [ "${PROFILE_ARCH}" = "sparc64" ]
-		then
+		if [ "${PROFILE_ARCH}" = "sparc64" ]; then
 
 			# Get rid of -mcpu options, the CHOST will fix this up
 			replace-flags "-mcpu=ultrasparc" ""
@@ -425,8 +376,8 @@ setup_flags() {
 }
 
 src_compile() {
-	local myconf=
-	local myconf_nptl=
+	local myconf=""
+	local myconf_nptl=""
 
 	setup_flags
 
@@ -467,6 +418,8 @@ src_compile() {
 			myconf="${myconf} --enable-kernel=2.2.5"
 		fi
 	fi
+
+	has_version "sys-devel/hardened-gcc" && CC="${CC} -yet_exec"
 
 	einfo "Configuring GLIBC..."
 	rm -rf ${S}/buildhere
@@ -588,7 +541,6 @@ EOF
 
 	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
-
 }
 
 pkg_postinst() {
