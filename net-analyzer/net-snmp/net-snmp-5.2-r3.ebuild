@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.4 2005/02/21 10:44:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.5 2005/02/27 12:50:06 brix Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -19,8 +19,8 @@ DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	lm_sensors? (
-		x86?   ( sys-apps/lm-sensors )
-		amd64? ( sys-apps/lm-sensors )
+		x86?   ( sys-apps/lm_sensors )
+		amd64? ( sys-apps/lm_sensors )
 	)"
 RDEPEND="${DEPEND}
 	dev-perl/TermReadKey
@@ -40,7 +40,7 @@ src_unpack() {
 			epatch ${FILESDIR}/${PN}-lm_sensors.patch
 		else
 			eerror "Unfortunatly you are trying to enable lm_sensors support for an unsupported arch."
-			eerror "please check the availability of sys-apps/lm-sensors - if it is available on"
+			eerror "please check the availability of sys-apps/lm_sensors - if it is available on"
 			eerror "your arch, please file a bug about this."
 			die "lm_sensors patch error: unsupported arch."
 		fi
