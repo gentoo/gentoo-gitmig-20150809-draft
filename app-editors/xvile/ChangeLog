@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/xvile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.1 2002/02/01 21:53:01 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.2 2002/12/22 18:34:03 mcummings Exp $
+
+*xvile-9.3h (22 Dec 2002)
+
+  22 Dec 2002; Michael Cummings <mcummings@gentoo.org> xvile-9.3h.ebuild:
+
+  Many thanks go to jbooth (jbooth@uiuc.edu) in bug 12469 for this
+  ebuild. This version of vile will work with perl 5.8, where the
+  previous versions would not. Will unmask for x86 when perl 5.8 is
+  unmasked.
 
 *xvile-9.2r (1 Feb 2002)
 
