@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.13.ebuild,v 1.8 2004/02/29 10:48:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.13.ebuild,v 1.9 2004/03/21 06:34:01 mr_bones_ Exp $
 
 inherit games
 
@@ -14,7 +14,13 @@ KEYWORDS="x86 ppc hppa amd64"
 IUSE="nls geoip gtk2"
 
 DEPEND=">=games-util/qstat-25
-	gtk2? ( =x11-libs/gtk+-2* ) : ( =x11-libs/gtk+-1* media-libs/gdk-pixbuf )
+	gtk? (
+		gtk2? ( =x11-libs/gtk+-2* )
+		!gtk2? (
+			=x11-libs/gtk+-1*
+			media-libs/gdk-pixbuf
+		)
+	)
 	geoip? ( dev-libs/geoip )
 	sys-devel/libtool
 	app-arch/bzip2"
