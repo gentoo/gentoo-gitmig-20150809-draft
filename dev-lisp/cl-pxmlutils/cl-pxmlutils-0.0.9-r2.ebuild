@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pxmlutils/cl-pxmlutils-0.0.9-r2.ebuild,v 1.3 2004/06/24 23:50:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pxmlutils/cl-pxmlutils-0.0.9-r2.ebuild,v 1.4 2005/02/03 03:32:23 mkennedy Exp $
 
 inherit common-lisp eutils
 
-DESCRIPTION="Portable version of Franz's xmlutils.  Includes XML and HTML parsers."
+DESCRIPTION="Portable version of Franz's xmlutils.	Includes XML and HTML parsers."
 HOMEPAGE="http://www.common-lisp.net/project/bese/pxmlutils.html"
 SRC_URI="ftp://ftp.common-lisp.net/pub/project/bese/pxmlutils/pxmlutils_${PV}.tar.gz"
 
@@ -23,7 +23,10 @@ CLPACKAGE=pxmlutils
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-gentoo.patch
+	epatch ${FILESDIR}/${PV}-gentoo.patch || die
+}
+src_compile() {
+	:
 }
 
 src_install() {
