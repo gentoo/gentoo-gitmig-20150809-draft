@@ -32,7 +32,7 @@ src_compile() {
 		--enable-m-guard --host="${CHOST}" \
 		${myconf} || die
 
-	emake || die
+	emake || make || die
 }
 
 src_install () {
