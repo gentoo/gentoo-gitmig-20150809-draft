@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.29 2003/11/04 14:12:22 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.30 2003/11/04 18:55:52 mr_bones_ Exp $
 
 IUSE="tcltk java"
 
@@ -16,7 +16,7 @@ DEPEND="tcltk? ( dev-lang/tcl )
 	java? ( virtual/jdk )"
 
 src_compile() {
-        addwrite /proc/self/maps
+	addwrite /proc/self/maps
 
 	local myconf
 
