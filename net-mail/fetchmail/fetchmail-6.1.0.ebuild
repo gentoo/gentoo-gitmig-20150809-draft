@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.1.0.ebuild,v 1.4 2002/10/08 15:44:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.1.0.ebuild,v 1.5 2002/10/10 11:21:55 raker Exp $
 
 IUSE="ssl nls"
 
@@ -38,9 +38,6 @@ src_compile() {
 		--enable-NTLM \
 		--enable-SDPS \
 		${myconf} || die "Configuration failed."
-
-	use ssl && \
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die "patch failed"
 
 	emake || die "Compilation failed."
 
