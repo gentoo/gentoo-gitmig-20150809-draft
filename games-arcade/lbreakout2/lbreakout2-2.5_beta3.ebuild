@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5_beta3.ebuild,v 1.3 2004/03/19 09:14:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5_beta3.ebuild,v 1.4 2004/03/19 09:23:15 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -33,6 +33,7 @@ src_unpack() {
 src_compile() {
 	filter-flags -O?
 	egamesconf \
+		--with-highscore-path="${GAMES_STATEDIR}" \
 		--with-doc-path="/usr/share/doc/${PF}" \
 		--datadir="${GAMES_DATADIR_BASE}" \
 		|| die
@@ -40,7 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	dodir "${GAMES_STATEDIR}"
 	egamesinstall \
 		inst_dir="${D}/${GAMES_DATADIR}/${PN}" \
 		hi_dir="${D}/${GAMES_STATEDIR}/" \
