@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.18 2004/10/20 06:49:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.19 2004/10/20 12:21:33 lu_zero Exp $
+
+  20 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.14.1-r1.ebuild:
+  Make sure the .desktop file got installed
 
 *ati-drivers-extra-3.14.1-r1 (20 Oct 2004)
 

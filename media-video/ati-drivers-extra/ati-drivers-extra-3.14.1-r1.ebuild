@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.14.1-r1.ebuild,v 1.1 2004/10/20 06:49:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.14.1-r1.ebuild,v 1.2 2004/10/20 12:21:33 lu_zero Exp $
 
 IUSE="qt"
 
@@ -53,7 +53,6 @@ src_unpack() {
 
 	cd ${WORKDIR}/extra/fglrx_panel
 	epatch ${FILESDIR}/${P}-ui-improvements.patch
-	cp ${FILESDIR}/fireglcontrol.desktop ${WORKDIR}/extra/fglrx_panel
 }
 
 src_compile() {
@@ -84,7 +83,9 @@ src_install() {
 	then
 		doexe ${WORKDIR}/extra/fglrx_panel/fireglcontrol
 
-		# Fix the paths in these
+		insinto /usr/share/applications/
+		doins ${FILESDIR}/fireglcontrol.desktop
+
 		insinto /usr/share/pixmaps/
 		doins ${WORKDIR}/extra/fglrx_panel/ati.xpm
 	else
