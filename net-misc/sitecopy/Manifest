@@ -1,0 +1,7 @@
+MD5 00db1d671b9cc9681e014667281147eb ChangeLog 1333
+MD5 187f73bae3eeae7871f2bb88fa2b53ab sitecopy-0.10.12-r1.ebuild 996
+MD5 d64c12eed3c7abbcdfba85a5486b5bfc sitecopy-0.11.4.ebuild 831
+MD5 c6b5f195933bc9aff491d34053195247 sitecopy-0.12.1.ebuild 1148
+MD5 09b3e7444248285b787fa3635d41aedc files/digest-sitecopy-0.10.12-r1 68
+MD5 33ca043ac941860223413b8d1ddc5d1f files/digest-sitecopy-0.11.4 67
+MD5 3ee0433186f6f3224dff93ab6818a119 files/digest-sitecopy-0.12.1 67

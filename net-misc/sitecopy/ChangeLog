@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.9 2003/02/12 08:32:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.10 2003/04/28 18:37:19 mholzer Exp $
+
+*sitecopy-0.12.1 (28 Apr 2003)
+
+  28 Apr 2003; Martin Holzer <mholzer@gentoo.org> sitecopy-0.12.1.ebuild:
+  Version bumped. Submitted by Hans Meine <gentoobug@chiefrocker.net> in #20107.
 
   15 Dec 2002; Maik Schreiber <blizzy@gentoo.org> sitecopy-0.10.12-r1.ebuild:
   Fixed sandbox violation (bug #10107, thanks to Bob Paddock
