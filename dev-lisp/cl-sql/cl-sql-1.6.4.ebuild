@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.6.4.ebuild,v 1.1 2003/06/10 04:53:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.6.4.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
 
 inherit common-lisp
 
@@ -38,23 +38,23 @@ src_install() {
 	insinto $clsrc/clsql ; doins clsql.asd
 	dosym $clsrc/clsql/clsql.asd $clsys/clsql.asd
 
-	insinto $clsrc/clsql-base/base ; doins base/*.lisp 
+	insinto $clsrc/clsql-base/base ; doins base/*.lisp
 	insinto $clsrc/clsql-base ; doins clsql-base.asd
 	dosym $clsrc/clsql-base/clsql-base.asd $clsys/clsql-base.asd
 
 	exeinto /usr/lib/clsql/
 	doexe uffi/clsql-uffi.so
 
- 	insinto $clsrc/clsql-uffi/uffi ; doins uffi/*.lisp 
+ 	insinto $clsrc/clsql-uffi/uffi ; doins uffi/*.lisp
  	insinto $clsrc/clsql-uffi ; doins clsql-uffi.asd
  	dosym $clsrc/clsql-uffi/clsql-uffi.asd $clsys/clsql-uffi.asd
 
-	insinto $clsrc/clsql-postgresql-socket/db-postgresql-socket ; doins db-postgresql-socket/*.lisp 
+	insinto $clsrc/clsql-postgresql-socket/db-postgresql-socket ; doins db-postgresql-socket/*.lisp
 	insinto $clsrc/clsql-postgresql-socket ; doins clsql-postgresql-socket.asd
 	dosym $clsrc/clsql-postgresql-socket/clsql-postgresql-socket.asd $clsys/clsql-postgresql-socket.asd
 
 	if use postgres ; then
-		insinto $clsrc/clsql-postgresql/db-postgresql ; doins db-postgresql/*.lisp 
+		insinto $clsrc/clsql-postgresql/db-postgresql ; doins db-postgresql/*.lisp
 		insinto $clsrc/clsql-postgresql ; doins clsql-postgresql.asd
 		dosym $clsrc/clsql-postgresql/clsql-postgresql.asd $clsys/clsql-postgresql.asd
 	fi

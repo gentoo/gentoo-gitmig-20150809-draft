@@ -1,4 +1,4 @@
 MD5 aef490a21ff8f968f338e225ba8123f4 ChangeLog 331
-MD5 c2c44900f839387a6277cebe18fc3169 cl-inflate-1.1.4.2.1.ebuild 800
-MD5 12bbae57ce2e43c7c4585600acc44926 files/inflate.asd 1239
+MD5 e6810304810bce208ce7a349220a3d23 cl-inflate-1.1.4.2.1.ebuild 799
 MD5 a2edf99d5162f55b35de68f81c3822e8 files/digest-cl-inflate-1.1.4.2.1 75
+MD5 12bbae57ce2e43c7c4585600acc44926 files/inflate.asd 1239

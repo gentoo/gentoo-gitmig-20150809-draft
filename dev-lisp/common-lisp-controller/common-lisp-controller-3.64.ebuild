@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.4 2003/08/23 01:16:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.5 2003/09/06 22:35:54 msterret Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
@@ -31,7 +31,7 @@ src_install() {
 		unregister-common-lisp-source \
 		unregister-common-lisp-implementation
 
-	exeinto /usr/lib/common-lisp-controller 
+	exeinto /usr/lib/common-lisp-controller
 	doexe debug-daemon-problems.sh
 
 	dodir /usr/share/common-lisp/source/common-lisp-controller
@@ -46,7 +46,7 @@ src_install() {
 	dodir /etc/common-lisp
 	touch ${D}/etc/common-lisp/autobuild # autobuild by default
 
-	dodoc *.txt README.* 
+	dodoc *.txt README.*
 	doman man/*.1 man/*.8 man/old/*.1 man/old/*.8
 
 	einfo ">>> Creating /etc/lisp-config.lisp"
@@ -54,10 +54,10 @@ src_install() {
 	cat >${D}/etc/lisp-config.lisp <<EOF
 (in-package :common-lisp-user)
 #+(or cmu scl)
-(setf system:*short-site-name* "Unknown" 
+(setf system:*short-site-name* "Unknown"
       system:*long-site-name* "Unknown")
 #+sbcl
-(setf sb-sys:*short-site-name* "Unknown" 
+(setf sb-sys:*short-site-name* "Unknown"
       sb-sys:*long-site-name* "Unknown")
 EOF
 }
@@ -111,7 +111,7 @@ pkg_config() {
 # 	        bash "$compiler" remove-clc || true
 # 	        echo
 # 	        echo Done rebuilding
-# 	    fi 
+# 	    fi
 # 	   fi
 # 	 done
 #     ;;

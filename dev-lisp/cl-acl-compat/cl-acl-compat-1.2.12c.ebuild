@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.12c.ebuild,v 1.1 2003/06/10 04:53:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.12c.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
 
 inherit common-lisp
 
@@ -22,5 +22,5 @@ src_install() {
 	dodir /usr/share/common-lisp/source/
 	cp -r acl-compat/ ${D}/usr/share/common-lisp/source/
 	common-lisp-install acl-compat/acl-compat.asd
-	common-lisp-system-symlink 
+	common-lisp-system-symlink
 }

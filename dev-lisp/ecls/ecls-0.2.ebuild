@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.9 2003/02/13 10:53:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.10 2003/09/06 22:35:54 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Embeddable Common Lisp 'Spain'"
@@ -35,7 +35,7 @@ src_compile() {
 
 	echo ${mcpu} -- ${march}
 
-	for i in build/{crs,c,gc,tk,.}/Makefile ; do 
+	for i in build/{crs,c,gc,tk,.}/Makefile ; do
 	   cp $i $i.orig ;
 	   cat $i.orig | sed -e "s:-mcpu= 1:-mcpu=${mcpu}:g" | sed -e "s:-march= 1:-march=${march}:g" > $i ;
 	done
@@ -45,7 +45,7 @@ src_compile() {
 
 	touch LGPL
 
-	alias lisp='echo NOT INSTALLED!' 
+	alias lisp='echo NOT INSTALLED!'
 	echo ${CXXFLAGS} ${CFLAGS}
 	make || die
 

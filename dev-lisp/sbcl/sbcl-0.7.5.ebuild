@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.8 2003/08/07 02:09:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.9 2003/09/06 22:35:54 msterret Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -16,21 +16,21 @@ SLOT="0"
 # Requires x86-only binary for bootstrapping
 # Krystof promises ppc binary for 0.7.6
 # Sparc is a lost cause.
-KEYWORDS="x86 -ppc -sparc " 
+KEYWORDS="x86 -ppc -sparc "
 PROVIDE="virtual/commonlisp"
 DEPEND=""
 
 src_unpack() {
 	unpack ${BIN}-x86-linux-binary.tar.bz2
 	mv ${BIN} ${BIN}-binary
-    
+
 	unpack ${P}-source.tar.bz2
 	unpack ${P}-html.tar.bz2
 }
 
 src_compile() {
-	export SBCL_HOME="../${BIN}-binary/output/" 
-	# 2002.07.19 -- karltk: 
+	export SBCL_HOME="../${BIN}-binary/output/"
+	# 2002.07.19 -- karltk:
 	# Marius tells me parallell make is  2-3 years off.
 	export GNUMAKE="make"
 	sh make.sh "../${BIN}-binary/src/runtime/sbcl" || die
@@ -40,7 +40,7 @@ src_install() {
 	doman doc/sbcl.1
 	dobin src/runtime/sbcl
 
-	dodoc BUGS CREDITS NEWS README INSTALL COPYING 
+	dodoc BUGS CREDITS NEWS README INSTALL COPYING
 	dohtml doc/html/*
 
 	LIB=${DESTTREE}/lib/sbcl

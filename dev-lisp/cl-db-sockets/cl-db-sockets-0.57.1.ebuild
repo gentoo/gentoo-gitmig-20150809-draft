@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-db-sockets/cl-db-sockets-0.57.1.ebuild,v 1.3 2003/08/28 17:23:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-db-sockets/cl-db-sockets-0.57.1.ebuild,v 1.4 2003/09/06 22:35:54 msterret Exp $
 
 inherit common-lisp
 
@@ -35,7 +35,7 @@ src_install() {
 		defpackage.lisp doc.lisp foreign-glue.lisp inet.lisp malloc.lisp \
 		misc.lisp name-service.lisp sockets.lisp sockopt.lisp split.lisp \
 		tests.lisp unix.lisp constants-arch.lisp ${FILESDIR}/db-sockets.asd
-	common-lisp-system-symlink 
+	common-lisp-system-symlink
 	dohtml *.html
 	dodoc INSTALL NEWS README* TODO
 }

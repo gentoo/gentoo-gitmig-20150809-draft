@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.1.ebuild,v 1.1 2003/06/10 04:53:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.1.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
 
 inherit common-lisp
 
@@ -35,7 +35,7 @@ src_install() {
 	insinto /usr/share/common-lisp/source/sdl-ffi/ffi
 	doins ffi/uffi.lisp
 	insinto /usr/share/common-lisp/source/sdl-ffi
-	doins sdl-ffi.asd 
+	doins sdl-ffi.asd
 
 	insinto /usr/share/common-lisp/source/sdl-demos/examples/nehe
 	doins examples/nehe/*.lisp
@@ -45,7 +45,7 @@ src_install() {
 	doins sdl-demos.asd
 
 	insinto /usr/share/common-lisp/source/sdl-ffi
-	doins sdl-ffi.asd 
+	doins sdl-ffi.asd
 
 	dodir /usr/share/common-lisp/systems
 

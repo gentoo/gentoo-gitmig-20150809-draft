@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/bigloo-2.5c.ebuild,v 1.1 2003/06/30 23:14:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/bigloo-2.5c.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${PN}${PV}
@@ -18,7 +18,7 @@ src_compile() {
 	local myjava=`java-config --java`
 	local myjavac=`java-config --javac`
 
-	use java && 
+	use java &&
 		myconf="--jvm=force --java=$myjava --javac=$myjavac" \
 		|| myconf="--jvm=no"
 
@@ -36,7 +36,7 @@ src_compile() {
 
 	sed -i "s/JCFLAGS=-O/JCFLAGS=/" Makefile.config || die
 	sed -i "s/\$(BOOTBINDIR)\/afile jas/LD_LIBRARY_PATH=\$(LD_LIBRARY_PATH) \$(BOOTBINDIR)\/afile jas/" \
-		bde/Makefile || die 
+		bde/Makefile || die
 
 	make || die
 }

@@ -1,5 +1,5 @@
 MD5 fb6d9a0163d89ce6827a2ac8f1fe4a9e ChangeLog 321
-MD5 f90afdb0a57b2901ef860e4f396e1c9b cl-pxml-20030325.ebuild 910
+MD5 daa109a2d2957705f835647a946825c0 cl-pxml-20030325.ebuild 909
+MD5 f63cd1b313a37c1b83b1f3683ea80deb files/digest-cl-pxml-20030325 68
 MD5 bbb59dd54bc4d55b47dc59a45bd238a0 files/pxml-gentoo.patch 1535
 MD5 7dca4766f93a466c0406ee95e16cd7e4 files/pxml.asd 166
-MD5 f63cd1b313a37c1b83b1f3683ea80deb files/digest-cl-pxml-20030325 68

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31.ebuild,v 1.1 2003/09/05 03:21:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
 
 IUSE="X threads fastcgi postgres ldap"
 
@@ -58,12 +58,12 @@ src_install() {
 	rm -f ${D}/usr/lib/clisp/base/*
 	(cd ${D}/usr/lib/clisp/base && ln -s ../full/* .)
 	chmod a+x ${D}/usr/lib/clisp/clisp-link
-  
+
 	# install common-lisp-controller profile
-	exeinto /usr/lib/common-lisp/bin 
+	exeinto /usr/lib/common-lisp/bin
 	doexe ${FILESDIR}/clisp.sh
 	insinto /usr/lib/clisp
-	doins ${FILESDIR}/install-clc.lisp 
+	doins ${FILESDIR}/install-clc.lisp
 }
 
 pkg_preinst() {

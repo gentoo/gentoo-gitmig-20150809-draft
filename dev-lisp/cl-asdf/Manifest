@@ -1,5 +1,5 @@
-MD5 6db547999e5a68cba697771d8c4fe538 cl-asdf-1.73b.ebuild 2104
-MD5 182ffa491ed46b7c30ea3e671879861f cl-asdf-1.77.2.ebuild 2113
 MD5 3b46a5ad19cb0e36e2c42cf394f31853 ChangeLog 546
+MD5 295c0a110eb80901e2c61c97d0f8b633 cl-asdf-1.73b.ebuild 2101
+MD5 d5cf3a8f88bf98f8fb5c6e61d67835d1 cl-asdf-1.77.2.ebuild 2107
 MD5 da47e17802d933cda8e74bd9f7351645 files/digest-cl-asdf-1.73b 64
 MD5 391a01fa14100c417cf1a398cb95a879 files/digest-cl-asdf-1.77.2 70

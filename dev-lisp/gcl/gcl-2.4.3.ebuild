@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.6 2003/02/13 10:53:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.7 2003/09/06 22:35:54 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
@@ -20,13 +20,13 @@ src_compile() {
 	cd ${S} ;  echo `pwd`
 	./configure --prefix=/usr || die
 
-	for i in */makefile makedefs makedefc makefile config.status ; do 
+	for i in */makefile makedefs makedefc makefile config.status ; do
 		mv $i $i.orig ;
 		cat $i.orig | \
 			sed -e 's|./configure: emacs: command not found|${prefix}/share/emacs/site-lisp/gcl|g' > $i
 	done
 
-	for i in  makedefs makedefc ; do 
+	for i in  makedefs makedefc ; do
 		mv $i $i.libs.orig ;
 		cat $i.libs.orig | \
 			sed -e 's|/usr/lib/gcc-lib/i686-pc-linux-gnu/3.2/../../../libbfd.a /usr/lib/gcc-lib/i686-pc-linux-gnu/3.2/libiberty.a|-liberty -lbfd|g' > $i
