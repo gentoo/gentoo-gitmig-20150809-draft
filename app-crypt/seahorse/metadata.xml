@@ -2,4 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
+<maintainer>
+	<email>gnome@gentoo.org</email>
+	<description>Maintainers of the stable branch 0.6*</description>
+</maintainer>
+<maintainer>
+	<email>dragonheart@gentoo.org</email>
+	<description>Maintainer of the unstable branch 0.7*. Note this has been introduced out of 
+	couresy. This is an unstable branch so I won't be jumping on every problem that occurs.
+	</description>
+</maintainer>
 </pkgmetadata>
