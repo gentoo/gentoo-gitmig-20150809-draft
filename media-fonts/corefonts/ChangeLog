@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/corefonts
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.1 2003/07/02 21:13:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.2 2003/10/23 00:54:05 agriffis Exp $
+
+  22 Oct 2003; Aron Griffis <agriffis@gentoo.org> corefonts-1.ebuild:
+  Stable on alpha
 
 *corefonts-1 (02 Jul 2003)
 
