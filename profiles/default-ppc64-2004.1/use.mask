@@ -15,6 +15,7 @@ krb4
 mmx
 mplayer
 pda
+prelude
 ruby
 svga
 sse
