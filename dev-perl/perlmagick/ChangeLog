@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.4 2003/04/24 15:30:32 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.5 2003/06/01 02:57:10 mcummings Exp $
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org>
+  perlmagick-5.5.5.3.ebuild, perlmagick-5.5.5.3.ebuild:
+  Removed older version - no longer supported by imagemagick
 
 *perlmagick-5.5.6 (24 Apr 2003)
 
