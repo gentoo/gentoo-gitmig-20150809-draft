@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.90 2004/01/29 19:50:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.91 2004/01/30 20:46:28 eradicator Exp $
+
+*xmms-1.2.8-r4 (30 Jan 2004)
+
+  30 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.8-r4.ebuild:
+  Updated dtd patch to fix multi-select segfault. Removed alsa debug messages to
+  close bug #29794
 
   29 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.9.ebuild:
   removed id3v2 patch and unmasked. The id3v2 patch causes an off-by-one error
