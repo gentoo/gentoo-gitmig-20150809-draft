@@ -1,8 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.4 2002/12/13 17:24:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.5 2002/12/16 18:03:51 azarah Exp $
 
 IUSE="crypt nls"
+
+inherit eutils
 
 CRYPT_PATCH_P="${P}-crypt-gentoo"
 S="${WORKDIR}/${P}"
@@ -11,9 +13,10 @@ SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.bz2
 	crypt? ( http://gentoo.twobit.net/misc/${CRYPT_PATCH_P}.patch.gz )"
 # Patched for 2.11y -- NJ <carpaski@gentoo.org)
 #	crypt? ( http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${CRYPT_PATCH_P}.patch.gz )"
-
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
+
 KEYWORDS="x86 ppc sparc alpha"
+SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
@@ -23,7 +26,6 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND} sys-devel/perl
 	nls? ( sys-devel/gettext )"
 
-SLOT="0"
 
 src_unpack() {
 	unpack ${A}
@@ -32,8 +34,11 @@ src_unpack() {
 
 	if [ ! -z "`use crypt`" ]
 	then
-		gunzip -c ${DISTDIR}/${CRYPT_PATCH_P}.patch.gz | patch -p1 || die "crypto patch"
+		epatch ${DISTDIR}/${CRYPT_PATCH_P}.patch.gz
 	fi
+
+	# Fix rare failures with -j4 or higher
+	epatch ${FILESDIR}/${P}-parallel-make.patch
 
 	cp MCONFIG MCONFIG.orig
 	sed -e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
