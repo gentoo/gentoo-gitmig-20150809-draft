@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.2.ebuild,v 1.5 2003/04/22 23:41:44 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.2.ebuild,v 1.6 2003/05/15 19:59:22 mholzer Exp $
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -15,6 +15,7 @@ PROVIDE="virtual/mta
 	 virtual/imapd"
 
 RDEPEND="virtual/glibc
+	!virtual/mta
 	>=app-crypt/gnupg-1.0.4
 	>=dev-libs/openssl-0.9.6
 	>=dev-tcltk/expect-5.33.0

@@ -20,6 +20,7 @@ PROVIDE="virtual/mta
 	 virtual/imapd"
 
 RDEPEND="virtual/glibc
+	!virtual/mta
 	>=app-crypt/gnupg-1.0.4
 	>=dev-libs/openssl-0.9.6
 	>=dev-tcltk/expect-5.33.0
