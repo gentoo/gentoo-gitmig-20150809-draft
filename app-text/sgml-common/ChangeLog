@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.20 2004/04/15 23:25:01 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.21 2004/04/26 12:12:14 obz Exp $
+
+  26 Apr 2004; Mike Gardiner <obz@gentoo.org> sgml-common-0.6.3-r3.ebuild,
+  sgml-common-0.6.3-r4.ebuild:
+  This has been ~x86 for way too long, for no reason. Marked -r4 x86 now. Fixed
+  S= in -r3 for fun
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org>
   sgml-common-0.6.3-r4.ebuild:
