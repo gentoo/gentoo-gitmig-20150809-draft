@@ -1,19 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/sinek/sinek-0.7.ebuild,v 1.2 2002/07/24 04:02:14 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sinek/sinek-0.7.ebuild,v 1.3 2002/07/25 05:40:13 seemant Exp $
 
+S="${WORKDIR}/${P}"
 DESCRIPTION="GTK interface for xine"
 HOMEPAGE="http://sinek.soureforge.net"
-LICENSE="GPL"
+SRC_URI="mirror://sourceforge/sinek/${P}.tar.gz"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/xine-lib-0.9.12
 	>=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
-	nls? ( sys-devel/gettext )
 	guile? ( dev-util/guile )"
 
-SRC_URI="mirror://sourceforge/sinek/${P}.tar.gz"
-S="${WORKDIR}/${P}"
+RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile(){
 	local myconf
@@ -21,26 +24,19 @@ src_compile(){
 	use nls || myconf="${myconf} --disable-nls"
 	use guile || myconf="${myconf} --disable-guile"
 	
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		${myconf} || die
-		
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install(){
-	make \
-		prefix=${D}/usr \
-		install || die
+	einstall || die
 
-        dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README
 	
-	if use gnome
-	then
+	use gnome && ( \
 		insinto /usr/share/pixmaps
 		doins pixmaps/${PN}.xpm
 		insinto /usr/share/gnome/apps/Multimedia
 		doins ${PN}.desktop
-	fi
+	)
 }
