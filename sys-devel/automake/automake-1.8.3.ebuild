@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.3.ebuild,v 1.6 2004/04/02 18:29:53 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.3.ebuild,v 1.7 2004/04/04 10:02:48 gmsoft Exp $
 
 IUSE=""
 
@@ -65,7 +65,7 @@ HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS="amd64 x86 ppc sparc alpha ~mips ~hppa ia64 ~ppc64 ~s390"
+KEYWORDS="amd64 x86 ppc sparc alpha ~mips hppa ia64 ~ppc64 ~s390"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.58"
