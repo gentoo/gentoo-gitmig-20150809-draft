@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.20 2004/07/03 16:10:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.21 2004/08/19 04:56:30 hardave Exp $
+
+  18 Aug 2004; Hardave Riar <hardave@gentoo.org> lzo-1.08-r1.ebuild:
+  Added ~mips keyword.
 
   03 Jul 2004; <solar@gentoo.org> lzo-1.08-r1.ebuild:
   allow user optimizations

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.12 2004/07/03 16:10:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.13 2004/08/19 04:56:30 hardave Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="An extremely fast compression and decompression library"
 HOMEPAGE="http://www.oberhumer.com/opensource/lzo/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.oberhumer.com/opensource/lzo/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64 ppc64 ~mips"
 IUSE=""
 
 DEPEND="x86? ( dev-lang/nasm )"
@@ -25,6 +25,9 @@ src_unpack() {
 }
 
 src_compile() {
+	#Needed on mips and probablly others
+	gnuconfig_update
+
 	econf --enable-shared || die
 	emake || die
 }
