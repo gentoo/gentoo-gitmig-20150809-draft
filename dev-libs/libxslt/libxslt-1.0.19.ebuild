@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.19.ebuild,v 1.7 2002/10/04 05:16:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.19.ebuild,v 1.8 2002/12/01 12:01:39 mholzer Exp $
 
 inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XSLT libraries and tools"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"

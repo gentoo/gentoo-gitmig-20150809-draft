@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.14 2002/11/08 18:11:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.15 2002/12/01 12:01:39 mholzer Exp $
 
 *libxslt-1.0.22 (27 Oct 2002)
 
@@ -13,6 +13,9 @@
 
 *libxslt-1.0.20 (06 Sep 2002)
 
+  29 Nov 2002;Martin Holzer <mholzer@gentoo.org> libxslt-1.0.20.ebuild:
+  Changed download url. 
+
   17 Sep 2002; Spider <spider@gentoo.org> libxslt-1.0.20.ebuild : ppc keyword
   added
 
@@ -24,6 +27,9 @@
   had to patch the python/Makefile to make it adhere to DESTDIR
 
 *libxslt-1.0.19 (07 Jul 2002)
+
+  29 Nov 2002; Martin Holzer <mholzer@gentoo.org> libxslt-1.0.19.ebuild :
+  Changed download url.
 
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
   Added ppc to keywords
