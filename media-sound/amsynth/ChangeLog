@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amsynth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.14 2004/10/31 10:04:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.15 2004/11/23 03:00:51 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  amsynth-1.0.0.ebuild:
+  Added to ~sparc.
 
   31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -amsynth-1.0_rc4.ebuild:

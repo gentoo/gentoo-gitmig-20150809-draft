@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0.0.ebuild,v 1.8 2004/07/04 09:31:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0.0.ebuild,v 1.9 2004/11/23 03:00:51 eradicator Exp $
+
+IUSE="oss alsa jack"
 
 inherit eutils
 
@@ -10,13 +12,10 @@ MY_P=${MY_P/amsynth/amSynth}
 DESCRIPTION="A retro analogue - modelling softsynth"
 HOMEPAGE="http://amsynthe.sourceforge.net/"
 SRC_URI="mirror://sourceforge/amsynthe/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
-
-IUSE="oss alsa jack"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 
 # libsndfile support is actually optional, but IMHO this package should have it
 DEPEND="=dev-cpp/gtkmm-1.2* \
