@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/pike
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.2 2003/09/20 11:17:11 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.3 2003/10/27 12:22:55 scandium Exp $
+
+*pike-7.4.28-r1 (27 Oct 2003)
+
+  27 Oct 2003; Rainer Groesslinger <scandium@gentoo.org>
+  pike-7.4.28-r1.ebuild:
+  new revision with many use flag and configure additions
+  thanks to Fredrik Mellstrom <traal@etek.chalmers.se> for providing
+  the patches which were added with some minor changes
 
 *pike-7.4.28 (20 Sep 2003)
 
