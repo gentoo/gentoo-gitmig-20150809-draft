@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7-r1.ebuild,v 1.4 2004/09/27 15:46:47 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7-r1.ebuild,v 1.5 2004/10/08 14:02:49 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -46,7 +46,7 @@ RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}
 #---------------------------------------------------------------------------
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 #===========================================================================
 src_unpack() {
 	local i
@@ -161,13 +161,17 @@ src_compile() {
 		&& myconf="${myconf} --with-readline" \
 		|| myconf="${myconf} --without-readline"
 	#-----------------------------------------------------------------------
-	if [ "${ARCH}" != "amd64" ]; then
-		use kerberos && use ldap \
-			&& myconf="${myconf} --with-ads" \
-			|| myconf="${myconf} --without-ads"
-	else
-		myconf="${myconf} --without-ads"
-	fi
+	# Removing: bug #64815 states that ads in amd64 is now ok
+	###if [ "${ARCH}" != "amd64" ]; then
+	###	use kerberos && use ldap \
+	###		&& myconf="${myconf} --with-ads" \
+	###		|| myconf="${myconf} --without-ads"
+	###else
+	###	myconf="${myconf} --without-ads"
+	###fi
+	use kerberos && use ldap \
+		&& myconf="${myconf} --with-ads" \
+		|| myconf="${myconf} --without-ads"
 	#-----------------------------------------------------------------------
 	append-ldflags -L/usr/$(get_libdir) # lib64 location
 	append-ldflags -Wl,-z,now # lib preload
@@ -352,6 +356,9 @@ pkg_postinst() {
 	ewarn "         3.0.7: param: 'winbind enable local accounts' is now"
 	ewarn "                       disabled by default"
 	ewarn ""
+	einfo "If you experience client locks in file transfers _only_, try the parameter"
+	einfo "         use sendfile = no (man smb.conf(5), man sendfile(2))"
+	einfo ""
 	if use ldap; then
 		ewarn "If you are upgrading from prior to 3.0.2, and you are using LDAP"
 		ewarn "    for Samba authentication, you must check the sambaPwdLastSet"
