@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/gnu-classpath
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.1 2004/03/07 02:05:02 zx Exp $
+
+*gnu-classpath-0.06 (09 Mar 2004)
+
+  09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> gnu-classpath-0.06.ebuild,
+  metadata.xml:
+  Initial Import. Closes #43926
+
