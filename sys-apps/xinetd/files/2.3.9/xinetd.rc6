@@ -1,0 +1,41 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/2.3.9/xinetd.rc6,v 1.1 2002/10/24 15:03:54 aliz Exp $
+
+opts="start stop reload restart dump check"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting xinetd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/xinetd \
+		-- -pidfile /var/run/xinetd.pid ${XINETD_OPTS}
+	eend $? 
+}
+
+stop() {
+	ebegin "Stopping xinetd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/xinetd.pid
+	eend $?
+}
+
+reload(){
+	ebegin "Reloading configuration"
+	killall -HUP xinetd &>/dev/null
+	eend $?
+}
+
+dump(){
+	ebegin "Dumping configuration"
+	killall -USR1 xinetd &>/dev/null
+	eend $?
+}
+
+check(){
+	ebegin "Performing Consistency Check"
+	/bin/kill -s IOT xinetd &>/dev/null
+	eend $?
+}
