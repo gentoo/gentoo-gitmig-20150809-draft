@@ -23,7 +23,7 @@
 
 # <alain@gentoo.org> (26 Feb 2003)
 # New syntax - not meant for distribution.
-=sys-apps/portage-2.0.47-r5
+>=sys-apps/portage-2.0.47-r5
 
 # <danarmak@gentoo.org> (25 Feb 2003)
 # badly broken here - masking until resolved
