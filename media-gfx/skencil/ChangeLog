@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/skencil
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.7 2004/07/19 22:11:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.8 2004/10/13 21:32:47 seemant Exp $
+
+  13 Oct 2004; Seemant Kulleen <seemant@gentoo.org> skencil-0.6.16.ebuild,
+  skencil-0.6.16_pre3.ebuild:
+  HOMEPAGE update thanks to: James Kyte <james.kyte@gmail.com> in bug #67452
 
   19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> skencil-0.6.16.ebuild,
   skencil-0.6.16_pre3.ebuild:
