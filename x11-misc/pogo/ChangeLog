@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pogo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.6 2004/06/28 20:10:05 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.7 2005/03/25 15:30:26 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> pogo-2.2.ebuild:
+  added ~amd64
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> pogo-2.2.ebuild:
   add sed-4 dep
