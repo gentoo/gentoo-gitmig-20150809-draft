@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.33 2003/05/24 05:48:11 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.34 2003/06/15 12:51:41 gmsoft Exp $
 
   24 May 2003; Todd Berman <tberman@gentoo.org> sendmail-8.12.9-r2.ebuild:
   closed bug #21354
@@ -18,6 +18,9 @@
   Fixed bug #20792
 
 *sendmail-8.12.9-r2 (26 Apr 2003)
+
+  15 Jun 2003; Guy Martin <gmsoft@gentoo.org> sendmail-8.12.9-r2.ebuild:
+  Added hppa to KEYWORDS.
 
   26 Apr 2003; <tberman@gentoo.org> sendmail-8.12.9-r2.ebuild:
   Added NIS database support. Closes bug #18578.
