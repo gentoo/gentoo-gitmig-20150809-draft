@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/rackview
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.1 2003/05/16 21:14:41 tantive Exp $
+
+*rackview-0.04 (16 May 2003)
+
+  16 May 2003; <tantive@gentoo.org> rackview-0.04.ebuild:
+  New ebuild. Submitted by Rigo Ketelings <rigo@home.nl>.
+
+
