@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.04-r4.ebuild,v 1.4 2001/10/06 16:44:02 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.04-r4.ebuild,v 1.5 2001/11/24 18:36:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/bash/${P}.tar.gz ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 

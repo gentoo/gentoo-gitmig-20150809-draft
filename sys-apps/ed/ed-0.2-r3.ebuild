@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.2 2001/08/26 23:42:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.3 2001/11/24 18:36:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your basic line editor"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/ed/${P}.tar.gz ftp://ftp.gnu.org/pub/gnu/ed/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/pub/gnu/ed/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ed/"
 DEPEND="virtual/glibc sys-apps/texinfo"
 
