@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.15 2004/07/23 19:23:27 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.16 2004/10/22 17:43:54 citizen428 Exp $
+
+*fxruby-1.2.2 (22 Oct 2004)
+
+  22 Oct 2004; Michael Kohl <citizen428@gentoo.org> +fxruby-1.2.2.ebuild:
+  New version for the 1.2 branch of Fox.
 
   23 Jul 2004; <twp@gentoo.org> fxruby-1.0.25.ebuild, fxruby-1.0.28-r1.ebuild,
   fxruby-1.0.29.ebuild:
