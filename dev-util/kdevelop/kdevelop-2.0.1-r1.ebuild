@@ -1,12 +1,17 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <bart.verwilst@pandora.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.0.1-r1.ebuild,v 1.2 2001/10/01 11:04:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.0.1-r1.ebuild,v 1.3 2001/10/02 23:54:52 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
-inherit kde-base kde.org || die
+inherit kde-base || die
 
 DESCRIPTION="KDevelop ${PV}"
 HOMEPAGE="www.kdevelop.org"
+
+SRC_PATH="kde/stable/2.1.1/src/${P}.tar.bz2"
+SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
+	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
+	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 
 DEPEND="$DEPEND
 	>=kde-base/kdelibs-2.2
