@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.ebuild,v 1.1 2004/01/02 00:03:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.ebuild,v 1.2 2004/01/03 23:57:55 vapier Exp $
 
 inherit games
 
-S="${WORKDIR}/VisualBoyAdvance-${PV}"
 DESCRIPTION="gameboy, gameboy color, and gameboy advance emulator"
 HOMEPAGE="http://vboy.emuhq.com/"
-SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz
+	mirror://gentoo/${P}-zutil.h-1.2.bz2"
 
-KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="0"
-
+KEYWORDS="x86"
 IUSE="mmx debug"
 
 DEPEND="virtual/x11
@@ -22,33 +21,50 @@ DEPEND="virtual/x11
 	media-libs/libsdl
 	>=sys-apps/sed-4"
 
+S=${WORKDIR}/VisualBoyAdvance-${PV}
+
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	sed -i \
-		-e "s:@LIBTOOL@:/usr/bin/libtool:" `find -name Makefile.in` || \
-			die "sed Makefile.in failed"
+		-e "s:@LIBTOOL@:/usr/bin/libtool:" \
+		`find -name Makefile.in` \
+		|| die "sed Makefile.in failed"
+	cd win32/include/png
+	for f in * ; do
+		[ -e /usr/include/${f} ] \
+			&& rm ${f} && ln -s /usr/include/${f}
+	done
+	cd ../zlib
+	for f in * ; do
+		[ -e /usr/include/${f} ] \
+			&& rm ${f} && ln -s /usr/include/${f}
+	done
+	has_version '>=sys-libs/zlib-1.2' \
+		&& unpack ${P}-zutil.h-1.2.bz2 \
+		&& mv ${P}-zutil.h-1.2 zutil.h
 }
 
 src_compile() {
 	egamesconf \
 		--enable-c-core \
 		`use_with debug profiling` \
-		`use_with mmx` || \
-			die
+		`use_with mmx` \
+		|| die
 	if [ ! `use debug` ] ; then
 		sed -i \
-			-e 's:prof/libprof.a::' src/Makefile || \
-				die "sed src/Makefile failed"
+			-e 's:prof/libprof.a::' \
+			src/Makefile \
+			|| die "sed src/Makefile failed"
 	fi
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install                 || die "make install failed"
-	dogamesbin "${FILESDIR}/visualboyadvance" || die "dogamesbin failed"
-	insinto "${GAMES_DATADIR}/VisualBoyAdvance"
-	doins src/VisualBoyAdvance.cfg            || die "doins failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README README-win.txt || \
-		die "dodoc failed"
+	make DESTDIR=${D} install || die "make install failed"
+	dogamesbin ${FILESDIR}/visualboyadvance
+	insinto ${GAMES_DATADIR}/VisualBoyAdvance
+	doins src/VisualBoyAdvance.cfg
+	dodoc AUTHORS ChangeLog INSTALL NEWS README README-win.txt
 	prepgamesdirs
 }
