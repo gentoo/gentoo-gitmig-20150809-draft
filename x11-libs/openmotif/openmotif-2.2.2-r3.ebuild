@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r3.ebuild,v 1.6 2003/12/01 15:26:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r3.ebuild,v 1.7 2003/12/01 15:28:41 lanius Exp $
 
 inherit libtool motif
 
@@ -66,6 +66,16 @@ src_unpack() {
 	done
 	eend $?
 	unset f list
+
+	#
+	# move `system.mwmrc' from /usr/X11R6/lib/X11 to /etc/X11/mwm (FHS).
+	#   Just symlinking `system.mwmrc' isn't enough here because mwm
+	#   also looks for localized verions in `$LANG/system.mwmrc'.
+	#   Instead, this patch changes the default location from
+	#   `/usr/X11R6/lib/X11/' to `/usr/X11R6/lib/X11/mwm/', which will
+	#   be symlinked to /etc/X11/mwm/.
+	#
+	epatch "$FILESDIR/mwm-configdir.patch"
 
 	#
 	# Rebuild libtool (#15119, #20540, #21681)
