@@ -1,20 +1,26 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.15 2004/02/25 06:56:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.16 2004/03/19 01:07:58 raker Exp $
+
+*afterstep-2.0_beta4 (18 Mar 2004)
+
+  18 Mar 2004; Nick Hadaway <raker@gentoo.org> afterstep-2.0_beta4.ebuild,
+  files/as2-gnome-r1.diff:
+  Another version bump.  Updated the gnome patch.
 
 *afterstep-2.0_beta3 (25 Feb 2004)
 
-  25 Feb 2004; Nick Hadaway <raker@gentoo.org> afterstep-2.00_beta3.ebuild:
+  25 Feb 2004; Nick Hadaway <raker@gentoo.org> afterstep-2.0_beta3.ebuild:
   Version bump.  Stability changes.  No significant ebuild changes.
   See bug #42029.
 
-  21 Oct 2003; Nick Hadaway <raker@gentoo.org> afterstep-2.00_beta2.ebuild:
+  21 Oct 2003; Nick Hadaway <raker@gentoo.org> afterstep-2.0_beta2.ebuild:
   See bug #31541.  Thanks to Doug Weimer and Mike Gardiner for providing
   quick answers to a pesky little problem.
 
 *afterstep-2.0_beta2 (18 Oct 2003)
 
-  18 Oct 2003; Nick Hadaway <raker@gentoo.org> afterstep-2.00_beta2.ebuild:
+  18 Oct 2003; Nick Hadaway <raker@gentoo.org> afterstep-2.0_beta2.ebuild:
   Afterstep is almost 2.00 revisions old! :)
 
   12 Jun 2003; <msterret@gentoo.org> afterstep-1.8.11-r1.ebuild,

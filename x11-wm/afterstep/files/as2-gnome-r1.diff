@@ -1,0 +1,34 @@
+diff -urN AfterStep-2.00.beta4b/Makefile.in AfterStep-2.00.beta4b-modified/Makefile.in
+--- AfterStep-2.00.beta4b/Makefile.in	2004-03-05 14:19:54.000000000 -0600
++++ AfterStep-2.00.beta4b-modified/Makefile.in	2004-03-18 19:01:20.807818448 -0600
+@@ -66,12 +66,13 @@
+ 	echo "If you want AfterStep to appear in your Gnome menu, please install as root."; \
+ 	fi \
+ 	fi
+-	@if [ -d /usr/share/gnome/wm-properties ] ; then \
+-	if [ -w /usr/share/gnome/wm-properties ] ; then \
+-	 echo $(CP) AfterStep.desktop /usr/share/gnome/wm-properties/; \
+-	 $(CP) AfterStep.desktop /usr/share/gnome/wm-properties/; \
++	@if [ -d $(GNOME_SHAREDIR)/wm-properties ] ; then \
++	if [ -w $(GNOME_SHAREDIR)/wm-properties ] ; then \
++	 echo $(CP) AfterStep.desktop $(GNOME_SHAREDESTDIR)/wm-properties/; \
++	$(MKDIR) -p $(GNOME_SHAREDESTDIR)/wm-properties; \
++	$(CP) AfterStep.desktop $(GNOME_SHAREDESTDIR)/wm-properties/; \
+ 	else \
+-	echo "/usr/share/gnome/wm-properties exists but is not writable."; \
++	echo "$(GNOME_SHAREDIR)/wm-properties exists but is not writable."; \
+ 	echo "If you want AfterStep to appear in your Gnome menu, please install as root."; \
+ 	fi \
+ 	fi
+diff -urN AfterStep-2.00.beta4b/autoconf/Makefile.defines.in AfterStep-2.00.beta4b-modified/autoconf/Makefile.defines.in
+--- AfterStep-2.00.beta4b/autoconf/Makefile.defines.in	2004-03-05 14:19:52.000000000 -0600
++++ AfterStep-2.00.beta4b-modified/autoconf/Makefile.defines.in	2004-03-18 18:59:38.244410456 -0600
+@@ -54,6 +54,8 @@
+ AFTER_BIN_DIR	= $(DESTDIR)@bindir@
+ AFTER_MAN_DIR	= $(DESTDIR)@mandir@/man1
+ AFTER_SHAREDIR	= $(DESTDIR)@datadir@/afterstep
++GNOME_SHAREDIR	= @datadir@/gnome
++GNOME_SHAREDESTDIR = $(DESTDIR)$(GNOME_SHAREDIR)
+ AFTER_DOC_DIR	= $(AFTER_SHAREDIR)/doc
+ AFTER_DIR	= @with_afterdir@
+ AFTER_SAVE	= @with_afterdir@/.workspace_state
