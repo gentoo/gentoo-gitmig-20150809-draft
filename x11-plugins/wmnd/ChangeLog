@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.8 2003/07/14 05:21:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.9 2003/07/16 01:30:47 raker Exp $
+
+  15 Jul 2003; Nick Hadaway <raker@gentoo.org> wmnd-0.4.7.ebuild:
+  Added ppc keyword.
 
 *wmnd-0.5.7 (13 Jul 2003)
 
