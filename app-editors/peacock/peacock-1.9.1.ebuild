@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/peacock-1.9.1.ebuild,v 1.3 2004/06/24 22:00:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/peacock-1.9.1.ebuild,v 1.4 2004/08/28 14:01:06 usata Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/peacock/${P}.tar.gz"
 HOMEPAGE="http://peacock.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2
