@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.7 2005/03/15 19:12:09 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.8 2005/03/30 23:21:15 cryos Exp $
+
+  31 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  emul-linux-x86-gtklibs-1.2-r1.ebuild:
+  Marked stable on amd64, fixes issues with firefox-bin and acroread.
 
 *emul-linux-x86-gtklibs-1.2-r1 (15 Mar 2005)
 
