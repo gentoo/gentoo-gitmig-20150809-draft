@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2              
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.3.5-r1.ebuild,v 1.4 2003/02/13 17:15:12 vapier Exp $                                                                    
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.3.5-r1.ebuild,v 1.5 2003/04/22 06:00:05 mkeadle Exp $                                                                    
 DESCRIPTION="Utility to place icons on the root window"                         
                                                                                 
 HOMEPAGE="http://linuxhelp.hn.org/idesk.php"                           
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
                                                                                 
 DEPEND=">media-libs/imlib-1.9.14
-	virtual/x11"                                           
+	virtual/x11
+	media-libs/freetype"
 
 S="${WORKDIR}/${P}"                                                            
 
