@@ -57,9 +57,7 @@ src_unpack() {
    einfo "Checking out latest Mozilla from CVS..."
    einfo "[ mozilla/browser & mozilla/toolkit ]"
    cvs -z3 -d:pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot checkout mozilla/browser mozilla/toolkit mozilla/client.mk
-   einfo "Now lets get the rest of the shit"
    make -f mozilla/client.mk checkout
-   einfo "copying some shit"
    cp -a mozilla ${S}
    cd ${S}
    # Fix a ownership porblem
@@ -67,7 +65,6 @@ src_unpack() {
 }
 
 src_compile() {
-   einfo "configurez0r"
    local myconf="--disable-composer \
       --with-x \
       --with-system-jpeg \
