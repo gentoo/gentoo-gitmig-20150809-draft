@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nstats
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.6 2004/06/24 22:14:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.7 2004/07/10 11:51:36 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml, nstats-0.4.ebuild:
+  Tidy, x86 stable
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
