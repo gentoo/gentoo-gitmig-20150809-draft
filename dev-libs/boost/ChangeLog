@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.10 2004/02/14 01:25:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.11 2004/02/24 00:10:28 bazik Exp $
+
+  24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> boost-1.30.2.ebuild:
+  Stable on sparc, DEPEND of media-sound/zinf
 
   13 Feb 2004; George Shapovalov <george@gentoo.org> boost-1.31.0_alpha2-r1.ebuild :
   improved symlinks, now the whole set is created instead of just a few out-of-place
