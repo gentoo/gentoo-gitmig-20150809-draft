@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.5 2003/02/12 08:29:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.6 2003/08/04 18:58:54 mholzer Exp $
+
+*netstat-nat-1.4.2 (04 Aug 2003)
+
+  04 Aug 2003; Martin Holzer <mholzer@gentoo.org> netstat-nat-1.4.2.ebuild:
+  Version bumped.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
