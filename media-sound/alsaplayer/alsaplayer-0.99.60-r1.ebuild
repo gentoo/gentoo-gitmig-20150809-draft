@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.60-r1.ebuild,v 1.1 2002/05/04 13:35:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.60-r1.ebuild,v 1.2 2002/05/31 09:23:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Media player primarily utilising ALSA"
 SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
-HOMEPAGE="http://www.alsa-project.org/"
+HOMEPAGE="http://www.alsaplayer.org/"
 QTROOT="/usr/qt/3"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.5.10 )
