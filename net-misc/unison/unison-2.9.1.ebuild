@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.6 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.7 2003/12/23 12:28:10 pyrania Exp $
 
 IUSE="gtk"
 
@@ -14,7 +14,7 @@ DEPEND=">=dev-lang/ocaml-3.04
 	gtk? ( >=dev-ml/lablgtk-1.2.3 )"
 RDEPEND="gtk? ( >=x11-libs/gtk+-1.2.10 )"
 
-SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/stable/${P}/src.tar.gz"
+SRC_URI="mirror://${P}.tar.gz"
 
 S=${WORKDIR}/${P}
 
