@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cddb-py
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cddb-py/ChangeLog,v 1.9 2004/09/15 19:38:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cddb-py/ChangeLog,v 1.10 2004/10/07 21:29:41 kloeri Exp $
+
+  07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> -cddb-py-1.3.ebuild:
+  Remove old version.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> cddb-py-1.4.ebuild:
   Stable sparc.
