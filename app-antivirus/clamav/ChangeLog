@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.4 2004/06/10 21:00:20 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.5 2004/06/14 21:01:21 lordvan Exp $
+
+*clamav-0.73 (14 Jun 2004)
+
+  14 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> +clamav-0.73.ebuild:
+  new version 0.73 added
 
   10 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> clamav-0.67.ebuild,
   clamav-0.68.1.ebuild, clamav-0.70.ebuild, clamav-0.71.ebuild,
