@@ -1,6 +1,6 @@
-diff -Naur gkrellm-2.1.28/src/main.c gkrellm-2.1.28_/src/main.c
---- gkrellm-2.1.28/src/main.c	2004-04-11 07:34:37.631188496 +0200
-+++ gkrellm-2.1.28_/src/main.c	2004-04-11 07:34:24.247223168 +0200
+diff -Naur src/main.c.org src/main.c
+--- src/main.c.org	2004-04-11 07:34:37.631188496 +0200
++++ src/main.c	2004-04-11 07:34:24.247223168 +0200
 @@ -2214,8 +2214,8 @@
  
  	if (_GK.sticky_state)
