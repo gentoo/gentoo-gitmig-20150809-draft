@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/jdictionary
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.6 2004/10/05 13:34:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.7 2004/11/03 11:56:00 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jdictionary-1.8-r1.ebuild,
+  jdictionary-1.8.ebuild:
+  depend on app-arch/unzip
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   jdictionary-1.8.ebuild:

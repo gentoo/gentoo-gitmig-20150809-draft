@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r1.ebuild,v 1.2 2004/10/05 20:32:06 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r1.ebuild,v 1.3 2004/11/03 11:57:25 axxo Exp $
 
 inherit java-pkg
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/jdk
+	app-arch/unzip
 	>=dev-java/ant-1.6
 	dev-java/sax
 	dev-java/jnlp-bin
