@@ -1,0 +1,13 @@
+# ChangeLog for dev-java/junit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.1 2002/02/11 22:29:05 karltk Exp $
+
+*junit-3.7 ( 11 Feb 2002 )
+
+  11 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog junit-3.7.ebuild files/digest-junit-3.7:
+  
+  JUnit is a simple framework for writing and running automated tests. As a 
+  political gesture, it celebrates programmers testing their own software.
+
+  Submitted by William McArthur <Leknor@Leknor.com>
+
