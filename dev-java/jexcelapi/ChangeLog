@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jexcelapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.1 2005/01/23 14:50:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.2 2005/01/29 21:50:11 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jexcelapi-2.5.1.ebuild:
+  added support for the source useflag. fixes #79966
 
 *jexcelapi-2.5.1 (23 Jan 2005)
 
