@@ -1,11 +1,14 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.11 2002/12/09 04:17:44 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.12 2002/12/10 16:58:09 nall Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *gnome-spell-0.5 (27 Sep 2002)
+
+  10 Dec 2002; Jon Nall <nall@gentoo.org> gnome-spell-0.5.ebuild :
+  added ~ppc to keywords
 
   06 Nov 2002; L. Boshell <leonardop@gentoo.org> : Added control-center-1.4
   dependency. Thanks to <suka_at@yahoo.de> for his report on bug #10254.
