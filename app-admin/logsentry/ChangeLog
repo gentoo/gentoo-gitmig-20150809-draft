@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logsentry
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.16 2004/12/10 22:17:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.17 2004/12/14 00:04:02 ticho Exp $
+
+  14 Dec 2004; Andrej Kacian <ticho@gentoo.org> logsentry-1.1.1.ebuild:
+  Fix an einfo typo mentioned by Leonid Kabanov <lkabanov@mail.ru> in bug #73971.
 
   10 Dec 2004; Andrej Kacian <ticho@gentoo.org> logsentry-1.1.1.ebuild:
   Changed mail-client/mailx -> virtual/mailx in RDEPEND, for bug #73972.

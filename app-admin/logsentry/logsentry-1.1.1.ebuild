@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.18 2004/12/10 22:17:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.19 2004/12/14 00:04:02 ticho Exp $
 
 DESCRIPTION="automatically monitor system logs and mail security violations on a periodic basis"
 
@@ -57,7 +57,7 @@ EOF
 
 pkg_postinst() {
 	einfo
-	einfo "Uncomment the logwatch line in /etc/cron.hourly/logsentry.cron,"
+	einfo "Uncomment the logcheck line in /etc/cron.hourly/logsentry.cron,"
 	einfo "or add directly to root's crontab"
 	einfo
 }
