@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.3 2004/03/05 13:29:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.4 2004/03/07 15:50:34 dholm Exp $
+
+inherit flag-o-matic
 
 MY_PV="0.8.25-20040302"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -20,6 +22,7 @@ DEPEND="X? ( virtual/x11 gtk? x11-libs/gtk+ ) :
 	games-emulation/caps"
 
 src_compile() {
+	replace-flags "-O3" "-O2"
 	use sdl && myconf="--with-sdl-sound --with-sdl-gfx"
 
 	cp ${FILESDIR}/split_cpuemu.pl ${S}/src
