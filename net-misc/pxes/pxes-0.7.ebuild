@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.7.ebuild,v 1.6 2004/07/15 03:20:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.7.ebuild,v 1.7 2004/08/16 17:39:54 wolf31o2 Exp $
 
 IUSE="cdr ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
@@ -45,7 +45,7 @@ src_install() {
 	cp -ar ${S}/stock ${Ddir}
 	cp -ar ${S}/tftpboot ${D}
 	dodoc Documentation/ChangeLog
-	dohtml Documentation/html/{index,pxe,readme,screenshots}.html,howto/{configuring_ICA,customizing_kernel_and_modules,gdm,xfs,ms_only_environment/ms_only_environment}.html
+	dohtml -r Documentation/html/*
 	exeinto ${dir}
 	doexe ${FILESDIR}/makedevices.sh
 	cd ${WORKDIR}/pxesconfig-${PV}
