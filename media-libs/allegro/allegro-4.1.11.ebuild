@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.11.ebuild,v 1.2 2003/08/22 19:33:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.11.ebuild,v 1.3 2003/09/24 21:51:32 usata Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -21,7 +21,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	svga? ( media-libs/svgalib )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	tetex? ( app-text/tetex )"
+	tetex? ( virtual/tetex )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.16 2003/08/22 19:33:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.17 2003/09/24 21:51:32 usata Exp $
+
+  25 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> allegro-4.0.3.ebuild,
+  allegro-4.1.11.ebuild, allegro-4.1.9.ebuild:
+  Changed app-text/tetex to virtual/tetex.
 
   22 Aug 2003; Michael Sterrett <msterret@gentoo.org> allegro-4.1.11.ebuild:
   Add back Spanky's fixes from 4.1.9 that I missed before.
