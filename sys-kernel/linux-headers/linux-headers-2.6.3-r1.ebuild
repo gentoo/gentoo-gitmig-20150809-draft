@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3-r1.ebuild,v 1.1 2004/02/22 16:55:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3-r1.ebuild,v 1.2 2004/02/29 20:52:40 jhuebel Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -25,7 +25,7 @@ KEYWORDS="-*"
 
 # Figure out what architecture we are, and set ARCH appropriately
 ARCH="$(uname -m)"
-ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/`
+ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/  -e s/i386_64/x86_64/`
 [ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
 
 # Archs which have their own separate header packages, add a check here
