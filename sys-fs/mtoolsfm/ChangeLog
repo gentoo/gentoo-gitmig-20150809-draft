@@ -1,0 +1,19 @@
+# ChangeLog for sys-fs/mtoolsfm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtoolsfm/ChangeLog,v 1.1 2003/09/17 03:54:28 seemant Exp $
+
+*mtoolsfm-1.9.3 (16 Sep 2003)
+
+  16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> metadata.xml,
+  mtoolsfm-1.9.3.ebuild, files/mtoolsfm.c.diff:
+  changed dependency to sys-fs/mtools, and moved this to sys-fs as well
+
+  29 Jul 2003; lanius@gentoo.org mtoolsfm-1.9.3.ebuild:
+  stable bump
+
+*mtoolsfm-1.9.3 (15 Jul 2003)
+
+  15 Jul 2003; Heinrich Wendel <lanius@gentoo.org> mtoolsfm-1.9.3.ebuild,
+  files/mtoolsfm.c.diff:
+  initial release
+
