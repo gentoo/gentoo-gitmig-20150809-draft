@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.5.ebuild,v 1.1 2002/01/24 13:05:05 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.5.ebuild,v 1.2 2002/03/27 12:30:26 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="imlib"
@@ -28,9 +28,5 @@ src_install() {
 	make prefix=${D}/usr sysconfdir=${D}/etc/X11/imlib install || die
 	preplib /usr
 	dodoc AUTHORS COPYING* ChangeLog README
-	docinto html
-	dodoc doc/*.gif doc/index.html
+	dohtml -r doc
 }
-
-
-
