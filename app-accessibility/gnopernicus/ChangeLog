@@ -1,7 +1,13 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.2 2004/03/18 00:23:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.3 2004/03/25 04:39:41 leonardop Exp $
 
+*gnopernicus-0.8.1 (24 Mar 2004)
+
+  24 Mar 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.1.ebuild,
+  files/gnopernicus-0.8.1-brltty_fix.patch:
+  New release. Added support for brltty via the local USE flag `brltty'.
+  
   17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gnopernicus-0.7.4.ebuild:
   sparc keyword again
