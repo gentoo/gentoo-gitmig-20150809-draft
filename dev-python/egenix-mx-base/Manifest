@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1140db75dc792367bbc5d178461c6fbf ChangeLog 3298
 MD5 9358681ca1de5db844e0a693362c2bda egenix-mx-base-2.0.6.ebuild 677
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c5675b944d478f7a0890ddc3853ee2ef ChangeLog 3406
 MD5 99181ea397e00e1872e65d9e811e1eb2 egenix-mx-base-2.0.5.ebuild 669
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 af47a948e9145473f867071766ddee18 files/digest-egenix-mx-base-2.0.5 72
 MD5 678bcf931e0d79b1625885bc71dcba7a files/digest-egenix-mx-base-2.0.6 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0zbCugEuf3OQ0akRAp/XAJ4uzUc87OLO5a3ZCVRk6gKEDEDwrwCeNv7j
-o36vgq/TojjItngdU1BsLqw=
-=o9jk
------END PGP SIGNATURE-----

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28c2ba1584e76940c3533c252b7c5b3e ChangeLog 1115
 MD5 77a3249a99a1b7ea96fdf8e033a2fb99 csv-0.5.0.ebuild 606
-MD5 8ca5da8ec9b85d99e0b8ccc068d11b67 csv-1.0-r1.ebuild 733
+MD5 850e79fccf5c6ec8a276be65afdf6f86 ChangeLog 1223
 MD5 df5f358cefe4a7d881c1130dec3d8363 csv-1.0.ebuild 494
+MD5 8ca5da8ec9b85d99e0b8ccc068d11b67 csv-1.0-r1.ebuild 733
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 549e931ec64de357ae6d1a811cb460fb files/csv-1.0-rename.patch 4181
-MD5 166ca7153bab968e71efabe99584402d files/digest-csv-0.5.0 57
-MD5 9e38ebb2987d5a487e73480d73dd3ead files/digest-csv-1.0 58
 MD5 9e38ebb2987d5a487e73480d73dd3ead files/digest-csv-1.0-r1 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByuJl60LfUIagIAkRAgmEAJ0YcOgIlnd/NlYHE+3xJL7T5l0uUwCcCPMB
-81Lq2qs8vEuvKm6RhCHTRf8=
-=65w7
------END PGP SIGNATURE-----
+MD5 9e38ebb2987d5a487e73480d73dd3ead files/digest-csv-1.0 58
+MD5 166ca7153bab968e71efabe99584402d files/digest-csv-0.5.0 57
