@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portagemaster
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.6 2004/03/13 18:59:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.7 2004/03/17 19:04:38 gustavoz Exp $
+
+  17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  portagemaster-0.2.1.ebuild:
+  stable on sparc
 
   13 Mar 2004; Jason Wever <weeve@gentoo.org> portagemaster-0.2.1.ebuild:
   Added ~sparc keyword.
