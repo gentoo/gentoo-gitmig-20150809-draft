@@ -1,18 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.08.ebuild,v 1.5 2003/06/22 17:44:00 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.08.ebuild,v 1.6 2003/06/24 20:26:08 vapier Exp $
 
+MY_P=${PN}-1.99_08
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="An embedded Perl interpreter for Apache2"
 HOMEPAGE="http://perl.apache.org/"
+SRC_URI="http://perl.apache.org/dist/${MY_P}.tar.gz"
 
-NEWP="${PN}-1.99_08"
-S=${WORKDIR}/${NEWP}
-SRC_URI="http://perl.apache.org/dist/${NEWP}.tar.gz"
-DEPEND="dev-lang/perl =net-www/apache-2*"
 LICENSE="GPL-2"
 KEYWORDS="~x86 amd64"
 IUSE=""
 SLOT="1"
+
+DEPEND="dev-lang/perl
+	=net-www/apache-2*"
 
 src_compile() {
 	perl Makefile.PL \

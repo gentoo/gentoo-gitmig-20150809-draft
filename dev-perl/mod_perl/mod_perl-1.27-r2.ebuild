@@ -1,21 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27-r2.ebuild,v 1.4 2003/06/21 21:36:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27-r2.ebuild,v 1.5 2003/06/24 20:26:08 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="A Perl Module for Apache"
 SRC_URI="http://perl.apache.org/dist/${P}.tar.gz"
-HOMEPAGE="http://perl.apache.org"
+HOMEPAGE="http://perl.apache.org/"
 
 SLOT="0"
 LICENSE="Apache-1.1 as-is"
 KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
-
-DEPEND="dev-lang/perl dev-perl/libwww-perl =net-www/apache-1*"
-
 IUSE="ipv6"
 
-inherit eutils
+DEPEND="dev-lang/perl
+	dev-perl/libwww-perl
+	=net-www/apache-1*"
 
 src_unpack() {
 	unpack ${A}
@@ -42,7 +42,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make \
 		PREFIX=${D}/usr	\
 		INSTALLMAN1DIR=${D}/usr/share/man/man1	\

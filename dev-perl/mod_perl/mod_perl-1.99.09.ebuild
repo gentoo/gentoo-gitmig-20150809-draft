@@ -1,21 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.09.ebuild,v 1.5 2003/06/22 17:44:00 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.09.ebuild,v 1.6 2003/06/24 20:26:08 vapier Exp $
 
+inherit eutils
+
+MY_PV=$(echo $PV | perl -pe 's/\.([^.]+)$/_\1/')
+MY_P=${PN}-${MY_PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="An embedded Perl interpreter for Apache2"
+SRC_URI="http://perl.apache.org/dist/${MY_P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
-NEWPV=$(echo $PV | perl -pe 's/\.([^.]+)$/_\1/')
-NEWP="${PN}-${NEWPV}"
-S=${WORKDIR}/${NEWP}
-SRC_URI="http://perl.apache.org/dist/${NEWP}.tar.gz"
-DEPEND="dev-lang/perl =net-www/apache-2* >=dev-perl/CGI-2.93 >=sys-apps/sed-4"
 LICENSE="GPL-2"
 KEYWORDS="~x86 amd64"
 IUSE=""
 SLOT="1"
 
-inherit eutils
+DEPEND="dev-lang/perl
+	=net-www/apache-2*
+	>=dev-perl/CGI-2.93
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
