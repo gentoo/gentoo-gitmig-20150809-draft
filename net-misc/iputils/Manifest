@@ -2,19 +2,20 @@
 Hash: SHA1
 
 MD5 e2ccbeed9ec09bab7f076ddf927b1eee ChangeLog 5062
-MD5 73b9d1d0fbd243c19f6ab07fb3c78e5e iputils-021109-r3.ebuild 2745
+MD5 803f089c3d1999303ca7b3c72777c755 iputils-021109-r3.ebuild 2689
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 d85216426f34d4e768ab8f9f48c66e4f files/021109-syserror.patch 324
 MD5 0a62fdeb93c761e5407fd3e185308a99 files/iputils-021109-pfkey.patch 3477
 MD5 c11c8762616b29e6d556a147aaa9374a files/021109-no-pfkey-search.patch 307
 MD5 2baac2d4f1c8f01957aaaf6b6349c203 files/021109-gcc34.patch 347
 MD5 66a524e27160410a2dbaef8d2eed5365 files/digest-iputils-021109-r3 73
-MD5 b4615612d4514f12b35fbaf27d3e04fe files/iputils-20020927-no-ether_ntohost.patch 635
 MD5 79de65b9da536090d0560ba51520fd9d files/iputils-021109-linux-udp-header.patch 418
 MD5 c9986b4299c200260da8f025c5e4b0ea files/021109-ipg-linux-2.6.patch 981
+MD5 b4615612d4514f12b35fbaf27d3e04fe files/021109-uclibc-no-ether_ntohost.patch 635
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2hMCroRuSHgZdywRAhQ2AKCRIC75RG7rORc0gnrFxcDikPSPdACfbA5L
-GO5EnD1VXVnmFQOv0wMff1g=
-=5IT7
+iD8DBQFB2hVvroRuSHgZdywRAu7lAJ9n0Yp2L3OlxJRyq5poIMpHHh3FTQCffw6e
+H6nU75qDqX4NwB0WFbAIdO0=
+=i3u3
 -----END PGP SIGNATURE-----

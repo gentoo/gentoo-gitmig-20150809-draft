@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.14 2005/01/04 03:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.15 2005/01/04 04:02:36 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils toolchain-funcs
 
@@ -39,6 +39,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	epatch ${FILESDIR}/${PV}-no-pfkey-search.patch
 	epatch ${FILESDIR}/${PV}-ipg-linux-2.6.patch #71756
+	epatch ${FILESDIR}/${PV}-syserror.patch
+	epatch ${FILESDIR}/${PV}-uclibc-no-ether_ntohost.patch
 
 	# make iputils work with newer glibc snapshots
 	epatch ${FILESDIR}/${P}-linux-udp-header.patch
@@ -57,9 +59,6 @@ src_unpack() {
 	sed -i "s:-ll:-lfl -L${ROOT}/usr/lib ${LDFLAGS}:" setkey/Makefile || die "sed setkey failed"
 
 	sed -i 's:yacc:bison -y:' libipsec/Makefile #59191
-
-	use uclibc && sed -e 's/sys_errlist\[errno\]/strerror(errno)/' -i ${S}/rdisc.c
-	use uclibc && epatch ${FILESDIR}/${PN}-20020927-no-ether_ntohost.patch
 }
 
 src_compile() {
