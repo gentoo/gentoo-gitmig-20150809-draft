@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.21 2004/05/10 10:50:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.22 2004/05/26 00:53:24 squinky86 Exp $
+
+*ardour-0.9_beta14 (25 May 2004)
+
+  25 May 2004; Jon Hood <squinky86@gentoo.org> +ardour-0.9_beta14.ebuild:
+  version bump, closes #51929; fix metadata.xml
 
   10 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ardour-0.9_beta11-r1.ebuild:
