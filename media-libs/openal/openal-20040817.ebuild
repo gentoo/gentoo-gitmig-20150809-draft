@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.5 2004/11/01 19:48:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.6 2004/12/16 08:38:35 corsair Exp $
 
 inherit eutils gnuconfig
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://opensource.creative.com/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc amd64 ~ppc64"
+KEYWORDS="x86 sparc ~ppc amd64 ppc64"
 
 DEPEND="x86? ( dev-lang/nasm )
 	alsa? ( >=media-libs/alsa-lib-1.0.2 )
@@ -22,7 +22,7 @@ DEPEND="x86? ( dev-lang/nasm )
 	mpeg? ( media-libs/smpeg )"
 
 src_compile() {
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 	local myconf
 
 	use esd && myconf="${myconf} --enable-esd"
