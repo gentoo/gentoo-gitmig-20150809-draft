@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/brltty/brltty-3.4.1.ebuild,v 1.1 2004/03/07 18:47:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/brltty/brltty-3.4.1.ebuild,v 1.2 2004/03/15 18:22:37 dmwaters Exp $
 
 IUSE="gpm"
 
 DESCRIPTION="BRLTTY is a background process (daemon) which provides access to the Linux/Unix console (when in text mode) for a blind person "
-HOMEPAGE="http://mielke.cc/brtltty"
+HOMEPAGE="http://mielke.cc/brltty"
 SRC_URI="http://mielke.cc/brltty/releases/${P}.tar.gz"
 
 SLOT="0"

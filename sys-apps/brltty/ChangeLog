@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/brltty
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/brltty/ChangeLog,v 1.1 2004/03/07 18:47:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/brltty/ChangeLog,v 1.2 2004/03/15 18:22:37 dmwaters Exp $
+
+  15 Mar 2004; <dmwaters@gentoo.org> brltty-3.4.1.ebuild:
+  Fixed a typeo in the homepage url, thanks to cybersystem for noticing that.
 
 *brltty-3.4.1 (07 Mar 2004)
 
