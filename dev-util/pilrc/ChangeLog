@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pilrc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*pilrc-2.9_p10 (18 Sep 2003)
+
+  18 Sep 2003; Alastair Tse <liquidx@gentoo.org> pilrc-2.9_p10.ebuild,
+  files/pilrc-2.9_p10-Makefile.patch:
+  version bump to latest patch level. putting tentatively under app-pda herd
+
 *pilrc-2.9 (12 Jun 2003)
 
   12 Jun 2003; <msterret@gentoo.org> pilrc-2.9.ebuild:
