@@ -18,7 +18,6 @@ virtual/jre		dev-java/blackdown-jre
 virtual/jdk-r1		dev-java/blackdown-jdk
 virtual/jre-r1		dev-java/blackdown-jre
 virtual/imapd		net-mail/courier-imap
-virtual/x11-web-browser	net-www/mozilla
 sys-apps/console-tools	sys-apps/kbd
 virtual/blackbox	x11-wm/blackbox
 virtual/emacs		app-editors/emacs
