@@ -4,6 +4,7 @@
 3dnow
 afs
 alsa
+directfb
 firebird
 mmx
 pic

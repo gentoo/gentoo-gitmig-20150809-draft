@@ -5,6 +5,7 @@
 afs
 alsa
 apm
+directfb
 firebird
 mmx
 pic
