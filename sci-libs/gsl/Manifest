@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9abbd9721b787dbccbedc888cee53785 gsl-1.4.ebuild 772
 MD5 1d3180977a0a90e4c3828c8b49a6c732 gsl-1.3.ebuild 1016
-MD5 0c97dd883cb46fa732432c5a1477162a ChangeLog 2445
+MD5 e33c57a48ac79d47fbdf9210212629ef ChangeLog 2550
+MD5 9abbd9721b787dbccbedc888cee53785 gsl-1.4.ebuild 772
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 5f0a27845cdb652d4720cf49199a0770 files/digest-gsl-1.4 60
 MD5 c7dae15dca92a4eac63ec297ec7b28ec files/k6-undef.diff 1444
 MD5 19c1fec1e698b1a7928d072be94e1aef files/digest-gsl-1.3 60
-MD5 5f0a27845cdb652d4720cf49199a0770 files/digest-gsl-1.4 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0c6jI1lqEGTUzyQRApzQAKDJ0Tmay4JPeBtsXxc4IBgjd65cKgCgkCvl
-LVtRNt3DpWbx8fX5ze70DO0=
-=JeKs
------END PGP SIGNATURE-----

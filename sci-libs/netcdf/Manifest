@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d2759493bc9855fe834be94e70b4077 netcdf-3.5.0-r4.ebuild 1226
+MD5 05ba5246265ec8115989deaf70b0be91 ChangeLog 3609
 MD5 17b512246e15e85b21900cd09cbbad64 netcdf-3.5.0-r3.ebuild 1188
-MD5 a364cc110d668bc57a653b0eb0741e0b ChangeLog 3504
-MD5 a90354cea7ea5a1ccb093598a750c7c6 metadata.xml 354
+MD5 7d2759493bc9855fe834be94e70b4077 netcdf-3.5.0-r4.ebuild 1226
 MD5 1802a75183911c517851306453afb7d9 netcdf-3.5.1.ebuild 1078
-MD5 fc4457bab8a911f12f9048c4a2c32322 files/digest-netcdf-3.5.0-r3 64
+MD5 a90354cea7ea5a1ccb093598a750c7c6 metadata.xml 354
 MD5 fc4457bab8a911f12f9048c4a2c32322 files/digest-netcdf-3.5.0-r4 64
+MD5 253c25302faf05dae06feda0e45a85e2 files/digest-netcdf-3.5.1 64
 MD5 46a9de0130f415c3cff34812e9ce6724 files/fPIC.patch 209
 MD5 3dff80a6b8f002594a1e93145ffa6311 files/gcc3-gentoo.patch 6826
-MD5 253c25302faf05dae06feda0e45a85e2 files/digest-netcdf-3.5.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0btPI1lqEGTUzyQRAtzBAJ9vfq0T+llJytLalrApkUZP7SR6UgCfe5Z/
-fd3bbV0EgRoWAUu5Rtndc2Y=
-=mUeZ
------END PGP SIGNATURE-----
+MD5 fc4457bab8a911f12f9048c4a2c32322 files/digest-netcdf-3.5.0-r3 64
