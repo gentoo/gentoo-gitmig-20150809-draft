@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.11 2003/02/27 02:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.12 2003/08/15 10:16:18 g2boojum Exp $
+
+*icecast-2.0_alpha2 (15 Aug 2003)
+
+  15 Aug 2003; Nick Hadaway <raker@gentoo.org> icecast-2.0_alpha2.ebuild:
+  Icecast is back. :)  Development is obviously not complete but icecast1
+  is really ancient.
 
 *icecast-1.3.12-r1 (23 Jul 2002)
 
