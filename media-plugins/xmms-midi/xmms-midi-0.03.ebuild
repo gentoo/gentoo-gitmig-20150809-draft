@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.14 2004/10/07 03:19:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.15 2004/10/10 20:16:30 eradicator Exp $
 
 IUSE=""
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 DESCRIPTION="Timidity++ Dependent MIDI Plugun for XMMS"
 HOMEPAGE="http://ban.joh.cam.ac.uk/~cr212/xmms-midi/"
