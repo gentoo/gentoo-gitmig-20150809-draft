@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/im-canna
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.1 2004/08/03 18:11:29 usata Exp $
+
+*im-canna-0.3.2.1 (04 Aug 2004)
+
+  04 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +im-canna-0.3.2.1.ebuild:
+  Initial import.
+
