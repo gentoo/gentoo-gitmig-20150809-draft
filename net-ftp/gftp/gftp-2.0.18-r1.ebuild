@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18.ebuild,v 1.3 2005/02/14 15:15:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18-r1.ebuild,v 1.1 2005/02/14 16:05:42 foser Exp $
+
+inherit eutils
 
 DESCRIPTION="Gnome based FTP Client"
 SRC_URI="http://www.gftp.org/${P}.tar.bz2"
@@ -8,7 +10,7 @@ HOMEPAGE="http://www.gftp.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
 IUSE="nls gtk gtk2 ssl"
 
 DEPEND="virtual/x11
@@ -22,7 +24,18 @@ DEPEND="virtual/x11
 
 #RDEPEND="nls? ( sys-devel/gettext )"
 
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# fix building gtk1 backend (#80845)
+	epatch ${FILESDIR}/${P}-fix_gtk1.patch
+
+}
+
 src_compile() {
+
 	local myconf
 
 	use nls \
@@ -48,6 +61,7 @@ src_compile() {
 
 	econf ${myconf} || die
 	emake || die
+
 }
 
 src_install() {
