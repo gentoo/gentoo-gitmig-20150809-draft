@@ -1,33 +1,49 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5.ebuild,v 1.6 2002/10/05 05:39:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.7.ebuild,v 1.1 2002/11/20 17:16:33 woodchip Exp $
 
-IUSE="tcpd ldap cups ssl acl"
+IUSE="pam acl cups ldap ssl tcpd vscan"
+
+VSCAN_VER=0.2.5e
+VSCAN_MODS="fprot mks openantivirus" #kaspersky sophos symantec trend
+#need libs/headers/extra support for these ones^; please test!
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org"
 
 S=${WORKDIR}/${P}
-SRC_URI="http://us2.samba.org/samba/ftp/${P}.tar.gz"
-
-RDEPEND="virtual/glibc
-	>=sys-libs/pam-0.72
-	acl? ( sys-apps/acl )
-	cups? ( net-print/cups )
-	ldap? ( =net-nds/openldap-2* )
-	ssl? ( >=dev-libs/openssl-0.9.6 )"
-
-DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
-
-SLOT="0"
+SRC_URI="vscan? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.gz
+	http://us3.samba.org/samba/ftp/${P}.tar.bz2"
+DEPEND="pam? >=sys-libs/pam-0.72
+	acl? sys-apps/acl
+	cups? net-print/cups
+	ldap? =net-nds/openldap-2*
+	ssl? >=dev-libs/openssl-0.9.6
+	tcpd? >=sys-apps/tcp-wrappers-7.6
+	vscan? >=dev-libs/popt-1.6.3"
+KEYWORDS="~x86 ~ppc ~sparc64"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc64"
+SLOT="0"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
+	local i
+	unpack ${A} || die
+	cd ${S} || die
+
+	patch -p0 <${FILESDIR}/samba-2.2.2-smbmount.diff || die
+	patch -p1 <${FILESDIR}/samba-2.2.5-gp-reloc-fix.patch || die
+	cd ${S}/source/client
+	patch -p0 <${FILESDIR}/samba-2.2.6-smbumount_lazy.patch || die
+
+	if use portldap; then
+		cd ${S}/source
+		patch -p0 <$FILESDIR/nonroot-bind.diff || die
+	fi
+
+	if use ldap; then
+		cd ${S}
+		patch -p0 <${FILESDIR}/samba-2.2.6-libresolv.patch || die
+	fi
 
 	# fix kerberos include file collision..
 	cd ${S}/source/include
@@ -35,20 +51,29 @@ src_unpack() {
 	sed -e "s:profile\.h:smbprofile.h:" includes.h > includes.h.new
 	mv includes.h.new includes.h
 
-	#cd ${S}/source
-	#autoconf || die
+	# for clean docs packaging sake, make a copy..
+	cp -a ${S}/examples ${S}/examples.bin
+	if use vscan; then
+		# prep source for selected vscan plugin modules..
+		for i in ${VSCAN_MODS}
+		do
+			cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER}/$i \
+				${S}/examples.bin/VFS
+		done
+	fi
+
+	cd ${S}/source
+	autoconf || die
 }
 
 src_compile() {
-	local myconf
-	use acl && myconf="${myconf} --with-acl-support"
-	use acl ||  myconf="${myconf} --without-acl-support"
-	use ssl && myconf="${myconf} --with-ssl"
-	use ssl || myconf="${myconf} --without-ssl"
-	use cups && myconf="${myconf} --enable-cups"
-	use cups || myconf="${myconf} --disable-cups"
-	use ldap && myconf="${myconf} --with-ldapsam"
-	use ldap || myconf="${myconf} --without-ldapsam"
+	local i myconf
+	use acl && myconf="${myconf} --with-acl-support" ||  myconf="${myconf} --without-acl-support"
+	use ssl && myconf="${myconf} --with-ssl" || myconf="${myconf} --without-ssl"
+	use pam && myconf="${myconf} --with-pam --with-pam_smbpass" || \
+		myconf="${myconf} --without-pam --without-pam_smbpass"
+	use cups && myconf="${myconf} --enable-cups" || myconf="${myconf} --disable-cups"
+	use ldap && myconf="${myconf} --with-ldapsam" || myconf="${myconf} --without-ldapsam"
 
 	cd ${S}/source
 	./configure \
@@ -61,11 +86,11 @@ src_compile() {
 		--with-configdir=/etc/samba \
 		--with-mandir=/usr/share/man \
 		--with-piddir=/var/run/samba \
-		--with-lockdir=/var/run/samba \
 		--with-swatdir=/usr/share/swat \
+		--with-lockdir=/var/cache/samba \
 		--with-privatedir=/etc/samba/private \
 		--with-codepagedir=/var/lib/samba/codepages \
-		--with-pam --with-pam_smbpass \
+		--with-sendfile-support \
 		--without-sambabook \
 		--without-automount \
 		--without-spinlocks \
@@ -80,10 +105,37 @@ src_compile() {
 		--with-utmp \
 		--with-vfs \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
+		#--with-winbind-ldap-hack
 
-	make all smbfilter smbwrapper smbcacls pam_smbpass \
+	# compile samba..
+	make all smbfilter smbwrapper smbcacls \
 		nsswitch nsswitch/libnss_wins.so debug2html
-	assert "compile problem"
+	assert "samba compile problem"
+	if use pam; then
+		make pam_smbpass || die "pam_smbpass compile problem"
+	fi
+
+	# compile the bundled vfs modules..
+	cd ${S}/examples.bin/VFS
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man || die "bad ./configure"
+	make || die "VFS modules compile problem"
+
+	# compile mkntpasswd in examples/LDAP/ for smbldaptools..
+	if use ldap; then
+		cd ${S}/examples.bin/LDAP/smbldap-tools/mkntpwd
+		make || die "mkntpwd compile problem"
+	fi
+
+	# compile the selected antivirus vfs plugins..
+	if use vscan; then
+		for i in ${VSCAN_MODS}
+		do
+			cd ${S}/examples.bin/VFS/$i && make
+			assert "problem building $i vscan module"
+		done
+	fi
 }
 
 src_install() {
@@ -116,8 +168,16 @@ src_install() {
 	insinto /usr/lib
 	doins source/bin/libsmbclient.a
 	exeinto /lib/security
-	doexe source/bin/pam_smbpass.so
+	use pam && doexe source/bin/pam_smbpass.so
 	doexe source/nsswitch/pam_winbind.so
+
+
+	# vfs modules..
+	exeinto /usr/lib/samba/vfs
+	doexe examples.bin/VFS/audit.so
+	doexe examples.bin/VFS/block/block.so
+	doexe examples.bin/VFS/recycle/recycle.so
+	use vscan && doexe examples.bin/VFS/*/vscan-*.so
 
 
 	# some utility scripts..
@@ -126,9 +186,11 @@ src_install() {
 		exeinto /usr/bin
 		doexe source/script/${i}
 	done
+	# and this handy one..
+	doexe packaging/Mandrake/findsmb
 
 
-	# install secure binary files..
+	# secure binary files..
 	for i in smbd nmbd swat smbfilter debug2html smbmnt smbcontrol winbindd
 	do
 		exeinto /usr/sbin
@@ -138,11 +200,11 @@ src_install() {
 	fperms 4755 /usr/sbin/smbmnt
 
 
-	# install man pages..
+	# man pages..
 	doman docs/manpages/*
 
 
-	# install codepage source files
+	# codepage source files
 	for i in 437 737 775 850 852 857 861 862 866 932 936 949 950 1125 1251
 	do
 		insinto /var/lib/samba/codepages/src
@@ -225,12 +287,29 @@ src_install() {
 	done
 
 
-	# too many docs to sort through; install them all! :)
+	# install the utilities from LDAP/smbldap-tools
+	if use ldap; then
+		exeinto /usr/share/samba/smbldap-tools
+		doexe examples/LDAP/smbldap-tools/*.pl
+		doexe examples/LDAP/smbldap-tools/smbldap_tools.pm
+		doexe examples/LDAP/{import,export}_smbpasswd.pl
+		chmod 0700 ${D}/usr/share/samba/smbldap-tools/{import,export}_smbpasswd.pl
+		exeinto /usr/sbin
+		doexe examples.bin/LDAP/smbldap-tools/mkntpwd/mkntpwd
+		#dodir /usr/lib/perl5/site_perl/5.6.1
+		eval `perl '-V:installarchlib'`
+		dodir ${installarchlib}
+		dosym /etc/samba/smbldap_conf.pm ${installarchlib}
+		dosym /usr/share/samba/smbldap-tools/smbldap_tools.pm ${installarchlib}
+	fi
+
+
+	# we don't want two copies of the book or manpages
+	rm -rf docs/htmldocs/using_samba docs/manpages
+	# attempt to install all the docs as easily as possible :/
 	dodoc COPYING Manifest README Roadmap WHATSNEW.txt
 	docinto full_docs
 	cp -a docs/* ${D}/usr/share/doc/${PF}/full_docs
-	# but we don't want two copies of the book!
-	rm -rf ${D}/usr/share/doc/${PF}/full_docs/htmldocs/using_samba
 	docinto examples
 	cp -a examples/* ${D}/usr/share/doc/${PF}/examples
 	prepalldocs
@@ -239,6 +318,17 @@ src_install() {
 	# and we should unzip the html docs..
 	gunzip ${D}/usr/share/doc/${PF}/full_docs/faq/*
 	gunzip ${D}/usr/share/doc/${PF}/full_docs/htmldocs/*
+	if use vscan; then
+		docinto vscan-modules
+		cd ${WORKDIR}/${PN}-vscan-${VSCAN_VER}
+		dodoc AUTHORS COPYING ChangeLog FAQ INSTALL NEWS README TODO
+		for i in ${VSCAN_MODS}
+		do
+			docinto vscan-modules/$i
+			dodoc $i/INSTALL
+		done
+	fi
+	cd ${S} # hyaah; thems a lotta docs!
 
 
 	# link /usr/bin/smbmount to /sbin/mount.smbfs which allows it
@@ -248,15 +338,15 @@ src_install() {
 
 
 	# make the smb backend symlink for cups printing support..
-	if [ -n "`use cups`" ] ; then
+	if use cups; then
 		dodir /usr/lib/cups/backend
 		dosym /usr/bin/smbspool /usr/lib/cups/backend/smb
 	fi
 
 
-	# make a symlink on /usr/lib/smbwrapper.so in /usr/bin
-	# to fix smbsh problem (another way to do that, anyone???)
-	dosym /usr/lib/smbwrapper.so /usr/bin/smbwrapper.so
+	# make a symlink on /usr/lib/smbwrapper.so in /usr/sbin
+	# to fix smbsh problem.  #6936
+	dosym /usr/lib/smbwrapper.so /usr/sbin/smbwrapper.so
 
 
 	# now the config files..
@@ -268,6 +358,11 @@ src_install() {
 	doins ${FILESDIR}/smbusers
 	doins ${FILESDIR}/smb.conf.example
 	doins ${FILESDIR}/lmhosts
+	doins ${FILESDIR}/recycle.conf
+	if use ldap; then
+		doins ${FILESDIR}/smbldap_conf.pm
+		doins ${FILESDIR}/samba-slapd-include.conf
+	fi
 
 	insinto /etc/pam.d
 	newins ${FILESDIR}/samba.pam samba
@@ -294,22 +389,8 @@ pkg_postinst() {
 	install -m1777 -o root -g root -d ${ROOT}/var/spool/samba
 	install -m0755 -o root -g root -d ${ROOT}/var/log/samba
 	install -m0755 -o root -g root -d ${ROOT}/var/run/samba
+	install -m0755 -o root -g root -d ${ROOT}/var/cache/samba
 	install -m0755 -o root -g root -d ${ROOT}/var/lib/samba/{netlogon,profiles}
 	install -m0755 -o root -g root -d \
 		${ROOT}/var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
-
-
-	# im guessing people dont need this anymore, it was quite a while ago...
-	# /etc/smb is changed to /etc/samba, /var/run/smb to /var/run/samba
-	#ewarn "******************************************************************"
-	#ewarn "* NOTE: If you upgraded from an earlier version of samba you     *"
-	#ewarn "*       must move your /etc/smb files to the more aptly suited   *"
-	#ewarn "*       /etc/samba directory.  Also, please move the files in    *"
-	#ewarn "*       /var/run/smb to /var/run/samba.  Lastly, if you have     *"
-	#ewarn "*       the string "/etc/smb" in your smb.conf file, please      *"
-	#ewarn "*       change that to "/etc/samba".  The old /etc/smb/codepages *"
-	#ewarn "*       directory doesn't need to be moved into /etc/samba       *"
-	#ewarn "*       because those files are now kept in the                  *"
-	#ewarn "*       /var/lib/samba/codepages directory.                      *"
-	#ewarn "******************************************************************"
 }
