@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.1 2003/01/28 07:08:41 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.2 2003/01/31 07:39:13 raker Exp $
 
 TLS_P="pfixtls-0.8.13-2.0.3-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.3"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.pca.dfn.de/pub/tools/net/postfix/official/${P}.tar.gz
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.12/${IPV6_P}.patch.gz )"
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 PROVIDE="virtual/mta
 	 virtual/mda"
 DEPEND=">=sys-libs/db-3.2
