@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050123.ebuild,v 1.1 2005/02/01 09:20:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050123.ebuild,v 1.2 2005/02/01 15:27:21 swegener Exp $
 
 GCC_MANPAGE_VERSION="none"
 ETYPE="gcc-compiler"
@@ -38,4 +38,4 @@ DEPEND="${RDEPEND}
 	>=sys-devel/binutils-2.15.90.0.1.1-r1"
 
 PDEPEND="sys-devel/gcc-config
-	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build ( sys-libs/libstdc++-v3 ) ) ) ) )"
+	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
