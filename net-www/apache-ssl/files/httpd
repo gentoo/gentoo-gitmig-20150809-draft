@@ -1,0 +1,115 @@
+#!/bin/sh
+#RCUPDATE:3 4:75:This line is required for script management
+#
+
+. /etc/rc.d/config/functions
+
+# Apache control script designed to allow an easy command line interface
+# to controlling Apache.  Written by Marc Slemko, 1997/08/23
+# 
+# The exit codes returned are:
+#	0 - operation completed successfully
+#	1 - 
+#	2 - usage error
+#	3 - httpd could not be started
+#	4 - httpd could not be stopped
+#	5 - httpd could not be started during a restart
+#	6 - httpd could not be restarted during a restart
+#	7 - httpd could not be restarted during a graceful restart
+#	8 - configuration syntax error
+#
+# When multiple arguments are given, only the error from the _last_
+# one is reported.  Run "apachectl help" for usage info
+#
+#
+# |||||||||||||||||||| START CONFIGURATION SECTION  ||||||||||||||||||||
+# --------------------                              --------------------
+# 
+# the path to your PID file
+PIDFILE=/var/run/httpd.pid
+#
+# the path to your httpd binary, including options if necessary
+HTTPD=/usr/sbin/httpd
+#
+# a command that outputs a formatted text version of the HTML at the
+# url given on the command line.  Designed for lynx, however other
+# programs may work.  
+LYNX="lynx -dump"
+#
+# the URL to your server's mod_status status page.  If you do not
+# have one, then status and fullstatus will not work.
+STATUSURL="http://localhost/server-status"
+#
+# --------------------                              --------------------
+# ||||||||||||||||||||   END CONFIGURATION SECTION  ||||||||||||||||||||
+
+ERROR=0
+ARGV="$@"
+
+if [ "x$ARGV" = "x" ] ; then 
+    ARGS="help"
+fi
+
+    # check for pidfile
+    if [ -f $PIDFILE ] ; then
+	PID=`cat $PIDFILE`
+	if [ "x$PID" != "x" ] && kill -0 $PID 2>/dev/null ; then
+	    STATUS="httpd (pid $PID) running"
+	    RUNNING=1
+	else
+	    STATUS="httpd (pid $PID?) not running"
+	    RUNNING=0
+	fi
+    else
+	STATUS="httpd (no pid file) not running"
+	RUNNING=0
+    fi
+
+SERVICE="Apache Webserver"
+opts="start stop restart status"
+
+start() {
+	if [ $RUNNING -eq 1 ]; then
+	    echo "$0 $ARG: httpd (pid $PID) already running"
+	    continue
+	fi
+	ebegin "Starting service $SERVICE..."
+	start-stop-daemon --quiet --start --exec $HTTPD 1>&2
+	eend $? "Error starting $SERVICE"
+}
+
+stop() {
+
+	if [ $RUNNING -eq 0 ]; then
+	    echo "$0 $ARG: $STATUS"
+	fi
+	ebegin "Stopping serveice $SERVICE..."
+	start-stop-daemon --quiet --stop --pid $PIDFILE 1>&2
+	eend $? "Error stopping $SERVICE"
+}
+
+restart () {
+
+	stop
+	start
+
+}
+ 
+status() {
+	$LYNX $STATUSURL | awk ' /process$/ { print; exit } { print } '
+}
+
+fullstatus () {
+	$LYNX $STATUSURL
+}
+
+configtest () {
+	if $HTTPD -t; then
+	    :
+	else
+	    ERROR=8
+	fi
+}
+
+doservice ${@}
+

@@ -1,0 +1,24 @@
+# Configuretion at gentoolinux.mydomain
+def_bindir='/usr/bin'
+def_libdir='/usr/lib/w3m'
+def_helpdir='/usr/lib/w3m'
+pref_lang=2
+lynx_key=n
+ftppass_hostnamegen=n
+show_params=n
+use_nntp=n
+use_color=y
+use_menu=y
+use_mouse=y
+use_cookie=y
+use_ssl=y
+dmodel=5
+use_ssl_verify=y
+ded='/usr/bin/vi'
+dmail='mailx'
+dbrowser='/usr/X11R6/bin/netscape'
+dcc='gcc'
+dcflags='-O6 -mpentium'
+dtermlib='-lncurses'
+dldflags=''
+
