@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.11 2004/11/17 18:56:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.12 2004/12/08 14:27:23 eradicator Exp $
+
+IUSE="dedicated opengl alsa"
 
 inherit games
 
@@ -12,14 +14,13 @@ SRC_URI="mirror://3dgamers/pub/3dgamers4/games/wolfensteinet/et-linux-${PV}-2.x8
 LICENSE="RTCW-ETEULA"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="dedicated opengl"
 RESTRICT="nomirror nostrip"
 
 DEPEND="virtual/libc"
 RDEPEND="dedicated? ( app-misc/screen )
 	!dedicated? ( virtual/opengl )
 	opengl? ( virtual/opengl )
-	amd64? ( app-emulation/emul-linux-x86-xlibs )"
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0-r1 )"
 
 S="${WORKDIR}"
 dir="${GAMES_PREFIX_OPT}/${PN}"
@@ -46,6 +47,11 @@ src_install() {
 
 	dogamesbin "${FILESDIR}/et" || die "dogamesbin failed"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/et
+
+	if use amd64 && use alsa; then
+		dosed 's:exec:aoss32 exec:' ${GAMES_BINDIR}/et
+	fi
+
 	if use dedicated ; then
 		dogamesbin "${FILESDIR}/et-ded" || die "dogamesbin failed"
 		dosed "s:GENTOO_DIR:${dir}:" "${GAMES_BINDIR}/et-ded"

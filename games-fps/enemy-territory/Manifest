@@ -1,8 +1,18 @@
-MD5 038e75efda3cd82e79bb1e5f0dbafb85 ChangeLog 2812
-MD5 94f1cfe6706797434331dba9cb98a24a enemy-territory-2.56-r2.ebuild 2505
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 138c7429be60684b9e5a9f3843e7a320 ChangeLog 2993
+MD5 f32ceb9c21a024f478ab56aea4f8bce2 enemy-territory-2.56-r2.ebuild 2609
 MD5 f414f5eb26874bc33efe3ac1f0beab5d metadata.xml 1049
 MD5 4923bd56bd1be4356324b1af17f47ac5 files/digest-enemy-territory-2.56-r2 71
 MD5 9706616a064d2425aa5d8d8775995955 files/et 43
 MD5 69d783cd9fed81e4aacd11281d36ebe9 files/et-ded 46
 MD5 51ae531a8796cf809651bae90f744db6 files/et-ded.conf.d 333
 MD5 579bf10dab41adc4d91b9981801e2770 files/et-ded.rc 874
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtw9tArHZZzCEUG0RAkRCAJ9NmAhAvrlI3ehMsaF8FFBzLSwfXACeIDts
+DQgdhXFPBQqKMzbu1A1/zUE=
+=Kryy
+-----END PGP SIGNATURE-----
