@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.3.ebuild,v 1.3 2003/02/13 09:17:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.3.ebuild,v 1.4 2003/03/01 01:13:50 vapier Exp $
 
-DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
+DESCRIPTION="WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
 HOMEPAGE="http://www.lyx.org/"
 
@@ -20,7 +20,6 @@ DEPEND="virtual/x11
 	>=sys-devel/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus"
-
 RDEPEND="${DEPEND}
 	app-text/ghostscript
 	app-text/xpdf

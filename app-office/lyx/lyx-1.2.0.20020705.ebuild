@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.11 2003/02/13 09:17:44 vapier Exp $
-
-IUSE="nls cups"
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.12 2003/03/01 01:13:50 vapier Exp $
 
 S=${WORKDIR}/lyx-devel
-DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
+DESCRIPTION="WYSIWYM frontend for LaTeX"
 SRC_URI="mirror://gentoo//${P}.tar.bz2"
 HOMEPAGE="http://www.lyx.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
+IUSE="nls cups"
 
 # This lyx-base ebuild only depends on the absolutely necessary packages.
 # The acompanying lyx-utils ebuild depends on lyx-base and on everything
@@ -37,7 +36,6 @@ RDEPEND="${DEPEND}
 	app-text/chktex"
 
 src_compile() {
-	
 	use nls || myconf="${myconf} --disable-nls"
 	[ -n "$DEBUG" ] && myconf="$myconf --enable-debug" || myconf="$myconf --disable-debug"
 	
@@ -54,11 +52,10 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	# The 'install-strip' target is provided by the LyX makefile
 	# for stripping installed binaries.  Use prefix= instead of
 	# DESTDIR=, otherwise it violates the sandbox in the po directory.
-	make prefix=${D}/usr install
+	make prefix=${D}/usr install || die
 	dodoc README* UPGRADING INSTALL* ChangeLog NEW COPYING ANNOUNCE ABOUT-NLS
 }
-

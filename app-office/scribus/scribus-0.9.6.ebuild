@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.9.6.ebuild,v 1.2 2003/02/13 09:20:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.9.6.ebuild,v 1.3 2003/03/01 01:16:08 vapier Exp $
 
-DESCRIPTION="Scribus is a Layout program"
-HOMEPAGE="http://web2.altmuehlnet.de/fschmid"
+DESCRIPTION="Layout program similar to Adobe® PageMaker, QuarkXPress, or Adobe® InDesign"
+HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"
 SRC_URI="http://web2.altmuehlnet.de/fschmid/${P}.tar.gz"
 
 SLOT="0"
@@ -17,13 +17,13 @@ DEPEND="=x11-libs/qt-3*
 	sys-libs/zlib"
 
 src_compile() {
-	econf
+	econf || die
 	emake CXXFLAGS="${CXXFLAGS} -I/usr/include/lcms" || die
 	mv debian/scribus-debian.xpm debian/scribus.xpm
 }
 
 src_install() {
-	einstall destdir=${D}
+	einstall destdir=${D} || die
 
 	dodoc AUTHORS ChangeLog README TODO
 
