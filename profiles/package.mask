@@ -842,7 +842,7 @@ x11-base/xdirectfb
 
 #g2boojum@gentoo.org 27 June 2002
 # masked until we get the cups ghostscript in portage
->=net-print-cups-1.1.15
+>=net-print/cups-1.1.15
 
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
