@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.8 2003/07/19 22:55:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.9 2003/09/13 07:05:15 obz Exp $
 
 MY_PN=${PN/-sgml/}
 MY_P=${MY_PN}-${PV}
@@ -24,7 +24,8 @@ DEPEND=">=dev-lang/perl-5
 	=app-text/docbook-sgml-dtd-3.1-r1
 	=app-text/docbook-sgml-dtd-4.0-r1
 	=app-text/docbook-sgml-dtd-4.1-r1
-	tetex? ( app-text/jadetex )"
+	tetex? ( app-text/jadetex )
+	|| ( net-www/lynx net-www/links )"
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/docbook-sgml-utils-frontend.patch || die

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.14 2003/09/13 06:05:26 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.15 2003/09/13 07:05:15 obz Exp $
+
+  13 Sep 2003; Mike Gardiner <obz@gentoo.org>
+  docbook-sgml-utils-0.6.11-r2.ebuild, docbook-sgml-utils-0.6.12-r1.ebuild,
+  docbook-sgml-utils-0.6.12.ebuild:
+  Added dependency on lynx or links for docbook2txt, see bug #22856
 
 *docbook-sgml-utils-0.6.12-r1 (13 Sep 2003)
 
