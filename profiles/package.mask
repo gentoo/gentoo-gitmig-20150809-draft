@@ -205,13 +205,6 @@ net-www/zope
 #>=media-video/nvidia-glx-1.0.2880
 #>=x11-base/xfree-4.2.0-r9
 
-#GNUCash-1.6* do not work with these
-# guile-1.5 changed function names of 1.4
-# g-wrap-1.3.* is unstable series, where 1.2.* the stable is
-# -- Azarah (17 March 2002)
->=dev-util/guile-1.5
->=dev-libs/g-wrap-1.3
-
 # drobbins, 16 Mar 2002: This kernel sucks :)
 =sys-kernel/linux-sources-2.4.18
 
@@ -734,8 +727,8 @@ dev-libs/libmrproject
 >=app-office/mrproject-0.5.91
 >=app-office/gnumeric-1.1.3
 
-# spider@gentoo.org ; 18 Apr 2002
-# development branch against gtk+-2.0 (libsigc++ is dependency)
+>=dev-util/guile-1.5
+>=dev-libs/g-wrap-1.3
 >=x11-libs/gtkmm-1.3.0
 >=dev-libs/libsigc++-1.1.0
 >=dev-python/pygtk-1.99.0
