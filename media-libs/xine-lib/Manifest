@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5b840f21929f96a86e005e3128e866cc ChangeLog 28160
+MD5 6fb7610863b59f442956c19dfba2aeb0 ChangeLog 28259
 MD5 af08cabbae4b191018ca153392a86bea metadata.xml 304
 MD5 b25152bddc933afdf390149b07f2ff43 xine-lib-1_rc5-r3.ebuild 5473
 MD5 a53b6f55661ef41e343932ceb7108cc3 xine-lib-1_rc6.ebuild 5358
 MD5 d2d62f59048715eaf85d88a90842729d xine-lib-1_rc7.ebuild 5327
+MD5 cb60e0c8c41802098a6f05ecd0ce21de xine-lib-1_rc8-r1.ebuild 5469
 MD5 d9591aa743f1cbe61c93c98846b139b2 xine-lib-1_rc8.ebuild 5380
-MD5 57bfe5d908fa622f554cb057c2e543b0 xine-lib-1_rc8-r1.ebuild 5522
 MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
 MD5 044cbe825fc480693aec675808e4c679 files/digest-xine-lib-1_rc5-r3 67
 MD5 082b3ed1c96543704d604199047b1dee files/digest-xine-lib-1_rc6 68
 MD5 98e135f240fada719668b012c77b40be files/digest-xine-lib-1_rc7 67
+MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8 67
+MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8-r1 67
+MD5 54088d42a9e9980285a96b7e2cce19cf files/djb_demux_aiff.patch 559
 MD5 5e99bec89f5cc4f0d00bcd61430d67cb files/protect-CFLAGS.patch-1_rc2 597
 MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc3 597
 MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc4 597
@@ -36,15 +39,12 @@ MD5 a52bac7d568413597e0c7932b164e58c files/xine-lib-2.6.patch 594
 MD5 0cf698a9ff87a3595140d92df7b900b6 files/xine-lib-configure.patch 342
 MD5 aa54582a91933533008c1211dcbcfb35 files/xine-lib-disable-directfb.patch 4169
 MD5 3cbdef8aa211184b96474addb4f7c5d6 files/xine-lib-gcc34.patch 423
-MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
-MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8 67
-MD5 54088d42a9e9980285a96b7e2cce19cf files/djb_demux_aiff.patch 559
 MD5 5d2c3c00bf3ae9a89dfcaa8b5c5b17a2 files/xine-lib-x11.patch 703
-MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8-r1 67
+MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBy5pgFdQwWVoAgN4RAqLBAKDtP8Y6OPKxQXW33rZV3xp2qimt5gCfbGqM
-rc3c52FkX4bWhJHlxSpmSnI=
-=CdWj
+iD8DBQFBzi3lFdQwWVoAgN4RAq6xAJwL614/reY8n40TmRBWlSAPR9q0TQCffyZy
+K5hG8wef5JnGQEurqRZQebs=
+=vsGS
 -----END PGP SIGNATURE-----
