@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/iksemel
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iksemel/ChangeLog,v 1.1 2004/08/16 03:54:52 squinky86 Exp $
+
+*iksemel-1.2 (15 Aug 2004)
+
+  15 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +iksemel-1.2.ebuild:
+  Initial import, closes #60370. Thanks to S.Caglar Onur
+  <caglar.onur@tubitak.gov.tr> for the ebuild.
+
