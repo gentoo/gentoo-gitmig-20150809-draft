@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.10 2004/07/14 15:01:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.11 2004/09/23 15:30:03 vapier Exp $
 
 inherit libtool
 
@@ -8,23 +8,25 @@ DESCRIPTION="Shared Memory Abstraction Library"
 HOMEPAGE="http://www.ossp.org/pkg/lib/mm/"
 SRC_URI="ftp://ftp.ossp.org/pkg/lib/mm/${P}.tar.gz"
 
-DEPEND="virtual/libc"
-
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ia64 mips"
+KEYWORDS="alpha arm hppa ia64 mips ~ppc ~sparc ~x86"
 IUSE=""
 
-src_compile() {
+DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	elibtoolize
-	econf --host=${CHOST} || die "bad ./configure"
-	make || die "compile problem"
+}
+
+src_test() {
 	make test || die "testing problem"
 }
 
 src_install() {
-	einstall || die
-	dodoc README LICENSE ChangeLog INSTALL PORTING THANKS
-
-	dosym /usr/lib/libmm.so /usr/lib/libmm.so.1
+	make install DESTDIR=${D} || die
+	dodoc README ChangeLog INSTALL PORTING THANKS
+	dosym libmm.so /usr/lib/libmm.so.1
 }
