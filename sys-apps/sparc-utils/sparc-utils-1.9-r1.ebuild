@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r1.ebuild,v 1.4 2003/06/23 00:17:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r1.ebuild,v 1.5 2003/08/16 13:48:42 weeve Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${P}.orig
-DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
+DESCRIPTION="Various sparc utilites from Debian GNU/Linux"
 HOMEPAGE="http://www.debian.org/"
 SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://gentoo/${PN}_${PV}-2.diff.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86 -amd64 -ppc -alpha -mips -hppa -arm sparc"
+KEYWORDS="-* sparc"
 
 DEPEND="sys-kernel/linux-headers"
 RDEPEND="virtual/glibc"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sparc-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.10 2003/06/22 19:36:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.11 2003/08/16 13:48:42 weeve Exp $
+
+  16 Aug 2003; Jason Wever <weeve@gentoo.org> metadata.xml,
+  sparc-utils-1.9-r1.ebuild, sparc-utils-1.9.ebuild:
+  Ebuild updates and addition of metadata.xml
 
   22 Jun 2003; Jason Wever <weeve@gentoo.org> sparc-utils-1.9-r1.ebuild,
   sparc-utils-1.9.ebuild:
