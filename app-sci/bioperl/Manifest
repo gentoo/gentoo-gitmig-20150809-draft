@@ -2,6 +2,7 @@ MD5 d83f077ff4deca282a614098204649d5 ChangeLog 870
 MD5 8e47663b52056acabfe389fff6515abd bioperl-1.0.2.ebuild 1549
 MD5 4b53e5b83a67807a46ba90f2260fddb0 bioperl-1.2.ebuild 1572
 MD5 5bd49c63392ef31a2e57d49237a129ca bioperl-1.2.2.ebuild 2275
+MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 1828ff2ba6225e17a98d27bfbad5c7c9 files/bioperl-1.2-manpage.diff 712
 MD5 dfdb9921cbef92f60e9746a9531d8de7 files/digest-bioperl-1.0.2 66
 MD5 14b9e16331895fe40e231065f7dda942 files/digest-bioperl-1.2 64
