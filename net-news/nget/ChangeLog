@@ -1,6 +1,12 @@
 # ChangeLog for net-news/nget
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.10 2004/07/01 22:39:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.11 2004/07/15 00:36:24 swegener Exp $
+
+*nget-0.27 (15 Jul 2004)
+
+  15 Jul 2004; Sven Wegener <swegener@gentoo.org> -nget-0.22.1.ebuild,
+  -nget-0.24.2.ebuild, -nget-0.25.ebuild, +nget-0.27.ebuild:
+  Version bump and cleaned out older ebuilds.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nget-0.22.1.ebuild,
   nget-0.24.2.ebuild, nget-0.25.ebuild, nget-0.26.ebuild:
