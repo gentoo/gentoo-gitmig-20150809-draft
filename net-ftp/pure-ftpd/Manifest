@@ -1,18 +1,28 @@
-MD5 cabbf63b46a78767ab82db5404f25725 pure-ftpd-1.0.17a.ebuild 2253
-MD5 ad888f818961e3f2935bfc2f0f69efd9 pure-ftpd-1.0.16b.ebuild 2241
-MD5 b3f21bbfe78502ea91bf12e2369a7e1b pure-ftpd-1.0.18-r1.ebuild 2403
-MD5 16b9f1b50d0b4aac8d8ff0375ad8ed64 pure-ftpd-1.0.18.ebuild 2307
-MD5 f062f4cf2bdee907a91054eaf8b3f16a pure-ftpd-1.0.16c.ebuild 2246
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9554fe339d0975969561b50cabfbad74 ChangeLog 4748
 MD5 12158b386c76f1fa317b9b474abfb30e metadata.xml 249
+MD5 ad888f818961e3f2935bfc2f0f69efd9 pure-ftpd-1.0.16b.ebuild 2241
+MD5 f062f4cf2bdee907a91054eaf8b3f16a pure-ftpd-1.0.16c.ebuild 2246
+MD5 cabbf63b46a78767ab82db5404f25725 pure-ftpd-1.0.17a.ebuild 2253
+MD5 16b9f1b50d0b4aac8d8ff0375ad8ed64 pure-ftpd-1.0.18.ebuild 2307
+MD5 7cfe5a996134493b745c8d14750ff4e6 pure-ftpd-1.0.18-r1.ebuild 2344
 MD5 0e2de54a63d8f1c4a44d15f95e38b044 files/digest-pure-ftpd-1.0.16b 70
 MD5 f1a1d4817df4539dc199812979aac307 files/digest-pure-ftpd-1.0.16c 70
-MD5 48f295e6b7a19f3b4da8388a21e2e435 files/digest-pure-ftpd-1.0.17a 70
-MD5 3337c87446dfd6df440449cacecfee17 files/pure-ftpd.rc6 700
 MD5 458b5d7567f55f4257ea1a6bfe3ff150 files/ftpusers 177
-MD5 f2a93e08e2a874ad4776e24ab3e0d9a7 files/pure-ftpd-1.0.18-fcntl.patch 1220
 MD5 6950e43cd48fea12490706463e0a6f9b files/pure-ftpd.conf_d 2287
-MD5 aae5d284df1fe729a6f3c7a57d9034e8 files/pure-ftpd.rc6-r1 747
+MD5 2ef46b78d137d97c7c2197a32a23047b files/pure-ftpd.rc6 701
+MD5 f5d5ce92869df4c8c0148634e87487a6 files/pure-ftpd.rc6-r1 748
 MD5 86b7638f0ed01530fff30204ba6b5ce7 files/pure-ftpd.xinetd 238
-MD5 d774a3f199df590cbbaa83ac80dfa93b files/digest-pure-ftpd-1.0.18-r1 69
+MD5 48f295e6b7a19f3b4da8388a21e2e435 files/digest-pure-ftpd-1.0.17a 70
 MD5 d774a3f199df590cbbaa83ac80dfa93b files/digest-pure-ftpd-1.0.18 69
+MD5 d774a3f199df590cbbaa83ac80dfa93b files/digest-pure-ftpd-1.0.18-r1 69
+MD5 f2a93e08e2a874ad4776e24ab3e0d9a7 files/pure-ftpd-1.0.18-fcntl.patch 1220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA21/rHTu7gpaalycRAj9YAKD7ZEZuh7zLHNz9sS2U4Tsq+9IwHgCaArHc
+7PfEcltcMpr2gCfyjbDqdBo=
+=wmEa
+-----END PGP SIGNATURE-----

@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18-r1.ebuild,v 1.5 2004/06/24 22:47:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18-r1.ebuild,v 1.6 2004/06/24 23:12:20 vapier Exp $
 
 inherit eutils
 
-IUSE="pam mysql postgres ldap ssl"
-
-DESCRIPTION="Pure-FTPd is a fast, production-quality, standard-conformant FTP server"
-SRC_URI="ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/${P}.tar.bz2"
+DESCRIPTION="fast, production-quality, standard-conformant FTP server"
 HOMEPAGE="http://www.pureftpd.org/"
+SRC_URI="ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/${P}.tar.bz2"
 
+LICENSE="BSD"
 SLOT="0"
-LICENSE="BSD" # Changed from GPL-2 to BSD 06/09/2003
-KEYWORDS="~x86 ~ppc sparc alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ~ia64"
+IUSE="pam mysql postgres ldap ssl"
 
 DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -50,9 +49,9 @@ src_compile() {
 }
 
 src_install() {
-	einstall
+	einstall || die
 
-	dodoc AUTHORS CONTACT COPYING ChangeLog FAQ HISTORY INSTALL README* NEWS
+	dodoc AUTHORS CONTACT ChangeLog FAQ HISTORY INSTALL README* NEWS
 
 	use pam && cp ${FILESDIR}/ftpusers ${D}/etc/ftpusers
 	use pam && insinto /etc/pam.d && doins pam/pure-ftpd
@@ -69,7 +68,7 @@ src_install() {
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/pure-ftpd.xinetd pure-ftpd
 
-	if use ldap; then
+	if use ldap ; then
 		dodir /etc/openldap/schema
 		insinto /etc/openldap/schema
 		doins pureftpd.schema
