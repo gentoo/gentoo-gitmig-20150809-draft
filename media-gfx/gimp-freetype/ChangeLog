@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/gimp-freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.4 2003/01/16 12:49:06 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.5 2003/01/16 23:54:44 leonardop Exp $
 
 *gimp-freetype-0.2-r3 (16 Jan 2003)
+
+  16 Jan 2003; Leonardo Boshell <leonardop@gentoo.org> : Fix for sandbox
+  violation (bug #14030).
 
   16 Jan 2003; Jared Hudson <jhhudso@gentoo.org> : Fixed install bug where
   gimp-freetype was installing help files to /var/tmp/portage/
