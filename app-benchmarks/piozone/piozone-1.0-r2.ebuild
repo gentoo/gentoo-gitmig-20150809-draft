@@ -7,7 +7,7 @@ HOMEPAGE="http://www2.lysator.liu.se/~pen/piozone/"
 LICENSE="GPL-2"
 
 DEPEND="sys-devel/gcc"
-	   
+
 IUSE=""
 SLOT="0"
 KEYWORDS="~x86"
