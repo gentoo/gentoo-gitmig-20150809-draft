@@ -1,0 +1,25 @@
+diff -ur dasher-3.2.11.orig/configure dasher-3.2.11/configure
+--- dasher-3.2.11.orig/configure	2004-08-02 23:56:24.000000000 +0200
++++ dasher-3.2.11/configure	2005-01-23 09:53:07.000000000 +0100
+@@ -11258,18 +11300,18 @@
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ 	  done
+-	  if test "x$XTST_LIBS" = x; then
+-	    { { echo "$as_me:$LINENO: error: Couldn't find the Xtst library. Check config.log for details" >&5
++	fi
++	if test "x$XTST_LIBS" = x; then
++	  { { echo "$as_me:$LINENO: error: Couldn't find the Xtst library. Check config.log for details" >&5
+ echo "$as_me: error: Couldn't find the Xtst library. Check config.log for details" >&2;}
+    { (exit 1); exit 1; }; }
+-	  else
+-	    X_LIBS="$X_LIBS $XTST_LIBS"
++	else
++	  X_LIBS="$X_LIBS $XTST_LIBS"
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_XTST 1
+ _ACEOF
+ 
+-	  fi
+ 	fi

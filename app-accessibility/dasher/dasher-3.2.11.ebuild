@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.11.ebuild,v 1.8 2005/01/17 20:15:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.11.ebuild,v 1.9 2005/02/12 08:02:32 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A text entry interface, driven by continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
@@ -38,3 +38,11 @@ G2CONF="${G2CONF} $(use_with gnome) $(use_with accessibility a11y) \
 $(use_with accessibility speech)"
 
 DOCS="ABOUT-NLS AUTHORS ChangeLog MAINTAINERS NEWS README"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix test phase for the xtst library
+	epatch ${FILESDIR}/${P}-xtst_fix.patch
+}
