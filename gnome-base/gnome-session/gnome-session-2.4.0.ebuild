@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.0.ebuild,v 1.10 2003/12/13 01:01:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.0.ebuild,v 1.11 2004/01/26 00:23:42 vapier Exp $
 
 inherit gnome2
 
@@ -39,7 +39,7 @@ src_unpack() {
 	# but it doesn't hurt elsewhere.
 #	epatch ${FILESDIR}/${PN}-2.0.9-64bit.patch || die
 
-#	WANT_AUTOCONF_2_5=1 autoconf || die
+#	WANT_AUTOCONF=2.5 autoconf || die
 #	automake
 }
 

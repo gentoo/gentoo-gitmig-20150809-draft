@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1-r2.ebuild,v 1.4 2004/01/16 20:54:07 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1-r2.ebuild,v 1.5 2004/01/26 00:24:49 vapier Exp $
 
 inherit gnome2
 
@@ -60,7 +60,7 @@ src_unpack() {
 	use gstreamer && epatch ${FILESDIR}/${PN}-2-icon_view_gst_audio_preview.patch
 	# add libgnomeprint support
 	use cups && epatch ${FILESDIR}/${PN}-2-x-printers.patch
-	WANT_AUTOCONF_2_5=1 autoheader || die
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	WANT_AUTOCONF=2.5 autoheader || die
+	WANT_AUTOCONF=2.5 autoconf || die
 	WANT_AUTOMAKE=1.4 automake || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.1.1.ebuild,v 1.3 2004/01/18 14:36:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.1.1.ebuild,v 1.4 2004/01/26 00:23:12 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 	cd ${S}
 	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in
 
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	WANT_AUTOCONF=2.5 autoconf || die
 	WANT_AUTOMAKE=1.4 automake || die
 
 	# Fix bug 16853 by building gnome-about with IEEE to prevent

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.12 2003/12/13 00:21:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.13 2004/01/26 00:24:49 vapier Exp $
 
 inherit gnome2
 
@@ -57,7 +57,7 @@ src_unpack() {
 
 	if [ `use cups` ]; then
 		epatch ${FILESDIR}/${PN}-2-x-printers.patch
-		WANT_AUTOCONF_2_5=1 autoconf || die
+		WANT_AUTOCONF=2.5 autoconf || die
 		WANT_AUTOMAKE=1.6 automake || die
 	fi
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1.ebuild,v 1.3 2003/12/07 23:40:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1.ebuild,v 1.4 2004/01/26 00:24:49 vapier Exp $
 
 inherit gnome2
 
@@ -60,8 +60,8 @@ src_unpack() {
 
 	# regenerating only needed with patching
 	if [ `use cups` ] || [ `use gstreamer` ]; then
-		WANT_AUTOCONF_2_5=1 autoheader || die
-		WANT_AUTOCONF_2_5=1 autoconf || die
+		WANT_AUTOCONF=2.5 autoheader || die
+		WANT_AUTOCONF=2.5 autoconf || die
 		WANT_AUTOMAKE=1.4 automake || die
 	fi
 
