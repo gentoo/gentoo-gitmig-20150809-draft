@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ermixer-0.8.ebuild,v 1.8 2003/07/02 22:23:15 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ermixer-0.8.ebuild,v 1.9 2003/09/03 16:57:04 taviso Exp $
 
 DESCRIPTION="A full featured console-based audio mixer."
 HOMEPAGE="http://ermixer.sourceforge.net"
@@ -10,7 +10,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 		qt? ( x11-libs/qt )"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc alpha"
 
 SRC_URI="mirror://sourceforge/ermixer/${P}.tar.gz"
 S="${WORKDIR}/${P}"
