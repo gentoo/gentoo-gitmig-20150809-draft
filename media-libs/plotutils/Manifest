@@ -1,8 +1,18 @@
-MD5 cfadef3c00c8ed9e02ea53d16db69d22 ChangeLog 2472
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31a5504df11e0e16ed7926d7a74f6199 plotutils-2.4.1-r2.ebuild 2612
-MD5 d315a3c502ce6a6be13636bff4fd574d plotutils-2.4.1-r3.ebuild 2673
+MD5 aeaba0f669a3f733126c37ed09e5cd34 ChangeLog 2572
+MD5 033dfc107d02a880f3fd674d070c957a plotutils-2.4.1-r3.ebuild 2670
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r2 68
+MD5 3b5cdbb61e3d7337ad331b2da0e82315 files/plotutils-2.4.1-rangecheck.patch 1858
 MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r3 68
 MD5 37137ec05ee56b449d60098e9dd9c6e9 files/plotutils-2.4.1-gentoo.patch 2619
-MD5 3b5cdbb61e3d7337ad331b2da0e82315 files/plotutils-2.4.1-rangecheck.patch 1858
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBonW7ugEuf3OQ0akRAhXBAJ456otV3ypcwpp9lVr9WUIHKG/D7QCcCi6e
+y4GzGQvAGn/X7O6vtg7TR6E=
+=jRCf
+-----END PGP SIGNATURE-----
