@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.30 2004/10/06 11:41:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.31 2004/10/07 14:50:07 lanius Exp $
+
+*lesstif-0.93.97 (07 Oct 2004)
+
+  07 Oct 2004; Heinrich Wendel <lanius@gentoo.org> +lesstif-0.93.97.ebuild:
+  version bump for security reason; unfortunately the 1.2 build is no longer
+  provided, so we have to switch to 2.1
 
   06 Oct 2004; Guy Martin <gmsoft@gentoo.org> lesstif-0.93.94.ebuild:
   Stable on hppa.
