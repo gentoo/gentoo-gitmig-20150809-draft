@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.2 2004/06/27 10:15:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.3 2004/06/28 03:23:41 agriffis Exp $
 
 inherit eutils
 
@@ -48,13 +48,13 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug --enable-verbose-debug"
 
 	# select storage driver
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		myconf="${myconf} --with-storage-driver=mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
 
 		# an experimental feature available with MySQL backend
-		if [ `use neural` ] ; then
+		if use neural ; then
 			myconf="${myconf} --enable-neural-networking"
 		fi
 	else
@@ -91,7 +91,7 @@ src_install () {
 	# documentation
 	dodoc CHANGELOG LICENSE README RELEASE.NOTES
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		newdoc tools.mysql_drv/README README.MYSQL
 	fi
 
@@ -102,7 +102,7 @@ src_install () {
 	doins ${FILESDIR}/untrusted.mailer_args
 
 	# database related configuration and scripts
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		local PASSWORD="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
 
 		# Replace some variables in the configuration files
@@ -180,14 +180,14 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		einfo "To setup dspam to run out-of-the-box on your system with a mysql database, run:"
 		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	fi
 }
 
 pkg_config () {
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		${CONFIGDIR}/mysql_install_db
 		mv ${CONFIGDIR}/mysql.data ${HOMEDIR}
 	fi
