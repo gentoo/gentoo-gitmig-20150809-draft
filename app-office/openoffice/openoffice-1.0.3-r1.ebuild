@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.6 2003/09/07 10:02:33 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.7 2003/10/09 19:48:03 pappy Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -378,11 +378,23 @@ src_compile() {
 	export CXX="$(gcc-getCXX)"
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml - #27761
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	then
+    if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ] && has_version "sys-devel/hardened-gcc"
+    then
+        export CC="${CC} -yet_exec -fstack-protector"
+		export CXX="${CXX} -yet_exec -fstack-protector"
+    fi
+
+    if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
+    then
 		export CC="${CC} -yet_exec"
 		export CXX="${CXX} -yet_exec"
-	fi
+    fi
+
+    if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
+    then
+		export CC="${CC} -yet_exec"
+		export CXX="${CXX} -yet_exec"
+    fi
 
 	# Enable ccache for this build (Az)
 	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
