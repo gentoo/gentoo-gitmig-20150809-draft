@@ -61,7 +61,6 @@
 *sys-apps/ed
 *sys-apps/fbset
 *sys-apps/file
-*sys-apps/fileutils
 *sys-apps/findutils
 *sys-apps/gawk
 *sys-apps/grep
@@ -80,13 +79,12 @@
 *sys-apps/psmisc
 *sys-apps/sed
 *sys-apps/setserial
-*sys-apps/sh-utils
 *<sys-apps/shadow-5
 *sys-apps/pam-login
 *sys-apps/sharutils
 *sys-apps/tar
 *>=sys-apps/texinfo-4.2-r1
-*sys-apps/textutils
+*sys-apps/coreutils
 *sys-apps/util-linux
 *sys-apps/which
 *sys-devel/autoconf
