@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/spamcup
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.1 2004/09/19 20:53:42 ticho Exp $
+
+*spamcup-1.08 (19 Sep 2004)
+
+  19 Sep 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +spamcup-1.08.ebuild:
+  Initial version. Closes #42920.
+
