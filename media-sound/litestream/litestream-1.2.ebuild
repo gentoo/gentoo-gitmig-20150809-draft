@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/litestream-1.2.ebuild,v 1.1 2004/03/24 22:53:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/litestream-1.2.ebuild,v 1.2 2004/03/25 11:57:45 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="BSD"
 IUSE=""
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=""
 RDEPEND=""
