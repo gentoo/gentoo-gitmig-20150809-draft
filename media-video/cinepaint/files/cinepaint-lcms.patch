@@ -1,0 +1,92 @@
+diff -ur cinepaint-0.19-0_old/app/cms.h cinepaint-0.19-0/app/cms.h
+--- cinepaint-0.19-0_old/app/cms.h	2004-11-23 20:58:15.000000000 +0900
++++ cinepaint-0.19-0/app/cms.h	2005-03-19 03:48:07.864524744 +0900
+@@ -20,7 +20,7 @@
+ #ifndef __CMS_H__
+ #define __CMS_H__
+ 
+-#include <lcms.h>
++#include <lcms/lcms.h>
+ #include <gtk/gtk.h>
+ 
+ #include "canvas.h"
+diff -ur cinepaint-0.19-0_old/app/depth/commands.c cinepaint-0.19-0/app/depth/commands.c
+--- cinepaint-0.19-0_old/app/depth/commands.c	2004-12-04 05:25:34.000000000 +0900
++++ cinepaint-0.19-0/app/depth/commands.c	2005-03-19 03:48:40.364583984 +0900
+@@ -16,7 +16,7 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+  */
+ 
+-#include <lcms.h>
++#include <lcms/lcms.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+diff -ur cinepaint-0.19-0_old/app/look_profile.c cinepaint-0.19-0/app/look_profile.c
+--- cinepaint-0.19-0_old/app/look_profile.c	2004-11-23 20:58:14.000000000 +0900
++++ cinepaint-0.19-0/app/look_profile.c	2005-03-19 03:48:23.599132720 +0900
+@@ -1,5 +1,5 @@
+ #include <gtk/gtk.h>
+-#include <lcms.h>
++#include <lcms/lcms.h>
+ 
+ #include "../lib/version.h"
+ #include "actionarea.h"
+cinepaint-0.19-0だけに発見: cinepaint-configure.patch
+diff -ur cinepaint-0.19-0_old/configure cinepaint-0.19-0/configure
+--- cinepaint-0.19-0_old/configure	2005-01-02 03:40:51.000000000 +0900
++++ cinepaint-0.19-0/configure	2005-03-19 03:44:25.962259016 +0900
+@@ -21898,7 +21898,7 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <lcms.h>
++#include <lcms/lcms.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+@@ -21941,7 +21941,7 @@
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <lcms.h>
++#include <lcms/lcms.h>
+ _ACEOF
+ if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+   (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+cinepaint-0.19-0だけに発見: libtool
+diff -ur cinepaint-0.19-0_old/plug-ins/tiff/info.c cinepaint-0.19-0/plug-ins/tiff/info.c
+--- cinepaint-0.19-0_old/plug-ins/tiff/info.c	2004-12-31 20:58:29.000000000 +0900
++++ cinepaint-0.19-0/plug-ins/tiff/info.c	2005-03-19 03:49:23.415039320 +0900
+@@ -37,7 +37,7 @@
+ #include "tiff_plug_in.h"
+ #include "info.h"
+ 
+-#include <lcms.h>
++#include <lcms/lcms.h>
+ 
+ #ifndef DEBUG
+  /*#define DEBUG*/
+diff -ur cinepaint-0.19-0_old/plug-ins/tiff/tiff_plug_in.h cinepaint-0.19-0/plug-ins/tiff/tiff_plug_in.h
+--- cinepaint-0.19-0_old/plug-ins/tiff/tiff_plug_in.h	2004-11-23 21:17:14.000000000 +0900
++++ cinepaint-0.19-0/plug-ins/tiff/tiff_plug_in.h	2005-03-19 03:49:37.939831216 +0900
+@@ -79,7 +79,7 @@
+     #include <gtk/gtk.h>
+   #endif
+ #endif
+-#include <lcms.h>
++#include <lcms/lcms.h>
+ #if GIMP_MAJOR_VERSION == 0 && GIMP_MINOR_VERSION == 15
+   #include "libgimp/gimpcms.h"
+ #endif
+--- cinepaint-0.19-0_old/plug-ins/jpeg/jpeg.c	2005-03-19 04:01:43.243568288 +0900
++++ cinepaint-0.19-0/plug-ins/jpeg/jpeg.c	2005-03-19 04:02:19.068122128 +0900
+@@ -33,7 +33,7 @@
+ #include "lib/plugin_main.h"
+ 
+ #include <stdio.h>
+-#include "lcms.h"
++#include <lcms/lcms.h>
+ #include "iccjpeg.h"
+ 
+ 
