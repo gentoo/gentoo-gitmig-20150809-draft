@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.4 2003/03/26 23:30:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.5 2003/03/29 14:31:22 nakano Exp $
 
 IUSE="ssl nls slang cjk crypt imap"
 
@@ -12,7 +12,7 @@ S=$WORKDIR/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 	http://www.spinnaker.de/mutt/compressed/patch-${PV}.rr.compressed.1.gz
-	cjk? ( http://www.emaillab.org/mutt/1.5/mutt-${PV}i-ja.1.tar.gz )
+	cjk? ( http://www.emaillab.org/mutt/1.5/${P}i-ja.1.tar.gz )
 	http://cedricduval.free.fr/download/mutt/${edit_threads}"
 HOMEPAGE="http://www.mutt.org"
 
@@ -30,15 +30,17 @@ inherit flag-o-matic
 
 src_unpack() {
 	unpack ${P}i.tar.gz
-	if [ "`use cjk`" ]; then
-		unpack mutt-${P}i-ja.1.tar.gz
-		cd ${S}
-		epatch ../mutt-${PV}i-ja.1/patch-${PV}.tt.ja.1
-	fi
 
 	cd ${S}
 	epatch ${DISTDIR}/patch-${PV}.rr.compressed.1.gz
 	epatch ${DISTDIR}/${edit_threads}
+
+	if [ "`use cjk`" ]; then
+		cd ${WORKDIR}
+		unpack ${P}i-ja.1.tar.gz
+		cd ${S}
+		epatch ../${P}i-ja.1/patch-${PV}.tt.ja.1
+	fi
 }
 
 src_compile() {
