@@ -1,7 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.6 2002/07/16 04:19:53 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.7 2002/07/25 01:52:51 spider Exp $
 
+db-3.2.9 (25 Jul 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> :
+  add a fix to remove -fno-exceptions in CXXFLAGS as it doesnt build then
+  
 *db-4.0.14 (changelog entries missing/omitted?) - Gerk
 
 *db-1.85-r2 (8 May 2002)
