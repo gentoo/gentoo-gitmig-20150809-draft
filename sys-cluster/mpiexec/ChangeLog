@@ -1,12 +1,13 @@
 # ChangeLog for sys-cluster/mpiexec
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/ChangeLog,v 1.4 2004/04/19 19:28:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/ChangeLog,v 1.5 2004/04/27 09:16:18 aliz Exp $
 
   19 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; mpiexec-0.74-r1.ebuild,
   mpiexec-0.75.ebuild:
   Move SMP check from global scope to pkg_setup() (#48352).
 
 *mpiexec-0.74-r1 (25 Mar 2004)
+*mpiexec-0.75 (25 Mar 2004)
 
   25 Mar 2004; Michael Imhof <tantive@gentoo.org> mpiexec-0.74-r1.ebuild,
   mpiexec-0.74.ebuild, mpiexec-0.75.ebuild:
