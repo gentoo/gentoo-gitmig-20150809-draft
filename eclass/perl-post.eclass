@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-post.eclass,v 1.7 2002/07/27 18:28:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-post.eclass,v 1.8 2002/08/16 12:20:48 mcummings Exp $
 # The perl-post eclass is designed to allow the ${installarchdir}/perllocal.pod
 # file to be updated cleanly after perl and/or perl-modules are installed
 # or removed.
@@ -11,6 +11,7 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 	perlinfo updatepod
 
+SITE_LIB=""
 ARCH_LIB=""
 POD_DIR=""
 
@@ -46,7 +47,9 @@ perl-post_perlinfo() {
 	if [ -f /usr/bin/perl ]
 	then 
 		eval `perl '-V:installarchlib'`
+		eval `perl '-V:installsitearch'`
 		ARCH_LIB=${installarchlib}
+		SITE_LIB=${installsitearch}
 
 		eval `perl '-V:version'`
 		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
@@ -59,6 +62,18 @@ perl-post_updatepod() {
 
 	if [ -d "${POD_DIR}" ]
 	then
-		cat ${POD_DIR}/*.pod > ${ARCH_LIB}/perllocal.pod
+		for FILE in `find ${POD_DIR} -type f -name "*.pod.arch"`; do
+		   cat ${FILE} >> ${ARCH_LIB}/perllocal.pod
+		   rm -f ${FILE}
+		done
+		for FILE in `find ${POD_DIR} -type f -name "*.pod.site"`; do
+		   cat ${FILE} >> ${SITE_LIB}/perllocal.pod
+		   rm -f ${FILE}
+		done
+				   
+		#cat ${POD_DIR}/*.pod.arch >> ${ARCH_LIB}/perllocal.pod
+		#cat ${POD_DIR}/*.pod.site >> ${SITE_LIB}/perllocal.pod
+		#rm -f ${POD_DIR}/*.pod.site
+		#rm -f ${POD_DIR}/*.pod.site
 	fi
 }
