@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-finespectrum
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/ChangeLog,v 1.6 2004/09/15 19:25:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/ChangeLog,v 1.7 2004/11/27 20:22:11 corsair Exp $
+
+  27 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  xmms-finespectrum-1.0.1_alpha1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72244
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-finespectrum-1.0.1_alpha1.ebuild:
