@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r7.ebuild,v 1.1 2004/03/16 21:33:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r7.ebuild,v 1.2 2004/04/06 03:17:56 vapier Exp $
 
 IUSE=""
 
-inherit eutils
+inherit eutils flag-o-matic
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Daemon for the Linux Device Filesystem"
