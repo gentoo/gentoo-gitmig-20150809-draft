@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.54 2004/02/02 14:31:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.55 2004/02/05 16:45:25 lu_zero Exp $
+
+  05 Feb 2004; Luca Barbato <lu_zero@gentoo.org> kdeutils-3.2.0.ebuild:
+  Marked ~ppc
 
 *kdeutils-3.2.0_rc1 (02 Feb 2004)
 

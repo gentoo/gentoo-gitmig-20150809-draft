@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.52 2004/02/02 14:30:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.53 2004/02/05 16:44:53 lu_zero Exp $
+
+  05 Feb 2004; Luca Barbato <lu_zero@gentoo.org> kdetoys-3.2.0.ebuild:
+  Marked ~ppc
 
 *kdetoys-3.2.0 (02 Feb 2004)
 
