@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.705 2004/11/02 00:41:30 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.706 2004/11/02 01:42:39 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -502,8 +502,8 @@ net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
 net-misc/asterisk:nopri - Disable pri support
 net-misc/asterisk:nozaptel - Disable zaptel support
-net-misc/asterisk:pri - Enables pri support
-net-misc/asterisk:zaptel - Enables zaptel support
+net-misc/asterisk:pri - Enables pri support (>=asterisk-1.0.1)
+net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gnugk:accounting - Enables call logging (accounting)
