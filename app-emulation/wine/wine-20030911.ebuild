@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030911.ebuild,v 1.1 2003/09/13 07:03:17 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030911.ebuild,v 1.2 2003/09/13 10:07:04 mholzer Exp $
 
 inherit eutils base
 
@@ -33,9 +33,6 @@ src_unpack() {
 	base_src_unpack
 	cd ${S}
 	epatch ${DISTDIR}/${P}-xopenfont.patch
-
-	#cd ${S}/dlls/oleaut32/
-	#patch -R < ${FILESDIR}/kpp-fix.patch
 }
 
 src_compile() {
@@ -54,11 +51,10 @@ src_compile() {
 		`use_with nptl` \
 		`use_enable debug trace` \
 		`use_enable debug` \
-		|| die
+		|| die "configure failed"
 
 	cd ${S}/programs/winetest
-	cp Makefile 1
-	sed -e 's:wine.pm:include/wine.pm:' 1 > Makefile
+	sed -i 's:wine.pm:include/wine.pm:' Makefile
 
 	# No parallel make
 	cd ${S}
