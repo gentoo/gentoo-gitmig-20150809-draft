@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/kentoo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kentoo/ChangeLog,v 1.1 2004/07/28 20:32:58 centic Exp $
+
+*kentoo-0.3 (28 Jul 2004)
+
+  28 Jul 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +kentoo-0.3.ebuild:
+  Add new package, fixes Bug 58678
+
