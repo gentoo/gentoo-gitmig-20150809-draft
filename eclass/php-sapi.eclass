@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.42 2004/07/14 16:09:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.43 2004/07/15 04:15:30 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -236,6 +236,7 @@ php-sapi_check_java_config() {
 }
 
 php-sapi_src_unpack() {
+	php-sapi_warning_mssql_freetds
 	# this is obsolete
 	# use xml || \
 	# ( ewarn "You have the xml USE flag turned off. Previously this"
@@ -631,6 +632,7 @@ php-sapi_pkg_preinst() {
 
 php-sapi_pkg_postinst() {
 	einfo "The INI file for this build is ${PHPINIDIRECTORY}/php.ini"
+	php-sapi_warning_mssql_freetds
 	if has_version 'dev-php/php-core'; then
 		ewarn "The dev-php/php-core package is now obsolete. You should unmerge"
 		ewarn "it, and re-merge >=dev-php/php-4.3.4-r2 afterwards to ensure"
@@ -647,4 +649,11 @@ php-sapi_securityupgrade() {
 		einfo "This is a security upgrade for PHP!"
 		einfo "However it is not critical for your machine"
 	fi
+}
+
+php-sapi_warning_mssql_freetds() {
+	ewarn "If you have both freetds and mssql in your USE flags, parts of PHP"
+	ewarn "may not behave correctly, or may give strange warnings. You have"
+	ewarn "been warned! It's recommended that you pick ONE of them. For sybase"
+	ewarn "support, chose 'freetds'. For mssql support choose 'mssql'."
 }
