@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.23 2004/07/09 11:17:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.24 2004/07/21 00:27:24 eradicator Exp $
+
+*sound-juicer-0.5.12-r1 (20 Jul 2004)
+
+  20 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +sound-juicer-0.5.12-r1.ebuild:
+  Revision bump for lame encoding support. Thanks to Marc Heerdink
+  <marc@koelkast.net>. Closes bug #57750.
 
 *sound-juicer-0.5.12 (09 Jul 2004)
 
