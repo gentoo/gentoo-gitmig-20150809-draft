@@ -1,3 +1,5 @@
+MD5 5f34a572b2c1feb65e237e7c52ab6567 ChangeLog 638
+MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+MD5 929492cbbfd1c68e57b2c03926bf8f36 happy-1.13.ebuild 763
 MD5 95a35d94c76b8652438bef694f5041ea files/digest-happy-1.13 66
-MD5 965159c09f9e3a106315a4d95daf6365 ChangeLog 477
-MD5 e90dafe061fd58b561eca1545b76116e happy-1.13.ebuild 669
+MD5 867164cb216f479dbf37c872b3babd0e files/happy-1.13-pragma.patch.bz2 498

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/happy
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.1 2003/04/22 08:23:02 kosmikus Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.2 2004/01/06 12:18:12 kosmikus Exp $
+
+  06 Jan 2004; Andres Loeh <kosmikus@gentoo.org> happy-1.13.ebuild,
+  files/happy-1.13-pragma.patch.bz2:
+  Added patch so that happy can be built with ghc 6.2.
 
 *happy-1.13 (22 Apr 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.13.ebuild,v 1.2 2003/07/11 21:07:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.13.ebuild,v 1.3 2004/01/06 12:18:12 kosmikus Exp $
 
 DESCRIPTION="A yacc-like parser generator for Haskell"
 HOMEPAGE="http://haskell.org/happy/"
@@ -12,6 +12,11 @@ IUSE=""
 
 DEPEND="virtual/ghc"
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	bzcat ${FILESDIR}/happy-1.13-pragma.patch.bz2 | patch -p0
+}
 
 src_compile() {
 	econf || die
