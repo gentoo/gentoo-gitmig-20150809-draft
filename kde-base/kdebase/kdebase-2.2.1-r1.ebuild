@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.4 2001/10/16 15:02:14 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.5 2001/11/04 19:01:40 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -23,7 +23,7 @@ src_compile() {
     
     kde_src_compile myconf
     
-    use ldap	&& myconf="--with-ldap" 	|| myconf="--without-ldap"
+    use ldap	&& myconf="$myconf --with-ldap" || myconf="$myconf --without-ldap"
     use pam	&& myconf="$myconf --with-pam"	|| myconf="$myconf --with-shadow"
     use motif					|| myconf="$myconf --without-motif"
     use lame					|| myconf="$myconf --without-lame"
