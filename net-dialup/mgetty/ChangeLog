@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.26 2004/04/27 21:39:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.27 2004/04/28 10:00:42 swtaylor Exp $
+
+  28 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> mgetty-1.1.30.ebuild:
+  stable promotion
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> mgetty-1.1.28.ebuild:
   Add inherit eutils
