@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.21 2004/09/05 00:08:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.22 2004/12/05 03:43:07 obz Exp $
+
+  05 Dec 2004; Mike Gardiner <obz@gentoo.org> traceroute-1.4_p12-r2.ebuild:
+  Keyworded hppa and ia64, after SpankY's testing
 
   04 Sep 2004; <solar@gentoo.org> traceroute-1.4_p12-r2.ebuild:
   use non-lazy bindings for +s apps installed by this package

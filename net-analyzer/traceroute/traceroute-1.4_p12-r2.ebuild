@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.10 2004/09/05 00:08:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.11 2004/12/05 03:43:07 obz Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ee.lbl.gov/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm amd64 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha arm amd64 ppc64 ia64 hppa"
 IUSE=""
 
 RDEPEND="virtual/libc"
