@@ -102,6 +102,9 @@ dev-perl/CDDB-File
 =sys-apps/portage-2.0.30_alpha
 =sys-apps/portage-2.0.30_alpha2
 =sys-apps/portage-2.0.30_alpha3
+# <drobbins@gentoo.org> (28 Aug 2002)
+# New release version; still should be tested some.
+=sys-apps/portage-2.0.30
 
 # <azarah@gentoo.org> (25 Aug 2002)
 # This one *STILL* activate the atexit() bug in some
