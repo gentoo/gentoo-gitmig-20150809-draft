@@ -1,5 +1,5 @@
 MD5 6b872c1796605ae5fc652ad52a21d383 ChangeLog 643
-MD5 0f3a44218f69439da8bf452aaf6ab582 tclxml-2.4.ebuild 649
-MD5 823599bedc5ae05b1794b84fe035d52c tclxml-2.5.ebuild 737
+MD5 53a2901a68984d411316ba4a8c40e465 tclxml-2.4.ebuild 652
+MD5 31ec97d6f5d33c58aeae5dfefe883f49 tclxml-2.5.ebuild 739
 MD5 0a225320340157ce509a1645988f1a10 files/digest-tclxml-2.4 62
 MD5 2770e7494e3f147c5a80579ff7334250 files/digest-tclxml-2.5 62
