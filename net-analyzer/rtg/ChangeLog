@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rtg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.1 2004/02/08 19:26:36 anti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.2 2004/05/08 14:51:01 kugelfang Exp $
+
+  08 May 2004; Danny van Dyk <kugelfang@gentoo.org> rtg-0.7.4.ebuild:
+  Marked ~amd64.
 
 *rtg-0.7.4 (08 Feb 2004)
 
