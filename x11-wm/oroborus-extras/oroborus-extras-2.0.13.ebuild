@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.13.ebuild,v 1.6 2004/06/24 23:43:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.13.ebuild,v 1.7 2004/07/03 12:51:33 slarti Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~sparc ppc"
+KEYWORDS="~x86 ~sparc ppc ~amd64"
 
 DEPEND="x11-wm/oroborus
 	=x11-libs/gtk+-1.2*
