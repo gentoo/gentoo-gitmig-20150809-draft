@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.28 2003/06/27 13:33:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.29 2003/06/27 17:04:38 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -281,7 +281,7 @@ src_unpack() {
 	fi
 	
 	# Fix broken makefiles for -fPIC problem -- see bug #23581
-	mkdir -p ${S}/xc/exports/lib
+	mkdir -p ${S}/exports/lib
 	
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
