@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.42 2004/08/16 04:50:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.43 2004/08/18 09:39:56 pauldv Exp $
+
+  18 Aug 2004; <pauldv@gentoo.org> swig-1.3.21.ebuild:
+  Fix bug #60626, thanks to the people who commented there and provided 
+  the fix.
 
   16 Aug 2004; Mike Frysinger <vapier@gentoo.org> swig-1.3.21.ebuild:
   Clean up and make sure CFLAGS arent killed #59509.

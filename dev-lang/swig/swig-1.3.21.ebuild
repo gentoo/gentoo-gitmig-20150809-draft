@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.23 2004/08/16 21:04:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.24 2004/08/18 09:39:56 pauldv Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -61,6 +61,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install install-runtime DESTDIR=${D} || die
 	dodoc ANNOUNCE CHANGES FUTURE NEW README TODO
 }
