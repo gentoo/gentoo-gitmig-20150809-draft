@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r1.ebuild,v 1.2 2002/08/06 06:35:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r1.ebuild,v 1.3 2002/08/06 16:18:51 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An incredibly powerful, extensible text editor"
@@ -26,7 +26,7 @@ PROVIDE="virtual/emacs"
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	local myconf

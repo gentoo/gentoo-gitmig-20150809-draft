@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.7 2002/05/17 00:36:18 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.8 2002/08/06 16:23:24 gerk Exp $
 
 *fte-20020324 (17 May 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   17 May 2002; M.Thibaut <murphy@gentoo.org> fte-20020324.ebuild :
   

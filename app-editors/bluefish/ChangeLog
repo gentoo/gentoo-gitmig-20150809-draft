@@ -1,14 +1,20 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.4 2002/07/16 09:49:59 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.5 2002/08/06 16:15:39 gerk Exp $
 
 *bluefish-2002.06.23 (16 Jul 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> bluefish-2002.06.23.ebuild :
 
   Added gtk2 port snapshot.
 
 *bluefish-0.7-r2 (27 Mar 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> bluefish-0.7-r2.ebuild :
 
