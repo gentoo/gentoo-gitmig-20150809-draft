@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mindterm-bin/mindterm-bin-2.4.1.ebuild,v 1.2 2004/06/24 22:24:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mindterm-bin/mindterm-bin-2.4.2.ebuild,v 1.1 2004/08/31 03:26:39 zx Exp $
 
 DESCRIPTION="A Java SSH Client"
-HOMEPAGE="http://www.appgate.com/products/5_MindTerm/"
-SRC_URI="http://www.appgate.com/products/5_MindTerm/4_Download/${PN%%-bin}_${PV}-bin.zip"
+HOMEPAGE="http://www.appgate.com/products/80_MindTerm/"
+SRC_URI="http://www.appgate.com/products/80_MindTerm/110_MindTerm_Download/${PN%%-bin}_${PV}-bin.zip"
 
 LICENSE="mindterm"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 RDEPEND="virtual/x11
-		virtual/jre"
+	virtual/jre"
 
 S=${WORKDIR}
 
