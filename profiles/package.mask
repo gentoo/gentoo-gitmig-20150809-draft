@@ -708,7 +708,7 @@ net-mail/exmh
 =net-im/ccmsn-0.3
 
 # Masked for testing of the ACL parts (styx 21 Jun 2002)
->=sys-apps/e2fsprogs-1.27-r1
+=sys-apps/e2fsprogs-1.27-r1
 
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
