@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.8 2004/10/27 03:37:23 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.1 2004/10/27 03:37:23 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
-BRANCH_UPDATE="20041006"
+BRANCH_UPDATE="20041021"
 
 # Minimum kernel version we support
 # (Recent snapshots fails with 2.6.5 and earlier)
@@ -40,7 +40,8 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="-* ~x86 ~amd64 -hppa ~ppc64 -ppc"
+#KEYWORDS="-* ~x86 ~amd64 -hppa ~ppc64 -ppc"
+KEYWORDS="-*"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -463,7 +464,11 @@ do_fedora_patches() {
 	# go team ramdom nptl stuff
 	want_nptl && epatch ${S}/fedora/glibc-nptl-check.patch
 
-	#(use x86 || use alpha || use sparc) || rm -rf glibc-compat
+	# remove the fedora-branch glibc 2.0 compat stuff.
+	rm -rf glibc-compat
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-fedora-branch-no-libnoversion.patch
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-fedora-branch-no-force-nontls.patch
+
 	rm -f sysdeps/alpha/alphaev6/memcpy.S
 	find . -type f -size 0 -o -name "*.orig" -exec rm -f {} \;
 	touch `find . -name configure`
@@ -539,9 +544,6 @@ src_unpack() {
 
 	# multicast DNS aka rendezvous support
 	epatch ${FILESDIR}/2.3.4/glibc-2.3.3-mdns-resolver.diff
-
-	# Improved handled temporary files. bug #66358
-	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-tempfile.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh

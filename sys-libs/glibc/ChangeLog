@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.280 2004/10/19 19:52:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.281 2004/10/27 03:37:23 lv Exp $
+
+*glibc-2.3.4.20041021 (26 Oct 2004)
+
+  26 Oct 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.3.4/glibc-2.3.4-fedora-branch-no-force-nontls.patch,
+  +files/2.3.4/glibc-2.3.4-fedora-branch-no-libnoversion.patch,
+  glibc-2.3.4.20041006.ebuild, +glibc-2.3.4.20041021.ebuild:
+  updated to the fedora-branch snap in fedora's 2.3.3-73 src rpm and removed the
+  glibc 2.0 compat (libNoVersion) changes
 
   19 Oct 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   sane fix for problem mentioned below
