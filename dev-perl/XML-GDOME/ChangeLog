@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/XML-GDOME
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.1 2003/10/03 11:11:08 mcummings Exp $
+
+*XML-GDOME-0.83 (03 Oct 2003)
+
+  03 Oct 2003; Michael Cummings <mcummings@gentoo.org> XML-GDOME-0.83.ebuild:
+  Dependancy for XML-LibXML-XPathContext, a dep for xml-xsh
+
