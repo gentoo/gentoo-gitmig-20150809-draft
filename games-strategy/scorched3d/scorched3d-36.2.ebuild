@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-36.2.ebuild,v 1.2 2004/01/16 21:32:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-36.2.ebuild,v 1.3 2004/01/17 02:16:34 vapier Exp $
 
 inherit games
 
-S="${WORKDIR}/scorched"
 DESCRIPTION="Multi-player tank battle in 3D (OpenGL)"
 HOMEPAGE="http://www.scorched3d.co.uk/"
 SRC_URI="mirror://sourceforge/scorched3d/Scorched3D-${PV}-src.tar.gz"
 
-KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+KEYWORDS="x86 ppc"
 
 RDEPEND=">=media-libs/libsdl-1.0.1
 	media-libs/sdl-net
@@ -23,6 +21,8 @@ RDEPEND=">=media-libs/libsdl-1.0.1
 	mysql? ( dev-db/mysql )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+S=${WORKDIR}/scorched
 
 src_compile() {
 	egamesconf \
@@ -44,4 +44,13 @@ src_install() {
 	cp -R data/ "${D}${GAMES_DATADIR}/${PN}" || die "cp failed (data)"
 	cp README "${D}${GAMES_DATADIR}/${PN}" || die "cp failed (README)"
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	if has_version media-video/ati-drivers ; then
+		ewarn "This game might segfault while using ATI drivers."
+		ewarn "Please disable opengl support if it does."
+		ewarn "http://bugs.gentoo.org/show_bug.cgi?id=38443"
+	fi
 }
