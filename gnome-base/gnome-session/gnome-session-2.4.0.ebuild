@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.0.ebuild,v 1.1 2003/09/10 23:39:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.0.ebuild,v 1.2 2003/10/05 10:29:07 obz Exp $
 
 inherit gnome2
 
@@ -31,6 +31,9 @@ G2CONF="${G2CONF} $(use_enable ipv6)"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# patch for logout dialog, see bug # 30230 and dups
+	epatch ${FILESDIR}/gnome-session-2.4-defaults.patch
 
 	# This patch is only necessary on 64-bit platforms such as Alpha
 	# but it doesn't hurt elsewhere.
