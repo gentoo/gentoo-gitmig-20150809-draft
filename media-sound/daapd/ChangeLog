@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/daapd
+# ChangeLog for media-sound/daapd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.1 2004/03/31 02:20:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.2 2004/04/05 21:28:54 vapier Exp $
 
 *daapd-0.2.1d (30 Mar 2004)
 
