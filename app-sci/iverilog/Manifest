@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
-MD5 e108c3e5f436d89db0bd548185e205b1 iverilog-0.7.ebuild 757
-MD5 d7c624ddb36c6a7023b60f7ea4c88c07 ChangeLog 1588
+MD5 e418a8b57a090f08a7510e04953f7216 ChangeLog 1670
 MD5 e7c000f86f0916d03b81de4568289722 iverilog-0.6.1.ebuild 707
+MD5 e108c3e5f436d89db0bd548185e205b1 iverilog-0.7.ebuild 757
 MD5 8ad1cfa21bc81feeda6b897d610e25a5 iverilog-20031009.ebuild 762
-MD5 19b284337aa5c272b128a77d54ba5155 iverilog-20040606.ebuild 762
-MD5 82630cd90af6e1957c6021b28c3e6699 files/digest-iverilog-20031009 69
-MD5 e494ce6654d6f418abe86a3c395e32d0 files/digest-iverilog-20040606 69
+MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+MD5 9fdf8fcda88747f0ff6772fd6bb8cdd0 iverilog-20040606.ebuild 767
 MD5 021fc38fca78a6ad8992d9737f467805 files/digest-iverilog-0.6.1 65
 MD5 acc06de1262011b69620ea99b0d71b34 files/digest-iverilog-0.7 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBLeGxKtJO8LeSoosRAsCZAKCd09Do2n5jcar9y/i5+rqxYtzAwwCfdXDt
-479+Qh6fYliI5MaFHWhtTSo=
-=yhlM
------END PGP SIGNATURE-----
+MD5 82630cd90af6e1957c6021b28c3e6699 files/digest-iverilog-20031009 69
+MD5 e494ce6654d6f418abe86a3c395e32d0 files/digest-iverilog-20040606 69
