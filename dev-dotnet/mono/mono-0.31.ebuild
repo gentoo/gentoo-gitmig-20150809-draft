@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.3 2004/03/30 04:59:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.4 2004/06/02 20:45:30 agriffis Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -45,7 +45,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if [ -n "`use nptl`" ] && have_NPTL
+	if use nptl && have_NPTL
 	then
 		myconf="${myconf} --with-nptl=yes"
 	else
