@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/argtable
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.1 2005/02/01 14:49:43 ka0ttic Exp $
+
+*argtable-2.4 (01 Feb 2005)
+
+  01 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +files/argtable-2.4-fix-makefile.diff, +argtable-2.4.ebuild:
+  Initial commit for bug 56504.
+

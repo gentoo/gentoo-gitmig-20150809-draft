@@ -1,0 +1,48 @@
+--- argtable2.orig/Makefile.in	2005-02-01 08:54:09.211698973 -0500
++++ argtable2/Makefile.in	2005-02-01 09:40:35.358574264 -0500
+@@ -30,8 +30,6 @@
+ libdir      ?= @libdir@
+ includedir  ?= @includedir@
+ mandir      ?= @mandir@/man3
+-docdir      ?= $(prefix)/share/doc/argtable2
+-exampledir  ?= $(prefix)/share/doc/argtable2/example
+ 
+ 
+ all:
+@@ -47,26 +45,16 @@
+ 	cd tests; $(MAKE) installcheck
+ 
+ install: all
+-	@INSTALL@ -d $(includedir)
+-	@INSTALL@ -d $(libdir)
+-	@INSTALL@ -d $(mandir)
+-	@INSTALL@ -d $(docdir)
+-	@INSTALL@ -d $(exampledir)
+-	@INSTALL@ -m 644 src/argtable2.h            $(includedir)
+-	@INSTALL@ -m 644 src/libargtable2.a         $(libdir)
+-	@INSTALL@ -m 644 src/@LIBDYNAMIC@        $(libdir)/@LIBDYNAMICVERS@
+-	@INSTALL@ -m 644 doc/*.html                 $(docdir)
+-	@INSTALL@ -m 644 doc/*.gif                  $(docdir)
+-	@INSTALL@ -m 644 doc/*.ps                   $(docdir)
+-	@INSTALL@ -m 644 doc/*.pdf                  $(docdir)
+-	@INSTALL@ -m 644 doc/argtable2.3            $(mandir)
+-	@INSTALL@ -m 644 example/*.[ch]             $(exampledir)
+-	@INSTALL@ -m 644 example/Makefile           $(exampledir)
+-	@INSTALL@ -m 644 example/README.txt         $(exampledir)
+-	-@STRIP@ -S $(libdir)/libargtable2.a $(libdir)/@LIBDYNAMICVERS@
+-	@RM@ -f $(libdir)/@LIBDYNAMIC@
+-	cd $(libdir) ; @LN@ -fs @LIBDYNAMICVERS@ @LIBDYNAMIC@
+-	cd $(mandir) ; @LN@ -fs argtable2.3 argtable.3
++	@INSTALL@ -d $(DESTDIR)$(includedir)
++	@INSTALL@ -d $(DESTDIR)$(libdir)
++	@INSTALL@ -d $(DESTDIR)$(mandir)
++	@INSTALL@ -m 644 src/argtable2.h            $(DESTDIR)$(includedir)
++	@INSTALL@ -m 644 src/libargtable2.a         $(DESTDIR)$(libdir)
++	@INSTALL@ -m 644 src/@LIBDYNAMIC@	    $(DESTDIR)$(libdir)/@LIBDYNAMICVERS@
++	@INSTALL@ -m 644 doc/argtable2.3            $(DESTDIR)$(mandir)
++	@RM@ -f $(DESTDIR)$(libdir)/@LIBDYNAMIC@
++	cd $(DESTDIR)$(libdir) ; @LN@ -fs @LIBDYNAMICVERS@ @LIBDYNAMIC@
++	cd $(DESTDIR)$(mandir) ; @LN@ -fs argtable2.3 argtable.3
+ 
+ uninstall:
+ 	@RM@ -f $(includedir)/argtable2.h
