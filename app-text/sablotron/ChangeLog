@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.6 2002/09/24 05:30:47 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.7 2002/11/26 15:04:24 mcummings Exp $
+
+*sablotron-0.96 (26 Nov 2002)
+
+  26 Nov 2002; Michael Cummings <mcummings@gentoo.org> sablotron-0.96.ebuild:
+
+  new version, masked for testing, seeing if it resolves bug 11085
 
 *sablotron-0.95-r1 (13 Jul 2002)
 
