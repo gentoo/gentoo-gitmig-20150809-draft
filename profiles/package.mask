@@ -22,6 +22,10 @@
 ##
 
 
+# <satai@gentoo.org> (20 Sep 2002)
+# Too many problems.  Masking to fix.
+>app-text/tetex-1.0.7-r10
+
 # <raker@gentoo.org> (18 Sep 2002)
 # New verison of ghostscript.
 # Please test and report on bug #7787
