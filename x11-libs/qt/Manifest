@@ -8,7 +8,7 @@ MD5 fc48dcb3cc34e5b6161f9e10be094b7c qt-3.3.4-r1.ebuild 8432
 MD5 048c159df273b9caf9ab683e542c3c4f qt-4.0.0_beta1-r3.ebuild 5840
 MD5 dd2127b3c7bc12b24621d172b6a075af qt-3.2.3-r1.ebuild 5159
 MD5 7e97379b94036d9db24b3ca93c21b6e7 qt-3.3.3-r3.ebuild 8737
-MD5 7a6ec52b6d36148c54bf7b88b9421456 qt-3.3.4-r2.ebuild 8363
+MD5 814fba7fca09b618cdaf77bc0b4b207b qt-3.3.4-r2.ebuild 8363
 MD5 2a5d402b9d5ceff465069a1651f3b329 qt-2.3.2-r2.ebuild 2765
 MD5 fbe7f8bc183824f9c17974b1a493c94d qt-3.3.2.ebuild 6895
 MD5 3e5e045d0c1448839a8dc1c82aeef21b files/qt-3.3.3-qclipboard-hack.patch 1662
