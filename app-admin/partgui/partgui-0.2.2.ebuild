@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/partgui-0.2.2.ebuild,v 1.1 2003/09/12 10:57:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/partgui-0.2.2.ebuild,v 1.2 2003/09/16 04:46:02 msterret Exp $
 
 DESCRIPTION="PartGUI is a nice graphical partitioning tool"
 HOMEPAGE="http://part-gui.sourceforge.net/"
@@ -13,8 +13,8 @@ IUSE=""
 DEPEND=">=x11-libs/qt-3.1.0
 	dev-libs/newt
 	>=sys-apps/parted-1.6.5
-	>=sys-apps/xfsprogs-2.3.9
-	>=sys-apps/e2fsprogs-1.33"
+	>=sys-fs/xfsprogs-2.3.9
+	>=sys-fs/e2fsprogs-1.33"
 
 src_compile() {
 	econf || die "configure failed"

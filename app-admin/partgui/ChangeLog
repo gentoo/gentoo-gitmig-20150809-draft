@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/partgui
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/ChangeLog,v 1.1 2003/09/12 10:57:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/ChangeLog,v 1.2 2003/09/16 04:46:02 msterret Exp $
+
+  15 Sep 2003; Michael Sterrett <msterret@gentoo.org> partgui-0.2.2.ebuild:
+  sys-apps -> sys-fs
 
 *partgui-0.2.2 (12 Sep 2003)
 
