@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.22 2003/04/23 00:33:11 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.23 2003/04/25 22:18:46 mholzer Exp $
 
 *gnome-spell-1.0.2 (21 Apr 2003)
 
@@ -30,6 +30,9 @@
   Changed sparc ~sparc keywords
  
 *gnome-spell-0.5 (27 Sep 2002)
+
+  25 Apr 2003; Martin Holzer <mholzer@gentoo.org> gnome-spell-0.5.ebuild:
+  Changed evo depend. closes #19946.
 
   09 Apr 2003; Graham Forest <vladimir@gentoo.org> gnome-spell-0.5.ebuild:
   Downgraded to ~ppc
