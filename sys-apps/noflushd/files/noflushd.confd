@@ -1,0 +1,7 @@
+# Config file for /etc/init.d/noflushd
+
+#TIMEOUT=60
+#DISKS=/dev/discs/disc0/disc
+#EXTRA=
+#NOFLUSHD_OPTS="-n $TIMEOUT $DISKS $EXTRA"
+

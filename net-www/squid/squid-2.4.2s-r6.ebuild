@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.2s-r6.ebuild,v 1.2 2001/11/04 23:05:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.2s-r6.ebuild,v 1.3 2001/12/23 23:25:19 azarah Exp $
 
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"
@@ -99,4 +99,5 @@ src_install() {
 
 	insinto /etc/pam.d ; newins ${FILESDIR}/squid.pam squid
 	exeinto /etc/init.d ; newexe ${FILESDIR}/squid.rc6 squid
+	insinto /etc/conf.d ; newins ${FILESDIR}/squid.confd squid
 }

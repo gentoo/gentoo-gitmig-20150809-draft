@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.22-r6.ebuild,v 1.1 2001/11/03 21:46:01 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.22-r6.ebuild,v 1.2 2001/12/23 23:25:19 azarah Exp $
 
 AV="1.3.22"
 MSV="2.8.5"
@@ -63,6 +63,8 @@ src_install() {
 
     exeinto /etc/init.d
     newexe ${FILESDIR}/httpd.rc6 httpd
+    insinto /etc/conf.d
+    newins ${FILESDIR}/httpd.confd httpd
     insinto /etc/httpd
     doins ${FILESDIR}/httpd.conf
 }

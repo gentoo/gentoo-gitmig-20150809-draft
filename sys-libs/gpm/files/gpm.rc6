@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/files/gpm.rc6,v 1.5 2001/12/06 20:17:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/files/gpm.rc6,v 1.6 2001/12/23 23:25:19 azarah Exp $
 
-#NB:  Config options moved to /etc/conf.d/gpm
+#NB: Config is in /etc/conf.d/gpm
 
 
 depend() {

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Originally written by Achim Gottinger <achim@gentoo.org>
 # Heavily updated for nfs-utils-0.3.1 by Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r7.ebuild,v 1.2 2001/10/22 00:13:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r7.ebuild,v 1.3 2001/12/23 23:25:19 azarah Exp $
 
 S=$WORKDIR/$P
 DESCRIPTION="kernel NFS daemons"
@@ -45,10 +45,10 @@ src_install() {
 	dodoc linux-nfs/*
 	dodir /etc/init.d
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/nfs-${PVR} nfs
-	newexe ${FILESDIR}/nfsmount-${PVR} nfsmount
+	newexe ${FILESDIR}/nfs.rc6 nfs
+	newexe ${FILESDIR}/nfsmount.rc6 nfsmount
 	insinto /etc/conf.d
-	newins ${FILESDIR}/nfs.confd-${PVR} nfs
+	newins ${FILESDIR}/nfs.confd nfs
 	# Don't create runlevels symlinks here.  NFS is not something that
 	# should be enabled by default.  Administrators can use rc-update
 	# to do it themselves.

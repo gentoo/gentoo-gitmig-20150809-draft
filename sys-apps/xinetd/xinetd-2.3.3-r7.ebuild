@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer System Team <system@gentoo.org>
 # Author Achim Gottinger <achim@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3-r7.ebuild,v 1.1 2001/11/21 05:08:55 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3-r7.ebuild,v 1.2 2001/12/23 23:25:19 azarah Exp $
 
 # NB: This ebuild introduces the /etc/xinetd.d includedir with a default
 #     /etc/xinetd.conf file.  Check your config files if you're upgrading
@@ -31,12 +31,13 @@ src_compile() {
 
 src_install() {
 
-	into /usr ; dosbin xinetd/xinetd
+	into /usr ; dosbin xinetd/xinetd xinetd/itox
 	exeinto /usr/sbin ; doexe ${FILESDIR}/xconv.pl
 
 	newman xinetd/xinetd.conf.man xinetd.conf.5
 	newman xinetd/xinetd.log.man xinetd.log.8
 	newman xinetd/xinetd.man xinetd.8
+	doman xinetd/itox.8
 	
 	newdoc xinetd/sample.conf xinetd.conf.dist.sample
 	newdoc ${FILESDIR}/xinetd.conf xinetd.conf.default
@@ -44,5 +45,6 @@ src_install() {
 
 	insinto /etc/xinetd.d ; doins ${FILESDIR}/etc.xinetd.d/*
 	exeinto /etc/init.d ; newexe ${FILESDIR}/xinetd.rc6 xinetd
+	insinto /etc/conf.d ; newins ${FILESDIR}/xinetd.confd xinetd
 	insinto /etc ; doins ${FILESDIR}/xinetd.conf
 }

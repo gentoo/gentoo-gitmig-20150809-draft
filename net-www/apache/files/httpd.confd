@@ -1,0 +1,3 @@
+# Config file for /etc/init.d/httpd
+
+#HTTPD_OPTS="-D SSL -D PHP4"

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r6.ebuild,v 1.1 2001/10/18 21:10:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r6.ebuild,v 1.2 2001/12/23 23:25:19 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -44,5 +44,7 @@ src_install () {
     #startups for dictd
     exeinto /etc/init.d
     newexe ${FILESDIR}/${PVR}/dictd.rc6 dictd
+    insinto /etc/conf.d
+    newins ${FILESDIR}/${PVR}/dictd.confd dictd
 }
 

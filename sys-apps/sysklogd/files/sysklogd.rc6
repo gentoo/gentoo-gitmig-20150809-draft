@@ -1,11 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/files/sysklogd.rc6,v 1.6 2001/12/06 20:17:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/files/sysklogd.rc6,v 1.7 2001/12/23 23:25:19 azarah Exp $
 
-SYSLOGD="-m 0"
-# send warnings and above to the console
-KLOGD="-c 3 -2"
+# NB: Config is in /etc/conf.d/sysklogd
+
 
 depend() {
 

@@ -1,24 +1,24 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/files/wwwoffled.rc6,v 1.2 2001/12/06 20:17:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/files/wwwoffled.rc6,v 1.3 2001/12/23 23:25:19 azarah Exp $
 
 EXE=`which wwwoffled`
-SERVICE='wwwoffled'
 
 depend() {
-    need localmount
+	need localmount
 }
 
 start() {
-    ebegin "Starting $SERVICE"
-    start-stop-daemon --start --quiet --exec $EXE -- -c /var/spool/wwwoffle/wwwoffle.conf
-    eend $? "Started $SERVICE." "Error starting $SERVICE."
+	ebegin "Starting wwwoffled"
+	start-stop-daemon --start --quiet --exec $EXE \
+		-- -c /var/spool/wwwoffle/wwwoffle.conf
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping $SERVICE"
-    start-stop-daemon --stop --quiet --exec $EXE
-    eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
+	ebegin "Stopping wwwoffled"
+	start-stop-daemon --stop --quiet --exec $EXE
+	eend $?
 }
 

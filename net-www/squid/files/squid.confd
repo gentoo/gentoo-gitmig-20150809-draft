@@ -1,0 +1,7 @@
+# Config file for /etc/init.d/squid
+
+# you may move these variables to your rc.conf file if you wish
+SQUID_OPTS="-DYC"
+# default 1024, maximum 4096; tune up if a busy cache
+SQUID_MAXFD=1024
+

@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger achim@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.7.ebuild,v 1.3 2001/09/13 00:09:53 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.7.ebuild,v 1.4 2001/12/23 23:25:19 azarah Exp $
 
-#P=
-A="${P}.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap packet sniffer/logger/lightweight IDS"
-SRC_URI="http://www.snort.org/Files/${A}"
+SRC_URI="http://www.snort.org/Files/${P}.tar.gz"
 HOMEPAGE="http://www.snort.org"
 
 DEPEND="virtual/glibc >=net-libs/libpcap-0.5.2
@@ -20,43 +18,56 @@ RDEPEND="virtual/glibc sys-devel/perl
 
 src_compile() {
 
-    local myconf
-    if [ `use mysql` ]
-    then
-	myconf="--with-mysql-includes=/usr/include/mysql \
-		--with-mysql-libraries=/usr/lib/mysql"
-    else
-	myconf="--without-mysql"
-    fi
-    if [ `use ssl` ]
-    then
-	myconf="$myconf --with-openssl"
-    else
-	myconf="$myconf --without-openssl"
-    fi
-    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
-         --enable-smbalerts --enable-pthreads \
-	 --without-odbc --without-postgresql --without-oracle $myconf
-    try make
-
+	local myconf
+	if [ `use mysql` ]
+	then
+		myconf="--with-mysql-includes=/usr/include/mysql \
+			--with-mysql-libraries=/usr/lib/mysql"
+	else
+		myconf="--without-mysql"
+	fi
+	if [ `use ssl` ]
+	then
+		myconf="$myconf --with-openssl"
+	else
+		myconf="$myconf --without-openssl"
+	fi
+	./configure --prefix=/usr \
+		--mandir=/usr/share/man \
+		--host=${CHOST} \
+		--enable-smbalerts \
+		--enable-pthreads \
+		--without-odbc \
+		--without-postgresql \
+		--without-oracle \
+		$myconf || die
+		
+	make || die
 }
 
-src_install () {
+src_install() {
 
-    try make DESTDIR=${D} install
-    insinto /usr/lib/snort/bin
-    doins contrib/create_mysql contrib/*.pl contrib/snortlog
-    dodoc AUTHORS BUGS ChangeLog COPYING CREDITS NEWS README.*
-    dodoc RULES.SAMPLE USAGE contrib/pgsql.php3
-	 insinto /etc/snort
-	 doins ${FILESDIR}/snort.conf
-	 insinto /usr/lib/snort
-	 doins *lib
-	 insinto /etc/init.d
-	 doexe ${FILESDIR}/snort
+	make DESTDIR=${D} install || die
+	insinto /usr/lib/snort/bin
+	
+	doins contrib/create_mysql contrib/*.pl contrib/snortlog
+	dodoc AUTHORS BUGS ChangeLog COPYING CREDITS NEWS README.*
+	dodoc RULES.SAMPLE USAGE contrib/pgsql.php3
+	
+	insinto /etc/snort
+	doins ${FILESDIR}/snort.conf
+	
+	insinto /usr/lib/snort
+	doins *lib
+	
+	exeinto /etc/init.d
+	doexe ${FILESDIR}/snort
+	insinfo /etc/conf.d
+	newins ${FILESDIR}/snort.confd snort
 }
 
 pkg_postint() {
+
 	groupadd snort
 	useradd -s /dev/null -g snort -s /bin/false snort
 }
