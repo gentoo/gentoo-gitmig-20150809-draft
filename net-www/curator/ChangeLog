@@ -1,0 +1,9 @@
+# ChangeLog for net-www/curator
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/curator/ChangeLog,v 1.1 2003/04/02 09:43:36 sethbc Exp $
+
+*curator-2.0 (02 Apr 2003)
+
+  02 Apr 2003; Seth Chandler <sethbc@gentoo.org>; curator-2.0.ebuild:
+  added curator to portage
+
