@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libsvg-cairo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.8 2004/09/03 15:35:20 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.9 2005/02/04 22:42:19 twp Exp $
+
+  04 Feb 2005; Tom Payne <twp@gentoo.org>
+  +files/libsvg-cairo-stdarg_h.patch, libsvg-cairo-0.1.4.ebuild:
+  Added stdarg.h patch. Bug # 80680. Thanks lucass.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   libsvg-cairo-0.1.4.ebuild:
