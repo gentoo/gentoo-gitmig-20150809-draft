@@ -1,0 +1,12 @@
+# ChangeLog for media-video/mgavideo
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.1 2003/03/25 06:24:36 george Exp $
+
+*matroxset-0.3 (23 Mar 2003)
+ 
+  23 Mar 2003; George Shapovalov <george@gentoo.org> matroxset-0.3.ebuild, files/digest-matroxset-0.3 :
+  first inclusion (#2401)
+  LICENSE set to GPL-2 after the getting the reply of the utility author Petr Vandrovec
+
+  4 Nov 2002; Sean P. Kane <spkane@genomatica.com> matroxset-0.3.ebuild :
+  created the ebuild
