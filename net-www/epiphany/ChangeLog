@@ -1,6 +1,9 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.28 2003/10/21 03:02:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.29 2003/10/22 16:53:00 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> epiphany-1.0.ebuild:
+  set ppc in keywords
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> epiphany-1.0.2.ebuild:
   Stable on alpha
