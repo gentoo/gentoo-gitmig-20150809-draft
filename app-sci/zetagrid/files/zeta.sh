@@ -19,4 +19,13 @@
 #
 # ======================================================================
 
-nohup nice -19 java -Xmx128m -Djava.library.path=. -Dsun.net.inetaddr.ttl=0 -Dnetworkaddress.cache.ttl=0 -Dnetworkaddress.cache.negative.ttl=0 -cp zeta.jar:zeta_client.jar zeta.ZetaClient &
+if [ -n "$http_proxy" ]; then
+    http_proxy="${http_proxy#http://}"
+    http_proxy="${http_proxy%/}"
+    proxies="-Dhttp.proxyHost=${http_proxy%:*} \
+             -Dhttp.proxyPort=${http_proxy#*:}"
+else
+    proxies=""
+fi
+
+nohup nice -19 java -Xmx128m $proxies -Djava.library.path=. -Dsun.net.inetaddr.ttl=0 -Dnetworkaddress.cache.ttl=0 -Dnetworkaddress.cache.negative.ttl=0 -cp zeta.jar:zeta_client.jar zeta.ZetaClient &
