@@ -1,6 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.0.ebuild,v 1.6 2004/01/21 08:56:48 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.1.ebuild,v 1.1 2004/01/21 08:56:48 torbenh Exp $
+
 
 DESCRIPTION="Linux Drum Machine"
 HOMEPAGE="http://hydrogen.sourceforge.net"
@@ -13,8 +14,7 @@ KEYWORDS="x86"
 S="${WORKDIR}/${P}"
 
 DEPEND="virtual/x11
-	>=x11-libs/qt-3
-	>=media-libs/libhydrogen-0.7.6"
+	>=x11-libs/qt-3"
 
 src_compile() {
 	econf
