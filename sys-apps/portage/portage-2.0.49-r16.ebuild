@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r16.ebuild,v 1.5 2003/11/06 04:30:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r16.ebuild,v 1.6 2003/11/12 02:03:27 carpaski Exp $
 
 IUSE="build"
 
@@ -263,6 +263,7 @@ pkg_postinst() {
 
 	# Old place of install
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
+	rm -f ${ROOT}usr/lib/python2.2/site-packages/xpak.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/output.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/cvstree.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py[co]
