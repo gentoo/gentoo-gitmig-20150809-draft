@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.4-r1.ebuild,v 1.1 2005/01/01 08:09:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.4-r1.ebuild,v 1.2 2005/01/02 04:04:22 swegener Exp $
 
 MY_P=ScrollZ-${PV}
 
 DESCRIPTION="Advanced IRC client based on ircII"
 SRC_URI="ftp://ftp.scrollz.com/pub/ScrollZ/source/${MY_P}.tar.gz"
 HOMEPAGE="http://www.scrollz.com/"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
