@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Cristian Martinez <cfuga@itam.mx>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a.ebuild,v 1.2 2002/02/23 18:13:28 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a.ebuild,v 1.3 2002/02/23 21:08:38 g2boojum Exp $
 
 PN0=imap
 S=${WORKDIR}/${PN0}-${PV}
@@ -67,6 +67,7 @@ src_install() {
 	insinto /usr/include
 	doins c-client/{mail,imap4r1,rfc822,linkage}.h
 	dolib.a c-client/c-client.a
+	dosym /usr/lib/c-client.a /usr/lib/libc-client.a
 
 	doman src/ipopd/ipopd.8c src/imapd/imapd.8c
 
