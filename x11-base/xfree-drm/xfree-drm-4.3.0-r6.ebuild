@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.20 2004/06/24 21:57:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.21 2004/07/26 20:16:19 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -88,10 +88,10 @@ pkg_setup() {
 src_unpack() {
 	# 2.6 kernels are broken for now
 	is_kernel "2" "6" && \
-		die "Please link /usr/src/linux to 2.4 kernel sources. xfree-drm is not yet working with 2.6 kernels, use the DRM in the kernel."
+		die "Please link ${ROOT}/usr/src/linux to 2.4 kernel sources. xfree-drm is not yet working with 2.6 kernels, use the DRM in the kernel."
 
 	# Is this necessary with the fixed Makefile?
-	if [ ! -f /usr/src/linux/include/config/MARKER ] ; then
+	if [ ! -f ${ROOT}/usr/src/linux/include/config/MARKER ] ; then
 		die "Please compile kernel sources with \"make bzImage.\""
 	fi
 
@@ -119,7 +119,7 @@ src_unpack() {
 
 # Pfeifer said this patch is ok for any kernel >= 2.4 <spyderous>
 #	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ] && \
-	if [ -r /usr/src/linux/mm/rmap.c ]
+	if [ -r ${ROOT}/usr/src/linux/mm/rmap.c ]
 	then
 		einfo "Detected rmap enabled kernel."
 		EPATCH_SINGLE_MSG="Applying rmap patch..." \
@@ -140,7 +140,7 @@ src_compile() {
 	ln -sf Makefile.linux Makefile
 	einfo "Building DRM..."
 	make ${VIDCARDS} \
-		TREE="/usr/src/linux/include" KV="${KV}"
+		TREE="${ROOT}/usr/src/linux/include" KV="${KV}"
 	make dristat || die
 }
 
@@ -148,7 +148,7 @@ src_install() {
 
 	einfo "installing DRM..."
 	make \
-		TREE="/usr/src/linux/include" \
+		TREE="${ROOT}/usr/src/linux/include" \
 		KV="${KV}" \
 		DESTDIR="${D}" \
 		MODS="${VIDCARDS}" \

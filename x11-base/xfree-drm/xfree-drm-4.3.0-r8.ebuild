@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r8.ebuild,v 1.6 2004/06/24 21:57:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r8.ebuild,v 1.7 2004/07/26 20:16:19 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -111,13 +111,13 @@ src_compile() {
 		unset ARCH
 		make -f Makefile.linux \
 			DRM_MODULES="${VIDCARDS}" \
-			LINUXDIR=//usr/src/linux \
+			LINUXDIR=${ROOT}/usr/src/linux \
 			LINUXOUTPUT=${KV_OUTPUT} \
 			modules || die "Build failed."
 	else
 		einfo "Building DRM for kernel 2.4..."
 		make ${VIDCARDS} \
-			TREE="/usr/src/linux/include" KV="${KV}" || die "Build failed."
+			TREE="${ROOT}/usr/src/linux/include" KV="${KV}" || die "Build failed."
 	fi
 
 	# Build dristat utility (bug #18799)
@@ -139,7 +139,7 @@ src_install() {
 		fi
 		make -f Makefile.linux \
 			KV="${KV}" \
-			LINUXDIR=/usr/src/linux \
+			LINUXDIR=${ROOT}/usr/src/linux \
 			LINUXOUTPUT=${KV_OUTPUT} \
 			MODS="${VIDCARDS}" \
 			ARCH="${MYARCH}" \
@@ -147,7 +147,7 @@ src_install() {
 			install || die "Install failed."
 	else
 		make \
-			TREE="/usr/src/linux/include" \
+			TREE="${ROOT}/usr/src/linux/include" \
 			KV="${KV}" \
 			DESTDIR="${D}" \
 			MODS="${VIDCARDS}" \

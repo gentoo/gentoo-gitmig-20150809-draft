@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.18 2004/06/24 21:57:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.19 2004/07/26 20:16:19 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -68,10 +68,10 @@ pkg_setup() {
 
 	# 2.6 kernels are broken for now
 	is_kernel 2 6 && \
-		die "Please link /usr/src/linux to 2.4 kernel sources. xfree-drm does not yet work with 2.6 kernels, use the DRM in the kernel."
+		die "Please link ${ROOT}/usr/src/linux to 2.4 kernel sources. xfree-drm does not yet work with 2.6 kernels, use the DRM in the kernel."
 
 	# Force at least make dep (this checks for bzImage, actually) (bug #22853)
-	if [ ! -f /usr/src/linux/include/config/MARKER ]
+	if [ ! -f ${ROOT}/usr/src/linux/include/config/MARKER ]
 	then
 		die "Please compile kernel sources with \"make bzImage\"."
 	fi
@@ -114,7 +114,7 @@ src_compile() {
 	ln -sf Makefile.linux Makefile
 	einfo "Building DRM..."
 	make ${VIDCARDS} \
-		TREE="/usr/src/linux/include" KV="${KV}"
+		TREE="${ROOT}/usr/src/linux/include" KV="${KV}"
 	# Build dristat utility (bug #18799)
 	# But, don't do it if the GATOS drivers are being built, since it won't work
 	if ! use gatos
@@ -126,7 +126,7 @@ src_compile() {
 src_install() {
 	einfo "installing DRM..."
 	make \
-		TREE="/usr/src/linux/include" \
+		TREE="${ROOT}/usr/src/linux/include" \
 		KV="${KV}" \
 		DESTDIR="${D}" \
 		MODS="${VIDCARDS}" \

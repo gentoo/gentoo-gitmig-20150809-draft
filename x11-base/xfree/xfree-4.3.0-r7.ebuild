@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.5 2004/06/24 21:57:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.6 2004/07/26 20:13:38 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -422,7 +422,7 @@ src_unpack() {
 		fi
 	fi
 
-	if ( [ -e "/usr/src/linux" ] && \
+	if ( [ -e "${ROOT}/usr/src/linux" ] && \
 		[ ! `is_kernel "2" "2"` ] ) || \
 		[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then

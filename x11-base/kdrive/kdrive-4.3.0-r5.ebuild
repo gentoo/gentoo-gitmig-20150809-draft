@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.7 2004/06/24 21:56:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.8 2004/07/26 20:11:34 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -135,7 +135,7 @@ src_unpack() {
 
 		get_kernel_info
 		if [ "${KV_MAJOR}" -ge "2" -a "${KV_MINOR}" -ge "4" ] || \
-		     (  [ -e "/usr/src/linux" ] && \
+		     (  [ -e "${ROOT}/usr/src/linux" ] && \
 			      [ ! `is_kernel "2" "2"` ] ) || \
 				  [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 		then

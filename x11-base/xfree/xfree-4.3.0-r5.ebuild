@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.18 2004/06/24 21:57:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.19 2004/07/26 20:13:38 spyderous Exp $
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -315,7 +315,7 @@ src_unpack() {
 	#
 	#  http://people.mandrakesoft.com/~flepied/projects/wacom/
 	#
-	if ( [ -e "/usr/src/linux" ] && \
+	if ( [ -e "${ROOT}/usr/src/linux" ] && \
 		[ ! `is_kernel "2" "2"` ] ) || \
 		[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then
@@ -369,7 +369,7 @@ src_unpack() {
 		fi
 	fi
 
-	if ( [ -e "/usr/src/linux" ] && \
+	if ( [ -e "${ROOT}/usr/src/linux" ] && \
 		[ ! `is_kernel "2" "2"` ] ) || \
 		[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.353 2004/07/20 05:52:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.354 2004/07/26 20:13:38 spyderous Exp $
+
+  26 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r5.ebuild,
+  xfree-4.3.0-r6.ebuild, xfree-4.3.0-r7.ebuild:
+  /usr/src/linux needs ${ROOT}.
 
   20 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   PATCH_VER 2.1.25.7. No changes from .6, just fixing a corruption issue --
