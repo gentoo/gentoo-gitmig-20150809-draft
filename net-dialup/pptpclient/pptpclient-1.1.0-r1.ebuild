@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.10 2004/10/02 12:50:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.11 2004/10/04 22:52:59 pvdabeel Exp $
 
 
 S=${WORKDIR}/pptp-linux-${PV}-1
@@ -14,7 +14,7 @@ DEPEND="net-dialup/ppp
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="tcltk"
 
 src_compile() {

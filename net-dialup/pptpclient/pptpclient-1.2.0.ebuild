@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.2.0.ebuild,v 1.9 2004/10/02 12:50:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.2.0.ebuild,v 1.10 2004/10/04 22:52:59 pvdabeel Exp $
 
 MY_P=pptp-linux-${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pptpclient/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64 alpha"
+KEYWORDS="x86 ppc amd64 alpha"
 IUSE="tcltk"
 
 DEPEND="net-dialup/ppp
