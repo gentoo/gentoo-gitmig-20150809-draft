@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.26 2004/06/28 16:00:29 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.27 2004/07/11 20:20:25 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -119,7 +119,7 @@ function webapp_strip_cwd ()
 function webapp_configfile ()
 {
 	webapp_checkfileexists "$1" "$D"
-	echo $1
+
 	local MY_FILE="`webapp_strip_appdir \"$1\"`"
 	echo $MY_FILE
 
@@ -469,7 +469,7 @@ function webapp_pkg_postinst ()
 
 		if [ "$IS_REPLACE" = "1" ]; then
 			einfo "${PN}-${PVR} is already installed - replacing"
-			/usr/sbin/webapp-config -C -d "$INSTALL_DIR"
+			my_mode=-I
 		elif [ "$IS_UPGRADE" = "1" ]; then
 			einfo "$REMOVE_PKG is already installed - upgrading"
 			my_mode=-U
