@@ -1,11 +1,21 @@
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 d339357d200a2665b2864dfd0275f8a3 pari-2.1.6.ebuild 1907
-MD5 d33b0309bbbaa8e508e35af360efb31b pari-2.1.5-r1.ebuild 953
-MD5 1e700d23940503ab82ef77ff1921803a ChangeLog 3962
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4818ef4876441247184df2b11538de44 pari-2.1.5-r4.ebuild 1882
-MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r4 63
-MD5 2fd9906f2bf293fdad42d572846508de files/digest-pari-2.1.6 60
-MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r1 63
+MD5 a910aa02b7f5171ce2af7185d06b98af pari-2.1.6.ebuild 1907
+MD5 d33b0309bbbaa8e508e35af360efb31b pari-2.1.5-r1.ebuild 953
+MD5 cfd81af060957602e8518f7b9623b5bd ChangeLog 4062
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 c3f89da5ddbdb73646e3d64ee31ea887 files/docs.patch 915
-MD5 dccf7ef464f99fa750a5c7fc3ec67e8f files/wrong_functype-r1.patch 1498
+MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r1 63
+MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r4 63
 MD5 cbd309a01e2fee1a5ba6cb3a93ba5708 files/wrong_functype.patch 1946
+MD5 2fd9906f2bf293fdad42d572846508de files/digest-pari-2.1.6 60
+MD5 dccf7ef464f99fa750a5c7fc3ec67e8f files/wrong_functype-r1.patch 1498
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCUNCSM+I1L6GK/u4RAumSAJ9ALW0rEM6Q0QIoOxNENbzOgy8YEgCfeGlf
+bJwzRD4MpY1Jw7m9qD5btk8=
+=1VWI
+-----END PGP SIGNATURE-----
