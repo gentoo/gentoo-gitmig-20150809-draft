@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.1 2005/01/05 15:20:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.2 2005/01/05 19:24:04 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,12 @@ DEPEND="virtual/libc
 	app-arch/ncompress"
 RDEPEND="${DEPEND}
 	nls? ( >=sys-devel/gettext-0.10.35 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-flex-arg.patch
+}
 
 src_compile() {
 	use static && append-ldflags -static
