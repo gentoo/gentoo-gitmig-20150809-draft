@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.2 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.3 2004/10/29 07:11:35 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -10,7 +10,7 @@
 # build support for.  Note, that this variable is only unlocked if the USE
 # variable "expertxfree" is switched on, at least for xfree.
 
-ECLASS=xfree
+ECLASS=x11
 INHERITED="${INHERITED} ${ECLASS}"
 
 EXPORT_FUNCTIONS vcards is_kernel strip_bins
