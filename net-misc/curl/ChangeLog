@@ -1,0 +1,145 @@
+# ChangeLog for net-ftp/curl
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.1 2004/03/29 00:30:33 vapier Exp $
+
+  30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> curl-7.11.0.ebuild:
+  Stable on hppa.
+
+  23 Mar 2004; <augustus@gentoo.org> curl-7.11.0.ebuild:
+  Marked stable on AMD64.
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> curl-7.11.0.ebuild:
+  Added ~mips keyword.
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> curl-7.10.8-r1.ebuild:
+  Added ~mips keyword.
+
+  09 Mar 2004; <agriffis@gentoo.org> curl-7.10.8-r1.ebuild:
+  stable on alpha and ia64
+
+  02 Mar 2004; Tom Gall <tgall@gentoo.org> curl-7.11.0.ebuild:
+  stable on ppc64
+
+  06 Feb 2004; <gustavoz@gentoo.org> curl-7.10.8-r1.ebuild:
+  stable on sparc
+
+*curl-7.11.0 (04 Feb 2004)
+
+  04 Feb 2004; Alastair Tse <liquidx@gentoo.org> curl-7.10.3-r1.ebuild,
+  curl-7.10.8-r1.ebuild, curl-7.10.8.ebuild, curl-7.11.0.ebuild:
+  version bump (#40188)
+
+  29 Jan 2004; Aron Griffis <agriffis@gentoo.org> curl-7.10.7.ebuild:
+  stable on alpha and ia64
+
+*curl-7.10.8-r1 (16 Jan 2004)
+
+  06 Feb 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.8-r1.ebuild:
+  Marked stable on hppa.
+
+  16 Jan 2004; Alastair Tse <liquidx@gentoo.org> curl-7.10.8-r1.ebuild,
+  files/curl-7.10.8-transfer-segv.patch:
+  backported fix for segfault for libcurl. Submitted by Gustavo Felisberto
+  <gustavo felisberto.net>. (#37959)
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> curl-7.10.7.ebuild:
+  Marked stable on sparc.
+
+  09 Dec 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.2.ebuild,
+  curl-7.10.3-r1.ebuild, curl-7.10.5-r1.ebuild, curl-7.10.7.ebuild,
+  curl-7.10.8.ebuild:
+  removed pam dependency, added openldap dep for older versions (#35343)
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> curl-7.10.3-r1.ebuild:
+  Stable on ia64
+
+*curl-7.10.8 (03 Nov 2003)
+
+  03 Nov 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.8.ebuild:
+  version bump
+
+*curl-7.10.7 (03 Nov 2003)
+
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.7.ebuild :
+  Marked stable on hppa.
+
+  03 Nov 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.7.ebuild:
+  version bump
+
+  19 Jun 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.5-r1.ebuild:
+  marking as stable x86 because it includes a fairly important bugfix over all
+  7.10.x series
+
+*curl-7.10.5-r1 (13 Jun 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.5-r1.ebuild :
+  Marked stable on hppa.
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.5-r1.ebuild :
+  Added ~hppa to KEYWORDS.
+
+  13 Jun 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.5-r1.ebuild,
+  files/curl-7.10.5-badssl.patch:
+  backported one-liner patch from cvs to add compatibility with broken ssl
+  servers. (#22567) also some cleanups.
+
+*curl-7.10.5 (13 Jun 2003)
+
+  13 Jun 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.5.ebuild:
+  version bump. https now checks if certs are valid.
+
+*curl-7.10.4 (09 Apr 2003)
+
+  09 Apr 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.4.ebuild:
+  version bump
+
+*curl-7.10.3-r1 (20 Mar 2003)
+
+  20 Mar 2003; Aron Griffis <agriffis@gentoo.org> curl-7.10.2.ebuild,
+  curl-7.10.3-r1.ebuild, curl-7.10.3.ebuild:
+  Remove pic USE-flag and bump rev
+
+*curl-7.10.3 (28 Feb 2003)
+
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> curl-7.10.3.ebuild:
+  Mark stable on alpha
+
+  28 Feb 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.3.ebuild files/digest-curl-7.10.3 :
+  Version Bump. Fixes #14015.
+
+*curl-7.10.2 (19 Nov 2002)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.2.ebuild :
+  Added hppa to KEYWORDS.
+
+  23 Dec 2002; Martin Holzer <mholzer@gentoo.org> curl-7.9.7.ebuild files/digest-curl-7.10.2 Changelog :
+  Changed SRC_URI from .tar.gz to .tar.bz2
+
+  17 Dec 2002; Aron Griffis <agriffis@gentoo.org> curl-7.10.2.ebuild :
+  Added ~alpha to KEYWORDS
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+  19 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + more USE flag support
+
+*curl-7.9.7 (17 May 2002)
+
+  23 Dec 2002; Martin Holzer <mholzer@gentoo.org> curl-7.9.7.ebuild files/digest-curl-7.9.7 Changelog :
+  Ipv6 now configured by emerge. Fixed #11214.
+  Changed SRC_URI from .tar.gz to .tar.bz2
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
+  17 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
+  Version bump.  Seems to work better when compiled w/ gcc 3.0.4.
+
+*curl-7.9.3 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
