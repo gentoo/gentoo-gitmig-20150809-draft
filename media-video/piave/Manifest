@@ -1,3 +1,4 @@
-MD5 5480c2328caaa9813e6500fcd19da59b ChangeLog 415
+MD5 5802039eb809d429e384cf21a673d733 ChangeLog 521
 MD5 b930e21bf22fd73f984ae65f871fdc2d metadata.xml 253
-MD5 9a03ed86245906e31dcbc5c91842b78e piave-0.2.4.ebuild 1091
+MD5 3376bd027bda6c7a9b669c63024f5924 piave-0.2.4.ebuild 1098
+MD5 e82020c9dafa6d2c570921b0fafbd5ff files/digest-piave-0.2.4 63
