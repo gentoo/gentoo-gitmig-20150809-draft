@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.4 2004/09/17 04:35:16 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.5 2004/10/18 19:12:23 squinky86 Exp $
+
+*libtorrent-0.3.7 (18 Oct 2004)
+
+  18 Oct 2004; Jon Hood <squinky86@gentoo.org>
+  -files/libtorrent-0.3.1-client.patch, -libtorrent-0.3.2.ebuild,
+  +libtorrent-0.3.7.ebuild:
+  Version bump, remove old versions.
 
 *libtorrent-0.3.5 (16 Sep 2004)
 
