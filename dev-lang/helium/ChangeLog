@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/helium
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.3 2003/12/02 14:49:30 kosmikus Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.4 2004/02/18 14:23:30 kosmikus Exp $
+
+  18 Feb 2004; Andres Loeh <kosmikus@gentoo.org> :
+  New version (#40365).
 
   02 Dec 2003; Andres Loeh <kosmikus@gentoo.org> helium-1.1.ebuild:
   Corrected source URI's according to bug #34849.
