@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.300 2004/08/08 00:45:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.301 2004/08/11 18:18:46 lv Exp $
+
+  11 Aug 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.1/gcc-3.4.1-glibc-is-native.patch, gcc-3.4.1-r2.ebuild,
+  gcc-3.4.1.ebuild:
+  added a fix for bug 55108, where enabling multilib caused gcc to fail
+  compiling with "Link tests are not allowed after GCC_NO_EXECUTABLES"
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> gcc-3.3.3-r3.ebuild,
   gcc-3.3.3-r4.ebuild, gcc-3.3.3-r5.ebuild, gcc-3.3.3-r6.ebuild,

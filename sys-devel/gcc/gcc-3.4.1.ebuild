@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.18 2004/08/09 03:09:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.19 2004/08/11 18:18:46 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -487,6 +487,15 @@ src_unpack() {
 	epatch ${FILESDIR}/3.4.0/gcc34-multi32-hack.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
 	epatch ${FILESDIR}/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch
+
+	if use amd64 && use multilib ; then
+		# this should hack around the GCC_NO_EXECUTABLES bug
+		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
+		cd ${S}/libstdc++-v3
+		einfo "running autoreconf..."
+		autoreconf
+		cd ${S}
+	fi
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
