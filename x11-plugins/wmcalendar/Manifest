@@ -1,5 +1,5 @@
-MD5 81c1e5ed7bc8641250996c37d60f7e5a wmcalendar-0.5.0.ebuild 907
-MD5 9fb6de29d84470c9867a1a4a2995c16b ChangeLog 674
+MD5 4e7734203da93507a5f86237c5ff69e8 ChangeLog 770
+MD5 3b7b231a7107541baedc6868e1aa02b6 wmcalendar-0.5.0.ebuild 911
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 e1445dfb0ac0d0dd189f22956e61de10 files/digest-wmcalendar-0.5.0 67
 MD5 54f3e7d4eb228c47d0712426fff78d15 files/wmcalendar-0.5.0.makefile.patch 980
