@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.23.ebuild,v 1.2 2004/06/02 13:40:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.23.ebuild,v 1.3 2004/06/24 21:21:30 agriffis Exp $
 
 DESCRIPTION="language independent text-to-speech system"
 HOMEPAGE="http://epos.ure.cas.cz/"

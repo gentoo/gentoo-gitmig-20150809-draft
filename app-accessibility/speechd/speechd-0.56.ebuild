@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56.ebuild,v 1.5 2004/05/31 18:45:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56.ebuild,v 1.6 2004/06/24 21:24:04 agriffis Exp $
 
 DESCRIPTION="Implements /dev/speech (any text written to /dev/speech will be spoken aloud)"
 HOMEPAGE="http://www.speechio.org/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.6 2004/05/31 18:45:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.7 2004/06/24 21:22:21 agriffis Exp $
 
 DESCRIPTION="Flite text to speech engine"
 HOMEPAGE="http://www.speech.cs.cmu.edu/flite/index.html"
