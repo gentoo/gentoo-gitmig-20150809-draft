@@ -1,18 +1,17 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/files/powertweakd.rc6,v 1.1 2002/08/05 15:33:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/files/powertweakd.rc6,v 1.2 2003/01/12 23:10:07 raker Exp $
 
 start() {
-        checkconfig || return 1
-        ebegin "Starting proftpd"
-        start-stop-daemon --start --quiet --exec /usr/sbin/powertweakd -- -d -p  /var/run/powertweakd.pid 
+        ebegin "Starting powertweakd"
+        start-stop-daemon --start --quiet --exec /usr/sbin/powertweakd -- -d -p /var/run/powertweakd.pid 
         eend $?
 }
 
 stop() {
-        ebegin "Stopping proftpd"
-        start-stop-daemon --stop --quiet --pidfile /var/run/powertweakd.pid
+        ebegin "Stopping powertweakd"
+        start-stop-daemon --stop --quiet --exec /usr/sbin/powertweakd
         eend $?
 }
 
