@@ -1,4 +1,6 @@
 MD5 6fb808ee71ebfb5139461cf677ef5e0e stellarium-0.5.2.ebuild 754
-MD5 1e5346c80d38adefa558c9fbd054467e ChangeLog 1007
+MD5 8b09fd7d7021fe5d5f5a28bcf0f28566 stellarium-0.6.0.ebuild 629
+MD5 36afdea9824b6f62717d65d74e0337d1 ChangeLog 1104
 MD5 e4bdac528fd001633aa222d2b42fe048 metadata.xml 219
 MD5 86f0c7ba8d19b134d3fc0ba76f7cb419 files/digest-stellarium-0.5.2 69
+MD5 66045214d764b4b038374273fd42f9ad files/digest-stellarium-0.6.0 69
