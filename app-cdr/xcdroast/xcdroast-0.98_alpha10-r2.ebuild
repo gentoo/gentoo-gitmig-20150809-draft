@@ -16,9 +16,9 @@ DEPEND="=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
 	>=media-libs/gdk-pixbuf-0.16.0
 	>=media-libs/giflib-3.0
-	~app-cdr/cdrtools-1.11.24"
+	=app-cdr/cdrtools-1.11*"
 
-RDEPEND="~app-cdr/cdrtools-1.11.24"
+RDEPEND="=app-cdr/cdrtools-1.11*"
 
 src_compile () {
 	
