@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.9 2003/12/02 04:10:31 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.10 2003/12/14 23:43:09 spider Exp $
 
 IUSE="build crypt"
 
@@ -56,7 +56,7 @@ src_unpack() {
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
-	chown -R 0.0 *
+	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.20.ebuild,v 1.13 2003/09/16 19:28:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.20.ebuild,v 1.14 2003/12/14 23:48:22 spider Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
-	chown -R 0.0 *
+	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
 
 }

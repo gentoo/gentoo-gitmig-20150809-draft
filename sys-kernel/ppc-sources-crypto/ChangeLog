@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ppc-sources-crypto
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.6 2003/12/05 17:24:12 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.7 2003/12/14 23:43:09 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> ppc-sources-crypto-2.4.20-r1.ebuild,
+  ppc-sources-crypto-2.4.20.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
 *ppc-sources-crypto-2.4.20-r1 (02 Dec 2003)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ppc-sources-dev
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.14 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.15 2003/12/14 23:48:22 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> ppc-sources-dev-2.4.19.ebuild,
+  ppc-sources-dev-2.4.20.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   ppc-sources-dev-2.4.21.ebuild, ppc-sources-dev-2.4.22.ebuild:

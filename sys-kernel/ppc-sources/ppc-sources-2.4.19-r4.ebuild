@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.19-r4.ebuild,v 1.14 2003/09/29 19:02:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.19-r4.ebuild,v 1.15 2003/12/14 23:45:24 spider Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -64,7 +64,7 @@ src_unpack() {
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
-	chown -R 0.0 *
+	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
