@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libmms
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.1 2005/01/08 13:37:43 foser Exp $
+
+*libmms-0.1 (08 Jan 2005)
+
+  08 Jan 2004; foser <foser@gentoo.org> libmms-0.1.ebuild :
+  Initial commit
+  Library to support mms streaming
+  Added to media-video (video) herd, foser as temporary maintainer
