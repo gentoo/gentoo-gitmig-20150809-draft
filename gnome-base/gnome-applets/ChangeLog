@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.9 2002/07/25 12:38:00 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.10 2002/08/06 00:11:19 spider Exp $
+
+*gnome-applets-1.4.0.5 (05 Aug 2002)
+  05 Aug 2002 ; Spider <spider@gentoo.org> gnome-applets-1.4.0.5.ebuild :
+  bump version
 
 *gnome-applets-2.0.1 (25 Jul 2002)
  25 Jul 2002; Spider <spider@gentoo.org> gnome-applets-2.0.1.ebuild :
@@ -18,6 +22,8 @@
   since core and panel are the same package, same binaries and same files, there shouldn't be any conflicts at any time. 
 
 *gnome-applets-2.0.0 (10 Jun 2002)
+  05 aug 2002; Spider <spider@gentoo.org> :
+  change to use mirror:// and remove force debug in favour of inherit debug
   10 Jun 2002; Spider <spider@gentoo.org> gnome-applets-2.0.0.ebuild :
   back in force with a stable version
 
