@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.17 2004/10/03 07:24:45 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.18 2004/10/03 18:11:00 brad Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
 
-IUSE="java gnome gtk2 ldap debug xinerama xprint"
+IUSE="java gnome ldap debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
 IUSE="${IUSE} moznoxft"
 [[ ${PN} == mozilla || ${PN} == mozilla-firefox ]] && \
@@ -26,15 +26,10 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	gtk2? (
-		>=x11-libs/gtk+-2.2.0
-		>=dev-libs/glib-2.2.0
-		>=x11-libs/pango-1.2.1
-		>=dev-libs/libIDL-0.8.0 )
-	!gtk2? (
-		=x11-libs/gtk+-1.2*
-		=dev-libs/glib-1.2*
-		=gnome-base/orbit-0* )
+	>=x11-libs/gtk+-2.2.0
+	>=dev-libs/glib-2.2.0
+	>=x11-libs/pango-1.2.1
+	>=dev-libs/libIDL-0.8.0
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
 	>=net-www/mozilla-launcher-1.19"
 
@@ -135,7 +130,6 @@ mozilla_conf() {
 		--disable-installer \
 		--disable-pedantic \
 		--enable-crypto \
-		--enable-mathml \
 		--enable-xterm-updates \
 		--with-pthreads \
 		--with-system-jpeg \
@@ -143,20 +137,13 @@ mozilla_conf() {
 		--with-system-zlib \
 		--with-x \
 		--without-system-nspr \
+		--enable-default-toolkit=gtk2 \
 		$(mozilla_use_enable ipv6) \
-		$(mozilla_use_enable ldap) \
-		$(mozilla_use_enable ldap ldap-experimental) \
 		$(mozilla_use_enable xinerama) \
 		$(mozilla_use_enable xprint) \
-		$(mozilla_use_enable gnome gnomevfs)"
-
-	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
-	#       tested ok -- azarah
-	if use gtk2; then
-		mozilla_annotate +gtk2 --enable-default-toolkit=gtk2
-	else
-		mozilla_annotate -gtk2 --enable-default-toolkit=gtk
-	fi
+		$(mozilla_use_enable gnome gnomevfs) \
+		$(mozilla_use_enable truetype freetype2) \
+		$(mozilla_use_enable truetype freetypetest)"
 
 	if use debug; then
 		mozilla_annotate +debug \
@@ -186,33 +173,19 @@ mozilla_conf() {
 		mozilla_annotate "building on ultrasparc" --enable-js-ultrasparc
 	fi
 
-	# Check if we should enable Xft support...
-	if use moznoxft; then
-		mozilla_annotate "disabling xft2 by request (+moznoxft)" --disable-xft
-	elif use gtk2; then
-		# We need Xft2.0 locally installed
-		if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
-			# We also need pango-1.1, else Mozilla links to both
-			# Xft1.1 *and* Xft2.0, and segfault...
-			pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
-			if [[ ${pango_version//.} -gt 10 ]]; then
-				mozilla_annotate "gtk2 with xft2 (+gtk2 -moznoxft)" --enable-xft
-			else
-				mozilla_annotate "gtk2 without xft2 (bad pango version <1.1)" --disable-xft
-			fi
+	# We need Xft2.0 locally installed
+	if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
+		# We also need pango-1.1, else Mozilla links to both
+		# Xft1.1 *and* Xft2.0, and segfault...
+		pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
+		if [[ ${pango_version//.} -gt 10 ]]; then
+			mozilla_annotate "gtk2 with xft2 (-moznoxft)" --enable-xft
 		else
-			mozilla_annotate "gtk2 without xft2 (no pkg-config xft)" --disable-xft
+			mozilla_annotate "gtk2 without xft2 (bad pango version <1.1)" --disable-xft
 		fi
 	else
-		mozilla_annotate "gtk1 with xft2 (-gtk2 -moznoxft)" --enable-xft
+		mozilla_annotate "gtk2 without xft2 (no pkg-config xft)" --disable-xft
 	fi
-
-	# Freetype support used to be inversely tied to xft support.  Looking in the
-	# -bin versions it's apparent that mozilla.org builds with both enabled, so
-	# we'll allow that too.
-	myconf="${myconf} \
-		$(mozilla_use_enable truetype freetype2) \
-		$(mozilla_use_enable truetype freetypetest)"
 
 	# Support some development/debugging stuff for web developers
 	if ( ${MOZ} || ${FF} ) && use mozdevelop; then
@@ -229,28 +202,68 @@ mozilla_conf() {
 	if ${MOZ} || ${FF}; then
 		# Bug 60668: Galeon doesn't build without oji enabled, so enable it
 		# regardless of java setting.
-		myconf="${myconf} --enable-oji"
+		myconf="${myconf} --enable-oji \
+			--enable-mathml"
 	else
 		mozilla_annotate "n/a on ${PN}" --disable-oji
 	fi
 
 	# Some mailer-only flags
-	# (This doesn't work for moz-1.7.2 or tb-0.7.3 #59971)
-#	if ${MOZ} || ${TB} && use mozplaintext; then
-#		mozilla_annotate "+mozplaintext" \
-#			--enable-plaintext-editor-only
-#	fi
+	if ${TB}; then
+		# Set up extensions
+		if [[ ${PV} < 0.8 ]]; then
+			myext="pref,spellcheck,universalchardet,wallet"
+		else
+			myext="wallet,spellcheck,xmlextras,webservices"
+		fi
+
+		myconf="${myconf} --enable-single-profile \
+		--enable-necko-protocols=http,file,jar,viewsource,res,data \
+		--enable-image-decoders=default,-xbm \
+		$(mozilla_use_enable ldap) \
+		$(mozilla_use_enable ldap ldap-experimental) \
+		--enable-extensions=${myext}"
+
+		mozilla_annotate "n/a on ${PN}" \
+			--disable-calendar \
+			--disable-svg \
+			--disable-necko-disk-cache \
+			--disable-profilesharing 
+			
+	fi
 
 	# Some firefox-only flags
 	if ${FF}; then
+		# Set up extensions
+		myext="cookie,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xmlextras,xml-rpc"
+		[[ ${PV} < 1.0 ]] && myext="${myext},typeaheadfind"
+		use mozdevelop && myext="${myext},venkman"
+		use gnome && myext="${myext},gnomevfs"
+		
+		myconf="${myconf} --enable-single-profile \
+		--enable-extensions=${myext}"
+			
 		mozilla_annotate "n/a on ${PN}" \
 			--disable-mailnews \
-			--disable-composer
+			--disable-composer \
+			--disable-ldap \
+			--disable-profilesharing
 	fi
 
 	# Some moz-only flags
 	if ${MOZ}; then
-		myconf="${myconf} $(mozilla_use_enable mozcalendar calendar)"
+		# Set up extensions
+		myext="default"
+		use mozdevelop && myext="${myext},venkman"
+		use gnome && myext="${myext},gnomevfs"
+		use moznoirc && myext="${myext},-irc"
+		use mozxmlterm && myext="${myext},xmlterm"
+
+		myconf="${myconf} $(mozilla_use_enable mozcalendar calendar) \
+		$(mozilla_use_enable ldap) \
+		$(mozilla_use_enable ldap ldap-experimental) \
+		--enable-extensions=${myext}"
+
 		if use moznomail && ! use mozcalendar; then
 			mozilla_annotate "+moznomail -mozcalendar" --disable-mailnews
 		fi
@@ -266,37 +279,7 @@ mozilla_conf() {
 			mozilla_annotate "-mozsvg" \
 				--disable-svg
 		fi
-	else
-		mozilla_annotate "n/a on ${PN}" \
-			--disable-calendar \
-			--disable-svg
 	fi
-
-	# Setup extensions.
-	# This is a little strange because "configure" is the same for moz/ff/tb but
-	# the extensions don't work everywhere.  In particular we don't want to
-	# start the ff/tb lists with "default"
-	if ${MOZ}; then
-		myext="default"
-		use mozdevelop && myext="${myext},venkman"
-		use gnome && myext="${myext},gnomevfs"
-		use moznoirc && myext="${myext},-irc"
-		use mozxmlterm && myext="${myext},xmlterm"
-	elif ${FF}; then
-		# note that help is broken, and irc doesn't work
-		# also typeaheadfind applies only to versions prior to 1.0PR #64196
-		myext="cookie,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xmlextras,xml-rpc"
-		[[ ${PV} < 1.0 ]] && myext="${myext},typeaheadfind"
-		use mozdevelop && myext="${myext},venkman"
-		use gnome && myext="${myext},gnomevfs"
-	else
-		if [[ ${PV} < 0.8 ]]; then
-			myext="pref,spellcheck,universalchardet,wallet"
-		else
-			myext="pref,spellcheck,universalchardet,wallet,xmlextras"
-		fi
-	fi
-	myconf="${myconf} --enable-extensions=${myext}"
 
 	# Report!
 	echo
