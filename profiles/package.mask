@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3065 2004/08/15 05:29:19 squinky86 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3066 2004/08/16 13:42:13 caleb Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -187,30 +187,6 @@ sys-fs/progsreiserfs
 # <games@gentoo.org> (26 May 2004)
 # Using system libmikmod breaks mod music #52064
 >=media-libs/sdl-mixer-1.2.5-r2
-
-# <caleb@gentoo.org> - Aug 10 2004
-# The 3.3.0-rc2's are here only because I'm rolling them
-# into portage gradually to test dependency changes, 
-# and some of the packages may not be publically available for a few more
-# hours yet.  Will unmask in a few days.
-
-=kde-base/arts-1.3.0_rc2
-=kde-base/kdelibs-3.3.0_rc2
-=kde-base/kdebase-3.3.0_rc2
-=kde-base/kdenetwork-3.3.0_rc2
-=kde-base/kdepim-3.3.0_rc2
-=kde-base/kdemultimedia-3.3.0_rc2
-=kde-base/kdeutils-3.3.0_rc2
-=kde-base/kdesdk-3.3.0_rc2
-=kde-base/kdegraphics-3.3.0_rc2
-=kde-base/kdegames-3.3.0_rc2
-=kde-base/kdeedu-3.3.0_rc2
-=kde-base/kdetoys-3.3.0_rc2
-=kde-base/kdeartwork-3.3.0_rc2
-=kde-base/kdeaddons-3.3.0_rc2
-=kde-base/kdeadmin-3.3.0_rc2
-=kde-base/kdeaccessibility-3.3.0_rc2
-=kde-base/kdewebdev-3.3.0_rc2
 
 # <pauldv@gentoo.org> (24 May 2004)
 # Insecure, do not use unless for converting old databases
