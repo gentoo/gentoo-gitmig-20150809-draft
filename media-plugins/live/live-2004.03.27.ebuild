@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.15 2004/07/10 23:39:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.16 2004/07/16 23:00:59 vapier Exp $
 
 inherit flag-o-matic eutils
 
-DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
-
-HOMEPAGE="http://www.live.com/"
 MY_P=${P/-/.}
+DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
+HOMEPAGE="http://www.live.com/"
 SRC_URI="http://www.live.com/liveMedia/public/${MY_P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 sparc alpha ~hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE=""
+
 DEPEND="virtual/libc"
+
 S=${WORKDIR}/${PN}
 
 src_unpack() {
