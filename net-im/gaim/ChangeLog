@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.316 2005/03/21 19:37:29 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.317 2005/03/23 16:10:41 rizzo Exp $
+
+*gaim-1.2.0-r2 (23 Mar 2005)
+
+  23 Mar 2005; Don Seiler <rizzo@gentoo.org> +gaim-1.2.0-r2.ebuild:
+  Removing the stupid, uninformed xscreensaver change I made. Adding full-time
+  dep on startup-notification to avoid confusion.
 
 *gaim-1.2.0-r1 (21 Mar 2005)
 
