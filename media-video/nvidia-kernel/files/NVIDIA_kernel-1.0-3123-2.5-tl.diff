@@ -1,6 +1,6 @@
-diff -ru NVIDIA_kernel-1.0-3123/Makefile NVIDIA_kernel-1.0-3123-2.5/Makefile
---- NVIDIA_kernel-1.0-3123/Makefile	Tue Aug 27 16:36:53 2002
-+++ NVIDIA_kernel-1.0-3123-2.5/Makefile	Sun Oct 20 07:40:08 2002
+diff -ru NVIDIA_kernel-1.0-3123/Makefile NVIDIA_kernel-1.0-3123-2.5-tl/Makefile
+--- NVIDIA_kernel-1.0-3123/Makefile	2002-08-28 01:36:53.000000000 +0200
++++ NVIDIA_kernel-1.0-3123-2.5-tl/Makefile	2002-12-17 20:09:14.000000000 +0100
 @@ -8,7 +8,7 @@
  OBJECTS=nv.o os-interface.o os-registry.o 
  HEADERS=os-interface.h nv-linux.h nv-misc.h nv.h  nv-ids.h rmretval.h nvtypes.h nv_ref.h  $(VERSION_HDR)
@@ -21,9 +21,9 @@ diff -ru NVIDIA_kernel-1.0-3123/Makefile NVIDIA_kernel-1.0-3123-2.5/Makefile
  endif
  
  DEFINES+=$(EXTRA_DEFINES)
-diff -ru NVIDIA_kernel-1.0-3123/nv-linux.h NVIDIA_kernel-1.0-3123-2.5/nv-linux.h
---- NVIDIA_kernel-1.0-3123/nv-linux.h	Tue Aug 27 16:36:53 2002
-+++ NVIDIA_kernel-1.0-3123-2.5/nv-linux.h	Sat Oct 26 07:38:02 2002
+diff -ru NVIDIA_kernel-1.0-3123/nv-linux.h NVIDIA_kernel-1.0-3123-2.5-tl/nv-linux.h
+--- NVIDIA_kernel-1.0-3123/nv-linux.h	2002-08-28 01:36:53.000000000 +0200
++++ NVIDIA_kernel-1.0-3123-2.5-tl/nv-linux.h	2002-12-17 20:12:38.000000000 +0100
 @@ -28,19 +28,14 @@
  #include <linux/module.h>
  #include <linux/version.h>
@@ -105,7 +105,7 @@ diff -ru NVIDIA_kernel-1.0-3123/nv-linux.h NVIDIA_kernel-1.0-3123-2.5/nv-linux.h
  #  define in_irq()                      (local_irq_count[smp_processor_id()])
  #  define LINUX_VMA_OFFS(vma)           ((vma)->vm_offset)
  #  define GET_MODULE_SYMBOL(mod, sym)   (void*) get_module_symbol((mod), (sym))
-@@ -136,7 +122,50 @@
+@@ -136,9 +122,58 @@
  #  define MEM_MAP_READ_COUNT(map_nr)    (atomic_read(&mem_map[map_nr].count))
  #  define MEM_MAP_INC_COUNT(map_nr)     (atomic_inc(&mem_map[map_nr].count))
  #  define MEM_MAP_DEC_COUNT(map_nr)     (atomic_dec(&mem_map[map_nr].count))
@@ -118,8 +118,8 @@ diff -ru NVIDIA_kernel-1.0-3123/nv-linux.h NVIDIA_kernel-1.0-3123-2.5/nv-linux.h
 +#  define MEM_MAP_READ_COUNT(map_nr)    (atomic_read(&(map_nr)->count))
 +#  define MEM_MAP_INC_COUNT(map_nr)     (atomic_inc(&(map_nr)->count))
 +#  define MEM_MAP_DEC_COUNT(map_nr)     (atomic_dec(&(map_nr)->count))
-+#endif
-+
+ #endif
+ 
 +#ifdef KERNEL_2_5
 +#  define NV_DEVICE_NUMBER(_minor)      ((kdev_val(_minor)) & 0x0f)
 +#  define NV_IS_CONTROL_DEVICE(_minor)  (((kdev_val(_minor)) & 0xff) == 0xff)
@@ -140,24 +140,32 @@ diff -ru NVIDIA_kernel-1.0-3123/nv-linux.h NVIDIA_kernel-1.0-3123-2.5/nv-linux.h
 +#  define MAY_SLEEP()                   (!in_interrupt())
 +#endif
 +
-+#ifdef KERNEL_2_5
-+#define PTE_OFFSET(pmd, address, pte)   (pte = *pte_offset_map(pmd, address))
-+#else
-+#ifdef pte_offset_atomic
++#ifdef pte_offset_map       /* rmap-vm or 2.5  */
 +#define PTE_OFFSET(pmd, address, pte)               \
 + {                                                  \
++     pte_t *pPTE;                                   \
++     pPTE = pte_offset_map(pmd, address);           \
++     pte = *pPTE;                                   \
++     pte_unmap(pPTE);                               \
++ }
++#else
++#ifdef pte_offset_atomic        /* aa-vm   */
++#define PTE_OFFSET(pmd, address, pte)               \
++  {                                                 \
 +     pte_t *pPTE;                                   \
 +     pPTE = pte_offset_atomic(pmd, address);        \
 +     pte = *pPTE;                                   \
 +     pte_kunmap(pPTE);                              \
-+ }
-+#else
++  }
++#else   /* !pte_offset_atomic */
 +#define PTE_OFFSET(pmd, address, pte)   (pte = *pte_offset(pmd, address))
-+#endif
- #endif
- 
++#endif  /* pte_offset_atomic  */
++#endif  /* pte_offset_map     */
++
  #define NV_PAGE_ALIGN(addr)             ( ((addr) + PAGE_SIZE - 1) / PAGE_SIZE)
-@@ -193,14 +222,11 @@
+ #define NV_MASK_OFFSET(addr)            ( (addr) & (PAGE_SIZE - 1) )
+ 
+@@ -193,14 +228,11 @@
  
      nv_alloc_t *alloc_queue;
  
@@ -174,9 +182,9 @@ diff -ru NVIDIA_kernel-1.0-3123/nv-linux.h NVIDIA_kernel-1.0-3123-2.5/nv-linux.h
  
      /* per-device locking mechanism for access to core rm */
      spinlock_t rm_lock;
-diff -ru NVIDIA_kernel-1.0-3123/nv.c NVIDIA_kernel-1.0-3123-2.5/nv.c
---- NVIDIA_kernel-1.0-3123/nv.c	Tue Aug 27 16:36:52 2002
-+++ NVIDIA_kernel-1.0-3123-2.5/nv.c	Sat Oct 26 07:20:31 2002
+diff -ru NVIDIA_kernel-1.0-3123/nv.c NVIDIA_kernel-1.0-3123-2.5-tl/nv.c
+--- NVIDIA_kernel-1.0-3123/nv.c	2002-08-28 01:36:52.000000000 +0200
++++ NVIDIA_kernel-1.0-3123-2.5-tl/nv.c	2002-12-17 20:09:14.000000000 +0100
 @@ -36,7 +36,6 @@
  // keep track of opened clients and their process id so they
  //   can be free'd up on abnormal close
@@ -605,9 +613,9 @@ diff -ru NVIDIA_kernel-1.0-3123/nv.c NVIDIA_kernel-1.0-3123-2.5/nv.c
              printk("NVRM: not using NVAGP, AGPGART is loaded!!\n");
          } else
              status = rm_init_agp(nv);
-diff -ru NVIDIA_kernel-1.0-3123/os-interface.c NVIDIA_kernel-1.0-3123-2.5/os-interface.c
---- NVIDIA_kernel-1.0-3123/os-interface.c	Tue Aug 27 16:36:52 2002
-+++ NVIDIA_kernel-1.0-3123-2.5/os-interface.c	Sat Oct 26 07:49:14 2002
+diff -ru NVIDIA_kernel-1.0-3123/os-interface.c NVIDIA_kernel-1.0-3123-2.5-tl/os-interface.c
+--- NVIDIA_kernel-1.0-3123/os-interface.c	2002-08-28 01:36:52.000000000 +0200
++++ NVIDIA_kernel-1.0-3123-2.5-tl/os-interface.c	2002-12-17 20:09:14.000000000 +0100
 @@ -27,7 +27,7 @@
  
  BOOL os_is_administrator(PHWINFO pDev)
@@ -935,7 +943,7 @@ diff -ru NVIDIA_kernel-1.0-3123/os-interface.c NVIDIA_kernel-1.0-3123-2.5/os-int
          
      if (err) {
          printk(KERN_ERR "NVRM: AGPGART: unable to remap %lu pages\n",
-@@ -1782,11 +1658,9 @@
+@@ -1782,12 +1658,10 @@
      if (sgi_funcs.add_barrier == NULL)
      {
  #if defined(TESTING_SWAP)
@@ -943,7 +951,8 @@ diff -ru NVIDIA_kernel-1.0-3123/os-interface.c NVIDIA_kernel-1.0-3123-2.5/os-int
          inter_module_register(ADD_BARRIER_FUNC,    THIS_MODULE, sgitest_add_barrier);
          inter_module_register(REMOVE_BARRIER_FUNC, THIS_MODULE, sgitest_remove_barrier);
          inter_module_register(SWAP_READY_FUNC,     THIS_MODULE, sgitest_swap_ready);
--#endif
  #endif
+-#endif
          sgi_funcs.add_barrier = GET_MODULE_SYMBOL(0, ADD_BARRIER_FUNC);
          sgi_funcs.remove_barrier = GET_MODULE_SYMBOL(0, REMOVE_BARRIER_FUNC);
+         sgi_funcs.swap_ready = GET_MODULE_SYMBOL(0, SWAP_READY_FUNC);

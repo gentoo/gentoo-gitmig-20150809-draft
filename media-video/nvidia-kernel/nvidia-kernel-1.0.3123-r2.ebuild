@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.3123-r2.ebuild,v 1.2 2002/12/09 04:26:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.3123-r2.ebuild,v 1.3 2003/01/20 19:33:41 azarah Exp $
 
 inherit eutils
 
@@ -41,6 +41,7 @@ src_unpack() {
 	
 	local KV_major="`uname -r | cut -d. -f1`"
 	local KV_minor="`uname -r | cut -d. -f2`"
+	local KV_micro="`uname -r | cut -d. -f3 | sed -e 's:[^0-9].*::'`"
 
 	cd ${S}
 	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
@@ -49,6 +50,14 @@ src_unpack() {
 		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
 		EPATCH_SINGLE_MSG="Applying page_alloc.c patch..." \
 		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl-pa.diff
+		EPATCH_SINGLE_MSG="Applying module patch for 2.5..." \
+		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-module.diff
+
+		if [ "${KV_micro}" -gt 53 ]
+		then
+			EPATCH_SINGLE_MSG="Applying module patch for 2.5.54 or later..." \
+			epatch ${FILESDIR}/${NV_PACKAGE}-2.5.54.diff
+		fi
 	else
 		EPATCH_SINGLE_MSG="Applying page_alloc.c patch..." \
 		epatch ${FILESDIR}/${NV_PACKAGE}-pa.diff
