@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.2-r1.ebuild,v 1.1 2003/06/17 09:39:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.2-r2.ebuild,v 1.1 2003/06/30 11:07:37 aliz Exp $
 
 IUSE="ssl kde"
 [ -n "`use kde`" ] && inherit kde-base eutils
@@ -8,8 +8,7 @@ IUSE="ssl kde"
 
 LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
-SRC_URI="mirror://sourceforge/sim-icq/${P}.tar.gz
-	http://debian.thermoman.de/misc/sim-patches.tar.gz"
+SRC_URI="mirror://sourceforge/sim-icq/${P}.tar.gz"
 HOMEPAGE="http://sim-icq.sourceforge.net"
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
@@ -21,14 +20,8 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	epatch ${FILESDIR}/${P}-nostl.diff
-
-	for a in ${WORKDIR}/sim-patches/*; do
-		epatch ${a}
-	done
+	epatch ${FILESDIR}/${PV}-patches
 }
-
-
-PATCHES="${FILESDIR}/${P}-nostl.diff"
 
 src_compile() {
 	if [ -n "`use ssl`" ]; then
