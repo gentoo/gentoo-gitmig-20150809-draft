@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.2 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.3 2003/05/13 11:29:33 jje Exp $
+
+*rosegarden-4.0.9 (13 May 2003)
+
+  13 May 2003; jje <jje@gentoo.org> rosegarden-4.0.9.ebuild:
+  Version bump. Updated depends. Fixed ${P}.
 
 *rosegarden-4.0.8.5 (01 Mar 2003)
 
