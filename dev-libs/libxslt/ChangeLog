@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.81 2004/09/19 08:07:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.82 2004/11/05 03:09:29 obz Exp $
+
+  05 Nov 2004; Mike Gardiner <obz@gentoo.org> -libxslt-1.0.33.ebuild,
+  -libxslt-1.1.3.ebuild, libxslt-1.1.4.ebuild, libxslt-1.1.6.ebuild,
+  libxslt-1.1.8-r1.ebuild, libxslt-1.1.8.ebuild, libxslt-1.1.9-r1.ebuild,
+  libxslt-1.1.9.ebuild:
+  Removed conditional inheritance, see QA on bug #68913, and cleaned out
+  oldest versions
 
   19 Sep 2004; Joshua Kinard <kumba@gentoo.org> libxslt-1.1.8-r1.ebuild:
   Marked stable on mips.

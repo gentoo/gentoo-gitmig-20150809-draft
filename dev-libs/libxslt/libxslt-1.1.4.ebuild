@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.4.ebuild,v 1.11 2004/07/04 19:15:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.4.ebuild,v 1.12 2004/11/05 03:09:29 obz Exp $
 
-inherit libtool gnome.org
-use python && inherit python
+inherit libtool gnome.org python
 
 DESCRIPTION="XSLT libraries and tools"
 HOMEPAGE="http://www.xmlsoft.org/"
