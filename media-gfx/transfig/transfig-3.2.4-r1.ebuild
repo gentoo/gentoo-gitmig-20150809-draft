@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.2 2003/05/10 17:33:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.3 2003/06/24 21:39:32 lu_zero Exp $
+
+inherit gcc
 
 MY_P=${P/transfig-/transfig.}
 S=${WORKDIR}/${MY_P}
@@ -20,6 +22,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}.patch
+	#bad way to fix a bad issue
+	if [ "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -ge "3" ]
+	then
+	epatch  ${FILESDIR}/${P}-gcc-3.3.patch
+	fi
 }
 
 src_compile() {
