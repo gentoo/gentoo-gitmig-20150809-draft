@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.2 2004/08/01 22:10:58 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.3 2004/08/02 22:05:50 lanius Exp $
 
 inherit eutils kmod
 
@@ -64,7 +64,7 @@ src_compile() {
 	[ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=serial \
 		--with-port=0x3f8 --with-irq=4"
 
-	if is_kernel 2 6; then
+	if is_kernel 2 6 && ! is_koutput; then
 		kmod_make_linux_writable
 	fi
 
