@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0c21ca72fce4e123fa5121db51bf7571 ChangeLog 7408
 MD5 ec488c2827fab65ef67f47709c1c7de0 metadata.xml 253
 MD5 586d00643c23d8c4d9d7681eaf90f49e keychain-2.5.1.ebuild 928
-MD5 58b7ff88a8b801bece9707285a52048f keychain-2.5.3.ebuild 939
+MD5 58b7ff88a8b801bece9707285a52048f keychain-2.5.3.1.ebuild 939
 MD5 bfa5a1b665052c02afe8358e4d8e53cb files/digest-keychain-2.5.1 66
 MD5 960e0f8d2a77563d72ee17e04fa65764 files/digest-keychain-2.5.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLxZEBXaUFmZvwyMRAg4WAJ0R8MU0q2piFWItrOtfiEBq4DXxMQCdEpTz
-MYFoTZuseBIHbtyLCpw/jAI=
-=1YW3
------END PGP SIGNATURE-----
+MD5 c3dbab3110dc1ad94fe2c0cdf8d23199 files/digest-keychain-2.5.3.1 68

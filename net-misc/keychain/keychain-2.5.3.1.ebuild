@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.5.3.ebuild,v 1.1 2005/03/09 15:28:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.5.3.1.ebuild,v 1.1 2005/03/10 18:35:30 agriffis Exp $
 
 DESCRIPTION="ssh-agent manager"
 HOMEPAGE="http://www.gentoo.org/proj/en/keychain/"
