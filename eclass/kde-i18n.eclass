@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.36 2002/12/11 13:46:19 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.37 2002/12/21 14:54:43 hannes Exp $
 
 inherit kde
 ECLASS=kde-i18n
@@ -31,6 +31,8 @@ case "$PV" in
 	2.2.2)		SRC_PATH="stable/${PV}/src/${P}.tar.bz2"
 			KEYWORDS="x86";;
 	3.1_*)		SRC_PATH="unstable/kde-${PV//_/-}/src/kde-i18n/${RP}.tar.bz2" 
+			KEYWORDS="x86 ppc";;
+	3.0.5a)		SRC_PATH="stable/${PV}/src/kde-i18n/${PN}-${PV/a/}.tar.bz2" 
 			KEYWORDS="x86 ppc";;
 	3*)		SRC_PATH="stable/${PV}/src/kde-i18n/${P}.tar.bz2" 
 			KEYWORDS="x86 ppc";;
