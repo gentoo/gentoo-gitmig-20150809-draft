@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/parsedxml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/parsedxml/ChangeLog,v 1.8 2004/10/14 20:17:34 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/parsedxml/ChangeLog,v 1.9 2004/10/23 22:38:19 lanius Exp $
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> -parsedxml-1.3.1.ebuild,
+  parsedxml-1.4.ebuild:
+  remove old version
 
   14 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org> parsedxml-1.4.ebuild:
   Stable on x86, for silva1.1 release for 2004.3
