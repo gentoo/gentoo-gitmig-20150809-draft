@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.16 2004/04/09 15:51:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.17 2004/06/19 14:30:47 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> xforms-1.0.90.ebuild:
+  Stable on x86.
 
 *xforms-1.0.90 (09 Apr 2004)
 
