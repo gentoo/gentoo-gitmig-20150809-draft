@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.0.ebuild,v 1.1 2003/04/16 16:52:11 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.0.ebuild,v 1.2 2003/04/22 06:55:44 aliz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.snort.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha"
+KEYWORDS="x86 sparc alpha"
 
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1
@@ -39,6 +39,8 @@ src_unpack() {
 	# Following patch contributed in bug #18258
 	#is this needed in 2.0? -Method
 	#use alpha && epatch ${FILESDIR}/${P}-alpha.patch
+
+	sed "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" < etc/snort.conf > etc/snort.conf.distrib
 }
 
 src_compile() {
@@ -82,8 +84,8 @@ src_install () {
 	docinto contrib ; dodoc contrib/*
 
 	insinto /etc/snort
-	doins etc/classification.config rules/*.rules
-	newins etc/snort.conf snort.conf.distrib
+	doins etc/reference.config etc/classification.config rules/*.rules
+	doins etc/snort.conf.distrib
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/snort.rc6 snort
 	insinto /etc/conf.d ; newins ${FILESDIR}/snort.confd snort

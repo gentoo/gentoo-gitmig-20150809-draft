@@ -13,4 +13,4 @@ LOGDIR="/var/log/snort"
 CONF=/etc/snort/snort.conf
 
 # This pulls in the options above
-SNORT_OPTS="-D -u snort -i $IFACE -dev -l $LOGDIR -c $CONF"
+SNORT_OPTS="-D -u snort -i $IFACE -l $LOGDIR -c $CONF"
