@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040615.ebuild,v 1.10 2004/11/04 04:00:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040615.ebuild,v 1.11 2004/12/14 11:07:46 hattya Exp $
 
 MY_P="man-pages-ja-${PV}"
 GENTOO_MAN_P="portage-${P}"
@@ -12,7 +12,7 @@ SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ia64"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
 IUSE=""
 
 DEPEND="!>=sys-apps/groff-1.19
