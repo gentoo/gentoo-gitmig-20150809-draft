@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc1.ebuild,v 1.1 2004/02/21 20:18:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc1.ebuild,v 1.2 2004/04/03 23:55:13 spyderous Exp $
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -20,7 +20,7 @@ inherit gnuconfig
 
 
 RDEPEND=">=sys-libs/ncurses-5.0
-	X? ( >=x11-base/xfree-4.0 )
+	X? ( virtual/x11 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	nas? ( >=media-libs/nas-1.4 )

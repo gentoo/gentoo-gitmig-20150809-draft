@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.19 2004/03/31 00:14:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.20 2004/04/03 23:55:13 spyderous Exp $
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  timidity++-2.12.0-r3.ebuild, timidity++-2.13.0_rc1.ebuild,
+  timidity++-2.13.0_rc2.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   30 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   timidity++-2.13.0_rc2.ebuild:
