@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.20 2004/07/29 03:56:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.21 2004/09/27 02:02:27 morfic Exp $
+
+*libfame-0.9.1 (26 Sep 2004)
+
+  26 Sep 2004; Daniel Goller <morfic@gentoo.org>
+  +files/libfame-0.9.1-gcc34.patch, +files/libfame-0.9.1-mmx_configure.patch,
+  +libfame-0.9.1.ebuild:
+  Bump to 0.9.1 + adding of patches, closing bug #45736
+  Thanks to Bret Towe for supplying patches and Halcyon for testing
 
   28 Jul 2004; Tom Gall <tgall@gentoo.org> libfame-0.9.0-r1.ebuild:
   stable on ppc64, bug #55076
