@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/advancecomp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.19 2005/01/01 11:40:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.20 2005/02/06 21:02:14 taviso Exp $
+
+  06 Feb 2005; Tavis Ormandy <taviso@gentoo.org> advancecomp-1.13.ebuild:
+  stable on x86
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
