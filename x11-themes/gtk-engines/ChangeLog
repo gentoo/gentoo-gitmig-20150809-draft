@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.5 2003/07/13 01:30:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.6 2003/07/14 11:00:18 liquidx Exp $
+
+  14 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtk-engines-2.2.0.ebuild:
+  using newdepend to 'workaround' metadata conditional
 
   13 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtk-engines-2.2.0.ebuild:
   add imlib dep if gtk+-1 is being used
