@@ -1,7 +1,10 @@
-MD5 cb4919e64b09d21b8f4f8862d1183dff ChangeLog 8820
-MD5 ac8403b62a661a3cc6753e5b630645c7 nessus-core-2.2.0.ebuild 1851
-MD5 26fed21f66c0780978a792e651989132 nessus-core-2.3.0.ebuild 1260
-MD5 26fed21f66c0780978a792e651989132 nessus-core-2.2.2a.ebuild 1260
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 50b94029e247f9673486709250c1caec ChangeLog 8821
+MD5 d16cc7b592817ac2a6d87bfc42e53655 nessus-core-2.2.0.ebuild 1851
+MD5 8da16861b085ddda61a4f8f92f16aa01 nessus-core-2.3.0.ebuild 1261
+MD5 808fa7dfade1c7a47ffe122719946abb nessus-core-2.2.2a.ebuild 1262
 MD5 883d45d6092c114bdf3d35a3ce45161a metadata.xml 244
 MD5 6dc0eacbbd341c07604c5d3b1eaa2458 nessus-core-2.0.12.ebuild 1839
 MD5 d523fcb11205cb895b8d8c1272c07d33 files/digest-nessus-core-2.2.0 138
@@ -12,3 +15,10 @@ MD5 5c3b75512d095ff2ff65bbe535fe63b3 files/nessus-core-2.0.7.patch 448
 MD5 9a0fe4028467fdee9187dbcc20107278 files/nessusd-r6 486
 MD5 02fce1d620b03f7d03f3ae84fdeea4d6 files/patch_1.nessus-core.2.0.7 787
 MD5 16d08afb09cfc5710977cd1d01174398 files/digest-nessus-core-2.0.12 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+Z2SmdTrptrqvGERAj1rAKCE797ID/hrzUOdLOec8Uaf7xexJACgh1Xq
+21AnoAw2XdaoEqu3UbKs9aA=
+=5ccl
+-----END PGP SIGNATURE-----
