@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba06a7bc4720a67d557a46a398302f67 ChangeLog 985
+MD5 16508747bf26f196f317c91054c11b93 ChangeLog 1093
+MD5 36df090f9503e8d7f780aff063fb6184 ggz-txt-client-0.0.9.ebuild 814
 MD5 58f65bbd06035ab03fabd423c60bcbd1 ggz-txt-client-0.0.5.ebuild 529
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 36df090f9503e8d7f780aff063fb6184 ggz-txt-client-0.0.9.ebuild 814
-MD5 5eb94fe62119e52dd8461293e0bf42c3 files/digest-ggz-txt-client-0.0.5 71
 MD5 94eb1f6691ba379818476e5d29366714 files/digest-ggz-txt-client-0.0.9 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBz0UKroRuSHgZdywRAgYSAJ9mpqBM4dO32awBSZCNgzIONa7lDgCffu5b
-GS76Z2PbuBs08hSI1z+/05A=
-=Wqbq
------END PGP SIGNATURE-----
+MD5 5eb94fe62119e52dd8461293e0bf42c3 files/digest-ggz-txt-client-0.0.5 71
