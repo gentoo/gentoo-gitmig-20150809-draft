@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48_pre.ebuild,v 1.3 2004/12/15 21:40:52 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.ebuild,v 1.1 2005/01/02 04:23:47 swtaylor Exp $
 
 inherit eutils
 
@@ -8,7 +8,6 @@ DESCRIPTION="An MTA designed specifically for maildirs"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2" || SRC_URI="http://www.courier-mta.org/beta/courier/${P%%_pre}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
 S="${WORKDIR}/${P%%_pre}"
-RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
