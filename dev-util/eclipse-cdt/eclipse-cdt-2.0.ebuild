@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/eclipse-cdt-2.0.ebuild,v 1.1 2004/07/28 00:38:40 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/eclipse-cdt-2.0.ebuild,v 1.2 2004/07/28 14:40:32 karltk Exp $
 
 inherit eclipse-ext
 
@@ -11,7 +11,7 @@ LICENSE="CPL-1.0"
 SLOT="2"
 KEYWORDS="-* ~x86"
 IUSE=""
-DEPEND=">=dev-util/eclipse-3.0.0"
+DEPEND=">=dev-util/eclipse-sdk-3.0.0"
 S=${WORKDIR}/${P}
 
 # karltk: A lot more work to do:
