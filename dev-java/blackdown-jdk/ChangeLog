@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.41 2003/11/13 14:08:55 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.42 2003/11/14 17:40:30 pappy Exp $
+
+  14 Nov 2003; Alexander Gabert <pappy@gentoo.org> blackdown-jdk-1.4.1.ebuild:
+  added java binary to chpax treatment
 
   13 Nov 2003; Alexander Gabert <pappy@gentoo.org> blackdown-jdk-1.4.1.ebuild:
   added chpax for java_vm in jre/bin
