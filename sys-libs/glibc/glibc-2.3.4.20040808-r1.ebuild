@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.8 2004/10/13 22:43:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.9 2004/10/18 23:20:25 tgall Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -604,7 +604,11 @@ src_install() {
 	mkdir ${T}/thread-backup
 	mv ${D}/$(get_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	env -uRESTRICT prepallstrip
-	mv ${T}/thread-backup/* ${D}/$(get_libdir)/ || die
+
+	# this directory can be empty in certain cases so || die is wrong
+	# but hey, this is an emergancy fix for ppc64 so I won't break anyone else
+	use ppc64 && mv ${T}/thread-backup/* ${D}/$(get_libdir)/
+	use !ppc64 && mv ${T}/thread-backup/* ${D}/$(get_libdir)/ || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
@@ -692,7 +696,9 @@ EOF
 	insinto /etc
 	doins ${FILESDIR}/locales.build
 
-	must_exist /$(get_libdir)/ libpthread.so.0
+	# this test isn't using the correct directory on ppc64
+	# and really it's a worthless test
+	use !ppc64 && must_exist /$(get_libdir)/ libpthread.so.0
 
 	# this whole section is useless, it fails if sandbox is LOADED, not if it's
 	# enabled. but forcing sandbox not to load isnt an option...
@@ -749,6 +755,11 @@ pkg_preinst() {
 	# chunk of FHS compliance only applies to 64bit archs where 32bit
 	# compatibility is a major concern (not IA64, for example).
 	use amd64 && [ "$(get_libdir)" == "lib64" ] && fix_lib64_symlinks
+
+	# note that PPC64 doesn't comply with documents that aren't
+	# a standard yet and there is little support in the 
+	# community for them. But post 2004.3 we'll figure it out
+	use ppc64 && [ "$(get_libdir)" == "lib64" ]
 }
 
 pkg_postinst() {
