@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/fesi
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/ChangeLog,v 1.12 2004/12/04 14:03:26 karltk Exp $
+
+*fesi-1.1.8 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> fesi-1.1.8.ebuild:
+  Initial import. Ebuild submitted by Jan Brinkmann <lucky@the-luckduck.de>.
+  Fixes #63296.
