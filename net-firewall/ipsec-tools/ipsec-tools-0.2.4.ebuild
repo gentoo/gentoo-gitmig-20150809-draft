@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.2.4.ebuild,v 1.1 2004/02/01 11:35:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.2.4.ebuild,v 1.2 2004/02/01 15:43:47 plasmaroo Exp $
 
 DESCRIPTION="IPsec-Tools is a port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation."
 HOMEPAGE="http://ipsec-tools.sourceforge.net/"
@@ -22,8 +22,8 @@ pkg_setup() {
 src_compile() {
 	unset CC
 	./configure --prefix=/usr --sysconfdir=/etc --with-kernel-headers=/usr/src/linux/include || die
-	sed -e 's:AM_CFLAGS = :AM_CFLAGS = -include /usr/include/linux/compiler.h :' -i src/setkey/Makefile || die
-	sed -e 's:CPPFLAGS=:CPPFLAGS = -include /usr/include/linux/compiler.h :' -i src/racoon/Makefile || die
+	sed -e 's:AM_CFLAGS = :AM_CFLAGS = -include /usr/src/linux/include/linux/compiler.h :' -i src/setkey/Makefile || die
+	sed -e 's:CPPFLAGS=:CPPFLAGS = -include /usr/src/linux/include/linux/compiler.h :' -i src/racoon/Makefile || die
 	emake || die
 }
 
