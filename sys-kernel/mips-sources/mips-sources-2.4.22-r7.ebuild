@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r6.ebuild,v 1.1 2004/01/06 01:53:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r7.ebuild,v 1.1 2004/01/19 08:29:44 kumba Exp $
 
 ETYPE="sources"
 inherit kernel
@@ -48,7 +48,7 @@ src_unpack() {
 	epatch ${FILESDIR}/do_brk_fix.patch
 
 	# mremap fix (Possibly Exploitable)
-	epatch ${FILESDIR}/mremap-fix.patch
+	epatch ${FILESDIR}/mremap-fix-try2.patch
 
 	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
 	epatch ${FILESDIR}/rtc-fixes.patch
