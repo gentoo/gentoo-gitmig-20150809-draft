@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.19 2004/07/10 19:55:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.20 2004/07/12 01:35:56 mr_bones_ Exp $
+
+  11 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> gcl-2.6.2.ebuild:
+  fix readline dep
 
 *gcl-2.6.2 (09 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.2.ebuild,v 1.1 2004/07/10 19:55:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.2.ebuild,v 1.2 2004/07/12 01:35:56 mr_bones_ Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="emacs readline debug X tcltk"
 DEPEND=">=app-text/texi2html-1.64
 	emacs? ( virtual/emacs )
 	X? ( virtual/x11 )
-	readline ( sys-libs/readline )
+	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
 	virtual/tetex"
 
