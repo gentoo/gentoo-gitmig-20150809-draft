@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/stellarium
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.11 2004/10/07 12:57:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.12 2004/10/18 07:39:56 mr_bones_ Exp $
+
+*stellarium-0.6.1 (18 Oct 2004)
+
+  18 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +stellarium-0.6.1.ebuild:
+  version bump
 
   07 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
   +files/0.6.0-gcc3.4.patch, stellarium-0.6.0.ebuild:
