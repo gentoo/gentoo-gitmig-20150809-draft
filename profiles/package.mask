@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3797 2005/04/05 15:53:35 ka0ttic Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3798 2005/04/06 10:05:05 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,11 +21,15 @@
 ##   End example
 ##
 
-# Gustavo Zacarias <gustavoz@gentoo.org> (04 Mar 2005)
+# Jeremy Huddleston <eradicator@gentoo.org> (06 Apr 2005)
+# For those who want the DST bugfix before 0.18 is released in a few days
+=media-tv/mythtv-0.17-r1
+
+# Gustavo Zacarias <gustavoz@gentoo.org> (04 Apr 2005)
 # Needs python 2.4
 =dev-python/pyparted-1.6.9-r1
 
-# solar <security@gentoo> (01 Mar 2005)
+# solar <security@gentoo> (01 Apr 2005)
 net-print/pdq
 # local information disclosure. bug 84647
 # unmaintained upstream project. removal pending.
