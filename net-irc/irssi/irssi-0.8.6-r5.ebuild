@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r5.ebuild,v 1.1 2003/11/12 01:01:08 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r5.ebuild,v 1.2 2004/02/21 20:38:05 seemant Exp $
 
 IUSE="nls ipv6 perl ssl"
 
@@ -17,6 +17,7 @@ DEPEND=">=dev-libs/glib-1.2
 	ssl? ( dev-libs/openssl )
 	!net-irc/irssi-cvs
 	socks5? ( >=net-misc/dante-1.1.13 )"
+
 RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
