@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.27 2003/08/18 11:29:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.28 2003/10/03 00:27:11 agenkin Exp $
+
+*alsa-tools-0.9.7 (02 Oct 2003)
+
+  02 Oct 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version update.
+  Two tools have been removed (hdsploader and sscape_ctl), because they no
+  longer compile with linux headers from 2.4 series kernels.  I sent bug
+  reports to the alsa-devel people, so, hopefully, they'll be fixed in
+  subsequent releases.
 
 *alsa-tools-0.9.6-r1 (18 Aug 2003)
 
