@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.3 2002/07/11 06:30:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.4 2002/07/16 23:17:08 seemant Exp $
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
 S=${WORKDIR}/vmware-distrib
@@ -46,7 +46,7 @@ src_install () {
 	cp -a lib/* ${D}/opt/vmware/lib/
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
-	rm -r ${D}/opt/vmware/lib/modules/binary
+	rm -rf ${D}/opt/vmware/lib/modules/binary
 
 	dodir /opt/vmware/doc
 	cp -a doc/* ${D}/opt/vmware/doc/
