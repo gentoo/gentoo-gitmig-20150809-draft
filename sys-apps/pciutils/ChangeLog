@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.32 2004/07/17 06:04:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.33 2004/07/26 14:57:27 solar Exp $
+
+  26 Jul 2004; <solar@gentoo.org> pciutils-2.1.11-r1.ebuild:
+  fix command line overflow which did not allow for null terminator when using
+  lspci -vvv (AGPx1 and AGPx2 and AGPx4) bug #41422
 
   16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   pciutils-2.1.11-r1.ebuild:
