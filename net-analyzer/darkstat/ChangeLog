@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.7 2004/07/21 17:28:38 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.8 2004/07/22 10:55:19 usata Exp $
+
+  22 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> darkstat-2.6-r1.ebuild:
+  Added to macos. This closes bug #57817
 
 *darkstat-2.6-r1 (21 Jul 2004)
 
