@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.5 2002/06/02 12:13:38 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.6 2002/06/15 15:03:07 spider Exp $
+
+*ggv-1.99.7 (15 Jun 2002)
+  15 Jun 2002; Spider <spider@gentoo.org> ggv-1.99.7.ebuild:
+  updated version.. no big change
+
 
 *ggv-1.99.6 (1 Jun 2002) 
   1 Jun 2002; Spider <spider@gentoo.org> ggv-1.99.6.ebuild: 
