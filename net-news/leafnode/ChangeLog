@@ -1,6 +1,18 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.30 2004/06/28 22:45:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.31 2004/06/28 22:52:56 swegener Exp $
+
+*leafnode-2.0.0_alpha20040513 (29 Jun 2004)
+
+  29 Jun 2004; Sven Wegener <swegener@gentoo.org>
+  -leafnode-2.0.0_alpha20040206.ebuild, +leafnode-2.0.0_alpha20040513.ebuild:
+  Version bump to 2.0.0_alpha20040513 in the pre-release series and removed the
+  older ebuild as upstream source package has been dropped. Thanks to Daniel
+  Webert <daniel_webert@web.de> in bug #55365. Fixed bug #43094 so that leafnode
+  looks in the right directories for configuration files. Thanks to Rui Malheiro
+  <rmalheiro@6mil.pt> for reporting and providing a patch. Tidied the ebuild a
+  bit. Thanks to tove <bugs@veller.net> in bug #43039 for reporting and
+  providing a solution.
 
 *leafnode-1.10.1 (29 Jun 2004)
 
