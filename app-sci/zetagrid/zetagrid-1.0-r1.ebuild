@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r1.ebuild,v 1.1 2003/01/12 21:40:52 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r1.ebuild,v 1.2 2003/01/12 23:47:27 tantive Exp $
 
 S=${WORKDIR}/zetagrid-${PV}
 DESCRIPTION="An open source and platform independent grid system"
@@ -18,7 +18,7 @@ KEYWORDS="~x86"
 
 src_unpack() {
 	unpack zeta_base.zip zeta_linux_x86.zip zeta_progress.zip
-	if test -f /opt/zetagrid/zeta.cfg; then
+	if test -e /opt/zetagrid/zeta.cfg; then
 	    rm ${WORKDIR}/zeta.cfg
 	fi
 }
@@ -32,7 +32,7 @@ src_install() {
 	newexe ${FILESDIR}/zetagrid.init zetagrid
 }
 
-pkg_postinstl() {
+pkg_postinst() {
 	einfo "Zetagrid is now installed in /opt/zetagrid"
 	einfo "Please change zeta.cfg for configuration issues!"
 	einfo
