@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.7-r2.ebuild,v 1.1 2004/07/23 01:54:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.7-r2.ebuild,v 1.2 2004/08/01 08:11:29 kumba Exp $
 
 
 # Version Data
@@ -76,7 +76,7 @@ src_unpack() {
 	# Security Fixes
 	echo -e ""
 	ebegin "Applying Security Fixes"
-		epatch ${FILESDIR}/CAN-2004-0497-2.6-attr_gid.patch
+		epatch ${FILESDIR}/CAN-2004-0497-attr_gid.patch
 		epatch ${FILESDIR}/CAN-2004-0596-2.6-eql.patch
 		epatch ${FILESDIR}/CAN-2004-0626-death_packet.patch
 	eend

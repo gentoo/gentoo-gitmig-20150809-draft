@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.4-r5.ebuild,v 1.1 2004/07/23 01:54:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.4-r5.ebuild,v 1.2 2004/08/01 08:11:29 kumba Exp $
 
 
 # Version Data
@@ -82,8 +82,8 @@ src_unpack() {
 		epatch ${FILESDIR}/CAN-2004-0228-cpufreq.patch
 		epatch ${FILESDIR}/CAN-2004-0229-fb_copy_cmap.patch
 		epatch ${FILESDIR}/CAN-2004-0427-2.6-do_fork.patch
-		epatch ${FILESDIR}/CAN-2004-0495_0496-2.6-sparse.patch
-		epatch ${FILESDIR}/CAN-2004-0497-2.6-attr_gid.patch
+		epatch ${FILESDIR}/CAN-2004-0495_0496-2.6-sparse.patch.bz2
+		epatch ${FILESDIR}/CAN-2004-0497-attr_gid.patch
 		epatch ${FILESDIR}/CAN-2004-0596-2.6-eql.patch
 		epatch ${FILESDIR}/CAN-2004-0626-death_packet.patch
 	eend
