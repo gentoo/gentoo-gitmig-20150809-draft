@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r1.ebuild,v 1.1 2004/08/29 23:15:42 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r1.ebuild,v 1.2 2004/08/31 09:40:35 lv Exp $
 
 DESCRIPTION="X11R6 libraries for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
@@ -24,3 +24,19 @@ src_install() {
 	cp ${FILESDIR}/XI18N_OBJS ${D}/emul/linux/x86/usr/X11R6/lib32/X11/locale/C/
 	cp ${FILESDIR}/XLC_LOCALE ${D}/emul/linux/x86/usr/X11R6/lib32/X11/locale/C/
 }
+
+pkg_postinst() {
+	# do not replace any of the following with $(get_libdir)
+	if [ ! -e /usr/X11R6/lib/X11/locale/lib ] ; then
+		ln -s /emul/linux/x86/usr/X11R6/lib/X11/locale/lib /usr/X11R6/lib/X11/locale/lib
+	elif [ ! -h /usr/X11R6/lib/X11/locale/lib ] ; then
+		echo
+		ewarn "/usr/X11R6/lib/X11/locale/lib isnt a symlink, some apps will"
+		ewarn "refuse to work (adobe acrobat, staroffice, etc). Right now the"
+		ewarn "fix is to install at least xorg 6.7.99.903, which has been made"
+		ewarn "lib64 aware, and then reinstall emul-linux-x86-xlibs."
+		echo
+		sleep 10
+	fi
+}
+
