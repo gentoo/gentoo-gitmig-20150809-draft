@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.9 2003/11/04 03:40:44 abhishek Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.10 2004/02/15 15:06:35 dholm Exp $
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> synergy-1.0.14.ebuild:
+  Added to ~ppc.
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
