@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.159 2005/02/05 06:24:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.160 2005/02/12 04:53:46 eradicator Exp $
+
+*xmms-1.2.10-r13 (11 Feb 2005)
+
+  11 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +xmms-1.2.10-r13.ebuild:
+  This version is identical to 1.2.10-r12, but now all the plugins are
+  provided by external packages.
 
   04 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r12.ebuild:
