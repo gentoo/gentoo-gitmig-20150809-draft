@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.15 2004/07/16 02:42:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.16 2004/09/01 08:03:09 eradicator Exp $
+
+*cdparanoia-3.9.8-r2 (01 Sep 2004)
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/cdparanoia-3.9.8-identify_crash.patch,
+  +files/cdparanoia-3.9.8-toc.patch, +cdparanoia-3.9.8-r2.ebuild:
+  Added patches for a couple bugs to close bug #62386. Thanks to Alan Swanson
+  <swanson@ukfsn.org>.
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> cdparanoia-3.9.8-r1.ebuild:
   stable on ppc64, bug #55563
