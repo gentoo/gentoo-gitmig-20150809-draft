@@ -1,0 +1,164 @@
+Gentoo Linux Development Status
+
+Latest system snapshot: 25 Apr 2001
+Latest build snapshot: 01 May 2001
+Current Release: None
+Next Release: 1.0_rc5 (May 2001)
+
+[ download/install ]
+
+
+About Gentoo Linux
+
+Linux is a fast, modern x86-based Linux distribution with a clean and flexible
+design -- in this respect, Gentoo Linux may appeal to Slackware, Linux From
+Scratch or BSD users. Unlike other Linux distros, Gentoo Linux has an advanced
+package management system called Portage, similar in functionality to BSD
+ports.  However, unlike ports, Portage is written in Python and is a good deal
+more powerful and flexible than the BSD variant.
+
+The latest Gentoo Linux packages are made available in the form of "ebuild"
+autobuild scripts, which are integrated into the official Gentoo Linux Portage
+tree by Gentoo Linux developers.  Users can update their local copy of the
+Portage tree and gain access to the latest and greatest ebuilds, allowing them
+to install the latest Linux software on their systems.
+
+Here's how ebuilds work.  An ebuild script contains all the information needed
+to download, patch, compile and install a particular package using the user's
+preferred optimization settings, and with optional compile-time extensions
+(like GNOME support) enabled or disabled as desired.  The user simply specifies
+which package he or she would like built, and the sources are automatically
+downloaded, unpacked, patched, compiled locally and the binaries are installed.
+The user ends up with a package set up to his or her exact specifications.  
+
+
+Related Resources:
+	
+	Gentoo Linux User Guide
+	
+	Portage User Guide
+	
+	Subscribe to the gentoo-announce
+	mailing list ( release announcements)
+	
+	Subscribe to the gentoo-dev mailing list
+	( user & developer list)
+	
+	Visit us at #gentoo at irc.openprojects.net
+
+Alt:
+
+	Linux 2.4.4+, glibc-2.2, gcc 2.95.3 and the latest development tools
+	ReiserFS, LVM, ALSA, PCMCIA-CS and lm_sensors support built-in; XFS and GFS will be added soon
+	Xfree86 4.0.3, OpenGL, KDE 2.1.1 and GNOME 1.4
+	tcp-wrappers, uscpi-tcp ("tcpserver"), xinetd, iptables and Linux QoS tools (tc) included
+	modern qmail (with optional mysql and LDAP support), postfix and exim MTAs
+	GRUB boot loader (LILO is still available if you need it)
+	D.J. Bernstein's supervise (daemontools) used to ensure availability for
+	important services
+	syslogd and klogd have been replaced with multilog (higher-performance, auto-rotation and
+	64-bit timestamps)
+	600+ up-to-date ebuild scripts for your favorite apps
+	
+Download/Install Gentoo Linux
+
+News:
+
+	We're currently recommending that people either wait for our next
+	official Gentoo Linux ISO CD release (1.0_rc5) or install using a
+	system or build snapshot for the time being.  We removed our previous
+	release (1.0_rc4_pre2) from the ibiblio.org mirror because our current
+	system snapshots and build images are much more robust, and include
+	2.4.4+ kernels which no longer have ReiserFS filesystem corruption
+	problems.
+
+Impo:
+
+	Please remember that Gentoo Linux is in a prerelease state.  This means
+	that it should only be installed by developers or adventurous users, and
+	should not be used in a production capacity.  Gentoo Linux will be
+	production-ready by the 1.0 release.
+	
+
+
+Currently, we have three different methods of installing Gentoo Linux,
+depending on your needs: the install CD method, the system snapshot method and the
+build image method.
+
+For every official Gentoo Linux release, we create a bootable ISO image that
+can be used to install Gentoo Linux.  The process works as follows: you burn
+the ISO image using a CD-R, and then boot the CD and are presented with a
+minimal CD-based Gentoo Linux system.  You then use this system to create
+partitions and set up filesystems as needed.  Once your filesystems are
+created, you mount them and extract the system-image ("sys.tbz2") tarball
+included on the CD, which contains a basic Gentoo Linux system.  After a few
+more configuration steps, you can umount your Gentoo Linux partitions and
+install a boot manager; Gentoo Linux is now ready to run.  Since our CD releases
+include precompiled packages for most applications, they're generally around
+600Mb in size.
+
+In-between our official Gentoo Linux ISO CD releases, we create up-to-date
+sys.tbz2 files, called "system snapshots".  These sys.tbz2 files are identical
+in design to the sys.tbz2 image included on our official CDs, except that they
+are more up-to-date and are used by our developers as we are refining a Gentoo
+Linux for the next official CD release.  A lot of the time, we'll recommend
+that you install a system snapshot rather than our latest official Gentoo Linux
+CD release, because our system snapshots are often the most stable and
+up-to-date version of Gentoo Linux available.  However, since system snapshots
+are for developers only, we don't provide an ISO image; instead, we provide the
+sys.tbz2 tarball only -- it's up to you to get the tarball extracted to a spare
+partition.  However, we will often include bootdisks to make this process
+easier, depending on whether or not the system snapshot is truly ready for
+prime-time use.  System images average around 70Mb in size.
+
+Our third, and possibly most interesting install method uses a "build image",
+or build.tbz2 file.  This build.tbz2 file contains a minimal chrootable Gentoo
+Linux environment; you use it by extracting build.tbz2 to a spare partition and
+then chrooting to it from an existing Linux system.  Then, you can build a
+complete Gentoo Linux system from scratch using Portage -- as well as your
+desired optimization settings and compile-time extensions enabled.  Using the
+"build image" approach, you can create a complete Gentoo Linux system from
+scratch that's set up just the way you want it.
+
+However, build image installation is a bit more labor intensive than the other
+approaches.  First, you must download the build.tbz2 file (typically about 17Mb
+in size), extract it to a spare partition, chroot to the build environment, configure
+networking, and use emerge to grab the latest version of our Portage tree using
+rsync.  Then, you can configure your /etc/make.conf with your desired system-wide
+compilation settings, and use a special bootstrap script to automatically rebuild
+the system to the point where it's the equivalent to a sys.tbz2 file.  At this
+point, your Gentoo Linux system is ready to boot on its own.
+
+Resources:
+
+	Gentoo Linux Installation Guide: how to install Gentoo Linux via CD
+	
+	Gentoo Linux Portage User Guide
+	
+	Gentoo Linux System Snapshot README
+
+	Primary Download Site at www.ibiblio.org:
+		Gentoo Linux CD ISO images
+		Gentoo Linux system snapshots and build images
+		
+	Secondary Download Site at www.sourceforge.net:
+		Gentoo Linux CD ISO images
+		Gentoo Linux system snapshots and build images
+	
+The team
+
+Daniel Robbins
+
+
+
+<p>Daniel Robbins is the President/CEO of Gentoo Technologies, Inc., the
+creator of <a href="http://www.gentoo.org">Gentoo Linux</a> and the developer
+of the <b>Portage</b> system.  In addition to his Gentoo Linux-related
+responsibilities, he is also a regular columnist for the <a
+href="http://www.ibm.com/developerworks/linux">IBM developerWorks</a> Linux
+Zone and Usability special topic, and a frequent author of IBM developerWorks
+Linux tutorials.  In the past, Daniel has also contributed to the Macmillan
+books <i>Caldera OpenLinux Unleashed</i>, <i>SuSE Linux Unleased</i> and
+<i>Samba Unleashed</i> and served as a Lead Graphic Artist for Psygnosis, now a
+part of <a href="http://www.scea.com">SONY Computer Entertainment</a>.
+
