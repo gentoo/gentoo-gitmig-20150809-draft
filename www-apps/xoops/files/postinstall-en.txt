@@ -1,0 +1,6 @@
+Now create a database for Xoops to use (consult your MySQL manual if you don't
+know how.
+Then browse to http://yourhost/xoops
+
+When you are done with the installer, remove the install/ directory, and chmod
+mainfile.php to 444.
