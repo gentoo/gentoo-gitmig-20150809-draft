@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.31.0.ebuild,v 1.1 2003/10/11 08:23:19 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.31.0.ebuild,v 1.2 2003/10/11 21:41:45 mr_bones_ Exp $
 
 inherit elisp-common libtool
 
@@ -61,7 +61,7 @@ pkg_setup() {
 		ewarn " Subversion had chaged the repository filesystem schema from 0.28.0."
 		ewarn " So you MUST dump your repositories before upgrading."
 		einfo ""
-		einfo "More details:" 
+		einfo "More details:"
 		einfo "http://svn.collab.net/repos/svn/trunk/notes/repos_upgrade_HOWTO"
 		sleep 5
 	fi
