@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/mod_ftpd-0.12.3.ebuild,v 1.2 2004/05/28 15:41:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/mod_ftpd-0.12.3.ebuild,v 1.3 2004/06/20 14:23:49 zul Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.outoforder.cc/downloads/${PN}/${P}.tar.bz2"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="gdbm"
 
 DEPEND="=net-www/apache-2*
