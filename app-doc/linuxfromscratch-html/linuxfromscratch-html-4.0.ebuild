@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-4.0.ebuild,v 1.5 2004/06/24 21:47:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-4.0.ebuild,v 1.6 2004/12/20 04:00:13 jhuebel Exp $
 
 MY_P="LFS-BOOK-${PV}-HTML"
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.linuxfromscratch.org/"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""
-KEYWORDS="x86 ppc sparc s390"
+KEYWORDS="x86 ppc sparc s390 amd64"
 
 src_install() {
 	dodir /usr/share/doc/linuxfromscratch-html-${PV}
