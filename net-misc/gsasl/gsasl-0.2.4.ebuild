@@ -1,16 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.0.ebuild,v 1.5 2005/01/22 16:15:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.4.ebuild,v 1.1 2005/01/22 16:15:42 slarti Exp $
 
 DESCRIPTION="The GNU SASL client, server, and library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
-SRC_URI="ftp://alpha.gnu.org/pub/gnu/gsasl/${P}.tar.gz"
+SRC_URI="http://josefsson.org/gsasl/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 # TODO: check http://www.gnu.org/software/gsasl/#dependencies for more
 # 	optional external libraries.
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="kerberos nls static doc"
 PROVIDE="virtual/gsasl"
 DEPEND="virtual/libc
@@ -31,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	make DESTDIR=${D} || die "einstall failed"
 	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README README-alpha THANKS
 	doman doc/gsasl.1
 
