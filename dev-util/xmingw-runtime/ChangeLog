@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xmingw-runtime
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-runtime/ChangeLog,v 1.7 2004/10/14 16:49:06 cretin Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-runtime/ChangeLog,v 1.8 2005/02/09 17:13:34 blubb Exp $
+
+  09 Feb 2005; Simon Stelling <blubb@gentoo.org> xmingw-runtime-3.5.ebuild:
+  added ~amd64
 
 *xmingw-runtime-3.5 (14 Oct 2004)
 
