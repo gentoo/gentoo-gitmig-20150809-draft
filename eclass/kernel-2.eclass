@@ -247,7 +247,7 @@ unipatch() {
 	#unpack any passed tarballs
 	for i in ${UNIPATCH_LIST}
 	do
-		if [ -n "$(echo ${i} | grep -e ".tar" -e ".tbz" -e ".tgz")" ]
+		if [ -n "$(echo ${i} | grep -e "\.tar" -e "\.tbz" -e "\.tgz")" ]
 		then
 			extention=${i/*./}
 			case ${extention} in
