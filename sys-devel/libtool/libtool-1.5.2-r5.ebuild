@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.14 2004/07/15 03:33:30 agriffis Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.15 2004/07/15 21:22:38 tgall Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -68,7 +68,7 @@ src_unpack() {
 	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-mktemp.patch
 	epatch ${FILESDIR}/ltconfig-uclibc.patch
 
-	gnuconfig_update
+	S="${OLD_S}" gnuconfig_update
 
 	cd ${S}
 	echo
@@ -142,13 +142,7 @@ src_compile() {
 
 	cd ${OLD_S}
 
-	# Detect mips/mips64
-	gnuconfig_update
-
-	# regen to allow for build,host,target ppc64
-	gnuconfig_update
-
-	# detect uclibc
+	# regen to allow for build,host,target mips/mips64/ppc64/uclibc
 	gnuconfig_update
 
 	einfo "Configuring ${OLD_S##*/} ..."
@@ -165,9 +159,7 @@ src_compile() {
 
 	cd ${S}
 
-	# Detect mips/mips64
-	gnuconfig_update
-
+	# regen to allow for build,host,target mips/mips64/ppc64/uclibc
 	gnuconfig_update
 
 	einfo "Configuring ${S##*/} ..."
