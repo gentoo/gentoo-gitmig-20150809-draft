@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.19 2002/03/23 18:22:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.20 2002/03/23 23:33:42 drobbins Exp $
+
+*baselayout-1.7.5-r1 (23 Mar 2002)
+
+  23 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : Jim Nutt pointed out that
+  his /etc/inittab kept on getting overwritten after every new baselayout merge.
+  Investigated and found many illegal things being done in pkg_postinst(), which
+  are now hopefully fixed.
 
 *baselayout-1.7.5 (23 Mar 2002)
 
