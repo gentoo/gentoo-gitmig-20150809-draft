@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/iverilog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.7 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.8 2003/11/28 20:36:22 plasmaroo Exp $
+
+*iverilog-20031009 (28 Nov 2003)
+
+  28 Nov 2003; <plasmaroo@gentoo.org> iverilog-0.7.ebuild,
+  iverilog-20031009.ebuild: Added a development snapshot of Icarus Verilog, 
+  which should clear up any compile problems and freshen up the tree.
 
   11 Jun 2003; <msterret@gentoo.org> iverilog-0.7.ebuild:
   Based on Bug#: 20350, add -j1 to emake.
