@@ -120,3 +120,4 @@ move net-www/issue-tracker www-apps/issue-tracker
 move net-www/lxr www-apps/lxr
 move net-www/moinmoin www-apps/moinmoin
 move net-www/mypictures www-apps/mypictures
+move net-www/mythweb www-apps/mythweb
