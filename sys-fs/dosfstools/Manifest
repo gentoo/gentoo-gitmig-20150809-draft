@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7158ccf7863ea0abb21cf48e98eedac5 ChangeLog 3597
-MD5 6512db9b9107e16582a788bcad9587d8 dosfstools-2.8-r3.ebuild 1143
-MD5 a5fde2336ae54e7e18847b17ba27e198 dosfstools-2.9.ebuild 1433
+MD5 e2ea11aa1fe22847aba792409652ad08 ChangeLog 3702
+MD5 f5fa26a1d67d5ab2696925e3fe07203b dosfstools-2.10-r1.ebuild 1348
+MD5 28b1b8ba1d77128bb4939b56594e247b dosfstools-2.9.ebuild 1432
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 149282200f0a4901d985b0bd06acabb3 dosfstools-2.10.ebuild 1477
-MD5 c507eac6796866c81cab2eb2866351a7 dosfstools-2.10-r1.ebuild 1347
+MD5 b64d7cd7090f17384a15d8f3005df66c dosfstools-2.10.ebuild 1476
+MD5 a8bc3c42bde14fd146408ec792aa27be dosfstools-2.8-r3.ebuild 1143
 MD5 51b6aebebdca730b6a304548ec5c6da1 files/digest-dosfstools-2.8-r3 69
-MD5 8102aee0611b0b9f797c88f7cc4fd503 files/digest-dosfstools-2.9 69
 MD5 af6a07ad458852ef02d58a7a3658ca15 files/errno.patch 257
-MD5 9eae6c4e222bcb616db95d21959a7688 files/digest-dosfstools-2.10 70
-MD5 6b58c7a85ca01fc79287563b903024ff files/dosfstools-2.10-2.6.headers.patch 357
-MD5 9eae6c4e222bcb616db95d21959a7688 files/digest-dosfstools-2.10-r1 70
 MD5 1892bf8b14475bb28ecd9c09492ba854 files/dosfstools-2.10-lseek64.patch 5650
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBPjx5HTu7gpaalycRAmyyAKDAS9kZPGIKsnqxSSlsnv71i8oC1QCeMhBm
-hn0cPZ8puAsTpBPlhDImX2M=
-=MtxL
------END PGP SIGNATURE-----
+MD5 6b58c7a85ca01fc79287563b903024ff files/dosfstools-2.10-2.6.headers.patch 357
+MD5 8102aee0611b0b9f797c88f7cc4fd503 files/digest-dosfstools-2.9 69
+MD5 9eae6c4e222bcb616db95d21959a7688 files/digest-dosfstools-2.10 70
+MD5 9eae6c4e222bcb616db95d21959a7688 files/digest-dosfstools-2.10-r1 70
