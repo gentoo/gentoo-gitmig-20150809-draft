@@ -83,6 +83,7 @@
 *sys-devel/bison
 *sys-devel/flex
 *sys-devel/gcc
+*sys-devel/gettext
 *sys-devel/libtool
 *sys-devel/m4
 *sys-devel/make
