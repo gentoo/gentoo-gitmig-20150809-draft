@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.27 2003/12/10 10:51:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.28 2003/12/11 10:24:13 phosphan Exp $
+
+*sane-backends-1.0.13-r2 (11 Dec 2003)
+
+  11 Dec 2003; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.13-r2.ebuild:
+  Added support for Brother MFC 4600 via USB if "usb" is in USE. The patch
+  originates from http://sourceforge.net/projects/brother-mfc/ but had to be
+  modified for 1.0.13.
 
   10 Dec 2003; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.11.ebuild, sane-backends-1.0.12-r1.ebuild,
