@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pychart
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.6 2004/08/18 04:58:39 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.7 2004/12/07 03:31:00 kloeri Exp $
+
+*pychart-1.36 (07 Dec 2004)
+
+  07 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> +pychart-1.36.ebuild:
+  Version bump.
 
   17 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> pychart-1.33.ebuild:
   Marked 1.33 stable x86 and version bump, bug# 60664
