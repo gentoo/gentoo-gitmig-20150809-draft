@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.18 2004/12/11 21:28:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.19 2004/12/17 05:54:16 vapier Exp $
 
 # What's in this kernel?
 
@@ -89,6 +89,8 @@ src_compile() {
 	local extra_makeopts=
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		extra_makeopts="CROSS_COMPILE=${CTARGET}-"
+	elif type -p ${CHOST}-ar ; then
+		extra_makeopts="CROSS_COMPILE=${CHOST}-"
 	fi
 
 	# if there arent any installed headers, then there also isnt an asm
