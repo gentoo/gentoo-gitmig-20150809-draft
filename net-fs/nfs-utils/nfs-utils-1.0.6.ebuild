@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6.ebuild,v 1.8 2004/01/14 22:53:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6.ebuild,v 1.9 2004/01/15 22:18:10 agriffis Exp $
 
 IUSE="tcpd"
 
@@ -34,6 +34,12 @@ src_install() {
 	make install install_prefix=${D} MANDIR=${D}/usr/share/man \
 		|| die "Failed to install"
 
+	# Don't overwrite existing xtab/etab, install the original
+	# versions somewhere safe...  more info in pkg_postinst
+	mkdir -p ${D}/usr/lib/nfs
+	mv ${D}/var/lib/nfs/* ${D}/usr/lib/nfs
+	keepdir /var/lib/nfs
+
 	# Install some client-side binaries in /sbin
 	mkdir ${D}/sbin
 	mv ${D}/usr/sbin/rpc.{lockd,statd} ${D}/sbin
@@ -52,6 +58,18 @@ src_install() {
 }
 
 pkg_postinst() {
+	# Install default xtab and friends if there's none existing.
+	# In src_install we put them in /usr/lib/nfs for safe-keeping, but
+	# the daemons actually use the files in /var/lib/nfs.  This fixes
+	# bug 30486
+	local f
+	for f in ${ROOT}/usr/lib/nfs/*; do
+		[[ -f ${ROOT}/var/lib/nfs/${f##*/} ]] && continue
+		einfo "Copying default ${f##*/} from /usr/lib/nfs to /var/lib/nfs"
+		cp -a ${f} ${ROOT}/var/lib/nfs/
+	done
+
+	echo
 	einfo "NFS V2 and V3 servers now default to \"sync\" IO if ${P}"
 	einfo "(or later) is installed."
 	einfo "More info at ${HOMEPAGE} (see questions 5, 12, 13, and 14)."
@@ -61,6 +79,7 @@ pkg_postinst() {
 	ewarn "export list, thus assuming the default behavior, a warning will"
 	ewarn "be generated at export time."
 	echo
+
 	# Running depscan since we introduced /etc/init.d/{portmap,nfs}
 	/etc/init.d/depscan.sh
 }
