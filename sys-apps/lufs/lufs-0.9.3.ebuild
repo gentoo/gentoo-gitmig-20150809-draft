@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.3.ebuild,v 1.6 2003/09/07 01:16:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.3.ebuild,v 1.7 2003/09/07 01:17:17 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"
@@ -47,7 +47,7 @@ src_install () {
 
 pkg_postinst() {
 	id lufs 2>/dev/null || useradd -g nobody -d /home/lufs -m -s /bin/sh -c "LUFS user" lufs
-    /usr/sbin/update-modules || return 0
+	/usr/sbin/update-modules || return 0
 }
 
 pkg_postrm() {

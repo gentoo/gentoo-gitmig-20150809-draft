@@ -2,9 +2,9 @@ MD5 f70dc43e2c7ce3bfe38b4bfcd078a3a8 ChangeLog 2077
 MD5 605357e00850584d8323df2e3e928512 lufs-0.7.0.ebuild 1342
 MD5 8c9527338eee71a4e88e8bad8d5e0adc lufs-0.8.0-r1.ebuild 1376
 MD5 dfe6e358ebe4d72ccd7b392179a8ab59 lufs-0.8.0.ebuild 1360
-MD5 ceb172556b3929b1e41c7aafe097be2b lufs-0.9.3.ebuild 1436
-MD5 54d1dcdbab4868314dac19f75565e637 lufs-0.9.4.ebuild 1443
-MD5 80610898f2af5fdf1f25d7cc2feed855 lufs-0.9.5.ebuild 1604
+MD5 f20441971994360ab22c72a3b08269cc lufs-0.9.3.ebuild 1433
+MD5 1409bb8a711fe5eb364c9b66e2d723ff lufs-0.9.4.ebuild 1440
+MD5 60e407d4ff53b4a283575c03ba63c806 lufs-0.9.5.ebuild 1601
 MD5 c574a7036eebafdb31765fec945e0498 files/digest-lufs-0.7.0 62
 MD5 589f3dad16a475a1f541a2be26ff9d33 files/digest-lufs-0.8.0 62
 MD5 589f3dad16a475a1f541a2be26ff9d33 files/digest-lufs-0.8.0-r1 62
