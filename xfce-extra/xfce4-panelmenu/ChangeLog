@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-panelmenu
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-panelmenu/ChangeLog,v 1.1 2005/02/28 21:41:32 bcowan Exp $
+
+*xfce4-panelmenu-0.2.1 (28 Feb 2005)
+
+  28 Feb 2005; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfce4-panelmenu-0.2.1.ebuild:
+  Initial import.
+
