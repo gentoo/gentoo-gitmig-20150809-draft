@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.10 2004/04/01 08:53:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.11 2004/04/19 16:06:23 foser Exp $
 
 IUSE="ssl nls"
 
@@ -67,6 +67,8 @@ src_compile() {
 
 src_install() {
 	einstall || die
+
+	rmdir ${D}/usr/doc
 
 	dodoc AUTHORS COPYING* ChangeLog NEWS README
 }
