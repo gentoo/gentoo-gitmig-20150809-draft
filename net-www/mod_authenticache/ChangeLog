@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_authenticache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_authenticache/ChangeLog,v 1.9 2004/07/01 22:45:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_authenticache/ChangeLog,v 1.10 2004/08/14 14:53:37 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org>
+  mod_authenticache-2.0.8.ebuild:
+  Trimmed trailing whitespace.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mod_authenticache-2.0.6.ebuild, mod_authenticache-2.0.8.ebuild:
