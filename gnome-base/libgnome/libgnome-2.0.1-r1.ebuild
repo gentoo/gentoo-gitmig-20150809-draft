@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.0.1-r1.ebuild,v 1.2 2002/07/11 06:30:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.0.1-r1.ebuild,v 1.3 2002/07/19 13:07:56 stroke Exp $
 
 inherit gnome2
 
@@ -8,8 +8,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Essential Gnome Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
+SLOT="0"
+KEYWORDS="x86"
 LICENSE="GPL-2 LGPL-2.1"
-
 
 RDEPEND=">=dev-libs/libxslt-1.0.18
 	>=dev-libs/glib-2.0.0
