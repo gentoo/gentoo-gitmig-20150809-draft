@@ -1,5 +1,5 @@
-MD5 34d0e444a29623d4b10dec19684058de ChangeLog 1823
-MD5 881aa29eaf03e11b63666179b4805f08 auctex-11.14.ebuild 1342
+MD5 c0cb60e092aa878d7388ca32e6c41e4a ChangeLog 1909
+MD5 5bc182600b6022d37ff7af582e90fcbc auctex-11.14.ebuild 1332
 MD5 58f3ddc03b5e54563fc8a9764e687dd5 metadata.xml 183
 MD5 07f98857b9cd7c49631f6b5cb42f9778 files/50auctex-gentoo.el 57
 MD5 3a36edc892ced33e4f4aa21ebb595c04 files/digest-auctex-11.14 64
