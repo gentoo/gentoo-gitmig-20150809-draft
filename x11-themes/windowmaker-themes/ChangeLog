@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/windowmaker-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.3 2003/06/30 05:58:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.4 2003/12/08 05:45:09 mr_bones_ Exp $
+
+  07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  windowmaker-themes-0.1.ebuild:
+  chown x.y -> chown x:y (bug 35127)
 
 *windowmaker-themes-0.1 (07 Jun 2003)
 

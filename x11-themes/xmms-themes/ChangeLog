@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xmms-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.5 2003/05/05 20:20:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.6 2003/12/08 05:44:17 mr_bones_ Exp $
+
+  07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  xmms-themes-0.0.2.ebuild, xmms-themes-0.0.3.ebuild:
+  chown x.y -> chown x:y (bug 35127)
 
 *xmms-themes-0.0.3 (05 May 2003)
 

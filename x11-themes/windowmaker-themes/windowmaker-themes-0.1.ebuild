@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.4 2003/09/29 21:57:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.5 2003/12/08 05:45:09 mr_bones_ Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
@@ -108,7 +108,7 @@ src_unpack() {
 src_install () {
 	dodir /usr/share/WindowMaker/Themes
 	cp -dpR * ${D}/usr/share/WindowMaker/Themes/
-	chown -R root.root ${D}/usr/share/WindowMaker/Themes/
+	chown -R root:root ${D}/usr/share/WindowMaker/Themes/
 	chmod -R o-w ${D}/usr/share/WindowMaker/Themes/
 }
 
