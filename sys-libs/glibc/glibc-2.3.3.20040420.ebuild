@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.13 2004/07/09 17:30:51 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.14 2004/07/11 07:51:15 kumba Exp $
 
 IUSE="nls pic build nptl erandom debug"
 
@@ -415,7 +415,7 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
 		epatch ${FILESDIR}/2.3.3/semtimedop.diff
 		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
-		epatch ${FILESDIR}/2.3.3/mips-n32n64regs.diff
+#####		epatch ${FILESDIR}/2.3.3/mips-n32n64regs.diff
 	fi
 
 	if [ "${ARCH}" = "alpha" ]
