@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.17 2003/07/26 00:46:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.18 2003/07/26 00:48:09 vapier Exp $
 
 *vmware-workstation-4.0.4460-r1 (25 Jul 2003)
 
@@ -12,7 +12,6 @@
   10 Apr 2003; Preston A. Elder <prez@gentoo.org>
   vmware-workstation-4.0.4460.ebuild, files/digest-vmware-workstation-4.0.4460,
   files/4.0.4460/* :
-
   Version bump.  This is the release version.
 
 *vmware-workstation-4.0.4320 (22 Mar 2003)
@@ -20,7 +19,6 @@
   22 Mar 2003; Philip Walls <malverian@gentoo.org>
   vmware-workstation-4.0.4320.ebuild, files/digest-vmware-workstation-4.0.4320,
   files/4.0.4320/* :
-
   Version bump. Added symlinks to /usr/bin, made vmware-vmx SUID,
   Added init scripts and desktop icons for this version (non-existant in
   4121). Added pciutils to DEPEND as required to run vmware-config.pl
@@ -34,7 +32,7 @@
 *vmware-workstation-3.2.1.2237-r1 (25 Jul 2003)
 
   25 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bump to try to add glibc-2.3.2 support #16444.
+  Version bump to try to add glibc-2.3.2 support #16444 + 2.5/2.6 kern support.
 
 *vmware-workstation-3.2.1.2237 (17 Jul 2003)
 
