@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dd0442f6d933ce1903a4492a02597b45 nginx-0.1.23-r1.ebuild 2242
-MD5 4287ca6e76dc97d25c36573bc4a5ec39 ChangeLog 536
+MD5 df36c36802b1e6b7dd3a8b34c664d15f ChangeLog 544
 MD5 822f3c821527e6a34f23a6a92a884766 metadata.xml 220
 MD5 8c7b8c93f0c4048d83df9cdc31d86e1b files/nginx 922
 MD5 373afb3b6eb255483f9dab56d9ab83ee files/digest-nginx-0.1.23-r1 64
 MD5 b3342c18a1880b574cbe4458560019c6 files/nginx.conf 1445
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCJhMSI1lqEGTUzyQRAj9sAKCjBX9lej/cuyd1iAZqi+QAiauJpgCg09SE
+mVl5nZ4lwgYpni3U/0VMmdQ=
+=aaWC
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # ChangeLog for www-servers/nginx
-# Copyright 2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.2 2005/03/02 17:34:40 voxus Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.3 2005/03/02 19:25:00 swegener Exp $
 
 *nginx-0.1.23-r1 (02 Mar 2005)
 
