@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gabber
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/ChangeLog,v 1.25 2004/06/19 06:05:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/ChangeLog,v 1.26 2004/06/21 17:42:48 humpback Exp $
+
+*gabber-1.9.4 (21 Jun 2004)
+
+  21 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>; gabber-1.9.4.ebuild:
+  Adding version 1.9.4, version bump from 1.9.3
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> gabber-0.8.8.ebuild,
   gabber-1.9.3.ebuild:
