@@ -1,0 +1,7 @@
+MD5 574e6568f90932075ef9599913f793e0 ChangeLog 1604
+MD5 61e7277b9d0a0ac0f35482e65c267b25 powertweak-0.99.4.ebuild 1557
+MD5 5478aa9d7c2747af0d61fbe0b66e0adf powertweak-0.99.5_pre20021029.ebuild 1378
+MD5 186537e6997431efc00728e2c4a24229 files/digest-powertweak-0.99.4 70
+MD5 3e7d5c707e95707ebb692f656a344f6d files/digest-powertweak-0.99.5_pre20021029 153
+MD5 1905168a8b57ae19ab4a2dfe41fddbb4 files/powertweak-0.99.4-gentoo.diff 2417
+MD5 2fd577a47363796e9c15c5f8c31a3dc5 files/powertweakd.rc6 560
