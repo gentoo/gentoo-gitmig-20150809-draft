@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-demo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.8 2004/04/03 18:15:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.9 2004/04/05 01:24:06 wolf31o2 Exp $
+
+  04 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-demo-2206-r3.ebuild:
+  Fixing Ddir and closing bug #46803.
 
   03 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing digest and closing bug #46693.

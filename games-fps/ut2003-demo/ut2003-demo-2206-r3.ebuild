@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.3 2004/04/02 03:54:20 wolf31o2 Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.4 2004/04/05 01:24:06 wolf31o2 Exp $.
 
 inherit games
 
@@ -19,6 +19,8 @@ DEPEND="virtual/opengl
 IUSE=""
 
 S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license
@@ -36,11 +38,10 @@ src_unpack() {
 src_install() {
 	einfo "This will take a while ... go get a pizza or something"
 
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
-	tar -jxvf ut2003lnx_demo.tar.bz2 -C ${D}/${dir} || die
-	tar -jxvf ${FILESDIR}/misc.tar.bz2 -C ${D}/${dir} || die
+	tar -jxvf ut2003lnx_demo.tar.bz2 -C ${Ddir} || die
+	tar -jxvf ${FILESDIR}/misc.tar.bz2 -C ${Ddir} || die
 
 	# fix the benchmark configurations to use SDL rather than the Windows driver
 	cd ${D}/${dir}/Benchmark/Stuff
@@ -53,7 +54,7 @@ src_install() {
 
 	# have the benchmarks run the nifty wrapper script rather than ../System/ut2003-bin directly
 	cd ${D}/opt/ut2003-demo/Benchmark
-	for f in ${D}/${dir}/Benchmark/*-*.sh ; do
+	for f in ${Ddir}/Benchmark/*-*.sh ; do
 		dosed 's:\.\./System/ut2003-bin:../ut2003_demo:' ${f}
 	done
 
@@ -64,7 +65,7 @@ src_install() {
 	doexe ${FILESDIR}/{benchmark,results.sh}
 
 	# Here we apply DrSiN's crash patch
-	cp ${S}/CrashFix/System/crashfix.u ${Ddir}/System
+	cp ${S}/CrashFix/System/crashfix.u ${Ddir}/System || die "CrashFix failed"
 
 ed ${Ddir}/System/Default.ini >/dev/null 2>&1 <<EOT
 $
