@@ -1,0 +1,9 @@
+# ChangeLog for app-doc/jargon
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/jargon/ChangeLog,v 1.1 2004/02/06 02:05:39 mr_bones_ Exp $
+
+*jargon-4.4.7 (05 Feb 2004)
+
+  05 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> jargon-4.4.7.ebuild:
+  initial commit (bug 40375)
+
