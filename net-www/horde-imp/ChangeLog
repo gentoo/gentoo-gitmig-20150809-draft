@@ -1,6 +1,11 @@
 # ChangeLog for net-www/horde-imp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.15 2004/01/27 00:57:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.16 2004/02/26 18:14:31 mholzer Exp $
+
+*horde-imp-3.2.3 (26 Feb 2004)
+
+  26 Feb 2004; Martin Holzer <mholzer@gentoo.org> horde-imp-3.2.3.ebuild:
+  Version bumped.
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org> horde-imp-3.2.2.ebuild:
   Fix for bug #32636
