@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.3 2003/02/16 19:13:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.4 2003/07/01 21:58:48 aliz Exp $
 
 IUSE="X"
 
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.cs.wisc.edu/~larus/spim.html"
 SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/spim.tar.gz"
 DESCRIPTION="MIPS Simulator"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="as-is"
 S=${WORKDIR}/${P}
 
