@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.14 2003/11/08 16:55:03 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.15 2004/02/19 20:18:43 rphillips Exp $
+
+  19 Feb 2004; Ryan Phillips <rphillips@gentoo.org> mit-krb5-1.3.1.ebuild:
+  marked stable 1.3.1. Fixes #40982
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> mit-krb5-1.2.7.ebuild:
   added sparc keyword
