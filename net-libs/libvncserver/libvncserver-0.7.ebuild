@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.6.ebuild,v 1.6 2004/08/11 22:42:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.7.ebuild,v 1.1 2004/12/29 20:01:58 vapier Exp $
 
 inherit eutils
 
-X11VNC_VER=20040101
 DESCRIPTION="library for creating vnc servers"
 HOMEPAGE="http://libvncserver.sourceforge.net/"
-SRC_URI="mirror://sourceforge/libvncserver/LibVNCServer-${PV}.tar.gz
-	 http://dev.gentoo.org/~plasmaroo/patches/vnc/${P}-${X11VNC_VER}-x11vnc.c.bz2"
+SRC_URI="mirror://sourceforge/libvncserver/LibVNCServer-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa ~amd64"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="nobackchannel no24bpp zlib jpeg"
 
 DEPEND="virtual/x11
@@ -24,9 +22,10 @@ S=${WORKDIR}/LibVNCServer-${PV}
 src_unpack() {
 	unpack LibVNCServer-${PV}.tar.gz
 	cd ${S}
-	sed -i "/^CFLAGS/s:-g:${CFLAGS}:" Makefile.in */Makefile.in
-	cd contrib
-	unpack ${P}-${X11VNC_VER}-x11vnc.c.bz2
+	sed -i \
+		-e "/^CFLAGS/s:-g:${CFLAGS}:" \
+		-e '/^SUBDIRS/s:x11vnc::' \
+		Makefile.in || die "sed foo"
 }
 
 src_compile() {
@@ -38,15 +37,15 @@ src_compile() {
 		&& myconf="${myconf} --without-24bpp" \
 		|| myconf="${myconf} --with-24bpp"
 	econf \
-		`use_with zlib` \
-		`use_with jpeg` \
+		$(use_with zlib) \
+		$(use_with jpeg) \
 		${myconf} \
 		|| die
 	emake || die
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dobin examples/storepasswd
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
