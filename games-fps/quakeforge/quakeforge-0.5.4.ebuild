@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.2 2003/09/22 13:42:37 vapier Exp $
 
 inherit games
 
@@ -89,7 +89,7 @@ src_compile() {
 		`use_enable oss` \
 		--enable-sound \
 		${debugopts} \
-		--with-user-cfg=${GAMES_SYSCONFDIR}/quakeforge.conf \
+		--with-global-cfg=${GAMES_SYSCONFDIR}/quakeforge.conf \
 		--with-sharepath=${GAMES_DATADIR}/quake-data \
 		--with-clients=${clients} \
 		--with-servers=${servers} \
