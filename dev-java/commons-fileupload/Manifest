@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e63c295c7a129b5e3868a05836d3bbe1 commons-fileupload-1.0.ebuild 1275
-MD5 292187df05381ec5c033721dde28017f ChangeLog 1955
+MD5 2bd4bedab59cadba2d91f0d631988e3a commons-fileupload-1.0.ebuild 1267
+MD5 0ca96904a2652c3697d15c9fbc550288 ChangeLog 2083
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 050bb4de310d71a2a9800328eb66d272 files/build.xml.patch 10539
 MD5 aee8a592019aad96d13006121ef476dc files/digest-commons-fileupload-1.0 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcVUf/rLF9B432nYRAn1VAKDMH16jOB78OWUktXY1x4U1arnC1ACfSwND
-HPgo5nzMyZwHOZi/yXAciIs=
-=eeQ/
+iD8DBQFBcrt2/rLF9B432nYRArI+AKC0D27NdqdJbjNJm56Vd39mDkKwLACgkYAH
+ocKn5ytrwXCLVWBoccI21IU=
+=daN5
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.10 2004/10/16 17:06:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.11 2004/10/17 18:35:17 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -21,8 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/build.xml.patch
-	local SAPI="`java-config -p servletapi-2.4`"
-	echo "servlet-api.jar = ${SAPI/*:/}" >> build.properties
+	echo "servlet-api.jar = $(java-pkg_getjar servletapi-2.4 servlet-api.jar)" >> build.properties
 }
 
 src_compile() {
