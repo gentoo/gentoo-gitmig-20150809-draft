@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3332 2004/11/19 00:44:21 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3333 2004/11/19 06:16:05 langthang Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <langthang@gentoo.org> (18 Nov 2004)
+# Masking for testing
+>=net-mail/courier-imap-3.0.8.20041116
 
 # <latexer@gentoo.org> (18 Nov 2004)
 # Masking of the split-up gtk-sharp stuff.
