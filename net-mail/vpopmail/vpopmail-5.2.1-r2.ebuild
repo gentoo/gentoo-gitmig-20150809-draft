@@ -1,0 +1,174 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.1 2002/07/26 09:38:47 carpaski Exp $
+
+# TODO: all ldap, sybase support
+S=${WORKDIR}/${P}
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+HOMEPAGE="http://www.inter7.com/vpopmail"
+
+DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail or Postfix mail servers."
+SRC_URI="http://www.inter7.com/vpopmail/${P}.tar.gz
+	http://gentoo.twobit.net/misc/vpopmail-5.2.1-mysql.diff"
+
+DEPEND="sys-apps/sed
+	sys-apps/ucspi-tcp
+	mysql? ( =dev-db/mysql-3.23* )"
+
+RDEPEND="net-mail/qmail
+	virtual/cron
+	mysql? ( =dev-db/mysql-3.23* )"
+
+# Define vpopmail home dir in /etc/password if different
+VPOP_DEFAULT_HOME="/var/vpopmail"
+VPOP_HOME="$VPOP_DEFAULT_HOME"
+
+vpopmail_set_homedir() {
+	VPOP_HOME=`grep vchkpw /etc/passwd | cut -d: -f6`
+	if [ -z "$VPOP_HOME" ]; then
+		echo -ne "\a"
+	  eerror "vchkpw's home directory is null in /etc/passwd"
+	  eerror "You probably want to check that out."
+		eerror "Continuing with default."
+		sleep 1; echo -ne "\a"; sleep 1; echo -ne "\a"
+		VPOP_HOME="/var/vpopmail"
+	else
+		einfo "Setting VPOP_HOME to: $VPOP_HOME"
+	fi
+}
+
+pkg_setup() {
+	if [ -z `getent group vchkpw` ]; then
+		(groupadd -g 89 vchkpw 2>/dev/null || groupadd vchkpw ) || die "problem adding vchkpw group"
+	fi    
+	if [ -z `getent passwd vpopmail` ]; then
+		useradd -g vchkpw -u 89 -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" -s /bin/false -m vpopmail || \
+		useradd -g vchkpw -u `getent group vchkpw | awk -F":" '{ print $3 }'` -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" \
+		-s /bin/false -m vpopmail || die "problem adding vpopmail user"
+	fi
+}
+
+src_unpack() {
+
+	cd ${WORKDIR}
+	unpack ${P}.tar.gz
+	cd ${S}
+
+	if [ "`use mysql`" ]; then
+		einfo "Applying MySQL patch..."
+		# Thanks to Nicholas Jones (carpaski@gentoo.org)
+		patch < ${DISTDIR}/vpopmail-5.2.1-mysql.diff
+	fi
+}
+
+src_compile() {
+	vpopmail_set_homedir
+
+	use mysql && \
+		myopts="${myopts} --enable-mysql=y \
+			--enable-libs=/usr/include/mysql \
+			--enable-sqllibdir=/usr/lib/mysql \
+			--enable-mysql-logging=y \
+			--enable-auth-logging=y \
+			--enable-valias=y \
+			--enable-mysql-replication=n"
+	
+	# the configure script tries to make directories not using ${D}
+	sed -e '1560,1567d' -e '2349d' -e '2107d' -e '2342d' configure > configure.new
+	mv --force configure.new configure
+	chmod u+x configure
+
+	econf ${myopts} --sbindir=/usr/sbin \
+		--bindir=/usr/bin \
+		--sysconfdir=${VPOP_HOME}/etc \
+		--enable-qmaildir=/var/qmail \
+		--enable-qmail-newu=/var/qmail/bin/qmail-newu \
+		--enable-qmail-inject=/var/qmail/bin/qmail-inject \
+		--enable-qmail-newmrh=/var/qmail/bin/qmail-newmrh \
+		--enable-vpopuser=vpopmail \
+		--enable-many-domains=y \
+		--enable-vpopgroup=vchkpw \
+		--enable-file-locking=y \
+		--enable-file-sync=y \
+		--enable-md5-passwords=y \
+		--enable-clear-passwd=y \
+		--enable-defaultquota=30000000,1000C \
+		--enable-roaming-users=y --enable-relay-clear-minutes=60 \
+		--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
+		--enable-logging=y \
+		--enable-log-name=vpopmail || die "./configure failed"
+
+	[ "`use mysql`" ] && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
+
+	emake || die "Make failed."
+
+}
+
+src_install () {
+	vpopmail_set_homedir
+
+	make DESTDIR=${D} install-strip || die
+
+	# Install documentation.
+	dodoc AUTHORS ChangeLog COPYING FAQ INSTALL NEWS TODO
+	dodoc README README.* RELEASE.NOTES UPGRADE.*
+	dodoc doc/doc_html/* doc/man_html/*
+	rm -rf ${D}/${VPOP_HOME}/doc
+	dosym /usr/share/doc/${P}-r1/ ${VPOP_HOME}/doc
+	chown vpopmail.vchkpw ${D}/${VPOP_HOME}/doc
+
+	# Create symlink in /usr/bin for executables
+	mkdir -p ${D}/usr/bin/
+	for item in `ls -1 ${D}${VPOP_HOME}/bin`; do dosym ${VPOP_HOME}/bin/${item} usr/bin/${item} ; done
+
+	# Create /etc/vpopmail.conf
+	[ "`use mysql`" ] && mkdir ${D}/etc && cp ${FILESDIR}/vpopmail.conf ${D}/etc/
+
+	# Configure b0rked. We'll do this manually
+	echo "-I${VPOP_HOME}/include" > ${D}/${VPOP_HOME}/etc/inc_deps
+	if [ "`use mysql`" ]; then
+		echo "-L${VPOP_HOME}/lib -lvpopmail -L/usr/lib/mysql -lmysqlclient -lz" > ${D}/${VPOP_HOME}/etc/lib_deps
+	else
+		echo "-L${VPOP_HOME}/lib -lvpopmail" > ${D}/${VPOP_HOME}/etc/lib_deps
+	fi
+}
+
+pkg_preinst() {
+	vpopmail_set_homedir
+
+	# Keep DATA
+	touch ${VPOP_HOME}/domains/.keep
+
+	# This is a workaround until portage handles binary packages+users better.
+	pkg_setup
+}
+
+pkg_postinst() {
+	einfo "Performing post-installation routines for ${P}."
+	echo "40 * * * * /usr/bin/clearopensmtp 2>&1 > /dev/null" >> /var/spool/cron/crontabs/root
+
+	if [ "`use mysql`" ]; then
+		einfo ""
+		einfo "You have 'mysql' turned on in your USE"
+		einfo "Vpopmail needs a VALID MySQL USER. Let's call it 'vpopmail'"
+		einfo "You MUST add it and then specify its passwd in the /etc/vpopmail.conf file"
+		einfo ""
+		einfo "First log into mysql as your mysql root user and pass. Then:"
+		einfo "> create database vpopmail;"
+		einfo "> use mysql;"
+		einfo "> grant select, insert, update, delete, create, drop on vpopmail.* to"
+		einfo "  vpopmail@localhost identified by 'your password';"
+		einfo "> flush privileges;"
+		einfo ""
+	fi
+}
+
+pkg_postrm() {
+	sed "/^40.*\/usr\/bin\/clearopensmtp.*null$/d" /var/spool/cron/crontabs/root > /var/spool/cron/crontabs/root.new
+	mv --force /var/spool/cron/crontabs/root.new /var/spool/cron/crontabs/root
+	einfo "The vpopmail DATA will NOT be removed automatically."
+	einfo "You can delete them manually by removing the ${VPOP_HOME} directory."
+}

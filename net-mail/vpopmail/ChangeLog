@@ -1,10 +1,19 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.1 2002/07/24 10:49:23 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.2 2002/07/26 09:38:47 carpaski Exp $
 
 *vpopmail-5.2.1 (24 Jul 2002)
 
-  1 Feb 2002; Maurizio Disimino <kevin@aptbasilicata.it> ChangeLog :
+  26 Feb 2002; Nicholas Jones <carpaski@gentoo.org> vpopmail-5.2.1-r2 :
+
+  Revised -r1 submitted via consortium of Patrick Naubert and Maurizio
+	Disimino to fix the library data and sandbox issues.
+	
+	Added homedir-via-passwd-homedir capability. Moved some code around.
+  
+*vpopmail-5.2.1 (24 Jul 2002)
+
+  24 2002; Maurizio Disimino <kevin@aptbasilicata.it> ChangeLog :
   
   Vpopmail is a PITA if you turn on MySQL support. Nicholas Jones
   (carpaski@gentoo.org) wrote a patch to make our life much simpler. 
