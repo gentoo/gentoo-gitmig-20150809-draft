@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.18.ebuild,v 1.5 2004/04/27 15:52:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.20.ebuild,v 1.1 2004/04/27 15:52:47 aliz Exp $
 
 inherit gnuconfig eutils
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="Utility for opening arj archives."
 HOMEPAGE="http://arj.sourceforge.net/"
 SRC_URI="mirror://sourceforge/arj/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc ~sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
@@ -17,12 +16,6 @@ IUSE=""
 DEPEND="virtual/glibc"
 
 RESTRICT=nostrip
-
-src_unpack() {
-	unpack ${A}; cd ${S}
-	epatch ${FILESDIR}/${P}-fPIC.patch
-	epatch ${FILESDIR}/${P}-2.6.headers.patch
-}
 
 src_compile() {
 	gnuconfig_update
