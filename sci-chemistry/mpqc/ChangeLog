@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/mpqc
+# ChangeLog for sci-chemistry/mpqc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.1 2004/12/24 16:49:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.2 2004/12/24 20:17:01 swegener Exp $
 
 *mpqc-2.2.2 (24 Dec 2004)
 
