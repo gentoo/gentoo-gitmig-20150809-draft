@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.20-r2.ebuild,v 1.9 2003/12/02 03:31:08 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.20-r2.ebuild,v 1.10 2003/12/08 23:15:36 spider Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
-	chown -R 0.0 *
+	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
