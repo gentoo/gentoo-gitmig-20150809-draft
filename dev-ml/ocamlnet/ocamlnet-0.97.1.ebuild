@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.97.1.ebuild,v 1.1 2004/08/21 18:38:09 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.97.1.ebuild,v 1.2 2004/08/25 13:16:05 mattam Exp $
 
 inherit findlib
 
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	findlib_src_install NET_DB_DIR=${D}${destdir}/netstring
+	findlib_src_install NET_DB_DIR=${D}`ocamlfind printconf destdir`/netstring
 
 	cd ${WORKDIR}/${P}
 	dodoc README

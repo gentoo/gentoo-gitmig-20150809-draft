@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.5 2004/08/21 18:38:09 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.6 2004/08/25 13:16:05 mattam Exp $
+
+  25 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> ocamlnet-0.97.1.ebuild:
+  NET_DB_DIR fix.
 
 *ocamlnet-0.97.1 (19 Aug 2004)
 
