@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.18 2003/11/29 23:13:22 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.19 2004/01/29 13:38:31 agriffis Exp $
 
 inherit flag-o-matic
 
 SLOT="0"
 LICENSE="XAnim"
-KEYWORDS="x86 ppc sparc alpha -mips -hppa -arm amd64"
+KEYWORDS="x86 ppc sparc alpha -mips -hppa -arm amd64 -ia64"
 
 _XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
 _XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
