@@ -26,6 +26,14 @@ firebird
 # must use a SELinux profile
 selinux
 
+# technically this is fine but there are dependancy issues
+java
+#
+# for now tgall@gentoo.org
+jikes
+junit
+
+
 # masked until net-nds/openldap is tested on ppc64
 ldap
 
