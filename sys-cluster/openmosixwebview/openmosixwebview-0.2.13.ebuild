@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixwebview/openmosixwebview-0.2.13.ebuild,v 1.1 2004/01/11 19:15:54 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixwebview/openmosixwebview-0.2.13.ebuild,v 1.2 2004/01/11 21:48:54 tantive Exp $
 
 DESCRIPTION="Produces web charts for monitoring an openMosix cluster"
 SRC_URI="http://laurel.datsi.fi.upm.es/~rpons/openmosix/download/openmosixwebview-${PV}.tar.gz"
@@ -10,7 +10,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND=">=sys-cluster/openmosix-user-0.3.5"
+DEPEND=">=sys-cluster/openmosix-user-0.3.5
+	>=net-www/apache-2
+	>=dev-php/mod_php-4"
 RDEPEND="${DEPEND}"
 
 src_install() {
