@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.15 2005/01/01 10:52:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.16 2005/01/02 19:45:55 eradicator Exp $
 
 IUSE="doc"
 
@@ -17,7 +17,7 @@ LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 
-RDEPEND="sys-libs/ncurses"
+RDEPEND="|| ( sys-libs/ncurses sys-libs/libtermcap-compat )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
