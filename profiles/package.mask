@@ -24,8 +24,12 @@
 # <azarah@gentoo.org> (25 Mar 2003)
 # Tempory mask gawk versions that do not have filefuncs.so module, as it
 # (new gawk version) breaks baselayout if its (baselayout) not remerged.
-=sys-apps/gawk-3.1.2
-=sys-apps/gawk-3.1.2-r1
+# <rommel> r2 is b0rked gives me an error that devfs isnt in the kernel
+# and then x fails to load nvidia
+# <rommel> then trying to emerge 3.1.1-r1 totally b0rked everything till
+# avenj found a thread that said baselayout had to be reemerged after
+# 3.1.1-r1 was installed then it all booted fine
+>=sys-apps/gawk-3.1.2
 
 # <sethbc@gentoo.org> (23 Mar 2003)
 # masked due to weird borkage, bombing out at init
