@@ -1,20 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r2.ebuild,v 1.6 2002/08/16 04:09:24 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r2.ebuild,v 1.7 2002/08/30 14:32:48 seemant Exp $
+
+inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Virtual File System."
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ppc sparc sparc64"
-LICENSE="GPL-2 LGPL-2.1"
+
 SLOT="1"
+LICENSE="GPL-2 LGPL-2.1"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND="( =gnome-base/gconf-1.0* )	
-	 >=gnome-base/gnome-libs-1.4.1.2
-	 >=gnome-base/gnome-mime-data-1.0.1
-	 >=sys-apps/bzip2-1.0.2
-	 ssl? ( dev-libs/openssl )"
+	>=gnome-base/gnome-libs-1.4.1.2
+	>=gnome-base/gnome-mime-data-1.0.1
+	>=sys-apps/bzip2-1.0.2
+	ssl? ( dev-libs/openssl )"
 
 
 DEPEND="${RDEPEND}
@@ -24,7 +27,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf
-	libtoolize --force --copy
+	elibtoolize
 	if [ -z "`use nls`" ]
 	then
 		myconf="${myconf} --disable-nls"
@@ -32,20 +35,12 @@ src_compile() {
 		touch intl/libgettext.h
 	fi
 	
-	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --sysconfdir=/etc \
-		    --localstatedir=/var/lib \
-		    ${myconf} || die
-
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-	     sysconfdir=${D}/etc \
-	     localstatedir=${D}/var/lib \
-	     install || die
+	einstall || die
 
 	dodoc AUTHORS COPYING* ChangeLog NEWS README
 }
