@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdplay
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.1 2003/05/12 17:00:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.2 2003/07/04 08:51:11 lu_zero Exp $
+
+  04 Jul 2003; Luca Barbato <lu_zero@gentoo.org> libdvdplay-1.0.1.ebuild:
+  Added ~ppc keyword 
 
 *libdvdplay-1.0.1 (12 May 2003)
 
