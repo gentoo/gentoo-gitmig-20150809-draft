@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.35.ebuild,v 1.5 2004/02/21 00:21:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.35.ebuild,v 1.6 2004/04/11 14:55:13 pyrania Exp $
 
 IUSE="nls gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 SRC_URI="mirror://sourceforge/gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.obsession.se/gentoo/"

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.29 2004/03/02 07:49:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.30 2004/04/11 14:55:13 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> gentoo-0.11.35.ebuild,
+  gentoo-0.11.45.ebuild, gentoo-0.11.46.ebuild:
+  Marked stable on x86.
 
 *gentoo-0.11.46 (01 Mar 2004)
 
