@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49_pre9.ebuild,v 1.1 2003/07/16 14:56:36 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49_pre10.ebuild,v 1.1 2003/07/16 19:44:14 carpaski Exp $
 
 IUSE="build"
 
