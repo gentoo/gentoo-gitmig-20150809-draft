@@ -1,24 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce746456f187c111041dac1f7330cc48 ChangeLog 1165
-MD5 4b61808173816fad49f9f0c7dd6127c0 cl-gd-0.1.0.ebuild 1419
-MD5 26c16a3ae40089f2d83d0dd2d9382063 cl-gd-0.1.4.ebuild 1557
-MD5 08491b1d68b381ba4c35afe1bf599017 cl-gd-0.2.0.ebuild 2262
-MD5 30a9bc8500295971e1228982268c3d9f metadata.xml 420
 MD5 45767ff03f34a695deb29ebff3aabe24 cl-gd-0.2.0-r1.ebuild 1889
+MD5 2f340039769a93258f8fdf8d18159801 cl-gd-0.4.2.ebuild 2046
+MD5 4b61808173816fad49f9f0c7dd6127c0 cl-gd-0.1.0.ebuild 1419
 MD5 f2b992a75dfa0914a3a1b2357c630232 cl-gd-0.3.1.ebuild 2277
+MD5 08491b1d68b381ba4c35afe1bf599017 cl-gd-0.2.0.ebuild 2262
 MD5 2f340039769a93258f8fdf8d18159801 cl-gd-0.4.1.ebuild 2046
+MD5 ce746456f187c111041dac1f7330cc48 ChangeLog 1165
+MD5 26c16a3ae40089f2d83d0dd2d9382063 cl-gd-0.1.4.ebuild 1557
+MD5 30a9bc8500295971e1228982268c3d9f metadata.xml 420
 MD5 f47a6f22326f50ee0123303a9672eeab files/digest-cl-gd-0.1.0 63
 MD5 fec3d8a7a4baca19965abf58f34a84bb files/digest-cl-gd-0.1.4 63
 MD5 df350c7ee5da704ad167c6bdc5e790f8 files/digest-cl-gd-0.2.0 68
-MD5 df350c7ee5da704ad167c6bdc5e790f8 files/digest-cl-gd-0.2.0-r1 68
 MD5 85bee1b2b7d566a6c1d61e18b2d0d694 files/digest-cl-gd-0.3.1 68
 MD5 9e46d6f0fb21b76bf454980f6c7a2ab3 files/digest-cl-gd-0.4.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4vWhHTu7gpaalycRAmcnAKDHiiWcnQkdpN8Xd/VvxXLFRN+zJwCfc5s0
-VmIlrPlbYtFn3k4X8KvT6xc=
-=a+st
------END PGP SIGNATURE-----
+MD5 772d4feb41f525c8ad7a6a7b4f7733b2 files/digest-cl-gd-0.4.2 68
+MD5 df350c7ee5da704ad167c6bdc5e790f8 files/digest-cl-gd-0.2.0-r1 68
