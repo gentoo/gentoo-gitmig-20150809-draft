@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.8 2003/10/01 21:21:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.9 2003/10/02 23:55:58 robbat2 Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.inter7.com/${PN}/${P}.tar.gz
 	mysql? ( http://gentoo.twobit.net/misc/${P}-mysql.diff )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 DEPEND_COMMON="net-mail/qmail
 	mysql? ( >=dev-db/mysql-3.23* )"
 DEPEND="sys-apps/sed
@@ -92,8 +92,8 @@ src_compile() {
 
 	# Bug 20127
 	use clearpasswd &&
-		myopts="${myconf} --enable-clear-passwd=y" ||
-		myopts="${myconf} --enable-clear-passwd=n"
+		myopts="${myopts} --enable-clear-passwd=y" ||
+		myopts="${myopts} --enable-clear-passwd=n"
 
 	econf ${myopts} --sbindir=/usr/sbin \
 		--bindir=/usr/bin \
@@ -114,7 +114,7 @@ src_compile() {
 		--enable-logging=y \
 		--enable-log-name=vpopmail
 
-	[ "`use mysql`" ] && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
+	use mysql && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
 
 	emake || die "Make failed."
 }
