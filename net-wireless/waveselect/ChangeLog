@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/waveselect
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/ChangeLog,v 1.1 2005/01/27 18:41:15 genstef Exp $
+
+*waveselect-0.1.2 (27 Jan 2005)
+
+  27 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +waveselect-0.1.2.ebuild:
+  New ebuild thanks to Heath H Holcomb <xcable_hhh@yahoo.com> in bug 79656
+
