@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.25 2005/01/29 05:12:23 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.26 2005/01/31 15:05:14 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libgnomecanvasmm-2.6.1.ebuild:
+  Keyworded ~sparc
 
   29 Jan 2005; Mike Gardiner <obz@gentoo.org> libgnomecanvasmm-2.6.1.ebuild:
   Add ~ppc keyword to 2.6.1

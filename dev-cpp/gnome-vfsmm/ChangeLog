@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.9 2005/01/29 06:48:05 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.10 2005/01/31 15:06:20 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-vfsmm-2.6.1.ebuild:
+  Keyworded ~sparc
 
   29 Jan 2005; Mike Gardiner <obz@gentoo.org> gnome-vfsmm-2.6.1.ebuild:
   Added ~ppc to keywords
