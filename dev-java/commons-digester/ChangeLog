@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.14 2004/10/16 17:05:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.15 2004/10/17 07:24:52 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  commons-digester-1.6.ebuild:
+  keywords ~amd64; closes #67321, #67322.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   commons-digester-1.5.ebuild, commons-digester-1.6.ebuild:
