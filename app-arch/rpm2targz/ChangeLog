@@ -1,10 +1,13 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.6 2003/02/12 02:57:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.7 2003/03/28 18:03:10 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *rpm2targz-8.0 (1 Feb 2002)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> rpm2targz-8.0.ebuild :
+  Added hppa to KEYWORDS.
 
   05 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> rpm2targz-8.0.ebuild :
 
