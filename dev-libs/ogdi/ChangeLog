@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/ogdi
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ogdi/ChangeLog,v 1.1 2003/01/05 05:20:50 george Exp $
+
+*ogdi-3.1.1.ebuild (04 ñÎ× 2003)
+
+  04 Jan 2003; George Shapovalov <george@gentoo.org> ChangeLog, ogdi-3.1.1.ebuild, files/digest-ogdi-3.1.1 :
+  initial release
+  open geographical datastore interface
+  ebuild submitted by Nathaniel C. Domingo  <nathaniel.domingo@upd.edu.ph>
