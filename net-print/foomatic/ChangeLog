@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.28 2004/07/17 17:35:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.29 2004/07/19 00:42:26 kloeri Exp $
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> foomatic-3.0.1.ebuild:
+  Stable on alpha.
 
   17 Jul 2004; Tom Gall <tgall@gentoo.org> foomatic-3.0.1.ebuild:
   stable on ppc64, bug #55797
