@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.17 2003/03/03 22:06:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.18 2003/03/31 11:08:50 absinthe Exp $
 
 *jedit-4.1 (03 Mar 2003)
+
+  31 Mar 2003; Dylan Carlson <absinthe@gentoo.org> jedit-4.1.ebuild:
+  Moved x86 to stable.
 
   03 Mar 2003; Martin Holzer <mholzer@gentoo.org> jedit-4.1.ebuild :
   Fixed shell wrapper. Closes #12804.
