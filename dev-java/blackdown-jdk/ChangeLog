@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.38 2003/10/03 10:57:22 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.39 2003/10/05 03:44:44 brad_mssw Exp $
+
+  04 Oct 2003; Brad House <brad_mssw@gentoo.org> blackdown-jdk-1.4.1.ebuild:
+  allow amd64 to install java
 
   03 Oct 2003; Alexander Gabert <pappy@gentoo.org> blackdown-jdk-1.4.1.ebuild:
   added chpax behaviour for proper operation of blackdown under PaX kernels
