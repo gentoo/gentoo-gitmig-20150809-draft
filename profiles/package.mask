@@ -316,6 +316,7 @@ dev-lisp/cmucl-bin
 
 # <caleb@gentoo.org> (18 Jan 2004 Update)
 # new kde versions mask - will clean up shortly
+# these will all be removed very soon (02-02-04)
 
 =kde-base/kde-3.2.0_rc1
 =kde-base/kde-i18n-3.2.0_rc1
@@ -331,12 +332,11 @@ dev-lisp/cmucl-bin
 =kde-base/kdetoys-3.2.0_rc1
 =kde-base/kdeutils-3.2.0_rc1
 =kde-base/kdemultimedia-3.2.0_rc1
-=kde-base/kdepim-3.2.0_rc1
-=kde-base/kdenetwork-3.2.0_rc1
-=kde-base/kdelibs-3.2.0_rc1
-=kde-base/kdebase-3.2.0_rc1
-=kde-base/arts-1.2.0_rc1
-
+=kde-base/kdepim-3.2.0
+=kde-base/kdenetwork-3.2.0
+=kde-base/kdelibs-3.2.0
+=kde-base/kdebase-3.2.0
+=kde-base/arts-1.2.0
 
 # <liquidx@gentoo.org> (29 Aug 2003)
 # initial testing for python 2.3.x. do not unmask unless you
