@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a8ca5c4ac6714114c51bf5441baa96ca eclipse-emf-bin-200403250631.ebuild 944
 MD5 a681485c22e2b7542d75a74a726c8dc2 ChangeLog 620
 MD5 3752b9c7955e5e920a6271e8448ace90 metadata.xml 806
+MD5 2122121689f0eb61b93629de881a49d6 eclipse-emf-bin-2.0.1.ebuild 937
 MD5 6f8b332c301e2b5d3ed4a4ca3df35f87 files/digest-eclipse-emf-bin-200403250631 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBiMRq/rLF9B432nYRAmpWAJ9x85wpQnPOH7aT3h1KA02jk0/93wCeNIqW
-dQv5wv7aVtxPfs6lzJ3GARY=
-=E72B
------END PGP SIGNATURE-----
+MD5 fa281466e024b7756c7acf2b7fa504f1 files/digest-eclipse-emf-bin-2.0.1 71

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/eclipse-ve-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-ve-bin/ChangeLog,v 1.5 2004/11/03 11:45:34 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-ve-bin/ChangeLog,v 1.6 2005/03/19 21:20:20 luckyduck Exp $
+
+*eclipse-ve-bin-1.0.2 (19 Mar 2005)
+
+  19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +eclipse-ve-bin-1.0.2.ebuild:
+  new upstream version, see #84546
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
   eclipse-ve-bin-1.0_rc1.ebuild, eclipse-ve-bin-1.0_rc2.ebuild:

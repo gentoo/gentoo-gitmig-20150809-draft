@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/eclipse-gef-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.7 2004/11/12 17:17:48 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.8 2005/03/19 21:19:13 luckyduck Exp $
+
+*eclipse-gef-bin-3.0.1 (19 Mar 2005)
+
+  19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +eclipse-gef-bin-3.0.1.ebuild:
+  new upstream version, see #84546
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org>
   eclipse-gef-bin-20040619.ebuild:

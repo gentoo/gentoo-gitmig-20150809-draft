@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/eclipse-emf-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/ChangeLog,v 1.4 2004/11/03 11:43:32 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/ChangeLog,v 1.5 2005/03/19 21:18:20 luckyduck Exp $
+
+*eclipse-emf-bin-2.0.1 (19 Mar 2005)
+
+  19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +eclipse-emf-bin-2.0.1.ebuild:
+  new upstream version, fixes #84546
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
   eclipse-emf-bin-200403250631.ebuild:

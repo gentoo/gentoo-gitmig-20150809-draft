@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/eclipse-emf-bin-200403250631.ebuild,v 1.5 2005/03/19 21:18:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/eclipse-emf-bin-2.0.1.ebuild,v 1.1 2005/03/19 21:18:20 luckyduck Exp $
 
 inherit eclipse-ext
 
 DESCRIPTION="EMF is a modeling framework and code generation facility for building tools and other applications based on a structured data model."
 HOMEPAGE="http://www.eclipse.org/emf/"
-SRC_URI="http://download.eclipse.org/tools/emf/downloads/drops/2.0/I200403250631/emf-runtime-I200403250631.zip"
+SRC_URI="http://download.eclipse.org/tools/emf/downloads/drops/2.0.1/R200409171617/emf-sdo-runtime-2.0.1.zip"
 LICENSE="CPL-1.0"
 SLOT="2"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=dev-util/eclipse-sdk-3.0.0_pre8
+DEPEND=">=dev-util/eclipse-sdk-3.0.1
 		app-arch/unzip"
 
 src_unpack() {
