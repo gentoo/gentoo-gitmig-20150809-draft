@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.118.ebuild,v 1.1 2005/01/31 21:12:49 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.121.ebuild,v 1.1 2005/03/06 00:41:19 ferdy Exp $
 
 inherit eutils
 
@@ -22,20 +22,19 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch || \
+	epatch ${FILESDIR}/${PN}-gentoo.patch || \
 		die "failed to patch ${P}-gentoo.patch"
 
 	if use ssl; then
 		echo $PWD
 		cp imapsync imapsync-ssl
-		epatch ${FILESDIR}/${P}-ssl.patch || die "patch failed"
+		epatch ${FILESDIR}/${PN}-ssl.patch || die "patch failed"
 		epatch ${S}/patches/imapsync-ssl.diff || \
 			die "failed to patch imapsync-ssl.diff"
 	fi
 }
 
 src_install() {
-
 	make install DESTDIR=${D} || die "make failed"
 	#into /usr
 	dobin imapsync imapsync-ssl
