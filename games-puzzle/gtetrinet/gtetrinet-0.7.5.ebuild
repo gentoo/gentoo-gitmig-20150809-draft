@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.5.ebuild,v 1.1 2003/10/14 13:41:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.5.ebuild,v 1.2 2004/01/06 02:57:32 avenj Exp $
 
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="nls ipv6"
 
 RDEPEND="dev-libs/libxml2
