@@ -15,7 +15,7 @@ HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
 
 SLOT="0"
 KEYWORDS="x86 -ppc"
-LICENSE="sun-j2sl"
+LICENSE="sun-csl"
 
 RDEPEND="virtual/glibc
 	virtual/x11
@@ -59,7 +59,6 @@ src_compile () {
 	export ALT_MOZILLA_PATH="${S}/mozilla"
 	export ALT_BOOTDIR="/opt/${P}"
 	export ALT_MOTIF_DIR="${S}/motif"
-	export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin"
 	cd control/make
 
 	# MUST use make, we DONT want any -j options!
