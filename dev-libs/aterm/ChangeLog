@@ -1,0 +1,23 @@
+# ChangeLog for dev-libs/aterm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.1 2002/04/12 13:51:40 karltk Exp $
+
+*aterm-1.6.6 (11 Apr 2002)
+
+  11 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> aterm-1.6.6.ebuild files/digest-aterm-1.6.6:
+
+  ATerm (short for Annotated Term) is an abstract data type designed for the 
+  exchange of tree-like data structures between distributed applications.
+
+  The ATerm library forms a comprehensive procedural interface which enables
+  creation and manipulation of ATerms in C and Java. The ATerm implementation 
+  is based on maximal subterm sharing and automatic garbage collection.
+
+  A binary exchange format for the concise representation of ATerms (sharing 
+  preserved) allows the fast exchange of ATerms between applications. In a 
+  typical application---parse trees which contain considerable redundant 
+  information---less than 2 bytes are needed to represent a node in memory, 
+  and less than 2 bits are needed to represent it in binary format. The 
+  implementation of ATerms scales up to the manipulation of ATerms in the 
+  giga-byte range.
+
