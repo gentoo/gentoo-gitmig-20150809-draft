@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.10 2004/07/14 13:47:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.11 2004/07/15 13:03:12 kugelfang Exp $
 
 IUSE="X atlas f77 gnome tcltk"
 
@@ -22,7 +22,6 @@ DEPEND="virtual/libc
 		x86? ( atlas? ( dev-libs/atlas ) )
 		sparc? ( atlas? ( dev-libs/atlas ) )
 		~amd64? ( atlas? ( dev-libs/atlas ) )
-		~amd64? ( !f77? ( dev-lang/f2c >=dev-libs/libf2c-20021004-r1 ) )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.4
@@ -34,7 +33,7 @@ DEPEND="virtual/libc
 			>=dev-libs/glib-1.2.10
 			>=media-sound/esound-0.2.23
 			>=media-libs/audiofile-0.2.1 )"
-
+S
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 sparc ppc amd64"
