@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.4.66.ebuild,v 1.2 2001/06/04 10:34:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.4.66.ebuild,v 1.3 2001/07/29 10:56:02 hallski Exp $
 
 #P=
 A=${P}.tar.bz2
@@ -12,11 +12,11 @@ HOMEPAGE="http://sylpheed.good-day.net"
 
 DEPEND=">=x11-libs/gtk+-1.2
         >=media-libs/compface-1.4
-	gnome? ( >=gnome-base/gdk-pixbuf-0.10 )
+	gnome? ( >=media-libs/gdk-pixbuf-0.10 )
 	nls? ( sys-devel/gettext )"
 
 RDEPEND=">=x11-libs/gtk+-1.2
-	gnome? ( >=gnome-base/gdk-pixbuf-0.10 )"
+	gnome? ( >=media-libs/gdk-pixbuf-0.10 )"
 
 src_compile() {
 
