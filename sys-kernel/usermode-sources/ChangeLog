@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.59 2005/01/12 21:05:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.60 2005/03/07 23:10:16 plasmaroo Exp $
+
+*usermode-sources-2.6.8.1-r9 (07 Mar 2005)
+
+  07 Mar 2005; <plasmaroo@gentoo.org> -usermode-sources-2.4.26-r12.ebuild,
+  +usermode-sources-2.4.26-r13.ebuild, -usermode-sources-2.6.8.1-r8.ebuild,
+  +usermode-sources-2.6.8.1-r9.ebuild,
+  +files/usermode-sources-2.4.77666.patch,
+  +files/usermode-sources-2.4.78362.patch,
+  +files/usermode-sources-2.4.78363.patch,
+  +files/usermode-sources-2.6.74070.patch,
+  +files/usermode-sources-2.6.77666.patch,
+  +files/usermode-sources-2.6.77923.patch,
+  +files/usermode-sources-2.6.81106.patch,
+  +files/usermode-sources-2.6.82141.patch:
+  Security bump: Fix #74070, #77666, #78362, #78363, #77923, #81106, #82141.
 
   12 Jan 2005; <plasmaroo@gentoo.org> files/usermode-sources-2.6.77094.patch:
   Fix #77094 patch; bug #77458.

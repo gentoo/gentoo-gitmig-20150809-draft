@@ -1,0 +1,191 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2005/02/02 17:41:06-08:00 guninski@guninski.com 
+#   [PATCH] Fix sign checks in copy_from_read_buf()
+#   
+#   Fix signedness and remove the now unnecessary cast.
+#   
+#   Acked-by: Marcelo Tosatti <marcelo.tosatti@cyclades.com>
+#   Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+# 
+# drivers/char/n_tty.c
+#   2005/01/30 07:56:05-08:00 guninski@guninski.com +2 -2
+#   Fix sign checks in copy_from_read_buf()
+# 
+# ChangeSet
+#   2005/02/02 17:42:38-08:00 guninski@guninski.com 
+#   [PATCH] Fix signed compare in fs/proc/generic.c::proc_file_read()
+#   
+#   Acked-by: Marcelo Tosatti <marcelo.tosatti@cyclades.com>
+#   Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+# 
+# fs/proc/generic.c
+#   2005/01/30 07:58:00-08:00 guninski@guninski.com +1 -1
+#   Fix signed compare in fs/proc/generic.c::proc_file_read()
+# 
+# ChangeSet
+#   2005/02/02 17:45:11-08:00 guninski@guninski.com 
+#   [PATCH] reiserfs: use proper 64-bit clean types
+#   
+#   reiserfs_file_write() casts its (size_t) count parameter to int, which can become
+#   a problem on 64-bit architectures
+#   
+#   This attempts to fix this by changing the variables dealing with count
+#   and offset and the "min_t" comparisons to use "size_t" through-out.
+#   
+#   Acked-by: Marcelo Tosatti <marcelo.tosatti@cyclades.com>
+#   Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+# 
+# fs/reiserfs/file.c
+#   2005/01/26 07:28:12-08:00 guninski@guninski.com +11 -12
+#   reiserfs: use proper 64-bit clean types
+# 
+# ChangeSet
+#   2005/02/08 07:59:56-08:00 torvalds@ppc970.osdl.org 
+#   Fix ATM copy-to-user usage.
+#   
+#   More of the Guninski "copy_to_user() takes a size_t" series.
+# 
+# net/atm/addr.c
+#   2005/02/08 07:59:48-08:00 torvalds@ppc970.osdl.org +1 -1
+#   Fix ATM copy-to-user usage.
+#   
+#   More of the Guninski "copy_to_user() takes a size_t" series.
+# 
+# net/atm/addr.h
+#   2005/02/08 07:59:48-08:00 torvalds@ppc970.osdl.org +1 -1
+#   Fix ATM copy-to-user usage.
+#   
+#   More of the Guninski "copy_to_user() takes a size_t" series.
+# 
+diff -Nru a/drivers/char/n_tty.c b/drivers/char/n_tty.c
+--- a/drivers/char/n_tty.c	2005-02-15 11:56:06 -08:00
++++ b/drivers/char/n_tty.c	2005-02-15 11:56:06 -08:00
+@@ -1143,13 +1143,13 @@
+ 
+ {
+ 	int retval;
+-	ssize_t n;
++	size_t n;
+ 	unsigned long flags;
+ 
+ 	retval = 0;
+ 	spin_lock_irqsave(&tty->read_lock, flags);
+ 	n = min(tty->read_cnt, N_TTY_BUF_SIZE - tty->read_tail);
+-	n = min((ssize_t)*nr, n);
++	n = min(*nr, n);
+ 	spin_unlock_irqrestore(&tty->read_lock, flags);
+ 	if (n) {
+ 		mb();
+diff -Nru a/fs/proc/generic.c b/fs/proc/generic.c
+--- a/fs/proc/generic.c	2005-02-15 11:55:35 -08:00
++++ b/fs/proc/generic.c	2005-02-15 11:55:35 -08:00
+@@ -60,7 +60,7 @@
+ 		return -ENOMEM;
+ 
+ 	while ((nbytes > 0) && !eof) {
+-		count = min_t(ssize_t, PROC_BLOCK_SIZE, nbytes);
++		count = min_t(size_t, PROC_BLOCK_SIZE, nbytes);
+ 
+ 		start = NULL;
+ 		if (dp->get_info) {
+diff -Nru a/fs/reiserfs/file.c b/fs/reiserfs/file.c
+--- a/fs/reiserfs/file.c	2005-02-15 11:56:07 -08:00
++++ b/fs/reiserfs/file.c	2005-02-15 11:56:07 -08:00
+@@ -588,7 +588,7 @@
+ 
+ /* Unlock pages prepared by reiserfs_prepare_file_region_for_write */
+ void reiserfs_unprepare_pages(struct page **prepared_pages, /* list of locked pages */
+-			      int num_pages /* amount of pages */) {
++			      size_t num_pages /* amount of pages */) {
+     int i; // loop counter
+ 
+     for (i=0; i < num_pages ; i++) {
+@@ -619,7 +619,7 @@
+     int offset; // offset in page
+ 
+     for ( i = 0, offset = (pos & (PAGE_CACHE_SIZE-1)); i < num_pages ; i++,offset=0) {
+-	int count = min_t(int,PAGE_CACHE_SIZE-offset,write_bytes); // How much of bytes to write to this page
++	size_t count = min_t(size_t,PAGE_CACHE_SIZE-offset,write_bytes); // How much of bytes to write to this page
+ 	struct page *page=prepared_pages[i]; // Current page we process.
+ 
+ 	fault_in_pages_readable( buf, count);
+@@ -718,8 +718,8 @@
+ 				struct reiserfs_transaction_handle *th,
+ 				struct inode *inode,
+ 				loff_t pos, /* Writing position offset */
+-				int num_pages, /* Number of pages to write */
+-				int write_bytes, /* number of bytes to write */
++				size_t num_pages, /* Number of pages to write */
++				size_t write_bytes, /* number of bytes to write */
+ 				struct page **prepared_pages /* list of pages */
+ 				)
+ {
+@@ -854,9 +854,9 @@
+ static int reiserfs_prepare_file_region_for_write(
+ 				struct inode *inode /* Inode of the file */,
+ 				loff_t pos, /* position in the file */
+-				int num_pages, /* number of pages to
++				size_t num_pages, /* number of pages to
+ 					          prepare */
+-				int write_bytes, /* Amount of bytes to be
++				size_t write_bytes, /* Amount of bytes to be
+ 						    overwritten from
+ 						    @pos */
+ 				struct page **prepared_pages /* pointer to array
+@@ -1252,10 +1252,9 @@
+     while ( count > 0) {
+ 	/* This is the main loop in which we running until some error occures
+ 	   or until we write all of the data. */
+-	int num_pages;/* amount of pages we are going to write this iteration */
+-	int write_bytes; /* amount of bytes to write during this iteration */
+-	int blocks_to_allocate; /* how much blocks we need to allocate for
+-				   this iteration */
++	size_t num_pages;/* amount of pages we are going to write this iteration */
++	size_t write_bytes; /* amount of bytes to write during this iteration */
++	size_t blocks_to_allocate; /* how much blocks we need to allocate for this iteration */
+         
+         /*  (pos & (PAGE_CACHE_SIZE-1)) is an idiom for offset into a page of pos*/
+ 	num_pages = !!((pos+count) & (PAGE_CACHE_SIZE - 1)) + /* round up partial
+@@ -1269,7 +1268,7 @@
+ 	    /* If we were asked to write more data than we want to or if there
+ 	       is not that much space, then we shorten amount of data to write
+ 	       for this iteration. */
+-	    num_pages = min_t(int, REISERFS_WRITE_PAGES_AT_A_TIME, reiserfs_can_fit_pages(inode->i_sb));
++	    num_pages = min_t(size_t, REISERFS_WRITE_PAGES_AT_A_TIME, reiserfs_can_fit_pages(inode->i_sb));
+ 	    /* Also we should not forget to set size in bytes accordingly */
+ 	    write_bytes = (num_pages << PAGE_CACHE_SHIFT) - 
+ 			    (pos & (PAGE_CACHE_SIZE-1));
+@@ -1295,7 +1294,7 @@
+ 	    // But overwriting files on absolutelly full volumes would not
+ 	    // be very efficient. Well, people are not supposed to fill
+ 	    // 100% of disk space anyway.
+-	    write_bytes = min_t(int, count, inode->i_sb->s_blocksize - (pos & (inode->i_sb->s_blocksize - 1)));
++	    write_bytes = min_t(size_t, count, inode->i_sb->s_blocksize - (pos & (inode->i_sb->s_blocksize - 1)));
+ 	    num_pages = 1;
+ 	    // No blocks were claimed before, so do it now.
+ 	    reiserfs_claim_blocks_to_be_allocated(inode->i_sb, 1 << (PAGE_CACHE_SHIFT - inode->i_blkbits));
+diff -Nru a/net/atm/addr.c b/net/atm/addr.c
+--- a/net/atm/addr.c	2005-02-15 11:56:16 -08:00
++++ b/net/atm/addr.c	2005-02-15 11:56:16 -08:00
+@@ -114,7 +114,7 @@
+ }
+ 
+ 
+-int atm_get_addr(struct atm_dev *dev,struct sockaddr_atmsvc __user *buf,int size)
++int atm_get_addr(struct atm_dev *dev,struct sockaddr_atmsvc __user *buf,size_t size)
+ {
+ 	unsigned long flags;
+ 	struct atm_dev_addr *walk;
+diff -Nru a/net/atm/addr.h b/net/atm/addr.h
+--- a/net/atm/addr.h	2005-02-15 11:56:16 -08:00
++++ b/net/atm/addr.h	2005-02-15 11:56:16 -08:00
+@@ -13,6 +13,6 @@
+ void atm_reset_addr(struct atm_dev *dev);
+ int atm_add_addr(struct atm_dev *dev,struct sockaddr_atmsvc *addr);
+ int atm_del_addr(struct atm_dev *dev,struct sockaddr_atmsvc *addr);
+-int atm_get_addr(struct atm_dev *dev,struct sockaddr_atmsvc __user *buf,int size);
++int atm_get_addr(struct atm_dev *dev,struct sockaddr_atmsvc __user *buf,size_t size);
+ 
+ #endif
