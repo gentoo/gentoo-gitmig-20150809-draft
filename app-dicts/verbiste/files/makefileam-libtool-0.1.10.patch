@@ -1,0 +1,40 @@
+--- src/commands/Makefile.am.orig	2005-04-03 18:36:56.000000000 -0400
++++ src/commands/Makefile.am	2005-04-03 18:50:35.000000000 -0400
+@@ -16,7 +16,7 @@
+ 
+ french_deconjugator_LDADD = \
+ 	$(LIBXML2_LIBS) \
+-	-L../verbiste -lverbiste-$(API)
++	../verbiste/libverbiste-$(API).la
+ 
+ french_conjugator_SOURCES = \
+ 	french-conjugator.cpp \
+@@ -30,7 +30,7 @@
+ 
+ french_conjugator_LDADD = \
+ 	$(LIBXML2_LIBS) \
+-	-L../verbiste -lverbiste-$(API)
++	../verbiste/libverbiste-$(API).la
+ 
+ L = LIBDATADIR=$(top_srcdir)/data
+ 
+--- src/gnome/Makefile.am.orig	2005-04-03 18:40:45.000000000 -0400
++++ src/gnome/Makefile.am	2005-04-03 18:50:52.000000000 -0400
+@@ -35,7 +35,7 @@
+ 
+ verbiste_applet_LDADD = \
+ 	$(LIBXML2_LIBS) \
+-        -L../verbiste -lverbiste-$(API) \
++	../verbiste/libverbiste-$(API).la \
+ 	$(LIBPANELAPPLET_LIBS) \
+ 	@INTLLIBS@ @LIBS@
+ 
+@@ -85,7 +85,7 @@
+ 
+ verbiste_LDADD = \
+ 	$(LIBXML2_LIBS) \
+-        -L../verbiste -lverbiste-$(API) \
++	../verbiste/libverbiste-$(API).la \
+ 	$(LIBGNOMEUI_LIBS) \
+ 	@INTLLIBS@ @LIBS@
+ 

@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.6 2005/01/01 13:03:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.7 2005/04/03 23:08:43 tester Exp $
+
+*verbiste-0.1.10 (03 Apr 2005)
+
+  03 Apr 2005; Olivier Crête <tester@gentoo.org>
+  +files/makefileam-libtool-0.1.10.patch, +verbiste-0.1.10.ebuild:
+  Version bump
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> verbiste-0.1.9.ebuild:
   Fixed invalid atoms in *DEPEND.
