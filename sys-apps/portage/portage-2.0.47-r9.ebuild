@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r9.ebuild,v 1.3 2003/03/13 09:24:45 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r9.ebuild,v 1.4 2003/03/13 09:28:01 carpaski Exp $
 
 IUSE="build"
 
@@ -48,6 +48,7 @@ src_install() {
 	#config files
 	cd ${S}/cnf
 	insinto /etc
+
 	case "$ARCH" in
 		alpha )
 		newins make.globals.alpha make.globals
@@ -77,6 +78,8 @@ src_install() {
 		doins make.globals make.conf
 		;;
 	esac
+	use build && rm -f ${D}/etc/make.conf
+
 	doins etc-update.conf dispatch-conf.conf
 	#python modules
 	cd ${S}/src/python-missingos
