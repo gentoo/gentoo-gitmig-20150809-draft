@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.2.ebuild,v 1.11 2004/12/31 16:08:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.2.ebuild,v 1.12 2005/01/02 17:45:22 carlo Exp $
 
 inherit eutils kde
 

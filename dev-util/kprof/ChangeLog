@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kprof
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.5 2004/12/31 16:08:49 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.6 2005/01/02 17:45:22 carlo Exp $
+
+*kprof-1.4.3 (02 Jan 2005)
+
+  02 Jan 2005; Carsten Lohrke <carlo@gentoo.org> +kprof-1.4.3.ebuild:
+  version bump
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> kprof-1.4.2.ebuild:
   Added ~sparc keyword.
