@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07.3.ebuild,v 1.2 2005/02/07 21:22:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07.3.ebuild,v 1.3 2005/02/08 14:57:38 gustavoz Exp $
 
 inherit rpm eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://rpmfind.net/linux/fedora/core/3/SRPMS/${MY_P}.src.rpm"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~hppa ~amd64 ~alpha ~sparc ~ia64 ~mips ~ppc64 ~s390"
+KEYWORDS="x86 ~ppc ~hppa ~amd64 ~alpha sparc ~ia64 ~mips ~ppc64 ~s390"
 IUSE=""
 
 RDEPEND="virtual/libc"
