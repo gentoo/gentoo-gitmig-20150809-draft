@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/sqsh
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.1 2002/12/11 23:32:48 rphillips Exp $
+
+*sqsh-2.1 (11 Dec 2002)
+
+  11 Dec 2002; Sean Summers <ebuild@generalprotectionfault.com> sqsh-2.1.ebuild :
+
+  Initial package
+  Had to patch src/config.h with a config.h from sqsh-1.7; configure is broken.

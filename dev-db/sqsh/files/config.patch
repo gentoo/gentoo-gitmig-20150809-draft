@@ -1,0 +1,22 @@
+60c60
+< /* #undef HAVE_STRERROR */
+---
+> #define HAVE_STRERROR 1
+62,67c62,67
+< /* #undef HAVE_STRFTIME */
+< /* #undef HAVE_MEMCPY */
+< /* #undef HAVE_MEMMOVE */
+< /* #undef HAVE_LOCALTIME */
+< /* #undef HAVE_TIMELOCAL */
+< /* #undef HAVE_STRCHR */
+---
+> #define HAVE_STRFTIME 1
+> #define HAVE_MEMCPY 1
+> #define HAVE_MEMMOVE 1
+> #define HAVE_LOCALTIME 1
+> #define HAVE_TIMELOCAL 1
+> #define HAVE_STRCHR 1
+69c69
+< /* #undef HAVE_GETTIMEOFDAY */
+---
+> #define HAVE_GETTIMEOFDAY 1
