@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public Licensev2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0.ebuild,v 1.4 2003/08/05 18:19:48 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0.ebuild,v 1.5 2003/08/06 07:04:22 vapier Exp $
 
 DESCRIPTION="Atari 800 emulator"
 HOMEPAGE="http://atari800.sourceforge.net/"

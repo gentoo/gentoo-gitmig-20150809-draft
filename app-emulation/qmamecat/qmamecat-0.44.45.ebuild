@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public Licensev2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.3 2003/08/05 18:20:36 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.4 2003/08/06 07:09:47 vapier Exp $
 
 MY_PV="${PV/45/b45}"
 DESCRIPTION="QT mame catalog and frontend"
