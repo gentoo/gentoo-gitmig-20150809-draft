@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3220 2004/10/05 11:13:14 twp Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3221 2004/10/05 12:18:36 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -24,6 +24,7 @@
 
 # Brad Cowan <bcowan@gentoo.org> (04 Oct 2004)
 # masking until out of beta
+=xfce-base/xfce-mcs-manager-4.1.90
 =xfce-base/xfce4-4.1.90
 =xfce-base/xfce4-base-4.1.90
 =xfce-base/libxfce4util-4.1.90
