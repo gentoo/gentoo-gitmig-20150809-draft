@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.7 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.8 2003/04/04 19:19:39 liquidx Exp $
+
+*pexpect-0.97 (04 Apr 2003)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> pexpect-0.97.ebuild:
+  version bump
 
 *pexpect-0.94 (27 Oct 2002)
 
