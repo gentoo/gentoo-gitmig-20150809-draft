@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnomemm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.1 2003/06/20 23:44:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.2 2003/06/24 02:38:06 lu_zero Exp $
+
+  24 Jun 2003; Luca Barbato <lu_zero@gentoo.org> gnomemm-1.2.3-r1.ebuild:
+  added the ppc keyword.
 
 *gnomemm-1.2.3-r1 (21 Jun 2003)
 
