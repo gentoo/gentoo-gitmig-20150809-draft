@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.11 2004/01/09 23:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.12 2004/01/11 10:48:59 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="A library for running svga graphics on the console"
 HOMEPAGE="http://www.svgalib.org/"
 SRC_URI="http://www.svgalib.org/${P}.tar.gz
-	http://www.arava.co.il/matan/svgalib/r128.c"
+	mirror://gentoo/${P}-r128.c.bz2"
+#	http://www.arava.co.il/matan/svgalib/r128.c"
 
 LICENSE="BSD"
 SLOT="0"
@@ -25,7 +26,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc3.patch #23515
 
 	# Update r128 driver, bug #10987.
-	cp -f ${DISTDIR}/r128.c ${S}/src
+	unpack ${P}-r128.c.bz2
+	mv ${P}-r128.c ${S}/src/r128.c
 }
 
 src_compile() {
