@@ -1,0 +1,27 @@
+#!/bin/sh
+#RCUPDATE:3 4:72:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=gentool
+opts="start stop"
+
+
+start() {
+    ebegin "Starting supervised ${SERVICE}"
+	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping supervised ${SERVICE}"
+   	if [ -e ${SVCDIR}/control/${SERVICE} ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
+		rm ${SVCDIR}/control/${SERVICE}
+	fi
+	eend $?
+}
+
+doservice ${@}
+
