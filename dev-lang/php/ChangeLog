@@ -1,10 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.20 2002/04/28 23:38:19 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.21 2002/04/29 04:15:33 rphillips Exp $
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
-  This ChangeLog file needs reformatting.
+  There is a compilation problem with the --with-gettext 
+  variable being passed to configure from within portage.
 
   25 Apr 2002; Donny Davies <woodchip@gentoo.org> :
 
