@@ -124,7 +124,7 @@ diff -ru slmodem-2.9.9.orig/drivers/Makefile slmodem-2.9.9/drivers/Makefile
 +	mkdir -p $(DESTDIR)/etc && \
 +	cp /etc/modules.conf $(DESTDIR)/etc/modules.conf.slamr && \
 +	echo 'alias char-major-212 slamr' >> $(DESTDIR)/etc/modules.conf && \
-+	echo 'alias char-major-213 slusb' >> $DESTDIR)/etc/modules.conf 
++	echo 'alias char-major-213 slusb' >> $(DESTDIR)/etc/modules.conf 
 +	/sbin/depmod -a
 +
 +install-modules: uninstall-old
