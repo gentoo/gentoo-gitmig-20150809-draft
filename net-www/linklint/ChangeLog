@@ -1,0 +1,10 @@
+# ChangeLog for net-www/linklint
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/linklint/ChangeLog,v 1.1 2003/06/08 17:19:06 avenj Exp $
+
+*linklint-2.3.4 (08 Jun 2003)
+
+  08 Jun 2003; Jon Portnoy <avenj@gentoo.org> linklint-2.3.4.ebuild :
+  Initial import of linklint. Ebuild submitted by Eivind Tagseth
+  <eivindt-gentoo@multinet.no> and checked by Don Seiler
+  <don@seiler.us>.
