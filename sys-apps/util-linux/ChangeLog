@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.38 2003/06/10 17:01:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.39 2003/06/22 22:07:20 kumba Exp $
+
 
 *util-linux-2.11z-r4 (01 Jun 2003)
+
+  22 Jun 2003; Joshua Kinard <kumba@gentoo.org> util-linux-2.11z-r4.ebuild:
+  Changed ~sparc & ~mips to sparc & mips
 
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> util-linux-2.11z-r4.ebuild:
   If pam was disabled in IUSE, src_unpack would fail.  Fixed the logic.
