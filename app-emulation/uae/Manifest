@@ -2,7 +2,7 @@ MD5 d4f702886e315a0832658a9409030830 ChangeLog 3369
 MD5 800d59bca6b74f54268ca8c63af928ee metadata.xml 668
 MD5 af8db5e7e94c29b370ea7f832f4506c4 uae-0.8.22.ebuild 1279
 MD5 29d8dc818001e2f0ce15c9effdc2b36b uae-0.8.25_pre20040302.ebuild 1819
-MD5 ca57570bdffa34194ebb2dbad0a513ac uae-0.8.27_pre20040720.ebuild 2132
+MD5 c5f20110d3aa62b8881c069d950f789a uae-0.8.27_pre20040720.ebuild 2124
 MD5 b2fac0f21ee34abaa6279cf7ad023119 files/digest-uae-0.8.22 62
 MD5 02f734719ea8dc27787fb6be6ddcc11e files/digest-uae-0.8.25_pre20040302 73
 MD5 77b204c71d52f0a0423054b5a9b8a0cb files/split_cpuemu.pl 498

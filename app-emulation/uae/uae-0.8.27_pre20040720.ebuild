@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.27_pre20040720.ebuild,v 1.1 2004/07/20 15:10:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.27_pre20040720.ebuild,v 1.2 2004/07/21 08:28:53 dholm Exp $
 
-inherit eutils
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 MY_PV="0.8.27-20040720"
 S="${WORKDIR}/${PN}-${MY_PV}"
