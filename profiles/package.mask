@@ -621,8 +621,6 @@ dev-lang/tcl-tk
 =media-gfx/gphoto-2.0.0
 =media-gfx/gphoto-2.0.0-r1
 
-#seemant@gentoo.org 1 Apr 2002
-=media-video/drip-0.81
 
 # jhhudso@gentoo.org 3 Apr 2002
 # This is the new version of shadow, needs more beta testing
@@ -742,10 +740,6 @@ gnome-extra/libgnomeuimm
 =media-libs/libgii-20010313
 =media-libs/libggi-20010313
 
-#seemant@gentoo.org, 15 Apr 2002
-# won't compile against Qt3, so it is under investigation
-=media-video/vlc-0.3.0
-
 #seemant@gentoo.org 16 Apr 2002
 # ispell's newer stuff is totally b0rked
 >=ispell-3.2.06.ebuild
@@ -776,10 +770,6 @@ app-cdr/cddump
 
 # jnelson@gentoo.org 29 May 2002
 #=dev-lang/python-2.2.1-r1
-
-# seemant@gentoo.org 1 May 2002
-# libpng-1.2.2 -- coz users don't --clean rsync like they should
-=media-libs/libpng-1.2.2
 
 # seemant@gentoo.org 5 May 2002
 # xpdf-1.00-r1 has a dependency on the masked freetype2
