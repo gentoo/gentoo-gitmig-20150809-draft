@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/qtella
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.5 2002/07/27 13:56:11 danarmak Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.6 2002/08/23 00:27:18 danarmak Exp $
+
+*qtella-0.5.3-r2 (23 Aug 2002)
+
+  23 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Behave correctly wrt. eclasses; fix behaviour when USE kde is off (bug
+  #6296).
 
   28 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
