@@ -1,33 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.10 2004/03/18 21:37:53 dholm Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.6.2.ebuild,v 1.1 2004/05/30 03:25:41 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="C++ STL library"
+HOMEPAGE="http://www.stlport.org/"
 SRC_URI="http://www.stlport.org/archive/${P}.tar.gz"
-HOMEPAGE="http://www.stlport.org"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
-SLOT="0"
-KEYWORDS="x86 sparc amd64 ~ppc"
-LICENSE="as-is"
-
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
-	# Do we use the new multi scheme gcc ?
-	if ! /usr/sbin/gcc-config --get-current-profile &> /dev/null
-	then
-		epatch ${FILESDIR}/${P}-gcc3.patch2
-	fi
-
-	epatch ${FILESDIR}/${P}-optimize.patch
+	epatch ${FILESDIR}/${PV}-optimize.patch
+	epatch ${FILESDIR}/${PV}-gcc-includes.patch
+	sed -i 's:-D_STLP_REAL_LOCALE_IMPLEMENTED::' src/gcc-linux.mak
 }
 
 src_compile() {
@@ -35,14 +28,14 @@ src_compile() {
 	emake -f gcc-linux.mak || die "Compile failed"
 }
 
-src_install () {
-
+src_install() {
 	dodir /usr/include
 	cp -R ${S}/stlport ${D}/usr/include
 	rm -rf ${D}/usr/include/stlport/BC50
 
 	dodir /usr/lib
 	cp -R ${S}/lib/* ${D}/usr/lib/
+	dosym libstlport_gcc_stldebug.so /usr/lib/libstlport_gcc_debug.so
 	rm -rf ${D}/usr/lib/obj
 
 	cd ${S}/etc/
@@ -51,4 +44,3 @@ src_install () {
 	cd ${S}
 	dohtml -r doc
 }
-

@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.13 2004/05/29 23:21:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.14 2004/05/30 03:25:41 vapier Exp $
+
+*STLport-4.6.2 (29 May 2004)
+
+  29 May 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/4.6.2-gcc-includes.patch, +files/4.6.2-optimize.patch,
+  files/STLport-4.5.3-gcc3.patch, -files/STLport-4.5.3-gcc3.patch2,
+  -STLport-4.5.3-r1.ebuild, -STLport-4.5.3-r2.ebuild, STLport-4.5.3-r3.ebuild,
+  +STLport-4.6.2.ebuild:
+  Version bump and clean up old ebuilds #45278
 
 *STLport-4.5.3-r3 (29 May 2004)
 

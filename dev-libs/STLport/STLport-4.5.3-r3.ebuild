@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r3.ebuild,v 1.1 2004/05/29 23:21:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r3.ebuild,v 1.2 2004/05/30 03:25:41 vapier Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	# Do we use the new multi scheme gcc ?
 	if ! /usr/sbin/gcc-config --get-current-profile &> /dev/null
 	then
-		epatch ${FILESDIR}/${P}-gcc3.patch2
+		epatch ${FILESDIR}/${P}-gcc3.patch
 	fi
 
 	epatch ${FILESDIR}/${P}-optimize.patch
