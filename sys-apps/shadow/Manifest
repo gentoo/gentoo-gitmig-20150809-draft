@@ -3,9 +3,8 @@ Hash: SHA1
 
 MD5 45f252469142b03dec4a9a581c3df5a2 ChangeLog 14412
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f227fddac93c5f27799b9a8c9e34cd2b shadow-4.0.4.1-r3.ebuild 6076
 MD5 23ef7363bf5ffa1d0f3343ff2a618e5d shadow-4.0.4.1-r4.ebuild 5943
-MD5 e531273bb3064bdc79cc36da2d7533ac shadow-4.0.5.ebuild 4917
+MD5 d612d0da474849d68dfa53c55d50e200 shadow-4.0.5.ebuild 4902
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
 MD5 2d2faa6b9a837f9319de52a780485743 files/securetty 243
 MD5 058f760e522ab65e270293003805fe61 files/shadow-4.0.4.1-userdel-missing-brackets.patch 380
@@ -19,7 +18,6 @@ MD5 bb55107c3a9354ef2d1977547fdb5a83 files/shadow-4.0.4.1-useradd-manpage-update
 MD5 7becc41b4f7264483ee3ff0ca8277084 files/shadow-4.0.4.1-passwd-typo.patch 438
 MD5 b8efca60a25e256eebe54c3d0db0760f files/shadow-4.0.4.1-gcc34-xmalloc.patch 361
 MD5 020e030c2d09b206e88cf9051ced6244 files/shadow-4.0.4.1-nonis.patch 1504
-MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r3 67
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
 MD5 51b0337bd261f6ed5e53af5dc196431a files/pam.d/system-auth 499
 MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/pam.d/login 431
@@ -31,7 +29,7 @@ MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth-1.1 491
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBgbI5HTu7gpaalycRAobjAJ9wxipsxzPgXs8yRQEaL97+HPWzLACg3zse
-BtL2RdjLw5oSMIjKWMs9Mjo=
-=eGJ/
+iD8DBQFBhk3iHTu7gpaalycRAgHJAKDc+hUE84uLI9YGiSl4zObcTnkr4QCg8ORn
+gxokEtTOewJjafE2/Fy0mG0=
+=8bZL
 -----END PGP SIGNATURE-----
