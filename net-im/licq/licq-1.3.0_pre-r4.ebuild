@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r3.ebuild,v 1.1 2004/08/21 19:29:56 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r4.ebuild,v 1.1 2004/08/22 12:36:05 voxus Exp $
 
 inherit eutils
 
@@ -67,8 +67,10 @@ src_compile() {
 	use socks5	&& myconf="${myconf} --enable-socks5"
 	if use crypt
 	then
-		myconf="${myconf} --disable-gpgme"
+		myconf="${myconf} --enable-gpgme"
 		epatch ${FILESDIR}/1.3.0-gpgme3_hack.patch
+	else
+		myconf="${myconf} --disable-gpgme"
 	fi
 
 	econf ${myconf} || die
