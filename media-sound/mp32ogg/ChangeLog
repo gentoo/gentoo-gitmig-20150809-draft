@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/mp32ogg
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.1 2003/05/12 19:45:57 avenj Exp $
+
+*mp32ogg-0.11 (12 May 2003)
+
+  12 May 2003; Jon Portnoy <avenj@gentoo.org> mp32ogg-0.11.ebuild :
+  Initial import. Ebuild submitted by John Herdy and
+  Abhishek Amit in bugs 10145 and 19336. Thanks John and
+  Abhishek!
