@@ -1,16 +1,21 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10q.ebuild,v 1.2 2000/11/28 16:43:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10q.ebuild,v 1.3 2000/11/30 23:14:35 achim Exp $
 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
 SRC_URI="ftp://ftp.de.kernel.org/pub/linux/utils/util-linux/${P}.tar.bz2"
+DEPEND=">=sys-libs/gpm-1.19.3
+	>=sys-libs/slang-1.4.2"
+RDEPEND="$DEPEND
+	>=sys-apps/bash-2.04
+	>=sys-devel/perl-5.6"
 
 src_compile() {                           
 	try ./configure
-	try make
+	try make ${MAKEOPTS} LDFLAGS=\"\"
 }
 
 src_unpack() {
@@ -32,6 +37,8 @@ src_install() {
 	cd ${S}
 	try make DESTDIR=${D} install
 	cd ${S}
+	dodoc HISTORY MAINTAINER README VERSION
+	docinto licenses
 	dodoc licenses/* HISTORY 
 	docinto examples
 	dodoc example.files/*

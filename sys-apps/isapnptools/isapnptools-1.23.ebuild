@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.23.ebuild,v 1.2 2000/09/15 20:09:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.23.ebuild,v 1.3 2000/11/30 23:14:33 achim Exp $
 
 P=isapnptools-1.23
 A=${P}.tgz
@@ -10,10 +10,12 @@ DESCRIPTION="Tools for configuring ISA PnP devices"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/hardware/${A}"
 HOMEPAGE="http://www.roestock.demon.co.uk/isapnptools/"
 
+DEPEND=">=sys-libs/glibc-2.1.3"
+
 src_compile() {  
     try ./configure --prefix=/usr --host=${CHOST}
-    try make
-}
+    try make ${MAKEOPTS}
+} 
 
 src_unpack() {
     unpack ${A}
@@ -32,8 +34,10 @@ src_install() {
     dodir /usr/man/man5 
     dodir /usr/man/man8
     try make DESTDIR=${D} install
-    prepman
-    dodoc AUTHORS ChangeLog COPYING README doc/README* doc/*.txt 
+    dodoc AUTHORS ChangeLog COPYING README NEWS 
+    docinto txt
+    # Small fix
+    dodoc doc/README*  doc/*.txt test/*.txt
     dodoc etc/isapnp.*
 }
 

@@ -1,11 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later Author Daniel Robbins
 # <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.3-r1.ebuild,v 1.1 2000/11/27 00:14:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.3-r1.ebuild,v 1.2 2000/11/30 23:14:34 achim Exp $
  
 A=""
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
+SRC_URI=""
+RDEPEND=">=sys-apps/bash-2.04
+	 >=sys-devel/perl-5.6.0
+	 || ( >=sys-devel/python-basic-1.5 >=dev-lang/python-1.5 )"
 
 src_unpack() {
   mkdir ${S}

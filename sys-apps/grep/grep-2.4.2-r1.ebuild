@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.4.2-r1.ebuild,v 1.5 2000/10/09 16:02:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.4.2-r1.ebuild,v 1.6 2000/11/30 23:14:33 achim Exp $
 
 P=grep-2.4.2
 A=${P}.tar.gz
@@ -10,19 +10,14 @@ DESCRIPTION="GNU regular expression matcher"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/grep/${A}
 	 ftp://prep.ai.mit.edu/gnu/grep/${A}"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
-
+DEPEND=">=sys-libs/glibc-2.1.3"
 src_compile() {                           
 	try ./configure --prefix=/usr --host=${CHOST}
-	try make
+	try make ${MAKEOPTS}
 }
 
-src_install() {                               
-	into /usr
-	dobin src/grep src/egrep src/fgrep
-	doinfo doc/grep.info
-	doman doc/*.1
-	MOPREFIX=grep
-	domo po/*.po
+src_install() {     
+	try make prefix=${D}/usr install                          
 	dodoc AUTHORS COPYING ChangeLog NEWS README THANKS TODO
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r1.ebuild,v 1.4 2000/10/03 16:02:04 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r1.ebuild,v 1.5 2000/11/30 23:14:32 achim Exp $
 
 P=findutils-4.1      
 A=${P}.tar.gz
@@ -11,9 +11,15 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/findutils/${A}
 	 ftp://prep.ai.mit.edu/gnu/findutils/${A}"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 
+DEPEND=">=sys-libs/glibc-2.1.3"
+RDEPEND="$DEPEND
+	 >=sys-apps/bash-2.04"
+
 src_compile() {                           
     try ./configure --prefix=/usr --host=${CHOST}
-    try make
+    # do not use pmake recursive
+    try make LOCATE_DB=/var/state/locatedb  \
+	libexecdir=/usr/libexec/find $MAKEOPTS
 }
 
 src_unpack() {
@@ -37,17 +43,11 @@ src_unpack() {
 
 src_install() {                               
     cd ${S}
-    cd locate
-    cp updatedb updatedb.orig
-    sed -e 's:LOCATE_DB=/usr/var/locatedb:LOCATE_DB=/var/lib/locate/locatedb:' -e 's:TMPDIR=/usr/tmp:TMPDIR=/tmp:' updatedb.orig > updatedb   
-    cd ..
-
-    into /usr
-    doinfo doc/find.info doc/find.info-1 doc/find.info-2
-    dobin find/find locate/locate locate/updatedb xargs/xargs
-    doman find/*.1 locate/*.1 locate/*.5 xargs/*.1
-    exeinto /usr/libexec
-    doexe locate/bigram locate/code locate/frcode
+    dodir /var/state/locatedb
+    try make prefix=${D}/usr libexecdir=${D}/usr/libexec/find \
+	LOCATE_DB=${D}/var/state/locatedb install
+    dosed "s:TMPDIR=/usr/tmp:TMPDIR=/tmp:" usr/bin/updatedb
     dodoc COPYING NEWS README TODO ChangeLog
+    rm -fr ${D}/usr/var
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r1.ebuild,v 1.5 2000/10/09 16:02:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r1.ebuild,v 1.6 2000/11/30 23:14:33 achim Exp $
 
 P=gzip-1.2.4a      
 A=${P}.tar.gz
@@ -10,33 +10,41 @@ DESCRIPTION="Standard GNU compressor"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gzip/${A}
 	 ftp://prep.ai.mit.edu/gnu/gzip/${A}"
 HOMEPAGE="http://www.gnu.org/software/gzip/gzip.html"
+DEPEND=">=sys-libs/glibc-2.1.3"
+RDEPEND="$DEPEND
+	 >=sys-apps/bash-2.04"
 
 src_compile() {                           
 	try ./configure --host=${CHOST} --prefix=/usr
-	try make
+	try pmake
 }
 
-src_install() {               
-	into /usr                
-	doman *.1
-	dosym gzip.1.gz /usr/man/man1/gunzip.1.gz
-	dosym gzip.1.gz /usr/man/man1/zcat.1.gz	
-	dosym zdiff.1.gz /usr/man/man1/zcmp.1.gz
-	doinfo gzip.info
-	dobin gzip
-	insopts -m0755
-	insinto /usr/bin
-	for x in zdiff zgrep zmore znew zforce gzexe
+src_install() { 
+	dodir /usr/bin    
+	try make prefix=${D}/usr install 
+	cd ${D}/usr/bin
+	for i in gzexe zforce zgrep zmore znew zcmp
 	do
-	    sed -e "1d" -e "s|BINDIR|/usr/bin|" ${x}.in > ${x}
-	    doins ${x}
+	  cp ${i} ${i}.orig
+	  sed -e "1d" -e "s:${D}::" ${i}.orig > ${i}
+	  rm ${i}.orig
+	  chmod 755 ${i}
 	done
-	dosym gzip /usr/bin/zcat
-	dosym gzip /usr/bin/gunzip
-	dosym gzip /usr/bin/zcat
-	dosym zdiff /usr/bin/zcmp
+	cd ${D}/usr/man/man1
+	
+	for i in gzexe gzip zcat zcmp zdiff zforce \
+		 zgrep zmore znew
+	do
+	  rm ${i}.1
+	  ln -s gunzip.1.gz ${i}.1.gz
+	done
+	cd ${S}
+	rm -rf ${D}/usr/lib
 	dodoc ChangeLog COPYING NEWS README THANKS TODO 
+	docinto txt
 	dodoc algorithm.doc gzip.doc
 }
+
+
 
 

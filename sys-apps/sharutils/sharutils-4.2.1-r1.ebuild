@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r1.ebuild,v 1.4 2000/10/03 16:02:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r1.ebuild,v 1.5 2000/11/30 23:14:34 achim Exp $
 
 P=sharutils-4.2.1
 A=${P}.tar.gz
@@ -9,10 +9,13 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Tools to deal with shar archives"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/sharutils/${A}
 	 ftp://prep.ai.mit.edu/gnu/sharutils/${A}"
+DEPEND=">=sys-libs/glibc-2.1.3"
+RDEPEND="$DEPEND
+	 >=sys-apps/bash-2.04"
 
 src_compile() {                           
 	try ./configure --host=${CHOST} --prefix=/usr
-	try make
+	try make ${MAKEOPTS} localedir=/usr/share/locale
 }
 
 src_unpack() {
@@ -26,14 +29,12 @@ src_unpack() {
 
 src_install() {                               
 	cd ${S}
-	try make prefix=${D}/usr install
+	try make prefix=${D}/usr localedir=${D}/usr/share/locale install
 	doman doc/*.[15]
-	prepinfo
-	rm -r ${D}/usr/share/locale
-	mv ${D}/usr/lib/locale/ ${D}/usr/share/
 	rm -rf ${D}/usr/lib
 	cd ${S}
-	dodoc AUTHORS BACKLOG COPYING ChangeLog ChangeLog.OLD NEWS README README.OLD THANKS TODO
+	dodoc AUTHORS BACKLOG COPYING ChangeLog ChangeLog.OLD \
+	      NEWS README README.OLD THANKS TODO
 }
 
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.4 2000/09/15 20:09:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.5 2000/11/30 23:14:31 achim Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -9,10 +9,18 @@ DESCRIPTION="queues jobs for later execution"
 SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
 	 ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.dif"
 
+
+DEPEND=">=sys-libs/glibc-2.1.3"
+RDEPEND="$DEPEND
+	 >=sys-apps/bash-2.04"
+
 src_compile() {
 
-    try ./configure --host=${CHOST} --sysconfdir=/etc/at 
-    try make
+    try ./configure --host=${CHOST} --sysconfdir=/etc/at \
+	--with-jobdir=/var/cron/atjobs \
+	--with-atspool=/var/cron/atspool \
+	--with-etcdir=/etc/at 
+    try pmake 
 
 }
 
@@ -36,12 +44,14 @@ src_install() {
 	dosbin atd atrun
 	for i in atjobs atspool
 	do
-	  dodir /var/spool/${i}
- 	  fperms 700 /var/spool/${i}
-	  fowners daemon.daemon /var/spool/${i}
+	  dodir /var/cron/${i}
+ 	  fperms 700 /var/cron/${i}
+	  fowners daemon.daemon /var/cron/${i}
 	done
 	doman at.1 at_allow.5 atd.8 atrun.8
-	dodoc COPYING ChangeLog Copyright Problems README
+	dodoc COPYING ChangeLog Copyright 
+	docinto txt
+	dodoc Problems README
 	dodir /etc/rc.d/init.d
 	cp ${O}/files/atd ${D}/etc/rc.d/init.d/  
 	dodir /etc/at

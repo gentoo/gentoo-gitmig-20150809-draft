@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.70.ebuild,v 1.1 2000/11/24 00:48:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.70.ebuild,v 1.2 2000/11/30 23:14:32 achim Exp $
 
 P=daemontools-0.70
 A=${P}.tar.gz
@@ -16,13 +16,12 @@ src_unpack() {
   unpack ${A}
   cd ${S}
   echo "gcc ${CFLAGS}" > conf-cc
-  echo "gcc -s" > conf-ld
+  echo "gcc" > conf-ld
 }
 
 src_compile() {                           
   cd ${S}
-  echo $PATH
-  try make
+  try pmake
 }
 
 src_install() {                               

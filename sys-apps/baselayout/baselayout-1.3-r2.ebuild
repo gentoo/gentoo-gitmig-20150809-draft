@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3-r2.ebuild,v 1.2 2000/11/27 22:40:41 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3-r2.ebuild,v 1.3 2000/11/30 23:14:31 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gentoo.org"
 src_install()
 {
 	dodir /boot
-	dodir /usr/include
+	dodir /usr/include /usr/src
 	dosym /var/log /usr/adm
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../src/linux/include/linux /usr/include/linux
@@ -35,7 +35,7 @@ src_install()
 	dodir /var /var/run /var/log/news
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
-	dodir /var/lib/locate /var/lib/pkg /var/spool
+	dodir /var/db/pkg /var/spool
 	dodir /root /opt /home/ftp /etc/modules /proc
 	chmod go-rx ${D}/root
 	dodir /tmp
@@ -61,10 +61,11 @@ src_install()
         dosym rcboot.d /etc/rc.d/rc0.d
         dosym rchalt.d /etc/rc.d/rc6.d
 
-    dodir /etc/pam.d
-    cd ${FILESDIR}/pam.d
-    insinto /etc/pam.d
-    doins *
+	dodir /etc/pam.d
+	cd ${FILESDIR}/pam.d
+	insinto /etc/pam.d
+	doins *
+
 	dodir /etc/rc.d/init.d
 	dodir /etc/rc.d/config
 	cd ${FILESDIR}/rc.d/init.d
@@ -89,7 +90,6 @@ src_install()
         MAKEDEV sg
         MAKEDEV scd
         MAKEDEV rtc 
-	dodoc README.newusers blurb.txt
 	cd ${D}/etc/rc.d/config
 	cp runlevels runlevels.orig
 	sed -e 's:##OSNAME##:Gentoo Linux:g' -e 's:##ARCH##:i686a:g' runlevels.orig > runlevels
