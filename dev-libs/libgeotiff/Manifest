@@ -1,5 +1,5 @@
-MD5 268f18e24425b7ae20017104f472912e libgeotiff-1.2.0.ebuild 1279
-MD5 498b53b05410370f8c51959ec5a81b28 libgeotiff-1.2.1.ebuild 1279
+MD5 20e548876c7bfa0d72bf08bae19cb486 libgeotiff-1.2.0.ebuild 1358
+MD5 fcdbf9d844bb27414aa19df1117188c6 libgeotiff-1.2.1.ebuild 1358
 MD5 8a6968e2d4de1449fc7b261e16e495a9 ChangeLog 566
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 e77842442c89596a723f6ce5745cfd4d files/digest-libgeotiff-1.2.0 68

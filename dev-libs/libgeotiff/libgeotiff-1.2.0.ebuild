@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.6 2003/10/06 01:56:57 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.7 2003/10/07 22:47:11 seemant Exp $
 
 inherit base eutils
 
-DESCRIPTION="libgeotiff"
+DESCRIPTION="Library for reading TIFF files with embedded tags for geographic (cartographic) information"
 HOMEPAGE="http://remotesensing.org/geotiff/geotiff.html"
 SRC_URI="ftp://ftp.remotesensing.org/pub/geotiff/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
