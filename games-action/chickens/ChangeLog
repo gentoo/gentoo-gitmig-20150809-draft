@@ -1,0 +1,10 @@
+# ChangeLog for games-action/chickens
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.1 2004/07/10 07:27:09 mr_bones_ Exp $
+
+*chickens-0.2.0 (10 Jul 2004)
+
+  10 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +chickens-0.2.0.ebuild:
+  Initial commit (bug #56367, submitted ebuild not used)
+
