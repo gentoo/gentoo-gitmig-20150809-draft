@@ -1,6 +1,12 @@
 # ChangeLog for games-board/eboard
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.4 2004/01/02 02:16:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.5 2004/01/03 03:38:55 mr_bones_ Exp $
+
+  02 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> eboard-0.8.0.ebuild,
+  eboard-0.9.0.ebuild, eboard-0.9.5.ebuild:
+  fix sed for CXXFLAGS (bug 36995)
+  fix config location
+  more error checking/messages
 
 *eboard-0.9.5 (01 Jan 2003)
 
