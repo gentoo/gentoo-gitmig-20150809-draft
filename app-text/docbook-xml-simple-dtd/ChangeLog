@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.12 2003/11/15 02:56:31 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.13 2004/03/09 05:15:50 geoman Exp $
+
+  09 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  docbook-xml-simple-dtd-1.0.ebuild:
+  Added ~mips keyword.
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
   docbook-xml-simple-dtd-4.1.2.4.ebuild:
