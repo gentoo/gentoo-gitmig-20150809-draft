@@ -1,25 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.12 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.13 2004/06/07 22:15:33 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="IRC daemon with hostname cloaking, SOCKS proxy checking and other advanced features"
-SRC_URI="ftp://ftp.slashnet.org/pub/cyclone/server/${P}.tar.gz"
 HOMEPAGE="http://www.slashnet.org"
+SRC_URI="ftp://ftp.slashnet.org/pub/cyclone/server/${P}.tar.gz"
+
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-LICENSE="GPL-2"
+IUSE=""
+
 DEPEND="virtual/glibc"
 
 src_unpack() {
-
 	unpack ${P}.tar.gz
 	cp ${FILESDIR}/res_init.c ${S}/src
-
 }
 
 src_compile() {
-
 	# Server administrators are encouraged to customize the following
 	# variables if actually deploying cyclone in an IRC network.  Upon
 	# merging of this package a config file is created in /etc/cyclone
@@ -86,11 +85,9 @@ END_OF_CONFIG
 
 	# compile it
 	emake RES="res_init.o" || die
-
 }
 
-src_install () {
-
+src_install() {
 	# store generated .config file
 	dodir /etc/cyclone
 	cp ${S}/.config ${D}/etc/cyclone/config
@@ -103,7 +100,7 @@ src_install () {
 	mv ${D}/usr/bin/ircd ${D}/usr/bin/cyclone-ircd
 
 	# documentation files
-	dodoc AUTHORS ChangeLog COPYING INSTALL README doc/oper.txt
+	dodoc AUTHORS ChangeLog INSTALL README doc/oper.txt
 	dodoc doc/NOTICE doc/rfc* doc/Crule.readme doc/cyclone.gif doc/Operators
 
 	# install sample configuration file
@@ -117,20 +114,16 @@ src_install () {
 	chmod 755 ${D}/etc/cyclone/chkconf ${D}/etc/cyclone/encrypt
 	chmod 644 ${D}/etc/cyclone/example.conf ${D}/etc/cyclone/ircd.motd
 	chmod 600 ${D}/etc/cyclone/ircd.conf ${D}/etc/cyclone/config
-
 }
 
-
-src_postinst()
-{
-
-	einfo Please read the documentation.  The default /etc/cyclone/ircd.conf
-	einfo will need to be edited and file permissions changed so only root
-	einfo and the account under which the ircd will run can read the plaintext
-	einfo passwords stored in that file.
+pkg_postinst() {
+	einfo "Please read the documentation.  The default /etc/cyclone/ircd.conf"
+	einfo "will need to be edited and file permissions changed so only root"
+	einfo "and the account under which the ircd will run can read the plaintext"
+	einfo "passwords stored in that file."
 	einfo
-	einfo Failure to modify the ircd.conf will result in cyclone-ircd
-	einfo quietly refusing to run.  Read the documentation and config file.
+	einfo "Failure to modify the ircd.conf will result in cyclone-ircd"
+	einfo "quietly refusing to run.  Read the documentation and config file."
 
 }
 
