@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.7.ebuild,v 1.3 2004/02/26 03:52:14 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.7.ebuild,v 1.4 2004/05/18 22:59:00 leonardop Exp $
 
 inherit gnome2
 
 IUSE="zlib"
 
 DESCRIPTION="Developer help browser"
-HOMEPAGE="http://devhelp.codefactory.se/"
+HOMEPAGE="http://www.imendio.com/projects/devhelp/"
 
 SLOT="0"
 LICENSE="GPL-2"
