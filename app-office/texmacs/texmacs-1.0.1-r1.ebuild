@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.1-r1.ebuild,v 1.1 2003/09/13 07:25:31 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.1-r1.ebuild,v 1.2 2003/09/13 07:26:26 obz Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND=">=app-text/tetex-1.0.7-r7
 	virtual/x11
 	spell? ( >=app-text/ispell-3.2 )"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	app-text/ghostscript"
 
 src_compile() {
