@@ -1,9 +1,14 @@
 # ChangeLog for x11-themes/gtk-themes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/ChangeLog,v 1.4 2002/11/07 22:56:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/ChangeLog,v 1.5 2003/01/10 04:09:48 seemant Exp $
 
 *gtk-themes-2.0-r1 (29 Oct 2002)
   
+  09 Jan 2002; Seemant Kulleen <seemant@gentoo.org> gtk-themes-2.0-r1.ebuild :
+
+  Made the gtk-crux-engine dependent on the gnome USE flag.  Since these are
+  GTK themes, gnome should NOT be a hard requirement.
+ 
   07 Nov 2002; L. Boshell <leonardop@gentoo.org> : Few more themes and a
   new gtk-engine dep reported on bug #6943.
   
