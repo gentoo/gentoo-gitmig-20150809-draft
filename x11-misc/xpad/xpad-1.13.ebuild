@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-1.13.ebuild,v 1.8 2004/04/13 07:53:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-1.13.ebuild,v 1.9 2004/06/24 22:43:10 agriffis Exp $
 
 DESCRIPTION="A GTK+ 2.0 based 'post-it' note system."
 HOMEPAGE="http://xpad.sourceforge.net/"

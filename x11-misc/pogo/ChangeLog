@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/pogo
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.4 2004/06/20 18:11:06 port001 Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.5 2004/06/24 22:30:48 agriffis Exp $
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> pogo-2.2.ebuild:
   Added IUSE and metadata.xml

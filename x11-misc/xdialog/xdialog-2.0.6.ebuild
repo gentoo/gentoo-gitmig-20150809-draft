@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.0.6.ebuild,v 1.5 2004/02/28 19:19:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.0.6.ebuild,v 1.6 2004/06/24 22:39:46 agriffis Exp $
 
 S=${WORKDIR}/${P/x/X}
 DESCRIPTION="drop-in replacement for cdialog using GTK"

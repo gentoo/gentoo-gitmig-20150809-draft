@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.20.ebuild,v 1.4 2004/05/21 17:05:09 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.20.ebuild,v 1.5 2004/06/24 22:39:36 agriffis Exp $
 
 S=${WORKDIR}/${P}/X11
 DESCRIPTION=" Dali Clock is a digital clock. When a digit changes, it melts into its new shape."

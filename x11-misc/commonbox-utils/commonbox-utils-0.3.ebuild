@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/commonbox-utils-0.3.ebuild,v 1.11 2004/02/17 23:02:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/commonbox-utils-0.3.ebuild,v 1.12 2004/06/24 22:14:56 agriffis Exp $
 
 DESCRIPTION="Common utilities for fluxbox, blackbox, and openbox"
 HOMEPAGE="http://mkeadle.org/"

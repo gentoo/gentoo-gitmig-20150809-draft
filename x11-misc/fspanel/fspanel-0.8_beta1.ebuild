@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/fspanel-0.8_beta1.ebuild,v 1.8 2004/06/19 14:28:40 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/fspanel-0.8_beta1.ebuild,v 1.9 2004/06/24 22:19:06 agriffis Exp $
 
 S=${WORKDIR}/fspanel-0.8beta1
 DESCRIPTION="F***ing Small Panel. Good (and small) replacement for gnome-panel"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/bbappconf-0.0.2.ebuild,v 1.5 2004/05/23 14:20:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/bbappconf-0.0.2.ebuild,v 1.6 2004/06/24 22:11:50 agriffis Exp $
 
 DESCRIPTION="utility that allows you to specify window properties in blackbox"
 SRC_URI="http://bbtools.windsofstorm.net/sources/${P}.tar.gz"

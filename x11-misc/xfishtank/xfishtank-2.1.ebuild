@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.3 2004/06/20 18:00:21 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.4 2004/06/24 22:40:39 agriffis Exp $
 
 DESCRIPTION="Turns your root window into an aquarium."
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/X11/demos/"

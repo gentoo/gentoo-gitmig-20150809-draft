@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/mkxf86config
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.7 2004/06/24 02:08:34 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.8 2004/06/24 22:29:07 agriffis Exp $
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> mkxf86config-0.8-r2.ebuild:
   QA - fix use invocation

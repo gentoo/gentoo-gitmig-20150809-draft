@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/rss-glx
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.19 2004/06/24 02:12:27 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.20 2004/06/24 22:31:59 agriffis Exp $
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> rss-glx-0.7.4-r1.ebuild,
   rss-glx-0.7.6.ebuild:

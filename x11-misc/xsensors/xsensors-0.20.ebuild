@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.20.ebuild,v 1.3 2004/04/15 21:14:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.20.ebuild,v 1.4 2004/06/24 22:44:39 agriffis Exp $
 
 DESCRIPTION="A hardware health information viewer, interface to lm-sensors"
 HOMEPAGE="http://www.linuxhardware.org/xsensors"

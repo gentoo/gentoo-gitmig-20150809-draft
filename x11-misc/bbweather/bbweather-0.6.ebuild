@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.ebuild,v 1.8 2004/06/11 20:22:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.ebuild,v 1.9 2004/06/24 22:14:25 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="blackbox weather monitor"

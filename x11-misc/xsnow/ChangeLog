@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xsnow
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.9 2004/06/14 18:30:04 pyrania Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.10 2004/06/24 22:45:20 agriffis Exp $
 
   14 Jun 2004; <pyrania@gentoo.org> xsnow-1.42.ebuild:
   Added IUSE.

@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xcalendar
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.10 2004/06/14 18:47:30 pyrania Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.11 2004/06/24 22:38:43 agriffis Exp $
 
   14 Jun 2004; <pyrania@gentoo.org> xcalendar-4.0.ebuild:
   Added motif to IUSE.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4-r2.ebuild,v 1.5 2004/04/14 09:09:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4-r2.ebuild,v 1.6 2004/06/24 22:16:55 agriffis Exp $
 
 inherit eutils
 

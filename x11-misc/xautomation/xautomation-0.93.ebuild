@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/xautomation-0.93.ebuild,v 1.3 2004/06/12 17:57:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/xautomation-0.93.ebuild,v 1.4 2004/06/24 22:38:01 agriffis Exp $
 
 DESCRIPTION="Control X from command line and find things on screen"
 HOMEPAGE="http://hoopajoo.net/projects/xautomation.html"

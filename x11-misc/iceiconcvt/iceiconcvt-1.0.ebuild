@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceiconcvt/iceiconcvt-1.0.ebuild,v 1.3 2004/03/24 11:23:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceiconcvt/iceiconcvt-1.0.ebuild,v 1.4 2004/06/24 22:23:03 agriffis Exp $
 
 DESCRIPTION="IceWM icons' converter"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"

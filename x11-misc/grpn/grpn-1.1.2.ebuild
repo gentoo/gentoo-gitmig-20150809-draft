@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/grpn-1.1.2.ebuild,v 1.7 2004/06/19 14:08:51 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/grpn-1.1.2.ebuild,v 1.8 2004/06/24 22:20:56 agriffis Exp $
 
 DESCRIPTION="GRPN is a Reverse Polish Notation calculator for X"
 HOMEPAGE="http://lashwhip.com/grpn.html"

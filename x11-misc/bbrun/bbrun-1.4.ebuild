@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.4.ebuild,v 1.5 2004/05/23 15:00:11 pvdabeel Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.4.ebuild,v 1.6 2004/06/24 22:13:53 agriffis Exp $ 
 
 IUSE=""
 DESCRIPTION="blackbox program execution dialog box"

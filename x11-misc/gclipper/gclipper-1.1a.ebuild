@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gclipper/gclipper-1.1a.ebuild,v 1.12 2004/05/23 16:22:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gclipper/gclipper-1.1a.ebuild,v 1.13 2004/06/24 22:19:39 agriffis Exp $
 
 DESCRIPTION="multiple buffer clipboard that automatically fetches new selections and maintains them in a history"
 SRC_URI="http://www.thunderstorms.org/gclipper/gclipper-1.1a.tar.gz"

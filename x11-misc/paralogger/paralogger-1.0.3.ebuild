@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/paralogger-1.0.3.ebuild,v 1.3 2004/04/26 14:51:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/paralogger-1.0.3.ebuild,v 1.4 2004/06/24 22:30:16 agriffis Exp $
 
 DESCRIPTION="Bourne shell script to "tail" the system log(s) in borderless transparent Eterm(s)"
 HOMEPAGE="http://projects.gtk.mine.nu/paralogger"

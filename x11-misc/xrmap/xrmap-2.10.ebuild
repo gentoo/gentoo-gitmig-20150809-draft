@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.10.ebuild,v 1.2 2004/06/19 13:55:59 pyrania Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.10.ebuild,v 1.3 2004/06/24 22:43:55 agriffis Exp $ 
 
 DESCRIPTION="The Xrmap program is a X client for generating images of the Earth and manipulating the CIA World data bank"
 HOMEPAGE="http://frmas.free.fr/li_1.htm#_Xrmap_"

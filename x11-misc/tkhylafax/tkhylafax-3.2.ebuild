@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkhylafax/tkhylafax-3.2.ebuild,v 1.6 2004/05/09 14:48:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkhylafax/tkhylafax-3.2.ebuild,v 1.7 2004/06/24 22:34:02 agriffis Exp $
 
 # This is a new ebuild for the tkHylafax client.  This code has barely been
 # touched in several years, but it works well enough, and is the only

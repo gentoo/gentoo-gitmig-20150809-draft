@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.3.1.ebuild,v 1.5 2004/06/20 05:17:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.3.1.ebuild,v 1.6 2004/06/24 22:15:27 agriffis Exp $
 
 DESCRIPTION="A Window Matching utility similar to Sawfish's Matched Windows feature"
 HOMEPAGE="http://www.burtonini.com/blog/computers/devilspie"

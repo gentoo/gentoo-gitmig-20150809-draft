@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.0.ebuild,v 1.6 2004/06/20 18:23:35 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.0.ebuild,v 1.7 2004/06/24 22:20:23 agriffis Exp $
 
 inherit gnome2
 

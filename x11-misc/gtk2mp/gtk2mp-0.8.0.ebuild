@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtk2mp/gtk2mp-0.8.0.ebuild,v 1.2 2004/04/11 15:05:24 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtk2mp/gtk2mp-0.8.0.ebuild,v 1.3 2004/06/24 22:21:17 agriffis Exp $
 
 DESCRIPTION="A GTK2 frontend to Music Player Daemon (MPD), which allows remote access for playing music (MP3's, Ogg's, and Flac's) and managing playlists."
 SRC_URI="http://www.moviegalaxy.com.ar/gtk2mp/${P}.tar.gz"

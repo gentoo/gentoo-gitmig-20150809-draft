@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/wmctrl-1.05.ebuild,v 1.2 2004/05/07 20:46:28 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/wmctrl-1.05.ebuild,v 1.3 2004/06/24 22:36:37 agriffis Exp $
 
 DESCRIPTION="command line tool to interact with an EWMH/NetWM compatible X Window Manager"
 HOMEPAGE="http://sweb.cz/tripie/utils/wmctrl/"

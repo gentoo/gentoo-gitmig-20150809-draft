@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/ttmkfdir
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.34 2004/06/19 13:59:31 pyrania Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.35 2004/06/24 22:34:37 agriffis Exp $
 
   19 Jun 2004; <pyrania@gentoo.org> ttmkfdir-3.0.9.ebuild:
   Removed default ${S}.

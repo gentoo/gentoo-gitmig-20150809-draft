@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/icebgset-1.1.ebuild,v 1.4 2004/03/24 11:15:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/icebgset-1.1.ebuild,v 1.5 2004/06/24 22:22:30 agriffis Exp $
 
 DESCRIPTION="IceWM background editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"

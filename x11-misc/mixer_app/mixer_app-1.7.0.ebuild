@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.7.0.ebuild,v 1.8 2004/06/14 00:21:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.7.0.ebuild,v 1.9 2004/06/24 22:28:57 agriffis Exp $
 
 #need to do some name mangling
 #so that ebuild name adheres to "standart"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.1.ebuild,v 1.10 2004/06/02 20:25:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.1.ebuild,v 1.11 2004/06/24 22:37:51 agriffis Exp $
 
 DESCRIPTION="An automatic X screen-locker/screen-saver."
 SRC_URI="http://www.ibiblio.org/pub/Linux/X11/screensavers/${P}.tgz"

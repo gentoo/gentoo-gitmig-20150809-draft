@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.1.5.ebuild,v 1.6 2004/04/14 09:09:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.1.5.ebuild,v 1.7 2004/06/24 22:17:39 agriffis Exp $
 
 DESCRIPTION="fluxbox-util application that creates and manage icons on your Fluxbox desktop"
 HOMEPAGE="http://www.fluxbox.org/fbdesk/"

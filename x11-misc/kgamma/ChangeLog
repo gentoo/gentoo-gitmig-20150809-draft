@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/kgamma
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kgamma/ChangeLog,v 1.13 2004/06/19 14:13:05 pyrania Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kgamma/ChangeLog,v 1.14 2004/06/24 22:26:16 agriffis Exp $
 
   19 Jun 2004; <pyrania@gentoo.org> kgamma-1.0.1.ebuild:
   Added IUSE.

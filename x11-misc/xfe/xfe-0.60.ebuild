@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.60.ebuild,v 1.3 2004/04/11 17:35:18 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.60.ebuild,v 1.4 2004/06/24 22:40:29 agriffis Exp $
 
 DESCRIPTION="MS-Explorer like file manager for X"
 HOMEPAGE="http://sourceforge.net/projects/xfe/"

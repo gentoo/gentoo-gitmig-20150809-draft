@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/gtkdialog-0.58.8.ebuild,v 1.4 2004/06/01 13:08:58 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/gtkdialog-0.58.8.ebuild,v 1.5 2004/06/24 22:21:28 agriffis Exp $
 
 DESCRIPTION="GUI-creation utility that can be used with an arbitrary interpreter"
 HOMEPAGE="http://freshmeat.net/projects/gtkdialog/"

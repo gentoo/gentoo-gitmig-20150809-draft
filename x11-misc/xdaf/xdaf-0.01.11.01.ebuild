@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/xdaf-0.01.11.01.ebuild,v 1.2 2004/01/26 17:03:03 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/xdaf-0.01.11.01.ebuild,v 1.3 2004/06/24 22:39:25 agriffis Exp $
 
 MY_P=${P/-0/-A}
 DESCRIPTION="Small tool to provide visual feedback of local disks activity by changing the default X11 mouse pointer"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/xhkeys-1.0.0.ebuild,v 1.2 2004/04/19 07:19:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/xhkeys-1.0.0.ebuild,v 1.3 2004/06/24 22:41:22 agriffis Exp $
 
 DESCRIPTION="assign particular actions to any key or key combination"
 HOMEPAGE="http://www.geocities.com/wmalms/"

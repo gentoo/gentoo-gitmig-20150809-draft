@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/e-fancylauncher
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e-fancylauncher/ChangeLog,v 1.6 2004/04/14 09:09:01 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e-fancylauncher/ChangeLog,v 1.7 2004/06/24 22:16:33 agriffis Exp $
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> e-fancylauncher-0.7-r1.ebuild:
   Added IUSE=

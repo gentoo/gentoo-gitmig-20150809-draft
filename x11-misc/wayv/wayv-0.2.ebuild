@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/wayv-0.2.ebuild,v 1.4 2004/04/11 17:25:25 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/wayv-0.2.ebuild,v 1.5 2004/06/24 22:35:56 agriffis Exp $
 
 PKG=${P/-0.2/.0.2}
 MY_P=${P/-0.2}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-1.20.ebuild,v 1.6 2004/06/01 13:16:14 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-1.20.ebuild,v 1.7 2004/06/24 22:27:22 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lava Lamp graphical representation of running processes."

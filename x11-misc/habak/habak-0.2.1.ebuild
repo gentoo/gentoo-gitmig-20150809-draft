@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.1.ebuild,v 1.4 2004/06/19 14:25:47 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.1.ebuild,v 1.5 2004/06/24 22:22:10 agriffis Exp $
 
 DESCRIPTION="A simple but powerful tool to set desktop wallpaper"
 HOMEPAGE="http://lubuska.zapto.org/~hoppke/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.0.ebuild,v 1.12 2004/06/01 13:20:04 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.0.ebuild,v 1.13 2004/06/24 22:29:52 agriffis Exp $
 
 DESCRIPTION="Turns on numlock in X"
 HOMEPAGE="http://dforce.sh.cvut.cz/~seli/en/numlockx"
