@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-infopipe
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/ChangeLog,v 1.6 2004/04/04 19:11:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/ChangeLog,v 1.7 2004/04/09 02:02:30 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-infopipe-1.3.ebuild:
+  Fixing configure to include explicit #!/bin/sh for sandbox bug workaround. See
+  bug #47165.
 
   04 Apr 2004; Guy Martin <gmsoft@gentoo.org> xmms-infopipe-1.3.ebuild:
   Marked stable on hppa.
