@@ -1,9 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.1 2002/11/05 19:50:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.2 2002/11/05 19:54:36 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
+
 # you better have a *good* reason why you're *not* using games.eclass
 # in an ebuild in app-games
 
