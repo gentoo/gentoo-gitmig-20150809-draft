@@ -1,7 +1,10 @@
 # ChangeLog for dev-util/jam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.3 2003/02/12 06:44:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.4 2003/04/16 02:36:57 lu_zero Exp $
 
+  16 Apr 2003; Luca barbato <lu_zero@gentoo.org> :
+  added ~ppc KEYWORD
+  
   28 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Tab fixes, etc.  Mark stable as it test fine, and not critical
   ebuild.  I should note that Brian Olsen <bnolsen@attbi.com> also
