@@ -341,11 +341,12 @@ media-video/lives
 # needs a lot more testing
 >net-misc/ltsp-core-3.0.9-r3
 
-# John Mylchreest <johnm@gentoo.org> (14 August 2003)
+# <plasmaroo@gentoo.org> (04 Jan 2004)
 # Headers have changed and break support with many video drivers such as
-# bttv or zoran. Kernel patch is being worked on bt lm_sensor people afaik
->=sys-apps/lm-sensors-2.8
->=sys-apps/i2c-2.8
+# bttv or zoran. This is kept masked at the level which the latest
+# gentoo-sources supports - 2.8.1 at gentoo-sources-2.4.22.
+>=sys-apps/lm-sensors-2.8.2
+>=sys-apps/i2c-2.8.2
 
 # seemant@gentoo.org (02 Aug 2003)
 # masking openafs-1.3 series as it is really unstable and useless
