@@ -1,0 +1,80 @@
+#! /bin/sh
+
+#   Copyright (c) 2001-2002 The Apache Software Foundation.  All rights
+#   reserved.
+#   Edited for Gentoo Linux
+
+if [ -f $HOME/.gentoo/java-env ] ; then
+  envfile=$HOME/.gentoo/java-env
+elif [ -f /etc/env.d/20java ] ; then
+  envfile=/etc/env.d/20java
+else
+  echo "!!! /etc/env.d/20java not found, please configure your system VM with java-config"
+fi
+
+JAVA_HOME=`java-config --jdk-home`
+
+# load system-wide ant configuration
+if [ -f "/etc/ant.conf" ] ; then 
+  . /etc/ant.conf
+fi
+
+if [ -z "$usejikes" ] ; then
+  usejikes=false;
+fi
+
+# load user ant configuration
+if [ -f "$HOME/.antrc" ] ; then 
+  . $HOME/.antrc
+fi
+
+ANT_HOME=/usr/share/ant
+
+# set ANT_LIB location
+ANT_LIB=${ANT_HOME}/lib
+
+JAVACMD=`java-config --java`
+ 
+if [ ! -x "$JAVACMD" ] ; then
+  echo "Error: We cannot execute $JAVACMD "
+  echo "Error: Possibly java-config is not configured, please configure your system VM with java-config"
+  exit 1
+fi
+
+if [ -n "$CLASSPATH" ] ; then
+  LOCALCLASSPATH="$CLASSPATH"
+fi
+
+# add in the dependency .jar files
+LOCALCLASSPATH=`java-config --classpath=ant`
+
+if [ -n "$JAVA_HOME" ] ; then
+  if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
+    LOCALCLASSPATH="$LOCALCLASSPATH:$JAVA_HOME/lib/tools.jar"
+  fi
+
+  if [ -f "$JAVA_HOME/lib/classes.zip" ] ; then
+    LOCALCLASSPATH="$LOCALCLASSPATH:$JAVA_HOME/lib/classes.zip"
+  fi
+
+else
+  echo "Warning: JAVA_HOME environment variable is not set."
+  echo "  If build fails because sun.* classes could not be found"
+  echo "  you will need to set the JAVA_HOME environment variable"
+  echo "  to the installation directory of java."
+fi
+
+# supply JIKESPATH to Ant as jikes.class.path
+if [ -n "$JIKESPATH" ] ; then
+  if $cygwin ; then
+    JIKESPATH=`cygpath --path --windows "$JIKESPATH"`
+  fi
+  ANT_OPTS="$ANT_OPTS -Djikes.class.path=$JIKESPATH"
+fi
+
+# Allow Jikes support (off by default)
+if $usejikes; then
+  ANT_OPTS="$ANT_OPTS -Dbuild.compiler=jikes"
+fi
+
+"$JAVACMD" -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main $ANT_ARGS "$@"
