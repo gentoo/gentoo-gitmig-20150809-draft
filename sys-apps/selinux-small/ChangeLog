@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.1 2003/03/17 05:25:50 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.2 2003/03/20 06:27:21 method Exp $
+
+*selinux-small-2003011510-r2 (19 Mar 2003)
+
+  19 Mar 2003; Joshua Brindle <method@gentoo.org> selinux-small-2003011510-r2.ebuild:
+  This selinux-small actually works, installs the appropriate stuff, installs a
+  default policy and now labels the filesystem in pkg_config
+  This is brought to you by pebenito, thanks for all his efforts!
 
 *selinux-small-2003011510-r1 (16 Mar 2003)
 
