@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.22 2003/06/01 20:04:02 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.23 2003/06/02 23:38:29 mkeadle Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -24,7 +24,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 	
 PROVIDE="virtual/blackbox"
 
-myconf="--enable-xft"
+myconf=""
 mydoc=""
 BOOTSTRAP=""
 FORCEXFT=""
@@ -89,6 +89,10 @@ commonbox_src_compile() {
 	use xinerama \
 		&& myconf="${myconf} --enable-xinerama" \
 		|| myconf="${myconf} --disable-xinerama"
+
+	use truetype \
+		&& myconf="${myconf} --enable-xft" \
+		|| myconf="${myconf} --disable-xft"
 
 	econf \
 		--sysconfdir=/etc/X11/${MYBIN} \
