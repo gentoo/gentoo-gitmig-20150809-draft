@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.11 2003/10/03 03:44:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.12 2003/10/03 03:52:06 vapier Exp $
 
 inherit eutils
 
@@ -19,7 +19,6 @@ DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/readline-4.1
 	sys-libs/libcap
 	ssl? ( dev-libs/openssl )"
-#	>=sys-devel/automake-1.7.6"
 
 pkg_setup() {
 	enewgroup ntp 123
@@ -45,7 +44,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-droproot.patch #21444
 
 	epatch ${FILESDIR}/linux-config-phone.patch #13001
-	sed -i "s:-Wpointer-arith::" configure
+	sed -i "s:-Wpointer-arith::" configure.in
+
+	# needed in order to make files with right ver info #30220.
+	aclocal -I . || die "autolocal"
+	automake || die "automake"
+	autoconf || die "autoconf"
 }
 
 src_compile() {
