@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.4 2003/02/12 06:03:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.5 2003/05/22 19:08:38 mholzer Exp $
+
+*gdome2-0.7.4 (22 May 2003)
+
+  22 May 2003; Martin Holzer <mholzer@gentoo.org> gdome2-0.7.4.ebuild:
+  Version bumped. Ebuild submitted by Christian Kruse <ckruse@wwwtech.de> in 
+  #21458.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
