@@ -115,6 +115,7 @@ move app-sci/equate sci-calculators/equate
 move app-sci/fung-calc sci-calculators/fung-calc
 move app-sci/galculator sci-calculators/galculator
 move app-sci/hcalc sci-calculators/hcalc
+move app-sci/hexcalc sci-calculators/hexcalc
 move app-sci/kconvert sci-calculators/kconvert
 move app-sci/kunit sci-calculators/kunit
 move app-sci/pgcalc2 sci-calculators/pgcalc2
