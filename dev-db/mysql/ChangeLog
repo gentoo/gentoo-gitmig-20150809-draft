@@ -1,26 +1,23 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.19 2002/10/27 07:52:21 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.20 2002/10/27 07:54:33 woodchip Exp $
 
 *mysql-3.23.53 (27 Oct 2002)
 
-  27 Oct 2002; Donny Davies <woodchip@gentoo.org> :
-  Chase latest release.  Close #9481, #9335.
+  27 Oct 2002; Donny Davies <woodchip@gentoo.org> : Chase latest release.
+  Close #9481, #9335.
 
 *mysql-3.23.52-r1 (29 Sep 2002)
   
   20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> mysql-3.23.52-r1.ebuild :
-
   Changed the sparc USE check per bug #9372 by torgeir@trenger.ro (Torgeir
   Hansen)
 
   15 Oct 2002; <mcummings@datanode.net> mysql-3.23.52-r1.ebuild :
-
   Changed the BDB check due to a bug in BDB on sparc's. See notes in ebuild
   for reference URL.
 
   29 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mysql-3.23.52-r1.ebuild :
-
   Added thread-safe client support... MyODBC package needs this flag compiled
   into mysql to work correctly.  Fixes #8411. Submitted by Peter Ruskin
 
@@ -28,57 +25,46 @@
 
   25 Aug 2002; Donny Davies <woodchip@gentoo.org> mysql-3.23.52.ebuild,
   mysql-3.23.52-install-db-sh.diff :
-
   Update to latest stable release.  Fix mysql_install_db patch.
 
 *mysql-3.23.51-r4 (28 Jul 2002)
 
-  28 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r4.ebuild:
-  
+  28 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r4.ebuild:  
   Add back in the tcpd patch -- seems to cause compile failure  
 
 *mysql-3.23.51-r3 (25 Jul 2002)
 
   25 Jul 2002; Donny Davies <woodchip@gentoo.org> mysql-3.23.51-r3.ebuild :
-
   Fix initscript install.  s/mysql.rc6/mysql.init/
 
   25 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r3.ebuild files/digest-mysql-3.23.51-r3 files/mysql.init:
-
   Fixed 5152 - used some fancy awk to extract the datadir from
-   /etc/mysql/my.cnf -- new init file is mysql.init
-  Removed mysql-3.23.49.ebuild, mysql-3.23.51-r2.ebuild and assoc. digests
-  Removed files/mysql.rc6
+  /etc/mysql/my.cnf -- new init file is mysql.init
 
 *mysql-3.23.51-r2 (07 Jul 2002)
 
   25 Jul 2002; Ryan Phillips <rphillips@gentoo.org> mysql-3.23.51-r2.ebuild :
-
   The -tcpd- patch appears to have been fixed upstream.  It has been
   removed from the ebuild
 
   07 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r2.ebuild :
-
   Attempt to fix problem with mysql compile *not* using provided bdb.
   Also, add users in preinst, not pkg_setup, as per policy.
 
 *mysql-3.23.51-r1 (02 Jul 2002)
 
   02 Jul 2002; Ryan Phillips <rphillips@gentoo.org> mysql-3.23.51-r1.ebuild :
-
   Added symlink to libmysqlclient_r.so
 
 *mysql-4.0.1 (27 Jun 2002)
 
   27 June 2002; Ryan Phillips <rphillips@gentoo.org> :
-
   Added the unreleased mysql for development purposes and testing.
   Currently masked in portage.mask
   
 *mysql-3.23.51 (22 Jun 2002)
 
   22 June 2002; Donny Davies <woodchip@gentoo.org> :
-
   Update to latest stable release; 3.23.51.
   - Important!  On >=gentoo-1.3, the bundled 3.2.9a bezerkeley db will be
     built if you have USE berkdb.  On <gentoo-1.3, the sys-libs/db-3.2.9
@@ -90,7 +76,6 @@
 *mysql-3.23.49-r2 (16 June 2002)
 
   16 June 2002; Bart Verwilst <verwilst@gentoo.org> :
-
   Made sure that mysql compiled on gentoo 1.3+ as well, where db 4.0.14 is 
   the default... Stayed off 3.23.50, whoever updates mysql next, please 
   take my changes here in account as well plz
@@ -98,21 +83,18 @@
 *mysql-3.23.49-r1 (3 May 2002)
 
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Added LICENSE, SLOT, $Headers.
 
 *mysql-3.23.49 (18 Feb 2002)
 
   18 Feb 2002; Donny Davies <woodchip@gentoo.org> mysql-3.23.49.ebuild,
   files/mysql-3.23-db-3.2.3.diff :
-
   Updated to latest release.  Tweaked the db patch to apply properly to
   this version.  Some cosmetic fixies.
 
 *mysql-3.23.47 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
