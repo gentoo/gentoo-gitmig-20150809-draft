@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre3.ebuild,v 1.1 2004/04/14 01:48:51 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre3.ebuild,v 1.2 2004/04/14 02:52:18 carpaski Exp $
 
 IUSE="build"
 
@@ -13,6 +13,7 @@ SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
+
 
 # Contact carpaski with a reason before you modify any of these.
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
