@@ -1,7 +1,7 @@
 #!/usr/bin/python
-# vim: set ts=4 sw=4:
-# Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/pkg-clean,v 1.5 2003/02/14 22:06:26 vapier Exp $
 # Author: Leo Lipelis <aeoo@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
