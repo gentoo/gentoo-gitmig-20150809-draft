@@ -1,8 +1,11 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.43 2003/11/05 05:35:29 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.44 2004/01/22 15:00:50 gmsoft Exp $
 
 *proftpd-1.2.9 (05 Nov 2003)
+
+  22 Jan 2004; Guy Martin <gmsoft@gentoo.org> proftpd-1.2.9.ebuild:
+  Marked stable on hppa.
 
   05 Nov 2003; Stewart Honsberger <blkdeath@gentoo.org> proftpd-1.2.9.ebuild:
   Version bump. Security fixes, some memory leaks, IPv4 / IPv6 fixes.
