@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.13 2004/04/14 09:35:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.14 2004/05/05 21:38:49 rizzo Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="The GNOME Jabber Client"
 SRC_URI="mirror://sourceforge/gabber/${P}.tar.gz"
 HOMEPAGE="http://gabber.sourceforge.net"
 
-IUSE="ssl crypt xmms nls"
+IUSE="ssl crypt xmms nls ipv6"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~alpha ~amd64"
@@ -49,7 +49,8 @@ src_compile() {
 		&& myconf="${myconf} --with-ssl-dir=/usr" \
 		|| myconf="${myconf} --disable-ssl"
 
-	# ipv6 not enabled because it doesn't work for this release - liquidx
+	# For some reason use_enable was always enabling.  rizzo.
+	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	econf ${myconf} \
 		`use_enable xmms` \
