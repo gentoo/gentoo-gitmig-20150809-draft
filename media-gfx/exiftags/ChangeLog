@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiftags
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.6 2004/07/01 10:48:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.7 2004/09/21 23:31:10 kito Exp $
+
+  21 Sep 2004; kito@gentoo.org :
+  added ~ppc-macos keyword
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> exiftags-0.97.ebuild:
   virtual/glibc -> virtual/libc
