@@ -1,8 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.53 2003/05/26 09:26:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.54 2003/06/08 13:22:56 foser Exp $
 
 *xchat-2.0.2-r2 (26 May 2003)
+
+  08 Jun 2003; foser <foser@gentoo.org> xchat-2.0.2-r2.ebuild :
+  Fixed gtk dependancy to follow USE flag, removed xchat link
 
   26 May 2003; Alastair Tse <liquidx@gentoo.org> xchat-2.0.2-r2.ebuild,
   files/xc202-fixdetach.diff, files/xc202-fixurlg.diff:
