@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbar/iconbar-0.5.20031013.ebuild,v 1.1 2003/10/14 03:27:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbar/iconbar-0.5.20031013.ebuild,v 1.2 2003/10/29 03:41:37 vapier Exp $
 
 inherit enlightenment
 
@@ -23,8 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/iconbar
-	dodir /usr/share/${PN}
-	cp -rf data/* ${D}/usr/share/${PN}/
+	dodir /usr/share/iconbar /usr/bin
+	make install PREFIX=${D}/usr || die
 	find ${D} -name CVS -type d -exec rm -rf '{}' \;
 }
