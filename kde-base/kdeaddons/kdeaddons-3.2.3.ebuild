@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.2.3.ebuild,v 1.1 2004/06/10 22:45:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.2.3.ebuild,v 1.2 2004/06/12 12:27:14 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -24,4 +24,4 @@ use xmms || export ac_cv_have_xmms=no
 # Make vimpart use /usr/bin/kvim -- fixes bug 33257.
 # This should continue to apply to upcoming versions since it's
 # Gentoo-specific and won't go upstream.
-PATCHES="$FILESDIR/${PN}-3.2.0-kvim.diff"
+PATCHES="$FILESDIR/${PN}-3.2.0-kvim.diff $FILESDIR/${PN}-3.2.3-gcc34.patch"
