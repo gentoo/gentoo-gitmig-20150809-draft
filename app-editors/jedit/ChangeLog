@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.22 2004/02/05 04:52:21 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.23 2004/02/08 00:34:34 anti Exp $
+
+*jedit-4.2_pre9 (07 Feb 2004)
+
+  07 Feb 2004; Ray Russell Reese III <anti@gentoo.org> jedit-4.2_pre9.ebuild:
+  Version bump
 
   05 Feb 2004; Adrian Almenar <strider@gentoo.org> jedit-4.2_pre8.ebuild:
   Updated build dependencies, with <dev-java/ant-1.5, it will fail. Thanks to
