@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3.ebuild,v 1.1 2005/01/09 20:26:13 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r1.ebuild,v 1.1 2005/01/24 18:39:42 humpback Exp $
 
 inherit eutils
 
@@ -11,14 +11,14 @@ MY_P="${PN}-${MY_PV}"
 LANGVER="${VER}_rc1"
 HTTPMIRR="http://gentoo-pt.org/~humpback/psi"
 EXTRAPATCH_VER=0.1
-IUSE="kde ssl crypt vanilla"
+IUSE="kde ssl crypt extras"
 #RESTRICT="nomirror"
 QV="2.0"
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http://psi.affinix.com"
 # translations from http://tanoshi.net/language.html
 SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
-		!vanilla?	( http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-${EXTRAPATCH_VER}.tar.bz2
+		extras?	( http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-${EXTRAPATCH_VER}.tar.bz2
 		http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.2.tar.bz2 )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-${LANGVER}.tar.bz2 )
 		linguas_ca? ( ${HTTPMIRR}/psi_ca-${LANGVER}.tar.bz2 )
@@ -53,25 +53,31 @@ KEYWORDS="~x86 ~ppc ~hppa ~amd64 ~sparc"
 #After final relase we do not need this
 S="${WORKDIR}/${MY_P}"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c
-	>=app-crypt/qca-1.0
-	>=app-crypt/qca-tls-1.0 )
-	crypt? ( >=app-crypt/gnupg-1.2.2 )
-	>=x11-libs/qt-3"
+DEPEND=">=app-crypt/qca-1.0-r2
+	>=x11-libs/qt-3.3.1"
+
+RDEPEND="ssl? ( >=app-crypt/qca-tls-1.0-r2 )
+		crypt? ( >=app-crypt/gnupg-1.2.2 )"
+
 
 PATCHBASE="${WORKDIR}"
 PATCHDIR="${PATCHBASE}/${VER}"
 
 src_unpack() {
 		unpack ${A}
-		if !(use vanilla);
+		if !(use extras);
 			then
+			ewarn "You are going to install the original psi version. You might want to"
+			ewarn "try the version with extra unsuported patches by adding 'extras' to"
+			ewarn "your use flags."
+			else
+			ebeep
 			ewarn "You are about to build a version of Psi with extra unsuported patches."
 			ewarn "Patched psi versions will not be supported by the Gentoo devs or the psi"
 			ewarn "development team."
-			ewarn "If you do not want that please press Control-C now and add 'vanilla' to "
+			ewarn "If you do not want that please press Control-C now and add '-extras' to "
 			ewarn "your USE flags."
-			sleep 5
+			epause 10
 			cd ${S}
 			# from http://www.cs.kuleuven.ac.be/~remko/psi/
 			epatch ${PATCHDIR}/avatars_psi.diff
