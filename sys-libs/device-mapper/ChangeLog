@@ -1,0 +1,26 @@
+# ChangeLog for sys-libs/device-mapper
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.1 2003/09/02 20:45:55 max Exp $
+
+*device-mapper-1.00.05 (02 Sep 2003)
+
+  02 Sep 2003; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild:
+  Bump version to 1.00.05.
+
+  03 Jul 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Set KEYWORDS to ~x86.
+
+  12 Jun 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Drop unneccessary die() calls.
+
+  29 May 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Better kernel-support error message.
+
+  23 May 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Install libdevmapper.so to /lib as well.
+
+*device-mapper-0.96.08 (12 May 2003)
+
+  12 May 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Initial version.
+
