@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-2.0.0.ebuild,v 1.2 2004/07/21 18:28:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-2.0.0.ebuild,v 1.3 2004/08/20 00:11:31 carlo Exp $
 
 inherit base
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rekallrevealed.org/packages/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="doc"
 
 DEPEND="sys-devel/automake
