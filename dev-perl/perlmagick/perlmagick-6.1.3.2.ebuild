@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-6.1.3.2.ebuild,v 1.5 2004/11/02 20:11:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-6.1.3.2.ebuild,v 1.6 2004/11/04 05:32:28 vapier Exp $
 
 inherit perl-module eutils
 
@@ -13,15 +13,14 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A Perl module to harness the powers of ImageMagick"
 HOMEPAGE="http://www.imagemagick.org/"
 SRC_URI="mirror://sourceforge/imagemagick/${MY_P2}.tar.bz2"
-RESTRICT="nomirror"
-KEYWORDS="~x86 ~ppc sparc ~alpha ~hppa amd64 ~mips ~ppc64 ~ia64"
-IUSE=""
-SLOT="0"
 
 # 2004.09.06 rac
 # i think this license needs changing, as does imagemagick. the
 # website says "an apache-style license".
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="~x86 ~ppc sparc ~alpha hppa amd64 ~mips ~ppc64 ia64"
+IUSE=""
 
 DEPEND="=media-gfx/imagemagick-${PV}*
 	>=dev-lang/perl-5"
