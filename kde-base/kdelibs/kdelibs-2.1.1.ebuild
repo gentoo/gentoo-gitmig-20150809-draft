@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.1.ebuild,v 1.2 2001/04/19 02:31:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.1.ebuild,v 1.3 2001/04/21 08:04:51 achim Exp $
 
 V=2.1
 A=${P}.tar.bz2
@@ -21,7 +21,8 @@ DEPEND=">=sys-devel/gcc-2.95.2
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	mysql? ( >=dev-db/mysql-3.23.30 )
 	postgres? ( >=dev-db/postgresql-7.0.3 )
-	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
+	alsa? ( >=media-libs/alsa-lib-0.5.9 )
+	sys-devel/autoconf"
 
 RDEPEND=">=sys-devel/gcc-2.95.2
 	 >=media-libs/audiofile-0.1.9
@@ -32,6 +33,8 @@ src_unpack() {
     unpack ${A}
     cd ${S}
     patch -p0 < ${FILESDIR}/${P}-ksgmltools-gentoo.diff
+    rm configure
+    autoconf
 }
 
 src_compile() {
