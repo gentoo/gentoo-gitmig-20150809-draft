@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r2.ebuild,v 1.1 2005/02/13 20:12:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r2.ebuild,v 1.2 2005/02/16 05:36:42 genstef Exp $
 
 inherit linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://submount.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-2.4-${PV}.tar.gz
 		mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~alpha ~ppc ~sparc ~amd64"
 IUSE=""
 
 MODULE_NAMES="subfs(fs:${S}/subfs-${MY_PV})"
