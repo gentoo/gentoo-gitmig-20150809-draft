@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.1 2005/01/29 09:24:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.2 2005/02/06 11:47:16 mrness Exp $
 
 inherit linux-mod rpm eutils
 
-DESCRIPTION="SuSE's 2.6 AVM kernel modules for fcclassic, fcpci, fcpcmcia, fcpnp, fcusb, fcusb2, fxusb_CZ and fxusb"
+DESCRIPTION="SuSE's 2.6 AVM kernel modules for fcclassic, fcpci, fcpcmcia, fcpnp, fcusb, fcusb2, fxusb_CZ, fxusb, e2220pc and e5520pc"
 HOMEPAGE="http://www.avm.de/"
 
 AVM_SRC=("fritzcrd.pci" "fritzcrd.pcm" "fritzcrd.usb" "fritzcrdusb.v20" "fritzx.usb")
@@ -16,14 +16,12 @@ for ((CARD=0; CARD < ${#AVM_SRC[*]}; CARD++)); do
 	SRC_URI="${SRC_URI} ftp://ftp.avm.de/cardware/${AVM_SRC[CARD]}/linux/suse.91/${AVM_FILES[CARD]}.tar.gz"
 done
 
-
-
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="pcmcia usb"
 
-DEPEND=">=net-dialup/capi4k-utils-20040810"
+DEPEND="net-dialup/capi4k-utils"
 
 S="${WORKDIR}/usr/src/kernel-modules/fritzcapi"
 
@@ -112,7 +110,7 @@ src_unpack() {
 
 	cd ${S}
 	if kernel_is ge 2 6 10; then
-		epatch ${FILESDIR}/fritzcapi-2.6.26.7-fix-for-2.6.10.patch
+		epatch ${FILESDIR}/${PN}-fix-for-2.6.10.patch
 	fi
 }
 
