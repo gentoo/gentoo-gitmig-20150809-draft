@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/waimea
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/ChangeLog,v 1.6 2002/10/15 03:49:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/ChangeLog,v 1.7 2002/11/06 21:10:19 bcowan Exp $
+
+*waimea-0.4.0 (06 Nov 2002)
+  
+  06 Nov 2002; Brad Cowan <bcowan@gentoo.org> waimea-0.4.0.ebuild,
+  files/digest-waimea-0.4.0 :
+  
+  Version bump, ebuild cleanup.
 
 *waimea-0.3.5 (14 Oct 2002)
 
