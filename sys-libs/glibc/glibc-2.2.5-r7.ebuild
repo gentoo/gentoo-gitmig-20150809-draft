@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.26 2002/12/09 19:01:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.27 2002/12/09 20:32:58 seemant Exp $
 
 IUSE="nls pic build"
 
@@ -144,7 +144,7 @@ src_unpack() {
 		einfo "Applying sparc-misc patch..."
 		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-misc.diff > /dev/null || die
 
-		if [ "${ARCH}" = "sparc64" ]
+		if [ "${PROFILE_ARCH}" = "sparc64" ]
 		then
 			einfo "Applying seemant's -fixups patch..."
 			cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc64-fixups.diff > /dev/null || die
