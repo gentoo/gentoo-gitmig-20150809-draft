@@ -1,0 +1,11 @@
+--- geomview-1.8.1/configure.old	2003-10-06 20:19:35.000000000 -0700
++++ geomview-1.8.1/configure	2003-10-06 20:20:22.000000000 -0700
+@@ -3319,7 +3319,7 @@
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+-  STRSTREAMLIB=-liostream
++  STRSTREAMLIB=-lstdc++
+                      
+ fi
+ rm -f conftest*

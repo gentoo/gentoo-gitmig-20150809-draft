@@ -1,0 +1,142 @@
+*** src/lib/oogl/util/glibglue.C	2001-02-23 05:40:30.000000000 +0100
+--- ../geomview-GCC_3.2/src/lib/oogl/util/glibglue.C	2002-10-30 10:23:54.000000000 +0100
+***************
+*** 1,6 ****
+! #include <streambuf.h>
+! #include <strstream.h>
+! #include <stdiostream.h>
+! #include <iostream.h>
+
+  // This C++ glue allows futil.c to use the GNU libc (Linux)
+--- 1,4 ----
+! #include <streambuf>
+! #include <sstream>
+
+  // This C++ glue allows futil.c to use the GNU libc (Linux)
+***************
+*** 9,20 ****
+
+  struct stdio_mark {
+!     istdiostream* instream;
+!     streammarker *m;
+  };
+
+! strstreambuf *
+  CC_fmemopen(char *mem, int len)
+  {
+!     return new strstreambuf(mem, len);
+  }
+
+--- 7,23 ----
+
+  struct stdio_mark {
+!   FILE* instream;
+!   long m;
+  };
+
+!   std::stringbuf *
+  CC_fmemopen(char *mem, int len)
+  {
+!     std::stringbuf *b;
+!     b = new std::stringbuf;
+!     //b->str(mem);
+!     b->pubsetbuf(mem, len);
+!     return b;
+!     //return new std::streambuf(mem, len);
+  }
+
+***************
+*** 22,29 ****
+  CC_stdio_setmark(stdio_mark *sm, FILE* f)
+  {
+!     if(sm) delete sm->m;
+!     else   sm = new stdio_mark;
+!     sm->instream = new istdiostream(f);
+!     sm->m = new streammarker(sm->instream->rdbuf());
+      return sm;
+  }
+--- 25,31 ----
+  CC_stdio_setmark(stdio_mark *sm, FILE* f)
+  {
+!     if(!sm) sm = new stdio_mark;
+!     sm->instream = f;
+!     sm->m = ftell(f);
+      return sm;
+  }
+***************
+*** 32,36 ****
+  CC_stdio_seekmark(struct stdio_mark *sm)
+  {
+!     return sm->instream->rdbuf()->seekmark(*sm->m);
+  }
+
+--- 34,38 ----
+  CC_stdio_seekmark(struct stdio_mark *sm)
+  {
+!     return fseek(sm->instream, sm->m, SEEK_SET);
+  }
+
+***************
+*** 38,44 ****
+  CC_stdio_freemark(stdio_mark *sm)
+  {
+-    delete sm->m;
+-    delete sm->instream;
+     delete sm;
+  }
+
+--- 40,45 ----
+  CC_stdio_freemark(stdio_mark *sm)
+  {
+     delete sm;
+  }
+
++ 
+*** src/lib/oogl/util/futil.c	2001-02-23 05:41:31.000000000 +0100
+--- ../geomview-GCC_3.2/src/lib/oogl/util/futil.c	2002-10-30 10:21:38.000000000 +0100
+***************
+*** 841,847 ****
+  #  endif
+  #endif
+! extern struct stdio_mark *CC_stdio_setmark__FP10stdio_markP8_IO_FILE(struct stdio_mark *m, FILE *f);
+! extern int		  CC_stdio_seekmark__FP10stdio_mark(struct stdio_mark *mark);
+! extern void  		  CC_stdio_freemark__FP10stdio_mark(struct stdio_mark *mark); 
+
+  #if !USE_FSTROPEN_1
+--- 841,853 ----
+  #  endif
+  #endif
+! 
+! /* This a very nasty trick to link C++ functions from C code.
+!  * The names of the functions bellow are obtained by compiling the
+!  * glibglue.C file with "g++ -c" and then using "objdump -t glibglue.o"
+!  * to spy the names asigned to the functions
+!  */
+! extern struct stdio_mark *_Z16CC_stdio_setmarkP10stdio_markP8_IO_FILE(struct stdio_mark *m, FILE *f);
+! extern int		  _Z17CC_stdio_seekmarkP10stdio_mark(struct stdio_mark *mark);
+! extern void  		  _Z17CC_stdio_freemarkP10stdio_mark(struct stdio_mark *mark); 
+
+  #if !USE_FSTROPEN_1
+***************
+*** 857,867 ****
+
+  struct stdio_mark *stdio_setmark(struct stdio_mark *m, FILE *f)
+! { return CC_stdio_setmark__FP10stdio_markP8_IO_FILE(m, f); }
+
+  int stdio_seekmark(struct stdio_mark *mark)
+! { return CC_stdio_seekmark__FP10stdio_mark(mark) != EOF; }
+
+  void stdio_freemark(struct stdio_mark *mark)
+! { CC_stdio_freemark__FP10stdio_mark(mark); }
+
+
+--- 863,873 ----
+
+  struct stdio_mark *stdio_setmark(struct stdio_mark *m, FILE *f)
+! { return _Z16CC_stdio_setmarkP10stdio_markP8_IO_FILE(m, f); }
+
+  int stdio_seekmark(struct stdio_mark *mark)
+! { return _Z17CC_stdio_seekmarkP10stdio_mark(mark) != EOF; }
+
+  void stdio_freemark(struct stdio_mark *mark)
+! { _Z17CC_stdio_freemarkP10stdio_mark(mark); }

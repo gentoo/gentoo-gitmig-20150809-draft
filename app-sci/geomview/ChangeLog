@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/geomview
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/ChangeLog,v 1.1 2004/03/05 08:02:41 nerdboy Exp $
+
+*geomview-1.8.1-r3 (04 Mar 2004)
+
+  04 Mar 2004; <nerdboy@gentoo.org> geomview-1.8.1-r3.ebuild, metadata.xml:
+  new user-contributed ebuild (a group effort even) by David Hyunjin Lim,
+  with contributions from Cliff Yapp (I added the keywords and cleaned up
+  the syntax a bit)
+
