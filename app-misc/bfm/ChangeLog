@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.1 2005/03/29 10:25:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.2 2005/04/02 10:02:14 axxo Exp $
+
+  02 Apr 2005; Thomas Matthijs <axxo@gentoo.org> bfm-1.2.ebuild:
+  adjust wrapper script closes 82904
 
 *bfm-1.2 (29 Mar 2005)
 

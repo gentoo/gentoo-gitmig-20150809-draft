@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.1 2005/03/29 10:25:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.2 2005/04/02 10:02:14 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jre-1.4
-	|| ( >=dev-java/blackdown-java3d-bin-1.3
+	|| ( >=dev-java/blackdown-java3d-bin-1.3.1-r1
 		>=dev-java/sun-java3d-bin-1.3 )
 	dev-java/ant-core
 	jikes? ( dev-java/jikes )
@@ -53,7 +53,7 @@ src_install() {
 	fi
 
 	echo "#!/bin/sh" > ${PN}
-	echo "\$(java-config -J) -Djava.library.path=/opt/${java3d}/lib -cp \$(java-config -p bfm,${java3d}) Bfm" >> ${PN}
+	echo "\$(java-config -J) -Djava.library.path=\$(java-config -i ${java3d}) -cp \$(java-config -p bfm,${java3d}) Bfm"  \"\$@\">> ${PN}
 
 	dobin ${PN}
 
@@ -61,7 +61,7 @@ src_install() {
 	doins ${S}/bfm.conf
 
 	if use doc; then
-		dodoc README ChangeLog bindings COPYING NEWS
+		dodoc README ChangeLog bindings NEWS
 		java-pkg_dohtml -r docs/*
 	fi
 	use source && java-pkg_dosrc src/*
