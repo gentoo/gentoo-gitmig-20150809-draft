@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8.ebuild,v 1.2 2004/04/23 22:36:29 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8.ebuild,v 1.3 2004/04/24 15:53:52 stuart Exp $
 
 DESCRIPTION="lighttpd is intented to be a frontend for ad-servers which have to deliver small files concurrently to many connections."
 HOMEPAGE="http://jan.kneschke.de/projects/lighttpd"
@@ -44,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall DESTDIR=${D} || die
+	make DESTDIR=${D} install || die
 	dodoc README COPYING
 	newdoc doc/lighttpd.conf lighttpd.conf.example
 	dodoc doc/fastcgi.txt doc/authentification.txt
