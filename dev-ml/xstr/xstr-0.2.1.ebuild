@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xstr/xstr-0.2.1.ebuild,v 1.1 2005/03/08 23:21:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xstr/xstr-0.2.1.ebuild,v 1.2 2005/03/19 01:09:58 swegener Exp $
 
 inherit findlib
 

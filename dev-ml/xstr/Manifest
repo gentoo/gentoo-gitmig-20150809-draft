@@ -1,4 +1,14 @@
-MD5 46f3d2a19673f2b394cf9772d46f1dbf xstr-0.2.1.ebuild 652
-MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b3696e8e47a96f762a6c4a27c00058e xstr-0.2.1.ebuild 653
 MD5 b9d42d20b2ca51101dfcd11e5e8517ad ChangeLog 371
+MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
 MD5 7ebc271b8ae47a869632df80e741321a files/digest-xstr-0.2.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCO3vsI1lqEGTUzyQRAp6zAJ4/fS5Bdt5Y8qGkf911EbGpDBAoWQCaAhte
+mzkNh1/uElSSwr1RRiG1f5E=
+=Hdhg
+-----END PGP SIGNATURE-----
