@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.1 2002/06/27 12:01:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.2 2002/06/28 14:09:30 seemant Exp $
 
 # If you are looking in here, it is because emerge has instructed you to do
 # so.  Please go to http://messenger.yahoo.com/download/unix.html and scroll
@@ -48,12 +48,13 @@ src_compile() {
 }
 
 src_install () {
-#	exeinto /opt/ymessenger/bin
-#	doexe bin/ymessenger
-#	doexe bin/ymessenger.bin
 
 	insinto /opt/ymessenger/bin
 	doins bin/*
+
+	exeinto /opt/ymessenger/bin
+	doexe bin/ymessenger
+	doexe bin/ymessenger.bin
 
 	cp -a lib ${D}/opt/${PN}
 	
