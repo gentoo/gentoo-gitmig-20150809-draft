@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.3 2002/11/30 11:25:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.4 2002/11/30 19:31:50 hannes Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist 
 
@@ -23,9 +23,6 @@ use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$m
 #myconf="$myconf --enable-objc"
 
 export LIBPYTHON="`python-config`"
-
-# patch from cvs which fixes the kjsembed includes install dir
-PATCHES="$FILESDIR/$P-kjsembed.diff"
 
 #src_unpack()
 #{
