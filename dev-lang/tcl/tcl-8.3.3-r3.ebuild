@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r3.ebuild,v 1.1 2002/06/24 23:20:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r3.ebuild,v 1.2 2002/06/27 12:50:57 seemant Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -13,6 +12,9 @@ HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
 DESCRIPTION="Tool Command Language"
 
 DEPEND="virtual/glibc"
+
+SLOT=""
+LICENSE="BSD"
 
 # hyper-optimizations untested...
 #

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3.ebuild,v 1.3 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3.ebuild,v 1.4 2002/06/27 12:50:05 seemant Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -14,6 +13,9 @@ DESCRIPTION="Tk Widget Set"
 DEPEND="virtual/glibc
 		virtual/x11
 		=dev-lang/tcl-${PV}*"
+
+SLOT=""
+LICENSE="BSD"
 
 # hyper-optimizations untested...
 #
