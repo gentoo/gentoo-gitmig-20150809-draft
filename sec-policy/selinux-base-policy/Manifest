@@ -1,4 +1,6 @@
-MD5 73a2c21aa0441bb5625b6fe8d86d125d ChangeLog 3377
+MD5 253ae14f7f5600bf5ac6fdb28f1dfe20 ChangeLog 3549
 MD5 808b5f7f5d6654666e9193672d463229 metadata.xml 473
+MD5 b72e6c5b85478448f5bd00662799306c selinux-base-policy-20030817.ebuild 2028
 MD5 c656ecb47e08edc4c5bfb0331e1f4919 selinux-base-policy-20030729-r1.ebuild 2101
+MD5 4fa1e35b36f50344f9f7e6de59687a24 files/digest-selinux-base-policy-20030817 80
 MD5 4d266a57f64936ce65e5018775edefd8 files/digest-selinux-base-policy-20030729-r1 80

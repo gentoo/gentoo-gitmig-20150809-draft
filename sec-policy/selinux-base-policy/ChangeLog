@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.5 2003/08/11 01:44:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.6 2003/08/18 02:38:28 pebenito Exp $
+
+*selinux-base-policy-20030817 (17 Aug 2003)
+
+  17 Aug 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030817.ebuild:
+  Initial commit of new API policy
 
   10 Aug 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20030729-r1.ebuild:
