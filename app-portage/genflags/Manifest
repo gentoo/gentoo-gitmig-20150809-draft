@@ -1,8 +1,14 @@
-MD5 3bb1c14ea21b2f20952f8ef97a7ae32a genflags-0.96.ebuild 1520
-MD5 b00be145ee792ad7b6f5ef4d0246c65a genflags-0.94-r1.ebuild 1568
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d3f8d70580be7fcd97fe72d87e3ff3c ChangeLog 1234
 MD5 6346f55d1a2891948e971c283e8c823f metadata.xml 247
-MD5 147ce4494d8310d3baf2ad674a1f8732 genflags-0.94.ebuild 1198
-MD5 3e806613bd44390b74e42b99ebc73ffb files/digest-genflags-0.94 141
+MD5 042dc7fd34f0162f4b1a519f31250c25 genflags-0.96.ebuild 1445
 MD5 16ee605bd999aa435fda39bef3ca28b4 files/digest-genflags-0.96 141
-MD5 3e806613bd44390b74e42b99ebc73ffb files/digest-genflags-0.94-r1 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4HaQHTu7gpaalycRAspKAKDOtNLlq7e2G7wX0l9q0NKhISlfKwCg5Hao
+V8bpP3YK+5XUka3B7uV0O7M=
+=F89L
+-----END PGP SIGNATURE-----
