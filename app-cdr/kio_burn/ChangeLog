@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kio_burn
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/ChangeLog,v 1.2 2004/11/13 18:07:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/ChangeLog,v 1.3 2004/11/23 19:31:38 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kio_burn-0.4.ebuild:
+  QA: missing "inherit eutils"
 
   13 Nov 2004; Michael Hanselmann <hansmi@gentoo.org> kio_burn-0.4.ebuild:
   Added to ~ppc.

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/kio_burn-0.4.ebuild,v 1.2 2004/11/13 18:07:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/kio_burn-0.4.ebuild,v 1.3 2004/11/23 19:31:38 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="KDE ioslave to burn CD"
 HOMEPAGE="http://www-users.york.ac.uk/~jrht100/burn/"
