@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r1.ebuild,v 1.1 2004/04/08 02:06:34 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r1.ebuild,v 1.2 2004/04/27 21:52:01 agriffis Exp $
+
+inherit eutils
 
 MY_PN="${PN}-stable"
 S="${WORKDIR}/${MY_PN}-${PV}"
