@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.18 2004/10/26 14:17:22 taviso Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.19 2004/12/31 13:58:07 josejx Exp $
+
+  01 Jan 2005; Joseph Jezak <josejx@gentoo.org> ksh-93.20040229.ebuild:
+  Marked ~ppc.
 
   26 Oct 2004; Tavis Ormandy <taviso@gentoo.org> ksh-93.20040229.ebuild:
   use toolchain-funcs to determine compiler
