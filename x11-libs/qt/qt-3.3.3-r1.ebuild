@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.5 2004/10/25 17:29:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.6 2004/10/31 05:39:12 morfic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~sparc ~hppa ~mips ~ppc64"
 IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
@@ -70,6 +70,15 @@ src_unpack() {
 		epatch ../${IMMQT_P}.diff
 		sh make-symlinks.sh || die "make symlinks failed"
 	fi
+
+	cd mkspecs/linux-g++
+	# set c/xxflags and ldflags
+	strip-flags
+	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
+		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
+		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
+		qmake.conf
+	cd ${S}
 
 #	use icc && export PLATFORM=linux-icc
 }

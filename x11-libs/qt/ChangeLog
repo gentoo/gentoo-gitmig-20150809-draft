@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.174 2004/10/25 17:29:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.175 2004/10/31 05:39:12 morfic Exp $
+
+  31 Oct 2004; Daniel Goller <morfic@gentoo.org> qt-3.3.3-r1.ebuild,
+  qt-3.3.3.ebuild:
+  Fixing qt to allow CFLAGS to close bug 25551
+  using strip-flags to keep things sane
 
   25 Oct 2004; Dan Armak <danarmak@gentoo.org> qt-2.3.2-r1.ebuild,
   qt-3.2.3-r1.ebuild, qt-3.3.1-r2.ebuild, qt-3.3.2.ebuild,
