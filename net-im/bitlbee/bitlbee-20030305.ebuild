@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-20030305.ebuild,v 1.1 2003/04/09 12:49:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-20030305.ebuild,v 1.2 2003/04/13 21:34:19 weeve Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ src_unpack() {
 
 	# Patch the default xinetd file to add/adjust values to Gentoo defaults
 	cd ${S}/doc
-	epatch ${FILESDIR}/${PN}-0.72-xinetd.patch
+	epatch ${FILESDIR}/${PN}-xinetd.patch
 }
 
 src_compile() {
