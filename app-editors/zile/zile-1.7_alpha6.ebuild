@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.9 2004/06/24 22:05:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.10 2004/10/05 12:19:44 pvdabeel Exp $
 
 DESCRIPTION="tiny emacs clone"
 HOMEPAGE="http://zile.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/zile/${P/_alpha/-a}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2"

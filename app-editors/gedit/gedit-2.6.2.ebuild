@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.6.2.ebuild,v 1.7 2004/10/01 05:53:05 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.6.2.ebuild,v 1.8 2004/10/05 12:19:43 pvdabeel Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ia64"
 IUSE="spell"
 
 RDEPEND=">=gnome-base/libglade-2.3.6

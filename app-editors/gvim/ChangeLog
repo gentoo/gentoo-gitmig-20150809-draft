@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.89 2004/10/04 15:41:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.90 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gvim-6.2-r9.ebuild,
+  gvim-6.3-r1.ebuild:
+  Masked gvim-6.3-r1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gvim-6.2-r9.ebuild:
+  Masked gvim-6.2-r9.ebuild stable for ppc
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> gvim-6.3-r1.ebuild:
   Stable on hppa.

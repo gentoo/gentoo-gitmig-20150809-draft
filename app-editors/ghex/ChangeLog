@@ -1,6 +1,17 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.19 2004/09/22 20:10:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.20 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ghex-2.2.1.ebuild,
+  ghex-2.4.0.1.ebuild, ghex-2.4.1.ebuild:
+  Masked ghex-2.4.1.ebuild testing for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ghex-2.2.1.ebuild,
+  ghex-2.4.0.1.ebuild:
+  Masked ghex-2.4.0.1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ghex-2.2.1.ebuild:
+  Masked ghex-2.2.1.ebuild stable for ppc
 
   22 Sep 2004; Michael Hanselmann <hansmi@gentoo.org> :
   Added to ~ppc, bug 64071.

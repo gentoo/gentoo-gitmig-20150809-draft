@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/gmanedit-0.3.3-r3.ebuild,v 1.4 2004/08/09 16:04:11 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/gmanedit-0.3.3-r3.ebuild,v 1.5 2004/10/05 12:19:43 pvdabeel Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Gnome based manpage editor"
 SRC_URI="http://gmanedit.sourceforge.net/files/${P}.tar.bz2"
 HOMEPAGE="http://gmanedit.sourceforge.net/"
 
-KEYWORDS="x86 sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ppc ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""

@@ -1,6 +1,17 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.23 2004/08/27 12:04:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.24 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> mp-3.2.10.ebuild,
+  mp-3.2.11.ebuild, mp-3.3.1.ebuild:
+  Masked mp-3.3.1.ebuild testing for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> mp-3.2.10.ebuild,
+  mp-3.2.11.ebuild:
+  Masked mp-3.2.11.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> mp-3.2.10.ebuild:
+  Masked mp-3.2.10.ebuild stable for ppc
 
   27 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> mp-3.3.1.ebuild:
   fix up gmp symlink and tidy src_compile

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4.ebuild,v 1.10 2004/07/03 19:29:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4.ebuild,v 1.11 2004/10/05 12:19:43 pvdabeel Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nedit/${P}-source.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips amd64 alpha"
+KEYWORDS="x86 ppc sparc ~mips amd64 alpha"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )

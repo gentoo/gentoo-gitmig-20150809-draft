@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/lfhex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.7 2004/09/11 15:37:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.8 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  lfhex-0.3.7-r1.ebuild:
+  Masked lfhex-0.3.7-r1.ebuild stable for ppc
 
   12 Sep 2004; Daniel Black <dragonheart@gentoo.org> lfhex-0.3.7-r1.ebuild:
   x86 keyword

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.3h.ebuild,v 1.10 2004/06/27 22:22:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.3h.ebuild,v 1.11 2004/10/05 12:19:44 pvdabeel Exp $
 
 S=${WORKDIR}/vile-9.3
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.phred.org/pub/vile/vile-9.3.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ppc ~sparc alpha"
 IUSE="perl"
 
 DEPEND="virtual/libc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.10.ebuild,v 1.6 2004/06/27 22:16:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.10.ebuild,v 1.7 2004/10/05 12:19:43 pvdabeel Exp $
 
 DESCRIPTION="the definitive text editor"
 HOMEPAGE="http://www.triptico.com/software/mp.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.triptico.com/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ppc"
 IUSE="ncurses gtk"
 
 DEPEND="virtual/libc

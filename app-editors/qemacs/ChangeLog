@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.9 2004/09/07 14:50:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.10 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  qemacs-0.3.1.ebuild:
+  Masked qemacs-0.3.1.ebuild stable for ppc
 
   07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> qemacs-0.3.1.ebuild,
   +files/qemacs-0.3.1-tty_utf8.patch:

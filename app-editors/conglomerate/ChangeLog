@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/conglomerate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.9 2004/06/24 21:51:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.10 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  conglomerate-0.7.11.ebuild, conglomerate-0.7.6.ebuild:
+  Masked conglomerate-0.7.6.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  conglomerate-0.7.11.ebuild:
+  Masked conglomerate-0.7.11.ebuild stable for ppc
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> conglomerate-0.7.12.ebuild:
   marked ~amd64

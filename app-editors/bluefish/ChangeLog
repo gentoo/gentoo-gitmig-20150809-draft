@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.32 2004/08/18 03:46:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.33 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bluefish-0.11.ebuild, bluefish-0.12.ebuild:
+  Masked bluefish-0.12.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bluefish-0.11.ebuild:
+  Masked bluefish-0.11.ebuild stable for ppc
 
   17 Aug 2004; Tom Gall <tgall@gentoo.org> bluefish-0.12.ebuild:
   stable on ppc64, bug #58313

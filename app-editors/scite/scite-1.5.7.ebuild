@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.7.ebuild,v 1.6 2004/09/21 23:40:56 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.7.ebuild,v 1.7 2004/10/05 12:19:44 pvdabeel Exp $
 
 MY_PV=${PV//./}
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${PN}/gtk
 
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE="gtk2"
 
 src_unpack() {

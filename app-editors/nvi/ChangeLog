@@ -1,6 +1,18 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.20 2004/06/24 22:00:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.21 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nvi-1.81.5-r1.ebuild, nvi-1.81.5-r2.ebuild, nvi-1.81.5.ebuild:
+  Masked nvi-1.81.5.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nvi-1.81.5-r1.ebuild, nvi-1.81.5-r2.ebuild:
+  Masked nvi-1.81.5-r2.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nvi-1.81.5-r1.ebuild:
+  Masked nvi-1.81.5-r1.ebuild stable for ppc
 
   24 Apr 2004; Tom Gall <tgall@gentoo.org> nvi-1.81.5-r2.ebuild:
   mark ppc64 stable

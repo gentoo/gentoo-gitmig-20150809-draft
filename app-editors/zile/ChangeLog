@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/zile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.8 2004/06/25 20:20:45 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.9 2004/10/05 12:19:44 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  zile-1.7_alpha6.ebuild:
+  Masked zile-1.7_alpha6.ebuild stable for ppc
 
   25 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> zile-1.7_beta3-r1.ebuild:
   Marked ~amd64.

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kvim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.23 2004/07/26 16:55:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.24 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kvim-6.2.14.ebuild:
+  Masked kvim-6.2.14.ebuild stable for ppc
 
   26 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Added to package.mask, see bug #56992 if you'd like to save this package

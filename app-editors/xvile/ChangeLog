@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/xvile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.9 2004/06/24 22:04:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.10 2004/10/05 12:19:44 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xvile-9.3h.ebuild,
+  xvile-9.4d.ebuild:
+  Masked xvile-9.4d.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xvile-9.3h.ebuild:
+  Masked xvile-9.3h.ebuild stable for ppc
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> xvile-9.4d.ebuild:
   Stable on sparc.

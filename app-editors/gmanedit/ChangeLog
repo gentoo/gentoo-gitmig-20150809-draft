@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gmanedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/ChangeLog,v 1.6 2004/09/05 06:57:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/ChangeLog,v 1.7 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gmanedit-0.3.3-r2.ebuild, gmanedit-0.3.3-r3.ebuild:
+  Masked gmanedit-0.3.3-r3.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gmanedit-0.3.3-r2.ebuild:
+  Masked gmanedit-0.3.3-r2.ebuild stable for ppc
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

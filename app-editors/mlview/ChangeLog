@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/mlview
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.5 2004/06/24 21:59:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.6 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mlview-0.6.2.ebuild, mlview-0.6.3.ebuild:
+  Masked mlview-0.6.3.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mlview-0.6.2.ebuild:
+  Masked mlview-0.6.2.ebuild stable for ppc
 
   16 Jun 2004; L. Boshell <leonardop@gentoo.org> mlview-0.6.3.ebuild:
   Marked stable on x86.

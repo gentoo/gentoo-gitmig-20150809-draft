@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.13 2004/07/03 21:36:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.14 2004/10/05 12:19:43 pvdabeel Exp $
 
 inherit kde eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.freehackers.org/${PN}"
 SRC_URI="http://freenux.org/${PN}/${P//_}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha x86 sparc ~ppc ~amd64"
+KEYWORDS="alpha x86 sparc ppc ~amd64"
 IUSE="python gpm nls ruby perl cscope ncurses"
 
 DEPEND=">=app-editors/vim-core-6.2

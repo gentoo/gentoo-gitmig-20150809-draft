@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.14 2004/07/15 20:19:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.15 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> elvis-2.2.0.ebuild:
+  Masked elvis-2.2.0.ebuild stable for ppc
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> elvis-2.2.0.ebuild:
   stable on ppc64, bug #55527

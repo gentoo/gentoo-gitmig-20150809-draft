@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.15 2004/06/24 21:59:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.16 2004/10/05 12:19:43 pvdabeel Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc amd64 ~mips"
+KEYWORDS="x86 ppc sparc amd64 ~mips"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )

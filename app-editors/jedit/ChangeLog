@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.41 2004/10/02 16:38:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.42 2004/10/05 12:19:43 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  jedit-4.1-r1.ebuild, jedit-4.1.ebuild:
+  Masked jedit-4.1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  jedit-4.1-r1.ebuild:
+  Masked jedit-4.1-r1.ebuild stable for ppc
 
   02 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jedit-4.2.ebuild:
   Create even more docs

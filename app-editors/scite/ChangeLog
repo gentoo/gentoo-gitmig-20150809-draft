@@ -1,6 +1,26 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.28 2004/09/25 14:09:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.29 2004/10/05 12:19:44 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> scite-1.5.6.ebuild,
+  scite-1.5.7.ebuild, scite-1.5.8.ebuild, scite-1.5.9.ebuild,
+  scite-1.6.1.ebuild:
+  Masked scite-1.6.1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> scite-1.5.6.ebuild,
+  scite-1.5.7.ebuild, scite-1.5.8.ebuild, scite-1.5.9.ebuild:
+  Masked scite-1.5.9.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> scite-1.5.6.ebuild,
+  scite-1.5.7.ebuild, scite-1.5.8.ebuild:
+  Masked scite-1.5.8.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> scite-1.5.6.ebuild,
+  scite-1.5.7.ebuild:
+  Masked scite-1.5.7.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> scite-1.5.6.ebuild:
+  Masked scite-1.5.6.ebuild stable for ppc
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> scite-1.6.1.ebuild:
   Stable on sparc.

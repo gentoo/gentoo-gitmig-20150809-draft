@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.1.4.ebuild,v 1.6 2004/06/24 22:01:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.1.4.ebuild,v 1.7 2004/10/05 12:19:43 pvdabeel Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 HOMEPAGE="http://quanta.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 
 IUSE=""
 SLOT="0"
