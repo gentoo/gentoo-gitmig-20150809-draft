@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.9 2004/01/05 11:08:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.10 2004/01/08 07:13:36 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -61,7 +61,7 @@ RDEPEND="
                   >=media-libs/libpng-1.2.5 )
    gd? ( >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
    gdbm? ( >=sys-libs/gdbm-1.8.0 )
-   java? ( =virtual/jdk-1.4* dev-java/java-config )
+   !alpha? ( java? ( =virtual/jdk-1.4* dev-java/java-config ) )
    jpeg? ( >=media-libs/jpeg-6b )
    ldap? ( >=net-nds/openldap-1.2.11 )
    mysql? ( >=dev-db/mysql-3.23.26 )
@@ -204,7 +204,7 @@ php_src_compile() {
 
 	[ -f "/proc/self/stat" ] || die "You need /proc mounted for configure to complete correctly!"
 
-	use java && php_check_java_config
+	use java && use !alpha && php_check_java_config
 
 	if use berkdb; then
 		einfo "Enabling NBDM"
@@ -232,7 +232,7 @@ php_src_compile() {
 	use freetds && myconf="${myconf} --with-sybase=/usr"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use informix && [ -n "${INFORMIXDIR}" ] && myconf="${myconf} --with-informix=${INFORMIXDIR}"
-	use java && myconf="${myconf} --with-java=${JAVA_HOME}"
+	use java && use !alpha && myconf="${myconf} --with-java=${JAVA_HOME}"
 	use mcal && myconf="${myconf} --with-mcal=/usr"
 	use oci8 && [ -n "${ORACLE_HOME}" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
@@ -448,7 +448,7 @@ php_src_install() {
 	# 2. edit the php.ini file ready for installation
 	# - stuart@gentoo.org
 	local phpinisrc=php.ini-dist
-	if use java && [ "${PN}" != "php-core" ]; then
+	if use java && [ "${PN}" != "php-core" ] && use !alpha; then
 		# we put these into /usr/lib so that they cannot conflict with
 		# other versions of PHP (e.g. PHP 4 & PHP 5)
 		insinto ${PHPEXTDIR}
