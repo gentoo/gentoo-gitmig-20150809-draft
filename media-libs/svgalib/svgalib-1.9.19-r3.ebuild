@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r2.ebuild,v 1.1 2005/01/22 23:43:57 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r3.ebuild,v 1.1 2005/01/23 14:52:10 dsd Exp $
 
 inherit eutils flag-o-matic toolchain-funcs kernel-mod
 
@@ -142,7 +142,7 @@ src_install() {
 	echo "probeall  /dev/svga  svgalib_helper" > ${D}/etc/modules.d/svgalib
 
 	if [ -e ${ROOT}/dev/.devfsd ] ; then
-		dodir /etc/devfs.d
+		insinto /etc/devfs.d
 		newins ${FILESDIR}/svgalib.devfs svgalib
 	elif [ -e ${ROOT}/dev/.udev ] ; then
 		dodir /etc/udev/permissions.d
