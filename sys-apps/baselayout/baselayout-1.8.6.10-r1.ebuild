@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.12 2003/12/14 20:22:02 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.13 2003/12/14 23:40:41 spider Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -254,7 +254,7 @@ src_install() {
 	keepdir /tmp /var/lock
 	chmod 1777 ${D}/tmp
 	chmod 1777 ${D}/var/tmp
-	chown root.uucp ${D}/var/lock
+	chown root:uucp ${D}/var/lock
 	chmod 775 ${D}/var/lock
 	insopts -m0644
 
