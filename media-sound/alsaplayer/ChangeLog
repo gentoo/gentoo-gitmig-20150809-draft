@@ -1,7 +1,11 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.13 2003/02/12 07:24:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.14 2003/03/09 20:29:40 aliz Exp $
 
+*alsaplayer-0.99.74 (09 Mar 2003)
+
+  09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
 *alsaplayer-0.99.73 (16 Dec 2002)
 
