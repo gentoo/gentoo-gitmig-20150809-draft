@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.1.3.ebuild,v 1.4 2005/01/01 14:40:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.1.3.ebuild,v 1.5 2005/01/21 06:29:42 usata Exp $
 
 inherit eutils
 
@@ -13,8 +13,18 @@ SLOT="0"
 KEYWORDS="x86 alpha ppc"
 IUSE=""
 
-DEPEND="|| ( >=app-i18n/scim-0.99.8 >=app-i18n/scim-cvs-0.99.8 )
+RDEPEND="|| ( >=app-i18n/scim-0.99.8 >=app-i18n/scim-cvs-0.99.8 )
 	>=app-i18n/uim-0.3.9"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if has_version '=app-i18n/uim-0.4.5-r1' || has_version 'app-i18n/uim-svn' ; then
+		sed -i -e "/^UIM_VERSION/s/=.*/=rev1650/" configure* || die
+	fi
+}
 
 src_compile() {
 	econf || die
