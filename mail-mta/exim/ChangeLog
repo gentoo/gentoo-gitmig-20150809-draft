@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.7 2004/07/18 17:15:29 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.8 2004/07/22 21:38:46 peitolm Exp $
+
+*exim-4.41 (22 Jul 2004)
+
+  22 Jul 2004; Colin Morey <peitolm@gentoo.org> +exim-4.41.ebuild:
+  Revision Bump.
 
 *exim-4.40 (18 Jul 2004)
 
