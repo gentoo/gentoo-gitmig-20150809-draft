@@ -1245,3 +1245,7 @@ app-cdr/eroaster
 # masking PyXML-0.8 due to freeze
 =dev-python/PyXML-0.8
 
+# jnelson@gentoo.org 24 Sep 2002
+# mask todo-manager because it's really busted
+app-misc/todo-manager-bronze
+
