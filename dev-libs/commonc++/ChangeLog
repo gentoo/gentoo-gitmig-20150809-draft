@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-libs/commonc++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.4 2002/10/03 20:32:44 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.5 2002/11/06 06:24:22 vapier Exp $
 
 *commonc++-1.9.7-r1 (03 Oct 2002)
   03 Oct 2002; Matt Keadle <mkeadle@gentoo.org> commonc++-1.9.7-r2:
