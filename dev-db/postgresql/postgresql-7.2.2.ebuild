@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.1 2002/08/26 08:05:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.2 2002/08/26 09:20:59 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -45,11 +45,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-
-	unpack postgresql-${PV}.tar.gz
+	unpack ${A}
 
 	cd ${S}
-
 	# we know that a shared libperl is present, the default perl
 	# config is however set to the static libperl.a
 	# just remove the check
@@ -58,7 +56,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
@@ -81,7 +78,6 @@ src_compile() {
 		$myconf || die
 
 	make || die
-
 }
 
 pkg_preinst() {
@@ -132,6 +128,10 @@ src_install () {
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/${PV}/${PN}
 
+	# remove unnecessary files
+	rm ${D}/usr/share/doc/${P}/postgres.tar.gz
+	rm ${D}/usr/share/doc/${P}/man.tar.gz
+
 	einfo ">>> Execute the following command"
 	einfo ">>> ebuild  /var/db/pkg/dev-db/${P}/${P}.ebuild config"
 	einfo ">>> to setup the initial database environment."
@@ -139,7 +139,6 @@ src_install () {
 
 
 pkg_config() {
-
 	einfo ">>> Creating data directory ..."
 	mkdir -p /var/lib/postgresql/data
 	chown -Rf postgres.postgres /var/lib/postgresql
@@ -152,5 +151,4 @@ pkg_config() {
 	else
 		sudo -u postgres /usr/bin/initdb --pgdata /var/lib/postgresql/data
 	fi
-
 }
