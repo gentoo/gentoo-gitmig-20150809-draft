@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.9 2003/02/12 08:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.10 2003/08/10 15:20:48 iggy Exp $
+
+  10 Aug 2003; <iggy@gentoo.org> teapop-0.3.5.ebuild, files/teapop-confd,
+  files/teapop-init:
+  added init script and confd script, fixes bug 25967, thanks to port001
 
 *teapop-0.3.5 (20 Jan 2003)
 

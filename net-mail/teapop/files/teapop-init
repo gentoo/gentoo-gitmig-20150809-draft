@@ -1,0 +1,37 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/files/teapop-init,v 1.1 2003/08/10 15:20:48 iggy Exp $
+
+depend() {
+        need net
+        use logger
+        after *
+}
+
+checkconfig() {
+        if [ ! -e /etc/teapop.passwd ] ; then
+                eerror "You need an /etc/teapop.passwd file to run teapop"
+                return 1
+        fi
+}
+
+start() {
+        checkconfig || return 1
+        ebegin "Starting teapop"
+        start-stop-daemon --start --quiet \
+                --pidfile /var/run/teapop.pid --exec /usr/sbin/teapop -- ${TEAPOP_OPTS}
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping teapop"
+        start-stop-daemon --stop --quiet \
+                --pidfile /var/run/teapop.pid --exec /usr/sbin/teapop
+        eend $?
+}
+
+restart() {
+	stop
+	start
+}
