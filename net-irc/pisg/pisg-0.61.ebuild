@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.61.ebuild,v 1.2 2004/11/12 18:16:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.61.ebuild,v 1.3 2004/12/05 01:31:32 swegener Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pisg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 
 IUSE=""
 
