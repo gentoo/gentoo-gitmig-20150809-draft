@@ -20,7 +20,8 @@
 -- <xsl:value-of select="title"/></title>
 </head>
 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
-	<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+	<!--<table border="0" width="100%" cellspacing="0" cellpadding="0">-->
+	<table border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td valign="top" height="168" width="30%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -52,7 +53,8 @@
 <!--content begin-->
 
 <!--Netscape 4.7 hack table start-->
-<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">
+<!--<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">-->
+<table border="0" cellspacing="5" cellpadding="0" width="100%">
 <tr><td class="content" valign="top" align="left">
 		<table class="infotab" align="right" cellpadding="0" cellspacing="0" border="0">
 		<tr>
@@ -105,7 +107,8 @@
 	<title>Gentoo Linux -- <xsl:value-of select="title"/></title>
 </head>
 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
-	<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+	<!--<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">-->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tr>
 			<td valign="top" height="168" width="30%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -135,11 +138,13 @@
 		</tr>
 		<tr>
 			<td valign="top" height="96" align="right" width="30%" bgcolor="#dddaec">
-				<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
+				<!--<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">-->
+				<table width="100%" cellspacing="0" cellpadding="0" border="0">
 					<tr><td height="1%" valign="top" align="right"><img src="/images/gridtest.gif"/></td></tr>
 					<tr><td height="99%" valign="top" align="center">
 						<!--info goes here-->			
-						<table width="90%" height="100%" cellspacing="0" cellpadding="5" border="0">
+						<table width="90%" cellspacing="0" cellpadding="5" border="0">
+						<!--<table width="90%" height="100%" cellspacing="0" cellpadding="5" border="0">-->
 						<tr><td class="infotext" valign="top">
 						<p class="infosub">Download Sites:</p>
 						<p class="infolist"><a href="http://www.ibiblio.org/gentoo">ibiblio.org mirror</a></p>
@@ -170,7 +175,8 @@
 <!--content begin-->
 
 <!--Netscape 4.7 hack table start-->
-<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">
+<!--<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">-->
+<table border="0" cellspacing="5" cellpadding="0" width="100%">
 <tr><td class="content" valign="top" align="left">
 	<xsl:if test="/mainpage/standout">
 	<table class="infotab" width="50%" align="right" cellpadding="0" cellspacing="0" border="0">
@@ -220,22 +226,23 @@
 <xsl:template match="chapter">
 	<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
 	<xsl:if test="/guide">
-		<a name="#{$chapid}"></a>
-		<xsl:if test="title">
-			<p class="chaphead"><span class="chapnum"><xsl:number/>.</span> 
-			<xsl:value-of select="title"/>
-			</p>
-		</xsl:if>
+		<xsl:choose>
+		<xsl:when test="title">
+			<p class="chaphead"><font class="chapnum"><a name="{$chapid}"><xsl:number/>.</a></font> <xsl:value-of select="title"/></p>
+		</xsl:when>
+		<xsl:otherwise>
+			<p class="chaphead"><font class="chapnum"><a name="{$chapid}"><xsl:number/>.</a></font></p> 
+		</xsl:otherwise>
+		</xsl:choose>
 	</xsl:if>
 	<xsl:apply-templates select="section"/>
 </xsl:template>
 
 <xsl:template match="section">
 	<xsl:if test="/guide">
-		<xsl:variable name="sectid"><xsl:value-of select="$chapid"/>_sect<xsl:number/></xsl:variable>
-			<a name="#{$sectid}"></a>
 		<xsl:if test="title">
-			<p class="secthead"><xsl:value-of select="title"/></p>
+			<xsl:variable name="sectid"><xsl:value-of select="$chapid"/>_sect<xsl:number/></xsl:variable>
+			<p class="secthead"><a name="{$sectid}"><xsl:value-of select="title"/>&#160;</a></p>
 		</xsl:if>
 	</xsl:if>
 	<xsl:apply-templates select="body"/>
@@ -244,7 +251,7 @@
 <xsl:template match="figure">
 	<xsl:variable name="fignum"><xsl:number level="any"/></xsl:variable>
 	<xsl:variable name="figid">doc_fig<xsl:number/></xsl:variable>
-	<a name="#{$figid}"/>
+	<a name="{$figid}"/>
 	<table cellspacing="0" cellpadding="0" border="0">
 	<tr><td class="infohead" bgcolor="#7a5ada">
 	<p class="caption">
@@ -298,15 +305,15 @@
 </xsl:template>
 
 <xsl:template match="codenote">
-	<span class="comment">// <xsl:value-of select="." /></span>
+	<font class="comment">// <xsl:value-of select="." /></font>
 </xsl:template>
 
 <xsl:template match="comment">
-	<span class="comment"><xsl:apply-templates /></span>
+	<font class="comment"><xsl:apply-templates /></font>
 </xsl:template>
 
 <xsl:template match="i">
-	<span class="input"><xsl:apply-templates /></span>
+	<font class="input"><xsl:apply-templates /></font>
 </xsl:template>
 
 <xsl:template match="b">
@@ -318,7 +325,7 @@
 </xsl:template>
 
 <xsl:template match="c">
-	<span class="code"><xsl:apply-templates /></span> 
+	<font class="code"><xsl:apply-templates /></font> 
 </xsl:template>
 
 <xsl:template match="box">
@@ -328,7 +335,7 @@
 <xsl:template match="pre">
 	<xsl:variable name="prenum"><xsl:number level="any" /></xsl:variable>
 	<xsl:variable name="preid">doc_pre<xsl:number level="any" /></xsl:variable>
-	<a name="#{$preid}"/>
+	<a name="{$preid}"/>
 	<table width="100%" cellspacing="0" cellpadding="0" border="0">
 	<tr><td class="infohead" bgcolor="#7a5ada">
 	<p class="caption">
@@ -349,10 +356,8 @@
 	</td></tr></table> 
 </xsl:template>
 
-<!-- path is used for specifying files and URLs; if you are linking
-part of a sentence rather than a path, then don't use this, use span instead-->
 <xsl:template match="path">
-	<span class="path"><xsl:value-of select="."/></span>
+	<font class="path"><xsl:value-of select="."/></font>
 </xsl:template>
 
 <xsl:template match="uri">
@@ -372,7 +377,7 @@ part of a sentence rather than a path, then don't use this, use span instead-->
 </xsl:template>
 
 <xsl:template match="e">
-	<span class="emphasis"><xsl:apply-templates /></span>
+	<font class="emphasis"><xsl:apply-templates /></font>
 </xsl:template>
 
 <xsl:template match="mail">
