@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a8d76905e8a9727607b10c1b3722dcc9 zsh-4.1.1-r5.ebuild 3389
 MD5 607a5475313774b3ee38918e633cfd6a zsh-4.2.0-r1.ebuild 3692
 MD5 708c996d82ee2e1638a48016d7f5d698 zsh-4.0.9-r3.ebuild 2701
@@ -18,3 +21,10 @@ MD5 de0db046f0f40cb1cc3cd3f6e6b2645a files/zshenv 318
 MD5 d401be6503fc2e34341d56e99ee25e94 files/_portage-20040204 10954
 MD5 b862cd1ab51c87c0d1ec2b2c5c21c230 files/_portage-20040730 13907
 MD5 df0cf63f195a5d5b34845726c401766a files/digest-zsh-4.2.1 199
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOeSd/rLF9B432nYRAmaxAKCjedHPZ94c50Xla5L947A41tkLtwCgtgfT
+h36y/rvXNcuzjo863Ti+KAk=
+=sEHQ
+-----END PGP SIGNATURE-----
