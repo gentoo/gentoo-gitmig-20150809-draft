@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.8 2002/12/05 22:18:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.9 2002/12/14 23:35:07 rphillips Exp $
+
+*phpmyadmin-2.3.3 (11 Dec 2002)
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> phpmyadmin-2.3.3.ebuild :
+  New version. Includes Quequero's tweaks to the ebuild. Fixes #11990
 
 *phpmyadmin-2.3.2-r1 (05 Dec 2002)
 
