@@ -1,6 +1,7 @@
 #! /bin/sh
 
-BINNAME="$(basename $0)"
+BINNAME_LONG="$(basename $0)"
+BINNAME="${BINNAME_LONG%-tc}"
 
 if [ -n "${HELIUM_TEMP}" ]; then
 	TEMP="${HELIUM_TEMP}";
@@ -10,15 +11,22 @@ else
 		mkdir ${TEMP};
 	fi;
 fi
-if [ -z "${LVMPATH}" ]; then
-	LVMPATH=".:/usr/lib/helium/lib";
+
+if [ "${BINNAME_LONG}" = "${BINNAME}" ]; then
+	HELIUM_LIBS="/usr/lib/helium/lib";
 else
-	LVMPATH="${LVMPATH}:/usr/lib/helium/lib";
+	HELIUM_LIBS="/usr/lib/helium/tclib";
+fi
+
+if [ -z "${LVMPATH}" ]; then
+	LVMPATH=".:${HELIUM_LIBS}";
+else
+	LVMPATH="${LVMPATH}:${HELIUM_LIBS}";
 fi
 export LVMPATH
 export TEMP
 
-if [ x${BINNAME} = xhint ]; then
+if [ "${BINNAME}" = "hint" ]; then
 
 	JAVA="$(java-config --java)"
         PROGCALL="${JAVA} -jar -DPATH=${PATH} -DLVMPATH=${LVMPATH} /usr/share/helium/lib/Hint.jar"

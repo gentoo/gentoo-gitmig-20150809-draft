@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/helium
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.10 2004/10/16 23:10:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.11 2004/11/18 13:36:59 kosmikus Exp $
+
+*helium-1.2-r1 (18 Nov 2004)
+
+  18 Nov 2004; Andres Loeh <kosmikus@gentoo.org>
+  +files/helium-1.2-libraries.patch, files/helium-wrapper,
+  +helium-1.2-r1.ebuild:
+  Made compatible with gcc-3.4 and fixed a bug that caused the wrong set of
+  libraries to be used by default (both bug #71183).
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> helium-1.1.ebuild,
   helium-1.2.ebuild:
