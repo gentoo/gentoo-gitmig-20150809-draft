@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.12 2004/08/24 18:42:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.13 2004/08/29 04:41:33 solar Exp $
+
+*madwifi-driver-0.1_pre20040824-r1 (29 Aug 2004)
+
+  29 Aug 2004; <solar@gentoo.org>
+  +files/madwifi-driver-2.6.8-20040814-proc_dointvec.patch,
+  +files/madwifi-multi-ssid-support.patch,
+  +madwifi-driver-0.1_pre20040824-r1.ebuild:
+  update for 2.6.8 kernels
 
   24 Aug 2004; <solar@gentoo.org> :
   updated snapshot, pulling from the wpa branch

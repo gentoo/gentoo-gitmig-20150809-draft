@@ -1,0 +1,57 @@
+diff -Naur old/ath/if_ath.c new/ath/if_ath.c
+--- old/ath/if_ath.c	2004-08-05 19:17:21.000000000 -0400
++++ new/ath/if_ath.c	2004-08-14 19:50:39.000000000 -0400
+@@ -4626,7 +4626,7 @@
+ 
+ static int
+ ath_sysctl_halparam(ctl_table *ctl, int write, struct file *filp,
+-	void *buffer, size_t *lenp)
++	void __user *buffer, size_t *lenp, loff_t *ppos)
+ {
+ 	struct ath_softc *sc = ctl->extra1;
+ 	u_int val;
+@@ -4635,7 +4635,7 @@
+ 	ctl->data = &val;
+ 	ctl->maxlen = sizeof(val);
+ 	if (write) {
+-		ret = proc_dointvec(ctl, write, filp, buffer, lenp);
++		ret = proc_dointvec(ctl, write, filp, buffer, lenp, ppos);
+ 		if (ret == 0) {
+ 			switch (ctl->ctl_name) {
+ 			case ATH_SLOTTIME:
+@@ -4687,7 +4687,7 @@
+ 		default:
+ 			return -EINVAL;
+ 		}
+-		ret = proc_dointvec(ctl, write, filp, buffer, lenp);
++		ret = proc_dointvec(ctl, write, filp, buffer, lenp, ppos);
+ 	}
+ 	return ret;
+ }
+diff -Naur old/net80211/ieee80211_linux.c new/net80211/ieee80211_linux.c
+--- old/net80211/ieee80211_linux.c	2004-08-05 13:34:54.000000000 -0400
++++ new/net80211/ieee80211_linux.c	2004-08-14 19:49:24.000000000 -0400
+@@ -357,7 +357,7 @@
+ 
+ static int
+ ieee80211_sysctl_debug(ctl_table *ctl, int write, struct file *filp,
+-	void *buffer, size_t *lenp)
++	void __user *buffer, size_t *lenp, loff_t *ppos)
+ {
+ 	struct ieee80211com *ic = ctl->extra1;
+ 	u_int val;
+@@ -366,12 +366,12 @@
+ 	ctl->data = &val;
+ 	ctl->maxlen = sizeof(val);
+ 	if (write) {
+-		ret = proc_dointvec(ctl, write, filp, buffer, lenp);
++		ret = proc_dointvec(ctl, write, filp, buffer, lenp, ppos);
+ 		if (ret == 0)
+ 			ic->msg_enable = val;
+ 	} else {
+ 		val = ic->msg_enable;
+-		ret = proc_dointvec(ctl, write, filp, buffer, lenp);
++		ret = proc_dointvec(ctl, write, filp, buffer, lenp, ppos);
+ 	}
+ 	return ret;
+ }

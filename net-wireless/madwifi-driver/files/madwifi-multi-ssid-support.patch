@@ -1,0 +1,89 @@
+Index: net80211/ieee80211_input.c
+===================================================================
+RCS file: /cvsroot/madwifi/madwifi/net80211/ieee80211_input.c,v
+retrieving revision 1.12
+diff -u -r1.12 ieee80211_input.c
+--- madwifi/net80211/ieee80211_input.c	19 Aug 2004 02:15:44 -0000	1.12
++++ madwifi/net80211/ieee80211_input.c	25 Aug 2004 17:14:08 -0000
+@@ -1684,17 +1684,20 @@
+ 		}
+ 
+ 		/*
+-		 * Use mac and channel for lookup so we collect all
+-		 * potential AP's when scanning.  Otherwise we may
++		 * Use mac, channel and SSID for lookup so we collect all
++		 * potential AP's with all SSIDs when scanning.  Otherwise we may
+ 		 * see the same AP on multiple channels and will only
+-		 * record the last one.  We could filter APs here based
++		 * record the last one, or omit the second response from an
++		 * AP supporting several SSIDs.  We could filter APs here based
+ 		 * on rssi, etc. but leave that to the end of the scan
+ 		 * so we can keep the selection criteria in one spot.
+ 		 * This may result in a bloat of the scanned AP list but
+ 		 * it shouldn't be too much.
+ 		 */
+-		ni = ieee80211_find_node_with_channel(ic, wh->i_addr2,
+-				&ic->ic_channels[chan]);
++		ni = ieee80211_find_node_with_channel_and_ssid(ic, wh->i_addr2,
++				&ic->ic_channels[chan], ssid);
++
++
+ 		if (ni == NULL) {
+ #ifdef IEEE80211_DEBUG
+ 			if (ieee80211_msg_scan(ic))
+Index: net80211/ieee80211_node.c
+===================================================================
+RCS file: /cvsroot/madwifi/madwifi/net80211/ieee80211_node.c,v
+retrieving revision 1.7
+diff -u -r1.7 ieee80211_node.c
+--- madwifi/net80211/ieee80211_node.c	19 Aug 2004 02:09:13 -0000	1.7
++++ madwifi/net80211/ieee80211_node.c	25 Aug 2004 17:14:08 -0000
+@@ -817,6 +817,31 @@
+ }
+ 
+ /*
++ * Like find but search based on the channel too.
++ */
++struct ieee80211_node *
++ieee80211_find_node_with_channel_and_ssid(struct ieee80211com *ic, u_int8_t *macaddr,
++	struct ieee80211_channel *chan, char *ssid)
++{
++	struct ieee80211_node *ni;
++	int hash;
++
++	hash = IEEE80211_NODE_HASH(macaddr);
++	IEEE80211_NODE_LOCK(ic);
++	LIST_FOREACH(ni, &ic->ic_hash[hash], ni_hash) {
++		if (IEEE80211_ADDR_EQ(ni->ni_macaddr, macaddr) &&
++		    ni->ni_chan == chan && 
++		    (ssid[1] == 0 || (ssid[1] == ni->ni_esslen &&
++		      !memcmp(ssid + 2, ni->ni_essid, ssid[1])))){
++			ieee80211_node_incref(ni);/* mark referenced */
++			break;
++		}
++	}
++	IEEE80211_NODE_UNLOCK(ic);
++	return ni;
++}
++
++/*
+  * Like find but search based on the ssid too.
+  */
+ struct ieee80211_node *
+Index: net80211/ieee80211_node.h
+===================================================================
+RCS file: /cvsroot/madwifi/madwifi/net80211/ieee80211_node.h,v
+retrieving revision 1.4
+diff -u -r1.4 ieee80211_node.h
+--- madwifi/net80211/ieee80211_node.h	19 Aug 2004 01:06:58 -0000	1.4
++++ madwifi/net80211/ieee80211_node.h	25 Aug 2004 17:14:08 -0000
+@@ -193,6 +193,9 @@
+ extern	struct ieee80211_node *ieee80211_find_node_with_channel(
+ 		struct ieee80211com *, u_int8_t *macaddr,
+ 		struct ieee80211_channel *);
++extern  struct ieee80211_node *ieee80211_find_node_with_channel_and_ssid(
++		struct ieee80211com *, u_int8_t *macaddr,
++		struct ieee80211_channel *, char *);
+ extern	struct ieee80211_node *ieee80211_find_node_with_ssid(
+ 		struct ieee80211com *, u_int8_t *macaddr, u_int ssidlen,
+ 		const u_int8_t *ssid);
