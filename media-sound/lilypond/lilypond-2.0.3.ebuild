@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.3.ebuild,v 1.4 2004/05/17 16:07:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.3.ebuild,v 1.5 2004/05/28 14:36:08 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.lilypond.org/ftp/${MY_PV}/${P}.tar.gz"
 HOMEPAGE="http://lilypond.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~x86 ~ppc"
+KEYWORDS="alpha x86 ~ppc"
 
 RDEPEND=">=dev-util/guile-1.6.4
 	virtual/ghostscript

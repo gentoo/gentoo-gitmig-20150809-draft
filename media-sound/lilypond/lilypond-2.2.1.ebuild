@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.0.ebuild,v 1.7 2004/05/17 16:07:34 usata Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.1.ebuild,v 1.1 2004/05/28 14:36:08 agriffis Exp $
 
 IUSE="doc"
 
@@ -12,31 +10,26 @@ SRC_URI="http://www.lilypond.org/ftp/${MY_PV}/${P}.tar.gz"
 HOMEPAGE="http://lilypond.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~x86"
+KEYWORDS="~alpha ~x86 ~ppc"
 
-DEPEND=">=dev-lang/python-2.2.3-r1
+RDEPEND=">=dev-util/guile-1.6.4
+	virtual/ghostscript
+	>=app-text/tetex-2.0.2
+	>=dev-lang/python-2.2.3-r1"
+
+DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.0-r12
-	>=dev-util/guile-1.6.4
-	virtual/tetex
 	>=sys-apps/texinfo-4.6
 	>=sys-devel/flex-2.5.4a-r5
 	>=sys-devel/gcc-3.1-r8
 	>=sys-devel/make-3.80
 	>=app-text/mftrace-1.0.19
-	virtual/ghostscript
 	sys-devel/bison !=sys-devel/bison-1.75
 	doc? ( media-gfx/imagemagick
 		>=media-libs/netpbm-9.12-r4 )"
 
-RDEPEND=">=dev-util/guile-1.6.4
-	virtual/ghostscript
-	virtual/tetex
-	>=dev-lang/python-2.2.3-r1"
-
 src_unpack() {
 	unpack ${A} || die "unpack failed"
-	cd ${S}; epatch ${FILESDIR}/${P}-coreutils-compat.patch
-	NOCONFIGURE=1 ./autogen.sh >/dev/null
 }
 
 src_compile() {
@@ -71,16 +64,23 @@ src_install () {
 	doins buildscripts/out/lilypond-profile \
 		buildscripts/out/lilypond-login \
 		buildscripts/out/clean-fonts \
-		buildscripts/out/lilypond.words \
+		buildscripts/out/lilypond-words \
 		|| die "doins failed"
-	insinto /usr/share/lilypond/${PV}/elisp/out
-	doins elisp/out/lilypond.words.el elisp/out/lilypond.words.vim \
-		|| die "doins failed"
+
+	# emacs support, should this be done differently?
 	insinto /usr/share/lilypond/${PV}/elisp
 	doins elisp/*.el \
 		|| die "doins failed"
-	insinto /usr/share/lilypond/${PV}/
-	doins lilypond.vim vimrc \
+	insinto /usr/share/lilypond/${PV}/elisp/out
+	doins elisp/out/lilypond-words.el \
+		|| die "doins failed"
+
+	# vim support, should this be done differently?
+	insinto /usr/share/lilypond/${PV}/vim/out
+	doins vim/out/lilypond-words.vim \
+		|| die "doins failed"
+	insinto /usr/share/lilypond/${PV}/vim
+	doins vim/lilypond*.vim vim/vimrc \
 		|| die "doins failed"
 
 	# we might be able to get the new "make out=www web-install"
