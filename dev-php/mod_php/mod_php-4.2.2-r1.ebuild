@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.9 2002/09/02 16:57:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.10 2002/09/03 20:33:18 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -44,8 +44,8 @@ DEPEND="
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	firebird? ( >=dev-db/firebird-1.0 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
-	postgres? ( >=dev-db/postgresql-7.1 )
-	java? ( virtual/jdk )"
+	postgres? ( >=dev-db/postgresql-7.1 )"
+	#java? ( virtual/jdk )
 # Only needed by CGI-Version
 #	readline? ( >=sys-libs/ncurses-5.1
 #		>=sys-libs/readline-4.1 )"
@@ -63,25 +63,25 @@ src_unpack() {
 	cat configure.old | sed "s/PHP_UNAME=\`uname -a\`/PHP_UNAME=\`uname -s -n -r -v\`/g" > configure
 	chmod 755 configure
 				
-	if [ "`use java`" ] ; then
+	#if [ "`use java`" ] ; then
 
-		cp configure configure.orig
-		cat configure.orig | \
-			sed -e 's/LIBS="-lttf $LIBS"/LIBS="-lttf $LIBS"/' \
-			> configure
+	#	cp configure configure.orig
+	#	cat configure.orig | \
+	#		sed -e 's/LIBS="-lttf $LIBS"/LIBS="-lttf $LIBS"/' \
+	#		> configure
 
-		cp ext/gd/gd.c ext/gd/gd.c.orig
-		cat ext/gd/gd.c.orig | \
-			sed -e "s/typedef FILE gdIOCtx;//" \
-			> ext/gd/gd.c
-		if [ "$JAVAC" ];
-		then
-	              cp ext/java/Makefile.in ext/java/Makefile.in.orig
-	              cat ext/java/Makefile.in.orig | \
-	                      sed -e "s/^\tjavac/\t\$(JAVAC)/" \
-	                      > ext/java/Makefile.in
-		fi
-	fi
+	#	cp ext/gd/gd.c ext/gd/gd.c.orig
+	#	cat ext/gd/gd.c.orig | \
+	#		sed -e "s/typedef FILE gdIOCtx;//" \
+	#		> ext/gd/gd.c
+	#	if [ "$JAVAC" ];
+	#	then
+	#              cp ext/java/Makefile.in ext/java/Makefile.in.orig
+	#              cat ext/java/Makefile.in.orig | \
+	#                      sed -e "s/^\tjavac/\t\$(JAVAC)/" \
+	#                      > ext/java/Makefile.in
+	#	fi
+	#fi
 
 }
 
@@ -154,7 +154,7 @@ src_compile() {
 
 	use xml2 && myconf="${myconf} --with-dom"
 	use crypt && myconf="${myconf} --with-mcrypt --with-mhash"
-	use java && myconf="${myconf} --with-java=${JDK_HOME}"
+	#use java && myconf="${myconf} --with-java=${JDK_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
 

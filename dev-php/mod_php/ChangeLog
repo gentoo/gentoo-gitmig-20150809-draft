@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.16 2002/09/02 16:57:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.17 2002/09/03 20:33:18 rphillips Exp $
 
   02 Sep 2002; Daniel Robbins <drobbins@gentoo.org> mod_php-4.2.2-r1.ebuild :
   rphillips' gmp fix broke the ebuild, fixing... (no rev bump)
@@ -10,6 +10,12 @@
   the next thing becomes a separate funky command.
 
 *mod_php-4.2.2-r1 (18 Aug 2002)
+
+  03 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.2-r1.ebuild :
+
+  Users have had issues compiling php with java support.  It works fine
+  on my two computers. I'm not sure if it is user error or config file
+  problems.  I've disabled it for now.
 
   01 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.2-r1.ebuild :
   Users have had trouble compiling with gmp support... Disabled for now
