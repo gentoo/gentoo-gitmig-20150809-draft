@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5aa04dc0806d36f4683af0b0854393b7 slmodem-2.9.9a-r2.ebuild 3942
-MD5 71fb5b71fc8346bceb852f408f194b01 ChangeLog 9942
+MD5 3637c7e3fe4b31081f97768434376210 slmodem-2.9.9a-r2.ebuild 3882
+MD5 557dd375e6b120aeff137f3be431514a ChangeLog 10065
 MD5 93dd8a9d0c0f815e8445d9f0c1fc0910 metadata.xml 578
 MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
 MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
@@ -12,10 +9,3 @@ MD5 242152f0af5388e94c82cd188e7f6892 files/slmodem-2.9.init 2648
 MD5 ef9ad53b66480e01974b9f183e4edbc8 files/digest-slmodem-2.9.9a-r2 66
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
 MD5 026f2e2fae1fbd999455b36630164a88 files/slmodem-usb_endpoint_halted-gentoo.patch 830
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD4DBQFB8buBjiC39V7gKu0RAlDDAKCNMYwIeEg9f65X4mLuNo3PRLBeOQCY8+YT
-z3k5jdEfKE2d5W+HJk1vrQ==
-=Bidi
------END PGP SIGNATURE-----

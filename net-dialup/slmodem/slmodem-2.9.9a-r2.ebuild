@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9a-r2.ebuild,v 1.1 2005/01/22 02:33:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9a-r2.ebuild,v 1.2 2005/01/28 14:20:04 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -25,9 +25,6 @@ pkg_setup() {
 	BUILD_TARGETS="all"
 
 	local CONFIG_CHECK=""
-	if useq alsa; then
-		CONFIG_CHECK="${CONFIG_CHECK} SND"
-	fi
 	if useq usb; then
 		CONFIG_CHECK="${CONFIG_CHECK} USB"
 	fi
