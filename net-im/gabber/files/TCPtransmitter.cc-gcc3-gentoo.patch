@@ -1,0 +1,12 @@
+diff -u gabber-0.8.7.orig/src/TCPTransmitter.cc gabber-0.8.7/src/TCPTransmitter.cc
+--- gabber-0.8.7.orig/src/TCPTransmitter.cc	Sun Feb 17 16:29:51 2002
++++ gabber-0.8.7/src/TCPTransmitter.cc	Fri Aug 30 14:30:13 2002
+@@ -1338,7 +1338,7 @@
+      }
+ }
+ 
+-void TCPTransmitter::setProxy(const string &ptype, const string &host, guint port, const string &user, const string &password, bool tryOther = true)
++void TCPTransmitter::setProxy(const string &ptype, const string &host, guint port, const string &user, const string &password, bool tryOther)
+ {
+      if (_state != Offline)
+      {
