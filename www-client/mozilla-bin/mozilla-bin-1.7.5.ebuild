@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.5.ebuild,v 1.2 2005/03/23 20:04:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.5.ebuild,v 1.3 2005/03/30 20:05:36 kugelfang Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -36,6 +36,11 @@ RDEPEND="virtual/x11
 	)
 	virtual/x11
 	>=www-client/mozilla-launcher-1.13"
+
+# This is a binary x86 package => ABI=x86
+# Please keep this in future versions
+# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+has_multilib_profile && ABI="x86"
 
 src_install() {
 	# Install mozilla in /opt

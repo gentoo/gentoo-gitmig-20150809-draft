@@ -1,12 +1,22 @@
-MD5 cd322274cf8756e4e8198fd3bba57bd5 ChangeLog 2372
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d51874adfe82518d2995df9b804701c ChangeLog 2608
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 8262141effb1727b0975fd755946aa42 mozilla-bin-1.7.2.ebuild 2112
-MD5 74503fe0e1bb46dfcae4a1a90776c6eb mozilla-bin-1.7.3.ebuild 2108
-MD5 b95cabd6e875d564c3a44b6c1adb85fd mozilla-bin-1.7.5.ebuild 2108
-MD5 272ec6e7d05d8fc5fb431bfb66426166 mozilla-bin-1.7.6-r1.ebuild 2399
+MD5 e4f9cfa8c44ab1b43955852a72ab4581 mozilla-bin-1.7.2.ebuild 2279
+MD5 4a1f583d59d6381bf8f45d7dd9c55dab mozilla-bin-1.7.3.ebuild 2275
+MD5 b7fadf818a399132345c8693a096622a mozilla-bin-1.7.5.ebuild 2275
+MD5 5bb7c6482fdd417ddb4c0ebf60136e34 mozilla-bin-1.7.6-r1.ebuild 2568
 MD5 20d752803fe0a78a4167a6100d4209cb files/digest-mozilla-bin-1.7.2 85
 MD5 3ac1f23690d1f3208ac0d9ef0e680e23 files/digest-mozilla-bin-1.7.3 85
 MD5 018ecd12fcb5cd65246173770adb9638 files/digest-mozilla-bin-1.7.5 85
 MD5 ae88c11f0026aa7f8462f1f5da667795 files/digest-mozilla-bin-1.7.6-r1 85
 MD5 6d52ff4ce4567db1cad08ea40157a65d files/mozilla-bin-icon.png 2350
 MD5 4eac4e98b875ba3b652d6626756f5517 files/mozilla-bin.desktop 184
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCSwgI5mJXAu5GbtIRAnfBAJ4xCTv0dy9NsC0m/MPMhWucJeQyXgCfQqjE
+HJy8cucITUsx+NCoHAEesNQ=
+=YrHX
+-----END PGP SIGNATURE-----
