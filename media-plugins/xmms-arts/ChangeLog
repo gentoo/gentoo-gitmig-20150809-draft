@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.10 2003/07/12 18:40:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.11 2003/09/15 12:16:36 seemant Exp $
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> :
+  Version bump, kinda. This is a new package by harvardk of the xmms development
+  group. Seems that the old plugin is abandoned by its upstream authors.
+  This package seems to be a stand-in replacement. This
+  ebuild submitted by: Javier López <iborg1013@terra.es> in bug #28226
 
 *xmms-arts-0.4-r6 (25 Oct 2002)
 
