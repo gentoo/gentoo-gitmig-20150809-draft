@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/sun-jre
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre/ChangeLog,v 1.1 2004/02/12 18:58:03 lostlogic Exp $
+
+*sun-jre-1.4.2.03 (12 Feb 2004)
+
+  12 Feb 2004; Brandon Low <lostlogic@gentoo.org> metadata.xml,
+  sun-jre-1.4.2.03.ebuild, files/sun-jre-1.4.2.03:
+  First version of the Sun JRE, I primarily based this on the sun-jdk-1.4.2.03
+  ebuild, I hope I ported it over correctly
+
