@@ -1,9 +1,13 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.1 2002/04/25 01:57:00 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.2 2002/06/10 00:51:36 rphillips Exp $
 
-*lua-4.0 (23 Apr 2002)
+*lua-4.0 (09 June 2002)
 
+  09 June 2002; Ryan Phillips <rphillips@gentoo.org> lua-4.0.ebuild :
+
+  Fixed ebuild since package has changed.
+  
   23 Apr 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
