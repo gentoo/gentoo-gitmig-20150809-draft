@@ -1,33 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.18 2004/07/29 01:40:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.19 2004/09/11 07:04:05 vapier Exp $
 
-DESCRIPTION="A command that displays info about resources used by a program"
-SRC_URI="ftp://ftp.gnu.org/pub/gnu/time/${P}.tar.gz"
+inherit eutils
+
+DESCRIPTION="displays info about resources used by a program"
 HOMEPAGE="http://www.gnu.org/directory/time.html"
-KEYWORDS="x86 amd64 ppc sparc ppc64"
-IUSE=""
-SLOT="0"
+SRC_URI="ftp://ftp.gnu.org/pub/gnu/time/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="amd64 arm ppc ppc64 sparc x86"
+IUSE=""
 
 DEPEND="virtual/libc"
 
-src_compile() {
-	./configure --prefix=/usr \
-		--mandir=/usr/share/man || die
-	emake || die
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	automake -a || die "automake"
+	autoconf || die "autoconf"
+	epatch ${FILESDIR}/${PV}-info-dir-entry.patch
 }
 
 src_install() {
-	cd ${S}
-	echo "START-INFO-DIR-ENTRY
-* time: (time).            summarize system resources used
-END-INFO-DIR-ENTRY" > temp
-	sed -e '/^trans/r temp' < time.info > time.info.new
-	mv time.info.new time.info
-
-	make prefix=${D}/usr sysconfdir=${D}/etc mandir=${D}/usr/share/man install || die
-	gzip -9 ${D}/usr/info/time.info
-	dodoc ChangeLog COPYING README
-	dodoc AUTHORS NEWS
+	make install DESTDIR=${D} || die
+	dodoc ChangeLog README AUTHORS NEWS
 }
