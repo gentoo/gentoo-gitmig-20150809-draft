@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.9.0_beta-r1.ebuild,v 1.2 2004/06/29 16:46:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.9.0_beta-r1.ebuild,v 1.3 2004/07/24 05:53:23 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE="oggvorbis jack nls static oss cdr"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	jack? ( media-sound/jack-audio-connection-kit )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	cdr? ( app-cdr/cdrdao )
@@ -24,7 +24,9 @@ DEPEND="virtual/x11
 	>=media-libs/ladspa-sdk-1.12
 	>=media-libs/ladspa-cmt-1.15
 	>=media-libs/portaudio-18
-	>=media-libs/flac-1.1.0
+	>=media-libs/flac-1.1.0"
+
+DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake"
 
