@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmpower
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.13 2005/01/25 15:27:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.14 2005/02/23 09:34:06 s4t4n Exp $
+
+*wmpower-0.4.0 (23 Feb 2005)
+
+  23 Feb 2005; Michele Noberasco <s4t4n@gentoo.org> wmpower-0.4.0.ebuild:
+  Version bump. Added ~ppc keyword as I got positive feedback on CVS version.
 
   25 Jan 2005; Michele Noberasco <s4t4n@gentoo.org> wmpower-0.3.1.ebuild:
   Update Copyright headers
