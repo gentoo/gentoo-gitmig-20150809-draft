@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.1.5.ebuild,v 1.1 2005/03/12 21:21:59 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.1-r1.ebuild,v 1.1 2005/04/02 20:11:34 arj Exp $
 
 inherit eutils
 
-IUSE="nls nothreadsafe"
+IUSE="nothreadsafe"
 
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library."
 SRC_URI="http://www.sqlite.org/${P}.tar.gz"
@@ -37,7 +37,6 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-threadsafe"
 	fi
-	myconf="${myconf} `use_with nls utf8`"
 	myconf="--with-tcl=/usr/$(get_libdir)/"
 	econf ${myconf} || die
 	emake all || die # doc is not working yet in 3.1.2
@@ -56,7 +55,7 @@ src_install () {
 
 	dobin lemon
 	dodoc README VERSION
-	doman sqlite.1
+	doman sqlite3.1
 	docinto html
 	dohtml doc/*.html doc/*.txt doc/*.png
 }
