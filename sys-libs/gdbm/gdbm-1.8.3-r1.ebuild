@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.11 2004/12/07 20:21:00 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.12 2005/03/14 23:45:23 vapier Exp $
 
-inherit gnuconfig flag-o-matic eutils libtool
+inherit flag-o-matic eutils libtool
 
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
@@ -10,17 +10,14 @@ SRC_URI="mirror://gnu/gdbm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="berkdb"
 
-DEPEND="virtual/libc
-	berkdb? ( =sys-libs/db-1* )"
-RDEPEND="virtual/libc"
+DEPEND="berkdb? ( =sys-libs/db-1* )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	gnuconfig_update
+	cd "${S}"
 	append-flags -fomit-frame-pointer
 	uclibctoolize
 }
@@ -32,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALL_ROOT=${D} install || die
+	make INSTALL_ROOT="${D}" install || die
 
 	make \
 		includedir=/usr/include/gdbm \
@@ -42,7 +39,7 @@ src_install() {
 	dodoc ChangeLog NEWS README
 
 	# temp backwards support #32510
-	if [ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ] ; then
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ]] ; then
 		cp ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ${D}/usr/$(get_libdir)/
 		touch ${D}/usr/$(get_libdir)/libgdbm.so.2
 	fi
