@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.22 2002/12/22 10:32:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.23 2003/01/21 14:08:49 foser Exp $
+
+*libxml2-2.4.30 (07 Jan 2003)
+
+  07 Jan 2003; foser <foser@gentoo.org> libxml2-2.4.30.ebuild :
+  New version
+  Added stripping of all unknown CFLAGS (bug #14265)
 
 *libxml2-2.4.28-r1 (22 Dec 2002)
 
