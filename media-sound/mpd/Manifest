@@ -1,6 +1,6 @@
 MD5 5fb626bb31fce06423c51e3c2be6dd28 ChangeLog 1580
 MD5 ab5e6f092e72a5e37250d833a4b574f1 mpd-0.9.2.ebuild 1189
-MD5 9173f58071b073cd39466ea2821ad6fa mpd-0.9.3.ebuild 1297
+MD5 e5ff06951dabed73840f6d7b52558483 mpd-0.9.3.ebuild 1416
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 cf61965ae8a57bd5520da8228bfd6e3b files/mpd.rc6 819
 MD5 621f975dad77dfc05c74fd1310e0daa2 files/mpd.conf 161
