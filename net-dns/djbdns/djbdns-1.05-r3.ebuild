@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.11 2003/05/24 09:58:57 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.12 2003/09/07 00:09:56 msterret Exp $
 
 DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
@@ -26,14 +26,14 @@ src_unpack() {
 	fi
 }
 
-src_compile() {                           
+src_compile() {
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
 	echo "/usr" > conf-home
 	MAKEOPTS="-j1" emake || die "emake failed"
 }
 
-src_install() {                               
+src_install() {
 	insinto /etc
 	doins dnsroots.global
 	into /usr

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r2.ebuild,v 1.2 2003/06/08 05:15:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r2.ebuild,v 1.3 2003/09/07 00:09:56 msterret Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -48,7 +48,7 @@ src_compile() {
 
 src_install() {
 	einstall
-	
+
 	dodoc CHANGES COPYRIGHT FAQ README
 
 	use doc && {
@@ -73,8 +73,8 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/named.rc6 named
 	insinto /etc/conf.d ; newins ${FILESDIR}/named.confd named
-	
-	dosym ../../var/bind/named.ca /var/bind/root.cache 
+
+	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
 }
@@ -112,7 +112,7 @@ pkg_config() {
 
 	if [ -z "$CHROOT" -a ! -d "/chroot/dns" ]; then
 		CHROOT="/chroot/dns"
-	elif [ -d ${CHROOT} ]; then 
+	elif [ -d ${CHROOT} ]; then
 		eerror; eerror "${CHROOT:-/chroot/dns} already exists. Quitting."; eerror; EXISTS="yes"
 	fi
 

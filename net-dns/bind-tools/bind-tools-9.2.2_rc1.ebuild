@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2_rc1.ebuild,v 1.7 2003/02/27 12:01:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2_rc1.ebuild,v 1.8 2003/09/07 00:09:56 msterret Exp $
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
@@ -14,7 +14,7 @@ LICENSE="as-is"
 SLOT="0"
 
 DEPEND="virtual/glibc"
- 
+
 src_compile() {
 	econf || die "configure failed"
 
@@ -27,7 +27,7 @@ src_compile() {
 	cd ${S}/bin/dig
 	make || die "make failed in /bin/dig"
 }
- 
+
 src_install() {
 	cd ${S}/bin/dig
 	dobin dig host nslookup
