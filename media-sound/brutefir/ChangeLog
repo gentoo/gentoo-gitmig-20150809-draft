@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/brutefir
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.5 2004/10/07 06:40:14 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.6 2005/01/22 11:53:26 luckyduck Exp $
+
+*brutefir-1.0c (22 Jan 2005)
+
+  22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +brutefir-1.0c.ebuild:
+  new upstream version, fixes #77637
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   brutefir-1.0a.ebuild:

@@ -1,25 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.7 2005/01/22 11:53:26 luckyduck Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0c.ebuild,v 1.1 2005/01/22 11:53:26 luckyduck Exp $
 
 inherit eutils
 
+IUSE=""
 DESCRIPTION="BruteFIR is a software convolution engine, a program for applying long FIR filters to multi-channel digital audio, either offline or in realtime."
 HOMEPAGE="http://www.ludd.luth.se/~torger/brutefir.html"
 SRC_URI="http://www.ludd.luth.se/~torger/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=media-libs/alsa-lib-0.9.1
 	media-sound/jack-audio-connection-kit
 	>=sci-libs/fftw-3.0.0"
 
 src_compile() {
-	emake || die
+	emake || die "make failed"
 }
 
 src_install() {
@@ -28,7 +27,7 @@ src_install() {
 	mkdir -p ${D}/usr/lib/brutefir
 
 	einstall DESTDIR=${D} \
-		INSTALL_PREFIX=${D}/usr	|| die
+		INSTALL_PREFIX=${D}/usr	|| die "make install failed"
 
 	if [ "$(get_libdir)" != "lib" ]; then
 		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
@@ -41,7 +40,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo Brutefir is a complicated piece of software. Please read the documentation first!
-	einfo You can find documentation here: http://www.ludd.luth.se/~torger/brutefir.html
-	einfo Example config files are in /usr/share/brutefir
+	einfo ""
+	einfo "Brutefir is a complicated piece of software. Please"
+	einfo "read the documentation first! You can find "
+	einfo "documentation here: http://www.ludd.luth.se/~torger/brutefir.html"
+	einfo "Example config files are in /usr/share/brutefir"
+	einfo ""
 }
