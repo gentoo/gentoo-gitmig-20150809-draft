@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.15.ebuild,v 1.1 2000/11/25 12:57:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.15.ebuild,v 1.2 2000/11/25 14:01:31 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,8 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gnome-libs-1.2.4
-	>=gnome-base/libxml-1.8.10"
+	>=gnome-base/libxml-1.8.10
+	bonobo? ( >=gnome-base/bonobo-0.28 )"
 
 src_unpack() {
   unpack ${A}
@@ -22,7 +23,14 @@ src_unpack() {
 }
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --enable-bonobo
+  local myopts
+  if [ "`use bonobo`" ]
+  then
+     myopts="--enable-bonobo"
+  else
+     myopts="--disable-bonobo"
+  fi
+  try ./configure --host=${CHOST} --prefix=/opt/gnome ${myopts}
   try make 
 }
 
