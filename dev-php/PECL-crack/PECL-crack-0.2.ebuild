@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-crack/PECL-crack-0.1.ebuild,v 1.2 2005/03/18 05:47:15 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-crack/PECL-crack-0.2.ebuild,v 1.1 2005/03/18 05:47:15 sebastian Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="crack"
