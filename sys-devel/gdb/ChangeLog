@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.52 2004/09/07 15:50:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.53 2004/09/09 18:07:18 wolf31o2 Exp $
+
+  09 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> gdb-6.2.ebuild:
+  Making multilib safe and closing bug #63438.
 
   07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gdb-6.1.1.ebuild:
   Stable on sparc
