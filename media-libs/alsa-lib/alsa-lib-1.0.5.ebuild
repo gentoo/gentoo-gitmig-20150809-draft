@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5.ebuild,v 1.1 2004/05/31 05:03:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5.ebuild,v 1.2 2004/06/01 20:29:44 mholzer Exp $
 
 inherit libtool
 
@@ -21,7 +21,6 @@ PDEPEND="!ppc? ( jack? ( =media-plugins/alsa-jack-${PV}* ) )"
 MY_P=${P/_rc/rc}
 #SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${MY_P}.tar.bz2"
 SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
