@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3284 2004/10/26 17:59:48 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3285 2004/10/28 12:52:18 foser Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -319,10 +319,6 @@ net-misc/nxserver-business
 net-misc/nxserver-enterprise
 net-misc/nxserver-freenx
 
-# <foser@gentoo.org> (03 Sep 2004)
-# Up for removal, unmaintained (#62566)
-app-office/gaby
-
 # <lucass@gentoo.org> (26 Aug 2004)
 # unstable branch of pygtk
 =dev-python/pygtk-2.3*
@@ -616,10 +612,6 @@ media-video/realone
 # <george@gentoo.org> (03 Feb 2004)
 # blas dependants, will have to be unmasked after virtual is finalized and blas is unmasked
 =app-sci/xfoil-6.94-r1
-
-# <foser@gentoo.org> (16 Jan 2004)
-# development release
->=gnome-extra/gnome-network-1.99
 
 # <rphillips@gentoo.org> (15 Jan 2004)
 # prerelease version, but first that support signing
