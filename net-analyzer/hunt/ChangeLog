@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hunt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/ChangeLog,v 1.3 2004/07/01 19:51:06 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/ChangeLog,v 1.4 2004/11/08 12:24:40 eldad Exp $
+
+  08 Nov 2004; Eldad Zack <eldad@gentoo.org> hunt-1.5.ebuild:
+  Homepage update, thanks to Jason Cavett <jason.cavett@gmail.com>, Closes
+  #70426.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> hunt-1.5.ebuild,
   +metadata.xml:
