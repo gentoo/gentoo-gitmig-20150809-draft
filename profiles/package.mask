@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lu_zero@gentoo.org> (06 Apr 2003)
+# Has issues
+=media-video/ati-drivers-2.9.6
+
 # <robbat2@gentoo.org> (05 Apr 2003)
 # temporary mask due to compile bug somebody pointed out to me directly
 =dev-java/antlr-2.7.2
