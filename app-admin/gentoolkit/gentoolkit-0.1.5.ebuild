@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.4-r1.ebuild,v 1.1 2002/03/17 00:14:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.5.ebuild,v 1.1 2002/03/17 02:04:51 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
@@ -10,6 +10,7 @@ HOMEPAGE="http://"
 
 DEPEND=""
 RDEPEND=">=dev-lang/python-2.0
+	>=dev-util/dialog-0.7
 	>=sys-devel/perl-5.6"
 
 src_install () {
