@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 435fd42c2ee9526b5d86bfd8da1acbf4 ChangeLog 992
 MD5 46363e58429c13f655dce06d664ddf77 photo-1.2.3.ebuild 612
-MD5 e49a2ab1bb07c9e1f1fc19d34a7022c9 ChangeLog 885
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 1f8827c1b24f9b294695c4b1d323a1f6 files/digest-photo-1.2.3 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBo4rlI1lqEGTUzyQRAocBAJ9hp1ZnmfLcuos3lLki+QxYleufXgCg1LfN
-HTFxs6HbHv2MaOets+DtRxw=
-=CeVe
------END PGP SIGNATURE-----
