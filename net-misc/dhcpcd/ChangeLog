@@ -1,8 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.30 2004/03/08 23:49:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.31 2004/03/15 15:22:04 aliz Exp $
 
 *dhcpcd-1.3.22_p4-r5 (08 Mar 2004)
+*dhcpcd-1.3.22_p4-r4 (08 Mar 2004)
 
   08 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
   dhcpcd-1.3.22_p4-r2.ebuild, dhcpcd-1.3.22_p4-r3.ebuild,

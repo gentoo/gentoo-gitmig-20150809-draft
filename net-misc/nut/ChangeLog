@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.27 2004/03/09 03:39:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.28 2004/03/15 15:22:05 aliz Exp $
+
+*nut-1.4.1 (08 Mar 2004)
+*nut-1.5.12 (08 Mar 2004)
 
   08 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> files/upsd.rc6:
   bug #42883, nut snmp-ups support. bug #42195, version bump. bug #43551, catch
