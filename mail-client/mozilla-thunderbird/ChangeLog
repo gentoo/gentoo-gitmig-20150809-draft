@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.44 2004/12/29 20:09:12 sejo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.45 2005/03/23 15:40:55 brad Exp $
+
+*mozilla-thunderbird-1.0.2 (23 Mar 2005)
+
+  23 Mar 2005; Brad Laue <brad@gentoo.org> +mozilla-thunderbird-1.0.2.ebuild:
+  Bump to 1.0.2. See bug #84074 for fix details.
 
   29 Dec 2004; <SeJo@gentoo.org> :
   stable on ppc glsa: 68976
