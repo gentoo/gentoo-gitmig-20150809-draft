@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.109 2004/03/14 09:55:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.110 2004/04/16 03:33:03 kumba Exp $
+
+*binutils-2.15.90.0.3 (15 Apr 2004)
+
+  15 Apr 2004; Joshua Kinard <kumba@gentoo.org> binutils-2.12.90.0.15.ebuild,
+  binutils-2.13.90.0.16-r1.ebuild, binutils-2.13.90.0.18-r1.ebuild,
+  binutils-2.13.90.0.18.ebuild, binutils-2.14.90.0.2.ebuild,
+  binutils-2.14.90.0.4.1-r1.ebuild, binutils-2.14.90.0.5-r1.ebuild,
+  binutils-2.14.90.0.6-r2.ebuild, binutils-2.14.90.0.6-r3.ebuild,
+  binutils-2.14.90.0.6-r6.ebuild, binutils-2.14.90.0.6-r7.ebuild,
+  binutils-2.15.90.0.3.ebuild:
+  New ebuild for binutils-2.15.90.0.3, and removed portage from DEPEND in older
+  ebuilds as it caused repoman troubles.
 
   14 Mar 2004; Joshua Kinard <kumba@gentoo.org> :
   Added a patch to the patchball for mips that reverses a patch added in

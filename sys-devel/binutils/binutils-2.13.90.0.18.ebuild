@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.20 2004/02/23 00:18:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.21 2004/04/16 03:33:04 kumba Exp $
 
 IUSE="nls bootstrap build"
 
@@ -23,7 +23,6 @@ LICENSE="GPL-2 | LGPL-2"
 KEYWORDS="x86 ppc alpha sparc ~mips ~hppa "
 
 DEPEND="virtual/glibc
-	>=sys-apps/portage-2.0.21
 	nls? ( sys-devel/gettext )
 	|| ( dev-lang/perl
 	     ( !build?     ( dev-lang/perl ) )
