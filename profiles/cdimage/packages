@@ -1,3 +1,4 @@
+sys-apps/baselayout
 net-ftp/ftp
 net-misc/dhcpcd
 net-misc/netkit-telnetd
@@ -60,4 +61,4 @@ sys-libs/pwdb
 sys-libs/readline
 sys-libs/slang
 sys-libs/zlib
-=sys-kernel/linux-2.4.4.9
+#=sys-kernel/linux-2.4.4.9
