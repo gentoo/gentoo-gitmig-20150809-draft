@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5062ab7103883bc22a6793486f771662 ChangeLog 14944
-MD5 3d415603c8d0ddbb732ce7eec99ec7e8 metadata.xml 447
 MD5 f5f6f3d8e22a5c09fcc927aacf583fa0 cdrtools-2.01.ebuild 2494
+MD5 fb7c98c4ada508b4870303b6cf6f327c metadata.xml 450
+MD5 77f8d181bdf4f47dd7f0064f64aebc0b ChangeLog 14947
 MD5 245b4ec3f9e91750df712bee416f6481 files/cdrtools-2.01-scsi-remote.patch 540
 MD5 c848b3b9b6921469483a22caa0fd40c3 files/digest-cdrtools-2.01 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBdVeqHTu7gpaalycRAh+xAJ408WLmRsBj5kOBxANmCrhFbxa0WwCg7hgM
-GkgSaNhZ9INdimDkMAdam/M=
-=1rMQ
------END PGP SIGNATURE-----

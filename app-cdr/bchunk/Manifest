@@ -1,6 +1,6 @@
 MD5 649a628f11f07fd13016b73ad5bec771 ChangeLog 1193
 MD5 0201c036a37de6a4b064bbff0baf8107 bchunk-1.1.1.ebuild 606
-MD5 e07007528df3519d44e2914131164317 metadata.xml 403
 MD5 2598b3f0fafa90b2137b2b54dd92ffce bchunk-1.2.0.ebuild 621
+MD5 752ed32cf9ba99ca800ffdbfa7c765b0 metadata.xml 406
 MD5 13b561039eacac208de0f28160e92d77 files/digest-bchunk-1.1.1 63
 MD5 add24f73686c647124c5931b11081ff1 files/digest-bchunk-1.2.0 63
