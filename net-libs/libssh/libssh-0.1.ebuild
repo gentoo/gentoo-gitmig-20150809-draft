@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.1.ebuild,v 1.6 2004/09/25 04:22:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.1.ebuild,v 1.7 2005/03/05 18:11:31 kingtaco Exp $
 
 DESCRIPTION="access a working SSH implementation by means of a library"
 HOMEPAGE="http://0xbadc0de.be/projects/sshlib.html"

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.6 2005/03/05 07:46:10 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.7 2005/03/05 18:11:31 kingtaco Exp $
+
+  05 Mar 2005; Mike Doty <kingtaco@gentoo.org> :
+  ~amd64 per ka0ttics request
 
 *libssh-0.11 (05 Mar 2005)
 
