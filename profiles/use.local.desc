@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.618 2004/09/15 14:51:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.619 2004/09/15 22:07:52 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -243,6 +243,7 @@ games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/aabrowse:geoip - lookup countries by IP addresses via the GeoIP library
 games-util/xqf:geoip - Add geoip support
+gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-base/gnome-vfs:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
