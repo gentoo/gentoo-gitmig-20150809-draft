@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b8869b1ebb2050a5f24bea01f49becb4 qmail-mysql-1.03-r13.ebuild 14045
 MD5 d50526687642a486fa216d1ac9b36e96 qmail-mysql-1.03.ebuild 8434
 MD5 6f04177db099690087743e4b5a8537b7 ChangeLog 2582
@@ -6,7 +9,7 @@ MD5 e0686e52df7f0c840a7ac2bfe1fd291a files/tcp.qmqp.sample 337
 MD5 02b7d10943e7640a9e4bc684a0c2ed1a files/digest-qmail-mysql-1.03-r13 1446
 MD5 946a715ffdd5e6d2d29c6fdfb29376dd files/tcp.smtp.sample 3726
 MD5 55b519379b1330f57110fa6d60982cff files/tcp.pop3.sample 285
-MD5 7dbe164188aa14fd05fa2c26d1095a9a files/digest-qmail-mysql-1.03 385
+MD5 7228d980fe4d32086223d517b69a7ca8 files/digest-qmail-mysql-1.03 318
 MD5 76d218a258e2ec859ab80c377351afce files/tcp.qmtp.sample 370
 MD5 f42a779e5c708c2d7bf38de66dfb93f5 files/1.03/rc 108
 MD5 aa0823cdce32c502c856664c8b0ce775 files/1.03/run-qmailsmtpd 231
@@ -46,3 +49,10 @@ MD5 11437b16608a7950501c889b67d6a2db files/1.03-r13/config-sanity-check 824
 MD5 d3997795df512803e6a27b5486d2b81e files/1.03-r13/qmail-smtpd-relay-reject.gentoo.patch 1433
 MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03-r13/run-qmailsend 29
 MD5 0e97c0b031776f40cacdfbf3114af574 files/1.03-r13/run-qmailpop3dlog 97
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpP9II1lqEGTUzyQRAhaSAJ4jtmmQoIPdTTs6ZvqrGFsT4I1fEACfWPsx
+RsV2DooDzOO3btgtt3jxdXE=
+=/KBd
+-----END PGP SIGNATURE-----

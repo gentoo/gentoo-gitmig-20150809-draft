@@ -1,6 +1,5 @@
 MD5 622f65f982e380dbe86e6574f3abcb7c qmail-1.03.tar.gz 220668
 MD5 1d5b0aafb651ce2ad02aac6af80758c0 qmail-link-sync.patch 1403
-MD5 99070bb55cac5ad61f8fb203422e651e ext_todo-20030105.patch 33763
 MD5 2ff58c3570870a8ff9a1d9eb9aec05a6 big-concurrency.patch 9331
 MD5 8edda59102180973dd1bb546da7de160 qmail-0.0.0.0.patch 450
 MD5 0860a5b5cd5b6f99bf005e845b2e0764 qmail-mysql-1.1.8.patch 57702
