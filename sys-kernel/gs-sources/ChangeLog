@@ -1,9 +1,15 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.24 2003/10/14 22:35:33 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.25 2003/10/27 02:10:10 livewire Exp $
 
-*gs-sources-2.4.23_pre7 (014 Oct 2003)
-  14 Oct; Bob Johnson <livewire@gentoo.org>
+*gs-sources-2.4.23_pre8 (26 Oct 2003)
+  26 Oct 2003; Bob Johnson <livewire@gentoo.org>
+ 	- bumped to pre8
+	- bumped freeswan to 2.03
+	- added v4l2
+ 	
+*gs-sources-2.4.23_pre7 (14 Oct 2003)
+  14 Oct 2003; Bob Johnson <livewire@gentoo.org>
         - bumped to pre7
 	- win4lin compile fix
 
