@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.9_pre1.ebuild,v 1.1 2003/01/17 17:25:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.9_pre1.ebuild,v 1.2 2003/01/19 21:21:58 lostlogic Exp $
 
 # This includes backwards compatability for stable kernels
-
 IUSE=""
+
+inherit flag-o-matic
 
 inherit eutils
 
@@ -37,6 +38,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fPIC
+
 	einfo "Building modutils..."
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
 
