@@ -1,13 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.14.ebuild,v 1.4 2004/06/25 02:01:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.17.ebuild,v 1.1 2004/09/07 11:06:55 usata Exp $
+
+inherit ruby
 
 DESCRIPTION="A mail handling library for Ruby"
 HOMEPAGE="http://www.lickey.com/rubymail/"
 SRC_URI="http://www.lickey.com/rubymail/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~hppa ~mips ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~mips ~sparc ~x86 ~ppc"
+USE_RUBY="any"
 IUSE=""
 DEPEND="virtual/ruby"
 
@@ -22,4 +25,8 @@ src_install() {
 	dodoc NEWS NOTES README THANKS TODO
 	dohtml -r doc/*
 	cp -dr guide ${D}/usr/share/doc/${PF}
+}
+
+src_test() {
+	ruby tests/runtests.rb || die "runtests.rb failed."
 }
