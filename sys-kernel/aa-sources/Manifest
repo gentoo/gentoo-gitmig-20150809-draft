@@ -17,7 +17,7 @@ MD5 95708646470a95668e8789cd415844ed files/aa-sources.CAN-2004-0497.patch 846
 MD5 222e890035f4ad3152f0c2a625a9ea67 files/aa-sources-2.6.5.cmdlineLeak.patch 693
 MD5 b738cb0120a32aa92cfcfdbd564dd21f files/aa-sources-2.6.5.ProcPerms.patch 1368
 MD5 1dd59d14a720c0c23e47e28d0b4fd6f9 files/aa-sources-2.6.5.CAN-2004-0228.patch 437
-MD5 bc064c04efae22530cab9268b72113d4 files/digest-aa-sources-2.4.23-r3 288
+MD5 4ccd121645a534f0581df9b26d98c2c4 files/digest-aa-sources-2.4.23-r3 288
 MD5 5674421c7e2c7e50e2509bed7d96c4d4 files/aa-sources-2.6.5.CAN-2004-0427.patch 332
 MD5 8204afea1d572b49a4a80d8da4eef0c9 files/aa-sources-2.6.5.CAN-2004-0596.patch 1033
 MD5 eb70acb35ba13daa4b1fda53cb61fc01 files/aa-sources-2.6.5.CAN-2004-0495-0496.patch 23861
