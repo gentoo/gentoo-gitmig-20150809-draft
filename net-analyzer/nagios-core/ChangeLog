@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.14 2003/11/27 21:30:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.15 2004/01/27 11:47:17 mboman Exp $
+
+*nagios-core-1.1-r5 (27 Jan 2004)
+
+  27 Jan 2004; Michael Boman <mboman@gentoo.org> metadata.xml,
+  nagios-core-1.1-r5.ebuild:
+  More or less re-wrote the ebuild. Introducing new USE flag: "noweb". "noweb"
+  disables the installation of web interface. Very useful for distributed monitoring.
+  It also closes bug #20617 and #23669.
+
+  Because of the new "noweb" USE flag I removed the "gd" flag.
+
+  These ebuilds are unmaintained so i'm making myself the maintainer for now.
 
   27 Nov 2003; Martin Holzer <mholzer@gentoo.org> nagios-core-1.1-r4.ebuild:
   marking x86 stable
