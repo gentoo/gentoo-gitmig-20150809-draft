@@ -27,7 +27,9 @@
 
 # <solar@gentoo.org> (29 Sep 2003)
 # masked for security reasons bug 26787
-<=media-sound/mpg123-0.59s
+# masked <=r, as seen here:
+# http://archives.neohapsis.com/archives/bugtraq/2003-01/0116.html
+<=media-sound/mpg123-0.59r
 
 # <usata@gentoo.org> (30 Sep 2003)
 # Testing needed, beta version.
