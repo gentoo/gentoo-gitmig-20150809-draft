@@ -1,23 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.3.ebuild,v 1.1 2005/01/21 16:37:36 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.3.ebuild,v 1.2 2005/02/13 05:46:51 vapier Exp $
 
 inherit eutils gnuconfig
-
-IUSE="nls oggvorbis flac"
 
 DESCRIPTION="EasyTAG mp3/ogg ID3 tag editor"
 HOMEPAGE="http://easytag.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="nls oggvorbis flac"
+
 RDEPEND=">=media-libs/id3lib-3.8.2
 	>=x11-libs/gtk+-2.4.1
 	flac? ( >=media-libs/flac-1.1.0 >=media-libs/libvorbis-1.0 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
 
 src_unpack() {
 	unpack ${A}
@@ -40,7 +39,7 @@ src_install() {
 		GNOME_SYSCONFDIR=${D}/etc \
 		|| die
 
-	dodoc ChangeLog COPYING NEWS README TODO THANKS USERS-GUIDE
+	dodoc ChangeLog NEWS README TODO THANKS USERS-GUIDE
 }
 
 pkg_postinst() {
