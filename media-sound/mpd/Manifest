@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 051edad2c301a5288458c7059223b3ab ChangeLog 8518
-MD5 ab49b3978e51630cd199bddd4321bd49 metadata.xml 221
-MD5 b5c1597139467b11f93023360327c327 mpd-0.11.4-r1.ebuild 2457
 MD5 84c6ffa502998a8b06cc83de6c33594b mpd-0.11.5.ebuild 2873
-MD5 be29322e9ef93c85929ea30b851f5aa5 mpd-0.11.4.ebuild 2848
 MD5 f6579ea96d9eea72802fe573b750fea4 mpd-0.11.4-r2.ebuild 2662
-MD5 e1942b96aae7fa8cbc9b738857b5988f files/mpd.rc6 870
-MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5 63
-MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4-r2 63
-MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4-r1 63
+MD5 be29322e9ef93c85929ea30b851f5aa5 mpd-0.11.4.ebuild 2848
+MD5 051edad2c301a5288458c7059223b3ab ChangeLog 8518
+MD5 74c25ed47224b9d121ba2f3c7e73defe metadata.xml 217
+MD5 b5c1597139467b11f93023360327c327 mpd-0.11.4-r1.ebuild 2457
 MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4 63
+MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5 63
+MD5 e1942b96aae7fa8cbc9b738857b5988f files/mpd.rc6 870
+MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4-r1 63
+MD5 59c974273bb1408f7c525f068a3bf6d5 files/digest-mpd-0.11.4-r2 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCEAgFQlM6RnzZP+IRAv2lAJ0fwZZqmVGJktYUjXmf139ws4OsGgCfVPpa
-T0QzytDpB3uV/3errJK2HBE=
-=q8TS
+iD8DBQFCUbgN/rLF9B432nYRArRxAKCyzFCqFvOlLSdn+V5v7PGrJgG63ACgunH1
+3venH/GBTJ1qxnb77y9aCl8=
+=OXCb
 -----END PGP SIGNATURE-----
