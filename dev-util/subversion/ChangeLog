@@ -1,9 +1,15 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.26 2003/07/15 09:47:23 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.27 2003/07/16 19:06:41 pauldv Exp $
 
+*subversion-0.25.0 (16 Jul 2003)
+
+  16 Jul 2003; <paul@gentoo.org> subversion-0.25.0.ebuild:
+  New upstream version
 
 *subversion-0.24.2 (15 Jul 2003)
+  15 Jul 2003; <paul@gentoo.org> subversion-0.24.2-r1.ebuild:
+  Make repository location configurable by an environment variable
 
   15 Jul 2003; <paul@gentoo.org> subversion-0.24.2-r1.ebuild,
   subversion-0.24.2.ebuild:
