@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a25ff65adfa27d5ae129a3eaccead1f0 gplflash-0.4.10-r3.ebuild 1257
+MD5 808c19d052086eb1f9b8626bb901e37c gplflash-0.4.13.ebuild 1493
 MD5 24614946bc1ad9b13fe890223ef364fd gplflash-0.4.12.ebuild 1274
-MD5 fc554800a23205040a40889c45ee9901 ChangeLog 2593
+MD5 8263f26dde657296570b4054237934af ChangeLog 2697
 MD5 949fb05a0b370c806f90c42b6f70f248 metadata.xml 580
-MD5 aeb4d8afe606318a867c77f841d041ec gplflash-0.4.13.ebuild 1499
-MD5 37d2d7738b1e06fcb5c161ffce30f238 files/digest-gplflash-0.4.10-r3 61
-MD5 986f1d69944d8e520137dd61e3c480ed files/gplflash-0.4.10-fPIC.patch 2011
-MD5 4e51ed812f940be98742997fee035846 files/gplflash-0.4.10-gcc3-gentoo.diff 1060
-MD5 1560bb78cb5b479b310c1604fb1b46da files/gplflash-0.4.10-ppc.diff 2018
 MD5 1318f3bcf0259626c50162947f7eb7d5 files/digest-gplflash-0.4.12 68
 MD5 d7c22e5bc2dbb9299d6feb1ed3fe9504 files/digest-gplflash-0.4.13 68
+MD5 37d2d7738b1e06fcb5c161ffce30f238 files/digest-gplflash-0.4.10-r3 61
+MD5 986f1d69944d8e520137dd61e3c480ed files/gplflash-0.4.10-fPIC.patch 2011
+MD5 1560bb78cb5b479b310c1604fb1b46da files/gplflash-0.4.10-ppc.diff 2018
+MD5 4e51ed812f940be98742997fee035846 files/gplflash-0.4.10-gcc3-gentoo.diff 1060
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCOeAaevY57Fted3ERAovIAKC3Caco6EuRNyZYSe/c2KX6iEYhtQCgmqa5
+k4AfCyQI0B8NuLEn894Sg2E=
+=8nNP
+-----END PGP SIGNATURE-----

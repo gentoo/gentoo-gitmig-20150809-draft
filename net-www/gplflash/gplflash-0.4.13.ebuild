@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.13.ebuild,v 1.1 2005/03/08 14:34:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.13.ebuild,v 1.2 2005/03/17 19:51:29 lanius Exp $
 
 inherit nsplugins eutils flag-o-matic
 
@@ -34,7 +34,7 @@ src_compile() {
 	# configure -- includes and libraries won't be found correctly.
 	# temporal solution is pointing configure to the exaclt location
 	# until a better solution is found. bug #79270
-	econf --with-plugin-dir=${D}/${PLUGDIR} $(use_enable debug) \
+	econf --with-plugin-dir=${PLUGDIR} $(use_enable debug) \
 		--x-includes=/usr/include/X11/ --x-libraries=/usr/lib/ \
 		|| die "configure failed"
 
