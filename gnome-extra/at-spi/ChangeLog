@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.57 2004/08/08 01:00:30 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.58 2004/09/04 17:04:55 axxo Exp $
+
+  04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> at-spi-1.4.0.ebuild,
+  at-spi-1.4.2.ebuild:
+  fix depend syntax 58347
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> at-spi-1.4.2.ebuild:
   stable on amd64
