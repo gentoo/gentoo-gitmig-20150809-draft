@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r12.ebuild,v 1.2 2003/02/07 12:24:41 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r12.ebuild,v 1.3 2003/02/12 13:50:37 carpaski Exp $
 
 IUSE="build"
 
@@ -42,6 +42,10 @@ src_compile() {
 	else
 		make || die
 	fi
+	
+	cp ${S}/bin/emerge ${S}/bin/emerge.orig
+	sed 's:--timeout=60:--timeout=180:' < ${S}/bin/emerge.orig > ${S}/bin/emerge.new && mv ${S}/bin/emerge.new ${S}/bin/emerge
+	rm -f ${S}/bin/emerge.orig ${S}/bin/emerge.new
 }
 
 src_install() {
