@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-3.6.2-r1.ebuild,v 1.3 2004/07/14 16:37:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-3.6.2-r1.ebuild,v 1.4 2004/09/15 21:06:04 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="ssl pam tcpd crypt"
 
-DEPEND="crypt? ( >=app-crypt/gpgme-0.3.13 )
+DEPEND="crypt? ( =app-crypt/gpgme-0.3.14 )
 	ssl?   ( >=dev-libs/openssl-0.9.6 )
 	pam?   ( >=sys-libs/pam-0.75 )
 	tcpd?  ( >=sys-apps/tcp-wrappers-7.6 )
