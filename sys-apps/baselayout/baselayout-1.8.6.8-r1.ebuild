@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.15 2003/10/05 21:31:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.16 2003/10/14 21:24:59 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -59,7 +59,7 @@ src_unpack() {
 	if [ "${ARCH}" = "sparc" ]
 	then
 		cp rc.conf rc.conf.orig
-		sed -e 's:KEYMAP="us":KEYMAP="sun":' rc.conf.orig >rc.conf || die
+		sed -e 's:KEYMAP="us":KEYMAP="sunkeymap":' rc.conf.orig >rc.conf || die
 		rm -f rc.conf.orig
 	fi
 
@@ -135,7 +135,7 @@ defaltmerge() {
 	# (because it conflicts with some makefiles)
 	local ROOT=""
 	ROOT="`cat ${T}/ROOT`"
-	if [ -z "`use bootstrap`" -a -z "`use build`" -a -e ${ROOT}/dev/.devfsd ]
+	if [ -e ${ROOT}/dev/.devfsd ]
 	then
 		# We're installing to a system that has devfs enabled; don't create device
 		# nodes.

@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.8 2003/10/14 21:24:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.11.ebuild,v 1.1 2003/10/14 21:24:59 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
-# with hardened-gcc-2.4.2 we do not need the -lc and libs any more for fstack-protector when building static
-
 IUSE="bootstrap build static"
 
-SV="1.4.3.10"
-SVREV="p1"
+SV="1.4.3.11"
+SVREV="p2"
 # SysvInit version
 SVIV="2.84"
 
@@ -24,7 +22,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha mips arm hppa ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~arm ~hppa ~ia64"
 
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.23"
@@ -46,8 +44,6 @@ fi
 src_unpack() {
 
 	unpack ${A}
-
-	use static && export LDFLAGS="-static"
 
 	# Fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -99,6 +95,8 @@ src_unpack() {
 
 src_compile() {
 
+	use static && export LDFLAGS="-static"
+
 	echo "${ROOT}" > ${T}/ROOT
 
 	cd ${S}/src
@@ -113,26 +111,6 @@ src_compile() {
 		einfo "Building sysvinit..."
 		emake CC="${CC:-gcc}" LD="${CC:-gcc}" \
 			LDFLAGS="${LDFLAGS}" || die "problem compiling sysvinit"
-
-		if [ -z "`use bootstrap`" ]
-		then
-			# We let gawk now install filefuncs.so, and that is as a symlink to a
-			# versioned .so ...
-			if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
-			then
-				# Build gawk module
-#				cd ${S}/src/filefuncs
-#				einfo "Building awk module..."
-#				make CC="${CC:-gcc}" LD="${CC:-gcc}" || {
-#					eerror "Failed to build gawk module.  Make sure you have"
-#					eerror "sys-apps/gawk-3.1.1-r1 or later installed"
-#					die "problem compiling gawk module"
-#				}
-
-				eerror "Please install sys-apps/gawk-3.1.1-r2 or later!"
-				die "gawk too old"
-			fi
-		fi
 	fi
 }
 
@@ -178,6 +156,41 @@ keepdir_mount() {
 	done
 
 	return 0
+}
+
+create_dev_nodes() {
+	case ${ARCH} in
+		x86)
+			einfo "Using generic-i386 to make device nodes..."
+			${ROOT}/sbin/MAKEDEV generic-i386
+			;;
+		ppc)
+			einfo "Using generic-powerpc to make device nodes..."
+			${ROOT}/sbin/MAKEDEV generic-powerpc
+			;;
+		sparc)
+			einfo "Using generic-sparc to make device nodes..."
+			${ROOT}/sbin/MAKEDEV generic-sparc
+			;;
+		mips)
+			einfo "Using generic-mips to make device nodes..."
+			${ROOT}/sbin/MAKEDEV generic-mips
+			;;
+		arm)
+			einfo "Using generic-arm to make device nodes..."
+			${ROOT}/sbin/MAKEDEV generic-arm
+			;;
+		hppa)
+			einfo "Using generic-hppa to make device nodes..."
+			${ROOT}/sbin/MAKEDEV generic-hppa
+			;;
+		*)
+			einfo "Using generic to make device nodes..."
+			${ROOT}/sbin/MAKEDEV generic
+			;;
+	esac
+
+	${ROOT}/sbin/MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
 
 src_install() {
@@ -278,7 +291,7 @@ src_install() {
 	into /
 	dosbin ${S}/sbin/MAKEDEV
 	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
-	keepdir /lib/dev-state
+	keepdir /lib/dev-state /lib/udev-state
 	if [ "${altmerge}" -eq "1" ]
 	then
 		# rootfs and devfs
@@ -288,7 +301,7 @@ src_install() {
 	else
 		# Normal
 		keepdir /dev
-		keepdir /dev/pts /dev/shm
+		keepdir_mount /dev/pts /dev/shm
 		dosym ../sbin/MAKEDEV /dev/MAKEDEV
 	fi
 
@@ -333,12 +346,6 @@ src_install() {
 		do
 			[ -f ${foo} ] && doins ${foo}
 		done
-
-#		if [ ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
-#		then
-#			exeinto /lib/rcscripts
-#			doexe ${S}/src/filefuncs/filefuncs.so
-#		fi
 	fi
 
 	# Compat symlinks (some stuff have hardcoded paths)
@@ -419,6 +426,17 @@ src_install() {
 
 	keepdir ${svcdir} >/dev/null 2>&1
 
+	# Ok, create temp device nodes
+	mkdir -p "${T}/udev-$$"
+	cd "${T}/udev-$$"
+	echo
+	einfo "Making device nodes (this could take a minute or so...)"
+	create_dev_nodes
+	# Now create tarball that can also be used for udev
+	tar -jclpf "${T}/devices-$$.tar.bz2" *
+	insinto /lib/udev-state
+	newins "${T}/devices-$$.tar.bz2" devices.tar.bz2
+
 	# Skip this if we are merging to ROOT
 	[ "${ROOT}" = "/" ] && return 0
 
@@ -489,63 +507,36 @@ pkg_preinst() {
 			cp -af "${ROOT}/etc/init.d" "${ROOT}/etc/init_d.old"
 		fi
 	fi
+
+	if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2" -a -e "${ROOT}/dev/.udev" ]
+	then
+		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2" \
+			"${ROOT}/lib/udev-state/devices.tar.bz2.old"
+	fi
 }
 
 pkg_postinst() {
+	if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2.old" ]
+	then
+		# Rather use our current device tarball ...
+		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2.old" \
+			"${ROOT}/lib/udev-state/devices.tar.bz2"
+	else
+		# Make sure our tarball do not get removed ...
+		touch -m "${ROOT}/lib/udev-state/devices.tar.bz2"
+	fi
 
-	echo
-	# Doing device node creation in pkg_postinst() now so they aren't recorded
-	# in CONTENTS.  Latest CVS-only version of Portage doesn't record device
-	# nodes in CONTENTS at all.
 	defaltmerge
 	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ "${altmerge}" -eq "0" -a ! -e ${ROOT}/dev/.devfsd ]
+	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" ]
 	then
-		cd ${ROOT}/dev
-		# These devices are also needed by many people and should be included
-		einfo "Making device nodes (this could take a minute or so...)"
-
-		case ${ARCH} in
-			x86)
-				einfo "Using generic-i386 to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-i386
-				;;
-			ppc)
-				einfo "Using generic-powerpc to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-powerpc
-				;;
-			sparc)
-				einfo "Using generic-sparc to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-sparc
-				;;
-			mips)
-				einfo "Using generic-mips to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-mips
-				;;
-			arm)
-				einfo "Using generic-arm to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-arm
-				;;
-			hppa)
-				einfo "Using generic-hppa to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-hppa
-				;;
-			*)
-				einfo "Using generic to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic
-				;;
-		esac
-
-		${ROOT}/sbin/MAKEDEV sg
-		${ROOT}/sbin/MAKEDEV scd
-		${ROOT}/sbin/MAKEDEV rtc
-		${ROOT}/sbin/MAKEDEV audio
-		${ROOT}/sbin/MAKEDEV hde
-		${ROOT}/sbin/MAKEDEV hdf
-		${ROOT}/sbin/MAKEDEV hdg
-		${ROOT}/sbin/MAKEDEV hdh
+		einfo "Populating /dev with device nodes..."
+		tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" -C "${ROOT}/dev"
 	fi
+
+	echo
+
 	# We create the /boot directory here so that /boot doesn't get deleted when a previous
 	# baselayout is unmerged with /boot unmounted.
 	install -d ${ROOT}/boot
@@ -662,6 +653,7 @@ EOF
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [ "${ROOT}" = "/" -a -z "`use build`" -a -z "`use bootstrap`" ]
 	then
+		echo
 		# Do not return an error if this fails
 		/sbin/init U &>/dev/null || :
 
