@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.2 2004/08/27 09:30:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.3 2004/09/01 22:41:59 ciaranm Exp $
+
+*gentoo-syntax-20040901 (01 Sep 2004)
+
+  01 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20040901.ebuild:
+  Version bump. Changes since previous version include ChangeLog support, better
+  GLEP syntax, better error detection and more supported eclasses.
 
   27 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
   gentoo-syntax-20040826.ebuild:
