@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.751 2004/11/22 21:22:48 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.752 2004/11/22 21:33:32 robmoss Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -611,7 +611,6 @@ sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless driver
 sys-apps/shadow:skey - Enable S/Key (Single use password) authentication support
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube2/RaQ2)
-sys-boot/grub:netboot - Enables network booting
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/lam-mpi:f77 - Adds support for f77
