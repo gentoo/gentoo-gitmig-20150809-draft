@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.14 2004/09/12 20:21:14 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.15 2004/09/13 17:32:34 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -435,6 +435,52 @@ make_gcc_hard() {
 
 	# rebrand to make bug reports easier
 	release_version="${release_version/Gentoo/Gentoo Hardened}"
+}
+
+
+create_vanilla_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	if use hardened ; then
+		# if using hardened, then we need to move xgcc out of the way
+		# and recompile it
+		sed -i -e 's#ALL_CFLAGS = -DEFAULT_PIE_SSP#ALL_CFLAGS = #' Makefile
+		mv xgcc xgcc.hard
+		rm gcc.o
+		make xgcc
+		einfo "Creating a vanilla gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
+		mv xgcc.hard xgcc
+	else
+		einfo "Creating a vanilla gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
+	fi
+	popd > /dev/null
+}
+
+
+create_hardened_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	if use !hardened ; then
+		# if not using hardened, then we need to move xgcc out of the way
+		# and recompile it
+		sed -i -e 's#ALL_CFLAGS = #ALL_CFLAGS = -DEFAULT_PIE_SSP #' Makefile
+		mv xgcc xgcc.vanilla
+		rm gcc.o
+		make xgcc
+		einfo "Creating a hardened gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
+		mv xgcc.vanilla xgcc
+	else
+		einfo "Creating a hardened gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
+	fi
+	popd > /dev/null
+}
+
+
+split_out_specs_files() {
+	create_vanilla_specs_file || die "failed to split out vanilla specs"
+	create_hardened_specs_file || die "failes to split out hardened specs"
 }
 
 
@@ -963,6 +1009,10 @@ gcc_src_compile() {
 
 	einfo "Compiling ${PN}..."
 	gcc_do_make ${GCC_MAKE_TARGET}
+
+	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ] ; then
+		split_out_specs_files || die "failed to split out specs"
+	fi
 
 	popd > /dev/null
 }
