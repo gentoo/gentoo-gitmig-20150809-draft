@@ -1,3 +1,5 @@
-MD5 6a8d500dbfd7ebcb0c0019ee138a5c40 ChangeLog 441
+MD5 3eb54d17bf4d2676f8f9d5202cc5af15 ktoblzcheck-0.6.ebuild 556
+MD5 ae552970b6fc4f7990a46abab6877157 ChangeLog 560
 MD5 768f155fd7096a60c015bab6da449966 ktoblzcheck-0.3.ebuild 554
 MD5 7fa422d2333bdfe236a7901659b2ce82 files/digest-ktoblzcheck-0.3 67
+MD5 685db24b79c7f46d8897e77036ce4b08 files/digest-ktoblzcheck-0.6 67
