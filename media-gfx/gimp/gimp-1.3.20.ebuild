@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.20.ebuild,v 1.1 2003/09/20 08:47:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.20.ebuild,v 1.2 2003/09/20 08:57:04 liquidx Exp $
 
 IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
 
@@ -90,11 +90,11 @@ src_install() {
 	dodir /usr/share/applications
 	rm ${D}/usr/share/gimp/1.3/misc/gimp-1.3.desktop
 	mv ${D}/usr/share/gimp/1.3/misc/gimp.desktop ${D}/usr/share/applications/gimp-1.3.desktop
-	
+
 	# create temporary libtool workaround links
 	for x in libgimp libgimpwidgets libgimpbase libgimpcolor; do
 		dosym /usr/lib/${x}-1.3.so.20 /usr/lib/${x}-1.3.so.19
-	done		
+	done
 }
 
 pkg_postinst() {
