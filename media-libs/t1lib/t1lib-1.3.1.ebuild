@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.12 2003/03/20 04:27:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.13 2003/04/28 15:56:01 mholzer Exp $
 
 IUSE="X tetex"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Type 1 Rasterizer Library for UNIX/X11"
-SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
-HOMEPAGE="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib/t1lib.html"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
+HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
 
 DEPEND="X? ( virtual/x11 )
 	tetex? ( >=app-text/tetex-1.0.7 )"
@@ -17,7 +17,7 @@ LICENSE="LGPL-2 GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa"
 
 src_unpack() {
-	unpack "${P}.tar.gz"
+	unpack ${A}
 
 	cd ${S}/doc
 	mv Makefile.in Makefile.in-orig
