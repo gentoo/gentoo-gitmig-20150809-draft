@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.2 2002/04/11 03:32:36 spider Exp $
+*bbconf-1.2-r1 (10 Apr 2002)
+  10 Apr 2002; Spider <spider@gentoo.org> bbconf-1.2-r1.ebuild:
+  Fix qt related configure flag.
 
 *bbconf-1.2 (1 Feb 2002)
 
