@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.1 2004/08/11 05:45:55 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.2 2004/08/30 15:40:07 dholm Exp $
+
+  30 Aug 2004; David Holm <dholm@gentoo.org> kamix-0.5.4.ebuild:
+  Added to ~ppc.
 
 *kamix-0.5.4 (11 Aug 2004)
 

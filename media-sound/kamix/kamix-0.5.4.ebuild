@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/kamix-0.5.4.ebuild,v 1.1 2004/08/11 05:45:55 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/kamix-0.5.4.ebuild,v 1.2 2004/08/30 15:40:07 dholm Exp $
 
 inherit kde
 need-kde 3
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/kamix/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="${DEPEND}
 	>=media-libs/alsa-lib-0.9"
