@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.19 2004/12/06 23:12:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.20 2004/12/06 23:23:19 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1274,6 +1274,7 @@ setup_config_files() {
 	# Fix default config files after installing fonts to /usr/share/fonts
 	sed -i -e "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
 		-e "s:/usr/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
+		-e "s:/usr/$(get_libdir)/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/xorg.conf.example
 	if use font-server; then
 		sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
