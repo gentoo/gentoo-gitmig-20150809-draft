@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/files/speedfreq.rc,v 1.4 2004/02/25 13:46:58 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/files/speedfreq.rc,v 1.5 2004/03/11 00:16:10 tantive Exp $
 
 depend() {
 	need modules logger
@@ -12,19 +12,21 @@ check_battery() {
 	[ "${SPEEDFREQ_SPEED}" == "auto" ] || return 0
 
 	local status=""
-	if [ -e /proc/acpi/battery/BAT1/state ] ; then
+	if [ -e /proc/acpi/battery/BAT0/state ] ; then
+		status="$(awk '/^charging/ {print $NF}' /proc/acpi/battery/BAT0/state)"
+	elif [ -e /proc/acpi/battery/BAT1/state ] ; then
 		status="$(awk '/^charging/ {print $NF}' /proc/acpi/battery/BAT1/state)"
 	elif [ -e /proc/pmu/info ] ; then
 		status="$(awk '/^AC Power/ {print $NF}' /proc/pmu/info)"
-		[ ${status} -eq 1 ] \
+	[ ${status} -eq 1 ] \
 			&& status="charging" \
 			|| status="discharging"
 	fi
 
 	case ${status} in
-		charging)		SPEEDFREQ_SPEED=performance;;
+		charging)	SPEEDFREQ_SPEED=performance;;
 		discharging)	SPEEDFREQ_SPEED=powersave;;
-		*)				SPEEDFREQ_SPEED=performance;;
+		*)		SPEEDFREQ_SPEED=performance;;
 	esac
 	return 0
 }

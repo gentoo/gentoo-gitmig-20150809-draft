@@ -6,4 +6,4 @@ MD5 1cab56f6e74cd2e900c9f59f55383d11 files/speedfreq.conf 783
 MD5 384a3c0ba9c47cef45f4b202e69f5581 files/digest-speedfreq-0.5 64
 MD5 d46afb4e9c52383f9cd2f8d52413e25e files/battery.sh 790
 MD5 f96b11d757583258d2fff576c68b06e2 files/digest-speedfreq-0.7.2 66
-MD5 bac658e4df648adcef27f160d917b0f5 files/speedfreq.rc 1220
+MD5 15c2bcca7f009a18cb5cf7abd39d3fef files/speedfreq.rc 1340
