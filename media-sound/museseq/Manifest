@@ -1,9 +1,8 @@
-MD5 b5529e82b3105a7b0ab30523576baa53 ChangeLog 2232
+MD5 bc13e6b8638b6c33af260200cbca39b2 ChangeLog 2323
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 5414de7396aa13b76f24d7ea3d2567c8 museseq-0.6.0.ebuild 1669
 MD5 81f234e80c7dad37cca358041fa47500 museseq-0.6.2-r1.ebuild 2750
 MD5 537ef14b3847d7d6c3b287abd84386ff museseq-0.6.2.ebuild 2595
-MD5 2290c47b73ded2b71aa0b126ef06c1de museseq-0.7.0.ebuild 2573
 MD5 cbc52b356437ff53ced441374a08d178 files/digest-museseq-0.6.0 64
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2 64
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2-r1 64
@@ -12,4 +11,3 @@ MD5 08b5947de834c47253a313e6a7d0a3e5 files/museseq-0.6.2-fPIC.patch 4002
 MD5 8bf0be08b3013a6047aecad1e99bc1fb files/museseq-0.6.2-gcc34.patch 5500
 MD5 34b26def47703a0516433e9fb07ed0fd files/museseq-0.6.2-int2ptr.patch 20425
 MD5 7fb0bc9c25aa67018b8c07120f4f16a1 files/museseq-0.6.2-memory.patch 2032
-MD5 20ef97c251eae618ada71d7493308b96 files/digest-museseq-0.7.0 64
