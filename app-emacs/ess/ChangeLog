@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ess
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.4 2004/08/26 13:27:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.5 2004/08/26 15:03:17 usata Exp $
+
+*ess-5.2.2-r1 (26 Aug 2004)
+
+  26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +ess-5.2.2-r1.ebuild,
+  -ess-5.2.2.ebuild:
+  Fixed missing ../../etc/ess directory.
 
 *ess-5.2.2 (26 Aug 2004)
 

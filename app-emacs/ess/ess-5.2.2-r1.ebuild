@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.2.2.ebuild,v 1.1 2004/08/26 13:27:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.2.2-r1.ebuild,v 1.1 2004/08/26 15:03:17 usata Exp $
 
 inherit elisp
 
@@ -23,29 +23,33 @@ RDEPEND="virtual/emacs"
 SITEFILE=50ess-gentoo.el
 
 src_compile() {
-	einfo "Compiling lisp sources..."
-	pushd ${S}/lisp && make;
-	popd;
-	einfo "Making documentation..."
+	#einfo "Compiling lisp sources..."
+	#pushd ${S}/lisp && make;
+	#popd;
+	#einfo "Making documentation..."
 	# The -glossary option doesn't work with Gentoo texi2html.
 	sed "s:-glossary::g" ${S}/doc/Makefile > ${T}/Makefile;
-	mv -f ${T}/Makefile ${S}/doc/Makefile;
-	pushd ${S}/doc && make;
-	popd;
+	#mv -f ${T}/Makefile ${S}/doc/Makefile;
+	#pushd ${S}/doc && make;
+	#popd;
+	make PREFIX=/usr \
+		INFODIR=/usr/share/info \
+		LISPDIR=/usr/share/emacs/site-lisp/ess \
+		|| die
 }
 
 src_install() {
-	elisp-install ${PN} lisp/*.el lisp/*.elc;
+	make PREFIX=${D}/usr \
+		INFODIR=${D}/usr/share/info \
+		LISPDIR=${D}/usr/share/emacs/site-lisp/ess \
+		install || die
 	elisp-site-file-install ${FILESDIR}/${SITEFILE};
-	doinfo ${S}/doc/*.info*;
-	dohtml ${S}/doc/*.html;
-	dodoc ${S}/doc/[N-Z]*;
-	dodoc ${S}/etc/{sas-keys.ps,ess-sas-sh-command,ess-s?.S}
+	dodir /usr/share/emacs/etc/ess
+	cp -a etc/* ${D}/usr/share/emacs/etc/ess
+	dohtml ${S}/doc/html/*.html
+	dodoc ${S}/doc/{NEWS,README,TODO}
 	insinto /usr/share/doc/${P}
 	doins ${S}/doc/ess-intro.pdf
-	insinto /usr/share/doc/${P}/examples
-	doins ${S}/etc/function-outline.S
-	cp -Rf ${S}/etc/other/S-spread ${D}/usr/share/doc/${P}/examples
 }
 
 pkg_postinst() {
