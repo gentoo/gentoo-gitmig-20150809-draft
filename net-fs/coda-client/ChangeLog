@@ -1,0 +1,33 @@
+# ChangeLog for net-fs/coda-client
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.1 2002/10/23 21:23:01 lostlogic Exp $
+
+*coda-client-5.3.19 (23 Jul 2002)
+
+  23 Oct 2002; Brandon Low <lostlogic@gentoo.org> coda-client-5.3.19.ebuild, coda-client-5.3.19-gentoo.patch, coda-client-5.3.19-gentoo2.patch:
+
+  This took forever to make it work, but it does now, gcc-3 compile
+  fixes are in gentoo2.patch and there is some sedfu in the ebuild.
+
+  This is this the initial portage commit of this ebuild.
+
+  15 Jul 2002; Greg Briggs <gb006k@mail.rochester.edu> 
+  coda-client-5.3.19.ebuild, coda-client-5.3.19-gentoo.patch: 
+
+  Created  ebuild for this package.
+  * To test out coda in a hurry, do (as root of course):
+      emerge coda-client
+      venus-setup testserver.coda.cs.cmu.edu
+      /etc/init.d/venus.init start
+  Okay, now watch your 11th console until it says "/coda now mounted".
+  Now look in /coda for some files; you have connected to the testserver!
+  * Notes: You need kernel support for Coda enabled. You definitely need to 
+  read the docs to use Coda, at least 
+      http://www.coda.cs.cmu.edu/doc/html/coda-howto-5.html
+  The initscript that gets added to your system is "/etc/init.d/venus.init".
+  This will also mount coda -- no changes to fstab. By the way, you can test
+  with the public Coda server "testserver.coda.cs.cmu.edu".
+  * Bugs (these are in other packages I think; it is SAFE TO IGNORE them)
+  "cat: write error" during ebuild: a problem in depscan.sh
+  "mv: cannot move `cfs0-' to `cfs0': Operation not permitted" during 
+    venus-setup: a problem in "( cd /dev ; ./MAKEDEV cfs )"
