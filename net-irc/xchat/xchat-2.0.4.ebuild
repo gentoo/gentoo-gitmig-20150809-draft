@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.5 2003/08/21 14:51:30 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.6 2003/08/21 15:14:23 obz Exp $
 
 inherit eutils
 
@@ -64,4 +64,17 @@ src_install() {
 	doins src/common/xchat-plugin.h
 
 	dodoc AUTHORS COPYING ChangeLog README*
+}
+
+pkg_postinst( ) {
+
+	# warnings for people for who USE="gtk2 -gtk" doesnt behave as
+	# they expect, see bug #26427
+	if [ ! `use gtk` ]; then
+		echo ""
+		ewarn "If you wish to use the gtk2 frontend for xchat, please"
+		ewarn "USE=\"gtk\" emerge xchat"
+		echo ""
+	fi
+
 }
