@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.6 2004/07/09 21:44:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.7 2004/07/15 05:22:04 agriffis Exp $
 
-IUSE="build crypt"
+IUSE=""
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
