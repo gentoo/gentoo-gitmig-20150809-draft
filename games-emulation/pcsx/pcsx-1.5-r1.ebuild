@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.2 2003/09/09 23:33:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.3 2004/02/13 15:59:20 dholm Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.pcsx.net/downloads/PcsxSrc-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="opengl"
 
 DEPEND="sys-libs/zlib
@@ -25,7 +25,7 @@ RDEPEND="games-emulation/psemu-cdr
 	games-emulation/psemu-padjoy
 	games-emulation/psemu-peopsspu
 	|| (
-		opengl? ( games-emulation/psemu-gpupetemesagl )
+		opengl? ( x86? games-emulation/psemu-gpupetemesagl )
 		games-emulation/psemu-peopssoftgpu
 	)"
 
@@ -42,6 +42,14 @@ src_unpack() {
 		-e 's:Pcsx.cfg:~/.pcsx/config:' \
 		Linux/LnxMain.c \
 		|| die "sed LnxMain.c failed"
+	if [ "${ARCH}" = "ppc" ]; then
+		sed -i \
+			-e "s:^CPU\ =.*:CPU = powerpc:" Linux/Makefile \
+			|| die "sed Linux/Makefile failed"
+		sed -i \
+			-e "s:__LINUX__:__i386__:g" Gte.c \
+			|| die "sed Gte.c failed"
+	fi
 }
 
 src_compile() {
