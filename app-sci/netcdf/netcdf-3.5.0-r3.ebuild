@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/netcdf-3.5.0-r3.ebuild,v 1.5 2004/02/06 15:47:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/netcdf-3.5.0-r3.ebuild,v 1.6 2004/02/17 20:03:29 agriffis Exp $
 
 DESCRIPTION="Scientific library and interface for array oriented data access"
 SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.Z"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.unidata.ucar.edu/packages/netcdf/"
 
 LICENSE="UCAR-Unidata"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64 alpha ia64"
 
 S=${WORKDIR}/${P}/src
 

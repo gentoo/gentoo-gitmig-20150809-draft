@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/netcdf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.8 2004/02/06 15:50:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.9 2004/02/17 20:03:29 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> netcdf-3.5.0-r3.ebuild:
+  stable on alpha and ia64 for the sake of dev-python/ScientificPython
 
   12 Jan 2004; <nerdboy@gentoo.org> netcdf-3.5.0-r3.ebuild,
   netcdf-3.5.0-r2.ebuild, metadata.xml:
