@@ -22,6 +22,10 @@
 ##
 
 # <tantive@gentoo.org> (18 Sep 2002)
+# Version bumped, masked due to freeze
+=sys-kernel/openmosix-sources-2.4.19-r5
+
+# <tantive@gentoo.org> (18 Sep 2002)
 # Initial release, masked for testing.
 =app-admin/openmosixview-1.2
 
