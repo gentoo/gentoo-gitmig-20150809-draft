@@ -14,13 +14,20 @@ SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/nessus-libraries-${PV}
 
 HOMEPAGE="http://www.nessus.org/"
 
+DEPEND=">=sys-apps/bash-2.04
+	>=sys-libs/glibc-2.1.3
+	>=dev-libs/glib-1.2.8
+	>=x11-libs/gtk+-1.2.8
+	>=x11-base/xfree-4.0.1"
+
 src_compile() {
 
   export PATH=${D}/usr/bin:$PATH
   export LD_LIBRARY_PATH=${D}/usr/lib:$LD_LIBRARY_PATH
   echo "Compiling libraries..."                           
   cd ${S}/nessus-libraries
-  try ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
+  try ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state \
+	--enable-pthread 
   try make
   try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
   cd ${D}/usr/bin
