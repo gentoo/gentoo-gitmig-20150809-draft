@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.4.ebuild,v 1.2 2002/07/17 09:08:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.4.ebuild,v 1.3 2002/11/04 17:53:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tcl/tk MSN Messenger client for linux"
@@ -23,8 +23,8 @@ src_unpack() {
 src_install() {
 
 	cd ${S}
-	mkdir -p ${D}/usr/share/msn4lin
-	mkdir -p ${D}/usr/bin
+	dodir /usr/share/msn4lin
+	dodir /usr/bin
 	rm -f lang/languages
 	cp ${FILESDIR}/languages-${PV} lang/languages
 	dodoc GNUGPL agradecimientos.txt leeme.txt original.txt
@@ -36,5 +36,3 @@ src_install() {
 	ln -sf /usr/share/msn4lin/msn4lin ${D}/usr/bin/msn4lin
 	
 }
-
-

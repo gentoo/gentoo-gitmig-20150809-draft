@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.7.ebuild,v 1.2 2002/11/01 14:08:28 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.7.ebuild,v 1.3 2002/11/04 17:52:02 seemant Exp $
 
 IUSE="ssl"
 
@@ -39,7 +39,7 @@ src_install() {
 	export BINDIR=$PREFIX/bin
 	export LIBDIR=$PREFIX/share/psi
 
-	mkdir -p ${D}/usr/share/psi
+	dodir /usr/share/psi
 	echo [Installing Psi]
 
 	mkdir -p $BINDIR
@@ -58,10 +58,10 @@ src_install() {
 
 
 
-       if [ "`use ssl`" ]; then
-	       cd ${WORKDIR}/qssl-${QV}
-               cp libqssl.so ${D}/usr/share/psi
-               cd ${S}
-        fi
+	if [ "`use ssl`" ]; then
+		cd ${WORKDIR}/qssl-${QV}
+		cp libqssl.so ${D}/usr/share/psi
+		cd ${S}
+	fi
 
 }

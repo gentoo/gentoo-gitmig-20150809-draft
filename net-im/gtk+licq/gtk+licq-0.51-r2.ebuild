@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.7 2002/10/05 05:39:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.8 2002/11/04 17:52:30 seemant Exp $
 
 IUSE="nls spell gnome"
 
@@ -44,7 +44,8 @@ src_install() {
 	myprefix="usr"
 	make prefix=${D}/${myprefix} install || die
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
-	mkdir -p ${D}/usr/lib/licq
+
+	dodir /usr/lib/licq
 	cd ${D}/usr/lib/licq
 	ls	../../../${myprefix}/lib/licq
 	ln -s ../../../${myprefix}/lib/licq/* .
