@@ -1,30 +1,28 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.3.1.ebuild,v 1.1 2002/06/25 20:24:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.3.1.ebuild,v 1.2 2002/07/17 09:52:23 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="kernel level implementation of the AppleTalk Protocol Suite"
-SRC_URI="http://download.sourceforge.net/netatalk/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/netatalk/${P}.tar.gz"
 HOMEPAGE="http://netatalk.sourceforge.net"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
-DEPEND="virtual/glibc
+DEPEND="sys-apps/shadow
+	>=sys-libs/db-3
 	pam? ( sys-libs/pam )
-	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
-	sys-apps/shadow
-	>=sys-libs/db-3"
+	tcpd? ( sys-apps/tcp-wrappers )"
 
 src_compile() {
 	use pam  && myconf="${myconf} --with-pam"
 	use tcpd && myconf="${myconf} --with-tcp-wrappers"
 	use ssl  || myconf="${myconf} --disable-ssl"
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+
+	econf \
 		--enable-fhs \
 		--with-shadow \
 		--with-db3 \

@@ -14,10 +14,12 @@ extensive UNIX environment for accessing files easily and quickly."
 
 SRC_URI="http://www.openafs.org/dl/openafs/1.2.2/openafs-1.2.2-src.tar.bz2"
 HOMEPAGE="http://www.openafs.org/"
-LICENSE="IPL-1"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2
+SLOT="0"
+LICENSE="IPL-1"
+KEYWORDS="x86 -ppc -sparc -sparc64"
+
+DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.75"
 
 ARCH=i386_linux24
