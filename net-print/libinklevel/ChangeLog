@@ -1,0 +1,10 @@
+# ChangeLog for net-print/libinklevel
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.1 2003/09/21 15:21:56 lanius Exp $
+
+*libinklevel-0.5 (21 Sep 2003)
+
+  21 Sep 2003; Heinrich Wendel <lanius@gentoo.org> libinklevel-0.5.ebuild,
+  metadata.xml:
+  initial release, thx to Marcin Wisnicki <wisnia21@freeshell.org> for the ebuild
+
