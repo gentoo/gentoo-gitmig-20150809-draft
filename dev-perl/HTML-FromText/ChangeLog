@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-FromText
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.2 2003/12/16 19:20:46 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.3 2004/02/17 19:44:37 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> HTML-FromText-1.005.ebuild:
+  stable on alpha and ia64
 
   16 Dec 2003; Jason Wever <weeve@gentoo.org> HTML-FromText-1.005.ebuild:
   Marked stable on sparc to fix broken dependencies of
