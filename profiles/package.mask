@@ -435,12 +435,6 @@ app-emulation/winex-cvs
 # but with new portage "update" feature ....
 net-misc/nt
 
-# <seemant@gentoo.org> (31 Aug 2002)
-# masked while readline upgrade issues are sorted with bash
-# Should be sorted now, as bash use included readline.
-#=sys-libs/readline-4.3*
-#>=sys-apps/bash-2.05b
-
 # <cselkirk@gentoo.org> (31 Aug 2002)
 # masked for testing
 =net-libs/libpcap-0.7.1-r1
@@ -484,10 +478,6 @@ dev-perl/CDDB-File
 =sys-libs/glibc-2.2.5-r8
 
 
-# <cardoe@gentoo.org> (24 Aug 2002)
-# masked for testing...
-#>=sys-apps/pcmcia-cs-3.2.1
-
 # <seemant@gentoo.org> (23 Aug 2002)
 # masked for testing.  x3270 for version bump, and xmms for removal of avi
 # stuff, gpgme for version bump.
@@ -520,13 +510,6 @@ x11-libs/qt-embedded
 # <leonardop@gentoo.org> (19 Aug 2002)
 # Masked for, guess what... testing
 =dev-util/guile-1.4.1
-
-# <mcummings@gentoo.org> (18 Aug 2002)
-# The following are masked for testing
-#=dev-perl/AxKit-1.6
-#=dev-perl/XML-LibXML-1.52
-#=dev-perl/XML-NamespaceSupport-1.07
-#=dev-perl/XML-LibXSLT-1.50
 
 # <bass@gentoo.org> (16 Aug 2002)
 # test it please
