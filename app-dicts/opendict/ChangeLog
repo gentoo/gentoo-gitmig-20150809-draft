@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/opendict
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.1 2004/08/13 21:15:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.2 2004/08/14 17:26:56 pythonhead Exp $
+
+*opendict-0.5.4 (14 Aug 2004)
+
+  14 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> opendict-0.5.4.ebuild:
+  Fixed symlink. bug# 60339
 
   13 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> :
   Initial commit. Thanks <roma1390@uosis.mif.vu.lt> for the ebuild. bug #32120

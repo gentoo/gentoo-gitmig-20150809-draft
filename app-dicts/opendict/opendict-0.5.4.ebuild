@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.5.4.ebuild,v 1.1 2004/08/13 21:15:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.5.4.ebuild,v 1.2 2004/08/14 17:26:56 pythonhead Exp $
 
 inherit python
 
@@ -35,7 +35,10 @@ src_install() {
 	cp po/lt/opendict.mo ${D}/usr/share/locale/lt/LC_MESSAGES/
 	cp opendict.py ${DHOME}
 	cp copying.txt ${DHOME}
-	dosym ${DHOME}/opendict.py /usr/bin/opendict
+	dodir /usr/bin
+	fperms 755 /usr/lib/python${PYVER}/site-packages/opendict/opendict.py
+	dosym /usr/lib/python${PYVER}/site-packages/opendict/opendict.py /usr/bin/opendict || die "dosym failed"
+
 	cp misc/opendict.desktop ${D}/usr/share/applications/
 	dodoc BUGS ChangeLog README.txt TODO.txt doc/OpenDict_plugin_dev.txt
 }
