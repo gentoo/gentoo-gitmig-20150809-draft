@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.23 2003/10/01 15:55:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.24 2003/12/14 04:02:05 gmsoft Exp $
+
+  14 Dec 2003; Guy Martin <gmsoft@gentoo.org> fileutils-4.1.11-r2.ebuild:
+  Marked stable on hppa.
 
   01 Oct 2003; Aron Griffis <agriffis@gentoo.org> fileutils-4.1.11-r2.ebuild:
   Stable on alpha to handle the coreutils changeover (see bug 30032)
