@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta2.ebuild,v 1.1 2004/12/19 00:00:09 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta2.ebuild,v 1.2 2004/12/19 20:15:05 mr_bones_ Exp $
 
 inherit java-pkg eutils
 
@@ -52,7 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	java-pkg_dojar target/jaxen*.jar
 
 	use doc && java-pkg_dohtml -r target/doc/*
