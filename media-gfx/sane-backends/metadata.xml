@@ -4,6 +4,5 @@
 <herd>no-herd</herd>
 <maintainer>
   <email>phosphan@gentoo.org</email>
-  <description>No real maintainer, don't even have a scanner. Just looks like I sometimes fix bugs. If you want to maintain this, just go ahead.</description>
 </maintainer>
 </pkgmetadata>
