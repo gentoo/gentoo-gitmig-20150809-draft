@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-2.0.ebuild,v 1.5 2004/09/03 19:16:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-2.0.ebuild,v 1.6 2004/09/23 12:23:13 vapier Exp $
 
 DESCRIPTION="Tool for creating compressed filesystem type squashfs"
 HOMEPAGE="http://squashfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/squashfs/squashfs${PV}.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390 ppc64"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
