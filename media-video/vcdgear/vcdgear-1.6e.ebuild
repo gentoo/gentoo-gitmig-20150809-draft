@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.6 2003/07/12 21:12:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.7 2004/02/22 22:33:58 agriffis Exp $
 
 DESCRIPTION="extract MPEG streams from CD images, convert VCD files to MPEG, correct MPEG errors, and more"
 HOMEPAGE="http://www.vcdgear.com/"
@@ -15,7 +15,7 @@ S="${WORKDIR}/vcdgear"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc  -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 IUSE="static"
 
 DEPEND=""

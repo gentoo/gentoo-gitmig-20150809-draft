@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.4.ebuild,v 1.3 2004/02/18 16:20:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.4.ebuild,v 1.4 2004/02/22 22:33:43 agriffis Exp $
 
 
 inherit check-kernel
@@ -11,7 +11,7 @@ SRC_URI="http://www.smcc.demon.nl/webcam/pwcx-${PV}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc  -alpha"
+KEYWORDS="~x86 -ppc -sparc -alpha"
 DEPEND=""
 S=${WORKDIR}/pwcx-${PV}
 
