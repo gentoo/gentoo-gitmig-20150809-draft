@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.5 2003/04/27 11:12:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.6 2003/05/01 12:37:50 taviso Exp $
+
+*bash-2.05b-r5 (01 May 2003)
+
+  01 May 2003; Tavis Ormandy <taviso@gentoo.org> bash-2.05b-r5.ebuild,
+  files/bash-2.05b-empty-herestring.patch:
+  Fixing segfault on empty herestring.
 
 *bash-2.05b-r4 (27 Apr 2003)
 
