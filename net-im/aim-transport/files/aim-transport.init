@@ -7,7 +7,7 @@ depend() {
 
 start() {
 	ebegin "Starting AIM Jabber Transport"
-	jabberd -B -c /etc/jabber/aimtrans.xml -H /var/spool/jabber >/dev/null 2>&1
+	/usr/sbin/jabberd -B -c /etc/jabber/aimtrans.xml -H /var/spool/jabber >/dev/null 2>&1
 	eend $?
 }
 
