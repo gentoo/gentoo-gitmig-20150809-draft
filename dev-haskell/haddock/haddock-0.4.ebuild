@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.5 2003/09/07 03:13:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.6 2003/09/11 01:34:54 msterret Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -25,7 +25,7 @@ DEPEND="virtual/ghc
 		=app-text/docbook-sgml-dtd-3.1-r1
 		>=app-text/docbook-dsssl-stylesheets-1.64
 		tetex? ( >=app-text/tetex-1.0.7
- 			>=app-text/jadetex-3.12 ) )"
+		>=app-text/jadetex-3.12 ) )"
 
 RDEPEND=""
 
@@ -45,7 +45,7 @@ src_compile() {
 	# using make because emake behaved strangely on my machine
 	make || die
 
-        # if documentation has been requested, build documentation ...
+	# if documentation has been requested, build documentation ...
 	if use doc; then
 		cd ${S}/haddock/doc
 		emake html || die
