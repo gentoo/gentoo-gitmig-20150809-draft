@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_random
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/ChangeLog,v 1.6 2004/07/06 00:59:13 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/ChangeLog,v 1.7 2004/11/01 21:07:59 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  mod_random-2.0.ebuild:
+  Marked ~ppc64; bug #67404
 
 *mod_random-1.4 (07 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-2.0.ebuild,v 1.5 2004/06/25 01:03:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-2.0.ebuild,v 1.6 2004/11/01 21:07:59 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}
 SRC_URI="http://software.tangent.org/download/${P}.tar.gz"
 DEPEND="=net-www/apache-2*"
 LICENSE="Apache-1.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc64"
 IUSE=""
 SLOT="0"
 
