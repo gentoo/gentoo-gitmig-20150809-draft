@@ -63,3 +63,4 @@ move app-sci/clustalw sci-biology/clustalw
 move app-sci/primer3 sci-biology/primer3
 move app-sci/aaindex sci-biology/aaindex
 move app-sci/cutg sci-biology/cutg
+move app-sci/prints sci-biology/prints
