@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.5.ebuild,v 1.6 2005/01/07 01:54:45 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.5.ebuild,v 1.7 2005/01/08 23:34:09 slarti Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2 LGPL-2"
 
 IUSE="dvdr hal"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa ~amd64 alpha ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc hppa amd64 alpha ~ia64 ~mips"
 
 RDEPEND=">=dev-libs/glib-2.4
 	>=x11-libs/gtk+-2.4

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.8.0.ebuild,v 1.6 2004/12/23 16:36:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.8.0.ebuild,v 1.7 2005/01/08 23:37:03 slarti Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="Ximian-logos GPL-2"
 
 SLOT="2"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64 ~mips"
 IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.8.0.1.ebuild,v 1.5 2004/12/11 10:50:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.8.0.1.ebuild,v 1.6 2005/01/08 23:22:16 slarti Exp $
 
 inherit gnome2
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-1.1.0.ebuild,v 1.6 2004/12/23 20:15:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-1.1.0.ebuild,v 1.7 2005/01/08 23:40:20 slarti Exp $
 
 inherit gnome2
 
 DESCRIPTION="GAIL libraries for Gnome2 "
 HOMEPAGE="http://developer.gnome.org/projects/gap/"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64 ~mips"
 LICENSE="LGPL-2"
 IUSE=""
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.6.0.ebuild,v 1.9 2004/07/04 14:12:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.6.0.ebuild,v 1.10 2005/01/08 23:37:03 slarti Exp $
 
 inherit gnome2
 
