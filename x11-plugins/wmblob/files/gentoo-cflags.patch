@@ -1,0 +1,11 @@
+--- configure	2004-07-18 00:39:44.704951200 +0200
++++ configure	2004-07-18 00:40:42.536159520 +0200
+@@ -4473,7 +4473,7 @@
+ 
+ 
+ # compiler flags
+-CFLAGS="$CFLAGS -O2 -Wall"
++CFLAGS="$CFLAGS $GENTOO_CFLAGS -Wall"
+ 
+                               ac_config_files="$ac_config_files Makefile src/Makefile doc/Makefile"
+ 

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WmBlob
+Comment=Blobs viewer
+Comment[pl]=Wyświetlacz blobów
+Exec=wmblob
+Type=Application
+Encoding=UTF-8
+Terminal=0
+Categories=Application;Graphics;
