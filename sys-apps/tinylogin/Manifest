@@ -1,3 +1,5 @@
-MD5 260bed24348e89cad2d4f7c97fe6aebc ChangeLog 343
-MD5 ca025b05f358ac71e8db3cdec2b2d823 tinylogin-1.2.ebuild 766
 MD5 7b60c7a8c430066d9c935f0c7dfa3492 files/digest-tinylogin-1.2 65
+MD5 f205e4d830aea7ebd7633fc6ba5816ce files/digest-tinylogin-1.4 65
+MD5 ca025b05f358ac71e8db3cdec2b2d823 tinylogin-1.2.ebuild 766
+MD5 7f21fe158930df0d19d1edf7a285ac8e ChangeLog 445
+MD5 b38f72bddd188dfb41d7cda8fee04dfd tinylogin-1.4.ebuild 749
