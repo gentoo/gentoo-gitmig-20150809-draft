@@ -1,10 +1,16 @@
 # ChangeLog for media-lib/libsndfile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.1 2002/05/24 07:05:41 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.2 2002/09/18 20:01:50 raker Exp $
+
+*libsndfile-1.0.1 (18 Sep 2002)
+
+  18 Sep 2002; Nick Hadaway <raker@gentoo.org> libsndfile-1.0.1.ebuild,
+  files/digest-libsndfile-1.0.1 :
+  Version bump.  API changes from version 0 to version 1 are available
+  at http://www.zipworld.com.au/~erikd/libsndfile/version-1.html
 
 *libsndfile-0.0.28 (24 May 2002)
 
   24 May 2002; Arcady Genkin <agenkin@thpoon.com> libsndfile-0.0.28.ebuild :
-  
   Initial version of the package, created by
   ryan.shaw@stanfordalumni.org (Ryan Shaw).
