@@ -1,6 +1,10 @@
 # ChangeLog for media-video/realone
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/ChangeLog,v 1.8 2003/05/11 13:21:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/ChangeLog,v 1.9 2003/05/22 09:08:33 liquidx Exp $
+
+  22 May 2003; Alastair Tse <liquidx@gentoo.org> realone-1.ebuild:
+  make the delay in exiting a little more robust. thanks to Chris Bainbridge
+  <chrb@dcs.ed.ac.uk>
 
   11 May 2003; Alastair Tse <liquidx@gentoo.org> realone-1.ebuild:
   explicitly unset DISPLAY to prevent GUI from popping up (#19293)

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.7 2003/05/11 13:21:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.8 2003/05/22 09:08:33 liquidx Exp $
 
 IUSE="gnome kde"
 
@@ -55,7 +55,7 @@ src_install() {
 	unset DISPLAY # make sure it uses the virtualx rather than realx (#19293)
 	export maketype="./${INSTALL_BINARY}"
 	virtualmake < /dev/null >& /dev/null &
-	while ! [ -r rnsetup/realplaydoc.xpm ]
+	while ! [ -r rnsetup/realplaydoc.xpm -a -r rnsetup/EMBED/raclass.zip ]
 	do 
 		sleep 1
 	done
