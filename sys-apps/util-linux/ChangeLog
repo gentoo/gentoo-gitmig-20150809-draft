@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.7 2002/07/06 23:08:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.8 2002/07/09 11:41:32 aliz Exp $
+
+*util-linux-2.11r-r1 (9 Jul 2002)
+
+  9 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11r-r1.ebuild files/digest-util-linux-2.11r-r1 :
+
+  Crypto patch only applied if USE setting "crypt" is enabled.
 
 *util-linux-2.11r (7 Jul 2002)
 
