@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.01.ebuild,v 1.4 2005/01/14 23:49:23 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.01.ebuild,v 1.5 2005/03/08 16:18:45 axxo Exp $
 
 inherit java eutils
 
@@ -53,7 +53,7 @@ FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetail
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
 	einfo ${FETCH_SDK}
-	einfo "(Select the Linux or Linux AMD64 Self-extracting (.bin), depending on your arch)"
+	einfo "(Select the Self-extracting (.bin) for Linux or Linux AMD64, depending on your arch)"
 	einfo "and move it to ${DISTDIR}"
 
 	if use jce; then
