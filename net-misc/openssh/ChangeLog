@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.21 2002/11/29 21:06:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.22 2002/12/01 02:34:16 jmorgan Exp $
+
+  01 Dec 2002; Jack Morgan <jmorgan@gentoo.org> openssh-3.5_p1.ebuild :
+  Removed ~ from sparc/sparc64 keywords.
 
   29 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> openssh-3.5_p1.ebuild :
   Rewrote patch applying code.
