@@ -1,6 +1,18 @@
-MD5 bc589e30ad10710c20b31b63d9391ccc Bit-Vector-6.3.ebuild 491
-MD5 6ce9d07e6c58016cf4b4a0b850176c62 Bit-Vector-6.3-r1.ebuild 505
-MD5 11fedf19a71c5f2517ca17b98463fef2 ChangeLog 960
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de109806251db63eb79b46bafcaf0bd6 Bit-Vector-6.3-r1.ebuild 533
+MD5 677a995a5926dcd9fd162d69e7ed2111 Bit-Vector-6.3.ebuild 518
+MD5 728b3f80f72ab912e14ae7295e807d78 ChangeLog 1287
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 429d6e106abba2217f3851f676015789 Bit-Vector-6.4.ebuild 535
 MD5 a77d4b5fc4d7c30ad34758e3fdad687b files/digest-Bit-Vector-6.3 66
 MD5 a77d4b5fc4d7c30ad34758e3fdad687b files/digest-Bit-Vector-6.3-r1 66
+MD5 ce9ed0d38b9f5bee268ad770e0210460 files/digest-Bit-Vector-6.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBc/LttG5z4I8BtQoRAv03AJ42ekCfBj7LkZLuTdqVVbbXW+n7tgCbBd1+
+gvgtj5CS7VDuOG045VYJo4k=
+=xbpt
+-----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Bit-Vector
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.11 2004/06/25 00:09:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.12 2004/10/18 16:48:28 mcummings Exp $
+
+*Bit-Vector-6.4 (18 Oct 2004)
+
+  18 Oct 2004; Michael Cummings <mcummings@gentoo.org>
+  Bit-Vector-6.3-r1.ebuild, Bit-Vector-6.3.ebuild, +Bit-Vector-6.4.ebuild:
+  New version on cpan; ARCHS: because of the new dependancy, I could not carry
+  over existing arch settings. Please test the dependancy and mark as
+  appropriate.
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> Bit-Vector-6.3-r1.ebuild:
   added s390 to keywords
