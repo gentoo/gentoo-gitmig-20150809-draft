@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.5.4.ebuild,v 1.1 2002/07/05 00:30:13 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.5.4.ebuild,v 1.2 2002/07/05 03:11:18 stroke Exp $
 
-DESCRIPTION="Groovy little ftp client"
+DESCRIPTION="LFTP is a sophisticated ftp/http client, file transfer program."
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
 
 S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2
-	http://metalab.unc.edu/pub/Linux/system/network/file-transfer/${P}.tar.bz2"
+	http://metalab.unc.edu/pub/Linux/system/network/file-transfer/${P}.tar.gz"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1 
