@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.6 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.7 2003/09/13 22:10:09 dholm Exp $
 
 inherit libtool sgml-catalog
 
@@ -18,7 +18,7 @@ RDEPEND="app-text/sgml-common
 DEPEND="dev-lang/perl
 	${RDEPEND}"
 
-KEYWORDS="x86 amd64 hppa"
+KEYWORDS="x86 amd64 hppa ~ppc"
 
 src_unpack() {
 	unpack ${A}
