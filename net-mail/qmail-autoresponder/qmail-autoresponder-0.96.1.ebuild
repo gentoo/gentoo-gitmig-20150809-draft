@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1.ebuild,v 1.3 2003/09/05 09:06:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1.ebuild,v 1.4 2003/10/02 15:09:45 kumba Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rate-limited autoresponder for qmail."
@@ -14,6 +14,14 @@ KEYWORDS="x86 ~sparc ~ppc"
 DEPEND="virtual/glibc
 	dev-libs/bglibs"
 RDEPEND=">=net-mail/qmail-1.03-r7"
+
+src_unpack() {
+	unpack ${A}
+
+	# This patch fixes a multi-line string issue with gcc-3.3
+	# Closes Bug #30137
+	epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
+}
 
 src_compile() {
 	cd ${S}
