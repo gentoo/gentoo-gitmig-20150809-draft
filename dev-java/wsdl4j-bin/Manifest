@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 04f1446be0c34c73426bb0ab4914a589 wsdl4j-bin-1.4.ebuild 735
-MD5 6264d095f47f2591c0dd9cb795e00d65 ChangeLog 750
+MD5 5ba9674cdf9b63b8dc3611ac425a119a ChangeLog 848
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 76270cd57ea8844e3836c4b2b1acc170 wsdl4j-bin-1.4.ebuild 746
 MD5 a678b3de35611eebb86441ef5e33ce7f files/digest-wsdl4j-bin-1.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcV0I/rLF9B432nYRArc/AJ4gAlCDKn+3MtBwnv3qkGQvkh+f8QCfbQci
-ydFcsznVELXlKQ4+qhvOsDw=
-=uoh2
------END PGP SIGNATURE-----

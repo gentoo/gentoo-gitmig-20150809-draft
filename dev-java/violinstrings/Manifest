@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd507cc15f4b97a91a020ae60360cee2 violinstrings-1.0.2.ebuild 909
-MD5 12b3428f5e5672cd4708ae82f38b24fe ChangeLog 748
+MD5 934ee92f40da2f215a45136d2c39a0c4 ChangeLog 853
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 fe45c4cbbdb9c10d56731b082f4f8a20 violinstrings-1.0.2.ebuild 920
 MD5 13a99b5cdd89a9c75078aaeb4ef31aef files/digest-violinstrings-1.0.2 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVzi/rLF9B432nYRAqsvAJ4gvh93SibIklewVKJkDBJFu5TQrQCgmQaU
-CMGYz5jkKh2+dAfj/ZFnnQ8=
-=MbQk
------END PGP SIGNATURE-----
