@@ -1,3 +1,4 @@
-MD5 3bd1cabd68c370c250e5b5ce7c59008c files/digest-boson-0.8 137
-MD5 e6880f90934c6187e8a38633da48ab11 boson-0.8.ebuild 1042
 MD5 aaae8c88dca59b6089dd50efc14d51f9 ChangeLog 1163
+MD5 e6880f90934c6187e8a38633da48ab11 boson-0.8.ebuild 1042
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 3bd1cabd68c370c250e5b5ce7c59008c files/digest-boson-0.8 137
