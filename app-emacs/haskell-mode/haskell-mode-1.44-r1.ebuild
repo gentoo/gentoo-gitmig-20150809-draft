@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-1.44-r1.ebuild,v 1.2 2004/03/22 23:55:41 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-1.44-r1.ebuild,v 1.3 2004/06/15 08:32:01 kloeri Exp $
 
 inherit elisp
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/emacs"
-RDEPEND="${DEPEND}"
-S="${WORKDIR}/${P}"
 
 SITEFILE="50${PN}-gentoo.el"
 
