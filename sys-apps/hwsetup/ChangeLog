@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.5 2004/05/14 15:45:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.6 2004/05/14 16:33:59 wolf31o2 Exp $
+
+*hwsetup-1.0-r1 (14 May 2004)
+
+  14 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> +hwsetup-1.0-r1.ebuild:
+  Revision bumped to include latest release.
 
   14 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Changing maintainers to newly formed livecd herd.
