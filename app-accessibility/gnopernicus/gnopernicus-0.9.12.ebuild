@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.9.12.ebuild,v 1.1 2004/09/18 19:27:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.9.12.ebuild,v 1.2 2004/09/18 19:57:42 leonardop Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Software tools for blind and visually impaired in Gnome 2"
 HOMEPAGE="http://www.baum.ro/gnopernicus.html"
@@ -12,7 +12,6 @@ SLOT="1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 IUSE="brltty doc ipv6"
 
-# libgail-gnome is only required during runtime
 RDEPEND=">=gnome-base/gconf-1.1.5
 	>=dev-libs/popt-1.5
 	>=gnome-base/libgnome-1.102
@@ -38,9 +37,3 @@ G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable brltty)"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-#src_unpack() {
-#	unpack ${A}
-#	cd ${S}
-#	# Patch to make it work with any version of brltty.
-#	epatch ${FILESDIR}/${P}-brltty_fix.patch
-#}
