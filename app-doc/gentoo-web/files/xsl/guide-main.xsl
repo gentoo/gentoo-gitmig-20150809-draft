@@ -211,7 +211,6 @@
 
 						<p class="infosub">User Documentation:</p>
 						<p class="infolist"><a href="/doc/faq.html">Gentoo Linux FAQ</a></p>
-						<p class="infolist"><a href="/doc/install.html">Gentoo Linux CD Installation Guide</a></p>
 						<p class="infolist"><a href="/doc/portage-user.html">Portage User Guide</a></p>
 						<p class="infolist"><a href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a></p>
 						
@@ -288,16 +287,16 @@
 
 <xsl:template match="chapter">
 	<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
-	<xsl:if test="/guide">
-		<xsl:choose>
-		<xsl:when test="title">
-			<p class="chaphead"><font class="chapnum"><a name="{$chapid}"><xsl:number/>.</a></font> <xsl:value-of select="title"/></p>
-		</xsl:when>
-		<xsl:otherwise>
+	<xsl:choose>
+	<xsl:when test="title">
+		<p class="chaphead"><font class="chapnum"><a name="{$chapid}"><xsl:number/>.</a></font> <xsl:value-of select="title"/></p>
+	</xsl:when>
+	<xsl:otherwise>
+		<xsl:if test="/guide">
 			<p class="chaphead"><font class="chapnum"><a name="{$chapid}"><xsl:number/>.</a></font></p> 
-		</xsl:otherwise>
-		</xsl:choose>
-	</xsl:if>
+		</xsl:if>
+	</xsl:otherwise>
+	</xsl:choose>
 	<xsl:apply-templates select="section"/>
 </xsl:template>
 
@@ -381,6 +380,10 @@
 
 <xsl:template match="b">
 	<b><xsl:apply-templates /></b>
+</xsl:template>
+
+<xsl:template match="brite">
+	<font color="#ff0000"><b><xsl:apply-templates /></b></font>
 </xsl:template>
 
 <xsl:template match="body">
