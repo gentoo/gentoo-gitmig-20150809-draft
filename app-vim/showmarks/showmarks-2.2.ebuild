@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/showmarks-2.2.ebuild,v 1.4 2004/09/19 19:50:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/showmarks-2.2.ebuild,v 1.5 2004/10/08 02:42:19 vapier Exp $
 
 inherit vim-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: show location marks visually"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=152"
 
 LICENSE="public-domain"
-KEYWORDS="alpha sparc x86 ~ia64 ~ppc ~amd64 mips"
+KEYWORDS="alpha ~amd64 ia64 mips ~ppc sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="showmarks.txt"
