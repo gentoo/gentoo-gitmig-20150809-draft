@@ -9,7 +9,7 @@ HOMEPAGE="http://mkeadle.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPENDS="media-gfx/xv"
 
