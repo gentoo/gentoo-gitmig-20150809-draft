@@ -1,9 +1,19 @@
-MD5 67afbc0dee45d6aa70f97d0adaf007a8 eblook-1.6.ebuild 739
-MD5 4a0fbbc986067c75c790dd7dd1da1854 eblook-1.5.1.ebuild 829
-MD5 678ef43d4e277ba138db9af556bfcb55 eblook-1.6.1.ebuild 743
-MD5 2dd0d38329683c842dc42803f1ff8dd2 ChangeLog 951
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b262d269245cfe59652aa1b2dc7489a6 ChangeLog 1143
+MD5 8b0e86d87ebf280eab8db48fd00f090a eblook-1.5.1.ebuild 846
 MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
+MD5 98fe874539f7634107010c41be744b2f eblook-1.6.ebuild 759
+MD5 fc040263644afa7a0d60d44819fc27d2 eblook-1.6.1.ebuild 741
 MD5 1475d7679421c071476945659472b1d8 files/digest-eblook-1.5.1 64
-MD5 165f5f34a317615b2eb5fa80ebc84da2 files/digest-eblook-1.6.1 64
-MD5 adb0e4ea729994eb4069e0a2eef68470 files/eblook-1.5.1-eb4-gentoo.diff 393
 MD5 258d6e2b8b03a8f42ed8f03b8cf973da files/digest-eblook-1.6 62
+MD5 adb0e4ea729994eb4069e0a2eef68470 files/eblook-1.5.1-eb4-gentoo.diff 393
+MD5 165f5f34a317615b2eb5fa80ebc84da2 files/digest-eblook-1.6.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnGoKVWNWqTUmv+0RAu2wAJwJZXNbedHfjcrMfTh3am94u9eVlwCguCRu
+j8PR6rslF8WIut2FLs8mm3k=
+=HxpH
+-----END PGP SIGNATURE-----

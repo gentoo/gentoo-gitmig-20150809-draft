@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.7 2004/06/24 21:39:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.8 2004/11/18 09:23:17 usata Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-RDEPEND=">=dev-libs/eb-3.3.4"
+RDEPEND="!>=dev-libs/eb-4.1
+	>=dev-libs/eb-3.3.4"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.53"
 
