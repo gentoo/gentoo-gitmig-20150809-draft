@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wdiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.7 2004/06/28 04:18:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.8 2004/08/20 20:59:41 seemant Exp $
+
+*wdiff-0.5-r1 (20 Aug 2004)
+
+  20 Aug 2004; Seemant Kulleen <seemant@gentoo.org>
+  +files/wdiff-0.5-segfault-fix.diff, +wdiff-0.5-r1.ebuild:
+  Add a patch to fix the segfaulting when wdiff is run as a user. Problem
+  reported and fixed by: Mikko Ruuska <mikko.ruuska@solidtech.com> in bug #60543
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> wdiff-0.5.ebuild:
   Added ~sparc, ~mips
