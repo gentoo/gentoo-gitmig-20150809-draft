@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.95.ebuild,v 1.1 2005/03/31 04:35:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.95.ebuild,v 1.2 2005/04/01 16:35:05 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -13,29 +13,30 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="xmame"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="3dfx alsa arts dga esd expat ggi joystick mmx net opengl sdl svga X xv"
+IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xv"
 
 RDEPEND="sys-libs/zlib
-	sdl? ( >=media-libs/libsdl-1.2.0 )
 	alsa? ( media-libs/alsa-lib )
-	xv? ( virtual/x11 )
+	arts? ( kde-base/arts )
 	dga? ( virtual/x11 )
-	X? ( virtual/x11 )
+	esd? ( >=media-sound/esound-0.2.29 )
+	expat? ( dev-libs/expat )
+	ggi? ( media-libs/libggi )
+	lirc? ( app-misc/lirc )
 	opengl? (
 		virtual/x11
 		virtual/opengl
 		virtual/glu )
-	expat? ( dev-libs/expat )
-	esd? ( >=media-sound/esound-0.2.29 )
+	sdl? ( >=media-libs/libsdl-1.2.0 )
 	svga? ( media-libs/svgalib )
-	ggi? ( media-libs/libggi )
-	arts? ( kde-base/arts )"
+	X? ( virtual/x11 )
+	xv? ( virtual/x11 )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 # Icc sucks. bug #41342
 #	icc? ( dev-lang/icc )
 
-S="${WORKDIR}/xmame-${PV}"
+S=${WORKDIR}/xmame-${PV}
 
 toggle_feature() {
 	if use $1 ; then
@@ -44,6 +45,7 @@ toggle_feature() {
 			|| die "sed Makefile ($1 / $2) failed"
 	fi
 }
+
 toggle_feature2() {
 	use $1 && toggle_feature $2 $3
 }
@@ -96,12 +98,13 @@ src_unpack() {
 	toggle_feature xv X11_XV
 	toggle_feature expat BUILD_EXPAT
 	toggle_feature opengl X11_OPENGL
+	toggle_feature lirc LIRC
 
 	case ${ARCH} in
 		x86|ia64|amd64)
 			append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce
 			use amd64 || append-flags -ffast-math #54270
-			[ $(gcc-major-version) -eq 3 ] \
+			[[ $(gcc-major-version) -eq 3 ]] \
 				&& append-flags -falign-functions=2 -falign-jumps=2 -falign-loops=2 \
 				|| append-flags -malign-functions=2 -malign-jumps=2 -malign-loops=2
 			;;
