@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 009e915a22eac8bc6954b2661d5f8207 ChangeLog 2766
-MD5 f49479d0f6f4969c3e9cd2aa344c8287 libzvt-2.0.1-r2.ebuild 743
+MD5 897bca430d6a246a77ed72e4400c684b libzvt-2.0.1-r2.ebuild 746
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c447acdeafe5afe1c8c51337db30ddf9 files/digest-libzvt-2.0.1-r2 65
 MD5 e6d5d4cb4b88822dc078b4081252e9ec files/libzvt-2.0.1-gentoo.diff 689
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBeY78Rkyva5PS18kRAi3CAJ9dyrKq0EudgKnJh/TUZMQUdiIiyQCgxPTj
-Y0MSllEbfdeFyFWVIlGfbKo=
-=F94p
------END PGP SIGNATURE-----
