@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.1 2002/07/12 05:53:44 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.2 2002/07/12 05:57:02 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IRC daemon with hostname cloaking, SOCKS proxy checking and other advanced features"
@@ -102,7 +102,8 @@ src_install () {
 	mv ${D}/usr/bin/ircd ${D}/usr/bin/cyclone-ircd
 
 	# documentation files
-	dodoc AUTHORS ChangeLog COPYING INSTALL README {doc/*:-history}
+	dodoc AUTHORS ChangeLog COPYING INSTALL README doc/oper.txt
+	dodoc doc/NOTICE doc/rfc* doc/Crule.readme doc/cyclone.gif doc/Operators
 
 	# install sample configuration file
 	cp ${S}/doc/example.conf ${D}/etc/cyclone/ircd.conf
