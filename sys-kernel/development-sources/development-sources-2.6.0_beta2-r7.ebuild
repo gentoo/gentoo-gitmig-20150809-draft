@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta2-r7.ebuild,v 1.1 2003/08/07 23:37:53 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta2-r7.ebuild,v 1.2 2003/08/08 21:10:58 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -16,8 +16,8 @@ ETYPE="sources"
 
 IUSE="alsa"
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI}"
 PATCH_URI="http://www.kernel.org/pub/linux/kernel/v2.6/snapshots/patch-${PKV}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI}"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 SLOT="${PKV}"
