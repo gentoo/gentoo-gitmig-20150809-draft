@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.7 2003/09/16 20:17:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.8 2003/10/05 15:46:10 obz Exp $
+
+  05 Oct 2003; Mike Gardiner <obz@gentoo.org> gucharmap-1.0.0.ebuild,
+  metadata.xml:
+  Marked stable on x86
 
   16 Sep 2003; Jason Wever <weeve@gentoo.org> gucharmap-1.0.0.ebuild:
   Added ~sparc keyword.
