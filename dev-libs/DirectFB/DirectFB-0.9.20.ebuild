@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.5 2003/11/23 13:36:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.6 2003/12/24 00:44:59 vapier Exp $
+
+inherit eutils
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 matrox neomagic nsc nvidia radeon savage tdfx"
 
@@ -26,6 +28,12 @@ pkg_setup() {
 		ewarn "via the VIDEO_CARDS variable what video card you use."
 		einfo "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-linux-2.6.patch
 }
 
 src_compile() {

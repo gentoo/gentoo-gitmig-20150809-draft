@@ -1,0 +1,10 @@
+--- interfaces/IDirectFBVideoProvider/idirectfbvideoprovider_v4l.c.orig	2003-12-23 19:23:58.346966040 -0500
++++ interfaces/IDirectFBVideoProvider/idirectfbvideoprovider_v4l.c	2003-12-23 19:24:26.624667176 -0500
+@@ -27,6 +27,7 @@
+ #if defined(__dietlibc__) && !defined(_BSD_SOURCE)
+ #define _BSD_SOURCE
+ #endif
++#define _LINUX_TIME_H
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
