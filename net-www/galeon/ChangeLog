@@ -1,6 +1,11 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.49 2003/07/09 17:42:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.50 2003/07/11 19:31:00 spider Exp $
+
+*galeon-1.3.5-r1 (11 Jul 2003)
+
+  11 Jul 2003; <spider@gentoo.org> galeon-1.3.5-r1.ebuild:
+  Building agains moz 1.4 (only)
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> galeon-1.3.4.ebuild,
   galeon-1.3.5.ebuild, metadata.xml:
