@@ -1,6 +1,6 @@
 # ChangeLog for net-print/hp-web-jetadmin
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/ChangeLog,v 1.4 2002/08/17 23:09:56 aliz Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/ChangeLog,v 1.5 2003/02/12 08:42:45 vapier Exp $
 
 *hp-web-jetadmin-6.5-r2 (4 May 2002)
 
