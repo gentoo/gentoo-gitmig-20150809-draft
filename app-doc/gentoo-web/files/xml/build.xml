@@ -12,8 +12,8 @@ sources that are automatically downloaded from the Internet.  This build CD inst
 will work with any x86-compatible system.
 </abstract>
 
-<version>1.2</version>
-<date>02 Sep 2001</date>
+<version>1.4</version>
+<date>06 Sep 2001</date>
 
 <chapter>
 <title>About the Install</title>
@@ -30,7 +30,7 @@ a base to download and install packages whose sources are downloaded from the In
 
 <p>To install from the build CD, you will need to have a 486+ processor, and ideally at
 least 64 Megabytes of RAM.  To begin the install process, first grab the 16Mb
-build CD ISO image (<path>build-ix86-1.0_rc6-r9.iso</path> is the latest at the time this
+build CD ISO image (<path>build-ix86-1.0_rc6-r10.iso</path> is the latest at the time this
 article was written) from
 <uri>http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/</uri>.  Then, create
 your own CD-ROM using this image and your preferred CD burning software.
@@ -67,12 +67,23 @@ system.  To view a list of all available network card modules, type <c>ls /lib/m
 To load a particular module, type:</p>
 
 <pre>
-# <i>insmod /lib/modules/*/kernel/drivers/net/pcnet32.o</i>
+# <i>modprobe pcnet32</i>
 	<comment>(replace pcnet32 with your NIC module)</comment>
 </pre>
 
+<impo><path>build-1.0_rc6-r10.iso</path> and later include <c>modprobe</c>; all earlier CDs include <c>insmod</c>.</impo>
+
 <p>Now, if you want to be able to access any SCSI hardware, you will need to load the appropriate
-modules from /lib/modules, again using <c>insmod</c>.</p>
+modules from /lib/modules, again using <c>modprobe</c>:</p>
+<pre>
+# <i>modprobe aic7xxx</i>
+# <i>modprobe sr_mod</i>
+# <i>modprobe sd_mod</i>
+</pre>
+<p>Above, we modprobe the <c>aic7xxx</c> SCSI driver and then make sure that SCSI CD-ROM (<c>sr_mod</c>)
+and disk (<c>sd_mod</c>) support is loaded.</p>
+<note><c>hdparm</c> is now included on -r10 and later of the iso.  If any of your drives require tweaking, now
+would be a good time to do so.</note>
 </body>
 </section>
 </chapter>
@@ -80,27 +91,35 @@ modules from /lib/modules, again using <c>insmod</c>.</p>
 <title>Set up partitions</title>
 <section>
 <body>
-<p>Now that the kernel can see our network card and disk controllers, it's time to set up disk partitions
-for Gentoo Linux.</p>
 
-<p>Here's a quick overview of the standard Gentoo Linux partition layout.  We're going to create at
-least three partitions: a swap partition, a root partition (to hold the bulk of Gentoo Linux), and a special boot
-partition.  The boot partition is designed to hold GRUB boot loader information
-as well as your Linux kernel(s).  The boot partition gives us a safe place to
-store everything related to booting Linux. During normal day-to-day Gentoo
-Linux use, your boot partition should remain <e>unmounted</e>.  This prevents
-your kernel from being made unavailable to GRUB (due to filesystem corruption)
-in the event of a system crash, preventing the chicken-and-egg problem where
-GRUB can't read your kernel (since your filesystem isn't consistent) but you can't
-bring your filesystem back to a consistent state (since you can't boot!)      
-</p>
+<p>Now that the kernel can see our network card and disk controllers, it's time
+to set up disk partitions for Gentoo Linux.</p>
 
-<p>Now, on to filesystem types.  We recommend that you install Gentoo Linux on
-a ReiserFS root filesystem because they're much faster and generally more
-reliable than their ext2 counterparts.  We've been using ReiserFS for a long
-time now and we believe that since kernel 2.4.4, it's not only "stable enough",
-but perfect for use in production environments.  However, if you want to use
-ext2 for your root and boot filesystems, we support this as well.  Here are our recommended filesystem sizes and types:</p>
+<p>Here's a quick overview of the standard Gentoo Linux partition layout.
+We're going to create at least three partitions: a swap partition, a root
+partition (to hold the bulk of Gentoo Linux), and a special boot partition.
+The boot partition is designed to hold GRUB boot loader information as well as
+your Linux kernel(s).  The boot partition gives us a safe place to store
+everything related to booting Linux. During normal day-to-day Gentoo Linux use,
+your boot partition should remain <e>unmounted</e>.  This prevents your kernel
+from being made unavailable to GRUB (due to filesystem corruption) in the event
+of a system crash, preventing the chicken-and-egg problem where GRUB can't read
+your kernel (since your filesystem isn't consistent) but you can't bring your
+filesystem back to a consistent state (since you can't boot!)      </p>
+
+<p>Now, on to filesystem types.  Right now, you have three filesystem options:
+ext2, ext3 (journalling) and ReiserFS.  ext2 is the tried and true Linux
+filesystem but doesn't have metadata journalling.  ext3 is the new version of
+ext2 with both metadata journalling and ordered data writes, effectively
+providing data journalling as well.  ReiserFS is a B*-tree based filesystem
+with very good small file performance, and greatly outperforms both ext2 and
+ext3 when dealing with small files (files less than 4k), often by a factor of
+10x-15x.  ReiserFS has metadata journalling, but no data journalling.  If
+you're looking for the most standard filesystem, use ext2.  If you're looking
+for the most rugged journaled filesystem, use ext3.  If you're looking for a
+high-performance filesystem with journalling support, use ReiserFS.  Both ext3
+and ReiserFS are production-ready.  Here are our basic recommended filesystem
+sizes and types:</p>
 
   <table>
   <tr>
@@ -112,7 +131,7 @@ ext2 for your root and boot filesystems, we support this as well.  Here are our 
   <tr>
   	<ti>boot partition, containing kernel(s) and boot information</ti>
 	<ti>&gt;10 Megabytes</ti>
-	<ti>ext2 or reiserfs, if reiserfs then mount with <c>-o notail</c></ti>
+	<ti>ext2 highly recommended (easiest) or ReiserFS, if reiserfs then mount with <c>-o notail</c></ti>
   	<ti>/dev/hda1</ti>
   </tr>
    <tr>
@@ -124,26 +143,38 @@ ext2 for your root and boot filesystems, we support this as well.  Here are our 
   <tr>
   	<ti>root partition, containing main filesystem (/usr, /home, etc)</ti>
 	<ti>&gt;=1.5 Gigabytes</ti>
-	<ti>ReiserFS recommended, ext2 ok</ti>
+	<ti>ReiserFS, ext3, ext2 ok</ti>
   	<ti>/dev/hda3</ti>
   </tr>
  </table>
 
-<note>At this point, create your partitions using fdisk.<!--, LVM logical volumes or
-   software RAID volumes, as desired.  LVM and software RAID is not yet supported
-   under 1.0_rc6. and we will have 
-   instructions on how to create an LVM initrd soon.  Until then, the LVM 
-   option is only for the Sistina guys and those who are really LVM-saavy :)
-   Use fdisk to create any partitions you need.-->
+<note>At this point, create your partitions using fdisk.  Note that your partitions
+should be of type 0x82 if swap and 0x83 for regular filesystems (whether ReiserFS <e>or</e> ext2).
 </note>
 
 <p>Once you've created your partitions using <c>fdisk</c>, it's time to initialize
-the filesystems that will be used to house our data, as follows:</p>
+the filesystems that will be used to house our data.  Initialize swap as follows:</p>
 <pre>
-# <i>mkreiserfs /dev/hda1</i>
 # <i>mkswap /dev/hda2</i>
+</pre>
+<p>You can use the <c>mke2fs</c> command to create ext2 filesystems:</p>
+<pre>
+# <i>mke2fs /dev/hda1</i>
+</pre>
+<p>To create ReiserFS filesystems, use the <c>mkreiserfs</c> command:</p>
+<pre>
 # <i>mkreiserfs /dev/hda3</i>
 </pre>
+<p>If you'd like to use ext3, first make sure that the <path>ext3.o</path> module is loaded:</p>
+<pre>
+# <i>modprobe ext3</i>
+</pre>
+<p>Then, you can create ext3 filesystems using <c>mke2fs -j</c>:</p>
+<pre>
+# <i>mke2fs -j /dev/hda3</i>
+</pre>
+
+<note>You can find out more about using ext3 under Linux 2.4 at <uri>http://www.uow.edu.au/~andrewm/linux/ext3/ext3-usage.html</uri>.</note>
 </body>
 </section>
 </chapter>
@@ -382,7 +413,7 @@ Super Bombad Racing" for the PS2.
 </section>
 </chapter>
 <chapter>
-<title>Installing the kernel and additional packages</title>
+<title>Installing the kernel and system logger</title>
 <section>
 <body>
 <p>
@@ -399,13 +430,39 @@ your own custom kernel:
 # <i>mv bzImage bzImage.orig</i> <comment>[if bzImage already exists]</comment>
 # <i>cp /usr/src/linux/arch/i386/boot/bzImage /boot</i>
 </pre>
-<impo>During the <c>make menuconfig</c> process, be sure to enable the "Device File System",
+<impo>For your kernel to function properly, there are several options that you will
+need to ensure are in the kernel proper -- that is, they should <e>be enabled but not
+compiled as modules</e>.
+Under the "File systems" section, be sure to enable the "Device File System",
 but do <e>not</e> tell the kernel to automatically mount devfs at boot time.  You'll also
-need to enable the "Virtual Memory Filesystem", as well as "ReiserFS". :)</impo>
+need to enable the "Virtual Memory Filesystem".  Be sure to enable "ReiserFS" if you have
+any ReiserFS partitions; the same goes for "Ext3".  It's always a good idea to leave ext2
+enabled whether you are using it or not.
+</impo>
 
 <p>
-Your new custom kernel (and modules) are now installed.
+Your new custom kernel (and modules) are now installed.  Now you need to choose a system
+logger that you would like to install.  We offer sysklogd, which is the traditional set
+of system logging daemons.  We also have syslog-ng as well as metalog.  Power users seem
+to gravitate away from sysklogd (not very good performance) and towards syslog-ng and 
+metalog.  If in doubt, you may want to try metalog, since it seems to be quite popular.
+To merge your logger of choice, type <e>one</e> of the next three lines:
 </p>
+
+<pre>
+# <i>emerge sys-apps/sysklogd</i>
+<comment>or</comment>
+# <i>emerge app-admin/syslog-ng</i>
+<comment>or</comment>
+# <i>emerge app-admin/metalog</i>
+</pre>
+</body>
+</section>
+</chapter>
+<chapter>
+<title>Install miscellaneous stuff</title>
+<section>
+<body>
 <p>
 To install any additional packages in the Portage tree
 you can just <c>emerge</c> any packages in <path>/usr/portage/</path> 
@@ -434,7 +491,8 @@ to get your base system booting before merging X. :)
 a few important system files and install the GRUB boot loader. 
 The first file we need to
 configure is <path>/etc/fstab</path>.  Here's an example file; remember that you should use
-the <c>notail</c> option for your boot partition if you created a ReiserFS filesystem on it:</p>
+the <c>notail</c> option for your boot partition if you chose to create a ReiserFS filesystem on it.
+Remember to specify <c>ext2</c>, <c>ext3</c> or <c>reiserfs</c> filesystem types as appropriate.</p>
 <pre>
 <comment># /etc/fstab: static file system information.
 #
@@ -508,12 +566,12 @@ loaded:
 configured for your first boot:</p>
 <pre>
 # <i>e3 /etc/init.d/net.eth0</i>
-# <i>ln -s /etc/init.d/net.eth0 /etc/runlevels/default/net.eth0</i>
+# <i>rc-update add net.eth0 default</i>
 </pre>
 <p>However, if you have a dynamic IP, do the same thing with <c>net.eth0-dhcp</c>:</p>
 <pre>
-# <i>e3 /etc/init.d/net.eth0</i>
-# <i>ln -s /etc/init.d/net.eth0 /etc/runlevels/default/net.eth0</i>
+# <i>e3 /etc/init.d/net.eth0-dhcp</i>
+# <i>rc-update add net.eth0-dhcp default</i>
 </pre>
 <p>If you need to set up any additional network interfaces, copy <c>net.eth0</c>
 or <c>net.eth0-dhcp</c> to <c>net.eth1</c> or <c>net.eth1-dhcp</c> and repeat.</p>
