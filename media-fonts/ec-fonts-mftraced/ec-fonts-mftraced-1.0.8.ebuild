@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ec-fonts-mftraced/ec-fonts-mftraced-1.0.8.ebuild,v 1.3 2004/12/27 21:59:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ec-fonts-mftraced/ec-fonts-mftraced-1.0.8.ebuild,v 1.4 2004/12/28 14:17:24 josejx Exp $
 
 DESCRIPTION="EC Fonts for Lilypond"
 SRC_URI="http://lilypond.org/download/fonts/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://lilypond.org/"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 RDEPEND=">=dev-util/guile-1.6.4
