@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.11 2004/03/27 08:35:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.12 2004/03/27 15:11:20 aliz Exp $
+
+*bestcrypt-1.5_p2 (27 Mar 2004)
+
+  27 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> bestcrypt-1.5_p2.ebuild:
+  Fix detection of kernel dir, closing #42125. Also add patch for missing
+  BDEV_FILE in newer 2.6 kernels and new Makefile patch.
 
   27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   bestcrypt-1.2_p6.ebuild, bestcrypt-1.4_p2.ebuild, bestcrypt-1.5_p1.ebuild:

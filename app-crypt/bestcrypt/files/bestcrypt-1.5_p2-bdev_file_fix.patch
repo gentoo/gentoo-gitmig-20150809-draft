@@ -1,0 +1,11 @@
+--- mod/bc_dev26.c	2004-03-27 14:46:16.163050206 +0000
++++ mod/bc_dev26.c	2004-03-27 15:02:29.696906457 +0000
+@@ -634,7 +634,7 @@
+ 	}
+ 
+ 	if (S_ISBLK(bc->bc_dentry->d_inode->i_mode))
+-		blkdev_put(bc->bc_dentry->d_inode->i_bdev, BDEV_FILE);
++		blkdev_put(bc->bc_dentry->d_inode->i_bdev);
+ 
+ 	if (!bc->bc_flags.readonly)
+ 		put_write_access(bc->bc_dentry->d_inode);
