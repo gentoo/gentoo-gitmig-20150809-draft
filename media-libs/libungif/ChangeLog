@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libungif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.25 2005/01/31 03:02:01 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.26 2005/02/03 21:06:22 tgall Exp $
+
+  03 Feb 2005; Tom Gall <tgall@gentoo.org> libungif-4.1.0.1b.ebuild,
+  libungif-4.1.3.ebuild:
+  fix problems with autoconf failing on version mismatch when that
+  version was already installed.
 
   31 Jan 2005; Travis Tilley <lv@gentoo.org> libungif-4.1.3.ebuild:
   stable on amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.17 2005/01/08 09:03:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.18 2005/02/03 21:06:22 tgall Exp $
 
 inherit eutils libtool
 
@@ -8,7 +8,6 @@ REAL_P=${P/.1b/b1}
 DESCRIPTION="A library for reading and writing gif images without LZW compression"
 HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 SRC_URI="mirror://gentoo/${REAL_P}.tar.bz2"
-
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
@@ -34,6 +33,7 @@ src_compile() {
 
 	local myconf
 	use alpha && myconf="${myconf} --host=alpha-unknown-linux-gnu"
+	export WANT_AUTOCONF=2.5
 	econf `use_with X x` ${myconf} || die
 	emake || die
 }
