@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.9 2004/12/04 03:17:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.10 2004/12/04 07:23:03 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -79,6 +79,20 @@ alt_headers() {
 		fi
 	fi
 	echo "${ALT_HEADERS}"
+}
+alt_prefix() {
+	if [[ ${CTARGET} = ${CHOST} ]] ; then
+		echo /usr
+	else
+		echo /usr/${CTARGET}
+	fi
+}
+alt_libdir() {
+	if [[ ${CTARGET} = ${CHOST} ]] ; then
+		echo /$(get_libdir)
+	else
+		echo /usr/${CTARGET}/lib
+	fi
 }
 
 setup_flags() {
@@ -599,6 +613,8 @@ glibc_do_configure() {
 		die "invalid pthread option"
 	fi
 
+	# Who knows if this works :)
+	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
 	myconf="${myconf} --without-cvs
 			--enable-bind-now
 			--build=${CHOST}
@@ -606,10 +622,10 @@ glibc_do_configure() {
 			--disable-profile
 			--without-gd
 			--with-headers=$(alt_headers)
-			--prefix=/usr
-			--mandir=/usr/share/man
-			--infodir=/usr/share/info
-			--libexecdir=/usr/lib/misc"
+			--prefix=$(alt_prefix)
+			--mandir=$(alt_prefix)/share/man
+			--infodir=$(alt_prefix)/share/info
+			--libexecdir=$(alt_prefix)/lib/misc"
 
 	GBUILDDIR="${WORKDIR}/build-${CTARGET}-$1"
 	mkdir -p ${GBUILDDIR}
@@ -660,6 +676,10 @@ src_install() {
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			install || die
+	fi
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		# punt all the junk not needed by a cross-compiler
+		rm -r "${D}"/usr/${CTARGET}/{bin,etc,lib/gconv,sbin,share}
 	fi
 
 	if use !nptlonly && want_nptl ; then
@@ -723,13 +743,13 @@ src_install() {
 
 	# now, strip everything but the thread libs #46186
 	mkdir -p ${T}/thread-backup
-	mv ${D}/$(get_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
+	mv ${D}/$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	if use !nptlonly && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
-		mv ${D}/$(get_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
+		mv ${D}/$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
 	fi
 	env -uRESTRICT prepallstrip
-	cp -R -- ${T}/thread-backup/* ${D}/$(get_libdir)/ || die
+	cp -R -- ${T}/thread-backup/* ${D}/$(alt_libdir)/ || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/$(get_libdir)/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.15 2004/12/04 03:17:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.16 2004/12/04 07:23:03 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -79,6 +79,20 @@ alt_headers() {
 		fi
 	fi
 	echo "${ALT_HEADERS}"
+}
+alt_prefix() {
+	if [[ ${CTARGET} = ${CHOST} ]] ; then
+		echo /usr
+	else
+		echo /usr/${CTARGET}
+	fi
+}
+alt_libdir() {
+	if [[ ${CTARGET} = ${CHOST} ]] ; then
+		echo /$(get_libdir)
+	else
+		echo /usr/${CTARGET}/lib
+	fi
 }
 
 setup_flags() {
@@ -561,6 +575,9 @@ src_compile() {
 	want_tls || myconf="${myconf} --without-tls"
 	want_tls && myconf="${myconf} --with-tls"
 
+	# Who knows if this works :)
+	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
+
 	# some silly people set LD_RUN_PATH and that breaks things.
 	# see bug 19043
 	unset LD_RUN_PATH
@@ -576,10 +593,10 @@ src_compile() {
 		--without-gd \
 		--without-cvs \
 		--with-headers=$(alt_headers) \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--libexecdir=/usr/lib/misc \
+		--prefix=$(alt_prefix) \
+		--mandir=$(alt_prefix)/share/man \
+		--infodir=$(alt_prefix)/share/info \
+		--libexecdir=$(alt_prefix)/lib/misc \
 		--enable-bind-now \
 		${myconf} || die
 
@@ -600,13 +617,18 @@ src_install() {
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install || die
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		# punt all the junk not needed by a cross-compiler
+		rm -r "${D}"/usr/${CTARGET}/{bin,etc,lib/gconv,sbin,share}
+	fi
+
 	# now, strip everything but the thread libs #46186
-	mkdir ${T}/thread-backup
-	mv ${D}/$(get_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
+	mkdir -p ${T}/thread-backup
+	mv ${D}/$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	env -uRESTRICT prepallstrip
 
 	# this directory can be empty in certain cases so || die is wrong
-	ls  ${T}/thread-backup/*  1>/dev/null 2>&1 && mv -f ${T}/thread-backup/* ${D}/$(get_libdir)/
+	ls  ${T}/thread-backup/*  1>/dev/null 2>&1 && mv -f ${T}/thread-backup/* ${D}/$(alt_libdir)/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
