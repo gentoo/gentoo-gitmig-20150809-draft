@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.18 2003/09/13 21:07:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.19 2003/11/03 23:53:17 vapier Exp $
+
+*dc-gui-0.77 (03 Nov 2003)
+
+  03 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #32553 and db-4 sed fix like in dctc.
 
 *dc-gui-0.75 (23 Jul 2003)
 
