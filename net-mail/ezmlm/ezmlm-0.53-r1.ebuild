@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53-r1.ebuild,v 1.2 2004/04/27 20:56:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53-r1.ebuild,v 1.3 2004/05/29 15:05:04 hhg Exp $
 
 inherit eutils fixheadtails
 
 DESCRIPTION="Simple yet powerful mailing list manager for qmail."
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz
 		http://csa-net.dk/djbware/ezmlm-0.53-ia64.patch"
-HOMEPAGE="http://cr.yp.to/software/${PN}.html"
+HOMEPAGE="http://cr.yp.to/${PN}.html"
 
 SLOT="0"
 LICENSE="as-is"
