@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.6.ebuild,v 1.1 2004/09/13 05:54:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.6.ebuild,v 1.2 2004/11/11 12:44:22 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://core.segfault.pl/~krzynio/vexed/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 RDEPEND="virtual/libc
