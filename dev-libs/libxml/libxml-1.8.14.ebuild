@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.14.ebuild,v 1.1 2001/06/28 20:29:07 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.14.ebuild,v 1.2 2001/08/23 10:15:16 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="libxml"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
-         ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gnome-env-1.0
