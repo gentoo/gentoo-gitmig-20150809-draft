@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.73b.ebuild,v 1.1 2003/06/07 19:39:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.73b.ebuild,v 1.2 2003/08/23 01:12:49 weeve Exp $
 
 DESCRIPTION="Another System Definition Facility for Common Lisp"
 HOMEPAGE="http://packages.debian.org/unstable/devel/cl-asdf.html"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-asdf/${PN}_${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 DEPEND=""
 
