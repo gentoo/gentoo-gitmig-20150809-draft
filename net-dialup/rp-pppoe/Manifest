@@ -1,25 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 00119e10604b4d135645a4fd13dcd554 ChangeLog 5445
+MD5 01cff5ddd218af750d196f607ddadb08 ChangeLog 5662
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 0f639c9d201201602dd1d3cbcefc8896 rp-pppoe-3.5-r1.ebuild 1598
 MD5 443cd9158850793019160ef6fd003ffc rp-pppoe-3.5-r2.ebuild 1641
-MD5 369091616bd1b0e298296a46427b50d6 rp-pppoe-3.5-r3.ebuild 1662
-MD5 4fa62067e9cb8b446a645ea5908d846d rp-pppoe-3.5-r4.ebuild 1933
-MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r1 64
-MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r2 64
-MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r3 64
-MD5 3ec97394e888b357e2c6020b3ab0155c files/rp-pppoe-3.5-dsa-557.patch 5581
-MD5 8708f33468c5aeada5ec65d597edec17 files/rp-pppoe-3.5-netscripts.patch 4063
-MD5 d90e4422c967ed2ba160c12b22f977b4 files/rp-pppoe-3.5-pidfile.patch 3266
+MD5 4d62c5ea3852358bb1bd17e95735247f rp-pppoe-3.5-r5.ebuild 1915
 MD5 966f79051cec3049cc3abb79ca6d3ab1 files/rp-pppoe.rc 498
-MD5 12a12bf20f670c990419c8f819c760df files/3.5-adsl-stop.patch 875
-MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r4 64
+MD5 d90e4422c967ed2ba160c12b22f977b4 files/rp-pppoe-3.5-pidfile.patch 3266
+MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r2 64
+MD5 3ec97394e888b357e2c6020b3ab0155c files/rp-pppoe-3.5-dsa-557.patch 5581
+MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r5 64
+MD5 8708f33468c5aeada5ec65d597edec17 files/rp-pppoe-3.5-netscripts.patch 4063
+MD5 4e9fa8d65d286e5e37e953e7c822c70e files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBl9yhjtv59x0+BrURAmTPAKD6pRQ4r3zumX0ZSw9Gc9UxiTYCzQCg3nBs
-LlhmwLX07iq1muBWyZUkkZw=
-=ewdE
+iD8DBQFBsAo/roRuSHgZdywRAunPAJ4qioLnMQ/vSG7XhEuutwhVxUN0hQCcDCqE
+sdaJkkmuE6Z9xYTpkJjqTbs=
+=CCYF
 -----END PGP SIGNATURE-----
