@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.10 2003/10/14 22:43:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.11 2003/10/15 00:10:08 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -8,7 +8,6 @@
 
 # Removing USE as soon as VIDEO_CARDS shows up in make.conf
 IUSE="3dfx gamma i8x0 matrox rage128 radeon sis"
-
 # VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis"
 
 inherit eutils xfree
@@ -67,7 +66,7 @@ if [ `use radeon || vcards radeon` ]
 then
 	VIDCARDS="${VIDCARDS} radeon.o"
 fi
-if [ `use sis || vcards sis300` ]
+if [ `use sis || vcards sis` ]
 then
 	VIDCARDS="${VIDCARDS} sis.o"
 fi
@@ -95,7 +94,7 @@ src_unpack() {
 
 	# Require at least one video card.
 	if [ -z "${VIDCARDS}" ] ; then
-		die "Please set at least one video card in VIDEO_CARDS in make.conf or the environment. USE is deprecated. Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis300, i810, i830, and gamma."
+		die "Please set at least one video card in VIDEO_CARDS in make.conf or the environment. USE is deprecated. Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
 	fi
 
 	unpack ${A}
@@ -184,10 +183,10 @@ pkg_postinst() {
 	if [ -z "VIDEO_CARDS" ]
 	then
 		einfo "USE is deprecated. Please set your video cards using VIDEO_CARDS."
-		einfo "Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis300, i810, i830, and gamma."
+		einfo "Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
 	fi
 
-	if vcards sis300
+	if vcards sis
 	then
 		einfo "SiS direct rendering only works on 300/305, 540, 630/S/ST, 730/S chipsets."
 		einfo "SiS framebuffer also needs to be enabled in the kernel."
