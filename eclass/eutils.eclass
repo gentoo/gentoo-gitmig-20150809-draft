@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.157 2005/03/07 17:45:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.158 2005/03/17 02:45:10 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -388,7 +388,8 @@ epatch() {
 			if [ "${count}" -eq 5 ]
 			then
 				echo
-				eerror "Failed Patch: ${patchname}!"
+				eerror "Failed Patch: ${patchname} !"
+				eerror " ( ${PATCH_TARGET} )"
 				eerror
 				eerror "Include in your bugreport the contents of:"
 				eerror
@@ -914,36 +915,117 @@ edos2unix() {
 #			http://www.freedesktop.org/wiki/Standards_2fmenu_2dspec
 # path:		if your app needs to startup in a specific dir
 make_desktop_entry() {
-	[ -z "$1" ] && eerror "make_desktop_entry: You must specify the executable" && return 1
+	[[ -z $1 ]] && eerror "make_desktop_entry: You must specify the executable" && return 1
 
-	local exec="${1}"
-	local name="${2:-${PN}}"
-	local icon="${3:-${PN}.png}"
-	local type="${4}"
-	local subdir="${6}"
-	local path="${5:-${GAMES_BINDIR}}"
-	if [ -z "${type}" ]
-	then
-		case ${CATEGORY} in
-			"app-emulation")
-				type=Emulator
-				subdir="Emulation"
+	local exec=${1}
+	local name=${2:-${PN}}
+	local icon=${3:-${PN}.png}
+	local type=${4}
+	local path=${5}
+
+	if [[ -z ${type} ]] ; then
+		local catmaj=${CATEGORY%%-*}
+		local catmin=${CATEGORY##*-}
+		case ${catmaj} in
+			app)
+				case ${catmin} in
+					admin)     type=System;;
+					cdr)       type=DiscBurning;;
+					dicts)     type=Dictionary;;
+					editors)   type=TextEditor;;
+					emacs)     type=TextEditor;;
+					emulation) type=Emulator;;
+					laptop)    type=HardwareSettings;;
+					office)    type=Office;;
+					vim)       type=TextEditor;;
+					xemacs)    type=TextEditor;;
+					*)         type=;;
+				esac
 				;;
-			"games-"*)
-				type=Game
-				subdir="Games"
+
+			dev)
+				type=Development
 				;;
-			"net-"*)
+
+			games)
+				[[ -z ${path} ]] && path=${GAMES_BINDIR}
+
+				case ${catmin} in
+					action)     type=ActionGame;;
+					arcade)     type=ArcadeGame;;
+					board)      type=BoardGame;;
+					kid)        type=KidsGame;;
+					emulation)  type=Emulator;;
+					puzzle)     type=LogicGame;;
+					rpg)        type=RolePlaying;;
+					roguelike)  type=RolePlaying;;
+					simulation) type=Simulation;;
+					sports)     type=SportsGame;;
+					strategy)   type=StrategyGame;;
+					*)          type=;;
+				esac
+				type=Game;${type}
+				;;
+
+			mail)
+				type=Network;Email
+				;;
+
+			media)
+				case ${catmin} in
+					gfx)   type=Graphics;;
+					radio) type=Tuner;;
+					sound) type=Audio;;
+					tv)    type=TV;;
+					video) type=Video;;
+					*)     type=;;
+				esac
+				type=AudioVideo;${type}
+				;;
+
+			net)
+				case ${catmin} in
+					dialup) type=Dialup;;
+					ftp)    type=FileTransfer;;
+					im)     type=InstantMessaging;;
+					irc)    type=IRCClient;;
+					mail)   type=Email;;
+					news)   type=News;;
+					nntp)   type=News;;
+					p2p)    type=FileTransfer;;
+					*)      type=;;
+				esac
+				type=Network;${type}
+				;;
+
+			sci)
+				case ${catmin} in
+					astro*) type=Astronomoy;;
+					bio*)   type=Biology;;
+					calc*)  type=Calculator;;
+					chem*)  type=Chemistry;;
+					geo*)   type=Geology;;
+					math*)  type=Math;;
+					*)      type=;;
+				esac	
+				type=Science;${type}
+				;;
+
+			www)
+				case ${catmin} in
+					client) type=WebBrowser;;
+					*)      type=;;
+				esac
 				type=Network
-				subdir="${type}"
 				;;
+
 			*)
 				type=
-				subdir=
 				;;
 		esac
 	fi
-	local desktop="${T}/${exec%% *}-${P}.desktop"
+
+	local desktop=${T}/${exec%% *}-${P}.desktop
 
 echo "[Desktop Entry]
 Encoding=UTF-8
