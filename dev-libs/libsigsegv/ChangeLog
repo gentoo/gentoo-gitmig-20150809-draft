@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigsegv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.6 2004/07/04 04:31:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.7 2004/07/04 11:36:30 dholm Exp $
+
+  04 Jul 2004; David Holm <dholm@gentoo.org> libsigsegv-2.1.ebuild:
+  Added to ~ppc.
 
 *libsigsegv-2.1 (03 Jul 2004)
 
