@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5.ebuild,v 1.2 2004/11/24 06:08:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5.ebuild,v 1.3 2004/12/11 17:17:07 dsd Exp $
 
 inherit kernel-mod eutils versionator
 
@@ -32,6 +32,13 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/cloop.fix.patch
 	epatch ${FILESDIR}/cloop.zlib-amd64.patch
+
+	# Debian uses conf.vars, everyone else uses .config
+	sed -i "s:conf.vars:.config:" Makefile
+
+	# Remove erroneous 2.4 include
+	kernel-mod_is_2_4_kernel && \
+		sed -i "s:#include <netinet/in.h>::" advancecomp-1.9_create_compressed_fs/advfs.cc
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cloop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.4 2004/11/24 16:23:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.5 2004/12/11 17:17:07 dsd Exp $
+
+  11 Dec 2004; Daniel Drake <dsd@gentoo.org> cloop-2.01.5.ebuild:
+  Fix 2.4 compilation
 
   24 Nov 2004; Stefan Schweizer <genstef@gentoo.org>
   +files/cloop.zlib-amd64.patch, cloop-2.01.5.ebuild:

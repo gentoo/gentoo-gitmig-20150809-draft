@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a9c58ce17c978363b0aa5e2e6545c7ba cloop-0.68.ebuild 2110
-MD5 48fab355f7c8d27fa49a2afb3de0c15f cloop-2.01.5.ebuild 1963
+MD5 92cbdba7a8888eb362afae91b159eb32 cloop-2.01.5.ebuild 2202
 MD5 f921e57967efb1fc6c2cb4ccb0dcbb92 cloop-2.00.ebuild 2027
 MD5 7498bc7803ebc9010d29cecefc3079b6 cloop-1.0.ebuild 1832
-MD5 6d4148ed99a22710207735942d68c58d ChangeLog 2140
+MD5 7636ead76228a9c0e164d2bc204df35e ChangeLog 2224
 MD5 4bb124b6d8e7842a97dd4b5fc87c545a cloop-1.02.ebuild 1938
 MD5 2d8e24e9e409e35ee446ec8d59f23c8d metadata.xml 269
 MD5 fddd6265f57fe660c663a7b5b673f7f7 files/kernel-2.6.8-fs_h-fix.patch 759
@@ -17,10 +14,3 @@ MD5 cc6063c4f68af1ae01cf6437c8a224b8 files/digest-cloop-2.00 63
 MD5 4666ce65a6ce33f0a2c449fcec7e0488 files/cloop.fix.patch 2071
 MD5 eba344b1fcf93c086a762d9f059adf84 files/digest-cloop-2.01.5 64
 MD5 ab48f2b1094c297eaa04e42906bf652b files/kernel26_amd64.patch 2121
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpLWfI1lqEGTUzyQRAl7IAKCM90hE1IKK0SO+4Rvgr6XkEE6dIACg0Un+
-3bXzJ2iV2Kk0WuuMAPlcvrc=
-=3EK4
------END PGP SIGNATURE-----
