@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.4 2005/01/24 09:36:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.5 2005/01/24 10:19:54 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -205,9 +205,8 @@ src_install() {
 
 	etc_files_install
 
-	# ??? Seems as if this shouldn't have a !
 	# We move libGLU to /usr/lib now
-	if ! use opengl; then
+	if use opengl; then
 		dosym libGLU.so.1.3 /usr/$(get_libdir)/libMesaGLU.so
 	fi
 
