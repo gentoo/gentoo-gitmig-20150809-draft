@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.80 2003/07/21 08:35:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.81 2003/08/14 05:17:29 g2boojum Exp $
+
+  13 Aug 2003; Nick Hadaway <raker@gentoo.org> files/postfix.rc6:
+  Added ypbind to the use list so NIS-related services are started
+  before the mail server is started.  See bug #26405.
 
   21 Jul 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.13-r1.ebuild:
   Only install the smtpd.conf if sasl is in USE.
