@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/zisofs-tools-1.0.4-r1.ebuild,v 1.12 2004/07/16 09:09:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/zisofs-tools-1.0.4-r1.ebuild,v 1.13 2004/07/18 15:03:38 tgall Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/fs/zisofs/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha arm amd64 hppa"
+KEYWORDS="x86 ~ppc sparc alpha arm amd64 hppa ppc64"
 IUSE="static"
 
 DEPEND=">=sys-libs/zlib-1.1.4"
