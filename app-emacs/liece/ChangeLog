@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/liece
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/ChangeLog,v 1.5 2003/08/17 19:12:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/ChangeLog,v 1.6 2003/08/18 15:31:08 usata Exp $
+
+*liece-1.4.7-r1 (19 Aug 2003)
+
+  19 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> liece-1.4.7-r1.ebuild,
+  files/liece-1.4.7-gentoo.patch:
+  Fixed insecure temporary file
 
 *liece-2.0.0_alpha20030526 (18 Aug 2003)
 
