@@ -62,13 +62,8 @@ your /etc/crontab file:
 Note that you should use poller.php as the cronjob instead of cmd.php (as it was with 
 earlier versions) to enable you to switch between cmd.php and cactid.
 
-
-PHP
-
-FINALLY, you must have these settings in your php.ini:
-
-	register_globals = On
-	register_argc_argv = On
-
+Also make sure that the user poller.php runs ( ${VHOST_SERVER_GID} ) as has
+permission to create new files in Cacti's 'rra/' directory which is
+${MY_INSTALLDIR}/rrd
 
 
