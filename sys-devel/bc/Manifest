@@ -1,10 +1,20 @@
-MD5 5559d9c9c3848d6981b41a0e2614d21c ChangeLog 2346
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 65912c5b87f74d8de0f072ad9bad9286 bc-1.06-r6.ebuild 1915
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 682fbd19cd0377cd4085fd205248665e ChangeLog 2440
 MD5 5dcd4193123a3278c4e8f06a9fc46532 bc-1.06-r5.ebuild 1811
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 5adbdf2aa01d4fe7dbf98d13750dffbc bc-1.06-r6.ebuild 1916
 MD5 c6bc9e8c6698c429c778901b2d353c3f files/bc-1.06-info-fix.diff 3182
 MD5 40794acac9c09ee182af19387df613b4 files/bc-1.06-readline42.diff 430
-MD5 678de048f9423a545c34894a9e9045b0 files/bc-1.06-longopts.patch 913
-MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r6 59
-MD5 fb32cf57c22acd86e7bd5afdb2191552 files/bc-1.06-static-save.patch 519
 MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r5 59
+MD5 678de048f9423a545c34894a9e9045b0 files/bc-1.06-longopts.patch 913
+MD5 fb32cf57c22acd86e7bd5afdb2191552 files/bc-1.06-static-save.patch 519
+MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r6 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLu9QKRy60XGEcJIRAnvqAJ9lZ8kujrq3BQ54+RP2dgVorgDBKwCgkhMo
+wfI2nVd/8ohMe2fllhYKoYg=
+=1/KY
+-----END PGP SIGNATURE-----
