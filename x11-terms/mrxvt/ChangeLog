@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.4 2004/10/17 16:10:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.5 2004/10/23 06:46:12 usata Exp $
+
+*mrxvt-0.3.6 (23 Oct 2004)
+
+  23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +mrxvt-0.3.6.ebuild:
+  Version bumped.
 
   18 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> mrxvt-0.3.5.ebuild:
   Modified DESCRIPTION, thanks to Daniel Webert <rockoo@rockoo.homelinux.org>.

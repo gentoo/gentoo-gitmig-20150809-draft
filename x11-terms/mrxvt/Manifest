@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a0df12e80ac2c6ed46f090170aff0da mrxvt-0.3.4.ebuild 1877
+MD5 e167b894e1c15c78d9bbf9cf55939748 ChangeLog 848
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 073f88d803df6204c6c25a4998bc4b93 ChangeLog 731
+MD5 9a0df12e80ac2c6ed46f090170aff0da mrxvt-0.3.4.ebuild 1877
 MD5 0d50292f734be7c42ae7c595eb41d563 mrxvt-0.3.5.ebuild 2115
+MD5 4c16be16437985c324761bc6f88bd2e8 mrxvt-0.3.6.ebuild 2115
 MD5 fd7edfcbe4deec6c0c0702a880cd5475 files/digest-mrxvt-0.3.4 60
 MD5 62b3aa05b4f4efe8015b497a10da1c32 files/digest-mrxvt-0.3.5 60
+MD5 cee18b29ccc9b416733d6d2c7cfe4fc8 files/digest-mrxvt-0.3.6 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (Darwin)
 
-iD8DBQFBcpg2VWNWqTUmv+0RAlmaAKCQhHYZmB9tKckbZrdd0XerjYZlEwCeLFUf
-rAm31egM8SJyeX3kXAzKfsY=
-=bHVj
+iD8DBQFBef5IVWNWqTUmv+0RAlOTAJ0XbgLLwd46ZpKKGUvpdz/oxwMcagCfTy/D
+VNzd1gUpIwTk3t3SjmgcvtE=
+=bptD
 -----END PGP SIGNATURE-----
