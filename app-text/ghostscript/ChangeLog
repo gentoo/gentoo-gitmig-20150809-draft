@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.54 2004/06/28 22:11:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.55 2004/06/29 23:55:42 lu_zero Exp $
+
+*ghostscript-7.05.6 (30 Jun 2004)
+
+  30 Jun 2004; Luca Barbato <lu_zero@gentoo.org> +files/gs7.05-gdevhl12.c,
+  +ghostscript-7.05.6.ebuild, ghostscript-7.07.1-r1.ebuild,
+  ghostscript-7.07.1-r2.ebuild:
+  Put back the ghostscript-7.05.6 since the latter won't work on ppc
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org>  ghostscript-7.07.1-r2.ebuild:
   mark ~ppc64, bug #54151
