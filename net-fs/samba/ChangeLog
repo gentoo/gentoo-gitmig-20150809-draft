@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.137 2004/12/17 15:27:23 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.138 2004/12/21 14:59:53 gmsoft Exp $
+
+  21 Dec 2004; Guy Martin <gmsoft@gentoo.org> samba-3.0.9-r1.ebuild:
+  Stable on hppa (#73943).
 
 *samba-3.0.10 (17 Dec 2004)
 
