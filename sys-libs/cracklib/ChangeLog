@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.28 2003/08/09 17:30:41 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.29 2003/09/08 15:24:50 pappy Exp $
+
+  08 Sep 2003; Alexander Gabert <pappy@gentoo.org> cracklib-2.7-r7.ebuild:
+  bug 28132 take out libgcc_s.so for gcc2.95
 
   09 Aug 2003; Alexander Gabert <pappy@gentoo.org> cracklib-2.7-r7.ebuild:
   adding propolice bugfix dependency only for gcc
