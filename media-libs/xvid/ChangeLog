@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.22 2004/06/11 11:01:05 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.23 2004/06/22 20:40:07 kugelfang Exp $
+
+  22 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/xvid-1.0.1-64bit-clean.patch, xvid-1.0.1.ebuild:
+  Added unconditional 64bit cleaning patch. Patch got ok by ferringb.
+  Fixes BUG #54134.
 
 *xvid-1.0.1 (11 Jun 2004)
 

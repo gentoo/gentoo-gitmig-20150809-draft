@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.1.ebuild,v 1.2 2004/06/14 13:19:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.1.ebuild,v 1.3 2004/06/22 20:40:07 kugelfang Exp $
 
 inherit eutils
 
@@ -23,6 +23,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-DESTDIR.patch
+
+	# Appliying 64bit patch unconditionally.
+	# Simple patch that works arch independent.
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/06/22
+	cd ${S}/../..
+	epatch ${FILESDIR}/${P}-64bit-clean.patch
 }
 
 src_install() {
