@@ -1,0 +1,41 @@
+--- phpsysinfo-dev/includes/os/class.Linux.inc.php.orig	2004-06-07 03:06:47.185996319 +0200
++++ phpsysinfo-dev/includes/os/class.Linux.inc.php	2004-06-07 03:07:15.387538984 +0200
+@@ -176,6 +176,38 @@
+       fclose($fd);
+     } 
+ 
++       // sparc64 specific code follows
++       // This adds the ability to display the cache that a CPU has
++       // Originally made by Sven Blumenstein <bazik@gentoo.org> in 2004
++       // Modified by Tom Weustink <freshy98@gmx.net> in 2004
++
++        if ($fd = fopen('/proc/openprom/SUNW,UltraSPARC@0,0/ecache-size', 'r')) {
++           $results['cache'] = base_convert(fgets($fd, 32), 16, 10)/1024 . ' KB';
++           fclose($fd);
++       }
++
++        if ($fd = fopen('/proc/openprom/SUNW,UltraSPARC-II@0,0/ecache-size', 'r')) {
++           $results['cache'] = base_convert(fgets($fd, 32), 16, 10)/1024 . ' KB';
++           fclose($fd);
++       }
++
++        if ($fd = fopen('/proc/openprom/SUNW,UltraSPARC@1c,0/ecache-size', 'r')) {
++           $results['cache'] = base_convert(fgets($fd, 32), 16, 10)/1024 . ' KB';
++           fclose($fd);
++       }
++
++        if ($fd = fopen('/proc/openprom/SUNW,UltraSPARC-IIi@1c,0/ecache-size', 'r')) {
++           $results['cache'] = base_convert(fgets($fd, 32), 16, 10)/1024 . ' KB';
++           fclose($fd);
++       }
++
++        if ($fd = fopen('/proc/openprom/SUNW,UltraSPARC-II@1c,0/ecache-size', 'r')) {
++           $results['cache'] = base_convert(fgets($fd, 32), 16, 10)/1024 . ' KB';
++           fclose($fd);
++       }
++
++       // sparc64 specific code ends
++
+     $keys = array_keys($results);
+     $keys2be = array('model', 'mhz', 'cache', 'bogomips', 'cpus');
+ 

@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.23 2005/03/15 18:27:04 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.24 2005/04/01 17:09:08 corsair Exp $
+
+*phpsysinfo-2.3-r2 (01 Apr 2005)
+
+  01 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  +files/phpsysinfo-2.3-sparc.patch, +files/phpsysinfo-2.3-xss-and-path.patch,
+  +phpsysinfo-2.3-r2.ebuild:
+  Revision bump to fix bug #53178 (sparch cpu patch) and bug #86478 (XSS and
+  path disclosure issues); Stable on ppc64
 
 *phpsysinfo-2.3-r1 (15 Mar 2005)
 

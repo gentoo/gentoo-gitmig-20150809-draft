@@ -1,25 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 be73e8f0b0a1c76c2a32f3de08ae3584 ChangeLog 3328
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 90bc9a8436887302085fbba200aac900 phpsysinfo-2.1-r1.ebuild 1425
 MD5 aa15da55376b3faaa7cb58e80eaee9ca phpsysinfo-2.1-r2.ebuild 1545
 MD5 8827892746bd5882799782a7880220d4 phpsysinfo-2.1.ebuild 909
-MD5 2a4787b7359d335ebb9f0430f4bb3e32 phpsysinfo-2.3.ebuild 1069
-MD5 90bc9a8436887302085fbba200aac900 phpsysinfo-2.1-r1.ebuild 1425
 MD5 08c8fc60174ef3ff913eced95d7bb74c phpsysinfo-2.2.ebuild 1085
-MD5 29a920c00a4c6be7bf2adc0e6b92bca0 ChangeLog 3018
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 b3595c0eebf0d7f02ddf48ca76940a92 phpsysinfo-2.3-r1.ebuild 1077
+MD5 2a4787b7359d335ebb9f0430f4bb3e32 phpsysinfo-2.3.ebuild 1069
+MD5 5c55722dd9b6be4c4dea7da26493f1a0 phpsysinfo-2.3-r2.ebuild 1137
 MD5 dd6e98f9ae29de67bf46f225d4fe3eff files/digest-phpsysinfo-2.1 66
-MD5 90445c68318e8784cc1d594123e06edc files/digest-phpsysinfo-2.2 66
-MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3 66
-MD5 7885e7ba5eca949998923dae36e02071 files/fix_memory_display_kernel2.5.diff.gz 1230
 MD5 31e3ac9396a003b09c5f3caf78c361f2 files/digest-phpsysinfo-2.1-r1 133
 MD5 31e3ac9396a003b09c5f3caf78c361f2 files/digest-phpsysinfo-2.1-r2 133
+MD5 90445c68318e8784cc1d594123e06edc files/digest-phpsysinfo-2.2 66
+MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3 66
 MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNykaaGfFFLhbXWkRAqj7AKCGjGuaDrD0KdiZpB5zjhNIzCfcYQCgh9fC
-wmc3GeTOet28KhEbxJaLoeY=
-=zQIm
------END PGP SIGNATURE-----
+MD5 7885e7ba5eca949998923dae36e02071 files/fix_memory_display_kernel2.5.diff.gz 1230
+MD5 ca07aa2a3675997e7e9a7a052b3a4dc1 files/phpsysinfo-2.3-sparc.patch 1652
+MD5 ac0f72a0a4d39050931afdad0deeb37b files/phpsysinfo-2.3-xss-and-path.patch 5452
+MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3-r2 66
