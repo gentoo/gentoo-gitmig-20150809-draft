@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/gentoo-distfiles-mirror
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-distfiles-mirror/ChangeLog,v 1.1 2003/11/18 01:27:39 tantive Exp $
+
+*gentoo-distfiles-mirror-0.1_pre1 (18 Nov 2003)
+
+  18 Nov 2003; Michael Imhof <tantive@gentoo.org> gentoo-distfiles-mirror-0.1_pre1.ebuild,
+  files/0.1/apache.addon-module, files/0.1/portage-incremirror:
+  Initial release.
+
