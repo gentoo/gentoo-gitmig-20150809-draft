@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.1.0.9089.ebuild,v 1.2 2004/07/14 20:12:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.1.0.9089.ebuild,v 1.3 2004/07/15 11:08:28 jmglov Exp $
 
 MY_PN="VMware-console"
 MY_PV=`echo ${PV} | sed -e 's/\.\([0-9]\+\)$/-\1/'`
@@ -18,7 +18,7 @@ KEYWORDS="~x86"
 RESTRICT="fetch nostrip"
 IUSE="esx"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11"
 
 pkg_nofetch() {
