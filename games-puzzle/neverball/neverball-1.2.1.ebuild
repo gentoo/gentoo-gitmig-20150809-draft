@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.2.1.ebuild,v 1.1 2004/04/11 00:42:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.2.1.ebuild,v 1.2 2004/04/11 17:43:38 vapier Exp $
 
 inherit games eutils
 
@@ -27,11 +27,7 @@ src_unpack() {
 	sed -i '/CONFIG_PATH/s:"\./data":"'${GAMES_DATADIR}/${PN}'":g' \
 		share/config.h \
 		|| die "sed config.h failed"
-	# the $(MAPC_TARG) is just a temp fix ... should be in
-	# future releases ... parallel builds fail w/out it
-	sed -i \
-		-e "s:-Wall -O3:${CFLAGS}:" \
-		-e '/^data\/sol-/s:$: $(MAPC_TARG):' \
+	sed -i "s:-Wall -O3:${CFLAGS}:" \
 		Makefile \
 		|| die "sed Makefile failed"
 }
