@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.17 2004/07/30 23:15:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.18 2004/07/31 00:23:47 tgall Exp $
+
+  31 Jul 2004; Tom Gall <tgall@gentoo.org> jwhois-3.2.2.ebuild:
+  ppc64 stable restored, don't mask arches without talking to the arch lead
 
   31 Jul 2004; Daniel Black <dragonheart@gentoo.org> jwhois-3.2.0.ebuild,
   jwhois-3.2.1.ebuild, jwhois-3.2.2.ebuild, +metadata.xml:
