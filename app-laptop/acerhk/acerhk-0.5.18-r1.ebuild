@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18-r1.ebuild,v 1.3 2005/01/02 10:40:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18-r1.ebuild,v 1.4 2005/01/02 10:44:04 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://www.informatik.hu-berlin.de/~tauber/acerhk/"
 SRC_URI="http://www.informatik.hu-berlin.de/~tauber/acerhk/archives/acerhk-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
@@ -27,4 +26,15 @@ src_unpack() {
 src_install() {
 	linux-mod_src_install
 	dodoc README COPYING NEWS doc/*
+}
+
+pkg_postinst() {
+	linux-mod_pkg_postinst
+
+	einfo "You can load the module:"
+	einfo "% modprobe acerhk poll=1"
+	einfo "If you need poll=1 you can set it permanently in /etc/modules.d/acerhk"
+	echo
+	einfo "If you need more info about this driver you can read the README file"
+	einfo "% zmore /usr/share/doc/${PN}-${PV}/README.gz"
 }
