@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.10 2003/07/15 09:18:23 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.11 2003/08/29 23:47:01 zul Exp $
+
+*pinfo-0.6.8 (29 Aug 2003)
+
+  29 Aug 2003; <chuck@gentoo.org> pinfo-0.6.8.ebuild:
+  Version bump, updated SRC_URL, and homepage. Closes #27530.
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org> pinfo-0.6.7.ebuild:
   Added sparc stable keyword
