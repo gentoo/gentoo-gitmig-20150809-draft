@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <souder@gentoo.org>  (08 Dec 2003)
+# Unmaintained upstream since > year
+gnome-extra/apotheke
+
+
 # <pyrania@gentoo.org> (07 Dec 2003)
 # see bug #32469
 # preparing to drop
