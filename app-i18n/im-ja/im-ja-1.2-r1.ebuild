@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2-r1.ebuild,v 1.5 2005/01/01 14:30:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2-r1.ebuild,v 1.6 2005/02/05 06:35:44 usata Exp $
 
 inherit gnome2 eutils
 
@@ -19,6 +19,8 @@ IUSE="gnome canna freewnn skk anthy"
 
 DEPEND="dev-lang/perl
 	dev-perl/URI
+	>=sys-devel/autoconf-2.50
+	>=sys-devel/automake-1.7
 	${RDEPEND}"
 RDEPEND="virtual/libc
 	>=dev-libs/glib-2.4
@@ -39,6 +41,9 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${DISTDIR}/${P}-20041001.diff.gz
+	if has_version '>=x11-libs/gtk+-2.6' ; then
+		epatch ${FILESDIR}/${P}-gtk26.patch
+	fi
 }
 
 src_compile() {
@@ -53,6 +58,7 @@ src_compile() {
 	use skk || myconf="$myconf --disable-skk"
 	#use debug && myconf="$myconf --enable-debug"
 
+	libtoolize --copy --force || die
 	# gnome2_src_compile automatically sets debug IUSE flag
 	econf $myconf || die "econf im-ja failed"
 	emake || die "emake im-ja failed"
