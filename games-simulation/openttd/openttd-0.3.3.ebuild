@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.3.ebuild,v 1.2 2004/07/23 22:38:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.3.ebuild,v 1.3 2004/09/06 21:25:10 slarti Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/openttd/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="debug png zlib"
 
 DEPEND="virtual/libc

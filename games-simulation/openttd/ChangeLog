@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.5 2004/07/23 22:38:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.6 2004/09/06 21:25:10 slarti Exp $
+
+  06 Sep 2004; Tom Martin <slarti@gentoo.org> openttd-0.3.3.ebuild:
+  Marked ~amd64, resolving bug 63029. Thanks to E. Papegaaij
+  <e.papegaaij@student.utwente.nl> for reporting.
 
   23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> openttd-0.3.3.ebuild:
   need unzip if we're planning to unzip anything (bug #58036)
