@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r2.ebuild,v 1.1 2004/02/04 07:50:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r2.ebuild,v 1.2 2004/02/05 07:19:02 eradicator Exp $
 
 inherit flag-o-matic eutils
 
-PATCHVER="0.4"
+PATCHVER="0.5"
 
 MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
@@ -69,6 +69,7 @@ src_unpack() {
 	else
 		# add recode patch http://sourceforge.net/projects/rusxmms/
 		epatch ${PATCHDIR}/${P}-recode-csa27.patch
+		epatch ${PATCHDIR}/${P}-recode-csa27.gcc2.patch
 	fi
 
 	if [ ! -f ${S}/config.rpath ] ; then
