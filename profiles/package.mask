@@ -320,11 +320,6 @@ x11-libs/qt-embedded
 # Masked for testing
 =app-admin/modlogan-0.7.18
 
-# <spider@gentoo.org> (16 Aug 2002 )
-# Masking for testing, new gnome2.eclass mungling with schemas
-# =gnome-base/gnome-applets-2.0.1-r1
-# =media-libs/gst-plugins-0.4.0-r1
-
 # <mjc@gentoo.org> (15 Aug 2002)
 # new ebuild, thanks to carpaski =)
 net-www/apache2
@@ -361,10 +356,6 @@ sys-apps/fakeroot
 # masked for testing
 =app-shells/zsh-4.0.5
 
-# <azarah@gentoo.org> (12 Aug 2002)
-# add libdvdnav-0.1.3 support. needs testing
-#=media-video/mplayer-0.90_pre6-r3
-
 # <bass@gentoo.org> (08 Aug 2002)
 # beta version for gnome2
 =app-games/teg-0.11.0
@@ -387,7 +378,6 @@ app-editors/kvim
 # 08/13/02 fixed more hardcoded values 
 # in default Makefile
 =dev-perl/SGMLSpm-1.03-r2
-#=dev-perl/SGMLSpm-1.03-r3
 
 # <seemant@gentoo.org> (05 Aug 2002)
 # masked for testing
@@ -1052,17 +1042,9 @@ dev-lang/tcl-tk
 =media-gfx/gphoto-2.0.0
 =media-gfx/gphoto-2.0.0-r1
 
-
-# jhhudso@gentoo.org 3 Apr 2002
-# This is the new version of shadow, needs more beta testing
-#
-# Test ok, and is latest stable.  Azarah (08 Aug 2002)
-#>=sys-apps/shadow-4.0.3
-
 # spider@gentoo.org ; 21 May 2002;
 # this is the gnome2 mask!
 # (gnome-2 that is ;)
-
 # dependencies for theese arent fixed yet:
 >=x11-libs/gtkmm-1.3.0
 >=dev-libs/libsigc-1.1.0
