@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/xmysqladmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/ChangeLog,v 1.2 2002/09/13 05:34:10 rphillips Exp $
 
 *xmysqladmin-1.0 (1 Feb 2002)
+
+  12 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xmysqladmin-1.0.ebuild :
+
+  Fixed sed statement.  Fixes #7797.  Submitted by David Morel
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
