@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Term-ProgressBar
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.1 2003/02/12 03:23:12 seemant Exp $
+
+*Term-ProgressBar-2.02 (11 Feb 2003)
+
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog
+  Term-ProgressBar-2.02.ebuild files/digest-Term-ProgressBar-2.02 :
+
+  New perl module for xmltv for mythtv.   Ebuild submitted by: Tony Clark
+  <tclark@telia.com> in bug #13036.
