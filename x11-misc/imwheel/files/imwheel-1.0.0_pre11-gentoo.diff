@@ -1,0 +1,10 @@
+--- Makefile.in_	2004-06-13 04:50:25.305898704 +0200
++++ Makefile.in	2004-06-13 04:52:14.187346208 +0200
+@@ -219,7 +219,7 @@
+ imwheel_DEPENDENCIES = imwheel.o util.o cfg.o jax/libjax.a
+ man_MANS = imwheel.1
+ EXTRA_DIST = BUGS FREEBSD EMACS M-BA47 BUGS see imwheel.1.html imwheel.1 TODO imwheelrc @extras_dist@ @mdump_dist@ lefty.sh imwheel.spec slack.sh
+-ETCDIR = /etc/X11/imwheel
++ETCDIR = ${D}/etc/X11/imwheel
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
