@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.74 2003/08/09 23:02:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.75 2003/08/10 08:30:32 kumba Exp $
+
+  10 Aug 2003; Joshua Kinard <kumba@gentoo.org> glibc-2.3.2-r1.ebuild:
+  Moved to stable on mips.  Been using it for ages w/ no problems.
 
   10 Aug 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r2.ebuild,
   glibc-2.3.2-r3.ebuild, files/fix-sysctl_h.patch, files/test-sysctl_h.c:
