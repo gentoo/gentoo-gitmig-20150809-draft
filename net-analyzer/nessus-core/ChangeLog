@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.24 2003/10/22 06:21:59 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.25 2003/11/19 08:54:23 phosphan Exp $
+
+*nessus-core-2.0.9 (19 Nov 2003)
+
+  19 Nov 2003; Patrick Kursawe <phosphan@gentoo.org>
+  nessus-core-2.0.6a-r1.ebuild, nessus-core-2.0.9.ebuild,
+  files/nessus-core-2.0.6a.patch, files/nessus-core-2.0.8a.patch:
+  Version bump, cleanup
 
   22 Oct 2003; Patrick Kursawe <phosphan@gentoo.org>
   nessus-core-2.0.8a.ebuild:
