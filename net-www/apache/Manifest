@@ -6,7 +6,7 @@ MD5 738de16a708fdae922876faebfa4ddd7 apache-2.0.48-r4.ebuild 12398
 MD5 e0f991e03523c04fc281041e5a6c88c6 apache-1.3.29-r1.ebuild 7442
 MD5 393a81b82d3926a4118bc16e885c57f6 apache-2.0.49.ebuild 12811
 MD5 6a8c8f57294fd9118e7ae5a0ba2ffb1f apache-1.3.31-r1.ebuild 6708
-MD5 6bdfe27bc8f69a75c8e3f17dd8be4bcc ChangeLog 32329
+MD5 687b130f8da00e891483b23ddc23ef9b ChangeLog 32617
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 d4b8a4908870107e15cc1edbd0ec6ebb files/apache-1.3.29_mod_auth_db.patch 729
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
@@ -106,6 +106,5 @@ MD5 161245c7aa1eb785db53b34d6a10be43 files/patches/1.3.31/00_gentoo_suexec_pam.p
 MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31/00_gentoo_apachectl.patch 32836
 MD5 3c0dfc9f2dc93ae46eb6382cf9533f18 files/patches/1.3.31-r1/00_gentoo_base.patch 27799
 MD5 a63b9472904d3500cf72b370a9ee3200 files/patches/1.3.31-r1/00_gentoo_db4_detect.patch 1304
-MD5 28272b16a4f701f29eb73d932fd81101 files/patches/1.3.31-r1/Readme.PATCHES 747
 MD5 161245c7aa1eb785db53b34d6a10be43 files/patches/1.3.31-r1/00_gentoo_suexec_pam.patch 2149
 MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31-r1/00_gentoo_apachectl.patch 32836
