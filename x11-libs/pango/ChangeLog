@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.31 2003/02/12 09:24:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.32 2003/02/21 23:44:58 agriffis Exp $
 
-*pango-1.2.1.ebuild (04 Feb 2003)
+*pango-1.2.1 (04 Feb 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> pango-1.2.1.ebuild :
+  Mark stable on alpha
 
   05 Feb 2003; foser <foser@gentoo.org> pango-1.2.1.ebuild :
   removed sgmltools-lite dep
@@ -10,7 +13,7 @@
   04 Feb 2003; Spider <spider@gentoo.org> pango-1.2.1.ebuild :
   versionbumped 
 
-*pango-1.2.0.ebuild (22 Dec 2002)
+*pango-1.2.0 (22 Dec 2002)
   
   04 Feb 2003; Spider <spider@gentoo.org> 
   Change DEBUG to DEBUGBUILD
