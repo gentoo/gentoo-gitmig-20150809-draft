@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.13.ebuild,v 1.5 2004/07/02 08:37:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.13.ebuild,v 1.6 2004/07/15 03:08:36 agriffis Exp $
 
 IUSE=""
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Assembler and loader used to create kernel bootsector"
 SRC_URI="http://www.cix.co.uk/~mayday/${PN/bin/dev}/${P}.tar.gz"
 HOMEPAGE="http://www.cix.co.uk/~mayday/"
