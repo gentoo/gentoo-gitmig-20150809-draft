@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.27.ebuild,v 1.12 2004/12/30 20:38:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.27.ebuild,v 1.13 2005/03/10 05:27:08 vapier Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-nls.patch
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:=.*:= /usr/share/doc/${PF}:" \
 		-e '/^PKG_[[:upper:]]*_DIR/s:= := $(DESTDIR):' \
@@ -54,5 +55,6 @@ src_compile() {
 }
 
 src_install() {
-	make DIST_ROOT=${D} install install-dev install-lib || die
+	make DIST_ROOT="${D}" install install-dev install-lib || die
+	dodoc README
 }

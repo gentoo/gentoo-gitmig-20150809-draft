@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/acl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.40 2004/12/16 06:13:06 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.41 2005/03/10 05:27:08 vapier Exp $
+
+  10 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/acl-2.2.27-nls.patch, acl-2.2.27.ebuild:
+  Fix USE=-nls support #84641 by B. Bruce.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> acl-2.2.27.ebuild:
   Stable on amd64. Closes bug 73277.
