@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.883 2005/01/22 17:44:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.884 2005/01/22 18:28:11 lostlogic Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -395,6 +395,7 @@ media-libs/libsdl:libcaca - Add support for colored ASCII-art graphics
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
+media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
 media-libs/openvrml:javascript - Script node JavaScript support
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdif:threads  - Enables posix thread support
