@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/radiance
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/radiance/ChangeLog,v 1.1 2003/12/14 17:44:53 malverian Exp $
+
+*radiance-3.5 (14 Dec 2003)
+
+  14 Dec 2003; Philip Walls <malverian@gentoo.org radiance-3.5.ebuild
+  Initial import.  Ebuild submitted by Derek Young <d@young.hostforweb.com>.
+  Thanks also to James Harlow <hythloday@gentoo.org> for an earlier 
+  preliminary ebuild. Closes bug #20163
