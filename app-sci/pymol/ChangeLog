@@ -1,14 +1,22 @@
 # ChangeLog for app-sci/pymol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.4 2003/02/12 05:18:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.5 2003/06/20 04:53:29 george Exp $
 
-*pymol-0.82.ebuild (05 Feb 2003)
+*pymol-0.88 (29 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> pymol-0.88.ebuild, files/{files/digest-pymol-0.88,nosplash-gentoo.patch,setup2.py-gentoo.patch} :
+  new version (#22235)
+  now uses distutils for python
+  thanks to Todd Geders <geders@purdue.edu> for update notification 
+  and Ben Cornett <acornet@emory.edu>  for "distutilized" ebuild submission
+
+*pymol-0.86 (05 Feb 2003)
 
   05 Feb 2003; George Shapovalov <george@gentoo.org> pymol-0.86.ebuild, files/digest-pymol-0.86 :
   new version, (#13531)
   removed -funroll-loops from CFLAGS
 
-*pymol-0.82.ebuild (17 July 2002)
+*pymol-0.82 (17 July 2002)
 
   19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> pymol-0.82.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
