@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.3.ebuild,v 1.3 2003/07/12 15:15:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.3.ebuild,v 1.4 2004/01/15 03:56:36 robbat2 Exp $
 
 inherit eutils
 
@@ -45,8 +45,8 @@ src_install() {
 	#protect these programs
 	local gid=`grep ^apache: /etc/group |cut -d: -f3`
 	[ -z "${gid}" ] && gid=81
-	fowners root.${gid} /usr/lib/apache2-extramodules/unixgroup
-	fowners root.${gid} /usr/lib/apache2-extramodules/pwauth
+	fowners root:${gid} /usr/lib/apache2-extramodules/unixgroup
+	fowners root:${gid} /usr/lib/apache2-extramodules/pwauth
 	fperms 4710 /usr/lib/apache2-extramodules/unixgroup
 	fperms 4710 /usr/lib/apache2-extramodules/pwauth
 }
