@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.5 2003/04/22 22:58:14 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.6 2003/06/08 01:21:56 rac Exp $
+
+  07 Jun 2003; <rac@gentoo.org> Devel-StackTrace-1.03.ebuild:
+  Add IUSE, shift URL to by-modules
 
 *Devel-StackTrace-1.03 (22 Apr 2003)
 
