@@ -24,11 +24,8 @@ tcltk
 gtk
 gtk2
 
-# gtk+ pulls in XML-Parser with USE="nls xml", so Perl issue should
-# be resolved first before keywording them
-gtk
-gtk2
-
+# masking xmms until we get deps sorted out
+xmms
 
 # net-misc/dante fails to compile, so we mask it until we succeed
 # (dev-lang/ruby, net-misc/lftp)
