@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.2_rc2.ebuild,v 1.1 2004/01/26 03:37:34 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.2_rc2.ebuild,v 1.2 2004/01/26 09:59:28 johnm Exp $
 
 K_NOUSENAME="yes"
-K_PREPATCHED="yes"
 ETYPE="sources"
 inherit kernel-2
 detect_version
