@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.4 2004/02/15 21:37:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.5 2004/02/15 22:13:39 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -705,7 +705,7 @@ EOF
 	if [ "${ROOT}" = "/" -a \
 	     ! -f /etc/gshadow -a -x /usr/sbin/grpck -a -x /usr/sbin/grpconv ]
 	then
-		/usr/sbin/grpck &>/dev/null
+		/usr/sbin/grpck -r &>/dev/null
 		if [ "$?" -eq 0 ]
 		then
 			/usr/sbin/grpconv
