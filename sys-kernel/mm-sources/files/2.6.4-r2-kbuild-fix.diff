@@ -1,0 +1,12 @@
+diff -aur linux-2.6.4-mm2-orig/Makefile linux-2.6.4-mm2/Makefile
+--- linux-2.6.4-mm2-orig/Makefile	2004-03-15 10:14:44.000000000 -0500
++++ linux-2.6.4-mm2/Makefile	2004-03-15 11:05:36.335178328 -0500
+@@ -990,7 +990,7 @@
+ 	@set -e; \
+ 	$(if $($(quiet)cmd_$(1)),echo '  $(subst ','\'',$($(quiet)cmd_$(1)))';) \
+ 	$(cmd_$(1)); \
+-	scripts/fixdep $(depfile) $@ '$(subst $$,$$$$,$(subst ','\'',$(cmd_$(1))))' > $(@D)/.$(@F).tmp; \
++	scripts/basic/fixdep $(depfile) $@ '$(subst $$,$$$$,$(subst ','\'',$(cmd_$(1))))' > $(@D)/.$(@F).tmp; \
+ 	rm -f $(depfile); \
+ 	mv -f $(@D)/.$(@F).tmp $(@D)/.$(@F).cmd)
+ 
