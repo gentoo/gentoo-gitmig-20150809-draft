@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gento.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-3.34.ebuild,v 1.1 2001/12/30 22:18:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.01.ebuild,v 1.1 2002/02/25 04:37:56 azarah Exp $
 
-#P=
 S=${WORKDIR}/${P}
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -26,43 +25,54 @@ RDEPEND="virtual/x11
 	kde? ( kde-base/kde-env )"
 
 src_compile() {
-	local myconf
+	local myconf=""
 	if [ "`use gnome`" ]
 	then
-		myconf="--with-gnome"
+		myconf="${myconf} --with-gnome"
 	else
-		myconf="--without-gnome"
+		myconf="${myconf} --without-gnome"
 	fi
 	if [ "`use gtk`" ]
 	then
-		myconf="$myconf --with-gtk"
+		myconf="${myconf} --with-gtk"
 	else
-		myconf="$myconf --without-gtk"
+		myconf="${myconf} --without-gtk"
 	fi
 	if [ "`use motif`" ]
 	then
-		myconf="$myconf --with-motif"
+		myconf="${myconf} --with-motif"
 	else
-		myconf="$myconf --without-motif"
+		myconf="${myconf} --without-motif"
 	fi
 	if [ "`use pam`" ]
 	then
-		myconf="$myconf --with-pam"
+		myconf="${myconf} --with-pam"
 	else
-		myconf="$myconf --without-pam"
+		myconf="${myconf} --without-pam"
 	fi
 	if [ "`use opengl`" ]
 	then
-		myconf="$myconf --with-gl --with-gle"
+		myconf="${myconf} --with-gl --with-gle"
 	else
-		myconf="$myconf --without-gl --without-gle"
+		myconf="${myconf} --without-gl --without-gle"
 	fi
 
-   ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
-	--enable-subdir=/usr/lib/xscreensaver $myconf \
-	--with-mit-ext --with-dpms-ext --with-xf86vmode-ext \
-	--with-proc-interrupts --with-xpm --with-xshm-ext \
-	--with-xdbe-ext --enable-locking || die
+	./configure --prefix=/usr \
+		--mandir=/usr/share/man \
+		--host=${CHOST} \
+		--enable-hackdir=/usr/lib/xscreensaver \
+		--with-mit-ext \
+		--with-dpms-ext \
+		--with-xinerama-ext \
+		--with-xf86vmode-ext \
+		--with-xf86gamma-ext \
+		--with-proc-interrupts \
+		--with-xpm \
+		--with-xshm-ext \
+		--with-xdbe-ext \
+		--enable-locking \
+		${myconf} || die
+		
 	emake || die
 }
 
@@ -72,6 +82,10 @@ src_install () {
 		dodir $KDEDIR/bin
 	fi
 	make install_prefix=${D} install || die
+
+	# Fix double Control Center entry
+	rm -f ${D}/usr/share/control-center/capplets/screensaver.desktop
+	
 #	if [ "`use gnome`" ]
 #	then
 #		#dodir /usr/bin
