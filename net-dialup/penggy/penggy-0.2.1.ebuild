@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.4 2004/12/28 22:58:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.5 2004/12/28 23:05:03 mrness Exp $
 
 DESCRIPTION="Provide access to Internet using the AOL/Compuserve network."
 HOMEPAGE="http://www.peng.apinc.org/eng/"
@@ -10,11 +10,6 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 RDEPEND=">=dev-util/guile-1.4.0"
-
-src_compile() {
-	econf || die "configure failed"
-	emake || die "make failed"
-}
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
