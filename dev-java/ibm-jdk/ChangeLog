@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.16 2002/11/25 03:05:01 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.17 2002/12/02 23:42:55 strider Exp $
+
+*ibm-jdk-1.4.0-r1 (02 Dec 2002)
+
+  02 Dec 2002; Adrian Almenar <strider@gentoo.org> 
+  Added: ibm-jdk-1.4.0.ebuild files/digest-ibm-jdk-1.4.0
+  Modified: files/ibm-jdk-1.4.0
+  Fixed an error on setting classpath. IBM cuts the (rt.jar on sun-jdk) on
+  various files that need to be added to classpath.
 
 *ibm-jdk-1.4.0 (24 Nov 2002)
 
