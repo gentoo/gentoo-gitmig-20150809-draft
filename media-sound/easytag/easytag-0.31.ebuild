@@ -1,19 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2-r3.ebuild,v 1.2 2004/04/30 01:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31.ebuild,v 1.1 2004/06/02 19:26:10 seemant Exp $
 
 inherit eutils
 
 IUSE="nls oggvorbis flac gtk2"
 
-MY_PV=${PV/1_pre/0.}
-MY_P=${PN}-${MY_PV}
-DSD_PATCH=${MY_P}-dsd4.patch.bz2
-S=${WORKDIR}/${MY_P}
+DSD_PATCH=${P}-dsd1.patch.bz2
 DESCRIPTION="EasyTAG mp3/ogg ID3 tag editor"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-	gtk2? http://www.reactivated.net/patches/easytag-0.30/${DSD_PATCH}"
 HOMEPAGE="http://easytag.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
+	gtk2? http://www.reactivated.net/patches/${PN}/${PV}/${DSD_PATCH}"
 
 RDEPEND=">=media-libs/id3lib-3.8.2
 	gtk2? ( =x11-libs/gtk+-2.4* )
@@ -22,31 +19,24 @@ RDEPEND=">=media-libs/id3lib-3.8.2
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/automake-1.7*
-	>=sys-devel/autoconf-2.5*
-	>=sys-apps/sed-4.0.5"
+	gtk2? ( >=sys-devel/automake-1.7 >=sys-devel/autoconf-2.5 )"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 src_unpack() {
-	unpack ${MY_P}.tar.bz2
+	unpack ${P}.tar.bz2
 	cd ${S}
 
 	if use gtk2; then
 		epatch ${DISTDIR}/${DSD_PATCH}
-		epatch ${FILESDIR}/${P}-gcc2.patch
 
 		export WANT_AUTOMAKE=1.7
 		export WANT_AUTOCONF=2.5
 		ebegin "Remaking configure script (be patient)"
 		autoreconf &>/dev/null
 		eend $?
-	else
-		epatch ${FILESDIR}/${MY_P}-fix-configure.patch
-		export WANT_AUTOCONF=2.5
-		autoconf
 	fi
 }
 

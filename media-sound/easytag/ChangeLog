@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.27 2004/05/15 06:08:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.28 2004/06/02 19:26:10 seemant Exp $
+
+*easytag-0.31 (02 Jun 2004)
+
+  02 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +easytag-0.31.ebuild,
+  -easytag-0.31_pre2-r3.ebuild, -easytag-0.31_pre2-r4.ebuild:
+  Version bump to newest upstream release WITH Daniel Drake <dsd@gentoo.org>
+  coming in with a brand new gtk2 patch for it, Thanks to him and Tristen for
+  testing in bug #52447
 
 *easytag-0.31_pre2-r5 (14 May 2004)
 
