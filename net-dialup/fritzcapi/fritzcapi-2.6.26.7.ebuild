@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7.ebuild,v 1.1 2004/11/20 13:31:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7.ebuild,v 1.2 2004/11/22 06:12:00 mrness Exp $
 
 inherit kernel-mod rpm
 
@@ -13,11 +13,10 @@ SRC_URI="ftp://ftp.suse.com/pub/suse/i386/update/9.1/rpm/i586/km_${P/2.6./2.6-}.
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="pcmcia usb"
 
 RDEPEND=">=net-dialup/capi4k-utils-20040810"
 DEPEND="${RDEPEND}
-	app-arch/rpm2targz
 	virtual/linux-sources"
 
 pkg_setup() {
@@ -35,11 +34,20 @@ src_unpack() {
 }
 
 src_compile() {
-	unset ARCH
-	emake KERNEL_SOURCE="${ROOT}/usr/src/linux" modules || die "emake modules failed"
+	(
+		unset ARCH
+		emake KERNEL_SOURCE="${ROOT}/usr/src/linux" modules || die "emake modules failed"
+	)
 }
 
 src_install() {
+	if ! useq pcmcia ; then
+		rm fritz.*/src/*pcmcia*.ko
+	fi
+	if ! useq usb ; then
+		rm fritz.*/src/*usb*.ko
+	fi
+
 	insinto /lib/modules/${KV_VERSION_FULL}/extra
 	doins fritz.*/src/*.ko
 }
