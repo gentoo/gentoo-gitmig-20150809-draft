@@ -1,0 +1,10 @@
+--- modutils-2.4.27/include/util.h.orig	2004-12-07 22:09:38.964691752 -0500
++++ modutils-2.4.27/include/util.h	2004-12-07 22:09:06.051606217 -0500
+@@ -23,6 +23,7 @@
+    Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  */
+ 
+ 
++#include <sys/param.h>
+ #include <stdio.h>
+ #include <sys/stat.h>
+ 

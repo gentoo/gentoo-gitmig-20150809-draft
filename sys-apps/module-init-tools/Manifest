@@ -1,21 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc3a400b38e391b6c7c76bd85b7e83e0 ChangeLog 14167
+MD5 6e37cd13012b72c9fdbc6f9bd617c1a5 ChangeLog 14329
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2581ed2f27f384ee6f2d04e21fc5073f module-init-tools-3.1.ebuild 5495
+MD5 3010d0d4a26f536f9410c74ef1a24920 module-init-tools-3.1.ebuild 5529
 MD5 5710fb42e858a845378c3fb2d024f796 module-init-tools-3.0-r2.ebuild 5336
 MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1 142
 MD5 34f20e2837caff74cef9cca766e1e0c4 files/3.1-modprobe.d.5.bz2 2288
 MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
 MD5 0562a7a338175d0b6100ef7958b0ef5e files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
+MD5 97fd0899fb54b236e35bdd1bd5fae336 files/modutils-2.4.27-PATH_MAX.patch 309
 MD5 d179298a960a2576683689fe19818c8b files/generate-modprobe-assume-kernel.patch 3767
 MD5 07aa415fd57ac42cd0c11527edc9782d files/module-init-tools-0.9.15-legacy-modext-support.patch 481
 MD5 060ce311606657915548168939e965b4 files/modutils-2.4.22-no-above-below.patch 382
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBssknroRuSHgZdywRAgXUAJ9xc7R6466jQTN8F5CSVG6P19OXQQCggzq/
-XdDLvgEzToWAVhYDhrf2WGk=
-=vyqa
+iD8DBQFBtm5jroRuSHgZdywRAkeyAJ4/A3O5HdIlQUiunqRqWrqfHBAOgACfeInN
+q469dyf6UeX0476zf4pVruQ=
+=bcy0
 -----END PGP SIGNATURE-----

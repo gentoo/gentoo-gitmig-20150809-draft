@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1.ebuild,v 1.3 2004/12/05 08:38:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1.ebuild,v 1.4 2004/12/08 03:00:39 vapier Exp $
 
-# This ebuild includes backwards compatability for stable 2.4 kernels
-
-inherit flag-o-matic eutils gnuconfig
+inherit flag-o-matic eutils gnuconfig toolchain-funcs
 
 MYP="${P/_pre/-pre}"
 S="${WORKDIR}/${MYP}"
@@ -39,6 +37,7 @@ src_unpack() {
 	if ! use no-old-linux ; then
 		cd ${WORKDIR}/modutils-${MODUTILS_PV}
 		epatch ${FILESDIR}/modutils-2.4.22-no-above-below.patch
+		epatch ${FILESDIR}/modutils-2.4.27-PATH_MAX.patch
 	fi
 
 	# Support legacy .o modules
@@ -68,6 +67,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export BUILDCC="$(tc-getBUILD_CC)"
+
 	filter-flags -fPIC
 
 	if ! use no-old-linux ; then
