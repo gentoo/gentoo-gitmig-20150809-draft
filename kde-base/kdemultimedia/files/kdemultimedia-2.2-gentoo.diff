@@ -1,15 +1,26 @@
---- kmidi/TIMIDITY/motif_p.c~	Sun Jul 22 22:26:41 2001
-+++ kmidi/TIMIDITY/motif_p.c	Sun Jul 22 22:26:51 2001
-@@ -24,6 +24,7 @@
+diff -ru kdemultimedia-2.2.1.orig/kmidi/TIMIDITY/motif_p.c kdemultimedia-2.2.1/kmidi/TIMIDITY/motif_p.c
+--- kmidi/TIMIDITY/motif_p.c	Mon Feb 28 19:07:37 2000
++++ kmidi/TIMIDITY/motif_p.c	Fri Oct 19 04:00:10 2001
+@@ -22,6 +22,7 @@
+     pipe communication between motif interface and sound generator
+ 
      */
++#include <sys/errno.h>
  #ifdef IA_MOTIF
  
-+#include <errno.h>
  #include <stdio.h>
- #include <stdlib.h>
- #include <unistd.h>
---- kmidi/alsa_a.cpp.orig	Thu Aug 16 23:17:55 2001
-+++ kmidi/alsa_a.cpp	Thu Aug 16 23:19:27 2001
+diff -ru kdemultimedia-2.2.1.orig/kmidi/alsa_a.cpp kdemultimedia-2.2.1/kmidi/alsa_a.cpp
+--- kmidi/alsa_a.cpp	Thu Aug 24 21:49:04 2000
++++ kmidi/alsa_a.cpp	Fri Oct 19 04:01:06 2001
+@@ -254,7 +254,7 @@
+                == 1 warning
+                == -1 fails
+  */
+-static int set_playback_info (void* handle__,
++static int set_playback_info (snd_pcm_t* handle__,
+ 			      uint32* encoding__, uint32* rate__,
+ 			      const int32 extra_param[5])
+ {
 @@ -426,13 +426,13 @@
      playback_params.fragments_max = extra_param[0];
  #endif

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.1-r1.ebuild,v 1.5 2001/10/18 21:34:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.1-r1.ebuild,v 1.6 2001/10/19 14:48:38 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -26,7 +26,6 @@ src_unpack() {
 
 	base_src_unpack all patch
 	cd ${S}
-	patch -p0 < ${FILESDIR}/motif_p.c.patch
 
 }
 
