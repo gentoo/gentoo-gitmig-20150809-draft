@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.1 2004/08/08 19:42:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.2 2004/08/08 22:31:48 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -535,7 +535,6 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 	use erandom || myconf="${myconf} --disable-dev-erandom"
-	use hardened && myconf="${myconf} --enable-bind-now"
 
 	if want_nptl && want_tls; then
 		myconf="${myconf} \
@@ -571,6 +570,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--libexecdir=/usr/lib/misc \
+		--enable-bind-now \
 		${myconf} || die
 
 	einfo "Building GLIBC..."
