@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.0_beta1.ebuild,v 1.1 2004/06/03 07:31:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.0_beta1.ebuild,v 1.2 2004/06/04 23:02:59 dholm Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ RESTRICT="nomirror"
 
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2.2"
