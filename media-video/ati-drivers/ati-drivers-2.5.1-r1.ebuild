@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.3 2003/02/13 13:22:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.4 2003/02/28 18:56:15 liquidx Exp $
 
 IUSE="qt kde gnome"
 
@@ -8,7 +8,7 @@ SRC_URI="http://pdownload.mii.instacontent.net/ati/drivers/fglrx-glc22-4.2.0-${P
 HOMEPAGE="http://www.ati.com"
 DESCRIPTION="Ati precompiled drivers for r300, r250 and r200 chipsets"
 
-LICENSE="ATI GPL QPL"
+LICENSE="ATI GPL-2 QPL-1.0"
 SLOT="${KV}"
 KEYWORDS="~x86 -ppc -sparc -sparc64"
 
