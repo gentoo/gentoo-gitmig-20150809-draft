@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/kterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.3 2003/02/12 09:44:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.4 2003/06/20 13:49:22 yakina Exp $
+
+*kterm-6.2.0-r1 (20 Jun 2003)
+
+  20 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> kterm-6.2.0-r1.ebuild,
+  digest-kterm-6.2.0-r1:
+
+  Wallpaper support, JIS0213 support and pretty easy defaults for Japanese
+  users. Ebuild submitted by Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp> (#22757).
 
 *kterm-6.2.0 (12 Aug 2002)
 
