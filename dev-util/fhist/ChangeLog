@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fhist
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.5 2003/02/12 06:42:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.6 2004/02/24 23:04:22 bazik Exp $
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> fhist-1.10.ebuild:
+  KEYWORDS+=sparc
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
