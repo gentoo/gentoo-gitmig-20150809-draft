@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.3 2003/03/13 23:10:57 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.4 2003/04/05 01:00:55 zwelch Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
@@ -51,7 +51,11 @@ ARM_KERNEL_PATCH="patch-${OKV}${ARM_PATCH_SUFFIX}"
 DESCRIPTION="Full sources for the ARM/Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 \
 	ftp://ftp.arm.linux.org.uk/pub/armlinux/source/kernel-patches/v2.4/${ARM_KERNEL_PATCH}.bz2"
+HOMEPAGE="http://www.arm.linux.org.uk/ \
+		http://www.kernel.org/ \
+		http://www.gentoo.org/"
 
+# now fix up SRC_URI and HOMEPAGE
 if [ -n "${SUBARCH_KERNEL_PATCH}" ]; then
 	if [ -n "${SUBARCH_KERNEL_URLBASE}" ]; then
 		SRC_URI="${SRC_URI} \
@@ -60,9 +64,11 @@ if [ -n "${SUBARCH_KERNEL_PATCH}" ]; then
 		die "${SUBARCH}: ${SUBARCH_KERNEL_PATCH} does not have a URLBASE"
 	fi
 fi
+if [ -n "${SUBARCH_KERNEL_HOMEPAGE}" ]; then 
+	HOMEPAGE="${SUBARCH_KERNEL_HOMEPAGE} ${HOMEPAGE}"
+fi
 
-HOMEPAGE="${SUBARCH_KERNEL_HOMEPAGE} http://www.arm.linux.org.uk/ \
-		http://www.kernel.org/ http://www.gentoo.org/"
+
 KEYWORDS="arm -hppa -x86 -ppc -sparc -alpha -mips"
 SLOT="${KV}"
 
@@ -80,11 +86,9 @@ src_unpack() {
 
 	# do the actual patching
 	cd ${S} || die
-	einfo "Applying ${ARM_KERNEL_PATCH}"
-	patch -p1 < "${WORKDIR}/${ARM_KERNEL_PATCH}" || die
+	epatch "${WORKDIR}/${ARM_KERNEL_PATCH}" || die
 	[ -n "${SUBARCH_KERNEL_PATCH}" ] && \
-		{ einfo "Applying ${ARM_KERNEL_PATCH}" && \
-			patch -p1 < "${WORKDIR}/${SUBARCH_KERNEL_PATCH}" || die; }
+		{ epatch "${WORKDIR}/${SUBARCH_KERNEL_PATCH}" || die; }
 
 	kernel_universal_unpack
 }
