@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cfd9ab555e4e48a1de179adf6c957d6d ChangeLog 54617
+MD5 a4af8ce6ba54b729b7fd84de8faa5c5e ChangeLog 54771
 MD5 784b3e3150529826ac47e99ec3514f90 apache-1.3.29-r2.ebuild 7178
 MD5 f35b6a00cbfa7ddd39face3420cd4fc6 apache-1.3.31-r1.ebuild 6739
 MD5 9a5242011f95057c3afabf1cc3973f11 apache-1.3.31-r2.ebuild 6864
@@ -14,7 +14,7 @@ MD5 a6568a1f276ed27458ab61fb5897bca2 apache-1.3.33.ebuild 6851
 MD5 511fffcacde823eaf727f0984568106b apache-2.0.50.ebuild 12905
 MD5 6f88208cb336bbe5da0a50b08b1e6390 apache-2.0.51-r1.ebuild 12840
 MD5 451d45c9613e9ed7ee770085a8e28ef8 apache-2.0.51.ebuild 12831
-MD5 625b80716912a469762650ef8480fde5 apache-2.0.52-r1.ebuild 12893
+MD5 705499ae0028bf34a98c183ee39b75b5 apache-2.0.52-r1.ebuild 13083
 MD5 0bc87f432d6353df99d4ca1192dbb607 apache-2.0.52-r2.ebuild 12298
 MD5 0cf9883613088e305a968618162f451a apache-2.0.52-r3.ebuild 11729
 MD5 b1af5f9fb89636fb427805dfe9a3621c apache-2.0.52.ebuild 12834
@@ -98,7 +98,7 @@ MD5 5d45e2b46965e7c6866b259df4efe4b2 files/patches/2.0.50-r1/Readme.PATCHES 357
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCGl/JjUHll2nfF60RAg+RAJ9sMIM2V58IyEu1XvqB2I8APPd2NQCgoEu1
-eEsmrMOQwFHOozCMQFG3bdM=
-=Il+V
+iD8DBQFCHXGMjUHll2nfF60RAk6fAJ0SddgTgCI4kfKZqfjg1qW5mKFTYQCcCX+w
+i/VxMQR6JmnrWCg5jq6wqyE=
+=E2kk
 -----END PGP SIGNATURE-----

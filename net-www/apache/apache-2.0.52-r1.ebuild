@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.13 2005/01/25 13:33:50 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.14 2005/02/24 06:16:49 beu Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -324,6 +324,11 @@ src_install () {
 		sed -i -e '13a\AcceptMutex fcntl' \
 			${D}/etc/apache2/conf/apache2.conf
 	fi
+
+	# /var/log is removed above - re-create it (fixes bug #76044)
+	# /etc/apache2/conf/ssl is also needed in pkg_postinst if USE=ssl
+	dodir /var/log/apache2
+	use ssl && dodir /etc/apache2/conf/ssl
 }
 
 parse_modules_config() {
