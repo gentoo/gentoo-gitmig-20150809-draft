@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.36 2004/08/17 13:44:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.37 2004/10/17 16:34:33 solar Exp $
+
+  17 Oct 2004; <solar@gentoo.org> net-tools-1.60-r9.ebuild:
+  marked stable x86
 
   17 Aug 2004; <solar@gentoo.org> files/net-tools-1.60-get_name.patch:
   updated the get_name patch a little as per comment 16/17 bug 58633
