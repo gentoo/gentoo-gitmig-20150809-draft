@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.7 2004/08/31 20:04:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.8 2004/10/26 22:23:11 slarti Exp $
 
-inherit gcc eutils fixheadtails
+inherit toolchain-funcs eutils fixheadtails
 
 IUSE="ssl noauthcram notlsbeforeauth"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
@@ -200,7 +200,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${PVR}/qmail-macos-dns-fix.patch
 	fi
 
-	echo -n "$(gcc-getCC) ${CFLAGS}" >${S}/conf-cc
+	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
 		einfo "Enabling SSL/TLS functionality"
 		echo -n ' -DTLS ' >>${S}/conf-cc
@@ -223,7 +223,7 @@ src_unpack() {
 		einfo "Enabling AUTHCRAM support"
 	fi
 
-	echo -n "$(gcc-getCC) ${LDFLAGS}" > ${S}/conf-ld
+	echo -n "$(tc-getCC) ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
 
 	# fix coreutils messup

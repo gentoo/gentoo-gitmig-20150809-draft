@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.5 2004/07/20 14:24:11 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.6 2004/10/26 22:23:11 slarti Exp $
 
-inherit gcc eutils fixheadtails
+inherit toolchain-funcs eutils fixheadtails
 
 IUSE="ssl"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
@@ -156,12 +156,12 @@ src_unpack() {
 	#EPATCH_SINGLE_MSG="qmail-pop3d reports erroneous figures on STAT after a DELE" \
 	#epatch ${DISTDIR}/qmail-pop3d-stat.patch 
 
-	echo -n "$(gcc-getCC) ${CFLAGS}" >${S}/conf-cc
+	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
 		einfo "Enabling SSL/TLS functionality"
 		echo -n ' -DTLS' >>${S}/conf-cc
 	fi
-	echo -n "$(gcc-getCC) ${LDFLAGS}" > ${S}/conf-ld
+	echo -n "$(tc-getCC) ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
 
 	# fix coreutils messup

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r11.ebuild,v 1.5 2004/07/14 16:53:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r11.ebuild,v 1.6 2004/10/26 22:23:11 slarti Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 IUSE="ssl"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
@@ -106,12 +106,12 @@ src_unpack() {
 	cd ${S}
 
 	if use ssl; then
-		echo "$(gcc-getCC) ${CFLAGS} -DTLS" > conf-cc
+		echo "$(tc-getCC) ${CFLAGS} -DTLS" > conf-cc
 	else
-		echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+		echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	fi
 
-	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "500" > conf-spawn
 
 }
