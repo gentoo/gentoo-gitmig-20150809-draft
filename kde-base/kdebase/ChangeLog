@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.9 2002/04/13 19:14:25 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.10 2002/04/30 11:46:59 danarmak Exp $
+
+*kdebase-3.0-r2 (30 Apr 2002)
+
+  30 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+  
+  Fix bug #2093 (files being installed into /var/tmp).
 
   13 Apr 2002; Bart Verwilst <verwilst@gentoo.org>: Ok, just copied the 
   icons inside the pics dir to the /usr/share/pixmaps first :o) you never 
