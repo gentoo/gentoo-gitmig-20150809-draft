@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.7.ebuild,v 1.1 2004/03/02 18:28:56 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.7.ebuild,v 1.2 2004/03/02 22:11:41 dholm Exp $
 
 inherit base
 
@@ -13,7 +13,7 @@ DEPEND="app-text/tetex
 IUSE="icc"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 
 PATCHES1=${FILESDIR}/blitz-0.7.diff
