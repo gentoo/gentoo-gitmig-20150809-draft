@@ -1,38 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 55fac499571e2eef86274fab2b9e34e0 ChangeLog 8976
+MD5 dbed262d9541443d40554e1a2074f194 ChangeLog 9092
 MD5 58516a09eebcaa2239ea0b70f310484e linux26-headers-2.6.8.1.ebuild 3895
-MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
-MD5 dfd568bac7a9a63656bb225c499b72fe linux26-headers-2.6.8.1-r1.ebuild 4779
 MD5 89403525f4da5e8458fd7f720d6de6ee linux26-headers-2.6.6-r1.ebuild 4223
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 b3d1c41a74dbe1041b4082288cacd3ca linux26-headers-2.6.7-r4.ebuild 4031
+MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
+MD5 c796d1e35250c20030027448b32eb12e linux26-headers-2.6.8.1-r1.ebuild 4877
 MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1 68
 MD5 14a0de85d11206096f05e186cebab07b files/linux26-headers-2.6.8.1-appCompat.patch 53549
 MD5 0501d9fb994e3c9721b2a239e92e30c6 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4086
-MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-linux26-headers-2.6.5 66
 MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6-r1 66
 MD5 b3e4e51616a061327b46cbd31132c8c8 files/generate-asm-sparc 1654
-MD5 ec3d195f7d40d599802d5c0c5ad8f502 files/linux26-headers-2.6.4-appCompat.patch 17240
 MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux26-headers-2.6.0-fb.patch 386
-MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1-r1 68
 MD5 a73786f0b9dda7e9ebacb91a192384f9 files/linux26-headers-2.6.0-sysctl_h-compat.patch 352
-MD5 00e5bea1e925c2d81d32191937eb8d5b files/linux26-headers-soundcard-ppc64.patch 631
 MD5 598136365858338b26557b7587c6725f files/linux26-headers-2.6.3-strict-ansi-fix.patch 4166
-MD5 602f7309c0163c018627f06b5f1ace3a files/linux26-headers-2.6.8.1-arm-float.patch 640
 MD5 aa9ba92e8479bdb5f69b03b5c72be866 files/linux26-headers-2.6.4-unistd-nptl-fix.patch 362
 MD5 8fbc202526e4c1b1672c5274bbff4e5f files/linux26-headers-2.6.6-appCompat.patch 26689
 MD5 830c6d1dcb1b22b9095e6f16f3ebdf85 files/linux26-headers-2.6.6-tcp_info-DRS-backport.patch 288
 MD5 7c487aa645f5d88e86c3252ab44ef5ae files/linux26-headers-2.6.7-appCompat.patch 42608
-MD5 6dd79a655f006aebb7206203f3654976 files/linux26-headers-2.6.7-generic-arm-prepare.patch 978
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r4 66
+MD5 6dd79a655f006aebb7206203f3654976 files/linux26-headers-2.6.7-generic-arm-prepare.patch 978
 MD5 d78e0d94873de4518bca401d5688401c files/linux26-headers-2.6.7-prefetch.patch 528
+MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-linux26-headers-2.6.5 66
+MD5 ec3d195f7d40d599802d5c0c5ad8f502 files/linux26-headers-2.6.4-appCompat.patch 17240
+MD5 fb33a0ba21375f190137b9f478ad9799 files/digest-linux26-headers-2.6.8.1-r1 146
+MD5 00e5bea1e925c2d81d32191937eb8d5b files/linux26-headers-soundcard-ppc64.patch 631
+MD5 602f7309c0163c018627f06b5f1ace3a files/linux26-headers-2.6.8.1-arm-float.patch 640
 MD5 5c5cab42cc6280e956a081ef9a56223e files/linux26-headers-2.6.8.1-sparc-glibcsafe.patch 2449
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtj/cArHZZzCEUG0RAhBgAKCAxEdts0CqUUjaUI30ZXEjwfO0wgCfdIS7
-Jk5a02nawCxe0UUzeLwAebs=
-=c636
+iD8DBQFBuHI2roRuSHgZdywRAmpRAJ0euZuP5/DGIYpUBJoKM30GYColrgCdFF9c
+e5o40YKDKaezoooIR+Z5QJg=
+=BOXr
 -----END PGP SIGNATURE-----
