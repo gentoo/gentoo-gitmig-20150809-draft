@@ -1,6 +1,12 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.20 2004/12/20 15:40:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.21 2004/12/27 19:16:44 ciaranm Exp $
+
+*glark-1.7.2 (27 Dec 2004)
+
+  27 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/1.7.2/glark-completion, +glark-1.7.2.ebuild:
+  New version, bug #75814. Now with bash-completion goodness.
 
 *glark-1.7.1 (20 Dec 2004)
 
