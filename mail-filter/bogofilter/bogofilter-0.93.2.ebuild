@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.93.2.ebuild,v 1.1 2004/12/14 00:26:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.93.2.ebuild,v 1.2 2004/12/28 20:30:36 ribosome Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="doc gsl notransactions"
 
 RDEPEND="virtual/libc
 	>=sys-libs/db-3.2
-	gsl? ( dev-libs/gsl )"
+	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
 
 DEPEND="${RDEPEND}
