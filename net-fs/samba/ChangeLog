@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.14 2002/10/21 02:56:13 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.15 2002/10/24 22:26:41 woodchip Exp $
+
+*samba-2.2.6 (Oct 24 2002)
+
+  24 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Chase latest release.  New local USE vscan flag for building the
+  openantivirus project plugins.  Added several more ldap files
+  and scripts.  Now builds the bundled VFS plugins.  Added more docs
+  and findsmb script.  Added lazy smbumount and VFS plugins reloc patches.
 
 *samba-2.2.5-r1 (Aug 27 2002)
 
@@ -10,7 +18,6 @@
 
   27 Aug 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.5-r1.ebuid,
   smb.conf.example :
-
   Fix #6936; thanks shadow@ines.ro.  Fix #7133, thanks klebermass@limtec.de.
 
 *samba-2.2.5 (23 Jun 2002)
@@ -22,14 +29,12 @@
   Added ppc keyword
 
   23 Jun 2002; Donny Davies <woodchip@gentoo.org> :
-
   Update to latest; samba-2.2.5.  Please see the samba WHATSNEW.txt file
   in /usr/doc/samba for the detailed fixes.  
 
 *samba-2.2.4-r1 (13 May 2002)
 
   13 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Install smbmnt and smbumount suid root, close #2635.
   Pass --bindir to ./configure, close #2515.
   Add a few more codepages.
@@ -39,7 +44,6 @@
   6 May 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.4.ebuild,
   smb.conf.example, system-auth-winbind, samba-svc, winbind-init, lmhosts,
   samba-init, nsswitch.conf-winbind, nsswitch.conf-wins :
-
   Added a much better smb.conf.example.  Added smbwrapper (smbsh).  Added
   libnss_winbind (see /etc/nsswitch.conf-winbind).  Added libnss_wins
   (see /etc/nsswitch.conf-wins).  Added libsmbclient.  Added USE ssl and
@@ -52,15 +56,13 @@
 
 *samba-2.2.3a-r3 (3 May 2002)
   
-  3 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
+  3 May 2002; Donny Davies <woodchip@gentoo.org> :  
   Added LICENSE, SLOT, $Headers.
 
 *samba-2.2.3a-r2 (27 March 2002)
 
   27 March 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.3a-r2.ebuild,
   swat.xinetd, smbusers, samba.rc6, samba-2.2.3a-srv_spoolss_nt.patch :
-
   /etc/smb has moved to the better-suited /etc/samba directory.  Simply move
   your /etc/smb/* to /etc/samba.  Then delete the /etc/samba/codepages
   directory.  These files are now in /var/lib/samba/codepages.  /var/run/smb
@@ -71,7 +73,6 @@
   Added a patch to fix changing printer properties from Windows NT.
 
   10 March 2002; Donny Davies <woodchip@gentoo.org> files/samba.rc6 :
-
   Tweak initscript to kill the daemons via pidfile.
 
 *samba-2.2.3a-r1 (5 March 2002)
@@ -79,7 +80,6 @@
   5 March 2002; M.Schlemmer <azarah@gentoo.org> samba-2.2.3a-r1.ebuild,
   samba-2.2.3a-loadparm.c.patch, samba-2.2.3a-proto.c.patch,
   samba-2.2.3a-reply.h.patch :
-
   Move the patches to ${FILESDIR}, as they have the same names as those for
   2.2.2, but is not the same, thus ibiblio do not cache the new ones, and
   we get digest errors.
@@ -89,7 +89,6 @@
   4 March 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.3a.ebuild, 
   files/samba-2.2.3a-cli_spoolss_notify.diff, files/samba-2.2.3a-pam_smbpass.diff,
   files/samba-2.2.2-XFS-quota.diff :
-
   Added acl USE flag support, patch to fix pam_smbpass compilation, patch for Win2k
   printing and removed XFS quota patch -- its merged upstream.  Updated to latest
   network recycle bin patches.  If you get md5 checksum errors with the recycle bin
@@ -100,13 +99,11 @@
 *samba-2.2.2-r9 (2 March 2002)
 
   2 March 2002; M.Schlemmer <azarah@gentoo.org> samba-2.2.2-r9.ebuild :
-
   Added creation of symlink for supporting cups printing.
 
 *samba-2.2.2-r8 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
