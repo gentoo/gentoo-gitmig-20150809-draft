@@ -1,0 +1,50 @@
+--- Makefile	2003-03-31 11:13:05.000000000 +0800
++++ Makefile	2004-10-04 10:41:10.292769416 +0800
+@@ -1,5 +1,5 @@
+ NAME		= cnet
+-VERSION		= 2.0.4
++VERSION		= 2.0.9
+ SHELL		= /bin/sh
+ #
+ # Change the following 5 constants to suit your local site.
+@@ -7,14 +7,14 @@
+ # It is presumed that BINDIR and MANDIR exist, so you may need
+ # to create them, and set their permissions, if necessary.
+ #
+-PREFIX		= /usr/local
++PREFIX		= /usr/
+ #
+ BINDIR		= $(PREFIX)/bin
+-CNETDIR		= $(PREFIX)/cnetlib
+-MANDIR		= $(PREFIX)/man/man1
++CNETDIR		= $(PREFIX)/lib/cnetlib
++MANDIR		= $(PREFIX)/share/man/man1
+ MANEXT		= 1
+ MANFILE		= $(MANDIR)/$(NAME).$(MANEXT)
+-WEBDIR		= /home/httpd/html/cnet
++WEBDIR		= $(CNETDIR)/html
+ 
+ # ---------------------------------------------------------------------
+ 
+--- src/Makefile.linux	2004-05-11 03:27:19.000000000 +0800
++++ src/Makefile.linux	2004-10-04 10:24:10.000000000 +0800
+@@ -29,7 +29,7 @@
+ ANSICC		= gcc -ansi
+ INCLUDES	= $(LIBELFINC)
+ 
+-CFLAGS		= -O -Wall -fPIC $(INCLUDES) $(XINCLUDES)
++CFLAGS		= -march=pentium3 -O3 -pipe -fPIC $(INCLUDES) $(XINCLUDES)
+ 
+ LD		= gcc -rdynamic
+ LIBDIRS		= -L/usr/X11R6/lib $(XLIBDIRS) $(LIBELFDIR)
+--- src/config.h	2004-05-13 02:13:43.000000000 +0800
++++ src/config.h	2004-10-04 10:39:39.000000000 +0800
+@@ -169,7 +169,7 @@
+ #if	defined(USE_FREEBSD)
+ #define	CNETPATH	"/usr/local/share/cnet:/usr/local/include:/usr/local/cnetlib"
+ #else
+-#define	CNETPATH	"/usr/local/cnetlib:/usr/lib/cnet:/cslinux/cnetlib"
++#define	CNETPATH	"/usr/lib/cnetlib:/usr/lib/cnet:"
+ #endif
+ 
+ 
