@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.9 2005/02/14 17:57:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.10 2005/02/14 18:23:51 kugelfang Exp $
+
+  14 Feb 2005; Danny van Dyk <kugelfang@gentoo.org>
+  glade-sharp-1.0.4.ebuild:
+  Reporter is wrong! Keyworded -amd64.
 
   14 Feb 2005; Danny van Dyk <kugelfang@gentoo.org>
   glade-sharp-1.0.4.ebuild:
