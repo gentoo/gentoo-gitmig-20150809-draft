@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-0.5.13.ebuild,v 1.1 2004/03/28 10:38:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-0.5.13.ebuild,v 1.2 2004/03/28 12:03:42 dholm Exp $
 
 DESCRIPTION="copies DVD .vob files to harddisk, decrypting them on the way"
 HOMEPAGE="http://lpn.rnbhq.org/"
 SRC_URI="http://lpn.rnbhq.org/download/${P}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
