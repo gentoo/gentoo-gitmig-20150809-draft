@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/oneko
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.2 2003/02/12 05:05:20 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.3 2004/03/30 06:55:19 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; oneko-1.2.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
 *oneko-1.2 (18 Jul 2002)
 

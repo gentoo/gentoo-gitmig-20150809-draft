@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.5 2004/03/30 06:49:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.6 2004/03/30 06:51:50 spyderous Exp $
 
 DESCRIPTION="An open-source GIS with raster and vector functionality."
 HOMEPAGE="http://grass.itc.it/"
@@ -18,7 +18,7 @@ DEPEND=">=sys-devel/make-3.80
 	>=sys-devel/flex-2.5.4a
 	>=sys-devel/bison-1.35
 	>=sys-libs/ncurses-5.3
-	>=x11-base/xfree-4.2.1
+	virtual/x11
 	>=sys-libs/gdbm-1.8.0
 	>=sys-devel/gcc-3.2.2
 	=dev-libs/fftw-2*
