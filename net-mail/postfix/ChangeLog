@@ -1,11 +1,15 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.27 2002/08/13 21:44:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.28 2002/08/15 22:38:43 raker Exp $
 
 *postfix-1.1.11.200206013-r1 (13 Aug 2002)
 
+  15 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  postfix-1.1.11.20020613-r1.ebuild :
+  Updated CCARGS and AUXLIBS variables for a proper TLS enabled postfix.
+
   13 Aug 2002; Nick Hadaway <raker@gentoo.org>
-  postfix-1.1.11.20020613-r1, files/digest-postfix-1.1.11.20020613-r1 :
+  postfix-1.1.11.20020613-r1.ebuild, files/digest-postfix-1.1.11.20020613-r1 :
   Many changes have been made to the ebuild so I created a -r1.  This
   ebuild should copy smtpd.conf into /etc/sasl2 to match the latest
   cyrus-sasl ebuild.  This should hopefully fix some of the sasl problems
