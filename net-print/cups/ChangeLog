@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.53 2003/11/29 19:53:20 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.54 2003/12/02 20:11:21 lanius Exp $
+
+  02 Dec 2003; Heinrich Wendel <lanius@gentoo.org> cups-1.1.20.ebuild:
+  replace Os by O2 on amd64, bug #38450
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> cups-1.1.20.ebuild:
   mark stable on amd64
