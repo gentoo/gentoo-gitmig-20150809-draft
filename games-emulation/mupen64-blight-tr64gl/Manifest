@@ -1,4 +1,14 @@
-MD5 0342718efb5d2ce8f15a33b416f316f5 ChangeLog 613
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3dfeaedf1c4cbd637e598270011a4a06 ChangeLog 864
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 2f29d9e65327177a2b8ddc83167fc64e blight-tr64gl-0.7.4_pre1.ebuild 703
-MD5 408f2a595b0a70418853c2e07aeba30f files/digest-blight-tr64gl-0.7.4_pre1 75
+MD5 34fa5d293342dd6736350b7e73228475 mupen64-blight-tr64gl-0.7.4_pre1.ebuild 717
+MD5 408f2a595b0a70418853c2e07aeba30f files/digest-mupen64-blight-tr64gl-0.7.4_pre1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3KXDUpKYMelfdYERAlQ9AJ9wqOfOyaziK/eGlW5ynBiwcx6AugCgg0n2
+Tbl5uyZCgS2b/1k/hX/PDiA=
+=465b
+-----END PGP SIGNATURE-----
