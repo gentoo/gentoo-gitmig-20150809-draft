@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.20 2004/08/23 21:53:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.21 2004/09/16 15:33:57 eradicator Exp $
 
 IUSE="tcpd"
+
+inherit eutils
 
 DESCRIPTION="NIS SERVER"
 SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.gz"
@@ -10,17 +12,16 @@ HOMEPAGE="http://www.linux-nis.org/nis/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
-	net-libs/openslp
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp ${FILESDIR}/defs.sed ypmake
-	patch < ${FILESDIR}/${PV}/volatile-fix-gcc-3.2.diff || die
+	epatch ${FILESDIR}/${PV}/volatile-fix-gcc-3.2.diff
 }
 
 src_compile() {
