@@ -1,6 +1,8 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.13 2002/12/17 20:27:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.14 2003/01/25 02:15:27 woodchip Exp $
+
+  24 Jan 2003; <woodchip@gentoo.org> mod_perl-1.99.08 : version bump; #14503.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
