@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 223a20d6185f22ed41f0e4c1d837e862 ChangeLog 16599
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f51a14bf24b80a22cffde108b8926bfa shadow-4.0.4.1-r4.ebuild 5946
-MD5 bcf82330e90bd6ccbdb35832f4515c38 shadow-4.0.6.ebuild 5124
+MD5 f96394451b004646341711c5b5632794 shadow-4.0.6.ebuild 5197
 MD5 4125cc2058868a022961911926760349 shadow-4.0.5-r2.ebuild 5422
 MD5 ce9da667eed1ff6355e78620af4724b2 shadow-4.0.5-r3.ebuild 5508
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
@@ -39,7 +39,7 @@ MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth-1.1 491
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBrctxroRuSHgZdywRAqaPAJ9gTYvcLOAd9gGK97YI+flCYsWdbwCfUP2p
-NtzBWygrz8tQCk928OSR9vE=
-=46ip
+iD8DBQFBtmqProRuSHgZdywRAjjVAJ43yljrbBSRDkQhhWnZyp26Gm1tAwCfe1xS
+kGodwgQrC6/QXWD2kYjoWvM=
+=xKRS
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.6.ebuild,v 1.4 2004/11/25 15:37:31 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.6.ebuild,v 1.5 2004/12/08 02:44:21 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -60,6 +60,8 @@ src_unpack() {
 
 src_compile() {
 	append-ldflags -Wl,-z,now
+	[[ ${CTARGET} != ${CHOST} ]] \
+		&& export ac_cv_func_setpgrp_void=yes
 	econf \
 		--disable-desrpc \
 		--with-libcrypt \
