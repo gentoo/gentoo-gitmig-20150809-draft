@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.0.1.ebuild,v 1.5 2002/10/04 05:26:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.0.1.ebuild,v 1.6 2002/10/17 16:36:53 bjb Exp $
 
 # HappyDoc version numbering is not very compatible with portage -- kludgeing
 S=${WORKDIR}/HappyDoc-r2_0_1/
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 alpha"
 
 src_compile() {
 	python setup.py build || die

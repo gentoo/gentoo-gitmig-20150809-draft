@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-0.2.0.ebuild,v 1.3 2002/10/04 05:27:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-0.2.0.ebuild,v 1.4 2002/10/17 16:36:53 bjb Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.hwaci.com/sw/sqlite/"
 DEPEND="virtual/python
 		dev-db/sqlite"
 RDEPEND="${DEPEND}"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 alpha"
 LICENSE="pysqlite"
 SLOT="0"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ReportLab-1.14.ebuild,v 1.4 2002/10/04 05:26:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ReportLab-1.14.ebuild,v 1.5 2002/10/17 16:36:53 bjb Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}
 	dev-python/Imaging"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 alpha"
 
 src_compile() {
 	cp ${FILESDIR}/${PV}/setup.py .        
