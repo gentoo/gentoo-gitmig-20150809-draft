@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.8 2003/09/18 00:14:08 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.9 2003/09/29 17:01:24 vapier Exp $
 
 inherit eutils
 
@@ -39,6 +39,9 @@ src_unpack() {
 
 	# GCC-3.3 Compile Fix
 	epatch ${PATCHDIR}/${P}-multiline-string.patch
+
+	# manpage fix #29677
+	epatch ${FILESDIR}/${PV}-man.patch
 
 	cp ${PATCHDIR}/net-tools-1.60-config.h config.h
 	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
