@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-0.3.2.ebuild,v 1.2 2004/02/24 00:01:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-0.3.2.ebuild,v 1.3 2004/06/19 08:34:23 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://nesqi.homeip.net/hexxagon/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND="virtual/glibc

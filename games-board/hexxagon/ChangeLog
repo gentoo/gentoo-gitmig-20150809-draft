@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.4 2004/02/24 00:01:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.5 2004/06/19 08:34:23 mr_bones_ Exp $
+
+  19 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> hexxagon-0.3.2.ebuild:
+  Keyword for amd64 (bug #54388)
 
   23 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> hexxagon-0.3.2.ebuild:
   make gtk non-optional
