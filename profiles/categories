@@ -1,6 +1,6 @@
 app-admin 
-app-benchmarks
 app-arch 
+app-benchmarks
 app-cdr 
 app-crypt
 app-dicts
@@ -38,6 +38,9 @@ dev-ruby
 dev-tcltk
 dev-tex
 dev-util 
+games-emulation
+games-engines
+games-fps
 gnome-base
 gnome-extra 
 kde-base 
@@ -60,8 +63,8 @@ net-irc
 net-libs 
 net-mail
 net-misc 
-net-news 
 net-nds 
+net-news 
 net-p2p
 net-print 
 net-wireless
