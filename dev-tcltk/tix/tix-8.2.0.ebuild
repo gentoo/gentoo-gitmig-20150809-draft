@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.11 2004/01/24 22:58:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.12 2004/01/25 02:32:20 mr_bones_ Exp $
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}/unix
@@ -35,7 +35,7 @@ src_compile() {
 	sed -e 's:TK_LIBS =:TK_LIBS = -L/usr/X11R6/lib -lX11:' \
 		-e 's:^\(SHLIBS_LD_LIBS.*\):\1 ${TK_LIBS}:' \
 		-i ${S}/unix/Makefile
-	
+
 	eend $?
 	make || die
 }
