@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.4 2004/07/14 21:55:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.5 2004/07/14 22:21:14 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -316,7 +316,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"recode"		"recode"		1
 	enable_extension_disable	"simplexml"		"simplexml"		1
 	enable_extension_with		"snmp"			"snmp"			1
-	enable_extension_with		"soap"			"soap"			1
+	enable_extension_enable		"soap"			"soap"			1
 	enable_extension_enable		"sockets"		"sockets"		1
 	enable_extension_disable	"spl"			"spl"			1
 	enable_extension_with		"sybase"		"sybase"		1
