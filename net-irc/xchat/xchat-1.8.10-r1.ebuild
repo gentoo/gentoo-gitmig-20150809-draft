@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.8 2002/12/09 04:33:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.9 2002/12/16 23:15:52 agriffis Exp $
 
 IUSE="ssl nls mmx gnome ipv6 python kde gtk perl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~alpha"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	python? ( >=dev-lang/python-2.2-r7 )

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.35 2002/12/13 13:29:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.36 2002/12/16 23:15:52 agriffis Exp $
+
+  16 Dec 2002; Aron Griffis <agriffis@gentoo.org> xchat-1.8.10-r1.ebuild xchat-1.9.7.ebuild:
+  Added ~alpha to KEYWORDS in both stable and devel versions
 
 *xchat-1.9.7 (13 Dec 2002)
 
