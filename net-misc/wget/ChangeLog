@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.18 2003/10/22 22:53:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.19 2003/11/02 07:23:10 seemant Exp $
+
+  01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.8.2-r2.ebuild,
+  wget-1.8.2-r3.ebuild:
+  changed the SRC_URI for the new percentage patches to point to the Gentoo
+  mirrors instead. Closes bug #32514 by Stony Yakovac <stonyy@tek.com>
 
 *wget-1.9 (22 Oct 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.12 2003/10/15 05:42:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.13 2003/11/02 07:23:10 seemant Exp $
 
 inherit gnuconfig
 
@@ -8,7 +8,7 @@ NPVER=20011209
 DESCRIPTION="Network utility to retrieve files from the WWW"
 HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
 SRC_URI="mirror://gnu/wget/${P}.tar.gz
-	http://www.biscom.net/~cade/away/wget-new-percentage/wget-new-percentage-cvs-${NPVER}.tar.gz
+	mirror://gentoo/wget-new-percentage-cvs-${NPVER}.tar.gz
 	ipv6? mirror://gentoo/${P}-ipv6-debian.patch.bz2"
 
 LICENSE="GPL-2"
