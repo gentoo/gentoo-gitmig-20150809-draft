@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6-r1.ebuild,v 1.4 2004/03/07 08:19:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6-r1.ebuild,v 1.5 2004/03/11 02:51:33 pylon Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~mips -*"
+KEYWORDS="ppc ~ppc64 -*"
 IUSE="nls static readline debug noreiserfs"
 
 DEPEND=">=sys-fs/e2fsprogs-1.27
