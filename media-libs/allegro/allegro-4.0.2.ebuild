@@ -1,21 +1,30 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gantoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.1.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.2.ebuild,v 1.1 2002/07/07 03:16:17 seemant Exp $
+
+LICENSE="Allegro"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Allegro is a cross-platform multimedia library"
 SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 HOMEPAGE="http://alleg.sourceforge.net/"
 
-DEPEND="X? ( virtual/x11 )"
+
+SLOT="0"
+KEYWORDS="x86"
+
+
+RDEPEND="X? ( virtual/x11 )
+	alsa? ( media-libs/alsa-lib )
+	esd? ( media-sound/esound )
+	svga? ( media-libs/svgalib )"
+
+DEPEND="${RDEPEND}
+	tetex? ( app-text/tetex )"
 
 src_compile() {
 	
-	confopts="--infodir=/usr/share/info	\
-		--mandir=/usr/share/man \
-		--prefix=/usr \
-		--host=${CHOST}"
+	use tetex
 	
 	# Always enable Linux console support and accompanying drivers
 	confopts="${confopts} --enable-linux --enable-vga"
@@ -58,7 +67,8 @@ src_compile() {
 			--enable-xwin-vidmode \
 			--enable-xwin-dga \
 			--enable-xwin-dga2" \
-		|| confopts="${confopts} --without-x \
+		|| confopts="${confopts} \
+			--without-x \
 			--disable-xwin-shm \
 			--disable-xwin-vidmode \
 			--disable-xwin-dga \
@@ -76,13 +86,18 @@ src_compile() {
 
 	# --------------
 
-	./configure \
-		${confopts} || die
+	econf ${confopts} || die
 	
 	# emake doesn't work
-	make || die
+	make CFLAGS="${CFLAGS}" || die
 	
-	make docs-ps docs-dvi || die
+	if use tetex;
+	then
+		addwrite "/var/lib/texmf"
+		addwrite "/usr/share/texmf"
+		addwrite "/var/cache/fonts"
+		make docs-dvi docs-ps || die
+	fi
 	
 }
 
@@ -94,9 +109,23 @@ src_install () {
 		mandir=${D}/usr/share/man \
 		install install-gzipped-man install-gzipped-info || die
 	
-	cd ${S}
 	# Different format versions of the Allegro documentation
-	dohtml allegro.dvi allegro.ps
-	dodoc allegro.txt 
+
+	dodoc AUTHORS CHANGES THANKS readme.txt todo.txt
+
+	if use tetex;
+	then 
+		dodoc docs/allegro.dvi docs/allegro.ps
+	fi
+
+	dohtml docs/html/*
+
+	docinto txt
+	dodoc docs/txt/*.txt
+
+	docinto rtf
+	dodoc docs/rtf/*.rtf
 	
+	docinto build
+	dodoc docs/build/*.txt
 }
