@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/linux_logo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.9 2003/03/08 08:45:09 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.10 2003/06/07 23:12:04 seemant Exp $
+
+*linux_logo-4.07-r1 (07 Jun 2003)
+
+  07 Jun 2003; Seemant Kulleen <seemant@gentoo.org> linux_logo-4.07-r1.ebuild:
+  The -r1 release adds nls support (thanks to Rach Holmes), and also a
+  patch from James Rowe <Jay@jnrowe.uklinux.net> via the venerable Rach Holmes,
+  which adds the issue.logo to linux_logo
 
 *linux_logo-4.07 (08 Mar 2003)
 
