@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.12 2003/11/29 21:24:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.13 2003/12/29 16:04:03 bazik Exp $
+
+  29 Dec 2003; Sven Blumenstein <bazik@gentoo.org> lirc-0.6.6-r1.ebuild:
+  Marked sparc to fix gxine depend.
 
   29 Nov 2003; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre2.ebuild:
   fixed typo in LIRC_OPTS
