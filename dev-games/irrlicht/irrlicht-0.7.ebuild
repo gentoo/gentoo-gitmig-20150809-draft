@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.7.ebuild,v 1.1 2004/09/13 05:53:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.7.ebuild,v 1.2 2004/11/03 00:12:00 vapier Exp $
 
 inherit eutils
 
@@ -10,13 +10,15 @@ SRC_URI="mirror://sourceforge/irrlicht/${P}.zip"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE="doc"
 
-DEPEND="media-libs/jpeg
+RDEPEND="media-libs/jpeg
 	sys-libs/zlib
 	virtual/opengl
 	virtual/x11"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
@@ -27,9 +29,9 @@ src_unpack() {
 	rm -rf zlib jpeglib
 	ln -s /usr/include jpeglib
 	ln -s /usr/include zlib
-	epatch "${FILESDIR}/${PV}-system-libs.patch" || die "system libs patch failed"
-	epatch "${FILESDIR}/${PV}-jpeg.patch" || die "JPEG patch failed"
-	epatch "${FILESDIR}/${PV}-opengl.patch" || die "OpenGL patch failed"
+	epatch "${FILESDIR}/${PV}-system-libs.patch"
+	epatch "${FILESDIR}/${PV}-jpeg.patch"
+	epatch "${FILESDIR}/${PV}-opengl.patch"
 }
 
 src_compile() {
