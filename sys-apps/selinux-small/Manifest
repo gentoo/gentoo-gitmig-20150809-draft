@@ -1,6 +1,7 @@
 MD5 f88c131ca9d285be1ba7ad2d0126331a ChangeLog 5505
 MD5 effd006ee5a76d62ceeef715b5dbf00b selinux-small-2003040709-r3.ebuild 4399
 MD5 8098f68887ec205cb21d4e5a7355d764 selinux-small-2003040709-r4.ebuild 5447
+MD5 74ed0ebe40bb920f2c477898e6e9abc0 metadata.xml 457
 MD5 0986e11cde481cc9d4f8061654dedead files/digest-selinux-small-2003040709-r3 151
 MD5 14ef7a8e2104665076099d6fe3f0f664 files/digest-selinux-small-2003040709-r4 73
 MD5 8daee4f4fd3e4a74c4d5f2ddb6b086a5 files/newrole 1197
