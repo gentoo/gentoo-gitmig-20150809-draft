@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-2.1_beta2.ebuild,v 1.1 2001/01/31 20:49:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-2.1_beta2.ebuild,v 1.2 2001/03/06 05:27:27 achim Exp $
 
 A=""
 S=${WORKDIR}
@@ -19,8 +19,8 @@ RDEPEND="
 src_install() {
 
 	insinto /etc/env.d
-	doins ${FILESDIR}/90kde21
+	doins ${FILESDIR}/90kde21b
 	exeinto /usr/X11R6/bin/wm
-	doexe ${FILESDIR}/kde21
+	doexe ${FILESDIR}/kde21b
 
 }
