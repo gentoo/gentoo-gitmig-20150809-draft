@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.2 2005/02/26 04:19:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.3 2005/03/05 17:39:48 wolf31o2 Exp $
 
 # 	[x] Base Install Required (+4 MB) 
 #	[x] Scenarios (+7 MB)
@@ -86,7 +86,7 @@ src_install() {
 	prepgamesdirs
 	make_desktop_entry heroes3 "Heroes of Might and Magic III" "heroes3.xpm"
 
-	if [ "${ARCH}" = "x86" ]; then
+	if use x86; then
 		einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."
 		dosym /lib/loki_ld-linux.so.2 ${dir}/ld-linux.so.2 && \
 		dosym /usr/lib/loki_libc.so.6 ${dir}/libc.so.6 && \
