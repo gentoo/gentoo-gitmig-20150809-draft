@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.1 2005/03/23 15:40:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.2 2005/03/23 15:58:06 agriffis Exp $
 
 IUSE="crypt"
 
@@ -20,7 +20,8 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
-RDEPEND="crypt? ( >=app-crypt/gnupg-1.2.1 )"
+RDEPEND="crypt? ( >=app-crypt/gnupg-1.2.1 )
+	>=net-www/mozilla-launcher-1.28"
 
 S=${WORKDIR}/mozilla
 
@@ -113,7 +114,17 @@ src_install() {
 	# use mozilla-launcher which supports thunderbird as of version 1.6.
 	# version 1.7-r1 moved the script to /usr/libexec
 	dodir /usr/bin
-	dosym /usr/libexec/mozilla-launcher /usr/bin/thunderbird
+	cat <<EOF >${D}/usr/bin/thunderbird
+#!/bin/sh
+# 
+# Stub script to run mozilla-launcher.  We used to use a symlink here but
+# OOo brokenness makes it necessary to use a stub instead:
+# http://bugs.gentoo.org/show_bug.cgi?id=78890
+
+export MOZILLA_LAUNCHER=thunderbird
+exec /usr/libexec/mozilla-launcher "\$@"
+EOF
+chmod 0755 ${D}/usr/bin/thunderbird
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps

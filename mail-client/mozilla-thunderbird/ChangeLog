@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.45 2005/03/23 15:40:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.46 2005/03/23 15:58:06 agriffis Exp $
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-thunderbird-1.0.2.ebuild:
+  Use a stub script instead of symlink to mozilla-launcher. This in
+  combination with mozilla-launcher-1.28 should fix #78890
 
 *mozilla-thunderbird-1.0.2 (23 Mar 2005)
 
