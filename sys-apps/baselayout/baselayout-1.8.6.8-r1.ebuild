@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.14 2003/10/05 20:58:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.15 2003/10/05 21:31:45 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -12,7 +12,7 @@ SVREV="p1"
 # SysvInit version
 SVIV="2.84"
 
-S="${WORKDIR}/rc-scripts-${SV}"
+S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
 S2="${WORKDIR}/sysvinit-${SVIV}/src"
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
