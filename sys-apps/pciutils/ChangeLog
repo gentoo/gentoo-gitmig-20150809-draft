@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.2 2002/05/03 01:47:18 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.3 2002/06/03 00:12:54 mkennedy Exp $
+
+*pciutils-2.1.9-r2 (2 June 2002)
+
+  2 June; Matthew Kennedy <mkennedy@gentoo.org>
+  pciutils-2.1.9-r2.ebuild, files/digest-pciutils-2.1.9-r2, ChangeLog :
+
+  Fixed -Werror breakage for GCC3.1. Thanks to
+  lostlogic@lostlogicx.com (Brandon Low) for the corrected ebuild.
 
 *pciutils-2.1.9 (24 Feb 2002)
 
