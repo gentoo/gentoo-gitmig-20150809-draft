@@ -1,0 +1,9 @@
+# ChangeLog for sys-libs/libcap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.1 2003/05/15 21:53:30 robbat2 Exp $
+
+*libcap-1.10 (15 May 2003)
+  15 May 2003; Robin Johnson <robbat2@gentoo.org> Manifest,
+  files/libcap-1.10-python.patch, files/digest-libcap-1.10,
+  libcap-1.10.ebuild, ChangeLog:
+  Initial import. Ebuild submitted by Francisco Gimeno <kikov@fco-gimeno.com> 
