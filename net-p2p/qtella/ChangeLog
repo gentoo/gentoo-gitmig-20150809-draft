@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/qtella
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.7 2002/12/08 21:15:35 verwilst Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.8 2003/02/12 08:40:49 vapier Exp $
 
 *qtella-0.5.4 (8 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/cccp
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/ChangeLog,v 1.1 2002/12/08 21:22:41 verwilst Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/ChangeLog,v 1.2 2003/02/12 08:38:12 vapier Exp $
 
 *cccp-0.8 (8 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
 
