@@ -1,6 +1,10 @@
 # ChangeLog for net-www/horde-turba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/ChangeLog,v 1.4 2003/02/12 08:48:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/ChangeLog,v 1.5 2003/04/08 21:53:55 alron Exp $
+
+*horde-turba-1.2 (08 Apr 2003)
+  08 Apr 2003; Dean Bailey <alron@gentoo.org> horde-turba-1.2 :
+  Version bump and fix for when updatin turba.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
