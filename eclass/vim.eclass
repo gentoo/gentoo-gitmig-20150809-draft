@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.31 2003/07/15 01:41:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.32 2003/07/22 00:34:02 msterret Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -19,7 +19,7 @@ SLOT="0"
 LICENSE="vim"
 
 # portage dependency is for use_with/use_enable
-DEPEND="
+newdepend "
 	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
@@ -33,9 +33,9 @@ DEPEND="
 # Vim versions after 6.2d should work with Ruby 1.8 because of a local
 # Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
 if [[ "$PV" < 6.2 || ( "$PV" == 6.2_pre* && "${PV#*pre}" -lt 4 ) ]]; then
-	DEPEND="${DEPEND} ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
+	newdepend "ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
 else
-	DEPEND="${DEPEND} ruby? ( dev-lang/ruby )"
+	newdepend "ruby? ( dev-lang/ruby )"
 fi
 
 apply_vim_patches() {
