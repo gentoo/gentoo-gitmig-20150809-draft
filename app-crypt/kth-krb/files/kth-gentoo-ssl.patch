@@ -1,0 +1,198 @@
+diff -urN krb4-1.2.2.old/admin/adm_locl.h krb4-1.2.2/admin/adm_locl.h
+--- krb4-1.2.2.old/admin/adm_locl.h	2001-08-25 20:40:36.000000000 -0500
++++ krb4-1.2.2/admin/adm_locl.h	2003-11-21 18:12:23.000000000 -0600
+@@ -82,6 +82,9 @@
+ #include <roken.h>
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/appl/afsutil/kstring2key.c krb4-1.2.2/appl/afsutil/kstring2key.c
+--- krb4-1.2.2.old/appl/afsutil/kstring2key.c	2001-08-25 20:40:37.000000000 -0500
++++ krb4-1.2.2/appl/afsutil/kstring2key.c	2003-11-21 18:12:52.000000000 -0600
+@@ -43,6 +43,9 @@
+ #include <roken.h>
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/appl/bsd/bsd_locl.h krb4-1.2.2/appl/bsd/bsd_locl.h
+--- krb4-1.2.2.old/appl/bsd/bsd_locl.h	2002-08-28 13:55:41.000000000 -0500
++++ krb4-1.2.2/appl/bsd/bsd_locl.h	2003-11-21 18:13:06.000000000 -0600
+@@ -271,6 +271,9 @@
+ #endif
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/appl/ftp/ftp/ftp_locl.h krb4-1.2.2/appl/ftp/ftp/ftp_locl.h
+--- krb4-1.2.2.old/appl/ftp/ftp/ftp_locl.h	2001-08-22 15:30:19.000000000 -0500
++++ krb4-1.2.2/appl/ftp/ftp/ftp_locl.h	2003-11-21 18:14:24.000000000 -0600
+@@ -132,6 +132,9 @@
+ 
+ /* des_read_pw_string */
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/appl/movemail/pop.c krb4-1.2.2/appl/movemail/pop.c
+--- krb4-1.2.2.old/appl/movemail/pop.c	2002-08-28 15:10:02.000000000 -0500
++++ krb4-1.2.2/appl/movemail/pop.c	2003-11-21 18:13:33.000000000 -0600
+@@ -66,6 +66,9 @@
+ #endif
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/appl/otp/otp_locl.h krb4-1.2.2/appl/otp/otp_locl.h
+--- krb4-1.2.2.old/appl/otp/otp_locl.h	2001-08-22 15:30:21.000000000 -0500
++++ krb4-1.2.2/appl/otp/otp_locl.h	2003-11-21 18:13:46.000000000 -0600
+@@ -53,6 +53,9 @@
+ #include <roken.h>
+ #include <err.h>
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/appl/telnet/libtelnet/enc_des.c krb4-1.2.2/appl/telnet/libtelnet/enc_des.c
+--- krb4-1.2.2.old/appl/telnet/libtelnet/enc_des.c	2001-08-28 19:45:19.000000000 -0500
++++ krb4-1.2.2/appl/telnet/libtelnet/enc_des.c	2003-11-21 18:13:56.000000000 -0600
+@@ -51,6 +51,9 @@
+ #include "misc-proto.h"
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/appl/telnet/libtelnet/encrypt.h krb4-1.2.2/appl/telnet/libtelnet/encrypt.h
+--- krb4-1.2.2.old/appl/telnet/libtelnet/encrypt.h	2001-08-22 15:30:22.000000000 -0500
++++ krb4-1.2.2/appl/telnet/libtelnet/encrypt.h	2003-11-21 18:14:07.000000000 -0600
+@@ -91,6 +91,9 @@
+ #define	SK_DES		1	/* Matched Kerberos v5 KEYTYPE_DES */
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #define des_new_random_key des_random_key
+ #else
+diff -urN krb4-1.2.2.old/include/Makefile.in krb4-1.2.2/include/Makefile.in
+--- krb4-1.2.2.old/include/Makefile.in	2003-03-17 04:05:37.000000000 -0600
++++ krb4-1.2.2/include/Makefile.in	2003-11-21 18:17:33.000000000 -0600
+@@ -642,7 +642,10 @@
+ .et.c:
+ 	$(COMPILE_ET) $<
+ @HAVE_OPENSSL_TRUE@des.h:
+-@HAVE_OPENSSL_TRUE@	echo '#include <@DES_H@>' > des.h
++@HAVE_OPENSSL_TRUE@	echo '#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY' > des.h
++@HAVE_OPENSSL_TRUE@	echo '#define OPENSSL_DES_LIBDES_COMPATIBILITY 1' >> des.h
++@HAVE_OPENSSL_TRUE@	echo '#endif' >> des.h
++@HAVE_OPENSSL_TRUE@	echo '#include <@DES_H@>' >> des.h
+ 
+ ktypes.h: bits$(EXEEXT)
+ 	./bits$(EXEEXT) ktypes.h
+diff -urN krb4-1.2.2.old/kadmin/kadm_locl.h krb4-1.2.2/kadmin/kadm_locl.h
+--- krb4-1.2.2.old/kadmin/kadm_locl.h	2001-12-05 08:49:07.000000000 -0600
++++ krb4-1.2.2/kadmin/kadm_locl.h	2003-11-21 18:17:49.000000000 -0600
+@@ -112,6 +112,9 @@
+ #include <sl.h>
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/lib/kadm/kadm_locl.h krb4-1.2.2/lib/kadm/kadm_locl.h
+--- krb4-1.2.2.old/lib/kadm/kadm_locl.h	2002-09-09 10:26:17.000000000 -0500
++++ krb4-1.2.2/lib/kadm/kadm_locl.h	2003-11-21 18:18:09.000000000 -0600
+@@ -70,6 +70,9 @@
+ #include <roken.h>
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/lib/krb/krb.h.in krb4-1.2.2/lib/krb/krb.h.in
+--- krb4-1.2.2.old/lib/krb/krb.h.in	2001-08-25 20:42:29.000000000 -0500
++++ krb4-1.2.2/lib/krb/krb.h.in	2003-11-21 18:25:50.000000000 -0600
+@@ -48,6 +48,9 @@
+ #if !defined(NOPROTO) && !defined(__STDC__)
+ #define NOPROTO
+ #endif
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <@DES_H@>
+ 
+ /* CNS compatibility ahead! */
+@@ -224,6 +227,13 @@
+     int admin;
+ };
+ 
++/*
++ * Fixes Gentoo bug #30575, See the following threads for details:
++ * https://lists.openafs.org/pipermail/openafs-info/2003-October/010904.html
++ * https://lists.openafs.org/pipermail/openafs-info/2003-October/010910.html
++ */
++#define des_ks_struct _ossl_old_des_ks_struct
++
+ /* Location of ticket file for save_cred and get_cred */
+ #define TKT_FILE        tkt_string()
+ #ifndef TKT_ROOT
+diff -urN krb4-1.2.2.old/lib/rxkad/rxkad_locl.h krb4-1.2.2/lib/rxkad/rxkad_locl.h
+--- krb4-1.2.2.old/lib/rxkad/rxkad_locl.h	2001-08-25 20:40:45.000000000 -0500
++++ krb4-1.2.2/lib/rxkad/rxkad_locl.h	2003-11-21 18:18:23.000000000 -0600
+@@ -54,6 +54,9 @@
+ #endif
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
+diff -urN krb4-1.2.2.old/server/kerberos.c krb4-1.2.2/server/kerberos.c
+--- krb4-1.2.2.old/server/kerberos.c	2003-03-16 22:04:23.000000000 -0600
++++ krb4-1.2.2/server/kerberos.c	2003-11-21 18:18:37.000000000 -0600
+@@ -80,6 +80,9 @@
+ #include <base64.h>
+ 
+ #ifdef HAVE_OPENSSL
++#ifndef OPENSSL_DES_LIBDES_COMPATIBILITY
++#define OPENSSL_DES_LIBDES_COMPATIBILITY 1
++#endif
+ #include <openssl/des.h>
+ #else
+ #include <des.h>
