@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.2.4.ebuild,v 1.3 2004/02/20 19:50:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3.3.ebuild,v 1.1 2004/02/20 19:50:21 usata Exp $
 
 # flag-o-matic functions now in portage, no need to inherit it
 
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="spell"
-KEYWORDS="x86 ~ppc"
+# TeXmacs 1.0.X -> stable release, TeXmacs 1.0.X.Y -> development release
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="virtual/tetex
 	>=dev-util/guile-1.4
@@ -23,7 +24,7 @@ RDEPEND="virtual/tetex
 	virtual/x11
 	spell? ( >=app-text/ispell-3.2 )"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	virtual/ghostscript"
 
 src_compile() {
@@ -38,7 +39,7 @@ src_compile() {
 	# and now replace the detected optimisations with our safer ones
 	sed -i "s:\(^CXXOPTIMIZE = \).*:\1${CXXFLAGS}:" src/common.makefile
 	# emake b0rked
-	make || die
+	emake -j1 || die
 
 }
 
