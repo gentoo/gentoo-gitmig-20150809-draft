@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.38 2004/05/12 08:26:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.39 2004/05/14 00:55:39 vapier Exp $
+
+*libpng-1.2.5-r6 (13 May 2004)
+
+  13 May 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/libpng-1.0.12-gentoo.diff, files/libpng-1.2.5-gentoo.diff,
+  -files/libpng-update-bins.sh, -files/libpng-update-libs.sh,
+  -libpng-1.0.12-r2.ebuild, -libpng-1.0.15-r1.ebuild, libpng-1.0.15-r2.ebuild,
+  -libpng-1.0.15.ebuild, -libpng-1.2.5-r2.ebuild, -libpng-1.2.5-r3.ebuild,
+  -libpng-1.2.5-r4.ebuild, -libpng-1.2.5-r5.ebuild, +libpng-1.2.5-r6.ebuild:
+  Add small patch from netbsd #49263 by Anders Rune Jensen. Re-add the
+  flag-o-matic stuff for k6 cpus and gcc-3.2/3.3
 
 *libpng-1.2.5-r5 (11 May 2004)
 *libpng-1.0.15-r2 (11 May 2004)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r5.ebuild,v 1.1 2004/05/11 19:55:36 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r6.ebuild,v 1.1 2004/05/14 00:55:39 vapier Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -21,6 +21,9 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
+	[ "`gcc-version`" == "3.2" ] && replace-cpu-flags i586 k6 k6-2 k6-3
+	[ "`gcc-version`" == "3.3" ] && replace-cpu-flags i586 k6 k6-2 k6-3
+
 	sed \
 		-e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
 		-e "s:ZLIBINC=.*:ZLIBINC=/usr/include:" \
@@ -37,7 +40,7 @@ src_compile() {
 src_install() {
 	dodir /usr/{include,lib}
 	dodir /usr/share/man
-	einstall MANPATH=${D}/usr/share/man|| die "Failed to install"
+	einstall MANPATH=${D}/usr/share/man || die "Failed to install"
 
 	doman libpng.3 libpngpf.3 png.5
 	dodoc ANNOUNCE CHANGES KNOWNBUG README TODO Y2KINFO
