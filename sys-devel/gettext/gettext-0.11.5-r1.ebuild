@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5-r1.ebuild,v 1.7 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5-r1.ebuild,v 1.8 2003/05/20 02:26:57 kumba Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -10,7 +10,7 @@ IUSE="nls"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm ~mips"
 
 src_unpack() {
 	unpack ${A}
