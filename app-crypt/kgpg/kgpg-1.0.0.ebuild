@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kgpg/kgpg-1.0.0.ebuild,v 1.1 2003/03/04 13:48:22 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kgpg/kgpg-1.0.0.ebuild,v 1.2 2003/03/19 19:20:58 hannes Exp $
 
 inherit kde-base 
 need-kde 3 
@@ -10,6 +10,6 @@ DESCRIPTION="KDE integration for GnuPG"
 SRC_URI="http://devel-home.kde.org/~kgpg/src/${P}.tar.gz" 
 HOMEPAGE="http://devel-home.kde.org/~kgpg/index.html" 
 LICENSE="GPL-2" 
-KEYWORDS="~x86 ~ppc" 
+KEYWORDS="x86 ~ppc" 
 
 newdepend "app-crypt/gnupg"
