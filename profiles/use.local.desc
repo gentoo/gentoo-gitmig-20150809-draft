@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.104 2003/09/08 00:45:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.105 2003/09/08 08:54:53 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -95,6 +95,7 @@ net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:skey - Enable S/Key (Single use password) authentication support
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
+net-p2p/mldonkey:mldonkeypango - enable pango patches for mldonkey
 net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
 net-p2p/nicotine:geoip - Enable GeoIP support
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
