@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.3 2003/03/02 02:07:38 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.4 2003/03/02 18:15:52 latexer Exp $
 
 NOCO_VERSION="0.13b"
 
@@ -8,8 +8,8 @@ S=${WORKDIR}/${P}
 OV="orinoco-${NOCO_VERSION}"
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
-	http://airsnort.shmoo.com/${OV}-patched.diff
-	http://ozlabs.org/people/dgibson/dldwd/${OV}.tar.gz"
+	wavelan? ( http://airsnort.shmoo.com/${OV}-patched.diff )
+	wavelan? ( http://ozlabs.org/people/dgibson/dldwd/${OV}.tar.gz )"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers"
@@ -38,7 +38,8 @@ src_unpack() {
 		patch -p1 < ${DISTDIR}/${OV}-patched.diff
 
 		cd ${S}
-		mv ../${OV}/hermes*.{c,h} \
+		/bin/chmod ug+w ${S}/wireless/*
+		mv -f ../${OV}/hermes*.{c,h} \
 			../${OV}/orinoco*.{c,h} \
 			../${OV}/ieee802_11.h wireless/
 	fi
@@ -46,14 +47,15 @@ src_unpack() {
 
 	
 	cd ${S}
-	cp Configure Configure.orig
+	mv Configure Configure.orig
 	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
+	chmod ug+x Configure
 	#man pages will now install into /usr/share/man
 
 	cd ${S}
 	### As per the SourceForge web site reqs and bug #3400
 	# We'll replace all ide_cs with ide-cs
-	cp etc/config etc/config.orig
+	mv etc/config etc/config.orig
 	sed -e 's:ide_cs:ide-cs:g' etc/config.orig > etc/config
 	rm -f etc/config.orig
 
