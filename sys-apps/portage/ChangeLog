@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.12 2002/02/28 01:11:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.13 2002/05/02 05:23:37 kain Exp $
 
 See the gentoo-src Portage ChangeLog for up-to-date release information:
 http://www.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/portage/ChangeLog?rev=HEAD&content-type=text/vnd.viewcvs-markup
+
+*portage-1.9.5-r1 (2 May 2002)
+
+  2 May 2002; Kain <kain@kain.org> : small fix for portage running on PPC,
+  since sandbox breaks on PPC.  (We disable sandbox there.)
 
 *portage-1.8.9_pre9 (21 Feb 2002)
 
