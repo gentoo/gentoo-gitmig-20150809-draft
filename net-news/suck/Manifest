@@ -1,4 +1,14 @@
-MD5 09522bebd84e3d960002a6aadd99d6ef suck-4.3.2.ebuild 1202
-MD5 2a6ead4c02cf933c9f7671741b89edc0 ChangeLog 438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e003adfac86dfeefd53e94e0a6ac81a1 suck-4.3.2.ebuild 1201
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
+MD5 f2655e75412d08b09442e5364df48ddb ChangeLog 532
 MD5 42078d2bd0030ce7062a4405c32e2bef files/digest-suck-4.3.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCZTQAXomK8S72HoRAlxwAJ9y7Sva9h65DipadqdYCKgyUX5TewCfVFqK
+D5RKzuU4kXRkEJ8UByWe3vw=
+=/iJn
+-----END PGP SIGNATURE-----
