@@ -10,4 +10,4 @@ MD5 1afffcb0a10f9c0028dc5062244934fc files/digest-firehol-1.91 64
 MD5 900023a168850621684489055919f9ed files/digest-firehol-1.120 65
 MD5 5bbd5e937bfbca1a18412642dd122eb6 files/digest-firehol-1.159 65
 MD5 24f588c8420a4d441a56a632cf827be8 files/digest-firehol-1.191 66
-MD5 3ad863dbe28a9013942ec0277cb6bc03 files/firehol.initrd 482
+MD5 d35ae3140fdbb1dda3259023101e982c files/firehol.initrd 476
