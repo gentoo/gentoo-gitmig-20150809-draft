@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.8 2004/01/06 04:48:26 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.9 2004/01/07 13:48:40 hanno Exp $
+
+*amule-1.2.3 (07 Jan 2004)
+
+  07 Jan 2004; Hanno Boeck <hanno@gentoo.org> amule-1.2.3.ebuild:
+  Version bump. Removed gtk2-check, latest amule runs fine with gtk2.
 
   05 Jan 2004; Jon Portnoy <avenj@gentoo.org> amule-1.1.2.ebuild :
   AMD64 keywords.
