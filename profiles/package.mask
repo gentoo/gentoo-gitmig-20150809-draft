@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (15 Aug 2002)
+# masked for missing patch -- hello raker!
+=x11-libs/openmotif-2.2.2
+
 # <mjc@gentoo.org> (15 Aug 2002)
 # new ebuild, thanks to carpaski =)
 net-www/apache2
