@@ -1,5 +1,5 @@
-MD5 f7707ee38233cf1e0589b06a8c3a5fc4 gtoaster-1.0_beta6.ebuild 1904
-MD5 7b3e5c09135686a351072ffe3c59835a ChangeLog 2194
+MD5 5d79bb4ca540f1f22985196cfacd2853 gtoaster-1.0_beta6.ebuild 1900
+MD5 05299f6ef54483bbdc3fccfa1a236bee ChangeLog 2291
 MD5 12158b386c76f1fa317b9b474abfb30e metadata.xml 249
 MD5 1eb3e66bb9f6f444be6ec2491ecc587a files/scdtosr.diff 1751
 MD5 30354196151aa6af726ca19e9be520e5 files/configure.in.diff 404
