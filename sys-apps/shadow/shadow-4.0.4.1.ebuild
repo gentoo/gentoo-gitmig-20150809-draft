@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.3 2004/01/24 16:54:13 azarah Exp $
-
-IUSE="pam selinux"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.4 2004/02/08 20:36:48 vapier Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -10,7 +8,6 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 
 SELINUX_PATCH="shadow-4.0.4.1-selinux.diff"
 
-S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
@@ -18,16 +15,15 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ~ppc64"
+IUSE="pam selinux"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
 	nls? ( sys-devel/gettext )
 	selinux? ( sys-libs/libselinux )"
-
 RDEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
 	selinux? ( sys-libs/libselinux )"
-
 
 pkg_preinst() {
 	rm -f ${ROOT}/etc/pam.d/system-auth.new
@@ -194,4 +190,3 @@ pkg_postinst() {
 		rm -f ${ROOT}/etc/pam.d/system-auth.new
 	fi
 }
-

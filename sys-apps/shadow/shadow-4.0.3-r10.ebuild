@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.3 2004/01/10 02:37:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.4 2004/02/08 20:36:48 vapier Exp $
 
 IUSE="pam selinux"
 
@@ -13,7 +13,7 @@ SELINUX_PATCH="shadow-4.0.3-selinux.diff"
 S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
-SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
+SRC_URI="ftp://ftp.pld.org.pl/software/shadow/old/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
