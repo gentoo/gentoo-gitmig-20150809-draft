@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/proxytunnel
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.1 2004/02/05 00:37:58 vapier Exp $
+
+*proxytunnel-1.1.3 (04 Feb 2004)
+
+  04 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by #40166 by Ed Catmur.
