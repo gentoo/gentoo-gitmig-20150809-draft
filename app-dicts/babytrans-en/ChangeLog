@@ -1,6 +1,6 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/Changelog,v 1.1 2004/09/10 05:32:30 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/ChangeLog,v 1.1 2004/09/11 05:48:52 angusyoung Exp $
 
   10 Oct 2004; Otavio Piske <angusyoung@gentoo.org> babytrans-0.9.2.ebuild :
   Initial release (bug #26156)
