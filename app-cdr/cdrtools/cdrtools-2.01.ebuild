@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.12 2004/10/19 18:06:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.13 2004/10/27 20:35:44 kito Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86 ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -27,8 +27,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch
 
 	cd ${S}/DEFAULTS
-	sed -i "s:/opt/schily:/usr:g" Defaults.linux
-	sed -i "s:/usr/src/linux/include::g" Defaults.linux
+	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
+	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
+	sed -i "s:/usr/src/linux/include::g" Defaults.${MYARCH}
 
 	cd ${S}/librscg
 	sed -i "s:/opt/schily:/usr:g" scsi-remote.c
@@ -47,15 +48,17 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	dobin cdda2wav/OBJ/*-linux-cc/cdda2wav || die "cdda2wav"
-	dobin cdrecord/OBJ/*-linux-cc/cdrecord || die "cdrecord"
-	dobin mkisofs/OBJ/*-linux-cc/mkisofs || die "mkisofs"
-	dobin readcd/OBJ/*-linux-cc/readcd || die "readcd"
-	dosbin rscsi/OBJ/*-linux-cc/rscsi || die "rscsi"
-	insinto /usr/include
-	doins incs/*-linux-cc/align.h incs/*-linux-cc/avoffset.h incs/*-linux-cc/xconfig.h || die "include"
 
-	cd mkisofs/diag/OBJ/*-linux-cc
+	dobin cdda2wav/OBJ/*-*-cc/cdda2wav || die "cdda2wav"
+	dobin cdrecord/OBJ/*-*-cc/cdrecord  || die "cdrecord"
+	dobin mkisofs/OBJ/*-*-cc/mkisofs || die "mkisofs"
+	dobin readcd/OBJ/*-*-cc/readcd || die "readcd"
+	dosbin rscsi/OBJ/*-*-cc/rscsi || die "rscsi"
+
+	insinto /usr/include
+	doins incs/*-*-cc/align.h incs/*-*-cc/avoffset.h incs/*-*-cc/xconfig.h || die "include"
+
+	cd mkisofs/diag/OBJ/*-*-cc
 	dobin devdump isodump isoinfo isovfy || die "dobin"
 
 	cd ${S}
@@ -63,8 +66,8 @@ src_install() {
 	doins rscsi/rscsi.dfl
 	doins cdrecord/cdrecord.dfl
 
-	cd ${S}/libs/*-linux-cc
-	dolib.a *.a
+	cd ${S}/libs/*-*-cc
+	dolib.a *.a || die "dolib failed"
 
 	cd ${S}
 	insinto /usr/include/scsilib
@@ -85,6 +88,16 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Note the special license on cdrecord/cdrecord.c starting from line 4648."
+	if use ppc-macos ; then
+		einfo ""
+		einfo "Darwin/OS X use the following device names: "
+		einfo ""
+		einfo "CD burners: (probably) ./cdrecord dev=IOCompactDiscServices "
+		einfo ""
+		einfo "DVD burners: (probably) ./cdrecord dev=IODVDServices "
+		einfo ""
+	else
 	echo
 	einfo "The command line option 'dev=ATAPI:' should be used for IDE CD writers."
+	fi
 }

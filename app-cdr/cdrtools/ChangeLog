@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.102 2004/10/26 01:21:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.103 2004/10/27 20:35:44 kito Exp $
+
+  27 Oct 2004; Kito <kito@gentoo.org> cdrtools-2.01.ebuild:
+  added ~ppc-macos closes bug 58717
 
   13 Oct 2004; Lars Weiler <pylon@gentoo.org>
   -files/cdrtools-2.01-kernel25-support.patch,
