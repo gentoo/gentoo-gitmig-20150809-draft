@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/netkit-timed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.9 2004/07/01 21:34:03 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.10 2004/08/07 01:31:34 dragonheart Exp $
+
+*netkit-timed-0.17-r7 (07 Aug 2004)
+
+  07 Aug 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/0.17-CFLAG-DEF-fix.patch, +files/0.17-timed.patch, -files/timed.c,
+  netkit-timed-0.17-r6.ebuild, +netkit-timed-0.17-r7.ebuild +metadata.xml:
+  0.17-r6 broken as per bug #59610. Removed timed.c and replaced with patch.
+  Version 0.17-r7 fixed the problem. Thanks to Antonio <netbix@tiscali.it> for
+  the bug report and Jens Lindemann <jens.lindemann@gmail.com> for the fix.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> netkit-timed-0.17-r6.ebuild:
   change virtual/glibc to virtual/libc, add IUSE
