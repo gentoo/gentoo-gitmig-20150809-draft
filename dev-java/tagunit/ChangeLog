@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tagunit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/ChangeLog,v 1.4 2004/10/17 19:21:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/ChangeLog,v 1.5 2004/10/22 10:27:03 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> tagunit-1.0.1.ebuild:
+  Keywords ~amd64. Fixed dodoc.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> tagunit-1.0.1.ebuild:
   keyword x86
