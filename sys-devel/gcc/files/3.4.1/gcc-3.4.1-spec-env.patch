@@ -5,7 +5,7 @@
    /* Process any user specified specs in the order given on the command
       line.  */
 +
-+  GET_ENVIRONMENT (specs_file, "GCC_SPEC");
++  GET_ENVIRONMENT (specs_file, "GCC_SPECS");
 +  if (specs_file)
 +    {
 +      struct user_specs *user = xmalloc (sizeof (struct user_specs));

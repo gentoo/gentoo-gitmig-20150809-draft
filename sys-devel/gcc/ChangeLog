@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.328 2004/09/19 21:37:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.329 2004/09/19 21:51:41 solar Exp $
+
+  19 Sep 2004; <solar@gentoo.org> files/3.3.4/gcc-3.3.4-spec-env.patch,
+  files/3.4.1/gcc-3.4.1-spec-env.patch:
+  update robs patches from GCC_SPEC to GCC_SPECS so names are consistent in all
+  gcc versions
 
   19 Sep 2004; <solar@gentoo.org> :
   restore changelog
