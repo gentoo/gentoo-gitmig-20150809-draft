@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/packages,v 1.4 2004/04/07 20:38:31 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/packages,v 1.5 2004/04/08 19:13:23 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -12,6 +12,6 @@
 *>=sys-libs/libselinux-1.6
 *>=sys-apps/checkpolicy-1.6
 *>=sys-apps/policycoreutils-1.6
-*>=sec-policy/selinux-base-policy-20040225
+*>=sec-policy/selinux-base-policy-20040408
 *>=dev-python/python-selinux-2.12
 ##############################################################################
