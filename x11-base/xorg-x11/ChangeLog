@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.88 2004/08/13 21:02:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.89 2004/08/14 01:41:19 tseng Exp $
+
+  13 Aug 2004; Brandon Hale <tseng@gentoo.org> xorg-x11-6.7.99.2.ebuild:
+  Minor adjustment to einfo for USE=dlloader, rework sed to replace keyboard
+  with kbd driver, move that bit into setup_config_files and clean up that
+  function a bit.
 
 *xorg-x11-6.7.99.2 (13 Aug 2004)
 

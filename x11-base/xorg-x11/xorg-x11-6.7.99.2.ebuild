@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.2 2004/08/13 21:11:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.3 2004/08/14 01:41:19 tseng Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -274,7 +274,7 @@ host_def_setup() {
 			echo "#define DoLoadableServer	NO" >>config/cf/host.def
 		else
 			if use dlloader ; then
-				einfo "Setting DoLoadableServer/MakeDllModules to YES for etdyn building"
+				einfo "Setting DoLoadableServer/MakeDllModules to YES."
 				echo "#define DoLoadableServer  YES" >> config/cf/host.def
 				echo "#define MakeDllModules    YES" >> config/cf/host.def
 			fi
@@ -815,9 +815,15 @@ setup_config_files() {
 			cp ${ROOT}${FILE} ${T}${DIR}
 			# New font paths
 			sed -i "s,/usr/X11R6/lib/X11/fonts,/usr/share/fonts,g" ${T}${FILE}
-			# Work around upgrade problem where people have
-			# Option "XkbRules" "xfree86" in their config file
-			sed -i "s:^.*Option.*"XkbRules".*$::g" ${T}${FILE}
+
+			if [ "${FILE}" = "/etc/X11/xorg.conf" ]
+			then
+				# "keyboard" driver is deprecated and will be removed, switch to "kbd"
+				sed -i "s:^.*Driver.*"keyboard".*$:^.*Driver.*"kbd":g" ${T}${FILE}
+				# Work around upgrade problem where people have
+				# Option "XkbRules" "xfree86" in their config file
+				sed -i "s:^.*Option.*"XkbRules".*$::g" ${T}${FILE}
+			fi
 
 			dodir ${DIR}
 			insinto ${DIR}
@@ -825,16 +831,6 @@ setup_config_files() {
 		fi
 	done
 }
-
-update_config_files() {
-	# The new keyboard driver is kbd instead of keyboard
-	if [ "${ROOT}" = "/" ]
-	then
-		sed 's:"keyboard":"kbd":' \
-			${ROOT}/etc/X11/xorg.conf > ${ROOT}/etc/X11/._cfg0001_xorg.conf
-	fi
-}
-
 
 src_install() {
 
@@ -1254,8 +1250,6 @@ print_info() {
 }
 
 pkg_postinst() {
-
-	update_config_files
 
 	env-update
 
