@@ -106,10 +106,6 @@ x11-libs/gtkmm-addons
 # Masking pending unfreeze.
 app-games/koth
 
-# <mkeadle@gentoo.org> (03 Oct 2002)
-# masking for testing for replacement of commonc++
-dev-libs/commoncpp2
-
 # <aliz@gentoo.org> (3 Oct 2002)
 # Masked for testing
 =app-sci/magic-7.1-r1
@@ -189,11 +185,6 @@ dev-libs/commoncpp2
 =app-i18n/kde-i18n-zh_CN-3.1_beta2
 =app-i18n/kde-i18n-zh_TW-3.1_beta2
 =app-i18n/kde-i18n-zu-3.1_beta2
-
-
-# <mkeadle@gentoo.org> (30 Sep 2002)
-# Masking pending BRRRR disfreeze
-media-video/SDLcam
 
 # <agenkin@gentoo.org> (30 Sep 2002)
 # Masking pending unfreeze.
