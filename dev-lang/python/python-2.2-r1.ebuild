@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.ebuild,v 1.2 2002/01/03 16:37:29 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r1.ebuild,v 1.1 2002/01/03 16:41:37 drobbins Exp $
 
 S=${WORKDIR}/Python-${PV}
 FCHKSUM="python-fchksum-1.6"
@@ -127,6 +127,5 @@ src_install() {
 		mkdir "${D}/usr/lib/python2.2/tools"
 		mv "${S}/Tools/idle" "${D}/usr/lib/python2.2/tools/"
 		dosym /usr/lib/python2.2/tools/idle/idle.py /usr/bin/idle.py
-		dosym /usr/bin/idle.py /usr/bin/idle
 	fi
 }
