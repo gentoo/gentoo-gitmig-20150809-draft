@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.1 2004/11/26 18:05:51 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.2 2004/11/26 19:46:41 sergey Exp $
 
 # Author: Sergey Kuleshov <svyatogor@gentoo.org>
 #
@@ -15,16 +15,16 @@ if [ -z "$ROX_VER" ]; then
 fi
 
 DEPEND="${DEPEND}
-		>=app-rox/rox-$ROX_VER"
+		>=rox-base/rox-$ROX_VER"
 
 if [ -n "$ROX_LIB_VER" ]; then
 	DEPEND="${DEPEND}
-			  >=app-rox/rox-lib-$ROX_LIB_VER"
+			  >=rox-base/rox-lib-$ROX_LIB_VER"
 fi
 
 if [ -n "$ROX_CLIB_VER" ]; then
 	DEPEND="${DEPEND}
-			  >=app-rox/rox-clib-$ROX_CLIB_VER"
+			  >=rox-base/rox-clib-$ROX_CLIB_VER"
 fi
 
 
