@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.38 2004/07/27 16:02:41 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.39 2004/08/01 22:35:07 slarti Exp $
+
+  01 Aug 2004; Tom Martin <slarti@gentoo.org> zope-2.7.2.ebuild:
+  Marked ~amd64, added gid.patch. Closing bug 48696 (thanks to Markus Gapp
+  <markus.gapp@tznets.com>.
 
   27 Jul 2004; Jodok Batlogg <batlogg@gentoo.org>; zope-2.6.4-r1.ebuild,
   zope-2.7.1.ebuild, zope-2.7.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.2.ebuild,v 1.3 2004/07/27 16:02:41 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.2.ebuild,v 1.4 2004/08/01 22:35:07 slarti Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-0.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
 IUSE="unicode"
 
 RDEPEND="=dev-lang/python-2.3*"
@@ -77,6 +77,13 @@ pkg_preinst() {
 	enewgroup ${ZGID} 261
 	usermod -g ${ZGID} ${ZUID} 2>&1 >/dev/null || \
 	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} ${ZGID}
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use amd64 \
+		&& epatch ${FILESDIR}/2.7.2/gid.patch
 }
 
 src_compile() {
