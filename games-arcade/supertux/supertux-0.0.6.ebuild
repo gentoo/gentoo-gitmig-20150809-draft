@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.0.6.ebuild,v 1.1 2004/03/30 11:05:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.0.6.ebuild,v 1.2 2004/03/30 15:37:54 dholm Exp $
 
 inherit games
 use debug && inherit debug
@@ -9,7 +9,7 @@ DESCRIPTION="A game similar to Super Mario Bros."
 HOMEPAGE="http://www.newbreedsoftware.com/supertux/"
 SRC_URI="mirror://sourceforge/super-tux/${P}.tar.bz2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug opengl"
