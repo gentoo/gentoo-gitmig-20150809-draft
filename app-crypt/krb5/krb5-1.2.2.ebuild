@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <grant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.2.ebuild,v 1.1 2001/06/21 15:26:25 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.2.ebuild,v 1.2 2001/06/24 02:20:29 achim Exp $
 
 #P=
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${A1}"
+SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${A}"
 DESCRIPTION="MIT Kerberos V (set up for pam)"
 HOMEPAGE="http://crypto-publish.org"
 
