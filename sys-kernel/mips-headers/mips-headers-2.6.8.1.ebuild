@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.8.1.ebuild,v 1.1 2004/10/01 23:12:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.8.1.ebuild,v 1.2 2004/10/01 23:16:14 kumba Exp $
 
 
 # Eclass stuff
@@ -10,7 +10,7 @@ inherit kernel eutils
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20040822"			# Date of diff between kernel.org and lmo CVS
-COBALTPATCHVER="1.4"			# Tarball version for cobalt patches
+COBALTPATCHVER="1.7"			# Tarball version for cobalt patches
 GENPATCHVER="1.0"			# Tarball version for generic patches
 EXTRAVERSION=-mipscvs-${CVSDATE}
 KV="${OKV}${EXTRAVERSION}"
