@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.2.1.ebuild,v 1.1 2003/03/31 20:09:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.2.1.ebuild,v 1.2 2003/04/01 14:46:53 liquidx Exp $
 
 inherit distutils
 
@@ -15,18 +15,25 @@ KEYWORDS="~x86"
 
 IUSE=""
 
-DEPEND=">=dev-python/wxPython-2.2
+RDEPEND=">=dev-python/wxPython-2.2
 	>=dev-lang/python-2.1"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0.5"
 
 
 mydoc="FAQ.txt README.txt LICENSE.txt"
 
 pkg_postinst() {
-	# add entry to mailcap if it doesn't already exist
-	if ! grep "application/x-bittorrent" /etc/mailcap;
-	then
-		einfo "adding application/x-bittorrent to /etc/mailcap..."
-		echo 'application/x-bittorrent; /usr/bin/btdownloadprefetched.py %s; test=test -n "$DISPLAY"' >> /etc/mailcap
+	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
+
+    if [ -n "`grep 'application/x-bittorrent' /etc/mailcap`" ]; then
+    	# replace bittorrent entry if it already exists
+		einfo "updating bittorrent mime info"
+        sed -i "s,application/x-bittorrent;.*,${MAILCAP_STRING}," /etc/mailcap
+    else
+    	# add bittorrent entry if it doesn't exist
+        einfo "adding bittorrent mime info"
+		echo "${MAILCAP_STRING}" >> /etc/mailcap
 	fi
 }
 
