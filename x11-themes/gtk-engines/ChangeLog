@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.6 2003/07/14 11:00:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.7 2003/08/18 17:15:06 agriffis Exp $
+
+  18 Aug 2003; Aron Griffis <agriffis@gentoo.org> gtk-engines-2.2.0.ebuild:
+  Add gnuconfig updates for Alpha EV67
 
   14 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtk-engines-2.2.0.ebuild:
   using newdepend to 'workaround' metadata conditional

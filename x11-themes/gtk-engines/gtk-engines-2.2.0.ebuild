@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.2.0.ebuild,v 1.4 2003/07/14 11:00:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.2.0.ebuild,v 1.5 2003/08/18 17:15:06 agriffis Exp $
 
-inherit gtk-engines2
+inherit gtk-engines2 gnuconfig
 
 GTK1_VER="0.12"
 GTK2_VER="${PV}"
@@ -30,3 +30,11 @@ SLOT="0"
 GTK1_S=${WORKDIR}/${PN}-${GTK1_VER}
 GTK2_S=${WORKDIR}/${PN}-${GTK2_VER}
 
+src_unpack() {
+	unpack ${A}
+	if use alpha; then
+		gnuconfig_update || die 'gnuconfig_update failed'
+		( cd $GTK1_S && libtoolize --force ) || die 'libtoolize1 failed'
+		( cd $GTK2_S && libtoolize --force ) || die 'libtoolize2 failed'
+	fi
+}
