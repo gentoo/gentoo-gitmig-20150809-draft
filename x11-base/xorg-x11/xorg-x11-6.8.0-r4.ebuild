@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.22 2004/12/06 23:43:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.23 2004/12/07 02:13:11 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -320,7 +320,7 @@ src_install() {
 
 	# Fix perms
 	if ! use minimal; then
-		fperms 755 /usr/$(get_libdir)/xkb/geometry/sgi /usr/X11R6/bin/dga
+		fperms 755 /usr/$(get_libdir)/X11/xkb/geometry/sgi /usr/X11R6/bin/dga
 	fi
 
 	compose_files_setup
@@ -598,7 +598,7 @@ host_def_setup() {
 		# Saving this for a later revision
 		# echo "#define BinDir /usr/bin" >> ${HOSTCONF}
 		# /usr/X11R6/lib/X11
-		echo "#define LibDir /usr/$(get_libdir)" >> ${HOSTCONF}
+		echo "#define LibDir /usr/$(get_libdir)/X11" >> ${HOSTCONF}
 		# /usr/X11R6/lib with exception of /usr/X11R6/lib/X11
 		echo "#define UsrLibDir /usr/$(get_libdir)" >> ${HOSTCONF}
 
@@ -1017,17 +1017,12 @@ backward_compat_setup() {
 	dosym ../../../share/doc/${PF} /usr/X11R6/$(get_libdir)/X11/doc
 #	dosym ../share/bin /usr/X11R6/bin
 
-	# Another symlink for the keysym database (#70927)
-	dosym ../XKeysymDB /usr/$(get_libdir)/X11/XKeysymDB
-
-	# dev-java/sun-j2sdk wants /usr/X11R6/libdir/X11/config (#71654)
-	dosym ../../../$(get_libdir)/config /usr/X11R6/$(get_libdir)/X11/config
 }
 
 fix_permissions() {
 	# Fix permissions on locale/common/*.so
 	local x
-	for x in ${D}/usr/$(get_libdir)/locale/$(get_libdir)/common/*.so*; do
+	for x in ${D}/usr/$(get_libdir)/X11/locale/$(get_libdir)/common/*.so*; do
 		if [ -f ${x} ]; then
 			fperms 0755 ${x/${D}}
 		fi
@@ -1042,10 +1037,10 @@ fix_permissions() {
 }
 
 zap_host_def_cflags() {
-	ebegin "Fixing $(get_libdir)/config/host.def"
-		cp ${D}/usr/$(get_libdir)/config/host.def ${T}
+	ebegin "Fixing $(get_libdir)/X11/config/host.def"
+		cp ${D}/usr/$(get_libdir)/X11/config/host.def ${T}
 		awk '!/OptimizedCDebugFlags|OptimizedCplusplusDebugFlags|GccWarningOptions/ {print $0}' \
-			${T}/host.def > ${D}/usr/$(get_libdir)/config/host.def \
+			${T}/host.def > ${D}/usr/$(get_libdir)/X11/config/host.def \
 			|| eerror "Munging host.def failed"
 		# theoretically, /usr/lib/X11/config is a possible candidate for
 		# config file management. If we find that people really worry about imake
@@ -1074,17 +1069,14 @@ setup_standard_symlinks() {
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/DPS /usr/include/DPS
 	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../../usr/$(get_libdir)/xkb /etc/X11/xkb
-	# Added one to reflect xkb move from /usr/X11R6/libdir/X11/xkb
-	# to /usr/libdir/xkb
-	dosym ../../$(get_libdir)/xkb /usr/X11R6/$(get_libdir)/X11/xkb
+	dosym ../../usr/$(get_libdir)/X11/xkb /etc/X11/xkb
 }
 
 compose_files_setup() {
 	# Hack from Mandrake (update ours that just created Compose files for
 	# all locales)
 	local x
-	for x in $(find ${D}/usr/$(get_libdir)/locale/ -mindepth 1 -type d); do
+	for x in $(find ${D}/usr/$(get_libdir)/X11/locale/ -mindepth 1 -type d); do
 		# make empty Compose files for some locales
 		# CJK must not have that file (otherwise XIM don't works some times)
 		case $(basename ${x}) in
@@ -1104,7 +1096,7 @@ compose_files_setup() {
 	# Another hack from Mandrake -- to fix dead + space for the us
 	# international keyboard
 	local i
-	for i in ${D}/usr/$(get_libdir)/locale/*/Compose; do
+	for i in ${D}/usr/$(get_libdir)/X11/locale/*/Compose; do
 		sed -i \
 			-e 's/\(<dead_diaeresis> <space>\).*$/\1 : "\\"" quotedbl/' \
 			-e "s/\(<dead_acute> <space>\).*$/\1 : \"'\" apostrophe/" ${i} \
@@ -1242,7 +1234,7 @@ strip_execs() {
 		done
 		# Now do the libraries ...
 		for x in ${D}/usr/{$(get_libdir),$(get_libdir)/opengl/${PN}/$(get_libdir)}/*.so.* \
-			${D}/usr/{$(get_libdir),$(get_libdir)/locale/$(get_libdir)/common}/*.so.*; do
+			${D}/usr/{$(get_libdir),$(get_libdir)/X11/locale/$(get_libdir)/common}/*.so.*; do
 			if [ -f ${x} ]; then
 				echo "$(echo ${x/${D}})"
 				${STRIP} --strip-debug ${x} || :
@@ -1327,26 +1319,6 @@ migrate_usr_x11r6_lib() {
 	# Put a symlink in its place if there's not one there
 	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
 		&& ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
-
-	# We also need to create a symlink from /usr/X11R6/libdir/X11/xkb
-	# to /usr/libdir/xkb, so libxklavier and xkb stuff is happy
-
-	einfo "Migrating from /usr/X11R6/$(get_libdir)/X11/xkb to /usr/$(get_libdir)/xkb..."
-	# Make the new dir if it doesn't already exist
-	[ ! -e ${ROOT}usr/$(get_libdir)/xkb ] \
-		&& mkdir ${ROOT}usr/$(get_libdir)/xkb
-	# Move anything in the old xkb dir if it's not a symlink
-	[ ! -L ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb ] \
-		&& mv -f ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb/* \
-		${ROOT}usr/$(get_libdir)/xkb
-	# Get rid of the directory if it's not a symlink
-	[ ! -L ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb ] \
-		&& rmdir ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb
-	# Add symlink to reflect xkb move from /usr/X11R6/libdir/X11/xkb
-	# to /usr/libdir/xkb
-	[ ! -L ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb ] \
-		&& ln -s ../../$(get_libdir)/xkb \
-		${ROOT}usr/X11R6/$(get_libdir)/X11/xkb
 }
 
 update_config_files() {
@@ -1585,7 +1557,7 @@ switch_opengl_implem() {
 }
 
 remove_old_compose_files() {
-	for x in $(find ${ROOT}/usr/$(get_libdir)/locale/ -mindepth 1 -type d); do
+	for x in $(find ${ROOT}/usr/$(get_libdir)/X11/locale/ -mindepth 1 -type d); do
 		# Remove old compose files we might have created incorrectly
 		# CJK must not have that file (otherwise XIM don't works some times)
 		case $(basename ${x}) in
