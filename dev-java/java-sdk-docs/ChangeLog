@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.20 2004/02/15 09:44:26 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.21 2004/02/23 15:09:58 bazik Exp $
+
+  23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> java-sdk-docs-1.4.2.ebuild:
+  Stable on sparc.
 
   15 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   java-sdk-docs-1.4.1.ebuild:
