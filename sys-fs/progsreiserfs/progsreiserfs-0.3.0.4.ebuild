@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.8 2004/06/24 22:53:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.9 2004/07/15 03:39:25 agriffis Exp $
 
 inherit libtool gnuconfig
 
@@ -20,7 +20,7 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 	use debug && myconf="${myconf} --disable-debug"
 
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	elibtoolize
 	econf ${myconf} || die "Configure failed"
