@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.3 2005/01/27 03:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.4 2005/02/01 23:49:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -78,7 +78,7 @@ CPU_X86="GENERIC_386 {3,4,5,6}86 PENTIUM{II,III,4} K{6,7} ELAN CRUSOE WINCHIP{C6
 IUSE_UCLIBC_CPU="${CPU_ARM} ${CPU_MIPS} ${CPU_PPC} ${CPU_SH} ${CPU_X86}"
 
 check_cpu_opts() {
-	local cpu_var="CPU_$(echo $(tc-arch ${CTARGET}) | tr [a-z] [A-Z])"
+	local cpu_var="CPU_$(echo $(tc-arch) | tr [a-z] [A-Z])"
 	if [[ -z ${UCLIBC_CPU} ]] ; then
 		ewarn "You really should consider setting UCLIBC_CPU"
 		ewarn "Otherwise, the build will be generic (read: slow)."
@@ -105,6 +105,17 @@ src_unpack() {
 	cd ${S}
 	check_cpu_opts
 
+	echo
+	einfo "Runtime Prefix: $(alt_rprefix)"
+	einfo "Kernel Prefix:  $(alt_kprefix)"
+	einfo "Devel Prefix:   $(alt_prefix)"
+	einfo "CBUILD:         ${CBUILD:-${CHOST}}"
+	einfo "CHOST:          ${CHOST}"
+	einfo "CTARGET:        ${CTARGET}"
+	einfo "CPU:            ${UCLIBC_CPU}"
+	einfo "ENDIAN:         $(tc-endian)"
+	echo
+
 	########## PATCHES ##########
 
 	[[ -n ${CVS_VER} ]] && \
@@ -120,13 +131,13 @@ src_unpack() {
 	########## CPU SELECTION ##########
 
 	local target config_target
-	case $(tc-arch ${CTARGET}) in
+	case $(tc-arch) in
 		arm)  target="arm";     config_target="GENERIC_ARM";;
 		mips) target="mips";    config_target="MIPS_ISA_1";;
 		ppc)  target="powerpc"; config_target="no cpu-specific options";;
 		sh)   target="sh";      config_target="SH4";;
 		x86)  target="i386";    config_target="GENERIC_386";;
-		*)    die "$(tc-arch ${CTARGET}) lists no defaults :/";;
+		*)    die "$(tc-arch) lists no defaults :/";;
 	esac
 	sed -i -e "s:default TARGET_i386:default TARGET_${target}:" \
 		extra/Configs/Config.in
@@ -185,7 +196,7 @@ src_unpack() {
 	fi
 
 	if use hardened ; then
-		if has $(tc-arch ${CTARGET}) mips ppc x86 ; then
+		if has $(tc-arch) mips ppc x86 ; then
 			echo "UCLIBC_BUILD_PIE=y" >> .config
 		else
 			echo "UCLIBC_BUILD_PIE=n" >> .config
@@ -219,14 +230,6 @@ src_unpack() {
 	cp .config myconfig
 
 	emake clean >/dev/null || die "could not clean"
-
-	echo
-	einfo "Runtime Prefix: $(alt_rprefix)"
-	einfo "Kernel Prefix:  $(alt_kprefix)"
-	einfo "Devel Prefix:   $(alt_prefix)"
-	einfo "CBUILD:         ${CBUILD:-${CHOST}}"
-	einfo "CHOST:          ${CHOST}"
-	einfo "CTARGET:        ${CTARGET}"
 }
 
 src_compile() {
