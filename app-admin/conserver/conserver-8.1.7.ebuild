@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.7.ebuild,v 1.1 2004/05/30 17:51:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.7.ebuild,v 1.2 2004/06/01 22:26:51 agriffis Exp $
 
 inherit ssl-cert
 
@@ -66,7 +66,7 @@ src_install() {
 	insinto /etc/pam.d ; newins ${FILESDIR}/conserver.pam conserver
 
 	# Add certs if SSL use flag is enabled
-	if [ `use ssl` ]; then
+	if use ssl; then
 		dodir /etc/ssl/conserver
 		insinto /etc/ssl/conserver
 		docert conserver

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.4 2004/05/31 19:21:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.5 2004/06/01 22:31:58 agriffis Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_install() {
 	insinto /etc
 	newins ${FILESDIR}/${PV}/webalizer.conf webalizer.conf
 
-	if [ "`use apache2`" ]; then
+	if use apache2; then
 		# patch for apache2
 		sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
 		insinto /etc/apache2/conf
@@ -73,7 +73,7 @@ src_install() {
 }
 
 pkg_postinst(){
-	if [ -n "`use apache2`" ]; then
+	if use apache2; then
 	einfo "to update your apache.conf just type"
 	einfo "echo \"Include  conf/addon-modules/webalizer.conf\" \
 		>> /etc/apache/conf/apache.conf"

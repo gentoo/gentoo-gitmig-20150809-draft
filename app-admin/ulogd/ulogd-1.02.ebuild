@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.02.ebuild,v 1.5 2004/02/27 11:16:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.02.ebuild,v 1.6 2004/06/01 22:30:47 agriffis Exp $
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
 SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
@@ -33,7 +33,7 @@ src_install() {
 	dodoc README AUTHORS Changes
 	cd doc/
 	dodoc ulogd.txt ulogd.a4.ps
-	if [ -n "`use mysql`" ]; then
+	if use mysql; then
 		dodoc mysql.table mysql.table.ipaddr-as-string
 	fi
 	dohtml ulogd.html

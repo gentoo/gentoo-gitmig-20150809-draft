@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.05.ebuild,v 1.8 2004/05/10 14:56:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.05.ebuild,v 1.9 2004/06/01 22:29:46 agriffis Exp $
 
 IUSE="ncurses"
 
@@ -21,7 +21,7 @@ src_install() {
 		/usr/bin/switchto
 	dosed "s:/etc/switchto.last:/etc/quickswitch/switchto.last:" \
 		/usr/bin/switchto
-	if [ "`use ncurses`" ]; then
+	if use ncurses; then
 		dobin switcher
 		dosed "s:/etc/switchto.conf:/etc/quickswitch/switchto.conf:" \
 			/usr/bin/switcher

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/quickswitch
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.14 2004/05/10 14:56:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.15 2004/06/01 22:29:46 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> quickswitch-1.02.ebuild,
+  quickswitch-1.05.ebuild:
+  Fix use invocation
 
   10 May 2004; Daniel Ahlberg <aliz@gentoo.org> quickswitch-1.05.ebuild:
   Added amd64 keyword, closing #50529.
