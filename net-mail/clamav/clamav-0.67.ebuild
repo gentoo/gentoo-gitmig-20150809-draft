@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.67.ebuild,v 1.8 2004/02/21 10:48:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.67.ebuild,v 1.9 2004/02/29 11:01:39 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,9 +40,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use milter` ]; then
+	if use milter ; then
 		einfo "For simple instructions howto setup the clamav-milter..."
 		einfo ""
-		einfo "less /usr/share/doc/${PVR}/clamav-milter.README.gentoo.gz"
+		einfo "less /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
 	fi
 }
