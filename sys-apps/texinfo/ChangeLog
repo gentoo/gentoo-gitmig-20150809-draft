@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.44 2004/08/17 20:35:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.45 2004/08/24 03:45:16 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> texinfo-4.6.ebuild,
+  texinfo-4.7-r1.ebuild, texinfo-4.7.ebuild:
+  WANT_AUTOMAKE_1_6=1 -> WANT_AUTOMAKE=1.6
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org> texinfo-4.7-r1.ebuild:
   stable on alpha and ia64

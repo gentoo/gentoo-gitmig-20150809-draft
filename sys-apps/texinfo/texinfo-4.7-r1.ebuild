@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.7-r1.ebuild,v 1.2 2004/08/17 20:35:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.7-r1.ebuild,v 1.3 2004/08/24 03:45:16 swegener Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 
 	use static && append-ldflags -static
 
-	export WANT_AUTOMAKE_1_6=1
+	export WANT_AUTOMAKE=1.6
 	econf ${myconf} || die
 	emake || die
 }
