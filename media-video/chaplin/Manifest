@@ -1,4 +1,14 @@
-MD5 6aeb79ca0970a8e725f0a1a83d62911d chaplin-1.10.ebuild 760
-MD5 79493e3a6fb5765c5742b9ffb4b914e8 ChangeLog 416
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c00ad4ed764389c79d598bb225f0a004 ChangeLog 520
+MD5 27fd850114a2fefbad18fb231e293b5c chaplin-1.10.ebuild 770
 MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
 MD5 a147b729492280334d6bbae85da44c32 files/digest-chaplin-1.10 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZGCKArHZZzCEUG0RAoInAJ9Y9bI4HZdgt8IYF4/74xPGWucZuQCbBvcs
+rpVSj48uUcz0tMUHdyHDXzs=
+=09WD
+-----END PGP SIGNATURE-----
