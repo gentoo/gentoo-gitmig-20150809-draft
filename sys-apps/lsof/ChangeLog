@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lsof
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.19 2003/10/26 23:02:22 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.20 2004/03/24 18:18:29 mholzer Exp $
+
+*lsof-4.71 (24 Mar 2004)
+
+  24 Mar 2004; Martin Holzer <mholzer@gentoo.org> lsof-4.71.ebuild:
+  Version bumped. Closes 45605
 
 *lsof-4.69 (26 Oct 2003)
 
