@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.1 2003/09/01 13:29:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.2 2003/09/01 14:26:58 taviso Exp $
 
 inherit gnuconfig
 
@@ -32,14 +32,16 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 						>=dev-perl/perl-tk-800.024-r2
 						>=dev-perl/X11-Protocol-0.51 ) )
 		truetype? ( virtual/xft 
-					>=media-libs/fontconfig-2.1-r1 )
+					>=media-libs/fontconfig-2.1-r1 
+					>=dev-libs/expat-1.95.6-r1 )
+		!noxpm? ( >=media-libs/netpbm-9.12-r4 )
 		>=dev-lang/perl-5.6.1-r10	
-		>=media-libs/netpbm-9.12-r4
-		>=dev-libs/expat-1.95.6-r1
 		>=sys-libs/zlib-1.1.4-r1
 		virtual/x11"
-# XXX: gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
-# XXX: gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
+# XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
+# XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
+# XXX:	netpbm is used for some of the dynamic menu scripts features, assuming 
+# 		anyone with noxpm will not want them.
 DEPEND="${RDEPEND} 
 	>=sys-apps/sed-4
 	sys-devel/automake
