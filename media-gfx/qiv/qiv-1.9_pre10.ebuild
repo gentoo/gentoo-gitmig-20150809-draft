@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.9_pre10.ebuild,v 1.5 2004/02/28 07:22:18 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.9_pre10.ebuild,v 1.6 2004/03/17 07:55:04 seemant Exp $
 
-P="qiv-1.9-pre10"
-S="${WORKDIR}/qiv-1.9"
+MY_P=${P/_/-}
+S=${WORKDIR}/${P%%_*}
 DESCRIPTION="Quick Image Viewer"
-SRC_URI="http://www.klografx.net/qiv/devel/${P}.tgz"
+SRC_URI="http://www.klografx.net/qiv/devel/${MY_P}.tgz"
 HOMEPAGE="http://www.klografx.net/qiv/"
 
 SLOT="0"
