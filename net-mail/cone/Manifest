@@ -1,2 +1,14 @@
-MD5 939a6445d47050ab3c95a7f0d3cd4d40 cone-0.56.ebuild 9442
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8794a8fe11871ddd496b21ba18ed78e5 cone-0.56.ebuild 762
+MD5 4176106b82405b3381074ebfcb076b39 ChangeLog 542
+MD5 17c4efc78bb8fcfbfdfc1f57dafa4e5b metadata.xml 387
 MD5 cd49a94f0d2396f3880a8b0bca431073 files/digest-cone-0.56 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.3 (GNU/Linux)
+
+iD8DBQE/3URk+cPN+Z7qK9cRAnvqAKCEE1x62aKHtlPTQJUJPXCGJdRbcACfaHzU
+YlO2IGhM0/a+zvdWNzXFw6w=
+=ZI0X
+-----END PGP SIGNATURE-----
