@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.39 2005/03/01 13:15:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.40 2005/03/14 21:09:12 hardave Exp $
+
+  14 Mar 2005; Hardave Riar <hardave@gentoo.org> kdewebdev-3.3.2.ebuild:
+  Marked ~mips.
 
   28 Feb 2005; Jason Wever <weeve@gentoo.org> kdewebdev-3.4.0_rc1.ebuild:
   Added ~sparc keyword.
