@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.26 2002/11/23 21:37:40 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.27 2002/11/29 13:13:00 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -285,13 +285,13 @@ cvs_src_unpack() {
 	
 	if [ -n "$ECVS_SUBDIR" ]; then
 		if [ -n "$ECVS_LOCAL" ]; then
-			cp -f "$ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/*" "$WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR"
+			cp -f "$ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR"/* "$WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR"
 		else
 			cp -Rf "$ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR" "$WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR/.."
 		fi    
 	else
 		if [ -n "$ECVS_LOCAL" ]; then
-			cp -f "$ECVS_TOP_DIR/$ECVS_MODULE/*" "$WORKDIR/$ECVS_MODULE"
+			cp -f "$ECVS_TOP_DIR/$ECVS_MODULE"/* $WORKDIR/$ECVS_MODULE
 		else
 			cp -Rf "$ECVS_TOP_DIR/$ECVS_MODULE" "$WORKDIR"
 		fi
