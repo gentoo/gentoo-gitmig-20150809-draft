@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.12 2002/12/12 22:12:00 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.13 2002/12/13 11:00:46 blizzy Exp $
 
  12 Dec 2002; Jan Seidel <tuxus@gentoo.org> readline-4.2a-r1.ebuild :
    Added mips to keywords.
@@ -11,8 +11,7 @@
   Added a patch from upstream maintainer to fix bug:
   http://bugs.gentoo.org/show_bug.cgi?id=11762
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *readline-4.1-r5 (26 Oct 2002)
 *readline-4.2a-r1 (26 Oct 2002)
