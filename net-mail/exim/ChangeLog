@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.20 2003/02/03 20:39:34 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.21 2003/02/08 01:24:50 raker Exp $
 
 *exim-4.12 (28 Jan 2003)
+
+  07 Feb 2003; Nick Hadaway <raker@gentoo.org> exim-4.12.ebuild :
+  Marked stable for x86.
 
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> exim-4.12.ebuild,
   files/digest-exim-4.12 :
