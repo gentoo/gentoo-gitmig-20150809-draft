@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.5 2003/06/04 21:21:08 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.6 2003/06/05 13:42:06 liquidx Exp $
 
 IUSE="X gpm truetype"
 
@@ -13,8 +13,8 @@ HOMEPAGE="http://space.mit.edu/~davis/jed/"
 DEPEND=">=sys-libs/slang-1.4.5
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )
-	truetype? ( virtual/xft
-                >=media-libs/freetype-2.0 )"
+	X? ( truetype? ( virtual/xft
+                >=media-libs/freetype-2.0 ) )"
 
 PROVIDE="virtual/editor"
 
@@ -41,7 +41,7 @@ src_compile() {
 		cd ${S}
 	fi
 
-	if [ -n "`use truetype`" ]; then
+	if [ -n "`use X`" -a -n "`use truetype`" ]; then
 	   cd src
 	   mv Makefile Makefile.orig
 	   sed -e 's/#XRENDERFONTLIBS/XRENDERFONTLIBS/' Makefile.orig > Makefile.new

@@ -1,9 +1,12 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.11 2003/06/04 21:21:08 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.12 2003/06/05 13:42:06 liquidx Exp $
 
   04 Jun 2003; Christian Birchinger <joker@gentoo.org> jed-0.99.16-r1.ebuild:
   Added sparc stable keyword
+
+  05 Jun 2003; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r1.ebuild:
+  make X optional again even if use has +truetype
 
   04 Jun 2003; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r1.ebuild:
   changed default keybindings to emacs. #17717.
