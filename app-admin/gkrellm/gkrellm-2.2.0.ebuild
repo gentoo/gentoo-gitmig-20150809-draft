@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.0.ebuild,v 1.1 2004/06/01 19:46:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.0.ebuild,v 1.2 2004/06/01 19:50:04 mholzer Exp $
 
 inherit eutils
 
@@ -11,12 +11,13 @@ SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc ~alpha sparc hppa amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
 IUSE="X nls ssl"
 
 DEPEND=">=sys-apps/sed-4
 	ssl? ( dev-libs/openssl )
-	X? (  >=x11-libs/gtk+-2.0.5 )"
+	X? (  >=x11-libs/gtk+-2.0.5
+		>=x11-libs/pango-1.4.0 )"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
