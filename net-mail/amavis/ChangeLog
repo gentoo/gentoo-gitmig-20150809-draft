@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/amavis
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/ChangeLog,v 1.2 2002/09/05 12:02:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/ChangeLog,v 1.3 2002/10/23 20:32:57 raker Exp $
+
+*amavis-0.3.12_pre8 (23 Oct 2002)
+
+  23 Oct 2002; Nick Hadaway <raker@gentoo.org> amavis-0.3.12_pre8.ebuild,
+  files/digest-amavis-0.3.12_pre8 :
+  Version bump.  0.2.x of amavis is non-maintained code.  The ebuild currently
+  only supports postfix as the mta.  Depending on how flexible the configuration
+  is I may end up splitting this ebuild into amavis-postfix, amavis-exim, etc...
 
 *amavis-0.2.1-r3 (05 Sep 2002)
 
