@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.1 2004/04/21 22:12:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.2 2004/04/25 19:36:08 eradicator Exp $
+
+  25 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> emacspeak-18.ebuild:
+  licensed under BSD according to etc/COPYRIGHT. Parts under GPL-2 according to
+  Makefile.
 
 *emacspeak-18 (21 Apr 2004)
   21 Apr 2004; Jon Hood <squinky86@gentoo.org> emacspeak-18.ebuild:
