@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/mac-fdisk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.9 2004/12/16 10:37:51 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.10 2005/02/05 21:41:08 hansmi Exp $
+
+*mac-fdisk-0.1-r4 (05 Feb 2005)
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +files/largerthan2gb.patch, +mac-fdisk-0.1-r4.ebuild:
+  New revision with support for files larger than 2 GB, see bug 80095. Added
+  again to ~ppc.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> mac-fdisk-0.1-r3.ebuild:
   Stable on ppc64

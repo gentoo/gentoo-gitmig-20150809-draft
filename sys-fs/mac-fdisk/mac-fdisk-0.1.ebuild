@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.4 2004/08/08 00:47:33 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.5 2005/02/05 21:41:08 hansmi Exp $
 
 DEBRV=8
 DESCRIPTION="Mac/PowerMac disk partitioning utility"
