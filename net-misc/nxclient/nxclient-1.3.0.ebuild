@@ -5,7 +5,7 @@
 inherit rpm
 
 DESCRIPTION="NXClient is a X11/VNC/NXServer client especially tuned for using remote desktops over low-bandwidth links such as the Internet"
-HOMEPAGE="www.nomachine.com"
+HOMEPAGE="http://www.nomachine.com"
 
 IUSE=""
 LICENSE="as-is"
