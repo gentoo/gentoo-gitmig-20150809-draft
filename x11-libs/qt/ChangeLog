@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.47 2003/01/08 17:58:05 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.48 2003/01/28 12:04:40 hannes Exp $
+
+*qt-3.1.0-r2 (28 Jan 2003)
+*qt-3.1.1-r1 (28 Jan 2003)
+
+  28 Jan 2003; Hannes Mehnert <hannes@gentoo.org> qt-3.1.0-r2.ebuild,
+  qt-3.1.1-r1.ebuild: added designer.diff which fixes bug #12964.
 
   07 Jan 2003; Hannes Mehnert <hannes@gentoo.org> qt-2.3.2-r1.ebuild:
   removed !x11-libs/xft from DEPEND, added -no-xft to configure. really better

@@ -1,0 +1,16 @@
+--- src/tools/qlibrary_unix.cpp.old	2003-01-28 12:40:51.000000000 +0100
++++ src/tools/qlibrary_unix.cpp	2003-01-28 12:41:03.000000000 +0100
+@@ -141,13 +141,6 @@
+     if ( !pHnd )
+ 	return TRUE;
+ 
+-    if ( dlclose( pHnd ) ) {
+-#if defined(QT_DEBUG) || defined(QT_DEBUG_COMPONENT)
+-	qWarning( "%s", dlerror() );
+-#endif
+-	return FALSE;
+-    }
+-
+     pHnd = 0;
+     return TRUE;
+ }
