@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.32.ebuild,v 1.4 2004/07/14 23:55:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.32-r1.ebuild,v 1.1 2004/09/21 01:59:46 vapier Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	cd ${S}
 	cp installgl.sh{,.orig}
 	epatch ${FILESDIR}/${PV}-install.patch
+	epatch ${FILESDIR}/${PV}-stack-overflow.patch
 }
 
 yesno() { if $@ ; then echo y ; else echo n ; fi ; }

@@ -1,0 +1,12 @@
+--- bin/sources/dupescan.c.orig	2004-09-20 21:19:29.448018912 -0400
++++ bin/sources/dupescan.c	2004-09-20 21:20:58.484483312 -0400
+@@ -51,7 +51,8 @@
+   read_conf_datapath(Temp);
+   sprintf(dupefile, "%s/logs/dupefile", Temp);
+   
+-  strcpy(dupename, argv[1]);
++  strncpy(dupename, argv[1], sizeof(dupename)-1);
++  dupename[sizeof(dupename)-1] = '\0';
+   if((fp = fopen(dupefile, "r")) == NULL)
+     return 0;
+ 

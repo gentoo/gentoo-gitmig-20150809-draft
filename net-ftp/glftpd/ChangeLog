@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/glftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.9 2004/06/24 22:45:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.10 2004/09/21 01:59:46 vapier Exp $
+
+*glftpd-1.32-r1 (20 Sep 2004)
+
+  20 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.32-stack-overflow.patch, +glftpd-1.32-r1.ebuild:
+  Version bump to fix stack overflow #64809.
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> glftpd-1.32.ebuild:
   Fix use invocation, trusting SpanKY to clean up yesno ;-)

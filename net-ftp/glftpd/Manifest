@@ -1,6 +1,17 @@
-MD5 64389b03537304b64cb4db0cd4e9d802 glftpd-1.32.ebuild 2767
-MD5 f58d5217a490e9fa5e93106c95cd71a8 ChangeLog 775
-MD5 421ebf4ff7a3d7618578fa291d8bef23 files/digest-glftpd-1.32 65
-MD5 6399dbb185314c6017b02b3df2cdf5ea files/glftpd.xinetd.d 384
-MD5 81335a6d3e45dc6d3d00f1b30eedd849 files/glftpd.env.d 26
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 78b5f0b1caeb66a743083e78ca60ad24 ChangeLog 961
+MD5 2b647d0a96e8b30705782d2b79bec1e8 glftpd-1.32-r1.ebuild 2815
 MD5 4acdfa97d781bcecd8107b66a882ada8 files/1.32-install.patch 1432
+MD5 81335a6d3e45dc6d3d00f1b30eedd849 files/glftpd.env.d 26
+MD5 6399dbb185314c6017b02b3df2cdf5ea files/glftpd.xinetd.d 384
+MD5 421ebf4ff7a3d7618578fa291d8bef23 files/digest-glftpd-1.32-r1 65
+MD5 f619ff9e604df95944d54c1d624970a6 files/1.32-stack-overflow.patch 411
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBT4suHTu7gpaalycRAlqEAKCDMwByqO60OPsAVS13Xcxj2xej/ACeIUAU
+na+bp8yibYhlg0rKbFwwywk=
+=hPxv
+-----END PGP SIGNATURE-----
