@@ -1,13 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/files/gpm.rc6,v 1.7 2002/01/20 10:00:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/files/gpm.rc6,v 1.8 2002/07/07 09:53:43 naz Exp $
 
 #NB: Config is in /etc/conf.d/gpm
 
 
 depend() {
 	need localmount
+	use hotplug
 }
 
 checkconfig() {

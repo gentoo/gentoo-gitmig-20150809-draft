@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r1.ebuild,v 1.1 2002/03/05 03:53:22 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r1.ebuild,v 1.2 2002/07/07 09:53:43 naz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
@@ -12,6 +12,9 @@ DEPEND="virtual/glibc
 	sys-devel/autoconf"
 	
 RDEPEND="virtual/glibc"
+
+SLOT="0"
+LICENSE="GPL-2"
 
 src_compile() {
 	#this little hack turns off EMACS byte compilation.  Really don't want
