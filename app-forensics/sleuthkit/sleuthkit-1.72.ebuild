@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.72.ebuild,v 1.2 2004/09/18 16:15:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.72.ebuild,v 1.3 2004/09/23 12:12:09 vapier Exp $
 
 DESCRIPTION="A collection of file system and media management forensic analysis tools"
 HOMEPAGE="http://www.sleuthkit.org/sleuthkit/"
 SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz"
+
 LICENSE="GPL-2 IBM"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~hppa ~s390"
+KEYWORDS="arm hppa ppc s390 sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/DateManip
 	virtual/libc
 	sys-libs/zlib"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/gcc"

@@ -1,25 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.01.ebuild,v 1.3 2004/09/18 16:18:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.01.ebuild,v 1.4 2004/09/23 12:14:06 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="A graphical interface to the digital forensic analysis tools in The Sleuth Kit."
-SRC_URI="mirror://sourceforge/autopsy/${P}.tar.gz"
 HOMEPAGE="http://www.sleuthkit.org/autopsy/"
-RESTRICT="nomirror"
+SRC_URI="mirror://sourceforge/autopsy/${P}.tar.gz"
 
-KEYWORDS="x86 sparc ~s390 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="arm ppc s390 sparc x86"
 IUSE=""
-# Runtime depend on grep and file deliberate
 
+# Runtime depend on grep and file deliberate
 RDEPEND="dev-lang/perl
 	app-forensics/sleuthkit
 	sys-apps/grep
 	sys-apps/file"
-
 DEPEND="dev-lang/perl
 	app-forensics/sleuthkit
 	>=sys-apps/sed-4"
