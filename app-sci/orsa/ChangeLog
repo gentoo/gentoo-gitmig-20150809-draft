@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/orsa
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.4 2003/10/01 06:25:37 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.5 2004/03/10 07:03:08 phosphan Exp $
+
+*orsa-0.5.0_rc2 (10 Mar 2004)
+
+  10 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> orsa-0.5.0_rc2.ebuild:
+  New version, intruduced ginac/gsl/fftw/qt/mpi USE flag usage.
 
 *orsa-0.3.1 (30 Sep 2003)
 
