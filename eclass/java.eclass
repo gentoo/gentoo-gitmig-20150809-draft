@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.14 2003/11/08 21:40:53 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.15 2003/12/23 16:51:44 brad_mssw Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -58,9 +58,9 @@ pkg_postinst() {
 
 system_arch() {
 	local sarch
-	sarch=`echo $ARCH | sed -e s/[i]*.86/i386/ -e s/x86_64/i386/ -e s/sun4u/sparc/ -e s/sparc64/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	sarch=`echo $ARCH | sed -e s/[i]*.86/i386/ -e s/x86_64/amd64/ -e s/sun4u/sparc/ -e s/sparc64/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	if [ -z "$sarch" ] ; then
-		sarch=`uname -m | sed -e s/[i]*.86/i386/ -e s/x86_64/i386/ -e s/sun4u/sparc/ -e s/sparc64/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
+		sarch=`uname -m | sed -e s/[i]*.86/i386/ -e s/x86_64/amd64/ -e s/sun4u/sparc/ -e s/sparc64/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	fi
 	echo $sarch
 }
