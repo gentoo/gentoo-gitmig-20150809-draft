@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/baghira
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.1 2004/06/12 14:58:30 carlo Exp $
+
+*baghira-0.3r (12 Jun 2004)
+
+  12 Jun 2004; Carsten Lohrke <carlo@gentoo.org> baghira-0.3r.ebuild,
+  metadata.xml, files/gcc34-baghira-03r.patch:
+  Initial ebuild. Thanks to Federico Zenith et al, see Bug 41406
+
