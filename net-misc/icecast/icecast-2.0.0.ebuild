@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.0.ebuild,v 1.9 2004/06/24 23:49:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.0.ebuild,v 1.10 2004/07/01 21:09:48 squinky86 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha amd64"
 IUSE="curl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=media-libs/libvorbis-1.0

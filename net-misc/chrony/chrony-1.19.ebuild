@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.19.ebuild,v 1.6 2004/06/24 23:38:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.19.ebuild,v 1.7 2004/07/01 20:52:51 squinky86 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 -sparc"
 IUSE="readline"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	readline? ( >=sys-libs/readline-4.1-r4 )"
 
 src_unpack() {

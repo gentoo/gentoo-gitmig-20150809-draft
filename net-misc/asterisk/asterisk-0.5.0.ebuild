@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.5.0.ebuild,v 1.6 2004/06/24 23:34:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.5.0.ebuild,v 1.7 2004/07/01 20:40:56 squinky86 Exp $
 
 IUSE="doc alsa mysql gtk mmx nopri nozaptel noiax"
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	media-sound/mpg123
 	doc? ( app-doc/doxygen )
 	alsa? ( media-libs/alsa-lib )

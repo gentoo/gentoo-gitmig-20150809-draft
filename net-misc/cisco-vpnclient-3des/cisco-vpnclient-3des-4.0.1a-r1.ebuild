@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.6 2004/06/26 16:24:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.7 2004/07/01 20:54:27 squinky86 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="-* x86"
 RESTRICT="fetch"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/linux-sources
 	>=sys-apps/sed-4"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.931.ebuild,v 1.2 2004/06/24 23:48:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.931.ebuild,v 1.3 2004/07/01 21:08:26 squinky86 Exp $
 
 DESCRIPTION="An HTML preprocessor using ML syntax"
 HOMEPAGE="http://www.linguistik.uni-erlangen.de/~msbethke/software.html"
@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

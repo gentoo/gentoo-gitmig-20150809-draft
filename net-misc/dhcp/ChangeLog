@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.40 2004/06/24 23:41:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.41 2004/07/01 20:56:39 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> dhcp-3.0_p2-r4.ebuild,
+  dhcp-3.0_p2-r5.ebuild, dhcp-3.0_p2-r6.ebuild:
+  change virtual/glibc to virtual/libc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> dhcp-3.0_p2-r4.ebuild:
   Add inherit eutils

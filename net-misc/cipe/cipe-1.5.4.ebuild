@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.3 2004/06/24 23:39:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.4 2004/07/01 20:53:23 squinky86 Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE="ssl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.20 2004/06/24 23:40:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.21 2004/07/01 20:55:06 squinky86 Exp $
 
 inherit gcc
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc alpha hppa mips amd64"
 SLOT="0"
 IUSE="tcpd debug"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-libs/pam
 	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND}

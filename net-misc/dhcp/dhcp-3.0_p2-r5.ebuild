@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r5.ebuild,v 1.3 2004/06/24 23:41:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r5.ebuild,v 1.4 2004/07/01 20:56:39 squinky86 Exp $
 
 IUSE="static selinux"
 
@@ -17,7 +17,7 @@ LICENSE="isc-dhcp"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ~mips ppc64 hppa"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 
 RDEPEND="selinux? ( sec-policy/selinux-dhcp )"

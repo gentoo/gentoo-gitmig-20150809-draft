@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0a.ebuild,v 1.12 2004/06/26 10:55:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0a.ebuild,v 1.13 2004/07/01 20:43:30 squinky86 Exp $
 
 DESCRIPTION="light Unix download accelerator"
 HOMEPAGE="http://www.lintux.cx/axel.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 IUSE="debug"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	cd work/${P}

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gtm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.9 2004/06/24 23:47:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.10 2004/07/01 21:05:46 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> gtm-0.4.11-r2.ebuild,
+  gtm-0.4.11.ebuild:
+  change virtual/glibc to virtual/libc
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

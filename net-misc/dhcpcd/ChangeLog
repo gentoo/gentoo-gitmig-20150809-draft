@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.33 2004/06/24 23:41:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.34 2004/07/01 20:57:23 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> dhcpcd-1.3.22_p4-r4.ebuild,
+  dhcpcd-1.3.22_p4-r5.ebuild:
+  change virtual/glibc to virtual/libc
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> dhcpcd-1.3.22_p4-r5.ebuild:
   stable on amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/6tunnel-0.09.ebuild,v 1.7 2004/06/24 23:33:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/6tunnel-0.09.ebuild,v 1.8 2004/07/01 20:39:00 squinky86 Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}
@@ -10,7 +10,7 @@ SRC_URI="ftp://amba.bydg.pdi.net/pub/wojtekka/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 s390"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 #HOMEPAGE="" there is no homepage available, if you find one, please report to
 #bugs.gentoo.org

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r4.ebuild,v 1.3 2004/06/24 23:41:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r4.ebuild,v 1.4 2004/07/01 20:57:23 squinky86 Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64"
 IUSE="build static"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 PROVIDE="virtual/dhcpc"
 
 src_unpack() {

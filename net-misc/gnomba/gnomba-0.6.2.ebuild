@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2.ebuild,v 1.11 2004/06/24 23:45:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2.ebuild,v 1.12 2004/07/01 21:02:53 squinky86 Exp $
 
 DESCRIPTION="Gnome Samba Browser"
 HOMEPAGE="http://gnomba.sourceforge.net"
@@ -13,7 +13,7 @@ IUSE="nls"
 
 RDEPEND="gnome-base/gnome-libs"
 DEPEND="${RDEPEND}
-	virtual/glibc"
+	virtual/libc"
 
 src_compile() {
 	./configure \

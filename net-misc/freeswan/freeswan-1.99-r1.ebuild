@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99-r1.ebuild,v 1.2 2004/06/24 23:44:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99-r1.ebuild,v 1.3 2004/07/01 21:00:22 squinky86 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/${P}.tar.gz
 	 http://www.strongsec.com/freeswan/x509patch-${X509_PATCH}-${P}.tar.gz"
 
 HOMEPAGE="http://www.freeswan.org"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/linux-sources
 	>=dev-libs/gmp-3.1.1
 	sys-apps/iproute2"

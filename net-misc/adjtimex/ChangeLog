@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/adjtimex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.3 2004/06/24 23:33:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.4 2004/07/01 20:39:23 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> adjtimex-1.16.ebuild:
+  change virtual/glibc to virtual/libc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> adjtimex-1.16.ebuild:
   Add inherit eutils

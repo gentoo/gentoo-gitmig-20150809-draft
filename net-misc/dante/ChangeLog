@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.28 2004/06/24 23:40:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.29 2004/07/01 20:55:06 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> dante-1.1.13.ebuild,
+  dante-1.1.14-r1.ebuild, dante-1.1.14-r2.ebuild:
+  change virtual/glibc to virtual/libc
 
   13 Jun 2004; Aron Griffis <agriffis@gentoo.org> dante-1.1.13.ebuild:
   Fix use invocation

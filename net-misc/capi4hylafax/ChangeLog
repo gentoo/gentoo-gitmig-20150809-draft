@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/capi4hylafax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.4 2004/06/24 23:38:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.5 2004/07/01 20:49:28 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> capi4hylafax-01.02.02.ebuild:
+  change virtual/glibc to virtual/libc
 
   25 Apr 2004; Steve Arnold <nerdboy@gentoo.org> capi4hylafax-01.02.02.ebuild:
   removed ?IUSE stuff

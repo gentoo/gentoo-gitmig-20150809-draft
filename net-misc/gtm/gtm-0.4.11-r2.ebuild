@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.10 2004/06/24 23:47:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.11 2004/07/01 21:05:46 squinky86 Exp $
 
 IUSE="ssl nls gnome"
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	x11-libs/gtk+
 	gnome-base/oaf
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 	gnome? ( gnome-base/gnome-applets )
 	ssl?   ( dev-libs/openssl )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/x11
 	net-misc/wget
 	>=gnome-base/gnome-libs-1.4.0.2

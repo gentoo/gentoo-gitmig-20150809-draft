@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hsc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.5 2004/06/24 23:48:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.6 2004/07/01 21:08:26 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> hsc-0.929.ebuild,
+  hsc-0.931.ebuild:
+  change virtual/glibc to virtual/libc
 
 *hsc-0.931 (11 Dec 2003)
 
