@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.4 2005/01/19 12:49:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.5 2005/01/19 21:28:03 lu_zero Exp $
 
 IUSE="multilib" #doc
 
@@ -153,7 +153,7 @@ src_install() {
 	einfo "Installing multilib support"
 	X11_LIB_DIR="${X11_DIR}$(get_multilibdir)"
 
-	insinto ${ATI_ROOT}/lib32
+	exeinto ${ATI_ROOT}/lib32
 	doexe ${WORKDIR}/usr/X11R6/lib/libGL.so.1.2
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib32/libGL.so.1
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib32/libGL.so
