@@ -1,19 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl-mt/sbcl-mt-0.8.4.20.ebuild,v 1.2 2003/10/22 19:53:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl-mt/sbcl-mt-0.8.4.35.ebuild,v 1.1 2003/10/22 19:53:13 mkennedy Exp $
 
 inherit common-lisp-common
+
+DEB_PV=1
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is a Open Source development system for ANSI Common Lisp. It provides an interactive environment including an integrated native compiler, interpreter, and debugger.  This is the multreaded version of SBCL"
 HOMEPAGE="http://sbcl.sourceforge.net/"
 BV_X86=0.8.1
-DEB_PV=1
 SRC_URI="http://ftp.debian.org/debian/pool/main/s/sbcl-mt/sbcl-mt_${PV}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/s/sbcl-mt/sbcl-mt_${PV}-${DEB_PV}.diff.gz
 	x86? ( mirror://sourceforge/sbcl/sbcl-${BV_X86}-x86-linux-binary.tar.bz2 )"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="-x86"
 PROVIDE="virtual/commonlisp"
 # the SRC_URI trickery needs this
 DEPEND=">=sys-apps/portage-2.0.27
@@ -113,5 +114,6 @@ pkg_postrm() {
 		rm -rf /usr/lib/sbcl-mt || true
 		einfo "Unregistering Common Lisp implementation ${PN}"
 		rm -f /usr/lib/common-lisp/bin/${PN}.sh || die
+		rm -rf /usr/lib/common-lisp/${PN}/ || die
 	fi
 }

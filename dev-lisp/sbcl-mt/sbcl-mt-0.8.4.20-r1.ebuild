@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl-mt/sbcl-mt-0.8.4.20.ebuild,v 1.2 2003/10/22 19:53:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl-mt/sbcl-mt-0.8.4.20-r1.ebuild,v 1.1 2003/10/22 19:53:13 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -113,5 +113,6 @@ pkg_postrm() {
 		rm -rf /usr/lib/sbcl-mt || true
 		einfo "Unregistering Common Lisp implementation ${PN}"
 		rm -f /usr/lib/common-lisp/bin/${PN}.sh || die
+		rm -rf /usr/lib/common-lisp/${PN} || die
 	fi
 }
