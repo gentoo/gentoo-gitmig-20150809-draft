@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.5 2005/03/18 19:48:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.6 2005/03/23 16:19:04 seemant Exp $
 
 inherit nsplugins
 
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND=">=media-video/kaffeine-0.4.3b"
 RDEPEND=">=media-video/kaffeine-0.4.3b
-	|| ( >=net-www/mozilla-1.6-r1 >=www-client/mozilla-firefox-0.8 )"
+	|| ( >=www-client/mozilla-1.6-r1 >=www-client/mozilla-firefox-0.8 )"
 
 src_compile() {
 	econf --prefix=/usr/lib/${PLUGINS_DIR} || die
