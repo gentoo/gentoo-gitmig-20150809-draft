@@ -10,6 +10,6 @@ MD5 bcd0e223c0be9cc4d1af5f2b5578a096 /files/kdelibs-3.0.5a-dontcrash.diff 500
 MD5 ed6c2a4ca2dca736f3cbfe717b762fe6 /files/kdelibs-2.2.2a-gentoo.diff 75788
 MD5 6e7c2097ad93ecd9a011d1685cb8971f /files/kdelibs-3.1-libxml2-2.5.2.diff 1404
 MD5 acd90863c0847e230aa37f3943d58176 /files/kdelibs-3.0.5a-libxml2-2.5.2.diff 703
-MD5 2fa65f2e189bf09d9a41898d84ab7be3 /kdelibs-3.1.1a.ebuild 2589
+MD5 6b17ea1df25845fd34fb7dd26e2c9d93 /kdelibs-3.1.1a.ebuild 2572
 MD5 5687b1f9d7e0698f63c35c53322c786a kdelibs-3.1.1a.diff.bz2 156512
 MD5 15eb9412c589126844b277b9e80cfffc kdelibs-3.1.1.tar.bz2 10313173
