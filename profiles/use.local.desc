@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.14 2003/04/22 13:33:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.15 2003/04/23 17:02:58 danarmak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -35,3 +35,5 @@ app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 x11-misc/lineakd:xosd - Sends display using the X On Screen Display library
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
+kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
+kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
