@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.69 2003/10/11 05:19:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.70 2003/10/12 17:45:56 agenkin Exp $
 
   10 Oct 2003; Daniel Robbins <drobbins@gentoo.org> xine-lib-1_rc0-r3.ebuild:
   add a patch to disable xine-lib's default CFLAGS settings. They are a bit
@@ -16,6 +16,11 @@
   26 Sep 2003; Jason Wever <weeve@gentoo.org> xine-lib-1_beta12-r1.ebuild:
   Added sparc keyword.
 
+*xine-lib-1_rc1 (06 Oct 2003)
+
+  06 Oct 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump to 1_rc1.
+	
 *xine-lib-1_rc0-r3 (18 Aug 2003)
 
   24 Aug 2003; foser <foser@gentoo.org> xine-lib-1_rc0-r3.ebuild :
