@@ -46,3 +46,6 @@ virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
 virtual/snmp		net-analyzer/net-snmp
 virtual/winkernel	sys-kernel/win4lin-sources
+virtual/flim		app-emacs/flim
+virtual/semi		app-emacs/semi
+virtual/tetex		app-text/tetex

@@ -41,3 +41,6 @@ virtual/skkserv		app-i18n/skkserv
 virtual/snmp		net-analyzer/net-snmp
 virtual/imap-c-client	net-libs/c-client
 virtual/wine            app-emulation/wine app-emulation/winex app-emulation/winex-cvs
+virtual/flim		app-emacs/flim
+virtual/semi		app-emacs/semi
+virtual/tetex		app-text/tetex

@@ -40,3 +40,6 @@ virtual/xft		x11-base/xfree
 x11-libs/xaw            x11-libs/Xaw3d
 virtual/snmp		net-analyzer/net-snmp
 virtual/imap-c-client	net-libs/c-client
+virtual/flim		app-emacs/flim
+virtual/semi		app-emacs/semi
+virtual/tetex		app-text/tetex

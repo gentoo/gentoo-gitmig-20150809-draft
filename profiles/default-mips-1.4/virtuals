@@ -38,3 +38,6 @@ virtual/skkserv		app-i18n/skkserv
 virtual/ghc		dev-lang/ghc-bin
 virtual/snmp		net-analyzer/net-snmp
 virtual/imap-c-client	net-libs/c-client
+virtual/flim		app-emacs/flim
+virtual/semi		app-emacs/semi
+virtual/tetex		app-text/tetex
