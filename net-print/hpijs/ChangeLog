@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.23 2004/06/01 04:07:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.24 2004/06/02 02:29:03 lv Exp $
+
+  01 Jun 2004; Travis Tilley <lv@gentoo.org> hpijs-1.5.ebuild:
+  stable on amd64
 
   01 Jun 2004; Mike Frysinger <vapier@gentoo.org>
   +files/hpijs-1.5-gcc34.patch, hpijs-1.5.ebuild:
