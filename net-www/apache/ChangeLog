@@ -2,6 +2,39 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.10 2002/05/14 03:27:31 woodchip Exp
 
+*apache-1.3.25 (18 Jun 2002)
+
+  19 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
+	
+	o The real exploit fix. Also patched a mdk patch so that it applied.
+
+  18 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
+
+  o ADDED PATCH FOR PROXY-HTTP1.1-CHUNKS EXPLOIT
+
+  o Fixed bug #2313 -- Better checks for group/user
+
+  o Fixed bug #3533 -- User can setup user/group and the homedir
+                       of the apache user will be the data directory
+
+  4 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Added LICENSE, SLOT, $Headers.
+
+  26 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  o Made the user/group id's 81 in pkg_setup after thusly adding them to
+    Gentoo's baselayout.  No need to upgrade folks; cosmetic-only fix.
+
+  10 Apr 2002; Donny Davies <woodchip@gentoo.org> apache-1.3.24-r1.ebuild,
+  files/conf/commonapache.conf :
+
+  o Corrected the apache user's home directory (/var/www -> /home/httpd).
+  o Corrected the icons directory (/var/www/icons -> /home/httpd/icons).
+  o Ripped the php mime types from the commonapache.conf file.  I moved
+    them to the php package, as an addon config snippet.
+    (/etc/apache/conf/mod_php.conf)
+
 *apache-1.3.24-r6 (18 Jun 2002)
 
   18 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
