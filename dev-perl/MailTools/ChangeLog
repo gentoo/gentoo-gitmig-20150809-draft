@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.15 2004/05/26 10:11:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.16 2004/06/06 12:53:23 mcummings Exp $
+
+*MailTools-1.62 (06 Jun 2004)
+
+  06 Jun 2004; Michael Cummings <mcummings@gentoo.org> MailTools-1.62.ebuild:
+  new version on cpan
 
   26 May 2004; Bryan Østergaard <kloeri@gentoo.org> MailTools-1.60.ebuild:
   Stable on alpha.
