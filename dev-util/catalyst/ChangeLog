@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.15 2004/05/12 12:44:36 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.16 2004/05/22 07:22:02 zhen Exp $
+
+*catalyst-1.0.8 (22 May 2004)
+
+  22 May 2004; John Davis <zhen@gentoo.org> catalyst-1.0.4.ebuild,
+  catalyst-1.0.5.1.ebuild, catalyst-1.0.5.ebuild, catalyst-1.0.6.ebuild,
+  catalyst-1.0.8.ebuild, metadata.xml:
+  cleanup and addition of 1.0.8, version bump
 
   12 May 2004; Michael McCabe <randy@gentoo.org> catalyst-1.0.7.ebuild:
   Added s390 keywords
