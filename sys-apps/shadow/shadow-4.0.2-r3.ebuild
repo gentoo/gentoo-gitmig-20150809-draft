@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2-r3.ebuild,v 1.1 2002/04/04 05:32:40 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2-r3.ebuild,v 1.2 2002/04/08 00:00:25 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
@@ -19,9 +19,11 @@ pkg_preinst() {
 }
 
 src_compile() {
+	libtoolize --copy --force
+
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
-				
+
 	./configure --disable-desrpc \
 		--with-libcrypt \
 		--with-libcrack \
@@ -32,7 +34,8 @@ src_compile() {
 		${myconf} || die "bad configure"
 		
 	# Parallel make fails sometimes
-	make LDFLAGS="" || die "compile problem"
+	make LDFLAGS="-lcrack -lcrypt" \
+		LIBS="../libmisc/nscd.o" || die "compile problem"
 }
 
 src_install() {
