@@ -1,0 +1,6 @@
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/clrngd/Manifest,v 1.1 2004/01/04 23:20:13 robbat2 Exp $
+MD5 063096dcf8699085425fc870afe94adc clrngd-1.0.3.ebuild 668
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 986877d6a71de29a8c5102c45df92b24 files/clrngd-conf.d 416
+MD5 cfc145bbc592f4751c42727d4ea466f1 files/clrngd-init.d 444
+MD5 08adeed9571a7bc44a80c7ba1c7a1614 files/digest-clrngd-1.0.3 63
