@@ -2,5 +2,9 @@ MD5 9089c9d8bb77456b8d35a6f25b268e23 grsec-sources-2.4.21.2.0_rc2.ebuild 1671
 MD5 852d21edf1e3eb9530a9bbac9610f804 grsec-sources-2.4.21.1.9.11.ebuild 1670
 MD5 f546d12b85c9dc51d1707a31d9367487 metadata.xml 371
 MD5 4992dbeeee1e704aaf57fcac885c3040 ChangeLog 432
+MD5 5804bd0e4c97907d5d1046f1a08e21e2 grsec-sources-2.4.22.1.9.12.ebuild 1670
+MD5 ea6a6b6cdc817c7d554f492fef4081a6 grsec-sources-2.4.22.2.0_rc3.ebuild 1671
 MD5 8ce72e4001839fb39f9d3b0597e681b8 files/digest-grsec-sources-2.4.21.1.9.11 219
 MD5 a66ec80566f602367995d845a5266ed4 files/digest-grsec-sources-2.4.21.2.0_rc2 221
+MD5 08b7d088a6681d925452a15c4b6f9e89 files/digest-grsec-sources-2.4.22.1.9.12 219
+MD5 21c883b5aea0e41748002a4eb76a98ce files/digest-grsec-sources-2.4.22.2.0_rc3 221
