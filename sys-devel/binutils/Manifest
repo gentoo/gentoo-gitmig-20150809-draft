@@ -2,12 +2,6 @@
 Hash: SHA1
 
 MD5 0c24c62fe28146841136c2e513b733e8 ChangeLog 36330
-MD5 b60efe46b3d022ade1a74c6fa2c09d7f binutils-2.11.92.0.12.3-r2.ebuild 2980
-MD5 1872c47d3b04308a4237ea2dbcc47bc5 binutils-2.11.92.0.7.ebuild 2290
-MD5 a7b48133d78b1efde98f85bea80d6ea5 binutils-2.12.90.0.15.ebuild 3257
-MD5 82b406767ced8cb3c132e0e0add81786 binutils-2.13.90.0.16-r1.ebuild 4413
-MD5 31f491671acb36cdc8584e4913d3555f binutils-2.13.90.0.18-r1.ebuild 5160
-MD5 cab7bdfc09cd579f1cc7e0db46808c1a binutils-2.13.90.0.18.ebuild 4238
 MD5 7925584cdead9edcf0d2da2e026a1ae3 binutils-2.14.90.0.2.ebuild 5339
 MD5 62fc9029b8103c66a41f790e417abf6c binutils-2.14.90.0.4.1-r1.ebuild 6298
 MD5 d378d83bc86904f4d98f2465c877e227 binutils-2.14.90.0.5-r1.ebuild 5448
@@ -29,15 +23,7 @@ MD5 50ca49430b20bc9727ceece6289c7dad binutils-2.15.91.0.1-r2.ebuild 4994
 MD5 722667759a5cd99eef79be263a5f4834 binutils-2.15.91.0.2.ebuild 5120
 MD5 dca4c0b2880c411176ca6cfcd95600db binutils-2.15.92.0.2.ebuild 5149
 MD5 e028ff3d2a6829f26d2da9ab69715216 binutils-2.15.92.0.2-r1.ebuild 4960
-MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
-MD5 f453b3f208b17cd18380bc3653936487 files/binutils-2.12.90.0.14-x86_64-libpic.patch 1184
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
-MD5 db3f89b51f6961b0cf92bdddf8127ea7 files/digest-binutils-2.11.92.0.12.3-r2 161
-MD5 6c32de9a9503293bb03048f09dadc182 files/digest-binutils-2.11.92.0.7 74
-MD5 e6b97971464cab854a321254d84ae44f files/digest-binutils-2.12.90.0.15 75
-MD5 b7ccd9bdcb0ab7c26bcf2a3e4c2e2afc files/digest-binutils-2.13.90.0.16-r1 75
-MD5 4270b9eea6fb9d807bc63ba0a221ea9b files/digest-binutils-2.13.90.0.18 75
-MD5 d435975192db69b96d36c62e2ad0876c files/digest-binutils-2.13.90.0.18-r1 160
 MD5 bac15ed517ba3cc1eb3c08f463654aad files/digest-binutils-2.14.90.0.2 75
 MD5 c2028bfe76e16c23a00a4ad36a5a36f2 files/digest-binutils-2.14.90.0.4.1-r1 77
 MD5 f2fca878c36319fd0efd1606f4baf24e files/digest-binutils-2.14.90.0.5-r1 75
@@ -144,7 +130,7 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdoF2HTu7gpaalycRAmNhAKCsK8xrmYS/oPFbRESzPlkY8B+1PgCfb8QZ
-xgBj/xLlW+6J6Yq7mABWv+s=
-=llc2
+iD8DBQFBdoNpHTu7gpaalycRAtQnAKD5lHTXJkzNVXqGPcnrDYLa8TRSLQCbB1Te
+FWyz2TA1MB6UPNeLbZnBcV4=
+=1oEf
 -----END PGP SIGNATURE-----
