@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libbonobo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.28 2003/09/23 15:50:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.29 2003/10/05 12:53:36 obz Exp $
+
+  05 Oct 2003; Mike Gardiner <obz@gentoo.org> libbonobo-2.4.0.ebuild:
+  Marked stable on x86
 
   23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> libbonobo-2.2.3.ebuild:
   set ppc in keywords
