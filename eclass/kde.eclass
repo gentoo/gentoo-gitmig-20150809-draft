@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.90 2004/01/26 00:44:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.91 2004/01/26 01:38:51 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -143,19 +143,41 @@ kde_src_compile() {
 configure_die()
 {
 	echo $@
+
 	eerror
 	eerror	"Your KDE program installation died while running the configure script"
 	eerror
-	eerror  "If the error was related to not finding the STL, you have a gcc error"
-	eerror  "that is easily fixed by re-emerging the latest version of gcc"
-	eerror  "See http://forums.gentoo.org/viewtopic.php?p=790048#790048"
-	eerror  "or http://bugs.gentoo.org/show_bug.cgi?id=38634"
-	eerror
-	eerror
-	eerror	"If the error died during the check for Qt, and you have Qt installed, the problem"
-	eerror	"is most likely due to your nvidia drivers being configured improperly.  See the
-	eerror  "forums, or try reconfiguring using: opengl-update xfree"
-	eerror
+
+	if [ -f /etc/env.d/09opengl ]
+	then
+		source /etc/env.d/09opengl
+		if [ -n "${LDPATH}" ]
+		then
+			GL_IMPLEM="${LDPATH/\/usr\/lib\/opengl\/}"
+			GL_IMPLEM="${GL_IMPLEM/\/lib}"
+			unset LDPATH
+		fi
+	fi
+	
+
+	if [ ${GL_IMPLEM} = "nvidia" ]
+	then
+		eerror	"You're using the nvidia drivers.  The problem is most likely fixed by "
+		eerror	"running: 'opengl-update xfree' to change your opengl back to xfree "
+		eerror  "(which is what Qt was most likely compiled against)"
+	fi	
+
+	if [ -f /usr/lib/gcc-lib/${CHOST}/3.2.3/include/stdio.h ]
+	then
+
+		eerror
+		eerror  "If the error was related to not finding the STL, you have a gcc error"
+		eerror  "that is easily fixed by re-emerging the latest version of gcc"
+		eerror  "See http://forums.gentoo.org/viewtopic.php?p=790048#790048"
+		eerror  "or http://bugs.gentoo.org/show_bug.cgi?id=38634"
+		eerror
+	fi
+
 	die
 }
 
