@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r1.ebuild,v 1.2 2002/02/21 22:33:59 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r2.ebuild,v 1.1 2002/02/23 15:40:51 g2boojum Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="Pine 'a Program for Internet News & Email', email client"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	ldap? ( net-nds/openldap )"
 
 if [ "`use imap`" ] ; then
-	PROVIDE="virtual/imap"
+	PROVIDE="virtual/imapd"
 fi
 
 src_unpack() {
