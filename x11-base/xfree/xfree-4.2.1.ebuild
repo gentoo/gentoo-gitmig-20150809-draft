@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.19 2002/10/20 20:40:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.20 2002/10/20 23:00:14 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -280,8 +280,9 @@ src_unpack() {
 	echo "#define HasFontconfig YES" >> config/cf/host.def
 
 	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
+#	einfo "Applying Xft quality hack..."
 #	cd ${S}/lib/Xft
-#	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
+#	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 > /dev/null || die
 }
 
 src_compile() {
