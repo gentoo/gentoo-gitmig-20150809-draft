@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/Xautoconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/ChangeLog,v 1.12 2004/07/17 21:17:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/ChangeLog,v 1.13 2004/10/07 19:38:23 pylon Exp $
+
+*Xautoconfig-0.22-r2 (07 Oct 2004)
+
+  07 Oct 2004; Lars Weiler <pylon@gentoo.org> files/XF4text.h.diff,
+  files/Xautoconfig.patch, -Xautoconfig-0.22-r1.ebuild,
+  +Xautoconfig-0.22-r2.ebuild, -Xautoconfig-0.22.ebuild:
+  Edited the patches and the ebuild so that it works with X.org.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> Xautoconfig-0.15.ebuild:
   Added eutils, added IUSE=.
