@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/skk-jisyo-extra
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.5 2003/08/27 22:10:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.6 2003/09/01 16:31:07 usata Exp $
+
+*skk-jisyo-extra-200309 (02 Sep 2003)
+
+  02 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
+  skk-jisyo-extra-200309.ebuild:
+  New snapshot
 
 *skk-jisyo-extra-200308-r1 (20 Aug 2003)
 
