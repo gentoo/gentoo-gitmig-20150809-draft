@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-0.14-r1.ebuild,v 1.1 2004/02/02 15:39:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-0.14-r1.ebuild,v 1.2 2004/02/29 14:44:15 aliz Exp $
 
 inherit latex-package
 
@@ -9,7 +9,7 @@ IUSE=""
 DESCRIPTION="A non validating namespace aware XML parser implemented in TeX"
 HOMEPAGE="http://www.dcarlisle.demon.co.uk/xmltex/manual.html"
 # Taken from: ftp://www.ctan.org/tex-archive/macros/xmltex.tar.gz
-SRC_URI="http://ftp.debian.org/debian/pool/main/x/xmltex/${P/-/_}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/x/xmltex/${P/-/_}.orig.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"

@@ -1,8 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.1 2004/02/26 19:05:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.2 2004/02/29 14:44:15 aliz Exp $
 
 *latex2rtf-1.9.15 (27 Feb 2004)
+*latex2rtf-1.9.14 (27 Feb 2004)
 
   27 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> latex2rtf-1.9.14.ebuild,
   latex2rtf-1.9.15.ebuild, files/latex2rtf-Makefile-gentoo.diff:
