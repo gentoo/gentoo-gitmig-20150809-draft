@@ -1,6 +1,6 @@
-# ChangeLog for dev-python/ReportLab
+# ChangeLog for dev-python/reportlab
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.1 2003/07/04 12:16:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.2 2003/07/11 15:51:53 vapier Exp $
 
 *reportlab-1.17-r1 (04 Jul 2003)
 
