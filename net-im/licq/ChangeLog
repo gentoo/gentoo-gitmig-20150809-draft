@@ -1,6 +1,9 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.28 2003/07/09 16:28:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.29 2003/08/13 19:58:48 blkdeath Exp $
+
+  13 Aug 2003; Stewart <stewart@gentoo.org> licq-1.2.7.ebuild:
+  Marked for testing on PPC
 
   09 Jul 2003; Martin Holzer <mholzer@gentoo.org> licq-1.2.7.ebuild:
   Adding doc dir for docs. Closes #24026
