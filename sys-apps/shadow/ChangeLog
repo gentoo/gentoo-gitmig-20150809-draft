@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.81 2004/11/02 19:27:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.82 2004/11/02 20:10:00 eradicator Exp $
+
+  02 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  shadow-4.0.5.ebuild:
+  Stable amd64.
 
   02 Nov 2004; Markus Rothe <corsair@gentoo.org> shadow-4.0.5.ebuild:
   Stable on ppc64, bug #69212
