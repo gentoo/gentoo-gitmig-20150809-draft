@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.2 2003/05/29 00:34:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.3 2003/05/29 00:38:55 weeve Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.mpg123.de/mpg123/${P}.tar.gz"
 HOMEPAGE="http://www.mpg123.de/"
 
 DEPEND="virtual/glibc
-	sparc? ( media-sound/esound ) "
+	sparc? ( media-libs/audiofile ) "
 
 SLOT="0"
 LICENSE="as-is"
