@@ -1,0 +1,12 @@
+# ChangeLog for x11-misc/rendercheck
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.1 2004/11/06 00:19:02 spyderous Exp $
+
+*rendercheck-1.0.3 (05 Nov 2004)
+
+  05 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +rendercheck-1.0.3.ebuild:
+  This tests an implementation of X's Render extension against independent
+  calculations of the expected results. The ebuild is based on
+  x11-misc/xcompmgr.
+

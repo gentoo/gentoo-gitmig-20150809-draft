@@ -1,5 +1,5 @@
-MD5 ac1137a20503dcb8f9ba2939a2a766f6 metadata.xml 230
-MD5 759b4d83ea6e5e7733f68d873c294715 ChangeLog 1970
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 2c62d101e039a0347e9a917c4dab5e8c ChangeLog 2078
 MD5 e4b3a71c2bf425756b4cd78ec0cf315a xcompmgr-1.1.ebuild 779
 MD5 c213ee6c4fb070f148bbc520e93bd9dd xcompmgr-1.1.1.ebuild 596
 MD5 07e5ec00d181e904a58ae4d14a14b7e3 files/digest-xcompmgr-1.1 63
