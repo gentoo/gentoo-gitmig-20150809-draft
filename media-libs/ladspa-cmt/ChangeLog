@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.8 2004/03/15 02:43:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.9 2004/03/31 20:41:40 dholm Exp $
+
+  31 Mar 2004; David Holm <dholm@gentoo.org> ladspa-cmt-1.15.ebuild:
+  Added to ~ppc.
 
   14 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ladspa-cmt-1.14.ebuild, metadata.xml:
