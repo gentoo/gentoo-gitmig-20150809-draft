@@ -1,6 +1,5 @@
 move sys-apps/brltty app-accessibility/brltty
 move app-misc/yasr app-accessibility/yasr
-
 move media-sound/festival app-accessibility/festival
 move media-sound/speechd app-accessibility/speechd
 move media-sound/speech-tools app-accessibility/speech-tools
@@ -15,3 +14,4 @@ move gnome-extra/gnome-speech app-accessibility/gnome-speech
 move gnome-extra/at-poke app-accessibility/at-poke
 move app-text/dasher app-accessibility/dasher
 move media-video/kyro-kernel media-video/kyro-drivers
+move net-ftp/curl net-misc/curl
