@@ -775,8 +775,3 @@ sys-apps/texinfo
 # prez@gentoo.org 20 May 2002
 # Needs testing, but now works with gcc 3.1
 =sys-devel/perl-5.6.1-r4
-
-# seemant@gentoo.org 20 May 2002
-# Needs testing for gcc 3.1 and stability
-=dev-libs/pilot-link-0.10.99
-=gnome-extra/gnome-pilot-0.1.65-r1
