@@ -1,8 +1,8 @@
 #!/sbin/runscript
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Author: Michael v.Ostheim <MvOstheim@web.de>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/files/mondo.sh,v 1.1 2002/05/15 19:32:06 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/files/mondo.sh,v 1.2 2003/02/14 23:26:16 vapier Exp $
 
 depend() {
 	need modules
