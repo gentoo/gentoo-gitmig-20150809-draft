@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.17 2005/03/07 11:33:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.18 2005/03/08 01:10:44 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -921,7 +921,7 @@ use_multilib() {
 # Setup toolchain variables that would be defined in the profiles for these archs.
 crosscompile_setup() {
 	if is_crosscompile; then
-		local VAR="CFLAGS_"${CHOST//-/_}
+		local VAR="CFLAGS_"${CTARGET//-/_}
 		local VAL=${!VAR}
 
 		if [[ -n ${VAL} ]] ; then
