@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040218.ebuild,v 1.1 2004/08/10 08:43:18 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040218.ebuild,v 1.2 2004/08/14 13:50:40 swegener Exp $
 
 DESCRIPTION="bozohttpd is a small and secure http server"
 HOMEPAGE="http://www.eterna.com.au/bozohttpd/"
@@ -8,6 +8,7 @@ SRC_URI="http://www.eterna.com.au/bozohttpd/${P}.tar.bz2"
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 DEPEND=">=dev-libs/openssl-0.9.7d-r1"
 
 src_unpack()
