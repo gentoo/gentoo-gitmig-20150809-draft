@@ -6,4 +6,8 @@
 	<email>cyfred@gentoo.org</email>
 	<name>Andrew Bevitt</name>
 </maintainer>
+<maintainer>
+	<email>mrness@gentoo.org</email>
+	<name>Alin Nastac</name>
+</maintainer>
 </pkgmetadata>
