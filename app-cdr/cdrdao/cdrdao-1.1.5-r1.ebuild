@@ -1,7 +1,7 @@
 # Copyright 1999 - 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Peter Kadau <peter.kadau@web.de>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.4 2002/02/12 01:23:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.5 2002/04/06 21:33:53 gbevin Exp $
 
 S=${WORKDIR}/cdrdao-1.1.5
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
@@ -20,8 +20,10 @@ src_unpack() {
 
 	unpack ${A}
 	
+	patch -p0 <${FILESDIR}/${P}-c++.patch || die
+
 	if [ ! "`use gnome`" ] ; then
-		patch -p0 <${FILESDIR}/${PF}-gentoo.diff
+		patch -p0 <${FILESDIR}/${P}-gentoo.diff || die
 	fi
 }
 
