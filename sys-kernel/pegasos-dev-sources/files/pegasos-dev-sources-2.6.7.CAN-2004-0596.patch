@@ -1,0 +1,46 @@
+--- 1.13/drivers/net/eql.c	2004-07-21 03:13:40 -07:00
++++ 1.14/drivers/net/eql.c	2004-07-21 03:13:40 -07:00
+@@ -495,6 +495,8 @@
+ 		return -EFAULT;
+ 
+ 	slave_dev = dev_get_by_name(sc.slave_name);
++	if (!slave_dev)
++		return -ENODEV;
+ 
+ 	ret = -EINVAL;
+ 
+@@ -527,11 +529,13 @@
+ 	if (copy_from_user(&sc, scp, sizeof (slave_config_t)))
+ 		return -EFAULT;
+ 
+-	eql = dev->priv;
+ 	slave_dev = dev_get_by_name(sc.slave_name);
++	if (!slave_dev)
++		return -ENODEV;
+ 
+ 	ret = -EINVAL;
+ 
++	eql = dev->priv;
+ 	spin_lock_bh(&eql->queue.lock);
+ 	if (eql_is_slave(slave_dev)) {
+ 		slave = __eql_find_slave_dev(&eql->queue, slave_dev);
+--- 1.14/drivers/net/eql.c	2004-07-21 03:13:33 -07:00
++++ 1.15/drivers/net/eql.c	2004-07-21 03:13:33 -07:00
+@@ -499,6 +499,8 @@
+ 		return -ENODEV;
+ 
+ 	ret = -EINVAL;
++	if (!slave_dev)
++		return ret;
+ 
+ 	spin_lock_bh(&eql->queue.lock);
+ 	if (eql_is_slave(slave_dev)) {
+@@ -534,6 +536,8 @@
+ 		return -ENODEV;
+ 
+ 	ret = -EINVAL;
++	if (!slave_dev)
++		return ret;
+ 
+ 	eql = dev->priv;
+ 	spin_lock_bh(&eql->queue.lock);
