@@ -1,0 +1,54 @@
+# ChangeLog for app-sci/blas-reference
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.1 2004/12/29 18:21:54 ribosome Exp $
+
+*blas-reference-19940131 (29 Dec 2004)
+
+  29 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/Makefile.gz, +files/f77-reference,
+  +blas-reference-19940131-r1.ebuild, +blas-reference-19940131.ebuild:
+  Moved from app-sci/blas-reference to sci-libs/blas-reference.
+
+  21 Oct 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild-r1 :
+  moved to use fortran.eclass (and 64-bit.eclass), keymasked -* until fortran.eclass settles
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  blas-reference-19940131.ebuild:
+  Switch to use epause and ebeep, bug #62950
+
+  09 Jun 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild :
+  added ~amd64 keyword (ifc masked in use.mask for amd64 profiles until we get 64bit ifc)
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  blas-reference-19940131.ebuild:
+  Fix use invocation
+
+  11 May 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild :
+  fix for the g77 issue (with >=gcc-3.3.3-r2)
+
+  23 Apr 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild, files/Makefile.gz :
+  updated the Makefile to work with new libtool (added --tag=F77 in a few places),
+  also recompressed it with gzip (works better for small files)
+
+  01 Feb 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild, files/* :
+  as per discussion in #30453 renaming (plain) blas to blas-reference.
+  Will stay package-masked until the whole move is complete, at which point pre-move/pre-virtual versions
+  will be removed. Preserving the history in this ChangeLog
+
+*blas-reference-19940131 (27 Oct 2003)
+
+  27 Oct 2003; George Shapovalov <george@gentoo.org> blas-19940131.ebuild, files/{Makefile.bz2,f77-reference} :
+  a "real" version (#30462), 
+  according to code this is when last modifications were made.
+  This version provides both static and shared library.
+  This is a part of a large ehnahcement of blas support in portage (#30453)
+  package-masked for now
+  thanks to Derek Dolney <dolney@astro.physics.upenn.edu> for the "fix"
+
+  02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> blas-19980702.ebuild:
+  marked stable for x86
+
+*blas-reference-19980702 (31 Oct 2002)
+
+  31 Oct 2002; Hannes Mehnert <hannes@gentoo.org> blas-19980702.ebuild,
+  ChangeLog: Initial ebuild.
