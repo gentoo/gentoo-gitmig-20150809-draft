@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r3.ebuild,v 1.2 2003/02/13 13:10:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r4.ebuild,v 1.1 2003/03/07 15:35:10 vapier Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -96,8 +96,4 @@ pkg_postinst() {
 	echo
 	einfo "If you have not yet done this, rebuild and install"
 	einfo "your kernel modules and re-emerge this package."
-	echo
-	ewarn "You must edit /etc/emu10k1.conf and set the"
-	ewarn "CARD_TYPE that reflects the soundblaster card"
-	ewarn "you have in your computer."
 }
