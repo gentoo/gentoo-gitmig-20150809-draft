@@ -1,12 +1,16 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.39 2004/03/24 17:33:52 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.40 2004/04/22 00:47:37 g2boojum Exp $
+
+  21 Apr 2004; Grant Goodyear <g2boojum@gentoo.org>
+  sendmail-8.12.11-r2.ebuild, files/site.config.m4:
+  New version thanks to lcars!
 
 *sendmail-8.12.11-r1 (24 Mar 2004)
 
-  24 Mar 2004; Grant Goodyear <g2boojum@hotmail.com>
+  24 Mar 2004; Grant Goodyear <g2boojum@gentoo.org>
   sendmail-8.12.11-r1.ebuild, files/mailer.conf:
-  New revision that adds mailwrapper support
+  New revision that adds mailwrapper support 
 
   19 Mar 2004; Aron Griffis <agriffis@gentoo.org> sendmail-8.12.10.ebuild,
   sendmail-8.12.11.ebuild:

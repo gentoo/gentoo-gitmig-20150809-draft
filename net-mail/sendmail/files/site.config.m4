@@ -13,5 +13,3 @@ define(`confMAN8SRC', `8')
 define(`confLDOPTS_SO', `-shared -Wl')
 APPENDDEF(`conf_sendmail_ENVDEF', `@@conf_sendmail_ENVDEF@@')
 APPENDDEF(`conf_sendmail_LIBS', `@@conf_sendmail_LIBS@@')
-APPENDDEF(`conf_sendmail_ENVDEF', `-DMILTER')
-
