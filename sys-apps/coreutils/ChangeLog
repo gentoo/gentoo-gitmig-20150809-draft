@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.40 2003/09/29 00:20:19 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.41 2003/10/01 18:21:57 taviso Exp $
+
+  01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> coreutils-5.0.91.ebuild:
+  missing help2man dependency
 
   28 Sep 2003; Chris PeBenito <pebenito@gentoo.org> coreutils-5.0.91.ebuild:
   Fix selinux patch for 5.0.91.
