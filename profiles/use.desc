@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.172 2004/07/21 14:08:23 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.173 2004/07/27 02:41:12 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -263,6 +263,7 @@ wddx - Adds support for WDDX
 wmf - Adds support for the wmf vector image format
 wxwindows - Adds support for wxWindows/wxGTK
 xface - Adds xface support -- only in use for sylpheed and sylpheed-claws
+xine - Add support for the XINE movie libraries
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
 xml - Check/Support flag for XML library (version 1)
 xml2 - Check/Support flag for XML library (version 2)

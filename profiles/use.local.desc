@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.511 2004/07/26 12:33:01 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.512 2004/07/27 02:41:12 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -243,7 +243,6 @@ media-gfx/blender:blender-game - Adds game engine support to blender
 media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimageview:mng - Enable mng format support
 media-gfx/gimageview:mplayer - Enable mplayer support
-media-gfx/gimageview:xine - Enable xine support
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/gimp:mng - Enable MNG support
 media-gfx/gnuplot:xemacs - Add lisp files for emacs
@@ -279,10 +278,8 @@ media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/mcdp:diet - Compile and link with dietlibc
 media-sound/mpd:aac - Enable support for aac using the faad2 library
 media-sound/mpd:droproot - Run the daemon as non-root by default.
-media-sound/muine:xine - Use Xine backend 
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rhythmbox:faad - Enables faad2 support
-media-sound/rhythmbox:xine - Use Xine backend
 media-sound/terminatorx:sox - Enable sox support
 media-sound/timidity++:portaudio - Enable support for the portaudio API
 media-tv/freevo:matrox - Enable output support on Matrox cards
