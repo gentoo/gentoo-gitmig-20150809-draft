@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.3 2004/11/16 16:06:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.4 2004/11/16 23:50:05 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
 
@@ -14,24 +14,14 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
-IUSE="java ipv6 moznoxft truetype xinerama"
+IUSE="java mozsvg"
 
 RDEPEND="virtual/x11
-	!moznoxft? ( virtual/xft )
-	>=sys-libs/zlib-1.1.4
-	>=media-libs/jpeg-6b
 	>=media-libs/libmng-1.0.0
-	>=media-libs/libpng-1.2.1
-	>=sys-apps/portage-2.0.36
-	dev-libs/expat
-	app-arch/zip
-	app-arch/unzip
 	java?  ( virtual/jre )
-	>=net-www/mozilla-launcher-1.20"
+	mozsvg? ( x11-libs/cairo )"
 
 DEPEND="${RDEPEND}
-	virtual/libc
-	dev-util/pkgconfig
 	java? ( >=dev-java/java-config-0.2.0 )"
 
 # Needed by src_compile() and src_install().
@@ -75,6 +65,8 @@ src_compile() {
 	mozconfig_use_extension mozdevelop venkman
 	mozconfig_use_enable gnome gnomevfs
 	mozconfig_use_extension gnome gnomevfs
+	mozconfig_use_enable mozsvg svg
+	mozconfig_use_enable mozsvg svg-renderer-cairo
 	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/lib/MozillaFirefox
 
 	# Finalize and report settings
