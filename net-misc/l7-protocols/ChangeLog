@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.3 2004/09/19 00:20:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.4 2004/12/02 10:57:59 dragonheart Exp $
+
+*l7-protocols-2004.11.28 (02 Dec 2004)
+
+  02 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  l7-protocols-2004.09.13.ebuild, +l7-protocols-2004.11.28.ebuild:
+  QA fix and version bump as per bug #69279. ${tc-getCC} and bad nomirror fixes.
+  Thanks Spanky
 
 *l7-protocols-2004.09.13 (19 Sep 2004)
 
