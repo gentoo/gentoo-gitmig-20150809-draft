@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.5.1a.ebuild,v 1.2 2003/02/13 15:19:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.5.1a.ebuild,v 1.3 2003/03/23 10:06:59 mholzer Exp $
 
 S="${WORKDIR}/GNUnet-${PV}"
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
@@ -29,4 +29,12 @@ src_install () {
 
 	docinto contrib
 	dodoc contrib/*
+}
+
+pkg_postinst() {
+    einfo ""
+    einfo "now copy an appropriate config file from"
+    einfo "/usr/share/doc/${P}/contrib"
+    einfo "to ~/.gnunet/gnunet.conf"
+    einfo ""
 }

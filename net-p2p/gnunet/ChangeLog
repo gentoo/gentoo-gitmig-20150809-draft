@@ -1,8 +1,12 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.6 2003/03/23 01:34:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.7 2003/03/23 10:06:58 mholzer Exp $
 
 *gnunet-0.5.2a (23 mar 2003)
+
+  23 Mar 2003; Martin Holzer <mholzer@gentoo.org> gnunet-0.4.6.ebuild,
+  gnunet-0.5.1a.ebuild, gnunet-0.5.2a.ebuild:
+  Added postinst with einfo about the config file. closes #18020.
 
   23 mar 2003; <spider@gentoo.org> gnunet-0.5.2a.ebuild:
   Updated, bugfix release
