@@ -2,4 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
+<longdescription>Simple example module library for gpsim that contains a 2-input AND gate and a 2-input OR 
+gate</longdescription>
 </pkgmetadata>
