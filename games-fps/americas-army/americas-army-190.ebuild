@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-190.ebuild,v 1.2 2003/11/01 16:30:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-190.ebuild,v 1.3 2003/11/09 17:58:52 vapier Exp $
 
 inherit games
 
@@ -9,13 +9,11 @@ HOMEPAGE="http://www.americasarmy.com/"
 SRC_URI="ftp://armyops:ftp@guinness.devrandom.net:7000/armyops${PV}-linux.bin
 	ftp://armyops:ftp@2dollar.unixwhore.com:69/armyops${PV}-linux.bin
 	http://www.biot.com/misc/armyops${PV}-linux.bin"
-RESTRICT="nomirror"
 
 LICENSE="Army-EULA"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip"
-IUSE=""
+RESTRICT="nostrip nomirror"
 
 DEPEND="virtual/glibc"
 RDEPEND="media-sound/esound
@@ -25,12 +23,12 @@ RDEPEND="media-sound/esound
 S=${WORKDIR}
 
 pkg_setup() {
-	ewarn "The installed game takes about 1.3GB of space!"
 	games_pkg_setup
+	ewarn "The installed game takes about 1.3GB of space!"
 }
 
 src_unpack() {
-	unpack_makeself || die
+	unpack_makeself
 	tar -zxf setupstuff.tar.gz || die
 }
 
@@ -57,8 +55,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "To play the game run:"
 	einfo " armyops"
-
-	games_pkg_postinst
 }
