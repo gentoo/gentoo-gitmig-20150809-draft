@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31.ebuild,v 1.3 2003/11/26 20:29:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31.ebuild,v 1.4 2003/11/26 21:57:23 mkennedy Exp $
 
 IUSE="X threads fastcgi postgres ldap nls"
 
@@ -19,7 +19,7 @@ DEPEND="dev-libs/libsigsegv
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
