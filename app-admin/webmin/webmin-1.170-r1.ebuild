@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r1.ebuild,v 1.1 2004/11/18 07:00:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r1.ebuild,v 1.2 2004/11/18 20:24:44 mr_bones_ Exp $
 
 IUSE="ssl apache2 webmin-minimal"
 
@@ -11,7 +11,7 @@ VM_V="2.31"
 DESCRIPTION="Webmin, a web-based system administration interface"
 HOMEPAGE="http://www.webmin.com/"
 SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
-	 !webmin-minimal? ( mirror://sourceforge/webadmin/${P}.tar.gz 
+	 !webmin-minimal? ( mirror://sourceforge/webadmin/${P}.tar.gz
 	                   http://www.webmin.com/download/virtualmin/virtual-server-${VM_V}.wbm.gz )"
 
 LICENSE="BSD"
