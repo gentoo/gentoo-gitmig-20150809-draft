@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.5.ebuild,v 1.6 2004/05/03 20:39:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.5.ebuild,v 1.7 2004/06/09 16:55:38 agriffis Exp $
 
 inherit gcc eutils
 export WANT_GCC_3="yes"

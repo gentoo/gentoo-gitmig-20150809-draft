@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.11 2004/05/04 03:54:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.12 2004/06/09 16:54:54 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -78,7 +78,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use pcc` ] ; then
+	if use pcc ; then
 		echo
 		einfo "OSS sound output may not work on ppc"
 		einfo "If your hear only static noise, try"
