@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/kflog
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.7 2004/06/28 20:00:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.8 2004/07/03 19:56:08 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kflog-2.1.1.ebuild:
+  QA: need-kde after R/DEPEND
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> kflog-2.1.1.ebuild:
   glibc -> libc

@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kpasscard/kpasscard-0.1.2.ebuild,v 1.8 2004/06/24 22:27:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kpasscard/kpasscard-0.1.2.ebuild,v 1.9 2004/07/03 19:57:03 carlo Exp $
 
 inherit kde
-need-kde 3
+
 
 DESCRIPTION="app for storing several passwords to a chipcard encrypted by a master password"
 HOMEPAGE="http://www.tobias-bayer.de/en/kpasscard.html"
@@ -14,5 +14,5 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="${DEPEND}
-	>=sys-libs/libchipcard-0.6"
+DEPEND=">=sys-libs/libchipcard-0.6"
+need-kde 3
