@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-0.6.2.ebuild,v 1.6 2004/01/25 12:30:28 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-0.6.2.ebuild,v 1.7 2004/04/26 15:42:15 agriffis Exp $
 
 DESCRIPTION="Gringotts is a utility that allows you to jot down sensitive data"
 SRC_URI="http://devel.pluto.linux.it/projects/Gringotts/current/${P}.tar.bz2"
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
