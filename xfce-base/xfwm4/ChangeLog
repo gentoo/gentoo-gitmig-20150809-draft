@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.12 2003/12/24 06:09:43 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.13 2004/01/09 05:33:56 bcowan Exp $
+
+*xfwm4-4.0.3 (09 Jan 2004)
+
+  09 Jan 2004; Brad Cowan <bcowan@gentoo.org> xfwm4-4.0.3.ebuild:
+  Bugfix release of xfce4. Fixes memory leak and adds kde systray support
 
 *xfwm4-4.0.2 (24 Dec 2003)
 
