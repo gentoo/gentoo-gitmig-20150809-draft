@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-24.ebuild,v 1.7 2004/06/25 00:47:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-24.ebuild,v 1.8 2004/07/01 22:41:33 eradicator Exp $
 
 S=${WORKDIR}/wireless_tools.24
 DESCRIPTION="Wireless Tools"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html"
 KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="GPL-2"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 IUSE=""
 
 src_compile() {

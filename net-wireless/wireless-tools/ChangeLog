@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.32 2004/06/25 00:47:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.33 2004/07/01 22:41:33 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  wireless-tools-24.ebuild, wireless-tools-25-r1.ebuild,
+  wireless-tools-26-r1.ebuild, wireless-tools-26.ebuild,
+  wireless-tools-26_pre9.ebuild, wireless-tools-27_pre2-r1.ebuild,
+  wireless-tools-27_pre22.ebuild, wireless-tools-27_pre23.ebuild:
+  virtual/glibc -> virtual/libc
 
 *wireless-tools-26-r1 (24 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/gtkskan-0.2.ebuild,v 1.5 2004/06/25 00:44:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/gtkskan-0.2.ebuild,v 1.6 2004/07/01 22:41:03 eradicator Exp $
 
 IUSE="gnome"
 
@@ -12,7 +12,7 @@ KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	=sys-libs/db-1.85*
 	=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4 >=gnome-base/gnome-core-1.4 )"
