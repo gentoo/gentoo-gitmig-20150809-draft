@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.62 2004/12/13 20:26:58 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.63 2005/01/08 02:10:18 vapier Exp $
+
+  07 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  files/man-1.5m-groff-1.18.patch, -man-1.5o_p1.ebuild:
+  Version bump.  Also fix the <B7> gremlins #44201 by Chris Smith.
 
 *man-1.5o_p1 (13 Dec 2004)
 

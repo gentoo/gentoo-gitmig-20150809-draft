@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5o_p1.ebuild,v 1.1 2004/12/13 20:26:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5o_p2.ebuild,v 1.1 2005/01/08 02:10:18 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -32,7 +32,7 @@ src_unpack() {
 		configure || die "configure sed failed"
 
 	# Make sure man2html respects our CFLAGS
-	epatch ${FILESDIR}/${P}-man2html-CFLAGS.patch
+	epatch ${FILESDIR}/man-1.5o_p1-man2html-CFLAGS.patch
 
 	# security fix
 	epatch ${FILESDIR}/man-1.5m-security.patch
@@ -43,10 +43,6 @@ src_unpack() {
 
 	# For groff-1.18 or later we need to call nroff with '-c'
 	epatch ${FILESDIR}/man-1.5m-groff-1.18.patch
-
-	# Fix a crash when calling man with:  man -k "foo bar" (bug #9761).
-	# <azarah@gentoo.org> (26 Dec 2002).
-	epatch ${FILESDIR}/man-1.5m-util_c-segfault.patch
 
 	# Various fixes from Redhat
 	epatch ${FILESDIR}/man-1.5m-redhat-patches.patch
@@ -120,14 +116,9 @@ src_install() {
 	fperms 2555 /usr/bin/man
 
 	diropts -m0775 -g man
-	for x in $(awk '
-		/^MANSECT/ {
-			split($2, sects, ":")
-			for (x in sects)
-				print "cat" sects[x]
-		}' ${D}/etc/man.conf)
-	do
-		keepdir /var/cache/man/${x}
+	local mansects=$(grep ^MANSECT "${D}"/etc/man.conf | cut -f2-)
+	for x in ${mansects//:/ } ; do
+		keepdir /var/cache/man/cat${x}
 	done
 }
 
