@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3156 2004/09/15 21:25:27 jhhudso Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3157 2004/09/16 19:07:08 ribosome Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Olivier Fisette <ribosome@gentoo.org> (16 Sep 2004)
+# Insufficient testing and many issues. In Portage for testing.
+app-sci/staden-emboss
 
 # Aron Griffis <agriffis@gentoo.org> (15 Sep 2004)
 # New modular net-scripts need testing
