@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Time-HiRes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.8 2002/12/22 16:11:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.9 2003/01/08 12:09:45 mcummings Exp $
+
+*Time-HiRes-1.42 (08 Jan 2003)
+
+  08 Jan 2003;Michael Cummings <mcummings@gentoo.org> Time-HiRes-1.42.ebuild
+  Version bump (again). 1.38 is no longer available, bug 13465
 
 *Time-HiRes-1.38 (22 Dec 2002)
 
