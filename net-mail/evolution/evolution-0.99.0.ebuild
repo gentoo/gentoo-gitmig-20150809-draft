@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.99.0.ebuild,v 1.3 2001/11/09 16:45:42 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.99.0.ebuild,v 1.4 2001/11/10 02:06:26 agriffis Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -70,7 +70,8 @@ src_compile() {
 		    --with-db3=${WORKDIR}/db3 				\
 		    $myconf || die
 
-	make || die # emake didn't work.
+	# emake might not work, so fall back to make
+	emake || make || die
 }
 
 src_install () {
