@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0.ebuild,v 1.3 2003/11/04 11:55:54 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0.ebuild,v 1.4 2003/11/04 18:56:31 mr_bones_ Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -154,7 +154,7 @@ set_languages () {
 	fi
 	case "$LANGUAGE" in
 		01 | ENUS ) LANGNO=01; LANGNAME=ENUS; LFULLNAME="US English (default)"
-			;;	
+			;;
 		03 | PORT ) LANGNO=03; LANGNAME=PORT; LFULLNAME=Portuguese
 			;;
 		07 | RUSS ) LANGNO=07; LANGNAME=RUSS; LFULLNAME=Russian
@@ -271,8 +271,8 @@ src_unpack() {
 	rm stlport/STLport-4.5.3.patch
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 
-	#Fix compilation with gcc 3.2.x	
-	epatch ${FILESDIR}/${PV}/config.patch	
+	#Fix compilation with gcc 3.2.x
+	epatch ${FILESDIR}/${PV}/config.patch
 
 	#Hopefully this fixes some of the compile problems
 	kernel-mod_getversion
