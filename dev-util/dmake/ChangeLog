@@ -1,10 +1,13 @@
 # ChangeLog for dev-util/dmake
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.4 2003/02/12 06:40:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.5 2003/03/10 15:19:18 cretin Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *dmake-4.1-r1 (1 Feb 2002)
+
+  10 Mar 2003; Stefan Jones <cretin@gentoo.org> :
+  Added patch to fix errno in newer glibc and merged sed lines also int patch
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

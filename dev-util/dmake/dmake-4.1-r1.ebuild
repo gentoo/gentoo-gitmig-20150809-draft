@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.7 2003/02/13 11:50:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.8 2003/03/10 15:19:18 cretin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Improved make"
@@ -21,17 +21,8 @@ src_unpack() {
 	mv dmake ${P}
 
 	cd ${S}
-	cp unix/runargv.c unix/runargv.c.orig
-	
-	cat unix/runargv.c.orig | \
-		sed -e "s:extern.*char \*sys_errlist\[\];::" \
-			> unix/runargv.c
 
-	cp unix/startup.h unix/startup.h.orig
-	
-	cat unix/startup.h | \
-		sed -e "s:usr/local/lib/dmake:usr/share/dmake:" \
-			> unix/startup.h	
+	patch -p1 < ${FILESDIR}/${PF}.diff || die
 }
 
 src_compile() {
