@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/open-cobol-0.23.ebuild,v 1.2 2004/03/14 02:33:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/open-cobol-0.23.ebuild,v 1.3 2004/04/26 00:11:58 agriffis Exp $
 
 DESCRIPTION="an open-source COBOL compiler"
 HOMEPAGE="http://www.open-cobol.org/"
@@ -21,7 +21,7 @@ src_compile() {
 
 	econf \
 		$(use_enable nls) \
-		$(use_with readline)
+		$(use_with readline) || die "econf failed"
 	emake
 }
 

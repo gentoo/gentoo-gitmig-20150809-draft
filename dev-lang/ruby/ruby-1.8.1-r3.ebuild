@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r3.ebuild,v 1.6 2004/04/23 22:20:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r3.ebuild,v 1.7 2004/04/26 00:14:15 agriffis Exp $
 
 IUSE="socks5 tcltk cjk"
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	if [ -n "`use cjk`" ] ; then
 		pushd oniguruma
-		econf --with-rubydir=${S}
+		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
 		popd
 	fi
