@@ -1,22 +1,24 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.12-r2.ebuild,v 1.5 2002/07/14 19:20:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.12-r2.ebuild,v 1.6 2002/07/26 11:53:13 blizzy Exp $
 
-A=${P}.tar.gz
-S=${WORKDIR}/${P}
 DESCRIPTION="Prints out location of specified executables that are in your path"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/which/${A}"
 HOMEPAGE="http://www.xs4all.nl/~carlo17/which/"
-KEYWORDS="x86"
-SLOT="0"
+SRC_URI="http://www.xs4all.nl/~carlo17/which/${P}.tar.gz"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
-DEPEND="virtual/glibc sys-apps/texinfo"
+RDEPEND="virtual/glibc
+	sys-apps/texinfo"
+DEPEND="${RDEPEND}"
+
+S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	cd ${S}
+	patch -p1 -i ${FILESDIR}/which-gentoo.patch || die
 }
 
 src_compile() {
@@ -30,4 +32,3 @@ src_install() {
     doinfo which.info
     dodoc AUTHORS COPYING EXAMPLES NEWS README*
 }
-
