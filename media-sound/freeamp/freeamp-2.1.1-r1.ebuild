@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.4 2002/07/02 05:09:08 seemant Exp $
-use arts && 
-use arts && inherit kde-functions && set-kdedir
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.5 2002/07/13 17:06:19 drobbins Exp $
+
+inherit kde-functions 
 
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support"
 SRC_URI="http://www.freeamp.org/download/src/${P}.tar.bz2"
@@ -45,11 +45,16 @@ src_unpack() {
 }
 
 src_compile() {
+	if [ -n "`which artsc-config`" ]; then
+	    ARTSPREFIX="`artsc-config --arts-prefix`"
+	else
+	    ARTSPREFIX="/usr/kde/3"
+	fi
 
 	local myconf
 	use alsa || myconf="${myconf} --disable-alsa"
 	use esd  || myconf="${myconf} --disable-esd"
-	use arts && myconf="${myconf} --with-extra-includes=${KDEDIR}/include"
+	use arts && myconf="${myconf} --with-extra-includes=${ARTSPREFIX}/include"
 
 	./configure --prefix=/usr --host=${CHOST} ${myconf} || die
 	make ; assert "compile problem :("
