@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ctrlproxy-2.6.1.ebuild,v 1.1 2004/09/13 02:59:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ctrlproxy-2.6.1.ebuild,v 1.2 2004/10/26 20:56:46 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://jelmer.vernstok.nl/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="x86 alpha ~ppc ia64"
 IUSE="ssl"
 
 DEPEND=">=dev-libs/glib-2
