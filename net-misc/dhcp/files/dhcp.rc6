@@ -1,12 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc6,v 1.5 2003/07/25 20:27:08 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc6,v 1.6 2003/08/13 20:12:55 max Exp $
 
 depend() {
 	need net
-	use logger
-	use named
+	use logger dns
 }
 
 checkconfig() {
@@ -14,20 +13,30 @@ checkconfig() {
 		eerror "No ${CHROOT}/etc/dhcp/dhcpd.conf file exists!"
 		return 1
 	fi
+
+	if [ ! -f "${CHROOT}/var/lib/dhcp/dhcpd.leases" ] ; then
+		ebegin "Creating dhcpd.leases"
+		touch "${CHROOT}/var/lib/dhcp/dhcpd.leases" || return 1
+		eend $?
+	fi
+
+	ebegin "Setting ownership on dhcpd.leases"
+	chown dhcp:dhcp "${CHROOT}/var/lib/dhcp/dhcpd.leases" || return 1
+	eend $?
 }
 
 start() {
-    checkconfig || return 1
+	checkconfig || return 1
 
-    ebegin "Starting ${CHROOT:+chrooted }dhcpd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd \
-    	-- -user dhcp -group dhcp ${DHCPD_OPTS} \
+	ebegin "Starting ${CHROOT:+chrooted }dhcpd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd \
+		-- -user dhcp -group dhcp ${DHCPD_OPTS} \
 	${CHROOT:+-chroot ${CHROOT}} ${IFACE}
-    eend $?
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping dhcpd"
-    start-stop-daemon --stop --quiet --exec /usr/sbin/dhcpd
-    eend $?
+	ebegin "Stopping dhcpd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/dhcpd
+	eend $?
 }

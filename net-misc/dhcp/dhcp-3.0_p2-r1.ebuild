@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r1.ebuild,v 1.1 2003/07/23 17:18:30 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r1.ebuild,v 1.2 2003/08/13 20:12:55 max Exp $
 
 inherit flag-o-matic
 
@@ -8,8 +8,7 @@ IUSE=""
 DESCRIPTION="ISC Dynamic Host Configuration Protocol."
 HOMEPAGE="http://www.isc.org/products/DHCP"
 
-MY_P="${P/_p/pl}"
-SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz
+SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P/_p/pl}.tar.gz
 	http://www.episec.com/people/edelkind/patches/dhcp/dhcp-3.0+paranoia.patch"
 
 LICENSE="isc-dhcp"
@@ -17,23 +16,18 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips"
 
 DEPEND="virtual/glibc
-	sys-apps/groff"
+	>=sys-apps/sed-4"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${P/_p/pl}"
 
 src_unpack() {
-
-	unpack ${A}
-
-	cd "${S}"
+	unpack ${A} && cd "${S}"
 
 	epatch "${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch"
 	epatch "${DISTDIR}/dhcp-3.0+paranoia.patch"
-
 }
 
 src_compile() {
-
 	# 01/Mar/2003: Fix for bug #11960 by Jason Wever <weeve@gentoo.org>
 	if [ "${ARCH}" = "sparc" ] ; then
 		filter-flags "-O3"
@@ -64,11 +58,9 @@ src_compile() {
 		--copts "-DPARANOIA -DEARLY_CHROOT" || die "configure failed"
 
 	emake || die "compile problem"
-
 }
 
 src_install() {
-
 	enewgroup dhcp
 	enewuser dhcp -1 /bin/false /var/lib/dhcp dhcp
 
@@ -77,7 +69,8 @@ src_install() {
 	insinto /etc/dhcp
 	newins server/dhcpd.conf dhcpd.conf.sample
 	newins client/dhclient.conf dhclient.conf.sample
-	dosed "s:/etc/dhclient-script:/etc/dhcp/dhclient-script:" /etc/dhcp/dhclient.conf.sample
+	dosed "s:/etc/dhclient-script:/etc/dhcp/dhclient-script:" \
+		/etc/dhcp/dhclient.conf.sample
 	mv "${D}/sbin/dhclient-script" "${D}/etc/dhcp/dhclient-script.sample"
 
 	dodoc ANONCVS CHANGES COPYRIGHT README RELNOTES doc/*
@@ -85,19 +78,16 @@ src_install() {
 	newdoc client/scripts/linux dhclient-script.sample
 	newdoc server/dhcpd.conf dhcpd.conf.sample
 
-	touch "${D}/var/lib/dhcp/dhclient.leases"
-	touch "${D}/var/lib/dhcp/dhcpd.leases"
-
 	insinto /etc/conf.d
 	newins "${FILESDIR}/dhcp.conf" dhcp
 
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/dhcp.rc6" dhcp
 
+	keepdir /var/lib/dhcp
 }
 
 pkg_postinst() {
-
 	einfo "You can edit /etc/conf.d/dhcp to customize dhcp settings"
 	einfo
 	einfo "The DHCP ebuild now includes chroot support."
@@ -107,11 +97,9 @@ pkg_postinst() {
 	einfo "Before running the above command you might want to change the chroot"
 	einfo "dir in /etc/conf.d/dhcp, otherwise /chroot/dhcp will be used."
 	echo
-
 }
 
 pkg_config() {
-
 	CHROOT=`sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/dhcp 2>/dev/null`
 
 	if [ ! -d "${CHROOT:=/chroot/dhcp}" ] ; then
@@ -130,5 +118,4 @@ pkg_config() {
 		eerror "${CHROOT} already exists. Quitting."
 		eerror
 	fi
-
 }
