@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/elm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.5 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.6 2004/08/07 17:57:24 tomk Exp $
+
+*elm-2.4_rc100-r1 (07 Aug 2004)
+
+  07 Aug 2004; Tom Knight <tomk@gentoo.org> +elm-2.4_rc100-r1.ebuild:
+  Thanks to Andrej Kacian for the patch to fix bug #38156
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> elm-2.4_rc100.ebuild:
   virtual/glibc -> virtual/libc
