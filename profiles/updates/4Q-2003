@@ -65,3 +65,4 @@ move net-misc/x3270 net-misc/suite3270
 move net-libs/lcrzo net-libs/netwib
 move net-analyzer/lcrzoex net-analyzer/netwox
 move app-i18n/konfont media-fonts/konfont
+move app-misc/gwhere x11-misc/gwhere
