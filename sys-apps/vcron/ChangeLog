@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.11 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.12 2003/03/23 19:20:05 method Exp $
 
 *vcron-3.0.1-r1 (20 Apr 2002)
+
+  23 Mar 2003; Joshua Brindle <method@gentoo.org> vcron-3.0.1-r1.ebuild:
+  added selinux support, thanks pebenito
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> vcron-3.0.1-r1.ebuild :
   Marked as stable for mips.
