@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Reviewed by Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.15 2004/06/24 22:04:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.16 2004/07/14 15:32:15 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="gnome-utils"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
@@ -57,6 +56,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING* ChangeLog NEWS README*
 }
-
-
-

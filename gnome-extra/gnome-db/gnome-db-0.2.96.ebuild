@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.96.ebuild,v 1.17 2004/06/24 22:04:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.96.ebuild,v 1.18 2004/07/14 15:31:35 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Framework for creating database applications"
 SRC_URI="ftp://ftp.gnome-db.org/pub/gnome-db/sources/latest/${P}.tar.gz
 	ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
@@ -72,4 +71,3 @@ pkg_postrm() {
 	echo ">>> Updating Scrollkeeper database..."
 	scrollkeeper-update >/dev/null 2>&1
 }
-
