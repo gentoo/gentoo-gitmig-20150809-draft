@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.19 2003/03/09 07:42:59 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.20 2003/03/11 11:35:34 zwelch Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -34,7 +34,7 @@ then
 
 elif [ "${ETYPE}" = "headers" ]
 then
-	PROVIDE="virtual/kernel"
+	PROVIDE="virtual/kernel virtual/os-headers"
 else
 	eerror "Unknown ETYPE=\"${ETYPE}\"!"
 	die
