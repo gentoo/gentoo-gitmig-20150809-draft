@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.8-r3.ebuild,v 1.2 2005/01/01 21:42:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.8-r4.ebuild,v 1.1 2005/01/05 05:33:34 vapier Exp $
 
 inherit toolchain-funcs
 

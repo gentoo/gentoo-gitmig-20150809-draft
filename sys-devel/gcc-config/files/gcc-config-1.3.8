@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.8,v 1.4 2004/12/29 01:05:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.8,v 1.5 2005/01/05 05:33:34 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -199,14 +199,16 @@ switch_profile() {
 			&& ${RM} -f "${ROOT}/usr/bin/${x}"{32,64}
 
 		# Only install a wrapper if the binary exists ...
-		# If installing one of the C++ binaries, check to see
-		# if g++ exists so we don't install crappy wrappers
-		if ([[ -x ${ROOT}/${GCC_BIN_PATH}/${x} || ${x} = "cc" ]]) || \
-		   ([[ ${x} = "c++" || ${x} = ${CTARGET}-c++ || ${x} = "cpp" ]] && \
-		    [[ -x ${ROOT}/${GCC_BIN_PATH}/${CTARGET}-g++ ]])
-		then
+		# We want to figure out the 'reference file' for each 
+		# wrapper (the binary we're 'wrapping') so that we can 
+		# sync mtimes together.  This makes things like ccache
+		# happy.  See Bug #70548 for more info.
+		local ref=${ROOT}/${GCC_BIN_PATH}/${x}
+		[[ ${x} = "cc" ]] && ref=${ROOT}/${GCC_BIN_PATH}/gcc
+		if [[ -x ${ref} ]] ; then
 			${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" \
 			         "${ROOT}/usr/bin/${x}"
+			touch -r "${ref}" "${ROOT}/usr/bin/${x}"
 
 			# Install 32bit and 64bit wrappers if need be
 			# This should probably get folded back into the wrapper ...
