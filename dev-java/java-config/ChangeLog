@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.42 2004/01/14 18:26:51 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.43 2004/01/16 12:24:09 aether Exp $
+
+*java-config-1.2.4 (16 Jan 2004)
+
+  16 Jan 2004; Jason A Mobarak <aether@gentoo.org> java-config-1.2.3.ebuild,
+  java-config-1.2.4.ebuild:
+  add correct version string and sys.path.insert to
+  fixes problems with output no being in the module path
 
 *java-config-1.2.3 (14 Jan 2004)
 
