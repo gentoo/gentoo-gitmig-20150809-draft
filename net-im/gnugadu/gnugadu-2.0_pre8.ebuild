@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0_pre8.ebuild,v 1.2 2004/03/17 19:50:00 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0_pre8.ebuild,v 1.3 2004/03/17 19:59:41 spock Exp $
 
 IUSE="debug tlen esd oss xosd arts jabber perl spell"
 
@@ -25,14 +25,12 @@ DEPEND=">=x11-libs/gtk+-2.2.0
 	arts? ( >=kde-base/arts-0.9.5 )
 	esd? ( media-sound/esound )
 	tlen? ( net-libs/libtlen )
-	spell? ( app-text/gtkspell )"
+	spell? ( =app-text/gtkspell-2.0.2 )"
 
 src_compile() {
 
 	myconf="--with-gui --with-gadu --with-remote --with-docklet_system_tray --with-docklet_dockapp --with-sms --with-update --with-external"
-
-	# we don't use this just yet as it appears to be somewhat broken
-	# use spell && myconf="${myconf} --with-gtkspell"
+	use spell && myconf="${myconf} --with-gtkspell"
 
 	econf ${myconf} \
 		`use_enable debug` \
