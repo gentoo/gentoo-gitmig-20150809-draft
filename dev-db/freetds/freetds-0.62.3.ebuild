@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.62.3.ebuild,v 1.10 2004/08/20 04:06:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.62.3.ebuild,v 1.11 2004/09/27 18:14:53 gustavoz Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips alpha arm ~hppa amd64 ia64 s390 ppc64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha arm ~hppa amd64 ia64 s390 ppc64"
 IUSE="odbc mssql"
 
 DEPEND="virtual/libc"
