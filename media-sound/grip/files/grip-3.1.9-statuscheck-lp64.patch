@@ -1,0 +1,11 @@
+--- grip-3.1.9-orig/src/status_window.c	2004-03-31 04:29:50.000000000 +0200
++++ grip-3.1.9/src/status_window.c	2004-04-04 00:17:15.664086496 +0200
+@@ -83,7 +83,7 @@
+ void StatusWindowWrite(StatusWindow *sw,char *msg)
+ {
+   char *buf, *locale_msg=NULL;
+-  int len;
++  gsize len;
+   int pos=0;
+ 
+   /*  gtk_widget_queue_resize(sw->term_widget);*/
