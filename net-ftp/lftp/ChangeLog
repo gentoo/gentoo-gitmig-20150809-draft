@@ -1,8 +1,12 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.10 2002/08/15 22:02:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.11 2002/08/25 16:51:53 raker Exp $
 
 *lftp-2.6.1 (13 Aug 2002)
+
+  25 Aug 2002; Nick Hadaway <raker@gentoo.org> lftp-2.6.1.ebuild :
+  Added sys-devel/gettext to DEPEND instead of just RDEPEND as
+  it is required to set all LC variables for compile-time.
 
   15 Aug 2002; Nick Hadaway <raker@gentoo.org> lftp-2.6.1.ebuild :
   Forcing nls temporarily until I can figure out how to fix compile
