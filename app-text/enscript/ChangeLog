@@ -1,15 +1,13 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.2 2002/02/04 20:06:21 m0rpheus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.3 2002/02/04 20:20:26 m0rpheus Exp $
 
 *enscript-1.6.3 (4 Feb 2002)
   
- 4 Feb 2002; F.Meyndert <m0rpheus@gentoo.org> ChangeLog :
+ 4 Feb 2002; F.A Meyndert <m0rpheus@gentoo.org> ChangeLog :
 
  Added new enscript version too fix temporary file symlink bug that may
  let local users gain elevated privileges.
-
-
 
 
 *enscript-1.6.1-r1 (1 Feb 2002)
