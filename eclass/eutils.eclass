@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.34 2003/06/21 09:23:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.35 2003/06/22 05:44:04 drobbins Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -402,7 +402,7 @@ get_number_of_jobs() {
 
 	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j *[0-9]*::g'`"
 
-	if [ "${ARCH}" = "x86" -o "${ARCH}" = "hppa" -o \
+	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "x86" -o "${ARCH}" = "hppa" -o \
 		"${ARCH}" = "arm" -o "${ARCH}" = "mips" ]
 	then
 		# these archs will always have "[Pp]rocessor"
