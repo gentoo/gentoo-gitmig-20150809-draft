@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.1-r1.ebuild,v 1.7 2004/11/04 10:03:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.1-r1.ebuild,v 1.8 2004/11/04 10:05:17 dragonheart Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,6 +16,7 @@ LICENSE="cryptopp"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 DEPEND="app-arch/zip"
+RDEPEND=""
 IUSE=""
 
 S=${WORKDIR}
