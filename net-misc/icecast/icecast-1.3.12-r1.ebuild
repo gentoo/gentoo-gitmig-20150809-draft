@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-1.3.12-r1.ebuild,v 1.5 2003/02/12 12:34:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-1.3.12-r1.ebuild,v 1.6 2003/02/27 02:36:34 vapier Exp $
 
 inherit eutils
-
-IUSE="crypt"
 
 DESCRIPTION="Internet based broadcasting system based on the mpeg3 streaming technology"
 HOMEPAGE="http://www.icecast.org/"
@@ -13,6 +11,7 @@ SRC_URI="http://www.icecast.org/releases/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc sparc"
+IUSE="crypt"
 
 DEPEND="virtual/glibc"
 
@@ -20,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-variables-gentoo.diff.bz2
+	epatch ${FILESDIR}/${PV}-errno.patch
 }
 
 src_compile() {
