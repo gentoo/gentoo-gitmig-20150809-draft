@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/fceultra
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/ChangeLog,v 1.6 2002/11/21 16:53:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/ChangeLog,v 1.7 2002/11/22 16:48:15 vapier Exp $
+
+*fceultra-081-r1 (22 Nov 2002)
+
+  22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added support for sdl version #11089
 
 *fceultra-081 (21 Nov 2002)
 
