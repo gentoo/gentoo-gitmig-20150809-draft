@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.45 2003/06/16 20:48:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.46 2003/06/16 20:52:48 vapier Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -40,7 +40,7 @@ if [ -z "$SRC_URI" ]; then
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
 
-IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype"
+IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit png postgres qt snmp spell ssl tiff truetype"
 
 # Berkdb is disabled due to DB4 and changes in PHP4.3.2
 #RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
@@ -254,7 +254,7 @@ php_src_compile() {
 	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap`"
 	myconf="${myconf} `use_with xml2 dom` `use_with xml2 dom-xslt`"
 	myconf="${myconf} `use_with kerberos` `use_with gd` `use_with pam`"
-	myconf="${myconf} `use_with pic` `use_enable memlimit memory-limit`"
+	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
 
 	#Waiting for somebody to want Cyrus support :-)
