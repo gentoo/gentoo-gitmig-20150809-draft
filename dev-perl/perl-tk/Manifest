@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9d7462622480138234d5ba60e7133cd7 perl-tk-800.024-r2.ebuild 658
 MD5 0f1496faea117be8d6e80a6a9be6907b perl-tk-800.025.ebuild 608
 MD5 75a25ba03d338409b497e04f8de36385 perl-tk-800.025-r1.ebuild 683
 MD5 4229d65bd3e4f7c08fadbdfc062e0b32 perl-tk-800.024-r1.ebuild 623
-MD5 c6d9904b4775e503c2eafd3bfa8d83ce ChangeLog 3591
+MD5 6156f5eb74e50816d7d183ab7d426769 ChangeLog 3684
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7b3881d32faf8922205fb595c76f4f58 perl-tk-804.027.ebuild 584
+MD5 c00ade410bd5ae45ef98c060a5d4a1c6 perl-tk-804.027.ebuild 584
 MD5 27da8d81c4762781a1ccb0041930d745 files/digest-perl-tk-800.025 62
 MD5 0f1f6e9b0ed927dc06a26a50906da667 files/digest-perl-tk-804.027 63
 MD5 83637a46d21d15a9ebb0c65d43f95544 files/digest-perl-tk-800.024-r1 63
 MD5 83637a46d21d15a9ebb0c65d43f95544 files/digest-perl-tk-800.024-r2 63
 MD5 27da8d81c4762781a1ccb0041930d745 files/digest-perl-tk-800.025-r1 62
 MD5 11a3b779734992780308fabad2d9f967 files/perl-tk-800.025-dirtarget.patch 518
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCGUB9M+I1L6GK/u4RAgUxAJ4/gkVY99ieNqMT3srZiUhPBKWT7ACfRZ7e
-PdtR2t1fpoWD+SUl9eT9ixs=
-=PemO
------END PGP SIGNATURE-----
