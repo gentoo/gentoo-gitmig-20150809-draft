@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.4 2004/02/22 05:51:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.5 2004/03/02 16:34:27 iggy Exp $
 
 inherit gcc flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sources.redhat.com/pub/bzip2/v102/${P}.tar.gz"
 
 LICENSE="BZIP2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ia64 ppc64"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ia64 ppc64 s390"
 IUSE="build static debug"
 
 DEPEND="virtual/glibc"
