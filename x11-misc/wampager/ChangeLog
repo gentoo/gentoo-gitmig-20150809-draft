@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wampager
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/ChangeLog,v 1.8 2004/04/11 17:24:38 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/ChangeLog,v 1.9 2004/04/16 02:47:20 weeve Exp $
+
+  15 Apr 2004; Jason Wever <weeve@gentoo.org> wampager-0.9.1.ebuild:
+  Stable on sparc.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> wampager-0.9.1.ebuild:
   Marked stable on x86.
