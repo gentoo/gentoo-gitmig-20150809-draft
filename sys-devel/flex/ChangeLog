@@ -1,10 +1,15 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.22 2004/09/06 20:42:44 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.23 2004/09/16 06:36:40 robmoss Exp $
 
    06 Sep 2004; Alexander Plank <alexander@gentoo.org> flex-2.5.4a-r5.ebuild:
    add ~macos -- it overwrites apple's flex
-  
+
+  16 Sep 2004; <rmoss@gentoo.org> flex-2.5.4a-r5.ebuild:
+  flex-2.5.4a was using a broken, irritatingly short version of the testsuite.
+  Adding "make bigcheck" in the previously nonexistent src_test function fixes
+  this.
+
   27 Jul 2004; Alexander Gabert <pappy@gentoo.org> flex-2.5.4a-r5.ebuild:
   flex breaks when MAKEOPTS is set aggressively
 
