@@ -1,8 +1,12 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.12 2003/03/28 06:37:48 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.13 2003/05/14 22:27:29 robbat2 Exp $
 
 *libwww-5.4.0-r1 (05 Sep 2002)
+
+  14 May 2003; Robin Johnson <robbat2@gentoo.org> libwww-5.4.0-r1.ebuild:
+  Add block for !dev-libs/9libs since that causes a compile failure since
+  9libs installs a custom libc.h that breaks things.
 
   27 Mar 2003; <rac@gentoo.org> libwww-5.4.0-r1.ebuild:
   remove mysql4 block, as -DUSE_OLD_FUNCTIONS is now defined there
