@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.7 2003/10/11 22:48:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.8 2003/12/02 22:30:41 taviso Exp $
+
+  02 Dec 2003; Tavis Ormandy <taviso@gentoo.org> ksh-93.20030724.ebuild:
+  die if build script fails, no longer required to fail first.
 
   11 Oct 2003; Jason Wever <weeve@gentoo.org> ksh-93.20030724.ebuild:
   Added ~sparc keyword, resolves bug #25668.

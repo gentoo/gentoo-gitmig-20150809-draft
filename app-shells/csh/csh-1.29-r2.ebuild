@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.5 2003/11/17 11:45:30 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.6 2003/12/02 22:29:13 taviso Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -74,11 +74,11 @@ src_unpack() {
 src_compile() {
 
 	einfo "Adding flags required for succesful compilation..."
+
 	# this should be easier than maintaining a patch. 
-	for i in {-Dlint,-w,-D__dead="",-D__LIBC12_SOURCE__,-DNODEV="-1",-DTTYHOG=1024,-DMAXPATHLEN=4096,-D_GNU_SOURCE,-D_DIAGASSERT="assert"}
-	do
-		append-flags ${i}
-	done
+	append-flags -Dlint -w -D__dead="" -D__LIBC12_SOURCE__ -DNODEV="-1"
+	append-flags -DTTYHOG=1024 -DMAXPATHLEN=4096 -D_GNU_SOURCE
+	append-flags -D_DIAGASSERT="assert"
 
 	# maybe they dont warn on BSD, but _damn_.
 	export NOGCCERROR=1

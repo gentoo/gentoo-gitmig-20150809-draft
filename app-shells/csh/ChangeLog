@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/csh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.12 2003/11/17 11:45:30 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.13 2003/12/02 22:29:13 taviso Exp $
+
+  02 Dec 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r2.ebuild:
+  no need to append-flags one at a time, minor syntax change.
 
   17 Nov 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r2.ebuild:
   "William Joy" => "Bill Joy", I think most people would recognise the 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.5 2003/11/10 17:12:31 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.6 2003/12/02 22:30:41 taviso Exp $
 
 inherit ccc eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 
 	# set the optimisations for the build process
 	export CCFLAGS="${CFLAGS}"
-	cd ${S}; ./bin/package only make ast-ksh CC=${CC:-gcc} || true
+	cd ${S}; ./bin/package only make ast-ksh CC=${CC:-gcc} || die
 
 	# install the optional locale data.
 	# heh, check out locale fudd, or piglatin :)
