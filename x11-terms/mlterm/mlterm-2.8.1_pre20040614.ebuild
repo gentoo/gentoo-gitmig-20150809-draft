@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040614.ebuild,v 1.1 2004/06/16 04:12:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040614.ebuild,v 1.2 2004/06/24 02:25:04 agriffis Exp $
 
 IUSE="truetype gtk imlib bidi nls uim"
 
@@ -24,9 +24,9 @@ DEPEND="gtk? ( >=x11-libs/gtk+-2 )
 src_compile() {
 	local myconf imagelib
 
-	if [ -n "`use gtk`" ] ; then
+	if use gtk ; then
 		imagelib="gdk-pixbuf"
-	elif [ -n "`use imlib`" ] ; then
+	elif use imlib ; then
 		imagelib="imlib"
 	fi
 
