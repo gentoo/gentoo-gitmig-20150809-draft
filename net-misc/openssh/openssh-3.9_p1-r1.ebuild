@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.10 2005/01/22 15:56:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.11 2005/01/31 04:24:26 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -31,8 +31,8 @@ RDEPEND="virtual/libc
 	!ppc64? ( skey? ( >=app-admin/skey-1.1.5-r1 ) )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
-	x86? ( smartcard? ( dev-libs/opensc ) )
-	!ppc64? ( tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) )"
+	smartcard? ( dev-libs/opensc )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
 	virtual/os-headers
 	dev-lang/perl
@@ -96,10 +96,10 @@ src_compile() {
 		--with-privsep-path=/var/empty \
 		--with-privsep-user=sshd \
 		--with-md5-passwords \
-		`use_with kerberos kerberos5 /usr` \
-		`use_with tcpd tcp-wrappers` \
-		`use_with skey` \
-		`use_with smartcard opensc` \
+		$(use_with kerberos kerberos5 /usr) \
+		$(use_with tcpd tcp-wrappers) \
+		$(use_with skey) \
+		$(use_with smartcard opensc) \
 		${myconf} \
 		|| die "bad configure"
 
