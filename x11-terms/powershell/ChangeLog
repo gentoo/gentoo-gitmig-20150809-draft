@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/powershell
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/ChangeLog,v 1.3 2003/02/12 09:45:12 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/ChangeLog,v 1.4 2004/01/22 21:22:38 mholzer Exp $
+
+  22 Jan 2004; Martin Holzer <mholzer@gentoo.org> powershell-0.8.ebuild,
+  powershell-0.9_pre3.ebuild:
+  updating homepage and src_uri. closes 39032
 
 *powershell-0.9_pre3 (15 Sep 2002)
 
