@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-mime-data
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/ChangeLog,v 1.30 2003/11/15 23:59:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/ChangeLog,v 1.31 2003/12/23 14:29:17 foser Exp $
+
+*gnome-mime-data-2.4.1 (23 Dec 2003)
+
+  23 Dec 2003; foser <foser@gentoo.org> gnome-mime-data-2.4.1.ebuild :
+  New release
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
   gnome-mime-data-2.4.0.ebuild:
