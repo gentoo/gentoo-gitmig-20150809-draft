@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.1.ebuild,v 1.2 2005/01/11 02:45:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.1.ebuild,v 1.3 2005/03/20 00:42:37 luckyduck Exp $
 
 inherit flag-o-matic
 
@@ -19,13 +19,12 @@ SLOT="0"
 
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="xmms matroska ogg theora"
+IUSE="xmms matroska ogg theora libvisual"
 
 DEPEND=">=media-video/mplayer-0.90-r2
 		>=media-gfx/imagemagick-5.5.6
 		>=dev-lang/perl-5.8.0-r12
 		>=x11-libs/gtk+-2.2.1
-		media-libs/gdk-pixbuf
 		media-libs/libsdl
 		>=media-video/ffmpeg-0.4.8
 		>=media-libs/jpeg-6b-r3
@@ -38,7 +37,7 @@ DEPEND=">=media-video/mplayer-0.90-r2
 					media-libs/libmatroska )
 		ogg? ( media-sound/ogmtools )
 		>=media-video/mjpegtools-1.6.2
-		"
+		libvisual? ( >=media-libs/libvisual-0.2.0 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -48,8 +47,9 @@ src_unpack() {
 
 src_compile() {
 	use amd64 && append-flags -fPIC -DPIC
-	econf || die
-	emake || die
+	econf \
+		$(use_enable libvisual) || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {

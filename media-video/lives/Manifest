@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c9cc5cb939fa8d3a204759e50ceba4be lives-0.8.1.ebuild 1179
-MD5 25b3577a88f7c565d3447dc19c89ffac lives-0.9.1.ebuild 1265
+MD5 7669379140f795c39192d8c92c513817 lives-0.9.1.ebuild 1357
 MD5 e1cd45e8a0008e22e1d605cf3bc31ccc lives-0.8.5.ebuild 1612
 MD5 3224c25483955d6626a0cb70fb790dd3 lives-0.7.1.ebuild 1018
-MD5 06cd867bb18cd4fb824a1b57dced09d2 ChangeLog 1093
+MD5 c93e669aab0c11b405c85c72b6090ab2 ChangeLog 1287
 MD5 7a869ae1cd18658a7486607289aac4ca metadata.xml 221
 MD5 2a440292415e6970c054d5b0fd0a2398 files/digest-lives-0.7.1 68
 MD5 c91e14653dd56cec040e0c713525d5dc files/digest-lives-0.8.1 135
 MD5 14c653499dd72251adf4c09b5c57f6b3 files/digest-lives-0.8.5 68
 MD5 1b0651671174c9538041c40633dc0558 files/digest-lives-0.9.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPMcC06ebR+OMO78RAjttAJ9XH86zj+79SNRfMwtx2J1RRCskQwCfX1wZ
+32AkQnBaUKgcA6ddm28opUA=
+=/yM+
+-----END PGP SIGNATURE-----
