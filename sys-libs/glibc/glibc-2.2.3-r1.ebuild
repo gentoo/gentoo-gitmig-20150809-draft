@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r1.ebuild,v 1.1 2001/05/18 22:45:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r1.ebuild,v 1.2 2001/05/31 22:15:27 pete Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -119,26 +119,30 @@ src_install() {
 
 pkg_preinst()
 {
-  # Check if we run under X
-  if [ -e /usr/X11R6/bin/X ] ; then
-	if [ "`/sbin/pidof /usr/X11R6/bin/X`" ] ; then
-	  echo "glibc can not be installed wHile X is running!!"
-	  exit 1
-        fi
-  fi
-  echo "Saving ld-linux,libc6 and libpthread"
-
-  /bin/cp ${ROOT}lib/ld-linux.so.2 ${ROOT}tmp
-  /sbin/sln ${ROOT}tmp/ld-linux.so.2 ${ROOT}lib/ld-linux.so.2
-  /bin/cp ${ROOT}lib/libc.so.6 ${ROOT}tmp
-  /sbin/sln ${ROOT}tmp/libc.so.6 ${ROOT}lib/libc.so.6
-  /bin/cp ${ROOT}lib/libpthread.so.0 ${ROOT}tmp
-  /sbin/sln ${ROOT}tmp/libpthread.so.0 ${ROOT}lib/libpthread.so.0
-
-	if [ -e ${ROOT}etc/localtime ]
+    # Check if we run under X
+    if [ -e /usr/X11R6/bin/X ]
+    then
+	if [ "`/sbin/pidof /usr/X11R6/bin/X`" ]
 	then
-		#keeping old timezone
-		if [ -e ${D}/etc/localtime ] ; then
+	    echo "glibc can not be installed while X is running!!"
+	    exit 1
+        fi
+    fi
+    
+    echo "Saving ld-linux,libc6 and libpthread"
+    for file in ld-linux.so.2 libc.so.6 libpthread.so.0
+    do
+	if [ -f ${file} ]
+	then
+	    /bin/cp ${ROOT}/lib/${file} ${ROOT}/tmp
+	    /sbin/sln ${ROOT}/tmp/${file} ${ROOT}/lib/${file}
+	fi
+    done
+    
+    if [ -e ${ROOT}etc/localtime ]
+    then
+	#keeping old timezone
+	if [ -e ${D}/etc/localtime ] ; then
 		  /bin/rm ${D}/etc/localtime
 		fi
 	else
@@ -153,12 +157,9 @@ pkg_postinst()
   /sbin/sln ${ROOT}lib/ld-${PV}.so ${ROOT}lib/ld-linux.so.2
   /sbin/sln ${ROOT}lib/libc-${PV}.so ${ROOT}lib/libc.so.6
   /sbin/sln ${ROOT}lib/libpthread-0.9.so ${ROOT}lib/libpthread.so.0
-  /bin/rm  ${ROOT}tmp/ld-linux.so.2
-  /bin/rm  ${ROOT}tmp/libc.so.6
-  /bin/rm  ${ROOT}tmp/libpthread.so.0
+  /bin/rm -f ${ROOT}tmp/ld-linux.so.2
+  /bin/rm -f ${ROOT}tmp/libc.so.6
+  /bin/rm -f ${ROOT}tmp/libpthread.so.0
   /sbin/ldconfig -r ${ROOT}
 
 }
-
-
-
