@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.1 2003/11/18 19:04:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.2 2003/11/18 22:32:28 gmsoft Exp $
 
 IUSE="nls pic build nptl"
 
@@ -53,7 +53,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="~x86 ~sparc ~amd64 ~hppa ~alpha"
+KEYWORDS="~x86 ~sparc ~amd64 -hppa ~alpha"
 SLOT="2.2"
 LICENSE="LGPL-2"
 
@@ -373,35 +373,6 @@ src_unpack() {
 		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
 	fi
 
-	if  [ "${ARCH}" = "hppa" ]
-	then
-		# Guy Martin <gmsoft@gentoo.org> (27 Oct 2003)
-		# Doing like this can seems a bit ugly but it allow me to
-		# change which patch will be applied in further reakease of
-		# the glibc ebuild. If somone know a better way to do this
-		# feel fre to let me know
-		cd ${S}
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-00-pthreads.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-01-sysdeps-pthreads.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-02-pthreads.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-03-dl-machine.patch
-		epatch  ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-05-entry.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-06-oldsemaphore.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-07-framestatefor.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-08-dlfptr.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-09-pthreadtypes.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-10-ptmachine.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-11-kernelstat.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-12-unwind-dw2.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-13-dynamiclink.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-14-fpu.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-15-clone.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-16-prototypes.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-17-casts.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-18-sgu.patch
-		epatch  ${FILESDIR}/2.3.2/glibc-2.3.2-hppa-19-cancel.patch
-	fi
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
