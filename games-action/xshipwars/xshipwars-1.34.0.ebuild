@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.4 2004/02/22 15:51:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.5 2004/03/31 03:35:27 mr_bones_ Exp $
 
-inherit gcc games eutils
+inherit gcc eutils games
 
 MY_P=xsw-${PV}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="massively multi-player, ultra graphical, space-oriented gaming system designed exclusively for network play"
 SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${MY_P}.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/xswdata-1.33d.tar.bz2
@@ -14,13 +14,14 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${MY_P}.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/stsounds1.4.tgz"
 HOMEPAGE="http://wolfpack.twu.net/ShipWars/XShipWars/"
 
-KEYWORDS="x86"
-SLOT="0"
 LICENSE="GPL-2 xshipwars"
+SLOT="0"
+KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=media-sound/esound-0.2.23
-	>=x11-base/xfree-4.1.0"
+	virtual/x11"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
