@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10.ebuild,v 1.2 2003/02/13 12:34:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10.ebuild,v 1.3 2003/03/30 00:49:42 liquidx Exp $
 
 IUSE="pdflib"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
-	>=x11-libs/openmotif-2.1
+	virtual/motif
 	media-libs/libpng
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )"
