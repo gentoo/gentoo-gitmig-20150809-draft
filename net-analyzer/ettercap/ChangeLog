@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.16 2003/07/24 00:11:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.17 2003/12/13 16:54:56 pylon Exp $
+
+  13 Dec 2003; Lars Weiler <pylon@gentoo.org> ettercap-0.6.11.ebuild:
+  Masked stable on ppc
 
 *ettercap-0.6.11 (23 Jul 2003)
 
