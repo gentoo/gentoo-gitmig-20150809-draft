@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.7-r1.ebuild,v 1.2 2004/06/05 10:48:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.7-r1.ebuild,v 1.3 2004/06/05 12:11:00 dragonheart Exp $
 
 inherit eutils
 
@@ -53,8 +53,10 @@ src_install() {
 		insinto /etc/modules.d/; newins ${FILESDIR}/${PN}-2.9.modules ${PN}
 	elif [ -e ${ROOT}/dev/.udev ] ; then
 	# udev
+		dodir /etc/udev/rules.d/
 		echo 'KERNEL="slamr", NAME="slamr0", SYMLINK="modem"' > \
 			 ${D}/etc/udev/rules.d/55-${PN}.rules
+		dodir /etc/udev/permissions.d
 		echo 'slamr*:root:dialout:0660' > \
 			${D}/etc/udev/permissions.d/55-${PN}.permissions
 	else
