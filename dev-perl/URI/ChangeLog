@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.20 2004/03/23 09:53:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.21 2004/05/12 04:54:28 randy Exp $
+
+  12 May 2004; Michael McCabe <randy@gentoo.org> URI-1.28.ebuild:
+  Added s390 keywords
 
   23 Mar 2004; Joshua Kinard <kumba@gentoo.org> URI-1.28.ebuild:
   Marked stable on mips.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Base64
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.20 2004/03/23 09:53:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.21 2004/05/12 04:53:32 randy Exp $
+
+  12 May 2004; Michael McCabe <randy@gentoo.org> MIME-Base64-3.00.ebuild:
+  Added s390 keywords
 
   23 Mar 2004; Joshua Kinard <kumba@gentoo.org> MIME-Base64-2.20.ebuild,
   MIME-Base64-3.00.ebuild:
