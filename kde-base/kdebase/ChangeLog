@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.138 2004/08/06 15:11:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.139 2004/08/06 15:23:25 caleb Exp $
+
+*kdebase-3.2.3-r1 (06 Aug 2004)
+
+  06 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdebase-3.2.3-r1.ebuild,
+  files/post-3.2.3-kdebase-htmlframes.patch, files/3.2.3-r1/Xsetup,
+  files/3.2.3-r1/backgroundrc, files/3.2.3-r1/kdmrc,
+  files/3.2.3-r1/startkde-3.2.3-r1-gentoo.diff:
+  Incorporate a security fix
 
 *kdebase-3.3.0_rc1 (06 Aug 2004)
 
