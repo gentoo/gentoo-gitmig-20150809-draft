@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.248 2004/09/09 04:48:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.249 2004/09/13 13:43:56 stuart Exp $
+
+*apache-2.0.50-r2 (13 Sep 2004)
+
+  13 Sep 2004; Stuart Herbert <stuart@gentoo.org> +apache-2.0.50-r2.ebuild:
+  Fix for CAN-2004-0751 (see Gentoo bug #62626)
 
   08 Sep 2004; Joshua Kinard <kumba@gentoo.org> apache-2.0.50-r1.ebuild:
   Marked stable on mips.
