@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6dc3d2e0f09339a6f946c76d97832616 ChangeLog 840
+MD5 cfc1ffdfba8d537bce10f7bc9373431e tcpflow-0.21.ebuild 687
 MD5 ad215f88e41d4e99f97f3a1b5b853e46 tcpflow-0.20.ebuild 694
+MD5 65f7612e076afd3e4f5b0130404818ff ChangeLog 935
 MD5 04e17c57c255d1c4e3b222e11b4658f4 metadata.xml 261
-MD5 f635e942b0ac7a6ab620bb25d42d12d7 tcpflow-0.21.ebuild 688
 MD5 218d536750e8b2aa04e1f3443bd0960c files/digest-tcpflow-0.20 63
 MD5 fe3e473a09a64af6052d7ad014862c00 files/digest-tcpflow-0.21 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtcmdTrptrqvGERAi52AJ47hevWaELVg2dTXGJlonvGeCKFKQCfTjLD
-IvVIevIQnu8EPgINrGeENAI=
-=B010
------END PGP SIGNATURE-----
