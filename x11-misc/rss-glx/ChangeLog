@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.12 2003/09/29 21:49:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.13 2003/09/29 22:54:16 liquidx Exp $
+
+  29 Sep 2003; Alastair Tse <liquidx@gentoo.org> rss-glx-0.6.8.ebuild,
+  rss-glx-0.7.4-r1.ebuild, rss-glx-0.7.5.ebuild, rss-glx-0.7.6.ebuild,
+  files/rss-glx-0.7.5-kdedesktop.patch, files/rss-glx-0.7.6-kdedesktop.patch:
+  cleanup and whitespace fixes
 
   29 Sep 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml:
   rearrange metadata.xml

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.2 2003/09/08 20:12:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.3 2003/09/29 22:54:16 liquidx Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -21,12 +21,12 @@ DEPEND="virtual/x11
 	virtual/opengl
 	>=sys-apps/sed-4
 	>=media-gfx/imagemagick-5.5.7
-	kde? ( kde-base/kdeartwork ) : ( x11-misc/xscreensaver )"
+	kde? ( kde-base/kdeartwork )
+	!kde? ( x11-misc/xscreensaver )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-kdedesktop.patch
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-0.7.4-kdedesktop.patch
 }
 
 src_compile() {
@@ -68,24 +68,24 @@ pkg_postinst() {
 		einfo "Adding Really Slick Screensavers to XScreenSaver"
 
 		sed -i '/*programs:/a\
-    GL:       \"Cyclone\"  cyclone --root     \\n\\\
-    GL:      \"Euphoria\"  euphoria --root    \\n\\\
-    GL:    \"Fieldlines\"  fieldlines --root  \\n\\\
-    GL:        \"Flocks\"  flocks --root      \\n\\\
-    GL:          \"Flux\"  flux --root        \\n\\\
-    GL:        \"Helios\"  helios --root      \\n\\\
-    GL:       \"Lattice\"  lattice --root     \\n\\\
-    GL:        \"Plasma\"  plasma --root      \\n\\\
-    GL:     \"Skyrocket\"  skyrocket --root   \\n\\\
-    GL:    \"Solarwinds\"  solarwinds --root  \\n\\\
-    GL:     \"Colorfire\"  colorfire --root   \\n\\\
-    GL:   \"Hufos Smoke\"  hufo_smoke --root  \\n\\\
-    GL:  \"Hufos Tunnel\"  hufo_tunnel --root \\n\\\
-    GL:    \"Sundancer2\"  sundancer2 --root  \\n\\\
-    GL:          \"BioF\"  biof --root        \\n\\\
-    GL:    \"MatrixView\"  matrixview --root  \\n\\\
-    GL:   \"Spirographx\"  spirographx --root \\n\\\
-    GL:   \"BusySpheres\"  busyspheres --root \\n\\' \
+	GL:       \"Cyclone\"  cyclone --root     \\n\\\
+	GL:      \"Euphoria\"  euphoria --root    \\n\\\
+	GL:    \"Fieldlines\"  fieldlines --root  \\n\\\
+	GL:        \"Flocks\"  flocks --root      \\n\\\
+	GL:          \"Flux\"  flux --root        \\n\\\
+	GL:        \"Helios\"  helios --root      \\n\\\
+	GL:       \"Lattice\"  lattice --root     \\n\\\
+	GL:        \"Plasma\"  plasma --root      \\n\\\
+	GL:     \"Skyrocket\"  skyrocket --root   \\n\\\
+	GL:    \"Solarwinds\"  solarwinds --root  \\n\\\
+	GL:     \"Colorfire\"  colorfire --root   \\n\\\
+	GL:   \"Hufos Smoke\"  hufo_smoke --root  \\n\\\
+	GL:  \"Hufos Tunnel\"  hufo_tunnel --root \\n\\\
+	GL:    \"Sundancer2\"  sundancer2 --root  \\n\\\
+	GL:          \"BioF\"  biof --root        \\n\\\
+	GL:    \"MatrixView\"  matrixview --root  \\n\\\
+	GL:   \"Spirographx\"  spirographx --root \\n\\\
+	GL:   \"BusySpheres\"  busyspheres --root \\n\\' \
 	${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver
 
 	else
