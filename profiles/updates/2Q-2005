@@ -1,1 +1,2 @@
 move dev-java/oro dev-java/jakarta-oro
+move dev-java/regexp pdev-java/jakarta-regexp
