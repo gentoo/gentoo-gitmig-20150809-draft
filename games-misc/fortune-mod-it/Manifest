@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 453d1dbb170da7ccb369c0d109ea18bb ChangeLog 556
 MD5 8918d0620a73eb5c61bfcfdf9c1d9854 fortune-mod-it-1.51.ebuild 825
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 c74727310883cbd875f9c90e6010a496 fortune-mod-it-1.99.ebuild 841
+MD5 695bab039091e33ef4f5b986c617feed fortune-mod-it-1.99.ebuild 850
 MD5 c1d4d8d790431e155c71391b0fa0ac1d files/digest-fortune-mod-it-1.51 71
 MD5 3026a0d48d5b2e3f2b9b0169da93d838 files/digest-fortune-mod-it-1.99 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB0Mj/roRuSHgZdywRAvzVAJ4gHlKmI2mp1SdF+zthXH7qRDOpzACeKshb
-4QX6IeDtyGqrcm2/N1f3xJQ=
-=XVT4
+iD8DBQFCCSr65mJXAu5GbtIRAm6vAJ9cSBxG8v0QQCiVrxw04fM2YisSKQCcDEkJ
+GXmTjyhvvOJfTJRfyTvis94=
+=DiVU
 -----END PGP SIGNATURE-----
