@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.43 2003/04/09 15:27:53 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.44 2003/05/06 17:56:18 lu_zero Exp $
+
+*binutils-2.14.90.0.1 (06 May 2003)
+
+  06 May 2003; Luca Barbato <lu_zero@gentoo.org>
+  binutils-2.14.90.0.1.ebuild:
+  New version, seems to solve the ppc relocation issues.
 
 *binutils-2.13.90.0.20-r1 (09 Apr 2003)
 
