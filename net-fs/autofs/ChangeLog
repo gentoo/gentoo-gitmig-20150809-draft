@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.2 2002/02/02 05:35:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.3 2002/04/11 13:31:08 seemant Exp $
+
+*autofs-3.1.7-r3 (11 Apr 2002)
+
+  11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> files/autofs :
+
+  xevol@newtonave.net (David Snopek) in bug #1432 gave us a more modern 
+  gentoofied script.
 
   2 Feb 2002; Donny Davies <woodchip@gentoo.org> files/autofs.rc6 :
 

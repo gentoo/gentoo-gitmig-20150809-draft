@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/sbin/runscript
 #RCUPDATE:3 4:75:
-# $Id: autofs,v 1.1 2000/08/08 17:53:33 achim Exp $
+# $Id: autofs,v 1.2 2002/04/11 13:31:08 seemant Exp $
 #
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/auto.master, then a YP
@@ -10,7 +10,7 @@
 # /etc/rc.d/init.d/autofs or /etc/init.d/autofs
 #
 
-. /etc/rc.d/config/functions
+. /etc/init.d/functions.sh
 
 FLAGS="defaults 21"
 
@@ -107,7 +107,7 @@ start() {
 	getmounts | while read cmd mnt rest
 	do
 		echo -n " $mnt"
-		pidfile=/var/run/autofs`echo $mnt | sed 's/\//./'`.pid
+		pidfile=/var/run/autofs`echo $mnt | sed 's/\//./g'`.pid
 		start-stop-daemon --start --pidfile $pidfile --quiet \
 			--exec $EXE -- $mnt $rest
 		#
@@ -153,7 +153,7 @@ restart() {
 	start
 }
 
-doservice ${@}
+#doservice ${@}
 
 
 
