@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r2.ebuild,v 1.3 2002/04/13 12:07:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r2.ebuild,v 1.4 2002/04/13 23:33:30 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -10,7 +10,7 @@ HOMEPAGE="http://netpbm.sourceforge.net/"
 
 DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
-	=media-libs/libpng-1.2.1"
+	>=media-libs/libpng-1.2.1"
 
 src_unpack() {
     unpack ${A}
