@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.6.ebuild,v 1.2 2002/02/15 05:55:23 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.6.ebuild,v 1.3 2002/02/16 05:17:01 agenkin Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="The ultimate emacs, IMO.  This is a non-FSF but still free for use version of the biggest text editor ever created."
@@ -93,5 +93,5 @@ src_install() {
         cd "${D}/usr/share/info"
         rm -f dir info.info texinfo* termcap*
         cd "${S}"
-        dodoc BUGS CHANGES-beta COPYING GETTING* INSTALL ISSUES PROBLEMS README*
+        dodoc BUGS CHANGES-release COPYING GETTING* INSTALL ISSUES PROBLEMS README*
 }
