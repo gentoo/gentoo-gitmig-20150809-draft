@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r1.ebuild,v 1.4 2004/12/01 14:42:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.12 2004/12/01 14:42:06 chriswhite Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0.7"
 
 #-sparc: 0.7.41 - dsputil_init_vis undefined - eradicator
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 -sparc x86"
 IUSE="3dnow X alsa avi debug dvd esd mmx oggvorbis qt sdl sse static truetype xv zlib"
 
 DEPEND=">=media-libs/jpeg-6b
@@ -48,26 +48,9 @@ src_unpack() {
 	# make sure pkgconfig file is correct #53183
 	cd ${S}
 	epatch ${FILESDIR}/throw.patch
-	epatch ${FILESDIR}/${PN}-${PV}-gcc2.patch
 	use sparc && epatch ${FILESDIR}/${P}-sparc.patch
 	rm -f avifile.pc
-	sed -i "/^includedir=/s:avifile$:avifile-${PV:0:3}:" avifile.pc.in \
-		|| die "sed failed (avifile.pc.in)"
-	sed -e "s:| sed s/-g//::" -i configure || die "sed failed (-g)"
-	# Fix qt detection
-	sed -i \
-		-e "s:extern \"C\" void exit(int);:/* extern \"C\" void exit(int); */:" \
-		configure || die "sed failed (qt detection)"
-	# Fix hardcoded Xrender linking, bug #68899
-	if ! use X; then
-		sed -e 's/-lXrender//g' -i lib/video/Makefile.* \
-		|| die "sed failed (Xrender)"
-	fi
-	# adding CFLAGS by default which exists only for x86 is no good idea
-	# but I can't get it through gcc 3.4.3 without omit-frame-pointer
-	find . -name "Makefile.in" | while read file; do
-		sed -e "s/^AM_CFLAGS = .*/AM_CFLAGS = -fomit-frame-pointer/" -i $file
-	done
+	sed -i "/^includedir=/s:avifile$:avifile-${PV:0:3}:" avifile.pc.in
 }
 
 src_compile() {
@@ -117,9 +100,12 @@ src_compile() {
 	export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"
 	export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
 
-	filter-flags "-momit-leaf-frame-pointer"
+	# Fix qt detection
+	sed -i \
+		-e "s:extern \"C\" void exit(int);:/* extern \"C\" void exit(int); */:" \
+		configure
 
-	export FFMPEG_CFLAGS="${CFLAGS}"
+	filter-flags "-momit-leaf-frame-pointer"
 
 	econf \
 		`use_enable static` \

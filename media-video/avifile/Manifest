@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f444c449716823ed42bf6e33236aa0c9 ChangeLog 15426
+MD5 2f78342c34e60b6d00870e2c78bccfbe ChangeLog 15644
 MD5 1d3631b1ad62370f492ec32aa6762425 avifile-0.7.37.20030522-r2.ebuild 4434
 MD5 7f129854d0522ef071cd9d1a62688cee avifile-0.7.32.20030219.ebuild 4065
 MD5 b80546f1e5f52f38abec15e91478e999 avifile-0.7.38.20030710-r1.ebuild 4008
-MD5 8a616e9640f57a62152d26753245b610 avifile-0.7.41.20041001-r1.ebuild 4591
+MD5 e24f4f8f83d26add3f0dafcc21213335 avifile-0.7.41.20041001-r1.ebuild 4593
+MD5 1eb1b5bd4ddeaf3b16c9e40b8a18d904 avifile-0.7.41.20041001.ebuild 3952
 MD5 76b95bd390c69f39e5e7b028b3ff69a5 metadata.xml 272
 MD5 8390bf9de24635d667a5724c2cc0cbe9 files/avifile-0.7.37.20030522-divx.patch 11943
 MD5 7a55e6cb72df715c9b822505d5b4b8b0 files/avifile-0.7.38.20030710-2.6.patch 2038
@@ -17,6 +18,7 @@ MD5 69d7c84947a5ea083f25e43fdacc126e files/avifile-gcc34.patch 5795
 MD5 f2e5938361909893d37d1ce0b80fdbfc files/avifile-x86-gcc34.patch 5247
 MD5 c1a25bfd2234206e97e7b744c39c0d06 files/digest-avifile-0.7.37.20030522-r2 73
 MD5 88eda2a3289907201d524c557bd8a753 files/digest-avifile-0.7.32.20030219 73
+MD5 f19f862b147fa314ed83d4b78e661a5d files/digest-avifile-0.7.41.20041001 71
 MD5 21e60c1838b04fa1990fe5538569ac4b files/digest-avifile-0.7.38.20030710-r1 71
 MD5 f19f862b147fa314ed83d4b78e661a5d files/digest-avifile-0.7.41.20041001-r1 71
 MD5 5c7a3ea4957036aa1da3db9880a3ed34 files/flvenc-patch 558
@@ -24,7 +26,7 @@ MD5 c5840e80e1a70f6b5ce25679e53f2dcb files/throw.patch 7396
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBrPzrFdQwWVoAgN4RAnMWAKChlfPFSRJpUkcBK9Ohin/0pDlykwCeLog6
-2+xsCPVMUHRkYTciRLjSHeU=
-=piG0
+iD8DBQFBrdhlFdQwWVoAgN4RAqYzAJ9BQwk1eaQ1ssIUgtGvlgmbMpkXqgCaA7mr
+u13Yx2PhzSdrS6a+0PS56hk=
+=Ao9m
 -----END PGP SIGNATURE-----
