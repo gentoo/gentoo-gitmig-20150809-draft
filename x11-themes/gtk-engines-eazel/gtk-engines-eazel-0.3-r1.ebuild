@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/gtk-engines-eazel-0.3-r1.ebuild,v 1.9 2004/06/25 22:10:30 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/gtk-engines-eazel-0.3-r1.ebuild,v 1.10 2004/07/09 21:37:03 kloeri Exp $
 
 inherit gtk-engines2
 
@@ -9,7 +9,7 @@ MY_PN="eazel-engine"
 IUSE=""
 DESCRIPTION="GTK+1 Eazel Theme Engine"
 SRC_URI="mirror://debian/pool/main/e/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 LICENSE="GPL-2"
 SLOT="1"
 

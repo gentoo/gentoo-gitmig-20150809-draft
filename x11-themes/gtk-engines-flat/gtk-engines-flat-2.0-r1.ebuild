@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r1.ebuild,v 1.7 2004/06/25 22:05:44 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r1.ebuild,v 1.8 2004/07/09 21:33:52 kloeri Exp $
 
 inherit gtk-engines2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnome/teams/art.gnome.org/themes/gtk/Flat-1.2.x.tar.gz
 	http://download.freshmeat.net/themes/gtk2flat/gtk2flat-default.tar.gz"
 HOMEPAGE="http://art.gnome.org/show_theme.php?themeID=56&category=gtk
 	http://themes.freshmeat.net/projects/gtk2flat/"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 LICENSE="GPL-2"
 SLOT="2"
 
