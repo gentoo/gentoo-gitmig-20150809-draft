@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-378-r1.ebuild,v 1.3 2003/01/19 16:13:04 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-378-r1.ebuild,v 1.4 2003/02/09 01:38:59 gmsoft Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.greenwoodsoftware.com/"
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
