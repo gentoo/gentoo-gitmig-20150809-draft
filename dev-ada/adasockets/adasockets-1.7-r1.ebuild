@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.6 2003/10/28 13:33:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.7 2003/10/28 20:00:48 dholm Exp $
 
 inherit gnat
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.rfc1149.net/download/adasockets/${P}.tar.gz"
 HOMEPAGE="http://www.rfc1149.net/devel/adasockets/"
 LICENSE="GMGPL"
 
-DEPEND="<dev-lang/gnat-5.*"
+DEPEND="<dev-lang/gnat-5.0"
 RDEPEND=""
 SLOT="0"
 IUSE=""

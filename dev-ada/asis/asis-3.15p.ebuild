@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.7 2003/10/28 13:23:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.8 2003/10/28 20:01:32 dholm Exp $
 
 inherit gnat
 
@@ -10,7 +10,7 @@ SRC_URI="http://gd.tuwien.ac.at/languages/ada/gnat/3.15p/asis/${P}-src.tgz"
 HOMEPAGE="http://www.gnat.com/"
 
 LICENSE="GMGPL"
-DEPEND="<dev-lang/gnat-5.*"
+DEPEND="<dev-lang/gnat-5.0"
 RDEPEND=""
 SLOT="0"
 KEYWORDS="x86 ~ppc"
@@ -82,7 +82,8 @@ src_install () {
 
 	#set up environment
 	dodir /etc/env.d
-	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" > ${D}/etc/env.d/55asis
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" \
+		> ${D}/etc/env.d/55asis
 	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" \
 		>> ${D}/etc/env.d/55asis
 }

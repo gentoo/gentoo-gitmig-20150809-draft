@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.4 2003/10/28 13:53:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.5 2003/10/28 20:02:39 dholm Exp $
 
 inherit gnat
 
@@ -8,7 +8,7 @@ DESCRIPTION="POSIX Ada Bindings"
 HOMEPAGE="http://www.cs.fsu.edu/~baker/florist.html"
 SRC_URI="ftp://cs.nyu.edu/pub/gnat/3.15p/florist-3.15p-src.tgz"
 
-DEPEND="<dev-lang/gnat-5.*"
+DEPEND="<dev-lang/gnat-5.0"
 RDEPEND=""
 LICENSE="GMGPL"
 SLOT="0"
