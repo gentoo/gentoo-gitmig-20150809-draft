@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.18 2003/11/24 08:07:29 lostlogic Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.19 2004/01/22 16:41:21 lostlogic Exp $
+
+  22 Jan 2004; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.93-r1.ebuild:
+  Depends on Yacc
 
 *gtk-gnutella-0.93-r1 (24 Nov 2003)
 
