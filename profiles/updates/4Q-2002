@@ -73,9 +73,6 @@ move app-text/dictd-vera app-dicts/dictd-vera
 move app-text/dictd-web1913 app-dicts/dictd-web1913
 move app-text/dictd-wn app-dicts/dictd-wn
 move sys-apps/atitvout media-video/atitvout
-move kde-base/arts-1.1.0.3 kde-base/arts-1.1.0_rc3
-move kde-base/arts-1.1.0.4 kde-base/arts-1.1.0
-move kde-base/arts-1.1.0.5 kde-base/arts-1.1.0_rc5
 move app-sci/kstars kde-base/kdeedu
 move gnome-extra/mc app-misc/mc
 move media-sound/freeamp media-sound/zinf

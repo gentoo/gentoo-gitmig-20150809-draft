@@ -12,17 +12,12 @@ move net-misc/knetfilter net-firewall/firestarter
 move net-misc/kmyfirewall net-firewall/kmyfirewall
 move net-misc/dynfw net-firewall/dynfw
 move dev-libs/gtk-sharp x11-libs/gtk-sharp
-move app-editors/kile-1.31 app-editors/kile-1.3.1
-move app-i18n/kde-i18n-zh_CN.GB2312-2.2.2 app-i18n/kde-i18n-zh_CN-2.2.2
-move app-i18n/kde-i18n-zh_TW.Big5-2.2.2 app-i18n/kde-i18n-zh_TW-2.2.2
 move sys-apps/bash app-shells/bash
 move sys-devel/perl dev-lang/perl
 move sys-apps/ipchains net-firewall/ipchains
 move sys-apps/iptables net-firewall/iptables
-move media-video/kino-0.60 media-video/kino-0.6
 move sys-kernel/lolo-sources sys-kernel/pfeifer-sources
 move net-p2p/dc-gui2 net-p2p/dc-gui
-move gnome-extra/gtkhtml-3.0.1 gnome-extra/libgtkhtml-3.0.1
 move media-video/libdvb media-libs/libdvb
 move net-wireless/gkrellmwireless x11-plugins/gkrellmwireless
 move net-misc/gshield net-firewall/gshield
