@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.1.2.ebuild,v 1.1 2003/08/14 03:04:08 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.1.2.ebuild,v 1.2 2003/08/14 03:13:11 g2boojum Exp $
 
 IUSE=""
 
@@ -15,6 +15,7 @@ SRC_URI="ftp://ftp.f-prot.com/pub/linux/${MY_P}.tar.gz"
 RDEPEND=">=app-arch/unzip-5.42-r1
 	dev-lang/perl
 	dev-perl/libwww-perl"
+PROVIDE="virtual/antivirus"
 
 SLOT="0"
 LICENSE="F-PROT"
