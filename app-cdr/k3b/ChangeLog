@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.24 2003/10/14 15:50:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.25 2003/10/31 17:37:41 caleb Exp $
+
+*k3b-0.10.1 (31 Oct 2003)
+
+  31 Oct 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.10.1.ebuild:
+  Version bump, add i18n support (thanks to Carlo) bug #32113
 
 *k3b-0.10 (14 Oct 2003)
 
