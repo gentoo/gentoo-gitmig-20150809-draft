@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.1.15.ebuild,v 1.1 2002/05/23 19:15:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.1.15.ebuild,v 1.2 2002/05/23 23:24:10 spider Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -30,7 +30,8 @@ RDEPEND=">=dev-libs/glib-2.0.0
 	>=gnome-base/bonobo-activation-0.9.6
 	>=gnome-base/libgnome-1.112.0
 	>=gnome-base/libgnomecanvas-1.112.1
-	>=gnome-base/libgnomeui-1.112.1"
+	>=gnome-base/libgnomeui-1.112.1
+	>=gnome-base/gail-0.13"
 
 DEPEND="${RDEPEND} >=dev-util/pkgconfig-0.12.0"		
 
