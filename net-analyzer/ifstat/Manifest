@@ -1,6 +1,16 @@
-MD5 9d0f5d07886200bf7c4ab40ce3f60b08 ChangeLog 1530
-MD5 6c135ce092c2b215ecad18d59381e09b ifstat-1.0.ebuild 684
-MD5 7e7fa36d7baa51404e623fc58b22305b ifstat-1.1.ebuild 683
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f0a9c192b67f67de43a0632a3b4ffe44 metadata.xml 431
-MD5 e017f0ba646dda4a948483bbb0ab56eb files/digest-ifstat-1.0 61
+MD5 8ad8fa99ed817c62d9cd1b431dcdf17e ChangeLog 1621
+MD5 fa70c1928bddeadfd3d4bce651dee2fd ifstat-1.1.ebuild 689
+MD5 d92418111886da3ed36411630aa4e41a ifstat-1.0.ebuild 683
 MD5 920405b5079fac9a9d124de3a4aa3a06 files/digest-ifstat-1.1 61
+MD5 e017f0ba646dda4a948483bbb0ab56eb files/digest-ifstat-1.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFB/pWvKRy60XGEcJIRArniAJ4oErW9ui54OMVekeJFtJuALFzp+QCXWvcs
+jaCaLcldlJ5RKfBhjEeK+A==
+=1VMr
+-----END PGP SIGNATURE-----

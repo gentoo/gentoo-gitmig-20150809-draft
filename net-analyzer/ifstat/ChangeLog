@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ifstat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.13 2004/09/16 22:36:51 gustavoz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.14 2005/01/31 20:31:52 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> ifstat-1.1.ebuild:
+  Keyworded ~ppc
 
   16 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> ifstat-1.1.ebuild:
   Stable on amd64 and ppc64
