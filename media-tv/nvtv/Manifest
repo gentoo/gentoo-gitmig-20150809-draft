@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb204b3cbc5581c296ead7f0d56ae23f nvtv-0.4.6.ebuild 1194
 MD5 23977af6bb58ca49206b350c3c107a88 nvtv-0.4.5.ebuild 1192
 MD5 c49cc8f55fd971464cf9507248a680f0 nvtv-0.4.7.ebuild 1194
 MD5 12db05d7bedf5d210f404d858d0013b9 ChangeLog 2081
-MD5 f691708ddf9faed17b657dc03253f20a metadata.xml 383
+MD5 2569873e0455de904a5b88b2343d9fbd metadata.xml 311
 MD5 adc49002cf7b7b0274f7b51ba7e0749d files/digest-nvtv-0.4.5 62
 MD5 100984154e7d0abd397f9180eac2e191 files/digest-nvtv-0.4.6 62
 MD5 3efd64b27ba09b15639638f067915d24 files/digest-nvtv-0.4.7 62
 MD5 00390c52c9eb68c5ff65c81cddb0ba5c files/nvtv.start 531
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0l1I1lqEGTUzyQRAjBDAKCkyVJGFq0g9R4YW3V6T/yVAekLtgCfdss1
+Vyd4J3tBl61MD02+fOYLXc0=
+=i/6p
+-----END PGP SIGNATURE-----
