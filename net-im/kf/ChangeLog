@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kf/ChangeLog,v 1.5 2004/06/12 21:44:01 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kf/ChangeLog,v 1.6 2004/06/12 23:11:46 lucass Exp $
+
+  13 Jun 2004; Lukasz Strzygowski <lucass@gentoo.org> kf-0.1.4.1.ebuild:
+  Fixed dependency issue.
 
 *kf-0.1.4.1 (12 Jun 2004)
 
