@@ -1,8 +1,9 @@
 # ChangeLog for dev-util/tmake
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.8 2004/04/07 21:23:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.9 2004/04/07 21:34:17 agriffis Exp $
 
-  07 Apr 2004; Aron Griffis <agriffis@gentoo.org> tmake-1.11.ebuild:
+  07 Apr 2004; Aron Griffis <agriffis@gentoo.org> tmake-1.8-r1.ebuild,
+  tmake-1.11.ebuild:
   Add ~alpha and ~ia64
 
   10 Dec 2003; Lars Weiler <pylon@gentoo.org> tmake-1.11.ebuild:
