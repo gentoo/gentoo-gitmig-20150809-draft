@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.73 2003/10/21 16:08:43 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.74 2003/10/26 19:38:28 mholzer Exp $
+
+*xine-lib-1_rc2 (26 Oct 2003)
+
+  26 Oct 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-1_rc2.ebuild,
+  files/protect-CFLAGS.patch-1_rc2:
+  Version bumped.
 
   21 Oct 2003; Brandon Hale <tseng@gentoo.org> xine-lib-1_rc1.ebuild:
   Add -mno-sse2 in case of p4 opts, fixes build errors
