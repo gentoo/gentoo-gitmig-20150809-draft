@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r15.ebuild,v 1.1 2005/01/24 14:21:22 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r15.ebuild,v 1.2 2005/01/24 14:26:43 carpaski Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -54,36 +54,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i 's:hasq maketest:hasq test:g' bin/ebuild.sh
-	patch pym/portage.py <<END_OF_PATCH_END_OF_PATCH_END_OF_PATCH
---- portage.py	17 Jan 2005 16:38:22 -0000	1.524.2.33
-+++ portage.py	21 Jan 2005 05:19:30 -0000
-@@ -1156,6 +1156,10 @@
- 			self["PORTDIR_OVERLAY"] = string.join(new_ov)
- 			self.backup_changes("PORTDIR_OVERLAY")
- 
-+		if os.environ.get("PORTAGE_CALLER", "") == "repoman":
-+			self["PORTDIR_OVERLAY"] = ""
-+			self.backup_changes("PORTDIR_OVERLAY")
-+
- 		self.regenerate()
- 		
- 		
-@@ -1170,9 +1170,11 @@
- 				self["FEATURES"] = string.join(self.features, " ")
- 				self.backup_changes("FEATURES")
- 
--		if "maketest" in features:
--			features.append("test")
--			features.sort()
-+		if "maketest" in self.features:
-+			self.features.append("test")
-+			self.features.sort()
-+			self["FEATURES"] = string.join(self.features, " ")
-+			self.backup_changes("FEATURES")
- 
- 		if mycpv:
- 			self.setcpv(mycpv)
-END_OF_PATCH_END_OF_PATCH_END_OF_PATCH
 	true
 }
 
