@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.2_pre6.ebuild,v 1.1 2005/01/27 18:19:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.2.ebuild,v 1.1 2005/02/05 18:27:07 genstef Exp $
 
 inherit linux-mod eutils
 
