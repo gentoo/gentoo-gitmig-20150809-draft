@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.39 2004/03/23 10:12:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.40 2004/04/12 16:56:04 twp Exp $
+
+  12 Apr 2004; <twp@gentoo.org> phpmyadmin-2.5.6.ebuild,
+  phpmyadmin-2.5.6_rc1.ebuild:
+  Added IUSE. 2.5.6 stable on x86.
 
   23 Mar 2004; Joshua Kinard <kumba@gentoo.org> phpmyadmin-2.5.6.ebuild,
   phpmyadmin-2.5.6_rc1.ebuild:
