@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.8 2004/06/24 21:47:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.9 2004/06/29 14:55:24 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> gtkada-2.2.0-r1.ebuild,
+  gtkada-2.2.1.ebuild, gtkada-2.2.1_pre20031005.ebuild:
+  add sed-4 dep
 
 *gtkada-2.2.1 (21 Nov 2003)
 

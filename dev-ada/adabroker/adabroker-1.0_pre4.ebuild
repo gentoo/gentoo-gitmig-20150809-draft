@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.8 2004/06/24 21:44:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.9 2004/06/29 14:51:36 agriffis Exp $
 
 inherit gnat
 
@@ -10,7 +10,8 @@ SRC_URI="http://adabroker.eu.org/distrib/${PN}-1.0pre4.tar.gz"
 HOMEPAGE="http://adabroker.eu.org/"
 LICENSE="GMGPL"
 
-DEPEND="<dev-lang/gnat-5.0"
+DEPEND="<dev-lang/gnat-5.0
+	>=sys-apps/sed-4"
 RDEPEND=""
 IUSE=""
 SLOT="0"
