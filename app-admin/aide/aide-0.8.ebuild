@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.8.ebuild,v 1.13 2002/12/09 04:17:34 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.8.ebuild,v 1.14 2003/01/15 19:51:50 weeve Exp $
 
 IUSE="nls postgres"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cs.tut.fi/~rammer/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc -sparc "
 
 DEPEND="sys-apps/gzip 
 	sys-devel/bison 

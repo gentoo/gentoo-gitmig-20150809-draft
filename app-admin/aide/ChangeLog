@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/aide
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/ChangeLog,v 1.8 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/ChangeLog,v 1.9 2003/01/15 19:50:32 weeve Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -14,6 +14,10 @@
   Also contains updates from Paul Belt <gaarde@yahoo.com> in #5372.
 
 *aide-0.8 (15 Mar 2002)
+
+  15 Jan 2003; Jason Wever <weeve@gentoo.org> aide-0.8 :
+
+  Changed sparc keyword to -sparc as aide --init is broken on sparc.
 
   13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> aide-0.8 :
 
