@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fcab50ebeaaa157ff78578d21058c84a ChangeLog 1276
-MD5 7b635f1a711c48e0a108a1dc934a58f9 linup-1.1.1-r1.ebuild 768
-MD5 edb03e1f886db92dc51695d05cbced61 files/digest-linup-1.1.1-r1 62
+MD5 7f58d75cef5134b12a897a9519f67fe8 linup-1.1.1-r1.ebuild 775
+MD5 7fa1b9be93d5457e5f5d1964fa1034c3 ChangeLog 1362
 MD5 2d62949fcd5cb73c7366d168b2225a41 files/fix-uptimes-host.gz 303
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35aRHTu7gpaalycRAhL+AKDXHh9I+36FDFM4gUg8vqo/nVhD+QCg1Ryz
-WS5CEmEm3iE11sclc7QGL6U=
-=URzg
------END PGP SIGNATURE-----
+MD5 edb03e1f886db92dc51695d05cbced61 files/digest-linup-1.1.1-r1 62

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d51343978a3cd9eb27e146fe433fa5d7 ChangeLog 1748
-MD5 e68f4cfa3a6ba29efbd0e0a8613d40c7 lhinv-1.1-r2.ebuild 741
+MD5 9dccda8be8f39d759997eb10978e602c lhinv-1.1-r3.ebuild 785
+MD5 d6c0ab2972c69f718b8df442deb5d779 ChangeLog 1831
 MD5 a3088815ded7f32ebe5ba5be68152e5c metadata.xml 446
-MD5 0a9607d1dcff426593fb97b335a67b05 lhinv-1.1-r3.ebuild 778
+MD5 e68f4cfa3a6ba29efbd0e0a8613d40c7 lhinv-1.1-r2.ebuild 741
 MD5 803c8b6bb78dfd1c74d7dc4b549dec54 files/digest-lhinv-1.1-r2 60
 MD5 803c8b6bb78dfd1c74d7dc4b549dec54 files/digest-lhinv-1.1-r3 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35ZrHTu7gpaalycRAh12AJ0SXX93cdbXHahGv9stDWkOZhD3pQCfXCj5
-g5G5JPCwDX9EU6KqlCDtUEQ=
-=4Agn
------END PGP SIGNATURE-----
