@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.30 2004/09/05 18:56:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.31 2004/11/16 23:01:22 matsuu Exp $
+
+*phppgadmin-3.5 (17 Nov 2004)
+
+  17 Nov 2004; MATSUU Takuto <matsuu@gentoo.org> +phppgadmin-3.5.ebuild:
+  Version bumped. Bug 66846.
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> phppgadmin-3.4.ebuild:
   Added amd64 keyword, closing #58993.
