@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.3 2004/06/05 00:58:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.4 2004/06/05 12:35:25 g2boojum Exp $
+
+  05 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> :
+  Adding the new postfix to the tree (bug # 48796).  Thanks to
+  Davin Boling, Matt Girard, Lang Thang, Mogens Meier Christensen,
+  theboywho, Andrew Glen-Young, and Ajay Sharma.
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> postfix-2.0.19-r2.ebuild:
   Stable on alpha.
