@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.990 2005/03/06 10:14:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.991 2005/03/06 15:03:56 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -640,19 +640,7 @@ net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed w
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
 sci-astronomy/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
-sci-biology/aaindex:no-emboss - Do not index the database files for use with EMBOSS
-sci-biology/aaindex:no-rawdb - Do not install the original database files (keep only indexed files)
-sci-biology/cutg:no-emboss - Do not index the database files for use with EMBOSS
-sci-biology/cutg:no-rawdb - Do not install the original database files (keep only indexed files)
-sci-biology/emboss:no-biodata - Do not install the biological databases used by some programs.
-sci-biology/prints:no-emboss - Do not index the database files for use with EMBOSS
-sci-biology/prints:no-rawdb - Do not install the original database files (keep only indexed files)
-sci-biology/prosite:no-emboss - Do not index the database files for use with EMBOSS
-sci-biology/prosite:no-rawdb - Do not install the original database files (keep only indexed files)
-sci-biology/rebase:no-emboss - Do not index the database files for use with EMBOSS
-sci-biology/rebase:no-rawdb - Do not install the original database files (keep only indexed files)
-sci-biology/transfac:no-emboss - Do not index the database files for use with EMBOSS
-sci-biology/transfac:no-rawdb - Do not install the original database files (keep only indexed files)
+sci-biology/hmmer:pvm - Adds support for parallel virtual machine.
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
 sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
