@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Log
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.21 2004/11/29 11:06:10 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.22 2005/03/08 17:06:18 sebastian Exp $
+
+  08 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-Log-1.1.ebuild, -PEAR-Log-1.2.ebuild, -PEAR-Log-1.8.1.ebuild:
+  Cleanup.
 
   29 Nov 2004; Simon Stelling <blubb@gentoo.org> PEAR-Log-1.8.4.ebuild:
   added ~amd64
