@@ -1,19 +1,19 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.12.ebuild,v 1.8 2004/06/24 22:56:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.21.ebuild,v 1.1 2005/01/02 02:06:11 mholzer Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}
 DESCRIPTION="A sweet plugin to control XMMS from GKrellM2"
 SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/gkrellmms.phtml"
-
+IUSE=""
 DEPEND=">=app-admin/gkrellm-2*
 	media-sound/xmms"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 src_compile() {
 	emake || die
