@@ -838,3 +838,6 @@ x11-base/xdirectfb
 # masked since package is not released
 >=dev-db/mysql-4.0.1_alpha
 
+# seemant@gentoo.org 02 Jul 2002
+# masked coz it's a cvs release
+=x11-wm/blackbox-0.65.0.20020702
