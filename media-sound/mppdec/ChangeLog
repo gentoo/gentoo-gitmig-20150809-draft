@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/mppdec
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mppdec/ChangeLog,v 1.1 2004/04/17 08:12:54 eradicator Exp $
+
+*mppdec-1.1 (17 Apr 2004)
+
+  17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  mppdec-1.1.ebuild, files/mppdec-1.1-nostatic.patch:
+  Initial import. Ebuild provided by Stephan Kapfinger <s.kapfinger@gmx.de> in
+  bug #44869.
+
