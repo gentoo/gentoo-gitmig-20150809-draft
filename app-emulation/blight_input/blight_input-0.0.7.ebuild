@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight_input/blight_input-0.0.7.ebuild,v 1.1 2003/08/07 08:01:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight_input/blight_input-0.0.7.ebuild,v 1.2 2003/08/09 08:29:33 msterret Exp $
+
+inherit games
 
 DESCRIPTION="An input plugin for the mupen64 N64 emulator"
 SRC_URI="http://deltaanime.ath.cx/~blight/n64/blight_input_plugin/${P}.tgz"
@@ -23,8 +25,7 @@ src_unpack() {
 
 src_install() {
 	make install						|| die "make install failed"
-	dodir /usr/lib/mupen64/plugins		|| die "dodir failed"
-	insinto /usr/lib/mupen64/plugins
-	doins src/blight_input.so			|| die "doins failed"
+	exeinto ${GAMES_LIBDIR}/mupen64/plugins
+	doexe src/blight_input.so			|| die "doexe failed"
 	dodoc AUTHORS ChangeLog README ToDo || die "dodoc failed"
 }
