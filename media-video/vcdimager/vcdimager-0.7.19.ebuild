@@ -11,7 +11,7 @@ HOMEPAGE="http://www.vcdimager.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ppc ~amd64"
 
 # Ideally this would also include help2man, but it's not yet in portage.
 DEPEND=">=dev-libs/libcdio-0.64
