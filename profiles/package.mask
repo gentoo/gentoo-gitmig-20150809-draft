@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3529 2005/01/24 21:26:07 compnerd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3530 2005/01/24 22:03:36 slarti Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,13 +21,18 @@
 ##   End example
 ##
 
+# <slarti@gentoo.org> (24 Jan 2005)
+# gnutls-1.1.23 (all versions) are masked, broken dep with msmtp.
+# See two entries down.
+=mail-mta/msmtp-1.3.4
+
 # <compnerd@gentoo.org> (24 Jan 2005)
 # Masked as it has security holes. We (Java Herd) recommend that you use
 # sun-jdk-bin instead of this deprecated package.  This will be removed unless
 # someone wishes to touch this (it has an evil license btw). (bug #78854)
 dev-java/sun-j2sdk
 
-# <dragonheart@gentoo.org>/<slarti@gbentoo.org> (22 Jan 2005)
+# <dragonheart@gentoo.org>/<slarti@gentoo.org> (22 Jan 2005)
 # Masked as it links to the previous version of gnutls installed
 >=net-libs/gnutls-1.1.23
 
