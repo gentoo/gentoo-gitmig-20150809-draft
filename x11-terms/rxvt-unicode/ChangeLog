@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.24 2004/07/14 14:48:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.25 2004/07/26 20:57:27 latexer Exp $
+
+*rxvt-unicode-3.2 (26 Jul 2004)
+
+  26 Jul 2004; Peter Johanson <latexer@gentoo.org> +rxvt-unicode-3.2.ebuild:
+  Bump. Bold support.
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org> rxvt-unicode-3.0.ebuild:
   stable on amd64
