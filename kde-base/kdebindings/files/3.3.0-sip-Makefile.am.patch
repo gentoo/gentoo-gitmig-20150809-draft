@@ -1,0 +1,11 @@
+--- python/Makefile.am.orig	2004-08-26 11:28:23.654636248 -0500
++++ python/Makefile.am	2004-08-26 11:28:48.609842480 -0500
+@@ -21,7 +21,7 @@
+ 	@(cd pykde && $(MAKE))
+ 
+ sipdone:
+-	cd sip && export QTDIR=${qt_dir} && @PYTHON@ configure.py -b @bindir@ -d ${site_packages} -e ${python_inc_dir} -v ${sip_dir}
++	cd sip && export QTDIR=${qt_dir} && @PYTHON@ configure.py -b @bindir@ -d ${site_packages} -e ${python_inc_dir} -v ${sip_dir} -l qt-mt
+ 	@(cd sip && $(MAKE))
+ 	echo "" > sipdone
+ 

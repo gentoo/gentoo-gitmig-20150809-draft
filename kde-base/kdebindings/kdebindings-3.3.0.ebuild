@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.3.0.ebuild,v 1.1 2004/08/25 18:14:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.3.0.ebuild,v 1.2 2004/08/26 16:35:21 caleb Exp $
 # TODO: add gnustep, objc bindings
 
-inherit kde-dist flag-o-matic
+inherit kde-dist flag-o-matic eutils
 
 DESCRIPTION="KDE library bindings for languages other than c++"
 
@@ -21,6 +21,7 @@ DEPEND="=kde-base/kdebase-${PV}*
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/3.3.0-sip-Makefile.am.patch
 
 	if ! use mozilla ; then
 	# disable mozilla bindings/xpart, because configure doesn't seem to do so
@@ -30,7 +31,8 @@ src_unpack() {
 	sed -e 's:mozilla::' Makefile.am.orig > Makefile.am
 	fi
 
-	cd ${S} && aclocal
+	
+	cd ${S} && make -f admin/Makefile.common
 }
 
 src_compile() {

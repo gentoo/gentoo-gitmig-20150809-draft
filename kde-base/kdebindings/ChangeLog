@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.69 2004/08/25 18:14:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.70 2004/08/26 16:35:21 caleb Exp $
+
+  26 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdebindings-3.3.0.ebuild,
+  files/3.3.0-sip-Makefile.am.patch:
+  Add a patch to make it compile
 
 *kdebindings-3.3.0 (25 Aug 2004)
 
