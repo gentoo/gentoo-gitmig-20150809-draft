@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ksimus-0.3.6-r1.ebuild,v 1.5 2003/12/12 08:15:43 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ksimus-0.3.6-r1.ebuild,v 1.6 2004/03/26 12:17:31 phosphan Exp $
 
 inherit kde-base
 
@@ -12,6 +12,7 @@ SRC_URI="http://ksimus.berlios.de/download/ksimus-3-${PV}.tar.gz
 		http://ksimus.berlios.de/download/${MY_PATCH}.gz"
 
 LICENSE="GPL-2"
+IUSE=""
 SLOT="0"
 
 DEPEND=">=sys-apps/sed-4
