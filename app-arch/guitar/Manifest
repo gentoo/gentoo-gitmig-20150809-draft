@@ -1,4 +1,14 @@
-MD5 f36f9dc6223c8f79fc457ddb3d9f5c6a guitar-0.1.4.ebuild 974
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8ff58f88ce8599a3af05985ec544930f ChangeLog 1517
+MD5 6dcd8f1d430999877dbc6c7f4c9d592a guitar-0.1.4.ebuild 856
 MD5 dab7696b5e040e412f887980f226db23 files/digest-guitar-0.1.4 64
 MD5 8ae679e723d206b50b88118dc6bebb52 files/install.gnome 495
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBm4LZHTu7gpaalycRAkLZAJ9/Qr0TOLaIrlbsyuy+Bh9CgZ0r1ACdFrDW
+EaOblc+DSPPYn4nkFn3DfBc=
+=iW/P
+-----END PGP SIGNATURE-----
