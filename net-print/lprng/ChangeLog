@@ -1,6 +1,11 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.8 2003/07/13 20:39:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.9 2003/07/18 12:38:09 lanius Exp $
+
+*lprng-3.8.21 (18 Jul 2003)
+
+  18 Jul 2003; lanius@gentoo.org lprng-3.8.21.ebuild:
+  version bump
 
 *lprng-3.8.12-r1 (14 Jun 2003)
 
