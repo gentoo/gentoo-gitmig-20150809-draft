@@ -1,0 +1,7 @@
+MD5 638f7504455e1799ad500302cc5b33e8 ChangeLog 1639
+MD5 8e9a024b88a586903829244e0db62fbe scsh-0.6.1-r1.ebuild 1239
+MD5 07e2ecfd9b144011ccbe21872a89764c scsh-0.6.3.ebuild 987
+MD5 b7e39b230ea1a68dc05f0fffc89718b8 scsh-0.6.4.ebuild 986
+MD5 13ee0eae9052df37dccd3543b4f6afb5 files/digest-scsh-0.6.1-r1 63
+MD5 3e98983c5c98b782b38dd6a79c0b223d files/digest-scsh-0.6.3 63
+MD5 a372b30637890116cf31b7ad64a68129 files/digest-scsh-0.6.4 63
