@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r14.ebuild,v 1.9 2005/01/03 20:55:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r14.ebuild,v 1.10 2005/01/03 22:08:32 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-date-localtime.patch.txt
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt
 	http://www.ckdhr.com/ckd/qmail-103.patch
-	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth.patch
+	http://www.arda.homeunix.net/store/old_software/qregex-starttls-2way-auth.patch
 	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt
 	mirror://gentoo/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2
 	http://www.dataloss.nl/software/patches/qmail-popupnofd2close.patch
