@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0-r1.ebuild,v 1.1 2004/08/21 06:14:03 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0-r1.ebuild,v 1.2 2004/09/20 07:40:04 ticho Exp $
 
 
 inherit eutils
 IUSE="mysql ldap gdbm berkdb"
 
 DESCRIPTION="Mail delivery agent/filter"
-HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
+HOMEPAGE="http://www.courier-mta.org/maildrop/"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 
 SLOT="0"
