@@ -7,17 +7,17 @@ DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++.
 SRC_URI="http://anjuta.sourceforge.net/packages/anjuta-${PV}.tar.gz"
 HOMEPAGE="http://anjuta.sourceforge.net/"
 
-DEPEND="gnome-base/gnome-libs
-	x11-libs/gtk+
+DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
+	>=x11-libs/gtk+-1.2.10-r4
 	media-libs/audiofile
-	gnome-base/libxml
-	gnome-base/scrollkeeper"
+	dev-libs/libxml
+	app-text/scrollkeeper"
 	
-RDEPEND=" gnome-apps/glade
-	 gnome-apps/glademm
-	 gnome-apps/gnome-iconedit
-	 gnome-base/scrollkeeper
-	 x11-libs/gtk+
+RDEPEND="dev-util/glade
+	 dev-util/glademm
+	 media-gfx/gnome-iconedit
+	 app-text/scrollkeeper
+	 >=x11-libs/gtk+-1.2.10-r4
 	 media-libs/audiofile
 	 media-sound/esound
 	 sys-apps/bash
@@ -35,8 +35,8 @@ src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
 
-	./configure --host=${CHOST} --prefix=/opt/gnome  --mandir=/usr/share/man \
-		--infodir=/usr/share/info --with-sysconfdir=/etc/opt/gnome \
+	./configure --host=${CHOST} --prefix=/usr  --mandir=/usr/share/man \
+		--infodir=/usr/share/info --with-sysconfdir=/etc/gnome \
 		$myconf || die
 	emake || die
 }
