@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.54 2004/11/04 16:52:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.55 2004/11/05 16:57:57 usata Exp $
+
+  06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> files/xpdfrc.1,
+  xpdf-3.00-r4.ebuild, xpdf-3.00-r5.ebuild:
+  Added version strings to cjk fonts.
 
   03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> xpdf-3.00-r5.ebuild:
   Stable on alpha, bug 69662.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r4.ebuild,v 1.7 2004/10/25 19:48:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r4.ebuild,v 1.8 2004/11/05 16:57:57 usata Exp $
 
 inherit eutils
 
@@ -27,13 +27,13 @@ DEPEND="motif? ( virtual/x11
 	x11-libs/openmotif )
 	>=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
-	virtual/ghostscript"
+	>=virtual/ghostscript-7.07.1-r5"
 
 RDEPEND="${DEPEND}
-	linguas_ja? ( media-fonts/kochi-substitute )
-	linguas_zh_CN? ( media-fonts/arphicfonts )
-	linguas_zh_TW? ( media-fonts/arphicfonts )
-	linguas_ko? ( media-fonts/baekmuk-fonts )
+	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
+	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
+	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )
+	linguas_ko? ( >=media-fonts/baekmuk-fonts-2.2 )
 	!app-text/xpdf-chinese-simplified
 	!app-text/xpdf-chinese-traditional
 	!app-text/xpdf-cyrillic
