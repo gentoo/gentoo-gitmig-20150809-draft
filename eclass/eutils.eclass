@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.57 2003/09/22 21:39:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.58 2003/09/22 22:09:51 iggy Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -947,7 +947,7 @@ check_license() {
 		eerror "If you CTRL+C out of this, the install will not run!"
 		echo
 
-		${PAGER} ${src} || die "Could not execute ${PAGER} ${src}
+		${PAGER} ${src} || die "Could not execute ${PAGER} ${src}"
 		einfo "Do you accept the terms of this license? [yes/no]"
 		read ACCEPT_TERMS
 		case ${ACCEPT_TERMS} in
