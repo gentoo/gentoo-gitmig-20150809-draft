@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040130.ebuild,v 1.5 2004/07/02 09:32:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040130.ebuild,v 1.6 2004/08/21 05:09:14 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -104,7 +104,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # until alan modra and friends are done with their current 3.3.x efforts
 # for ppc64
 KEYWORDS="-* ppc64"
-#KEYWORDS="-*  ~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64"
+#KEYWORDS="-*  ~x86 ~mips ~sparc ~amd64 -hppa ~alpha -ia64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.12 2004/08/08 00:45:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.13 2004/08/21 05:09:14 vapier Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -95,7 +95,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="~x86 ~sparc ~mips ~alpha arm -hppa ~amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~sparc ~mips ~alpha arm -hppa ~amd64 -ia64 ~ppc64 s390"
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
 # Ok, this is a hairy one again, but lets assume that we
