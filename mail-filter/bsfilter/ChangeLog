@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/bsfilter
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/ChangeLog,v 1.5 2004/11/08 14:16:02 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/ChangeLog,v 1.6 2004/11/12 17:23:47 nakano Exp $
+
+  12 Nov 2004; Masatomo Nakano <nakano@gentoo.org> -bsfilter-1.0.3.ebuild,
+  -bsfilter-1.0.4.ebuild, bsfilter-1.0.5.ebuild:
+  Marked stable on x86.
 
 *bsfilter-1.0.5 (08 Nov 2004)
 
