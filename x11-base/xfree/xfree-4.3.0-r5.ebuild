@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.3 2004/02/23 19:45:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.4 2004/03/01 04:52:45 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -163,6 +163,12 @@ pkg_setup() {
 		then
 			die "The static USE flag is incompatible with the sdk USE flag."
 		fi
+	fi
+
+	# Check for existence of $CC, we use it later
+	if [ -z "${CC}" ]
+	then
+		die "Please set the CC variable to your compiler. export CC=gcc."
 	fi
 }
 

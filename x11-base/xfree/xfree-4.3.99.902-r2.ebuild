@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.2 2004/02/17 22:51:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.3 2004/03/01 04:52:45 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -135,6 +135,14 @@ PROVIDE="virtual/x11
 inherit eutils flag-o-matic gcc xfree
 
 DESCRIPTION="Xfree86: famous and free X server"
+
+pkg_setup() {
+	# Check for existence of $CC, we use it later
+	if [ -z "${CC}" ]
+	then
+		die "Please set the CC variable to your compiler. export CC=gcc."
+	fi
+}
 
 src_unpack() {
 
