@@ -1,0 +1,21 @@
+# ChangeLog for dev-util/fhist
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.1 2002/04/13 21:10:35 karltk Exp $
+
+*fhist-1.8 (13 Apr 2002)
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> fhist-1.8.ebuild files/digest-fhist-1.8 :
+
+  The FHist package contains 3 utilities, a file history tool ``fhist'', a 
+  file comparison tool ``fcomp'', and a file merging tool ``fmerge''. All 
+  three are bundled together, because they all use the same minimal-difference
+  algorithm.
+
+  The history tool presented here, fhist, is a minimal history tool. It 
+  provides no locking or branching. This can be useful in contexts where the 
+  configuration management or change control be being provided by some other 
+  tool.
+
+  The history tool, fhist is able to handle binary files. The file comparison
+  tool, fcomp, usually does a line-for-line plain-text comparison, however it 
+  is also capable of a byte-for-byte binary comparison. 
