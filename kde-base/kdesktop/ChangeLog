@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.7 2005/03/18 17:30:34 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.8 2005/03/21 03:27:14 weeve Exp $
+
+  20 Mar 2005; Jason Wever <weeve@gentoo.org> kdesktop-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdesktop-3.4.0.ebuild:
   Added to ~ppc

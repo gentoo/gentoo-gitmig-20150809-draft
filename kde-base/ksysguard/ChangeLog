@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.10 2005/03/18 16:30:43 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.11 2005/03/21 03:36:24 weeve Exp $
+
+  20 Mar 2005; Jason Wever <weeve@gentoo.org> ksysguard-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> ksysguard-3.4.0.ebuild:
   Added to ~ppc
