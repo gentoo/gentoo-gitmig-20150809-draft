@@ -1,0 +1,17 @@
+# ChangeLog for sys-apps/acpi4asus
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.1 2004/03/08 05:14:59 latexer Exp $
+
+*acpi4asus-0.27 (08 Mar 2004)
+
+  08 Mar 2004; Peter Johanson <latexer@gentoo.org> acpi4asus-0.27.ebuild,
+  metadata.xml:
+  Moved to app-laptop from sys-apps
+
+*acpi4asus-0.27 (28 Feb 2004)
+
+  28 Feb 2004; Peter Johanson <latexer@gentoo.org> acpi4asus-0.27.ebuild,
+  metadata.xml:
+  Initial Commit. Thanks to Marco Testarmata <testarmata.marco@tiscali.it> for
+  the ebuild from #43089
+
