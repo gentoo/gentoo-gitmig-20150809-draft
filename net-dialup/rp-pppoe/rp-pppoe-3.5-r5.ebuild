@@ -1,17 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r5.ebuild,v 1.1 2004/12/03 06:39:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r5.ebuild,v 1.2 2005/01/22 04:14:10 pyrania Exp $
 
 inherit eutils
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 HOMEPAGE="http://www.roaringpenguin.com/"
-SRC_URI="http://www.roaringpenguin.com/pppoe/${P}.tar.gz"
+SRC_URI="http://www.roaringpenguin.com/penguin/pppoe/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="X"
+IUSE="X tcltk"
 
 DEPEND=">=net-dialup/ppp-2.4.1
 	X? ( tcltk? (

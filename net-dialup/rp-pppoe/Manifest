@@ -1,11 +1,21 @@
-MD5 443cd9158850793019160ef6fd003ffc rp-pppoe-3.5-r2.ebuild 1641
-MD5 bef7f453e14ca96ce5d033704af20b46 ChangeLog 5769
-MD5 4d62c5ea3852358bb1bd17e95735247f rp-pppoe-3.5-r5.ebuild 1915
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf86ea53ec6ae8d64f72ca032801d729 rp-pppoe-3.5-r2.ebuild 1641
+MD5 051d73a435a89125001ba2163bf0dbc4 ChangeLog 5882
+MD5 35206b2bacd1dbc33c8e56f28a7a0f75 rp-pppoe-3.5-r5.ebuild 1930
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 d90e4422c967ed2ba160c12b22f977b4 files/rp-pppoe-3.5-pidfile.patch 3266
-MD5 3ec97394e888b357e2c6020b3ab0155c files/rp-pppoe-3.5-dsa-557.patch 5581
-MD5 966f79051cec3049cc3abb79ca6d3ab1 files/rp-pppoe.rc 498
-MD5 8708f33468c5aeada5ec65d597edec17 files/rp-pppoe-3.5-netscripts.patch 4063
-MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r5 64
-MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r2 64
 MD5 4e9fa8d65d286e5e37e953e7c822c70e files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
+MD5 966f79051cec3049cc3abb79ca6d3ab1 files/rp-pppoe.rc 498
+MD5 3ec97394e888b357e2c6020b3ab0155c files/rp-pppoe-3.5-dsa-557.patch 5581
+MD5 d90e4422c967ed2ba160c12b22f977b4 files/rp-pppoe-3.5-pidfile.patch 3266
+MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r2 64
+MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r5 64
+MD5 8708f33468c5aeada5ec65d597edec17 files/rp-pppoe-3.5-netscripts.patch 4063
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8dMjI7fK2cqeyXkRArWQAJsGGT8bxJyJlNIxcaDCQE7MvPG6wACggENr
+gpRm0Kwn+bPR5rtDUHtaPOg=
+=JeNr
+-----END PGP SIGNATURE-----
