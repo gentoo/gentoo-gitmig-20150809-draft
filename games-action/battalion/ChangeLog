@@ -1,6 +1,9 @@
 # ChangeLog for games-action/battalion
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.1 2004/06/03 13:43:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.2 2004/06/03 23:10:05 wolf31o2 Exp $
+
+  03 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> battalion-1.4b.ebuild:
+  Adding dodir...
 
 *battalion-1.4b (03 Jun 2004)
 
