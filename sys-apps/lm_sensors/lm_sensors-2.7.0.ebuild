@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.7.0.ebuild,v 1.4 2003/01/17 07:51:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.7.0.ebuild,v 1.5 2003/01/17 07:52:25 lostlogic Exp $
 
 inherit flag-o-matic
 
@@ -22,7 +22,7 @@ src_compile()  {
 
 	filter-flags -fPIC
 
-	emake clean all || die "lm_sensors requires the source of a compatible kernel\nversion installed in /usr/src/linux and i2c support built as a modules"
+	emake clean all || die "lm_sensors requires the source of a compatible kernel\nversion installed in /usr/src/linux and >=i2c-2.7.0 support built as a modules this support is included in gentoo-sources as of 2.4.20-r1"
 }
 
 src_install() {
