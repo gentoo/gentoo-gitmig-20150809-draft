@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.8 2003/02/13 12:12:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.9 2003/04/13 14:38:59 seemant Exp $
 
-IUSE="doc"
+IUSE="doc nls"
 
 
 inherit gnome2
@@ -22,8 +22,8 @@ RDEPEND=">=dev-libs/glib-2.0.6
 	>=dev-libs/expat-1.95
 	dev-python/PyXML
 	>=dev-lang/python-2.0-r7
-	>=sys-devel/gettext-0.10.40
-	>=dev-libs/libxml2-2.4.24"
+	>=dev-libs/libxml2-2.4.24
+	nls? ( >=sys-devel/gettext-0.10.40 )"
 	
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}
