@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.27 2005/03/17 13:20:17 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.28 2005/03/21 17:33:36 kang Exp $
+
+  21 Mar 2005; Guillaume Destuynder <kang@gentoo.org>
+  rsbac-dev-sources-2.6.11-r1.ebuild:
+  Marked 2.6.11-r1 stable
 
 *rsbac-dev-sources-2.6.11-r1 (17 Mar 2005)
 
