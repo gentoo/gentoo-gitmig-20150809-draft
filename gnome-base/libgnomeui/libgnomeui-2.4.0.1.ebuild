@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.4.0.ebuild,v 1.3 2003/09/08 14:06:33 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.4.0.1.ebuild,v 1.1 2003/09/10 22:34:45 foser Exp $
 
 inherit gnome2
 
-DESCRIPTION="User interface part of libgnome"
+DESCRIPTION="User Interface routines for Gnome"
 HOMEPAGE="http://www.gnome.org/"
 
 IUSE="doc jpeg"
@@ -16,10 +16,10 @@ RDEPEND=">=x11-libs/pango-1.1.2
 	>=dev-libs/popt-1.5
 	>=media-sound/esound-0.2.26
 	>=media-libs/audiofile-0.2.3
-	>=gnome-base/gconf-2.3
-	>=gnome-base/libgnome-2.4
-	>=gnome-base/libgnomecanvas-2.4
-	>=gnome-base/libbonoboui-2.4
+	>=gnome-base/gconf-1.2
+	>=gnome-base/libgnome-2
+	>=gnome-base/libgnomecanvas-2
+	>=gnome-base/libbonoboui-2
 	jpeg ( media-libs/jpeg )"
 
 DEPEND="${RDEPEND}
