@@ -1,14 +1,16 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.4.ebuild,v 1.4 2001/08/26 04:45:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.4.ebuild,v 1.5 2001/08/28 18:08:10 achim Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org"
 #debianutils is for "readlink"
+if [ -z "`use build`" ] ; then
 RDEPEND="sys-devel/spython sys-apps/debianutils"
+fi
 PPV=1.5
 
 src_unpack() {
