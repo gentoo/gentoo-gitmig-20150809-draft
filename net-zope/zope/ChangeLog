@@ -1,8 +1,15 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.6 2003/10/10 21:02:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.7 2003/10/30 14:58:06 lanius Exp $
 
 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*zope-2.6.2 (30 Oct 2003)
+
+  30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> zope-2.6.0-r1.ebuild,
+  zope-2.6.0-r2.ebuild, zope-2.6.0-r3.ebuild, zope-2.6.0.ebuild,
+  zope-2.6.2.ebuild:
+  version bump, cleanups (enewuser, enewgroup), bug #32073
 
   10 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> zope-2.4.0-r6.ebuild,
   zope-2.5.1.ebuild:
