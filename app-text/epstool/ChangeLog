@@ -1,0 +1,7 @@
+# ChangeLog for app-text/epstool
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.1 2003/07/09 14:23:06 phosphan Exp $
+
+  09 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> :
+  Initial import.
+
