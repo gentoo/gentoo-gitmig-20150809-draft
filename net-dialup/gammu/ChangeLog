@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gammu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.7 2004/05/12 11:53:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.8 2004/06/17 01:39:08 st_lim Exp $
+
+  17 Jun 2004; Lim Swee Tat <st_lim@gentoo.org> :
+  Upped the version. Pleasantly surprised that Marcin has finally fixed the
+  problem we had to patch all this time.
 
 *gammu-0.95.0 (05 May 2004)
 
