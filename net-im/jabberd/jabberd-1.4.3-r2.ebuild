@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r2.ebuild,v 1.1 2004/03/01 12:06:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r2.ebuild,v 1.2 2004/03/27 21:06:42 humpback Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -123,10 +123,10 @@ src_install() {
 
 	fperms g+rw /etc/jabber
 	fperms g+rw /usr/sbin/jabberd
-	fperms g+rw /var/spool/jabber
-	fperms g+rw /var/spool/jabber/error.log
-	fperms g+rw /var/spool/jabber/record.log
 	fperms g+rw /var/log/jabber
+	fperms g+rw /var/log/jabber/error.log
+	fperms g+rw /var/log/jabber/record.log
+	fperms g+rw /var/spool/jabber
 	fperms u+xs /usr/sbin/jabberd
 
 	#Install header files for transports to use
