@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/mknbi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.2 2002/12/13 17:22:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.3 2002/12/25 18:37:12 mholzer Exp $
 
-*mknbi-1.2.10.ebuild
+*mknbi-1.2.11.ebuild (25 Dec 2002)
 
-  13 Dec 2002; Martin Holzer <mholzer@gentoo.org> mknbi-1.2.10.ebuild files/digest-mknbi-1.2.10 Changelog
+  25 Dec 2002; Martin Holzer <mholzer@gentoo.org> knbi-1.2.11.ebuild files/digest-mknbi-1.2.11 ChangeLog :
+  Version pumped, fixed dependency. Closes #12446.
+
+*mknbi-1.2.10.ebuild (13 Dec 2002)
+
+  13 Dec 2002; Martin Holzer <mholzer@gentoo.org> mknbi-1.2.10.ebuild files/digest-mknbi-1.2.10 Changelog :
   Initial Version. 
