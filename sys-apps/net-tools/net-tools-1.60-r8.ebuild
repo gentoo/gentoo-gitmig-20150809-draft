@@ -1,51 +1,73 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r6.ebuild,v 1.4 2004/02/23 00:47:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.1 2004/03/29 07:34:04 seemant Exp $
 
 inherit eutils
 
-DESCRIPTION="standard Linux network tools"
+DESCRIPTION="Standard Linux networking tools"
 SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
-	mirror://gentoo/${P}-gentoo-extra.tar.bz2"
+	mirror://gentoo/${P}-gentoo-extra-1.tar.bz2"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa mips"
-IUSE="nls build"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64 ~s390"
+IUSE="nls build static"
 
-DEPEND="nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )
+	>=sys-apps/sed-4"
 
 src_unpack() {
+
+	if [ "`use static`" ] ; then
+		CFLAGS="${CFLAGS} -static"
+		LDFLAGS="${LDFLAGS} -static"
+	fi
+
 	PATCHDIR=${WORKDIR}/${P}-gentoo
 
 	unpack ${A}
 	cd ${S}
 
+	# Compile fix for 2.6 kernels
+	epatch ${FILESDIR}/net-tools-1.60-2.6-compilefix.patch
+
+	epatch ${FILESDIR}/net-tools-1.60-cleanup-list-handling.patch
+
 	# some redhat patches
+	epatch ${PATCHDIR}/net-tools-1.54-ipvs.patch
 	epatch ${PATCHDIR}/net-tools-1.57-bug22040.patch
 	epatch ${PATCHDIR}/net-tools-1.60-manydevs.patch
 	epatch ${PATCHDIR}/net-tools-1.60-miiioctl.patch
+	epatch ${PATCHDIR}/net-tools-1.60-virtualname.patch
+	epatch ${PATCHDIR}/net-tools-1.60-cycle.patch
+
+	# GCC-3.3 Compile Fix
+	epatch ${PATCHDIR}/${P}-multiline-string.patch
+
+	# manpage fix #29677
+	epatch ${FILESDIR}/${PV}-man.patch
 
 	cp ${PATCHDIR}/net-tools-1.60-config.h config.h
 	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
 
-	cp Makefile Makefile.orig
-	sed -e "s:-O2 -Wall -g:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i \
+		-e "s:-O2 -Wall -g:${CFLAGS}:" \
+		-e "/^LOPTS =/ s/\$/${CFLAGS}/" Makefile ||
+			die "sed Makefile failed"
 
-	cd man
-	cp Makefile Makefile.orig
-	sed -e "s:/usr/man:/usr/share/man:" Makefile.orig > Makefile
+	sed -i -e "s:/usr/man:/usr/share/man:" man/Makefile || \
+		die "sed man/Makefile failed"
 
 	cp -f ${PATCHDIR}/ether-wake.c ${S}
-	cd ${S}
+	cp -f ${PATCHDIR}/ether-wake.8 ${S}/man/en_US
 
 	if [ -z "`use nls`" ] ; then
-		mv config.h config.h.orig
-		sed 's:\(#define I18N\) 1:\1 0:' config.h.orig > config.h
+		sed -i -e 's:\(#define I18N\) 1:\1 0:' config.h || \
+			die "sed config.h failed"
 
-		mv config.make config.make.orig
-		sed 's:I18N=1:I18N=0:' config.make.orig > config.make
+		sed -i -e 's:I18N=1:I18N=0:' config.make ||
+			die "sed config.make failed"
 	fi
 
 	touch config.{h,make}		# sync timestamps
@@ -60,9 +82,9 @@ src_compile() {
 	if [ "`use nls`" ] ; then
 		cd po
 		make || die
-		cd ${S}
 	fi
 
+	cd ${S}
 	gcc ${CFLAGS} -o ether-wake ether-wake.c || die
 }
 

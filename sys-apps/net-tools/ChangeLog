@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.26 2004/03/05 18:15:13 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.27 2004/03/29 07:34:04 seemant Exp $
+
+*net-tools-1.60-r8 (28 Mar 2004)
+
+  28 Mar 2004; Seemant Kulleen <seemant@gentoo.org> net-tools-1.60-r6.ebuild,
+  net-tools-1.60-r8.ebuild, files/net-tools-1.60-cleanup-list-handling.patch:
+  fix for nameif segfaulting on larger mtabs, thanks to: Tony Vroon
+  <tony@vroon.org> in bug #37769
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> net-tools-1.60-r7.ebuild:
   adding initial s390 support
