@@ -1,8 +1,11 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.2 2003/04/03 21:30:48 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.3 2003/04/06 08:54:21 absinthe Exp $
 
 *jmeter-1.8.1 (16 Mar 2003)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> jmeter-1.8.1.ebuild:
+  ppc sparc moved to stable.
 
   03 Apr 2003; Dylan Carlson <absinthe@gentoo.org> jmeter-1.8.1.ebuild:
   moved x86 to stable.
