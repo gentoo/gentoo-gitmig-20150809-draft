@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f1af8f31a1a363f7339440ecfdd16749 ChangeLog 668
-MD5 e885f880a843884d54fddb81a80e0180 cpuburn-1.4.ebuild 866
+MD5 9f20ba39e79ed7a255519a016dc8f326 ChangeLog 672
+MD5 a268f35b5926a13a114b40599a9fa8c2 cpuburn-1.4.ebuild 871
 MD5 6cf0a4c748c883846c78a58b0173aa80 files/digest-cpuburn-1.4 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW3byHTu7gpaalycRAolMAJ9i8CoHaPwnKF2p07n6nH3WHFRhQQCg0w8I
-mQgt1XresnJPe0oW24RnAzM=
-=ZUHL
------END PGP SIGNATURE-----

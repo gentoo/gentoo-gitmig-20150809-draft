@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68e11ec775b8566b4651be3e86bf6185 ChangeLog 1028
-MD5 150169aad3de384255b22cf3c9227ae8 lmbench-3.0_alpha3.ebuild 1314
+MD5 7c697fa7e56865dbf259218eec183b05 ChangeLog 1030
+MD5 b8339fc518949be40e529431937d4e8c lmbench-3.0_alpha3.ebuild 1319
 MD5 1067597d6549e1545b84a9d379901ae4 metadata.xml 412
 MD5 1cddbfe67828e96db956b8b6535f44c0 files/bc-config 646
 MD5 25a33fad490151f7d1e8522b7795da7f files/bc_lm.pl 3196
 MD5 79c7cffe8649099fd090204cd546db39 files/digest-lmbench-3.0_alpha3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3zPdHTu7gpaalycRAntSAKD42Egv9pe9uR5CFVzPlw2E+StqHQCfXCs3
-3W4zFjfcXdTsP2eKVw8z7Lw=
-=4YhZ
------END PGP SIGNATURE-----
