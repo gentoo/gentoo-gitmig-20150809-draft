@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.74 2003/10/25 14:46:14 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.75 2003/10/26 10:36:53 sergey Exp $
+
+  26 Oct 2003; Sergey Kuleshov <svyatogor@gentoo.org>
+  files/xmms-1.2.8-russian-charset-csa20.patch:
+  Fixed bug 31984 - xmms-1.2.8-r3 Assertion `xmms_autocharset_changed>=0' failed.
 
   25 Oct 2003; Sergey Kuleshov <svyatogor@gentoo.org>
   files/xmms-1.2.8-russian-charset-csa20.patch:
