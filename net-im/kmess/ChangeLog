@@ -1,0 +1,9 @@
+# ChangeLog for net-im/kmess
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.1 2002/04/24 21:08:02 verwilst Exp $
+
+*kmess-0.9.2 (24 April 2002)
+
+  24 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+  
+  Initial version in Portage.. Enjoy!
