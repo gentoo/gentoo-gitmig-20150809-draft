@@ -17,6 +17,7 @@ MD5 09a849bbe9c516658420632e9ddcbfc8 files/digest-mips-sources-2.6.7-r6 384
 MD5 2fc5d0e8a97a8d2e7c9e20552a795d96 files/misc-2.6-compat_alloc_user_space.patch 755
 MD5 d205ef18aaa52cfea67cd116df7e763c files/digest-mips-sources-2.4.27 303
 MD5 fa6b0c9324110b868df7cad2d83300ba files/digest-mips-sources-2.6.8.1 388
+MD5 fbb6766828584e454bf053286aad6207 files/mipscvs-2.4.27-makefile-fix.patch 428
 MD5 fbb6766828584e454bf053286aad6207 files/mipscvs-2.4.25-makefile-fix.patch 428
 MD5 95ba3093147f4188db0ea4949e4317cf files/mipscvs-2.4.25-makefile-inlinelimit.patch 1588
 MD5 764740b749fd1f81313aa941c55000ac files/mipscvs-2.4.25-no-page-align.patch 1013
