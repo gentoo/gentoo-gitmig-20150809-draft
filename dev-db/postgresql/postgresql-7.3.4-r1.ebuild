@@ -1,13 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.8 2004/04/06 02:59:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.9 2004/04/16 02:18:38 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
-DESCRIPTION="sophisticated Object-Relational DBMS"
-
-RESTRICT="nomirror"
 P_HIERPG="hier-Pg7.3-0.3"
+DESCRIPTION="sophisticated Object-Relational DBMS"
 HOMEPAGE="http://www.postgresql.org/ http://gppl.terminal.ru/index.eng.html"
 SRC_URI="mirror://postgresql/src/${PV}/${P}.tar.gz
 	pg-hier? ( http://gppl.terminal.ru/${P_HIERPG}.tar.gz )"
@@ -16,6 +14,7 @@ LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib pg-hier"
+RESTRICT="nomirror"
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
@@ -80,7 +79,7 @@ check_java_config() {
 
 src_unpack() {
 	unpack ${A} || die
-	if [ "`use pg-hier`" ]; then
+	if use pg-hier ; then
 		cd ${WORKDIR} || die
 		mv readme.html README-${P_HIERPG}.html || die
 		cd ${S} || die
@@ -92,7 +91,7 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	if [ "`use java`" -a ! "`use amd64`" -a ! "`use hppa`" ]; then
+	if use java && ! use amd64 && ! use hppa ; then
 		check_java_config
 	fi
 
@@ -100,7 +99,7 @@ src_compile() {
 	use tcltk && myconf="--with-tcl"
 	use python && use ppc || myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	if [ "`use java`" -a ! "`use amd64`" -a ! "`use hppa`" ]; then
+	if use java && ! use amd64 && ! use hppa ; then
 		myconf="$myconf --with-java"
 	fi
 	use ssl && myconf="$myconf --with-openssl"
@@ -133,7 +132,7 @@ src_compile() {
 src_install() {
 	addwrite "/usr/share/man/man3/Pg.3pm"
 
-	if [ "`use perl`" ]
+	if use perl
 	then
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
 		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
@@ -148,7 +147,7 @@ src_install() {
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	cd ${S}
-	if [ "`use pg-hier`" ]; then
+	if use pg-hier ; then
 		dodoc ${WORKDIR}/README-${P_HIERPG}.html
 	fi
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
@@ -165,7 +164,7 @@ src_install() {
 	rm -rf ${D}/usr/doc ${D}/mnt
 	exeinto /usr/bin
 
-	if [ "`use java`" -a ! "`use amd64`" -a ! "`use hppa`" ]; then
+	if use java && ! use amd64 && ! use hppa ; then
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi

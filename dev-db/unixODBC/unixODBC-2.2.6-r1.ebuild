@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.4 2004/03/23 09:15:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.5 2004/04/16 02:21:04 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -22,7 +24,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-# braindead check in configure fails - hack approach
+	# braindead check in configure fails - hack approach
 	epatch ${FILESDIR}/${P}-configure.in.patch
 
 	autoconf || die "autoconf failed"
@@ -31,27 +33,28 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ "`use qt`" ]
-	then
+	if use qt ; then
 		myconf="--enable-gui=yes"
 	else
 		myconf="--enable-gui=no"
 	fi
 
-	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --sysconfdir=/etc/unixODBC \
-		    ${myconf} || die
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--sysconfdir=/etc/unixODBC \
+		${myconf} || die
 
 	make || die
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		cd gODBCConfig
-		./configure --host=${CHOST} \
-				--prefix=/usr \
-				--sysconfdir=/etc/unixODBC \
-				${myconf} || die
+		./configure \
+			--host=${CHOST} \
+			--prefix=/usr \
+			--sysconfdir=/etc/unixODBC \
+			${myconf} || die
 
 		# not sure why these symlinks are needed. busted configure, i guess...
 		ln -s ../depcomp .
@@ -64,14 +67,14 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		cd gODBCConfig
 		make DESTDIR=${D} install || die
 		cd ..
 	fi
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README*
+	dodoc AUTHORS ChangeLog NEWS README*
 	find doc/ -name "Makefile*" -exec rm '{}' \;
 	dohtml doc/*
 	prepalldocs

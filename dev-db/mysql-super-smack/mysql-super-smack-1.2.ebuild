@@ -1,18 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.2.ebuild,v 1.1 2004/02/24 04:04:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.2.ebuild,v 1.2 2004/04/16 02:15:37 vapier Exp $
+
+inherit eutils
 
 MY_PN="super-smack"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="MySQL Super Smack is a benchmarking, stress testing, and load generation tool for MySQL & PostGreSQL"
 HOMEPAGE="http://jeremy.zawodny.com/mysql/${MY_PN}/"
-SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz"
+SRC_URI="http://jeremy.zawodny.com/mysql/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="mysql postgres"
+
 DEPEND="mysql? ( dev-db/mysql )
-		postgres? ( dev-db/postgresql )"
+	postgres? ( dev-db/postgresql )"
+
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
@@ -28,7 +33,6 @@ src_compile() {
 	use postgres && myconf="${myconf} --with-pgsql"
 	myconf="${myconf} --with-datadir=/var/tmp/${MY_PN}"
 	myconf="${myconf} --with-smacks-dir=/usr/share/${MY_PN}"
-	echo $myconf
 	econf ${myconf} || die
 	emake || die
 }

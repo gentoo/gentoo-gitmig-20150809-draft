@@ -1,12 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57-r1.ebuild,v 1.3 2004/02/22 07:34:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57-r1.ebuild,v 1.4 2004/04/16 02:17:17 vapier Exp $
 
-# bug #11681; get b0rked code when using -march=k6 with this package.
-inherit flag-o-matic
-replace-flags "-march=k6-3" "-march=i586"
-replace-flags "-march=k6-2" "-march=i586"
-replace-flags "-march=k6" "-march=i586"
+inherit flag-o-matic eutils
 
 SVER=${PV%.*}
 #normal releases:
@@ -21,8 +17,8 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="static readline innodb berkdb tcpd ssl debug"
 KEYWORDS="x86 ~sparc ~alpha ~hppa"
+IUSE="static readline innodb berkdb tcpd ssl debug"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -30,7 +26,6 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	>=sys-libs/zlib-1.1.3
 	dev-lang/perl
 	sys-apps/procps"
-
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 
 src_unpack() {
@@ -49,6 +44,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug #11681; get b0rked code when using -march=k6 with this package.
+	replace-cpu-flags i586 k6 k6-2 k6-3
+
 	local myconf
 	# The following fix is due to a bug with bdb on sparc's. See: 
 	# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
@@ -134,8 +132,7 @@ src_install() {
 		rm -f ${D}/usr/bin/mysql_setpermission
 	fi
 
-	dodoc README COPYING COPYING.LIB MIRRORS \
-		Docs/{manual.ps,manual.txt}
+	dodoc README MIRRORS Docs/{manual.ps,manual.txt}
 	dohtml -r Docs/*
 	docinto conf-samples
 	dodoc support-files/my-*.cnf
