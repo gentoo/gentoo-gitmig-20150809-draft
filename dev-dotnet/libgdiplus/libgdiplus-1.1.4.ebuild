@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.4.ebuild,v 1.1 2005/02/21 18:19:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.4.ebuild,v 1.2 2005/02/21 20:12:07 latexer Exp $
 
 inherit libtool eutils
 
@@ -30,6 +30,7 @@ RDEPEND=">=dev-dotnet/mono-${PV}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-included-cairo-fix.diff || die
 	libtoolize --copy --force || die "libtoolize failed"
 	aclocal || die "aclocal failed"
 	autoconf || die "autoconf failed"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.20 2005/02/21 18:19:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.21 2005/02/21 20:12:07 latexer Exp $
+
+  21 Feb 2005; Peter Johanson <latexer@gentoo.org>
+  +files/libgdiplus-1.1.4-included-cairo-fix.diff, libgdiplus-1.1.4.ebuild:
+  Forgot a small patch.
 
 *libgdiplus-1.1.4 (21 Feb 2005)
 

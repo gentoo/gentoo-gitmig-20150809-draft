@@ -1,0 +1,33 @@
+diff -aur libgdiplus-1.1.4/configure.in libgdiplus-1.1.4-cairo-fix/configure.in
+--- libgdiplus-1.1.4/configure.in	2005-01-26 20:33:54.000000000 -0500
++++ libgdiplus-1.1.4-cairo-fix/configure.in	2005-02-03 21:20:58.826151752 -0500
+@@ -30,6 +30,7 @@
+ 	CAIRO_LIBS='$(top_builddir)/cairo/src/libcairo.la'
+ 	CAIRO_CFLAGS='-I$(top_srcdir)/libpixman/src -I$(top_srcdir)/cairo/src'
+ 	AC_DEFINE(USE_INCLUDED_CAIRO,1,[Use Cairo bundled in libgdiplus])
++	AM_CONDITIONAL(USE_INCLUDED_CAIRO, true)
+ else
+ 	if pkg-config --exact-version 0.3.0 cairo; then
+ 		echo Cairo installation OK
+@@ -39,6 +40,7 @@
+ 
+ 	CAIRO_LIBS="`pkg-config --libs cairo`"
+ 	CAIRO_CFLAGS="`pkg-config --cflags cairo`"
++	AM_CONDITIONAL(USE_INCLUDED_CAIRO, false)
+ fi
+ 
+ GDIPLUS_LIBS="$CAIRO_LIBS `pkg-config --libs glib-2.0 ` `freetype-config --libs`"
+diff -aur libgdiplus-1.1.4/Makefile.am libgdiplus-1.1.4-cairo-fix/Makefile.am
+--- libgdiplus-1.1.4/Makefile.am	2005-01-25 14:43:11.000000000 -0500
++++ libgdiplus-1.1.4-cairo-fix/Makefile.am	2005-02-03 21:15:22.270316016 -0500
+@@ -1,4 +1,9 @@
+-SUBDIRS = libpixman cairo src tests
++SUBDIRS = 
++if USE_INCLUDED_CAIRO
++SUBDIRS += libpixman cairo
++endif
++
++SUBDIRS += src tests
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ 
