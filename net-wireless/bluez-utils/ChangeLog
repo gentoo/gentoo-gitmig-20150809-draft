@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.10 2003/09/29 20:45:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.11 2003/11/22 21:37:39 liquidx Exp $
+
+  22 Nov 2003; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.3-r1.ebuild,
+  files/bluez-utils-2.3-rfcomm_fflush.patch:
+  added patch to flush output for rfcomm (#32719)
 
   29 Sep 2003; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.3-r1.ebuild:
   fix exec perms on init script
