@@ -1,0 +1,35 @@
+# ChangeLog for dev-libs/libgeotiff
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.1 2004/12/28 22:52:55 ribosome Exp $
+
+*libgeotiff-1.2.1 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +libgeotiff-1.2.0.ebuild, +libgeotiff-1.2.1.ebuild:
+  Moved from dev-libs/libgeotiff to sci-libs/libgeotiff.
+
+  11 Dec 2004; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
+  libgeotiff-1.2.0.ebuild, libgeotiff-1.2.1.ebuild:
+  moved to sci-herd and bumped to x86
+
+  24 Nov 2003; <rphillips@gentoo.org> libgeotiff-1.2.1.ebuild:
+  changed depend to libtiff-3.6.0
+
+*libgeotiff-1.2.1 (05 Oct 2003)
+
+  08 Oct 2003; Ryan Phillips <rphillips@gentoo.org> :
+  bug fix
+
+  05 Oct 2003; Ryan Phillips <rphillips@gentoo.org> :
+  version bump
+  removed patch
+
+*libgeotiff-1.2.0 (19 Jun 2003)
+
+  05 Oct 2003; Ryan Phillips <rphillips@gentoo.org> :
+  marked stable
+  removed patch
+
+  19 Jun 2003; Ryan Phillips <rphillips@gentoo.org> :
+
+  Created by Paul Kronenwetter. Fixes Bug #12232
