@@ -1,4 +1,14 @@
-MD5 dd1645f5433d54c9ff9ae0e880871ab0 ChangeLog 518
-MD5 987d8e3c7b6be4fbc5633a31e0adb4da ask-2.4.1.ebuild 1532
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d50e8dbe70a05411043bb73686ffe843 ChangeLog 602
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 0759bcbd4eaf35dfc4196547dd5580d4 ask-2.4.1.ebuild 1531
 MD5 6d9189406cd0e6df7ea50a6e1d49ecfc files/digest-ask-2.4.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBVa4N10xuJSrg3/sRAr66AJ9HPNq7m8t5T0cZ1YMF++v7Xxks/wCfXHMD
+JhsMm3FS9+TKh2Z0pAY2z8g=
+=AJHY
+-----END PGP SIGNATURE-----
