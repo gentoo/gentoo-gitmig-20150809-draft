@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db46343f17a32e13e418a54d79c9df4f ChangeLog 1175
-MD5 e56bc4d0f76e8312d9dfee4833fa3636 openntpd-3.6_p1.ebuild 998
+MD5 28d410c0ad5a5d0c3a1e5058759cebac ChangeLog 1265
 MD5 e30195b608a584f4e245e7edfe260680 openntpd-0.20040824p.ebuild 944
+MD5 d4073e95b0ac6c95313b95c83492f012 openntpd-3.6_p1.ebuild 1006
 MD5 b1e008f7e477784dded26817d225dd1c files/3.6_p1-ntpd.8.patch 507
-MD5 468ce285b2b4b1d152bd4cfd51b613e8 files/openntpd.rc 915
-MD5 9cb3424ed5b3f20a231d581b78629afb files/openntpd.conf.d 257
-MD5 ccc41a09c3fd03e626921199700f9a7e files/digest-openntpd-3.6_p1 66
 MD5 6629cc381ff1007852deb4dfc2303b20 files/digest-openntpd-0.20040824p 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBogW4HTu7gpaalycRAl+9AKDwMkPTBQ2AQojvn0BYlBc5Lgf4ggCfY575
-3tl00xWqyLbYCQfKbz6Ee4M=
-=TDpm
------END PGP SIGNATURE-----
+MD5 ccc41a09c3fd03e626921199700f9a7e files/digest-openntpd-3.6_p1 66
+MD5 9cb3424ed5b3f20a231d581b78629afb files/openntpd.conf.d 257
+MD5 468ce285b2b4b1d152bd4cfd51b613e8 files/openntpd.rc 915

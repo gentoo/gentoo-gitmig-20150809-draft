@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.9 2004/11/04 03:12:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.10 2004/12/10 13:32:50 agriffis Exp $
+
+  12 Dec 2004; Aron Griffis <agriffis@gentoo.org> openntpd-3.6_p1.ebuild:
+  add ~ia64
 
 *openntpd-0.20040824p (03 Nov 2004)
 
