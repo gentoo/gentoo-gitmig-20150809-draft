@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/colorgcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.4 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.5 2002/12/25 21:53:43 azarah Exp $
+
+*colorgcc-1.3.2-r2 (25 Dec 2002)
+
+  25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> colorgcc-1.3.2-r2.ebuild,
+                                                    colorgcc-1.3.2-gcc_config.patch :
+
+  Add support for gcc-config enabled gcc's, closing bug #12689.  Note that
+  you need gcc-config-1.2.7 or later ...
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
