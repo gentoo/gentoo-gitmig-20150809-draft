@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.1 2004/04/23 12:08:02 stuart Exp $
+
+*linkchecker-1.12.0 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> linkchecker-1.12.0.ebuild,
+  metadata.xml:
+  Initial import; thanks to Carlo <current@myrealbox.com>; bug #40259
+
