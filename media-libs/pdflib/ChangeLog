@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.41 2004/10/16 23:11:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.42 2004/11/30 05:31:39 chriswhite Exp $
+
+*pdflib-6.0.0_p1 (30 Nov 2004)
+
+  30 Nov 2004; Chris White <chriswhite@gentoo.org> +pdflib-6.0.0_p1.ebuild:
+  Version bump to 6.0.0_p1.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> pdflib-5.0.2.ebuild:
   dojar --> java-pkg_dojar
