@@ -1,0 +1,97 @@
+#!/bin/bash
+#
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.1 2004/02/10 07:21:13 brad Exp $
+
+# Set to "window" if you prefer new Firefox windows instead of new tabs
+newtype=${MOZILLA_NEWTYPE:-"tab"}
+
+# Point this to your Firefox installation if not using the default
+export MOZILLA_FIVE_HOME="/usr/lib/MozillaFirefox"
+fbpath=${MOZILLA_FIVE_HOME}
+
+# Sanity check
+if [[ -z $DISPLAY ]]; then
+  echo "DISPLAY is unset!" >&2
+  exit 1
+fi
+
+# Validate the args and extract the url
+url=''
+declare -a args=($@)
+while [[ $# -ne 0 ]] ; do
+  if [[ $1 == -* ]] ; then
+    case ${1#-} in
+      height|width|CreateProfile|P|UILocale|contentLocale|remote|edit|chrome)
+        shift 2 ;;
+      *)
+        shift 1 ;;
+    esac
+  else
+    if [[ -n $url ]] ; then
+      echo "Usage error: more than one URL given" >&2
+      exit 255
+    else
+      url=$1
+      shift 1
+      if [[ $url != *:* ]] ; then
+        url=http://$url
+      fi
+    fi
+  fi
+done
+
+# Try to start in an existing session; check all screens
+declare -a screens=(
+  $(/usr/X11R6/bin/xdpyinfo | awk '
+    /^name of display:/ { 
+      disp = substr($NF, 0, index($NF, ".")-1) 
+    }
+    /^number of screens:/ {
+      for (i = 0; i < $NF; i++) printf("%s.%d\n", disp, i)
+    }')
+  )
+
+# Attempt to fix bug 39797 by making sure MozillaFirefox is running
+# on the DISPLAY prior to calling mozilla-xremote-client.  The
+# problem here is that mozilla-xremote-client will return a zero
+# exit status if it contacts a Thunderfox-0.3 instance, even though
+# Thunderfox can't handle the openURL request.  :-(
+#
+# Note: This seems to be fixed with Thunderfox-0.4, which rejects the
+# openURL request appropriately.
+declare -a candidates=()
+for s in $DISPLAY "${screens[@]}"; do 
+  if DISPLAY=${s} xwininfo -root -tree | grep -q 'firefox-bin'; then
+    candidates=("${candidates[@]}" ${s})
+  fi
+done
+
+if [[ ${#candidates[@]} > 0 ]]; then
+  for s in "${candidates[@]}"; do 
+    DISPLAY=${s} ${fbpath}/mozilla-xremote-client "openURL($url, new-$newtype)" \
+    && exit 0
+  done
+  retval=$?
+else
+  # simulate mozilla-xremote-client's response when it can't find an instance
+  retval=2
+fi
+
+if [[ $retval -eq 2 || $retval -eq 3 ]] ; then
+  # 2 = No running windows found, so start a new instance
+  # 3 = Thunderfox is running, but doesn't handle openURL command
+  #     (or it might be an unresponsive Firefox)
+  ${fbpath}/firefox "${args[@]}" && exit 0
+  retval=$?
+  echo "firefox exited with non-zero status ($retval)" >&2
+elif [[ $retval -eq 1 ]] ; then
+  echo "Unable to connect to X server" >&2
+else
+  echo "Unknown error $retval from mozilla-xremote-client" >&2
+fi
+
+exit $retval
+
+# vim:expandtab sw=2:

@@ -1,0 +1,9 @@
+
+
+*mozilla-firefox-0.8 (10 Feb 2004)
+
+  10 Feb 2004; Brad Laue <brad@gentoo.org> metadata.xml,
+  mozilla-firefox-0.8.ebuild, files/10MozillaFirefox, files/firefox,
+  files/mozilla-1.3-alpha-stubs.patch, files/mozilla-firebird-amd64.patch:
+  Introducing Mozilla Firefox.
+
