@@ -1,0 +1,19 @@
+PPC 2.4 kernels
+---------------
+
+- ppc-sources contains pegasos-compatible 2.4 benh kernel sources.
+
+PPC 2.6 kernels
+---------------
+
+- benh no longer maintains a separate 2.6 tree, linus merges benhs
+  patches directly into the main linux tree (hereinafter refered to 
+  as the linus tree). 
+
+- gentoo-dev-sources provides sources for the linus tree (patched
+  with various performance enhancing patches and pegasos support 
+  patch)
+
+- development-sources provides the vanilla linus tree (without 
+  performance enhacing patches and pegasos support patch)
+
