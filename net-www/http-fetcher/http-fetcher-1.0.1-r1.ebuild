@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/http-fetcher/http-fetcher-1.0.1-r1.ebuild,v 1.2 2003/02/13 15:35:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/http-fetcher/http-fetcher-1.0.1-r1.ebuild,v 1.3 2003/03/24 17:46:42 mkennedy Exp $
 
 DESCRIPTION="HTTP Fetcher is a small, robust, flexible library for downloading files via HTTP using the GET method."
 HOMEPAGE="http://cs.nmu.edu/~lhanson/http_fetcher/"
@@ -18,6 +18,8 @@ src_unpack () {
 	unpack ${A}
 	# source: InetCop Security Advisory, Bugtraq, 06 Jan 2003
 	cd ${S}/src && patch -p0 <${FILESDIR}/buffer-overflow-gentoo.patch || die
+	# glibc2.3.2 linking problems
+	cd ${S} && patch -p1 <${FILESDIR}/errno-link-gentoo.patch || die
 }
 
 src_compile() {
@@ -34,4 +36,3 @@ src_install() {
 	dohtml -r docs/index.html docs/html
 	dodoc README ChangeLog INSTALL LICENSE
 }
-
