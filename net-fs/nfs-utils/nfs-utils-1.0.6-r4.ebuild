@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r4.ebuild,v 1.8 2004/11/09 19:53:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r4.ebuild,v 1.9 2004/11/14 02:34:05 vapier Exp $
 
 inherit gnuconfig
 
@@ -13,13 +13,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="tcpd"
 
-DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
-RDEPEND="${DEPEND}
+RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	>=net-nds/portmap-5b-r6
 	>=sys-apps/util-linux-2.11f"
+DEPEND="${RDEPEND}
+	>=sys-apps/portage-2.0.51"
 
 src_compile() {
-	gnuconfig_update
 	econf \
 		--mandir=/usr/share/man \
 		--with-statedir=/var/lib/nfs \
@@ -33,12 +33,15 @@ src_compile() {
 	fi
 
 	# parallel make fails for depend target
-	make depend || die "failed to make depend"
+	emake -j1 depend || die "failed to make depend"
 	emake || die "Failed to compile"
 }
 
 src_install() {
-	make install install_prefix=${D} MANDIR=${D}/usr/share/man \
+	make \
+		install_prefix=${D} \
+		MANDIR=${D}/usr/share/man \
+		install \
 		|| die "Failed to install"
 
 	# Don't overwrite existing xtab/etab, install the original
@@ -51,19 +54,15 @@ src_install() {
 
 	# Install some client-side binaries in /sbin
 	dodir /sbin
-	mv ${D}/usr/sbin/rpc.{lockd,statd} ${D}/sbin
+	mv ${D}/usr/sbin/rpc.{lockd,statd} ${D}/sbin/
 
 	dodoc ChangeLog README
 	docinto linux-nfs ; dodoc linux-nfs/*
 
 	insinto /etc ; doins ${FILESDIR}/exports
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/nfs-5 nfs
-	newexe ${FILESDIR}/nfsmount nfsmount
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/nfs.confd nfs
+	doinitd ${FILESDIR}/nfs ${FILESDIR}/nfsmount
+	newconfd ${FILESDIR}/nfs.confd nfs
 }
 
 pkg_postinst() {
