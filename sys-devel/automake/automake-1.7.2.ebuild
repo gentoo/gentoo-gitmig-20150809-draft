@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.2.ebuild,v 1.13 2004/07/15 03:08:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.2.ebuild,v 1.14 2004/08/24 08:42:18 seemant Exp $
 
 IUSE=""
 
@@ -412,7 +412,7 @@ pkg_postinst() {
 	done
 
 	echo
-	einfo "Please note that the 'WANT_AUTOMAKE_1_?=1' have changed to:"
+	einfo "Please note that the 'WANT_AUTOMAKE_1_?=1' syntax has changed to:"
 	echo
 	einfo "  WANT_AUTOMAKE=<required version>"
 	echo

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.6 2004/08/21 06:54:33 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.7 2004/08/24 08:42:18 seemant Exp $
 
 inherit eutils
 
@@ -494,7 +494,7 @@ pkg_postinst() {
 	done
 
 	echo
-	einfo "Please note that the 'WANT_AUTOMAKE_1_?=1' have changed to:"
+	einfo "Please note that the 'WANT_AUTOMAKE_1_?=1' syntax has changed to:"
 	echo
 	einfo "  WANT_AUTOMAKE=<required version>"
 	echo
