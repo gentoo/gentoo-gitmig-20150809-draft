@@ -1,28 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.10 2004/06/25 20:59:22 agriffis Exp $
-
-IUSE="nls build afs"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.11 2004/06/29 15:58:53 vapier Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="GNU utilities to find files"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
-
 # Note this doesn't point to gnu.org because alpha.gnu.org has quit
 # supplying the development versions.  If it comes back in the future
 # then we might want to redirect the link.  See bug 18729
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc hppa alpha ia64 mips"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
+IUSE="nls build afs"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
 	x86? ( afs? ( net-fs/openafs ) )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

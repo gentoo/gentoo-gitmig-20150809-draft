@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.22 2004/06/28 16:07:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.23 2004/06/29 15:58:53 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
-SELINUX_PATCH="findutils-4.1.20-selinux.diff.bz2"
+SELINUX_PATCH="findutils-4.1.20-selinux.diff"
 
 DESCRIPTION="GNU utilities to find files"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
