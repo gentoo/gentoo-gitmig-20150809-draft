@@ -3,8 +3,8 @@ MD5 87a28f8bfb348b061c531a3bdbca8884 gnunet-0.4.2.ebuild 1117
 MD5 94e70847eb6c1f77c4060c6e5bfe8dbb gnunet-0.5.1a.ebuild 972
 MD5 ea484e7b68f8a6a5547f97d2c210fc6e gnunet-0.4.4.ebuild 1116
 MD5 8fd9f497e54af15d39dbbf749c85e29b gnunet-0.4.6.ebuild 1086
-MD5 00b0e74eaf4793b9afa3e7c00d67ddd7 gnunet-0.5.4.ebuild 1208
-MD5 bda93bc721907a1bbdb0851377cbadd2 ChangeLog 1625
+MD5 f9923e2f10ff96052337f034625f803d gnunet-0.5.4.ebuild 1207
+MD5 69d207f2c0e3ba12271c83b826e7c60f ChangeLog 1706
 MD5 7664f3e5104494e1adac6a1509e14ad7 files/digest-gnunet-0.5.1a 66
 MD5 ac97b3cabe2be122a2a6f6bd693ff30e files/digest-gnunet-0.5.2a 66
 MD5 cd954d086aa8704dece0dd0b302f07f2 files/digest-gnunet-0.4.2 65

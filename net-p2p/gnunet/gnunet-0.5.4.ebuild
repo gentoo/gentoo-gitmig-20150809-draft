@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.5.4.ebuild,v 1.1 2003/06/16 23:16:34 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.5.4.ebuild,v 1.2 2003/07/09 08:27:24 spider Exp $
 
 S="${WORKDIR}/GNUnet-${PV}"
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
@@ -11,7 +11,7 @@ IUSE="ipv6"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-libs/openssl-0.9.6d
 	>=sys-libs/gdbm-1.8.0
