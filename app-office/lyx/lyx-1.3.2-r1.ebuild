@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.9 2003/10/06 15:38:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.10 2003/10/08 08:25:50 obz Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha"
-IUSE="nls cups qt debug"
+IUSE="nls cups qt debug gnome"
 
 DEPEND="virtual/x11
 	virtual/tetex
@@ -77,6 +77,13 @@ src_install() {
 	dodoc README* UPGRADING INSTALL* ChangeLog NEWS COPYING ANNOUNCE ABOUT-NLS $DISTDIR/preferences
 	insinto /usr/share/lyx/bind
 	doins $DISTDIR/hebrew.bind
+
+	# gnome menu entry
+	if use gnome; then
+		insinto /usr/share/applications
+		doins ${FILESDIR}/lyx.desktop
+	fi
+
 }
 
 pkg_postinst() {

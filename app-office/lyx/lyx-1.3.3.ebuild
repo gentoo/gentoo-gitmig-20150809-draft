@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.1 2003/10/07 09:14:30 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.2 2003/10/08 08:25:50 obz Exp $
 
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha"
-IUSE="nls cups qt debug"
+IUSE="nls cups qt debug gnome"
 
 # these dependencies need looking at.
 # does lyx only need qt to compile but not run ?
@@ -77,6 +77,13 @@ src_install() {
 	dodoc README* UPGRADING INSTALL* ChangeLog NEWS COPYING ANNOUNCE ABOUT-NLS $DISTDIR/preferences
 	insinto /usr/share/lyx/bind
 	doins $DISTDIR/hebrew.bind
+
+	# gnome menu entry
+	if use gnome; then
+		insinto /usr/share/applications
+		doins ${FILESDIR}/lyx.desktop
+	fi
+
 }
 
 pkg_postinst() {
