@@ -1,3 +1,5 @@
-MD5 ea95d3472987c5f15a2ffb5598df9bbf files/digest-vobcopy-0.5.7 65
 MD5 82556b1e6a2f561accf520581b50044f ChangeLog 416
 MD5 04ceded9fec2de31dbbdb1889a7035b7 vobcopy-0.5.7.ebuild 674
+MD5 04ceded9fec2de31dbbdb1889a7035b7 vobcopy-0.5.8.ebuild 674
+MD5 ea95d3472987c5f15a2ffb5598df9bbf files/digest-vobcopy-0.5.7 65
+MD5 b1c360ab585503adcd49993902e57f7d files/digest-vobcopy-0.5.8 65
