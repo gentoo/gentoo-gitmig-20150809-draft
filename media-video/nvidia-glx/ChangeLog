@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.70 2005/01/17 08:47:43 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.71 2005/01/18 07:36:06 eradicator Exp $
+
+*nvidia-glx-1.0.6629-r2 (17 Jan 2005)
+
+  17 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +nvidia-glx-1.0.6629-r2.ebuild:
+  Revision bumping to support amd64's 2005.0. Now installs both 32bit and
+  64bit libs on that profile.
 
   17 Jan 2005; Andrew Bevitt <cyfred@gentoo.org>
   nvidia-glx-1.0.6629-r1.ebuild, -nvidia-glx-1.0.6629.ebuild:
