@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.8 2004/09/15 18:35:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.9 2004/09/30 01:36:11 eradicator Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-3.2.1-gentoo.patch || die
+	epatch ${FILESDIR}/${P}-gentoo.patch || die
 }
 
 src_compile() {
