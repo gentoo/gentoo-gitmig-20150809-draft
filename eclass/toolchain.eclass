@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.96 2005/01/30 07:45:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.97 2005/01/31 02:08:44 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -287,8 +287,13 @@ get_gcc_src_uri() {
 
 	# gcc bounds checking patch
 	if [[ -n ${HTB_VER} ]] ; then
+		local HTBFILE="bounds-checking-gcc-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2"
 		GCC_SRC_URI="${GCC_SRC_URI}
-			boundschecking? ( http://web.inter.nl.net/hcc/Haj.Ten.Brugge/bounds-checking-${PN}-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2 )"
+			boundschecking? ( 
+				mirror://sourceforge/boundschecking/${HTBFILE}
+				http://web.inter.nl.net/hcc/Haj.Ten.Brugge/${HTBFILE}
+				${GENTOO_TOOLCHAIN_BASE_URI}/${HTBFILE}
+			)"
 	fi
 
 	echo "${GCC_SRC_URI}"
