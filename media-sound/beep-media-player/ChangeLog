@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.31 2004/12/19 15:05:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.32 2004/12/19 20:25:33 chainsaw Exp $
+
+  19 Dec 2004; Tony Vroon <chainsaw@gentoo.org>
+  beep-media-player-0.9.7-r1.ebuild:
+  Added warnings if the user did not enable MP3 support.
 
 *beep-media-player-0.9.7-r1 (19 Dec 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r1.ebuild,v 1.1 2004/12/19 15:05:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r1.ebuild,v 1.2 2004/12/19 20:25:33 chainsaw Exp $
 
 IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
@@ -34,6 +34,10 @@ DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
 
 src_unpack() {
+	if ! useq mp3; then
+		ewarn "MP3 support is now optional and you have not enabled it."
+	fi
+
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-noclick-resize.patch
@@ -86,5 +90,6 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "Your XMMS skins, if any, have been symlinked."
+	einfo "MP3 support is now optional, enable the mp3 USE-flag if you want this."
 	echo
 }
