@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.9 2004/02/23 17:50:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.10 2004/03/16 03:20:51 geoman Exp $
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> xawtv-3.90-r1.ebuild,
+  xawtv-3.90.ebuild, xawtv-3.91.ebuild:
+  removed ~mips keywords...please do not keyword these for mips anymore
 
 *xawtv-3.91 (23 Feb 2004)
 
