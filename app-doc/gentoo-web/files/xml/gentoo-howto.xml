@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
-<!-- $Id: gentoo-howto.xml,v 1.13 2001/05/20 08:37:24 pete Exp $ -->
+<!-- $Id: gentoo-howto.xml,v 1.14 2001/05/23 01:27:41 drobbins Exp $ -->
 
-<guide>
+<guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
 <author title="Author"><mail link="pete@gentoo.org">Peter Gavin</mail></author>
 <abstract>This document describes the Gentoo Linux Portage system, how

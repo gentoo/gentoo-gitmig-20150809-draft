@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<guide>
+<guide link="/doc/install.html">
 <title>Gentoo Linux Installation Guide</title>
 <author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 <author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
@@ -121,7 +121,7 @@ Once you've downloaded the ISO image and burned your own Gentoo Linux CD, go ahe
 and boot your system from the CD.  You'll be presented with a GRUB menu that looks
 like this:
 </p>
-<figure link="install-boot.gif" short="The boot screen" caption="When the CD boots, you'll see this screen"/>
+<figure link="/images/install-boot.gif" short="The boot screen" caption="When the CD boots, you'll see this screen"/>
 <p>
 Go ahead and select the first option to continue the CD boot process.  Linux will boot and the Gentoo
 Linux CD detector will start up and detect and mount a minimal Gentoo Linux system included
@@ -146,7 +146,7 @@ partition (256Mb), and <path>/dev/hda3</path> is the root partition (1.5Mb).  No
 Once you've created your partitions, remember to write your changes using the
 <c>w</c> option.
 </p>
-<figure link="install-fdisk.gif" short="Creating partitions" caption="Creating partitions using fdisk"/>
+<figure link="/images/install-fdisk.gif" short="Creating partitions" caption="Creating partitions using fdisk"/>
 </body>
 </section>
 

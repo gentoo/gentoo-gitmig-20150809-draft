@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<guide>
+<guide type="project" link="/projects/dynfw.html">
 <title>dynfw Dynamic Firewall Tools, v1.0</title>
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 

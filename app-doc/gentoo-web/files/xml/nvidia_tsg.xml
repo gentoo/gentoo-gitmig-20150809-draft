@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<guide>
+<guide link="/doc/nvidia_tsg.html">
 <title>nVidia Linux Driver Troubleshooting Guide</title>
 <author><mail link="phoenix@minion.de">Christian Zander</mail></author>
 <author><mail link="mthome@bbn.com">Michael Thome</mail></author>

@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<guide>
+<guide link="/doc/portage-user.html">
 <title>Portage User Guide</title>
 <author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 <author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
