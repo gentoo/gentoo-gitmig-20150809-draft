@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.24 2004/10/10 17:24:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.25 2004/10/31 12:39:47 ka0ttic Exp $
+
+  31 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> devtodo-0.1.18.ebuild:
+  Use bash-completion.eclass
 
   10 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
   Updated metadata to reflect new shell-tools herd.

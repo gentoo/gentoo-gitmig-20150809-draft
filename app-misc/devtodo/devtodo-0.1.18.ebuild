@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18.ebuild,v 1.1 2004/09/11 15:31:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18.ebuild,v 1.2 2004/10/31 12:39:47 ka0ttic Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig bash-completion
 
 DESCRIPTION="A nice command line todo list for developers"
 HOMEPAGE="http://swapoff.org/DevTodo"
@@ -37,8 +37,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog QuickStart README TODO doc/scripts.sh \
 		doc/scripts.tcsh doc/todorc.example contrib/tdrec
 
-	insinto /usr/share/bash-completion
-	newins ${FILESDIR}/${PN}.bash-completion ${PN}
+	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
 }
 
 pkg_postinst() {
