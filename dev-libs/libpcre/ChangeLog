@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.22 2003/11/19 18:22:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.23 2003/12/21 23:39:53 gmsoft Exp $
 
 *libpcre-4.4 (19 Nov 2003)
+
+  22 Dec 2003; Guy Martin <gmsoft@gentoo.org> libpcre-4.4.ebuild :
+  Marked stable for hppa. append-flags -fPIC for hppa.
 
   19 Nov 2003; Martin Holzer <mholzer@gentoo.org> libpcre-4.4.ebuild:
   Version bumped. Closes #28976

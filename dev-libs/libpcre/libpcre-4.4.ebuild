@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.4.ebuild,v 1.1 2003/11/19 18:22:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.4.ebuild,v 1.2 2003/12/21 23:39:53 gmsoft Exp $
 
 inherit libtool
 
@@ -11,12 +11,12 @@ HOMEPAGE="http://www.pcre.org/"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~amd64 ~ia64"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
-	if [ "${ARCH}" = "amd64" ]
+	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "hppa" ]
 	then
 		append-flags -fPIC
 	fi
