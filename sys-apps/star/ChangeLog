@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/star
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.2 2002/04/13 03:26:53 woodchip Exp $
+
+*star-1.4_alpha21 (12 Apr 2002)
+
+  12 Apr 2002; Donny Davies <woodchip@gentoo.org> ChangeLog :
+
+  Update to latest available release.
 
 *star-1.4_alpha15 (1 Feb 2002)
 
