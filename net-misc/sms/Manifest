@@ -1,4 +1,6 @@
 MD5 c3470920989e363259e3615130e58e0f sms-1.9.2i.ebuild 752
 MD5 53f9af53bd2ae23719be948338b95567 metadata.xml 756
-MD5 49950e42deab7a28ff6b91538343963e ChangeLog 367
+MD5 594c6a9f34d2262fc5fa42086bf4eae5 ChangeLog 472
+MD5 69b54d0e14f5762b8e5162b5150e4ef2 sms-1.9.2k.ebuild 756
 MD5 9d5d19dd9aefe3dfd501fe46a9a27f4f files/digest-sms-1.9.2i 61
+MD5 36116b7cf448ae4958c5017ff02f7068 files/digest-sms-1.9.2k 61
