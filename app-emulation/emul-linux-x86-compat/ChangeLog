@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.1 2004/08/16 22:53:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.2 2004/08/29 03:45:50 lv Exp $
+
+  28 Aug 2004; Travis Tilley <lv@gentoo.org> emul-linux-x86-compat-1.0.ebuild:
+  stable on amd64
 
 *emul-linux-x86-compat-1.0 (16 Aug 2004)
 
