@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.25 2004/11/17 00:18:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.26 2004/11/19 09:11:44 eradicator Exp $
 
 IUSE=""
 
@@ -22,7 +22,7 @@ DEPEND=">=sys-devel/autoconf-2.50
 
 RDEPEND="virtual/libc"
 
-asrc_unpack() {
+src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	epatch ${FILESDIR}/${P}-amd64.patch
@@ -39,7 +39,7 @@ asrc_unpack() {
 	elibtoolize
 }
 
-asrc_compile() {
+src_compile() {
 	econf || die
 	sh ltconfig ltmain.sh || die "ltconfig failed"
 	emake || die "emake failed"
