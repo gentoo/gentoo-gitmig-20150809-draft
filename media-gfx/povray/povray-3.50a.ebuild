@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.1 2002/08/02 19:03:10 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.2 2002/08/05 03:08:54 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
 SRC_URI="ftp://ftp.povray.org/pub/povray/Official/Unix/povuni_s.tgz"
-#	ftp://ftp.povray.org/pub/povray/Official/Unix/povuni_d.tgz"
 HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
@@ -22,10 +21,10 @@ DEPEND="media-libs/libpng
 src_compile() {
 
 	econf || die
-	
+
 	# fix system default povray.ini to point to install directory
 	cp povray.ini povray.ini.orig
-	sed -e "s:\(/usr/\)local/\(share\):\1\2:" povray.ini.orig > povray.ini
+	sed -e "s:\(/usr/\)local/\(lib\):\1share:" povray.ini.orig > povray.ini
 
 	cd src
 	cp Makefile makefile.orig
@@ -94,5 +93,17 @@ src_compile() {
 src_install ()
 {
 	emake DESTDIR=${D} install || die
-	ln -s /usr/share/povray-3.5/povray.ini /etc/povray.ini
+
+	mkdir -p ${D}/etc
+	dosym /usr/share/povray-3.5/povray.ini /etc/povray.ini
+}
+
+pkg_postinst ()
+{
+	einfo "Installing configuration files"
+	einfo "*Warning* I/O Security disabled by default"
+	einfo "          Check /etc/povray.conf to enable"
+
+	echo -e "[File I/O Security]\nnone" > /etc/povray.conf
+	
 }
