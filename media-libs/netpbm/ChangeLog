@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.50 2004/10/07 03:01:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.51 2004/11/01 10:45:00 kloeri Exp $
+
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> netpbm-10.20.ebuild:
+  Stable on alpha.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   netpbm-10.20.ebuild:
