@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.16 2004/08/29 01:14:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.17 2004/08/29 11:21:02 mholzer Exp $
+
+*xawtv-3.86-r2 (29 Aug 2004)
+
+  29 Aug 2004; Martin Holzer <mholzer@gentoo.org> xawtv-3.86-r2.ebuild,
+  files/alevtd-style-mozilla.diff:
+  adding patch for style sheet correction. patch submitted by Rudi Lippert
+  <gentoo@lyrikpage.de> In 48955
 
 *xawtv-3.94 (29 Aug 2004)
 
