@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7_rc3.ebuild,v 1.1 2002/11/18 05:20:31 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7_rc3.ebuild,v 1.2 2002/11/19 09:41:47 leonardop Exp $
 
 IUSE="ldap pam postgres mysql ssl tcpd"
 
@@ -25,7 +25,7 @@ DEPEND="net-libs/libpcap
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6f )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r3 )"
 
 src_unpack() {
 
