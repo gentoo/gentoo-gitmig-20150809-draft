@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.17_pre3.ebuild,v 1.3 2002/03/22 05:17:33 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.17_pre3.ebuild,v 1.4 2002/03/22 05:26:09 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -60,6 +60,7 @@ src_install() {
 
 pkg_postinst() {
 	cd ${ROOT}usr/src/${DIRNAME}
+	make mrproper
 	if [ -e "${ROOT}usr/src/linux/.config" ]
 	then
 		cp "${ROOT}usr/src/linux/.config" .config
