@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.2 2005/01/01 10:19:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.3 2005/01/07 02:56:37 josejx Exp $
 
 # Notes:
 #
@@ -39,7 +39,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 RDEPEND="!app-office/openoffice-bin
 	>=sys-libs/glibc-2.1
@@ -227,6 +227,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/openoffice-java.patch
 
 	epatch ${FILESDIR}/${PV}/gcc-instlib.patch
+
+	# Workaround for bug #73940, may break debug use flag on ppc
+	if use ppc; then
+		epatch ${FILESDIR}/${PV}/STLport-vector.patch
+	fi
 
 	#Fix for newer Freetype
 	epatch ${FILESDIR}/${PV}/freetype-217.patch
