@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2799 2004/04/05 06:34:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2800 2004/04/05 07:25:07 carpaski Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -76,6 +76,7 @@ games-fps/aaut
 # <carpaski@gentoo.org> (21 Mar 2004)
 # There's a cache regeneration / deadlock issue to be resolved.
 =sys-apps/portage-2.0.50-r2
+>=sys-apps/portage-2.0.50-r4
 
 # <raker@gentoo.org> (18 Mar 2004)
 # The latest AfterStep beta is broken :(
