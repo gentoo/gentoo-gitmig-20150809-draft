@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.7 2004/04/16 11:32:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.8 2004/06/06 22:30:08 agriffis Exp $
 
 IUSE="opengl"
 
@@ -19,7 +19,8 @@ DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Inline
 	>=dev-perl/ExtUtils-F77-1.13
 	dev-perl/Text-Balanced
-	opengl? ( virtual/opengl virtual/glu )"
+	opengl? ( virtual/opengl virtual/glu )
+	>=sys-apps/sed-4"
 
 mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* COPYING Release_Notes TODO"
 
@@ -29,7 +30,7 @@ src_unpack() {
 	unpack ${A}
 
 	#open gl does not work at the moment
-	if [ "`use opengl`" ]
+	if use opengl
 	then
 		echo "OpenGL support is current disabled due to build issues"
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
@@ -38,11 +39,9 @@ src_unpack() {
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
-	if [ "`use hppa`"  -o "`use amd64`" ]
-	then
-	 cd ${S}/Lib/Slatec
-	 cp Makefile.PL Makefile.PL.orig
-	 sed -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL.orig > Makefile.PL
+	if use hppa || use amd64; then
+		cd ${S}/Lib/Slatec
+		sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL
 	fi
 }
 

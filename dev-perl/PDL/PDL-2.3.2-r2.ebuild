@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r2.ebuild,v 1.6 2003/09/06 22:37:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r2.ebuild,v 1.7 2004/06/06 22:30:08 agriffis Exp $
 
 IUSE="opengl"
 
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 
 	#open gl does not work at the moment
-	if [ "`use opengl`" ]
+	if use opengl
 	then
 		echo "OpenGL support is current disabled due to build issues"
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
