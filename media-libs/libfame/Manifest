@@ -1,5 +1,5 @@
 MD5 39b87dbec41b00aefcf12b0bac727d28 ChangeLog 1112
-MD5 8804a8572e2ec96990b95c284e8807cf libfame-0.8.10.ebuild 791
-MD5 90d16e117e6d7e4167dedce780ba8112 libfame-0.9.0.ebuild 886
+MD5 69968a96cb4d8e5994b3093d4820b72e libfame-0.8.10.ebuild 797
+MD5 e50d0909cd30443694b5544eac1e3ba2 libfame-0.9.0.ebuild 887
 MD5 c3a2bb99aa1812617fb10c1738955aad files/digest-libfame-0.8.10 66
 MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0 65

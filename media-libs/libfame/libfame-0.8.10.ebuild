@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.8.10.ebuild,v 1.8 2003/04/25 13:46:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.8.10.ebuild,v 1.9 2003/07/16 16:41:36 pvdabeel Exp $
 
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
 SRC_URI="mirror://sourceforge/fame/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://fame.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND="virtual/glibc"
 
