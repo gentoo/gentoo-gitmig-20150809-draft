@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.9.ebuild,v 1.1 2004/04/13 02:18:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.9.ebuild,v 1.2 2004/04/13 02:25:16 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -29,8 +29,8 @@ DEPEND="virtual/os-headers
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 RDEPEND="${DEPEND}
-	!build? !bootstrap? ( 
-		>=sys-apps/gawk-3.1.1-r2 
+	!build? !bootstrap? (
+		>=sys-apps/gawk-3.1.1-r2
 		>=sys-apps/util-linux-2.11z-r6
 	)"
 
@@ -64,7 +64,7 @@ src_unpack() {
 
 		# Note that if sysvinit is ever built with USE=build, need to
 		# refrain from building sulogin as it needs libcrypt which is
-		# not in the build image: 
+		# not in the build image:
 		# sed -i -e '/^PROGS/s/ sulogin//' Makefile || die
 
 		# Selinux patch for sysvinit
@@ -200,11 +200,11 @@ src_install() {
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
-	kdir /opt 
+	kdir /opt
 	kdir -o root -g uucp -m0755 /var/lock
 	kdir /proc
 	kdir -m 0700 /root
-	kdir /sbin 
+	kdir /sbin
 	kdir /usr
 	kdir /usr/bin
 	kdir /usr/include
@@ -269,7 +269,7 @@ src_install() {
 	# filesystem and config files still work
 	dosym . /boot/boot
 
-	# 
+	#
 	# Setup files in /etc
 	#
 	dosym  ../proc/filesystems /etc/filesystems
@@ -313,7 +313,7 @@ src_install() {
 	# rc-scripts version for testing of features that *should* be present
 	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
 
-	# 
+	#
 	# Setup files related to /dev
 	#
 	into /
@@ -337,12 +337,13 @@ src_install() {
 		newins "${T}/devices-$$.tar.bz2" devices.tar.bz2
 	fi
 
-	# 
+	#
 	# Setup files in /bin
+	#
 	cd ${S}/bin
 	dobin rc-status
 
-	# 
+	#
 	# Setup files in /sbin
 	#
 	cd ${S}/sbin
@@ -395,14 +396,14 @@ src_install() {
 	dodoc ${FILESDIR}/copyright
 	dodoc ${S}/ChangeLog
 
-	# 
+	#
 	# Install baselayout utilities
 	#
 	cd ${S}/src
 	einfo "Installing utilities..."
 	make DESTDIR="${D}" install || die "problem installing utilities"
 
-	# 
+	#
 	# Install sysvinit
 	#
 	if ! use build; then
@@ -438,7 +439,7 @@ pkg_preinst() {
 		ln -snf modules.autoload.d/kernel-2.4 ${ROOT}/etc/modules.autoload
 	fi
 
-	if [[ -f "${ROOT}/lib/udev-state/devices.tar.bz2" && 
+	if [[ -f "${ROOT}/lib/udev-state/devices.tar.bz2" &&
 			-e "${ROOT}/dev/.udev" ]]; then
 		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2" \
 			"${ROOT}/lib/udev-state/devices.tar.bz2.current"
