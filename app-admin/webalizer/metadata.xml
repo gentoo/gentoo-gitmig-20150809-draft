@@ -5,7 +5,5 @@
 <maintainer>
   <email>web-apps@gentoo.org</email>
   <name>Gentoo Web Application Packages Maintainers</name>
-<!--  <description>Description of the maintainership</description> -->
 </maintainer>
-<!-- <longdescription>Long description of the package</longdescription> -->
 </pkgmetadata>
