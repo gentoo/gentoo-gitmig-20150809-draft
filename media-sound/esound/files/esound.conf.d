@@ -2,6 +2,11 @@
 
 # Note: You need to start esound on boot, only if you want to use it over network.
 
+# Warning: To use global esound daemon, you must also set spawn_options
+# in /etc/esd/esd.conf to the same protocol (i. e. add "-tcp") and unset
+# "Enable sound server startup" in gnome-sound-properties for all users
+# and optionally handle authentization.
+
 # For more see "esd -h".
 
 

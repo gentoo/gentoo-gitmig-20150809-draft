@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29-r1.ebuild,v 1.2 2003/05/29 23:13:52 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29-r1.ebuild,v 1.3 2003/05/30 22:55:56 utx Exp $
 
 IUSE="tcpd alsa"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 DEPEND=" >=media-libs/audiofile-0.1.9
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )

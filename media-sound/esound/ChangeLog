@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.18 2003/05/29 22:36:51 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.19 2003/05/30 22:55:56 utx Exp $
 
 *esound-0.2.29-r1 (30 May 2003)
+
+  31 May 2003; Stanislav Brabec <utx@gentoo.org> esound-0.2.29-r1.ebuild,
+  files/esound.conf.d, files/esound.init.d:
+  Masked for testing. Added warning about client setup to global daemon config
+  files.
 
   30 May 2003; Stanislav Brabec <utx@gentoo.org> esound-0.2.29-r1.ebuild,
   files/esound-0.2.29-alsa-period.diff, files/esound.conf.d,
