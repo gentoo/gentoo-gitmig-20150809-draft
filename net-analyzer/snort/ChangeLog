@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.10 2003/02/12 07:49:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.11 2003/03/04 11:05:42 aliz Exp $
+
+*snort-1.9.1 (04 Mar 2003)
+
+  04 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
