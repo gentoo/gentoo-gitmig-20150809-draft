@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.16 2004/09/13 20:58:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.17 2004/09/15 18:05:24 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -10,6 +10,8 @@ ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
 EXPORT_FUNCTIONS src_unpack pkg_setup src_compile src_install
+
+[ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
 if [ "${ETYPE}" == "gcc-library" ] ; then
 	IUSE="nls build uclibc"
