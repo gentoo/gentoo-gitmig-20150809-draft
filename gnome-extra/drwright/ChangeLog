@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/drwright
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.1 2003/06/08 20:49:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.2 2003/06/19 17:09:31 johnm Exp $
+
+  19 Jun 2003; John Mylchreest <johnm@gentoo.org>; drwright-0.16.ebuild:
+  Adding gcc-3.3 fix - closing #22467
 
 *drwright-0.16 (08 Jun 2003)
 
