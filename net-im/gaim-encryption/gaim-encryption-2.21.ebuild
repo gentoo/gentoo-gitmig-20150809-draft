@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.21.ebuild,v 1.8 2004/03/10 15:11:34 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.21.ebuild,v 1.9 2004/03/14 01:54:47 geoman Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ppc alpha ia64 hppa"
+KEYWORDS="x86 sparc amd64 ppc alpha ia64 hppa ~mips"
 
 DEPEND=">=net-im/gaim-0.75-r3
 		|| ( dev-libs/nss net-www/mozilla )"
