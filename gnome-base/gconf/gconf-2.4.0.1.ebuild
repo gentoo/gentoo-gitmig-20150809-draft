@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.3.3.ebuild,v 1.4 2003/09/09 20:37:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.4.0.1.ebuild,v 1.1 2003/09/10 23:02:32 foser Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 RDEPEND=">=dev-libs/glib-2.0.1
 	>=gnome-base/ORBit2-2.8
 	>=dev-libs/libxml2-2.4.17
-	>=x11-libs/gtk+-2"
+	dev-libs/popt"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
