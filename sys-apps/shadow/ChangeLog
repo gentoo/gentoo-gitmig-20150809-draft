@@ -1,8 +1,16 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.21 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.22 2002/12/25 02:55:35 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*shadow-4.0.3-r3 (25 Dec 2002)
+
+  25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r3.ebuild :
+
+  Added /etc/default/useradd with default shell of /bin/bash, closing bug #5629.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  
+  Changed sparc ~sparc keywords.
  
   03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r2.ebuild :
 
