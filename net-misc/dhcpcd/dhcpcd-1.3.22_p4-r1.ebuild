@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.2 2003/09/07 00:47:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.3 2003/09/07 09:53:30 gmsoft Exp $
 
 inherit gnuconfig
 
@@ -14,12 +14,12 @@ KEYWORDS="x86 ppc sparc ~alpha hppa arm mips amd64"
 LICENSE="GPL-2"
 IUSE="build"
 
-[ "${ARCH}" = "hppa" -o -z "${CBUILD}" ] && CBUILD="${CHOST}"
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
 	use alpha && gnuconfig_update
 	use amd64 && gnuconfig_update
+	use hppa && gnuconfig_update
 
 	cd ${S}
 	#Started working on this patch from an older version I found; then
