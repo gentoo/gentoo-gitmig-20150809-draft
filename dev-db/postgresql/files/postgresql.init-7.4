@@ -1,0 +1,55 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/dev-db/postgresql/files/postgresql.rc6,v 1.1 2002/01/06 00:53:24 woodchip Exp
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -d $PGDATA ]; then
+		eerror "directory not found: $PGDATA"
+		eerror "You should create PGDATA directory first."
+		return 1
+	fi
+}
+
+start()	{
+	checkconfig || return 1
+
+	ebegin "Starting postgres"
+	if [ -f $PGDATA/postmaster.pid ]; then
+		rm $PGDATA/postmaster.pid
+	fi
+	su - $PGUSER -c "/usr/bin/pg_ctl start -D '$PGDATA' -s -l '$PGLOG' -o '$PGOPTS'"
+
+	while :
+	do
+		cnt=$(($cnt + 1))
+		if [ -f "$PGDATA/postmaster.pid" ]; then
+			ret=0
+			break
+		fi
+
+		if [ $cnt -eq 30 ]; then
+			eerror "Please see log file: $PGLOG"
+			ret=1
+			break
+		fi
+		sleep 1
+	done
+	eend $ret
+}
+
+stop ()	{
+	ebegin "Stopping postgres"
+	su - $PGUSER -c "/usr/bin/pg_ctl stop -D '$PGDATA' -s -m fast"
+	eend $?
+}
+
+svc_restart () {
+	ebegin "Restarting postgres"
+	su - $PGUSER -c "/usr/bin/pg_ctl restart -D '$PGDATA' -s -m fast -l '$PGLOG' -o '$PGOPTS'"
+	eend $?
+}
