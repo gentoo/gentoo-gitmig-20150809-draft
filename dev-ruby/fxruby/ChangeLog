@@ -1,7 +1,13 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.2 2003/02/12 06:35:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.3 2003/04/23 11:01:33 twp Exp $
 
+*fxruby-1.0.21 (23 Apr 2003)
+
+  23 Apr 2003; Tom Payne <twp@gentoo.org> fxruby-1.0.21.ebuild :
+
+  Version bump. Minor ebuild tidying. Bug # 19476.
+  
 *fxruby-1.0.17 (27 Dec 2002)
 
   27 Dec 2002; Ryan Phillips <rphillips@gentoo.org> : Initial release. Submitted by: Holden Glova
