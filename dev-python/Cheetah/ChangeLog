@@ -1,16 +1,19 @@
 # ChangeLog for dev-python/Cheetah
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/ChangeLog,v 1.5 2002/12/13 10:56:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/ChangeLog,v 1.6 2003/01/29 01:24:21 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*Cheetah-0.9.15 (28 Jan 2003)
+
+  28 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Updated to version 0.9.15a3.
+  Sanified the ChangeLog.
  
-*Cheetah-0.9.14.ebuild (13 Aug 2002)
+*Cheetah-0.9.14 (13 Aug 2002)
 
-  13 Aug 2002; Joachim Blaabjerg <styx@gentoo.org Cheetah-0.9.14.ebuild :
-
+  13 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> Cheetah-0.9.14.ebuild :
   Version bump.
 
-*Cheetah-0.9.13.ebuild (03 Jun 2002)
+*Cheetah-0.9.13 (03 Jun 2002)
 
   26 Jul 2002; George Shapovalov <george@gentoo.org> Cheetah-0.9.13.ebuild :
   added KEYWORDS
