@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/stepulator
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stepulator/ChangeLog,v 1.1 2004/09/25 23:57:49 fafhrd Exp $
+
+*stepulator-1.0 (10 Sep 2004)
+
+  10 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +stepulator-1.0.ebuild:
+  Added package
+
