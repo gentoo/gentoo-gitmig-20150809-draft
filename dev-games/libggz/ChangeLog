@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/libggz
+# ChangeLog for dev-games/libggz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.1 2003/07/13 03:13:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.2 2003/07/26 07:38:27 vapier Exp $
 
   11 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> libggz-0.0.7.ebuild:
   Fixed dependency on newer libgcrypt, marked as ~arch.
