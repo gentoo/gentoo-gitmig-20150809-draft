@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/crypt-des-ede3
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/ChangeLog,v 1.1 2003/06/23 16:35:25 mcummings Exp $
+
+*crypt-des-ede3-0.01 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  crypt-des-ede3-0.01.ebuild:
+  New module for net-ssh
+
