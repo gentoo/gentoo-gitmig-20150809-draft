@@ -11,7 +11,7 @@ We are working hard on a new release of Gentoo Linux, but right now, the
 1.0_rc4_pre2 release on ibiblio.org and its mirrors is a bit out of date.  If
 you're interested in installing Gentoo Linux, we recommend you wait until the
 1.0_rc5 release (coming soon to a mirror near you) or install a <uri
-link="http://www.ibiblio.org/gentoo/gentoo-x86-distro/gentoo-1.0_rc4/packages/snapshots/">
+link="http://www.ibiblio.org/gentoo/snapshots/">
 system snapshot</uri> rather than using the official 1.0_rc4_pre2 version.
 You'll find installation <path>README</path>s at the above link, and you can also reach us
 on <path>#gentoo</path> or the gentoo-dev mailing list if you have any questions.  Please
