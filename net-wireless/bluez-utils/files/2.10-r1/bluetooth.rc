@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/2.10-r1/bluetooth.rc,v 1.2 2004/09/24 20:23:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/2.10-r1/bluetooth.rc,v 1.3 2004/10/22 07:53:01 liquidx Exp $
 
 UART_CONF="/etc/bluetooth/uart"
 
@@ -138,6 +138,6 @@ stop() {
 }
 
 restart() {
-	svc_start
 	svc_stop
+	svc_start
 }

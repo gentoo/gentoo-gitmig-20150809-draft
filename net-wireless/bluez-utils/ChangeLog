@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.32 2004/10/16 17:26:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.33 2004/10/22 07:53:01 liquidx Exp $
+
+  22 Oct 2004; Alastair Tse <liquidx@gentoo.org> files/2.10-r1/bluetooth.rc:
+  fix restart command in init script (#68727)
 
   16 Oct 2004; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.10-r1.ebuild:
   disable hidd/hid2hci by default, fix pin-helper installation.
