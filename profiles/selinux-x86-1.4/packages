@@ -65,6 +65,10 @@
 >=sys-apps/stat-2.5
 >=app-admin/logrotate-3.6.5
 >=sys-apps/vcron-3.0.1-r1
+
+# we use the login from sys-apps/shadow, as its patched for SELinux.  
+# pam-login shouldn't be installed, or it could overwrite the good login.
+!sys-apps/pam-login
 ##############################################################################
 
 *app-shells/bash
