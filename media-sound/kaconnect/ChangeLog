@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kaconnect
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/ChangeLog,v 1.1 2004/03/06 12:48:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/ChangeLog,v 1.2 2004/04/10 20:36:18 eradicator Exp $
+
+  10 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  kaconnect-1.1.1.ebuild:
+  Stable x86.
 
 *kaconnect-1.1.1 (06 Mar 2004)
 
