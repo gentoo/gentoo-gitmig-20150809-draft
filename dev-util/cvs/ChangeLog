@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.9 2003/01/21 08:55:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.10 2003/01/22 01:52:01 jrray Exp $
+
+*cvs-1.11.5-r1 (21 Jan 2003)
+
+  21 Jan 2003; J Robert Ray <jrray@gentoo.org> cvs-1.11.5-r1.ebuild : Specify
+  a temp dir to use during configure otherwise it auto-detects the
+  /var/tmp/portage/... directory.  Closes bug 14287.
 
   21 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> cvs-1.11.5.ebuild :
   Security update. Also closes #6424.
