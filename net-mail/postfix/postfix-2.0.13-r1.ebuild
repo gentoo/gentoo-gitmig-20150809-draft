@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13-r1.ebuild,v 1.3 2003/07/21 08:35:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13-r1.ebuild,v 1.4 2003/08/16 02:26:12 g2boojum Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox postgres"
 
@@ -209,6 +209,7 @@ src_install () {
 	chmod 644 main.cf
 	rm -f main.cf~
 	fperms 600 /etc/postfix/saslpass
+	epatch ${FILESDIR}/postfix-2.0.0/master.cf.diff
 
 	exeinto /etc/init.d ; doexe ${FILESDIR}/postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
