@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d39c077244a9b6d00225e5cc915558e ChangeLog 3971
 MD5 84906df12ff06c74e269a55f292f09ac wvstreams-3.70-r2.ebuild 869
-MD5 d991640e2ff373e482b3c3478282fef1 wvstreams-3.74.ebuild 1392
-MD5 76eee65ed9ee7babf51f46e167d82bc1 wvstreams-3.75.ebuild 1736
-MD5 6313ca924eead9acd286f742778e0da9 wvstreams-4.0.ebuild 1607
 MD5 4ac90373143f90a1bddea60711f40568 wvstreams-3.75-r1.ebuild 1808
+MD5 76eee65ed9ee7babf51f46e167d82bc1 wvstreams-3.75.ebuild 1736
+MD5 d991640e2ff373e482b3c3478282fef1 wvstreams-3.74.ebuild 1392
+MD5 b83f5e3b101698769b921d69dff5c631 ChangeLog 4062
+MD5 af7f5f5bc2ad63878bb2eca443281e59 wvstreams-4.0.ebuild 1602
 MD5 dab468062cf36e0e81e72fb2a59299e0 files/3.70-gcc3.patch 3171
+MD5 4c60e22939d4518a795262edf85e5bf3 files/wvcrash-uclibc-gentoo.patch 384
 MD5 5d649f23e7b31fb9224bace4c35bcf3e files/3.70-openssl.patch 470
-MD5 f2058097f693e07dadf248b1a3319db3 files/digest-wvstreams-3.70-r2 66
-MD5 b8b38bbbccf83a9024a243149fd9b7d1 files/wvstreams-3.70-gentoo.patch 1174
 MD5 0ee90e98345afff96aaf89dbda1910fc files/digest-wvstreams-3.74 68
-MD5 185e2acbb79c70873208936653ff2407 files/wvstreams-3.74-fPIC.patch 431
-MD5 c48022170e1e20f8222af4b4711373eb files/wvstreams-3.74-makefile.patch 363
 MD5 9f5fc56a6f1636fa2b6673a16888c0ea files/digest-wvstreams-3.75 68
-MD5 e088c237ee63897e074e0f92e66fc250 files/wvstreams-3.75-fPIC.patch 1522
+MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
 MD5 c48022170e1e20f8222af4b4711373eb files/wvstreams-3.75-makefile.patch 363
+MD5 185e2acbb79c70873208936653ff2407 files/wvstreams-3.74-fPIC.patch 431
+MD5 e088c237ee63897e074e0f92e66fc250 files/wvstreams-3.75-fPIC.patch 1522
+MD5 7c5ceff9d19db13318a9c8c6de08e7ef files/digest-wvstreams-4.0 66
+MD5 c48022170e1e20f8222af4b4711373eb files/wvstreams-3.74-makefile.patch 363
+MD5 f2058097f693e07dadf248b1a3319db3 files/digest-wvstreams-3.70-r2 66
+MD5 9f5fc56a6f1636fa2b6673a16888c0ea files/digest-wvstreams-3.75-r1 68
+MD5 b8b38bbbccf83a9024a243149fd9b7d1 files/wvstreams-3.70-gentoo.patch 1174
 MD5 7a2a3fb9116991ebccad327a9ad0fd87 files/wvstreams-3.75-tcl_8_4.patch 945
 MD5 e4f46fcdd724dc1c316aefe9e0228dac files/wvstreams-3.75-gcc34.patch 3573
-MD5 7c5ceff9d19db13318a9c8c6de08e7ef files/digest-wvstreams-4.0 66
-MD5 4c60e22939d4518a795262edf85e5bf3 files/wvcrash-uclibc-gentoo.patch 384
-MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
-MD5 9f5fc56a6f1636fa2b6673a16888c0ea files/digest-wvstreams-3.75-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBmfuVmdTrptrqvGERAv9iAJwPZzCqYCwjJ0WUXnjc2OSXlG+ATACgkbMQ
-MOvVslqfFyEm5xZLM9Uf9tg=
-=5M+o
------END PGP SIGNATURE-----
