@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.17 2003/09/11 01:10:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.18 2004/02/24 17:55:12 seemant Exp $
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/gmp/${P}.tar.gz"
 
-LICENSE="LGPL-2"
 SLOT="0"
+LICENSE="LGPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="~sys-devel/m4-1.4"
@@ -25,6 +25,7 @@ src_compile() {
 		--localstatedir=/var/state/gmp \
 		--enable-cxx \
 		--enable-mpbsd \
+		--disable-fft \
 		${myconf} \
 		|| die "configure failed"
 

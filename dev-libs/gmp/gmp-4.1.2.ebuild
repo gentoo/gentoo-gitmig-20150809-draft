@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.12 2004/02/21 11:07:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.13 2004/02/24 17:55:12 seemant Exp $
 
 inherit flag-o-matic libtool
 filter-flags -ffast-math
@@ -9,8 +9,8 @@ DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational nu
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
 
-LICENSE="LGPL-2"
 SLOT="0"
+LICENSE="LGPL-2"
 KEYWORDS="x86 ~ppc ~sparc alpha amd64 ia64"
 
 DEPEND="~sys-devel/m4-1.4"
@@ -32,6 +32,7 @@ src_compile() {
 		--localstatedir=/var/state/gmp \
 		--enable-cxx \
 		--enable-mpbsd \
+		--disable-fft \
 		${myconf} \
 		|| die "configure failed"
 	emake || die "emake failed"
