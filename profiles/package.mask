@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3492 2005/01/14 14:39:20 lu_zero Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3493 2005/01/15 03:31:35 carpaski Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <carpaski@gentoo.org> (15 Jan 2005)
+# Testing the new virtuals code.
+=sys-apps/portage-2.0.51-r13
 
 # <lu_zero@gentoo.org> (14 Jan 2005)
 # Cinelerra is too broken to be fixed
