@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r2.ebuild,v 1.12 2002/10/05 05:39:05 drobbins Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r4.ebuild,v 1.1 2002/10/12 09:31:49 blocke Exp $
 
 # note to self: check for java deps
 
@@ -13,16 +11,19 @@ HOMEPAGE="http://www.rpm.org/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
 	>=sys-apps/bzip2-1.0.1
 	>=dev-libs/popt-1.6.3"
 
-DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_unpack() {
+
+	export WANT_AUTOCONF_2_1=1
 
 	unpack ${A}
 	cd ${S}
@@ -31,13 +32,14 @@ src_unpack() {
 	# Suppress pointer warnings
 	cp configure configure.orig
 	sed -e "s:-Wpointer-arith::" configure.orig > configure
-
 }
 
 src_compile() {
 
 	local myconf
 	use nls || myconf="--disable-nls"
+	use sparc64 && myconf="$myconf --host=${CHOST}"
+
 	econf ${myconf} || die
 	make || die
 }
@@ -48,11 +50,22 @@ src_install() {
 	mv ${D}/bin/rpm ${D}/usr/bin
 	rm -rf ${D}/bin
 
+	# Fix for bug #8578 (app-arch/rpm create dead symlink)
+	# Local RH 7.3 install has no such symlink anywhere
+	rm -f ${D}/usr/lib/rpmpopt
+
+    keepdir /var/lib/rpm
+
 	dodoc CHANGES COPYING CREDITS GROUPS README* RPM* TODO
 }
 
 pkg_postinst() {
 
-	${ROOT}/usr/bin/rpm --initdb --root=${ROOT}
-
+	if [ -f ${ROOT}/var/lib/rpm/nameindex.rpm ]; then
+		einfo "RPM database found... Rebuilding database (may take a while)..."
+		${ROOT}/usr/bin/rpm --rebuilddb --root=${ROOT}
+	else
+		einfo "No RPM database found... Creating database..."
+		${ROOT}/usr/bin/rpm --initdb --root=${ROOT}
+	fi
 }

@@ -1,16 +1,22 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.8 2002/09/16 00:42:32 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.9 2002/10/12 09:31:49 blocke Exp $
+
+*rpm-4.0.4-r4 (12 Oct 2002)
+
+  12 Oct 2002; Bruce A. Locke <blocke@shivan.org> rpm-4.0.4-r4.ebuild:
+  Remove dead symlink (bug #8578) and ebuild no longer blindly creates
+  a database if one already exists.
 
 *rpm-4.0.4-r3 (23 Jul 2002)
 
-  14 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ChangeLog rpm-4.0.4-r3.ebuild: This
-  package can not compile on sparc64 without a --host option to configure, so I added
-  that flag. Revamped ChangeLog layout according to new guidelines.
-
-  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild: This package
-  can not compile with autoconf-2.53a, so autoconf-2.1 is forced.  Thanks to:
-  garion@garion.mnbsyr.com (John Sutherland) in bug #7595
+  14 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ChangeLog rpm-4.0.4-r3.ebuild: 
+  This package can not compile on sparc64 without a --host option to configure,
+  so I added that flag. Revamped ChangeLog layout according to new guidelines.
+  
+  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild: 
+  This package can not compile with autoconf-2.53a, so autoconf-2.1 is forced. 
+  Thanks to:  garion@garion.mnbsyr.com (John Sutherland) in bug #7595
 
   23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild: In keeping
   with RH tradition, this package requires bloat.  As such, gettext is not optional,
