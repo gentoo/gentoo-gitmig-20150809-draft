@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc4.ebuild,v 1.2 2004/09/26 20:04:04 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc5.ebuild,v 1.1 2004/09/27 02:01:59 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -20,7 +20,7 @@ RESTRICT="nomirror mirror"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~macos ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
 
 LICENSE="GPL-2"
-RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( dev-python/python-selinux )"
+RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( >=dev-python/python-selinux-2.15 )"
 
 python_version() {
 	local tmpstr="$(/usr/bin/python -V 2>&1 )"
