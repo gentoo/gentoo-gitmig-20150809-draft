@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/c-client
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.19 2004/11/03 06:31:55 psi29a Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.20 2005/02/01 15:33:05 cryos Exp $
+
+*c-client-2004a-r1 (01 Feb 2005)
+
+  01 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/c-client-2004a-amd64-so-fix.patch, +c-client-2004a-r1.ebuild:
+  Patched Makefile to build a shared library for amd64, allowing PHP 5 with imap
+  to compile. Also fixed the symlinking of c-client.a for multilib archs.
 
   03 Nov 2004; Bret Curtis <psi29a@gentoo.org> :
   Addeing to ~mips for testing

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e.ebuild,v 1.4 2004/06/24 23:10:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e.ebuild,v 1.5 2005/02/01 15:33:05 cryos Exp $
 
 inherit flag-o-matic
 

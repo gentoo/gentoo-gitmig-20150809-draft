@@ -1,15 +1,28 @@
-MD5 44079b46669e8e96f2b7bd1f5149b82a ChangeLog 2542
-MD5 9cf6c167a8006a1b40e857e863e082df c-client-2002d.ebuild 1855
-MD5 16d735011ca6e1fba4e704b9a9e17637 c-client-2002e.ebuild 1896
-MD5 edc992cc694f676c505dd1b67ba08fed c-client-2004a.ebuild 2183
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e7bce4b8478b1128e86efb8bf43a7d08 c-client-2002e-r2.ebuild 2039
+MD5 1f17131717d381fea23ce8a065acf1a2 c-client-2004a.ebuild 2182
+MD5 81f0f9656a107854fa3ddf25217525a6 c-client-2002e-r1.ebuild 1974
+MD5 5fb5acd5c2e0b78dbaca4aa75cb36b74 c-client-2002e.ebuild 1893
+MD5 47ac744573c05e8e5c5dc6b471bde3fa c-client-2002d-r1.ebuild 1869
+MD5 4f41fccb86faf1807f69e9e7695866a8 c-client-2004a-r1.ebuild 2589
+MD5 63e9e9e6c33eb4037c6357e7686273fa ChangeLog 2854
 MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
-MD5 15c2baad3ad73ff964dbcbc021aa4e1d c-client-2002d-r1.ebuild 1872
-MD5 a5b3bc4a1a6c7920f7e9db3fc87e54d8 c-client-2002e-r1.ebuild 1977
-MD5 e33976d27203c3df41d14113cd0a4ea5 c-client-2002e-r2.ebuild 2039
-MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
-MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d 62
-MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e 62
-MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a 62
+MD5 cc926ec2e710759c314acd92cd84b770 c-client-2002d.ebuild 1853
 MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d-r1 62
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r1 62
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r2 62
+MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a-r1 62
+MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d 62
+MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e 62
+MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a 62
+MD5 cde23dc2375a8c33998202c8f0c9ae0e files/c-client-2004a-amd64-so-fix.patch 675
+MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB/6FantT9W3vfTuoRAp14AJ0SOOF+lhPM3QRN78JdZbKe17//9QCgqi8W
+mfROganeUfuEVVxlAp+9s9w=
+=hpbO
+-----END PGP SIGNATURE-----
