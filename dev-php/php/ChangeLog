@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.46 2003/05/26 23:28:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.47 2003/05/31 22:26:32 robbat2 Exp $
  
 *php-4.3.1-r2 (22 Apr 2003)
 
@@ -29,6 +29,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *php-4.3.1 (24 Feb 2003)
+
+  31 May 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.1.ebuild:
+  Improve the slight java fix with java-config.
 
   03 Mar 2003; Seemant Kulleen <seemant@gentoo.org> php-4.3.1-r1.ebuild,
   php-4.3.1.ebuild:

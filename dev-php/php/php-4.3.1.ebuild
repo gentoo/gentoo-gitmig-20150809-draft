@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.8 2003/03/06 04:20:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.9 2003/05/31 22:26:32 robbat2 Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
@@ -48,7 +48,7 @@ DEPEND="
 	postgres? ( >=dev-db/postgresql-7.1 )
 	readline? ( >=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.1 )
-	java? ( virtual/jdk )"
+	java? ( =virtual/jdk-1.4* dev-java/java-config )"
 
 #Removed
 #java? ( virtual/jdk )
@@ -56,7 +56,17 @@ DEPEND="
 RDEPEND="
 	xml? ( >=app-text/sablotron-0.95-r1 >=net-libs/libwww-5.3.2 )
 	qt? ( >=x11-libs/qt-2.3.0 )
-	java? ( virtual/jdk )"
+	java? ( =virtual/jdk-1.4* )"
+
+php_check_java_config() {
+	JDKHOME="`java-config --jdk-home`"
+	NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
+	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+		eerror "${NOJDKERROR}"
+		die "${NOJDKERROR}"
+	fi
+}
+
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
@@ -93,6 +103,8 @@ src_unpack() {
 }
 
 src_compile() {
+
+	php_check_java_config
 
 	local myconf
 
