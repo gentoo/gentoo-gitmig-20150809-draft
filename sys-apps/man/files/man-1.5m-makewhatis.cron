@@ -7,5 +7,5 @@
 #
 #
 
-#source /etc/profile
+#source /etc/profile.env
 #/usr/sbin/makewhatis -w
