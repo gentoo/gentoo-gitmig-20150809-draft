@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.6 2002/11/08 10:56:07 trance Exp $ 
+# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.7 2002/11/08 10:57:30 trance Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=${PVR}
-KV=2.4.20-r8
+KV=2.4.19-r7
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
