@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.24 2003/11/13 14:03:42 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.25 2003/12/19 20:07:00 gmsoft Exp $
+
+  19 Dec 2003; Guy Martin <gmsoft@gentoo.org> xv-3.10a-r6.ebuild:
+  Marked stable on hppa.
 
   13 Nov 2003; <tuxus@gentoo.org> xv-3.10a-r6.ebuild:
   added mips to KEYWORDS
