@@ -33,13 +33,12 @@ diff -ur abcde-1.9.9.orig/abcde abcde-1.9.9/abcde
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-Only in abcde-1.9.9: abcde~
 --- abcde-1.9.9/Makefile.orig	Sun May 27 14:36:26 2001
 +++ abcde-1.9.9/Makefile	Sun May 27 14:36:38 2001
 @@ -1,12 +1,12 @@
  VERSION = 1.9.9
 -INSTALL = /usr/bin/install -c
-+INSTALL = /bin/install -c
++INSTALL = /usr/bin/install -c
  
  # Installation directories
  prefix = ${DESTDIR}/usr

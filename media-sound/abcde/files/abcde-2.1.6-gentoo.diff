@@ -14,7 +14,7 @@
 @@ -1,12 +1,12 @@
  VERSION = 2.1.6
 -INSTALL = /usr/bin/install -c
-+INSTALL = /bin/install -c
++INSTALL = /usr/bin/install -c
  
  # Installation directories
  prefix = ${DESTDIR}/usr

@@ -4,7 +4,7 @@ diff -u -r abcde-2.1.9/Makefile abcde-2.1.9.new/Makefile
 @@ -1,12 +1,12 @@
  VERSION = 2.1.9
 -INSTALL = /usr/bin/install -c
-+INSTALL =/bin/install -c
++INSTALL = /usr/bin/install -c
  
  # Installation directories
  prefix = ${DESTDIR}/usr
