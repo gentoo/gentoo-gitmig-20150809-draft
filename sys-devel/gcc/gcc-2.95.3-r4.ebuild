@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.5 2001/08/29 01:52:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.6 2001/08/29 20:26:45 drobbins Exp $
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
 	ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3.tar.gz
@@ -135,7 +135,7 @@ src_install() {
         fi
     else
         rm -rf ${D}/usr/share/{man,info}
-        cd texinfo
+        cd ${S}/texinfo
         newbin makeinfo/makeinfo makeinfo.gcc
 		newbin util/texi2dvi texi2dvi.gcc
 		newbin util/install-info install-info.gcc
