@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.15 2004/04/24 02:16:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.16 2004/04/24 02:22:57 vapier Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -51,12 +51,12 @@ gnuconfig_do_update() {
 		targetlist=`find ${S} -name "${file}"`
 		if [ -n "$targetlist" ] ; then
 			for target in $targetlist; do
-				einfo "Updating ${target/$S\//}"
+				einfo " Updating ${target/$S\//}"
 				cp -f ${configsubs_dir}/${file} ${target}
 				eend $!
 			done
 		else
-			ewarn "No ${file} found in ${S}, skipping.."
+			ewarn " No ${file} found in ${S}, skipping.."
 		fi
 	done
 }
