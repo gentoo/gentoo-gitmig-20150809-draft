@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p.ebuild,v 1.1 2003/07/14 01:44:46 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p.ebuild,v 1.2 2003/09/07 03:26:12 msterret Exp $
 
 S="${WORKDIR}/glade-${PV}-src"
 DESCRIPTION="The GNAT implementation of the ARM Annex for Distributed Systems."
@@ -53,5 +53,5 @@ src_install () {
 		${D}/usr/lib/ada/adalib/garlic/
 
 	#install examples
-	cp -r Examples ${D}/usr/share/doc/${PF}/	
+	cp -r Examples ${D}/usr/share/doc/${PF}/
 }
