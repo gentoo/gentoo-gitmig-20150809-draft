@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-1.9.4.ebuild,v 1.1 2004/06/21 17:42:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-1.9.4.ebuild,v 1.2 2004/06/22 10:59:38 humpback Exp $
 
 inherit gnome2
 
@@ -17,15 +17,13 @@ KEYWORDS="~x86 ~sparc"
 IUSE="spell ssl"
 
 DEPEND="sys-devel/gettext
-	=dev-cpp/gtkmm-2.2.11
-	=dev-cpp/gconfmm-2.0.2
+	>=dev-cpp/gtkmm-2.2.11
+	>=dev-cpp/gconfmm-2.0.2
 	>=dev-cpp/libglademm-2.0
 	>=net-im/jabberoo-1.9.0
 	dev-util/pkgconfig
 	ssl? ( dev-libs/openssl )
 	spell? ( app-text/gtkspell )"
-
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
