@@ -1,4 +1,14 @@
-MD5 7955900184adacf049e4fa10ba105c30 ChangeLog 518
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c0a5dd05bcfafe03bdb3d465857a0dd9 ChangeLog 611
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 5508cda9f7dffe4165d767156298f705 xmms-oss-1.2.10.ebuild 605
+MD5 d5b710ddf6104f26f65271e25adb0612 xmms-oss-1.2.10.ebuild 604
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-oss-1.2.10 142
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPH5IugEuf3OQ0akRAqIrAJ0QygNCdDSbLvtr7o9FS3yBTcfgxwCffJcp
+OEM+XEUc6tXxHqHVKR3Dg44=
+=AFRe
+-----END PGP SIGNATURE-----

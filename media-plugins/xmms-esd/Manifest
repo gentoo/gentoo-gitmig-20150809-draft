@@ -1,6 +1,16 @@
-MD5 03531f77c9af034c6437001a36b43c5f ChangeLog 764
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 394492eb2d140663c16ca205256df855 ChangeLog 862
+MD5 ae0d83089ec7efd3b787ec8f4eb4ec12 xmms-esd-1.2.10-r1.ebuild 699
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 81324c1bb3f7d46474a925492c0ae223 xmms-esd-1.2.10-r1.ebuild 700
 MD5 0e59ec2635fe58d7d04d4ade643a2d10 xmms-esd-1.2.10.ebuild 688
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-esd-1.2.10 142
 MD5 29189a07ebf2ac1578898c2234dc1bce files/digest-xmms-esd-1.2.10-r1 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPIBKugEuf3OQ0akRAuiZAJ97D2nJ7/8pvcw/X0tI7YHQAXqUPQCfYNAp
+ZIkbX1S0ckAOC/+OWepqFbQ=
+=za2w
+-----END PGP SIGNATURE-----
