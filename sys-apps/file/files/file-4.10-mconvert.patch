@@ -1,0 +1,18 @@
+--- src/softmagic.c.orig	2004-11-13 03:07:49.000000000 -0500
++++ src/softmagic.c	2004-11-13 03:27:20.000000000 -0500
+@@ -427,12 +427,12 @@ mconvert(struct magic_set *ms, union VAL
+ 		return 1;
+ 	case FILE_STRING:
+ 		{
+-			int n;
++			size_t n;
+ 
+ 			/* Null terminate and eat *trailing* return */
+ 			p->s[sizeof(p->s) - 1] = '\0';
+-			n = strlen(p->s) - 1;
+-			if (p->s[n] == '\n')
++			n = strlen(p->s);
++			if (n-- && p->s[n] == '\n')
+ 				p->s[n] = '\0';
+ 			return 1;
+ 		}

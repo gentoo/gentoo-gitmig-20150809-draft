@@ -1,11 +1,22 @@
-MD5 09b222fed88036e11b814fee55e9f2ef ChangeLog 8843
-MD5 061925f1389fb03c0e6a2e639eaaf9da file-4.08.ebuild 1425
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a26ce7962e08d209fccf7669e8e832da file-4.10-r1.ebuild 1909
 MD5 e2d53ae79cd02fc5ddbad4dc8de3f656 file-4.09.ebuild 1903
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 deefcaad96da75f331ac1ab9d9bc23f9 file-4.10.ebuild 1900
-MD5 397fe1ac24cbad058a03936b3df1d193 file-4.10-r1.ebuild 1866
+MD5 20bab7f04adf55f326d43c38c1ec7d93 ChangeLog 8967
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 061925f1389fb03c0e6a2e639eaaf9da file-4.08.ebuild 1425
+MD5 8cf0ba615168e0a01ddd576d39b19efe files/digest-file-4.10-r1 61
+MD5 d83caef7e9c2a9719022f57de134edae files/file-4.10-mconvert.patch 476
 MD5 9ab14ea35a2db2864bb6e92d1ca87f17 files/digest-file-4.08 61
 MD5 655e5c463709e244970b23b64aaf8bf7 files/digest-file-4.09 61
-MD5 8f6cec8c0754678a2817139182637eac files/file-4.xx-mips-gentoo.diff 13035
 MD5 8cf0ba615168e0a01ddd576d39b19efe files/digest-file-4.10 61
-MD5 8cf0ba615168e0a01ddd576d39b19efe files/digest-file-4.10-r1 61
+MD5 8f6cec8c0754678a2817139182637eac files/file-4.xx-mips-gentoo.diff 13035
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBluD494CCfB4KcwwRAgLqAJ4o2p/HTbaVN1IEKldpO70+QZ91WACeKsNb
+CFhW/w64iFMGJtO6Br2tK4M=
+=NdLu
+-----END PGP SIGNATURE-----

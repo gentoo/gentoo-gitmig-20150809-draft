@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.64 2004/11/12 20:10:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.65 2004/11/14 04:37:24 solar Exp $
+
+  13 Nov 2004; <solar@gentoo.org> +files/file-4.10-mconvert.patch,
+  file-4.10-r1.ebuild:
+  fixed off by one bug in file-4.10
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> file-4.10-r1.ebuild:
   Stable on sparc
