@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fc0c0aba7d770718ba216c98c9e94d3c ChangeLog 496
+MD5 3b9c380a36f29fa045ccc25084a07b07 kshutdown-0.2.1.ebuild 428
+MD5 c7905dd20e49deed0bced0499a9f714c metadata.xml 222
+MD5 c05706865f3fbece9ef827b1b4ea4c5f files/digest-kshutdown-0.2.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBYHgFI1lqEGTUzyQRAtLFAJwNDKEsewEUcdiuUJf7hIpkF7oruACeLduF
+ShJNtydEZCn/B0xQZcQaCEY=
+=wQSE
+-----END PGP SIGNATURE-----

@@ -1,0 +1,19 @@
+# ChangeLog for app-misc/kshutdown
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.1 2004/10/30 17:13:36 carlo Exp $
+
+*kshutdown-0.2.1 (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +kshutdown-0.2.1.ebuild:
+  Moved from app-misc/kshutdown to kde-misc/kshutdown.
+
+  03 Sep 2004; David Holm <dholm@gentoo.org> kshutdown-0.2.1.ebuild:
+  Added to ~ppc.
+
+*kshutdown-0.2.0 (19 Aug 2004)
+
+  19 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +kshutdown-0.2.1.ebuild:
+  Initial revision, closing bug #36487.
+  Thanks to Elias Probst <elias.probst@gmx.de>.
