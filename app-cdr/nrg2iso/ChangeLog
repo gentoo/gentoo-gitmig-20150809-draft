@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/nrg2iso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.7 2004/06/27 21:31:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.8 2004/07/30 10:28:32 chrb Exp $
+
+*nrg2iso-0.4 (30 Jul 2004)
+
+  30 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +nrg2iso-0.4.ebuild:
+  version bump
 
   27 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> nrg2iso-0.2-r1.ebuild:
   Marked ~amd64.
