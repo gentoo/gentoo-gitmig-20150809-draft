@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.71 2005/01/09 18:56:47 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.72 2005/01/11 15:12:17 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -51,8 +51,6 @@ export CTARGET="${CTARGET:-${CHOST}}"
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
-IUSE="${IUSE} build doc"
-SLOT="${PVR}"
 
 # set LINUX_HOSTCFLAGS if not already set
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
@@ -144,21 +142,34 @@ if [ "${ETYPE}" == "sources" ]
 then
 	# binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
-			>=sys-devel/binutils-2.11.90.0.31 )
-			doc? ( !arm? ( !s390? ( app-text/docbook-sgml-utils ) ) )"
+		>=sys-devel/binutils-2.11.90.0.31 )
+		doc? ( !arm? ( !s390? ( app-text/docbook-sgml-utils ) ) )"
 
 	RDEPEND="${DEPEND}
-		 	 !build? ( >=sys-libs/ncurses-5.2
-			 dev-lang/perl
-			 virtual/modutils
-			 sys-devel/make )"
+		!build? ( >=sys-libs/ncurses-5.2
+		dev-lang/perl
+		virtual/modutils
+		sys-devel/make )"
 
 	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" \
 		|| PROVIDE="virtual/linux-sources virtual/alsa"
-
+		
+	SLOT="${PVR}"
+	DESCRIPTION="Sources for the Linux kernel"
+	IUSE="${IUSE} build doc"
 elif [ "${ETYPE}" == "headers" ]
 then
-	PROVIDE="virtual/kernel virtual/os-headers"
+	DESCRIPTION="Linux system headers"
+	IUSE="${IUSE}"
+	
+	if [[ ${CTARGET} = ${CHOST} ]]
+	then
+		DEPEND="!virtual/os-headers"
+		PROVIDE="virtual/kernel virtual/os-headers"
+		SLOT="0"
+	else
+		SLOT="${CTARGET}"
+	fi
 else
 	eerror "Unknown ETYPE=\"${ETYPE}\", must be \"sources\" or \"headers\""
 	die
@@ -214,13 +225,37 @@ unpack_set_extraversion() {
 # Compile Functions
 #==============================================================
 compile_headers() {
-	local MY_ARCH
+	local extra_makeopts=
+	local HOSTCFLAGS=
+	unset ARCH
+	
+	if kernel_is 2 4
+	then
+		yes "" | make oldconfig
+		echo ">>> make oldconfig complete"
+		use sparc && make dep
+	elif kernel_is 2 6
+	then
+		# autoconf.h isnt generated unless it already exists. plus, we have
+		# no guarantee that any headers are installed on the system...
+		[ -f "${ROOT}"/usr/include/linux/autoconf.h ] \
+			|| touch include/linux/autoconf.h
 
-	MY_ARCH=${ARCH}
-	unset ${ARCH}
-	yes "" | make oldconfig
-	echo ">>> make oldconfig complete"
-	ARCH=${MY_ARCH}
+		# When cross-compiling, we need to set the CROSS_COMPILE var properly
+		if [[ ${CTARGET} != ${CHOST} ]] ; then
+			extra_makeopts="CROSS_COMPILE=${CTARGET}-"
+		elif type -p ${CHOST}-ar ; then
+			extra_makeopts="CROSS_COMPILE=${CHOST}-"
+		fi
+		
+		# if there arent any installed headers, then there also isnt an asm
+		# symlink in /usr/include/, and make defconfig will fail, so we have
+		# to force an include path with $S.
+		local HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
+		ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
+		make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "defconfig failed"
+		make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "prepare failed"
+	fi
 }
 
 compile_manpages() {
@@ -243,22 +278,31 @@ install_universal() {
 }
 
 install_headers() {
-	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
-
 	local ddir=$(kernel_header_destdir)
+
 	cd ${S}
 	dodir ${ddir}/linux
-	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 	cp -ax ${S}/include/linux/* ${D}/${ddir}/linux
 	rm -rf ${D}/${ddir}/linux/modules
-
 	dodir ${ddir}/asm
-	cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
 
-	if [ $(kernel_is_2_6) $? == 0 ]
+	if [ "${PROFILE_ARCH}" = "sparc64" -o "${PROFILE_ARCH}" = "sparc64-multilib" ] ; then
+		rm -Rf ${ddir}/asm
+		dodir ${ddir}/asm-sparc
+		dodir ${ddir}/asm-sparc64
+		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
+		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
+		generate_sparc_asm ${D}/usr/include
+	else
+		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
+	fi
+
+	if kernel_is 2 6
 	then
 		dodir ${ddir}/asm-generic
 		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
+		
+		
 	fi
 }
 
@@ -323,8 +367,8 @@ install_manpages() {
 #==============================================================
 preinst_headers() {
 	local ddir=$(kernel_header_destdir)
-	[[ -L ${ROOT}${ddir}/linux ]] && rm "${ROOT}"${ddir}/linux
-	[[ -L ${ROOT}${ddir}/asm ]] && rm "${ROOT}"${ddir}/asm
+	[[ -L ${ddir}/linux ]] && rm ${ddir}/linux
+	[[ -L ${ddir}/asm ]] && rm ${ddir}/asm
 }
 
 # pkg_postinst functions
@@ -383,24 +427,16 @@ postinst_sources() {
 }
 
 postinst_headers() {
-	echo
-	einfo "Kernel headers are usually only used when recompiling glibc."
-	einfo "Following the installation of newer headers it is advised that"
-	einfo "you re-merge glibc as follows:"
-	einfo "# emerge glibc"
-	einfo "Failure to do so will cause glibc to not make use of newer"
-	einfo "features present in the updated kernelheaders."
-	echo
+	einfo "Kernel headers are usually only used when recompiling glibc, as such, following the installation"
+	einfo "of newer headers, it is advised that you re-merge glibc as follows:"
+	einfo "emerge glibc"
+	einfo "Failure to do so will cause glibc to not make use of newer features present in the updated kernel"
+	einfo "headers."
 }
 
 # pkg_setup functions
 #==============================================================
 setup_headers() {
-	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ \
-	-e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/)
-	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH="sparc64"
-	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64-multilib" ] && ARCH="sparc64"
-
 	[ -z "${H_SUPPORTEDARCH}" ] && H_SUPPORTEDARCH="${PN/-*/}"
 	for i in ${H_SUPPORTEDARCH}
 	do
@@ -412,8 +448,8 @@ setup_headers() {
 		echo
 		eerror "This version of ${PN} does not support ${ARCH}."
 		eerror "Please merge the appropriate sources, in most cases"
-		eerror "this will be ${ARCH}-headers."
-		die "incorrect headers"
+		eerror "(but not all) this will be called ${ARCH}-headers."
+		die "Package unsupported for ${ARCH}"
 	fi
 }
 
@@ -643,7 +679,8 @@ detect_version() {
 	if [ -n "${K_PREPATCHED}" ]
 	then
 		EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}${PR/r/}"
-	else
+	elif [ ${ETYPE} != "headers" ]
+	then
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
 		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
@@ -724,6 +761,73 @@ detect_arch() {
 	done
 }
 
+# sparc nastiness
+#==============================================================
+# This script generates the files in /usr/include/asm for sparc systems
+# during installation of sys-kernel/linux-headers.
+# Will no longer be needed when full 64 bit support is used on sparc64
+# systems.
+#
+# Shamefully ripped from Debian
+# ----------------------------------------------------------------------
+
+# Idea borrowed from RedHat's kernel package
+
+generate_sparc_asm() {
+	local name
+
+	cd $1 || die
+	mkdir asm
+
+	for h in `( ls asm-sparc; ls asm-sparc64 ) | grep '\.h$' | sort -u`; do
+		name="$(echo $h | tr a-z. A-Z_)"
+		# common header
+		echo "/* All asm/ files are generated and point to the corresponding
+ * file in asm-sparc or asm-sparc64.
+ */
+
+#ifndef __SPARCSTUB__${name}__
+#define __SPARCSTUB__${name}__
+" > asm/${h}
+
+		# common for sparc and sparc64
+		if [ -f asm-sparc/$h -a -f asm-sparc64/$h ]; then
+			echo "#ifdef __arch64__
+#include <asm-sparc64/$h>
+#else
+#include <asm-sparc/$h>
+#endif
+" >> asm/${h}
+
+		# sparc only
+		elif [ -f asm-sparc/$h ]; then
+echo "#ifndef __arch64__
+#include <asm-sparc/$h>
+#endif
+" >> asm/${h}
+
+		# sparc64 only
+		else
+echo "#ifdef __arch64__
+#include <asm-sparc64/$h>
+#endif
+" >> asm/${h}
+		fi
+
+		# common footer
+		echo "#endif /* !__SPARCSTUB__${name}__ */" >> asm/${h}
+	done
+	return 0
+}
+
+headers___fix() {
+	sed -i \
+		-e "s/\([ "$'\t'"]\)u8\([ "$'\t'"]\)/\1__u8\2/g;" \
+		-e "s/\([ "$'\t'"]\)u16\([ "$'\t'"]\)/\1__u16\2/g;" \
+		-e "s/\([ "$'\t'"]\)u32\([ "$'\t'"]\)/\1__u32\2/g;" \
+		-e "s/\([ "$'\t'"]\)u64\([ "$'\t'"]\)/\1__u64\2/g;" \
+		"$@"
+}
 
 # common functions
 #==============================================================
@@ -741,27 +845,33 @@ kernel-2_src_unpack() {
 }
 
 kernel-2_src_compile() {
+	detect_version
+	cd ${S}
 	[ "${ETYPE}" == "headers" ] && compile_headers
 	[ "${ETYPE}" == "sources" ] && \
 		use doc && ! use arm && ! use s390 && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
+	detect_version
 	[ "${ETYPE}" == "headers" ] && preinst_headers
 }
 
 kernel-2_src_install() {
+	detect_version
 	install_universal
 	[ "${ETYPE}" == "headers" ] && install_headers
 	[ "${ETYPE}" == "sources" ] && install_sources
 }
 
 kernel-2_pkg_postinst() {
+	detect_version
 	[ "${ETYPE}" == "headers" ] && postinst_headers
 	[ "${ETYPE}" == "sources" ] && postinst_sources
 }
 
 kernel-2_pkg_setup() {
+	detect_version
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
 	# This is to fix some weird portage bug? in stable versions of portage.
