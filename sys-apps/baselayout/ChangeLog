@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.24 2002/04/22 04:07:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.25 2002/04/23 10:28:02 azarah Exp $
+
+*baselayout-1.7.8-r1 (23 Apr 2002)
+
+  23 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
+
+  Remove /var/run/utmpx again.
 
 *baselayout-1.7.8 (22 Apr 2002)
 
