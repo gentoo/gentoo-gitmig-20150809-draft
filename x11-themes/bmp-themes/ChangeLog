@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/bmp-themes
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bmp-themes/ChangeLog,v 1.1 2004/11/20 19:34:43 chainsaw Exp $
+
+*bmp-themes-0.0.3 (20 Nov 2004)
+
+  20 Nov 2004; Tony Vroon <chainsaw@gentoo.org> +bmp-themes-0.0.3.ebuild:
+  Initial commit. Ebuild based on the one submitted by will@johnstonclan.net
+  in bug #62171.
+
