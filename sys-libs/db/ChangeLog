@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.26 2003/05/24 08:35:24 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.27 2003/05/24 11:48:05 pauldv Exp $
+
+*db-3.2.9-r5 (24 May 2003)
+
+  24 May 2003; Paul de Vrieze <pauldv@gentoo.org> db-3.2.9-r5.ebuild,
+  db-4.0.14.ebuild, db-4.1.24.ebuild:
+  The db4 ebuilds have now been changed to live alongside the db3 ebuilds. Also
+  the db-3.2.9-r5 ebuild is created to go along with the db-4 ebuilds. This
+  ebuild is more gentle to the db4 ebuild, but upgrading this is not that
+  necessary.
 
   19 May 2003; Zach Welch <zwelch@gentoo.org> db-3.2.9-r2.ebuild:
   Mark all platforms stable in 3.2.9-r2 KEYWORDS
