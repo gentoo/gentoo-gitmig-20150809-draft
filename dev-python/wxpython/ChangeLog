@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.9 2004/09/05 07:43:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.10 2004/11/13 04:08:20 pythonhead Exp $
+
+*wxpython-2.4.2.4-r1 (12 Nov 2004)
+
+  12 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> +files/wxpy-config.py,
+  +files/wxversion.py, +wxpython-2.4.2.4-r1.ebuild,
+  +wxpython-2.5.3.1.ebuild:
+  Version bump, retrofitted with SLOTs, bug# 47810
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
