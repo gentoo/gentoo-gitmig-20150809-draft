@@ -1,0 +1,23 @@
+#!/bin/sh
+# Configuration Sanity Checking for qmail
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/files/1.03-r4/config-sanity-check,v 1.1 2004/04/06 21:56:10 sj7trunks Exp $
+# This is intended solely to stop qmail eating up all your hard disk space with logs
+
+CONFIG_SANITY_GOOD=1
+
+# check simple stuff first
+if [ -z "${QMAILDUID}" -o -z "${NOFILESGID}" -o -z "${SERVICE}" ]; then
+    echo "SERVICE(${SERVICE}), QMAILDUID(${QMAILDUID}) or NOFILESGID(${NOFILESGID}) is unset in $0"
+    CONFIG_SANITY_GOOD=0
+fi
+
+# now make sure we are are on a port that is resolable to a port number
+if [ -z "`getent services ${TCPSERVER_PORT}`" ]; then
+    CONFIG_SANITY_GOOD=0
+fi
+    
+if [ ! "${CONFIG_SANITY_GOOD}" -eq "1" ]; then
+    echo "Some error detected, sleeping for 30 seconds for safety"
+    sleep 30s
+    exit 1
+fi

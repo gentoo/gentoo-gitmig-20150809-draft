@@ -1,0 +1,56 @@
+--- Makefile2	2004-04-06 12:29:07.000000000 -0700
++++ Makefile	2004-04-06 12:36:02.099022746 -0700
+@@ -19,12 +19,12 @@
+ # -DQMQP_COMPRESS to use the QMQP on the fly compression (for clusters)
+ # -DQUOTATRASH to include the Trash in the quota calculation (normaly it is not)
+ # -DSMTPEXECCHECK to enable smtp DOS/Windows executable detection
+-#LDAPFLAGS=-DQLDAP_CLUSTER -DEXTERNAL_TODO -DDASH_EXT -DDATA_COMPRESS -DQMQP_COMPRESS
++LDAPFLAGS=-DQLDAP_CLUSTER -DEXTERNAL_TODO -DBIGTODO -DDASH_EXT -DDATA_COMPRESS -DQMQP_COMPRESS -DALTQUEUE
+ 
+ # Perhaps you have different ldap libraries, change them here
+-LDAPLIBS=-L/usr/local/lib -lldap -llber
++LDAPLIBS=-L/usr/lib -lldap -llber
+ # and change the location of the include files here
+-LDAPINCLUDES=-I/usr/local/include
++LDAPINCLUDES=-I/usr/include
+ # on Slowaris you need -lresolv and probably a LD_RUN_PATH added like this:
+ #LDAPLIBS=-L/opt/OpenLDAP/lib -lldap -llber -lresolv -R/opt/OpenLDAP/lib
+ # for example on my Linux box I use:
+@@ -33,7 +33,7 @@
+ #LDAPINCLUDES=-I/opt/OpenLDAP/include
+ 
+ # ZLIB needed for -DDATA_COMPRESS and -DQMQP_COMPRESS
+-#ZLIB=-lz
++ZLIB=-lz
+ # or you installed zlib in a different path you can use something like this
+ #ZLIB=-L/opt/zlib/lib -lz
+ #ZINCLUDES=-I/opt/zlib/include
+@@ -57,23 +57,23 @@
+ MNW=-DMAKE_NETSCAPE_WORK 
+ 
+ # to enable the auto-maildir-make feature uncomment the next line
+-#MDIRMAKE=-DAUTOMAILDIRMAKE
++MDIRMAKE=-DAUTOMAILDIRMAKE
+ 
+ # to enable the auto-homedir-make feature uncomment the next line
+-#HDIRMAKE=-DAUTOHOMEDIRMAKE
++HDIRMAKE=-DAUTOHOMEDIRMAKE
+ 
+ # on most systems we need this to make auth_pop and auth_imap
+ #SHADOWLIBS=-lcrypt
+ # OpenBSD and other Systems do not have libcrypt, so comment the line out
+ # if you get linking problems.
+ # To use shadow passwords under some Linux OS, uncomment the next two lines.
+-#SHADOWLIBS=-lcrypt -lshadow
+-#SHADOWOPTS=-DPW_SHADOW
++SHADOWLIBS=-lcrypt -lshadow
++SHADOWOPTS=-DPW_SHADOW
+ # To use shadow passwords under Solaris, uncomment the SHADOWOPTS line.
+ 
+ # to enable the possibility to log and debug imap and pop uncoment the
+ # next line
+-#DEBUG=-DDEBUG
++DEBUG=-DDEBUG
+ # WARNING: you need a NONE DEBUG auth_* to run with inetd
+ 
+ # for profiling ...

@@ -4,7 +4,7 @@
     <herd>net-mail</herd>
     <maintainer>
         <email>sj7trunks@gentoo.org</email>
-        <description>qmail-ldap maintainer for the ldap stuff</description>
+        <description>qmail-ldap maintainer</description>
     </maintainer>
     <maintainer>
         <email>robbat2@gentoo.org</email>

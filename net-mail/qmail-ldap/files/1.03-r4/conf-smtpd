@@ -1,0 +1,41 @@
+# Configuration file for qmail-smtpd
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/files/1.03-r4/conf-smtpd,v 1.1 2004/04/06 21:56:10 sj7trunks Exp $
+
+# Stuff to run before tcpserver
+#QMAIL_TCPSERVER_PRE=""
+# Stuff to run qmail-smtpd
+#QMAIL_SMTP_PRE=""
+# Stuff to after qmail-smtpd
+QMAIL_SMTP_POST="/var/qmail/bin/auth_smtp /usr/bin/true"
+
+# this turns off the IDENT grab attempt on connecting
+TCPSERVER_OPTS="${TCPSERVER_OPTS} -R"
+
+# You might want to use rblsmtpd with this, but you need to fill in a RBL server here first
+# see http://cr.yp.to/ucspi-tcp/rblsmtpd.html for more details
+#QMAIL_SMTP_PRE="${QMAIL_SMTP_PRE} rblsmtpd -r RBL-SERVER"
+
+# If you are interested in providing POP or IMAP before SMTP type relaying,
+# emerge relay-ctrl, then uncomment the next 2 lines
+#QMAIL_TCPSERVER_PRE="${QMAIL_TCPSERVER_PRE} envdir /etc/relay-ctrl relay-ctrl-chdir"
+#QMAIL_SMTP_PRE="${QMAIL_SMTP_PRE} relay-ctrl-check"
+# In /etc/courier-imap/authdaemonrc add the next line to the end:
+#authmodulelist="${authmodulelist} relay-ctrl-allow"
+# Then in /etc/courier-imap/{imapd,imapd-ssl,pop3d,pop3d-ssl}
+# Add this at the end
+#PRERUN="${PRERUN} envdir /etc/relay-ctrl relay-ctrl-chdir"
+
+# This next block is for SMTP-AUTH 
+# This provides the LOGIN, PLAIN and CRAM-MD5 types
+# the 'cmd5checkpw' used in $QMAIL_SMTP_AUTHCHECKPASSWORD supports CRAM-MD5
+# and reads it's data from /etc/poppasswd
+# see the manpage for cmd5checkpw for details on the passwords
+# uncomment the next four lines to enable SMTP-AUTH
+#QMAIL_SMTP_AUTHHOST=$(<${QMAIL_CONTROLDIR}/me)
+#[ -z "${QMAIL_SMTP_POST}" ] && QMAIL_SMTP_POST=/bin/true
+#QMAIL_SMTP_CHECKPASSWORD="/bin/cmd5checkpw"
+#QMAIL_SMTP_POST="${QMAIL_SMTP_AUTHHOST} ${QMAIL_SMTP_CHECKPASSWORD} ${QMAIL_SMTP_POST}"
+
+#Set the debug level for this service
+LOGLEVEL="0"
+

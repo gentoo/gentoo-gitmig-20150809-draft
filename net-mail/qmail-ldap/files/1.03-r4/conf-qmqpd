@@ -1,0 +1,19 @@
+# Configuration file for qmail-qmqpd
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/files/1.03-r4/conf-qmqpd,v 1.1 2004/04/06 21:56:10 sj7trunks Exp $
+
+# Stuff to run before tcpserver
+#QMAIL_TCPSERVER_PRE=""
+# Stuff to run qmail-qmqpd
+#QMAIL_QMQP_PRE=""
+# Stuff to after qmail-qmqpd
+#QMAIL_QMQP_POST=""
+
+# this turns off the IDENT grab attempt on connecting
+TCPSERVER_OPTS="${TCPSERVER_OPTS} -R"
+
+# I don't trust /etc/services to have obscure ports
+TCPSERVER_PORT=628
+
+#Set the debug level for this service
+LOGLEVEL="0"
+

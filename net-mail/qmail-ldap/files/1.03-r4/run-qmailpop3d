@@ -1,0 +1,27 @@
+#!/bin/sh
+# Gentoo Startup script for qmail's POP3 daemon
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/files/1.03-r4/run-qmailpop3d,v 1.1 2004/04/06 21:56:10 sj7trunks Exp $
+#
+# If you need to edit this file, please look at editing conf-pop3d and
+# conf-common first.  If you still need to change this file, you should
+# probably file a bug on the bugzilla saying what you wanted to change so that
+# modification can be make possible via the configuration files
+
+# This is to make life easier
+SERVICE=pop3
+
+# this is to inherit QMAIL_CONTROLDIR
+. /etc/profile
+
+[ -s ${QMAIL_CONTROLDIR}/conf-common ] && source ${QMAIL_CONTROLDIR}/conf-common
+[ -s ${QMAIL_CONTROLDIR}/conf-${SERVICE}d ] && source ${QMAIL_CONTROLDIR}/conf-${SERVICE}d
+[ -s /var/qmail/bin/config-sanity-check ] && source /var/qmail/bin/config-sanity-check
+
+exec env - LOGLEVEL=${LOGLEVEL} \
+    /usr/bin/softlimit ${SOFTLIMIT_OPTS} \
+    /usr/bin/tcpserver ${TCPSERVER_OPTS} -x /etc/tcp.${SERVICE}.cdb -c ${MAXCONN} \
+    ${TCPSERVER_HOST} ${TCPSERVER_PORT} \
+    ${QMAIL_POP3_PREAUTH} /var/qmail/bin/qmail-popup ${QMAIL_POP3_POP3HOST} \
+    ${QMAIL_POP3_CHECKPASSWORD} ${QMAIL_POP3_POSTAUTH} \
+    /var/qmail/bin/qmail-pop3d ${MAILDIR} 2>&1
+

@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/qmail-ldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.7 2004/03/14 00:40:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.8 2004/04/06 21:56:10 sj7trunks Exp $
+
+  06 Apr 2004; Benjamin Coles <sj7trunks@gentoo.org>
+  A special thanks to these people:
+  Aiko Barz <aiko@chroot.de>
+  Christian Zoffoli <czoffoli@xmerlin.org>
+  Changes include the following: Compression, zlib, debug,
+  better supervise scripts, 99qmail fix, tcprules fix, rc perms
+  Clustering, ldapauth user creation fix, and naming convention fix.
+  Latest qmail-ldap patch as well.
 
   13 Mar 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
   metadata.xml:
