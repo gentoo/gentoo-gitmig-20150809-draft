@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.37 2003/09/24 21:39:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.38 2003/09/26 18:52:43 darkspecter Exp $
+
+  26 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> coreutils-5.0-r4.ebuild:
+  set ppc in keywords
 
 *coreutils-4.5.11-r1 (24 Sep 2003)
 
