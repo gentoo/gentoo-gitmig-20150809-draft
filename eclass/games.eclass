@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.26 2003/03/03 04:59:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.27 2003/03/03 21:39:24 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -60,16 +60,18 @@ egamesinstall() {
 gameswrapper() {
 	local oldtree=${DESTTREE}
 	into ${GAMES_PREFIX}
-	local cmd="do$1"; shift
+	local cmd=$1; shift
 	${cmd} $@
 	into ${oldtree}
 }
 
-dogamesbin() { gameswrapper bin $@; }
-dogamessbin() { gameswrapper sbin $@; }
-dogameslib() { gameswrapper lib $@; }
-dogameslib.a() { gameswrapper lib.a $@; }
-dogameslib.so() { gameswrapper lib.so $@; }
+dogamesbin() { gameswrapper ${FUNCNAME/games} $@; }
+dogamessbin() { gameswrapper ${FUNCNAME/games} $@; }
+dogameslib() { gameswrapper ${FUNCNAME/games} $@; }
+dogameslib.a() { gameswrapper ${FUNCNAME/games} $@; }
+dogameslib.so() { gameswrapper ${FUNCNAME/games} $@; }
+newgamesbin() { gameswrapper ${FUNCNAME/games} $@; }
+newgamessbin() { gameswrapper ${FUNCNAME/games} $@; }
 
 gamesowners() { chown ${GAMES_USER}.${GAMES_GROUP} $@; }
 gamesperms() { chmod u+rw,g+r-w,o-rwx $@; }
