@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.9 2004/06/24 22:53:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.10 2004/06/28 04:11:59 ciaranm Exp $
 
 MY_PV="${PV}b3"
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
@@ -9,7 +9,7 @@ SRC_URI="ftp://mama.indstate.edu/linux/tree/${PN}-${MY_PV}.tgz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha amd64"
+KEYWORDS="x86 ~ppc sparc alpha amd64 ~mips"
 IUSE=""
 
 RDEPEND="virtual/glibc"
