@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r2.ebuild,v 1.2 2005/01/28 16:39:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.1 2005/01/30 07:09:42 ka0ttic Exp $
 
 inherit eutils fixheadtails
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64 ~mips"
-IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux"
+IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc"
 
 PROVIDE="virtual/snmp"
 DEPEND="virtual/libc
@@ -32,7 +32,9 @@ RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-snmpd )
 	!virtual/snmp"
 
-DEPEND="${DEPEND} >=sys-apps/sed-4"
+DEPEND="${DEPEND}
+	>=sys-apps/sed-4
+	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
@@ -90,6 +92,11 @@ src_compile() {
 	if use perl ; then
 		emake perlmodules || die "compile perl modules problem"
 	fi
+
+	if use doc ; then
+		einfo "Building HTML Documentation"
+		make docsdox || die "failed to build docs"
+	fi
 }
 
 src_install () {
@@ -106,6 +113,8 @@ src_install () {
 
 	dodoc AGENT.txt ChangeLog FAQ INSTALL NEWS PORTING README* TODO
 	newdoc EXAMPLE.conf.def EXAMPLE.conf
+
+	use doc && dohtml docs/html/*
 
 	keepdir /etc/snmp /var/lib/net-snmp
 
