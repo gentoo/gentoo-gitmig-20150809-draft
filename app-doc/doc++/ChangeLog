@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.1 2003/07/20 03:47:09 jje Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.2 2004/02/22 13:18:35 aliz Exp $
+
+  22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> doc++-3.4.10.ebuild:
+  Unmasking. Closing #35427.
 
 *doc++-3.4.10 (20 Jul 2003)
 
