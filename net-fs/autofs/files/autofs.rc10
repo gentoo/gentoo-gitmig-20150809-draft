@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc9,v 1.4 2005/03/15 04:18:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc10,v 1.1 2005/03/15 04:18:38 robbat2 Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/autofs/auto.master, then a YP
@@ -84,14 +84,29 @@ function getmounts()
 		# If the options include a -t or --timeout parameter, then
 		# pull those particular options out.
 		# echo DAEMONOPTIONS OPTIONS $daemonoptions $options
+		allopts="$daemonoptions $options"
 		startupoptions=
-		if echo $options $daemonoptions | grep -q -- '-t' ; then
-		    startupoptions="--timeout $(echo $daemonoptions $options | \
-		      sed 's/.*--*t\(imeout\)*[ \t=]*\([0-9][0-9]*\).*$/\2/g')"
-		fi
+
+		# there is no way to get all of these out in a single sed call that I'm aware of :-(
+		opt_timeout="$(echo ${allopts} | sed -n -e '/-t/s/.*--*t\(imeout\)*[[:space:]=]*\([0-9][0-9]*\).*$/--timeout \2/gp')"
+		opt_pidfile="$(echo ${allopts} | sed -n -e '/-p/s/.*--*p\(id-file\)*[[:space:]=]*\([^[:space:]]*\).*$/--pid-file \2/gp')"
+		opt_verbose="$(echo ${allopts} | sed -n -e '/-v/s/.*--*v\(erbose\)*.*$/--verbose/gp')"
+		opt_debug="$(echo ${allopts} | sed -n -e '/-d/s/.*--*d\(ebug\)*.*$/--debug/gp')"
+		opt_ghost="$(echo ${allopts} | sed -n -e '/-g/s/.*--*g\(host\)*.*$/--ghost/gp')"
+
+		startupoptions="${opt_timeout} ${opt_pidfile} ${opt_verbose} ${opt_debug} ${opt_ghost}"
+		
+
 		# Other option flags are intended for maps.
-		mapoptions="$(echo "$daemonoptions $options" |\
-		      sed   's/--*t\(imeout\)*[ \t=]*\([0-9][0-9]*\)//g')"
+		mapoptions="$(echo ${allopts} | sed  \
+			-e '/-t/{s/--*t\(imeout\)*[[:space:]=]*\([0-9][0-9]*\)//g }' \
+			-e '/-p/{s/--*p\(id-file\)*[[:space:]=]*\([^[:space:]]*\)//g }' \
+			-e '/-v/{s/--*v\(erbose\)*//g }' \
+			-e '/-d/{s/--*d\(ebug\)*//g }' \
+			-e '/-g/{s/--*g\(host\)*//g }' \
+			-e 's/^[[:space:]]*//g' \
+			-e 's/[[:space:]]*$//g')"
+
 		# Break up the maptype and map, if the map type is specified
 		maptype="${map/:*}"
 		# Handle degenerate map specifiers
