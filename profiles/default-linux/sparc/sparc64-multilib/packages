@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.1 2004/12/11 02:12:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.2 2004/12/13 10:11:25 eradicator Exp $
 
 # Sometimes necessary to trick programs into thinking we're really
 # a sparc32 system.
@@ -13,4 +13,4 @@
 *>=sys-devel/binutils-2.15.92.0.2-r1
 -*<sys-devel/gcc-3.4.1
 *>=sys-devel/gcc-3.4.3-r1
-*>=sys-libs/glibc-2.3.3.20040420-r2
+*>=sys-libs/glibc-2.3.4.20040808-r1
