@@ -1,30 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.5.ebuild,v 1.2 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.5.ebuild,v 1.3 2003/10/27 14:39:11 vapier Exp $
 
 DESCRIPTION="Runset Init suite, a replacement for sysv style initd"
-SRC_URI="ftp://ftp.ocis.net/pub/users/ldeutsch/release/${P}.tar.gz"
 HOMEPAGE="http://www.icewalkers.com/softlib/app/app_00233.html"
+SRC_URI="http://www.ibiblio.org/pub/Linux/system/daemons/init/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
-	econf
-	make || die
+	econf || die
+	emake || die
 }
 
 src_install() {
 	# fix info file
-	echo "INFO-DIR-SECTION Admin" >>doc/runset.info
-	echo "START-INFO-DIR-ENTRY" >>doc/runset.info
-	echo "* runset: (runset). " >>doc/runset.info
-	echo "END-INFO-DIR-ENTRY" >>doc/runset.info
-
+	cat << EOF >> doc/runset.info
+INFO-DIR-SECTION Admin
+START-INFO-DIR-ENTRY
+* runset: (runset).
+END-INFO-DIR-ENTRY
+EOF
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING INSTALL ChangeLog LSM NEWS README
-	cp -a ${S}/sample ${D}/usr/share/doc/${PF}
+	dodoc AUTHORS ChangeLog LSM NEWS README
+	cp -a ${S}/sample ${D}/usr/share/doc/${PF}/
 }
