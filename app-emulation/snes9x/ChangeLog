@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/snes9x
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.1 2002/05/27 02:03:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.2 2002/06/24 05:24:04 rphillips Exp $
+
+*snes-139-r1 (23 Jun 2002)
+
+  23 Jun 2002; Ryan Phillips <rphillips@gentoo.org> snes-139-r1.ebuild :
+
+  Thanks to Per Wigren the ebuild has been updated with X11 support and
+  opengl.
 
 *snes-139 (26 May 2002)
 
