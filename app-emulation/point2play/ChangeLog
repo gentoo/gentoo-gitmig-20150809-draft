@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/point2play
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/ChangeLog,v 1.10 2004/06/23 22:24:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/ChangeLog,v 1.11 2004/06/23 22:51:04 vapier Exp $
+
+  23 Jun 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.3-fix-sound-test.patch, point2play-1.3.ebuild:
+  Patch the sound test to actually work #35755.
 
 *point2play-1.3 (23 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3.ebuild,v 1.1 2004/06/23 22:24:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3.ebuild,v 1.2 2004/06/23 22:51:04 vapier Exp $
 
 inherit eutils
 
@@ -27,6 +27,11 @@ pkg_nofetch() {
 	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
 	echo
 	einfo "The archive should then be placed into ${DISTDIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-fix-sound-test.patch
 }
 
 src_install() {
