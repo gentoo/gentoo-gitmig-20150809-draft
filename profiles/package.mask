@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3726 2005/03/14 00:57:42 beu Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3727 2005/03/14 03:41:15 chriswhite Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1144,7 +1144,7 @@ media-plugins/realvideo-codecs
 
 # <solar@gentoo> (06 Feb 2004)
 # RealOne/RealPlayer 8 vulnerabilities bug #40469
-media-video/realplayer
+<media-video/realplayer-10.0.3
 media-video/realone
 
 # <george@gentoo.org> (03 Feb 2004)
