@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ppc-sources-dev
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.22 2004/04/12 16:36:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.23 2004/04/15 11:42:40 plasmaroo Exp $
+
+*ppc-sources-dev-2.4.24-r3 (15 Apr 2004)
+
+  15 Apr 2004; <plasmaroo@gentoo.org> ppc-sources-dev-2.4.24-r3.ebuild,
+  files/ppc-sources-dev-2.4.24.CAN-2004-0109.patch:
+  Version bump for the CAN-2004-0109 issue; bug #47881.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ppc-sources-dev-2.4.19.ebuild,
   ppc-sources-dev-2.4.20.ebuild, ppc-sources-dev-2.4.22-r1.ebuild,
