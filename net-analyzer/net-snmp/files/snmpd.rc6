@@ -1,13 +1,13 @@
 #!/sbin/runscript
 
 depend() {
-	need net
 	use logger
+	need net
 }
 
 checkconfig() {
 	if [ ! -e /etc/snmp/snmpd.conf ] ; then
-		eerror "You need an /etc/snmp/snmpd.conf to run snmpd"
+		eerror "You need an /etc/snmp/snmpd.conf config file to run snmpd"
 		return 1
 	fi
 }

@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.22 2003/09/19 21:49:33 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.23 2003/09/24 04:36:16 max Exp $
+
+  23 Sep 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.1.ebuild,
+  net-snmp-5.0.2a-r1.ebuild, net-snmp-5.0.2a.ebuild, net-snmp-5.0.6-r1.ebuild,
+  net-snmp-5.0.6.ebuild, net-snmp-5.0.8.ebuild, net-snmp-5.0.9-r1.ebuild,
+  net-snmp-5.0.9.ebuild, files/net-snmp-5.0.6-gentoo.diff,
+  files/net-snmpd.rc6, files/snmpd.conf, files/snmpd.rc6:
+  Purge all the no-longer download-able versions and tweak some minor tidbits.
 
 *net-snmp-5.0.9-r1 (19 Sep 2003)
 
