@@ -1,10 +1,11 @@
 # ChangeLog for dev-perl/HTML-TableExtract
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.1 2002/10/30 22:23:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.2 2002/10/30 23:43:51 seemant Exp $
 
 *HTML-TableExtract-1.08 (30 Oct 2002)
 
   01 Oct 2002; HTML-TableExtract-1.08.ebuild ChangeLog
   files/digest-HTML-TableExtract-1.08 :
+
   New submission for retrieving info from an HTML table by: Gustavo Felisberto
-  <gustavo@felisberto.net> in bug #8890.
+  <gustavo@felisberto.net> in bug #8926.
