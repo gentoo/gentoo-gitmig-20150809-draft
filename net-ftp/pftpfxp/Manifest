@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 41206a284b90d6def971f350b47a81ea pftpfxp-0.11.4.6.ebuild 1244
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 b45fd69ad7e58c4957cdd929417cc9f7 ChangeLog 464
+MD5 5c7f9305285e6c7efdbc232f737d533e files/digest-pftpfxp-0.11.4.6 68
+MD5 e5a814afb2d03338d5f2e0c69fb75f69 files/0.11.4.6-gcc3.4.fix 505
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBputpmdTrptrqvGERAhb+AJ9ZwNSDedkrSEvBbt3jVPQCP8/R2QCeMOz1
+sSAezYCViTYKNIGzzMiB03w=
+=cTDT
+-----END PGP SIGNATURE-----
