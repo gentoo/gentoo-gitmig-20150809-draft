@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.5 2004/10/17 07:26:36 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.6 2004/11/28 11:45:16 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="A lib to make the setup of Java Management Extensions easier"
 SRC_URI="mirror://apache/jakarta/commons/modeler/source/modeler-1.1-src.tar.gz"
-HOMEPAGE="http://jakarta.apache.org/commons/modeler.html"
+HOMEPAGE="http://jakarta.apache.org/commons/modeler/"
 LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4
