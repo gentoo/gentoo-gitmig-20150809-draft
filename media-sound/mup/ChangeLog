@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/mup
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/ChangeLog,v 1.1 2002/02/26 07:31:02 gbevin Exp $
+
+*mup-4.3 (26/02/2002)
+
+  26 Feb 2002; G.Bevin <gbevin@gentoo.org> :
+  
+  Added mup 4.3 as a portage package. Note that this is a shareware application
+  and that you'll need to register to be able to create music sheets without
+  the 'unregistered' background image.
+  
