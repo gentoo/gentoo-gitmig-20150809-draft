@@ -1,0 +1,23 @@
+--- configure.orig	2003-08-01 15:35:36.000000000 +0200
++++ configure	2003-08-01 15:36:10.000000000 +0200
+@@ -4904,6 +4904,7 @@
+ cat >conftest.$ac_ext <<_ACEOF
+ #line 4905 "configure"
+ #include "confdefs.h"
++#include "db.h"
+ 
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ #ifdef __cplusplus
+@@ -4911,11 +4912,10 @@
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char db_create ();
+ int
+ main ()
+ {
+-db_create ();
++db_create (0,0,0);
+   ;
+   return 0;
+ }
