@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.2.ebuild,v 1.3 2002/12/18 15:51:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.2.ebuild,v 1.4 2003/01/16 12:21:12 seemant Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -13,8 +13,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc sparc"
 IUSE="gif png"
 
-DEPEND="sys-apps/supersed"
-RDEPEND="app-text/ghostscript
+DEPEND="app-text/ghostscript
 	app-text/tetex
 	media-libs/netpbm
 	sys-devel/perl
@@ -62,16 +61,15 @@ src_install() {
 	dodoc BUGS Changes FAQ INSTALL LICENSE MANIFEST README TODO
 
 	# make /usr/share/latex2html sticky
-	touch .keep
-	insinto /usr/share/latex2html
-	doins .keep
+	keepdir /usr/share/latex2html
 
 	# clean the perl scripts up to remove references to the sandbox
-	einfo "fixing shit"
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/pstoimg.pl
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/latex2html.pl
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/cfgcache.pm
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/l2hconf.pm
+	einfo "fixing sandbox references"
+	einfo ${T}
+	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/pstoimg.pl
+	dosed "s:${S}::g" /usr/lib/latex2html/latex2html.pl
+	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/cfgcache.pm
+	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/l2hconf.pm
 }
 
 pkg_postinst() {
