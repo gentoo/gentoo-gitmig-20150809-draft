@@ -1,11 +1,14 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.12 2004/02/09 08:26:16 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.13 2004/04/21 19:09:15 spyderous Exp $
+
+  21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Fix ChangeLog entry by root.
 
 *ifc-7.1.008 (09 Feb 2004)
 
-  09 Feb 2004; root <root@gentoo.org> ifc-6.0.ebuild, ifc-7.0.064-r1.ebuild,
-  ifc-7.0.064.ebuild, ifc-7.1.008.ebuild, metadata.xml:
+  09 Feb 2004; Jared Hudson <jhhudso@gentoo.org> ifc-6.0.ebuild,
+  ifc-7.0.064-r1.ebuild, ifc-7.0.064.ebuild, ifc-7.1.008.ebuild, metadata.xml:
   Version bump and fixed copyright headers in other ebuilds. New ebuild credit
   goes to Derek Dolney <dolney@astro.upenn.edu> under bug id #29483
 
