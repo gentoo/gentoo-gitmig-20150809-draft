@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.6.5.ebuild,v 1.3 2004/09/04 23:12:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.6.5.ebuild,v 1.4 2004/09/12 09:58:05 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 SUPPORTP="pvpgn-support-1.0"
 DESCRIPTION="A gaming server for Battle.Net compatible clients"

@@ -1,6 +1,6 @@
 MD5 3fcdde44b2e520d98df3c4d65b730ee2 ChangeLog 586
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 214b2a6f767b992d8540fb88647a15c8 pvpgn-1.6.5.ebuild 2436
+MD5 6284978a67b8a0cf4b916400d344cdc0 pvpgn-1.6.5.ebuild 2447
 MD5 778be818c35e7df1e022398198427172 files/1.6.5-fhs.patch 10322
 MD5 ba5db7daf3b6cfeb5c463b3d8f7ee32b files/digest-pvpgn-1.6.5 134
 MD5 0dea305044e123e1b1ee007331906727 files/init.d.rc 785
