@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3.ebuild,v 1.10 2004/08/21 06:49:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3.ebuild,v 1.11 2004/08/21 18:48:43 usata Exp $
 
 inherit eutils
 
@@ -9,11 +9,15 @@ DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
 IMMQT_P="qt-x11-immodule-unified-qt3.3.2-20040814"
-IMMQT_P2="qt-3.3.3-complemental-patch-for-immodule-20040814"
+IMMQT_P2="qt-3.3.3-immodule-20040814-20040819"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
-	immqt? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )
-	immqt-bc? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )"
+	immqt? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz
+		mirror://gentoo/${IMMQT_P2}.diff.gz
+		http://dev.gentoo.org/~usata/distfiles/${IMMQT_P2}.diff.gz )
+	immqt-bc? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz
+		mirror://gentoo/${IMMQT_P2}.diff.gz
+		http://dev.gentoo.org/~usata/distfiles/${IMMQT_P2}.diff.gz )"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
@@ -68,11 +72,10 @@ src_unpack() {
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
 
 	if use immqt || use immqt-bc ; then
-		# epatch dies when patch returns an error, but we have to
-		# ignore it.
-		einfo "Applying immodule patch. Please ignore an error on qapplication_x11.cpp."
-		patch -p0 -g0 -s < ../${IMMQT_P}.diff
-		patch -p1 -g0 -s < ${FILESDIR}/${IMMQT_P2}.diff
+		pushd ..
+		epatch ${IMMQT_P2}.diff
+		popd
+		epatch ../${IMMQT_P}.diff
 		sh make-symlinks.sh || die "make symlinks failed"
 	fi
 
