@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <iggy@gentoo.org> (02 Dec 2003)
+# preparing to drop
+sys-kernel/rsbac-sources
+
 # <g2boojum@gentoo.org> (02 Dec 2003)
 # Hotmail changed their site again
 <=net-mail/gotmail-0.7.10
