@@ -1,0 +1,10 @@
+--- linux-2.4.9-32.7/fs/jbd/journal.c	2004-04-17 10:30:29.828087432 +0100
++++ linux-2.4.9-32.7/fs/jbd/journal.c	2004-04-17 10:31:40.990269136 +0100
+@@ -619,6 +619,7 @@
+ 
+ 	bh = getblk(journal->j_dev, blocknr, journal->j_blocksize);
+ 	bh->b_state |= (1 << BH_Dirty);
++	memset(bh->b_data, 0, journal->j_blocksize);
+ 	BUFFER_TRACE(bh, "return this buffer");
+ 	return journal_add_journal_head(bh);
+ }

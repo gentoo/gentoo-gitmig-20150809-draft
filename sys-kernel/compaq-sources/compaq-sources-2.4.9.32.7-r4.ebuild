@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r3.ebuild,v 1.1 2004/04/15 08:17:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r4.ebuild,v 1.1 2004/04/17 09:35:23 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -46,7 +46,7 @@ src_unpack() {
 	mv usr/src/linux-${KV} ${WORKDIR}
 	cd ${S}
 
-	# just fix a couple of minor issues...
+	# Just fix a couple of minor issues...
 	sed -i 's#include/linux/autoconf.h \(include/linux/version.h \\\)#\1#' Makefile
 	sed -i 's#\(extern\) \(unsigned long irq_err_count;\)#\1 volatile \2#' arch/alpha/kernel/irq_alpha.c
 	sed -i 's#/DISCARD/ : { \*(.text.exit)#/DISCARD/ : {#' arch/alpha/vmlinux.lds.in
@@ -54,11 +54,14 @@ src_unpack() {
 	# Security patches
 	epatch ${FILESDIR}/${P}.do_brk.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
 
-	# hand it over to the eclass...
+	# Hand it over to the eclass...
 	kernel_universal_unpack
 }
 
