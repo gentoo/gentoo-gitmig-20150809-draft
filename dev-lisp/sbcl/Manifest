@@ -7,6 +7,7 @@ MD5 6c9f9c96627678efaa377d40692ea969 sbcl-0.8.1.ebuild 1534
 MD5 30af45636c7e7d046f5ad5a732473742 sbcl-0.8.3.68.ebuild 2545
 MD5 d913694a716b741d4edb240f3d8049b3 sbcl-0.8.3.ebuild 2562
 MD5 2842b64ad2353ca9b97ab1563ddb1e35 sbcl-0.8.4-r1.ebuild 3569
+MD5 87f0e6e890505a81ed87b4f74e302137 sbcl-0.8.4-r2.ebuild 3812
 MD5 c4fad0c97a08164fd44dea56a258a475 sbcl-0.8.4.ebuild 2560
 MD5 36e1837606337c53dc21111b18146143 files/digest-sbcl-0.6.12 150
 MD5 61c9382b669d5b190b434be62664253e files/digest-sbcl-0.7.5 219
@@ -16,8 +17,9 @@ MD5 1821ff9718a8d902b416c691258c9a40 files/digest-sbcl-0.8.1 304
 MD5 1c37a6df08d60b9008ded7dfb2b584ab files/digest-sbcl-0.8.3 301
 MD5 714f4433aa5692baadd4b3ec5dfe9c9b files/digest-sbcl-0.8.3.68 301
 MD5 e4cb586a69674d17caa700f1cc5bda52 files/digest-sbcl-0.8.4 362
+MD5 5dbead83e334ab169eddfb64e138606b files/digest-sbcl-0.8.4-r1 528
+MD5 5dbead83e334ab169eddfb64e138606b files/digest-sbcl-0.8.4-r2 528
 MD5 47993934f65e81900eff345eec6fabe5 files/gc.lisp-linux-2.6.patch 664
 MD5 6e40a080b566cc78dfe522ae34eec0a7 files/install-clc.lisp 1338
 MD5 2821ba30af598f01018a43b370010e7c files/sbcl.rc 251
 MD5 149ae58f2a3254c2746b71452292abf2 files/sbcl.sh 2170
-MD5 5dbead83e334ab169eddfb64e138606b files/digest-sbcl-0.8.4-r1 528
