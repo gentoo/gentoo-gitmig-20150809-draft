@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.88.ebuild,v 1.2 2004/11/17 23:23:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.88.ebuild,v 1.3 2004/11/30 20:54:06 swegener Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -21,7 +21,7 @@ RDEPEND="sys-libs/zlib
 	xv? ( virtual/x11 )
 	dga? ( virtual/x11 )
 	X? ( virtual/x11 )
-	opengl (
+	opengl? (
 		virtual/x11
 		virtual/opengl
 		virtual/glu )
