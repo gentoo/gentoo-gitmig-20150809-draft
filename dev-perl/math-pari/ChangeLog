@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/math-pari
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.1 2003/06/23 15:25:24 mcummings Exp $
+
+*math-pari-2.010500 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  math-pari-2.010500.ebuild:
+  First import of math-pari, needed for ssh/crypt function in perl
+
