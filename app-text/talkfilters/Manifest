@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 18632d683ac61b3ddf25ce253cadba94 talkfilters-2.3.3-r1.ebuild 1074
-MD5 902573f4fb66a9af1ce947cc8f4758f8 talkfilters-2.3.4-r1.ebuild 1074
-MD5 818cfa701fc2f7358acb18930938cf6c ChangeLog 1533
+MD5 0c76fe113cff3570cb8b633f478568dd ChangeLog 1613
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 4809f10362a70a5b8bf4ef98d804cb83 talkfilters-2.1.ebuild 1046
+MD5 18632d683ac61b3ddf25ce253cadba94 talkfilters-2.3.3-r1.ebuild 1074
+MD5 8412a2466201d96f04f1b8e8eacc7ee5 talkfilters-2.3.4-r1.ebuild 1071
+MD5 e98c05d941b1703fe449023656b827f0 files/digest-talkfilters-2.1 67
 MD5 2bf3bf8d8322640c5c4580ccd2f233c9 files/digest-talkfilters-2.3.3-r1 69
 MD5 533f25dd0383144c11961b639d2588c4 files/digest-talkfilters-2.3.4-r1 69
-MD5 e98c05d941b1703fe449023656b827f0 files/digest-talkfilters-2.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCHxImEZCkKN40op4RAl5hAJ4yijpkz3SBlKXmwN6rmzCxdY21nQCgxHmh
-YVby5DRz6n6izlJmkPGx12E=
-=rRpN
------END PGP SIGNATURE-----
