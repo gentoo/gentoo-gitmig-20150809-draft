@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.3.ebuild,v 1.1 2001/02/07 16:10:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.3.ebuild,v 1.2 2001/02/07 19:35:06 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,6 @@ DESCRIPTION="Console display library used by most text viewer"
 SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${A}"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
-RDEPEND="virtual/glibc"
 
 src_unpack() {
 
