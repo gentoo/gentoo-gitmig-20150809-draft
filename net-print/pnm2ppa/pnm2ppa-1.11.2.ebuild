@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.11.2.ebuild,v 1.1 2002/10/29 14:56:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.11.2.ebuild,v 1.2 2003/02/13 15:26:43 vapier Exp $
 
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 

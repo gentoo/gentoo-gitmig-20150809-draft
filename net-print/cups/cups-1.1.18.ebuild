@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18.ebuild,v 1.5 2003/01/18 15:37:31 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18.ebuild,v 1.6 2003/02/13 15:24:10 vapier Exp $
 
 IUSE="ssl slp pam"
 
