@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1.ebuild,v 1.6 2003/04/06 08:48:15 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1.ebuild,v 1.7 2003/04/23 15:11:28 vapier Exp $
 
 NP=${P/-/}
 S=${WORKDIR}/${NP}
-DESCRIPTION="JUnit is a simple framework to write repeatable tests."
+DESCRIPTION="simple framework to write repeatable tests"
 SRC_URI="http://download.sourceforge.net/junit/${NP}.zip"
 HOMEPAGE="http://www.junit.org/"
 
