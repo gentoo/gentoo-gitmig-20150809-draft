@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r3.ebuild,v 1.2 2001/02/27 13:42:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r3.ebuild,v 1.3 2001/04/07 16:16:44 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console and font utilities"
@@ -11,7 +11,7 @@ HOMEPAGE="http://altern.org/ydirson/en/lct/"
 DEPEND="virtual/glibc
         sys-devel/automake
         >=sys-devel/flex-2.5.4a-r2
-        nls? ( sys-devel/gettext )"
+        nls? ( sys-devel/gettext ) sys-devel/autoconf"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
