@@ -1,6 +1,9 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.64 2004/09/08 13:05:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.65 2004/09/19 16:45:03 stuart Exp $
+
+  19 Sep 2004; Stuart Herbert <stuart@gentoo.org> :
+  Version bump; CONF_LIBDIR support for amd64
 
   08 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
   Fixed herd name
