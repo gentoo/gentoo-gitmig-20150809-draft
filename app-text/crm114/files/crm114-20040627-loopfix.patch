@@ -1,0 +1,14 @@
+diff -urN crm114-old/mailfilter.crm crm114-new/mailfilter.crm
+--- crm114-old/mailfilter.crm	2004-06-27 03:45:19.000000000 -0700
++++ crm114-new/mailfilter.crm	2004-07-16 11:00:01.970824969 -0700
+@@ -807,8 +807,8 @@
+ 		#   get rid of any first-column 'From's as they are message breaks!
+ 		#   this isn't necessary if we're mailing to someplace else...
+ 		{
+-			match (:f:) <nomultiline> [:m_text:] /\n\nFrom/
+-			alter (:f:) />:*:f:/
++			match (:f:) <nomultiline> [:m_text:] /^From/
++			alter (:f:) / :*:f:/
+ 			liaf
+ 		}
+ 	       	alter (:_dw:) /:*:_dw:-=-Extra Stuff-=-\n\n:*:m_text: -0-0-0- :*:_nl:/		
