@@ -2,6 +2,12 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+*openh323-1.12.0-r1 (09 Jul 2003)
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> openh323-1.12.0-r1.ebuild,
+  openh323-1.12.0.ebuild:
+  adds ffmpeg support. also has backwards compatibility symlinks with -r0
+
   29 Jun 2003; Alastair Tse <liquidx@gentoo.org> openh323-1.11.7.ebuild,
   openh323-1.12.0.ebuild:
   fix broken libopenh323 symlink
