@@ -1,8 +1,10 @@
 # ChangeLog for media-sound/smixer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.2 2002/09/06 21:26:22 owen Exp $
 
 *smixer-1.0.1 (1 Feb 2002)
+  6 Sep 2002; Owen Stampflee <owen@gentoo.org> smixer-1.0.1.ebuild:
+  Added PPC to KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
