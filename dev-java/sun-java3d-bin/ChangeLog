@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-java3d-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/ChangeLog,v 1.3 2004/09/05 07:19:37 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/ChangeLog,v 1.4 2005/04/04 16:32:40 luckyduck Exp $
+
+*sun-java3d-bin-1.3.2 (04 Apr 2005)
+
+  04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +sun-java3d-bin-1.3.2.ebuild, -sun-java3d-bin-1.32-r1.ebuild,
+  -sun-java3d-bin-1.32.ebuild:
+  version bump, now there is also support for amd64. fixes #73359
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
