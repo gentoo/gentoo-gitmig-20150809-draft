@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.2 2003/07/16 17:42:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.3 2003/07/19 12:12:44 lanius Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ src_unpack() {
 
 	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
 #	patch -p0 ${S}/man/gs.1 < ${FILESDIR}/${P}.man.patch || die
-	epatch ${FILESDIR}/ghostscript-7.05.5.man.patch
+	epatch ${FILESDIR}/${P}.man.patch
 
 	epatch ${FILESDIR}/ps2epsi-security.patch
 
