@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.0.ebuild,v 1.2 2003/09/14 08:25:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.0.ebuild,v 1.3 2003/09/28 13:17:29 foser Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.abisource.com"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://sourceforge/${PN}/${PN}-plugins-${PV}.tar.bz2"
 
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 ~sparc ~alpha ~ppc"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -26,7 +26,7 @@ RDEPEND="virtual/x11
 	media-libs/libpng
 	>=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
-	>=app-text/wv-0.7.6
+	>=app-text/wv-1
 	>=dev-libs/fribidi-0.10.4
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
 	( xml2? >=dev-libs/libxml2-2.4.10 : dev-libs/expat )
