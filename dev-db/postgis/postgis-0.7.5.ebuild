@@ -1,20 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5.ebuild,v 1.1 2003/07/12 23:18:05 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5.ebuild,v 1.2 2003/08/05 18:46:45 vapier Exp $
 
-IUSE=""
-
-S="${WORKDIR}/${P}"
 MY_PGSQL="postgresql-7.3.3"
-
 DESCRIPTION="adds support for geographic objects to PostgreSQL"
+HOMEPAGE="http://postgis.refractions.net/"
 SRC_URI="http://postgis.refractions.net/${P}.tar.gz
 	ftp://ftp8.us.postgresql.org/pub/pgsql/source/v7.3.3/${MY_PGSQL}.tar.gz"
-HOMEPAGE="http://postgis.refractions.net"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
 SLOT="0"
+KEYWORDS="~x86"
 
 DEPEND="~postgresql-7.3.3
 	dev-libs/proj
@@ -59,8 +55,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
-
+src_install() {
 	cd ${WORKDIR}/${MY_PGSQL}/contrib/${P}
 
 	make \
