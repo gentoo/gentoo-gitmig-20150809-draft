@@ -1,4 +1,4 @@
-# Author Matthew Turk <m-turk@nwu.edu>
+# Author Matthew Turk <satai@gentoo.org>
 #
 # This eClass is designed to be easy to use and implement.  The vast majority of
 # LaTeX packages will only need to define SRC_URI (and sometimes S) for a
@@ -83,6 +83,7 @@ latex-package_src_doinstall() {
 	    "tex" | "dtx")
 	    	for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 		do
+		    echo "Making documentation: $i"
 		    texi2dvi -q -c --language=latex $i
 		done
 	        ;;
@@ -113,7 +114,7 @@ latex-package_src_doinstall() {
                 latex-package_src_doinstall sh
                 ;;
             "all")
-                latex-package_src_doinstall styles doc fonts bin
+                latex-package_src_doinstall styles fonts bin doc 
                 ;;
         esac
     shift
