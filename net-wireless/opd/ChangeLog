@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/opd
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/ChangeLog,v 1.1 2004/12/15 16:53:33 ticho Exp $
+
+*opd-0.2 (15 Dec 2004)
+
+  15 Dec 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +files/0.2-compile-fix.patch, +opd-0.2.ebuild:
+  Initial import.
+
