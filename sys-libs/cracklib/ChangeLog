@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.40 2004/03/09 23:40:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.41 2004/04/24 06:24:19 robbat2 Exp $
+
+*cracklib-2.7-r9 (23 Apr 2004)
+
+  23 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> cracklib-2.7-r9.ebuild:
+  bug #47482, libcrack.so should be in /lib as other stuff in the root fs is
+  linked against it.
 
   09 Mar 2004; <agriffis@gentoo.org> cracklib-2.7-r8.ebuild:
   stable on alpha and ia64
