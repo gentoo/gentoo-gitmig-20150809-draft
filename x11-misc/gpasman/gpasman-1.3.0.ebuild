@@ -1,32 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.9 2002/10/20 18:55:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.10 2002/11/04 08:00:46 seemant Exp $
 
 S=${WORKDIR}/${P}
-
 DESCRIPTION="Gpasman: GTK Password manager"
 # This is _NOT_ the offical download site, but the official site
 # seems to not work (ever).
 SRC_URI="http://gpasman.nl.linux.org/${P}.tar.gz"
 HOMEPAGE="http://gpasman.nl.linux.org/"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
-
-src_compile() {
-
-	./configure --prefix=/usr || die "configure failed"
-	emake || die
-	
-}
-
 src_install() {
-
-	
-	mkdir -p ${D}/usr/bin
+	dodir /usr/bin
 	emake prefix=${D}/usr install
 
 	dodoc ChangeLog AUTHORS README BUGS NEWS
