@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.7.ebuild,v 1.1 2003/03/22 06:30:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.7.ebuild,v 1.2 2003/03/25 04:21:03 lostlogic Exp $
 
 inherit eutils
 
-TLS_P="pfixtls-0.8.13-2.0.3-0.9.7"
-IPV6_P="tls+ipv6-1.12-pf-2.0.3"
+TLS_P="pfixtls-0.8.13-2.0.6-0.9.7a"
+IPV6_P="tls+ipv6-1.13-pf-2.0.7"
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org"
 SRC_URI="ftp://ftp.pca.dfn.de/pub/tools/net/postfix/official/${P}.tar.gz
 	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )
-	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.12/${IPV6_P}.patch.gz )"
+	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.13/${IPV6_P}.patch.gz )"
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
@@ -38,6 +38,10 @@ is_postfix_installed() {
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then
 		groupadd postdrop || die "problem adding group postdrop"
+	fi
+
+	if ! grep -q ^mail:.*postfix /etc/group ; then
+		usermod -G mail postfix || die "problem adding user postfix to group mail"
 	fi
 }
 
