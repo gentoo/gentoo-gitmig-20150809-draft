@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sablevm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/ChangeLog,v 1.6 2004/09/05 16:54:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/ChangeLog,v 1.7 2004/09/12 17:17:52 axxo Exp $
+
+  12 Sep 2004; Thomas Matthijs <axxo@gentoo.org> sablevm-1.1.5.ebuild,
+  sablevm-1.1.6.ebuild:
+  add depend on >=dev-libs/popt-1.7 see bug 63749
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> sablevm-1.1.6.ebuild:
   Added amd64 keyword, closing #58443.
