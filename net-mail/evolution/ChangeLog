@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.68 2003/07/09 15:46:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.69 2003/07/11 22:05:34 liquidx Exp $
+
+*evolution-1.4.3 (11 Jul 2003)
+
+  11 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.3.ebuild:
+  replaced mozilla dependency with dev-libs/nss dev-libs/nspr (#23730). SSL
+  support is still provided by either nspr/nss or openssl, use the 'mozilla' USE
+  flag to select. by default, it will use nss/nspr as ximian also packages with
+  that as default (#24185). also removed 1.4.0 release hacks.
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.92.ebuild,
   evolution-1.4.0.ebuild:
