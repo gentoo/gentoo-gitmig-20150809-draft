@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/lsh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/ChangeLog,v 1.4 2004/06/24 23:26:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/ChangeLog,v 1.5 2004/07/11 21:46:44 vapier Exp $
+
+*lsh-1.4.3-r1 (11 Jul 2004)
+
+  11 Jul 2004; Mike Frysinger <vapier@gentoo.org> +files/1.4.3-gcc34.patch,
+  +lsh-1.4.3-r1.ebuild, -lsh-1.4.3.ebuild:
+  Make sure we dont install the bundled nettle library since it is tracked with
+  dev-libs/nettle #56156 by Rainer Groesslinger.
 
   29 Dec 2003; Jason Wever <weeve@gentoo.org> lsh-1.4.3.ebuild:
   And on the 7th day, the ~sparc keyword appeared. And the insane Gentoo/SPARC

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3.ebuild,v 1.4 2004/06/24 23:26:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3-r1.ebuild,v 1.1 2004/07/11 21:46:44 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A GNU implementation of the Secure Shell protocols"
 HOMEPAGE="http://www.lysator.liu.se/~nisse/lsh/"
@@ -19,6 +21,12 @@ DEPEND="dev-libs/gmp
 	tcpd? ( sys-apps/tcp-wrappers )
 	pam? ( sys-libs/pam )"
 #	kerberos? ( virtual/krb5 )
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+}
 
 src_compile() {
 	# configure script checks /dev/ptmx in order to enable
@@ -39,4 +47,8 @@ src_compile() {
 src_install() {
 	emake install DESTDIR=${D} || die
 	dodoc ANNOUNCE AUTHORS ChangeLog FAQ NEWS README
+
+	# remove bundled crap #56156
+	cd ${D}/usr
+	rm -rf lib include share/info/nettle.info*
 }
