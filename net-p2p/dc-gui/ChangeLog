@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.4 2002/07/06 06:08:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.5 2002/07/26 05:06:35 gerk Exp $
 
 *dc-gui-0.58 (5 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   5 Jul 2002; Seemant Kulleen <seemant@gentoo.org> dc-gui-0.58.ebuild
   files/digest-dc-gui-0.58 :
