@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.10 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.11 2003/09/25 13:04:50 taviso Exp $
+
+  25 Sep 2003; Tavis Ormandy <taviso@gentoo.org> bochs-2.0.2.ebuild:
+  testing on alpha (~alpha)
 
   06 Jun 2003; <msterret@gentoo.org> bochs-2.0.2.ebuild:
   use sed -i and use_with
