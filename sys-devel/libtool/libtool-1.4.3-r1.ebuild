@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r1.ebuild,v 1.3 2003/08/02 13:34:09 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r1.ebuild,v 1.4 2003/08/03 05:26:59 tester Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
-inherit eutils
+inherit eutils gnuconfig
 
 # NOTE:  We install libltdl of libtool-1.3x for compat reasons ...
 
@@ -46,6 +46,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/${PN}-1.2f-cache.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.3.5-nonneg.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.3.5-mktemp.patch
+
+	use amd64 && S=${OLD_S} gnuconfig_update
 
 	cd ${S}
 	# Redhat patches
