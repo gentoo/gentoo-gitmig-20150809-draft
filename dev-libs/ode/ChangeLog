@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/ode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ChangeLog,v 1.4 2003/04/02 15:53:27 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ChangeLog,v 1.5 2003/06/24 05:02:36 george Exp $
+
+*ode-0.035-r1 (23 Jun 2003)
+
+  23 Jun 2003; George Shapovalov <george@gentoo.org> ode-0.035-r1.ebuild :
+  see (#22071)
+  made configuring sed construct more readable and "standard"
+  fixed Makefile to honor user defined CFLAGS instead of throwing them out
 
 *ode-0.035 (02 Apr 2003)
 
