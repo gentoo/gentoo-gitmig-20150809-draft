@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.2.ebuild,v 1.2 2004/01/05 23:27:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.3.ebuild,v 1.1 2004/01/17 18:25:40 lanius Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
 LICENSE="ZPL"
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 # This is for developers that wish to test Zope with virtual/python.
 # If this is a problem, let me know right away. --kutsuya@gentoo.org
@@ -23,15 +23,21 @@ KEYWORDS="~x86 ~sparc"
 if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
 	RDEPEND="virtual/python"
 	python='python'
+elif [ "${PYTHON_SLOT_VERSION}" != '' ] ; then
+	RDEPEND="=dev-lang/python-${PYTHON_SLOT_VERSION}*"
+	python="python${PYTHON_SLOT_VERSION}"
 else
 	RDEPEND="=dev-lang/python-2.1.3*"
 	python='python2.1'
 fi
 
-DEPEND="virtual/glibc
-		>=sys-apps/sed-4.0.5"
+RDEPEND="${RDEPEND}
+	!net-zope/verbosesecurity"
 
-RDEPEND="app-admin/zope-config"
+DEPEND="${RDEPEND}
+	virtual/glibc
+	>=sys-apps/sed-4.0.5
+	>=app-admin/zope-config-0.3"
 
 ZUID=zope
 ZGID=$(echo ${P} |sed -e "s:\.:_:g")
@@ -68,10 +74,16 @@ install_help() {
 }
 
 pkg_setup() {
-	if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
-		ewarn "WARNING: You set PYTHON_SLOT_VERSION=VIRTUAL. So this ebuild will"
-		ewarn "use python-2.2*. Zope Corp. only recommends using python-2.1.3 "
+	if [ "${PYTHON_SLOT_VERSION}" != '' ] ; then
+		ewarn "WARNING: You set PYTHON_SLOT_VERSION=${PYTHON_SLOT_VERSION}."
+		if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
+			ewarn "So this ebuild will use virtual/python."
+		else
+			ewarn "So this ebuild will use python-${PYTHON_SLOT_VERSION}*."
+		fi
+		ewarn "Zope Corp. only recommends using python-2.1.3 "
 		ewarn "with this version of zope. Emerge at your own risk."
+		ewarn "Python-2.3 is known NOT to work."
 		sleep 12
 	fi
 	enewgroup ${ZGID}
