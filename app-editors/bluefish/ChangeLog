@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/bluefish
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.35 2004/12/19 17:51:02 hanno Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.36 2005/01/01 13:21:27 eradicator Exp $
 
   19 Dec 2004; Hanno Boeck <hanno@gentoo.org> bluefish-0.13.ebuild:
   Change einstall to make install (thanks to Matthias Dahl in bug 74174).

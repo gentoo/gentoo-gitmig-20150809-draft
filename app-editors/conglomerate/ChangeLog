@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/conglomerate
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.10 2004/10/05 12:19:43 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.11 2005/01/01 13:21:56 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   conglomerate-0.7.11.ebuild, conglomerate-0.7.6.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.17 2004/10/31 04:59:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.18 2005/01/01 13:28:15 eradicator Exp $
 
 P0=${PN}-0.99-16
 S=${WORKDIR}/${P0}

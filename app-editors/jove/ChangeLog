@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/jove
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.4 2004/12/30 21:12:42 seemant Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.5 2005/01/01 13:29:10 eradicator Exp $
 
   30 Dec 2004; Seemant Kulleen <seemant@gentoo.org> :
   since I added this, I'll be the maintainer

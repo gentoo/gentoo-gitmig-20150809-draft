@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7.ebuild,v 1.4 2004/07/18 05:57:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7.ebuild,v 1.5 2005/01/01 13:30:59 eradicator Exp $
 
 DESCRIPTION="A fast, efficient hex-editor with support for large files and comparing binary files"
 HOMEPAGE="http://freshmeat.net/projects/lfhex"

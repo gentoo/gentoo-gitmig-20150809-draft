@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.10 2004/10/05 12:19:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.11 2005/01/01 13:37:53 eradicator Exp $
 
 DESCRIPTION="tiny emacs clone"
 HOMEPAGE="http://zile.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.13 2004/11/30 20:51:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.14 2005/01/01 13:24:23 eradicator Exp $
 
 inherit flag-o-matic eutils alternatives gcc
 

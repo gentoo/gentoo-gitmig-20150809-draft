@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/lpe
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.4 2004/10/05 12:19:43 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.5 2005/01/01 13:31:12 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lpe-1.2.6.ebuild:
   Masked lpe-1.2.6.ebuild stable for ppc

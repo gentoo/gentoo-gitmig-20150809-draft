@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/jext
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.8 2004/10/16 18:40:10 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.9 2005/01/01 13:28:43 eradicator Exp $
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jext-3.2_pre3.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

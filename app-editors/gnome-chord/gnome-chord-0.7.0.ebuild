@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gnome-chord/gnome-chord-0.7.0.ebuild,v 1.6 2004/06/24 21:54:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gnome-chord/gnome-chord-0.7.0.ebuild,v 1.7 2005/01/01 13:26:14 eradicator Exp $
 
 inherit gnome2
 

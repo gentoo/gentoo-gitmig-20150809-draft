@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r5.ebuild,v 1.13 2004/09/21 23:43:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r5.ebuild,v 1.14 2005/01/01 13:34:56 eradicator Exp $
 
 MY_P=ex-040103
 S=${WORKDIR}/${MY_P}

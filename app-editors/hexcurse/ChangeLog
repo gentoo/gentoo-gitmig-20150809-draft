@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/hexcurse
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.3 2004/08/10 00:39:26 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.4 2005/01/01 13:27:21 eradicator Exp $
 
   09 Aug 2004; Mike Frysinger <vapier@gentoo.org> +files/1.55-gcc.patch,
   hexcurse-1.55.ebuild:

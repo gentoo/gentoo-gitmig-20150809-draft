@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/ng
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.4 2004/08/26 11:47:50 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.5 2005/01/01 13:32:28 eradicator Exp $
 
   26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> ng-1.5_beta1.ebuild:
   Marked as stable.

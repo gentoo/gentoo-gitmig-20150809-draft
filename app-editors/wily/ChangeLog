@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/wily
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.7 2004/10/05 12:19:44 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.8 2005/01/01 13:36:03 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wily-1.0.ebuild:
   Masked wily-1.0.ebuild stable for ppc

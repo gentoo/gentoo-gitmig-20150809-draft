@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/xemacs-gtk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/ChangeLog,v 1.14 2004/06/24 22:04:01 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/ChangeLog,v 1.15 2005/01/01 13:36:42 eradicator Exp $
 
   22 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
   xemacs-gtk-21.4.8-r2.ebuild, xemacs-gtk-21.4.8-r3.ebuild:

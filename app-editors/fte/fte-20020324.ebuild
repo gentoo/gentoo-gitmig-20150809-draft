@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.19 2004/06/24 21:53:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.20 2005/01/01 13:24:52 eradicator Exp $
 
 DESCRIPTION="Lightweight text-mode editor"
 HOMEPAGE="http://fte.sourceforge.net/"

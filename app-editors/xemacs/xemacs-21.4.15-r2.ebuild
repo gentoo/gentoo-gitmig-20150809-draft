@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15-r2.ebuild,v 1.6 2004/11/20 19:17:08 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15-r2.ebuild,v 1.7 2005/01/01 13:36:27 eradicator Exp $
 
 inherit eutils
 

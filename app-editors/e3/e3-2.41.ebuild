@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.41.ebuild,v 1.5 2004/06/30 02:29:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.41.ebuild,v 1.6 2005/01/01 13:23:04 eradicator Exp $
 
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
 HOMEPAGE="http://www.sax.de/~adlibit"

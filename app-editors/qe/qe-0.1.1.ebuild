@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/qe-0.1.1.ebuild,v 1.8 2004/06/27 22:18:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/qe-0.1.1.ebuild,v 1.9 2005/01/01 13:33:20 eradicator Exp $
 
 DESCRIPTION="PE2-like editor program under U*nix with Chinese support"
 HOMEPAGE="http://www.cc.ncu.edu.tw/~center5/product/qe/ http://members.xoom.com/linux4tw/qe/"

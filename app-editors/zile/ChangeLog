@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/zile
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.11 2004/12/21 21:47:46 hansmi Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.12 2005/01/01 13:37:53 eradicator Exp $
 
   21 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
   zile-1.7_beta3-r1.ebuild:

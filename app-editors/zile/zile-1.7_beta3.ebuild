@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_beta3.ebuild,v 1.5 2004/06/25 19:41:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_beta3.ebuild,v 1.6 2005/01/01 13:37:53 eradicator Exp $
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="tiny emacs clone"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.9.2.ebuild,v 1.8 2004/06/27 22:15:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.9.2.ebuild,v 1.9 2005/01/01 13:30:22 eradicator Exp $
 
 DESCRIPTION="Terminal text editor"
 HOMEPAGE="http://www.gnu.org/directory/text/editors/le-editor.html"

@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/geresh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/ChangeLog,v 1.5 2004/11/22 05:03:50 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/ChangeLog,v 1.6 2005/01/01 13:25:34 eradicator Exp $
 
   22 Nov 2004; Mike Frysinger <vapier@gentoo.org> geresh-0.4.1.ebuild:
   Use standard make install DESTDIR stuff.

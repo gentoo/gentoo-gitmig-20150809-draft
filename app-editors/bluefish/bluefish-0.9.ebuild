@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.9.ebuild,v 1.12 2004/06/24 21:51:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.9.ebuild,v 1.13 2005/01/01 13:21:27 eradicator Exp $
 
 DESCRIPTION="Bluefish is a GTK HTML editor for the experienced web designer or programmer"
 HOMEPAGE="http://bluefish.openoffice.nl/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.17 2004/06/27 22:21:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.18 2005/01/01 13:36:42 eradicator Exp $
 
 inherit eutils
 

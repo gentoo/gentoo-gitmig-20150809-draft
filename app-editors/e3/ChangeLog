@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/e3
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.11 2004/06/30 02:29:31 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.12 2005/01/01 13:23:04 eradicator Exp $
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> e3-2.41.ebuild,
   e3-2.42.ebuild, e3-2.43.ebuild:
