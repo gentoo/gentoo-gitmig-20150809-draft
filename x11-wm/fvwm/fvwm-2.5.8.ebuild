@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.4 2003/11/03 13:52:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.5 2003/11/03 14:08:56 taviso Exp $
 
 inherit eutils
 
@@ -231,6 +231,13 @@ src_install() {
 	else
 		# Remove useless script if perllib isnt required.
 		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
+	fi
+
+	# cool hints test application, maybe useful 
+	# for developers.
+	if use debug; then
+		dobin ${S}/tests/hints/hints_test
+		newdoc ${S}/tests/hints/README README.hints
 	fi
 
 	# fvwm-convert-2.6 is just a stub, contains no code - remove it for now.
