@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.2 2002/07/30 03:47:27 cselkirk Exp $
 
 *pwgen-2.01 (1 Feb 2002)
+
+  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> pwgen-2.01.ebuild
+
+  Added ppc to KEYWORDS. Added RDEPEND.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
