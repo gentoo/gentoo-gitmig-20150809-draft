@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.44 2003/02/22 08:36:54 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.45 2003/07/13 09:08:26 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 
@@ -38,17 +38,31 @@ case "$PV" in
 			KEYWORDS="x86 ppc";;
 	3*)		SRC_PATH="stable/${PV}/src/kde-i18n/${P}.tar.bz2" 
 			KEYWORDS="x86 ppc";;
+	5)		KEYWORDS="x86";;
 esac
 
-if [ "$PN" == "kde-i18n" ]; then
+if [ "$PV" == "5" ]; then
+	S=${WORKDIR}/kde-i18n
+elif [ "$PN" == "kde-i18n" ]; then
 	SRC_PATH=${SRC_PATH/src\/kde-i18n\//src\//}
 	S=${WORKDIR}/${RP}
 fi
 
-SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
+# for cvs ebuilds we don't need to fetch tarballs
+if [ "$PV" != "5" ]; then
+	SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
+fi
 
 kde-i18n_src_unpack() {
-	base_src_unpack
+	
+	if [ "$PV" == "5" ]; then
+	    KCVS_MODULE=kde-i18n
+	    [ "$PN" != "kde-i18n" ] && KCVS_SUBDIR="${PN//kde-i18n-}"
+	    KCVS_SUBDIR_NODOC=true
+	    kde-source_src_unpack
+	else
+	    base_src_unpack
+	fi
 
 	for dir in ${S} `cat ${S}/subdirs`; do
 		if [ -f "$dir/docs/common/Makefile.in" ]; then
@@ -58,13 +72,35 @@ kde-i18n_src_unpack() {
 			sed -e 's:(kde_htmldir)/en/common:(kde_libs_htmldir)/en/common:g' Makefile.in.orig > Makefile.in
 		fi
 	done
+	
+	if [ "$PV" == "5" -a "$PN" != "kde-i18n" ]; then
+	    cd $S
+	    echo ${PN//kde-i18n-/} > subdirs
+	fi
+	
 }
 
 kde-i18n_src_compile() {
 
 	kde_src_compile myconf
 	myconf="$myconf --prefix=$KDEDIR"
-	kde_src_compile configure make
+	
+	# enable caching because that makes running all the configure scripts in the subdirs faster
+	# (for cvs i18n packages)
+	myconf="$myconf -C"
+	
+	kde_src_compile configure
+	
+	# wierd, but this is apparently equired by what's in kde i18n cvs nowadays
+	if [ "$PV" == "5" ]; then
+	    for x in `cat subdirs`; do
+		cd $S/$x
+	        test -f ./configure && ( ./configure --cache-file=../config.cache $myconf || die "configure failed" )
+	    done
+	fi
+	
+	cd $S
+	kde_src_compile make
 
 }
 
