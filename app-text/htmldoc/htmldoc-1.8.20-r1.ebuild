@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.4 2004/02/29 18:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.5 2004/03/12 08:24:24 mr_bones_ Exp $
 
 DESCRIPTION="Convert HTML pages into a PDF document"
 SRC_URI="ftp://ftp.easysw.com/pub/htmldoc/1.8.20/${P}-1-source.tar.bz2"
