@@ -1,5 +1,5 @@
 MD5 3946c223ef59c83ee06b48c1677ef2e1 ChangeLog 327
-MD5 02c27747b8c189178440aa39393922fe gok-0.8.3.ebuild 751
+MD5 24b08db4fb18b36c5d112df37b4ae88d gok-0.8.3.ebuild 766
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5bee1f567e8eeb918044a17b56482f01 files/digest-gok-0.8.3 62
 MD5 0117b7d5af8f875f58fe5f441de2afef files/gok-0.8.3-gcc2_fix.patch 560
