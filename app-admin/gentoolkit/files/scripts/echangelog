@@ -8,25 +8,33 @@
 #   >   Add ~alpha to KEYWORDS
 #   >
 
-
+use strict;
 use POSIX qw(strftime);
 
 my @files = ();
-my ($entry, $user, $date, $text);
+my ($entry, $user, $date, $text, $version);
+my %versions = ();
 
-die "No ChangeLog in this directory\n" unless -f 'ChangeLog';
+# Read the current ChangeLog
+open I, '<ChangeLog' or die "Can't open ChangeLog for input: $!\n";
+{ local $/ = undef; $text = <I>; }
+close I;
 
+# Figure out what has changed around here
 open C, 'cvs diff --brief 2>&1 |' or die "Can't run cvs diff: $!\n";
 while (<C>) {
     /ChangeLog/ and next;
     if (/^cvs server: (\S+) .*new entry/ || /^Index: (\S+)/) {
         push @files, $1;
+        if ($1 =~ /^([^\/]*?)\.ebuild$/) {
+            $versions{$1} = -1;
+        }
     }
 }
 close C;
-
 die "No changed files found\n" unless @files;
 
+# Get the entry from the cmdline or stdin
 if ($ARGV[0]) {
     $entry = $ARGV[0];
 } else {
@@ -34,24 +42,45 @@ if ($ARGV[0]) {
     print "Please type the log entry, finish with ctrl-d\n";
     $entry = <>;
 }
-
 die "Empty entry; aborting\n" unless $entry =~ /\S/;
-$entry =~ s/^\s*(.*?)\s*$/$1/;  # trim whitespace
-$entry =~ s/^/  /gm;            # add indentation
 
+# Prepend the user info to the entry
 $user = $ENV{'ECHANGELOG_USER'} ||
         sprintf("%s <%s\@gentoo.org>", (getpwuid($<))[6,0]);
-
 $date = strftime("%d %b %Y", localtime);
+$entry =~ s/^\s*(.*?)\s*\z/$1/;  # trim whitespace
+$entry = "$date; $user @files :\n$entry";
+$entry =~ s/^/  /gm;             # add indentation
 
-open I, '<ChangeLog' or die "Can't open ChangeLog for input: $!\n";
-{ local $/ = undef; $text = <I>; }
-close I;
+# Find the version that's highest in the file (or determine if we're
+# adding a new version).
+if (%versions) {
+    for (keys %versions) {
+        $versions{$_} = index $text, $_;
+    }
+    $version = (sort { $versions{$a} <=> $versions{$b} } keys %versions)[0];
+}
 
+if (!defined $version) {
+    # Changing a patch or something, not an ebuild, so put the entry
+    # at the top of the file.
+    $text =~ s/^.*?\n(?=\s)/$&\n$entry\n/s
+        or die "Failed to insert new entry\n";
+} elsif ($versions{$version} > -1) {
+    # Insert after the *version line
+    $text =~ s/^\*$version\s.*\n/$&\n$entry\n/m 
+        or die "Failed to insert new entry\n";
+} else {
+    # Insert at the top with a new version marker
+    $text =~ s/^.*?\n(?=\s)/$&\n*$version ($date)\n\n$entry\n/s
+        or die "Failed to insert new entry\n";
+}
+
+# Write the new ChangeLog
 open O, '>ChangeLog.new' or die "Can't open ChangeLog.new for output: $!\n";
-$text =~ s/^.*?\n(?=\s)/$&\n  $date; $user @files :\n$entry\n/s;
-print O $text;
-close O;
+print O $text            or die "Can't write ChangeLog.new: $!\n";
+close O                  or die "Can't close ChangeLog.new: $!\n";
 
-system 'diff ChangeLog ChangeLog.new';
+# Move things around
+system 'diff -u ChangeLog ChangeLog.new';
 rename 'ChangeLog.new', 'ChangeLog' or die "Can't rename: $!\n";

@@ -16,13 +16,13 @@ my $kw = shift @ARGV;
 
 for my $f (@ARGV) {
     open I, "<$f"       or die "Can't read $f: $!\n";
-    open O, ">$f.new"   or die "Can't write $f.new: $!\n";
+    open O, ">$f.new"   or die "Can't create $f.new: $!\n";
     select O;
 
     while (<I>) {
         /^KEYWORDS/ or print, next;
         s/~?$arch/$kw/ || s/.*?['"].*?(?=['"])/$& $kw/;
-        print $_, <I>;
+        print $_, <I> or die "Can't write $f.new: $!\n";
     }
 
     close I;
