@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.2a.ebuild,v 1.2 2004/06/25 00:33:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.2a.ebuild,v 1.3 2004/06/29 01:25:10 squinky86 Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 IUSE="ipv6 gtk crypt mysql"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -55,7 +55,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	use ipv6 && ewarn "ipv6 support is -very- experimental and prone to bug"
+	use ipv6 && ewarn "ipv6 support is -very- experimental and prone to bugs"
 	einfo
 	einfo "now copy an appropriate config file from"
 	einfo "/usr/share/doc/${P}/contrib"

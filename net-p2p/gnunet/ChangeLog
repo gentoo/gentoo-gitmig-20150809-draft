@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.25 2004/06/25 00:33:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.26 2004/06/29 01:25:10 squinky86 Exp $
+
+*gnunet-0.6.2b (28 Jun 2004)
+
+  28 Jun 2004; Jon Hood <squinky86@gentoo.org>
+  +files/gnunet-download-manager.scm, -gnunet-0.5.5.ebuild,
+  -gnunet-0.6.1b.ebuild, -gnunet-0.6.1c.ebuild, -gnunet-0.6.2.ebuild,
+  gnunet-0.6.2a.ebuild, +gnunet-0.6.2b.ebuild:
+  version bump, thanks to Jon Lund Steffensen <jonls@users.sourceforge.net> in
+  #55246
 
 *gnunet-0.6.2a (12 May 2004)
 
