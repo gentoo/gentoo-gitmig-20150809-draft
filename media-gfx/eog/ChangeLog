@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.85 2005/01/01 14:52:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.86 2005/01/08 23:17:51 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> eog-2.8.2.ebuild:
+  Stable on amd64.
 
   01 Jan 2005; Jason Wever <weeve@gentoo.org> eog-0.6-r4.ebuild:
   Added ~sparc keyword.
