@@ -78,7 +78,7 @@ if [ -z "$OOHOME" ] ; then
       exit 1
     fi
     echo "running openoffice.org setup..."
-    if ! /opt/OpenOffice.org<pv>/program/setup -R:/etc/openoffice/autoresponse.conf ; then
+    if ! /opt/OpenOffice.org<pv>/program/setup -R:/etc/openoffice/autoresponse.conf >& /dev/null; then
       echo "setup failed.. abort"
       exit 1
     fi
