@@ -1,11 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.14 2005/01/21 20:13:59 eradicator Exp $
-
-# Jeremy Huddleston <eradicator@gentoo.org>
-# Force binutils-config versions of binutils
-=sys-devel/binutils-2.15.90.0.3-r3
-=sys-devel/binutils-2.15.91.0.1
-=sys-devel/binutils-2.15.91.0.2
-=sys-devel/binutils-2.15.92.0.2-r1
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.15 2005/01/23 11:57:34 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # gcc ebuilds that haven't been updated to use the src_install in
