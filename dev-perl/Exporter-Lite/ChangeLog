@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Exporter-Lite
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Lite/ChangeLog,v 1.1 2004/06/06 03:23:54 mcummings Exp $
+
+*Exporter-Lite-0.01 (05 Jun 2004)
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  Exporter-Lite-0.01.ebuild, metadata.xml:
+  dep for html-fromtext
+
