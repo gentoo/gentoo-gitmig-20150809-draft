@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/gwave
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/ChangeLog,v 1.5 2004/04/19 10:23:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/ChangeLog,v 1.6 2004/04/25 22:49:46 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> gwave-20020122.ebuild:
+  Add die following econf for bug 48950
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> gwave-20020122.ebuild,
   gwave-20030804.ebuild, gwave-20031224.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.6 2004/04/19 12:33:51 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.7 2004/04/25 22:55:54 agriffis Exp $
 
 inherit eutils
 
@@ -59,27 +59,27 @@ src_unpack() {
 
 src_compile() {
 	# compile balsa
-	econf
+	econf || die "econf failed"
 	sed -i -e "s: \$(bindir): \$(DESTDIR)\$(bindir):g" bin/Makefile
 	emake BALSAHOME=${S} || die
 
 	# configure tech paths
 	if [ $TECH_AMS ]; then
 	cd ${WORKDIR}/balsa-tech-ams-20030506
-	econf
+	econf || die "econf failed"
 	fi
 
 	# config generic verilog backend
 	cd ${WORKDIR}/balsa-tech-verilog-20030204
-	econf
+	econf || die "econf failed"
 
 	# config Xilinx FPGA backend
 	cd ${WORKDIR}/balsa-tech-xilinx-20021029
-	econf
+	econf || die "econf failed"
 
 	# config example tech
 	cd ${WORKDIR}/balsa-tech-example-${My_PV}
-	econf
+	econf || die "econf failed"
 
 	# config balsa-lard (deprecated, but may find some use for it)
 	#cd ${WORKDIR}/balsa-lard-${PV}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/tclspice-0.2.14.ebuild,v 1.5 2004/04/07 20:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/tclspice-0.2.14.ebuild,v 1.6 2004/04/25 22:56:40 agriffis Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-xspice --enable-experimental --with-tcl
+	econf --enable-xspice --enable-experimental --with-tcl || die "econf failed"
 	emake tcl || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20020122.ebuild,v 1.4 2004/04/19 10:23:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20020122.ebuild,v 1.5 2004/04/25 22:49:46 agriffis Exp $
 
 DESCRIPTION="A waveform viewer analog data, such as spice simulations"
 HOMEPAGE="http://www.geda.seul.org/tools/gwave/"
@@ -16,7 +16,7 @@ DEPEND="x11-libs/gtk+
 	x11-libs/guile-gtk"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	make || die
 }
 

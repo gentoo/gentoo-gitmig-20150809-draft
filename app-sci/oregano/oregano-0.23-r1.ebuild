@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/oregano-0.23-r1.ebuild,v 1.6 2004/04/19 12:00:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/oregano-0.23-r1.ebuild,v 1.7 2004/04/25 22:53:07 agriffis Exp $
 
 DESCRIPTION="Oregano is an application for schematic capture and simulation of electrical circuits."
 SRC_URI="ftp://ftp.codefactory.se/pub/CodeFactory/software/oregano/${P}.tar.gz"
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=app-sci/spice-3.5.5"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

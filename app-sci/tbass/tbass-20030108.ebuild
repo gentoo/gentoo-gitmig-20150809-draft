@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.7 2004/02/24 08:52:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.8 2004/04/25 22:55:54 agriffis Exp $
 
 IUSE=""
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	# compile balsa
-	econf
+	econf || die "econf failed"
 
 	cd bin
 	sed -e "s: \$(bindir): \$(DESTDIR)\$(bindir):g" Makefile > Makefile.1
@@ -50,7 +50,7 @@ src_compile() {
 	econf
 
 	cd ${WORKDIR}/balsa-tech-verilog-1.0
-	econf
+	econf || die "econf failed"
 }
 
 src_install() {

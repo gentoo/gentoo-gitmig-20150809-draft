@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/nco/nco-2.9.1.ebuild,v 1.1 2004/03/05 10:10:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/nco/nco-2.9.1.ebuild,v 1.2 2004/04/25 22:52:17 agriffis Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 DEPEND="app-sci/netcdf"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake
 
 	#need to make info
