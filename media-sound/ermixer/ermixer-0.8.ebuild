@@ -9,7 +9,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 		qt? ( x11-libs/qt )"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 SRC_URI="mirror://sourceforge/ermixer/${P}.tar.gz"
 S="${WORKDIR}/${P}"
