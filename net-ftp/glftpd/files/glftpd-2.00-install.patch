@@ -1,0 +1,101 @@
+--- installgl.sh
++++ installgl.sh
+@@ -246 +245,0 @@
+-read randomkey
+@@ -272 +271 @@
+-    read usetcpd
++    usetcpd=${USETCPD}
+@@ -336 +335 @@
+-    read jail
++    jail=y
+@@ -349 +348 @@
+-                read jaildir
++                jaildir=${GLROOT}
+@@ -361 +360 @@
+-                            read reply
++                            echo "SHOULD NOT HAVE BEEN HERE 1" ; exit 1
+@@ -393 +392 @@
+-        read useprivgroup
++        useprivgroup=n
+@@ -414 +413 @@
+-                    read privgroup
++                    echo "SHOULD NOT HAVE BEEN HERE 2" ; exit 1
+@@ -423 +422 @@
+-                        read reply
++						echo "SHOULD NOT HAVE BEEN HERE 3" ; exit 1
+@@ -441 +440 @@
+-                        read jailusers
++                        echo "SHOULD NOT HAVE BEEN HERE 4" ; exit 1
+@@ -505 +504 @@
+-    read glroot
++    break
+@@ -517 +516 @@
+-                read reply
++                echo "SHOULD NOT HAVE BEEN HERE 5" ; exit 1
+@@ -602 +601 @@
+-    read servicename
++    servicename=glftpd
+@@ -617 +616 @@
+-            read keystroke
++            echo "SHOULD NOT HAVE BEEN HERE 6" ; exit 1
+@@ -639 +638 @@
+-    read keystroke
++    echo "SHOULD NOT HAVE BEEN HERE 6.2" ; exit 1
+@@ -696 +695 @@
+-        $usegcc $gccflags "$jaildir$glroot/bin/$base" "$cfile" >/dev/null 2>&1 || \
++        $usegcc $gccflags "$jaildir$glroot/bin/$base" "$cfile" >& "$cfile".cc.log || \
+@@ -699 +698 @@
+-            echo "OK."
++            echo "OK." ; rm -f "$cfile".cc.log
+@@ -702 +701 @@
+-            echo "FAILED!"
++            echo "FAILED!" ; cat "$cfile".cc.log
+@@ -826 +825 @@
+-    read port
++    port=21
+@@ -842,4 +840,0 @@
+-{ grep -v ^${servicename} /etc/services;
+-  echo "$servicename   $port/tcp"
+-} > /etc/services.new
+-mv -f /etc/services.new /etc/services
+@@ -891 +886 @@
+-        read whichnetd
++        whichnetd=${WHICHNETD}
+@@ -903,3 +898 @@
+-    echo "ERROR: Can't determine if you are using inetd or xinetd!"
+-    echo "Please fix this problem and re-run the installation script"
+-    exit 1
++	whichnetd=${WHICHNETD}
+@@ -920 +913 @@
+-   read keystroke
++   keystroke=n
+@@ -938 +931 @@
+-    read keystroke
++    keystroke=no
+@@ -960 +952,0 @@
+-      cp /etc/localtime /usr/lib/
+@@ -980 +972 @@
+-    read tlsname
++    tlsname="ftp server"
+@@ -1041 +1033 @@
+-    mv -f $base.pem $tls/
++    mv -f $base.pem $D$tls/
+@@ -1068 +1060 @@
+-  read tls
++  echo "SHOULD NOT HAVE BEEN HERE 7" ; exit 1
+@@ -1096 +1088 @@
+-        read tls
++        tls=/etc/glftpd-dsa.pem ; break
+@@ -1222,3 +1214,2 @@
+-    [ ! -d "/etc/xinetd.d" ] && {
+-        mkdir /etc/xinetd.d
+-        echo "includedir /etc/xinetd.d" >> /etc/xinetd.conf
++    [ ! -d "$D/etc/xinetd.d" ] && {
++        mkdir $D/etc/xinetd.d
+@@ -1226 +1217 @@
+-    cat <<EOF > /etc/xinetd.d/$servicename
++    cat <<EOF > $D/etc/xinetd.d/$servicename
+@@ -1252,3 +1242,0 @@
+-{ crontab -l | grep -v "$jaildir$glroot/bin/reset"
+-  echo "0  0 * * *      $jaildir$glroot/bin/reset ${euroweek}${confpath}"
+-} | crontab - > /dev/null

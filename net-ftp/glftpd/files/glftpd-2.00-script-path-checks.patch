@@ -1,0 +1,47 @@
+Make people don't try scanning for files they shouldn't have 
+access to normally.
+
+http://bugs.gentoo.org/show_bug.cgi?id=82544
+
+--- bin/sitenfo.sh
++++ bin/sitenfo.sh
+@@ -37,6 +37,11 @@
+     exit 0
+ }
+ 
++[ "${1/..\/}" != "$1" ] && {
++	echo "That zipfile does not exist!"
++	exit 1
++}
++
+ [ ! -e "$1" ] && {
+     echo "That zipfile does not exist!"
+     exit 1
+--- bin/sitezipchk.sh
++++ bin/sitezipchk.sh
+@@ -37,6 +37,11 @@
+     exit 0
+ }
+ 
++[ "${1/..\/}" != "$1" ] && {
++	echo "That zipfile does not exist!"
++	exit 1
++}
++
+ [ ! -e "$1" ] && {
+     echo "That zipfile does not exist!"
+     exit 1
+--- bin/siteziplist.sh
++++ bin/siteziplist.sh
+@@ -37,6 +37,11 @@
+     exit 0
+ }
+ 
++[ "${1/..\/}" != "$1" ] && {
++	echo "That zipfile does not exist!"
++	exit 1
++}
++
+ [ ! -e "$1" ] && {
+     echo "That zipfile does not exist!"
+     exit 1

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.32-r2.ebuild,v 1.2 2005/02/19 22:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-2.00.ebuild,v 1.1 2005/02/19 22:53:54 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.glftpd.com/files/${MY_P}.tgz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
@@ -23,18 +23,18 @@ S=${WORKDIR}/${MY_P}
 # custom options
 export CUSTOMGLROOT=${CUSTOMGLROOT:-/opt/glftpd}
 export GLROOT=${GLROOT:-${D}${CUSTOMGLROOT}}
-export GLFTPD_PORT=${GLFTPD_PORT:-21}
 
 pkg_setup() {
-	[ -d /proc/sysvipc ] || die "You need System V IPC support in your kernel"
+	[[ -d /proc/sysvipc ]] || die "You need System V IPC support in your kernel"
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	cp installgl.sh{,.orig}
-	epatch ${FILESDIR}/${PV}-install.patch
-	epatch ${FILESDIR}/${PV}-stack-overflow.patch
+	epatch "${FILESDIR}"/${P}-install.patch
+	epatch "${FILESDIR}"/${P}-gcc.patch
+	epatch "${FILESDIR}"/${P}-script-path-checks.patch
 }
 
 yesno() { if $@ ; then echo y ; else echo n ; fi ; }
@@ -47,7 +47,7 @@ src_install() {
 	export JAIL=y
 	export MAKETLS=$(yesno [ ! -e /etc/glftpd-dsa.pem ])
 	export WHICHNETD=x
-	${S}/installgl.sh
+	"${S}"/installgl.sh || die "installgl.sh failed"
 
 	# fix the glftpd.conf file
 	sed -i \
@@ -70,8 +70,7 @@ src_install() {
 	dosed "s:GLROOT:${CUSTOMGLROOT}:g" /etc/xinetd.d/glftpd
 
 	# env entry to protect our ftp passwd/group files
-	insinto /etc/env.d
-	newins ${FILESDIR}/glftpd.env.d 99glftpd
+	newenvd ${FILESDIR}/glftpd.env.d 99glftpd
 	dosed "s:GLROOT:${CUSTOMGLROOT}:g" /etc/env.d/99glftpd
 
 	# chmod the glftpd dir so that user files will work
@@ -93,12 +92,6 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	einfo "Updating /etc/services"
-	{ grep -v ^glftpd /etc/services;
-	echo "glftpd   ${GLFTPD_PORT}/tcp"
-	} > /etc/services.new
-	mv -f /etc/services.new /etc/services
-
 	einfo "Updating crontab"
 	{ crontab -l | grep -v "bin/reset"
 	echo "0  0 * * *      ${CUSTOMGLROOT}/bin/reset -r ${CUSTOMGLROOT}/glftpd.conf"

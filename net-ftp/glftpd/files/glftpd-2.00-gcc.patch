@@ -1,0 +1,7 @@
+--- bin/sources/glupdate.c
++++ bin/sources/glupdate.c
+@@ -64,3 +64,3 @@
+ void update_log (struct dirlog);
+-void get_dir_size (char *, int *, long *);
++void get_dir_size (char *, int *, unsigned long long *);
+ char *trim (char *);
