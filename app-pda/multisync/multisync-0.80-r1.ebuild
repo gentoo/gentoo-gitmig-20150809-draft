@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.8 2004/04/07 23:19:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.9 2004/05/30 08:13:42 robbat2 Exp $
 
 inherit eutils
 
@@ -25,10 +25,10 @@ DEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6j
 	evo?  (
 		gtk2? (
-			=net-mail/evolution-1.4*
+			=mail-client/evolution-1.4*
 			=x11-libs/gtk+-2* )
 		!gtk2? (
-			=net-mail/evolution-1.2*
+			=mail-client/evolution-1.2*
 			=x11-libs/gtk+-1* )
 	)
 	irmc? ( >=sys-apps/irda-utils-0.9.15
