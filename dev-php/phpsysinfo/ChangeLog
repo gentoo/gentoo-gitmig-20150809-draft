@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.5 2003/10/14 03:41:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.6 2003/10/31 11:48:42 pyrania Exp $
+
+  31 Oct 2003; Markus Nigbur <pyrania@gentoo.org> phpsysinfo-2.1-r1.ebuild,
+  phpsysinfo-2.1.ebuild:
+  Fixed typos.
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
