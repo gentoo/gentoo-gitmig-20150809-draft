@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.91.ebuild,v 1.1 2004/03/14 16:11:48 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.91.ebuild,v 1.2 2004/03/29 00:53:13 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="a RAD tool for BASIC"
 HOMEPAGE="http://gambas.sourceforge.net"
 SRC_URI="http://gambas.sourceforge.net/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="postgres mysql sdl doc curl debug"
+
 DEPEND=">=sys-devel/automake-1.7.5
 	>=x11-base/xfree-4.3.0
 	>=x11-libs/qt-3.2
@@ -18,7 +20,7 @@ DEPEND=">=sys-devel/automake-1.7.5
 	sdl? ( media-libs/libsdl )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
-	curl? ( net-ftp/curl )"
+	curl? ( net-misc/curl )"
 
 src_unpack() {
 	unpack ${A}
@@ -42,7 +44,7 @@ src_compile() {
 	myconf="${myconf} `use_enable sdl`"
 	myconf="${myconf} `use_enable curl`"
 
-	if use debug; then
+	if use debug ; then
 		myconf="${myconf} --disable-optimization --enable-debug"
 	else
 		myconf="${myconf} --enable-optimization --disable-debug"
@@ -57,7 +59,7 @@ src_install() {
 	export PATH="${D}/usr/bin:${PATH}"
 	einstall || die
 
-	dodoc README INSTALL NEWS AUTHORS ChangeLog COPYING TODO
+	dodoc README INSTALL NEWS AUTHORS ChangeLog TODO
 
 	# only install the API docs and examples with USE=doc
 	if use doc; then
