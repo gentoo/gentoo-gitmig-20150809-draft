@@ -9,8 +9,8 @@ HOMEPAGE="http://ofset.sourceforge.net/gcompris/"
 SRC_URI="mirror://sourceforge/gcompris/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
 IUSE="oggvorbis nls python"
 
 DEPEND="virtual/x11
@@ -51,6 +51,7 @@ src_install() {
 	make install DESTDIR=${D} || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	mv ${D}/${GAMES_DATADIR}/{locale,gnome,pixmaps} ${D}/usr/share/
+	rm -rf ${GAMES_LIBDIR}/menu
 	if [ ! `use nls` ] ; then
 		rm -rf ${D}/usr/share/locale
 		cd ${D}/${GAMES_DATADIR}/gcompris/boards/sounds
