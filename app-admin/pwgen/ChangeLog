@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.12 2003/12/14 03:42:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.13 2004/01/04 17:07:29 weeve Exp $
+
+  04 Jan 2004; Jason Wever <weeve@gentoo.org> pwgen-2.01.ebuild,
+  pwgen-2.03-r1.ebuild, pwgen-2.03.ebuild:
+  Marked 2.0.3-r1 stable on sparc and updated copyright dates on all ebuilds.
 
   13 Dec 2003; Guy Martin <gmsoft@gentoo.org> pwgen-2.03-r1.ebuild:
   Marked stable on hppa.

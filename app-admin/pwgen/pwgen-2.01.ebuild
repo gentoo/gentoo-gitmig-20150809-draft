@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.01.ebuild,v 1.14 2003/03/28 18:08:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.01.ebuild,v 1.15 2004/01/04 17:07:29 weeve Exp $
 
 DESCRIPTION="Password Generator"
 SRC_URI="mirror://sourceforge/pwgen/${P}.tar.gz"
