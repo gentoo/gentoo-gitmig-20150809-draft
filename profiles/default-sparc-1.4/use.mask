@@ -4,6 +4,7 @@
 3dnow
 afs
 alsa
+firebird
 mmx
 pic
 sse

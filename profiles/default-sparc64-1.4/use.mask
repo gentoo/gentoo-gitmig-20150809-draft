@@ -5,6 +5,7 @@
 afs
 alsa
 apm
+firebird
 mmx
 pic
 sse
