@@ -1,6 +1,25 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.78 2003/03/09 03:23:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.79 2003/03/23 15:40:10 azarah Exp $
+
+*gcc-3.2.2-r2 (21 Mar 2003)
+
+  21 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.2-r2.ebuild,
+  gcc32-pr7768.patch, gcc32-pr8213.patch, gcc32-pr9732.patch,
+  gcc322-pr8746.patch, gcc322-pr9888.patch, gcc322-ggc_page-speedup.patch,
+  gcc-3.2.2-branch-update-20030322.patch, gcc-3.2.2-tls-update2.patch :
+  
+  - Update to gcc-3_2 branch 2003-03-22 (gcc-3.2.2-branch-update-20030322.patch)
+  - Update TLS patch (gcc-3.2.2-tls-update2.patch) for 2003-03-22 CVS branch.
+  - Add gcc322-pr9888.patch to fix a out of range 'loop' instructions for the
+    K6 family of processors.  Many thanks to Jim Bray <jb@as220.org> for his
+    work in getting this resolved with the gcc devs, and bringing it to my
+    attention (included in branch-update).
+  - Add gcc322-pr8746.patch to fix corner cases of miscompilation on K6 arch.
+  - Get gcc to decreases the number of times the collector has to be run
+    by increasing its memory workspace, bug #16548, thanks to
+    Garen <garen@garen.net>, patch gcc322-ggc_page-speedup.patch.
+  - Also added some other PR bugfixes.
 
   09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.2*.ebuild :
   Fix handling of fix_libtool_files.sh to be more $FILESDIR independant.

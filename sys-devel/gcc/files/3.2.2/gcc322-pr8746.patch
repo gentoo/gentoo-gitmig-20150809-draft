@@ -1,0 +1,73 @@
+2003-03-20  Eric Botcazou  <ebotcazou at libertysurf dot fr>
+
+	PR optimization/8746
+	* i386.md (and promoting splitters): Further disable QI to SImode
+	promoting, as well as HI to SImode promoting, when doing so
+	changes immediate to be 32bit.
+
+
+2003-03-20  Eric Botcazou  <ebotcazou at libertysurf dot fr>
+
+ 	* gcc.dg/i386-signbit-2.c: New test.
+	* gcc.dg/i386-signbit-3.c: New test.
+
+Index: config/i386/i386.md
+===================================================================
+RCS file: /cvs/gcc/gcc/gcc/config/i386/i386.md,v
+retrieving revision 1.404.2.11
+diff -u -r1.404.2.11 i386.md
+--- gcc/config/i386/i386.md	13 Mar 2003 00:47:26 -0000	1.404.2.11
++++ gcc/config/i386/i386.md	20 Mar 2003 16:15:17 -0000
+@@ -16845,20 +16845,20 @@
+      operands[2] = gen_lowpart (SImode, operands[2]);
+    PUT_MODE (operands[3], SImode);")
+ 
++; Don't promote the QImode tests, as i386 doesn't have encoding
++; of test instructions with 32-bit sign-extended immediate so the
++; code grows.
+ (define_split
+   [(set (reg 17)
+-	(compare (and (match_operand 1 "aligned_operand" "")
+-		      (match_operand 2 "const_int_operand" ""))
++	(compare (and (match_operand:HI 1 "aligned_operand" "")
++		      (match_operand:HI 2 "const_int_operand" ""))
+ 		 (const_int 0)))
+    (set (match_operand 0 "register_operand" "")
+ 	(and (match_dup 1) (match_dup 2)))]
+   "! TARGET_PARTIAL_REG_STALL && reload_completed
+    && ix86_match_ccmode (insn, CCNOmode)
+-   && (GET_MODE (operands[0]) == HImode
+-       || (GET_MODE (operands[0]) == QImode 
+-	   /* Ensure that the operand will remain sign extended immediate.  */
+-	   && INTVAL (operands[2]) >= 0
+-	   && (TARGET_PROMOTE_QImode || optimize_size)))"
++   /* Ensure that the operand will remain sign-extended immediate.  */
++   && INTVAL (operands[2]) >= 0"
+   [(parallel [(set (reg:CCNO 17)
+ 		   (compare:CCNO (and:SI (match_dup 1) (match_dup 2))
+ 			         (const_int 0)))
+@@ -16871,9 +16871,9 @@
+    operands[0] = gen_lowpart (SImode, operands[0]);
+    operands[1] = gen_lowpart (SImode, operands[1]);")
+ 
+-; Don't promote the QImode tests, as i386 don't have encoding of
+-; the test instruction with 32bit sign extended immediate and thus
+-; the code grows.
++; Don't promote the QImode tests, as i386 doesn't have encoding
++; of test instructions with 32-bit sign-extended immediate so the
++; code grows.
+ (define_split
+   [(set (reg 17)
+ 	(compare (and (match_operand:HI 0 "aligned_operand" "")
+@@ -16881,7 +16881,8 @@
+ 		 (const_int 0)))]
+   "! TARGET_PARTIAL_REG_STALL && reload_completed
+    && ix86_match_ccmode (insn, CCNOmode)
+-   && GET_MODE (operands[0]) == HImode"
++   /* Ensure that the operand will remain sign-extended immediate.  */
++   && INTVAL (operands[1]) >= 0"
+   [(set (reg:CCNO 17)
+ 	(compare:CCNO (and:SI (match_dup 0) (match_dup 1))
+ 		      (const_int 0)))]
+
+
