@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.46 2003/06/16 20:52:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.47 2003/06/16 21:03:10 vapier Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -20,12 +20,7 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install 
 
-function runningunstable() {
-local data="`echo "${ACCEPT_KEYWORDS}" |grep '~'`"
-local retval=false
-[ -n "${data}" ] && retval=true
-return ${retval} 
-}
+function runningunstable() { has ~${ARCH} ${ACCEPT_KEYWORDS} > /dev/null ; }
 
 MY_PN=php
 MY_P=${MY_PN}-${PV}
