@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r7.ebuild,v 1.1 2004/09/23 02:52:32 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r7.ebuild,v 1.2 2004/10/14 14:57:34 ribosome Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="The Staden Package - Biological sequence handling and analysis"
 HOMEPAGE="http://${PN}.sourceforge.net/"
@@ -159,8 +159,8 @@ src_compile() {
 		MACHINE="linux" \
 		JOB="all" \
 		O="linux-binaries" \
-		CC=${CC:-gcc} \
-		CXX=${CXX:-g++} \
+		CC=$(gcc-getCC) \
+		CXX=$(gcc-getCXX) \
 		F77=${F77:-g77} \
 		|| die "Package compilation failed."
 
@@ -172,8 +172,8 @@ src_compile() {
 		MACHINE="linux" \
 		JOB="all" \
 		O="linux-binaries" \
-		CC=${CC:-gcc} \
-		CXX=${CXX:-g++} \
+		CC=$(gcc-getCC) \
+		CXX=$(gcc-getCXX) \
 		F77=${F77:-g77} \
 		|| die "Package compilation failed."
 
