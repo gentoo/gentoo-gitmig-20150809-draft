@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.5 2001/06/09 12:00:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.6 2001/07/07 17:27:48 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ DEPEND=">=media-libs/imlib-1.9.8.1
 	>=dev-libs/libpcre-3.2
 	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
 	perl? ( >=sys-devel/perl-5.6 )
-	python? ( >=dev-lang/python-2.0 )
+	python? ( >=dev-lang/python-2.0-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
         opengl? ( >=x11-libs/gtkglarea-1.2.2 )
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/imlib-1.9.8.1
 	>=dev-libs/libpcre-3.2
 	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
 	perl? ( >=sys-devel/perl-5.6 )
-	python? ( >=dev-lang/python-2.0 )
+	python? ( >=dev-lang/python-2.0i-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
         opengl? ( >=x11-libs/gtkglarea-1.2.2 )
@@ -71,7 +71,7 @@ src_compile() {
 	--enable-gtk=module \
 	--enable-c=module $myconf \
 	--enable-javascript=yes --with-included-njs --enable-csinc
-    try make LDFLAGS=\"-L/usr/lib/python2.0/config/ -lz\"
+    try make LDFLAGS=\"-L/usr/lib/python2.0/config/ -lpython2.0 `python-config`\"
 
 
 }
