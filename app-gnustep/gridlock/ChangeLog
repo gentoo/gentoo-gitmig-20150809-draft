@@ -1,6 +1,6 @@
 # ChangeLog for app-gnustep/gridlock
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gridlock/ChangeLog,v 1.4 2004/04/17 19:43:33 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gridlock/ChangeLog,v 1.5 2004/06/24 21:40:46 agriffis Exp $
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gridlock-1.6.1.ebuild:
   Added IUSE=

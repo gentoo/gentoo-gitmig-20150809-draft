@@ -1,6 +1,6 @@
 # ChangeLog for app-gnustep/renaissance
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/renaissance/ChangeLog,v 1.3 2004/04/17 19:43:33 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/renaissance/ChangeLog,v 1.4 2004/06/24 21:42:13 agriffis Exp $
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> renaissance-0.7.0.ebuild:
   Added IUSE=
