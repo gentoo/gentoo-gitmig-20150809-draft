@@ -1,0 +1,96 @@
+diff -Naur vcdimager-0.7.20.orig/Makefile.am vcdimager-0.7.20/Makefile.am
+--- vcdimager-0.7.20.orig/Makefile.am	2004-02-19 22:15:27.000000000 -0800
++++ vcdimager-0.7.20/Makefile.am	2004-09-24 02:22:31.161011459 -0700
+@@ -22,7 +22,7 @@
+ 
+ # pkg-config(1) related rules
+ pkgconfigdir = $(libdir)/pkgconfig
+-pkgconfig_DATA = libvcdinfo.pc 
++pkgconfig_DATA = libvcdinfo.pc libvcd.pc
+ 
+ EXTRA_DIST = BUGS FAQ cygwin-dist.sh HACKING libpopt.m4 \
+ 	ChangeLog_pre0_5 ChangeLog_pre0_7_14 \
+diff -Naur vcdimager-0.7.20.orig/Makefile.in vcdimager-0.7.20/Makefile.in
+--- vcdimager-0.7.20.orig/Makefile.in	2004-02-19 22:20:23.000000000 -0800
++++ vcdimager-0.7.20/Makefile.in	2004-09-24 02:22:52.548477211 -0700
+@@ -222,7 +222,7 @@
+ 
+ # pkg-config(1) related rules
+ pkgconfigdir = $(libdir)/pkgconfig
+-pkgconfig_DATA = libvcdinfo.pc 
++pkgconfig_DATA = libvcdinfo.pc libvcd.pc
+ EXTRA_DIST = BUGS FAQ cygwin-dist.sh HACKING libpopt.m4 \
+ 	ChangeLog_pre0_5 ChangeLog_pre0_7_14 \
+ 	debian/changelog debian/control debian/copyright debian/docs debian/info debian/rules debian/watch $(wildcard debian/*.install)
+diff -Naur vcdimager-0.7.20.orig/lib/Makefile.am vcdimager-0.7.20/lib/Makefile.am
+--- vcdimager-0.7.20.orig/lib/Makefile.am	2004-02-12 16:52:18.000000000 -0800
++++ vcdimager-0.7.20/lib/Makefile.am	2004-09-24 02:23:26.158923375 -0700
+@@ -45,8 +45,7 @@
+ libvcdinfo_la_REVISION := 1
+ libvcdinfo_la_AGE := 0
+ 
+-noinst_LTLIBRARIES = libvcd.la
+-lib_LTLIBRARIES = libvcdinfo.la
++lib_LTLIBRARIES = libvcd.la libvcdinfo.la
+ 
+ INCLUDES = $(LIBVCD_CFLAGS) $(LIBCDIO_CFLAGS)
+ 
+diff -Naur vcdimager-0.7.20.orig/lib/Makefile.in vcdimager-0.7.20/lib/Makefile.in
+--- vcdimager-0.7.20.orig/lib/Makefile.in	2004-02-19 22:20:25.000000000 -0800
++++ vcdimager-0.7.20/lib/Makefile.in	2004-09-24 02:26:15.567934554 -0700
+@@ -92,7 +92,7 @@
+ CONFIG_CLEAN_FILES =
+ am__installdirs = $(DESTDIR)$(libdir)
+ libLTLIBRARIES_INSTALL = $(INSTALL)
+-LTLIBRARIES = $(lib_LTLIBRARIES) $(noinst_LTLIBRARIES)
++LTLIBRARIES = $(lib_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ libvcd_la_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ am_libvcd_la_OBJECTS = vcd.lo data_structures.lo directory.lo files.lo \
+@@ -254,8 +254,7 @@
+ libvcdinfo_la_CURRENT := 0
+ libvcdinfo_la_REVISION := 1
+ libvcdinfo_la_AGE := 0
+-noinst_LTLIBRARIES = libvcd.la
+-lib_LTLIBRARIES = libvcdinfo.la
++lib_LTLIBRARIES = libvcd.la libvcdinfo.la
+ INCLUDES = $(LIBVCD_CFLAGS) $(LIBCDIO_CFLAGS)
+ libvcd_la_LIBADD = $(LIBCDIO_LIBS) $(LIBISO9660_LIBS)
+ libvcd_la_SOURCES = \
+@@ -382,17 +381,8 @@
+ 	  echo "rm -f \"$${dir}/so_locations\""; \
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
+-
+-clean-noinstLTLIBRARIES:
+-	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
+-	@list='$(noinst_LTLIBRARIES)'; for p in $$list; do \
+-	  dir="`echo $$p | sed -e 's|/[^/]*$$||'`"; \
+-	  test "$$dir" = "$$p" && dir=.; \
+-	  echo "rm -f \"$${dir}/so_locations\""; \
+-	  rm -f "$${dir}/so_locations"; \
+-	done
+ libvcd.la: $(libvcd_la_OBJECTS) $(libvcd_la_DEPENDENCIES) 
+-	$(LINK)  $(libvcd_la_LDFLAGS) $(libvcd_la_OBJECTS) $(libvcd_la_LIBADD) $(LIBS)
++	$(LINK) -rpath $(libdir) $(libvcd_la_LDFLAGS) $(libvcd_la_OBJECTS) $(libvcd_la_LIBADD) $(LIBS)
+ libvcdinfo.la: $(libvcdinfo_la_OBJECTS) $(libvcdinfo_la_DEPENDENCIES) 
+ 	$(LINK) -rpath $(libdir) $(libvcdinfo_la_LDFLAGS) $(libvcdinfo_la_OBJECTS) $(libvcdinfo_la_LIBADD) $(LIBS)
+ 
+@@ -564,7 +554,7 @@
+ clean: clean-am
+ 
+ clean-am: clean-generic clean-libLTLIBRARIES clean-libtool \
+-	clean-noinstLTLIBRARIES mostlyclean-am
++	mostlyclean-am
+ 
+ distclean: distclean-am
+ 	-rm -rf ./$(DEPDIR)
+@@ -613,7 +603,7 @@
+ uninstall-am: uninstall-info-am uninstall-libLTLIBRARIES
+ 
+ .PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \
+-	clean-libLTLIBRARIES clean-libtool clean-noinstLTLIBRARIES \
++	clean-libLTLIBRARIES clean-libtool \
+ 	ctags distclean distclean-compile distclean-generic \
+ 	distclean-libtool distclean-tags distdir dvi dvi-am html \
+ 	html-am info info-am install install-am install-data \
