@@ -8,7 +8,7 @@ need-kde 3
 DESCRIPTION="Qinx, a KDE style inspired by QNX Photon microGUI"
 SRC_URI="http://www.usermode.org/code/qinx-0.2.tar.gz"
 HOMEPAGE="http://www.usermode.org/code.html"
-LICENSE="qinx-0.2"
+LICENSE="as-is"
 
 KEYWORDS="x86"
 
