@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3486 2005/01/13 23:29:52 greg_g Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3487 2005/01/14 08:02:36 johnm Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -285,8 +285,6 @@ app-shells/rssh
 # mass upgrade.
 >=sys-kernel/gentoo-sources-2.6
 >=sys-kernel/hardened-sources-2.6
->=sys-kernel/pegasos-sources-2.6
->=sys-kernel/ppc-sources-2.6
 >=sys-kernel/rsbac-sources-2.6
 >=sys-kernel/vanilla-sources-2.6
 # this includes the headers too
