@@ -258,3 +258,6 @@ gnome-apps/gnapster
 # gdm doesn't want to start with this imlib, might be that you have to remerge 
 # parts of GNOME. 
 >=media-libs/imlib-1.9.11
+
+# This one does not build on rc6
+>=sys-apps/iptables-1.2.4
