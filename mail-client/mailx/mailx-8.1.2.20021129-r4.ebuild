@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r4.ebuild,v 1.1 2004/09/13 17:15:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r4.ebuild,v 1.2 2004/09/13 17:16:17 ticho Exp $
 
 inherit ccc eutils
 IUSE=""
@@ -16,7 +16,8 @@ HOMEPAGE="http://www.debian.org"
 DEPEND=">=net-libs/liblockfile-1.03
 	virtual/mta
 	!mail-client/mailutils
-	mail-client/mailx-support"
+	mail-client/mailx-support
+	!virtual/mailx"
 PROVIDE="virtual/mailx"
 
 SLOT="0"
