@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r1.ebuild,v 1.2 2004/06/24 23:02:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r2.ebuild,v 1.1 2004/06/29 16:50:45 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://www.netraverse.com/member/downloads/files/mki-adapter.patch
 	 http://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch"
 HOMEPAGE="http://www.kernel.org/ http://www.netraverse.com/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
@@ -31,6 +31,8 @@ src_unpack() {
 	patch -Np1 -i ${DISTDIR}/mki-adapter.patch >/dev/null 2>&1 || die "Error: mki-adapter patch failed."
 	eend $?
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 
 	kernel_universal_unpack

@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.25 2004/06/24 23:02:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.26 2004/06/29 16:50:45 plasmaroo Exp $
+
+*win4lin-sources-2.4.26-r2 (29 Jun 2004)
+
+  29 Jun 2004; <plasmaroo@gentoo.org> -win4lin-sources-2.4.26-r1.ebuild,
+  +win4lin-sources-2.4.26-r2.ebuild,
+  +files/win4lin-sources-2.4.26.CAN-2004-0495.patch,
+  +files/win4lin-sources-2.4.26.CAN-2004-0535.patch:
+  Security bump for the CAN-2004-0495 and CAN-2004-0535 vulnerabilities.
 
 *win4lin-sources-2.4.26-r1 (15 Jun 2004)
 
