@@ -1,6 +1,6 @@
 MD5 39bc6b56e6ea2b4a4acdf5a232121663 balsa-2.0.14.ebuild 1726
 MD5 694d66321b4ec7cced8adfcdc2f8b080 balsa-2.0.11.ebuild 1648
-MD5 b9c2e217eb00175d69b12f1b2ca0a408 balsa-2.0.15.ebuild 1451
+MD5 49b7970e97b0cac087137faefbc160e5 balsa-2.0.15-r1.ebuild 1441
 MD5 a679efb198ad87b68ac094b4d27716c3 balsa-2.0.10.ebuild 1722
 MD5 306baf1b7cdbf5f70da066752ebd44af balsa-1.4.3.ebuild 1715
 MD5 8e9d2fd32f66fd9537a6f7b4f3ab83b7 ChangeLog 7573
@@ -11,3 +11,4 @@ MD5 2011fe7cfdc0ef2d21825be38169169f files/digest-balsa-2.0.14 66
 MD5 aa4090173ee51cb5766ef1b3a6d6f379 files/digest-balsa-2.0.15 66
 MD5 7640c6a66bb87af1486164581e95296d files/balsa-1.4.0-gentoo.diff 830
 MD5 92455a1d3e62f5727b37d43f60acdf12 files/digest-balsa-1.4.3 65
+MD5 aa4090173ee51cb5766ef1b3a6d6f379 files/digest-balsa-2.0.15-r1 66
