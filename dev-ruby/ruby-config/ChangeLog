@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-config
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.1 2004/01/29 18:02:15 usata Exp $
+
+*ruby-config-0.1 (30 Jan 2004)
+
+  30 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  ruby-config-0.1.ebuild, files/ruby-config.sh:
+  Initial import. Derived from dev-lang/ruby to cope with dev-lang/ruby-cvs
+
