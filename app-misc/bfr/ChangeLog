@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/bfr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.9 2004/11/04 20:40:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.10 2004/12/03 17:59:09 slarti Exp $
+
+  03 Dec 2004; Tom Martin <slarti@gentoo.org> bfr-1.5.ebuild,
+  bfr-1.6.ebuild:
+  einstall -> make DESTDIR=${D} install
 
   04 Nov 2004; Markus Rothe <corsair@gentoo.org> bfr-1.6.ebuild:
   Marked ~ppc64; bug #70048
