@@ -15,3 +15,4 @@ MD5 6775371821db3139dd2470c794a1e01f files/digest-postfix-1.1.11.20020917 166
 MD5 c33c672b82d58d36299c1cfd66dddf40 files/digest-postfix-2.0.3 219
 MD5 32967889bdab593d4329d63cfc07820d files/digest-postfix-2.0.8 220
 MD5 798b43d4f63482e4eae84941d5b4f40e files/smtp.pam 206
+MD5 803eb5ffc166aaaf2f3b78ddf71fe73d files/postfix-2.0.0/main.cf.diff 2382
