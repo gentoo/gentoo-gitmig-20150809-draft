@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/erec
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/ChangeLog,v 1.1 2004/03/18 15:44:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/ChangeLog,v 1.2 2004/04/17 16:43:54 eradicator Exp $
+
+  17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> erec-2.2.0.1.ebuild:
+  Stable x86.
 
 *erec-2.2.0.1 (18 Mar 2004)
 
