@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/envlab
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.2 2004/02/29 14:44:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.3 2004/04/13 12:54:03 kugelfang Exp $
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> envlab-1.2.ebuild:
+  marked ~amd64
 
 *envlab-1.2 (29 Feb 2004)
 

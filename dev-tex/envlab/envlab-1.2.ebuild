@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.1 2004/02/28 22:10:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.2 2004/04/13 12:54:03 kugelfang Exp $
 
 S="${WORKDIR}/${PN}"
 LICENSE="LPPL-1.2"
@@ -11,7 +11,7 @@ HOMEPAGE="http://planck.psu.edu/~boris/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 SLOT="0"
 DEPEND="virtual/tetex"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 src_compile() {
 	ebegin "Compiling ${PN}"
