@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.12 2002/05/01 19:52:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.13 2002/05/13 20:30:49 agenkin Exp $
+
+*mozilla-1.0_rc2 (13 May 2002)
+
+  13 May 2002; Arcady Genkin <agenkin@thpoon.com> mozilla-1.0_rc2.ebuild:
+
+  Updated to 1.0rc2.
 
 *mozilla-1.0_rc1-r1 (1 May 2002)
 
