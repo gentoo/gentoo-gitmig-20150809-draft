@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r4.ebuild,v 1.1 2001/10/05 22:49:44 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r4.ebuild,v 1.2 2001/11/04 22:02:16 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,13 +14,17 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${A}
 DEPEND="virtual/glibc virtual/x11
         >=dev-libs/glib-1.2.10"
 
+
 src_unpack() {
+
 	unpack ${A}
+	
 	cd ${S}
 	patch -p0 < ${FILESDIR}/gtk-1.2.10.patch || die
 }
 
 src_compile() {
+
 	local myconf
 
 	if [ "${DEBUG}" ]
@@ -41,6 +45,7 @@ src_compile() {
 }
 
 src_install() {
+
 	make install DESTDIR=${D} || die
 
 	preplib /usr
@@ -60,13 +65,14 @@ src_install() {
 }
 
 pkg_postinst() {
+
 	echo
-	echo **********************************************************************
-	echo * Older versions added /etc/X11/gtk/gtkrc which changed settings for *
-	echo * all themes it seems.  Please remove it manually as it will not due *
-	echo * to /env protection.                                                *
-	echo *                                                                    *
-	echo * NB:  The old gtkrc is available through the new Gentoo gtk theme.  *
-	echo **********************************************************************
+	echo "**********************************************************************"
+	echo "* Older versions added /etc/X11/gtk/gtkrc which changed settings for *"
+	echo "* all themes it seems.  Please remove it manually as it will not due *"
+	echo "* to /env protection.                                                *"
+	echo "*                                                                    *"
+	echo "* NB:  The old gtkrc is available through the new Gentoo gtk theme.  *"
+	echo "**********************************************************************"
 	echo
 }
