@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.10 2004/08/04 17:37:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.11 2004/08/06 14:08:18 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~arm ~hppa amd64 ~ia64 s390"
+KEYWORDS="x86 ~ppc sparc alpha ~arm ~hppa amd64 ~ia64 s390"
 IUSE="nls"
 
 DEPEND="virtual/libc
