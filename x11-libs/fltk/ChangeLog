@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.16 2002/12/09 12:02:53 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.17 2002/12/19 04:21:39 raker Exp $
 
 *fltk-1.1.2 (09 Dec 2002)
+
+  18 Dec 2002; Nick Hadaway <raker@gentoo.org> fltk-1.1.2.ebuild :
+  Marked stable.
                                                                                                    
   09 Dec 2002; Jack Morgan <jmorgan@gentoo.org> fltk-1.1.*.ebuild : 
   Removed ~sparc64/sparc64 keywords
