@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-2.7.ebuild,v 1.3 2003/10/04 15:34:57 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-2.7.ebuild,v 1.4 2004/03/21 14:04:46 mboman Exp $
 
 DESCRIPTION="A next-generation scanning tool for pentesters"
 HOMEPAGE="http://www.thc.org/releases.php"
@@ -10,19 +10,14 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="ssl"
 DEPEND="virtual/glibc
-	ssl? ( >=openssl-0.9.6j )"
-RDEPEND=""
-
-S=${WORKDIR}/${P}
+	ssl? ( >=dev-libs/openssl-0.9.6j )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# gentoo standard place for templates/configuration files
-	mv amap.h amap.h.orig
-	sed amap.h.orig -e '/archpath/ s:/usr/etc/:/usr/share/amap/:' > amap.h
+	sed -i -e '/archpath/ s:/usr/etc/:/usr/share/amap/:' amap.h
 }
-
 
 src_compile() {
 	make || die
