@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.186 2005/02/21 04:38:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.187 2005/02/24 20:59:32 kaiowas Exp $
+
+  24 Feb 2005; petre rodan <kaiowas@gentoo.org> postgresql-7.3.6-r1.ebuild,
+  postgresql-7.3.7-r2.ebuild, postgresql-7.3.8.ebuild,
+  postgresql-7.3.9-r1.ebuild, postgresql-7.3.9.ebuild,
+  postgresql-7.4.3-r1.ebuild, postgresql-7.4.3.ebuild,
+  postgresql-7.4.5-r1.ebuild, postgresql-7.4.5-r2.ebuild,
+  postgresql-7.4.5.ebuild, postgresql-7.4.6.ebuild,
+  postgresql-7.4.7-r1.ebuild, postgresql-7.4.7.ebuild,
+  postgresql-8.0.0.ebuild, postgresql-8.0.1-r1.ebuild,
+  postgresql-8.0.1.ebuild:
+  added selinux RDEPEND - bug 79747
 
   20 Feb 2005; Aron Griffis <agriffis@gentoo.org> postgresql-7.3.9-r1.ebuild,
   postgresql-7.4.7-r1.ebuild:
