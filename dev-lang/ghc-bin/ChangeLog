@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.17 2004/10/17 09:05:32 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.18 2004/10/18 17:03:04 kosmikus Exp $
+
+*ghc-bin-6.2.2 (18 Oct 2004)
+
+  18 Oct 2004; Andres Loeh <kosmikus@gentoo.org> ghc-bin-6.2.2.ebuild:
+  Version bump for x86.
 
 *ghc-bin-6.2.1 (17 Oct 2004)
 
