@@ -1,10 +1,13 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.7 2003/02/12 03:48:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.8 2003/03/25 11:09:14 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *nvi-1.81.5 (20 Oct 2002)
+
+  25 Mar 2003, Guy Martin <gmsoft@gentoo.org> nvi-1.81.5.ebuild :
+  Added hppa to KEYWORDS.
 
   20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> nvi-1.81.5.ebuild
   files/digest-nvi-1.81.5 :
