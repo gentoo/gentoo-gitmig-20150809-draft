@@ -1,0 +1,17 @@
+Install instructions
+
+1) Open up wp-config-sample.php and fill in your database connection details
+2) Save the file as wp-config.php
+
+3) Launch /wp-admin/install.php in your browser.
+4) Note the password given to you.
+
+The install script should then send you to the login page.
+
+Sign in with the username admin and the password generated during the installation.
+
+You can then click on 'Profile' to change the password.
+
+Upgrade instructions
+
+1) Point your browser to /wp-admin/upgrade.php
