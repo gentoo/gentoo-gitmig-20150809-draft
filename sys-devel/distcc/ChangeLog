@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.137 2005/02/06 06:09:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.138 2005/03/19 14:57:39 lisa Exp $
+
+  19 Mar 2005; Lisa Seelye <lisa@gentoo.org> :
+  Finally put a test around newuser to test for bootstrap condition (where
+  shadow is not present) and cleaned out some legacy stuff.
 
 *distcc-2.18.3-r4 (05 Feb 2005)
 

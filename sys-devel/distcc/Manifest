@@ -1,25 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 96d3a0bf78a4b950bf02a304eed7db8c ChangeLog 25178
+MD5 90175e60f78bf8a1eb623dcf31620298 ChangeLog 25355
 MD5 226fbaefb55345566d2a38d00f6dc160 distcc-2.16-r2.ebuild 4844
 MD5 2f7d9eaca2df59be318eb50fc2f2e2f5 distcc-2.18.3-r2.ebuild 4791
-MD5 c04441917ccb5e5f9790642545c1f469 metadata.xml 375
 MD5 71814b963a24a7fd295433932da974b1 distcc-2.18.3-r4.ebuild 4795
+MD5 c04441917ccb5e5f9790642545c1f469 metadata.xml 375
+MD5 4d624398dfce16bcb68bb43e3c952b74 distcc-2.18.3-r5.ebuild 4562
 MD5 c462167d99c154e9f8b9f94022ed2a71 files/digest-distcc-2.16-r2 64
 MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r2 66
-MD5 fec77b3be8d8bd8f2d6e5a708cb35717 files/distcc-config 4874
-MD5 687a622f11f457581b267ce5fb3c2721 files/distcc-gentoo-multilib.patch 3784
-MD5 ec06b50c03c5002d4df60e49b9798445 files/distcc-gentoo-multilib-r1.patch 4245
 MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r4 66
+MD5 fec77b3be8d8bd8f2d6e5a708cb35717 files/distcc-config 4874
+MD5 ec06b50c03c5002d4df60e49b9798445 files/distcc-gentoo-multilib-r1.patch 4245
+MD5 687a622f11f457581b267ce5fb3c2721 files/distcc-gentoo-multilib.patch 3784
+MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r5 66
 MD5 69a089566bd18a1bfba2da639964c19e files/2.17/conf 1317
 MD5 1161999a5d25185f95a8c284bd7307d1 files/2.17/init 733
 MD5 bb53a18e009ef62f4402a23f83bfda20 files/2.18/conf 1384
 MD5 739ebfc62fe125b76021cf7987a158f7 files/2.18/init 733
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCBbSdArHZZzCEUG0RAs0EAJ9Q1wxfUb7xd5rGKJxPonTviv6krQCfXIQM
-hXu9C9VskQw8whjSY2vS3Z8=
-=FZK9
------END PGP SIGNATURE-----
