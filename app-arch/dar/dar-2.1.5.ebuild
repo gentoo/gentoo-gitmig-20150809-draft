@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.5.ebuild,v 1.4 2005/01/01 11:43:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.5.ebuild,v 1.5 2005/03/03 17:49:08 ciaranm Exp $
 
 inherit flag-o-matic libtool
 
@@ -15,7 +15,7 @@ IUSE="acl"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	>=app-arch/bzip2-1.0.2
-	acl? ( sys-apps/attr )"
+	acl? ( sys-process/attr )"
 
 src_unpack() {
 	unpack ${A}
