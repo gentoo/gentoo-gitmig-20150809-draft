@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.2 2004/12/14 00:12:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.3 2005/02/12 01:02:55 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -31,6 +31,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	# Fix perms on status files #74217
 	local f
 	for f in triptych.{clr,cnt,scr} ; do
