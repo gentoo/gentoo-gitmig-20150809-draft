@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/kmasqdialer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kmasqdialer/ChangeLog,v 1.2 2003/06/20 04:17:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kmasqdialer/ChangeLog,v 1.3 2003/11/19 14:38:04 lanius Exp $
+
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  metadata.xml
 
 *kmasqdialer-2.05 (28 May 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.6 2003/05/23 07:11:24 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.7 2003/11/19 14:41:23 lanius Exp $
+
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  metadata.xml
 
 *ltmodem-8.26_alpha9-r1 (23 May 2003)
   
