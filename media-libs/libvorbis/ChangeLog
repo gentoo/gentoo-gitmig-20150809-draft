@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.37 2004/06/24 23:15:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.38 2004/09/12 10:32:54 hansmi Exp $
+
+  12 Sep 2004; Michael Hanselmann <hansmi@gentoo.org>
+  libvorbis-1.0.1-r2.ebuild:
+  Corrected the ebuild to compile on Mac OS X. Thanks to Vincent Strubel who
+  submitted the patch in Bug #58006. Added to ~macos.
 
   20 Jun 2004; Tom Gall <tgall@gentoo.org> libvorbis-1.0.1-r2.ebuild:
   stable on ppc64, bug #54142
