@@ -1,13 +1,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# System-wide defaults for the gcc 3.2 Portage system
+# System-wide defaults for the gcc 3.2.3 Portage system
 
+# <zhen@gentoo.org> these are left here for archival purposes
+#	please note that they are NOT used in our profile.
 USE="x86 oss apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm gtk imlib
 java jpeg kde gnome libg++ libwww mad mikmod mmx motif mpeg ncurses nls oggvorbis
 opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
 svga tcpd truetype X xml2 xmms xv zlib"
 
-# -- zhen can we run with this? -solar (Oct  5 2003)
-# minimalist defaults
+# <zhen@gentoo.org> defaults for a hardened system
 USE="x86 berkdb crypt readline nls ssl tcpd zlib"
 
 ARCH="x86"
