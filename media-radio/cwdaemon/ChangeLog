@@ -1,6 +1,19 @@
 # ChangeLog for media-radio/cwdaemon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.6 2005/01/12 05:45:55 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.7 2005/03/31 01:33:58 killsoft Exp $
+
+  30 Mar 2005; Robb Romans <killsoft@gentoo.org> :
+  New version 0.9.2
+  * Many patches by Jason L. Wright, AI4JW, which brings us OpenBSD
+    support and the following:
+  * Better command line parsing and error checking added.
+  * The 'none' sound device had been added in case you don't want a
+    sidetone.
+  * Free entry of portnames has been added, together with autodetection
+    of ports. This should give support for more platforms.
+  * A null device has been added in case you want sidetone but no keying,
+    see 'man cwdaemon'.
+  * Many minor bugfixes.
 
 *cwdaemon-0.9.1 (11 Jan 2005)
 
