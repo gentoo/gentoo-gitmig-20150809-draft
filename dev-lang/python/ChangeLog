@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.126 2005/02/07 04:28:20 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.127 2005/02/07 20:47:42 eradicator Exp $
+
+*python-2.4-r2 (07 Feb 2005)
+
+  07 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/python-2.4-libdir.patch, +python-2.4-r2.ebuild:
+  Multilib releated cleanup.
 
 *python-2.2.3-r6 (06 Feb 2005)
 
