@@ -1,10 +1,13 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.7 2005/01/01 11:08:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.8 2005/01/02 19:14:17 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *localepurge-0.2-r1 (13 Jul 2004)
 
-  13 Jul 2004; J. Alberto Suárez López <bass@gentoo.org> localepurge-0.2-r1.ebuild:
+  13 Jul 2004; J. Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> localepurge-0.2-r1.ebuild:
   New locale-list, support more locales and removed duplicates.
   Configuration file fixed. close bug #56431 
 
@@ -16,5 +19,5 @@
   7 Sept 2002; Owen Stampflee <owen@gentoo.org> localepurge-0.2.ebuild:
   Changed PPC to ppc in keywords.
 
-  17 Aug 2002; J.Alberto Suárez López <bass@gentoo.org> localepurge-0.2.ebuild:
+  17 Aug 2002; J.Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> localepurge-0.2.ebuild:
   First release.  Only testing.
