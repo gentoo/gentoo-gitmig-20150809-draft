@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom ryan@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcat/nc-110.ebuild,v 1.1 2001/05/15 19:55:37 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcat/nc-110.ebuild,v 1.2 2001/05/15 20:48:02 ryan Exp $
 
 A="nc110.tgz"
 S=${WORKDIR}/${P}
@@ -25,7 +25,6 @@ src_compile() {
 	| sed -e "s:^CC =.*$:CC = gcc \$(CFLAGS):" > Makefile
     cp netcat.c netcat.orig
     cat netcat.orig | sed -e "s:#define HAVE_BIND:#undef HAVE_BIND:" > netcat.c
-    bash
     try make linux
 
 }
