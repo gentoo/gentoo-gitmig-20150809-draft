@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r4.ebuild,v 1.3 2003/02/14 18:47:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r4.ebuild,v 1.4 2003/02/15 19:52:43 dragon Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
 HOMEPAGE="http://www.ntp.org/"
 
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 SLOT="0"
 
 DEPEND="virtual/glibc
