@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.15 2003/02/19 21:09:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.16 2003/02/28 09:50:58 cretin Exp $
+
+*rpm-4.0.4-r5 (28 Feb 2003)
+
+  28 Feb 2003; Stefan Jones <cretin@gentoo.org> rpm-4.0.4-r5.ebuild :
+  Fixed bug #15621 with homemade patch.
 
 *rpm-4.1 (19 Feb 2003)
 
