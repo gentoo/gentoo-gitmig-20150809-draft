@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.7-r1.ebuild,v 1.11 2005/01/05 16:32:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.1 2005/01/05 16:32:01 chriswhite Exp $
+
+inherit eutils
 
 DESCRIPTION="An X image viewer."
 SRC_URI="http://xzgv.browser.org/${P}.tar.gz"
@@ -8,10 +10,11 @@ HOMEPAGE="http://xzgv.browser.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 DEPEND="virtual/x11
+	sys-apps/gawk
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
@@ -24,8 +27,18 @@ src_unpack() {
 
 	cd ${S}
 	cp config.mk config.mk.orig
-	sed -e "s:-O2 -Wall:${CFLAGS}:" \
-		config.mk.orig > config.mk
+	sed -i -e "s:-O2 -Wall:${CFLAGS}:" config.mk
+
+	case "${ARCH}" in
+		"x86")
+			;;
+		*)
+			sed -i -e "s/CFLAGS+=-DINTERP_MMX/#&/" config.mk
+			;;
+	esac
+
+	# Fix for bug #74069
+	epatch ${FILESDIR}/${P}-integer-overflow-fix.diff
 }
 
 src_compile() {

@@ -1,6 +1,19 @@
-MD5 42a167e1eb5d7c0e1e348df9bb1b00d9 ChangeLog 943
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 040e0e9fe81d41648319b69aa5c99f24 ChangeLog 1154
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 63e70f430ddb82ae0477176dc02ec42e xzgv-0.7-r1.ebuild 1161
-MD5 ee3fe63d1b9be7a0c6463383b95d73aa xzgv-0.8.ebuild 1259
+MD5 c7b6bed4012956449cc69bcc784f5438 xzgv-0.7-r1.ebuild 1163
+MD5 8f2b7ebde784e98ef01f95f127c3222e xzgv-0.8.ebuild 1261
+MD5 df06c51ab7c9b6508144fd39e0f6abce xzgv-0.8-r1.ebuild 1359
 MD5 fdc1547580fe894d8749ab0fbc604452 files/digest-xzgv-0.7-r1 60
 MD5 df76e36ea08fa4317c30d7879eec9f93 files/digest-xzgv-0.8 60
+MD5 9495e82307945c08599a0bd9ffc2f4f6 files/xzgv-0.8-integer-overflow-fix.diff 6374
+MD5 df76e36ea08fa4317c30d7879eec9f93 files/digest-xzgv-0.8-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3BV6FdQwWVoAgN4RAittAJ9XtXxKKzzUmuei2Z+c8XEzsauKRQCcDUVC
+EUOFE1TSixDLQCaCsMOLxv8=
+=PXvA
+-----END PGP SIGNATURE-----
