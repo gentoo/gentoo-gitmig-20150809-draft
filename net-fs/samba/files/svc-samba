@@ -1,0 +1,37 @@
+#!/bin/sh
+#RCUPDATE:3 4:76:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=svc-samba
+opts="start stop"
+
+EXE0=/usr/sbin/nmbd
+EXE1=/usr/sbin/smbd
+
+start() {
+	ebegin "Starting $SERVICE"
+	ln -sf ../services/smbd ${SVCDIR}/control/smbd
+	ln -sf ../services/nmbd ${SVCDIR}/control/nmbd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+    if [ -e ${SVCDIR}/control/smbd ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/smbd
+		rm ${SVCDIR}/control/smbd
+	fi
+	if [ -e ${SVCDIR}/control/nmbd ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/nmbd
+		rm ${SVCDIR}/control/nmbd
+	fi
+	eend $?
+}
+
+doservice ${@}
+
+
+

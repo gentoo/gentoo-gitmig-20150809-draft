@@ -4,48 +4,27 @@
 . /etc/rc.d/config/functions
 
 SERVICE=samba
-opts="start stop restart"
+opts="start stop"
 
 EXE0=/usr/sbin/nmbd
 EXE1=/usr/sbin/smbd
 
 start() {
-		ebegin "Starting $SERVICE"
-		start-stop-daemon --start --quiet --exec $EXE0 
-		result=$?
-		start-stop-daemon --start --quiet --exec $EXE1 
-		result=$(( $result + $? ))
-		eend $result "Started $SERVICE." "Error starting $SERVICE."
-
+	ebegin "Starting $SERVICE"
+	start-stop-daemon --start --quiet --exec $EXE0 
+	result=$?
+	start-stop-daemon --start --quiet --exec $EXE1 
+	result=$(( $result + $? ))
+	eend $result
 }
 
 stop() {
-		ebegin "Starting $SERVICE"
-		start-stop-daemon --stop --quiet --exec $EXE0 
-		result=$?
-		start-stop-daemon --stop --quiet --exec $EXE1 
-		result=$(( $result + $? ))
-		eend $result "Stopped $SERVICE." "Error stopping $SERVICE."
-
-}
-supervise_start() {
-		ebegin "Starting supervised $SERVICE"
-		svc -u /etc/supervise/smbd
-		svc -u /etc/supervise/nmbd
-		eend $? "Started $SERVICE." "Error starting $SERVICE."
-}
-
-
-supervise_stop() {
-		ebegin "Stopping supervised $SERVICE"
-		svc -d /etc/supervise/smbd
-		svc -d /etc/supervise/nmbd
-		eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
-}
-
-restart () {
-	stop
-	start
+	ebegin "Starting $SERVICE"
+	start-stop-daemon --stop --quiet --exec $EXE0 
+	result=$?
+	start-stop-daemon --stop --quiet --exec $EXE1 
+	result=$(( $result + $? ))
+	eend $result
 }
 
 doservice ${@}

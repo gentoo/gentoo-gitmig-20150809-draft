@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r2.ebuild,v 1.1 2001/01/01 23:26:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r3.ebuild,v 1.1 2001/01/10 06:05:17 drobbins Exp $
 
 P=samba-2.0.7
 A=${P}.tar.gz
@@ -38,7 +38,6 @@ src_install() {
 		PRIVATEDIR=${D}/etc/smb/private SWATDIR=${D}/usr/share/swat \
 		LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin
 	prepman
-
 	into /usr
 	cd ${S}
 	dodoc COPYING Manifest README README-smbmount Roadmap WHATSNEW.txt
@@ -62,8 +61,8 @@ src_install() {
 	cd ${S}
 	cp -a examples ${D}/usr/doc/${PF}
 	cp examples/smb.conf.default ${D}/etc/smb/smb.conf.example
-	dodir /etc/rc.d/init.d
-	cp ${O}/files/samba ${D}/etc/rc.d/init.d
+	exeinto /etc/rc.d/init.d
+	doexe ${FILESDIR}/samba ${FILESDIR}/svc-samba
 	diropts -m0700
 	dodir /etc/smb/private
 
@@ -71,24 +70,22 @@ src_install() {
 	local x
 	for x in smbd nmbd
 	do
-		dodir /var/supervise/${x}/log
-		chmod +t ${D}/var/supervise/${x}
-		exeinto /var/supervise/${x}
+		dodir /var/lib/supervise/services/${x}/log
+		chmod +t ${D}/var/lib/supervise/services/${x}
+		exeinto /var/lib/supervise/services/${x}
 		newexe ${FILESDIR}/${x}-run run
-		exeinto /var/supervise/${x}/log
+		exeinto /var/lib/supervise/services/${x}/log
 		newexe ${FILESDIR}/${x}-log run
-		dosym /var/supervise/${x}/log/${x}-log /var/log/${x}.d
 	done
 }
 
-pkg_config() {
-
-    source ${ROOT}/etc/rc.d/config/functions
-
-    echo "Generating symlinks..."
-
-    ${ROOT}/usr/sbin/rc-update add samba
-
+pkg_postinst() {
+	echo "Samba installed.  To configure samba to start on boot, type:"
+	echo
+	echo "# rc-update add svc-samba    [ for high-availability supervised Samba -- recommended ]"
+	echo "# rc-update add samba		[ for normal non-supervised Samba ]"
+	echo 
+	echo "Also, please note that you must configure /etc/smb/smb.conf before Samba will work properly."
 }
 
 
