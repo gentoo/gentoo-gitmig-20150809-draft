@@ -1,6 +1,18 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 86d77ac786ca12fbd6f034dfb550a7a8 Cgi-Simple-0.06.ebuild 508
 MD5 4714ec1dc1775fac30b45e6d4003f154 Cgi-Simple-0.075.ebuild 528
-MD5 ea5d2c08f97d26b0446b726e881d0b87 ChangeLog 747
+MD5 e60133fec810c34cc184baf09e500344 ChangeLog 887
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 37c4a59b9dca918958ca09b47400fd5a Cgi-Simple-0.077.ebuild 517
 MD5 60825ecec90e5b15b6e2a3b15646d435 files/digest-Cgi-Simple-0.06 67
 MD5 d18cb181078892142788055992f3a09b files/digest-Cgi-Simple-0.075 68
+MD5 c35cce0f59f2b47d8d59b5b605ba0f86 files/digest-Cgi-Simple-0.077 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBsn2rtG5z4I8BtQoRAlwgAJ9I9DlekN5O719uWF9CLniN0Pg5HgCfRxt9
+Y9fIqz08n3f+kSyhWMXxAT0=
+=g6+Y
+-----END PGP SIGNATURE-----
