@@ -1,4 +1,4 @@
-MD5 2a3eda40a9ac8c94c58c95ca0aafd202 ChangeLog 6718
+MD5 87c929f8d24a8d127e9176a13b3630c8 ChangeLog 6827
 MD5 1b22d28366b43da7e3cb86ddc4ef4c1e sawfish-1.0.1-r5.ebuild 2013
 MD5 12589c6a3a29aa851c46dbdd6aa47f51 sawfish-1.0.1-r6.ebuild 2050
 MD5 b340c65f9f8a378aff72ff032f9280f5 sawfish-1.2.ebuild 2223
@@ -7,7 +7,7 @@ MD5 1cf40cbc9390cc195751d8147e6fb5ed sawfish-1.3-r1.ebuild 2041
 MD5 74bd84edc07a51201cb558490fda957a sawfish-1.3.ebuild 2241
 MD5 912a38d9daeef09c925d30b1a7ecb6fc sawfish-1.3-r2.ebuild 2127
 MD5 34922c9c0ba12b0e47e572e1708831f3 sawfish-1.3-r3.ebuild 2417
-MD5 961336937fd686c25ec0cc9c49531301 sawfish-1.3.20040120.ebuild 2696
+MD5 b0fd82f9ae28948b6b13aba577f71e18 sawfish-1.3.20040120.ebuild 2693
 MD5 caeb1eaaf77305901f5c3bc19f3637d5 files/Sawfish.desktop 449
 MD5 1ae747636b3422e00ef41cc07fc37ab4 files/capplet-crash.patch 556
 MD5 a7d051180bc14a630027439f0d385dcd files/digest-sawfish-1.0.1-r5 66
