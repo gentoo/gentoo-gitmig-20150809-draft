@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.4 2004/09/12 09:28:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.5 2004/09/12 09:51:51 stuart Exp $
+
+  12 Sep 2004; Stuart Herbert <stuart@gentoo.org> nx-x11-1.4.0-r1.ebuild,
+  nx-x11-1.4.0-r2.ebuild:
+  Fixed installation of NX.h header file
 
 *nx-x11-1.4.0-r2 (12 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r1.ebuild,v 1.2 2004/09/12 09:28:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r1.ebuild,v 1.3 2004/09/12 09:51:51 stuart Exp $
 
 inherit eutils
 
@@ -79,6 +79,9 @@ src_install() {
 	dolib lib/Xrender/libXrender.so
 
 	preplib /usr/NX
+
+	insinto /usr/X11R6/include
+	doins ../nxcomp/NX.h
 
 	dodir /var/lib/nxserver
 
