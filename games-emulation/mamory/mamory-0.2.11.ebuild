@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header:
 
 inherit games
 
@@ -17,13 +17,13 @@ RDEPEND=""
 
 src_compile() {
 	egamesconf || die
-	emake CFLAGS="${CFLAGS} -DNDEBUG" || die
+	emake CFLAGS="${CFLAGS} -DNDEBUG" || die "emake failed"
 }
 
 src_install() {
 	egamesinstall || die
 	mv ${D}/${GAMES_PREFIX}/include ${D}/usr/
-	dodoc AUTHORS ChangeLog README TODO 
-	dohtml DOCS/mamory.html
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
+	dohtml DOCS/mamory.html || die "dohtml failed"
 	prepgamesdirs
 }
