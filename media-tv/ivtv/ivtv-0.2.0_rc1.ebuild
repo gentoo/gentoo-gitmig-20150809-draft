@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc1.ebuild,v 1.3 2004/10/19 14:39:59 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc1.ebuild,v 1.4 2004/10/26 20:46:29 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -17,7 +17,7 @@ HOMEPAGE="http://ivtv.sourceforge.net"
 MY_P="${P/_/-}c"
 
 
-SRC_URI="http://67.18.1.101/~ckennedy/ivtv/${MY_P}.tgz
+SRC_URI="http://67.18.1.101/~ckennedy/ivtv/${MY_P/1c/}/${MY_P}.tgz
 	http://hauppauge.lightpath.net/software/pvr250/pvr250_18a_inf.zip"
 
 RESTRICT="nomirror"
@@ -29,7 +29,8 @@ KEYWORDS="~x86"
 
 IUSE="lirc"
 
-DEPEND="lirc? ( app-misc/lirc )"
+DEPEND="app-arch/unzip
+	lirc? ( app-misc/lirc )"
 
 src_unpack() {
 	unpack ${MY_P}.tgz
@@ -62,13 +63,12 @@ src_install() {
 	dodoc README doc/*
 
 	cd ${WORKDIR}/${MY_P}/utils
-	newbin test_ioctl ivtvctl
 	newbin encoder ivtv-encoder
 	newbin fwapi ivtv-fwapi
 	newbin radio ivtv-radio
 	newbin vbi ivtv-vbi
 	newbin mpegindex ivtv-mpegindex
-	dobin ivtvfbctl ivtvplay
+	dobin ivtvfbctl ivtvplay ivtvctl
 	newdoc README README.utils
 	dodoc README.mythtv-ivtv README.radio README.vbi zvbi.diff
 	dodoc lircd-g.conf lircd.conf lircrc
@@ -78,7 +78,8 @@ src_install() {
 	dodir /usr/include/linux
 	dodir /lib/modules/`uname -r`/extra
 	cd ${WORKDIR}/${MY_P}/driver
-	make DESTDIR=${D} install || die "installation of driver failed"
+	make DESTDIR=${D} INSTALL_MOD_PATH=${D} \
+		install || die "installation of driver failed"
 
 	set_arch_to_portage
 
