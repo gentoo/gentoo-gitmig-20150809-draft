@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.20 2004/04/27 21:42:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.21 2004/06/06 23:29:46 tantive Exp $
+
+*heartbeat-1.2.2 (07 Jun 2004)
+
+  07 Jun 2004; root <root@gentoo.org> heartbeat-1.2.2.ebuild:
+  Version bumped. Closes #50909.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> heartbeat-1.2.0-r2.ebuild:
   Add inherit eutils
