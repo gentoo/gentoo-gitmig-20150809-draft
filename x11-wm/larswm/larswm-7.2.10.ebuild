@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.2.10.ebuild,v 1.2 2003/11/04 15:55:22 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.2.10.ebuild,v 1.3 2004/03/07 09:27:30 pyrania Exp $
 
 DESCRIPTION="larswm is a hack for 9wm, adding for instance automatic window tiling and virtual desktops"
-HOMEPAGE="http://www-personal.umich.edu/~larsb/larswm/"
-SRC_URI="http://www-personal.umich.edu/~larsb/larswm/${P}.tar.gz"
+HOMEPAGE="http://www.fnurt.net/larswm/"
+SRC_URI="http://www.fnurt.net/larswm/${P}.tar.gz"
 LICENSE="9wm"
 
 SLOT="0"
