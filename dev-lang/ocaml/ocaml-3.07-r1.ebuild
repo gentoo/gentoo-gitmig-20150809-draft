@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.25 2004/10/12 19:33:45 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.26 2004/10/20 18:02:57 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	filter-flags "-fstack-protector"
-	strip-flags
+	replace-flags "-O?" -O2
 
 	local myconf
 	use tcltk || myconf="-no-tk"
