@@ -1,0 +1,537 @@
+diff -uNr BitTorrent-3.2.1b/BitTorrent/Downloader.py BitTorrent-3.2.1b-stats2/BitTorrent/Downloader.py
+--- BitTorrent-3.2.1b/BitTorrent/Downloader.py	2002-12-24 05:39:23.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/BitTorrent/Downloader.py	2003-04-07 16:15:34.000000000 -0400
+@@ -9,6 +9,7 @@
+ class SingleDownload:
+     def __init__(self, downloader, connection):
+         self.downloader = downloader
++        self.unhave = downloader.numpieces
+         self.connection = connection
+         self.choked = true
+         self.interested = false
+@@ -119,9 +120,14 @@
+                 return
+ 
+     def got_have(self, index):
++        if index == self.downloader.numpieces-1:
++            self.downloader.totalmeasure.update_rate(self.downloader.storage.total_length-(self.downloader.numpieces-1)*self.downloader.storage.piece_length)
++        else:
++            self.downloader.totalmeasure.update_rate(self.downloader.storage.piece_length)
+         if self.have[index]:
+             return
+         self.have[index] = true
++        self.unhave -= 1
+         self.downloader.picker.got_have(index)
+         self._check_interest([index])
+         self.download_more([index])
+@@ -130,6 +136,7 @@
+         self.have = have
+         for i in xrange(len(have)):
+             if have[i]:
++                self.unhave -= 1
+                 self.downloader.picker.got_have(i)
+         self._check_interest([i for i in xrange(len(have)) if have[i]])
+         self.download_more()
+@@ -148,9 +155,11 @@
+         self.backlog = backlog
+         self.max_rate_period = max_rate_period
+         self.downmeasure = downmeasure
++        self.totalmeasure = Measure(max_rate_period*storage.piece_length/storage.request_size)
+         self.numpieces = numpieces
+         self.snub_time = snub_time
+         self.measurefunc = measurefunc
++        self.disconnectedseeds = {}
+         self.downloads = []
+ 
+     def make_download(self, connection):
+diff -uNr BitTorrent-3.2.1b/BitTorrent/DownloaderFeedback.py BitTorrent-3.2.1b-stats2/BitTorrent/DownloaderFeedback.py
+--- BitTorrent-3.2.1b/BitTorrent/DownloaderFeedback.py	2003-03-25 03:32:18.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/BitTorrent/DownloaderFeedback.py	2003-03-31 18:11:15.000000000 -0500
+@@ -6,7 +6,8 @@
+ 
+ class DownloaderFeedback:
+     def __init__(self, choker, add_task, statusfunc, upfunc, downfunc,
+-            remainingfunc, leftfunc, file_length, finflag, interval, sp):
++            remainingfunc, leftfunc, file_length, finflag, interval, sp,
++            statistics):
+         self.choker = choker
+         self.add_task = add_task
+         self.statusfunc = statusfunc
+@@ -18,6 +19,7 @@
+         self.finflag = finflag
+         self.interval = interval
+         self.sp = sp
++        self.statistics = statistics
+         self.lastids = []
+         self.display()
+ 
+@@ -73,10 +75,12 @@
+ 
+     def display(self):
+         self.add_task(self.display, self.interval)
++        self.statistics.update()
+         if self.sp:
+             self.spew()
+         if self.finflag.isSet():
+-            self.statusfunc(upRate = self.upfunc())
++            self.statusfunc(upRate = self.upfunc(),
++                statistics = self.statistics)
+             return
+         timeEst = self.remainingfunc()
+ 
+@@ -84,7 +88,9 @@
+         
+         if timeEst is not None:
+             self.statusfunc(timeEst = timeEst, fractionDone = fractionDone, 
+-                downRate = self.downfunc(), upRate = self.upfunc())
++                downRate = self.downfunc(), upRate = self.upfunc(),
++                statistics = self.statistics)
+         else:
+             self.statusfunc(fractionDone = fractionDone, 
+-                downRate = self.downfunc(), upRate = self.upfunc())
++                downRate = self.downfunc(), upRate = self.upfunc(),
++                statistics = self.statistics)
+diff -uNr BitTorrent-3.2.1b/BitTorrent/EndgameDownloader.py BitTorrent-3.2.1b-stats2/BitTorrent/EndgameDownloader.py
+--- BitTorrent-3.2.1b/BitTorrent/EndgameDownloader.py	2002-12-27 05:06:55.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/BitTorrent/EndgameDownloader.py	2003-04-07 16:02:24.000000000 -0400
+@@ -40,6 +40,9 @@
+ 
+     def disconnected(self):
+         self.downloader.downloads.remove(self)
++        for i in xrange(len(self.have)):
++	    if self.have[i]:
++                self.downloader.picker.lost_have(i)
+ 
+     def got_choke(self):
+         self.choked = true
+@@ -111,14 +114,20 @@
+         if self.downloader.requests == []:
+             for d in copy(self.downloader.downloads):
+                 if d.unhave == 0:
++                    self.downloader.disconnectedseeds[d.connection.connection.id]=time()
+                     d.connection.close()
+         return true
+ 
+     def got_have(self, index):
++        if index == self.downloader.numpieces-1:
++            self.downloader.totalmeasure.update_rate(self.downloader.storage.total_length-(self.downloader.numpieces-1)*self.downloader.storage.piece_length)
++        else:
++            self.downloader.totalmeasure.update_rate(self.downloader.storage.piece_length)
+         if self.have[index]:
+             return
+         self.have[index] = true
+         self.unhave -= 1
++        self.downloader.picker.got_have(index)
+         if self.downloader.storage.do_I_have(index):
+             return
+         shuffle(self.downloader.requests)
+@@ -126,18 +135,23 @@
+             if i == index:
+                 self.send_request(i, begin, length)
+         if self.downloader.requests == [] and self.unhave == 0:
++            self.downloader.disconnectedseeds[self.connection.connection.id]=time()
+             self.connection.close()
+ 
+     def got_have_bitfield(self, have):
+         self.have = have
++        i=0
+         for h in self.have:
+             if h:
+                 self.unhave -= 1
++                self.downloader.picker.got_have(i)
++            i+=1
+         shuffle(self.downloader.requests)
+         for i, begin, length in self.downloader.requests:
+             if self.have[i]:
+                 self.send_request(i, begin, length)
+         if self.downloader.requests == [] and self.unhave == 0:
++            self.downloader.disconnectedseeds[self.connection.connection.id]=time()
+             self.connection.close()
+ 
+ class EndgameDownloader:
+@@ -147,9 +161,12 @@
+         self.max_rate_period = old.max_rate_period
+         self.numpieces = old.numpieces
+         self.downmeasure = old.downmeasure
++        self.totalmeasure = old.totalmeasure
+         self.measurefunc = old.measurefunc
++        self.picker = old.picker
+         self.snub_time = old.snub_time
+         self.requests = []
++        self.disconnectedseeds = old.disconnectedseeds
+         for d in old.downloads:
+             self.requests.extend(d.active_requests)
+         self.downloads = []
+diff -uNr BitTorrent-3.2.1b/BitTorrent/PiecePicker.py BitTorrent-3.2.1b-stats2/BitTorrent/PiecePicker.py
+--- BitTorrent-3.2.1b/BitTorrent/PiecePicker.py	2003-02-02 00:47:20.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/BitTorrent/PiecePicker.py	2003-03-31 21:51:13.000000000 -0500
+@@ -61,6 +61,9 @@
+         self.numinterests = [0] * numpieces
+         self.interestpos = range(numpieces)
+         self.fixed = []
++        self.totalcount = 0
++        self.numhaves = [0] * numpieces
++        self.crosscount = [numpieces]
+         self.got_any = false
+ 
+     # this is a total hack to support python2.1 but supports for ... in
+@@ -73,6 +76,12 @@
+             raise IndexError
+ 
+     def got_have(self, i):
++        self.totalcount+=1
++        self.crosscount[self.numhaves[i]]-=1
++        self.numhaves[i]+=1
++        if self.numhaves[i]==len(self.crosscount):
++            self.crosscount.append(0)
++        self.crosscount[self.numhaves[i]]+=1
+         if self.numinterests[i] is None:
+             return
+         interests = self.interests[self.numinterests[i]]
+@@ -89,6 +98,10 @@
+         interests.append(i)
+ 
+     def lost_have(self, i):
++        self.totalcount-=1
++        self.crosscount[self.numhaves[i]]-=1
++        self.numhaves[i]-=1
++        self.crosscount[self.numhaves[i]]+=1
+         if self.numinterests[i] is None:
+             return
+         interests = self.interests[self.numinterests[i]]
+diff -uNr BitTorrent-3.2.1b/BitTorrent/Statistics.py BitTorrent-3.2.1b-stats2/BitTorrent/Statistics.py
+--- BitTorrent-3.2.1b/BitTorrent/Statistics.py	1969-12-31 19:00:00.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/BitTorrent/Statistics.py	2003-04-07 20:50:53.000000000 -0400
+@@ -0,0 +1,59 @@
++# Written by Edward Keyes
++# see LICENSE.txt for license information
++
++from time import time
++from copy import copy
++
++class Statistics:
++    def __init__(self, upmeasure, downmeasure, connecter):
++        self.upmeasure = upmeasure
++        self.downmeasure = downmeasure
++        self.connecter = connecter
++        self.downloader = connecter.downloader
++        self.picker = connecter.downloader.picker
++        self.torrentmeasure = connecter.downloader.totalmeasure
++        self.upTotal = 0.0
++        self.downTotal = 0.0
++        self.shareRating = 0.0
++        self.numSeeds = 0
++        self.numOldSeeds = 0
++        self.numPeers = 0
++
++    def update(self):
++        self.upTotal = self.upmeasure.get_total()
++        self.downTotal = self.downmeasure.get_total()
++        if self.downTotal > 0:
++            self.shareRating = float(self.upTotal)/self.downTotal
++        else:
++            if self.upTotal == 0:
++               self.shareRating = 0.0
++            else:
++               self.shareRating = -1.0
++        self.downloader = self.connecter.downloader
++        self.picker = self.downloader.picker
++        self.torrentmeasure = self.downloader.totalmeasure
++        self.torrentRate = self.torrentmeasure.get_rate()
++        self.torrentTotal = self.torrentmeasure.get_total()
++        self.numSeeds = 0
++        for download in self.downloader.downloads:
++            if download.unhave == 0:
++                self.numSeeds+=1
++        for id in copy(self.downloader.disconnectedseeds.keys()):
++            if time()-self.downloader.disconnectedseeds[id]>3600:
++               #Expire old seeds after 1 hour from last connection
++               del self.downloader.disconnectedseeds[id]
++        self.numOldSeeds = len(self.downloader.disconnectedseeds)
++        self.numPeers = len(self.downloader.downloads)-self.numSeeds
++        self.numCopies = -self.numSeeds
++        for i in range(len(self.picker.crosscount)):
++            if self.picker.crosscount[i]==0:
++                self.numCopies+=1
++            else:
++                self.numCopies+=1-float(self.picker.crosscount[i])/self.picker.numpieces
++                break
++        if self.numPeers==0:
++            self.percentDone = 0.0
++        else:
++            self.percentDone = 100.0*(float(self.picker.totalcount)/self.picker.numpieces-self.numSeeds)/self.numPeers
++
++
+diff -uNr BitTorrent-3.2.1b/BitTorrent/download.py BitTorrent-3.2.1b-stats2/BitTorrent/download.py
+--- BitTorrent-3.2.1b/BitTorrent/download.py	2003-03-29 16:01:40.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/BitTorrent/download.py	2003-03-31 18:40:39.000000000 -0500
+@@ -18,6 +18,7 @@
+ from CurrentRateMeasure import Measure
+ from EndgameDownloader import EndgameDownloader
+ from PiecePicker import PiecePicker
++from Statistics import Statistics
+ from bencode import bencode, bdecode
+ from sha import sha
+ from os import getpid, path, makedirs
+@@ -253,10 +254,11 @@
+         upmeasure.get_total, downmeasure.get_total, listen_port, 
+         config['ip'], myid, infohash, config['http_timeout'], errorfunc, 
+         config['max_initiate'], doneflag)
++    statistics = Statistics(upmeasure,downmeasure,connecter)
+     DownloaderFeedback(choker, rawserver.add_task, statusfunc, 
+         upmeasure.get_rate, downmeasure.get_rate, ratemeasure.get_time_left, 
+         ratemeasure.get_size_left, file_length, finflag,
+-        config['display_interval'], config['spew'])
++        config['display_interval'], config['spew'], statistics)
+ 
+     statusfunc(activity = 'connecting to peers')
+     ann[0] = rerequest.announce
+diff -uNr BitTorrent-3.2.1b/BitTorrent/track.py BitTorrent-3.2.1b-stats2/BitTorrent/track.py
+--- BitTorrent-3.2.1b/BitTorrent/track.py	2003-03-27 21:10:45.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/BitTorrent/track.py	2003-04-07 16:18:05.000000000 -0400
+@@ -142,22 +142,24 @@
+                 names.sort()
+                 if self.allowed != None and self.show_names:
+                     s.write('<table summary="files" border=1>\n' \
+-                        '<tr><th>info hash</th><th>torrent name</th><th align="right">complete</th><th align="right">downloading</th></tr>\n')
++                        '<tr><th>info hash</th><th>torrent name</th><th align="right">complete<BR>(real / NAT)</th><th align="right">downloading<BR>(real / NAT)</th></tr>\n')
+                 else:
+                     s.write('<table summary="files">\n' \
+-                        '<tr><th>info hash</th><th align="right">complete</th><th align="right">downloading</th></tr>\n')
++                        '<tr><th>info hash</th><th align="right">complete<BR>(real / NAT)</th><th align="right">downloading<BR>(real / NAT)</th></tr>\n')
+                 for name in names:
+                     l = self.downloads[name]
+-                    c = len([1 for i in l.values() if i['left'] == 0])
+-                    d = len(l) - c
++                    creal = len([1 for i in l.values() if (i['left'] == 0 and not i.get('nat'))])
++                    cnat = len([1 for i in l.values() if (i['left'] == 0 and i.get('nat'))] )
++                    dreal = len([1 for i in l.values() if (i['left'] > 0 and not i.get('nat'))])
++                    dnat = len([1 for i in l.values() if (i['left'] > 0 and i.get('nat'))] )
+                     if self.allowed != None and self.show_names:
+                         if self.allowed.has_key(name):
+-                            s.write('<tr><td><code>%s</code></td><td><code>%s</code></td><td align="right"><code>%i</code></td><td align="right"><code>%i</code></td></tr>\n' \
+-                                % (b2a_hex(name), self.allowed[name], c, d))
++                            s.write('<tr><td><code>%s</code></td><td><code>%s</code></td><td align="right"><code>%i / %i</code></td><td align="right"><code>%i / %i</code></td></tr>\n' \
++                                % (b2a_hex(name), self.allowed[name], creal, cnat, dreal, dnat))
+ 
+                     else:
+-                        s.write('<tr><td><code>%s</code></td><td align="right"><code>%i</code></td><td align="right"><code>%i</code></td></tr>\n' \
+-                            % (b2a_hex(name), c, d))
++                        s.write('<tr><td><code>%s</code></td><td align="right"><code>%i / %i</code></td><td align="right"><code>%i / %i</code></td></tr>\n' \
++                            % (b2a_hex(name), creal, cnat, dreal, dnat))
+                 s.write('</table>\n' \
+                     '<ul>\n' \
+                     '<li><em>info hash:</em> SHA1 hash of the "info" section of the metainfo (*.torrent)</li>\n' \
+diff -uNr BitTorrent-3.2.1b/btdownloadcurses.py BitTorrent-3.2.1b-stats2/btdownloadcurses.py
+--- BitTorrent-3.2.1b/btdownloadcurses.py	2003-03-28 00:14:08.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/btdownloadcurses.py	2003-04-07 15:57:37.000000000 -0400
+@@ -68,6 +68,9 @@
+         self.downloadTo = ''
+         self.downRate = '---'
+         self.upRate = '---'
++        self.shareRating = ''
++        self.seedStatus = ''
++        self.peerStatus = ''
+         self.errors = []
+         self.globalerrlist = mainerrlist
+ 
+@@ -89,7 +92,8 @@
+         self.display()
+ 
+     def display(self, fractionDone = None, timeEst = None,
+-            downRate = None, upRate = None, activity = None):
++            downRate = None, upRate = None, activity = None,
++            statistics = None):
+         if activity is not None and not self.done:
+             self.activity = activity
+         elif timeEst is not None:
+@@ -104,6 +108,16 @@
+             self.downRate = '%.1f KB/s' % (float(downRate) / (1 << 10))
+         if upRate is not None:
+             self.upRate = '%.1f KB/s' % (float(upRate) / (1 << 10))
++        if statistics is not None:
++           if (statistics.shareRating < 0) or (statistics.shareRating > 100):
++               self.shareRating = 'oo  (%.1f MB up / %.1f MB down)' % (float(statistics.upTotal) / (1<<20), float(statistics.downTotal) / (1<<20))
++           else:
++               self.shareRating = '%.3f  (%.1f MB up / %.1f MB down)' % (statistics.shareRating, float(statistics.upTotal) / (1<<20), float(statistics.downTotal) / (1<<20))
++           if not self.done:
++              self.seedStatus = '%d seen now, plus %.3f distributed copies' % (statistics.numSeeds,0.001*int(1000*statistics.numCopies))
++           else:
++              self.seedStatus = '%d seen recently, plus %.3f distributed copies' % (statistics.numOldSeeds,0.001*int(1000*statistics.numCopies))
++           self.peerStatus = '%d seen now, %.1f%% done at %.1f kB/s' % (statistics.numPeers,statistics.percentDone,float(statistics.torrentRate) / (1 << 10))
+ 
+         fieldwin.erase()
+         fieldwin.addnstr(0, 0, self.file, fieldw, curses.A_BOLD)
+@@ -114,12 +128,15 @@
+         fieldwin.addnstr(4, 0, self.status, fieldw)
+         fieldwin.addnstr(5, 0, self.downRate, fieldw)
+         fieldwin.addnstr(6, 0, self.upRate, fieldw)
++        fieldwin.addnstr(7, 0, self.shareRating, fieldw)
++        fieldwin.addnstr(8, 0, self.seedStatus, fieldw)
++        fieldwin.addnstr(9, 0, self.peerStatus, fieldw)
+ 
+         if self.errors:
+             for i in range(len(self.errors)):
+-                fieldwin.addnstr(7 + i, 0, self.errors[i], fieldw, curses.A_BOLD)
++                fieldwin.addnstr(10 + i, 0, self.errors[i], fieldw, curses.A_BOLD)
+         else:
+-            fieldwin.move(7, 0)
++            fieldwin.move(10, 0)
+ 
+         curses.panel.update_panels()
+         curses.doupdate()
+@@ -151,7 +168,10 @@
+     labelwin.addstr(4, 0, 'status:')
+     labelwin.addstr(5, 0, 'dl speed:')
+     labelwin.addstr(6, 0, 'ul speed:')
+-    labelwin.addstr(7, 0, 'error(s):')
++    labelwin.addstr(7, 0, 'sharing:')
++    labelwin.addstr(8, 0, 'seeds:')
++    labelwin.addstr(9, 0, 'peers:')
++    labelwin.addstr(10, 0, 'error(s):')
+     curses.panel.update_panels()
+     curses.doupdate()
+ 
+@@ -197,4 +217,3 @@
+        print "These errors occurred during execution:"
+        for error in mainerrlist:
+           print error
+-
+diff -uNr BitTorrent-3.2.1b/btdownloadgui.py BitTorrent-3.2.1b-stats2/btdownloadgui.py
+--- BitTorrent-3.2.1b/btdownloadgui.py	2003-03-27 23:35:58.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/btdownloadgui.py	2003-04-07 17:11:34.000000000 -0400
+@@ -83,6 +83,19 @@
+         gridSizer.Add(wxStaticText(panel, -1, 'Upload rate:'))
+         self.upRateText = wxStaticText(panel, -1, '')
+         gridSizer.Add(self.upRateText, 0, wxEXPAND)
++
++        gridSizer.Add(wxStaticText(panel, -1, 'Share rating:'))
++        self.shareRatingText = wxStaticText(panel, -1, '')
++        gridSizer.Add(self.shareRatingText, 0, wxEXPAND)
++
++        gridSizer.Add(wxStaticText(panel, -1, 'Seed status:'))
++        self.seedStatusText = wxStaticText(panel, -1, '')
++        gridSizer.Add(self.seedStatusText, 0, wxEXPAND)
++
++        gridSizer.Add(wxStaticText(panel, -1, 'Peer status:'))
++        self.peerStatusText = wxStaticText(panel, -1, '')
++        gridSizer.Add(self.peerStatusText, 0, wxEXPAND)
++
+         gridSizer.AddGrowableCol(1)
+ 
+         colSizer.Add(gridSizer, 0, wxEXPAND)
+@@ -122,10 +135,10 @@
+ 
+     def updateStatus(self, fractionDone = None,
+             timeEst = None, downRate = None, upRate = None,
+-            activity=None):
+-        self.invokeLater(self.onUpdateStatus, [fractionDone, timeEst, downRate, upRate, activity])
++            activity = None, statistics = None):
++        self.invokeLater(self.onUpdateStatus, [fractionDone, timeEst, downRate, upRate, activity, statistics])
+ 
+-    def onUpdateStatus(self, fractionDone, timeEst, downRate, upRate, activity):
++    def onUpdateStatus(self, fractionDone, timeEst, downRate, upRate, activity, statistics):
+         if fractionDone is not None and not self.fin:
+             self.gauge.SetValue(int(fractionDone * 1000))
+             self.frame.SetTitle('%d%% %s - BitTorrent %s' % (int(fractionDone*100), self.filename, version))
+@@ -134,9 +147,19 @@
+         if activity is not None and not self.fin:
+             self.timeEstText.SetLabel(activity)
+         if downRate is not None:
+-            self.downRateText.SetLabel('%.0f kB/s' % (float(downRate) / (1 << 10)))
++            self.downRateText.SetLabel('%.1f kB/s' % (float(downRate) / (1 << 10)))
+         if upRate is not None:
+-            self.upRateText.SetLabel('%.0f kB/s' % (float(upRate) / (1 << 10)))
++            self.upRateText.SetLabel('%.1f kB/s' % (float(upRate) / (1 << 10)))
++        if statistics is not None:
++           if (statistics.shareRating < 0) or (statistics.shareRating > 100):
++               self.shareRatingText.SetLabel('oo  (%.1f MB up / %.1f MB down)' % (float(statistics.upTotal) / (1<<20), float(statistics.downTotal) / (1<<20)))
++           else:
++               self.shareRatingText.SetLabel('%.3f  (%.1f MB up / %.1f MB down)' % (statistics.shareRating, float(statistics.upTotal) / (1<<20), float(statistics.downTotal) / (1<<20)))
++           if not self.fin:
++              self.seedStatusText.SetLabel('%d seen now, plus %.3f distributed copies' % (statistics.numSeeds,0.001*int(1000*statistics.numCopies)))
++           else:
++              self.seedStatusText.SetLabel('%d seen recently, plus %.3f distributed copies' % (statistics.numOldSeeds,0.001*int(1000*statistics.numCopies)))
++           self.peerStatusText.SetLabel('%d seen now, %.1f%% done at %.1f kB/s' % (statistics.numPeers,statistics.percentDone,float(statistics.torrentRate) / (1 << 10)))
+ 
+     def finished(self):
+         self.fin = true
+diff -uNr BitTorrent-3.2.1b/btdownloadheadless.py BitTorrent-3.2.1b-stats2/btdownloadheadless.py
+--- BitTorrent-3.2.1b/btdownloadheadless.py	2003-03-17 14:26:39.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/btdownloadheadless.py	2003-04-07 15:55:35.000000000 -0400
+@@ -35,6 +35,9 @@
+         self.downloadTo = ''
+         self.downRate = ''
+         self.upRate = ''
++        self.shareRating = ''
++        self.seedStatus = ''
++        self.peerStatus = ''
+         self.errors = []
+ 
+     def finished(self):
+@@ -56,7 +59,8 @@
+         self.display()
+ 
+     def display(self, fractionDone = None, timeEst = None, 
+-            downRate = None, upRate = None, activity = None):
++            downRate = None, upRate = None, activity = None,
++            statistics = None):
+         if fractionDone is not None:
+             self.percentDone = str(float(int(fractionDone * 1000)) / 10)
+         if timeEst is not None:
+@@ -64,9 +68,19 @@
+         if activity is not None and not self.done:
+             self.timeEst = activity
+         if downRate is not None:
+-            self.downRate = '%.0f kB/s' % (float(downRate) / (1 << 10))
++            self.downRate = '%.1f kB/s' % (float(downRate) / (1 << 10))
+         if upRate is not None:
+-            self.upRate = '%.0f kB/s' % (float(upRate) / (1 << 10))
++            self.upRate = '%.1f kB/s' % (float(upRate) / (1 << 10))
++        if statistics is not None:
++           if (statistics.shareRating < 0) or (statistics.shareRating > 100):
++               self.shareRating = 'oo  (%.1f MB up / %.1f MB down)' % (float(statistics.upTotal) / (1<<20), float(statistics.downTotal) / (1<<20))
++           else:
++               self.shareRating = '%.3f  (%.1f MB up / %.1f MB down)' % (statistics.shareRating, float(statistics.upTotal) / (1<<20), float(statistics.downTotal) / (1<<20))
++           if not self.done:
++              self.seedStatus = '%d seen now, plus %.3f distributed copies' % (statistics.numSeeds,0.001*int(1000*statistics.numCopies))
++           else:
++              self.seedStatus = '%d seen recently, plus %.3f distributed copies' % (statistics.numOldSeeds,0.001*int(1000*statistics.numCopies))
++           self.peerStatus = '%d seen now, %.1f%% done at %.1f kB/s' % (statistics.numPeers,statistics.percentDone,float(statistics.torrentRate) / (1 << 10))
+         print '\n\n\n\n'
+         for err in self.errors:
+             print 'ERROR:\n' + err + '\n'
+@@ -76,6 +90,9 @@
+         print 'download to:   ', self.downloadTo
+         print 'download rate: ', self.downRate
+         print 'upload rate:   ', self.upRate
++        print 'share rating:  ', self.shareRating
++        print 'seed status:   ', self.seedStatus
++        print 'peer status:   ', self.peerStatus
+         stdout.flush()
+ 
+     def chooseFile(self, default, size, saveas, dir):
+diff -uNr BitTorrent-3.2.1b/btlaunchmany.py BitTorrent-3.2.1b-stats2/btlaunchmany.py
+--- BitTorrent-3.2.1b/btlaunchmany.py	2003-03-27 20:05:57.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/btlaunchmany.py	2003-04-01 10:33:35.000000000 -0500
+@@ -92,7 +92,7 @@
+ 
+     def status(self, fractionDone = None,
+             timeEst = None, downRate = None, upRate = None,
+-            activity = None):
++            activity = None, statistics = None):
+         if fractionDone is not None:
+             newpercent = int(fractionDone*100)
+             if newpercent != self.percentDone:
+diff -uNr BitTorrent-3.2.1b/btlaunchmanycurses.py BitTorrent-3.2.1b-stats2/btlaunchmanycurses.py
+--- BitTorrent-3.2.1b/btlaunchmanycurses.py	2003-03-28 00:14:08.000000000 -0500
++++ BitTorrent-3.2.1b-stats2/btlaunchmanycurses.py	2003-04-01 10:33:58.000000000 -0500
+@@ -213,7 +213,7 @@
+         self.localfile = abspath(saveas)
+         return saveas
+ 
+-    def display(self, fractionDone = None, timeEst = None, downRate = None, upRate = None, activity = None):
++    def display(self, fractionDone = None, timeEst = None, downRate = None, upRate = None, activity = None, statistics = None):
+         if self.basex != wininfo[self.myname]['basex']: 
+             # leave nothing but blank space
+             mainwin.addnstr(self.basex, 0, ' ' * 1000, mainwinw)
