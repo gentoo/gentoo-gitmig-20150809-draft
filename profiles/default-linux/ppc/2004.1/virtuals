@@ -45,7 +45,6 @@ virtual/sylpheed	mail-client/sylpheed
 virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
 virtual/tftp		net-misc/tftp-hpa
-virtual/w3m		net-www/w3m
 virtual/x11		x11-base/xorg-x11
 virtual/xemacs		app-editors/xemacs
 virtual/xft	     x11-base/xorg-x11

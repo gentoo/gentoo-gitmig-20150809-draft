@@ -42,7 +42,6 @@ virtual/ssh		net-misc/openssh
 virtual/sylpheed	mail-client/sylpheed
 virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
-virtual/w3m		net-www/w3m
 virtual/x11		x11-base/xfree
 virtual/x11-web-browser	net-www/mozilla
 x11-libs/xaw		x11-libs/Xaw3d
