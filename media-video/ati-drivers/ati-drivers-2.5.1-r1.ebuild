@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.1 2003/01/15 05:32:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.2 2003/02/03 20:47:56 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -16,6 +16,7 @@ DEPEND=">=virtual/linux-sources-2.4
 	>=sys-libs/glibc-2.2.2
 	sys-apps/cpio
 	app-arch/rpm
+	<x11-base/xfree-4.2.99
 	qt? ( >=x11-libs/qt-3.0 )"
 
 ATIBIN="${D}/opt/ati/bin"
