@@ -1,2 +1,3 @@
 move app-misc/gtkdiff x11-misc/gtkdiff
 move app-misc/gcolor x11-misc/gcolor
+move dev-libs/libpq++ dev-cpp/libpqpp
