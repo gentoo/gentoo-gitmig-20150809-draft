@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040928.ebuild,v 1.3 2004/09/29 05:24:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041002.ebuild,v 1.1 2004/10/04 11:29:35 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
-BRANCH_UPDATE="20040928"
+BRANCH_UPDATE="20041002"
 
 # Minimum kernel version we support
 # (Recent snapshots fails with 2.6.5 and earlier)
