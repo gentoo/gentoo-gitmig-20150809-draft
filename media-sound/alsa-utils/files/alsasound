@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.21 2004/11/29 21:33:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.22 2005/01/31 21:44:54 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -157,7 +157,6 @@ terminate() {
 restore_mixer() {
 	if [ ! -r $asoundcfg ]; then
 		ewarn "No mixer config in $asoundcfg, you have to unmute your card!"
-		return 1
 	elif [ -x $alsactl ]; then
 		CARDS="$(cat /proc/asound/cards | awk '/: / { print $1 }')"
 		for CARDNUM in ${CARDS}
