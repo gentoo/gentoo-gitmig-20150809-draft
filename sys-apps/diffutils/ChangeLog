@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.22 2003/06/13 11:02:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.23 2003/06/24 14:33:54 agriffis Exp $
 
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> diffutils-2.8.4-r3.ebuild:
+  Mark stable on alpha
 
 *diffutils-2.8.4-r3 (04 Feb 2003)
 

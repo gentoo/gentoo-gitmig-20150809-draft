@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.26 2003/05/20 05:10:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.27 2003/06/24 14:33:35 agriffis Exp $
 
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> modutils-2.4.25.ebuild:
+  Mark stable on alpha
 
 *modutils-2.4.25 (31 Mar 2003)
 
