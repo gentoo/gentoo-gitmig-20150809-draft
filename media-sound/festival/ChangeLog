@@ -3,6 +3,10 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.2-r3.ebuild:
+  Removing borked ebuild to fix bug #41228.
+
 *festival-1.4.3-r1 (12 Mar 2004)
 
   12 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
