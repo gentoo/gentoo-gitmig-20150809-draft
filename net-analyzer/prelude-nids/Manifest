@@ -1,14 +1,16 @@
-MD5 88224dffed952720b740402a3b2e175b prelude-nids-0.8.6.ebuild 1385
-MD5 14c2967bb2d6605ec3ce9ed5caafe0fc prelude-nids-0.8.1.ebuild 1513
-MD5 4dc889e3e56de4902b9125099eb4c188 prelude-nids-0.8.5.ebuild 1367
-MD5 d75977c808d4639e741d7bc51afdd9fc prelude-nids-0.8.1-r1.ebuild 1794
-MD5 bda6f27ed52378e990ba3d6339e3e738 prelude-nids-0.8.4.ebuild 1320
-MD5 695524df645f975b47166f320762cda0 ChangeLog 2231
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 206f067d31f44141d4f243cc3711b127 prelude-nids-0.8.6.ebuild 1326
+MD5 ec3af30a03ed8051f343d4293f62c892 ChangeLog 2492
 MD5 aa28b0cd63f86cdb3b93258c3d231756 metadata.xml 309
-MD5 bf55921bc902a6516c4c5844aeb60e87 files/digest-prelude-nids-0.8.1 70
-MD5 50c2103b874c4fbf51bc8cacf321bb1d files/digest-prelude-nids-0.8.4 70
-MD5 6786cceef872411426f2eec07a2dda73 files/digest-prelude-nids-0.8.5 70
 MD5 09832a59e6a2adbcac19f18df270f272 files/digest-prelude-nids-0.8.6 70
-MD5 bf55921bc902a6516c4c5844aeb60e87 files/digest-prelude-nids-0.8.1-r1 70
 MD5 5c85fcf0a618f64ab70c726d71746d84 files/gentoo.conf 186
 MD5 0f302768ea35807e86c0db7a10e4de1f files/gentoo.init 599
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA9O7zT+MN7JbqCpMRAk8dAJ9P0d7eHF2ddgdysg6L+QWCnSEmvwCfXRrW
+xHiOkyUKltsCdcbUqeyidWY=
+=M64L
+-----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/prelude-nids
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.14 2004/07/01 20:14:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.15 2004/07/14 08:31:36 eldad Exp $
+
+  14 Jul 2004; Eldad Zack <eldad@gentoo.org> -prelude-nids-0.8.1-r1.ebuild,
+  -prelude-nids-0.8.1.ebuild, -prelude-nids-0.8.4.ebuild,
+  -prelude-nids-0.8.5.ebuild, prelude-nids-0.8.6.ebuild:
+  Replaced MAKEOPTS override with emake -j1, Purged old unstable ebuilds
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> prelude-nids-0.8.4.ebuild,
   prelude-nids-0.8.5.ebuild, prelude-nids-0.8.6.ebuild:
