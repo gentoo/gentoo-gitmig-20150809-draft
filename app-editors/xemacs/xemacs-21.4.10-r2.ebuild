@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r2.ebuild,v 1.8 2004/01/05 23:35:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r2.ebuild,v 1.9 2004/03/30 02:40:56 mr_bones_ Exp $
 
 IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena neXt Xaw3d"
 
 LICENSE="GPL-2"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="XEmacs is a highly customizable open source text editor and application development system."
 EFS=1.29
 BASE=1.71
