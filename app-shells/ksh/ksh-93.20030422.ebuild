@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030422.ebuild,v 1.1 2003/05/29 03:57:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030422.ebuild,v 1.2 2003/05/29 11:58:41 taviso Exp $
 
 RELEASE="2003-04-22"
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)."
@@ -19,8 +19,7 @@ KEYWORDS="~x86 ~alpha"
 IUSE="static nls"
 
 DEPEND="virtual/glibc
-	>=sys-apps/sed-4
-	!app-shells/pdksh"
+	>=sys-apps/sed-4"
 RDEPEND="virtual/glibc"
 
 S=${WORKDIR}
@@ -86,8 +85,10 @@ src_compile() {
 src_install() {
 	# check where the build scripts put them
 	local my_arch="${S}/arch/$(${S}/bin/package)"
+	mv ${my_arch}/bin/ok/ksh ${my_arch}/bin/ok/ksh93
 	exeinto /bin
-	doexe ${my_arch}/bin/ok/ksh
+	doexe ${my_arch}/bin/ok/ksh93
+	[ ! -f /bin/ksh ] && dosym /bin/ksh93 /bin/ksh
 	# i doubt anyone is fanatical enough to use 
 	# this as /bin/sh.
 	mv ${my_arch}/man/man1/sh.1 ${my_arch}/man/man1/ksh.1
