@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.5 2002/09/09 02:31:53 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.6 2002/10/05 05:39:27 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
+
+IUSE="build"
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files

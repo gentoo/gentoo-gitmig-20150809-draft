@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.19.10_pre4.ebuild,v 1.1 2002/09/24 06:41:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.19.10_pre4.ebuild,v 1.2 2002/10/05 05:39:27 drobbins Exp $
+
+IUSE="crypt xfs build acpi4linux"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 

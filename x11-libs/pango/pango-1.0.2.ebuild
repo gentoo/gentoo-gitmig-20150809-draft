@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.2.ebuild,v 1.6 2002/10/04 06:40:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.2.ebuild,v 1.7 2002/10/05 05:39:27 drobbins Exp $
+
+IUSE="doc"
 
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+

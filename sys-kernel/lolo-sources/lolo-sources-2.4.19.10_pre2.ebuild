@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
+IUSE="crypt build"
+
 #we use this next variable to avoid duplicating stuff on cvs
 OKV="`echo ${PV}|sed -e 's:\(^.*\)\.[^\.]*:\1:'`"
 EXTRAVERSION="`echo ${P} | \
