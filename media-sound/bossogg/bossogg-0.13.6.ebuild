@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.6 2004/07/04 16:34:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.7 2004/07/04 23:38:57 mr_bones_ Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-Makefile.patch
 	touch NEWS AUTHORS
-	
+
 	export WANT_AUTOMAKE=1.7
 	export WANT_AUTOCONF=2.5
 	aclocal || die
