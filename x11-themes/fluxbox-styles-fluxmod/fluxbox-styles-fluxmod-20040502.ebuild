@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20040502.ebuild,v 1.4 2004/06/24 23:25:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20040502.ebuild,v 1.5 2004/08/11 02:53:28 tgall Exp $
 
 DESCRIPTION="A collection of FluxBox themes from FluxMod"
 HOMEPAGE="http://fluxmod.dk"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="creativecommons-by-nc-sa-1.0"
 
 SLOT="0"
-KEYWORDS="x86 sparc mips ~ppc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 sparc mips ~ppc ~alpha ~hppa ~amd64 ~ia64 ppc64"
 
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
