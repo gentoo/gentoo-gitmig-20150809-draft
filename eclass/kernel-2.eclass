@@ -1,34 +1,49 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.46 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.47 2004/11/24 16:36:38 johnm Exp $
 
-# Description: kernel.eclass rewrite for a clean base regarding the 2.6
-#              series of kernel with back-compatibility for 2.4
+# kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
+# with back-compatibility for 2.4
 #
-# Maintainer: John Mylchreest <johnm@gentoo.org>
+# Author: John Mylchreest <johnm@gentoo.org>
+# Copyright 2004 Gentoo Linux
 #
 # Please direct your bugs to the current eclass maintainer :)
+# thatll be: johnm
 
 # added functionality:
 # unipatch		- a flexible, singular method to extract, add and remove patches.
 
-# A Couple of env vars are available to effect usage of this eclass
+# A Couple of env vars are available to effect behaviour of this eclass
 # These are as follows:
 #
-# K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be automatically set within the kernel Makefile
-# K_NOUSENAME		- if this is set then EXTRAVERSION will not include the first part of ${PN} in EXTRAVERSION
-# K_PREPATCHED		- if the patchset is prepatched (ie: mm-sources, ck-sources, ac-sources) it will use PR (ie: -r5) as the patchset version for 
-#			- and not use it as a true package revision
-# K_EXTRAEINFO		- this is a new-line seperated list of einfo displays in postinst and can be used to carry additional postinst messages
-# K_EXTRAEWARN		- same as K_EXTRAEINFO except ewarn's instead of einfo's
-
-# H_SUPPORTEDARCH	- this should be a space separated list of ARCH's which can be supported by the headers ebuild
-
-# UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
-# UNIPATCH_EXCLUDE	- an addition var to support exlusion based completely on "<passedstring>*" and not "<passedno#>_*"
-#			- this should _NOT_ be used from the ebuild as this is reserved for end users passing excludes from the cli
-# UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
-# UNIPATCH_STRICTORDER	- if this is set places patches into directories of order, so they are applied in the order passed
+# K_NOFIXINSTALL_PATH	- some patches (wolk for example) dont like INSTALL_PATH
+#						  being fixed prior to patching. therefore having this
+#						  option set disables the command to change this.
+# K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be
+#						  automatically set within the kernel Makefile
+# K_NOUSENAME			- if this is set then EXTRAVERSION will not include the
+#						  first part of ${PN} in EXTRAVERSION
+# K_PREPATCHED			- if the patchset is prepatched (ie: mm-sources,
+#						  ck-sources, ac-sources) it will use PR (ie: -r5)
+#						  as the patchset version and not use it as a true
+#						  package revision
+# K_EXTRAEINFO			- this is a new-line seperated list of einfo displays in
+#						  postinst and can be used to carry additional postinst
+#						  messages
+# K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
+# H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
+#						  can be supported by the headers ebuild
+# UNIPATCH_LIST			- space delimetered list of patches to be applied to the
+#						  kernel
+# UNIPATCH_EXCLUDE		- an additional var to support exlusion based completely
+#						  on "<passedstring>*" and not "<passedno#>_*"
+#						- this should _NOT_ be used from the ebuild as this is
+#						  reserved for end users passing excludes from the cli
+# UNIPATCH_DOCS			- space delimemeted list of docs to be installed to the
+#						  doc dir
+# UNIPATCH_STRICTORDER	- if this is set places patches into directories of
+#						  order, so they are applied in the order passed
 
 ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
@@ -46,13 +61,13 @@ SLOT="${KV}"
 # Grab kernel version from KV
 KV_MAJOR=$(echo ${KV} | cut -d. -f1)
 KV_MINOR=$(echo ${KV} | cut -d. -f2)
-KV_PATCH=$(echo ${KV} | cut -d. -f3)
+KV_PATCH=$(echo ${KV} | cut -d. -f3-)
 KV_PATCH=${KV_PATCH/[-_]*/}
 
 # set LINUX_HOSTCFLAGS if not already set
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
-#Eclass functions only from here onwards ...
+#Eclass functions only from here onwards...
 #==============================================================
 kernel_is() {
 	local RESULT
@@ -82,13 +97,14 @@ kernel_is_2_4() {
 }
 
 kernel_is_2_6() {
-	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && return 0 || return 1
+	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && \
+		return 0 || return 1
 }
 
 # Capture the sources type and set DEPENDs
 if [ "${ETYPE}" == "sources" ]
 then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	# binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 		>=sys-devel/binutils-2.11.90.0.31 )
 		doc? ( !arm? ( !s390? ( app-text/docbook-sgml-utils ) ) )"
@@ -99,7 +115,9 @@ then
 		sys-apps/module-init-tools
 		sys-devel/make )"
 		
-	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" || PROVIDE="virtual/linux-sources virtual/alsa"
+	[ $(kernel_is_2_4) $? == 0 ] && \
+		PROVIDE="virtual/linux-sources" || \
+		PROVIDE="virtual/linux-sources virtual/alsa"
 
 elif [ "${ETYPE}" == "headers" ]
 then
@@ -127,15 +145,14 @@ universal_unpack() {
 	unpack linux-${OKV}.tar.bz2
 	if [ "${OKV}" != "${KV}" ]
 	then
-		mv linux-${OKV} linux-${KV} || die "Unable to move source tree to ${KV}."
+		mv linux-${OKV} linux-${KV} || \
+		die "Unable to move source tree to ${KV}."
 	fi
 	cd ${S}
 	
 	# change incorrect install path
-	mv Makefile Makefile.orig
-	sed	-e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-		Makefile.orig > Makefile
-	rm Makefile.orig
+	[ -z "${K_NOFIXINSTALL_PATH}" ] && \
+		sed -i -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
 
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
@@ -143,19 +160,14 @@ universal_unpack() {
 	if [ -d "${S}/Documentation/DocBook" ]
 	then
 		cd ${S}/Documentation/DocBook
-		sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
-			&& mv Makefile.new Makefile
+		sed -i -e "s:db2:docbook2:g" Makefile
 		cd ${S}
 	fi
 }
 
 unpack_set_extraversion() {
-	# Gentoo Linux uses /boot, so fix 'make install' to work properly and fix EXTRAVERSION
 	cd ${S}
-	mv Makefile Makefile.orig
-	sed	-e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
-		Makefile.orig > Makefile
-	rm Makefile.orig
+	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
 }
 
 # Compile Functions
@@ -173,7 +185,7 @@ compile_headers() {
 compile_manpages() {
 	local MY_ARCH
 
-	einfo "Making manpages ..."
+	einfo "Making manpages..."
 	MY_ARCH=${ARCH}
 	unset ARCH
 	make mandocs
@@ -215,16 +227,16 @@ install_sources() {
 
 	cd ${S}
 	dodir /usr/src
-	echo ">>> Copying sources ..."
+	echo ">>> Copying sources..."
 	file="$(find ${WORKDIR} -iname "docs" -type d)"
 	if [ -n "${file}" ]
 	then
 		for file in $(find ${file} -type f)
 		do
 			echo "${file/*docs\//}" >> ${S}/patches.txt
-			echo "===================================================" >> ${S}/patches.txt
+			echo "=========================================" >> ${S}/patches.txt
 			cat ${file} >> ${S}/patches.txt
-			echo "===================================================" >> ${S}/patches.txt
+			echo "=========================================" >> ${S}/patches.txt
 			echo "" >> ${S}/patches.txt
 		done
 	fi
@@ -232,7 +244,9 @@ install_sources() {
 	if [ ! -f ${S}/patches.txt ]
 	then
 		# patches.txt is empty so lets use our ChangeLog
-		[ -f ${FILESDIR}/../ChangeLog ] && echo "Please check the ebuild ChangeLog for more details." > ${S}/patches.txt
+		[ -f ${FILESDIR}/../ChangeLog ] && \
+			echo "Please check the ebuild ChangeLog for more details." \
+			> ${S}/patches.txt
 	fi
 
 	for doc in ${UNIPATCH_DOCS}
@@ -304,8 +318,8 @@ postinst_sources() {
 		echo
 	fi
 
-	# Show policy version, if this kernel has SELinux ...
-	local secfile="${ROOT}usr/src/linux-${KV}/security/selinux/include/security.h"
+	# Show policy version, if this kernel has SELinux...
+	local secfile="${ROOT}usr/src/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}/security/selinux/include/security.h"
 	if use selinux && [ -f "$secfile" ]
 	then
 		local polver=$(awk '/POLICYDB_VERSION /{print $3}' $secfile)
@@ -340,7 +354,9 @@ postinst_headers() {
 # pkg_setup functions
 #==============================================================
 setup_headers() {
-	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/)
+	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ \
+		-e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ \
+		-e s/amd64/x86_64/)
 	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH="sparc64"
 	
 	[ -z "${H_SUPPORTEDARCH}" ] && H_SUPPORTEDARCH="${PN/-*/}"
@@ -379,12 +395,10 @@ unipatch() {
 	# We're gonna need it when doing patches with a predefined patchlevel
 	shopt -s extglob
 
-	# This function will unpack all passed tarballs, add any passed patches, and remove any passed patchnumbers
+	# This function will unpack all passed tarballs, add any passed patches, 
+	# and remove any passed patchnumbers
 	# usage can be either via an env var or by params
-	# although due to the nature we pass this within this eclass
-	# it shall be by param only.
-	# -z "${UNIPATCH_LIST}" ] && UNIPATCH_LIST="${@}"
-	UNIPATCH_LIST="${@}"
+	[ -n "${@}" ] && UNIPATCH_LIST="${@} ${UNIPATCH_LIST}"
 
 	#unpack any passed tarballs
 	for i in ${UNIPATCH_LIST}
@@ -406,7 +420,8 @@ unipatch() {
 			then
 				STRICT_COUNT=$((${STRICT_COUNT} + 1))
 				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR}/${STRICT_COUNT}/ 1>/dev/null
+				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR}/${STRICT_COUNT}/ \
+					1>/dev/null
 			else
 				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR} 1>/dev/null
 			fi
@@ -414,7 +429,8 @@ unipatch() {
 			if [ $? == 0 ]
 			then
 				einfo "${i/*\//} unpacked"
-				[ -n "$(echo ${i} | grep ':')" ] && echo ">>> Strict patch levels not currently supported for tarballed patchsets"
+				[ -n "$(echo ${i} | grep ':')" ] && \
+					echo ">>> Strict patch levels not currently supported for tarballed patchsets"
 			else
 				eerror "Failed to unpack ${i/:*/}"
 				die "unable to unpack patch tarball"
@@ -444,8 +460,8 @@ unipatch() {
 					echo
 					eerror "FATAL: unable to locate:"
 					eerror "${i}"
-					eerror "for read-only. The file either has incorrect permissions"
-					eerror "or does not exist."
+					eerror "for read-only. The file either has incorrect"
+					eerror "permissions or does not exist."
 					die Unable to locate ${i}
 				fi
 			
@@ -453,7 +469,8 @@ unipatch() {
 				then
 					STRICT_COUNT=$((${STRICT_COUNT} + 1))
 					mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch${PATCH_LEVEL})
+					$(${PIPE_CMD} ${i} > \
+						${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch${PATCH_LEVEL})
 				else
 					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch${PATCH_LEVEL})
 				fi
@@ -474,26 +491,26 @@ unipatch() {
 	UNIPATCH_DROP="${UNIPATCH_EXCLUDE} ${UNIPATCH_DROP}"
 	for i in ${UNIPATCH_DROP}
 	do
+		einfo "Excluding Patch #${i}"
 		for x in ${KPATCH_DIR}
 		do
 			rm -f ${x}/${i}* 2>/dev/null
-			if [ $? == 0 ]
-			then
-				einfo "Excluding Patch #${i}"
-				einfo "From: ${x/${WORKDIR}/}"
-			fi
 		done
 	done
 
 	# and now, finally, we patch it :)
 	for x in ${KPATCH_DIR}
 	do
-		for i in $(find ${x} -maxdepth 1 -iname "*.patch*" -or -iname "*.diff" | sort -n)
+		for i in $(find ${x} -maxdepth 1 -iname "*.patch*" -or -iname "*.diff*" | sort -n)
 		do
+			unset PATCH_DEPTH
+		
 			STDERR_T="${T}/${i/*\//}"
 			STDERR_T="${STDERR_T/.patch*/.err}"
+			STDERR_T="${STDERR_T/.diff*/.err}"
 
-			PATCH_DEPTH=${i/*.patch/}
+			[ -z ${i/*.patch*/} ] && PATCH_DEPTH=${i/*.patch/}
+			[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/}
 
 			if [ -z "${PATCH_DEPTH}" ]; then
 				PATCH_DEPTH=0
@@ -504,12 +521,12 @@ unipatch() {
 			do
 				echo "Attempting Dry-run:" >> ${STDERR_T}
 				echo "cmd: patch -p${PATCH_DEPTH} --dry-run -f < ${i}" >> ${STDERR_T}
-				echo "=======================================================" >> ${STDERR_T}
+				echo "==========================================" >> ${STDERR_T}
 				if [ $(patch -p${PATCH_DEPTH} --dry-run -f < ${i} >> ${STDERR_T}) $? -eq 0 ]
 				then
 					echo "Attempting patch:" > ${STDERR_T}
 					echo "cmd: patch -p${PATCH_DEPTH} -f < ${i}" >> ${STDERR_T}
-					echo "=======================================================" >> ${STDERR_T}
+					echo "======================================" >> ${STDERR_T}
 					if [ $(patch -p${PATCH_DEPTH} -f < ${i} >> ${STDERR_T}) "$?" -eq 0 ]
 					then
 						eend 0
@@ -518,7 +535,7 @@ unipatch() {
 					else
 						eend 1
 						eerror "Failed to apply patch ${i/*\//}"
-						eerror "Please attach ${STDERR_T} to any bug you may post."
+						eerror "Please attach ${STDERR_T} to any bug you post."
 						die "Failed to apply ${i/*\//}"
 					fi
 				else
@@ -528,7 +545,7 @@ unipatch() {
 			if [ ${PATCH_DEPTH} -eq 5 ]
 			then
 				eend 1
-				eerror "Please attach ${STDERR_T} to any bug you may post."
+				eerror "Please attach ${STDERR_T} to any bug you post."
 				die "Unable to dry-run patch."
 			fi
 		done
@@ -546,19 +563,22 @@ unipatch() {
 #==============================================================
 detect_version() {
 	# this function will detect and set
-	# - OKV: Original Kernel Version (2.6.0/2.6.0-test11)
-	# - KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
-	# - EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
+	# OKV: Original Kernel Version (2.6.0/2.6.0-test11)
+	# KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
+	# EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
 	
-	OKV=${PV/_beta/-test}
-	OKV=${OKV/_rc/-rc}
-	OKV=${OKV/_pre*/}
-	OKV=${OKV/-r*/}
+	if [ -z "${OKV}" ]
+	then
+		OKV=${PV/_beta/-test}
+		OKV=${OKV/_rc/-rc}
+		OKV=${OKV/_pre*/}
+		OKV=${OKV/-r*/}
+	fi
 	
 	KV_MAJOR=$(echo ${OKV} | cut -d. -f1)
 	KV_MINOR=$(echo ${OKV} | cut -d. -f2)
 	KV_PATCH=$(echo ${OKV} | cut -d. -f3)
-	KV_PATCH=${KV_PATCH/[-_]*/}	
+	KV_PATCH=${KV_PATCH/[-_]*/}
 	
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 	
@@ -569,29 +589,31 @@ detect_version() {
 	then
 		RELEASE=${RELEASE/_pre/-pre}
 	else
-	RELEASE=${RELEASE/_pre/-bk}
+		RELEASE=${RELEASE/_pre/-bk}
 	fi
 	RELEASETYPE=${RELEASE//[0-9]/}
 	
 	EXTRAVERSION="${RELEASE}"
-	
+
 	if [ -n "${K_PREPATCHED}" ]
 	then
 		EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}${PR/r/}"
 	else
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
+		[ "${PN/-*/}" == "wolk" ] && EXTRAVERSION="-${PN/-*/}-${PV}"
 		[ "${PR}" != "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
-	
+
 	KV=${OKV}${EXTRAVERSION}
-	
-	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the portage naming convention
-	# these cannot be supported, but the code here can handle it up until this point
-	# and theoretically thereafter.
+
+	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the 
+	# portage naming convention these cannot be supported, but the code here can
+	# handle it up until this point and theoretically thereafter.
 	
 	if [ "${RELEASETYPE}" == "-rc" -o "${RELEASETYPE}" == "-pre" ]
 	then
-		OKV="${KV_MAJOR}.${KV_MINOR}.$([ $((${KV_PATCH} - 1)) -lt 0 ] && echo ${KV_PATCH} || echo $((${KV_PATCH} - 1)))"
+		OKV="${KV_MAJOR}.${KV_MINOR}.$([ $((${KV_PATCH} - 1)) -lt 0 ] && \
+			echo ${KV_PATCH} || echo $((${KV_PATCH} - 1)))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${PV//_/-}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${PV//_/-}.bz2"
@@ -617,7 +639,7 @@ detect_version() {
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
-	
+
 	S=${WORKDIR}/linux-${KV}
 }
 
@@ -644,9 +666,10 @@ detect_arch() {
 		COMPAT_URI="${LOOP_ARCH}_URI"
 		COMPAT_URI="${!COMPAT_URI}"
 		
-		[ -n "${COMPAT_URI}" ] && ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr '[:upper:]' '[:lower:]')? ( ${COMPAT_URI} )"
+		[ -n "${COMPAT_URI}" ] && \
+			ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr [A-Z] [a-z])? ( ${COMPAT_URI} )"
 		
-		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr '[:lower:]' '[:upper:]')" ]
+		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr [a-z] [A-Z])" ]
 		then
 			for i in ${COMPAT_URI}
 			do
@@ -661,14 +684,16 @@ detect_arch() {
 #==============================================================
 kernel-2_src_unpack() {
 	universal_unpack
-	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
+	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && \
+		unipatch "${UNIPATCH_LIST_DEFAULT}"
 	[ -z "${K_NOSETEXTRAVERSION}" ] && unpack_set_extraversion
 	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
 }
 
 kernel-2_src_compile() {
 	[ "${ETYPE}" == "headers" ] && compile_headers
-	[ "${ETYPE}" == "sources" ] && use doc && ! use arm && ! use s390 && compile_manpages
+	[ "${ETYPE}" == "sources" ] && \
+		use doc && ! use arm && ! use s390 && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
@@ -690,5 +715,5 @@ kernel-2_pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
 	# This is to fix some weird portage bug? in stable versions of portage.
-	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack ..."
+	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack..."
 }
