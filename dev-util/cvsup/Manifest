@@ -7,7 +7,7 @@ MD5 393154754f0d144a7cb93927a7c88acf files/digest-cvsup-16.1h 213
 MD5 3198f637cbeed3a5992c9cda4574aa13 files/digest-cvsup-16.1e-r2 212
 MD5 9a5b6ecba759a5260d4fb3d4e07a4c9c files/gentoo.sup 153
 MD5 3f47f29ce5967adb60f63c5e251f1452 files/gentoo_mirror.sup 208
-MD5 0f0df492128e5314e91de8fc11009d30 cvsup-16.1h.ebuild 3851
-MD5 07b03f882870adfa552e2f77103f3de1 cvsup-16.1e-r2.ebuild 3800
-MD5 93ae77dd132d484fa97442bdf259ce3f cvsup-16.1e.ebuild 602
+MD5 6913cf05f880c349a93a8603d72af10b cvsup-16.1h.ebuild 3843
+MD5 4a8d26455e49455ae38b4d1a465b12ec cvsup-16.1e-r2.ebuild 3794
+MD5 a3a1b0d521d5768a9ae2b2607fbc4db9 cvsup-16.1e.ebuild 603
 MD5 ccda54fa99a446a201010b0c318ea22d ChangeLog 1124
