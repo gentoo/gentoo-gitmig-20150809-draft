@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.10 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.11 2003/07/25 20:23:16 woodchip Exp $
+
+*netkit-rsh-0.17-r4 (25 Jul 2003)
+
+  25 Jul 2003; Donny Davies <woodchip@gentoo.org> netkit-rsh-0.17-r2.ebuild,
+  netkit-rsh-0.17-r4.ebuild, files/rexec.pamd, files/rlogin.pamd,
+  files/rsh.pamd:
+  Moved the pam.d/ snips to this package from sys-libs/pam.
 
 *netkit-rsh-0.17-r3 (25 Oct 2002)
 
