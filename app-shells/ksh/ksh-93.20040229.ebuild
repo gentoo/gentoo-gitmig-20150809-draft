@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.2 2004/04/15 23:09:17 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.3 2004/04/27 17:25:22 agriffis Exp $
 
-inherit ccc eutils
+inherit ccc eutils flag-o-matic
 
 RELEASE="2004-02-29"
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
