@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.2 2002/02/06 01:47:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.3 2002/02/20 07:23:20 drobbins Exp $
+
+*baselayout-1.7.1-r1 (20 Feb 2002)
+
+  20 Feb 2002; Daniel Robbins <drobbins@gentoo.org> baselayout-1.7.1-r1.ebuild:
+  moved MAKEDEV device node creation to pkg_postinst() so that device nodes don't
+  get recorded in CONTENTS.  Latest CVS Portage no longer records device nodes
+  in CONTENTS since there's generally no point or clean way to unmerge them.
 
 *baselayout-1.7.1 (6 Feb 2002)
 
