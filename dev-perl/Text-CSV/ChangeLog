@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.10 2004/06/25 01:04:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.11 2004/12/23 08:51:42 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Text-CSV-0.23-r1.ebuild:
+  added ~ppc64
 
 *Text-CSV-0.23-r1 (21 Jun 2003)
  

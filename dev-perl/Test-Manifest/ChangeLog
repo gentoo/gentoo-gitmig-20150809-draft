@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.7 2004/10/17 21:06:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.8 2004/12/23 08:49:00 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> :
+  added ~ppc64
 
 *Test-Manifest-1.11 (17 Oct 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.6 2004/10/17 16:56:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.7 2004/12/23 08:35:25 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Sub-Uplevel-0.09.ebuild:
+  added ~ppc64
 
   17 Oct 2004; Michael Cummings <mcummings@gentoo.org>
   Sub-Uplevel-0.09.ebuild:
