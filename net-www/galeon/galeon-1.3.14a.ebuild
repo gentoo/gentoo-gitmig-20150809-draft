@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.14a.ebuild,v 1.5 2004/06/17 11:07:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.14a.ebuild,v 1.6 2004/06/20 02:42:27 gustavoz Exp $
 
 inherit gnome2 debug libtool eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~ia64 amd64"
+KEYWORDS="x86 ~ppc ~alpha sparc ~ia64 amd64"
 SLOT="0"
 
 S=${WORKDIR}/${P%%a}
