@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.11 2003/12/03 16:02:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.12 2003/12/08 18:45:51 liquidx Exp $
 
 inherit flag-o-matic eutils python
 
@@ -139,5 +139,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	python_makesym
-	python_mod_cleanup
+	python_mod_cleanup /usr/lib/python2.2
 }
