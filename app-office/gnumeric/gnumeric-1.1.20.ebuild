@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.17.ebuild,v 1.3 2003/07/03 22:57:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.20.ebuild,v 1.1 2003/08/22 17:38:17 foser Exp $
 
 #provide Xmake and Xemake
-inherit virtualx libtool gnome2 eutils
+inherit virtualx libtool gnome2 eutils debug
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
@@ -13,7 +13,9 @@ KEYWORDS="~x86 ~ppc"
 
 # evolution, perl, guile and gb support disabled currently (or to be removed)
 
-IUSE="libgda python bonobo"
+# FIXME : should rethink gda/gnomedb USE stuff
+
+IUSE="libgda gnomedb python bonobo"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
@@ -25,17 +27,17 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=gnome-extra/gal-1.99
 	>=dev-libs/libxml2-2.4.12
-	>=gnome-extra/libgsf-1.8
+	>=gnome-extra/libgsf-1.8.1
 	>=media-libs/libart_lgpl-2.3.11
-	perl?   ( >=dev-lang/perl-5.6 )
 	python? ( >=dev-lang/python-2.0 
 		>=dev-python/pygtk-1.99.10 )
-	libgda? ( >=gnome-extra/libgda-0.10 )
-	bonobo? ( >=gnome-base/libbonobo-2
-		>=gnome-base/libbonoboui-2
-		>=gnome-base/bonobo-activation-1.0.2 )"
+	libgda? ( >=gnome-extra/libgda-0.90 )
+	bonobo? ( >=gnome-base/libbonobo-2.2
+		>=gnome-base/libbonoboui-2.2 )"
+#	gnomedb? ( >=gnome-extra/libgnomedb-0.90.2 )
 
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.27.2
 	dev-util/pkgconfig"
 
 src_unpack() {
@@ -44,10 +46,11 @@ src_unpack() {
 }
 
 src_compile() {
-  	econf `use_with bonobo` `use_with python` `use_with libgda gda`
+  	econf `use_with bonobo` `use_with python` `use_with libgda gda` 
+	# `use_with gnomedb gda`
 
 	#the build process have to be able to connect to X
-	Xemake || Xmake || die
+	Xemake || die
 }
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING NEWS README TODO"

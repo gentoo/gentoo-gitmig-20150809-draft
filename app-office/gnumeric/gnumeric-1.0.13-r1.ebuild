@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.2 2003/06/10 13:29:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.3 2003/08/22 17:38:17 foser Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 IUSE="libgda gb evo python bonobo guile perl"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
