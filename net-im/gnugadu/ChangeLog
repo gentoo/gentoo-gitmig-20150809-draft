@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.23 2004/10/14 22:53:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.24 2004/10/21 18:13:43 spock Exp $
+
+*gnugadu-2.2.0 (21 Oct 2004)
+
+  21 Oct 2004; Michal Januszewski <spock@gentoo.org> +gnugadu-2.2.0.ebuild:
+  Version bump.
 
   15 Oct 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0.5.ebuild,
   gnugadu-2.0.6.ebuild:
