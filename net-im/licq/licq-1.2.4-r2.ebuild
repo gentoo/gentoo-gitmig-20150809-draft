@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.4 2003/02/07 15:13:59 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.5 2003/02/07 20:47:56 seemant Exp $
 
-IUSE="ssl socks5 qt kde ncurses"
+IUSE="ssl socks5 qt kde gtk ncurses"
 
 use kde && inherit kde-base
 use kde && need-kde 3.0
@@ -20,6 +20,28 @@ DEPEND="${DEPEND}
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 SLOT="2"
 KEYWORDS="x86"
+
+src_unpack() {
+	unpack ${A}
+	
+	if [ -z "`use qt`" ]
+	then
+		if [ -z "`use gtk`" ]
+		then
+			ebegin "Setting console plugin as default..."
+			cp ${S}/src/licq.conf.h ${T}
+			sed "s:Plugin1 = qt-gui:Plugin1 = console:" \
+				${T}/licq.conf.h > ${S}/src/licq.conf.h
+			eend $?
+		else
+			ebegin "Setting GTK plugin as default..."
+			cp ${S}/src/licq.conf.h ${T}
+			sed "s:Plugin1 = qt-gui:Plugin1 = gtk-gui:" \
+				${T}/licq.conf.h > ${S}/src/licq.conf.h
+			eend $?
+		fi
+	fi
+}
 
 src_compile() {
 
@@ -136,6 +158,4 @@ src_install() {
 	make DESTDIR=${D} install || die
 	docinto plugins/rms
 	dodoc README licq_rms.conf
-
-
 }
