@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0438280d99e7ca0de9ea61818e31e586 metadata.xml 224
-MD5 27965ff54d58c0950d3a655b58744cde ChangeLog 625
-MD5 ef985873e2cf23c0413a4d8673df1a74 cvs2svn-1.1.0.ebuild 579
+MD5 ab074f4010602743b3143ef3dd0b3cb4 ChangeLog 796
+MD5 977b3f2e1481f9ee14e96f4ba8e46dd9 cvs2svn-1.1.0.ebuild 575
+MD5 e072950186e0b26e4a2401daa77e6445 cvs2svn-1.2.1.ebuild 579
 MD5 ba6b597ae98bdb979914bef4e7e262ba files/digest-cvs2svn-1.1.0 65
+MD5 f8490326e1c47eaa55b6d38523871fd3 files/digest-cvs2svn-1.2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNQjHBXaUFmZvwyMRAp8CAJ97rQIr4T29Uux1RLOj38rWrTPivgCfeCg3
+zwDEB1EuNYynxEdHoZO8gPI=
+=LM9o
+-----END PGP SIGNATURE-----
