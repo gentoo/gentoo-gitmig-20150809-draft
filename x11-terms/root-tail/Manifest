@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cc13bed4267bdb242a18d9fd0274a699 root-tail-1.2-r2.ebuild 952
+MD5 d8f006bffc85ee60ee25703dc67ca783 root-tail-1.2-r2.ebuild 951
 MD5 88c7bc31d50da25669463b2c1d97f535 root-tail-1.2-r1.ebuild 789
 MD5 ac82ac29a67025a863f3d258d3d6d680 root-tail-1.1.ebuild 673
-MD5 b43b76b76a2f7125e6df47be733fd9a3 ChangeLog 4024
+MD5 277e26dd119de79d730b5b5f890ad578 ChangeLog 4123
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 f8b36716748f19ede695042176e3648b files/digest-root-tail-1.2-r1 64
 MD5 f8b36716748f19ede695042176e3648b files/digest-root-tail-1.2-r2 64
 MD5 bc94057d9203dc8c6a01efb2172f5a15 files/digest-root-tail-1.1 64
 MD5 3ede80f52914b3650247dbea9ff963fb files/root-tail-1.2-kde.patch 3188
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMCalEZCkKN40op4RApdYAKC+dp0Tt1DAzrRy3gunDxY+Kv2PTACcClTE
-HmceUmTdGUWou4yC5VOlHsg=
-=PKzA
+iD8DBQFCQ3FiEZCkKN40op4RAuLFAJ92V9fAW8DRg0nEgF2Q1R+E3cs6EgCgtXqu
+CpKZf2p3kwRVMqDIFwN0mvs=
+=ef3D
 -----END PGP SIGNATURE-----
