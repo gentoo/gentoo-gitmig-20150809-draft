@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gaim-encryption
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/ChangeLog,v 1.14 2004/04/10 20:06:45 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/ChangeLog,v 1.15 2004/04/11 12:48:25 gustavoz Exp $
+
+  11 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gaim-encryption-2.22.ebuild:
+  Stable on sparc
 
 *gaim-encryption-2.23 (10 Apr 2004)
 
