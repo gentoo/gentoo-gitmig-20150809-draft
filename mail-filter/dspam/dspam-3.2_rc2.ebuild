@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2_rc2.ebuild,v 1.1 2004/10/09 04:40:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2_rc2.ebuild,v 1.2 2004/10/09 14:45:12 st_lim Exp $
 
 inherit eutils
 
@@ -181,13 +181,18 @@ src_install () {
 	echo "enableWhitelist=on") >${T}/default.prefs
 	echo "groupname:classification:*globaluser" >${T}/group
 	if use cyrus; then
-		echo "/usr/lib/cyrus/deliver %u" > ${T}/untrusted.mailer_args
+		echo "UntrustedDeliveryAgent /usr/lib/cyrus/deliver %u" >> ${D}${HOMEDIR}/dspam.conf
+		sed -e 's:/usr/bin/procmail:/usr/lib/cyrus/deliver %u:g' \
+			-i ${D}${HOMEDIR}/dspam.conf
 	elif use exim; then
-		echo "/usr/sbin/exim -oMr spam-scanned %u" > ${T}/untrusted.mailer_args
+		echo "UntrustedDeliveryAgent /usr/sbin/exim -oMr spam-scanned %u" >> ${D}${HOMEDIR}/dspam.conf
+		sed -e 's:/usr/bin/procmail:/usr/sbin/exim -oMr spam-scanned %u:g' \
+			-i ${D}${HOMEDIR}/dspam.conf
 	elif use courier; then
 		echo "/usr/bin/maildrop -d %u" > ${T}/untrusted.mailer_args
-	elif use procmail; then
-		echo "/usr/bin/procmail -d %u" > ${T}/untrusted.mailer_args
+		echo "UntrustedDeliveryAgent /usr/bin/maildrop -d %u" >> ${D}${HOMEDIR}/dspam.conf
+		sed -e 's:/usr/bin/procmail:/usr/bin/maildrop -d %u:g' \
+			-i ${D}${HOMEDIR}/dspam.conf
 	fi
 
 	# install some initial configuration
