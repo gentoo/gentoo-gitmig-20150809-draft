@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.273 2004/01/27 18:48:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.274 2004/01/31 17:52:11 spyderous Exp $
+
+  31 Jan 2004; <donnie@gentoo.org> xfree-4.3.99.16.ebuild,
+  xfree-4.3.99.901.ebuild, xfree-4.3.99.902.ebuild:
+  Removing gatos USE from 4.3.99 until gatos is ported to it.
 
   27 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.1-r2.ebuild:
   Fix fowners syntax again, it got broken in the last commit.

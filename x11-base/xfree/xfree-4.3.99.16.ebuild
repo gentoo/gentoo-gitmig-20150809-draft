@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.16.ebuild,v 1.8 2004/01/27 11:53:57 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.16.ebuild,v 1.9 2004/01/31 17:52:11 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
 # IUSE="sse mmx 3dnow" are disabled in favor of autodetection
-IUSE="3dfx xml2 truetype nls cjk doc ipv6 debug static pam sdk gatos"
+# IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
+IUSE="3dfx xml2 truetype nls cjk doc ipv6 debug static pam sdk"
 # INPUT_DEVICES="synaptics"
 
 filter-flags "-funroll-loops"
@@ -543,7 +544,7 @@ src_install() {
 		make install DESTDIR=${D} || die
 	fi
 
-	if use sdk || use gatos
+	if use sdk # || use gatos
 	then
 		einfo "Installing XFree86 SDK..."
 		make install.sdk DESTDIR=${D} || die

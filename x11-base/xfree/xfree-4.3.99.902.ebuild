@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902.ebuild,v 1.7 2004/01/27 11:53:57 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902.ebuild,v 1.8 2004/01/31 17:52:11 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
 # IUSE="sse mmx 3dnow" were disabled in favor of autodetection
-IUSE="3dfx cjk debug doc gatos ipv6 nls pam sdk static truetype xml2"
+# IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
+IUSE="3dfx cjk debug doc ipv6 nls pam sdk static truetype xml2"
 # INPUT_DEVICES="synaptics"
 
 filter-flags "-funroll-loops"
@@ -193,10 +194,10 @@ src_unpack() {
 	mv -f ${PATCH_DIR}/9960_all_4.3.0-exec-shield-GNU* ${PATCH_DIR}/excluded
 	mv -f ${PATCH_DIR}/9961_all_4.3.0-libGL-exec-shield* ${PATCH_DIR}/excluded
 
-	if [ ! "`use gatos`" ]
-	then
+#	if [ ! "`use gatos`" ]
+#	then
 		mv -f ${PATCH_DIR}/9841_all_4.3.0-gatos-mesa* ${PATCH_DIR}/excluded
-	fi
+#	fi
 
 	if use debug
 	then
@@ -495,7 +496,7 @@ src_install() {
 		make install DESTDIR=${D} || die
 	fi
 
-	if use sdk || use gatos
+	if use sdk # || use gatos
 	then
 		einfo "Installing XFree86 SDK..."
 		make install.sdk DESTDIR=${D} || die
