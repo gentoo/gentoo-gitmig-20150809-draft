@@ -619,42 +619,27 @@ def isspecific(mypkg):
 # if foo-1.2 (that version) is installed.
 
 def isinstalled(mycatpkg):
-	mycatpkg=string.split(mycatpkg,"/")
-	if not os.path.isdir(root+"var/db/pkg/"+mycatpkg[0]):
-		return 0
-	mypkgs=os.listdir(root+"var/db/pkg/"+mycatpkg[0])
-	if isjustname(mycatpkg[1]):
-		# only name specified
-		for x in mypkgs:
-			thispkgname=pkgsplit(x)[0]
-			if mycatpkg[1]==thispkgname:
-				return 1
+	global installcache
+	mycatpkg2=string.split(mycatpkg,"/")
+	if not installcache:
+		installcache=port_insttree()
+		#initialize cache
+	
+	if isjustname(mycatpkg2[1]):
+		if installcache.has_key(mycatpkg):
+			return 1
+		else:
+			return 0
 	else:
+		mysplit=pkgsplit(mycatpkg2[1])
+		mykey=mycatpkg2[0]+"/"+mysplit[0]
 		# name and version specified
-		for x in mypkgs:
-			if mycatpkg[1]==x:
+		if not installcache.has_key(mykey):
+			return 0
+		for x in installcache[mykey]:
+			if x[0]==mycatpkg:
 				return 1
 	return 0
-
-def installedcmp(mycatpkg):
-	"""Compares specific mycatpkg ("cat/pkg-1.2") against installed package version.
-		Assumes that mycatpkg is already installed.  Make sure it is before calling this.
-		Returns 0 if mycatpkg is installed (exact version).  Returns a positive number if
-		an older version is installed, and returns a negative number if a newer version
-		is installed."""
-		
-	mycatpkg=string.split(mycatpkg,"/")
-	mypkgs=os.listdir(root+"var/db/pkg/"+mycatpkg[0])
-	mypkglist=[]
-	for x in mypkgs:
-		mysplit=pkgsplit(x)
-		if x:
-			mypkglist.append(mysplit)
-	mysplit=pkgsplit(mycatpkg[1])
-	for x in mypkglist:
-		if x[0]==mysplit[0]:
-			#same package
-			return pkgcmp(mysplit,x)
 	
 # This function can be used as a package verification function, i.e.
 # "pkgsplit("foo-1.2-1") will return None if foo-1.2-1 isn't a valid
@@ -701,6 +686,7 @@ def pkgsplit(mypkg):
 		return None
 
 def catpkgsplit(mycatpkg):
+	"""returns [cat, pkgname, version, rev ]"""
 	mysplit=string.split(mycatpkg,"/")
 	if len(mysplit)!=2:
 		return None
@@ -770,12 +756,20 @@ def getgeneral(mycatpkg):
 		return string.join([mysplit[0],mysplit[1]],"/")
 
 def dep_depreduce(mypkgdep):
+	global installcache
+	#installcache holds a cached dictionary containing all installed packages
+	if not installcache:
+		installcache=port_insttree()
+		#initialize cache
+
 	if mypkgdep[0]=="!":
+		#this is an exact package match
 		if isinstalled(mypkgdep[1:]):
 			return 0
 		else:
 			return 1
 	elif mypkgdep[0]=="=":
+		#this is an exact package match
 		if isspecific(mypkgdep[1:]):
 			if isinstalled(mypkgdep[1:]):
 				return 1
@@ -784,32 +778,56 @@ def dep_depreduce(mypkgdep):
 		else:
 			return None
 	elif mypkgdep[0:2]==">=":
+		#this needs to check against multiple packages
 		if not isspecific(mypkgdep[2:]):
 			return None
 		if isinstalled(getgeneral(mypkgdep[2:])):
-			if installedcmp(mypkgdep[2:])<=0:
-				return 1
+			mycatpkg=catpkgsplit(mypkgdep[2:])
+			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+			if not installcache.has_key(mykey):
+				return 0
+			for x in installcache[mykey]:
+				if pkgcmp(x[1][1:],mycatpkg[1:])>=0:
+					return 1
 		return 0
 	elif mypkgdep[0:2]=="<=":
+		#this needs to check against multiple packages
 		if not isspecific(mypkgdep[2:]):
 			return None
 		if isinstalled(getgeneral(mypkgdep[2:])):
-			if installedcmp(mypkgdep[2:])>=0:
-				return 1
+			mycatpkg=catpkgsplit(mypkgdep[2:])
+			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+			if not installcache.has_key(mykey):
+				return 0
+			for x in installcache[mykey]:
+				if pkgcmp(x[1][1:],mycatpkg[1:])<=0:
+					return 1
 		return 0
 	elif mypkgdep[0]=="<":
-		if not isspecific(mypkgdep[1:]):
+		#this needs to check against multiple packages
+		if not isspecific(mypkgdep[2:]):
 			return None
-		if isinstalled(getgeneral(mypkgdep[1:])):
-			if installedcmp(mypkgdep[1:])>0:
-				return 1
+		if isinstalled(getgeneral(mypkgdep[2:])):
+			mycatpkg=catpkgsplit(mypkgdep[2:])
+			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+			if not installcache.has_key(mykey):
+				return 0
+			for x in installcache[mykey]:
+				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
+					return 1
 		return 0
 	elif mypkgdep[0]==">":
-		if not isspecific(mypkgdep[1:]):
+		#this needs to check against multiple packages
+		if not isspecific(mypkgdep[2:]):
 			return None
-		if isinstalled(getgeneral(mypkgdep[1:])):
-			if installedcmp(mypkgdep[1:])<0:
-				return 1
+		if isinstalled(getgeneral(mypkgdep[2:])):
+			mycatpkg=catpkgsplit(mypkgdep[2:])
+			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+			if not installcache.has_key(mykey):
+				return 0
+			for x in installcache[mykey]:
+				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
+					return 1
 		return 0
 	if not isspecific(mypkgdep):
 		if isinstalled(mypkgdep):
@@ -1164,15 +1182,16 @@ def port_porttree():
 	os.chdir(origdir)
 	return portagedict
 	
-	
-configdefaults=getconfig("/etc/make.defaults")
-configsettings=getconfig("/etc/make.conf")
-root=getsetting("ROOT")
-if len(root)==0:
-	root="/"
-elif root[-1]!="/":
-	root=root+"/"
-#dep_print( dep_parse(">=net-misc/openssh-2.2.0 >=sys-libs/slang-1.4.2")[1])
-#dep_print( dep_parse("=sys-libs/pam-0.72-r1 bar/foo || ( sys-libs/zlib foo/bar )")[1])
-ERRPKG=""
-ERRVER=""
+def init():
+	global installcache, configdefaults, configsettings, root, ERRPKG, ERRVER
+	configdefaults=getconfig("/etc/make.defaults")
+	configsettings=getconfig("/etc/make.conf")
+	root=getsetting("ROOT")
+	if len(root)==0:
+		root="/"
+	elif root[-1]!="/":
+		root=root+"/"
+	ERRPKG=""
+	ERRVER=""
+	installcache=None
+init()
