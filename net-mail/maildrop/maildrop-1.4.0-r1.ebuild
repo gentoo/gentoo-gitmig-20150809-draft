@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0-r1.ebuild,v 1.1 2002/09/06 04:18:09 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0-r1.ebuild,v 1.2 2002/09/12 14:43:26 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
 DEPEND=">=sys-libs/gdbm-1.8.0
 	sys-devel/perl
 	virtual/mta"
-
+RDEPEND="${DEPEND}"
 PROVIDE="virtual/mda"
 
 SLOT="0"
@@ -32,7 +32,7 @@ src_compile() {
 		--enable-maildirquota \
 		--enable-use-dotlock=1 \
 		--mandir=/usr/share/man \
-		--with-etcdir=/etc/maildrop \
+		--with-etcdir=/etc \
 		--with-default-maildrop=./.maildir/ \
 		--enable-sendmail=/usr/sbin/sendmail \
 		--host=${CHOST} || die "bad ./configure"

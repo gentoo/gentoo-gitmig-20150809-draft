@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.7 2002/09/06 04:18:09 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.8 2002/09/12 14:43:26 raker Exp $
 
 *maildrop-1.4.0-r1 (5 Sep 2002)
+
+  12 Sep 2002; Nick Hadaway <raker@gentoo.org> maildrop-1.4.0-r1.ebuild :
+  Changed etc-dir to /etc instead of /etc/maildrop to fix compatibility
+  with MTAs.  Thanks to Kang on bug #7834
 
   5 Sep 2002; Jared H. Hudson <jhhudso@gentoo.org> maildrop-1.4.0-r1.ebuild :
   Added dependency checking for virtual/mta and made maildrop provide
