@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.4.1.ebuild,v 1.6 2004/01/30 16:44:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.4.1.ebuild,v 1.7 2004/02/12 18:39:31 ciaranm Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://usefulinc.com/software/gnome-bluetooth/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2

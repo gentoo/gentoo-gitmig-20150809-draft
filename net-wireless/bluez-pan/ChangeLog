@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-pan
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-pan/ChangeLog,v 1.4 2004/01/30 16:59:29 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-pan/ChangeLog,v 1.5 2004/02/12 18:41:05 ciaranm Exp $
+
+  12 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> bluez-pan-1.1.ebuild:
+  Adding ~sparc (works with some kernels, see bug #39710)
 
   30 Jan 2004; Peter Johanson <latexer@gentoo.org> bluez-pan-1.1.ebuild,
   metadata.xml:
