@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.12-r2.ebuild,v 1.3 2002/03/29 14:19:44 seemant Exp $
+# Author Fabrice Alphonso <fabrice@alphonso.dyndns.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.12-r3.ebuild,v 1.1 2002/04/11 13:10:50 verwilst Exp $
 
 S="${WORKDIR}/pwlib"
-SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/${PN}_${PV}.tar.gz"
+SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/${PN}_${PV}-patched.tar.gz"
 DESCRIPTION="Libs needed for GnomeMeeting"
 
 DEPEND="virtual/glibc
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 
-	unpack pwlib_1.2.12.tar.gz
+	unpack pwlib_1.2.12-patched.tar.gz
 	cd ${S}
 	patch -p0 < ${FILESDIR}/${PN}-gentoo.diff
 
@@ -34,22 +34,13 @@ src_compile() {
 src_install() {
 
 	mkdir -p ${D}/usr/lib
-	mkdir -p ${D}/usr/include/ptclib
-	mkdir -p ${D}/usr/include/ptlib/unix/ptlib
 	mkdir -p ${D}/usr/share/pwlib
 	cd ${S}	
 	cp -a lib/*so* ${D}/usr/lib
-	cp -a include/ptlib.h ${D}/usr/include
-	cp -a include/ptlib/*.h ${D}/usr/include/ptlib/
-	cp -a include/ptlib/*.inl ${D}/usr/include/ptlib/	
-	cp -a include/ptlib/unix/ptlib/*.h ${D}/usr/include/ptlib/unix/ptlib
-	cp -a include/ptlib/unix/ptlib/*.inl ${D}/usr/include/ptlib/unix/ptlib
-	cp -a include/ptclib/*.h ${D}/usr/include/ptclib/
 
 	cp -a * ${D}/usr/share/pwlib/
 	rm -rf ${D}/usr/share/pwlib/make/CVS
-	#cp -a tools/* ${D}/usr/share/pwlib/tools/
-        rm -rf ${D}/usr/share/pwlib/tools/CVS
+	rm -rf ${D}/usr/share/pwlib/tools/CVS
 	rm -rf ${D}/usr/share/pwlib/tools/asnparser/CVS
 	rm -rf ${D}/usr/share/pwlib/src
 	rm -rf ${D}/usr/share/pwlib/include/CVS
@@ -61,10 +52,3 @@ src_install() {
 }
 
 
-#pkg_postinst() {
-#
-#	cd /usr/share/pwlib
-#        ln -sf /usr/lib lib
-#        ln -sf /usr/include/pwlib include
-
-#}
