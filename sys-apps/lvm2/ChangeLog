@@ -1,0 +1,42 @@
+# ChangeLog for sys-apps/lvm2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm2/ChangeLog,v 1.1 2003/09/02 20:47:37 max Exp $
+
+*lvm2-2.00.05 (02 Sep 2003)
+
+  02 Sep 2003; Max Kalika <max@gentoo.org> lvm2-2.00.05.ebuild:
+  Bump version to 2.00.05.
+
+  03 Jul 2003; Max Kalika <max@gentoo.org> lvm2-1.95.15.ebuild:
+  Set KEYWORDS to ~x86.
+
+  12 Jun 2003; Max Kalika <max@gentoo.org> lvm2-1.95.15.ebuild:
+  Drop unneccessary die() calls.
+
+  29 May 2003; Max Kalika <max@gentoo.org> lvm2-1.95.10.ebuild,
+  lvm2-1.95.15.ebuild, files/lvm2.rc6:
+  Remove stale version.  Patch /etc/init.d/{checkfs,halt.sh} to
+  activate/deactivate LVM2.  Remove the no longer needed lvm2.rc6 file.
+
+*lvm2-1.95.15 (27 May 2003)
+
+  27 May 2003; Max Kalika <max@gentoo.org> lvm2-1.95.15.ebuild:
+  Bump version.
+
+  22 May 2003; root <root> lvm2-1.95.10.ebuild, files/lvm2.rc6:
+  Install binary and all symlinks to /sbin as well.  Fixes booting if /usr
+  is a separate partition. Change startup script to look for utilities in
+  /sbin.  Fix startup script modules depend.
+
+  15 May 2003; Max Kalika <max@gentoo.org> files/lvm2.rc6:
+  Start before checkfs.
+
+  14 May 2003; Max Kalika <max@gentoo.org> lvm2-1.95.10.ebuild,
+  files/lvm2.rc6:
+  Add startup script.
+
+*lvm2-1.95.10 (12 May 2003)
+
+  12 May 2003; Max Kalika <max@gentoo.org> lvm2-1.95.10.ebuild:
+  Initial version.
+
