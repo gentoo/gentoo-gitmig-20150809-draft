@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.8.ebuild,v 1.2 2004/06/04 21:13:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.4.2.ebuild,v 1.4 2004/06/04 21:13:58 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,15 +28,22 @@ src_unpack() {
 }
 
 src_compile() {
+	if use gtk ; then
+		sed -i -e "s:@GTK2_TRUE@::g" -e "s:@GTK2_FALSE@:#:g" \
+			Makefile.in `echo */Makefile.in`
+	else
+		sed -i -e "s:@GTK2_TRUE@:#:g" -e "s:@GTK2_FALSE@::g" \
+			Makefile.in `echo */Makefile.in`
+		sed -i -e "/^SUBDIRS/s/gtk//" Makefile.in
+	fi
 
 	use debug && append-flags -g
-	econf `use_enable nls` \
-		`use_with gtk gtk2` || die "econf failed"
-	emake || die "emake failed"
+	econf `use_enable nls` || die
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 }
 
@@ -44,7 +51,7 @@ pkg_postinst() {
 	einfo
 	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
 	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo (uim doesn't support skkserv)."
-	einfo "To use uim-prime you should emerge >=app-i18n/prime-0.8."
+	einfo "To use uim-prime you should emerge app-i18n/prime."
 	einfo
 
 	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
