@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.5 2004/08/26 15:56:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.6 2004/10/17 01:50:28 solar Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ PROVIDE="virtual/snmp"
 DEPEND="virtual/libc
 	!minimal? ( <sys-libs/db-2 )
 	>=sys-libs/zlib-1.1.4
-	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	perl? (
@@ -31,6 +30,8 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	perl? ( X? ( dev-perl/perl-tk ) )
 	!virtual/snmp"
+
+DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
