@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.23 2003/10/18 20:28:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.24 2003/10/23 23:03:08 foser Exp $
+
+*libgtop-2.0.6 (23 Oct 2003)
+
+  23 Oct 2003; foser <foser@gentoo.org> libgtop-2.0.6.ebuild :
+  New version, fix libtool versioning once again (*sigh*)
 
   18 Oct 2003; Aron Griffis <agriffis@gentoo.org> libgtop-2.0.5.ebuild:
   Stable on alpha
