@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8.ebuild,v 1.6 2004/04/13 00:29:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8.ebuild,v 1.7 2004/04/27 08:05:39 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 	# Only way to disable gcdmaster currently ...
 	use gnome || \
 		sed -i -e 's:^en_xdao=yes:en_xdao=no:g' configure
