@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.8 2004/01/13 19:06:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.9 2004/02/14 23:08:36 wolf31o2 Exp $
+
+  14 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> files/vpnclient.rc:
+  Removing -qs from insmod line to allow proper support with newer
+  module-init-tools. Closing bug #37678.
 
   13 Jan 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   cisco-vpnclient-3des-4.0.3b-r1.ebuild, cisco-vpnclient-3des-4.0.3b.ebuild:

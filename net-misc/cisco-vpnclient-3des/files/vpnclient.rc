@@ -35,7 +35,7 @@ start() {
         fi
 
         if [ -d $PC ] ; then
-                /sbin/insmod -qs ${PC}/${VPNMOD}
+                /sbin/insmod ${PC}/${VPNMOD} >/dev/null 2>&1
                 if [ "$?" != "0" ] ; then
                         eerror "Failed to load module ${VPNMOD}"
                         exit 1
@@ -67,7 +67,7 @@ start() {
 		;;
 		*)
 			eerror "Failed (unsupported Linux version)."
-			/sbin/rmmod -q ${VPNMOD}
+			/sbin/rmmod ${VPNMOD}
 			exit 1
 		;;
 	esac
