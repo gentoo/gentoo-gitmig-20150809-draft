@@ -1,0 +1,10 @@
+# ChangeLog for games-board/xmille
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.1 2004/01/09 01:43:59 mr_bones_ Exp $
+
+*xmille-2.0 (08 Jan 2004)
+
+  08 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  xmille-2.0.ebuild, files/2.0.patch:
+  initial commit; ebuild and patch from Bruce Guenter via bug 37626
+
