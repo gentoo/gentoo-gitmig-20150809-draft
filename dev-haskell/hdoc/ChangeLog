@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdoc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.6 2005/01/01 18:04:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.7 2005/01/21 10:37:42 kosmikus Exp $
+
+  21 Jan 2005; Andres Loeh <kosmikus@gentoo.org> -hdoc-0.8.2.ebuild:
+  Removed old version.
 
 *hdoc-0.8.3 (21 Oct 2004)
 
