@@ -1,6 +1,10 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.23 2004/06/25 00:40:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.24 2004/07/01 22:40:34 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lprng-3.8.22.ebuild,
+  lprng-3.8.26.ebuild, lprng-3.8.27.ebuild:
+  virtual/glibc -> virtual/libc
 
   16 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> lprng-3.8.26.ebuild:
   sparc & hppa lovin

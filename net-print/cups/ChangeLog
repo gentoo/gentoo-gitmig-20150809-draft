@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.71 2004/06/25 00:37:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.72 2004/07/01 22:40:19 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cups-1.1.19-r1.ebuild, cups-1.1.20-r1.ebuild, cups-1.1.20.ebuild:
+  virtual/glibc -> virtual/libc
 
   19 Jun 2004; Tom Gall <tgall@gentoo.org> cups-1.1.20-r1.ebuild:
   stable on ppc64, bug #54123
