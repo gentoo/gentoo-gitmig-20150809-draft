@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.49.0.ebuild,v 1.1 2005/03/04 11:48:50 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.49.0.ebuild,v 1.2 2005/03/21 11:14:15 swtaylor Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -41,7 +41,10 @@ RDEPEND="${DEPEND}
 	sys-process/procps"
 
 PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
+	pam? ( net-mail/mailbase )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )"
+
+filter-flags '-fomit-frame-pointer'
 
 src_unpack() {
 	use fam || (
@@ -136,8 +139,6 @@ set_maildir() {
 
 src_install() {
 	local f
-	dodir /etc/pam.d
-
 	einfo "Setting up maildirs in the account skeleton ..."
 	diropts -m 755 -o root -g root
 	dodir /etc/skel
@@ -160,8 +161,13 @@ src_install() {
 	cd ${D}/etc/courier
 	insinto /etc/courier
 	newins ${FILESDIR}/apache-sqwebmail.inc apache-sqwebmail.inc
-	mv imapd.authpam imap.authpam ; mv pop3d.authpam pop3.authpam
-	for f in *.authpam ; do mv "${f}" "${D}/etc/pam.d/${f%%.authpam}" ; done
+
+	if use pam ; then
+		dodir /etc/pam.d
+		rm imapd.authpam pop3d.authpam
+		for f in *.authpam ; do mv "${f}" "${D}/etc/pam.d/${f%%.authpam}" ; done
+	fi
+
 	for f in *.dist ; do cp ${f} ${f%%.dist} ; done
 	[ -e ldapaliasrc ] &&  ( chown root:root ldapaliasrc ; chmod 400 ldapaliasrc )
 	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
