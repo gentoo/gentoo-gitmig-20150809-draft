@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r3.ebuild,v 1.1 2002/07/26 03:01:13 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r3.ebuild,v 1.2 2002/07/26 04:04:38 woodchip Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -120,7 +120,7 @@ src_install() {
 	insinto /etc/mysql
 	doins ${FILESDIR}/my.cnf scripts/mysqlaccess.conf
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/mysql.rc6 mysql
+	newexe ${FILESDIR}/mysql.init mysql
 }
 
 pkg_config() {
