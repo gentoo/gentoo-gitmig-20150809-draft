@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.19 2002/10/13 21:15:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.20 2002/10/13 21:56:33 azarah Exp $
 
 *glibc-2.2.5-r7 (13 Oct 2002)
 
@@ -8,6 +8,10 @@
 
   Some cleanups.  Tidy ebuild.  Move all patches to ${FILESDIR}/${PV/.
   Remove old patches.
+
+  Add patches to fix warnings with gcc-3.2:
+
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0228.html
 
   13 Oct 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r7.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.15 2002/10/13 21:15:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.16 2002/10/13 21:56:33 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -109,6 +109,8 @@ src_unpack() {
 
 	if [ "`gcc-version`" = "3.2" ]; then
 		cd ${S}
+		# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0228.html
+		# <azarah@gentoo.org> (13 Oct 2002)
 		einfo "Applying divbyzero patch..."
 		patch -p1 < ${FILESDIR}/${PV}/${P}.divbyzero.patch > /dev/null || die
 		einfo "Applying restrict_arr patch..."
