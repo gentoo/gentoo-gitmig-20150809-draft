@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.0.ebuild,v 1.5 2004/05/01 23:55:26 avenj Exp $
 
 IUSE="ipv6 perl ssl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://epicsol.org"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~ia64 ~alpha ~hppa sparc"
+KEYWORDS="~x86 ~ppc ~ia64 ~alpha ~hppa sparc ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
