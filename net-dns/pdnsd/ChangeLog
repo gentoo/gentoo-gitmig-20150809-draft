@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.9 2003/02/27 09:58:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.10 2003/03/10 08:25:32 aliz Exp $
+
+  09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> files/pdnsd.rc6 : 
+  Fixed typo in init file. Closes #16881.
 
   27 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> pdnsd-1.1.7a.ebuild files/pdnsd.rc6 :
   Add --tcp to daemon startup, closes #15657. Small fixes in 1.1.7a ebuild.
