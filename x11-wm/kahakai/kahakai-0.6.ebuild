@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.ebuild,v 1.1 2003/12/16 18:37:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.ebuild,v 1.2 2003/12/17 14:56:59 bcowan Exp $
 
 IUSE="truetype xinerama"
 S=${WORKDIR}/${P}
@@ -32,7 +32,7 @@ src_compile() {
 	# Why doesn't Xrandr work?
 	econf \
 		--enable-hsetroot \
-		--disable-xrandr
+		--disable-xrandr \
 		`use_enable python` \
 		`use_enable ruby` \
 		`use_enable xinerama` \
