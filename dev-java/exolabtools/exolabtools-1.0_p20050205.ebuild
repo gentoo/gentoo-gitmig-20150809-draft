@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/exolabtools-1.0_p20050205.ebuild,v 1.6 2005/04/03 08:46:49 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/exolabtools-1.0_p20050205.ebuild,v 1.7 2005/04/03 08:52:07 sejo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="Exolab"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~sparc ~ppc"
+KEYWORDS="~amd64 ~x86 ~sparc -ppc"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
