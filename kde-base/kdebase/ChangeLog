@@ -1,6 +1,19 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.162 2004/12/09 01:53:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.163 2004/12/09 18:15:25 caleb Exp $
+
+*kdebase-3.2.3-r2 (09 Dec 2004)
+
+  09 Dec 2004; Caleb Tennis <caleb@gentoo.org>
+  +files/post-3.2.3-kdebase-smb.diff, +files/post-3.3.1-kdebase-smb.diff,
+  +files/3.2.3-r2/Xsetup, +files/3.2.3-r2/backgroundrc, +files/3.2.3-r2/kdmrc,
+  +files/3.2.3-r2/startkde-3.2.3-r1-gentoo.diff,
+  +files/3.2.3-r2/startkde-3.2.3-r2-gentoo.diff, +files/3.3.1-r1/Xsetup,
+  +files/3.3.1-r1/backgroundrc, +files/3.3.1-r1/kdmrc,
+  +files/3.3.1-r1/startkde-3.3.1-gentoo.diff,
+  +files/3.3.1-r1/startkde-3.3.1-r1-gentoo.diff, +kdebase-3.2.3-r2.ebuild,
+  +kdebase-3.3.1-r1.ebuild:
+  Rev bump for security fix bug #72804
 
   08 Dec 2004; Caleb Tennis <caleb@gentoo.org> +files/pgo.desktop:
   forgot this file
