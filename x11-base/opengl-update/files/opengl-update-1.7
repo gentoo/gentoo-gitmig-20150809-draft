@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.7,v 1.1 2004/05/28 08:31:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.7,v 1.2 2004/05/31 07:22:32 spyderous Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 
@@ -14,6 +14,14 @@ then
 fi
 
 usage() {
+# In addition to the below function, there are two extra uses for this.
+#
+# They aren't in the printed help message because they're intended
+# 	for developer use.
+# 1) --use-old $NEW_IMPLEM will switch to the new implementation only if
+# 	no old setup existed (i.e., X has never been installed)
+# 2) --get-implementation will return the implementation
+
 cat << FOO
 usage: ${0##*/} <GL implementation>
 
