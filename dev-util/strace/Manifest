@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d1cb5651538b42e6650289bf18815afc ChangeLog 4871
+MD5 7c18a12a49e98339f4b1f7b217c7fa3b ChangeLog 4936
 MD5 9b0c10d3984cb0a0629ab8bd2202135b strace-4.4.94.ebuild 1196
 MD5 0f7e44ef2b6c2598f320eb7e5390b11c strace-4.4.98.ebuild 1320
 MD5 c8f6e53db1108edf6a09cf9d662899b5 strace-4.5.1.ebuild 1299
@@ -19,7 +19,7 @@ MD5 f18a719a3d60b0a6f6fd89949d1db35c files/digest-strace-4.5.6 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBCcZNHTu7gpaalycRAip6AKCVnvjvle1ip3o7oD/8NVeOclbkpQCfdQSk
-mLmaoB+tDyZ88yVT6zUqxts=
-=vuFM
+iD4DBQFBErawHTu7gpaalycRAjFlAJjCznMUk+dhIDCy4kXPH+sydWYEAKCi+25k
+axN53JB8h9XzGiNkG1TpBw==
+=lBd7
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.41 2004/07/02 05:13:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.42 2004/08/05 22:36:57 vapier Exp $
+
+  05 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> strace-4.4.94.ebuild,
   strace-4.4.98-r1.ebuild, strace-4.4.98.ebuild, strace-4.5.1.ebuild,
