@@ -1,0 +1,25 @@
+# ChangeLog for games-emulation/blight-tr64gl
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/ChangeLog,v 1.1 2005/01/06 02:40:33 morfic Exp $
+
+*mupen64-blight-tr64gl-0.7.4_pre1 (05 Jan 2005)
+
+  05 Jan 2005; Daniel Goller <morfic@gentoo.org> +metadata.xml,
+  +mupen64-blight-tr64gl-0.7.4_pre1.ebuild:
+  Moved from games-emulation/blight-tr64gl to
+  games-emulation/mupen64-blight-tr64gl.
+
+  26 Sep 2003; Michael Sterrett <msterret@gentoo.org>
+  blight-tr64gl-0.7.4_pre1.ebuild:
+  fix DESCRIPTION
+
+  09 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  blight-tr64gl-0.7.4_pre1.ebuild:
+  added prepgamesdirs
+
+*blight-tr64gl-0.7.4_pre1 (09 Aug 2003)
+
+  09 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  blight-tr64gl-0.7.4_pre1.ebuild:
+  initial commit (bug 24890)
+
