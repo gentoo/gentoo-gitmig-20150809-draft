@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r3.ebuild,v 1.4 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r3.ebuild,v 1.5 2003/09/03 04:06:40 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 SRC_URI="http://cr.yp.to/daemontools/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/daemontools.html"
 
-KEYWORDS="x86 amd64 ppc sparc alpha"
-SLOT="0"
 LICENSE="freedist"
+SLOT="0"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 DEPEND="virtual/glibc"
 
@@ -20,11 +20,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-errno.patch
+	epatch ${FILESDIR}/${PV}-head-1.patch
 
 	use static && LDFLAGS="${LDFLAGS} -static"
 
-	echo "gcc ${CFLAGS}" > src/conf-cc
-	echo "gcc ${LDFLAGS}" > src/conf-ld
+	echo "$(gcc-getCC) ${CFLAGS}" > src/conf-cc
+	echo "$(gcc-getCC) ${LDFLAGS}" > src/conf-ld
 	echo ${S} > src/home
 }
 
