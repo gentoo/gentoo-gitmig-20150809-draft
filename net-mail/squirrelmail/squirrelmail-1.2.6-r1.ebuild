@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.6.ebuild,v 1.1 2002/05/21 22:01:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.6-r1.ebuild,v 1.1 2002/06/12 19:27:53 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 HTTPD_ROOT="/home/httpd/htdocs"
@@ -33,6 +33,6 @@ src_install () {
 pkg_postinst() {
 	einfo
 	einfo "Squirrelmail requires PHP to have 'register_globals = On'"
-	einfo "Please edit /etc/PHP4/php.ini."
+	einfo "Please edit /etc/php4/php.ini."
 	einfo
 }
