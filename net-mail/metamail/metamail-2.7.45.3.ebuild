@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.2 2004/05/11 22:55:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.3 2004/05/12 01:40:28 seemant Exp $
 
 inherit eutils
 
@@ -23,13 +23,16 @@ DEPEND="sys-libs/ncurses
 
 src_unpack() {
 	unpack ${A}
-	export WANT_AUTOCONF=2.1
 	cd ${S}
 	epatch ${WORKDIR}/metamail_${MY_PV}.diff
-	autoreconf
 	chmod +x ${S}/configure
 }
 
+src_compile() {
+	export WANT_AUTOCONF=2.5
+	econf || die
+	emake || emake || die
+}
 src_install () {
 	make DESTDIR=${D} install || die
 	dodoc COPYING CREDITS README
