@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.08.ebuild,v 1.7 2004/01/22 14:57:09 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.08.ebuild,v 1.8 2004/03/10 04:32:22 max Exp $
 
-MY_P=${PN/lvm/LVM}.${PV}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
-HOMEPAGE="http://www.sistina.com/products_lvm.htm"
-SRC_URI="ftp://ftp.sistina.com/pub/LVM2/tools/${MY_P}.tgz"
+HOMEPAGE="http://sources.redhat.com/lvm2/"
+SRC_URI="ftp://sources.redhat.com/pub/lvm2/${PN/lvm/LVM}.${PV}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -16,14 +14,16 @@ DEPEND=">=sys-libs/device-mapper-1.00.07"
 RDEPEND="${DEPEND}
 	!sys-fs/lvm-user"
 
+S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
+
 src_compile() {
-	econf || die
+	econf
 
 	# Parallel build doesn't work.
 	emake -j1 || die "compile problem"
 }
 
 src_install() {
-	einstall sbindir="${D}/sbin" || die
+	einstall sbindir="${D}/sbin"
 	dodoc BUGS COPYING* INSTALL INTRO README TODO VERSION doc/*
 }
