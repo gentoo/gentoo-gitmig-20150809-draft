@@ -7,8 +7,8 @@ MD5 67131dd9bf95d27be0abb143fd60199a mono-0.95.ebuild 1606
 MD5 4854360d1955592fb8e93f7bf4efa93d mono-0.31.ebuild 2603
 MD5 d7bf41448695033862db9bb4cc7c3d97 ChangeLog 7488
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 17591b314adc47fc62b44e6ad37b804f files/dotnet.conf 581
-MD5 b6d590bc23c22bc80ea11b14e833555a files/dotnet.init 1042
+MD5 9f4b4eb6a1555ed574dbdd359cae3070 files/dotnet.conf 573
+MD5 f33c78b627cbbc1db2ab5f6cc5299e70 files/dotnet.init 1034
 MD5 33b073ed2746ffc3552b2c68a2215b56 files/digest-mono-0.30.1 127
 MD5 43da8709d0752a2ef9f9dfb050a05d9f files/digest-mono-0.28 123
 MD5 b1d7d1f8b30cadd81ca257cfb0126f2b files/digest-mono-0.30 123
