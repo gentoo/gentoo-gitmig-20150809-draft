@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.20050218.ebuild,v 1.2 2005/02/24 05:51:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050325.ebuild,v 1.1 2005/03/31 07:06:41 usata Exp $
 
 TETEX_PV=3.0
 TEXMF_PATH=/var/lib/texmf
@@ -13,9 +13,9 @@ HOMEPAGE="http://www.ascii.co.jp/pb/ptex/
 	http://www.fsci.fuk.kindai.ac.jp/aftp/pub/ptex/utils/"
 
 PTEX_TEXMF_PV=2.3
-PTEX_SRC="ptex-src-${PV%.*}.tar.gz"
+PTEX_SRC="ptex-src-${PV%_*}.tar.gz"
 PTEX_TEXMF="ptex-texmf-${PTEX_TEXMF_PV}.tar.gz"
-PTETEX=ptetex3-${PV//*.}
+PTETEX=ptetex3-${PV//*_p}
 
 S=${WORKDIR}/tetex-src-${TETEX_PV}
 
@@ -67,7 +67,7 @@ src_unpack() {
 	cd ${S}/texk
 	echo ">>> Unpacking dvipsk-jpatch to ${S}/texk ..."
 	tar xzf ${WORKDIR}/${PTETEX}/archive/dvipsk-*.tar.gz || die
-	epatch dvipsk-*.diff
+	epatch dvipsk-*.patch
 
 	if use X ; then
 		cd ${S}
@@ -128,6 +128,9 @@ src_compile() {
 }
 
 src_install() {
+	addwrite /var/cache/fonts
+	addwrite /var/lib/texmf
+	addwrite /usr/share/texmf
 	tetex_src_install base doc fixup
 
 	einfo "Installing pTeX ..."

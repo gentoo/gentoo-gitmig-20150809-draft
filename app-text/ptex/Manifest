@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7e2177040b2e7e20d504818b3c0f905 ptex-3.1.5.ebuild 3536
 MD5 8d593730a37cadd2d0bfee8ebd03fc9f ChangeLog 5716
 MD5 d2fd604b88f163116f23670ca84b1815 metadata.xml 531
 MD5 797efb394010cf53628df42097d24c58 ptex-3.1.8.1.ebuild 4917
-MD5 c004152e2907bd7aca89e8fbf88bdce4 ptex-3.1.8.20050218.ebuild 4828
+MD5 b7e2177040b2e7e20d504818b3c0f905 ptex-3.1.5.ebuild 3536
+MD5 f8238325da4dcddd3f6d51aafd6ef6c8 ptex-3.1.8.1_p20050325.ebuild 4829
 MD5 b8191d6e039d4434e4fd70d1b19cc4a0 ptex-3.1.4-r2.ebuild 3526
-MD5 d4d469b2a8b88c4d97440979fd5c2a41 files/20updmap-ja.cfg 43
-MD5 4d1956517ccb98e9be75cdf83f9b7ac0 files/20fmtutil-platex.cnf 121
-MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
-MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
-MD5 661aaa7be66ace377a17bb300e99b508 files/digest-ptex-3.1.8.1 271
-MD5 424cf5900fe6b1af9867cd2e8c952292 files/digest-ptex-3.1.4-r2 718
-MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
-MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
-MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
-MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
-MD5 6648e754bb26bb4ebeaae5a2051aca01 files/digest-ptex-3.1.8.20050218 271
-MD5 3e6bd16aa42a2c0f77d9ea14dabb96f3 files/digest-ptex-3.1.5 718
-MD5 d15f2d9ab04bcfa15c3e737f106d1625 files/psfonts-ja.map 1158
 MD5 a1829990d625a3607cc38b99a27b9574 files/20texmf-cmap.cnf 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRqB+ugEuf3OQ0akRAkqxAJ9ufF03mO0Jnslc64r2PAe/szP/WACgjuy/
-9Q4QnEqEwrLGn74g/oOkm1o=
-=jQSY
------END PGP SIGNATURE-----
+MD5 661aaa7be66ace377a17bb300e99b508 files/digest-ptex-3.1.8.1 271
+MD5 d15f2d9ab04bcfa15c3e737f106d1625 files/psfonts-ja.map 1158
+MD5 3e6bd16aa42a2c0f77d9ea14dabb96f3 files/digest-ptex-3.1.5 718
+MD5 4d1956517ccb98e9be75cdf83f9b7ac0 files/20fmtutil-platex.cnf 121
+MD5 87133c725fc92254cef1555a5643da86 files/digest-ptex-3.1.8.1_p20050325 271
+MD5 424cf5900fe6b1af9867cd2e8c952292 files/digest-ptex-3.1.4-r2 718
+MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
+MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
+MD5 d4d469b2a8b88c4d97440979fd5c2a41 files/20updmap-ja.cfg 43
+MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
+MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
+MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
+MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
