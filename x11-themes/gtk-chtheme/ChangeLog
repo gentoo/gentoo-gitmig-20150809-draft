@@ -1,0 +1,14 @@
+# ChangeLog for gnome-extra/gtk-chtheme
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/ChangeLog,v 1.1 2004/05/06 21:47:16 khai Exp $
+
+*gtk-chtheme-0.3.1 (06 May 2004)
+
+  06 May 2004; Yi Qiang <khai@gentoo.org> +metadata.xml,
+  +gtk-chtheme-0.3.1.ebuild:
+  Second commmit of the same ebuild, moved from gnome-extra to x11-themes, also
+  fixed headers and fixed the src_install() routine.
+
+  05 May 2004; Yi Qiang <khai@gentoo.org> :
+  Initial commit, thanks to Hans Oluf Hagen for ebuild (Bug #39837)
+
