@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.7 2004/01/09 22:23:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.8 2004/02/17 20:09:09 vapier Exp $
 
 MY_P="${P/-/-snap-}"
 EZM3="ezm3-1.1"
@@ -13,9 +13,9 @@ SRC_URI="ftp://ftp3.freebsd.org/pub/FreeBSD/development/CVSup/sources/${MY_P}.ta
 	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${EZM3}-src.tar.bz2
 	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${EZM3}-${EZM3_TARGET}-boot.tar.bz2"
 
-KEYWORDS="x86 ~ppc -sparc"
 LICENSE="BSD"
 SLOT="0"
+KEYWORDS="-* x86 ~ppc"
 IUSE="X opengl static"
 
 DEPEND="virtual/glibc
