@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r5.ebuild,v 1.2 2004/05/30 15:04:58 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r5.ebuild,v 1.3 2004/05/31 03:02:15 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc"
 
@@ -417,6 +417,8 @@ src_unpack() {
 
 	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
+
+	epatch ${FILESDIR}/3.4.0/gcc34-ppc64-typo-fix.patch
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h

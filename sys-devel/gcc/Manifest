@@ -23,12 +23,12 @@ MD5 c7e55fc7f4bfd637f45786c0c5fbb365 gcc-2.95.3-r8.ebuild 9095
 MD5 b5f1d4d71ad38c5c5e489466ac0ad399 gcc-3.3.3-r3.ebuild 24690
 MD5 9fb6a5505f97c736a3f40f84ea9c71da gcc-3.3.2-r6.ebuild 21217
 MD5 e6ead3ed008a1fe7adc73ddae996ade3 gcc-3.3.2-r1.ebuild 17965
-MD5 b14eb3cc30ef1022488ef67e4a5cf66b ChangeLog 53131
+MD5 5ab1b5b20b99f597ed651df19b66e8de ChangeLog 53273
 MD5 f00b83c775e21267dcfc5c57412dc961 gcc-3.3.2.ebuild 17908
 MD5 3b2fd4637666e71aae9954782cd23016 gcc-3.3.3_pre20040426.ebuild 22633
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 66229a95f7bb2856fd07dfd0d6589480 gcc-3.3.3-r5.ebuild 25326
-MD5 83b2f75e875867dbb252ed18aaebc641 gcc-3.4.0-r5.ebuild 27902
+MD5 ce8ed3d30600a2c72bc550e7bc02fc0d gcc-3.4.0-r5.ebuild 27956
 MD5 d70bcc196f1d68275346f067efcb9373 files/cc 20
 MD5 dcf3646d19d351cc4d95a8096c6eaf58 files/cpp 20
 MD5 e962c23dd4396850f0e36424ec5596d7 files/digest-gcc-3.3.3_pre20040408-r1 138
@@ -149,5 +149,6 @@ MD5 ff6d7b5082c5e39fab8a5d8932c1a8b7 files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 
 MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-branding.patch 839
 MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.patch 653
 MD5 02c346508a61b399952de4f8855871ff files/3.4.0/gcc-3.4.0-r3-gentoo-branding.patch 781
+MD5 17872e0a3d1067207208de03985c2978 files/3.4.0/gcc34-ppc64-typo-fix.patch 299
 MD5 66df5567226338b7504bbd3c25cea92c files/3.4.0/gcc-3.4-libiberty-pic.patch 370
 MD5 66edf32babf498517ca56fa44c901f26 files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch 894
