@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/clustalx-1.83.ebuild,v 1.3 2004/11/17 14:17:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/clustalx-1.83.ebuild,v 1.4 2004/11/18 09:13:29 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp-igbmc.u-strasbg.fr/pub/ClustalX/clustalx1.83.sun.tar.gz"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="app-sci/ncbi-tools
