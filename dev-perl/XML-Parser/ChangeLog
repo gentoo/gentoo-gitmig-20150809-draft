@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.10 2003/04/16 12:47:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.11 2003/07/31 13:48:11 mcummings Exp $
+
+*XML-Parser-2.33 (31 Jul 2003)
+
+  31 Jul 2003; Michael Cummings <mcummings@gentoo.org> XML-Parser-2.33.ebuild:
+  CPAN Version bump;installs good, appears to be good, testing needed.
 
 *XML-Parser-2.31-r1 (29 Oct 2002)
 
