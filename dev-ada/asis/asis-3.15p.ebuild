@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.3 2003/09/18 22:11:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.4 2003/10/06 00:20:58 dholm Exp $
 
 inherit gnat
 
@@ -13,7 +13,7 @@ LICENSE="GMGPL"
 DEPEND="dev-lang/gnat"
 RDEPEND=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 src_unpack() {

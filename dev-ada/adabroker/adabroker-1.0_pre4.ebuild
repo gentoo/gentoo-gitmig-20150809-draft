@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.2 2003/09/08 07:20:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.3 2003/10/06 00:16:54 dholm Exp $
+
+inherit gnat
 
 S="${WORKDIR}/${PN}-1.0pre4"
 DESCRIPTION="AdaBroker is a CORBA implementation for Ada."
@@ -12,9 +14,7 @@ DEPEND="dev-ada/gnat"
 RDEPEND=""
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
-
-inherit gnat
+KEYWORDS="x86"
 
 src_compile() {
 	econf \

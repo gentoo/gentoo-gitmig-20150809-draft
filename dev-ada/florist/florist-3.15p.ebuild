@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.2 2003/09/18 22:23:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.3 2003/10/06 00:12:20 dholm Exp $
 
 inherit gnat
 
@@ -12,7 +12,7 @@ DEPEND="dev-lang/gnat"
 RDEPEND=""
 LICENSE="GMGPL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 S="${WORKDIR}/${P}-src"

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.1 2003/09/18 22:44:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.2 2003/10/06 00:23:44 dholm Exp $
+
+inherit gnat
 
 S="${WORKDIR}/glade-${PV}-src"
 DESCRIPTION="The GNAT implementation of the ARM Annex for Distributed Systems."
@@ -12,9 +14,7 @@ DEPEND="dev-lang/gnat"
 RDEPEND=""
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
-
-inherit gnat
+KEYWORDS="x86 ~ppc"
 
 src_compile() {
 	local CFLAGS="${ADACFLAGS} -fPIC"
