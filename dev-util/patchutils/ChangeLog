@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.19 2004/08/22 07:24:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.20 2004/08/26 01:58:45 seemant Exp $
+
+*patchutils-0.2.30 (25 Aug 2004)
+
+  25 Aug 2004; Seemant Kulleen <seemant@gentoo.org> patchutils-0.2.29.ebuild,
+  +patchutils-0.2.30.ebuild:
+  version bump, thanks to: Will Buckner <wcc@techmonkeys.org> in bug #61596.
+  Also .29 to stable x86
 
   22 Aug 2004; Joshua Kinard <kumba@gentoo.org> patchutils-0.2.29.ebuild:
   Marked stable on mips.
