@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/hdf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/ChangeLog,v 1.3 2004/02/11 11:06:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/ChangeLog,v 1.4 2004/02/18 07:17:36 phosphan Exp $
+
+*hdf-4.2.0-r2 (18 Feb 2004)
+
+  18 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> hdf-4.2.0-r2.ebuild:
+  Little fixes, see bug #41146 for details.
 
 *hdf-4.2.0-r1 (11 Feb 2004)
 
