@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.5_beta.ebuild,v 1.1 2002/11/29 11:00:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.5_beta.ebuild,v 1.2 2002/12/07 05:54:03 jmorgan Exp $
 
 #mysql-4.0.5a_beta.ebuild:
 # -->!!! Name error in 4.0.5a_beta: characters before _ must be numeric
@@ -34,7 +34,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	>=sys-libs/zlib-1.1.3
 	sys-devel/perl
 	sys-apps/procps"
-KEYWORDS="~x86 ~sparc64 ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
