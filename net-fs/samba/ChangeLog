@@ -1,13 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.49 2003/10/18 00:59:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.50 2003/11/02 19:15:23 woodchip Exp $
 
-
-*samba-3.0.0-r1 (25 Sep 2003)
+  02 Nov 2003; Donny Davies <woodchip@gentoo.org> metadata.xml:
+  Add metadata.xml.
 
   17 Oct 2003; Joshua Kinard <kumba@gentoo.org> samba-2.2.8a.ebuild,
   samba-3.0.0-r1.ebuild:
   Added ~mips to KEYWORDS; Works for me well on mips, but still need wider use
+
+*samba-3.0.0-r1 (25 Sep 2003)
 
   25 Sep 2003; Donny Davies <woodchip@gentoo.org> samba-3.0.0-r1.ebuild,
   files/smb.conf.example-samba3, files/winbind-init:
