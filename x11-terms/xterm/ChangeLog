@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.17 2004/04/15 15:11:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.18 2004/04/18 21:05:42 lv Exp $
+
+  18 Apr 2004; Travis Tilley <lv@gentoo.org> xterm-184.ebuild:
+  marking stable on amd64 as a needed dependency for xorg-x11. see bug 48261 for
+  more details.
 
   15 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-179.ebuild,
   xterm-184.ebuild:
