@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/php-accelerator-1.3.3-r1.ebuild,v 1.3 2004/06/25 01:23:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/php-accelerator-1.3.3-r1.ebuild,v 1.4 2004/06/27 14:22:22 stuart Exp $
 
 DESCRIPTION="The ionCube PHP Accelerator"
 HOMEPAGE="http://www.php-accelerator.co.uk/"
@@ -38,7 +38,7 @@ PHPA="php_accelerator-${PHPA_VER}_php-${PHP_VER}_${OS}_${CPU}-glibc${GLIBC_VER}"
 
 SRC_URI="http://www.php-accelerator.co.uk/releases/${OS}_${CPU}-glibc${GLIBC_VER}/${PHPA_VER}_${PHP_VER}/${PHPA}.tgz"
 DEPEND=""
-RDEPEND=">=virtual/glibc-${GLIBC_VER} >=virtual/php-${PHP_VER}"
+RDEPEND=">=sys-libs/glibc-${GLIBC_VER} >=virtual/php-${PHP_VER}"
 
 S=${WORKDIR}/${PHPA}
 
