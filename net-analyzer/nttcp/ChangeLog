@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nttcp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.1 2004/03/04 23:18:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.2 2004/04/08 03:30:56 lv Exp $
+
+  07 Apr 2004; Travis Tilley <lv@gentoo.org> nttcp-1.47.ebuild:
+  added ~amd64 keyword
 
 *nttcp-1.47 (04 Mar 2004)
 
