@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.64 2005/01/03 00:08:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.65 2005/01/19 23:27:44 vapier Exp $
+
+  19 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  files/1.5.6/libtool-1.5-filter-host-tags.patch:
+  Update the infer tag patch to go both ways #77921.
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
