@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r11.ebuild,v 1.1 2004/11/27 00:45:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r12.ebuild,v 1.1 2004/12/01 11:15:23 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20040712"			# Date of diff between kernel.org and lmo CVS
 COBALTPATCHVER="1.4"			# Tarball version for cobalt patches
-SECPATCHVER="1.5"			# Tarball version for security patches
+SECPATCHVER="1.6"			# Tarball version for security patches
 GENPATCHVER="1.0"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"

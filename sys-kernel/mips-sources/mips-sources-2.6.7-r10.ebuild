@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.7-r9.ebuild,v 1.1 2004/11/27 00:45:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.7-r10.ebuild,v 1.1 2004/12/01 11:15:23 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20040621"			# Date of diff between kernel.org and lmo CVS
 COBALTPATCHVER="1.5"			# Tarball version for cobalt patches
-SECPATCHVER="1.5"			# Tarball version for security patches
+SECPATCHVER="1.6"			# Tarball version for security patches
 GENPATCHVER="1.0"                       # Tarball version for generic patches
 IP32DIFFDATE="20040402"			# Date of diff of iluxa's minpatchset
 EXTRAVERSION="-mipscvs-${CVSDATE}"
@@ -102,7 +102,7 @@ src_unpack() {
 		epatch ${WORKDIR}/security/CAN-2004-0883-2.6.8.1-smbfs_remote_overflows.patch
 		epatch ${WORKDIR}/security/security-2.6-attr_check.patch
 		epatch ${WORKDIR}/security/security-2.6-proc_race.patch
-		epatch ${WORKDIR}/security/security-2.6.8.1-binfmt_elf-fixes.patch
+		epatch ${WORKDIR}/security/security-2.6.7-binfmt_elf-fixes.patch
 		epatch ${WORKDIR}/security/security-2.6-remote_ddos.patch
 		epatch ${WORKDIR}/security/security-2.6.7-mips-ptrace.patch
 	eend

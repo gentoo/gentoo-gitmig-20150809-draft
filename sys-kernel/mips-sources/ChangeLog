@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.63 2004/11/27 12:35:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.64 2004/12/01 11:15:23 kumba Exp $
+
+*mips-sources-2.4.27-r4 (01 Dec 2004)
+
+  01 Dec 2004; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.4.26-r11.ebuild, +mips-sources-2.4.26-r12.ebuild,
+  -mips-sources-2.4.27-r3.ebuild, +mips-sources-2.4.27-r4.ebuild,
+  +mips-sources-2.6.7-r10.ebuild, -mips-sources-2.6.7-r9.ebuild,
+  -mips-sources-2.6.8.1-r3.ebuild, +mips-sources-2.6.8.1-r4.ebuild,
+  -mips-sources-2.6.9-r4.ebuild, +mips-sources-2.6.9-r5.ebuild:
+  Security updates again; CAN-2004-0814 had a newer patch to be applied to 2.4.*
+  and 2.6.7/2.6.8.1. Also included an updated patch for the binfmt_elf vuln.
+  SECPATCHVER bumped to 1.6.
 
   27 Nov 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.6.9-r4.ebuild:
   Tested to work (for the most part) on IP22, works well for Cobalt, and
