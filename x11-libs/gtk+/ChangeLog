@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.84 2003/12/07 15:03:55 foser Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.85 2004/02/05 22:32:49 spider Exp $
+
+*gtk+-1.2.10-r11 (05 Feb 2004)
+
+  05 Feb 2004; <spider@gentoo.org> gtk+-1.2.10-r11.ebuild:
+  Minor change to DEPEND, adding an RDEPEND to get intltool out of the RDEPEND
+  set. this deserves a revbump only to make sure that packages get updated.
 
   07 Dec 2003; foser <foser@gentoo.org> gtk+-1.2.10-r10.ebuild :
   Fix sysconfdir to /etc to fix gtkrc problems described in #34279
