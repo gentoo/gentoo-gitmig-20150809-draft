@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 939f0b97be45e42820ffaca672bda62e ChangeLog 2059
 MD5 5015f7e54404d64974a4a4829cf8e6fc PEAR-Net_Socket-1.0.1-r1.ebuild 371
-MD5 2f5d7a34e27b10d8bff5f5a05a4980ab PEAR-Net_Socket-1.0.1.ebuild 562
-MD5 2b887ba8da35f707fdc84ecb8783eb7d PEAR-Net_Socket-1.0.2.ebuild 373
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 2b3789b8019576174b7af3db8bd379f1 PEAR-Net_Socket-1.0.5.ebuild 380
-MD5 1e3fb090d5a7053f58557783f2c114c7 files/digest-PEAR-Net_Socket-1.0.1 63
+MD5 27b290196ccc5ecc975c5cf3590ccdf8 ChangeLog 2192
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 1e3fb090d5a7053f58557783f2c114c7 files/digest-PEAR-Net_Socket-1.0.1-r1 63
-MD5 d1b23cb2afe5209ed4ead4c11dff126a files/digest-PEAR-Net_Socket-1.0.2 63
 MD5 c5da95fc0e50b850db1d691af4123319 files/digest-PEAR-Net_Socket-1.0.5 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCDiSOaGfFFLhbXWkRAuybAJoC5FSxiGK+MvPfwXcReDUm8UdB0gCfeYJI
-MlTj9JfvixwPsQT/LvNjeCM=
-=e3Np
+iD8DBQFCLd7aaGfFFLhbXWkRAngXAKCA5rUT2z4zXy6dWn6pUhRKHUMk3QCeKIeJ
+toA74TbIEzMGyyimRTyRnfQ=
+=WDCD
 -----END PGP SIGNATURE-----
