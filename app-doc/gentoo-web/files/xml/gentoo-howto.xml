@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<!-- $Id: gentoo-howto.xml,v 1.19 2001/08/13 19:20:17 drobbins Exp $ -->
+<!-- $Id: gentoo-howto.xml,v 1.20 2001/08/17 21:52:07 drobbins Exp $ -->
 
 <guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
@@ -530,7 +530,7 @@ to call <c>./configure</c> with the <c>--infodir=/usr/share/info</c> argument.
 <body><p>These are scripts you can use in your ebuild files to perform common tasks.</p>
 <table>
 <tr><ti>dobin</ti><ti>installs the specified binaries into <path>DESTTREE/bin</path></ti></tr>
-<tr><ti>dodir</ti><ti>sets the target prefix (<path>DESTTREE</path>) for <c>dobin</c>, <c>dolib</c>, <c>doman</c>, etc.</ti></tr>
+<tr><ti>into</ti><ti>sets the target prefix (<path>DESTTREE</path>) for <c>dobin</c>, <c>dolib</c>, <c>doman</c>, etc.</ti></tr>
 <tr><ti>dodoc</ti><ti>installs the specified files into the packages documentation directory (<path>/usr/share/doc/${PF}</path>)</ti></tr>
 <tr><ti>doexe</ti><ti></ti></tr>
 <tr><ti>dohard</ti><ti></ti></tr>
