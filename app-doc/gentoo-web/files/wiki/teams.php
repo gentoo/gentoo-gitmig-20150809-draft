@@ -1,22 +1,9 @@
 <?php	include "functions.php";
 	main_header();
-	if     ( $team == 'system' ) {
-		$team =     'System';
-		$team_num = 2;
-	} elseif ( $team == 'desktop' ) {
-		$team =     'Desktop';
-		$team_num = 3;
-	} elseif ( $team == 'server' ) {
-		$team =     'Server';
-		$team_num = 4;
-	} elseif ( $team == 'tools' ) {
-		$team =     'Tools';
-		$team_num = 5;
-	} elseif ( $team == 'infrastructure' ) {
-		$team =     'Infrastructure';
-		$team_num = 6;
-	} else {
-		print '<p style="font-color:red;">Unknown team.</p>';
+	$team_num = $team;
+	$team = $teams[$team];
+	if (!$team) {
+		print '<p style="color:red;">Unknown team.</p>';
 		main_footer();
 		exit;
 	}

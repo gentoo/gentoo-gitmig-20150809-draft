@@ -72,7 +72,7 @@ global $uid, $dbusername; ?>
 <?php } # main header ?>
 
 <?php function main_footer () {
-global $uid, $dbusername, $show_privates, $list; ?>
+global $uid, $dbusername, $show_privates, $list, $teams; ?>
 	</td>
 	<td width="175" valign="top">
 
@@ -138,11 +138,9 @@ global $uid, $dbusername, $show_privates, $list; ?>
 
 			<p style="font-size:x-small;font-weight:bold;">Teams</p>
 			<ul>
-				<li><a href="teams.php?team=system">System</a>
-				<li><a href="teams.php?team=desktop">Desktop</a>
-				<li><a href="teams.php?team=server">Server</a>
-				<li><a href="teams.php?team=tools">Tools</a>
-				<li><a href="teams.php?team=infrastructure">Infrastructure</a>
+				<?php while ( $each = each($teams) ) { ?>
+				<li><a href="teams.php?team=<?=$each['key'];?>"><?=$each['value'];?></a>
+				<?php } ?>
 			</ul>
 
 
