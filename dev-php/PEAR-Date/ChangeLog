@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.19 2005/03/27 14:42:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.20 2005/04/01 04:45:11 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> PEAR-Date-1.4.3.ebuild:
+  stable on ia64
 
   27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> PEAR-Date-1.4.3.ebuild:
   Stable on alpha.

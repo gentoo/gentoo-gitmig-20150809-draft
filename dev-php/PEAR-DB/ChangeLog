@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.23 2005/03/27 19:48:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.24 2005/04/01 04:44:43 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> PEAR-DB-1.6.8.ebuild:
+  stable on ia64
 
   27 Mar 2005; Guy Martin <gmsoft@gentoo.org> PEAR-DB-1.6.8.ebuild:
   Stable on hppa.

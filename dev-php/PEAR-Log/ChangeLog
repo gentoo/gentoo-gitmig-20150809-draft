@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.25 2005/03/27 15:37:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.26 2005/04/01 04:45:46 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> PEAR-Log-1.8.4.ebuild:
+  stable on ia64
 
   27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> PEAR-Log-1.8.4.ebuild:
   Stable on alpha.
