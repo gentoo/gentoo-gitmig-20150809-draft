@@ -1,0 +1,13 @@
+--- module-init-tools-0.9.12/modprobe.c.orig	2003-07-12 20:00:52.000000000 +0200
++++ module-init-tools-0.9.12/modprobe.c	2003-07-12 20:28:04.000000000 +0200
+@@ -1015,7 +1015,9 @@ static char *read_config(const char *fil
+ 				newresult = read_config(newfilename, 1, name,
+ 							dump_only, removing,
+ 							options, commands);
+-				if (!result)
++				/* Files included override aliases, etc that was
++				 * already set ... */
++				if (newresult)
+ 					result = newresult;
+ 			}
+ 		} else if (strcmp(cmd, "options") == 0) {
