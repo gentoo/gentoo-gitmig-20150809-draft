@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.2 2003/09/20 05:40:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.3 2003/10/05 21:12:18 brad_mssw Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.atstake.com/research/tools/network_utilities/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 IUSE="ipv6 static"
 
 DEPEND="virtual/glibc"
