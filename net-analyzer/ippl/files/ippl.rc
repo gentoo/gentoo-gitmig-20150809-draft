@@ -1,0 +1,39 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/files/ippl.rc,v 1.1 2002/11/04 13:01:39 aliz Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -f /etc/ippl.conf ]
+	then
+		eerror "Please create /etc/ippl.conf"
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || return $?
+	ebegin "Starting ippl"
+	start-stop-daemon --start --quiet --pidfile /var/run/ippl.pid \
+		--startas /usr/sbin/ippl
+	eend $? "Failed to start ippl"
+}
+
+stop() {
+	ebegin "Stopping ippl"
+	start-stop-daemon --stop --quiet --pidfile /var/run/ippl.pid
+	eend $? "Failed to stop ippl"
+
+	# clean stale pidfile
+	if [ -f /var/run/ippl.pid ]
+	then
+		rm -f /var/run/ippl.pid
+	fi
+}
+
+
