@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.0.1.ebuild,v 1.4 2004/03/31 17:49:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.0.1.ebuild,v 1.5 2004/04/17 16:21:15 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 
-IUSE=""
+IUSE="oggvorbis"
 
 RDEPEND=">=dev-db/sqlite-2.8
 	>=media-libs/id3lib-3.8
