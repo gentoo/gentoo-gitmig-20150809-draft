@@ -1,10 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ed31b8c7a6237f0ac57798b377390679 gnumeric-1.2.12.ebuild 1959
 MD5 5159958a88d136c042a6c414d9996b93 gnumeric-1.2.6.ebuild 1995
-MD5 2e1e561c91a1731a7e23e24c6b038dd5 gnumeric-1.2.13.ebuild 1961
-MD5 61d64e37e874d9bc6ae37673432e374c gnumeric-1.2.2.ebuild 1663
+MD5 99009c801e964044a620fbeb5acc76fc gnumeric-1.2.13.ebuild 1962
 MD5 95e26a046f058155ae835e69aa6f59e3 ChangeLog 10294
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f8459d46bf2c4e9d6cba7194b184146d gnumeric-1.0.13-r1.ebuild 2819
@@ -12,15 +8,7 @@ MD5 3b0b9ef38a3445a52df579b1aff3e7b1 files/gnumeric-1.2.1-fix_doc_destdir_instal
 MD5 48c7f38d541d59ac1a888121072bc6df files/digest-gnumeric-1.2.12 70
 MD5 34982e496dcc5110bba611652645d400 files/digest-gnumeric-1.2.13 70
 MD5 e3240d8a40c24a464b95631ef8c41727 files/gnumeric-1.2.0-fix_doc_destdir_install.patch 563
-MD5 e6e85c25e0f6c2ba3b3c5af4597f706e files/digest-gnumeric-1.2.2 69
 MD5 2513c8977def1ef6ce7489be0d52afed files/digest-gnumeric-1.2.6 69
 MD5 7843727e1fcde50a4a2283ba34da3c1d files/digest-gnumeric-1.0.13-r1 69
 MD5 b4f77780f0a0a1a29df8c8b184b2c110 files/gnumeric-1.1.16-scrollkeeper.patch 493
 MD5 4ea524a5bc0155e6fb624670d57075f7 files/gnumeric-1.2.0-gcc2_fix.patch 693
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBbZMzCHk4+ZoBpvsRAo4uAJ9RKixGujscc7tfn/3G4QopSTYqyQCcDspi
-CFikw9Xme4H6+cKITKP28IY=
-=eShi
------END PGP SIGNATURE-----
