@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.0_rc2.ebuild,v 1.4 2004/04/01 23:20:27 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.0_rc2.ebuild,v 1.5 2004/04/03 23:04:29 pylon Exp $
 
 IUSE="kde"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ppprs1.phy.tu-dresden.de/~trogisch/${PN}/download/20_LinCVS/hr_$
 HOMEPAGE="http://www.lincvs.org"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ppc ~amd64"
 LICENSE="GPL-2"
 RESTRICT="nomirror"
 
