@@ -1,4 +1,14 @@
-MD5 6e1e33d911aff5cd0aecdb2a8ed00f98 smbc-0.8.0.ebuild 1047
-MD5 c9b006f86ac253cd31878614b66fcfac ChangeLog 372
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 12e186fdfafd5b44f119074278de3de6 smbc-0.8.0.ebuild 1054
+MD5 f955356de8e33e1375d0cde3a5e2f449 ChangeLog 476
 MD5 3b97c253ef28c6b300d5e0fa53a6a90e metadata.xml 384
 MD5 8b2b37d82817c2deb7127d90a09f1c04 files/digest-smbc-0.8.0 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOPoI1lqEGTUzyQRAn/YAKDIQqOGLMaPNRsUWYgL7DbAlYAW5wCfdMyn
+njWlFn+BW/hIrWUa89avlB8=
+=mvP8
+-----END PGP SIGNATURE-----
