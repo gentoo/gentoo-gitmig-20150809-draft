@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.26 2003/10/29 23:38:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.27 2003/10/30 23:17:54 kumba Exp $
+
+
+*linux-headers-2.4.22 (21 Sep 2003)
+
+  30 Oct 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild,
+  linux-headers-2.4.22.ebuild:
+  Added a minor note in pkg_postinst() to advise users to upgrade their glibc
+  after emerging newer kernel headers.  Closes Bug #25836
+  Tweaked the ARCH= line in the same ebuilds to get assigned the value of
+  "uname -m".  This prevents any nasty surprises incase someone re-defines
+  $ARCH from the commandline (or in a script).  Closes Bug #26647.
 
   29 Oct 2003; <plasmaroo@gentoo.org> linux-headers-2.2.20.ebuild,
   linux-headers-2.2.21_pre3.ebuild, linux-headers-2.4.16-r1.ebuild,
@@ -11,8 +22,6 @@
   linux-headers-2.4.19-r1.ebuild, linux-headers-2.4.19.ebuild:
   All linux-headers ebuilds have been re-slotted to slot zero.
   Bug #32197, et al.
-
-*linux-headers-2.4.22 (21 Sep 2003)
 
   23 Oct 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild,
   linux-headers-2.4.22.ebuild:
