@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/duconv-1.1.ebuild,v 1.10 2004/02/22 20:02:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/duconv-1.1.ebuild,v 1.11 2004/03/12 08:46:22 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A small util that converts from dos<->unix"
 SRC_URI="http://people.freenet.de/tfaehr/${PN}.tgz"
 HOMEPAGE="http://people.freenet.de/tfaehr/linux.htm"
