@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.4 2005/03/24 23:40:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.5 2005/03/25 13:38:37 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
@@ -54,8 +54,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-linux26.patch #74608
 	#epatch "${FILESDIR}"/${PV}-direct-8bit-color.patch #76946
 	epatch "${FILESDIR}"/${PV}-amd64-endian.patch #77300
-	[[ $(gcc-major-version) -eq 2 ]] && \
-		epatch "${FILESDIR}"/${PV}-gcc2-asm.patch #75392
 
 	if use nas && ! use X ; then #32447
 		sed -i \

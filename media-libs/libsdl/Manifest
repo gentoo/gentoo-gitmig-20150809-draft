@@ -2,7 +2,7 @@ MD5 2e6ecdfb2323b110e8029a87d1dcac06 ChangeLog 11680
 MD5 cbbab78f5125f834ffb0f83be4957736 libsdl-1.2.6-r3.ebuild 3013
 MD5 7f079469132865bdd25780277639f098 libsdl-1.2.7-r3.ebuild 3960
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
-MD5 4028d08fdc66e982428ece0b665b3454 libsdl-1.2.8-r1.ebuild 4248
+MD5 bbae8293e563b787ab5de539478dda80 libsdl-1.2.8-r1.ebuild 4158
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
 MD5 60ecfde6cc7b734ef03b93357c537674 files/1.2.8-keyrepeat.patch 598
 MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266
@@ -21,6 +21,5 @@ MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r3 62
 MD5 88437c556d9b4571f08de4a4e2d9323a files/1.2.8-libcaca.patch 23278
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.8-nobuggy-X.patch 568
 MD5 4ce5ec18eafcf0b1c6caf31c9f67cb1d files/digest-libsdl-1.2.8-r1 62
-MD5 22c541533c3c588f430b62440053071f files/1.2.8-gcc2-asm.patch 10160
 MD5 e6471a33cb0d62a807640ef3eccffb5f files/1.2.8-direct-8bit-color.patch 7414
 MD5 358c3d6380bf0b6ba3e78ce47c5ec578 files/libsdl-1.2.8-gcc2.patch.bz2 2639
