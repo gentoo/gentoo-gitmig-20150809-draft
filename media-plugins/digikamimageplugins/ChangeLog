@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/digikamimageplugins
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.1 2004/10/18 21:13:18 carlo Exp $
+
+*digikamimageplugins-0.7.0_beta1 (18 Oct 2004)
+
+  18 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +digikamimageplugins-0.7.0_beta1.ebuild:
+  "Initial" commit, previous known as digikamplugins.
+
