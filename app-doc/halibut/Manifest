@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea16c23a8c61492a87e597228c25cc09 ChangeLog 497
 MD5 bd42a69cf736d706416b099de382bae3 halibut-0.9.ebuild 776
-MD5 5b56c893a4beda62d4961c94c415c4dd metadata.xml 300
+MD5 09dab33b82af3bf0a492beeb04d6e2b7 metadata.xml 264
 MD5 68e53279bef13dda03f71e9f89e5c68f files/digest-halibut-0.9 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhLEqHTu7gpaalycRAoT3AJsGaVlLMHdp5ReILyfSrZT2XyduagCffDfI
+cFVDvSl+4d1LcPlk0EF/bvQ=
+=TMfJ
+-----END PGP SIGNATURE-----
