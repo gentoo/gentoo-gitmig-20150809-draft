@@ -1,8 +1,13 @@
 # ChangeLog for app-pda/synce-libsynce
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/ChangeLog,v 1.5 2004/03/26 12:34:10 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/ChangeLog,v 1.6 2004/03/30 12:10:58 tad Exp $
 
-*synce-libsynce-0.8.9 (26 Mar 2004)
+*synce-libsynce-0.8.9 (30 Mar 2004)
+
+  30 Mar 2004; Troy Dack <troy@gentoo.org> synce-libsynce-0.8.9.ebuild,
+  files/0.8.9/synce-libsynce-0.8.9-gcc33.patch:
+  Patch to build properly with gcc-3.3. Thanks to Geoffrey SCOUTHEETEN
+  <scout@scoutheeten.com> for the patch. Closes Bug #45878.
 
   26 Mar 2004; Troy Dack <troy@gentoo.org> synce-libsynce-0.8.9.ebuild:
   Version bump.
