@@ -105,10 +105,6 @@ media-libs/gst-plugins-cdparanoia
 # Masked for testing
 >=dev-util/anjuta-1.1.1
 
-# <rac@gentoo.org> 03 Jun 2003
-# testing
-=dev-lang/perl-5.8.0-r11
-
 # <caleb@gentoo.org> 29 May 2003
 # Still in testing phases
 =x11-libs/qt-3.2.0*
