@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r3.ebuild,v 1.1 2003/11/23 10:17:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r3.ebuild,v 1.2 2003/12/14 19:03:35 lanius Exp $
 
 IUSE="X"
 VBOX_V=0.1.9
@@ -20,6 +20,7 @@ RDEPEND=">=sys-apps/portage-2.0.47-r10
 	virtual/glibc
 	sys-libs/ncurses
 	sys-libs/gdbm
+	dev-lang/tcl
 	X? ( virtual/x11 )"
 
 DEPEND="${RDEPEND} virtual/linux-sources"
