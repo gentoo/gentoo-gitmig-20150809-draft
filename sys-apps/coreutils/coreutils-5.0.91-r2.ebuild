@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r2.ebuild,v 1.9 2003/12/17 04:53:16 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r2.ebuild,v 1.10 2003/12/27 21:28:12 seemant Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="nls build acl selinux static"
 
-PATCH_VER=1.4.1
+PATCH_VER=1.4.2
 PATCHDIR=${WORKDIR}/patch
 
 S=${WORKDIR}/${P}
@@ -24,7 +24,7 @@ KEYWORDS="~x86 ppc ~sparc alpha hppa ~arm ~mips ia64 amd64 ppc64"
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.49
 	>=sys-devel/automake-1.7.6
-	sys-devel/autoconf
+	>=sys-devel/autoconf-2.57
 	sys-apps/help2man
 	ppc? ( >=sys-devel/m4-1.4-r1 )
 	nls? ( sys-devel/gettext )
