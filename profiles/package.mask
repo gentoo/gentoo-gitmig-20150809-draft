@@ -258,3 +258,8 @@ gnome-apps/gnapster
 # Untested
 >=gnome-base/bonobo-1.0.11
 >=gnome-base/ORBit-0.5.12
+
+
+# Added this to fix ext3 kernel oops for me.  If drobbins
+# will have a look at it and verify
+=sys-kernel/linux-sources-2.4.13
