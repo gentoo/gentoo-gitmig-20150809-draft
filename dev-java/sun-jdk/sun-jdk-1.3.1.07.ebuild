@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.07.ebuild,v 1.1 2003/04/23 06:16:50 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.07.ebuild,v 1.2 2003/04/23 20:21:28 strider Exp $
 
 IUSE="doc"
 
@@ -9,8 +9,8 @@ inherit java nsplugins
 At="j2sdk-1_3_1_07-linux-i586.bin"
 S="${WORKDIR}/jdk1.3.1_07"
 SRC_URI=""
-DESCRIPTION="Sun Java Development Kit 1.3.1"
-HOMEPAGE="http://java.sun.com/j2se/1.3/download-linux.html"
+DESCRIPTION="Sun Java Development Kit 1.3.1_07"
+HOMEPAGE="http://java.sun.com/j2se/1.3/download.html"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.7
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
@@ -20,7 +20,7 @@ PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 LICENSE="sun-bcla"
 SLOT="1.3"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then

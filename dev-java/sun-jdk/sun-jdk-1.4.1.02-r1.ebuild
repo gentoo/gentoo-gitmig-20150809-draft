@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.01-r1.ebuild,v 1.5 2003/03/09 14:26:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.02-r1.ebuild,v 1.1 2003/04/23 20:21:29 strider Exp $
 
 IUSE="doc"
 
 inherit java nsplugins
 
-At="j2sdk-1_4_1_01-linux-i586.bin"
-S="${WORKDIR}/j2sdk1.4.1_01"
-DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1_01"
+At="j2sdk-1_4_1_02-linux-i586.bin"
+S="${WORKDIR}/j2sdk1.4.1_02"
+DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1_02"
 HOMEPAGE="http://java.sun.com/j2se/1.4.1/download.html"
 SRC_URI=""
 
 SLOT="1.4"
 LICENSE="sun-bcla"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 
 DEPEND=">=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
@@ -29,7 +29,7 @@ src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
 		die "Please download ${At} from ${HOMEPAGE} (select the \"Linux self-extracting file\" package format of the SDK) and move it to ${DISTDIR}"
 	fi
-	tail +436 ${DISTDIR}/${At} > install.sfx
+	tail +430 ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
 	./install.sfx || die
 	rm install.sfx

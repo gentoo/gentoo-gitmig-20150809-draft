@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg
 # Maintainer: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/files/sun-jdk-1.4.1.02,v 1.1 2003/03/06 18:48:17 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/files/sun-jdk-1.4.1.02,v 1.2 2003/04/23 20:21:29 strider Exp $
 
 VERSION="Sun JDK @PV@"
 JAVA_HOME=/opt/@P@
-CLASSPATH=/opt/@P@/jre/lib/rt.jar:.
+CLASSPATH=.:/opt/@P@/jre/lib:/opt/@P@/lib/tools.jar
 JDK_HOME=/opt/@P@
 JAVAC=${JAVA_HOME}/bin/javac
 ADDPATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin"
