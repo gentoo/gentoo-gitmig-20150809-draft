@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.2 2002/05/15 22:51:18 jnelson Exp $
 
+*ming-0.2a (15 May 2002)
+
+  15 May 2002; Jon Nelson <jnelson@gentoo.org> ming-0.2a.ebuild :
+  
+  New ebuild for new version!
+  
 *ming-0.1.1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
