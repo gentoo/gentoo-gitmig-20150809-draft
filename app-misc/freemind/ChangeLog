@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/freemind
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.1 2004/02/15 04:16:10 zx Exp $
+
+*freemind-0.6.7 (14 Feb 2004)
+
+  14 Feb 2004; Chris Aniszczyk <zx@gentoo.org> freemind-0.6.7.ebuild:
+  Initial Import. Bug #25717
+
