@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dvcgi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/ChangeLog,v 1.3 2003/07/12 09:22:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/ChangeLog,v 1.4 2003/07/14 18:55:12 pvdabeel Exp $
+
+*dvcgi-0.5.8 (14 Jul 2003) 
+  
+  14 Jul 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Added new version
 
 *dvcgi-0.5.7 (13 Mar 2003)
  
