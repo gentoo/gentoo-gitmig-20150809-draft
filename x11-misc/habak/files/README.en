@@ -2,7 +2,7 @@ Habak - "Ha" Background
 =========
 
 Compilation:
-	We need a compilator, X server and Imlib2. Just run make, that's all.
+	We need a compiler, X server and Imlib2. Just run make, that's all.
 
 Installation:
 	Well, place a ready binary where you want.
@@ -10,11 +10,11 @@ Installation:
 A short review:
 
 
-Habak are using layers. The lowest layer is just a black screen.
+Habak is using layers. The lowest layer is just a black screen.
 On this you can place other objects, called habaks. There are
 three kinds of habaks: graphic files (images),  fonts and "internal objects"
-(internals). Wallaper are created by putting on a black screen
-one or more any habaks. An order of habaks in command line is an order
+(internals). Wallaper is created by putting on a black screen
+one or more habaks. An order of habaks in command line is an order
 of putting them on desktop, so the last habak will be drawed above
 previous habaks.
 
@@ -25,9 +25,9 @@ Files (images) are included by -i option, ie:
 
 ./habak -i ~/graphics/wallpaper.jpg
 
-will include to desktop tapeta.jpg file. If you typed after -i not a file,
-but a directory, habak will create a list of files in this, randomly
-select any of them, and then will try to load it. In other words,
+will include to desktop wallpaper.jpg file. If you typed after -i not a file,
+but a directory, habak would create a list of files contained within, randomly
+select any one of them, and then try to load it. In other words,
 if you have a lot of pictures in ~/gfx/nice_wallpapers/ then habak
 can choose random image. You only need to run './habak -i ~/gfx/nice_wallpapers/'
 
@@ -47,16 +47,16 @@ are available, "int" and "INT", which do an interlacing. For example:
 ./habak -I int
 
 Internal habak "int" do an interlacing, by turning out even lines
-of image. Very nice effect, especially if wallpaper is so gaudy.
+of image. Very nice effect, especially if wallpaper is gaudy.
 "INT" habak works identical as "int", but turns out odd lines
 (by putting together "int" and "INT" you can turn out all lines of screen).
 
-By default lines aren't turned out in fact, but go darked (in my opinion
+By default lines aren't turned out in fact, but darked (in my opinion
 it generates a better effect), but you can control it by
 -c color modifier (i will tell about it later).
 
 
-USING PHILOSOFY
+USAGE PHILOSOPHY
 You can (and you should to) put habaks together, ie.
 
 ./habak -i ~/gfx/cool.jpg -I int -i ~/gfx/small_logo.png -f ~/.fonts/deltafont.ttf -f ~/.fonts/deltafont.ttf/10
@@ -67,7 +67,7 @@ image, then deltafont.ttf font, and eventually one more time deltafont.ttf
 file, but this time with size of 10 pixels. Simple.
 
 MODIFIERS
-Obviously, alone habaks won't be so elastic, so there are available a lot
+Obviously, alone habaks wouldn't be so elastic, so there are available a lot
 of modifiers that affect on them look. Some modifiers are even
 necessary. Modifiers are options, that are given following
 a definition of any habak - they affect only just followed habak.
@@ -152,8 +152,7 @@ i generats *two* font habaks with the same content, but
 one of it is displacemented a little, and have smaller
 transparency. It gives so nice effect of shadow under text. By
 putting together *several* such shadows differenced in size of font
-and intensivity of transparency you can achieve
-very fantasy effects.
+and intensivity of transparency you can achieve fantastic effects.
 
 Finally, fire up:
 
@@ -162,5 +161,5 @@ Finally, fire up:
 Here i added an internal habak "interlace", between picture
 from /usr/local/share/backgrounds/lens and font habaks, so
 image is faced by small grid of interlacing, but text is not
-(becouse is placed above interlacing).
+(because it is placed above interlacing).
 
