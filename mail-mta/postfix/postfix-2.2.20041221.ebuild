@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.20041221.ebuild,v 1.2 2005/01/02 21:04:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.20041221.ebuild,v 1.3 2005/01/05 17:47:13 kaiowas Exp $
 
 inherit eutils ssl-cert toolchain-funcs
-IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda"
+IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux"
 
 MY_PV=${PV%.*}-${PV##*.}
 PROD_PV=${MY_PV}
@@ -27,7 +27,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/${PROD_SRC
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~s390 ~mips ~hppa"
-#IUSE="ipv6 pam ldap mysql postgres ssl sasl vda mailwrapper mbox"
+#IUSE="ipv6 pam ldap mysql postgres ssl sasl vda mailwrapper mbox selinux"
 
 PROVIDE="virtual/mta virtual/mda"
 DEPEND=">=sys-libs/db-3.2
@@ -40,6 +40,7 @@ DEPEND=">=sys-libs/db-3.2
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
+	selinux? ( sec-policy/selinux-postfix )
 	!mailwrapper? ( !virtual/mta )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 if use ssl; then

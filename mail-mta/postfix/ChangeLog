@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.40 2005/01/02 21:04:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.41 2005/01/05 17:47:13 kaiowas Exp $
+
+  05 Jan 2005; petre rodan <kaiowas@gentoo.org> postfix-2.1.5-r1.ebuild,
+  postfix-2.2.20041221.ebuild:
+  added RDEPEND for selinux systems
 
   02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
   postfix-2.1.5-r1.ebuild:
