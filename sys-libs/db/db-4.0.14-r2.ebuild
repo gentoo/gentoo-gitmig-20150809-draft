@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.7 2003/09/08 08:39:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.8 2003/09/08 17:04:46 pappy Exp $
 
 IUSE="tcltk java doc"
 
@@ -46,10 +46,10 @@ src_compile() {
 	fi
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	then
-		CC="${CC} -yet_exec"
-	fi
+	#if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
+	#then
+	#	CC="${CC} -yet_exec"
+	#fi
 
 	../dist/configure \
 		--prefix=/usr \
