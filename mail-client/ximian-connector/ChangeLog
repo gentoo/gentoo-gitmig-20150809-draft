@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/ximian-connector
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.13 2004/10/22 22:37:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.14 2004/11/30 17:07:33 obz Exp $
+
+  30 Nov 2004; Mike Gardiner <obz@gentoo.org>
+  ximian-connector-1.2.2_p1.ebuild:
+  Removed pkg_setup() function, KEYWORDS covers that. Remove sed in global
+  scope for bash regex. Fixed SRC_URI to be cache-friendly, test for arch? (
+  get arch.rpm )
 
   22 Oct 2004; Alastair Tse <liquidx@gentoo.org>
   ximian-connector-1.4.7.2.ebuild, ximian-connector-2.0.0.ebuild,

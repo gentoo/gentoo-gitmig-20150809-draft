@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.7 2004/09/05 07:21:26 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.8 2004/11/30 17:07:33 obz Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
@@ -23,9 +23,12 @@ fi
 
 # make the ximian rev from the package version
 # 1.2.1_p2 should result in 1.2.1-2
-XIMIAN_REV=`echo ${PV} | sed -e "s/_p/-/"`
+XIMIAN_REV="${PV/_p/-}"
 
-SRC_URI="${PN}-${XIMIAN_REV}.ximian.1.${XIMIAN_ARCH}.rpm"
+# we break the cache if we use $ARCH in the global scope,
+# so we specify the x86/ppc rpms here
+SRC_URI="x86? ( ${PN}-${XIMIAN_REV}.ximian.1.i386.rpm )
+		 ppc? ( ${PN}-${XIMIAN_REV}.ximian.1.ppc.rpm )"
 RDEPEND="=mail-client/evolution-1.2*"
 DEPEND="app-arch/rpm2targz
 		${RDEPEND}"
@@ -37,14 +40,6 @@ pkg_nofetch() {
 	einfo ""
 	einfo "NOTE: x86 users should download the package for redhat-73-i386"
 	einfo "      ppc users should download the package for yellowdog-22-ppc"
-}
-
-pkg_setup() {
-	if [ "${ARCH}" != "x86" -a "${ARCH}" != "ppc" ]
-	then
-		einfo "This package is only available for x86 and ppc, sorry"
-		die "Not supported on your ARCH"
-	fi
 }
 
 src_unpack() {
