@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.19 2004/02/23 09:01:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.20 2004/04/02 09:41:04 eradicator Exp $
+
+  02 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> aumix-2.8.ebuild:
+  Removed alsa IUSE.  Fixed myconf.  Closes bug #46475.
 
   22 Feb 2004; Aron Griffis <agriffis@gentoo.org> aumix-2.8.ebuild:
   stable on alpha and ia64

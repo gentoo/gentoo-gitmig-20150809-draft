@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.13 2004/02/23 09:01:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.14 2004/04/02 09:41:04 eradicator Exp $
 
-IUSE="alsa gtk gtk2 gnome gpm nls"
+IUSE="gtk gtk2 gnome gpm nls"
 
 DESCRIPTION="Aumix volume/mixer control program."
 SRC_URI="http://jpj.net/~trevor/aumix/${P}.tar.bz2"
@@ -12,9 +12,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 hppa amd64 sparc alpha ia64"
 
+#alsa support is broken in 2.8	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
 DEPEND=">=sys-libs/ncurses-5.2
 	gpm?  ( >=sys-libs/gpm-1.19.3 )
-	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
 	gtk?  (
 			!gtk2? ( =x11-libs/gtk+-1.2* )
 			gtk2? ( >=x11-libs/gtk+-2.0.0 )
@@ -22,21 +22,20 @@ DEPEND=">=sys-libs/ncurses-5.2
 	nls?  ( sys-devel/gettext )"
 
 src_compile() {
-	local myconf
+#	`use_with alsa`
+	local myconf=`use_with gpm` `use_enable nls`
 
 	if use gtk; then
-		use gtk2 \
-			&& myconf="${myconf} --without-gtk1" \
-			|| myconf="${myconf} --without-gtk with-gtk1"
+		if use gtk2; then
+			myconf="${myconf} --with-gtk --without-gtk1"
+		else
+			myconf="${myconf} --without-gtk --with-gtk1"
+		fi
 	else
 		myconf="${myconf} --without-gtk --without-gtk1";
 	fi
 
-	use gpm  || myconf="${myconf} --without-gpm"
-	use nls  || myconf="${myconf} --disable-nls"
-	use alsa || myconf="${myconf} --without-alsa"
-
-	econf ${myconf}
+	econf ${myconf} || die
 	emake || die "make failed"
 }
 
