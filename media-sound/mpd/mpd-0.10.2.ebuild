@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.10.2.ebuild,v 1.3 2004/03/28 21:50:58 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.10.2.ebuild,v 1.4 2004/03/30 18:19:57 eradicator Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6"
 
@@ -19,7 +19,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	audiofile? ( media-libs/audiofile )
 	flac? ( >=media-libs/flac-1.1.0 )
 	media-libs/libid3tag
-	media-libs/libao
+	>=media-libs/libao-0.8.4
 	sys-libs/zlib"
 
 src_compile() {
