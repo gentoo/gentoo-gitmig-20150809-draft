@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.147 2004/04/28 15:09:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.148 2004/04/29 08:10:27 kumba Exp $
+
+  29 Apr 2004; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.3.3_pre20040420.ebuild:
+  Masked on mips until some patches can be dug/cooked/found to fix some issues.
 
   28 Apr 2004; <solar@gentoo.org> glibc-2.3.3_pre20040420.ebuild,
   files/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch:
