@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.8 2002/07/16 03:53:06 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.9 2002/07/17 11:43:45 seemant Exp $
+
+*ispell-3.2.06-r5 (17 Jul 2002)
+
+  17 Jul 2002; Seemant Kulleen <seemant@gentoo.org> ispell-3.2.06-r5.ebuild
+  files/digest-ispell-3.2.06-r5 :
+
+  Added miscfiles to DEPEND list.
 
 *ispell-3.2.06-r4 (12 Jul 2002)
 
