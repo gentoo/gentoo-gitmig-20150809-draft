@@ -1,4 +1,14 @@
-MD5 6971b62464d4406c74301023fb05d533 ChangeLog 346
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4e219f9fd161d03619fd8e85a5eced8a ChangeLog 468
 MD5 dc82b3c7abb5b3877fb77258ac463a16 metadata.xml 248
 MD5 b955b1baf8f3c49a43b3fe42adcb84c2 ri-browser-1.2.ebuild 524
-MD5 4c178094040ac4c52bbd772d722d7f84 files/digest-ri-browser-1.2 65
+MD5 b47225701771b03363bc003c0d88e2d3 files/digest-ri-browser-1.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCK0kgCHk4+ZoBpvsRAoEcAJ9lEPWL+jcPx6iPybtCZJD9qWSdJQCeJseX
+YCjJguZbYcCZuF5eHoLSk7o=
+=Mpk7
+-----END PGP SIGNATURE-----
