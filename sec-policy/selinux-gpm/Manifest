@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 749fe999813adb88457df8d2894f2a52 ChangeLog 538
 MD5 3e6e642d7c225b0a478a79a65f1e3d03 metadata.xml 390
 MD5 a8a570dc7d4217fa797861799e17b95b selinux-gpm-20040429.ebuild 393
+MD5 a48c02131ff94594e11600812220856c selinux-gpm-20041110.ebuild 283
 MD5 9c5a6991dc6f69013afcd162dfe1e2b3 files/digest-selinux-gpm-20040429 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBTjj9GFJQsIJWJy4RAt5FAJ9DGgRBMQuc6hMfxp6az/q+TPJOewCfXndP
-0yNiUEqlj6RySlpriglp3+M=
-=tjoM
------END PGP SIGNATURE-----
+MD5 66f1ea5ef8c0b48898d67ed2269a6518 files/digest-selinux-gpm-20041110 70

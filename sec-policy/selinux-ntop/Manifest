@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0b862f284eb93b9963c50dc78298b27e ChangeLog 828
+MD5 47830631c3be9966f67536c09ed1b10b ChangeLog 530
 MD5 74d53a3441e3e708148bf2f891f2c001 metadata.xml 507
-MD5 95a567dd3762d3d2d9dd0bfd9231f3d3 selinux-ntop-20040901.ebuild 377
-MD5 0fced8dd6f385ed849247c62ef624c2e selinux-ntop-20041016.ebuild 376
-MD5 c3c3824e0485400a9c57d1be1a3c48a4 files/digest-selinux-ntop-20040901 71
-MD5 5210e11bb8dff9cb300fb448fd6dd237 files/digest-selinux-ntop-20041016 71
+MD5 0d930c7c215ad52c602de6d6808391a3 selinux-ntop-20041113.ebuild 376
+MD5 0bbe8e10ca752bba4bb825f2dc759764 files/digest-selinux-ntop-20041113 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeyRhGSBEIeh4AEYRAmc5AJ9wZCBjA2JN7omi+LTMk8O7PolycwCfVLk7
-oSxgaALY2CJm/cHfpshwFUQ=
-=T6/j
+iD8DBQFBljpDGSBEIeh4AEYRAj/0AJ4orCVenlXA+l4gRtRHDNk7j7zH+gCdH5vb
+r/CrxqEWDuHuGZAZH9F7Ov0=
+=tuG/
 -----END PGP SIGNATURE-----
