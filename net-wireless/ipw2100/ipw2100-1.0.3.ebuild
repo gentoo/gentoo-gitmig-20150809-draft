@@ -1,15 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.3.ebuild,v 1.2 2005/01/29 00:22:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.3.ebuild,v 1.3 2005/02/01 10:11:42 brix Exp $
 
 inherit linux-mod eutils
 
 FW_VERSION="1.3"
+PATCH_2_4_VERSION="1"
 
 DESCRIPTION="Driver for the Intel PRO/Wireless 2100 3B miniPCI adapter"
 
-HOMEPAGE="http://ipw2100.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+HOMEPAGE="http://ipw2100.sourceforge.net"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
+		mirror://gentoo/${P}-2.4-v${PATCH_2_4_VERSION}.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,10 +41,6 @@ FW_LOADER_ERROR="${P} requires Hotplug firmware loading support (CONFIG_FW_LOADE
 CRC32_ERROR="${P} requires support for CRC32 functions (CONFIG_CRC32)."
 
 pkg_setup() {
-	if kernel_is 2 4; then
-		die "${P} does not support building against kernel 2.4.x"
-	fi
-
 	if linux_chkconfig_present CRYPTO_AES_586 && linux_chkconfig_present CRYPTO_AES; then
 		eerror "${P} requires support for AES cipher algorithms (i586) (CONFIG_CRYPTO_AES_586)."
 		eerror "This option is called CONFIG_CRYPTO_AES in kernels prior to 2.6.8."
@@ -54,6 +52,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	if kernel_is 2 4; then
+		cd ${S}
+		epatch ${WORKDIR}/${P}-2.4-v${PATCH_2_4_VERSION}.patch
+	fi
 
 	einfo "Patching Makefile to enable WPA"
 	sed -i "s:^# CONFIG_IEEE80211_WPA=:CONFIG_IEEE80211_WPA=:" \
