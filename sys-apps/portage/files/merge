@@ -5,20 +5,23 @@ from commands import *
 import string
 
 mystart=os.path.normpath(os.environ["D"])
-mypackage=os.path.normpath(os.environ["PF"])
+mypackage=os.environ["PF"]
+mycategory=os.environ["CATEGORY"]
 myroot=os.environ["ROOT"]
 
 os.chdir(mystart)
 print 
 print ">>> Merging contents of",mystart,"into live filesystem at "+myroot
-print ">>> Recording merged files to "+myroot+"var/db/pkg/"+mypackage+"/CONTENTS"
+print ">>> Recording merged files to "+myroot+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS"
 def prepare_db():
     if not os.path.isdir(myroot+"var/db"):
 	os.mkdir(myroot+"var/db",0755)
     if not os.path.isdir(myroot+"var/db/pkg"):
 	os.mkdir(myroot+"/var/db/pkg",0755)
-    if not os.path.isdir(myroot+"var/db/pkg/"+mypackage):
-	os.mkdir(myroot+"var/db/pkg/"+mypackage,0755)
+    if not os.path.isdir(myroot+"var/db/pkg/"+mycategory):
+	os.mkdir(myroot+"/var/db/pkg/"+mycategory,0755)
+    if not os.path.isdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage):
+	os.mkdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 
 def md5(x):
     myresult=getstatusoutput("/usr/bin/md5sum "+x)
@@ -73,7 +76,7 @@ def mergefiles():
 
 
 prepare_db()
-outfile=open(myroot+"var/db/pkg/"+mypackage+"/CONTENTS","w")
+outfile=open(myroot+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")
 mergefiles()
 print
 print ">>>",mypackage,"installed."

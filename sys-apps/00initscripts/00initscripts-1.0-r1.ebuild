@@ -5,7 +5,6 @@ P=00initscripts-1.0
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Colorized initscripts for Enoch"
-CATEGORY="sys"
 SRC_URI="ftp://gentoolinux.sourceforge.net/pub/gentoolinux/current/distfiles/"${A}
 
 src_install() {                               

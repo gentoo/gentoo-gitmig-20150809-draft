@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-19990827-r1.ebuild,v 1.1 2000/08/02 17:07:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-19990827-r1.ebuild,v 1.2 2000/08/16 04:38:30 drobbins Exp $
 
 P="shadow-19990827"      
 A=${P}.tar.gz
 A0=shadow-19990827-redhat.patch
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
-CATEGORY="sys-apps"
 SRC_URI="ftp://piast.t19.ds.pwr.wroc.pl/pub/linux/shadow/shadow-19990827.tar.gz"
 
 src_compile() {                           

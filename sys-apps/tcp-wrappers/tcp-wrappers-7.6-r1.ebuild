@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r1.ebuild,v 1.1 2000/08/02 17:07:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r1.ebuild,v 1.2 2000/08/16 04:38:31 drobbins Exp $
 
 P=tcp-wrappers-7.6      
 A=tcp_wrappers_7.6.tar.gz
 A0="tcp_wrappers_7.6.patch"
 S=${WORKDIR}/tcp_wrappers_7.6
 DESCRIPTION="tcp wrappers"
-CATEGORY="sys-apps"
 SRC_URI="ftp://ftp.porcupine.org/pub/security/${A}"
 
 

@@ -14,7 +14,6 @@ export PROXY
 export HTTP_PROXY
 export FTP_PROXY
 
-
 initvars() {
 	#fix up ROOT path so that it always has a / after it
 	local rlen
@@ -955,8 +954,8 @@ dyn_install() {
     echo
     echo ">>> Install ${PF} into ${D}"
     src_install
-    install -d -m0700 ${D}/var/db/pkg/${PF}
-    cp ${STARTDIR}/${EBUILD} ${D}/var/db/pkg/${PF}
+    install -d -m0700 ${D}/var/db/pkg/${CATEGORY}/${PF}
+    cp ${STARTDIR}/${EBUILD} ${D}/var/db/pkg/${CATEGORY}/${PF}
     echo ">>> Completed installing into ${D}"
     echo
     cd ${BUILDDIR}
@@ -966,7 +965,7 @@ dyn_install() {
 dyn_merge() {
     trap "" SIGINT SIGQUIT
     #not interruptible, so that the db doesn't get garbled
-    if [ -d ${ROOT}/var/db/pkg/${PF} ]
+    if [ -d ${ROOT}/var/db/pkg/${CATEGORY}/${PF} ]
     then
 	echo 
 	echo '!!!' "${PF} already merged -- unmerge first" 
@@ -1047,7 +1046,7 @@ dyn_rpm () {
 
 dyn_help() {
 	echo
-	echo "Portage v1.0"
+	echo "Portage v1.0-r1"
 	echo "Copyright 2000 Gentoo Technologies, Inc."
 	echo 
 	echo "How to use the ebuild command:"
@@ -1067,12 +1066,13 @@ dyn_help() {
 	echo
 	echo "The following settings will be used for the ebuild process:"
 	echo
-	echo "  package     : ${PF}" "( \${PF} )"
+	echo "  package     : ${PF}" 
+	echo "  category    : ${CATEGORY}" 
 	echo "  description : ${DESCRIPTION}"
-	echo "  system      : ${CHOST}" "( \${CHOST} )"
-	echo "  c flags     : ${CFLAGS}" "( \${CFLAGS} )"
-	echo "  c++ flags   : ${CXXFLAGS}" "( \${CXXFLAGS} )"
-	echo "  make flags  : ${MAKEOPTS}" "( \${MAKEOPTS} )"
+	echo "  system      : ${CHOST}" 
+	echo "  c flags     : ${CFLAGS}" 
+	echo "  c++ flags   : ${CXXFLAGS}" 
+	echo "  make flags  : ${MAKEOPTS}" 
 	echo -n "  build mode  : "
 	if [ -n "${DEBUG}" ]
 	then
@@ -1080,8 +1080,8 @@ dyn_help() {
 	else
 	    echo "production (stripped)"
 	fi
-	echo "  merge to    : ${ROOT}" "( \${ROOT} )"
-	echo "  db location : ${ROOT}var/db/pkg/${P}/CONTENTS"
+	echo "  merge to    : ${ROOT}" 
+	echo "  db location : ${ROOT}var/db/pkg/${CATEGORY}/${P}/CONTENTS"
 	echo 
 	if [ -n "$USE" ]
 	then
@@ -1154,7 +1154,7 @@ src_menu() {
 #dummy value for help printouts
 P=packagename
 
-if [ $# -lt 2 ]
+if [ $# -lt 1 ]
 then
 	echo
 	echo '!!!' "At least two arguments expected."
@@ -1197,6 +1197,7 @@ setp() {
 }
 
 export STARTDIR=`pwd`
+export CATEGORY=`/usr/bin/basename ${STARTDIR}/..`
 export O=`dirname ${STARTDIR}/${1}`
 export EBUILD=${1}
 export PEBUILD=${O}/files/${PLATFORM}.ebuild
@@ -1264,6 +1265,11 @@ do
   PERLINSTALL=`echo INSTALL$i=$D$install $PERLINSTALL`
 done
 export PERLINSTALL
+
+if [ $# -eq 1 ]
+then
+	dyn_help
+fi
 
 foo=2
 while [ $foo -le $# ]

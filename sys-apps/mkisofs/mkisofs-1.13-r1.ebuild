@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r1.ebuild,v 1.1 2000/08/02 17:07:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r1.ebuild,v 1.2 2000/08/16 04:38:28 drobbins Exp $
 
 P=mkisofs-1.13
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-CATEGORY="sys-apps"
 DESCRIPTION="Prints out location of specified executables that are in your path"
 SRC_URI="ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/mkisofs/$A"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/mkisofs.html"
