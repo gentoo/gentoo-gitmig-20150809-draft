@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.5-r2.ebuild,v 1.1 2005/01/18 22:27:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.5-r2.ebuild,v 1.2 2005/01/18 22:34:17 foser Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -35,10 +35,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 
 	if get_version; then
-		kernel_is ge 2.6.10 && break
+		kernel_is ge 2 6 10 && break
 	else
 		RKV=$(uname -r)
-		RKV=${RKV///-*}
+		RKV=${RKV//-*}
 		if version_is_at_least "2.6.10" ${RKV}; then
 			break
 		fi
