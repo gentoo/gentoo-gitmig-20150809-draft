@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.22 2004/09/16 00:19:54 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.23 2004/11/14 19:02:15 pebenito Exp $
+
+*checkpolicy-1.18 (14 Nov 2004)
+
+  14 Nov 2004; Chris PeBenito <pebenito@gentoo.org>
+  +checkpolicy-1.18.ebuild:
+  New upstream release.
 
   15 Sep 2004; Chris PeBenito <pebenito@gentoo.org> checkpolicy-1.16.ebuild:
   Fix Makefile for multiple compile jobs.

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf50dfba3b58741b49120cb82b622fff ChangeLog 2975
-MD5 a4de996f98ab33815fb92f6741717e95 checkpolicy-1.14.ebuild 734
-MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
+MD5 33cf2cec640e03946326716c453db2d8 ChangeLog 3113
 MD5 93edd052ed925c7f2710227c6a28f2ed checkpolicy-1.16.ebuild 1081
-MD5 fa01f34ec563792d4ff66110b4f733a3 files/digest-checkpolicy-1.14 64
-MD5 f2b40ebba90e0bef0a570012d5a16965 files/digest-checkpolicy-1.16 64
+MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
+MD5 e687b1f33393a2259f9be36813f3f163 checkpolicy-1.18.ebuild 1232
 MD5 d607f647a52bbb00a5bf754fe4f1dc90 files/checkpolicy-1.16-no-netlink-warn.diff 1022
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZc9PGFJQsIJWJy4RAkqSAJ9Ex0w3lYdVv9sjnPbea90mVrVrwwCfRRTT
-2OiicfqXEG118QZ6POnAQQw=
-=ZFRW
------END PGP SIGNATURE-----
+MD5 f2b40ebba90e0bef0a570012d5a16965 files/digest-checkpolicy-1.16 64
+MD5 c9bca9508ff124ef4bc19252bdef032b files/digest-checkpolicy-1.18 64
