@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.1 2003/07/08 20:58:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.2 2003/09/16 19:20:12 mholzer Exp $
 
 DESCRIPTION="Automated port scan detector and response tool"
 # Seems like CISCO took the site down?
@@ -15,7 +15,6 @@ DEPEND=">=sys-apps/sed-4"
 S=${WORKDIR}/${PN}_beta
 
 src_unpack() {
-
 	unpack ${A} ; cd ${S}
 
 	# Setting the portsentry.conf file location
@@ -33,15 +32,14 @@ src_unpack() {
 	sed -i \
 		-e "s:^set SENTRYDIR.*:set SENTRYDIR=/etc/portsentry:g" \
 		ignore.csh || die "sed ignore.csh failed"
+	epatch ${FILESDIR}/gcc.patch
 }
 
 src_compile() {
-
 	make CFLAGS="${CFLAGS}" linux || die
 }
 
 src_install() {
-
 	dobin portsentry ignore.csh
 	dodoc README* CHANGES LICENSE CREDITS
 	newdoc portsentry.ignore portsentry.ignore.sample
