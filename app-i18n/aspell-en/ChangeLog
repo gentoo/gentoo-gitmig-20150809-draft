@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/aspell-en
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-en/ChangeLog,v 1.1 2002/08/14 14:52:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-en/ChangeLog,v 1.2 2002/08/15 07:59:04 seemant Exp $
+
+*aspell-en-0.0.0.10 (15 Aug 2002)
+
+  15 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  aspell-en-0.0_pre10.ebuild aspell-0.0.0.10.ebuild :
+
+  removed the pre nonsense, as it is not a good versioning scheme. this new
+  ebuild is more accurate for that.
 
 *aspell-en-0.0_pre10 (14 Aug 2002)
 
