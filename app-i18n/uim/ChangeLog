@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.80 2005/01/12 18:38:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.81 2005/02/11 15:53:12 usata Exp $
+
+*uim-0.4.6_alpha1 (12 Feb 2005)
+
+  12 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> +uim-0.4.6_alpha1.ebuild:
+  Added alpha release of uim-0.4.6.
 
   12 Jan 2005; Guy Martin <gmsoft@gentoo.org> uim-0.4.5-r1.ebuild:
   Stable on hppa.
