@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pmk
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.2 2004/03/16 15:29:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.3 2004/04/17 06:39:41 mr_bones_ Exp $
+
+  16 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> pmk-0.8.1.ebuild,
+  pmk-0.8.ebuild:
+  correct license (bug #48027)
 
 *pmk-0.8.1 (16 Mar 2004)
 
