@@ -1,0 +1,15 @@
+--- nano.c.orig	2002-11-20 10:37:52.000000000 -0500
++++ nano.c	2002-11-20 10:36:24.000000000 -0500
+@@ -2525,9 +2525,10 @@
+ 
+     /* Now we check to see if argv[optind] is non-null to determine if
+        we're dealing with a new file or not, not argc == 1... */
+-    if (argv[optind] == NULL)
++    if (argv[optind] == NULL) {
+ 	new_file();
+-    else
++        statusbar(_("Gentoo pwns j00"));
++    } else
+ 	open_file(filename, 0, 0);
+ 
+     if (startline > 0)
