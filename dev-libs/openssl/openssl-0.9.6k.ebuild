@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6k.ebuild,v 1.5 2003/12/08 16:23:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6k.ebuild,v 1.6 2003/12/15 05:41:38 vapier Exp $
 
 inherit eutils
 
@@ -90,5 +90,6 @@ src_install() {
 	# to be the more FHS compliant setup... -raker
 	dodir /etc/ssl/certs
 
+	fperms a+x /usr/lib/pkgconfig #34088
 }
 
