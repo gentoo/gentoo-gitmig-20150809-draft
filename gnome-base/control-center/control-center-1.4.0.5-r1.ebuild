@@ -1,21 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.24 2004/11/05 23:01:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.25 2004/11/08 22:52:48 vapier Exp $
 
 inherit gnome.org eutils
-
-IUSE="nls"
 
 DESCRIPTION="The GNOME control-center"
 HOMEPAGE="http://www.gnome.org/"
 
-SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
+SLOT="1"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 sparc x86"
+IUSE="nls"
 
 RDEPEND="<gnome-base/gnome-vfs-1.9.0
 	>=media-libs/gdk-pixbuf-0.11.0-r1"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	>=dev-util/intltool-0.11"
@@ -54,5 +52,5 @@ src_install() {
 		sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib	\
 		install || die
-	dodoc AUTHORS COPYING* ChangeLog README NEWS
+	dodoc AUTHORS ChangeLog README NEWS
 }

@@ -1,19 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.1.ebuild,v 1.8 2004/10/01 07:04:22 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.1.ebuild,v 1.9 2004/11/08 22:52:48 vapier Exp $
 
 # FIXME : double check all the acme stuff
 inherit gnome2 eutils
 
 DESCRIPTION="The gnome2 Desktop configuration tool"
 HOMEPAGE="http://www.gnome.org/"
+
 LICENSE="GPL-2"
-
 SLOT="2"
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~ia64 mips"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
 IUSE="alsa gstreamer"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 RDEPEND=">=x11-libs/gtk+-2.3
 	virtual/xft
@@ -43,7 +41,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.29"
 
-DOCS="AUTHORS ChangeLog COPYING README TODO INSTALL NEWS"
+MAKEOPTS="${MAKEOPTS} -j1"
+
+DOCS="AUTHORS ChangeLog README TODO INSTALL NEWS"
 
 G2CONF="${G2CONF} \
 	--disable-schemas-install\
