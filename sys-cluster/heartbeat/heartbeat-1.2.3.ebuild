@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.0-r2.ebuild,v 1.5 2004/08/25 15:11:21 tantive Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3.ebuild,v 1.1 2004/10/02 05:50:17 iggy Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -10,7 +8,7 @@ SRC_URI="http://www.linux-ha.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -mips"
+KEYWORDS="~x86 -mips ~ppc"
 IUSE="ldirectord"
 
 DEPEND="dev-libs/popt
@@ -19,30 +17,9 @@ DEPEND="dev-libs/popt
 	ldirectord? (	sys-cluster/ipvsadm
 			dev-perl/libwww-perl
 			dev-perl/perl-ldap
-			dev-perl/libnet )
-	>=sys-devel/libtool-1.5.2-r5"
+			dev-perl/libnet )"
 
 # need to add dev-perl/Mail-IMAPClient inside ldirectord above
-
-fix_makefiles() {
-	einfo "fixing up the Makefiles"
-	sed -i -e 's:mkdir -p $(ckptvarlibdir):mkdir -p $(DESTDIR)$(ckptvarlibdir):' ${S}/telecom/checkpointd/Makefile* || die "failed to sed Makefiles"
-	aclocal
-	autoheader
-	libtoolize --ltdl --force --copy
-	automake --add-missing --include-deps
-	autoconf
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	mv ltmain.sh ltmain.orig
-	echo "export _POSIX2_VERSION=199209" > ltmain.sh
-	cat ltmain.orig >> ltmain.sh
-	epatch ${FILESDIR}/${P}-failbackfix.patch
-	fix_makefiles
-}
 
 src_compile() {
 	./configure --prefix=/usr \
@@ -52,7 +29,7 @@ src_compile() {
 		--with-group-id=65 \
 		--with-ccmuser-name=cluster \
 		--with-ccmuser-id=65 || die
-	emake -j1 || die "compile problem"
+	emake -j 1 || die "compile problem"
 }
 
 pkg_preinst() {
