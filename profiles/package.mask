@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <strider@gentoo.org> (18 Nov 2002)
+# Building preocess of docs is broken
+# cause this ebuild needs access X Server
+=dev-java/xalan-2.4.1
+
 # <cretin@gentoo.org> (17 Nov 2002)
 # New version
 =sys-devel/binutils-2.13.90.0.14
