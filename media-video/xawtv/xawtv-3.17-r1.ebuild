@@ -4,7 +4,6 @@
 P=xawtv-3.17
 A=xawtv_3.17.tar.gz
 S=${WORKDIR}/${P}
-CATEGORY="media-video"
 DESCRIPTION="TV application for the bttv driver"
 SRC_URI="http://me.in-berlin.de/~kraxel/v4l/"${A}
 HOMEPAGE="http://me.in-berlin.de/~kraxel/xawtv.html"
