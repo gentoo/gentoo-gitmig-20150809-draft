@@ -50,10 +50,6 @@
 =sys-kernel/xfs-sources-2.4.19-r2
 =sys-kernel/gentoo-sources-2.4.19-r10
 
-# <carpaski@gentoo.org> (06 Oct 2002)
-# Masked for a quick test period. GLSA on local DoS. Version bump.
-=net-www/apache-1.3.27
-
 # <tantive@gentoo.org> (05 Oct 2002)
 # Version bumped, masked for testing, supporting evms-1.2
 =sys-kernel/openmosix-sources-2.4.19-r6
