@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.52 2003/09/13 19:24:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.53 2003/09/13 20:08:41 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -682,7 +682,7 @@ make_desktop_entry() {
 	if [ -z "${type}" ] ; then
 		case ${CATEGORY} in
 			app-emulation)	type=Emulator	;;
-			app-games)	type=Game	;;
+			games-*)	type=Game	;;
 			*)		type=""		;;
 		esac
 	fi
