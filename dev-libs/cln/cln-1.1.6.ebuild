@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.6.ebuild,v 1.5 2004/11/23 17:08:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.6.ebuild,v 1.6 2004/12/02 06:59:38 phosphan Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -29,7 +29,7 @@ src_compile() {
 	fi
 
 	# Trouble: see bug #70779
-	if ["$( gcc-fullversion )" == "3.3.4" ]; then
+	if [ "$( gcc-fullversion )" == "3.3.4" ]; then
 		filter-flags -finline-functions
 	fi
 
