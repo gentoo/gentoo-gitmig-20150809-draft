@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.7 2002/09/22 01:06:33 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.8 2002/09/25 22:07:00 sunflare Exp $
+
+*giftcurs-0.5.2 (25 Sep 2002)
+  25 Sep 2002; Phil Bordelon <sunflare@gentoo.org> giftcurs-0.5.2.ebuild :
+  version bump; major upstream fixes
 
 *giftcurs-0.5.1 (13 Sep 2002)
   13 Sep 2002; Spider <spider@gentoo.org> giftcurs-0.5.1.ebuild :
