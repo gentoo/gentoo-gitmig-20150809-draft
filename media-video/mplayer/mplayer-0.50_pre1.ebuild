@@ -6,11 +6,20 @@
 
 MY_P="MPlayer-0.50pre"
 S=${WORKDIR}/${MY_P}?
-A="${MY_P}1.tar.bz2 default.tar.bz2 mp-arial-iso-8859-1.zip"
+
+# Only install skin if GUI should be build (gtk as USE flag)
+if [ "`use gtk`" ] ; then
+	A="${MY_P}1.tar.bz2 default.tar.bz2 mp-arial-iso-8859-1.zip"
+	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
+		 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2
+		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
+else		  
+        A="${MY_P}1.tar.bz2 mp-arial-iso-8859-1.zip"
+        SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
+                 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
+fi
+
 DESCRIPTION="Media Player for Linux"
-SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
-	 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2
-	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
 HOMEPAGE="http://www.mplayerhq.hu"
 
 # Experimental USE flags dvd and decss
@@ -135,3 +144,28 @@ src_install() {
 	doins ${S}/etc/codecs.conf
 	
 }
+
+pkg_postinst() {
+
+	echo
+	echo '######################################################################'
+	echo '# MPlayer users that are going to use the GUI, please note the       #'
+	echo '# following:                                                         #'
+	echo '#                                                                    #'
+	echo '#   The GUI works best with mplayer -vo xv -gui, but since there is  #'
+	echo '#   no USE flag for XVideo, or for using the GUI, the autodetection  #'
+	echo '#   process cannot detect this by default (SDL will be used rather). #'
+	echo '#   So, if you setup supports XVideo (xvinfo should give output),    #'
+	echo '#   maybe do something like:                                         #'
+	echo '#                                                                    #'
+	echo '#     echo "vo = xv" >~/.mplayer/config                              #'
+	echo '#     echo "gui = 1" >>~/.mplayer/config                             #'
+	echo '#                                                                    #'
+	echo '#   after launching mplayer for the first time.                      #'
+	echo '#                                                                    #'
+	echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
+	echo '######################################################################'
+	echo
+
+}
+
