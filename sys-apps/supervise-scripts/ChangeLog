@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/supervise-scripts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/ChangeLog,v 1.7 2003/08/28 20:12:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/ChangeLog,v 1.8 2003/09/23 04:28:51 robbat2 Exp $
+
+  22 Sep 2003; Robin H. Johnson <robbat2@gentoo.org>
+  supervise-scripts-3.5.ebuild:
+  fix head -1 coreutils stuff
 
 *supervise-scripts-3.5 (28 Aug 2003)
 
