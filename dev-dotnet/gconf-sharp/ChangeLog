@@ -1,0 +1,10 @@
+# ChangeLog for dev-dotnet/gconf-sharp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.1 2004/11/19 03:29:01 latexer Exp $
+
+*gconf-sharp-1.0.4 (18 Nov 2004)
+
+  18 Nov 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +gconf-sharp-1.0.4.ebuild:
+  Initial ebuild. New broken out gtk-sharp component.
+

@@ -1,0 +1,9 @@
+# ChangeLog for dev-dotnet/glade-sharp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.1 2004/11/19 03:27:14 latexer Exp $
+
+*glade-sharp-1.0.4 (18 Nov 2004)
+
+  18 Nov 2004; <peter@gentoo.org> +metadata.xml, +glade-sharp-1.0.4.ebuild:
+  Initial ebuild. New broken out gtk-sharp component.
+
