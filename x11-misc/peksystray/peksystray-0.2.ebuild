@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/peksystray-0.2.ebuild,v 1.5 2004/06/24 22:30:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/peksystray-0.2.ebuild,v 1.6 2005/01/30 18:01:59 taviso Exp $
 
 inherit eutils
 
@@ -20,6 +20,11 @@ src_unpack() {
 	# Quick patch to get rid of the multi-line string literal.
 	# 	-taviso (10 Jan 2004)
 	cd ${S}; epatch ${FILESDIR}/${PN}-gcc3-mlsl.diff
+}
+
+src_compile() {
+	econf --x-libraries=/usr/X11R6/lib || die
+	emake || die
 }
 
 src_install() {
