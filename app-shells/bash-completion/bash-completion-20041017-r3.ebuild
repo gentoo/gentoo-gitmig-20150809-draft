@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r3.ebuild,v 1.1 2004/12/06 16:28:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r3.ebuild,v 1.2 2004/12/25 13:04:58 ka0ttic Exp $
 
 inherit eutils
 
@@ -18,7 +18,10 @@ IUSE=""
 
 DEPEND="app-arch/tar
 	app-arch/bzip2"
-RDEPEND=">=app-shells/bash-2.05a"
+RDEPEND="|| (
+				>=app-shells/bash-2.05a
+				app-shells/zsh
+			)"
 
 S="${WORKDIR}/${PN/-/_}"
 
@@ -67,4 +70,12 @@ pkg_postinst() {
 		ewarn "Please run etc-update to replace /etc/bash_completion.d/gentoo with a symlink."
 	fi
 	echo
+
+	if has_version 'app-shells/zsh' ; then
+		einfo "If you are interested in using the provided bash completion functions with"
+		einfo "zsh, valuable tips on the effective use of bashcompinit are available:"
+		einfo "  http://www.zsh.org/mla/workers/2003/msg00046.html"
+		einfo "  http://zshwiki.org/ZshSwitchingTo"
+		echo
+	fi
 }

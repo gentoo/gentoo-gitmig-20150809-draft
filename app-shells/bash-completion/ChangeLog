@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.86 2004/12/16 05:03:16 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.87 2004/12/25 13:04:58 ka0ttic Exp $
+
+  25 Dec 2004; Aaron Walker <ka0ttic@gentoo.org>
+  bash-completion-20041017-r3.ebuild:
+  RDEPEND on bash or zsh, since zsh is also able to read bash-completions; bug
+  75384. Also added some einfo's with URL's to more info for zsh users.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   bash-completion-20041017-r1.ebuild:
