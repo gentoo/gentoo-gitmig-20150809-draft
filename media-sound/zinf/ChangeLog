@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.9 2003/02/14 22:56:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.10 2003/03/08 11:58:43 jje Exp $
 
   14 Feb 2003; Dan Armak <danarmak@gentoo.org> zinf-2.2.3.ebuild:
 
@@ -16,6 +16,9 @@
   new version.
 
 *zinf-2.2.1 (06 Dec 2002)
+
+  08 Mar 2003; root <root@gentoo.org> zinf-2.2.1.ebuild:
+  Fixed nested die.
 
   06 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
