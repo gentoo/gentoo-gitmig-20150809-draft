@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.4 2004/04/29 19:28:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.5 2004/06/23 02:45:12 vapier Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 ppc alpha"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2*"
@@ -54,11 +54,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	echo
 	einfo "First you must start a server by running \`bubnbros-server\`."
 	einfo "Afterwards you can start the client by running \`bubnbros\`"
 	einfo "or \`bubnbros-x\`.  Note that the X version of the game"
 	einfo "doesn't support sound and music."
-
-	games_pkg_postinst
 }
