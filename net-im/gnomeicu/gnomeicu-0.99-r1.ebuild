@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.3 2003/05/09 22:42:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.4 2003/06/07 11:32:55 liquidx Exp $
 
 inherit gnome2 
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gnomeicu.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc  ~ppc ~alpha" 
+KEYWORDS="~x86 ~sparc ~ppc ~alpha" 
 
 DEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/libxml2-2.4.23
@@ -29,7 +29,7 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}/doc/C; sed -i -e 's:-scrollkeeper-update.*:-scrollkeeper-update -p $(scrollkeeper_localstate_dir) -o $(DESTDIR)$(omf_dest_dir):' Makefile.in
+	gnome2_omf_fix ${S}/doc/C/Makefile.in ${S}/doc/omf.make
 }
 
 DOCS="AUTHORS COPYING CREDITS ChangeLog README ABOUT-NLS"
