@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.9 2003/07/13 12:54:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.10 2003/09/06 22:02:56 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IRC daemon with hostname cloaking, SOCKS proxy checking and other advanced features"
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc"
 src_unpack() {
 
 	unpack ${P}.tar.gz
-	cp ${FILESDIR}/res_init.c ${S}/src	
+	cp ${FILESDIR}/res_init.c ${S}/src
 
 }
 
@@ -25,15 +25,15 @@ src_compile() {
 	# merging of this package a config file is created in /etc/cyclone
 	# which is reused whenever this package is upgraded.
 
-	# If you wish to modify this configuration in the future, you can 
-	# either edit this ebuild or edit the created /etc/cyclone/config and 
+	# If you wish to modify this configuration in the future, you can
+	# either edit this ebuild or edit the created /etc/cyclone/config and
 	# remerge this ebuild.
 
 	if [ -f /etc/cyclone/config ]
 	then
 		einfo Reusing compile time configuration stored in /etc/cyclone/config...
 		einfo To reset the configuration delete the config file and remerge.
-		
+
 		cp /etc/cyclone/config ${S}/.config
 	else
 		einfo No previous configuration found... using defaults defined in ebuild...

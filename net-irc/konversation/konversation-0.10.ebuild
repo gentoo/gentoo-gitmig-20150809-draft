@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.10.ebuild,v 1.2 2003/03/03 16:31:15 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.10.ebuild,v 1.3 2003/09/06 22:02:56 msterret Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 src_install() {
-	
+
 	kde_src_install
 
 	use nls || rm -rf ${D}/usr/share/locale

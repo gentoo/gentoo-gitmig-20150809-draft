@@ -9,7 +9,7 @@ HOMEPAGE="http://irssi.org/"
 DEPEND="	>=dev-libs/glib-1.2
 		sys-libs/ncurses
 		perl? ( dev-lang/perl )
-		!net-irc/irssi" 
+		!net-irc/irssi"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
@@ -30,10 +30,10 @@ src_compile() {
 	# Note: there is an option to build a GUI for irssi, but according
 	# to the website the GUI is no longer developed, so that option is
 	# not used here.
-	
+
 	# Edit these if you like
 	myconf="--without-servertest --with-bot --with-proxy --with-ncurses"
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	#perl is auto-detected and must be explicitly disabled

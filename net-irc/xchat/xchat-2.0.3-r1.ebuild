@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.3-r1.ebuild,v 1.7 2003/08/14 21:57:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.3-r1.ebuild,v 1.8 2003/09/06 22:02:56 msterret Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_compile() {
 	# xchat's configure script uses sys.path to find library path
 	# instead of python-config (#25943)
 	unset PYTHONPATH
-	
+
 	econf \
 		`use_enable gtk gtkfe` \
 		`use_enable ssl openssl` \
@@ -54,19 +54,19 @@ src_compile() {
 		`use_enable nls` \
 		--program-suffix=-2 \
 		|| die "Configure failed"
-	
+
 	MAKEOPTS="-j1" emake || die "Compile failed"
 }
 
 src_install() {
-	# some magic to create a menu entry for xchat 2	
+	# some magic to create a menu entry for xchat 2
 	mv xchat.desktop xchat.desktop.old
 	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=XChat IRC:Name=XChat 2 IRC:" xchat.desktop.old > xchat.desktop
 
 	einstall install || die "Install failed"
 
 	# install plugin development header
-	insinto /usr/include/xchat	
+	insinto /usr/include/xchat
 	doins src/common/xchat-plugin.h
 
 	dodoc AUTHORS COPYING ChangeLog README*

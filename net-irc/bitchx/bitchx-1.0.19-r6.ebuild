@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.2 2003/09/05 18:05:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.3 2003/09/06 22:02:56 msterret Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,7 +25,7 @@ replace-flags -O[3-9] -O2
 # hppa need -fPIC too
 [ "${ARCH}" = "hppa" ] && append-flags "-fPIC"
 
-DEPEND=">=sys-libs/ncurses-5.1 
+DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	xmms? ( media-sound/xmms )
 	ncurses? ( sys-libs/ncurses )
@@ -64,7 +64,7 @@ src_compile() {
 	use esd && use gtk \
 		&& myconf="${myconf} --enable-sound" \
 		|| myconf="${myconf} --disable-sound"
-	
+
 	use gtk && use gnome\
 	    && myconf="${myconf} --with-gtk" \
 		|| myconf="${myconf} --without-gtk"
@@ -77,7 +77,7 @@ src_compile() {
 	#use ncurses \
 	#	&& myconf="${myconf} --without-tgetent" \
 	#	|| myconf="${myconf} --with-tgetent"
-	
+
 	# lamer@gentoo.org BROKEN, will not work with our socks
 	# implementations, is looking for a SOCKSConnect function that our
 	# dante packages don't have :-(
@@ -88,14 +88,14 @@ src_compile() {
 	mv ${S}/include/config.h ${S}/include/config.h.orig
 	sed -e "s/#undef LATIN1/#define LATIN1 ON/;" \
 		${S}/include/config.h.orig > \
-		${S}/include/config.h 
+		${S}/include/config.h
 	#ugly workaround
 	use gtk && use gnome && ( \
 		einfo "gtkBitchX will be built, if you want BitchX please issue"
-		einfo "USE="-gtk" emerge bitchx" 
+		einfo "USE="-gtk" emerge bitchx"
 		sleep 10
 		) && CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
-	
+
 	econf CFLAGS="${CFLAGS}" \
 		--enable-cdrom \
 		--with-plugins \
@@ -126,7 +126,7 @@ src_install () {
 	insinto /usr/X11R6/include/bitmaps
 	doins BitchX.xpm
 
-	dodoc BitchX-* BitchX.bot *.doc BitchX.faq README.hooks 
+	dodoc BitchX-* BitchX.bot *.doc BitchX.faq README.hooks
 	dodoc bugs *.txt functions ideas mode tcl-ideas watch
 	dodoc *.tcl
 	dohtml *.html

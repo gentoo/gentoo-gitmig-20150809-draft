@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.10.ebuild,v 1.5 2003/07/13 12:54:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.10.ebuild,v 1.6 2003/09/06 22:02:56 msterret Exp $
 
 IUSE="ipv6 perl ssl"
 
 DESCRIPTION="Epic4 IRC Client"
 SRC_URI="ftp://prbh.org/pub/epic/EPIC4-ALPHA/${P}.tar.bz2
-	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20030114.tar.gz" 
+	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20030114.tar.gz"
 HOMEPAGE="http://epicsol.org"
 
 SLOT="0"
@@ -25,11 +25,11 @@ src_compile() {
 	use ipv6 \
 		&& myconf="${myconf} --with-ipv6" \
 		|| myconf="${myconf} --without-ipv6"
-	
+
 	use perl \
 		&& myconf="${myconf} --with-perl" \
 		|| myconf="${myconf} --without-perl"
-	
+
 	use ssl \
 		&& myconf="${myconf} --with-ssl" \
 		|| myconf="${myconf} --without-ssl"
@@ -42,7 +42,7 @@ src_compile() {
 	econf \
 		--libexecdir=/usr/lib/misc \
 		${myconf} || die
-	
+
 	make || die
 }
 
@@ -53,13 +53,13 @@ src_install () {
 
 	rm -f ${D}/usr/bin/epic
 	dosym epic-EPIC4-${PV} /usr/bin/epic
-	
+
 	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
 	docinto doc
 	cd doc
 	dodoc *.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load
 	dodoc nicknames outputhelp server_groups SILLINESS TS4
-	
+
 	dodir /usr/share/epic
 	tar zxvf ${DISTDIR}/epic4-help-20030114.tar.gz -C ${D}/usr/share/epic
 }

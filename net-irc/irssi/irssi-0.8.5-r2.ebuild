@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r2.ebuild,v 1.11 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r2.ebuild,v 1.12 2003/09/06 22:02:56 msterret Exp $
 
 IUSE="nls ipv6 perl"
 
@@ -25,10 +25,10 @@ src_compile() {
 	# Note: there is an option to build a GUI for irssi, but according
 	# to the website the GUI is no longer developed, so that option is
 	# not used here.
-	
+
 	# Edit these if you like
 	myconf="--without-servertest --with-bot --with-proxy --with-ncurses"
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	#perl is auto-detected and must be explicitly disabled

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.7 2003/07/13 16:48:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.8 2003/09/06 22:02:56 msterret Exp $
 
 inherit eutils
 
@@ -27,8 +27,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	
-	cd ${S}	
+
+	cd ${S}
 	epatch ${FILESDIR}/xc1811fixststint.diff
 
 	use python && ( \
@@ -51,10 +51,10 @@ src_compile() {
 	else
 		myopts="${myopts} --disable-gnome"
     fi
-	
+
 	use gtk \
 		|| myopts="${myopts} --disable-gtkfe"
-	
+
 	use ssl \
 		&& myopts="${myopts} --enable-openssl"
 
@@ -71,15 +71,15 @@ src_compile() {
 			&& myopts="${myopts} --enable-mmx"	\
 			|| myopts="${myopts} --disable-mmx"
 	fi
-	
+
 	use ipv6 \
 		&& myopts="${myopts} --enable-ipv6"
-	
+
 	use python \
 		&& myflags="`python-config`" \
 	 	&& myopts="${myopts} --enable-python"
-	
-	
+
+
 	econf ${myopts} || die
 	emake || die
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.2-r2.ebuild,v 1.4 2003/07/09 17:14:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.2-r2.ebuild,v 1.5 2003/09/06 22:02:56 msterret Exp $
 
-IUSE="perl tcltk python ssl gtk mmx ipv6" 
+IUSE="perl tcltk python ssl gtk mmx ipv6"
 
 S=${WORKDIR}/${P}
 
@@ -17,9 +17,9 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha"
 RDEPEND=">=dev-libs/glib-2.0.3
 	gtk? ( >=x11-libs/gtk+-2.0.3 )
 	perl? ( >=dev-lang/perl-5.6.1 )
-	ssl? ( >=dev-libs/openssl-0.9.6d ) 
+	ssl? ( >=dev-libs/openssl-0.9.6d )
 	python? ( dev-lang/python )
-	tcltk? ( dev-lang/tcl )"               
+	tcltk? ( dev-lang/tcl )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -59,19 +59,19 @@ src_compile() {
 	econf \
 		--program-suffix=-2 \
 		${myopts} || die "Configure failed"
-	
+
 	MAKEOPTS="-j1" emake || die "Compile failed"
 }
 
 src_install() {
-	# some magic to create a menu entry for xchat 2	
+	# some magic to create a menu entry for xchat 2
 	mv xchat.desktop xchat.desktop.old
 	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=XChat IRC:Name=XChat 2 IRC:" xchat.desktop.old > xchat.desktop
 
 	einstall install || die "Install failed"
 
 	# install plugin development header
-	insinto /usr/include/xchat	
+	insinto /usr/include/xchat
 	doins src/common/xchat-plugin.h
 
 	dodoc AUTHORS COPYING ChangeLog README*

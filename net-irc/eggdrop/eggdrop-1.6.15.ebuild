@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.1 2003/07/29 01:12:51 gregf Exp $
-			   
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.2 2003/09/06 22:02:56 msterret Exp $
+
 DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/eggdrop${PV}.tar.gz"
@@ -37,12 +37,12 @@ src_compile() {
 		--host=${CHOST} \
 		--disable-cc-optimization \
 		${myconf} || die "./configure failed"
-	
+
 	make config || die "module config failed"
 
 	if use static; then
 		make static || die "make static failed"
-	fi 
+	fi
 
 	if use debug; then
 		make debug || die "make debug failed"
@@ -52,7 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	local a
 	make DEST=${D}/opt/eggdrop install
 

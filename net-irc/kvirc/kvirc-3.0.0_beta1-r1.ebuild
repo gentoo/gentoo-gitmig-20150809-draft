@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta1-r1.ebuild,v 1.2 2003/08/03 03:34:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta1-r1.ebuild,v 1.3 2003/09/06 22:02:56 msterret Exp $
 
 inherit kde-base
 
@@ -31,15 +31,15 @@ use ipv6		&& myconf="$myconf --with-ipv6-support" \
 # arts support without kde support isn't liked by the configure script
 # possibly it could be made to work but i didn't want to spend time on it
 use kde			&& myconf="$myconf --with-kde-support --with-arts-support" \
-			|| myconf="$myconf --without-kde-support --without-arts-support" 
+			|| myconf="$myconf --without-kde-support --without-arts-support"
 use esd			&& myconf="$myconf --with-esd-support" \
-			|| myconf="$myconf --without-esd-support" 
+			|| myconf="$myconf --without-esd-support"
 # no use flag as yet, and a hard dep is rather pointless
 #use audiofile		&& myconf="$myconf --with-arts-support" \
-#			|| myconf="$myconf --without-arts-support" 
+#			|| myconf="$myconf --without-arts-support"
 # doesn't compile
 #use ssl			&& myconf="$myconf --with-ssl-support" \
-#			|| myconf="$myconf --without-ssl-support" 
+#			|| myconf="$myconf --without-ssl-support"
 
 # use aa even when kde support is disabled
 myconf="$myconf --with-aa-fonts"

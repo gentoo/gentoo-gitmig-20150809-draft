@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_pre20021217.ebuild,v 1.3 2003/02/13 14:15:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_pre20021217.ebuild,v 1.4 2003/09/06 22:02:56 msterret Exp $
 IUSE="kde esd ipv6 ssl"
 inherit kde-base
 
@@ -29,13 +29,13 @@ use ipv6		&& myconf="$myconf --with-ipv6-support" \
 # arts support without kde support isn't liked by the configure script
 # possibly it could be made to work but i didn't want to spend time on it
 use kde			&& myconf="$myconf --with-kde-support --with-arts-support" \
-			|| myconf="$myconf --without-kde-support --without-arts-support" 
+			|| myconf="$myconf --without-kde-support --without-arts-support"
 use esd			&& myconf="$myconf --with-esd-support" \
-			|| myconf="$myconf --without-esd-support" 
+			|| myconf="$myconf --without-esd-support"
 #use oss			&& myconf="$myconf --with-audiofile--support" \
-#			|| myconf="$myconf --without-audiofile-support" 
+#			|| myconf="$myconf --without-audiofile-support"
 use ssl			&& myconf="$myconf --with-ssl-support" \
-			|| myconf="$myconf --without-ssl-support" 
+			|| myconf="$myconf --without-ssl-support"
 
 # use aa even when kde support is disabled; enable local 8bit character set conversion
 myconf="$myconf --with-aa-fonts" #--with-local-8bit"
@@ -47,25 +47,25 @@ src_compile() {
     # always install into /usr regardless of kde support
     # kvirc doesn't have a kde-like installed file structure anyway
     myconf="$myconf --prefix=/usr -v"
-    
+
     # make sure we disable kde support as the configure script can auto-enable
     # it when it isn't wanted
     use kde || export KDEDIR=""
-    
+
     need-automake 1.5
     need-autoconf 2.5
-    ./autogen.sh    
-    kde_src_compile configure make    
+    ./autogen.sh
+    kde_src_compile configure make
 
 }
 
 src_install () {
-    
+
     make install DESTDIR=${D} || die
     make docs DESTDIR=${D} || die
 
     dodoc ChangeLog INSTALL README TODO
-    
+
 }
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.12 2003/03/25 10:14:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.13 2003/09/06 22:02:56 msterret Exp $
 
 IUSE="ssl nls mmx gnome ipv6 python kde gtk perl"
 
@@ -26,9 +26,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 
 	unpack ${A}
-	
+
 	cd ${S}
-	
+
 	patch -p1 <${FILESDIR}/xc1810fixme3.diff
 	cp configure configure.orig
 
@@ -51,10 +51,10 @@ src_compile() {
 	else
 		myopts="${myopts} --disable-gnome"
     fi
-	
+
 	use gtk \
 		|| myopts="${myopts} --disable-gtkfe"
-	
+
 	use ssl \
 		&& myopts="${myopts} --enable-openssl"
 
@@ -71,24 +71,24 @@ src_compile() {
 			&& myopts="${myopts} --enable-mmx"	\
 			|| myopts="${myopts} --disable-mmx"
 	fi
-	
+
 	use ipv6 \
 		&& myopts="${myopts} --enable-ipv6"
-	
+
 	use python \
 		&& myflags="`python-config`" \
 	 	&& myopts="${myopts} --enable-python"
-	
+
 	./configure \
 		--prefix=/usr \
 		--host=${CHOST} \
 		${myopts} || die
-	
+
 	emake || die
 }
 
 src_install() {
-	
+
 	use kde && ( \
 		make \
 			prefix=${D}/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.2 2003/08/03 03:34:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.3 2003/09/06 22:02:56 msterret Exp $
 
 inherit kde-base
 
@@ -35,13 +35,13 @@ use ipv6		|| myconf="$myconf --without-ipv6-support"
 # also, explicitly passing --with-kde-support seems to break configure's logic, so just
 # let it autodetect in that case
 #use kde		&& myconf="$myconf --with-kde-support --with-arts-support" \
-use kde			|| myconf="$myconf --without-kde-support --without-arts-support" 
+use kde			|| myconf="$myconf --without-kde-support --without-arts-support"
 #use esd		&& myconf="$myconf --with-esd-support" \
-use esd			|| myconf="$myconf --without-esd-support" 
+use esd			|| myconf="$myconf --without-esd-support"
 use oss			&& myconf="$myconf --with-af--support" \
-			|| myconf="$myconf --without-af-support" 
+			|| myconf="$myconf --without-af-support"
 #use ssl		&& myconf="$myconf --with-ssl-support" \
-use ssl			|| myconf="$myconf --without-ssl-support" 
+use ssl			|| myconf="$myconf --without-ssl-support"
 
 # use aa even when kde support is disabled; disable local 8bit character set conversion, doesn't compile
 myconf="$myconf --with-aa-fonts"
@@ -60,7 +60,7 @@ src_compile() {
 	need-automake 1.5
 	need-autoconf 2.5
 
-	kde_src_compile configure make    
+	kde_src_compile configure make
 }
 
 src_install() {
