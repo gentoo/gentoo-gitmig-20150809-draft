@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/rekall
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.8 2004/10/31 12:56:34 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.9 2004/12/12 15:29:34 carlo Exp $
+
+*rekall-2.2.3 (12 Dec 2004)
+
+  12 Dec 2004; Carsten Lohrke <carlo@gentoo.org> +rekall-2.2.3.ebuild:
+  version bump
 
   31 Oct 2004; Simone Gotti <motaboy@gentoo.org>
   +files/rekall-2.2.1-configure.patch:
