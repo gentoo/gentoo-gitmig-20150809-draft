@@ -1,7 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.18 2002/03/21 16:32:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.19 2002/03/23 18:22:25 drobbins Exp $
 
+*baselayout-1.7.5 (23 Mar 2002)
+
+  23 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : New release with several
+  rc-script bug fixes; see /usr/share/doc/baselayout-1.7.5/ChangeLog.gz for more
+  info (this new baselayout includes rc-scripts-1.3.1)
+  
   21 March 2002; M.Schlemmer <azarah@gentoo.org> :
 
   Update the pkg_postinst() stuff to use the build USE flag when doing stuff
