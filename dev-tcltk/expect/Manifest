@@ -3,7 +3,7 @@ MD5 c2d3ac5a228cb182b3df1a1992e35368 expect-5.37.1-r1.ebuild 1823
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 9df41e392d2d7f86495ad08b8096041d expect-5.37.1-r2.ebuild 3051
 MD5 4c73ddde0d04ccf48e7c4109b995e14f expect-5.40.0-r1.ebuild 2515
-MD5 d9156d7bae290a96fb3b21eb65dad875 expect-5.42.1.ebuild 2920
+MD5 6df5dccb90b220ebfa94de0e773cf0f9 expect-5.42.1.ebuild 2998
 MD5 d72515e421619404da8e13d785d018da expect-5.40.0.ebuild 1778
 MD5 56f93170a590d0db63d826802dcc9847 files/digest-expect-5.40.0 65
 MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1-r1 65
