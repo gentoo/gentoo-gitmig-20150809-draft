@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.1 2004/06/20 02:56:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.2 2004/06/20 04:51:04 solar Exp $
 
 inherit eutils gnuconfig db
 
@@ -53,7 +53,7 @@ src_compile() {
 
 	# Mips needs a gnuconfig update so obscure things like mips64 are known
 	# db-4.1.25_p1 extracts to ${WORKDIR}/db-4.1.25, so we need to strip the _p1
-	if ( use mips || uclibc ) ; then
+	if ( use mips || use uclibc ) ; then
 		einfo "Updating config.{guess,sub} for mips"
 		local OLDS="${S}"
 		S="${S}/../dist"
