@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r3.ebuild,v 1.3 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r3.ebuild,v 1.4 2002/10/11 20:51:36 raker Exp $
 
-IUSE="ssl tcpd sasl readline ipv6 berkdb gdbm ldap"
+IUSE="ssl tcpd readline ipv6 berkdb gdbm ldap"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -18,7 +18,6 @@ DEPEND="virtual/glibc
 	tcpd?	  ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl?	  ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
-	sasl?     ( >=dev-libs/cyrus-sasl-1.5.27 )
 	berkdb? ( >=sys-libs/db-3.2.9 )
 	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
 
@@ -52,18 +51,13 @@ src_compile() {
 	fi
 	use ipv6 && myconf="${myconf} --enable-ipv6" \
 		|| myconf="${myconf} --disable-ipv6"
-	use sasl && myconf="${myconf} --enable-cyrus-sasl" \
-		|| myconf="${myconf} --disable-cyrus-sasl"
-
 
 	econf \
 		--enable-passwd \
 		--enable-shell \
 		--enable-shared \
 		--enable-static \
-		--localstatedir=/var/state/openldap \
 		--libexecdir=/usr/lib/openldap \
-		--sysconfdir=/etc \
 		${myconf} || die "bad configure"
 
 	make depend || die
@@ -72,6 +66,7 @@ src_compile() {
 }
 
 src_install() {
+
 	make DESTDIR=${D} install || die "make install failed"
 
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE
@@ -80,4 +75,5 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/slapd.rc6 slapd
 	newexe ${FILESDIR}/slurpd.rc6 slurpd
+
 }

@@ -1,11 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.12 2002/09/22 00:34:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.13 2002/10/11 20:51:36 raker Exp $
 
 *openldap-2.0.25-r3 (21 Sept 2002)
+
+  11 Oct 2002; Nick Hadaway <raker@gentoo.org> openldap-2.0.25-r3.ebuild :
+  Removed sasl support as saslv2 support is not complete in this and
+  causes a circular dependancy with cyrus-sasl.  cyrus-sasl still has
+  ldap support built in.
  
   21 Sept 2002; Grant Goodyear <g2boojum@gentoo.org> openldap-2.0.25-r3.ebuild	
-
   Replaced entire make install section w/ "make DESTDIR=${D} install".
   The previous version was putting ${D} in the /etc/openldap files, and
   the simple fix seems to have solved the problem.   I also checked, and
@@ -15,14 +19,12 @@
 *openldap-2.0.25-r2 (15 Aug 2002)
  
   16 Sep 2002; Seemant Kulleen <seemant@gentoo.org> openldap-2.0.25-r2.ebuild	
-
   Fixed sysconfdir to /etc so that config files go into the /etc/openldap
   directory instead of /etc/openldap/openldap.  Thanks to:
   gdjohn@egregious.org.uk (Gareth John) in bug #7986
  
   07 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
   openldap-2.0.25-r2.ebuild :
-
   Fixed the use flags so that they are not prefixed with "ldap-"  as
   discovered by jap1@ionet.net (Jacob Perkins) and kevin@aptbasilicata.it
   (j2ee) in bug #7597
@@ -37,10 +39,8 @@
   12 Aug 2002; Mark Guertin <gerk@gentoo.org> :                                 
   Added ppc to keywords                                                         
 
-
   29 Jul 2002; Nick Hadaway <raker@gentoo.org>
   openldap-2.0.25-r1, files/slapd.rc6, files/digest-openldap-2.0.25-r1 :
-
   Updated ebuild for proper USE flag to configure option generation.  Fixed
   a typo in slapd.rc6.  Bumping to -r1 due to the many changes in the ebuild
   since the first 2.0.25 release.
@@ -48,38 +48,32 @@
 *openldap-2.0.25 (17 Jul 2002)
 
   26 Jul 2002; Nick Hadaway <raker@gentoo.org> files/slapd.rc6 :
-
   Added --pidfile /var/state/openldap/slapd.pid to files/slapd.rc6 to supress
   error messages when shutting doesn slapd.
 
   26 Jul 2002; Nick Hadaway <raker@gentoo.org>
-
   re-modified ebuild so localstatedir=/var/state/openldap to match with the
   default slapd config file.  /var/state/openldap/openldap-ldbm and
   /var/state/openldap/openldap-slurp are also created correctly.
   Bug #5557 re-visited.
 
   26 Jul 2002; Nick Hadaway <raker@gentoo.org>
-  
   modified ebuild to create a /var/state/openldap to conicide with default
   configuration of where databases are stored.  Closes bug #5557.
 
   17 Jul 2002; Nick Hadaway <raker@gentoo.org>
   openldap-2.0.25.ebuild, file/digest-openldap-2.0.25 :
-
   Version bump to latest stable vesion.  Also added support for SASL by
   request on bug #5104.
 
 *openldap-2.0.23 (20 Apr 2002)
 
   20 Apr 2002; Ryan Phillips <rphillips@gentoo.org> openldap-2.0.23 :
-
   Updated package
 
 *openldap-2.0.21 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
