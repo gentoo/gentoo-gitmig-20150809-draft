@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-openft
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.20 2004/08/25 17:59:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.21 2004/08/28 03:14:43 squinky86 Exp $
+
+  27 Aug 2004; Jon Hood <squinky86@gentoo.org> gift-openft-0.2.1.4.ebuild:
+  Add berkdb USE flag irt #35424.
 
   25 Aug 2004; Jon Hood <squinky86@gentoo.org> -gift-openft-0.2.1.2.ebuild,
   gift-openft-0.2.1.4.ebuild:
