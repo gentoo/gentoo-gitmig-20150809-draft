@@ -1,0 +1,21 @@
+# ChangeLog for sys-apps/tic98
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/ChangeLog,v 1.1 2005/03/05 00:48:58 ciaranm Exp $
+
+*tic98-1.01 (05 Mar 2005)
+
+  05 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +files/tic98-1.01-gentoo.diff, +files/tic98.diff, +tic98-1.01-r1.ebuild,
+  +tic98-1.01.ebuild:
+  Moved from sys-apps/tic98 to media-gfx/tic98.
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> tic98-1.01-r1.ebuild,
+  tic98-1.01.ebuild:
+  use epatch for patching
+
+*tic98-1.01-r1 (19 Oct 2003)
+
+*tic98-1.01 (04 Dec 2002)
+
+  04 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by mjc.
