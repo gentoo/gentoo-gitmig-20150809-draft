@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.10 2003/02/12 03:48:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.11 2003/03/14 19:15:22 hannes Exp $
+
+*quanta-3.1.1 (14 Mar 2003)
+
+  14 Mar 2003; Hannes Mehnert <hannes@gentoo.org> quanta-3.1.1.ebuild:
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
