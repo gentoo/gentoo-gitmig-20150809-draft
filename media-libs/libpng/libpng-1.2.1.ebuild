@@ -9,7 +9,7 @@ DESCRIPTION="libpng"
 SRC_URI="ftp://swrinde.nde.swri.edu/pub/png/src/${P}.tar.gz"
 HOMEPAGE="http://www.libpng.org/"
 
-DEPEND=">=sys-libs/zlib-1.1.3-r2"
+DEPEND=">=sys-libs/zlib-1.1.4"
 
 src_compile() {
 	sed -e "s:ZLIBLIB=../zlib:ZLIBLIB=/usr/lib:" -e "s:ZLIBINC=../zlib:ZLIBINC=/usr/include:" -e "s:prefix=/usr:prefix=${D}/usr:" -e "s/-O3/${CFLAGS}/" scripts/makefile.linux > Makefile

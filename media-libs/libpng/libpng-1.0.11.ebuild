@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.11.ebuild,v 1.1 2001/05/06 18:36:42 achim Exp $
+# /space/gentoo/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.11.ebuild,v 1.1 2001/05/06 18:36:42 achim Exp
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
