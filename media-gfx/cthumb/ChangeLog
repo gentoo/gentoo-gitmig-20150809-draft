@@ -1,10 +1,10 @@
 # ChangeLog for media-gfx/cthumb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/ChangeLog,v 1.5 2003/02/12 06:58:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/ChangeLog,v 1.6 2003/10/23 14:06:36 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*cthumb-4.2 (05 Sep 2002) cthumb-4.2.ebuild ChangeLog, digest-cthumb-4.2
+*cthumb-4.2 (05 Sep 2002) 
 
   05 Sep 2002; Sven Vermeulen <sven.vermeulen@rug.ac.be> cthumb-4.2.ebuild :
 
