@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.18 2004/03/23 09:27:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.19 2004/04/19 15:09:10 dragonheart Exp $
+
+  20 Apr 2004; Daniel Black <dragonheart@gentoo.org> mit-krb5-1.3.1.ebuild:
+  QA - removed runtime dependance on autoconf
 
   23 Mar 2004; Joshua Kinard <kumba@gentoo.org> mit-krb5-1.3.1.ebuild:
   Marked stable on mips.

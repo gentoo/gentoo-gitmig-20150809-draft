@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.10 2004/03/23 09:27:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.11 2004/04/19 15:09:10 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -17,6 +17,9 @@ IUSE="krb4 static"
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf"
+
+RDEPEND="virtual/glibc"
+
 PROVIDE="virtual/krb5"
 
 src_unpack() {
