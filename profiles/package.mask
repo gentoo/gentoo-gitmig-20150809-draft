@@ -52,7 +52,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1152 2002/08/02 09:20:04 danarmak Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1153 2002/08/02 14:12:03 jnelson Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -959,3 +959,8 @@ app-cdr/eroaster
 # Masked 'cause it needs to be tested with gcc versions > 2.95
 # lostologic can you please test it and patch it again if needed ?
 =gnome-extra/gnomemm-1.2.3
+
+# jnelson@gentoo.org 2 Aug 2002
+# mask python-fchksum because older versions of portage hork on the
+# circular dependency
+=dev-python/python-fchksum-1.6.1-r1
