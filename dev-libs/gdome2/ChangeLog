@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.10 2004/03/24 14:32:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.11 2004/04/03 02:40:32 matsuu Exp $
+
+*gdome2-0.8.1 (03 Apr 2004)
+
+  03 Apr 2004; <matsuu@gentoo.org> gdome2-0.8.1.ebuild:
+  Version bumped.
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> gdome2-0.7.4.ebuild:
   Stable on sparc.
