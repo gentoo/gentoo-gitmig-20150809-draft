@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.10 2004/07/22 14:09:07 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.11 2004/08/15 15:03:01 pfeifer Exp $
+
+  15 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> : strongswan-2.1.5.ebuild
+  Mark stable on x86.
 
 *strongswan-2.1.5 (22 Jul 2004)
 
