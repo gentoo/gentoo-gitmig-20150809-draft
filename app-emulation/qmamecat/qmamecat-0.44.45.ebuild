@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.1 2003/03/02 05:25:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.2 2003/06/21 10:05:55 vapier Exp $
 
 MY_PV="${PV/45/b45}"
-DESCRIPTION="mame catalog and frontend"
+DESCRIPTION="QT mame catalog and frontend"
 SRC_URI="http://www.mameworld.net/mamecat/snapshots/qmamecat-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.mameworld.net/mamecat/"
 
