@@ -1,5 +1,5 @@
-MD5 69015917f2320edfeec51a9fae648830 tmake-1.8-r1.ebuild 755
-MD5 5c386577baf63a0ccca270d1405725a1 ChangeLog 1524
+MD5 ece1e49d41fb0fa9f4909e3438ef0e2f ChangeLog 1616
 MD5 b50f82cb019cfb1cd7c1207e08453b36 tmake-1.11.ebuild 747
+MD5 40ba5efbd13e11c82bdeb8bb3e70cccd tmake-1.8-r1.ebuild 763
 MD5 2ce5dd72992607f3cdb3552b5475915e files/digest-tmake-1.11 61
 MD5 b901e95b3a464c9233c1a75312b9a9ad files/digest-tmake-1.8-r1 60
