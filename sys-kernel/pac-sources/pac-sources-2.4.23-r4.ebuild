@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r4.ebuild,v 1.1 2004/04/15 09:33:16 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r4.ebuild,v 1.2 2004/04/15 10:03:51 plasmaroo Exp $
 
 IUSE="build"
 
@@ -14,6 +14,7 @@ inherit kernel eutils
 PACV=pac1
 # KV=patched kernel version
 KV="${PV/_/-}-${PACV}"
+NKV="${PV/_/-}-pac${PR/r/}"
 # OKV=original kernel version as provided by ebuild
 OKV="`echo ${KV} | cut -d- -f1`"
 # OKVLAST=(working) last digit of OKV
@@ -25,7 +26,7 @@ PRERC="`echo ${PV}|grep \_`"
 
 # Other working variables
 S=${WORKDIR}/linux-${KV}
-EXTRAVERSION="`echo ${KV}|sed -e 's:[^-]*\(-.*$\):\1:'`"
+EXTRAVERSION="-pac${PR/r/}"
 
 # If it's a last-stable+pre/rc+aa (marcelo), we need to handle it differently
 # ourkernel is the stable kernel we'll be working with (previous or current)
@@ -47,9 +48,8 @@ SLOT="${KV}"
 
 src_unpack() {
 	unpack linux-${OURKERNEL}.tar.bz2
-	mv linux-${OURKERNEL} linux-${KV} || die
-
-	cd linux-${KV}
+	mv linux-${OURKERNEL} linux-${NKV} || die
+	cd linux-${NKV}
 
 	# if we need a pre/rc patch, then use it
 	if [ ${PRERC} ]; then
