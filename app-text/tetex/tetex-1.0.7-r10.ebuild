@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.3 2002/08/02 17:42:50 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.4 2002/08/14 16:26:24 satai Exp $
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 
@@ -18,7 +18,7 @@ DEPEND="sys-apps/ed
 	sys-libs/zlib 
 	X? ( virtual/x11 )
 	png? ( >=media-libs/libpng-1.2.1 )
-	ncurses ( sys-libs/ncurses )
+	ncurses? ( sys-libs/ncurses )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )"
 
 RDEPEND=">=sys-devel/perl-5.2
