@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.5 2004/06/25 02:28:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.6 2004/08/02 15:48:31 tseng Exp $
+
+*desktop-file-utils-0.7 (02 Aug 2004)
+
+  02 Aug 2004; Brandon Hale <tseng@gentoo.org> +desktop-file-utils-0.7.ebuild:
+  Version bump, closes #56645
 
 *desktop-file-utils-0.5 (21 Mar 2004)
 
