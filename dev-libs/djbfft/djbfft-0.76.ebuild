@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.3 2004/05/26 18:50:23 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.4 2004/06/03 16:40:32 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 	MY_CFLAGS="$CFLAGS -O1 -fomit-frame-pointer"
 	use x86 && MY_CFLAGS="$MY_CFLAGS -malign-double"
 
-	if [ `use static` ]
+	if use static
 	then
 		LIBPERMS="0644"
 		LIBDJBFFT="libdjbfft.a"
@@ -37,7 +37,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc3.patch"
 	epatch "${FILESDIR}/${P}-shared.patch"
-	if [ `use static` ]
+	if use static
 	then
 		echo "$CC $MY_CFLAGS" > "conf-cc"
 	else
@@ -54,7 +54,7 @@ src_compile() {
 
 src_install() {
 	make LIBDJBFFT="$LIBDJBFFT" setup check || die
-	if [ ! `use static` ]
+	if ! use static
 	then
 		ln -snf "${LIBDJBFFT}" "${MY_D}/lib/libdjbfft.so"
 		ln -snf "${LIBDJBFFT}" "${MY_D}/lib/libdjbfft.so.${MY_PV%%.*}"

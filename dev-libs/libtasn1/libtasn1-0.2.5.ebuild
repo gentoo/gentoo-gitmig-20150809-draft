@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.2.5.ebuild,v 1.4 2004/04/16 19:56:59 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.2.5.ebuild,v 1.5 2004/06/03 16:53:45 agriffis Exp $
 
 DESCRIPTION="This is the library which provides ASN.1 structures parsing capabilities for use with GNUTLS"
 HOMEPAGE="http://www.gnutls.org/"
@@ -23,5 +23,5 @@ src_install() {
 	einstall || die "installed failed"
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README THANKS TODO
-	[ "`use doc`" ] && dodoc doc/asn1.ps
+	use doc && dodoc doc/asn1.ps
 }

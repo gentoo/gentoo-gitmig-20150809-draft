@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.3.ebuild,v 1.5 2004/04/26 17:55:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.3.ebuild,v 1.6 2004/06/03 16:45:55 agriffis Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	unpack ${A} && cd "${S}"
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
-	if [ "`use tcpd`" ] ; then
+	if use tcpd ; then
 		epatch "${FILESDIR}/cyrus-imapd-libwrap.patch"
 	fi
 

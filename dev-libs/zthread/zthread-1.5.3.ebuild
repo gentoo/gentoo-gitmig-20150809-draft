@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-1.5.3.ebuild,v 1.13 2004/03/14 12:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-1.5.3.ebuild,v 1.14 2004/06/03 16:39:22 agriffis Exp $
 
 DESCRIPTION="platform-independent object-oriented threading architecture"
 HOMEPAGE="http://www.cs.buffalo.edu/~crahen/projects/zthread/"
@@ -16,7 +16,7 @@ S=${WORKDIR}/ZThread-${PV}
 
 src_compile() {
 	local myconf
-	[ `use debug` ] \
+	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
 	econf ${myconf} || die "./configure failed"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.17 2004/04/26 17:55:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.18 2004/06/03 16:45:55 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> cyrus-imap-dev-2.2.3.ebuild:
+  Fix use invocation
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> cyrus-imap-dev-2.2.3.ebuild:
   Add die following econf for bug 48950

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8.ebuild,v 1.13 2004/02/22 20:07:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8.ebuild,v 1.14 2004/06/03 16:44:10 agriffis Exp $
 
 IUSE="X"
 
@@ -22,7 +22,7 @@ src_compile() {
 	sed 's:^OFLAGS.= -O3:OFLAGS = ${OPT_FLAGS}:' < Makefile.orig > Makefile
 	rm Makefile.orig
 
-	if [ "`use X`" ]; then
+	if use X; then
 		mv Makefile Makefile.orig
 		sed 's:^GUISUP.= false:GUISUP = true:' < Makefile.orig > Makefile
 		rm Makefile.orig
