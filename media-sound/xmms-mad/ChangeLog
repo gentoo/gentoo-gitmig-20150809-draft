@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-mad/ChangeLog,v 1.1 2002/05/01 14:48:34 sandymac Exp $
+
+*xmms-mad-0.0.8 (1 May 2002)
+
+  1 May 2002; William McArthur <sandymac@gentoo.org> xmms-mad-0.0.8.ebuild :
+
+  xmms-mad is a plugin to replace the mpg132 plugin that xmms defaults to using
+  for mp3 playback. It uses the libmad decoder which has higher quality output
+  at the expense of using more cpu power.
