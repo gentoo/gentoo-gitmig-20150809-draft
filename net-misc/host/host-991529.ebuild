@@ -1,48 +1,45 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.17 2003/10/09 16:20:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.18 2003/10/10 09:39:45 mr_bones_ Exp $
 
 S="${WORKDIR}"
 
+# This is somewhat old tool, has not been changed since 1999,
+# Still looks like host from bind does not provide all possible functionality
+# at least xtraceroute wants LOC support, which is provided by this tool.
 DESCRIPTION="the standalone host tool, supports LOC reporting (RFC1876)"
-#this is somewhat old tool, has not been changed since 1999,
-#still looks like host from bind does not provide all possible functionality
-#at least xtraceroute wants LOC support, which is provided by this tool
-
-SRC_URI="ftp://ftp.ripe.net/tools/dns/${PN}.tar.Z"
+# This is the homepage for xtraceroute, not host, but that's best I can do -
+# at least it is mentioned there.
 HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
-#that's the homepage for xtraceroute, not host, but that's best I can do
-#at least it is mentioned there
+SRC_URI="ftp://ftp.ripe.net/tools/dns/${PN}.tar.Z"
 
-DEPEND="net-dns/bind-tools"
-#either bind or bind-tools will do,
-#but since bind-tools is just a partiall install of bind
-#there is no point in introducing new use var and doing PROVIDE dance..
-
-
-SLOT="0"
-LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha mips hppa"
+LICENSE="as-is"
+SLOT="0"
+
+DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
 	cd ${S}
 	unpack ${A}
 
-	sed -e "s:staff:root:" Makefile
+	sed -i -e "s:staff:root:" Makefile || \
+		die "sed Makefile failed"
 }
 
 src_compile() {
-	emake CC="${CC}" CXX="${CXX}" || die
+	emake CC="${CC}" COPTS="${CFLAGS}" || \
+		die "emake failed"
+	# ATTN!
+	# This util has slightly different format of output from "standard" host
+	# rename it to hostx, hopefully this does not conflict with anything.
+	mv host hostx
+	mv host.1 hostx.1
 }
 
 src_install () {
-	#ATTN!
-	#This util has slightly different format of output from "standard" host
-	#I will rename it to hostx, I hope this does not conflict with anything big
 	cd ${WORKDIR}
-	mv host hostx
-	mv host.1 hostx.1
-	dobin hostx
-	doman hostx.1
-	dodoc RE*
+	dobin hostx   || die "dobin failed"
+	doman hostx.1 || die "doman failed"
+	dodoc RE*     || die "dodoc failed"
 }
