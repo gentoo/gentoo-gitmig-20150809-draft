@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/transfusion-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/ChangeLog,v 1.4 2004/06/24 22:47:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/ChangeLog,v 1.5 2004/07/01 11:18:19 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  transfusion-bin-1.01.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   transfusion-bin-1.01.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.6 2004/06/26 16:11:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.7 2004/07/01 11:18:58 eradicator Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 IUSE="dedicated"
 RESTRICT="nostrip"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-arch/unzip
 	games-util/uz2unpack"
 RDEPEND="dedicated? ( games-server/ut2003-ded )

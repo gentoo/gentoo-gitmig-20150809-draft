@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.7 2004/06/24 22:41:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.8 2004/07/01 11:16:57 eradicator Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 IUSE="dedicated opengl"
 RESTRICT="nomirror nostrip"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="dedicated? ( app-misc/screen )
 	!dedicated? ( virtual/opengl )
 	opengl? ( virtual/opengl )"

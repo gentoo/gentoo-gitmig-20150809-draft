@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/soldieroffortune
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.5 2004/06/24 22:46:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.6 2004/07/01 11:18:05 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  soldieroffortune-1.06a.ebuild:
+  virtual/glibc -> virtual/libc
 
   12 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   soldieroffortune-1.06a.ebuild:

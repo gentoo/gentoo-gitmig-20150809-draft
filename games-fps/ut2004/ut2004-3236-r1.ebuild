@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo FOUndation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3236-r1.ebuild,v 1.2 2004/06/26 15:57:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3236-r1.ebuild,v 1.3 2004/07/01 11:19:12 eradicator Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 amd64"
 RESTRICT="nostrip"
 IUSE="opengl dedicated"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	games-util/uz2unpack"
 RDEPEND="opengl? ( virtual/opengl )
 	dedicated? ( app-misc/screen )"

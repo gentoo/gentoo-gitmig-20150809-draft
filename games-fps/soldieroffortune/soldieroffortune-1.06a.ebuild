@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.6 2004/06/24 22:46:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.7 2004/07/01 11:18:05 eradicator Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 RESTRICT="nostrip"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	virtual/opengl"
 

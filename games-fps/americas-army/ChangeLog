@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.17 2004/06/24 22:40:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.18 2004/07/01 11:16:43 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  americas-army-200a-r1.ebuild, americas-army-210.ebuild:
+  virtual/glibc -> virtual/libc
 
   01 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   americas-army-210.ebuild:
