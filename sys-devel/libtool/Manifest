@@ -2,14 +2,10 @@ MD5 775607a529da167809cff53b94a610c0 ChangeLog 6616
 MD5 fbcf7a29349882a6f6c75491400d1953 libtool-1.4.1-r10.ebuild 1780
 MD5 4c81b1a801295b7ed712e8e6ac481fd0 libtool-1.5.2-r3.ebuild 5445
 MD5 4d48b4072e8f2a4591a4d80a23f6042f libtool-1.4.2-r2.ebuild 2182
-MD5 6e9311e710399a611970be41fcff8b23 libtool-1.5.2-r2.ebuild 5117
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3a0095e2cf87981d079b9ca02c2556ee libtool-1.4.3-r3.ebuild 4786
-MD5 867e676a7b9923c1f1a585700a6e0185 libtool-1.5.2-r1.ebuild 4750
 MD5 0988730d91b787159d631c37932efef5 files/digest-libtool-1.4.2-r2 66
-MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r1 131
 MD5 cd3779fa4710870bb83597c39736e822 files/digest-libtool-1.4.1-r10 66
-MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r2 131
 MD5 6e892e6bd1ca4d9babce9f9163f6118e files/digest-libtool-1.4.3-r3 131
 MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r3 131
 MD5 d2313fcf3c18603f201627ca94850786 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd_len.patch 1153
