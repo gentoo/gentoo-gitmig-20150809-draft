@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.2 2003/10/06 14:14:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.3 2003/10/09 19:08:02 wolf31o2 Exp $
 
-inherit eutils
+inherit eutils games
 
 MY_P=Maelstrom-${PV}
 S=${WORKDIR}/${MY_P}
@@ -17,6 +17,10 @@ LICENSE="GPL-2"
 DEPEND=">=media-libs/libsdl-1.1.5
 	>=media-libs/sdl-net-1.2.2"
 
+pkg_setup() {
+	games_pkg_setup
+}
+
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
@@ -26,4 +30,13 @@ src_unpack() {
 src_install() {
 	einstall || die
 	dodoc ChangeLog README TODO DIFFERENCES INTERESTING-COMBINATIONS
+
+	insinto /usr/share/pixmaps
+	newins ${D}/usr/games/Maelstrom/icon.xpm maelstrom.xpm
+	make_desktop_entry Maelstrom "Maelstrom" maelstrom.xpm
+	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
 }
