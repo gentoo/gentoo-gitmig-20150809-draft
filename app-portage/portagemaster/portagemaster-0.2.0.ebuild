@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.0.ebuild,v 1.2 2003/09/07 03:12:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.0.ebuild,v 1.3 2003/11/20 02:19:52 vapier Exp $
 
 DESCRIPTION="A java portage browser and installer"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://portagemaster.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 -ppc sparc"
 IUSE="jikes"
 
@@ -24,12 +24,8 @@ pkg_setup() {
 	if [ -z "$foo" ] ; then
 		eerror "You have to set the 1.4.1 JDK as your system default to compile this package."
 		einfo "Use java-config --set-system-vm=sun-jdk-1.4.1 (or more recent) to set it."
-		exit 1
+		die
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
 }
 
 src_compile() {
@@ -39,10 +35,9 @@ src_compile() {
 		sed 's!<property name="build.compiler" value="jikes"/>!<property name="build.compiler" value="modern"/>!' < build.xml.orig > build.xml
 	fi
 	ant
-	cp src/portagemaster src/portagemaster.orig
-	sed -e s:/usr/share/portagemaster/portagemaster.jar:/usr/share/portagemaster/lib/portagemaster-${PV}.jar: \
-		< src/portagemaster.orig \
-		> src/portagemaster || die
+	sed -i \
+		-e s:/usr/share/portagemaster/portagemaster.jar:/usr/share/portagemaster/lib/portagemaster-${PV}.jar: \
+		src/portagemaster || die
 }
 
 src_install() {
