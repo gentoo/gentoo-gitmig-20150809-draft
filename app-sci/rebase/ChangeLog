@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/rebase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rebase/ChangeLog,v 1.4 2004/08/11 00:47:16 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rebase/ChangeLog,v 1.5 2004/09/29 23:37:14 ribosome Exp $
+
+*rebase-409 (29 Sep 2004)
+
+  29 Sep 2004; Olivier Fisette <ribosome@gentoo.org> -rebase-406.ebuild,
+  rebase-408.ebuild, +rebase-409.ebuild:
+  Added x86 to 408. New version 409. Removed old version.
 
 *rebase-408 (10 Aug 2004)
 
