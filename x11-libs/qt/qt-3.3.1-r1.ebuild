@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.1.ebuild,v 1.1 2004/03/01 13:01:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.1-r1.ebuild,v 1.1 2004/03/06 13:10:12 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -46,6 +46,8 @@ src_unpack() {
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
 
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
+
+	epatch ${FILESDIR}/qfontdatabase_x11.diff
 
 #	use icc && export PLATFORM=linux-icc
 }

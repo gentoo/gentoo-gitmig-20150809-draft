@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.130 2004/03/01 13:01:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.131 2004/03/06 13:10:12 caleb Exp $
+
+*qt-3.3.1-r1 (06 Mar 2004)
+
+  06 Mar 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.1-r1.ebuild,
+  files/qfontdatabase_x11.diff:
+  Add a patch which fixes many font problems for users.
+  Patch is from Trolltech, and will be in 3.3.2
 
 *qt-3.3.1 (01 Mar 2004)
 
