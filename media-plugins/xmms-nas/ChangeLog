@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-nas
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.4 2003/02/19 04:01:32 nall Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.5 2004/04/10 10:36:05 eradicator Exp $
+
+  10 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-nas-0.2-r1.ebuild:
+  Works on sparc.
 
   18 Feb 2003; Jon Nall <nall@gentoo.org> xmms-nas-0.2-r1.ebuild :
   marking as ~ppc. it seems any endian issues were on the nas end.

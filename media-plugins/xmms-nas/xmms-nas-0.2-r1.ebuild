@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.5 2003/02/19 04:01:32 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.6 2004/04/10 10:36:05 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A xmms plugin for NAS"
@@ -11,7 +11,7 @@ DEPEND="media-sound/xmms media-libs/nas"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 src_compile() {
 	econf || die
