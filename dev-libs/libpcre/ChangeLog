@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.9 2003/03/10 08:55:34 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.10 2003/03/14 18:55:29 tuxus Exp $
 
 *libpcre-3.9-r2 (10 Mar 2003)
 
@@ -10,6 +10,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libpcre-3.9-r1
+
+  14 Mar 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to KEYWORDS
 
   21 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
