@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/sqlite-php-0.0.5.ebuild,v 1.4 2003/07/26 15:57:41 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/sqlite-php-0.0.5.ebuild,v 1.5 2003/09/08 04:53:26 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PHP bindings for SQLite"
@@ -28,6 +28,6 @@ src_compile() {
 src_install () {
 
 	php-ext-source_src_install
-	dodoc README CREDITS CHANGES 
+	dodoc README CREDITS CHANGES
 
 }
