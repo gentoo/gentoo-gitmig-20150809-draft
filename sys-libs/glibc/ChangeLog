@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.303 2005/01/11 22:25:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.304 2005/01/12 05:17:16 eradicator Exp $
+
+  11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20040619-r2.ebuild, glibc-2.3.4.20040808-r1.ebuild,
+  glibc-2.3.4.20041102.ebuild:
+  Changed linux26-headers depend to accept linux-headers-2.6 as well.
 
   11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20040808-r1.ebuild, glibc-2.3.4.20041102.ebuild:
