@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5-r1.ebuild,v 1.2 2003/03/04 21:38:52 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5-r1.ebuild,v 1.3 2003/03/05 16:53:36 lostlogic Exp $
 
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/sed/${P}.tar.gz"
@@ -16,11 +16,11 @@ DEPEND="virtual/glibc
 RDEPEND="virtual/glibc"
 
 src_compile() {
-	econf `use_enable nls` || die
-	if [ `use static` ] ; then
-		emake || die
+	econf `use_enable nls` || die "Configure failed"
+	if [ -z `use static` ] ; then
+		emake || die "Shared build failed"
 	else
-		emake LDFLAGS=-static || die
+		emake LDFLAGS=-static || die "Static build failed"
 	fi
 }
 
@@ -29,7 +29,7 @@ src_install() {
 	dobin sed/sed
 	if [ -z "`use build`" ]
 	then
-		einstall || die "install failed"
+		einstall || die "Install failed"
 		dodoc COPYING NEWS README* THANKS TODO AUTHORS BUGS ANNOUNCE ChangeLog
 		docinto examples
 		dodoc ${FILESDIR}/dos2unix ${FILESDIR}/unix2dos

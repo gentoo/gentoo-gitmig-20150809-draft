@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.21 2003/03/04 21:38:52 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.22 2003/03/05 16:53:36 lostlogic Exp $
 
 *sed-4.0.5-r1 (04 Mar 2002)
+
+  05 Mar 2003; Brandon Low <lostlogic@gentoo.org> sed-4.0.5-r1.ebuild:
+  Fix static use variables, and add appropriate die messages
 
   04 Mar 2003; Brandon Low <lostlogic@gentoo.org> sed-4.0.5-r1.ebuild:
   Add examples to installed docs
