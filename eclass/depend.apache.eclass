@@ -1,9 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.11 2005/03/04 12:37:55 eradicator Exp $
-
-inherit multilib
-
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.12 2005/03/04 12:39:28 eradicator Exp $
 ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
 
@@ -47,8 +44,8 @@ APACHECTL2="/usr/sbin/apache2ctl"
 ##
 ## Paths to the server root directories
 ####
-APACHE1_BASEDIR="/usr/$(get_libdir)/apache"
-APACHE2_BASEDIR="/usr/$(get_libdir)/apache2"
+APACHE1_BASEDIR="/usr/lib/apache"
+APACHE2_BASEDIR="/usr/lib/apache2"
 
 ####
 ## APACHE1_CONFDIR, APACHE2_CONFDIR
