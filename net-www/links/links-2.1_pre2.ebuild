@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.0.ebuild,v 1.2 2002/07/04 00:42:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2.ebuild,v 1.1 2002/07/10 00:18:15 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -11,8 +10,9 @@ LICENSE="GPL-2"
 MYP="${P/_/}"
 S="${WORKDIR}/${MYP}"
 SRC_URI="${HOMEPAGE}/download/${MYP}.tar.bz2
-		http://www.ibiblio.org/gentoo/distfiles/links-2.0pre4-patch.tar.bz2"
-SLOT="0"
+	http://www.ibiblio.org/gentoo/distfiles/links-2.1_pre2-patch.tar.bz2"
+SLOT="2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6c )
@@ -27,6 +27,8 @@ DEPEND="virtual/glibc
 src_compile ()
 {
 	local myconf
+
+	myconf="--program-suffix=2"
 
 	use X \
 		&& myconf="${myconf} --with-x" \
