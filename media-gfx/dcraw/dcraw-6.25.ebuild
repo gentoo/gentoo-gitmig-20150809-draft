@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-6.09.ebuild,v 1.5 2005/01/17 17:25:56 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-6.25.ebuild,v 1.1 2005/01/17 17:25:56 wschlich Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cybercom.net/~dcoffin/dcraw/"
 SRC_URI="http://dev.gentoo.org/~wschlich/src/media-gfx/dcraw/${P}.tar.bz2"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="debug"
 DEPEND="virtual/libc >=media-libs/jpeg-6b"
 RDEPEND="media-libs/netpbm"
@@ -41,5 +41,9 @@ pkg_postinst() {
 	einfo "45 degrees, see fujiturn-usage.txt.gz on how to fix that."
 	einfo ""
 	einfo "There's an example wrapper script included called 'dcwrap'."
+	einfo ""
+	einfo "This package also includes 'dcparse', which extracts"
+	einfo "thumbnail images (preferably JPEGs) from any raw digital"
+	einfo "camera formats that have them, and shows table contents."
 	einfo ""
 }
