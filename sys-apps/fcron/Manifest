@@ -1,25 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d9e9e8adcb236d4cf01e918705a05e43 ChangeLog 6551
-MD5 f27d23d740050ab714fc1c315d9ae0e4 fcron-2.9.5.1.ebuild 3452
+MD5 551e214dd439635a6bf23fe52e3ef45d fcron-2.9.5.1-r1.ebuild 2874
 MD5 ca42c765bc8fa7b0779424acc59d877d fcron-2.0.2.ebuild 3052
+MD5 f27d23d740050ab714fc1c315d9ae0e4 fcron-2.9.5.1.ebuild 3452
+MD5 d9e9e8adcb236d4cf01e918705a05e43 ChangeLog 6551
 MD5 9c8fdf815ce980c230d763b496d4d088 metadata.xml 158
-MD5 f659349d3f24fa1b57684af8f495efe6 files/fcrontab.pam 506
-MD5 42d8a93754df65def4a3746bbc68e494 files/digest-fcron-2.9.5.1 69
 MD5 52572ff759db2d68e16f8cbc46fc6cd9 files/crontab 833
-MD5 bebebfe6bc1ce39b1703b624f2be567e files/fcron-2.0.0-configure.diff 390
-MD5 583200a8686cf8bdd59e970ad8a55d21 files/fcron.conf-2.9.5.1 800
+MD5 7e9a6dd8e9a4e482d7b6bf33d1f9881b files/fcron.conf 747
 MD5 d450e99144dc943526cd370c2b3a87e1 files/fcron.deny 377
-MD5 2d4d092f7a76917183b5d8086d871e67 files/fcron.allow 375
+MD5 d18b499ccc7338a352ccc5111a23e224 files/digest-fcron-2.0.2 67
 MD5 618ee227782ad9a3939c89e932eb2d2e files/fcron.pam 296
 MD5 54d34efc5c1c41481d4605e38ddba3a8 files/fcron.rc6 705
-MD5 d18b499ccc7338a352ccc5111a23e224 files/digest-fcron-2.0.2 67
-MD5 7e9a6dd8e9a4e482d7b6bf33d1f9881b files/fcron.conf 747
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB4iXnLLFUmVNQ7rkRAnAvAKCOpQ1/ZSPHoRqzytFPWVhcwl7iIgCgjJ3S
-l68vOYs5aRHGu2kYrRzk7j8=
-=2y5K
------END PGP SIGNATURE-----
+MD5 bebebfe6bc1ce39b1703b624f2be567e files/fcron-2.0.0-configure.diff 390
+MD5 2d4d092f7a76917183b5d8086d871e67 files/fcron.allow 375
+MD5 f659349d3f24fa1b57684af8f495efe6 files/fcrontab.pam 506
+MD5 42d8a93754df65def4a3746bbc68e494 files/digest-fcron-2.9.5.1 69
+MD5 583200a8686cf8bdd59e970ad8a55d21 files/fcron.conf-2.9.5.1 800
+MD5 42d8a93754df65def4a3746bbc68e494 files/digest-fcron-2.9.5.1-r1 69
