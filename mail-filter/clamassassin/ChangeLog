@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.10 2004/10/16 00:30:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.11 2004/11/01 21:31:50 slarti Exp $
+
+  01 Nov 2004; Tom Martin <slarti@gentoo.org> clamassassin-1.2.1.ebuild:
+  Stable on amd64.
 
   16 Oct 2004; Andrej Kacian <ticho@gentoo.org>
   clamassassin-1.2.0-r1.ebuild:
