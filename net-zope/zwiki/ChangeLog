@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zwiki
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.13 2004/10/18 18:32:56 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.14 2004/12/18 22:22:27 batlogg Exp $
+
+*zwiki-0.36.2 (18 Dec 2004)
+
+  18 Dec 2004; Jodok Batlogg <batlogg@gentoo.org>; +zwiki-0.36.2.ebuild:
+  version bump
+  repoman wanted fixes for 0.22.0 - iuse was missing, no digest
 
   18 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org> -zwiki-0.17.0.ebuild,
   -zwiki-0.19.0.ebuild:
