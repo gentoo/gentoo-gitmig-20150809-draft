@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc2.ebuild,v 1.1 2004/10/29 03:09:52 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc2.ebuild,v 1.2 2004/12/05 02:01:11 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -15,7 +15,7 @@ HOMEPAGE="http://ivtv.sourceforge.net"
 # stupidly named tarballs
 MY_P="${P/_/-}f"
 
-SRC_URI="http://67.18.1.101/~ckennedy/ivtv/${MY_P}.tgz
+SRC_URI="http://205.209.168.201/~ckennedy/ivtv/${MY_P}.tgz
 	http://hauppauge.lightpath.net/software/pvr250/pvr250_18a_inf.zip"
 
 RESTRICT="nomirror"
