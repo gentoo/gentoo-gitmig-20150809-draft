@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/opera-static-6.03.ebuild,v 1.2 2002/10/04 06:20:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/opera-static-6.03.ebuild,v 1.3 2002/12/09 04:33:20 manson Exp $
 
 NV=6.03-20020813.1-static-qt.i386
 S=${WORKDIR}/opera-${NV}
@@ -8,7 +8,7 @@ DESCRIPTION="Opera web browser, statically built."
 HOMEPAGE="http://www.opera.com/linux/"
 SRC_URI="http://www.panix.com/opera/files/linux/603/final/en/qt_static/opera-${NV}.tar.bz2"
 SLOT="0"
-KEYWORDS="x86 -ppc sparc sparc64"
+KEYWORDS="x86 -ppc sparc "
 LICENSE="OPERA"
 
 DEPEND="virtual/x11"

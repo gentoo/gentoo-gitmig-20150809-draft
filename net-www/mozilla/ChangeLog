@@ -1,7 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.64 2002/12/08 21:39:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.65 2002/12/09 04:33:20 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *mozilla-1.2.1-r1 (08 Dec 2002)
 
   08 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r1.ebuild :

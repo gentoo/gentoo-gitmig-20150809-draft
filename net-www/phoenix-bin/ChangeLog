@@ -1,7 +1,10 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.12 2002/11/21 22:48:44 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.13 2002/12/09 04:33:20 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *phoenix-bin-20021121 (21 Nov 2002)
 
   21 Nov 2002; Mark Guertin <gerk@gentoo.org> phoenix-bin-20021121.ebuild:

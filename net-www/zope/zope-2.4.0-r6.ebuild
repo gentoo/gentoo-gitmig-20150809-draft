@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.7 2002/10/04 06:21:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.8 2002/12/09 04:33:21 manson Exp $
 
 A="Zope-${PV}-src.tgz ZEO-1.0b3.tgz"
 S=${WORKDIR}/Zope-${PV}-src
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.zope.org"
 DEPEND="virtual/glibc 
         =dev-lang/python-2.1*"
 RDEPEND="=dev-lang/python-2.1*"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="as-is"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27.ebuild,v 1.1 2002/10/06 09:37:34 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27.ebuild,v 1.2 2002/12/09 04:33:20 manson Exp $
 
 mod_ssl_ver=2.8.11-${PV}
 HARD_SERVER_LIMIT=512
@@ -8,7 +8,7 @@ HARD_SERVER_LIMIT=512
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 	mirror://gentoo/${P}-patches.tbz2
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz"

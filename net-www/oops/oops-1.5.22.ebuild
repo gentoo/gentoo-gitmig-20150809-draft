@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.22.ebuild,v 1.1 2002/10/21 18:39:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.22.ebuild,v 1.2 2002/12/09 04:33:20 manson Exp $
 
 DESCRIPTION="An advanced multithreaded caching web proxy"
 HOMEPAGE="http://zipper.paco.net/~igor/oops.eng/"
 SRC_URI="http://zipper.paco.net/~igor/oops/${P}.tar.gz"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 SLOT="0"
 LICENSE="GPL-2"
 

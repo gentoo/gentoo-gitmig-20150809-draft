@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: gplflash-0.4.10-r1.ebuild,v 1.9 2002/10/22 07:42:29 seemant Exp $
+# $Id: gplflash-0.4.10-r1.ebuild,v 1.10 2002/12/09 04:33:20 manson Exp $
 
 S=${WORKDIR}/flash-0.4.10
 DESCRIPTION="GPL Shockwave Flash Player/Plugin"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.swift-tools.com/Flash"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="media-libs/libflash"
 

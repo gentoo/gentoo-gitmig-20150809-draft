@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.12 2002/11/25 05:48:22 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.13 2002/12/09 04:33:20 manson Exp $
 
 NV=6.0-20020510.2-shared-qt.i386
 S=${WORKDIR}/opera-${NV}
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.opera.com"
 SRC_URI="http://www.panix.com/opera/files/linux/600/final/en/qt_shared/opera-${NV}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="-x86 -ppc -sparc -sparc64"
+KEYWORDS="-x86 -ppc -sparc "
 LICENSE="OPERA"
 
 DEPEND="=x11-libs/qt-2*

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.21 2002/12/04 20:53:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.22 2002/12/09 04:33:20 manson Exp $
 
 IUSE="moznomail java mozp3p mozaccess gtk2 mozinterfaceinfo ssl ldap mozxmlterm mozctl gnome mozsvg"
 
@@ -36,7 +36,7 @@ S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV1}/src/${PN}-source-${MY_PV1}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc"
 LICENSE="MPL-1.1 NPL-1.1"
 
 RDEPEND=">=x11-base/xfree-4.2.0-r11
@@ -300,8 +300,6 @@ src_install() {
 			TODO="${S}/dist/mozilla-`uname -m`-pc-linux-gnu.tar.gz"
 			;;
 		sparc)
-			;;
-		sparc64)
 			;;
 		arm)
 			;;

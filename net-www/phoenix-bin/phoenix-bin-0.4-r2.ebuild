@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4-r2.ebuild,v 1.4 2002/11/30 21:39:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4-r2.ebuild,v 1.5 2002/12/09 04:33:20 manson Exp $
 
 MY_PN=${PN/-bin/}
 S=${WORKDIR}/${MY_PN}
@@ -9,7 +9,7 @@ SRC_URI="http://ftp.mozilla.org/pub/${MY_PN}/releases/${PV}/${MY_PN}-${PV}-i686-
 HOMEPAGE="http://www.mozilla.org/projects/phoenix/"
 RESTRICT="nostrip"
 
-KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 -ppc -sparc  -alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 

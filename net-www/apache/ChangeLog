@@ -1,7 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.30 2002/11/28 20:23:09 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.31 2002/12/09 04:33:20 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *apache-2.0.43-r1 (28 Nov 2002)
 
   28 Nov 2002; Donny Davies <woodchip@gentoo.org> : Updated layout!

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.0.3.ebuild,v 1.6 2002/10/04 06:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.0.3.ebuild,v 1.7 2002/12/09 04:33:20 manson Exp $
 
 S=${WORKDIR}/jakarta-${P}
 DESCRIPTION="Apache Servlet Engine"
 SRC_URI="http://jakarta.apache.org/builds/jakarta-tomcat-4.0/release/v${PV}/bin/jakarta-tomcat-${PV}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="Apache-1.1"
 

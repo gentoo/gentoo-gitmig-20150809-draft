@@ -1,13 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.1.ebuild,v 1.1 2002/10/31 18:18:04 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.1.ebuild,v 1.2 2002/12/09 04:33:20 manson Exp $
 
 DESCRIPTION="Horde Application Framework"
 HOMEPAGE="http://www.horde.org"
 SRC_URI="ftp://ftp.horde.org/pub/horde/tarballs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc "
 DEPEND=""
 RDEPEND=">=dev-php/mod_php-4.1.0
          >=sys-devel/gettext-0.10.40

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-5.0.50.ebuild,v 1.5 2002/10/21 13:05:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-5.0.50.ebuild,v 1.6 2002/12/09 04:33:20 manson Exp $
 
 S=${WORKDIR}/flash_linux
 DESCRIPTION="Macromedia Shockwave Flash Player"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.macromedia.com"
 
 SLOT="0"
-KEYWORDS="x86 -ppc sparc sparc64"
+KEYWORDS="x86 -ppc sparc "
 LICENSE="Macromedia"
 
 src_install() {                               

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/roundup-0.4.2.ebuild,v 1.7 2002/10/04 06:21:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/roundup-0.4.2.ebuild,v 1.8 2002/12/09 04:33:20 manson Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces."
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/roundup/${P}.tar.gz"
 HOMEPAGE="http://roundup.sourceforge.net"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="as-is"
 SLOT="0"
 

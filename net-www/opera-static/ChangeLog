@@ -1,7 +1,10 @@
 # ChangeLog for net-www/opera-static
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.7 2002/10/31 16:57:08 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.8 2002/12/09 04:33:20 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *opera-static-6.1 (31 Oct 2002)
 
   31 Oct 2002; Arcady Genkin <agenkin@gentoo.org> opera-static-6.1.ebuild :
