@@ -1,3 +1,4 @@
-MD5 9f3e92249b00ce23b0d76d2f271f131a asp2php-0.76.17.ebuild 781
-MD5 d3b811c460a49fd219e6596f69ef924c files/asp2php-0.76.17-makefile.patch 1247
+MD5 91b5a25be26689932adbc369b3d9a3b6 asp2php-0.76.17.ebuild 763
+MD5 973c87255e13854aad7c1a2168c95211 ChangeLog 404
+MD5 4fcaabf107de3907210d8acbc50d40a3 files/asp2php-0.76.17-makefile.patch 1237
 MD5 a261c315bf4212c90600867a3bc18752 files/digest-asp2php-0.76.17 66
