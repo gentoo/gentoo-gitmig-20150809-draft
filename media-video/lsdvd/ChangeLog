@@ -1,6 +1,15 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.3 2003/07/30 12:36:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.4 2003/11/18 17:31:09 mholzer Exp $
+
+*lsdvd-0.10 (18 Nov 2003)
+
+  18 Nov 2003; Martin Holzer <mholzer@gentoo.org> lsdvd-0.10.ebuild:
+  Version bumped.
+
+  18 Nov 2003; Martin Holzer <mholzer@gentoo.org> lsdvd-0.6.ebuild,
+  lsdvd-0.7.ebuild, lsdvd-0.9.ebuild:
+  adding RESTRICT="nomirror"
 
 *lsdvd-0.9 (30 Jul 2003)
 
