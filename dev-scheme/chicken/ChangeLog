@@ -1,6 +1,6 @@
-# ChangeLog for dev-lisp/chicken
+# ChangeLog for dev-scheme/chicken
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.1 2005/02/07 07:50:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.2 2005/02/07 19:31:45 swegener Exp $
 
 *chicken-1.89 (07 Feb 2005)
 
