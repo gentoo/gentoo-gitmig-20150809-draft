@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.73 2004/12/08 10:29:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.74 2004/12/08 21:11:46 hardave Exp $
+
+  08 Dec 2004; Hardave Riar <hardave@gentoo.org>
+  files/file-4.xx-mips-gentoo.diff, file-4.12.ebuild:
+  Fixed up mips patch so it applies cleanly. Keyworded stable on mips, bug
+  #72521.
 
   08 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> file-4.12.ebuild:
   Stable on alpha, bug 72521.
