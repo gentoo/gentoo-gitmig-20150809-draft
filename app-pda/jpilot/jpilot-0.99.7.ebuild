@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7.ebuild,v 1.2 2004/06/24 21:42:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7.ebuild,v 1.3 2004/06/27 00:56:37 liquidx Exp $
 
 SYNCMAL="0.72.1"
 MALSYNC="2.2.0"
@@ -60,7 +60,7 @@ src_install() {
 
 	einstall \
 		docdir=${D}/usr/share/doc/${PF} \
-		icondir=${D}/usr/share/doc/${PF}/icons \
+		icondir=${D}/usr/share/pixmaps \
 		desktopdir=${D}/usr/share/applications || die "install failed"
 
 	insinto /usr/lib/jpilot/plugins
@@ -73,6 +73,9 @@ src_install() {
 	newdoc jpilot-syncmal-${SYNCMAL}/README README.jpilot-syncmal
 	dodoc jpilot-syncmal-${SYNCMAL}/malsync/Doc/README_AvantGo
 	dodoc jpilot-syncmal-${SYNCMAL}/malsync/Doc/README_malsync
+
+	dosym jpilot-icon3.xpm /usr/share/pixmaps/jpilot.xpm
+
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
 	doins ${S}/jpilotrc.*
