@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.7 2004/09/26 02:46:23 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.8 2004/09/27 00:20:17 fafhrd Exp $
+
+  26 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/gnustep-gui-0.9.4-camaelon.patch, gnustep-gui-0.9.4.ebuild:
+  New local USE flag 'camaelon' patches in support for Camaelon GNUstep theme
+  engine; PDEPEND added if this USE flag is on for gnustep-libs/camaelon.
 
   25 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> gnustep-gui-0.9.4.ebuild:
   Made library depends less strict.

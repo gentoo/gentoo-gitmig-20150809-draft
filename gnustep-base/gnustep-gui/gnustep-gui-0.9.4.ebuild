@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.3 2004/09/26 02:46:23 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.4 2004/09/27 00:20:17 fafhrd Exp $
 
 inherit gnustep
 
@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-IUSE="${IUSE} jpeg gif png gsnd doc cups"
+IUSE="${IUSE} jpeg gif png gsnd doc cups camaelon"
 DEPEND="${GNUSTEP_BASE_DEPEND}
 	virtual/x11
 	=media-libs/tiff-3*
@@ -24,6 +24,16 @@ DEPEND="${GNUSTEP_BASE_DEPEND}
 	=app-text/aspell-0.50*"
 RDEPEND="${DEPEND}
 	${DOC_RDEPEND}"
+PDEPEND="camaelon? =gnustep-libs/camaelon-0.1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if use camaelon
+	then
+		epatch ${FILESDIR}/${P}-camaelon.patch
+	fi
+}
 
 src_compile() {
 	egnustep_env
