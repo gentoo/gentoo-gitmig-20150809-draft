@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.10 2003/12/18 13:07:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.11 2004/01/25 12:41:43 carpaski Exp $
 
 *koffice-i18n-1.3_rc2 (18 Dec 2003)
+
+  25 Jan 2003; Nicholas Jones <carpaski@gentoo.org> koffice-i18n-1.3_rc2:
+	Added quotes on -z check at line 31.
 
   18 Dec 2003; Caleb Tennis <caleb@gentoo.org> koffice-i18n-1.3_rc2.ebuild:
   new release candidate
@@ -13,6 +16,9 @@
 
 *koffice-i18n-1.3_rc1 (31 Oct 2003)
 
+  25 Jan 2003; Nicholas Jones <carpaski@gentoo.org> koffice-i18n-1.3_rc1:
+	Added quotes on -z check at line 31.
+
   31 Oct 2003; Caleb Tennis <caleb@gentoo.org> koffice-i18n-1.3_rc1.ebuild:
   Version bump
 
@@ -21,6 +27,9 @@
 
 *koffice-i18n-1.2.1-r1 (25 Sep 2003)
 *koffice-i18n-1.3_beta4 (25 Sep 2003)
+
+  25 Jan 2003; Nicholas Jones <carpaski@gentoo.org> koffice-i18n-1.3_beta4:
+	Added quotes on -z check at line 31.
 
   25 Sep 2003; Caleb Tennis <caleb@gentoo.org> koffice-i18n-1.1.1.ebuild,
   koffice-i18n-1.2.1-r1.ebuild, koffice-i18n-1.2.ebuild,

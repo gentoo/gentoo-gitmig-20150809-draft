@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3_rc2.ebuild,v 1.1 2003/12/18 13:07:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3_rc2.ebuild,v 1.2 2004/01/25 12:41:43 carpaski Exp $
 
 inherit kde
 need-kde 3
@@ -28,7 +28,7 @@ do
 	SRC_URI="$SRC_URI linguas_${pkg}? ( $BASEDIR/koffice-i18n-${pkg}-${MY_PV}.tar.bz2)"
 done
 
-if [ -z $SRC_URI ]; then
+if [ -z "$SRC_URI" ]; then
 	SRC_URI="$BASEDIR/koffice-i18n-${MY_PV}.tar.bz2"
 fi
 
