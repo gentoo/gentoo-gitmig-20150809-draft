@@ -1,12 +1,52 @@
 --- Makefile.in	2004-08-15 01:11:43.000000000 +0200
-+++ ../cxfe-modified/Makefile.in	2004-08-25 19:03:47.273757920 +0200
-@@ -34,8 +34,7 @@
++++ ../cxfe-edited/Makefile.in	2004-09-25 10:56:21.820612240 +0200
+@@ -1,7 +1,7 @@
+ SHELL = /bin/sh
+ VPATH = @srcdir@
+ 
+-subdirs = @subdirs@
++subdirs = .
+ top_srcdir = @top_srcdir@
+ srcdir = @srcdir@
+ prefix = @prefix@
+@@ -13,9 +13,9 @@
+ 
+ CC = @CC@ -Wall
+ CPPFLAGS = @CPPFLAGS@
+-CFLAGS = $(CPPFLAGS) @CFLAGS@ `xine-config --cflags`
++CFLAGS = $(CPPFLAGS) @CFLAGS@ `xine-config --cflags` -I/usr/X11R6/include
+ LIBS = @LIBS@
+-LDFLAGS = `xine-config --libs` @LDFLAGS@ -lX11 @LIBS@ 
++LDFLAGS = `xine-config --libs` -L/usr/X11R6/lib -lX11 -lXext @LDFLAGS@ @LIBS@ 
+ INSTALL = @INSTALL@
+ 
+ #CC=gcc -Wall -g -O2
+@@ -29,15 +29,20 @@
+ cxfe: cxfe.o termio/getch2.o
+ 
+ clean:
+-	rm cxfe.o cxfe termio/*.o
++	@if test -f cxfe.o ; then rm cxfe.o ; fi
++	@if test -f cxfe ; then rm cxfe termio/*.o ; fi
++	@if test -f termio/getch2.o ; then rm cxfe termio/*.o ; fi
+ 
  install:
- 	cp cxfe $(bindir)/cxfe
- 	chmod 755 $(bindir)/cxfe
+-	cp cxfe $(bindir)/cxfe
+-	chmod 755 $(bindir)/cxfe
 -        if test ! -d $(prefix)/share/cxfe ; then mkdir -p $(prefix)/share/cxfe ; 
 -fi
-+	if test ! -d $(prefix)/share/cxfe ; then mkdir -p $(prefix)/share/cxfe ; fi
- 	cp lircrc-example $(prefix)/share/cxfe/lircrc
+-	cp lircrc-example $(prefix)/share/cxfe/lircrc
++	@echo "Installing cxfe to:" $(bindir)/cxfe
++	@chmod +x cxfe
++	@cp cxfe $(bindir)/cxfe
++	@if test ! -d $(prefix)/share/cxfe ; \
++	then mkdir -p $(prefix)/share/cxfe ; \
++	fi
++	@echo "Installing lirc example to:" $(prefix)/share/cxfe/lircrc
++	@cp lircrc-example $(prefix)/share/cxfe/lircrc
  
  uninstall:
+-	rm -f $(bindir)/cxfe
+-	rm -Rf $(prefix)/share/cxfe
++	@rm -f $(bindir)/cxfe
++	@rm -Rf $(prefix)/share/cxfe
