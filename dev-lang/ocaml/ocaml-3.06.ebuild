@@ -1,10 +1,10 @@
 # Copyright 20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.05.ebuild,v 1.2 2002/08/14 11:58:50 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.1 2002/09/02 19:04:29 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."
-SRC_URI="ftp://ftp.inria.fr/lang/caml-light/${P}.tar.gz"
+SRC_URI="http://caml.inria.fr/distrib/${P}/${P}.tar.gz"
 HOMEPAGE="http://www.ocaml.org/"
 
 DEPEND="virtual/glibc
@@ -40,14 +40,7 @@ src_install ()
 
 	# silly, silly makefiles
 	dosed "s:${D}::g" /usr/lib/ocaml/ld.conf
-	
-	dodir /etc/env.d
-	echo LDPATH=/usr/lib/ocaml:/usr/lib/ocaml/labltk \
-		> ${D}/etc/env.d/30ocaml
+
+	# documentation
 	dodoc Changes INSTALL LICENSE README Upgrading
-
 }
-
-
-
-
