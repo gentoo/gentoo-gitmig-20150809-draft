@@ -6,7 +6,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1435915e8d7f22af585b23335b45ced0 apcupsd-3.10.15.ebuild 2445
 MD5 c7e7009608d846b75ae57616e5063db0 apcupsd-3.10.10.ebuild 2506
 MD5 79fbd20420f039a3ade2d1772723939b apcupsd-3.10.10-r1.ebuild 2551
-MD5 c19161085d2b820c4f4b87a55c68aaef ChangeLog 7041
+MD5 9bcf61ddcbad56e7f94529ca79be85d1 ChangeLog 7258
 MD5 1edda758e443285ff65aaebcaf893f26 apcupsd-3.10.9.ebuild 2505
 MD5 3fe72118440066f4063e3040f7073726 apcupsd-3.10.8.ebuild 2505
 MD5 350594bbff4af6f9d84642680267a533 apcupsd-3.10.10-r2.ebuild 2683
@@ -41,7 +41,7 @@ MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.10/apcupsd.in.patch 315
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBLQTXKtJO8LeSoosRApvkAKCl2wxrUyGgPvLvEapG95ZOC34w6ACfSbBA
-wov+uxnCpAcGL+CSWJ5rjR4=
-=P2yo
+iD8DBQFBLa15KtJO8LeSoosRAgkqAJsEbNrka12XbP/6aRSJN49ZslUxkwCfaor1
+fOehokg8vJasEhA0Kpf3C40=
+=M6kT
 -----END PGP SIGNATURE-----

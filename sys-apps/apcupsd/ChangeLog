@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.39 2004/08/25 21:28:33 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.40 2004/08/26 09:28:02 tantive Exp $
+
+  26 Aug 2004; Michael Imhof <tantive@gentoo.org> +files/3.10.15/apache.conf,
+  +files/3.10.15/apcupsd.in.patch, +files/3.10.15/smtp.patch,
+  +files/3.10.15/ucd-snmp.patch:
+  Forgot to add some files. Closes #61714.
 
 *apcupsd-3.10.15 (25 Aug 2004)
 
