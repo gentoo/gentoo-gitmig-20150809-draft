@@ -1,4 +1,14 @@
-MD5 2b1beb29784ee884a119e38b31dd9f58 xrick-021212-r1.ebuild 1124
-MD5 a6aaa1330376ce1b886f66497d48a31e ChangeLog 1126
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6bab6e857b7ab412ca25dac937b5b374 xrick-021212-r1.ebuild 1132
+MD5 7a2e59ce345e0e57a3dc9a300c06ae6f ChangeLog 1239
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 0c00480004b6777f8316186982e0eabb files/digest-xrick-021212-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBno8+Z/iYVBmujdURAj67AJ4jhDg0fvHzLmnm9kN5+unNrNKEqwCg43x+
+HQEW4cnketkryEGHCbgaqJY=
+=OI3Y
+-----END PGP SIGNATURE-----
