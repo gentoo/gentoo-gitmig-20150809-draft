@@ -12,5 +12,14 @@ SRC_URI="http://www.spamassassin.org/released/${P}.tar.gz"
 HOMEPAGE="http://www.spamassassin.org"
 
 DEPEND="dev-perl/Net-DNS"
+LICENSE="GPL-2 | Artistic"
 
 mydoc="License TODO"
+
+src_install () {
+	make PREFIX=${D}/usr INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+	LOCAL_RULES_DIR=${D}/etc/mail/spamassassin \
+	INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
+	dodoc Changes MANIFEST README TODO License
+	dodoc procmailrc.example sample-nonspam.txt sample-spam.txt
+}
