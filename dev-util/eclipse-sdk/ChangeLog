@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.61 2004/08/22 16:15:31 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.62 2004/09/08 20:16:30 karltk Exp $
+
+*eclipse-sdk-3.1_pre1 (08 Sep 2004)
+
+  08 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-3.1_pre1.ebuild, files/eclipse-3.1, files/eclipse-3.1.desktop:
+  New upstream version.
 
   22 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0-r3.ebuild, eclipse-sdk-2.1.3-r5.ebuild:
@@ -28,24 +34,24 @@
   eclipse-sdk-3.0.0-r3.ebuild, eclipse-sdk-3.0.0.ebuild:
   added the xml.jar for ppc to bootclasspath
 
-*eclipse-sdk-3.0.0-r3 30 Jul 2004
+*eclipse-sdk-3.0.0-r3 (30 Jul 2004)
 
   30 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0-r3.ebuild: Trying to get it working on PPC.
 
-*eclipse-sdk-3.0.0-r2 27 Jul 2004
+*eclipse-sdk-3.0.0-r2 (27 Jul 2004)
 
   27 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-2.1.3-r5.ebuild:
   Added manpage.
 
-*eclipse-sdk-2.1.3-r5 27 Jul 2004
+*eclipse-sdk-2.1.3-r5 (27 Jul 2004)
 
   27 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-2.1.3-r5.ebuild:
   Added manpage.
 
-*eclipse-sdk-3.0.0-r1 21 Jul 2004
+*eclipse-sdk-3.0.0-r1 (21 Jul 2004)
 
   21 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
   Fixed mozilla embedding problem, #56516. Fixed dependency issue, #56840.
