@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.15.ebuild,v 1.9 2004/06/24 22:45:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.15.ebuild,v 1.10 2004/07/14 23:55:35 agriffis Exp $
 
 inherit eutils
 
 IUSE="nls gtk gtk2 ssl"
-S=${WORKDIR}/${P}
 DESCRIPTION="Gnome based FTP Client"
 SRC_URI="http://www.gftp.org/${P}.tar.bz2"
 HOMEPAGE="http://www.gftp.org"

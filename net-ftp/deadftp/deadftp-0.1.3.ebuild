@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/deadftp/deadftp-0.1.3.ebuild,v 1.11 2004/06/24 22:44:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/deadftp/deadftp-0.1.3.ebuild,v 1.12 2004/07/14 23:54:50 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gnome based FTP Client"
 SRC_URI="mirror://sourceforge/deadftp/${P}.tar.bz2"
 HOMEPAGE="http://deadftp.sourceforge.net"
