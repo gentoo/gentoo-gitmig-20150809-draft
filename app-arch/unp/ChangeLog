@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unp
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.1 2003/11/27 18:13:52 hanno Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.2 2004/03/11 21:56:35 hanno Exp $
+
+*unp-1.0.9 (11 Mar 2004)
+
+  11 Mar 2004; Hanno Boeck <hanno@gentoo.org> unp-1.0.9.ebuild:
+  Version bump.
 
 *unp-1.0.8 (27 Nov 2003)
 
