@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.5 2002/12/25 15:40:22 viz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.6 2003/01/08 07:12:37 raker Exp $
 
 *ladspa-sdk-1.12 (25 Dec 2002)
+
+  08 Jan 2002; Nick Hadaway <raker@gentoo.org> ladspa-sdk-1.12.ebuild :
+  Marked stable.
 
   25 Dec 2002; Tobias Eichert <viz@gentoo.org> ladspa-sdk-1.12.ebuild
   files/digest-ladspa-sdk-1.12 :
