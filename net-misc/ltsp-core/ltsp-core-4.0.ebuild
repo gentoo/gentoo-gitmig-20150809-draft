@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.2 2004/01/31 20:04:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.3 2004/02/27 15:19:12 lanius Exp $
 
 IUSE="X debug"
 
@@ -60,7 +60,7 @@ ltsp_x336_VGA16-3.3.6-0-i386.tgz
 ltsp_x336_W32-3.3.6-0-i386.tgz"
 
 LTSP_STUFF="ltspcfg-0.3.tgz
-ltsp_kernel-3.0.12-i386.tgz"
+ltsp_kernel-3.0.13-i386.tgz"
 
 for FILE in ${LTSP_CORE} ${LTSP_STUFF}
 do
@@ -89,7 +89,7 @@ DEPEND="app-arch/tar
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 S=${WORKDIR}/ltsp
 
@@ -144,7 +144,7 @@ src_install() {
 	cd ltsp_kernel
 	find i386 -print | cpio -pmud --quiet ${D}/opt/ltsp 2> /dev/null
 	insinto /tftpboot/lts
-	doins vmlinuz-2.4.22-ltsp-2
+	doins vmlinuz-2.4.24-ltsp-1
 	cd ..
 
 	# pxe stuff
