@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r2.ebuild,v 1.1 2004/11/02 06:42:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r3.ebuild,v 1.1 2004/11/14 04:59:41 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20041022"			# Date of diff between kernel.org and lmo CVS
 COBALTPATCHVER="1.8"			# Tarball version for cobalt patches
-SECPATCHVER="1.3"			# Tarball version for security patches
-GENPATCHVER="1.3"			# Tarball version for generic patches
+SECPATCHVER="1.4"			# Tarball version for security patches
+GENPATCHVER="1.4"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
@@ -97,13 +97,15 @@ src_unpack() {
 	echo -e ""
 	einfo ">>> Generic Patches"
 		# IP32 Patches
-		epatch ${WORKDIR}/mips-patches/misc-2.6-ip32-onion2-gbefb-fixes-old.patch
+		epatch ${WORKDIR}/mips-patches/misc-2.6-ip32-onion2-gbefb-fixes-20041029.patch
 		epatch ${WORKDIR}/mips-patches/misc-2.6.9-ths-ip32-misc.patch
 		epatch ${WORKDIR}/mips-patches/misc-2.6-ip32-tweak-makefile.patch
-		epatch ${WORKDIR}/mips-patches/misc-2.6-gbefb-compile-fix.patch
+		epatch ${WORKDIR}/mips-patches/misc-2.6-ip32-fix-rm7k.patch
 
 		# Generic
 		epatch ${WORKDIR}/mips-patches/misc-2.6-fix-prologue-error.patch
+		epatch ${WORKDIR}/mips-patches/misc-2.6-new-ramdisk-code.patch
+		epatch ${WORKDIR}/mips-patches/misc-2.6-kconfig-tweak
 	eend
 
 
@@ -136,10 +138,11 @@ src_unpack() {
 	fi
 
 
-#	# Security Fixes
-#	echo -e ""
-#	ebegin ">>> Applying Security Fixes"
-#	eend
+	# Security Fixes
+	echo -e ""
+	ebegin ">>> Applying Security Fixes"
+		epatch ${WORKDIR}/security/security-2.6.9-binfmt_elf-fixes.patch
+	eend
 
 
 #	# IP27 (Origin) Hacks - XXX - Not Implemented
