@@ -1,6 +1,12 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.36 2004/07/28 09:37:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.37 2004/07/28 17:09:57 axxo Exp $
+
+  28 Jul 2004; Thomas Matthijs <axxo@gentoo.org> files/4.1.30/gentoo.diff,
+  files/4.1.30/tomcat.conf, files/5.0.27/gentoo.diff,
+  files/5.0.27/tomcat.conf, tomcat-4.1.30.ebuild, tomcat-5.0.27.ebuild:
+  added commented config defaults to use jikes compile,added doc use flag,
+  closes 58670
 
   28 Jul 2004; Thomas Matthijs <axxo@gentoo.org> files/3.3.2/tomcat.init,
   files/4.1.30/tomcat.init, files/5.0.27/tomcat.init, tomcat-3.3.2.ebuild,

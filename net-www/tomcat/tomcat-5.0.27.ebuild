@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.27.ebuild,v 1.3 2004/07/28 09:38:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.27.ebuild,v 1.4 2004/07/28 17:09:57 axxo Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="Apache-2.0"
 DEPEND=""
 RDEPEND=">=virtual/jdk-1.3
 		sys-apps/sed"
-IUSE=""
+IUSE="doc"
 
 TOMCAT_HOME="/opt/${PN}${SLOT}"
 TOMCAT_NAME="${PN}${SLOT}"
@@ -57,7 +57,11 @@ src_install() {
 	keepdir /var/log/${TOMCAT_NAME}
 
 	mv conf ${D}/etc/${TOMCAT_NAME}
-	mv bin common server shared temp webapps work ${D}${TOMCAT_HOME}
+	mv bin common server shared temp work ${D}${TOMCAT_HOME}
+	if ! use doc; then
+		rm -rf webapps/{tomcat-docs,jsp-examples,servlets-examples}
+	fi
+	mv webapps ${D}${TOMCAT_HOME}
 
 	dosym /etc/${TOMCAT_NAME} ${TOMCAT_HOME}/conf
 	dosym /var/log/${TOMCAT_NAME} ${TOMCAT_HOME}/logs
