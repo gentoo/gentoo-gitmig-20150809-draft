@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.5 2002/07/13 21:03:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.6 2002/07/16 17:59:15 danarmak Exp $
 
 inherit kde kde.org || die
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
@@ -78,17 +78,17 @@ src_install() {
 	
 	dodir /etc/env.d
 	
-	if [ "$KDE2DIR" != "$KDE2LIBSDIR" ]; then
-echo "PATH=${KDE2LIBSDIR}/bin:${KDE2DIR}/bin
-ROOTPATH=${KDE2LIBSDIR}/bin:${KDE2DIR}/bin
-LDPATH=${KDE2LIBSDIR}/lib:${KDE2DIR}/lib" > ${D}/etc/env.d/70kdelibs-${PV}
+	if [ "$KDEDIR" != "/usr/kde/2" ]; then
+echo "PATH=${KDEDIR}/bin:/usr/kde/2/bin
+ROOTPATH=${KDEDIR}/bin:/usr/kde/2/bin
+LDPATH=${KDEDIR}/lib:/usr/kde/2/lib" > ${D}/etc/env.d/70kdelibs-${PV}
 	else
-echo "PATH=${KDE2LIBSDIR}/bin
-ROOTPATH=${KDE2LIBSDIR}/bin
-LDPATH=${KDE2LIBSDIR}/lib" > ${D}/etc/env.d/70kdelibs-${PV}
+echo "PATH=${KDEDIR}/bin
+ROOTPATH=${KDEDIR}/bin
+LDPATH=${KDEDIR}/lib" > ${D}/etc/env.d/70kdelibs-${PV}
 	fi
 
-	echo "KDEDIR=${KDE2DIR}" > ${D}/etc/env.d/40kdedir-${PV}
+	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/40kdedir-${PV}
 
 }
 
