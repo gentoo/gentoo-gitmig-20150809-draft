@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.10 2004/03/01 06:26:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.11 2004/03/13 08:42:16 eradicator Exp $
 
 IUSE="xmms gtk ipv6 tcpd"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.teknap.com/pub/TekNap/${MY_P}.tar.gz"
 HOMEPAGE="http://www.TekNap.com/"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/teknap
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.4 2003/02/12 08:41:10 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.5 2004/03/13 08:42:16 eradicator Exp $
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> teknap-1.3g.ebuild:
+  Moved to ~arch as it borks with newer gccs. Also, upstream development is dead
+  (the homepage doesn't even exist). See bug #38456.
 
   24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
