@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.15 2004/12/24 07:51:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.16 2004/12/26 06:16:40 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -55,7 +55,12 @@ horde_pkg_setup() {
 	webapp_pkg_setup
 
 	if [[ ! -z ${HORDE_PHP_FEATURES} ]] ; then
-		if ! built_with_use mod_php ${HORDE_PHP_FEATURES} ; then
+		local param
+		if [[ ${HORDE_PHP_FEATURES:0:2} = "-o" ]] ; then
+			param="-o"
+			HORDE_PHP_FEATURES=${HORDE_PHP_FEATURES:2}
+		fi
+		if ! built_with_use ${param} mod_php ${HORDE_PHP_FEATURES} ; then
 			eerror "You MUST re-emerge ${phpver} with at least one of"
 			eerror "the following options in your USE:"
 			eerror " ${HORDE_PHP_FEATURES}"
