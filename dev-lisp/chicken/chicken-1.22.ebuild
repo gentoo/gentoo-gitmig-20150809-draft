@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/chicken/chicken-1.22.ebuild,v 1.3 2004/06/24 23:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/chicken/chicken-1.22.ebuild,v 1.4 2004/07/13 06:29:17 mr_bones_ Exp $
 
 DESCRIPTION="Chicken is a native Scheme to C compiler"
 SRC_URI="http://www.call-with-current-continuation.org/${P}.tar.gz"
 HOMEPAGE="http://www.call-with-current-continuation.org/"
+
 LICENSE="BSD"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
+IUSE=""
 
 DEPEND=""
 
