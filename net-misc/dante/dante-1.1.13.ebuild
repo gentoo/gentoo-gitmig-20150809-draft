@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.6 2002/11/02 11:01:53 seemant Exp $
 
 IUSE="tcpd"
 
@@ -8,11 +8,17 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A free socks4,5 and msproxy implemetation"
 SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 HOMEPAGE="http://www.inet.no/dante/"
-RDEPEND="virtual/glibc sys-libs/pam tcpd? ( sys-apps/tcp-wrappers )"
-DEPEND="${RDEPEND} sys-devel/perl"
+
 LICENSE="BSD"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~sparc ~sparc64"
 SLOT="0"
+
+RDEPEND="virtual/glibc
+	sys-libs/pam
+	tcpd? ( sys-apps/tcp-wrappers )"
+
+DEPEND="${RDEPEND}
+	sys-devel/perl"
 
 # removed the src_unpack() since it doesn't appear to need any of those
 # patches (they all barfed when I tried to apply them by hand)
