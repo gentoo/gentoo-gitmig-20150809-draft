@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.14 2004/11/01 17:44:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.15 2004/11/07 07:37:03 corsair Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ossp.org/pkg/lib/mm/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="alpha arm hppa ia64 mips ppc s390 ~sparc ~x86 ~amd64"
+KEYWORDS="alpha arm hppa ia64 mips ppc s390 ~sparc ~x86 ~amd64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.19 2004/11/01 17:44:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.20 2004/11/07 07:37:03 corsair Exp $
+
+  07 Nov 2004; Markus Rothe <corsair@gentoo.org> mm-1.3.0.ebuild:
+  Marked ~ppc64
 
   01 Nov 2004; Lars Weiler <pylon@gentoo.org> mm-1.3.0.ebuild:
   Stable on ppc for PHP5, Bug #60442.
