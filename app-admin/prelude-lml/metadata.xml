@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>hardened</herd>
 	<maintainer>
-		<email>solar@gentoo.org</email>
-		<description>Mediator</description>
+		<email>mboman@gentoo.org</email>
+		<description>Primary Mantainer</description>
 	</maintainer>
 	<longdescription>Prelude-IDS Log Monitoring Lackey</longdescription>
 </pkgmetadata>
