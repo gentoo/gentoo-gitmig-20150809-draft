@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.36 2004/10/16 04:15:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.37 2004/11/03 15:48:16 lv Exp $
+
+  03 Nov 2004; Travis Tilley <lv@gentoo.org> +files/1.14.90-optimize.patch,
+  tar-1.14.90-r1.ebuild:
+  added a patch from James Couzens that fixes building tar 1.14.90 with newer
+  glibc snapshots
 
 *tar-1.14.90-r1 (16 Oct 2004)
 

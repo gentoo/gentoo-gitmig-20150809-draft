@@ -1,0 +1,17 @@
+01 Nov 2004 jcouzens
+
+This patch fixes the stupid bug in argp-fs-xinl.c
+--- lib/argp-fs-xinl.c.orig 2004-10-29 13:45:06.806318952 +0100
++++ lib/argp-fs-xinl.c      2004-10-29 13:45:26.385342488 +0100
+@@ -22,8 +22,9 @@
+ #endif
+
+ #define ARGP_FS_EI
+-#undef __OPTIMIZE__
+-#define __OPTIMIZE__
++#ifndef __OPTIMIZE__
++#define __OPTIMIZE__ 1
++#endif
+ #include "argp-fmtstream.h"
+
+ #if 0

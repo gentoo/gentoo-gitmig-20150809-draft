@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90-r1.ebuild,v 1.1 2004/10/16 04:15:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90-r1.ebuild,v 1.2 2004/11/03 15:48:16 lv Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-tests.patch #67023
 	epatch ${FILESDIR}/${PV}-gnulib.patch #67038
 	epatch ${FILESDIR}/${PV}-scripts.patch
+	epatch ${FILESDIR}/${PV}-optimize.patch #69395
 	gnuconfig_update
 }
 
