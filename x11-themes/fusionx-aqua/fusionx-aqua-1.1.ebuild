@@ -1,21 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.8 2004/06/30 23:03:44 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.9 2004/07/03 20:11:39 carlo Exp $
 
 inherit kde
-need-kde 3.1
 
 MY_P="FusionX-Aqua-${PV}"
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="stylish \"Fusion X Aqua\" theme for KDE"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5296"
 SRC_URI="http://www.kdelook.org/content/files/5296-${MY_P}.tar.gz"
-IUSE=""
-LICENSE="GPL-2"
+
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~alpha amd64"
+LICENSE="GPL-2"
+IUSE=""
 
 DEPEND="kde-base/kdebase"
+need-kde 3.1
 
 src_compile(){
 	# nothing to compile, but don't want the eclass to try to compile anything
