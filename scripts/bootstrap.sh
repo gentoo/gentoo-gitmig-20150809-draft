@@ -22,14 +22,14 @@ else
 	olduse="$USE"
 	unset=no
 fi
-export USE="build"
+export USE="build bootstrap"
 export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
 cd /usr/portage
 emerge $myPORTAGE || exit
-emerge $myGETTEXT || exit
 emerge $myBINUTILS || exit
 emerge $myGCC || exit
+emerge $myGETTEXT || exit
 if [ "$unset" = "yes" ]
 then
 	unset USE
