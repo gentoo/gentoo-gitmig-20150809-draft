@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 2e93f1b98af9ba94338221890f335c9b ChangeLog 3516
 MD5 9fc39149d10338732478469a31d56631 libungif-4.1.0.1b.ebuild 2182
-MD5 7bccdfecdf986a4ca9cebbd2993cd89b ChangeLog 3361
-MD5 e4aedd01243fdbe8c7bb23a075b4b34c libungif-4.1.3.ebuild 1927
-MD5 934f005d68b860ad80eff92ecf9e0273 files/libungif-CVS.patch 4542
-MD5 4dce5cb6bb39518676e2056624963e1a files/libungif-4.1.0-stdarg.patch 655
+MD5 1c62b4e35d234633d9fafe4a31b0564a libungif-4.1.3.ebuild 1955
 MD5 f71b3a2bf523f503987501c602a1c1e9 files/digest-libungif-4.1.0.1b 69
+MD5 4dce5cb6bb39518676e2056624963e1a files/libungif-4.1.0-stdarg.patch 655
+MD5 934f005d68b860ad80eff92ecf9e0273 files/libungif-CVS.patch 4542
 MD5 c8f7239f2db03a50ebcc2bd24a0cf8d0 files/digest-libungif-4.1.3 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4yD6ugEuf3OQ0akRAi+rAJ9qPTSBsIAmUyDIqQ8cXKLtRzwbAgCfSAN6
-M8LhlzodP8wa9VIwv/Hc2/A=
-=GV08
+iD8DBQFB5/v1roRuSHgZdywRAgOOAJ0ekTmueET2IKLpffWO/A26IyT+qgCght/z
+7MQ2acJ7i6nYb/DuK4HY30U=
+=HOOE
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.3.ebuild,v 1.6 2005/01/11 00:39:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.3.ebuild,v 1.7 2005/01/14 17:04:51 vapier Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos sparc x86"
 IUSE="X gif"
 
-RDEPEND="X? ( virtual/x11 )"
+RDEPEND="X? ( virtual/x11 )
+	gif? ( media-libs/giflib )"
 
 src_unpack() {
 	unpack ${A}
