@@ -1,0 +1,8 @@
+# ChangeLog for net-analyzer/tptest
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.1 2003/07/02 08:21:05 aliz Exp $
+
+*tptest-3.1.0 (02 Jul 2003)
+
+  02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> tptest-3.1.0.ebuild :
+  Initial import.
