@@ -197,6 +197,11 @@ def merge(mycategory,mypackage,mystart):
 	print 
 	print ">>> Merging contents of",mystart,"to "+root
 	print ">>> Logging merge to "+root+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS"
+	if not os.path.exists(root):
+		os.makedirs(root,0700)
+	elif not os.path.isdir(root):
+		print "!!! Error: ROOT setting points to a non-directory.  Exiting."
+		return
 	prepare_db(mycategory,mypackage)
 	outfile=open(root+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")
 	mergefiles(outfile,mystart)
