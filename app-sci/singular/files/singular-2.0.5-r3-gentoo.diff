@@ -41,8 +41,19 @@
  #if defined(HAVE_ELF_SYSTEM)
  #include <dlfcn.h>
  
---- Singular/feResource.cc.orig	2004-03-03 12:26:07.000000000 +0100
-+++ Singular/feResource.cc	2004-03-22 21:19:24.005384472 +0100
+--- Singular/mod_raw.cc.orig	2004-03-22 23:20:46.424288520 +0100
++++ Singular/mod_raw.cc	2004-03-22 23:22:11.975282792 +0100
+@@ -44,7 +44,7 @@
+   if (bin_dir != NULL)
+   {
+     char path_name[MAXPATHLEN];
+-    sprintf(path_name, "%s%s%s.%s", bin_dir, DIR_SEPP, binary_name, 
++    sprintf(path_name, "%s%s%s%s.%s", bin_dir, "/lib/singular", DIR_SEPP, binary_name, 
+             DL_TAIL);
+     handle = dynl_open(path_name);
+     if (handle == NULL && ! warn_handle)
+--- Singular/feResource.cc	2004-03-23 14:01:06.000000000 +0100
++++ Singular/feResource.cc.new	2004-03-23 13:30:22.000000000 +0100
 @@ -45,7 +45,7 @@
  #define SINGULAR_DEFAULT_DIR "/usr/local/Singular/"S_VERSION1
  #endif
@@ -52,12 +63,12 @@
  #endif // defined(MAKE_DISTRIBUTION)
  
  #ifdef ix86_Win
-@@ -83,15 +83,12 @@
+@@ -83,21 +83,19 @@
  {
    {"SearchPath",    's',     feResPath,  NULL,
     "$SINGULARPATH;"
 -   "%b/LIB;"
--   "%r/LIB;"
+    "%r/LIB;"
 -   "%r/../LIB;"
 +   "%r/share/singular/LIB;"
     "%d/LIB;"
@@ -70,8 +81,18 @@
 +  {"BinDir",    'b',    feResDir,   "SINGULAR_BIN_DIR",     "%d/bin",""},
 +  {"RootDir",   'r',    feResDir,   "SINGULAR_ROOT_DIR",    "%d",                ""},
    {"DefaultDir",'d',    feResDir,   "SINGULAR_DEFAULT_DIR",  SINGULAR_DEFAULT_DIR,  ""},
-   {"InfoFile",  'i',    feResFile,  "SINGULAR_INFO_FILE",   "%r/info/singular.hlp", ""},
-   {"IdxFile",   'x',    feResFile,  "SINGULAR_IDX_FILE",    "%r/doc/singular.idx",  ""},
+-  {"InfoFile",  'i',    feResFile,  "SINGULAR_INFO_FILE",   "%r/info/singular.hlp", ""},
+-  {"IdxFile",   'x',    feResFile,  "SINGULAR_IDX_FILE",    "%r/doc/singular.idx",  ""},
+-  {"HtmlDir",   'h',    feResDir,   "SINGULAR_HTML_DIR",    "%r/html",              ""},
++  {"InfoFile",  'i',    feResFile,  "SINGULAR_INFO_FILE",   "%r/share/singular/singular.hlp", ""},
++  {"IdxFile",   'x',    feResFile,  "SINGULAR_IDX_FILE",    "%r/share/singular/singular.idx",  ""},
++  {"HtmlDir",   'h',    feResDir,   "SINGULAR_HTML_DIR",    "%r/share/doc/PFSUBST/html",              ""},
+   {"ManualUrl", 'u',    feResUrl,   "SINGULAR_URL",         "http://www.singular.uni-kl.de/Manual/"S_VERSION1,    ""},
+-  {"ExDir",      'm',   feResDir,   "SINGULAR_EXAMPLES_DIR","%r/examples",              ""},
++  {"ExDir",      'm',   feResDir,   "SINGULAR_EXAMPLES_DIR","%r/share/doc/PFSUBST/examples",              ""},
+ #if !defined(macintosh)
+   {"netscape",  'N',    feResBinary,"NETSCAPE",             "%b/netscape",          ""},
+   {"info",      'I',    feResBinary,"INFO",                 "%b/info",              ""},
 @@ -105,7 +102,7 @@
  #ifdef ix86_Win
    {"rxvt",     'X',    feResBinary,"RXVT",                "%b/rxvt.exe",             ""},
@@ -81,14 +102,3 @@
  #endif
    {"Path",      'p',    feResPath,  NULL,                   "%b;$PATH",         ""},
  #endif // ! defined(macintosh)
---- Singular/mod_raw.cc.orig	2004-03-22 23:20:46.424288520 +0100
-+++ Singular/mod_raw.cc	2004-03-22 23:22:11.975282792 +0100
-@@ -44,7 +44,7 @@
-   if (bin_dir != NULL)
-   {
-     char path_name[MAXPATHLEN];
--    sprintf(path_name, "%s%s%s.%s", bin_dir, DIR_SEPP, binary_name, 
-+    sprintf(path_name, "%s%s%s%s.%s", bin_dir, "/lib/singular", DIR_SEPP, binary_name, 
-             DL_TAIL);
-     handle = dynl_open(path_name);
-     if (handle == NULL && ! warn_handle)

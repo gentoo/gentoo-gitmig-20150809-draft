@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/singular
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/ChangeLog,v 1.7 2004/03/23 15:03:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/ChangeLog,v 1.8 2004/03/24 07:29:31 phosphan Exp $
+
+*singular-2.0.5-r3 (24 Mar 2004)
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5-r1.ebuild,
+  singular-2.0.5-r2.ebuild, singular-2.0.5-r3.ebuild, singular-2.0.5.ebuild,
+  files/singular-2.0.5-gentoo.diff, files/singular-2.0.5-r1-gentoo.diff,
+  files/singular-2.0.5-r2-gentoo.diff, files/singular-2.0.5-r3-gentoo.diff:
+  Little path fix, see also bug #45446. Cleaning up.
 
 *singular-2.0.5-r2 (23 Mar 2004)
 
