@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/jisx0213-fonts
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/ChangeLog,v 1.1 2003/07/26 21:25:11 usata Exp $
+
+*jisx0213-fonts-1.03 (27 Jul 2003)
+
+  27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> jisx0213-fonts-1.03.ebuild:
+  Initial import. This closes bug #22758
+
