@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r4.ebuild,v 1.2 2002/03/30 14:25:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r4.ebuild,v 1.3 2002/03/30 15:49:42 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libglade allows programs to load their UIs from an XMLS description at tuntime."
@@ -24,10 +24,6 @@ src_compile() {
 		|| myconf="${myconf} --disable-bonobo --disable-bonobotest"
 
 	use nls || myconf="${myconf} --disable-nls"
-
-	use gnome	\
-		&& myconf="${myconf} --with-gnome --enable-gnomedb"	\
-		|| myconf="${myconf} --without-gnome --disable-gnomedb"
 
 	./configure --host=${CHOST}					\
 		--prefix=/usr					\
