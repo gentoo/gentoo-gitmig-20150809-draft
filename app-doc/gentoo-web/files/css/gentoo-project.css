@@ -1,0 +1,181 @@
+BODY { 
+	background: white; 
+	color: black; 
+	font-size: 0.9em; 
+	font-family: Georgia, Verdana, Arial, Helvetica; 
+}
+
+P,H2,H3,UL,OL { 
+	margin: 0.5em 5% 0.5em 5%; 
+}
+
+TABLE {
+	margin: 0.5em 5% 0.5em 5%;
+}
+
+PRE {
+	margin: 0.5em 5% 0.5em 5%; 
+	background: #ddddff;
+	font-family: Lucida Console, Courier;
+	color: #000000;
+}
+
+/*
+H1 { 
+	margin: 4.0em 10% 0em 8%; 
+	font-size: 1.8em; 
+	font-weight: bold; 
+}
+*/
+.dochead { 
+	margin: 1.5em 0% 0em 0%; 
+	font-size: 1.6em; 
+	font-weight: bold; 
+}
+
+.chaphead { 
+	margin: 1.2em 14% 0.5em 3%; 
+	font-size: 1.6em; 
+	font-weight: bold; 
+}
+
+.chapnum {
+	font-size: 0.8em;
+}
+
+.secthead {
+	margin: 1.0em 14% 0.2em 4%;
+	color: #ececec;
+	font-size: 1.0em; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+/*	text-decoration: underline; */
+}
+
+.code {
+	font-family: Lucida Console, Courier;
+	color: #0000ff;
+}
+
+.path {
+	font-family: Lucida Console, Courier;
+}
+
+.emphasis {
+	font-style: italic;
+}
+
+.note {
+	background: #bbffbb;
+}
+
+.impo {
+	background: #ffffbb;
+}
+
+.warn {
+	background: #ffbbbb;
+}
+
+.input {
+	color: #0000ff;
+}
+
+.comment {
+	color: #ff0000; 
+}
+
+.notehead {
+	font-weight: bold;
+}
+
+/*.secthead { 
+	font-family: Verdana,Arial,Helvetica; 
+	margin: 0.5em 10% 0.2em 8%; 
+	font-size: 1.1em; 
+	font-weight: bold; 
+}
+*/
+.toptable { 
+	margin: 0em 0% 0em 0%; 
+}
+
+.secondtable { 
+	margin: 4.0em 0% 0.1em 3%; 
+}
+
+.tableinfo {
+	padding-left: 1.0em;
+	padding-right: 1.0em;
+	font-size: 0.7em; 
+	background: #ececec;
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+}
+
+.doclink { 
+	padding: 0.5em; 
+	background: black; 
+	color: #33ff00; 
+	font-weight: bold; 
+	font-size: 0.75em; 
+	font-family: Verdana, Arial, Helvetica; 
+}
+
+.caption {
+	padding-left: 1.0em;
+	padding-right: 1.0em;
+	margin: 0em 5% 0em 5%;
+	font-size: 0.7em; 
+	background:#ececec; 
+	color: white; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+}
+
+.caption a:link {
+	color: #00ff00;
+}
+
+.caption a:visited {
+	color: #00dd00;
+}
+
+.tochead {
+	padding-left: 1.0em;
+	padding-right: 1.0em;
+	margin: 0em 0% 0.2em 0%;
+	font-size: 0.7em; 
+	background:#ececec; 
+	color: white; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+}
+
+.tochead a:link {
+	color: #00ff00;
+}
+
+.tochead a:visited {
+	color: #00dd00;
+}
+
+.tocitem { 
+	margin: 0em 0% 0em 2%;
+	font-size: 0.7em; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica; 
+}
+
+.abstract { 
+	color: #7a5ada; 
+	margin: 0em 0% 0em 0%; 
+	font-size: 0.7em; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+}
+.info {
+	margin: 0em 0% 1em 0%; 
+	font-size: 0.8em; 
+}
+ 
