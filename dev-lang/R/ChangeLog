@@ -1,9 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.28 2004/08/11 15:39:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.29 2004/08/13 18:06:32 kugelfang Exp $
 
   06 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> R-1.9.0-r1.ebuild:
-  Marked stable on amd64, ppc and x86.
+  Marked stable on amd64.
 
   11 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> R-1.8.1.ebuild,
   R-1.9.0-r1.ebuild, R-1.9.0.ebuild:
