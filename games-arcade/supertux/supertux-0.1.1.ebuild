@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.1.ebuild,v 1.1 2004/05/13 01:11:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.1.ebuild,v 1.2 2004/06/22 04:04:47 mr_bones_ Exp $
 
 inherit games
 
@@ -13,11 +13,21 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="opengl"
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	virtual/x11
 	>=media-libs/libsdl-1.1.5
 	>=media-libs/sdl-image-1.2.2
 	>=media-libs/sdl-mixer-1.2.5"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i \
+		-e 's/icflower/iceflower/g' src/scene.cpp \
+		|| die "sed src/scene.cpp failed"
+}
 
 src_compile() {
 	egamesconf \
