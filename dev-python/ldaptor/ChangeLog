@@ -1,7 +1,11 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.2 2003/02/12 06:32:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.3 2003/04/04 23:47:20 liquidx Exp $
 
 *ldaptor-0.0.6 (12 Dec 2002)
-	12 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>
-	initial ebuild
+
+  05 Apr 2003; Alastair Tse <liquidx@gentoo.org> ldaptor-0.0.6.ebuild:
+  bump to stable
+
+  12 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> :
+  initial ebuild
