@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-asdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.15 2004/11/21 05:16:38 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.16 2004/11/28 02:35:04 josejx Exp $
+
+  28 Nov 2004; Joseph Jezak <josejx@gentoo.org> cl-asdf-1.86.ebuild:
+  Marked ppc stable.
 
   21 Nov 2004; Nick Dimiduk <ndimiduk@gentoo.org> cl-asdf-1.86.ebuild:
   Added ~ppc-macos keyword

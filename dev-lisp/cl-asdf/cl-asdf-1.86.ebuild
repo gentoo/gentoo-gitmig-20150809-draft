@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.86.ebuild,v 1.2 2004/11/21 05:16:38 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.86.ebuild,v 1.3 2004/11/28 02:35:04 josejx Exp $
 
 DEB_PV=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-asdf/${PN}_${PV}.orig.tar.g
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~mips ~ppc ~ppc-macos"
+KEYWORDS="x86 ~sparc ~mips ppc ~ppc-macos"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller"
