@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_ftpd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.1 2004/05/14 17:01:36 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.2 2004/06/03 13:20:52 zul Exp $
+
+  03 Jun 2004; Chuck Short <zul@gentoo.org> files/mod_ftpd.conf:
+  Added missing conf file. Closes #52480.
 
 *mod_ftpd-0.12.3 (15 May 2004)
 
