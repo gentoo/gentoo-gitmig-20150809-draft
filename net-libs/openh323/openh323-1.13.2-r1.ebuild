@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.12 2004/08/13 22:32:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.13 2004/09/06 19:46:59 ciaranm Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,7 +41,7 @@ pkg_setup() {
 		ewarn "we are currently investigating this problem..."
 		ewarn ""
 		ewarn "<sleeping 10 seconds...>"
-		sleep 10
+		epause 10
 	fi
 }
 
