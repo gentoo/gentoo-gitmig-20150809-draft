@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20-r1.ebuild,v 1.2 2004/05/12 04:46:15 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20-r1.ebuild,v 1.3 2004/05/28 03:05:14 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64 mips s390"
+KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="ssl slp pam"
 
 DEP="virtual/glibc
@@ -20,13 +20,10 @@ DEP="virtual/glibc
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
-
 DEPEND="${DEP}
 	>=sys-devel/autoconf-2.58"
-
 RDEPEND="${DEP}
 	!virtual/lpr"
-
 PROVIDE="virtual/lpr"
 
 src_unpack() {
