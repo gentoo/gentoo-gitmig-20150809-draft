@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/kcdlabel
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.1 2003/04/23 12:34:40 pauldv Exp $
+
+*kcdlabel-2.11 (23 Apr 2003)
+
+  23 Apr 2003; Paul de Vrieze pauldv@gentoo.org kcdlabel-2.11.ebuild:
+  Initial import.  Ebuild submitted by Philippe Van Hecke <philippe.vanhecke@bel
+  net.be>
+
