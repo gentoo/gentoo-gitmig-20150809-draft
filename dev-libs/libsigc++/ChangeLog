@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.3 2002/04/18 01:27:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.4 2002/06/17 22:56:26 spider Exp $
 
+
+*libsigc++-1.1.11 (17 Jun 2002)
+  17 Jun 2002; Spider <spider@gentoo.org> libsigc++-1.1.11.ebuild :
+  Just bumping the version to the latest that gtkmm requires. somone,  take over this?
+  
 *Älibsigc++-1.1.9 (18 Apr 2002)
   18 Apr 2002; Spider <spider@gentoo.org> libsigc++-1.1.9.ebuild
   I forgot to add SLOT="1.2" the last time
