@@ -1,0 +1,13 @@
+# ChangeLog for media-libs/xvid
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.1 2002/12/02 14:43:22 azarah Exp $
+
+*xvid-0.9.0 (02 Dec 2002)
+
+  02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Initial release, thanks to good work by Jacob Perkins <source@pipeline.com>.
+  Fixed the DEPEND .. we cannot depend on nasm for other archs than x86.
+  Also do not install if media-libs/divx4linux is installed.  Fixed examples
+  to install into doc dir.
+
