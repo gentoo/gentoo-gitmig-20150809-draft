@@ -1,0 +1,20 @@
+# ChangeLog for net-www/resin-ee
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/ChangeLog,v 1.1 2003/04/30 13:56:44 absinthe Exp $
+
+*resin-ee-2.1.9 (30 Apr 2003)
+
+  30 Apr 2003; Dylan Carlson <absinthe@gentoo.org> resin-ee-2.1.9.ebuild,
+  files/2.1.9/21resin, files/2.1.9/resin-ee.diff, files/2.1.9/resin.conf,
+  files/2.1.9/resin.init:
+  Initial import.
+  
+  With the addition of EE, I am setting both net-www/resin and net-www/resin-ee
+  to block each other. The only real difference from an installation perspective
+  is that resin-ee classes install to /usr/share/resin-ee/lib/. While it is
+  possible to configure both ebuilds to install to different locations, I doubt
+  this will be of any practical value to anyone (since logically you would never
+  run both on the same system).
+  
+  If anyone feels strongly against this, file a bug and it will be re-evaluated.
+
