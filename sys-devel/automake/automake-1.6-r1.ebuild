@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6-r1.ebuild,v 1.3 2002/04/07 18:41:17 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6-r1.ebuild,v 1.4 2002/04/23 19:42:16 azarah Exp $
 
 OLD_PV=1.4-p5
 OLD_P=${PN}-${OLD_PV}
@@ -61,6 +61,7 @@ src_install() {
 	# to use.
 	exeinto /usr/lib/${PN}
 	doexe ${FILESDIR}/am-wrapper.pl
+	dosed "s:1\.6x:${PV}:g" /usr/lib/${PN}/am-wrapper.pl
 
 	#
 	# ************ automake-1.6x ************
@@ -72,13 +73,13 @@ src_install() {
 
 	for x in automake aclocal
 	do
-		mv ${D}/usr/bin/${x}-${PV} ${D}/usr/bin/${x}-1.6x
+		mv ${D}/usr/bin/${x}-${PV} ${D}/usr/bin/${x}-${PV}
 		rm -f ${D}/usr/bin/${x}
 	done
 
 	doinfo automake-1.6.info*
 
-	docinto ${PF}/${PV}
+	docinto ${PV}
 	dodoc COPYING NEWS README THANKS TODO AUTHORS ChangeLog
 
 	#
@@ -97,7 +98,7 @@ src_install() {
 		dosym ../lib/${PN}/am-wrapper.pl /usr/bin/${x}
 	done
 
-	docinto ${PF}/${OLD_PV}
+	docinto ${OLD_PV}
 	dodoc COPYING NEWS README THANKS TODO AUTHORS ChangeLog
 }
 
