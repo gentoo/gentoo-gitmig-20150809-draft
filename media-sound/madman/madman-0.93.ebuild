@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.93.ebuild,v 1.2 2004/07/13 23:00:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.93.ebuild,v 1.3 2004/07/17 09:42:34 dholm Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 #-amd64: 0.93: see bug #56821
-KEYWORDS="~x86 -amd64 ~sparc"
+KEYWORDS="~x86 -amd64 ~sparc ~ppc"
 
 DEPEND=">=x11-libs/qt-3.1.0-r3
 	>=media-libs/libvorbis-1.0
