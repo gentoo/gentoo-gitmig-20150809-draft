@@ -1,11 +1,16 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.5 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.6 2003/01/12 18:01:08 seemant Exp $
+
+*jpeg-6b-r3 (15 Nov 2002)
+
+  12 Jan 2003; Seemant Kulleen <seemant@gentoo.org> jpeg-6b-r3.ebuild :
+
+  Replace -march=k6 and -march=k6-2 flags with -march=i586, as per bug
+  #13684 by: raymond.barbiero@uconn.edu (Raymond D Barbiero)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*jpeg-6b-r3 (15 Nov 2002)
-
   18 Nov 2002; Will Woods <wwoods@gentoo.org> jpeg-6b-r3.ebuild, ChangeLog:
   Minor fix to chouser's minor fix, updating gnuconfig files so they 
   recognize alphaev67 as a valid CHOST.

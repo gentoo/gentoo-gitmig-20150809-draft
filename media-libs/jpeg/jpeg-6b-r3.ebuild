@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.5 2002/12/15 10:44:20 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.6 2003/01/12 18:01:08 seemant Exp $
 
-inherit gnuconfig
+inherit gnuconfig flag-o-matic
 
 MY_P=${PN}src.v${PV}
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
@@ -14,6 +14,10 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc"
+
+CFLAGS="${CFLAGS/k6-2/k6}"
+CFLAGS="${CFLAGS/k6/i586}"
+CXXFLAGS="${CFLAGS}"
 
 src_unpack() {
 	unpack ${A}
