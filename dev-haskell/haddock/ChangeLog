@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.8 2003/12/22 09:11:11 kosmikus Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.9 2004/03/23 00:57:02 mattam Exp $
+
+  23 Mar 2004; Matthieu Sozeau <mattam@gentoo.org> haddock-0.6-r2.ebuild:
+  Added ~ppc keyword.
 
 *haddock-0.6-r2 (22 Dec 2003)
 
