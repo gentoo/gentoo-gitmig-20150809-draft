@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.6.5.ebuild,v 1.2 2004/09/01 05:37:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.6.5.ebuild,v 1.3 2004/09/04 23:12:55 dholm Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pvpgn/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="mysql postgres"
 
 DEPEND="virtual/libc
