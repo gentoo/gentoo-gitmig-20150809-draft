@@ -1,17 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.7-r1.ebuild,v 1.4 2002/07/11 06:30:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.06.23.ebuild,v 1.1 2002/07/16 09:49:59 stroke Exp $
 
-S=${WORKDIR}/${P}
+MY_PV=`echo ${PV} | sed -e 's/\./-/g'`
+S=${WORKDIR}/${PN}-gtk2
 DESCRIPTION="Bluefish is a GTK HTML editor for the experienced web designer or programmer."
-SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/${P}.tar.bz2"
+SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/snapshots/${PN}-gtk2port-${MY_PV}.tgz"
 HOMEPAGE="http://bluefish.openoffice.nl/"
 LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0"
 
-DEPEND="=x11-libs/gtk+-1.2*
-        >=media-libs/imlib-1.9.10-r1
-		perl? ( sys-devel/perl )
-		nls? ( sys-devel/gettext )"
+DEPEND=">=x11-libs/gtk+-2.0.5
+	>=media-libs/freetype-2.0.9
+        >=media-libs/gdk-pixbuf-0.18
+	perl? ( sys-devel/perl )
+	nls? ( sys-devel/gettext )"
+
+RDEPEND="${DEPEND}"
 
 src_compile() {
 
@@ -19,7 +25,9 @@ src_compile() {
 	use perl && myconf="${myconf} --with-perl"
 	use nls  || myconf="${myconf} --disable-nls"
 	
-	./configure --prefix=/usr \
+	./configure 	\
+		--prefix=/usr \
+		--mandir=/usr/share/man	\
 		--host=${CHOST} \
 		--with-autocomplet \
 		${myconf} || die
@@ -39,7 +47,11 @@ src_install () {
 			$f.orig > $f
 	done
 
-	make DESTDIR=${D} install || die
+	make 	\
+		DESTDIR=${D}	\
+		mandir=${D}/usr/share/man	\
+		install || die
+
     dodoc ABOUT-NLS AUTHORS BUGS COPYING INSTALL NEWS README TODO
 	mv manual ${D}usr/share/doc/${PF}
 }
