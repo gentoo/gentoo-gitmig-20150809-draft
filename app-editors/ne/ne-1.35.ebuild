@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.35.ebuild,v 1.3 2004/08/22 13:37:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.35.ebuild,v 1.4 2004/09/07 23:06:53 swegener Exp $
 
 DESCRIPTION="the nice editor, easy to use for the beginner and powerful for the wizard"
 HOMEPAGE="http://ne.dsi.unimi.it/"
@@ -8,7 +8,7 @@ SRC_URI="http://ne.dsi.unimi.it/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )"
@@ -31,7 +31,7 @@ src_install() {
 	doinfo doc/*.info* || die "doinfo failed"
 	dohtml doc/*.html || die "dohtml failed"
 	dodoc \
-		CHANGES README
+		CHANGES README \
 		doc/*.txt doc/*.ps doc/*.pdf doc/*.texinfo doc/default.* \
 		|| die "dodoc failed"
 }
