@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.6 2003/10/01 15:04:44 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.7 2003/12/10 22:35:28 avenj Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rotix allows you to generate rotational obfuscations."
@@ -9,7 +9,7 @@ SRC_URI="http://elektron.its.tudelft.nl/~hemmin98/rotix_releases/${P}/${P}.tar.b
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ia64"
+KEYWORDS="x86 ~ppc ia64 amd64"
 
 IUSE="nls"
 
