@@ -1,4 +1,6 @@
 MD5 4dfa49bf0d193ffdf629c11934c30b31 Mail-POP3Client-2.15.ebuild 608
-MD5 1535742b8bef5f0f72fd1358a638fe8a ChangeLog 584
+MD5 d0908f7966d8d48ac1700ddd50ce322f ChangeLog 835
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 79574dd505fb7c0b28a1399ceb5c2b98 Mail-POP3Client-2.7-r2.ebuild 639
 MD5 ce2af29ade39f6cf293bff8ffe6fe20c files/digest-Mail-POP3Client-2.15 71
+MD5 0ad678e78e6eb02cd6ef107cf46e9256 files/digest-Mail-POP3Client-2.7-r2 65
