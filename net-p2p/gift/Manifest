@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 c72b3fd39eec1ba2a35e3ec31a1dff81 gift-0.11.7-r1.ebuild 2012
 MD5 3408d5257ab210c257a3176267b33453 gift-0.11.6.ebuild 1339
 MD5 20f38ffd20cb25188a17e8fe4a985f60 gift-0.11.7_pre20040627.ebuild 2139
 MD5 fa7abf5b122646184f15da253331f226 gift-0.11.6-r1.ebuild 1920
-MD5 2a1dbd5a7a585b068d185d5576348cd4 gift-0.11.7.ebuild 2138
-MD5 77d2dfee13f023b9e38ae78e3181796d ChangeLog 3126
+MD5 5441bdb24bb4ed9ddf781db8094f9c28 ChangeLog 3279
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6 64
-MD5 8f91b068201aa85015f5d55ca35867d8 files/digest-gift-0.11.7 64
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6-r1 64
+MD5 8f91b068201aa85015f5d55ca35867d8 files/digest-gift-0.11.7-r1 64
 MD5 bc6445cb39701ab31230338ff7be3949 files/gift.confd 641
 MD5 5fa0c8c029d556146dbdedfd9ae8c479 files/gift.initd 710
 MD5 e53b1d5024a6b4a9c59097929889cd0e files/digest-gift-0.11.7_pre20040627 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBUgTFcAgAdbxYsnERAhwMAJ9GzuF8BVW0ietzF5BLtEP25wfGKACfWlTf
-ezHVlZ4lQ7RIjWuAMHKwaX8=
-=YMNZ
+iD8DBQFBUtuecAgAdbxYsnERAo8UAJ4j3EOqigwPn3c6l8CbV21ejK6f1QCfUGXt
+R0UklGPY7agQPyp1iW/eShw=
+=CNDU
 -----END PGP SIGNATURE-----
