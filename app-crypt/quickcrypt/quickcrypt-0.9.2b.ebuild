@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quickcrypt/quickcrypt-0.9.2b.ebuild,v 1.12 2005/01/01 12:37:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quickcrypt/quickcrypt-0.9.2b.ebuild,v 1.13 2005/04/01 02:28:07 agriffis Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://linux.netpimpz.com/quickcrypt/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc alpha amd64 ~ia64 hppa ~mips"
+KEYWORDS="x86 sparc ppc alpha amd64 ia64 hppa ~mips"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6*

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/quickcrypt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quickcrypt/ChangeLog,v 1.8 2005/01/02 19:23:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quickcrypt/ChangeLog,v 1.9 2005/04/01 02:28:07 agriffis Exp $
+
+  31 Mar 2005; Aron Griffis <agriffis@gentoo.org> quickcrypt-0.9.2b.ebuild:
+  stable on ia64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
