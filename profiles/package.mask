@@ -90,6 +90,8 @@ dev-libs/commoncpp2
 # <bcowan@gentoo.org> (01 Oct 2002)
 # mask updated version of sylpheed for testing
 =net-mail/sylpheed-0.8.4
+# (03 Oct 2002)
+=net-mail/sylpheed-0.8.5
 
 # <spider@gentoo.org> (01 Oct 2002)
 # Masking since its a versionbump as well as fix.
