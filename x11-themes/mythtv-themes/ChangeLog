@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.8 2004/06/24 23:35:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.9 2004/06/28 22:45:21 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> mythtv-themes-0.13.ebuild,
+  mythtv-themes-0.14.ebuild:
+  sync IUSE
 
 *mythtv-themes-0.14 (06 Feb 2004)
 

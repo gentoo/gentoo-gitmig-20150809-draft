@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.1.ebuild,v 1.7 2004/06/24 23:35:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.1.ebuild,v 1.8 2004/06/28 22:42:40 agriffis Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ SRC_URI="ftp://dl.xs4all.nl/pub/mirror/Mandrake-devel/cooker/SRPMS/galaxy-${PV}-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc ~alpha"
+IUSE=""
 
 # Needed to build...
 DEPEND="app-arch/rpm2targz
