@@ -1,6 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-1.2.3.ebuild,v 1.1 2002/07/26 19:56:59 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-1.2.3.ebuild,v 1.2 2002/07/27 17:52:11 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-1.2.3/src/${P}.tar.gz"
 
 DEPEND="=net-analyzer/libnasl-1.2.3
 	X? ( x11-base/xfree )
-	gtk? ( x11-libs/gtk-1.2* )"
+	gtk? ( =x11-libs/gtk-1.2* )"
 
 SLOT="0"
 LICENSE="GPL-2"
