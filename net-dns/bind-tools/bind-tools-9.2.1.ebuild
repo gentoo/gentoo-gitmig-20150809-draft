@@ -23,13 +23,13 @@ src_compile() {
 	econf || die "configure failed"
 
 	cd ${S}/lib/isc
-	emake || die "make failed in /lib/isc"
+	make || die "make failed in /lib/isc"
 
 	cd ${S}/lib/dns
-	emake || die "make failed in /lib/dns"
+	make || die "make failed in /lib/dns"
 
 	cd ${S}/bin/dig
-	emake || die "make failed in /bin/dig"
+	make || die "make failed in /bin/dig"
 }
  
 src_install() {
