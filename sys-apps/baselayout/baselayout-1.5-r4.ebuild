@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r4.ebuild,v 1.2 2001/08/08 20:37:43 pete Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r4.ebuild,v 1.3 2001/10/06 17:04:49 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
-A=""
 S=${WORKDIR}/${P}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI=""

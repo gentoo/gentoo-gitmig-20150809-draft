@@ -1,9 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# /home/cvsroot/gentoo-x86/sys-apps/grub/grub-0.5.96.1-r2.ebuild,v 1.2 2001/02/07 20:05:43 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.5.96.1-r4.ebuild,v 1.6 2001/08/31 03:23:39 pm Exp $
-
+# Author: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.5.96.1-r4.ebuild,v 1.7 2001/10/06 17:04:49 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
@@ -15,7 +13,7 @@ DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	try patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
 }
 
 src_compile() {
@@ -24,17 +22,11 @@ src_compile() {
 }
 
 src_install() {
-	try make prefix=${D}/usr sbindir=${D}/sbin mandir=${D}/usr/share/man infodir=${D}/usr/share/info install
-	
-	if [ -z "`use bootcd`" ]
-	then
-        dodir /boot/grub
-		cd ${D}/usr/share/grub/i386-pc
-		cp stage1 stage2 *stage1_5 ${D}/boot/grub
-		dosym . /boot/boot		
-        cd ${S}
-		dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
-	else
-		rm -rf ${D}/usr/share/{man,info,doc}
-	fi
+	make prefix=${D}/usr sbindir=${D}/sbin mandir=${D}/usr/share/man infodir=${D}/usr/share/info install || die
+	dodir /boot/grub
+	cd ${D}/usr/share/grub/i386-pc
+	cp stage1 stage2 *stage1_5 ${D}/boot/grub
+	dosym . /boot/boot		
+	cd ${S}
+	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
 }
