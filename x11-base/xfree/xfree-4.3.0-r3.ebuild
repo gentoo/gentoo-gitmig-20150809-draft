@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.81 2003/11/02 21:42:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.82 2003/11/05 00:10:39 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -37,7 +37,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.1.21"
+PATCH_VER="2.1.22"
 FT2_VER="2.1.3"
 XCUR_VER="0.3.1"
 SISDRV_VER="311003-1"
@@ -142,24 +142,14 @@ DESCRIPTION="Xfree86: famous and free X server"
 PATCH_DIR=${WORKDIR}/patch
 
 pkg_setup() {
-	# Hack for patch 9132.
-	if [ ! -e "/usr/src/linux" ] || \
-		( [ -e "/usr/src/linux" ] && \
-		is_kernel "2" "4" ) ; then
-			ewarn "If you compile this against a 2.4 kernel and later switch"
-			ewarn "to a 2.6 kernel, you must recompile xfree or OpenGL"
-			ewarn "applications will segfault."
-			ewarn "It compiles for 2.4 if no /usr/src/linux exists."
-			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-			echo -ne "\a" ; sleep 1
-			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-			echo -ne "\a" ; sleep 1
-			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-			echo -ne "\a" ; sleep 1
-			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-			echo -ne "\a" ; sleep 1
-			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-			echo -ne "\a" ; sleep 1
+	# A static build disallows building the SDK.
+	# See config/xf86.rules.
+	if use static
+	then
+		if use sdk || use gatos
+		then
+			die "The static USE flag is incompatible with gatos and sdk USE flags."
+		fi
 	fi
 }
 
@@ -250,8 +240,6 @@ src_unpack() {
 	if use debug
 	then
 		mv -f ${PATCH_DIR}/5901* ${PATCH_DIR}/excluded
-	else
-		mv -f ${PATCH_DIR}/0127* ${PATCH_DIR}/excluded
 	fi
 # FIXME: bug #19812, 075 should be deprecated by 076, left as
 # TDFX_RISKY for feedback (put in -r3 if no problems)
@@ -270,15 +258,6 @@ src_unpack() {
 		then
 			mv -f ${PATCH_DIR}/2001* ${PATCH_DIR}/excluded
 		fi
-	fi
-
-	# Bug #30541, workaround
-	# Default to using patch, to avoid issues with tcltk
-	# on initial install, emerge system whines about no kernel
-	# Do -e instead of -h for hand-rolled kernels
-	if [ -e "/usr/src/linux" ] ; then
-		is_kernel "2" "4" || \
-		mv -f ${PATCH_DIR}/9132* ${PATCH_DIR}/excluded
 	fi
 
 	# Various Patches from all over
@@ -361,7 +340,7 @@ src_unpack() {
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
 
-	if [ -n "`use debug`" -o -n "`use static`" ]
+	if use static
 	then
 		echo "#define DoLoadableServer	NO" >>config/cf/host.def
 	fi
@@ -523,7 +502,7 @@ src_unpack() {
 
 #	# Build with the binary MatroxHAL driver
 #	echo "#define HaveMatroxHal YES" >> config/cf/host.def
-#	echo "#define UseMatroxHal YES" >> config/cf/host.def
+	echo "#define UseMatroxHal YES" >> config/cf/host.def
 
 # Will uncomment this after kde, qt, and *box ebuilds are alterered to use
 # it
@@ -562,6 +541,16 @@ src_compile() {
 
 	# Set MAKEOPTS to have proper -j? option ..
 	get_number_of_jobs
+
+	# Compile ucs2any C implementation (patch #9142)
+	ebegin "Compiling ucs2any C implementation"
+		cd ${S}/fonts/util
+		gcc -Wall -o ucs2any ucs2any.c
+		[ ! -d ../../exports/bin/ ] && mkdir -p ../../exports/bin/
+		mv ucs2any ../../exports/bin/
+		ls ${S}/exports/bin/
+		cd ${S}
+	eend 0
 
 	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
 	# MAKEOPTS, they'll redefine an internal XFree86 Makefile variable and the

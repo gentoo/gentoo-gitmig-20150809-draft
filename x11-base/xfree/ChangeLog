@@ -1,6 +1,25 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.234 2003/11/02 22:05:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.235 2003/11/05 00:10:38 spyderous Exp $
+
+  04 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  PATCH_VER 2.1.22. Most significant changes are fixing the Mesa patch to work
+  on 2.4 and 2.6 as well as changing ucs2any Perl script to a C program, which
+  is much faster. Add
+  9145_all_4.3.0-RandR-refresh-rate-rounding-error-fix-from-CVSHEAD.patch. Add
+  9146_all_4.3.0-vidmode-SEGV-fix-from-CVS-HEAD.patch to fix SEGV in vidmode
+  extension. Add
+  1701_all_4.3.0-rendition-complete-driver-backport-CVS20031031.patch, full
+  backport of rendition driver. Obsoletes
+  5500_all_4.3.0-rendition-disable-cause-of-SEGV.patch. Update to
+  9132_all_4.3.0-Mesa-SSE-fixes-from-MesaCVS-v2.patch, which doesn't break 2.6
+  kernels. Remove big warning for previous patch #9132. Add
+  9142_all_4.3.0-ucs2any-C-implementation.patch and a little bit in ebuild to
+  compile it. It's faster than the previous Perl script. Thanks Mike Harris for
+  some wonderful patches. Update ebuild to only build static for USE=static and
+  not USE=debug. Add incompatibility warning for static and sdk. Update ebuild
+  to build support for later adding mga HAL lib but not to build or expect the
+  lib.
 
 *xfree-4.3.99.15 (02 Nov 2003)
 
