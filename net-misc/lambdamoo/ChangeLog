@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lambdamoo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.2 2003/07/12 07:29:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.3 2003/08/10 01:34:55 luke-jr Exp $
+
+  10 Aug 2003; Luke-Jr <luke-jr@gentoo.org> lambdamoo-1.8.1-r1.ebuild:
+  mirror://sourceforge.net is invalid... removed the .net
 
 *lambdamoo-1.8.1-r1 (12 Jul 2003)
 
