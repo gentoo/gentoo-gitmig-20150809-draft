@@ -333,18 +333,27 @@ def expand(mystring,dictlist=[]):
 class config:
 	def __init__(self):
 		self.origenv=os.environ.copy()
+		self.populated=0
+	def populate(self):
 		self.configlist=[self.origenv.copy(),getconfig("/etc/make.conf"),getconfig("/etc/make.profile/make.defaults"),getconfig("/etc/make.globals")]
+		self.populated=1
 	def __getitem__(self,mykey):
+		if not self.populated:
+			self.populate()
 		for x in self.configlist:
 			if x.has_key(mykey):
 				return expand(x[mykey],self.configlist)
 		return ""		
 	def has_key(self,mykey):
+		if not self.populated:
+			self.populate()
 		for x in self.configlist:
 			if x.has_key(mykey):
 				return 1 
 		return 0
 	def keys(self):
+		if not self.populated:
+			self.populate()
 		mykeys=[]
 		for x in self.configlist:
 			for y in x.keys():
@@ -352,8 +361,12 @@ class config:
 					mykeys.append(y)
 		return mykeys
 	def __setitem__(self,mykey,myvalue):
+		if not self.populated:
+			self.populate()
 		self.configlist[0][mykey]=myvalue
 	def reset(self):
+		if not self.populated:
+			self.populate()
 		"reset environment to original settings"
 		self.configlist[0]=self.origenv.copy()
 	def environ(self):
