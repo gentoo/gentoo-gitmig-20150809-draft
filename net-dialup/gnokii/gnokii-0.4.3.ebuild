@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.4.3.ebuild,v 1.3 2003/09/07 00:09:22 msterret Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.4.3.ebuild,v 1.4 2003/09/08 07:10:17 msterret Exp $
 
 S=$WORKDIR/${P}
 DESCRIPTION="a client that plugs into your handphone"
