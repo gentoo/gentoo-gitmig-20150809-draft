@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a8d75dbeb833db5e0a88650264fb0076 ChangeLog 9321
+MD5 d39b0d8aa4e08d73b178734d3268dbd4 ChangeLog 9484
 MD5 322a89ea7d860b06dd825ee790ccdbb0 e2fsprogs-1.35.ebuild 2822
 MD5 d44b2892adf62734a7b41cc659791104 e2fsprogs-1.35-r1.ebuild 3376
-MD5 cedf1cc9fdc0544d15b69f2b24b81366 e2fsprogs-1.36.ebuild 3140
+MD5 265e424aab7cff43621724982f8e738a e2fsprogs-1.36.ebuild 3242
 MD5 3d9735f2397680a4978124f6805219ae files/digest-e2fsprogs-1.35 67
 MD5 f079047f6885f762f6fa838b55236cb2 files/e2fsprogs-sed-locale.patch 5989
 MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36 67
 MD5 3d9735f2397680a4978124f6805219ae files/digest-e2fsprogs-1.35-r1 67
 MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCBp5pp5vW4rUFj5oRAvlxAJ4veYo+CM70MVHOCtrp4dcqJOl0UQCfW0dt
+7Xt+H9/UMQD+boiwgh/EjJ8=
+=jIf8
+-----END PGP SIGNATURE-----
