@@ -50,6 +50,10 @@ media-libs/nurbs++
 # Azarah (26 May 2002)
 =media-video/avifile-0.7.20020412
 
+# This is is _very_ experimental!
+# azarah - 19 Jun 2002
+>=x11-base/xfree-4.2.99
+
 # These ones are untested, and introduce new stuff
 # azarah - 28 May 2002
 =x11-base/xfree-4.2.0-r11
