@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.18 2003/03/31 11:26:27 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.19 2003/05/21 14:08:04 lu_zero Exp $
+
+  21 May 2003; Luca Barbato <lu_zero@gentoo.org> pdflib-4.0.3-r1.ebuild:
+  Added ~ppc keyword
 
 *pdflib-4.0.3-r1 (13 Jan 2003)
 
