@@ -1,6 +1,21 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.33 2003/10/04 14:01:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.34 2003/10/07 23:49:33 liquidx Exp $
+
+*wxGTK-2.4.2 (08 Oct 2003)
+
+  08 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxGTK-2.4.0.ebuild,
+  wxGTK-2.4.1-r1.ebuild, wxGTK-2.4.1.ebuild, wxGTK-2.4.2.ebuild,
+  files/wxGTK-2.4.2-contrib_animate.patch:
+  version bump and various fixes including png/jpeg/tiff/zlib deps (#28684) and
+  debug support (#29042) thanks to Vaclav Slavik <vaclav.slavik@matfyz.cz>,
+  unicode option (#28684) thanks to Radek Podgorny <radek@podgorny.cz> and
+  finally correct licensing (#28697) thanks to Vaclav Slavik
+  <vaclav.slavik@matfyz.cz> again.
+  
+  Note that unicode support is by default turned off and must be enabled
+  accompanied by the gtk2 useflag. Take care when enabling unicode because
+  many wxWindows applications do not support unicode.
 
   04 Oct 2003; Aron Griffis <agriffis@gentoo.org> wxGTK-2.4.1-r1.ebuild:
   Add ~alpha to KEYWORDS

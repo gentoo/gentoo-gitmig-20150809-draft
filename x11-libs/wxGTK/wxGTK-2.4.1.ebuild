@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.1.ebuild,v 1.4 2003/09/08 06:57:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.1.ebuild,v 1.5 2003/10/07 23:49:33 liquidx Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 HOMEPAGE="http://www.wxwindows.org/"
 
-LICENSE="LGPL-2"
+LICENSE="wxWinLL-3"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="nls odbc opengl gtk2"
