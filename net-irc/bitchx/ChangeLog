@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.24 2003/07/16 10:12:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.25 2003/08/06 12:40:29 phosphan Exp $
+
+  06 Aug 2003; Patrick Kursawe <phosphan@gentoo.org> bitchx-1.0.19-r5.ebuild:
+  Updated homepage and SRC_URI
 
   16 Jun 2003; Luca Barbato <lu_zero@gentoo.org> :
   Applied the fix as suggested by Martin Lesser 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.9 2003/08/04 22:39:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.10 2003/08/06 12:40:29 phosphan Exp $
 
 inherit flag-o-matic eutils
 replace-flags -O[3-9] -O2
@@ -9,8 +9,8 @@ replace-flags -O[3-9] -O2
 
 MY_P=ircii-pana-${PV/.0./.0c}
 DESCRIPTION="An IRC Client"
-HOMEPAGE="http://www.bitchx.com/"
-SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
+HOMEPAGE="http://www.bitchx.org/"
+SRC_URI="http://bitchx.org/files/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
