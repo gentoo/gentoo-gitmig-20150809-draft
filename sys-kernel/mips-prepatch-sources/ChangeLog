@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mips-prepatch-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/ChangeLog,v 1.4 2003/11/21 00:40:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/ChangeLog,v 1.5 2003/12/29 08:52:08 kumba Exp $
+
+*mips-prepatch-sources-2.4.24_pre2 (29 Dec 2003)
+
+  29 Dec 2003; Joshua Kinard <kumba@gentoo.org>
+  mips-prepatch-sources-2.4.24_pre2.ebuild:
+  snapshot dated 20031226 from linux-mips CVS of a 2.4.24-pre2 kernel
 
 *mips-prepatch-sources-2.4.23_rc2 (20 Nov 2003)
 
