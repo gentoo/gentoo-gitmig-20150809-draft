@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.11-r1.ebuild,v 1.5 2004/11/12 10:13:09 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.11-r1.ebuild,v 1.6 2004/11/14 20:57:10 kloeri Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Xft powered terminal widget"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="x86 ppc sparc alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 LICENSE="LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2
