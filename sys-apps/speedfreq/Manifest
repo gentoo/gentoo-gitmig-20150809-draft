@@ -1,12 +1,22 @@
-MD5 3fb6c0734002411db70dc59323b324a8 speedfreq-0.5.ebuild 1819
-MD5 dff082ffc72ee9b31c18f687b3b094e6 speedfreq-0.7.2-r1.ebuild 1847
-MD5 a26a3c1713b91635267da2258273b7d9 speedfreq-0.7.2.ebuild 1822
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a38504350f26b7e6ec5ce5ff3746128 ChangeLog 908
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e33256ea1b5a5459874db26dc9564a95 files/speedfreq.rc 1339
+MD5 3fb6c0734002411db70dc59323b324a8 speedfreq-0.5.ebuild 1819
+MD5 a26a3c1713b91635267da2258273b7d9 speedfreq-0.7.2.ebuild 1822
+MD5 01dfbeaddd4941d6050d860ef3cb054a speedfreq-0.7.2-r1.ebuild 1845
+MD5 d46afb4e9c52383f9cd2f8d52413e25e files/battery.sh 790
+MD5 384a3c0ba9c47cef45f4b202e69f5581 files/digest-speedfreq-0.5 64
+MD5 1cab56f6e74cd2e900c9f59f55383d11 files/speedfreq.conf 783
+MD5 15c2bcca7f009a18cb5cf7abd39d3fef files/speedfreq.rc 1340
+MD5 f96b11d757583258d2fff576c68b06e2 files/digest-speedfreq-0.7.2 66
 MD5 f96b11d757583258d2fff576c68b06e2 files/digest-speedfreq-0.7.2-r1 66
 MD5 4ae134571b43465ff61cbd376539f6cf files/0.7.2-python-ver.patch 348
-MD5 f96b11d757583258d2fff576c68b06e2 files/digest-speedfreq-0.7.2 66
-MD5 d33e7a90b828511811afbe370a7d5964 files/speedfreq.conf 782
-MD5 384a3c0ba9c47cef45f4b202e69f5581 files/digest-speedfreq-0.5 64
-MD5 d46afb4e9c52383f9cd2f8d52413e25e files/battery.sh 790
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4JnzHTu7gpaalycRAi9bAJ9ciXx142EHcPIbKzBtDKgrGFCvUwCglElQ
+jxgT9IEZ3I0FoI/Nl0x1XTE=
+=pgfm
+-----END PGP SIGNATURE-----

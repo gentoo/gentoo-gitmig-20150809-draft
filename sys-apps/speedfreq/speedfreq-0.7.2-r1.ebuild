@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.7.2-r1.ebuild,v 1.3 2004/06/24 22:27:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.7.2-r1.ebuild,v 1.4 2004/06/28 22:21:15 vapier Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ pkg_postinst() {
 	if use acpi ; then
 		echo
 		einfo "A sample script for powercontrol has been placed in /etc/acpi/battery.sh"
-		einfo "To use it add the following lines to your /etc/acpi/default/events"
+		einfo "To use it add the following lines to your /etc/acpi/events/default"
 		einfo " event=battery.*"
 		einfo " action=/etc/acpi/battery.sh %e"
 		einfo "Note that this only supports one battery at the time"
