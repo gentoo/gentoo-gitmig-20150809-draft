@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.1.ebuild,v 1.3 2004/09/24 17:12:14 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.1.ebuild,v 1.4 2004/09/24 23:32:59 slarti Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	filter-flags "-fPIC"
 	unpack ${A} || die
 	cd ${S} || die
-	epatch ${FILESDIR}/${PN}-2.0.1-gentoo.diff.bz2 || die
+	epatch ${FILESDIR}/${PN}-2.0.1-gentoo.diff || die
 	use tcpd && echo '#define VSF_BUILD_TCPWRAPPERS' >> builddefs.h
 	use ssl && echo '#define VSF_BUILD_SSL' >> builddefs.h
 }
