@@ -1,8 +1,0 @@
---- Makefile	Mon Jun 12 10:19:14 2000
-+++ Makefile.new	Thu Apr 25 10:51:27 2002
-@@ -1,4 +1,4 @@
--SUBDIRS= Jpeg Zlib Lib Player Plugin Kflash
-+SUBDIRS= Jpeg Zlib Lib Player Plugin
- 
- all:
- 	for subdir in $(SUBDIRS); do (cd $$subdir; $(MAKE)); done
