@@ -1,0 +1,12 @@
+# ChangeLog for app-games/orbital-eunuchs-sniper
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*orbital-eunuchs-sniper-1.29 (22 Apr 2003)
+
+  22 Apr 2003; Phil Bordelon <sunflare@gentoo.org> orbital-eunuchs-sniper-1.29.ebuild:
+  lu_zero tested it on PPC, and it worked.  Joy and rapture!  Added.
+
+  22 Apr 2003; Phil Bordelon <sunflare@gentoo.org> orbital-eunuchs-sniper-1.29.ebuild:
+  Initial commit.  Thanks to zakk for goading me into finishing these up.
+

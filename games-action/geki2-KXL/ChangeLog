@@ -1,0 +1,13 @@
+# ChangeLog for app-games/geki2-KXL
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*geki2-KXL-2.0.3 (06 Jul 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> geki2-KXL-2.0.3.ebuild :
+  Added KEYWORDS, SLOT.
+
+  06 Jul 2002; Ben Lutgens <lamer@gentoo.org> geki2-KXL-2.0.3.ebuild,
+  files/digest-geki2-KXL-2.0.3, ChangeLog :
+
+  New Package

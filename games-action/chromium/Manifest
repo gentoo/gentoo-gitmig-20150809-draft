@@ -1,0 +1,4 @@
+MD5 bfa95892a6761ef70d64b31a9fa4f9e2 files/chromium-0.9.12-gcc3-gentoo.patch 329
+MD5 8efe8d996573ec81e5357e39c046cdd3 files/digest-chromium-0.9.12-r4 144
+MD5 19668e1974d2e43dbae2795dc3c75b96 chromium-0.9.12-r4.ebuild 1672
+MD5 2e05e27abe25737861cb4df76e184170 ChangeLog 2045

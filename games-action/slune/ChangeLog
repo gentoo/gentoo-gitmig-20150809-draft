@@ -1,0 +1,9 @@
+# ChangeLog for app-games/slune
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*slune-0.3.1 (10 May 2003)
+
+  10 May 2003; Alastair Tse <liquidx@gentoo.org> slune-0.3.1.ebuild:
+  Initial ebuild. Thanks to FranÃ§ois Weykmans <nectroom@swing.be>. Part of
+  Slune and OOmadness suite.

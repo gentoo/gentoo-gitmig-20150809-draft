@@ -1,0 +1,21 @@
+# ChangeLog for app-games/maelstrom
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*maelstrom-3.0.6 (22 May 2003)
+
+  22 May 2003; Daniel Ahlberg <aliz@gentoo.org> maelstrom-3.0.6.ebuild :
+  Security update.
+
+*maelstrom-3.0.5 (26 Apr 2002)
+
+  05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> maelstrom-3.0.5.ebuild:
+  set ~ppc in keywords
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> maelstrom-3.0.5.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> maelstrom-3.0.5.ebuild
+  files/digest-maelstrom-3.0.5 :
+
+  New game.

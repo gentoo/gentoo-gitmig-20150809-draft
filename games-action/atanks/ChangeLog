@@ -1,0 +1,54 @@
+# ChangeLog for app-games/atanks
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*atanks-0.9.9d (20 Aug 2003)
+
+  20 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.9d.ebuild:
+  version bump
+
+*atanks-0.9.9b (15 Aug 2003)
+
+  15 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.9b.ebuild:
+  version bump
+
+*atanks-0.9.9a (11 Aug 2003)
+
+  11 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.9a.ebuild:
+  version bump
+
+*atanks-0.9.8h (08 Aug 2003)
+
+  08 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8h.ebuild:
+  version bump
+
+*atanks-0.9.8g (04 Aug 2003)
+
+  04 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8g.ebuild:
+  version bump
+
+*atanks-0.9.8f (03 Aug 2003)
+
+  03 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8f.ebuild:
+  version bump
+
+  02 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8e.ebuild:
+  using sed -i so need to depend on sed >= 4
+
+*atanks-0.9.8e (02 Aug 2003)
+
+  02 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8d.ebuild,
+  atanks-0.9.8e.ebuild:
+  version bump. includes the good pkg_postinst note from Rob Cakebread (bug
+  25787)
+
+*atanks-0.9.8d (01 Aug 2003)
+
+  01 Aug 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8d.ebuild:
+  version bump
+
+*atanks-0.9.8b (31 Jul 2003)
+
+  31 Jul 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8b.ebuild:
+  initial commit.  ebuild submitted by Rob Cakebread via bug 25606 (modified)
+

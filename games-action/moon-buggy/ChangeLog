@@ -1,0 +1,19 @@
+# ChangeLog for app-games/moon-buggy
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org> moon-buggy-0.5.1.ebuild,
+  moon-buggy-0.5.53.ebuild:
+  fix DESCRIPTION
+
+*moon-buggy-0.5.1 (25 Jun 2003)
+
+  25 Jun 2003; <msterret@gentoo.org> moon-buggy-0.5.1.ebuild,
+  moon-buggy-0.5.53.ebuild:
+  GPL to GPL-2 (repoman warning); use sed -i
+
+*moon-buggy-0.5.53 (24 Jun 2003)
+
+  24 Jun 2003; John Mylchreest <johnm@gentoo.org>; moon-buggy-0.5.53.ebuild:
+  Initial submission, close #23030
+

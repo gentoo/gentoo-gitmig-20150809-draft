@@ -1,0 +1,47 @@
+# ChangeLog for app-games/bzflag
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*bzflag-1.7.7.1 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Cleaned up ebuild because upstream cleaned up the build process #23134.
+
+*bzflag-1.7.7.0 (20 Dec 2002)
+
+  20 Dec 2002; Brandon Low <lostlogic@gentoo.org> bzflag-1.7.7.0.ebuild :
+  Change naming scheme the 3rd dot represents the letter, the 4th
+  dot represents the number after the letter.
+  Add some sed cuz it was specifying literal gcc paths which made
+  it unhappy.
+
+  29 Jun 2002; Seemant Kulleen <seemant@gentoo.org> bzflag-1.7.6.ebuild :
+  Changed the sed statement slightly, added LICENSE, general cleanup. Thanks
+  to: patrickn@tygerteam.com (Patrick Naubert) in bug #4320 for the sed.
+
+*bzflag-1.7.6 (22 Jun 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Added KEYWORDS.
+
+  22 Jun 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+  New version. The real version is 1.7e6. Also updated ${S} and added a
+  patch to make it compile under gcc-3.1 (created for us by captain_proton
+  on #BZFlag on OPN (Thanks a bunch!)
+
+*bzflag-1.7.4 (1 Feb 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> bzflag-1.7.4.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  16 Mar 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  New upstream release. Real version is 1.7e4 but portage doesn't support that.
+
+*bzflag-1.7 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

@@ -1,0 +1,51 @@
+# ChangeLog for app-games/chromium
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*chromium-0.9.12-r4 (07 Jul 2003)
+
+  07 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped to fix the environment #18570.  (yes i really fixed it this time)
+
+*chromium-0.9.12-r3 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped to fix the environment #18570.
+
+*chromium-0.9.12-r2 (18 Dec 2002)
+
+  18 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added games eclass support and fixed env.d for #11798.
+
+*chromium-0.9.12-r1 (25 Jul 2002)
+
+  07 Nov 2002; Mark Guertin <gerk@gentoo.org> chromium-0.9.12-r1.ebuild:
+  RDEPEND=$DEPEND is also depreciated
+
+  13 Sep 2002; Donny Davies <woodchip@gentoo.org> chromium-0.9.12-r1.ebuild :
+  sys-devel/ld.so is deprecated; #6476.
+  
+  25 Jul 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  files/chromium-0.9.12-r1.ebuild, chromium-0.9.12-r1.ebuild :  
+  Fix for GCC 3.1. Thanks to buison01@ie.hva.nl (motown) Bug #4407
+
+  29 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  Make configure script honour $myconf (bug #3001).
+
+*chromium-0.9.12 (28 Mar 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> chromium-0.9.12.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> chromium-0.9.12.ebuild :
+  Updated copyright year, prettified the ebuild slightly, and made the USE
+  flag "oggvorbis" instead of "vorbis"
+
+*chromium-0.9.12 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

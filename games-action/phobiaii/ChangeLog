@@ -1,0 +1,11 @@
+# ChangeLog for app-games/phobiaii
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*phobiaii-1.1 (12 Dec 2002)
+
+  09 May 2003; Martin Holzer <mholzer@gentoo.org> phobiaii-1.1.ebuild:
+  Added sys-libs/lib-compat to DEPEND. Closes #17321.
+  
+  12 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #4616.

@@ -1,0 +1,21 @@
+# ChangeLog for app-games/xshipwars
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*xshipwars-1.34.0 (01 Feb 2002)
+
+  19 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added CFLAGS fix #11406.
+
+  01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a patch for #9093, added games eclass support, added server install
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xshipwars-1.34.0.ebuild :
+  Added KEYWORDS.
+
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

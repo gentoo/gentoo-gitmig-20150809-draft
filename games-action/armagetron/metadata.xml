@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>games</herd>
+<maintainer>
+  <email>luke-jr@gentoo.org</email>
+  <name>Luke-Jr</name>
+</maintainer>
+<longdescription>ArmageTRON is a 3D light cycle game featuring the ability to play against others online</longdescription>
+</pkgmetadata>

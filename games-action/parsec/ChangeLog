@@ -1,0 +1,8 @@
+# ChangeLog for app-games/parsec
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*parsec-0197 (12 Jul 2003)
+
+  12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Henrik Schöpel <Spock2000@gmx.de> #21760.

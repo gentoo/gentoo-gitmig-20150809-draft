@@ -1,0 +1,28 @@
+# ChangeLog for app-games/koth
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org> koth-0.7.7.ebuild,
+  koth-0.8.0.ebuild:
+  fix DESCRIPTION; tidy; add some error messages
+
+*koth-0.8.0 (09 Feb 2003)
+
+  09 Feb 2003; Seemant Kulleen<seemant@gentoo.org> koth-0.8.0.ebuild
+  files/digest-koth-0.8.0 :
+
+  Version bump into testing profile.
+
+*koth-0.7.7 (09 Feb 2003)
+ 
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> koth-0.7.7.ebuild
+  files/digest-koth-0.7.7 :
+
+  Version bump. And using : instead of / in sed expressions, closing bug
+  #15006 by Blu3 <david+gentoo.org@blue-labs.org>
+
+*koth-0.7.6 (04 Oct 2002)
+
+  04 Oct 2002; Arcady Genkin <agenkin@thpoon.com> koth-0.7.6 :
+
+  Initial version.

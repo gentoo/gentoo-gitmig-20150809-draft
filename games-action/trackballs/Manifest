@@ -1,0 +1,5 @@
+MD5 9f2ed5f855d248e18a2fb6d93ef4671d files/digest-trackballs-0.9.0 142
+MD5 a31aca7fa7d6a2acecd5140f6986361f files/0.9.0-sparkle.patch 299
+MD5 e4670c29b372122294828ca8be76f6f8 files/0.9.0-destdir-icons.patch 1343
+MD5 8ac3b76ddc8d87398bb7c44d2a9bd8b5 ChangeLog 470
+MD5 ff1bf8f913d38f4fd93f8729aadf10c9 trackballs-0.9.0.ebuild 1060

@@ -1,0 +1,49 @@
+# ChangeLog for app-games/abuse_sdl
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*abuse_sdl-0.7.0-r2 (04 Aug 2003)
+
+  04 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  abuse_sdl-0.7.0-r2.ebuild:
+  fix for bug 25730 - fixed a hard-coded path in the default config writer.
+
+  04 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  abuse_sdl-0.7.0-r1.ebuild:
+  skip NEWS install since it's empty
+
+*abuse_sdl-0.7.0-r1 (07 Mar 2003)
+
+  07 Mar 2003; Philip Walls <malverian@gentoo.org> abuse_sdl-0.7.0-r1.ebuild :
+  Do prepgamesdir AFTER patch is applied. Fix by Robert Holak
+  <panthar@panthar.org>. Bug #18648
+
+*abuse_sdl-0.7.0 (16 Jan 2003)
+
+  16 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #13600.
+
+*abuse_sdl-0.6.1-r3 (27 Dec 2002)
+
+  27 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a better stupid patch for #11475 from Philip Walls.
+
+*abuse_sdl-0.6.1-r2 (12 Nov 2002)
+
+  12 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a stupid fix (not sure why it works) for #10573
+
+*abuse_sdl-0.6.1-r1 (17 Jul 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> abuse_sdl-0.6.1-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+*abuse_sdl-0.6.1 (22 Apr 2002)
+
+  22 Apr 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

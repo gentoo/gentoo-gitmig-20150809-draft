@@ -1,0 +1,9 @@
+# ChangeLog for app-games/trackballs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*trackballs-0.9.0 (20 Jun 2003)
+
+  20 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Väinö Järvelä <vaino.jarvela@pp.inet.fi>,
+  Mårten Woxberg <marwo264@student.liu.se>, Rigo Ketelings <rigo@home.nl> #13019.

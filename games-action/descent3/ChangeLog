@@ -1,0 +1,10 @@
+# ChangeLog for app-games/descent3
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*descent3-1.4.0b (28 Jul 2003)
+
+  28 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org> descent3-1.4.0b.ebuild,
+  files/descent3:
+  Initial import.  Ebuild by me.
+

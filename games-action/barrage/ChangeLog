@@ -1,0 +1,9 @@
+# ChangeLog for app-games/barrage
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*barrage-1.0.1 (06 Aug 2003)
+
+  06 Aug 2003; Michael Sterrett <msterret@gentoo.org> barrage-1.0.1.ebuild:
+  initial commit.  ebuild from Stephen Bridges via bug 26047
+

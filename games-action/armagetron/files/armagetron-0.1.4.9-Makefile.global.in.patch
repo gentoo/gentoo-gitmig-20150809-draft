@@ -1,0 +1,11 @@
+--- Makefile.global.in	Tue Jun 26 08:37:57 2001
++++ Makefile.global.in.new	Sun May 26 11:31:30 2002
+@@ -40,7 +40,7 @@
+ # how to compile C++ - files
+ 
+ %.o: ${srcdir}/%.cpp
+-	$(SYNC)      # on my laptop: make sure changes get flushed to disk
++	$(SYNCDISK)      # on my laptop: make sure changes get flushed to disk
+ 	$(CXX) $(CXXFLAGS) $(INCLUDES) -I${srcdir} -I${top_srcdir}/src -c  $< -o $@
+ 
+ %.a:

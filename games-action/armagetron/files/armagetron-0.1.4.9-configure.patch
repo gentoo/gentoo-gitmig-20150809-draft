@@ -1,0 +1,13 @@
+--- configure.orig	Fri May 24 19:03:13 2002
++++ configure	Fri May 24 19:05:22 2002
+@@ -1182,8 +1182,8 @@
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+-  ac_save_LIBS="$LIBS"
+-LIBS="-lGLU  $LIBS"
++  ac_save_LIBS="$LIBS -L/usr/X11R6/lib"
++LIBS="-lGLU  $LIBS -L/usr/X11R6/lib"
+ cat > conftest.$ac_ext <<EOF
+ #line 1189 "configure"
+ #include "confdefs.h"

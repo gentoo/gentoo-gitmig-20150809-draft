@@ -1,0 +1,74 @@
+# ChangeLog for app-games/armagetron
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+  25 Aug 2003; Luke-Jr <luke-jr@gentoo.org> armagetron-0.1.4.9.ebuild,
+  armagetron-0.2.4-r1.ebuild, armagetron-0.2.5.1.ebuild:
+  Removed unneccesary font from ebuilds
+
+  12 Aug 2003; Luke-Jr <luke-jr@gentoo.org> metadata.xml:
+  Created metadata.xml
+
+  29 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  armagetron-0.2.5.1.ebuild:
+  use sed -i and src_compile from games eclass
+
+*armagetron-0.2.5.1 (27 Jul 2003)
+
+  27 Jul 2003; <luke-jr@gentoo.org> armagetron-0.2.5.1.ebuild:
+  Unstable/dev version bump to 0.2.5.1
+
+*armagetron-0.2.5 (21 Jul 2003)
+
+  21 Jul 2003; <luke-jr@gentoo.org> armagetron-0.2.5.ebuild:
+  Unstable/dev version bump
+
+  14 Jul 2003; <luke-jr@gentoo.org> armagetron-0.2.4-r1.ebuild:
+  Moved ArmageTRON bin out of /opt
+
+*armagetron-0.2.4-r1 (12 Jul 2003)
+
+  12 Jul 2003; <luke-jr@gentoo.org> armagetron-0.2.4-r1.ebuild:
+  Maybe fixed a font problem occuring on some systems
+
+  10 Jul 2003; <luke-jr@gentoo.org> armagetron-0.2.4.ebuild:
+  0.2.4 now uses GAMES_DATADIR for data
+
+*armagetron-0.2.4 (10 Jul 2003)
+
+  10 Jul 2003; <luke-jr@gentoo.org> armagetron-0.2.4.ebuild:
+  Version bump: 0.2.4
+
+  08 Jul 2003; <luke-jr@gentoo.org> files/armagetron-0.2_pre2.sh:
+  version bump to 0.2.2 (stable) and 0.2.3 (unstable)
+
+*armagetron-0.2_pre2 (05 Jul 2003)
+
+  05 Jul 2003; <luke-jr@gentoo.org> armagetron-0.2_pre2.ebuild,
+  files/armagetron-0.2_pre2.sh:
+  Version bump to 0.2_pre2 and now uses games eclass
+
+  16 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: various little cleanups;
+  No version bump (still 0.1.4.9)
+
+*armagetron-0.1.4.9 (24 May 2002)
+  
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> armagetron-0.1.4.9.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  13 Aug 2002; J. Alberto Suárez López <bass@gentoo.org>
+  armagetron-0.1.4.9.ebuild : Added DEPEND unzip, needed for unpack the
+  moviepack.
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org>: Added ppc to keywords
+
+  29 Jul 2002; Spider <spider@gentoo.org> armagetron-0.1.4.9.ebuild: Change
+  CXXFLAGS so we dont have -fno-exceptions.
+
+  
+  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org>
+  armagetron-0.1.4.9.ebuild : Added LICENSE, KEYWORDS.
+
+  24 May 2002; Sean P. Kane <spk42@spkane.org> armagetron-0.1.4.9.ebuild :
+  First armagetron ebuild
+

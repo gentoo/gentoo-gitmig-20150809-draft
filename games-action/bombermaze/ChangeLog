@@ -1,0 +1,24 @@
+# ChangeLog for app-games/bombermaze
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+  06 Dec 2003; Mark Guertin <gerk@gentoo.org> bombermaze-0.6.6.ebuild :
+  Added ppc to keywords
+
+*bombermaze-0.6.6 (23 May 2002)
+
+  06 Oct 2002; Jose Alberto Suárez López <bass@gentoo.org>
+  bombermaze-0.6.6.ebuild:
+  Changed DEPEND, gnome-core to gnome-libs. It prevents the error
+  masked of the game. thanks David Vollbracht for the email.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> bombermaze-0.6.6.ebuild :
+  Added KEYWORDS, SLOT.
+
+  23 May 2002; Ryan Phillips <rphillips@gentoo.org> Changelog :
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

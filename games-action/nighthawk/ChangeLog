@@ -1,0 +1,15 @@
+# ChangeLog for app-games/nighthawk
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org> nighthawk-2.2.ebuild:
+  fix DESCRIPTION; tidy
+
+*nighthawk-2.2-1 (16 Jul 2002)
+
+  30 Sep 2002; Mike Frysinger <vapier@gentoo.org> nighthawk.patch:
+  Added an additional small patch to compile under gcc3.2
+
+  16 Jul 2002; J. Alberto S. L. <bass@gentoo.org> nighthawk-2.2-1.ebuild: 
+    First relase
+    

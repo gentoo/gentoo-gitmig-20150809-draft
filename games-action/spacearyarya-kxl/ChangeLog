@@ -1,0 +1,14 @@
+# ChangeLog for app-games/spacearyarya-kxl
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*spacearyarya-kxl-1.0.2 (06 Jul 2002)
+
+  29 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  spacearyarya-kxl-1.0.2.ebuild:
+  use games eclass
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> spacearyarya-kxl-1.0.2.ebuild :
+  Added KEYWORDS, SLOT.
+  files/digest-spacearyarya-kxl-1.0.2, ChangeLog :
+  New Package

@@ -1,0 +1,19 @@
+# ChangeLog for app-games/raptor2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/raptor2/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*raptor2-1.0.0-r1 (20 Jul 2003)
+
+  20 Jul 2003; jje <jje@gentoo.org> raptor2-1.0.0-r1.ebuild,
+  raptor2-1.0.0.ebuild:
+  New revision to use split dumb / allegro builds.
+  
+  Submitted by: Ben Davis <entheh@users.sf.net>
+
+  04 Jul 2003; Michael Sterrett <msterret@gentoo.org> raptor2-1.0.0.ebuild:
+  use sed -i
+
+*raptor2-1.0.0 (09 Mar 2003)
+
+  09 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Daniel Mannarino <thesnark@operamail.com> #16985.

@@ -1,0 +1,9 @@
+# ChangeLog for app-games/glaxium
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*glaxium-0.5 (19 Jun 2003)
+
+  19 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Thomas R. (TRauMa) <trauma@web.de>
+  and Bret Towe <btowe@gbis.com> #6752.

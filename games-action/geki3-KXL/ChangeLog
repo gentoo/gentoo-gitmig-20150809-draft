@@ -1,0 +1,8 @@
+# ChangeLog for app-games/geki3-KXL
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+
+*geki3-KXL-1.0.3 (04 Mar 2003)
+
+  04 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Thomas Preissler <tomjohn@gmx.de> #14452.

@@ -1,0 +1,60 @@
+
+CC=@CXX@
+INCLUDE=@CFLAGS@ @CPPFLAGS@
+LIB=@LIBS@
+
+OBJ= $(patsubst %.cpp,%.o,$(wildcard *.cpp))
+DATE=`date +"%d.%m.%Y"`
+
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+datadir=@datadir@
+bindir=@bindir@
+mandir=@mandir@
+
+GLAXIUM_INSTALLDIR=$(bindir)
+DATA_DIRS=samples textures
+GLAXIUM_HOME=$(datadir)/games/glaxium
+MAN_DIR=$(mandir)
+
+glaxium : $(OBJ)
+	gcc -g -o glaxium $(OBJ) $(LIB)
+
+
+
+nosound:
+	(SOUND=no; make)
+
+clean:
+	rm -f $(OBJ) glaxium config.log config.cache config.status aclocal.m4 *~
+
+
+%.o : %.cpp
+	$(CC) -c  $(INCLUDE) $< -o $@ -DDATADIR=\"$(GLAXIUM_HOME)\"
+
+
+install: glaxium
+	@echo Instaling glaxium in $(GLAXIUM_INSTALLDIR) and its data in $(GLAXIUM_HOME)
+
+	@if [ ! -d $(DESTDIR)$(GLAXIUM_HOME) ] ; then \
+	      mkdir -p $(DESTDIR)$(GLAXIUM_HOME) ; \
+	fi
+
+	@if [ ! -d $(DESTDIR)$(GLAXIUM_INSTALLDIR) ] ; then \
+	      mkdir -p $(DESTDIR)$(GLAXIUM_INSTALLDIR) ; \
+	fi
+
+	@if [ ! -d $(DESTDIR)$(MAN_DIR)/man6 ] ; then \
+	      mkdir -p $(DESTDIR)$(MAN_DIR)/man6 ; \
+	fi
+
+	@cp -f glaxium $(DESTDIR)$(GLAXIUM_INSTALLDIR)/
+	@cp -R $(DATA_DIRS)  $(DESTDIR)$(GLAXIUM_HOME)
+	@cp -f glaxium.6  $(DESTDIR)$(MAN_DIR)/man6/glaxium.6
+
+uninstall:
+	@echo Uninstaling glaxium
+	rm -f $(GLAXIUM_INSTALLDIR)/glaxium
+	rm -rf $(GLAXIUM_HOME)
+	rm -f $(MAN_DIR)/man6/glaxium.6
