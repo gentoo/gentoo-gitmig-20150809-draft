@@ -1,6 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r5.ebuild,v 1.1 2003/06/16 16:54:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r5.ebuild,v 1.2 2003/06/24 20:20:33 vapier Exp $
+
+inherit eutils
+##EPATCH_SOURCE="${FILESDIR}"
 
 DESCRIPTION="Fontviewer for PostScript Type 1 and TrueType"
 SRC_URI="mirror://sourceforge/gfontview/${P}.tar.gz"
@@ -16,9 +19,6 @@ DEPEND=">=media-libs/t1lib-1.0.1
 	=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 RDEPEND="nls? ( sys-devel/gettext )"
-
-inherit eutils
-##EPATCH_SOURCE="${FILESDIR}"
 
 src_unpack() {
 	unpack ${P}.tar.gz

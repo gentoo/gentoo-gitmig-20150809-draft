@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.2 2003/06/18 09:05:56 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.3 2003/06/24 20:21:10 vapier Exp $
+
+inherit flag-o-matic eutils
 
 DESCRIPTION="Symlinks scans for and fixes broken or messy symlinks"
 HOMEPAGE="http://www.ibiblio.org/pub/linux/utils/file/"
@@ -9,17 +11,10 @@ SRC_URI="http://www.ibiblio.org/pub/linux/utils/file/${P}.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-
 KEYWORDS="~x86 ~alpha"
-
 IUSE="static"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
-
-inherit flag-o-matic eutils
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	# bugfixes from the debian project.
