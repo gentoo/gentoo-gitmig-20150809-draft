@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.22 2004/03/27 16:24:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.23 2004/03/31 19:48:30 usata Exp $
+
+*skk-jisyo-200404 (01 Apr 2004)
+
+  01 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> skk-jisyo-200404.ebuild:
+  New CVS snapshot
 
   28 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> skk-jisyo-200401.ebuild:
   Marked as stable. Removed old ebuild.
