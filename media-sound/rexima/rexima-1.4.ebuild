@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/rexima-1.4.ebuild,v 1.10 2004/09/15 17:22:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/rexima-1.4.ebuild,v 1.11 2004/09/22 20:48:23 pvdabeel Exp $
 
 DESCRIPTION="A curses-based interactive mixer which can also be used from the command-line."
 HOMEPAGE="http://rus.members.beeb.net/rexima.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/sound/mixers/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ppc"
 IUSE=""
 
 RDEPEND="virtual/libc
