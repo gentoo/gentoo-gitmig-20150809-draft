@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd /usr/share/iconbar
+
+mkdir -p ~/.e/iconbar/icons
+
+cp -r icons/* ~/.e/iconbar/icons/
+cp -r order.txt ~/.e/iconbar/
+cp -r geometry.txt ~/.e/iconbar/
+cp -r build_icons.sh ~/.e/iconbar/
