@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.7.2.ebuild,v 1.4 2004/02/19 00:34:20 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.7.2.ebuild,v 1.5 2004/03/16 00:37:00 stkn Exp $
 
 IUSE="doc alsa mysql gtk mmx nopri nozaptel noiax vhosts"
 
@@ -23,8 +23,8 @@ DEPEND="virtual/glibc
 	gtk? ( =x11-libs/gtk+-1.2* )
 	!noiax? ( >=net-libs/iax-0.2.2 )
 	!nopri? ( >=net-libs/libpri-0.4 )
-	!nozaptel? ( >=net-misc/zaptel-0.7
-		     >=net-libs/zapata-0.7 )"
+	!nozaptel? ( >=net-misc/zaptel-0.8.1
+		     >=net-libs/zapata-0.8.1 )"
 
 pkg_setup() {
 	webapp-pkg_setup
