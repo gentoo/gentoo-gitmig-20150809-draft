@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.3e.ebuild,v 1.3 2003/02/13 17:22:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.3e.ebuild,v 1.4 2003/06/04 13:46:04 joker Exp $
 
 DESCRIPTION="file system viewer for Window Maker"
 HOMEPAGE="http://www.bayernline.de/~gscholz/linux/fsviewer/"
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 
 IUSE=""
 
-DEPEND="x11-wm/WindowMaker"
+DEPEND="x11-wm/windowmaker"
 
 S="${WORKDIR}/${PN}.app-${PV}"
 
