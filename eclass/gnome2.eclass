@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.7 2002/06/04 06:46:11 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.8 2002/06/04 07:42:38 blocke Exp $
 
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -20,11 +20,14 @@ export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"
 export CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer/} -g"
 
 G2CONF="--enable-debug=yes"
+SCROLLKEEPER_UPDATE="0"
 
 gnome2_src_compile() {
 
+	# doc keyword for gtk-doc
 	use doc && G2CONF="${G2CONF} --enable-gtk-doc" || G2CONF="${G2CONF} --disable-gtk-doc"
 	
+	# fix those .la files
 	if [ "${LIBTOOL_FIX}" = "1" ]
 	then
 		libtoolize --copy --force
@@ -37,6 +40,7 @@ gnome2_src_compile() {
 
 gnome2_src_install() {
 
+	# we must delay gconf schema installation due to sandbox
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 
 	einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"
@@ -49,6 +53,9 @@ gnome2_src_install() {
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
+	# only update scrollkeeper if this package needs it
+	[ -a ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="1"
+
 }
 
 gnome2_pkg_postinst() {
@@ -57,6 +64,7 @@ gnome2_pkg_postinst() {
 	if [ -n "${SCHEMAS}" ]
 	then
 
+		# install/update schemas the hard way
 		export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
 
 		echo ">>> Updating GConf2 Schemas for ${P}"
@@ -67,7 +75,7 @@ gnome2_pkg_postinst() {
 		done
 	fi
 
-	if [ -x /usr/bin/scrollkeeper-update ]
+	if [ -x /usr/bin/scrollkeeper-update ] && [ SCROLLKEEPER_UPDATE = "1" ]
 	then
 		echo ">>> Updating Scrollkeeper"
 		scrollkeeper-update -p /var/lib/scrollkeeper
