@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Ryan Phillips <rphillips@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.1 2002/10/27 22:40:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.2 2002/10/28 01:04:58 rphillips Exp $
 # Ripped from the vim ebuilds. src_compile and install
 # should be integrated in at some point
 
 # Calculate the version based on the name of the ebuild
 vim_version="${PV%_pre*}"
 vim_pre="${PV##*_pre}"
-VIMPATCH="vimpatch-1-213.tar.bz2"
+VIMPATCH="vimpatch-1-245.tar.bz2"
 
 if [ "$vim_version" = "$vim_pre" ]; then
 	# Final releases prior to 6.0 include a dash and decimal point in
