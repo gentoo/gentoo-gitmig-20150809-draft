@@ -21,9 +21,9 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (03 Feb 2003)
-# Locating a symlink bug.
-=sys-apps/portage-2.0.46-r11
+# <carpaski@gentoo.org> (07 Feb 2003)
+# Testing. Happy release.
+=sys-apps/portage-2.0.46-r12
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
 >=sys-apps/portage-2.0.47_pre1
 
