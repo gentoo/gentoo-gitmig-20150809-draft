@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.42 2003/03/05 04:37:25 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.43 2003/06/06 06:09:26 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script now accepts an optional argument.
@@ -153,19 +153,8 @@ export AUTOCLEAN="no"
 
 # Allow portage to overwrite stuff
 export CONFIG_PROTECT="-*"
-
-if [ "$1" = "" ] || [ "$1" = "0" -o "$1" = "1.5" ]
-then
-	#
-	# First stage of bootstrap (aka build stage)
-	#
-	cd /usr/portage
-	export USE="-* build bootstrap"
-	# Separate, so that the next command uses the *new* emerge
-	emerge ${myPORTAGE} || cleanup 1
-	emerge ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || cleanup 1
-	# make.conf has been overwritten, so we explicitly export our original settings
-fi
+	
+USE="-* build bootstrap" emerge ${myPORTAGE} || cleanup 1
 
 if [ -x /usr/bin/gcc-config ]
 then
@@ -186,17 +175,14 @@ then
 	${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &> /dev/null
 fi
 
-if [ "$1" = "" ] || [ "$1" = "0" -o "$1" = "2" ]
-then
-	#
-	# Second stage of boostrap
-	#
-	export USE="${ORIGUSE} bootstrap"
-	emerge ${myGLIBC} ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myZLIB} ${myBINUTILS} ${myGCC} || cleanup 1
-	# ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
-	export USE="${ORIGUSE}"
-	emerge ${myNCURSES} || cleanup 1
-fi
+export USE="${ORIGUSE} bootstrap"
+for x in ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} ${myGLIBC} ${MYBASELAYOUT} ${myZLIB} 
+do
+	emerge $x || cleanup 1
+done
+# ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
+export USE="${ORIGUSE}"
+emerge ${myNCURSES} || cleanup 1
 
 # Restore original make.conf
 cleanup 0
