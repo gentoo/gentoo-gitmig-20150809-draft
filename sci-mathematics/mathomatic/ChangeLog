@@ -1,0 +1,21 @@
+# ChangeLog for app-sci/mathomatic
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.1 2004/12/28 14:35:26 ribosome Exp $
+
+*mathomatic-11.1c (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/gentoo-mathomatic-11.1c.diff, +mathomatic-11.1c.ebuild:
+  Moved from app-sci/mathomatic to sci-mathematics/mathomatic.
+
+  13 Nov 2004; Michael Hanselmann <hansmi@gentoo.org> mathomatic-11.1c.ebuild:
+  Added to ~ppc.
+
+  28 Jul 2004; <malc@gentoo.org> mathomatic-11.1c.ebuild:
+  Add ~amd64 closes bug #57764
+
+*mathomatic-11.1c (20 May 2004)
+
+  20 May 2004; Thomas Veith <xtv@gentoo.org> mathomatic-11.1c.ebuild, Manifest,
+ChangeLog, metadata.xml, files/gentoo-mathomatic-11.1c.diff :
+  Initial import.  
