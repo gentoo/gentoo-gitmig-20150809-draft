@@ -1,6 +1,14 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.28 2004/09/28 01:35:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.29 2004/09/29 03:25:27 agriffis Exp $
+
+*mozilla-launcher-1.21 (28 Sep 2004)
+
+  28 Sep 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-launcher-1.18.ebuild, -mozilla-launcher-1.20.ebuild,
+  +mozilla-launcher-1.21.ebuild:
+  Update to 1.21 to remove chrome.rdf along with compreg.dat on first run of new
+  browser version #63999
 
 *mozilla-launcher-1.20 (27 Sep 2004)
 
