@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (27 Nov 2002)
+# Sometimes segfaults
+=net-irc/xchat-1.9.6
 
 # <bcowan@gentoo.org> (25 Nov 2002)
 # masking until db-4* are unmasked
