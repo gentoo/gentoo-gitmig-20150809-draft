@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.8 2004/09/19 21:31:59 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.9 2004/10/01 17:43:32 jbms Exp $
+
+*ipw2200-0.11 (01 Oct 2004)
+
+  01 Oct 2004; Jeremy Maitin-Shepard <jbms@gentoo.org> +ipw2200-0.11.ebuild:
+  Version bump. Creates symlinks to the firmware in the new firmware location.
+  Resolves bug #65784 and bug #65059.
 
 *ipw2200-0.8 (19 Sep 2004)
 
