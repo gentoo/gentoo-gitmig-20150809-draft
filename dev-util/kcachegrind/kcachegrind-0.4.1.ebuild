@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/kcachegrind-0.4.1.ebuild,v 1.2 2003/10/03 13:52:57 caleb Exp $
-inherit kde-base
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/kcachegrind-0.4.1.ebuild,v 1.3 2003/12/28 04:06:41 caleb Exp $
+inherit kde
 
 need-kde 3
 
