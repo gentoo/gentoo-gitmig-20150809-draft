@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.8 2003/10/29 16:48:08 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.9 2004/03/13 15:18:02 taviso Exp $
+
+  13 Mar 2004; Tavis Ormandy <taviso@gentoo.org> :
+  new snapshot, i'll use bzip2 instead of gzip.
 
   29 Oct 2003; Tavis Ormandy <taviso@gentoo.org> putty-20030902-r1.ebuild:
   code cleanups, moving makefile generation into src_unpack()
