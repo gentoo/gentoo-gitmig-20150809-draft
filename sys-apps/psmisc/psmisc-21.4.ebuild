@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.9 2004/06/24 22:22:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.10 2004/06/25 13:00:20 solar Exp $
 
 inherit eutils gnuconfig
 
@@ -26,8 +26,10 @@ src_unpack() {
 	if use selinux; then
 		# Necessary selinux patch
 		epatch ${FILESDIR}/${SELINUX_PATCH}
+		use nls || epatch ${FILESDIR}/${P}-no-nls-selinux.patch
+	else
+		use nls || epatch ${FILESDIR}/${P}-no-nls.patch
 	fi
-	use nls || epatch ${FILESDIR}/${P}-no-nls.patch
 }
 
 src_compile() {
