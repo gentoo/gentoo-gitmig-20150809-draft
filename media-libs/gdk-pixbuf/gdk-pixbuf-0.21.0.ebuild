@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.21.0.ebuild,v 1.1 2002/11/07 15:47:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.21.0.ebuild,v 1.2 2002/11/13 12:29:41 foser Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 src_unpack() {
 	unpack ${A}
