@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nbtscan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.8 2004/06/24 22:09:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.9 2004/07/01 20:00:18 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  nbtscan-1.0.3.ebuild, nbtscan-1.5.1.ebuild:
+  change virtual/glibc to virtual/libc, add metadata.xml, add IUSE
 
   29 Mar 2004; Michael Boman <mboman@gentoo.org> nbtscan-1.5.1.ebuild:
   Oops. New packages should be ~arch masked first.
