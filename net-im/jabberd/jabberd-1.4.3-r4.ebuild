@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.1 2004/09/20 15:50:53 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.2 2004/09/20 22:32:18 humpback Exp $
 
 inherit eutils
 
@@ -25,6 +25,15 @@ PDEPEND="msn? ( net-im/msn-transport )
 		 oscar? ( net-im/aim-transport )
 		 yahoo? ( net-im/yahoo-transport )
 		 icq? ( net-im/jit )"
+
+pkg_setup() {
+
+	if use ipv6 ; then
+		ewarn "You are about to build with ipv6 support, if your system is not using ipv6"
+		ewarn "do control-c now and emerge with \"USE=-ipv6\" "
+		epause 5
+	fi
+}
 
 src_unpack() {
 	unpack jabberd-${PV}.tar.gz
