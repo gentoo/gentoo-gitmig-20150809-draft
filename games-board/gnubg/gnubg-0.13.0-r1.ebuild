@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0-r1.ebuild,v 1.4 2004/03/21 06:09:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0-r1.ebuild,v 1.5 2004/06/03 19:26:46 agriffis Exp $
 
 inherit games
 
@@ -44,7 +44,7 @@ src_unpack() {
 	cd ${S}
 	mv ../${PN}.weights-${WPV} ${S}/${PN}.weights
 	mv ../${PN}.bd ${S}
-	if  [ `use nas` ] ; then
+	if  use nas ; then
 		# couldn't find -laudio without this.  Very odd.
 		sed -i \
 			-e "s:-laudio:-L/usr/X11R6/lib/ -laudio:" configure.in || \
