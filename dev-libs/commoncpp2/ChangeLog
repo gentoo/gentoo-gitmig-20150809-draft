@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: 
+
+*commoncpp2-1.0.1 (03 Oct 2002)
+
+  03 Oct 2002; Matt Keadle <mkeadle@gentoo.org> commoncpp2-1.0.1: 
+  This changelog is for the initial release of commoncpp2-1.0.1.ebuild which is
+  just a library needed for a few gnu applications. It is the new branch of
+  commonc++. Thanks to foser (real name??) for the ebuild!
+ 
