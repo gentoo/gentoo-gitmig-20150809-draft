@@ -6,6 +6,8 @@ MD5 8c1c4667609bae1089a66ea6c8ee1f28 files/1.5.1-gentoo-p1.patch 1376
 MD5 4e83631ff34cc2e5505210c328e55a88 files/1.5.1-gentoo-p2.patch 3461
 MD5 c945b2843e8b1d32fc4af70cf5026912 files/1.5.1-pthread.patch 204
 MD5 13a083a65d008679db7c396ceafa31f0 files/digest-libmpeg3-1.5.1 71
+MD5 07e228685340f8108b870543728f43cf files/1.5.1-proper-c.patch 601
+MD5 0335a104cfdf11350198751a1f3aff8c files/1.5.1-largefile.patch 291
 MD5 338a71ba8776da9dec09aecd72e241f8 libmpeg3-1.5-r1.ebuild 1370
-MD5 1c4d8242ac25616f8c27ada5bfbc1d55 ChangeLog 2507
-MD5 e20cfa7f8bd060dc039a053e86dce1ae libmpeg3-1.5.1.ebuild 1400
+MD5 10a580786bb51255cd8f7db076bd5518 ChangeLog 2651
+MD5 bed787ee9e44a80da83da9e735cf5e63 libmpeg3-1.5.1.ebuild 1483
