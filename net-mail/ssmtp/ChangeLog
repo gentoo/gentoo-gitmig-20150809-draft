@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.25 2004/04/13 18:10:07 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.26 2004/04/23 07:03:39 solar Exp $
+
+*ssmtp-2.60.7 (23 Apr 2004)
+
+  23 Apr 2004; <solar@gentoo.org> ssmtp-2.60.7.ebuild:
+  Format String Vulnerabilities. security bug #47918 + Fix broken/insecure
+  logfile handling bug #48435
 
 *ssmtp-2.60.4-r2 (13 Apr 2004)
 
