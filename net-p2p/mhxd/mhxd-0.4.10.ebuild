@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.9.ebuild,v 1.6 2004/07/28 12:26:05 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.10.ebuild,v 1.1 2004/07/28 12:26:05 kang Exp $
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DESCRIPTION="This is a Hotline 1.5+ compatible *nix Hotline Server. It supports IRC compatibility. See http://www.hotspringsinc.com/"
-SRC_URI="http://projects.acidbeats.de/${P}.tar.gz"
+SRC_URI="http://projects.acidbeats.de/${P}.tar.bz2"
 HOMEPAGE="http://hotlinex.sf.net/"
 
 IUSE="ipv6 ssl mysql"
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	dodoc AUTHORS INSTALL PROBLEMS README* ChangeLog TODO NEWS run/hxd/hxd.conf
+	dodoc hxd.sql AUTHORS INSTALL PROBLEMS README* ChangeLog TODO NEWS run/hxd/hxd.conf
 
 	cpdirs="accounts files newsdir etc exec lib"
 	dodir /etc/mhxd
@@ -49,7 +49,6 @@ src_install() {
 	insinto /var/mhxd ; doins run/hxd/news
 	insinto /var/mhxd; doins run/hxd/agreement
 	insinto /var/mhxd; doins run/hxd/.common
-	insinto /var/mhxd; doins run/hxd/hxd.sql
 
 	keepdir /var/mhxd/files
 	keepdir /var/mhxd/lib
@@ -58,19 +57,17 @@ src_install() {
 
 pkg_preinst() {
 	if ! groupmod hxd; then
-		groupadd hxd 2> /dev/null || \
-		die "Failed to create hxd group"
+		enewgroup hxd -1 || die "Failed to create hxd group"
 	fi
 
 	if ! id hxd; then
-		useradd -d /var/hxd -c "hxd added by portage" -g hxd hxd
-		assert "Failed to create hxd user"
+		enewuser hxd -1 /bin/bash /var/hxd hxd || "Failed to create hxd user"
 	fi
 }
 
 pkg_postinst() {
 	#fowners don't do directories :(
-	chown -R hxd:hxd /var/mhxd
+	chown -R hxd:hxd /var/mhxd || "Failed to set owner on /var/mhxd"
 	einfo
 	einfo "Welcome to Horline!"
 	einfo "Do '/etc/init.d/mhxd start' to start the server, then"

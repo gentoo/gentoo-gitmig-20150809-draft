@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/mhxd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.5 2004/07/17 10:42:14 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.6 2004/07/28 12:26:05 kang Exp $
+
+*mhxd-0.4.10 (28 Jul 2004)
+
+  28 Jul 2004; Guillaume Destuynder <kang@gentoo.org> +mhxd-0.4.9.ebuild:
+  Version bump. Now also uses enewgroup/enewuser in the ebuild.
 
   17 Jul 2004; Guillaume Destuynder <kang@gentoo.org> mhxd-0.4.9.ebuild:
   Added ~sparc keyword (ebuild was tested and verified working for this arch)
