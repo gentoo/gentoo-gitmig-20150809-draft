@@ -5,7 +5,7 @@ MD5 00e0463f6d3f9168161b5dbb2018eebf sqlite-2.8.12.ebuild 847
 MD5 860577d3f598990290ec0bd0fc89a9dd sqlite-2.8.13.ebuild 836
 MD5 8c48c00df69d5a7788ac16afa86d8d8f sqlite-2.8.3.ebuild 854
 MD5 8953a08cf332e2c67c304975ab2827c2 sqlite-2.8.14.ebuild 860
-MD5 2eefef589afbef255db5010cb61fde96 sqlite-2.8.15.ebuild 981
+MD5 10e49bfd7357f328169fe4a3d2ecb301 sqlite-2.8.15.ebuild 978
 MD5 130b125f6be7b942bdf4639f477795e8 sqlite-3.0.5.ebuild 1027
 MD5 f7f2b6db996414ddea4f372063c9732c sqlite-3.0.6.ebuild 1041
 MD5 fc1d6171cb71e35f1732a1dddcf68e39 sqlite-3.0.7.ebuild 990
