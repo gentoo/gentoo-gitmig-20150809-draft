@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.61 2005/01/26 05:59:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.62 2005/01/27 01:49:27 eradicator Exp $
+
+*opengl-update-2.1_pre4 (26 Jan 2005)
+
+  26 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/opengl-update-2.1_pre3, +files/opengl-update-2.1_pre4,
+  -opengl-update-2.1_pre3.ebuild, +opengl-update-2.1_pre4.ebuild:
+  Fix bug where symlinks aren't made in lib32 if lib32 is a symlink to the
+  emul dir.
 
 *opengl-update-2.1_pre3 (25 Jan 2005)
 

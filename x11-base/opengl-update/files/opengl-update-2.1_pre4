@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre3,v 1.1 2005/01/26 05:59:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre4,v 1.1 2005/01/27 01:49:27 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -172,7 +172,8 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 
 	LIBDIRS="lib lib32 lib64"
 	for LIBDIR in ${LIBDIRS}; do
-		[ -d "/usr/${LIBDIR}" -a ! -h "/usr/${LIBDIR}" ] || continue
+		[ "${LIBDIR}" = "lib32" ] || [ -d "/usr/${LIBDIR}" -a ! -h "/usr/${LIBDIR}" ] || continue
+
 		# System wide tls stuff
 		[ -h "/usr/${LIBDIR}/tls" ] && rm -f /usr/${LIBDIR}/tls
 		[ -d "/usr/${LIBDIR}/tls" ] || mkdir -p /usr/${LIBDIR}/tls

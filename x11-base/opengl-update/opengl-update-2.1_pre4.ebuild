@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre3.ebuild,v 1.1 2005/01/26 05:59:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre4.ebuild,v 1.1 2005/01/27 01:49:27 eradicator Exp $
 
 inherit multilib toolchain-funcs
 
