@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.6 2003/04/04 08:40:49 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.7 2003/05/18 01:43:18 yakina Exp $
 
 *nkf-2.0.2 (04 Apr 2003)
+
+  18 May 2003; YAMAKURA Makoto <yakina@gentoo.org> nkf-2.0.2.ebuild:
+  marking to stable x86
 
   04 Apr 2003; YAMAKURA Makoto <yakina@gentoo.org> nkf-2.0.2.ebuild
   digest-nkf-2.0.2 : version bump
