@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.4 2004/04/10 16:12:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.5 2004/04/25 14:52:12 usata Exp $
+
+  25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-progressbar-0.5.ebuild,
+  ruby-progressbar-0.8.ebuild:
+  Added to ~alpha. Don't assign default to S. Removed old ebuild.
 
   11 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-progressbar-0.5.ebuild,
   ruby-progressbar-0.8.ebuild:
