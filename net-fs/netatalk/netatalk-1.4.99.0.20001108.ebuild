@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.4.99.0.20001108.ebuild,v 1.4 2001/05/30 18:24:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.4.99.0.20001108.ebuild,v 1.5 2001/06/15 13:08:50 achim Exp $
 
 P=netatalk-1.4.99-0.20001108
 A=${P}.tar.gz
@@ -34,7 +34,7 @@ src_compile() {
         myconf="$myconf --with-tcp-wrappers"
   fi
   try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
-  	--with-shadow $myconf
+  	$myconf
 
   try make
 
@@ -44,8 +44,8 @@ src_install() {
 
   try make DESTDIR=${D} install
   rm ${D}/etc/rc.d/init.d/*
-  insinto /etc/rc.d/init.d
-  doins ${FILESDIR}/atalk
+  exeinto /etc/rc.d/init.d
+  doexe ${FILESDIR}/atalk
   dodoc BUGS CHANGES README* COPYRIGHT VERSION 
 
 }

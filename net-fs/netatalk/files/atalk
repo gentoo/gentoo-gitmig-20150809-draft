@@ -11,6 +11,7 @@
 #
 
   . /etc/rc.d/config/functions
+  . /etc/atalk/netatalk.conf
 
 SERVICE="Appletalk"
 opts="start stop restart"
@@ -29,7 +30,7 @@ start () {
 	start-stop-daemon --start --quiet --exec /usr/sbin/papd 1>&2
 	echo ' papd'
 
-	start-stop-daemon --start --quiet --exec /usr/sbin/afpd 1>&2
+	start-stop-daemon --start --quiet --exec /usr/sbin/afpd -- $AFPD_UMALIST 1>&2
 	echo ' afpd'
 
 	eend $? "Error starting $SERVICE daemons"
