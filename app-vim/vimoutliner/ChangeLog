@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vimoutliner
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.1 2004/11/28 13:17:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.2 2004/12/29 00:51:23 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  vimoutliner-0.3.3.ebuild:
+  x86, sparc, mips stable
 
 *vimoutliner-0.3.3 (28 Nov 2004)
 
