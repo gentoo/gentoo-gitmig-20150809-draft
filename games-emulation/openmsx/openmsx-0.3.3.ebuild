@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.3.3.ebuild,v 1.1 2003/11/04 09:26:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.3.3.ebuild,v 1.2 2003/11/04 22:46:55 mr_bones_ Exp $
 
-inherit games
+inherit flag-o-matic games
 
 DESCRIPTION="MSX emulator that aims for perfection"
 HOMEPAGE="http://openmsx.sourceforge.net/"
@@ -12,6 +12,9 @@ KEYWORDS="x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
+
+# fix bug 32745
+replace-flags '-Os' '-O2'
 
 DEPEND="dev-libs/libxml2
 	media-libs/libpng

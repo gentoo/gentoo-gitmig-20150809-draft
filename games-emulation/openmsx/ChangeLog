@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.1 2003/11/04 09:26:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.2 2003/11/04 22:46:55 mr_bones_ Exp $
+
+  04 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> openmsx-0.3.3.ebuild:
+  replace -Os with -O2 in CFLAGS to fix bug 32745
 
 *openmsx-0.3.3 (04 Nov 2003)
 
