@@ -22,6 +22,10 @@
 ##
 
 # <mkeadle@gentoo.org> (03 Oct 2002)
+# masking pending testing/unfreeze/salmon
+x11-themes/commonbox-styles-extra
+
+# <mkeadle@gentoo.org> (03 Oct 2002)
 # masking for testing for replacement of commonc++
 dev-libs/commoncpp2
 
