@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140.ebuild,v 1.2 2004/04/10 19:39:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140.ebuild,v 1.3 2004/04/15 03:04:28 randy Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.webmin.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 s390"
 
 DEPEND=""
 RDEPEND="dev-lang/perl
