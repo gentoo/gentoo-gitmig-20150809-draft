@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.22.ebuild,v 1.1 2003/10/29 22:43:15 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.22.ebuild,v 1.2 2003/11/04 03:39:40 frogger Exp $
 
 IUSE="build selinux"
 
@@ -45,21 +45,6 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
-}
-
-src_install() {
-	if [ "`use selinux`" ]; then
-		insinto /usr/flask
-		doins ${S}/security/selinux/flask/access_vectors
-		doins ${S}/security/selinux/flask/security_classes
-		doins ${S}/security/selinux/flask/initial_sids
-		insinto /usr/include/linux/flask
-		doins ${S}/security/selinux/include/linux/flask/*.h
-		insinto /usr/include/asm/flask
-		doins ${S}/security/selinux/include/asm/flask/uninstd.h
-	fi
-
-	kernel_src_install
 }
 
 pkg_postinst() {
