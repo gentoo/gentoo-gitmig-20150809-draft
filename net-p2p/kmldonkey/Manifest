@@ -1,5 +1,5 @@
 MD5 ba44fa35b4cd29c95be86a19eb65c327 files/digest-kmldonkey-0.3 65
 MD5 41b52d0752217540ff7a76b26cf53442 files/digest-kmldonkey-0.8 65
 MD5 dfceb2610c0c8838f8884402b7090118 ChangeLog 624
-MD5 38a81b8d9c8d051bb66fa76c92ecbb8a kmldonkey-0.3.ebuild 539
-MD5 e69a201346802e50df3b267b71b0dded kmldonkey-0.8.ebuild 783
+MD5 cbf406f8d348036eb70e30082e64ce16 kmldonkey-0.8.ebuild 778
+MD5 27a5c308f28e9e92bda55e2574138af3 kmldonkey-0.3.ebuild 534
