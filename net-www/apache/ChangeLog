@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.315 2005/01/22 05:25:15 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.316 2005/02/01 16:56:36 trapni Exp $
+
+  01 Feb 2005; Christian Parpart <trapni@gentoo.org> :
+  dropping php useflag and DEPEND
 
   22 Jan 2005; Christian Parpart <trapni@gentoo.org> :
   apache now DEPENDs on new net-www/gentoo-webroot-default
