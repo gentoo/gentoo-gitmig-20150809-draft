@@ -25,8 +25,10 @@ move x11-misc/gkrellscore x11-plugins/gkrellscore
 move x11-misc/gkrellshoot x11-plugins/gkrellshoot
 move x11-misc/gkrellsun x11-plugins/gkrellsun
 move x11-misc/gkrellweather x11-plugins/gkrellweather
-move x11-misc/gkleds x11-plugins/gkleds
-move x11-misc/gklmsensors x11-plugins/gklmsensors
+move x11-misc/gkleds x11-plugins/gkrellm-leds
+move x11-plugins/gkleds x11-plugins/gkrellm-leds
+move x11-misc/gklmsensors x11-plugins/gkrellm-sensors
+move x11-plugins/gklmsensors x11-plugins/gkrellm-sensors
 move x11-misc/glogwatch x11-plugins/glogwatch
 move x11-misc/wmCalClock x11-plugins/wmCalClock
 move x11-misc/wmMatrix x11-plugins/wmMatrix
