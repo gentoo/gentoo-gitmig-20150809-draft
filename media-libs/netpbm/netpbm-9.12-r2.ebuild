@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r2.ebuild,v 1.7 2002/07/23 00:12:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r2.ebuild,v 1.8 2002/08/06 21:23:47 blizzy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -16,21 +16,22 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
-    cp ${FILESDIR}/${PV}/Makefile.config .
+	unpack ${A}
+	cd ${S}
+	sed <${FILESDIR}/${PV}/Makefile.config >Makefile.config \
+		-e "s|-O3|${CFLAGS}|"
 }
 
 src_compile() {
-    make || die
+	make || die
 }
 
 src_install () {
-    make INSTALL_PREFIX="${D}/usr/" install || die
-    insinto /usr/include/pbm
-    doins pnm/{pam,pnm}.h ppm/{ppm,pgm,pbm}.h
-    doins pbmplus.h shopt/shopt.h
-    dodoc COPYRIGHT.PATENT GPL_LICENSE.txt HISTORY \
+	make INSTALL_PREFIX="${D}/usr/" install || die
+	insinto /usr/include/pbm
+	doins pnm/{pam,pnm}.h ppm/{ppm,pgm,pbm}.h
+	doins pbmplus.h shopt/shopt.h
+	dodoc COPYRIGHT.PATENT GPL_LICENSE.txt HISTORY \
 		Netpbm.programming README README.CONFOCAL README.DJGPP \
 		README.JPEG README.VMS netpbm.lsm
 }
