@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.53 2003/10/19 11:50:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.54 2003/10/24 05:09:32 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -23,7 +23,7 @@ ARCH_LIB=""
 POD_DIR=""
 
 # handling of DESTDIR changed in makemaker 6.11
-MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION gt "6.11" )'`
+MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
 
 perl-module_src_prep() {
 
