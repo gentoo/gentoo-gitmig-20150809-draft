@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xsu
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/ChangeLog,v 1.5 2003/02/12 02:55:21 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/ChangeLog,v 1.6 2004/04/14 07:27:00 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xsu-0.2.3.ebuild:
+  Removed S=.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.9 2004/03/30 23:07:38 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.10 2004/04/14 07:27:00 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> apachetop-0.9.ebuild:
+  Removed S=.
 
   30 Mar 2004; Chuck Short <zul@gentoo.org> :
   Version bump, closes #41429.

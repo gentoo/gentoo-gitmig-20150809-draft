@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.7 2004/04/09 16:36:19 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.8 2004/04/14 07:27:00 aliz Exp $
 
-S="${WORKDIR}/${P}"
+inherit eutils
+
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
 SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz"
