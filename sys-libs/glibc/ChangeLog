@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.13 2002/09/08 16:33:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.14 2002/09/22 08:01:31 azarah Exp $
+
+  22 Sep 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r6.ebuild :
+
+  Fix pic support, thanks to Christopher Horler <chris@horler.demon.co.uk>.
+  This closes bug #8178.
 
   08 Sep 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r6.ebuild :
 

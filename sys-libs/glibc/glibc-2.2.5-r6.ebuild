@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r6.ebuild,v 1.5 2002/09/14 15:51:26 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r6.ebuild,v 1.6 2002/09/22 08:01:31 azarah Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
@@ -167,6 +167,8 @@ src_install() {
 	
 	if [ "`use pic`" ] 
 	then
+		find ${S}/buildhere -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
+		find ${S}/buildhere -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
 		find ${S}/buildhere -name "*_pic.a" -exec cp {} ${D}/lib \;
 		find ${S}/buildhere -name "*.map" -exec cp {} ${D}/lib \;
 		for i in ${D}/lib/*.map
