@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.16 2004/08/20 22:51:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.17 2004/09/03 00:03:46 ciaranm Exp $
+
+  03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> align-28.ebuild:
+  Help text, bug #62559
 
 *align-28 (20 Aug 2004)
 

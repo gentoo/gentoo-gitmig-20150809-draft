@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-4.ebuild,v 1.2 2004/09/02 13:37:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-4.ebuild,v 1.3 2004/09/03 00:06:57 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -21,3 +21,8 @@ src_unpack() {
 	rm plugin/cecutil.vim
 }
 
+VIM_PLUGIN_HELPTEXT=\
+"This plugin will make vim automatically align assignment and similar
+statements when editing bib, c, c++, tex or vim code. To disable this
+plugin, use :let b:autoalign=0 , and to turn it back on again use
+:let b:autoalign=1 ."

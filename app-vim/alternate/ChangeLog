@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/alternate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.14 2004/08/25 16:16:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.15 2004/09/03 00:05:22 ciaranm Exp $
+
+  03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> alternate-2.8.ebuild:
+  Help text, bug #62559
 
   25 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> alternate-2.4.ebuild,
   alternate-2.6a.ebuild, alternate-2.7.ebuild, alternate-2.8.ebuild:
