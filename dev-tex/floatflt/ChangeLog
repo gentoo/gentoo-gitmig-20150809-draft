@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/floatflt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/ChangeLog,v 1.8 2004/09/30 00:28:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/ChangeLog,v 1.9 2004/10/16 16:06:05 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> floatflt-1.31a.ebuild:
+  Blocks >=tetex-2.96.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> floatflt-1.31a.ebuild:
   Added IUSE=.
