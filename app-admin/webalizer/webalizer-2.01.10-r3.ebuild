@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r3.ebuild,v 1.2 2003/07/14 16:58:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r3.ebuild,v 1.3 2003/07/30 15:17:53 pauldv Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -20,13 +20,14 @@ DEPEND="=sys-libs/db-1*
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	# fix --enable-dns; our db1 headers are in /usr/include/db1
-	mv dns_resolv.c dns_resolv.c.orig
-	sed -e 's%^\(#include \)\(<db.h>\)\(.*\)%\1<db1/db.h>\3%' \
-		dns_resolv.c.orig > dns_resolv.c
+#	mv dns_resolv.c dns_resolv.c.orig
+#	sed -e 's%^\(#include \)\(<db.h>\)\(.*\)%\1<db1/db.h>\3%' \
+#		dns_resolv.c.orig > dns_resolv.c
+	sed -i -e "s,db_185.h,db.h," configure
 }
 
 src_compile() {
-	econf --enable-dns || die
+	econf --enable-dns --with-db=/usr/include/db1/ || die
 	make || die
 }
 
