@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.4 2002/03/17 22:52:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.5 2002/03/21 06:16:40 azarah Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -18,16 +18,6 @@ DEPEND=">=sys-libs/cracklib-2.7-r3
 	berkdb? ( ~sys-libs/db-1.85 )"
 
 src_unpack() {
-
-	echo
-	echo "******************************************"
-	echo 
-	echo " THIS WILL BREAK YOUR SYSTEM!!!!!"
-	echo
-	echo "******************************************"
-	echo
-	die
-
 	unpack ${A}
 
 	cd ${WORKDIR}
