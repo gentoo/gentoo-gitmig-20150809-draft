@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3-r2.ebuild,v 1.14 2004/06/24 22:05:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3-r2.ebuild,v 1.15 2004/06/28 21:57:56 agriffis Exp $
 
 IUSE="nls alsa"
 
@@ -26,7 +26,7 @@ src_compile() {
 		myconf="--disable-nls"
 	fi
 
-	if [ "`use alsa`"  ] ; then
+	if use alsa ; then
 		myconf="${myconf} --enable-alsa=yes"
 	else
 		myconf="${myconf} --enable-alsa=no"
