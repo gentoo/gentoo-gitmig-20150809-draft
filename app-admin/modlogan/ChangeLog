@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.18 2004/10/17 17:14:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.19 2004/11/17 21:13:13 liquidx Exp $
+
+  17 Nov 2004; Alastair Tse <liquidx@gentoo.org> modlogan-0.8.13.ebuild:
+  replacing einstall with make DESTDIR (#71544)
 
 *modlogan-0.8.13 (17 Oct 2004)
 
