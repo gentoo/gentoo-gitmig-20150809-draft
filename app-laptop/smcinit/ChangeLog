@@ -1,0 +1,8 @@
+# ChangeLog for app-laptop/smcinit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/ChangeLog,v 1.1 2004/11/24 16:03:03 s4t4n Exp $
+
+*smcinit-0.4 (24 Nov 2004)
+
+  24 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> smcinit-0.4.ebuild:
+  Initial import. Closes #39746.

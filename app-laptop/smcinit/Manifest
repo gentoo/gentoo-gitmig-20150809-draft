@@ -1,0 +1,6 @@
+MD5 b7ed467109999e4ce974e17276cc2469 smcinit-0.4.ebuild 1147
+MD5 8163d568008df68d17bd36497514db70 ChangeLog 341
+MD5 43d8098cf6b1c18339b5f3934dcdf9c4 metadata.xml 253
+MD5 3254e176790847fc2528b4713e625a82 files/smcinit.conf 192
+MD5 78b68ef7f4de4826ce614b19fa2228e5 files/smcinit.initscript 693
+MD5 1072e90faa308622db9c695519cf5e9e files/digest-smcinit-0.4 64
