@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/vanilla-prepatch-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/ChangeLog,v 1.8 2003/09/02 09:08:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/ChangeLog,v 1.9 2003/09/04 10:25:54 aliz Exp $
+
+*vanilla-prepatch-sources-2.4.23_pre3 (04 Sep 2003)
+
+  04 Sep 2003; Daniel Ahlberg <aliz@gentoo.org>
+  vanilla-prepatch-sources-2.4.23_pre3.ebuild:
+  New version
 
 *vanilla-prepatch-sources-2.4.22_pre2 (02 Sep 2003)
 
