@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.32 2003/04/28 05:51:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.33 2003/05/19 13:05:22 danarmak Exp $
+
+*kdegames-3.1.2 (19 May 2003)
+
+  19 May 2003; Dan Armak <danarmak@gentoo.org> kdegames-3.1.2.ebuild:
+  New version of KDE.
 
   28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdegames-3.1.1.ebuild:
   Set ppc in KEYWORDS

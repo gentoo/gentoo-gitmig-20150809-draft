@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.30 2003/05/16 21:26:09 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.31 2003/05/19 13:05:22 danarmak Exp $
+
+*kde-3.1.2 (19 May 2003)
+
+  19 May 2003; Dan Armak <danarmak@gentoo.org> kde-3.1.2.ebuild:
+  New version of KDE.
 
 *kde-3.1.1a (16 Mai 2003)
 

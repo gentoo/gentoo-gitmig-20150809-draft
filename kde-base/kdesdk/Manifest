@@ -5,7 +5,7 @@ MD5 3c9acdb9e084b0985edc7cfdc8b72a8a kdesdk-3.1.2.ebuild 312
 MD5 37ff80f8f4c4c79a16d60a8f4b5f9370 kdesdk-2.2.2-r1.ebuild 525
 MD5 f162342dd6a24d1fe9407b115417c014 kdesdk-3.1.1.ebuild 310
 MD5 ce3e412d065b62401130070e5b498e62 kdesdk-3.0.5b.ebuild 329
-MD5 3614790dae236412a041bf96ce58e692 ChangeLog 3037
+MD5 99a14776ec8ab8136e50d9184d5886aa ChangeLog 3157
 MD5 e6c4829fcdb280108dcff69be0553960 files/digest-kdesdk-2.2.2-r1 131
 MD5 b38a426f5d7fc0a9679f467892059329 files/kdesdk-2.2.2-gentoo.diff 1062
 MD5 8aeaed4631590b1c686d4ddff85ee95d files/digest-kdesdk-3.0.4 66

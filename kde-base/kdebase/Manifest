@@ -8,7 +8,7 @@ MD5 378cf74d42ba6d30ccd0b61c420b1b96 kdebase-3.1.1.ebuild 3315
 MD5 f5e53e01db11fbdf081b5eec3e383d59 kdebase-2.2.2-r5.ebuild 2943
 MD5 4616c3a5dac71294a65bd62b42550cc6 kdebase-3.1.ebuild 3320
 MD5 abbe2ac5e9c940d44fa2a15503f10e66 kdebase-3.0.5a.ebuild 4189
-MD5 77ae2e4966f72db2d5bd2b1929b1c9e3 ChangeLog 13951
+MD5 c12cf5a029942647dd4881c0a81a5b09 ChangeLog 14076
 MD5 34e832659ad20dad4378fe1dbd192f17 kdebase-3.0.5a-r2.ebuild 8502
 MD5 c9aae02d663167cd32e6e0be07b66e84 kdebase-2.2.2-r4.ebuild 2811
 MD5 d06aabcc5fd1c39bc732b7571318d5d2 files/digest-kdebase-3.0.5a 69

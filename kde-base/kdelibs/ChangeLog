@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.77 2003/05/16 21:16:08 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.78 2003/05/19 13:05:22 danarmak Exp $
+
+*kdelibs-3.1.2 (19 May 2003)
+
+  19 May 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.1.2.ebuild:
+  New version of KDE.
 
   16 Mai 2003; Lars Weiler <pylon@gentoo.org> kdelibs-3.1.1a.ebuild:
   Set ppc in KEYWORDS
