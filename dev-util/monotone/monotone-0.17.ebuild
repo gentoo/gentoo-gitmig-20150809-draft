@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.17.ebuild,v 1.1 2005/03/24 08:18:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.17.ebuild,v 1.2 2005/03/24 18:29:25 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,8 +37,7 @@ src_compile() {
 }
 
 src_test() {
-	make check
-	einfo "test may fail on test 62"
+	make check || die "self test failed"
 }
 
 src_install() {
