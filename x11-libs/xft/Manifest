@@ -1,4 +1,4 @@
-MD5 7af006230150ff03a6380e77d7fa85ac ChangeLog 3022
-MD5 662d3903867e1f352b4e50eb2eb9d02b xft-2.0.1-r2.ebuild 1579
 MD5 9d8a6b53e0aa951959a3026fb4d8deef files/digest-xft-2.0.1-r2 65
 MD5 bdbcdd7f9f71d975bec7ca0c235d8677 files/xft-2.0.1-cvs-update-20021221.patch 6560
+MD5 7af006230150ff03a6380e77d7fa85ac ChangeLog 3022
+MD5 2f85794b2a3b2a2910bd409b05475723 xft-2.0.1-r2.ebuild 1564
