@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.4.ebuild,v 1.5 2004/11/23 04:48:21 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.4.ebuild,v 1.6 2004/11/23 04:55:01 pythonhead Exp $
 
 inherit distutils eutils
 

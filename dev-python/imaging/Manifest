@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b006a04d777dda00469e295271610a86 ChangeLog 4196
+MD5 fb82a95d4025d74af5935c7f67f72dd4 ChangeLog 4297
 MD5 69c5686fa1e97347d96f58fd92a8dc24 imaging-1.1.2-r2.ebuild 2680
 MD5 4cd47ec1f934248633ed031a6533298a imaging-1.1.3-r1.ebuild 1285
 MD5 88ed9ffe0502885e7baf2036ed1baa51 imaging-1.1.3-r2.ebuild 1339
 MD5 064a48a5b8f5253081930cc5e04810fc imaging-1.1.3.ebuild 2677
-MD5 9338dd8969f4a9970d5288db15b56593 imaging-1.1.4.ebuild 1425
+MD5 41fcfea870feb663eb6d5d31117d9d2e imaging-1.1.4.ebuild 1425
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 725fbbea484920fb04a652e6b746f34c imaging-1.1.4-r1.ebuild 1429
 MD5 7e1eafa229aad0303d6d04c88c1f89e6 files/digest-imaging-1.1.2-r2 65
@@ -21,7 +21,7 @@ MD5 171777970922938dc6a815dd2b6a85de files/digest-imaging-1.1.4-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBosEmz2gxt1z4IGYRAiTOAJ4nwHe/O1i4Eu0o3L9sKv9G/eUTZgCeIbie
-rIt2kEU1LhU4JDPDXJWMyWQ=
-=5nMx
+iD4DBQFBosK2z2gxt1z4IGYRAuwKAJjoEctaUDEgNMUgrxJiBorsdy/XAKCEhDJy
+hM7qFhvurepy1mVcHznidQ==
+=SbpI
 -----END PGP SIGNATURE-----
