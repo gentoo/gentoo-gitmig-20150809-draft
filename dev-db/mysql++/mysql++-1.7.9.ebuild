@@ -11,7 +11,7 @@ SRC_URI="http://mysql.he.net/Downloads/mysql++/mysql++-1.7.9.tar.gz
 	http://mysql.adgrafix.com/Downloads/mysql++/mysql++-1.7.9.tar.gz
 	http://mysql.fastmirror.com/Downloads/mysql++/mysql++-1.7.9.tar.gz
 	http://mysql.oms-net.nl/Downloads/mysql++/mysql++-1.7.9.tar.gz
-	mirror://gentoo/mysql++-gcc-3.0.patch"
+	mirror://gentoo/mysql++-gcc-3.0.patch.gz"
 
 # This is the download page but includes links to other places
 HOMEPAGE="http://www.mysql.org/downloads/api-mysql++.html"
@@ -22,11 +22,14 @@ KEYWORDS="~x86"
 LICENSE="LGPL-2"
 
 # Depends on MySQL being installed, duh! :-)
-DEPEND="mysql ( >=mysql-3.23.49 )"
+DEPEND="<dev-db/mysql-4.0.0
+		>=dev-db/mysql-3.23.49"
 
 src_compile() {
+ if [[ "${COMPILER}" == "gcc3" ]];then
 	patch -p1 < ${DISTDIR}/mysql++-gcc-3.0.patch || die
 	patch -p1 < ${FILESDIR}/mysql++-gcc-3.2.patch || die
+ fi
 	patch -p1 < ${FILESDIR}/mysql++-1.7.9_example.patch || die
 
 	# not including the directives to where MySQL is because it seems to find it
