@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.2.ebuild,v 1.1 2002/09/11 16:51:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.2.ebuild,v 1.2 2002/09/17 22:47:39 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -37,8 +37,8 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-ssl=/usr" \
 		|| myconf="${myconf} --without-ssl"
 
-	use socks5 && myconf="${myconf} --with-socks5" \
-		|| myconf="${myconf} --without-socks5"
+	use socks5 && myconf="${myconf} --with-socksdante=/usr" \
+		|| myconf="${myconf} --without-socksdante"
 
 	export CFLAGS="-fno-exceptions -fno-rtti ${CFLAGS}"
 	export CXXFLAGS="-fno-exceptions -fno-rtti ${CXXFLAGS}"

@@ -1,8 +1,12 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.12 2002/09/11 16:51:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.13 2002/09/17 22:47:39 raker Exp $
 
 *lftp-2.6.2 (11 Sep 2002)
+
+  17 Sep 2002; Nick Hadaway <raker@gentoo.org> lftp-2.6.2.ebuild :
+  Updated socks5 related configure options.  Thanks to Tom Prado on bug
+  #8013.
 
   11 Sep 2002; Nick Hadaway <raker@gentoo.org> lftp-2.6.2.ebuild,
   files/digest-lftp-2.6.2 :
