@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.22 2005/02/14 03:28:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.23 2005/02/14 03:38:06 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -539,6 +539,9 @@ alt_usrlibdir() {
 }
 
 setup_flags() {
+	# We need to do this or the build system will want to use ${CHOST_OPT}-gcc
+	export CC=$(tc-getCC)
+
 	# Over-zealous CFLAGS can often cause problems.  What may work for one
 	# person may not work for another.  To avoid a large influx of bugs
 	# relating to failed builds, we strip most CFLAGS out to ensure as few
@@ -773,7 +776,6 @@ glibc_do_configure() {
 		die "invalid pthread option"
 	fi
 
-	# Who knows if this works :)
 	myconf="${myconf} --without-cvs
 			--enable-bind-now
 			--build=${CBUILD_OPT:-${CBUILD}}
