@@ -1,5 +1,5 @@
-MD5 8f9f812b4c80db180d2e558d2eb1d0c4 ChangeLog 420
-MD5 bf97a1a81979a4a7fc4547d5385848c7 cedet-1.0_beta3.ebuild 1415
+MD5 33569bfe3ac5ae1db60dadf89a923fc5 ChangeLog 504
+MD5 d993f57b71f0f3d93a95cc68310f35d8 cedet-1.0_beta3.ebuild 1416
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 a070e39802eeece0cd8c0bf82727f2f2 files/60cedet-gentoo.el 263
 MD5 9dbe11bdb8fec03e4dd3cf9cbad937ca files/digest-cedet-1.0_beta3 68
