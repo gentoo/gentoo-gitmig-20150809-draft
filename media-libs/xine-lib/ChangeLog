@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.57 2003/07/14 03:28:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.58 2003/07/14 21:51:49 spider Exp $
+
+*xine-lib-1_beta12-r1 (14 Jul 2003)
+
+  14 Jul 2003; <spider@gentoo.org> xine-lib-1_beta12-r1.ebuild:
+  USE="gnome" support with a sed hack to disable gnome-vfs, no configure flags
+  for it unfortunately
 
 *xine-lib-1_beta12 (12 May 2003)
 
