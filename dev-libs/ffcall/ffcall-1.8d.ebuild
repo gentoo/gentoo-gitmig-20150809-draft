@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.18 2004/07/14 14:21:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.19 2004/11/09 22:19:14 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
 # "Ffcall is under GNU GPL. As a special exception, if used in GNUstep
 # or in derivate works of GNUstep, the included parts of ffcall are
 # under GNU LGPL." -ffcall author
-LICENSE="GPL-2 | LGPL-2"
+LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="x86 sparc ~hppa alpha ~ppc"
 IUSE=""

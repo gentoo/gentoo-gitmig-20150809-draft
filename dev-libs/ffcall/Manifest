@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 60fd9127016e9bebaa491be0c81212a3 ChangeLog 1365
-MD5 35e61401bf17ba8c204e749f8f2b5935 ffcall-1.8d.ebuild 1803
-MD5 bdbf75d85d5970065376fc57486400c3 ffcall-1.9.ebuild 1725
+MD5 3c2960b03433e132b581615e78a1c9d7 ffcall-1.8d.ebuild 1809
+MD5 46f829339d9d553bf79b58a6969be400 ffcall-1.9.ebuild 1731
 MD5 cd13882be2b4029127ad48a9037c98bc files/digest-ffcall-1.8d 63
-MD5 861781cf897cdab4ed21c9926801e25d files/digest-ffcall-1.9 62
 MD5 551cda681686392a1416ec70fecc2b94 files/ffcall_hppa_1.8-4.2.diff.gz 2416
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW1AqI1lqEGTUzyQRAi/sAKCiaAKYWssnIfJIQN3rjtazTBptRgCfUy0z
-zcgmh1x2TgenA8E44yf7hoI=
-=WeeX
------END PGP SIGNATURE-----
+MD5 861781cf897cdab4ed21c9926801e25d files/digest-ffcall-1.9 62
