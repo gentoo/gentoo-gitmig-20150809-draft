@@ -1,3 +1,5 @@
-MD5 70679bc46d62587c124ccd57ef5ed407 ChangeLog 775
-MD5 96d5a13e5ca01949a4a15de23bae161b treeline-0.7.3-r1.ebuild 1160
+MD5 b5a898a2f1cfc63d9dc9687055951a6c treeline-0.8.0.ebuild 1153
+MD5 fe01f37d3c6ac47aa918a30fe90f6f39 treeline-0.7.3-r1.ebuild 1160
+MD5 14a4fc916bd83cddaa8f25825600a1cd ChangeLog 959
+MD5 4a6812ccf71d551dd28b6f347581a4df files/digest-treeline-0.8.0 66
 MD5 c2791a8dd83630045f2360dc17f58c10 files/digest-treeline-0.7.3-r1 66
