@@ -6,9 +6,9 @@
 inherit kde-base
 
 DESCRIPTION="KDirStat - nice KDE replacement to du command"
-SRC_URI="http://kdirstat.sourceforge.net/download/kdirstat-1.8.4-beta.tgz"
+SRC_URI="http://kdirstat.sourceforge.net/download/${P}.tgz"
 HOMEPAGE="http://kdirstat.sourceforge.net/"
-S=${WORKDIR}/${PN}-1.8.4-beta
+S=${WORKDIR}/${P}
 
 need-kde 2.2
 
