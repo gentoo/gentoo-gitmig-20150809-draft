@@ -5,15 +5,6 @@ retrieving revision 1.160.10.3
 diff -u -r1.160.10.2 -r1.160.10.3
 --- python/python/dist/src/Lib/lib-tk/Tkinter.py	2002/08/23 15:27:52	1.160.10.2
 +++ python/python/dist/src/Lib/lib-tk/Tkinter.py	2003/03/29 09:48:12	1.160.10.3
-@@ -27,7 +27,7 @@
- tk.mainloop()
- """
- 
--__version__ = "$Revision: 1.1 $"
-+__version__ = "$Revision: 1.1 $"
- 
- import sys
- if sys.platform == "win32":
 @@ -1024,38 +1024,54 @@
          """Internal function."""
          if len(args) != len(self._subst_format): return args
