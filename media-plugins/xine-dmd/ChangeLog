@@ -1,0 +1,15 @@
+# ChangeLog for media-video/xine-dmd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-dmd/ChangeLog,v 1.1 2002/11/20 16:04:51 azarah Exp $
+
+*xine-dmd-1.0.6 (15 Jul 2002)
+
+  15 Jul 2002; Arcady Genkin <agenkin@thpoon.com> xine-dmd-1.0.6.ebuild :
+
+  Updated to 1.0.6.
+
+*xine-dmd-1.0.4 (26 May 2002)
+
+  26 May 2002; Arcady Genkin <agenkin@thpoon.com> xine-dmd-1.0.4.ebuild :
+
+  Initial version.

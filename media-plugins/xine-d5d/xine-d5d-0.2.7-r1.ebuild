@@ -1,0 +1,44 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-d5d/xine-d5d-0.2.7-r1.ebuild,v 1.1 2002/11/20 16:04:51 azarah Exp $
+
+S=${WORKDIR}/${P}
+DESCRIPTION="Captain CSS menu plugin for the xine media player"
+HOMEPAGE="http://members.fortunecity.de/captaincss/"
+SRC_URI="http://members.fortunecity.de/captaincss/d5d${PV//./}.txt"
+
+DEPEND=">=media-libs/xine-lib-0.9.12"
+
+SLOT="0"
+LICENSE="LGPL-2.1"
+KEYWORDS="x86 ppc"
+
+src_unpack() {
+
+	cp ${DISTDIR}/${A} . && chmod +x ${A} && ./${A} && \
+	tar zxf ${WORKDIR}/${P}.tgz || \
+	die "Unpacking failed"
+
+	cd ${WORKDIR}
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die "Patching failed"
+
+}
+
+src_compile() {
+
+	econf
+
+	if use ppc || use sparc || use sparc64
+	then
+		einfo "Configuring for Big-Endian Architecture"
+		echo "#define WORDS_BIGENDIAN" >> config.h
+	fi
+	
+	emake || die
+}
+
+src_install () {
+
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog INSTALL README NEWS
+}
