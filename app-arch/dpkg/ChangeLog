@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.26 2005/02/24 17:21:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.27 2005/03/25 12:45:41 lanius Exp $
+
+  25 Mar 2005; Heinrich Wendel <lanius@gentoo.org> dpkg-1.10.26.ebuild:
+  keep empty dirs on upgrade
 
   24 Feb 2005; Heinrich Wendel <lanius@gentoo.org> dpkg-1.10.26.ebuild:
   stable on amd64/x86

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.26.ebuild,v 1.3 2005/03/09 00:41:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.26.ebuild,v 1.4 2005/03/25 12:45:41 lanius Exp $
 
 inherit eutils
 
@@ -34,4 +34,6 @@ src_install() {
 	rm -f ${D}/usr/bin/md5sum
 	mv ${D}/usr/etc ${D}/
 	dodoc ChangeLog INSTALL THANKS TODO
+	keepdir /usr/lib/db/methods/{mnt,floppy,disk}
+	keepdir /usr/lib/db/{alternatives,info,methods,parts,updates}
 }

@@ -1,11 +1,21 @@
-MD5 1a06317c3d3eb24f30b82766886eb629 ChangeLog 2954
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b25982159b017ed0f41cf1c799ed584c dpkg-1.10.23.ebuild 909
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 d5a28a5f630757e5553eeda7a6c5a6bc dpkg-1.10.20.ebuild 922
-MD5 4a19244489e2c0f48b6a15026ec4cfbc dpkg-1.10.26.ebuild 910
+MD5 999042d9ec0e0a24eff863559c61ae07 ChangeLog 3056
+MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
+MD5 92eabb074fd88771f3aa2065709972b8 dpkg-1.10.26.ebuild 1020
+MD5 feb5a11111cc715877cc527c979ef699 files/dpkg-1.10.26.patch 840
+MD5 e25e466552059c545baaa686f75f8c9d files/digest-dpkg-1.10.20 65
 MD5 6ce73296206ff0316cc07546b042f0bb files/digest-dpkg-1.10.23 65
+MD5 3a89ac1e794696a143c8c6665b00cc1d files/digest-dpkg-1.10.26 65
 MD5 10b6a5c819cf7e8e0170991382ec48fe files/dpkg-1.10.23.patch 2435
 MD5 ad43abcbe5b91df05112cee2fc95c8f4 files/dpkg-1.10.18.patch 2429
-MD5 e25e466552059c545baaa686f75f8c9d files/digest-dpkg-1.10.20 65
-MD5 3a89ac1e794696a143c8c6665b00cc1d files/digest-dpkg-1.10.26 65
-MD5 feb5a11111cc715877cc527c979ef699 files/dpkg-1.10.26.patch 840
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRAgJevY57Fted3ERAkAbAJ9lU5DaPQYN+oLy4WzQQzuHBNZOhgCg3Bo4
+ECMP0HE5VqzE2YnHf3ROpBQ=
+=Sf+h
+-----END PGP SIGNATURE-----
