@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14-r3.ebuild,v 1.1 2002/04/12 21:35:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14-r3.ebuild,v 1.2 2002/04/30 11:32:08 seemant Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -64,7 +64,7 @@ src_install() {
 	PREFIX=${D} \
 	install || die "install problem"
 
-	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt LICENSE.html
+	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt
 	dosym /usr/share/cups/docs /usr/share/doc/${PF}/html
 
 	fowners lp.root /usr/bin/lppasswd
