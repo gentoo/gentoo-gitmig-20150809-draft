@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.3.ebuild,v 1.6 2003/03/26 02:36:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.3.ebuild,v 1.7 2003/07/26 10:21:51 raker Exp $
 
 inherit base
 
@@ -13,7 +13,8 @@ KEYWORDS="x86 -ppc -sparc"
 DEPEND="=dev-util/gnustep-gui-${PV}*
     >=media-libs/tiff-3.5.7
     >=media-libs/jpeg-6b-r2
-	x11-base/xfree"
+	x11-base/xfree
+	>=x11-wm/windowmaker-0.80.1"
 S=${WORKDIR}/${P}
 PATCHES="${FILESDIR}/${P}.xft1.patch"
 
