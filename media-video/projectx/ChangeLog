@@ -1,6 +1,9 @@
 # ChangeLog for media-video/projectx
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.5 2004/10/16 18:18:13 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.6 2005/01/07 21:16:59 luckyduck Exp $
+
+  07 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> projectx-0.81.7.ebuild:
+  added app-arch/unzip to DEPEND. also see bug #69831.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> projectx-0.81.7.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
