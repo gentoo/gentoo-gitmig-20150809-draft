@@ -1,6 +1,9 @@
-MD5 41f72b769ae2e6281e9fd22e2a966af2 ChangeLog 1929
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e490fa439364ebac45b72455f9b811d3 ChangeLog 2053
 MD5 28ed49040b6ddc36def2c2a536394b37 metadata.xml 251
-MD5 b043c1c8d7f015e3201046999183c391 mpd-svn-20050328.ebuild 3634
+MD5 d11cec98d13ab49a23ef8a4c99f41558 mpd-svn-20050328.ebuild 3738
 MD5 a949f2738fb9b8c36a256ac9531fda4d mpd-svn-20050312.ebuild 3738
 MD5 02fed60e83a2a4fa97ffb270283f346b mpd-svn-20050131.ebuild 3196
 MD5 e7f3e335924e2b9efad414e4f269076d mpd-svn-20041207.ebuild 3111
@@ -12,3 +15,10 @@ MD5 9d06583bf2f3ca00fa9a5ae6c01cab9b files/digest-mpd-svn-20050312 69
 MD5 51916f6bb6ff487021c4c26f76a1d8e7 files/digest-mpd-svn-20050308 69
 MD5 e236710f9d5c01c3f97b53f1c2013a19 files/digest-mpd-svn-20050328 69
 MD5 a7cc5b5be644089b25d206fe9b71ebd1 files/digest-mpd-svn-20041207 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSCNzQlM6RnzZP+IRAmEHAJ9dD19jAcdY7C1PDLJjXkZMtYQJGACgm/dt
+xTjszl40w70S0Rm6Ry0/8nE=
+=uu/2
+-----END PGP SIGNATURE-----
