@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.5.ebuild,v 1.1 2004/07/13 05:22:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.5.ebuild,v 1.2 2004/07/30 02:44:31 vapier Exp $
 
-inherit libtool flag-o-matic eutils
+inherit libtool flag-o-matic eutils gnuconfig
 
 DESCRIPTION="Perl-compatible regular expression library"
 HOMEPAGE="http://www.pcre.org/"
@@ -22,12 +22,13 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/pcre-4.4-uclibc-tuple.patch
 	epatch ${FILESDIR}/pcre-4.2-link.patch
-}
-
-src_compile() {
 	# position-independent code must used for all shared objects.
 	append-flags -fPIC
 	elibtoolize
+	gnuconfig_update
+}
+
+src_compile() {
 	econf --enable-utf8 || die
 	make || die
 }
