@@ -5,7 +5,7 @@ MD5 d110a93a706899b833b47734415399a0 postfix-2.1.3.ebuild 7356
 MD5 371bbcb4078dc0d652c2bd4827a522d7 postfix-2.2.20041221.ebuild 9164
 MD5 1848be83c993ea8bd86525076793970b postfix-2.1.5-r1.ebuild 7450
 MD5 a37e17b30106fd73993b70a6ec3db9af postfix-2.0.19.ebuild 6715
-MD5 d7908252a82a6617fcaf6d51a7001dac ChangeLog 28573
+MD5 6b1fcf22e0aee32f8a401af18c931db5 ChangeLog 28673
 MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
 MD5 f4fb1c0bcd39fe4ead34ade333819389 files/postfix.rc6 592
 MD5 889559c8b5d02597e9e7eec89e328360 files/smtp.pass 141
@@ -20,7 +20,7 @@ MD5 502e444ec6b9d6fb9bbef3bb0f5e284a files/smtp.pam 254
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFByb8d5FrxP71izLARAnv8AJ9QQn9U/oftGpluCwnsJ+Oqqck4CQCgiyWa
-fDIQTL18MJAM/ZH5WeJcI4g=
-=kPBs
+iD8DBQFBymP15FrxP71izLARAmK2AJ96V1MPG2RIuUGugRPw/goecSdLhACfbRJ9
+r79YCMx9hVe73qhC/tLyf/I=
+=3g4M
 -----END PGP SIGNATURE-----
