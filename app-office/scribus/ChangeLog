@@ -1,6 +1,11 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.19 2003/10/12 00:27:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.20 2003/11/02 10:55:04 hanno Exp $
+
+*scribus-1.1.2 (02 Nov 2003)
+
+  02 Nov 2003; Hanno Boeck <hanno@gentoo.org> scribus-1.1.2.ebuild:
+  Version bump.
 
   11 Oct 2003; Jason Wever <weeve@gentoo.org> scribus-1.1.1.ebuild:
   Added ~sparc keywords, fixes bug #30932.
