@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.2.ebuild,v 1.1 2004/11/11 19:24:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.2.ebuild,v 1.2 2005/01/13 15:06:32 liquidx Exp $
 
 inherit kernel-mod eutils
 
@@ -27,7 +27,7 @@ src_install() {
 		doins quickcam.o
 	fi
 
-	dobin /usr/bin/qcset
+	dobin qcset
 	dodoc README* APPLICATIONS COPYING CREDITS TODO FAQ
 
 	insinto /usr/share/doc/${PF}
