@@ -1,0 +1,7 @@
+MD5 49f9f69f4991d38efc382087d2943037 ChangeLog 598
+MD5 e1cfb3b5387e94eb81eff7e5662f03d6 liblrdf-0.2.3.ebuild 609
+MD5 be2a996a91d5be7ada86f23b6c77f41f liblrdf-0.2.4.ebuild 607
+MD5 be2a996a91d5be7ada86f23b6c77f41f liblrdf-0.3.1.ebuild 607
+MD5 e7d96917bbef85fc825be6ae0924ead8 files/digest-liblrdf-0.2.3 65
+MD5 7ba20646be333f5366b6877612283da0 files/digest-liblrdf-0.3.1 65
+MD5 72eee7bd5780e80ce7a9420f7758604f files/digest-liblrdf-0.2.4 65
