@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crystalspace/crystalspace-20030413-r1.ebuild,v 1.2 2003/04/27 20:57:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crystalspace/crystalspace-20030413-r1.ebuild,v 1.3 2003/04/27 21:02:51 vapier Exp $
 
 inherit games
 
@@ -21,7 +21,7 @@ DEPEND=">=media-libs/libpng-1.2.1
 	freetype? ( >=media-libs/freetype-2.0 )
 	openal? ( media-libs/openal )
 	zlib? ( sys-libs/zlib )
-	oggvorbis? ( >=media-libs/libogg-1.0 )
+	oggvorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
 	x86? ( dev-lang/nasm )
 	dev-libs/ode
