@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.4 2003/09/20 05:50:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.5 2003/10/24 19:14:00 mkennedy Exp $
+
+  24 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  new upstream
 
   19 Sep 2003; Seemant Kulleen <seemant@gentoo.org> color-theme-5.2.13.ebuild,
   color-theme-6.5.0.ebuild:
