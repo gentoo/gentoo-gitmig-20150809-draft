@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608.ebuild,v 1.1 2004/06/22 03:00:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608.ebuild,v 1.2 2004/06/22 19:57:43 vapier Exp $
 
 inherit eutils
 
@@ -34,7 +34,19 @@ src_unpack() {
 	else
 		ewarn "Your linux-headers in /usr/include/linux are too old to"
 		ewarn "support the HFSC scheduler.  It has been disabled."
+		echo
 	fi
+	# Disable q_delay if need be
+	if [ -z "`grep tc_dly_qopt ${ROOT}/usr/include/linux/pkt_sched.h`" ] ; then
+		ewarn "Your linux-headers in /usr/include/linux are too old to"
+		ewarn "support the DELAY scheduler.  It has been disabled."
+		echo
+		sed -i '/q_delay/s:.*::' tc/Makefile
+	fi
+
+	# Add a few debian fixes
+	epatch ${FILESDIR}/${PV}-misc-deb-fixes.patch
+	epatch ${FILESDIR}/${PV}-misc-gentoo-fixes.patch
 
 	# Fix cflags and db code
 	sed -i \
