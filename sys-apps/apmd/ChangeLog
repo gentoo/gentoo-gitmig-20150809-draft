@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.20 2004/09/03 01:10:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.21 2004/09/16 16:15:47 tester Exp $
+
+  16 Sep 2004; Olivier Crete <tester@gentoo.org> apmd-3.2.1_p4.ebuild:
+  Stable on x86 per request in bug 59139
 
   03 Sep 2004; Lars Weiler <pylon@gentoo.org> apmd-3.2.1_p4.ebuild:
   Stable on ppc (with gcc-3.4); see bug #59139.

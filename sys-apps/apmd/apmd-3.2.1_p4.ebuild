@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.9 2004/09/03 01:10:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.10 2004/09/16 16:15:47 tester Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://debian/pool/main/a/apmd/${MY_P}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc amd64 ppc64"
+KEYWORDS="x86 ppc amd64 ppc64"
 IUSE="X nls"
 
 DEPEND="virtual/os-headers
