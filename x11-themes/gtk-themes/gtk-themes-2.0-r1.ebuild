@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-2.0-r1.ebuild,v 1.7 2003/09/06 07:28:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-2.0-r1.ebuild,v 1.8 2003/10/04 12:33:58 leonardop Exp $
 
 DESCRIPTION="Some nice themes for GTK+ 2"
 LICENSE="GPL-2"
@@ -29,13 +29,12 @@ DEPEND=">=x11-themes/gtk-engines-cleanice-1.1.5
 	>=x11-themes/gtk-engines-flat-2.0
 	>=x11-themes/gtk-engines-lighthouseblue-0.4.2
 	>=x11-themes/gtk-engines-metal-1.9.0
-	>=x11-themes/gtk-engines-mgicchikn-1.0.0
+	>=x11-themes/gtk-engines-magicchicken-1
 	=x11-themes/gtk-engines-mist-0.8-r2
 	>=x11-themes/gtk-engines-pixbuf-1.9.0
 	>=x11-themes/gtk-engines-redmond95-1.9.0
 	>=x11-themes/gtk-engines-thinice-2.0.1
-	>=x11-themes/gtk-engines-xfce-2.0.8
-	gnome? ( >=x11-themes/gtk-engines-crux-1.9.3 )"
+	>=x11-themes/gtk-engines-xfce-2.0.8"
 
 src_unpack() {
 	return 0
