@@ -12,6 +12,11 @@ check_config() {
 		eerror "Please set all options in /etc/conf.d/freenet"
 		return 1
 	fi
+	if [ ! -f /etc/freenet.conf ]; then
+		eerror "To configure freenet, please run:"
+		eerror "# ebuild /usr/portage/net-p2p/freenet/freenet-[version].ebuild"
+		return 1
+	fi
 	return 0
 }
 
