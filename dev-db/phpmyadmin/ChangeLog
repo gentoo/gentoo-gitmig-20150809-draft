@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.9 2002/12/14 23:35:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.10 2003/01/10 20:37:43 joker Exp $
 
 *phpmyadmin-2.3.3 (11 Dec 2002)
+
+  10 Jan 2003; Christian Birchinger <joker@gentoo.org> :
+  Added "sparc" keyword. It has been running productive on sparc for weeks.
 
   11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> phpmyadmin-2.3.3.ebuild :
   New version. Includes Quequero's tweaks to the ebuild. Fixes #11990
