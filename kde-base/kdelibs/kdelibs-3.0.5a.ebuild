@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.5a.ebuild,v 1.7 2003/02/12 17:17:13 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.5a.ebuild,v 1.8 2003/02/13 12:28:02 vapier Exp $
 inherit kde kde.org eutils
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 

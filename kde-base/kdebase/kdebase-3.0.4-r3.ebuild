@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.6 2003/02/12 16:30:33 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.7 2003/02/13 12:26:20 vapier Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"

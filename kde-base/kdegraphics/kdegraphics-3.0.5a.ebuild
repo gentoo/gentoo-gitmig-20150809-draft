@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.5a.ebuild,v 1.6 2003/02/12 16:59:11 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.5a.ebuild,v 1.7 2003/02/13 12:27:41 vapier Exp $
 inherit kde-dist
 
 IUSE="scanner gphoto2 tetex"
