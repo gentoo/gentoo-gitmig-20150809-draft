@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-xenophilia-engine/gtk-xenophilia-engine-0.8.ebuild,v 1.3 2002/10/04 06:47:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-xenophilia-engine/gtk-xenophilia-engine-0.8.ebuild,v 1.4 2002/10/22 15:45:01 bjb Exp $
 
 MY_P=${P/gtk-/}
 MY_P=${MY_P/-engine/}
@@ -13,7 +13,7 @@ DEPEND=">=x11-libs/gtk+-2.0.5"
 
 SLOT="0" 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 
 src_compile() {
 	econf || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/commonbox-styles-0.2.ebuild,v 1.5 2002/10/17 15:21:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/commonbox-styles-0.2.ebuild,v 1.6 2002/10/22 15:45:00 bjb Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Common styles for flux|black|open(box)."
@@ -10,7 +10,7 @@ HOMEPAGE="http://mkeadle.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/x11"
 RDEPEND="virtual/x11"

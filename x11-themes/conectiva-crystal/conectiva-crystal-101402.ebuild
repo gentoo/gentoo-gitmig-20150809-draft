@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-101402.ebuild,v 1.1 2002/10/14 20:36:16 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-101402.ebuild,v 1.2 2002/10/22 15:45:01 bjb Exp $
 inherit kde # not kde-base since we don't need c++ deps
 
 need-kde 3
@@ -9,7 +9,7 @@ S="${WORKDIR}/crystal"
 DESCRIPTION="Conectiva Crystal - Icon theme. WARNING: already included in >=kde-3.1."
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.gz"
 HOMEPAGE="http://www.conectiva.com.br"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 SLOT="0"
 LICENSE="as-is"
 

@@ -10,6 +10,6 @@ SRC_URI="http://www.usermode.org/code/qinx-0.2.tar.gz"
 HOMEPAGE="http://www.usermode.org/code.html"
 LICENSE="as-is"
 
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 
 newdepend ">=kde-base/kdebase-3.0"

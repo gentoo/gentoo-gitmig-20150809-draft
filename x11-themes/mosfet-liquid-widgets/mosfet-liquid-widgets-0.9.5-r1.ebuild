@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.5-r1.ebuild,v 1.2 2002/10/17 15:21:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.5-r1.ebuild,v 1.3 2002/10/22 15:45:01 bjb Exp $
 inherit kde-base
 
 need-kde 3
@@ -11,7 +11,7 @@ SRC_URI="http://www.mosfet.org/mosfet-liquid${PV}.tar.gz"
 HOMEPAGE="http://www.mosfet.org/liquid.html"
 LICENSE="BSD"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 
 newdepend ">=kde-base/kdebase-3.0"
 

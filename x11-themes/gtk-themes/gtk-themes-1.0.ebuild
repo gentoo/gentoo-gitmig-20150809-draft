@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-1.0.ebuild,v 1.3 2002/10/19 21:31:11 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-1.0.ebuild,v 1.4 2002/10/22 15:45:01 bjb Exp $
 
 DESCRIPTION="Some nice themes for GTK+"
 LICENSE="GPL-2"
 SLOT="1"
 S=${WORKDIR}
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 
 BASE_URI="http://download.freshmeat.net/themes/"
 SRC_URI="${BASE_URI}3000_xeno/3000_xeno-1.1.tar.gz
