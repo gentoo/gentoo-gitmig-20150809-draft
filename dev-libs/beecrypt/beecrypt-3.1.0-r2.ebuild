@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r2.ebuild,v 1.12 2005/02/17 17:31:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r2.ebuild,v 1.13 2005/04/02 03:07:14 eradicator Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils multilib
 
 DESCRIPTION="Beecrypt is a general-purpose cryptography library."
 HOMEPAGE="http://sourceforge.net/projects/beecrypt"
@@ -38,10 +38,12 @@ src_unpack() {
 
 src_compile() {
 	conf=""
-	arch=`get-flag march`
-	[ -n "$arch" ] && conf="--with-arch=$arch"
-	cpu=`get-flag mcpu`
-	[ -n "$cpu" ] && conf="$conf --with-cpu=$cpu"
+	if ! use amd64; then
+		arch=`get-flag march`
+		[ -n "$arch" ] && conf="--with-arch=$arch"
+		cpu=`get-flag mcpu`
+		[ -n "$cpu" ] && conf="$conf --with-cpu=$cpu"
+	fi
 
 	econf \
 		`use_with python` \
@@ -54,6 +56,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	# Not needed
-	rm -f ${D}/usr/lib/python*/site-packages/_bc.*a
+	rm -f ${D}/usr/$(get_libdir)/python*/site-packages/_bc.*a
 	dodoc BUGS README BENCHMARKS NEWS || die "dodoc failed"
 }
