@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.112 2004/09/24 10:47:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.113 2004/10/17 22:54:10 weeve Exp $
+
+  17 Oct 2004; Jason Wever <weeve@gentoo.org> python-2.3.4.ebuild:
+  Stable on sparc.
 
   24 Sep 2004; Alastair Tse <liquidx@gentoo.org> -python-2.2.2.ebuild,
   python-2.3.3-r1.ebuild, python-2.3.3.ebuild, python-2.3.4.ebuild,
