@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.22 2004/12/19 18:19:16 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.23 2004/12/20 15:18:18 absinthe Exp $
+
+  20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> cairo-0.1.23-r1.ebuild:
+  Stable on amd64.
 
   19 Dec 2004; Tom Payne <twp@gentoo.org> cairo-0.2.0.ebuild:
   Updated glitz dependency. Bug # 73454. Thanks Nahum Shalman.
