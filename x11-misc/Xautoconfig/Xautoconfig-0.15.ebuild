@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author David Chamberlain <daybird@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.15.ebuild,v 1.11 2003/09/05 23:29:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.15.ebuild,v 1.12 2004/04/11 14:58:49 pyrania Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Xautoconfig is a PPC only config file generator for xfree86"
 SRC_URI="http://ftp.penguinppc.org/projects/xautocfg/${P}.tar.gz"
 HOMEPAGE="http://ftp.penguinppc.org/projects/xautocfg/"
@@ -23,7 +22,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/Xautoconfig-0.15.diff || die
+	epatch ${FILESDIR}/Xautoconfig-0.15.diff || die
 	cp ${FILESDIR}/XF4text.h ./
 }
 
