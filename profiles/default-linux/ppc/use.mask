@@ -2,16 +2,22 @@
 
 3dfx
 3dnow
+3dnowex
 acpi
+adabas
 afs
 avi
+birdstep
 cmucl
+fdftk
 hdf
 icc
 icc-pgo
 mmx
+mmx2
 selinux
 sse 
+sse2
 svga
 tcc
 x86 
