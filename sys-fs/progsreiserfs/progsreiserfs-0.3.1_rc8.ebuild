@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.1_rc8.ebuild,v 1.3 2005/01/10 02:49:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.1_rc8.ebuild,v 1.4 2005/01/11 18:44:56 vapier Exp $
 
 inherit libtool flag-o-matic
 
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" || die "Install failed"
 	# Make sure users only use the official namesys binaries
-	rm -r "${D}"/usr/{sbin,share/man}
+	rm -r "${D}"/usr/{sbin,share/man} || die "cant punt the cruft"
 
 	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	docinto demos
