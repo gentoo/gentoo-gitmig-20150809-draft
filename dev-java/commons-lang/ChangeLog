@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.13 2004/03/15 15:28:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.14 2004/03/17 05:21:17 zx Exp $
+
+  20 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-lang-2.0-r1.ebuild,
+  commons-lang-2.0.ebuild:
+  Not using jakarta-commons.eclass anymore, it's broken. Clean up.
 
 *commons-lang-2.0-r1 (29 Feb 2004)
 
