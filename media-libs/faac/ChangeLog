@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/faac
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.13 2004/06/24 22:59:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.14 2004/07/10 18:32:41 eradicator Exp $
+
+*faac-1.24 (10 Jul 2004)
+
+  10 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  +faac-1.24.ebuild:
+  Version bump closes bug #55769.
 
   07 May 2004; Jeremy Huddleston <eradicator@gentoo.org> faac-1.23.5.ebuild:
   Stable x86.
