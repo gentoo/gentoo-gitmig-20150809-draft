@@ -1,4 +1,6 @@
-MD5 c30aa635a76c599cce9c4425344562c0 files/digest-desklet-diskinfo-0.1.4 126
 MD5 b04bb413896f6a6b003285822013e9cc desklet-diskinfo-0.1.4.ebuild 1532
+MD5 bbadec32f79ecf33c5d8e010b01c9e1b desklet-diskinfo-0.1.4-r1.ebuild 1490
 MD5 243479a689e468e8e6bc414020f9adf2 ChangeLog 487
 MD5 a175a96fb7e85b152ade748dbd2360e0 metadata.xml 213
+MD5 c30aa635a76c599cce9c4425344562c0 files/digest-desklet-diskinfo-0.1.4-r1 126
+MD5 c30aa635a76c599cce9c4425344562c0 files/digest-desklet-diskinfo-0.1.4 126
