@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.7 2004/09/30 18:07:22 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.8 2004/10/03 22:49:45 gmsoft Exp $
+
+  04 Oct 2004; Guy Martin <gmsoft@gentoo.org> vino-2.8.0.ebuild:
+  Added ~hppa to KEYWORDS.
 
   30 Sep 2004; Stephen P. Becker <geoman@gentoo.org> vino-2.8.0.ebuild:
   added ~mips keyword
