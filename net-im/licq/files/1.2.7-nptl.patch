@@ -1,0 +1,34 @@
+Index: configure.in
+===================================================================
+RCS file: /cvsroot/licq/licq/configure.in,v
+retrieving revision 1.63
+diff -u -d -p -r1.63 configure.in
+--- configure.in        2 Jul 2003 04:44:47 -0000       1.63
++++ configure.in        1 Jan 2004 01:46:12 -0000
+@@ -142,6 +142,8 @@ dlopen(NULL, RTLD_NOW)
+ 
+ AC_CHECK_FUNCS(inet_addr inet_aton mktime select strdup strerror hstrerror readdir_r)
+ 
++AC_CHECK_FUNC(pthread_kill_other_threads_np,[AC_DEFINE([HAVE_PTHREAD_KILL_OTHER_THREADS_NP],
++[], [we are not using NTPL])])
+ AC_CHECK_SOCKS5
+ LICQ_CHECK_OPENSSL
+ 
+Index: src/sighandler.c
+===================================================================
+RCS file: /cvsroot/licq/licq/src/sighandler.c,v
+retrieving revision 1.5
+diff -u -d -p -r1.5 sighandler.c
+--- src/sighandler.c    16 Jun 2003 17:09:46 -0000      1.5
++++ src/sighandler.c    1 Jan 2004 01:46:12 -0000
+@@ -83,7 +83,10 @@ void licq_handle_sigsegv(int s)
+     fprintf(stderr, "%s\n", res[0]);*/
+   }
+   fprintf(stderr, "Attempting to generate core file.\n");
++
++  #ifdef HAVE_PTHREAD_KILL_OTHER_THREADS_NP
+   pthread_kill_other_threads_np();
++  #endif
+ #endif
+ 
+   abort();

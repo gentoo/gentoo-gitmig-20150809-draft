@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.10 2004/02/17 23:07:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.11 2004/03/14 12:08:56 lanius Exp $
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
@@ -45,7 +45,8 @@ src_unpack() {
 		fi
 	fi
 	cd ${S}
-	patch -p0 < ${FILESDIR}/1.2.7-debugflag.patch || die "patch failed"
+	epatch ${FILESDIR}/1.2.7-debugflag.patch
+	epatch ${FILESDIR}/1.2.7-nptl.patch
 }
 
 src_compile() {
