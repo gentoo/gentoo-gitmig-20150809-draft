@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.62 2004/02/28 01:12:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.63 2004/03/09 01:25:53 robbat2 Exp $
+
+*openldap-2.1.27 (08 Mar 2004)
+
+  08 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.27.ebuild,
+  files/openldap-2.1.27-perlthreadsfix.patch:
+  fix bug #43021, change kerberos deps to virtual instead of app-crypt/mit-krb5
+  (which breaks heimdal). fix bug #42966, version bump. newer, more portable fix
+  for bug #31202 (also fixes a weird problem case).
 
   27 Feb 2004; Joshua Kinard <kumba@gentoo.org> openldap-2.1.26.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps.

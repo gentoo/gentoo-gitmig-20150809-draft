@@ -1,0 +1,31 @@
+--- servers/slapd/back-perl.orig/Makefile.in	2002-06-20 18:15:09.000000000 -0700
++++ servers/slapd/back-perl/Makefile.in	2004-03-08 16:38:51.000000000 -0800
+@@ -28,7 +28,7 @@
+ 
+ shared_LDAP_LIBS = $(LDAP_LIBLDAP_R_LA) $(LDAP_LIBLBER_LA)
+ NT_LINK_LIBS = -L.. -lslapd $(@BUILD_LIBS_DYNAMIC@_LDAP_LIBS)
+-UNIX_LINK_LIBS = $(@BUILD_LIBS_DYNAMIC@_LDAP_LIBS)
++UNIX_LINK_LIBS = $(@BUILD_LIBS_DYNAMIC@_LDAP_LIBS) `perl -MExtUtils::Embed -e ldopts`
+ 
+ LIBBASE = back_perl
+ 
+--- servers/slapd/back-perl.orig/perl_back.h	2003-03-12 17:09:09.000000000 -0800
++++ servers/slapd/back-perl/perl_back.h	2004-03-08 16:39:35.000000000 -0800
+@@ -2,6 +2,8 @@
+ #ifndef PERL_BACK_H
+ #define PERL_BACK_H 1
+ 
++#include <perl.h>
++
+ LDAP_BEGIN_DECL
+ 
+ /*
+@@ -23,7 +25,7 @@
+ # define na	PL_na
+ #endif
+ 
+-#ifdef HAVE_WIN32_ASPERL
++#if defined(HAVE_WIN32_ASPERL) || defined(USE_ITHREADS)
+ /* pTHX is needed often now */
+ # define PERL_INTERPRETER			my_perl
+ # define PERL_BACK_XS_INIT_PARAMS		pTHX
