@@ -1,0 +1,7 @@
+default-sparc64-2004.0
+rm /etc/make.profile
+ln -s $(portageq portdir)/profiles/default-sparc64-2004.0 /etc/make.profile
+emerge system -pv
+
+For more information, please see:
+    http://www.gentoo.org/doc/en/gentoo-upgrading.xml
