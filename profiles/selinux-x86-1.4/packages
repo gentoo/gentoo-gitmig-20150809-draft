@@ -39,7 +39,7 @@
 *>=sys-apps/findutils-4.1.7-r3
 *=sys-apps/procps-3.1.12
 *sys-apps/psmisc
-*>=sys-apps/pam-login-3.11
+*<sys-apps/pam-login-3.14
 *sys-apps/util-linux
 *>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
