@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.2 2003/09/07 02:56:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.3 2003/09/10 04:41:17 msterret Exp $
 
 inherit flag-o-matic
 
@@ -38,37 +38,37 @@ src_compile()  {
 	einfo "This ebuild assumes your /usr/src/linux kernel is the one you"
 	einfo "used to build i2c-2.8.0. and is >=2.4.9 && < 2.5+"
 	einfo
-        einfo "For 2.5+ series kernels, use the support already in the kernel"
-        einfo "under 'Character devices' -> 'I2C support'."
+	einfo "For 2.5+ series kernels, use the support already in the kernel"
+	einfo "under 'Character devices' -> 'I2C support'."
 	einfo
-        einfo "To cross-compile, 'export LINUX=\"/lib/modules/<version>/build\"'"
-        einfo "or symlink /usr/src/linux to another kernel."
+	einfo "To cross-compile, 'export LINUX=\"/lib/modules/<version>/build\"'"
+	einfo "or symlink /usr/src/linux to another kernel."
 	einfo
 	einfo "*****************************************************************"
 	echo
 
-        if [ "$LINUX" != "" ]; then
-                einfo "Cross-compiling using:- $LINUX"
-                einfo "Using headers from:- `echo $LINUX/include/linux | sed 's/\/\//\//'`"
-                LINUX=`echo $LINUX | sed 's/build\//build/'`
-        else
+	if [ "$LINUX" != "" ]; then
+		einfo "Cross-compiling using:- $LINUX"
+		einfo "Using headers from:- `echo $LINUX/include/linux | sed 's/\/\//\//'`"
+		LINUX=`echo $LINUX | sed 's/build\//build/'`
+	else
 		einfo "You are running:- `uname -r`"
-                check_KV || die "Cannot find kernel in /usr/src/linux"
-                einfo "Using kernel in /usr/src/linux/:- ${KV}"
+		check_KV || die "Cannot find kernel in /usr/src/linux"
+		einfo "Using kernel in /usr/src/linux/:- ${KV}"
 
-                echo ${KV} | grep 2.4. > /dev/null
-                if [ $? == 1 ]; then
-                        eerror "Kernel version in /usr/src/linux is not 2.4.x"
-                        eerror "Please specify a 2.4.x kernel!"
-                        die "Incompatible Kernel"
-                else
-                        LINUX='/usr/src/linux'
-                fi
+		echo ${KV} | grep 2.4. > /dev/null
+		if [ $? == 1 ]; then
+			eerror "Kernel version in /usr/src/linux is not 2.4.x"
+			eerror "Please specify a 2.4.x kernel!"
+			die "Incompatible Kernel"
+		else
+			LINUX='/usr/src/linux'
+		fi
 
 		if [ "${KV}" != "`uname -r`" ]; then
 			ewarn "WARNING:- kernels do not match!"
 		fi
-        fi
+	fi
 
 	echo
 	sleep 2
