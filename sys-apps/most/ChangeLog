@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.9 2004/06/24 22:18:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.10 2004/06/27 23:49:01 ciaranm Exp $
+
+*most-4.9.5 (28 Jun 2004)
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> +most-4.9.5.ebuild:
+  Version bump. Changed the src_install around a bit to make things simpler for
+  arch people. Added in ~sparc ~mips to the supported arch list.
 
 *most-4.9.4 (06 Apr 2004)
 
