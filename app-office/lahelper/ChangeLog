@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lahelper
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lahelper/ChangeLog,v 1.1 2004/11/15 14:02:19 usata Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/lahelper/ChangeLog,v 1.2 2005/01/01 14:53:46 weeve Exp $
+
+  01 Jan 2005; Jason Wever <weeve@gentoo.org> lahelper-0.6.3.ebuild:
+  Added ~sparc keyword.
 
 *lahelper-0.6.3 (15 Nov 2004)
 
