@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/ppc-development-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.13 2003/12/27 00:49:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.14 2003/12/29 01:29:28 lu_zero Exp $
+
+  29 Dec 2003; Luca Barbato <lu_zero@gentoo.org>
+  ppc-development-sources-2.6.0-r1.ebuild,
+  ppc-development-sources-2.6.0-r2.ebuild,
+  ppc-development-sources-2.6.0_beta10-r1.ebuild,
+  ppc-development-sources-2.6.0_beta11-r1.ebuild,
+  ppc-development-sources-2.6.0_beta11-r2.ebuild,
+  ppc-development-sources-2.6.0_beta11-r3.ebuild,
+  ppc-development-sources-2.6.0_beta9-r3.ebuild,
+  ppc-development-sources-2.6.0_beta9-r4.ebuild,
+  ppc-development-sources-2.6.0_beta9-r5.ebuild:
+  Changed the post halloween note
 
 *ppc-development-sources-2.6.0-r2 (27 Dec 2003)
 

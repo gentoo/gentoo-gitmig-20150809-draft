@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.0-r1.ebuild,v 1.1 2003/12/21 19:16:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.0-r1.ebuild,v 1.2 2003/12/29 01:29:28 lu_zero Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -89,7 +89,7 @@ pkg_postinst() {
 	ewarn "rivafb and the mac floppy drivers are both broken. NVidia"
 	ewarn "users should use the openfirmware framebuffer for now."
 	echo
-	einfo "Consult http://www.codemonkey.org.uk/post-halloween-2.5.txt"
+	einfo "Consult http://www.linux.org.uk/~davej/docs/post-halloween-2.6.txt"
 	einfo "for more info about the 2.6 series."
 	echo
 }
