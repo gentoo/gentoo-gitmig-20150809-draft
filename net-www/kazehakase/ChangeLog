@@ -1,6 +1,9 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.6 2004/04/27 20:08:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.7 2004/06/06 17:21:27 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> kazehakase-0.1.4.ebuild:
+  Marked stable on amd64.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kazehakase-0.1.4.ebuild:
   Add inherit eutils
