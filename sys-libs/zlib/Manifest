@@ -1,5 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/Manifest,v 1.21 2003/12/21 09:45:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/Manifest,v 1.22 2003/12/23 10:57:13 robbat2 Exp $
 MD5 c4e38da0c9d2a30fd8ff4da0639abec4 zlib-1.1.4-r2.ebuild 1090
+MD5 37d02fcf435bab36a9f5f4c70053ec1c zlib-1.2.1-r2.ebuild 1467
 MD5 7702fd456b70d4a67252cedeb28c655e zlib-1.1.4-r4.ebuild 1335
 MD5 1c205ae462fe64d2dacacfb159c01150 zlib-1.2.1.ebuild 1291
 MD5 4237b2c4f14848f52b3bb0fd44c5599b zlib-1.2.1-r1.ebuild 1334
@@ -17,5 +18,6 @@ MD5 dd55b8f72a824c16a4d544b624c9eda1 files/digest-zlib-1.1.4-r2 63
 MD5 dd55b8f72a824c16a4d544b624c9eda1 files/digest-zlib-1.1.4-r3 63
 MD5 dd55b8f72a824c16a4d544b624c9eda1 files/digest-zlib-1.1.4-r4 63
 MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r1 63
+MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r2 63
 MD5 72490e2d8f00f11cd3d70f8352b2c9ad files/zlib-1.1.4-glibc.patch 323
 MD5 9c2321cdb61e2d58b41a0d61a98d293b files/zlib-1.2.1-build-fPIC.patch 2252
