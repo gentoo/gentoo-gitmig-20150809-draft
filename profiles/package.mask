@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <vapier@gentoo.org> (17 Apr 2003)
+# ebuild is incomplete ... currently only compiles ...
+dev-lang/cm3
+
 # <danarmak@gentoo.org> (16 Apr 2003)
 # not yet released
 =app-office/koffice-1.3_beta1
