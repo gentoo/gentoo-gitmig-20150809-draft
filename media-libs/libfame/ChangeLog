@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for media-libs/libfame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.3 2002/10/01 03:17:24 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.4 2002/11/06 06:25:38 vapier Exp $
 
 *libfame-0.9.0 (30 Sep 2002)
 
