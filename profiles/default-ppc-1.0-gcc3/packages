@@ -127,7 +127,7 @@
 *app-arch/ncompress
 *sys-apps/baselayout
 *sys-apps/portage
-*=sys-devel/binutils-2.12.90.0.15
+*=sys-devel/binutils-2.12.90.0.7
 *=sys-devel/gcc-3.2_pre
 
 *=sys-libs/glibc-2.2.5-r5
