@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.6.ebuild,v 1.1 2003/09/20 13:20:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.6.ebuild,v 1.2 2003/12/13 14:29:38 usata Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://pub.ks-and-ks.ne.jp/prog/pub/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 -alpha ~sparc ~ppc"
+KEYWORDS="x86 -alpha sparc ppc"
 
 DEPEND="virtual/glibc
 	dev-lang/perl"
