@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.77 2004/09/27 11:37:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.78 2004/09/27 11:49:22 lanius Exp $
+
+*ppp-2.4.2-r5 (27 Sep 2004)
+
+  27 Sep 2004; Heinrich Wendel <lanius@gentoo.org> -ppp-2.4.2-r4.ebuild,
+  +ppp-2.4.2-r5.ebuild:
+  add dhcp plugin, bug #62969
 
   27 Sep 2004; Heinrich Wendel <lanius@gentoo.org> files/2.4.2/net.ppp0:
   fix setup for two modems, bug #43923

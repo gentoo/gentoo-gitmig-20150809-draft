@@ -1,22 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r4.ebuild,v 1.3 2004/09/27 11:33:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r5.ebuild,v 1.1 2004/09/27 11:49:22 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="Point-to-point protocol - patched for PPPOE"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	http://www.polbox.com/h/hs001/ppp-2.4.2-mppe-mppc-1.1.patch.gz"
+	http://www.polbox.com/h/hs001/ppp-2.4.2-mppe-mppc-1.1.patch.gz
+	http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="ipv6 activefilter pam atm mppe-mppc"
+IUSE="ipv6 activefilter pam atm mppe-mppc dhcp"
 
 RDEPEND="virtual/libc
 	activefilter? ( <=net-libs/libpcap-0.7.2-r1 )
-	atm? ( x86? ( net-dialup/linux-atm ) )"
+	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -62,6 +63,14 @@ src_unpack() {
 	einfo "Enabling radius"
 	sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe radius/' pppd/plugins/Makefile.linux || die
 	sed -i -e '/^CFLAGS/s:$: -fPIC:' pppd/plugins/radius/radiusclient/lib/Makefile.in || die
+
+	use dhcp && {
+		# copy the ppp-dhcp plugin files
+		einfo "Copying ppp-dhcp plugin files..."
+		tar -xzf ${DISTDIR}/ppp-dhcpc.tgz -C ${S}/pppd/plugins/
+		sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' pppd/plugins/Makefile.linux || die
+		sed -i -e "s/-O2/${CFLAGS}/" pppd/plugins/dhcp/Makefile.linux
+	}
 }
 
 src_compile() {
@@ -115,6 +124,10 @@ src_install() {
 	if use atm; then
 		dolib.so pppd/plugins/pppoatm.so
 	fi
+	if use dhcp; then
+		dolib.so pppd/plugins/dhcp/dhcpc.so
+	fi
+
 	dodir /usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	mv ${D}/usr/lib/*.so ${D}/usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 
