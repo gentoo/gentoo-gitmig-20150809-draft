@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.3.ebuild,v 1.8 2004/09/06 19:02:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1-r1.ebuild,v 1.1 2005/02/24 17:26:15 port001 Exp $
 
 inherit eutils
 
@@ -44,17 +44,29 @@ DESCRIPTION="A security oriented POP3 server."
 HOMEPAGE="http://www.openwall.com/popa3d/"
 
 SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz
-		 http://www.data.is/~hhg/popa3d/${P}-vname-2.diff
-		 !mbox? ( http://www.data.is/~hhg/popa3d/popa3d-0.5.9-maildir-2.diff )"
+	 http://www.data.is/~hhg/popa3d/popa3d-0.6.3-vname-2.diff
+	 maildir? ( http://www.data.is/~hhg/popa3d/popa3d-0.5.9-maildir-2.diff )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=sys-apps/sed-4
-		pam? ( >=sys-libs/pam-0.72 )"
+	pam? ( >=sys-libs/pam-0.72
+	       >=net-mail/mailbase-0.00-r8 )"
 
 pkg_setup() {
+
+	if use pam && ! built_with_use net-mail/mailbase pam;
+	then
+		echo
+		eerror
+		eerror "${PN} needs net-mail/mailbase to be built with the pam USE flag"
+		eerror "activated. Please rebuild net-mail/mailbase with pam"
+		eerror
+		die "mailbase has to be built with pam flag"
+	fi
+
 	if use mbox && use maildir ; then
 		echo
 		eerror
@@ -92,14 +104,14 @@ src_compile() {
 
 	epatch ${DISTDIR}/popa3d-0.6.3-vname-2.diff
 
-	if use mbox ; then
-		einfo "Mailbox format is: MAILBOX."
-	else
-		epatch ${DISTDIR}/popa3d-0.5.9-maildir-2.diff
+	if use maildir ; then
 		einfo "Mailbox format is: MAILDIR."
+		epatch ${DISTDIR}/popa3d-0.5.9-maildir-2.diff
 		if [ "${POPA3D_HOME_MAILBOX}" = "" ] ; then
 			POPA3D_HOME_MAILBOX=".maildir"
 		fi
+	else
+		einfo "Mailbox format is: MAILBOX."
 	fi
 
 	if [ "${POPA3D_HOME_MAILBOX}" != "" ] ; then
@@ -153,7 +165,7 @@ src_install() {
 	newexe ${FILESDIR}/popa3d-initrc popa3d
 
 	if use pam ; then
-		insinto /etc/pam.d
-		newins ${FILESDIR}/pam popa3d
+		dodir /etc/pam.d/
+		dosym /etc/pam.d/pop /etc/pam.d/popa3d
 	fi
 }
