@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/camaelon
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.4 2004/10/25 03:29:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.5 2004/11/05 22:11:24 blubb Exp $
+
+  05 Nov 2004; Simon Stelling <blubb@gentoo.org> camaelon-0.1.ebuild:
+  added ~amd64
 
   24 Oct 2004; Jason Wever <weeve@gentoo.org> camaelon-0.1.ebuild:
   Added ~sparc keyword wrt bug #68729.

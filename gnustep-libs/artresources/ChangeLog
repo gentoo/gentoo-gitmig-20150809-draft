@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/artresources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.4 2004/10/31 12:03:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.5 2004/11/05 22:13:32 blubb Exp $
+
+  05 Nov 2004; Simon Stelling <blubb@gentoo.org> artresources-0.1.2.ebuild:
+  added ~amd64
 
   31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   artresources-0.1.2.ebuild:
