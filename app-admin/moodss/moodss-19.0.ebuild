@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-19.0.ebuild,v 1.1 2004/09/28 13:03:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-19.0.ebuild,v 1.2 2004/10/28 12:49:51 matsuu Exp $
 
 DESCRIPTION="Modular Object Oriented Dynamic SpreadSheet"
 HOMEPAGE="http://moodss.sourceforge.net/"
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 #	odbc? ( dev-tcltk/tclodbc )
 
 src_compile() {
-	emake CFLAGS=${CFLAGS} || die
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
