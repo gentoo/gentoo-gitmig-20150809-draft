@@ -1,8 +1,11 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.8 2003/03/04 18:03:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.9 2003/03/09 19:28:40 agriffis Exp $
 
 *bind-tools-9.2.2 (04 Mar 2002)
+
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> bind-tools-9.2.2.ebuild:
+  Marked stable on alpha and x86 during package upgrade phase.
 
   04 Mar 2003; Brandon Low <lostlogic@gentoo.org> bind-tools-9.2.2.ebuild:
   make->emake -j1
