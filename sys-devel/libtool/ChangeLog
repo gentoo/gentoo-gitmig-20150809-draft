@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.22 2003/08/03 13:47:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.23 2003/09/17 19:11:17 avenj Exp $
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> libtool-1.4.3-r1.ebuild :
+  ia64 keywords.
 
   02 Aug 2003; Martin Schlemmer <azarah@gentoo.org> libtool-1.4.3-r1.ebuild:
   Mark stable for all.  (shoot me later)
