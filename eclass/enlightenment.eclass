@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.39 2005/01/08 08:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.40 2005/01/10 19:49:31 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -39,8 +39,8 @@ esac
 LICENSE="BSD"
 SLOT="0"
 case ${ECVS_STATE} in
-	release) KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86";;
-	snap)    KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86";;
+	release) KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86";;
+	snap)    KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86";;
 	live)    KEYWORDS="-*";;
 esac
 IUSE="nls doc"
