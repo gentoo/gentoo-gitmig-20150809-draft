@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.8 2003/03/10 22:19:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.9 2003/06/11 07:00:58 vladimir Exp $
+
+*sdl-ttf-2.0.6 (11 Jun 2003)
+
+  11 Jun 2003; Graham Forest <vladimir@gentoo.org> Manifest,
+  sdl-ttf-2.0.6.ebuild:
+  Version bump
 
   31 Jan 2003; Mark GUertin <gerk@gentoo.org> sdl-ttf-2.0.5.ebuild :
   Set to ppc stable
