@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.4 2005/01/23 10:17:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.5 2005/01/27 19:36:15 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,8 @@ RDEPEND="
 	zlib? ( sys-libs/zlib )
 	nls? ( sys-devel/gettext )
 	virtual/libc
-	readline? ( sys-libs/readline )"
+	readline? ( sys-libs/readline )
+	selinux? ( sec-policy/selinux-gnupg )"
 
 
 #	X? ( media-gfx/xloadimage media-gfx/xli )
