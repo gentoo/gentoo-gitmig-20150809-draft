@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.21 2004/09/12 21:13:34 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.22 2004/10/21 01:11:33 vapier Exp $
+
+  20 Oct 2004; Mike Frysinger <vapier@gentoo.org> -files/rsyncd.init,
+  gentoo-rsync-mirror-1.0-r4.ebuild:
+  Dont install init.d script anymore #59599 by Bjarke Istrup Pedersen.
 
   12 Sep 2004; Michael Imhof <tantive@gentoo.org> files/gentoo-mirror.conf:
   Fixed path in config file. Closes #63671.
