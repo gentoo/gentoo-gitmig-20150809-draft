@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_diagnostics/mod_diagnostics-0.0.1.ebuild,v 1.1 2005/01/10 12:57:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_diagnostics/mod_diagnostics-0.0.1.ebuild,v 1.2 2005/02/25 12:07:21 hollow Exp $
 
 inherit eutils apache-module
 
@@ -13,7 +13,10 @@ KEYWORDS="~x86"
 SLOT="0"
 IUSE=""
 
-APXS2_S="${WORKDIR}"
+S=${WORKDIR}
+
+APACHE2_MOD_CONF="20_${PN}"
+APACHE2_MOD_DEFINE="DIAGNOSTICS"
 
 need_apache2
 
