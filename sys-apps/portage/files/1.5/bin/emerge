@@ -319,9 +319,7 @@ add this to /etc/make.conf:
 CONFIG_PROTECT_MASK="/etc/wget /etc/rc.d"
 
 """
-
-
-	print outstuff
+		print outstuff
 	sys.exit(1)
 		
 if "--pretend" in myopts:
