@@ -1,0 +1,11 @@
+--- texk/tetex/texdoctk.orig	2004-05-21 08:16:29.000000000 +0900
++++ texk/tetex/texdoctk	2004-09-09 04:14:46.000000000 +0900
+@@ -316,7 +316,7 @@
+ 						    -fill=>'x',
+ 						    -side=>'right');
+ # handle selection; only one selection possible
+-    $tplist->bind('<Button-1>'=>sub{my $slctind=$tplist->curselection();
++    $tplist->bind('<Button-1>'=>sub{my $slctind=$tplist->index($tplist->curselection());
+ 				    $dspselect=$lbitems[$slctind];
+ 				    $docselect=$lbdocs[$slctind];});
+ #   key bindings
