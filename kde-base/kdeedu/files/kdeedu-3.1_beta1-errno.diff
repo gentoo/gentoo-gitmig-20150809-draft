@@ -1,0 +1,19 @@
+--- kmplot/kmplot/View.cpp	Mon Jul 15 23:34:49 2002
++++ kmplot/kmplot/View.cpp	Sun Jul 21 12:33:25 2002
+@@ -1,6 +1,6 @@
+ #include "View.h"
+ #include "View.moc"
+-
++#include <errno.h>
+ 
+ View::View( QWidget* parent, const char* name ) : QWidget( parent, name )
+ {
+@@ -151,7 +151,7 @@
+ 			mflg = 2;
+ 			for ( x = dmin; x < dmax; x += dx )
+ 			{
+-				int errno = 0;
++				errno = 0;
+ 				switch ( p_mode )
+ 				{
+ 				case 0:
