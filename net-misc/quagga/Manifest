@@ -1,32 +1,39 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 853a30dc9e47d59ed3c94a3c9bbc4bf5 metadata.xml 1387
-MD5 01fc96021b8cad5060ba761d5bbb2c3d quagga-0.96.4-r6.ebuild 3354
-MD5 6dc49c141cdc6399bd70142ddaa2aefe ChangeLog 5406
-MD5 cfc3a89dc2a63548877c7544ee9f1f13 quagga-0.96.5.ebuild 3415
-MD5 d19ba50e76f663979f91586bf96c9a2d quagga-0.96.5-r1.ebuild 3821
-MD5 377924dd5b2f0f5aa4d62039c3a3a9b6 quagga-0.97.1.ebuild 3818
-MD5 7b61bd40d79cd3591e6a00950b900400 quagga-0.97.2.ebuild 3846
-MD5 72494598a213a5d6f441496f48aefd7b files/digest-quagga-0.96.4-r6 66
+MD5 b70056f75c93d332c335c74f4e52ce2b quagga-0.96.4-r6.ebuild 3528
+MD5 8fb53c43576eb001c327062e9cc7d415 quagga-0.97.2.ebuild 3983
+MD5 37454b363590483e47d94149d36c4186 quagga-0.98.2.ebuild 4599
+MD5 ec4d382f3d6969b44a6579975ba8a6e2 quagga-0.97.1.ebuild 3957
+MD5 7b196a7d4501440d65cfac16cc349cdb ChangeLog 6102
+MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
+MD5 9516803db922d13a126a5315a0a27956 quagga-0.96.5-r1.ebuild 3959
+MD5 824b354d0cf35f8b889bcb115fe4eb72 quagga-0.96.5.ebuild 3589
 MD5 9056b8bd752a672787eacb129ee47535 files/digest-quagga-0.96.5 142
-MD5 9056b8bd752a672787eacb129ee47535 files/digest-quagga-0.96.5-r1 142
 MD5 9ee8920582beff3b7ffa2408666f5f2b files/digest-quagga-0.97.1 142
 MD5 898c502fc59023326048bdb4e014754f files/digest-quagga-0.97.2 142
+MD5 1a1df9fb95d48001187e1f56dc4ff5e5 files/digest-quagga-0.98.2 66
+MD5 72494598a213a5d6f441496f48aefd7b files/digest-quagga-0.96.4-r6 66
+MD5 9056b8bd752a672787eacb129ee47535 files/digest-quagga-0.96.5-r1 142
+MD5 18c1046db57ea850aabd385058522cc4 files/quagga.env 25
+MD5 7d8952055d69c80a4212194aac85c283 files/quagga.pam 1199
 MD5 3f95e96aeb427fa3de7f387ff3dc6ad6 files/init/bgpd 866
-MD5 4a118d93cab17b63f1d9c675f5d92fdf files/init/ospf6d 884
+MD5 e484b94e7ebb358d11fdf3252e0b604f files/init/ripd 865
 MD5 6b7fbbe67b98a52a36684455c3866d65 files/init/ospfd 875
 MD5 bfecfbc3b2f5b2748271a2838cac5a2b files/init/zebra 1143
-MD5 e484b94e7ebb358d11fdf3252e0b604f files/init/ripd 865
+MD5 4a118d93cab17b63f1d9c675f5d92fdf files/init/ospf6d 884
 MD5 2c6f6b3a64eedf1362a56fd6b3ca9c1b files/init/ripngd 885
 MD5 6d870c42af2625dcc07ba4b155618ebf files/patches-0.96.4/opaque-ready.patch 2617
 MD5 13439f842c485b5402125d2a18158c84 files/patches-0.96.4/ospf_refcount.patch 1296
-MD5 a08e46f6d262bc34749ee9cf9716a753 files/patches-0.97.1/01_all_unbreak-ospfapi.patch.bz2 667
 MD5 a5e54af5a6268307f6d5d86e6a5a680c files/patches-0.97.1/02_all_unbreak-ospfapi.patch.bz2 645
+MD5 a08e46f6d262bc34749ee9cf9716a753 files/patches-0.97.1/01_all_unbreak-ospfapi.patch.bz2 667
+MD5 7da4097332468741416e156a2e5d35e4 files/patches-0.98.2/amir-connected-route.patch 6336
+MD5 6c9cdbdc237bb8d24dfd26504059464b files/patches-0.98.2/ht-20050110-0.98.0-bgp-md5.patch 14570
+MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.2/ht-20040304-classless-bgp.patch 1581
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBiBsNHTu7gpaalycRAu4oAKCuMNjETrportJyeD/VGV0gJMLL9gCfdeYe
-pMthGnwk1CC+4Ojs/y7A+GU=
-=AnE1
+iD8DBQFCPbx1jiC39V7gKu0RAsLsAJ96TD8ZUzsKAtUL0K90wXnaQez0kwCfQr3o
+lpHIPaPagx+lwl93IUh5a/4=
+=zDib
 -----END PGP SIGNATURE-----

@@ -1,7 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Copyright 2003-2004 DataCore GmbH
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.97.1.ebuild,v 1.2 2004/10/25 17:35:17 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.97.1.ebuild,v 1.3 2005/03/20 18:09:43 mrness Exp $
 
 inherit eutils
 
@@ -20,7 +19,7 @@ IUSE="ipv6 snmp pam tcpmd5 ospfapi"
 DEPEND="virtual/libc
 	sys-devel/binutils
 	sys-apps/iproute2
-	=sys-libs/libcap-1.10-r3
+	>=sys-libs/libcap-1.10-r3
 	!sys-apps/zebra
 	!sys-apps/zebra-ag-svn
 	!sys-apps/zebra-pj-cvs
@@ -79,7 +78,7 @@ src_compile() {
 
 	# configure the stuff
 
-	./configure --host=${HOST} \
+	./configure --host=${CHOST} \
 		    --prefix=${D}/usr \
 		    --enable-tcp-zebra \
 	            --enable-nssa \
@@ -117,7 +116,9 @@ src_install() {
 
 pkg_postinst() {
 	# empty dir for pid files for the new priv separation auth
-	install -d -m0755 -o quagga -g quagga ${ROOT}/var/run/quagga
+	#set proper owner/group/perms even if dir already existed
+	install -d -m0700 -o ${QUAGGA_USER_NAME} -g ${QUAGGA_GROUP_NAME} ${ROOT}/etc/quagga
+	install -d -m0755 -o ${QUAGGA_USER_NAME} -g ${QUAGGA_GROUP_NAME} ${ROOT}/var/run/quagga
 
 	einfo "Sample configuration files can be found in /etc/quagga/sample."
 	einfo "You have to create config files in /etc/quagga before"
