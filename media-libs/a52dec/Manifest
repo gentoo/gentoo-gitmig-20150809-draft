@@ -1,8 +1,16 @@
-MD5 3af601384df0090f3f3f0c3010024d10 a52dec-0.7.4.ebuild 1028
-MD5 e1f68113ed462d43e2205cdbd238ed88 a52dec-0.7.4-r2.ebuild 1043
-MD5 76e92f288eebfdb16b3efbbe23744009 ChangeLog 2920
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de290c0400384a59257ecb5b48147c87 a52dec-0.7.4.ebuild 941
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3c6370fdff5cfa3f9ed308393e07909a a52dec-0.7.4-r1.ebuild 1014
-MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r1 64
-MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r2 64
+MD5 483a4eeaf96efe5b6dd5c2926e863521 ChangeLog 3062
+MD5 234b3ff5d39d0f83a02ec9fff3e23f0a a52dec-0.7.4-r2.ebuild 1030
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4 64
+MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBYQvFArHZZzCEUG0RApL6AJwNQfNjgrt5xfudUBQSpWhwX7Om4gCcCJvo
+y6v5PyQ7Pi+uiSq3AAjmIDE=
+=DXXb
+-----END PGP SIGNATURE-----

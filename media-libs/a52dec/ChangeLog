@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.20 2004/10/01 13:58:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.21 2004/10/04 08:37:13 eradicator Exp $
+
+  04 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -a52dec-0.7.4-r1.ebuild:
+  Make stable version build shared, too. Removing -r1.
 
 *a52dec-0.7.4-r2 (01 Oct 2004)
 

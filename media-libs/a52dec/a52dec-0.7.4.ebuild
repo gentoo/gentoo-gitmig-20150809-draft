@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.18 2004/09/28 02:04:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.19 2004/10/04 08:37:13 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -20,14 +20,10 @@ src_compile() {
 	append-flags -fPIC
 	filter-flags -fprefetch-loop-arrays
 
-	local myconf
-	use oss \
-		|| myconf="${myconf} --disable-oss"
-	use static \
-		&& myconf="${myconf} --disable-shared --enable-static" \
-		|| myconf="${myconf} --enable-shared --disable-static"
-
-	econf ${myconf} || die
+	local myconf="--enable-shared"
+	use oss || myconf="${myconf} --disable-oss"
+	econf 	$(use_enable static) \
+		${myconf} || die
 	emake || die "emake failed"
 }
 
