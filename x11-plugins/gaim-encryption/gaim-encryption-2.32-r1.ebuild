@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32-r1.ebuild,v 1.2 2004/11/27 04:20:08 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32-r1.ebuild,v 1.3 2004/11/29 20:01:50 rizzo Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -14,19 +14,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~ppc64"
 IUSE=""
 
 DEPEND=">=net-im/gaim-1.0.1
-	>=dev-libs/nss-3.9.2-r2"
+	|| ( >=dev-libs/nss-3.9.2-r2 net-www/mozilla-firefox net-www/mozilla )"
 
 src_compile() {
-	local myconf
 
-	NSS_LIB=/usr/lib
-	NSS_INC=/usr/include
-	myconf="${myconf} --with-nspr-includes=${NSS_INC}/nspr"
-	myconf="${myconf} --with-nss-includes=${NSS_INC}/nss"
-	myconf="${myconf} --with-nspr-libs=${NSS_LIB}/nspr"
-	myconf="${myconf} --with-nss-libs=${NSS_LIB}/nss"
-
-	econf ${myconf} || die "Configuration failed"
+	econf || die "Configuration failed"
 	einfo "Replacing -Os CFLAG with -O2"
 	replace-flags -Os -O2
 
