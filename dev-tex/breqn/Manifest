@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 04c35ecd9f078ff1fa2b73894efa39c1 ChangeLog 510
+MD5 e135067d3d1338a58796c36768c57783 breqn-0.94.ebuild 582
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 45176b3e8e487bc29a50f69711170551 breqn-0.94.ebuild 572
-MD5 378a2e73d7ce8eaff268a3010fa6de11 ChangeLog 398
 MD5 4ddb81c5636529889dec5adc2dbdfe6a files/digest-breqn-0.94 56
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZ7sMVWNWqTUmv+0RAv2WAJ4zh5KSLAxhrznAVIRLZrtqVVlcKQCbBUy3
-D0qUZZhY0YPMMLXuBHAYOxI=
-=+KSE
+iD8DBQFBpbL2mdTrptrqvGERArgkAJwOca2gi7C743dj5gIzdxfAWkLa9QCdH95s
+f/TcsI2tWx4LsuqybbETX9g=
+=LWxR
 -----END PGP SIGNATURE-----

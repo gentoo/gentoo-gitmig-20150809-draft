@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/breqn
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/breqn/ChangeLog,v 1.1 2004/10/09 10:24:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/breqn/ChangeLog,v 1.2 2004/11/25 10:24:47 dragonheart Exp $
+
+  25 Nov 2004; Daniel Black <dragonheart@gentoo.org> breqn-0.94.ebuild:
+  ppc keyword as per bug #72350.
 
 *breqn-0.94 (09 Oct 2004)
 
