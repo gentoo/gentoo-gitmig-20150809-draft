@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.227 2004/11/24 02:17:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.228 2004/12/05 01:28:00 spyderous Exp $
+
+  04 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-x11-6.8.0-r2.ebuild:
+  Remove stale, vulnerable version.
 
   23 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r2.ebuild, xorg-x11-6.7.0-r3.ebuild,
