@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.8 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.9 2002/12/26 23:37:53 raker Exp $
+
+*uw-imap-2002a (26 Dec 2002)
+
+  26 Dec 2002; Nick Hadaway <raker@gentoo.org> uw-imap-2002a.ebuild,
+  files/digest-uw-imap-2002a :
+  Version bump.  No patches this time.  Plaintext passwd file
+  authentication is currently turned of with ssl enabled.  The ssl 
+  certs directory is now /etc/ssl/certs to match with the newest openssl
+  builds.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
