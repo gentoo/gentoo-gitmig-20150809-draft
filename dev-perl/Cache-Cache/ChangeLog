@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Cache-Cache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.4 2003/02/12 06:14:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.5 2003/06/05 15:23:45 mcummings Exp $
+
+*Cache-Cache-1.02 (05 Jun 2003)
+
+  05 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Cache-Cache-1.02.ebuild:
+  Version bump from CPAN, corrected DESCRIPTION
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
