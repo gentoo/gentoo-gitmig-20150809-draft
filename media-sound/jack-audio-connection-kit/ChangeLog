@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.42 2004/09/22 21:44:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.43 2004/09/22 21:52:12 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  jack-audio-connection-kit-0.99.0.ebuild:
+  Marking stable on sparc as it is the only version and many jack-capable
+  packages are already stable on sparc. If it breaks, sorry... come bitch me
+  out.
 
   22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   jack-audio-connection-kit-0.99.0.ebuild:
