@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.64 2004/07/31 20:56:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.65 2004/07/31 22:15:01 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -129,7 +129,7 @@ vim_src_unpack() {
 		cd ${S} || die
 		ebegin "Unpacking vim runtime snapshot"
 		rm -rf runtime
-		bzip2 -dc ${DISTDIR}/${VIM_RUNTIME_SNAP} | /bin/tar xf -
+		bzip2 -dc ${DISTDIR}/${VIM_RUNTIME_SNAP} | tar xf -
 		assert  # this will check both parts of the pipeline; eend would not
 		eend 0
 	fi
