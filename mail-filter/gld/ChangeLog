@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.2 2004/08/11 18:31:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.3 2004/08/11 19:27:51 slarti Exp $
+
+  11 Aug 2004; Tom Martin <slarti@gentoo.org> gld-1.3.ebuild:
+  Fixed DEPEND.
 
   11 Aug 2004; Tom Martin <slarti@gentoo.org> gld-1.3.ebuild, files/gld.rc:
   Made the rc-script more verbose, fixed an option order problem with
