@@ -2,7 +2,7 @@ MD5 3371196636bb7c8eb3ff50ef6acd404f gradm2-0.0_pre4-r1.ebuild 2885
 MD5 82139455c54705b9abf5c5fbd8ce4d3b gradm2-0.0_pre4.ebuild 2885
 MD5 0d8e3709e4d781848b64ce455ec75ecd metadata.xml 631
 MD5 76d963e07402ba2db6ef3939af35a687 gradm2-0.0_rc2.ebuild 2892
-MD5 b2819bddc9bf35343020b6f522be1086 ChangeLog 1121
+MD5 c0a1adcc881dda3c9ccea9dbd4d9fccd ChangeLog 1121
 MD5 7432a8b46c6440cc44b8a527a4fdd6c4 files/digest-gradm2-0.0_pre4 65
 MD5 7432a8b46c6440cc44b8a527a4fdd6c4 files/digest-gradm2-0.0_pre4-r1 65
 MD5 9f0bd2935478a0062128d87e1c2c8bad files/digest-gradm2-0.0_rc2 64
