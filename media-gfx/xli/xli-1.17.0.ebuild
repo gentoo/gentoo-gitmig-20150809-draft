@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.17 2005/02/05 21:51:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.18 2005/02/06 11:25:42 vapier Exp $
 
 inherit alternatives
 
 DESCRIPTION="X Load Image: view images or load them to root window"
-SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/${P}.tar.gz"
 HOMEPAGE="http://pantransit.reptiles.org/prog/"
+SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86 ppc hppa ~amd64 ~ppc-macos ~sparc ~alpha"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc-macos ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11
@@ -19,7 +19,6 @@ DEPEND="virtual/x11
 	>=media-libs/jpeg-6b-r2"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}
@@ -46,7 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	/usr/X11R6/bin/xmkmf || die
 
 	emake CDEBUGFLAGS="${CFLAGS}" || die
