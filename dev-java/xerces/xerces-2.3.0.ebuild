@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0.ebuild,v 1.1 2003/03/09 19:55:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0.ebuild,v 1.2 2003/04/06 08:17:40 absinthe Exp $
 
 S=${WORKDIR}/xerces-${PV//./_}
 DESCRIPTION="The next generation of high performance, fully compliant XML parsers in the Apache Xerces family"
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 src_unpack() {
