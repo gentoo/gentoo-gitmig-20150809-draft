@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.35 2003/08/03 02:33:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.36 2003/10/26 10:22:51 liquidx Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
-# Spidler <spidler@gentoo.org>
+# Spidler <spider@gentoo.org>
 
 inherit libtool gnome.org
 [ `use debug` ] && inherit debug
@@ -29,13 +29,13 @@ gnome2_src_configure() {
 		&& G2CONF="${G2CONF} --enable-gtk-doc" \
 		|| G2CONF="${G2CONF} --disable-gtk-doc"
 
-	econf ${@} ${G2CONF} || die "./configure failure"
+	econf "$@" ${G2CONF} || die "./configure failure"
 
 }
 
 gnome2_src_compile() {
 
-	gnome2_src_configure ${@}
+	gnome2_src_configure "$@"
 	emake || die "compile failure"
 
 }
@@ -50,11 +50,11 @@ gnome2_src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 
 	if [ -z "${USE_DESTDIR}" -o "${USE_DESTDIR}" = "0" ]; then
-		einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ " ${@}
+		einstall "scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/" "$@"
 	else
 		make DESTDIR=${D} \
 			scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \
-			${@} install
+		   	"$@" install
 	fi
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
