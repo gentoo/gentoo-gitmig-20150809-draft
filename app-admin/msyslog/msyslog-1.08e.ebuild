@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08e.ebuild,v 1.4 2002/09/28 00:22:59 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08e.ebuild,v 1.5 2002/09/28 00:29:00 g2boojum Exp $
 
 MY_P=${PN}-v${PV}
 S=${WORKDIR}/${MY_P}
@@ -51,9 +51,9 @@ src_install() {
 		QUICK_INSTALL README src/TODO doc/*
 	docinto examples ; dodoc src/examples/*
 
-	insinto /etc/msyslog ; doins ${FILESDIR}/msyslog.conf
-	insinto /etc/conf.d ; newins ${FILESDIR}/msyslog-confd msyslog
-	exeinto /etc/init.d ; newexe ${FILESDIR}/msyslog-init msyslog
+	insinto /etc/msyslog ; doins ${S2}/msyslog.conf
+	insinto /etc/conf.d ; newins ${S2}/msyslog-confd msyslog
+	exeinto /etc/init.d ; newexe ${S2}/msyslog-init msyslog
 }
 
 pkg_postinst() {
