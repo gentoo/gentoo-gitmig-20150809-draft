@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r2.ebuild,v 1.2 2004/02/13 15:41:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r2.ebuild,v 1.3 2004/03/30 09:32:59 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="P.E.Op.S Sound Emulation (SPU) PSEmu Plugin"
 HOMEPAGE="http://sourceforge.net/projects/peops/"
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="alsa oss"
 
-DEPEND="alsa? ( media-libs/alsa-lib )
+RDEPEND="alsa? ( media-libs/alsa-lib )
 	app-arch/unzip
-	=x11-libs/gtk+-1*
+	=x11-libs/gtk+-1*"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	sys-devel/automake"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
@@ -31,13 +33,16 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	sed -i -e "s/-mpentium//" -e "/^CCFLAGS3/s:=:= ${CFLAGS} :" Makefile
-	if [ `use oss` ] || [ -z "`use oss``use alsa`" ] ; then
+	sed -i \
+		-e "s/-mpentium//" \
+		-e "/^CCFLAGS3/s:=:= ${CFLAGS} :" Makefile \
+			|| die "sed Makefile failed"
+	if use oss || [ -z "`use oss``use alsa`" ] ; then
 		emake clean || die
 		emake USEALSA=FALSE || die
 		mv libspu* ..
 	fi
-	if [ `use alsa` ] ; then
+	if use alsa ; then
 		emake clean || die
 		emake USEALSA=TRUE || die
 		mv libspu* ..
@@ -45,7 +50,7 @@ src_compile() {
 
 	cd linuxcfg
 	econf || die
-	emake || die
+	emake || die "emake failed"
 	mv src/spucfg src/cfgPeopsOSS
 }
 
