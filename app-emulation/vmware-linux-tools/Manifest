@@ -1,0 +1,7 @@
+MD5 9931389a4b830497b9184a105e19fb85 vmware-linux-tools-4.5.2.ebuild 2025
+MD5 77df9b065bd273b006c84e367b7cc665 ChangeLog 480
+MD5 0415383a9f09e469d1a77c2510dda94a metadata.xml 221
+MD5 076b748d7140400d21d72352b91b1e33 files/digest-vmware-linux-tools-4.5.2 71
+MD5 5d5be188e4b28fd552d1eb6250e65f1c files/4.5.2/vmware-linux-tools 2086
+MD5 7f6694e67686fa494cb860db3f6a87b4 files/4.5.2/locations 874
+MD5 bd0505ab92d03f82b898858d45787f58 files/4.5.2/xorg.conf 2646
