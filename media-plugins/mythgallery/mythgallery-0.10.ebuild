@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.10.ebuild,v 1.1 2003/07/08 23:41:19 johnm Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.10.ebuild,v 1.2 2003/08/07 04:03:00 vapier Exp $
 
 inherit flag-o-matic
 
-IUSE=""
 DESCRIPTION="Gallery and slideshow module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
 SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
@@ -17,17 +16,14 @@ DEPEND=">=media-tv/mythtv-${PV}
 	>=sys-apps/sed-4"
 
 src_unpack() {
-
 	unpack ${A}
 
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:/usr/local:/usr:" -i "${i}" || die "sed failed"
 	done
-
 }
 
 src_compile() {
-
 	cpu="`get-flag march`"
 	if [ ! -z "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "${S}/settings.pro" || die "sed failed"
@@ -36,22 +32,18 @@ src_compile() {
 	qmake -o "${S}/Makefile" "${S}/${PN}.pro"
 
 	emake || die "compile problem"
-
 }
 
 src_install() {
-
 	make INSTALL_ROOT="${D}" install || die "make install failed"
 
 	insinto "/usr/share/mythtv/database/${PN}"
 	doins database/*.sql
 
 	dodoc COPYING README UPGRADING
-
 }
 
 pkg_postinst() {
-
 	einfo "If this is the first time you install MythGallery,"
 	einfo "you need to add /usr/share/mythtv/database/${PN}/gallery.sql"
 	einfo "to your MythTV database."
@@ -66,5 +58,4 @@ pkg_postinst() {
 	ewarn "which need to be performed or this package will not work"
 	ewarn "properly."
 	echo
-
 }
