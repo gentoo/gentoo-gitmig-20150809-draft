@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.38 2005/02/01 03:22:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.39 2005/03/05 23:56:27 lu_zero Exp $
+
+  06 Mar 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
+  Dep change to be ready to the wxGTK update
 
   01 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/bochs-2.1.1-regparm-typo.patch, bochs-2.1.1.ebuild:
