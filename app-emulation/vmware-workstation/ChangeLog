@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.57 2004/09/12 14:36:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.58 2004/11/04 01:42:40 wolf31o2 Exp $
+
+  03 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-3.2.1.2242-r2.ebuild:
+  Updated to vmware-any-any-update84 and removing tcl from DEPEND. Closing bug
+  #62500.
 
   12 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-3.2.1.2242-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r2.ebuild,v 1.4 2004/09/12 14:36:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r2.ebuild,v 1.5 2004/11/04 01:42:40 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit gcc eutils
 
 S=${WORKDIR}/vmware-distrib
-N26KernSupport="vmware-any-any-update83"
+N26KernSupport="vmware-any-any-update84"
 NP="VMware-workstation-3.2.1-2242"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -34,8 +34,7 @@ RESTRICT="nostrip"
 DEPEND="virtual/libc
 	virtual/x11
 	virtual/os-headers
-	>=dev-lang/perl-5
-	>=dev-lang/tcl-8.3.3"
+	>=dev-lang/perl-5"
 
 src_unpack() {
 	check_KV
