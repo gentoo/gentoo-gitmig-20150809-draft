@@ -1,5 +1,15 @@
-MD5 5418c794946542a7fcb84c29930cc348 ChangeLog 684
-MD5 b26e4b7eba012edbdf6ffaef693c8b5a dial-1.2.ebuild 748
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b3d35f892f98aec4f2e484a898ceba9 ChangeLog 680
+MD5 f64866a513d2b1a0dada1974887ce2a9 dial-1.2.ebuild 744
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 eb7b7d6d9ed60af816b708ce7147a129 files/dial-1.2-gcc3.3.patch 512
 MD5 d75fbdf38c778e45cf42d89b9c92c9b1 files/digest-dial-1.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm5ckjtv59x0+BrURAua/AKC/rL5hme6/zmwMiEd1LQEaE1WkwQCfcBhp
+eLyBj72Q1+iHVi8wKxJFfIk=
+=0G6v
+-----END PGP SIGNATURE-----
