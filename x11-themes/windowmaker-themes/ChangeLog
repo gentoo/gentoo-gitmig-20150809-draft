@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/windowmaker-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.7 2004/06/24 23:38:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.8 2004/09/16 18:29:40 fafhrd Exp $
+
+  15 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  windowmaker-themes-0.1.ebuild:
+  Added metadata.xml; assigned herd-ship to "gnustep".
+
+  15 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  windowmaker-themes-0.1.ebuild:
+  Removed some themes that carried artwork that bears copyright at request of
+  the MPAA.
 
   19 Jun 2004; <pyrania@gentoo.org> windowmaker-themes-0.1.ebuild:
   Added IUSE.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.8 2004/06/24 23:38:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.9 2004/09/16 18:29:40 fafhrd Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
@@ -21,13 +21,10 @@ SRC_URI="${THEME_URI}3white.tar.gz
 	${THEME_URI}BadtzLight.tar.gz
 	${THEME_URI}Bathroom.tar.gz
 	${THEME_URI}Brijach.tar.gz
-	${THEME_URI}BuffyTheVampireSlayer.tar.gz
 	${THEME_URI}ChiasaAonuma.tar.gz
-	${THEME_URI}Clean.tar.gz
 	${THEME_URI}Cold.tar.gz
 	${THEME_URI}Crave.tar.gz
 	${THEME_URI}Cyrus-Hds.tar.gz
-	${THEME_URI}DaVinci.tar.gz
 	${THEME_URI}DarwinsiMac.tar.gz
 	${THEME_URI}DigitalGirls.tar.gz
 	${THEME_URI}Edify.tar.gz
@@ -41,15 +38,11 @@ SRC_URI="${THEME_URI}3white.tar.gz
 	${THEME_URI}GraveSite.tar.gz
 	${THEME_URI}ImacgirlGrape.tar.gz
 	${THEME_URI}Intrigue.tar.gz
-	${THEME_URI}KoRnWeb.tar.gz
 	${THEME_URI}Latest.tar.gz
 	${THEME_URI}Lichen.tar.gz
-	${THEME_URI}Looking.tar.gz
 	${THEME_URI}Midnight.tar.gz
 	${THEME_URI}MidoriLinux.tar.gz
 	${THEME_URI}Monday.tar.gz
-	${THEME_URI}NightmareInTheEther.tar.gz
-	${THEME_URI}Pooh.tar.gz
 	${THEME_URI}RainGutter.tar.gz
 	${THEME_URI}Rain_Gutter.tar.gz
 	${THEME_URI}RedDot.tar.gz
