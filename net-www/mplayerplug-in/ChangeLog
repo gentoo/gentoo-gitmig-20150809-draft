@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.15 2004/02/28 11:42:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.16 2004/02/28 17:10:53 brad Exp $
+
+*mplayerplug-in-2.40 (28 Feb 2004)
+
+  28 Feb 2004; Brad Laue <brad@gentoo.org> mplayerplug-in-2.40.ebuild:
+  Version bump. Closes #43053
 
 *mplayerplug-in-2.11 (28 Feb 2004)
 
