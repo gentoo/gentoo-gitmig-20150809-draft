@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.3.ebuild,v 1.8 2002/12/24 21:14:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.3.ebuild,v 1.9 2003/02/13 14:08:08 vapier Exp $
 
 IUSE="nas nls esd gnome arts gtk2 perl"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kxicq2/kxicq2-0.7.6.ebuild,v 1.8 2002/07/27 10:44:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kxicq2/kxicq2-0.7.6.ebuild,v 1.9 2003/02/13 14:11:15 vapier Exp $
 
 inherit kde-base || die
 

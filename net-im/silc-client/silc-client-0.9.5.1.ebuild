@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.5.1.ebuild,v 1.5 2002/11/19 13:03:05 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.5.1.ebuild,v 1.6 2003/02/13 14:12:53 vapier Exp $
 
 IUSE="socks5 ipv6 perl"
 
