@@ -1,6 +1,10 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.25 2004/06/25 01:10:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.26 2004/07/27 10:37:08 tigger Exp $
+
+  27 Jul 2004; Rob Holland <tigger@gentoo.org> privoxy-2.9.14_beta.ebuild,
+  privoxy-3.0.2.ebuild, privoxy-3.0.3.ebuild:
+  Fix user/group addition re #58526
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> privoxy-3.0.3.ebuild:
   Stable on alpha.

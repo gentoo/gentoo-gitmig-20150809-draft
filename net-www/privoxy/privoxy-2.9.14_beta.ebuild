@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.10 2004/06/25 01:10:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.11 2004/07/27 10:37:08 tigger Exp $
+
+inherit eutils
 
 IUSE="selinux"
 MY_P=${P/_beta/-beta}
@@ -16,16 +18,9 @@ SLOT="2"
 KEYWORDS="x86 sparc"
 LICENSE="GPL-2"
 
-pkg_setup() {
-
-	if ! grep -q ^privoxy: /etc/group ; then
-		groupadd privoxy || die "problem adding group privoxy"
-	fi
-
-	if ! grep -q ^privoxy: /etc/passwd ; then
-		useradd  -g privoxy -s /bin/false -d /etc/privoxy -c "privoxy" privoxy\
-			|| die "problem adding user apache"
-	fi
+pkg_preinst() {
+	enewgroup privoxy
+	enewuser privoxy -1 /bin/false /etc/privoxy privoxy
 }
 
 src_unpack() {

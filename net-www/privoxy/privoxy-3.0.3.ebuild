@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-3.0.3.ebuild,v 1.7 2004/06/25 01:10:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-3.0.3.ebuild,v 1.8 2004/07/27 10:37:09 tigger Exp $
+
+inherit eutils
 
 S="${WORKDIR}/${P}-stable"
 HOMEPAGE="http://www.privoxy.org"
@@ -16,15 +18,9 @@ LICENSE="GPL-2"
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="selinux? ( sec-policy/selinux-privoxy )"
 
-pkg_setup() {
-	if ! grep -q ^privoxy: /etc/group ; then
-		groupadd privoxy || die "problem adding group privoxy"
-	fi
-
-	if ! grep -q ^privoxy: /etc/passwd ; then
-		useradd  -g privoxy -s /bin/false -d /etc/privoxy -c "privoxy" privoxy\
-			|| die "problem adding user privoxy"
-	fi
+pkg_preinst() {
+	enewgroup privoxy
+	enewuser privoxy -1 /bin/false /etc/privoxy privoxy
 }
 
 src_unpack() {
