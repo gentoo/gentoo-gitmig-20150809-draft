@@ -10,43 +10,91 @@
    Dan Armak
   </author>
   <date>
-   Updated for 20020206
+   Updated for 20020329
   </date>
-  <sect1>
-   <title>
-   Warning
-  </title>
-  <para>
-   The eclasses have been modified and the documentation isn't up to date, to be fixed shortly.
-  </para>
-  </sect1>
   <sect1>
    <title>
    Introduction
   </title>
-  <para>
-   eclasses are parts of ebuilds; that is, they have the same syntax ebuilds do, but do not define all the required variables and functions. ebuilds can inherit from eclasses, and eclasses can inherit from other eclasses. As in OOP, this is used to ensure maximum code reuse among similar ebuilds.
-  </para>
-  <para>
-   This inheritance is implemented via simple bash sourcing. So, when you 'inherit&rdquo; something its functions and variables override your own. For this reason, variables and functions are usually extended and not just set (more on this later).
-  </para>
-  <para>
-   The most uniform group of ebuilds is the kde apps. These were accordingly selected to be the test case for eclasses, and I believe I can now say the test has been successful. Eclasses for non-kde ebuilds may follow, but there are no concrete plans as of this time.
-  </para>
-  <para>
-   Because of the current customisable KDEDIR (KDE?DIR, KDE?LIBSDIR) scheme, all kde ebuilds (including ebuilds for apps with optional kde support) <emphasis>must </emphasis>use the eclasses. As a minimum, inherit kde-dirs to get the set-qtdir(), set-kdedir() functions.
-  </para>
-  <para>
-   Section two explains how eclasses work; section three gives an example of a typical inheriting ebuild, and another of an ebuild for an app with optional kde functionality.
-  </para>
+   <sect2>
+    <title>
+    Overview
+   </title>
+   <para>
+    eclasses are parts of ebuilds. They are sourced (&ldquo;inherited&rdquo;) by ebuilds and other eclasses, to provide default settings and functions across many similar ebuilds. As in OOP, this is used to ensure maximum code reuse among similar ebuilds.
+   </para>
+   <para>
+    This first section shows briefly how to write an eclass. The second is a detailed overview of all the existing eclasses. The third explains how to write a KDE ebuild using the kde group of eclasses.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    Example
+   </title>
+   <para>
+    Here is a fictive sourceforge.eclass, designed to provide homepage and download locations to sourceforge.net-hosted projects:
+   </para>
+   <programlisting>
+<![ CDATA [# Copyright 2001-2002 Gentoo Technologies, Inc.
+]]><![ CDATA [# Distributed under the terms of the GNU General Public License, v2 or later
+]]><![ CDATA [# Author Dan Armak <danarmak@gentoo.org>
+]]><![ CDATA [# $Header: /var/cvsroot/gentoo-x86/eclass/doc/eclass-howto.sgml,v 1.11 2002/03/30 12:52:17 danarmak Exp $
+]]><![ CDATA [
+]]><![ CDATA [# This eclass sets $HOMEPAGE and $SRC_URI to the standard vaules for
+]]><![ CDATA [# sourceforge.net - hosted projects.
+]]><![ CDATA [
+]]><![ CDATA [ECLASS=base
+]]><![ CDATA [
+]]><![ CDATA [HOMEPAGE="http://${PN}.sourceforge.net/"
+]]><![ CDATA [SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
+]]>   </programlisting>
+   <para>
+    The first four lines are headers, just like those in any ebuild. The next two lines are a short description of the eclass. The seventh line set &dollar;ECLASS to the eclass's name, which is useful for some applications not seen in this example. The rest of the code does the actual work - setting SRC_URI and HOMEPAGE.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    There you go
+   </title>
+   <para>
+    This is all you need to know to actually write eclasses. Put your new eclass in /usr/portage/eclass/, and put these two lines at the beginning of your ebuild:
+   </para>
+   <programlisting>
+<![ CDATA [. /usr/portage/eclass/inherit.eclass || die
+]]><![ CDATA [inherit sourceforge
+]]>   </programlisting>
+   <para>
+    The first line is only needed for backward compatibility with &lt;=portage-1.8.8, i.e. the rc6 profile. The new 1.8.9 portage tree contains an inherit() function, but the old one doesn't and so we have to manually source inherit.eclass which provides it. This backward support will be discontinued on April the 25th, one month after the release of portage-1.8.9_pre32 for the 1.0 profile (the first portage to include inherit() and some other eclass-supporting elements).
+   </para>
+   <para>
+    Oh, and you can inherit several eclasses at the same time by saying:
+   </para>
+   <programlisting>
+<![ CDATA [inherit eclass1 eclass2 ...
+]]>   </programlisting>
+   <para>
+    ...but watch their order!
+   </para>
+   </sect2>
   </sect1>
   <sect1>
    <title>
-   The eclasses
+   The current eclasses
   </title>
   <para>
    The best way of becoming familiar with the current eclass structure is an explanation of what each eclass does.
   </para>
+  <para>
+   The most uniform group of ebuilds is the kde apps. These were accordingly selected to be the test case for eclasses, and the test has been successful. Eclasses for non-kde ebuilds may follow, but there are no concrete plans as of this time. (Write a useful one!)
+  </para>
+  <para>
+   Because of the current customisable KDEDIR (KDE?DIR, KDE?LIBSDIR) scheme, all kde ebuilds (including ebuilds for apps with optional kde support) need to<emphasis> </emphasis>use the eclasses, or else be forced to duplicate their functionality. As a minimum, inherit kde-functions to get the set-qtdir(), set-kdedir() functions. See more in section 3.
+  </para>
+   <sect2>
+    <title>
+    ebuild.sh
+   </title>
+   </sect2>
    <sect2>
     <title>
     inherit.eclass

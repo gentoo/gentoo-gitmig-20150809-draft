@@ -30,63 +30,148 @@ eclass howto
 Dan Armak
 \layout Date
 
-Partailly updated for 20020206
-\layout Section
-
-Warning
-\layout Standard
-
-The eclasses have been modified and the documentation isn't up to date,
- to be fixed shortly.
+Updated for 20020330
 \layout Section
 
 Introduction
+\layout Subsection
+
+Overview
 \layout Standard
 
-eclasses are parts of ebuilds; that is, they have the same syntax ebuilds
- do, but do not define all the required variables and functions.
- ebuilds can inherit from eclasses, and eclasses can inherit from other
- eclasses.
- As in OOP, this is used to ensure maximum code reuse among similar ebuilds.
-\layout Standard
+eclasses are parts of ebuilds.
+ They are sourced (
+\begin_inset Quotes eld
+\end_inset 
 
-This inheritance is implemented via simple bash sourcing.
- So, when you 'inherit
+inherited
 \begin_inset Quotes erd
 \end_inset 
 
- something its functions and variables override your own.
- For this reason, variables and functions are usually extended and not just
- set (more on this later).
+) by ebuilds and other eclasses, to provide default settings and functions
+ across many similar ebuilds.
+ As in OOP, this is used to ensure maximum code reuse among similar ebuilds.
 \layout Standard
 
-The most uniform group of ebuilds is the kde apps.
- These were accordingly selected to be the test case for eclasses, and I
- believe I can now say the test has been successful.
- Eclasses for non-kde ebuilds may follow, but there are no concrete plans
- as of this time.
+This first section shows briefly how to write an eclass.
+ The second is a detailed overview of all the existing eclasses.
+ The third explains how to write a KDE ebuild using the kde group of eclasses.
+\layout Subsection
+
+Example
 \layout Standard
 
-Because of the current customisable KDEDIR (KDE?DIR, KDE?LIBSDIR) scheme,
- all kde ebuilds (including ebuilds for apps with optional kde support)
- 
-\emph on 
-must 
-\emph default 
-use the eclasses.
- As a minimum, inherit kde-dirs to get the set-qtdir(), set-kdedir() functions.
+Here is a fictive sourceforge.eclass, designed to provide homepage and download
+ locations to sourceforge.net-hosted projects:
+\layout Code
+
+# Copyright 2001-2002 Gentoo Technologies, Inc.
+\layout Code
+
+# Distributed under the terms of the GNU General Public License, v2 or later
+\layout Code
+
+# Author Dan Armak <danarmak@gentoo.org>
+\layout Code
+
+# $Header: /home/cvsroot/gentoo-x86/eclass/sourceforge.eclass,v 1.12 2002/03/27
+ 22:33:53 danarmak Exp $
+\layout Code
+
+\layout Code
+
+# This eclass sets $HOMEPAGE and $SRC_URI to the standard vaules for
+\layout Code
+
+# sourceforge.net - hosted projects.
+\layout Code
+
+\layout Code
+
+ECLASS=base
+\layout Code
+
+\layout Code
+
+HOMEPAGE="http://${PN}.sourceforge.net/"
+\layout Code
+
+SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
 \layout Standard
 
-Section two explains how eclasses work; section three gives an example of
- a typical inheriting ebuild, and another of an ebuild for an app with optional
- kde functionality.
+The first four lines are headers, just like those in any ebuild.
+ The next two lines are a short description of the eclass.
+ Line 7 sets $ECLASS to the eclass's name, which is useful for some applications
+ not seen in this example.
+ These are conventions you should follow.
+\layout Standard
+
+The rest of the code does the actual work - setting $SRC_URI and $HOMEPAGE.
+\layout Subsection
+
+There you go
+\layout Standard
+
+This is all you need to know to actually write eclasses.
+ Put your new eclass in /usr/portage/eclass/, and put these two lines at
+ the beginning of your ebuild:
+\layout Code
+
+.
+ /usr/portage/eclass/inherit.eclass || die
+\layout Code
+
+inherit sourceforge
+\layout Standard
+
+The first line is only needed for backward compatibility with <=portage-1.8.8,
+ i.e.
+ the rc6 profile.
+ The new 1.8.9 portage tree contains an inherit() function, but the old one
+ doesn't and so we have to manually source inherit.eclass which provides
+ it.
+ This backward support will be discontinued on April the 25th, one month
+ after the release of portage-1.8.9_pre32 for the 1.0 profile (the first portage
+ to include inherit() and some other eclass-supporting elements).
+\layout Standard
+
+Oh, and you can inherit several eclasses at the same time by saying:
+\layout Code
+
+inherit eclass1 eclass2 ...
+\layout Standard
+
+...but watch their order!
 \layout Section
 
-The eclasses
+The current eclasses
 \layout Standard
 
 The best way of becoming familiar with the current eclass structure is an
  explanation of what each eclass does.
+\layout Standard
+
+The most uniform group of ebuilds is the kde apps.
+ These were accordingly selected to be the test case for eclasses, and the
+ test has been successful.
+ Eclasses for non-kde ebuilds may follow, but there are no concrete plans
+ as of this time.
+ (Write a useful one!)
+\layout Standard
+
+Because of the current customisable KDEDIR (KDE?DIR, KDE?LIBSDIR) scheme,
+ all kde ebuilds (including ebuilds for apps with optional kde support)
+ need to
+\emph on 
+ 
+\emph default 
+use the eclasses, or else be forced to duplicate their functionality.
+ As a minimum, inherit kde-functions to get the set-qtdir(), set-kdedir()
+ functions.
+ See more in section 3.
+\layout Subsection
+
+ebuild.
 \layout Subsection
 
 inherit.eclass
