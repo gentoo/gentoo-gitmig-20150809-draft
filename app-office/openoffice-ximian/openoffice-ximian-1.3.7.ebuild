@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.5 2005/01/16 22:59:19 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.6 2005/01/17 07:09:38 suka Exp $
 
 # Notes:
 #
@@ -24,7 +24,7 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit eutils fdo-mime flag-o-matic toolchain-funcs
 
 IUSE="curl gnome hardened java kde nptl zlib"
 
@@ -542,15 +542,6 @@ src_install() {
 	insinto /usr/share/applications
 	doins *.desktop
 
-	einfo "Installing mime info (need \"gnome\" or \"kde\" in USE)..."
-	if use gnome
-	then
-		insinto /usr/share/application-registry
-		doins ${FILESDIR}/${OO_VER}/ximian-openoffice.applications
-		insinto /usr/share/mime-info
-		doins ${FILESDIR}/${OO_VER}/ximian-openoffice.keys
-	fi
-
 	if use kde
 	then
 		insinto /usr/share/mimelnk/application
@@ -580,6 +571,11 @@ src_install() {
 }
 
 pkg_postinst() {
+
+	if use gnome; then
+		fdo-mime_desktop_database_update
+		fdo-mime_mime_database_update
+	fi
 
 	einfo " To start Ximian-OpenOffice.org, run:"
 	einfo
