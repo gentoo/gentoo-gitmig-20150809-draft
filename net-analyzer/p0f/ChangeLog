@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.8 2003/12/10 18:41:54 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.9 2003/12/14 04:05:49 pappy Exp $
+
+  14 Dec 2003; Alexander Gabert <pappy@gentoo.org> :
+  added digest and tested
 
   10 Dec 2003; Alexander Gabert <pappy@gentoo.org> p0f-2.0.2.ebuild:
   bugfix 35476 by gustavoz, changing SRC_URI for updated versions of p0f
