@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.1 2003/05/25 11:30:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.2 2003/08/08 12:09:36 aliz Exp $
 
 
 inherit gcc eutils gnuconfig libtool
@@ -13,7 +13,8 @@ SRC_URI="http://www.stafford.uklinux.net/libesmtp/${P}.tar.bz2"
 HOMEPAGE="http://www.stafford.uklinux.net/libesmtp/"
 
 DEPEND=">=sys-devel/libtool-1.4.1
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+	ssl? ( >=dev-libs/openssl-0.9.6b )
+	>=sys-apps/sed-4"
 
 RDEPEND=""
 
@@ -31,13 +32,17 @@ src_compile() {
 	use ssl || myconf="${myconf} --without-openssl"
 	
 	if [ "`gcc-major-version`" -eq "2"  ]; then
-	    myconf="${myconf} --disable-isoc"
+		myconf="${myconf} --disable-isoc"
 	fi
 
 	./configure --prefix=/usr \
 		--enable-all \
 		--enable-threads \
 		${myconf} || die "configure failed"
+
+	if [ "`gcc-major-version`" -eq "3" ] && [ "`gcc-minor-version`" -ge "3" ]; then
+		sed -i "s:-Wsign-promo::g" Makefile
+	fi
 
 	emake || die "emake failed"
 }
