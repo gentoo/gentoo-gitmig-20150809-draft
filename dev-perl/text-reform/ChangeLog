@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/text-reform
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.1 2003/08/22 09:26:47 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.2 2004/04/15 18:15:44 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> text-reform-1.11.ebuild:
+  added s390 to keywords
 
 *text-reform-1.11 (22 Aug 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-stringy
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/ChangeLog,v 1.8 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/ChangeLog,v 1.9 2004/04/15 18:18:49 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> IO-stringy-2.108-r1.ebuild:
+  added s390 to keywords
 
 *IO-stringy-2.108-r1 (21 Jun 2003)
  
