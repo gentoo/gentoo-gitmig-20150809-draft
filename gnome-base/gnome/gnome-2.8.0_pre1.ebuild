@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.3 2004/09/18 19:40:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.4 2004/09/19 12:29:09 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -86,14 +86,13 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-themes/gnome-themes-2.8
 
 	>=x11-terms/gnome-terminal-2.7.3
-	>=gnome-extra/gnome2-user-docs-2.6.0.1
+	>=gnome-extra/gnome2-user-docs-2.8.0.1
 
 	>=x11-libs/gtksourceview-1
 	>=gnome-extra/gucharmap-1.4.1
-	>=gnome-base/libgnomeprint-2.6
-	>=gnome-base/libgnomeprintui-2.6
+	>=gnome-base/libgnomeprint-2.8
+	>=gnome-base/libgnomeprintui-2.8
 
-	>=gnome-extra/gal-2.2.1
 	>=gnome-extra/libgtkhtml-3.2.1
 
 	>=gnome-extra/gnome-utils-2.8
@@ -135,10 +134,15 @@ RDEPEND="${RDEPEND}
 	>=gnome-base/gnome-volume-manager-1.0.2
 	>=net-misc/vino-2.8
 
+	>=gnome-extra/gal-2.2.1
+
 	>=gnome-extra/evolution-data-server-1
 	>=mail-client/evolution-2
+	>=gnome-extra/evolution-webcal-2
 
-	>=app-admin/gnome-system-tools-1"
+	>=app-admin/gnome-system-tools-1
+
+	>=net-analyzer/gnome-nettool-0.99.3"
 
 pkg_postinst () {
 
