@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.13 2005/01/22 12:04:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.14 2005/02/12 11:35:41 jhhudso Exp $
+
+  12 Feb 2005; Jared Hudson <jhhudso@gentoo.org>
+  +files/pdns-2.9.17-amd64-fix.diff:
+  Bumped pdns to 2.9.17 and marked stable due to DOS vulnerability reported in bug #80713
 
   22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> pdns-2.9.16.ebuild:
   added ~amd64 to KEYWORDS. fixes #78838

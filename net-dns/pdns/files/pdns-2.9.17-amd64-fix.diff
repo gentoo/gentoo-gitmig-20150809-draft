@@ -1,0 +1,42 @@
+diff -ur pdns-2.9.17.orig/pdns/logger.cc pdns-2.9.17/pdns/logger.cc
+--- pdns-2.9.17.orig/pdns/logger.cc	2004-09-13 13:55:07.000000000 -0500
++++ pdns-2.9.17/pdns/logger.cc	2005-02-12 04:01:13.828334456 -0600
+@@ -131,6 +131,25 @@
+   return *this;
+ }
+ 
++Logger& Logger::operator<<(unsigned long i)
++{
++  ostringstream tmp;
++  tmp<<i;
++ 
++ *this<<tmp.str();
++  
++  return *this;
++}
++
++Logger& Logger::operator<<(long i)
++{
++  ostringstream tmp;
++  tmp<<i;
++
++  *this<<tmp.str();
++
++  return *this;
++}
+ 
+ Logger& Logger::operator<<(ostream & (&)(ostream &))
+ {
+diff -ur pdns-2.9.17.orig/pdns/logger.hh pdns-2.9.17/pdns/logger.hh
+--- pdns-2.9.17.orig/pdns/logger.hh	2004-09-13 13:54:44.000000000 -0500
++++ pdns-2.9.17/pdns/logger.hh	2005-02-12 04:02:32.779332080 -0600
+@@ -110,7 +110,9 @@
+   */
+   Logger& operator<<(const string &s);   //!< log a string
+   Logger& operator<<(int);   //!< log an int
++  Logger& operator<<(long);  //!< log an long
+   Logger& operator<<(unsigned int);   //!< log an unsigned int
++  Logger& operator<<(unsigned long);   //!< log an unsigned long
+   Logger& operator<<(Urgency);    //!< set the urgency, << style
+ 
+ #ifndef WIN32
