@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db4c2310964a332714bc732f30c54560 l7-protocols-20040819.ebuild 1497
+MD5 d2a40535d935edde6491e596f8ba8ba5 ChangeLog 533
+MD5 cd24f5aa859e23e0f4abc222796bfd2c l7-protocols-20040819.ebuild 1496
 MD5 89edb769612add8464eb3c324f09e197 metadata.xml 374
-MD5 be8f41a53b32be5a3295393af1ccbcd2 ChangeLog 446
 MD5 8fcc2bb64c6850837d5f0f8fc4c6cd00 files/digest-l7-protocols-20040819 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBOPpzmdTrptrqvGERAo4lAJ9hNAJbNeNMmofFGeHgP8TJ/BCDCACdGtsT
-m8HontazXVuy1qZRoP0C0eA=
-=MXFR
------END PGP SIGNATURE-----
