@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.1 2003/07/31 12:28:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.2 2003/07/31 12:47:41 taviso Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -21,7 +21,10 @@ RDEPEND="virtual/glibc"
 
 S=${WORKDIR}/src/bin/csh
 
-src_compile() {
+src_unpack() {
+	# unpack the source tarball
+	unpack ${A}
+	
 	# hide some BSDisms, mostly my work, got some hints from the
 	# debian project (they use an older OpenBSD csh, though).
 	cd ${S}; epatch ${FILESDIR}/linux-vs-bsd.diff || die "patching failed."
@@ -62,19 +65,23 @@ src_compile() {
 	
 	printf "\t\"DEBUG\",\n\t\"ERR\",\n\t(char *)0x0\n};\n\n" >> ${S}/signames.h
 
-	einfo "Adding flags required for succesful compilation..."
-	# this should be easier than maintaining a patch. 
-	for i in {-Dlint,-w,-D__dead="",-D__LIBC12_SOURCE__,-DNODEV="-1",-DTTYHOG=1024,-DMAXPATHLEN=4096,-D_GNU_SOURCE,-D_DIAGASSERT="assert"}
-	do
-		append-flags ${i}
-	done
-
 	einfo "Making some final tweaks..."
 	sed -i 's#sys/tty.h#linux/tty.h#g' ${S}/file.c
 	sed -i 's!\(#include "proc.h"\)!\1\n#include "signames.h"\n!g' ${S}/proc.c
 	sed -i 's#\(strpct.c time.c\)#\1 vis.c#g' ${S}/Makefile
 	sed -i 's!#include "namespace.h"!!g' ${S}/vis.c
 	sed -i 's#/usr/games/fortune#/usr/bin/fortune#g' ${S}/dot.login
+
+}
+
+src_compile() {
+
+	einfo "Adding flags required for succesful compilation..."
+	# this should be easier than maintaining a patch. 
+	for i in {-Dlint,-w,-D__dead="",-D__LIBC12_SOURCE__,-DNODEV="-1",-DTTYHOG=1024,-DMAXPATHLEN=4096,-D_GNU_SOURCE,-D_DIAGASSERT="assert"}
+	do
+		append-flags ${i}
+	done
 
 	# maybe they dont warn on BSD, but _damn_.
 	export NOGCCERROR=1
