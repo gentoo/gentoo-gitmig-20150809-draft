@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.7 2003/12/11 17:31:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.8 2003/12/13 17:35:36 brad_mssw Exp $
 
 inherit flag-o-matic virtualx gnome2
 use kde && inherit kde
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.ximian.com"
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~hppa ~alpha"
+KEYWORDS="x86 ~ppc sparc ~hppa ~alpha amd64"
 
 # Top stanza are ximian deps
 RDEPEND=">=gnome-extra/libgtkhtml-3.0.9
@@ -46,7 +46,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.9
 	                ) )
 	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 	ldap? ( >=net-nds/openldap-2.0 )
-	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
+	amd64? ( ) : ( kerberos? ( >=app-crypt/mit-krb5-1.2.5 ) )
 	doc? ( >=app-text/scrollkeeper-0.3.10-r1 )"
 
 DEPEND="${RDEPEND}
