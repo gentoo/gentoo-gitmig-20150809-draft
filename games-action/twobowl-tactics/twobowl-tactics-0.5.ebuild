@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/twobowl-tactics/twobowl-tactics-0.5.ebuild,v 1.1 2004/03/09 08:51:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/twobowl-tactics/twobowl-tactics-0.5.ebuild,v 1.2 2004/03/09 14:54:09 dholm Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.towbowltactics.com/download/tbt.${PV}.src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/glibc
