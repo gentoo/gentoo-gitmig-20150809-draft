@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/powerprefs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.4 2004/06/04 05:13:48 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.5 2004/06/04 23:29:15 pylon Exp $
+
+  05 Jun 2004; Lars Weiler <pylon@gentoo.org> powerprefs-0.4.5.ebuild:
+  Fix for DESTDIR, so that pixmap-installion would not violate sandbox
 
 *powerprefs-0.4.5 (04 Jun 2004)
 
