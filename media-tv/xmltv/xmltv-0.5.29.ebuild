@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.28.ebuild,v 1.2 2004/03/07 21:30:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.29.ebuild,v 1.1 2004/03/07 21:30:12 mholzer Exp $
 
 inherit perl-module
 
