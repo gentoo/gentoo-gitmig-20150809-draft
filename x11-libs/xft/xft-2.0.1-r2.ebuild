@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.8 2004/01/30 07:31:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.9 2004/02/17 08:09:14 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\.0\./_}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa arm ~amd64"
+KEYWORDS="x86 ppc alpha sparc hppa ~amd64"
 
 RDEPEND="x11-base/xfree
 	>=media-libs/fontconfig-2.1-r1"
