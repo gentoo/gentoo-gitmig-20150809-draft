@@ -1,15 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.2-r1.ebuild,v 1.2 2004/01/05 07:55:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0_rc1.ebuild,v 1.1 2004/01/05 07:55:12 robbat2 Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig fixheadtails
 
 # TODO: all ldap, sybase support
 HOMEPAGE="http://www.inter7.com/vpopmail"
 DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail or Postfix mail servers."
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+MY_PV=${PV/_/-}
+MY_P=${PN}-${MY_PV}
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	mysql? ( http://gentoo.twobit.net/misc/${PN}-5.2.1-mysql.diff )"
 SLOT="0"
 LICENSE="GPL-2"
@@ -21,6 +23,7 @@ DEPEND="sys-apps/sed
 		${DEPEND_COMMON}"
 RDEPEND="${DEPEND_COMMON}
 	 	 virtual/cron"
+S="${WORKDIR}/${MY_P}"
 
 # Define vpopmail home dir in /etc/password if different
 VPOP_DEFAULT_HOME="/var/vpopmail"
@@ -55,51 +58,41 @@ pkg_setup() {
 
 src_unpack() {
 	cd ${WORKDIR}
-	unpack ${P}.tar.gz
+	unpack ${MY_P}.tar.gz
 	cd ${S}
 
 	epatch ${FILESDIR}/vpopmail-5.2.1-showall.patch
 
-	if use mysql; then
-		einfo "Applying MySQL patch..."
-		# Thanks to Nicholas Jones (carpaski@gentoo.org)
-		epatch ${DISTDIR}/vpopmail-5.2.1-mysql.diff
-	fi
-
-	for i in vchkpw.c vconvert.c vdelivermail.c vpopbull.c vpopmail.c vqmaillocal.c vuserinfo.c; do
+	for i in vchkpw.c vconvert.c vdelivermail.c vpopbull.c vpopmail.c vqmaillocal.c vuserinfo.c maildirquota.c; do
 		sed -e 's|Maildir|.maildir|g' -i $i || die "Failed to change s/Maildir/.maildir/g in $i"
 	done
 
 	gnuconfig_update
-
-	# the configure script tries to force root and make directories not using ${D}
-	cp configure configure.orig
-	#sed -e '1282,1289d' -e '1560,1567d' -e '2349d' -e '2107d' -e '2342d' configure > configure.new
-	sed -e '1304,1311d' -e '1582,1589d' -e '2129d' -e '2364d' -e '2371d' -i configure
+	ht_fix_file ${S}/cdb/Makefile
 }
 
 src_compile() {
 	vpopmail_set_homedir
+	addpredict /var/vpopmail/etc/lib_deps
+	addpredict /var/vpopmail/etc/inc_deps
 
 	use ipalias && myopts="${myopts} --enable-ip-alias-domains=y" \
 		|| myopts="${myopts} --enable-ip-alias-domains=n"
 
-	use mysql && myopts="${myopts} --enable-mysql=y \
+	use mysql && myopts="${myopts} --enable-auth-module=mysql \
 			--enable-libs=/usr/include/mysql \
 			--enable-sqllibdir=/usr/lib/mysql \
 			--enable-mysql-logging=y \
 			--enable-auth-logging=y \
 			--enable-valias=y \
-			--enable-mysql-replication=n" \
+			--enable-mysql-replication=n \
+			--enable-mysql-limits" \
 		|| myopts="${myopts} --enable-mysql=n"
 
 	# Bug 20127
 	use clearpasswd &&
 		myopts="${myopts} --enable-clear-passwd=y" ||
 		myopts="${myopts} --enable-clear-passwd=n"
-
-	addpredict /var/vpopmail/etc/lib_deps
-	addpredict /var/vpopmail/etc/inc_deps
 
 	econf ${myopts} --sbindir=/usr/sbin \
 		--bindir=/usr/bin \
@@ -115,13 +108,26 @@ src_compile() {
 		--enable-file-sync=y \
 		--enable-md5-passwords=y \
 		--enable-defaultquota=30000000,1000C \
-		--enable-roaming-users=y --enable-relay-clear-minutes=60 \
-		--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
 		--enable-logging=y \
 		--enable-log-name=vpopmail \
-		--enable-qmail-ext
+		--enable-qmail-ext \
+		--enable-domainquotas \
+		--disable-tcp-rules-prog --disable-tcpserver-file --disable-roaming-users
+	
+	# TCPRULES for relaying is now considered obsolete, use relay-ctrl instead
+	#--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
+	#--enable-roaming-users=y --enable-relay-clear-minutes=60 \
+	#--disable-rebuild-tcpserver-file \
 
-	use mysql && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> ${S}/config.h
+
+	# fix some borkage
+	sed -re 's:(/var/vpopmail/etc/inc_deps):$(DESTDIR)/\1:g' -i ${S}/Makefile || die "failed to fix"
+	sed -re 's:(/var/vpopmail/etc/lib_deps):$(DESTDIR)/\1:g' -i ${S}/Makefile || die "failed to fix"
+	if use mysql; then
+		sed -re 's:@USE_MYSQL@:"1":g' -i ${S}/Makefile || die "failed to fix"
+	else
+		sed -re 's:@USE_MYSQL@:"0":g' -i ${S}/Makefile || die "failed to fix"
+	fi
 
 	emake || die "Make failed."
 }
@@ -129,7 +135,7 @@ src_compile() {
 src_install () {
 	vpopmail_set_homedir
 
-	make DESTDIR=${D} install-strip || die
+	make DESTDIR=${D} install || die
 
 	into /var/vpopmail
 	dobin ${FILESDIR}/vpopmail-Maildir-dotmaildir-fix.sh
@@ -137,7 +143,7 @@ src_install () {
 
 	# Install documentation.
 	dodoc AUTHORS ChangeLog COPYING FAQ INSTALL NEWS TODO
-	dodoc README README.* RELEASE.NOTES UPGRADE.*
+	dodoc README* RELEASE.NOTES UPGRADE.*
 	dodoc doc/doc_html/* doc/man_html/*
 	rm -rf ${D}/${VPOP_HOME}/doc
 	dosym /usr/share/doc/${PF}/ ${VPOP_HOME}/doc
@@ -146,18 +152,25 @@ src_install () {
 	if use mysql; then
 		einfo "Installing vpopmail mysql configuration file"
 		dodir /etc
-		insinto /etc
-		doins ${FILESDIR}/vpopmail.conf
-		fowners vpopmail:vpopmail /etc/vpopmail.conf
-		fperms 600 /etc/vpopmail.conf
+		#config file position
+		mv ${D}/var/vpopmail/etc/vpopmail.mysql ${D}/etc/vpopmail.conf
+		dosym /etc/vpopmail.conf /var/vpopmail/etc/vpopmail.mysql
+		sed -e '12d' -i ${D}/etc/vpopmail.conf
+		echo '# Read-only DB' >>${D}/etc/vpopmail.conf
+		echo 'localhost|0|vpopmail|secret|vpopmail' >>${D}/etc/vpopmail.conf
+		echo '# Write DB' >>${D}/etc/vpopmail.conf
+		echo 'localhost|0|vpopmail|secret|vpopmail' >>${D}/etc/vpopmail.conf
+		# lock down perms
+		fperms 640 /etc/vpopmail.conf
+		fowner root:vpopmail /etc/vpopmail.conf
 	fi
 
 	# Install a proper cronjob instead of the old nastiness
-	einfo "Installing cronjob"
-	dodir /etc/cron.hourly
-	insinto /etc/cron.hourly
-	doins ${FILESDIR}/vpopmail.clearopensmtp
-	fperms +x /etc/cron.hourly/vpopmail.clearopensmtp
+	#einfo "Installing cronjob"
+	#dodir /etc/cron.hourly
+	#insinto /etc/cron.hourly
+	#doins ${FILESDIR}/vpopmail.clearopensmtp
+	#fperms +x /etc/cron.hourly/vpopmail.clearopensmtp
 
 	einfo "Installing env.d entry"
 	dodir /etc/env.d
@@ -165,10 +178,10 @@ src_install () {
 	doins ${FILESDIR}/99vpopmail
 
 	# Configure b0rked. We'll do this manually
-	echo "-I${VPOP_HOME}/include" > ${D}/${VPOP_HOME}/etc/inc_deps
-	local libs_extra
-	use mysql && libs_extra="-L/usr/lib/mysql -lmysqlclient -lz" || libs_extra=""
-	echo "-L${VPOP_HOME}/lib -lvpopmail ${libs_extra}" > ${D}/${VPOP_HOME}/etc/lib_deps
+	#echo "-I${VPOP_HOME}/include" > ${D}/${VPOP_HOME}/etc/inc_deps
+	#local libs_extra
+	#use mysql && libs_extra="-L/usr/lib/mysql -lmysqlclient -lz" || libs_extra=""
+	#echo "-L${VPOP_HOME}/lib -lvpopmail ${libs_extra}" > ${D}/${VPOP_HOME}/etc/lib_deps
 
 	einfo "Locking down vpopmail permissions"
 	# secure things more, i don't want the vpopmail user being able to write this stuff!
@@ -205,13 +218,13 @@ pkg_postinst() {
 		einfo "> flush privileges;"
 		echo
 		einfo "If you have problems with vpopmail not accepting mail properly,"
-		einfo "please ensure that /etc/vpopmail.conf is chmod 600 and"
-		einfo "owned by vpopmail:vpopmail"
+		einfo "please ensure that /etc/vpopmail.conf is chmod 640 and"
+		einfo "owned by root:vpopmail"
 	fi
 	# do this for good measure
 	if [ -e /etc/vpopmail.conf ]; then
-		chmod 600 /etc/vpopmail.conf
-		chown vpopmail:vpopmail /etc/vpopmail.conf
+		chmod 640 /etc/vpopmail.conf
+		chown root:vpopmail /etc/vpopmail.conf
 	fi
 
 	upgradewarning
@@ -231,4 +244,7 @@ upgradewarning() {
 	ewarn "script at /var/vpopmail/bin/vpopmail-Maildir-dotmaildir-fix.sh"
 	ewarn "to upgrade your system! (It can do conversions both ways)."
 	ewarn "You should be able to run it right away without any changes."
+	echo
+	einfo "Use of vpopmail's tcp.smtp[.cdb] is also deprecated now, consider"
+	einfo "using net-mail/relay-ctrl instead."
 }
