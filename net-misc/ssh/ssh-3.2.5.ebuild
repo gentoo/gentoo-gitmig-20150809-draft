@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.1 2003/09/26 06:26:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.2 2003/09/27 00:59:22 vapier Exp $
 
 DESCRIPTION="Ssh.com Non-Comercial Use ssh version"
 HOMEPAGE="http://www.ssh.com/"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.ssh.com/pub/ssh/${P}.tar.gz"
 LICENSE="SSH"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="X ipv6 gpg openssh"
+IUSE="X ipv6 crypt openssh"
 
 DEPEND="X? ( virtual/x11 )
 	!openssh? ( !virtual/ssh )"
@@ -19,7 +19,7 @@ src_compile() {
 	econf \
 		`use_with ipv6 ipv6` \
 		`use_with X` \
-		`use_with gpg` \
+		`use_with crypt gpg` \
 		|| die "configure failed"
 	emake -j1 || die "make failed"
 }
