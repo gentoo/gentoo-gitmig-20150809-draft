@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-202.ebuild,v 1.3 2003/03/05 04:40:15 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-202.ebuild,v 1.4 2003/08/09 22:24:24 karltk Exp $
 
 S=${WORKDIR}/plt
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
@@ -48,14 +48,14 @@ src_install () {
 
 	for x in background-help-desk drscheme games help-desk mzc \
 		setup-plt tex2page web-server web-server-monitor \
-		web-server-text
+		web-server-text ; 
 	do
 		mysed /usr/share/drscheme/bin/${x}
 	done
 
 	cd ${D}/usr/share/drscheme/bin
-	for x in *
+	for x in * ;
 	do
-		dosym /usr/share/drscheme/bin/${file} /usr/bin/${file}
+		dosym /usr/share/drscheme/bin/${x} /usr/bin/${x}
 	done
 }
