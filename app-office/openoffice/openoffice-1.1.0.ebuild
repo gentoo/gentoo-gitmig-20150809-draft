@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.6 2003/10/21 09:33:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.7 2003/10/23 09:24:25 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -90,7 +90,7 @@ export LS_COLORS=""
 
 pkg_setup() {
 
-	if [ "$(gcc-version)" != "3.2" ]
+	if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" ];
 	then
 		eerror
 		eerror "This build needs gcc-3.2.x, but due to profile"
@@ -315,6 +315,9 @@ get_EnvSet() {
 }
 
 src_compile() {
+	if [ "$(gcc-version)" = "3.2" ]; then
+		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
+	fi
 	addpredict /bin
 	local buildcmd=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r1.ebuild,v 1.3 2003/10/21 09:33:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r1.ebuild,v 1.4 2003/10/23 09:24:25 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -137,11 +137,19 @@ pkg_setup() {
 	ewarn " merge again.					               "
 	ewarn "****************************************************************"
 
+	set_languages
 
 }
 
 set_languages () {
+	if [ -z "$LANGUAGE" ]; then
+		LANGUAGE=01
+	fi
+
 	case "$LANGUAGE" in
+		01 | ENUS ) LANGNO=01; LANGNAME=ENUS; LFULLNAME="US English (default
+)"
+			;;
 		03 | PORT ) LANGNO=03; LANGNAME=PORT; LFULLNAME=Portuguese
 			;;
 		07 | RUSS ) LANGNO=07; LANGNAME=RUSS; LFULLNAME=Russian
@@ -195,7 +203,13 @@ set_languages () {
 		97 | HEBREW ) LANGNO=97; LANGNAME=HEBREW; LFULLNAME=Hebrew
 			;;
 		* )
-			LANGNO=01; LANGNAME=ENUS; LFULLNAME="US English (default)"
+			eerror "Unknown LANGUAGE setting!"
+			eerror
+			eerror "Known LANGUAGE settings are:"
+			eerror "  ENUS | PORT | RUSS | GREEK | DTCH | FREN | SPAN | FINN | CAT | ITAL |"
+			eerror "  CZECH | SLOVAK | DAN | SWED | POL | GER | PORTBR | THAI | ESTONIAN |"
+			eerror "  JAPN | KOREAN | CHINSIM | CHINTRAD | TURK | HINDI | ARAB | HEBREW"
+			die
 			;;
 	esac
 }
@@ -308,6 +322,11 @@ get_EnvSet() {
 }
 
 src_compile() {
+
+	if [ "$(gcc-version)" = "3.2" ]; then
+		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
+	fi
+
 	addpredict /bin
 	local buildcmd=""
 
@@ -332,7 +351,7 @@ src_compile() {
 	# Enable new ccache for this build
 	elif [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
 	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
-	     -x /usr/bin/ccache ]
+	     -x /usr/bin/ccache -a ! -d /usr/bin/ccache ]
 	then
 		# Build uses its own env with $PATH, etc, so
 		# we take the easy way out. (Az)
