@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.4 2004/11/23 19:30:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.5 2004/11/24 19:19:22 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -76,11 +76,14 @@ fi
 
 # Common xdelta code
 
-SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
-for x in $XDELTA_DELTA; do
-	SRC_URI="$SRC_URI mirror://kde/$x"
-done
-SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+if [ -n "$XDELTA_BASE" ]; then # depends on $PV only, so is safe to modify SRC_URI inside it
+	SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
+	for x in $XDELTA_DELTA; do
+		SRC_URI="$SRC_URI mirror://kde/$x"
+	done
+	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+fi
+	
 debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
 
 # Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
