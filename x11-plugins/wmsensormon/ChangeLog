@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmsensormon
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.1 2003/01/28 22:46:48 raker Exp $
+
+*wmsensormon-1.2_beta (28 Jan 2003)
+
+  28 Jan 2003; Nick Hadaway <raker@gentoo.org> wmsensormon-1.2_beta.ebuild,
+  files/digest-wmsensormon-1.2_beta :
+  New ebuild.
