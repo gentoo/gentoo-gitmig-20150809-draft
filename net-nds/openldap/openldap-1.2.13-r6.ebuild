@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.13-r6.ebuild,v 1.6 2002/08/16 03:55:04 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.13-r6.ebuild,v 1.7 2002/10/04 06:15:55 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
