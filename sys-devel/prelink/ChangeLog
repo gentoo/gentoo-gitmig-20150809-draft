@@ -1,10 +1,16 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.6 2002/12/22 04:44:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.7 2003/01/02 02:56:12 azarah Exp $
+
+*prelink-20021213 (02 Jan 2003):
+
+  02 Jan 2003; Martin Schlemmer <azarah@gentoo.org> prelink-20021213.ebuild :
+  Update version.
 
 *prelink-20021002-r1 (05 Dec 2002):
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords.
  
   05 Dec 2002; Martin Schlemmer <azarah@gentoo.org> prelink-20021002-r1.ebuild :
   Do not run the undosyslibs.sh test, as it always fails if glibc is prelinked.
