@@ -1,9 +1,16 @@
 # ChangeLog for app-i18n/skkinput
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.1 2002/11/06 05:33:42 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.2 2002/11/07 16:55:45 nakano Exp $
 
 *skkinput-2.05.ebuild (6 Nov 2002)
 
-  6 Nov 2002; Masatomo Nakano <nakano@gentoo.org> skkinput-2.05.ebuild :
+  8 Nov 2002; Masatomo Nakano <nakano@gentoo.org> skkinput-2.05.ebuild,
+	ChangeLog :
+
+  modified KEYWORDS from ~x86 to x86
+
+  6 Nov 2002; Masatomo Nakano <nakano@gentoo.org> skkinput-2.05.ebuild,
+  files/digest-skkinput-2.0, ChangeLog :
+
   initial import
 

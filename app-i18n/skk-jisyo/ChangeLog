@@ -1,13 +1,19 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.4 2002/11/06 06:03:41 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.5 2002/11/07 16:55:27 nakano Exp $
 
 *skk-jisyo-200211 (06 Nov 2002)
+
+  08 Nov 2002; Masatomo Nakano <nakano@gentoo.org> skk-jisyo-200211.ebuild,
+  ChangeLog :
+
+  modified KEYWORDS from ~x86 to x86
 
   06 Nov 2002; Masatomo Nakano <nakano@gentoo.org> skk-jisyo-200211.ebuild,
   files/digest-skk-jisyo-200211, ChangeLog :
 
   New version. Thanks to matsuu@7501.net (MATSUU Takuto) in bug #10305.
+
 
 *skk-jisyo-200210 (26 Oct 2002)
 
