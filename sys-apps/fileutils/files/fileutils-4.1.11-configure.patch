@@ -1,0 +1,11 @@
+--- fileutils-4.1.11/configure.orig	2002-09-25 16:08:45.000000000 +0200
++++ fileutils-4.1.11/configure	2002-09-25 16:05:52.000000000 +0200
+@@ -33236,7 +33236,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   jm_cv_sys_struct_winsize_needs_sys_ptem_h=yes
+-      if test $am_cv_sys_posix_termios = yes; then
++      if test "${am_cv_sys_posix_termios}" = yes; then
+ 	cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ #include "confdefs.h"

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.6 2002/07/14 19:20:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.7 2002/09/25 14:29:50 azarah Exp $
+
+*fileutils-4.1.11 (25 Sep 2002)
+
+  25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Update version.  Seems acl is included in this release.
 
 *fileutils-4.1.8-r2 (04 May 2002)
 
