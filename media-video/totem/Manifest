@@ -1,4 +1,5 @@
 MD5 597db12788ed059bace43622c59274b9 totem-0.99.5.ebuild 1303
+MD5 9b37c8b22626242de0c3f5be70ea8879 totem-0.99.7.ebuild 1302
 MD5 9b37c8b22626242de0c3f5be70ea8879 totem-0.99.6.ebuild 1302
 MD5 62a834e43941fb7d1a0d445d5317732e totem-0.99.1.ebuild 910
 MD5 386c3a4c9042b97499080a645a51d4fb ChangeLog 3449
@@ -6,3 +7,4 @@ MD5 dafbcb3d4280b4a0802bb5cd74f74c98 metadata.xml 559
 MD5 a34eba707248ed75430185ae674a1723 files/digest-totem-0.99.1 65
 MD5 c24abb8ac12e32b2372e91d65343cc34 files/digest-totem-0.99.5 65
 MD5 d7987155dea6d847ae81853c461f7de0 files/digest-totem-0.99.6 65
+MD5 de48e6636ec8a8884f4e17cadbb89d82 files/digest-totem-0.99.7 65
