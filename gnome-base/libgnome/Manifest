@@ -1,5 +1,4 @@
 MD5 c5ca25f14e75b9fcaf16d097f5b5ff29 libgnome-2.4.0.ebuild 818
-MD5 94aa184fd8d10fea661dc45e7d631cbe libgnome-2.6.1.1.ebuild 826
 MD5 06e14e15235f634153d1d11cd9e4e3b6 libgnome-2.6.0.ebuild 813
 MD5 b03b2054d3613a8f8cb4603a570abaf6 libgnome-2.6.1.1-r1.ebuild 913
 MD5 a52ec4266aa7f84dd6724e454d1dbb93 ChangeLog 6724
@@ -8,6 +7,5 @@ MD5 2b0de98dc555c8799312fd2df376ef37 libgnome-2.6.1.2.ebuild 825
 MD5 855dcd3c74ed050bee4e7f8d50a3b870 files/digest-libgnome-2.4.0 67
 MD5 db85dc1051fbaabe3ef0b73fa8c6f13c files/digest-libgnome-2.6.0 68
 MD5 971c1f5de6aa1275e6e49d2026058beb files/digest-libgnome-2.6.1.1-r1 70
-MD5 971c1f5de6aa1275e6e49d2026058beb files/digest-libgnome-2.6.1.1 70
 MD5 145e53730390dfc40b6d0f90d57c5fa6 files/digest-libgnome-2.6.1.2 70
 MD5 5c0b401f19aeb078f2fb6d04bbb545c0 files/libgnome-2.6.1.1-fix_sound.patch 515
