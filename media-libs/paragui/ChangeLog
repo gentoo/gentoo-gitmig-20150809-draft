@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.2 2002/05/02 10:29:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.3 2002/05/19 23:55:58 rphillips Exp $
 
 *paragui-1.0.1-r1 (2 May 2002) 
+
+  19 May 2002; Ryan Phillips <rphillips@gentoo.org> paragui-1.0.1-r1.ebuild :
+
+  Added expat dependency
+
   02 May 2002; Spider <spider@gentoo.org> paragui-1.0.1-r1.ebuild
   Fix a missing S= 
 
