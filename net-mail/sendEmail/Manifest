@@ -1,4 +1,14 @@
-MD5 8045a485a0c6cf213bf67bd282e465a7 sendEmail-1.42.ebuild 646
-MD5 1e37fde8429eadaf6d6acecbf664e815 ChangeLog 405
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b9f68f9955ecadf0fa14e09373804b67 metadata.xml 696
+MD5 8921ab45cb985cdaff9b5b1a8e8e6c23 sendEmail-1.42.ebuild 645
+MD5 3e5161342133d2ddcd4a74df0d52873b ChangeLog 504
 MD5 09a6b718ff080adf3ca92b588f56b8e8 files/digest-sendEmail-1.42 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBQYJ4KSoOBZY9iUIRAo3BAJ9+elSZe9k0behXTkk9p4uJq1MvLwCfeVpw
+hdbKZB78gJJkc5ccPApBwMw=
+=KFy9
+-----END PGP SIGNATURE-----
