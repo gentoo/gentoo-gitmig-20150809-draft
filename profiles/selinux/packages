@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.4 2004/03/18 19:21:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.5 2004/04/02 19:47:26 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -41,6 +41,5 @@
 >=sys-kernel/vanilla-sources-2.6.0
 ##############################################################################
 
-*net-firewall/iptables
 *virtual/bootloader
 -*virtual/dev-manager
