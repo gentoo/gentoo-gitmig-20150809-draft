@@ -1,3 +1,6 @@
+#still not working:
+=sys-libs/ncurses-5.2-r4
+
 #wget-1.7-r2 works, but Aron wants to make sure there's no impact to
 #buildcd, etc.
 =net-misc/wget-1.7-r2
@@ -68,7 +71,6 @@ app-admin/va-systemimager-server
 app-admin/va-systemimager-client
 <media-video/avifile-0.7.0
 >=dev-lang/python-2.1
->=sys-libs/ncurses-5.2-r4
 >=sys-apps/texinfo-4.0c
 >=media-libs/pdflib-4.0.0
 >=berlin-base/berlin-0.2.2
