@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.171 2004/07/10 23:27:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.172 2004/07/21 14:08:23 stuart Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -221,6 +221,7 @@ sdl - Adds support for Simple Direct Layer (media library)
 selinux - !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
 session - Adds persistent session support
 shared - Adds support for building shared objects
+sharedmem - Adds support for shared memory use
 simplexml - support for simplexml
 slang - Adds support for the slang text display library (it's like ncurses, but different)
 slp - Adds Service Locator Protocol support to CUPS
