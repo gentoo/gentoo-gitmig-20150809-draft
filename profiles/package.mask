@@ -5,6 +5,9 @@
 #this fixes that.  devlopers give it a shot
 =net-misc/rsync-2.5.4-r1
 
+# new python ebuild is half baked... it breaks portage (fchksum)
+=dev-lang/python-2.2-r6
+
 #for developers only -- right now (drobbins, 16 Apr 2002)
 =sys-apps/portage-1.9.0
 
