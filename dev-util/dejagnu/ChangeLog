@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/dejagnu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.4 2004/03/01 11:27:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.5 2004/05/07 12:38:11 lv Exp $
+
+*dejagnu-1.4.4-r1 (07 May 2004)
+
+  07 May 2004; Travis Tilley <lv@gentoo.org>
+  +files/dejagnu-ignore-libwarning.patch, +dejagnu-1.4.4-r1.ebuild:
+  added patch to ignore linker warning when searching for 64bit libraries in
+  /lib and marked stable on amd64
 
   01 Mar 2004; David Holm <dholm@gentoo.org> dejagnu-1.4.4.ebuild:
   Added to ~ppc.
