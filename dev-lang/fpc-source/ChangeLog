@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/fpc-source
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/ChangeLog,v 1.1 2004/08/21 16:40:44 chriswhite Exp $
+
+*fpc-source-1.9.5_pre20040820 (22 Aug 2004)
+
+  22 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +fpc-source-1.9.5_pre20040820.ebuild:
+  Initial package import.  Adding myself as maintainer.
+
