@@ -1,11 +1,19 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.24 2003/10/20 05:11:33 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.25 2003/10/20 05:32:21 rphillips Exp $
   
   19 Oct 2003; Ryan Phillips <rphillips@gentoo.org> files/afs.rc.rc6:
   Added Steven Jenkins' init.d script patch
 
-*openafs-1.2.10 (06 Aug 2003)
+*openafs-1.2.10 (19 aug 2003)
+
+  19 Aug 2003; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild :
+  Removed afs.rc, kaserver-patch.diff, openafs-1.2.5-sunrpc-overflow.patch,
+  openafs-1.2.8-errno.patch since they are not used anymore.
+
+  Added Steven Jenkins' pinsta--execve-adhere patch. Fixes #26287
+
+*openafs-1.2.10 (06 aug 2003)
 
   06 Aug 2003; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.10.ebuild :
   Added Steven Jenkins' update. Fixes #26041 and a provisional fix for #15581
