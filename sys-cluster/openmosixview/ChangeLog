@@ -1,6 +1,6 @@
-# ChangeLog for app-admin/openmosixview
+# ChangeLog for sys-cluster/openmosixview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/ChangeLog,v 1.1 2003/10/16 10:07:49 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/ChangeLog,v 1.2 2003/10/18 07:17:26 vapier Exp $
 
 *openmosixview-1.5 (24 Jul 2003)
 
