@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.4 2004/04/18 20:00:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.5 2004/05/07 01:23:35 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ogre/${PN}-linux_osx-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ppc"
 IUSE="doc gtk"
 
 RDEPEND="virtual/opengl
@@ -19,15 +19,17 @@ RDEPEND="virtual/opengl
 	media-libs/devil
 	gtk? (
 		=dev-cpp/libglademm-2*
-		=dev-cpp/gtkmm-2*
-	)
+		=dev-cpp/gtkmm-2* )
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	x86? || amd64? ( >=media-gfx/nvidia-cg-toolkit-1.2 )
+	x86? ( >=media-gfx/nvidia-cg-toolkit-1.2 )
+	amd64? ( >=media-gfx/nvidia-cg-toolkit-1.2 )
 	>=sys-apps/sed-4
-	|| ( dev-libs/STLport >=sys-devel/gcc-3.0 )"
+	|| (
+		dev-libs/STLport
+		>=sys-devel/gcc-3.0 )"
 
-S=${WORKDIR}/ogrenew
+S="${WORKDIR}/ogrenew"
 
 src_unpack() {
 	unpack ${A}
