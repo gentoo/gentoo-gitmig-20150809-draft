@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.4 2005/01/09 11:43:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.5 2005/03/17 21:55:55 luckyduck Exp $
 
 IUSE="alsa jack doc"
 
@@ -43,7 +43,7 @@ src_unpack() {
 	automake # this will fail because of bad upstream Makefile.am
 	autoconf || die
 
-	elibtoolize
+	libtoolize --copy --force
 }
 
 src_compile() {

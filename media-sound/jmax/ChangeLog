@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jmax
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.10 2005/01/09 11:43:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.11 2005/03/17 21:55:55 luckyduck Exp $
+
+  17 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml,
+  jmax-4.1.0.ebuild:
+  libtoolize, fixes #74760. also updated metadata.xml, torbenh is retired.
 
   09 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jmax-4.1.0.ebuild:
   added use_enable jack call to econf, fixes #67371.

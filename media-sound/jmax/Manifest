@@ -1,8 +1,18 @@
-MD5 054e093ae0404bed6b5afd0fab47dd8b jmax-4.1.0.ebuild 1664
-MD5 f7be2f6f0c006819ee2a8432873fab29 ChangeLog 1365
-MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 12b6edb19b41b9bd23db9e9ad7a2527f jmax-4.1.0.ebuild 1678
+MD5 bd44642495643521790fffbada1c45e0 ChangeLog 1528
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 14eb868795e30de75f2f6bcd7a962de3 files/jmax-4.1.0-gcc34.patch 968
 MD5 ce7938192f9fef7f13fa7fe709c6f3ad files/jmax-4.0.2-work_with_recent_alsa-lib.patch 991
 MD5 a2964306dfa904cce770a5be6a3492d0 files/jmax-4.1.0-otherArch.patch 651
 MD5 25c6fe2b25184c40b3096887923ecf85 files/jmax-4.1.0-fix-java-check.patch 1206
 MD5 bc96e130e7d54a74caa5c39641d6e898 files/digest-jmax-4.1.0 125
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOfz106ebR+OMO78RAgqmAJ4mHYxhJJKELwt32c78Ev1dNcqRAgCgmBIq
+tz20Hx87s/xZRkAlGvIPfiQ=
+=Xsuc
+-----END PGP SIGNATURE-----
