@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.27 2004/09/06 18:47:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.28 2004/09/10 19:51:32 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> xerces-2.6.0.ebuild,
+  xerces-2.6.1.ebuild, xerces-2.6.2-r1.ebuild, xerces-2.6.2.ebuild:
+  changed dependencies to ant-core
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> xerces-2.6.0.ebuild,
   xerces-2.6.1.ebuild, xerces-2.6.2-r1.ebuild, xerces-2.6.2.ebuild:

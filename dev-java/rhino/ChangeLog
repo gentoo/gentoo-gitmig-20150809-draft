@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.16 2004/09/04 13:02:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.17 2004/09/10 19:50:35 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> rhino-1.5_rc5.ebuild:
+  changed dependencies to ant-core
 
   04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> rhino-1.5_rc5.ebuild:
   stable on sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.1.ebuild,v 1.5 2004/09/06 18:47:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.1.ebuild,v 1.6 2004/09/10 19:51:32 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -16,7 +16,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
-DEPEND=">=dev-java/ant-1.5.2"
+DEPEND=">=dev-java/ant-core-1.5.2"
 RDEPEND=">=virtual/jdk-1.3"
 
 src_unpack() {

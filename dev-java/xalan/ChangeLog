@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.22 2004/09/06 00:10:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.23 2004/09/10 19:51:04 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> xalan-2.5.2.ebuild,
+  xalan-2.6.0.ebuild:
+  changed dependencies to ant-core
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> xalan-2.6.0.ebuild:
   Switch to use epause and ebeep, bug #62950

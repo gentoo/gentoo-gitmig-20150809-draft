@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5_rc5.ebuild,v 1.9 2004/09/04 13:02:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5_rc5.ebuild,v 1.10 2004/09/10 19:50:35 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64 sparc"
 IUSE="jikes doc"
 S="${WORKDIR}/${MY_P%%RC1}"
-DEPEND="dev-java/ant
+DEPEND="dev-java/ant-core
 	>=virtual/jdk-1.3
 	app-arch/unzip
 	jikes? ( dev-java/jikes )"
