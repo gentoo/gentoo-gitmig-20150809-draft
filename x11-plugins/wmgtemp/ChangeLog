@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmgtemp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.1 2002/10/07 16:24:05 raker Exp $
+
+*wmgtemp-0.6 (07 Oct 2002)
+
+  07 Oct 2002; Nick Hadaway <raker@gentoo.org> wmgtemp-0.6.ebuild,
+  files/digest-wmgtemp-0.6 :
+  New ebuild.  See bug #4888.  Added optimization and doc installation.
