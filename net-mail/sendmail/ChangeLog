@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.8 2002/07/12 21:57:42 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.9 2002/07/13 21:59:36 g2boojum Exp $
+
+*sendmail-8.12.4-r5 (13 Jul 2002)
+
+  13 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  sasl fixes; thanks to Jay 'Eraserhead' Felice
 
 *sendmail-8.12.4-r4 (12 Jul 2002)
 
