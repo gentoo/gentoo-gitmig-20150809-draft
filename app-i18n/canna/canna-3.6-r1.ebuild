@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6-r1.ebuild,v 1.1 2002/12/02 14:41:51 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6-r1.ebuild,v 1.2 2002/12/03 05:37:25 nakano Exp $
 
 MY_P="Canna36p1"
 S="${WORKDIR}/${MY_P}"
@@ -36,5 +36,6 @@ src_install () {
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*
 	exeinto /etc/init.d ; newexe ${FILESDIR}/canna.initd canna || die
 	insinto /etc/conf.d ; newins ${FILESDIR}/canna.confd canna || die
+	touch ${D}/var/log/canna/.keep || die
 }
 
