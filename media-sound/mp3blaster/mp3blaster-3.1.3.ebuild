@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.3.ebuild,v 1.11 2004/06/25 00:11:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.3.ebuild,v 1.12 2004/10/30 10:56:36 eradicator Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://www.stack.nl/~brama/mp3blaster/"
@@ -38,10 +40,10 @@ src_compile() {
 	use oggvorbis || myconf="${myconf} --without-oggvorbis"
 
 	econf ${myconf} || die
-	make CC="gcc ${CFLAGS}" CXX="c++ ${CXXFLAGS}" || die
+	make CC="$(tc-getCC) ${CFLAGS}" CXX="$(tc-getCXX) ${CXXFLAGS}" || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc ANNOUNCE AUTHORS COPYING CREDITS ChangeLog FAQ NEWS README TODO
+	make DESTDIR="${D}" install || die
+	dodoc ANNOUNCE AUTHORS CREDITS ChangeLog FAQ NEWS README TODO
 }
