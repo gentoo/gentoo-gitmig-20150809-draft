@@ -1,10 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.2.ebuild,v 1.6 2003/03/11 11:30:08 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4.ebuild,v 1.1 2003/03/16 10:05:31 azarah Exp $
+
+# This ebuild needs to be merged "live".  You can't simply make a package
+# of it and merge it later.
 
 IUSE="bootstrap build"
 
-SV="1.4.3.2"
+SV="1.4.3.4"
 SVREV=""
 # SysvInit version
 SVIV="2.84"
@@ -19,7 +22,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~arm ~hppa"
 
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.23"
@@ -34,10 +37,6 @@ RDEPEND="${DEPEND}
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 	   
-
-# This ebuild needs to be merged "live".  You can't simply make a package
-# of it and merge it later.
-
 pkg_setup() {
 
 	if [ "${ROOT}" = "/" ]
@@ -85,32 +84,43 @@ src_unpack() {
 		cp rc.conf rc.conf.orig
 		sed -e 's:KEYMAP="us":KEYMAP="sun":' rc.conf.orig >rc.conf || die
 		rm -f rc.conf.orig
-
-		cp inittab inittab.orig
-		sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
-			inittab.orig > inittab || die
-		rm -f inittab.orig
 	fi
 
-	# Fix mips specific stuff
-        if [ "${ARCH}" = "mips" ]
-        then
-                cd ${S}/etc
-                cp inittab inittab.orig
-                sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
-                        inittab.orig > inittab || die
-                rm -f inittab.orig
-        fi
+	# Add serial console ...
+	case ${ARCH} in
+		sparc|mips)
+			cp inittab inittab.orig
+			sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
+				inittab.orig > inittab || die
+			rm -f inittab.orig
+			;;
+	esac
+
+	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	then
+		# Sanity check to see if has version works
+		if has_version '>=sys-apps/baselayout-1.8' &> /dev/null
+		then
+			einfo "Checking if we need to tweak CONFIG_PROTECT_MASK"
+			# Make sure user get things updated first time he merge 1.8.6 ...
+			if ! has_version '>=sys-apps/baselayout-1.8.6' &> /dev/null
+			then
+				touch "${WORKDIR}/update_init_d"
+			fi
+		fi
+	fi
 }
 
 src_compile() {
+
+	[ -z "${CC}" ] && CC="gcc"
 
 	cp ${S}/sbin/runscript.c ${T}
 	cp ${S}/sbin/start-stop-daemon.c ${T}
 
 	cd ${T}
-	gcc ${CFLAGS} runscript.c -o runscript || die "cant compile runscript.c"
-	gcc ${CFLAGS} start-stop-daemon.c -o start-stop-daemon || die "cant compile start-stop-daemon.c"
+	${CC} ${CFLAGS} runscript.c -o runscript || die "cant compile runscript.c"
+	${CC} ${CFLAGS} start-stop-daemon.c -o start-stop-daemon || die "cant compile start-stop-daemon.c"
 	echo ${ROOT} > ${T}/ROOT
 
 	if [ -z "`use build`" ]
@@ -118,14 +128,17 @@ src_compile() {
 		# Build sysvinit stuff
 		cd ${S2}
 		einfo "Building sysvinit..."
-		emake LDFLAGS="" || die "problem compiling sysvinit"
+		emake CC="${CC}" \
+			LD="${CC}" \
+			LDFLAGS="" || die "problem compiling sysvinit"
 
 		if [ -f /usr/include/awk/awk.h ]
 		then
 			# Build gawk module
 			cd ${S}/src
 			einfo "Building awk module..."
-			make || {
+			make CC="${CC}" \
+				LD="${CC}" || {
 				eerror "Failed to build gawk module.  Make sure you have"
 				eerror "sys-apps/gawk-3.1.1-r1 or later installed"
 				die "problem compiling gawk module"
@@ -209,7 +222,7 @@ src_install() {
 	dosym ../../share/info	/usr/X11R6/share/info
 	# End FHS compatibility symlinks stuff
 		
-	for foo in doman ${FILESDIR}/MAKEDEV.8 ${S}/man/*
+	for foo in ${S}/man/*
 	do
 		[ -f ${foo} ] && doman ${foo}
 	done
@@ -304,6 +317,13 @@ src_install() {
 	doins ${S}/etc/env.d/00basic
 
 	keepdir /etc/devfs.d
+
+	keepdir /etc/modules.autoload.d
+	insinto /etc/modules.autoload.d
+	for foo in in ${S}/etc/modules.autoload.d/*
+	do
+		[ -f ${foo} ] && doins ${foo}
+	done
 	
 	keepdir /etc/modules.d
 	insinto /etc/modules.d
@@ -341,9 +361,9 @@ src_install() {
 	doexe ${S}/sbin/rc-daemon.sh
 	doexe ${S}/sbin/rc-help.sh
 	# Compat symlinks (some stuff have hardcoded paths)
-	dosym /sbin/depscan.sh /etc/init.d/depscan.sh
-	dosym /sbin/runscript.sh /etc/init.d/runscript.sh
-	dosym /sbin/functions.sh /etc/init.d/functions.sh
+	dosym ../../sbin/depscan.sh /etc/init.d/depscan.sh
+	dosym ../../sbin/runscript.sh /etc/init.d/runscript.sh
+	dosym ../../sbin/functions.sh /etc/init.d/functions.sh
 
 	# We can only install new, fast awk versions of scripts
 	# if 'build' or 'bootstrap' is not in USE.  This will
@@ -423,12 +443,43 @@ pkg_preinst() {
 
 	# Remove old backup /etc/conf.d/rc files ...
 	rm -f ${ROOT}/etc/conf.d/._cfg????_rc
+	# Remove old backup /etc/inittab files ...
+	rm -f ${ROOT}/etc/._cfg????_inittab
+
+	if [ -f ${ROOT}/etc/modules.autoload -a ! -d ${ROOT}/etc/modules.autoload.d ]
+	then
+		mkdir -p ${ROOT}/etc/modules.autoload.d
+		mv -f ${ROOT}/etc/modules.autoload \
+			${ROOT}/etc/modules.autoload.d/kernel-2.4
+		ln -snf modules.autoload.d/kernel-2.4 ${ROOT}/etc/modules.autoload
+	fi
+	
+	# Make sure user get things updated first time he merge 1.8.6 ...
+	if [ -f "${WORKDIR}/update_init_d" ]
+	then
+		# Update CONFIG_PROTECT_MASK to exclude /etc/init.d from
+		# CONFIG_PROTECT ...
+		ewarn "Changing CONFIG_PROTECT_MASK to ensure critical files are updated ..."
+		echo "CONFIG_PROTECT_MASK=\"/etc/init.d\"" \
+			> ${ROOT}/etc/env.d/99foo
+		etc-update &> /dev/null
+		export CONFIG_PROTECT_MASK="${CONFIG_PROTECT_MASK}:/etc/init.d"
+
+		if [ -d "${ROOT}/etc/init.d" ]
+		then
+			# Backup /etc/init.d if it exists ...
+			einfo "Backing up /etc/init.d ..."
+			cp -af "${ROOT}/etc/init.d" "${ROOT}/etc/init_d.old"
+		fi
+	fi
 }
 
 pkg_postinst() {
 
-	# Doing device node creation in pkg_postinst() now so they aren't recorded in CONTENTS.
-	# latest CVS-only version of Portage doesn't record device nodes in CONTENTS at all.
+	echo
+	# Doing device node creation in pkg_postinst() now so they aren't recorded
+	# in CONTENTS.  Latest CVS-only version of Portage doesn't record device
+	# nodes in CONTENTS at all.
 	defaltmerge
 	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
@@ -455,9 +506,17 @@ pkg_postinst() {
 				einfo "Using generic-mips to make device nodes..."
 				${ROOT}/usr/sbin/MAKEDEV generic-mips
 				;;
+			arm)
+				einfo "Using generic-arm to make device nodes..."
+				${ROOT}/usr/sbin/MAKEDEV generic-arm
+				;;
+			hppa)
+				einfo "Using generic-hppa to make device nodes..."
+				${ROOT}/usr/sbin/MAKEDEV generic-hppa
+				;;
 			*)
-				einfo "Using generic-i386 to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-i386
+				einfo "Using generic to make device nodes..."
+				${ROOT}/usr/sbin/MAKEDEV generic
 				;;
 		esac
 		
@@ -507,12 +566,17 @@ EOF
 	done
 
 	# Make sure we get everything ready for $svcdir that moved to
-	# /var/state/init.d ....
+	# /var/lib/init.d ....
 	if [ -z "`use build`" -a -z "`use bootstrap`" ]
 	then
+		local oldsvcdir="${svcdir}"
 		local rcconfd="`ls ${ROOT}/etc/conf.d/._cfg????_rc 2> /dev/null`"
+		local inittab="`ls ${ROOT}/etc/._cfg????_inittab 2> /dev/null`"
 
-		if [ -f "${rcconfd}" -a -z "`grep 'svcmount' ${ROOT}/etc/conf.d/rc`" ]
+		# Replace and backup /etc/conf.d/rc if needed ...
+		if [ -f "${rcconfd}" ] && \
+		   ([ -z "`grep 'svcmount' ${ROOT}/etc/conf.d/rc`" ] || \
+		    [ -z "`grep 'svcdir' ${ROOT}/etc/conf.d/rc | grep 'var\/lib\/init.d'`" ])
 		then
 			ewarn "Backing up your old /etc/conf.d/rc, and replacing with new!"
 			ewarn "This is needed, as \$svcdir moved from /mnt/.init.d to"
@@ -521,17 +585,34 @@ EOF
 			cp -f "${ROOT}/etc/conf.d/rc" "${ROOT}/etc/conf.d/rc.old"
 			mv -f "${rcconfd}"  "${ROOT}/etc/conf.d/rc"
 		fi
-	
+
+		# Replace and backup /etc/inittab if needed ...
+		if [ -f "${inittab}" ] && \
+		   [ -z "`grep 'si::sysinit:/sbin/rc sysinit' /etc/inittab`" ]
+		then
+			ewarn "Backing up your old /etc/inittab, and replacing with new!"
+			ewarn "This is needed, as there was critical changes to /sbin/rc."
+			echo
+			cp -f "${ROOT}/etc/inittab" "${ROOT}/etc/inittab.old"
+			mv -f "${inittab}"  "${ROOT}/etc/inittab"
+		fi
+
 		source ${ROOT}/etc/conf.d/rc
 
 		# Handle the ${svcdir} that changed in location
 		if [ ! -d "${ROOT}/${svcdir}/started" ]
 		then
+			einfo "Trying to move SVCDIR to new location..."
+			echo
 			mkdir -p "${ROOT}/${svcdir}"
 #			mount -t tmpfs tmpfs ${ROOT}/${svcdir}
-			if [ -d ${ROOT}/mnt/.init.d ]
+			if [ -d "${ROOT}/${oldsvcdir}/started" ]
 			then
-				cp -ax ${ROOT}/mnt/.init.d/* ${ROOT}/${svcdir}
+				cp -ax "${ROOT}/${oldsvcdir}"/* "${ROOT}/${svcdir}"
+				
+			elif [ -d "${ROOT}/mnt/.init.d/started" ]
+			then
+				cp -ax "${ROOT}/mnt/.init.d"/* "${ROOT}/${svcdir}"
 			fi
 		fi
 	fi
@@ -567,13 +648,33 @@ EOF
 	echo "Gentoo Base System version ${SV}" > ${ROOT}/etc/gentoo-release
 
 	echo
+	ewarn "Please be sure to update all pending '._cfg*' files in /etc are updated,"
+	ewarn "else things might break at your next reboot!  You can use 'etc-update'"
+	ewarn "to accomplish this:"
+	echo
+	ewarn "  # etc-update"
+	echo
+	
+	if [ -f "${ROOT}/etc/env.d/99foo" ]
+	then
+		echo
+		ewarn "Due to large changes from 1.8.5 to 1.8.6, all your files in /etc/init.d"
+		ewarn "have been updated automatically.  If you did make any changes directly"
+		ewarn "to your old files, they can be found in /etc/init_d.old.  Please just"
+		ewarn "make sure to edit the new files, and not just copy the old over!"
+		echo
+
+		rm -f "${ROOT}/etc/env.d/99foo"
+	fi
+
+	echo
 	einfo "Please note that /sbin/update-modules moved to /sbin/modules-update"
 	einfo "for consistency reasons."
 	echo
-	ewarn "Please be sure to update all scripts in /etc/init.d/ as well as"
-	ewarn "/etc/inittab to the latest versions, else things might break at"
-	ewarn "your next reboot!"
-	echo
+
+	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+	sleep 8
 }
 
 pkg_postrm() {
