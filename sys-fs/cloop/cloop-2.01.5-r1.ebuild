@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5.ebuild,v 1.4 2005/01/12 18:11:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5-r1.ebuild,v 1.1 2005/01/12 18:11:53 genstef Exp $
 
-inherit kernel-mod eutils versionator
+inherit linux-mod eutils versionator
 
 DESCRIPTION="Compressed filesystem loopback kernel module"
 HOMEPAGE="http://www.knopper.net/knoppix/"
@@ -15,39 +15,36 @@ IUSE=""
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 
 pkg_setup() {
-	if kernel-mod_is_2_4_kernel ;
+	CONFIG_CHECK="ZLIB_INFLATE"
+	if kernel_is 2 4
 	then
-		kernel-mod_configoption_present ZLIB_DEFLATE || \
-			die "You need ZLIB_DEFLATE support in your kernel!"
+		CONFIG_CHECK="${CONFIG_CHECK} ZLIB_DEFLATE"
 	fi
-	kernel-mod_configoption_present ZLIB_INFLATE || \
-		die "You need ZLIB_INFLATE support in your kernel!"
-	kernel-mod_check_modules_supported
+	MODULE_NAMES="cloop(fs:)"
+	BUILD_TARGETS="all"
+	BUILD_PARAMS="KVERSION=${KV_FULL} KERNEL_DIR=${KV_DIR}"
+	linux-mod_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/kernel26_amd64.patch
-	kernel-mod_is_2_6_kernel && [ "${KV_PATCH}" -gt 7 ] && epatch ${FILESDIR}/kernel-2.6.8-fs_h-fix.patch
+	epatch ${FILESDIR}/cloop.fix-Makefile-for-kernel-2.6-and-amd64.patch
+	epatch ${FILESDIR}/cloop.fix-incompatible-kernel-2.6.7-and-later.patch
 	cd ${S}
-	epatch ${FILESDIR}/cloop.fix.patch
-	epatch ${FILESDIR}/cloop.zlib-amd64.patch
+	epatch ${FILESDIR}/cloop.fix-7z-syntax-for-gcc-3.4.patch
+	epatch ${FILESDIR}/cloop.fix-create_compressed_fs-segfault-on-amd64.patch
 
 	# Debian uses conf.vars, everyone else uses .config
 	sed -i "s:conf.vars:.config:" Makefile
 
 	# Remove erroneous 2.4 include
-	kernel-mod_is_2_4_kernel && \
+	has_version =sys-kernel/linux-headers-2.4.* && \
 		sed -i "s:#include <netinet/in.h>::" advancecomp-1.9_create_compressed_fs/advfs.cc
 }
 
-src_compile() {
-	kernel-mod_src_compile
-}
-
 src_install() {
-	insinto /lib/modules/${KV_VERSION_FULL}/misc
-	kernel-mod_is_2_4_kernel && doins cloop.o || doins cloop.ko
+	linux-mod_src_install
+
 	dobin create_compressed_fs extract_compressed_fs
 	cp debian/create_compressed_fs.1 debian/extract_compressed_fs.1
 	doman debian/create_compressed_fs.1 debian/extract_compressed_fs.1
@@ -55,7 +52,8 @@ src_install() {
 }
 
 pkg_postinst () {
-	if kernel-mod_is_2_4_kernel ; then
+	if kernel_is 2 4
+	then
 		einfo "Adding /dev/cloop devices"
 		if [ -e /dev/cloop ] ; then
 			rm -f /dev/cloop
@@ -67,7 +65,5 @@ pkg_postinst () {
 		mknod /dev/cloop1 b 240 1 || die
 	fi
 
-	einfo "Checking kernel module dependencies"
-	test -r "${ROOT}/usr/src/linux/System.map" && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
+	linux-mod_pkg_postinst
 }

@@ -1,0 +1,69 @@
+diff -ru cloop-2.01/Makefile cloop-2.01.new/Makefile
+--- cloop-2.01/Makefile	2004-05-14 14:17:51.000000000 -0500
++++ cloop-2.01.new/Makefile	2004-07-21 16:26:59.167257880 -0500
+@@ -1,18 +1,51 @@
+ #!/usr/bin/make
+ 
+-KERNEL_DIR=/usr/src/linux
++KVERSION=$(shell uname -r)
++MACHINE=$(shell uname -m)
++KERNEL_DIR=/lib/modules/$(KVERSION)/build
++KERNEL_INCLUDE=$(KERNEL_DIR)/include
++INCLUDE_26:=-include $(KERNEL_INCLUDE)/config/modversions.h -include $(KERNEL_INCLUDE)/linux/version.h
++INCLUDE_24:=-include $(KERNEL_INCLUDE)/linux/modversions.h
++
++file_exist=$(shell test -f $(1) && echo yes || echo no)
++
++# test for 2.6 or 2.4 kernel
++ifeq ($(call file_exist,$(KERNEL_DIR)/Rules.make), yes)
++PATCHLEVEL:=4
++else
++PATCHLEVEL:=6
++endif
+ 
+ ifdef APPSONLY
+ CFLAGS:=-Wall -Wstrict-prototypes -Wno-trigraphs -O2 -s -I. -fno-strict-aliasing -fno-common -fomit-frame-pointer 
+ else
+-include $(KERNEL_DIR)/.config
++ifeq ($(PATCHLEVEL),4)
+ include $(KERNEL_DIR)/conf.vars
++else
++include $(KERNEL_DIR)/.config
++endif
+ endif
+ 
+ CKERNOPS:=-D__KERNEL__ -DMODULE -fno-builtin -nostdlib -DKBUILD_MODNAME="cloop" -DKBUILD_BASENAME="cloop"
+ 
++# I needed this for my amd64 system running 2.6.7
++# it maybe required for 2.6, so I add it here
++ifeq ($(PATCHLEVEL),6)
++CKERNOPS+= -D__OPTIMIZE__
++endif
++
++# check for amd64
++ifeq ($(MACHINE),x86_64)
++CKERNOPS+=-mno-red-zone -mcmodel=kernel
++endif
++
+ ifdef CONFIG_MODVERSIONS
+-MODVERSIONS:= -DMODVERSIONS -include $(KERNEL_DIR)/include/linux/modversions.h
++MODVERSIONS:= -DMODVERSIONS
++ifeq ($(PATCHLEVEL),4)
++MODVERSIONS+=$(INCLUDE_24)
++else
++MODVERSIONS+=$(INCLUDE_26)
++endif
+ CKERNOPS += $(MODVERSIONS)
+ endif
+ 
+diff -ru cloop-2.01/advancecomp-1.9_create_compressed_fs/advfs.cc cloop-2.01.new/advancecomp-1.9_create_compressed_fs/advfs.cc
+--- cloop-2.01/advancecomp-1.9_create_compressed_fs/advfs.cc	2004-04-18 15:33:29.000000000 -0500
++++ cloop-2.01.new/advancecomp-1.9_create_compressed_fs/advfs.cc	2004-07-20 11:55:28.000000000 -0500
+@@ -30,6 +30,7 @@
+ #include "utility.h"
+ #include "compress.h"
+ #include "siglock.h"
++#define __OPTIMIZE__
+ #include <netinet/in.h>
+ 
+ #include "lib/mng.h"
