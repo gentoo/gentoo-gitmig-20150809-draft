@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.17 2002/10/27 18:59:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.18 2002/11/23 14:54:43 vapier Exp $
 
-IUSE="freetype postgres tiff libwww nls jpeg readline ssl gd #java mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb firebird pam oci8"
+IUSE="freetype postgres tiff libwww nls jpeg readline ssl gd mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb firebird pam oci8" #java
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -200,4 +199,3 @@ pkg_postinst() {
 	einfo "There is no security compiled in."	
 	einfo
 }
-
