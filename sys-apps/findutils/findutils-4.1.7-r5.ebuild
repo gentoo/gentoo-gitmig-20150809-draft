@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.9 2004/06/24 22:06:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.10 2004/06/25 20:59:22 agriffis Exp $
 
 IUSE="nls build afs"
 
@@ -39,8 +39,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	# Detect mips properly
-	use mips && gnuconfig_update
+	# Detect new systems properly
+	gnuconfig_update
 
 	use nls || myconf="${myconf} --disable-nls"
 

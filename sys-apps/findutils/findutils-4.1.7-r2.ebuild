@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.15 2004/06/24 22:06:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.16 2004/06/25 20:59:22 agriffis Exp $
 
 IUSE="nls build afs"
 
@@ -53,7 +53,7 @@ src_install() {
 
 	dosed "s:TMPDIR=/usr/tmp:TMPDIR=/tmp:" usr/bin/updatedb
 	rm -rf ${D}/usr/var
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		dodoc COPYING NEWS README TODO ChangeLog
 	else

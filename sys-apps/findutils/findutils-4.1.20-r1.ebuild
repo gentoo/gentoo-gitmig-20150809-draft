@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.20 2004/06/24 22:06:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.21 2004/06/25 20:59:21 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -31,9 +31,7 @@ src_unpack() {
 	cd ${S}
 
 	# Detect new systems properly
-	use mips && gnuconfig_update
-	use ppc64 && gnuconfig_update
-	use sh && gnuconfig_update
+	gnuconfig_update
 
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
