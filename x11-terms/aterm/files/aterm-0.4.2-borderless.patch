@@ -81,7 +81,7 @@ diff -Bru aterm-cvs/src/rxvt.h aterm-cvs-modif/src/rxvt.h
  #define Opt_scrollKeypress	(1LU<<12)
  #define Opt_transparent		(1LU<<13)
  #define Opt_transparent_sb	(1LU<<14)
-+#define Opt_borderLess		(1LU<<15)
++#define Opt_borderLess		(1LU<<16)
  
  /* place holder used for parsing command-line options */
  #define Opt_Boolean		(1LU<<31)
