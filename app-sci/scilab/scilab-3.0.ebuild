@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-3.0.ebuild,v 1.4 2004/09/14 15:51:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-3.0.ebuild,v 1.5 2004/12/01 07:31:07 phosphan Exp $
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Scilab/distributions/${P}.src.tar.gz"
@@ -63,8 +63,10 @@ src_compile() {
 	use tcltk || myopts="${myopts} --without-tk"
 	use Xaw3d || myopts="${myopts} --without-xaw3d"
 	use atlas && myopts="${myopts} --with-atlas-library=/usr/lib"
-	use gtk2 && myopts="${myopts} --with-gtk2" || \
-		use gtk && myopts="${myopts} --with-gtk"
+	if use gtk; then
+		use gtk2 && myopts="${myopts} --with-gtk2" || \
+			myopts="${myopts} --with-gtk"
+	fi
 
 	econf ${myopts} || die
 	env HOME=${S} make all || die

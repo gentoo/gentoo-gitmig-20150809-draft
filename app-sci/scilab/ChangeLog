@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.23 2004/11/26 14:18:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.24 2004/12/01 07:31:07 phosphan Exp $
+
+  01 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> scilab-3.0.ebuild:
+  Correcting gtk/gtk2 handling (bug #70053)
 
   27 Nov 2004; Joseph Jezak <josejx@gentoo.org> scilab-2.7-r3.ebuild:
   Marked ~ppc for bug #71458.
