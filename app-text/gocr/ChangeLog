@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.15 2004/03/21 19:16:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.16 2004/04/26 11:38:08 obz Exp $
+
+  26 Apr 2004; Mike Gardiner <obz@gentoo.org> gocr-0.37.ebuild,
+  gocr-0.39.ebuild:
+  Marked stable on x86
 
   22 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> gocr-0.3.6-r2.ebuild,
   gocr-0.3.6-r3.ebuild, gocr-0.37.ebuild, gocr-0.39.ebuild:
