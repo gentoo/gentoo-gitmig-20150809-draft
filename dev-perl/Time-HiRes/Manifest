@@ -2,10 +2,10 @@ MD5 f8d37ae1383ab91ab39fe8f4138bfb78 ChangeLog 3463
 MD5 f44a3daa03576f43f3fce001635c5e2f Time-HiRes-1.42.ebuild 572
 MD5 b7443f0c81a09219ca2948b28007039e Time-HiRes-1.47.ebuild 581
 MD5 6435cdd0752a5c238bc84c213444f1f0 Time-HiRes-1.50.ebuild 584
-MD5 4be3ba459863b617351acac27909aa57 Time-HiRes-1.54.ebuild 559
-MD5 69687e6efdfe0f82bf55123b104228e2 Time-HiRes-1.59.ebuild 588
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 df9448d35192c36c7bc0641fe8c8484e Time-HiRes-1.66.ebuild 593
+MD5 4be3ba459863b617351acac27909aa57 Time-HiRes-1.54.ebuild 559
+MD5 2fd58fcc0cd8ae57967cc437fd3487d8 Time-HiRes-1.59.ebuild 614
+MD5 481cc55514cf0dd50bdeac8f8ffe8820 Time-HiRes-1.66.ebuild 623
 MD5 f33ad522a8c32c6292406a7e04636273 files/digest-Time-HiRes-1.42 66
 MD5 0b0c0d302e6afc7a1c06225ec6c9d607 files/digest-Time-HiRes-1.47 66
 MD5 48f5411006791142fe05e6140def5e5e files/digest-Time-HiRes-1.50 66
