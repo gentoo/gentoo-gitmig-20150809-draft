@@ -3,3 +3,4 @@ if [ $1 = "start" -o $1 = "install" ]; then
 	# fix location of SQL tables
 	sed -e "s|../tables/|${VHOST_ROOT}/${PN}/tables/|" -i ${MY_INSTALLDIR}/config_setup.php
 fi
+# we don't clean up because the user should have removed config_setup.php per postinstall instructions
