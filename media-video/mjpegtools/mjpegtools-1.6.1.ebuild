@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.9 2003/08/06 13:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.10 2003/08/26 00:56:47 max Exp $
 
 inherit gcc libtool flag-o-matic base
 
@@ -24,7 +24,7 @@ RDEPEND="media-libs/jpeg
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0.5
 	x86? ( media-libs/libmovtar )
-	avi? ( media-video/avifile )
+	avi? ( <media-video/avifile-0.7.38 )
 	quicktime? ( virtual/quicktime )
 	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )
 	mmx? ( dev-lang/nasm )

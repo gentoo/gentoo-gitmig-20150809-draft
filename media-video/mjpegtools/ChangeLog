@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.31 2003/08/04 18:34:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.32 2003/08/26 00:56:47 max Exp $
+
+  25 Aug 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.0-r7.ebuild,
+  mjpegtools-1.6.1.ebuild:
+  Require avifile < 0.7.38. Doesn't compile with the newest version.
 
   04 Aug 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7.ebuild,
   mjpegtools-1.6.1.ebuild:
