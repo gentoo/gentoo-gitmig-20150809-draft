@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1037 2005/03/24 17:52:25 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1038 2005/03/25 01:21:21 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -763,15 +763,15 @@ sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:xattr - enables extended attributes
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-process/procps:n32 - Enable n32 ABI support on mips
-www-app/dspam-web:cyrus - Build delivery options for cyrus-imapd
-www-app/dspam-web:exim - Build with delivery options for exim
-www-app/dspam-web:large-domain - Builds for large domain rather than for domain scale
-www-app/dspam-web:maildrop - Build with delivery options for maildrop
-www-app/dspam-web:neural - Build neural support for dspam
-www-app/dspam-web:procmail - Build procmail filter support
-www-app/dspam-web:sqlite - Build sqlite 2 support
-www-app/dspam-web:sqlite3 - Build sqlite 2 support
-www-app/dspam-web:virtual-users  - Build with virtual-users support
+www-apps/dspam-web:cyrus - Build delivery options for cyrus-imapd
+www-apps/dspam-web:exim - Build with delivery options for exim
+www-apps/dspam-web:large-domain - Builds for large domain rather than for domain scale
+www-apps/dspam-web:maildrop - Build with delivery options for maildrop
+www-apps/dspam-web:neural - Build neural support for dspam
+www-apps/dspam-web:procmail - Build procmail filter support
+www-apps/dspam-web:sqlite - Build sqlite 2 support
+www-apps/dspam-web:sqlite3 - Build sqlite 2 support
+www-apps/dspam-web:virtual-users  - Build with virtual-users support
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
