@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.16 2004/11/14 17:15:37 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.17 2004/11/21 19:58:31 ciaranm Exp $
+
+*gentoo-syntax-20041121 (21 Nov 2004)
+
+  21 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20041121.ebuild:
+  New version. Changes include error highlighting for EXTRA_ECONF and cat
+  abuse, improved highlighting for ChangeLogs and package.keywords, new syntax
+  highlighting for make.conf and a bugsummary plugin (move the cursor over a
+  bug number and enter <Leader>bug for a summary).
 
   14 Nov 2004; Steve Arnold <nerdboy@gentoo.org>
   gentoo-syntax-20041009.ebuild:
