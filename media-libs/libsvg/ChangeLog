@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/libsvg
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.1 2004/03/17 23:43:28 twp Exp $
+
+*libsvg-0.1.2 (18 Mar 2004)
+
+  18 Mar 2004; Tom Payne <twp@gentoo.org> libsvg-0.1.2.ebuild :
+  Initial commit.
