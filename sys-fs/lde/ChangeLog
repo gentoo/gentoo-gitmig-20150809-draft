@@ -1,0 +1,8 @@
+# ChangeLog for sys-fs/lde
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lde/ChangeLog,v 1.1 2003/09/26 08:46:36 vapier Exp $
+
+*lde-2.6.0 (26 Sep 2003)
+
+  26 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
