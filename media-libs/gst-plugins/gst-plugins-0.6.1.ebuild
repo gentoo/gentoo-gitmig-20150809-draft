@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.1.ebuild,v 1.1 2003/04/19 11:40:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.1.ebuild,v 1.2 2003/04/20 13:27:35 foser Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -106,7 +106,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-alsa"
 	use arts \
 		&& myconf="${myconf} --enable-arts --enable-artsc" \
-		|| myconf="${myconf} --disable-arts --enable-artsc"
+		|| myconf="${myconf} --disable-arts --disable-artsc"
 	use encode \
 		&& myconf="${myconf} --enable-lame" \
 		|| myconf="${myconf} --disable-lame"

@@ -1,9 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.29 2003/04/19 11:40:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.30 2003/04/20 13:27:35 foser Exp $
 
 *gst-plugins-0.6.1 (19 Apr 2003)
+
+  20 Apr 2003; foser <foser@gentoo.org> gst-plugins-0.6.{0-r4.1}.ebuild :
+  Fixed arts disable line for configure (#19640)
 
   19 Apr 2003; foser <foser@gentoo.org> gst-plugins-0.6.1.ebuild :
   reenabled v4l stuff, removed some incorporated patches
