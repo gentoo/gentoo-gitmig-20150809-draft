@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.86-r1.ebuild,v 1.2 2003/06/27 14:21:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.86-r1.ebuild,v 1.3 2003/07/21 09:35:14 johnm Exp $
 
 inherit virtualx
 
@@ -30,7 +30,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	motif? ( virtual/motif
 		app-text/recode )
 	opengl? ( virtual/opengl )
-	quicktime? ( media-libs/libquicktime )"
+	quicktime? ( virtual/quicktime )"
 
 src_compile() {
 	local myconf
