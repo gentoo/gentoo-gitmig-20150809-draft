@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cd-discid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.3 2002/12/13 10:59:41 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.4 2003/01/19 03:43:13 kain Exp $
+
+  18 Jan 2003; Bryon Roche <kain@kain.org> ChangeLog, cd-discid-0.6.ebuild :
+
+  Added ppc to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

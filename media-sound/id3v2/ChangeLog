@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.1 2002/05/22 20:24:55 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.2 2003/01/19 03:47:42 kain Exp $
+
+  18 Jan 2003; Bryon Roche <kain@kain.org> ChangeLog, id3v2-0.1.7.ebuild :
+
+  Added ppc to keywords.
 
 *id3v2-0.1.7 (22 May 2002)
 
