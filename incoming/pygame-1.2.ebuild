@@ -12,8 +12,8 @@ SRC_URI="http://www.pygame.org/ftp/${P}.tar.gz"
 HOMEPAGE="http://www.pygame.org/"
 
 #build-time dependencies
-DEPEND=">=media-libs/libsdl-1.2.0
-	>=dev-lang/python-2.0
+DEPEND="virtual/python
+	>=media-libs/libsdl-1.2.0
 	>=media-libs/sdl-ttf-2.0.3
 	>=media-libs/sdl-image-1.2.0
 	>=media-libs/sdl-mixer-1.2.0
@@ -21,11 +21,11 @@ DEPEND=">=media-libs/libsdl-1.2.0
 	>=media-libs/smpeg-0.4.4"
 
 src_compile() {
-	try python setup.py build
+	python setup.py build || die
 }
 
 src_install () {
-	echo ${D}
-	try python setup.py install --prefix=${D}/usr
+	python setup.py install --prefix=${D}/usr || die
+	dodoc README.TXT WHATSNEW
 }
 
