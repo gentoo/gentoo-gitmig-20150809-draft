@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.3 2001/06/07 01:45:52 achim Exp $
+# /home/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.3 2001/06/07 01:45:52 achim Exp
 
 V=2.1
 A=${P}.tar.bz2
@@ -29,7 +29,7 @@ RDEPEND=">=sys-devel/gcc-2.95.2
          >=media-libs/tiff-3.5.5
          >=sys-apps/bzip2-1.0.1
 	 >=x11-libs/qt-x11-2.3.0
-         =kde-base/kde-env-2.1
+         =kde-base/kde-env-2.1-r1
          app-text/sgml-common
          alsa? ( >=media-libs/alsa-lib-0.5.9 )
          ssl? ( >=dev-libs/openssl-0.9.6 )"
