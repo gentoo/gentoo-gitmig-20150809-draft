@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.10 2005/02/17 13:00:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.11 2005/03/02 23:23:36 j4rg0n Exp $
 
 inherit eutils elisp-common
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
 LICENSE="gnuplot"
 
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc ~ppc-macos ~ppc ppc64 alpha"
+KEYWORDS="x86 amd64 ~sparc ppc-macos ~ppc ppc64 alpha"
 IUSE="doc emacs gd ggi pdflib plotutils png readline svga X xemacs"
 
 DEPEND="
