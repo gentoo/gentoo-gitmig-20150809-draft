@@ -440,39 +440,45 @@ def doebuild(myebuild,mydo,checkdeps=1):
 	settings["D"]=settings["BUILDDIR"]+"/image/"
 	
 	#initial ebuild.sh bash environment configured
-	
-	if mydo in ["prerm","postrm","preinst","postinst","config","touch","clean","digest","unmerge"]:
-		#no dep check needed
-		pass
-	elif mydo=="depend":
-		return string.split(getoutput("/usr/sbin/ebuild.sh depend"),"\n")
-	elif checkdeps:
-		#optional dependency check -- if emerge is calling us, it will be skipped
+	if checkdeps:
 		mydeps=string.split(getoutput("/usr/sbin/ebuild.sh depend"),"\n")
-		retval=dep_frontend("build",mydeps[0])
-		if (retval):
-			return retval
-		if mydo not in ["package","rpm"]:
-			retval=dep_frontend("runtime",mydeps[1])
-			if retval:
-				return retval
-	
+		if mydo=="depend":
+			return mydeps
+		elif mydo=="check":
+			return dep_frontend("build",mydeps[0])
+		elif mydo=="rcheck":
+			return dep_frontend("runtime",mydeps[1])
+		if mydo in ["merge","qmerge","unpack", "compile", "rpm", "package"]:
+			#optional dependency check -- if emerge is merging, this is skipped 
+			retval=dep_frontend("build",mydeps[0])
+			if (retval): return retval
+	else:
+		if mydo in ["depend","check","rcheck"]:
+			print "!!! doebuild(): ",mydo,"cannot be called with checkdeps equal to zero."
+			return 1
+		
 	#initial dep checks complete; time to process main commands
 	
-	if mydo=="unpack": return spawn("/usr/sbin/ebuild.sh fetch unpack")
+	if mydo=="unpack": 
+		return spawn("/usr/sbin/ebuild.sh fetch unpack")
 	elif mydo=="compile":
-		#do build deps
 		return spawn("/usr/sbin/ebuild.sh fetch unpack compile")
 	elif mydo in ["prerm","postrm","preinst","postinst","config","touch","clean","fetch","digest","unmerge","install"]:
 		return spawn("/usr/sbin/ebuild.sh "+mydo)
-	elif mydo=="qmerge": return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
+	elif mydo=="qmerge": 
+		#qmerge is specifically not supposed to do a runtime dep check
+		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
 	elif mydo=="merge":
 		retval=spawn("/usr/sbin/ebuild.sh fetch unpack compile install")
-		if retval:
-			return retval
+		if retval: return retval
+		if checkdeps:
+			retval=dep_frontend("runtime",mydeps[1])
+			if (retval): return retval
 		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
-	elif mydo=="unmerge": return unmerge(settings["CATEGORY"],settings["PF"])
-	elif mydo=="rpm": return spawn("/usr/sbin/ebuild.sh fetch unpack compile install rpm")
+	elif mydo=="unmerge": 
+		return unmerge(settings["CATEGORY"],settings["PF"])
+	elif mydo=="rpm": 
+		return spawn("/usr/sbin/ebuild.sh fetch unpack compile install rpm")
 	elif mydo=="package":
 		retval=spawn("/usr/sbin/ebuild.sh fetch")
 		if retval:
