@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.1.ebuild,v 1.3 2001/11/10 00:29:58 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2.ebuild,v 1.1 2002/01/28 18:25:50 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PDL Perl Module"
