@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.3_alpha3.ebuild,v 1.1 2004/03/15 14:22:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.3_alpha3.ebuild,v 1.2 2004/03/18 15:50:03 dholm Exp $
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, including API documentation and tutorials."
 HOMEPAGE="http://hk-classes.sourceforge.net/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sourceforge/hk-classes/${MY_P}.tar.bz2
 		 mirror://sourceforge/sourceforge/knoda/hk_docs-0.6.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="mysql postgres odbc doc"
 
 # At least one of the following is required
