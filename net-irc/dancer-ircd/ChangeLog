@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/dancer-ircd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.14 2004/10/16 18:43:28 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.15 2005/01/23 22:07:46 swegener Exp $
+
+*dancer-ircd-1.0.35 (23 Jan 2005)
+
+  23 Jan 2005; Sven Wegener <swegener@gentoo.org> files/dancer-ircd,
+  +files/dancer-ircd-1.0.35, +files/dancer-ircd.confd,
+  +dancer-ircd-1.0.35.ebuild:
+  Version bump, bug 75474.
 
   16 Oct 2004; Mike Frysinger <vapier@gentoo.org>
   dancer-ircd-1.0.31_p8-r1.ebuild:
