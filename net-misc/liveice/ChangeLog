@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/liveice
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.1 2002/10/30 13:27:19 aliz Exp $
+
+*liveice-20000530 (30 Oct 2002)
+
+  30 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import. Ebuild submitted by Hannes Mehnert <hannes@gentoo.org> 
+  in #5920.
