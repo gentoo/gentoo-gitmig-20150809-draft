@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8.ebuild,v 1.4 2004/05/12 12:11:54 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8.ebuild,v 1.5 2004/05/12 12:23:34 pappy Exp $
 
-inherit mount-boot eutils
+inherit mount-boot eutils flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
