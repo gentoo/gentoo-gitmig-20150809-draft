@@ -6,8 +6,12 @@
 		packages for the Vim text editor.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie app-vim enthält Plugins und
-		Syntax-Pakete für den Vim Texteditor.
+		Die Kategorie app-vim enthÃ¤lt Plugins und
+		Syntax-Pakete fÃ¼r den Vim Texteditor.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría app-vim contiene extensiones y paquetes 
+		de syntaxis para el editor de texto Vim.
 	</longdescription>
 </catmetadata>
 
