@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.3 2003/06/03 18:12:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.4 2003/06/30 18:59:32 coredumb Exp $
 
 ECVS_SERVER="cvs.php.net:/repository"
 ECVS_MODULE="php5"
@@ -8,6 +8,8 @@ ECVS_USER="cvsread"
 ECVS_PASS="phpfi"
 ECVS_AUTH="pserver"
 ECVS_BRANCH=""
+
+PHPSAPI="cli"
 
 inherit php cvs
 
@@ -36,6 +38,7 @@ src_compile() {
 
 
 src_install() {
+	installtargets="${installtargets} install-cli"
 	php_src_install
 	
 	cp sapi/cli/php .
