@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.1 2003/09/05 17:58:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.2 2003/09/05 18:05:59 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.bitchx.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 replace-flags -O[3-9] -O2
 
