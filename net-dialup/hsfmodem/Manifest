@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 ab3fb4ab75d1bded74fe7ec828b9ff19 hsfmodem-6.03.00.04111200.ebuild 804
 MD5 5a1c9e518e2624b6ade5c838f2950d06 hsfmodem-7.18.00.02.ebuild 1064
-MD5 f519709a05b74474140a0c21e9b80284 ChangeLog 2628
+MD5 f3e9bd66fca6e55302b591ecc1e87026 ChangeLog 2627
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 bcbc3caf75472ce3f4a9ee0e122a86e4 files/digest-hsfmodem-6.03.00.04111200 84
 MD5 e284b1513d312c30e77623de2a16b405 files/digest-hsfmodem-7.18.00.02 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2u8+jiC39V7gKu0RApQkAKC6kH0bs/9tBZSvKtEnhCdp8JhIVgCgv/g2
-RXZljs3SYIIMtiGdto1Szxw=
-=lIXk
+iD8DBQFB26jPI1lqEGTUzyQRAkgXAKDYCOcTNsWapE01Kj4/f07KYtzALwCaA12a
+R6538hlBhQW2rJIWbZ0bQ0c=
+=y+qI
 -----END PGP SIGNATURE-----
