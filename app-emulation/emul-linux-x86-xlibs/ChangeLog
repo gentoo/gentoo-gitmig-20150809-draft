@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.19 2005/02/07 20:10:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.20 2005/02/07 22:55:22 cryos Exp $
+
+  07 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  emul-linux-x86-xlibs-1.2-r5.ebuild:
+  Added some extra logic to remove stale locale lib symlinks.
 
 *emul-linux-x86-xlibs-1.2-r5 (07 Feb 2005)
 
