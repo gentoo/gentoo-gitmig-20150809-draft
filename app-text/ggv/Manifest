@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7ff58b9131c089940e82ef379602a140 ChangeLog 8867
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 d5f3a115801b0d03d46e16d6b45e6f56 ChangeLog 8960
+MD5 803fe4183bf6f18ce9c1771687ea2ff0 ggv-1.1.94.ebuild 1630
 MD5 0433a6ab8ff282099bca7f1b47022677 ggv-2.4.1.ebuild 829
-MD5 1de81a231b2150ff1747bddb37d13f92 ggv-2.8.0.ebuild 703
 MD5 c27816e73e959dbd1f53a3fedcf5aefe ggv-2.6.0.ebuild 701
 MD5 ebdd9e4c82821b74488b17eb475ffe34 ggv-2.6.1.ebuild 701
-MD5 803fe4183bf6f18ce9c1771687ea2ff0 ggv-1.1.94.ebuild 1630
-MD5 310c1bd3003c69b1103c6a8c8eaf9c81 ggv-2.8.1.ebuild 687
-MD5 68688e676f5d0f61aeb97e413dfdb041 files/digest-ggv-2.4.1 63
-MD5 ebf8fa7fb4c1673eff3df32a5c46869e files/digest-ggv-2.8.1 63
-MD5 d14e7cb9a428e2a46f909b7d1da5cfab files/digest-ggv-2.6.0 63
+MD5 1de81a231b2150ff1747bddb37d13f92 ggv-2.8.0.ebuild 703
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 9af95b296d55146f2ae7aa7b5d0c6588 ggv-2.8.1.ebuild 688
 MD5 9839595041edeb9a62751cae70d30ea1 files/digest-ggv-1.1.94 62
-MD5 515619d60d10dc4e10d15e9b93af4541 files/ggv-2.4-fix_gtk+-2.4_build.patch 951
+MD5 68688e676f5d0f61aeb97e413dfdb041 files/digest-ggv-2.4.1 63
+MD5 d14e7cb9a428e2a46f909b7d1da5cfab files/digest-ggv-2.6.0 63
 MD5 5e8c7421876ca58a1e41e3075a394852 files/digest-ggv-2.6.1 63
 MD5 0af782d2299128f802179dfd6b10cded files/digest-ggv-2.8.0 63
+MD5 515619d60d10dc4e10d15e9b93af4541 files/ggv-2.4-fix_gtk+-2.4_build.patch 951
+MD5 ebf8fa7fb4c1673eff3df32a5c46869e files/digest-ggv-2.8.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBxZ+EugEuf3OQ0akRAsDnAKCkciAu5GqbRKgZiWcg5E6RV6DhLgCbBt6M
-IwMQGN7UBpmTCHy6OnZS0aY=
-=UGvz
+iD8DBQFByOe5KRy60XGEcJIRApF2AJ9uDufnZaREsjrSf4xDKe7WfX7EoQCfXIo8
+4QSiRNje6BcEboMnOF9o1h0=
+=L8LR
 -----END PGP SIGNATURE-----
