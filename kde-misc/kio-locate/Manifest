@@ -1,4 +1,6 @@
+MD5 197f7d4363c9931ffb37ec5c11bc1be3 kio-locate-0.3.0.ebuild 538
 MD5 fa3466132c800c688a47a50ddb335c8b kio-locate-0.2.4.ebuild 532
-MD5 d945ec5234e57a1e79f1e20c678497ae ChangeLog 727
+MD5 e2f88c3a1dcf72d232fe7a606085ee66 ChangeLog 851
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
 MD5 df27237bea73170b86b6e81b81d379d1 files/digest-kio-locate-0.2.4 68
+MD5 3598fca50edc709a2779c2071cd16499 files/digest-kio-locate-0.3.0 68
