@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre8.ebuild,v 1.2 2004/01/01 05:55:02 anti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre8.ebuild,v 1.3 2004/02/05 04:52:21 strider Exp $
 
 MY_PV="42pre8"
 
@@ -14,7 +14,7 @@ IUSE="jikes"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
-	>=dev-java/ant-1.4.1
+	>=dev-java/ant-1.5.4
 	jikes? ( >=dev-java/jikes-1.17 )"
 
 S="${WORKDIR}/jEdit"
