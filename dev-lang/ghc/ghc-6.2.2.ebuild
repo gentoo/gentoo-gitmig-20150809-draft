@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.2 2004/10/23 23:14:49 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.3 2004/10/26 13:50:12 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -61,20 +61,16 @@ GHCPATH="${PATH}:/opt/ghc/bin"
 SUPPORTED_CFLAGS=""
 
 # Setup supported CFLAGS.
-setup_cflag() {
+check_cflags() {
 	OLD_CFLAGS="${CFLAGS}"
-	CFLAGS="${CFLAGS} $1"
+	CFLAGS="$1"
 	strip-unsupported-flags
-
-	if [ "${OLD_CFLAGS}" != "${CFLAGS}" ];
-	then
-		SUPPORTED_CFLAGS="$1 ${SUPPORTED_CFLAGS}"
-	fi
+	SUPPORTED_CFLAGS="${SUPPORTED_CFLAGS} ${CFLAGS}"
+	CFLAGS="${OLD_CFLAGS}"
 }
 
 setup_cflags() {
-	setup_cflag "-fno-pic"
-	setup_cflag "-fno-stack-protector"
+	check_cflags "-nopie -fno-stack-protector -fno-stack-protector-all"
 }
 
 src_unpack() {
@@ -86,9 +82,10 @@ src_unpack() {
 	cd ${S}/ghc
 	pushd driver
 	setup_cflags
+
 	epatch ${FILESDIR}/${PN}-6.2.hardened.patch
-	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS//-f/-optc-f}|" ghc/ghc.sh
-	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS//-f/-optc-f}|" ghci/ghci.sh
+	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS// -/ -optc-}|" ghc/ghc.sh
+	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS// -/ -optc-}|" ghci/ghci.sh
 	popd
 }
 
@@ -105,7 +102,7 @@ src_compile() {
 	# patch included)
 	setup_cflags
 	echo "SRC_CC_OPTS+=${SUPPORTED_CFLAGS}" >> mk/build.mk
-	echo "SRC_HC_OPTS+=${SUPPORTED_CFLAGS//-f/-optc-f}" >> mk/build.mk
+	echo "SRC_HC_OPTS+=${SUPPORTED_CFLAGS// -/ -optc-}" >> mk/build.mk
 
 	# force the config variable ArSupportsInput to be unset;
 	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
