@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.2-r2.ebuild,v 1.2 2002/06/12 20:00:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.2-r2.ebuild,v 1.3 2002/06/28 15:06:30 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
@@ -17,7 +17,7 @@ RDEPEND=">=gnome-extra/gal-0.19
 	>=gnome-base/gnome-print-0.34
 	>=gnome-base/bonobo-1.0.18
 	gnome? ( >=gnome-base/gconf-1.0.7-r2 
-			<gnome-base/gconf-1.10.0 )
+		<gnome-base/gconf-1.10.0 )
 	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )"
 
