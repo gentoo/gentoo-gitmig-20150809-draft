@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.20 2005/02/10 23:13:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.21 2005/02/13 14:05:54 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -89,11 +89,14 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 ### END DOCUMENTATION ###
 
 # Defaults:
-CFLAGS_default=""
-LDFLAGS_default=""
-CHOST_default="${CHOST}"
-LIBDIR_default="${CONF_LIBDIR:-lib}"
-CDEFINE_default="__unix__"
+export MULTILIB_ABIS=${MULTILIB_ABIS:-"default"}
+export DEFAULT_ABI=${DEFAULT_ABI:-"default"}
+export ABI=${ABI:-"default"}
+export CFLAGS_default=""
+export LDFLAGS_default=""
+export CHOST_default=${CHOST}
+export LIBDIR_default=${CONF_LIBDIR:-"lib"}
+export CDEFINE_default="__unix__"
 
 # has_multilib_profile()
 has_multilib_profile() {

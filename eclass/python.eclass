@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.14 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.15 2005/02/13 14:05:54 eradicator Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -13,7 +13,7 @@
 # python_mod_exists()     - Checks if a python module exists
 # python_mod_compile()    - Compiles a .py file to a .pyc/.pyo
 # python_mod_optimize()   - Generates .pyc/.pyo precompiled scripts
-# python_mod_cleanup()    - Goes through /usr/lib/python* to remove
+# python_mod_cleanup()    - Goes through /usr/lib*/python* to remove
 #                           orphaned *.pyc *.pyo
 # python_makesym()        - Makes /usr/bin/python symlinks
 
@@ -180,7 +180,7 @@ python_mod_cleanup() {
 			SEARCH_PATH="${SEARCH_PATH} ${myroot}/${path#/}"
 		done
 	else
-		for path in ${myroot}/usr/lib/python*/site-packages; do
+		for path in ${myroot}/usr/lib*/python*/site-packages; do
 			SEARCH_PATH="${SEARCH_PATH} ${path}"
 		done
 	fi
@@ -200,5 +200,3 @@ python_mod_cleanup() {
 		done
 	done
 }
-
-
