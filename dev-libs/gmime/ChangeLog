@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.11 2005/01/13 22:29:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.12 2005/02/06 16:54:51 dsd Exp $
+
+*gmime-2.1.11 (06 Feb 2005)
+
+  06 Feb 2005; Daniel Drake <dsd@gentoo.org> +gmime-2.1.11.ebuild:
+  Version bump thanks to Kai Zimmermann <kzimmerm@gentoo.org> in bug #80428
 
   13 Jan 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.10.ebuild:
   Fixed creation of tutorial when USE="doc".
