@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1-r1.ebuild,v 1.1 2000/12/19 23:13:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1-r1.ebuild,v 1.2 2000/12/20 00:41:05 achim Exp $
 
 A="apache_1.3.14.tar.gz mod_ssl-2.7.1-1.3.14.tar.gz"
 S=${WORKDIR}/apache_1.3.14
@@ -17,7 +17,7 @@ DEPEND=">=sys-apps/bash-2.04
 
 src_compile() {                           
    export SSL_BASE=SYSTEM
-   export CFLAGS="$CFLAGS -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+   export EXTRA_CFLAGS="-DUSE_FLOCK_SERIALIZED_ACCEPT -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
    cd ${S}/../mod_ssl-2.7.1-1.3.14
     try ./configure --with-apache=${S} --with-ssl=SYSTEM
    cd ${S}
@@ -38,7 +38,6 @@ src_compile() {
 src_install() { 
     cd ${S}
     try make install-quiet root=${D}
-    prepman
 
     dodoc ABOUT_APACHE Announcement INSTALL* KEYS LICENSE* README* WARNING*
     docinto mod_ssl
