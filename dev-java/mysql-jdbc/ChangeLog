@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/mysql-jdbc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/ChangeLog,v 1.6 2003/02/12 05:54:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/ChangeLog,v 1.7 2003/04/26 09:24:52 robbat2 Exp $
+
+*mysql-jdbc-3.07 (26 Apr 2003)
+
+  26 Apr 2003; Robin Johnson <robbat2@gentoo.org> mysql-jdbc-3.07.ebuild,
+  files/21mysqlconnector
 
 *mysql-jdbc-2.0.14 (08 Jul 2002)
 
