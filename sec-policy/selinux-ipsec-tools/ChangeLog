@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-ipsec-tools
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ipsec-tools/ChangeLog,v 1.1 2004/07/04 01:13:12 pebenito Exp $
+
+*selinux-ipsec-tools-20040703 (03 Jul 2004)
+
+  03 Jul 2004; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
+  +selinux-ipsec-tools-20040703.ebuild:
+  Initial commit.  Gentoo fixes by Petre Rodan.
+
