@@ -1,0 +1,5 @@
+MD5 8ea733ff6c67e675da9215e3fd73fe28 ChangeLog 1216
+MD5 e79608d9f1649d1f1f847400c293c76d sysstat-3.3.6-r1.ebuild 1033
+MD5 fa1564a8420adf1fabd975d479c726b7 sysstat-4.0.7.ebuild 1026
+MD5 6d8c047307b59fea566a7d61b52c12e5 files/digest-sysstat-3.3.6-r1 64
+MD5 6d9a61061bc468e70100ba366eb4515a files/digest-sysstat-4.0.7 65
