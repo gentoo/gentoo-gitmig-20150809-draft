@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.23 2004/05/28 19:37:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.24 2004/06/02 21:38:49 ferringb Exp $
+
+  02 Jun 2004; Brian Harring <ferringb@gentoo.org> live-2004.03.27.ebuild:
+  keywording 2004.03.27 x86, closing bug #49419
 
   28 May 2004; Guy Martin <gmsoft@gentoo.org> live-2004.03.27.ebuild:
   Added ~hppa to KEYWORDS.
