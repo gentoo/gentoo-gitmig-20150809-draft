@@ -2,20 +2,19 @@
 # Distributed under the terms of the GNU General Public License v2
 # $
 
-PARCH=${P/_/}
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
-SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${PARCH}.tar.gz"
+SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=dev-libs/openssl-0.9.6k"
 
-S="${WORKDIR}/${PARCH}"
+S="${WORKDIR}/${P}"
 
 src_compile() {
 
