@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.2.ebuild,v 1.1 2005/01/20 21:20:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.2.ebuild,v 1.2 2005/02/07 21:18:53 chriswhite Exp $
 
 inherit nsplugins eutils rpm
 
@@ -39,4 +39,12 @@ src_install() {
 		doexe nphelix.so
 		inst_plugin /opt/netscape/plugins/nphelix.so
 	fi
+
+	# Language resources
+	cd ${D}/opt/RealPlayer/share/locale
+	for LC in *; do
+		mkdir -p ${D}/usr/share/locale/${LC}/LC_MESSAGES
+		dosym /opt/RealPlayer/share/locale/${LC}/player.mo /usr/share/locale/${LC}/LC_MESSAGES/realplay.mo
+		dosym /opt/RealPlayer/share/locale/${LC}/widget.mo /usr/share/locale/${LC}/LC_MESSAGES/libgtkhx.mo
+	done
 }
