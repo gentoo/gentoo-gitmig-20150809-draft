@@ -1,4 +1,6 @@
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 0f12c0819a6274ef0a8b806ca54a1d17 ChangeLog 375
 MD5 ab89c99d4a4dfcf2171a6199857b584b alsa-firmware-1.0.0_rc1.ebuild 622
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 ab89c99d4a4dfcf2171a6199857b584b alsa-firmware-1.0.0_rc2.ebuild 622
 MD5 9c8373dda0046b211956970126ccf2e2 files/digest-alsa-firmware-1.0.0_rc1 76
+MD5 2e36a104a13a36bdb2defb8c8fa30587 files/digest-alsa-firmware-1.0.0_rc2 76
