@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.5 2003/10/07 17:56:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.6 2003/11/11 18:06:29 mholzer Exp $
+
+inherit webapp-apache
 
 S=${WORKDIR}/${P}
 
@@ -17,39 +19,38 @@ RDEPEND=">=dev-php/mod_php-4.1.0
 	>=net-www/horde-pear-1.1"
 IUSE=""
 
-# We will use these to set the permissions properly
-HTTPD_USER="apache"
-HTTPD_GROUP=`grep $HTTPD_USER /etc/passwd |cut -d: -f4`
 
-# Allow users to move the default data directory by setting the
-# home directory of the 'apache' user elsewhere.
-HTTPD_ROOT=`grep $HTTPD_USER /etc/passwd | cut -d: -f6`/htdocs
+webapp-detect || NO_WEBSERVER=1
+
+HTTPD_USER="apache"
+HTTPD_GROUP="apache"
 
 pkg_setup() {
-	if [ -z "${HTTPD_ROOT}" ]; then
-		eewarn "HTTPD_ROOT is null!"
-		eewarn "You probably want to check /etc/passwd"
-		die "Need to have a place to put horde in"
-	fi
 	if [ -L ${HTTPD_ROOT}/horde ] ; then
 		ewarn "You need to unmerge your old Horde version first."
 		ewarn "Horde will be installed into ${HTTPD_ROOT}/horde"
 		ewarn "directly instead of a version-dependant directory."
 		die "need to unmerge old version first"
 	fi
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
 src_install () {
+
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/${PN}
+	
 	dodoc COPYING README docs/*
 	rm -rf COPYING README docs
-	dodir ${HTTPD_ROOT}/horde
-	cp -r . ${D}/${HTTPD_ROOT}/horde
-#	cp ${FILESDIR}/${PV}/vfs.sql ${D}/${HTTPD_ROOT}/horde/scripts/db
-	# protecting files
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${D}/${HTTPD_ROOT}/horde
+	dodir ${destdir}
+	cp -r . ${D}${destdir}
+	cd ${D}/${HTTPD_ROOT}
+	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
+	# Fix permissions
 	find ${D}/${HTTPD_ROOT}/horde/ -type f -exec chmod 0640 {} \;
 	find ${D}/${HTTPD_ROOT}/horde/ -type d -exec chmod 0750 {} \;
-	chmod 0000 ${D}/${HTTPD_ROOT}/horde/test.php
+	chmod 0000 ${destdir}/test.php
 }
 
 pkg_postinst() {
