@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r2.ebuild,v 1.1 2005/01/28 11:19:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r2.ebuild,v 1.2 2005/01/28 16:39:36 ka0ttic Exp $
 
 inherit eutils fixheadtails
 
@@ -117,6 +117,8 @@ src_install () {
 		-e 's/snmpd/snmptrapd/g' \
 		-e 's/SNMPD/SNMPTRAPD/g' \
 		${D}/etc/init.d/snmpd > ${D}/etc/init.d/snmptrapd || die
+	chmod 0755 ${D}/etc/init.d/snmptrapd
+
 	newconfd ${FILESDIR}/snmptrapd.conf snmptrapd
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.

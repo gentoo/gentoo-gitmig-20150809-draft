@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.76 2005/01/28 11:19:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.77 2005/01/28 16:39:36 ka0ttic Exp $
+
+  28 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2-r2.ebuild:
+  Fixed perms on snmptrapd init script. Thanks to Weeve for letting me know.
 
 *net-snmp-5.2-r2 (28 Jan 2005)
 
