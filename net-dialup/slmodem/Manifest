@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f0ba7e43652f0bd01e0119f7a47bdbeb ChangeLog 3482
-MD5 8114f79f8735648770d8f37c32861c88 metadata.xml 252
 MD5 39a6e7fcda2ee23817e894ed009e7ba7 slmodem-2.7.14.ebuild 1511
-MD5 aa56ae238239ffc06f6127c7ea73c731 slmodem-2.9.7.ebuild 2106
+MD5 8114f79f8735648770d8f37c32861c88 metadata.xml 252
+MD5 cf8fa297fc10313b967f5be8f0c704d0 ChangeLog 3640
 MD5 372056f392f4fb7e5403ab11e34f08c9 slmodem-2.9.7-r1.ebuild 2766
 MD5 6fa12f24d063c8e27767d74d89b0045e slmodem-2.9.7-r2.ebuild 3361
-MD5 4f5bcaad7a491efabcd51ca6a81d52cb slmodem-2.9.9.ebuild 3723
-MD5 3627a32bd33e067000cc4975873b79ea files/slmodem-2.9.conf 632
+MD5 aa56ae238239ffc06f6127c7ea73c731 slmodem-2.9.7.ebuild 2106
+MD5 8b5f426b0aac645b7390b130f36cb13d slmodem-2.9.9.ebuild 3720
 MD5 04150d1eddd9774a7d1a70df93600e3c files/digest-slmodem-2.7.14 64
-MD5 5565553c8ddd949c38070e59ce64b90c files/slmodem-2.7.14-makefile-fixup.patch 1626
 MD5 24079d6e20ac945048a1c212f06772ce files/slmodem-2.7.devfs 431
 MD5 117ea746ee99218e673afc397038120d files/slmodem-2.7.modules 669
-MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
-MD5 31efdce45dc6665bfc2c6cb50048d714 files/slmodem-2.9.7-makefile-fixup.patch 3476
+MD5 5565553c8ddd949c38070e59ce64b90c files/slmodem-2.7.14-makefile-fixup.patch 1626
 MD5 0391d6463fed235e6038d9048a7e5251 files/digest-slmodem-2.9.7 65
-MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
-MD5 04070d4192ade444595216ffca81d328 files/slmodem-2.9.init 1341
 MD5 0391d6463fed235e6038d9048a7e5251 files/digest-slmodem-2.9.7-r1 65
 MD5 0391d6463fed235e6038d9048a7e5251 files/digest-slmodem-2.9.7-r2 65
+MD5 31efdce45dc6665bfc2c6cb50048d714 files/slmodem-2.9.7-makefile-fixup.patch 3476
+MD5 3627a32bd33e067000cc4975873b79ea files/slmodem-2.9.conf 632
+MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
+MD5 e247b59b405c3396a156ff6ecb44d110 files/slmodem-2.9.init 1338
+MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
 MD5 9ae4e594075f43c76a7067fa8004095a files/digest-slmodem-2.9.9 65
 MD5 25bc07758bde2e7a6aeb796e840d4ff2 files/slmodem-2.9.9-makefile-fixup.patch 6327
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBAvsJmdTrptrqvGERAt5iAJ4/wHzaJYAnq3jAiryR/QZVPxhKKgCfTqts
-GiZ5EsiAjjf4cdUn++8x00M=
-=HwSF
------END PGP SIGNATURE-----

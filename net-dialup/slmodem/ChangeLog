@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.16 2004/07/25 00:04:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.17 2004/08/01 09:40:12 spyderous Exp $
+
+  01 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>; files/slmodem-2.9.init,
+  slmodem-2.9.9.ebuild:
+  init script needs alsasound, not alsa-sound (#59051).
 
   25 Jul 2004; Daniel Black <dragonheart@gentoo.org> files/slmodem-2.9.conf,
   files/slmodem-2.9.init, slmodem-2.9.9.ebuild:

@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.6 2004/07/25 00:04:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.7 2004/08/01 09:40:12 spyderous Exp $
 
 depend() {
 	need logger
 	if [ "${ALSA}" = "yes" ]
 	then
-		need alsa-sound
+		need alsasound
 	fi
 }
 

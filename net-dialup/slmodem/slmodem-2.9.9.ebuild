@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9.ebuild,v 1.2 2004/07/25 00:04:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9.ebuild,v 1.3 2004/08/01 09:40:12 spyderous Exp $
 
 inherit kmod eutils
 
@@ -150,7 +150,7 @@ pkg_postinst() {
 	if use alsa;
 	then
 		einfo "I hope you have already added alsa to your startup: "
-		einfo "otherwise type: rc-update add alsa-sound boot"
+		einfo "otherwise type: rc-update add alsasound boot"
 		einfo
 		einfo "If you need to use snd-intel8x0m from the kernel"
 		einfo "compile it as a module and edit /etc/module.d/alsa"
