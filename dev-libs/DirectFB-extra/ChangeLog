@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/DirectFB-extra
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.1 2003/02/02 10:23:22 seemant Exp $
+
+*DirectFB-extra-0.9.16 (02 Feb 2003)
+
+  02 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  DirectFB-extra-0.9.16.ebuild files/digest-DirectFB-extra-0.9.16 :
+
+  Initial import of extra video/image/font providers and drivers for
+  DirectFB.  The versions will track the DirectFB versions
