@@ -9,7 +9,6 @@ MD5 30d111c4ff4ffa5712a71ab4ac7e2c02 baselayout-1.11.9-r1.ebuild 17015
 MD5 a564d6194f6a91d76d572a0f934c4faa baselayout-1.9.4-r7.ebuild 18143
 MD5 7875c929dd71e995da27936c6d859717 baselayout-1.9.4-r6.ebuild 16862
 MD5 d124ceab1208e23c4d2b5ce5eb2a882b baselayout-1.11.10.ebuild 16827
-MD5 245dbcaff929be266ba51fe174cad7c0 baselayout-1.12.0_alpha1-r1.ebuild 16920
 MD5 090789f9ee35e61ba4c68e048a474e4a baselayout-1.11.10-r2.ebuild 17000
 MD5 d61e4a00085df2dbae64d376613ccd8c baselayout-1.12.0_alpha1-r2.ebuild 17217
 MD5 9d6be55475cd744a889551d6cc31596b files/digest-baselayout-1.11.10-r1 70
@@ -30,7 +29,6 @@ MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
 MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 579
 MD5 126200ae85bdf0ef43de75411f71aaa8 files/rc-scripts-1.6.9-domainname.patch 380
 MD5 6ec416bfd1097d350c09e78949a736b8 files/rc-scripts-1.6.9-ifconfig.patch 266
-MD5 8973ba1466f017b32112df32c15ee8a7 files/digest-baselayout-1.12.0_alpha1-r1 69
 MD5 f96ffe6b44684809b8ec0e4450093f59 files/baselayout-1.11.10-iwconfig-2.patch 925
 MD5 4222104e326e50e3c570c82a31070138 files/baselayout-1.12.0_alpha1-export-myservice-for-critical.patch 528
 MD5 8973ba1466f017b32112df32c15ee8a7 files/digest-baselayout-1.12.0_alpha1-r2 69
@@ -38,7 +36,7 @@ MD5 2fdc18068389dc7268dddad2bae82dfe files/baselayout-1.12.0_alpha1-modules-retu
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCN1f41ZcsMnZjRyIRAvHfAKCFA4AiFeoKlMjn0sFYaUh8AK04/gCfcjTg
-DJLXvQ9LTFoFZyyHAlBxxyY=
-=FBeJ
+iD8DBQFCN1hr1ZcsMnZjRyIRAmvbAJ9YrNT78rgaowa5mvD/UFwRNQB4hgCfclLy
+JTMq9a6ZorvQknv5KlW7it4=
+=tEDA
 -----END PGP SIGNATURE-----
