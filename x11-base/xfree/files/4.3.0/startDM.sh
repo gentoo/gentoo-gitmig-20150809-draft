@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/startDM.sh,v 1.1 2003/02/28 04:28:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/startDM.sh,v 1.2 2003/12/04 06:37:47 spyderous Exp $
 
 source /etc/init.d/functions.sh
 
@@ -21,7 +21,7 @@ then
 
 	/sbin/start-stop-daemon --start --quiet --exec ${EXE}
 	retval=$?
-	sleep 5
+	wait; sleep 2
 	
 	if [ "${retval}" -ne 0 ]
 	then

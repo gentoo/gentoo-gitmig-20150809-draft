@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.251 2003/12/04 00:39:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.252 2003/12/04 06:37:47 spyderous Exp $
+
+  04 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; files/4.3.0/Xsetup_0,
+  files/4.3.0/startDM.sh, files/4.3.0/xdm.start:
+  Fix bugs #21140, #23957 and #26125.
 
   03 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; :
   Fixing bad digest that slipped through somehow.

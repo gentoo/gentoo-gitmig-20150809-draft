@@ -4,7 +4,7 @@
 
 # get KDEDIR value (only) and run kdmdesktop from there
 eval "`grep KDEDIR /etc/profile.env`"
-[ -n "$KDEDIR" ]  && ${KDEDIR}/bin/kdmdesktop
+[ -x $KDEDIR/bin/kdmdesktop  ]  && ${KDEDIR}/bin/kdmdesktop
 
 # --- Gentoo ---
 # create list of sessions for kdm
