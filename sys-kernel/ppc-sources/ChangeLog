@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ppc-sources
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.15 2003/02/08 16:44:22 gerk Exp $
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.16 2003/02/10 16:33:05 doctomoe Exp $
+
+  10 Feb 2003; Olivier Reisch <doctomoe@gentoo.org> ppc-sources-2.4.20-r2.ebuild:
+  Added missing SLOT to ebuild.
 
 *ppc-sources-2.4.20-r2 (18 Dec 2002)
 
