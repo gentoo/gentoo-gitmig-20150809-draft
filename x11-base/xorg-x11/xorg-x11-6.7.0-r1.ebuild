@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.25 2004/07/16 05:53:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.26 2004/07/16 06:11:44 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -32,7 +32,7 @@ inherit eutils flag-o-matic gcc xfree
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow cjk debug doc hardened ipv6 mmx nls pam pie sdk sse static"
+IUSE="3dfx 3dnow cjk debug dlloader doc ipv6 mmx nls pam sdk sse static"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
@@ -202,13 +202,13 @@ pkg_setup() {
 		einfo "Disabling PAM features in ${PN}..."
 	fi
 
-	if use static
+	if use static || use dlloader
 	then
 		# A static build disallows building the SDK.
 		# See config/xf86.rules.
 		if use sdk
 		then
-			die "The static and pie USE flags are currently incompatible with the sdk USE flag."
+			die "The static and dlloader USE flags are currently incompatible with the sdk USE flag."
 		fi
 	fi
 }
@@ -300,7 +300,7 @@ host_def_setup() {
 		then
 			echo "#define DoLoadableServer	NO" >>config/cf/host.def
 		else
-			if use pie ; then
+			if use dlloader ; then
 				einfo "Setting DoLoadableServer/MakeDllModules to YES for etdyn building"
 				echo "#define DoLoadableServer  YES" >> config/cf/host.def
 				echo "#define MakeDllModules    YES" >> config/cf/host.def
