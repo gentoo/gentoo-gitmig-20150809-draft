@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.7 2002/12/13 10:59:47 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.8 2002/12/27 23:49:03 mcummings Exp $
+
+*mrtg-2.9.22 (27 Dec 2002)
+
+  27 Dec 2002; Michael Cummings <mcummings@gentoo.org>: mrtg-2.9.22.ebuild:
+
+  Version bump; this one works with perl 5.8, bug 12539
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
