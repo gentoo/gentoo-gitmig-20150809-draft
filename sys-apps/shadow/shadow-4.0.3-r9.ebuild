@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.3 2003/12/10 08:13:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.4 2003/12/11 05:53:15 seemant Exp $
 
 IUSE="pam selinux"
 
@@ -141,7 +141,7 @@ src_install() {
 	# also broken. Just do it over.
 	rm -rf ${D}/usr/share/man/*
 
-	rm -f man/id.1 man/getspnam.3
+	rm -f man/id.1 man/getspnam.3 man/passwd.5
 	for x in man/*.[0-9]
 	do
 		[ -f ${x} ] && doman ${x}
