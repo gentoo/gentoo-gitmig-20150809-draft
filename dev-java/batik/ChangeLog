@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.9 2004/06/27 16:59:46 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.10 2004/08/13 21:23:35 zx Exp $
+
+*batik-1.5.1 (13 Aug 2004)
+
+  13 Aug 2004; Chris Aniszczyk <zx@gentoo.org> +batik-1.5.1.ebuild:
+  Version bump
 
   27 Jun 2004; Chris Aniszczyk <zx@gentoo.org> batik-1.5.ebuild:
   Marking stable on ppc
