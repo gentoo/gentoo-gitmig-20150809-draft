@@ -1,4 +1,6 @@
+MD5 03b12b5099cb615ae5cbe07736da134f pgasync-2.01.ebuild 668
 MD5 f4af31ed50b0e2045c22d6b9e96342bb pgasync-1.15b.ebuild 669
-MD5 3722a561e8d4538334dbad8207941859 ChangeLog 408
+MD5 36de36a274dc53b438236206645c56de ChangeLog 527
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 d642505d299d0662a7ab78b519a34f72 files/digest-pgasync-1.15b 64
+MD5 e47e6beacaa2f2bca3e02a9cc82e947d files/digest-pgasync-2.01 63
