@@ -1,8 +1,12 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.2 2002/09/05 17:13:31 cselkirk Exp $
 
 *rpm2targz-8.0 (1 Feb 2002)
+
+  05 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> rpm2targz-8.0.ebuild :
+
+  Added ppc to KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
