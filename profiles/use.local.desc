@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.44 2003/06/14 23:30:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.45 2003/06/15 17:02:21 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -31,7 +31,7 @@ media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/totem:gstreamer - Enable gstreamer instead of Xine backend
-media-video/transcode - Enable Altivec code portions
+media-video/transcode:altivec - Enable Altivec code portions
 net-analyzer/slurm:altcolors - Use alternative color set
 net-fs/shfs:amd - Enable automounter support
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org
