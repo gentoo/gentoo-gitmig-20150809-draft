@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.2.ebuild,v 1.1 2004/04/15 23:21:51 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.2.ebuild,v 1.2 2004/04/16 14:57:21 dholm Exp $
 
 DESCRIPTION="A QT frontend for svc"
 SRC_URI="http://www.together.net/~plomp/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.together.net/~plomp/qtsvc.html"
 
 SLOT="0"
 LICENSE="BSD Artistic"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND="=x11-libs/qt-2*"
 RDEPEND="${DEPEND}
