@@ -1,0 +1,11 @@
+--- attal-src-0.8.1/libCommon/genericMapDisposition.cpp.orig	2004-07-14 19:51:47.783372784 -0400
++++ attal-src-0.8.1/libCommon/genericMapDisposition.cpp	2004-07-14 19:51:56.068113312 -0400
+@@ -59,7 +59,7 @@
+ 		delete [] _dispo;
+ 	}
+ 
+-	_dispo = new (DispositionType *)[ height ];
++	_dispo = new DispositionType *[ height ];
+ 	for( i = 0; i < height; i++ ) {
+ 		_dispo[i] = new DispositionType[ width ];
+ 		for( j = 0; j < width; j++ ){

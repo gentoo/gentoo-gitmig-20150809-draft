@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.8.1.ebuild,v 1.1 2004/07/10 03:01:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.8.1.ebuild,v 1.2 2004/07/15 00:08:16 vapier Exp $
 
-inherit games
+inherit games eutils
 
 MY_P="${PN}-src-${PV}"
 DESCRIPTION="turn-based strategy game project"
@@ -22,6 +22,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 	for lib in Client Common Fight Server ; do
 		sed -i \
 			-e "/^TARGET/s:= ${lib}:= ${PN}${lib}:" \
