@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.4 2002/07/09 09:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.5 2002/09/25 14:16:49 vapier Exp $
 
 *netkit-telnetd-0.17-r3 (1 May 2002)
+
+  25 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added alpha to KEYWORDS
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> netkit-telnetd-0.17-r3.ebuild:
   Added KEYWORDS, LICENSE, SLOT:
