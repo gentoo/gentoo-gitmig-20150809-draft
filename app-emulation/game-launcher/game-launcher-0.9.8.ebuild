@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.4 2003/06/21 08:05:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.5 2003/08/21 23:05:01 msterret Exp $
 
 inherit games eutils
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.dribin.org/dave/game_launcher/"
 SRC_URI="mirror://sourceforge/glaunch/gl${PV//./}s.zip"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="x86"
+SLOT="0"
 
 RDEPEND=">=media-libs/allegro-4.0.0
 	>=media-libs/loadpng-0.11
@@ -20,23 +20,32 @@ RDEPEND=">=media-libs/allegro-4.0.0
 	>=media-libs/jpgalleg-1.1
 	>=sys-libs/zlib-1.1.4"
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	app-arch/unzip"
 
 S=${WORKDIR}/glaunch
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
 	edos2unix `find -regex '.*\.[ch]' -or -name '*.cc'`
 
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 	epatch ${FILESDIR}/${PV}-digi-oss.patch
 
-	mv common.mk common.mk_orig
-	sed s/'TARGET\(.*\)= MINGW'/'#TARGET\1= MINGW'/ common.mk_orig | sed s/'#TARGET\(.*\)= UNIX'/'TARGET\1= UNIX'/ > common.mk
-	emake || die
+	sed -i \
+		-e "s/TARGET\(.*\)= MINGW/#TARGET\1= MINGW/" \
+		-e "s/#TARGET\(.*\)= UNIX/TARGET\1= UNIX/" common.mk || \
+			die "sed common.mk failed"
+}
+
+src_compile() {
+	emake -j1 CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
 	dodir /opt/${P}
-	cp -r ${S}/* ${D}/opt/${P}  # doinst can't do recursive
+	cp -R ${S}/* ${D}/opt/${P}  # doinst can't do recursive
 	prepgamesdirs
 }
