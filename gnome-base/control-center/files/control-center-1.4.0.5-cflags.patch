@@ -1,0 +1,22 @@
+--- control-center-1.4.0.5/configure.old	2004-10-17 23:46:58.212734744 +0100
++++ control-center-1.4.0.5/configure	2004-10-17 23:47:34.358239792 +0100
+@@ -8629,7 +8629,7 @@
+ fi
+ 
+ 
+-CFLAGS="`gnome-config --cflags gdk_pixbuf`${CFLAGS}"
++CFLAGS="`gnome-config --cflags gdk_pixbuf` ${CFLAGS}"
+ 
+ have_libesd=no
+ # Check whether --with-esd-prefix or --without-esd-prefix was given.
+--- control-center-1.4.0.5/configure.in~	2002-04-06 16:33:59.000000000 +0100
++++ control-center-1.4.0.5/configure.in	2004-10-17 23:46:29.631079816 +0100
+@@ -95,7 +95,7 @@
+ fi
+ AC_SUBST(PIXBUF_CFLAGS)
+ AC_SUBST(PIXBUF_LIBS)
+-CFLAGS="`gnome-config --cflags gdk_pixbuf`${CFLAGS}"
++CFLAGS="`gnome-config --cflags gdk_pixbuf` ${CFLAGS}"
+ 
+ dnl esd-manager
+ have_libesd=no
