@@ -1,6 +1,6 @@
-MD5 fa2361c43faacfaa66b0db4ec0d82758 ChangeLog 8467
+MD5 b2ece2c731fadb0884cf77357b008030 ChangeLog 8635
 MD5 399eb7607b8f1f3f597e93566b1bda7c metadata.xml 453
-MD5 2db2b7ccb1ed17b5c0095f3d38ab8f75 aa-sources-2.6.5-r5.ebuild 1232
+MD5 f12484a011b847811a4043f950691aba aa-sources-2.6.5-r5.ebuild 1270
 MD5 bc631b940195181e5d3217d8874edd49 aa-sources-2.4.23-r2.ebuild 4063
 MD5 60d25ff310fc6abfdce39ec9e47345af files/aa-sources-2.4.23.CAN-2004-0685.patch 2809
 MD5 eaeda68a619caaddd5b8fdc5e7c39932 files/aa-sources-2.4.23.CAN-2004-0177.patch 384
@@ -33,5 +33,6 @@ MD5 21f3a4f186017d925067335e24db36a1 files/aa-sources-2.4.23.CAN-2004-0109.patch
 MD5 eb70acb35ba13daa4b1fda53cb61fc01 files/aa-sources-2.6.5.CAN-2004-0495-0496.patch 23861
 MD5 ac42024b6e6ee1e2165914db4b22a61c files/aa-sources-2.4.23.CAN-2004-0178.patch 424
 MD5 fcfb3fc100621b77d191f86b66dd810a files/aa-sources-2.4.22-ide-scsi-missing-sym-fix.patch 465
+MD5 aa595005721b58929ee55e2e8f4b6ba0 files/aa-sources-2.6.5.CAN-2004-0816.patch 1693
 MD5 c460ea130cb4ae84a5063ba044e3ce72 files/aa-sources-2.4.23.CAN-2004-0427.patch 460
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242

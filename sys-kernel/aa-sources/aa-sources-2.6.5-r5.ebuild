@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.12 2004/08/09 22:45:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.13 2004/10/21 18:10:10 plasmaroo Exp $
 
 ETYPE="sources"
 K_NOUSENAME="yes"
@@ -22,7 +22,8 @@ UNIPATCH_LIST="
 	${FILESDIR}/${P}.ProcPerms.patch
 	${FILESDIR}/${P}.CAN-2004-0596.patch
 	${FILESDIR}/${P}.CAN-2004-0495-0496.patch
-	${FILESDIR}/${P}.cmdlineLeak.patch"
+	${FILESDIR}/${P}.cmdlineLeak.patch
+	${FILESDIR}/${P}.CAN-2004-0816.patch"
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
