@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19-r1.ebuild,v 1.18 2003/12/08 23:44:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19-r1.ebuild,v 1.19 2003/12/17 03:29:39 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -18,7 +18,7 @@ PROVIDE="virtual/kernel virtual/os-headers"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips ia64"
+KEYWORDS="x86 ppc sparc alpha mips ia64 ppc64"
 
 KERNEL_ARCH=`echo $ARCH |\
 	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
