@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_beta3.ebuild,v 1.5 2004/06/25 19:41:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_beta3-r1.ebuild,v 1.1 2004/06/25 19:41:25 usata Exp $
+
+inherit eutils
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="tiny emacs clone"
@@ -9,15 +11,21 @@ SRC_URI="mirror://sourceforge/zile/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc"
-IUSE=""
+KEYWORDS="~x86 ~alpha -ppc"
+IUSE="doc"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 DEPEND=">=dev-util/gperf-2.7.2
 	>=sys-apps/texinfo-4.3
-	virtual/tetex"
+	doc? ( virtual/tetex )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack "${A}"
+	epatch "${FILESDIR}/${P}-compilefix.diff"
+	use doc || epatch "${FILESDIR}/${P}-norefcardps.diff"
+}
 
 src_compile() {
 	myconf="--enable-all-modes"
