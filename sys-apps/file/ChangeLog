@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.76 2004/12/11 07:33:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.77 2004/12/13 23:51:26 vapier Exp $
+
+  13 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/file-4.12-cross-compile.patch, file-4.12.ebuild:
+  Cross-compiling patch from uClibc.
 
   11 Dec 2004; Markus Rothe <corsair@gentoo.org> file-4.12.ebuild:
   Stable on ppc64; bug #72521

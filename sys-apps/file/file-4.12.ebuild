@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.12.ebuild,v 1.10 2004/12/13 01:45:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.12.ebuild,v 1.11 2004/12/13 23:51:26 vapier Exp $
 
-inherit flag-o-matic gnuconfig eutils distutils libtool
+inherit flag-o-matic gnuconfig eutils distutils libtool toolchain-funcs
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
@@ -26,6 +26,10 @@ src_unpack() {
 	# on MIPS machines to a specific format so that other programs can
 	# recognize things.
 	use mips && epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
+
+	# The build process tries to run the compiled file ... not a good
+	# thing if file was cross compiled ;)
+	tc-is-cross-compiler && epatch ${FILESDIR}/${P}-cross-compile.patch
 
 	# GNU updates
 	uclibctoolize
