@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/fsh 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/ChangeLog,v 1.4 2004/06/24 23:44:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/ChangeLog,v 1.5 2004/07/13 21:19:19 mr_bones_ Exp $
+
+  13 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> fsh-1.2-r1.ebuild,
+  -fsh-1.2.ebuild:
+  don't set rdepend==depend; tidy
 
 *fsh-1.2-r1 (23 Apr 2003)
 
