@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/kobodeluxe
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.2 2003/09/10 20:34:07 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.3 2004/01/24 12:40:52 mr_bones_ Exp $
+
+  24 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  kobodeluxe-0.3-r1.ebuild, kobodeluxe-0.4_pre6.ebuild:
+  tidy old versions
 
   04 Jul 2003; Michael Sterrett <msterret@gentoo.org>
   kobodeluxe-0.4_pre8.ebuild:
