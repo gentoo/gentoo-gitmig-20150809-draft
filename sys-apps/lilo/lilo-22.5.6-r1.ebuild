@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6-r1.ebuild,v 1.1 2003/07/14 09:12:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6-r1.ebuild,v 1.2 2003/07/16 22:00:00 azarah Exp $
 
 inherit mount-boot eutils
 
@@ -20,10 +20,12 @@ DEPEND="dev-lang/nasm
 
 PROVIDE="virtual/bootloader"
 
+# Some local variables
+LILO_SBIN_BINARIES="lilo activate edit mkrescue"
+LILO_GET_BOOTS="egrep '^(#?)BOOTS' Makefile | sed -e 's:^#*BOOTS=::'"
+
 src_unpack() {
 	unpack ${P}.tar.gz || die
-	cd ${S}
-	patch -p0 < ${FILESDIR}/dot-b-files.patch || die "patch failed"
 
 	# This bootlogo patch is borrowed from SuSE Linux.
 	# You should see Raphaël Quinet's (quinet@gamers.org) website,
@@ -32,22 +34,28 @@ src_unpack() {
 }
 
 src_compile() {
-	[ -z "${CC}" ] && CC="gcc"
-
 	emake CC="${CC}" OPT="-O1" \
-		lilo edit activate \
-		$(grep '^BOOTS' Makefile | sed -e 's:^BOOTS=::') || die
+		${LILO_SBIN_BINARIES} \
+		$(eval ${LILO_GET_BOOTS}) || die
 }
 
 src_install() {
 	into /
-	dosbin lilo activate mkrescue
+	dosbin ${LILO_SBIN_BINARIES}
+	mv ${D}/sbin/edit ${D}/sbin/ledit
 	into /usr
 	dosbin keytab-lilo.pl
 	
 	dodir /boot
 	insinto /boot
-	doins boot-text.b boot-menu.b boot-bmp.b chain.b mbr.b os2_d.b
+	doins $(eval ${LILO_GET_BOOTS})
+
+	# Sanity check in case things change ...
+	if [ "$(ls -1 "${D}"/boot/boot-*.b | wc -l)" -lt 3 ]
+	then
+		eerror "Did not install all the bootsectors, please report!"
+		die "Did not install all the bootsectors!"
+	fi
 
 	insinto /etc
 	newins ${FILESDIR}/lilo.conf lilo.conf.example
@@ -60,47 +68,19 @@ src_install() {
 pkg_preinst() {
 	mount-boot_mount_boot_partition
 
-	if [ ! -L ${ROOT}/boot/boot.b -a -f ${ROOT}/boot/boot.b ]
-	then
-		einfo "Saving old boot.b..."
-		mv -f ${ROOT}/boot/boot.b ${ROOT}/boot/boot.old
-	fi
-
-	if [ ! -L ${ROOT}/boot/boot-text.b -a -f ${ROOT}/boot/boot-text.b ]
-	then
-		einfo "Saving old boot-text.b..."
-		mv -f ${ROOT}/boot/boot-text.b ${ROOT}/boot/boot-text.old
-	fi
-
-	if [ ! -L ${ROOT}/boot/boot-menu.b -a -f ${ROOT}/boot/boot-menu.b ]
-	then
-		einfo "Saving old boot-menu.b..."
-		mv -f ${ROOT}/boot/boot-menu.b ${ROOT}/boot/boot-menu.old
-	fi
-
-	if [ ! -L ${ROOT}/boot/boot-bmp.b -a -f ${ROOT}/boot/boot-bmp.b ]
-	then
-		einfo "Saving old boot-bmp.b..."
-		mv -f ${ROOT}/boot/boot-bmp.b ${ROOT}/boot/boot-bmp.old
-	fi
-
-	if [ ! -L ${ROOT}/boot/chain.b -a -f ${ROOT}/boot/chain.b ]
-	then
-		einfo "Saving old chain.b..."
-		mv -f ${ROOT}/boot/chain.b ${ROOT}/boot/chain.old
-	fi
-
-	if [ ! -L ${ROOT}/boot/mbr.b -a -f ${ROOT}/boot/mbr.b ]
-	then
-		einfo "Saving old mbr.b..."
-		mv -f ${ROOT}/boot/mbr.b ${ROOT}/boot/mbr.old
-	fi
-
-	if [ ! -L ${ROOT}/boot/os2_d.b -a -f ${ROOT}/boot/os2_d.b ]
-	then
-		einfo "Saving old os2_d.b..."
-		mv -f ${ROOT}/boot/os2_d.b ${ROOT}/boot/os2_d.old
-	fi
+	for x in ${ROOT}/boot/*.b
+	do
+		if [ ! -L "${x}" -a -f "${x}" ] && \
+		   [ -f "${D}/${x}" -o \
+		     -n "$(grep "/boot/${x##*/}" "${BUILDDIR}"/*/CONTENTS 2>/dev/null)" ]
+		     # Check if installed to $D, or if a binary package,
+		     # it in CONTENTS ...
+		then
+			x="$(echo "${x}" | sed -e 's://:/:g')"
+			einfo "Saving old ${x}..."
+			mv -f ${x} ${x}.old
+		fi
+	done
 }
 
 # Check whether LILO is installed
