@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.14 2004/06/25 00:16:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.15 2004/09/15 19:39:14 eradicator Exp $
 
 IUSE=""
 
@@ -12,8 +12,7 @@ SRC_URI="http://optronic.sourceforge.net/files/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
-
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=dev-cpp/gtkmm-1.2*"

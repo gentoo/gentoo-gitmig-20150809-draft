@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/orpheus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.10 2004/09/04 01:10:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.11 2004/09/15 19:39:28 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> orpheus-1.5.ebuild:
+  Stable sparc.
 
   04 Sep 2004; Sven Wegener <swegener@gentoo.org> +files/1.5-gcc34.patch,
   orpheus-1.2.ebuild, orpheus-1.3.ebuild, orpheus-1.4.ebuild,

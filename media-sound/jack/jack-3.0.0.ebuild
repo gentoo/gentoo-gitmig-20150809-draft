@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.9 2004/09/02 13:58:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.10 2004/09/15 19:38:22 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ DESCRIPTION="A frontend for several cd-rippers and mp3 encoders"
 HOMEPAGE="http://www.home.unix-ag.org/arne/jack/"
 SRC_URI="http://www.home.unix-ag.org/arne/jack/${P}.tar.gz"
 
-KEYWORDS="x86 ppc amd64 ~sparc ppc64"
+KEYWORDS="x86 ppc amd64 sparc ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 
