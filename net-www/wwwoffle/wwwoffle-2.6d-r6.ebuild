@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.6d-r6.ebuild,v 1.1 2001/10/20 16:47:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.6d-r6.ebuild,v 1.2 2001/10/20 17:36:22 danarmak Exp $
 
 S=${WORKDIR}/${P}
 
@@ -24,11 +24,11 @@ src_unpack() {
     
     patch -p0 <${FILESDIR}/${P}-gentoo.diff
     
-#    if [ "`use ipv6 `" ]; then
-#	cp Makefile 2
-#	sed -e 's/USE_IPV6=0/USE_IPV6=1/' 2 > Makefile
-#	rm 2
-#    fi
+    if [ "`use ipv6 `" ]; then
+	cp Makefile 2
+	sed -e 's/USE_IPV6=0/USE_IPV6=1/' 2 > Makefile
+	rm 2
+    fi
         
 }
 
