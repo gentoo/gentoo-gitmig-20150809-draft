@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.13 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.14 2002/12/15 13:44:00 aliz Exp $
+
+*squirrelmail-1.2.10 (15 Dec 2002)
+
+  15 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> squirrelmail-1.2.10.ebuild :
+  Version bump and include XSS security fix from cvs.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
