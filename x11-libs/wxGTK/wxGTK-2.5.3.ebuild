@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1-r1.ebuild,v 1.2 2004/11/06 17:30:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.3.ebuild,v 1.1 2004/11/13 03:32:58 pythonhead Exp $
 
-inherit flag-o-matic eutils
+inherit eutils
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
 HOMEPAGE="http://www.wxwidgets.org/"
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
-SLOT="0"
-KEYWORDS="~x86"
+SLOT="2.5"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~amd64 ~ia64 ~hppa ~ppc64"
 IUSE="debug no_wxgtk1 gtk2 odbc opengl unicode"
 
 RDEPEND="virtual/x11
@@ -23,7 +23,8 @@ RDEPEND="virtual/x11
 	gtk2? ( >=x11-libs/gtk+-2.0 >=dev-libs/glib-2.0 )
 	!no_wxgtk1? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
 DEPEND="${RDEPEND}
-	gtk2? ( dev-util/pkgconfig )"
+	gtk2? ( dev-util/pkgconfig )
+	sys-apps/sed"
 
 # Note 1: Gettext is not runtime dependency even if nls? because wxWidgets
 #         has its own implementation of it
@@ -33,11 +34,11 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	einfo "New in >=wxGTK-2.4.2-r2:"
 	einfo "------------------------"
-	einfo "You can now have gtk, gtk2 and unicode versions installed"
+	einfo "You can now have gtk, gtk2(ansi) and gtk2(unicode) versions installed"
 	einfo "simultaneously. gtk is installed by default because it is"
 	einfo "more stable than gtk2. Use no_wxgtk1 if you don't want it."
 	einfo "Put gtk2 and unicode in your USE flags to get those"
-	einfo "additional versions."
+	einfo "additional versions if desired."
 	einfo "NOTE:"
 	einfo "You can also get debug versions of any of those, but not debug"
 	einfo "and normal installed at the same time."
@@ -52,12 +53,12 @@ pkg_setup() {
 src_compile() {
 	local myconf
 	export LANG='C'
-	filter-flags -fvisibility-inlines-hidden
+	sed -i "s/-O2//g" configure || die "sed configure failed"
+
 	myconf="${myconf} `use_with opengl`"
 	myconf="${myconf} --with-gtk"
 	myconf="${myconf} `use_enable debug`"
-	#For apps like net-p2p/amule that use obsolete wxDate/wxTime
-	myconf="${myconf} --enable-timedate"
+	myconf="${myconf} --enable-monolithic"
 
 	if ! use no_wxgtk1 ; then
 		mkdir build_gtk
@@ -131,10 +132,18 @@ src_install() {
 		einstall || die "install gtk2 contrib failed"
 	fi
 
-	# twp 20040830 wxGTK forgets to install htmlproc.h; copy it manually
-	insinto /usr/include/wx/html
-	doins ${S}/include/wx/html/htmlproc.h
+	# /usr/bin/wx-config is a symlink to the real wx-config. 2.4 and 2.5 
+	# don't have compatible versions. (See wxwidgets.eclass)
+	# Since 2.5.3 is un-tested and breaks most apps, we'll remove wx-config
+	# and force people to use the wxwidgets eclass and export WX_GTK_VER=2.5 
+	# to find it:
+	rm ${D}/usr/bin/wx-config
 
-	cd ${S}
-	dodoc *.txt
+	dodoc ${S}/*.txt
+
+	# twp 20040830 wxGTK forgets to install htmlproc.h; copy it manually
+	# Not sure if this will be necessary for 2.5, verify: pythonhead 10 Nov 2004
+	# This was for wxRuby
+	#insinto /usr/include/wx/html
+	#doins ${S}/include/wx/html/htmlproc.h
 }
