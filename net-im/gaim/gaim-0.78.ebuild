@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.78.ebuild,v 1.1 2004/05/31 01:08:38 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.78.ebuild,v 1.2 2004/05/31 17:32:12 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
 
-IUSE="nls perl spell nas debug crypt cjk gnutls"
+IUSE="nls perl spell nas debug crypt cjk gnutls silc"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -25,7 +25,8 @@ DEPEND=">=x11-libs/gtk+-2.0
 			!<dev-perl/ExtUtils-MakeMaker-6.17 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	dev-libs/nss
-	gnutls? ( net-libs/gnutls )"
+	gnutls? ( net-libs/gnutls )
+	silc? ( net-im/silc-toolkit )"
 PDEPEND="crypt? ( >=net-im/gaim-encryption-2.26 )"
 
 pkg_setup() {
@@ -75,6 +76,11 @@ src_compile() {
 		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
 		myconf="${myconf} --with-gnutls-libs=/usr/lib"
 	} || myconf="${myconf} --enable-gnutls=no"
+
+	use silc && {
+		myconf="${myconf} --with-silc-includes=/usr/include/silc-toolkit"
+		myconf="${myconf} --with-silc-libs=/usr/lib"
+	}
 
 	myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
 	myconf="${myconf} --with-nss-includes=/usr/include/nss"
