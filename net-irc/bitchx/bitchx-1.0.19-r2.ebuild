@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.5 2002/10/01 02:54:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.6 2002/10/03 20:08:09 bcowan Exp $
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
@@ -12,6 +12,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
+inherit flag-o-matic
+replace-flags -O3 -O2
 
 DEPEND=">=sys-libs/ncurses-5.1 
 	ssl? ( >=dev-libs/openssl-0.9.6 )
