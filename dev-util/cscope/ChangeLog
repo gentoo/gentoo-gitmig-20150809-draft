@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.8 2003/06/04 18:52:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.9 2003/06/05 23:04:18 wwoods Exp $
+
+  05 Jun 2003; Will Woods <wwoods@gentoo.org> cscope-15.3.ebuild,
+  cscope-15.4.ebuild:
+  added gnuconfig_update to fix ./configure on newer arches
 
 *cscope-15.4 (04 Jun 2003)
 
