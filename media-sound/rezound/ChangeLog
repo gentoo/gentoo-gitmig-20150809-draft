@@ -1,9 +1,13 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.10 2004/03/24 23:19:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.11 2004/04/08 07:47:24 eradicator Exp $
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org> rezound-0.9.0_beta.ebuild:
   fixing depend. see 45343
+
+  24 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rezound-0.9.0_beta.ebuild:
+  ebuild cleanup for bug #45343.
 
   16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   rezound-0.7.0_beta.ebuild, rezound-0.8.3_beta-r2.ebuild,
