@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mairix
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.2 2003/02/12 08:13:11 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.3 2004/04/16 20:29:04 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> mairix-0.10.ebuild:
+  adding s390 keywords
 
 *mairix-0.10 (20 Jan 2003)
 
