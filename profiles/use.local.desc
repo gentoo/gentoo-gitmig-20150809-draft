@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.824 2004/12/28 21:08:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.825 2004/12/29 02:08:37 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -87,10 +87,6 @@ app-pda/multisync:bluetooth - Enable Bluetooth support with IRMC
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
-app-sci/gmt:gmtfull - Full resolution bathimetry database;
-app-sci/gmt:gmthigh - Adds high resolution bathimetry database
-app-sci/gmt:gmtsuppl - Supplement functions for GMT;
-app-sci/gmt:gmttria - Non GNU triangulation method, more efficient;
 app-shells/dash:diet - Compile and link with dietlibc
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/a2ps:vanilla - Do not add extra patches which change default behaviour
@@ -626,6 +622,10 @@ sci-biology/transfac:no-emboss - Do not index the database files for use with EM
 sci-biology/transfac:no-rawdb - Do not install the original database files (keep only indexed files)
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
+sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
+sci-geosciences/gmt:gmthigh - Adds high resolution bathimetry database
+sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT;
+sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient;
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
 sci-mathematics/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
