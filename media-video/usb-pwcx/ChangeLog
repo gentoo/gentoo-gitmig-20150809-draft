@@ -1,6 +1,10 @@
 # ChangeLog for media-video/usb-pwcx
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.12 2004/08/07 23:49:54 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.13 2005/01/31 11:31:48 blubb Exp $
+
+  31 Jan 2005; Simon Stelling <blubb@gentoo.org> usb-pwcx-8.2.2.ebuild,
+  usb-pwcx-8.4.ebuild:
+  set keywords -* exept x86
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> usb-pwcx-8.2.2.ebuild:
   Typo in DESCRIPTION: resoltions -> resolutions. Bug 59717.
