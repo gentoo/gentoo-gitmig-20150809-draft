@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.61 2004/11/23 04:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.62 2004/11/23 13:44:48 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -59,7 +59,7 @@ for opt in "$@" ; do
 	esac
 done
 
-if [ -n "${STRAP_RUN}" ] 
+if [ -n "${STRAP_RUN}" ]  ; then
 	if [ ${BOOTSTRAP_STAGE} -ge 6 ] ; then
 		echo
 		einfo "System has been bootstrapped already!"
