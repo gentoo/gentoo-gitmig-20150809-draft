@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.44 2005/03/24 20:36:45 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.45 2005/03/24 20:44:35 griffon26 Exp $
+
+  24 Mar 2005; Maurice van der Pot <griffon26@gentoo.org> :
+  Had repoman fix Manifest file
 
   24 Mar 2005; Maurice van der Pot <griffon26@gentoo.org>
   valgrind-2.4.0.ebuild:
