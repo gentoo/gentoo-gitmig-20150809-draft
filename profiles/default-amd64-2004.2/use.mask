@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.1 2004/06/22 16:19:51 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.2 2004/06/25 21:00:34 kugelfang Exp $
 
 # WON'T BUILD - SECTION
 
@@ -45,3 +45,8 @@ sse2
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# 2004/06/25 - Danny van Dyk <kugelfang@gentoo.org>
+# Known BUGs (#54760) + lack of brain/man power to maintain "hardened" in the
+# default profile. Use the hardened profile instead.
+hardened
