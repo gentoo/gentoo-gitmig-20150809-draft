@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
 
+inherit eutils
+
 DESCRIPTION="An MTA designed specifically for maildirs"
 #SRC_URI="http://www.courier-mta.org/beta/courier/${P}.tar.bz2"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -9,10 +11,11 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha"
-IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite"
 
 PROVIDE="virtual/mta
+	 virtual/mda
 	 virtual/imapd"
 
 DEPEND="virtual/glibc
@@ -28,6 +31,8 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	spell? ( virtual/aspell-dict )
+	!virtual/mta
+	!virtual/mda
 	!virtual/imapd"
 
 RDEPEND="${DEPEND}
@@ -38,10 +43,11 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e 's:\#define.*USER_DIR.*\"Maildir\":\#define\tUSER_DIR\t\".maildir\":' \
-		webmail/sqwebmail.h || die "failed to change maildir"
-	sed -i -e 's:maildir="Maildir";:maildir=".maildir";:' \
-		webmail/auth.c || die "failed to change maildir"
+#	sed -i -e 's:\#define.*USER_DIR.*\"Maildir\":\#define\tUSER_DIR\t\".maildir\":' \
+#		webmail/sqwebmail.h || die "failed to change maildir"
+#	sed -i -e 's:maildir="Maildir";:maildir=".maildir";:' \
+#		webmail/auth.c || die "failed to change maildir"
+	use norewrite && epatch ${FILESDIR}/norewrite.patch
 }
 
 src_compile() {
@@ -159,6 +165,7 @@ src_install() {
 	dodir /etc/pam.d
 	make install DESTDIR=${D} || die
 	# fix bug #15873 bad owner on /var/run/courier
+	mkdir -p ${D}/var/run/courier
 	diropts -o mail -g mail
 	for dir2keep in `(cd ${D} && find . -type d)` ; do
 		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
@@ -203,6 +210,10 @@ src_install() {
 	echo "See /usr/share/courier/htmldoc/index.html for docs in html format" \
 		>>${D}/usr/share/doc/${P}/README.htmldocs
 
+	insinto /usr/lib/courier/courier
+	insopts -m  755 -o mail -g mail
+	doins ${S}/courier/webmaild
+
 	# See bug #10574
 	# file which describes the webadmin password file
 	insinto /etc/courier/webadmin
@@ -225,9 +236,6 @@ src_install() {
 		${D}/usr/share/courier/courierwebadmin/admin-45pop3.pl \
 		|| ewarn "failed to fix webadmin"
 
-}
-
-pkg_preinst() {
 	# avoid name collisions in /usr/sbin
 	local y
 	cd ${D}/usr/share/courier
@@ -247,27 +255,17 @@ pkg_preinst() {
 	touch esmtproutes
 	touch backuprelay
 	touch maildroprc
-	chown mail:root ldapaliasrc
+	[ -e ldapaliasrc ] && chown mail:root ldapaliasrc
 	chg_cfg imapd-ssl COURIERTLS /usr/bin/couriertls
 	chg_cfg authdaemonrc authmodulelist authpam
 	chg_cfg authdaemonrc version authdaemond.plain
 	set_mime esmtpd esmtpd-ssl esmtpd-msa
-	set_maildir courierd
+	set_maildir courierd imapd pop3d sqwebmaild
 }
 
 pkg_postinst() {
 	cd ${S}
 	make install-configure
-
-	# fixes bug #15873 for upgrades, should be able to yank this sometime in
-	# the future
-	chown --recursive mail:mail ${ROOT}/var/run/courier
-
-	# need to do this for new installs to be able to start courier
-	# without having to run rc-update ...
-	# NOTE: not needed with new portages, but I'll leave it for a while for
-	# old portages
-	/etc/init.d/depscan.sh
 
 	einfo "The following command will setup courier for your system:"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}/${PN}-${PV}.ebuild config"
