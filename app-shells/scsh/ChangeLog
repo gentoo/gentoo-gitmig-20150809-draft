@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/scsh
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.9 2003/04/15 21:34:03 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.10 2004/02/26 16:53:38 mkennedy Exp $
+
+*scsh-0.6.5 (26 Feb 2004)
+
+  26 Feb 2004; <mkennedy@gentoo.org> metadata.xml, scsh-0.6.5.ebuild:
+  New upstream; new metadata.xml; use new DESTDIR support
 
 *scsh-0.6.4 (15 Apr 2003)
 
