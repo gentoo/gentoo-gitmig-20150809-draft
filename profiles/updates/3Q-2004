@@ -128,3 +128,4 @@ move net-www/phpBB www-apps/phpBB
 move net-www/phpmp www-apps/phpmp
 move net-www/phpwebsite www-apps/phpwebsite
 move net-www/roundup www-apps/roundup
+move net-www/scgi www-apps/scgi
