@@ -2,7 +2,7 @@ MD5 b17567cb7d554cf0fb7db88e9b6883ce libgtop-2.5.2.ebuild 612
 MD5 f98320acc853bb15b3390c10c3a7ddd9 libgtop-2.6.0.ebuild 612
 MD5 be4b9a5724eff4aa88ac7b94420b47a8 libgtop-2.0.8.ebuild 589
 MD5 8176078b8465cd8c08803fc5d0080beb libgtop-1.0.13-r2.ebuild 1505
-MD5 2de95841b0f856acd4e3fceb9242357b libgtop-2.8.0.ebuild 618
+MD5 53127b50976dddc55d0d938fe57d785d libgtop-2.8.0.ebuild 617
 MD5 ef93178d198655dc246a35a52fb1effc ChangeLog 6300
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 059693f20d0addbeb2d9d98cbc58dfac files/libgtop-2.0.6-lt_version_fix.patch 424

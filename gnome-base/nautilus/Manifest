@@ -6,7 +6,7 @@ MD5 b895718bc0b4715522971180e30c5cf6 nautilus-2.6.0.ebuild 2363
 MD5 a67cd136892af33c8eba094604ce0f4b nautilus-2.6.3-r1.ebuild 3013
 MD5 5716522297a31edfbd44d85cf1dba0dc ChangeLog 14497
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 94f17862ef673909c346a395712cf072 nautilus-2.8.0.ebuild 2710
+MD5 56ddbe0af5ce30f6be59b656fed8ed3a nautilus-2.8.0.ebuild 2711
 MD5 dbfcca25a47c67d13020371a1acbff7a files/nautilus-2-thumbnail_max_size.patch 1444
 MD5 b6616981e10e2a9725840198f3b29d15 files/nautilus-2-x-printers.patch 39941
 MD5 4792b2819e2384304f5a63008db5b9f6 files/nautilus-2-icon_view_gst_audio_preview.patch 8305
