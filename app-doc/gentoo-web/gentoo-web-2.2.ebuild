@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.33 2002/02/06 00:57:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.34 2002/02/06 01:11:03 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -80,7 +80,7 @@ src_install() {
 	echo '<mainpage id="news"><title>Gentoo Linux News</title><author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>' >> ${T}/main-news.xml
 	echo "<version>1.0</version><date>${mydate}</date><newsitems>" >> ${T}/main-news.xml
 	local myext
-	for x in `find xml/news -iname 200*.xml`
+	for x in `find xml/news -iname 200*.xml | sort -r`
 	do
 		myext=`basename $x`
 		myext=${myext%*.xml}
