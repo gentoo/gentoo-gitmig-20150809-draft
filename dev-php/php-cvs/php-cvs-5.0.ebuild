@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.1 2003/04/25 18:02:10 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.2 2003/04/27 18:07:50 coredumb Exp $
 
 ECVS_SERVER="cvs.php.net:/repository"
 ECVS_MODULE="php5"
@@ -48,6 +48,15 @@ src_compile() {
 
 src_install() {
 	php_src_install
+	
+	cp sapi/cli/php .
+	exeinto /usr/bin
+	doexe php
+			
+	#We'll keep that as php4 for the mean time, to avoid accidents
+	mv php.ini-dist php.ini
+	insinto /etc/php4
+	doins php.ini
 
 	docinto Zend
 	dodoc Zend/ZEND_CHANGES Zend/ChangeLog Zend/OBJECTS2_HOWTO
