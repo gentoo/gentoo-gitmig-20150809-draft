@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.29 2003/12/29 03:24:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.30 2004/01/08 00:16:58 mholzer Exp $
+
+  08 Jan 2004; Martin Holzer <mholzer@gentoo.org> strace-4.4.98.ebuild:
+  adding IUSE for static. Closes 36082
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> strace-4.4.98.ebuild:
   Move to mips stable (~mips -> mips)

@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.98.ebuild,v 1.9 2003/12/29 03:24:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.98.ebuild,v 1.10 2004/01/08 00:16:58 mholzer Exp $
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
-IUSE=""
+IUSE="static"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc ~alpha hppa mips amd64 ia64"
@@ -23,7 +24,11 @@ src_compile() {
 	# configure is broken by default for sparc and possibly others, regen
 	# from configure.in
 	autoconf
-	./configure --prefix=/usr || die
+	if use static; then
+		LDFLAGS="-static" ./configure --prefix=/usr || die
+	else
+		./configure --prefix=/usr || die
+	fi
 	emake || die
 }
 
