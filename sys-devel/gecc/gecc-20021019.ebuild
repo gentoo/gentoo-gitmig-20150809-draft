@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.1 2002/10/20 00:24:17 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.2 2002/10/20 00:29:40 mjc Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -55,7 +55,7 @@ SLOT="0"
 # applications) specify all keywords.
 # DO NOT USE KEYWORDS="*". This is deprecated and only for backward
 # compatibility reasons.
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 # Build-time dependencies, such as
 #    ssl? ( >=openssl-0.9.6b )
