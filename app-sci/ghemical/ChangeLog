@@ -1,6 +1,8 @@
 # ChangeLog for app-sci/ghemical
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ChangeLog,v 1.9 2003/02/12 05:16:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ChangeLog,v 1.10 2003/07/02 12:33:39 aliz Exp $
+
+*ghemical-1.00 (13 Feb 2003)
 
   13 Jan 2003; foser <foser@gentoo.org> ghemical-1.00.ebuild :
   Corrected deps, removed gtkglext dep.

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/libnova/libnova-0.7.0.ebuild,v 1.1 2003/05/21 07:08:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/libnova/libnova-0.7.0.ebuild,v 1.2 2003/07/02 12:33:39 aliz Exp $
 
 DESCRIPTION="Celestial Mechanics and Astronomical Calculation Library"
 HOMEPAGE="http://libnova.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libnova/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="app-doc/doxygen"

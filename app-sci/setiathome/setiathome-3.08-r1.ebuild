@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.1 2003/05/04 13:36:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.2 2003/07/02 12:33:39 aliz Exp $
 
 IUSE="X"
 
@@ -31,7 +31,7 @@ RDEPEND="X? ( x11-base/xfree )"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 
 src_unpack () {
 	cd ${WORKDIR}

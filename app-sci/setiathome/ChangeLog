@@ -1,8 +1,8 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.8 2003/05/04 13:36:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.9 2003/07/02 12:33:39 aliz Exp $
 
-*setiathome-3.08 (04 May 2003)
+*setiathome-3.08-r1 (04 May 2003)
 
   04 May 2003; Daniel Ahlberg <aliz@gentoo.org> setiathome-3.08-r1.ebuild :
   Closes #9467.
@@ -11,6 +11,11 @@
 
   09 Par 2003; Daniel Ahlberg <aliz@gentoo.org> setiathome-3.08.ebuild :
   Security update. Rewrote package fetching.
+
+*setiathome-3.03-r1 (13 Feb 2003)
+
+  02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *setiathome-3.03 (19 Jul 2002)
 

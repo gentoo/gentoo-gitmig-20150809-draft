@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4-r1.ebuild,v 1.1 2003/03/25 09:51:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4-r1.ebuild,v 1.2 2003/07/02 12:33:39 aliz Exp $
 
 IUSE="mpi"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gromacs.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 #mpi is a local USE flag now
 #May become official when situation with mpich is cleared (now the only mpi implementation awailable is lam-mpi)

@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.15 2003/06/09 20:09:37 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.16 2003/07/02 12:33:39 aliz Exp $
 
 *octave-2.1.49 (09 Jun 2003) 
   09 Jun 2003; George Shapovalov <george@gentoo.org> octave-2.1.49.ebuild :
@@ -30,6 +30,11 @@
 
   13 Dec 2002; George Shapovalov <george@gentoo.org> octave-2.1.40.ebuild, files/digest-octave-2.1.40 : 
   new version
+
+*octave-2.0.17-r2 (09 Apr 2003)
+
+  02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *octave-2.0.17-r1 (13 Jul 2002)
 

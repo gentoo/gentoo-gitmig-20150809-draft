@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.5.ebuild,v 1.1 2003/04/24 00:09:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.5.ebuild,v 1.2 2003/07/02 12:33:39 aliz Exp $
 
 DESCRIPTION="PHYLIP (the PHYLogeny Inference Package) is a package of programs for inferring phylogenies (evolutionary trees)"
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://evolution.genetics.washington.edu/pub/phylip/${PN}.tar.Z"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=""
 
