@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-ir
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ir/ChangeLog,v 1.1 2005/02/12 03:42:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ir/ChangeLog,v 1.2 2005/02/28 10:48:01 eradicator Exp $
+
+  28 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-ir-1.2.10.ebuild:
+  Stable amd64, sparc, x86.
 
 *xmms-ir-1.2.10 (11 Feb 2005)
 
