@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1.ebuild,v 1.2 2004/08/07 18:27:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1.ebuild,v 1.3 2004/11/18 00:00:08 chriswhite Exp $
+
+inherit eutils kmod
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -11,8 +13,6 @@ KEYWORDS="~x86 ~alpha ~ia64 ~amd64 ~ppc"
 IUSE=""
 DEPEND="virtual/linux-sources"
 #RDEPEND=""
-
-inherit eutils kmod
 
 pkg_setup() {
 	einfo ""
