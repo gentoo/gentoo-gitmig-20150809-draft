@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.5 2004/05/25 13:12:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.6 2004/06/02 12:36:09 agriffis Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -260,7 +260,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/build.patch
 
 	# Linux/SPARC fixes
-	[ `use sparc` ] && epatch ${FILESDIR}/${PV}/linux-sparc.patch
+	use sparc && epatch ${FILESDIR}/${PV}/linux-sparc.patch
 
 	#Security fix
 	epatch ${FILESDIR}/${PV}/neon.patch
@@ -461,7 +461,7 @@ src_install() {
 	done
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/gnome/apps/OpenOffice.org
 		# Install the files needed for the catagory
@@ -482,7 +482,7 @@ src_install() {
 		done
 	fi
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		local kdeloc="${D}${INSTDIR}/share/kde/net/"
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.8 2004/05/30 08:27:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.9 2004/06/02 12:33:20 agriffis Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -49,32 +49,32 @@ src_compile() {
 	elibtoolize
 
 	local myconf=""
-	if [ -n "`use gb`" ]; then
+	if use gb; then
 		myconf="${myconf} --with-gb"
 	else
 		myconf="${myconf} --without-gb"
 	fi
-	if [ -n "`use perl`" ]; then
+	if use perl; then
 		myconf="${myconf} --with-perl"
 	else
 		myconf="${myconf} --without-perl"
 	fi
-	if [ -n "`use python`" ]; then
+	if use python; then
 		myconf="${myconf} --with-python"
 	else
 		myconf="${myconf} --without-python"
 	fi
-	if [ -n "`use libgda`" ]; then
+	if use libgda; then
 		myconf="${myconf} --with-gda --with-bonobo"
 	else
 		myconf="${myconf} --without-gda"
 	fi
-	if [ -n "`use evo`" ]; then
+	if use evo; then
 		myconf="${myconf} --with-evolution"
 	fi
-	if [ -n "`use bonobo`" ]; then
+	if use bonobo; then
 		myconf="${myconf} --with-bonobo"
-	elif [ -z "`use libgda`" ]; then
+	elif ! use libgda; then
 		myconf="${myconf} --without-bonobo"
 	fi
 

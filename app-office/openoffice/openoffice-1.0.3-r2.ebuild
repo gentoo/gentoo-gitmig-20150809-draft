@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r2.ebuild,v 1.3 2004/05/12 11:17:05 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r2.ebuild,v 1.4 2004/06/02 12:36:09 agriffis Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -608,7 +608,7 @@ src_install() {
 	dosym ooffice /usr/bin/oosetup
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/gnome/apps/OpenOffice.org
 		# Install the files needed for the catagory
@@ -625,7 +625,7 @@ src_install() {
 		done
 	fi
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		local kdeloc="${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org${PV}"
 
