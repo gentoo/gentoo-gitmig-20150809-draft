@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho2/gkrellmwho2-0.2.8.ebuild,v 1.3 2004/06/24 22:58:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho2/gkrellmwho2-0.2.8.ebuild,v 1.4 2004/07/09 23:33:24 slarti Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}.orig
@@ -12,11 +12,12 @@ DEPEND=">=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 src_compile() {
-	pwd
-	ls
+# Eh? --slarti
+#	pwd
+#	ls
 	econf || die
 	emake || die
 }
