@@ -1,6 +1,12 @@
 # ChangeLog for www-proxy/middleman
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/ChangeLog,v 1.3 2004/09/05 09:20:40 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/ChangeLog,v 1.4 2005/04/06 18:27:29 mrness Exp $
+
+  06 Apr 2005; Alin Nastac <mrness@gentoo.org>
+  -files/middleman-1.9.1-makefile.patch,
+  +files/middleman-2.0.1-gcc-34.patch, -middleman-1.9.1-r1.ebuild,
+  -middleman-2.0.1-r1.ebuild, middleman-2.0.1-r2.ebuild:
+  Fix compilation on gcc-3.4 and mark stable on x86. Remove obsolete versions.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

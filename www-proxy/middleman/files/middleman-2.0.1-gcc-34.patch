@@ -1,0 +1,33 @@
+diff -Nru middleman-2.0.1.orig/src/main.c middleman-2.0.1/src/main.c
+--- middleman-2.0.1.orig/src/main.c	2004-03-12 00:28:57.000000000 +0200
++++ middleman-2.0.1/src/main.c	2005-04-06 21:12:10.580927424 +0300
+@@ -407,7 +407,7 @@
+ #else
+ 	pcre_free = xfree;
+ 	// grr... argument to malloc is int on some systems, and long on others
+-	(void *) pcre_malloc = (void *) xmalloc;
++	(void *&) pcre_malloc = (void *) xmalloc;
+ #endif
+ 
+ 	global->dns_cache = hash_create(DNS_HASH_SIZE);
+diff -Nru middleman-2.0.1.orig/src/stats.c middleman-2.0.1/src/stats.c
+--- middleman-2.0.1.orig/src/stats.c	2004-03-12 00:27:16.000000000 +0200
++++ middleman-2.0.1/src/stats.c	2005-04-06 21:11:29.636151976 +0300
+@@ -175,7 +175,7 @@
+ 
+ 	sc.name = stat;
+ 	sc.type = type | StatCounter::CALLBACK;
+-	(void *)sc.value.callback = (void *)cb;
++	(void *&)sc.value.callback = (void *)cb;
+ 
+ 	counter_list.push_back(sc);
+ 
+@@ -193,7 +193,7 @@
+ 
+ 	sc.name = stat;
+ 	sc.type = type | StatCounter::CALLBACK;
+-	(void *)sc.value.callback = (void *)cb;
++	(void *&)sc.value.callback = (void *)cb;
+ 
+ 	counter_list.push_back(sc);
+ 

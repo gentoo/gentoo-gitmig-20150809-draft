@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/middleman-2.0.1-r2.ebuild,v 1.2 2004/09/03 16:06:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/middleman-2.0.1-r2.ebuild,v 1.3 2005/04/06 18:27:29 mrness Exp $
 
 inherit eutils
 
@@ -10,10 +10,8 @@ HOMEPAGE="http://sourceforge.net/projects/middle-man"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc"
+KEYWORDS="x86 ppc"
 IUSE="${IUSE} pam zlib"
-
-#S=${WORKDIR}/
 
 DEPEND="virtual/libc
 	dev-libs/libpcre
@@ -25,12 +23,8 @@ src_unpack() {
 	unpack ${A}
 	[ -f ${FILESDIR}/${P}-gentoo.diff ] && epatch ${FILESDIR}/${P}-gentoo.diff
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-${PV}-putlog-fix.patch
-
-	#if [ "$PV" = "1.9" ]; then
-	#	einfo "Patching Makefile.in to avoid sandbox problems"
-	#	sed -i -e s:"INSTALL) -d /var":"INSTALL) -d \$(DESTDIR)/var":g Makefile.in
-	#fi
+	epatch ${FILESDIR}/${P}-putlog-fix.patch
+	epatch ${FILESDIR}/${P}-gcc-34.patch
 }
 
 src_compile() {
