@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-String
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.12 2004/01/19 02:41:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.13 2004/05/26 21:41:11 kloeri Exp $
+
+  26 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  Unicode-String-2.07.ebuild:
+  Stable on alpha.
 
   18 Jan 2004; <gustavoz@gentoo.org> Unicode-String-2.07.ebuild:
   marked stable on sparc
