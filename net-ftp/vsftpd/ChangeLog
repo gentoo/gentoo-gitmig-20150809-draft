@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.50 2005/02/09 16:22:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.51 2005/03/13 14:44:59 solar Exp $
+
+*vsftpd-2.0.2 (13 Mar 2005)
+
+  13 Mar 2005; <solar@gentoo.org> +vsftpd-2.0.2.ebuild:
+  - version bump. fixes an issue with SSL secured data connections dropping out
 
   09 Feb 2005; <solar@gentoo.org> vsftpd-2.0.1.ebuild:
   - remove fPIC filtering on vsftpd-2.0.1 (no longer needed) bug #74519
