@@ -1,0 +1,68 @@
+# ChangeLog for sys-apps/mtx
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mtx/ChangeLog,v 1.1 2005/03/15 19:48:09 ciaranm Exp $
+
+*mtx-1.2.18 (15 Mar 2005)
+*mtx-1.2.17 (15 Mar 2005)
+
+  15 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +mtx-1.2.17.ebuild, +mtx-1.2.18.ebuild:
+  Moved from sys-apps/mtx to sys-block/mtx.
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  15 Oct 2004; Guy Martin <gmsoft@gentoo.org> mtx-1.2.18.ebuild:
+  Stable on hppa.
+
+  27 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> mtx-1.2.18.ebuild:
+  Marked stable on amd64.
+
+  06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> mtx-1.2.18.ebuild:
+  Stable on sparc
+
+  11 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> mtx-1.2.18.ebuild:
+  mark stable on x86, needed for 2.6 kernels. bug #44360, #38540.
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mtx-1.2.17.ebuild,
+  mtx-1.2.18.ebuild:
+  glibc -> libc
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> mtx-1.2.18.ebuild:
+  Stable on alpha.
+
+  26 Apr 2004; Jason Wever <weeve@gentoo.org> mtx-1.2.17.ebuild:
+  Stable on sparc.
+
+  02 Apr 2004; <plasmaroo@gentoo.org> mtx-1.2.18.ebuild:
+  Added a sed script to filter out "/usr/src/linux/include" from the source;
+  this solves compilation errors on 2.6 kernels. Closes bug #45537.
+
+*mtx-1.2.18 (13 Jan 2004)
+
+  13 Jan 2004; Martin Holzer <mholzer@gentoo.org> mtx-1.2.18.ebuild:
+  Version bumped. Closes 37947.
+
+  13 Jan 2004; Martin Holzer <mholzer@gentoo.org> mtx-1.2.17.ebuild:
+  Adding RESTRICT=nomirror.
+
+  07 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> mtx-1.2.17.ebuild:
+  Added ~ppc as this is needed for amanda and I've got reports of it working
+  on PPC.
+
+  24 Nov 2003; Aron Griffis <agriffis@gentoo.org> mtx-1.2.17.ebuild:
+  Stable on alpha.
+
+  28 Oct 2003; Todd Sunderlin <todd@gentoo.org> mtx-1.2.17.ebuild:
+  Added ~sparc keyword.
+
+*mtx-1.2.17 (23 Oct 2002)
+
+  23 Oct 2002; Brandon Low <lostlogic@gentoo.org> mtx-1.2.17.ebuild: 
+
+  New package submission, resolves bugs 3960 7207 8861 based on ebuilds
+  by: Josh Timmons <josh@developerx.com>
+      Alexander Holler <holler@ahsoftware.de>
+      Andrew Glen-Young <andy@metropolis.co.za>
+      Russell Adams <rladams@kelsey-seybold.com>
+  I hope that one of them will keep it up-to-date for me :)
