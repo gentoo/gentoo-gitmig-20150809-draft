@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.14.ebuild,v 1.5 2003/03/23 08:37:44 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.14.ebuild,v 1.6 2003/04/05 03:25:57 weeve Exp $
 
 IUSE="nls gtk2"
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gftp.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc "
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/x11
 	gtk2? ( >=x11-libs/gtk+-2.0.0 )
