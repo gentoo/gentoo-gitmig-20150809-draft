@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27.ebuild,v 1.1 2005/01/18 11:23:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r1.ebuild,v 1.1 2005/01/19 13:13:46 usata Exp $
 
 DESCRIPTION="Powerful GTK+ based image & movie viewer"
 HOMEPAGE="http://gtkmmviewer.sourceforge.net/"
@@ -50,7 +50,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	# make DESTDIR=${D} install doesn't work
+	einstall || die
 	use gnome || rm -r ${D}/usr/share/gnome/ ${D}/usr/share/pixmaps/
 }
 

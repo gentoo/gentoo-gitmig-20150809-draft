@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 abc75cc9890ccde9c4c425c1acc5f697 ChangeLog 1407
+MD5 7450fed134c76fa90e82a2586e19510b ChangeLog 1584
 MD5 7dbdcb559d3684fa9b06ef8b421019c1 gimageview-0.2.25.ebuild 1912
 MD5 4368b20da8cb79a90eb16111f691f548 metadata.xml 379
 MD5 526389d38327d5dca4da682991421019 gimageview-0.2.26.ebuild 1637
-MD5 b7e1527ff99afa1d7ae6f5fec3da04ba gimageview-0.2.27.ebuild 1636
+MD5 ffed5fa0974b65cd7fd4dc3612be2942 gimageview-0.2.27-r1.ebuild 1664
 MD5 36f65a43da5f087e4bbc63ff7f8adad0 files/digest-gimageview-0.2.25 70
 MD5 9a949f1e3e1aebb680b0b2823db37bf1 files/gimv-gcc34.patch 851
 MD5 89b270a7d0a783ab34544f41c5224819 files/digest-gimageview-0.2.26 70
-MD5 f74096a129e40fbd3c7a911c3afe461a files/digest-gimageview-0.2.27 70
+MD5 f74096a129e40fbd3c7a911c3afe461a files/digest-gimageview-0.2.27-r1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB7O/KVWNWqTUmv+0RAguLAJ98nI+5ztzV8op/2UCGqkvoOGwhgQCfdWxQ
-WflkZCCFyY7XithFeTHh/BY=
-=hlpM
+iD8DBQFB7lsaVWNWqTUmv+0RAml/AJoC3+xbYXXhqs2clgK7LpeG+FNHTACdFyqY
+g9lNmyTg5U6TLGlQLHrjpHw=
+=gXc+
 -----END PGP SIGNATURE-----
