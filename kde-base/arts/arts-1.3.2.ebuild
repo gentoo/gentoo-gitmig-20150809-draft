@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2.ebuild,v 1.2 2004/12/09 11:32:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2.ebuild,v 1.3 2004/12/09 15:44:11 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV/1.3.2/3.3.2}/src/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~alpha"
-IUSE="alsa oggvorbis esd artswrappersuid jack mad"
+IUSE="alsa oggvorbis esd artswrappersuid jack mad hardened"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
@@ -33,7 +33,11 @@ src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/1.3.0-jack-configure.in.in.patch
 	epatch ${FILESDIR}/${P}-alsa-bigendian.patch
-	epatch ${FILESDIR}/arts-1.3.2-mcopidl.patch
+
+	if (is-flag -fstack-protector || is-flag -fstack-protector-all || use hardened); then
+		epatch ${FILESDIR}/arts-1.3.2-mcopidl.patch
+	fi
+
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	# rm -f $S/configure

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.128 2004/12/09 11:32:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.129 2004/12/09 15:44:11 caleb Exp $
+
+  09 Dec 2004; Caleb Tennis <caleb@gentoo.org> arts-1.3.2.ebuild:
+  Only use the hardened patch if it's necessary
 
   09 Dec 2004; Caleb Tennis <caleb@gentoo.org> arts-1.3.2.ebuild:
   Add a patch to apply -fno-stack-protector so arts doesn't die for some people
