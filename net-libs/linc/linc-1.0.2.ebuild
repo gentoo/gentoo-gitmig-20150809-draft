@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-1.0.2.ebuild,v 1.6 2004/06/24 23:15:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-1.0.2.ebuild,v 1.7 2004/07/15 01:13:21 agriffis Exp $
 
 IUSE="doc ssl"
 
 inherit libtool gnome2
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A library to ease the writing of networked applications"
 HOMEPAGE="http://www.gnome.org/"
 
@@ -24,4 +23,3 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} $(use_with ssl openssl)"
 
 DOCS="AUTHORS ChangeLog COPYING HACKING MAINTAINERS README* NEWS TODO"
-
