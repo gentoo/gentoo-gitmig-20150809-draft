@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.8.ebuild,v 1.6 2004/04/28 06:24:51 vapier Exp $
 
+DESCRIPTION="Network Information Service tools"
+HOMEPAGE="http://www.linux-nis.org/nis/"
+SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ppc64 ~ia64"
 IUSE="nls"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Network Information Service tools"
-SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${P}.tar.bz2"
-HOMEPAGE="http://www.linux-nis.org/nis"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ppc64 ~ia64"
 DEPEND="virtual/glibc"
 
 src_compile() {
 	local myconf="--sysconfdir=/etc/yp"
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myconf="${myconf} --disable-nls"
 		mkdir intl
@@ -35,7 +35,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	insinto /etc/yp ; doins etc/nicknames
 	# This messes up boot so we remove it
 	rm -d ${D}/bin/ypdomainname
