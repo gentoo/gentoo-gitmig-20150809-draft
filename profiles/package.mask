@@ -34,9 +34,9 @@ app-admin/webconfig
 =x11-libs/qt-x11-2.3.2
 
 #waiting for new portage dep format
->=x11-libs/qt-x11-3
->=x11-libs/qt-3
->=app-doc/qt-docs-3
+#>=x11-libs/qt-x11-3
+#>=x11-libs/qt-3
+#>=app-doc/qt-docs-3
 
 #untested, author mentions an error
 media-libs/id3lib-docs
@@ -294,3 +294,8 @@ net-misc/gkrellmwireless
 
 # Needs to be tested under KDE env. with sandbox
 dev-util/poedit
+
+# packages dependent on dev-lang/tcl-tk should be updated for the new scheme
+# and then tcl-tk should be removed, have two schemes present is too confusing
+dev-lang/tcl
+dev-lang/tk
