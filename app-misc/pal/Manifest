@@ -1,6 +1,16 @@
-MD5 92e41499036b0e36b435e5e40b0e9d2c pal-0.3.4.ebuild 773
-MD5 8a86a83fc7a79de55a60c3bae23c06a0 pal-0.3.3.ebuild 772
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f1abb69e03ce53034030928cbf3bf6e3 ChangeLog 1223
 MD5 e81faf30eaebe278f1e13a079b316fe8 metadata.xml 519
-MD5 228d68103a2c55df1bc0d80965d42afb files/digest-pal-0.3.3 57
+MD5 f340936c11ed5c7760c33d430f355140 pal-0.3.4.ebuild 765
+MD5 b795be7c30ffd096b0327223de208867 pal-0.3.3.ebuild 764
 MD5 6794687af78097439e2946d771c61c74 files/digest-pal-0.3.4 58
+MD5 228d68103a2c55df1bc0d80965d42afb files/digest-pal-0.3.3 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35mjHTu7gpaalycRAvPQAKDjgT8DUt/13Usm9hisBJx7LQLyngCfXTSU
+cTuSkof4NeWPRoGLb5eqoUY=
+=zRe5
+-----END PGP SIGNATURE-----

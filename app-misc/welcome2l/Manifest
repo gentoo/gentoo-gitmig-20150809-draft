@@ -1,5 +1,15 @@
-MD5 fb07dc19cbf9edd99a8ea711ae750cdc welcome2l-3.04.ebuild 959
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b278fae5ca2fa8418a864d0b2b663e9 ChangeLog 1312
-MD5 6741e21385b95a4f940c0c104566b385 files/welcome2l.initscript 159
-MD5 373376c0a3b1924d993e20675c66ec37 files/welcome2l-3.04-gentoo.patch 30692
+MD5 73c54e7c019f6b7b8f2baf0f030f2ea4 welcome2l-3.04.ebuild 948
 MD5 ae4608a48e118a1e480ae98cef669837 files/digest-welcome2l-3.04 70
+MD5 373376c0a3b1924d993e20675c66ec37 files/welcome2l-3.04-gentoo.patch 30692
+MD5 6741e21385b95a4f940c0c104566b385 files/welcome2l.initscript 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35vzHTu7gpaalycRAodgAJ9kYcrCNE9pfD/A+rPX4I//xl1onQCgjqaW
+2Jgr9ohWm4lDV1M0kBqFX5U=
+=jTND
+-----END PGP SIGNATURE-----

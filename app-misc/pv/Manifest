@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 32a3f2bf079665f5149bbcd477d4e754 ChangeLog 445
 MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
-MD5 6c571873b6cd16ff7ccfcf1c97f69497 pv-0.8.1.ebuild 658
+MD5 9e8ec6b93bc78f70fe542c23513394c0 pv-0.8.1.ebuild 578
 MD5 7d10e38953b610a7c418e78e0a4fcd76 files/digest-pv-0.8.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35ntHTu7gpaalycRAsLUAJ9leu8Dh5p4yMUMZEKV1bCm0nkh3QCeLJh+
+n/RE3NTWPn/A3eKRl0JP3SY=
+=spQm
+-----END PGP SIGNATURE-----

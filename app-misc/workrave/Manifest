@@ -1,7 +1,17 @@
-MD5 aa87662a96f2cd2541fcf94ddf2b996d workrave-1.6.1.ebuild 1517
-MD5 f853a11538e94712f86d021a778c603a workrave-1.4.0-r1.ebuild 2242
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6af1d16b408d69506e827eb31c126106 ChangeLog 2984
 MD5 67c79a367364e0cd7ae0e3592f0c35e0 metadata.xml 530
-MD5 27bae5033a65f662821f75b0f95f252b files/workrave-1.4.0-gcc2_fixes.patch 899
+MD5 c3a00fec9e9214e21b95c96d67d577d6 workrave-1.6.1.ebuild 1495
+MD5 17de6e98fa52c268850581c6a2b1e825 workrave-1.4.0-r1.ebuild 2218
 MD5 9359bb4e6eb58db8f008fdf27b255f75 files/digest-workrave-1.6.1 67
 MD5 bc9d7939a5ed8b03c2c327360e7b1c43 files/digest-workrave-1.4.0-r1 66
+MD5 27bae5033a65f662821f75b0f95f252b files/workrave-1.4.0-gcc2_fixes.patch 899
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35wsHTu7gpaalycRAjFaAJ9YfIW4XDU+eHzQvPWZ/lAiwLdDXgCg00GW
+uGSdP4r3qGDW2nPWfEDijd0=
+=7/mz
+-----END PGP SIGNATURE-----

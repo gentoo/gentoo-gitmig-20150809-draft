@@ -1,4 +1,14 @@
-MD5 e1ce9b401584855077c5873ac9d5ee2d rolo-011.ebuild 702
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4145975dca3ed07fdbe9ca5e878aa2ab ChangeLog 650
+MD5 15f42cfd04a8f742d15bd2ed478edfea rolo-011.ebuild 692
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 5507c7a0b8c8ed5ea7844891707f957d files/digest-rolo-011 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35qKHTu7gpaalycRApXdAKCaZPNwCgOwBQVhaa6b6f6IxzYaQQCeM0x9
+tajCrnJRbvUWb6j2+kzLqYY=
+=vjxm
+-----END PGP SIGNATURE-----

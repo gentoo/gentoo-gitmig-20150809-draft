@@ -1,8 +1,18 @@
-MD5 6ff9f3661a2d715a6c085cca800d0725 rioutil-1.4.4.ebuild 811
-MD5 a2a804979b551cc653102cd7d65992ac rioutil-1.4.2b.ebuild 712
-MD5 edc993cd27a49091d6d1f0cd61b3d29a rioutil-1.3.3.ebuild 758
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 06754f9514db76f678e1e3f17ac25fd9 ChangeLog 1782
+MD5 edc993cd27a49091d6d1f0cd61b3d29a rioutil-1.3.3.ebuild 758
+MD5 997385b9ff403f19685cb754a0497a1c rioutil-1.4.2b.ebuild 681
+MD5 0604856ca33827ca7d441e67bb664aa0 rioutil-1.4.4.ebuild 730
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 dc3c89c8600c99e61efa4bbd65876b22 files/digest-rioutil-1.3.3 66
 MD5 72a43d60ff9736ade5cf03ea35853db7 files/digest-rioutil-1.4.4 66
+MD5 dc3c89c8600c99e61efa4bbd65876b22 files/digest-rioutil-1.3.3 66
 MD5 59927df6017f718328d0f7ce6eaeb2d3 files/digest-rioutil-1.4.2b 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35pYHTu7gpaalycRAhslAJ9Pc9q8bq0/jx8o4IMWu6SxVRlHmQCg6zJn
+akEHxV/vzsIvjOgRT8nquX4=
+=kh3N
+-----END PGP SIGNATURE-----

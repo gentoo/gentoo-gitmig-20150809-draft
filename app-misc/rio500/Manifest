@@ -1,5 +1,15 @@
-MD5 fcbee08af7676ad2352e9873e2cf53ea rio500-0.7-r1.ebuild 805
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d4a8ecc3cdf4ada9a5629abee3aa12a5 ChangeLog 1385
-MD5 5afc0dbc4563e69803ce58a5f60a4183 rio500-0.7-r2.ebuild 943
+MD5 ce87dd89e7e019f556f115c94d753c0f rio500-0.7-r1.ebuild 795
+MD5 bd2d6ff9164ab7568e762c32713462c9 rio500-0.7-r2.ebuild 933
 MD5 fb73c696618bd1e2417425c450669ddc files/digest-rio500-0.7-r1 62
 MD5 fb73c696618bd1e2417425c450669ddc files/digest-rio500-0.7-r2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35pFHTu7gpaalycRAn6rAJ91LotiaAWqehYwhzBAj7OVp0FNuwCfWSIP
+Eof7gNIrz/JBtseg1HFlxP4=
+=LoMQ
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 2c45bb633751105e6988998705fe99b8 symlinks-1.2.ebuild 978
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ee40ce598f015aa7166cb71df42d6334 ChangeLog 599
 MD5 41aa1eb06478bb0ceb9630dc224f0320 metadata.xml 596
+MD5 900b2bfc7af9a47be7e1b0c0c008b779 symlinks-1.2.ebuild 982
 MD5 666d1377e011bc239345c67bf9f6f274 files/digest-symlinks-1.2 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35tNHTu7gpaalycRAgEAAKCKITUTh7xxV47FKjk7XA4tavxv6ACg9l0o
+BYki41Z1tf+FTju+kJ93mhM=
+=pJD5
+-----END PGP SIGNATURE-----

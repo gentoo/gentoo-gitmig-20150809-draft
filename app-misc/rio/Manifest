@@ -1,3 +1,13 @@
-MD5 c34d8a0c9f444380735ae57412bc45bd rio-1.0.7.ebuild 753
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3dcfdeab0e11082cc6dd38c1dd2d348c ChangeLog 445
+MD5 d9fe99ab470ecb67c963a43cace2a820 rio-1.0.7.ebuild 714
 MD5 57d3999d889f638c313d32013ed95bdc files/digest-rio-1.0.7 54
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35o0HTu7gpaalycRAoAuAJ93yXp420Ys7ehwmEvs0DuCu7birACg7yNJ
++hFqYR/SeNdH5RiHmoRle+c=
+=5yPn
+-----END PGP SIGNATURE-----
