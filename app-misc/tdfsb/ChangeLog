@@ -1,2 +1,18 @@
-#12/20/2002 8:06pm EST ZhEN
-New package. This is an SDL file browser, much like the one seen in Jurassic Park 1.
+# ChangeLog for app-misc/tdfsb
+# Copyright 2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.2 2002/12/21 11:53:52 seemant Exp $
+
+*app-misc/tdfsb-0.0.7 (12 Dec 2002)
+
+  12 Dec 2002; Seemant Kulleen <seemant@gentoo.org> tdfsb-0.0.7.ebuild
+  ChangeLog :
+
+  Made ChangeLog proper, and fixed up ebuild to be more standards conforming
+  to Gentoo ebuilds.  Additionally, added media-libs/smpeg to DEPEND list,
+  closing bug #12504 by marduk@python.net (marduk)
+
+  12 Dec 2002; John P. Davis <zhen@gentoo.org> tdfsb-0.0.7.ebuild ChangeLog
+  files/digest-tdfsb-0.0.7 :
+  New package. This is an SDL file browser, much like the one seen in 
+  Jurassic Park 1.
