@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.56 2003/02/14 23:16:11 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.57 2003/02/15 01:57:29 gerk Exp $
 
 *perl-5.6.1-r11 (14 Feb 2003)
+
+  14 Feb 2003; Mark Guertin <gerk@gentoo.org> perl-5.6.1-r11.ebuild :
+  Set to ppc stable
 
   14 Feb 2003; Mark Guertin <gerk@gentoo.org> perl-5.6.1-r11.ebuild files/5.6.1-builtin-fixup.diff files/5.6.1-op-test-fix.diff files/digest-perl-5.6.1-r11 :
   built-in sed fixups, placed in makefile.SH instead of randomly thru the build.  Thanks to rac for all his help and an lfs patch
