@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p1.ebuild,v 1.3 2004/05/18 22:32:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.1 2004/05/18 22:32:04 usata Exp $
 
 inherit cannadic eutils
 
@@ -10,11 +10,11 @@ MY_P="Canna${PV//./}"
 
 DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://canna.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/canna/7449/${MY_P/_/}.tar.bz2"
+SRC_URI="mirror://sourceforge.jp/canna/9558/${MY_P/_/}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND="virtual/glibc
 	virtual/x11
@@ -38,9 +38,6 @@ src_unpack() {
 src_compile() {
 
 	xmkmf || die
-
-	# Remove VENDORNAME, see bug #48229
-	sed -i -e '/VENDORNAME/d' Makefile
 
 	#make libCannaDir=../lib/canna canna || die
 	make canna || die

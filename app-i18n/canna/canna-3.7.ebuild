@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7.ebuild,v 1.8 2004/05/06 11:31:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7.ebuild,v 1.9 2004/05/18 22:32:04 usata Exp $
 
 inherit cannadic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge.jp/canna/7240/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha amd64"
+KEYWORDS="x86 ppc ~sparc alpha amd64"
 
 DEPEND="virtual/glibc
 	virtual/x11
