@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.05.ebuild,v 1.3 2003/07/13 11:30:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.05.ebuild,v 1.4 2004/01/26 00:52:47 vapier Exp $
 
 DESCRIPTION="IP Stack Integrity Checker"
 HOMEPAGE="http://www.packetfactory.net/projects/ISIC/"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 DEPEND="=net-libs/libnet-1.0*"
 
 src_compile() {
-	env WANT_AUTOCONF_2_5=1 autoconf || die
+	env WANT_AUTOCONF=2.5 autoconf || die
 	econf || die
 	emake || die
 }

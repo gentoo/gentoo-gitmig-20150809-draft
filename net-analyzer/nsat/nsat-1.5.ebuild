@@ -1,21 +1,20 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.5 2003/10/28 13:39:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.6 2004/01/26 00:53:46 vapier Exp $
 
-IUSE="X"
-
-S=${WORKDIR}/${PN}
 DESCRIPTION="Network Security Analysis Tool, an application-level network security scanner"
-SRC_URI="mirror://sourceforge/nsat/${P}.tgz"
 HOMEPAGE="http://nsat.sourceforge.net/"
+SRC_URI="mirror://sourceforge/nsat/${P}.tgz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~sparc"
+IUSE="X"
 
 DEPEND="X? ( virtual/x11 dev-lang/tk )
 	>=net-libs/libpcap-0.7.1-r1 "
-RDEPEND=${DEPEND}
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	WANT_AUTOCONF_2_5=1
+	WANT_AUTOCONF=2.5
 	autoconf
 
 	econf $( use_with X x ) || die
