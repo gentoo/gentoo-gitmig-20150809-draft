@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r2.ebuild,v 1.1 2002/01/26 01:03:32 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r2.ebuild,v 1.2 2002/01/26 01:07:56 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Automounter"
@@ -38,6 +38,6 @@ src_install() {
 	cp ${FILESDIR}/auto.master ${D}/etc/autofs
 	cp ${FILESDIR}/auto.misc ${D}/etc/autofs
 
-	dodir /etc/init.d
-	cp ${FILESDIR}/autofs ${D}/etc/init.d
+	exeinto /etc/init.d ; newexe ${FILESDIR}/autofs.rc6 autofs
+	insinto /etc/conf.d ; newins ${FILESDIR}/autofs.confd autofs
 }
