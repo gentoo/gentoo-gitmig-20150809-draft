@@ -1,0 +1,19 @@
+# config file for mldonkey control script
+
+# owner of mlnet process (don't change, must be existing)
+MLUSER="p2p"
+
+# home dir of owner (don't change, must be existing)
+MLHOME="/home/p2p"
+
+# subdir if any (will be created, if not existing)
+MLDIR=".mldonkey"
+
+# bandwidth control, values in kb/s
+MLLOWDOWN="6"
+MLLOWUP="2"
+MLHIGHDOWN="30"
+MLHIGHUP="10"
+
+# port for webinterface, usually 4080
+MLPORT="4080"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>ml</herd>
+<maintainer>
+  <email>JulianHoch@web.de</email>
+  <name>Julian Hoch</name>
+  <description>caleb@gentoo.org passed the buck to Julian</description>
+</maintainer>
+<longdescription>An ocaml client to access the eDonkey network.</longdescription>
+</pkgmetadata>
