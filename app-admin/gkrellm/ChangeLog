@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.69 2004/01/26 13:58:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.70 2004/02/18 14:33:39 agriffis Exp $
+
+  18 Feb 2004; Aron Griffis <agriffis@gentoo.org> gkrellm-2.1.24.ebuild,
+  gkrellm-2.1.25.ebuild:
+  add ia64/~ia64 keywords
 
   26 Jan 2004; Jason Wever <weeve@gentoo.org> gkrellm-2.1.24.ebuild:
   Marked stable on sparc.
