@@ -7,7 +7,7 @@ DESCRIPTION="User-land utilities for openMosix process migration (clustering) so
 SRC_URI="http://prdownloads.sourceforge.net/openmosix/openMosixUserland-${PV}.tgz"
 HOMEPAGE="http://www.openmosix.com"
 RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2"
-DEPEND="$RDEPEND sys-apps/findutils sys-devel/perl"
+DEPEND="$RDEPEND ~sys-kernel/openmosix-sources-2.4.17_pre3 sys-apps/findutils sys-devel/perl"
 
 src_unpack() {
 	unpack ${A}
