@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.3 2004/02/11 20:41:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.4 2004/02/11 20:48:40 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox maildir"
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	# See Bug #22787
-	unset WANT_AUTOMAKE_2_5
+	unset WANT_AUTOCONF_2_5
 	# See Bug #11170
 	case ${ARCH} in
 		alpha|ppc) replace-flags "-O[3-9]" "-O2" ;;

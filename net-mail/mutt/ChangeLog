@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.41 2004/02/11 20:41:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.42 2004/02/11 20:48:40 agriffis Exp $
+
+  11 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.4-r1.ebuild,
+  mutt-1.5.5.1.ebuild, mutt-1.5.6.ebuild:
+  use WANT_AUTOCONF, not WANT_AUTOMAKE (bug 33919)
 
   11 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.4-r1.ebuild,
   mutt-1.5.4.ebuild, mutt-1.5.5.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.1 2004/02/11 20:39:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.2 2004/02/11 20:48:40 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp maildir vanilla"
 
@@ -78,7 +78,7 @@ src_compile() {
 		--disable-fcntl --enable-flock --enable-external-dotlock"
 
 	# See Bug #22787
-	unset WANT_AUTOMAKE_2_5 WANT_AUTOMAKE
+	unset WANT_AUTOCONF_2_5 WANT_AUTOCONF
 
 	# See Bug #11170
 	case ${ARCH} in
