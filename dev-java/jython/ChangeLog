@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.7 2004/07/16 15:58:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.8 2004/07/30 11:54:52 karltk Exp $
+
+  30 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>:
+  Moved to dev-java/jython-bin, as these ebuilds do not compile from sources,
+  and upstream project doesn't release any.
 
   16 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
   fix python.home path in files/jython closes 49841
