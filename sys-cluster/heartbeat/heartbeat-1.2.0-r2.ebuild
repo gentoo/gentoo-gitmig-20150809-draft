@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.0-r2.ebuild,v 1.3 2004/06/24 22:38:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.0-r2.ebuild,v 1.4 2004/06/28 01:51:16 agriffis Exp $
 
 inherit eutils
 
@@ -70,7 +70,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	# if ! USE="ldirectord" then don't install it
-	if [ ! `use ldirectord` ] ; then
+	if ! use ldirectord ; then
 		rm ${D}/etc/init.d/ldirectord
 		rm ${D}/etc/logrotate.d/ldirectord
 		rm ${D}/usr/man/man8/supervise-ldirectord-config.8

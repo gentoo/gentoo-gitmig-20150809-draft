@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.0.4.ebuild,v 1.5 2004/06/24 22:38:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.0.4.ebuild,v 1.6 2004/06/28 01:51:16 agriffis Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -47,7 +47,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	# if ! USE="ldirectord" then don't install it
-	if [ ! `use ldirectord` ] ; then
+	if ! use ldirectord ; then
 		rm ${D}/etc/init.d/ldirectord
 		rm ${D}/etc/logrotate.d/ldirectord
 		rm ${D}/usr/man/man8/supervise-ldirectord-config.8

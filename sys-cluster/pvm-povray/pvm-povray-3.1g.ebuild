@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.4 2004/06/24 22:41:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.5 2004/06/28 01:52:15 agriffis Exp $
 
 S=${WORKDIR}/povray31
 DESCRIPTION="The Persistance Of Vision Ray Tracer - PVM version"
@@ -88,12 +88,12 @@ src_compile() {
 	cd source/pvm
 	aimk newunix || die
 
-	if [ "`use X`" ] ; then
+	if use X ; then
 		einfo 'Building x-pvmpov'
 		aimk newxwin || die
 	fi
 
-	if [ "`use svga`" ] ; then
+	if use svga ; then
 		einfo 'Building s-pvmpov'
 		aimk newsvga || die
 	fi

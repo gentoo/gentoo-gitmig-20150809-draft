@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.23 2004/06/24 22:38:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.24 2004/06/28 01:51:16 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org> heartbeat-1.0.4.ebuild,
+  heartbeat-1.1.5.ebuild, heartbeat-1.2.0-r2.ebuild, heartbeat-1.2.2.ebuild:
+  QA - fix use invocation
 
 *heartbeat-1.2.2 (07 Jun 2004)
 
