@@ -1,6 +1,20 @@
 # ChangeLog for net-dns/ddclient
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.12 2004/12/29 03:00:31 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.13 2005/04/01 22:20:38 seemant Exp $
+
+*ddclient-3.6.6 (01 Apr 2005)
+
+  01 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/ddclient-3.6.2-gentoo.diff, -files/ddclient-3.6.3-gentoo.diff,
+  -files/ddclient-3.6.3-mss1.diff, +files/ddclient.init,
+  +files/ddclient-daemon0inconfig.diff, +files/ddclient-gentoo.diff,
+  +files/ddclient-mss1.diff, ddclient-3.6.2.ebuild, ddclient-3.6.3.ebuild,
+  +ddclient-3.6.6.ebuild:
+  Get rid of some crufy diffs in files/ -- the changes across the versioned
+  diffs were not real changes, and so the diffs are shared now. Additionally,
+  with this version bump is a new initscript to take advantage of the chuid
+  argument to start-stop-daemon so that ddclient runs as the ddclient user,
+  rather than root.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
