@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lisp2wish/cl-lisp2wish-20040131.ebuild,v 1.2 2004/06/24 23:46:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lisp2wish/cl-lisp2wish-20040131.ebuild,v 1.3 2004/07/14 15:54:50 agriffis Exp $
 
 inherit common-lisp
 
@@ -12,6 +12,7 @@ SRC_URI="http://www.riise-data.net/lisp2wish-${MY_PV}.tgz"
 LICENSE="lisp2wish"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 DEPEND="virtual/commonlisp
 	dev-lisp/common-lisp-controller"
 RDEPEND="${DEPEND}

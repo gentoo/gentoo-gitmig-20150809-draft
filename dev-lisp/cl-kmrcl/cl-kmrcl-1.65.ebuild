@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/cl-kmrcl-1.65.ebuild,v 1.2 2004/06/24 23:45:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/cl-kmrcl-1.65.ebuild,v 1.3 2004/07/14 15:53:59 agriffis Exp $
 
 inherit common-lisp
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.b9.com/kmrcl/kmrcl-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 DEPEND="dev-lisp/cl-rt"
 
 CLPACKAGE=kmrcl
