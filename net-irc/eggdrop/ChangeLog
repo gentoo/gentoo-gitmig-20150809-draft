@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/eggdrop
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.1 2003/07/29 01:12:51 gregf Exp $
+
+*eggdrop-1.6.15 (28 Jul 2003)
+
+  28 Jul 2003; Greg Fitzgerald <gregf@gentoo.org> eggdrop-1.6.15.ebuild,
+  files/eggdrop-installer:
+  Initial Release. This closes bug #18461 Credit to both Curtis Hogg
+  <buckminst@inconnu.isu.edu> and Chuck Short <chuck_short@rogers.com>
+
