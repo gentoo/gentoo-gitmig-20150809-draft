@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.1 2004/03/29 15:07:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.2 2004/03/29 18:41:02 mr_bones_ Exp $
 
 inherit rpm
 
-# bash magic to extract last 2 versions as XIMIAN_V, 
+# bash magic to extract last 2 versions as XIMIAN_V,
 # third last version as RPM_V and the rest as MY_PV
 MY_PV=${PV%.[0-9]*.[0-9]*.[0-9]*}
 END_V=${PV/${MY_PV}./}
@@ -22,7 +22,7 @@ IUSE="xmms"
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
 	app-arch/rpm2targz"
-	
+
 
 RDEPEND=">=x11-themes/gnome-themes-extras-0.5"
 
@@ -58,4 +58,3 @@ src_install () {
 	cd ${S}
 	dodoc COPYING ChangeLog
 }
-
