@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.10 2005/02/03 11:09:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.11 2005/03/18 20:13:42 seemant Exp $
 
 inherit eutils java-utils
 
@@ -64,7 +64,7 @@ pkg_setup() {
 			einfo "Compiling against net-www/mozilla"
 			mozilla_dir=/usr/lib/mozilla
 		elif [ -f ${ROOT}/usr/lib/MozillaFirefox/libgtkembedmoz.so ] ; then
-			einfo "Compiling against net-www/mozilla-firefox"
+			einfo "Compiling against www-client/mozilla-firefox"
 			mozilla_dir=/usr/lib/MozillaFirefox
 		else
 			eerror "You need either Mozilla, compiled against gtk+ v2.0 or newer"
