@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.12 2004/04/30 19:53:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.13 2004/06/09 07:36:59 eradicator Exp $
+
+*evms-2.3.4 (09 Jun 2004)
+
+  09 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +evms-2.3.4.ebuild:
+  Version bump.  Added sys-libs/device-mapper to DEPEND.
 
 *evms-2.3.2 (30 Apr 2004)
 
