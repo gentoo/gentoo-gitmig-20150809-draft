@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/quanta
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.20 2003/12/28 03:57:38 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.21 2004/01/19 14:58:11 caleb Exp $
+
+*quanta-3.2.0_rc1 (19 Jan 2004)
+
+  19 Jan 2004; Caleb Tennis <caleb@gentoo.org> quanta-3.2.0_beta1.ebuild,
+  quanta-3.2.0_beta2.ebuild, quanta-3.2.0_rc1.ebuild:
+  New version
 
 *quanta-3.2.0_beta2 (27 Dec 2003)
 
