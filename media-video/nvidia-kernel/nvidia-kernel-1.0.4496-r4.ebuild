@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r4.ebuild,v 1.3 2003/11/02 15:48:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r4.ebuild,v 1.4 2003/11/26 12:28:30 vapier Exp $
 
 PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
@@ -102,6 +102,9 @@ src_unpack() {
 		# Kbuild have issues currently (sandbox related).
 		ln -snf Makefile.nvidia Makefile
 	fi
+
+	# if you set this then it's your own fault when stuff breaks :)
+	[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile
 }
 
 src_compile() {
