@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/profiler
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.5 2004/10/05 02:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.6 2004/10/16 23:06:48 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> profiler-1.ebuild:
+  dojar --> java-pkg_dojar
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> profiler-1.ebuild:
   Masked profiler-1.ebuild stable for ppc
