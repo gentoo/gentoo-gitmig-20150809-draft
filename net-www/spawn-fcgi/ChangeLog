@@ -1,0 +1,12 @@
+# ChangeLog for net-www/spawn-fcgi
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/ChangeLog,v 1.1 2004/06/26 23:56:56 stuart Exp $
+
+*spawn-fcgi-1.1.0 (27 Jun 2004)
+
+  27 Jun 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/spawn-fcgi-1.1.0.conf, +files/spawn-fcgi-1.1.0.initd,
+  +spawn-fcgi-1.1.0.ebuild:
+  Initial import; based on lighttpd ebuild by Boris Wachtmeister
+  <sirro@nurfuerspam.de>; see bug #55049
+
