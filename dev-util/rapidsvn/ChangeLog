@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/rapidsvn
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.1 2003/08/20 04:58:09 iggy Exp $
+
+*rapidsvn-0.2.0 (19 Aug 2003)
+
+  19 Aug 2003; <iggy@gentoo.org> metadata.xml, rapidsvn-0.2.0.ebuild:
+  new package, fixes bug 25422, thanks to keanu@keanu.be
+
