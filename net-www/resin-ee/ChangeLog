@@ -1,6 +1,9 @@
 # ChangeLog for net-www/resin-ee
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/ChangeLog,v 1.1 2003/04/30 13:56:44 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/ChangeLog,v 1.2 2003/12/14 23:29:24 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> resin-ee-2.1.9.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
 *resin-ee-2.1.9 (30 Apr 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/orion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.9 2003/05/01 17:50:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.10 2003/12/14 23:29:24 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> orion-2.0.1.ebuild, orion-2.0.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
 *orion-2.0.1 (01 May 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.22 2003/10/16 11:18:29 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.23 2003/12/14 23:29:24 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> tomcat-4.1.24-r1.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
   16 Oct 2003; Sergey Kuleshov <svyatogor@gentoo.org> tomcat-4.1.24-r1.ebuild:
   Fixed permissions for /etc/conf.d/tomcat

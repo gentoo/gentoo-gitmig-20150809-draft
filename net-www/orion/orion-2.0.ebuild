@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.9 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.10 2003/12/14 23:29:24 spider Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -78,7 +78,7 @@ src_install() {
 	local dirs="applications database default-web-app demo lib persistence autoupdate.properties"
 	for i in $dirs ; do
 		cp -a ${i} ${D}/opt/${PN}/
-		chown -R orion.orion ${D}/opt/${PN}/${i}
+		chown -R orion:orion ${D}/opt/${PN}/${i}
 	done
 
 	# INSTALL APP CONFIG
@@ -86,7 +86,7 @@ src_install() {
 	local dirs="application.xml data-sources.xml database-schemas default-web-site.xml global-web-application.xml jms.xml mime.types principals.xml rmi.xml server.xml"
 	for i in $dirs ; do
 		cp -a ${i} ${D}/opt/${PN}/config
-		chown -R orion.orion ${D}/opt/${PN}/config/${i}
+		chown -R orion:orion ${D}/opt/${PN}/config/${i}
 	done
 
 	# INSTALL JARS
