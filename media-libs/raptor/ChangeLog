@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.16 2004/07/01 08:03:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.17 2004/09/15 19:22:17 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> raptor-1.2.0.ebuild:
+  Stable sparc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> raptor-0.9.12.ebuild,
   raptor-0.9.8.ebuild, raptor-1.2.0.ebuild:
