@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2848 2004/05/07 15:06:32 suka Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2849 2004/05/08 02:28:08 mr_bones_ Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -846,9 +846,9 @@ media-libs/id3lib-docs
 #
 <sys-devel/autoconf-2.53a
 
-# broken
+# broken (achim)
 app-text/sgml2x
->=app-admin/modlogan-0.7.4 (achim)
+>=app-admin/modlogan-0.7.4
 
 # unfinished
 app-admin/va-systemimager-server
