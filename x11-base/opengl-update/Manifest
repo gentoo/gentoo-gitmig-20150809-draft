@@ -9,7 +9,7 @@ MD5 020171f71e450cf568dac04eabd695f4 opengl-update-1.8.2.ebuild 1594
 MD5 1a24f101a73042eef1bc8ded313b9984 opengl-update-2.0_pre4-r1.ebuild 1740
 MD5 763f994c2b49a6c6ba2c418ab334617c opengl-update-2.1_pre4.ebuild 2184
 MD5 c4bd3ca5f011edc8adfaff3f32c0babd opengl-update-2.0_pre5.ebuild 1741
-MD5 7eb44963bf8a44d3635eb5d9b72c6a91 opengl-update-2.1_pre5.ebuild 2184
+MD5 db6d1e4982884ab8d0d1e48a08a28e88 opengl-update-2.1_pre5.ebuild 2199
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-opengl-update-1.5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-opengl-update-1.7.2 0
 MD5 745fdf145b2e08f0c996a3ca40b1ca16 files/digest-opengl-update-1.8.2 64
@@ -27,7 +27,7 @@ MD5 745fdf145b2e08f0c996a3ca40b1ca16 files/digest-opengl-update-2.1_pre5 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCByU+ArHZZzCEUG0RAoFXAJ4o2cpRTGLsPbBXhtk15TzC0AXGWgCeOSGe
-Eiax9FG/BoOHGO29Z1axd7E=
-=zxsK
+iD8DBQFCBygrArHZZzCEUG0RAhAiAKCF9Swb7TCYObw0fxKNnc+UFIi4pgCcCdkT
+ApkhX4iLtGmqEAG0Siif75c=
+=cuQP
 -----END PGP SIGNATURE-----
