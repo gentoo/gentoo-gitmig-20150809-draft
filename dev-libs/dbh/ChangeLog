@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dbh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.23 2005/02/01 22:34:19 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.24 2005/03/17 03:21:48 bcowan Exp $
+
+*dbh-1.0.22 (17 Mar 2005)
+
+  17 Mar 2005; Brad Cowan <bcowan@gentoo.org> +dbh-1.0.22.ebuild:
+  Version bump.
 
 *dbh-1.0.21 (01 Feb 2005)
 
