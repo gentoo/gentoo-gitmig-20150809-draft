@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.44 2004/09/16 17:54:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.45 2004/09/17 19:19:10 kloeri Exp $
+
+  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> sip-4.1_rc1.ebuild:
+  Fix src_uri.
 
 *sip-4.1_rc1 (16 Sep 2004)
 
