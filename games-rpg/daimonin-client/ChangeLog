@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/daimonin-client
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.10 2004/12/30 00:30:58 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.11 2005/01/23 00:10:30 wolf31o2 Exp $
+
+  22 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  daimonin-client-0.95b-r2.ebuild, daimonin-client-0.96.6_beta3.ebuild:
+  Setting virtual/x11 DEPEND based on X USE flag and closing bug #77826.
 
 *daimonin-client-0.96.6_beta3 (29 Dec 2004)
 
