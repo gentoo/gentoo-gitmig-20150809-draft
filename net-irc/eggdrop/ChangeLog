@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.25 2004/08/28 20:42:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.26 2004/09/12 03:27:05 swegener Exp $
+
+  12 Sep 2004; Sven Wegener <swegener@gentoo.org> files/eggdrop-installer:
+  Added documentation to eggdrop-installer about how to create the user file and
+  how to start the bot correctly. Closes bug #63578.
 
 *eggdrop-1.6.17 (28 Aug 2004)
 
