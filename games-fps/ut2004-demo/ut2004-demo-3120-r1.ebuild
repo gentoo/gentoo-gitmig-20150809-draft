@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r1.ebuild,v 1.2 2004/02/21 21:40:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r1.ebuild,v 1.3 2004/02/24 06:45:31 augustus Exp $
 
 inherit games eutils
 
@@ -11,11 +11,12 @@ SRC_URI="x86? ( ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 	http://www.lokigames.com/sekrit/ut2004-lnx-demo-${PV}.run.bz2
 	http://pomac.netswarm.net/mirror/games/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 	http://icculus.org/~icculus/tmp/${PN}-lnx-tts-pingpatch.tar.bz2 )
-	amd64? ( mirror://gentoo/ut2004-lnx64-demo-${PV}.run.bz2 )"
+	amd64? ( mirror://gentoo/ut2004-lnx64-demo-${PV}.run.bz2
+	http://icculus.org/~icculus/tmp/${PN}-lnx64-tts-pingpatch.tar.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 amd64"
 
 DEPEND="!dedicated? ( virtual/opengl )"
 
@@ -44,11 +45,9 @@ src_install() {
 	dodir ${GAMES_BINDIR}
 	dosym ${dir}/ut2004demo ${GAMES_BINDIR}/ut2004demo
 
-	if [ "${ARCH}" = "x86" ]; then
-		# Ping patch
-		exeinto ${dir}/System
-		doexe ut2004-bin
-	fi
+	# Ping patch
+	exeinto ${dir}/System
+	doexe ut2004-bin
 
 	prepgamesdirs
 }
