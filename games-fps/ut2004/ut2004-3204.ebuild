@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.5 2004/05/25 12:15:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.6 2004/05/25 13:15:45 wolf31o2 Exp $
 
 inherit games
 
@@ -30,6 +30,7 @@ pkg_setup() {
 	# The following is a nasty mess to determine if we are installing from
 	# a DVD or from multiple CDs.  Anyone feel free to submit patches to this
 	# to bugs.gentoo.org as I know it is a very ugly hack.
+	USE_DVD=
 	if [ -n "${CD_ROOT}" ]; then
 		[ -d "${CD_ROOT}/CD1" ] && USE_DVD=1
 	else
