@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.1.8.ebuild,v 1.1 2005/01/05 00:49:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.1.10.ebuild,v 1.1 2005/02/28 22:41:50 luckyduck Exp $
 
 DESCRIPTION="A robust, clean, extremely portable, efficient, and specification-compliant Java virtual machine."
 HOMEPAGE="http://sablevm.org/"
@@ -13,7 +13,7 @@ SRC_URI="http://sablevm.org/download/release/${PV}/sablevm-${PV}.tar.gz
 	http://sablevm.org/download/release/${PV}/sablevm-classpath-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE="gtk debug"
 DEPEND=">=dev-libs/libffi-1.20
 	>=dev-libs/popt-1.7
