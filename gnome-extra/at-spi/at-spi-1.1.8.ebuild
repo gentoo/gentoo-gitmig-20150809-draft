@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.8.ebuild,v 1.5 2003/06/09 00:25:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.8.ebuild,v 1.6 2003/07/04 21:47:09 gmsoft Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,7 @@ DESCRIPTION="This is the Gnome Accessibility Toolkit"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~hppa"
 
 RDEPEND=">=gnome-base/gail-0.17
 	>=gnome-base/libbonobo-2.0.0
