@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/ipkg-utils
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.1 2004/08/24 23:18:34 solar Exp $
+
+*ipkg-utils-1.7 (24 Aug 2004)
+
+  24 Aug 2004; <solar@gentoo.org> +metadata.xml, +ipkg-utils-1.7.ebuild:
+  initial commit of ipkg-utils. ebuild written by tigger@g.o
+
