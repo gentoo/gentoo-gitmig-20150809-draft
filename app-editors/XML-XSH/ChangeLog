@@ -1,0 +1,12 @@
+# ChangeLog for app-editors/XML-XSH
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH/ChangeLog,v 1.1 2003/01/03 13:55:59 mcummings Exp $
+
+  03 Jan 2003; Michael Cummings <mcummings@gentoo.org>:
+  Moved from net-www to app-editors - more approriate here. unmasking for x86.
+
+*XML-XSH-1.6 (02 Jan 2003)
+
+  02 Jan 2003; Michael Cummings <mcummings@gentoo.org> XML-XSH-1.6.ebuild:
+
+  Initial import. Bug submitted by stocke2, but 12148.
