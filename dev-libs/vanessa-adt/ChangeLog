@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/vanessa-adt
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.1 2003/03/15 07:52:26 george Exp $
+
+*vanessa-adt-0.0.4_beta4.ebuild (14 Mar 2003)
+
+  14 Mar 2003; George Shapovalov <george@gentoo.org> vanessa-adt-0.0.4_beta4.ebuild, files/digest-vanessa-adt-0.0.4_beta4 :
+  initial release (#17400)
+  Provides Abstract Data Types (ADTs) Includes queue, dynamic array, hash and key value ADT.
+  ebuild submitted by Todd Punderson <todd@doonga.net>
