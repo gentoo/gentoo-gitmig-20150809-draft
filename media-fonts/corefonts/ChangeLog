@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/corefonts
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.6 2004/02/16 03:12:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.7 2004/02/16 03:14:38 spyderous Exp $
+
+  15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Adding metadata.xml.
 
   15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; corefonts-1-r1.ebuild:
   Adding hints about /etc/fonts/local.conf.
