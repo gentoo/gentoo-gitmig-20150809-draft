@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.78 2005/02/09 16:26:25 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.79 2005/02/24 16:40:42 blubb Exp $
+
+  24 Feb 2005; Simon Stelling <blubb@gentoo.org> kdevelop-3.1.2.ebuild:
+  stable on amd64
 
 *kdevelop-3.2.0_beta2 (09 Feb 2005)
 
