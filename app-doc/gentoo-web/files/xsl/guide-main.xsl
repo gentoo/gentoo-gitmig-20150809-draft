@@ -144,15 +144,26 @@
 	<!--<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">-->
 	<table border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tr>
-			<td valign="top" height="168" width="30%" bgcolor="#45347b">
+			<td rowspan="2" valign="top" height="168" width="30%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
 					<tr><td class="logobg" valign="top" align="center" height="120"><img src="/images/gtop-new.jpg"/></td></tr>
 					<tr><td class="logobg" valign="top" align="center" height="48"><img src="/images/gbot-new.gif"/></td></tr>
 				</table>
 			</td>
-			<td valign="bottom" height="168" width="70%" bgcolor="#000000">
-				<!--Netscape 4.7 table hack-->
-				<p class="menu">
+			
+			<td valign="middle" align="center" width="70%" bgcolor="#000000">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center">
+						<p class="infotext"><font color="#00ff00"><br/><a href="http://www.qksrv.net/click-477620-5032686" target="_top" ><img src="http://www.qksrv.net/image-477620-5032686" width="468" height="60" alt="DDR Memory at Crucial.com" border="0"/></a><br/><b>inventor</b> and <b>cvs.gentoo.org</b> use Crucial RAM; click above, buy some... and support <i>us</i>!</font></p>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="bottom" align="left" width="70%" bgcolor="#000000">
+			<p class="menu">
 				<xsl:choose>
 					<xsl:when test="/mainpage/@id='about'">
 						<a class="highlight" href="/index.html"> About Gentoo Linux</a> |
