@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6.ebuild,v 1.2 2003/02/13 09:05:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6.ebuild,v 1.3 2003/02/14 08:30:04 vapier Exp $
 
+inherit eutils
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
@@ -57,8 +58,6 @@ DEPEND="virtual/linux-sources"
 SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
 
 S=${WORKDIR}/${P}
-
-inherit eutils
 
 src_unpack() {
 	unpack ${P}.tar.bz2
