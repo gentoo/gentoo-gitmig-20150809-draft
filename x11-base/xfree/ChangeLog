@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.13 2002/04/07 20:25:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.14 2002/04/16 01:02:28 seemant Exp $
+
+  15 Apr 2002; Seemant Kulleen <seeamnt@gentoo.org> xfree-4.2.0-r9.ebuild :
+
+  Changed the glide USE flag to 3dfx USE flag instead.
 
   7 Apr 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r9.ebuild :
 
