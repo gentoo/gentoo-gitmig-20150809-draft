@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.2.ebuild,v 1.1 2002/05/23 00:18:33 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.2.ebuild,v 1.2 2002/05/23 02:53:49 spider Exp $
 
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
@@ -21,12 +21,12 @@ SLOT="0"
 #libglade
 RDEPEND=">=dev-util/pkgconfig-0.12.0
 		>=dev-libs/glib-2.0.0
-		>=dev-libs/libxml2-2.4.19	
+		>=dev-libs/libxml2-2.4.19
 		nls? ( sys-devel/gettext )"
 
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0'
+	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 	
 
