@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.40 2003/10/09 19:48:03 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.41 2003/10/10 18:47:27 pappy Exp $
+
+  10 Oct 2003; Alexander Gabert <pappy@gentoo.org> openoffice-1.0.3-r1.ebuild:
+  changed hardened-gcc flags
 
   09 Oct 2003; Alexander Gabert <pappy@gentoo.org> openoffice-1.0.3-r1.ebuild:
   added new hppa dependent hardened-gcc flags
