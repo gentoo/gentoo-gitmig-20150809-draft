@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.63 2004/04/17 08:14:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.64 2004/04/20 08:12:01 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-lib-1.0.4.ebuild:
+  USE=static option for bug #48233.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> alsa-lib-1.0.3b-r2.ebuild:
   stable on amd64

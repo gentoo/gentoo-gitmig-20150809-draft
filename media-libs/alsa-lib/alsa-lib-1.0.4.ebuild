@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.4.ebuild,v 1.1 2004/04/04 19:01:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.4.ebuild,v 1.2 2004/04/20 08:12:01 eradicator Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64 -sparc ~ia64"
 LICENSE="GPL-2 LGPL-2.1"
 
-IUSE="jack"
+IUSE="jack static"
 
 DEPEND=">=sys-devel/automake-1.7.2
 	>=sys-devel/autoconf-2.57-r1"
@@ -31,8 +31,20 @@ src_unpack() {
 	elibtoolize
 }
 
+src_compile() {
+	local myconf=""
+
+	# Can't do both according to alsa docs and bug #48233
+	if use static; then
+		myconf="--enable-static=yes --enable-shared=no"
+	fi
+
+	econf ${myconf} || die
+	emake || die
+}
+
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	#This alsa version does not provide libasound.so.1
 	#Without this library just about everything even remotely
