@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.12 2002/09/11 20:35:33 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.13 2002/09/15 15:07:26 raker Exp $
 
 *exim-4.05 (29 Aug 2002)
+
+  15 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.05.ebuild :
+  Fixed a typo.  -lpg to -lpq.  See bug #7878
 
   11 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.05.ebuild :
   Updated ebuild to install convert4r{3,4} into /usr/sbin as suggested

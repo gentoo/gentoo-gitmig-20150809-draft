@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.5 2002/09/11 20:35:33 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.6 2002/09/15 15:07:26 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -102,7 +102,7 @@ src_unpack() {
 		sed -e "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" \
 			Local/Makefile.tmp >| Local/Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I/usr/include/postgresql"
-		LOOKUP_LIBS="$LOOKUP_LIBS -lpg"
+		LOOKUP_LIBS="$LOOKUP_LIBS -lpq"
 	fi
 
 	if [ -n "$LOOKUP_INCLUDE" ]; then
