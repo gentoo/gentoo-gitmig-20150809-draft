@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/ninja
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.6 2004/04/26 11:40:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.7 2004/04/27 08:51:08 aliz Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> ninja-1.5.9_pre9.ebuild:
   Add die following econf for bug 48950
@@ -17,7 +17,7 @@
   18 Oct 2003; Chuck Short <zul@gentoo.org> ninja-1.5.9_pre9.ebuild:
   Marked stable on x86, added amd64 to keywords.
 
-*ninja-1.5.9_pre9.ebuild (12 May  2003)
+*ninja-1.5.9_pre9 (12 May  2003)
 
   12 May 2003; Jon Portnoy <avenj@gentoo.org> ebuild-1.5.9_pre9.ebuild :
   Initial import. Ebuild submitted by Burton Samograd
