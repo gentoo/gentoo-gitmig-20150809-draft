@@ -55,7 +55,7 @@
 *sys-apps/console-data
 *sys-apps/console-tools
 *sys-apps/cpio
-*sys-apps/dcron
+*>=sys-apps/dcron-2.7-r5
 *sys-apps/debianutils
 *sys-apps/devfsd
 *sys-apps/diffutils
