@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.2.1.ebuild,v 1.4 2004/06/24 21:32:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.2.1.ebuild,v 1.5 2004/06/25 18:05:12 vapier Exp $
 
 DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system."
 HOMEPAGE="http://www.tildeslash.com/monit/"
@@ -11,14 +11,13 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc sparc"
 IUSE="ssl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison"
 
 src_compile() {
-
 	econf `use_with ssl` || die
 	emake || die
 }
@@ -26,7 +25,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc CHANGES.txt CONTRIBUTORS FAQ.txt LICENSE README* STATUS UPGRADE.txt
+	dodoc CHANGES.txt CONTRIBUTORS FAQ.txt README* STATUS UPGRADE.txt
 	dohtml -r doc/*
 
 	insinto /etc; insopts -m700; doins monitrc || die
@@ -34,8 +33,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
 	einfo "Sample configurations are available at"
 	einfo "http://www.tildeslash.com/monit/examples.html"
-	einfo
 }
