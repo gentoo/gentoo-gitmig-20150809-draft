@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.7 2004/12/06 21:41:39 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.8 2004/12/06 22:05:08 johnm Exp $
 
 # This eclass provides functions for compiling external kernel modules
 # from source.
@@ -28,7 +28,7 @@ use_m() {
 	get_version;
 	
 	# if the kernel version is greater than 2.6.6 then we should use
-	# M= instead of SUBDIR=
+	# M= instead of SUBDIRS=
 	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -gt 5 -a ${KV_PATCH} -gt 5 ] && \
 		return 0 || return 1
 }
@@ -37,7 +37,7 @@ convert_to_m() {
 	[ ! -f "${1}" ] && die "convert_to_m() requires a filename as an argument"
 	if use_m
 	then
-		ebegin "Converting ${1/${WORKDIR}\//} to use M= instead of SUBDIR="
+		ebegin "Converting ${1/${WORKDIR}\//} to use M= instead of SUBDIRS="
 		sed -i 's:SUBDIRS=:M=:g' ${1}
 		eend $?
 	fi
@@ -131,8 +131,7 @@ linux-mod_src_compile() {
 	
 		einfo "Preparing ${modulename} module"
 		cd ${sourcedir}
-		emake clean || die Unable to make clean.
-		emake ${BUILD_PARAMS} ${BUILD_TARGETS:-module} || die Unable to make ${BUILD_PARAMS} module.
+		emake ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module} || die Unable to make ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module}.
 	done
 	ARCH="${xarch}"
 }
