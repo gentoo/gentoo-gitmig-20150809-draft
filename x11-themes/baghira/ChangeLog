@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.16 2004/09/28 18:50:15 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.17 2004/10/07 15:40:11 voxus Exp $
+
+*baghira-0.5h-r1 (07 Oct 2004)
+
+  07 Oct 2004; Konstantin Arkhipov <voxus@gentoo.org> +baghira-0.5h-r1.ebuild,
+  +files/baghira-ximian_fix.patch:
+  Added patch, which prevents ximian's openoffice from crashing, when
+  baghira style is used. Thanks to Mathew Hennessy <hennessy@thoughtcrime.com>
+  for pointing to patch.
 
 *baghira-0.5h (28 Sep 2004)
 
