@@ -1,6 +1,10 @@
 # ChangeLog for net-www/gorua
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.6 2004/04/11 17:10:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.7 2004/04/27 19:56:20 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gorua-0.16-r2.ebuild,
+  gorua-0.17.ebuild:
+  Add inherit eutils
 
 *gorua-0.17 (12 Apr 2004)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.3.ebuild,v 1.2 2004/04/17 23:01:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.3.ebuild,v 1.3 2004/04/27 19:57:37 agriffis Exp $
+
+inherit eutils
 
 MY_P="${P}-src"
 
