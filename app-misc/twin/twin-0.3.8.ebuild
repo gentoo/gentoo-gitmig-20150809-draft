@@ -9,7 +9,7 @@ SRC_URI="http://ftp1.sourceforge.net/twin/${A}
 	 http://linuz.sns.it/~max/twin/${A}"
 HOMEPAGE="http://linuz.sns.it/~max/twin/" 
 DEPEND="virtual/glibc
-	X? ( >=x11-base/xfree-4.0.1 )
+	X? ( virtual/x11 )
         >=sys-libs/ncurses-5.2"
 	
 src_unpack() {
