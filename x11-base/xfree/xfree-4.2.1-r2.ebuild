@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.15 2003/01/11 09:56:09 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.16 2003/01/15 14:08:46 gerk Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -163,6 +163,11 @@ src_unpack() {
 		# closing bug #10146.
 		EPATCH_EXCLUDE="107_all_4.2.1-gcc32-internal-compiler-error.patch.bz2"
 	fi
+
+        # remove 082 patch which b0rks keycodes
+        # see bug #13073
+        rm ${WORKDIR}/patch/082*
+
 	# Various Patches from all over
 	epatch ${WORKDIR}/patch/
 	unset EPATCH_EXCLUDE

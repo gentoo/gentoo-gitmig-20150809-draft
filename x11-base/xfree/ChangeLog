@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.82 2003/01/11 09:56:09 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.83 2003/01/15 14:08:46 gerk Exp $
+
+  15 Jan 2002; Mark Guertin <gerk@gentoo.org> xfree-4.2.1-r2.ebuild :
+  Removed patch 082 as it was the one breaking keycodes, set ppc in 
+  keywords. See bug #13073
 
   11 Jan 2003; Jack Morgan <jmorgan@gentoo.org> xfree-4.2.1-r2.ebuild :
   Changed sparc back to -sparc as it breakes keymaps
