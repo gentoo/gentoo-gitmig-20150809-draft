@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 b71c53c4f5e5bc482eeced8ab20f7851 ChangeLog 4339
 MD5 2bf8431a4672f447fe8f386469bb28d5 sharutils-4.2.1-r9.ebuild 1362
-MD5 14b0a2c31d549ab60cbc50ccd08ffeec sharutils-4.2.1-r10.ebuild 1420
+MD5 56321e53302fc06942b963f5896cac15 sharutils-4.2.1-r10.ebuild 1419
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r10 67
 MD5 aeb2dc437bac48b13e8ebc1d632013ad files/sharutils-4.2.1-buffer-check.patch 2416
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r9 67
@@ -12,7 +12,7 @@ MD5 567118e62dd91c695bdffe56281a5324 files/sharutils-4.2.1-buffer-limits.patch 1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWwyWHTu7gpaalycRAmYwAKC6I5ikCGNS+rse14YdhMll6cOrjwCfac1J
-yWa9jyANjptHYVQxkJWn/ZI=
-=qphO
+iD8DBQFBWw0EHTu7gpaalycRApq+AKDpzoD3cxp9hMxOpYKuauuGvpH3cwCg7L0Z
+kMdjoQBeDaI7hjxQJHbk1uE=
+=eVV7
 -----END PGP SIGNATURE-----
