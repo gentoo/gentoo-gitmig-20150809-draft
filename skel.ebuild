@@ -63,8 +63,6 @@ SLOT="0"
 # should be considered unstable until testing proves its stability.  Once 
 # packages go stable the ~ prefix is removed.  So, if you've confirmed that 
 # your ebuild works on x86 and ppc, you'd specify: KEYWORDS="~x86 ~ppc"
-# For packages that are platform-independent (like Java, PHP or Perl
-# applications) specify all keywords.
 # For binary packages, use -* and then list the archs the bin package
 # exists for.  If the package was for an x86 binary package, then
 # KEYWORDS would be set like this: KEYWORDS="-* x86"
