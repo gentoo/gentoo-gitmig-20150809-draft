@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.41 2005/03/05 07:05:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.42 2005/03/29 21:52:34 ticho Exp $
+
+*pine-4.62-r2 (29 Mar 2005)
+
+  29 Mar 2005; Andrej Kacian <ticho@gentoo.org>
+  +files/pine-4.62-spooldir-permissions.patch, pine-4.62-r1.ebuild,
+  +pine-4.62-r2.ebuild:
+  Updated the chappa-patchset. 4.62-r1 stable on x86. Introduced patch which
+  turns off .lockfile usage to get rid of "vulnerable" spool directory on
+  startup.
 
   05 Mar 2005; Joseph Jezak <josejx@gentoo.org> pine-4.62.ebuild:
   Marked ppc stable for bug #83249.

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.62-r1.ebuild,v 1.3 2005/03/29 21:52:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.62-r2.ebuild,v 1.1 2005/03/29 21:52:34 ticho Exp $
 
 inherit eutils
 
 # Using this ugly hack, since we're making our own versioned copies of chappa 
 # patch, as upstream doesn't version them. (see #59573) 
-CHAPPA_PF="${P}-r1"
+CHAPPA_PF="${P}-r2"
 
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
 HOMEPAGE="http://www.washington.edu/pine/
@@ -20,7 +20,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ppc-macos ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc-macos ~ia64"
 IUSE="ssl ldap kerberos largeterminal pam passfile debug"
 
 DEPEND="virtual/libc
@@ -60,42 +60,44 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
+	epatch "${FILESDIR}/${P}-spooldir-permissions.patch" || die
+
 	# Various fixes and features.
-	epatch "${WORKDIR}/${CHAPPA_PF}-chappa-all.patch"
+	epatch "${WORKDIR}/${CHAPPA_PF}-chappa-all.patch" || die
 	# Fix flock() emulation.
-	cp "${FILESDIR}/flock.c" "${S}/imap/src/osdep/unix"
+	cp "${FILESDIR}/flock.c" "${S}/imap/src/osdep/unix" || die
 	# Build the flock() emulation.
-	epatch "${FILESDIR}/imap-4.7c2-flock_4.60.patch"
+	epatch "${FILESDIR}/imap-4.7c2-flock_4.60.patch" || die
 	if use ldap ; then
 		# Link to shared ldap libs instead of static.
-		epatch "${FILESDIR}/pine-4.30-ldap.patch"
+		epatch "${FILESDIR}/pine-4.30-ldap.patch" || die
 		mkdir "${S}/ldap"
 		ln -s /usr/lib "${S}/ldap/libraries"
 		ln -s /usr/include "${S}/ldap/include"
 	fi
 #	if use ipv6 ; then
-#		epatch "${DISTDIR}/${P}-v6-20031001.diff"
+#		epatch "${DISTDIR}/${P}-v6-20031001.diff" || die
 #	fi
 	if use passfile ; then
 		#Is this really the correct place to define it?
-		epatch "${FILESDIR}/pine-4.56-passfile.patch"
+		epatch "${FILESDIR}/pine-4.56-passfile.patch" || die
 	fi
 	if use largeterminal ; then
 		# Add support for large terminals by doubling the size of pine's internal display buffer
-		epatch "${FILESDIR}/pine-4.61-largeterminal.patch"
+		epatch "${FILESDIR}/pine-4.61-largeterminal.patch" || die
 	fi
 
 	# Something from RedHat.
-	epatch "${FILESDIR}/pine-4.31-segfix.patch"
+	epatch "${FILESDIR}/pine-4.31-segfix.patch" || die
 	# Create lockfiles with a mode of 0600 instead of 0666.
-	epatch "${FILESDIR}/pine-4.40-lockfile-perm.patch"
+	epatch "${FILESDIR}/pine-4.40-lockfile-perm.patch" || die
 	# Add missing time.h includes.
-	epatch "${FILESDIR}/imap-2000-time.patch"
+	epatch "${FILESDIR}/imap-2000-time.patch" || die
 	# Bug #23336 - makes pine transparent in terms that support it.
-	epatch "${FILESDIR}/transparency.patch"
+	epatch "${FILESDIR}/transparency.patch" || die
 
 	# Bug #72861 - relaxes subject length for base64-encoded subjects
-	epatch "${FILESDIR}/pine-4.61-subjectlength.patch"
+	epatch "${FILESDIR}/pine-4.61-subjectlength.patch" || die
 
 	if use debug ; then
 		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
