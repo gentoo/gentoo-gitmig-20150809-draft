@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3657 2005/02/24 16:30:44 beu Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3658 2005/02/25 00:36:30 ka0ttic Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -30,10 +30,6 @@ net-www/mod_authenticache
 # Masked due to vulnerabilities and upstream being dead
 # Bug #81634
 games-action/armagetron
-
-# Aaron Walker <ka0ttic@gentoo.org> (24 Feb 2005)
-# Masked for testing under KDE; patch added for KDE support
-=x11-terms/root-tail-1.2-r2
 
 # Peter Johanson <latexer@gentoo.org> (21 Feb 2005)
 # Masking the 1.1.4 release. Mainly in portage for advanced users
