@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Digest-Nilsimsa
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/ChangeLog,v 1.1 2002/06/28 12:11:33 seemant Exp $
+
+*Digest-Nilsimsa-0.06 (28 Jun 2002)
+
+  28 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  Digest-Nilsimsa-0.06.ebuild files/digest-Digest-Nilsimsa-0.06 :
+
+  New package, courtesy of jmahler@pacbell.net (Jeremiah Mahler) in bug
+  #3963
