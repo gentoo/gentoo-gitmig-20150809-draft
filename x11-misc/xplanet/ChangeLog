@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.12 2003/09/12 01:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.13 2003/11/04 03:40:44 abhishek Exp $
+
+  03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
+  Added metadata.xml
 
 *xplanet-1.0.1 (17 Mar 2003)
 

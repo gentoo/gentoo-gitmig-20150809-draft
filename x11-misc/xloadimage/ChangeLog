@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xloadimage
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.16 2003/09/22 02:15:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.17 2003/11/04 03:40:44 abhishek Exp $
+
+  03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
+  Added metadata.xml
 
   21 Sep 2003; Seemant Kulleen <seemant@gentoo.org> xloadimage-4.1-r1.ebuild:
   SRC_URI update, thanks to: Péntek László <nembela@index.hu> in bug #29294

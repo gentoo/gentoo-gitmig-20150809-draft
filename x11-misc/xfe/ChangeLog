@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.1 2003/06/20 16:22:56 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.2 2003/11/04 03:40:44 abhishek Exp $
+
+  03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
+  Added metadata.xml
 
 *xfe-0.54.2 (20 Jun 2003)
 

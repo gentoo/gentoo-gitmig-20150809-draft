@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
 
+  03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
+  Added metadata.xml
+
 *xmbdfed-4.5 (24 Oct 2002)
 
   24 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmbdfed-4.5.ebuild

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkeycaps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.6 2003/10/19 06:01:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.7 2003/11/04 03:40:44 abhishek Exp $
+
+  03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
+  Added metadata.xml
 
   18 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> xkeycaps-2.46.ebuild:
   tidy; added IUSE; use sed-4; more error checking; more docs
